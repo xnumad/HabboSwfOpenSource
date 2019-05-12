@@ -45,7 +45,7 @@ package com.sulake.habbo.moderation
 			
 			if (this._frame != null)
 			{
-				this._frame.visible = visible;
+				this._frame.visible = false;//visible;
 			}
 		}
 		

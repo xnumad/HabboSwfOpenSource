@@ -37,6 +37,7 @@
     import com.sulake.core.window.motion.JumpBy;
     import com.sulake.core.window.motion.Dispose;
     import com.sulake.core.window.motion.Motion;
+    import com.sulake.habbo.session.SecurityLevelEnum;
 
     public class BottomBarLeft implements ILinkEventTracker 
     {
@@ -382,7 +383,7 @@
 									{
 										if (_local_4.name == "MODTOOL")
 										{
-											_local_4.visible = true;
+											_local_4.visible = this._toolbar.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569);
 										}
 									}
                                 }

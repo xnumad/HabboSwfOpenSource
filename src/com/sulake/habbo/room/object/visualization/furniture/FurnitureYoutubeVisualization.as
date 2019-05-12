@@ -13,12 +13,8 @@
         {
             var k:IRoomObjectModel = object.getModel();
             var _local_2:Map = k._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA);
-            var _local_3:String = k.getString(RoomObjectVariableEnum.SESSION_URL_PREFIX);
-            if (_local_3 == null)
-            {
-                return null;
-            }
-            return _local_3 + _local_2.getValue(THUMBNAIL_URL);
+            
+            return _local_2.getValue(THUMBNAIL_URL);
         }
     }
 }

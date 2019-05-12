@@ -22,6 +22,7 @@ dirToArray("src");
 
 $tmp = "";
 $deleteFile = array();
+$doublons = array();
 foreach ($paths as $path) {
     $parts = explode('\\', $path);
     $file = array_pop($parts);
@@ -57,7 +58,7 @@ foreach ($paths as $path) {
     }
     
     $nameFile = explode('.', $file)[0];
-
+    
     $dataBin = file_get_contents($pathDir.'/'.$sourceName);
     $dataBin = str_replace("\r", "\n", $dataBin);
     $lignBin = explode("\n", $dataBin);
@@ -76,6 +77,13 @@ foreach ($paths as $path) {
         $nameTemplate = explode('"', explode("<skin name=\"", $firstLign)[1])[0]."_xml";
     }
 
+    if (array_key_exists($nameTemplate, $doublons)) {
+        $doublons[$nameTemplate]++;
+    }
+     else {
+         $doublons[$nameTemplate] = 1;
+     }
+
     $tmp .= $path.": ".$pathDir.'/'.$sourceName.": ". $pathDir.'/'.$nameTemplate.".bin\n";
     continue;
 
@@ -87,9 +95,13 @@ foreach ($paths as $path) {
 
 
 }
+asort($doublons);
+
+file_put_contents("tmp2.txt", print_r($doublons, true));
+exit();
 
 foreach($deleteFile as $file) {
-    unlink($file);
+    //unlink($file);
 }
 
 file_put_contents("tmp.txt", $tmp);

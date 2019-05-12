@@ -43,9 +43,9 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            this.addMessageEvent(new _Str_8731(this._Str_23173));
-            this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this._Str_24746));
-            this.addMessageEvent(new _Str_9325(this._Str_25218));
+            //this.addMessageEvent(new _Str_8731(this._Str_23173));
+            //this.addMessageEvent(new YoutubeDisplayPlaylistsEvent(this._Str_24746));
+            //this.addMessageEvent(new _Str_9325(this._Str_25218));
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -108,6 +108,8 @@
 
         public function _Str_2485(k:Event):void
         {
+            return;
+
             var _local_4:Boolean;
             if (this._container.roomEngine == null)
             {
