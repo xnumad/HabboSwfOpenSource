@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<skin name="illumina_light_skin_button" version="0.0">
+
+    <!-- shared variables -->
+    <variables>
+        <variable key="asset" value="illumina_light_button_default_png" type="String"/>
+    </variables>
+
+    <!-- the following maps states to layouts and templates -->
+    <states>
+        <state name="default" layout="illumina_light_button" template="illumina_light_button_default_template"/>
+        <state name="hovering" layout="illumina_light_button" template="illumina_light_button_hovering_template"/>
+        <state name="pressed" layout="illumina_light_button" template="illumina_light_button_pressed_template"/>
+    </states>
+
+    <!-- templates defines regions in bitmap asset -->
+    <templates>
+        <template name="illumina_light_button_default_template" asset="$asset">
+            <entities>
+                <entity name="button_top_left" type="bitmap"><region><Rectangle x="0" y="0" width="6" height="8"/></region></entity>
+                <entity name="button_top_center" type="bitmap"><region><Rectangle x="6" y="0" width="1" height="8"/></region></entity>
+                <entity name="button_top_right" type="bitmap"><region><Rectangle x="7" y="0" width="4" height="8"/></region></entity>
+                <entity name="button_center_left" type="bitmap"><region><Rectangle x="0" y="8" width="6" height="12"/></region></entity>
+                <entity name="button_center_center" type="bitmap"><region><Rectangle x="6" y="8" width="1" height="12"/></region></entity>
+                <entity name="button_center_right" type="bitmap"><region><Rectangle x="7" y="8" width="4" height="12"/></region></entity>
+                <entity name="button_bottom_left" type="bitmap"><region><Rectangle x="0" y="20" width="6" height="8"/></region></entity>
+                <entity name="button_bottom_center" type="bitmap"><region><Rectangle x="6" y="20" width="1" height="8"/></region></entity>
+                <entity name="button_bottom_right" type="bitmap"><region><Rectangle x="7" y="20" width="4" height="8"/></region></entity>
+
+                <entity name="button_center_left_curve" type="bitmap"><region><Rectangle x="1" y="31" width="3" height="5"/></region></entity>
+                <entity name="button_center_right_curve" type="bitmap"><region><Rectangle x="7" y="31" width="3" height="5"/></region></entity>
+
+                <entity name="glow_top_left" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_top_center" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_top_right" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_center_left" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_center_right" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_bottom_left" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_bottom_center" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="glow_bottom_right" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+            </entities>
+        </template>
+
+        <template name="illumina_light_button_hovering_template" asset="$asset">
+            <entities>
+                <entity name="button_top_left" type="bitmap"><region><Rectangle x="0" y="0" width="6" height="8"/></region></entity>
+                <entity name="button_top_center" type="bitmap"><region><Rectangle x="6" y="0" width="1" height="8"/></region></entity>
+                <entity name="button_top_right" type="bitmap"><region><Rectangle x="7" y="0" width="4" height="8"/></region></entity>
+                <entity name="button_center_left" type="bitmap"><region><Rectangle x="0" y="8" width="6" height="12"/></region></entity>
+                <entity name="button_center_center" type="bitmap"><region><Rectangle x="6" y="8" width="1" height="12"/></region></entity>
+                <entity name="button_center_right" type="bitmap"><region><Rectangle x="7" y="8" width="4" height="12"/></region></entity>
+                <entity name="button_bottom_left" type="bitmap"><region><Rectangle x="0" y="20" width="6" height="8"/></region></entity>
+                <entity name="button_bottom_center" type="bitmap"><region><Rectangle x="6" y="20" width="1" height="8"/></region></entity>
+                <entity name="button_bottom_right" type="bitmap"><region><Rectangle x="7" y="20" width="4" height="8"/></region></entity>
+
+                <entity name="button_center_left_curve" type="bitmap"><region><Rectangle x="1" y="31" width="3" height="5"/></region></entity>
+                <entity name="button_center_right_curve" type="bitmap"><region><Rectangle x="7" y="31" width="3" height="5"/></region></entity>
+
+                <entity name="glow_top_left" type="bitmap"><region><Rectangle x="11" y="0" width="19" height="19"/></region></entity>
+                <entity name="glow_top_center" type="bitmap"><region><Rectangle x="30" y="0" width="12" height="19"/></region></entity>
+                <entity name="glow_top_right" type="bitmap"><region><Rectangle x="42" y="0" width="19" height="19"/></region></entity>
+                <entity name="glow_center_left" type="bitmap"><region><Rectangle x="11" y="19" width="19" height="12"/></region></entity>
+                <entity name="glow_center_right" type="bitmap"><region><Rectangle x="42" y="19" width="19" height="12"/></region></entity>
+                <entity name="glow_bottom_left" type="bitmap"><region><Rectangle x="11" y="31" width="19" height="19"/></region></entity>
+                <entity name="glow_bottom_center" type="bitmap"><region><Rectangle x="30" y="31" width="12" height="19"/></region></entity>
+                <entity name="glow_bottom_right" type="bitmap"><region><Rectangle x="42" y="31" width="19" height="19"/></region></entity>
+            </entities>
+        </template>
+
+        <template name="illumina_light_button_pressed_template" asset="$asset">
+            <entities>
+                <entity name="button_top_left" type="bitmap"><region><Rectangle x="0" y="50" width="6" height="8"/></region></entity>
+                <entity name="button_top_center" type="bitmap"><region><Rectangle x="6" y="50" width="1" height="8"/></region></entity>
+                <entity name="button_top_right" type="bitmap"><region><Rectangle x="7" y="50" width="4" height="8"/></region></entity>
+                <entity name="button_center_left" type="bitmap"><region><Rectangle x="0" y="58" width="6" height="12"/></region></entity>
+                <entity name="button_center_center" type="bitmap"><region><Rectangle x="6" y="58" width="1" height="12"/></region></entity>
+                <entity name="button_center_right" type="bitmap"><region><Rectangle x="7" y="58" width="4" height="12"/></region></entity>
+                <entity name="button_bottom_left" type="bitmap"><region><Rectangle x="0" y="70" width="6" height="8"/></region></entity>
+                <entity name="button_bottom_center" type="bitmap"><region><Rectangle x="6" y="70" width="1" height="8"/></region></entity>
+                <entity name="button_bottom_right" type="bitmap"><region><Rectangle x="7" y="70" width="4" height="8"/></region></entity>
+
+                <entity name="button_center_left_curve" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+                <entity name="button_center_right_curve" type="bitmap"><region><Rectangle x="0" y="0" width="1" height="1"/></region></entity>
+
+                <entity name="glow_top_left" type="bitmap"><region><Rectangle x="11" y="0" width="19" height="19"/></region></entity>
+                <entity name="glow_top_center" type="bitmap"><region><Rectangle x="30" y="0" width="12" height="19"/></region></entity>
+                <entity name="glow_top_right" type="bitmap"><region><Rectangle x="42" y="0" width="19" height="19"/></region></entity>
+                <entity name="glow_center_left" type="bitmap"><region><Rectangle x="11" y="19" width="19" height="12"/></region></entity>
+                <entity name="glow_center_right" type="bitmap"><region><Rectangle x="42" y="19" width="19" height="12"/></region></entity>
+                <entity name="glow_bottom_left" type="bitmap"><region><Rectangle x="11" y="31" width="19" height="19"/></region></entity>
+                <entity name="glow_bottom_center" type="bitmap"><region><Rectangle x="30" y="31" width="12" height="19"/></region></entity>
+                <entity name="glow_bottom_right" type="bitmap"><region><Rectangle x="42" y="31" width="19" height="19"/></region></entity>
+            </entities>
+        </template>
+    </templates>
+
+    <!-- markup for layout drawer -->
+    <layouts>
+        <layout name="illumina_light_button" transparent="true">
+            <entities>
+                <entity name="glow_top_left" id="0" colorize="true"><region><Rectangle x="0" y="0" width="19" height="19"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="glow_top_center" id="0" colorize="true"><region><Rectangle x="19" y="0" width="12" height="19"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="glow_top_right" id="0" colorize="true"><region><Rectangle x="31" y="0" width="19" height="19"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="glow_center_left" id="0" colorize="true"><region><Rectangle x="0" y="19" width="19" height="12"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+                <entity name="glow_center_right" id="0" colorize="true"><region><Rectangle x="31" y="19" width="19" height="12"/></region><scale horizontal="move" vertical="strech"/></entity>
+                <entity name="glow_bottom_left" id="0" colorize="true"><region><Rectangle x="0" y="31" width="19" height="19"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="glow_bottom_center" id="0" colorize="true"><region><Rectangle x="19" y="31" width="12" height="19"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="glow_bottom_right" id="0" colorize="true"><region><Rectangle x="31" y="31" width="19" height="19"/></region><scale horizontal="move" vertical="move"/></entity>
+
+                <entity name="button_top_left" id="0" colorize="false"><region><Rectangle x="11" y="11" width="6" height="8"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="button_top_center" id="0" colorize="false"><region><Rectangle x="17" y="11" width="18" height="8"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="button_top_right" id="0" colorize="false"><region><Rectangle x="35" y="11" width="4" height="8"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="button_center_left" id="0" colorize="false"><region><Rectangle x="11" y="19" width="6" height="12"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+                <entity name="button_center_center" id="0" colorize="false"><region><Rectangle x="17" y="19" width="18" height="12"/></region><scale horizontal="strech" vertical="strech"/></entity>
+                <entity name="button_center_right" id="0" colorize="false"><region><Rectangle x="35" y="19" width="4" height="12"/></region><scale horizontal="move" vertical="strech"/></entity>
+                <entity name="button_bottom_left" id="0" colorize="false"><region><Rectangle x="11" y="31" width="6" height="8"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="button_bottom_center" id="0" colorize="false"><region><Rectangle x="17" y="31" width="18" height="8"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="button_bottom_right" id="0" colorize="false"><region><Rectangle x="35" y="31" width="4" height="8"/></region><scale horizontal="move" vertical="move"/></entity>
+
+                <entity name="button_center_left_curve" id="0" colorize="false"><region><Rectangle x="12" y="24" width="3" height="5"/></region><scale horizontal="fixed" vertical="center"/></entity>
+                <entity name="button_center_right_curve" id="0" colorize="false"><region><Rectangle x="35" y="24" width="3" height="5"/></region><scale horizontal="move" vertical="center"/></entity>
+            </entities>
+        </layout>
+    </layouts>
+</skin>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<skin name="bubble_pointer_left_skin" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="asset" value="habbo_skin_ubuntu_png" type="String" />
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+
+	<states>
+        <state name="default" layout="pointer_left" template="default_pointer_left" />
+	</states>
+
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+        <template name="default_pointer_left" asset="$asset">
+			<entities>
+				<entity name="pointer" type="bitmap"><region><Rectangle x="110" y= "230" width="8" height="13" /></region></entity>
+            </entities>
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+        <layout name="pointer_left" transparent="true">
+			<entities>
+                <entity name="pointer"><region><Rectangle x="0" y="0" width="8" height="13" /></region><scale horizontal="move" vertical="center" /></entity>
+            </entities>
+		</layout>
+	</layouts>
+</skin>

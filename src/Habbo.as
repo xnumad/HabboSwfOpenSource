@@ -591,7 +591,7 @@ import ICoreLocalizationFrameworkLib; ICoreLocalizationFrameworkLib;
 import ICoreWindowFrameworkLib; ICoreWindowFrameworkLib;
 import IHabboLoadingScreen; IHabboLoadingScreen;
 import Logger; Logger;
-import ModerationIconXML; ModerationIconXML;
+import binaryData.ModerationIconXML; binaryData.ModerationIconXML;
 import OnBoardingHcFlow; OnBoardingHcFlow;
 import RoomManagerLib; RoomManagerLib;
 import RoomSpriteRendererLib; RoomSpriteRendererLib;

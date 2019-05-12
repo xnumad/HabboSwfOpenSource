@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<skin name="tab_content_skin_3" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="asset"	value="habbo_skin_ubuntu_png"	type="String" />
+	</variables>
+
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default" layout="tab_content_3" template="tab_content_3" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="tab_content_3" asset="$asset">
+		<entities>	
+			<entity name="top" type="bitmap"><region><Rectangle x="100" y= "100" width="14" height="15" /></region></entity>
+			<entity name="btm" type="bitmap"><region><Rectangle x="100" y= "110" width="14" height="4" /></region></entity>
+		</entities>	
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="tab_content_3" transparent="false">
+			<entities>	
+				<entity name="top" id="0">
+					<region><Rectangle x="0" y="0" width="32" height="15" /></region>
+					<scale horizontal="strech" vertical="fixed" />
+				</entity>
+				<entity name="btm" id="0">
+					<region><Rectangle x="0" y="14" width="32" height="4" /></region>
+					<scale horizontal="strech" vertical="strech" />
+				</entity>
+			</entities>	
+		</layout>
+	</layouts>
+</skin>

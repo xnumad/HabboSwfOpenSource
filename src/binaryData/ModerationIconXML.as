@@ -1,4 +1,4 @@
-package 
+package binaryData
 {
 	import mx.core.ByteArrayAsset;
 	

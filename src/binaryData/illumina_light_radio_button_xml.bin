@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout name="illumina_light_radio_button" width="50" height="12" version="0.0">
+	<window>
+		<text name="_CAPTION_TEXT" style="0" x="0" y="0" width="50" height="12" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_fixed"/>
+				<param name="relative_vertical_scale_fixed"/>
+				<param name="use_parent_graphic_context"/>
+				<param name="inherit_caption"/>
+			</params>
+			<variables>
+				<var key="text_style" value="il_regular"/>
+				<var key="margins">
+					<value>
+						<Map>
+							<var key="left" value="14" type="int"/>
+							<var key="top" value="0" type="int"/>
+							<var key="right" value="0" type="int"/>
+							<var key="bottom" value="0" type="int"/>
+						</Map>
+					</value>
+				</var>
+                <var key="auto_size" value="left"/>
+                <var key="multiline" value="true"/>
+                <var key="word_wrap" value="true"/>
+			</variables>
+		</text>
+	</window>
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_header_black" width="100" height="15" version="0.0">
+
+	<window>
+	
+		<container name="header_container" x="0" y="0" width="100" height="15" tags="_EXCLUDE, _INTERNAL">
+	
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="use_parent_graphic_context" />
+				<param name="bound_to_parent_rect" />
+                <param name="inherit_caption" />
+			</params>
+
+			<children>
+
+				<!-- Caption text -->
+
+				<label name="header_title_text" x="4" y="0" width="12" height="15" background="true" color="0xff4b4b4b" tags="_TITLE, _EXCLUDE, _INTERNAL, _COLORIZE">
+					<params>
+						<param name="relative_horizontal_scale_center" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="use_parent_graphic_context" />
+                        <param name="inherit_caption" />
+					</params>
+					<variables>
+                        <var key="text_style" value="frame_title" />
+						<var key="margins">
+							<value>
+								<Map>
+									<var key="left" value="8" type="int" />
+									<var key="top" value="1" type="int" />
+									<var key="right" value="8" type="int" />
+									<var key="bottom" value="1" type="int" />
+								</Map>
+							</value>
+						</var>
+					</variables>
+				</label>
+
+                <!-- Controls container -->
+
+                <itemlist_horizontal x="85" y="0" width="15" height="15" background="true" color="0xffffffff" tags="_EXCLUDE, _INTERNAL, _COLORIZE, _CONTROLS">
+                    <params>
+                        <param name="relative_horizontal_scale_move" />
+                        <param name="relative_vertical_scale_fixed" />
+                        <param name="use_parent_graphic_context" />
+                    </params>
+
+                    <children>
+
+                        <!-- Close button -->
+
+                        <closebutton name="header_button_close" x="0" y="0" width="15" height="15" tags="_EXCLUDE, _INTERNAL, close">
+                            <params>
+                                <param name="relative_horizontal_scale_fixed" />
+                                <param name="relative_vertical_scale_fixed" />
+                                <param name="input_event_processor" />
+                                <param name="use_parent_graphic_context" />
+                            </params>
+                        </closebutton>
+                    </children>
+                </itemlist_horizontal>
+			</children>
+		</container>
+	</window>
+</layout>

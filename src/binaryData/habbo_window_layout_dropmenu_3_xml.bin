@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_dropmenu_3" width="40" height="20" version="0.0">
+	<window>
+		<label name="_DROPLIST_TITLETEXT" x="6" y="4" width="10" height="12" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+			</params>
+			<variables>
+                <var key="text_style" value="u_regular" type="String" />
+			</variables>
+		</label>
+		<scrollable_itemlist_vertical name="_DROPLIST_ITEMLIST" x="2" y="2" width="36" height="14" tags="_EXCLUDE, list">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="use_parent_graphic_context" />
+				<param name="expand_to_accommodate_children" />
+			</params>
+		</scrollable_itemlist_vertical>
+        <region x="6" y="2" width="28" height="18" name="_DROPLIST_REGION" treshold="0" tags="_EXCLUDE, _INTERNAL">
+            <params>
+                <param name="input_event_processor" />
+                <param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+                <param name="relative_horizontal_scale_strech" />
+            </params>
+        </region>
+	</window>
+</layout>

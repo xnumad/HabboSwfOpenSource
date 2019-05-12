@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_12315.bin", mimeType="application/octet-stream")]
+    [Embed(source="radio_button_skin_xml.bin", mimeType="application/octet-stream")]
     public class _Str_12315 extends ByteArrayAsset 
     {
     }

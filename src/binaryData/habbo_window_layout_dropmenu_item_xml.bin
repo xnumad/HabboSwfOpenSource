@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_dropmenu_item" width="8" height="12" version="0.0">
+	<window>
+		<label name="_BTN_TEXT" x="0" y="0" width="8" height="12" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_fixed" />
+				<param name="relative_vertical_scale_center" />
+				<param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+			</params>
+			<variables>
+                <var key="text_style" value="regular" type="String" />
+				<var key="margins"><value>
+					<Map>
+						<var key="left"   value="4" type="int" />
+						<var key="top"    value="1" type="int" />
+						<var key="right"  value="4" type="int" />
+						<var key="bottom" value="2" type="int" />
+					</Map>
+				</value></var>
+			</variables>
+		</label>
+	</window>
+</layout>
