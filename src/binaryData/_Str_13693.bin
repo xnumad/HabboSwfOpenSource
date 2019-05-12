@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="mystery_box_toolbar_extension" width="192" height="137" version="0.1" uid="AB0FF494-930F-BFB2-2281-4CD349B6ACA8">
+  <window>
+    <border x="0" y="0" width="192" height="137" params="16" style="6" color="0x0676767">
+      <children>
+        <border x="3" y="3" width="186" height="130" params="16" style="3" color="0x0201e19" blend="0.8">
+          <children>
+            <background x="0" y="0" width="186" height="20" params="16" style="100" color="0xffff676767" background="true"/>
+            <text x="1" y="3" width="150" height="15" params="16" style="3" caption="%24%7Bmysterybox.tracker.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="6" y="27" width="174" height="16" params="16" style="100" caption="%24%7Bmysterybox.tracker.description%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="etching_color" value="0x0" type="hex"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="49" y="72" width="89" height="39" params="147664" style="100">
+              <children>
+                <region x="0" y="0" width="39" height="39" params="17" style="100" name="box_region" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_tracker_border" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="100" name="box_colour" color="0x0ff0000">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_box_base" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="100" name="box_overlay">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_box_overlay" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="50" y="0" width="39" height="39" params="17" style="100" name="key_region" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_tracker_border" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="100" name="key_colour" color="0x0ff0000">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_key_base" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="39" height="39" params="16" style="100" name="key_overlay">
+                      <variables>
+                        <var key="asset_uri" value="mysterybox_key_overlay" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+              </children>
+            </container>
+            <link x="24" y="112" width="138" height="17" params="193" style="100" name="faq_link" caption="%24%7Bmysterybox.tracker.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xbeff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </link>
+          </children>
+        </border>
+        <region x="168" y="2" width="20" height="20" params="17" style="100" name="minimize_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="20" height="19" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="common_minimize_unetched" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="168" y="2" width="20" height="20" params="17" style="100" name="maximize_region" visible="false" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="20" height="19" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="common_maximize_unetched" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <static_bitmap x="124" y="2" width="19" height="20" params="16" style="100" name="small_box" color="0x0ff0000" visible="false">
+          <variables>
+            <var key="asset_uri" value="mysterybox_box_small" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="144" y="3" width="20" height="19" params="16" style="100" name="small_key" color="0x0ff0000" visible="false">
+          <variables>
+            <var key="asset_uri" value="mysterybox_key_small" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </border>
+  </window>
+</layout>

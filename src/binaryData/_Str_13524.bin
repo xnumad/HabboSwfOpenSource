@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="me_menu_new_view" width="546" height="53" version="0.1" uid="DC9D554E-FA27-8114-8F12-F5A272B7DC3E">
+  <window>
+    <border x="0" y="0" width="546" height="53" params="147457" style="6" name="buttons" color="0x03b3933">
+      <children>
+        <container x="0" y="0" width="546" height="53" params="147472" style="3">
+          <children>
+            <boxsizer x="3" y="3" width="543" height="50" params="147472" style="3">
+              <children>
+                <region x="12" y="2" width="50" height="48" params="17" style="1" name="guide" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="guide_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_guide" type="String"/>
+                        <var key="pivot_point" value="top center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.guide%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="guide_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_guide" type="String"/>
+                        <var key="pivot_point" value="top center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="70" y="2" width="50" height="48" params="17" style="1" name="talents" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="talents_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_talents" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.talents%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="talents_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_talents" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="128" y="2" width="60" height="48" params="17" style="1" name="achievements" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="achievements_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_achv" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.achievements%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="achievements_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_achv" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="196" y="2" width="60" height="48" params="17" style="1" name="minimail" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="minimail_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_mail" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.minimail%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="minimail_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_mail" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="264" y="2" width="60" height="48" params="17" style="1" name="profile" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="profile_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_profile" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.profile%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="profile_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_profile" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="332" y="2" width="60" height="48" params="17" style="1" name="rooms" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="rooms_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_rooms" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.myrooms%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="rooms_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_rooms" type="String"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="400" y="2" width="60" height="48" params="17" style="1" name="clothes" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="clothes_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_clothing" type="String"/>
+                        <var key="pivot_point" value="top center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.editavatar%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="clothes_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_clothing" type="String"/>
+                        <var key="pivot_point" value="top center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="468" y="2" width="60" height="48" params="17" style="1" name="forums" color="0xff3d3d3d" treshold="0">
+                  <children>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="forums_icon_color">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_forums" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="0" y="32" width="60" height="14" params="786640" style="0" name="field_text" caption="%24%7Bwidget.memenu.forums%7D" width_max="60">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <static_bitmap x="14" y="0" width="32" height="30" params="16" style="0" name="forums_icon_grey">
+                      <variables>
+                        <var key="asset_uri" value="me_menu_me_forums" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="greyscale" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <container x="536" y="2" width="7" height="30" params="16" style="3"/>
+              </children>
+              <variables>
+                <var key="spacing" value="8" type="int"/>
+                <var key="padding_horizontal" value="12" type="int"/>
+                <var key="padding_vertical" value="2" type="int"/>
+              </variables>
+            </boxsizer>
+          </children>
+        </container>
+      </children>
+    </border>
+  </window>
+</layout>

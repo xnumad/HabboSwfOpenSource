@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="snowwar_exit_confirmation" width="270" height="163" version="0.1" uid="A457D503-47A3-FB93-2D7B-5698FECB66A2">
+  <window>
+    <frame x="0" y="0" width="270" height="163" params="1" style="3" caption="%24%7Bsnowwar.exit.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="12" y="12" width="238" height="18" params="16" style="0" caption="%24%7Bsnowwar.exit.confirmation%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <container_button x="8" y="80" width="110" height="35" params="17" style="3" name="no">
+          <children>
+            <text x="4" y="8" width="102" height="18" params="208" style="0" caption="%24%7Bsnowwar.exit.no%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </container_button>
+        <container_button x="144" y="80" width="110" height="35" params="17" style="3" name="yes">
+          <children>
+            <text x="2" y="8" width="107" height="18" params="208" style="0" caption="%24%7Bsnowwar.exit.yes%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </container_button>
+      </children>
+    </frame>
+  </window>
+</layout>

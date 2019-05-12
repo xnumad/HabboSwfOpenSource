@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="login_user_list_item" width="172" height="20" version="0.1" uid="38B535D4-3989-A2AE-1C12-32AFA0CE88EB">
+  <window>
+    <region x="0" y="0" width="172" height="20" params="131089" style="200" caption="username" treshold="0" width_min="172" width_max="172">
+      <children>
+        <label x="20" y="2" width="27" height="17" params="16" style="3" name="title" caption="title">
+          <variables>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="text_color" value="0x666666" type="hex"/>
+          </variables>
+        </label>
+        <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="icon">
+          <variables>
+            <var key="asset_uri" value="illumina_light_separator_png" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

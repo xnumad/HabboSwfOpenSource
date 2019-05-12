@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboMessengerBootstrap" version="0.0">
+	  <interface iid="com.sulake.iid.IIDHabboMessenger" />	  
+	  <assets>
+	    <asset mimeType="image/png" name="close_png" />	
+	    <asset mimeType="image/png" name="convo_bg_png" />		
+	    <asset mimeType="image/png" name="follow_friend_png" />			
+	    <asset mimeType="image/png" name="minimail_png" />
+	    <asset mimeType="image/png" name="next_png" />
+	    <asset mimeType="image/png" name="prev_png" />			
+	    <asset mimeType="image/png" name="resize_png" />
+	    <asset mimeType="image/png" name="tab_bg_hilite_png" />
+	    <asset mimeType="image/png" name="tab_bg_next_png" />
+	    <asset mimeType="image/png" name="tab_bg_sel_png" />
+	    <asset mimeType="image/png" name="tab_bg_unsel_png" />
+	   
+	    <asset mimeType="text/xml" name="main_window_xml" />
+	    <asset mimeType="text/xml" name="msg_entry_xml" />
+	    <asset mimeType="text/xml" name="tab_entry_xml" />
+
+        <asset mimeType="text/xml" name="messenger_xml" />
+
+	   </assets>	  
+	</component>
+	
+</manifest>

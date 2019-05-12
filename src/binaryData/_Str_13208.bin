@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="strip_club_items_dialog" width="278" height="154" version="0.1" uid="0EC5D9BE-B1CA-B94A-3DF9-4F68AFBA2466">
+  <window>
+    <frame x="0" y="0" width="278" height="154" params="32769" style="3" name="_frame" caption="%24%7Bavatareditor.invalidclubitems.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="266" height="122" params="8390800" style="0" name="_border" caption="Border">
+          <children>
+            <text x="27" y="10" width="210" height="30" params="8388624" style="3" name="_strip_description" caption="%24%7Bavatareditor.invalidclubitems.description%7D" tags="DESCRIPTION">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button_thick x="110" y="93" width="244" height="22" params="132113" style="3" name="strip_button_club_info" caption="%24%7Bavatareditor.invalidclubitems.moreinfo%7D" tags="OK" width_min="50"/>
+            <button x="18" y="93" width="78" height="22" params="918545" style="3" name="strip_button_ok" caption="%24%7Bgeneric.ok%7D" tags="OK" width_min="50"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_part_item" width="41" height="41" version="0.1" uid="D787574D-C8A2-D6C1-4411-D4E0DABC1CC1">
+  <window>
+    <container x="0" y="0" width="41" height="41" params="17" style="0" name="container" color="0xffffffffff" background="true">
+      <children>
+        <border x="0" y="0" width="41" height="41" params="16" style="3" name="background" color="0x0e9e9e1"/>
+        <bitmap x="0" y="0" width="39" height="39" params="2192" style="0" name="part"/>
+        <bitmap x="0" y="0" width="41" height="41" params="2192" style="0" name="selected"/>
+      </children>
+    </container>
+  </window>
+</layout>

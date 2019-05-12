@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.ModerationManagerBootstrap" version="0.0" >
+	    <interface iid="com.sulake.iid.IIDHabboModeration" />
+		<assets>
+		    <asset mimeType="text/xml" name="evidence_frame_xml" />
+			<asset mimeType="text/xml" name="issue_browser_xml" />
+			<asset mimeType="text/xml" name="modact_summary_xml" />
+            <asset mimeType="text/xml" name="roomtool_frame_xml" />
+            <asset mimeType="text/xml" name="roomvisits_frame_xml" />
+            <asset mimeType="text/xml" name="userclassification_frame_xml" />
+			<asset mimeType="text/xml" name="send_msgs_xml" />
+			<asset mimeType="text/xml" name="start_panel_xml" />
+			<asset mimeType="text/xml" name="user_info_xml" />
+			<asset mimeType="text/xml" name="user_info_frame_xml" />
+			<asset mimeType="text/xml" name="issue_handler_xml" />
+            <asset mimeType="image/png" name="room_icon_png" />
+			<asset mimeType="image/png" name="user_icon_png" />
+			<asset mimeType="text/xml" name="moderation_icon_xml" />
+			<asset mimeType="image/png" name="moderation_m_icon_png" />
+		</assets>
+	</component>
+	
+</manifest>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_effect_unselected" width="154" height="52" version="0.1" uid="C7A3061C-92E0-B0F1-82BD-6A517CABC954">
+  <window>
+    <container x="0" y="0" width="154" height="52" params="17" style="0" name="selected_border" color="0xff3d3d3d" treshold="0">
+      <children>
+        <border x="0" y="0" width="154" height="48" params="16" style="2" color="0x0666666">
+          <children>
+            <bitmap x="4" y="4" width="40" height="40" params="16" style="0" name="effect_icon_bg"/>
+            <bitmap x="4" y="4" width="40" height="40" params="16" style="0" name="effect_icon"/>
+            <bitmap x="4" y="4" width="40" height="40" params="16" style="0" name="effect_hilite"/>
+            <container x="50" y="20" width="98" height="22" params="16" style="0" name="loader_border" color="0xffffffffff" background="true">
+              <children>
+                <container x="1" y="1" width="96" height="20" params="16" style="0" name="loader_bg" color="0xffff3d3d3d" background="true">
+                  <children>
+                    <container x="1" y="1" width="94" height="18" params="16" style="0" name="loader_bar" color="0xffff666666" background="true">
+                      <children>
+                        <container x="0" y="0" width="94" height="2" params="16" style="0" name="loader_highlight" color="0xffff999999" background="true"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <text x="52" y="24" width="98" height="13" params="16" style="0" name="time_left" caption="%24%7Bwidgets.memenu.effects.active.timeleft%7D" blend="0.8" width_min="98" width_max="98">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="50" y="6" width="163" height="13" params="16" style="0" name="effect_name" caption="%24%7Bwidget.memenu.effectname%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="24" y="4" width="20" height="15" params="16" style="0" name="effect_amount_bg1" color="0xffffdddddd" background="true">
+              <children>
+                <container x="1" y="1" width="18" height="13" params="16" style="0" name="effect_amount_bg2" color="0xffff666666" background="true">
+                  <children>
+                    <text x="0" y="0" width="18" height="13" params="16" style="0" name="effect_amount" caption="99">
+                      <variables>
+                        <var key="text_color" value="0xeeeeee" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

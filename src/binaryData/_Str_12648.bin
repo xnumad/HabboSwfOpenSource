@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="AchievementResolutionCompleted" width="340" height="273" version="0.1" uid="E7E997B9-0CDF-0D10-1CF5-A7E643F2DAC6">
+  <window>
+    <frame x="1" y="1" width="340" height="273" params="49153" style="100" caption="%24%7Bresolution.completed.title%7D" width_min="340" height_max="525">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="20" y="10" width="294" height="222" params="147472" style="100">
+          <children>
+            <label x="0" y="0" width="254" height="24" params="16" style="100" caption="%24%7Bresolution.completed.header%7D" height_min="24" height_max="24">
+              <variables>
+                <var key="text_style" value="il_heading_title" type="String"/>
+              </variables>
+            </label>
+            <text x="0" y="29" width="294" height="40" params="16" style="100" caption="%24%7Bresolution.completed.description%7D" height_min="40" height_max="40">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="85" y="74" width="125" height="120" params="147472" style="100">
+              <children>
+                <static_bitmap x="5" y="0" width="120" height="120" params="786448" style="100" height_min="120" height_max="120">
+                  <variables>
+                    <var key="asset_uri" value="common_hilight_big" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="24" y="20" width="81" height="90" params="786448" style="100" height_min="90" height_max="90">
+                  <variables>
+                    <var key="asset_uri" value="icons_hilighter_yellow" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <widget x="39" y="37" width="50" height="50" params="16" style="100" name="achievement_badge">
+                  <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                    <var key="badge_image:pivot_point" value="center" type="String"/>
+                    <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                    <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </widget>
+              </children>
+            </container>
+            <region x="0" y="199" width="294" height="23" params="17" style="100" name="cancel_button" treshold="0">
+              <children>
+                <text x="0" y="0" width="294" height="16" params="16" style="100" caption="%24%7Bresolution.completed.close%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_link_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

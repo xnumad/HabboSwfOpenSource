@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="camera_interface" width="340" height="536" version="0.1" uid="A75CF6BB-4140-B9CD-33F8-20E0DA61604A">
+  <window>
+    <container x="0" y="0" width="340" height="536" params="33025" style="3" name="bgBorder" caption="%24%7Bcamera.interface.title%7D" color="0x0555555" treshold="0">
+      <children>
+        <border x="6" y="453" width="328" height="82" params="16" style="7" name="slot_container" visible="false">
+          <children>
+            <boxsizer x="7" y="15" width="340" height="58" params="16" style="3">
+              <children>
+                <region x="0" y="0" width="58" height="58" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="cameraButton_0" treshold="0">
+                  <children>
+                    <bitmap x="0" y="0" width="58" height="58" params="16" style="3" name="cameraSlot_0" treshold="0">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </region>
+                <region x="64" y="0" width="58" height="58" params="17" style="3" name="cameraButton_1" treshold="0">
+                  <children>
+                    <bitmap x="0" y="0" width="58" height="58" params="16" style="3" name="cameraSlot_1" treshold="0">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </region>
+                <region x="128" y="0" width="58" height="58" params="17" style="3" name="cameraButton_2" treshold="0">
+                  <children>
+                    <bitmap x="0" y="0" width="58" height="58" params="16" style="3" name="cameraSlot_2">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </region>
+                <region x="192" y="0" width="58" height="58" params="17" style="3" name="cameraButton_3" treshold="0">
+                  <children>
+                    <bitmap x="0" y="0" width="58" height="58" params="16" style="3" name="cameraSlot_3" treshold="0">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </region>
+                <region x="256" y="0" width="58" height="58" params="17" style="3" name="cameraButton_4" treshold="0">
+                  <children>
+                    <bitmap x="0" y="0" width="58" height="58" params="16" style="3" name="cameraSlot_4" treshold="0">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </region>
+              </children>
+              <variables>
+                <var key="spacing" value="6" type="int"/>
+                <var key="padding_horizontal" value="0" type="int"/>
+                <var key="padding_vertical" value="0" type="int"/>
+              </variables>
+            </boxsizer>
+            <static_bitmap x="0" y="-25" width="62" height="62" params="0" style="3" name="photo_border" visible="false">
+              <variables>
+                <var key="asset_uri" value="camera_photo_border" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <region x="0" y="0" width="19" height="21" params="131073" style="3" name="delete_photo_button" visible="false" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="19" height="21" params="16" style="3">
+                  <variables>
+                    <var key="asset_uri" value="camera_cam_close_x" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </border>
+        <bitmap x="9" y="36" width="320" height="320" params="20" style="3" name="image"/>
+        <bitmap x="9" y="35" width="320" height="320" params="20" style="3" name="flash"/>
+        <static_bitmap x="0" y="0" width="340" height="462" params="16" style="3" name="custom_frame">
+          <variables>
+            <var key="asset_uri" value="camera_cam_bg" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="242" y="55" width="88" height="17" params="262160" style="3" name="photo_date" caption="6/4/2014%2014%3A02" visible="false">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="etching_color" value="0xff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="220" y="69" width="110" height="17" params="262160" style="3" name="photo_roomname" caption="My%20awesome%20room" visible="false">
+          <variables>
+            <var key="auto_size" value="right" type="String"/>
+            <var key="etching_color" value="0xff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="10" y="38" width="318" height="318" params="16" style="3" name="camera_crosshair">
+          <variables>
+            <var key="asset_uri" value="camera_viewfinder" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <region x="120" y="362" width="98" height="95" params="131073" style="100" name="button_release" treshold="0">
+          <children>
+            <static_bitmap x="3" y="1" width="94" height="94" params="0" style="100" name="release_bitmap" tags="%23bg">
+              <variables>
+                <var key="asset_uri" value="camera_camera_btn" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="tool_tip_caption" value="${camera.take.photo.button.tooltip}" type="String"/>
+          </variables>
+        </region>
+        <static_bitmap x="11" y="298" width="318" height="58" params="16" style="0" name="buyButtonBg" color="0x0ff0000" blend="0.5" clipping="false" background="true">
+          <variables>
+            <var key="asset_uri" value="tools_black_pixel" type="String"/>
+          </variables>
+        </static_bitmap>
+        <button_thick x="92" y="308" width="157" height="40" params="917505" style="6" dynamic_style="brightness_and_shadow_under" name="button_editor" caption="%24%7Bcamera.editor.button.text%7D" color="0x09e00" clipping="false" treshold="0">
+          <variables>
+            <var key="tool_tip_caption" value="${camera.editor.button.tooltip}" type="String"/>
+          </variables>
+        </button_thick>
+        <region x="350" y="42" width="9" height="10" params="147473" style="3" name="chooseSlotButton_0" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="9" height="10" params="16" style="0" name="slotImage_0">
+              <variables>
+                <var key="asset_uri" value="camera_arrow_gray" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="350" y="109" width="9" height="10" params="147473" style="3" name="chooseSlotButton_1" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="9" height="10" params="16" style="0" name="slotImage_1">
+              <variables>
+                <var key="asset_uri" value="camera_arrow_gray" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="350" y="177" width="9" height="10" params="147473" style="3" name="chooseSlotButton_2" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="9" height="10" params="16" style="0" name="slotImage_2">
+              <variables>
+                <var key="asset_uri" value="camera_arrow_gray" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="350" y="244" width="9" height="10" params="147473" style="3" name="chooseSlotButton_3" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="9" height="10" params="16" style="0" name="slotImage_3">
+              <variables>
+                <var key="asset_uri" value="camera_arrow_gray" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="350" y="310" width="9" height="10" params="147473" style="3" name="chooseSlotButton_4" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="9" height="10" params="16" style="0" name="slotImage_4">
+              <variables>
+                <var key="asset_uri" value="camera_arrow_gray" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <header x="9" y="5" width="323" height="28" params="273" style="3" caption="%24%7Bcamera.interface.title%7D" color="0x0666666" treshold="0"/>
+      </children>
+    </container>
+  </window>
+</layout>

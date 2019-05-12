@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="vote_choice" width="20" height="20" version="0.0">
+  <window>
+    <border x="0" y="0" width="350" height="25" params="0" style="2" color="0xd2d2d2">
+      <children>
+        <button x="6" y="2" width="25" height="21" params="131089" style="0" name="button" caption="a" width_min="25" width_max="25" height_min="0"/>
+        <container x="35" y="3" width="308" height="19" params="16" style="0" name="bg" color="0xff000000" background="true">
+          <children>
+            <container x="1" y="1" width="306" height="17" params="16" style="0" name="bg_fill" color="0xff999999" background="true"/>
+            <container x="1" y="1" width="306" height="2" params="16" style="0" name="bg_shadow" color="0xff777777" background="true"/>
+            <bitmap x="1" y="1" width="306" height="17" params="16" style="0" name="vote_bar"/>
+          </children>
+        </container>
+        <text x="40" y="5" width="295" height="14" params="16" style="0" name="text" caption="%24%7B002_lorem_ipsum_content%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

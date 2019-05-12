@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="moderation_icon" width="170" height="170" version="0.1" uid="603AC898-69B3-135E-7C00-31DADEE2F1B5">
+  <window>
+	<container x="30" y="30" width="28" height="33" params="80" style="0" name="moderation_m_icon_png" color="0x00">
+		<children>
+			<static_bitmap x="0" y="0" width="28" height="33" params="16"  style="3">
+				<variables>
+					<var key="asset_uri" value="moderation_m_icon" type="String"/>
+					<var key="stretched_x" value="false" type="Boolean"/>
+					<var key="stretched_y" value="false" type="Boolean"/>
+					<var key="fit_size_to_contents" value="true" type="Boolean"/>
+				</variables>
+			</static_bitmap>
+		</children>
+	</container>
+  </window>
+</layout>

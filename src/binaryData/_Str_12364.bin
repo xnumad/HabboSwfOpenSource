@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="simple_alert" width="310" height="163" version="0.1" uid="F50DAAC4-3775-B39E-6321-00AE8C8EA8A3">
+  <window>
+    <frame x="0" y="0" width="310" height="163" params="163841" style="3" caption="caption" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <static_bitmap x="10" y="8" width="1" height="1" params="16" style="100" name="illustration">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="10" y="8" width="290" height="118" params="8536080" style="100" name="list" clipping="false">
+          <children>
+            <itemlist_vertical x="0" y="0" width="290" height="43" params="147472" style="100" name="list_top">
+              <children>
+                <label x="0" y="0" width="54" height="19" params="16" style="100" name="subtitle" caption="subtitle">
+                  <variables>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="text_color" value="0xc30000" type="hex"/>
+                  </variables>
+                </label>
+                <formatted_text x="0" y="19" width="291" height="24" params="16" style="100" name="message" caption="message" width_min="291" width_max="291">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="margin_bottom" value="8" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </itemlist_vertical>
+            <itemlist_vertical x="0" y="46" width="290" height="72" params="147472" style="100" name="list_bottom">
+              <children>
+                <static_bitmap x="0" y="0" width="1000" height="13" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                    <var key="pivot_point" value="bottom center" type="String"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <button_thick x="82" y="18" width="126" height="28" params="131281" style="3" name="close_button" caption="%24%7Balert.close.button%7D" color="0x0efefef"/>
+                <link x="14" y="51" width="262" height="21" params="193" style="100" name="link" caption="link" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="margin_bottom" value="5" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

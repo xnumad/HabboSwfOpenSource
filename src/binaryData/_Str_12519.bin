@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="achievement_notification" width="436" height="227" version="0.1" uid="1ACC4B35-377F-A5C0-2832-F4B8FD1B43DC">
+  <window>
+    <frame x="0" y="5" width="436" height="227" params="164097" style="1" caption="%24%7Bnotifications.motd.title%7D" color="0x4c4c4c">
+      <children>
+        <border x="1" y="0" width="420" height="160" params="16" style="0" name="notifications_border" caption="Messages%20for%20you">
+          <children>
+            <scrollable_itemlist_vertical x="5" y="6" width="410" height="149" params="16" style="0" name="message_list" caption="Messages%20for%20you"/>
+          </children>
+        </border>
+        <button x="200" y="168" width="30" height="26" params="131089" style="0" name="close" caption="%24%7Bgeneric.ok%7D"/>
+      </children>
+    </frame>
+  </window>
+</layout>

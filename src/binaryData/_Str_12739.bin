@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="history_item" width="169" height="24" version="0.1" uid="B5031343-8047-EB10-EE2C-9F168B2876DE">
+  <window>
+    <region x="0" y="0" width="169" height="24" params="1" style="3" dynamic_style="brightness_and_shadow_under" treshold="0">
+      <children>
+        <label x="3" y="3" width="145" height="17" params="16" style="3" name="room_name" caption="the%20greatest%20room%20on%20earth" tags="%23icon">
+          <variables>
+            <var key="text_color" value="0xffffff" type="hex"/>
+          </variables>
+        </label>
+      </children>
+    </region>
+  </window>
+</layout>

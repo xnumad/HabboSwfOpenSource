@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="task_progress_dialog" width="378" height="370" version="0.1" uid="A8298CEF-3BCC-7FF0-95B3-B5318AC02037">
+  <window>
+    <frame x="1" y="-10" width="378" height="370" params="131073" style="100" caption="%24%7Btalent.track.task.progress.dialog.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="0" y="0" width="380" height="321" params="8536080" style="100" name="list">
+          <children>
+            <border x="15" y="0" width="345" height="204" params="147472" style="104" color="0x0e2e2e2">
+              <children>
+                <itemlist_vertical x="0" y="0" width="345" height="204" params="147472" style="100" name="top_list" height_min="70">
+                  <children>
+                    <container x="0" y="0" width="345" height="10" params="16" style="100">
+                      <children>
+                        <widget x="0" y="1" width="60" height="70" params="0" style="100" name="badge">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:badge_id" value="ACH_EmailVerification1" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </container>
+                    <text x="60" y="10" width="285" height="17" params="16" style="100" name="instruction" caption="Give%2010%20scratches%20to%20a%20pet.">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="60" y="27" width="285" height="30" params="16" style="100" name="title" caption="Level%20title" height_min="30">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <widget x="10" y="57" width="325" height="30" params="16" style="100" name="action_separator">
+                      <variables>
+                        <var key="widget_type" value="separator" type="String"/>
+                      </variables>
+                    </widget>
+                    <text x="10" y="87" width="325" height="17" params="16" style="100" name="action_title" caption="%24%7Btalent.track.task.action.title%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="10" y="104" width="325" height="30" params="16" style="100" name="action_description" caption="You%20can%20find%20the%20Habbo%20Way%20by%20clicking." height_min="30">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <container x="9" y="134" width="320" height="60" params="16" style="100" name="email_container">
+                      <children>
+                        <container x="0" y="0" width="320" height="60" params="16" style="100" name="unverified_container" visible="false">
+                          <children>
+                            <border x="0" y="0" width="271" height="29" params="16" style="105" name="error_border" color="0x0cc0000"/>
+                            <border x="2" y="2" width="267" height="24" params="16" style="105" name="input_border">
+                              <children>
+                                <input x="4" y="4" width="258" height="15" params="1" style="0" name="email_txt" caption="hgfjhgf">
+                                  <variables>
+                                    <var key="text_style" value="il_regular" type="String"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </input>
+                              </children>
+                            </border>
+                            <region x="3" y="28" width="319" height="21" params="17" style="0" name="change_email_region" treshold="0">
+                              <children>
+                                <text x="0" y="0" width="156" height="16" params="16" style="100" caption="%24%7Btalent.track.progress.setemail%7D">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="underline" value="true" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                              </children>
+                            </region>
+                            <text x="2" y="28" width="318" height="33" params="16" style="3" name="error_txt" caption="jkhgjk%20hgk%20jhg%20kjhg%20jkh%20lkjh%20lkjh%20lkjh%20lkjh%20lkj%20hlkjh%20lkj%20hlkjh%20lkj">
+                              <variables>
+                                <var key="text_color" value="0xcc0000" type="hex"/>
+                                <var key="text_style" value="u_bold" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <container x="2" y="29" width="328" height="36" params="16" style="100" name="changed_container">
+                              <children>
+                                <static_bitmap x="0" y="6" width="11" height="10" params="16" style="100">
+                                  <variables>
+                                    <var key="asset_uri" value="help_accept_icon" type="String"/>
+                                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                                <text x="16" y="2" width="306" height="30" params="16" style="100" caption="%24%7Btalent.track.progress.emailchanged%7D">
+                                  <variables>
+                                    <var key="text_style" value="il_heading_3" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="multiline" value="true" type="Boolean"/>
+                                    <var key="word_wrap" value="true" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                              </children>
+                            </container>
+                          </children>
+                        </container>
+                        <text x="0" y="0" width="320" height="60" params="16" style="100" name="verified_txt" caption="%24%7Btalent.track.progress.emailverified%7D" visible="false">
+                          <variables>
+                            <var key="text_style" value="il_heading_3" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="0" y="194" width="345" height="10" params="16" style="100"/>
+                  </children>
+                </itemlist_vertical>
+              </children>
+            </border>
+            <container x="0" y="204" width="380" height="15" params="16" style="100"/>
+            <container x="15" y="219" width="350" height="47" params="16" style="100" name="progress_main_container">
+              <children>
+                <container x="0" y="0" width="350" height="16" params="16" style="100" name="progress_container">
+                  <children>
+                    <static_bitmap x="0" y="0" width="4" height="16" params="16" style="100" name="unachieved_left">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="0" width="342" height="16" params="16" style="100" name="unachieved_mid">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_mid" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="346" y="0" width="4" height="16" params="16" style="100" name="unachieved_right">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_right" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="4" height="16" params="16" style="100" name="achieved_left">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="0" width="342" height="16" params="16" style="100" name="achieved_mid">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_mid" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="346" y="0" width="4" height="16" params="16" style="100" name="achieved_right">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_right" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <text x="0" y="15" width="349" height="17" params="16" style="100" name="progress_text" caption="%24%7Btalent.track.task.progress.dialog.progress%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <widget x="0" y="46" width="350" height="2" params="16" style="100" name="progress_separator">
+                  <variables>
+                    <var key="widget_type" value="separator" type="String"/>
+                  </variables>
+                </widget>
+              </children>
+            </container>
+            <button x="67" y="266" width="246" height="55" params="131281" style="101" name="action_link" caption="%24%7Btalent.track.task.progress.dialog.thanks%7D" color="0x0bbbbbb"/>
+          </children>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="40" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

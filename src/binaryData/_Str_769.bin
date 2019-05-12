@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+<offsets>
+	<offset size="h" direction="4" x="-17" y="17" z="-0.9"/>
+	<offset size="h" direction="2" x="22" y="17" z="-0.9"/>
+	<offset size="sh" direction="4" x="-5" y="16" z="-0.9"/>
+	<offset size="sh" direction="2" x="9" y="16" z="-0.9"/>
+</offsets>

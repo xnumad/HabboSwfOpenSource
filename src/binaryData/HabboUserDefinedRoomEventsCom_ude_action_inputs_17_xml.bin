@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_event" width="228" height="342" version="0.1" uid="DDD4D6C8-AF3D-5CDD-DEDA-2128684200D3">
+  <window>
+    <container x="0" y="0" width="228" height="342" params="17" style="0" name="cont" color="0xffff3d3d3d" background="true">
+      <children>
+        <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" color="0xffff232323" background="true"/>
+        <checkbox x="5" y="5" width="15" height="16" params="17" style="1" name="prize_limit_checkbox"/>
+        <text x="22" y="5" width="166" height="13" params="0" style="0" name="prize_limit_txt" caption="%24%7Bwiredfurni.params.prizelimit%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="22" y="20" width="196" height="34" params="0" style="0" name="prize_limit_warning_txt" caption="Reward%20limit%20not%20set.%20Make%20sure%20rewards%20are%20badges%20or%20non-tradeable%20items.">
+          <variables>
+            <var key="text_color" value="0xcc0000" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="0" y="20" width="228" height="35" params="16" style="0" name="slider_container"/>
+        <container x="0" y="55" width="228" height="1" params="16" style="0" name="ruler" color="0xffff232323" background="true"/>
+        <text x="6" y="60" width="207" height="13" params="0" style="0" name="desc_txt" caption="How%20often%20can%20a%20user%20be%20rewarded">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <selector x="5" y="76" width="218" height="40" params="17" style="0" name="user_reward_interval_selector">
+          <children>
+            <radiobutton x="0" y="0" width="20" height="20" params="17" style="1" name="interval_0_radio"/>
+            <text x="22" y="0" width="27" height="13" params="0" style="0" name="desc_txt" caption="Once">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="italic" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <radiobutton x="74" y="20" width="20" height="20" params="17" style="1" name="interval_1_radio" id="1"/>
+            <text x="91" y="20" width="49" height="13" params="0" style="0" name="desc_txt" caption="1%20/%20n Days">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <radiobutton x="151" y="20" width="20" height="20" params="17" style="1" name="interval_2_radio" id="2"/>
+            <text x="168" y="20" width="48" height="13" params="0" style="0" name="desc_txt" caption="1%20/%20n Hours">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <radiobutton x="0" y="20" width="20" height="20" params="17" style="1" name="interval_3_radio" id="3"/>
+            <text x="22" y="20" width="40" height="13" params="0" style="0" name="desc_txt" caption="1%20/%20n Mins">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="75" y="0" width="130" height="12" params="262145" style="0" name="interval_input" caption="1">
+              <variables>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </selector>
+        <container x="0" y="116" width="228" height="1" params="16" style="0" name="ruler" color="0xffff232323" background="true"/>
+        <checkbox x="5" y="120" width="15" height="16" params="17" style="1" name="unique_prize_checkbox"/>
+        <text x="22" y="120" width="102" height="13" params="0" style="0" name="unique_prize_txt" caption="Unique%20Rewards%3F">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="22" y="135" width="196" height="40" params="0" style="0" name="unique_prize_desc_txt" caption="If%20checked%20each%20reward%20will%20be%20given%20once%20to%20each%20user.%20Probabilities%20are%20not%20in%20use.">
+          <variables>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="0" y="178" width="228" height="25" params="16" style="0" name="rewards_header_container">
+          <children>
+            <text x="2" y="0" width="53" height="13" params="0" style="0" name="rewards_header_txt" caption="Rewards">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="159" y="0" width="61" height="13" params="1" style="0" name="add_reward_txt" caption="Add%20reward" visible="false" treshold="0">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="165" y="10" width="55" height="13" params="0" style="0" name="propability_txt" caption="Probability">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="2" y="10" width="39" height="13" params="0" style="0" name="is_badge_txt" caption="Badge%3F">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="47" y="10" width="109" height="13" params="0" style="0" name="reward_code_txt" caption="Product/Badge%20code">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="0" y="201" width="228" height="140" params="16" style="0" name="rewards_container"/>
+        <container x="0" y="174" width="228" height="1" params="16" style="0" name="ruler" color="0xffff232323" background="true"/>
+      </children>
+    </container>
+  </window>
+</layout>

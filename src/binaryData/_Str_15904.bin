@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="main_window" width="275" height="105" version="0.1" uid="FECDD868-F354-505B-69E0-5E807657B35F">
+  <window>
+    <frame x="55" y="140" width="275" height="105" params="98305" style="0" name="friendlist_window" caption="%24%7Bfriendlist.friends%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="1" y="0" width="275" height="56" params="0" style="0" name="main_content" caption="%24%7Bfriendlist.friends%7D" color="0xffff000000" background="true">
+          <children>
+            <background x="0" y="0" width="273" height="10" params="17" style="0" name="bg" caption="%24%7Bfriendlist.friends%7D" color="0xffff000000" background="true"/>
+            <container x="0" y="0" width="273" height="17" params="17" style="0" name="flt_1" caption="%24%7Bfriendlist.friends%7D">
+              <children>
+                <container x="0" y="0" width="273" height="17" params="1" style="0" name="header" caption="%24%7Bfriendlist.friends%7D" id="1">
+                  <children>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_hilite" caption="%24%7Bfriendlist.friends%7D" id="1"/>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_friends" caption="%24%7Bfriendlist.friends%7D" id="1"/>
+                    <text x="4" y="2" width="219" height="15" params="0" style="0" name="caption_text" caption="%24%7Bfriendlist.friends%7D%20%280%29">
+                      <variables>
+                        <var key="text_color" value="0x626262" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_white" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_white" caption="%24%7Bfriendlist.friends%7D"/>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <container x="0" y="15" width="273" height="17" params="17" style="0" name="flt_2" caption="%24%7Bfriendlist.friends%7D">
+              <children>
+                <container x="0" y="0" width="273" height="17" params="1" style="0" name="header" caption="%24%7Bfriendlist.friends%7D" id="2">
+                  <children>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_hilite" caption="%24%7Bfriendlist.friends%7D" id="2"/>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_friend_requests" caption="%24%7Bfriendlist.friends%7D" id="2"/>
+                    <text x="4" y="2" width="190" height="20" params="0" style="0" name="caption_text" caption="%24%7Bfriendlist.tab.friendrequests%7D%20%281%29">
+                      <variables>
+                        <var key="text_color" value="0xf6f6f6" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_white" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_white" caption="%24%7Bfriendlist.friends%7D"/>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <container x="0" y="30" width="273" height="17" params="17" style="0" name="flt_3" caption="%24%7Bfriendlist.friends%7D">
+              <children>
+                <container x="0" y="0" width="273" height="17" params="1" style="0" name="header" caption="%24%7Bfriendlist.friends%7D" id="3">
+                  <children>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_hilite" caption="%24%7Bfriendlist.friends%7D" id="3"/>
+                    <bitmap x="0" y="0" width="273" height="17" params="17" style="0" name="hdr_search" caption="%24%7Bfriendlist.friends%7D" id="3"/>
+                    <text x="4" y="2" width="190" height="20" params="0" style="0" name="caption_text" caption="%24%7Bgeneric.search%7D%20%285%29">
+                      <variables>
+                        <var key="text_color" value="0xefefef" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_black" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="6" width="10" height="10" params="16" style="0" name="arrow_down_white" caption="%24%7Bfriendlist.friends%7D"/>
+                    <bitmap x="71" y="4" width="10" height="10" params="16" style="0" name="arrow_right_white" caption="%24%7Bfriendlist.friends%7D"/>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+        </container>
+        <container x="5" y="44" width="210" height="30" params="16" style="0" name="footer">
+          <children>
+            <container_button x="0" y="7" width="90" height="20" params="17" style="0" name="open_edit_ctgs_but" caption="%24%7Bfriendlist.friends%7D">
+              <children>
+                <bitmap x="5" y="5" width="10" height="10" params="17" style="0" name="open_edit_ctgs" caption="%24%7Bfriendlist.friends%7D"/>
+                <text x="20" y="3" width="100" height="20" params="16" style="0" caption="%24%7Bfriendlist.settings%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <text x="100" y="11" width="110" height="20" params="145" style="0" name="info_text" caption="PH%20Info">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

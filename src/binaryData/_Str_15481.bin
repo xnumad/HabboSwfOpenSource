@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="packagecard_new" width="342" height="298" version="0.1" uid="6890E812-8EAA-03BB-D524-E4D983CDAC2B">
+  <window>
+    <frame x="0" y="0" width="342" height="298" params="33025" style="3" caption="%24%7Bwidget.furni.present.window.title%7D" color="0x0418db0" width_min="275" height_min="150">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-2" y="0" width="336" height="246" params="147472" style="3" color="0x0e9e9e9" width_min="330" width_max="380">
+          <children>
+            <itemlist x="0" y="0" width="336" height="246" params="13516817" style="0" name="element_list" width_min="330" width_max="370">
+              <children>
+                <container x="3" y="0" width="330" height="159" params="12583120" style="3" name="gift_card_container" color="0x0e9e9e9">
+                  <children>
+                    <static_bitmap x="10" y="10" width="306" height="149" params="16" style="0" name="gift_card">
+                      <variables>
+                        <var key="asset_uri" value="catalogue_giftcard_blank" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <container x="15" y="5" width="60" height="149" params="16" style="0" name="avatar_image_container" width_min="60" width_max="60" height_min="149" height_max="149">
+                      <children>
+                        <region x="0" y="0" width="60" height="149" params="3935441" style="0" name="avatar_image_region" treshold="0">
+                          <children>
+                            <bitmap x="0" y="0" width="60" height="149" params="16" style="0" name="avatar_image"/>
+                          </children>
+                          <variables>
+                            <var key="tool_tip_caption" value="${widget.furni.present.sender.profile_tooltip}" type="String"/>
+                            <var key="tool_tip_delay" value="100" type="uint"/>
+                          </variables>
+                        </region>
+                      </children>
+                    </container>
+                    <text x="95" y="31" width="190" height="100" params="1" style="0" name="message_text">
+                      <variables>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="max_chars" value="140" type="int"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="max_lines" value="5" type="int"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="4" type="Number"/>
+                      </variables>
+                    </text>
+                    <link x="95" y="123" width="190" height="4" params="1" style="0" name="message_from" treshold="0">
+                      <variables>
+                        <var key="auto_size" value="right" type="String"/>
+                        <var key="text_style" value="u_italic" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="tool_tip_caption" value="${widget.furni.present.sender.profile_tooltip}" type="String"/>
+                      </variables>
+                    </link>
+                  </children>
+                </container>
+                <itemlist x="3" y="169" width="330" height="66" params="12730385" style="0" name="button_list" width_min="330" width_max="360">
+                  <children>
+                    <button_thick x="62" y="0" width="206" height="28" params="147665" style="5" name="open_gift_button" caption="%24%7Bwidget.furni.present.open_gift%7D" color="0x0aa00" width_min="206" width_max="328" height_min="28"/>
+                    <button x="62" y="38" width="206" height="28" params="131281" style="3" name="give_gift_button" caption="%24%7Bwidget.furni.present.give_gift%7D" width_min="206" width_max="330" height_min="28"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="10" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist>
+                <container x="0" y="245" width="336" height="1" params="16" style="0" name="separator" background="true"/>
+              </children>
+              <variables>
+                <var key="spacing" value="10" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

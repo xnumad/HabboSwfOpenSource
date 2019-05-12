@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<skin name="tab_context_skin" version="0.0">
+
+
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default" layout="tab_context" template="tab_context" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="tab_context" asset="">
+
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="tab_context" transparent="false">
+			
+			<!-- placeholders defines regions for certain child windows -->
+			
+			<placeholders>
+			
+				<placeholder name="selector">
+					<scale horizontal="strech" vertical="fixed" />
+					<region><Rectangle x="6" y="0" width="20" height="20" /></region>
+				</placeholder>
+				
+				<placeholder name="content">
+					<scale horizontal="strech" vertical="strech" />
+					<region><Rectangle x="0" y="20" width="32" height="20" /></region>
+				</placeholder>
+				
+			</placeholders>
+		</layout>
+	</layouts>
+</skin>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_effects" width="312" height="170" version="0.1" uid="8EA89EDD-D510-F44F-EF16-3679862BE51B">
+  <window>
+    <border x="1" y="1" width="312" height="170" params="1" style="6" name="settings_brdr" color="0x079756e">
+      <children>
+        <text x="93" y="5" width="126" height="17" params="786640" style="0" name="settings_title" caption="%24%7Bwidget.memenu.settings.title%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="10" y="24" width="292" height="1" params="786640" style="0" name="line" color="0xffff2f2f2f" background="true"/>
+        <border x="10" y="29" width="292" height="108" params="16" style="3" name="volume_grey_area" color="0x0666666" visible="false"/>
+        <text x="82" y="32" width="148" height="17" params="786640" style="0" name="volume_text" caption="%24%7Bwidget.memenu.settings.volume%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="14" y="48" width="285" height="28" params="17" style="100" name="ui_volume_container">
+          <children>
+            <text x="0" y="6" width="60" height="18" params="16" style="100" name="title" caption="%24%7Bwidget.memenu.settings.volume.ui%7D">
+              <variables>
+                <var key="etching_color" value="0x0" type="hex"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="98" y="0" width="144" height="24" params="16" style="0" name="volume_container">
+              <children>
+                <static_bitmap x="2" y="0" width="139" height="20" params="16" style="0" name="slider_base">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_slider_base" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <container x="0" y="9" width="144" height="15" params="16" style="0" name="slider_movement_area">
+                  <children>
+                    <region x="132" y="0" width="12" height="15" params="33073" style="3" name="slider_button" color="0x00" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="12" height="15" params="272" style="0" name="slider_bitmap">
+                          <variables>
+                            <var key="asset_uri" value="toolbar_memenu_settings_slider_button" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <region x="60" y="0" width="29" height="30" params="17" style="3" name="sounds_off" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_off_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_off_white" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="251" y="0" width="29" height="30" params="17" style="3" name="sounds_on" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_on_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_on_white" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+        <container x="14" y="76" width="285" height="28" params="16" style="100" name="furni_volume_container">
+          <children>
+            <text x="0" y="6" width="60" height="18" params="16" style="100" name="title" caption="%24%7Bwidget.memenu.settings.volume.furni%7D">
+              <variables>
+                <var key="etching_color" value="0x0" type="hex"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="98" y="0" width="144" height="24" params="16" style="0" name="volume_container">
+              <children>
+                <static_bitmap x="2" y="0" width="139" height="20" params="16" style="0" name="slider_base">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_slider_base" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <container x="0" y="9" width="144" height="15" params="16" style="0" name="slider_movement_area">
+                  <children>
+                    <region x="132" y="0" width="12" height="15" params="33073" style="3" name="slider_button" color="0x00" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="12" height="15" params="272" style="0" name="slider_bitmap">
+                          <variables>
+                            <var key="asset_uri" value="toolbar_memenu_settings_slider_button" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <region x="60" y="0" width="29" height="30" params="17" style="3" name="sounds_off" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_off_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_off_white" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="251" y="0" width="29" height="30" params="17" style="3" name="sounds_on" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_on_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_on_white" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+        <container x="14" y="104" width="285" height="28" params="16" style="100" name="trax_volume_container">
+          <children>
+            <text x="0" y="6" width="60" height="18" params="16" style="100" name="title" caption="%24%7Bwidget.memenu.settings.volume.trax%7D">
+              <variables>
+                <var key="etching_color" value="0x0" type="hex"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="98" y="0" width="144" height="24" params="16" style="0" name="volume_container">
+              <children>
+                <static_bitmap x="2" y="0" width="139" height="20" params="16" style="0" name="slider_base">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_slider_base" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <container x="0" y="9" width="144" height="15" params="16" style="0" name="slider_movement_area">
+                  <children>
+                    <region x="132" y="0" width="12" height="15" params="33073" style="3" name="slider_button" color="0x00" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="12" height="15" params="272" style="0" name="slider_bitmap">
+                          <variables>
+                            <var key="asset_uri" value="toolbar_memenu_settings_slider_button" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <region x="60" y="0" width="29" height="30" params="17" style="3" name="sounds_off" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_off_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_off_white" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="251" y="0" width="29" height="30" params="17" style="3" name="sounds_on" color="0x0666666" treshold="0">
+              <children>
+                <static_bitmap x="0" y="4" width="29" height="22" params="16" style="0" name="sounds_on_icon">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_memenu_settings_sounds_on_white" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+        <button x="10" y="132" width="60" height="28" params="1180721" style="3" name="back_btn" caption="%24%7Bwidget.memenu.back%7D" width_min="60" width_max="60"/>
+      </children>
+    </border>
+  </window>
+</layout>

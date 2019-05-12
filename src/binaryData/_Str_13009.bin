@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="tag" width="140" height="19" version="0.1" uid="04558B79-0979-AE5E-0B52-0A8B542967BC">
+  <window>
+    <container x="0" y="0" width="140" height="19" params="16" style="3" name="tag_container">
+      <children>
+        <region x="108" y="0" width="32" height="19" params="262161" style="3" name="tag_region" color="0xfffff1a700" background="true">
+          <children>
+            <text x="3" y="2" width="25" height="15" params="4194320" style="3" name="tag_text" caption="%23tag">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

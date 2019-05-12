@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="landing_view" width="500" height="186" version="0.1" uid="664610C8-85ED-862A-DC98-08A79C90FCEA">
+  <window>
+    <container x="0" y="0" width="500" height="186" params="16" style="0" color="0x00" background="true" width_max="500">
+      <children>
+        <static_bitmap x="7" y="10" width="12" height="4" params="16" style="100" name="border_bar" height_min="4" height_max="4">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="24" y="4" width="133" height="14" params="16" style="100" name="page_expiry_title" caption="%24%7Blanding.view.pageexpiry.title%7D" tags="COLORABLE">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="167" y="10" width="330" height="4" params="16" style="100" name="hdr_line" height_min="4" height_max="4">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="239" y="19" width="259" height="155" params="16" style="0">
+          <children>
+            <widget x="0" y="0" width="99" height="37" params="147472" style="0" name="countdown_widget">
+              <variables>
+                <var key="widget_type" value="countdown" type="String"/>
+                <var key="countdown:running" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+            <container x="0" y="37" width="30" height="6" params="16" style="0" name="spacing"/>
+            <text x="0" y="43" width="183" height="24" params="16" style="100" name="page_header_txt" caption="Get%20your%20Executive%20on%21" tags="COLORABLE">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="67" width="260" height="40" params="16" style="100" name="page_desc_txt" caption="...and%20everything%20must%20go%2C%20so%20get%20yourself%20some%20of%20the%20sweet%2C%20sweet%20plastic%20fantastic%20while%20you%20still%20can%21%20You%20don%27t%20want%20to%20miss%20out%20on%20the%20classics%21" tags="COLORABLE">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="0" y="107" width="233" height="48" params="131089" style="100" name="open_catalog_button" caption="%24%7Blanding.view.pageexpiry.opencatalog%7D" height_min="48" height_max="48"/>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+        <static_bitmap x="52" y="20" width="162" height="162" params="16" style="100" name="promo_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.catalogue.url}kitchen_teaser_de.gif" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

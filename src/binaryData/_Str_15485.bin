@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="rev_room_event" width="241" height="191" version="0.1" uid="5ADCEEDB-3BEA-C86A-4FB0-6F17825A9D07">
+  <window>
+    <frame x="0" y="0" width="241" height="191" params="32769" style="3" name="event_window" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="11" y="4" width="218" height="192" params="144" style="0" name="inputs_cont">
+          <children>
+            <text x="0" y="0" width="173" height="17" params="16" style="0" name="name_label" caption="%24%7Bnavigator.eventsettings.name%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="0" y="16" width="217" height="15" params="1" style="0" name="event_name" background="true">
+              <variables>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <text x="0" y="36" width="169" height="17" params="16" style="0" name="desc_label" caption="%24%7Bnavigator.eventsettings.desc%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="0" y="52" width="217" height="88" params="1" style="0" name="event_desc" caption="1%0D2%0D3%0D4%0D5%0D6" background="true">
+              <variables>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </container>
+        <container x="10" y="200" width="220" height="29" params="98321" style="0" name="buttons" color="0xff3d3d3d"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

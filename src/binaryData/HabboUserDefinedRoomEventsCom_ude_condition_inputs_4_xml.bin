@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_event" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="228" height="55" params="17" style="0" name="cont" color="0xff3d3d3d" background="true">
+      <children>
+        <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" color="0xff232323" background="true"/>
+        <text x="5" y="5" width="218" height="13" params="0" style="0" name="desc_txt" caption="%24%7Bwiredfurni.params.allowbefore%7D">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <container x="0" y="20" width="228" height="35" params="16" style="0" name="slider_container"/>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_exit" width="68" height="50" version="0.1" uid="7E0B85AB-C8F0-74A0-1F98-D4D94D1E16A4">
+  <window>
+    <region x="0" y="0" width="68" height="50" params="1" style="0" name="exitButton" color="0x0cc3333" treshold="0">
+      <children>
+        <bitmap x="0" y="0" width="68" height="50" params="16" style="0" name="backgroundImage" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="ui_exit_down" type="String"/>
+          </variables>
+        </bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

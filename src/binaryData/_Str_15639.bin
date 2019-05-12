@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ude_help" width="240" height="240" version="0.1" uid="64AAFE18-068D-815A-4A0F-7823981B75B3">
+  <window>
+    <frame x="0" y="0" width="240" height="240" params="163841" style="0" name="content" caption="%24%7Bwiredfurni.help.title%7D" color="0x03e3e3e">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="228" height="213" params="16" style="0" name="help_container" caption="%24%7Bwiredfurni.help.title%7D" color="0xffff3d3d3d" background="true">
+          <children>
+            <text x="0" y="3" width="225" height="100" params="786432" style="0" name="help_title" caption="dynamic" clipping="false">
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <bitmap x="0" y="100" width="220" height="80" params="17" style="0" name="help_image" caption="dynamic"/>
+            <text x="0" y="180" width="218" height="30" params="16" style="1" name="help_text">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container_button x="5" y="185" width="20" height="20" params="17" style="1" name="button_previous" caption="%24%7Bwiredfurni.help.title%7D">
+              <children>
+                <icon x="4" y="5" width="12" height="12" params="16" style="2" caption="%24%7Bwiredfurni.help.title%7D" color="0x0666666"/>
+              </children>
+            </container_button>
+            <container_button x="200" y="185" width="20" height="20" params="17" style="1" name="button_next" caption="%24%7Bwiredfurni.help.title%7D">
+              <children>
+                <icon x="6" y="5" width="12" height="12" params="16" style="3" caption="%24%7Bwiredfurni.help.title%7D" color="0x0666666"/>
+              </children>
+            </container_button>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

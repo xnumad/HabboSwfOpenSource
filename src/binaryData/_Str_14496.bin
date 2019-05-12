@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="badgeGridItem" width="44" height="44" version="0.1" uid="BD0BC389-00F6-7F94-77BB-8CF0EEEB7A6B">
+  <window>
+    <region x="0" y="0" width="44" height="44" params="17" style="3" treshold="0">
+      <children>
+        <border x="0" y="0" width="44" height="44" params="16" style="2" name="bg">
+          <children>
+            <widget x="2" y="2" width="40" height="40" params="16" style="100" name="badgeWidget">
+              <variables>
+                <var key="widget_type" value="badge_image" type="String"/>
+                <var key="badge_image:pivot_point" value="center" type="String"/>
+                <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </widget>
+          </children>
+        </border>
+      </children>
+    </region>
+  </window>
+</layout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="QuestEntry" width="135" height="122" version="0.1" uid="3758B86B-6520-9477-45DD-249D33538E16">
+  <window>
+    <container name="entry_container" x="0" y="0" width="135" height="122" params="16" style="0">
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="roomchat_bubble_speak" width="100" height="32" version="0.1" uid="A6CAFD13-1B4F-21D0-09E2-8CAB7DEB5C22">
+  <window>
+    <region x="0" y="0" width="100" height="36" params="17" style="0" name="bubblecont" color="0x0ff00ff" treshold="0" tags="chat_bubble">
+      <children>
+        <bitmap x="0" y="-6" width="100" height="30" params="144" style="0" name="background"/>
+        <bitmap x="0" y="23" width="9" height="6" params="16" style="0" name="pointer"/>
+        <text x="60" y="10" width="4" height="4" params="16" style="0" name="message" treshold="0">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0x999999" type="hex"/>
+            <var key="text_style" value="u_chat_whisper" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

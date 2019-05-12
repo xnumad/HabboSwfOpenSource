@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_orderinfo_nocredits" width="284" height="125" version="0.1" uid="37D09579-F20C-6C01-B5EC-9CAF21C74C92">
+  <window>
+    <container x="0" y="0" width="284" height="125" params="16" style="0" name="habbo_orderinfo_nocredits">
+      <children>
+        <text x="16" y="14" width="250" height="17" params="16" style="3" name="habbo_message_text_a" caption="%24%7Bshopping_costs%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="16" y="34" width="250" height="17" params="16" style="3" name="habbo_message_text_b" caption="%24%7Bshopping_nocash%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="77" y="90" width="33" height="22" params="393361" style="3" name="nobalance_ok" caption="%24%7Bok%7D" width_max="80"/>
+        <button x="193" y="90" width="54" height="22" params="393361" style="3" name="button_cancel" caption="%24%7Bcancel%7D" width_max="80"/>
+      </children>
+    </container>
+  </window>
+</layout>

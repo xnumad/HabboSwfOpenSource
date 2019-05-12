@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<skin name="header_skin_7" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="asset" value="habbo_skin_ubuntu_png" type="String" />
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default" layout="header_3" template="default_header_mode" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="default_header_mode" asset="$asset">
+			<entities>
+				<entity name="header_center" type="bitmap"><region><Rectangle x="20" y= "15" width="6" height="5" /></region></entity>
+			</entities>
+		</template>
+		
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="header_7" transparent="false">
+			<entities>
+				<entity name="header_center" id="1">
+					<region><Rectangle x="0" y="0" width="6" height="20" /></region>
+					<scale horizontal="stretch" vertical="fixed" />
+				</entity>
+			</entities>
+		</layout>
+	</layouts>
+</skin>

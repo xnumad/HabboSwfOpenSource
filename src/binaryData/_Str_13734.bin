@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="element_concurrentusersmeter" width="250" height="46" version="0.1" uid="18028193-3DC3-34B7-1B6F-8ECE72AE620B">
+  <window>
+      <static_bitmap x="0" y="0" width="63" height="157" params="16" style="100" name="image">
+        <variables>
+          <var key="fit_size_to_contents" value="true" type="Boolean"/>
+        </variables>
+      </static_bitmap>
+  </window>
+</layout>

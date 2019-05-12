@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="avatar_popup" width="20" height="20" version="0.0">
+  <window>
+    <border x="0" y="0" width="203" height="90" params="0" style="0" name="avatar_popup">
+      <children>
+        <bitmap x="11" y="5" width="32" height="72" params="17" style="0" name="face"/>
+        <text x="40" y="5" width="95" height="13" params="4325392" style="0" name="name_text_online" caption="PH%20Avatar%20Name">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="auto_size" value="null" type="String"/>
+          </variables>
+        </text>
+        <text x="60" y="9" width="140" height="13" params="16" style="0" name="name_text_offline" caption="PH%20Avatar%20Name">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="40" y="20" width="150" height="30" params="16" style="0" name="motto_text" caption="PH%20Room%20Desc%3A%20Neque%20porro%20quisquam%20est%20qui%20dolorem%20ipsum%20quia%20dolor%20sit%20amet%2C%20consectetur%2C%20adipisci%20velit">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="10" y="66" width="180" height="13" params="16" style="0" name="online_text" caption="%24%7Bfriendlist.avatarpopup.online%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="10" y="8" width="30" height="10" params="17" style="0" name="offline"/>
+        <text x="10" y="27" width="180" height="13" params="16" style="0" name="last_access_text" caption="%24%7Bfriendlist.avatarpopup.lastaccess%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

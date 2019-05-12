@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="user_pending" width="282" height="320" version="0.1" uid="3593A3EC-8E15-8716-66AB-02E3FC1005AD">
+  <window>
+    <frame x="0" y="0" width="282" height="320" params="32769" style="100" name="user_pending" caption="%24%7Bguide.help.request.user.pending.title%7D" width_min="282" width_max="282" height_min="290">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="5" y="0" width="270" height="272" params="8519696" style="0" width_min="270" width_max="270">
+          <children>
+            <border x="0" y="0" width="270" height="122" params="131088" style="102" width_min="270" width_max="270">
+              <children>
+                <static_bitmap x="10" y="37" width="60" height="85" params="1040" style="100">
+                  <variables>
+                    <var key="asset_uri" value="help_user_pending" type="String"/>
+                    <var key="pivot_point" value="bottom left" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="70" y="10" width="94" height="19" params="16" style="100" name="request_type" caption="Request%20type">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <widget x="70" y="25" width="4" height="4" params="147472" style="100" name="request_timestamp">
+                  <variables>
+                    <var key="widget_type" value="updating_timestamp" type="String"/>
+                  </variables>
+                </widget>
+                <scrollable_itemlist_vertical x="70" y="42" width="200" height="80" params="16" style="100">
+                  <children>
+                    <text x="0" y="0" width="190" height="16" params="16" style="100" name="request_description" caption="Request%20description">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </scrollable_itemlist_vertical>
+              </children>
+            </border>
+            <text x="10" y="127" width="279" height="29" params="16" style="100" caption="%24%7Bguide.help.request.user.pending.info.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="margin_top" value="10" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="10" y="161" width="260" height="16" params="16" style="100" caption="%24%7Bguide.help.request.user.pending.info.message%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="10" y="182" width="260" height="16" params="16" style="100" name="waiting_time" caption="%24%7Bguide.help.request.user.pending.info.waiting%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="0" y="203" width="270" height="2" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <container_button x="57" y="210" width="200" height="48" params="180241" style="101" name="cancel_button" caption="%24%7Bguide.help.request.user.pending.cancel.button%7D" color="0x0bbbbbb" width_max="200" height_min="48" height_max="48">
+              <children>
+                <itemlist_horizontal x="20" y="11" width="200" height="25" params="8536080" style="100" width_max="200">
+                  <children>
+                    <static_bitmap x="0" y="8" width="11" height="12" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="help_decline_icon" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <label x="16" y="6" width="231" height="15" params="16" style="100" caption="%24%7Bguide.help.request.user.pending.cancel.button%7D">
+                      <variables>
+                        <var key="text_style" value="il_button" type="String"/>
+                        <var key="text_color" value="0x0" type="hex"/>
+                      </variables>
+                    </label>
+                    <container x="252" y="0" width="15" height="30" params="16" style="100"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </container_button>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="24" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

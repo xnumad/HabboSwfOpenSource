@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_dance" width="170" height="160" version="0.1" uid="FCAE1E51-3169-8A5B-6DCF-51CB3826F846">
+  <window>
+    <container x="0" y="0" width="170" height="160" params="16" style="0" name="dance_container">
+      <children>
+        <text x="13" y="5" width="144" height="13" params="786640" style="0" name="settings_title" caption="%24%7Bwidget.memenu.settings%7D" width_max="150">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="5" y="22" width="160" height="1" params="16" style="0" name="line" color="0xffff2f2f2f" background="true"/>
+        <button x="5" y="55" width="160" height="22" params="131089" style="1" name="character_settings" caption="%24%7Bwidget.memenu.settings.character%7D" width_min="160" width_max="160"/>
+        <button x="5" y="30" width="160" height="22" params="131089" style="1" name="sound_settings" caption="%24%7Bwidget.memenu.settings.audio%7D" width_min="160" width_max="160"/>
+        <button x="5" y="80" width="160" height="22" params="131089" style="1" name="chat_settings" caption="%24%7Bwidget.memenu.settings.chat%7D" width_min="160" width_max="160"/>
+        <text x="6" y="106" width="159" height="20" params="16" style="0" name="identity_text" caption="%24%7Bwidget.memenu.settings.no_identity%7D">
+          <variables>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="5" y="131" width="60" height="22" params="131089" style="1" name="back" caption="%24%7Bgeneric.back%7D" width_min="60" width_max="60"/>
+      </children>
+    </container>
+  </window>
+</layout>

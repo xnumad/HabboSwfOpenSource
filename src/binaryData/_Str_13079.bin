@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="memenu_main" width="245" height="249" version="0.1" uid="44CD81D5-1BDC-2FBA-ADD6-AF9D5B776756">
+  <window>
+    <container x="0" y="0" width="245" height="249" params="17" style="0" name="buttons">
+      <children>
+        <region x="0" y="0" width="79" height="79" params="17" style="1" name="hc" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="hc_icon"/>
+            <text x="0" y="61" width="94" height="13" params="786640" style="0" name="hc_text" caption="%24%7Bwidget.memenu.hc%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="83" y="83" width="79" height="79" params="17" style="1" name="rooms" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="rooms_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="rooms_text" caption="%24%7Bwidget.memenu.myrooms%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="0" y="83" width="79" height="79" params="17" style="1" name="clothes" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="clothes_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="clothes_text" caption="%24%7Bwidget.memenu.myclothes%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="166" y="83" width="79" height="79" params="17" style="1" name="effects" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="effects_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="effects_text" caption="%24%7Bwidget.memenu.effects%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="0" y="165" width="79" height="79" params="17" style="1" name="dance" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="dance_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="dance_text" caption="%24%7Bwidget.memenu.dance%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="83" y="165" width="79" height="79" params="17" style="1" name="wave" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="wave_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="wave_text" caption="%24%7Bwidget.memenu.wave%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="166" y="165" width="79" height="79" params="17" style="1" name="settings" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="settings_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="settings_text" caption="%24%7Bwidget.memenu.settings%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="83" y="1" width="79" height="79" params="17" style="1" name="credits" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="credits_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="credits_text" caption="%24%7Bwidget.memenu.credits%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="166" y="1" width="79" height="79" params="17" style="1" name="minimail" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="minimail_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="minimail_text" caption="%24%7Bwidget.memenu.minimail%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

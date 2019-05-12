@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="club_buy_info_item" width="151" height="139" version="0.1" uid="1980C5ED-D0B0-3983-FABD-9CC2AF184F60">
+  <window>
+    <border x="0" y="0" width="151" height="139" params="16" style="2" color="0x09b9448">
+      <children>
+        <border x="1" y="1" width="149" height="137" params="16" style="2" color="0x0ebeada"/>
+        <border x="5" y="5" width="141" height="25" params="16" style="2" color="0x09b9448">
+          <children>
+            <text x="0" y="5" width="141" height="17" params="786448" style="3" name="item_header" caption="%24%7Bcatalog.club.info.header%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <text x="9" y="44" width="134" height="30" params="16" style="3" name="info_content" caption="%24%7Bcatalog.club.info.content%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

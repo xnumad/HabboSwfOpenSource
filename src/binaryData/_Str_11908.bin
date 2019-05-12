@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout name="habbo_simple_window_layout" width="100" height="100" version="0.0">
+	<window>
+		<container name="frame" x="0" y="0" width="100" height="100">
+			<params>
+				<param name="input_event_processor" />
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_strech" />
+				<param name="use_parent_graphic_context" />
+				<param name="bound_to_parent_rect" />
+			</params>
+			<children>
+				<container name="content_area" x="0" y="0" width="100" height="90">
+					<params>
+						<param name="relative_horizontal_scale_strech" />
+						<param name="relative_vertical_scale_strech" />
+						<param name="use_parent_graphic_context" />
+						<param name="bound_to_parent_rect" />
+						<param name="input_event_processor" />
+					</params>
+				</container>
+			</children>
+		</container>
+	</window>
+</layout>

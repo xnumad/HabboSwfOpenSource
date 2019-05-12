@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="mystery_box_reward" width="430" height="234" version="0.1" uid="47EECAA8-CDD4-39F4-51CF-411678DAC531">
+  <window>
+    <frame x="0" y="0" width="430" height="234" params="1" style="100" caption="%24%7Bmysterybox.reward.text%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist x="0" y="8" width="428" height="185" params="8536080" style="100">
+          <children>
+            <label x="150" y="0" width="128" height="16" params="208" style="100" caption="%24%7Bmysterybox.reward.title%7D"/>
+            <container x="160" y="20" width="109" height="109" params="208" style="100" name="bitmap_container" width_min="109" height_min="109">
+              <children>
+                <static_bitmap x="0" y="0" width="109" height="109" params="3280" style="100">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}Quests/ach_receive_star.png" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <bitmap x="54" y="54" width="1" height="1" params="3280" style="100" name="reward_image">
+                  <variables>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </bitmap>
+              </children>
+            </container>
+            <button x="127" y="133" width="175" height="52" params="131281" style="100" name="close_button" caption="%24%7Bmysterybox.reward.close%7D"/>
+          </children>
+          <variables>
+            <var key="spacing" value="4" type="int"/>
+          </variables>
+        </itemlist>
+      </children>
+    </frame>
+  </window>
+</layout>

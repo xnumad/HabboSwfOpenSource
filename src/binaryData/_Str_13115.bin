@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="effects_widget" width="190" height="85" version="0.1" uid="648CE92D-E915-4912-C622-470BFFAAD02C">
+  <window>
+    <border x="0" y="0" width="190" height="85" params="1081633" style="6" color="0x05b5953">
+      <children>
+        <border x="5" y="5" width="157" height="22" params="16" style="3" color="0xff292929"/>
+        <text x="3" y="7" width="184" height="17" params="16" style="0" name="title" caption="%24%7Bwidget.memenu.effects%7D" treshold="0">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_frame_title" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <closebutton x="165" y="6" width="20" height="20" params="17" style="3" name="close" background="true" treshold="0"/>
+        <scrollable_itemlist_vertical x="6" y="30" width="178" height="48" params="8388624" style="3" name="list"/>
+        <container x="0" y="30" width="190" height="48" params="16" style="0" name="no_effects">
+          <children>
+            <text x="0" y="15" width="190" height="17" params="16" style="0" caption="%24%7Bwidget.memenu.effects.info%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="italic" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="charge_confirmation" width="20" height="20" version="0.0">
+  <window>
+    <frame x="91" y="73" width="205" height="178" params="33025" style="0" caption="%24%7Bcatalog.charge.title%7D" color="0x418db0">
+      <children>
+        <border x="0" y="0" width="193" height="147" params="16" style="0" caption="%24%7Bcatalog.charge.title%7D">
+          <children>
+            <text x="11" y="8" width="172" height="22" params="16" style="0" name="charges_txt" caption="%24%7Bcatalog.charge.currentamount%7D">
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0x0" type="hex"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="11" y="30" width="170" height="75" params="16" style="0" name="load_txt" caption="%24%7Bcatalog.charge.info%7D">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0x0" type="hex"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <button x="6" y="113" width="181" height="27" params="131089" style="0" name="charge_button" caption="%24%7Bcatalog.charge.charge%7D" width_min="181" width_max="181"/>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

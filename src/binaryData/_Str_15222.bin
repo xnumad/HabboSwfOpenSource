@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="newuser_name_suggestion_item" width="22" height="16" version="0.1" uid="78CD92AB-7878-CB74-FDE8-EDD6C369B7EB">
+  <window>
+    <text x="4" y="4" width="22" height="16" params="17" style="0" name="content" caption="fef" background="true" width_min="2" width_max="120">
+      <variables>
+        <var key="auto_size" value="left" type="String"/>
+        <var key="text_color" value="0x224657" type="hex"/>
+        <var key="text_style" value="il_regular" type="String"/>
+        <var key="margin_left" value="2" type="int"/>
+        <var key="margin_right" value="2" type="int"/>
+        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+        <var key="spacing" value="0" type="Number"/>
+        <var key="leading" value="0" type="Number"/>
+      </variables>
+    </text>
+  </window>
+</layout>

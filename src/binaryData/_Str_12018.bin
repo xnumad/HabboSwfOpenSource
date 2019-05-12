@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<skin name="tab_button_skin_3" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="asset"	value="habbo_skin_ubuntu_png"	type="String" />
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default"  layout="button_tab_3" template="default_button" />
+		<!-- <state name="active"   layout="button_tab" template="default_button" /> -->
+		<state name="pressed"  layout="button_tab_3" template="selected_button" />
+		<state name="selected" layout="button_tab_3" template="selected_button" />
+		<state name="hovering" layout="button_tab_3" template="hovering_button" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="default_button" asset="$asset">
+			<entities>	
+				<entity name="tab_left" type="bitmap"><region><Rectangle x="70" y= "100" width="9" height="32" /></region></entity>
+				<entity name="tab_mid" type="bitmap"><region><Rectangle x="78" y= "100" width="4" height="32" /></region></entity>
+				<entity name="tab_right" type="bitmap"><region><Rectangle x="81" y= "100" width="9" height="32" /></region></entity>
+
+			</entities>
+		</template>
+		
+		<template name="selected_button" asset="$asset">
+			<entities>
+				<entity name="tab_left" type="bitmap"><region><Rectangle x="10" y= "100" width="9" height="32" /></region></entity>
+				<entity name="tab_mid" type="bitmap"><region><Rectangle x="19" y= "100" width="4" height="32" /></region></entity>
+				<entity name="tab_right" type="bitmap"><region><Rectangle x="23" y= "100" width="9" height="32" /></region></entity>
+			</entities>
+		</template>
+		
+		<template name="hovering_button" asset="$asset">
+			<entities>		
+				<entity name="tab_left" type="bitmap"><region><Rectangle x="40" y= "100" width="9" height="32" /></region></entity>
+				<entity name="tab_mid" type="bitmap"><region><Rectangle x="49" y= "100" width="4" height="32" /></region></entity>
+				<entity name="tab_right" type="bitmap"><region><Rectangle x="53" y= "100" width="9" height="32" /></region></entity>
+			</entities>
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="button_tab_3" transparent="true">
+			<entities>
+
+				<!-- left -->
+				
+				<entity name="tab_left" id="0">
+					<region><Rectangle x="0" y="0" width="9" height="32" /></region>
+					<scale horizontal="fixed" vertical="fixed" />
+				</entity>
+
+				
+				<!-- center -->
+				
+				<entity name="tab_mid" id="0">
+					<region><Rectangle x="9"  y="0" width="10" height="32" /></region>
+					<scale horizontal="strech" vertical="fixed" />
+				</entity>
+				
+
+				
+				<!-- right -->
+				
+				<entity name="tab_right" id="0">
+					<region><Rectangle x="19" y="0" width="9" height="32" /></region>
+					<scale horizontal="move" vertical="fixed" />
+				</entity>
+				
+
+				
+			</entities>
+		</layout>
+	</layouts>
+</skin>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="AchievementSimple" width="52" height="50" version="0.1" uid="FD2D6C97-B8AF-7710-9947-94A7867D3FEB">
+  <window>
+    <container x="0" y="0" width="52" height="50" params="16" style="0" name="achievement_container" color="0x0c9c9c9">
+      <children>
+        <static_bitmap x="0" y="0" width="52" height="50" params="17" style="0" name="bg_unselected_bitmap">
+          <variables>
+            <var key="asset_uri" value="common_item_unselected" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="52" height="50" params="16" style="0" name="bg_selected_bitmap" visible="false">
+          <variables>
+            <var key="asset_uri" value="common_item_selected" type="String"/>
+          </variables>
+        </static_bitmap>
+        <widget x="6" y="5" width="40" height="40" params="16" style="0" name="achievement_pic_bitmap">
+          <variables>
+            <var key="widget_type" value="badge_image" type="String"/>
+            <var key="badge_image:pivot_point" value="center" type="String"/>
+            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </widget>
+        <region x="0" y="0" width="52" height="50" params="17" style="0" name="bg_region" treshold="0" tags="FIT%3AachievementsSelectSpecific"/>
+      </children>
+    </container>
+  </window>
+</layout>

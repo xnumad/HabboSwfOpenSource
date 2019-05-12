@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_main" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="240" height="200" params="163841" style="0" name="content" caption="%24%7Bwiredfurni.title%7D" color="0x3e3e3e">
+      <children>
+        <container x="0" y="0" width="228" height="142" params="16" style="0" name="configure_container" caption="%24%7Bwiredfurni.title%7D" color="0xff3d3d3d" background="true">
+          <children>
+            <container x="5" y="40" width="228" height="50" params="16" style="0" name="header_container" caption="%24%7Bwiredfurni.title%7D" color="0xff3d3d3d" background="true">
+              <children>
+                <bitmap x="0" y="2" width="15" height="15" params="17" style="0" name="trigger_icon_bitmap" caption="%24%7Bwiredfurni.title%7D"/>
+                <bitmap x="0" y="2" width="15" height="15" params="17" style="0" name="action_icon_bitmap" caption="%24%7Bwiredfurni.title%7D"/>
+                <bitmap x="0" y="2" width="15" height="15" params="17" style="0" name="condition_icon_bitmap" caption="%24%7Bwiredfurni.title%7D"/>
+                <text x="20" y="3" width="199" height="50" params="16" style="0" name="conf_name_txt" caption="filledByserver">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <text x="0" y="20" width="218" height="50" params="16" style="0" name="conf_desc_txt" caption="filledByServer">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <text x="5" y="40" width="210" height="13" params="786433" style="0" name="apply_snapshot_txt" caption="%24%7Bwiredfurni.applysnapshot%7D" width_min="210" width_max="210">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                  </variables>
+                </text>                  
+              </children>
+            </container>
+
+            <container x="5" y="40" width="228" height="50" params="16" style="0" name="warning_container" color="0xff3d3d3d" background="true">
+              <children>
+                <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" caption="%24%7Bwiredfurni.title%7D" color="0xff232323" background="true"/>
+                <text x="0" y="3" width="218" height="50" params="16" style="0" name="caption_txt" caption="filledByserver">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <text x="0" y="20" width="218" height="100" params="16" style="0" name="desc_txt" caption="filledByServer">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+
+            <container x="0" y="40" width="228" height="1" params="16" style="0" name="custom_inputs_container" caption="%24%7Bwiredfurni.title%7D" color="0xffffffff" background="true"/>
+            <container x="0" y="60" width="228" height="95" params="16" style="0" name="select_furni_container" caption="%24%7Bwiredfurni.title%7D" color="0xff3d3d3d" background="true">
+              <children>
+                <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" caption="%24%7Bwiredfurni.title%7D" color="0xff232323" background="true"/>
+                <text x="5" y="5" width="218" height="13" params="786432" style="0" name="caption" caption="%24%7Bwiredfurni.pickfurnis.caption%7D">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <text x="5" y="18" width="218" height="47" params="786432" style="0" name="info" caption="%24%7Bwiredfurni.pickfurnis.desc%7D">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <text x="25" y="65" width="185" height="35" params="786432" style="0" name="furni_type_matches_txt" caption="%24%7Bwiredfurni.pickfurnis.furnitypematches%7D">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+
+                <container_button x="0" y="73" width="20" height="20" params="17" style="1" name="dec_stuff_sel_button">
+                  <children>
+                    <icon x="4" y="5" width="12" height="12" params="16" style="2" color="0x0666666"/>
+                  </children>
+                </container_button>
+                <container_button x="208" y="73" width="20" height="20" params="17" style="1" name="inc_stuff_sel_button">
+                  <children>
+                    <icon x="6" y="5" width="12" height="12" params="16" style="3" color="0x666666"/>
+                  </children>
+                </container_button>
+
+              </children>
+            </container>
+
+            <container x="0" y="40" width="228" height="55" params="16" style="0" name="action_inputs_container"  color="0xff3d3d3d" background="true">
+              <children>
+                <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" color="0xFF232323" background="true"/>
+                  <text x="5" y="5" width="218" height="13" params="786432" style="0" name="delay_desc_txt" caption="${wiredfurni.params.delay}">
+                    <variables>
+                     <var key="font_face" value="Volter Bold" type="String"/>
+                     <var key="font_size" value="9" type="uint"/>
+                     <var key="text_color" value="0xffffff" type="hex"/>
+                     <var key="embed_fonts" value="true" type="Boolean"/>
+                     <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+                     <var key="word_wrap" value="true" type="Boolean"/>
+                    </variables>
+                  </text>
+                  <container x="0" y="20" width="228" height="35" params="16" style="0" name="delay_slider_container"/>
+                </children>
+            </container>
+
+
+            <container x="0" y="80" width="228" height="45" params="16" style="0" name="configure_footer" caption="%24%7Bwiredfurni.title%7D" color="0xff3d3d3d" background="true">
+              <children>
+                <container x="0" y="17" width="228" height="1" params="16" style="0" name="ruler" caption="%24%7Bwiredfurni.title%7D" color="0xff232323" background="true"/>
+                <text x="5" y="0" width="210" height="13" params="786433" style="0" name="helplink" caption="%24%7Bwiredfurni.help%7D" width_min="210" width_max="210">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+                <button x="120" y="23" width="103" height="22" params="131089" style="1" name="cancel_save_button" caption="%24%7Bcancel%7D" width_min="103" width_max="103"/>
+                <button x="5" y="23" width="103" height="22" params="131089" style="1" name="save_button" caption="%24%7Bwiredfurni.ready%7D" width_min="103" width_max="103"/>
+              </children>
+            </container>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

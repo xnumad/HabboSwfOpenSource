@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_leaderboard_entry" width="356" height="42" version="0.1" uid="B53962EE-203B-F579-5F82-5FD05EE68628">
+  <window>
+    <container x="0" y="0" width="356" height="42" params="16" style="0" background="true">
+      <children>
+        <bitmap x="0" y="0" width="356" height="42" params="16" style="0" name="highlight" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="leaderboard_highlighter" type="String"/>
+          </variables>
+        </bitmap>
+        <text x="7" y="9" width="50" height="20" params="16" style="0" name="rank" caption="12345">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="15" type="uint"/>
+            <var key="text_color" value="0x1077ac" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0.5" type="Number"/>
+          </variables>
+        </text>
+        <region x="53" y="1" width="44" height="40" params="17" style="0" name="imageRegion" treshold="0"/>
+        <bitmap x="50" y="1" width="44" height="40" params="2064" style="0" name="avatarImage" caption="Name"/>
+        <text x="98" y="9" width="88" height="20" params="16" style="0" name="name" caption="PlayerName">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="15" type="uint"/>
+            <var key="text_color" value="0x1077ac" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="284" y="9" width="58" height="20" params="262160" style="0" name="score" caption="999999">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="15" type="uint"/>
+            <var key="text_color" value="0x1077ac" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0.5" type="Number"/>
+          </variables>
+        </text>
+        <bitmap x="0" y="40" width="350" height="2" params="1040" style="0" name="divider" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="leaderboard_divider" type="String"/>
+          </variables>
+        </bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

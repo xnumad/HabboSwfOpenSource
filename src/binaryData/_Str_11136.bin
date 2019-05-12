@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_alert" version="0.0" width="300" height="200">
+	<window>
+		<frame name="frame" x="0" y="0" width="200" height="400">
+	
+			<params>
+				<param name="input_event_processor" />
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_strech" />
+				<param name="use_parent_graphic_context" />
+				<param name="bound_to_parent_rect" />
+			</params>
+
+			<children>
+	
+				<!-- Caption text -->
+					
+				<text name="alert_title" x="8" y="8" caption="" width="160" height="20">
+					<params>
+						<param name="relative_horizontal_scale_center" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="use_parent_graphic_context" />
+						<param name="bound_to_parent_rect" />
+					</params>
+					<variables>
+				
+					</variables>
+				</text>
+			
+				<text name="alert_text" x="8" y="40" caption="" width="160" height="120">
+					<params>
+						<param name="relative_horizontal_scale_center" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="use_parent_graphic_context" />
+						<param name="bound_to_parent_rect" />
+					</params>
+					<variables>
+				
+					</variables>
+				</text>
+
+			</children>
+		</frame>
+	</window>
+</layout>

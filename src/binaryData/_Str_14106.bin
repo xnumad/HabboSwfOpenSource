@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="Achievements" width="389" height="297" version="0.1" uid="BE111AC6-F73B-1A72-180D-53DDAE3A5D65">
+  <window>
+    <frame x="0" y="0" width="389" height="297" params="32769" style="3" name="quest_main_window" caption="%24%7Binventory.achievements%7D" color="0xff418db0" tags="FIT%3Aachievements">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="19" y="0" width="371" height="10" params="144" style="0" name="categories_cont"/>
+        <container x="0" y="0" width="389" height="37" params="144" style="0" name="categories_footer_cont">
+          <children>
+            <text x="5" y="23" width="379" height="18" params="129" style="0" name="achievement_score_txt" caption="%24%7Bachievements.categories.score%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_color" value="0x444444" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="0" y="0" width="389" height="75" params="144" style="0" name="achievements_header_cont">
+          <children>
+            <background x="1" y="0" width="387" height="75" params="2192" style="0" color="0xffff8899a2" background="true"/>
+            <background x="0" y="74" width="387" height="1" params="16" style="3" color="0xffff000000" background="true"/>
+            <static_bitmap x="297" y="3" width="84" height="72" params="16" style="0" name="category_pic_bitmap">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <html x="78" y="13" width="286" height="24" params="129" style="0" name="category_name_txt" caption="Category%20Name%20Placeholder">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <text x="78" y="40" width="245" height="24" params="129" style="0" name="category_progress_txt" caption="%24%7Bachievements.details.categoryprogress%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <region x="14" y="21" width="33" height="34" params="147473" style="100" name="back_button" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="33" height="34" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="icons_back" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+        <container x="10" y="0" width="367" height="100" params="16" style="3" name="achievements_list" width_min="367" height_max="245">
+          <children>
+            <itemlist_vertical x="0" y="0" width="367" height="10" params="16" style="100" name="achievements_scrollarea" height_max="245">
+              <children>
+                <container x="0" y="0" width="367" height="10" params="16" style="0" name="achievements_cont"/>
+              </children>
+            </itemlist_vertical>
+            <scrollbar_vertical x="350" y="0" width="18" height="50" params="17" style="3" name="achievements_scrollbar">
+              <variables>
+                <var key="scrollable" value="achievements_scrollarea" type="String"/>
+              </variables>
+            </scrollbar_vertical>
+          </children>
+        </container>
+        <border x="15" y="0" width="360" height="129" params="144" style="0" name="achievement_cont" color="0x0cccccc">
+          <children>
+            <html x="114" y="18" width="238" height="17" params="129" style="0" name="achievement_name_txt" caption="Achievement%20Name%20Placeholder">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <widget x="10" y="12" width="85" height="85" params="16" style="0" name="achievement_pic_bitmap">
+              <variables>
+                <var key="widget_type" value="badge_image" type="String"/>
+                <var key="badge_image:pivot_point" value="center" type="String"/>
+                <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                <var key="badge_image:zoom_x" value="2" type="Number"/>
+                <var key="badge_image:zoom_y" value="2" type="Number"/>
+              </variables>
+            </widget>
+            <html x="114" y="34" width="238" height="47" params="129" style="0" name="achievement_desc_txt" caption="Achievement%20Desc%3A%20pasdsad%20sadaddsad%20sadsa%20as%20dasd%20sad%20asd%20sada%20sdas%20das%20dsad%20sad%20asd%20asd%20ad%20ada%20sdas%20dsa%20das%20dsa%20dsad%20jhg%20jhg%20jh%20gjh%20gjh%20g">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <text x="113" y="74" width="162" height="17" params="1040" style="0" name="reward_caption_txt" caption="%24%7Bachievements.details.reward%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="164" y="74" width="23" height="17" params="1040" style="0" name="reward_amount_txt" caption="200">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="183" y="70" width="23" height="26" params="1040" style="0" name="currency_icon" id="9999"/>
+            <text x="4" y="97" width="95" height="17" params="16" style="0" name="level_txt" caption="%24%7Bachievements.details.level%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="Group Entry" width="62" height="60" version="0.1" uid="94FEC140-9E25-96AE-88E7-49D6F7D99DB9">
+  <window>
+    <container x="0" y="0" width="62" height="60" params="16" style="0" name="group_entry_container" color="0x0c9c9c9">
+      <children>
+        <static_bitmap x="0" y="0" width="62" height="60" params="16" style="0" name="bg_selected_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}achievement_active.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="62" height="60" params="17" style="0" name="bg_unselected_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}achievement_inactive.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <widget x="11" y="10" width="40" height="40" params="16" style="0" name="group_pic_bitmap">
+          <variables>
+            <var key="widget_type" value="badge_image" type="String"/>
+            <var key="badge_image:type" value="group" type="String"/>
+            <var key="badge_image:pivot_point" value="center" type="String"/>
+            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </widget>
+        <region x="0" y="0" width="62" height="60" params="17" style="0" name="bg_region" treshold="0"/>
+        <region x="1" y="1" width="18" height="16" params="81" style="0" name="clear_favourite" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="18" height="16" params="16" style="0" name="icon">
+              <variables>
+                <var key="asset_uri" value="extended_profile_clear_favourite" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="tool_tip_caption" value="${group.clearfavourite}" type="String"/>
+          </variables>
+        </region>
+        <region x="1" y="1" width="18" height="16" params="81" style="0" name="make_favourite" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="18" height="16" params="16" style="0" name="icon">
+              <variables>
+                <var key="asset_uri" value="extended_profile_make_favourite" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="tool_tip_caption" value="${group.makefavourite}" type="String"/>
+          </variables>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

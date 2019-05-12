@@ -1,0 +1,966 @@
+<?xml version="1.0"?>
+<manifest>
+
+    <component class="com.sulake.bootstrap.HabboWindowManagerComponentBootstrap" version="0.0">
+
+        <interface iid="com.sulake.iid.IIDHabboWindowManager"/>
+        <interface iid="com.sulake.iid.IIDCoreWindowManager"/>
+
+        <assets>
+            <asset mimeType="text/xml" name="scroll_bitmap_test_xml"/>
+
+            <asset mimeType="text/xml" name="habbo_element_description_xml"/>
+
+            <!-- Layout descriptions -->
+
+            <asset mimeType="text/xml" name="habbo_window_layout_bubble_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_bubble_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_thick_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_thick_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_thick_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_large_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_large_5_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_button_shiny_thick_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_frame_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_frame_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_frame_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scaler_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scaler_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollbar_horizontal_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollbar_vertical_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollable_itemlist_vertical_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollable_itemgrid_vertical_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollable_itemlist_vertical_ubuntu_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_scrollable_itemgrid_vertical_ubuntu_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_simple_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_alert_xml"/>
+            <asset mimeType="text/xml" name="unseen_item_counter_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_header_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_header_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_header_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_header_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tab_button_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tab_button_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tab_button_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tab_context_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tab_context_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_tooltip_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_item_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_item_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_dropmenu_item_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_layout_droplist_xml"/>
+            <asset mimeType="text/xml" name="unique_item_overlay_griditem_xml"/>
+            <asset mimeType="text/xml" name="unique_item_overlay_supply_xml"/>
+            <asset mimeType="text/xml" name="unique_item_overlay_preview_xml"/>
+            <asset mimeType="text/xml" name="rarity_item_overlay_griditem_xml"/>
+            <asset mimeType="text/xml" name="rarity_item_overlay_preview_xml"/>
+
+            <!-- Skin descriptions -->
+
+            <asset mimeType="text/xml" name="habbo_skin_text_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_frame_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_frame_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_frame_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_colorless_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_colorless_dropshadow_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_slot_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_4_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_5_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_6_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_8_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_border_9_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_up_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_right_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_down_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_left_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_up_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_right_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_down_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_bubble_pointer_left_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_frame_pointer_down_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_checkbox_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_checkbox_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_checkbox_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_close_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_close_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_close_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_close_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_help_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_default_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_shiny_default_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_default_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_shiny_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_default_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_radio_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_radio_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_radio_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_tab_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_tab_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_tab_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_tab_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_thick_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_shiny_thick_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_shiny_large_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_thick_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_shiny_thick_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_thick_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_left_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_center_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_right_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_left_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_center_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_right_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_left_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_center_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_button_group_right_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scaler_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scaler_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scaler_white_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scaler_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scrollbar_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scrollbar_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_scrollbar_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_header_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_header_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_header_7_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_icon_set_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_dropmenu_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_dropmenu_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_dropmenu_black_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_droplist_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_droplist_thick_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_droplist_item_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_tab_context_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_tab_content_3_xml"/>
+            <asset mimeType="text/xml" name="habbo_skin_tooltip_xml"/>
+
+            <!-- Style sheets -->
+
+            <asset mimeType="text/plain" name="text_styles_css"/>
+
+            <!-- Graphic assets -->
+
+            <asset mimeType="image/png" name="habbo_blue_skin_png"/>
+            <asset mimeType="image/png" name="habbo_skin_ubuntu_png"/>
+            <asset mimeType="image/png" name="skin_ubuntu_bg_9"/>
+
+            <asset mimeType="image/png" name="habbo_cursor_link_png"/>
+            <asset mimeType="image/png" name="habbo_cursor_drag_png"/>
+            <asset mimeType="image/png" name="habbo_icons_png"/>
+            <asset mimeType="text/xml" name="habbo_window_alert_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_alert_link_xml"/>
+            <asset mimeType="text/xml" name="habbo_window_confirm_xml"/>
+            <asset mimeType="text/xml" name="habbo_crasher_dialog_xml"/>
+            <asset mimeType="text/xml" name="simple_alert_xml"/>
+
+            <asset mimeType="image/png" name="placeholder_avatar_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_head_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_cropped_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_head_cropped_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_small_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_small_head_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_small_cropped_png"/>
+            <asset mimeType="image/png" name="placeholder_avatar_small_head_cropped_png"/>
+            <asset mimeType="image/png" name="placeholder_pet_png"/>
+            <asset mimeType="image/png" name="placeholder_pet_small_png"/>
+            <asset mimeType="image/png" name="placeholder_furni_png"/>
+            <asset mimeType="image/png" name="placeholder_furni_small_png"/>
+
+            <!-- Font assets -->
+
+            <asset mimeType="application/x-font-truetype" name="volter"/>
+            <asset mimeType="application/x-font-truetype" name="volterb"/>
+
+            <asset mimeType="application/x-font-truetype" name="ubuntu_regular"/>
+            <asset mimeType="application/x-font-truetype" name="ubuntu_bold"/>
+            <asset mimeType="application/x-font-truetype" name="ubuntuThick_bold"/>
+            <asset mimeType="application/x-font-truetype" name="ubuntu_italic"/>
+            <asset mimeType="application/x-font-truetype" name="ubuntu_bold_italic"/>
+            <asset mimeType="application/x-font-truetype" name="ubuntuMedium"/>;
+            <asset mimeType="application/x-font-truetype" name="ubuntu_condensed"/>;
+
+            <!-- Some dialogs used for testing -->
+
+            <asset mimeType="text/xml" name="asset_viewer_frame_xml"/>
+            <asset mimeType="text/xml" name="asset_viewer_entity_xml"/>
+            <asset mimeType="text/xml" name="asset_viewer_list_view_xml"/>
+            <asset mimeType="text/xml" name="list_tester_xml"/>
+            <asset mimeType="text/xml" name="list_tester_item_xml"/>
+
+            <!-- Illumina generic windows -->
+            <asset mimeType="image/png" name="illumina_alert_illustrations_frank_neutral_png"/>
+
+            <!-- Illumina light -->
+            <asset mimeType="image/png" name="illumina_light_balloon_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_etched_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_frame_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_infobox_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_light_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_raised_png"/>
+            <asset mimeType="image/png" name="illumina_light_border_sunk_png"/>
+            <asset mimeType="image/png" name="illumina_light_button_default_png"/>
+            <asset mimeType="image/png" name="illumina_light_button_frame_close_png"/>
+            <asset mimeType="image/png" name="illumina_light_button_unetched_png"/>
+            <asset mimeType="image/png" name="illumina_light_bubble_chat_arrow_png"/>
+            <asset mimeType="image/png" name="illumina_light_bubble_chat_bg_png"/>
+            <asset mimeType="image/png" name="illumina_light_checkbox_basic_png"/>
+            <asset mimeType="image/png" name="illumina_light_clock_background_png"/>
+            <asset mimeType="image/png" name="illumina_light_clock_background_left_png"/>
+            <asset mimeType="image/png" name="illumina_light_clock_background_mid_png"/>
+            <asset mimeType="image/png" name="illumina_light_clock_background_right_png"/>
+            <asset mimeType="image/png" name="illumina_light_icons_png"/>
+            <asset mimeType="image/png" name="illumina_light_input_chat_png"/>
+            <asset mimeType="image/png" name="illumina_light_progress_indicator_etched_png"/>
+            <asset mimeType="image/png" name="illumina_light_progress_indicator_flat_png"/>
+            <asset mimeType="image/png" name="illumina_light_radio_button_png"/>
+            <asset mimeType="image/png" name="illumina_light_scrollbar_horizontal_png"/>
+            <asset mimeType="image/png" name="illumina_light_scrollbar_vertical_png"/>
+            <asset mimeType="image/png" name="illumina_light_separator_png"/>
+            <asset mimeType="image/png" name="illumina_light_switch_png"/>
+
+            <asset mimeType="text/xml" name="illumina_light_frame_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_frame_modal_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_frame_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_light_skin_border_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_sunk_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_light_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_raised_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_input_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_chat_bubble_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_balloon_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_border_infobox_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_light_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_button_plain_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_button_plain_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_button_unetched_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_light_checkbox_basic_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_checkbox_basic_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_switch_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_switch_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_light_radio_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_radio_button_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_light_scrollbar_horizontal_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_scrollbar_vertical_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_skin_scrollbar_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_scrollable_itemlist_vertical_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_dropmenu_item_xml"/>
+            <asset mimeType="text/xml" name="illumina_light_dropmenu_xml"/>
+
+            <!-- Illumina dark -->
+            <asset mimeType="image/png" name="habbo_skin_illumina_dark_png"/>
+
+            <asset mimeType="text/xml" name="illumina_dark_frame_xml"/>
+            <asset mimeType="text/xml" name="illumina_dark_skin_frame_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_dark_header_xml"/>
+            <asset mimeType="text/xml" name="illumina_dark_skin_header_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_dark_skin_border_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_dark_button_xml"/>
+            <asset mimeType="text/xml" name="illumina_dark_skin_button_xml"/>
+
+            <asset mimeType="text/xml" name="illumina_dark_scrollbar_horizontal_xml"/>
+            <asset mimeType="text/xml" name="illumina_dark_scrollbar_vertical_xml"/>
+            <asset mimeType="text/xml" name="illumina_dark_skin_scrollbar_xml"/>
+
+            <asset mimeType="image/png" name="illumina_dark_scrollbar_horizontal_png"/>
+            <asset mimeType="image/png" name="illumina_dark_scrollbar_vertical_png"/>
+
+            <!-- Glaze generated content start - do not change or remove! -->
+
+			<asset mimeType="image/png" name="achievement_ach_progressbar1" />
+			<asset mimeType="image/png" name="achievement_ach_progressbar2" />
+			<asset mimeType="image/png" name="achievement_ach_progressbar3" />
+			<asset mimeType="image/png" name="achievement_ach_progressbar4" />
+			<asset mimeType="image/png" name="achievement_ach_progressbar5" />
+			<asset mimeType="image/png" name="avatar_editor_avatar_editor_download_icon" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_13x21_1" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_13x21_2" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_13x21_3" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_40x32_1" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_40x32_2" />
+			<asset mimeType="image/png" name="avatar_editor_editor_clr_40x32_3" />
+			<asset mimeType="image/png" name="avatar_editor_generic_platform" />
+			<asset mimeType="image/png" name="avatar_editor_generic_remove_selection" />
+			<asset mimeType="image/png" name="avatar_editor_parts_hilite" />
+			<asset mimeType="image/png" name="avatar_editor_parts_hilite_with_sd" />
+			<asset mimeType="image/png" name="avatar_editor_rotate_avatar_button" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_effects" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_generic" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_head" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_hotlooks" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_legs" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_torso" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_ae_tabs_wardrobe" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_accessories" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_accessories_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_shoes" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_shoes_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_trousers" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_bottom_trousers_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_effects_fx" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_gender_female" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_gender_female_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_gender_male" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_gender_male_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_accessories" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_accessories_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_eyewear" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_eyewear_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_face_accessories" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_face_accessories_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_hair" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_hair_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_hats" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_head_hats_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_accessories" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_accessories_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_jacket" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_jacket_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_prints" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_prints_on" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_shirt" />
+			<asset mimeType="image/png" name="avatar_editor_tabs_top_shirt_on" />
+			<asset mimeType="image/png" name="avatar_editor_wardrobe_select_outfit" />
+			<asset mimeType="image/png" name="avatar_editor_wardrobe_select_outfit_over" />
+			<asset mimeType="image/png" name="avatar_editor_wardrobe_wardrobe_empty_slot" />
+			<asset mimeType="image/png" name="bottom_bar_buildersclub" />
+			<asset mimeType="image/png" name="bottom_bar_camera" />
+			<asset mimeType="image/png" name="bottom_bar_collapse_left" />
+			<asset mimeType="image/png" name="bottom_bar_collapse_right" />
+			<asset mimeType="image/png" name="bottom_bar_divider_1px" />
+			<asset mimeType="image/png" name="bottom_bar_games" />
+			<asset mimeType="image/png" name="bottom_bar_home" />
+			<asset mimeType="image/png" name="bottom_bar_inventory" />
+			<asset mimeType="image/png" name="bottom_bar_logo" />
+			<asset mimeType="image/png" name="bottom_bar_navigator" />
+			<asset mimeType="image/png" name="bottom_bar_quests" />
+			<asset mimeType="image/png" name="bottom_bar_shop" />
+			<asset mimeType="image/png" name="bottom_bar_stories" />
+			<asset mimeType="image/png" name="bottom_bar_modtool" />
+			<asset mimeType="image/png" name="camera_arrow_gray" />
+			<asset mimeType="image/png" name="camera_arrow_green" />
+			<asset mimeType="image/png" name="camera_browse_ffwd" />
+			<asset mimeType="image/png" name="camera_cam_bg" />
+			<asset mimeType="image/png" name="camera_cam_btn_hi" />
+			<asset mimeType="image/png" name="camera_cam_close_x" />
+			<asset mimeType="image/png" name="camera_camera_btn" />
+			<asset mimeType="image/png" name="camera_camera_btn_down" />
+			<asset mimeType="image/png" name="camera_camera_edit" />
+			<asset mimeType="image/png" name="camera_camera_icon" />
+			<asset mimeType="image/png" name="camera_fx_button_active" />
+			<asset mimeType="image/png" name="camera_fx_button_outline" />
+			<asset mimeType="image/png" name="camera_fx_button_selected" />
+			<asset mimeType="image/png" name="camera_fx_frame_selected" />
+			<asset mimeType="image/png" name="camera_fx_slider_bottom_active" />
+			<asset mimeType="image/png" name="camera_fx_slider_button" />
+			<asset mimeType="image/png" name="camera_habbo_camera" />
+			<asset mimeType="image/png" name="camera_icon_colorfilter" />
+			<asset mimeType="image/png" name="camera_icon_compositefilter" />
+			<asset mimeType="image/png" name="camera_icon_frame" />
+			<asset mimeType="image/png" name="camera_locked" />
+			<asset mimeType="image/png" name="camera_photo_border" />
+			<asset mimeType="image/png" name="camera_remove_effect" />
+			<asset mimeType="image/png" name="camera_retake_button" />
+			<asset mimeType="image/png" name="camera_shadow_outline" />
+			<asset mimeType="image/png" name="camera_viewfinder" />
+			<asset mimeType="image/png" name="camera_zoom_in" />
+			<asset mimeType="image/png" name="camera_zoom_out" />
+			<asset mimeType="image/png" name="campaign_day_generic_activated" />
+			<asset mimeType="image/png" name="campaign_day_generic_bg" />
+			<asset mimeType="image/png" name="campaign_day_generic_button" />
+			<asset mimeType="image/png" name="campaign_generic_lock" />
+			<asset mimeType="image/png" name="campaign_icon_advent" />
+			<asset mimeType="image/png" name="campaign_opened" />
+			<asset mimeType="image/png" name="catalogue_background" />
+			<asset mimeType="image/png" name="catalogue_badge_background" />
+			<asset mimeType="image/png" name="catalogue_bundle_star" />
+			<asset mimeType="image/png" name="catalogue_clakboard" />
+			<asset mimeType="image/png" name="catalogue_color_picker_27x22_border" />
+			<asset mimeType="image/png" name="catalogue_color_picker_27x22_color" />
+			<asset mimeType="image/png" name="catalogue_color_picker_27x22_selection" />
+			<asset mimeType="image/png" name="catalogue_effects_ninja" />
+			<asset mimeType="image/png" name="catalogue_giftcard_blank" />
+			<asset mimeType="image/png" name="catalogue_ufo_pricebg" />
+			<asset mimeType="image/png" name="common_beta_sign" />
+			<asset mimeType="image/png" name="common_blue_arrow_horizontal" />
+			<asset mimeType="image/png" name="common_blue_arrow_vertical" />
+			<asset mimeType="image/png" name="common_chat_indicator" />
+			<asset mimeType="image/png" name="common_chat_style_block" />
+			<asset mimeType="image/png" name="common_chat_styles" />
+			<asset mimeType="image/png" name="common_chisel" />
+			<asset mimeType="image/png" name="common_close_x" />
+			<asset mimeType="image/png" name="common_green_arrow_horizontal" />
+			<asset mimeType="image/png" name="common_green_arrow_vertical" />
+			<asset mimeType="image/png" name="common_hilight_big" />
+			<asset mimeType="image/png" name="common_info_icon_grey" />
+			<asset mimeType="image/png" name="common_item_selected" />
+			<asset mimeType="image/png" name="common_item_unselected" />
+			<asset mimeType="image/png" name="common_loading_icon" />
+			<asset mimeType="image/png" name="common_maximize" />
+			<asset mimeType="image/png" name="common_maximize_unetched" />
+			<asset mimeType="image/png" name="common_minimize_unetched" />
+			<asset mimeType="image/png" name="common_offers_icon" />
+			<asset mimeType="image/png" name="common_promo_arrow_close" />
+			<asset mimeType="image/png" name="common_promo_arrow_top_right" />
+			<asset mimeType="image/png" name="common_small_coin" />
+			<asset mimeType="image/png" name="common_small_pen" />
+			<asset mimeType="image/png" name="common_star" />
+			<asset mimeType="image/png" name="common_trashcan_big" />
+			<asset mimeType="image/png" name="common_trashcan_small" />
+			<asset mimeType="image/png" name="common_welcome_screen_arrow" />
+			<asset mimeType="image/png" name="craft_craft_bg" />
+			<asset mimeType="image/png" name="extended_profile_clear_favourite" />
+			<asset mimeType="image/png" name="extended_profile_make_favourite" />
+			<asset mimeType="image/png" name="extended_profile_rooms" />
+			<asset mimeType="image/png" name="floor_plan_editor_add_tile" />
+			<asset mimeType="image/png" name="floor_plan_editor_enter_tile" />
+			<asset mimeType="image/png" name="floor_plan_editor_logo" />
+			<asset mimeType="image/png" name="floor_plan_editor_raise_tile" />
+			<asset mimeType="image/png" name="floor_plan_editor_remove_tile" />
+			<asset mimeType="image/png" name="floor_plan_editor_sink_tile" />
+			<asset mimeType="image/png" name="forum_forum_edit" />
+			<asset mimeType="image/png" name="forum_forum_hide" />
+			<asset mimeType="image/png" name="forum_forum_list0" />
+			<asset mimeType="image/png" name="forum_forum_list1" />
+			<asset mimeType="image/png" name="forum_forum_list2" />
+			<asset mimeType="image/png" name="forum_forum_locked" />
+			<asset mimeType="image/png" name="forum_forum_pinned" />
+			<asset mimeType="image/png" name="forum_forum_report" />
+			<asset mimeType="image/png" name="forum_forum_unhide" />
+			<asset mimeType="image/png" name="forum_forum_unlocked" />
+			<asset mimeType="image/png" name="forum_forum_unpinned" />
+			<asset mimeType="image/png" name="forum_reply" />
+			<asset mimeType="image/png" name="friend_bar_all_friends" />
+			<asset mimeType="image/png" name="friend_bar_event_notification_icon" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_chat" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_eye" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_go_room" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_messenger" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_messenger_notify_0" />
+			<asset mimeType="image/png" name="friend_bar_friendlist_messenger_notify_1" />
+			<asset mimeType="image/png" name="friend_bar_friends_browse_bg" />
+			<asset mimeType="image/png" name="friend_bar_search_habbos" />
+			<asset mimeType="image/png" name="game_center_achievement_locked_icon" />
+			<asset mimeType="image/png" name="game_center_loading_icon" />
+			<asset mimeType="image/png" name="group_guild_color_btm" />
+			<asset mimeType="image/png" name="group_guild_color_top" />
+			<asset mimeType="image/png" name="hc_center_hc_center_cover" />
+			<asset mimeType="image/png" name="hc_center_hc_center_icon_credits" />
+			<asset mimeType="image/png" name="hc_center_hc_center_illustration" />
+			<asset mimeType="image/png" name="hc_center_hc_center_timer" />
+			<asset mimeType="image/png" name="hc_center_hc_postit_bg" />
+			<asset mimeType="image/png" name="hc_center_t0" />
+			<asset mimeType="image/png" name="hc_center_t1" />
+			<asset mimeType="image/png" name="hc_center_t2" />
+			<asset mimeType="image/png" name="hc_center_t3" />
+			<asset mimeType="image/png" name="hc_center_t4" />
+			<asset mimeType="image/png" name="hc_center_t5" />
+			<asset mimeType="image/png" name="hc_center_t6" />
+			<asset mimeType="image/png" name="hc_center_t7" />
+			<asset mimeType="image/png" name="hc_center_t8" />
+			<asset mimeType="image/png" name="hc_center_t9" />
+			<asset mimeType="image/png" name="help_accept_icon" />
+			<asset mimeType="image/png" name="help_bandaid" />
+			<asset mimeType="image/png" name="help_chat_review_anonymous" />
+			<asset mimeType="image/png" name="help_chat_review_avatar_anonymous" />
+			<asset mimeType="image/png" name="help_chat_review_avatar_perpetrator" />
+			<asset mimeType="image/png" name="help_chat_review_decision_bad" />
+			<asset mimeType="image/png" name="help_chat_review_decision_ok" />
+			<asset mimeType="image/png" name="help_chat_review_decision_refused" />
+			<asset mimeType="image/png" name="help_chat_review_decision_searching_1" />
+			<asset mimeType="image/png" name="help_chat_review_decision_searching_2" />
+			<asset mimeType="image/png" name="help_chat_review_decision_undecided" />
+			<asset mimeType="image/png" name="help_chat_review_decision_very_bad" />
+			<asset mimeType="image/png" name="help_chat_review_decision_waiting_1" />
+			<asset mimeType="image/png" name="help_chat_review_decision_waiting_2" />
+			<asset mimeType="image/png" name="help_chat_review_perpetrator" />
+			<asset mimeType="image/png" name="help_chat_review_progress_big_1" />
+			<asset mimeType="image/png" name="help_chat_review_progress_big_2" />
+			<asset mimeType="image/png" name="help_chat_review_progress_big_3" />
+			<asset mimeType="image/png" name="help_chat_review_progress_big_4" />
+			<asset mimeType="image/png" name="help_chat_review_vote_bad" />
+			<asset mimeType="image/png" name="help_chat_review_vote_bad_down" />
+			<asset mimeType="image/png" name="help_chat_review_vote_bad_over" />
+			<asset mimeType="image/png" name="help_chat_review_vote_ok" />
+			<asset mimeType="image/png" name="help_chat_review_vote_ok_down" />
+			<asset mimeType="image/png" name="help_chat_review_vote_ok_over" />
+			<asset mimeType="image/png" name="help_chat_review_vote_very_bad" />
+			<asset mimeType="image/png" name="help_chat_review_vote_very_bad_down" />
+			<asset mimeType="image/png" name="help_chat_review_vote_very_bad_over" />
+			<asset mimeType="image/png" name="help_citizenship_default" />
+			<asset mimeType="image/png" name="help_decline_icon" />
+			<asset mimeType="image/png" name="help_error_state" />
+			<asset mimeType="image/png" name="help_feeling_confused" />
+			<asset mimeType="image/png" name="help_feeling_confused_coming_up" />
+			<asset mimeType="image/png" name="help_frank_greeting" />
+			<asset mimeType="image/png" name="help_guide_accept" />
+			<asset mimeType="image/png" name="help_guide_icon" />
+			<asset mimeType="image/png" name="help_habboway_correct" />
+			<asset mimeType="image/png" name="help_habboway_dove_off" />
+			<asset mimeType="image/png" name="help_habboway_dove_on" />
+			<asset mimeType="image/png" name="help_habboway_dove_quizz" />
+			<asset mimeType="image/png" name="help_habboway_next" />
+			<asset mimeType="image/png" name="help_habboway_prev" />
+			<asset mimeType="image/png" name="help_habboway_wrong" />
+			<asset mimeType="image/png" name="help_help_duck" />
+			<asset mimeType="image/png" name="help_illustrations_bully" />
+			<asset mimeType="image/png" name="help_illustrations_question" />
+			<asset mimeType="image/png" name="help_illustrations_tour" />
+			<asset mimeType="image/png" name="help_need_help" />
+			<asset mimeType="image/png" name="help_notification" />
+			<asset mimeType="image/png" name="help_poor_frank" />
+			<asset mimeType="image/png" name="help_requester_icon" />
+			<asset mimeType="image/png" name="help_user_create" />
+			<asset mimeType="image/png" name="help_user_feedback" />
+			<asset mimeType="image/png" name="help_user_pending" />
+			<asset mimeType="image/png" name="high_score_highscore_cup" />
+			<asset mimeType="image/png" name="icons_back" />
+			<asset mimeType="image/png" name="icons_back_small" />
+			<asset mimeType="image/png" name="icons_builder_error_full" />
+			<asset mimeType="image/png" name="icons_builder_error_furnilimit" />
+			<asset mimeType="image/png" name="icons_builder_error_grouproom" />
+			<asset mimeType="image/png" name="icons_builder_error_notroom" />
+			<asset mimeType="image/png" name="icons_builder_error_room" />
+			<asset mimeType="image/png" name="icons_builder_error_userinroom" />
+			<asset mimeType="image/png" name="icons_close" />
+			<asset mimeType="image/png" name="icons_facebook" />
+			<asset mimeType="image/png" name="icons_flag" />
+			<asset mimeType="image/png" name="icons_forward" />
+			<asset mimeType="image/png" name="icons_forward_small" />
+			<asset mimeType="image/png" name="icons_go_to_room_icon" />
+			<asset mimeType="image/png" name="icons_hc_icon_small" />
+			<asset mimeType="image/png" name="icons_hilighter_yellow" />
+			<asset mimeType="image/png" name="icons_link_icon" />
+			<asset mimeType="image/png" name="icons_next" />
+			<asset mimeType="image/png" name="icons_panic" />
+			<asset mimeType="image/png" name="icons_share" />
+			<asset mimeType="image/png" name="icons_star" />
+			<asset mimeType="image/png" name="icons_tickmark" />
+			<asset mimeType="image/png" name="icons_toolbar_achievements_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_achievements_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_builder_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_builder_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_catalogue_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_catalogue_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_divider" />
+			<asset mimeType="image/png" name="icons_toolbar_games_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_games_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_home_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_home_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_inventory_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_inventory_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_me_menu_placeholder" />
+			<asset mimeType="image/png" name="icons_toolbar_minimail_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_minimail_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_navigator_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_navigator_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_quests_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_quests_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_reception_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_reception_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_stories_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_stories_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_valentines_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_valentines_normal" />
+			<asset mimeType="image/png" name="icons_toolbar_xmas_hover" />
+			<asset mimeType="image/png" name="icons_toolbar_xmas_normal" />
+			<asset mimeType="image/png" name="icons_twitter" />
+			<asset mimeType="image/png" name="icons_wearable" />
+			<asset mimeType="image/png" name="illumina_horizontal_separator" />
+			<asset mimeType="image/png" name="infostand_bot_info_bg" />
+			<asset mimeType="image/png" name="inventory_download_icon" />
+			<asset mimeType="image/png" name="inventory_furni_icon_credits" />
+			<asset mimeType="image/png" name="inventory_furni_icon_floor" />
+			<asset mimeType="image/png" name="inventory_furni_icon_landscape" />
+			<asset mimeType="image/png" name="inventory_furni_icon_wallpaper" />
+			<asset mimeType="image/png" name="inventory_furni_no_recycle_icon" />
+			<asset mimeType="image/png" name="inventory_furni_no_trade_icon" />
+			<asset mimeType="image/png" name="inventory_furni_recycle_icon" />
+			<asset mimeType="image/png" name="inventory_furni_trade_icon" />
+			<asset mimeType="image/png" name="inventory_inventory_empty" />
+			<asset mimeType="image/png" name="inventory_inventory_icon" />
+			<asset mimeType="image/png" name="inventory_thumb_bg" />
+			<asset mimeType="image/png" name="inventory_thumb_bg_selected" />
+			<asset mimeType="image/png" name="inventory_thumb_icon_recycle" />
+			<asset mimeType="image/png" name="inventory_thumb_rent_ending" />
+			<asset mimeType="image/png" name="inventory_thumb_rent_started" />
+			<asset mimeType="image/png" name="inventory_thumb_selected_outline" />
+			<asset mimeType="image/png" name="inventory_trading_trading_locked_icon" />
+			<asset mimeType="image/png" name="inventory_trading_trading_unlocked_icon" />
+			<asset mimeType="image/png" name="landing_view_avatar_info_background" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle0" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle1" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle10" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle11" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle12" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle13" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle14" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle15" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle16" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle17" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle18" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle19" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle2" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle20" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle21" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle22" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle23" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle3" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle4" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle5" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle6" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle7" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle8" />
+			<asset mimeType="image/png" name="landing_view_needle_meter_needle9" />
+			<asset mimeType="image/png" name="landing_view_reception_horizontal" />
+			<asset mimeType="image/png" name="me_menu_me_achv" />
+			<asset mimeType="image/png" name="me_menu_me_clothing" />
+			<asset mimeType="image/png" name="me_menu_me_forums" />
+			<asset mimeType="image/png" name="me_menu_me_guide" />
+			<asset mimeType="image/png" name="me_menu_me_mail" />
+			<asset mimeType="image/png" name="me_menu_me_profile" />
+			<asset mimeType="image/png" name="me_menu_me_rooms" />
+			<asset mimeType="image/png" name="me_menu_me_talents" />
+			<asset mimeType="image/png" name="messenger_caution" />
+			<asset mimeType="image/png" name="messenger_minimize_button" />
+			<asset mimeType="image/png" name="messenger_notification_icon" />
+			<asset mimeType="image/png" name="messenger_profile_icon" />
+			<asset mimeType="image/png" name="messenger_visit_icon" />
+			<asset mimeType="image/png" name="mysterybox_box_base" />
+			<asset mimeType="image/png" name="mysterybox_box_overlay" />
+			<asset mimeType="image/png" name="mysterybox_box_small" />
+			<asset mimeType="image/png" name="mysterybox_key_base" />
+			<asset mimeType="image/png" name="mysterybox_key_overlay" />
+			<asset mimeType="image/png" name="mysterybox_key_small" />
+			<asset mimeType="image/png" name="mysterybox_tracker_border" />
+			<asset mimeType="image/png" name="navigation_icon_weblink" />
+			<asset mimeType="image/png" name="newnavigator_button_back" />
+			<asset mimeType="image/png" name="newnavigator_button_category_collapse" />
+			<asset mimeType="image/png" name="newnavigator_button_category_expand" />
+			<asset mimeType="image/png" name="newnavigator_button_category_show_more" />
+			<asset mimeType="image/png" name="newnavigator_button_leftpane_hide" />
+			<asset mimeType="image/png" name="newnavigator_button_leftpane_show" />
+			<asset mimeType="image/png" name="newnavigator_button_quicklink_add" />
+			<asset mimeType="image/png" name="newnavigator_button_quicklink_remove" />
+			<asset mimeType="image/png" name="newnavigator_button_rows" />
+			<asset mimeType="image/png" name="newnavigator_button_show_room_info" />
+			<asset mimeType="image/png" name="newnavigator_button_tiles" />
+			<asset mimeType="image/png" name="newnavigator_create_room" />
+			<asset mimeType="image/png" name="newnavigator_default_room" />
+			<asset mimeType="image/png" name="newnavigator_doormode_doorbell_small" />
+			<asset mimeType="image/png" name="newnavigator_doormode_invisible_small" />
+			<asset mimeType="image/png" name="newnavigator_doormode_password_small" />
+			<asset mimeType="image/png" name="newnavigator_event_icon" />
+			<asset mimeType="image/png" name="newnavigator_group_base_icon" />
+			<asset mimeType="image/png" name="newnavigator_icon_fav_no" />
+			<asset mimeType="image/png" name="newnavigator_icon_fav_yes" />
+			<asset mimeType="image/png" name="newnavigator_icon_group" />
+			<asset mimeType="image/png" name="newnavigator_icon_group_admin" />
+			<asset mimeType="image/png" name="newnavigator_icon_group_owner" />
+			<asset mimeType="image/png" name="newnavigator_icon_home_no" />
+			<asset mimeType="image/png" name="newnavigator_icon_home_yes" />
+			<asset mimeType="image/png" name="newnavigator_icon_ql_add" />
+			<asset mimeType="image/png" name="newnavigator_icon_ql_remove" />
+			<asset mimeType="image/png" name="newnavigator_icon_quicklink_plain" />
+			<asset mimeType="image/png" name="newnavigator_icon_usercount" />
+			<asset mimeType="image/png" name="newnavigator_nav_view_mini" />
+			<asset mimeType="image/png" name="newnavigator_nav_view_row" />
+			<asset mimeType="image/png" name="newnavigator_nav_view_thumbs" />
+			<asset mimeType="image/png" name="newnavigator_promote_room" />
+			<asset mimeType="image/png" name="newnavigator_random_room" />
+			<asset mimeType="image/png" name="newnavigator_rating_star_off" />
+			<asset mimeType="image/png" name="newnavigator_rating_star_on" />
+			<asset mimeType="image/png" name="newnavigator_refresh_search_icon" />
+			<asset mimeType="image/png" name="newnavigator_report_room" />
+			<asset mimeType="image/png" name="newnavigator_room_settings_icon" />
+			<asset mimeType="image/png" name="newnavigator_roominfo_temp" />
+			<asset mimeType="image/png" name="newnavigator_roomusercount_dimmer_black" />
+			<asset mimeType="image/png" name="poll_poll_prompt_frank" />
+			<asset mimeType="image/png" name="poll_poll_prompt_question" />
+			<asset mimeType="image/png" name="pursearea_credits_icon" />
+			<asset mimeType="image/png" name="pursearea_credits_icon2" />
+			<asset mimeType="image/png" name="pursearea_diamond_icon" />
+			<asset mimeType="image/png" name="pursearea_duckets_icon" />
+			<asset mimeType="image/png" name="pursearea_hc_icon" />
+			<asset mimeType="image/png" name="pursearea_logout_icon" />
+			<asset mimeType="image/png" name="pursearea_loyalty_icon" />
+			<asset mimeType="image/png" name="pursearea_settings_icon" />
+			<asset mimeType="image/png" name="rarity_item_rarity_item_plaque" />
+			<asset mimeType="image/png" name="rarity_item_rarity_preview_bg" />
+			<asset mimeType="image/png" name="relationship_status_bobba" />
+			<asset mimeType="image/png" name="relationship_status_heart" />
+			<asset mimeType="image/png" name="relationship_status_none" />
+			<asset mimeType="image/png" name="relationship_status_smile" />
+			<asset mimeType="image/png" name="roomtools_camera" />
+			<asset mimeType="image/png" name="roomtools_chat_history" />
+			<asset mimeType="image/png" name="roomtools_gear" />
+			<asset mimeType="image/png" name="roomtools_history_back_bg" />
+			<asset mimeType="image/png" name="roomtools_history_back_icon" />
+			<asset mimeType="image/png" name="roomtools_history_forward_bg" />
+			<asset mimeType="image/png" name="roomtools_history_forward_icon" />
+			<asset mimeType="image/png" name="roomtools_history_open_bg" />
+			<asset mimeType="image/png" name="roomtools_history_open_icon" />
+			<asset mimeType="image/png" name="roomtools_like" />
+			<asset mimeType="image/png" name="roomtools_magnifier" />
+			<asset mimeType="image/png" name="roomtools_minimizebutton" />
+			<asset mimeType="image/png" name="roomtools_photo_icon" />
+			<asset mimeType="image/png" name="roomtools_unlike" />
+			<asset mimeType="image/png" name="talent_achieved_div" />
+			<asset mimeType="image/png" name="talent_achieved_left" />
+			<asset mimeType="image/png" name="talent_achieved_mid" />
+			<asset mimeType="image/png" name="talent_achieved_right" />
+			<asset mimeType="image/png" name="talent_action_overlay" />
+			<asset mimeType="image/png" name="talent_avatar_glow" />
+			<asset mimeType="image/png" name="talent_check_mark_circle" />
+			<asset mimeType="image/png" name="talent_citizenship_accomplished" />
+			<asset mimeType="image/png" name="talent_helper_icon" />
+			<asset mimeType="image/png" name="talent_locked_achievement" />
+			<asset mimeType="image/png" name="talent_locked_stripe" />
+			<asset mimeType="image/png" name="talent_mask_left" />
+			<asset mimeType="image/png" name="talent_mask_right" />
+			<asset mimeType="image/png" name="talent_progress_lower" />
+			<asset mimeType="image/png" name="talent_progress_upper" />
+			<asset mimeType="image/png" name="talent_register_cutout_character" />
+			<asset mimeType="image/png" name="talent_task_progress_bg" />
+			<asset mimeType="image/png" name="talent_task_progress_fg" />
+			<asset mimeType="image/png" name="talent_task_progress_left" />
+			<asset mimeType="image/png" name="talent_task_progress_right" />
+			<asset mimeType="image/png" name="talent_unachieved_div" />
+			<asset mimeType="image/png" name="talent_unachieved_left" />
+			<asset mimeType="image/png" name="talent_unachieved_mid" />
+			<asset mimeType="image/png" name="talent_unachieved_right" />
+			<asset mimeType="image/png" name="talent_vip_reward" />
+			<asset mimeType="image/png" name="toolbar_citizenship_icon" />
+			<asset mimeType="image/png" name="toolbar_credit_icon_0" />
+			<asset mimeType="image/png" name="toolbar_credit_icon_1" />
+			<asset mimeType="image/png" name="toolbar_credit_icon_2" />
+			<asset mimeType="image/png" name="toolbar_duckat_icon_0" />
+			<asset mimeType="image/png" name="toolbar_duckat_icon_1" />
+			<asset mimeType="image/png" name="toolbar_duckat_icon_2" />
+			<asset mimeType="image/png" name="toolbar_hc_icon_0" />
+			<asset mimeType="image/png" name="toolbar_hc_icon_1" />
+			<asset mimeType="image/png" name="toolbar_hc_icon_2" />
+			<asset mimeType="image/png" name="toolbar_memenu_achievements_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_achievements_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_clothes_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_clothes_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_guide_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_guide_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_minimail_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_minimail_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_profile_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_profile_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_rooms_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_rooms_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_slider_base" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_slider_button" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_sounds_off_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_sounds_off_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_sounds_on_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_sounds_on_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_settings_white" />
+			<asset mimeType="image/png" name="toolbar_memenu_talents_color" />
+			<asset mimeType="image/png" name="toolbar_memenu_talents_white" />
+			<asset mimeType="image/png" name="toolbar_offer_icon_0" />
+			<asset mimeType="image/png" name="toolbar_offer_icon_1" />
+			<asset mimeType="image/png" name="toolbar_offer_icon_2" />
+			<asset mimeType="image/png" name="toolbar_room_icon_0" />
+			<asset mimeType="image/png" name="toolbar_room_icon_1" />
+			<asset mimeType="image/png" name="toolbar_room_icon_2" />
+			<asset mimeType="image/png" name="tools_black_pixel" />
+			<asset mimeType="image/png" name="tools_file_icon" />
+			<asset mimeType="image/png" name="tools_folder_icon" />
+			<asset mimeType="image/png" name="tools_tools_download_icon" />
+			<asset mimeType="image/png" name="unique_item_label_1" />
+			<asset mimeType="image/png" name="unique_item_label_glass_shine" />
+			<asset mimeType="image/png" name="unique_item_label_number_glyphs" />
+			<asset mimeType="image/png" name="unique_item_label_plaque_border" />
+			<asset mimeType="image/png" name="unique_item_label_plaque_metal" />
+			<asset mimeType="image/png" name="unique_item_label_studs" />
+			<asset mimeType="image/png" name="unique_item_large_background_wide" />
+			<asset mimeType="image/png" name="unique_item_large_glass_bottom" />
+			<asset mimeType="image/png" name="unique_item_large_glass_mid" />
+			<asset mimeType="image/png" name="unique_item_large_glass_shine" />
+			<asset mimeType="image/png" name="unique_item_large_glass_top" />
+			<asset mimeType="image/png" name="unique_item_large_iron" />
+			<asset mimeType="image/png" name="unique_item_large_na_button" />
+			<asset mimeType="image/png" name="unique_item_large_na_button_wide" />
+			<asset mimeType="image/png" name="unique_item_large_tile_upright" />
+			<asset mimeType="image/png" name="unique_item_sold_out_label" />
+			<asset mimeType="image/png" name="unique_item_sold_out_tile" />
+			<asset mimeType="image/png" name="word_quiz_thum_down" />
+			<asset mimeType="image/png" name="word_quiz_thum_down_big" />
+			<asset mimeType="image/png" name="word_quiz_thum_up" />
+			<asset mimeType="image/png" name="word_quiz_thum_up_big" />
+			<asset mimeType="image/png" name="moderation_m_icon" />
+
+            <!-- Glaze generated content end - do not change or remove! -->
+
+            <!-- Widgets -->
+
+            <asset mimeType="text/xml" name="avatar_image_xml"/>
+            <asset mimeType="text/xml" name="badge_image_xml"/>
+            <asset mimeType="text/xml" name="balloon_xml"/>
+            <asset mimeType="text/xml" name="clock_base_xml"/>
+            <asset mimeType="text/xml" name="hover_bitmap_xml"/>
+            <asset mimeType="text/xml" name="illumina_border_xml"/>
+            <asset mimeType="text/xml" name="illumina_chat_bubble_xml"/>
+            <asset mimeType="text/xml" name="illumina_input_xml"/>
+            <asset mimeType="text/xml" name="updating_timestamp_xml"/>
+            <asset mimeType="text/xml" name="progress_indicator_xml"/>
+            <asset mimeType="text/xml" name="separator_xml"/>
+            <asset mimeType="text/xml" name="running_number_xml"/>
+            <asset mimeType="text/xml" name="pet_image_xml"/>
+            <asset mimeType="text/xml" name="furniture_image_xml"/>
+            <asset mimeType="text/xml" name="room_previewer_xml"/>
+            <asset mimeType="text/xml" name="pixel_limit_xml"/>
+            <asset mimeType="text/xml" name="room_thumbnail_xml"/>
+            <asset mimeType="text/xml" name="room_usercount_xml"/>
+
+        </assets>
+        <aliases>
+            <asset mimeType="image/png" name="illumina_light_border_top_left" ref="illumina_light_border_etched_png">
+                <param key="region" value="0,0,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_top_center" ref="illumina_light_border_etched_png">
+                <param key="region" value="3,0,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_top_right" ref="illumina_light_border_etched_png">
+                <param key="region" value="6,0,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_center_left" ref="illumina_light_border_etched_png">
+                <param key="region" value="0,3,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_center_center" ref="illumina_light_border_etched_png">
+                <param key="region" value="3,3,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_center_right" ref="illumina_light_border_etched_png">
+                <param key="region" value="6,3,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_bottom_left" ref="illumina_light_border_etched_png">
+                <param key="region" value="0,6,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_bottom_center" ref="illumina_light_border_etched_png">
+                <param key="region" value="3,6,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_border_bottom_right" ref="illumina_light_border_etched_png">
+                <param key="region" value="6,6,3,3"/>
+            </asset>
+
+            <asset mimeType="image/png" name="illumina_dark_border_top_left" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="68,0,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_top_center" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="71,0,32,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_top_right" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="103,0,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_center_left" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="68,3,3,24"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_center_center" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="71,3,32,24"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_center_right" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="103,3,3,24"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_bottom_left" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="68,27,3,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_bottom_center" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="71,27,32,3"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_dark_border_bottom_right" ref="habbo_skin_illumina_dark_png">
+                <param key="region" value="103,27,3,3"/>
+            </asset>
+
+            <asset mimeType="image/png" name="progress_disk_flat_on" ref="illumina_light_progress_indicator_flat_png">
+                <param key="region" value="0,0,8,8"/>
+            </asset>
+            <asset mimeType="image/png" name="progress_disk_flat_off" ref="illumina_light_progress_indicator_flat_png">
+                <param key="region" value="11,0,8,8"/>
+            </asset>
+            <asset mimeType="image/png" name="progress_disk_etched_on" ref="illumina_light_progress_indicator_etched_png">
+                <param key="region" value="10,0,10,11"/>
+            </asset>
+            <asset mimeType="image/png" name="progress_disk_etched_off" ref="illumina_light_progress_indicator_etched_png">
+                <param key="region" value="0,0,10,11"/>
+            </asset>
+
+            <asset mimeType="image/png" name="illumina_light_separator_horizontal" ref="illumina_light_separator_png">
+                <param key="region" value="3,0,3,2"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_separator_vertical" ref="illumina_light_separator_png">
+                <param key="region" value="0,3,2,3"/>
+            </asset>
+
+            <asset mimeType="image/png" name="unique_item_number_glyph_0" ref="unique_item_label_number_glyphs">
+                <param key="region" value="1,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_1" ref="unique_item_label_number_glyphs">
+                <param key="region" value="6,0,3,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_2" ref="unique_item_label_number_glyphs">
+                <param key="region" value="9,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_3" ref="unique_item_label_number_glyphs">
+                <param key="region" value="14,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_4" ref="unique_item_label_number_glyphs">
+                <param key="region" value="19,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_5" ref="unique_item_label_number_glyphs">
+                <param key="region" value="24,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_6" ref="unique_item_label_number_glyphs">
+                <param key="region" value="29,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_7" ref="unique_item_label_number_glyphs">
+                <param key="region" value="34,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_8" ref="unique_item_label_number_glyphs">
+                <param key="region" value="39,0,5,5"/>
+            </asset>
+            <asset mimeType="image/png" name="unique_item_number_glyph_9" ref="unique_item_label_number_glyphs">
+                <param key="region" value="44,0,5,5"/>
+            </asset>
+
+            <asset mimeType="image/png" name="illumina_light_balloon_arrow_up" ref="illumina_light_balloon_png">
+                <param key="region" value="0,17,9,6"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_balloon_arrow_down" ref="illumina_light_balloon_png">
+                <param key="region" value="0,23,9,6"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_balloon_arrow_left" ref="illumina_light_balloon_png">
+                <param key="region" value="0,29,6,9"/>
+            </asset>
+            <asset mimeType="image/png" name="illumina_light_balloon_arrow_right" ref="illumina_light_balloon_png">
+                <param key="region" value="7,29,6,9"/>
+            </asset>
+        </aliases>
+
+    </component>
+</manifest>

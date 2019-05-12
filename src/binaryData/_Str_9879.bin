@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<skin name="illumina_dark_skin_button" version="0.0">
+
+	<!-- shared variables -->
+	<variables>
+		<variable key="asset" value="habbo_skin_illumina_dark_png" type="String"/>
+	</variables>
+
+	<!-- the following maps states to layouts and templates -->
+	<states>
+		<state name="default" layout="illumina_dark_button" template="illumina_dark_button_template"/>
+	</states>
+
+	<!-- templates defines regions in bitmap asset -->
+	<templates>
+		<template name="illumina_dark_button_template" asset="$asset">
+			<entities>
+				<entity name="top_left" type="bitmap"><region><Rectangle x="33" y="0" width="4" height="4"/></region></entity>
+				<entity name="top_center" type="bitmap"><region><Rectangle x="37" y="0" width="20" height="4"/></region></entity>
+				<entity name="top_right" type="bitmap"><region><Rectangle x="57" y="0" width="4" height="4"/></region></entity>
+				<entity name="center_left" type="bitmap"><region><Rectangle x="33" y="4" width="4" height="20"/></region></entity>
+				<entity name="center_center" type="bitmap"><region><Rectangle x="37" y="4" width="20" height="20"/></region></entity>
+				<entity name="center_right" type="bitmap"><region><Rectangle x="57" y="4" width="4" height="20"/></region></entity>
+				<entity name="bottom_left" type="bitmap"><region><Rectangle x="33" y="24" width="4" height="5"/></region></entity>
+				<entity name="bottom_center" type="bitmap"><region><Rectangle x="37" y="24" width="20" height="5"/></region></entity>
+				<entity name="bottom_right" type="bitmap"><region><Rectangle x="57" y="24" width="4" height="5"/></region></entity>
+			</entities>
+		</template>
+	</templates>
+
+	<!-- markup for layout drawer -->
+	<layouts>
+		<layout name="illumina_dark_button" transparent="true">
+			<entities>
+				<entity name="top_left"   id="0" colorize="false"><region><Rectangle x="0" y="0" width="4" height="4"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+				<entity name="top_center"   id="0" colorize="false"><region><Rectangle x="4" y="0" width="20" height="4"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+				<entity name="top_right"   id="0" colorize="false"><region><Rectangle x="24" y="0" width="4" height="4"/></region><scale horizontal="move" vertical="fixed"/></entity>
+				<entity name="center_left"   id="0" colorize="false"><region><Rectangle x="0" y="4" width="4" height="20"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+				<entity name="center_center"   id="0" colorize="false"><region><Rectangle x="4" y="4" width="20" height="20"/></region><scale horizontal="strech" vertical="strech"/></entity>
+				<entity name="center_right"   id="0" colorize="false"><region><Rectangle x="24" y="4" width="4" height="20"/></region><scale horizontal="move" vertical="strech"/></entity>
+				<entity name="bottom_left"   id="0" colorize="false"><region><Rectangle x="0" y="24" width="4" height="5"/></region><scale horizontal="fixed" vertical="move"/></entity>
+				<entity name="bottom_center"   id="0" colorize="false"><region><Rectangle x="4" y="24" width="20" height="5"/></region><scale horizontal="strech" vertical="move"/></entity>
+				<entity name="bottom_right"   id="0" colorize="false"><region><Rectangle x="24" y="24" width="4" height="5"/></region><scale horizontal="move" vertical="move"/></entity>
+			</entities>
+		</layout>
+	</layouts>
+</skin>

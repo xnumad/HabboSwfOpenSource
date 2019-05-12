@@ -1,0 +1,81 @@
+﻿package com.sulake.habbo.session
+{
+    import com.sulake.core.runtime.IUnknown;
+    import flash.events.IEventDispatcher;
+    import flash.display.BitmapData;
+    import com.sulake.habbo.session.product.IProductData;
+    import com.sulake.habbo.session.furniture.IFurnitureData;
+    import com.sulake.habbo.session.product.IProductDataListener;
+    import com.sulake.habbo.session.furniture.IFurniDataListener;
+    import __AS3__.vec.Vector;
+
+    public interface ISessionDataManager extends IUnknown 
+    {
+        function get events():IEventDispatcher;
+        function get _Str_25698():Boolean;
+        function get _Str_22031():Boolean;
+        function get _Str_11656():Boolean;
+        function hasSecurity(_arg_1:int):Boolean;
+        function get _Str_8500():int;
+        function get clubLevel():int;
+        function get _Str_14040():Boolean;
+        function get _Str_6986():Boolean;
+        function get userId():int;
+        function get userName():String;
+        function get realName():String;
+        function get figure():String;
+        function get gender():String;
+        function get _Str_11198():Boolean;
+        function get _Str_2799():Boolean;
+        function get _Str_4050():Boolean;
+        function get _Str_22301():Boolean;
+        function get _Str_17491():String;
+        function get _Str_17927():String;
+        function _Str_18437(_arg_1:int):Array;
+        function getBadgeImage(_arg_1:String):BitmapData;
+        function _Str_20021(_arg_1:String):BitmapData;
+        function _Str_5831(_arg_1:String):String;
+        function _Str_19992(_arg_1:String):String;
+        function _Str_18459(_arg_1:String):BitmapData;
+        function _Str_15979(_arg_1:String):BadgeInfo;
+        function _Str_17173(_arg_1:int):String;
+        function getGroupBadgeImage(_arg_1:String):BitmapData;
+        function _Str_17218(_arg_1:String):BitmapData;
+        function _Str_15583(_arg_1:String):String;
+        function _Str_19687(_arg_1:String):String;
+        function _Str_4701():Boolean;
+        function _Str_3655(_arg_1:String):Boolean;
+        function _Str_10249(_arg_1:String):void;
+        function _Str_14353(_arg_1:String):void;
+        function get _Str_3577():int;
+        function get _Str_2985():int;
+        function _Str_20136(_arg_1:int):void;
+        function _Str_19464():void;
+        function _Str_21665(_arg_1:int):void;
+        function getProductData(_arg_1:String):IProductData;
+        function _Str_3411(_arg_1:int):IFurnitureData;
+        function _Str_19930(_arg_1:int):Array;
+        function _Str_4531(_arg_1:int):IFurnitureData;
+        function getFloorItemDataByName(_arg_1:String, _arg_2:int=0):IFurnitureData;
+        function _Str_14102(_arg_1:String, _arg_2:int=0):IFurnitureData;
+        function _Str_21275(_arg_1:int, _arg_2:String):void;
+        function _Str_21655(_arg_1:int):void;
+        function _Str_21775(_arg_1:int, _arg_2:String):void;
+        function _Str_22197(_arg_1:int):void;
+        function loadProductData(_arg_1:IProductDataListener=null):Boolean;
+        function _Str_4536(_arg_1:IFurniDataListener):Vector.<IFurnitureData>;
+        function _Str_16650(_arg_1:IProductDataListener):void;
+        function get _Str_22295():Boolean;
+        function isPerkAllowed(_arg_1:String):Boolean;
+        function _Str_15321(_arg_1:String):String;
+        function sendSpecialCommandMessage(_arg_1:String):void;
+        function get currentTalentTrack():String;
+        function _Str_21742(_arg_1:int):void;
+        function _Str_20401(_arg_1:IFurniDataListener):void;
+        function _Str_21481(_arg_1:Boolean):void;
+        function get _Str_18110():Boolean;
+        function setFriendBarState(_arg_1:Boolean):void;
+        function setRoomToolsState(_arg_1:Boolean):void;
+        function get _Str_8444():int;
+    }
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="citizenship_welcome" width="480" height="302" version="0.1" uid="7757BAA1-945E-F98D-93DC-71057F15E2B6">
+  <window>
+    <container x="0" y="0" width="480" height="302" params="147472" style="100">
+      <children>
+        <frame x="0" y="20" width="480" height="282" params="1" style="101" caption="%24%7Bcitizenship.promo.popup.title%7D">
+          <filters>
+            <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+          </filters>
+          <children>
+            <itemlist_vertical x="14" y="37" width="469" height="212" params="8536080" style="100">
+              <children>
+                <text x="7" y="0" width="334" height="35" params="16" style="100" caption="%24%7Bcitizenship.promo.popup.heading%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="7" y="45" width="294" height="40" params="16" style="100" caption="%24%7Bcitizenship.promo.popup.description.1%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="7" y="95" width="294" height="28" params="16" style="100" caption="%24%7Bcitizenship.promo.popup.description.2%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="133" width="449" height="79" params="16" style="100">
+                  <children>
+                    <button x="155" y="0" width="139" height="52" params="131281" style="100" name="show_citizenship" caption="%24%7Bcitizenship.promo.popup.open.button%7D"/>
+                    <region x="110" y="40" width="228" height="22" params="147665" style="100" name="postpone_citizenship" treshold="0">
+                      <children>
+                        <label x="0" y="6" width="228" height="16" params="16" style="100" caption="%24%7Bcitizenship.promo.popup.close.button%7D">
+                          <variables>
+                            <var key="text_style" value="il_link_regular" type="String"/>
+                          </variables>
+                        </label>
+                      </children>
+                    </region>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="10" type="int"/>
+              </variables>
+            </itemlist_vertical>
+            <static_bitmap x="330" y="28" width="178" height="193" params="0" style="100">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}talent/welcome.png" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="margin_left" value="1" type="int"/>
+            <var key="margin_top" value="30" type="int"/>
+            <var key="margin_right" value="1" type="int"/>
+            <var key="margin_bottom" value="1" type="int"/>
+          </variables>
+        </frame>
+        <label x="10" y="7" width="98" height="14" params="0" style="100" caption="%24%7Bcitizenship.promo.popup.subtitle%7D">
+          <variables>
+            <var key="text_style" value="il_small_white" type="String"/>
+          </variables>
+        </label>
+      </children>
+    </container>
+  </window>
+</layout>

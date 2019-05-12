@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu" width="200" height="260" version="0.1" uid="73C4EF66-34DB-51A4-5FC7-97433D94DF9F">
+  <window>
+    <border x="0" y="0" width="200" height="260" params="32" style="6" name="main_content" color="0x05b5953" tags="MAIN_CONTENT"/>
+  </window>
+</layout>

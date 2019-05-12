@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="catalog_volter" width="550" height="516" version="0.1" uid="7B9E1578-C204-3CFC-1525-DAD9DA8B82B3">
+  <window>
+    <container x="0" y="0" width="550" height="516" params="32801" style="0" name="catalog_main_container">
+      <children>
+        <frame x="370" y="24" width="175" height="466" params="257" style="0" name="navigatorMain" caption="%24%7Bcatalog.title%7D" color="0xff418db0">
+          <filters>
+            <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+          </filters>
+          <children>
+            <border x="0" y="0" width="163" height="434" params="2192" style="5" name="navigationContainer" caption="Catalog">
+              <children>
+                <scrollable_itemlist_vertical x="3" y="0" width="160" height="434" params="16" style="0" name="navigationList" caption="Catalog">
+                  <children>
+                    <itemlist_vertical x="0" y="0" width="158" height="21" params="16" style="0" name="list_template"/>
+                    <region x="0" y="21" width="158" height="21" params="131217" style="0" name="item_template" color="0xffff000000" background="true" treshold="0">
+                      <children>
+                        <background x="0" y="0" width="158" height="20" params="16" style="0" name="background" color="0xffffffffff" background="true" tags="SELECTION_COLOR"/>
+                        <background x="0" y="0" width="22" height="20" params="16" style="0" name="iconBackground" color="0xffffeeeeee" background="true" tags="ICON_COLOR">
+                          <children>
+                            <static_bitmap x="0" y="0" width="22" height="20" params="16" style="0">
+                              <variables>
+                                <var key="asset_uri" value="catalogue_color_picker_27x22_color" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </background>
+                        <static_bitmap x="0" y="0" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                          <variables>
+                            <var key="asset_uri" value="${image.library.url}catalogue/icon_1.png" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <text x="26" y="4" width="4" height="4" params="176" style="0" name="item_title" tags="ITEM_TITLE">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <icon x="122" y="5" width="15" height="15" params="16" style="5" name="drop_button" color="0x00" tags="DOWNBTN"/>
+                      </children>
+                    </region>
+                    <region x="0" y="42" width="158" height="21" params="131217" style="0" name="subitem_template" color="0xffff000000" background="true" treshold="0">
+                      <children>
+                        <background x="0" y="0" width="158" height="20" params="16" style="0" name="background" color="0xffffd2f0f3" background="true" tags="SELECTION_COLOR"/>
+                        <static_bitmap x="5" y="0" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                          <variables>
+                            <var key="asset_uri" value="${image.library.url}catalogue/icon_2.png" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <text x="32" y="4" width="4" height="4" params="176" style="0" name="item_title" tags="ITEM_TITLE">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </region>
+                  </children>
+                  <variables>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                  </variables>
+                </scrollable_itemlist_vertical>
+              </children>
+            </border>
+          </children>
+        </frame>
+        <static_bitmap x="0" y="0" width="380" height="516" params="257" style="0" name="layoutBackground">
+          <variables>
+            <var key="asset_uri" value="catalogue_background" type="String"/>
+          </variables>
+        </static_bitmap>
+        <container x="6" y="40" width="360" height="460" params="0" style="0" name="layoutContainer" background="true"/>
+        <static_bitmap x="6" y="35" width="359" height="70" params="0" style="0" name="catalog.header.image">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/catalog_header_roombuilder.gif" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <formatted_text x="10" y="110" width="355" height="30" params="0" style="3" name="catalog.header.description" caption="%24%7Blorem.header%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_italic" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+      </children>
+    </container>
+  </window>
+</layout>

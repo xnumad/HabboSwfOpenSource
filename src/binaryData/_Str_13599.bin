@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pet_commands" width="195" height="462" version="0.1" uid="A0CFF2F3-02DF-471E-4C28-259D585A69DC">
+  <window>
+    <frame x="27" y="30" width="195" height="462" params="32801" style="3" caption="%24%7Bwidgets.pet.commands.title%7D" color="0xff67a3bf" tags="pet_commands">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="5" y="7" width="71" height="90" params="17" style="3" name="image_container" caption="%24%7Bwidgets.pet.commands.title%7D">
+          <children>
+            <bitmap x="0" y="0" width="71" height="90" params="17" style="3" name="avatar_image" caption="%24%7Bwidgets.pet.commands.title%7D"/>
+          </children>
+        </container>
+        <text x="76" y="43" width="159" height="17" params="16" style="3" name="pet_name" caption="%24%7Bwidgets.pet.commands.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="6" y="103" width="170" height="279" params="16" style="3" name="commands_container" caption="%24%7Bwidgets.pet.commands.title%7D">
+          <children>
+            <button x="0" y="0" width="84" height="22" params="131089" style="3" name="pet_command_template" width_min="84" width_max="84"/>
+          </children>
+        </container>
+        <container x="5" y="400" width="169" height="20" params="787473" style="3" name="status_skill_container">
+          <children>
+            <bitmap x="6" y="1" width="162" height="17" params="16" style="3" name="status_skill_bitmap"/>
+            <text x="82" y="2" width="4" height="4" params="208" style="3" name="status_skill_value_text">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <bitmap x="0" y="0" width="18" height="18" params="16" style="3" name="status_skill_icon">
+              <variables>
+                <var key="bitmap_asset_name" value="icon_pet_experience" type="String"/>
+              </variables>
+            </bitmap>
+            <text x="7" y="1" width="155" height="17" params="208" style="3" name="status_skill_text" caption="%24%7Binfostand.pet.text.skill.next%7D" visible="false">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="help_page" value="help/pets/training" type="String"/>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

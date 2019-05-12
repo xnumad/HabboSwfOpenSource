@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_window_alert" width="278" height="141" version="0.1" uid="F8E790A9-B344-234A-B4C9-00A91328C920">
+  <window>
+    <frame x="0" y="-1" width="278" height="141" params="32769" style="3" name="_alert_frame" caption="Alert" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="27" y="14" width="210" height="17" params="8388624" style="0" name="_alert_summary" caption="Alert" tags="DESCRIPTION">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <itemlist_horizontal x="26" y="81" width="215" height="24" params="787664" style="0" name="_alert_button_list" caption="Alert" color="0x0ffff33" height_min="22">
+          <children>
+            <link x="0" y="3" width="51" height="17" params="131073" style="0" name="_alert_button_cancel" caption="Cancel" treshold="0" width_min="50">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </link>
+            <button x="83" y="0" width="50" height="24" params="131089" style="3" name="_alert_button_custom" caption="Alert" width_min="50"/>
+            <button_thick x="165" y="0" width="50" height="24" params="131089" style="3" name="_alert_button_ok" caption="Ok" width_min="50"/>
+          </children>
+          <variables>
+            <var key="spacing" value="32" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

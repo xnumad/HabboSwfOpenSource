@@ -1,0 +1,13 @@
+<chatstyle id="8" name="fortune_teller" systemstyle="true">
+	<layouts>
+		<speakLayout assetId="bubble_speak"/>
+		<whisperLayout assetId="bubble_whisper"/>
+		<shoutLayout assetId="bubble_shout"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="left"/>
+		<middleBitmap assetId="mid"/>
+		<rightBitmap assetId="right"/>
+		<pointerBitmap assetId="pointer"/>
+	</bitmaps>
+</chatstyle>

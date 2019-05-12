@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_event" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="228" height="200" params="17" style="0" name="cont" color="0xff3d3d3d" background="true">
+      <children>
+        <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" color="0xFF232323" background="true"/>
+        <text x="5" y="5" width="218" height="13" params="786432" style="0" name="desc_txt" caption="${wiredfurni.params.startdir}" color="0xFFffffff">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+
+        <selector x="5" y="21" width="218" height="17" params="17" style="0" name="startdir_selector">
+          <children>
+
+            <radiobutton x="0" y="0" width="20" height="20" params="17" style="1" id="0" name="startdir_0_radio"/>
+            <bitmap x="17" y="0" width="15" height="15" params="17" style="0" name="move_0"/>
+
+            <radiobutton x="55" y="0" width="20" height="20" params="17" style="1" id="2" name="startdir_2_radio"/>
+            <bitmap x="72" y="0" width="15" height="15" params="17" style="0" name="move_2"/>
+
+            <radiobutton x="110" y="0" width="20" height="20" params="17" style="1" id="4" name="startdir_4_radio"/>
+            <bitmap x="127" y="0" width="15" height="15" params="17" style="0" name="move_4"/>
+
+            <radiobutton x="165" y="0" width="20" height="20" params="17" style="1" id="6" name="startdir_6_radio"/>
+            <bitmap x="182" y="0" width="15" height="15" params="17" style="0" name="move_6"/>
+
+          </children>
+        </selector>
+
+        <container x="0" y="42" width="228" height="1" params="16" style="0" name="ruler" color="0xFF232323" background="true"/>
+        <text x="5" y="47" width="218" height="13" params="786432" style="0" name="desc_txt" caption="${wiredfurni.params.turn}" color="0xFFffffff">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+
+        <selector x="5" y="63" width="218" height="137" params="17" style="0" name="turn_selector">
+          <children>
+            <radiobutton x="0" y="0" width="20" height="20" params="17" style="1" id="0" name="turn_0_radio"/>
+            <text x="20" y="0" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.0}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="20" width="20" height="20" params="17" style="1" id="1" name="turn_1_radio"/>
+            <text x="20" y="20" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.1}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="40" width="20" height="20" params="17" style="1" id="2" name="turn_2_radio"/>
+            <text x="20" y="40" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.2}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="60" width="20" height="20" params="17" style="1" id="3" name="turn_3_radio"/>
+            <text x="20" y="60" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.3}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="80" width="20" height="20" params="17" style="1" id="4" name="turn_4_radio"/>
+            <text x="20" y="80" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.4}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="100" width="20" height="20" params="17" style="1" id="5" name="turn_5_radio"/>
+            <text x="20" y="100" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.5}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+            <radiobutton x="0" y="120" width="20" height="20" params="17" style="1" id="6" name="turn_6_radio"/>
+            <text x="20" y="120" width="190" height="13" params="0" style="0" caption="${wiredfurni.params.turn.6}">
+             <variables>
+              <var key="font_face" value="Volter" type="String"/>
+              <var key="font_size" value="9" type="uint"/>
+              <var key="text_color" value="0xffffff" type="hex"/>
+              <var key="embed_fonts" value="true" type="Boolean"/>
+              <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+             </variables>
+            </text>
+
+          </children>
+        </selector>
+
+      </children>
+    </container>
+  </window>
+</layout>

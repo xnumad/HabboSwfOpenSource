@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_condition_inputs_24" width="228" height="48" version="0.1" uid="F360FD47-1CB3-42AE-25A2-ACB349BD2B7F">
+  <window>
+    <container x="0" y="0" width="228" height="48" params="17" style="0" dynamic_style="" name="cont" color="0xffff3d3d3d" background="true">
+      <children>
+        <container x="0" y="0" width="228" height="1" params="16" style="0" dynamic_style="" name="ruler" color="0xffff232323" background="true"/>
+        <text x="5" y="5" width="118" height="13" params="786432" style="0" dynamic_style="" name="start_date_desc_txt" caption="%24%7Bwiredfurni.params.startdate%7D">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <input x="129" y="5" width="92" height="15" params="1" style="0" dynamic_style="" name="start_date">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="border" value="true" type="Boolean"/>
+            <var key="border_color" value="0xffffff" type="hex"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="tool_tip_caption" value="YYYY/MM/DD HH:MM" type="String"/>
+          </variables>
+        </input>
+        <text x="5" y="25" width="118" height="13" params="786432" style="0" dynamic_style="" name="end_date_desc_txt" caption="%24%7Bwiredfurni.params.enddate%7D">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <input x="129" y="25" width="92" height="15" params="1" style="0" dynamic_style="" name="end_date">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="border" value="true" type="Boolean"/>
+            <var key="border_color" value="0xffffff" type="hex"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="tool_tip_caption" value="YYYY/MM/DD HH:MM" type="String"/>
+          </variables>
+        </input>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_leaderboard" width="437" height="511" version="0.1" uid="50E05E68-3B2F-8AFE-1246-F136BECFCEA3">
+  <window>
+    <frame x="12" y="9" width="437" height="511" params="32769" style="3" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.3411764705882353" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <bitmap x="0" y="0" width="431" height="472" params="2192" style="0" name="background" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="leaderboard_bg" type="String"/>
+          </variables>
+        </bitmap>
+        <region x="107" y="0" width="119" height="28" params="17" style="0" name="this_week_region" color="0x00" background="true" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="119" height="28" params="16" style="0" name="this_week_image" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="left_black" type="String"/>
+              </variables>
+            </bitmap>
+            <text x="0" y="5" width="119" height="17" params="2192" style="0" name="this_week_text" caption="%24%7Bsnowwar.leaderboard.this_week%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="226" y="0" width="119" height="28" params="17" style="0" name="all_time_region" color="0x00" background="true" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="119" height="28" params="16" style="0" name="all_time_image" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="right_blue" type="String"/>
+              </variables>
+            </bitmap>
+            <text x="0" y="5" width="119" height="17" params="2192" style="0" name="all_time_text" caption="%24%7Bsnowwar.leaderboard.all_time%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <container x="40" y="30" width="350" height="389" params="3145744" style="0" name="borderContainer">
+          <children>
+            <border x="0" y="28" width="350" height="336" params="8388816" style="0" name="listBorder" blend="0.5" clipping="false"/>
+            <region x="146" y="1" width="58" height="28" params="209" style="0" name="scrollUp" treshold="0">
+              <children>
+                <bitmap x="0" y="0" width="58" height="28" params="16" style="0" treshold="0"/>
+              </children>
+            </region>
+            <region x="146" y="361" width="58" height="28" params="1233" style="0" name="scrollDown" treshold="0">
+              <children>
+                <bitmap x="0" y="0" width="58" height="28" params="16" style="0" treshold="0"/>
+              </children>
+            </region>
+          </children>
+        </container>
+        <link x="0" y="445" width="431" height="18" params="1" style="0" name="changeView" caption="Hall%20Of%20Fame" treshold="0">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+          </variables>
+        </link>
+        <itemlist x="37" y="58" width="356" height="336" params="3145920" style="0" name="list" background="true"/>
+        <region x="17" y="199" width="14" height="18" params="17" style="0" name="previousWeek" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="14" height="18" params="16" style="0" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="scroll_left" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </region>
+        <region x="400" y="199" width="14" height="18" params="17" style="0" name="nextWeek" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="14" height="18" params="16" style="0" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="scroll_right" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </region>
+        <text x="251" y="397" width="46" height="18" params="16" style="0" name="reset_text_stroke" caption="Reset%3A%20">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="UbuntuThick" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0x1077ac" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="251" y="397" width="46" height="18" params="16" style="0" name="reset_text" caption="Reset%3A%20">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </frame>
+  </window>
+</layout>

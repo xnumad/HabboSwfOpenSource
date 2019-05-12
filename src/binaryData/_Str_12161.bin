@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_button_black" width="20" height="22" version="0.0">
+	<window>
+		<label name="_BTN_TEXT" style="0" x="0" y="0" width="20" height="22" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_center" />
+				<param name="relative_vertical_scale_center" />
+				<param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+			</params>
+			<variables>
+                <var key="text_style" value="button_regular" />
+				<var key="text_color" value="0xffffffff" type="hex" />
+				<var key="margins"><value>
+					<Map>
+						<var key="left"   value="8" type="int" />
+						<var key="top"    value="4" type="int" />
+						<var key="right"  value="8" type="int" />
+						<var key="bottom" value="4" type="int" />
+					</Map>
+				</value></var>
+			</variables>
+		</label>
+	</window>
+</layout>

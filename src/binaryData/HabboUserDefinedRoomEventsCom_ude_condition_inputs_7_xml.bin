@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_event" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="228" height="80" params="17" style="0" name="cont" color="0xff3d3d3d" background="true">
+      <children>
+        <container x="0" y="0" width="228" height="1" params="16" style="0" name="ruler" color="0xFF232323" background="true"/>
+        <text x="5" y="5" width="218" height="13" params="786432" style="0" name="desc_txt" caption="${wiredfurni.params.requireall}" color="0xFFffffff">
+          <variables>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+
+        <selector x="5" y="21" width="218" height="60" params="17" style="0" name="eval_selector">
+          <children>
+             <radiobutton x="0" y="0" width="20" height="20" params="17" style="1" id="0" name="eval_0_radio"/>
+             <text x="20" y="0" width="190" height="35" params="786432" style="0" caption="${wiredfurni.params.requireall.0}">
+              <variables>
+               <var key="font_face" value="Volter" type="String"/>
+               <var key="font_size" value="9" type="uint"/>
+               <var key="text_color" value="0xffffff" type="hex"/>
+               <var key="embed_fonts" value="true" type="Boolean"/>
+               <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+               <var key="multiline" value="true" type="Boolean"/>
+               <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+             </text>
+
+             <radiobutton x="0" y="30" width="20" height="20" params="17" style="1" id="1" name="eval_1_radio"/>
+             <text x="20" y="30" width="190" height="35" params="786432" style="0" caption="${wiredfurni.params.requireall.1}">
+              <variables>
+               <var key="font_face" value="Volter" type="String"/>
+               <var key="font_size" value="9" type="uint"/>
+               <var key="text_color" value="0xffffff" type="hex"/>
+               <var key="embed_fonts" value="true" type="Boolean"/>
+               <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+               <var key="multiline" value="true" type="Boolean"/>
+               <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+             </text>
+
+          </children>
+        </selector>
+
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="trophy_general" width="340" height="173" version="0.1" uid="0E2094F3-4926-AD6D-FF88-CD83FA732392">
+  <window>
+    <container x="0" y="0" width="340" height="173" params="33025" style="0" name="trophy_container" caption="trophy_container" treshold="0">
+      <children>
+        <bitmap x="0" y="0" width="340" height="173" params="16" style="0" name="trophy_bg" caption="trophy_bg">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <text x="22" y="25" width="297" height="116" params="16" style="0" name="greeting" caption="Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Aenean%20sit%20amet%20justo%20sagittis%20orci%20dapibus%20semper%20sagittis%20id%20neque.%20Nunc%20sed%20quam%20vitae%20felis%20semper%20neque.%20Nunc%20sed%20quam%20vitae%20felis%20semper%20neque.%20Nunc%20sed%20quam%20vitae%20felis%20semper%20neque.%20Nunc%20sed%20quam%20vitae%20felis%20semper%20neque.%20Nunc%20sed%20quam%20vitae%20felis%20semper%20%20semper%20%20semper%20%20semper%20%20semper%20%20semper%20%20semper%20%20sempeaaaaaa">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="21" y="142" width="83" height="18" params="16" style="0" name="date" caption="da.te.">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="246" y="142" width="74" height="17" params="262160" style="0" name="name" caption="kateislonger">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <region x="318" y="3" width="18" height="20" params="17" style="0" name="close" caption="close" treshold="0"/>
+        <container x="130" y="4" width="80" height="18" params="131072" style="0" name="title_bg" caption="title_bg" color="0xffffff0000" background="true">
+          <children>
+            <text x="18" y="1" width="44" height="17" params="786432" style="1" name="%2524%257Bwidget.furni.trophy.title%257D" caption="%24%7Bwidget.furni.trophy.title%7D" color="0x00">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

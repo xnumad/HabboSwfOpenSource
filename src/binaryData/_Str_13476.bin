@@ -1,0 +1,13 @@
+<chatstyle id="2" name="bot" systemstyle="true">
+	<layouts>
+		<speakLayout assetId="bubble_bot_speak"/>
+		<whisperLayout assetId="bubble_bot_whisper"/>
+		<shoutLayout assetId="bubble_bot_shout"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="bot_chat_bubble_left"/>
+		<middleBitmap assetId="bot_chat_bubble_middle"/>
+		<rightBitmap assetId="bot_chat_bubble_right"/>
+		<pointerBitmap assetId="bot_chat_bubble_pointer"/>
+	</bitmaps>
+</chatstyle>

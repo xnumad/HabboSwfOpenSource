@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<manifest>
+    <component class="com.sulake.bootstrap.HabboGameManagerBootstrap" version="0.1" >
+        <interface iid="com.sulake.iid.IIDHabboGameManager" />
+        <assets>
+		<!-- 
+            <asset mimeType="image/png" name="bg_sky"/>
+            <asset mimeType="image/png" name="bg_sunshine"/>
+            <asset mimeType="image/png" name="bg_vista_1"/>
+            <asset mimeType="image/png" name="bg_vista_2"/>
+            <asset mimeType="image/png" name="bg_vista_3"/>
+            <asset mimeType="image/png" name="blue_ball"/>
+            <asset mimeType="image/png" name="blue_ball_rematch"/>
+            <asset mimeType="image/png" name="blue_glove"/>
+            <asset mimeType="image/png" name="blue_infobox"/>
+            <asset mimeType="image/png" name="blue_square"/>
+            <asset mimeType="image/png" name="gray_ball"/>
+            <asset mimeType="image/png" name="gray_infobox"/>
+            <asset mimeType="image/png" name="gray_square"/>
+            <asset mimeType="image/png" name="green_square"/>
+            <asset mimeType="image/png" name="load_1"/>
+            <asset mimeType="image/png" name="load_2"/>
+            <asset mimeType="image/png" name="load_3"/>
+            <asset mimeType="image/png" name="load_4"/>
+            <asset mimeType="image/png" name="load_5"/>
+            <asset mimeType="image/png" name="load_6"/>
+            <asset mimeType="image/png" name="load_7"/>
+            <asset mimeType="image/png" name="load_8"/>
+            <asset mimeType="image/png" name="red_ball"/>
+            <asset mimeType="image/png" name="red_ball_rematch"/>
+            <asset mimeType="image/png" name="red_glove"/>
+            <asset mimeType="image/png" name="red_infobox"/>
+            <asset mimeType="image/png" name="red_square"/>
+            <asset mimeType="image/png" name="snowstorm_logo"/>
+            <asset mimeType="image/png" name="ui_ball_indicator_bg"/>
+            <asset mimeType="image/png" name="ui_ball"/>
+            <asset mimeType="image/png" name="ui_exit_down"/>
+            <asset mimeType="image/png" name="ui_exit_up"/>
+            <asset mimeType="image/png" name="ui_make_balls_down"/>
+            <asset mimeType="image/png" name="ui_make_balls_up"/>
+            <asset mimeType="image/png" name="ui_me_bg"/>
+            <asset mimeType="image/png" name="rematch_1"/>
+            <asset mimeType="image/png" name="rematch_2"/>
+            <asset mimeType="image/png" name="rematch_3"/>
+            <asset mimeType="image/png" name="rematch_4"/>
+            <asset mimeType="image/png" name="rematch_5"/>
+            <asset mimeType="image/png" name="rematch_6"/>
+            <asset mimeType="image/png" name="ui_me_health_0"/>
+            <asset mimeType="image/png" name="ui_me_health_1"/>
+            <asset mimeType="image/png" name="ui_me_health_2"/>
+            <asset mimeType="image/png" name="ui_me_health_3"/>
+            <asset mimeType="image/png" name="ui_me_health_4"/>
+            <asset mimeType="image/png" name="ui_me_health_5"/>
+            <asset mimeType="image/png" name="ui_me_minus_1"/>
+            <asset mimeType="image/png" name="ui_me_minus_2"/>
+            <asset mimeType="image/png" name="ui_me_minus_3"/>
+            <asset mimeType="image/png" name="ui_me_minus_4"/>
+            <asset mimeType="image/png" name="ui_me_plus_1"/>
+            <asset mimeType="image/png" name="ui_me_plus_2"/>
+            <asset mimeType="image/png" name="ui_me_plus_3"/>
+            <asset mimeType="image/png" name="ui_me_plus_4"/>
+            <asset mimeType="image/png" name="ui_no_balls_1"/>
+            <asset mimeType="image/png" name="ui_no_balls_2"/>
+            <asset mimeType="image/png" name="ui_no_balls_3"/>
+            <asset mimeType="image/png" name="ui_no_balls_4"/>
+            <asset mimeType="image/png" name="ui_timer_and_points"/>
+            <asset mimeType="image/png" name="arena_8_preview"/>
+            <asset mimeType="image/png" name="arena_9_preview"/>
+            <asset mimeType="image/png" name="arena_10_preview"/>
+            <asset mimeType="image/png" name="arena_11_preview"/>
+            <asset mimeType="image/png" name="star_empty"/>
+            <asset mimeType="image/png" name="star_filled_bronze"/>
+            <asset mimeType="image/png" name="star_filled_silver"/>
+            <asset mimeType="image/png" name="star_filled_gold"/>
+            <asset mimeType="image/png" name="quick_play_background"/>
+            <asset mimeType="image/png" name="quick_play_teaser"/>
+            <asset mimeType="image/png" name="quick_play_instructions"/>
+            <asset mimeType="image/png" name="free_games_bg"/>
+            <asset mimeType="image/png" name="leaderboard_bg"/>
+            <asset mimeType="image/png" name="leaderboard_divider"/>
+            <asset mimeType="image/png" name="leaderboard_highlighter"/>
+            <asset mimeType="image/png" name="left_black"/>
+            <asset mimeType="image/png" name="left_blue"/>
+            <asset mimeType="image/png" name="right_black"/>
+            <asset mimeType="image/png" name="right_blue"/>
+            <asset mimeType="image/png" name="add_friend_icon_blue"/>
+            <asset mimeType="image/png" name="add_friend_icon_red"/>
+            <asset mimeType="image/png" name="add_friend_icon_green"/>
+            <asset mimeType="image/png" name="scroll_down_click"/>
+            <asset mimeType="image/png" name="scroll_down_hilite"/>
+            <asset mimeType="image/png" name="scroll_down_inactive"/>
+            <asset mimeType="image/png" name="scroll_down_normal"/>
+            <asset mimeType="image/png" name="scroll_up_click"/>
+            <asset mimeType="image/png" name="scroll_up_hilite"/>
+            <asset mimeType="image/png" name="scroll_up_inactive"/>
+            <asset mimeType="image/png" name="scroll_up_normal"/>
+            <asset mimeType="image/png" name="scroll_left"/>
+            <asset mimeType="image/png" name="scroll_right"/>
+            -->
+
+            <!--
+            <asset mimeType="image/png" name="throw_1_1"/>
+            <asset mimeType="image/png" name="throw_1_2"/>
+            <asset mimeType="image/png" name="throw_1_3"/>
+            <asset mimeType="image/png" name="throw_1_4"/>
+
+            <asset mimeType="image/png" name="throw_2_1"/>
+            <asset mimeType="image/png" name="throw_2_2"/>
+            <asset mimeType="image/png" name="throw_2_3"/>
+            <asset mimeType="image/png" name="throw_2_4"/>
+            <asset mimeType="image/png" name="throw_2_5"/>
+
+            <asset mimeType="image/png" name="throw_3_1"/>
+            <asset mimeType="image/png" name="throw_3_2"/>
+            <asset mimeType="image/png" name="throw_3_3"/>
+            <asset mimeType="image/png" name="throw_3_4"/>
+            <asset mimeType="image/png" name="throw_3_5"/>
+
+            <asset mimeType="image/png" name="balls_1"/>
+            <asset mimeType="image/png" name="balls_2"/>
+            <asset mimeType="image/png" name="balls_3"/>
+            <asset mimeType="image/png" name="balls_4"/>
+            <asset mimeType="image/png" name="balls_5"/>
+
+            <asset mimeType="image/png" name="move_1"/>
+            <asset mimeType="image/png" name="move_2"/>
+            <asset mimeType="image/png" name="move_3"/>
+            <asset mimeType="image/png" name="move_4"/>
+
+            <asset mimeType="image/png" name="pagination_ball"/>
+            <asset mimeType="image/png" name="pagination_ball_hilite"/>
+            -->
+
+            <asset mimeType="text/xml" name="games_main"/>
+            <asset mimeType="text/xml" name="instructions_list_item"/>
+            <asset mimeType="text/xml" name="counter"/>
+            <asset mimeType="text/xml" name="figure"/>
+            <asset mimeType="text/xml" name="snowwar_ending"/>
+            <asset mimeType="text/xml" name="snowwar_exit"/>
+            <asset mimeType="text/xml" name="snowwar_lobby_player"/>
+            <asset mimeType="text/xml" name="snowwar_own_stats"/>
+            <asset mimeType="text/xml" name="snowwar_lobby_player_team_1"/>
+            <asset mimeType="text/xml" name="snowwar_lobby_player_team_2"/>
+            <asset mimeType="text/xml" name="snowwar_results_player_team_1"/>
+            <asset mimeType="text/xml" name="snowwar_results_player_team_2"/>
+            <asset mimeType="text/xml" name="snowwar_snowballs"/>
+            <asset mimeType="text/xml" name="snowwar_team_scores"/>
+            <asset mimeType="text/xml" name="snowwar_timer"/>
+            <asset mimeType="text/xml" name="snowwar_loading_background_xml" />
+            <asset mimeType="text/xml" name="snowwar_exit_confirmation" />
+            <asset mimeType="text/xml" name="snowwar_leaderboard" />
+            <asset mimeType="text/xml" name="snowwar_leaderboard_entry" />
+
+            <asset name="explosion0001" mimeType="image/png">
+              <param key="offset" value="-64,-64"/>
+            </asset>
+            <asset name="explosion0002" mimeType="image/png">
+              <param key="offset" value="-59,-58"/>
+            </asset>
+            <asset name="explosion0003" mimeType="image/png">
+              <param key="offset" value="-55,-53"/>
+            </asset>
+            <asset name="explosion0004" mimeType="image/png">
+              <param key="offset" value="-51,-46"/>
+            </asset>
+            <asset name="explosion0005" mimeType="image/png">
+              <param key="offset" value="-60,-39"/>
+            </asset>
+            <asset name="explosion0006" mimeType="image/png">
+              <param key="offset" value="-35,-31"/>
+            </asset>
+            <asset name="explosion0007" mimeType="image/png">
+              <param key="offset" value="-28,-23"/>
+            </asset>
+            <asset name="explosion0008" mimeType="image/png">
+              <param key="offset" value="-28,-23"/>
+            </asset>
+            <asset name="explosion0009" mimeType="image/png">
+              <param key="offset" value="-25,-25"/>
+            </asset>
+            <asset name="explosion0010" mimeType="image/png">
+              <param key="offset" value="-52,-39"/>
+            </asset>
+            <asset name="explosion0011" mimeType="image/png">
+              <param key="offset" value="-66,-43"/>
+            </asset>
+            <asset name="explosion0012" mimeType="image/png">
+              <param key="offset" value="-66,-45"/>
+            </asset>
+            
+            <!-- Game center -->
+            <asset mimeType="text/xml" name="game_center_view_generic_xml"/>
+            <asset mimeType="text/xml" name="game_center_leaderboard_view_xml"/>
+            <asset mimeType="text/xml" name="game_center_teaser_view_xml"/>
+            <asset mimeType="text/xml" name="game_center_waiting_game_view_xml"/>
+            <asset mimeType="text/xml" name="game_achievement_entry_xml"/>
+            <asset mimeType="text/xml" name="game_leaderboard_entry_xml"/>
+            <asset mimeType="text/xml" name="game_leaderboard_entry_small_xml"/>
+
+            <asset mimeType="text/xml" name="game_center_lucky_loser_entry_xml"/>
+
+            <asset mimeType="image/png" name="game_center_icon_selected"/>
+            <asset mimeType="image/png" name="game_center_speech_bubble"/>
+            <asset mimeType="image/png" name="game_center_reward_star"/>
+
+        </assets>
+    </component>
+</manifest>

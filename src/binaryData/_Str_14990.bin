@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="request_report_user" width="282" height="347" version="0.1" uid="E0AE8595-4391-1D23-68B6-73A8305E85F0">
+  <window>
+    <frame x="0" y="0" width="282" height="347" params="32769" style="100" name="report_user" caption="%24%7Bguide.help.request.emergency.title%7D" width_min="282" width_max="282" height_min="50">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="5" y="0" width="270" height="292" params="8536080" style="0" name="list" width_min="270" width_max="270">
+          <children>
+            <text x="0" y="0" width="264" height="38" params="16" style="100" caption="%24%7Bguide.help.request.emergency.desc%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_bottom" value="10" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="264" height="16" params="16" style="100" name="report_error" caption="%24%7Bguide.help.request.emergency.desc.error%7D" visible="false">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xff0000" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <widget x="0" y="38" width="270" height="100" params="16" style="100" name="input_widget">
+              <variables>
+                <var key="widget_type" value="illumina_input" type="String"/>
+                <var key="illumina_input:button_caption" value="" type="String"/>
+                <var key="illumina_input:empty_message" value="${guide.help.request.emergency.input.empty}" type="String"/>
+                <var key="illumina_input:multiline" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+            <container x="0" y="138" width="30" height="20" params="16" style="100"/>
+            <border x="0" y="158" width="270" height="108" params="16" style="104" color="0x0ac1d19">
+              <children>
+                <text x="10" y="10" width="250" height="30" params="16" style="100" caption="%24%7Bguide.help.request.emergency.help.title%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <link x="10" y="41" width="250" height="16" params="33" style="100" name="urgent_help_link" caption="%24%7Bguide.help.request.emergency.help.link%7D" visible="false" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+                <button x="60" y="59" width="136" height="48" params="147665" style="101" name="submit_button" caption="%24%7Bguide.help.request.user.create.input.button%7D" color="0x0bbbbbb" height_min="48" height_max="48"/>
+              </children>
+            </border>
+            <container x="0" y="266" width="30" height="10" params="16" style="100"/>
+            <link x="0" y="276" width="270" height="16" params="1" style="100" name="cancel_link" caption="%24%7Bguide.help.request.user.create.cancel.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </link>
+          </children>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="25" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

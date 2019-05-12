@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="tab_entry" width="20" height="20" version="0.0">
+  <window>
+    <text background="true" x="0" y="0" width="193" height="63" params="16" style="0" name="aaa" caption="Sharing%20your%20password%20or%20personal%20details%20online%20is%20dangerous.%20The%20moderators%20might%20monitor%20these%20conversations%20for%20your%20safety.">
+      <variables>
+        <var key="font_face" value="Volter" type="String"/>
+        <var key="font_size" value="9" type="uint"/>
+        <var key="text_color" value="0" type="uint"/>
+        <var key="embed_fonts" value="true" type="Boolean"/>
+        <var key="multiline" value="true" type="Boolean"/>
+        <var key="word_wrap" value="true" type="Boolean"/>
+      </variables>
+    </text>
+  </window>
+</layout>

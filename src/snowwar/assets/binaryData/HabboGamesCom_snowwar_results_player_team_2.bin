@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_results_player_team_2" width="289" height="62" version="0.1" uid="06FE0FB3-00E0-A60D-53AE-84C6BD7E3452">
+  <window>
+    <itemlist_horizontal x="0" y="0" width="289" height="62" params="16" style="0">
+      <children>
+        <container x="0" y="0" width="61" height="62" params="16" style="0" name="playerScoreContainer">
+          <children>
+            <bitmap x="0" y="0" width="59" height="59" params="16400" style="0" name="playerScoreBackground" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="red_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="0" y="0" width="61" height="62" params="16400" style="0" name="playerScoreGlow" tags="bitmap"/>
+            <text x="0" y="17" width="60" height="24" params="131088" style="0" name="playerScore_stroke" caption="102" tags="stroke" width_min="40">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="UbuntuThick" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xfd6859" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="thickness" value="200" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="0" y="17" width="60" height="24" params="131088" style="0" name="playerScore" caption="102">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <bitmap x="5" y="5" width="50" height="50" params="208" style="0" name="loadingIcon" visible="false" tags="bitmap"/>
+          </children>
+        </container>
+        <container x="61" y="0" width="162" height="62" params="16" style="0" name="playerDataContainer">
+          <children>
+            <bitmap x="0" y="0" width="162" height="62" params="16" style="0" name="playerDataBackground" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="red_infobox" type="String"/>
+              </variables>
+            </bitmap>
+            <text x="47" y="3" width="68" height="19" params="208" style="0" name="playerName_stroke" caption="Painimies" tags="stroke" width_max="150">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="UbuntuThick" type="String"/>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x993333" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="thickness" value="200" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="47" y="3" width="68" height="19" params="208" style="0" name="playerName" caption="Painimies" width_max="150">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="20" y="26" width="135" height="35" params="16" style="0" name="playerStats">
+              <children>
+                <container x="0" y="0" width="112" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="112" height="16" params="131088" style="0" name="playerHitsLabel" caption="%24%7Bsnowwar.results.hits%7D" width_min="33">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="62" y="0" width="60" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="60" height="17" params="131088" style="0" name="playerHits_stroke" caption="20" tags="stroke" width_min="30">
+                      <variables>
+                        <var key="auto_size" value="right" type="String"/>
+                        <var key="font_face" value="UbuntuThick" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xcc6666" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="200" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="0" width="60" height="17" params="131088" style="0" name="playerHits" caption="20" width_min="30">
+                      <variables>
+                        <var key="auto_size" value="right" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="0" y="14" width="114" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="114" height="16" params="131088" style="0" name="playerKillsLabel" caption="%24%7Bsnowwar.results.kills%7D" width_min="40">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="62" y="14" width="60" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="60" height="17" params="131088" style="0" name="playerKills_stroke" caption="5" tags="stroke" width_min="30">
+                      <variables>
+                        <var key="auto_size" value="right" type="String"/>
+                        <var key="font_face" value="UbuntuThick" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xcc6666" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="200" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="0" width="60" height="17" params="131088" style="0" name="playerKills" caption="5" width_min="30">
+                      <variables>
+                        <var key="auto_size" value="right" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <container x="13" y="24" width="140" height="35" params="16" style="0" name="playerTotalStats">
+              <children>
+                <container x="0" y="9" width="148" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="148" height="17" params="131088" style="0" name="totalScoreLabel" caption="%24%7Bsnowwar.stats.total_score%7D" width_min="33">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="100" y="9" width="54" height="17" params="131088" style="0">
+                  <children>
+                    <text x="0" y="0" width="54" height="17" params="131088" style="0" name="totalScore_stroke" caption="20" tags="stroke" width_min="24">
+                      <variables>
+                        <var key="font_face" value="UbuntuThick" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xcc6666" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="200" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="0" width="50" height="17" params="131088" style="0" name="totalScore" caption="20" width_min="20">
+                      <variables>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <region x="7" y="33" width="150" height="13" params="17" style="0" name="scoreTooltip" visible="false" treshold="0">
+              <children>
+                <bitmap x="0" y="0" width="150" height="13" params="16" style="0" name="skillLevel" tags="bitmap"/>
+              </children>
+              <variables>
+                <var key="tool_tip_delay" value="0" type="uint"/>
+              </variables>
+            </region>
+          </children>
+        </container>
+        <container x="223" y="0" width="64" height="62" params="16" style="0" name="playerImageContainer">
+          <children>
+            <bitmap x="0" y="0" width="64" height="62" params="16" style="0" name="playerImageBackground" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="red_square" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="0" y="0" width="64" height="62" params="16" style="0" name="playerImage" tags="bitmap"/>
+            <region x="0" y="0" width="64" height="62" params="17" style="0" name="addFriend" visible="false" treshold="0">
+              <children>
+                <bitmap x="41" y="3" width="20" height="20" params="16" style="0" tags="bitmap">
+                  <variables>
+                    <var key="bitmap_asset_name" value="add_friend_icon_red" type="String"/>
+                  </variables>
+                </bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${snowwar.add_friend.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="0" type="uint"/>
+              </variables>
+            </region>
+          </children>
+        </container>
+      </children>
+    </itemlist_horizontal>
+  </window>
+</layout>

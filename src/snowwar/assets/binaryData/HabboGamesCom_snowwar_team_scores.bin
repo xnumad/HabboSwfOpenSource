@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="snowwar_team_scores" width="189" height="147" version="0.1" uid="E4D7935B-D390-F80A-B7CD-1DD63B6BA69C">
+  <window>
+    <container x="0" y="0" width="189" height="147" params="64" style="0">
+      <children>
+        <bitmap x="0" y="0" width="188" height="147" params="16" style="0" name="backgroundImage" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="ui_timer_and_points" type="String"/>
+          </variables>
+        </bitmap>
+        <container x="29" y="44" width="56" height="27" params="16" style="0" color="0x0ff">
+          <children>
+            <text x="0" y="0" width="56" height="27" params="16" style="0" name="score_blue_stroke" caption="0" tags="stroke" width_min="30">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="UbuntuThick" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x1077ac" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="56" height="26" params="16" style="0" name="score_blue" caption="0" width_min="30">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="104" y="44" width="56" height="27" params="16" style="0" color="0x0ff0000">
+          <children>
+            <text x="0" y="0" width="56" height="27" params="16" style="0" name="score_red_stroke" caption="0" width_min="30">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="UbuntuThick" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xfd6859" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="56" height="26" params="16" style="0" name="score_red" caption="0">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

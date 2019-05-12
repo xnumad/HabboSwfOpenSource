@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="purchase_confirmation" width="325" height="291" version="0.1" uid="CF8B663C-86AF-4EB0-7883-CB24BCE27A7B">
+  <window>
+    <frame x="9" y="12" width="325" height="291" params="35073" style="3" caption="%24%7Bcatalog.purchase_confirmation.title%7D" color="0x0418db0" width_min="275" height_min="150">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="0" y="8" width="323" height="235" params="8538256" style="0" name="content">
+          <children>
+            <itemlist_vertical x="0" y="0" width="404" height="171" params="131088" style="0" caption="Confirm%20purchase">
+              <children>
+                <container x="0" y="0" width="344" height="171" params="16" style="0" caption="Confirm%20purchase">
+                  <children>
+                    <border x="10" y="12" width="126" height="152" params="16" style="0" caption="Confirm%20purchase" color="0x0f1f1f1">
+                      <children>
+                        <bitmap x="1" y="1" width="126" height="152" params="16" style="0" name="product_image" caption="Confirm%20purchase"/>
+                      </children>
+                    </border>
+                    <itemlist_vertical x="143" y="21" width="176" height="90" params="3145744" style="0" name="properties_itemlist">
+                      <children>
+                        <text x="0" y="0" width="177" height="35" params="8536080" style="0" name="product_name" caption="001%20lorem%20ipsum%20title%20that%20wraps%20around">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="14" type="uint"/>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="0" y="42" width="41" height="19" params="8536080" style="0" name="quantity" caption="X%20123">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="14" type="uint"/>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <itemlist_horizontal x="0" y="68" width="288" height="22" params="147472" style="0">
+                          <children>
+                            <text x="0" y="1" width="268" height="19" params="16" style="0" caption="%24%7Bcatalog.purchase.confirmation.dialog.cost%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="font_size" value="14" type="uint"/>
+                                <var key="text_style" value="u_regular" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <container x="268" y="0" width="20" height="22" params="147472" style="0" name="purchase_cost_box"/>
+                          </children>
+                        </itemlist_horizontal>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="7" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_vertical>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+            <container x="0" y="181" width="311" height="17" params="147472" style="100" name="disclaimer">
+              <children>
+                <text x="33" y="0" width="278" height="17" params="16" style="3" caption="%24%7Bdisclaimer.credit_spending%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <checkbox x="13" y="0" width="296" height="16" params="17" style="3" name="spending_disclaimer" treshold="0"/>
+              </children>
+            </container>
+            <itemlist_horizontal x="13" y="208" width="315" height="27" params="131088" style="3" name="buttons" caption="Confirm%20purchase">
+              <children>
+                <button x="0" y="0" width="110" height="27" params="132113" style="3" name="cancel_button" caption="%24%7Bcatalog.purchase_confirmation.cancel%7D" width_min="110" width_max="110" height_min="27" height_max="27"/>
+                <button_thick x="186" y="0" width="110" height="27" params="132113" style="5" name="buy_button" caption="%24%7Bcatalog.purchase_confirmation.buy%7D" color="0x0aa00" width_min="110" width_max="110" height_min="27" height_max="27"/>
+              </children>
+              <variables>
+                <var key="spacing" value="76" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

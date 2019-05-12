@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guide_closed" width="282" height="204" version="0.1" uid="DBCC6D48-619C-E26E-77B0-DB9B11ACABFF">
+  <window>
+    <frame x="0" y="0" width="282" height="204" params="32769" style="100" name="guide_closed" caption="%24%7Bguide.help.request.guide.closed.title%7D" width_min="282" width_max="282" height_min="0">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <container x="10" y="0" width="60" height="48" params="16" style="100">
+          <children>
+            <widget x="0" y="0" width="34" height="84" params="16" style="100" name="requester_avatar">
+              <variables>
+                <var key="widget_type" value="avatar_image" type="String"/>
+                <var key="avatar_image:cropped" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+          </children>
+        </container>
+        <itemlist_vertical x="70" y="0" width="200" height="147" params="8536080" style="0" width_min="200" width_max="200">
+          <children>
+            <text x="0" y="0" width="271" height="19" params="16" style="100" caption="%24%7Bguide.help.request.guide.closed.heading%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="24" width="200" height="16" params="16" style="100" name="close_reason" caption="Lilyflower%20closed%20the%20case.">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="45" width="200" height="28" params="16" style="100" caption="%24%7Bguide.help.request.guide.closed.thanks%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="0" y="78" width="266" height="48" params="131089" style="101" name="close_button" caption="%24%7Bguide.help.request.user.thanks.close.button%7D" color="0x0bbbbbb" height_min="48" height_max="48"/>
+            <link x="20" y="131" width="91" height="16" params="1" style="100" name="report_link" caption="Report%20Lilyflower" treshold="0">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="tool_tip_caption" value="${guide.help.common.report.link.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </link>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="40" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

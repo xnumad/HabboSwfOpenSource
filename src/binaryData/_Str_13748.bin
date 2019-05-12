@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboNavigatorBootstrap" version="0.0" >
+	  <interface iid="com.sulake.iid.IIDHabboNavigator" />
+	  <assets>
+	    <asset mimeType="image/png" name="arrow_down_white_png" />
+	    <asset mimeType="image/png" name="arrow_right_white_png" />	    
+	    <asset mimeType="image/png" name="create_room_png" />
+	    <asset mimeType="image/png" name="doormode_doorbell_png" />
+	    <asset mimeType="image/png" name="doormode_doorbell_small_png" />
+	    <asset mimeType="image/png" name="doormode_password_png" />
+	    <asset mimeType="image/png" name="doormode_password_small_png" />
+        <asset mimeType="image/png" name="doormode_invisible_png" />
+        <asset mimeType="image/png" name="doormode_invisible_small_png" />
+	    <asset mimeType="image/png" name="enter_room_png" />
+	    <asset mimeType="image/png" name="enter_room_l_png" />
+	    <asset mimeType="image/png" name="enter_room_m_png" />
+	    <asset mimeType="image/png" name="enter_room_r_png" />
+	    <asset mimeType="image/png" name="enter_room_a_png" />
+	    <asset mimeType="image/png" name="event_png" />
+	    <asset mimeType="image/png" name="favourite_png" />
+	    <asset mimeType="image/png" name="facebook_logo_small_png" />
+        <asset mimeType="image/png" name="group_base_icon_png" />
+        <asset mimeType="image/png" name="make_favourite_png" />
+	    <asset mimeType="image/png" name="home_png" />
+        <asset mimeType="image/png" name="make_home_png" />
+        <asset mimeType="image/png" name="icon_weblink_png" />
+	    <asset mimeType="image/png" name="icon_hotelview_png" />
+	    <asset mimeType="image/png" name="icon_hotelview_reactive_png" />    
+
+        <asset mimeType="image/png" name="navi_room_favourite_png" />
+	    <asset mimeType="image/png" name="navi_room_friends_png" />
+        <asset mimeType="image/png" name="navi_room_icon_png" />
+	    <asset mimeType="image/png" name="navi_room_official_png" />
+	    <asset mimeType="image/png" name="navi_room_own_png" />
+	    <asset mimeType="image/png" name="navi_room_popular_png" /> 
+	    <asset mimeType="image/png" name="navi_tag_hot_1_png" />    
+	    <asset mimeType="image/png" name="navi_tag_hot_2_png" />    
+	    <asset mimeType="image/png" name="navi_tag_hot_3_png" />    
+	    <asset mimeType="image/png" name="trading_allowed_png" />
+	    <asset mimeType="image/png" name="popup_arrow_down_png" />
+	    <asset mimeType="image/png" name="popup_arrow_left_png" />
+	    <asset mimeType="image/png" name="popup_arrow_right_png" />	    
+
+        <asset mimeType="image/png" name="rico_rnd_m_png" />
+        <asset mimeType="image/png" name="rico_rnd_l_png" />
+        <asset mimeType="image/png" name="rico_rnd_l_b_png" />
+	    <asset mimeType="image/png" name="rico_rnd_r_png" />
+        <asset mimeType="image/png" name="rico_rnd_r_b_png" />
+
+	    <asset mimeType="image/png" name="select_arrow_png" />	    
+	    <asset mimeType="image/png" name="tag_l_reactive_png" />
+	    <asset mimeType="image/png" name="tag_m_reactive_png" />
+	    <asset mimeType="image/png" name="tag_r_reactive_png" />
+	    <asset mimeType="image/png" name="tag_l_png" />
+	    <asset mimeType="image/png" name="tag_m_png" />
+	    <asset mimeType="image/png" name="tag_r_png" />    
+	    <asset mimeType="image/png" name="thumb_up_png" />
+	    <asset mimeType="image/png" name="tile_icon_black_png" />
+	    <asset mimeType="image/png" name="tile_icon_white_png" />   
+	    <asset mimeType="image/png" name="usercount_fixed_b_png" />
+	    <asset mimeType="image/png" name="usercount_fixed_g_png" />
+	    <asset mimeType="image/png" name="usercount_fixed_o_png" />
+	    <asset mimeType="image/png" name="usercount_fixed_r_png" />
+	    <asset mimeType="image/png" name="usercount_fixed_y_png" />
+        <asset mimeType="image/png" name="vip_icon_png" />  
+        <asset mimeType="image/png" name="remove_rights_png" />
+
+	    <asset mimeType="text/xml" name="grs_front_page_search_big_xml" />
+	    <asset mimeType="text/xml" name="grs_front_page_search_small_xml" />		    							    						    				
+	    <asset mimeType="text/xml" name="grs_guest_room_details_long_xml" />	
+	    <asset mimeType="text/xml" name="grs_guest_room_details_short_xml" />
+        <asset mimeType="text/xml" name="grs_guest_room_details_phase_one_xml" />
+	    <asset mimeType="text/xml" name="grs_guest_room_thumbnail_xml" />		    				
+	    <asset mimeType="text/xml" name="grs_room_ads_details_short_xml" />
+        <asset mimeType="text/xml" name="grs_room_ads_details_phase_one_xml" />
+	    <asset mimeType="text/xml" name="grs_hot_room_details_xml" />
+	    <asset mimeType="text/xml" name="grs_main_window_xml" />
+        <asset mimeType="text/xml" name="grs_main_window_new_xml" />
+	    <asset mimeType="text/xml" name="grs_official_room_row_xml" />
+        <asset mimeType="text/xml" name="grs_official_room_row_phase_one_xml" />
+        <asset mimeType="text/xml" name="grs_popular_tag_row_xml" />
+        <asset mimeType="text/xml" name="grs_promoted_room_category_xml" />
+        <asset mimeType="text/xml" name="grs_category_selector_xml" />
+	    <asset mimeType="text/xml" name="grs_usercount_xml" />
+	    <asset mimeType="text/xml" name="nav_error_popup_xml" />	
+	    <asset mimeType="text/xml" name="nav_simple_alert_xml" />
+        <asset mimeType="text/xml" name="nav_promo_alert_xml" />
+	    <asset mimeType="text/xml" name="iro_event_settings_xml" />
+        <asset mimeType="text/xml" name="iro_event_info_xml" />
+        <asset mimeType="text/xml" name="iro_room_details_framed_xml" />
+        <asset mimeType="text/xml" name="iro_room_filter_framed_xml" />
+	    <asset mimeType="text/xml" name="iro_tag_xml" />
+	    <asset mimeType="text/xml" name="roc_create_room_xml" />
+        <asset mimeType="text/xml" name="roc_vip_promo_xml" />
+	    <asset mimeType="text/xml" name="roc_room_thumbnail_xml" />
+        <asset mimeType="text/xml" name="ros_banned_user_xml" />
+	    <asset mimeType="text/xml" name="ros_flat_controller_xml" />
+        <asset mimeType="text/xml" name="ros_friend_xml" />
+        <asset mimeType="text/xml" name="ros_badword_xml" />
+	    <asset mimeType="text/xml" name="ros_room_settings_xml" />
+	    <asset mimeType="text/xml" name="ros_confirm_xml" />
+	    <asset mimeType="text/xml" name="password_input_xml" />
+	    <asset mimeType="text/xml" name="doorbell_xml" />
+        <asset mimeType="text/xml" name="guild_info_xml" />
+        <asset mimeType="text/xml" name="toolbar_hover_xml" />
+        <asset mimeType="text/xml" name="enforce_category_xml" />
+
+	   </assets>	
+	 </component> 
+	
+</manifest>

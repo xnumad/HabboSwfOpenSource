@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<layout name="illumina_light_frame_modal" width="50" height="80" version="0.0">
+    <filters>
+   		<DropShadowFilter distance="0" angle="0" color="0" alpha="0.75" blurX="80" blurY="80" />
+   	</filters>
+
+    <window>
+        <border x="0" y="40" width="50" height="40" style="101" tags="_INTERNAL, _EXCLUDE">
+            <params>
+                <param name="relative_horizontal_scale_strech"/>
+                <param name="relative_vertical_scale_strech"/>
+                <param name="use_parent_graphic_context" />
+            </params>
+        </border>
+
+        <container name="content_area" x="1" y="70" width="48" height="19" tags="_CONTENT, _INTERNAL, _EXCLUDE">
+            <params>
+                <param name="relative_horizontal_scale_strech"/>
+                <param name="relative_vertical_scale_strech"/>
+                <param name="use_parent_graphic_context"/>
+                <param name="reflect_resize_to_parent"/>
+            </params>
+        </container>
+
+        <container name="titlebar" x="0" y="40" width="50" height="30" treshold="0" tags="_EXCLUDE, _INTERNAL">
+            <params>
+                <param name="relative_horizontal_scale_strech" />
+                <param name="relative_vertical_scale_fixed" />
+                <param name="input_event_processor" />
+                <param name="use_parent_graphic_context" />
+                <param name="mouse_dragging_trigger" />
+            </params>
+        </container>
+
+        <label name="header_title_text" x="8" y="0" width="20" height="20" background="false" tags="_TITLE, _EXCLUDE, _INTERNAL">
+            <params>
+                <param name="relative_horizontal_scale_fixed" />
+                <param name="relative_vertical_scale_fixed" />
+                <param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+            </params>
+            <variables>
+                <var key="text_style" value="il_frame_modal_title" />
+                <var key="auto_size" value="left" type="String"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+            </variables>
+        </label>
+
+        <region name="header_button_close" x="22" y="49" width="20" height="20" treshold="0" tags="_EXCLUDE, _INTERNAL, close">
+            <params>
+                <param name="relative_horizontal_scale_move"/>
+                <param name="relative_vertical_scale_fixed"/>
+                <param name="use_parent_graphic_context"/>
+                <param name="input_event_processor"/>
+            </params>
+            <children>
+                <static_bitmap name="header_button_image" x="0" y="0" width="20" height="20" style="0" tags="_EXCLUDE, _INTERNAL">
+                    <params>
+                        <param name="relative_horizontal_scale_move"/>
+                        <param name="relative_vertical_scale_fixed"/>
+                        <param name="use_parent_graphic_context"/>
+                    </params>
+                    <variables>
+                        <var key="asset_uri" value="illumina_light_button_frame_close_png" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                    </variables>
+                </static_bitmap>
+            </children>
+        </region>
+
+        <scaler name="_FRAME_SCALER" x="0" y="70" width="50" height="10" visible="true" treshold="0" tags="_SCALER, _EXCLUDE, _INTERNAL">
+            <params>
+                <param name="relative_horizontal_scale_strech" />
+                <param name="relative_vertical_scale_move" />
+                <param name="use_parent_graphic_context" />
+                <param name="bound_to_parent_rect" />
+            </params>
+        </scaler>
+    </window>
+</layout>

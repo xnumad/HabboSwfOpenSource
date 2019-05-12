@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="marketplace_offer_details" width="340" height="460" version="0.1" uid="3A0B6AD0-CC6C-F38F-220E-EB261B455120">
+  <window>
+    <container x="0" y="0" width="340" height="460" params="16" style="0" name="details_container">
+      <children>
+        <button x="0" y="0" width="235" height="22" params="131089" style="3" name="back_button" caption="%24%7Bcatalog.marketplace.offer_details.back%7D"/>
+        <border x="0" y="32" width="66" height="62" params="16" style="0">
+          <children>
+            <bitmap x="0" y="0" width="66" height="62" params="16" style="0" name="item_image"/>
+          </children>
+        </border>
+        <widget x="34" y="30" width="40" height="40" params="16" style="3" name="unique_item_overlay_widget" visible="false">
+          <variables>
+            <var key="widget_type" value="limited_item_overlay_preview" type="String"/>
+          </variables>
+        </widget>
+        <widget x="16" y="48" width="40" height="40" params="16" style="3" name="rarity_item_overlay_widget">
+          <variables>
+            <var key="widget_type" value="rarity_item_overlay_grid" type="String"/>
+          </variables>
+        </widget>
+        <container x="73" y="28" width="267" height="80" params="16" style="0" name="text_container">
+          <children>
+            <text x="0" y="5" width="74" height="17" params="16" style="3" name="item_name" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="18" width="73" height="17" params="16" style="3" name="item_description" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="41" width="186" height="15" params="16" style="3" name="item_price" caption="%24%7Bcatalog.marketplace.offer_details.price%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="54" width="216" height="15" params="16" style="3" name="offer_count" caption="%24%7Bcatalog.marketplace.offer_details.offer_count%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="67" width="228" height="15" params="16" style="3" name="average_price" caption="%24%7Bcatalog.marketplace.offer_details.average_price%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <button x="291" y="35" width="39" height="22" params="393233" style="3" name="buy_button" caption="%24%7Bbuy%7D"/>
+        <selector x="0" y="116" width="340" height="34" params="17" style="3" name="chart_selector">
+          <children>
+            <button_group_left x="0" y="0" width="160" height="22" params="131089" style="3" name="price_development" caption="%24%7Bcatalog.marketplace.offer_details.price_development%7D" width_min="160" width_max="160"/>
+            <button_group_right x="160" y="0" width="160" height="22" params="131089" style="3" name="trade_volume" caption="%24%7Bcatalog.marketplace.offer_details.trade_volume%7D" width_min="160" width_max="160"/>
+          </children>
+        </selector>
+        <text x="0" y="145" width="76" height="17" params="16" style="3" name="chart_title" caption="%24%7Blorem.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="0" y="165" width="340" height="220" params="16" style="0">
+          <children>
+            <bitmap x="10" y="10" width="320" height="200" params="16" style="0" name="chart_bitmap">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

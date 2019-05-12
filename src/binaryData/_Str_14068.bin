@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="messenger" width="282" height="385" version="0.1" uid="E6DDBD30-EB8E-CDC8-EB64-4C01C0A60252">
+  <window>
+    <frame x="120" y="120" width="282" height="385" params="98305" style="100" caption="%24%7Bmessenger.window.title%7D" width_min="282" height_min="275">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <container x="16" y="0" width="248" height="40" params="144" style="103" name="avatar_list">
+          <children>
+            <border x="0" y="0" width="35" height="35" params="16" style="102">
+              <children>
+                <widget x="-3" y="-14" width="45" height="72" params="16" style="100" name="avatar_image">
+                  <variables>
+                    <var key="widget_type" value="avatar_image" type="String"/>
+                    <var key="avatar_image:scale" value="sh" type="String"/>
+                    <var key="avatar_image:only_head" value="true" type="Boolean"/>
+                  </variables>
+                </widget>
+                <widget x="8" y="8" width="20" height="20" params="16" style="0" name="group_badge_image" visible="false">
+                <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                    <var key="badge_image:type" value="group" type="String"/>
+                    <var key="badge_image:fit_size_to_contents" value="true" type="Boolean"/>
+
+                    <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                    <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                    <var key="badge_image:zoom_x" value="0.5" type="Number"/>
+                    <var key="badge_image:zoom_y" value="0.5" type="Number"/>
+
+                    <var key="badge_image:pivot_point" value="center" type="String"/>
+                  </variables>
+                </widget>
+                <static_bitmap x="19" y="6" width="13" height="12" params="16" style="100" name="chat_indicator" visible="false">
+                  <variables>
+                    <var key="asset_uri" value="common_chat_indicator" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <region x="0" y="0" width="35" height="35" params="17" style="100" name="avatar_click_region" treshold="0"/>
+              </children>
+            </border>
+          </children>
+        </container>
+        <region x="0" y="0" width="15" height="35" params="17" style="100" name="avatars_scroll_left" treshold="0">
+          <children>
+            <static_bitmap x="7" y="0" width="8" height="35" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="help_habboway_prev" type="String"/>
+                <var key="pivot_point" value="center left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="265" y="0" width="15" height="35" params="81" style="100" name="avatars_scroll_right" treshold="0">
+          <children>
+            <static_bitmap x="1" y="0" width="8" height="35" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="help_habboway_next" type="String"/>
+                <var key="pivot_point" value="center left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <widget x="0" y="39" width="281" height="15" params="144" style="100">
+          <children>
+            <label x="0" y="0" width="157" height="15" params="3088" style="100" name="separator_label" caption="%24%7Bmessenger.window.separator%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x444444" type="hex"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="margin_right" value="5" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <itemlist_horizontal x="7" y="57" width="266" height="21" params="144" style="100" name="button_strip">
+          <children>
+            <container_button x="0" y="0" width="21" height="20" params="131089" style="102" name="follow_button" caption="Follow" height_max="20">
+              <children>
+                <static_bitmap x="6" y="5" width="9" height="10" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="messenger_visit_icon" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${messenger.followfriend.tooltip}" type="String"/>
+              </variables>
+            </container_button>
+            <container_button x="25" y="0" width="30" height="20" params="131089" style="102" name="profile_button" caption="Profile" height_max="20">
+              <children>
+                <static_bitmap x="7" y="4" width="16" height="12" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="messenger_profile_icon" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+              </variables>
+            </container_button>
+            <button x="59" y="0" width="193" height="20" params="131089" style="102" name="report_button" caption="%24%7Bmessenger.window.button.report%7D" height_max="20">
+              <variables>
+                <var key="tool_tip_caption" value="${messenger.window.button.report.tooltip}" type="String"/>
+              </variables>
+            </button>
+          </children>
+          <variables>
+            <var key="spacing" value="4" type="int"/>
+          </variables>
+        </itemlist_horizontal>
+        <region x="253" y="57" width="20" height="20" params="81" style="102" name="close_conversation_button" caption="Close" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="20" height="20" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_light_button_frame_close_png" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <scrollable_itemlist_vertical x="7" y="84" width="266" height="212" params="2192" style="100" name="conversation">
+          <children>
+            <widget x="0" y="0" width="259" height="76" params="147472" style="100" name="msg_normal">
+              <variables>
+                <var key="widget_type" value="illumina_chat_bubble" type="String"/>
+              </variables>
+            </widget>
+            <border x="0" y="76" width="255" height="50" params="147472" style="105" name="msg_notification">
+              <children>
+                <static_bitmap x="0" y="0" width="50" height="50" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="messenger_caution" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="50" y="15" width="205" height="20" params="3088" style="100" name="content">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="margin_top" value="7" type="int"/>
+                    <var key="margin_bottom" value="9" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <border x="0" y="126" width="255" height="50" params="147472" style="105" name="msg_invitation" color="0x0d1efde">
+              <children>
+                <static_bitmap x="0" y="0" width="50" height="50" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="messenger_notification_icon" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="50" y="18" width="205" height="20" params="3088" style="100" name="content">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="margin_top" value="7" type="int"/>
+                    <var key="margin_bottom" value="9" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <container x="0" y="176" width="255" height="24" params="147472" style="102" name="msg_info">
+              <children>
+                <text x="0" y="0" width="255" height="24" params="16" style="100" name="content" width_min="255" width_max="255">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="margin_top" value="10" type="int"/>
+                    <var key="margin_bottom" value="10" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+        </scrollable_itemlist_vertical>
+        <widget x="7" y="305" width="266" height="30" params="1168" style="100" name="input_widget">
+          <variables>
+            <var key="widget_type" value="illumina_input" type="String"/>
+            <var key="illumina_input:empty_message" value="${messenger.window.input.default}" type="String"/>
+            <var key="illumina_input:max_chars" value="120" type="int"/>
+          </variables>
+        </widget>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="40" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="collect_minimized" width="192" height="29" version="0.1" uid="88EEABEE-60A3-A0B2-7901-57F24EEBE797">
+  <window>
+    <region x="0" y="0" width="192" height="29" params="17" style="0" name="collect_minimized" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="192" height="29" params="16" style="6" color="0x0686661" blend="1.0" tags="BGCOLOR"/>
+        <border x="3" y="3" width="186" height="22" params="16" style="3" color="0x0201e19" blend="0.8" visible="false"/>
+        <border x="163" y="0" width="29" height="29" params="16" style="6" color="0x96bdcb" blend="1.0">
+          <children>
+            <static_bitmap x="0" y="0" width="29" height="29" params="16" style="100" name="club_icon" tags="ICON">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}returnusergifting/phone_smaller.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </border>
+        <text x="10" y="6" width="154" height="16" params="16" style="100" caption="%24%7Bphone.number.collect.title%7D">
+          <variables>
+            <var key="text_style" value="il_regular_white" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

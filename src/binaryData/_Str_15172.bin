@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="mannequin_peer_wrong_gender" width="386" height="180" version="0.1" uid="6C2C9B33-F60D-5387-95F8-61E07155895E">
+  <window>
+    <container x="0" y="0" width="386" height="180" params="16" style="0">
+      <children>
+        <button_thick x="289" y="141" width="75" height="28" params="131089" style="3" name="ok_button" caption="%24%7Bgeneric.ok%7D" width_min="75" width_max="140"/>
+        <bitmap x="20" y="10" width="83" height="130" params="16" style="3" name="preview_image"/>
+        <text x="126" y="52" width="245" height="86" params="16" style="3" name="description" caption="%24%7Bmannequin.widget.wronggender%7D">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <icon x="80" y="110" width="43" height="29" params="16" style="0" name="club_icon"/>
+      </children>
+    </container>
+  </window>
+</layout>

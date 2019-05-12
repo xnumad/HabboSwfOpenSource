@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_header_3" width="64" height="33" version="0.0">
+
+	<window>
+	
+		<container name="header_container" style="0" x="0" y="0" width="64" height="33" tags="_EXCLUDE, _INTERNAL">
+	
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="use_parent_graphic_context" />
+				<param name="bound_to_parent_rect" />
+                <param name="inherit_caption" />
+			</params>
+
+			<children>
+		
+				<!-- Caption text -->
+
+				<label name="header_title_text" x="4" y="2" width="12" height="15" background="false" tags="_TITLE, _EXCLUDE, _INTERNAL">
+					<params>
+						<param name="relative_horizontal_scale_center" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="use_parent_graphic_context" />
+                        <param name="inherit_caption" />
+					</params>
+					<variables>
+						<var key="text_style" value="u_frame_title" />
+						<var key="grid_fit_type" value="subpixel" type="String"/>
+						<var key="text_color" value="0xffffff" type="hex"/>
+						<var key="margins">
+							<value>
+								<Map>
+									<var key="left" value="8" type="int" />
+									<var key="top" value="1" type="int" />
+									<var key="right" value="8" type="int" />
+									<var key="bottom" value="1" type="int" />
+								</Map>
+							</value>
+						</var>
+					</variables>
+				</label>
+
+				<!-- Controls container -->
+
+				<itemlist_horizontal x="20" y="2" width="45" height="20" background="false" color="0xffffffff" tags="_EXCLUDE, _INTERNAL, _COLORIZE, _CONTROLS">
+					<params>
+						<param name="relative_horizontal_scale_move" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="use_parent_graphic_context" />
+					</params>
+                    <variables>
+                        <var key="spacing" value="5" type="int"/>
+                    </variables>
+
+                    <children>
+
+                        <!-- Help button -->
+
+						<closebutton name="header_button_help" style="4" x="0" y="0" width="19" height="20" tags="_EXCLUDE, _INTERNAL, help">
+							<params>
+								<param name="relative_horizontal_scale_fixed" />
+								<param name="relative_vertical_scale_fixed" />
+								<param name="input_event_processor" />
+								<param name="use_parent_graphic_context" />
+							</params>
+						</closebutton>
+
+                        <!-- Close button -->
+
+						<closebutton name="header_button_close" style="3" x="23" y="0" width="19" height="20" tags="_EXCLUDE, _INTERNAL, close">
+							<params>
+								<param name="relative_horizontal_scale_fixed" />
+								<param name="relative_vertical_scale_fixed" />
+								<param name="input_event_processor" />
+								<param name="use_parent_graphic_context" />
+							</params>
+						</closebutton>
+					</children>
+				</itemlist_horizontal>
+			</children>
+		</container>
+	</window>
+</layout>

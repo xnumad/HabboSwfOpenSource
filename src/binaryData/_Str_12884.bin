@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_main" width="165" height="245" version="0.1" uid="DD2AA587-D7DA-5C33-DD2E-98253397F4F2">
+  <window>
+    <container x="0" y="0" width="165" height="245" params="17" style="0" name="buttons">
+      <children>
+        <region x="0" y="0" width="79" height="79" params="17" style="1" name="profile" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="profile_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="profile_text" caption="%24%7Bwidget.memenu.profile%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="86" y="0" width="79" height="79" params="17" style="1" name="minimail" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="minimail_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="minimail_text" caption="%24%7Bwidget.memenu.minimail%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="0" y="79" width="79" height="79" params="17" style="1" name="rooms" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="rooms_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="rooms_text" caption="%24%7Bwidget.memenu.myrooms%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="86" y="79" width="79" height="79" params="17" style="1" name="settings" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="settings_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="settings_text" caption="%24%7Bwidget.memenu.settings%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="0" y="158" width="79" height="79" params="17" style="1" name="achievements" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="achievements_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="achievements_text" caption="%24%7Bwidget.memenu.achievements%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="86" y="158" width="79" height="79" params="17" style="1" name="talents" color="0xff3d3d3d" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="talents_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="talents_text" caption="%24%7Bwidget.memenu.talents%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <region x="0" y="247" width="79" height="79" params="17" style="1" name="guide" color="0xff3d3d3d" visible="false" treshold="0">
+          <children>
+            <bitmap x="5" y="5" width="70" height="55" params="16" style="0" name="guide_icon"/>
+            <text x="4" y="61" width="70" height="13" params="786640" style="0" name="guide_text" caption="%24%7Bwidget.memenu.guide%7D" width_max="70">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

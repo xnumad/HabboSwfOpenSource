@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="poll" width="20" height="20" version="0.0">
+  <window>
+    <frame x="65" y="155" width="431" height="150" params="32769" style="0" caption="%24%7Bwidget.poll.title%7D">
+      <children>
+        <border x="0" y="2" width="418" height="117" params="2192" style="0" caption="Poll">
+          <children>
+            <text x="60" y="10" width="350" height="16" params="16" style="0" name="question" caption="%24%7B001_lorem_ipsum_title%7D" >
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0x0" type="hex"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="10" y="33" width="400" height="75" params="16" style="0" name="list_container">
+              <children>
+                <container x="0" y="0" width="34" height="75" params="2064" style="0" name="timer" caption="Poll" color="0xff000000" background="true">
+                  <children>
+                    <bitmap x="1" y="1" width="32" height="73" params="2064" style="0" name="timer_bar" caption="Poll"/>
+                    <text x="2" y="60" width="28" height="18" params="1040" style="0" name="timer_text" caption="30">
+                      <variables>
+                        <var key="font_face" value="Volter" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="embed_fonts" value="true" type="Boolean"/>
+                        <var key="auto_size" value="center" type="String"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <itemlist x="50" y="0" width="350" height="75" params="2065" style="0" name="choices" caption="Poll">
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

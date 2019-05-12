@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="counter" width="164" height="164" version="0.1" uid="5CB0BC56-9350-EEE9-0D8C-D4D2B40CC5D4">
+  <window>
+    <bitmap x="171" y="131" width="164" height="164" params="3264" style="0" name="counterBitmap" tags="bitmap" width_min="164" height_min="164">
+      <variables>
+        <var key="bitmap_asset_name" value="explosion001" type="String"/>
+      </variables>
+    </bitmap>
+  </window>
+</layout>

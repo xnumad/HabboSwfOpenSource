@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_invite_confirm" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="211" height="175" params="32769" style="0" name="alert_%202" caption="%24%7Bfriendlist.invite.title%7D">
+      <children>
+        <border x="0" y="0" width="199" height="118" params="98305" style="0" name="border">
+          <children>
+            <text x="10" y="5" width="180" height="20" params="1" style="0" name="invite_summary" caption="%24%7Bfriendlist.invite.summary%7D">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <input x="10" y="24" width="180" height="70" params="1" style="0" name="message_input" caption="">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="background" value="true" type="Boolean"/>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </input>
+            <text x="10" y="98" width="180" height="20" params="1" style="0" name="invite_note" caption="%24%7Bfriendlist.invite.note%7D">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <button x="139" y="122" width="60" height="21" params="131089" style="0" name="cancel" caption="%24%7Bgeneric.cancel%7D" width_min="60" width_max="60"/>
+        <button_thick x="0" y="122" width="60" height="21" params="131089" style="0" name="ok" caption="%24%7Bfriendlist.invite.send%7D" width_min="60" width_max="60"/>
+      </children>
+    </frame>
+  </window>
+</layout>

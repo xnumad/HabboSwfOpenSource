@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="purchase_confirmation" width="279" height="255" version="0.1" uid="3156E78C-C863-4586-5DD1-BBBE680BA322">
+  <window>
+    <frame x="0" y="0" width="279" height="255" params="33025" style="3" caption="%24%7Bcatalog.marketplace.confirm_title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="273" height="217" params="2192" style="0" caption="Confirm%20purchase">
+          <children>
+            <border x="12" y="12" width="48" height="48" params="16" style="0" caption="Confirm%20purchase" color="0x0f1f1f1">
+              <children>
+                <container x="4" y="4" width="40" height="40" params="16" style="0" name="image_container">
+                  <children>
+                    <static_bitmap x="2" y="2" width="36" height="36" params="16" style="0" name="unique_item_background_bitmap" visible="false">
+                      <variables>
+                        <var key="asset_uri" value="unique_item_label_1" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <bitmap x="0" y="0" width="40" height="40" params="16" style="0" name="item_image" tags="BITMAP" width_min="40" width_max="40"/>
+                    <widget x="2" y="2" width="36" height="36" params="16" style="3" name="unique_item_overlay_widget" visible="false">
+                      <variables>
+                        <var key="widget_type" value="limited_item_overlay_grid" type="String"/>
+                      </variables>
+                    </widget>
+                    <widget x="2" y="2" width="36" height="36" params="16" style="3" name="rarity_item_overlay_widget" visible="false">
+                      <variables>
+                        <var key="widget_type" value="rarity_item_overlay_grid" type="String"/>
+                      </variables>
+                    </widget>
+                  </children>
+                </container>
+              </children>
+            </border>
+            <text x="69" y="29" width="184" height="17" params="16" style="3" name="item_name" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="11" y="65" width="256" height="36" params="16" style="3" name="header_text" caption="%24%7Blorem.header%7D">
+              <variables>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="11" y="100" width="246" height="20" params="16" style="3" name="item_price" caption="%24%7Bcatalog.purchase.confirmation.dialog.costs%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="11" y="120" width="246" height="19" params="16" style="3" name="item_average_price" caption="%24%7Bcatalog.marketplace.offer_details.average_price%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="11" y="140" width="246" height="19" params="16" style="3" name="offer_count" caption="%24%7Bcatalog.marketplace.offer_count%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="9" y="184" width="120" height="25" params="132113" style="3" name="buy_button" caption="%24%7Bcatalog.purchase_confirmation.buy%7D" width_min="120" width_max="120"/>
+            <button x="147" y="184" width="120" height="25" params="132113" style="3" name="cancel_button" caption="%24%7Bcatalog.purchase_confirmation.cancel%7D" width_min="120" width_max="120"/>
+            <container x="9" y="163" width="252" height="24" params="16" style="100" name="disclaimer">
+              <children>
+                <text x="17" y="1" width="231" height="15" params="16" style="3" caption="%24%7Bdisclaimer.credit_spending%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="u_small" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <checkbox x="0" y="0" width="252" height="24" params="17" style="3" name="spending_disclaimer" treshold="0"/>
+              </children>
+            </container>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<layout name="illumina_dark_button" width="28" height="28" version="0.0">
+	<window>
+		<label name="_BTN_TEXT" style="0" x="0" y="0" width="28" height="28" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_center"/>
+				<param name="relative_vertical_scale_center"/>
+				<param name="use_parent_graphic_context"/>
+				<param name="inherit_caption"/>
+			</params>
+			<variables>
+				<var key="text_style" value="id_button"/>
+				<var key="margins">
+					<value>
+						<Map>
+							<var key="left" value="13" type="int"/>
+							<var key="top" value="3" type="int"/>
+							<var key="right" value="13" type="int"/>
+							<var key="bottom" value="3" type="int"/>
+						</Map>
+					</value>
+				</var>
+			</variables>
+		</label>
+	</window>
+</layout>

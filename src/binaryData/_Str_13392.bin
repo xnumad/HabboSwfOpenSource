@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="thumbnail" width="42" height="42" version="0.1" uid="AE010793-1549-2751-A6BC-7E7776519507">
+  <window>
+    <region x="0" y="0" width="42" height="42" params="17" style="0" clipping="false" treshold="0">
+      <children>
+        <border x="1" y="1" width="40" height="40" params="16" style="5" color="0x0cacaca" tags="BG_COLOR">
+          <children>
+            <static_bitmap x="2" y="2" width="36" height="36" params="16" style="0" name="unique_item_background_bitmap" visible="false">
+              <variables>
+                <var key="asset_uri" value="unique_item_label_1" type="String"/>
+              </variables>
+            </static_bitmap>
+            <bitmap x="1" y="18" width="38" height="35" params="16" style="0" name="bitmap" tags="BITMAP" width_min="40" width_max="38">
+              <variables>
+                <var key="pivot_point" value="top center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+            <widget x="0" y="0" width="40" height="40" params="16" style="100" name="badge" visible="false">
+              <variables>
+                <var key="widget_type" value="badge_image" type="String"/>
+                <var key="badge_image:pivot_point" value="center" type="String"/>
+                <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </widget>
+            <static_bitmap x="2" y="3" width="16" height="16" params="16" style="0" name="recyclable_container" visible="false">
+              <variables>
+                <var key="asset_uri" value="inventory_thumb_icon_recycle" type="String"/>
+              </variables>
+            </static_bitmap>
+            <widget x="2" y="2" width="36" height="36" params="16" style="0" name="unique_item_overlay_container" visible="false">
+              <variables>
+                <var key="widget_type" value="limited_item_overlay_grid" type="String"/>
+              </variables>
+            </widget>
+            <widget x="2" y="2" width="36" height="36" params="16" style="0" name="rarity_item_overlay_container" visible="false">
+              <variables>
+                <var key="widget_type" value="rarity_item_overlay_grid" type="String"/>
+              </variables>
+            </widget>
+            <container x="0" y="1" width="38" height="20" params="393360" style="0" name="number_container" color="0xff2f6982" tags="COUNT">
+              <children>
+                <text x="0" y="0" width="38" height="17" params="16" style="3" name="number" caption="66" tags="NUMBER%2CCOUNT" width_max="38">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_style" value="u_headline_small" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <static_bitmap x="4" y="4" width="10" height="10" params="16" style="100" name="rent_state" visible="false">
+              <variables>
+                <var key="asset_uri" value="inventory_thumb_rent_started" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </border>
+        <static_bitmap x="0" y="0" width="42" height="42" params="16" style="0" name="outline">
+          <variables>
+            <var key="asset_uri" value="inventory_thumb_selected_outline" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

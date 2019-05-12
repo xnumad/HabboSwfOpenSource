@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="spaces" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="339" height="416" params="16" style="0" name="default_3x3">
+      <children>
+        <bitmap x="0" y="0" width="339" height="68" params="16" style="0" name="headline"/>
+        <text x="12" y="73" width="315" height="52" params="16" style="0" name="pageText" caption="Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20In%20vitae%20est%20id%20tellus%20laoreet%20molestie.%20Integer%20quis%20dui%20eget%20erat%20dapibus%20dignissim.%20Curabitur%20lorem.%20Vestibulum%20id%20elit.%20Nulla%20eget%20sem%20malesuada%20magna%20iaculis%20ultrices.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0" type="uint"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

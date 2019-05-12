@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="catalog_promo" width="507" height="188" version="0.1" uid="AF5A5E2B-B50E-33DF-2DA1-08A5D6EFA2E0">
+  <window>
+    <container x="0" y="0" width="507" height="188" params="147472" style="0" name="catalog_promo">
+      <children>
+        <itemlist_vertical x="11" y="9" width="300" height="98" params="147472" style="0" name="info_container">
+          <children>
+            <formatted_text x="0" y="0" width="300" height="24" params="16" style="100" name="catalog_promo_caption" caption="%24%7Blanding.view.catalogpromo.caption%7D" tags="COLORABLE" width_min="300" width_max="300">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="29" width="300" height="16" params="16" style="100" name="catalog_promo_info" caption="%24%7Blanding.view.catalogpromo.info%7D" tags="COLORABLE">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <button x="-11" y="50" width="250" height="48" params="131089" style="100" name="open_page_button" caption="%24%7Blanding.view.catalogpromo.opencatalog%7D" width_min="250" width_max="250" height_min="48" height_max="48"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+        <container x="281" y="11" width="226" height="177" params="16400" style="0" name="picture_container">
+          <children>
+            <formatted_text x="10" y="145" width="200" height="28" params="16" style="100" name="catalog_promo_status" caption="%24%7Blanding.view.catalog.promo.picture.text%7D" tags="COLORABLE" width_min="200" width_max="200">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <static_bitmap x="20" y="0" width="183" height="144" params="16" style="0" name="picture">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/meter_level_0.png" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

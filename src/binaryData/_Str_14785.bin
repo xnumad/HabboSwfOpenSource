@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="thumbnail" width="35" height="60" version="0.1" uid="422E5901-CCFE-AB5C-4BD9-39CF8A3C812D">
+  <window>
+    <container x="0" y="0" width="35" height="60" params="17" style="3">
+      <children>
+        <button x="0" y="0" width="35" height="60" params="131089" style="3" name="button" tags="BUTTON"/>
+        <bitmap x="0" y="0" width="35" height="60" params="16" style="0" name="bitmap" tags="BITMAP"/>
+      </children>
+    </container>
+  </window>
+</layout>

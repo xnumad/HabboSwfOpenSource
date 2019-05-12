@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="chat_review_reporter_feedback" width="369" height="304" version="0.1" uid="E2BAF0DC-06A9-A0E2-A5F0-00CABAE88AAE">
+  <window>
+    <frame x="0" y="0" width="369" height="304" params="163841" style="100" name="pending_request" caption="%24%7Bguide.bully.request.reporter.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <container x="11" y="2" width="345" height="266" params="16400" style="100" clipping="false">
+          <children>
+            <text x="0" y="12" width="284" height="46" params="16" style="100" name="caption_txt" caption="%24%7Bguide.bully.request.reporter.sent.caption%7D">
+              <variables>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="text_style" value="il_heading_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <html x="0" y="49" width="282" height="101" params="1" style="100" name="body_txt" caption="%24%7Bguide.bully.request.reporter.sent.body%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <border x="0" y="151" width="345" height="50" params="16" style="102">
+              <children>
+                <static_bitmap x="18" y="17" width="16" height="17" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="help_notification" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="47" y="11" width="296" height="36" params="16" style="100" name="note_txt" caption="%24%7Bguide.bully.request.reporter.note%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <button x="102" y="216" width="140" height="50" params="131281" style="101" name="close_button" caption="%24%7Balert.close.button%7D" color="0x0bbbbbb"/>
+          </children>
+        </container>
+        <static_bitmap x="307" y="16" width="35" height="120" params="1040" style="100">
+          <variables>
+            <var key="asset_uri" value="help_illustrations_bully" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </frame>
+  </window>
+</layout>

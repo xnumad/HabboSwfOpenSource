@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guardian_chat_review_accept" width="282" height="276" version="0.1" uid="1F6FA60A-C59B-7528-BDCF-B379D6C92E51">
+  <window>
+    <frame x="0" y="0" width="282" height="276" params="32769" style="100" name="guardian_chat_review_accept" caption="%24%7Bguide.bully.request.guide.accept.title%7D" width_min="282" width_max="282" height_min="0">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <border x="0" y="20" width="280" height="224" params="16" style="103" name="border">
+          <children>
+            <itemlist_vertical x="0" y="0" width="280" height="221" params="16" style="0" name="itemlist">
+              <children>
+                <text x="70" y="0" width="170" height="47" params="16" style="100" name="request_title" caption="%24%7Bguide.bully.request.guide.accept.request.title%7D" width_max="170">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="margin_top" value="30" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="70" y="47" width="170" height="16" params="16" style="100" name="request_type" caption="%24%7Bguide.bully.request.guide.accept.request.type%7D" width_max="170">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <scrollable_itemlist_vertical x="70" y="63" width="205" height="80" params="16" style="100" name="request_description_wrapper">
+                  <children>
+                    <text x="0" y="0" width="195" height="38" params="16" style="100" name="request_description" caption="%24%7Bguide.bully.request.guide.accept.request.description%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="margin_top" value="10" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </scrollable_itemlist_vertical>
+                <container_button x="57" y="143" width="200" height="48" params="180241" style="101" name="accept_button" color="0x0bbbbbb" width_max="200" height_min="48" height_max="48">
+                  <children>
+                    <itemlist_horizontal x="20" y="11" width="200" height="25" params="8536080" style="100" width_max="200">
+                      <children>
+                        <static_bitmap x="0" y="8" width="11" height="12" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_accept_icon" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <label x="16" y="6" width="247" height="15" params="16" style="100" caption="%24%7Bguide.bully.request.guide.accept.accept.button%7D">
+                          <variables>
+                            <var key="text_style" value="il_button" type="String"/>
+                            <var key="margin_right" value="15" type="int"/>
+                          </variables>
+                        </label>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="5" type="int"/>
+                      </variables>
+                    </itemlist_horizontal>
+                  </children>
+                </container_button>
+                <region x="70" y="191" width="215" height="30" params="17" style="100" name="skip_link" treshold="0">
+                  <children>
+                    <label x="0" y="0" width="215" height="16" params="16" style="100" caption="%24%7Bguide.bully.request.guide.accept.skip.link%7D">
+                      <variables>
+                        <var key="text_style" value="il_link_regular" type="String"/>
+                      </variables>
+                    </label>
+                  </children>
+                </region>
+              </children>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <static_bitmap x="0" y="20" width="70" height="80" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="help_chat_review_perpetrator" type="String"/>
+            <var key="pivot_point" value="bottom center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <border x="185" y="0" width="80" height="50" params="16" style="102">
+          <children>
+            <widget x="10" y="10" width="63" height="37" params="147472" style="100" name="countdown">
+              <variables>
+                <var key="widget_type" value="countdown" type="String"/>
+                <var key="countdown:digits" value="2" type="uint"/>
+              </variables>
+            </widget>
+          </children>
+        </border>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="20" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

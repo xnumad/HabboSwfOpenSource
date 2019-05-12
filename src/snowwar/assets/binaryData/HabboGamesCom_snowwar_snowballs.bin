@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="snowwar_snowballs" width="57" height="260" version="0.1" uid="8DE344E8-78CA-92D7-8DF9-F9A06F633D38">
+  <window>
+    <container x="0" y="83" width="57" height="260" params="3072" style="0">
+      <children>
+        <container x="0" y="0" width="57" height="202" params="16" style="0">
+          <children>
+            <bitmap x="0" y="0" width="57" height="202" params="16" style="0" name="backgroundImage" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball_indicator_bg" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="14" width="30" height="30" params="16" style="0" name="ball_4" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="50" width="30" height="30" params="16" style="0" name="ball_3" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="86" width="30" height="30" params="16" style="0" name="ball_2" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="122" width="30" height="30" params="16" style="0" name="ball_1" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="158" width="30" height="30" params="16" style="0" name="ball_0" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_ball" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="14" y="158" width="30" height="30" params="16" style="0" name="ballProgress" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="" type="String"/>
+              </variables>
+            </bitmap>
+            <bitmap x="0" y="0" width="57" height="202" params="16" style="0" name="emptyFlashImage" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </container>
+        <region x="0" y="202" width="57" height="58" params="17" style="0" name="make_snowball" color="0x00" background="true" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="57" height="58" params="16" style="0" name="makeSnowballImage" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="ui_make_balls_up" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

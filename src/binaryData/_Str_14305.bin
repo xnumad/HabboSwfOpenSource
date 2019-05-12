@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_way" width="500" height="500" version="0.1" uid="3A20CA74-5190-E55D-9939-5FF165A81899">
+  <window>
+    <container x="0" y="0" width="500" height="500" params="0" style="101" caption="The%20Habbo%20Way" height_min="50">
+      <children>
+        <frame x="0" y="10" width="500" height="470" params="1" style="101">
+          <filters>
+            <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+          </filters>
+          <children>
+            <itemlist_horizontal x="198" y="0" width="102" height="30" params="147664" style="100">
+              <children>
+                <widget x="0" y="9" width="75" height="11" params="933904" style="100" name="page_widget">
+                  <variables>
+                    <var key="widget_type" value="progress_indicator" type="String"/>
+                    <var key="progress_indicator:style" value="etched" type="String"/>
+                    <var key="progress_indicator:size" value="6" type="uint"/>
+                  </variables>
+                </widget>
+                <static_bitmap x="77" y="2" width="25" height="25" params="16" style="100" name="dove_image">
+                  <variables>
+                    <var key="asset_uri" value="help_habboway_dove_off" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="spacing" value="2" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+            <container x="0" y="0" width="500" height="420" params="16" style="100" name="page_container" visible="false">
+              <children>
+                <widget x="245" y="30" width="10" height="275" params="16" style="100">
+                  <variables>
+                    <var key="widget_type" value="separator" type="String"/>
+                    <var key="separator:vertical" value="true" type="Boolean"/>
+                  </variables>
+                </widget>
+                <static_bitmap x="20" y="30" width="460" height="220" params="16" style="100" name="illustration">
+                  <variables>
+                    <var key="asset_uri" value="" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="30" y="255" width="20" height="30" params="16" style="100" name="correct_title_icon">
+                  <variables>
+                    <var key="asset_uri" value="help_habboway_correct" type="String"/>
+                    <var key="pivot_point" value="bottom center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="50" y="265" width="53" height="19" params="16" style="100" name="correct_title" caption="Playing">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="30" y="290" width="210" height="70" params="16" style="100" name="correct_description" caption="In%20Habbo%20you%20can%20play%20many%20games%2C%20be%20who%20you%20want%20to%20be%20and%20have%20fun...">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <static_bitmap x="270" y="255" width="20" height="30" params="16" style="100" name="wrong_title_icon">
+                  <variables>
+                    <var key="asset_uri" value="help_habboway_wrong" type="String"/>
+                    <var key="pivot_point" value="bottom center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="290" y="265" width="57" height="19" params="16" style="100" name="wrong_title" caption="Bullying">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="270" y="290" width="210" height="70" params="16" style="100" name="wrong_description" caption="as%20long%20as%20you%20don%u2019t%20hurt%20anyone%u2019s%20beliefs.%20Respect%20each%20and%20every%20other%20user.">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container_button x="21" y="350" width="197" height="60" params="147473" style="101" name="previous_button" color="0x0bbbbbb">
+                  <children>
+                    <itemlist_horizontal x="0" y="15" width="197" height="45" params="147472" style="100">
+                      <children>
+                        <container x="0" y="0" width="15" height="30" params="16" style="100"/>
+                        <static_bitmap x="15" y="1" width="20" height="30" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_habboway_prev" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <widget x="35" y="4" width="2" height="22" params="16" style="100">
+                          <variables>
+                            <var key="widget_type" value="separator" type="String"/>
+                            <var key="separator:vertical" value="true" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <text x="37" y="8" width="140" height="15" params="16" style="100" caption="%24%7Bhabbo.way.previous.button%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_button" type="String"/>
+                            <var key="margin_left" value="5" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <container x="177" y="0" width="20" height="30" params="16" style="100"/>
+                      </children>
+                    </itemlist_horizontal>
+                  </children>
+                </container_button>
+                <container_button x="303" y="350" width="178" height="60" params="409617" style="101" name="next_button" color="0x0bbbbbb">
+                  <children>
+                    <itemlist_horizontal x="0" y="15" width="178" height="45" params="147472" style="100">
+                      <children>
+                        <container x="0" y="0" width="20" height="30" params="16" style="100"/>
+                        <text x="20" y="8" width="121" height="15" params="16" style="100" caption="%24%7Bhabbo.way.next.button%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_button" type="String"/>
+                            <var key="margin_right" value="5" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <widget x="141" y="4" width="2" height="22" params="16" style="100">
+                          <variables>
+                            <var key="widget_type" value="separator" type="String"/>
+                            <var key="separator:vertical" value="true" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <static_bitmap x="143" y="1" width="20" height="30" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_habboway_next" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <container x="163" y="0" width="15" height="30" params="16" style="100"/>
+                      </children>
+                    </itemlist_horizontal>
+                  </children>
+                </container_button>
+              </children>
+            </container>
+            <container x="0" y="0" width="500" height="420" params="16" style="100" name="final_page" visible="false">
+              <children>
+                <text x="10" y="48" width="480" height="19" params="16" style="100" caption="%24%7Bhabbo.way.end.title%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="100" y="275" width="300" height="16" params="16" style="100" caption="%24%7Bhabbo.way.end.content%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <widget x="10" y="320" width="480" height="30" params="16" style="100">
+                  <variables>
+                    <var key="widget_type" value="separator" type="String"/>
+                  </variables>
+                </widget>
+                <container_button x="21" y="350" width="177" height="60" params="147473" style="101" name="back_button" color="0x0bbbbbb">
+                  <children>
+                    <itemlist_horizontal x="0" y="15" width="177" height="45" params="147472" style="100">
+                      <children>
+                        <container x="0" y="0" width="15" height="30" params="16" style="100"/>
+                        <static_bitmap x="15" y="1" width="20" height="30" params="16" style="100" name="illustration">
+                          <variables>
+                            <var key="asset_uri" value="help_habboway_prev" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <widget x="35" y="4" width="2" height="22" params="16" style="100">
+                          <variables>
+                            <var key="widget_type" value="separator" type="String"/>
+                            <var key="separator:vertical" value="true" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <text x="37" y="8" width="120" height="15" params="16" style="100" caption="%24%7Bhabbo.way.back.button%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_button" type="String"/>
+                            <var key="margin_left" value="5" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <container x="157" y="0" width="20" height="30" params="16" style="100"/>
+                      </children>
+                    </itemlist_horizontal>
+                  </children>
+                </container_button>
+                <button x="319" y="350" width="162" height="60" params="393233" style="101" name="quiz_button" caption="%24%7Bhabbo.way.quiz.button%7D" color="0x0bbbbbb"/>
+                <static_bitmap x="150" y="62" width="200" height="210" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}habboway/quiz_title.png" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="margin_left" value="1" type="int"/>
+            <var key="margin_top" value="50" type="int"/>
+            <var key="margin_right" value="1" type="int"/>
+            <var key="margin_bottom" value="1" type="int"/>
+          </variables>
+        </frame>
+        <container x="0" y="0" width="500" height="80" params="0" style="100">
+          <children>
+            <text x="0" y="0" width="145" height="17" params="16" style="100" caption="%24%7Bhabbo.way.frame.subtitle%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_style" value="il_frame_modal_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="16" width="258" height="30" params="16" style="100" caption="%24%7Bhabbo.way.frame.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_frame_modal_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

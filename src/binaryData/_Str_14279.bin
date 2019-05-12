@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ude_event" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="228" height="36" params="17" style="0" name="cont" color="0xff3d3d3d" background="true">
+      <children>
+        <container x="19" y="6" width="195" height="24" params="16" style="0" name="slider_container">
+          <children>
+            <container_button x="0" y="0" width="20" height="20" params="17" style="1" name="slider_button_left">
+              <children>
+                <icon x="4" y="5" width="12" height="12" params="16" style="2" color="0x666666"/>
+              </children>
+            </container_button>
+            <bitmap x="26" y="2" width="141" height="17" params="16" style="0" name="slider_base"/>
+            <container x="26" y="3" width="141" height="15" params="16" style="0" name="slider_movement_area">
+              <children>
+                <bitmap x="0" y="0" width="12" height="15" params="33073" style="0" name="slider_button"/>
+              </children>
+            </container>
+            <container_button x="173" y="0" width="20" height="20" params="17" style="1" name="slider_button_right">
+              <children>
+                <icon x="6" y="5" width="12" height="12" params="16" style="3" color="0x666666"/>
+              </children>
+            </container_button>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

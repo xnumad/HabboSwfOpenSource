@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="effect_selector" width="280" height="270" version="0.1" uid="60F4F7CA-0B03-CA19-9BA9-D461FF96708C">
+  <window>
+    <frame x="0" y="0" width="280" height="270" params="110593" style="3" caption="Show%20effect%20on%20avatar" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="4" y="17" width="256" height="215" params="2224" style="0" color="0xffffffffff" background="true"/>
+        <scrollable_itemlist_vertical x="4" y="17" width="256" height="215" params="2224" style="4" name="effect_list">
+          <children>
+            <text x="0" y="0" width="256" height="18" params="145" style="0" name="0" caption="None" background="true">
+              <variables>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="80" type="Number"/>
+                <var key="thickness" value="-15" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </scrollable_itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="8" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="8" type="int"/>
+        <var key="margin_bottom" value="8" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

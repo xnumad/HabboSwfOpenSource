@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="poll_question" width="382" height="561" version="0.1" uid="115EB593-69E5-6A66-2DA7-0A09223EC74C">
+  <window>
+    <frame x="0" y="0" width="382" height="561" params="32769" style="3" name="poll_question_frame" caption="%24%7Bpoll_question_title%7D" color="0xff418db0" width_min="382">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <region x="-5" y="8" width="380" height="60" params="1" style="3" name="header_region" color="0xffff0e3f52" background="true">
+          <children>
+            <text x="80" y="15" width="290" height="25" params="144" style="0" name="poll_question_headline" caption="%24%7Bpoll_question_headline%7D" color="0x00">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="10" y="7" width="40" height="40" params="16" style="3" name="poll_prompt_image">
+              <variables>
+                <var key="asset_uri" value="poll_poll_prompt_question" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <container x="0" y="70" width="370" height="424" params="8538128" style="3" color="0x0418db0">
+          <children>
+            <itemlist_vertical x="5" y="0" width="365" height="424" params="8538257" style="0" name="poll_content_wrapper" caption="%24%7Bpoll_window%7D" color="0x0418db0">
+              <children>
+                <scrollable_itemlist_vertical x="0" y="0" width="365" height="414" params="16400" style="3">
+                  <children>
+                    <text x="0" y="0" width="360" height="4" params="8601616" style="0" name="poll_question_text">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <container x="0" y="4" width="1" height="10" params="12714000" style="0"/>
+                    <container x="0" y="14" width="363" height="384" params="8538128" style="0" name="poll_question_answer_container"/>
+                  </children>
+                </scrollable_itemlist_vertical>
+                <container x="0" y="414" width="1" height="10" params="16" style="0"/>
+              </children>
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </container>
+        <container x="5" y="486" width="383" height="45" params="10224656" style="0" name="footer_container">
+          <children>
+            <text x="0" y="10" width="129" height="17" params="144" style="0" name="poll_question_number" caption="%24%7Bpoll_question_number%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <label x="190" y="10" width="74" height="17" params="393233" style="0" name="poll_question_cancel" caption="%24%7Bcancel%7D" width_min="74" width_max="74">
+              <variables>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+              </variables>
+            </label>
+            <button_thick x="270" y="0" width="80" height="40" params="131089" style="5" name="poll_question_button_ok" caption="%24%7Bok%7D" color="0x0aa00" width_min="80" width_max="80"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

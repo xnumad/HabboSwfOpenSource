@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_lobby_player" width="62" height="63" version="0.1" uid="3DD3BEA9-6681-B823-5F54-21F7ABE9D940">
+  <window>
+    <region x="0" y="0" width="62" height="63" params="17" style="0" name="region" background="true">
+      <children>
+        <bitmap x="0" y="0" width="62" height="63" params="16" style="0" name="bg_image" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="blue_square" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="0" y="0" width="62" height="63" params="16" style="0" name="image" tags="bitmap"/>
+      </children>
+      <variables>
+        <var key="tool_tip_delay" value="10" type="uint"/>
+      </variables>
+    </region>
+  </window>
+</layout>

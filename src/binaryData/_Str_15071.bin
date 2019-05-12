@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_frontpage4" width="360" height="460" version="0.1" uid="BD2CBC47-6574-F55F-E2B0-C6BB810BA9B4">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_frontpage4">
+      <children>
+        <static_bitmap x="246" y="64" width="103" height="324" params="16" style="0" name="ctlg_teaserimg_1">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/frontpage_teaser.gif" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <html x="15" y="70" width="225" height="320" params="1" style="3" name="ctlg_txt1" caption="%24%7Bloremipsum.html%7D" treshold="0">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="link_target" value="internal" type="String"/>
+          </variables>
+        </html>
+        <border x="8" y="397" width="345" height="61" params="16" style="2" name="bgBorder" color="0x051bbee">
+          <children>
+            <formatted_text x="10" y="6" width="272" height="17" params="16" style="3" name="ctlg_txt2" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <container x="0" y="20" width="345" height="34" params="16" style="0" name="redeemItemCodeWidget">
+              <children>
+                <border x="10" y="5" width="216" height="25" params="16" style="0">
+                  <children>
+                    <input x="4" y="4" width="206" height="15" params="1" style="3" name="voucher_code">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </input>
+                  </children>
+                </border>
+                <button x="274" y="5" width="62" height="22" params="393361" style="3" name="redeem" caption="%24%7Bredeem%7D" width_max="100"/>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboSoundManagerFlash10Bootstrap" version="0.0">
+
+		<interface iid="com.sulake.iid.IIDHabboSoundManager" />
+	
+		<assets>
+	
+			<asset mimeType="sound/mp3" name="sound_call_for_help" />
+			<asset mimeType="sound/mp3" name="sound_catalogue_cash" />
+			<asset mimeType="sound/mp3" name="sound_catalogue_duckets" />
+			<asset mimeType="sound/mp3" name="sound_console_message_sent" />
+			<asset mimeType="sound/mp3" name="sound_console_new_message" />
+			<asset mimeType="sound/mp3" name="sound_guide_received_invitation" />
+            <asset mimeType="sound/mp3" name="sound_guide_help_requested" />
+			<asset mimeType="sound/mp3" name="sound_respect_received" />
+            <asset mimeType="sound/mp3" name="sound_camera_shutter"/>
+
+            <asset mimeType="sound/mp3" name="HBSTG_ig_countdown" />
+            <asset mimeType="sound/mp3" name="HBSTG_ig_losing" />
+            <asset mimeType="sound/mp3" name="HBSTG_ig_winning" />
+
+            <asset mimeType="sound/mp3" name="FURNITURE_cuckoo_clock" />
+			
+			
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_get_snowball" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_hit1" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_hit2" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_hit3" />
+			<asset mimeType="sound/mp3" name="HBSTG_snowwar_make_snowball" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_miss" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_throw" />
+            <asset mimeType="sound/mp3" name="HBSTG_snowwar_walk" />
+
+
+        </assets>
+	
+	</component>
+	
+</manifest>

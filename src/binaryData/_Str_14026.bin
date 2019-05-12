@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="game_achievement_entry" width="300" height="48" version="0.1" uid="7AE890A6-C982-226A-B6BD-37B075459AE6">
+  <window>
+    <container x="0" y="0" width="300" height="48" params="144" style="0" name="achievement_container">
+      <children>
+        <widget x="10" y="0" width="40" height="40" params="16" style="0" name="achievement_image">
+          <variables>
+            <var key="widget_type" value="badge_image" type="String"/>
+            <var key="badge_image:pivot_point" value="top center" type="String"/>
+            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </widget>
+        <static_bitmap x="37" y="27" width="16" height="16" params="16" style="0" name="achievement_locked_image">
+          <variables>
+            <var key="asset_uri" value="game_center_achievement_locked_icon" type="String"/>
+          </variables>
+        </static_bitmap>
+        <formatted_text x="60" y="0" width="220" height="17" params="1073741969" style="0" name="achievement_name" caption="Achievement%20Name%20Placeholder">
+          <variables>
+            <var key="font_size" value="11" type="uint"/>            <var key="etching_color" value="0x0" type="hex"/>
+            <var key="text_style" value="il_heading_1" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+        <formatted_text x="60" y="16" width="220" height="31" params="1073741969" style="0" name="achievement_desc" caption="Achievement%20Desc%3A%20pasdsad%20sadaddsad%20sadsa%20as%20dasd%20sad%20asd%20sada%20sdas%20das">
+          <variables>
+            <var key="font_size" value="10" type="uint"/>            <var key="etching_color" value="0x0" type="hex"/>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+      </children>
+    </container>
+  </window>
+</layout>

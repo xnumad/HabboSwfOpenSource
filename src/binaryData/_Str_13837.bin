@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="opened_to_web_popup" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="189" height="45" params="0" style="0" name="opened_to_web_main" color="0xffcc6600" background="true">
+      <children>
+        <container x="2" y="2" width="185" height="41" params="16" style="0" name="cont" color="0xffffcc66" background="true"/>
+        <text x="50" y="10" width="100" height="30" params="1" style="0" name="info_text" caption="%24%7Bfriendlist.weblinkinfo%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0" type="uint"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="5" y="6" width="43" height="34" params="17" style="0" name="opened_to_web"/>
+      </children>
+    </container>
+  </window>
+</layout>

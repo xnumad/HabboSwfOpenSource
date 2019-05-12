@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ude_event" width="228" height="14" version="0.1" uid="3D23CF30-C536-D99F-5483-6D3AF12C1F56">
+  <window>
+    <container x="0" y="0" width="228" height="14" params="16" style="0" name="reward_container">
+      <children>
+        <input x="167" y="0" width="50" height="12" params="1" style="0" name="propability_input">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="border" value="true" type="Boolean"/>
+            <var key="border_color" value="0xffffff" type="hex"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="tool_tip_caption" value="Chance to get this reward. Value should be a number between 1 and 100" type="String"/>
+          </variables>
+        </input>
+        <checkbox x="11" y="0" width="15" height="16" params="17" style="1" name="is_badge_checkbox"/>
+        <input x="49" y="0" width="104" height="12" params="1" style="0" name="reward_code_input" caption="kjkjkjkj">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="border" value="true" type="Boolean"/>
+            <var key="border_color" value="0xffffff" type="hex"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="tool_tip_caption" value="Product code or badge code" type="String"/>
+          </variables>
+        </input>
+      </children>
+    </container>
+  </window>
+</layout>

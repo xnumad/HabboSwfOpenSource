@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.RoomRendererFactoryBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDRoomRendererFactory" />
+	</component>
+	
+</manifest>

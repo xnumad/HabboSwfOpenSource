@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<skin name="illumina_light_scrollbar_skin" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+	
+		<variable key="width" value="9" type="uint"	/>
+
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+	
+		<state name="default" layout="illumina_light_scrollbar_vertical"        template="null" />
+		<state name="default" layout="illumina_light_scrollbar_lift_vertical"   template="lift_vertical_default" />
+		<state name="default" layout="illumina_light_scrollbar_track_vertical"  template="track_vertical_default" />
+
+        <state name="default" layout="illumina_light_scrollbar_horizontal"        template="null" />
+      	<state name="default" layout="illumina_light_scrollbar_lift_horizontal"   template="lift_horizontal_default" />
+      	<state name="default" layout="illumina_light_scrollbar_track_horizontal"  template="track_horizontal_default" />
+
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+	
+		<template name="null" />
+		
+		<template name="lift_vertical_default" asset="illumina_light_scrollbar_vertical_png">
+			<entities>
+				<entity name="top" type="bitmap"><region><Rectangle x="0" y="0" width="$width" height="4" /></region></entity>
+				<entity name="mid" type="bitmap"><region><Rectangle x="0" y="4" width="$width" height="1" /></region></entity>
+				<entity name="btm" type="bitmap"><region><Rectangle x="0" y="5" width="$width" height="4" /></region></entity>
+			</entities>
+		</template>
+		
+		<template name="track_vertical_default" asset="illumina_light_scrollbar_vertical_png">
+			<entities>
+                <entity name="trtop" type="bitmap"><region><Rectangle x="10" y="0" width="$width" height="2" /></region></entity>
+                <entity name="trmid" type="bitmap"><region><Rectangle x="10" y="2" width="$width" height="5" /></region></entity>
+                <entity name="trbtm" type="bitmap"><region><Rectangle x="10" y="7" width="$width" height="2" /></region></entity>
+			</entities>
+		</template>
+
+        <template name="lift_horizontal_default" asset="illumina_light_scrollbar_horizontal_png">
+            <entities>
+                <entity name="lft" type="bitmap"><region><Rectangle x="0" y="0" width="4" height="$width" /></region></entity>
+                <entity name="mid" type="bitmap"><region><Rectangle x="4" y="0" width="1" height="$width" /></region></entity>
+                <entity name="rgt" type="bitmap"><region><Rectangle x="5" y="0" width="4" height="$width" /></region></entity>
+            </entities>
+        </template>
+
+        <template name="track_horizontal_default" asset="illumina_light_scrollbar_horizontal_png">
+            <entities>
+                <entity name="trlft" type="bitmap"><region><Rectangle x="10" y="0" width="2" height="$width" /></region></entity>
+                <entity name="trmid" type="bitmap"><region><Rectangle x="12" y="0" width="5" height="$width" /></region></entity>
+                <entity name="trrgt" type="bitmap"><region><Rectangle x="17" y="0" width="2" height="$width" /></region></entity>
+            </entities>
+        </template>
+
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="illumina_light_scrollbar_vertical" transparent="false" />
+
+		<layout name="illumina_light_scrollbar_track_vertical" transparent="false">
+            <entities>
+                <entity name="trtop" id="0">
+                    <region><Rectangle x="0" y="0" width="$width" height="2" /></region>
+                    <scale horizontal="fixed" vertical="fixed" />
+                </entity>
+                <entity name="trmid" id="0">
+                    <region><Rectangle x="0" y="2" width="$width" height="5" /></region>
+                    <scale horizontal="fixed" vertical="strech" />
+                </entity>
+                <entity name="trbtm" id="0">
+                    <region><Rectangle x="0" y="7" width="$width" height="2" /></region>
+                    <scale horizontal="fixed" vertical="move" />
+                </entity>
+            </entities>
+		</layout>
+		
+		<layout name="illumina_light_scrollbar_lift_vertical" transparent="true">
+			<entities>
+				<entity name="top" id="0">
+					<region><Rectangle x="0" y="0" width="$width" height="4" /></region>
+					<scale horizontal="fixed" vertical="fixed" />
+				</entity>
+				<entity name="mid" id="0">
+					<region><Rectangle x="0" y="4" width="$width" height="1" /></region>
+					<scale horizontal="fixed" vertical="strech" />
+				</entity>
+				<entity name="btm" id="0">
+					<region><Rectangle x="0" y="5" width="$width" height="4" /></region>
+					<scale horizontal="fixed" vertical="move" />
+				</entity>
+			</entities>
+		</layout>
+
+        <layout name="illumina_light_scrollbar_horizontal" transparent="false" />
+
+        <layout name="illumina_light_scrollbar_track_horizontal" transparent="false">
+            <entities>
+                <entity name="trlft" id="0">
+                    <region><Rectangle x="0" y="0" width="2" height="$width" /></region>
+                    <scale horizontal="fixed" vertical="fixed" />
+                </entity>
+                <entity name="trmid" id="0">
+                    <region><Rectangle x="2" y="0" width="5" height="$width" /></region>
+                    <scale horizontal="strech" vertical="fixed" />
+                </entity>
+                <entity name="trrgt" id="0">
+                    <region><Rectangle x="7" y="0" width="2" height="$width" /></region>
+                    <scale horizontal="move" vertical="fixed" />
+                </entity>
+            </entities>
+        </layout>
+
+        <layout name="illumina_light_scrollbar_lift_horizontal" transparent="true">
+            <entities>
+                <entity name="lft" id="0">
+                    <region><Rectangle x="0" y="0" width="4" height="$width" /></region>
+                    <scale horizontal="fixed" vertical="fixed" />
+                </entity>
+                <entity name="mid" id="0">
+                    <region><Rectangle x="4" y="0" width="1" height="$width" /></region>
+                    <scale horizontal="strech" vertical="fixed" />
+                </entity>
+                <entity name="rgt" id="0">
+                    <region><Rectangle x="5" y="0" width="4" height="$width" /></region>
+                    <scale horizontal="move" vertical="fixed" />
+                </entity>
+            </entities>
+        </layout>
+	</layouts>
+</skin>

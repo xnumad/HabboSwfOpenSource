@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_frame_7" width="64" height="73" version="0.0">
+ 
+ 	<!-- filters -->
+	
+	<filters>
+		<DropShadowFilter distance="4" angle="45" color="0" alpha="0.35" blurX="4" blurY="4" />
+	</filters>
+	
+	<!-- window child layout -->
+	
+	<window>
+		
+		<header name="titlebar" x="6" y="6" width="50" height="27" tags="_HEADER, _EXCLUDE, _INTERNAL, _COLORIZE">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="input_event_processor" />
+				<param name="use_parent_graphic_context" />
+				<param name="mouse_dragging_trigger" />
+                <param name="inherit_caption" />
+			</params>
+		</header>
+ 
+		<container name="content_area" x="3" y="36" width="58" height="25" tags="_CONTENT, _INTERNAL, _EXCLUDE">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_strech" />
+				<param name="use_parent_graphic_context" />
+				<param name="reflect_resize_to_parent" />
+			</params>
+		</container>
+		
+  		<scaler name="_FRAME_SCALER" x="41" y="40" width="20" height="20" visible="true" treshold="0" tags="_SCALER, _EXCLUDE, _INTERNAL, _COLORIZE">
+ 			<params>
+				<param name="relative_horizontal_scale_move" />
+				<param name="relative_vertical_scale_move" />
+				<param name="use_parent_graphic_context" />
+				<param name="bound_to_parent_rect" />
+			</params>
+ 		</scaler>
+
+		<frame_pointer_down name="pointer" x="28" y="59" params="1232" visible="true" width="16" height="12" tags="_POINTER, _INTERNAL, _EXCLUDE">
+			<param name="relative_horizontal_scale_move" />
+			<param name="relative_vertical_scale_move" />
+			<param name="use_parent_graphic_context" />
+			<param name="bound_to_parent_rect" />
+			<param name="on_resize_align_center" />
+		</frame_pointer_down>
+
+	</window>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="club_gift_preview" width="20" height="20" version="0.0">
+  <window>
+    <border x="21" y="12" width="200" height="200" params="0" style="0">
+      <children>
+        <bitmap x="20" y="20" width="160" height="160" params="12582928" style="0" name="image"/>
+      </children>
+    </border>
+  </window>
+</layout>

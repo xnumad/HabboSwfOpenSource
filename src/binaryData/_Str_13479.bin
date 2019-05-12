@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guildBadgeViewWidget" width="40" height="40" version="0.1" uid="46B84B54-7C8E-C6B3-A51D-9CCA26B1A4D6">
+  <window>
+    <widget x="0" y="0" width="40" height="40" params="0" style="3" name="badge">
+      <variables>
+        <var key="widget_type" value="badge_image" type="String"/>
+        <var key="badge_image:type" value="group" type="String"/>
+      </variables>
+    </widget>
+  </window>
+</layout>

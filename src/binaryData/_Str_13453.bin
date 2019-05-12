@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<manifest>
+    <component class="com.sulake.bootstrap.HabboGroupsManagerBootstrap" version="0.0" >
+        <interface iid="com.sulake.iid.IIDHabboGroupsManager" />
+        <assets>
+            <asset mimeType="text/xml" name="group_info_window" />
+            <asset mimeType="text/xml" name="guild_members_window" />
+            <asset mimeType="text/xml" name="group_management_window" />
+            <asset mimeType="text/xml" name="new_extended_profile" />
+            <asset mimeType="text/xml" name="group_entry" />
+            <asset mimeType="text/xml" name="member_entry" />
+            <asset mimeType="text/xml" name="group" />
+            <asset mimeType="text/xml" name="club_required" />
+            <asset mimeType="text/xml" name="group_created_window" />
+            <asset mimeType="text/xml" name="group_room_info" />
+            <asset mimeType="text/xml" name="no_groups" />
+
+            <!-- Badge editor -->
+            <asset mimeType="text/xml" name="badge_color_item" />
+            <asset mimeType="text/xml" name="badge_editor" />
+            <asset mimeType="text/xml" name="badge_layer" />
+            <asset mimeType="text/xml" name="badge_part_item" />
+
+            <asset mimeType="image/png" name="color_chooser_bg" />
+            <asset mimeType="image/png" name="color_chooser_fg" />
+            <asset mimeType="image/png" name="color_chooser_selected" />
+
+            <asset mimeType="image/png" name="part_preview_bg" />
+            <asset mimeType="image/png" name="position_grid" />
+            <asset mimeType="image/png" name="position_picker" />
+
+            <asset mimeType="image/png" name="badge_part_picker" />
+            <asset mimeType="image/png" name="badge_part_empty" />
+            <asset mimeType="image/png" name="badge_part_add" />
+        </assets>
+    </component>
+</manifest>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="floor_plan_editor_bc" width="662" height="609" version="0.1" uid="37F6C3C3-5265-A95D-763D-694DACE5CAFF">
+  <window>
+    <frame x="0" y="0" width="662" height="609" params="33025" style="3" caption="%24%7Bfloor.plan.editor.title%7D" color="0xff67a3bf">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="662" height="50" params="16" style="1" color="0xffff4e4844" background="true">
+          <children>
+            <container x="3" y="2" width="656" height="45" params="16" style="1" color="0xffff2d2724" background="true">
+              <children>
+                <static_bitmap x="9" y="5" width="38" height="38" params="16" style="3">
+                  <variables>
+                    <var key="asset_uri" value="floor_plan_editor_logo" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <label x="74" y="9" width="115" height="15" params="16" style="3" caption="%24%7Bfloor.plan.editor.subtitle%7D">
+                  <variables>
+                    <var key="text_style" value="u_small" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                  </variables>
+                </label>
+              </children>
+            </container>
+          </children>
+        </container>
+        <border x="10" y="57" width="344" height="448" params="16" style="3" name="heightmap_border" color="0x0bdbdb5">
+          <children>
+            <itemlist_vertical x="8" y="4" width="322" height="127" params="16" style="3" name="controls_container">
+              <children>
+                <container x="0" y="0" width="318" height="24" params="16" style="3">
+                  <children>
+                    <text x="0" y="1" width="161" height="17" params="16" style="3" caption="%24%7Bfloor.plan.editor.draw.mode%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <itemlist_horizontal x="0" y="24" width="320" height="52" params="16" style="3" name="buttons_itemlist">
+                  <children>
+                    <container_button x="0" y="0" width="51" height="42" params="17" style="3" name="add_tile">
+                      <children>
+                        <static_bitmap x="5" y="0" width="40" height="40" params="3932176" style="3">
+                          <variables>
+                            <var key="asset_uri" value="floor_plan_editor_add_tile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container_button>
+                    <container_button x="61" y="0" width="51" height="42" params="17" style="3" name="remove_tile">
+                      <children>
+                        <static_bitmap x="5" y="1" width="40" height="40" params="1835024" style="3">
+                          <variables>
+                            <var key="asset_uri" value="floor_plan_editor_remove_tile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container_button>
+                    <static_bitmap x="122" y="0" width="2" height="42" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <container_button x="134" y="0" width="51" height="42" params="17" style="3" name="increase_height">
+                      <children>
+                        <static_bitmap x="6" y="1" width="40" height="40" params="3932176" style="3">
+                          <variables>
+                            <var key="asset_uri" value="floor_plan_editor_raise_tile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container_button>
+                    <container_button x="195" y="0" width="51" height="42" params="17" style="3" name="decrease_height">
+                      <children>
+                        <static_bitmap x="6" y="4" width="40" height="40" params="3932176" style="3">
+                          <variables>
+                            <var key="asset_uri" value="floor_plan_editor_sink_tile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container_button>
+                    <static_bitmap x="256" y="0" width="2" height="42" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <container_button x="268" y="0" width="51" height="42" params="17" style="3" name="set_enter_tile">
+                      <children>
+                        <static_bitmap x="5" y="1" width="40" height="40" params="3932176" style="3">
+                          <variables>
+                            <var key="asset_uri" value="floor_plan_editor_enter_tile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container_button>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="10" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+                <container x="0" y="76" width="317" height="48" params="16" style="3" name="tileheight_controller_container">
+                  <children>
+                    <html x="0" y="4" width="156" height="16" params="1" style="3" name="tile_height_text" caption="%24%7Bfloor.plan.editor.tile.height%7D">
+                      <variables>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="editable" value="false" type="Boolean"/>
+                        <var key="selectable" value="false" type="Boolean"/>
+                        <var key="editable" value="false" type="Boolean"/>
+                        <var key="selectable" value="false" type="Boolean"/>
+                      </variables>
+                    </html>
+                    <bitmap x="1" y="23" width="315" height="19" params="17" style="3" name="tile_height_colormap">
+                      <variables>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0xffffff" type="hex"/>
+                      </variables>
+                    </bitmap>
+                    <static_bitmap x="0" y="29" width="12" height="16" params="16" style="3" name="tile_height_slider_track">
+                      <variables>
+                        <var key="asset_uri" value="avatar_editor_avatar_editor_download_icon" type="String"/>
+                        <var key="zoom_y" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+            <border x="0" y="132" width="332" height="304" params="16" style="3" name="heightmap_bg" color="0x00"/>
+            <itemlist_horizontal x="0" y="132" width="331" height="304" params="16" style="3" name="heightmap_wrapper">
+              <children>
+                <bitmap x="0" y="29" width="331" height="304" params="17" style="3" name="heightmap_bitmap">
+                  <variables>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </bitmap>
+              </children>
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="1" type="Number"/>
+                <var key="scroll_step_v" value="1" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+            <scrollbar_vertical x="331" y="132" width="13" height="304" params="17" style="3" name="heightmap_scroll_vertical">
+              <variables>
+                <var key="scrollable" value="heightmap_wrapper" type="String"/>
+              </variables>
+            </scrollbar_vertical>
+            <scrollbar_horizontal x="0" y="435" width="332" height="13" params="17" style="3" name="heightmap_scroll_horizontal">
+              <variables>
+                <var key="scrollable" value="heightmap_wrapper" type="String"/>
+              </variables>
+            </scrollbar_horizontal>
+            <region x="12" y="400" width="20" height="26" params="17" style="3" name="zoom" treshold="0">
+              <children>
+                <static_bitmap x="-4" y="-3" width="30" height="30" params="16" style="3" name="zoom">
+                  <variables>
+                    <var key="asset_uri" value="roomtools_magnifier" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </border>
+        <border x="366" y="57" width="289" height="449" params="16" style="3" name="preview_border" color="0x0bdbdb5">
+          <children>
+            <itemlist_horizontal x="3" y="3" width="271" height="98" params="16" style="3" name="room_controls_itemlist">
+              <children>
+                <container x="0" y="0" width="139" height="98" params="16" style="3" name="enterdirection_container">
+                  <children>
+                    <container_button x="17" y="46" width="25" height="24" params="17" style="5" name="enterdirection_left">
+                      <children>
+                        <icon x="7" y="7" width="30" height="30" params="16" style="2" color="0x00"/>
+                      </children>
+                    </container_button>
+                    <container_button x="82" y="46" width="25" height="24" params="17" style="5" name="enterdirection_right">
+                      <children>
+                        <icon x="9" y="7" width="28" height="29" params="16" style="3" color="0x00"/>
+                      </children>
+                    </container_button>
+                    <widget x="41" y="12" width="45" height="72" params="16" style="3" name="enterdirection_ghost_avatar">
+                      <variables>
+                        <var key="widget_type" value="avatar_image" type="String"/>
+                        <var key="avatar_image:scale" value="sh" type="String"/>
+                      </variables>
+                    </widget>
+                    <label x="7" y="4" width="120" height="17" params="16" style="3" caption="%24%7Bfloor.plan.editor.enter.direction%7D" width_max="120"/>
+                  </children>
+                </container>
+                <static_bitmap x="139" y="0" width="3" height="97" params="16" style="3">
+                  <variables>
+                    <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <container x="142" y="0" width="128" height="99" params="16" style="3">
+                  <children>
+                    <label x="14" y="4" width="110" height="17" params="16" style="3" caption="%24%7Bfloor.plan.editor.room.options%7D" width_max="110"/>
+                    <dropmenu x="16" y="30" width="104" height="21" params="17" style="3" name="wall_thickness_drop">
+                      <variables>
+                        <var key="item_array">
+                          <value>
+                            <Array>
+                              <var key="0" value="${navigator.roomsettings.wall_thickness.thinnest}" type="String"/>
+                              <var key="1" value="${navigator.roomsettings.wall_thickness.thin}" type="String"/>
+                              <var key="2" value="${navigator.roomsettings.wall_thickness.normal}" type="String"/>
+                              <var key="3" value="${navigator.roomsettings.wall_thickness.thick}" type="String"/>
+                            </Array>
+                          </value>
+                        </var>
+                      </variables>
+                    </dropmenu>
+                    <dropmenu x="16" y="58" width="104" height="21" params="17" style="3" name="floor_thickness_drop">
+                      <variables>
+                        <var key="item_array">
+                          <value>
+                            <Array>
+                              <var key="0" value="${navigator.roomsettings.floor_thickness.thinnest}" type="String"/>
+                              <var key="1" value="${navigator.roomsettings.floor_thickness.thin}" type="String"/>
+                              <var key="2" value="${navigator.roomsettings.floor_thickness.normal}" type="String"/>
+                              <var key="3" value="${navigator.roomsettings.floor_thickness.thick}" type="String"/>
+                            </Array>
+                          </value>
+                        </var>
+                      </variables>
+                    </dropmenu>
+                  </children>
+                </container>
+              </children>
+            </itemlist_horizontal>
+            <itemlist_horizontal x="7" y="97" width="269" height="30" params="16" style="3" name="wall_height_controls">
+              <children>
+                <checkbox x="0" y="7" width="18" height="17" params="17" style="3" name="walls_fixed_height_enabled_checkbox"/>
+                <text x="18" y="6" width="105" height="17" params="16" style="3" name="wall_height_text" caption="%24%7Bfloor.editor.wall.height%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="123" y="6" width="25" height="17" params="16" style="3" name="wall_height_number" caption="1" width_max="25">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0x5f5f5f" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="148" y="0" width="118" height="30" params="16" style="3">
+                  <children>
+                    <static_bitmap x="2" y="0" width="111" height="30" params="17" style="3" name="wall_height_slider" treshold="0">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_divider" type="String"/>
+                        <var key="pivot_point" value="center left" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="7" width="12" height="16" params="16" style="3" name="wall_height_slider_track">
+                      <variables>
+                        <var key="asset_uri" value="avatar_editor_avatar_editor_download_icon" type="String"/>
+                        <var key="zoom_y" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+              </children>
+            </itemlist_horizontal>
+            <border x="0" y="133" width="275" height="302" params="16" style="3" name="preview_bitmap_border"/>
+            <itemlist_horizontal x="1" y="135" width="273" height="300" params="16" style="3" name="preview_wrapper">
+              <children>
+                <bitmap x="0" y="0" width="273" height="300" params="16" style="3" name="preview_bitmap">
+                  <variables>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </bitmap>
+              </children>
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="scroll_step_h" value="1" type="Number"/>
+                <var key="scroll_step_v" value="1" type="Number"/>
+              </variables>
+            </itemlist_horizontal>
+            <scrollbar_horizontal x="0" y="435" width="280" height="14" params="17" style="3" name="preview_scroll_horizontal">
+              <variables>
+                <var key="scrollable" value="preview_wrapper" type="String"/>
+              </variables>
+            </scrollbar_horizontal>
+            <scrollbar_vertical x="274" y="135" width="20" height="299" params="17" style="3" name="preview_scroll_vertical">
+              <variables>
+                <var key="scrollable" value="preview_wrapper" type="String"/>
+              </variables>
+            </scrollbar_vertical>
+            <static_bitmap x="6" y="372" width="30" height="30" params="17" style="3" name="refresh" visible="false">
+              <variables>
+                <var key="asset_uri" value="inventory_furni_recycle_icon" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </border>
+        <container x="10" y="530" width="643" height="40" params="16" style="3" name="main_buttons">
+          <children>
+            <itemlist_horizontal x="0" y="0" width="120" height="40" params="16" style="3" name="left_buttons">
+              <children>
+                <button_thick x="0" y="0" width="120" height="35" params="131089" style="3" name="reload" caption="%24%7Bfloor.plan.editor.reload%7D" width_min="100" width_max="120"/>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+            <itemlist_horizontal x="273" y="0" width="370" height="40" params="262160" style="3" name="right_buttons">
+              <children>
+                <button_thick x="0" y="0" width="120" height="35" params="131089" style="3" name="import_export" caption="%24%7Bfloor.plan.editor.import.export%7D" width_min="90" width_max="120"/>
+                <button_thick x="125" y="0" width="120" height="35" params="131089" style="3" name="cancel" caption="%24%7Bfloor.plan.editor.cancel%7D" width_min="90" width_max="120"/>
+                <button_thick x="250" y="0" width="120" height="35" params="131089" style="5" name="save" caption="%24%7Bfloor.plan.editor.save%7D" color="0x0bb3e3" width_min="90" width_max="120"/>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="help_page" value="builders-club/info" type="String"/>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

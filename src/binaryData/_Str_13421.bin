@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="grs_front_page_search_small" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="271" height="28" params="145" style="0" name="cont">
+      <children>
+        <border x="0" y="0" width="262" height="22" params="144" style="0" name="button_area">
+          <children>
+            <text x="30" y="4" width="177" height="17" params="16" style="0" name="caption" caption="Parties%20Caption%20Placeholder">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+              </variables>
+            </text>            <bitmap x="7" y="3" width="16" height="16" params="16" style="0" name="icon"/>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

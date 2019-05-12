@@ -1,0 +1,10 @@
+<chatstyle id="1" name="generic" systemstyle="true">
+	<layouts>
+		<speakLayout assetId="bubble_generic"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="chat_bubble_left"/>
+		<middleBitmap assetId="chat_bubble_middle"/>
+		<rightBitmap assetId="chat_bubble_right"/>
+	</bitmaps>
+</chatstyle>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="vip_buy_item" width="320" height="75" version="0.1" uid="0561EBFE-0868-6B6E-2F3E-FD7B3F59DDD8">
+  <window>
+    <border x="0" y="0" width="320" height="75" params="16" style="2" color="0x0969696" width_min="320" width_max="320" height_min="75">
+      <children>
+        <border x="1" y="1" width="320" height="73" params="16" style="2" color="0x0dfdfdf" width_min="320" width_max="320"/>
+        <border x="5" y="5" width="310" height="25" params="16" style="2" color="0x0969696" width_min="310" width_max="310">
+          <children>
+            <text x="60" y="2" width="187" height="19" params="16" style="0" name="item_header" caption="catalog.club.item.header">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <bitmap x="6" y="4" width="33" height="17" params="16" style="0" name="vip_icon" tags="bitmap">
+              <variables>
+                <var key="bitmap_asset_name" value="vip_icon_medium" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </border>
+        <container x="5" y="41" width="112" height="26" params="16" style="0" name="item_price"/>
+        <button_thick x="225" y="37" width="90" height="30" params="393233" style="5" name="item_buy" caption="%24%7Bcatalog.club.button.buy%7D" color="0x0aa00" width_min="90" width_max="90" height_min="30" height_max="30"/>
+        <button_thick x="130" y="37" width="90" height="30" params="393233" style="5" name="item_gift" caption="%24%7Bcatalog.purchase_confirmation.gift%7D" color="0x0aa00" width_min="90" width_max="90" height_min="30" height_max="30"/>
+      </children>
+    </border>
+  </window>
+</layout>

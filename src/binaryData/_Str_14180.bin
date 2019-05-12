@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="safety_locked_notification" width="192" height="80" version="0.1" uid="F5E2802A-9603-A353-40B7-DF91F78125FF">
+  <window>
+    <border x="0" y="0" width="192" height="79" params="273" style="6" caption="%24%7Bgeneric.notification_title%7D" color="0x06f6f6f">
+      <children>
+        <text x="8" y="6" width="174" height="36" params="16" style="0" name="info_text" caption="%24%7Bnotifications.text.safety_locked%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <region x="8" y="51" width="35" height="18" params="131089" style="6" name="unlock_link_region" clipping="false" treshold="0">
+          <children>
+            <text x="0" y="2" width="147" height="17" params="0" style="1" name="unlock_link" caption="%24%7Bnotifications.button.safety_locked_unlock%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="iro_tag" width="38" height="14" version="0.1" uid="DB0DAD59-2EDA-C365-3F46-F4F00DB435A2">
+  <window>
+    <region x="0" y="0" width="38" height="14" params="81" style="0" name="tag" treshold="0">
+      <children>
+        <bitmap x="0" y="0" width="4" height="14" params="16" style="0" name="bg_l"/>
+        <bitmap x="4" y="0" width="28" height="14" params="144" style="0" name="bg_m"/>
+        <bitmap x="32" y="0" width="5" height="14" params="80" style="0" name="bg_r"/>
+        <text x="1" y="0" width="9" height="15" params="16" style="0" name="txt" caption="0" color="0x01a7aaf">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0xe3139" type="hex"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

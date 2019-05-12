@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="color_chooser_cell" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="40" height="32" params="17" style="1" name="color_chooser_cell">
+      <children>
+        <bitmap x="0" y="0" width="40" height="32" params="2192" style="0" name="border" tags="BG_BORDER"/>
+        <bitmap x="0" y="0" width="40" height="32" params="2192" style="0" name="color" tags="COLOR_IMAGE"/>
+        <bitmap x="0" y="0" width="40" height="32" params="2192" style="0" name="chosen" tags="COLOR_CHOSEN"/>
+      </children>
+    </container>
+  </window>
+</layout>

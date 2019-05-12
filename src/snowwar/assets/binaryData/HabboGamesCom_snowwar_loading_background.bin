@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="snowwar_loading_background" width="1153" height="553" version="0.1" uid="36D0AB66-AD27-3DE9-54DC-568F0798979A">
+  <window>
+    <container x="0" y="0" width="1153" height="553" params="2176" style="0" color="0xffffeefafc" background="true">
+      <children>
+        <bitmap x="0" y="0" width="1153" height="158" params="144" style="0" name="sky" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="bg_sky" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="292" y="0" width="569" height="144" params="208" style="0" name="sunshine" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="bg_sunshine" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="0" y="90" width="1153" height="133" params="144" style="0" name="vista_1" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="bg_vista_1" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="0" y="125" width="1153" height="187" params="144" style="0" name="vista_2" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="bg_vista_2" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="0" y="163" width="1153" height="274" params="144" style="0" name="vista_3" tags="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="bg_vista_3" type="String"/>
+          </variables>
+        </bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Quests" width="509" height="416" version="0.1" uid="3355326D-C934-81EF-EBFF-78294E557AFB">
+  <window>
+    <frame x="0" y="0" width="512" height="416" params="32769" style="3" name="quest_main_window" caption="%24%7Bquests.list.caption%7D" color="0xff418db0">
+    <variables>
+    <var key="test_id_key" value="quests" type="String"/>
+    </variables>
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <itemlist x="10" y="7" width="473" height="362" params="2177" style="0" name="quest_list" background="true"/>
+        <scrollbar_vertical x="484" y="7" width="17" height="364" params="2113" style="0" name="scroller" caption="%24%7Bnavigator.title%7D">
+          <variables>
+            <var key="scrollable" value="quest_list" type="String"/>
+          </variables>
+        </scrollbar_vertical>
+      </children>
+    </frame>
+  </window>
+</layout>

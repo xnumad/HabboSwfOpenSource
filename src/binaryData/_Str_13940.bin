@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_compose_message" width="455" height="470" version="0.1" uid="9E4B7AD2-0AA7-CB5D-3170-1DD26B815079">
+  <window>
+    <frame x="0" y="0" width="455" height="470" params="98337" style="3" caption="%24%7Bgroupforum.compose.window_title%7D" color="0xff418db0" width_min="455" height_min="455">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-5" y="8" width="453" height="80" params="129" style="2" name="top_part" color="0xffff0e3f52" background="true" treshold="0">
+          <children>
+            <region x="0" y="0" width="453" height="80" params="145" style="3" name="top_click_area" treshold="0"/>
+            <container x="0" y="0" width="80" height="80" params="16" style="3" name="icon_background" color="0xffff000000" background="true">
+              <children>
+                <widget x="20" y="20" width="40" height="40" params="16" style="3" name="group_icon">
+                  <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                    <var key="badge_image:type" value="group" type="String"/>
+                    <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                    <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </widget>
+              </children>
+            </container>
+            <text x="90" y="10" width="678" height="30" params="16" style="3" name="top_header_text" caption="Super-duper%20long%20group%20title" clipping="false">
+              <variables>
+                <var key="font_size" value="24" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="90" y="40" width="359" height="40" params="144" style="3" name="top_text" caption="Super-duper%20long%20goup%20description%2C%20maybe%20even%20multiline%2C%20but%20takes%20a%20few%20lines%20anyway" clipping="false">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="0" y="96" width="444" height="48" params="144" style="3" name="thread_subject_container" background="true">
+          <children>
+            <region x="0" y="0" width="444" height="21" params="145" style="3" color="0xffff227aad" background="true"/>
+            <text x="1" y="1" width="452" height="16" params="144" style="3" name="thread_subject_header" caption="%24%7Bgroupforum.compose.subject%7D" color="0x02767a7">
+              <variables>
+                <var key="text_color" value="0xeeeeee" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="0" y="21" width="444" height="22" params="129" style="3" name="thread_subject" background="true">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="16" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </container>
+        <container x="0" y="145" width="444" height="220" params="2193" style="3" name="message_text_container" color="0x0eeeeee" treshold="0">
+          <children>
+            <region x="0" y="0" width="444" height="21" params="145" style="3" color="0xffff227aad" background="true"/>
+            <text x="1" y="1" width="443" height="16" params="144" style="3" name="message_text_header" caption="%24%7Bgroupforum.compose.message%7D" color="0x02767a7">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0xeeeeee" type="hex"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="0" y="20" width="444" height="200" params="2177" style="3" name="message_text" color="0xffffffffff" background="true">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="margin_left" value="4" type="int"/>
+                <var key="margin_top" value="4" type="int"/>
+                <var key="margin_right" value="4" type="int"/>
+                <var key="margin_bottom" value="4" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <html x="243" y="4" width="197" height="16" params="262145" style="3" name="formatting_help" caption="%24%7Bgroupforum.compose.formatting_help%7D">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="text_style" value="id_link_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </container>
+        <container_button x="25" y="378" width="120" height="30" params="1041" style="3" name="cancel_btn" color="0x0dddddd" treshold="0" width_min="120">
+          <children>
+            <label x="0" y="7" width="163" height="17" params="3935440" style="3" name="cancel_btn_label" caption="%24%7Bgroupforum.compose.cancel%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <container_button x="295" y="378" width="120" height="30" params="263249" style="3" name="post_btn" color="0x0a9bc5" treshold="0" width_min="120">
+          <children>
+            <label x="0" y="7" width="152" height="17" params="3935440" style="3" name="send_message_label" caption="%24%7Bgroupforum.compose.post%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <text x="10" y="422" width="424" height="17" params="787600" style="3" name="status_text" caption="Thread%20subject%20should%20not%20be%20empty%21">
+          <variables>
+            <var key="font_size" value="11" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+      <variables>
+        <var key="help_page" value="forums" type="String"/>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="2" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboInventoryBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDHabboInventory" />
+		<assets>
+	
+		    <asset mimeType="text/xml"  name="inventory_xml" />
+		    <!--asset mimeType="text/xml" name="inventory_furni_xml" /-->
+		    <asset mimeType="text/xml"  name="inventory_effects_xml" />
+		    <asset mimeType="text/xml"  name="inventory_trading_xml" />
+		    <asset mimeType="text/xml"  name="inventory_trading_minimized_xml" />
+		    <asset mimeType="text/xml"  name="inventory_thumb_xml" />
+			<asset mimeType="text/xml"  name="inventory_thumb_credits_xml" />
+            <asset mimeType="text/xml"  name="buy_marketplace_tokens_xml" />
+            <asset mimeType="text/xml"  name="make_marketplace_offer_xml" />
+            <asset mimeType="text/xml"  name="marketplace_no_credits_xml" />
+            <asset mimeType="text/xml"  name="unseen_item_symbol_xml" />
+
+	    	<asset mimeType="image/png" name="fx_icon_1_png" />
+	    	<asset mimeType="image/png" name="fx_icon_2_png" />
+	    	<asset mimeType="image/png" name="fx_icon_3_png" />
+	    	<asset mimeType="image/png" name="fx_icon_4_png" />
+	    	<asset mimeType="image/png" name="fx_icon_5_png" />
+	    	<asset mimeType="image/png" name="fx_icon_6_png" />
+	    	<asset mimeType="image/png" name="fx_icon_7_png" />
+	    	<asset mimeType="image/png" name="fx_icon_8_png" />
+	    	<asset mimeType="image/png" name="fx_icon_9_png" />
+	    	<asset mimeType="image/png" name="fx_icon_10_png" />
+	    	<asset mimeType="image/png" name="fx_icon_11_png" />
+	    	<asset mimeType="image/png" name="fx_icon_12_png" />
+	    	<asset mimeType="image/png" name="fx_icon_13_png" />
+	    	<asset mimeType="image/png" name="fx_icon_14_png" />
+	    	<asset mimeType="image/png" name="fx_icon_15_png" />
+	    	<asset mimeType="image/png" name="fx_icon_16_png" />
+	    	<asset mimeType="image/png" name="fx_icon_17_png" />
+	    	<asset mimeType="image/png" name="fx_icon_18_png" />
+	    	<asset mimeType="image/png" name="fx_icon_19_png" />
+	    	<asset mimeType="image/png" name="fx_icon_20_png" />
+	    	<asset mimeType="image/png" name="fx_icon_21_png" />
+	    	<asset mimeType="image/png" name="fx_icon_22_png" />
+	    	<asset mimeType="image/png" name="fx_icon_23_png" />
+	    	<asset mimeType="image/png" name="fx_icon_24_png" />
+	    	<asset mimeType="image/png" name="fx_icon_25_png" />
+	    	<asset mimeType="image/png" name="fx_icon_26_png" />
+	    	<asset mimeType="image/png" name="fx_icon_27_png" />
+	    	<asset mimeType="image/png" name="fx_icon_31_png" />
+	    	<asset mimeType="image/png" name="fx_icon_32_png" />
+	    	<asset mimeType="image/png" name="fx_icon_44_png" />
+	    	<asset mimeType="image/png" name="fx_icon_47_png" />
+	    	<asset mimeType="image/png" name="fx_icon_48_png" />
+	    	<asset mimeType="image/png" name="fx_icon_53_png" />
+	    	<asset mimeType="image/png" name="fx_icon_54_png" />
+		<asset mimeType="image/png" name="fx_icon_59_png" />
+		<asset mimeType="image/png" name="fx_icon_60_png" />
+		<asset mimeType="image/png" name="fx_icon_61_png" />
+		<asset mimeType="image/png" name="fx_icon_62_png" />
+		<asset mimeType="image/png" name="fx_icon_63_png" />
+		<asset mimeType="image/png" name="fx_icon_64_png" />
+		<asset mimeType="image/png" name="fx_icon_65_png" />
+		<asset mimeType="image/png" name="fx_icon_66_png" />
+		<asset mimeType="image/png" name="fx_icon_67_png" />
+		<asset mimeType="image/png" name="fx_icon_69_png" />
+		<asset mimeType="image/png" name="fx_icon_70_png" />
+		<asset mimeType="image/png" name="fx_icon_71_png" />
+            	<asset mimeType="image/png" name="fx_icon_72_png" />
+            	<asset mimeType="image/png" name="fx_icon_73_png" />
+            	<asset mimeType="image/png" name="fx_icon_74_png" />
+            	<asset mimeType="image/png" name="fx_icon_75_png" />
+		<asset mimeType="image/png" name="fx_icon_76_png" />
+		<asset mimeType="image/png" name="fx_icon_78_png" />
+		<asset mimeType="image/png" name="fx_icon_79_png" />
+		<asset mimeType="image/png" name="fx_icon_80_png" />
+		<asset mimeType="image/png" name="fx_icon_81_png" />
+		<asset mimeType="image/png" name="fx_icon_82_png" />
+		<asset mimeType="image/png" name="fx_icon_83_png" />
+		<asset mimeType="image/png" name="fx_icon_84_png" />
+		<asset mimeType="image/png" name="fx_icon_85_png" />
+		<asset mimeType="image/png" name="fx_icon_86_png" />
+		<asset mimeType="image/png" name="fx_icon_87_png" />
+		<asset mimeType="image/png" name="fx_icon_88_png" />
+		<asset mimeType="image/png" name="fx_icon_89_png" />
+		<asset mimeType="image/png" name="fx_icon_90_png" />
+		<asset mimeType="image/png" name="fx_icon_91_png" />
+		<asset mimeType="image/png" name="fx_icon_92_png" />
+		<asset mimeType="image/png" name="fx_icon_93_png" />
+		<asset mimeType="image/png" name="fx_icon_94_png" />
+		<asset mimeType="image/png" name="fx_icon_99_png" />
+		<asset mimeType="image/png" name="fx_icon_100_png" />
+		<asset mimeType="image/png" name="fx_icon_101_png" />
+		<asset mimeType="image/png" name="fx_icon_102_png" />
+		<asset mimeType="image/png" name="fx_icon_104_png" />
+		<asset mimeType="image/png" name="fx_icon_105_png" />
+		<asset mimeType="image/png" name="fx_icon_106_png" />
+		<asset mimeType="image/png" name="fx_icon_107_png" />
+		<asset mimeType="image/png" name="fx_icon_108_png" />
+		<asset mimeType="image/png" name="fx_icon_109_png" />
+		<asset mimeType="image/png" name="fx_icon_110_png" />
+		<asset mimeType="image/png" name="fx_icon_111_png" />
+		<asset mimeType="image/png" name="fx_icon_112_png" />
+		<asset mimeType="image/png" name="fx_icon_113_png" />
+		<asset mimeType="image/png" name="fx_icon_114_png" />
+		<asset mimeType="image/png" name="fx_icon_115_png" />
+		<asset mimeType="image/png" name="fx_icon_116_png" />
+		<asset mimeType="image/png" name="fx_icon_117_png" />
+		<asset mimeType="image/png" name="fx_icon_118_png" />
+		<asset mimeType="image/png" name="fx_icon_119_png" />
+		<asset mimeType="image/png" name="fx_icon_120_png" />
+		<asset mimeType="image/png" name="fx_icon_121_png" />
+		<asset mimeType="image/png" name="fx_icon_122_png" />
+		<asset mimeType="image/png" name="fx_icon_123_png" />
+		<asset mimeType="image/png" name="fx_icon_124_png" />
+		<asset mimeType="image/png" name="fx_icon_125_png" />
+		<asset mimeType="image/png" name="fx_icon_126_png" />
+		<asset mimeType="image/png" name="fx_icon_127_png" />
+		<asset mimeType="image/png" name="fx_icon_128_png" />
+		<asset mimeType="image/png" name="fx_icon_129_png" />
+		<asset mimeType="image/png" name="fx_icon_130_png" />
+		<asset mimeType="image/png" name="fx_icon_131_png" />
+		<asset mimeType="image/png" name="fx_icon_132_png" />
+		<asset mimeType="image/png" name="fx_icon_133_png" />
+		<asset mimeType="image/png" name="fx_icon_134_png" />
+		<asset mimeType="image/png" name="fx_icon_135_png" />
+		<asset mimeType="image/png" name="fx_icon_136_png" />
+		<asset mimeType="image/png" name="fx_icon_137_png" />
+		<asset mimeType="image/png" name="fx_icon_138_png" />
+		<asset mimeType="image/png" name="fx_icon_139_png" />
+		<asset mimeType="image/png" name="fx_icon_140_png" />
+		<asset mimeType="image/png" name="fx_icon_141_png" />
+		<asset mimeType="image/png" name="fx_icon_142_png" />
+		<asset mimeType="image/png" name="fx_icon_143_png" />
+		<asset mimeType="image/png" name="fx_icon_144_png" />
+		<asset mimeType="image/png" name="fx_icon_145_png" />
+		<asset mimeType="image/png" name="fx_icon_146_png" />
+		<asset mimeType="image/png" name="fx_icon_147_png" />
+		<asset mimeType="image/png" name="fx_icon_148_png" />
+		<asset mimeType="image/png" name="fx_icon_149_png" />
+		<asset mimeType="image/png" name="fx_icon_150_png" />
+		<asset mimeType="image/png" name="fx_icon_151_png" />
+		<asset mimeType="image/png" name="fx_icon_152_png" />
+		<asset mimeType="image/png" name="fx_icon_153_png" />
+		<asset mimeType="image/png" name="fx_icon_154_png" />
+		<asset mimeType="image/png" name="fx_icon_155_png" />
+		<asset mimeType="image/png" name="fx_icon_156_png" />
+		<asset mimeType="image/png" name="fx_icon_157_png" />
+		<asset mimeType="image/png" name="fx_icon_158_png" />
+		<asset mimeType="image/png" name="fx_icon_159_png" />
+		<asset mimeType="image/png" name="fx_icon_160_png" />
+		<asset mimeType="image/png" name="fx_icon_161_png" />
+		<asset mimeType="image/png" name="fx_icon_162_png" />
+		<asset mimeType="image/png" name="fx_icon_164_png" />
+		<asset mimeType="image/png" name="fx_icon_165_png" />
+		<asset mimeType="image/png" name="fx_icon_166_png" />
+		<asset mimeType="image/png" name="fx_icon_167_png" />
+		<asset mimeType="image/png" name="fx_icon_168_png" />
+		<asset mimeType="image/png" name="fx_icon_169_png" />
+		<asset mimeType="image/png" name="fx_icon_170_png" />
+		<asset mimeType="image/png" name="fx_icon_171_png" />
+		<asset mimeType="image/png" name="fx_icon_172_png" />
+		<asset mimeType="image/png" name="fx_icon_173_png" />
+		<asset mimeType="image/png" name="fx_icon_174_png" />
+		<asset mimeType="image/png" name="fx_icon_175_png" />
+		<asset mimeType="image/png" name="fx_icon_176_png" />
+		<asset mimeType="image/png" name="fx_icon_177_png" />
+		<asset mimeType="image/png" name="fx_icon_178_png" />
+		<asset mimeType="image/png" name="fx_icon_179_png" />
+		<asset mimeType="image/png" name="fx_icon_180_png" />
+		<asset mimeType="image/png" name="fx_icon_181_png" />
+		<asset mimeType="image/png" name="fx_icon_182_png" />
+		<asset mimeType="image/png" name="fx_icon_183_png" />
+		<asset mimeType="image/png" name="fx_icon_186_png" />
+        <asset mimeType="image/png" name="fx_icon_191_png" />
+        <asset mimeType="image/png" name="fx_icon_192_png" />
+
+
+
+
+
+
+
+
+		    <asset mimeType="image/png" name="popup_arrow_left_png" />
+		    <asset mimeType="image/png" name="popup_arrow_right_png" />	
+		    <asset mimeType="text/xml"  name="item_popup_xml" />
+
+	    </assets>
+	</component>
+	
+</manifest>

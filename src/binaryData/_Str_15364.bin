@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables>
+	<var key="styles">
+		<value><Map>
+
+			<var key="achievement"><value><Map>
+                <var key="internallink" value="questengine/achievements"/>
+			</Map></value></var>
+			
+			<var key="receivedcredits"><value><Map>
+				<var key="icon" value="if_icon_temp_png"/>
+			</Map></value></var>
+			
+			<var key="friendonline"><value><Map>
+                <var key="internallink" value="friendlist/open"/>
+			</Map></value></var>
+			
+			<var key="friendoffline"><value><Map>
+                <var key="internallink" value="friendlist/open"/>
+			</Map></value></var>
+			
+			<var key="thirdpartyfriendonline"><value><Map>
+                <var key="internallink" value="friendlist/open"/>
+			</Map></value></var>
+			
+			<var key="thirdpartyfriendoffline"><value><Map>
+                <var key="internallink" value="friendlist/open"/>
+			</Map></value></var>
+			
+			<var key="info"><value><Map>
+				<var key="icon" value="if_icon_temp_png"/>
+			</Map></value></var>
+			
+			<var key="club"><value><Map>
+				<var key="icon" value="if_icon_hc_png"/>
+			</Map></value></var>
+
+            <var key="vip"><value><Map>
+				<var key="icon" value="if_icon_vip_png"/>
+			</Map></value></var>
+			
+			<var key="recyclerok"><value><Map>
+				<var key="icon" value="if_icon_recycler_png"/>
+			</Map></value></var>
+
+            <var key="soundmachine"><value><Map>
+            </Map></value></var>
+
+            <var key="petlevel"><value><Map>
+                <var key="internallink" value="inventory/open/pets"/>
+            </Map></value></var>
+
+            <var key="clubgift"><value><Map></Map></value></var>
+
+            <var key="roommessagesposted"><value><Map>
+                <var key="internallink" value="navigator/goto/"/>
+            </Map></value></var>
+
+		</Map></value>
+	</var>
+	
+	<var key="view">
+		<value><Map>
+			<var key="time_fade_in" value="1000" />
+			<var key="time_display" value="15000" />
+			<var key="time_fade_out" value="1000" />
+			<var key="position_horizontal" value="right" />
+			<var key="position_horizontal_follow_toolbar" value="false" />
+			<var key="position_vertical" value="top" />
+			<var key="position_vertical_follow_toolbar" value="false" />
+		</Map></value>
+	</var>
+	
+</variables>

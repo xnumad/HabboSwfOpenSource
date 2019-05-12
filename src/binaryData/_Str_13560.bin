@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Achievements" width="392" height="497" version="0.1" uid="8F4DBD33-6E58-2F9E-0330-0571C68C4D49">
+  <window>
+    <frame x="0" y="0" width="392" height="497" params="32769" style="3" name="groups_main_window" caption="%24%7Bgroup.window.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="391" height="110" params="144" style="0" name="header_cont">
+          <children>
+            <background x="1" y="0" width="390" height="110" params="2192" style="0" color="0xffffb3b099" background="true"/>
+            <tab_context x="-6" y="89" width="402" height="21" params="2193" style="0" name="edit_guild_tab_context">
+              <children>
+                <tab_button x="0" y="0" width="97" height="22" params="131089" style="0" name="edit_tab_1" caption="%24%7Bgroup.edit.tab.1%7D" id="1"/>
+                <tab_button x="97" y="0" width="101" height="22" params="131089" style="0" name="edit_tab_2" caption="%24%7Bgroup.edit.tab.2%7D" id="2"/>
+                <tab_button x="198" y="0" width="101" height="22" params="131089" style="0" name="edit_tab_3" caption="%24%7Bgroup.edit.tab.3%7D" id="3"/>
+                <tab_button x="299" y="0" width="101" height="22" params="131089" style="0" name="edit_tab_5" caption="%24%7Bgroup.edit.tab.5%7D" id="5"/>
+              </children>
+            </tab_context>
+            <container x="16" y="5" width="360" height="33" params="144" style="0" name="steps_header_cont" visible="false">
+              <children>
+                <static_bitmap x="0" y="0" width="84" height="33" params="16" style="0" name="gcreate_1_0">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_1_0.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="0" y="0" width="84" height="33" params="16" style="0" name="gcreate_1_1">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_1_1.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="77" y="0" width="83" height="33" params="16" style="0" name="gcreate_2_0">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_2_0.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="77" y="0" width="83" height="33" params="16" style="0" name="gcreate_2_1">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_2_1.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="153" y="0" width="83" height="33" params="16" style="0" name="gcreate_3_0">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_2_0.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="153" y="0" width="83" height="33" params="16" style="0" name="gcreate_3_1">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_2_1.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="227" y="0" width="133" height="33" params="16" style="0" name="gcreate_4_0">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_4_0.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="227" y="0" width="133" height="33" params="16" style="0" name="gcreate_4_1">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_4_1.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="335" y="0" width="21" height="20" params="16" style="0" name="gcreate_icon_credit">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_icon_credit.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="-38" y="7" width="156" height="18" params="786560" style="0" name="step_title_1" caption="%24%7Bgroup.create.steplabel.1%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="40" y="7" width="156" height="18" params="786560" style="0" name="step_title_2" caption="%24%7Bgroup.create.steplabel.2%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="115" y="7" width="156" height="18" params="786560" style="0" name="step_title_3" caption="%24%7Bgroup.create.steplabel.3%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="210" y="7" width="156" height="18" params="786560" style="0" name="step_title_4" caption="%24%7Bgroup.create.steplabel.4%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <static_bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_1">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/group_UI_identity.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_2">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/group_UI_badge.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_3">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/group_UI_colors.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_4">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/group_UI_ready.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_5">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/group_UI_ready.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <bitmap x="0" y="0" width="114" height="62" params="16" style="0" name="header_pic_bitmap_step_6"/>
+            <html x="126" y="43" width="263" height="24" params="129" style="0" name="header_caption_txt" caption="Caption%20PH">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <text x="126" y="69" width="232" height="40" params="129" style="0" name="header_desc_txt" caption="Desc%20PH">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="0" y="128" width="373" height="310" params="144" style="0" name="step_cont_1">
+          <children>
+            <border x="17" y="11" width="94" height="94" params="16" style="0" name="step_1_badge">
+              <children>
+                <border x="4" y="4" width="86" height="86" params="16" style="3" color="0x0e9e9e1"/>
+                <widget x="27" y="27" width="39" height="39" params="16" style="0" name="group_logo">
+                  <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                    <var key="badge_image:type" value="group" type="String"/>
+                    <var key="badge_image:pivot_point" value="center" type="String"/>
+                    <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                    <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </widget>
+              </children>
+            </border>
+            <region x="17" y="110" width="94" height="18" params="17" style="0" name="step_1_members_region" treshold="0">
+              <children>
+                <text x="10" y="0" width="74" height="17" params="786448" style="0" name="step_1_members_txt" caption="Members%20PH">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <text x="126" y="-8" width="107" height="18" params="129" style="0" name="name_label" caption="%24%7Bgroup.edit.name%7D" color="0x00">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="126" y="14" width="247" height="26" params="129" style="0" name="name_txt" background="true">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="max_chars" value="29" type="int"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <text x="126" y="52" width="100" height="18" params="129" style="0" name="desc_label" caption="%24%7Bgroup.edit.desc%7D" color="0x00">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <input x="126" y="74" width="247" height="80" params="129" style="0" name="desc_txt" background="true">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="max_chars" value="254" type="int"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <text x="126" y="166" width="101" height="18" params="129" style="0" name="base_label" caption="%24%7Bgroup.edit.base%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <dropmenu x="126" y="188" width="247" height="26" params="129" style="0" name="base_dropmenu"/>
+            <text x="126" y="214" width="247" height="38" params="129" style="0" name="base_warning" caption="%24%7Bgroup.edit.base.warning%7D">
+              <variables>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="italic" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <region x="126" y="252" width="247" height="38" params="17" style="0" name="create_room_link_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="247" height="38" params="128" style="0" name="create_room_link_txt" caption="%24%7Bgroup.createroom%7D">
+                  <variables>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </container>
+        <container x="0" y="110" width="392" height="305" params="144" style="0" name="step_cont_2" visible="false"/>
+        <button_thick x="17" y="245" width="94" height="29" params="131089" style="3" name="reset_badge" caption="%24%7Bgroup.edit.reset.badge%7D" visible="false" width_min="94" width_max="94"/>
+        <container x="0" y="110" width="392" height="305" params="144" style="0" name="step_cont_3" visible="false">
+          <children>
+            <text x="13" y="8" width="92" height="17" params="1048592" style="0" name="label_guild_color" caption="%24%7Bgroup.edit.color.guild.color%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="13" y="29" width="92" height="46" params="16" style="5" background="true">
+              <children>
+                <border x="4" y="4" width="84" height="38" params="16" style="3" color="0x0e9e9e1">
+                  <children>
+                    <static_bitmap x="4" y="4" width="36" height="30" params="16" style="0" name="guild_color_primary_color_btm">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_btm" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="4" width="36" height="30" params="16" style="0" name="guild_color_primary_color_top">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_top" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="44" y="4" width="36" height="30" params="16" style="0" name="guild_color_secondary_color_btm">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_btm" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="44" y="4" width="36" height="30" params="16" style="0" name="guild_color_secondary_color_top">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_top" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+              </children>
+            </border>
+            <text x="128" y="8" width="142" height="17" params="1048592" style="0" name="label_primary" caption="%24%7Bgroup.edit.color.primary.color%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="280" y="8" width="100" height="17" params="1048592" style="0" name="label_secondary" caption="%24%7Bgroup.edit.color.secondary.color%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="128" y="29" width="142" height="277" params="16" style="3" name="border" color="0x0bebba5">
+              <children>
+                <itemgrid_vertical x="3" y="3" width="138" height="273" params="16" style="0" name="guild_primary_color_selector">
+                  <variables>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                  </variables>
+                </itemgrid_vertical>
+              </children>
+            </border>
+            <border x="280" y="29" width="96" height="277" params="16" style="3" name="border" color="0x0bebba5">
+              <children>
+                <itemgrid_vertical x="3" y="3" width="94" height="273" params="16" style="0" name="guild_secondary_color_selector">
+                  <variables>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                  </variables>
+                </itemgrid_vertical>
+              </children>
+            </border>
+          </children>
+        </container>
+        <button_thick x="15" y="195" width="90" height="29" params="131089" style="3" name="reset_colors" caption="%24%7Bgroup.edit.reset.color%7D" visible="false" width_min="90" width_max="90"/>
+        <container x="0" y="111" width="389" height="360" params="144" style="0" name="step_cont_4" visible="false">
+          <children>
+            <text x="126" y="8" width="256" height="45" params="1" style="0" name="confirmation_caption" caption="Group%20Name%20Here%20DIPPA%20DAPPA%20DII" color="0x00">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <html x="126" y="46" width="260" height="215" params="1" style="0" name="confirmation_desc" caption="%24%7Bgroup.create.confirm.info%7D" color="0x00">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <border x="15" y="50" width="92" height="92" params="16" style="0" name="badge_border">
+              <children>
+                <border x="4" y="4" width="84" height="84" params="16" style="3" color="0x0e9e9e1"/>
+                <bitmap x="26" y="26" width="39" height="39" params="16" style="0" name="badge_preview_image"/>
+              </children>
+            </border>
+            <text x="15" y="33" width="92" height="17" params="0" style="0" name="guild_badge_txt" caption="%24%7Bgroup.create.confirm.guildbadge%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="15" y="155" width="92" height="17" params="0" style="0" name="guild_colors_txt" caption="%24%7Bgroup.create.confirm.guildcolors%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="15" y="172" width="92" height="46" params="16" style="5" background="true">
+              <children>
+                <border x="4" y="4" width="84" height="38" params="16" style="3" color="0x0e9e9e1">
+                  <children>
+                    <static_bitmap x="4" y="4" width="36" height="30" params="16" style="0" name="badge_preview_primary_color_btm">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_btm" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="4" width="36" height="30" params="16" style="0" name="badge_preview_primary_color_top">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_top" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="44" y="4" width="36" height="30" params="16" style="0" name="badge_preview_secondary_color_btm">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_btm" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="44" y="4" width="36" height="30" params="16" style="0" name="badge_preview_secondary_color_top">
+                      <variables>
+                        <var key="asset_uri" value="group_guild_color_top" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+              </children>
+            </border>
+            <border x="126" y="253" width="248" height="39" params="16" style="0" name="vip_required_border" color="0xffcc0000">
+              <children>
+                <region x="0" y="0" width="248" height="39" params="17" style="0" name="vip_required_region" treshold="0"/>
+                <icon x="14" y="11" width="16" height="17" params="16" style="14" name="vip_icon"/>
+                <text x="38" y="4" width="192" height="17" params="16" style="0" name="vip_required_txt" caption="%24%7Bgroup.create.confirm.viprequired%7D" color="0x00">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="38" y="20" width="160" height="17" params="16" style="0" name="get_vip_txt" caption="%24%7Bgroup.create.confirm.getvip%7D" color="0x00">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="0" y="410" width="390" height="42" params="1168" style="0" name="footer_cont" visible="false">
+          <children>
+            <region x="11" y="20" width="120" height="18" params="17" style="0" name="cancel_link_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="38" height="17" params="4194320" style="0" name="cancel_link" caption="%24%7Bcancel%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="11" y="20" width="120" height="18" params="17" style="0" name="previous_step_link_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="148" height="17" params="4194320" style="0" name="previous_step_link" caption="%24%7Bgroup.create.previousstep%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <border x="126" y="0" width="248" height="39" params="16" style="0" name="buy_border" color="0x0ffc300">
+              <children>
+                <static_bitmap x="9" y="11" width="21" height="20" params="16" style="0" name="buy_credit_icon">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}guilds/gcreate_icon_credit.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="37" y="3" width="131" height="34" params="0" style="0" name="buy_txt" caption="%24%7Bgroup.create.confirm.buyinfo%7D" color="0x00">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="13" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button_thick x="172" y="5" width="72" height="29" params="131153" style="3" name="buy_button" caption="%24%7Bgroup.create.confirm.buy%7D" width_min="72" width_max="72"/>
+              </children>
+            </border>
+            <button_thick x="256" y="13" width="120" height="29" params="131089" style="3" name="next_step_button" caption="%24%7Bgroup.create.nextstep%7D" width_min="120" width_max="120"/>
+          </children>
+        </container>
+        <container x="0" y="111" width="389" height="360" params="144" style="0" name="step_cont_5" visible="false">
+          <children>
+            <text x="16" y="6" width="170" height="19" params="1048592" style="0" name="guild_type" caption="%24%7Bgroup.edit.settings.type.caption%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_headline_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="16" y="29" width="170" height="199" params="16" style="0">
+              <children>
+                <border x="4" y="4" width="162" height="191" params="16" style="3" color="0x0e9e9e1">
+                  <children>
+                    <selector x="5" y="5" width="152" height="191" params="17" style="0" name="group_type_selector">
+                      <children>
+                        <radiobutton x="0" y="2" width="15" height="15" params="17" style="0" name="rb_type_regular"/>
+                        <text x="20" y="0" width="112" height="20" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.regular.label%7D">
+                          <variables>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <region x="0" y="22" width="16" height="16" params="17" style="0" name="grouptype_region_0" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="16" height="16" params="16" style="0" name="grouptype_icon_0">
+                              <variables>
+                                <var key="asset_uri" value="${image.library.url}guilds/grouptype_icon_0.png" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                          <variables>
+                            <var key="tool_tip_caption" value="${group.edit.settings.type.regular.help}" type="String"/>
+                          </variables>
+                        </region>
+                        <text x="20" y="15" width="132" height="45" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.regular.help%7D">
+                          <variables>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <radiobutton x="0" y="62" width="15" height="15" params="17" style="0" name="rb_type_exclusive"/>
+                        <text x="20" y="60" width="132" height="20" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.exclusive.label%7D">
+                          <variables>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <region x="0" y="82" width="16" height="16" params="17" style="0" name="grouptype_region_1" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="16" height="16" params="16" style="0" name="grouptype_icon_1">
+                              <variables>
+                                <var key="asset_uri" value="${image.library.url}guilds/grouptype_icon_1.png" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                          <variables>
+                            <var key="tool_tip_caption" value="${group.edit.settings.type.exclusive.help}" type="String"/>
+                          </variables>
+                        </region>
+                        <text x="20" y="75" width="132" height="45" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.exclusive.help%7D">
+                          <variables>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <radiobutton x="0" y="122" width="15" height="15" params="17" style="0" name="rb_type_private"/>
+                        <text x="20" y="120" width="132" height="20" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.private.label%7D">
+                          <variables>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <region x="0" y="142" width="16" height="16" params="17" style="0" name="grouptype_region_2" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="16" height="16" params="16" style="0" name="grouptype_icon_2">
+                              <variables>
+                                <var key="asset_uri" value="${image.library.url}guilds/grouptype_icon_2.png" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                          <variables>
+                            <var key="tool_tip_caption" value="${group.edit.settings.type.private.help}" type="String"/>
+                          </variables>
+                        </region>
+                        <text x="20" y="135" width="132" height="45" params="16" style="0" caption="%24%7Bgroup.edit.settings.type.private.help%7D">
+                          <variables>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </selector>
+                  </children>
+                </border>
+              </children>
+            </border>
+            <text x="207" y="6" width="170" height="19" params="1048592" style="0" name="guild_rights" caption="%24%7Bgroup.edit.settings.rights.caption%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="u_headline_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="207" y="29" width="170" height="144" params="16" style="0">
+              <children>
+                <border x="4" y="4" width="162" height="135" params="16" style="3" color="0x0e9e9e1">
+                  <children>
+                    <checkbox x="5" y="5" width="16" height="16" params="17" style="0" name="cb_member_rights" treshold="0"/>
+                    <text x="25" y="5" width="133" height="20" params="16" style="0" caption="%24%7Bgroup.edit.settings.rights.members.label%7D">
+                      <variables>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="5" y="25" width="152" height="100" params="16" style="0" caption="%24%7Bgroup.edit.settings.rights.members.help%7D">
+                      <variables>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </border>
+              </children>
+            </border>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

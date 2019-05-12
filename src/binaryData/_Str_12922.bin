@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="newuser_change_name" width="303" height="193" version="0.1" uid="9B342161-72DF-CDC8-B002-92C2FA89362F">
+  <window>
+    <container x="0" y="0" width="303" height="193" params="16" style="101">
+      <children>
+        <text x="47" y="29" width="205" height="37" params="16" style="0" name="info_text" caption="%24%7Btutorial.name_change.info.confirm%7D">
+          <variables>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="8" y="78" width="285" height="16" params="16" style="0" name="confirm_text" caption="%24%7Btutorial.name_change.confirm%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="47" y="105" width="205" height="16" params="16" style="0" name="final_name" caption="final_name">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="22" y="136" width="120" height="43" params="131089" style="3" name="confirm_name_button" caption="%24%7Bgeneric.ok%7D" color="0x0bbbbbb" width_min="120" width_max="120"/>
+        <button x="162" y="136" width="120" height="43" params="393233" style="3" name="cancel_confirmation_button" caption="%24%7Bgeneric.cancel%7D" color="0x0bbbbbb" width_min="120" width_max="120"/>
+      </children>
+    </container>
+  </window>
+</layout>

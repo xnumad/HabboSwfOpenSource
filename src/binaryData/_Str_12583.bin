@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboCatalogBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDHabboCatalog" />
+		<assets>
+
+			<!-- Generated From PNGs in assets -->
+            <asset mimeType="image/png" name="bot_thumb_bg"/>
+            <asset mimeType="image/png" name="bot_thumb_bg_selected"/>
+            <asset mimeType="image/png" name="ctlg_clr_27x22_1"/>
+            <asset mimeType="image/png" name="ctlg_clr_27x22_2"/>
+            <asset mimeType="image/png" name="ctlg_clr_27x22_3"/>
+            <asset mimeType="image/png" name="ctlg_clr_40x32_1"/>
+            <asset mimeType="image/png" name="ctlg_clr_40x32_2"/>
+            <asset mimeType="image/png" name="ctlg_clr_40x32_3"/>
+            <asset mimeType="image/png" name="ctlg_arrow_down"/>
+            <asset mimeType="image/png" name="ctlg_arrow_next"/>
+            <asset mimeType="image/png" name="ctlg_arrow_prev"/>
+            <asset mimeType="image/png" name="ctlg_arrow_right"/>
+            <asset mimeType="image/png" name="ctlg_dyndeal_background"/>
+            <asset mimeType="image/png" name="ctlg_icon_deal_hc"/>
+            <asset mimeType="image/png" name="ctlg_pic_deal_icon_narrow"/>
+            <asset mimeType="image/png" name="ctlg_recycler_slot_bg"/>
+            <asset mimeType="image/png" name="purse_club_small"/>
+            <asset mimeType="image/png" name="purse_coins_small"/>
+            <asset mimeType="image/png" name="purse_pixels_small"/>
+            <asset mimeType="image/png" name="testarrow_down"/>
+            <asset mimeType="image/png" name="testarrow_right"/>
+			<asset mimeType="image/gif" name="vip_icon_medium"/>
+            <asset mimeType="image/gif" name="events_confirm_purchase"/>
+            <asset mimeType="image/png" name="icon_bg_img_2"/>
+            <asset mimeType="image/png" name="icon_bg_img"/>
+			<asset mimeType="image/png" name="icon_duck_vipwhite"/>
+            <asset mimeType="image/png" name="icon_hc"/>
+            <asset mimeType="image/png" name="thumb_bg"/>
+            <asset mimeType="image/png" name="thumb_bg_selected"/>
+            <asset mimeType="image/png" name="icon_credit_0"/>
+            <asset mimeType="image/png" name="icon_credit_1"/>
+            <asset mimeType="image/png" name="icon_credit_2"/>
+            <asset mimeType="image/png" name="icon_credit_3"/>
+            <asset mimeType="image/png" name="icon_credit_4"/>
+            <asset mimeType="image/png" name="icon_credit_5"/>
+            <asset mimeType="image/png" name="icon_credit_6"/>
+            <asset mimeType="image/png" name="icon_pixel_0"/>
+            <asset mimeType="image/png" name="icon_shell_0"/>
+            <asset mimeType="image/png" name="touchscreen_phone"/>
+            <asset mimeType="image/png" name="gift_incognito" />
+            <asset mimeType="image/png" name="catalog_icon_badge_included" />
+            <asset mimeType="image/png" name="catalog_icon_ninja_effect_included" />
+            <asset mimeType="image/png" name="thumb_up"/>
+            <asset mimeType="image/png" name="bundle_discount_star_sheet"/>
+
+            <asset mimeType="text/xml" name="club_extend_confirmation"/>
+            <asset mimeType="text/xml" name="club_buy_confirmation"/>
+            <asset mimeType="text/xml" name="club_buy_hc_item"/>
+            <asset mimeType="text/xml" name="club_buy_info_item"/>
+            <asset mimeType="text/xml" name="club_buy_vip_item"/>
+            <asset mimeType="text/xml" name="club_buy_vip_upgrade_item"/>
+            <asset mimeType="text/xml" name="club_gift_confirmation"/>
+            <asset mimeType="text/xml" name="club_gift_list_item"/>
+            <asset mimeType="text/xml" name="club_gift_preview"/>
+			<asset mimeType="text/xml" name="vip_buy_item"/>
+			<asset mimeType="text/xml" name="vip_benefits"/>
+            <asset mimeType="text/xml" name="color_chooser_cell"/>
+            <asset mimeType="text/xml" name="configuration_catalog_spaces"/>
+            <asset mimeType="text/xml" name="gridItem"/>
+            <asset mimeType="text/xml" name="grid_item_with_price_multi"/>
+            <asset mimeType="text/xml" name="grid_item_with_price_single"/>
+
+            <asset mimeType="text/xml" name="habbo_orderinfo_cantbuycredits"/>
+            <asset mimeType="text/xml" name="habbo_orderinfo_dialog"/>
+            <asset mimeType="text/xml" name="habbo_orderinfo_gift_checked"/>
+            <asset mimeType="text/xml" name="habbo_orderinfo_gift_unchecked"/>
+            <asset mimeType="text/xml" name="habbo_orderinfo_nocredits"/>
+            <asset mimeType="text/xml" name="habbo_orderinfo_receiver_suggestion"/>
+            <asset mimeType="text/xml" name="clubBuyWidget"/>
+            <asset mimeType="text/xml" name="clubGiftWidget"/>
+            <asset mimeType="text/xml" name="itemGridWidget"/>
+            <asset mimeType="text/xml" name="colourGridWidget"/>
+            <asset mimeType="text/xml" name="marketPlaceOwnItemsWidget"/>
+            <asset mimeType="text/xml" name="marketPlaceWidget"/>
+            <asset mimeType="text/xml" name="productViewWidget"/>
+            <asset mimeType="text/xml" name="purchaseWidget"/>
+            <asset mimeType="text/xml" name="recyclerPrizesWidgetLevelItem"/>
+            <asset mimeType="text/xml" name="recyclerWidget"/>
+            <asset mimeType="text/xml" name="redeemItemCodeWidget"/>
+            <asset mimeType="text/xml" name="singleViewWidget"/>
+            <asset mimeType="text/xml" name="specialInfoWidget"/>
+            <asset mimeType="text/xml" name="textInputWidget"/>
+            <asset mimeType="text/xml" name="traxPreviewWidget"/>
+            <asset mimeType="text/xml" name="trophyWidget"/>
+            <asset mimeType="text/xml" name="marketplace_offer_details"/>
+            <asset mimeType="text/xml" name="marketplace_purchase_confirmation"/>
+            <asset mimeType="text/xml" name="marketplace_search_advanced"/>
+            <asset mimeType="text/xml" name="marketplace_search_simple"/>
+            <asset mimeType="text/xml" name="gift_palette_item"/>
+            <asset mimeType="text/xml" name="gift_wrapping"/>
+            <asset mimeType="text/xml" name="price_display"/>
+            <asset mimeType="text/xml" name="priceDisplayWidget"/>
+            <asset mimeType="text/xml" name="purchase_confirmation"/>
+            <asset mimeType="text/xml" name="suggestion_list_item"/>
+            <asset mimeType="text/xml" name="suggestion_list_item_new"/>
+            <asset mimeType="text/xml" name="spaces"/>
+            <asset mimeType="text/xml" name="purchaseButtons"/>
+            <asset mimeType="text/xml" name="purchaseWidgetBuyVipStub"/>
+            <asset mimeType="text/xml" name="guildSelectorWidget"/>
+            <asset mimeType="text/xml" name="guildBadgeViewWidget"/>
+            <asset mimeType="text/xml" name="guild_selector_widget_item"/>
+            <asset mimeType="text/xml" name="petPreviewWidget"/>
+            <asset mimeType="text/xml" name="club_direct_buy_xml"/>
+            <asset mimeType="text/xml" name="club_direct_buy_success_xml"/>
+            <asset mimeType="text/xml" name="badgeDisplayWidget"/>
+            <asset mimeType="text/xml" name="activityPointDisplayWidget"/>
+            <asset mimeType="text/xml" name="addOnBadgeViewWidget"/>
+            <asset mimeType="text/xml" name="spinnerWidget"/>
+            <asset mimeType="text/xml" name="catalog_volter"/>
+            <asset mimeType="text/xml" name="catalog_ubuntu"/>
+            <asset mimeType="text/xml" name="catalog_ubuntu_with_tabs"/>
+            <asset mimeType="text/xml" name="discountPromoItem"/>
+            <asset mimeType="text/xml" name="discountValueItem"/>
+            <asset mimeType="text/xml" name="totalPriceWidget"/>
+            <asset mimeType="text/xml" name="bundlesInfoItem"/>
+            <asset mimeType="text/xml" name="soldLtdItemsWidget"/>
+            <asset mimeType="text/xml" name="rent_confirmation" />
+            <asset mimeType="text/xml" name="badgeGridItem" />
+            <asset mimeType="text/xml" name="builderWidget"/>
+            <asset mimeType="text/xml" name="targeted_offer_dialog_xml"/>
+            <asset mimeType="text/xml" name="targeted_offer_dialog_variation_xml"/>
+            <asset mimeType="text/xml" name="targeted_offer_minimized_xml"/>
+            <asset mimeType="text/xml" name="targeted_offer_purchase_confirmation_xml"/>
+            <asset mimeType="text/xml" name="targeted_offer_habbomall_xml"/>
+
+            <!-- new layouts (Ubuntu) -->
+            <asset mimeType="text/xml" name="layout_badge_display" />
+            <asset mimeType="text/xml" name="layout_builders_club_addons" />
+            <asset mimeType="text/xml" name="layout_builders_club_loyalty" />
+            <asset mimeType="text/xml" name="layout_builders_club_frontpage" />
+            <asset mimeType="text/xml" name="layout_club_buy"/>
+            <asset mimeType="text/xml" name="layout_club_gifts"/>
+            <asset mimeType="text/xml" name="layout_default_3x3"/>
+            <asset mimeType="text/xml" name="layout_frontpage4"/>
+            <asset mimeType="text/xml" name="layout_frontpage_featured"/>
+            <asset mimeType="text/xml" name="layout_guild_custom_furni"/>
+            <asset mimeType="text/xml" name="layout_guild_frontpage"/>
+            <asset mimeType="text/xml" name="layout_info_duckets"/>
+            <asset mimeType="text/xml" name="layout_info_loyalty"/>
+            <asset mimeType="text/xml" name="layout_info_rentables"/>
+            <asset mimeType="text/xml" name="layout_loyalty_vip_buy"/>
+            <asset mimeType="text/xml" name="layout_marketplace"/>
+            <asset mimeType="text/xml" name="layout_marketplace_own_items"/>
+            <asset mimeType="text/xml" name="layout_monkey"/>
+            <asset mimeType="text/xml" name="layout_petcustomization"/>
+            <asset mimeType="text/xml" name="layout_pets"/>
+            <asset mimeType="text/xml" name="layout_pets2"/>
+            <asset mimeType="text/xml" name="layout_pets3"/>
+            <asset mimeType="text/xml" name="layout_recycler"/>
+            <asset mimeType="text/xml" name="layout_recycler_info"/>
+            <asset mimeType="text/xml" name="layout_recycler_prizes"/>
+            <asset mimeType="text/xml" name="layout_roomads"/>
+            <asset mimeType="text/xml" name="layout_single_bundle" />
+            <asset mimeType="text/xml" name="layout_soundmachine"/>
+            <asset mimeType="text/xml" name="layout_spaces_new"/>
+            <asset mimeType="text/xml" name="layout_trophies"/>
+            <asset mimeType="text/xml" name="layout_vip_buy"/>
+            <asset mimeType="text/xml" name="layout_guild_forum"/>
+
+            <!-- old layouts (volter) -->
+            <asset mimeType="text/xml" name="old_layout_badge_display" />
+            <asset mimeType="text/xml" name="old_layout_club_buy"/>
+            <asset mimeType="text/xml" name="old_layout_club_gifts"/>
+            <asset mimeType="text/xml" name="old_layout_default_3x3"/>
+            <asset mimeType="text/xml" name="old_layout_frontpage4"/>
+            <asset mimeType="text/xml" name="old_layout_guild_custom_furni"/>
+            <asset mimeType="text/xml" name="old_layout_guild_frontpage"/>
+            <asset mimeType="text/xml" name="old_layout_info_duckets"/>
+            <asset mimeType="text/xml" name="old_layout_info_loyalty"/>
+            <asset mimeType="text/xml" name="old_layout_info_rentables"/>
+            <asset mimeType="text/xml" name="old_layout_loyalty_vip_buy"/>
+            <asset mimeType="text/xml" name="old_layout_marketplace"/>
+            <asset mimeType="text/xml" name="old_layout_marketplace_own_items"/>
+            <asset mimeType="text/xml" name="old_layout_monkey"/>
+            <asset mimeType="text/xml" name="old_layout_petcustomization"/>
+            <asset mimeType="text/xml" name="old_layout_pets"/>
+            <asset mimeType="text/xml" name="old_layout_pets2"/>
+            <asset mimeType="text/xml" name="old_layout_pets3"/>
+            <asset mimeType="text/xml" name="old_layout_recycler"/>
+            <asset mimeType="text/xml" name="old_layout_recycler_info"/>
+            <asset mimeType="text/xml" name="old_layout_recycler_prizes"/>
+            <asset mimeType="text/xml" name="old_layout_roomads"/>
+            <asset mimeType="text/xml" name="old_layout_single_bundle" />
+            <asset mimeType="text/xml" name="old_layout_soundmachine"/>
+            <asset mimeType="text/xml" name="old_layout_spaces_new"/>
+            <asset mimeType="text/xml" name="old_layout_trophies"/>
+            <asset mimeType="text/xml" name="old_layout_vip_buy"/>
+
+            <asset mimeType="text/xml" name="offer_center_xml" />
+            <asset mimeType="text/xml" name="charge_confirmation" />
+
+            <!-- Club Center -->
+            <asset mimeType="text/xml" name="club_center_xml" />
+            <asset mimeType="text/xml" name="club_center_special_info_xml" />
+
+        </assets>
+        <aliases>
+            <asset mimeType="text/xml" name="old_layout_niko" ref="old_layout_monkey"/>
+
+            <asset mimeType="text/xml" name="old_layout_bots" ref="old_layout_default_3x3"/>
+            <asset mimeType="text/xml" name="old_layout_default_3x3_extrainfo" ref="old_layout_default_3x3"/>
+            <asset mimeType="text/xml" name="old_layout_pixeleffects" ref="old_layout_default_3x3"/>
+            <asset mimeType="text/xml" name="old_layout_sold_ltd_items" ref="old_layout_default_3x3"/>
+
+            <asset mimeType="text/xml" name="layout_niko" ref="layout_monkey"/>
+            <asset mimeType="text/xml" name="layout_bots" ref="layout_default_3x3"/>
+            <asset mimeType="text/xml" name="layout_default_3x3_extrainfo" ref="layout_default_3x3"/>
+            <asset mimeType="text/xml" name="layout_pixeleffects" ref="layout_default_3x3"/>
+            <asset mimeType="text/xml" name="layout_default_3x3_color_grouping" ref="layout_default_3x3"/>
+            <asset mimeType="text/xml" name="layout_sold_ltd_items" ref="layout_default_3x3"/>
+
+            <asset mimeType="image/png" name="bundle_discount_star_0" ref="bundle_discount_star_sheet"><param key="region" value="0,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_1" ref="bundle_discount_star_sheet"><param key="region" value="38,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_2" ref="bundle_discount_star_sheet"><param key="region" value="76,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_3" ref="bundle_discount_star_sheet"><param key="region" value="114,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_4" ref="bundle_discount_star_sheet"><param key="region" value="152,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_5" ref="bundle_discount_star_sheet"><param key="region" value="190,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_6" ref="bundle_discount_star_sheet"><param key="region" value="228,0,38,39" /></asset>
+            <asset mimeType="image/png" name="bundle_discount_star_7" ref="bundle_discount_star_sheet"><param key="region" value="266,0,38,39" /></asset>
+        </aliases>
+	</component>
+	
+</manifest>

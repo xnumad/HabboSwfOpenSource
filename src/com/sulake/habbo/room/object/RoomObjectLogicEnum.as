@@ -1,0 +1,77 @@
+﻿package com.sulake.habbo.room.object
+{
+    public class RoomObjectLogicEnum 
+    {
+        public static const FURNITURE_BASIC:String = "furniture_basic";
+        public static const FURNITURE_MULTISTATE:String = "furniture_multistate";
+        public static const FURNITURE_MULTIHEIGHT:String = "furniture_multiheight";
+        public static const FURNITURE_RANDOMSTATE:String = "furniture_randomstate";
+        public static const FURNITURE_PLACEHOLDER:String = "furniture_placeholder";
+        public static const FURNITURE_CREDIT:String = "furniture_credit";
+        public static const FURNITURE_STICKIE:String = "furniture_stickie";
+        public static const FURNITURE_PRESENT:String = "furniture_present";
+        public static const FURNITURE_TROPHY:String = "furniture_trophy";
+        public static const FURNITURE_ECOTRON_BOX:String = "furniture_ecotron_box";
+        public static const FURNITURE_DICE:String = "furniture_dice";
+        public static const FURNITURE_HOCKEY_SCORE:String = "furniture_hockey_score";
+        public static const FURNITURE_HABBOWHEEL:String = "furniture_habbowheel";
+        public static const FURNITURE_ONE_WAY_DOOR:String = "furniture_one_way_door";
+        public static const FURNITURE_PLANET_SYSTEM:String = "furniture_planet_system";
+        public static const FURNITURE_WINDOW:String = "furniture_window";
+        public static const FURNITURE_EXTERNAL_IMAGE_WALLITEM:String = "furniture_external_image_wallitem";
+        public static const FURNITURE_ROOMDIMMER:String = "furniture_roomdimmer";
+        public static const FURNITURE_SOUND_MACHINE:String = "furniture_sound_machine";
+        public static const FURNITURE_JUKEBOX:String = "furniture_jukebox";
+        public static const FURNITURE_CRACKABLE:String = "furniture_crackable";
+        public static const FURNITURE_PUSHABLE:String = "furniture_pushable";
+        public static const FURNITURE_CLOTHING_CHANGE:String = "furniture_clothing_change";
+        public static const FURNITURE_COUNTER_CLOCK:String = "furniture_counter_clock";
+        public static const FURNITURE_SCORE:String = "furniture_score";
+        public static const FURNITURE_ES:String = "furniture_es";
+        public static const FURNITURE_FIREWORKS:String = "furniture_fireworks";
+        public static const FURNITURE_SONG_DISK:String = "furniture_song_disk";
+        public static const FURNITURE_BB:String = "furniture_bb";
+        public static const FURNITURE_BG:String = "furniture_bg";
+        public static const FURNITURE_WELCOME_GIFT:String = "furniture_welcome_gift";
+        public static const FURNITURE_FLOOR_HOLE:String = "furniture_floor_hole";
+        public static const FURNITURE_MANNEQUIN:String = "furniture_mannequin";
+        public static const FURNITURE_GUILD_CUSTOMIZED:String = "furniture_guild_customized";
+        public static const FURNITURE_GROUP_FORUM_TERMINAL:String = "furniture_group_forum_terminal";
+        public static const FURNITURE_PET_CUSTOMIZATION:String = "furniture_pet_customization";
+        public static const FURNITURE_CUCKOO_CLOCK:String = "furniture_cuckoo_clock";
+        public static const FURNITURE_VOTE_COUNTER:String = "furniture_vote_counter";
+        public static const FURNITURE_VOTE_MAJORITY:String = "furniture_vote_majority";
+        public static const FURNITURE_SOUNDBLOCK:String = "furniture_soundblock";
+        public static const FURNITURE_RANDOM_TELEPORT:String = "furniture_random_teleport";
+        public static const FURNITURE_MONSTERPLANT_SEED:String = "furniture_monsterplant_seed";
+        public static const FURNITURE_PURCHASABLE_CLOTHING:String = "furniture_purchasable_clothing";
+        public static const FURNITURE_BACKGROUND_COLOR:String = "furniture_background_color";
+        public static const FURNITURE_MYSTERYBOX:String = "furniture_mysterybox";
+        public static const FURNITURE_EFFECTBOX:String = "furniture_effectbox";
+        public static const FURNITURE_MYSTERYTROPHY:String = "furniture_mysterytrophy";
+        public static const FURNITURE_ACHIEVEMENT_RESOLUTION:String = "furniture_achievement_resolution";
+        public static const FURNITURE_LOVELOCK:String = "furniture_lovelock";
+        public static const FURNITURE_WILDWEST_WANTED:String = "furniture_wildwest_wanted";
+        public static const FURNITURE_HWEEN_LOVELOCK:String = "furniture_hween_lovelock";
+        public static const FURNITURE_BADGE_DISPLAY:String = "furniture_badge_display";
+        public static const FURNITURE_HIGH_SCORE:String = "furniture_high_score";
+        public static const FURNITURE_INTERNAL_LINK:String = "furniture_internal_link";
+        public static const FURNITURE_CUSTOM_STACK_HEIGHT:String = "furniture_custom_stack_height";
+        public static const FURNITURE_YOUTUBE:String = "furniture_youtube";
+        public static const FURNITURE_RENTABLE_SPACE:String = "furniture_rentable_space";
+        public static const FURNITURE_CHANGE_STATE_WHEN_STEP_ON:String = "furniture_change_state_when_step_on";
+        public static const FURNITURE_VIMEO:String = "furniture_vimeo";
+        public static const FURNITURE_EDITABLE_INTERNAL_LINK:String = "furniture_editable_internal_link";
+        public static const FURNITURE_EDITABLE_ROOM_LINK:String = "furniture_editable_room_link";
+        public static const FURNITURE_CRAFTING_GIZMO:String = "furniture_crafting_gizmo";
+        public static const ROOM:String = "room";
+        public static const USER:String = "user";
+        public static const BOT:String = "bot";
+        public static const RENTABLE_BOT:String = "rentable_bot";
+        public static const PET:String = "pet";
+        public static const TILE_CURSOR:String = "tile_cursor";
+        public static const SELECTION_ARROW:String = "selection_arrow";
+        public static const GAME_SNOWBALL:String = "game_snowball";
+        public static const GAME_SNOWSPLASH:String = "game_snowsplash";
+    }
+}

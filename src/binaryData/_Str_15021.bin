@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboAvatarEditorManagerBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDHabboAvatarEditor" />
+		<assets>
+            <asset mimeType="text/xml" name="AvatarEditor" />
+            <asset mimeType="text/xml" name="AvatarEditorFrame" />
+            <asset mimeType="text/xml" name="AvatarEditorContent" />
+            <asset mimeType="text/xml" name="StripClubItemsInfo" />
+            <asset mimeType="text/xml" name="Outfit" />
+            <asset mimeType="text/xml" name="avatareditor_wardrobe_base" />
+            <asset mimeType="text/xml" name="avatar_editor_effect_griditem_xml" />
+		</assets>
+	</component>
+
+</manifest>

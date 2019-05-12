@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboLocalizationManagerBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDCoreLocalizationManager" />
+		<interface iid="com.sulake.iid.IIDHabboLocalizationManager" />
+
+		<assets>
+			<asset mimeType="text/plain" name="development_localizations" />
+		</assets>
+
+	</component>
+
+</manifest>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="room_info_popup_bubble" width="374" height="350" version="0.1" uid="09F40734-C832-77C1-8CD2-9D812CC0F95A">
+  <window>
+    <bubble x="0" y="0" width="374" height="350" params="1" style="7" caption="%24%7Bnavigator.room.info.popup.title%7D">
+      <children>
+        <itemlist x="11" y="-21" width="345" height="324" params="8388608" style="3" name="main_content">
+          <children>
+            <border x="0" y="0" width="345" height="125" params="16" style="2" name="header" height_min="125" height_max="125">
+              <children>
+                <itemlist x="7" y="6" width="331" height="112" params="8388624" style="3" name="header_content">
+                  <children>
+                    <itemlist_horizontal x="1" y="0" width="329" height="112" params="16" style="3" name="header_top">
+                      <children>
+                        <container x="0" y="0" width="112" height="112" params="16" style="3" name="room_thumbnail_container" color="0xffff000000" background="true">
+                          <children>
+                            <static_bitmap x="1" y="1" width="110" height="110" params="16" style="3" name="room_thumbnail">
+                              <variables>
+                                <var key="asset_uri" value="newnavigator_default_room" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <widget x="1" y="1" width="48" height="48" params="16" style="3" name="room_group_badge">
+                              <variables>
+                                <var key="widget_type" value="badge_image" type="String"/>
+                                <var key="badge_image:type" value="group" type="String"/>
+                                <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                                <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </widget>
+                          </children>
+                        </container>
+                        <container x="112" y="0" width="219" height="112" params="16" style="3" name="room_name_desc_owner_container">
+                          <children>
+                            <text x="6" y="0" width="214" height="33" params="16" style="3" name="room_name" caption="ROOM%20NAME%20PLACEHOLDER%20LOREM%20IPSUM%20DOLOR%20SIT%20AMET">
+                              <variables>
+                                <var key="text_style" value="u_bold" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <text x="5" y="33" width="214" height="80" params="16" style="3" name="room_desc" caption="ROOM%20DESC%20PLACEHOLDER%20LOREM%20IPSUM%20DOLOR%20SIT%20AMET">
+                              <variables>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                      </children>
+                    </itemlist_horizontal>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="7" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist>
+              </children>
+            </border>
+            <container x="0" y="128" width="344" height="30" params="16" style="3" name="room_group_owner_container">
+              <children>
+                <region x="175" y="3" width="170" height="30" params="17" style="3" name="room_group_region" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="15" height="13" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_icon_group" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="20" y="0" width="170" height="33" params="16" style="3" name="group_name" caption="The%20Bubblers">
+                      <variables>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.groupinfo.owner}" type="String"/>
+                  </variables>
+                </region>
+                <region x="5" y="3" width="150" height="30" params="17" style="3" name="room_owner_region" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="15" height="13" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="friend_bar_friendlist_eye" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="20" y="-2" width="130" height="33" params="16" style="3" name="owner_name" caption="Macklebee">
+                      <variables>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.roominfo.owner}" type="String"/>
+                  </variables>
+                </region>
+              </children>
+            </container>
+            <container x="0" y="161" width="344" height="80" params="16" style="3" name="newMid">
+              <children>
+                <container x="0" y="0" width="174" height="65" params="16" style="3" name="mid">
+                  <children>
+                    <itemlist x="0" y="0" width="263" height="65" params="16" style="3" name="properties">
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist>
+                  </children>
+                </container>
+                <container x="166" y="0" width="170" height="80" params="8388608" style="3" name="midBottom">
+                  <children>
+                    <itemlist x="12" y="0" width="170" height="80" params="8388608" style="3" name="midBottom_itemlist">
+                      <children>
+                        <container x="0" y="0" width="170" height="20" params="16" style="3">
+                          <children>
+                            <region x="0" y="0" width="20" height="20" params="17" style="3" name="favorite_region" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="favorite_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_icon_fav_no" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                            <label x="20" y="0" width="236" height="17" params="16" style="3" caption="%24%7Bnavigator.room.popup.room.info.favorite%7D"/>
+                          </children>
+                        </container>
+                        <container x="0" y="20" width="170" height="20" params="16" style="3">
+                          <children>
+                            <region x="0" y="0" width="20" height="20" params="17" style="3" name="home_region" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="home_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_icon_home_no" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                            <label x="20" y="0" width="224" height="17" params="16" style="3" caption="%24%7Bnavigator.room.popup.room.info.home%7D"/>
+                          </children>
+                        </container>
+                        <container x="0" y="40" width="170" height="20" params="16" style="3" name="settings_container">
+                          <children>
+                            <region x="0" y="0" width="20" height="20" params="17" style="3" name="settings_region" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="settings_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_room_settings_icon" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                            <label x="20" y="0" width="235" height="17" params="16" style="3" caption="%24%7Bnavigator.room.popup.info.room.settings%7D"/>
+                          </children>
+                        </container>
+                        <container x="0" y="60" width="170" height="20" params="16" style="3" name="report_container">
+                          <children>
+                            <region x="0" y="0" width="20" height="20" params="17" style="3" name="report_region" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="report_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_report_room" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                            <label x="20" y="0" width="202" height="17" params="16" style="3" caption="%24%7Bnavigator.room.popup.report.room%7D"/>
+                          </children>
+                        </container>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <itemlist x="0" y="244" width="345" height="80" params="8388608" style="3" name="bottom_itemlist">
+              <children>
+                <container x="0" y="0" width="345" height="23" params="16" style="3" name="tag_and_group_info">
+                  <children>
+                    <itemlist_horizontal x="0" y="0" width="200" height="20" params="16" style="3" name="tag_list">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                      </variables>
+                    </itemlist_horizontal>
+                    <static_bitmap x="318" y="0" width="18" height="16" params="16" style="3" name="group_mode_furnish"/>
+                    <static_bitmap x="279" y="0" width="18" height="16" params="16" style="3" name="group_mode_admin"/>
+                    <static_bitmap x="299" y="0" width="18" height="16" params="16" style="3" name="group_mode_size"/>
+                  </children>
+                </container>
+                <border x="7" y="23" width="331" height="55" params="16" style="3" name="event_info" color="0x0f1a700" blend="0.7">
+                  <children>
+                    <static_bitmap x="6" y="9" width="42" height="40" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_event_icon" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="54" y="3" width="275" height="16" params="16" style="3" name="event_name" caption="EVENT%20NAME%20LOREM%20IPSUM%20DOLOR%20SIT%20AMET">
+                      <variables>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="54" y="19" width="275" height="36" params="16" style="3" name="event_desc" caption="EVENT%20DESCRIPTION%20LOREM%20IPSUM%20DOLOR%20SIT%20AMET">
+                      <variables>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="bold" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </border>
+              </children>
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+        <var key="direction" value="left" type="String"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

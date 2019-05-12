@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="snowwar_timer" width="100" height="46" version="0.1" uid="EFF3EC56-1380-A6D0-F5DA-D61BEAE034C7">
+  <window>
+    <container x="0" y="0" width="100" height="46" params="64" style="8" background="true">
+      <children>
+        <border x="0" y="0" width="15" height="15" params="16" style="0" name="checksumIndicator" visible="false"/>
+        <text x="16" y="6" width="80" height="31" params="16" style="0" name="time_left_stroke" caption="01%3A23" tags="stroke" width_min="80">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="UbuntuThick" type="String"/>
+            <var key="font_size" value="25" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0x1077ac" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="thickness" value="200" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="16" y="6" width="80" height="31" params="16" style="0" name="time_left" caption="01%3A23" width_min="80">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="25" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>
