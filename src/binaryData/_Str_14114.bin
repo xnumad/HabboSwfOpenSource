@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="unseen_item_symbol" width="108" height="14" version="0.1" uid="2455F5E0-031F-3648-EA7E-90689E86A0B3">
+  <window>
+    <border x="0" y="0" width="108" height="14" params="16" style="0" color="0x052a900">
+      <children>
+        <text x="4" y="0" width="100" height="14" params="4194320" style="0" name="text" caption="inventory.furni.tab.new">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="grid_fit_type" value="subpixel" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

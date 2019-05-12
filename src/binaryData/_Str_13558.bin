@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="friends_footer" width="223" height="41" version="0.1" uid="8FC33C6F-DD43-7C61-BA84-EDC2BF485E0B">
+  <window>
+    <container x="0" y="0" width="223" height="41" params="16" style="1" name="footer" color="0xffffffffff" background="true">
+      <children>
+        <border x="5" y="5" width="213" height="31" params="144" style="0" name="border" color="0x0d9d9d9">
+          <children>
+            <container_button x="5" y="4" width="32" height="22" params="17" style="0" name="button_open_minimail" visible="false">
+              <children>
+                <bitmap x="8" y="4" width="19" height="14" params="16" style="0" name="icon"/>
+              </children>
+            </container_button>
+            <container_button x="5" y="4" width="32" height="22" params="17" style="0" name="button_room_invite">
+              <children>
+                <bitmap x="6" y="4" width="19" height="13" params="16" style="0" name="icon"/>
+              </children>
+            </container_button>
+            <container_button x="41" y="4" width="27" height="22" params="17" style="0" name="button_open_homepage">
+              <children>
+                <bitmap x="7" y="5" width="13" height="11" params="16" style="0" name="icon"/>
+              </children>
+            </container_button>
+            <container_button x="185" y="4" width="23" height="22" params="81" style="0" name="button_remove_friend">
+              <children>
+                <bitmap x="5" y="4" width="13" height="13" params="16" style="0" name="icon"/>
+              </children>
+            </container_button>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="unique_item_overlay_griditem" width="36" height="36" version="0.1" uid="440156AD-BF39-8D51-8385-BB2F8E440358">
+  <window>
+    <container x="0" y="0" width="36" height="36" params="16" style="0" name="unique_item_overlay_container_internal">
+      <children>
+        <bitmap x="1" y="28" width="34" height="7" params="16" style="0" name="unique_item_overlay_plaque_background_bitmap">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <static_bitmap x="0" y="27" width="36" height="9" params="16" style="0" name="unique_item_plaque_foreground_bitmap">
+          <variables>
+            <var key="asset_uri" value="unique_item_label_plaque_border" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="6" y="29" width="24" height="5" params="16" style="0" name="unique_item_overlay_plaque_number_bitmap">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <static_bitmap x="0" y="27" width="36" height="9" params="16" style="0" name="unique_item_plaque_studs_bitmap">
+          <variables>
+            <var key="asset_uri" value="unique_item_label_studs" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="36" height="36" params="16" style="0" name="unique_item_overlay_glaze_bitmap">
+          <variables>
+            <var key="asset_uri" value="unique_item_label_glass_shine" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="habbo_login_dialog" width="305" height="444" version="0.1" uid="01AD6D30-E8B6-F4DB-8217-32ABB77C76A2">
+  <window>
+    <frame x="0" y="0" width="305" height="444" params="1" style="101" name="habbo_login_dialog" caption="Habbo%20Login">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="5" y="0" width="293" height="364" params="16" style="100">
+          <children>
+            <container x="0" y="0" width="296" height="28" params="16" style="100" name="environment_container">
+              <children>
+                <label x="0" y="6" width="72" height="16" params="16" style="100" caption="Environment%3A"/>
+                <droplist x="89" y="0" width="200" height="25" params="17" style="100" name="environment_list" width_min="200"/>
+              </children>
+            </container>
+            <container x="0" y="31" width="298" height="30" params="16" style="100" name="name_container">
+              <children>
+                <label x="0" y="4" width="46" height="19" params="33" style="0" name="label_name" caption="Name%3A">
+                  <variables>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                  </variables>
+                </label>
+                <border x="90" y="0" width="200" height="29" params="16" style="105" name="name_border">
+                  <children>
+                    <input x="5" y="4" width="191" height="20" params="33" style="100" name="name_field">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="focus_capturer" value="true" type="Boolean"/>
+                      </variables>
+                    </input>
+                    <input x="5" y="4" width="191" height="20" params="33" style="100" name="dummy_field" caption="xIBlMDUyODA4YzFhYmVmNjlhMWE2MmMzOTYzOTZiODU5NTVlMmZmNTIyZjUxNTc2MzlmYTZhMTlhOThiNTRlMGU0ZDZlNDRmNDRjNGMwMzkwZmVlOGNjZjY0MmEyMmI2ZDQ2ZDcyMjhiMTBlMzRhZTZmZmZiNjFhMzVjMTEzMzM3ODBhZjZkZDFhYWFmYTczODhmYTZjNjViNTFlODIyNWM2YjU3Y2Y1ZmJhYzMwODU2ZTg5NjIyOTUxMmUxZjlhZjAzNDg5NTkzN2IyY2I2NjM3ZWI2ZWRmNzY4YzEwMTg5ZGYzMGMxMGQ4YTNlYzIwNDg4YTE5ODA2MzU5OWNhNmFkBTEwMDAx" visible="false">
+                        <variables>
+                            <var key="always_show_selection" value="true" type="Boolean"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                            <var key="focus_capturer" value="true" type="Boolean"/>
+                        </variables>
+                      </input>
+                  </children>
+                </border>
+                <container x="0" y="0" width="30" height="30" params="16" style="100"/>
+              </children>
+            </container>
+              <container x="0" y="0" width="298" height="10" params="16" style="100" name="dummy_container" visible="false">
+                  <children>
+                      <label x="0" y="4" width="46" height="19" params="33" style="0" name="label_name" caption="Dummy%3A">
+                          <variables>
+                              <var key="text_style" value="il_heading_1" type="String"/>
+                          </variables>
+                      </label>
+                      <border x="90" y="0" width="200" height="29" params="16" style="105" name="dummy_border">
+                          <children>
+                              <input x="5" y="4" width="191" height="20" params="33" style="100" name="dummy_field" caption="xIBlMDUyODA4YzFhYmVmNjlhMWE2MmMzOTYzOTZiODU5NTVlMmZmNTIyZjUxNTc2MzlmYTZhMTlhOThiNTRlMGU0ZDZlNDRmNDRjNGMwMzkwZmVlOGNjZjY0MmEyMmI2ZDQ2ZDcyMjhiMTBlMzRhZTZmZmZiNjFhMzVjMTEzMzM3ODBhZjZkZDFhYWFmYTczODhmYTZjNjViNTFlODIyNWM2YjU3Y2Y1ZmJhYzMwODU2ZTg5NjIyOTUxMmUxZjlhZjAzNDg5NTkzN2IyY2I2NjM3ZWI2ZWRmNzY4YzEwMTg5ZGYzMGMxMGQ4YTNlYzIwNDg4YTE5ODA2MzU5OWNhNmFkBTEwMDAx" visible="false">
+                                  <variables>
+                                      <var key="always_show_selection" value="true" type="Boolean"/>
+                                      <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                      <var key="spacing" value="0" type="Number"/>
+                                      <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                              </input>
+                          </children>
+                      </border>
+                      <container x="0" y="0" width="30" height="30" params="16" style="100"/>
+                  </children>
+              </container>
+            <container x="0" y="64" width="306" height="30" params="16" style="100" name="password_container">
+              <children>
+                <label x="0" y="4" width="73" height="19" params="33" style="100" name="label_password" caption="Password%3A">
+                  <variables>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                  </variables>
+                </label>
+                <border x="90" y="0" width="200" height="29" params="16" style="105" name="password_border">
+                  <children>
+                    <password x="5" y="4" width="192" height="20" params="33" style="100" name="pwd_field">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="display_as_password" value="true" type="Boolean"/>
+                      </variables>
+                    </password>
+                  </children>
+                </border>
+              </children>
+            </container>
+            <container x="90" y="97" width="198" height="46" params="16" style="100" name="options_container">
+              <children>
+                <text x="0" y="0" width="133" height="28" params="49" style="0" name="text002">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <checkbox x="0" y="0" width="194" height="21" params="49" style="101" name="useTicket" caption="Use%20SSO%20Ticket" treshold="0" height_min="21" height_max="21"/>
+                <checkbox x="0" y="22" width="198" height="21" params="49" style="101" name="useExistingSession" caption="Use%20existing%20Session" treshold="0" height_min="21" height_max="21"/>
+              </children>
+            </container>
+            <button x="90" y="146" width="200" height="52" params="131121" style="101" name="login_btn" caption="Login" color="0x0bbbbbb" width_min="200" height_min="52"/>
+            <border x="90" y="201" width="200" height="157" params="16" style="0" name="users_container" width_min="200">
+              <children>
+                <text x="0" y="0" width="200" height="157" params="16" style="100" name="users_info" caption="A%20list%20of%20your%20avatars%20will%20appear%20after%20successful%20login.">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <scrollable_itemlist_vertical x="2" y="2" width="196" height="153" params="16" style="100" name="list">
+                  <children>
+                    <button x="0" y="0" width="196" height="28" params="131089" style="102" name="userlist_item" caption="username" color="0x0bbbbbb" width_min="196" width_max="196"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="1" type="int"/>
+                  </variables>
+                </scrollable_itemlist_vertical>
+              </children>
+            </border>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="75" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="5" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

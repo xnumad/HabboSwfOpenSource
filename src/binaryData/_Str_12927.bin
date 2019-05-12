@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_marketplace" width="360" height="460" version="0.1" uid="D1526811-338F-9428-20A7-EB2A7285DCDC">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_marketplace" color="0x2121ffffff" background="true">
+      <children>
+        <container x="0" y="70" width="360" height="390" params="16" style="0" name="marketPlaceWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

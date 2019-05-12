@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="miniview" width="192" height="29" version="0.1" uid="16F4B990-0EF6-E0A7-7FF2-57F4D9A73758">
+  <window>
+    <container x="0" y="0" width="192" height="29" params="16" style="0" name="returnusergifting" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="192" height="29" params="16" style="6" color="0x0686661" blend="0.8" tags="BGCOLOR">
+          <children>
+            <widget x="124" y="3" width="99" height="37" params="147472" style="3" name="countdown">
+              <variables>
+                <var key="widget_type" value="countdown" type="String"/>
+                <var key="countdown:running" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+            <text x="10" y="6" width="154" height="16" params="16" style="100" caption="%24%7Bnext.gift.in%7D">
+              <variables>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

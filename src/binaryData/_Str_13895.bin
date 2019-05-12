@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="extend_confirmation" width="450" height="235" version="0.1" uid="89A0965F-5A44-9BB8-39B1-42BA499F44C4">
+  <window>
+    <frame x="1" y="1" width="450" height="235" params="33025" style="3" name="frame_title" color="0x07a98">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="1" y="0" width="448" height="25" params="16" style="0" name="background_container" color="0xffffbcbdbc" clipping="false" background="true"/>
+        <icon x="25" y="25" width="85" height="40" params="16" style="18" name="club_level_icon"/>
+        <itemlist_vertical x="140" y="25" width="285" height="175" params="8388624" style="0" name="itemlist_vertical">
+          <children>
+            <text x="0" y="0" width="266" height="14" params="16" style="0" name="extend_title">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="margin_bottom" value="10" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="80" type="Number"/>
+                <var key="thickness" value="-15" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="0" y="14" width="285" height="30" params="16" style="0" name="normal_price_container">
+              <children>
+                <text x="0" y="15" width="4" height="4" params="1048592" style="0" name="normal_price_label">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="150" y="15" width="30" height="4" params="1048592" style="0" name="normal_price_price_left">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <bitmap x="180" y="0" width="30" height="25" params="16" style="0" name="normal_price_icon_left"/>
+                <text x="212" y="0" width="10" height="4" params="16" style="0" name="plus" caption="+">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="220" y="15" width="30" height="4" params="1048592" style="0" name="normal_price_price_right">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <icon x="255" y="0" width="30" height="25" params="16" style="0" name="normal_price_icon_right"/>
+              </children>
+            </container>
+            <container x="0" y="44" width="285" height="30" params="16" style="0" name="you_save_container" clipping="false" background="true">
+              <children>
+                <text x="0" y="15" width="4" height="4" params="1048592" style="0" name="you_save_label">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="150" y="15" width="30" height="4" params="1048592" style="0" name="you_save_price_left">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <bitmap x="180" y="0" width="30" height="25" params="16" style="0" name="you_save_icon_left"/>
+                <text x="212" y="0" width="10" height="4" params="16" style="0" name="plus" caption="+">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="220" y="15" width="30" height="4" params="1048592" style="0" name="you_save_price_right">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <icon x="255" y="0" width="30" height="25" params="16" style="0" name="you_save_icon_right"/>
+              </children>
+            </container>
+            <container x="0" y="74" width="285" height="3" params="16" style="0" name="total_amount_line" color="0xffff007a98" clipping="false" background="true"/>
+            <container x="0" y="77" width="100" height="8" params="16" style="0" name="spacer"/>
+            <container x="0" y="85" width="285" height="31" params="16" style="0" name="your_price_container">
+              <children>
+                <text x="0" y="15" width="4" height="4" params="1048592" style="0" name="your_price_label" color="0x07a98">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="150" y="15" width="30" height="4" params="1048592" style="0" name="your_price_price_left">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <bitmap x="180" y="0" width="30" height="25" params="16" style="0" name="your_price_icon_left"/>
+                <text x="212" y="0" width="10" height="4" params="16" style="0" name="plus" caption="+">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <text x="220" y="15" width="30" height="4" params="1048592" style="0" name="your_price_price_right">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+                <icon x="255" y="0" width="30" height="25" params="16" style="0" name="your_price_icon_right"/>
+              </children>
+            </container>
+            <text x="0" y="116" width="244" height="9" params="16" style="0" name="offer_expiration" color="0x0666666">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="margin_bottom" value="5" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="80" type="Number"/>
+                <var key="thickness" value="-15" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="0" y="125" width="100" height="10" params="16" style="0"/>
+            <container x="0" y="135" width="285" height="40" params="16" style="0" name="action_container" width_max="285">
+              <children>
+                <button_thick x="135" y="0" width="150" height="30" params="393233" style="3" name="buy_now_button" width_max="150"/>
+                <region x="0" y="0" width="5" height="32" params="131089" style="0" name="maybe_later_region" treshold="0">
+                  <children>
+                    <text x="0" y="5" width="4" height="4" params="4194320" style="0" name="maybe_later_link">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                      </variables>
+                    </text>
+                  </children>
+                </region>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+        <bitmap x="1" y="110" width="40" height="144" params="1049712" style="0" name="club_teaser"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

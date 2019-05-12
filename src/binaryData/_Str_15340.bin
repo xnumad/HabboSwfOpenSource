@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="grs_main_window_new" width="400" height="474" version="0.1" uid="037202F9-16D9-BA02-370C-105CCBAA749E">
+  <window>
+    <frame x="0" y="0" width="400" height="474" params="98337" style="0" name="grs_main_window" caption="%24%7Bnavigator.title%7D" color="0xff418db0" tags="FIT%3Anavigator" height_min="215">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="388" height="442" params="2065" style="0" name="tabbedview" caption="%24%7Bnavigator.title%7D">
+          <children>
+            <tab_context x="0" y="0" width="388" height="442" params="2193" style="0" name="tab_context" caption="%24%7Bnavigator.title%7D">
+              <children>
+                <tab_button x="0" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_4" caption="%24%7Bnavigator.tab.special%7D" id="4" tags="FIT%3AnavigatorSpecialTab"/>
+                <tab_button x="123" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_6" caption="%24%7Bnavigator.tab.categories%7D" id="6" tags="FIT%3AnavigatorCategoryTab"/>
+                <tab_button x="266" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_2" caption="%24%7Bnavigator.tab.rooms%7D" id="2" tags="FIT%3AnavigatorRoomsTab"/>
+                <tab_button x="387" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_1" caption="%24%7Bnavigator.tab.events%7D" id="1" tags="FIT%3AnavigatorEventsTab"/>
+                <tab_button x="512" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_3" caption="%24%7Bnavigator.tab.me%7D" id="3" tags="FIT%3AnavigatorMeTab"/>
+                <tab_button x="616" y="0" width="20" height="22" params="131089" style="0" name="navigator_tab_5" caption="%24%7Bnavigator.tab.search%7D" id="5" tags="FIT%3AnavigatorSearchTab"/>
+              </children>
+            </tab_context>
+            <border x="9" y="26" width="369" height="30" params="17" style="0" name="search_header" caption="%24%7Bnavigator.title%7D" color="0xffcccccc">
+              <children>
+                <input x="90" y="5" width="201" height="17" params="1" style="0" name="search_str" color="0xffffffffff" background="true" tags="FIT%3AnavigatorSearchField">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="border" value="true" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+                <button x="300" y="3" width="65" height="21" params="131089" style="0" name="search_but" caption="%24%7Bgeneric.search%7D" tags="FIT%3AnavigatorSearchButton" width_min="65" width_max="65"/>
+                <dropmenu x="5" y="4" width="80" height="20" params="17" style="2" name="search_type" tags="FIT%3AnavigatorSearchType"/>
+              </children>
+            </border>
+            <container x="10" y="60" width="388" height="668" params="2065" style="0" name="tab_content" caption="%24%7Bnavigator.title%7D">
+              <children>
+                <container x="0" y="0" width="370" height="380" params="2048" style="0" name="list_content" caption="%24%7Bnavigator.title%7D" color="0xffffffff00" background="true">
+                  <children>
+                    <container x="0" y="0" width="370" height="380" params="2064" style="0" name="guest_rooms" caption="%24%7Bnavigator.title%7D" color="0xffffffffff" background="true">
+                      <children>
+                        <itemlist_vertical x="0" y="0" width="353" height="380" params="2177" style="0" name="item_list" caption="%24%7Bnavigator.title%7D" background="true"/>
+                        <scrollbar_vertical x="353" y="0" width="17" height="380" params="2113" style="0" name="scroller" caption="%24%7Bnavigator.title%7D">
+                          <variables>
+                            <var key="scrollable" value="item_list" type="String"/>
+                          </variables>
+                        </scrollbar_vertical>
+                        <text x="0" y="100" width="295" height="13" params="786449" style="0" name="no_rooms_found" caption="%24%7Bnavigator.noroomsfound%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_face" value="Volter Bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="395" height="380" params="2064" style="0" name="room_ads" caption="%24%7Bnavigator.title%7D" color="0xffffffffff" background="true">
+                      <children>
+                        <itemlist_vertical x="0" y="0" width="378" height="380" params="2177" style="0" name="item_list" caption="%24%7Bnavigator.title%7D" background="true"/>
+                        <scrollbar_vertical x="353" y="0" width="17" height="380" params="2113" style="0" name="scroller" caption="%24%7Bnavigator.title%7D">
+                          <variables>
+                            <var key="scrollable" value="item_list" type="String"/>
+                          </variables>
+                        </scrollbar_vertical>
+                        <text x="0" y="100" width="295" height="13" params="786449" style="0" name="no_rooms_found" caption="%24%7Bnavigator.noroomsfound%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_face" value="Volter Bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="395" height="380" params="2064" style="0" name="popular_tags" caption="%24%7Bnavigator.title%7D" color="0xffffffffff" visible="false" background="true">
+                      <children>
+                        <itemlist_vertical x="0" y="0" width="378" height="380" params="2177" style="0" name="item_list" caption="%24%7Bnavigator.title%7D" background="true"/>
+                        <scrollbar_vertical x="353" y="0" width="17" height="380" params="2113" style="0" name="scroller" caption="%24%7Bnavigator.title%7D">
+                          <variables>
+                            <var key="scrollable" value="item_list" type="String"/>
+                          </variables>
+                        </scrollbar_vertical>
+                        <text x="0" y="100" width="295" height="13" params="786449" style="0" name="no_tags_found" caption="%24%7Bnavigator.notagsfound%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_face" value="Volter Bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="395" height="380" params="2064" style="3" name="categories_container" caption="%24%7Bnavigator.title%7D" background="true">
+                      <children>
+                        <itemlist_vertical x="0" y="0" width="378" height="380" params="2177" style="3" name="item_list_category" caption="%24%7Bnavigator.title%7D" background="true">
+                          <children>
+                            <container x="0" y="0" width="353" height="1" params="16" style="0" name="top_categories" color="0xffffffffff" background="true"/>
+                          </children>
+                        </itemlist_vertical>
+                        <scrollbar_vertical x="353" y="0" width="17" height="380" params="2113" style="0" name="scroller_category">
+                          <variables>
+                            <var key="scrollable" value="item_list_category" type="String"/>
+                          </variables>
+                        </scrollbar_vertical>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="370" height="380" params="2064" style="0" name="official_rooms" caption="%24%7Bnavigator.title%7D" color="0xffffffffff" background="true">
+                      <children>
+                        <itemlist_vertical x="0" y="0" width="353" height="380" params="2177" style="0" name="item_list_official" caption="%24%7Bnavigator.title%7D" background="true">
+                          <children>
+                            <container x="0" y="0" width="353" height="1" params="16" style="0" name="promoted_rooms" color="0xffffffffff" background="true"/>
+                          </children>
+                        </itemlist_vertical>
+                        <scrollbar_vertical x="353" y="0" width="17" height="380" params="2113" style="0" name="scroller">
+                          <variables>
+                            <var key="scrollable" value="item_list_official" type="String"/>
+                          </variables>
+                        </scrollbar_vertical>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="0" width="382" height="50" params="1" style="0" name="custom_content" caption="%24%7Bnavigator.title%7D">
+                  <children>
+                    <container x="0" y="0" width="382" height="20" params="17" style="0" name="me_header" color="0xffcccccc" visible="false">
+                      <children>
+                        <dropmenu x="0" y="0" width="368" height="20" params="1" style="0" name="meSubNavi"/>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="382" height="20" params="17" style="0" name="rooms_header" color="0xffcccccc" visible="false">
+                      <children>
+                        <dropmenu x="0" y="0" width="368" height="20" params="1" style="0" name="roomCtgFilter"/>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="382" height="20" params="17" style="0" name="room_ad_header" color="0xffcccccc" visible="false">
+                      <children>
+                        <dropmenu x="0" y="0" width="368" height="20" params="1" style="0" name="roomAdFilter"/>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="382" height="33" params="17" style="0" name="room_competitions_header" color="0xffcccccc">
+                      <children>
+                        <text x="1" y="8" width="370" height="13" params="786449" style="0" caption="%24%7Bnavigator.roomcompetitionspager%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_face" value="Volter Bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <container_button x="0" y="0" width="30" height="30" params="17" style="0" name="prev_button">
+                          <children>
+                            <icon x="12" y="10" width="5" height="9" params="16" style="4" color="0x00"/>
+                          </children>
+                        </container_button>
+                        <container_button x="315" y="0" width="30" height="30" params="17" style="0" name="next_button">
+                          <children>
+                            <icon x="12" y="10" width="5" height="9" params="16" style="5" color="0x00"/>
+                          </children>
+                        </container_button>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="0" width="382" height="0" params="1025" style="0" name="custom_footer" caption="%24%7Bnavigator.title%7D">
+                  <children>
+                    <container x="0" y="0" width="382" height="37" params="17" style="0" name="me_footer" color="0xffcccccc">
+                      <children>
+                        <border x="0" y="8" width="369" height="29" params="17" style="0" name="more_rooms_container" caption="%24%7Bnavigator.title%7D" color="0xffcccccc">
+                          <children>
+                            <bitmap x="4" y="3" width="23" height="23" params="16" style="0" name="create_room"/>
+                            <text x="32" y="8" width="146" height="13" params="16" style="0" name="more_rooms_caption" caption="%24%7Bnavigator.moreroomscaption%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <button x="245" y="4" width="102" height="21" params="131089" style="0" name="create_room_but" caption="%24%7Bnavigator.createroom%7D" width_min="102" width_max="102"/>
+                          </children>
+                        </border>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="382" height="85" params="17" style="0" name="ad_footer" color="0xffcccccc">
+                      <children>
+                        <text x="6" y="2" width="121" height="13" params="16" style="0" name="ad_caption" caption="%24%7Bnavigator.adcaption%7D" visible="false">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_face" value="Volter Bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <container x="0" y="16" width="346" height="68" params="17" style="0" name="ad_cont" color="0xffffffffff" background="true"/>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="382" height="37" params="17" style="0" name="room_ads_footer" color="0xffcccccc">
+                      <children>
+                        <border x="0" y="8" width="369" height="29" params="17" style="0" name="link_to_navigator_container" caption="%24%7Bnavigator.title%7D" color="0xffcccccc">
+                          <children>
+                            <text x="5" y="8" width="150" height="16" params="16" style="0" name="get_event_caption" caption="%24%7Broomad.get.event.caption%7D">
+                              <variables>
+                                <var key="font_face" value="Volter" type="String"/>
+                                <var key="font_size" value="9" type="uint"/>
+                                <var key="text_style" value="il_regular" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <button x="245" y="4" width="102" height="21" params="131089" style="0" name="get_event_but" caption="%24%7Broomad.get.event%7D" width_min="102" width_max="102"/>
+                          </children>
+                        </border>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+        </container>
+        <text x="81" y="210" width="104" height="13" params="786432" style="0" name="loading_text" caption="%24%7Bnavigator.loading%7D" visible="false">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </frame>
+  </window>
+</layout>

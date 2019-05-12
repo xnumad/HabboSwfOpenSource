@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_layer" width="247" height="49" version="0.1" uid="FE54E53F-3938-5196-8571-D1B78BE0746E">
+  <window>
+    <container x="0" y="0" width="247" height="49" params="16" style="0" name="container">
+      <children>
+        <border x="0" y="0" width="247" height="49" params="16" style="3" name="border" color="0x0bebba5"/>
+        <container x="3" y="0" width="51" height="49" params="16" style="0" name="preview_container">
+          <children>
+            <button_thick x="0" y="0" width="49" height="49" params="131089" style="3" name="part_button"/>
+            <bitmap x="5" y="5" width="39" height="39" params="16" style="0" name="part_preview"/>
+          </children>
+        </container>
+        <container x="67" y="3" width="43" height="43" params="16" style="0" name="position_container">
+          <children>
+            <bitmap x="0" y="0" width="43" height="43" params="17" style="0" name="position_grid"/>
+            <bitmap x="1" y="1" width="13" height="13" params="16" style="0" name="position_picker"/>
+          </children>
+        </container>
+        <itemgrid_vertical x="124" y="2" width="120" height="45" params="16" style="0" name="color_selector">
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </itemgrid_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="friend_remove_confirm_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_14584.bin", mimeType="application/octet-stream")]
     public class _Str_14584 extends ByteArrayAsset 
     {
     }

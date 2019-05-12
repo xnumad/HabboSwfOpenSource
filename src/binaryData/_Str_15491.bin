@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_dance_button" width="20" height="20" version="0.0">
+  <window>
+    <button x="0" y="0" width_min="145" width="145" height="22" params="131089" style="1" name="dance_button" caption="">
+      <variables/>
+    </button>
+  </window>
+</layout>

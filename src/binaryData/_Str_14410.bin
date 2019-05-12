@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="packagecard" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="250" height="150" params="32784" style="0" name="ph_frame" caption="This feature is not yet available!">
+      <children>
+        <border x="0" y="0" width="238" height="118" params="16" style="0" name="ph_border">
+          <children>
+            <text x="82" y="17" width="134" height="44" params="16" style="0" name="ph_msg" caption="Coming soon!">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

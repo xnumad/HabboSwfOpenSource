@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ui_help_modal" width="150" height="100" version="0.1" uid="B6CE2F52-8931-2F8B-AD03-007C7AA7F820">
+  <window>
+    <container x="0" y="0" width="150" height="100" params="2176" style="7">
+      <children>
+        <bitmap x="0" y="0" width="149" height="99" params="2225" style="3" name="bitmap" color="0x024231e" blend="0.6" background="true">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <container x="0" y="0" width="146" height="94" params="2192" style="0" name="ui_container" color="0x0686661" treshold="0"/>
+      </children>
+    </container>
+  </window>
+</layout>

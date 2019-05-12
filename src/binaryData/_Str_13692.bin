@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="element_bodytext" width="38" height="38" version="0.1" uid="29F00EE6-7265-B64F-213E-4C20452C13AF">
+  <window>
+    <static_bitmap x="4" y="3" width="38" height="38" params="16" style="100" name="image">
+      <variables>
+        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+      </variables>
+    </static_bitmap>
+  </window>
+</layout>

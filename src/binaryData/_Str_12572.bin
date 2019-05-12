@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="camera_typebutton" width="95" height="37" version="0.1" uid="9966179D-225A-C188-1604-12CC220441D7">
+  <window>
+    <region x="0" y="0" width="95" height="37" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="region" treshold="0">
+      <children>
+        <border x="0" y="0" width="95" height="47" params="16" style="0" color="0x0cccccc" tags="%23bg"/>
+        <border x="0" y="0" width="95" height="47" params="16" style="8" name="active_border" tags="%23bg"/>
+        <bitmap x="18" y="0" width="60" height="37" params="16" style="3" name="icon">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

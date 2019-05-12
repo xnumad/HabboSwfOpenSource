@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="redeemItemCodeWidget" width="282" height="50" version="0.1" uid="34203E66-492C-F8B0-2B64-9CD28856A452">
+  <window>
+    <container x="38" y="350" width="282" height="50" params="16" style="0" name="redeemItemCodeWidget">
+      <children>
+        <border x="0" y="25" width="200" height="20" params="16" style="0"/>
+        <button x="213" y="25" width="62" height="22" params="393361" style="3" name="redeem" caption="%24%7Bredeem%7D" width_max="100"/>
+        <text x="0" y="10" width="72" height="17" params="16" style="3" name="voucher_code" caption="lorem%20ipsum">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="max_chars" value="16" type="int"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

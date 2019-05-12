@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chooser_view" width="203" height="168" version="0.1" uid="DC25D851-C69B-D364-30C2-84A0E6C3DC22">
+  <window>
+    <frame x="0" y="0" width="203" height="168" params="98305" style="3" caption="%24%7Bwidget.chooser.title%7D" color="0x0418db0" width_min="150" height_min="90">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="9" y="13" width="173" height="120" params="2192" style="0" caption="%24%7Bwidgets.chooser.title%7D">
+          <children>
+            <scrollable_itemlist_vertical x="0" y="0" width="172" height="120" params="2192" style="0" name="item_list" caption="%24%7Bwidgets.chooser.title%7D"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pixel_removal_catalog_page" width="350" height="340" version="0.1" uid="161DF839-889B-BFC8-C8D3-DB1F8FAA7FDD">
+  <window>
+    <container x="0" y="0" width="350" height="340" params="16" style="0" color="0x00" background="true">
+      <children>
+        <static_bitmap x="0" y="39" width="250" height="33" params="16" style="0" name="lift_header">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}reception/silverscreen250_top.png" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="72" width="250" height="233" params="2064" style="0" name="left_mid" height_min="1">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}reception/silverscreen250_mid2.png" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="304" width="250" height="37" params="1049616" style="0" name="lift_bottom">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}reception/silverscreen250_btm.png" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="5" y="157" width="120" height="135" params="16" style="100" name="promo_bitmap">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <text x="120" y="161" width="120" height="43" params="16" style="100" name="page_header_txt" caption="%24%7Blanding.view.pixelremoval.caption%7D">
+          <variables>
+            <var key="font_size" value="15" type="uint"/>
+            <var key="text_style" value="il_heading_1" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="-0.6" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="120" y="198" width="120" height="78" params="16" style="100" name="page_desc_txt" caption="%24%7Blanding.view.pixelremoval.info%7D">
+          <variables>
+            <var key="font_size" value="10" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="115" y="261" width="125" height="48" params="3277841" style="100" name="open_catalog_button" caption="%24%7Blanding.view.pixelremoval.button%7D" width_max="125" height_min="48" height_max="48"/>
+        <widget x="19" y="121" width="210" height="31" params="16" style="100">
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <text x="9" y="69" width="233" height="16" params="16" style="100" name="pixel_removal_title" caption="%24%7Blanding.view.pixelremoval.countdown%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <widget x="75" y="86" width="99" height="37" params="147472" style="100" name="pixels_countdown_widget">
+          <variables>
+            <var key="widget_type" value="countdown" type="String"/>
+          </variables>
+        </widget>
+      </children>
+    </container>
+  </window>
+</layout>

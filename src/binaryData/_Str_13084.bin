@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="poll_answer_text_input" width="300" height="90" version="0.1" uid="41EF31D0-3CA1-4BFC-793D-9C24228403AD">
+  <window>
+    <border x="10" y="12" width="300" height="90" params="16" style="0" name="poll_answer_border">
+      <children>
+        <input x="8" y="3" width="282" height="84" params="2177" style="0" name="poll_answer_input">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="max_chars" value="512" type="int"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </input>
+        <static_bitmap x="270" y="10" width="17" height="18" params="16" style="0" name="write_deco">
+          <variables>
+            <var key="asset_uri" value="common_small_pen" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="use_product_widget_frame_monsterplant" width="388" height="220" version="0.1" uid="9671C6CC-DBF3-2363-8945-7CA43986B506">
+  <window>
+    <frame x="33" y="26" width="388" height="220" params="32769" style="3" caption="%24%7Buseproduct.widget.title.monsterplant%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+    </frame>
+  </window>
+</layout>

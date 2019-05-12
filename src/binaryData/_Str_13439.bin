@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guide_tool_threeway" width="242" height="306" version="0.1" uid="89071832-76A9-690D-D773-B01119A35B25">
+  <window>
+    <frame x="0" y="0" width="242" height="306" params="32801" style="100" name="guide_tool" caption="%24%7Bguide.help.guide.tool.title%7D" width_min="242" width_max="242" height_min="50">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist x="8" y="0" width="226" height="253" params="8536080" style="0" name="list">
+          <children>
+            <border x="0" y="0" width="226" height="65" params="16" style="102">
+              <children>
+                <checkbox x="15" y="24" width="200" height="21" params="17" style="100" name="guide_tool_duty" caption="Off%20duty%20right%20now" treshold="0" height_min="21" height_max="21"/>
+                <text x="58" y="11" width="150" height="15" params="16" style="100" name="status_caption_txt" caption="%24%7Bguide.help.guide.tool.yourstatus%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="10" type="uint"/>
+                    <var key="text_color" value="0x666666" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <container x="0" y="70" width="227" height="97" params="16" style="100" name="handle_selection_container">
+              <children>
+                <text x="14" y="0" width="246" height="15" params="16" style="100" caption="%24%7Bguide.help.guide.tool.tickettypeselection.caption%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_3" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <checkbox x="15" y="21" width="207" height="21" params="17" style="101" name="handle_guide_tickets" caption="%24%7Bguide.help.guide.tool.tickettypeselection.guiderequests%7D" treshold="0" height_min="21" height_max="21"/>
+                <checkbox x="15" y="45" width="207" height="21" params="17" style="101" name="handle_helper_tickets" caption="%24%7Bguide.help.guide.tool.tickettypeselection.onlyhelprequests%7D" treshold="0" height_min="21" height_max="21"/>
+                <checkbox x="15" y="69" width="207" height="21" params="17" style="101" name="handle_guardian_tickets" caption="%24%7Bguide.help.guide.tool.tickettypeselection.bullyreports%7D" treshold="0" height_min="21" height_max="21"/>
+                <static_bitmap x="0" y="94" width="229" height="2" params="16" style="100" name="selection_separator">
+                  <variables>
+                    <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <background x="0" y="0" width="227" height="90" params="17" style="100" name="disabled_screen" color="0xaaaae2e2e2" background="true"/>
+              </children>
+            </container>
+            <container x="0" y="172" width="227" height="61" params="16" style="100" name="online_counts_container">
+              <children>
+                <static_bitmap x="4" y="13" width="23" height="24" params="16" style="100" name="info_img">
+                  <variables>
+                    <var key="asset_uri" value="common_info_icon_grey" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <formatted_text x="31" y="0" width="188" height="16" params="16" style="100" caption="%24%7Bguide.help.guide.tool.guidesonduty%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="31" y="17" width="193" height="16" params="16" style="100" caption="%24%7Bguide.help.guide.tool.helpersonduty%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="31" y="34" width="206" height="16" params="16" style="100" caption="%24%7Bguide.help.guide.tool.guardiansonduty%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <static_bitmap x="0" y="54" width="229" height="2" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <link x="0" y="238" width="226" height="16" params="1" style="100" name="guide_tool_talent" caption="%24%7Bguide.help.guide.tool.skill.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="tool_tip_caption" value="${guide.help.guide.tool.skill.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </link>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

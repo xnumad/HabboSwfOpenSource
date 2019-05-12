@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="stickie" width="185" height="178" version="0.1" uid="3CAC676B-E068-194F-B8FA-63880BBC6D7F">
+  <window>
+    <container x="0" y="0" width="185" height="178" params="32784" style="0">
+      <children>
+        <bitmap x="0" y="0" width="185" height="178" params="273" style="0" name="bg" tags="bg"/>
+        <bitmap x="9" y="4" width="10" height="10" params="17" style="0" name="delete" tags="delete_button"/>
+        <container x="26" y="5" width="9" height="9" params="17" style="1" name="blue" caption="blue_button" color="0xffff9cceff" background="true"/>
+        <container x="38" y="5" width="9" height="9" params="17" style="2" name="purple" caption="purple_button" color="0xffffff9cff" background="true"/>
+        <container x="50" y="5" width="9" height="9" params="17" style="3" name="green" caption="green_button" color="0xffff9cff9c" background="true"/>
+        <container x="62" y="5" width="9" height="9" params="17" style="0" name="yellow" caption="yellow_button" color="0xffffffff33" background="true"/>
+        <bitmap x="168" y="5" width="10" height="10" params="17" style="0" name="close" tags="close_button"/>
+        <input x="5" y="24" width="175" height="135" params="1" style="0" name="text">
+          <variables>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="max_chars" value="500" type="int"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </input>
+      </children>
+    </container>
+  </window>
+</layout>

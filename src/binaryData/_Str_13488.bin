@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="targeted_offer_window" width="575" height="430" version="0.1" uid="1E1E58C7-934C-1DC3-6238-283F47E19A2C">
+  <window>
+    <frame x="0" y="0" width="575" height="430" params="32769" style="3" color="0xff418db0" treshold="0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="13" y="48" width="320" height="249" params="16" style="3" color="0x0ffde5a">
+          <children>
+            <text x="10" y="12" width="301" height="28" params="16" style="3" name="txt_title" caption="UFO%20-%20Ultimate%20first%20time%20offer" color="0x00">
+              <variables>
+                <var key="font_size" value="23" type="uint"/>
+                <var key="text_color" value="0x1" type="hex"/>
+                <var key="text_style" value="ubuntu_condensed_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <html x="12" y="45" width="262" height="195" params="33" style="3" name="txt_description" caption="This%20is%20just%20this%20insane%20offer%20which%20is%20going%20to%20span%20over%20several%20several%20lines.%20Yee.Lorem%20ipsumdolor%20sit%20amet%20etc.%20" clipping="false" treshold="0" width_max="355">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </border>
+        <static_bitmap x="236" y="188" width="136" height="138" params="16" style="0" name="pricebg">
+          <variables>
+            <var key="asset_uri" value="catalogue_ufo_pricebg" type="String"/>
+          </variables>
+        </static_bitmap>
+        <container x="247" y="194" width="122" height="134" params="16" style="3">
+          <children>
+            <text x="10" y="10" width="97" height="24" params="935952" style="3" name="txt_price_label" caption="Price%3A" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="12" y="27" width="89" height="43" params="3557392" style="3" name="txt_price_credits" caption="40" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="35" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="87" y="43" width="22" height="22" params="16" style="3" name="credit_icon">
+              <variables>
+                <var key="asset_uri" value="pursearea_credits_icon2" type="String"/>
+              </variables>
+            </static_bitmap>
+            <text x="11" y="59" width="89" height="43" params="3557392" style="3" name="txt_price_activityPoints" caption="20" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="35" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="88" y="74" width="22" height="22" params="16" style="0" name="activityPoints_icon"/>
+            <text x="-5" y="62" width="41" height="31" params="935952" style="3" name="txt_plus_character" caption="+" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="25" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <static_bitmap x="379" y="47" width="179" height="283" params="16" style="0" name="bmp_illustration"/>
+        <container x="15" y="316" width="540" height="70" params="786448" style="3">
+          <children>
+            <text x="0" y="14" width="540" height="21" params="147472" style="3" name="txt_status" caption="%24%7Btargeted.offer.not.enough.credits%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="16" type="uint"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist_horizontal x="30" y="38" width="481" height="300" params="934096" style="3" name="itemlist_buttonbar">
+              <children>
+                <container x="0" y="0" width="100" height="30" params="786640" style="3" name="cnt_quantity">
+                  <children>
+                    <text x="0" y="4" width="100" height="17" params="16" style="3" caption="%24%7Bcatalog.bundlewidget.quantity%7D" color="0x00" width_max="100">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0x666666" type="hex"/>
+                        <var key="margin_right" value="4" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <border x="65" y="0" width="30" height="25" params="16" style="0">
+                      <children>
+                        <input x="3" y="5" width="22" height="15" params="1" style="3" name="quantity_input" caption="1" color="0x00">
+                          <variables>
+                            <var key="text_style" value="u_small" type="String"/>
+                            <var key="margin_right" value="4" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="restrict" value="0123456789" type="String"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </input>
+                      </children>
+                    </border>
+                  </children>
+                </container>
+                <button_thick x="110" y="0" width="189" height="30" params="917713" style="6" name="btn_get_credits" caption="%24%7Btargeted.offer.button.credits%7D" color="0x04faf4f"/>
+                <button_thick x="309" y="0" width="172" height="30" params="917713" style="6" name="btn_buy" caption="%24%7Btargeted.offer.button.buy%7D" color="0x04faf4f"/>
+              </children>
+              <variables>
+                <var key="spacing" value="10" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+        </container>
+        <border x="-3" y="-5" width="579" height="40" params="16400" style="3" name="cnt_time_left" color="0x0fc5046">
+          <children>
+            <container x="5" y="7" width="569" height="30" params="16" style="3">
+              <children>
+                <itemlist_horizontal x="222" y="0" width="96" height="30" params="933936" style="3">
+                  <children>
+                    <text x="0" y="5" width="15" height="21" params="144" style="3" name="txt_time_left_label_1" caption="...">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="16" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="15" y="0" width="66" height="30" params="8405136" style="3" name="txt_time_left" caption="00%3A00" treshold="0">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="24" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="81" y="5" width="15" height="21" params="144" style="3" name="txt_time_left_label_2" caption="...">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="16" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="32" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

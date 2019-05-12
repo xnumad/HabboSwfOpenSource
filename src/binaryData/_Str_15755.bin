@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="widget_container_widget" width="250" height="30" version="0.1" uid="81102C2D-2761-6B7A-B3F7-55E88869C0A4">
+  <window>
+    <container x="0" y="0" width="250" height="30" params="16" style="0" color="0x00" background="true"/>
+  </window>
+</layout>

@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="wildwest_engraving_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_12688.bin", mimeType="application/octet-stream")]
     public class _Str_12688 extends ByteArrayAsset 
     {
     }

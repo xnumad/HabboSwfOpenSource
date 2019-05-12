@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="nestBreedingSuccessDialog" width="323" height="221" version="0.1" uid="6DD6B2B7-F891-3AA1-6A12-41FED1CC0A55">
+  <window>
+    <frame x="0" y="0" width="323" height="221" params="1" style="100" caption="${breedpets.nestbreeding.success.header}">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <text x="39" y="15" width="252" height="16" params="16" style="100" caption="${breedpets.nestbreeding.success.title}">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="42" y="116" width="252" height="15" params="16" style="100" name="pet.name" caption="${breedpets.nestbreeding.success.name}">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="42" y="127" width="252" height="16" params="16" style="100" name="pet.raritycategory" caption="${breedpets.nestbreeding.success.raritycategory.0}">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="85" y="143" width="172" height="32" params="917521" style="102" name="button.ok" caption="${breedpets.nestbreeding.success.button.ok}" width_min="100"/>
+        <static_bitmap x="127" y="33" width="82" height="83" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="icons_hilighter_yellow" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="146" y="54" width="40" height="40" params="16" style="100" name="pet_image"/>
+      </children>
+    </frame>
+  </window>
+</layout>

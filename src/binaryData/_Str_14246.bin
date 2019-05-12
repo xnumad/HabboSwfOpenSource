@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_trophies" width="360" height="460" version="0.1" uid="40F54643-8C0B-175E-E485-E45356BB5A28">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_trophies">
+      <children>
+        <formatted_text x="0" y="70" width="360" height="135" params="16" style="3" name="trophy.description" caption="%24%7Bloremipsum.html%7D">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+        <container x="0" y="165" width="360" height="127" params="16" style="0" name="trophyWidget" tags="EMBEDDED">
+          <children>
+            <bitmap x="0" y="0" width="360" height="127" params="16" style="0" name="ctlg_teaserimg_1">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+            <container_button x="130" y="96" width="30" height="30" params="393233" style="3" name="ctlg_prevmodel_button" width_max="100">
+              <children>
+                <icon x="9" y="8" width="13" height="13" params="16" style="2" name="icon" color="0x00"/>
+              </children>
+            </container_button>
+            <container_button x="190" y="96" width="30" height="30" params="393233" style="3" name="ctlg_nextmodel_button" width_max="100">
+              <children>
+                <icon x="9" y="8" width="13" height="13" params="16" style="3" name="icon" color="0x00"/>
+              </children>
+            </container_button>
+          </children>
+        </container>
+        <container x="0" y="295" width="360" height="40" params="16" style="0" name="colourGridWidget"/>
+        <text x="3" y="339" width="356" height="15" params="16" style="3" name="trophy.enscription" caption="%24%7Blorem.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="0" y="355" width="360" height="70" params="16" style="5">
+          <children>
+            <container x="6" y="7" width="349" height="58" params="16" style="0" name="textInputWidget" caption="EMBEDDED">
+              <children>
+                <input x="0" y="0" width="349" height="58" params="1" style="3" name="input_text">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="max_chars" value="300" type="int"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </container>
+          </children>
+        </border>
+        <container x="0" y="430" width="360" height="30" params="16" style="0" name="purchaseWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

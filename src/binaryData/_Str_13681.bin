@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="search_footer" width="223" height="41" version="0.1" uid="028089C8-7924-7B29-0FB7-FFAE600EC352">
+  <window>
+    <container x="0" y="0" width="223" height="41" params="16" style="1" name="footer" color="0xffffb6b6b6" background="true">
+      <children>
+        <border x="5" y="5" width="213" height="31" params="144" style="0" name="border" color="0x0848484">
+          <children>
+            <input x="6" y="5" width="125" height="20" params="129" style="0" name="search_str" color="0xffffffffff" background="true">
+              <variables>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <container_button x="136" y="5" width="70" height="21" params="81" style="0" name="search_but">
+              <children>
+                <bitmap x="5" y="4" width="12" height="12" params="131089" style="0" name="search"/>
+                <text x="20" y="3" width="50" height="20" params="16" style="0" caption="%24%7Bgeneric.search%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chatstyle_template" width="55" height="34" version="0.1" uid="FFBC6A94-8695-8F62-9A65-4F0FE6C7A082">
+  <window>
+    <region x="0" y="0" width="55" height="34" params="17" style="0" name="chatstyle_region" treshold="0">
+      <children>
+        <border x="0" y="0" width="55" height="34" params="16" style="2" name="background_color"/>
+        <bitmap x="0" y="5" width="55" height="24" params="3148816" style="0" name="bubble_preview">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

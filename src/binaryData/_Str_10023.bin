@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="illumina_border" width="100" height="16" version="0.1" uid="DE2292E5-179B-FF2E-3807-067ABB97AD78">
+  <window>
+    <text x="0" y="0" width="100" height="16" params="2192" style="100" caption="Just%20now.">
+      <variables>
+        <var key="auto_size" value="right" type="String"/>
+        <var key="text_color" value="0x555555" type="hex"/>
+        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+        <var key="spacing" value="0" type="Number"/>
+        <var key="leading" value="0" type="Number"/>
+      </variables>
+    </text>
+  </window>
+</layout>

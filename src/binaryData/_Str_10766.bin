@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_tab_context_3" width="64" height="64" version="0.0">
+	<window>
+	
+		<tab_content name="content" x="0" y="30" width="64" height="32" tags="_CONTENT, _EXCLUDE, _INTERNAL">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_strech" />
+				<param name="use_parent_graphic_context" />
+				<param name="input_event_processor" />
+                <param name="inherit_caption" />
+			</params>
+		</tab_content>
+
+		<tab_selector name="selector" x="8" y="0" width="48" height="32" tags="_SELECTOR, _EXCLUDE, _INTERNAL">
+			<params>
+				<param name="relative_horizontal_scale_strech" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="use_parent_graphic_context" />
+				<param name="input_event_processor" />
+			</params>
+		</tab_selector>
+		
+	</window>
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="habbo_window_layout_tooltip" width="20" height="22" version="0.0">
+	<window>
+		<label name="_BTN_TEXT" style="0" x="0" y="6" width="20" height="22" background="false" tags="_EXCLUDE, _INTERNAL, title">
+			<params>
+				<param name="relative_horizontal_scale_center" />
+				<param name="relative_vertical_scale_center" />
+				<param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+			</params>
+			<variables>
+                <var key="text_style" value="u_tool_tip" />
+				<var key="background" value="false" type="Boolean" />
+				<var key="margins">
+					<value>
+						<Map>
+							<var key="left" value="6" type="int"/>
+							<var key="top" value="0" type="int"/>
+							<var key="right" value="6" type="int"/>
+							<var key="bottom" value="0" type="int"/>
+						</Map>
+					</value>
+				</var>
+			</variables>
+		</label>
+	</window>
+</layout>

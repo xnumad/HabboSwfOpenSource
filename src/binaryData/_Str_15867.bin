@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="game_center_leaderboard" width="670" height="530" version="0.1" uid="BC036129-BF1D-0B91-EDCD-DF41CD669061">
+  <window>
+    <frame x="12" y="9" width="670" height="530" params="32769" style="101" name="full_leaderboard_frame" caption="%24%7Bgamecenter.full_leaderboard_title%7D" width_min="670" height_min="530">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="664" height="491" params="48" style="0" name="full_leaderboard_container">
+          <children>
+            <container x="22" y="19" width="296" height="450" params="278608" style="0" name="this_week_container">
+              <children>
+                <widget x="0" y="20" width="296" height="430" params="45360" style="0" name="this_week_border">
+                  <variables>
+                    <var key="widget_type" value="illumina_border" type="String"/>
+                    <var key="illumina_border:content_child" value="this_week_list" type="String"/>
+                  </variables>
+                </widget>
+                <itemlist_vertical x="8" y="30" width="280" height="380" params="16" style="0" name="this_week_list"/>
+                <link x="8" y="410" width="280" height="27" params="1" style="0" name="this_week_toggle" caption="TOGGLE" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_heading_3" type="String"/>
+                    <var key="margin_top" value="12" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+                <text x="0" y="0" width="203" height="15" params="16" style="0" name="this_week_title" caption="%24%7Bgamecenter.leaderboard_this_week_title%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_3" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="346" y="19" width="296" height="288" params="278608" style="0" name="last_week_container">
+              <children>
+                <widget x="0" y="20" width="296" height="268" params="45360" style="0" name="last_week_border">
+                  <variables>
+                    <var key="widget_type" value="illumina_border" type="String"/>
+                    <var key="illumina_border:content_child" value="last_week_list" type="String"/>
+                  </variables>
+                </widget>
+                <itemlist_vertical x="8" y="30" width="280" height="190" params="16" style="100" name="last_week_list"/>
+                <itemlist_vertical x="8" y="240" width="280" height="38" params="16" style="0" name="own_entry_list"/>
+                <text x="8" y="223" width="280" height="12" params="16" style="100" name="own_entry_divider" caption="...">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="margin_top" value="-5" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="0" y="0" width="204" height="15" params="16" style="0" name="last_week_title" caption="%24%7Bgamecenter.leaderboard_last_week_title%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_3" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="346" y="324" width="296" height="145" params="16" style="0" name="weekly_top_container">
+              <children>
+                <bitmap x="6" y="13" width="90" height="90" params="16" style="0" name="weekly_top_reward_image">
+                  <variables>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </bitmap>
+                <widget x="0" y="0" width="296" height="145" params="16" style="0" name="weekly_top_border">
+                  <children>
+                    <text x="15" y="0" width="148" height="15" params="16" style="0" name="weekly_top_title" caption="%24%7Bgamecenter.weekly_top_title%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_border" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="widget_type" value="illumina_border" type="String"/>
+                    <var key="illumina_border:top_left_child" value="weekly_top_title" type="String"/>
+                  </variables>
+                </widget>
+                <bubble x="-30" y="100" width="265" height="42" params="1" style="100" name="weekly_top_bubble">
+                  <children>
+                    <text x="0" y="6" width="230" height="15" params="16" style="100" name="weekly_top_bubble_text" caption="%24%7Bgamecenter.weekly_top_bubble%7D">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="text_style" value="il_button" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="margin_left" value="8" type="int"/>
+                    <var key="margin_top" value="8" type="int"/>
+                    <var key="margin_right" value="8" type="int"/>
+                    <var key="margin_bottom" value="8" type="int"/>
+                    <var key="direction" value="right" type="String"/>
+                    <var key="pointer_offset" value="-7" type="int"/>
+                  </variables>
+                </bubble>
+                <bitmap x="240" y="44" width="60" height="100" params="16" style="0" name="weekly_top_avatar_image">
+                  <variables>
+                    <var key="pivot_point" value="bottom right" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </bitmap>
+                <text x="100" y="25" width="140" height="18" params="16" style="0" name="weekly_top_avatar_name" caption="titmouse">
+                  <variables>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="100" y="40" width="140" height="18" params="16" style="0" name="weekly_top_avatar_score" caption="10000%20points">
+                  <variables>
+                    <var key="text_style" value="il_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="100" y="60" width="140" height="18" params="16" style="0" name="weekly_top_reward_desc" caption="%24%7Bgamecenter.weekly_top_reward_desc%7D">
+                  <variables>
+                    <var key="text_style" value="il_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="100" y="75" width="140" height="18" params="16" style="0" name="weekly_top_reward_name" caption="Elite%20snowball%20statue">
+                  <variables>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

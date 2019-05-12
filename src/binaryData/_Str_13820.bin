@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="forum_permissions" width="350" height="545" version="0.1" uid="0947098F-7111-0408-A1C3-8541AA7CCF37">
+  <window>
+    <frame x="0" y="0" width="350" height="545" params="98337" style="3" caption="%24%7Bgroupforum.settings.window_title%7D" color="0xff418db0" width_min="350" width_max="350" height_min="455">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-5" y="8" width="348" height="80" params="129" style="2" name="top_part" color="0xffff0e3f52" background="true" treshold="0">
+          <children>
+            <region x="0" y="0" width="348" height="80" params="145" style="3" name="top_click_area" treshold="0"/>
+            <container x="0" y="0" width="80" height="80" params="16" style="3" name="icon_background" color="0xffff000000" background="true">
+              <children>
+                <widget x="20" y="20" width="40" height="40" params="16" style="3" name="group_icon">
+                  <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                  </variables>
+                </widget>
+              </children>
+            </container>
+            <text x="90" y="10" width="678" height="30" params="16" style="3" name="top_header_text" caption="Super-duper%20long%20group%20title" clipping="false">
+              <variables>
+                <var key="font_size" value="24" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="90" y="40" width="254" height="40" params="144" style="3" name="top_text" caption="Super-duper%20long%20goup%20description%2C%20maybe%20even%20multiline%2C%20but%20takes%20a%20few%20lines%20anyway" clipping="false">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container_button x="25" y="478" width="120" height="30" params="1041" style="3" name="cancel_btn" color="0x0dddddd" treshold="0" width_min="120">
+          <children>
+            <label x="0" y="7" width="160" height="17" params="3935440" style="3" caption="%24%7Bgroupforum.settings.cancel%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <container_button x="190" y="478" width="120" height="30" params="263249" style="3" name="ok_btn" color="0x0a9bc5" treshold="0" width_min="120">
+          <children>
+            <label x="0" y="7" width="137" height="17" params="3935440" style="3" caption="%24%7Bgroupforum.settings.ok%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <container x="3" y="100" width="444" height="80" params="16" style="3">
+          <children>
+            <label x="0" y="0" width="200" height="17" params="144" style="3" caption="%24%7Bgroupforum.permissions.read_label%7D"/>
+            <text x="40" y="20" width="404" height="20" params="16" style="3" name="label0" caption="%24%7Bgroupforum.permissions.option_all%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="40" width="404" height="20" params="16" style="3" name="label1" caption="%24%7Bgroupforum.permissions.option_group_members%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="60" width="404" height="20" params="16" style="3" name="label2" caption="%24%7Bgroupforum.permissions.option_group_admins%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <selector x="20" y="20" width="424" height="60" params="17" style="3" name="read_selector" treshold="0">
+              <children>
+                <radiobutton x="0" y="3" width="424" height="20" params="17" style="3" name="0"/>
+                <radiobutton x="0" y="23" width="424" height="20" params="17" style="3" name="1"/>
+                <radiobutton x="0" y="43" width="424" height="20" params="17" style="3" name="2"/>
+              </children>
+            </selector>
+          </children>
+        </container>
+        <container x="3" y="190" width="444" height="100" params="16" style="3">
+          <children>
+            <label x="0" y="0" width="256" height="17" params="144" style="3" caption="%24%7Bgroupforum.permissions.post_message_label%7D"/>
+            <text x="40" y="20" width="404" height="20" params="16" style="3" name="label0" caption="%24%7Bgroupforum.permissions.option_all%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="40" width="404" height="20" params="16" style="3" name="label1" caption="%24%7Bgroupforum.permissions.option_group_members%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="60" width="404" height="20" params="16" style="3" name="label2" caption="%24%7Bgroupforum.permissions.option_group_admins%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="80" width="404" height="20" params="16" style="3" name="label3" caption="%24%7Bgroupforum.permissions.option_owner%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <selector x="20" y="20" width="424" height="80" params="17" style="3" name="post_message_selector" treshold="0">
+              <children>
+                <radiobutton x="0" y="3" width="424" height="20" params="17" style="3" name="0"/>
+                <radiobutton x="0" y="23" width="424" height="20" params="17" style="3" name="1"/>
+                <radiobutton x="0" y="43" width="424" height="20" params="17" style="3" name="2"/>
+                <radiobutton x="0" y="63" width="424" height="20" params="17" style="3" name="3"/>
+              </children>
+            </selector>
+          </children>
+        </container>
+        <container x="3" y="300" width="444" height="100" params="16" style="3">
+          <children>
+            <label x="0" y="0" width="243" height="17" params="144" style="3" caption="%24%7Bgroupforum.permissions.post_thread_label%7D"/>
+            <text x="40" y="20" width="384" height="20" params="16" style="3" name="label0" caption="%24%7Bgroupforum.permissions.option_all%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="40" width="404" height="20" params="16" style="3" name="label1" caption="%24%7Bgroupforum.permissions.option_group_members%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="60" width="404" height="20" params="16" style="3" name="label2" caption="%24%7Bgroupforum.permissions.option_group_admins%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="80" width="404" height="20" params="16" style="3" name="label3" caption="%24%7Bgroupforum.permissions.option_owner%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <selector x="20" y="20" width="424" height="80" params="17" style="3" name="post_thread_selector" treshold="0">
+              <children>
+                <radiobutton x="0" y="3" width="424" height="20" params="17" style="3" name="0"/>
+                <radiobutton x="0" y="23" width="424" height="20" params="17" style="3" name="1"/>
+                <radiobutton x="0" y="43" width="424" height="20" params="17" style="3" name="2"/>
+                <radiobutton x="0" y="63" width="424" height="20" params="17" style="3" name="3"/>
+              </children>
+            </selector>
+          </children>
+        </container>
+        <container x="3" y="410" width="444" height="60" params="16" style="3">
+          <children>
+            <label x="0" y="0" width="232" height="17" params="144" style="3" caption="%24%7Bgroupforum.permissions.moderate_label%7D"/>
+            <text x="40" y="20" width="404" height="20" params="16" style="3" name="label2" caption="%24%7Bgroupforum.permissions.option_group_admins%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="40" y="40" width="404" height="20" params="16" style="3" name="label3" caption="%24%7Bgroupforum.permissions.option_owner%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <selector x="20" y="20" width="424" height="40" params="17" style="3" name="moderate_selector" treshold="0">
+              <children>
+                <radiobutton x="0" y="3" width="424" height="20" params="17" style="3" name="2"/>
+                <radiobutton x="0" y="23" width="424" height="20" params="17" style="3" name="3"/>
+              </children>
+            </selector>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="help_page" value="forums" type="String"/>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

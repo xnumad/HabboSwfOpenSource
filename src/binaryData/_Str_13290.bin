@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="logout_confirmation" width="192" height="90" version="0.1" uid="D68ED15C-E0C2-FBCF-9CBA-862571D66DBB">
+  <window>
+    <border x="0" y="0" width="192" height="90" params="64" style="1">
+      <children>
+        <text x="11" y="9" width="170" height="41" params="16" style="0" caption="%24%7Btoolbar.logout.confirmation%7D">
+          <variables>
+            <var key="text_style" value="il_regular_white" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="7" y="58" width="85" height="25" params="131089" style="4" name="confirm" caption="%24%7Btoolbar.logout.ok%7D" width_min="85" width_max="85" height_max="25"/>
+        <button x="99" y="58" width="85" height="25" params="131089" style="4" name="cancel" caption="%24%7Btoolbar.logout.cancel%7D" width_min="85" width_max="85" height_max="25"/>
+      </children>
+    </border>
+  </window>
+</layout>

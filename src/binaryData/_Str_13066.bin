@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="notification" width="315" height="191" version="0.1" uid="D7BE66A6-B985-3F88-F1C6-E540613E11AA">
+  <window>
+    <frame x="0" y="0" width="315" height="191" params="32769" style="1" name="widget_notification_frame" caption="widget.notification.header" color="0xff4c4c4c" tags="room_widget_teaser">
+      <children>
+        <border x="0" y="0" width="303" height="159" params="2192" style="0" caption="widget.notification.header" color="0x04c4c4c" blend="0">
+          <children>
+            <border x="0" y="0" width="303" height="159" params="2192" style="0" name="white_border" caption="widget.notification.header"/>
+            <text x="10" y="12" width="284" height="21" params="16" style="0" name="text_title" caption="widget.notification.title" color="0x0666666">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="text_style" value="bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="10" y="35" width="282" height="58" params="2192" style="0" name="text_description" caption="widget.notification.description" color="0x0888888">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0x888888" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container_button x="101" y="102" width="100" height="46" params="787665" style="1" name="button_ok" caption="widget.notification.header" height_min="46" height_max="46">
+              <children>
+                <border x="3" y="3" width="94" height="40" params="144" style="3" caption="widget.notification.header" color="0x06d00"/>
+                <border x="6" y="6" width="88" height="17" params="144" style="3" caption="widget.notification.header" color="0x0309d00"/>
+                <text x="37" y="10" width="25" height="24" params="3932368" style="0" caption="%24%7Bok%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="18" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <bitmap x="20" y="15" width="90" height="90" params="16" style="0" name="deco_img" caption="%24%7Bwidget.furni.teaser.title%7D" width_min="90" width_max="90" height_min="90" height_max="90"/>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

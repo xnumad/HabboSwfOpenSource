@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_clothes" width="210" height="155" version="0.1" uid="AC377DA5-71BD-367A-E75E-3A882522CCEF">
+  <window>
+    <frame x="0" y="0" width="210" height="155" params="163873" style="3" name="clothes_frame" caption="%24%7Bavatareditor.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="33" width="210" height="120" params="12716176" style="3" name="maincontent"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="0" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="achievement_notification" width="405" height="95" version="0.1" uid="08E41DA7-C5C3-CE95-FF37-02E540AC46A6">
+  <window>
+    <container x="0" y="0" width="405" height="95" params="133136" style="0" name="item_container">
+      <children>
+        <text x="5" y="5" width="395" height="85" params="133136" style="0" name="message_text">
+          <variables>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="minimized_menu" width="45" height="35" version="0.1" uid="8454C3A3-5507-818C-B106-B68C58AFF02F">
+  <window>
+    <bubble x="0" y="1" width="45" height="35" params="1048865" style="0" color="0x06e6b67" treshold="0">
+      <children>
+        <region x="0" y="0" width="38" height="30" params="17" style="0" name="minimize" treshold="0">
+          <children>
+            <icon x="14" y="11" width="15" height="15" params="16" style="6" name="icon"/>
+          </children>
+        </region>
+      </children>
+      <variables>
+        <var key="margin_left" value="4" type="int"/>
+        <var key="margin_top" value="4" type="int"/>
+        <var key="margin_right" value="4" type="int"/>
+        <var key="margin_bottom" value="4" type="int"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

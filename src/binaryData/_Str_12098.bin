@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="hoverBitmap" width="30" height="30" version="0.1" uid="7DC82DA3-C2A1-1882-AB30-E7F1759EA90E">
+  <window>
+    <static_bitmap x="0" y="0" width="30" height="30" params="2197" style="0"/>
+  </window>
+</layout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="playlist_item" width="229" height="52" version="0.1" uid="BE9B1287-A30E-1FD7-B62D-4D8ED64A28AA">
+  <window>
+    <region x="0" y="0" width="229" height="52" params="17" style="0" name="playlist_item" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="229" height="52" params="16" style="0" name="selected" tags="SELECTED"/>
+        <border x="3" y="3" width="223" height="46" params="16" style="2" name="background" color="0x0f1f1f1" tags="BG_COLOR"/>
+        <bitmap x="7" y="7" width="38" height="38" params="16" style="0" name="disk_image" tags="ICON"/>
+        <container x="4" y="4" width="44" height="44" params="16" style="0" name="action_buttons" tags="BUTTONS">
+          <children>
+            <border x="0" y="0" width="44" height="44" params="16" style="2" name="button_border" color="0x0658da0">
+              <children>
+                <container_button x="4" y="4" width="36" height="36" params="17" style="0" name="button_remove_from_playlist" tags="REMOVE_FROM_PLAYLIST">
+                  <children>
+                    <bitmap x="3" y="3" width="30" height="30" params="3934352" style="0" name="button_remove_from_playlist_image"/>
+                  </children>
+                </container_button>
+              </children>
+            </border>
+          </children>
+        </container>
+        <text x="70" y="11" width="4" height="4" params="16" style="0" name="song_title_text" tags="SONG_TITLE">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="70" y="27" width="4" height="4" params="16" style="0" name="song_author_text" tags="SONG_AUTHOR">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="10" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="54" y="13" width="14" height="14" params="16" style="0" name="song_name_icon_bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="jb_icon_disc" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="54" y="27" width="14" height="14" params="16" style="0" name="author_name_icon_bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="jb_icon_composer" type="String"/>
+          </variables>
+        </bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

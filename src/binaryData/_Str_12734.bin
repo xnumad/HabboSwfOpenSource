@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="club_direct_buy" width="454" height="442" version="0.1" uid="B23C56CE-80C7-EBAF-2469-CAF2684422C8">
+  <window>
+    <frame x="0" y="0" width="454" height="442" params="33025" style="3" caption="%24%7Bdirect.club.buy.dialog.title%7D" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="-2" y="-3" width="452" height="69" params="0" style="0" color="0xffff303030" background="true">
+          <children>
+            <bitmap x="54" y="15" width="349" height="43" params="16" style="0" name="header_image"/>
+          </children>
+        </background>
+        <text x="99" y="108" width="261" height="17" params="16" style="0" name="bold_text" caption="%24%7Bdirect.club.buy.header.bold.text%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="99" y="139" width="261" height="17" params="16" style="0" name="standard_text" caption="%24%7Bdirect.club.buy.header.standard.text%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="-1" y="205" width="100" height="197" params="16" style="0" name="teaser_image_1"/>
+        <bitmap x="349" y="206" width="100" height="197" params="16" style="0" name="teaser_image_2"/>
+        <border x="100" y="205" width="254" height="72" params="16" style="0" color="0x0dedede">
+          <children>
+            <border x="5" y="4" width="245" height="25" params="16" style="2" color="0x0959595">
+              <children>
+                <icon x="4" y="4" width="35" height="17" params="16" style="14"/>
+                <label x="44" y="4" width="168" height="17" params="16" style="0" caption="%24%7Bdirect.club.buy.period.length%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                  </variables>
+                </label>
+              </children>
+            </border>
+            <container_button x="167" y="36" width="81" height="30" params="17" style="3" name="buy" caption="Buy" width_min="80" height_min="29">
+              <children>
+                <label x="27" y="6" width="25" height="17" params="3932176" style="0" caption="%24%7Bbuy%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container_button>
+            <label x="5" y="43" width="108" height="15" params="16" style="0" caption="%24PRICE%20Offer%20text%20long">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </border>
+        <bitmap x="99" y="281" width="252" height="79" params="16" style="0" name="partner_image"/>
+        <link x="99" y="370" width="250" height="18" params="17" style="0" name="club_benefits_link" caption="%24%7Bdirect.club.buy.compare.club.benefits.link%7D" treshold="0">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="underline" value="true" type="Boolean"/>
+          </variables>
+        </link>
+      </children>
+    </frame>
+  </window>
+</layout>

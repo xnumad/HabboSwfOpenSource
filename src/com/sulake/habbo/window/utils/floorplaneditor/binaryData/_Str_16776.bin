@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="floor_plan_export_import" width="379" height="374" version="0.1" uid="14BBB4B8-A7AA-B2D8-8435-2216E7F09790">
+  <window>
+    <frame x="0" y="0" width="379" height="374" params="98305" style="3" caption="%24%7Bfloor.plan.editor.import.export%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="8" y="12" width="348" height="269" params="2193" style="105" color="0xffffffffff" background="true">
+          <children>
+            <input x="0" y="1" width="347" height="266" params="2177" style="100" name="data">
+              <variables>
+                <var key="font_face" value="Courier" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <scrollbar_vertical x="356" y="12" width="17" height="268" params="264273" style="3">
+          <variables>
+            <var key="scrollable" value="data" type="String"/>
+          </variables>
+        </scrollbar_vertical>
+        <scrollbar_horizontal x="8" y="280" width="349" height="18" params="1049745" style="3">
+          <variables>
+            <var key="scrollable" value="data" type="String"/>
+          </variables>
+        </scrollbar_horizontal>
+        <button x="-3" y="294" width="191" height="49" params="132113" style="101" name="revert" caption="%24%7Bfloor.plan.editor.revert.to.last.received.map%7D" color="0x0bbbbbb" width_max="191"/>
+        <button x="301" y="294" width="73" height="49" params="394321" style="101" name="save" caption="%24%7Bfloor.plan.editor.save%7D" color="0x0bbbbbb" width_max="73"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

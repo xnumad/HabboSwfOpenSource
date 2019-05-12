@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="mannequin_owner_save" width="386" height="180" version="0.1" uid="2BB99695-66F3-E2DF-D43D-DD49995431E6">
+  <window>
+    <container x="0" y="0" width="386" height="180" params="16" style="0">
+      <children>
+        <button_thick x="227" y="141" width="145" height="28" params="131089" style="3" name="save_button" caption="%24%7Bmannequin.widget.save%7D" width_min="130" width_max="145"/>
+        <bitmap x="20" y="10" width="83" height="130" params="16" style="3" name="preview_image"/>
+        <text x="126" y="30" width="254" height="33" params="16" style="3" name="outfit_name_show">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </text>
+        <text x="126" y="60" width="197" height="61" params="16" style="3" name="description" caption="%24%7Bmannequin.widget.savetext%20">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <icon x="80" y="110" width="43" height="29" params="16" style="0" name="club_icon"/>
+        <region x="15" y="147" width="151" height="20" params="17" style="0" name="back_region" treshold="0">
+          <children>
+            <text x="0" y="0" width="144" height="18" params="12582928" style="3" name="back_text" caption="mannequin.widget.back">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="80" type="Number"/>
+                <var key="thickness" value="-15" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

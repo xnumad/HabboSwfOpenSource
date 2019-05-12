@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="inventory_subwindow_get_more_music_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_14766.bin", mimeType="application/octet-stream")]
     public class _Str_14766 extends ByteArrayAsset 
     {
     }

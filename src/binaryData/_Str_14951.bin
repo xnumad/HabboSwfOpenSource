@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="abusive_notice" width="309" height="153" version="0.1" uid="F08EC8BE-68B0-4C90-AE68-0C2B356580D7">
+  <window>
+    <frame x="0" y="0" width="309" height="153" params="163841" style="100" name="abusive_notice" caption="%24%7Bhelp.emergency.abusive.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="8" y="2" width="291" height="113" params="8536080" style="100" clipping="false">
+          <children>
+            <label x="0" y="0" width="216" height="19" params="16" style="100" caption="%24%7Bhelp.emergency.abusive.subtitle%7D">
+              <variables>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="text_color" value="0xc30000" type="hex"/>
+              </variables>
+            </label>
+            <text x="0" y="22" width="291" height="24" params="16" style="100" caption="%24%7Bhelp.emergency.abusive.description%7D" width_min="291" width_max="291">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_bottom" value="8" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="0" y="49" width="291" height="13" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                <var key="pivot_point" value="bottom center" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <button x="47" y="65" width="196" height="48" params="131281" style="101" name="close_button" caption="%24%7Bhelp.emergency.abusive.close%7D" color="0x0bbbbbb"/>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </frame>
+  </window>
+</layout>

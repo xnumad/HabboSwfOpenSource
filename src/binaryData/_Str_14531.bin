@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="poll_cancel_confim" width="221" height="153" version="0.1" uid="83360462-BC54-8F05-302E-7BF73BB639CA">
+  <window>
+    <frame x="0" y="0" width="221" height="153" params="32769" style="3" name="poll_confirm_cancel_frame" caption="%24%7Bpoll_cancel_confirm_title%7D" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="5" y="13" width="198" height="13" params="144" style="0" caption="%24%7Bpoll_cancel_confirm_short%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Volter Bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="5" y="32" width="199" height="13" params="2192" style="0" caption="%24%7Bpoll_cancel_confirm_long%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="4" y="94" width="201" height="22" params="1232" style="0">
+          <children>
+            <button x="48" y="0" width="51" height="22" params="393233" style="0" name="poll_cancel_confirm_button_cancel" caption="%24%7Bcancel%7D"/>
+            <button_thick x="121" y="0" width="33" height="22" params="131089" style="0" name="poll_cancel_confirm_button_ok" caption="%24%7Bok%7D"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

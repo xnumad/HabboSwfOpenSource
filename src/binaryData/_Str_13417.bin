@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="task_progress_dialog" width="378" height="289" version="0.1" uid="44CDFE0C-003D-F73A-9BD2-8B54D11B34DA">
+  <window>
+    <frame x="1" y="-10" width="378" height="289" params="131073" style="100" caption="%24%7Btalent.track.task.progress.dialog.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <border x="15" y="0" width="347" height="211" params="16400" style="104" color="0x0e2e2e2">
+          <children>
+            <container x="0" y="99" width="215" height="110" params="1040" style="100">
+              <children>
+                <static_bitmap x="0" y="0" width="261" height="160" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="help_frank_greeting" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <text x="60" y="10" width="285" height="17" params="16" style="100" caption="${talent.track.progress.tour.header.caption}">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_2" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="60" y="27" width="285" height="30" params="16" style="100" caption="${talent.track.progress.tour.header.body}" height_min="30">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <widget x="10" y="57" width="325" height="30" params="16" style="100" name="action_separator">
+              <variables>
+                <var key="widget_type" value="separator" type="String"/>
+              </variables>
+            </widget>
+            <itemlist_vertical x="118" y="79" width="220" height="102" params="147472" style="100" name="top_list" height_min="70">
+              <children>
+                <text x="10" y="0" width="210" height="17" params="16" style="100" name="action_title" caption="${talent.track.progress.tour.info.caption}">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="10" y="17" width="210" height="30" params="16" style="100" name="action_description" caption="${talent.track.progress.tour.info.body}" height_min="30">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button x="0" y="47" width="153" height="55" params="131089" style="101" name="take_tour_button" caption="${talent.track.progress.tour.accept}" color="0x0bbbbbb"/>
+              </children>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <region x="16" y="211" width="347" height="33" params="17" name="decline_tour_region" style="100" treshold="0">
+          <children>
+            <text x="103" y="7" width="144" height="16" params="786448" style="100" caption="${talent.track.progress.tour.decline}">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="40" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

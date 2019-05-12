@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbopedia_edit" width="385" height="355" version="0.1" uid="0AA3C2F8-888A-7A70-6333-69BE3B2C6AD3">
+  <window>
+    <frame x="11" y="16" width="385" height="355" params="98305" style="100" caption="Habbopedia%20Editor">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <border x="8" y="7" width="368" height="276" params="2193" style="105">
+          <children>
+            <input x="0" y="0" width="368" height="276" params="2177" style="100" name="data">
+              <variables>
+                <var key="font_face" value="Courier" type="String"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <button x="-3" y="279" width="83" height="46" params="132113" style="101" name="revert" caption="Revert" color="0x0bbbbbb"/>
+        <button x="314" y="279" width="73" height="46" params="394321" style="101" name="save" caption="Save" color="0x0bbbbbb"/>
+      </children>
+    </frame>
+  </window>
+</layout>

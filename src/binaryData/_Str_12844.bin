@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="game_center_waiting_game" width="520" height="280" version="0.1" uid="5A031A54-B762-5379-FA0A-AC4DC188464F">
+  <window>
+    <frame x="48" y="63" width="520" height="280" params="32769" style="101" name="waiting_game_frame" caption="%24%7Bgamecenter.waiting_game_title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <container x="0" y="11" width="514" height="230" params="48" style="0" name="waiting_game_container">
+          <children>
+            <static_bitmap x="7" y="24" width="500" height="150" params="3932368" style="0" name="logo_image">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <link x="230" y="200" width="84" height="21" params="786433" style="100" name="cancel_link" caption="%24%7Bgeneric.cancel%7D" treshold="0">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </link>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

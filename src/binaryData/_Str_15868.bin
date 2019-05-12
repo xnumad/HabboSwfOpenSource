@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="notification_popup" width="306" height="92" version="0.1" uid="1B4F8BD9-1016-0B47-D121-96130814084C">
+  <window>
+    <frame x="20" y="14" width="306" height="92" params="32769" style="3" color="0xff67a3bf">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <itemlist_horizontal x="3" y="2" width="294" height="46" params="12730384" style="3">
+          <children>
+            <static_bitmap x="0" y="0" width="1" height="1" params="16" style="3" name="illustration">
+              <variables>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <itemlist x="1" y="0" width="293" height="46" params="8536080" style="3">
+              <children>
+                <formatted_text x="0" y="0" width="293" height="12" params="16" style="3" name="message">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="margin_bottom" value="8" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <link x="0" y="12" width="293" height="4" params="16385" style="3" name="link" visible="false" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+                <button x="136" y="16" width="20" height="30" params="131281" style="3" name="action" visible="false"/>
+              </children>
+            </itemlist>
+          </children>
+        </itemlist_horizontal>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_previewer" width="162" height="168" version="0.1" uid="8C3F45A2-E9CE-7D15-71F9-3E3F91947E52">
+  <window>
+    <region x="0" y="0" width="162" height="168" params="2193" style="100" name="room_canvas_container" color="0x00" background="true">
+      <children>
+        <display_object_wrapper x="0" y="0" width="162" height="168" params="2208" style="100" name="room_canvas"/>
+      </children>
+    </region>
+  </window>
+</layout>

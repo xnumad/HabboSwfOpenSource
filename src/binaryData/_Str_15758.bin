@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_all_friends_tab" width="30" height="30" version="0.1" uid="2317C877-7CB9-C729-2EFC-7EABD1DBDC7F">
+  <window>
+    <region x="0" y="0" width="30" height="30" params="17" style="3" name="container" treshold="0">
+      <children>
+        <static_bitmap x="0" y="0" width="30" height="30" params="16" style="3" treshold="0">
+          <variables>
+            <var key="asset_uri" value="friend_bar_all_friends" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

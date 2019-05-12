@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="video_offer_promo_bar" width="192" height="40" version="0.1" uid="41B67610-1104-4F3C-DE86-B2C9B74C9410">
+  <window>
+    <border x="0" y="0" width="192" height="40" params="16" style="6" name="promo_bar_border" color="0x06f6f6f">
+      <children>
+        <region x="26" y="6" width="145" height="30" params="8388625" style="0" name="text_region" treshold="0">
+          <children>
+            <text x="1" y="1" width="136" height="17" params="16" style="0" name="promo_text_shadow" caption="video%20offer%20promo%20text" width_min="136" width_max="136">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="136" height="17" params="8388624" style="0" name="promo_text" caption="video%20offer%20promo%20text" width_min="136" width_max="136">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <bitmap x="6" y="7" width="19" height="20" params="16" style="0" name="promo_icon" height_min="20" height_max="20"/>
+        <icon x="173" y="7" width="16" height="16" params="262161" style="9" name="promo_close_icon" color="0x0666666"/>
+      </children>
+    </border>
+  </window>
+</layout>

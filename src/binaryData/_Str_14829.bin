@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="purchase_confirmation" width="280" height="142" version="0.1" uid="29811AFE-186C-041A-7D71-9CBCEE17ACF0">
+  <window>
+    <frame x="0" y="0" width="280" height="142" params="33025" style="3" caption="%24%7Bcatalog.club_gift.confirm%7D" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="268" height="110" params="2192" style="0" caption="Confirm%20purchase">
+          <children>
+            <border x="12" y="12" width="48" height="48" params="16" style="0" name="image_border" caption="Confirm%20purchase" color="0x0f1f1f1">
+              <children>
+                <bitmap x="1" y="1" width="46" height="46" params="16" style="0" name="image" caption="Confirm%20purchase"/>
+                <text x="18" y="18" width="4" height="4" params="176" style="3" name="bundleCounter">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xcccc66" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <border x="10" y="2" width="17" height="13" params="131088" style="2" name="multiContainer" color="0x0ff3300">
+                  <children>
+                    <text x="3" y="0" width="4" height="4" params="16" style="3" name="multiCounter">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0xcccc66" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </border>
+              </children>
+            </border>
+            <text x="69" y="29" width="184" height="17" params="16" style="3" name="item_name">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="9" y="77" width="120" height="25" params="132113" style="3" name="select_button" caption="%24%7Bcatalog.club_gift.select%7D" width_min="120" width_max="120"/>
+            <button x="137" y="77" width="120" height="25" params="132113" style="3" name="cancel_button" caption="%24%7Bcancel%7D" width_min="120" width_max="120"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

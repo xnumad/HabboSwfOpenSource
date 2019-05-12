@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_tab_button" width="20" height="22" version="0.0">
+	<window>
+		<container x="0" y="0" width="10" height="22" background="false" tags="_EXCLUDE, _INTERNAL">
+			<params>
+				<param name="use_parent_graphic_context" />
+			</params>
+		</container>
+		<label name="title" style="0" x="0" y="0" width="20" height="22" background="false" tags="title, TAB_BUTTON_TITLE, _EXCLUDE, _INTERNAL">
+			<params>
+				<param name="relative_horizontal_scale_center" />
+				<param name="relative_vertical_scale_center" />
+				<param name="use_parent_graphic_context" />
+                <param name="inherit_caption" />
+			</params>
+			<variables>
+                <var key="text_style" value="button_tab" />
+				<var key="text_color" value="0xff000000" type="hex" />
+				<var key="margins"><value>
+					<Map>
+						<var key="left"   value="8" type="int" />
+						<var key="top"    value="2" type="int" />
+						<var key="right"  value="8" type="int" />
+						<var key="bottom" value="4" type="int" />
+					</Map>
+				</value></var>
+			</variables>
+		</label>
+	</window>
+</layout>

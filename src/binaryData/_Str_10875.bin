@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pet_image" width="58" height="49" version="0.1" uid="3E414A1D-E4E1-D651-8B65-480C10C6F9F8">
+  <window>
+    <container x="0" y="0" width="58" height="49" params="2196" style="0">
+      <children>
+        <bitmap x="0" y="0" width="58" height="49" params="2192" style="0" name="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="placeholder_pet_png" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <region x="0" y="0" width="58" height="49" params="2193" style="0" name="region" visible="false" treshold="0"/>
+      </children>
+    </container>
+  </window>
+</layout>

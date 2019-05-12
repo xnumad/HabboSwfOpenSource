@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="lovelock_engraving" width="375" height="210" version="0.1" uid="E34BBBA2-B2F1-CB41-5D55-AB8CC31BF58F">
+  <window>
+    <container x="0" y="0" width="375" height="210" params="1" style="100" caption="%24%7Blovelock.engraving.caption%7D">
+      <children>
+        <static_bitmap x="0" y="0" width="375" height="210" params="16" style="100" name="background">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}furniextras/loveLock_engraving.png" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="82" y="126" width="217" height="17" params="16" style="100" name="header" caption="%24%7Blovelock.engraving.caption%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="etching_color" value="0xffffffff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0x59224a" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <bitmap x="115" y="7" width="70" height="115" params="16" style="100" name="avatar_left">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <bitmap x="186" y="7" width="70" height="115" params="16" style="100" name="avatar_right"/>
+        <text x="19" y="175" width="150" height="17" params="16" style="100" name="name_left" caption="%24%7Blovelock.engraving.left%7D">
+          <variables>
+            <var key="auto_size" value="right" type="String"/>
+            <var key="etching_color" value="0xffffffff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0x59224a" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="199" y="175" width="87" height="17" params="16" style="100" name="name_right" caption="%24%7Blovelock.engraving.right%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="etching_color" value="0xffffffff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0x59224a" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="143" y="151" width="97" height="4" params="16" style="100" name="date">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="etching_color" value="0xffffffff" type="hex"/>
+            <var key="etching_position" value="bottom" type="String"/>
+            <var key="text_color" value="0x59224a" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <region x="330" y="33" width="21" height="17" params="17" style="100" name="header_button_close" treshold="0"/>
+      </children>
+    </container>
+  </window>
+</layout>

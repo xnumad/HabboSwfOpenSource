@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="landing_view" width="250" height="192" version="0.1" uid="78A37200-A102-3CEB-4D08-A2C1AEE4DEF2">
+  <window>
+    <container x="0" y="0" width="250" height="192" params="147472" style="0" color="0x00" background="true">
+      <children>
+        <static_bitmap x="0" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="18" y="4" width="162" height="14" params="16" style="100" name="title_txt" caption="%24%7Blanding.view.moderationpromo.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="150" y="10" width="100" height="4" params="16" style="100" name="hdr_line">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist x="0" y="29" width="250" height="163" params="16" style="0">
+          <children>
+            <formatted_text x="0" y="0" width="316" height="24" params="16" style="100" name="caption_txt" caption="%24%7Blanding.view.moderationpromo.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <container x="0" y="24" width="250" height="6" params="16" style="0" name="spacing" color="0x00" background="true"/>
+            <formatted_text x="0" y="30" width="250" height="16" params="16" style="100" name="info_txt" caption="%24%7Blanding.view.moderationpromo.info%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <container x="0" y="46" width="250" height="8" params="16" style="0" name="spacing" color="0x00" background="true"/>
+            <formatted_text x="0" y="54" width="237" height="15" params="16" style="100" name="cursing_caption_txt" caption="%24%7Blanding.view.moderationpromo.cursing.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_3" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="69" width="250" height="16" params="16" style="100" name="cursing_info_txt" caption="%24%7Blanding.view.moderationpromo.cursing.info%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <container x="0" y="85" width="250" height="8" params="16" style="0" name="spacing" color="0x00" background="true"/>
+            <formatted_text x="0" y="93" width="150" height="26" params="16" style="100" name="wrongdoers_caption_txt" caption="%24%7Blanding.view.moderationpromo.wrongdoers.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_3" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="119" width="250" height="28" params="16" style="100" name="wrongdoers_info_txt" caption="%24%7Blanding.view.moderationpromo.wrongdoers.info%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="itemGridWidget" width="360" height="200" version="0.1" uid="A8D9AC4B-796A-6A9F-C512-DACDCE132F31">
+  <window>
+    <container x="0" y="0" width="360" height="200" params="2064" style="3">
+      <children>
+        <border x="0" y="0" width="360" height="200" params="2192" style="6" blend="0.5"/>
+        <scrollable_itemgrid_vertical x="4" y="4" width="352" height="192" params="2192" style="3" name="itemGrid">
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

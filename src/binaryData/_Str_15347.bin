@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="hells" width="270" height="90" version="0.1" uid="19B365B1-AED9-3639-893D-7473C730E738">
+  <window>
+    <container x="0" y="0" width="270" height="90" params="16" style="3" name="row" color="0x0a5babf">
+      <children>
+        <border x="1" y="0" width="126" height="22" params="145" style="3" name="category_header" color="0x0999999">
+          <children>
+            <text x="7" y="2" width="59" height="13" params="16" style="0" name="category_name_txt" caption="Dippa%20daa">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <container_button x="1" y="19" width="269" height="53" params="145" style="3" name="enter_room_button">
+          <children>
+            <widget x="-13" y="-26" width="90" height="130" params="16" style="0" name="avatar_image_widget">
+              <variables>
+                <var key="widget_type" value="avatar_image" type="String"/>
+              </variables>
+            </widget>
+            <region x="61" y="28" width="201" height="19" params="1041" style="0" name="leader_region" treshold="0">
+              <children>
+                <text x="0" y="4" width="166" height="13" params="16" style="0" name="leader_name_caption_txt" caption="%24%7Bnavigator.promotedrooms.owner%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="49" y="4" width="71" height="13" params="16" style="0" name="leader_name_txt" caption="WillyWallyWolly">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <text x="60" y="8" width="147" height="13" params="16" style="0" name="room_name_txt" caption="Dippa%20daa">
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <bitmap x="212" y="3" width="44" height="30" params="80" style="0" name="navi_room_icon"/>
+          </children>
+        </container_button>
+        <region x="4" y="74" width="263" height="17" params="17" style="0" name="toggle_open_region" treshold="0">
+          <children>
+            <text x="-1" y="2" width="191" height="13" params="16" style="0" name="open_txt" caption="%24%7Bnavigator.promotedrooms.viewtopten%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="-1" y="2" width="189" height="13" params="16" style="0" name="close_txt" caption="%24%7Bnavigator.promotedrooms.hidetopten%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="252" y="5" width="12" height="18" params="16" style="5" name="arrow_right_icon" color="0x00"/>
+            <icon x="249" y="7" width="12" height="18" params="16" style="7" name="arrow_down_icon" color="0x00"/>
+          </children>
+        </region>
+        <itemlist_vertical x="3" y="97" width="264" height="216" params="2193" style="0" name="item_list" background="true"/>
+      </children>
+    </container>
+  </window>
+</layout>

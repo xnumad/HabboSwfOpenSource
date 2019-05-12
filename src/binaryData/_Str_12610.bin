@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_pets" width="360" height="460" version="0.1" uid="B55DE3EA-CA16-0105-AB10-E45BC0BEB6F7">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="2064" style="0" name="ctlg_pets">
+      <children>
+        <container x="0" y="0" width="360" height="460" params="2064" style="0" name="petsWidget" color="0x0eeeeee" tags="EMBEDDED">
+          <children>
+            <bitmap x="0" y="0" width="360" height="240" params="16" style="0" name="ctlg_teaserimg_1"/>
+            <container x="307" y="178" width="40" height="40" params="16" style="0" name="addOnBadgeViewWidget"/>
+            <container x="0" y="245" width="360" height="80" params="16" style="0" name="colourGridWidget" blend="0"/>
+            <text x="10" y="380" width="62" height="15" params="16" style="3" name="ctlg_text_1" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="10" y="225" width="62" height="15" params="16" style="3" name="ctlg_text_2" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="10" y="326" width="62" height="15" params="16" style="3" name="ctlg_text_3" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <dropmenu x="10" y="344" width="340" height="25" params="17" style="3" name="type_drop_menu"/>
+            <border x="10" y="398" width="340" height="25" params="16" style="4" color="0x0cccccc" background="true">
+              <children>
+                <input x="4" y="4" width="325" height="17" params="1" style="3" name="name_input_text" caption="input">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="max_chars" value="15" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </border>
+            <container x="0" y="429" width="360" height="30" params="1040" style="0" name="purchaseWidget"/>
+          </children>
+        </container>
+        <container x="0" y="0" width="360" height="460" params="2064" style="0" name="newPetsWidget" color="0x0eeeeee" tags="EMBEDDED">
+          <children>
+            <bitmap x="0" y="0" width="360" height="240" params="16" style="0" name="ctlg_teaserimg_1"/>
+            <text x="10" y="16" width="74" height="17" params="16" style="3" name="pet_breed_text" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="12" y="326" width="62" height="15" params="16" style="3" name="ctlg_text_3" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="245" width="360" height="80" params="16" style="0" name="colourGridWidget"/>
+            <text x="12" y="363" width="62" height="15" params="16" style="3" name="ctlg_text_2" caption="%24%7Blorem.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="10" y="385" width="340" height="25" params="16" style="4" color="0x0cccccc" background="true">
+              <children>
+                <input x="4" y="4" width="325" height="17" params="1" style="3" name="name_input_text" caption="%24%7Blorem.title%7D">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="max_chars" value="16" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </border>
+            <container x="0" y="429" width="360" height="30" params="1040" style="0" name="purchaseWidget"/>
+            <container x="13" y="177" width="40" height="40" params="16" style="0" name="addOnBadgeViewWidget"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

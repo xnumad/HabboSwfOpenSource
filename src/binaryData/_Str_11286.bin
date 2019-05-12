@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="rarity_item_overlay_preview" width="36" height="28" version="0.1" uid="22F751AA-FDD5-8253-0A6B-3AE780DAE686">
+  <window>
+    <container x="0" y="0" width="36" height="28" params="16" style="0" name="rarityItemWidget">
+      <children>
+        <static_bitmap x="0" y="0" width="36" height="28" params="16" style="0" name="plaque">
+          <variables>
+            <var key="asset_uri" value="rarity_item_rarity_preview_bg" type="String"/>
+          </variables>
+        </static_bitmap>
+        <text x="0" y="5" width="36" height="17" params="16" style="3" name="level" caption="0">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_color" value="0x333300" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

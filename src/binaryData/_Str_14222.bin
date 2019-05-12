@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="AchievementCategory" width="112" height="105" version="0.1" uid="C1378462-5EB2-DB9D-D089-365078911232">
+  <window>
+    <container x="0" y="0" width="112" height="105" params="16" style="0" name="achievement_category_container">
+      <children>
+        <static_bitmap x="0" y="0" width="112" height="105" params="3089" style="0" name="category_bg_act">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}achievement_bkg_active1.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="112" height="105" params="3089" style="0" name="category_bg_act_hover">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}achievement_bkg_active2.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="1" width="110" height="103" params="3088" style="0" name="category_bg_inact">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}achievement_category_bkg_empty_3.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <container x="1" y="1" width="111" height="104" params="16" style="0" name="hover_container">
+          <children>
+            <text x="23" y="7" width="65" height="17" params="208" style="0" name="header_txt" caption="Decoration">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="14" y="27" width="84" height="72" params="16" style="0" name="category_pic_bitmap">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <text x="40" y="75" width="30" height="18" params="208" style="0" name="completion_txt" caption="1/10">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <region x="0" y="0" width="110" height="103" params="17" style="0" name="category_region" treshold="0" tags="FIT%3AachievementsSelectCategory"/>
+        <border x="71" y="27" width="18" height="20" params="409616" style="7" name="unseen_count_border" color="0x0de4537">
+          <children>
+            <text x="0" y="0" width="18" height="20" params="16" style="3" name="unseen_count" caption="0">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="margin_left" value="3" type="int"/>
+                <var key="margin_top" value="1" type="int"/>
+                <var key="margin_right" value="5" type="int"/>
+                <var key="margin_bottom" value="2" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

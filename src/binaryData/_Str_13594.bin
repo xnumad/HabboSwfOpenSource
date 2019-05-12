@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="landing_view_jetset" width="1172" height="822" version="0.1" uid="A9ECD1F9-7320-A0F9-AC1C-FE87A5A4EDD5">
+  <window>
+    <background x="0" y="0" width="1172" height="822" params="0" style="0" color="0xffff000000" background="true">
+      <children>
+        <background x="0" y="0" width="1172" height="822" params="2192" style="0" name="content_background" color="0xffffaae0f0" background="true">
+          <children>
+            <static_bitmap x="0" y="-175" width="1173" height="997" params="2192" style="0" name="background_gradient_top">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_background_top_pixel.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="890" y="1" width="2" height="670" params="16" style="0" name="left-right_divider" visible="false">
+              <variables>
+                <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="314" width="306" height="470" params="1168" style="0" name="background_horizon_stretch">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_reception_backdrop_BG_left.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="305" y="314" width="867" height="470" params="263248" style="0" name="background_horizon">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_reception_BG_right_3.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="868" y="576" width="304" height="208" params="1104" style="0" name="background_right">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_reception_backdrop_left.png" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <icon x="180" y="0" width="8" height="11" params="147472" style="0" name="placeholder_dynamic_widget_slots"/>
+            <static_bitmap x="0" y="0" width="138" height="-44" params="2064" style="0" name="background_hotel_top">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_reception_backdrop_hotel_top_stretch.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="-264" width="1006" height="1048" params="1040" style="0" name="background_hotel_left">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/js_reception_backdrop_right_2.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <icon x="0" y="340" width="10" height="10" params="1040" style="4" name="widget_placeholder_personalmessages"/>
+            <icon x="109" y="620" width="10" height="10" params="1040" style="4" name="widget_placeholder_avatarimage"/>
+            <icon x="120" y="570" width="10" height="10" params="1040" style="4" name="widget_placeholder_bottom_slot"/>
+            <background x="0" y="784" width="1172" height="38" params="1168" style="0" color="0xffff333333" background="true"/>
+            <static_bitmap x="100" y="0" width="145" height="200" params="16" style="0" name="logo">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/reception_logo_drape.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </background>
+      </children>
+    </background>
+  </window>
+</layout>

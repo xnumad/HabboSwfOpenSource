@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="avatareditor_wardrobe" width="164" height="410" version="0.1" uid="A0B14481-E34D-FA34-2B06-5F4094CDB2D4">
+  <window>
+    <container x="0" y="0" width="164" height="410" params="16" style="0">
+      <children>
+        <text x="14" y="15" width="158" height="17" params="786448" style="3" caption="%24%7Bavatareditor.wardrobe.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0x83827e" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="19" y="67" width="135" height="300" params="16" style="4" color="0x0cbcbcb">
+          <children>
+            <itemlist_vertical x="4" y="3" width="64" height="294" params="786449" style="0" name="hc_slots">
+              <children>
+                <container x="0" y="0" width="56" height="56" params="16" style="100" name="slot_template">
+                  <children>
+                    <border x="29" y="3" width="24" height="50" params="16" style="3" color="0x0666666" blend="0.3"/>
+                    <region x="3" y="3" width="22" height="26" params="17" style="3" name="set_button" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="9" width="22" height="15" params="16" style="5">
+                          <variables>
+                            <var key="asset_uri" value="icons_forward_small" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                    <region x="2" y="28" width="22" height="26" params="17" style="3" name="get_button" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="22" height="15" params="16" style="4">
+                          <variables>
+                            <var key="asset_uri" value="icons_back_small" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                    <bitmap x="30" y="4" width="22" height="48" params="16" style="0" name="image"/>
+                    <region x="29" y="3" width="24" height="50" params="17" style="3" name="get_figure" treshold="0"/>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+              </variables>
+            </itemlist_vertical>
+            <itemlist_vertical x="70" y="3" width="64" height="294" params="786449" style="0" name="vip_slots">
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <icon x="79" y="47" width="20" height="15" params="16" style="13" name="hc_icon"/>
+        <container x="25" y="22" width="138" height="1" params="16" style="0" name="line" color="0xffff2f2f2f" visible="false" background="true" width_min="138" height_max="1"/>
+        <background x="0" y="0" width="1" height="410" params="16" style="0" color="0xffff000000" background="true"/>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="roomchat_bubble_speak_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_13283.bin", mimeType="application/octet-stream")]
     public class _Str_13283 extends ByteArrayAsset 
     {
     }

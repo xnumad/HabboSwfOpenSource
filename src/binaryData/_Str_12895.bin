@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="camera_filterbutton" width="62" height="62" version="0.1" uid="3A2CA7EB-407B-8686-BA1A-F0D584ECAE3B">
+  <window>
+    <region x="0" y="0" width="62" height="62" params="17" style="3" name="region" treshold="0">
+      <children>
+        <static_bitmap x="0" y="0" width="62" height="62" params="16" style="3" name="outline">
+          <variables>
+            <var key="asset_uri" value="camera_fx_button_outline" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="3" y="3" width="56" height="56" params="16" style="3" name="content"/>
+        <static_bitmap x="2" y="0" width="59" height="60" params="16" style="3" name="lock_indicator" visible="false">
+          <variables>
+            <var key="asset_uri" value="camera_locked" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="62" height="62" params="16" style="3" name="active_indicator" visible="false">
+          <variables>
+            <var key="asset_uri" value="camera_fx_button_active" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="62" height="62" params="16" style="3" name="selected_indicator" visible="false">
+          <variables>
+            <var key="asset_uri" value="camera_fx_button_selected" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <region x="43" y="0" width="19" height="19" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="remove_effect_button" visible="false">
+          <children>
+            <static_bitmap x="0" y="0" width="19" height="19" params="16" style="3" tags="%23bg">
+              <variables>
+                <var key="asset_uri" value="camera_cam_close_x" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="etching_color" value="0x48000000" type="hex"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+      </children>
+    </region>
+  </window>
+</layout>

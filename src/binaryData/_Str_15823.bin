@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="marketplace_search_simple" width="360" height="120" version="0.1" uid="1E34CD7F-4D1C-6A50-E11A-EB2A154F0B77">
+  <window>
+    <container x="0" y="0" width="360" height="120" params="16" style="0">
+      <children>
+        <text x="0" y="23" width="360" height="17" params="16" style="3" caption="%24%7Bcatalog.marketplace.sort_order%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_color" value="0x666666" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <dropmenu x="70" y="50" width="220" height="24" params="17" style="3" name="sort_dropmenu"/>
+      </children>
+    </container>
+  </window>
+</layout>

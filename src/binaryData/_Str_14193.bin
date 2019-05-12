@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="dynamic_widget_grid" width="1011" height="681" version="0.1" uid="DB37E942-DA36-14CA-7BD5-35A35D05B62A">
+  <window>
+    <container x="170" y="0" width="1011" height="681" params="147472" style="0" name="dynamic_widget_grid_container">
+      <children>
+        <itemlist x="86" y="4" width="925" height="677" params="16" style="0" name="widgetlist_fromtop">
+          <children>
+            <container x="-1" y="0" width="800" height="40" params="147472" style="0" name="widget_slot_1"/>
+            <container x="0" y="50" width="800" height="620" params="147472" style="0" name="center_slots_container">
+              <children>
+                <itemlist_horizontal x="0" y="1" width="800" height="619" params="16400" style="0" name="widget_slots_center_scrollable">
+                  <children>
+                    <itemlist x="0" y="0" width="500" height="52" params="147472" style="0" name="widget_slots_center_left" width_max="500">
+                      <children>
+                        <container x="0" y="0" width="500" height="1" params="147472" style="0" name="widget_slot_2"/>
+                        <itemlist x="0" y="51" width="500" height="1" params="16" style="100" name="widget_slot_4_root">
+                          <children>
+                            <container x="0" y="0" width="500" height="1" params="147472" style="0" name="widget_slot_4"/>
+                          </children>
+                          <variables>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                          </variables>
+                        </itemlist>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="50" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist>
+                    <container x="550" y="0" width="250" height="52" params="147472" style="0" name="widget_slots_right" width_max="250">
+                      <children>
+                        <itemlist x="0" y="0" width="250" height="52" params="4341776" style="0" name="widget_slots_center_right">
+                          <children>
+                            <container x="0" y="0" width="250" height="1" params="147472" style="0" name="widget_slot_3"/>
+                            <itemlist x="0" y="51" width="250" height="1" params="16" style="100" name="widget_slot_5_root">
+                              <children>
+                                <container x="0" y="0" width="250" height="1" params="147472" style="0" name="widget_slot_5"/>
+                              </children>
+                              <variables>
+                                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                              </variables>
+                            </itemlist>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="50" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                          </variables>
+                        </itemlist>
+                      </children>
+                    </container>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="50" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_horizontal>
+                <container x="0" y="619" width="800" height="1" params="16" style="100" name="scroll_extra_space_container"/>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist>
+        <scrollbar_vertical x="912" y="4" width="10" height="677" params="17" style="100" name="center_container_scrollbar">
+          <variables>
+            <var key="scrollable" value="widgetlist_fromtop" type="String"/>
+          </variables>
+        </scrollbar_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

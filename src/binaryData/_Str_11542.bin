@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<skin name="black_radio_button_skin" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="asset"	value="habbo_blue_skin_png"	type="String" />
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default" layout="button_radio_black" template="black_default_btn_mode" />
+		<!-- <state name="active"  layout="button_radio_black" template="black_default_btn_mode" /> -->
+		<!-- <state name="pressed" layout="button_radio_black" template="black_pressed_btn_mode" /> -->
+		<state name="selected" layout="button_radio_black" template="black_pressed_btn_mode" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="black_default_btn_mode" asset="$asset">
+			<entities>
+				<entity name="radio_btn" type="bitmap"><region><Rectangle x="428" y="100"  width="16" height="16" /></region></entity>
+			</entities>
+		</template>
+		
+		<template name="black_pressed_btn_mode" asset="$asset">
+			<entities>
+				<entity name="radio_btn" type="bitmap"><region><Rectangle x="428" y="116"  width="16" height="16" /></region></entity>
+			</entities>
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="button_radio_black" transparent="false">
+			<entities>
+				<entity name="radio_btn" id="0">
+					<region><Rectangle x="0" y="0" width="16" height="16" /></region>
+					<scale horizontal="fixed" vertical="fixed" />
+				</entity>
+			</entities>
+		</layout>
+	</layouts>
+</skin>

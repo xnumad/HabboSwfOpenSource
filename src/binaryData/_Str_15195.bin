@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="soldLtdItemsWidget" width="360" height="30" version="0.1" uid="2076758E-DDF0-077B-F6E7-E42219A5B8C9">
+  <window>
+    <container x="0" y="0" width="360" height="30" params="0" style="0" name="widgetContainer" treshold="0">
+      <children>
+        <static_bitmap x="0" y="0" width="360" height="30" params="16" style="0">
+          <variables>
+            <var key="asset_uri" value="unique_item_large_na_button_wide" type="String"/>
+            <var key="pivot_point" value="top right" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="204" y="8" width="137" height="17" params="16" style="3" name="not_available_text" caption="%24%7Bsold.ltd.items.not.available%7D" blend="0.7">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="etching_color" value="0xffffffff" type="hex"/>
+            <var key="text_color" value="0x101027" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <link x="18" y="8" width="179" height="15" params="1" style="3" name="check_markeplace_link" caption="%24%7Bsold.ltd.items.check.marketplace%7D" treshold="0" visible="false">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_size" value="10" type="uint"/>
+            <var key="text_color" value="0x101030" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </link>
+      </children>
+    </container>
+  </window>
+</layout>

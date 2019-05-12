@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_orderinfo_dialog" width="284" height="149" version="0.1" uid="B596A301-301D-86EA-E521-A6CEAD13D642">
+  <window>
+    <container x="0" y="0" width="284" height="149" params="131088" style="0" name="habbo_orderinfo_dialog">
+      <children>
+        <border x="0" y="0" width="284" height="149" params="131088" style="0">
+          <children>
+            <itemlist_vertical x="0" y="0" width="284" height="149" params="131088" style="3" name="orderItemList">
+              <children>
+                <container x="0" y="0" width="284" height="80" params="16" style="0" name="infoContainer">
+                  <children>
+                    <text x="16" y="14" width="250" height="15" params="16" style="3" name="habbo_orderinfo_text_a" caption="%24%7Bcatalog.purchase.confirmation.dialog.costs%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="16" y="34" width="250" height="15" params="16" style="3" name="habbo_orderinfo_text_b" caption="%24%7Bcatalog.purchase.confirmation.dialog.amount%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="16" y="54" width="250" height="26" params="16" style="3" name="habbo_orderinfo_text_c" caption="%24%7Bcatalog.purchase.confirmation.dialog.remaining%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="0" y="80" width="281" height="34" params="16" style="0" name="buttonContainer">
+                  <children>
+                    <button x="151" y="3" width="56" height="22" params="393361" style="3" name="button_cancel" caption="%24%7Bgeneric.cancel%7D" width_max="130"/>
+                    <button x="80" y="3" width="35" height="22" params="131217" style="3" name="button_ok" caption="%24%7Bgeneric.ok%7D" width_max="130"/>
+                  </children>
+                </container>
+              </children>
+            </itemlist_vertical>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

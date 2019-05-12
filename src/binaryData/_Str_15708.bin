@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_orderinfo_dialog" width="280" height="25" version="0.1" uid="35C21025-B883-412B-5877-A6CE2E7ACEEA">
+  <window>
+    <container x="0" y="80" width="280" height="25" params="16" style="0" name="checkBoxContainer">
+      <children>
+        <checkbox x="21" y="0" width="160" height="21" params="17" style="101" name="buyAsGift" caption="%24%7Bshopping_asagift%7D" treshold="0" height_min="21" height_max="21"/>
+      </children>
+    </container>
+  </window>
+</layout>

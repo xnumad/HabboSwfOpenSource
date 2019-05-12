@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="avatar_image" width="90" height="130" version="0.1" uid="6687CE7B-2AC7-02B3-83B8-5EF2E011442A">
+  <window>
+    <widget x="0" y="0" width="90" height="130" params="1040" style="100" name="avatar_image">
+      <variables>
+        <var key="widget_type" value="avatar_image" type="String"/>
+      </variables>
+    </widget>
+  </window>
+</layout>

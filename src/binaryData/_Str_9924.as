@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="illumina_light_switch_skin_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_9924.bin", mimeType="application/octet-stream")]
     public class _Str_9924 extends ByteArrayAsset 
     {
     }

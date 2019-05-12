@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="camera_typebutton_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_12572.bin", mimeType="application/octet-stream")]
     public class _Str_12572 extends ByteArrayAsset 
     {
     }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guide_ongoing" width="282" height="340" version="0.1" uid="AA202011-7088-A375-92D0-31ADF3CCC9A7">
+  <window>
+    <frame x="0" y="0" width="282" height="340" params="98305" style="100" name="guide_ongoing" caption="Helping%20out" width_min="282" width_max="282" height_min="320">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_horizontal x="10" y="0" width="258" height="30" params="16" style="100">
+          <children>
+            <button x="0" y="0" width="120" height="30" params="131089" style="102" name="visit_button" caption="%24%7Bguide.help.request.guide.ongoing.visit.button%7D" width_max="120" height_min="30" height_max="30">
+              <variables>
+                <var key="tool_tip_caption" value="${guide.help.request.guide.ongoing.visit.button.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </button>
+            <button x="125" y="0" width="120" height="30" params="131089" style="102" name="invite_button" caption="%24%7Bguide.help.request.guide.ongoing.invite.button%7D" width_max="120" height_min="30" height_max="30">
+              <variables>
+                <var key="tool_tip_caption" value="${guide.help.request.guide.ongoing.invite.button.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </button>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_horizontal>
+        <link x="170" y="15" width="90" height="16" params="1" style="100" name="report_link" caption="%24%7Bguide.help.common.report.link%7D" treshold="0">
+          <variables>
+            <var key="auto_size" value="right" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="tool_tip_caption" value="${guide.help.common.report.link.tooltip}" type="String"/>
+            <var key="tool_tip_delay" value="100" type="uint"/>
+          </variables>
+        </link>
+        <static_bitmap x="0" y="37" width="280" height="2" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <scrollable_itemlist_vertical x="5" y="38" width="270" height="184" params="2064" style="100" name="chat_list">
+          <children>
+            <label x="0" y="0" width="140" height="21" params="16" style="100" caption="%24%7Bguide.help.common.typing%7D">
+              <variables>
+                <var key="text_color" value="0x555555" type="hex"/>
+                <var key="margin_top" value="3" type="int"/>
+                <var key="margin_bottom" value="2" type="int"/>
+              </variables>
+            </label>
+          </children>
+        </scrollable_itemlist_vertical>
+        <container x="0" y="221" width="280" height="75" params="1040" style="100">
+          <children>
+            <static_bitmap x="0" y="0" width="280" height="2" params="147472" style="100" width_min="280" width_max="280">
+              <variables>
+                <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <widget x="10" y="15" width="260" height="30" params="16" style="100" name="input_widget">
+              <variables>
+                <var key="widget_type" value="illumina_input" type="String"/>
+                <var key="illumina_input:empty_message" value="Click here to chat" type="String"/>
+              </variables>
+            </widget>
+            <link x="10" y="53" width="260" height="16" params="1" style="100" name="close_link" caption="%24%7Bguide.help.request.guide.ongoing.close.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </link>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

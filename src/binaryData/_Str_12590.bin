@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ros_badword" width="200" height="20" version="0.1" uid="AC6A33D1-4753-2CC5-1351-AB69B6E28529">
+    <window>
+        <container x="0" y="0" width="200" height="20" params="16" style="0" name="badword_container" color="0xcc0000" background="true">
+            <children>
+                <region x="0" y="0" width="111" height="20" params="17" style="0" name="bg_region" color="0x00" treshold="0"/>
+                <text x="4" y="1" width="200" height="17" params="16" style="0" name="badword_txt" caption="PH%20Badword" color="0x00">
+                    <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                    </variables>
+                </text>
+            </children>
+        </container>
+    </window>
+</layout>

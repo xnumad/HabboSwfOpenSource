@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="safety_quiz_promo" width="577" height="57" version="0.1" uid="943DDDD3-382C-F4C1-F38A-6C2243CF397A">
+  <window>
+    <border x="186" y="0" width="577" height="57" params="192" style="2" name="safety_quiz_overlay" color="0x09b0000">
+      <children>
+        <border x="3" y="3" width="571" height="51" params="144" style="106"/>
+        <label x="73" y="11" width="174" height="19" params="16" style="100" caption="%24%7Bsafety.promo.widget.title%7D">
+          <variables>
+            <var key="text_style" value="il_heading_1" type="String"/>
+            <var key="text_color" value="0x9b0000" type="hex"/>
+          </variables>
+        </label>
+        <text x="74" y="30" width="160" height="16" params="16" style="100" caption="%24%7Bsafety.promo.widget.message%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="386" y="3" width="188" height="51" params="396305" style="100" name="safety_quiz_button" caption="%24%7Bsafety.promo.widget.button%7D"/>
+        <widget x="-8" y="-28" width="90" height="130" params="16" style="100" name="avatar">
+          <variables>
+            <var key="widget_type" value="avatar_image" type="String"/>
+            <var key="avatar_image:only_head" value="true" type="Boolean"/>
+            <var key="avatar_image:direction" value="south" type="String"/>
+          </variables>
+        </widget>
+        <static_bitmap x="9" y="34" width="57" height="18" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="help_bandaid" type="String"/>
+            <var key="pivot_point" value="bottom center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </border>
+  </window>
+</layout>

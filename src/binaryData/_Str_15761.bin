@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="chat_report_item" width="307" height="24" version="0.1" uid="66C96283-0AF4-43C2-A391-20378A6845A4">
+  <window>
+    <border x="0" y="64" width="307" height="24" params="147473" style="105">
+      <children>
+        <text x="0" y="0" width="307" height="24" params="3088" style="100" name="text" caption="foo%20faa%20fee" >
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="margin_top" value="4" type="int"/>
+            <var key="margin_bottom" value="4" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

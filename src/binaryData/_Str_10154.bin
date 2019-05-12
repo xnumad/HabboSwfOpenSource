@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<layout name="habbo_window_layout_scrollbar_vertical" width="17" height="56" version="0.0">
+
+	<window>
+	
+		<scrollbar_slider_button_up name="decrement" x="0" y="0" width="17" height="16" tags="_EXCLUDE, _INTERNAL, decrement">
+			<params>
+				<param name="input_event_processor" />
+				<param name="relative_horizontal_scale_fixed" />
+				<param name="relative_vertical_scale_fixed" />
+				<param name="use_parent_graphic_context" />
+			</params>
+		</scrollbar_slider_button_up>
+		
+		<scrollbar_slider_track_vertical name="slider_track" x="0" y="16" width="17" height="24" tags="_EXCLUDE, _INTERNAL, slider_track">
+			<params>
+				<param name="input_event_processor" />
+				<param name="relative_horizontal_scale_fixed" />
+				<param name="relative_vertical_scale_strech" />
+				<param name="use_parent_graphic_context" />
+			</params>
+			<children>
+				<scrollbar_slider_bar_vertical name="slider_bar" x="0" y="0" width="17" height="24" height_min="12" tags="_EXCLUDE, _INTERNAL, slider_bar">
+					<params>
+						<param name="input_event_processor" />
+						<param name="relative_horizontal_scale_fixed" />
+						<param name="relative_vertical_scale_fixed" />
+						<param name="draggable_with_mouse" />
+						<param name="bound_to_parent_rect" />
+						<param name="use_parent_graphic_context" />
+					</params>
+				</scrollbar_slider_bar_vertical>
+			</children>
+		</scrollbar_slider_track_vertical>
+		
+		<scrollbar_slider_button_down name="increment" x="0" y="40" width="17" height="16" tags="_EXCLUDE, _INTERNAL, increment">
+			<params>
+				<param name="input_event_processor" />
+				<param name="relative_horizontal_scale_fixed" />
+				<param name="relative_vertical_scale_move" />
+				<param name="use_parent_graphic_context" />
+			</params>
+		</scrollbar_slider_button_down>
+	</window>
+</layout>

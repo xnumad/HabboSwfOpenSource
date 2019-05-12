@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="layout_default_ubuntu" width="360" height="460" version="0.1" uid="F6DA8816-3CA5-E5A0-36C5-9FD212D28F36">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="2064" style="0" name="container" color="0xffff00ff">
+      <children>
+        <label x="2" y="243" width="122" height="17" params="16" style="3" caption="%24%7Bcatalog_selectproduct%7D" visible="false">
+          <variables>
+            <var key="text_style" value="u_italic" type="String"/>
+            <var key="text_color" value="0x666666" type="hex"/>
+          </variables>
+        </label>
+        <container x="0" y="0" width="360" height="240" params="16" style="2" name="productViewWidget" tags="E"/>
+        <container x="0" y="245" width="360" height="155" params="2064" style="6" name="itemGridWidget" tags="E"/>
+        <container x="182" y="245" width="176" height="155" params="1040" style="6" name="colourGridWidget" visible="false" tags="E"/>
+        <container x="0" y="430" width="360" height="30" params="1040" style="102" name="purchaseWidget"/>
+        <container x="182" y="2" width="175" height="25" params="0" style="0" name="activityPointDisplayWidget"/>
+        <container x="109" y="20" width="142" height="73" params="16" style="0" name="specialInfoWidget"/>
+        <container x="186" y="5" width="174" height="35" params="0" style="0" name="limitedItemWidget">
+          <children>
+            <widget x="0" y="0" width="200" height="40" params="147472" style="0" name="unique_item_overlay_container">
+              <variables>
+                <var key="widget_type" value="limited_item_overlay_supply" type="String"/>
+              </variables>
+            </widget>
+          </children>
+        </container>
+        <container x="0" y="425" width="360" height="30" params="1024" style="3" name="soldLtdItemsWidget"/>
+        <container x="0" y="405" width="200" height="25" params="17424" style="103" name="spinnerWidget" tags="EMBEDDED">
+          <children>
+            <text x="7" y="5" width="100" height="15" params="16" style="3" name="text_header" caption="%24%7Bcatalog.bundlewidget.spinner.select.amount%7D" color="0x00" visible="false" width_max="100">
+              <variables>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="margin_right" value="4" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container_button x="139" y="13" width="14" height="14" params="1" style="3" name="button_less" visible="false">
+              <children>
+                <icon x="2" y="4" width="13" height="12" params="16" style="7" name="icon_less" color="0x00"/>
+              </children>
+            </container_button>
+            <container_button x="139" y="-1" width="14" height="15" params="1" style="3" name="button_more" visible="false">
+              <children>
+                <icon x="2" y="4" width="11" height="11" params="16" style="6" name="icon_more" color="0x00"/>
+              </children>
+            </container_button>
+            <container x="0" y="0" width="200" height="25" params="16" style="3" name="quantitySelection">
+              <children>
+                <text x="0" y="3" width="100" height="17" params="16" style="3" name="quantityLabel" caption="%24%7Bcatalog.bundlewidget.quantity%7D" color="0x00" width_max="100">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0x666666" type="hex"/>
+                    <var key="margin_right" value="4" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <border x="65" y="0" width="135" height="25" params="16" style="3" name="discountContainer" color="0x092d27c">
+                  <children>
+                    <static_bitmap x="108" y="-2" width="30" height="30" params="0" style="3" name="thumbStar">
+                      <variables>
+                        <var key="asset_uri" value="catalogue_bundle_star" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="28" y="5" width="82" height="15" params="16" style="3" name="promo.info" caption="%24%7Bcatalog.bundlewidget.discount%7D" color="0x00" width_max="82">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="10" type="uint"/>
+                        <var key="margin_right" value="4" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="italic" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </border>
+                <border x="65" y="0" width="30" height="25" params="16" style="0" name="quantityInput">
+                  <children>
+                    <input x="3" y="5" width="22" height="15" params="1" style="3" name="text_value" caption="1" color="0x00">
+                      <variables>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="margin_right" value="4" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="restrict" value="0123456789" type="String"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </input>
+                  </children>
+                </border>
+              </children>
+            </container>
+          </children>
+        </container>
+        <container x="180" y="405" width="180" height="25" params="17424" style="103" name="totalPriceWidget" tags="EMBEDDED">
+          <children>
+            <text x="20" y="3" width="158" height="17" params="16" style="3" caption="%24%7Bcatalog.bundlewidget.price%7D" color="0x00">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="margin_right" value="4" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist_horizontal x="85" y="1" width="92" height="24" params="409616" style="3" name="totalprice_container">
+              <children>
+                <container x="0" y="0" width="10" height="20" params="147472" style="3" name="total_left">
+                  <children>
+                    <text x="0" y="3" width="10" height="17" params="16" style="3" name="text" caption="0">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0x999999" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <background x="0" y="10" width="10" height="2" params="16" style="3" name="strike" color="0xffffff0000" background="true"/>
+                  </children>
+                </container>
+                <text x="10" y="3" width="10" height="17" params="16" style="3" name="amount_text_left" caption="0">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <icon x="20" y="1" width="22" height="22" params="16" style="34" name="currency_indicator_bitmap_left"/>
+                <text x="42" y="3" width="8" height="17" params="16" style="3" name="plus" caption="+">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="margin_left" value="-2" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="50" y="0" width="10" height="20" params="147472" style="3" name="total_right">
+                  <children>
+                    <text x="0" y="3" width="10" height="17" params="16" style="3" name="text" caption="0">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0x999999" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <background x="0" y="10" width="10" height="2" params="16" style="3" name="strike" color="0xffffff0000" background="true"/>
+                  </children>
+                </container>
+                <text x="60" y="3" width="10" height="17" params="16" style="3" name="amount_text_right" caption="0">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <icon x="70" y="1" width="22" height="22" params="16" style="34" name="currency_indicator_bitmap_right"/>
+              </children>
+              <variables>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+        </container>
+        <container x="0" y="400" width="360" height="60" params="1040" style="3" name="builderWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

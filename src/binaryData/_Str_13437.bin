@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="navigator_guest_room_thumbnail" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="70" height="70" params="16" style="0" name="thumbnail">
+      <children>
+        <container x="0" y="3" width="64" height="64" params="16" style="0" name="picframe"/>
+        <bitmap x="0" y="3" width="64" height="64" params="16" style="0" name="enter_room"/>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -60,11 +60,11 @@ foreach ($paths as $path) {
 
     $dataBin = file_get_contents($pathDir.'/'.$sourceName);
     $dataBin = str_replace("\r", "\n", $dataBin);
-    $InitLign = explode("\n", $dataBin)[0];
-    if(strpos($InitLign, "<?xml ") === FALSE)
+    $lignBin = explode("\n", $dataBin);
+    if(strpos($lignBin[0], "<?xml ") === FALSE)
         continue; 
     
-    $firstLign = explode("\n", $dataBin)[1];
+    $firstLign = $lignBin[1];
     if(strpos($firstLign, "<layout name=\"") === FALSE && strpos($firstLign, "<skin name=\"") === FALSE)
         continue;
 

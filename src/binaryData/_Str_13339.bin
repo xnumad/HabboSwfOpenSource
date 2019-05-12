@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_interstitial" width="20" height="20" version="0.0">
+  <window>
+    <border x="0" y="0" width="240" height="146" params="0" style="0">
+      <children>
+        <display_object_wrapper x="10" y="10" width="220" height="91" params="2209" style="0" name="image"/>
+        <region x="10" y="10" width="220" height="91" params="2193" style="0" name="region" treshold="0">
+          <variables>
+            <var key="tool_tip_caption" value="${ads.interstitial.tooltip}" type="String"/>
+            <var key="tool_tip_delay" value="0" type="uint"/>
+          </variables>
+        </region>
+        <text x="10" y="111" width="220" height="15" params="1232" style="0" name="loading_text" caption="%24%7Broom.loading%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="auto_size" value="center" type="String"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

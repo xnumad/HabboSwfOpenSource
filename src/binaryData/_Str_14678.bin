@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="thread_list_item" width="600" height="40" version="0.1" uid="AA1685D5-0E20-434C-8BFB-4AAC8740EE61">
+  <window>
+    <boxsizer x="0" y="0" width="600" height="40" params="16" style="0" name="main_box">
+      <children>
+        <container x="0" y="0" width="20" height="40" params="16" style="3" name="left_button_container" background="true">
+          <children>
+            <itemlist_vertical x="0" y="0" width="20" height="40" params="16" style="3" name="info_buttons">
+              <children>
+                <region x="0" y="0" width="20" height="20" params="17" style="3" name="thread_lock" treshold="0">
+                  <children>
+                    <static_bitmap x="3" y="1" width="13" height="18" params="2192" style="3" name="icon">
+                      <variables>
+                        <var key="asset_uri" value="forum_forum_locked" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="0" y="20" width="20" height="20" params="17" style="3" name="thread_pin" treshold="0">
+                  <children>
+                    <static_bitmap x="3" y="2" width="13" height="15" params="2192" style="3" name="icon">
+                      <variables>
+                        <var key="asset_uri" value="forum_forum_pinned" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+              </children>
+            </itemlist_vertical>
+          </children>
+        </container>
+        <container x="21" y="0" width="387" height="40" params="16" style="0" name="texts_container" color="0x0eefeff" background="true" treshold="0" tags="relative%281%29">
+          <children>
+            <region x="0" y="0" width="280" height="17" params="131089" style="3" name="header_region" caption="thread%20subject" treshold="0">
+              <children>
+                <text x="0" y="0" width="117" height="17" params="16" style="3" name="header" caption="Some%20thread%20header">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <html x="0" y="16" width="460" height="16" params="1073741825" style="3" name="details" caption="By%20author%20LongLongLongName%207%20days%20ago%2C%20last%20message%20by%20LongLongLongName%2030%20seconds%20ago">
+              <variables>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </container>
+        <container x="409" y="0" width="140" height="40" params="16" style="3" name="unread_texts_container" background="true">
+          <children>
+            <region x="0" y="0" width="140" height="40" params="17" style="3" name="unread_region" caption="mm%3Ass" treshold="0"/>
+            <text x="0" y="0" width="140" height="15" params="16" style="3" name="messages1" caption="100%20messages">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="15" width="140" height="20" params="16" style="3" name="messages2" caption="12%20new">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <container x="550" y="0" width="50" height="40" params="17" style="3" name="button_container" background="true">
+          <children>
+            <itemlist_horizontal x="0" y="0" width="50" height="40" params="16" style="3" name="mod_buttons">
+              <children>
+                <region x="0" y="0" width="25" height="40" params="17" style="3" name="delete_thread" color="0xffffde4537" background="true" treshold="0">
+                  <children>
+                    <static_bitmap x="5" y="11" width="16" height="16" params="2192" style="3" name="icon">
+                      <variables>
+                        <var key="asset_uri" value="forum_forum_hide" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+                <region x="25" y="0" width="25" height="40" params="17" style="3" name="report_thread" color="0xffffff9c65" background="true" treshold="0">
+                  <children>
+                    <static_bitmap x="4" y="12" width="17" height="15" params="2192" style="3" name="icon">
+                      <variables>
+                        <var key="asset_uri" value="forum_forum_report" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+              </children>
+            </itemlist_horizontal>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="spacing" value="1" type="int"/>
+        <var key="padding_horizontal" value="0" type="int"/>
+        <var key="padding_vertical" value="0" type="int"/>
+      </variables>
+    </boxsizer>
+  </window>
+</layout>

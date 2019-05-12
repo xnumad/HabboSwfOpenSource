@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="AvatarEditor_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_14541.bin", mimeType="application/octet-stream")]
     public class _Str_14541 extends ByteArrayAsset 
     {
     }

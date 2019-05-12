@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<skin name="illumina_light_skin_border_input" version="0.0">
+
+	<!-- shared variables -->
+	<variables>
+		<variable key="asset" value="illumina_light_input_chat_png" type="String"/>
+	</variables>
+
+	<!-- the following maps states to layouts and templates -->
+	<states>
+		<state name="default" layout="illumina_light_border_input" template="illumina_light_border_input_template"/>
+	</states>
+
+	<!-- templates defines regions in bitmap asset -->
+	<templates>
+		<template name="illumina_light_border_input_template" asset="$asset">
+			<entities>
+                <entity name="border_top_left" type="bitmap"><region><Rectangle x="0" y="0" width="4" height="4"/></region></entity>
+                <entity name="border_top_center" type="bitmap"><region><Rectangle x="4" y="0" width="21" height="1"/></region></entity>
+                <entity name="border_top_right" type="bitmap"><region><Rectangle x="25" y="0" width="4" height="4"/></region></entity>
+                <entity name="border_center_left" type="bitmap"><region><Rectangle x="0" y="4" width="1" height="20"/></region></entity>
+                <entity name="border_center_right" type="bitmap"><region><Rectangle x="28" y="4" width="1" height="20"/></region></entity>
+                <entity name="border_bottom_left" type="bitmap"><region><Rectangle x="0" y="24" width="4" height="5"/></region></entity>
+                <entity name="border_bottom_center" type="bitmap"><region><Rectangle x="4" y="27" width="21" height="2"/></region></entity>
+                <entity name="border_bottom_right" type="bitmap"><region><Rectangle x="25" y="24" width="4" height="5"/></region></entity>
+
+                <entity name="background_top_left" type="bitmap"><region><Rectangle x="30" y="0" width="5" height="8"/></region></entity>
+                <entity name="background_top_center" type="bitmap"><region><Rectangle x="35" y="0" width="19" height="8"/></region></entity>
+                <entity name="background_top_right" type="bitmap"><region><Rectangle x="54" y="0" width="5" height="8"/></region></entity>
+                <entity name="background_center" type="bitmap"><region><Rectangle x="31" y="8" width="27" height="16"/></region></entity>
+                <entity name="background_bottom_left" type="bitmap"><region><Rectangle x="30" y="24" width="5" height="4"/></region></entity>
+                <entity name="background_bottom_center" type="bitmap"><region><Rectangle x="35" y="24" width="19" height="4"/></region></entity>
+                <entity name="background_bottom_right" type="bitmap"><region><Rectangle x="54" y="24" width="5" height="4"/></region></entity>
+			</entities>
+		</template>
+	</templates>
+
+	<!-- markup for layout drawer -->
+	<layouts>
+		<layout name="illumina_light_border_input" transparent="true">
+			<entities>
+                <entity name="background_top_left" id="0" colorize="true"><region><Rectangle x="0" y="0" width="5" height="8"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="background_top_center" id="0" colorize="true"><region><Rectangle x="5" y="0" width="19" height="8"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="background_top_right" id="0" colorize="true"><region><Rectangle x="24" y="0" width="5" height="8"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="background_center" id="0" colorize="true"><region><Rectangle x="1" y="8" width="27" height="16"/></region><scale horizontal="strech" vertical="strech"/></entity>
+                <entity name="background_bottom_left" id="0" colorize="true"><region><Rectangle x="0" y="24" width="5" height="4"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="background_bottom_center" id="0" colorize="true"><region><Rectangle x="5" y="24" width="19" height="4"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="background_bottom_right" id="0" colorize="true"><region><Rectangle x="24" y="24" width="5" height="4"/></region><scale horizontal="move" vertical="move"/></entity>
+
+                <entity name="border_top_left" id="0" colorize="false"><region><Rectangle x="0" y="0" width="4" height="4"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="border_top_center" id="0" colorize="false"><region><Rectangle x="4" y="0" width="21" height="1"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="border_top_right" id="0" colorize="false"><region><Rectangle x="25" y="0" width="4" height="4"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="border_center_left" id="0" colorize="false"><region><Rectangle x="0" y="4" width="1" height="20"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+                <entity name="border_center_right" id="0" colorize="false"><region><Rectangle x="28" y="4" width="1" height="20"/></region><scale horizontal="move" vertical="strech"/></entity>
+                <entity name="border_bottom_left" id="0" colorize="false"><region><Rectangle x="0" y="24" width="4" height="5"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="border_bottom_center" id="0" colorize="false"><region><Rectangle x="4" y="27" width="21" height="2"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="border_bottom_right" id="0" colorize="false"><region><Rectangle x="25" y="24" width="4" height="5"/></region><scale horizontal="move" vertical="move"/></entity>
+			</entities>
+		</layout>
+	</layouts>
+</skin>

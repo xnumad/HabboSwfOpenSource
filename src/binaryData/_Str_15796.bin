@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="trophyWidget" width="110" height="127" version="0.1" uid="0D97BA61-C72B-01D5-3E75-9CC904C01E39">
+  <window>
+    <container x="28" y="75" width="110" height="127" params="16" style="0" name="trophyWidget">
+      <children>
+        <bitmap x="4" y="0" width="102" height="127" params="16" style="0" name="ctlg_teaserimg_1"/>
+        <container_button x="0" y="56" width="30" height="30" params="393361" style="3" name="ctlg_prevmodel_button" width_max="100">
+          <children>
+            <icon x="9" y="8" width="13" height="13" params="16" style="2" name="icon" color="0x00"/>
+          </children>
+        </container_button>
+        <container_button x="80" y="56" width="30" height="30" params="393361" style="3" name="ctlg_nextmodel_button" width_max="100">
+          <children>
+            <icon x="9" y="8" width="13" height="13" params="16" style="3" name="icon" color="0x00"/>
+          </children>
+        </container_button>
+      </children>
+    </container>
+  </window>
+</layout>

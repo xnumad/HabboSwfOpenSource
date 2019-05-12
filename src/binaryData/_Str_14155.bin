@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="grs_hot_room_details" width="20" height="20" version="0.0">
+  <window>
+    <border x="0" y="0" width="203" height="70" params="0" style="0" name="popup_container" color="0xffffff">
+      <children>
+        <container x="5" y="5" width="193" height="70" params="16" style="0" name="details_container" color="0xffffff"/>
+      </children>
+    </border>
+  </window>
+</layout>

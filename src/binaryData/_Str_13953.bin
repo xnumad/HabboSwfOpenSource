@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="teaser_general" width="433" height="260" version="0.1" uid="50C1655F-05B4-ACC7-7E70-E542BB2609F1">
+  <window>
+    <frame x="0" y="0" width="433" height="260" params="32769" style="1" name="widget_teaser_frame" caption="%24%7Bwidget.furni.teaser.gift.title%7D" color="0xff4c4c4c" tags="room_widget_teaser">
+      <children>
+        <border x="0" y="0" width="420" height="227" params="16" style="1" name="bg" caption="%24%7Bwidget.furni.teaser.gift.title%7D" blend="0">
+          <children>
+            <border x="0" y="0" width="420" height="160" params="16" style="0" name="white_bg" caption="%24%7Bwidget.furni.teaser.gift.title%7D">
+              <children>
+                <bitmap x="1" y="0" width="419" height="159" params="1048592" style="0" name="dialog_bg" caption="%24%7Bwidget.furni.teaser.gift.title%7D"/>
+              </children>
+            </border>
+            <text x="130" y="12" width="282" height="21" params="16" style="0" name="header" caption="%24%7Bwidget.furni.teaser.notify.unlocked.title%7D" color="0x0444444">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0x444444" type="hex"/>
+                <var key="text_style" value="bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="130" y="31" width="282" height="120" params="16" style="0" name="text" caption="%24%7Bwidget.furni.teaser.notify.unlocked.desc%7D" color="0x0888888">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="text_color" value="0x888888" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container_button x="51" y="172" width="306" height="46" params="17" style="0" name="received_ok_btn" caption="%24%7Bwidget.furni.teaser.gift.title%7D" width_min="306" width_max="306" height_min="46" height_max="46">
+              <children>
+                <border x="3" y="3" width="300" height="40" params="16" style="3" name="btn_bg_1" caption="%24%7Bwidget.furni.teaser.gift.title%7D" color="0x06d00" width_min="300" width_max="300" height_min="40" height_max="40"/>
+                <border x="6" y="6" width="294" height="17" params="16" style="3" name="btn_bg_2" caption="%24%7Bwidget.furni.teaser.gift.title%7D" color="0x0309d00" width_min="294" width_max="294" height_min="17" height_max="17"/>
+                <text x="6" y="11" width="294" height="33" params="3932176" style="0" name="open_txt" caption="%24%7Bgeneric.ok%7D" width_min="294" width_max="294" height_min="33" height_max="33">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="18" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <bitmap x="23" y="16" width="90" height="90" params="16" style="0" name="deco_img" caption="%24%7Bwidget.furni.teaser.gift.title%7D" width_min="90" width_max="90" height_min="90" height_max="90"/>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ui_help_bubble" width="180" height="500" version="0.1" uid="B19CDDDE-E8D6-4E88-C921-018D2BB75F74">
+  <window>
+    <container x="0" y="0" width="180" height="500" params="96" style="0" name="master_container" color="0x00" clipping="false" treshold="0" width_max="180">
+      <children>
+        <bubble x="0" y="0" width="180" height="500" params="2433" style="7" name="bubble" clipping="false" width_max="200">
+          <children>
+            <region x="2" y="2" width="160" height="440" params="2193" style="0" name="profile_region" clipping="false" treshold="0" width_max="200">
+              <children>
+                <text x="0" y="0" width="159" height="437" params="12585104" style="0" name="help_bubble_text" caption="Testing%20Testing%21testingdsf" width_max="200">
+                  <variables>
+                    <var key="font_size" value="15" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="margin_left" value="8" type="int"/>
+                    <var key="margin_top" value="8" type="int"/>
+                    <var key="margin_right" value="8" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <button x="59" y="441" width="41" height="28" params="917713" style="5" name="help_bubble_btn_ok" caption="OK" color="0x033cc33"/>
+          </children>
+          <variables>
+            <var key="margin_left" value="8" type="int"/>
+            <var key="margin_top" value="8" type="int"/>
+            <var key="margin_right" value="8" type="int"/>
+            <var key="margin_bottom" value="8" type="int"/>
+          </variables>
+        </bubble>
+      </children>
+    </container>
+  </window>
+</layout>

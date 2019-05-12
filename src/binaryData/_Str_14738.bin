@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chooser_item" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="160" height="20" params="145" style="0" color="0xffeeeeee" background="true" treshold="0">
+      <children>
+        <text x="7" y="2" width="152" height="16" params="16" style="0" name="itemtext" caption="%24%7B001_lorem_ipsum_title%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0x0" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

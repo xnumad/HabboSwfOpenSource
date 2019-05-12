@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="colourGridWidget" width="115" height="100" version="0.1" uid="770C3B35-4129-4003-5724-E3F288E54EE1">
+  <window>
+    <container x="0" y="0" width="115" height="100" params="2192" style="3">
+      <children>
+        <border x="0" y="0" width="115" height="100" params="2192" style="6" blend="0.5"/>
+        <scrollable_itemgrid_vertical x="2" y="2" width="111" height="96" params="2192" style="3" name="colourGrid">
+          <variables>
+            <var key="spacing" value="2" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

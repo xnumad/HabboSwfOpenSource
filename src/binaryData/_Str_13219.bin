@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="navigator_highlighter" width="251" height="87" version="0.1" uid="28DC0182-D171-BE63-4E6C-801CF3DCBBF1">
+  <window>
+    <container x="0" y="0" width="251" height="87" params="0" style="0" name="welcome_screen">
+      <children>
+        <frame x="9" y="0" width="230" height="87" params="8388609" style="0" name="frame" caption="title" color="0xff418db0">
+          <filters>
+            <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+          </filters>
+          <children>
+            <closebutton x="200" y="4" width="18" height="18" params="17" style="0" name="close" caption="title" background="true" treshold="0"/>
+            <region x="14" y="8" width="189" height="37" params="8388625" style="0" name="click" treshold="0">
+              <children>
+                <text x="0" y="0" width="189" height="37" params="8388624" style="0" name="text" caption="welcome.scjkh%20kjh%20kjh%20kjh%20kjh%20kjh%20kjh%20kjhkjh%20kj%20hkj%20hkjhreen.message">
+                  <variables>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </frame>
+        <static_bitmap x="0" y="14" width="12" height="20" params="0" style="0" name="arrow">
+          <variables>
+            <var key="asset_uri" value="common_welcome_screen_arrow" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="236" y="14" width="12" height="20" params="0" style="0" name="arrow_right">
+          <variables>
+            <var key="asset_uri" value="common_welcome_screen_arrow" type="String"/>
+            <var key="zoom_x" value="-1" type="Number"/>
+            <var key="zoom_y" value="-1" type="Number"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

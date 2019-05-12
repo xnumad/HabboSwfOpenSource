@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="newuser_change_name" width="350" height="270" version="0.1" uid="C8EF391B-9339-217F-6D2B-A1E16F172A00">
+  <window>
+    <frame x="0" y="0" width="350" height="270" params="1" style="3" name="avatar_name_change_frame" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="345" height="225" params="16" style="101">
+          <children>
+            <text x="30" y="9" width="284" height="29" params="786640" style="0" name="static_info_text" caption="%24%7Btutorial.name_change.title.main%7D">
+              <variables>
+                <var key="text_color" value="0x7b96" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="20" y="40" width="300" height="25" params="16" style="105" name="input_border">
+              <children>
+                <input x="7" y="4" width="270" height="17" params="1" style="3" name="input" background="true">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="max_chars" value="15" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+                <static_bitmap x="278" y="2" width="20" height="20" params="16" style="3" name="pen_image">
+                  <variables>
+                    <var key="asset_uri" value="common_small_pen" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </border>
+            <button x="15" y="190" width="108" height="25" params="131089" style="0" name="check_name_button" caption="%24%7Btutorial.name_change.check%7D" color="0x0bbbbbb" width_max="108"/>
+            <text x="30" y="155" width="280" height="4" params="16" style="0" name="info_text">
+              <variables>
+                <var key="auto_size" value="null" type="String"/>
+                <var key="text_style" value="il_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="10" y="150" width="280" height="31" params="131089" style="0" name="suggestions"/>
+            <button x="165" y="190" width="149" height="25" params="131089" style="2" name="select_name_button" caption="%24%7Btutorial.name_change.pick%7D" color="0x0bbbbbb"/>
+            <button x="3000" y="1" width="119" height="43" params="393233" style="101" name="cancel_selection_button" caption="%24%7Bgeneric.cancel%7D" color="0x0bbbbbb"/>
+            <border x="10" y="70" width="320" height="75" params="16" style="3" name="hc_background_information" color="0x0c2c0b6">
+              <children>
+                <static_bitmap x="5" y="8" width="60" height="60" params="16" style="3" name="hc_icon_image">
+                  <variables>
+                    <var key="asset_uri" value="talent_vip_reward" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="80" y="8" width="230" height="60" params="16" style="3" name="hc_only_text" caption="Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.%20Duis%20non%20cursus%20lorem.%20Donec%20risus%20erat%2C%20lacinia%20id%20commodo%20ac%2C%20consectetur%20eget%20tellus.%20">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

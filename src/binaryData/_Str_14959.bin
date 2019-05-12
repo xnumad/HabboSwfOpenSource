@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_recycler" width="360" height="460" version="0.1" uid="BB22FA64-BC87-4735-E431-0DD1B97351BB">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_recycler" color="0x2121ffffff" background="true">
+      <children>
+        <static_bitmap x="172" y="170" width="183" height="235" params="16" style="0" name="ctlg_teaserimg_1">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/ctlg_furnimatic_image.gif" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <container x="0" y="215" width="360" height="245" params="16" style="0" name="recyclerWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

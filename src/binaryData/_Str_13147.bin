@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="calendar" width="1033" height="607" version="0.1" uid="3416F126-E11C-B5EA-B3D7-E4D61259C23A">
+  <window>
+    <frame x="0" y="0" width="1033" height="607" params="1" style="3" caption="" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="0" y="0" width="1033" height="607" params="2192" style="0" color="0xffff0e0f1f" background="true">
+          <children>
+            <container x="0" y="106" width="1033" height="463" params="144" style="3" name="spinner_container">
+              <children>
+                <itemlist_horizontal x="0" y="15" width="1033" height="447" params="149" style="3" name="calendar_itemlist">
+                  <children>
+                    <container x="0" y="0" width="202" height="447" params="21" style="3" name="btn_slot">
+                      <children>
+                        <static_bitmap x="0" y="0" width="202" height="447" params="19" style="3" name="bitmap_item">
+                          <variables>
+                            <var key="asset_uri" value="campaign_day_generic_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <container x="7" y="115" width="192" height="192" params="16" style="0" name="btn_present">
+                          <children>
+                            <static_bitmap x="0" y="0" width="192" height="192" params="4079635" style="3" name="bitmap_bg">
+                              <variables>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <static_bitmap x="0" y="0" width="192" height="192" params="4079635" style="3" name="bitmap_opened_bg" visible="false">
+                              <variables>
+                                <var key="asset_uri" value="campaign_opened" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <bitmap x="0" y="0" width="192" height="192" params="4079635" style="3" name="bitmap_icon2">
+                              <variables>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </bitmap>
+                            <static_bitmap x="0" y="0" width="192" height="192" params="4079635" style="3" name="bitmap_icon">
+                              <variables>
+                                <var key="asset_uri" value="" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </container>
+                        <static_bitmap x="0" y="0" width="47" height="51" params="4079635" style="3" name="bitmap_lock">
+                          <variables>
+                            <var key="asset_uri" value="campaign_generic_lock" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                    <container x="206" y="0" width="202" height="447" params="16" style="3">
+                      <children>
+                        <static_bitmap x="0" y="0" width="202" height="447" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="campaign_day_generic_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                    <container x="412" y="0" width="202" height="447" params="16" style="3">
+                      <children>
+                        <static_bitmap x="0" y="0" width="202" height="447" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="campaign_day_generic_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                    <container x="618" y="0" width="202" height="447" params="16" style="3">
+                      <children>
+                        <static_bitmap x="0" y="0" width="202" height="447" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="campaign_day_generic_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                    <container x="824" y="0" width="202" height="447" params="16" style="3">
+                      <children>
+                        <static_bitmap x="0" y="0" width="202" height="447" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="campaign_day_generic_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="4" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+                <bitmap x="0" y="15" width="408" height="447" params="2064" style="3" name="gradient1">
+                  <variables>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </bitmap>
+                <bitmap x="618" y="15" width="408" height="447" params="2048" style="3" name="gradient2">
+                  <variables>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </bitmap>
+              </children>
+            </container>
+          </children>
+        </background>
+        <static_bitmap x="31" y="32" width="47" height="51" params="16" style="3">
+          <variables>
+            <var key="asset_uri" value="campaign_calendar_icon" type="String"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="95" y="28" width="500" height="50" params="16" style="3" height_max="120">
+          <children>
+            <text x="0" y="0" width="500" height="26" params="9584688" style="3" name="info_heading" caption="December%2020th" color="0x07ecaed" width_max="500">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="text_color" value="0x7ecaed" type="hex"/>
+                <var key="text_style" value="ubuntu_condensed_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="29" width="500" height="17" params="9437232" style="3" name="info_body" caption="This%20spell%20will%20produce%20xxxxxx%20xxx%20xxxxx" width_max="500">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <region x="991" y="325" width="33" height="34" params="147457" style="100" name="btn_forward" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="33" height="34" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="icons_forward" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="4" y="325" width="33" height="34" params="147457" style="100" name="btn_back" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="33" height="34" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="icons_back" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <button x="0" y="0" width="120" height="30" params="131089" style="6" name="btn_force_open" caption="FORCE%20OPEN" color="0x0299f3a" visible="false" width_min="120" width_max="120"/>
+      </children>
+    </frame>
+  </window>
+</layout>

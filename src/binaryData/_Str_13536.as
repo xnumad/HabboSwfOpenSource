@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="playlist_subwindow_play_now_xml.bin", mimeType="application/octet-stream")]
+    [Embed(source="_Str_13536.bin", mimeType="application/octet-stream")]
     public class _Str_13536 extends ByteArrayAsset 
     {
     }

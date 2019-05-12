@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="chatinput_window" width="1280" height="1024" version="0.1" uid="6745714E-ACB5-397E-A728-4C2021945876">
+  <window>
+    <container x="0" y="0" width="1280" height="1024" params="16" style="0" name="master_container" width_min="90">
+      <children>
+        <container x="18" y="669" width="733" height="117" params="1049600" style="0" name="bubblecont" tags="chat_bubble" width_min="90">
+          <filters>
+            <DropShadowFilter distance="4" alpha="0.6"/>
+          </filters>
+          <children>
+            <itemlist_horizontal x="124" y="60" width="484" height="57" params="4194512" style="100" name="chat_input_container">
+              <children>
+                <border x="0" y="0" width="83" height="38" params="17" style="8" name="styles">
+                  <children>
+                    <bitmap x="7" y="2" width="55" height="34" params="16" style="100" name="preview_bitmap">
+                      <variables>
+                        <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                    <container x="63" y="3" width="18" height="33" params="16" style="100" name="dropdown_icon_container">
+                      <children>
+                        <icon x="2" y="14" width="10" height="5" params="16" style="7" color="0x00"/>
+                      </children>
+                    </container>
+                  </children>
+                </border>
+                <border x="90" y="0" width="340" height="38" params="16" style="8" name="input_border">
+                  <children>
+                    <region x="1" y="0" width="340" height="37" params="17" style="3" name="helpbutton_show_hover_region" treshold="0"/>
+                    <input x="10" y="7" width="326" height="24" params="1" style="0" name="chat_input" caption="${widgets.chatinput.default}" clipping="false" treshold="0" tags="FIT%3AchatInputField">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="antialias_type" value="advanced" type="String"/>
+                        <var key="font_face" value="Ubuntu" type="String"/>
+                        <var key="font_size" value="17" type="uint"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="max_chars" value="100" type="int"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="focus_capturer" value="true" type="Boolean"/>
+                      </variables>
+                    </input>
+                    <text x="10" y="9" width="325" height="23" params="16" style="0" name="block_text" caption="%24%7Bchat.input.alert.flood%7D" visible="false" treshold="0">
+                      <variables>
+                        <var key="antialias_type" value="advanced" type="String"/>
+                        <var key="font_face" value="Ubuntu" type="String"/>
+                        <var key="font_size" value="14" type="uint"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xff0000" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <closebutton x="313" y="9" width="22" height="21" params="17" style="4" name="helpbutton" background="true" treshold="0"/>
+                  </children>
+                </border>
+                <container_button x="437" y="0" width="47" height="38" params="12582929" style="4" name="send_button" tags="FIT%3AchatSayButton">
+                  <children>
+                    <text x="20" y="6" width="8" height="24" params="12582928" style="0" name="send_button_text" caption=".">
+                      <variables>
+                        <var key="antialias_type" value="advanced" type="String"/>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_face" value="Ubuntu" type="String"/>
+                        <var key="font_size" value="18" type="uint"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container_button>
+              </children>
+              <variables>
+                <var key="spacing" value="7" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+        </container>
+        <container x="2" y="661" width="160" height="105" params="1180672" style="0" name="chatstyles_menu">
+          <filters>
+            <DropShadowFilter distance="4" alpha="0.6"/>
+          </filters>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

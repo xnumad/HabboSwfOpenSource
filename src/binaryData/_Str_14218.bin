@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="nux_gift_selection" width="487" height="287" version="0.1" uid="C93718B4-3A6B-FF15-96D4-8582ED62FF06">
+  <window>
+    <frame x="0" y="0" width="487" height="287" params="34849" style="3" caption="%24%7Bnux.gift.selection.title%7D" color="0xff418db0" clipping="false">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-5" y="8" width="485" height="60" params="2176" style="0" color="0xffff3d6373" background="true">
+          <children>
+            <container x="2" y="2" width="481" height="56" params="2176" style="0" color="0xffff0f4052" background="true">
+              <children>
+                <text x="75" y="13" width="330" height="28" params="273" style="0" name="nux_gift_selection_choose_one" caption="%24%7Bnux.gift.selection.choose.one%7D" height_max="84">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="22" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_headline_big" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <static_bitmap x="16" y="10" width="38" height="41" params="0" style="100" name="club_icon" tags="ICON">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}nux/nux_present.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <itemlist_horizontal x="50" y="78" width="374" height="443" params="131280" style="0" name="nux_gift_selection_list">
+          <children>
+            <container x="0" y="0" width="118" height="435" params="917712" style="0" name="nux_gift_option">
+              <children>
+                <container x="0" y="0" width="108" height="108" params="0" style="0" name="option_thumbnail">
+                  <children>
+                    <background x="0" y="0" width="108" height="108" params="2176" style="3" name="option_bitmap_bg" color="0xffffbfbfb8" background="true"/>
+                    <static_bitmap x="0" y="0" width="108" height="108" params="0" style="100" name="option_bitmap" tags="ICON">
+                      <variables>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <text x="0" y="112" width="108" height="24" params="16" style="3" name="option_heading" caption="Lorem%20Ipsum%20is%20simply%20dummy" height_max="32">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button x="0" y="140" width="110" height="30" params="131073" style="3" name="option_button" caption="%24%7Bnux.gift.selection.button.get%7D" width_min="110" width_max="110"/>
+              </children>
+            </container>
+            <container x="128" y="0" width="118" height="435" params="917712" style="0" name="nux_gift_option">
+              <children>
+                <container x="0" y="0" width="108" height="108" params="0" style="0" name="option_thumbnail">
+                  <children>
+                    <background x="0" y="0" width="108" height="108" params="2176" style="3" name="option_bitmap_bg" color="0xffffbfbfb8" background="true"/>
+                    <static_bitmap x="0" y="0" width="108" height="108" params="0" style="100" name="option_bitmap" tags="ICON">
+                      <variables>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <text x="0" y="112" width="108" height="24" params="16" style="3" name="option_heading" caption="Lorem%20Ipsum%20is%20simply%20dummy" height_max="32">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button x="0" y="140" width="110" height="30" params="131073" style="3" name="option_button" caption="%24%7Bnux.gift.selection.button.get%7D" width_min="110" width_max="110"/>
+              </children>
+            </container>
+            <container x="256" y="0" width="118" height="435" params="917712" style="0" name="nux_gift_option">
+              <children>
+                <container x="0" y="0" width="108" height="108" params="0" style="0" name="option_thumbnail">
+                  <children>
+                    <background x="0" y="0" width="108" height="108" params="2176" style="3" name="option_bitmap_bg" color="0xffffbfbfb8" background="true"/>
+                    <static_bitmap x="0" y="0" width="108" height="108" params="0" style="100" name="option_bitmap" tags="ICON">
+                      <variables>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <text x="0" y="112" width="108" height="24" params="16" style="3" name="option_heading" caption="Lorem%20Ipsum%20is%20simply%20dummy" height_max="32">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button x="0" y="140" width="110" height="30" params="131073" style="3" name="option_button" caption="%24%7Bnux.gift.selection.button.get%7D" width_min="110" width_max="110"/>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

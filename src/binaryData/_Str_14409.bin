@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="toolbar_hover" width="252" height="36" version="0.1" uid="C1C26C71-008F-202E-8B7B-5F8DE171DC33">
+  <window>
+    <border x="0" y="0" width="252" height="36" params="147457" style="6" name="toolbar_hover" color="0x079756e">
+      <filters>
+        <DropShadowFilter distance="3" alpha="0.6"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="7" y="7" width="245" height="25" params="8519698" style="0" name="item_list" color="0x0fffff" tags="SIMPLE_ITEM">
+          <children>
+            <region x="0" y="0" width="238" height="25" params="17" style="0" name="item_basic" background="true" treshold="0" tags="SIMPLE_ITEM">
+              <children>
+                <border x="0" y="0" width="238" height="20" params="16" style="2" name="background" color="0x057544d"/>
+                <text x="7" y="2" width="75" height="17" params="18" style="200" name="text" caption="Sample%20item">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </itemlist_vertical>
+      </children>
+    </border>
+  </window>
+</layout>

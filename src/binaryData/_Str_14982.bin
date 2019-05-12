@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_open_messenger_tab" width="30" height="30" version="0.1" uid="B2AD4793-5D9F-1D22-20AB-7EAB7F94B602">
+  <window>
+    <region x="0" y="0" width="30" height="30" params="17" style="3" name="container" treshold="0">
+      <children>
+        <static_bitmap x="0" y="0" width="30" height="30" params="16" style="3" treshold="0">
+          <variables>
+            <var key="asset_uri" value="friend_bar_friendlist_messenger" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </region>
+  </window>
+</layout>

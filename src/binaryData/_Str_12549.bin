@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="spectator_mode" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="183" height="202" params="2176" style="0" width_min="183" height_min="202">
+      <children>
+        <bitmap x="0" y="0" width="91" height="91" params="16" style="0" name="top_left"/>
+        <bitmap x="91" y="0" width="1" height="19" params="144" style="0" name="top_middle"/>
+        <bitmap x="92" y="0" width="91" height="91" params="80" style="0" name="top_right"/>
+        <bitmap x="0" y="91" width="19" height="1" params="2064" style="0" name="middle_left"/>
+        <bitmap x="164" y="91" width="19" height="1" params="2128" style="0" name="middle_right"/>
+        <bitmap x="0" y="92" width="91" height="110" params="1040" style="0" name="bottom_left"/>
+        <bitmap x="91" y="164" width="1" height="38" params="1168" style="0" name="bottom_middle"/>
+        <bitmap x="92" y="92" width="91" height="110" params="1104" style="0" name="bottom_right"/>
+      </children>
+    </container>
+  </window>
+</layout>

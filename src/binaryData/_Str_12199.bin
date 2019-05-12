@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<layout name="illumina_dark_header" width="0" height="0" version="0.0">
+	<window>
+		<container name="header_container" x="0" y="0" width="100" height="30" tags="_EXCLUDE, _INTERNAL">
+			<params>
+				<param name="relative_horizontal_scale_strech"/>
+				<param name="relative_vertical_scale_fixed"/>
+				<param name="use_parent_graphic_context"/>
+				<param name="bound_to_parent_rect"/>
+				<param name="inherit_caption"/>
+			</params>
+			<children>
+				<!-- Caption text -->
+				<label name="header_title_text" x="20" y="2" width="12" height="30" background="true" color="0xff24211c" tags="_TITLE, _EXCLUDE, _INTERNAL, _COLORIZE">
+					<params>
+						<param name="relative_horizontal_scale_fixed"/>
+						<param name="relative_vertical_scale_fixed"/>
+						<param name="use_parent_graphic_context"/>
+						<param name="inherit_caption"/>
+					</params>
+					<variables>
+						<var key="text_style" value="u_frame_title"/>
+						<var key="text_color" value="0xffffffff" type="hex"/>
+						<var key="margins">
+							<value>
+								<Map>
+									<var key="left" value="10" type="int"/>
+									<var key="top" value="2" type="int"/>
+									<var key="right" value="10" type="int"/>
+									<var key="bottom" value="2" type="int"/>
+								</Map>
+							</value>
+						</var>
+					</variables>
+				</label>
+			</children>
+		</container>
+	</window>
+</layout>
+
