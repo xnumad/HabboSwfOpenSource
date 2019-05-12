@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="totalPriceWidget" width="180" height="25" version="0.1" uid="BAE93A92-8CCC-0BAB-29B9-DA788B5C6CD4">
+  <window>
+    <border x="0" y="0" width="180" height="25" params="16400" style="103" name="totalprice_widget_border">
+      <children>
+        <text x="10" y="3" width="14" height="17" params="16" style="3" name="header_text" caption="%3D" color="0x00">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="margin_right" value="4" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <itemlist_horizontal x="49" y="1" width="128" height="24" params="409616" style="3" name="totalprice_container">
+          <children>
+            <text x="0" y="3" width="38" height="17" params="262160" style="3" name="amount_text_left" caption="00000">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="38" y="1" width="22" height="22" params="16" style="34" name="currency_indicator_bitmap_left"/>
+            <text x="60" y="3" width="8" height="17" params="16" style="3" name="plus" caption="+">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_left" value="-2" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="68" y="3" width="38" height="17" params="262160" style="3" name="amount_text_right" caption="00000">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="106" y="1" width="22" height="22" params="16" style="34" name="currency_indicator_bitmap_right"/>
+          </children>
+        </itemlist_horizontal>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_info_rentables" width="360" height="460" version="0.1" uid="2CAF46F9-ED87-A393-87BD-E3CFD4E83CBB">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="2064" style="0" name="ctlg_info_rentables">
+      <children>
+        <border x="17" y="20" width="328" height="425" params="2064" style="2" color="0x0d8d8d8">
+          <children>
+            <itemlist_vertical x="10" y="9" width="309" height="407" params="2064" style="3">
+              <children>
+                <container x="0" y="0" width="306" height="47" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="1" y="3" width="23" height="22" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                        <var key="zoom_x" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="31" y="3" width="232" height="44" params="16" style="3" name="ctlg_text_1" caption="%24%7Blorem.html%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <static_bitmap x="266" y="1" width="40" height="40" params="16" style="0" name="rentables_rulepic1" tags="S">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/rentables_rulepic1.gif" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <container x="0" y="50" width="306" height="47" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="1" y="3" width="23" height="22" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                        <var key="zoom_x" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="31" y="3" width="232" height="44" params="16" style="3" name="ctlg_text_2" caption="%24%7Blorem.html%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <static_bitmap x="266" y="1" width="40" height="40" params="16" style="0" name="rentables_rulepic2" tags="S">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/rentables_rulepic2.gif" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <container x="0" y="100" width="306" height="47" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="1" y="3" width="23" height="22" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                        <var key="zoom_x" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="31" y="3" width="232" height="44" params="16" style="3" name="ctlg_text_3" caption="%24%7Blorem.html%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <static_bitmap x="266" y="1" width="40" height="40" params="16" style="0" name="rentables_rulepic3" tags="S">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/rentables_rulepic3.gif" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <container x="0" y="150" width="306" height="47" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="1" y="3" width="23" height="22" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                        <var key="zoom_x" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="31" y="3" width="232" height="44" params="16" style="3" name="ctlg_text_4" caption="%24%7Blorem.html%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <static_bitmap x="266" y="1" width="40" height="46" params="16" style="0" name="rentables_rulepic4" tags="S">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/rentables_rulepic4.gif" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <container x="0" y="200" width="306" height="47" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="1" y="3" width="23" height="22" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                        <var key="zoom_x" value="-1" type="Number"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="31" y="3" width="232" height="44" params="16" style="3" name="ctlg_text_5" caption="%24%7Blorem.html%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <static_bitmap x="266" y="1" width="40" height="40" params="16" style="0" name="rentables_rulepic5" tags="S">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/rentables_rulepic5.gif" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

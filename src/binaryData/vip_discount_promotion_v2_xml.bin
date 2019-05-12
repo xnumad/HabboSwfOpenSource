@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="vip_discount_promotion_v2" width="193" height="216" version="0.1" uid="5D09ADCC-2B3A-1561-5380-BFAE2B4B9EAF">
+  <window>
+    <border x="0" y="0" width="193" height="216" params="16" style="0">
+      <children>
+        <region x="167" y="7" width="20" height="20" params="17" style="100" name="minimize_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="20" height="20" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="messenger_minimize_button" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="167" y="7" width="20" height="20" params="17" style="100" name="maximize_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="20" height="20" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="common_maximize" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <text x="13" y="10" width="150" height="15" params="16" style="3" name="title_txt" caption="%24%7Bcitizen.vip.extend.promo.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="10" type="uint"/>
+            <var key="text_color" value="0x444444" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="94" y="113" width="92" height="102" params="1311824" style="100" name="promo_img">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}talent/citizenship_vip_extend_promo.png" type="String"/>
+            <var key="pivot_point" value="bottom right" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="0" y="30" width="188" height="105" params="147472" style="100" name="content_itemlist">
+          <children>
+            <text x="13" y="0" width="170" height="30" params="16" style="3" name="caption_txt" caption="%24%7Bcitizen.vip.extend.promo.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="13" y="35" width="170" height="15" params="16" style="3" name="info_txt" caption="%24%7Bcitizen.vip.extend.promo.info%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="4" y="55" width="187" height="50" params="131089" style="100" name="extend_button" caption="%24%7Bcitizen.vip.extend.promo.button%7D" width_min="187" width_max="187"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </border>
+  </window>
+</layout>

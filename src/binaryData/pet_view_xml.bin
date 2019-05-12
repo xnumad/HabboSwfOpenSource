@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pet_view" width="1036" height="440" version="0.1" uid="635445EB-8D0F-2CD4-5FE7-0A1DB9755463">
+  <window>
+    <itemlist_vertical x="0" y="0" width="1036" height="440" params="16" style="0">
+      <children>
+        <border x="0" y="0" width="190" height="285" params="17" style="1" name="info_border">
+          <children>
+            <closebutton x="170" y="6" width="18" height="16" params="17" style="1" background="true" treshold="0" tags="close"/>
+            <itemlist_vertical x="10" y="10" width="173" height="270" params="16" style="0" name="infostand_element_list">
+              <children>
+                <text x="84" y="0" width="4" height="4" params="208" style="0" name="name_text">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="84" y="4" width="4" height="4" params="208" style="0" name="breed_text">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="8" width="163" height="83" params="16" style="0" name="image_container" width_max="163">
+                  <children>
+                    <bitmap x="0" y="0" width="80" height="83" params="16" style="0" name="avatar_image" width_max="80"/>
+                    <container x="76" y="0" width="95" height="78" params="16" style="0" name="level_container">
+                      <children>
+                        <text x="25" y="10" width="45" height="13" params="208" style="0" name="level_text" caption="%24%7Bpet.level%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="0" y="31" width="115" height="13" params="208" style="0" name="status_skill_text" caption="%24%7Binfostand.pet.text.skill%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xa4a4a4" type="hex"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <bitmap x="8" y="47" width="78" height="18" params="208" style="0" name="skill_level_indicator"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="91" width="170" height="140" params="16" style="0" name="status_container">
+                  <children>
+                    <itemlist_vertical x="0" y="0" width="170" height="142" params="16" style="0" name="status_item_list_default">
+                      <children>
+                        <container x="0" y="0" width="169" height="34" params="16" style="0" name="status_happiness_container">
+                          <children>
+                            <text x="10" y="1" width="148" height="13" params="208" style="0" name="status_happiness_text" caption="%24%7Binfostand.pet.text.happiness%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="6" y="17" width="162" height="17" params="16" style="0" name="status_happiness_bitmap"/>
+                            <text x="82" y="18" width="4" height="4" params="208" style="0" name="status_happiness_value_text">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="0" y="16" width="18" height="18" params="16" style="0" name="status_happiness_icon">
+                              <variables>
+                                <var key="bitmap_asset_name" value="icon_pet_happiness" type="String"/>
+                              </variables>
+                            </bitmap>
+                          </children>
+                        </container>
+                        <container x="0" y="34" width="169" height="34" params="16" style="0" name="status_experience_container">
+                          <children>
+                            <text x="8" y="1" width="153" height="13" params="208" style="0" name="status_experience_text" caption="%24%7Binfostand.pet.text.experience%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="6" y="17" width="162" height="17" params="16" style="0" name="status_experience_bitmap"/>
+                            <text x="82" y="18" width="4" height="4" params="208" style="0" name="status_experience_value_text">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="0" y="16" width="18" height="18" params="16" style="0" name="status_experience_icon">
+                              <variables>
+                                <var key="bitmap_asset_name" value="icon_pet_experience" type="String"/>
+                              </variables>
+                            </bitmap>
+                          </children>
+                        </container>
+                        <container x="0" y="68" width="169" height="34" params="16" style="0" name="status_energy_container">
+                          <children>
+                            <text x="18" y="1" width="133" height="13" params="208" style="0" name="status_energy_text" caption="%24%7Binfostand.pet.text.energy%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="6" y="17" width="162" height="17" params="16" style="0" name="status_energy_bitmap"/>
+                            <text x="82" y="18" width="4" height="4" params="208" style="0" name="status_energy_value_text">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="0" y="16" width="18" height="18" params="16" style="0" name="status_energy_icon">
+                              <variables>
+                                <var key="bitmap_asset_name" value="icon_pet_energy" type="String"/>
+                              </variables>
+                            </bitmap>
+                          </children>
+                        </container>
+                        <text x="11" y="102" width="149" height="18" params="208" style="0" name="status_rarity_level" caption="%24%7Binfostand.pet.text.raritylevel%7D" height_min="15">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="margin_top" value="5" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </itemlist_vertical>
+                    <itemlist_vertical x="0" y="0" width="170" height="137" params="16" style="0" name="status_item_list_monsterplant" visible="false">
+                      <children>
+                        <container x="0" y="0" width="169" height="34" params="16" style="0" name="status_wellbeing_container">
+                          <children>
+                            <text x="13" y="1" width="142" height="13" params="208" style="0" name="status_wellbeing_text" caption="%24%7Binfostand.pet.text.wellbeing%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="6" y="17" width="162" height="17" params="16" style="0" name="status_wellbeing_bitmap"/>
+                            <text x="82" y="18" width="4" height="4" params="208" style="0" name="status_wellbeing_value_text">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="sharpness" value="0" type="Number"/>
+                                <var key="thickness" value="0" type="Number"/>
+                                <var key="kerning" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <bitmap x="0" y="16" width="18" height="18" params="16" style="0" name="status_wellbeing_icon">
+                              <variables>
+                                <var key="bitmap_asset_name" value="icon_pet_wellbeing" type="String"/>
+                              </variables>
+                            </bitmap>
+                          </children>
+                        </container>
+                        <text x="18" y="36" width="134" height="15" params="208" style="0" name="growth_status_text" caption="%24%7Binfostand.pet.text.growth%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="margin_bottom" value="2" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <widget x="36" y="53" width="99" height="37" params="147664" style="0" name="growth_status_widget">
+                          <variables>
+                            <var key="widget_type" value="countdown" type="String"/>
+                            <var key="countdown:seconds" value="12054" type="int"/>
+                          </variables>
+                        </widget>
+                        <text x="11" y="92" width="149" height="15" params="208" style="0" name="status_rarity_level" caption="%24%7Binfostand.pet.text.raritylevel%7D" height_min="15">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="margin_top" value="-2" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <widget x="67" y="109" width="40" height="28" params="16" style="0" name="rarity_item_overlay_widget">
+                          <variables>
+                            <var key="widget_type" value="rarity_item_overlay_preview" type="String"/>
+                          </variables>
+                        </widget>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_vertical>
+                  </children>
+                </container>
+                <container x="0" y="231" width="164" height="21" params="16" style="0" name="petrespect_container">
+                  <children>
+                    <text x="15" y="5" width="135" height="13" params="208" style="0" name="petrespect_text" caption="%24%7Binfostand.text.petrespect%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="0" y="3" width="13" height="21" params="16" style="0" name="petrespect_icon"/>
+                  </children>
+                </container>
+                <text x="66" y="252" width="41" height="13" params="208" style="0" name="age_text" caption="%24%7Bpet.age%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="23" y="265" width="126" height="13" params="208" style="0" name="owner_text" caption="%24%7Binfostand.text.petowner%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <container x="0" y="295" width="1000" height="25" params="16" style="0" name="button_list">
+          <children>
+            <region x="0" y="0" width="54" height="25" params="17" style="1" name="pick" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="137" height="25" params="131089" style="1" name="btn_pick" caption="%24%7Binfostand.button.pickup%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="64" y="0" width="44" height="25" params="17" style="1" name="train" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="130" height="25" params="131089" style="1" name="btn_train" caption="%24%7Binfostand.button.train%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="118" y="0" width="147" height="25" params="17" style="1" name="buy_food" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="147" height="25" params="131089" style="1" name="btn_buy_food" caption="%24%7Binfostand.button.buyfood%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="275" y="0" width="163" height="25" params="17" style="0" name="petrespect" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="163" height="25" params="131089" style="1" name="btn_petrespect" caption="%24%7Binfostand.button.petrespect%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="275" y="0" width="163" height="25" params="17" style="0" name="pettreat" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="150" height="25" params="131089" style="1" name="btn_pettreat" caption="%24%7Binfostand.button.pettreat%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="448" y="0" width="141" height="25" params="17" style="1" name="kick" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="141" height="25" params="131089" style="1" name="btn_kick" caption="%24%7Binfostand.button.petkick%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="589" y="0" width="132" height="25" params="17" style="1" name="move" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="132" height="25" params="131089" style="1" name="btn_move" caption="%24%7Binfostand.button.move%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+            <region x="600" y="0" width="132" height="25" params="17" style="0" name="rotate" tags="CMD_BUTTON_REGION">
+              <children>
+                <button x="0" y="0" width="139" height="25" params="131089" style="1" name="btn_rotate" caption="%24%7Binfostand.button.rotate%7D" tags="CMD_BUTTON"/>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="spacing" value="10" type="int"/>
+      </variables>
+    </itemlist_vertical>
+  </window>
+</layout>

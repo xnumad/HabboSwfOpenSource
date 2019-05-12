@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="relationship_chooser" width="30" height="68" version="0.1" uid="1E8A5849-39D4-2014-34C3-AAB23BF0CA14">
+  <window>
+    <border x="0" y="0" width="30" height="68" params="131072" style="100" color="0xffffffffff" background="true">
+      <children>
+        <itemlist_vertical x="2" y="2" width="25" height="63" params="16" style="100" name="items">
+          <children>
+            <region x="0" y="0" width="25" height="15" params="17" style="1" name="item_none" color="0xffffececec" background="true" treshold="0">
+              <children>
+                <static_bitmap x="0" y="1" width="16" height="14" params="16" style="100" name="image">
+                  <variables>
+                    <var key="asset_uri" value="relationship_status_none" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="0" y="16" width="25" height="15" params="17" style="1" name="item_heart" color="0xffffffffff" background="true" treshold="0">
+              <children>
+                <static_bitmap x="0" y="1" width="16" height="14" params="16" style="100" name="image">
+                  <variables>
+                    <var key="asset_uri" value="relationship_status_heart" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="0" y="32" width="25" height="15" params="17" style="1" name="item_smile" color="0xffffececec" background="true" treshold="0">
+              <children>
+                <static_bitmap x="0" y="1" width="16" height="14" params="16" style="100" name="image">
+                  <variables>
+                    <var key="asset_uri" value="relationship_status_smile" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="0" y="48" width="25" height="15" params="17" style="1" name="item_bobba" color="0xffffffffff" background="true" treshold="0">
+              <children>
+                <static_bitmap x="0" y="1" width="16" height="14" params="16" style="100" name="image">
+                  <variables>
+                    <var key="asset_uri" value="relationship_status_bobba" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+          <variables>
+            <var key="spacing" value="1" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </border>
+  </window>
+</layout>

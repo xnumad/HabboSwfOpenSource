@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="confirm_pet_breeding" width="320" height="623" version="0.1" uid="4A9EF928-958F-CAF4-08E6-3BDE6D2F5BC9">
+  <window>
+    <frame x="9" y="11" width="320" height="623" params="32769" style="100" caption="%24%7Bbreedpets.confirmation.widget.title%7D" width_min="320" width_max="320">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="0" y="0" width="318" height="484" params="147472" style="100" name="element_list" width_max="318">
+          <children>
+            <text x="10" y="0" width="264" height="28" params="16" style="100" name="title" caption="%24%7Bbreedpets.confirmation.widget.request%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="0" y="38" width="314" height="140" params="16" style="103" name="parentContainer" width_min="310" width_max="314">
+              <children>
+                <itemlist_horizontal x="10" y="7" width="290" height="146" params="147472" style="100" name="preview_list">
+                  <children>
+                    <itemlist_vertical x="0" y="0" width="140" height="121" params="147472" style="100" name="pet1_itemlist" width_min="140" width_max="140">
+                      <children>
+                        <text x="1" y="0" width="140" height="17" params="16" style="100" name="pet_name" caption="%24%7Bbreedpets.widget.pet1.name%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="text_style" value="il_heading_2" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <bitmap x="0" y="18" width="140" height="70" params="786448" style="100" name="preview_image" width_min="140" width_max="140" height_min="70" height_max="70"/>
+                        <text x="0" y="89" width="140" height="15" params="16" style="100" name="pet_level" caption="%24%7Bbreedpets.widget.pet1.level%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="text_style" value="il_heading_3" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="0" y="105" width="140" height="16" params="16" style="100" name="pet_description" caption="%24%7Bbreedpets.widget.pet1.description%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="1" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_vertical>
+                    <itemlist_vertical x="150" y="0" width="140" height="121" params="147472" style="100" name="pet2_itemlist" width_min="140" width_max="140">
+                      <children>
+                        <text x="0" y="0" width="140" height="17" params="16" style="100" name="pet_name" caption="%24%7Bbreedpets.widget.pet2.name%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="text_style" value="il_heading_2" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <bitmap x="0" y="18" width="140" height="70" params="16" style="100" name="preview_image2" width_min="140" width_max="140" height_min="70" height_max="70"/>
+                        <text x="0" y="89" width="140" height="15" params="16" style="100" name="pet_level" caption="%24%7Bbreedpets.widget.pet2.level%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="text_style" value="il_heading_3" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="0" y="105" width="140" height="16" params="16" style="100" name="pet_description" caption="%24%7Bbreedpets.widget.pet2.description%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="1" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_vertical>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="10" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </border>
+            <itemlist_vertical x="10" y="188" width="300" height="52" params="16" style="100" name="puppy_namelist" width_min="300">
+              <children>
+                <label x="0" y="0" width="70" height="15" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.baby.name%7D">
+                  <variables>
+                    <var key="text_style" value="il_heading_3" type="String"/>
+                  </variables>
+                </label>
+                <border x="0" y="17" width="295" height="31" params="16" style="105" color="0x0f0f0f0">
+                  <children>
+                    <input x="5" y="5" width="284" height="20" params="1" style="100" name="puppy.name.input">
+                      <variables>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="max_chars" value="32" type="int"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </input>
+                  </children>
+                </border>
+              </children>
+              <variables>
+                <var key="spacing" value="2" type="int"/>
+              </variables>
+            </itemlist_vertical>
+            <label x="10" y="250" width="78" height="15" params="16" style="100" name="breeding.title" caption="%24%7Bbreedpets.confirmation.widget.breeding.info%7D">
+              <variables>
+                <var key="text_style" value="il_heading_3" type="String"/>
+              </variables>
+            </label>
+            <border x="10" y="275" width="295" height="209" params="16" style="102">
+              <children>
+                <itemlist_vertical x="10" y="10" width="287" height="199" params="16" style="100">
+                  <children>
+                    <text x="0" y="0" width="286" height="40" params="16" style="100" name="text" caption="%24%7Bbreedpets.confirmation.widget.text%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="45" width="290" height="40" params="16" style="100" name="info" caption="%24%7Bbreedpets.confirmation.widget.info%7D" width_min="290">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <itemlist_vertical x="0" y="90" width="282" height="109" params="16" style="100" name="category_list">
+                      <children>
+                        <container x="0" y="0" width="280" height="25" params="16" style="100" name="rarityCategory1.container">
+                          <children>
+                            <label x="0" y="5" width="104" height="15" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.raritycategory.1%7D" width_min="100">
+                              <variables>
+                                <var key="text_style" value="il_heading_3" type="String"/>
+                              </variables>
+                            </label>
+                            <itemlist_horizontal x="90" y="0" width="200" height="25" params="16" style="100" name="breeds1">
+                              <variables>
+                                <var key="spacing" value="2" type="int"/>
+                              </variables>
+                            </itemlist_horizontal>
+                          </children>
+                        </container>
+                        <container x="0" y="27" width="280" height="25" params="16" style="100" name="rarityCategory2.container">
+                          <children>
+                            <label x="0" y="5" width="109" height="15" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.raritycategory.2%7D" width_min="100">
+                              <variables>
+                                <var key="text_style" value="il_heading_3" type="String"/>
+                              </variables>
+                            </label>
+                            <itemlist_horizontal x="90" y="0" width="200" height="25" params="16" style="100" name="breeds2">
+                              <variables>
+                                <var key="spacing" value="2" type="int"/>
+                              </variables>
+                            </itemlist_horizontal>
+                          </children>
+                        </container>
+                        <container x="0" y="54" width="280" height="25" params="16" style="100" name="rarityCategory3.container">
+                          <children>
+                            <label x="0" y="5" width="143" height="15" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.raritycategory.3%7D" width_min="100">
+                              <variables>
+                                <var key="text_style" value="il_heading_3" type="String"/>
+                              </variables>
+                            </label>
+                            <itemlist_horizontal x="90" y="0" width="200" height="25" params="16" style="100" name="breeds3">
+                              <variables>
+                                <var key="spacing" value="2" type="int"/>
+                              </variables>
+                            </itemlist_horizontal>
+                          </children>
+                        </container>
+                        <container x="0" y="81" width="280" height="25" params="16" style="100" name="rarityCategory4.container">
+                          <children>
+                            <label x="0" y="5" width="129" height="15" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.raritycategory.4%7D" width_min="100">
+                              <variables>
+                                <var key="text_style" value="il_heading_3" type="String"/>
+                              </variables>
+                            </label>
+                            <itemlist_horizontal x="90" y="0" width="200" height="20" params="16" style="100" name="breeds4">
+                              <variables>
+                                <var key="spacing" value="2" type="int"/>
+                              </variables>
+                            </itemlist_horizontal>
+                          </children>
+                        </container>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                      </variables>
+                    </itemlist_vertical>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                  </variables>
+                </itemlist_vertical>
+              </children>
+            </border>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+        <itemlist_vertical x="10" y="524" width="295" height="54" params="147472" style="100" name="button_list" width_min="295" width_max="295">
+          <children>
+            <button x="86" y="0" width="122" height="30" params="917521" style="102" name="save_button" caption="%24%7Bbreedpets.confirmation.widget.button.breed%7D" width_min="122" width_max="122"/>
+            <region x="0" y="33" width="295" height="21" params="131089" style="102" name="cancel_button" caption="%24%7Bbreedpets.widget.cancel%7D" treshold="0" width_min="295" width_max="295">
+              <children>
+                <text x="0" y="0" width="295" height="16" params="16" style="100" caption="%24%7Bbreedpets.confirmation.widget.button.cancel%7D" width_min="295" width_max="295">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_link_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

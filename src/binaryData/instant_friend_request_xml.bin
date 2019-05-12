@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="instant_friend_request" width="197" height="83" version="0.1" uid="60D44B99-0734-BEC6-B9DC-2DD7BC1C858E">
+  <window>
+    <container x="0" y="0" width="197" height="83" params="33057" style="0" name="master_container" color="0x00" background="true" treshold="0">
+      <children>
+        <bubble x="-6" y="-6" width="209" height="89" params="2449" style="0" color="0x0fac919" clipping="false">
+          <children>
+            <icon x="5" y="10" width="15" height="15" params="17" style="21" name="profile_icon"/>
+            <region x="25" y="5" width="142" height="32" params="17" style="0" name="profile_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="142" height="32" params="16" style="0" name="text">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="8" y="46" width="152" height="16" params="148497" style="0" name="decline_button" treshold="0" width_min="1">
+              <children>
+                <text x="0" y="0" width="152" height="16" params="16" style="0" caption="%24%7Bwidget.friendrequest.decline%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <container_button x="99" y="42" width="90" height="24" params="1041" style="3" name="accept_button" width_min="90" width_max="90">
+              <children>
+                <icon x="6" y="5" width="16" height="15" params="16" style="8" color="0x0aa00"/>
+                <text x="23" y="3" width="65" height="16" params="16" style="0" caption="%24%7Bwidget.friendrequest.accept%7D">
+                  <variables>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_style" value="button_shiny_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="80" type="Number"/>
+                    <var key="thickness" value="-15" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <closebutton x="171" y="3" width="19" height="20" params="17" style="3" name="close_button" background="true" treshold="0"/>
+          </children>
+        </bubble>
+      </children>
+    </container>
+  </window>
+</layout>

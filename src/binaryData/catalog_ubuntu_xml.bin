@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="catalog_ubuntu" width="570" height="600" version="0.1" uid="AFF0F6F1-79BB-175A-7D3E-04DACA54BC20">
+  <window>
+    <frame x="0" y="0" width="570" height="600" params="98337" style="3" name="catalog_main_container" caption="%24%7Bcatalog.title%7D" color="0xff418db0" width_min="570" width_max="570" height_min="540">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="1" y="0" width="568" height="90" params="144" style="3" name="catalog.header.background.border" color="0xffff376275" background="true">
+          <children>
+            <background x="2" y="2" width="564" height="86" params="144" style="3" name="catalog.header.background.body" color="0xffff0e3f52" background="true"/>
+            <static_bitmap x="0" y="0" width="568" height="90" params="144" style="3" name="catalog.header.image" blend="0.1">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}catalogue/catalog_header_roombuilder.gif" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="zoom_x" value="2" type="Number"/>
+                <var key="zoom_y" value="2" type="Number"/>
+                <var key="greyscale" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="24" y="30" width="40" height="35" params="16" style="3" name="catalog.header.icon">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}catalogue/icon_1.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="zoom_x" value="2" type="Number"/>
+                <var key="zoom_y" value="2" type="Number"/>
+              </variables>
+            </static_bitmap>
+            <container x="0" y="0" width="570" height="90" params="16" style="3" name="catalog.mode.header" visible="false">
+              <children>
+                <formatted_text x="80" y="11" width="133" height="24" params="16" style="3" name="catalog.header.title" caption="%24%7Bcatalog.header%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_headline_big" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="80" y="34" width="475" height="17" params="16" style="3" name="catalog.header.description" caption="%24%7Bcatalog.description%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </container>
+            <container x="0" y="0" width="570" height="90" params="16" style="3" name="builder.mode.header">
+              <children>
+                <formatted_text x="80" y="11" width="226" height="30" params="16" style="3" name="builder.header.title" caption="%24%7Bbuilder.header.title%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="24" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_headline_big" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="80" y="41" width="475" height="19" params="16" style="3" name="builder.header.status.membership" caption="%24%7Bbuilder.header.status.membership%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="2" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="80" y="56" width="475" height="19" params="16" style="3" name="builder.header.status.limit" caption="%24%7Bbuilder.header.status.limit%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="2" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </container>
+          </children>
+        </background>
+        <border x="8" y="96" width="184" height="24" params="16" style="105">
+          <children>
+            <formatted_text x="4" y="3" width="82" height="17" params="16" style="3" name="search.helper" caption="%24%7Bcatalog.search%7D" blend="0.5">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <input x="4" y="3" width="144" height="18" params="1" style="3" name="search.input">
+              <variables>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <region x="160" y="2" width="20" height="20" params="17" style="3" name="clear_search_button" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="search.clear.icon">
+                  <variables>
+                    <var key="asset_uri" value="common_small_pen" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </border>
+        <container x="8" y="124" width="184" height="433" params="2064" style="6" name="navigationContainer" caption="Catalog">
+          <children>
+            <border x="0" y="0" width="184" height="433" params="2064" style="6" blend="0.5"/>
+            <scrollable_itemlist_vertical x="3" y="5" width="178" height="423" params="2064" style="3" name="navigationList" caption="Catalog">
+              <children>
+                <itemlist_vertical x="0" y="0" width="178" height="19" params="16" style="3" name="normal_list_template"/>
+                <region x="0" y="19" width="180" height="21" params="131089" style="0" name="normal_topitem_template" color="0xff777777" treshold="0">
+                  <children>
+                    <background x="1" y="0" width="178" height="21" params="16" style="106" color="0xffffb4b4ae" background="true" tags="SELECTION_HILIGHT">
+                      <children>
+                        <background x="0" y="0" width="178" height="20" params="16" style="3" name="item_hilight_outer" color="0xffff82d1ed" background="true">
+                          <children>
+                            <background x="0" y="2" width="178" height="16" params="16" style="3" name="item_hilight_inner" color="0xffff63c5e9" background="true"/>
+                          </children>
+                        </background>
+                      </children>
+                    </background>
+                    <static_bitmap x="0" y="1" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/icon_1.png" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="26" y="2" width="27" height="17" params="176" style="3" name="item_title" caption="item" tags="ITEM_TITLE%2CSELECTION_COLOR">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="etching_color" value="0xffb4b4ae" type="hex"/>
+                        <var key="etching_position" value="top" type="String"/>
+                        <var key="text_color" value="0x666666" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <icon x="145" y="6" width="15" height="15" params="16" style="5" name="drop_button" color="0x0999999" visible="false" tags="DOWNBTN"/>
+                  </children>
+                </region>
+                <region x="0" y="40" width="179" height="21" params="131089" style="0" name="normal_subitem_template" color="0xff777777" treshold="0">
+                  <children>
+                    <background x="1" y="0" width="178" height="20" params="16" style="106" color="0xffffb4b4ae" background="true" tags="SELECTION_HILIGHT">
+                      <children>
+                        <background x="0" y="0" width="178" height="19" params="16" style="3" name="item_hilight_outer" color="0xffff82d1ed" background="true">
+                          <children>
+                            <background x="0" y="2" width="178" height="15" params="16" style="3" name="item_hilight_inner" color="0xffff63c5e9" background="true"/>
+                          </children>
+                        </background>
+                      </children>
+                    </background>
+                    <static_bitmap x="15" y="0" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/icon_2.png" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="42" y="1" width="50" height="17" params="176" style="3" name="item_title" caption="sub-item" tags="ITEM_TITLE%2CSELECTION_COLOR">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="etching_color" value="0xffb4b4ae" type="hex"/>
+                        <var key="etching_position" value="top" type="String"/>
+                        <var key="text_color" value="0x52819a" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="italic" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <icon x="145" y="6" width="15" height="15" params="16" style="5" name="drop_button" color="0x0999999" visible="false" tags="DOWNBTN"/>
+                  </children>
+                </region>
+                <itemlist_vertical x="0" y="60" width="178" height="19" params="16" style="3" name="builders_club_list_template"/>
+                <region x="0" y="79" width="180" height="21" params="131089" style="0" name="builders_club_topitem_template" color="0xff777777" treshold="0">
+                  <children>
+                    <background x="1" y="0" width="178" height="21" params="16" style="106" color="0xffffb4b4ae" background="true" tags="SELECTION_HILIGHT">
+                      <children>
+                        <background x="0" y="0" width="178" height="20" params="16" style="3" name="item_hilight_outer" color="0xffffffb53c" background="true">
+                          <children>
+                            <background x="0" y="2" width="178" height="16" params="16" style="3" name="item_hilight_inner" color="0xffffff8d00" background="true"/>
+                          </children>
+                        </background>
+                      </children>
+                    </background>
+                    <static_bitmap x="0" y="1" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/icon_1.png" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="26" y="2" width="27" height="17" params="176" style="3" name="item_title" caption="item" tags="ITEM_TITLE%2CSELECTION_COLOR">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="etching_color" value="0xffcf7200" type="hex"/>
+                        <var key="etching_position" value="top" type="String"/>
+                        <var key="text_color" value="0x666666" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <icon x="145" y="6" width="15" height="15" params="16" style="5" name="drop_button" color="0x0999999" visible="false" tags="DOWNBTN"/>
+                  </children>
+                </region>
+                <region x="0" y="100" width="179" height="20" params="131089" style="0" name="builders_club_subitem_template" color="0xff777777" treshold="0">
+                  <children>
+                    <background x="1" y="0" width="178" height="20" params="16" style="106" color="0xffffb4b4ae" background="true" tags="SELECTION_HILIGHT">
+                      <children>
+                        <background x="0" y="0" width="178" height="19" params="16" style="3" name="item_hilight_outer" color="0xffffffb53c" background="true">
+                          <children>
+                            <background x="0" y="2" width="178" height="15" params="16" style="3" name="item_hilight_inner" color="0xffffff8d00" background="true"/>
+                          </children>
+                        </background>
+                      </children>
+                    </background>
+                    <static_bitmap x="15" y="0" width="20" height="20" params="16" style="0" name="icon" tags="ICON_IMAGE">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}catalogue/icon_2.png" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="42" y="1" width="50" height="17" params="176" style="3" name="item_title" caption="sub-item" tags="ITEM_TITLE%2CSELECTION_COLOR">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="etching_color" value="0xffcf7200" type="hex"/>
+                        <var key="etching_position" value="top" type="String"/>
+                        <var key="text_color" value="0xb77734" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="italic" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <icon x="145" y="6" width="15" height="15" params="16" style="5" name="drop_button" color="0x0999999" visible="false" tags="DOWNBTN"/>
+                  </children>
+                </region>
+              </children>
+            </scrollable_itemlist_vertical>
+          </children>
+        </container>
+        <container x="200" y="96" width="360" height="460" params="2064" style="0" name="layoutContainer" background="true" tags="UBUNTU"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

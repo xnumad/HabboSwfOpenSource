@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="habbo_window_layout_scrollable_itemgrid" width="40" height="40" version="0.0">
+	<window>
+		<itemgrid_vertical x="0" y="0" width="23" height="40" params="2193" style="0" name="_ITEMGRID" tags="_ITEMGRID, _EXCLUDE, _INTERNAL">
+            <variables>
+                <var key="spacing" value="0" type="int"/>
+                <var key="scale_to_fit_items" value="false" type="Boolean"/>
+            </variables>
+        </itemgrid_vertical>
+		<scrollbar_vertical x="23" y="0" width="17" height="40" params="2129" style="0" name="_SCROLLBAR" tags="_SCROLLBAR, _EXCLUDE, _INTERNAL" />
+	</window>
+</layout>

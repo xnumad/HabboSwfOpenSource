@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_dance" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="163" height="208" params="16" style="0" name="dance_container">
+      <children>
+        <border x="0" y="0" width="163" height="181" params="16" style="1" name="dance_border">
+          <children>
+            <text x="62" y="5" width="38" height="13" params="786640" style="0" name="dance_title" caption="%24%7Bwidget.memenu.dance%7D" width_max="150">
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+                <var key="auto_size" value="left" type="String"/>
+              </variables>
+            </text>
+            <container x="5" y="22" width="152" height="1" params="16" style="0" name="line" color="0xff2f2f2f" background="true"/>
+            <itemlist_vertical x="9" y="33" width="145" height="140" params="17" style="0" name="buttonContainer">
+              <children>
+                <text x="0" y="0" width="145" height="50" params="16" style="0" name="club_info" caption="%24%7Bwidget.memenu.dance.clubinfo%7D">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="4" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <button x="0" y="182" width="50" height="22" params="131089" style="1" name="back_btn" caption="%24%7Bgeneric.back%7D"/>
+        <button x="52" y="182" width="110" height="22" params="131089" style="1" name="stop_dancing_button" caption="%24%7Bwidget.memenu.dance.stop%7D"/>
+      </children>
+    </container>
+  </window>
+</layout>

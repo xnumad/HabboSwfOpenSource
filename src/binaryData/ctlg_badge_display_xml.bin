@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_badge_display" width="360" height="460" version="0.1" uid="2FCEE45D-1CF8-8AB5-066C-DA831A2E5E83">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_badgedisplay">
+      <children>
+        <label x="5" y="130" width="107" height="15" params="16" style="3" name="ctlg_selectproduct" caption="%24%7Bcatalog_selectproduct%7D">
+          <variables>
+            <var key="text_style" value="u_small" type="String"/>
+          </variables>
+        </label>
+        <container x="180" y="150" width="175" height="248" params="16" style="0" name="productViewWidget"/>
+        <container x="169" y="118" width="142" height="73" params="16" style="0" name="specialInfoWidget"/>
+        <container x="0" y="430" width="360" height="30" params="16" style="0" name="purchaseWidget"/>
+        <container x="5" y="150" width="170" height="73" params="16" style="0" name="itemGridWidget"/>
+        <container x="181" y="400" width="170" height="30" params="0" style="0" name="limitedItemWidget">
+          <children>
+            <widget x="0" y="0" width="200" height="40" params="147472" style="3" name="unique_item_overlay_container">
+              <variables>
+                <var key="widget_type" value="limited_item_overlay_supply" type="String"/>
+              </variables>
+            </widget>
+          </children>
+        </container>
+        <label x="5" y="227" width="100" height="15" params="16" style="3" name="ctlg_selectbadge" caption="%24%7Bcatalog_selectbadge%7D">
+          <variables>
+            <var key="text_style" value="u_small" type="String"/>
+          </variables>
+        </label>
+        <container x="4" y="242" width="170" height="175" params="16" style="0" name="userBadgeSelectorWidget">
+          <children>
+            <scrollable_itemgrid_vertical x="0" y="0" width="170" height="195" params="16" style="3" name="badgeGrid">
+              <variables>
+                <var key="spacing" value="1" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </scrollable_itemgrid_vertical>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

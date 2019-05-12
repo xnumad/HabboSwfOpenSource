@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_color_item" width="15" height="15" version="0.1" uid="AD6C68EC-2D58-8FED-F4FF-BAC0263816B9">
+  <window>
+    <container x="0" y="0" width="15" height="15" params="17" style="0" name="container">
+      <children>
+        <bitmap x="0" y="0" width="15" height="15" params="2192" style="0" name="background"/>
+        <bitmap x="0" y="0" width="15" height="15" params="2192" style="0" name="foreground"/>
+        <bitmap x="0" y="0" width="15" height="15" params="2192" style="0" name="selected"/>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="user_feedback" width="282" height="306" version="0.1" uid="72C7CA9D-E946-DE8B-D9A9-02E7B1A0D853">
+  <window>
+    <frame x="0" y="0" width="282" height="306" params="32769" style="100" name="user_feedback" caption="%24%7Bguide.help.request.user.feedback.title%7D" width_min="282" width_max="282" height_min="0">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <border x="0" y="0" width="280" height="65" params="16" style="103">
+          <children>
+            <itemlist_horizontal x="10" y="10" width="165" height="40" params="147472" style="100">
+              <children>
+                <static_bitmap x="0" y="0" width="30" height="40" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="help_guide_icon" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <itemlist_vertical x="35" y="5" width="130" height="35" params="16" style="100">
+                  <children>
+                    <link x="0" y="0" width="70" height="17" params="1" style="100" name="guide_name_link" caption="Guide%20Name" treshold="0" width_max="130">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="tool_tip_caption" value="${guide.help.common.profile.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="100" type="uint"/>
+                      </variables>
+                    </link>
+                    <text x="0" y="17" width="64" height="16" params="16" style="100" name="guide_desc" caption="%24%7Bguide.help.request.user.feedback.guide.desc%7D" width_max="130">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </itemlist_vertical>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+            <link x="170" y="23" width="100" height="16" params="1" style="100" name="report_guide_link" caption="%24%7Bguide.help.common.report.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="tool_tip_caption" value="${guide.help.common.report.link.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </link>
+          </children>
+        </border>
+        <itemlist_vertical x="10" y="75" width="260" height="183" params="8536080" style="0" width_min="260" width_max="260">
+          <children>
+            <text x="0" y="0" width="170" height="17" params="16" style="100" caption="%24%7Bguide.help.request.user.feedback.closed.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_2" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="22" width="260" height="50" params="16" style="100" caption="%24%7Bguide.help.request.user.feedback.closed.desc%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_bottom" value="10" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <widget x="40" y="77" width="220" height="10" params="16" style="100">
+              <variables>
+                <var key="widget_type" value="separator" type="String"/>
+              </variables>
+            </widget>
+            <container x="0" y="92" width="260" height="1" params="16" style="100">
+              <children>
+                <static_bitmap x="0" y="-17" width="60" height="94" params="0" style="100">
+                  <variables>
+                    <var key="asset_uri" value="help_user_feedback" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <text x="60" y="98" width="200" height="30" params="16" style="100" caption="%24%7Bguide.help.request.user.feedback.question%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_2" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist_horizontal x="62" y="133" width="134" height="50" params="933904" style="100" caption="Yes">
+              <children>
+                <button x="0" y="0" width="69" height="48" params="131089" style="101" name="positive_button" caption="%24%7Bguide.help.request.user.feedback.positive.button%7D" color="0x0bbbbbb" height_min="48" height_max="48"/>
+                <button x="69" y="0" width="65" height="48" params="131089" style="101" name="negative_button" caption="%24%7Bguide.help.request.user.feedback.negative.button%7D" color="0x0bbbbbb" height_min="48" height_max="48"/>
+              </children>
+            </itemlist_horizontal>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="40" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

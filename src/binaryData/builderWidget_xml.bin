@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="builderWidget" width="360" height="60" version="0.1" uid="EAF639A0-57F1-55E0-5D59-BC65A9CE3726">
+  <window>
+    <container x="0" y="0" width="360" height="60" params="16" style="0">
+      <children>
+        <button_thick x="30" y="30" width="130" height="30" params="131089" style="5" name="place_one" caption="%24%7Bbuilder.placement_widget.place_one%7D" color="0x0dda100" width_min="130" width_max="130"/>
+        <button_thick x="201" y="30" width="130" height="30" params="131089" style="5" name="place_many" caption="%24%7Bbuilder.placement_widget.place_many%7D" color="0x0a9bc5" width_min="130" width_max="130"/>
+        <text x="5" y="3" width="143" height="15" params="16" style="3" caption="%24%7Bbuilder.placement_widget.hint%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="0" y="0" width="360" height="25" params="16400" style="3" name="error_container">
+          <children>
+            <border x="0" y="2" width="360" height="22" params="16" style="2" color="0xfff2d193"/>
+            <static_bitmap x="4" y="0" width="25" height="25" params="16" style="3" name="error_icon">
+              <variables>
+                <var key="asset_uri" value="icons_builder_error_full" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <text x="38" y="5" width="105" height="16" params="16" style="3" name="error_message" caption="We%20have%20a%20problem%21">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="text_color" value="0xde0e0a" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="rarity_item_overlay_griditem" width="36" height="36" version="0.1" uid="440166AD-BF39-8D51-8385-BB2F8E440358">
+  <window>
+    <container x="0" y="0" width="36" height="36" params="16" style="0" name="rarity_item_overlay_container_internal">
+      <children>
+        <static_bitmap x="0" y="27" width="36" height="9" params="16" style="0" name="rarity_item_plaque_bitmap">
+          <variables>
+          <var key="asset_uri" value="rarity_item_rarity_item_plaque" type="String"/>
+          <var key="stretched_x" value="false" type="Boolean"/>
+          <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="6" y="29" width="24" height="5" params="16" style="0" name="rarity_item_overlay_plaque_number_bitmap">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

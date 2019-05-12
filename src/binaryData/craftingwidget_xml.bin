@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="craftingwidget" width="543" height="407" version="0.1" uid="6EDBE562-FEA9-9BCF-1D37-966DD5AEF986">
+  <window>
+    <frame x="0" y="0" width="543" height="407" params="32769" style="3" caption="%24%7Bcrafting.title%7D" color="0x02d4f64">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <static_bitmap x="8" y="8" width="521" height="351" params="16" style="3">
+          <variables>
+            <var key="asset_uri" value="craft_craft_bg" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="398" y="198" width="131" height="101" params="16" style="3" name="furniture_icon">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="zoom_x" value="2" type="Number"/>
+            <var key="zoom_y" value="2" type="Number"/>
+          </variables>
+        </bitmap>
+        <text x="26" y="32" width="219" height="21" params="16" style="3" name="header_recipes" caption="%24%7Bcrafting.title.products%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Ubuntu bold" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_color" value="0xcec7b6" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="26" y="200" width="219" height="21" params="16" style="3" name="header_inventory" caption="%24%7Bcrafting.title.mixer%7D">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="font_face" value="Ubuntu bold" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_color" value="0xcec7b6" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="292" y="33" width="215" height="28" params="1048592" style="3" name="header_mixer" caption="Spellbook%20wdfsdf%20ef%20ewfwe%20fwfe%20wef%20ewf%20wefwe">
+          <variables>
+            <var key="font_face" value="Ubuntu bold" type="String"/>
+            <var key="font_size" value="11" type="uint"/>
+            <var key="text_color" value="0x9ca1a2" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <itemlist_vertical x="304" y="180" width="134" height="79" params="16" style="3" height_max="120">
+          <children>
+            <text x="0" y="0" width="134" height="43" params="9584688" style="3" name="info_text1" caption="This%20spell%20will%20produce%20yy%20yy%20yyyyyyyy%20yyyyyy%20yy%20yyy%20xxxxxx%20xxx%20xxxxx" width_max="134">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu bold" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="text_color" value="0x93999a" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="15" width="134" height="28" params="9437232" style="3" name="info_text2" caption="This%20spell%20will%20produce%20xxxxxx%20xxx%20xxxxx">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="text_color" value="0x697577" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+          <variables>
+            <var key="spacing" value="8" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <button x="294" y="317" width="216" height="30" params="131089" style="6" name="btn_craft" color="0x0299f3a" width_min="216" width_max="216"/>
+        <container x="285" y="316" width="225" height="31" params="131073" style="100" name="progress_bar" visible="false">
+          <children>
+            <button x="9" y="1" width="216" height="30" params="131091" style="3" name="btn_cancel" caption="%24%7Bgeneric.cancel%7D" width_min="216" width_max="216"/>
+            <border x="9" y="2" width="14" height="27" params="19" style="3" name="bar" color="0xff299f3a">
+              <children>
+                <background x="0" y="14" width="14" height="13" params="147" style="3" color="0x1111000000" background="true"/>
+              </children>
+            </border>
+            <background x="9" y="4" width="1" height="24" params="19" style="3" color="0xffff000000" background="true"/>
+          </children>
+        </container>
+        <scrollable_itemgrid_vertical x="26" y="69" width="246" height="108" params="16" style="3" name="itemgrid_products">
+          <children>
+            <container x="0" y="0" width="40" height="40" params="17" style="3">
+              <children>
+                <bitmap x="0" y="0" width="40" height="40" params="17" style="0" name="bitmap" tags="BITMAP" width_min="40" width_max="40">
+                  <variables>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </bitmap>
+                <region x="0" y="0" width="40" height="40" params="17" style="3" name="tooltip" treshold="0"/>
+                <container x="33" y="2" width="6" height="15" params="393363" style="0" name="number_container" color="0xffff2f6982" visible="false" background="true" tags="COUNT">
+                  <children>
+                    <text x="1" y="1" width="4" height="4" params="19" style="0" name="number" background="true" tags="NUMBER%2CCOUNT">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0x2f6982" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="4" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+        <scrollable_itemgrid_vertical x="26" y="238" width="246" height="108" params="16" style="3" name="itemgrid_inventory">
+          <variables>
+            <var key="spacing" value="4" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+        <itemgrid_vertical x="294" y="71" width="216" height="85" params="16" style="3" name="itemgrid_mixer">
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </itemgrid_vertical>
+      </children>
+    </frame>
+  </window>
+</layout>

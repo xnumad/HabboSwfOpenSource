@@ -59,9 +59,11 @@ foreach ($paths as $path) {
     $nameFile = explode('.', $file)[0];
 
     $dataBin = file_get_contents($pathDir.'/'.$sourceName);
-    if(strpos($dataBin, "<?xml version=\"1.0\"?>") === FALSE)
+    $dataBin = str_replace("\r", "\n", $dataBin);
+    $InitLign = explode("\n", $dataBin)[0];
+    if(strpos($InitLign, "<?xml ") === FALSE)
         continue; 
-
+    
     $firstLign = explode("\n", $dataBin)[1];
     if(strpos($firstLign, "<layout name=\"") === FALSE && strpos($firstLign, "<skin name=\"") === FALSE)
         continue;
@@ -75,7 +77,7 @@ foreach ($paths as $path) {
     }
 
     $tmp .= $path.": ".$pathDir.'/'.$sourceName.": ". $pathDir.'/'.$nameTemplate.".bin\n";
-    //continue;
+    continue;
 
     $deleteFile[] = $pathDir.'/'.$sourceName;
     copy($pathDir.'/'.$sourceName, $pathDir.'/'.$nameTemplate.".bin");

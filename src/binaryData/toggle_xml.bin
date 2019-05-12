@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="toggle" width="26" height="32" version="0.1" uid="7A825B25-9020-9BDB-1374-945B9E125AAE">
+  <window>
+    <border x="0" y="10" width="26" height="32" params="1" style="1" name="container" clipping="false">
+      <children>
+        <closebutton x="5" y="5" width="15" height="16" params="17" style="0" name="button_open" background="true" treshold="0"/>
+      </children>
+    </border>
+  </window>
+</layout>

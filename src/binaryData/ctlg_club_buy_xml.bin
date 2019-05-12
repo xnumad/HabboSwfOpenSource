@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ctlg_club_buy" width="360" height="460" version="0.1" uid="1EC661B5-2C82-C6CB-82F7-BB565F0BBC72">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_club_buy" color="0x2121ffffff" background="true">
+      <children>
+        <container x="10" y="70" width="340" height="390" params="16" style="0" name="clubBuyWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

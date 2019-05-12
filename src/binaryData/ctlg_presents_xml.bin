@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_presents" width="360" height="460" version="0.1" uid="97EB4243-73BA-BEEB-C037-C6C9B86823FD">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_presents">
+      <children>
+        <container x="10" y="140" width="340" height="320" params="16" style="0" name="clubGiftWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

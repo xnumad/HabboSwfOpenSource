@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="promo_duckets" width="278" height="44" version="0.1" uid="89E4FF17-DAF6-3897-405F-3B2AA8EC7EFC">
+  <window>
+    <container x="0" y="0" width="278" height="44" params="16448" style="100">
+      <children>
+        <border x="0" y="0" width="267" height="44" params="12582928" style="6" color="0x0757575">
+          <children>
+            <border x="3" y="3" width="261" height="37" params="12730384" style="3" color="0x024231e">
+              <children>
+                <formatted_text x="30" y="0" width="231" height="37" params="16" style="3" caption="%24%7Bpurse.duckets.promo%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0x757575" type="hex"/>
+                    <var key="text_style" value="u_italic" type="String"/>
+                    <var key="margin_top" value="10" type="int"/>
+                    <var key="margin_right" value="20" type="int"/>
+                    <var key="margin_bottom" value="10" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <region x="0" y="0" width="22" height="22" params="17" style="3" name="close_button" treshold="0">
+                  <children>
+                    <static_bitmap x="5" y="4" width="11" height="11" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="common_promo_arrow_close" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </region>
+              </children>
+            </border>
+          </children>
+        </border>
+        <static_bitmap x="261" y="0" width="17" height="30" params="80" style="3">
+          <variables>
+            <var key="asset_uri" value="common_promo_arrow_top_right" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

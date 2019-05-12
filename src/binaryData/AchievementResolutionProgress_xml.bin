@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="AchievementResolutionProgress" width="419" height="273" version="0.1" uid="4094BF99-3D9A-4650-ECC7-FA957F728092">
+  <window>
+    <frame x="1" y="1" width="419" height="273" params="49153" style="100" caption="%24%7Bresolution.progress.title%7D" width_min="340" height_max="525">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist x="0" y="0" width="430" height="225" params="147472" style="100" name="element_list">
+          <children>
+            <border x="8" y="0" width="404" height="112" params="16" style="102" width_min="338">
+              <children>
+                <itemlist_horizontal x="11" y="10" width="387" height="97" params="147472" style="100">
+                  <children>
+                    <container x="0" y="0" width="82" height="90" params="147472" style="100">
+                      <children>
+                        <static_bitmap x="0" y="0" width="82" height="90" params="786448" style="100" height_min="90" height_max="90">
+                          <variables>
+                            <var key="asset_uri" value="icons_hilighter_yellow" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <widget x="16" y="15" width="50" height="50" params="16" style="100" name="achievement_badge">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </container>
+                    <itemlist x="92" y="7" width="295" height="75" params="147472" style="100">
+                      <children>
+                        <label x="0" y="0" width="110" height="17" params="16" style="100" name="achievement.name" caption="Achievement%20name">
+                          <variables>
+                            <var key="text_style" value="il_heading_2" type="String"/>
+                          </variables>
+                        </label>
+                        <text x="0" y="22" width="294" height="16" params="16" style="100" name="achievement.desc" caption="Achievement%20description">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <button x="0" y="43" width="153" height="32" params="131217" style="102" name="reset_button" caption="%24%7Bresolution.progress.reset%7D"/>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="5" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                        <var key="resize_on_item_update" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="10" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </border>
+            <container x="8" y="122" width="404" height="42" params="16" style="100" name="progress_main_container">
+              <children>
+                <container x="0" y="0" width="404" height="16" params="16" style="100" name="progress_container">
+                  <children>
+                    <static_bitmap x="0" y="0" width="4" height="16" params="16" style="100" name="unachieved_left">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="0" width="396" height="16" params="16" style="100" name="unachieved_mid">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_mid" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="396" y="0" width="4" height="16" params="16" style="100" name="unachieved_right">
+                      <variables>
+                        <var key="asset_uri" value="talent_unachieved_right" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="4" height="16" params="16" style="100" name="achieved_left">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="4" y="0" width="396" height="16" params="16" style="100" name="achieved_mid">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_mid" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="396" y="0" width="4" height="16" params="16" style="100" name="achieved_right">
+                      <variables>
+                        <var key="asset_uri" value="talent_achieved_right" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+                <text x="0" y="15" width="404" height="17" params="16" style="100" name="progress_text" caption="%24%7Bresolution.progress.progress%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="il_heading_2" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <static_bitmap x="8" y="174" width="404" height="2" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+              </variables>
+            </static_bitmap>
+            <container x="8" y="186" width="404" height="39" params="16" style="100">
+              <children>
+                <widget x="142" y="1" width="99" height="37" params="147472" style="100" name="time_left_widget">
+                  <variables>
+                    <var key="widget_type" value="countdown" type="String"/>
+                  </variables>
+                </widget>
+                <text x="-11" y="2" width="144" height="19" params="16" style="100" caption="%24%7Bresolution.progress.time.left%7D">
+                  <variables>
+                    <var key="auto_size" value="right" type="String"/>
+                    <var key="text_style" value="u_headline_small" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

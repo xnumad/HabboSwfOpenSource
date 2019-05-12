@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="purchaseWidget" width="360" height="30" version="0.1" uid="42BA75C0-8BAB-D92B-FD76-A375D903CBB1">
+  <window>
+    <container x="0" y="0" width="360" height="30" params="16" style="0">
+      <children>
+        <border x="0" y="0" width="360" height="30" params="16" style="6" name="selection_information" blend="0.5">
+          <children>
+            <text x="10" y="5" width="341" height="19" params="16" style="3" caption="%24%7Bcatalog.purchase.select.info%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0x666666" type="hex"/>
+                <var key="text_style" value="u_headline_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <container x="0" y="3" width="360" height="25" params="16" style="0" name="default_buttons" visible="false">
+          <children>
+            <container_button x="185" y="0" width="170" height="24" params="17" style="3" name="buy_button" color="0x0aa00" width_min="170" width_max="170" height_min="24" height_max="24">
+              <children>
+                <text x="0" y="3" width="160" height="17" params="786448" style="3" name="purchase_label" caption="%24%7Bcatalog.purchase_confirmation.buy%7D" width_min="160" width_max="160">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <button x="5" y="0" width="170" height="24" params="131089" style="3" name="gift_button" caption="%24%7Bcatalog.purchase_confirmation.gift%7D" width_min="170" width_max="170" height_min="24" height_max="24"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

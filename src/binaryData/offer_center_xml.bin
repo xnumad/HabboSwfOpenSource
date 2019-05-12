@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="offer_center" width="377" height="412" version="0.1" uid="9C3ED857-99B5-4832-7C1E-6C5276C90D52">
+  <window>
+    <frame x="400" y="7" width="377" height="412" params="98305" style="3" caption="%24%7Boffers.center.title%7D" color="0xff67a3bf" width_min="377" width_max="377">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="94" y="9" width="186" height="19" params="208" style="100" caption="%24%7Boffers.center.rewards.label%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_headline_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="14" y="31" width="348" height="336" params="2064" style="0" color="0x0bbbbb4">
+          <children>
+            <scrollable_itemlist_vertical x="10" y="10" width="330" height="316" params="2064" style="100" name="reward_list">
+              <children>
+                <border x="0" y="0" width="313" height="64" params="16" style="0">
+                  <children>
+                    <border x="4" y="4" width="305" height="56" params="16" style="3" color="0x08bc9d9">
+                      <children>
+                        <border x="3" y="3" width="299" height="25" params="16" style="3" color="0x0aadde6"/>
+                        <text x="7" y="15" width="86" height="15" params="16" style="100" name="reward_date" caption="2013.01.15%2C%2016%3A48">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0x5f8c9f" type="hex"/>
+                            <var key="text_style" value="u_small" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="italic" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="9" y="29" width="80" height="17" params="16" style="100" name="reward_name" caption="Reward%20name">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </border>
+                    <bitmap x="211" y="4" width="80" height="56" params="16" style="100" name="reward_icon">
+                      <variables>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </border>
+              </children>
+            </scrollable_itemlist_vertical>
+          </children>
+        </border>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

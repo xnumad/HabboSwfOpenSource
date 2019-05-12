@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="lock_confirm" width="309" height="198" version="0.1" uid="F20C5C9E-4FCB-712A-E3CB-A5BE7D8615FE">
+  <window>
+    <frame x="0" y="0" width="309" height="198" params="49153" style="100" caption="%24%7Bfriend.furniture.confirm.lock.caption%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist x="9" y="1" width="290" height="163" params="8536080" style="100" name="top_list">
+          <children>
+            <text x="12" y="0" width="249" height="35" params="786512" style="100" name="subtitle" caption="%24%7Bfriend.furniture.confirm.lock.subtitle%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="max_lines" value="3" type="int"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="40" width="290" height="65" params="16" style="100" name="other_locked_container">
+              <children>
+                <static_bitmap x="122" y="4" width="44" height="44" params="16" style="100" name="lock">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}furniextras/unlocked_image.png" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <formatted_text x="0" y="49" width="291" height="24" params="1049616" style="100" name="message" caption="%24%7Bfriend.furniture.confirm.lock.other.locked%7D" width_min="291" width_max="291">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="margin_bottom" value="8" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </container>
+            <static_bitmap x="0" y="110" width="285" height="2" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+              </variables>
+            </static_bitmap>
+            <container x="0" y="117" width="288" height="46" params="16" style="100">
+              <children>
+                <button x="0" y="-2" width="140" height="48" params="131089" style="101" name="cancel_button" caption="%24%7Bfriend.furniture.confirm.lock.button.cancel%7D" color="0x0bbbbbb" width_max="140"/>
+                <button x="144" y="-2" width="140" height="48" params="393297" style="101" name="confirm_button" caption="%24%7Bfriend.furniture.confirm.lock.button.confirm%7D" color="0x0bbbbbb" width_max="140"/>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+      </children>
+    </frame>
+  </window>
+</layout>

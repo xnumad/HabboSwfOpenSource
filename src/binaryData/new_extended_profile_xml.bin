@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="new_extended_profile" width="521" height="537" version="0.1" uid="A3CD6830-8B79-D984-E981-68F07E66D503">
+  <window>
+    <frame x="0" y="0" width="521" height="537" params="33025" style="3" caption="%24%7Bextendedprofile.caption%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <itemlist x="6" y="-1" width="500" height="495" params="16" style="3">
+          <children>
+            <itemlist_horizontal x="0" y="0" width="500" height="207" params="16" style="3" name="top">
+              <children>
+                <container x="0" y="16" width="257" height="192" params="16" style="100" name="top_left">
+                  <children>
+                    <container x="0" y="0" width="56" height="113" params="16" style="100" name="avatar">
+                      <children>
+                        <widget x="10" y="0" width="34" height="84" params="787536" style="100" name="avatar_image">
+                          <variables>
+                            <var key="widget_type" value="avatar_image" type="String"/>
+                            <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </container>
+                    <itemlist x="56" y="-4" width="200" height="118" params="16" style="100" name="user_info">
+                      <children>
+                        <formatted_text x="0" y="0" width="141" height="16" params="16" style="100" name="user_name" caption="%24%7Bextendedprofile.username%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </formatted_text>
+                        <text x="0" y="16" width="200" height="30" params="16" style="100" name="motto_txt">
+                          <variables>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_style" value="u_italic" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <formatted_text x="0" y="46" width="129" height="16" params="16" style="100" name="user_created" caption="%24%7Bextendedprofile.created%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </formatted_text>
+                        <formatted_text x="0" y="78" width="161" height="16" params="16" style="100" name="user_activity_points" caption="%24%7Bextendedprofile.activitypoints%7D" visible="false">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </formatted_text>
+                        <formatted_text x="0" y="62" width="137" height="16" params="16" style="100" name="user_last_login" caption="%24%7Bextendedprofile.last.login%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </formatted_text>
+                        <container x="0" y="94" width="200" height="1" params="16" style="100"/>
+                        <itemlist_horizontal x="0" y="95" width="198" height="27" params="144" style="100" name="status">
+                          <children>
+                            <container x="0" y="0" width="40" height="23" params="16" style="100" name="online_offline_container">
+                              <children>
+                                <static_bitmap x="0" y="3" width="40" height="18" params="16" style="0" name="offline_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="${image.library.url}guilds/offline_icon.png" type="String"/>
+                                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                                <static_bitmap x="1" y="3" width="37" height="18" params="16" style="0" name="online_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="${image.library.url}guilds/online_icon.png" type="String"/>
+                                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </container>
+                            <container x="45" y="0" width="140" height="23" params="147472" style="100" name="friendstatus" width_max="140">
+                              <children>
+                                <icon x="0" y="5" width="16" height="16" params="16" style="8" name="ok_icon" color="0x03ce600" visible="false"/>
+                                <text x="16" y="4" width="132" height="17" params="16" style="0" name="status_txt" caption="%24%7Bextendedprofile.friend%7D" color="0x00">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="text_style" value="u_bold" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                                <text x="0" y="4" width="184" height="17" params="16" style="0" name="friend_request_sent_txt" caption="%24%7Bextendedprofile.friendrequestsent%7D" color="0x00" visible="false">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="text_style" value="u_regular" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="italic" value="true" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                                <button x="12" y="0" width="105" height="23" params="131089" style="3" name="addasfriend_button" caption="%24%7Bextendedprofile.addasafriend%7D" visible="false" width_min="105" width_max="105"/>
+                              </children>
+                            </container>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="5" type="int"/>
+                            <var key="auto_arrange_items" value="false" type="Boolean"/>
+                          </variables>
+                        </itemlist_horizontal>
+                      </children>
+                      <variables>
+                        <var key="auto_arrange_items" value="false" type="Boolean"/>
+                      </variables>
+                    </itemlist>
+                    <container x="0" y="117" width="257" height="15" params="16" style="100" name="change_own_attributes">
+                      <children>
+                        <link x="0" y="0" width="160" height="16" params="1" style="100" name="change_looks" caption="%24%7Bextended.profile.change.looks%7D" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_link_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                        <link x="85" y="0" width="169" height="16" params="262209" style="100" name="change_badges" caption="%24%7Bextended.profile.change.badges%7D" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_link_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                      </children>
+                    </container>
+                    <border x="1" y="136" width="256" height="55" params="16" style="2" name="badges" color="0xffafafaf">
+                      <children>
+                        <widget x="7" y="6" width="42" height="42" params="16" style="100" name="badge_0">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <widget x="57" y="6" width="42" height="42" params="16" style="100" name="badge_1">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <widget x="107" y="6" width="42" height="42" params="16" style="100" name="badge_2">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <widget x="157" y="6" width="42" height="42" params="16" style="100" name="badge_3">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <widget x="207" y="6" width="42" height="42" params="16" style="100" name="badge_4">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </border>
+                  </children>
+                </container>
+                <container x="265" y="12" width="1" height="192" params="16" style="8" name="spacer" color="0xffffafafaf" background="true"/>
+                <container x="274" y="13" width="226" height="192" params="16" style="100" name="top_right">
+                  <children>
+                    <formatted_text x="0" y="5" width="161" height="16" params="16" style="100" name="friend_count" caption="%24%7Bextendedprofile.friends.count%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <formatted_text x="0" y="24" width="150" height="17" params="16" style="100" name="rel_status_label_txt" caption="%24%7Bextendedprofile.relstatus%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <itemlist x="0" y="39" width="227" height="156" params="16" style="100" name="relationships">
+                      <children>
+                        <container x="0" y="0" width="227" height="47" params="16" style="100" name="relationship_heart">
+                          <children>
+                            <static_bitmap x="3" y="15" width="16" height="14" params="16" style="100">
+                              <variables>
+                                <var key="asset_uri" value="relationship_status_heart" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                            <border x="23" y="11" width="202" height="22" params="16" style="2">
+                              <children>
+                                <region x="7" y="3" width="160" height="16" params="17" style="100" name="heart_friend_name_link_region" caption="%24%7Bextended.profile.relationship.add.friends%7D" treshold="0" width_max="160">
+                                  <children>
+                                    <text x="0" y="0" width="160" height="16" params="16" style="100" name="heart_friend_name_link_text" caption="%24%7Bextended.profile.relationship.add.friends%7D" width_max="160">
+                                      <variables>
+                                        <var key="auto_size" value="left" type="String"/>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="bold" value="true" type="Boolean"/>
+                                        <var key="underline" value="true" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                  </children>
+                                </region>
+                              </children>
+                            </border>
+                            <widget x="191" y="2" width="33" height="34" params="1049616" style="100" name="heart_head">
+                              <variables>
+                                <var key="widget_type" value="avatar_image" type="String"/>
+                                <var key="avatar_image:only_head" value="true" type="Boolean"/>
+                                <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                                <var key="avatar_image:direction" value="southwest" type="String"/>
+                              </variables>
+                            </widget>
+                            <text x="31" y="33" width="186" height="16" params="16" style="100" name="heart_txt" caption="%24%7Bextendedprofile.relstatus.others.heart%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0x7f7f7f" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="italic" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                        <container x="0" y="47" width="227" height="47" params="16" style="100" name="relationship_smile">
+                          <children>
+                            <static_bitmap x="3" y="15" width="16" height="14" params="16" style="100">
+                              <variables>
+                                <var key="asset_uri" value="relationship_status_smile" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                            <border x="23" y="11" width="202" height="22" params="16" style="2">
+                              <children>
+                                <region x="7" y="3" width="160" height="16" params="17" style="100" name="smile_friend_name_link_region" caption="%24%7Bextended.profile.relationship.add.friends%7D" treshold="0" width_max="160">
+                                  <children>
+                                    <text x="0" y="0" width="160" height="16" params="16" style="100" name="smile_friend_name_link_text" caption="%24%7Bextended.profile.relationship.add.friends%7D" width_max="160">
+                                      <variables>
+                                        <var key="auto_size" value="left" type="String"/>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="bold" value="true" type="Boolean"/>
+                                        <var key="underline" value="true" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                  </children>
+                                </region>
+                              </children>
+                            </border>
+                            <widget x="191" y="2" width="33" height="34" params="1049616" style="100" name="smile_head">
+                              <variables>
+                                <var key="widget_type" value="avatar_image" type="String"/>
+                                <var key="avatar_image:only_head" value="true" type="Boolean"/>
+                                <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                                <var key="avatar_image:direction" value="southwest" type="String"/>
+                              </variables>
+                            </widget>
+                            <text x="31" y="33" width="185" height="16" params="16" style="100" name="smile_txt" caption="%24%7Bextendedprofile.relstatus.others.smile%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0x7f7f7f" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="italic" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                        <container x="0" y="94" width="227" height="47" params="16" style="100" name="relationship_bobba">
+                          <children>
+                            <static_bitmap x="3" y="15" width="16" height="14" params="16" style="100">
+                              <variables>
+                                <var key="asset_uri" value="relationship_status_bobba" type="String"/>
+                              </variables>
+                            </static_bitmap>
+                            <border x="23" y="11" width="202" height="22" params="16" style="2">
+                              <children>
+                                <region x="7" y="3" width="160" height="16" params="17" style="100" name="bobba_friend_name_link_region" caption="%24%7Bextended.profile.relationship.add.friends%7D" treshold="0" width_max="160">
+                                  <children>
+                                    <text x="0" y="0" width="160" height="16" params="16" style="100" name="bobba_friend_name_link_text" caption="%24%7Bextended.profile.relationship.add.friends%7D" width_max="160">
+                                      <variables>
+                                        <var key="auto_size" value="left" type="String"/>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="bold" value="true" type="Boolean"/>
+                                        <var key="underline" value="true" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                  </children>
+                                </region>
+                              </children>
+                            </border>
+                            <widget x="191" y="2" width="33" height="34" params="1049616" style="100" name="bobba_head">
+                              <variables>
+                                <var key="widget_type" value="avatar_image" type="String"/>
+                                <var key="avatar_image:only_head" value="true" type="Boolean"/>
+                                <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                                <var key="avatar_image:direction" value="southwest" type="String"/>
+                              </variables>
+                            </widget>
+                            <text x="31" y="33" width="190" height="16" params="16" style="100" name="bobba_txt" caption="%24%7Bextendedprofile.relstatus.others.bobba%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_color" value="0x7f7f7f" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="italic" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                      </children>
+                    </itemlist>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="8" type="int"/>
+                <var key="auto_arrange_items" value="false" type="Boolean"/>
+              </variables>
+            </itemlist_horizontal>
+            <container x="0" y="213" width="512" height="1" params="16" style="8" name="spacer" color="0xffffafafaf" background="true"/>
+            <itemlist_horizontal x="3" y="220" width="495" height="27" params="16" style="100" name="middle">
+              <children>
+                <region x="0" y="0" width="163" height="30" params="147473" style="100" name="rooms_button" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="35" height="30" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="extended_profile_rooms" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="39" y="6" width="124" height="16" params="16" style="100" name="rooms_link_text" caption="%24%7Bextendedprofile.rooms%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_link_strong" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </region>
+              </children>
+              <variables>
+                <var key="spacing" value="20" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+            <container x="0" y="253" width="512" height="1" params="16" style="8" name="spacer" color="0xffffafafaf" background="true"/>
+            <itemlist_horizontal x="0" y="260" width="500" height="236" params="16" style="100" name="bottom">
+              <children>
+                <container x="0" y="5" width="83" height="227" params="16" style="100" name="all_groups">
+                  <children>
+                    <formatted_text x="0" y="0" width="159" height="16" params="16" style="100" name="total_group_count" caption="%24%7Bextendedprofile.groups.count%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                    <scrollable_itemlist_vertical x="3" y="27" width="74" height="195" params="16" style="100" name="groups_list"/>
+                  </children>
+                </container>
+                <border x="89" y="5" width="410" height="224" params="16" style="2" name="group_details" color="0x0afafaf">
+                  <children>
+                    <container x="33" y="5" width="343" height="214" params="16" style="100" name="group_cont"/>
+                  </children>
+                </border>
+              </children>
+              <variables>
+                <var key="spacing" value="6" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+          <variables>
+            <var key="spacing" value="6" type="int"/>
+          </variables>
+        </itemlist>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_controls" width="85" height="35" version="0.1" uid="8D230EE2-F5EF-FFBA-5A3B-A3B455997957">
+  <window>
+    <container x="0" y="0" width="85" height="35" params="145" style="0" name="controls" clipping="false">
+      <children>
+        <region x="0" y="0" width="25" height="25" params="1" style="3" dynamic_style="lifted_hover" name="btn_chat" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="30" height="30" params="16" style="3" treshold="0" tags="%23icon">
+              <variables>
+                <var key="asset_uri" value="friend_bar_friendlist_chat" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="etching_color" value="0x48000000" type="hex"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="58" y="0" width="25" height="25" params="1" style="3" dynamic_style="lifted_hover" name="button_profile" caption="%24%7Bfriendbar.request.profile%7D" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="30" height="30" params="16" style="3" treshold="0" tags="%23icon">
+              <variables>
+                <var key="asset_uri" value="friend_bar_friendlist_eye" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="etching_color" value="0x48000000" type="hex"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="29" y="0" width="25" height="25" params="1" style="3" dynamic_style="lifted_hover" name="btn_visit" treshold="0" tags="%23icon">
+          <children>
+            <static_bitmap x="0" y="0" width="30" height="30" params="16" style="3" treshold="0">
+              <variables>
+                <var key="asset_uri" value="friend_bar_friendlist_go_room" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

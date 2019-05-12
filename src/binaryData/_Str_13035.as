@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_13035.bin", mimeType="application/octet-stream")]
+    [Embed(source="QuestTracker_xml.bin", mimeType="application/octet-stream")]
     public class _Str_13035 extends ByteArrayAsset 
     {
     }

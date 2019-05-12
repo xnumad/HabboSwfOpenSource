@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="roc_vip_promo" width="20" height="20" version="0.0">
+  <window>
+    <border x="0" y="0" width="272" height="52" params="16" style="2" color="0xd48612">
+      <children>
+        <text x="52" y="6" width="206" height="25" params="16" style="0" caption="%24%7Bnavigator.createroom.vippromo.text%7D">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="52" y="30" width="206" height="12" params="17" style="0" name="link" caption="%24%7Bnavigator.createroom.vippromo.link%7D" treshold="0">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <icon x="9" y="6" width="42" height="43" params="16" style="16"/>
+      </children>
+    </border>
+  </window>
+</layout>

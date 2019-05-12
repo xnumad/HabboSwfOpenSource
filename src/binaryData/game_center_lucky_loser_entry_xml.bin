@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="game_center_lucky_loser_entry" width="160" height="40" version="0.1" uid="9310B8D1-581E-E6D7-F452-98304EDA8D4A">
+  <window>
+    <container x="0" y="0" width="160" height="40" params="144" style="0" name="lucky_loser_entry_container">
+      <children>
+        <formatted_text x="0" y="5" width="150" height="17" params="1073741841" style="0" name="avatar_rank_name" caption="xx.%20name">
+          <variables>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+        <formatted_text x="0" y="20" width="150" height="15" params="1073741841" style="0" name="avatar_score">
+          <variables>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+      </children>
+    </container>
+  </window>
+</layout>

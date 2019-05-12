@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="game_center_teaser_view" width="670" height="450" version="0.1" uid="6A4928FE-1757-50A8-775A-26A6F98EE66B">
+  <window>
+    <frame x="12" y="9" width="670" height="450" params="32769" style="101" name="teaser_frame" caption="%24%7Bgamecenter.teaser_title%7D" width_min="670" height_min="50">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <display_object_wrapper x="12" y="39" width="640" height="360" params="1073741824" style="0" name="teaser_wrapper"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

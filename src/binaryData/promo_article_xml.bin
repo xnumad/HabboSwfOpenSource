@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="promo_article" width="500" height="118" version="0.1" uid="C7522CD0-5987-66B5-2999-01DA61B3DB68">
+  <window>
+    <container x="0" y="0" width="500" height="118" params="147472" style="0" name="root" clipping="false" width_max="500">
+      <children>
+        <itemlist_horizontal x="0" y="0" width="500" height="18" params="147600" style="0" name="title" width_min="500" width_max="500">
+          <children>
+            <static_bitmap x="0" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+              <variables>
+                <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+                <var key="pivot_point" value="center left" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <text x="16" y="4" width="155" height="14" params="16" style="100" name="header_txt" caption="%24%7Blanding.view.promo.article.header%7D" tags="COLORABLE">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_style" value="il_heading_3" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="175" y="10" width="500" height="4" params="16" style="100" name="hdr_line">
+              <variables>
+                <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+                <var key="pivot_point" value="center left" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="spacing" value="4" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+        <container x="10" y="23" width="160" height="10" params="0" style="100" name="navigation">
+          <children>
+            <region x="0" y="0" width="8" height="8" params="17" style="100" name="article_navigation" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="10" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="1" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="20" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="2" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="30" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="3" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="40" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="4" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="50" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="5" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="60" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="6" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="70" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="7" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="80" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="8" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+            <region x="90" y="0" width="8" height="8" params="17" style="100" name="article_navigation" id="9" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="8" height="8" params="16" style="100" name="navigation_disk" clipping="false" treshold="0">
+                  <variables>
+                    <var key="asset_uri" value="progress_disk_flat_off" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${promo.article.widget.tooltip.go.to.article}" type="String"/>
+                <var key="tool_tip_delay" value="250" type="uint"/>
+              </variables>
+            </region>
+          </children>
+        </container>
+        <container x="0" y="17" width="500" height="101" params="8536080" style="100" name="article">
+          <children>
+            <static_bitmap x="10" y="19" width="150" height="82" params="16" style="100" name="promo_image" width_max="150">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <itemlist_vertical x="170" y="0" width="330" height="34" params="16" style="0" name="content" clipping="false">
+              <children>
+                <text x="0" y="0" width="330" height="24" params="16" style="100" name="promo_title" caption="%24%7Bpromo.article.widget.loading%7D" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_title" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <formatted_text x="0" y="30" width="330" height="4" params="16" style="100" name="promo_text" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <button x="-10" y="40" width="52" height="48" params="131073" style="100" name="button" visible="false" width_max="330"/>
+              </children>
+              <variables>
+                <var key="spacing" value="6" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

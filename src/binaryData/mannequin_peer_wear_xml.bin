@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="mannequin_peer_wear" width="386" height="180" version="0.1" uid="27D18974-77B1-36D6-E12A-A4A82B76EB67">
+  <window>
+    <container x="0" y="0" width="386" height="180" params="16" style="0">
+      <children>
+        <button_thick x="227" y="141" width="145" height="28" params="131089" style="3" name="wear_button" caption="%24%7Bmannequin.widget.wear%7D" width_min="138" width_max="145"/>
+        <bitmap x="20" y="10" width="83" height="130" params="16" style="3" name="preview_image"/>
+        <text x="126" y="30" width="244" height="25" params="16" style="3" name="outfit_name_show">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_italic" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </text>
+        <text x="126" y="60" width="242" height="61" params="16" style="3" name="description" caption="%24%7Bmannequin.widget.weartext%7D">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <icon x="80" y="110" width="43" height="29" params="16" style="0" name="club_icon"/>
+      </children>
+    </container>
+  </window>
+</layout>

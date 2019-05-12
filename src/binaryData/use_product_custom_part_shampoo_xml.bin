@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="use_product_custom_part_shampoo" width="386" height="180" version="0.1" uid="F0612F96-E826-BB24-6E73-268A0AE7C462">
+  <window>
+    <container x="0" y="0" width="386" height="180" params="16" style="0">
+      <children>
+        <button_thick x="230" y="112" width="130" height="28" params="131089" style="3" name="save_button" caption="%24%7Buseproduct.widget.use%7D" width_min="130" width_max="145"/>
+        <region x="10" y="10" width="122" height="130" params="17" style="3" name="preview_image_region" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="122" height="130" params="16" style="3" name="preview_image"/>
+          </children>
+        </region>
+        <text x="140" y="15" width="200" height="61" params="16" style="3" name="description" caption="%24%7Buseproduct.widget.text.custompartshampoo%20" width_min="200" width_max="200">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <region x="160" y="118" width="65" height="25" params="17" style="0" name="cancel_text" treshold="0"/>
+        <text x="160" y="120" width="70" height="25" params="16" style="3" caption="%24%7Buseproduct.widget.cancel%7D">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="140" y="60" width="200" height="40" params="16" style="3" name="info" caption="%24%7Buseproduct.widget.info.custompartshampoo%7D" width_min="200" width_max="200">
+          <variables>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_italic" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

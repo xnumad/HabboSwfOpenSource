@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="main" width="643" height="532" version="0.1" uid="848A28C0-F3D6-387F-E3E6-55BF33463EB1">
+  <window>
+    <frame x="22" y="40" width="643" height="532" params="1" style="101">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <container x="0" y="-33" width="641" height="50" params="0" style="100">
+          <children>
+            <label x="0" y="0" width="82" height="14" params="16" style="100" caption="%24%7Bhelp.main2.subtitle%7D">
+              <variables>
+                <var key="text_style" value="il_small_white" type="String"/>
+              </variables>
+            </label>
+            <label x="0" y="10" width="184" height="30" params="16" style="100" caption="%24%7Bhelp.main2.title%7D">
+              <variables>
+                <var key="text_style" value="il_frame_modal_title" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+        <widget x="33" y="32" width="283" height="25" params="16" style="100">
+          <children>
+            <label x="12" y="5" width="112" height="15" params="3088" style="100" caption="%24%7Bhelp.main2.bully.title%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="margin_left" value="2" type="int"/>
+                <var key="margin_right" value="3" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <label x="30" y="60" width="144" height="17" params="16" style="100" caption="%24%7Bhelp.main2.bully.subtitle%7D">
+          <variables>
+            <var key="text_style" value="il_heading_2" type="String"/>
+          </variables>
+        </label>
+        <text x="30" y="80" width="221" height="16" params="16" style="100" caption="%24%7Bhelp.main2.bully.description%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="20" y="136" width="166" height="48" params="131089" style="101" name="bully_button" caption="%24%7Bhelp.main2.bully.button%7D" color="0x0bbbbbb"/>
+        <static_bitmap x="265" y="59" width="35" height="120" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="help_illustrations_bully" type="String"/>
+          </variables>
+        </static_bitmap>
+        <widget x="344" y="32" width="263" height="25" params="16" style="100">
+          <children>
+            <label x="12" y="5" width="131" height="15" params="3088" style="100" caption="%24%7Bhelp.main2.question.title%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="margin_left" value="2" type="int"/>
+                <var key="margin_right" value="3" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <label x="340" y="60" width="164" height="17" params="16" style="100" caption="%24%7Bhelp.main2.question.subtitle%7D">
+          <variables>
+            <var key="text_style" value="il_heading_2" type="String"/>
+          </variables>
+        </label>
+        <text x="340" y="80" width="191" height="16" params="16" style="100" caption="%24%7Bhelp.main2.question.description%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="330" y="136" width="186" height="48" params="131089" style="101" name="question_button" caption="%24%7Bhelp.main2.question.button%7D" color="0x0bbbbbb"/>
+        <static_bitmap x="511" y="57" width="90" height="128" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="help_illustrations_question" type="String"/>
+          </variables>
+        </static_bitmap>
+        <widget x="33" y="197" width="283" height="25" params="16" style="100">
+          <children>
+            <label x="12" y="5" width="110" height="15" params="3088" style="100" caption="%24%7Bhelp.main2.tour.title%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="margin_left" value="2" type="int"/>
+                <var key="margin_right" value="3" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <label x="30" y="225" width="140" height="17" params="16" style="100" caption="%24%7Bhelp.main2.tour.subtitle%7D">
+          <variables>
+            <var key="text_style" value="il_heading_2" type="String"/>
+          </variables>
+        </label>
+        <text x="30" y="245" width="201" height="16" params="16" style="100" caption="%24%7Bhelp.main2.tour.description%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="20" y="308" width="165" height="48" params="131089" style="101" name="tour_button" caption="%24%7Bhelp.main2.tour.button%7D" color="0x0bbbbbb"/>
+        <static_bitmap x="162" y="254" width="147" height="109" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="help_illustrations_tour" type="String"/>
+          </variables>
+        </static_bitmap>
+        <container x="336" y="196" width="271" height="169" params="16" style="100">
+          <children>
+            <border x="0" y="0" width="271" height="50" params="144" style="104" color="0x0bb0000">
+              <children>
+                <text x="10" y="6" width="182" height="19" params="16" style="100" caption="%24%7Bhelp.main2.emergency.title%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="10" y="25" width="129" height="14" params="16" style="100" caption="%24%7Bhelp.main2.emergency.subtitle%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <container x="0" y="42" width="271" height="127" params="2192" style="100">
+              <children>
+                <border x="0" y="-10" width="271" height="137" params="2192" style="105">
+                  <children>
+                    <text x="10" y="16" width="251" height="16" params="16" style="100" caption="%24%7Bhelp.main2.emergency.description%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <container_button x="44" y="93" width="183" height="34" params="147665" style="103" name="emergency_button" color="0x0dd0000">
+                      <children>
+                        <text x="0" y="0" width="183" height="34" params="16" style="100" caption="%24%7Bhelp.main2.emergency.button%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="il_regular_white" type="String"/>
+                            <var key="margin_left" value="10" type="int"/>
+                            <var key="margin_top" value="9" type="int"/>
+                            <var key="margin_right" value="13" type="int"/>
+                            <var key="margin_bottom" value="9" type="int"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </border>
+              </children>
+            </container>
+          </children>
+        </container>
+        <widget x="33" y="367" width="574" height="25" params="208" style="100">
+          <children>
+            <label x="12" y="5" width="105" height="15" params="3088" style="100" caption="%24%7Bhelp.main2.self.title%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="margin_left" value="2" type="int"/>
+                <var key="margin_right" value="3" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <border x="33" y="390" width="575" height="68" params="16" style="102">
+          <children>
+            <region x="0" y="0" width="191" height="68" params="17" style="100" name="safetypolicy_link" treshold="0">
+              <children>
+                <formatted_text x="10" y="24" width="170" height="20" params="3280" style="100" caption="%24%7Bhelp.main2.self.safetypolicy%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="4" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </region>
+            <widget x="190" y="10" width="2" height="49" params="3088" style="100">
+              <variables>
+                <var key="widget_type" value="separator" type="String"/>
+                <var key="separator:vertical" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+            <region x="191" y="0" width="193" height="68" params="17" style="100" name="habboway_link" treshold="0">
+              <children>
+                <formatted_text x="11" y="24" width="170" height="20" params="3280" style="100" caption="%24%7Bhelp.main2.self.habboway%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="4" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </region>
+            <widget x="384" y="10" width="2" height="49" params="3088" style="100">
+              <variables>
+                <var key="widget_type" value="separator" type="String"/>
+                <var key="separator:vertical" value="true" type="Boolean"/>
+              </variables>
+            </widget>
+            <region x="385" y="0" width="190" height="68" params="17" style="100" name="faq_link" treshold="0">
+              <children>
+                <formatted_text x="10" y="24" width="170" height="20" params="3280" style="100" caption="%24%7Bhelp.main2.self.faq%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="4" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </region>
+          </children>
+        </border>
+        <region x="50" y="463" width="541" height="23" params="209" style="100" name="payment_link" treshold="0">
+          <children>
+            <label x="206" y="3" width="129" height="16" params="3280" style="100" caption="%24%7Bhelp.main2.self.payment%7D">
+              <variables>
+                <var key="text_style" value="il_link_regular" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </region>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

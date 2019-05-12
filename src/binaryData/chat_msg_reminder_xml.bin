@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chat_msg_reminder" width="270" height="24" version="0.1" uid="EDC94246-0B80-46C4-9AA8-2CE82AAF4CBC">
+  <window>
+    <container x="0" y="0" width="270" height="24" params="147472" style="102" name="chat_msg_reminder">
+      <children>
+        <text x="0" y="0" width="270" height="24" params="16" style="100" name="content" width_min="270" width_max="270">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="margin_top" value="10" type="int"/>
+            <var key="margin_bottom" value="10" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

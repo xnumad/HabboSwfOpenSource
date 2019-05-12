@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="nux_offer_old_user" width="456" height="220" version="0.1" uid="F4E6433A-92A1-6515-CC53-85839BC02E97">
+  <window>
+    <frame x="0" y="0" width="456" height="220" params="32801" style="3" caption="%24%7Bnotification.notification.nux.popup.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="23" width="454" height="60" params="2176" style="0" color="0xffff3d6373" background="true">
+          <children>
+            <container x="2" y="2" width="450" height="56" params="2176" style="0" color="0xffff0f4052" background="true">
+              <children>
+                <text x="75" y="11" width="360" height="28" params="273" style="0" caption="%24%7Bnux.offer.old.user.title%7D" height_max="84">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="22" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_headline_big" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <static_bitmap x="12" y="5" width="56" height="54" params="0" style="100" name="club_icon" tags="ICON">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}nux/nux_cropped_frank.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <container x="4" y="89" width="446" height="118" params="0" style="100">
+          <children>
+            <text x="6" y="3" width="434" height="16" params="16" style="0" name="txtBody" caption="%24%7Bnux.offer.old.user.summary%7D" color="0x00" height_max="84">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_color" value="0x333333" type="hex"/>
+                <var key="text_style" value="u_tool_tip" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <boxsizer x="138" y="82" width="298" height="30" params="1458320" style="3" name="user_input_buttons">
+              <children>
+                <link x="0" y="0" width="158" height="30" params="1048577" style="3" name="btnSkip" caption="%24%7Bnux.offer.old.user.button.skip%7D" treshold="0" width_max="158" height_min="16">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_color" value="0x333333" type="hex"/>
+                    <var key="margin_top" value="14" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+                <button_thick x="168" y="0" width="130" height="30" params="131073" style="6" name="btnGo" caption="%24%7Bnux.offer.old.user.button.verify%7D" color="0x01da100" width_min="130" width_max="130"/>
+              </children>
+              <variables>
+                <var key="spacing" value="10" type="int"/>
+                <var key="padding_horizontal" value="0" type="int"/>
+                <var key="padding_vertical" value="0" type="int"/>
+              </variables>
+            </boxsizer>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="10" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="10" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

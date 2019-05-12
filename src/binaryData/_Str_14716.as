@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_14716.bin", mimeType="application/octet-stream")]
+    [Embed(source="roc_room_thumbnail_xml.bin", mimeType="application/octet-stream")]
     public class _Str_14716 extends ByteArrayAsset 
     {
     }

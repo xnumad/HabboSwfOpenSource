@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="mannequin_owner_main" width="386" height="180" version="0.1" uid="7FC034EF-1EF4-6E11-2A21-968B43A0D98F">
+  <window>
+    <container x="0" y="0" width="386" height="180" params="16" style="0">
+      <children>
+        <input x="133" y="25" width="190" height="21" params="1" style="3" name="outfit_name_set" background="true">
+          <variables>
+            <var key="border" value="true" type="Boolean"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="max_chars" value="30" type="int"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </input>
+        <bitmap x="330" y="27" width="17" height="18" params="16" style="0" name="write_deco"/>
+        <button_thick x="133" y="58" width="219" height="28" params="131089" style="3" name="configure_button" caption="%24%7Bmannequin.widget.style%7D" width_min="219"/>
+        <button x="133" y="98" width="219" height="28" params="131089" style="3" name="wear_button" caption="%24%7Bmannequin.widget.wear%7D" width_min="219"/>
+        <bitmap x="20" y="10" width="83" height="130" params="16" style="3" name="preview_image"/>
+        <icon x="80" y="110" width="43" height="29" params="16" style="0" name="club_icon"/>
+      </children>
+    </container>
+  </window>
+</layout>

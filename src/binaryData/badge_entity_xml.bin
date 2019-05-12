@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_entity" width="50" height="50" version="0.1" uid="DE0F267A-2E8C-3A92-8C45-A84B412A960B">
+  <window>
+    <border x="0" y="0" width="50" height="50" params="17" style="0" name="border.entity" background="false">
+      <children>
+        <bitmap x="0" y="0" width="50" height="50" params="16" style="0" name="badge.image" tags="THUMB_BITMAP"/>
+      </children>
+    </border>
+  </window>
+</layout>

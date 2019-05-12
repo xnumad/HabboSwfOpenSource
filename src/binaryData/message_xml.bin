@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="message" width="121" height="37" version="0.1" uid="90EF9902-1B82-52E7-8E41-43DA2C57E6A6">
+  <window>
+    <container x="0" y="0" width="121" height="37" params="144" style="0" name="message" color="0xffff4c5832" background="true" tags="notification">
+      <children>
+        <itemlist_vertical x="0" y="0" width="121" height="31" params="8388752" style="0" name="items">
+          <children>
+            <text x="2" y="0" width="120" height="16" params="16" style="0" name="title" caption="Title">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="2" y="15" width="121" height="16" params="8388624" style="0" name="message" caption="Message">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+          <variables>
+            <var key="spacing" value="-1" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

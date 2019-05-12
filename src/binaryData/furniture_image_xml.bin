@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="furniture_image" width="108" height="130" version="0.1" uid="3310AE76-E140-F7E4-4377-480B97EDD41E">
+  <window>
+    <container x="0" y="0" width="108" height="130" params="2196" style="0">
+      <children>
+        <bitmap x="0" y="0" width="108" height="130" params="2192" style="0" name="bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="placeholder_furni_png" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <region x="0" y="0" width="108" height="130" params="2193" style="0" name="region" visible="false" treshold="0"/>
+      </children>
+    </container>
+  </window>
+</layout>

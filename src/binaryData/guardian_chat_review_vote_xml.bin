@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="guardian_chat_review_vote" width="279" height="499" version="0.1" uid="C3B71766-70CB-9F78-BE06-48FFE027ABDA">
+  <window>
+    <frame x="-1" y="0" width="279" height="499" params="98305" style="100" name="guardian_chat_review_vote" caption="%24%7Bguide.bully.request.guide.vote.title%7D" width_min="279" width_max="279">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <widget x="207" y="8" width="63" height="37" params="147472" style="100" name="countdown">
+          <variables>
+            <var key="widget_type" value="countdown" type="String"/>
+            <var key="countdown:digits" value="2" type="uint"/>
+          </variables>
+        </widget>
+        <itemlist_horizontal x="14" y="42" width="259" height="16" params="147472" style="100">
+          <children>
+            <label x="0" y="0" width="193" height="15" params="16" style="100" caption="%24%7Bguide.bully.request.guide.vote.subtitle%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x222222" type="hex"/>
+              </variables>
+            </label>
+            <label x="193" y="1" width="66" height="14" params="16" style="100" name="incident_time" caption="%282%20minutes%20ago%29">
+              <variables>
+                <var key="text_style" value="il_small" type="String"/>
+                <var key="text_color" value="0x222222" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </itemlist_horizontal>
+        <border x="10" y="60" width="258" height="265" params="2064" style="105">
+          <children>
+            <scrollable_itemlist_vertical x="12" y="2" width="244" height="260" params="2064" style="100" name="chatlog">
+              <children>
+                <container x="0" y="0" width="226" height="22" params="147472" style="100" name="reported_user_template">
+                  <children>
+                    <static_bitmap x="0" y="3" width="16" height="17" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="help_chat_review_avatar_perpetrator" type="String"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="23" y="0" width="203" height="22" params="16" style="100" name="message" caption="lorem%20ipsum%20blah%20blah">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0xa9322b" type="hex"/>
+                        <var key="text_style" value="il_regular_white" type="String"/>
+                        <var key="margin_top" value="3" type="int"/>
+                        <var key="margin_bottom" value="3" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                  </children>
+                </container>
+                <static_bitmap x="0" y="22" width="226" height="2" params="16" style="100" name="separator_template">
+                  <variables>
+                    <var key="asset_uri" value="illumina_light_separator_horizontal" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <container x="0" y="24" width="226" height="22" params="147472" style="100" name="other_user_template">
+                  <children>
+                    <static_bitmap x="0" y="3" width="16" height="17" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="help_chat_review_avatar_anonymous" type="String"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <formatted_text x="23" y="0" width="203" height="22" params="16" style="100" name="message" caption="lorem%20ipsum%20blah%20blah">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="etching_color" value="0x0" type="hex"/>
+                        <var key="margin_top" value="3" type="int"/>
+                        <var key="margin_bottom" value="3" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </formatted_text>
+                  </children>
+                </container>
+              </children>
+            </scrollable_itemlist_vertical>
+          </children>
+        </border>
+        <container x="0" y="316" width="277" height="180" params="1040" style="103">
+          <children>
+            <label x="39" y="23" width="198" height="15" params="208" style="100" caption="%24%7Bguide.bully.request.guide.vote.question%7D">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x222222" type="hex"/>
+              </variables>
+            </label>
+            <itemlist_horizontal x="24" y="41" width="228" height="91" params="147664" style="100">
+              <children>
+                <container x="0" y="0" width="76" height="91" params="147472" style="100">
+                  <children>
+                    <label x="4" y="75" width="68" height="16" params="208" style="100" caption="%24%7Bguide.bully.request.guide.vote.ok%7D" width_max="68">
+                      <variables>
+                        <var key="text_color" value="0x444444" type="hex"/>
+                      </variables>
+                    </label>
+                    <region x="0" y="0" width="76" height="77" params="131089" style="101" name="vote_ok" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="76" height="77" params="3280" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_chat_review_vote_ok" type="String"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${guide.bully.request.guide.vote.ok.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="0" type="uint"/>
+                      </variables>
+                    </region>
+                  </children>
+                </container>
+                <container x="76" y="0" width="76" height="91" params="147472" style="100">
+                  <children>
+                    <label x="4" y="75" width="68" height="16" params="208" style="100" caption="%24%7Bguide.bully.request.guide.vote.bad%7D" width_max="68">
+                      <variables>
+                        <var key="text_color" value="0x444444" type="hex"/>
+                      </variables>
+                    </label>
+                    <region x="0" y="0" width="76" height="77" params="131089" style="101" name="vote_bad" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="76" height="77" params="3280" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_chat_review_vote_bad" type="String"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${guide.bully.request.guide.vote.bad.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="0" type="uint"/>
+                      </variables>
+                    </region>
+                  </children>
+                </container>
+                <container x="152" y="0" width="76" height="91" params="147472" style="100">
+                  <children>
+                    <label x="4" y="75" width="68" height="16" params="208" style="100" caption="%24%7Bguide.bully.request.guide.vote.very_bad%7D" width_max="68">
+                      <variables>
+                        <var key="text_color" value="0x444444" type="hex"/>
+                      </variables>
+                    </label>
+                    <region x="0" y="0" width="76" height="77" params="131089" style="101" name="vote_very_bad" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="76" height="77" params="3280" style="100">
+                          <variables>
+                            <var key="asset_uri" value="help_chat_review_vote_very_bad" type="String"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${guide.bully.request.guide.vote.very_bad.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="0" type="uint"/>
+                      </variables>
+                    </region>
+                  </children>
+                </container>
+              </children>
+            </itemlist_horizontal>
+            <static_bitmap x="6" y="144" width="265" height="3" params="16" style="100">
+              <variables>
+                <var key="asset_uri" value="illumina_light_separator_horizontal" type="String"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <region x="0" y="149" width="277" height="24" params="17" style="100" name="close_link" treshold="0">
+              <children>
+                <label x="44" y="2" width="188" height="16" params="208" style="100" caption="%24%7Bguide.bully.request.guide.vote.close%7D">
+                  <variables>
+                    <var key="text_style" value="il_link_regular" type="String"/>
+                    <var key="text_color" value="0x222222" type="hex"/>
+                  </variables>
+                </label>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="1" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

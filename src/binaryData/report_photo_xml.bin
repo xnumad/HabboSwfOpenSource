@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="report_photo" width="395" height="666" version="0.1" uid="A64762E3-7FC7-2733-0128-283145E767EF">
+    <window>
+        <frame x="108" y="48" width="395" height="666" params="33025" style="101" width_min="50" height_min="50">
+            <filters>
+                <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+            </filters>
+            <children>
+                <text x="10" y="-2" width="165" height="17" params="16" style="100" caption="%24%7Bhelp.report.selfie.header%7D">
+                    <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="12" type="uint"/>
+                        <var key="text_style" value="il_border" type="String"/>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                    </variables>
+                </text>
+                <text x="9" y="19" width="371" height="17" params="16" style="100" caption="%24%7Bhelp.report.selfie.body%7D">
+                    <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="12" type="uint"/>
+                        <var key="text_style" value="il_border" type="String"/>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="bold" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                    </variables>
+                </text>
+                <bitmap x="26" y="55" width="340" height="405" params="16" style="3" name="selfieLoader"/>
+                <widget x="26" y="471" width="340" height="64" params="16" style="3" name="input_widget">
+                    <variables>
+                        <var key="widget_type" value="illumina_input" type="String"/>
+                        <var key="illumina_input:button_caption" value="" type="String"/>
+                        <var key="illumina_input:multiline" value="true" type="Boolean"/>
+                    </variables>
+                </widget>
+                <button x="204" y="538" width="173" height="48" params="393233" style="100" name="report_confirm"
+                        caption="%24%7Bhelp.report.selfie.button%7D" width_min="0" width_max="196" height_min="48" height_max="48"/>
+            </children>
+            <variables>
+                <var key="margin_left" value="1" type="int"/>
+                <var key="margin_top" value="70" type="int"/>
+                <var key="margin_right" value="1" type="int"/>
+                <var key="margin_bottom" value="1" type="int"/>
+            </variables>
+        </frame>
+    </window>
+</layout>

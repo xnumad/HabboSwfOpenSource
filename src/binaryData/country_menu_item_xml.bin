@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="country_menu_item" width="204" height="30" version="0.1" uid="05920B68-2D04-8D3D-1B78-EB0CDDA0E752">
+  <window>
+    <container x="0" y="0" width="204" height="30" params="16" style="3">
+      <children>
+        <!--<static_bitmap x="1" y="1" width="47" height="28" params="16" style="3" name="flag"/>
+        <label x="50" y="4" width="24" height="21" params="16" style="3" name="country_code" caption="CC">-->
+          <label x="0" y="6" width="24" height="21" params="16" style="3" name="country_code" caption="CC">
+          <variables>
+            <var key="text_style" value="u_headline_small" type="String"/>
+          </variables>
+        </label>
+      </children>
+    </container>
+  </window>
+</layout>

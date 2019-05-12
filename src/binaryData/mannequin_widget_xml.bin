@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="mannequin_widget" width="388" height="220" version="0.1" uid="4CC4950C-7385-7F04-B80D-C9C4CFBE91D1">
+  <window>
+    <frame x="33" y="26" width="388" height="220" params="32769" style="3" caption="%24%7Bmannequin.widget.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+    </frame>
+  </window>
+</layout>

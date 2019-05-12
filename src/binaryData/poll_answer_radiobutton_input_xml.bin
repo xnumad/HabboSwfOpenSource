@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="poll_answer_radiobutton_input" width="365" height="125" version="0.1" uid="DCF34F65-9A97-6BE0-0E94-E16925C41715">
+  <window>
+    <container x="0" y="0" width="365" height="125" params="131217" style="0" name="poll_answer_content">
+      <children>
+        <selector x="0" y="0" width="365" height="125" params="131217" style="0" name="poll_answer_selector">
+          <children>
+            <itemlist x="0" y="0" width="365" height="125" params="131217" style="0" name="poll_answer_itemlist">
+              <children>
+                <container x="0" y="0" width="365" height="32" params="131216" style="0" name="poll_answer_entity">
+                  <children>
+                    <radiobutton x="0" y="4" width="19" height="16" params="17" style="0" name="poll_answer_entity_radiobutton" tags="POLL_SELECTABLE_ITEM"/>
+                    <text x="18" y="2" width="341" height="30" params="16" style="0" name="poll_answer_entity_text" caption="yksi%20kaksi%20kolme%20nelj%E4%20viisi%20kuu%20usi%20seit%20sem%E4n%20kahde%20ksan%20yhde%20ks%E4n%20yksi%20toi">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </itemlist>
+          </children>
+        </selector>
+      </children>
+    </container>
+  </window>
+</layout>

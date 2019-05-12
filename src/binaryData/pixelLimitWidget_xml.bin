@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pixelLimitWidget" width="73" height="163" version="0.1" uid="0CD3D8DB-E8BA-AA4B-BA49-4891757A9CA8">
+  <window>
+    <static_bitmap x="0" y="0" width="73" height="163" params="16" style="100" name="meter">
+      <variables>
+        <var key="asset_uri" value="${image.library.url}reception/challenge_meter_20.png" type="String"/>
+        <var key="pivot_point" value="bottom center" type="String"/>
+        <var key="stretched_x" value="false" type="Boolean"/>
+        <var key="stretched_y" value="false" type="Boolean"/>
+      </variables>
+    </static_bitmap>
+  </window>
+</layout>

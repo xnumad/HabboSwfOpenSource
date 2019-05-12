@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="game_center_view_generic" width="4638" height="768" version="0.1" uid="7F31CFDB-3BAF-F392-B340-263C1578CDA8">
+  <window>
+    <background x="0" y="0" width="4638" height="768" params="128" style="0" name="game_center_background" color="0xffff000000" background="true" width_min="960">
+      <children>
+        <container x="0" y="0" width="1275" height="768" params="2192" style="0" name="game_center_container" color="0xffff93d4f3" background="true" width_min="960" width_max="1280">
+          <children>
+            <scrollable_itemlist_vertical x="0" y="0" width="1275" height="610" params="2192" style="100" name="game_content_container">
+              <children>
+                <container x="0" y="0" width="1280" height="610" params="16" style="0" name="game_content" width_min="960" width_max="1280" height_min="610">
+                  <children>
+                    <static_bitmap x="0" y="0" width="1280" height="300" params="2192" style="0" name="gradient_image">
+                      <variables>
+                        <var key="pivot_point" value="bottom left" type="String"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="0" y="0" width="1280" height="610" params="2192" style="0" name="theme_image">
+                      <variables>
+                        <var key="pivot_point" value="bottom left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <container x="0" y="60" width="938" height="520" params="144" style="0" name="game_info_container">
+                      <children>
+                        <formatted_text x="420" y="0" width="98" height="17" params="208" style="100" name="description_title" caption="Description%20title%21">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="etching_color" value="0x0" type="hex"/>
+                            <var key="text_style" value="il_heading_2" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </formatted_text>
+                        <static_bitmap x="219" y="20" width="500" height="150" params="3932368" style="0" name="logo_image">
+                          <variables>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <container x="269" y="150" width="400" height="155" params="208" style="0" name="playnow_container">
+                          <children>
+                            <container_button x="102" y="0" width="196" height="63" params="16593" style="100" name="playnow_limited_button">
+                              <children>
+                                <itemlist_horizontal x="20" y="12" width="156" height="40" params="4194384" style="100">
+                                  <children>
+                                    <text x="0" y="13" width="131" height="13" params="16" style="100" name="play_now_button_text" caption="%24%7Bgamecenter.play_now%7D">
+                                      <variables>
+                                        <var key="auto_size" value="left" type="String"/>
+                                        <var key="text_style" value="button_bold" type="String"/>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="sharpness" value="0" type="Number"/>
+                                        <var key="thickness" value="0" type="Number"/>
+                                        <var key="kerning" value="false" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                    <container x="136" y="10" width="20" height="20" params="4079632" style="100" name="games_left_container"/>
+                                  </children>
+                                  <variables>
+                                    <var key="spacing" value="5" type="int"/>
+                                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                                  </variables>
+                                </itemlist_horizontal>
+                              </children>
+                            </container_button>
+                            <container_button x="114" y="0" width="173" height="63" params="209" style="100" name="playnow_unlimited_button" visible="false">
+                              <children>
+                                <text x="21" y="26" width="131" height="13" params="4194384" style="0" name="play_now_unlimited_button_text" caption="gamecenter.play_now">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="text_style" value="bold" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="sharpness" value="0" type="Number"/>
+                                    <var key="thickness" value="0" type="Number"/>
+                                    <var key="kerning" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                              </children>
+                            </container_button>
+                            <text x="10" y="10" width="380" height="17" params="786640" style="0" name="game_offline_description" caption="%24%7Bgamecenter.game_offline%7D" visible="false" width_max="380">
+                              <variables>
+                                <var key="auto_size" value="center" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_heading_2" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <text x="10" y="60" width="380" height="28" params="786640" style="0" name="game_description" caption="Watch%20out%20below%21%20Use%20power-ups%20including%20rockets%2C%20paracutes%20and%20shields%20to%20safely%20deliver%20your%20food%20and%20earn%20great%20prizes%21" width_max="380">
+                              <variables>
+                                <var key="auto_size" value="center" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_regular" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <text x="10" y="95" width="380" height="4" params="208" style="0" name="playnow_text">
+                              <variables>
+                                <var key="auto_size" value="center" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_regular" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="bold" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <link x="124" y="120" width="152" height="15" params="193" style="3" name="support_link" caption="%24%7Bgamecenter.support_link_text%7D" treshold="0" width_max="380">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_heading_3" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </link>
+                          </children>
+                        </container>
+                        <container x="5" y="315" width="901" height="83" params="131216" style="3" name="game_general_info_container">
+                          <children>
+                            <text x="130" y="5" width="640" height="17" params="12730576" style="1" name="game_general_info_text" caption="%24%7Bgamecenter.game_info.text%7D" clipping="false">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="text_style" value="u_regular" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="max_lines" value="6" type="int"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                      </children>
+                    </container>
+                    <container x="941" y="10" width="330" height="80" params="278608" style="0" name="room_link_container" width_min="300" height_min="80">
+                      <children>
+                        <static_bitmap x="8" y="18" width="56" height="49" params="16" style="100" name="room_link_icon">
+                          <variables>
+                            <var key="asset_uri" value="icons_toolbar_navigator_normal" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <link x="74" y="35" width="215" height="35" params="1" style="100" name="room_link" caption="%24%7Bgamecenter.room_link%7D" treshold="0">
+                          <variables>
+                            <var key="etching_color" value="0x0" type="hex"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                      </children>
+                    </container>
+                    <container x="941" y="100" width="330" height="270" params="278608" style="0" name="achievements_container" width_min="300" height_min="270">
+                      <children>
+                        <widget x="0" y="0" width="300" height="270" params="45360" style="0" name="achievements_border">
+                          <children>
+                            <text x="15" y="0" width="155" height="15" params="16" style="0" name="achievements_title" caption="%24%7Bgamecenter.achievements_title%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_border" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                          <variables>
+                            <var key="widget_type" value="illumina_border" type="String"/>
+                            <var key="illumina_border:top_left_child" value="achievements_title" type="String"/>
+                          </variables>
+                        </widget>
+                        <itemlist_vertical x="0" y="18" width="300" height="247" params="48" style="0" name="achievements_list"/>
+                      </children>
+                    </container>
+                    <container x="941" y="380" width="330" height="200" params="278608" style="0" name="leaderboard_container" width_min="200" height_min="200">
+                      <children>
+                        <widget x="0" y="0" width="300" height="200" params="45360" style="0" name="leaderboard_border">
+                          <children>
+                            <text x="15" y="0" width="149" height="15" params="16" style="0" name="leaderboard_title" caption="%24%7Bgamecenter.leaderboard_title%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="etching_color" value="0x0" type="hex"/>
+                                <var key="text_style" value="il_border" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                          <variables>
+                            <var key="widget_type" value="illumina_border" type="String"/>
+                            <var key="illumina_border:top_left_child" value="leaderboard_title" type="String"/>
+                          </variables>
+                        </widget>
+                        <link x="80" y="178" width="210" height="15" params="1073741825" style="0" name="leaderboard_link" caption="%24%7Bgamecenter.leaderboard_link%7D" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="right" type="String"/>
+                            <var key="etching_color" value="0x0" type="hex"/>
+                            <var key="text_style" value="il_border" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                        <itemlist_vertical x="0" y="15" width="300" height="170" params="16" style="0" name="leaderboard_list">
+                          <variables>
+                            <var key="spacing" value="5" type="int"/>
+                          </variables>
+                        </itemlist_vertical>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+              </children>
+            </scrollable_itemlist_vertical>
+            <container x="0" y="610" width="1275" height="158" params="1049776" style="0" name="game_icon_list_container" color="0xffff253235" background="true">
+              <children>
+                <widget x="0" y="0" width="1274" height="158" params="2224" style="0" name="game_list_border" caption="game_list_border">
+                  <children>
+                    <text x="15" y="0" width="137" height="15" params="16" style="0" name="game_list_title" caption="%24%7Bgamecenter.game_list_title%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="10" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="widget_type" value="illumina_border" type="String"/>
+                    <var key="illumina_border:top_left_child" value="game_list_title" type="String"/>
+                    <var key="illumina_border:bottom_center_child" value="game_list_items" type="String"/>
+                  </variables>
+                </widget>
+                <itemlist_horizontal x="5" y="15" width="1265" height="83" params="145" style="100" name="game_icon_list">
+                  <children>
+                    <region x="0" y="0" width="83" height="83" params="17" style="100" name="click_region" treshold="0">
+                      <children>
+                        <bitmap x="0" y="0" width="83" height="83" params="16" style="100" name="selected_icon"/>
+                        <static_bitmap x="4" y="4" width="75" height="75" params="16" style="100" name="game_icon" tags="ICON"/>
+                      </children>
+                    </region>
+                  </children>
+                </itemlist_horizontal>
+                <scrollbar_horizontal x="5" y="100" width="1265" height="12" params="145" style="100" name="game_icon_list_scroll">
+                  <variables>
+                    <var key="scrollable" value="game_icon_list" type="String"/>
+                  </variables>
+                </scrollbar_horizontal>
+              </children>
+            </container>
+            <border x="10" y="580" width="160" height="22" params="1040" style="105" name="game_center_filter_container" visible="false">
+              <children>
+                <input x="2" y="3" width="154" height="16" params="1" style="100" name="game_center_filter">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="359" y="234" width="277" height="62" params="16" style="3" name="entering_stories_container" visible="false">
+          <children>
+            <static_bitmap x="0" y="0" width="50" height="53" params="16" style="3">
+              <variables>
+                <var key="asset_uri" value="icons_toolbar_stories_normal" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <label x="54" y="15" width="162" height="17" params="16" style="3" caption="%24%7Bgamecenter.entering.stories%7D">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+      </children>
+    </background>
+  </window>
+</layout>

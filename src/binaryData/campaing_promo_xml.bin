@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="campaing_promo" width="500" height="130" version="0.1" uid="181FDC1E-271E-5956-05F6-F02C456248AF">
+  <window>
+    <container x="0" y="0" width="500" height="130" params="147472" style="0" background="true" width_max="500">
+      <children>
+        <static_bitmap x="0" y="0" width="500" height="130" params="16" style="100" name="promo_background">
+          <variables>
+            <var key="asset_uri" value="" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="161" y="16" width="275" height="96" params="16" style="0" name="content">
+          <children>
+            <text x="0" y="0" width="251" height="21" params="16" style="100" name="promo_title" caption="%24%7Blanding.view.campaign.promo.title%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="16" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="21" width="30" height="6" params="16" style="0" name="spacing"/>
+            <formatted_text x="0" y="27" width="251" height="15" params="16" style="100" name="promo_text" caption="%24%7Blanding.view.campaign.promo.text%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <container x="0" y="42" width="30" height="6" params="16" style="0" name="spacing"/>
+            <button x="-5" y="48" width="233" height="48" params="131089" style="100" name="button" caption="%24%7Blanding.view.campaign.promo.button%7D"/>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

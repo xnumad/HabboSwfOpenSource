@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_thumbnail" width="112" height="112" version="0.1" uid="819397C4-62E8-1BA5-EF47-891BA0C41A36">
+  <window>
+    <container x="0" y="0" width="112" height="112" params="16" style="3" name="room_thumbnail_container" color="0xffff000000" background="true">
+      <children>
+        <static_bitmap x="1" y="1" width="110" height="110" params="16" style="3" name="room_thumbnail">
+          <variables>
+            <var key="asset_uri" value="newnavigator_default_room" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

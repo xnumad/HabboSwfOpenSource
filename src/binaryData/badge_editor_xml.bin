@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_editor" width="392" height="305" version="0.1" uid="D4A0A2E0-6B5E-10BA-1A5D-D934FF536FAF">
+  <window>
+    <container x="0" y="0" width="392" height="305" params="16" style="0" name="badge_editor">
+      <children>
+        <container x="0" y="0" width="128" height="305" params="16" style="0" name="guild_badge">
+          <children>
+            <label x="25" y="8" width="71" height="17" params="16" style="0" name="guild_badge" caption="%24%7Bgroup.edit.badge.badge%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+              </variables>
+            </label>
+            <border x="17" y="29" width="94" height="94" params="16" style="0" name="border">
+              <children>
+                <border x="4" y="4" width="86" height="86" params="16" style="3" color="0x0e9e9e1"/>
+                <bitmap x="27" y="27" width="39" height="39" params="16" style="0" name="layer_0"/>
+                <bitmap x="27" y="27" width="39" height="39" params="16" style="0" name="layer_1"/>
+                <bitmap x="27" y="27" width="39" height="39" params="16" style="0" name="layer_2"/>
+                <bitmap x="27" y="27" width="39" height="39" params="16" style="0" name="layer_3"/>
+                <bitmap x="27" y="27" width="39" height="39" params="16" style="0" name="layer_4"/>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="128" y="0" width="264" height="305" params="16" style="0" name="part_edit">
+          <children>
+            <container x="0" y="0" width="264" height="29" params="16" style="0" name="part_edit_top_labels">
+              <children>
+                <label x="0" y="8" width="43" height="17" params="16" style="0" name="label_symbol" caption="%24%7Bgroup.edit.badge.symbol%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+                <label x="64" y="8" width="49" height="17" params="16" style="0" name="label_position" caption="%24%7Bgroup.edit.badge.position%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+                <label x="155" y="8" width="40" height="17" params="16" style="0" name="label_colors" caption="%24%7Bgroup.edit.badge.colors%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container>
+            <itemlist_vertical x="0" y="29" width="264" height="276" params="2176" style="0" name="part_edit_list">
+              <children>
+                <container x="0" y="0" width="264" height="19" params="16" style="0">
+                  <children>
+                    <text x="0" y="0" width="30" height="17" params="16" style="0" name="label_base" caption="%24%7Bgroup.edit.badge.base%7D">
+                      <variables>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="80" type="Number"/>
+                        <var key="thickness" value="-15" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="2" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </container>
+        <container x="128" y="0" width="264" height="305" params="16" style="0" name="part_select">
+          <children>
+            <container x="0" y="0" width="264" height="29" params="16" style="0" name="part_edit_top_labels">
+              <children>
+                <label x="0" y="8" width="78" height="17" params="16" style="0" name="label_symbol" caption="%24%7Bgroup.edit.badge.pick.symbol%7D">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container>
+            <border x="0" y="29" width="247" height="274" params="16" style="3" name="part_select_outer_border" color="0x0bebba5">
+              <children>
+                <border x="4" y="4" width="239" height="266" params="16" style="3" name="part_select_inner_border">
+                  <children>
+                    <itemgrid_vertical x="3" y="4" width="214" height="258" params="16" style="0" name="part_select_grid">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemgrid_vertical>
+                    <scrollbar_vertical x="219" y="4" width="17" height="258" params="17" style="0" name="part_select_grid_scrollbar">
+                      <variables>
+                        <var key="scrollable" value="part_select_grid" type="String"/>
+                      </variables>
+                    </scrollbar_vertical>
+                  </children>
+                </border>
+              </children>
+            </border>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

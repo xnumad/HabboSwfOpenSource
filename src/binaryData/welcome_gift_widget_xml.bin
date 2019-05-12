@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="welcome_gift_widget" width="453" height="95" version="0.1" uid="27E58736-F4A8-03C9-531B-E34720494F4B">
+  <window>
+    <container x="0" y="0" width="453" height="95" params="16" style="0">
+      <children>
+        <region x="0" y="0" width="453" height="45" params="17" style="2" name="edit" caption="%24%7Bwelcome.gift.email.edit%7D" color="0xffffccddff" background="true">
+          <children>
+            <bitmap x="8" y="13" width="25" height="20" params="16" style="0" name="email_icon"/>
+            <text x="44" y="12" width="350" height="24" params="16" style="0" name="email">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="16" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="306" y="14" width="135" height="17" params="262160" style="0" name="edit_text" caption="%24%7Bwelcome.gift.email.edit%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <container x="0" y="45" width="453" height="45" params="16" style="2" color="0xffffeceae0" background="true">
+          <children>
+            <button_thick x="315" y="8" width="130" height="30" params="132113" style="3" name="close" caption="%24%7Bwelcome.gift.close%7D" width_min="130"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

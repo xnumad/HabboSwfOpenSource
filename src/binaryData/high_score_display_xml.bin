@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="high_score_display" width="275" height="341" version="0.1" uid="2CC36D63-283D-AAF2-AF33-1D32E196A4F2">
+  <window>
+    <bubble x="0" y="0" width="275" height="341" params="17" style="100" caption="High%20Scores">
+      <children>
+        <container x="9" y="8" width="256" height="20" params="16" style="0" name="title" color="0xffff3f3f3f" background="true">
+          <children>
+            <label x="53" y="2" width="151" height="17" params="786640" style="100" caption="%24%7Bhigh.score.display.caption%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+        <border x="8" y="30" width="258" height="23" params="16" style="100" name="header">
+          <children>
+            <border x="0" y="0" width="190" height="23" params="16" style="100">
+              <children>
+                <text x="1" y="3" width="163" height="16" params="16" style="100" caption="%24%7Bhigh.score.display.users.header%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+            <border x="188" y="0" width="70" height="23" params="16" style="100">
+              <children>
+                <text x="-96" y="3" width="161" height="16" params="262224" style="100" caption="%24%7Bhigh.score.display.score.header%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </border>
+        <border x="8" y="53" width="257" height="255" params="16" style="108" name="list_background" color="0x0676767"/>
+        <label x="20" y="311" width="233" height="17" params="786640" style="100" name="footer" caption="%24%7Bhigh.score.display.congratulations.footer%7D">
+          <variables>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="text_color" value="0x6f6f6f" type="hex"/>
+          </variables>
+        </label>
+        <static_bitmap x="0" y="269" width="40" height="70" params="16" style="100" name="cup_icon">
+          <variables>
+            <var key="asset_uri" value="high_score_highscore_cup" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <scrollable_itemlist_vertical x="8" y="53" width="256" height="253" params="16" style="100" name="entries">
+          <children>
+            <container x="0" y="0" width="258" height="20" params="16" style="108" name="entry_template">
+              <children>
+                <text x="2" y="2" width="120" height="16" params="80" style="100" name="usernames" caption="USERNAMES%20PH%2C%20A%20LIST" width_max="180">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="etching_color" value="0x62ffffff" type="hex"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="189" y="2" width="56" height="16" params="262224" style="100" name="score" caption="SCORE%20PH">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="etching_color" value="0x62ffffff" type="hex"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+        </scrollable_itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="1" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

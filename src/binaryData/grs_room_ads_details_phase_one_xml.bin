@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="grs_room_ads_details_phase_one" width="346" height="17" version="0.1" uid="23CF1201-F567-6956-CDF3-1A3E736BE8AE">
+  <window>
+    <region x="0" y="0" width="346" height="17" params="145" style="0" name="details" color="0xffffffffff" background="true">
+      <children>
+        <text x="6" y="2" width="273" height="13" params="16" style="0" name="adname" caption="PH%20Room%20Name%3A%20Neque%20porro%20quisquam%20est%20que">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <bitmap x="285" y="1" width="13" height="16" params="80" style="0" name="doormode_password_small"/>
+        <bitmap x="285" y="1" width="13" height="16" params="80" style="0" name="doormode_doorbell_small"/>
+        <bitmap x="285" y="1" width="13" height="16" params="80" style="0" name="doormode_invisible_small"/>
+      </children>
+    </region>
+  </window>
+</layout>

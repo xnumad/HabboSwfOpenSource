@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="guild_selector_widget_item" width="133" height="22" version="0.1" uid="291E9014-F67C-5D00-4511-9CCD46EFBE0D">
+  <window>
+    <container x="0" y="0" width="133" height="22" params="16" style="0" name="guild_item" treshold="0">
+      <children>
+        <label x="0" y="4" width="72" height="17" params="16" style="3" name="guild_name" caption="lorem%20ipsum"/>
+        <bitmap x="112" y="4" width="21" height="14" params="16" style="0" name="guild_colors"/>
+      </children>
+    </container>
+  </window>
+</layout>

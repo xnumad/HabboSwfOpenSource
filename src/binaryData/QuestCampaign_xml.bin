@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="QuestCampaign" width="103" height="114" version="0.1" uid="3B678417-463E-2FEC-E7FC-E083A9DC0DEA">
+  <window>
+    <container x="0" y="0" width="103" height="114" params="16" style="0" name="campaign_container">
+      <children>
+        <background x="0" y="0" width="103" height="114" params="2192" style="0" name="bg" color="0xffff646464" background="true"/>
+        <background x="2" y="2" width="99" height="110" params="2192" style="0" name="bg_top" color="0xffffbbbbbb" background="true"/>
+        <background x="2" y="58" width="99" height="54" params="1168" style="0" name="bg_bottom" color="0xffffababab" background="true"/>
+        <text x="19" y="12" width="65" height="17" params="208" style="0" name="campaign_header_txt" caption="Decoration">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="-0.3" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="11" y="21" width="84" height="72" params="3088" style="0" name="campaign_pic_bitmap">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="27" y="84" width="49" height="20" params="1232" style="0" name="completion_bg_red_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}quest_counterbkg_disabled.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="27" y="84" width="49" height="20" params="1232" style="0" name="completion_bg_blue_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}quest_counterbkg_active.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="27" y="84" width="49" height="20" params="1232" style="0" name="completion_bg_green_bitmap">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}quest_counterbkg_completed.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <text x="36" y="84" width="30" height="18" params="208" style="0" name="completion_txt" caption="1/10">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

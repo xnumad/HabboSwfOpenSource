@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="mystery_box_open_dialog" width="361" height="271" version="0.1" uid="9A738AFC-CA47-4DB4-E908-3D1426EBC424">
+  <window>
+    <frame x="0" y="0" width="361" height="271" params="1" style="100" name="title_text" caption="Mystery%20Box">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <static_bitmap x="7" y="8" width="109" height="109" params="16" style="100">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}Quests/ach_receive_star.png" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="41" y="43" width="39" height="39" params="16" style="100" name="reward_base">
+          <variables>
+            <var key="asset_uri" value="mysterybox_box_base" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="41" y="43" width="39" height="39" params="16" style="100" name="reward_overlay">
+          <variables>
+            <var key="asset_uri" value="mysterybox_box_overlay" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <label x="115" y="34" width="201" height="17" params="16" style="100" name="subtitle_text" caption="You%20have%20started%20opening%20the%20box.">
+          <variables>
+            <var key="text_style" value="il_heading_2" type="String"/>
+          </variables>
+        </label>
+        <text x="115" y="54" width="217" height="28" params="16" style="100" name="description_text" caption="Another%20user%20with%20the%20key%20of%20the%20same%20colour%20is%20needed%20to%20unlock%20the%20box.">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="24" y="123" width="310" height="60" params="208" style="102">
+          <children>
+            <static_bitmap x="14" y="11" width="39" height="39" params="16" style="100" name="needed_base">
+              <variables>
+                <var key="asset_uri" value="mysterybox_key_base" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="14" y="11" width="39" height="39" params="16" style="100" name="needed_overlay">
+              <variables>
+                <var key="asset_uri" value="mysterybox_key_overlay" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <label x="62" y="22" width="228" height="16" params="3088" style="100" name="waiting_text" caption="Waiting%20for%20the%20other%20user%20to%20insert%20the%20key."/>
+          </children>
+        </border>
+        <button x="117" y="186" width="124" height="48" params="131281" style="101" name="cancel_button" caption="Cancel%20opening" color="0x0bbbbbb"/>
+      </children>
+    </frame>
+  </window>
+</layout>

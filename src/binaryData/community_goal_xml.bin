@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="community_goal" width="516" height="200" version="0.1" uid="61C96E50-B2FB-B400-B503-4378C669E52D">
+  <window>
+    <container x="0" y="0" width="516" height="200" params="147472" style="0" name="community_goal">
+      <children>
+        <static_bitmap x="7" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="24" y="4" width="154" height="14" params="16" style="100" name="community_title" caption="%24%7Blanding.view.community.headline%7D" tags="COLORABLE">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="193" y="10" width="310" height="4" params="16" style="100" name="hdr_line">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="0" y="30" width="300" height="98" params="147472" style="0" name="info_container">
+          <children>
+            <formatted_text x="0" y="0" width="300" height="24" params="16" style="100" name="goal_caption" caption="%24%7Blanding.view.community.caption%7D" tags="COLORABLE" width_min="300" width_max="300">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="29" width="300" height="16" params="16" style="100" name="goal_info" caption="%24%7Blanding.view.community.info%7D" tags="COLORABLE" width_min="300" width_max="300">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <button x="0" y="50" width="250" height="48" params="131089" style="100" name="community_catalog_button" caption="%24%7Blanding.view.community_catalog_button.text%7D" width_min="250" width_max="250" height_min="48" height_max="48"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <container x="290" y="0" width="226" height="200" params="16400" style="0" name="meter_container">
+          <children>
+            <formatted_text x="10" y="145" width="200" height="16" params="16" style="100" name="community_total_status" caption="%24%7Blanding.view.community.meter%7D" tags="COLORABLE" width_min="200" width_max="200">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <static_bitmap x="20" y="0" width="183" height="144" params="16" style="0" name="meter_level_0">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/meter_level_0.png" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="30" y="39" width="88" height="93" params="16" style="0" name="meter_level_1">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/meter_level_1.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="30" y="39" width="88" height="93" params="16" style="0" name="meter_level_1_icon" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="30" y="39" width="88" height="93" params="16" style="0" name="meter_level_1_icon_locked" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="50" y="10" width="133" height="78" params="16" style="0" name="meter_level_2">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/meter_level_2.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="50" y="10" width="133" height="78" params="16" style="0" name="meter_level_2_icon" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="50" y="10" width="133" height="78" params="16" style="0" name="meter_level_2_icon_locked" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="125" y="39" width="69" height="93" params="16" style="0" name="meter_level_3">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}reception/meter_level_3.png" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="125" y="39" width="69" height="93" params="16" style="0" name="meter_level_3_icon" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="125" y="39" width="69" height="93" params="16" style="0" name="meter_level_3_icon_locked" visible="false">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="60" y="48" width="96" height="85" params="16" style="0" name="meter_needle">
+              <variables>
+                <var key="asset_uri" value="landing_view_needle_meter_needle0" type="String"/>
+                <var key="pivot_point" value="bottom left" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

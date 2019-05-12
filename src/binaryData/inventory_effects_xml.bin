@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="inventory_effects" width="468" height="247" version="0.1" uid="60A163CF-B745-F905-9064-4FED574C3E62">
+  <window>
+    <container x="0" y="0" width="468" height="247" params="2064" style="3" name="effects_content">
+      <children>
+        <text x="316" y="7" width="42" height="17" params="786512" style="3" name="ActiveTitle" caption="Active%3A">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="il_heading_2" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <itemlist_vertical x="10" y="25" width="262" height="157" params="2192" style="3" name="inactive_items">
+          <children>
+            <bitmap x="0" y="0" width="172" height="157" params="17" style="3" name="inactive_items_image"/>
+          </children>
+        </itemlist_vertical>
+        <scrollbar_vertical x="280" y="25" width="18" height="157" params="2129" style="3" name="inactive_scroll">
+          <variables>
+            <var key="scrollable" value="inactive_items" type="String"/>
+          </variables>
+        </scrollbar_vertical>
+        <itemlist_vertical x="310" y="25" width="128" height="157" params="2128" style="3" name="active_items">
+          <children>
+            <bitmap x="0" y="0" width="128" height="157" params="17" style="3" name="active_items_image"/>
+          </children>
+        </itemlist_vertical>
+        <scrollbar_vertical x="445" y="25" width="18" height="157" params="2129" style="3" name="active_scroll">
+          <variables>
+            <var key="scrollable" value="inactive_items" type="String"/>
+          </variables>
+        </scrollbar_vertical>
+        <text x="6" y="7" width="66" height="17" params="786576" style="3" name="myEffectsTitle" caption="My%20Effects%3A">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="il_heading_2" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="0" y="192" width="520" height="55" params="1168" style="3" name="descriptionArea">
+          <children>
+            <bitmap x="15" y="0" width="50" height="50" params="16" style="3" name="effectDescriptionImage"/>
+            <button x="345" y="0" width="66" height="28" params="131153" style="3" name="activateEffect_button" caption="Activate"/>
+            <text x="75" y="0" width="256" height="55" params="144" style="3" name="effectDescriptionText" caption="%24%7Binventory.effects.defaultdescription%7D">
+              <variables>
+                <var key="text_style" value="il_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

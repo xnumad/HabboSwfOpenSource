@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="targetedoffers_minimized" width="192" height="51" version="0.1" uid="AA805EFD-15AE-BDD7-EEC7-62AA4ABFD769">
+  <window>
+    <region x="0" y="0" width="192" height="51" params="147473" style="0" name="targetedoffers_minimized" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="192" height="51" params="147472" style="9" color="0x0686661" tags="BGCOLOR">
+          <children>
+            <itemlist_vertical x="0" y="6" width="192" height="22" params="147472" style="3" name="itemlist">
+              <children>
+                <text x="50" y="0" width="138" height="4" params="8388624" style="100" name="txt_title" width_max="162">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="50" y="6" width="138" height="16" params="16" style="100" name="txt_time_left">
+                  <variables>
+                    <var key="text_style" value="il_regular_white" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="2" type="int"/>
+              </variables>
+            </itemlist_vertical>
+            <static_bitmap x="6" y="6" width="40" height="40" params="16" style="3" name="bmp_icon"/>
+          </children>
+        </border>
+      </children>
+    </region>
+  </window>
+</layout>

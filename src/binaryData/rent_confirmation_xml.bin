@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="rent_confirmation" width="370" height="300" version="0.1" uid="63AA03E1-7C79-B9F4-5886-CDD92AFF0350">
+  <window>
+    <frame x="0" y="0" width="370" height="300" params="32769" style="3" caption="%24%7Brent.confirmation.title.extend%7D" color="0xff67a3bf">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="20" y="25" width="160" height="180" params="16" style="0">
+          <children>
+            <bitmap x="0" y="0" width="160" height="180" params="2192" style="3" name="image">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+          </children>
+        </border>
+        <button x="20" y="220" width="99" height="30" params="132113" style="3" name="cancel_button" caption="%24%7Bgeneric.cancel%7D"/>
+        <button_thick x="268" y="220" width="82" height="30" params="394321" style="5" name="ok_button" caption="%24%7Bgeneric.ok%7D" color="0x0cc00"/>
+        <itemlist x="200" y="60" width="150" height="99" params="3293200" style="100" name="content_list">
+          <children>
+            <text x="0" y="0" width="150" height="30" params="16" style="3" name="rental_description" caption="%24%7Brent.confirmation.rental.description%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="40" width="150" height="30" params="16" style="100" name="furni_name" caption="The%20name%20of%20the%20furni%20in%20question">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist_horizontal x="0" y="80" width="150" height="19" params="16" style="100">
+              <children>
+                <label x="0" y="0" width="237" height="17" params="16" style="100" caption="%24%7Bcatalog.purchase.confirmation.dialog.cost%7D">
+                  <variables>
+                    <var key="text_style" value="u_regular" type="String"/>
+                  </variables>
+                </label>
+                <label x="240" y="0" width="22" height="17" params="16" style="100" name="price_amount" caption="000">
+                  <variables>
+                    <var key="text_style" value="u_regular" type="String"/>
+                  </variables>
+                </label>
+                <static_bitmap x="265" y="0" width="17" height="18" params="16" style="3" name="price_type">
+                  <variables>
+                    <var key="asset_uri" value="toolbar_duckat_icon_0" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+              </variables>
+            </itemlist_horizontal>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

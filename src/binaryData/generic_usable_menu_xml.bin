@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="generic_usable_menu" width="115" height="86" version="0.1" uid="DCF0A7EE-379D-29D7-40F8-72CD6A0822AC">
+  <window>
+    <bubble x="0" y="27" width="115" height="86" params="1048865" style="0" color="0x06e6b67" treshold="0">
+      <children>
+        <container x="0" y="0" width="107" height="76" params="12582928" style="0" name="border" color="0x06e6b67">
+          <children>
+            <region x="0" y="7" width="107" height="16" params="17" style="0" treshold="0">
+              <children>
+                <text x="23" y="0" width="61" height="16" params="208" style="0" name="furni_name" caption="furni_name">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <background x="2" y="27" width="103" height="1" params="144" style="0" color="0xffff000000" background="true"/>
+            <itemlist_vertical x="2" y="28" width="103" height="26" params="8519888" style="0" name="buttons">
+              <children>
+                <container x="1" y="0" width="101" height="26" params="144" style="3" name="use" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Bwidget.generic_usable.button.use%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="1" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+            <region x="4" y="55" width="100" height="18" params="1041" style="0" name="minimize" treshold="0">
+              <children>
+                <icon x="45" y="7" width="13" height="10" params="16" style="7" name="icon"/>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="4" type="int"/>
+        <var key="margin_top" value="4" type="int"/>
+        <var key="margin_right" value="4" type="int"/>
+        <var key="margin_bottom" value="4" type="int"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

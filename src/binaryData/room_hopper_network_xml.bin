@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_hopper_network" width="250" height="218" version="0.1" uid="58539306-131D-AF7F-DD12-E0D061078D40">
+  <window>
+    <container x="0" y="0" width="250" height="218" params="147472" style="0" color="0x00" background="true" width_max="250">
+      <children>
+        <static_bitmap x="0" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="18" y="4" width="174" height="14" params="16" style="100" name="title" caption="%24%7Blanding.view.roomhoppernetwork.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="167" y="10" width="100" height="4" params="16" style="100" name="hdr_line">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="0" y="20" width="250" height="198" params="16" style="0">
+          <children>
+            <text x="0" y="0" width="341" height="24" params="16" style="100" name="header" caption="%24%7Blanding.view.roomhoppernetwork.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="24" width="30" height="6" params="16" style="0" name="spacing"/>
+            <container x="0" y="30" width="250" height="120" params="16400" style="0" color="0x00" background="true">
+              <children>
+                <static_bitmap x="126" y="0" width="120" height="120" params="16" style="100" name="bitmap">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}reception/catalog_teaser_set_mnstr_gothic.png" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <text x="0" y="0" width="124" height="120" params="16" style="100" name="info" caption="%24%7Blanding.view.roomhoppernetwork.info%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <button x="-11" y="150" width="271" height="48" params="131089" style="100" name="button" caption="%24%7Blanding.view.roomhoppernetwork.gotoroom%7D" height_min="48" height_max="48"/>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

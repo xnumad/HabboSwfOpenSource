@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="inventory_subwindow_get_more_music" width="278" height="110" version="0.1" uid="08B7AF8F-2942-AB32-3848-29D1CF8F62D3">
+  <window>
+    <container x="0" y="0" width="278" height="110" params="16" style="0" name="get_more_music_container">
+      <children>
+        <bitmap x="0" y="0" width="278" height="110" params="16" style="0" name="get_more_music_background_image"/>
+        <text x="15" y="12" width="236" height="19" params="16" style="0" caption="%24%7Bplaylist.editor.text.get.more.music%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_style" value="bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="15" y="35" width="285" height="17" params="16" style="0" caption="%24%7Bplaylist.editor.text.you.have.no.songdisks.available%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="15" y="50" width="319" height="17" params="16" style="0" caption="%24%7Bplaylist.editor.text.you.can.buy.some.from.the.catalogue%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <button_thick x="15" y="73" width="233" height="29" params="131089" style="3" name="open_catalog_button" caption="%24%7Bplaylist.editor.button.open.catalogue%7D"/>
+      </children>
+    </container>
+  </window>
+</layout>

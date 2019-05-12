@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="newuser_change_name" width="303" height="193" version="0.1" uid="E36C0E3B-940C-1001-F537-0A2145B3321D">
+  <window>
+    <container x="0" y="0" width="303" height="193" params="16" style="101">
+      <children>
+        <text x="10" y="9" width="284" height="29" params="16" style="0" name="static_info_text" caption="%24%7Btutorial.name_change.info.select%7D">
+          <variables>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="10" y="45" width="167" height="25" params="16" style="105" name="input_border">
+          <children>
+            <input x="8" y="5" width="154" height="17" params="1" style="0" name="input" background="true">
+              <variables>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="max_chars" value="15" type="int"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <button x="185" y="41" width="108" height="32" params="131089" style="3" name="check_name_button" caption="%24%7Btutorial.name_change.check%7D" color="0x0bbbbbb" width_max="108"/>
+        <text x="10" y="76" width="280" height="4" params="16" style="0" name="info_text">
+          <variables>
+            <var key="auto_size" value="null" type="String"/>
+            <var key="text_style" value="il_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="10" y="116" width="280" height="31" params="131089" style="0" name="suggestions"/>
+        <button x="10" y="152" width="166" height="33" params="131089" style="3" name="select_name_button" caption="%24%7Btutorial.name_change.pick%7D" color="0x0bbbbbb"/>
+        <button x="194" y="152" width="99" height="33" params="393233" style="3" name="cancel_selection_button" caption="%24%7Bgeneric.cancel%7D" color="0x0bbbbbb"/>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="progress_indicator" width="8" height="8" version="0.1" uid="61022637-BD6E-B712-1AFE-F253FA7F03B2">
+  <window>
+    <itemlist_horizontal x="0" y="0" width="8" height="8" params="147472" style="0">
+      <children>
+        <static_bitmap x="0" y="0" width="8" height="8" params="16" style="0"/>
+      </children>
+      <variables>
+        <var key="spacing" value="3" type="int"/>
+      </variables>
+    </itemlist_horizontal>
+  </window>
+</layout>

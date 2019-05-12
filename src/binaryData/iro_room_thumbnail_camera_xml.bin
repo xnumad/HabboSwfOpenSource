@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="iro_room_thumbnail_camera" width="148" height="217" version="0.1" uid="DEF7C79F-69B3-1326-E2D9-AC2C570A613F">
+  <window>
+    <frame x="0" y="0" width="148" height="217" params="32769" style="3" caption="%24%7Bnavigator.thumbnail.camera.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="14" y="12" width="112" height="112" params="16" style="1" color="0xffff000000" background="true">
+          <children>
+            <bitmap x="1" y="1" width="110" height="110" params="16" style="3" name="viewfinder">
+              <variables>
+                <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+          </children>
+        </container>
+        <itemlist_horizontal x="4" y="138" width="135" height="30" params="786640" style="3">
+          <children>
+            <button_thick x="0" y="0" width="65" height="30" params="131089" style="6" name="button_cancel" caption="%24%7Bnavigator.thumbnail.camera.title.cancel%7D" color="0x0ff0000" width_min="65" width_max="65"/>
+            <button_thick x="70" y="0" width="65" height="30" params="131089" style="6" name="button_capture" caption="%24%7Bnavigator.thumbnail.camera.title.capture%7D" color="0x0ff00" width_min="65" width_max="65"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+      </children>
+    </frame>
+  </window>
+</layout>

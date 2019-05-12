@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="EntryArrows" width="15" height="25" version="0.1" uid="625ED806-E049-9CA0-EF47-E082AA62FEB9">
+  <window>
+    <container x="0" y="0" width="15" height="25" params="16" style="0" name="entry_arrows_cont">
+      <children>
+        <static_bitmap x="0" y="0" width="15" height="25" params="2192" style="0" name="arrow_0">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}quest_arrow1.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="15" height="25" params="3280" style="0" name="arrow_1">
+          <variables>
+            <var key="asset_uri" value="${image.library.questing.url}quest_arrow2.png" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

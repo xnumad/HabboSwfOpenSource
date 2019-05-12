@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="AchievementResolutions" width="312" height="525" version="0.1" uid="B181244C-9154-3D14-ADCC-A9173774F266">
+  <window>
+    <frame x="1" y="1" width="312" height="525" params="32769" style="100" caption="%24%7Bresolution.title%7D" width_min="312" width_max="312" height_max="525">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <border x="0" y="50" width="310" height="389" params="16" style="103" width_min="310" width_max="310"/>
+        <itemlist x="0" y="0" width="310" height="390" params="147472" style="100" name="element_list" width_max="310">
+          <children>
+            <text x="10" y="0" width="264" height="50" params="16" style="100" name="title" caption="%24%7Bresolution.header%7D" height_min="50" height_max="50">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemgrid_vertical x="10" y="60" width="290" height="230" params="16" style="100" name="achievements">
+              <variables>
+                <var key="spacing" value="6" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </itemgrid_vertical>
+            <itemlist_horizontal x="5" y="300" width="295" height="90" params="147472" style="100">
+              <children>
+                <container x="0" y="0" width="75" height="90" params="147472" style="100">
+                  <children>
+                    <static_bitmap x="0" y="0" width="75" height="90" params="786448" style="100" height_min="90" height_max="90">
+                      <variables>
+                        <var key="asset_uri" value="common_star" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <widget x="13" y="14" width="50" height="50" params="16" style="100" name="achievement_badge">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                  </children>
+                </container>
+                <itemlist x="75" y="4" width="220" height="63" params="147472" style="100" width_max="220">
+                  <children>
+                    <text x="0" y="0" width="220" height="17" params="16" style="100" name="achievement.name" caption="Achievement%20name%20" width_max="220">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="il_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="22" width="220" height="16" params="16" style="100" name="achievement.description" caption="Achievement%20description" width_min="0" width_max="220">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <itemlist_horizontal x="0" y="43" width="220" height="20" params="16" style="100">
+                      <children>
+                        <label x="0" y="0" width="153" height="16" params="16" style="100" caption="%24%7Bresolution.achievement.level%7D"/>
+                        <label x="155" y="1" width="173" height="15" params="16" style="100" name="achievement.level" caption="0" width_min="0">
+                          <variables>
+                            <var key="text_style" value="il_heading_3" type="String"/>
+                          </variables>
+                        </label>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                      </variables>
+                    </itemlist_horizontal>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist>
+              </children>
+            </itemlist_horizontal>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+        <button x="63" y="395" width="180" height="30" params="917521" style="102" name="save_button" caption="%24%7Bresolution.button.ok%7D" width_min="180" width_max="180"/>
+        <text x="5" y="403" width="300" height="15" params="16" style="100" name="disabled.reason" caption="Disabled%20for%20reason." visible="false" width_min="0" width_max="300">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_style" value="il_border" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <widget x="103" y="444" width="99" height="37" params="147472" style="100" name="countdown_widget">
+          <variables>
+            <var key="widget_type" value="countdown" type="String"/>
+          </variables>
+        </widget>
+      </children>
+      <variables>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="textInputWidget" width="229" height="71" version="0.1" uid="D9FF77F1-3B36-5265-8367-9CD3E65B2388">
+  <window>
+    <container x="61" y="282" width="229" height="71" params="16" style="0" name="textInputWidget">
+      <children>
+        <text x="0" y="0" width="229" height="17" params="16" style="3" name="input_text" caption="lorem%20ipsum">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

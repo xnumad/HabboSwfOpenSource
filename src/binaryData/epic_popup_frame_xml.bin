@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="epic_popup_frame" width="215" height="275" version="0.1" uid="CF5E951C-3FF3-3E65-CB84-37AA02A73B26">
+  <window>
+    <frame x="-12" y="0" width="215" height="275" params="163841" style="100">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <static_bitmap x="6" y="2" width="200" height="200" params="12730384" style="100" name="content_static_bitmap" width_min="200" height_min="200">
+          <variables>
+            <var key="asset_uri" value="common_loading_icon" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="7" y="195" width="199" height="14" params="1049744" style="100">
+          <variables>
+            <var key="asset_uri" value="illumina_horizontal_separator" type="String"/>
+            <var key="pivot_point" value="bottom center" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <button x="78" y="201" width="140" height="48" params="1442897" style="101" name="close_button" caption="%24%7Balert.close.button%7D" color="0x0bbbbbb"/>
+      </children>
+    </frame>
+  </window>
+</layout>

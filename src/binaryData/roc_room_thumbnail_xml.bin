@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="roc_room_thumbnail" width="137" height="99" version="0.1" uid="050DEF93-02B8-01D9-8BD3-599C262C1A40">
+  <window>
+    <region x="0" y="0" width="137" height="99" params="17" style="3" name="thumbnail" treshold="0">
+      <children>
+        <border x="0" y="0" width="135" height="96" params="16" style="0" name="bg_sel" color="0x06f8285"/>
+        <border x="0" y="0" width="135" height="96" params="16" style="0" name="bg_unsel" color="0x0cccccc"/>
+        <static_bitmap x="0" y="0" width="135" height="96" params="16" style="0" name="bg_pic">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="25" y="78" width="18" height="13" params="16" style="0" name="tile_size_txt" caption="104" color="0xffff000000" background="true">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <bitmap x="5" y="80" width="18" height="10" params="16" style="0" name="tile_icon_black"/>
+        <bitmap x="5" y="80" width="18" height="10" params="16" style="0" name="tile_icon_white"/>
+        <bitmap x="60" y="0" width="18" height="20" params="16" style="0" name="select_arrow"/>
+        <icon x="109" y="5" width="20" height="10" params="16" style="12" name="club_icon"/>
+      </children>
+    </region>
+  </window>
+</layout>

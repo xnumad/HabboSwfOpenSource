@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="layout_builders_club_frontpage" width="360" height="508" version="0.1" uid="AD9EE4D0-80D0-FA0B-D7C3-8FEC33CAC537">
+  <window>
+    <container x="0" y="0" width="360" height="508" params="2064" style="0" name="ctlg_builders_club_frontpage">
+      <children>
+        <html x="15" y="10" width="330" height="380" params="1" style="3" name="ctlg_description" caption="Formatted%20text" treshold="0">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="link_target" value="internal" type="String"/>
+          </variables>
+        </html>
+        <container x="0" y="408" width="360" height="100" params="1040" style="3" name="builderSubscriptionWidget">
+          <children>
+            <button_thick x="90" y="40" width="180" height="50" params="131089" style="5" name="subscribe_button_big" caption="%24%7Bbuilder.front_page.join%7D" color="0x0a9bc5" visible="false" width_min="180" width_max="180"/>
+            <button_thick x="195" y="60" width="140" height="30" params="131089" style="5" name="subscribe_button" caption="%24%7Bbuilder.front_page.join%7D" color="0x0a9bc5" width_min="140" width_max="140"/>
+            <button_thick x="25" y="60" width="140" height="30" params="131089" style="5" name="try_button" caption="%24%7Bbuilder.front_page.try%7D" color="0x0dda100" width_min="140" width_max="140"/>
+            <button_thick x="195" y="20" width="140" height="30" params="131089" style="5" name="subscribe_button_sms" caption="%24%7Bbuilder.front_page.join.sms%7D" color="0x0a9bc5" visible="false" width_min="140" width_max="140"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

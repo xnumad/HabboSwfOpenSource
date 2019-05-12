@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="friend_remove_confirm" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="160" height="200" params="32769" style="0" name="alert_%200" caption="%24%7Bfriendlist.removefriendconfirm.title%7D">
+      <children>
+        <border x="0" y="0" width="150" height="143" params="98305" style="0" name="border" caption="%24%7Bfriendlist.removefriendconfirm.title%7D">
+          <children>
+            <text x="10" y="10" width="130" height="120" params="1" style="0" name="remove_info" caption="%24%7Bfriendlist.removefriendconfirm.userlist%7D">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <button x="88" y="147" width="60" height="21" params="131089" style="0" name="cancel" caption="%24%7Bgeneric.cancel%7D" width_min="60" width_max="60"/>
+        <button_thick x="0" y="147" width="60" height="21" params="131089" style="0" name="ok" caption="%24%7Bgeneric.ok%7D" width_min="60" width_max="60"/>
+      </children>
+    </frame>
+  </window>
+</layout>

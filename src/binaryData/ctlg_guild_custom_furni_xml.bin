@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="ctlg_guild_custom_furni" width="360" height="460" version="0.1" uid="0DF4CD7A-4346-6BCA-2CE2-E4029ACA43C9">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="2064" style="0" name="ctlg_default_3x3">
+      <children>
+        <label x="5" y="134" width="107" height="15" params="16" style="3" name="ctlg_selectproduct" caption="%24%7Bcatalog_selectproduct%7D" visible="false">
+          <variables>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="text_color" value="0x666666" type="hex"/>
+          </variables>
+        </label>
+        <container x="0" y="245" width="360" height="125" params="2064" style="0" name="itemGridWidget" tags="E"/>
+        <container x="0" y="0" width="360" height="240" params="16" style="0" name="productViewWidget"/>
+        <container x="90" y="375" width="180" height="85" params="1040" style="0" name="guildSelectorWidget"/>
+        <container x="94" y="18" width="142" height="73" params="16" style="0" name="specialInfoWidget"/>
+        <container x="199" y="190" width="156" height="28" params="16" style="0" name="activityPointDisplayWidget"/>
+        <container x="307" y="138" width="40" height="40" params="0" style="0" name="guildBadgeViewWidget"/>
+        <container x="0" y="430" width="360" height="30" params="1040" style="0" name="purchaseWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

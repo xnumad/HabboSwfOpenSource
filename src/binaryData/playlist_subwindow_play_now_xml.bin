@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="playlist_subwindow_play_now" width="261" height="56" version="0.1" uid="6FD07BD5-175D-1267-EE87-491AD2188AF6">
+  <window>
+    <container x="0" y="0" width="261" height="56" params="16" style="0">
+      <children>
+        <button_thick x="6" y="3" width="250" height="50" params="131089" style="5" name="play_now_button" caption="%24%7Bplaylist.editor.button.play.now%7D" color="0x022bb00" width_min="250" width_max="250"/>
+      </children>
+    </container>
+  </window>
+</layout>

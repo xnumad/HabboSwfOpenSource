@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="discountValueItem" width="180" height="37" version="0.1" uid="627BBB20-9CEA-D410-56B1-DA754DB282FA">
+  <window>
+    <container x="0" y="0" width="180" height="37" params="16" style="0" name="discount_value_container" height_min="37" height_max="37">
+      <children>
+        <container x="0" y="1" width="180" height="15" params="128" style="0" name="total_value_backgroundbackground" color="0xffff737373" blend="0.7" background="true"/>
+        <container x="0" y="17" width="180" height="15" params="128" style="0" name="discount_value_backgroundbackground" color="0xffff009100" blend="0.7" background="true"/>
+        <container x="0" y="2" width="28" height="31" params="262160" style="0" name="header_container">
+          <children>
+            <bitmap x="-12" y="-4" width="40" height="40" params="0" style="0" name="icon_splash_bitmap"/>
+            <bitmap x="1" y="6" width="14" height="14" params="0" style="0" name="icon_bitmap"/>
+          </children>
+        </container>
+        <container x="28" y="1" width="155" height="15" params="80" style="0" name="total_value_container">
+          <children>
+            <text x="-3" y="1" width="147" height="14" params="0" style="3" name="total_text" caption="%24%7Bcatalog.bundlewidget.discount.total%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="24" y="-1" width="39" height="17" params="0" style="3" name="total_currency_value_left" caption="00000">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="65" y="1" width="14" height="14" params="0" style="0" name="total_currency_icon_left" blend="0.5"/>
+            <container x="25" y="7" width="55" height="2" params="0" style="0" name="striketrough_total_currency_left" color="0xffff000000" blend="0.5" background="true"/>
+            <text x="92" y="-1" width="38" height="17" params="0" style="3" name="total_currency_value_right" caption="00000">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="133" y="1" width="14" height="14" params="0" style="0" name="total_currency_icon_right" blend="0.5"/>
+            <container x="92" y="7" width="55" height="2" params="0" style="0" name="striketrough_total_currency_right" color="0xffff000000" blend="0.5" background="true"/>
+          </children>
+        </container>
+        <container x="28" y="17" width="155" height="15" params="80" style="0" name="discount_value_container">
+          <children>
+            <text x="-3" y="1" width="147" height="14" params="0" style="3" name="discount_text" caption="%24%7Bcatalog.bundlewidget.discount.save%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="24" y="-1" width="39" height="17" params="0" style="3" name="discount_currency_value_left" caption="00000">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="65" y="1" width="14" height="14" params="0" style="0" name="discount_currency_icon_left"/>
+            <text x="92" y="-1" width="38" height="17" params="0" style="3" name="discount_currency_value_right" caption="00000">
+              <variables>
+                <var key="auto_size" value="right" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="133" y="1" width="14" height="14" params="0" style="0" name="discount_currency_icon_right"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="packagecard" width="374" height="243" version="0.1" uid="89F4D74F-CA56-9382-2351-FB643D70F15B">
+  <window>
+    <frame x="0" y="0" width="374" height="243" params="33025" style="0" caption="%24%7Bwidget.furni.present.window.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="0" y="0" width="362" height="211" params="12582928" style="0">
+          <children>
+            <bitmap x="10" y="16" width="114" height="114" params="16" style="0" name="image_bg"/>
+            <bitmap x="10" y="16" width="114" height="114" params="16" style="0" name="gift_image"/>
+            <text x="135" y="16" width="216" height="52" params="16" style="0" name="title" caption="%24%7Bwidget.furni.present.title%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <text x="135" y="68" width="219" height="80" params="16" style="0" name="text">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="13" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="6" y="156" width="350" height="50" params="12582928" style="0" name="state_content" color="0xffeaece8" background="true">
+              <children>
+                <container x="0" y="0" width="351" height="50" params="16" style="0" color="0xffeeeeee" background="true">
+                  <children>
+                    <region x="14" y="8" width="100" height="33" params="1041" style="0" name="close" treshold="0">
+                      <children>
+                        <text x="0" y="9" width="100" height="22" params="16" style="0" caption="%24%7Bwidget.furni.present.close%7D">
+                          <variables>
+                            <var key="antialias_type" value="advanced" type="String"/>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_face" value="Ubuntu" type="String"/>
+                            <var key="font_size" value="12" type="uint"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="underline" value="true" type="Boolean"/>
+                            <var key="kerning" value="true" type="Boolean"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </region>
+                    <button_thick x="214" y="10" width="130" height="30" params="132113" style="5" name="open" caption="%24%7Bwidget.furni.present.open%7D" color="0x0aa00" width_min="130"/>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

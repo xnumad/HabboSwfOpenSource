@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="tab_content" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="18" width="223" height="100" params="17" style="0" name="tab_content" color="0xffcccccc" background="true">
+      <children>
+        <container x="5" y="5" width="218" height="95" params="16" style="0" name="list">
+          <children>
+            <itemlist x="0" y="0" width="195" height="95" params="17" style="0" name="list_content" color="0xffffffff" background="true"/>
+            <scrollbar_vertical x="195" y="0" width="20" height="95" params="17" style="0" name="scroller"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="new_friend_entity" width="127" height="36" version="0.1" uid="E72F7CC6-9B3E-9B84-BFF6-7A5D143E4390">
+  <window>
+    <border x="0" y="101" width="127" height="36" params="1" style="6" name="frame" color="0x075b986" clipping="false" treshold="0">
+      <children>
+        <itemlist_horizontal x="117" y="-13" width="0" height="25" params="262224" style="0" name="icons" clipping="false">
+          <variables>
+            <var key="spacing" value="2" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+        <itemlist_vertical x="3" y="7" width="121" height="35" params="2192" style="0" name="pieces" height_min="30">
+          <children>
+            <region x="0" y="0" width="119" height="35" params="145" style="0" name="header" color="0x00" treshold="0">
+              <children>
+                <text x="33" y="2" width="86" height="18" params="16" style="0" name="name" tags="label">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <region x="0" y="0" width="33" height="35" params="145" style="0" name="region_profile" color="0x00" treshold="0">
+                  <children>
+                    <container x="-11" y="-25" width="50" height="70" params="16" style="0">
+                      <children>
+                        <bitmap x="20" y="30" width="10" height="10" params="3932160" style="0" name="canvas"/>
+                      </children>
+                    </container>
+                  </children>
+                </region>
+              </children>
+            </region>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+         <bubble x="-6" y="-113" width="139" height="120" params="1" style="0" name="bubble" color="0x09dbf5a">
+          <children>
+            <text x="5" y="4" width="93" height="30" params="8388752" style="0" name="bubble_title" caption="%24%7Bfriendbar.game_invite.title%7D">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="5" y="32" width="110" height="4" params="8388752" style="0" name="bubble_message">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <closebutton x="101" y="3" width="19" height="20" params="81" style="3" name="bubble_button_close" background="true" treshold="0"/>
+            <container_button x="13" y="46" width="96" height="27" params="394449" style="3" name="bubble_button_accept" width_max="110">
+              <children>
+                <icon x="7" y="6" width="17" height="16" params="16" style="8" name="bubble_icon" color="0x0a900"/>
+                <text x="16" y="4" width="71" height="17" params="16" style="0" name="bubble_caption" caption="%24%7Bfriendbar.request.accept%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_style" value="button_shiny_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <region x="2" y="79" width="118" height="15" params="1233" style="1" name="bubble_click_region_reject" treshold="0">
+              <children>
+                <text x="0" y="0" width="119" height="15" params="4194320" style="1" name="bubble_link_reject" caption="%24%7Bfriendbar.request.decline%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_small" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </bubble>
+      </children>
+    </border>
+  </window>
+</layout>

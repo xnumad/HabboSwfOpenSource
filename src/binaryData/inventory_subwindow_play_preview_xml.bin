@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="inventory_subwindow_play_preview" width="278" height="110" version="0.1" uid="32502946-A49E-A665-51D6-48B9840A6809">
+  <window>
+    <container x="0" y="0" width="278" height="110" params="16" style="0" name="preview_play_container" color="0xffffffffff" background="true">
+      <children>
+        <bitmap x="0" y="0" width="278" height="110" params="16" style="0" name="preview_play_background_image"/>
+        <text x="15" y="21" width="287" height="19" params="16" style="0" caption="%24%7Bplaylist.editor.text.preview.playing.for.you%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_style" value="bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="31" y="40" width="193" height="18" params="16" style="0" name="preview_play_track_name" caption="preview_track_name">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="31" y="56" width="193" height="18" params="16" style="0" name="preview_play_author_name" caption="preview_author_name">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="10" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="15" y="42" width="14" height="14" params="16" style="0" name="song_name_icon_bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="jb_icon_disc" type="String"/>
+          </variables>
+        </bitmap>
+        <bitmap x="15" y="56" width="14" height="14" params="16" style="0" name="author_name_icon_bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="jb_icon_composer" type="String"/>
+          </variables>
+        </bitmap>
+        <button_thick x="15" y="76" width="219" height="28" params="131089" style="5" name="stop_preview_button" caption="%24%7Bplaylist.editor.button.preview.stop%7D" color="0x0cc0000"/>
+      </children>
+    </container>
+  </window>
+</layout>

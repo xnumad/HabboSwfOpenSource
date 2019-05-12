@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="navigator_guest_room_details_long" width="253" height="351" version="0.1" uid="0ADFDFA0-958D-6643-41EA-4206F100283C">
+  <window>
+    <border x="0" y="0" width="253" height="351" params="0" style="0" name="room_popup_container">
+      <children>
+        <container x="10" y="10" width="230" height="326" params="145" style="0" name="details_container">
+          <children>
+            <text x="0" y="0" width="233" height="30" params="144" style="0" name="roomname" caption="PH%20Room%20Name%3A%20Neque%20porro%20quisquam%20est%20que">
+              <variables>
+                <var key="font_face" value="Volter Bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <region x="0" y="30" width="235" height="17" params="17" style="0" name="roomowner_cont" treshold="0">
+              <children>
+                <text x="0" y="0" width="171" height="13" params="16" style="0" name="roomowner.caption" caption="%24%7Bnavigator.roomownercaption%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="50" y="0" width="15" height="13" params="80" style="0" name="user_info_region" treshold="0">
+                  <children>
+                    <icon x="0" y="2" width="15" height="11" params="16" style="21" name="icon_eye_off"/>
+                    <icon x="0" y="2" width="15" height="11" params="16" style="22" name="icon_eye_over"/>
+                  </children>
+                </container>
+                <text x="67" y="0" width="80" height="13" params="16" style="0" name="roomowner" caption="PH%20Room%20Owner" background="true" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+                <var key="tool_tip_delay" value="100" type="uint"/>
+              </variables>
+            </region>
+            <container x="0" y="50" width="180" height="12" params="16" style="0" name="roomctg_cont">
+              <children>
+                <text x="0" y="0" width="112" height="13" params="16" style="0" name="roomctg.caption" caption="%24%7Bnavigator.roomctg%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="50" y="0" width="65" height="13" params="17" style="0" name="roomctg" caption="PH%20Category" background="true">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <text x="0" y="70" width="233" height="30" params="144" style="0" name="roomdesc" caption="PH%20Room%20Desc%3A%20Neque%20porro%20quisquam%20est%20qui%20dolorem%20ipsum%20quia%20dolor%20sit%20amet%2C%20consectetur%2C%20adipisci%20velit">
+              <variables>
+                <var key="text_color" value="0x808080" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="90" width="233" height="70" params="16" style="0" name="extra_cont">
+              <children>
+                <container x="0" y="0" width="233" height="40" params="17" style="0" name="tags"/>
+                <container x="0" y="0" width="233" height="12" params="16" style="0" name="startedat_cont">
+                  <children>
+                    <text x="0" y="0" width="155" height="13" params="16" style="0" name="startedat.caption" caption="%24%7Bnavigator.eventstartedat%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_face" value="Volter Bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="50" y="0" width="46" height="13" params="17" style="0" name="startedat" caption="PH%3A%2015%3A48" background="true">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <container x="0" y="0" width="233" height="12" params="16" style="0" name="rating_cont">
+                  <children>
+                    <text x="0" y="0" width="142" height="13" params="16" style="0" name="rating.caption" caption="%24%7Bnavigator.ratingcaption%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_face" value="Volter Bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="50" y="0" width="21" height="13" params="17" style="0" name="rating" caption="999" background="true">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <container x="0" y="125" width="233" height="31" params="16" style="0" name="doormode_doorbell">
+              <children>
+                <bitmap x="0" y="0" width="19" height="24" params="16" style="0" name="doormode_doorbell"/>
+                <text x="35" y="0" width="198" height="31" params="16" style="0" name="infotxt" caption="%24%7Bnavigator.info.doorbell%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="0" y="160" width="233" height="31" params="16" style="0" name="doormode_invisible">
+              <children>
+                <bitmap x="0" y="0" width="19" height="24" params="16" style="0" name="doormode_invisible"/>
+                <text x="35" y="0" width="198" height="31" params="16" style="0" name="infotxt" caption="%24%7Bnavigator.info.invisible%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="0" y="190" width="233" height="31" params="16" style="0" name="doormode_password">
+              <children>
+                <bitmap x="0" y="0" width="19" height="24" params="16" style="0" name="doormode_password"/>
+                <text x="35" y="0" width="198" height="31" params="16" style="0" name="infotxt" caption="%24%7Bnavigator.info.password%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="0" y="215" width="233" height="20" params="16" style="0" name="trading_allowed">
+              <children>
+                <bitmap x="0" y="0" width="31" height="15" params="16" style="0" name="trading_allowed"/>
+                <text x="35" y="0" width="198" height="20" params="16" style="0" name="infotxt" caption="%24%7Bnavigator.info.tradingallowed%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="0" y="242" width="239" height="66" params="16" style="100" name="eventinfo_cont">
+              <children>
+                <text x="0" y="0" width="100" height="14" params="16" style="0" name="eventinfo.caption" caption="%24%7Broomad.event%7D">
+                  <variables>
+                    <var key="antialias_type" value="normal" type="String"/>
+                    <var key="etching_color" value="0x0" type="hex"/>
+                    <var key="etching_position" value="top-left" type="String"/>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="il_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="60" y="0" width="183" height="78" params="16" style="100" name="eventinfo_child_container">
+                  <children>
+                    <text x="0" y="0" width="157" height="12" params="16" style="0" name="eventinfo_name" caption="BLA">
+                      <variables>
+                        <var key="font_face" value="Volter" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_style" value="il_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="15" width="178" height="30" params="16" style="0" name="eventinfo_desc" caption="Eventinfo%20lalala" height_max="100">
+                      <variables>
+                        <var key="text_color" value="0x808080" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="53" width="107" height="12" params="16" style="0" name="eventinfo_expirationtime">
+                      <variables>
+                        <var key="font_face" value="Volter" type="String"/>
+                        <var key="font_size" value="9" type="uint"/>
+                        <var key="text_style" value="il_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <region x="0" y="305" width="233" height="20" params="17" style="0" name="roomsettings_cont" treshold="0">
+              <children>
+                <text x="0" y="0" width="120" height="13" params="17" style="0" name="roomsettings" caption="%24%7Bnavigator.roomsettings%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+    </border>
+  </window>
+</layout>

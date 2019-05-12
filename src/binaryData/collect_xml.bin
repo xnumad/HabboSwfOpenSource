@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="collect" width="477" height="440" version="0.1" uid="C7B7D63B-D682-FDC6-9BC0-87FC5201E703">
+  <window>
+    <frame x="0" y="0" width="477" height="440" params="32801" style="3" caption="%24%7Bphone.number.collect.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-2" y="-3" width="475" height="198" params="128" style="0" color="0xffff96bdcb" background="true">
+          <children>
+            <container x="2" y="2" width="471" height="194" params="128" style="0" color="0xffff6f95a4" background="true"/>
+          </children>
+        </container>
+        <container x="0" y="0" width="471" height="400" params="0" style="3">
+          <children>
+            <button_thick x="127" y="266" width="219" height="38" params="917505" style="5" name="ok_button" caption="%24%7Bphone.number.collect.send.button%7D" color="0x04faf4f" width_min="219" width_max="219"/>
+            <container x="8" y="8" width="461" height="182" params="2192" style="3">
+              <children>
+                <static_bitmap x="6" y="0" width="71" height="89" params="16" style="100" name="club_icon" tags="ICON">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.url}returnusergifting/phone_frank.png" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <html x="90" y="0" width="360" height="178" params="1" style="3" name="collect_summary" caption="%24%7Bphone.number.collect.summary%7D">
+                  <variables>
+                    <var key="font_size" value="14" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                    <var key="editable" value="false" type="Boolean"/>
+                    <var key="selectable" value="false" type="Boolean"/>
+                    <var key="editable" value="false" type="Boolean"/>
+                    <var key="selectable" value="false" type="Boolean"/>
+                  </variables>
+                </html>
+              </children>
+            </container>
+            <container x="8" y="200" width="464" height="61" params="144" style="0" name="phone_number_input_border">
+              <children>
+                <text x="0" y="2" width="167" height="14" params="16" style="3" caption="%24%7Bphone.number.collect.select.country%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="213" y="2" width="165" height="14" params="16" style="3" caption="%24%7Bphone.number.collect.input.number%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <boxsizer x="213" y="18" width="244" height="42" params="16" style="3">
+                  <children>
+                    <border x="0" y="0" width="244" height="38" params="16" style="4">
+                      <children>
+                        <input x="7" y="6" width="180" height="26" params="1" style="3" name="phone_number_input" caption="%24%7Bphone.number.collect.input.init.text%7D" width_max="240">
+                          <variables>
+                            <var key="font_size" value="20" type="uint"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </input>
+                        <static_bitmap x="222" y="11" width="17" height="18" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="common_small_pen" type="String"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </border>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="15" type="int"/>
+                    <var key="padding_horizontal" value="0" type="int"/>
+                    <var key="padding_vertical" value="0" type="int"/>
+                  </variables>
+                </boxsizer>
+              </children>
+            </container>
+          </children>
+        </container>
+        <droplist x="8" y="218" width="204" height="38" params="49" style="3" name="country_list" caption="Choose%20country"/>
+        <container x="2" y="308" width="468" height="87" params="144" style="3" name="user_input_buttons_container">
+          <children>
+            <border x="4" y="8" width="461" height="78" params="16" style="3"/>
+            <boxsizer x="5" y="15" width="460" height="64" params="933904" style="3" name="user_input_buttons">
+              <children>
+                <link x="0" y="0" width="460" height="28" params="786433" style="3" name="skip_link" caption="%24%7Bphone.number.collect.skip%7D" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_size" value="22" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+                <link x="0" y="34" width="460" height="30" params="786433" style="3" name="never_link" caption="%24%7Bphone.number.collect.never.again%7D" treshold="0">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_size" value="24" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </link>
+              </children>
+              <variables>
+                <var key="spacing" value="6" type="int"/>
+                <var key="vertical" value="true" type="Boolean"/>
+                <var key="padding_horizontal" value="0" type="int"/>
+                <var key="padding_vertical" value="0" type="int"/>
+              </variables>
+            </boxsizer>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

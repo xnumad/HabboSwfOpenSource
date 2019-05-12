@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_items_label" width="27" height="20" version="0.1" uid="35DC8A39-CE03-EF29-DE18-8DEF87FD027A">
+  <window>
+    <border x="1" y="1" width="27" height="20" params="16" style="7" color="0x0ee2924">
+      <children>
+        <text x="1" y="2" width="22" height="15" params="4194320" style="7" name="new_textfield" caption="new">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

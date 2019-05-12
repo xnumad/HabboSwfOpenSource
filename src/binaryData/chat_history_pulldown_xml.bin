@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chat_history_pulldown" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="200" height="39" params="144" style="0" name="GrapbarContainer">
+      <children>
+        <bitmap x="0" y="0" width="200" height="39" params="144" style="0" name="grapBarBg"/>
+        <container x="0" y="7" width="200" height="21" params="144" style="0" name="GrapBarStripe">
+          <children>
+            <bitmap x="51" y="0" width="98" height="21" params="786640" style="0" name="grapBarHandle"/>
+            <bitmap x="184" y="4" width="13" height="13" params="262225" style="0" name="GrapBarX"/>
+            <bitmap x="0" y="3" width="48" height="15" params="262288" style="0" name="grapBarGripL"/>
+            <bitmap x="152" y="3" width="29" height="15" params="16" style="0" name="grapBarGripR"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="element_bodytext" width="252" height="17" version="0.1" uid="EAB47B15-E7D4-B8D1-F6CC-08B54792DE5A">
+  <window>
+    <region x="0" y="0" width="252" height="17" params="17" style="0" treshold="0">
+      <children>
+        <formatted_text x="0" y="0" width="64" height="16" params="16" style="100" name="link_txt" caption="Link%20text%20ph" tags="COLORABLE">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+      </children>
+    </region>
+  </window>
+</layout>
