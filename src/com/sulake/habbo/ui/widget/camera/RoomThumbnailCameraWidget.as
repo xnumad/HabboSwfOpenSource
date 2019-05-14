@@ -165,17 +165,19 @@
                     case "button_capture":
                         this._Str_25628();
                         _local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
-                        if (((!(_local_4 == null)) && (_local_4._Str_17633())))
-                        {
-                            this.handler._Str_11986(_local_4);
+                        if(_local_4 == null)
+                            return;
+                        //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
+                        //{
+                            //this.handler._Str_11986(_local_4);
                             this._window.findChildByName("button_capture").disable();
                             this._window.findChildByName("button_cancel").disable();
                             this._component.removeUpdateReceiver(this);
-                        }
+                        /*}
                         else
                         {
                             windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
-                        }
+                        }*/
                         return;
                     case "header_button_close":
                     case "button_cancel":

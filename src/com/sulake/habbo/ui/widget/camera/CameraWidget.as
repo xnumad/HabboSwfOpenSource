@@ -52,6 +52,11 @@
             }
         }
 
+        public function get viewFinder():CameraViewFinder
+        {
+            return this._viewFinder;
+        }
+
         public function get catalog():IHabboCatalog
         {
             return this._component.catalog;

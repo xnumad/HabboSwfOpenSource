@@ -6,10 +6,12 @@
     {
         private var _data:Array;
 
-        public function PurchasePhotoMessageComposer()
+        public function PurchasePhotoMessageComposer(PhotoId:String)
         {
             this._data = [];
             super();
+
+            this._data.push(PhotoId);
         }
 
         public function getMessageArray():Array

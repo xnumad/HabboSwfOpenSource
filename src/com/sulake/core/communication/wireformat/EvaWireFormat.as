@@ -97,7 +97,7 @@
                 {
                     messageLength = buffer.readInt();
                 }
-                if (((messageLength < 2) || (messageLength > MAX_DATA)))
+                if (messageLength < 2)// || (messageLength > MAX_DATA)))
                 {
                     throw (new Error(("Invalid message length " + messageLength)));
                 }

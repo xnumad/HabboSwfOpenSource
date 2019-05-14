@@ -33,6 +33,10 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.ui.widget.camera.*;
+    import flash.events.Event;
+    import flash.net.URLRequestMethod;
+    import flash.net.URLLoader;
+    import com.sulake.habbo.utils.images.PNGEncoder;
 
     internal class PhotoPurchaseConfirmationDialog 
     {
@@ -54,6 +58,7 @@
         private var _extraDataId:String = null;
         private var _publishButtonEnablerTimer:Timer;
         private var _purchaseCount:int = 0;
+        private var _photoId:String;
 
         public function PhotoPurchaseConfirmationDialog(k:CameraWidget, _arg_2:String)
         {
@@ -84,9 +89,47 @@
             }
             (this._window as IFrameWindow)._Str_5665();
             this.setState(LOADING_IMAGE);
+
+            //load img
+            this.UploadPhoto();
+
             this._window.center();
             this._window.procedure = this._Str_3545;
         }
+
+        private function UploadPhoto():void
+        {
+            var PhotoImage:BitmapData = this._widget.viewFinder.getPreviewImage();
+            if(PhotoImage == null)
+            {
+                this._widget._Str_10821("photoPurchaseCancel");
+                this.hide();
+                return;
+            }
+
+            var UploadRequest:URLRequest = new URLRequest(this._widget.component.getProperty("camera.uploadlink"));
+            UploadRequest.data = PNGEncoder.encode(PhotoImage);
+            UploadRequest.contentType = "application/octet-stream";
+            UploadRequest.method = URLRequestMethod.POST;
+            var LoaderPhoto:URLLoader = new URLLoader();
+            LoaderPhoto.addEventListener(Event.COMPLETE, this.photoUploadCallback);
+            LoaderPhoto.load(UploadRequest);
+        }
+
+        private function photoUploadCallback(evt:Event):void
+        {
+            var PhotoId:String = evt.target.data;
+            if(PhotoId == "" || PhotoId.length != 32)
+            {
+                this._widget._Str_10821("photoPurchaseCancel");
+                this.hide();
+                return;
+            }
+
+            this._photoId = PhotoId;
+            this._Str_24775(PhotoId);
+        }
+
 
         private function _Str_22012(k:int, _arg_2:int):Boolean
         {
@@ -215,7 +258,7 @@
             }
             if (((k) && (k.length > 0)))
             {
-                k = (this._widget.component.context.configuration.getProperty("stories.image_url_base") + k);
+                k = (this._widget.component.context.configuration.getProperty("stories.upload_image.url") + k + ".png");
                 _local_2 = new BitmapFileLoader("image/png", new URLRequest(k));
                 _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_10931);
             }
@@ -450,7 +493,7 @@
                     if ((((this._state == IMAGE_LOADED) && (this._disclaimerAccepted)) && (this._Str_22012(this._widget.handler._Str_20642, this._widget.handler._Str_19681))))
                     {
                         this.setState(WAITING_PURCHASE_TO_COMPLETE);
-                        this._widget.handler._Str_23090();
+                        this._widget.handler._Str_23090(this._photoId);
                     }
                     return;
                 case "publish_button":

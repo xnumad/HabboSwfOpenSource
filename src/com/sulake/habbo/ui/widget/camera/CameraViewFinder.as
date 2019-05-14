@@ -69,6 +69,11 @@
             this._Str_5658.visible = false;
         }
 
+        public function getPreviewImage():BitmapData
+        {
+            return this._Str_2726.bitmap;
+        }
+
         public function dispose():void
         {
             if (this._disposed)
@@ -230,20 +235,20 @@
                     else
                     {
                         this._Str_2268._Str_23751();
-                        _local_4 = this._Str_2268.handler._Str_18593();
-                        if (((!(_local_4 == null)) && (_local_4._Str_17633())))
-                        {
-                            _Str_15112[this._Str_3290] = _local_4;
+                        //_local_4 = this._Str_2268.handler._Str_18593();
+                        //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
+                        //{
+                            //_Str_15112[this._Str_3290] = _local_4;
                             this._Str_16078(this._Str_2726.bitmap.clone());
                             this._Str_15606 = getTimer();
                             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.taken");
                             _local_5 = this._window.findChildByName("slot_container");
                             _local_5.visible = true;
-                        }
+                        /*}
                         else
                         {
-                            this._Str_2268.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
-                        }
+                            //this._Str_2268.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
+                        }*/
                     }
                     break;
             }

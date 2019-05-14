@@ -214,9 +214,9 @@
             this._roomDesktop._Str_19098(k, _arg_2);
         }
 
-        public function _Str_23090():void
+        public function _Str_23090(PhotoId:String):void
         {
-            this._container.connection.send(new PurchasePhotoMessageComposer());
+            this._container.connection.send(new PurchasePhotoMessageComposer(PhotoId));
         }
 
         public function _Str_23550():void
