@@ -13,6 +13,9 @@ function dirToArray($dir)
             if (is_dir($dir . DIRECTORY_SEPARATOR . $value)) {
                 dirToArray($dir . DIRECTORY_SEPARATOR . $value);
             } else {
+                $ext = explode('.', $value)[1];
+                if ($ext !== "as")
+                    continue;
                 $paths[] = $dir . DIRECTORY_SEPARATOR . $value;
             }
         }

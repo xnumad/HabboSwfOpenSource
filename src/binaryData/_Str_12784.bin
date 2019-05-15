@@ -1,7 +1,7 @@
 <chatstyles>
 	<style id="0" assetId="normal" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="1" assetId="generic" systemStyle="true" staffOverrideable="false"/>
-	<style id="2" assetId="bot" systemStyle="true" staffOverrideable="false" allowHTML="true"/>
+	<style id="2" assetId="bot" systemStyle="true" staffOverrideable="false" allowHTML="false"/>
 	<style id="3" assetId="normal_red" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="4" assetId="normal_blue" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="5" assetId="normal_yellow" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
@@ -28,10 +28,10 @@
 	<style id="27" assetId="storm" systemStyle="false" hcOnly="true" staffOverrideable="true"/>
 	<style id="28" assetId="parrot" systemStyle="true" staffOverrideable="false"/>
 	<style id="29" assetId="pirate" systemStyle="false" hcOnly="true" staffOverrideable="true"/>
-	<style id="30" assetId="bot_guide" systemStyle="true" staffOverrideable="false" allowHTML="true"/>
+	<style id="30" assetId="bot_guide" systemStyle="true" staffOverrideable="false" allowHTML="false"/>
 	<style id="31" assetId="bot_rentable" systemStyle="true" staffOverrideable="false"/>
 	<style id="32" assetId="skelestock" systemStyle="true" staffOverrideable="false"/>
-    <style id="33" assetId="bot_frank_large" systemStyle="true" staffOverrideable="false" allowHTML="true"/>
+    <style id="33" assetId="bot_frank_large" systemStyle="true" staffOverrideable="false" allowHTML="false"/>
     <style id="34" assetId="notification" systemStyle="true" staffOverrideable="false"/>
     <style id="35" assetId="goat" systemStyle="true" staffOverrideable="false"/>
     <style id="36" assetId="santa" systemStyle="true" staffOverrideable="false"/>

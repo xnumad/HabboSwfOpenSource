@@ -317,11 +317,11 @@
                 _local_7 = false;
             }
             this._Str_20462(k, _local_2);
-			ChatColours._Str_25637(k, _local_2);
+			//ChatColours._Str_25637(k, _local_2);
             var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettingsParser._Str_12581);
 			var _local_9:BitmapData = new BitmapData(_local_8.width, _local_8.height, true, 0);
             _local_8._Str_23014(_local_9);
-            return new ChatHistoryEntryBitmapBubble(k, _local_7, _local_4, _local_9, _local_2.overlap, (uint)(_local_2._Str_5640.color));
+            return new ChatHistoryEntryBitmapBubble(k, _local_7, _local_4, _local_9, _local_2.overlap);
         }
 
         private function _Str_20462(k:ChatItem, _arg_2:ChatStyle):void

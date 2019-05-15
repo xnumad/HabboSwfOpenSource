@@ -20,7 +20,7 @@
         private var _canIgnore:Boolean;
         private var _userName:String;
 
-        public function ChatHistoryEntryBitmapBubble(k:ChatItem, _arg_2:Boolean, _arg_3:String, _arg_4:BitmapData, _arg_5:Rectangle=null, _color:uint = 0)
+        public function ChatHistoryEntryBitmapBubble(k:ChatItem, _arg_2:Boolean, _arg_3:String, _arg_4:BitmapData, _arg_5:Rectangle=null)
         {
             this._overlap = _arg_5;
             this._userId = k.userId;
@@ -33,7 +33,6 @@
             _local_6.antiAliasType = AntiAliasType.ADVANCED;
             _local_6.embedFonts = true;
             _local_6.gridFitType = GridFitType.PIXEL;
-			_local_6.textColor = _color;
             var _local_7:int = _arg_4.height;
             var _local_8:int = ChatHistoryLayoutEnum._Str_7140;
             var _local_9:int = Math.max(ChatHistoryLayoutEnum._Str_13160, (ChatHistoryLayoutEnum._Str_13160 + _arg_5.top));

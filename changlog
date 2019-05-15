@@ -1,0 +1,7 @@
+-ModTool icon hidden for player
+-TvYoutube disabled box and thumbnail fixed
+-Camera fixed
+-Background crash fixed
+-Moving assets in a corresponding folder (images, binaryData, sounds, fonts)
+-First rename files assets (.as file name)
+-

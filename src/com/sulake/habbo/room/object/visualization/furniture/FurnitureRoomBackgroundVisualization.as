@@ -10,6 +10,7 @@
     {
         private var _imageOffsets:Dictionary;
 
+
         override public function dispose():void
         {
             super.dispose();
