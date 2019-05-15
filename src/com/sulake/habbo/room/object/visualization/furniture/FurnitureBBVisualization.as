@@ -5,8 +5,6 @@
 
     public class FurnitureBBVisualization extends FurnitureBrandedImageVisualization 
     {
-
-
         override protected function getAdClickUrl(k:IRoomObjectModel):String
         {
             return k.getString(RoomObjectVariableEnum.FURNITURE_BRANDING_URL);

@@ -10,7 +10,6 @@
     {
         private var _imageOffsets:Dictionary;
 
-
         override public function dispose():void
         {
             super.dispose();
@@ -93,8 +92,7 @@
 
         override protected function getSpriteMouseCapture(k:int, _arg_2:int, _arg_3:int):Boolean
         {
-            var _local_4:Boolean;
-            return _local_4;
+            return false;
         }
 
         private function _Str_13309(k:int, _arg_2:int):Number
