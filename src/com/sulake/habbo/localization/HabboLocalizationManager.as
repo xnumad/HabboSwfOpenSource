@@ -205,7 +205,7 @@
                     return _local_2;
                 }
             }
-            return k[0];
+            return "";//k[0];
         }
 
         private function _Str_12918(k:int):String
