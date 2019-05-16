@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="playlist_subwindow_add_songs" width="261" height="56" version="0.1" uid="5F13133C-547C-2C38-E305-29CF1AB05D5B">
+  <window>
+    <container x="0" y="0" width="261" height="56" params="16" style="0">
+      <children>
+        <bitmap x="0" y="0" width="180" height="56" params="16" style="0" name="background_image" clipping="false" background="true"/>
+        <bitmap x="8" y="3" width="46" height="46" params="16" style="0" name="add_songs_icon_image" tags="ICON"/>
+        <text x="63" y="1" width="270" height="19" params="16" style="0" caption="%24%7Bplaylist.editor.add.songs.to.your.playlist%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_style" value="bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <text x="63" y="21" width="200" height="32" params="16" style="0" caption="%24%7Bplaylist.editor.text.click.song.to.choose.click.again.to.move%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

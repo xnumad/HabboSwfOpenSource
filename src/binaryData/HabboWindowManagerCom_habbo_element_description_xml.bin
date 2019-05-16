@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<skin name="habbo" version="0.1">
+
+	<!-- Window types -->
+    <window type="null"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_frame_xml"			layout="null" />
+
+    <!-- Defaults -->
+    <window type="container"	intent="default" style="0"	renderer="null"	/>
+    <window type="bitmap"		intent="default" style="0"	renderer="bitmap" />
+    <window type="static_bitmap"    intent="default" style="0"   renderer="bitmap" />
+    <window type="background"		intent="default" style="0"	renderer="null"	/>
+
+    <window type="text"						intent="default" style="0"	renderer="text" asset="text_styles_css"	/>
+    <window type="formatted_text"			intent="default" style="0"	renderer="text" asset="text_styles_css"	/>
+    <window type="label"					intent="default" style="0"	renderer="label" asset="text_styles_css" />
+    <window type="password"					intent="default" style="0"	renderer="text" asset="text_styles_css" />
+    <window type="link"						intent="default" style="0"	renderer="text" asset="text_styles_css"	/>
+
+    <!-- Volter Defaults -->
+    <window type="border"		intent="white with sharper corners" style="3"	renderer="skin" asset="habbo_skin_border_slot_xml"		layout="border_slot" />
+    <window type="border"		intent="white with thin dark border" style="4"	renderer="skin" asset="habbo_skin_border_4_xml"	        layout="border_4" />
+    <window type="border"		intent="white with thin dark border and sharper corners" style="5"	renderer="skin" asset="habbo_skin_border_5_xml"	        layout="border_5" />
+    <window type="border"		intent="grey with thick border" style="6"	renderer="skin" asset="habbo_skin_border_6_xml"	        layout="border_6" />
+    <window type="border"		intent="grey with thin border" style="7"	renderer="skin" asset="habbo_skin_border_7_xml"	        layout="border_7" />
+    <window type="border"		intent="white with thick dark border" style="8"	renderer="skin" asset="habbo_skin_border_8_xml"	        layout="border_8" />
+    <window type="border"		intent="transp. grey with thick border" style="9"	renderer="skin" asset="habbo_skin_border_9_xml"	        layout="border_9" />
+
+    <!-- New navigator -->
+    <window type="border"		intent="white with drop shadow" style="10"	renderer="skin"	asset="habbo_skin_border_colorless_dropshadow_xml"	layout="border_colorless_dropshadow" />
+
+    <!-- Bubble -->
+    <window type="bubble"					intent="default" style="0"	renderer="skin"	asset="habbo_skin_bubble_xml"               window_layout="habbo_window_layout_bubble_xml" layout="bubble"	/>
+    <window type="bubble_pointer_up"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_bubble_pointer_up_xml"	layout="pointer_up"   />
+    <window type="bubble_pointer_right"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_bubble_pointer_right_xml"	layout="pointer_right"   />
+    <window type="bubble_pointer_down"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_bubble_pointer_down_xml"	layout="pointer_down"   />
+    <window type="bubble_pointer_left"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_bubble_pointer_left_xml"	layout="pointer_left"   />
+
+        <!-- ubuntu bubble -->
+     <window type="bubble"                  intent="default" style="7"  renderer="skin" asset="habbo_skin_bubble_7_xml"               
+        window_layout="habbo_window_layout_bubble_7_xml" layout="bubble_7" />
+    <window type="bubble_pointer_up"        intent="default" style="7"  renderer="skin" asset="habbo_skin_bubble_pointer_up_7_xml"    layout="pointer_up_7" />
+    <window type="bubble_pointer_right"     intent="default" style="7"  renderer="skin" asset="habbo_skin_bubble_pointer_right_7_xml" layout="pointer_right_7"   />
+    <window type="bubble_pointer_down"      intent="default" style="7"  renderer="skin" asset="habbo_skin_bubble_pointer_down_7_xml"  layout="pointer_down_7"   />
+    <window type="bubble_pointer_left"      intent="default" style="7"  renderer="skin" asset="habbo_skin_bubble_pointer_left_7_xml"  layout="pointer_left_7"   />
+
+    <window type="tab_context"			intent="default" style="0"	renderer="null" asset="habbo_skin_tab_context_xml"				window_layout="habbo_window_layout_tab_context_xml" layout="tab_context" />
+    <window type="tooltip"			    intent="default" style="0"	renderer="skin" asset="habbo_skin_tooltip_xml"					window_layout="habbo_window_layout_tooltip_xml" layout="tooltip" />
+
+    <window type="scrollable_itemlist_vertical" intent="default" style="0" renderer="null" window_layout="habbo_window_layout_scrollable_itemlist_vertical_xml" />
+    <window type="scrollable_itemgrid_vertical" intent="default" style="0" renderer="null" window_layout="habbo_window_layout_scrollable_itemgrid_vertical_xml" />
+
+    <!-- Volter Blue -->
+	<window type="frame"		intent="blue" style="0"	renderer="skin"	asset="habbo_skin_frame_xml"			window_layout="habbo_window_layout_frame_xml" layout="frame" color="0xff418db0" />
+    <window type="border"		intent="white with thin light border" style="0"	renderer="skin"	asset="habbo_skin_border_white_xml"		layout="border_white"	/>
+    <window type="header"		intent="blue" style="0"	renderer="skin"	asset="habbo_skin_header_xml"			window_layout="habbo_window_layout_header_xml" layout="header"	color="0xff418db0" treshold="1" />
+	<window type="button"				intent="default" style="0"	renderer="skin"	asset="habbo_skin_button_default_xml"				window_layout="habbo_window_layout_button_xml" layout="button" />
+	<window type="button_thick"			intent="default" style="0"	renderer="skin" asset="habbo_skin_button_thick_xml"					window_layout="habbo_window_layout_button_thick_xml" layout="button_thick" />
+    <window type="container_button"		intent="default" style="0"	renderer="skin" asset="habbo_skin_button_default_xml"			layout="button" />
+	<window type="button_group_left"	intent="default" style="0"	renderer="skin" asset="habbo_skin_button_group_left_xml"	        window_layout="habbo_window_layout_button_xml" layout="button_group_left" />
+	<window type="button_group_center"	intent="default" style="0"	renderer="skin" asset="habbo_skin_button_group_center_xml"	        window_layout="habbo_window_layout_button_xml" layout="button_group_center" />
+	<window type="button_group_right"	intent="default" style="0"	renderer="skin" asset="habbo_skin_button_group_right_xml"           window_layout="habbo_window_layout_button_xml" layout="button_group_right" />
+	<window type="scaler"				intent="default" style="0"	renderer="skin"	asset="habbo_skin_scaler_xml"					window_layout="habbo_window_layout_scaler_xml" layout="scaler" />
+    <window type="closebutton"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_button_close_xml"				layout="button_close"		treshold="0" background="true" />
+	<window type="dropmenu"				intent="default" style="0"	renderer="skin"	asset="habbo_skin_dropmenu_xml"					window_layout="habbo_window_layout_dropmenu_xml" layout="dropmenu_frame" />
+	<window type="dropmenu_item"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_dropmenu_xml"					window_layout="habbo_window_layout_dropmenu_item_xml" layout="dropmenu_item" />
+	<window type="radiobutton"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_button_radio_xml"				layout="button_radio" />
+	<window type="checkbox"				intent="default" style="0"	renderer="skin"	asset="habbo_skin_button_checkbox_xml"			layout="button_checkbox" />
+	<window type="tab_button"			intent="default" style="0"	renderer="skin" asset="habbo_skin_button_tab_xml"				window_layout="habbo_window_layout_tab_button_xml" layout="button_tab" />
+	<window type="tab_container_button"	intent="default" style="0"	renderer="skin" asset="habbo_skin_button_tab_xml"				layout="button_tab" />
+	<window type="tab_content"			intent="default" style="0"	renderer="skin" asset="habbo_skin_border_white_xml"				layout="border_white" />
+    <window type="droplist"			    intent="default" style="0"	renderer="skin"	asset="habbo_skin_droplist_xml"					window_layout="habbo_window_layout_droplist_xml" layout="droplist_frame" />
+    <window type="droplist_item"	    intent="default" style="0"	renderer="skin"	asset="habbo_skin_droplist_xml"					layout="droplist_item" />
+    <window type="scrollbar_horizontal"					intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	window_layout="habbo_window_layout_scrollbar_horizontal_xml" layout="scrollbar_horizontal" />
+    <window type="scrollbar_vertical"					intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	window_layout="habbo_window_layout_scrollbar_vertical_xml" layout="scrollbar_vertical" />
+    <window type="scrollbar_slider_button_up"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_button_up"		/>
+    <window type="scrollbar_slider_button_down"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_button_down"		/>
+    <window type="scrollbar_slider_button_left"			intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_button_left"		/>
+    <window type="scrollbar_slider_button_right"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_button_right"		/>
+    <window type="scrollbar_slider_track_horizontal"	intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_track_horizontal"	/>
+    <window type="scrollbar_slider_track_vertical"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_track_vertical"	/>
+    <window type="scrollbar_slider_bar_horizontal"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_lift_horizontal"	/>
+    <window type="scrollbar_slider_bar_vertical"		intent="default" style="0"	renderer="skin"	asset="habbo_skin_scrollbar_xml"	layout="scrollbar_lift_vertical"	/>
+
+
+    <!-- Volter Black -->
+	<window type="frame"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_frame_xml"			window_layout="habbo_window_layout_frame_xml" layout="frame" color="0xff4c4c4c" />
+	<window type="border"		intent="black borderless" style="1"	renderer="skin"	asset="habbo_skin_border_black_xml"		layout="border_black" />
+	<window type="header"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_header_xml"			window_layout="habbo_window_layout_header_black_xml" layout="header" color="0xff4c4c4c" treshold="1" />
+	<window type="button"				intent="black" style="1"	renderer="skin" asset="habbo_skin_button_default_black_xml"			window_layout="habbo_window_layout_button_black_xml" layout="button_black" />
+	<window type="button_thick"			intent="black" style="1"	renderer="skin" asset="habbo_skin_button_thick_black_xml"			window_layout="habbo_window_layout_button_thick_black_xml" layout="button_thick_black" />
+    <window type="container_button"		intent="black" style="1"	renderer="skin" asset="habbo_skin_button_default_black_xml"		layout="button_black" />
+	<window type="button_group_left"	intent="black" style="1"	renderer="skin" asset="habbo_skin_button_group_left_black_xml"      window_layout="habbo_window_layout_button_black_xml" layout="button_group_left_black" />
+	<window type="button_group_center"	intent="black" style="1"	renderer="skin" asset="habbo_skin_button_group_center_black_xml"    window_layout="habbo_window_layout_button_black_xml" layout="button_group_center_black" />
+	<window type="button_group_right"	intent="black" style="1"	renderer="skin" asset="habbo_skin_button_group_right_black_xml"     window_layout="habbo_window_layout_button_black_xml" layout="button_group_right_black" />
+	<window type="scaler"				intent="black" style="1"	renderer="skin"	asset="habbo_skin_scaler_xml"					window_layout="habbo_window_layout_scaler_xml" layout="scaler" />
+	<window type="closebutton"			intent="black" style="1"	renderer="skin"	asset="habbo_skin_button_close_black_xml"		layout="button_close_black"	treshold="0" background="true" />
+	<window type="dropmenu"				intent="black" style="1"	renderer="skin"	asset="habbo_skin_dropmenu_black_xml"			window_layout="habbo_window_layout_dropmenu_black_xml" layout="dropmenu_frame_black" />
+    <window type="dropmenu_item"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_dropmenu_black_xml"			window_layout="habbo_window_layout_dropmenu_item_black_xml" layout="dropmenu_item_black" />
+	<window type="radiobutton"			intent="black" style="1"	renderer="skin"	asset="habbo_skin_button_radio_black_xml"		layout="button_radio_black" />
+	<window type="checkbox"				intent="black" style="1"	renderer="skin"	asset="habbo_skin_button_checkbox_black_xml"	layout="button_checkbox_black" />
+	<window type="tab_button"			intent="black" style="1"	renderer="skin" asset="habbo_skin_button_tab_black_xml"			window_layout="habbo_window_layout_tab_button_black_xml" layout="button_tab_black" />
+	<window type="tab_container_button"	intent="black" style="1"	renderer="skin" asset="habbo_skin_button_tab_black_xml"			layout="button_tab_black" />
+	<window type="tab_content"			intent="black" style="1"	renderer="skin" asset="habbo_skin_border_black_xml"				layout="border_black" />
+    <window type="droplist"			    intent="white" style="1"	renderer="skin"	asset="habbo_skin_droplist_thick_xml"			window_layout="habbo_window_layout_droplist_xml" layout="droplist_thick_frame" />
+    <window type="droplist_item"	    intent="white" style="1"	renderer="skin"	asset="habbo_skin_droplist_xml"			        layout="droplist_item" />
+    <window type="scrollbar_horizontal"					intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	window_layout="habbo_window_layout_scrollbar_horizontal_xml" layout="scrollbar_horizontal_black" />
+    <window type="scrollbar_vertical"					intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	window_layout="habbo_window_layout_scrollbar_vertical_xml" layout="scrollbar_vertical_black" />
+    <window type="scrollbar_slider_button_up"			intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_button_up_black"			/>
+    <window type="scrollbar_slider_button_down"			intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_button_down_black"		/>
+    <window type="scrollbar_slider_button_left"			intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_button_left_black"		/>
+    <window type="scrollbar_slider_button_right"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_button_right_black"		/>
+    <window type="scrollbar_slider_track_horizontal"	intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_track_horizontal_black"	/>
+    <window type="scrollbar_slider_track_vertical"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_track_vertical_black"		/>
+    <window type="scrollbar_slider_bar_horizontal"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_lift_horizontal_black"	/>
+    <window type="scrollbar_slider_bar_vertical"		intent="black" style="1"	renderer="skin"	asset="habbo_skin_scrollbar_black_xml"	layout="scrollbar_lift_vertical_black"		/>
+
+    <!-- Volter Yellow -->
+    <window type="frame"		intent="yellow" style="2"	renderer="skin"	asset="habbo_skin_frame_xml"			window_layout="habbo_window_layout_frame_xml" layout="frame" color="0xfffac200" />
+	<window type="border"		intent="white borderless" style="2"	renderer="skin"	asset="habbo_skin_border_colorless_xml"	layout="border_colorless" />
+	<window type="header"		intent="yellow" style="2"	renderer="skin"	asset="habbo_skin_header_xml"			window_layout="habbo_window_layout_header_xml" layout="header"	color="0xfffac200" treshold="1" />
+	<window type="button"				intent="white" style="2"	renderer="skin" asset="habbo_skin_button_default_white_xml"			window_layout="habbo_window_layout_button_xml" layout="button_white" />
+	<window type="button_thick"			intent="white" style="2"	renderer="skin" asset="habbo_skin_button_thick_white_xml"			window_layout="habbo_window_layout_button_thick_xml" layout="button_thick_white" />
+    <window type="container_button"		intent="white" style="2"	renderer="skin" asset="habbo_skin_button_default_white_xml"		layout="button_white" />
+	<window type="button_group_left"	intent="white" style="2"	renderer="skin" asset="habbo_skin_button_group_left_white_xml"      window_layout="habbo_window_layout_button_xml" layout="button_group_left_white" />
+	<window type="button_group_center"	intent="white" style="2"	renderer="skin" asset="habbo_skin_button_group_center_white_xml"    window_layout="habbo_window_layout_button_xml" layout="button_group_center_white" />
+	<window type="button_group_right"	intent="white" style="2"	renderer="skin" asset="habbo_skin_button_group_right_white_xml"     window_layout="habbo_window_layout_button_xml" layout="button_group_right_white" />
+	<window type="scaler"				intent="white" style="2"	renderer="skin"	asset="habbo_skin_scaler_xml"					window_layout="habbo_window_layout_scaler_xml" layout="scaler" />
+	<window type="closebutton"			intent="white" style="2"	renderer="skin"	asset="habbo_skin_button_close_white_xml"		layout="button_close_white"	treshold="0" background="true" />
+	<window type="radiobutton"			intent="white" style="2"	renderer="skin"	asset="habbo_skin_button_radio_white_xml"		layout="button_radio_white" />
+	<window type="checkbox"				intent="white" style="2"	renderer="skin"	asset="habbo_skin_button_checkbox_white_xml"	layout="button_checkbox_white" />
+	<window type="tab_button"			intent="white" style="2"	renderer="skin" asset="habbo_skin_button_tab_white_xml"			window_layout="habbo_window_layout_tab_button_xml" layout="button_tab_white" />
+	<window type="tab_container_button"	intent="white" style="2"	renderer="skin" asset="habbo_skin_button_tab_white_xml"			layout="button_tab_white" />
+	<window type="tab_content"			intent="white" style="2"	renderer="skin" asset="habbo_skin_border_colorless_xml"			layout="border_colorless" />
+
+
+
+    <!-- Ubuntu Default -->
+    <window type="frame"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_frame_3_xml"			window_layout="habbo_window_layout_frame_3_xml" layout="frame_3" color="0xff418db0" />
+    <window type="header"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_header_3_xml"			window_layout="habbo_window_layout_header_3_xml" layout="header_3"	color="0xffffffff" treshold="0" />
+    <window type="scaler"				intent="default" style="3"	renderer="skin"	asset="habbo_skin_scaler_3_xml"					window_layout="habbo_window_layout_scaler_3_xml" layout="scaler_3" />
+    <window type="button"				intent="default" style="3"	renderer="skin" asset="habbo_skin_button_shiny_default_xml"			window_layout="habbo_window_layout_button_shiny_xml" layout="button_shiny"	/>
+    <window type="button_thick"			intent="default" style="3"	renderer="skin" asset="habbo_skin_button_shiny_thick_xml"			window_layout="habbo_window_layout_button_shiny_thick_xml" layout="button_shiny_thick"	/>
+    <window type="container_button"		intent="default" style="3"	renderer="skin" asset="habbo_skin_button_shiny_thick_xml"		layout="button_shiny_thick"	/>
+    <window type="closebutton"			intent="default" style="3"	renderer="skin"	asset="habbo_skin_button_close_3_xml"			layout="button_close_3"		treshold="0" background="true" />
+    <window type="dropmenu"				intent="default" style="3"	renderer="skin"	asset="habbo_skin_dropmenu_3_xml"				window_layout="habbo_window_layout_dropmenu_3_xml" layout="dropmenu_frame_3" />
+    <window type="dropmenu_item"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_dropmenu_3_xml"				window_layout="habbo_window_layout_dropmenu_item_3_xml" layout="dropmenu_item_3" />
+    <window type="tab_button"			intent="default" style="3"	renderer="skin" asset="habbo_skin_button_tab_3_xml"				window_layout="habbo_window_layout_tab_button_3_xml" layout="button_tab_3" />
+    <window type="tab_container_button"	intent="default" style="3"	renderer="skin" asset="habbo_skin_button_tab_3_xml"			    layout="button_tab_3" />
+    <window type="tab_content"			intent="default" style="3"	renderer="skin" asset="habbo_skin_tab_content_3_xml"			layout="tab_content_3" />
+    <window type="tab_context"			intent="default" style="3"	renderer="null" asset="habbo_skin_tab_context_xml"				window_layout="habbo_window_layout_tab_context_3_xml" layout="tab_context" />
+    <window type="scrollbar_horizontal"					intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	window_layout="habbo_window_layout_scrollbar_horizontal_xml" layout="scrollbar_horizontal_3" />
+    <window type="scrollbar_vertical"					intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	window_layout="habbo_window_layout_scrollbar_vertical_xml" layout="scrollbar_vertical_3" />
+    <window type="scrollbar_slider_button_up"			intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_button_up_3"			/>
+    <window type="scrollbar_slider_button_down"			intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_button_down_3"		/>
+    <window type="scrollbar_slider_button_left"			intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_button_left_3"		/>
+    <window type="scrollbar_slider_button_right"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_button_right_3"		/>
+    <window type="scrollbar_slider_track_horizontal"	intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_track_horizontal_3"	/>
+    <window type="scrollbar_slider_track_vertical"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_track_vertical_3"		/>
+    <window type="scrollbar_slider_bar_horizontal"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_lift_horizontal_3"	/>
+    <window type="scrollbar_slider_bar_vertical"		intent="default" style="3"	renderer="skin"	asset="habbo_skin_scrollbar_3_xml"	layout="scrollbar_lift_vertical_3"		/>
+    <window type="scrollable_itemlist_vertical" intent="default" style="3" renderer="null" window_layout="habbo_window_layout_scrollable_itemlist_vertical_ubuntu_xml" />
+    <window type="scrollable_itemgrid_vertical" intent="default" style="3" renderer="null" window_layout="habbo_window_layout_scrollable_itemgrid_vertical_ubuntu_xml" />
+
+    <!-- Ubuntu Black -->
+    <window type="frame"		intent="light" style="4"	renderer="skin"	asset="habbo_skin_frame_3_xml"			window_layout="habbo_window_layout_frame_3_xml" layout="frame_3" color="0xff67a3bf" />
+    <window type="header"		intent="light" style="4"	renderer="skin"	asset="habbo_skin_header_3_xml"			window_layout="habbo_window_layout_header_3_xml" layout="header_3"	color="0xffffffff" treshold="0" />
+    <window type="scaler"				intent="light" style="4"	renderer="skin"	asset="habbo_skin_scaler_3_xml"					window_layout="habbo_window_layout_scaler_3_xml" layout="scaler_3" />
+    <window type="button"				intent="black" style="4"	renderer="skin" asset="habbo_skin_button_shiny_black_xml"			window_layout="habbo_window_layout_button_shiny_black_xml" layout="button_shiny_black"	/>
+    <window type="button_thick"			intent="black" style="4"	renderer="skin" asset="habbo_skin_button_shiny_thick_black_xml"		window_layout="habbo_window_layout_button_shiny_thick_black_xml" layout="button_shiny_thick_black"	/>
+    <window type="container_button"		intent="black" style="4"	renderer="skin" asset="habbo_skin_button_shiny_large_xml"		layout="button_shiny_large"	/>
+    <window type="closebutton"			intent="help" style="4"	    renderer="skin"	asset="habbo_skin_button_help_3_xml"			layout="button_help_3"		treshold="0" background="true" />
+
+    <!-- Ubuntu White -->
+    <window type="button"				intent="white" style="5"	renderer="skin" asset="habbo_skin_button_shiny_default_xml"			window_layout="habbo_window_layout_button_shiny_black_xml" layout="button_shiny"	/>
+    <window type="button_thick"			intent="white" style="5"	renderer="skin" asset="habbo_skin_button_shiny_thick_xml"			window_layout="habbo_window_layout_button_shiny_thick_black_xml" layout="button_shiny_thick"	/>
+    <window type="container_button"		intent="white" style="5"	renderer="skin" asset="habbo_skin_button_shiny_large_xml"		layout="button_shiny_large"	/>
+
+    <!-- Ubuntu Green -->
+    <window type="button"				intent="green" style="6"	renderer="skin" asset="habbo_skin_button_shiny_default_xml"			window_layout="habbo_window_layout_button_shiny_black_xml" layout="button_shiny" color="0x00aa00" />
+    <window type="button_thick"			intent="green" style="6"	renderer="skin" asset="habbo_skin_button_shiny_thick_xml"			window_layout="habbo_window_layout_button_shiny_thick_black_xml" layout="button_shiny_thick" color="0x00aa00"/>
+    <window type="container_button"		intent="green" style="6"	renderer="skin" asset="habbo_skin_button_shiny_thick_xml"		layout="button_shiny_thick"	color="0x00aa00"/>
+
+    <!-- Ubuntu bubble -->
+    <window type="frame"		        intent="bubble" style="7"	renderer="skin"	asset="habbo_skin_frame_7_xml"			window_layout="habbo_window_layout_frame_7_xml" layout="frame_7" color="0xffffffff" />
+    <window type="header"		        intent="bubble" style="7"	renderer="skin"	asset="habbo_skin_header_7_xml"			window_layout="habbo_window_layout_header_7_xml" layout="header_7"	color="0xffffffff" treshold="0" />
+    <window type="frame_pointer_down"	intent="bubble" style="7"	renderer="skin"	asset="habbo_skin_frame_pointer_down_xml"	layout="frame_pointer_down"   />
+
+
+	<!-- Illumina light -->
+    <window type="frame" intent="default" 	style="100" renderer="skin" asset="illumina_light_skin_frame_xml" window_layout="illumina_light_frame_xml" layout="illumina_light_frame" />
+    <window type="frame" intent="modal" 	style="101" renderer="null" window_layout="illumina_light_frame_modal_xml" />
+    <window type="scaler" intent="default" style="100" renderer="null" />
+
+	<window type="border" intent="default"      style="100" renderer="skin" asset="illumina_light_skin_border_xml"              layout="illumina_light_border"/>
+    <window type="border" intent="frame"        style="101" renderer="skin" asset="illumina_light_skin_frame_xml"               layout="illumina_light_frame"/>
+    <window type="border" intent="sunk"         style="102" renderer="skin" asset="illumina_light_skin_border_sunk_xml"         layout="illumina_light_border_sunk"/>
+    <window type="border" intent="light"        style="103" renderer="skin" asset="illumina_light_skin_border_light_xml"        layout="illumina_light_border_light"/>
+    <window type="border" intent="raised"       style="104" renderer="skin" asset="illumina_light_skin_border_raised_xml"       layout="illumina_light_border_raised"/>
+    <window type="border" intent="input"        style="105" renderer="skin" asset="illumina_light_skin_border_input_xml"        layout="illumina_light_border_input"/>
+    <window type="border" intent="chat bubble"  style="106" renderer="skin" asset="illumina_light_skin_border_chat_bubble_xml"  layout="illumina_light_border_chat_bubble"/>
+    <window type="border" intent="balloon"      style="107" renderer="skin" asset="illumina_light_skin_border_balloon_xml"      layout="illumina_light_border_balloon"/>
+    <window type="border" intent="info box"     style="108" renderer="skin" asset="illumina_light_skin_border_infobox_xml"      layout="illumina_light_border_infobox" color="0x676767"/>
+
+    <window type="button" intent="landing view" style="100" renderer="skin" asset="illumina_light_skin_button_xml" window_layout="illumina_light_button_xml" layout="illumina_light_button"/>
+    <window type="button" intent="window"       style="101" renderer="skin" asset="illumina_light_skin_button_xml" window_layout="illumina_light_button_xml" layout="illumina_light_button" color="0xbbbbbb"/>
+    <window type="button" intent="plain"        style="102" renderer="skin" asset="illumina_light_skin_button_plain_xml" window_layout="illumina_light_button_plain_xml" layout="illumina_light_button_plain"/>
+    <window type="button" intent="unetched"     style="103" renderer="skin" asset="illumina_light_skin_button_unetched_xml" window_layout="illumina_light_button_plain_xml" layout="illumina_light_button_unetched"/>
+
+    <window type="container_button" intent="landing view" style="100" renderer="skin" asset="illumina_light_skin_button_xml" layout="illumina_light_button"/>
+    <window type="container_button" intent="window"       style="101" renderer="skin" asset="illumina_light_skin_button_xml" layout="illumina_light_button" color="0xbbbbbb"/>
+    <window type="container_button" intent="plain"        style="102" renderer="skin" asset="illumina_light_skin_button_plain_xml" layout="illumina_light_button_plain"/>
+    <window type="container_button" intent="unetched"     style="103" renderer="skin" asset="illumina_light_skin_button_unetched_xml" layout="illumina_light_button_unetched"/>
+
+    <window type="button_group_left"	intent="default" style="100"	renderer="skin" asset="habbo_skin_button_group_left_xml"	        window_layout="illumina_light_button_plain_xml" layout="button_group_left" />
+    <window type="button_group_center"	intent="default" style="100"	renderer="skin" asset="habbo_skin_button_group_center_xml"	        window_layout="illumina_light_button_plain_xml" layout="button_group_center" />
+    <window type="button_group_right"	intent="default" style="100"	renderer="skin" asset="habbo_skin_button_group_right_xml"           window_layout="illumina_light_button_plain_xml" layout="button_group_right" />
+
+    <window type="dropmenu"				intent="default" style="100"	renderer="skin"	asset="habbo_skin_dropmenu_xml"					window_layout="illumina_light_dropmenu_xml" layout="dropmenu_frame" />
+    <window type="dropmenu_item"		intent="default" style="100"	renderer="skin"	asset="habbo_skin_dropmenu_xml"					window_layout="illumina_light_dropmenu_item_xml" layout="dropmenu_item" />
+
+    <window type="checkbox" intent="switch" style="100" renderer="skin"	asset="illumina_light_skin_switch_xml" window_layout="illumina_light_switch_xml" layout="button_checkbox" treshold="0" height_min="21" height_max="21" />
+    <window type="checkbox" intent="basic"  style="101" renderer="skin"	asset="illumina_light_skin_checkbox_basic_xml" window_layout="illumina_light_checkbox_basic_xml" layout="button_checkbox" treshold="0" height_min="21" height_max="21" />
+
+    <window type="radiobutton" intent="default" style="100" renderer="skin"	asset="illumina_light_skin_radio_button_xml" window_layout="illumina_light_radio_button_xml" layout="button_radio" treshold="0" height_min="16" height_max="16" />
+
+    <window type="scrollbar_horizontal"               intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" window_layout="illumina_light_scrollbar_horizontal_xml" layout="illumina_light_scrollbar_vertical" />
+    <window type="scrollbar_slider_track_horizontal"  intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" layout="illumina_light_scrollbar_track_horizontal" />
+    <window type="scrollbar_slider_bar_horizontal"	  intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" layout="illumina_light_scrollbar_lift_horizontal"	/>
+    <window type="scrollbar_vertical"                 intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" window_layout="illumina_light_scrollbar_vertical_xml" layout="illumina_light_scrollbar_vertical" />
+    <window type="scrollbar_slider_track_vertical"	  intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" layout="illumina_light_scrollbar_track_vertical" />
+    <window type="scrollbar_slider_bar_vertical"	  intent="default" 	style="100" 	renderer="skin" asset="illumina_light_skin_scrollbar_xml" layout="illumina_light_scrollbar_lift_vertical"	/>
+    <window type="scrollable_itemlist_vertical"       intent="default" 	style="100" 	renderer="null" window_layout="illumina_light_scrollable_itemlist_vertical_xml" />
+
+	<!-- Illumina dark -->
+	<window type="frame"    intent="default" style="200" renderer="skin" asset="illumina_dark_skin_frame_xml"	    window_layout="illumina_dark_frame_xml" layout="illumina_dark_frame"/>
+	<window type="border"   intent="default" style="200" renderer="skin" asset="illumina_dark_skin_border_xml"      	layout="illumina_dark_border"/>
+	<window type="header"   intent="default" style="200" renderer="skin" asset="illumina_dark_skin_header_xml"      	window_layout="illumina_dark_header_xml" layout="illumina_dark_header"/>
+    <window type="button"   intent="default" style="200" renderer="skin" asset="illumina_dark_skin_button_xml"      	window_layout="illumina_dark_button_xml" layout="illumina_dark_button"/>
+
+    <window type="container_button" intent="default" style="200" renderer="skin" asset="illumina_dark_skin_button_xml" layout="illumina_dark_button"/>
+
+    <window type="scrollbar_horizontal"               intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" window_layout="illumina_dark_scrollbar_horizontal_xml" layout="illumina_dark_scrollbar_vertical" />
+    <window type="scrollbar_slider_track_horizontal"  intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" layout="illumina_dark_scrollbar_track_horizontal" />
+    <window type="scrollbar_slider_bar_horizontal"	  intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" layout="illumina_dark_scrollbar_lift_horizontal"	/>
+    <window type="scrollbar_vertical"                 intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" window_layout="illumina_dark_scrollbar_vertical_xml" layout="illumina_dark_scrollbar_vertical" />
+    <window type="scrollbar_slider_track_vertical"	  intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" layout="illumina_dark_scrollbar_track_vertical" />
+    <window type="scrollbar_slider_bar_vertical"	  intent="default" 	style="200" 	renderer="skin" asset="illumina_dark_skin_scrollbar_xml" layout="illumina_dark_scrollbar_lift_vertical"	/>
+
+
+	<!-- Icon types - TODO: It's a stupid idea to use styles for this!!! -->
+	
+	<window type="icon" intent="Simple arrow down" style="0" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_0" /></states>
+	</window>
+	<window type="icon" intent="Simple arrow up" style="1" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_1" /></states>
+	</window>
+	<window type="icon" intent="Simple arrow left" style="2" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_2" /></states>
+	</window>
+	<window type="icon" intent="Simple arrow right" style="3" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_3" /></states>
+	</window>
+	<window type="icon" intent="Triangle arrow left" style="4" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_4" /></states>
+	</window>
+	<window type="icon" intent="Triangle arrow right" style="5" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_5" /></states>
+	</window>
+	<window type="icon" intent="Triangle arrow up" style="6" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_6" /></states>
+	</window>
+	<window type="icon" intent="Triangle arrow down" style="7" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_7" /></states>
+	</window>
+	<window type="icon" intent="Symbol Accept" style="8" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_8" /></states>
+	</window>
+	<window type="icon" intent="Symbol Decline" style="9" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_9" /></states>
+	</window>
+	<window type="icon" intent="Coin" style="10" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon32">
+		<states><state name="default" layout="icon32" template="icon_10" /></states>
+	</window>
+    <window type="icon" intent="Club icon small" style="11" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_11" /></states>
+	</window>
+    <window type="icon" intent="VIP icon small" style="12" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_12" /></states>
+	</window>
+    <window type="icon" intent="Club icon square" style="13" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon24">
+		<states><state name="default" layout="icon24" template="icon_13" /></states>
+	</window>
+    <window type="icon" intent="VIP icon square" style="14" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon24">
+		<states><state name="default" layout="icon24" template="icon_14" /></states>
+	</window>
+    <window type="icon" intent="Club icon square big" style="15" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon32">
+		<states><state name="default" layout="icon32" template="icon_15" /></states>
+	</window>
+    <window type="icon" intent="VIP icon square big" style="16" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon32">
+		<states><state name="default" layout="icon32" template="icon_16" /></states>
+	</window>
+    <window type="icon" intent="Club icon gigantic" style="17" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon32">
+		<states><state name="default" layout="icon32" template="icon_17" /></states>
+	</window>
+    <window type="icon" intent="VIP icon gigantic" style="18" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon32">
+		<states><state name="default" layout="icon32" template="icon_18" /></states>
+	</window>
+    <window type="icon" intent="Pixel icon" style="19" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_19" /></states>
+	</window>
+	<window type="icon" intent="Clear text field icon" style="20" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon16">
+		<states><state name="default" layout="icon16" template="icon_20" /></states>
+	</window>
+    <window type="icon" intent="Extended profile icon" style="21" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15">
+		<states><state name="default" layout="icon15" template="icon_21" /></states>
+	</window>
+    <window type="icon" intent="Extended profile hover icon" style="22" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15">
+		<states><state name="default" layout="icon15" template="icon_22" /></states>
+	</window>
+
+    <window type="icon" intent="Loading animation frame 1" style="23" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15x15">
+		<states><state name="default" layout="icon15x15" template="icon_23" /></states>
+	</window>
+    <window type="icon" intent="Loading animation frame 2" style="24" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15x15">
+		<states><state name="default" layout="icon15x15" template="icon_24" /></states>
+	</window>
+    <window type="icon" intent="Loading animation frame 3" style="25" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15x15">
+		<states><state name="default" layout="icon15x15" template="icon_25" /></states>
+	</window>
+    <window type="icon" intent="Loading animation frame 4" style="26" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon15x15">
+		<states><state name="default" layout="icon15x15" template="icon_26" /></states>
+	</window>
+
+    <window type="icon" intent="Snowflake" style="27" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconSnowflake">
+		<states><state name="default" layout="iconSnowflake" template="icon_27" /></states>
+	</window>
+    <window type="icon" intent="Lock" style="28" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconLock">
+		<states><state name="default" layout="iconLock" template="icon_28" /></states>
+	</window>
+    <window type="icon" intent="Valentines" style="29" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconValentines">
+		<states><state name="default" layout="iconValentines" template="icon_29" /></states>
+	</window>
+
+    <window type="icon" intent="Horseshoe Big" style="30" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconHorseshoeBig">
+		<states><state name="default" layout="iconHorseshoeBig" template="icon_30" /></states>
+	</window>
+    <window type="icon" intent="Horseshoe Small" style="31" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconHorseshoeSmall">
+		<states><state name="default" layout="iconHorseshoeSmall" template="icon_31" /></states>
+	</window>
+
+    <window type="icon" intent="Ducket Big" style="32" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconDucketBig">
+		<states><state name="default" layout="iconDucketBig" template="icon_32" /></states>
+	</window>
+    <window type="icon" intent="Ducket Small" style="33" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconDucketSmall">
+		<states><state name="default" layout="iconDucketSmall" template="icon_33" /></states>
+	</window>
+
+    <window type="icon" intent="Credit Big" style="34" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCreditBig">
+		<states><state name="default" layout="iconCreditBig" template="icon_34" /></states>
+	</window>
+    <window type="icon" intent="Credit Small" style="35" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCreditSmall">
+		<states><state name="default" layout="iconCreditSmall" template="icon_35" /></states>
+	</window>
+
+    <window type="icon" intent="Subscription Point Big" style="36" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconSubscriptionPointBig">
+		<states><state name="default" layout="iconSubscriptionPointBig" template="icon_36" /></states>
+	</window>
+    <window type="icon" intent="Subscription Point Small" style="37" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconSubscriptionPointSmall">
+		<states><state name="default" layout="iconSubscriptionPointSmall" template="icon_37" /></states>
+	</window>
+
+    <window type="icon" intent="Nut Big" style="38" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconNutBig">
+		<states><state name="default" layout="iconNutBig" template="icon_38" /></states>
+	</window>
+    <window type="icon" intent="Nut Small" style="39" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconNutSmall">
+		<states><state name="default" layout="iconNutSmall" template="icon_39" /></states>
+	</window>
+
+    <window type="icon" intent="Credit And Nut Combo Big" style="40" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCreditAndNutBig">
+		<states><state name="default" layout="iconCreditAndNutBig" template="icon_40" /></states>
+	</window>
+
+    <window type="icon" intent="Diamond Big" style="41" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconDiamondBig">
+		<states><state name="default" layout="iconDiamondBig" template="icon_41" /></states>
+	</window>
+    <window type="icon" intent="Diamond Small" style="42" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconDiamondSmall">
+		<states><state name="default" layout="iconDiamondSmall" template="icon_42" /></states>
+	</window>
+
+    <window type="icon" intent="Credit And Diamond Combo Big" style="43" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCreditAndDiamondBig">
+		<states><state name="default" layout="iconCreditAndDiamondBig" template="icon_43" /></states>
+	</window>
+
+    <window type="icon" intent="Star Big" style="44" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconStarBig">
+        <states><state name="default" layout="iconStarBig" template="icon_44" /></states>
+    </window>
+
+    <window type="icon" intent="Star Small" style="45" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconStarSmall">
+        <states><state name="default" layout="iconStarSmall" template="icon_45" /></states>
+    </window>
+
+    <window type="icon" intent="Cloud Small" style="46" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCloudSmall">
+        <states><state name="default" layout="iconCloudSmall" template="icon_46" /></states>
+    </window>
+
+    <window type="icon" intent="Cloud Big" style="47" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCloudBig">
+        <states><state name="default" layout="iconCloudBig" template="icon_47" /></states>
+    </window>
+
+    <window type="icon" intent="Cloud And Credits Big" style="48" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconCloudAndCreditsBig">
+        <states><state name="default" layout="iconCloudAndCreditsBig" template="icon_48" /></states>
+    </window>
+
+    <window type="icon" intent="Pumpkin Small" style="49" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconPumpkinSmall">
+        <states><state name="default" layout="iconPumpkinSmall" template="icon_49" /></states>
+    </window>
+
+    <window type="icon" intent="Pumpkin Big" style="50" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconPumpkinBig">
+        <states><state name="default" layout="iconPumpkinBig" template="icon_50" /></states>
+    </window>
+
+    <window type="icon" intent="Pumpkin And Credits Big" style="51" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconPumpkinAndCreditsBig">
+        <states><state name="default" layout="iconPumpkinAndCreditsBig" template="icon_51" /></states>
+    </window>
+    <window type="icon" intent="Mobile icon square" style="52" renderer="skin" asset="habbo_skin_icon_set_xml" layout="icon24">
+        <states><state name="default" layout="icon24" template="icon_52" /></states>
+    </window>
+
+    <window type="icon" intent="Loyalty Big" style="53" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconLoyaltyBig">
+        <states><state name="default" layout="iconLoyaltyBig" template="icon_53" /></states>
+    </window>
+    <window type="icon" intent="Loyalty Small" style="54" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconLoyaltySmall">
+        <states><state name="default" layout="iconLoyaltySmall" template="icon_54" /></states>
+    </window>
+        <window type="icon" intent="seashell Big" style="55" renderer="skin" asset="habbo_skin_icon_set_xml" layout="iconSeashellBig">
+        <states><state name="default" layout="iconSeashellBig" template="icon_55" /></states>
+    </window>
+</skin>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_single_bundle" width="360" height="460" version="0.1" uid="99D40EF2-3518-E612-DF3B-DAB89E88190C">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_single_bundle">
+      <children>
+        <html x="15" y="103" width="329" height="62" params="1" style="3" name="ctlg_description" caption="%24%7Blorem.html%7D">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+          </variables>
+        </html>
+        <html x="159" y="182" width="173" height="25" params="1" style="3" name="ctlg_special_txt" caption="%24%7Blorem.html%7D">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+          </variables>
+        </html>
+        <container x="0" y="430" width="360" height="30" params="16" style="0" name="purchaseWidget"/>
+        <container x="164" y="207" width="176" height="157" params="16" style="0" name="bundleGridScrollWidget" tags="EMBEDDED">
+          <children>
+            <scrollable_itemgrid_vertical x="0" y="0" width="176" height="157" params="16" style="3" name="bundleGrid">
+              <variables>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </scrollable_itemgrid_vertical>
+          </children>
+        </container>
+        <static_bitmap x="7" y="169" width="137" height="218" params="16" style="100" name="ctlg_teaserimg_1">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/ctlg_furnimatic_image.gif" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <border x="17" y="385" width="324" height="40" params="16" style="3" color="0x0e0e0e0">
+          <children>
+            <static_bitmap x="10" y="5" width="32" height="30" params="16" style="100" name="ctlg_special_img">
+              <variables>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <html x="51" y="10" width="256" height="22" params="1" style="3" name="ctlg_text_1" caption="%24%7Blorem.html%7D">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </border>
+        <container x="292" y="167" width="40" height="40" params="0" style="0" name="addOnBadgeViewWidget"/>
+        <container x="63" y="167" width="83" height="30" params="0" style="100" name="simplePriceWidget">
+          <children>
+            <container x="0" y="0" width="83" height="30" params="16" style="100" name="fake_productimage"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

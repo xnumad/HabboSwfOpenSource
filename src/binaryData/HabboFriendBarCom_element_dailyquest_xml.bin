@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="element_dailyquest" width="250" height="70" version="0.1" uid="270C3286-58DB-F1C2-FB26-07C0B2A538A0">
+  <window>
+    <container x="0" y="0" width="250" height="70" params="16" style="0" color="0x00" background="true">
+      <children>
+        <container x="0" y="0" width="250" height="70" params="16" style="0" name="questdata_container" color="0x00" background="true">
+          <children>
+            <container_button x="0" y="2" width="250" height="39" params="16401" style="102" name="accept_button" visible="false" width_min="250" width_max="250">
+              <children>
+                <itemlist_vertical x="5" y="3" width="240" height="36" params="147472" style="100">
+                  <children>
+                    <text x="0" y="0" width="58" height="18" params="4194320" style="100" name="caption_txt" caption="DQ%20Title">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_size" value="13" type="uint"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="18" width="142" height="18" params="4194320" style="100" name="accept_text" caption="%24%7Blanding.view.quest.accept%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="margin_right" value="5" type="int"/>
+                        <var key="margin_bottom" value="2" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_vertical>
+              </children>
+            </container_button>
+            <region x="0" y="45" width="250" height="12" params="17" style="100" name="next_quest_region" visible="false" treshold="0">
+              <children>
+                <text x="0" y="0" width="137" height="14" params="16" style="100" name="next_quest_txt" caption="PH%3A%20Show%20me%20another%20easy%20quest" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="0" y="55" width="250" height="14" params="17" style="100" name="cancel_quest_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="105" height="14" params="16" style="100" name="cancel_quest_txt" caption="%24%7Blanding.view.quest.cancel%7D" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <border x="0" y="0" width="250" height="55" params="16" style="100" name="current_quest_border">
+              <children>
+                <button x="164" y="3" width="88" height="50" params="131153" style="100" name="go_button" caption="%24%7Blanding.view.quest.go%7D" width_min="88" width_max="88"/>
+                <formatted_text x="13" y="10" width="157" height="43" params="16" style="100" name="current_quest_txt" caption="%24%7Blanding.view.quest.currenttask%7D" tags="COLORABLE">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="39" y="45" width="211" height="17" params="16" style="0" name="difficulty_container" visible="false">
+          <children>
+            <region x="0" y="0" width="100" height="18" params="17" style="0" name="easy_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="98" height="14" params="16" style="100" name="label_txt" caption="%24%7Blanding.view.quest.easy%7D" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <static_bitmap x="103" y="0" width="2" height="20" params="2128" style="0" name="divider" blend="0.8">
+              <variables>
+                <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <region x="112" y="0" width="99" height="18" params="17" style="0" name="hard_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="99" height="14" params="16" style="100" name="label_txt" caption="%24%7Blanding.view.quest.hard%7D" tags="COLORABLE">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

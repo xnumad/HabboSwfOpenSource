@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ProgressBar" width="300" height="23" version="0.1" uid="559A0403-C914-4DA1-277F-99F47C41D060">
+  <window>
+    <container x="0" y="0" width="300" height="23" params="144" style="0" name="progress_bar_cont">
+      <children>
+        <static_bitmap x="0" y="0" width="4" height="23" params="16" style="0" name="bar_l">
+          <variables>
+            <var key="asset_uri" value="achievement_ach_progressbar1" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="4" y="0" width="1" height="23" params="16" style="0" name="bar_c">
+          <variables>
+            <var key="asset_uri" value="achievement_ach_progressbar2" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="5" y="0" width="4" height="23" params="16" style="0" name="bar_r">
+          <variables>
+            <var key="asset_uri" value="achievement_ach_progressbar3" type="String"/>
+          </variables>
+        </static_bitmap>
+        <background x="4" y="3" width="1" height="17" params="16" style="100" name="bar_a_bkg" color="0xffffffff00" background="true"/>
+        <static_bitmap x="4" y="3" width="1" height="17" params="16" style="0" name="bar_a_c">
+          <variables>
+            <var key="asset_uri" value="achievement_ach_progressbar4" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="5" y="3" width="1" height="17" params="16" style="0" name="bar_a_r">
+          <variables>
+            <var key="asset_uri" value="achievement_ach_progressbar5" type="String"/>
+          </variables>
+        </static_bitmap>
+        <text x="7" y="3" width="82" height="17" params="145" style="0" name="progress_txt" caption="Progress%20text">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

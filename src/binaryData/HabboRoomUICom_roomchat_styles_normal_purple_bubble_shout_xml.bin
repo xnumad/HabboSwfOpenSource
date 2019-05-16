@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="roomchat_bubble_shout" width="100" height="30" version="0.1" uid="6AE561D5-DB43-0351-2992-94066E69D0C1">
+  <window>
+    <region x="0" y="0" width="100" height="32" params="17" style="0" name="bubblecont" color="0x0ff00ff" treshold="0" tags="chat_bubble">
+      <children>
+        <bitmap x="0" y="0" width="100" height="24" params="144" style="0" name="background"/>
+        <bitmap x="0" y="23" width="9" height="6" params="16" style="0" name="pointer"/>
+        <bitmap x="13" y="0" width="1" height="1" params="16" style="0" name="user_image"/>
+        <label x="30" y="3" width="4" height="12" params="16" style="0" name="name">
+          <variables>
+            <var key="text_style" value="u_chat_name" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+          </variables>
+        </label>
+        <text x="26" y="3" width="4" height="12" params="16" style="0" name="message" treshold="0">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_chat_shout" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

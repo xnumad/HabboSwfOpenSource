@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="illumina_input" width="244" height="28" version="0.1" uid="F109562E-366C-2D68-F4ED-BA5F83F612C5">
+  <window>
+    <border x="0" y="0" width="244" height="28" params="144" style="105">
+      <children>
+        <button x="165" y="-7" width="86" height="42" params="394321" style="101" name="submit" color="0x0bbbbbb" height_max="42"/>
+        <label x="6" y="5" width="66" height="16" params="16" style="100" name="empty_message">
+          <variables>
+            <var key="text_color" value="0x888888" type="hex"/>
+          </variables>
+        </label>
+        <input x="5" y="5" width="235" height="17" params="2177" style="100" name="input">
+          <variables>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </input>
+      </children>
+    </border>
+  </window>
+</layout>

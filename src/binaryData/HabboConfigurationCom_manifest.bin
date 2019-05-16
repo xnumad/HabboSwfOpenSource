@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboConfigurationManagerBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDHabboConfigurationManager" />
+		<assets>
+			<asset mimeType="text/plain" name="development_configuration" />
+			<asset mimeType="text/plain" name="localization_configuration" />
+		</assets>
+	</component>
+	
+</manifest>

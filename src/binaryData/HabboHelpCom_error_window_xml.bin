@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="error_window" width="242" height="147" version="0.1" uid="F50FCD9B-1BD8-E389-8ECA-F356593E816F">
+  <window>
+    <frame x="0" y="0" width="242" height="147" params="32769" style="100" name="error_window" caption="%24%7Bguide.help.request.error.title%7D" width_min="242" width_max="242" height_min="50">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="8" y="0" width="226" height="99" params="8538128" style="0">
+          <children>
+            <text x="0" y="0" width="221" height="35" params="16" style="100" caption="%24%7Bguide.help.request.error.heading%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="35" width="221" height="16" params="16" style="100" caption="%24%7Bguide.help.request.error.message%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="10" y="51" width="207" height="48" params="131281" style="101" name="close_button" caption="%24%7Bguide.help.request.error.button%7D" color="0x0bbbbbb" height_min="48" height_max="48"/>
+          </children>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

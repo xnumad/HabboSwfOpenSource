@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_orderinfo_dialog" width="282" height="127" version="0.1" uid="891D4BF0-D329-8503-0787-A6CDFF3C5C34">
+  <window>
+    <container x="0" y="105" width="282" height="127" params="16" style="0" name="giftInfoContainer">
+      <children>
+        <checkbox x="21" y="0" width="20" height="20" params="17" style="3" name="buyAsGift"/>
+        <text x="43" y="1" width="78" height="15" params="16" style="3" caption="%24%7Bcatalog.purchase.confirmation.dialog.buyasgift.checkbox%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="25" y="24" width="220" height="20" params="16" style="0">
+          <children>
+            <input x="5" y="5" width="200" height="12" params="1" style="3" name="receiver">
+              <variables>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <border x="25" y="72" width="220" height="50" params="16" style="0">
+          <children>
+            <input x="5" y="5" width="200" height="40" params="1" style="3" name="message">
+              <variables>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <text x="25" y="47" width="213" height="26" params="16" style="3" caption="%24%7Bcatalog.purchase.confirmation.dialog.buyasgift.greetings.info%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

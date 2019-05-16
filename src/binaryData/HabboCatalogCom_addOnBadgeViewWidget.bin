@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="addOnBadgeViewWidget" width="40" height="40" version="0.1" uid="753DA162-4AE7-E298-A5EC-9CCAB741DB17">
+  <window>
+    <container x="0" y="0" width="40" height="40" params="0" style="0" name="addOnBadgeViewWidget">
+      <children>
+        <widget x="0" y="0" width="40" height="40" params="16" style="3" name="badge">
+          <variables>
+            <var key="widget_type" value="badge_image" type="String"/>
+          </variables>
+        </widget>
+      </children>
+    </container>
+  </window>
+</layout>

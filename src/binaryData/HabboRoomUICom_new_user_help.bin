@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="new_user_help" width="140" height="51" version="0.1" uid="139A671E-A611-3FDC-10CE-CB652443A403">
+  <window>
+    <bubble x="0" y="0" width="30" height="30" params="1" style="1" name="border" background="true">
+      <children>
+        <text x="5" y="5" width="0" height="0" params="12582928" style="0" name="help" caption="">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="14" type="uint"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </text>
+      </children>
+      <variables>
+        <var key="margin_left" value="8" type="int"/>
+        <var key="margin_top" value="8" type="int"/>
+        <var key="margin_right" value="8" type="int"/>
+        <var key="margin_bottom" value="8" type="int"/>
+        <var key="pointer_offset" value="-5" type="int"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

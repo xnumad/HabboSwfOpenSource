@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="welcome_gift_unverified_email" width="453" height="150" version="0.1" uid="8018FE96-988A-50EA-BC29-E70EB9900979">
+  <window>
+    <container x="0" y="0" width="453" height="150" params="16" style="2" color="0xffffccddff" background="true">
+      <children>
+        <bitmap x="8" y="13" width="25" height="20" params="16" style="0" name="email_icon"/>
+        <border x="41" y="6" width="385" height="36" params="16" style="0" name="email_input_border">
+          <children>
+            <container x="3" y="3" width="379" height="30" params="16" style="0" name="email_input_container" color="0xffffffffff" background="true">
+              <children>
+                <input x="0" y="3" width="375" height="25" params="1" style="0" name="email_input">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="16" type="uint"/>
+                    <var key="max_chars" value="48" type="int"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                  </variables>
+                </input>
+              </children>
+            </container>
+          </children>
+        </border>
+        <text x="0" y="47" width="453" height="48" params="16" style="0" name="email_change_instructions" caption="%24%7Bwelcome.gift.email.instructions%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="margin_left" value="10" type="int"/>
+            <var key="margin_right" value="10" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="true" type="Boolean"/>
+          </variables>
+        </text>
+        <region x="15" y="106" width="120" height="30" params="17" style="0" name="cancel_email_change" treshold="0">
+          <children>
+            <text x="0" y="6" width="120" height="22" params="16" style="0" name="cancel_email_change" caption="%24%7Bwelcome.gift.email.cancel%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <button_thick x="284" y="106" width="154" height="30" params="393233" style="3" name="save_email" caption="%24%7Bwelcome.gift.email.save%7D" width_min="130"/>
+      </children>
+    </container>
+  </window>
+</layout>

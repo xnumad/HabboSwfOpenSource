@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="styleselector_menu_new" width="67" height="41" version="0.1" uid="F47336FC-D886-5955-22B7-DBC5CF3218C9">
+  <window>
+    <border x="0" y="0" width="67" height="41" params="16" style="2" color="0x024231e" blend="0.8">
+      <children>
+        <itemgrid_vertical x="6" y="5" width="55" height="33" params="12582928" style="0" name="itemgrid">
+          <variables>
+            <var key="spacing" value="1" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemgrid_vertical>
+      </children>
+    </border>
+  </window>
+</layout>

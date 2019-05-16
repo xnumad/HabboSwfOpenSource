@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_loyalty_vip_buy" width="360" height="460" version="0.1" uid="B84A1D28-A18A-A451-92F1-C6BCD41E827C">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_loyalty_vip_buy" color="0x2121ffffff" background="true">
+      <children>
+        <container x="13" y="67" width="320" height="345" params="16" style="0" name="loyaltyVipBuyWidget">
+          <children>
+            <itemlist x="161" y="3" width="158" height="165" params="16" style="3" tags="own_items_grid" width_min="158" width_max="158" height_min="165" height_max="165">
+              <children>
+                <formatted_text x="0" y="0" width="158" height="17" params="786576" style="3" name="vip_title" caption="%24%7Bcatalog.vip.buy.title%7D" width_min="158" width_max="158">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="0" y="21" width="158" height="17" params="786576" style="3" name="vip_info" caption="%24%7Bcatalog.vip.buy.info%7D" width_min="158" width_max="158">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+              <variables>
+                <var key="spacing" value="4" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </itemlist>
+            <static_bitmap x="3" y="3" width="152" height="161" params="16" style="0" name="ctlg_teaserimg_1">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}catalogue/hc_catalog_teaser.gif" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <text x="19" y="330" width="286" height="17" params="786449" style="3" name="vip_link" caption="%24%7Bcatalog.vip.buy.link%7D" treshold="0">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0x38ef4" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <itemlist x="19" y="170" width="286" height="157" params="16" style="3" name="item_list_vip" width_min="286" width_max="286">
+              <variables>
+                <var key="spacing" value="4" type="int"/>
+              </variables>
+            </itemlist>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

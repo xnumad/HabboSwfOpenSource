@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="name_configuration" width="209" height="119" version="0.1" uid="C9AD4FE2-1033-DB65-47AE-F90C1D6E1D13">
+  <window>
+    <bubble x="0" y="0" width="209" height="119" params="33025" style="100" color="0x06e6b67">
+      <children>
+        <container x="1" y="1" width="191" height="20" params="144" style="100" color="0xffff000000" background="true">
+          <children>
+            <label x="1" y="2" width="189" height="17" params="786640" style="100" caption="%24%7Bbot.skill.name.configuration.title%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+        <itemlist x="7" y="25" width="183" height="81" params="16" style="100" name="configuration_items">
+          <children>
+            <label x="0" y="0" width="181" height="15" params="16" style="100" caption="%24%7Bbot.skill.name.configuration.new.name%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="text_color" value="0xeeeeee" type="hex"/>
+              </variables>
+            </label>
+            <input x="0" y="17" width="180" height="18" params="1" style="100" name="name_input">
+              <variables>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="border_color" value="0xffffff" type="hex"/>
+                <var key="etching_color" value="0x0" type="hex"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+            <container x="0" y="37" width="181" height="36" params="16" style="100">
+              <children>
+                <itemlist_horizontal x="58" y="7" width="124" height="35" params="262224" style="100">
+                  <children>
+                    <button_thick x="0" y="0" width="60" height="28" params="131089" style="3" name="cancel_button" caption="%24%7Bcancel%7D" width_max="120"/>
+                    <button_thick x="64" y="0" width="60" height="28" params="393233" style="5" name="save_button" caption="%24%7Bsave%7D" color="0x03f9f3f" width_min="60" width_max="120"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="4" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="2" type="int"/>
+          </variables>
+        </itemlist>
+      </children>
+    </bubble>
+  </window>
+</layout>

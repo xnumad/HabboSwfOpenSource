@@ -1,0 +1,10 @@
+9sliceXY = 32,10
+9sliceWH = 1,1
+pointerY = 24
+faceXY = 15,13
+textFieldMargins = 32,5,10,8
+textColorRGB = 0x000000
+fontFace = Ubuntu
+fontSize = 12
+overlapRect = 2,-1,0,0
+

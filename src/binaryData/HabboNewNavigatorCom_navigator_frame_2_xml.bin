@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="navigator_frame_2" width="578" height="535" version="0.1" uid="05FC2499-AF03-A9A9-AB92-A2652FC8DF36">
+  <window>
+    <frame x="1" y="1" width="578" height="535" params="98305" style="3" caption="%24%7Bnavigator.title%7D" color="0xff418db0" width_min="578" width_max="578" height_min="500">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="-3" y="-3" width="577" height="485" params="2192" style="3" color="0x0eceae0"/>
+        <container x="-2" y="-5" width="576" height="33" params="128" style="3" name="white_background" color="0xffffffffff" background="true"/>
+        <itemlist_vertical x="6" y="35" width="149" height="440" params="2064" style="3" name="left_pane">
+          <children>
+            <border x="0" y="0" width="141" height="494" params="16" style="2" name="quicklinks_border" height_min="350">
+              <children>
+                <region x="-6" y="0" width="149" height="21" params="2065" style="0" name="left_pane_hide" caption="HIDE" color="0x0b0ea" treshold="0">
+                  <children>
+                    <border x="6" y="0" width="141" height="27" params="16" style="2" color="0x0fba800">
+                      <children>
+                        <container x="0" y="0" width="136" height="18" params="16" style="3" name="left_hide_container">
+                          <children>
+                            <static_bitmap x="3" y="3" width="18" height="18" params="16" style="3">
+                              <variables>
+                                <var key="asset_uri" value="newnavigator_button_quicklink_add" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <text x="20" y="2" width="150" height="17" params="16" style="3" caption="%24%7Bnavigator.quick.links.title%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="grid_fit_type" value="subpixel" type="String"/>
+                                <var key="text_style" value="id_heading_2" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                        <container x="0" y="0" width="136" height="18" params="16" style="3" name="left_show_container" visible="false">
+                          <children>
+                            <static_bitmap x="3" y="3" width="12" height="12" params="16" style="3">
+                              <variables>
+                                <var key="asset_uri" value="newnavigator_button_quicklink_add" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <text x="20" y="1" width="130" height="16" params="16" style="3" caption="%24%7Bnavigator.quick.links.title%7D">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="font_size" value="11" type="uint"/>
+                                <var key="grid_fit_type" value="subpixel" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="text_style" value="u_bold" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="bold" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </container>
+                      </children>
+                    </border>
+                  </children>
+                </region>
+                <itemlist_vertical x="5" y="25" width="132" height="420" params="16" style="3" name="quicklinks_list">
+                  <children>
+                    <region x="-2" y="0" width="132" height="17" params="17" style="3" name="quick_link" treshold="0">
+                      <children>
+                        <text x="0" y="0" width="185" height="17" params="16" style="3" name="quick_link_text" caption="quick%20link%20ph%20oijasdf%20oaijs%20dfodisjf" treshold="0" tags="TEMPLATE">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <container_button x="115" y="1" width="16" height="16" params="17" style="0" name="remove_quick_link" visible="false">
+                          <children>
+                            <static_bitmap x="3" y="3" width="10" height="10" params="16" style="3">
+                              <variables>
+                                <var key="asset_uri" value="newnavigator_icon_ql_remove" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                          <variables>
+                            <var key="tool_tip_caption" value="${navigator.tooltip.remove.saved.search}" type="String"/>
+                          </variables>
+                        </container_button>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${navigator.tooltip.open.saved.search}" type="String"/>
+                      </variables>
+                    </region>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="2" type="int"/>
+                  </variables>
+                </itemlist_vertical>
+              </children>
+            </border>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <container x="159" y="25" width="410" height="455" params="2192" style="3" name="right_pane">
+          <children>
+            <border x="0" y="395" width="189" height="60" params="1040" style="4" name="create_room_border">
+              <children>
+                <region x="2" y="2" width="185" height="56" params="2193" style="3" name="create_room" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="186" height="59" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_create_room" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="60" y="22" width="125" height="17" params="16" style="3" caption="%24%7Bnavigator.create.room%7D">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="etching_color" value="0x3f000000" type="hex"/>
+                        <var key="etching_position" value="bottom-right" type="String"/>
+                        <var key="text_style" value="id_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.create.room}" type="String"/>
+                  </variables>
+                </region>
+              </children>
+            </border>
+            <border x="205" y="395" width="189" height="60" params="1040" style="5" name="random_room_border">
+              <children>
+                <region x="2" y="2" width="185" height="56" params="2193" style="3" name="random_room" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="186" height="59" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_random_room" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="60" y="22" width="125" height="17" params="16" style="3" caption="%24%7Bnavigator.random.room%7D">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="etching_color" value="0x3f000000" type="hex"/>
+                        <var key="etching_position" value="bottom-right" type="String"/>
+                        <var key="text_style" value="id_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.random.room}" type="String"/>
+                  </variables>
+                </region>
+              </children>
+            </border>
+            <border x="205" y="395" width="189" height="60" params="1040" style="5" name="promote_room_border" visible="false">
+              <children>
+                <region x="2" y="2" width="185" height="56" params="2193" style="3" name="promote_room" treshold="0">
+                  <children>
+                    <static_bitmap x="0" y="0" width="186" height="59" params="16" style="3">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_promote_room" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="60" y="22" width="125" height="17" params="16" style="3" caption="%24%7Bnavigator.promote.room%7D">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="etching_color" value="0x3f000000" type="hex"/>
+                        <var key="etching_position" value="bottom-right" type="String"/>
+                        <var key="text_style" value="id_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.promote.room}" type="String"/>
+                  </variables>
+                </region>
+              </children>
+            </border>
+            <container x="0" y="3" width="408" height="36" params="786448" style="3" name="search_tools">
+              <children>
+                <dropmenu x="4" y="10" width="116" height="24" params="17" style="4" name="filter_type_drop_menu">
+                  <variables>
+                    <var key="tool_tip_caption" value="${navigator.tooltip.filter.type}" type="String"/>
+                    <var key="item_array">
+                      <value>
+                        <Array>
+                          <var key="0" value="${navigator.filter.anything}" type="String"/>
+                          <var key="1" value="${navigator.filter.room.name}" type="String"/>
+                          <var key="2" value="${navigator.filter.owner}" type="String"/>
+                          <var key="3" value="${navigator.filter.tag}" type="String"/>
+                          <var key="4" value="${navigator.filter.group}" type="String"/>
+                        </Array>
+                      </value>
+                    </var>
+                  </variables>
+                </dropmenu>
+                <border x="133" y="10" width="235" height="24" params="16" style="4">
+                  <children>
+                    <input x="6" y="4" width="235" height="16" params="1" style="3" name="search_input" caption="filter%20by...">
+                      <variables>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="tool_tip_caption" value="${navigator.tooltip.filter.input}" type="String"/>
+                        <var key="tool_tip_delay" value="2000" type="uint"/>
+                      </variables>
+                    </input>
+                    <region x="215" y="4" width="20" height="20" params="17" style="3" name="clear_search_button" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3" name="search.clear.icon">
+                          <variables>
+                            <var key="asset_uri" value="common_small_pen" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </region>
+                  </children>
+                </border>
+                <container x="375" y="10" width="25" height="25" params="16" style="0" name="refreshButtonContainer" color="0x04eaac1" visible="false">
+                  <children>
+                    <button x="0" y="0" width="25" height="23" params="131089" style="5" name="refreshButton" color="0x7cc561" />
+                    <static_bitmap x="5" y="5" width="17" height="12" params="16" style="0">
+                      <variables>
+                        <var key="asset_uri" value="newnavigator_refresh_search_icon" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <scrollable_itemlist_vertical x="1" y="45" width="407" height="330" params="2192" style="3" name="block_results" tags="block_results">
+              <children>
+                <container x="2" y="0" width="396" height="200" params="147600" style="3" name="category_container" color="0xff9fff9f" tags="TEMPLATE%2Ccategory_container">
+                  <children>
+                    <background x="0" y="0" width="396" height="200" params="147472" style="3" name="category_content_background" color="0xffffffffff" background="true">
+                      <children>
+                        <container x="0" y="0" width="396" height="30" params="144" style="3" name="category_header" color="0xffffffffff" background="true" tags="category_header">
+                          <children>
+                            <region x="5" y="7" width="11" height="19" params="17" style="3" name="category_collapse" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="11" height="19" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_button_category_collapse" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="${navigator.tooltip.category.collapse}" type="String"/>
+                              </variables>
+                            </region>
+                            <region x="0" y="0" width="130" height="27" params="131089" style="3" name="category_name_region" treshold="0">
+                              <children>
+                                <text x="20" y="5" width="125" height="19" params="16" style="3" name="category_name" caption="Category%20Name%20PH" width_min="2" width_max="270">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="font_size" value="14" type="uint"/>
+                                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                                    <var key="text_color" value="0xf557b" type="hex"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                              </children>
+                            </region>
+                            <itemlist_horizontal x="283" y="1" width="99" height="26" params="262160" style="3" name="category_controls_itemlist">
+                              <children>
+                                <region x="0" y="4" width="11" height="18" params="17" style="3" name="category_toggle_tiles" treshold="0">
+                                  <children>
+                                    <static_bitmap x="0" y="0" width="11" height="19" params="16" style="3">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_nav_view_thumbs" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                  <variables>
+                                    <var key="tool_tip_caption" value="${navigator.tooltip.tiles}" type="String"/>
+                                  </variables>
+                                </region>
+                                <region x="16" y="4" width="11" height="18" params="17" style="3" name="category_toggle_rows" treshold="0">
+                                  <children>
+                                    <static_bitmap x="0" y="0" width="11" height="19" params="16" style="3">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_nav_view_row" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                  <variables>
+                                    <var key="tool_tip_caption" value="${navigator.tooltip.rows}" type="String"/>
+                                  </variables>
+                                </region>
+                                <region x="32" y="4" width="11" height="18" params="17" style="3" name="category_show_more" treshold="0">
+                                  <children>
+                                    <static_bitmap x="0" y="1" width="11" height="19" params="16" style="3">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_button_category_show_more" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                  <variables>
+                                    <var key="tool_tip_caption" value="${navigator.tooltip.category.show.more}" type="String"/>
+                                  </variables>
+                                </region>
+                                <region x="48" y="4" width="11" height="18" params="17" style="3" name="category_back" treshold="0">
+                                  <children>
+                                    <static_bitmap x="0" y="0" width="11" height="19" params="16" style="3">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_nav_view_mini" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                  <variables>
+                                    <var key="tool_tip_caption" value="${navigator.back}" type="String"/>
+                                  </variables>
+                                </region>
+                                <region x="64" y="4" width="19" height="18" params="17" style="3" name="category_add_quick_link" treshold="0">
+                                  <children>
+                                    <static_bitmap x="0" y="0" width="18" height="19" params="16" style="3">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_button_quicklink_add" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                  <variables>
+                                    <var key="tool_tip_caption" value="${navigator.tooltip.add.saved.search}" type="String"/>
+                                  </variables>
+                                </region>
+                              </children>
+                              <variables>
+                                <var key="spacing" value="5" type="int"/>
+                                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                                <var key="resize_on_item_update" value="true" type="Boolean"/>
+                              </variables>
+                            </itemlist_horizontal>
+                          </children>
+                        </container>
+                        <itemlist_vertical x="4" y="29" width="387" height="171" params="144" style="3" name="category_content">
+                          <children>
+                            <itemlist_horizontal x="0" y="0" width="392" height="146" params="16" style="106" name="navigator_entry_tile_container" color="0x0676767" tags="TEMPLATE">
+                              <children>
+                                <border x="0" y="0" width="122" height="146" params="16" style="10" name="navigator_entry_tile" color="0x0ebe9df" tags="SUBTEMPLATE">
+                                  <children>
+                                    <container x="7" y="6" width="108" height="109" params="16" style="3" color="0xffff000000" background="true"/>
+                                    <static_bitmap x="8" y="7" width="106" height="106" params="16" style="3" name="room_pic_placeholder">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_default_room" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                    <widget x="4" y="-3" width="50" height="61" params="16" style="3" name="room_group_badge" visible="false">
+                                      <variables>
+                                        <var key="widget_type" value="badge_image" type="String"/>
+                                        <var key="badge_image:type" value="group" type="String"/>
+                                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </widget>
+                                    <region x="0" y="0" width="122" height="146" params="17" style="3" name="go_to_room_region" treshold="0">
+                                      <variables>
+                                        <var key="tool_tip_caption" value="${navigator.tooltip.go.to.room}" type="String"/>
+                                      </variables>
+                                    </region>
+                                    <text x="0" y="116" width="100" height="30" params="16" style="3" name="room_name" caption="Room%20Name%20PH">
+                                      <variables>
+                                        <var key="font_size" value="10" type="uint"/>
+                                        <var key="text_style" value="u_bold" type="String"/>
+                                        <var key="margin_left" value="6" type="int"/>
+                                        <var key="margin_top" value="2" type="int"/>
+                                        <var key="margin_right" value="6" type="int"/>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="multiline" value="true" type="Boolean"/>
+                                        <var key="word_wrap" value="true" type="Boolean"/>
+                                        <var key="bold" value="false" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                    <border x="40" y="93" width="40" height="18" params="1835024" style="3" name="room_info_usercount_border" color="0x00">
+                                      <children>
+                                        <itemlist_horizontal x="3" y="1" width="31" height="15" params="786448" style="3" name="usercount">
+                                          <children>
+                                            <static_bitmap x="0" y="1" width="13" height="14" params="16" style="3" name="room_usercount_icon">
+                                              <variables>
+                                                <var key="asset_uri" value="newnavigator_icon_usercount" type="String"/>
+                                              </variables>
+                                            </static_bitmap>
+                                            <label x="14" y="0" width="17" height="17" params="16" style="3" name="room_usercount" caption="99">
+                                              <variables>
+                                                <var key="text_style" value="u_bold" type="String"/>
+                                                <var key="text_color" value="0xffffff" type="hex"/>
+                                              </variables>
+                                            </label>
+                                          </children>
+                                          <variables>
+                                            <var key="spacing" value="1" type="int"/>
+                                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                                          </variables>
+                                        </itemlist_horizontal>
+                                      </children>
+                                    </border>
+                                    <static_bitmap x="92" y="96" width="16" height="14" params="16" style="3" name="doormode_icon">
+                                      <variables>
+                                        <var key="asset_uri" value="" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                    <region x="98" y="120" width="18" height="18" params="17" style="3" name="info_popup_click_region" treshold="0">
+                                      <children>
+                                        <static_bitmap x="0" y="0" width="18" height="18" params="16" style="3">
+                                          <variables>
+                                            <var key="asset_uri" value="newnavigator_button_show_room_info" type="String"/>
+                                            <var key="stretched_x" value="false" type="Boolean"/>
+                                            <var key="stretched_y" value="false" type="Boolean"/>
+                                          </variables>
+                                        </static_bitmap>
+                                      </children>
+                                    </region>
+                                  </children>
+                                </border>
+                              </children>
+                              <variables>
+                                <var key="spacing" value="7" type="int"/>
+                              </variables>
+                            </itemlist_horizontal>
+                            <border x="0" y="151" width="383" height="20" params="17" style="3" name="navigator_entry_row_container" treshold="0" tags="TEMPLATE">
+                              <children>
+                                <container x="0" y="1" width="381" height="18" params="144" style="3" name="room_info_container">
+                                  <children>
+                                    <border x="0" y="0" width="40" height="18" params="16" style="3" name="room_info_usercount_border" color="0x00">
+                                      <children>
+                                        <itemlist_horizontal x="3" y="1" width="31" height="15" params="786448" style="3" name="usercount">
+                                          <children>
+                                            <static_bitmap x="0" y="1" width="13" height="14" params="16" style="3" name="room_usercount_icon">
+                                              <variables>
+                                                <var key="asset_uri" value="newnavigator_icon_usercount" type="String"/>
+                                              </variables>
+                                            </static_bitmap>
+                                            <label x="14" y="0" width="17" height="17" params="16" style="3" name="room_usercount" caption="99">
+                                              <variables>
+                                                <var key="text_style" value="u_bold" type="String"/>
+                                                <var key="text_color" value="0xffffff" type="hex"/>
+                                              </variables>
+                                            </label>
+                                          </children>
+                                          <variables>
+                                            <var key="spacing" value="1" type="int"/>
+                                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                                          </variables>
+                                        </itemlist_horizontal>
+                                      </children>
+                                    </border>
+                                    <text x="44" y="1" width="282" height="16" params="144" style="3" name="room_name" caption="Room%20Name%20PH">
+                                      <variables>
+                                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                        <var key="spacing" value="0" type="Number"/>
+                                        <var key="leading" value="0" type="Number"/>
+                                      </variables>
+                                    </text>
+                                    <region x="359" y="0" width="18" height="18" params="262161" style="3" name="info_popup_click_region" treshold="0">
+                                      <children>
+                                        <static_bitmap x="0" y="0" width="18" height="18" params="16" style="3">
+                                          <variables>
+                                            <var key="asset_uri" value="newnavigator_button_show_room_info" type="String"/>
+                                            <var key="stretched_x" value="false" type="Boolean"/>
+                                            <var key="stretched_y" value="false" type="Boolean"/>
+                                          </variables>
+                                        </static_bitmap>
+                                      </children>
+                                    </region>
+                                    <static_bitmap x="324" y="2" width="16" height="16" params="16" style="3" name="doormode_icon">
+                                      <variables>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                    <static_bitmap x="341" y="2" width="16" height="16" params="16" style="3" name="grouphome_icon">
+                                      <variables>
+                                        <var key="asset_uri" value="newnavigator_icon_group" type="String"/>
+                                        <var key="pivot_point" value="center" type="String"/>
+                                        <var key="stretched_x" value="false" type="Boolean"/>
+                                        <var key="stretched_y" value="false" type="Boolean"/>
+                                      </variables>
+                                    </static_bitmap>
+                                  </children>
+                                </container>
+                                <region x="0" y="0" width="357" height="20" params="17" style="3" name="go_to_room_region" treshold="0"/>
+                              </children>
+                            </border>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="5" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                          </variables>
+                        </itemlist_vertical>
+                      </children>
+                    </background>
+                  </children>
+                </container>
+                <container x="2" y="205" width="387" height="26" params="16528" style="3" name="category_container_collapsed" color="0xff9fff9f" tags="TEMPLATE%2Ccategory_container_collapsed">
+                  <children>
+                    <container x="0" y="0" width="387" height="26" params="144" style="3" name="category_header" color="0xffffffffff" background="true" tags="category_header">
+                      <children>
+                        <region x="0" y="0" width="196" height="27" params="131089" style="3" name="category_name_region" treshold="0">
+                          <children>
+                            <region x="5" y="4" width="11" height="18" params="17" style="3" name="category_expand" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="11" height="19" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_button_category_expand" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="${navigator.tooltip.category.expand}" type="String"/>
+                              </variables>
+                            </region>
+                            <text x="20" y="5" width="191" height="19" params="16" style="3" name="category_name" caption="Collapsed%20Category%20Name%20PH">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="font_size" value="14" type="uint"/>
+                                <var key="grid_fit_type" value="subpixel" type="String"/>
+                                <var key="text_color" value="0xf557b" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </region>
+                        <itemlist_horizontal x="331" y="1" width="52" height="24" params="262160" style="3" name="category_controls_itemlist">
+                          <children>
+                            <region x="16" y="4" width="11" height="18" params="17" style="3" name="category_show_more" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="1" width="11" height="19" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_button_category_show_more" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="${navigator.tooltip.category.show.more}" type="String"/>
+                              </variables>
+                            </region>
+                            <region x="32" y="4" width="20" height="18" params="17" style="3" name="category_add_quick_link" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="18" height="19" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="newnavigator_button_quicklink_add" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="${navigator.tooltip.add.saved.search}" type="String"/>
+                              </variables>
+                            </region>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="5" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                          </variables>
+                        </itemlist_horizontal>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="236" width="388" height="53" params="16" style="3" name="no_results_container">
+                  <children>
+                    <text x="51" y="0" width="286" height="21" params="3932240" style="3" caption="%24%7Bnavigator.search.returned.no.results%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_headline_medium" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+              </variables>
+            </scrollable_itemlist_vertical>
+            <container x="0" y="42" width="392" height="330" params="2176" style="3" name="search_waiting_for_results_mask" color="0x6f6feceae0" visible="false" background="true"/>
+          </children>
+        </container>
+        <region x="4" y="2" width="28" height="25" params="131089" style="3" name="temp_back" treshold="0">
+          <children>
+            <static_bitmap x="10" y="2" width="18" height="19" params="0" style="3">
+              <variables>
+                <var key="asset_uri" value="newnavigator_button_quicklink_add" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="tool_tip_caption" value="${navigator.tooltip.left.show.hide}" type="String"/>
+          </variables>
+        </region>
+        <static_bitmap x="-2" y="28" width="585" height="1" params="144" style="3">
+          <variables>
+            <var key="asset_uri" value="talent_task_progress_bg" type="String"/>
+          </variables>
+        </static_bitmap>
+        <tab_context x="115" y="-1" width="450" height="30" params="0" style="3" name="top_view_select_tab_context">
+          <children>
+            <tab_button x="0" y="0" width="88" height="32" params="17" style="3" name="top_view_select_tab_button" caption="top%20view%20ph">
+              <variables>
+                <var key="tool_tip_caption" value="${navigator.tooltip.select.tab}" type="String"/>
+                <var key="tool_tip_delay" value="1000" type="uint"/>
+              </variables>
+            </tab_button>
+          </children>
+        </tab_context>
+      </children>
+      <variables>
+        <var key="help_page" value="navigator" type="String"/>
+        <var key="margin_left" value="3" type="int"/>
+        <var key="margin_top" value="36" type="int"/>
+        <var key="margin_right" value="3" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

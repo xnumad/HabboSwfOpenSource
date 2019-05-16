@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="element_button" width="200" height="48" version="0.1" uid="D0FA5EE0-BA3C-D8A6-CF3A-4C7431AB655B">
+  <window>
+    <button x="-11" y="0" width="200" height="48" params="131089" style="100" name="action_button" caption="Button%20Text%20PH" width_min="200" width_max="200" height_min="48" height_max="48"/>
+  </window>
+</layout>

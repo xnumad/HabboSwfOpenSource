@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="club_buy_info_item" width="151" height="67" version="0.1" uid="426174B1-5B5C-BCDC-DDBE-9CC2802AF5CB">
+  <window>
+    <border x="0" y="0" width="151" height="67" params="16" style="2" color="0x09b9448">
+      <children>
+        <border x="1" y="1" width="149" height="65" params="16" style="2" color="0x0ebeada"/>
+        <border x="5" y="5" width="141" height="25" params="16" style="2" color="0x09b9448">
+          <children>
+            <icon x="5" y="5" width="20" height="20" params="16" style="11"/>
+            <text x="-4" y="5" width="141" height="17" params="16" style="3" name="item_header" caption="catalog.club.item.header">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <text x="9" y="44" width="101" height="17" params="16" style="3" name="item_price" caption="catalog.club.price">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="-8" y="38" width="151" height="22" params="393233" style="3" name="item_buy" caption="%24%7Bcatalog.club.button.buy%7D" width_min="40"/>
+      </children>
+    </border>
+  </window>
+</layout>

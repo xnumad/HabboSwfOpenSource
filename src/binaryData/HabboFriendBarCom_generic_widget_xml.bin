@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="landing_view" width="250" height="30" version="0.1" uid="02908A4C-B26F-63E8-3049-0893129A22A2">
+  <window>
+    <container x="0" y="0" width="250" height="30" params="147472" style="0" color="0x00" background="true">
+      <children>
+        <static_bitmap x="10" y="10" width="20" height="20" params="16" style="0" name="bitmap">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="0" y="0" width="250" height="20" params="16" style="0" name="content_container">
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

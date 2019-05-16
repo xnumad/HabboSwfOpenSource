@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="context_menu_widget" width="115" height="573" version="0.1" uid="07F960FF-1AC3-0170-A1B5-7551AC74CC10">
+  <window>
+    <bubble x="0" y="0" width="115" height="573" params="1048865" style="0" color="0x06e6b67" treshold="0">
+      <children>
+        <container x="0" y="0" width="107" height="563" params="12582928" style="0" name="border" color="0x06e6b67">
+          <children>
+            <region x="0" y="-1" width="107" height="28" params="1" style="0" name="profile_link" treshold="0" height_max="28">
+              <children>
+                <text x="0" y="0" width="107" height="28" params="3280" style="0" name="name" caption="Incarnatus%20Hairbullis" height_max="28">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="max_lines" value="2" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <background x="2" y="27" width="103" height="1" params="144" style="0" color="0xffff000000" background="true"/>
+            <itemlist_vertical x="2" y="28" width="103" height="513" params="8519888" style="0" name="buttons">
+              <children>
+                <container x="1" y="0" width="101" height="26" params="144" style="3" name="buy_saddle" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.buy_saddle%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="27" width="101" height="26" params="144" style="3" name="mount" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.mount%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="54" width="101" height="40" params="144" style="3" name="toggle_riding_permission" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="46" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <checkbox x="9" y="17" width="20" height="20" params="17" style="1" name="toggle_riding_permission_checkbox"/>
+                        <text x="26" y="0" width="78" height="46" params="3088" style="0" name="label" caption="%24%7Binfostand.button.toggle_riding_permission%7D" width_max="78" height_max="46">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="max_lines" value="3" type="int"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="95" width="101" height="26" params="144" style="3" name="dismount" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.dismount%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="122" width="101" height="26" params="144" style="3" name="respect" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.petrespect%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="149" width="101" height="26" params="144" style="3" name="treat" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="16" style="0" name="label" caption="%24%7Binfostand.button.pettreat%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="176" width="101" height="26" params="144" style="3" name="pass_handitem" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.give_handitem_to_pet%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="203" width="101" height="26" params="144" style="3" name="train" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.train%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="230" width="101" height="26" params="144" style="3" name="pick_up" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.pickup%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="257" width="101" height="26" params="144" style="3" name="saddle_off" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.saddleoff%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="284" width="101" height="26" params="144" style="3" name="give_water" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.givewater%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="311" width="101" height="26" params="144" style="3" name="give_light" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.givelight%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="338" width="101" height="26" params="144" style="3" name="breed" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.breed%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="365" width="101" height="26" params="144" style="3" name="harvest" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.harvest%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="392" width="101" height="26" params="144" style="3" name="revive" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.revive%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="419" width="101" height="26" params="144" style="3" name="compost" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.compost%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="446" width="101" height="26" params="144" style="3" name="more" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="101" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.link.more%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <icon x="92" y="12" width="5" height="10" params="16" style="5" name="icon" tags="arrow_right"/>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="473" width="101" height="40" params="144" style="3" name="toggle_breeding_permission" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="107" height="46" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <checkbox x="9" y="17" width="20" height="20" params="17" style="1" name="toggle_breeding_permission_checkbox"/>
+                        <text x="26" y="0" width="78" height="46" params="3088" style="0" name="label" caption="%24%7Binfostand.button.toggle_breeding_permission%7D" width_max="78" height_max="46">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="max_lines" value="3" type="int"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+              </children>
+              <variables>
+                <var key="spacing" value="1" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+            <region x="4" y="542" width="100" height="19" params="1041" style="0" name="minimize" treshold="0">
+              <children>
+                <icon x="45" y="7" width="13" height="10" params="16" style="7" name="icon"/>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="4" type="int"/>
+        <var key="margin_top" value="8" type="int"/>
+        <var key="margin_right" value="4" type="int"/>
+        <var key="margin_bottom" value="4" type="int"/>
+      </variables>
+    </bubble>
+  </window>
+</layout>

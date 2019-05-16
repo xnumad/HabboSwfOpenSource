@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="quiz_question" width="499" height="470" version="0.1" uid="3E263E73-521E-50C0-54BB-EA9D66BC926B">
+  <window>
+    <frame x="0" y="0" width="499" height="470" params="1" style="101" caption="%24%7Bhabbo.way.quiz.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <widget x="6" y="36" width="485" height="25" params="16" style="100">
+          <children>
+            <static_bitmap x="19" y="3" width="29" height="18" params="3088" style="100" name="indicator_image">
+              <variables>
+                <var key="asset_uri" value="" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <label x="40" y="5" width="77" height="15" params="3088" style="100" name="top_indicator" caption="top%20indicator">
+              <variables>
+                <var key="text_style" value="il_border" type="String"/>
+                <var key="text_color" value="0x555555" type="hex"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="margin_right" value="5" type="int"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <container x="25" y="60" width="470" height="310" params="16" style="100" name="question_pane" visible="false">
+          <children>
+            <itemlist_vertical x="0" y="20" width="460" height="285" params="16" style="100" name="contents">
+              <children>
+                <text x="0" y="0" width="339" height="16" params="16" style="100" name="question" caption="question">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0x555555" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <selector_list x="5" y="31" width="318" height="16" params="147473" style="100" name="answer_list">
+                  <children>
+                    <radiobutton x="0" y="0" width="318" height="16" params="147473" style="100" caption="answer" treshold="0" height_min="0" height_max="100"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="10" type="int"/>
+                    <var key="vertical" value="true" type="Boolean"/>
+                  </variables>
+                </selector_list>
+              </children>
+              <variables>
+                <var key="spacing" value="15" type="int"/>
+              </variables>
+            </itemlist_vertical>
+            <static_bitmap x="330" y="1" width="122" height="300" params="16" style="100" name="question_illustration">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}habboway/quiz_question.png" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <container x="0" y="50" width="498" height="320" params="16" style="100" name="failure_pane" visible="false">
+          <children>
+            <label x="247" y="27" width="4" height="4" params="208" style="100" name="failure_results">
+              <variables>
+                <var key="text_style" value="il_heading_title" type="String"/>
+              </variables>
+            </label>
+            <text x="104" y="70" width="291" height="4" params="208" style="100" name="failure_advice">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="146" y="106" width="207" height="205" params="16" style="100" name="failure_illustration">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}habboway/quiz_failure.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <container x="0" y="50" width="498" height="320" params="16" style="100" name="success_pane" visible="false">
+          <children>
+            <text x="39" y="27" width="421" height="4" params="208" style="100" name="success_results">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_style" value="il_heading_title" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <static_bitmap x="141" y="88" width="217" height="215" params="16" style="100" name="success_illustration">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}habboway/quiz_success.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <scrollable_itemlist_vertical x="20" y="69" width="477" height="297" params="16" style="100" name="analysis_pane" visible="false">
+          <children>
+            <itemlist_vertical x="0" y="0" width="470" height="149" params="147472" style="100">
+              <children>
+                <text x="0" y="0" width="455" height="35" params="16" style="100" name="question" caption="Lorem%20ipsum%20question%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.%20Lorem%20ipsum%20question%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_style" value="il_heading_1" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="45" width="448" height="28" params="147472" style="100" name="answer_container">
+                  <children>
+                    <static_bitmap x="0" y="0" width="15" height="16" params="16" style="100" name="answer_illustration">
+                      <variables>
+                        <var key="asset_uri" value="help_decline_icon" type="String"/>
+                        <var key="pivot_point" value="center left" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="15" y="0" width="433" height="28" params="16" style="100" name="answer" caption="Lorem%20ipsum%20answer%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.%20Lorem%20ipsum%20answer%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0x555555" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <border x="10" y="83" width="435" height="40" params="147472" style="102" name="explanation_container">
+                  <children>
+                    <static_bitmap x="10" y="10" width="30" height="30" params="16" style="100" name="explanation_illustration">
+                      <variables>
+                        <var key="asset_uri" value="help_habboway_dove_quizz" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="42" y="0" width="393" height="40" params="16" style="100" name="explanation" caption="Lorem%20ipsum%20explanation%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.%20Lorem%20ipsum%20explanation%20text%2C%20not%20quite%20as%20long%20as%20it%20gets.">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="margin_top" value="6" type="int"/>
+                        <var key="margin_bottom" value="6" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </border>
+                <static_bitmap x="2" y="133" width="450" height="16" params="16" style="100" name="separator">
+                  <variables>
+                    <var key="asset_uri" value="illumina_light_separator_horizontal" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="spacing" value="10" type="int"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </scrollable_itemlist_vertical>
+        <widget x="6" y="359" width="485" height="30" params="1040" style="100">
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <container x="0" y="374" width="498" height="65" params="1040" style="100" name="prev_next_buttons">
+          <children>
+            <container_button x="16" y="0" width="208" height="53" params="147473" style="101" name="prev_button" color="0x0bbbbbb">
+              <children>
+                <itemlist_horizontal x="11" y="11" width="197" height="42" params="4341776" style="100">
+                  <children>
+                    <static_bitmap x="0" y="0" width="25" height="30" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="help_habboway_prev" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="25" y="5" width="2" height="20" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="illumina_light_separator_vertical" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <label x="27" y="0" width="170" height="30" params="16" style="100" caption="%24%7Bhabbo.way.previous.button%7D">
+                      <variables>
+                        <var key="text_style" value="il_button" type="String"/>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="8" type="int"/>
+                        <var key="margin_right" value="25" type="int"/>
+                        <var key="margin_bottom" value="7" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </itemlist_horizontal>
+              </children>
+            </container_button>
+            <container_button x="296" y="0" width="185" height="53" params="409617" style="101" name="next_button" color="0x0bbbbbb">
+              <children>
+                <itemlist_horizontal x="11" y="11" width="174" height="42" params="4341776" style="100">
+                  <children>
+                    <label x="0" y="0" width="136" height="30" params="16" style="100" caption="%24%7Bhabbo.way.next.button%7D">
+                      <variables>
+                        <var key="text_style" value="il_button" type="String"/>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="8" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="7" type="int"/>
+                      </variables>
+                    </label>
+                    <static_bitmap x="136" y="5" width="2" height="20" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="illumina_light_separator_vertical" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="138" y="0" width="25" height="30" params="16" style="100">
+                      <variables>
+                        <var key="asset_uri" value="help_habboway_next" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <container x="163" y="0" width="11" height="30" params="16" style="100"/>
+                  </children>
+                </itemlist_horizontal>
+              </children>
+            </container_button>
+            <background x="14" y="1" width="240" height="58" params="17" style="100" name="prev_dimmer" color="0xa0a0e2e2e2" background="true"/>
+            <background x="243" y="1" width="240" height="58" params="17" style="100" name="next_dimmer" color="0xa0a0e2e2e2" background="true"/>
+          </children>
+        </container>
+        <container x="0" y="374" width="498" height="65" params="1040" style="100" name="failure_buttons" visible="false">
+          <children>
+            <button x="16" y="0" width="197" height="53" params="131089" style="101" name="review_button" caption="%24%7Bhabbo.way.quiz.review.button%7D" color="0x0bbbbbb"/>
+            <button x="298" y="0" width="183" height="53" params="393233" style="101" name="exit_button" caption="%24%7Bhabbo.way.quiz.exit.button%7D" color="0x0bbbbbb"/>
+            <label x="345" y="43" width="126" height="14" params="262160" style="100" caption="%24%7Bhabbo.way.quiz.wait.indication%7D" visible="false">
+              <variables>
+                <var key="text_style" value="il_small" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+        <container x="0" y="374" width="499" height="65" params="1040" style="100" name="exit_button_container" visible="false">
+          <children>
+            <button x="158" y="0" width="183" height="53" params="131281" style="101" name="exit_button" caption="%24%7Bhabbo.way.quiz.exit.button%7D" color="0x0bbbbbb"/>
+            <label x="186" y="43" width="126" height="14" params="208" style="100" name="retake_time_notice" caption="%24%7Bhabbo.way.quiz.wait.indication%7D" visible="false">
+              <variables>
+                <var key="text_style" value="il_small" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

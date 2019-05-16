@@ -1,0 +1,13 @@
+<chatstyle id="10" name="skeleton" staffoverride="true">
+	<layouts>
+		<speakLayout assetId="bubble_speak"/>
+		<whisperLayout assetId="bubble_whisper"/>
+		<shoutLayout assetId="bubble_shout"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="left"/>
+		<middleBitmap assetId="middle"/>
+		<rightBitmap assetId="right"/>
+		<previewIconBitmap assetId="preview"/>
+	</bitmaps>
+</chatstyle>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="grs_popular_tag_row" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="270" height="20" params="16" style="0" name="row" color="0xFFffffff" background="true"/>
+  </window>
+</layout>

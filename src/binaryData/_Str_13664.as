@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_13664.bin", mimeType="application/octet-stream")]
+    [Embed(source="HabboFriendBarCom_element_spacing_xml.bin", mimeType="application/octet-stream")]
     public class _Str_13664 extends ByteArrayAsset 
     {
     }

@@ -1,0 +1,603 @@
+u_regular {
+    font-family: Ubuntu;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_bold {
+    font-family: Ubuntu;
+    font-size: 12;
+    font-weight: bold;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_italic {
+    font-family: Ubuntu;
+    font-size: 12;
+    font-style: italic;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_bold_italic {
+    font-family: Ubuntu;
+    font-size: 12;
+    font-style: italic;
+    font-weight: bold;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_small {
+    font-family: Ubuntu;
+    font-size: 10;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_button_tab {
+    font-family: Ubuntu;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_headline_small {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 14;
+    kerning: true;
+    anti-alias-type: advanced;
+}
+u_headline_medium {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 16;
+    kerning: true;
+    anti-alias-type: advanced;
+}
+u_headline_big {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 18;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_frame_title {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_chat_name {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+u_chat_name_whisper {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+u_chat_speak {
+    font-family: Ubuntu;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+u_chat_shout {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+u_chat_whisper {
+    font-family: Ubuntu;
+    font-size: 12;
+    kerning: true;
+    font-style: italic;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+u_tool_tip {
+    font-family: Ubuntu;
+    font-size: 11;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+}
+u_tag {
+    font-family: Ubuntu;
+    font-size: 10;
+    font-style: italic;
+    kerning: true;
+    anti-alias-type: advanced;
+}
+
+
+ubuntu_condensed_regular {
+    font-family: UbuntuCondensed;
+    font-size: 11;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+ubuntu_condensed_title {
+    font-family: UbuntuCondensed;
+    font-size: 18;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: 200;
+}
+
+
+
+
+
+
+
+il_regular {
+	font-family: Ubuntu;
+	font-size: 11;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_regular_white {
+	font-family: Ubuntu;
+	font-size: 11;
+    color: #ffffff;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+il_small {
+	font-family: Ubuntu;
+	font-size: 9;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_small_white {
+	font-family: Ubuntu;
+	font-size: 9;
+    color: #ffffff;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+il_heading_title {
+	font-family: Ubuntu;
+	font-size: 18;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_heading_1 {
+	font-family: Ubuntu;
+	font-size: 14;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_heading_2 {
+	font-family: Ubuntu;
+	font-size: 12;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_heading_3 {
+	font-family: Ubuntu;
+	font-size: 10;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_button {
+	font-family: Ubuntu;
+	font-size: 10;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_border {
+    font-family: Ubuntu;
+   	font-size: 10;
+    font-weight: bold;
+   	kerning: true;
+   	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_frame_title {
+	font-family: Ubuntu;
+	font-size: 10;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+}
+
+il_frame_modal_title {
+	font-family: Ubuntu;
+	font-size: 24;
+    font-weight: bold;
+    color: #ffffff;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+il_link_regular {
+	font-family: Ubuntu;
+	font-size: 11;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+    text-decoration: underline;
+}
+
+il_link_strong {
+	font-family: Ubuntu;
+	font-size: 11;
+    font-weight: bold;
+	kerning: true;
+	anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    etching-color: #b2ffffff;
+    etching-position: bottom;
+    text-decoration: underline;
+}
+
+id_regular {
+    font-family: Ubuntu;
+    font-size: 11;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_small {
+    font-family: Ubuntu;
+    font-size: 9;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_heading_title {
+    font-family: Ubuntu;
+    font-size: 18;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_heading_1 {
+    font-family: Ubuntu;
+    font-size: 14;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_heading_2 {
+    font-family: Ubuntu;
+    font-size: 12;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_heading_3 {
+    font-family: Ubuntu;
+    font-size: 10;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_button {
+    font-family: Ubuntu;
+    font-size: 10;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_border {
+    font-family: Ubuntu;
+    font-size: 10;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_frame_title {
+    font-family: UbuntuCondensed;
+    font-size: 12;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+id_frame_modal_title {
+    font-family: Ubuntu;
+    font-size: 24;
+    font-weight: bold;
+    color: #ffffff;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+}
+
+id_link_regular {
+    font-family: Ubuntu;
+    font-size: 11;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    text-decoration: underline;
+}
+
+id_link_strong {
+    font-family: Ubuntu;
+    font-size: 11;
+    font-weight: bold;
+    color: #ffffff;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+    text-decoration: underline;
+}
+
+regular {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+
+italic {
+    font-family: Volter;
+    font-size: 9;
+    font-style: italic;
+    anti-alias-type: normal;
+}
+
+
+bold {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+
+small {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+
+bold_italic {
+    font-family: Volter Bold;
+    font-size: 9;
+    font-style: italic;
+    anti-alias-type: normal;
+}
+
+button_regular {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+button_bold {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+button_shiny_regular {
+    font-family: Ubuntu;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+button_shiny_bold {
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 12;
+    kerning: true;
+    anti-alias-type: advanced;
+    sharpness: 80;
+    thickness: -15;
+}
+
+button_tab {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+
+frame_title {
+    font-family: Volter Bold;
+    font-size: 9;
+    color: #ffffff;
+    anti-alias-type: normal;
+}
+
+headline_big {
+    font-family: Volter Bold;
+    font-size: 18;
+    anti-alias-type: normal;
+}
+
+headline_medium {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+headline_small {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+chat_name {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+chat_speak {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+chat_shout {
+    font-family: Volter Bold;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+chat_whisper {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}
+
+
+tool_tip {
+    font-family: Volter;
+    font-size: 9;
+    color: #ffffff;
+    anti-alias-type: normal;
+}
+
+tag {
+    font-family: Volter;
+    font-size: 9;
+    anti-alias-type: normal;
+}

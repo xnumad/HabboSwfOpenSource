@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="background_color_ui" width="292" height="255" version="0.1" uid="22A7E849-AFE7-C6FA-35D0-21622C6F9115">
+  <window>
+    <frame x="0" y="0" width="292" height="255" params="163841" style="3" name="backgroundcolor_ui" caption="%24%7Bwidget.backgroundcolour.title%7D" color="0xff67a3bf" height_min="0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="3" y="16" width="275" height="171" params="16" style="100" color="0xffffffffff" background="true">
+          <children>
+            <itemlist x="2" y="2" width="270" height="166" params="16" style="0" name="tab_content" caption="%24%7Bwidget.dimmer.title%7D">
+              <children>
+                <container x="0" y="0" width="270" height="29" params="16" style="100" name="header_container">
+                  <children>
+                    <text x="4" y="0" width="218" height="31" params="16" style="0" name="dimmer_info" caption="%24%7Bwidget.backgroundcolor.info%7D">
+                      <variables>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <border x="239" y="2" width="30" height="28" params="16" style="100">
+                      <children>
+                        <bitmap x="1" y="1" width="28" height="26" params="16" style="100" name="color_preview_bitmap">
+                          <variables>
+                            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                          </variables>
+                        </bitmap>
+                      </children>
+                    </border>
+                  </children>
+                </container>
+                <container x="0" y="29" width="30" height="5" params="16" style="100" name="spacer"/>
+                <container x="4" y="34" width="251" height="42" params="16" style="0" name="hue_container">
+                  <children>
+                    <text x="0" y="0" width="144" height="15" params="16" style="100" name="parameter" caption="%24%7Bwidget.backgroundcolor.hue%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="2" y="12" width="201" height="12" params="3932176" style="0" name="slider_base" caption="%24%7Bwidget.dimmer.title%7D"/>
+                    <container x="0" y="13" width="206" height="17" params="16" style="0" name="slider_movement_area" caption="%24%7Bwidget.dimmer.title%7D">
+                      <children>
+                        <bitmap x="0" y="7" width="12" height="17" params="33073" style="0" name="slider_button" caption="%24%7Bwidget.dimmer.title%7D"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="4" y="76" width="251" height="42" params="16" style="0" name="saturation_container">
+                  <children>
+                    <text x="0" y="0" width="178" height="15" params="16" style="100" name="parameter" caption="%24%7Bwidget.backgroundcolor.saturation%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="2" y="12" width="201" height="12" params="3932176" style="0" name="slider_base" caption="%24%7Bwidget.dimmer.title%7D"/>
+                    <container x="0" y="13" width="206" height="17" params="16" style="0" name="slider_movement_area" caption="%24%7Bwidget.dimmer.title%7D">
+                      <children>
+                        <bitmap x="0" y="7" width="12" height="17" params="33073" style="0" name="slider_button" caption="%24%7Bwidget.dimmer.title%7D"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="4" y="118" width="251" height="42" params="16" style="0" name="lightness_container">
+                  <children>
+                    <text x="0" y="0" width="170" height="15" params="16" style="100" name="parameter" caption="%24%7Bwidget.backgroundcolor.lightness%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="2" y="12" width="201" height="12" params="3932176" style="0" name="slider_base" caption="%24%7Bwidget.dimmer.title%7D"/>
+                    <container x="0" y="13" width="206" height="17" params="16" style="0" name="slider_movement_area" caption="%24%7Bwidget.dimmer.title%7D">
+                      <children>
+                        <bitmap x="0" y="7" width="12" height="17" params="33073" style="0" name="slider_button" caption="%24%7Bwidget.dimmer.title%7D"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+              </children>
+            </itemlist>
+          </children>
+        </border>
+        <button x="4" y="193" width="203" height="24" params="131089" style="0" name="apply_button" caption="%24%7Bwidget.backgroundcolor.button.apply%7D"/>
+        <button x="90" y="193" width="189" height="24" params="393233" style="0" name="on_off_button" caption="%24%7Bwidget.backgroundcolor.button.on%7D"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

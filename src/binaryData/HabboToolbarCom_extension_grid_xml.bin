@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="extension_grid" width="192" height="260" version="0.1" uid="FC4E6AA0-B36B-5817-1F2C-BB7C950F620C">
+  <window>
+    <itemlist_vertical x="0" y="0" width="192" height="260" params="262208" style="0" width_min="192" width_max="192">
+      <variables>
+        <var key="spacing" value="2" type="int"/>
+        <var key="resize_on_item_update" value="true" type="Boolean"/>
+      </variables>
+    </itemlist_vertical>
+  </window>
+</layout>

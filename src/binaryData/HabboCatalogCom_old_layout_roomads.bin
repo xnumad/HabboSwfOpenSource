@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_roomads" width="360" height="460" version="0.1" uid="030BC4F2-B87E-7DF9-C5D0-DAB7118DF844">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="100" name="roomads">
+      <children>
+        <text x="242" y="402" width="78" height="13" params="16" style="3" name="ctlg_price_1">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="0" y="0" width="360" height="460" params="16" style="100" name="roomAdsCatalogWidget">
+          <children>
+            <text x="10" y="70" width="117" height="17" params="16" style="3" name="ctlg_text_1" caption="%24%7Broomad.catalog_text%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <label x="10" y="117" width="105" height="15" params="16" style="3" caption="%24%7Broomad.catalog_name%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+              </variables>
+            </label>
+            <border x="10" y="137" width="330" height="33" params="16" style="105">
+              <children>
+                <input x="9" y="8" width="291" height="17" params="1" style="3" name="name_input_text">
+                  <variables>
+                    <var key="always_show_selection" value="true" type="Boolean"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="max_chars" value="25" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </border>
+            <label x="10" y="173" width="132" height="15" params="16" style="3" caption="%24%7Broomad.catalog_description%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+              </variables>
+            </label>
+            <border x="10" y="193" width="330" height="145" params="16" style="105">
+              <children>
+                <input x="9" y="8" width="313" height="129" params="2177" style="3" name="desc_input_text">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="max_chars" value="100" type="int"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+              </children>
+            </border>
+            <label x="10" y="346" width="130" height="15" params="16" style="3" caption="%24%7Broomad.catalog_roomname%7D">
+              <variables>
+                <var key="text_style" value="u_small" type="String"/>
+              </variables>
+            </label>
+            <dropmenu x="10" y="364" width="330" height="24" params="17" style="3" name="room_drop_menu"/>
+            <border x="10" y="396" width="131" height="26" params="16400" style="0" name="totalprice_widget_border">
+              <children>
+                <container x="43" y="3" width="44" height="18" params="131280" style="100" name="price_container"/>
+              </children>
+            </border>
+            <container x="0" y="430" width="360" height="30" params="16" style="100" name="purchaseWidget" tags="NO_GIFT_OPTION%2CROOM_INITIATE_PURCHASE"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

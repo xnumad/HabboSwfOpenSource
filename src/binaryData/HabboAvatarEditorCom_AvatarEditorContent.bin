@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="avatarEditorContent" width="490" height="484" version="0.1" uid="22EE1723-635A-70E6-92D4-BD5916E2A637">
+  <window>
+    <container x="-2" y="-4" width="490" height="484" params="4358160" style="3" name="avatarEditorContent">
+      <children>
+        <container x="1" y="0" width="489" height="110" params="16" style="3" name="avatarNameEditor">
+          <children>
+            <background x="-2" y="0" width="489" height="110" params="17" style="0" name="name_background" color="0xffff0e3f52" background="true"/>
+            <text x="40" y="15" width="400" height="35" params="786448" style="3" name="avatar_name" caption="%24%7Bavatareditor.title%7D" color="0x00">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_size" value="28" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <html x="170" y="50" width="136" height="16" params="1" style="3" name="avatar_name_change" caption="%24%7Bavatareditor.name.change%7D" visible="false">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x1b79ab" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </container>
+        <container x="1" y="70" width="489" height="414" params="4358160" style="3" name="avatarEditor">
+          <children>
+            <container x="1" y="4" width="486" height="410" params="16" style="3" name="tabbedView">
+              <children>
+                <tab_context x="2" y="5" width="482" height="395" params="17" style="3" name="mainTabs">
+                  <children>
+                    <tab_container_button x="0" y="0" width="52" height="46" params="17" style="3" name="generic">
+                      <children>
+                        <static_bitmap x="1" y="-5" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_generic" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                    <tab_container_button x="52" y="0" width="52" height="46" params="17" style="3" name="head">
+                      <children>
+                        <static_bitmap x="0" y="-6" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_head" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                    <tab_container_button x="104" y="0" width="52" height="46" params="17" style="3" name="torso">
+                      <children>
+                        <static_bitmap x="0" y="-6" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_torso" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                    <tab_container_button x="156" y="0" width="52" height="46" params="17" style="3" name="legs">
+                      <children>
+                        <static_bitmap x="0" y="-7" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_legs" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                    <tab_container_button x="208" y="0" width="52" height="46" params="17" style="3" name="hotlooks">
+                      <children>
+                        <static_bitmap x="0" y="-7" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_hotlooks" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                    <tab_container_button x="260" y="0" width="52" height="46" params="17" style="3" name="effects">
+                      <children>
+                        <static_bitmap x="0" y="-5" width="52" height="42" params="16" style="3" name="bitmap" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_effects" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </tab_container_button>
+                  </children>
+                </tab_context>
+                <container x="2" y="36" width="482" height="365" params="16" style="3" name="contentArea">
+                  <children>
+                    <container x="20" y="10" width="250" height="35" params="16" style="3" name="generic_content" visible="false">
+                      <children>
+                        <region x="6" y="0" width="47" height="35" params="17" style="3" name="tab_boy" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_boy" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_gender_male_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <text x="50" y="10" width="143" height="17" params="16" style="3" name="tab_boy_title" caption="%24%7Bavatareditor.generic.boy%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <region x="100" y="0" width="47" height="35" params="17" style="3" name="tab_girl" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="48" height="35" params="16" style="3" name="tab_girl" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_gender_female_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <text x="150" y="10" width="141" height="17" params="16" style="3" name="tab_girl_title" caption="%24%7Bavatareditor.generic.girl%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="20" y="10" width="280" height="35" params="16" style="3" name="head_content" visible="false">
+                      <children>
+                        <region x="6" y="0" width="47" height="35" params="17" style="3" name="tab_hair" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_hair" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_head_hair_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="58" y="0" width="47" height="35" params="17" style="3" name="tab_hat" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_hat" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_head_hats_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="110" y="0" width="47" height="35" params="17" style="3" name="tab_accessories" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_accessories" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_head_accessories_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="162" y="0" width="47" height="35" params="17" style="3" name="tab_eyewear" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_eyewear" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_head_eyewear_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="214" y="0" width="47" height="35" params="17" style="3" name="tab_masks" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_masks" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_head_face_accessories_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                      </children>
+                    </container>
+                    <container x="20" y="10" width="210" height="35" params="16" style="3" name="torso_content" visible="false">
+                      <children>
+                        <region x="6" y="0" width="47" height="35" params="17" style="3" name="tab_shirt" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_shirt" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_top_shirt_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="58" y="0" width="47" height="35" params="17" style="3" name="tab_prints" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_prints" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_top_prints_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="110" y="0" width="47" height="35" params="17" style="3" name="tab_jacket" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_jacket" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_top_jacket_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="162" y="0" width="47" height="35" params="17" style="3" name="tab_accessories" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_accessories" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_top_accessories_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                      </children>
+                    </container>
+                    <container x="20" y="10" width="170" height="35" params="16" style="3" name="legs_content">
+                      <children>
+                        <region x="6" y="0" width="47" height="35" params="17" style="3" name="tab_pants" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_pants" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_bottom_trousers_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="58" y="0" width="47" height="35" params="17" style="3" name="tab_shoes" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_shoes" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_bottom_shoes_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                        <region x="110" y="0" width="47" height="35" params="17" style="3" name="tab_belts" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_belts" tags="BITMAP">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_tabs_bottom_accessories_on" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                      </children>
+                    </container>
+                    <container x="20" y="10" width="310" height="290" params="16" style="3" name="hotlooks_content" visible="false">
+                      <children>
+                        <text x="0" y="0" width="262" height="26" params="16" style="3" name="hotlooksTitle" caption="%24%7Bavatareditor.hotlooks.title%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="20" type="uint"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="0" y="28" width="168" height="17" params="16" style="3" name="hotlooksChoose" caption="%24%7Bavatareditor.hotlooks.choose%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <itemgrid_vertical x="4" y="65" width="299" height="220" params="16" style="3" name="hotlooks" tags="WARDROBE_HOTLOOKS_ITEM_GRID">
+                          <variables>
+                            <var key="spacing" value="7" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                          </variables>
+                        </itemgrid_vertical>
+                      </children>
+                    </container>
+                    <container x="20" y="10" width="140" height="35" params="16" style="3" name="effects_content">
+                      <children>
+                        <static_bitmap x="0" y="0" width="47" height="35" params="16" style="3" name="tab_effects" tags="BITMAP">
+                          <variables>
+                            <var key="asset_uri" value="avatar_editor_tabs_effects_fx" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <text x="40" y="4" width="169" height="26" params="16" style="3" name="effectsTitle" caption="%24%7Binventory.effects%7D">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="font_size" value="20" type="uint"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="bold" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <region x="6" y="0" width="47" height="35" params="17" style="3" name="tab_effects" treshold="0"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="335" y="90" width="122" height="210" params="16" style="3" name="action_container"/>
+                <container x="20" y="94" width="330" height="302" params="16" style="3" name="grid_container">
+                  <children>
+                    <scrollable_itemgrid_vertical x="0" y="0" width="330" height="200" params="16" style="3" name="thumbs" tags="CATEGORYNAME_ITEM_GRID">
+                      <children>
+                        <region x="0" y="0" width="50" height="50" params="17" style="3" name="thumb_template" treshold="0">
+                          <children>
+                            <static_bitmap x="0" y="0" width="50" height="50" params="16" style="3" name="hover" tags="BG_COLOR">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_parts_hilite" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <bitmap x="0" y="0" width="50" height="50" params="16" style="0" name="bitmap" tags="BITMAP" width_min="50" width_max="50"/>
+                            <static_bitmap x="40" y="40" width="10" height="9" params="16" style="100" name="club_icon" tags="CLUB_ICON">
+                              <variables>
+                                <var key="asset_uri" value="icons_hc_icon_small" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <static_bitmap x="0" y="30" width="17" height="20" params="16" style="100" name="sellable_icon" tags="SELLABLE_ICON">
+                              <variables>
+                                <var key="asset_uri" value="icons_wearable" type="String"/>
+                                <var key="pivot_point" value="bottom left" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <scrollable_itemgrid_vertical x="0" y="210" width="165" height="93" params="16" style="3" name="palette0" tags="CATEGORY_COLOUR_ITEM_GRID">
+                      <children>
+                        <region x="0" y="0" width="15" height="23" params="17" style="1" name="palette_template" treshold="0">
+                          <children>
+                            <bitmap x="1" y="0" width="13" height="21" params="16" style="0" name="color" tags="COLOR_IMAGE">
+                              <variables>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </bitmap>
+                            <static_bitmap x="1" y="0" width="13" height="21" params="16" style="0" name="border" tags="BORDER">
+                              <variables>
+                                <var key="asset_uri" value="avatar_editor_editor_clr_13x21_1" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                            <static_bitmap x="3" y="10" width="10" height="9" params="16" style="100" name="club_icon" tags="CLUB_ICON">
+                              <variables>
+                                <var key="asset_uri" value="icons_hc_icon_small" type="String"/>
+                                <var key="pivot_point" value="center" type="String"/>
+                                <var key="stretched_x" value="false" type="Boolean"/>
+                                <var key="stretched_y" value="false" type="Boolean"/>
+                              </variables>
+                            </static_bitmap>
+                          </children>
+                        </region>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <scrollable_itemgrid_vertical x="165" y="210" width="165" height="93" params="16" style="3" name="palette1" tags="CATEGORY_COLOUR_ITEM_GRID">
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <text x="0" y="30" width="298" height="128" params="16" style="3" name="content_notification" caption="%24%7Bavatar.editor.content.notification%7D">
+                      <variables>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="0" width="300" height="30" params="16" style="3" name="content_title" caption="%24%7Bavatar.editor.content.title%7D">
+                      <variables>
+                        <var key="font_size" value="20" type="uint"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <widget x="351" y="88" width="125" height="210" params="16" style="3" name="avatarWidget" tags="AVATAR">
+              <variables>
+                <var key="widget_type" value="room_previewer" type="String"/>
+                <var key="room_previewer:offsetx" value="-65" type="int"/>
+                <var key="room_previewer:offsety" value="-30" type="int"/>
+                <var key="room_previewer:zoom" value="2" type="int"/>
+              </variables>
+            </widget>
+            <button_thick x="356" y="373" width="122" height="28" params="917521" style="3" name="save" caption="%24%7Bavatareditor.save%7D" width_min="100"/>
+            <container x="428" y="7" width="55" height="30" params="16" style="3" name="wardrobeButtonContainer">
+              <children>
+                <button x="0" y="0" width="55" height="30" params="131089" style="3" name="wardrobe"/>
+                <static_bitmap x="0" y="0" width="55" height="30" params="16" style="3" name="wardrobe_icon" tags="BITMAP">
+                  <variables>
+                    <var key="asset_uri" value="avatar_editor_tabs_ae_tabs_wardrobe" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <container x="484" y="4" width="0" height="380" params="4194320" style="3" name="sideContainer"/>
+            <container x="11" y="46" width="468" height="352" params="16" style="3" name="effectParamsContainer">
+              <children>
+                <text x="339" y="284" width="120" height="17" params="16" style="3" name="effect_name" caption="xxx">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_color" value="0x666666" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="345" y="301" width="120" height="18" params="16" style="3" name="time_left_bg">
+                  <children>
+                    <bitmap x="1" y="1" width="120" height="16" params="16" style="3" name="progress_bar_bitmap"/>
+                    <text x="0" y="0" width="120" height="17" params="16" style="3" name="effect_time_left" caption="00%3A00%20left">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="text_color" value="0x666666" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <text x="9" y="327" width="300" height="17" params="16" style="3" name="save_to_activate" caption="%24%7Bavatareditor.save.to.activate%7D">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_color" value="0x666666" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <button_thick x="347" y="6" width="115" height="28" params="393217" style="6" name="get_more_button" caption="%24%7Bavatareditor.effects.shop%7D" color="0x0aa00" width_max="115"/>
+              </children>
+            </container>
+            <region x="389" y="295" width="50" height="31" params="17" style="3" name="rotate_avatar" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="44" height="29" params="16" style="100">
+                  <variables>
+                    <var key="asset_uri" value="avatar_editor_rotate_avatar_button" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

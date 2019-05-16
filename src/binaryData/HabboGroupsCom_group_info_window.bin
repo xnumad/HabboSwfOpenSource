@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Group info window" width="363" height="232" version="0.1" uid="5B18AB08-2B95-9409-2666-86A9382F807C">
+  <window>
+    <frame x="0" y="0" width="363" height="268" params="32769" style="3" name="groups_info_window" caption="%24%7Bgroup.window.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="10" y="10" width="343" height="214" params="16" style="0" name="group_cont"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

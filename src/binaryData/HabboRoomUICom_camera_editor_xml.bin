@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="camera_editor" width="586" height="517" version="0.1" uid="0B6DD4FC-BBD6-19C1-5DA2-18EA53EEC1C7">
+  <window>
+    <frame x="0" y="0" width="586" height="517" params="32769" style="3" name="bgBorder" caption="%24%7Bcamera.editor.button.text%7D" color="0x0555555">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <bitmap x="249" y="10" width="320" height="320" params="20" style="3" name="image">
+          <variables>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <border x="249" y="360" width="321" height="51" params="20" style="3" name="caption_bg" visible="false">
+          <children>
+            <input x="5" y="4" width="310" height="47" params="1" style="3" name="captionInput">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="max_lines" value="3" type="int"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+        <button_thick x="413" y="426" width="150" height="28" params="131073" style="6" dynamic_style="brightness_and_shadow_under" name="purchase_button" caption="%24%7Bcamera.preview.button.text%7D" color="0x09e00" treshold="0" width_min="150" width_max="150"/>
+        <display_object_wrapper x="413" y="426" width="150" height="28" params="0" style="3" name="purchase_display_object"/>
+        <border x="11" y="51" width="230" height="410" params="16" style="2" name="border_for_itemgrid" background="true"/>
+        <scrollable_itemgrid_vertical x="16" y="56" width="220" height="400" params="16" style="200" name="item_grid">
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+        <background x="249" y="415" width="320" height="1" params="16" style="1" name="button_separator" color="0xffff000000" background="true" treshold="0"/>
+        <button x="255" y="426" width="150" height="28" params="131073" style="3" dynamic_style="brightness_and_shadow_under" name="cancel_button" caption="%24%7Bcatalog.purchase_confirmation.cancel%7D" color="0x0cccccc" treshold="0" width_min="150" width_max="150"/>
+        <container x="249" y="271" width="320" height="59" params="17" style="3" name="slider_container">
+          <children>
+            <border x="0" y="0" width="320" height="59" params="16" style="3" name="slider_bg_border" color="0x00" blend="0.5"/>
+            <border x="14" y="35" width="292" height="8" params="16" style="3" name="slider_dark_bottom" color="0x00">
+              <children>
+                <region x="0" y="0" width="292" height="8" params="17" style="3" name="shaft_click_area" treshold="0"/>
+              </children>
+            </border>
+            <bitmap x="16" y="36" width="288" height="6" params="16" style="3" name="slider_base">
+              <variables>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+            <container x="4" y="27" width="312" height="24" params="16" style="3" name="slider_movement_area">
+              <children>
+                <bitmap x="0" y="0" width="24" height="24" params="33073" style="3" name="slider_button">
+                  <variables>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </bitmap>
+              </children>
+            </container>
+            <text x="105" y="8" width="110" height="18" params="934096" style="3" name="slider_effect_info" caption="default%20filter%2050%25" width_max="320">
+              <variables>
+                <var key="text_color" value="0xeeeeee" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+        <region x="450" y="333" width="120" height="24" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="zoom_button" color="0x00">
+          <children>
+            <border x="0" y="0" width="120" height="24" params="16" style="2" name="zoom_bg_border" color="0x0c7c6bf"/>
+            <border x="5" y="0" width="106" height="23" params="935938" style="2" name="centerizer" color="0x0c7c6bf">
+              <children>
+                <static_bitmap x="0" y="1" width="13" height="22" params="16" style="3" name="magnifier" clipping="false">
+                  <variables>
+                    <var key="asset_uri" value="roomtools_magnifier" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="16" y="4" width="90" height="14" params="16" style="3" name="zoom_text" caption="%24%7Broom.zoom.button.text%7D" color="0x0999999" width_max="90">
+                  <variables>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_style" value="u_button_tab" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </region>
+        <region x="326" y="333" width="120" height="24" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="save_button">
+          <children>
+            <border x="0" y="0" width="120" height="24" params="16" style="2" name="save_bg_border" color="0x0c7c6bf"/>
+            <border x="4" y="0" width="109" height="20" params="935938" style="2" name="centerizer" color="0x0c7c6bf">
+              <children>
+                <static_bitmap x="0" y="4" width="16" height="16" params="16" style="3" name="download_image" clipping="false">
+                  <variables>
+                    <var key="asset_uri" value="tools_tools_download_icon" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="19" y="4" width="90" height="14" params="16" style="3" name="save_text" caption="%24%7Bfloor.plan.editor.save%7D" color="0x00" width_max="90">
+                  <variables>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_style" value="u_button_tab" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </region>
+        <display_object_wrapper x="326" y="333" width="120" height="24" params="0" style="3" name="save_click_catcher"/>
+      </children>
+      <variables>
+        <var key="help_page" value="camera" type="String"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

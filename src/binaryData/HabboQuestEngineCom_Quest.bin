@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Quest" width="362" height="114" version="0.1" uid="A68558FA-C16B-1ECB-7D94-E0703DB80E66">
+  <window>
+    <border x="0" y="0" width="362" height="114" params="16" style="0" name="quest_container" color="0x0c9c9c9">
+      <children>
+        <border x="5" y="6" width="351" height="28" params="144" style="0" name="quest_header" color="0x08e8e8e"/>
+        <text x="80" y="11" width="208" height="18" params="786448" style="0" name="quest_header_txt" caption="Frienship%20Quest%208/16%3A%20Share%20Love">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button_thick x="246" y="76" width="108" height="29" params="132177" style="3" name="accept_button" caption="%24%7Bquests.list.accept%7D" tags="FIT%3AquestsAcceptButton" width_min="108" width_max="108"/>
+        <text x="98" y="39" width="255" height="33" params="144" style="0" name="desc_txt" caption="Search%20around%20hotel%20and%20locate%20this%20very%20valuable%20dino%20egg%20jhg%20jhg%20jhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jhg%20jhgjhgjh%20gjhg%20jh%20gjhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jhg%20jhg">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="99" y="82" width="143" height="17" params="1040" style="0" name="reward_caption_txt" caption="%24%7Bquests.list.rewardcaption%7D">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="150" y="82" width="23" height="17" params="1040" style="0" name="reward_amount_txt" caption="200">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <region x="271" y="81" width="100" height="18" params="132113" style="0" name="cancel_region" treshold="0" tags="FIT%3AquestInfoCancel">
+          <children>
+            <text x="0" y="0" width="94" height="17" params="4194320" style="0" name="cancel_txt" caption="%24%7Bquests.list.reject%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <static_bitmap x="6" y="38" width="92" height="72" params="16" style="0" name="quest_pic_bitmap">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <icon x="169" y="80" width="22" height="22" params="1040" style="0" name="currency_icon" id="9999"/>
+        <html x="98" y="72" width="255" height="33" params="129" style="0" name="hint_txt" caption="Search%20around%20hotel%20and%20locate%20this%20very%20valuable%20dino%20egg%20jhg%20jhg%20jhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jhg%20jhgjhgjh%20gjhg%20jh%20gjhg%20jh%20gjhg%20jhg%20jhg%20jhg%20jhg%20jhg" visible="false">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+          </variables>
+        </html>
+        <region x="98" y="72" width="155" height="18" params="131089" style="0" name="link_region" visible="false" treshold="0">
+          <children>
+            <text x="0" y="0" width="132" height="17" params="4194320" style="0" name="link_catalog" caption="%24%7Bquests.list.opencatalog%7D" visible="false">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="144" height="17" params="4194320" style="0" name="link_navigator" caption="%24%7Bquests.list.opennavigator%7D" visible="false">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="0" width="155" height="17" params="4194320" style="0" name="link_room" caption="%24%7Bquests.gotocampaignroom%7D" visible="false">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <text x="98" y="53" width="255" height="20" params="144" style="0" name="delay_desc_txt" caption="%24%7Bquests.list.nextquestavailable%7D" visible="false">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="98" y="71" width="120" height="20" params="144" style="0" name="delay_txt" caption="7%20hours" visible="false">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="13" type="uint"/>
+            <var key="text_color" value="0x90bd" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="pending_bully_request" width="369" height="228" version="0.1" uid="67912B3C-40E7-C764-6702-C84F816F6908">
+  <window>
+    <frame x="0" y="0" width="369" height="228" params="163841" style="100" name="pending_request" caption="%24%7Bguide.pending.bully.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="8" y="2" width="351" height="192" params="8536080" style="100" clipping="false">
+          <children>
+            <label x="0" y="0" width="188" height="19" params="16" style="100" caption="%24%7Bguide.pending.bully.subtitle%7D">
+              <variables>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="text_color" value="0xc30000" type="hex"/>
+              </variables>
+            </label>
+            <text x="0" y="22" width="295" height="24" params="16" style="100" caption="%24%7Bguide.pending.bully.description%7D" width_min="295" width_max="295">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_bottom" value="8" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="0" y="49" width="295" height="88" params="16" style="102">
+              <children>
+                <label x="13" y="12" width="133" height="15" params="16" style="100" caption="%24%7Bguide.pending.bully.report%7D">
+                  <variables>
+                    <var key="text_style" value="il_border" type="String"/>
+                    <var key="text_color" value="0x444444" type="hex"/>
+                  </variables>
+                </label>
+                <label x="37" y="29" width="42" height="15" params="16" style="100" name="user_name" caption="user123">
+                  <variables>
+                    <var key="text_style" value="il_border" type="String"/>
+                  </variables>
+                </label>
+                <label x="37" y="42" width="135" height="27" params="16" style="100" name="room_name" caption="%24%7Bguide.pending.bully.room%7D">
+                  <variables>
+                    <var key="text_color" value="0x444444" type="hex"/>
+                    <var key="margin_bottom" value="11" type="int"/>
+                  </variables>
+                </label>
+                <widget x="13" y="34" width="18" height="19" params="3932176" style="100" name="user_avatar">
+                  <variables>
+                    <var key="widget_type" value="avatar_image" type="String"/>
+                    <var key="avatar_image:scale" value="sh" type="String"/>
+                    <var key="avatar_image:only_head" value="true" type="Boolean"/>
+                    <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                  </variables>
+                </widget>
+                <widget x="13" y="62" width="4" height="4" params="147472" style="100" name="timestamp">
+                  <variables>
+                    <var key="widget_type" value="updating_timestamp" type="String"/>
+                  </variables>
+                </widget>
+              </children>
+            </border>
+            <container x="-10" y="140" width="370" height="52" params="16" style="100">
+              <children>
+                <button x="115" y="0" width="140" height="48" params="131281" style="101" name="close_button" caption="%24%7Balert.close.button%7D" color="0x0bbbbbb"/>
+              </children>
+            </container>
+          </children>
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <static_bitmap x="320" y="39" width="35" height="120" params="1040" style="100">
+          <variables>
+            <var key="asset_uri" value="help_illustrations_bully" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </frame>
+  </window>
+</layout>

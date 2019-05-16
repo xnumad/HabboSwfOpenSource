@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_spaces_new" width="360" height="460" version="0.1" uid="88B0EEC3-CE5A-4CD9-51F7-DADFF30532AE">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" name="ctlg_spaces_new">
+      <children>
+        <container x="180" y="150" width="170" height="245" params="16" style="0" name="productViewWidget" tags="NO_ROOM_CANVAS"/>
+        <container x="180" y="150" width="180" height="275" params="16" style="0" name="roomPreviewWidget">
+          <children>
+            <bitmap x="0" y="0" width="180" height="277" params="16" style="0" name="catalog_floor_preview_example"/>
+            <bitmap x="29" y="151" width="288" height="147" params="16" style="0" name="catalog_wall_preview_b_right"/>
+            <bitmap x="118" y="151" width="120" height="118" params="16" style="0" name="catalog_space_preview_window"/>
+          </children>
+        </container>
+        <container x="0" y="430" width="360" height="30" params="16" style="0" name="purchaseWidget"/>
+        <container x="5" y="150" width="170" height="292" params="16" style="0" name="spacesNewWidget" tags="EMBEDDED%2CFIXED">
+          <children>
+            <selector x="0" y="0" width="170" height="22" params="17" style="100" name="groups">
+              <children>
+                <button_group_left x="0" y="0" width="147" height="21" params="131089" style="100" name="group.walls" caption="%24%7Bcatalog.spaces.tab.walls%7D" width_min="50"/>
+                <button_group_center x="50" y="0" width="152" height="21" params="131089" style="100" name="group.floors" caption="%24%7Bcatalog.spaces.tab.floors%7D" width_min="50"/>
+                <button_group_right x="100" y="0" width="150" height="21" params="131089" style="100" name="group.views" caption="%24%7Bcatalog.spaces.tab.views%7D" width_min="50"/>
+              </children>
+            </selector>
+            <scrollable_itemgrid_vertical x="0" y="28" width="170" height="239" params="16" style="3" name="itemGrid">
+              <variables>
+                <var key="spacing" value="2" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+              </variables>
+            </scrollable_itemgrid_vertical>
+          </children>
+        </container>
+        <container x="180" y="125" width="175" height="28" params="16" style="0" name="activityPointDisplayWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

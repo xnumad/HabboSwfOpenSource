@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="quiz_unlike" width="32" height="32" version="0.1" uid="85F18D9A-FE27-E597-80D3-ED54EB64F553">
+  <window>
+    <container x="-1" y="0" width="32" height="32" params="0" style="7">
+      <children>
+        <border x="0" y="0" width="32" height="32" params="16" style="2" name="white"/>
+        <border x="0" y="0" width="32" height="32" params="16" style="2" name="colored" color="0x0b32e22"/>
+        <region x="0" y="0" width="32" height="32" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_like" caption="z" clipping="false" treshold="0" width_min="32" width_max="32">
+          <children>
+            <static_bitmap x="5" y="8" width="22" height="22" params="16" style="3" clipping="false" tags="%23icon">
+              <variables>
+                <var key="asset_uri" value="word_quiz_thum_down" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="etching_color" value="0x48000000" type="hex"/>
+              </variables>
+            </static_bitmap>
+          </children>
+          <variables>
+            <var key="tool_tip_caption" value="${quizz.like.button.tooltip}" type="String"/>
+          </variables>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

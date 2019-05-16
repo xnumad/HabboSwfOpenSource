@@ -1,0 +1,14 @@
+<chatstyle id="9" name="zombie_hand" staffoverride="true">
+	<layouts>
+		<speakLayout assetId="bubble_speak"/>
+		<whisperLayout assetId="bubble_whisper"/>
+		<shoutLayout assetId="bubble_shout"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="left"/>
+		<middleBitmap assetId="middle"/>
+		<rightBitmap assetId="right"/>
+		<pointerBitmap assetId="pointer"/>
+		<previewIconBitmap assetId="preview"/>
+	</bitmaps>
+</chatstyle>

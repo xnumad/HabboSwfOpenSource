@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="productViewWidget" width="360" height="200" version="0.1" uid="C3566EE8-F7CE-F431-F065-DA6F9C26545F">
+  <window>
+    <container x="0" y="0" width="360" height="200" params="2064" style="0" name="main_container">
+      <children>
+        <bitmap x="0" y="0" width="360" height="200" params="2192" style="0" name="ctlg_teaserimg_1">
+          <variables>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <region x="0" y="0" width="360" height="200" params="2193" style="0" name="room_canvas_container" color="0xffff000000" background="true" treshold="0">
+          <children>
+            <display_object_wrapper x="0" y="0" width="360" height="200" params="2208" style="3" name="room_canvas"/>
+          </children>
+        </region>
+        <widget x="0" y="130" width="360" height="4" params="1168" style="100" visible="false">
+          <variables>
+            <var key="widget_type" value="separator" type="String"/>
+          </variables>
+        </widget>
+        <scrollable_itemgrid_vertical x="11" y="88" width="137" height="76" params="16" style="3" name="bundleGrid">
+          <variables>
+            <var key="spacing" value="2" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+          </variables>
+        </scrollable_itemgrid_vertical>
+        <formatted_text x="5" y="22" width="48" height="17" params="0" style="3" name="ctlg_product_name" caption="product">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+        <formatted_text x="5" y="36" width="175" height="15" params="0" style="3" name="ctlg_description" caption="description">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="italic" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </formatted_text>
+      </children>
+    </container>
+  </window>
+</layout>

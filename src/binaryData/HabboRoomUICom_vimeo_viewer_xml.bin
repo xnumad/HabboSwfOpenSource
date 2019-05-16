@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="vimeo_viewer" width="451" height="356" version="0.1" uid="B38E93BA-31F2-EE60-19A9-C0E625F2492C">
+  <window>
+    <frame x="0" y="0" width="451" height="356" params="98305" style="3" name="video_viewer" color="0xff67a3bf" width_min="400" height_min="350">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="7" y="6" width="431" height="302" params="18576" style="100" name="video_background" color="0xffff000000" background="true">
+          <children>
+            <label x="122" y="143" width="187" height="16" params="3280" style="100" name="no_videos_label" caption="%24%7Bwidget.furni.video_viewer.no_videos%7D">
+              <variables>
+                <var key="text_style" value="il_regular_white" type="String"/>
+              </variables>
+            </label>
+            <display_object_wrapper x="0" y="0" width="431" height="302" params="2176" style="3" name="video_wrapper" visible="false"/>
+          </children>
+        </background>
+        <border x="12" y="12" width="421" height="19" params="128" style="3" name="video_id_editor">
+          <children>
+            <label x="1" y="1" width="52" height="17" params="16" style="3" caption="Video%20id%3A">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+              </variables>
+            </label>
+            <input x="53" y="1" width="366" height="17" params="129" style="3" name="video_id" caption="40036380">
+              <variables>
+                <var key="restrict" value="0123456789" type="String"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

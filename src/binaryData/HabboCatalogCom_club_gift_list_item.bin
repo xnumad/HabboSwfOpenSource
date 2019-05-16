@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="marketplace_offers_item" width="320" height="58" version="0.1" uid="9C24F49C-226C-C638-FC5A-B62AD0B3B828">
+  <window>
+    <border x="0" y="0" width="320" height="58" params="16" style="0" color="0x0e3e3e3">
+      <children>
+        <label x="58" y="8" width="71" height="17" params="16" style="3" name="gift_name" caption="lorem%20ipsum">
+          <variables>
+            <var key="text_style" value="u_bold" type="String"/>
+          </variables>
+        </label>
+        <label x="58" y="22" width="60" height="15" params="16" style="3" name="gift_desc" caption="lorem%20ipsum">
+          <variables>
+            <var key="text_style" value="u_small" type="String"/>
+          </variables>
+        </label>
+        <text x="58" y="36" width="236" height="15" params="16" style="3" name="months_required">
+          <variables>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="167" y="32" width="148" height="22" params="393233" style="3" name="select_button" caption="%24%7Bcatalog.club_gift.select%7D"/>
+        <container x="7" y="6" width="52" height="46" params="16" style="0" name="image_container" background="true" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="52" height="46" params="16" style="0" name="image"/>
+            <text x="18" y="18" width="10" height="15" params="176" style="3" name="bundleCounter" caption="0">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_color" value="0xcccc66" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="10" y="2" width="17" height="17" params="131088" style="2" name="multiContainer" color="0x0ff3300">
+              <children>
+                <text x="3" y="0" width="10" height="16" params="16" style="3" name="multiCounter" caption="0">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_color" value="0xcccc66" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </container>
+        <icon x="5" y="5" width="20" height="20" params="16" style="12" name="vip_icon"/>
+      </children>
+    </border>
+  </window>
+</layout>

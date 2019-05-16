@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="inventory" width="490" height="342" version="0.1" uid="3BE66DF1-7998-E730-CEC8-AA055A4C36B5">
+  <window>
+    <frame x="0" y="0" width="490" height="342" params="98305" style="3" name="inventoryBase" caption="%24%7Binventory.title%7D" color="0xff418db0" width_min="490" width_max="490" height_min="300">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="0" y="0" width="478" height="301" params="2064" style="3" name="top_content" tags="TOP_CONTENT">
+          <children>
+            <tab_context x="0" y="0" width="478" height="301" params="2064" style="3" name="tabs" caption="Inventory">
+              <children>
+                <tab_container_button x="0" y="0" width="107" height="34" params="147473" style="3" name="furni" caption="%24%7Binventory.furni%7D">
+                  <children>
+                    <label x="0" y="0" width="107" height="34" params="16" style="3" caption="%24%7Binventory.furni%7D">
+                      <variables>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="7" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </tab_container_button>
+                <tab_container_button x="107" y="0" width="131" height="34" params="147473" style="3" name="rentables" caption="%24%7Binventory.rentables%7D">
+                  <children>
+                    <label x="0" y="0" width="131" height="34" params="16" style="3" caption="%24%7Binventory.rentables%7D">
+                      <variables>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="7" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </tab_container_button>
+                <tab_container_button x="238" y="0" width="155" height="34" params="147473" style="3" name="pets" caption="%24%7Binventory.furni.tab.pets%7D">
+                  <children>
+                    <label x="0" y="0" width="155" height="34" params="16" style="3" caption="%24%7Binventory.furni.tab.pets%7D">
+                      <variables>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="7" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </tab_container_button>
+                <tab_container_button x="393" y="0" width="119" height="34" params="147473" style="3" name="badges" caption="%24%7Binventory.badges%7D">
+                  <children>
+                    <label x="0" y="0" width="119" height="34" params="16" style="3" caption="%24%7Binventory.badges%7D">
+                      <variables>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="7" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </tab_container_button>
+                <tab_container_button x="512" y="0" width="105" height="34" params="147473" style="3" name="bots" caption="%24%7Binventory.bots%7D">
+                  <children>
+                    <label x="0" y="0" width="105" height="34" params="16" style="3" caption="%24%7Binventory.bots%7D">
+                      <variables>
+                        <var key="margin_left" value="10" type="int"/>
+                        <var key="margin_top" value="7" type="int"/>
+                        <var key="margin_right" value="10" type="int"/>
+                        <var key="margin_bottom" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                </tab_container_button>
+              </children>
+            </tab_context>
+            <container x="0" y="20" width="478" height="278" params="2064" style="3" name="empty_container">
+              <children>
+                <static_bitmap x="46" y="42" width="180" height="180" params="16" style="3" name="image">
+                  <variables>
+                    <var key="asset_uri" value="inventory_inventory_empty" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+                <itemlist_vertical x="287" y="64" width="176" height="154" params="16" style="3">
+                  <children>
+                    <text x="0" y="0" width="176" height="17" params="16" style="3" name="inventory_empty_title" caption="%24%7Binventory.empty.title%7D" tags="furni_description">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_color" value="0xdd0000" type="hex"/>
+                        <var key="text_style" value="il_heading_2" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="22" width="176" height="17" params="16" style="3" name="inventory_empty_description" caption="%24%7Binventory.empty.desc%7D" tags="furni_description">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="multiline" value="true" type="Boolean"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                  </variables>
+                </itemlist_vertical>
+                <button x="268" y="225" width="149" height="51" params="918545" style="3" name="open_catalog_btn" caption="%24%7Binventory.open.catalog%7D"/>
+              </children>
+            </container>
+            <container x="6" y="27" width="264" height="268" params="2064" style="3" name="loading_container" visible="false">
+              <children>
+                <static_bitmap x="0" y="0" width="264" height="268" params="16" style="3" name="download_image">
+                  <variables>
+                    <var key="asset_uri" value="inventory_download_icon" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <container x="5" y="35" width="468" height="261" params="2064" style="4" name="contentArea">
+              <children>
+                <container x="0" y="0" width="468" height="261" params="2064" style="3" name="furni">
+                  <children>
+                    <border x="0" y="0" width="468" height="25" params="16" style="3" name="options_container" color="0x0cacaca">
+                      <children>
+                        <border x="4" y="3" width="139" height="20" params="16" style="0">
+                          <children>
+                            <input x="3" y="2" width="120" height="15" params="1" style="3" name="filter" width_min="60">
+                              <variables>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </input>
+                            <region x="120" y="0" width="20" height="20" params="17" style="3" name="clear_filter_button" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="icons_close" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                          </children>
+                        </border>
+                        <dropmenu x="150" y="2" width="119" height="21" params="17" style="100" name="filter.options"/>
+                        <dropmenu x="274" y="2" width="119" height="21" params="17" style="100" name="placement.options"/>
+                      </children>
+                    </border>
+                    <container x="0" y="27" width="284" height="231" params="2064" style="3" name="grid_container">
+                      <children>
+                        <scrollable_itemgrid_vertical x="0" y="0" width="284" height="221" params="2065" style="3" name="item_grid" tags="FURNI_ITEM_GRID">
+                          <variables>
+                            <var key="spacing" value="2" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                          </variables>
+                        </scrollable_itemgrid_vertical>
+                        <itemlist_horizontal x="0" y="220" width="280" height="10" params="1040" style="3" name="item_grid_pages">
+                          <children>
+                            <region x="0" y="0" width="8" height="14" params="147473" style="3" treshold="0">
+                              <children>
+                                <text x="0" y="0" width="8" height="14" params="16" style="3" caption="0" tags="PAGE">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="text_style" value="il_small" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                              </children>
+                            </region>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="2" type="int"/>
+                          </variables>
+                        </itemlist_horizontal>
+                        <label x="185" y="217" width="98" height="17" params="263184" style="3" name="items.shown" caption="Items%20shown%3A%20x/y">
+                          <variables>
+                            <var key="text_color" value="0x777777" type="hex"/>
+                          </variables>
+                        </label>
+                      </children>
+                    </container>
+                    <container x="290" y="27" width="180" height="237" params="2064" style="3" name="preview_container">
+                      <children>
+                        <region x="5" y="0" width="170" height="130" params="18577" style="3" name="furni_preview_region" treshold="0" height_min="50"/>
+                        <widget x="5" y="0" width="170" height="130" params="2192" style="3" name="furni_preview_widget" height_min="50">
+                          <variables>
+                            <var key="widget_type" value="room_previewer" type="String"/>
+                          </variables>
+                        </widget>
+                        <itemlist_vertical x="0" y="2" width="180" height="233" params="1049728" style="3" name="preview_element_list">
+                          <children>
+                            <text x="0" y="0" width="190" height="17" params="786576" style="3" name="furni_name" caption="name" tags="furni_name" width_min="190" width_max="190">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="bold" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <text x="0" y="18" width="190" height="30" params="144" style="3" name="furni_description" caption="description%20lakjdsf%20lkjas%20dflkjalkjasdflkja%20sdlfkj%20asdf" tags="furni_description" width_min="190" width_max="190" height_max="45">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <text x="0" y="49" width="190" height="17" params="144" style="3" name="furni_extra" caption="extra" tags="furni_extra" width_min="190" width_max="190" height_min="12">
+                              <variables>
+                                <var key="auto_size" value="left" type="String"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="multiline" value="true" type="Boolean"/>
+                                <var key="word_wrap" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                            <button x="0" y="67" width="180" height="22" params="131089" style="3" name="placeinroom_btn" caption="%24%7Binventory.furni.placetoroom%7D" tags="FIT%3Ainventory.furni.placetoroom"/>
+                            <button x="0" y="90" width="165" height="22" params="131089" style="3" name="goto_room_btn" caption="%24%7Binventory.furni.gotoroom%7D" tags="FIT%3Ainventory.furni.gotoroom"/>
+                              <input x="0" y="136" width="50" height="19" params="1" style="3" name="offertotrade_cnt" background="true" width_min="50" width_max="50" caption="1">
+                                  <variables>
+                                      <var key="always_show_selection" value="true" type="Boolean"/>
+                                      <var key="text_style" value="u_regular" type="String"/>
+                                      <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                      <var key="border" value="true" type="Boolean"/>
+                                      <var key="spacing" value="0" type="Number"/>
+                                      <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                              </input>
+                            <button x="0" y="113" width="148" height="22" params="131089" style="3" name="offertotrade_btn" caption="%24%7Binventory.trading.offer%7D" width_min="60"/>
+                            <button x="0" y="136" width="167" height="22" params="131089" style="3" name="sell_btn" caption="%24%7Binventory.marketplace.sell%7D"/>
+                            <button x="0" y="159" width="125" height="28" params="131089" style="3" name="use_btn" caption="%24%7Binventory.furni.use%7D"/>
+                            <button x="0" y="188" width="168" height="22" params="131089" style="3" name="extendrent_btn" caption="%24%7Binventory.furni.extendrent%7D" tags="FIT%3Ainventory.furni.extendrent"/>
+                            <button x="0" y="211" width="189" height="22" params="131089" style="3" name="buyrenteditem_btn" caption="%24%7Binventory.furni.buyrenteditem%7D" tags="FIT%3Ainventory.furni.buyrenteditem"/>
+                          </children>
+                          <variables>
+                            <var key="spacing" value="1" type="int"/>
+                            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                            <var key="resize_on_item_update" value="true" type="Boolean"/>
+                          </variables>
+                        </itemlist_vertical>
+                        <itemlist_vertical x="0" y="0" width="52" height="34" params="0" style="3" name="icons_element_list">
+                          <children>
+                            <region x="0" y="0" width="52" height="16" params="131089" style="3" name="tradeable_info_region" treshold="0">
+                              <children>
+                                <text x="33" y="1" width="4" height="4" params="0" style="3" name="tradeable_number" tags="NUMBER%2CCOUNT">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                                <static_bitmap x="0" y="0" width="40" height="16" params="16" style="3" name="tradeable_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="inventory_furni_no_trade_icon" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="%24%7Binventory.furni.preview.tradeable_amount%7D" type="String"/>
+                              </variables>
+                            </region>
+                            <region x="0" y="16" width="52" height="16" params="131089" style="3" name="recyclable_info_region" treshold="0">
+                              <children>
+                                <text x="18" y="1" width="4" height="4" params="0" style="3" name="recyclable_number" tags="NUMBER%2CCOUNT">
+                                  <variables>
+                                    <var key="auto_size" value="left" type="String"/>
+                                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                    <var key="spacing" value="0" type="Number"/>
+                                    <var key="leading" value="0" type="Number"/>
+                                  </variables>
+                                </text>
+                                <static_bitmap x="0" y="0" width="28" height="16" params="16" style="3" name="recyclable_icon">
+                                  <variables>
+                                    <var key="asset_uri" value="inventory_furni_no_recycle_icon" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                              <variables>
+                                <var key="tool_tip_caption" value="%24%7Binventory.furni.preview.recyclable_amount%7D" type="String"/>
+                              </variables>
+                            </region>
+                          </children>
+                        </itemlist_vertical>
+                        <widget x="121" y="5" width="36" height="30" params="64" style="3" name="rarity_item_overlay_widget">
+                          <variables>
+                            <var key="widget_type" value="rarity_item_overlay_preview" type="String"/>
+                          </variables>
+                        </widget>
+                        <widget x="119" y="4" width="40" height="40" params="64" style="3" name="unique_limited_item_overlay_widget">
+                          <variables>
+                            <var key="widget_type" value="limited_item_overlay_preview" type="String"/>
+                          </variables>
+                        </widget>
+                        <button x="33" y="5" width="131" height="23" params="393217" style="3" name="nextItemButton" caption="%24%7Binventory.furni.next%7D"/>
+                        <button x="33" y="31" width="131" height="23" params="393217" style="3" name="viewItemButton" caption="%24%7Binventory.furni.view%7D"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="0" width="468" height="261" params="2064" style="3" name="pets" visible="false">
+                  <children>
+                    <scrollable_itemgrid_vertical x="0" y="0" width="274" height="261" params="2065" style="3" name="grid">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <container x="280" y="0" width="190" height="261" params="2128" style="3" name="preview_container">
+                      <children>
+                        <text x="0" y="0" width="66" height="19" params="144" style="3" name="preview_text" caption="PetName">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="u_headline_small" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <bitmap x="5" y="20" width="150" height="152" params="17" style="3" name="preview_image"/>
+                        <text x="5" y="177" width="190" height="30" params="144" style="3" name="preview_description" caption="Lorem%20ipsumlkj%20ljasdf%20lkjasd%20flkjasdflkj%20asdlkfj%20asdf" width_max="220">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="5" y="200" width="154" height="29" params="788496" style="3" name="preview_info" caption="...">
+                          <variables>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <button x="0" y="229" width="158" height="28" params="132113" style="3" name="place_button" caption="%24%7Binventory.pets.placetoroom%7D" width_min="158" width_max="158"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="0" width="468" height="261" params="2064" style="3" name="bots" visible="false">
+                  <children>
+                    <scrollable_itemgrid_vertical x="0" y="0" width="274" height="256" params="2193" style="3" name="grid">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <container x="280" y="0" width="190" height="261" params="2128" style="3" name="preview_container">
+                      <children>
+                        <text x="0" y="0" width="67" height="19" params="3145744" style="3" name="bot_name" caption="bot%20name">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_style" value="u_headline_small" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <bitmap x="43" y="24" width="100" height="150" params="17" style="3" name="preview_image"/>
+                        <text x="0" y="174" width="190" height="45" params="16" style="3" name="bot_description">
+                          <variables>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="multiline" value="true" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <button x="10" y="225" width="158" height="28" params="132113" style="3" name="place_button" caption="%24%7Binventory.bot.placetoroom%7D" width_min="158" width_max="158"/>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="0" width="468" height="261" params="2064" style="3" name="badges" visible="false">
+                  <children>
+                    <border x="0" y="0" width="328" height="25" params="16" style="3" name="options_container" color="0x0cacaca">
+                      <children>
+                        <border x="4" y="3" width="139" height="20" params="16" style="0">
+                          <children>
+                            <input x="3" y="2" width="122" height="15" params="1" style="3" name="filter" width_min="60">
+                              <variables>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </input>
+                            <region x="120" y="0" width="20" height="20" params="17" style="3" name="clear_filter_button" treshold="0">
+                              <children>
+                                <static_bitmap x="0" y="0" width="20" height="20" params="16" style="3">
+                                  <variables>
+                                    <var key="asset_uri" value="icons_close" type="String"/>
+                                    <var key="pivot_point" value="center" type="String"/>
+                                    <var key="stretched_x" value="false" type="Boolean"/>
+                                    <var key="stretched_y" value="false" type="Boolean"/>
+                                  </variables>
+                                </static_bitmap>
+                              </children>
+                            </region>
+                          </children>
+                        </border>
+                      </children>
+                    </border>
+                    <scrollable_itemgrid_vertical x="0" y="26" width="328" height="155" params="2193" style="3" name="inactive_items" tags="BADGE_ITEM_GRID">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </scrollable_itemgrid_vertical>
+                    <itemgrid_vertical x="335" y="23" width="135" height="151" params="2129" style="3" name="active_items" tags="ACTIVE_BADGE_ITEM_GRID">
+                      <variables>
+                        <var key="spacing" value="2" type="int"/>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemgrid_vertical>
+                    <text x="20" y="-3" width="285" height="19" params="16" style="3" name="myBadgesTitle" caption="%24%7Binventory.badges.inactivebadges%7D" visible="false">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="text_style" value="u_headline_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="330" y="3" width="134" height="19" params="80" style="3" name="wearingTitle" caption="%24%7Binventory.badges.activebadges%7D">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="text_style" value="u_headline_small" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <container x="0" y="184" width="468" height="55" params="1168" style="3" name="descriptionArea">
+                      <children>
+                        <border x="0" y="0" width="468" height="55" params="144" style="3" name="badge_desc_bg_box"/>
+                        <widget x="9" y="2" width="50" height="50" params="16" style="3" name="badge_image">
+                          <variables>
+                            <var key="widget_type" value="badge_image" type="String"/>
+                            <var key="badge_image:pivot_point" value="center" type="String"/>
+                            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </widget>
+                        <button x="282" y="20" width="179" height="28" params="393297" style="3" name="wearBadge_button" caption="%24%7Binventory.badges.wearbadge%7D"/>
+                        <text x="63" y="2" width="385" height="20" params="16" style="3" name="badgeName" caption="%24%7Binventory.badges.defaultdescription%7D">
+                          <variables>
+                            <var key="text_style" value="u_headline_small" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                        <text x="63" y="15" width="265" height="40" params="16" style="3" name="badgeDescriptionText" caption="%24%7Binventory.badges.defaultdescription%7D">
+                          <variables>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="word_wrap" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container>
+                    <container x="0" y="239" width="468" height="24" params="1168" style="3" name="achievements_score_container">
+                      <children>
+                        <border x="0" y="4" width="468" height="17" params="144" style="3" name="score_description_border" color="0x0428bb2" width_min="368">
+                          <children>
+                            <text x="0" y="0" width="468" height="17" params="3932240" style="3" name="score_description_text" caption="%24%7Bachievements_score_description%7D">
+                              <variables>
+                                <var key="auto_size" value="center" type="String"/>
+                                <var key="text_color" value="0xffffff" type="hex"/>
+                                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                                <var key="bold" value="true" type="Boolean"/>
+                                <var key="spacing" value="0" type="Number"/>
+                                <var key="leading" value="0" type="Number"/>
+                              </variables>
+                            </text>
+                          </children>
+                        </border>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+              </children>
+            </container>
+          </children>
+        </container>
+        <container x="0" y="301" width="478" height="1" params="16" style="3" name="subContentArea" caption="%24%7Binventory.title%7D"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="35" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="6" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

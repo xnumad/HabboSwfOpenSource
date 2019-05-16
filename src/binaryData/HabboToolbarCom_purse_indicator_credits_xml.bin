@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="purse_indicator_credits" width="192" height="29" version="0.1" uid="5823F7DA-BB4F-3D67-A185-A991A0D35726">
+  <window>
+    <region x="0" y="0" width="192" height="29" params="17" style="0" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="192" height="29" params="16" style="6" color="0xff55534e" tags="BGCOLOR"/>
+        <border x="3" y="3" width="186" height="22" params="16" style="3" color="0x0201e19" blend="0.8"/>
+        <border x="163" y="0" width="29" height="29" params="16" style="6" color="0xffe3af1e">
+          <children>
+            <static_bitmap x="0" y="0" width="29" height="29" params="22" style="0" name="credit_icon" tags="ICON">
+              <variables>
+                <var key="asset_uri" value="toolbar_credit_icon_0" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </border>
+        <text x="10" y="6" width="91" height="16" params="16" style="100" caption="%24%7Bpurse_coins%7D">
+          <variables>
+            <var key="text_color" value="0xe3af1e" type="hex"/>
+            <var key="text_style" value="il_regular_white" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="thickness" value="200" type="Number"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="90" y="6" width="60" height="16" params="262160" style="100" name="credits" caption="0">
+          <variables>
+            <var key="auto_size" value="right" type="String"/>
+            <var key="text_style" value="il_regular_white" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="44" y="0" width="33" height="29" params="147456" style="6" name="change_overlay" color="0x0e3af1e" visible="false">
+          <children>
+            <text x="0" y="0" width="33" height="29" params="16" style="0" name="change" caption="+50">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_regular_white" type="String"/>
+                <var key="margin_left" value="4" type="int"/>
+                <var key="margin_top" value="6" type="int"/>
+                <var key="margin_right" value="6" type="int"/>
+                <var key="margin_bottom" value="7" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+    </region>
+  </window>
+</layout>

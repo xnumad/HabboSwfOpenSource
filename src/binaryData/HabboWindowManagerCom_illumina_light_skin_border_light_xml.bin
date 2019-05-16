@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<skin name="illumina_light_skin_border_light" version="0.0">
+
+	<!-- shared variables -->
+	<variables>
+		<variable key="asset" value="illumina_light_border_light_png" type="String"/>
+	</variables>
+
+	<!-- the following maps states to layouts and templates -->
+	<states>
+		<state name="default" layout="illumina_light_border_light" template="illumina_light_border_light_template"/>
+	</states>
+
+	<!-- templates defines regions in bitmap asset -->
+	<templates>
+		<template name="illumina_light_border_light_template" asset="$asset">
+			<entities>
+				<entity name="top" type="bitmap"><region><Rectangle x="0" y="0" width="9" height="4"/></region></entity>
+				<entity name="center" type="bitmap"><region><Rectangle x="0" y="4" width="9" height="4"/></region></entity>
+				<entity name="bottom_left" type="bitmap"><region><Rectangle x="0" y="8" width="4" height="12"/></region></entity>
+				<entity name="bottom_center" type="bitmap"><region><Rectangle x="4" y="8" width="1" height="12"/></region></entity>
+				<entity name="bottom_right" type="bitmap"><region><Rectangle x="5" y="8" width="4" height="12"/></region></entity>
+			</entities>
+		</template>
+	</templates>
+
+	<!-- markup for layout drawer -->
+	<layouts>
+		<layout name="illumina_light_border_light" transparent="true">
+			<entities>
+				<entity name="top" id="0" colorize="true"><region><Rectangle x="0" y="0" width="9" height="4"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+				<entity name="center" id="0" colorize="true"><region><Rectangle x="0" y="4" width="9" height="4"/></region><scale horizontal="strech" vertical="strech"/></entity>
+				<entity name="bottom_left" id="0" colorize="true"><region><Rectangle x="0" y="8" width="4" height="12"/></region><scale horizontal="fixed" vertical="move"/></entity>
+				<entity name="bottom_center" id="0" colorize="true"><region><Rectangle x="4" y="8" width="1" height="12"/></region><scale horizontal="strech" vertical="move"/></entity>
+				<entity name="bottom_right" id="0" colorize="true"><region><Rectangle x="5" y="8" width="4" height="12"/></region><scale horizontal="move" vertical="move"/></entity>
+			</entities>
+		</layout>
+	</layouts>
+</skin>

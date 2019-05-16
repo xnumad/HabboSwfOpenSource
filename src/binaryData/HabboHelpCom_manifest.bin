@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<manifest>
+	<component class="com.sulake.bootstrap.HabboHelpBootstrap" version="0.0">
+	<interface iid="com.sulake.iid.IIDHabboHelp" />
+		<assets>
+            <asset mimeType="text/xml" name="welcome_name_change_xml" />
+            <asset mimeType="text/xml" name="welcome_name_selection_xml" />
+            <asset mimeType="text/xml" name="welcome_name_suggestion_item_xml" />
+            <asset mimeType="text/xml" name="welcome_name_confirmation_xml" />
+            <asset mimeType="text/xml" name="welcome_screen_xml" />
+            <asset mimeType="text/xml" name="welcome_tour_popup_xml" />
+
+            <!-- Main window -->
+            <asset mimeType="text/xml" name="topics_flow_help_xml" />
+            <asset mimeType="text/xml" name="main_help_xml" />
+            <asset mimeType="text/xml" name="main_xml" />
+
+            <!-- Guide help request -->
+            <asset mimeType="text/xml" name="user_create_xml" />
+            <asset mimeType="text/xml" name="user_pending_xml" />
+            <asset mimeType="text/xml" name="user_ongoing_xml" />
+            <asset mimeType="text/xml" name="user_feedback_xml" />
+            <asset mimeType="text/xml" name="user_thanks_xml" />
+            <asset mimeType="text/xml" name="user_guide_disconnected_xml" />
+
+            <asset mimeType="text/xml" name="guide_tool_xml" />
+            <asset mimeType="text/xml" name="guide_accept_xml" />
+            <asset mimeType="text/xml" name="guide_ongoing_xml" />
+            <asset mimeType="text/xml" name="guide_closed_xml" />
+
+            <asset mimeType="text/xml" name="guardian_chat_review_accept_xml" />
+            <asset mimeType="text/xml" name="guardian_chat_review_results_xml" />
+            <asset mimeType="text/xml" name="guardian_chat_review_vote_xml" />
+            <asset mimeType="text/xml" name="guardian_chat_review_wait_for_results_xml" />
+            <asset mimeType="text/xml" name="guardian_chat_review_wait_for_voters_xml" />
+
+            <asset mimeType="text/xml" name="error_window_xml" />
+            <asset mimeType="text/xml" name="chat_msg_xml" />
+            <asset mimeType="text/xml" name="chat_msg_notification_xml" />
+            <asset mimeType="text/xml" name="chat_msg_reminder_xml" />
+            <asset mimeType="text/xml" name="report_window_xml"/>
+            <asset mimeType="text/xml" name="rejected_window_xml"/>
+
+            <asset mimeType="text/xml" name="pending_bully_request_xml"/>
+            <asset mimeType="text/xml" name="pending_guide_session_xml"/>
+            <asset mimeType="text/xml" name="pending_instructions_request_xml"/>
+            <asset mimeType="text/xml" name="pending_tour_request_xml"/>
+
+            <asset mimeType="text/xml" name="chat_review_reporter_feedback_xml"/>
+
+            <!-- Illumina CFH -->
+
+            <asset mimeType="text/xml" name="abusive_notice_xml" />
+            <asset mimeType="text/xml" name="bully_report_xml" />
+            <asset mimeType="text/xml" name="chat_report_xml" />
+            <asset mimeType="text/xml" name="chat_report_item_xml" />
+            <asset mimeType="text/xml" name="emergency_help_request_xml" />
+            <asset mimeType="text/xml" name="pending_request_xml" />
+
+            <!-- Habbo way -->
+            <asset mimeType="text/xml" name="habbo_way_xml" />
+            <asset mimeType="text/xml" name="habbo_way_quiz_xml" />
+            <asset mimeType="text/xml" name="safety_booklet_xml" />
+            
+            <asset mimeType="text/xml" name="sanction_info_xml" />
+
+		</assets>
+	</component>
+</manifest>

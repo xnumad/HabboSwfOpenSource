@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="habbo_window_confirm" width="296" height="163" version="0.1" uid="26E963D2-CA51-71A6-C4EA-00AF8DE339FA">
+  <window>
+      <frame x="0" y="0" width="300" height="165" params="32769" style="3" name="_alert_frame" caption="Alert" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="16" y="14" width="253" height="17" params="16" style="100" name="_alert_description" caption="Alert" tags="DESCRIPTION">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <link x="20" y="102" width="100" height="17" params="132097" style="3" name="_alert_button_cancel" caption="%24%7Bgeneric.cancel%7D" treshold="0">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="underline" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </link>
+        <button_thick x="180" y="98" width="82" height="28" params="918545" style="3" name="_alert_button_ok" caption="%24%7Bgeneric.ok%7D" color="0x0efefef" tags="OK" width_min="50"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

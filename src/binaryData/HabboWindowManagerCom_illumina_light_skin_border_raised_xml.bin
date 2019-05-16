@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<skin name="illumina_light_skin_border_raised" version="0.0">
+
+    <!-- shared variables -->
+    <variables>
+        <variable key="asset" value="illumina_light_border_raised_png" type="String"/>
+    </variables>
+
+    <!-- the following maps states to layouts and templates -->
+    <states>
+        <state name="default" layout="illumina_light_border_raised" template="illumina_light_border_raised_template"/>
+    </states>
+
+    <!-- templates defines regions in bitmap asset -->
+    <templates>
+        <template name="illumina_light_border_raised_template" asset="$asset">
+            <entities>
+                <entity name="border_top_left" type="bitmap"><region><Rectangle x="0" y="0" width="4" height="4"/></region></entity>
+                <entity name="border_top_center" type="bitmap"><region><Rectangle x="4" y="0" width="3" height="4"/></region></entity>
+                <entity name="border_top_right" type="bitmap"><region><Rectangle x="7" y="0" width="4" height="4"/></region></entity>
+                <entity name="border_center_left" type="bitmap"><region><Rectangle x="0" y="4" width="1" height="3"/></region></entity>
+                <entity name="border_center_right" type="bitmap"><region><Rectangle x="10" y="4" width="1" height="3"/></region></entity>
+                <entity name="border_bottom_left" type="bitmap"><region><Rectangle x="0" y="7" width="4" height="5"/></region></entity>
+                <entity name="border_bottom_center" type="bitmap"><region><Rectangle x="4" y="7" width="3" height="5"/></region></entity>
+                <entity name="border_bottom_right" type="bitmap"><region><Rectangle x="7" y="7" width="4" height="5"/></region></entity>
+
+                <entity name="background_top_left" type="bitmap"><region><Rectangle x="12" y="0" width="7" height="7"/></region></entity>
+                <entity name="background_top_center" type="bitmap"><region><Rectangle x="19" y="0" width="1" height="7"/></region></entity>
+                <entity name="background_top_right" type="bitmap"><region><Rectangle x="20" y="0" width="7" height="7"/></region></entity>
+                <entity name="background_center_left" type="bitmap"><region><Rectangle x="12" y="7" width="7" height="1"/></region></entity>
+                <entity name="background_center_center" type="bitmap"><region><Rectangle x="19" y="7" width="1" height="1"/></region></entity>
+                <entity name="background_center_right" type="bitmap"><region><Rectangle x="20" y="7" width="7" height="1"/></region></entity>
+                <entity name="background_bottom_left" type="bitmap"><region><Rectangle x="12" y="8" width="7" height="7"/></region></entity>
+                <entity name="background_bottom_center" type="bitmap"><region><Rectangle x="19" y="8" width="1" height="7"/></region></entity>
+                <entity name="background_bottom_right" type="bitmap"><region><Rectangle x="20" y="8" width="7" height="7"/></region></entity>
+            </entities>
+        </template>
+    </templates>
+
+    <!-- markup for layout drawer -->
+    <layouts>
+        <layout name="illumina_light_border_raised" transparent="true">
+            <entities>
+                <entity name="border_top_left"   id="0" colorize="false"><region><Rectangle x="0" y="0" width="4" height="4"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="border_top_center"   id="0" colorize="false"><region><Rectangle x="4" y="0" width="9" height="4"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="border_top_right"   id="0" colorize="false"><region><Rectangle x="13" y="0" width="4" height="4"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="border_center_left"   id="0" colorize="false"><region><Rectangle x="0" y="4" width="1" height="9"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+                <entity name="border_center_right"   id="0" colorize="false"><region><Rectangle x="16" y="4" width="1" height="9"/></region><scale horizontal="move" vertical="strech"/></entity>
+                <entity name="border_bottom_left"   id="0" colorize="false"><region><Rectangle x="0" y="13" width="4" height="5"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="border_bottom_center"   id="0" colorize="false"><region><Rectangle x="4" y="13" width="9" height="5"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="border_bottom_right"   id="0" colorize="false"><region><Rectangle x="13" y="13" width="4" height="5"/></region><scale horizontal="move" vertical="move"/></entity>
+
+                <entity name="background_top_left"   id="0" colorize="true"><region><Rectangle x="1" y="1" width="7" height="7"/></region><scale horizontal="fixed" vertical="fixed"/></entity>
+                <entity name="background_top_center"   id="0" colorize="true"><region><Rectangle x="8" y="1" width="1" height="7"/></region><scale horizontal="strech" vertical="fixed"/></entity>
+                <entity name="background_top_right"   id="0" colorize="true"><region><Rectangle x="9" y="1" width="7" height="7"/></region><scale horizontal="move" vertical="fixed"/></entity>
+                <entity name="background_center_left"   id="0" colorize="true"><region><Rectangle x="1" y="8" width="7" height="1"/></region><scale horizontal="fixed" vertical="strech"/></entity>
+                <entity name="background_center_center"   id="0" colorize="true"><region><Rectangle x="8" y="8" width="1" height="1"/></region><scale horizontal="strech" vertical="strech"/></entity>
+                <entity name="background_center_right"   id="0" colorize="true"><region><Rectangle x="9" y="8" width="7" height="1"/></region><scale horizontal="move" vertical="strech"/></entity>
+                <entity name="background_bottom_left"   id="0" colorize="true"><region><Rectangle x="1" y="9" width="7" height="7"/></region><scale horizontal="fixed" vertical="move"/></entity>
+                <entity name="background_bottom_center"   id="0" colorize="true"><region><Rectangle x="8" y="9" width="1" height="7"/></region><scale horizontal="strech" vertical="move"/></entity>
+                <entity name="background_bottom_right"   id="0" colorize="true"><region><Rectangle x="9" y="9" width="7" height="7"/></region><scale horizontal="move" vertical="move"/></entity>
+            </entities>
+        </layout>
+    </layouts>
+</skin>

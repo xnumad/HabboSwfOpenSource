@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="element_caption" width="250" height="24" version="0.1" uid="21079E9A-0EB7-9E3E-FBC3-8F72B96653F8">
+  <window>
+    <formatted_text x="0" y="0" width="250" height="24" params="8388752" style="100" caption="Caption%20PH" tags="COLORABLE">
+      <variables>
+        <var key="auto_size" value="left" type="String"/>
+        <var key="font_size" value="18" type="uint"/>
+        <var key="text_style" value="il_heading_1" type="String"/>
+        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+        <var key="multiline" value="true" type="Boolean"/>
+        <var key="word_wrap" value="true" type="Boolean"/>
+        <var key="max_lines" value="2" type="int"/>
+        <var key="spacing" value="-0.6" type="Number"/>
+        <var key="leading" value="0" type="Number"/>
+      </variables>
+    </formatted_text>
+  </window>
+</layout>

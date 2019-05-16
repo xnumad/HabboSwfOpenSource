@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="recyclerWidget" width="360" height="245" version="0.1" uid="31D35827-650F-7E2A-6273-0DCCE62B6401">
+  <window>
+    <container x="0" y="0" width="360" height="245" params="16" style="0">
+      <children>
+        <container x="0" y="0" width="360" height="245" params="16" style="0" name="normal">
+          <children>
+            <button x="88" y="196" width="190" height="30" params="131089" style="3" name="recycler_recycle" caption="%24%7Bcatalog.recycler.button.recycle%7D"/>
+            <bitmap x="28" y="1" width="34" height="34" params="17" style="0" name="slot_bg_1"/>
+            <bitmap x="65" y="1" width="34" height="34" params="17" style="0" name="slot_bg_2"/>
+            <bitmap x="102" y="1" width="34" height="34" params="17" style="0" name="slot_bg_3"/>
+            <bitmap x="139" y="1" width="34" height="34" params="17" style="0" name="slot_bg_4"/>
+            <bitmap x="28" y="1" width="34" height="34" params="17" style="0" name="slot_img_1"/>
+            <bitmap x="65" y="1" width="34" height="34" params="17" style="0" name="slot_img_2"/>
+            <bitmap x="102" y="1" width="34" height="34" params="17" style="0" name="slot_img_3"/>
+            <bitmap x="139" y="1" width="34" height="34" params="17" style="0" name="slot_img_4"/>
+            <bitmap x="28" y="45" width="34" height="34" params="17" style="0" name="slot_bg_5"/>
+            <bitmap x="65" y="45" width="34" height="34" params="17" style="0" name="slot_bg_6"/>
+            <bitmap x="102" y="45" width="34" height="34" params="17" style="0" name="slot_bg_7"/>
+            <bitmap x="139" y="45" width="34" height="34" params="17" style="0" name="slot_bg_8"/>
+            <bitmap x="28" y="45" width="34" height="34" params="17" style="0" name="slot_img_5"/>
+            <bitmap x="65" y="45" width="34" height="34" params="17" style="0" name="slot_img_6"/>
+            <bitmap x="102" y="45" width="34" height="34" params="17" style="0" name="slot_img_7"/>
+            <bitmap x="139" y="45" width="34" height="34" params="17" style="0" name="slot_img_8"/>
+            <bitmap x="28" y="91" width="34" height="34" params="17" style="0" name="slot_bg_9"/>
+            <bitmap x="65" y="91" width="34" height="34" params="17" style="0" name="slot_bg_10"/>
+            <bitmap x="102" y="91" width="34" height="34" params="17" style="0" name="slot_bg_11"/>
+            <bitmap x="139" y="91" width="34" height="34" params="17" style="0" name="slot_bg_12"/>
+            <bitmap x="28" y="91" width="34" height="34" params="17" style="0" name="slot_img_9"/>
+            <bitmap x="65" y="91" width="34" height="34" params="17" style="0" name="slot_img_10"/>
+            <bitmap x="102" y="91" width="34" height="34" params="17" style="0" name="slot_img_11"/>
+            <bitmap x="139" y="91" width="34" height="34" params="17" style="0" name="slot_img_12"/>
+          </children>
+        </container>
+        <container x="0" y="0" width="360" height="245" params="16" style="0" name="inactive" visible="false">
+          <children>
+            <button x="77" y="195" width="225" height="30" params="131089" style="3" name="recycle_again_button" caption="%24%7Bcatalog.recycler.button.recycle_again%7D"/>
+          </children>
+        </container>
+        <container x="0" y="0" width="360" height="245" params="16" style="0" name="timeout" visible="false"/>
+      </children>
+    </container>
+  </window>
+</layout>

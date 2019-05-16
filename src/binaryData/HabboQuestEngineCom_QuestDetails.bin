@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Quest" width="481" height="182" version="0.1" uid="6AC8EDD0-FFF9-6E7B-104C-48C8793BFDC2">
+  <window>
+    <frame x="0" y="0" width="493" height="253" params="32769" style="3" caption="${quests.details.caption}" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+    </frame>
+  </window>
+</layout>

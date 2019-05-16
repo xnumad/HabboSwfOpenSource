@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="boygirl" width="20" height="20" version="0.0">
+  <window>
+    <frame x="2" y="0" width="308" height="151" params="32768" style="0" caption="%24%7Bwidget.furni.clothingchange.gender.title%7D" color="0x3d3d3d">
+      <children>
+        <border x="0" y="0" width="296" height="119" params="2192" style="0" caption="%24%7Bwidget.furni.clothingchange.gender.title%7D" color="0xf0f0f0">
+          <children>
+            <button x="19" y="82" width="100" height="22" params="1180753" style="0" name="Boy" caption="%24%7Bwidget.furni.clothingchange.gender.male%7D" width_min="100"/>
+            <button x="174" y="82" width="100" height="22" params="1442897" style="0" name="Girl" caption="%24%7Bwidget.furni.clothingchange.gender.female%7D" width_min="100"/>
+            <text x="20" y="16" width="254" height="42" params="16" style="0" caption="%24%7Bwidget.furni.clothingchange.gender.info%7D">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0x0" type="hex"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

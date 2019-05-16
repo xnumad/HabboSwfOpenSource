@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="memenu_dance" width="180" height="165" version="0.1" uid="CB0FDB77-5CE4-4954-364C-3B37C4D78753">
+  <window>
+    <border x="0" y="0" width="180" height="165" params="0" style="6" name="dance_container" color="0x079756e">
+      <children>
+        <text x="20" y="5" width="141" height="17" params="786640" style="3" name="settings_title" caption="%24%7Bwidget.memenu.settings%7D" width_max="150">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container x="5" y="22" width="160" height="1" params="16" style="3" name="line"/>
+        <button x="10" y="55" width="160" height="22" params="131089" style="3" name="character_settings" caption="%24%7Bwidget.memenu.settings.character%7D" width_min="160" width_max="160"/>
+        <button x="10" y="30" width="160" height="22" params="131089" style="3" name="sound_settings" caption="%24%7Bwidget.memenu.settings.audio%7D" width_min="160" width_max="160"/>
+        <button x="10" y="80" width="160" height="22" params="131089" style="3" name="chat_settings" caption="%24%7Bwidget.memenu.settings.chat%7D" width_min="160" width_max="160"/>
+        <text x="11" y="106" width="159" height="20" params="16" style="3" name="identity_text" caption="%24%7Bwidget.memenu.settings.no_identity%7D" visible="false">
+          <variables>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="10" y="127" width="60" height="28" params="131089" style="3" name="back" caption="%24%7Bgeneric.back%7D" width_min="60" width_max="60"/>
+      </children>
+    </border>
+  </window>
+</layout>

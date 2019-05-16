@@ -61,24 +61,10 @@ foreach ($paths as $path) {
     }
     
     $nameFile = explode('.', $file)[0];
-    
-    $dataBin = file_get_contents($pathDir.'/'.$sourceName);
-    $dataBin = str_replace("\r", "\n", $dataBin);
-    $lignBin = explode("\n", $dataBin);
-    if(strpos($lignBin[0], "<?xml ") === FALSE)
-        continue; 
-    
-    $firstLign = $lignBin[1];
-    if(strpos($firstLign, "<layout name=\"") === FALSE && strpos($firstLign, "<skin name=\"") === FALSE)
-        continue;
 
     $nameTemplate = "";
-    if (strpos($firstLign, "<layout name=\"") !== false) {
-        $nameTemplate = explode('"', explode("<layout name=\"", $firstLign)[1])[0]."_xml";
-    }
-    if (strpos($firstLign, "<skin name=\"") !== false) {
-        $nameTemplate = explode('"', explode("<skin name=\"", $firstLign)[1])[0]."_xml";
-    }
+
+    $nameTemplate = researchClassName($nameFile);
 
     if (array_key_exists($nameTemplate, $doublons)) {
         $doublons[$nameTemplate]++;
@@ -88,26 +74,51 @@ foreach ($paths as $path) {
      }
 
     $tmp .= $path.": ".$pathDir.'/'.$sourceName.": ". $pathDir.'/'.$nameTemplate.".bin\n";
-    continue;
 
     $deleteFile[] = $pathDir.'/'.$sourceName;
     copy($pathDir.'/'.$sourceName, $pathDir.'/'.$nameTemplate.".bin");
 
     $data = str_replace('source="'.$sourceName, 'source="'.$nameTemplate.".bin", $data);
     file_put_contents($path, $data);
-
-
 }
 asort($doublons);
 
 file_put_contents("tmp2.txt", print_r($doublons, true));
-exit();
+
 
 foreach($deleteFile as $file) {
-    //unlink($file);
+    unlink($file);
 }
 
 file_put_contents("tmp.txt", $tmp);
+
+function researchClassName($oldClassName) {
+    global $paths;
+    foreach ($paths as $path) {
+        $parts = explode('\\', $path);
+        $file = array_pop($parts);
+        if (strpos($file, ".") === false) {
+            continue;
+        }
+    
+        $ext = explode('.', $file)[1];
+        if ($ext !== "as") {
+            continue;
+        }
+    
+        $data = file_get_contents($path);
+    
+        if (strpos($data, ":Class = ".$oldClassName) === false) {
+            continue;
+        }
+
+        $class = explode('.', $file)[0];
+        $newClassName = explode(" ", explode(":Class = ".$oldClassName, $data)[0]);
+        $newClassName = $newClassName[count($newClassName) - 1];
+
+        return $class."_".$newClassName;
+    }
+}
 
 function getTypeDir($sourceExt) {
     if ($sourceExt == 'png')

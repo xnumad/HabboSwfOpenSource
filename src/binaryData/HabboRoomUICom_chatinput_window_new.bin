@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="chatinput_window_new" width="471" height="100" version="0.1" uid="3DCEA24E-DD58-AA51-203F-4DB46629C25D">
+  <window>
+    <container x="0" y="0" width="471" height="100" params="16" style="3" name="master_container" width_min="90">
+      <children>
+        <container x="0" y="0" width="471" height="100" params="1048592" style="3" name="bubblecont" tags="chat_bubble" width_min="90">
+          <children>
+            <closebutton x="449" y="68" width="20" height="25" params="1" style="4" name="helpbutton" background="true" treshold="0" height_min="25" height_max="25"/>
+            <container x="0" y="60" width="451" height="57" params="16" style="3" name="chat_input_container">
+              <children>
+                <border x="51" y="0" width="400" height="38" params="0" style="8" name="input_border" color="0x0e5e5e5">
+                  <children>
+                    <region x="1" y="-1" width="401" height="37" params="1" style="3" name="helpbutton_show_hover_region" treshold="0"/>
+                    <text x="10" y="9" width="325" height="23" params="16" style="0" name="block_text" caption="%24%7Bchat.input.alert.flood%7D" visible="false" treshold="0">
+                      <variables>
+                        <var key="antialias_type" value="advanced" type="String"/>
+                        <var key="font_face" value="Ubuntu" type="String"/>
+                        <var key="font_size" value="14" type="uint"/>
+                        <var key="grid_fit_type" value="subpixel" type="String"/>
+                        <var key="text_color" value="0xff0000" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="bold" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <input x="10" y="7" width="326" height="24" params="1" style="0" name="chat_input" caption="${widgets.chatinput.default}" clipping="false" treshold="0" tags="FIT%3AchatInputField">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="antialias_type" value="advanced" type="String"/>
+                        <var key="font_face" value="Ubuntu" type="String"/>
+                        <var key="font_size" value="17" type="uint"/>
+                        <var key="text_color" value="0x777777" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="max_chars" value="100" type="int"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                        <var key="focus_capturer" value="true" type="Boolean"/>
+                      </variables>
+                    </input>
+                  </children>
+                </border>
+                <region x="0" y="0" width="60" height="39" params="1" style="3" name="styles" clipping="false">
+                  <children>
+                    <static_bitmap x="0" y="0" width="57" height="38" params="16" style="3" name="style_bg" clipping="false">
+                      <variables>
+                        <var key="asset_uri" value="common_chat_style_block" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <static_bitmap x="25" y="10" width="17" height="19" params="16" style="100" name="style_icon" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="common_chat_styles" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <icon x="10" y="17" width="10" height="5" params="0" style="7" dynamic_style="brightness_and_shadow_under" color="0x04c4c4c"/>
+                  </children>
+                </region>
+              </children>
+            </container>
+          </children>
+        </container>
+        <container x="2" y="0" width="160" height="100" params="1179648" style="0" name="chatstyles_menu">
+          <filters>
+            <DropShadowFilter distance="4" alpha="0.6"/>
+          </filters>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="palette_item" width="27" height="22" version="0.1" uid="343E12CD-E2AE-2585-43B0-3211CB0DA849">
+  <window>
+    <container x="0" y="0" width="27" height="22" params="17" style="0" name="color_container" color="0xffffffffff" background="true">
+      <children>
+        <static_bitmap x="0" y="0" width="27" height="22" params="16" style="0" name="color">
+          <variables>
+            <var key="asset_uri" value="catalogue_color_picker_27x22_color" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="27" height="22" params="16" style="0" name="border">
+          <variables>
+            <var key="asset_uri" value="catalogue_color_picker_27x22_border" type="String"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="0" y="0" width="27" height="22" params="16" style="0" name="selection">
+          <variables>
+            <var key="asset_uri" value="catalogue_color_picker_27x22_selection" type="String"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

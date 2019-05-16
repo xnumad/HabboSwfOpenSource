@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="userview_test" width="1036" height="400" version="0.1" uid="BD864F62-5EDC-04E7-B48A-62EEE6AC8D58">
+  <window>
+    <itemlist_vertical x="0" y="0" width="1036" height="400" params="16" style="0">
+      <children>
+        <border x="0" y="0" width="190" height="357" params="17" style="1" name="info_border">
+          <children>
+            <bitmap x="8" y="11" width="16" height="15" params="17" style="0" name="home_icon" treshold="0"/>
+            <closebutton x="168" y="6" width="18" height="16" params="17" style="1" background="true" treshold="0" tags="close"/>
+            <itemlist_vertical x="10" y="10" width="170" height="341" params="16" style="0" name="infostand_element_list" background="true">
+              <children>
+                <region x="18" y="0" width="135" height="12" params="17" style="0" name="profile_link" treshold="0">
+                  <children>
+                    <text x="0" y="0" width="4" height="4" params="146" style="0" name="name_text" color="0x03d3d3d" background="true">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="font_face" value="Volter Bold" type="String"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+                    <var key="tool_tip_delay" value="100" type="uint"/>
+                  </variables>
+                </region>
+                <container x="0" y="15" width="170" height="1" params="16" style="0" name="images_spacer" color="0xffff333333" background="true"/>
+                <container x="-16" y="19" width="193" height="132" params="16" style="0" name="image_and_badges_container" color="0x06d6d6d" background="true">
+                  <children>
+                    <border x="16" y="0" width="67" height="130" params="16" style="0" name="grey_bg" color="0x0666666"/>
+                    <region x="17" y="2" width="66" height="127" params="17" style="0" name="avatar_image_profile_link" treshold="0">
+                      <children>
+                        <widget x="16" y="21" width="34" height="84" params="3282" style="0" name="avatar_image">
+                          <variables>
+                            <var key="widget_type" value="avatar_image" type="String"/>
+                            <var key="avatar_image:cropped" value="true" type="Boolean"/>
+                            <var key="avatar_image:direction" value="southwest" type="String"/>
+                          </variables>
+                        </widget>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="100" type="uint"/>
+                      </variables>
+                    </region>
+                    <widget x="88" y="1" width="42" height="42" params="17" style="0" name="badge_0" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <widget x="131" y="1" width="42" height="42" params="17" style="0" name="badge_group" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:type" value="group" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <widget x="88" y="44" width="42" height="42" params="17" style="0" name="badge_1" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <widget x="131" y="44" width="42" height="42" params="17" style="0" name="badge_2" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <widget x="88" y="87" width="42" height="42" params="17" style="0" name="badge_3" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <widget x="131" y="87" width="42" height="42" params="17" style="0" name="badge_4" treshold="0">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                  </children>
+                </container>
+                <container x="0" y="154" width="170" height="1" params="16" style="0" name="motto_spacer" color="0xffff333333" background="true" treshold="0"/>
+                <border x="0" y="158" width="170" height="57" params="17" style="0" name="motto_container" color="0x0666666" treshold="0">
+                  <children>
+                    <static_bitmap x="3" y="19" width="17" height="18" params="3088" style="0" name="changemotto.image">
+                      <variables>
+                        <var key="asset_uri" value="common_small_pen" type="String"/>
+                      </variables>
+                    </static_bitmap>
+                    <input x="20" y="2" width="140" height="53" params="1" style="0" name="motto_text">
+                      <variables>
+                        <var key="always_show_selection" value="true" type="Boolean"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="margin_top" value="6" type="int"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="max_chars" value="38" type="int"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </input>
+                  </children>
+                </border>
+                <container visible="false" x="0" y="218" width="170" height="1" params="16" style="0" name="score_spacer" color="0xffff333333" background="true"/>
+                <text visible="false" x="0" y="222" width="170" height="15" params="16" style="0" name="score_text" caption="%24%7Binfostand.text.achievement_score%7D">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text visible="false" x="0" y="240" width="170" height="15" params="16" style="0" name="score_value">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="258" width="170" height="1" params="16" style="0" name="handitem_spacer" color="0xffff333333" background="true"/>
+                <text x="0" y="262" width="170" height="17" params="16" style="0" name="handitem_txt" caption="%24%7Binfostand.text.handitem%7D">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="282" width="170" height="1" params="16" style="0" name="tags_spacer" color="0xffff333333" background="true"/>
+                <itemlist_vertical x="0" y="286" width="170" height="55" params="16" style="0" name="relationship_status_container">
+                  <children>
+                    <itemlist_horizontal x="0" y="0" width="172" height="16" params="16" style="100" name="relationship_heart">
+                      <children>
+                        <static_bitmap x="0" y="0" width="17" height="14" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="relationship_status_heart" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <link x="17" y="0" width="48" height="13" params="1" style="100" name="heart_randomusername" caption="user%20PH" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="underline" value="true" type="Boolean"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                        <label x="65" y="0" width="168" height="13" params="16" style="100" name="heart_others" caption="%24%7Binfostand.relstatus.heart.others%7D">
+                          <variables>
+                            <var key="text_style" value="regular" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                          </variables>
+                        </label>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_horizontal>
+                    <itemlist_horizontal x="0" y="19" width="172" height="16" params="16" style="100" name="relationship_smile">
+                      <children>
+                        <static_bitmap x="0" y="0" width="17" height="14" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="relationship_status_smile" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <link x="17" y="0" width="48" height="13" params="1" style="100" name="smile_randomusername" caption="user%20PH" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="underline" value="true" type="Boolean"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                        <label x="65" y="0" width="164" height="13" params="16" style="100" name="smile_others" caption="%24%7Binfostand.relstatus.smile.others%7D">
+                          <variables>
+                            <var key="text_style" value="regular" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                          </variables>
+                        </label>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_horizontal>
+                    <itemlist_horizontal x="0" y="38" width="172" height="16" params="16" style="100" name="relationship_bobba">
+                      <children>
+                        <static_bitmap x="0" y="0" width="17" height="14" params="16" style="100">
+                          <variables>
+                            <var key="asset_uri" value="relationship_status_bobba" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <link x="17" y="0" width="48" height="13" params="1" style="100" name="bobba_randomusername" caption="user%20PH" treshold="0">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="bold" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="underline" value="true" type="Boolean"/>
+                            <var key="kerning" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </link>
+                        <label x="65" y="0" width="170" height="13" params="16" style="100" name="bobba_others" caption="%24%7Binfostand.relstatus.bobba.others%7D">
+                          <variables>
+                            <var key="text_style" value="regular" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                          </variables>
+                        </label>
+                      </children>
+                      <variables>
+                        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                      </variables>
+                    </itemlist_horizontal>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="3" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_vertical>
+              </children>
+              <variables>
+                <var key="spacing" value="3" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </border>
+      </children>
+      <variables>
+        <var key="spacing" value="10" type="int"/>
+      </variables>
+    </itemlist_vertical>
+  </window>
+</layout>

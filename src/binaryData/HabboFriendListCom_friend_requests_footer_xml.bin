@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="friend_requests_footer" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="223" height="67" params="16" style="1" name="footer" color="0xffffffff" background="true">
+      <children>
+        <border x="5" y="5" width="213" height="57" params="144" style="0" name="border" color="0xd9d9d9">
+          <children>
+            <container_button x="5" y="30" width="203" height="21" params="145" style="0" name="reject_all_but">
+              <children>
+                <icon x="9" y="4" width="16" height="14" params="131089" style="9" name="icon" color="0xff3333"/>
+                <text x="30" y="3" width="160" height="20" params="144" style="0" caption="%24%7Bfriendlist.requests.dismissall%7D">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <container_button x="5" y="5" width="203" height="21" params="145" style="0" name="accept_all_but">
+              <children>
+                <icon x="9" y="4" width="16" height="14" params="131089" style="8" name="icon" color="0x33cc00"/>
+                <text x="32" y="3" width="160" height="20" params="144" style="0" caption="%24%7Bfriendlist.requests.acceptall%7D">
+                  <variables>
+                    <var key="font_face" value="Volter" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="text_color" value="0" type="hex"/>
+                    <var key="embed_fonts" value="true" type="Boolean"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

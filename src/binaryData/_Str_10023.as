@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_10023.bin", mimeType="application/octet-stream")]
+    [Embed(source="HabboWindowManagerCom_updating_timestamp_xml.bin", mimeType="application/octet-stream")]
     public class _Str_10023 extends ByteArrayAsset 
     {
     }

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboToolbarBootstrap" version="0.0">
+	
+		<interface iid="com.sulake.iid.IIDHabboToolbar" />
+		
+		<assets>
+
+            <!-- Toolbar -->
+            <asset mimeType="text/xml" name="toolbar_view_xml" />
+            <asset mimeType="text/xml" name="bottom_bar_left_xml" />
+            <asset mimeType="text/xml" name="bottom_background_border_xml" />
+            <asset mimeType="text/xml" name="new_items_label_xml" />
+            <asset mimeType="text/xml" name="me_menu_view_xml" />
+            <asset mimeType="text/xml" name="me_menu_new_view_xml" />
+            <asset mimeType="text/xml" name="me_menu_settings_menu_xml" />
+            <asset mimeType="text/xml" name="me_menu_sound_settings_xml" />
+            <asset mimeType="text/xml" name="me_menu_other_settings_xml" />
+
+            <asset mimeType="image/png" name="icon_navigator_normal" />
+            <asset mimeType="image/png" name="icon_catalogue_normal" />
+            <asset mimeType="image/png" name="icon_inventory_normal" />
+            <asset mimeType="image/png" name="icon_quests_normal" />
+            <asset mimeType="image/png" name="icon_xmas_normal" />
+            <asset mimeType="image/png" name="icon_valentines_normal" />
+            <asset mimeType="image/png" name="icon_achievements_normal" />
+            <asset mimeType="image/png" name="icon_games_normal" />
+
+            <asset mimeType="image/png" name="icon_navigator_hover" />
+            <asset mimeType="image/png" name="icon_catalogue_hover" />
+            <asset mimeType="image/png" name="icon_inventory_hover" />
+            <asset mimeType="image/png" name="icon_quests_hover" />
+            <asset mimeType="image/png" name="icon_xmas_hover" />
+            <asset mimeType="image/png" name="icon_valentines_hover" />
+            <asset mimeType="image/png" name="icon_achievements_hover" />
+            <asset mimeType="image/png" name="icon_games_hover" />
+            <asset mimeType="text/xml" name="extension_grid_xml" />
+
+            <!-- Help / Logout / Room Tools -->
+            <asset mimeType="text/xml" name="logout_xml" />
+            <asset mimeType="text/xml" name="logout_confirmation_xml" />
+            <asset mimeType="text/xml" name="roomtools_xml" />
+
+			<asset mimeType="image/png" name="roominfo_icon" />
+
+            <!-- Purse -->
+            <asset mimeType="text/xml" name="purse_xml" />
+            <asset mimeType="text/xml" name="purse_indicator_credits_xml" />
+            <asset mimeType="text/xml" name="purse_indicator_pixels_xml" />
+            <asset mimeType="text/xml" name="purse_indicator_seasonal_xml" />
+            <asset mimeType="text/xml" name="purse_indicator_club_xml" />
+            <asset mimeType="text/xml" name="settings_xml" />
+            <asset mimeType="text/xml" name="setting_category_xml" />
+
+            <asset mimeType="text/xml" name="promo_duckets_xml" />
+
+            <asset mimeType="image/png" name="icon_credit_0_png" />
+            <asset mimeType="image/png" name="icon_credit_1_png" />
+            <asset mimeType="image/png" name="icon_credit_2_png" />
+            <asset mimeType="image/png" name="icon_credit_3_png" />
+            <asset mimeType="image/png" name="icon_credit_4_png" />
+            <asset mimeType="image/png" name="icon_credit_5_png" />
+            <asset mimeType="image/png" name="icon_credit_6_png" />
+
+            <asset mimeType="image/png" name="icon_pixel_0_png" />
+            <asset mimeType="image/png" name="icon_pixel_1_png" />
+            <asset mimeType="image/png" name="icon_pixel_2_png" />
+            <asset mimeType="image/png" name="icon_pixel_3_png" />
+
+            <!-- Club Status Bar -->
+            <asset mimeType="text/xml" name="club_discount_promotion_xml" />
+            <asset mimeType="image/png" name="extend_hilite_png" />
+            <asset mimeType="text/xml" name="vip_discount_promotion_v2_xml" />
+            <asset mimeType="text/xml" name="vip_quests_promo_xml" />
+
+            <!-- Super saver ads video offer  -->
+            <asset mimeType="text/xml" name="video_offer_promotion_xml" />
+            <asset mimeType="image/png" name="offer_icon_png" />
+
+            <!-- Offer center -->
+            <asset mimeType="text/xml" name="offer_extension_xml" />
+
+            <!-- Phone number -->
+            <asset mimeType="text/xml" name="phonenumber_collect_xml" />
+            <asset mimeType="text/xml" name="phonenumber_verify_xml" />
+            <asset mimeType="text/xml" name="phonenumber_collect_minimized_xml" />
+            <asset mimeType="text/xml" name="phonenumber_verify_minimized_xml" />
+            <asset mimeType="text/xml" name="phonenumber_country_menu_item_xml" />
+
+            <!-- nux -->
+            <asset mimeType="text/xml" name="nux_offer_old_user_xml" />
+            <asset mimeType="text/xml" name="nux_gift_selection_xml" />
+            <asset mimeType="text/xml" name="nux_noob_room_offer_xml" />
+
+            <!-- Return user gifting -->
+            <asset mimeType="text/xml" name="returnusergifting_miniview_xml" />
+
+            <!-- Campaign calendar -->
+            <asset mimeType="text/xml" name="campaign_calendar_xml" />
+
+        </assets>
+		
+	</component>
+	
+</manifest>

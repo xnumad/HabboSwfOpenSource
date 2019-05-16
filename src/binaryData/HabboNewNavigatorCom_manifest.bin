@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboNewNavigatorBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDHabboNewNavigator" />
+        <assets>
+            <asset mimeType="text/xml" name="navigator_frame_2_xml" />
+            <asset mimeType="text/xml" name="room_info_popup_bubble_xml" />
+            <asset mimeType="text/xml" name="property_xml" />
+            <asset mimeType="text/xml" name="tag_xml" />
+        </assets>
+	</component>
+	
+</manifest>

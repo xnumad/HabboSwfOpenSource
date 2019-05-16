@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="usercount" width="34" height="13" version="0.1" uid="44581D6F-0C8A-7F77-CA2A-27A9510D82D4">
+  <window>
+    <region x="0" y="0" width="34" height="13" params="81" style="0" name="usercount" treshold="0">
+      <children>
+        <bitmap x="0" y="0" width="34" height="13" params="16" style="0" name="usercount_bg"/>
+        <text x="20" y="1" width="9" height="13" params="786448" style="0" name="txt" caption="0">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0xffffff" type="hex"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

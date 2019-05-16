@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="bottom_background_border" width="293" height="54" version="0.1" uid="F028E336-5B24-B4B0-8852-E70DD80AE065">
+  <window>
+    <border x="0" y="0" width="293" height="54" params="0" style="9" color="0x0686661"/>
+  </window>
+</layout>

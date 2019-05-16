@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="setting_category" width="120" height="17" version="0.1" uid="4C7EDF82-A768-985C-C8CF-A324603F208B">
+  <window>
+    <region x="0" y="0" width="120" height="17" params="17" style="3" treshold="0">
+      <children>
+        <label x="0" y="0" width="60" height="17" params="16" style="3" name="button_label" caption="Settings%201">
+          <variables>
+            <var key="text_color" value="0xffffff" type="hex"/>
+          </variables>
+        </label>
+      </children>
+    </region>
+  </window>
+</layout>

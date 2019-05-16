@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="custom_stack_height" width="320" height="189" version="0.1" uid="829642DD-268C-8F7A-1DBF-C6F3D67E565F">
+  <window>
+    <frame x="0" y="0" width="320" height="189" params="32769" style="100" caption="%24%7Bwidget.custom.stack.height.title%7D">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.34901960784313724" blurX="20" blurY="20"/>
+      </filters>
+      <children>
+        <button x="3" y="101" width="140" height="50" params="131089" style="101" name="button_above_stack" caption="%24%7Bfurniture.above.stack%7D" color="0x0bbbbbb"/>
+        <button x="165" y="99" width="148" height="50" params="393233" style="101" name="button_floor_level" caption="%24%7Bfurniture.floor.level%7D" color="0x0bbbbbb"/>
+        <border x="10" y="69" width="238" height="30" params="17" style="105" name="slider">
+          <children>
+            <container_button x="0" y="0" width="20" height="30" params="33073" style="102" name="slider_button"/>
+          </children>
+        </border>
+        <text x="10" y="5" width="294" height="59" params="16" style="100" caption="%24%7Bwidget.custom.stack.height.text%7D">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="250" y="69" width="58" height="30" params="16" style="105">
+          <children>
+            <input x="7" y="7" width="45" height="20" params="1" style="100" name="input_height" caption="1.0">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="restrict" value="0123456789." type="String"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

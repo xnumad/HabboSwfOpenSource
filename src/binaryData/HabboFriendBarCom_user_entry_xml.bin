@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Member Entry" width="48" height="158" version="0.1" uid="60B82FE5-B573-584C-C84A-37FAEF5017F9">
+  <window>
+    <region x="0" y="0" width="48" height="158" params="17" style="0" name="bg_region" color="0x00" treshold="0">
+      <children>
+        <widget x="-23" y="-15" width="90" height="130" params="16" style="0" name="avatar_image_widget">
+          <variables>
+            <var key="widget_type" value="avatar_image" type="String"/>
+          </variables>
+        </widget>
+        <region x="12" y="112" width="26" height="24" params="17" style="0" name="extra_link_region" color="0x00" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="26" height="24" params="16" style="100" name="extra_link_icon">
+              <variables>
+                <var key="asset_uri" value="icons_go_to_room_icon" type="String"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+      </children>
+      <variables>
+        <var key="tool_tip_caption" value="${group.members.showinfo}" type="String"/>
+      </variables>
+    </region>
+  </window>
+</layout>

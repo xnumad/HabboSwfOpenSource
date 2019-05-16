@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboUserDefinedRoomEventsBootstrap" version="0.0" >
+	  <interface iid="com.sulake.iid.IIDHabboUserDefinedRoomEvents" />
+	  <assets>
+        <asset mimeType="image/png" name="icon_action_png"/>
+        <asset mimeType="image/png" name="icon_condition_png"/>
+        <asset mimeType="image/png" name="icon_trigger_png"/>
+        <asset mimeType="image/png" name="move_0_png"/>
+        <asset mimeType="image/png" name="move_2_png"/>
+        <asset mimeType="image/png" name="move_4_png"/>
+        <asset mimeType="image/png" name="move_6_png"/>
+        <asset mimeType="image/png" name="move_diag_png"/>
+        <asset mimeType="image/png" name="move_rnd_png"/>  
+        <asset mimeType="image/png" name="move_vrt_png"/>
+        <asset mimeType="image/png" name="rotate_ccw_png"/>
+        <asset mimeType="image/png" name="rotate_cw_png"/>
+        <asset mimeType="image/png" name="slider_bg_png"/>
+        <asset mimeType="image/png" name="slider_obj_png"/>
+
+        <asset mimeType="text/xml" name="ude_main_xml" />
+        <asset mimeType="text/xml" name="ude_help_xml" />
+        <asset mimeType="text/xml" name="ude_slider_xml" />
+
+        <asset mimeType="text/xml" name="ude_trigger_inputs_0_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_3_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_6_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_7_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_10_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_12_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_13_xml" />
+        <asset mimeType="text/xml" name="ude_trigger_inputs_14_xml" />
+
+        <asset mimeType="text/xml" name="ude_action_inputs_3_xml" />  
+        <asset mimeType="text/xml" name="ude_action_inputs_4_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_6_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_7_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_9_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_13_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_14_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_16_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_17_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_17_reward_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_19_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_20_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_21_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_22_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_23_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_24_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_25_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_26_xml" />
+        <asset mimeType="text/xml" name="ude_action_inputs_27_xml" />
+
+        <asset mimeType="text/xml" name="ude_condition_inputs_0_xml" />  
+        <asset mimeType="text/xml" name="ude_condition_inputs_3_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_4_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_5_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_6_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_7_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_9_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_11_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_12_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_18_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_24_xml" />
+        <asset mimeType="text/xml" name="ude_condition_inputs_25_xml" />
+
+	   </assets>	
+	 </component> 
+	
+</manifest>

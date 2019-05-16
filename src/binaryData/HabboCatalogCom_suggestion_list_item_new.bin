@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="suggestion_list_item" width="262" height="20" version="0.1" uid="A6E38B8C-2F55-1DA1-5ABB-ABEACD44A356">
+  <window>
+    <region x="0" y="0" width="262" height="20" params="12730385" style="0" name="suggestion_list_item" color="0xffffcceeff" background="true" width_min="150" width_max="262" height_min="20" height_max="20">
+      <children>
+        <text x="0" y="0" width="261" height="20" params="12730384" style="0" name="name_text" caption="%24%7B001_lorem_ipsum_title%7D" width_min="150" width_max="261" height_min="20" height_max="20">
+          <variables>
+            <var key="text_style" value="u_regular" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="80" type="Number"/>
+            <var key="thickness" value="-15" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </region>
+  </window>
+</layout>

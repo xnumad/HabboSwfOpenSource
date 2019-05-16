@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="new_bar" width="300" height="48" version="0.1" uid="62D1EAAB-E58F-9D94-5455-73952C31E771">
+  <window>
+    <container x="0" y="0" width="300" height="48" params="1" style="0" dynamic_style="" name="border" color="0x055534e" clipping="false" treshold="0">
+      <children>
+        <container x="1" y="2" width="150" height="46" params="16" style="100" dynamic_style="" name="friendtools">
+          <children>
+            <static_bitmap x="15" y="3" width="1" height="40" params="16" style="2" dynamic_style="" name="line" background="true">
+              <variables>
+                <var key="asset_uri" value="bottom_bar_divider_1px" type="String"/>
+              </variables>
+            </static_bitmap>
+            <region x="135" y="0" width="15" height="46" params="17" style="0" dynamic_style="" name="collapse_left" treshold="0">
+              <children>
+                <border x="0" y="1" width="20" height="43" params="16" style="2" dynamic_style="" color="0x03b3933"/>
+                <static_bitmap x="1" y="0" width="13" height="45" params="208" style="0" dynamic_style="" name="icons_toolbar_collapse_left" treshold="0" tags="ICON_BMP%2C%23icon">
+                  <variables>
+                    <var key="asset_uri" value="roomtools_minimizebutton" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="18" y="5" width="45" height="41" params="1" style="3" dynamic_style="lifted_hover" name="icon_all_friends" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="32" height="33" params="16" style="3" dynamic_style="" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="friend_bar_all_friends" type="String"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${friend.bar.friends.title)" type="String"/>
+              </variables>
+            </region>
+            <region x="64" y="5" width="45" height="41" params="1" style="3" dynamic_style="lifted_hover" name="icon_find_friends" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="29" height="33" params="16" style="3" dynamic_style="" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="friend_bar_search_habbos" type="String"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+              <variables>
+                <var key="tool_tip_caption" value="${friend.bar.search.title}" type="String"/>
+              </variables>
+            </region>
+            <region x="103" y="5" width="31" height="41" params="1" style="3" dynamic_style="lifted_hover" name="icon_messenger" treshold="0">
+              <children>
+                <static_bitmap x="0" y="0" width="26" height="32" params="16" style="3" dynamic_style="" name="icon" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="friend_bar_friendlist_messenger" type="String"/>
+                    <var key="etching_color" value="0x48000000" type="hex"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="0" y="0" width="26" height="32" params="16" style="3" dynamic_style="" name="icon_1">
+                  <variables>
+                    <var key="asset_uri" value="friend_bar_friendlist_messenger_notify_0" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <static_bitmap x="0" y="0" width="26" height="32" params="16" style="3" dynamic_style="" name="icon_2">
+                  <variables>
+                    <var key="asset_uri" value="friend_bar_friendlist_messenger_notify_1" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </container>
+        <region x="145" y="4" width="28" height="40" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="button_left_page" treshold="0" tags="arrow%2Cleft">
+          <children>
+            <static_bitmap x="0" y="4" width="29" height="31" params="16" style="2" dynamic_style="" color="0x03b3933" tags="%23bg">
+              <variables>
+                <var key="asset_uri" value="friend_bar_friends_browse_bg" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="zoom_x" value="-1" type="Number"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <icon x="12" y="15" width="10" height="10" params="16" style="4" dynamic_style="" color="0x09c9791" tags="%23icon"/>
+          </children>
+        </region>
+        <itemlist_horizontal x="173" y="6" width="75" height="38" params="147472" style="0" dynamic_style="" name="list" color="0xffffff00" clipping="false">
+          <variables>
+            <var key="spacing" value="3" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+        <region x="248" y="4" width="29" height="40" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="button_right_page" color="0x03b3933" treshold="0" tags="arrow%2Cright">
+          <children>
+            <static_bitmap x="0" y="5" width="29" height="31" params="16" style="2" dynamic_style="" color="0x03b3933" tags="%23bg">
+              <variables>
+                <var key="asset_uri" value="friend_bar_friends_browse_bg" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <icon x="11" y="15" width="10" height="10" params="16" style="5" dynamic_style="" color="0x09c9791" tags="%23icon"/>
+          </children>
+        </region>
+        <region x="282" y="2" width="15" height="46" params="17" style="0" dynamic_style="" name="collapse_right" treshold="0">
+          <children>
+            <border x="0" y="1" width="20" height="43" params="16" style="2" dynamic_style="" color="0x03b3933"/>
+            <static_bitmap x="1" y="0" width="13" height="45" params="208" style="0" dynamic_style="" name="icons_toolbar_collapse_right" treshold="0" tags="ICON_BMP%2C%23icon">
+              <variables>
+                <var key="asset_uri" value="roomtools_minimizebutton" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="zoom_x" value="-1" type="Number"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="welcome_gift_unverified_email" width="453" height="50" version="0.1" uid="FAA74BC3-DEF0-774F-CF43-E3331CA979EF">
+  <window>
+    <container x="0" y="0" width="453" height="50" params="16" style="0" color="0xffffeceae0" background="true">
+      <children>
+        <region x="14" y="8" width="100" height="33" params="1041" style="0" name="close" treshold="0">
+          <children>
+            <text x="0" y="9" width="100" height="22" params="16" style="0" caption="%24%7Bwelcome.gift.close%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <button_thick x="313" y="10" width="130" height="30" params="132113" style="5" name="open" caption="%24%7Bwelcome.gift.open%7D" color="0x0cc00" width_min="130"/>
+      </children>
+    </container>
+  </window>
+</layout>

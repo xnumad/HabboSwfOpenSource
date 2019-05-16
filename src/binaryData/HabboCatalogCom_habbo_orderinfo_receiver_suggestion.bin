@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="habbo_orderinfo_receiver_suggestion" width="150" height="17" version="0.1" uid="810EA148-F58A-1350-F2FF-9CAF7B9E2B66">
+  <window>
+    <itemlist_vertical x="0" y="0" width="150" height="17" params="1" style="3">
+      <children>
+        <text x="0" y="0" width="35" height="17" params="16" style="3" name="name" caption="name" color="0xffffeeeeee" background="true">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+      <variables>
+        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+        <var key="resize_on_item_update" value="true" type="Boolean"/>
+      </variables>
+    </itemlist_vertical>
+  </window>
+</layout>

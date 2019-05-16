@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="badge_image" width="30" height="30" version="0.1" uid="54E176FB-1626-CF4D-091D-CB84A9EE8E8D">
+  <window>
+    <container x="0" y="0" width="30" height="30" params="16" style="0">
+      <children>
+        <border x="0" y="0" width="30" height="30" params="16" style="107" name="border" tags="_COLORIZE"/>
+        <static_bitmap x="0" y="0" width="30" height="30" params="16" style="0" name="bitmap" tags="_COLORIZE"/>
+      </children>
+    </container>
+  </window>
+</layout>

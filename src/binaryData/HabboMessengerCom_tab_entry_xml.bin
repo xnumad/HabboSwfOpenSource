@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="tab_entry" width="20" height="20" version="0.0">
+  <window>
+    <container x="0" y="0" width="30" height="30" params="17" style="0" name="tab" caption="tab_0">
+      <children>
+        <bitmap x="0" y="0" width="30" height="30" params="145" style="0" name="tab_bg_sel" caption="tab_0"/>
+        <bitmap x="0" y="0" width="30" height="30" params="145" style="0" name="tab_bg_unsel" caption="tab_0"/>
+        <bitmap x="0" y="0" width="30" height="30" params="145" style="0" name="tab_bg_hilite" caption="tab_0"/>        <bitmap x="0" y="0" width="30" height="30" params="145" style="0" name="tab_bg_next" caption="tab_0"/>
+        <bitmap x="11" y="7" width="10" height="10" params="208" style="0" name="prev" caption="tab_0"/>
+        <bitmap x="11" y="7" width="10" height="10" params="208" style="0" name="next" caption="tab_0"/>
+        <bitmap x="0" y="-19" width="32" height="72" params="16" style="0" name="face" caption="tab_0"/>
+      </children>
+    </container>
+  </window>
+</layout>

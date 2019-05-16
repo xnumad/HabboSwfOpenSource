@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="spinnerWidget" width="182" height="25" version="0.1" uid="D07BA480-4564-A61D-9FAA-DA7C56D00589">
+  <window>
+    <border x="0" y="0" width="182" height="25" params="16400" style="103" name="border_spinner_widget">
+      <children>
+        <text x="7" y="5" width="226" height="15" params="16" style="3" name="text_header" caption="%24%7Bcatalog.bundlewidget.spinner.select.amount%7D" color="0x00">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="margin_right" value="4" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="bold" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <container_button x="139" y="13" width="14" height="14" params="1" style="3" name="button_less">
+          <children>
+            <icon x="2" y="4" width="13" height="12" params="16" style="7" name="icon_less" color="0x00"/>
+          </children>
+        </container_button>
+        <container_button x="139" y="-1" width="14" height="15" params="1" style="3" name="button_more">
+          <children>
+            <icon x="2" y="4" width="11" height="11" params="16" style="6" name="icon_more" color="0x00"/>
+          </children>
+        </container_button>
+        <text x="154" y="5" width="24" height="15" params="16" style="3" name="text_value" caption="1" color="0x00">
+          <variables>
+            <var key="auto_size" value="center" type="String"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="margin_right" value="4" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="toolbar_view_squeezed" width="87" height="875" version="0.1" uid="0910B1F7-D814-E30B-D5EA-B74A9C9831BC">
+  <window>
+    <border x="0" y="0" width="87" height="875" params="147456" style="6" name="main_toolbar" color="0x079756e" tags="FIT%3Atoolbar">
+      <filters>
+        <DropShadowFilter distance="3" alpha="0.6"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="0" y="5" width="87" height="870" params="8536080" style="0" name="toolbar_items">
+          <children>
+            <region x="5" y="0" width="76" height="70" params="17" style="0" name="RECEPTION" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CVISIBLE_GAME_CENTER%2CFIT%3AtoolbarReception%2CRECEPTION">
+              <children>
+                <border x="3" y="5" width="70" height="57" params="2064" style="2" name="bg_reception" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_reception" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_reception_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <static_bitmap x="0" y="64" width="76" height="2" params="16" style="0">
+                  <variables>
+                    <var key="asset_uri" value="icons_toolbar_divider" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="5" y="70" width="76" height="70" params="17" style="0" name="HOME" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_HOTEL%2CFIT%3AtoolbarHome%2CHOME">
+              <children>
+                <border x="3" y="5" width="70" height="57" params="2064" style="2" name="bg_home" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="-2" width="60" height="60" params="208" style="0" name="icons_toolbar_home" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_home_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <static_bitmap x="0" y="64" width="76" height="2" params="16" style="0">
+                  <variables>
+                    <var key="asset_uri" value="icons_toolbar_divider" type="String"/>
+                    <var key="pivot_point" value="center" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <region x="5" y="140" width="76" height="80" params="17" style="0" name="NAVIGATOR" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_HOTEL%2CVISIBLE_ROOM%2CVISIBLE_GAME_CENTER%2CFIT%3AtoolbarNavigator">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_navigator" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="-2" width="60" height="60" params="208" style="0" name="icons_toolbar_navigator" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_navigator_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.navigator%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="220" width="76" height="80" params="17" style="0" name="QUESTS" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CFIT%3AtoolbarQuests">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_quests" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_quests" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_quests_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.quests%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="300" width="76" height="80" params="17" style="0" name="GAMES" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CVISIBLE_HOTEL%2CFIT%3AtoolbarGames">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_games" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_games" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_games_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.games%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="380" width="76" height="80" params="17" style="0" name="STORIES" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_HOTEL%2CFIT%3AtoolbarStories">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_stories" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_stories" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_stories_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.stories%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="460" width="76" height="80" params="17" style="0" name="ACHIEVEMENTS" background="true" treshold="0" tags="TOGGLE%2CFIT%3AtoolbarAchievements">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_achievements" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_achievements" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_achievements_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.achievements%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="540" width="76" height="80" params="17" style="0" name="CATALOGUE" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CVISIBLE_HOTEL%2CVISIBLE_GAME_CENTER%2CFIT%3AtoolbarCatalogue">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_catalogue" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_catalogue" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_catalogue_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.catalogue%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="620" width="76" height="80" params="17" style="0" name="BUILDER" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CVISIBLE_HOTEL%2CFIT%3AtoolbarCatalogue">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_builder" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_builder" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_builder_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.builder%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="700" width="76" height="80" params="17" style="0" name="INVENTORY" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CFIT%3AtoolbarInventory">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_inventory" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <static_bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icons_toolbar_inventory" tags="ICON_BMP">
+                      <variables>
+                        <var key="asset_uri" value="icons_toolbar_inventory_normal" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.inventory%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="5" y="780" width="76" height="80" params="17" style="0" name="MEMENU" background="true" treshold="0" tags="TOGGLE%2CVISIBLE_ROOM%2CVISIBLE_HOTEL%2CVISIBLE_GAME_CENTER%2CFIT%3AtoolbarMeMenu">
+              <children>
+                <border x="3" y="5" width="70" height="75" params="2064" style="2" name="bg_memenu" color="0x057544d" tags="ICON_BORDER">
+                  <children>
+                    <bitmap x="5" y="0" width="60" height="60" params="208" style="0" name="icon_me_menu" tags="ICON_BMP">
+                      <variables>
+                        <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </border>
+                <text x="0" y="62" width="76" height="17" params="263184" style="0" name="text" caption="%24%7Btoolbar.icon.label.memenu%7D">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="etching_color" value="0xff000000" type="hex"/>
+                    <var key="etching_position" value="bottom-right" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <static_bitmap x="60" y="38" width="13" height="26" params="16" style="100" name="guide_icon" visible="false">
+                  <variables>
+                    <var key="asset_uri" value="help_guide_icon" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+            <static_bitmap x="5" y="860" width="76" height="10" params="16" style="0" name="bottom_padding"/>
+          </children>
+        </itemlist_vertical>
+      </children>
+    </border>
+  </window>
+</layout>

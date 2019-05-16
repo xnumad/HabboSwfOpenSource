@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="forum_list_item" width="500" height="41" version="0.1" uid="FCE2F708-3AAF-04CA-40EF-F4C5355525CF">
+  <window>
+    <boxsizer x="0" y="0" width="500" height="41" params="16" style="0" name="main_box" color="0x0eefeff" background="true">
+      <children>
+        <container x="0" y="0" width="41" height="41" params="16" style="3" name="left_button_container">
+          <children>
+            <widget x="1" y="1" width="39" height="39" params="16" style="3" name="group_icon">
+              <variables>
+                <var key="widget_type" value="badge_image" type="String"/>
+                <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </widget>
+          </children>
+        </container>
+        <container x="42" y="0" width="357" height="40" params="16" style="0" name="texts_container" color="0x0eefeff" treshold="0" tags="relative%281%29">
+          <children>
+            <region x="0" y="0" width="280" height="17" params="131089" style="3" name="header_region" caption="thread%20subject" treshold="0">
+              <children>
+                <text x="0" y="0" width="114" height="17" params="16" style="3" name="header" caption="Some%20group%20header">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <html x="0" y="16" width="459" height="16" params="1073741825" style="3" name="details" caption="Rating%201000%2C%20last%20message%20by%20LongLongLongName%2030%20seconds%20ago">
+              <variables>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+        </container>
+        <container x="400" y="0" width="100" height="40" params="16" style="3" name="unread_texts_container">
+          <children>
+            <region x="0" y="0" width="100" height="40" params="145" style="3" name="unread_region" caption="mm%3Ass" treshold="0"/>
+            <text x="0" y="0" width="100" height="15" params="144" style="3" name="messages1" caption="100%20messages">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="15" width="100" height="20" params="144" style="3" name="messages2" caption="12%20new">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="10" type="uint"/>
+                <var key="text_style" value="regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="spacing" value="1" type="int"/>
+        <var key="padding_horizontal" value="0" type="int"/>
+        <var key="padding_vertical" value="0" type="int"/>
+      </variables>
+    </boxsizer>
+  </window>
+</layout>

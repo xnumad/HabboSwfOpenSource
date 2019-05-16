@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="illumina_border" width="30" height="30" version="0.1" uid="FD46C269-9F06-10D2-EDA2-C54563725703">
+  <window>
+    <container x="0" y="0" width="30" height="30" params="2192" style="0">
+      <children>
+        <bitmap x="0" y="0" width="30" height="30" params="2192" style="0" name="canvas">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <container x="0" y="0" width="30" height="30" params="2192" style="0" name="children"/>
+      </children>
+    </container>
+  </window>
+</layout>

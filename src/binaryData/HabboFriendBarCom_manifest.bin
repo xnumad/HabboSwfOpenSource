@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<manifest>
+    <component class="com.sulake.bootstrap.HabboFriendBarBootstrap" version="0.0">
+        <interface iid="com.sulake.iid.IIDHabboFriendBar" />
+        <assets>
+            <asset mimeType="text/xml" name="bar_xml" />
+            <asset mimeType="text/xml" name="new_bar_xml" />
+            <asset mimeType="text/xml" name="entity_xml" />
+            <asset mimeType="text/xml" name="add_friends_tab_xml" />
+            <asset mimeType="text/xml" name="friend_requests_tab_xml" />
+            <asset mimeType="text/xml" name="friend_request_tab_xml" />
+            <asset mimeType="text/xml" name="toggle_xml" />
+            <asset mimeType="text/xml" name="facebook_piece_xml" />
+            <asset mimeType="text/xml" name="controls_piece_xml" />
+            <asset mimeType="text/xml" name="message_piece_xml" />
+            <asset mimeType="text/xml" name="new_friend_entity_xml" />
+            <asset mimeType="text/xml" name="new_controls_piece_xml" />
+			<asset mimeType="text/xml" name="search_friends_tab_xml" />
+            <asset mimeType="text/xml" name="new_search_friends_tab_xml" />
+			<asset mimeType="text/xml" name="all_friends_tab_xml" />
+            <asset mimeType="text/xml" name="new_all_friends_tab_xml" />
+            <asset mimeType="text/xml" name="new_open_messenger_tab_xml" />
+			<asset mimeType="text/xml" name="play_snowstorm_tab_xml" />
+
+            <asset mimeType="image/png" name="ach_notification_icon_png" />
+
+            <asset mimeType="image/png" name="fb_icon_small_png" />
+            <asset mimeType="image/png" name="friends_icon_png" />
+            <asset mimeType="image/png" name="add_friends_icon_png" />
+            <asset mimeType="image/png" name="find_friends_icon_png" />
+            <asset mimeType="image/png" name="plus_friend_icon_png" />
+            <asset mimeType="image/png" name="icon_messenger_notify_1_png" />
+            <asset mimeType="image/png" name="icon_friendlist_png" />
+            <asset mimeType="image/png" name="icon_friendlist_notify_0_png" />
+            <asset mimeType="image/png" name="icon_friendlist_notify_1_png" />
+            <asset mimeType="image/png" name="icon_friendlist_hover_0_png" />
+            <asset mimeType="image/png" name="icon_friendlist_hover_1_png" />
+            <asset mimeType="image/png" name="icon_friendlist_hover_2_png" />
+            <asset mimeType="image/png" name="icon_friendlist_hover_3_png" />
+            <asset mimeType="image/png" name="icon_messenger_png" />
+            <asset mimeType="image/png" name="icon_messenger_notify_0_png" />
+            <asset mimeType="image/png" name="icon_messenger_notify_1_png" />
+
+            <asset mimeType="image/png" name="icon_stream_png" />
+            <asset mimeType="image/png" name="icon_stream_hover_png" />
+            <asset mimeType="image/png" name="icon_stream_new_png" />
+            <asset mimeType="image/png" name="icon_stream_new_hover_png" />
+			
+			
+            <asset mimeType="image/png" name="play_snowstorm_icon_png" />
+
+            <asset mimeType="image/png" name="search_friends_icon_png" />
+            <asset mimeType="image/png" name="all_friends_icon_png" />
+
+			<!-- Landing view related assets -->
+            <asset mimeType="text/xml" name="user_list_xml" />
+            <asset mimeType="text/xml" name="user_entry_xml" />
+            <asset mimeType="text/xml" name="competition_user_popup_xml" />
+            <asset mimeType="text/xml" name="on_duty_guide_user_popup_xml" />
+            <asset mimeType="text/xml" name="achievement_competition_prizes_xml" />
+            <asset mimeType="text/xml" name="avatar_image_xml" />
+            <asset mimeType="text/xml" name="community_goal_xml" />
+            <asset mimeType="text/xml" name="community_goal_voting_xml" />
+            <asset mimeType="text/xml" name="daily_quest_xml" />
+            <asset mimeType="text/xml" name="expiring_catalog_page_xml" />
+            <asset mimeType="text/xml" name="expiring_catalog_page_small_xml" />
+            <asset mimeType="text/xml" name="home_room_button_xml" />
+            <asset mimeType="text/xml" name="landing_view_generic_reception_xml" />
+            <asset mimeType="text/xml" name="catalog_promo_xml" />
+            <asset mimeType="text/xml" name="catalog_promo_small_xml" />
+            <asset mimeType="text/xml" name="campaign_promo_xml" />
+            <asset mimeType="text/xml" name="moving_object_xml" />
+            <asset mimeType="text/xml" name="moving_object_floating_xml" />
+            <asset mimeType="text/xml" name="next_ltd_available_xml" />
+            <asset mimeType="text/xml" name="landing_view_default_dynamic_layout_xml" />
+            <asset mimeType="text/xml" name="habbo_moderation_promo_xml" />
+            <asset mimeType="text/xml" name="habbo_talents_promo_xml" />
+            <asset mimeType="text/xml" name="habbo_way_promo_xml" />
+            <asset mimeType="text/xml" name="dynamic_widget_grid_xml" />
+            <asset mimeType="text/xml" name="pixel_removal_promo_xml" />
+            <asset mimeType="text/xml" name="fast_food_game_promo_xml" />
+            <asset mimeType="text/xml" name="room_hopper_network_xml" />
+            <asset mimeType="text/xml" name="landing_view_jetset_xml" />
+            <asset mimeType="text/xml" name="safety_quiz_promo_xml" />
+            <asset mimeType="text/xml" name="pixel_removal_credit_promo_xml" />
+            <asset mimeType="text/xml" name="dynamic_widget_grid_separator_xml" />
+            <asset mimeType="text/xml" name="landing_view_furnimatic_xml" />
+
+            <asset mimeType="text/xml" name="generic_widget_xml" />
+            <asset mimeType="text/xml" name="widget_container_widget_xml" />
+            <asset mimeType="text/xml" name="element_bodytext_xml" />
+            <asset mimeType="text/xml" name="element_button_xml" />
+            <asset mimeType="text/xml" name="element_caption_xml" />
+            <asset mimeType="text/xml" name="element_image_xml" />
+            <asset mimeType="text/xml" name="element_link_xml" />
+            <asset mimeType="text/xml" name="element_spacing_xml" />
+            <asset mimeType="text/xml" name="element_subcaption_xml" />
+            <asset mimeType="text/xml" name="element_timer_xml" />
+            <asset mimeType="text/xml" name="element_title_xml" />
+            <asset mimeType="text/xml" name="element_rewardbadge_xml" />
+            <asset mimeType="text/xml" name="element_concurrentusersmeter_xml" />
+            <asset mimeType="text/xml" name="element_concurrentusersinfo_xml" />
+            <asset mimeType="text/xml" name="element_dailyquest_xml" />
+            <asset mimeType="text/xml" name="initialization_error_xml" />
+            <asset mimeType="text/xml" name="element_community_goal_score_xml" />
+            <asset mimeType="text/xml" name="promo_article_xml" />
+            <asset mimeType="text/xml" name="bonus_rare_promo_xml" />
+
+            <!-- Talent track related assets -->
+            <asset mimeType="text/xml" name="citizenship_welcome_xml" />
+            <asset mimeType="text/xml" name="talent_track_xml" />
+            <asset mimeType="text/xml" name="level_up_xml" />
+            <asset mimeType="text/xml" name="task_progress_dialog_xml" />
+            <asset mimeType="text/xml" name="tour_task_progress_dialog_xml" />
+            <asset mimeType="text/xml" name="track_promo_xml" />
+
+            <!-- Epic popup -->
+            <asset mimeType="text/xml" name="epic_popup_frame_xml" />
+        </assets>
+    </component>
+</manifest>

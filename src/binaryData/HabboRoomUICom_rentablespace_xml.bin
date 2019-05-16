@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="rentablespace" width="256" height="224" version="0.1" uid="F435AD8F-238E-F723-A709-9F5098554C60">
+  <window>
+    <frame x="17" y="13" width="256" height="224" params="164097" style="3" caption="%24%7Brentablespace.widget.title%7D" color="0xff67a3bf">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <itemlist_vertical x="2" y="4" width="243" height="216" params="8519696" style="3" name="rent_view">
+          <children>
+            <text x="1" y="0" width="241" height="22" params="8388624" style="3" name="rent_instructions" caption="%24%7Brentablespace.widget.instructions%7D" clipping="false">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="margin_top" value="5" type="int"/>
+                <var key="margin_right" value="5" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container_button x="0" y="32" width="270" height="44" params="147665" style="3" name="rent_button">
+              <children>
+                <itemlist_horizontal x="0" y="0" width="270" height="44" params="147472" style="3">
+                  <children>
+                    <label x="0" y="11" width="56" height="21" params="16" style="3" name="price_label" caption="100%20x">
+                      <variables>
+                        <var key="text_style" value="u_headline_medium" type="String"/>
+                        <var key="margin_left" value="10" type="int"/>
+                      </variables>
+                    </label>
+                    <icon x="61" y="10" width="28" height="24" params="16" style="10"/>
+                    <label x="94" y="11" width="176" height="21" params="16" style="3" name="rent_label" caption="%24%7Brentablespace.widget.rent%7D">
+                      <variables>
+                        <var key="text_style" value="u_headline_medium" type="String"/>
+                        <var key="margin_right" value="10" type="int"/>
+                      </variables>
+                    </label>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+              </children>
+            </container_button>
+            <text x="1" y="126" width="245" height="40" params="147472" style="3" name="cant_rent_error" caption="Only%20HabboClub%20members%20can%20rent%20spaces." color="0x0ff0000">
+              <variables>
+                <var key="text_color" value="0xff0000" type="hex"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <icon x="209" y="112" width="37" height="40" params="16" style="15" name="icon_habboclub"/>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <itemlist_vertical x="2" y="4" width="245" height="97" params="8536080" style="3" name="rented_view" visible="false">
+          <children>
+            <label x="0" y="0" width="268" height="29" params="16" style="3" name="rented_to_label" caption="%24%7Brentablespace.widget.rented_to_label%7D">
+              <variables>
+                <var key="text_style" value="u_headline_small" type="String"/>
+                <var key="margin_left" value="10" type="int"/>
+                <var key="margin_top" value="10" type="int"/>
+              </variables>
+            </label>
+            <label x="0" y="34" width="37" height="17" params="16" style="3" name="renter_name" caption="User">
+              <variables>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="margin_left" value="10" type="int"/>
+                <var key="margin_right" value="5" type="int"/>
+              </variables>
+            </label>
+            <label x="0" y="56" width="249" height="19" params="16" style="3" name="time_label" caption="%24%7Brentablespace.widget.expires_label%7D">
+              <variables>
+                <var key="text_style" value="u_headline_small" type="String"/>
+                <var key="margin_left" value="10" type="int"/>
+              </variables>
+            </label>
+            <label x="0" y="80" width="113" height="17" params="16" style="3" name="time_remaining_label" caption="5%20days%20and%202%20hours">
+              <variables>
+                <var key="text_style" value="u_italic" type="String"/>
+                <var key="margin_left" value="10" type="int"/>
+              </variables>
+            </label>
+            <button x="20" y="102" width="204" height="30" params="131281" style="3" name="cancel_rent_button" caption="%24%7Brentablespace.widget.cancel_rent%7D" visible="false"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_vertical>
+        <itemlist_vertical x="0" y="0" width="253" height="182" params="131088" style="3" name="error_view" visible="false">
+          <children>
+            <text x="0" y="0" width="252" height="119" params="16" style="3" name="error_message" caption="Somebody%20else%20already%20rented%20this%20space.">
+              <variables>
+                <var key="text_color" value="0xff0000" type="hex"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="margin_top" value="10" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="42" y="119" width="169" height="22" params="147473" style="3" name="error_button_close" caption="%24%7Brentablespace.widget.close%7D"/>
+          </children>
+        </itemlist_vertical>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="30" type="int"/>
+        <var key="margin_right" value="5" type="int"/>
+        <var key="margin_bottom" value="0" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

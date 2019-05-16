@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="entity" width="127" height="164" version="0.1" uid="7E2C5822-7541-76BF-A3A4-4B2351AF8094">
+  <window>
+    <border x="0" y="0" width="127" height="164" params="1" style="6" name="frame" color="0xff74dbfa" treshold="0">
+      <children>
+        <itemlist x="7" y="3" width="116" height="140" params="8388752" style="0" name="tab_content" height_min="40">
+          <children>
+            <region x="0" y="0" width="112" height="31" params="145" style="0" name="header" color="0xff4f8e38" treshold="0">
+              <children>
+                <bitmap x="-2" y="-5" width="31" height="34" params="1310720" style="0" name="icon">
+                  <variables>
+                    <var key="bitmap_asset_name" value="add_friends_icon_png" type="String"/>
+                  </variables>
+                </bitmap>
+                <text x="29" y="0" width="77" height="30" params="3148816" style="0" name="title" caption="%24%7Bfriend.bar.find.title%7D" tags="label">
+                  <variables>
+                    <var key="antialias_type" value="advanced" type="String"/>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_face" value="Ubuntu" type="String"/>
+                    <var key="font_size" value="12" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="headline_medium" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <text x="0" y="31" width="112" height="62" params="16" style="0" name="text" caption="%24%7Bfriend.bar.find.text%7D" color="0xffffffffff" background="true">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="12" type="uint"/>
+                <var key="margin_left" value="2" type="int"/>
+                <var key="margin_top" value="2" type="int"/>
+                <var key="margin_right" value="2" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container x="0" y="93" width="1" height="6" params="16" style="0" name="spacer"/>
+            <button_thick x="0" y="99" width="111" height="32" params="131089" style="3" name="button" caption="%24%7Bfriend.bar.find.button%7D" width_min="111" width_max="111"/>
+          </children>
+          <variables>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist>
+      </children>
+    </border>
+  </window>
+</layout>

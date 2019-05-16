@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="quiz_question" width="360" height="130" version="0.1" uid="667D00BE-4972-8DF3-E2EF-3F216BDA7E8B">
+  <window>
+    <container x="0" y="0" width="360" height="130" params="147456" style="7">
+      <children>
+        <border x="0" y="0" width="360" height="130" params="131088" style="2" name="window_bg" color="0x00" blend="0.8">
+          <children>
+            <container x="79" y="3" width="203" height="70" params="4341968" style="0" name="ui_container2">
+              <children>
+                <text x="0" y="2" width="203" height="68" params="8260816" style="3" name="quiz_topic" caption="1jjjjjjlllll" width_max="660" height_max="68">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="28" type="uint"/>
+                    <var key="text_style" value="ubuntu_condensed_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="max_lines" value="2" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+            <container x="94" y="74" width="172" height="50" params="192" style="0" name="ui_container">
+              <children>
+                <region x="0" y="0" width="50" height="50" params="17" style="3" name="button_dislike" treshold="0">
+                  <children>
+                    <border x="0" y="0" width="50" height="50" params="16" style="3" name="border" color="0x0b32e22">
+                      <children>
+                        <static_bitmap x="9" y="11" width="31" height="34" params="18" style="3">
+                          <variables>
+                            <var key="asset_uri" value="word_quiz_thum_down_big" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </border>
+                  </children>
+                </region>
+                <region x="121" y="0" width="50" height="50" params="17" style="3" name="button_like" treshold="0">
+                  <children>
+                    <border x="0" y="0" width="50" height="50" params="16" style="3" name="border" color="0x07841">
+                      <children>
+                        <static_bitmap x="9" y="7" width="31" height="34" params="18" style="3">
+                          <variables>
+                            <var key="asset_uri" value="word_quiz_thum_up_big" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </border>
+                  </children>
+                </region>
+              </children>
+            </container>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="wall_message_main" width="552" height="565" version="0.1" uid="00CF242A-7737-6B32-547E-1DCCBC9F6490">
+  <window>
+    <frame x="0" y="0" width="552" height="565" params="98337" style="3" caption="%24%7Bgroupforum.view.window_title%7D" color="0xff418db0" width_min="400" height_min="525">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-5" y="8" width="550" height="80" params="129" style="2" name="top_part" color="0xffff0e3f52" background="true" treshold="0">
+          <children>
+            <region x="0" y="0" width="550" height="80" params="145" style="3" name="top_click_area" treshold="0"/>
+            <container x="0" y="0" width="80" height="80" params="16" style="3" name="icon_background" color="0xffff000000" background="true">
+              <children>
+                <widget x="20" y="20" width="40" height="40" params="16" style="3" name="group_icon">
+                  <variables>
+                    <var key="widget_type" value="badge_image" type="String"/>
+                  </variables>
+                </widget>
+                <static_bitmap x="18" y="18" width="44" height="43" params="16" style="3" name="header_icon">
+                  <variables>
+                    <var key="asset_uri" value="" type="String"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </container>
+            <text x="90" y="10" width="678" height="30" params="16" style="3" name="top_header_text" caption="Super-duper%20long%20group%20title" clipping="false">
+              <variables>
+                <var key="font_size" value="24" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="u_headline_big" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="90" y="40" width="456" height="40" params="144" style="3" name="top_text" caption="Super-duper%20long%20goup%20description%2C%20maybe%20even%20multiline%2C%20but%20takes%20a%20few%20lines%20anyway" clipping="false">
+              <variables>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <border x="484" y="60" width="65" height="18" params="409681" style="1" name="settings_button" color="0x00" treshold="0" height_min="18">
+              <children>
+                <static_bitmap x="3" y="2" width="15" height="15" params="16" style="3">
+                  <variables>
+                    <var key="asset_uri" value="pursearea_settings_icon" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <text x="17" y="1" width="48" height="16" params="1051664" style="3" caption="%24%7Bgroupforum.view.settings.header%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="grid_fit_type" value="subpixel" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="margin_right" value="3" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="thickness" value="15" type="Number"/>
+                    <var key="bold" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </border>
+          </children>
+        </container>
+        <itemlist_horizontal x="-5" y="88" width="550" height="25" params="128" style="3" name="shortcuts" color="0xffffffffff" background="true">
+          <children>
+            <text x="0" y="3" width="191" height="16" params="16" style="3" name="header" caption="%24%7Bgroupforum.view.shortcuts.header%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="margin_left" value="5" type="int"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <html x="196" y="3" width="159" height="16" params="1" style="3" name="my" caption="%24%7Bgroupforum.view.shortcuts.my%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x1b79ab" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <html x="360" y="3" width="174" height="16" params="1" style="3" name="active" caption="%24%7Bgroupforum.view.shortcuts.active%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x1b79ab" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+            <html x="539" y="3" width="183" height="16" params="1" style="3" name="popular" caption="%24%7Bgroupforum.view.shortcuts.popular%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="grid_fit_type" value="subpixel" type="String"/>
+                <var key="text_color" value="0x1b79ab" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+                <var key="editable" value="false" type="Boolean"/>
+                <var key="selectable" value="false" type="Boolean"/>
+              </variables>
+            </html>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+          </variables>
+        </itemlist_horizontal>
+        <text x="0" y="115" width="541" height="25" params="144" style="3" name="list_header" caption="Topic">
+          <variables>
+            <var key="font_size" value="16" type="uint"/>
+            <var key="text_color" value="0xa6a6a2" type="hex"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <border x="0" y="140" width="540" height="320" params="2192" style="7" name="list_border">
+          <children>
+            <scrollable_itemlist_vertical x="3" y="3" width="534" height="314" params="2192" style="3" name="scrollable_message_list">
+              <variables>
+                <var key="spacing" value="1" type="int"/>
+              </variables>
+            </scrollable_itemlist_vertical>
+          </children>
+        </border>
+        <container_button x="10" y="473" width="95" height="30" params="1041" style="3" name="back_button" color="0x0dddddd" treshold="0" width_min="95">
+          <children>
+            <label x="0" y="7" width="130" height="17" params="3935440" style="3" name="back_button_label" caption="%24%7Bgroupforum.view.back%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <container_button x="267" y="473" width="95" height="30" params="394321" style="3" name="post_button" color="0x0a9bc5" treshold="0" width_min="95">
+          <children>
+            <label x="33" y="7" width="29" height="17" params="1838288" style="3" name="post_button_label" caption="Post">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container_button>
+        <container x="372" y="473" width="165" height="30" params="1104" style="3">
+          <children>
+            <container_button x="0" y="0" width="25" height="30" params="393233" style="3" name="show_first" caption="%3C%3C" treshold="0">
+              <children>
+                <label x="4" y="7" width="17" height="17" params="3280" style="3" caption="%3C%3C">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container_button>
+            <container_button x="30" y="0" width="25" height="30" params="393233" style="3" name="show_previous" caption="%3C" treshold="0">
+              <children>
+                <label x="7" y="7" width="10" height="17" params="3280" style="3" caption="%3C">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container_button>
+            <text x="58" y="5" width="50" height="17" params="16" style="3" name="page_info" caption="30/200" color="0x0949491">
+              <variables>
+                <var key="auto_size" value="center" type="String"/>
+                <var key="text_color" value="0x949491" type="hex"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <container_button x="110" y="0" width="25" height="30" params="393233" style="3" name="show_next" caption="%3E">
+              <children>
+                <label x="7" y="7" width="10" height="17" params="3280" style="3" caption="%3E">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container_button>
+            <container_button x="140" y="0" width="25" height="30" params="393233" style="3" name="show_last" caption="%3E%3E" treshold="0">
+              <children>
+                <label x="4" y="7" width="17" height="17" params="3280" style="3" caption="%3E%3E">
+                  <variables>
+                    <var key="text_style" value="u_bold" type="String"/>
+                  </variables>
+                </label>
+              </children>
+            </container_button>
+          </children>
+        </container>
+        <container x="180" y="515" width="300" height="20" params="1104" style="3">
+          <children>
+              <html x="3" y="3" width="300" height="16" params="787585" style="3" name="status" caption="Status%20text">
+                  <variables>
+                      <var key="auto_size" value="center" type="String"/>
+                      <var key="font_size" value="11" type="uint"/>
+                      <var key="grid_fit_type" value="subpixel" type="String"/>
+                      <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                      <var key="spacing" value="0" type="Number"/>
+                      <var key="leading" value="0" type="Number"/>
+                      <var key="editable" value="false" type="Boolean"/>
+                      <var key="selectable" value="false" type="Boolean"/>
+                  </variables>
+              </html>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="help_page" value="forums" type="String"/>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="4" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

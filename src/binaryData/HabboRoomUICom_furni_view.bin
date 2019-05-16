@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="furni_view" width="429" height="497" version="0.1" uid="7093FB25-BA90-F4A0-8830-2C0B7A06AAF6">
+  <window>
+    <itemlist_vertical x="0" y="0" width="429" height="497" params="16" style="0">
+      <children>
+        <border x="0" y="0" width="190" height="390" params="16" style="1" name="info_border">
+          <children>
+            <closebutton x="168" y="6" width="18" height="16" params="17" style="1" background="true" treshold="0" tags="close"/>
+            <itemlist_vertical x="10" y="10" width="170" height="389" params="16" style="0" name="infostand_element_list">
+              <children>
+                <text x="0" y="0" width="159" height="12" params="144" style="0" name="name_text" caption="Furni%20name">
+                  <variables>
+                    <var key="font_face" value="Volter Bold" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="17" width="170" height="1" params="16" style="0" name="images_spacer" color="0xffff333333" background="true"/>
+                <container x="0" y="23" width="170" height="130" params="16" style="0" name="image_container" height_min="45">
+                  <children>
+                    <container x="0" y="0" width="170" height="130" params="2096" style="0" name="unique_item_background_container" visible="false" height_min="45">
+                      <children>
+                        <static_bitmap x="8" y="-1" width="5" height="9" params="0" style="0" name="unique_item_background_bottom">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_iron" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="155" y="-1" width="5" height="9" params="0" style="0" name="unique_item_background_bottom">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_iron" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="0" y="5" width="170" height="120" params="2064" style="0" name="unique_item_background_mid">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_glass_mid" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="0" y="0" width="170" height="5" params="16" style="0" name="unique_item_background_top">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_glass_top" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="0" y="125" width="170" height="5" params="1040" style="0" name="unique_item_background_bottom">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_glass_bottom" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="8" y="123" width="5" height="9" params="1024" style="0" name="unique_item_background_bottom">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_iron" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="155" y="123" width="5" height="9" params="1024" style="0" name="unique_item_background_bottom">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_iron" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                    </container>
+                    <bitmap x="5" y="5" width="140" height="120" params="8388624" style="0" name="image" height_min="45">
+                      <variables>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                    <container x="0" y="0" width="170" height="130" params="2096" style="0" name="unique_item_overlay_container" visible="false" height_min="45">
+                      <children>
+                        <static_bitmap x="0" y="5" width="170" height="120" params="2064" style="0">
+                          <variables>
+                            <var key="asset_uri" value="unique_item_large_glass_shine" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <widget x="128" y="6" width="40" height="40" params="16" style="0" name="unique_item_plaque_widget">
+                          <variables>
+                            <var key="widget_type" value="limited_item_overlay_preview" type="String"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </container>
+                    <container x="0" y="0" width="170" height="130" params="2096" style="0" name="rarity_item_overlay_container" visible="false">
+                      <children>
+                        <widget x="128" y="6" width="40" height="40" params="16" style="0" name="rarity_item_overlay_widget">
+                          <variables>
+                            <var key="widget_type" value="rarity_item_overlay_preview" type="String"/>
+                          </variables>
+                        </widget>
+                      </children>
+                    </container>
+                  </children>
+                </container>
+                <container x="0" y="158" width="170" height="1" params="16" style="0" name="description_spacer" color="0xffff333333" background="true"/>
+                <text x="0" y="164" width="170" height="40" params="16" style="0" name="description_text" caption="Furni%20description">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <container x="0" y="209" width="170" height="1" params="16" style="0" name="owner_spacer" color="0xffff333333" background="true"/>
+                <region x="0" y="215" width="170" height="17" params="17" style="0" name="owner_region" treshold="0">
+                  <children>
+                    <icon x="0" y="2" width="20" height="15" params="16" style="21" name="owner_link"/>
+                    <static_bitmap x="0" y="0" width="15" height="15" params="16" style="3" name="bcw_icon" visible="false">
+                      <variables>
+                        <var key="asset_uri" value="${image.library.url}/catalogue/icon_193.png" type="String"/>
+                        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="20" y="0" width="150" height="15" params="16" style="0" name="owner_name">
+                      <variables>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </region>
+                <container x="0" y="237" width="170" height="1" params="16" style="0" name="group_details_spacer" color="0xffff333333" background="true"/>
+                <region x="0" y="243" width="170" height="40" params="17" style="0" name="group_details_container" treshold="0">
+                  <children>
+                    <widget x="0" y="0" width="40" height="40" params="16" style="0" name="group_badge_image">
+                      <variables>
+                        <var key="widget_type" value="badge_image" type="String"/>
+                        <var key="badge_image:type" value="group" type="String"/>
+                        <var key="badge_image:pivot_point" value="center" type="String"/>
+                        <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+                        <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+                      </variables>
+                    </widget>
+                    <text x="45" y="10" width="128" height="37" params="16" style="0" name="group_name">
+                      <variables>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="sharpness" value="0" type="Number"/>
+                        <var key="thickness" value="0" type="Number"/>
+                        <var key="word_wrap" value="true" type="Boolean"/>
+                        <var key="kerning" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${infostand.group.link.tooltip}" type="String"/>
+                    <var key="tool_tip_delay" value="100" type="uint"/>
+                  </variables>
+                </region>
+                <text x="0" y="288" width="170" height="23" params="16" style="0" name="expiration_text" caption="%24%7Binfostand.rent.expiration%7D">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="margin_top" value="6" type="int"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <itemlist_horizontal x="0" y="316" width="170" height="22" params="16" style="100" name="purchase_buttons">
+                  <children>
+                    <button x="0" y="0" width="125" height="22" params="131089" style="0" name="catalog_button" caption="%24%7Binfostand.button.buy%7D" tags="catalog"/>
+                    <button x="130" y="0" width="128" height="22" params="131089" style="0" name="rent_button" caption="%24%7Binfostand.button.rent%7D"/>
+                    <button x="263" y="0" width="141" height="22" params="131089" style="0" name="extend_button" caption="%24%7Binfostand.button.extend%7D"/>
+                    <button x="409" y="0" width="141" height="22" params="131089" style="0" name="buyout_button" caption="%24%7Binfostand.button.buyout%7D"/>
+                  </children>
+                  <variables>
+                    <var key="spacing" value="5" type="int"/>
+                  </variables>
+                </itemlist_horizontal>
+                <container x="0" y="343" width="170" height="1" params="16" style="0" name="furni_details_spacer" color="0xffff333333" background="true"/>
+                <text x="0" y="349" width="170" height="40" params="16" style="0" name="furni_details_text" caption="Furni%20details">
+                  <variables>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+              <variables>
+                <var key="spacing" value="5" type="int"/>
+                <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                <var key="resize_on_item_update" value="true" type="Boolean"/>
+              </variables>
+            </itemlist_vertical>
+          </children>
+        </border>
+        <border x="0" y="400" width="190" height="62" params="17" style="2" name="custom_variables" color="0x0999999">
+          <children>
+            <border x="3" y="3" width="184" height="56" params="8388624" style="3" color="0x0333333">
+              <children>
+                <button x="55" y="4" width="75" height="24" params="131281" style="3" name="set_values" caption="Set%20values"/>
+                <itemlist_vertical x="0" y="32" width="214" height="26" params="8536080" style="3" name="variable_list">
+                  <children>
+                    <container x="0" y="0" width="183" height="26" params="16" style="3">
+                      <children>
+                        <label x="1" y="2" width="41" height="17" params="16" style="3" name="name" caption="Name%3A">
+                          <variables>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                          </variables>
+                        </label>
+                        <input x="80" y="2" width="100" height="17" params="1" style="3" name="value">
+                          <variables>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </input>
+                        <border x="80" y="0" width="100" height="20" params="16" style="3" color="0x0cccccc"/>
+                      </children>
+                    </container>
+                  </children>
+                </itemlist_vertical>
+              </children>
+            </border>
+          </children>
+        </border>
+        <itemlist_horizontal x="0" y="472" width="1280" height="25" params="16" style="0" name="button_list">
+          <children>
+            <button x="0" y="0" width="132" height="25" params="131089" style="1" name="move" caption="%24%7Binfostand.button.move%7D"/>
+            <button x="142" y="0" width="139" height="25" params="131089" style="1" name="rotate" caption="%24%7Binfostand.button.rotate%7D"/>
+            <button x="291" y="0" width="137" height="25" params="131089" style="1" name="pickup" caption="%24%7Binfostand.button.pickup%7D"/>
+            <button x="438" y="0" width="173" height="25" params="131089" style="1" name="save_branding_configuration" caption="%24%7Binfostand.button.savebranding%7D"/>
+            <button x="621" y="0" width="125" height="25" params="131089" style="1" name="use" caption="%24%7Binfostand.button.use%7D"/>
+          </children>
+          <variables>
+            <var key="spacing" value="10" type="int"/>
+          </variables>
+        </itemlist_horizontal>
+      </children>
+      <variables>
+        <var key="spacing" value="10" type="int"/>
+        <var key="scale_to_fit_items" value="true" type="Boolean"/>
+        <var key="resize_on_item_update" value="true" type="Boolean"/>
+      </variables>
+    </itemlist_vertical>
+  </window>
+</layout>

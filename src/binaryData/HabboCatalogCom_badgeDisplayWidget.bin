@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="badgeDisplayNewWidget" width="42" height="42" version="0.1" uid="4D6D95BC-F905-67E1-7FE8-9CCAB33837E4">
+  <window>
+    <container x="0" y="0" width="42" height="42" params="0" style="0" name="container" background="true">
+      <children>
+        <static_bitmap x="0" y="0" width="42" height="42" params="16" style="0" name="asset_image">
+          <variables>
+            <var key="asset_uri" value="catalogue_badge_background" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <widget x="0" y="0" width="42" height="42" params="16" style="3" name="badge_image">
+          <variables>
+            <var key="widget_type" value="badge_image" type="String"/>
+            <var key="badge_image:pivot_point" value="center" type="String"/>
+            <var key="badge_image:stretched_x" value="false" type="Boolean"/>
+            <var key="badge_image:stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </widget>
+      </children>
+    </container>
+  </window>
+</layout>

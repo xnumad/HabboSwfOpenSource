@@ -1,0 +1,15 @@
+<chatstyle id="0" name="normal">
+	<layouts>
+		<speakLayout assetId="bubble_speak"/>
+		<whisperLayout assetId="bubble_whisper"/>
+		<shoutLayout assetId="bubble_shout"/>
+	</layouts>
+	<bitmaps>
+		<leftBitmap assetId="chat_bubble_left"/>
+		<leftColorBitmap assetId="chat_bubble_left_color"/>
+		<middleBitmap assetId="chat_bubble_middle"/>
+		<rightBitmap assetId="chat_bubble_right"/>
+		<pointerBitmap assetId="chat_bubble_pointer"/>
+        	<previewIconBitmap assetId="selector_preview"/>
+    </bitmaps>
+</chatstyle>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_monkey" width="360" height="460" version="0.1" uid="5881B7C9-D591-2C84-3875-E3D5EA1EB102">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="2064" style="0" name="ctlg_monkey">
+      <children>
+        <region x="10" y="20" width="339" height="344" params="2065" style="0" name="ctlg_teaserimg_1_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="339" height="344" params="2064" style="0" name="ctlg_teaserimg_1">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}catalogue/catalog_monkey_teaser.gif" type="String"/>
+                <var key="pivot_point" value="top center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="10" y="375" width="339" height="80" params="1041" style="0" name="ctlg_special_img_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="339" height="80" params="16" style="0" name="ctlg_special_img">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}catalogue/catalog_monkey_store2_en.gif" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+      </children>
+    </container>
+  </window>
+</layout>

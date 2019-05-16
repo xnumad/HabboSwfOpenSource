@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.RoomObjectVisualizationFactoryBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDRoomObjectVisualizationFactory" />
+        <assets>
+            <asset mimeType="image/png" name="pet_experience_bubble_png" />
+            <asset mimeType="image/png" name="snowball_small_png" />
+            <asset mimeType="image/png" name="snowball_small_shadow_png" />
+            <asset mimeType="image/png" name="snowball_big_png" />
+            <asset mimeType="image/png" name="snowball_splash_1" />
+            <asset mimeType="image/png" name="snowball_splash_2" />
+            <asset mimeType="image/png" name="snowball_splash_3" />
+        </assets>
+	</component>
+	
+</manifest>

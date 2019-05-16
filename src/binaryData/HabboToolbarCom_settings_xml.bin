@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="settings" width="192" height="36" version="0.1" uid="4758769A-4389-FA0A-9A9E-A31DAAE2E9E8">
+  <window>
+    <region x="0" y="0" width="192" height="36" params="17" style="0" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="192" height="36" params="2064" style="6" color="0xff55534e" tags="BGCOLOR"/>
+        <border x="3" y="3" width="186" height="29" params="2064" style="3" color="0x0201e19" blend="0.8"/>
+      </children>
+    </region>
+  </window>
+</layout>

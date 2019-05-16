@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="priceDisplayWidget" width="20" height="29" version="0.1" uid="1A6D8E45-0341-0CE4-2689-9CC9E9231291">
+  <window>
+    <border x="12" y="9" width="20" height="29" params="409600" style="6" width_min="20" height_min="28">
+      <children>
+        <itemlist_horizontal x="0" y="0" width="15" height="29" params="147472" style="3">
+          <children>
+            <container x="0" y="4" width="3" height="10" params="16" style="0" width_min="3"/>
+            <container x="3" y="4" width="9" height="26" params="147472" style="0" name="price_box_new"/>
+            <container x="12" y="4" width="3" height="10" params="16" style="0" width_min="3"/>
+          </children>
+        </itemlist_horizontal>
+      </children>
+    </border>
+  </window>
+</layout>

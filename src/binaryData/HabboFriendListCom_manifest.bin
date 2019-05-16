@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<manifest>
+	<component class="com.sulake.bootstrap.HabboFriendListBootstrap" version="0.0">
+	  <interface iid="com.sulake.iid.IIDHabboFriendList" />
+	  <assets>
+	    <asset mimeType="image/png" name="arrow_down_black_png" />
+	    <asset mimeType="image/png" name="arrow_down_white_png" />
+	    <asset mimeType="image/png" name="arrow_right_black_png" />
+	    <asset mimeType="image/png" name="arrow_right_white_png" />	    		
+	    <asset mimeType="image/png" name="ask_for_friend_png" />
+	    <asset mimeType="image/png" name="follow_friend_png" />		    
+	    <asset mimeType="image/png" name="hdr_friend_requests_png" />
+	    <asset mimeType="image/png" name="hdr_friends_png" />
+	    <asset mimeType="image/png" name="hdr_hilite_png" />
+	    <asset mimeType="image/png" name="hdr_search_png" />    
+	    <asset mimeType="image/png" name="minimail_png" />
+	    <asset mimeType="image/png" name="offline_png" />	    	
+	    <asset mimeType="image/png" name="open_edit_ctgs_png" />		
+	    <asset mimeType="image/png" name="open_homepage_png" />		
+	    <asset mimeType="image/png" name="open_inbox_png" />		
+	    <asset mimeType="image/png" name="open_minimail_png" />		
+	    <asset mimeType="image/png" name="opened_to_web_png" />	
+	    <asset mimeType="image/png" name="popup_arrow_left_png" />
+	    <asset mimeType="image/png" name="popup_arrow_right_png" />	
+	    <asset mimeType="image/png" name="remove_friend_png" />		
+	    <asset mimeType="image/png" name="room_invite_png" />		
+	    <asset mimeType="image/png" name="start_chat_png" />
+	    <asset mimeType="image/png" name="search_png" />
+
+	    <asset mimeType="text/xml" name="avatar_popup_xml" />
+	    <asset mimeType="text/xml" name="friend_entry_xml" />
+	    <asset mimeType="text/xml" name="friend_remove_confirm_xml" />
+	    <asset mimeType="text/xml" name="friend_request_entry_xml" />
+	    <asset mimeType="text/xml" name="friend_requests_footer_xml" />	
+	    <asset mimeType="text/xml" name="friends_footer_xml" />		 
+	    <asset mimeType="text/xml" name="opened_to_web_popup_xml" />
+	    <asset mimeType="text/xml" name="pagelink_xml" />   				
+	    <asset mimeType="text/xml" name="main_window_xml" />
+	    <asset mimeType="text/xml" name="room_invite_confirm_xml" />	
+	    <asset mimeType="text/xml" name="search_entry_xml" />		
+	    <asset mimeType="text/xml" name="search_footer_xml" />
+	    <asset mimeType="text/xml" name="simple_alert_xml" />	
+	    <asset mimeType="text/xml" name="tab_content_xml" />	 	    				
+	    <asset mimeType="text/xml" name="relationship_chooser_xml" />
+	   </assets>
+	</component>
+</manifest>

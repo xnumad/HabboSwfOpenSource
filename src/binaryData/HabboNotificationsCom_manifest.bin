@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.HabboNotificationsBootstrap" version="0.0">
+	
+		<interface iid="com.sulake.iid.IIDHabboNotifications" />
+		
+		<assets>
+		    <asset mimeType="text/xml" name="motd_notification_xml" />
+		    <asset mimeType="text/xml" name="motd_notification_item_xml" />
+		    <asset mimeType="text/xml" name="habbo_notifications_config_xml" />
+		    <asset mimeType="text/xml" name="layout_notification_xml" />
+            <asset mimeType="text/xml" name="layout_notifications_browser_xml" />
+            <asset mimeType="text/xml" name="club_gift_notification_xml" />
+            <asset mimeType="text/xml" name="club_ending_notification_xml" />
+            <asset mimeType="text/xml" name="club_promo_notification_xml" />
+            <asset mimeType="text/xml" name="safety_locked_notification_xml" />
+            <asset mimeType="text/xml" name="feed_display_xml" />
+            <asset mimeType="text/xml" name="feed_entity_xml" />
+            <asset mimeType="text/xml" name="layout_notification_popup_xml" />
+			<asset mimeType="image/png" name="if_icon_temp_png" />
+			<asset mimeType="image/png" name="if_icon_hc_png" />
+            <asset mimeType="image/png" name="if_icon_vip_png" />
+			<asset mimeType="image/png" name="if_icon_recycler_png" />
+			<asset mimeType="image/png" name="if_icon_friend_bg_blue_png" />
+            <asset mimeType="image/png" name="if_icon_duckets_png" />
+            <asset mimeType="image/png" name="if_icon_loyalty_png" />
+            <asset mimeType="image/png" name="if_icon_diamond_png" />
+		</assets>
+	
+	</component>
+	
+</manifest>

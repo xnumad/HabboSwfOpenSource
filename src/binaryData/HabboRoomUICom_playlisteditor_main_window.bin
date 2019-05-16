@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="main_window" width="582" height="437" version="0.1" uid="C2F3663A-C8F3-6968-B041-299005555995">
+  <window>
+    <frame x="0" y="0" width="582" height="437" params="33025" style="0" name="playlist.editor" caption="%24%7Bplaylist.editor.title%7D" color="0xff418caf" tags="PLAYLIST_EDITOR">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <border x="0" y="0" width="303" height="407" params="16" style="0" name="my_music_border" background="true">
+          <children>
+            <itemgrid_vertical x="2" y="89" width="277" height="315" params="17" style="0" name="music_inventory_itemgrid" tags="MUSICINVENTORY">
+              <variables>
+                <var key="scroll_step_v" value="105" type="Number"/>
+              </variables>
+            </itemgrid_vertical>
+            <scrollbar_vertical x="280" y="93" width="17" height="306" params="17" style="0" name="music_inventory_scrollbar">
+              <variables>
+                <var key="scrollable" value="music_inventory_itemgrid" type="String"/>
+              </variables>
+            </scrollbar_vertical>
+            <border x="4" y="4" width="295" height="79" params="16" style="2" color="0x060863b"/>
+            <bitmap x="1" y="1" width="9" height="100" params="128" style="0" name="music_inventory_splash_image"/>
+            <text x="96" y="29" width="234" height="26" params="16" style="0" caption="%24%7Bplaylist.editor.my.music%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="1" y="295" width="278" height="110" params="0" style="0" name="preview_play_container"/>
+          </children>
+        </border>
+        <border x="307" y="0" width="263" height="407" params="16" style="0" name="playlist_border" background="true">
+          <children>
+            <itemlist_vertical x="2" y="89" width="236" height="262" params="17" style="0" name="playlist_editor_itemlist">
+              <variables>
+                <var key="scroll_step_v" value="52" type="Number"/>
+              </variables>
+            </itemlist_vertical>
+            <scrollbar_vertical x="239" y="94" width="17" height="254" params="17" style="0" name="playlist_scrollbar">
+              <variables>
+                <var key="scrollable" value="playlist_editor_itemlist" type="String"/>
+              </variables>
+            </scrollbar_vertical>
+            <border x="5" y="5" width="255" height="79" params="16" style="2" color="0x034637a"/>
+            <bitmap x="1" y="1" width="100" height="100" params="16" style="0" name="playlist_editor_splash_image"/>
+            <text x="96" y="29" width="217" height="26" params="16" style="0" caption="%24%7Bplaylist.editor.playlist%7D">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="20" type="uint"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+                <var key="text_style" value="bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="bold" value="true" type="Boolean"/>
+              </variables>
+            </text>
+            <container x="1" y="350" width="261" height="56" params="16" style="0" name="now_playing_container" background="true"/>
+          </children>
+        </border>
+      </children>
+    </frame>
+  </window>
+</layout>

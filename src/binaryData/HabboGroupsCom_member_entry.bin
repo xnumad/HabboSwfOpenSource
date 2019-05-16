@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="Member Entry" width="164" height="35" version="0.1" uid="C947E67A-892A-A44D-9BD3-74C06F43F141">
+  <window>
+    <border x="0" y="0" width="164" height="35" params="16" style="0" name="group_entry_container" color="0x0cc0000" background="true">
+      <children>
+        <region x="0" y="0" width="164" height="35" params="17" style="0" name="bg_region" color="0x00" treshold="0">
+          <variables>
+            <var key="tool_tip_caption" value="${group.members.showinfo}" type="String"/>
+          </variables>
+        </region>
+        <widget x="-3" y="0" width="33" height="34" params="1310736" style="0" name="avatar_image">
+          <variables>
+            <var key="widget_type" value="avatar_image" type="String"/>
+            <var key="avatar_image:only_head" value="true" type="Boolean"/>
+            <var key="avatar_image:cropped" value="true" type="Boolean"/>
+          </variables>
+        </widget>
+        <text x="33" y="1" width="77" height="16" params="16" style="0" name="user_name_txt" caption="User%20name%20PH" color="0x00">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="11" type="uint"/>
+            <var key="text_style" value="u_bold" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <region x="51" y="14" width="110" height="18" params="17" style="0" name="action_link_region" visible="false" treshold="0">
+          <children>
+            <text x="0" y="0" width="86" height="16" params="4194320" style="0" name="action_link" caption="Action%20Name%20PH">
+              <variables>
+                <var key="antialias_type" value="advanced" type="String"/>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_face" value="Ubuntu" type="String"/>
+                <var key="font_size" value="11" type="uint"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="sharpness" value="0" type="Number"/>
+                <var key="thickness" value="0" type="Number"/>
+                <var key="underline" value="true" type="Boolean"/>
+                <var key="kerning" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+          </children>
+        </region>
+        <container x="33" y="15" width="15" height="13" params="16" style="0" name="admin_container">
+          <children>
+            <static_bitmap x="0" y="0" width="15" height="13" params="16" style="0" name="icon_admin_off">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_admin_off.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="15" height="13" params="16" style="0" name="icon_admin_over">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_admin_over.png" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <static_bitmap x="34" y="15" width="15" height="13" params="16" style="0" name="icon_owner">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}guilds/icon_owner.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <region x="130" y="1" width="17" height="18" params="81" style="0" name="block_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_down">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_down.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_over">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_over.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_off">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_off.png" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <region x="146" y="1" width="17" height="18" params="81" style="0" name="remove_region" treshold="0">
+          <children>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_down">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_down.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_over">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_over.png" type="String"/>
+              </variables>
+            </static_bitmap>
+            <static_bitmap x="0" y="0" width="17" height="18" params="16" style="0" name="icon_close_off">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}guilds/icon_close_off.png" type="String"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </region>
+        <text x="50" y="15" width="61" height="15" params="16" style="0" name="member_since_txt" caption="Since%20Txt%20PH">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="text_color" value="0x666666" type="hex"/>
+            <var key="text_style" value="u_small" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="italic" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </border>
+  </window>
+</layout>

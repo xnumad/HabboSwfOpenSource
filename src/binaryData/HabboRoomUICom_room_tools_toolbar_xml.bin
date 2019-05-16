@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_tools_toolbar" width="165" height="207" version="0.1" uid="187E4867-C57F-C74F-210A-0529D11A0A60">
+  <window>
+    <container x="-2" y="0" width="165" height="207" params="16384" style="7">
+      <children>
+        <border x="1" y="0" width="164" height="207" params="8538112" style="2" name="window_bg" color="0x024231e" blend="0.8">
+          <children>
+            <itemlist x="24" y="6" width="140" height="201" params="8536064" style="3" name="itemlist_buttons" width_min="140">
+              <children>
+                <region x="0" y="0" width="130" height="25" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_settings" color="0x0494742" treshold="0">
+                  <children>
+                    <container x="0" y="0" width="28" height="25" params="16" style="0" color="0x0686661" blend="0" clipping="false"/>
+                    <static_bitmap x="3" y="0" width="25" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="roomtools_gear" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="4" width="90" height="14" params="16" style="3" name="text_settings" caption="%24%7Broom.settings.button.text%7D" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xcccccc" type="hex"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${room.settings.button.tooltip}" type="String"/>
+                  </variables>
+                </region>
+                <region x="0" y="25" width="130" height="25" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_zoom" caption="z" color="0x0494742" treshold="0">
+                  <children>
+                    <container x="0" y="0" width="28" height="25" params="16" style="0" color="0x0686661" blend="0" clipping="false"/>
+                    <static_bitmap x="3" y="0" width="25" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="roomtools_magnifier" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="3" width="90" height="14" params="16" style="3" name="text_zoom" caption="%24%7Broom.zoom.button.text%7D" color="0x0999999" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xbbbbbb" type="hex"/>
+                        <var key="text_style" value="u_button_tab" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${toolbar.icon.tooltip.zoom}" type="String"/>
+                  </variables>
+                </region>
+                <region x="0" y="50" width="130" height="25" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_chat_history" caption="z" color="0x0494742" clipping="false" treshold="0">
+                  <children>
+                    <container x="0" y="0" width="28" height="25" params="16" style="6" color="0x055534e" clipping="false"/>
+                    <static_bitmap x="3" y="0" width="25" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="roomtools_chat_history" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="3" width="90" height="14" params="16" style="3" name="text_chat_history" caption="%24%7Broom.chathistory.button.text%7D" color="0x0999999" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xbbbbbb" type="hex"/>
+                        <var key="text_style" value="u_button_tab" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${chat.history.button.tooltip}" type="String"/>
+                  </variables>
+                </region>
+                <region x="0" y="75" width="130" height="25" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_like" caption="z" color="0x0494742" clipping="false" treshold="0">
+                  <children>
+                    <container x="0" y="0" width="28" height="25" params="16" style="6" color="0x02e506f" clipping="false"/>
+                    <static_bitmap x="2" y="0" width="27" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="roomtools_like" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="3" width="90" height="14" params="16" style="3" name="text_like" caption="%24%7Broom.like.button.text%7D" color="0x0999999" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xbbbbbb" type="hex"/>
+                        <var key="text_style" value="u_button_tab" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${room.like.button.tooltip}" type="String"/>
+                  </variables>
+                </region>
+                <region x="0" y="100" width="130" height="29" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_camera" caption="z" color="0x0494742" clipping="false" treshold="0">
+                  <children>
+                    <container x="0" y="5" width="28" height="2" params="16" style="6" color="0x055534e" clipping="false"/>
+                    <static_bitmap x="2" y="0" width="27" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="roomtools_camera" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="3" width="90" height="14" params="16" style="3" name="text_camera" caption="%24%7Broom.camera.button.text%7D" color="0x0999999" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xbbbbbb" type="hex"/>
+                        <var key="text_style" value="u_button_tab" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${room.camera.button.tooltip}" type="String"/>
+                  </variables>
+                </region>
+                <region x="0" y="129" width="130" height="29" params="131073" style="0" dynamic_style="brightness_and_shadow_under" name="button_share" caption="z" color="0x0494742" clipping="false" treshold="0">
+                  <children>
+                    <container x="0" y="5" width="28" height="2" params="16" style="6" color="0x055534e" clipping="false"/>
+                    <static_bitmap x="2" y="0" width="27" height="25" params="16" style="3" clipping="false" tags="%23icon">
+                      <variables>
+                        <var key="asset_uri" value="navigation_icon_weblink" type="String"/>
+                        <var key="pivot_point" value="center" type="String"/>
+                        <var key="stretched_x" value="false" type="Boolean"/>
+                        <var key="stretched_y" value="false" type="Boolean"/>
+                        <var key="etching_color" value="0x48000000" type="hex"/>
+                      </variables>
+                    </static_bitmap>
+                    <text x="36" y="3" width="90" height="14" params="16" style="3" name="text_share" caption="%24%7Bnavigator.embed.caption%7D" color="0x0999999" width_max="90">
+                      <variables>
+                        <var key="font_size" value="11" type="uint"/>
+                        <var key="text_color" value="0xbbbbbb" type="hex"/>
+                        <var key="text_style" value="u_button_tab" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="underline" value="true" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                  <variables>
+                    <var key="tool_tip_caption" value="${room.camera.button.tooltip}" type="String"/>
+                  </variables>
+                </region>
+                <container x="3" y="158" width="115" height="43" params="0" style="3" name="cnt_history" clipping="false">
+                  <children>
+                    <region x="0" y="3" width="37" height="34" params="131073" style="3" dynamic_style="brightness_and_shadow_under" name="button_history_back" caption="%3C" clipping="false" treshold="0">
+                      <children>
+                        <static_bitmap x="3" y="2" width="34" height="31" params="16" style="3" color="0x044a88d" visible="false" clipping="false" tags="%23bg">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_forward_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="zoom_x" value="-1" type="Number"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="4" y="3" width="30" height="30" params="16" style="3" clipping="false" tags="%23icon">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_back_icon" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${room.history.button.back.tooltip}" type="String"/>
+                      </variables>
+                    </region>
+                    <region x="38" y="0" width="35" height="38" params="131073" style="3" dynamic_style="brightness_and_shadow_under" name="button_history" caption="H" clipping="false" treshold="0">
+                      <children>
+                        <static_bitmap x="1" y="1" width="33" height="35" params="16" style="3" color="0x044a88d" clipping="false" treshold="0" tags="%23icon">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_open_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="2" y="3" width="32" height="35" params="16" style="3" clipping="false" tags="%23icon">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_open_icon" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${room.history.button.tooltip}" type="String"/>
+                      </variables>
+                    </region>
+                    <region x="74" y="5" width="34" height="32" params="131073" style="3" dynamic_style="brightness_and_shadow_under" name="button_history_forward" caption="%3E" clipping="false" treshold="0">
+                      <children>
+                        <static_bitmap x="0" y="0" width="34" height="31" params="16" style="3" color="0x044a88d" clipping="false" tags="%23bg">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_forward_bg" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <static_bitmap x="3" y="1" width="30" height="30" params="16" style="3" clipping="false" tags="%23icon">
+                          <variables>
+                            <var key="asset_uri" value="roomtools_history_back_icon" type="String"/>
+                            <var key="pivot_point" value="center" type="String"/>
+                            <var key="stretched_x" value="false" type="Boolean"/>
+                            <var key="stretched_y" value="false" type="Boolean"/>
+                            <var key="zoom_x" value="-1" type="Number"/>
+                            <var key="etching_color" value="0x48000000" type="hex"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="tool_tip_caption" value="${room.history.button.forward.tooltip}" type="String"/>
+                      </variables>
+                    </region>
+                  </children>
+                </container>
+              </children>
+            </itemlist>
+          </children>
+        </border>
+        <border x="0" y="0" width="19" height="172" params="16384" style="2" name="side_bar_collapse" color="0x03b3933">
+          <children>
+            <region x="0" y="0" width="19" height="172" params="1" style="3" name="button_collapse" treshold="0">
+              <children>
+                <static_bitmap x="9" y="99" width="6" height="8" params="3145744" style="3" name="arrow_collapse" tags="%23icon">
+                  <variables>
+                    <var key="asset_uri" value="roomtools_minimizebutton" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </border>
+        <border x="0" y="64" width="19" height="108" params="1064960" style="2" name="side_bar_expand" color="0x03b3933">
+          <children>
+            <region x="0" y="0" width="19" height="108" params="2049" style="3" name="button_expand" treshold="0">
+              <children>
+                <static_bitmap x="11" y="50" width="6" height="8" params="3145744" style="3" name="arrow_expand">
+                  <variables>
+                    <var key="asset_uri" value="roomtools_minimizebutton" type="String"/>
+                    <var key="stretched_x" value="false" type="Boolean"/>
+                    <var key="stretched_y" value="false" type="Boolean"/>
+                    <var key="zoom_x" value="-1" type="Number"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </region>
+          </children>
+        </border>
+      </children>
+    </container>
+  </window>
+</layout>

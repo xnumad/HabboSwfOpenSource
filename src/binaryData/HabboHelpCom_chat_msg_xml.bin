@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="chat_msg" width="259" height="64" version="0.1" uid="11A2835C-101C-0316-9441-C50605F7CB19">
+  <window>
+    <widget x="0" y="0" width="259" height="64" params="147472" style="100" name="msg_widget">
+      <variables>
+        <var key="widget_type" value="illumina_chat_bubble" type="String"/>
+      </variables>
+    </widget>
+  </window>
+</layout>

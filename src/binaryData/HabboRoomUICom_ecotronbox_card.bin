@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ecotron_box_card" width="257" height="114" version="0.1" uid="91455268-A0A7-FEAA-010D-43C494232D7D">
+  <window>
+    <container x="0" y="0" width="257" height="114" params="33025" style="0" name="ecotronbox_container">
+      <children>
+        <static_bitmap x="0" y="0" width="257" height="114" params="19" style="0" name="ecotronbox_card_bg">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}Giftcards/ecotronbox_card_bg.png" type="String"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="7" y="38" width="39" height="39" params="16" style="0" name="ecotronbox_card_preview"/>
+        <button_thick x="47" y="90" width="191" height="22" params="131089" style="0" name="ecotronbox_card_btn_open" caption="%24%7Bwidget.furni.ecotronbox.open%7D"/>
+        <button x="200" y="90" width="85" height="22" params="131089" style="0" name="ecotronbox_card_btn_close" caption="%24%7Bgeneric.close%7D"/>
+        <text x="49" y="39" width="139" height="45" params="16" style="0" name="ecotronbox_card_msg" caption="%24%7Bwidget.furni.ecotronbox.title%7D">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="12" y="9" width="104" height="12" params="16" style="0" name="ecotronbox_card_date">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<manifest>
+
+	<component class="com.sulake.bootstrap.SessionDataManagerBootstrap" version="0.0">
+		<interface iid="com.sulake.iid.IIDSessionDataManager" />
+		<assets>
+			<asset mimeType="image/png" name="loading_icon" />
+		</assets>
+	</component>
+	
+</manifest>

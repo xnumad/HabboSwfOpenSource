@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="pet_breeding_pre_preview" width="29" height="25" version="0.1" uid="242CB330-2713-05A8-C47B-088D04D6063F">
+  <window>
+    <bitmap x="0" y="0" width="29" height="25" params="0" style="100"/>
+  </window>
+</layout>

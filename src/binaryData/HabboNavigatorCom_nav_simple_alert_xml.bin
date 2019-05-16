@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="simple_alert" width="193" height="157" version="0.1" uid="8DD1CDD6-2E2D-104A-9C33-0E2944BE0EAE">
+  <window>
+    <frame x="0" y="0" width="193" height="157" params="32769" style="3" name="alert_%203" caption="PH%20Caption" color="0x0418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <text x="12" y="14" width="160" height="78" params="1" style="0" name="body_text" caption="PH%20loren%20ipsum%20dolor%20pubba%20hubba%20duppa%20papatiti">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="sharpness" value="0" type="Number"/>
+            <var key="thickness" value="0" type="Number"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="kerning" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <button x="62" y="97" width="60" height="22" params="131089" style="3" name="ok" caption="%24%7Bgeneric.ok%7D" width_min="60" width_max="60"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="6" type="int"/>
+        <var key="margin_top" value="25" type="int"/>
+        <var key="margin_right" value="6" type="int"/>
+        <var key="margin_bottom" value="7" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

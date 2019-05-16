@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="landing_view" width="500" height="149" version="0.1" uid="CDB95E36-1985-15C8-75B6-C0715945B669">
+  <window>
+    <container x="0" y="0" width="500" height="149" params="147472" style="0" color="0x00" background="true">
+      <children>
+        <static_bitmap x="0" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="18" y="4" width="145" height="14" params="16" style="100" name="title_txt" caption="%24%7Blanding.view.talentspromo.title%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="200" y="10" width="300" height="4" params="16" style="100" name="hdr_line">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="21" y="60" width="192" height="101" params="16" style="0" name="teaser_image">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}reception/reception_widget_helpers_rev.png" type="String"/>
+            <var key="pivot_point" value="bottom left" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <itemlist_vertical x="230" y="29" width="270" height="120" params="16" style="0">
+          <children>
+            <formatted_text x="0" y="0" width="279" height="24" params="16" style="100" name="caption_txt" caption="%24%7Blanding.view.talentspromo.caption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="29" width="270" height="15" params="16" style="100" name="subcaption_txt" caption="%24%7Blanding.view.talentspromo.subcaption%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="text_style" value="il_heading_3" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <formatted_text x="0" y="49" width="270" height="16" params="16" style="100" name="info_txt" caption="%24%7Blanding.view.talentspromo.info%7D">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="multiline" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </formatted_text>
+            <button x="-11" y="70" width="256" height="50" params="131089" style="100" name="go_button" caption="%24%7Blanding.view.talentspromo.checkprogress%7D"/>
+          </children>
+          <variables>
+            <var key="spacing" value="5" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_vertical>
+      </children>
+    </container>
+  </window>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="bar" width="420" height="48" version="0.1" uid="2BFD1C11-F8AA-209B-A66B-302E86634928">
+  <window>
+    <container x="0" y="0" width="420" height="48" params="1" style="0" name="border" clipping="false" treshold="0">
+      <children>
+        <border x="0" y="0" width="420" height="48" params="2176" style="6" color="0x0403c35"/>
+        <container x="10" y="5" width="270" height="32" params="16" style="100" name="friendtools"/>
+        <region x="280" y="5" width="42" height="42" params="17" style="0" name="messenger" treshold="0">
+          <children>
+            <bitmap x="0" y="0" width="42" height="42" params="0" style="0" name="icon">
+              <variables>
+                <var key="bitmap_asset_name" value="messenger" type="String"/>
+              </variables>
+            </bitmap>
+          </children>
+        </region>
+        <container x="330" y="5" width="80" height="42" params="145" style="0" name="container" clipping="false">
+          <children>
+            <container x="16" y="0" width="48" height="38" params="208" style="0" name="wrapper" color="0xffff00ff" clipping="false">
+              <children>
+                <itemlist_horizontal x="24" y="0" width="0" height="38" params="4194320" style="0" name="list" color="0xffffff00" clipping="false">
+                  <variables>
+                    <var key="spacing" value="3" type="int"/>
+                    <var key="scale_to_fit_items" value="true" type="Boolean"/>
+                    <var key="resize_on_item_update" value="true" type="Boolean"/>
+                  </variables>
+                </itemlist_horizontal>
+                <container_button x="0" y="7" width="24" height="24" params="1" style="3" name="button_left_page" tags="arrow%2Cleft">
+                  <children>
+                    <icon x="7" y="7" width="10" height="10" params="16" style="2" color="0x0333333"/>
+                  </children>
+                </container_button>
+                <container_button x="24" y="7" width="24" height="24" params="65" style="3" name="button_right_page" tags="arrow%2Cright">
+                  <children>
+                    <icon x="7" y="7" width="10" height="10" params="16" style="3" color="0x0333333"/>
+                  </children>
+                </container_button>
+              </children>
+            </container>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

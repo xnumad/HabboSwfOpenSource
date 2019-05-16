@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="room_info_usercount" width="40" height="18" version="0.1" uid="8883B70D-4042-66A9-131E-E89018058B0B">
+  <window>
+    <border x="0" y="0" width="40" height="18" params="1835024" style="3" name="room_info_usercount_border" color="0x00">
+      <children>
+        <itemlist_horizontal x="3" y="1" width="31" height="15" params="786448" style="3" name="usercount">
+          <children>
+            <static_bitmap x="0" y="1" width="13" height="14" params="16" style="3" name="room_usercount_icon">
+              <variables>
+                <var key="asset_uri" value="newnavigator_icon_usercount" type="String"/>
+              </variables>
+            </static_bitmap>
+            <label x="14" y="0" width="17" height="17" params="16" style="3" name="room_usercount" caption="99">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xffffff" type="hex"/>
+              </variables>
+            </label>
+          </children>
+          <variables>
+            <var key="spacing" value="1" type="int"/>
+            <var key="scale_to_fit_items" value="true" type="Boolean"/>
+            <var key="resize_on_item_update" value="true" type="Boolean"/>
+          </variables>
+        </itemlist_horizontal>
+      </children>
+    </border>
+  </window>
+</layout>

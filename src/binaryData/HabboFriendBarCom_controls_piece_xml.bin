@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="controls" width="121" height="120" version="0.1" uid="99DDB3D6-119D-CB98-023E-44751B8FDFC2">
+  <window>
+    <container x="0" y="0" width="121" height="120" params="144" style="0" name="controls" clipping="false">
+      <children>
+        <button x="4" y="4" width="113" height="28" params="131089" style="3" name="btn_message" caption="%24%7Bfriend.bar.message%7D" width_min="113" width_max="113">
+          <variables>
+            <var key="tool_tip_caption" value="${friend.bar.message.tip}" type="String"/>
+          </variables>
+        </button>
+        <button x="4" y="34" width="113" height="28" params="131089" style="3" name="btn_visit" caption="%24%7Bfriend.bar.visit%7D" width_min="113">
+          <variables>
+            <var key="tool_tip_caption" value="${friend.bar.visit.tip}" type="String"/>
+          </variables>
+        </button>
+        <button x="4" y="34" width="113" height="28" params="131089" style="3" name="btn_game" caption="%24%7Bfriend.bar.game%7D" color="0x8ed9ef" width_min="113">
+          <variables>
+            <var key="tool_tip_caption" value="${friend.bar.game.tip}" type="String"/>
+          </variables>
+        </button>
+          <button x="4" y="64" width="113" height="28" params="131089" style="3" name="button_profile" caption="%24%7Bfriendbar.request.profile%7D" width_min="113">
+            <variables>
+              <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+            </variables>
+          </button>
+      </children>
+    </container>
+  </window>
+</layout>

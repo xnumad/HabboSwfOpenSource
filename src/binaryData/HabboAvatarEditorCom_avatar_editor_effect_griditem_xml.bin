@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="avatar_editor_effect_griditem" width="50" height="50" version="0.1" uid="3EF38700-DAD9-CA68-2B41-12F09D923465">
+  <window>
+    <region x="0" y="0" width="50" height="50" params="17" style="3" treshold="0">
+      <children>
+        <static_bitmap x="0" y="0" width="50" height="50" params="16" style="3" visible="false" tags="BG_COLOR">
+          <variables>
+            <var key="asset_uri" value="avatar_editor_parts_hilite" type="String"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="5" y="5" width="40" height="40" params="3935440" style="0" name="bitmap" tags="BITMAP" width_max="50" height_max="50">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+            <var key="pivot_point" value="center" type="String"/>
+            <var key="stretched_x" value="false" type="Boolean"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <container x="30" y="2" width="18" height="14" params="16" style="0" name="effect_amount_bg1" color="0xffffdddddd" background="true">
+          <children>
+            <container x="1" y="1" width="16" height="12" params="16" style="0" name="effect_amount_bg2" color="0xffff666666" background="true">
+              <children>
+                <text x="0" y="0" width="18" height="13" params="16" style="0" name="effect_amount" caption="99">
+                  <variables>
+                    <var key="text_color" value="0xeeeeee" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="sharpness" value="0" type="Number"/>
+                    <var key="thickness" value="0" type="Number"/>
+                    <var key="kerning" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+        </container>
+        <container x="4" y="41" width="42" height="5" params="16" style="0" name="duration_container" color="0xffffdddddd" visible="false" background="true">
+          <children>
+            <bitmap x="1" y="1" width="40" height="3" params="16" style="0" name="progress_bar">
+              <variables>
+                <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+              </variables>
+            </bitmap>
+          </children>
+        </container>
+      </children>
+    </region>
+  </window>
+</layout>

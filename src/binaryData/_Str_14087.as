@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_14087.bin", mimeType="application/octet-stream")]
+    [Embed(source="HabboHelpCom_main_xml.bin", mimeType="application/octet-stream")]
     public class _Str_14087 extends ByteArrayAsset 
     {
     }

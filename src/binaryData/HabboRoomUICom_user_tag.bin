@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="user_tag" width="20" height="20" version="0.0">
+  <window>
+    <text x="0" y="0" width="43" height="15" params="17" style="0" caption="my%20tag" color="0xff333333" background="true" height_min="15">
+      <variables>
+        <var key="font_face" value="Volter" type="String"/>
+        <var key="font_size" value="9" type="uint"/>
+        <var key="text_color" value="16777215" type="uint"/>
+        <var key="auto_size" value="left" type="String"/>
+        <var key="embed_fonts" value="true" type="Boolean"/>
+        <var key="margins">          <value>            <Map>              <var key="left" value="2" type="int"/>              <var key="top" value="0" type="int"/>              <var key="right" value="2" type="int"/>              <var key="bottom" value="0" type="int"/>            </Map>          </value>        </var>
+      </variables>
+    </text>
+  </window>
+</layout>

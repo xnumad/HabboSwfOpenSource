@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="share_room" width="457" height="196" version="0.1" uid="A60C62C0-D5EC-C2BE-4D0D-E1684965484A">
+  <window>
+    <frame x="0" y="0" width="457" height="250" params="33025" style="3" caption="%24%7Bnavigator.embed.title%7D" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="18" y="19" width="112" height="112" params="16" style="3" name="thumbnail_edges" color="0xffff000000" background="true">
+          <children>
+            <static_bitmap x="1" y="1" width="110" height="110" params="16" style="3" name="thumbnail_image">
+              <variables>
+                <var key="asset_uri" value="newnavigator_default_room" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+          </children>
+        </container>
+        <container x="150" y="10" width="285" height="240" params="16" style="0" name="embed_info" background="true">
+          <children>
+            <text x="0" y="0" width="281" height="26" params="16" style="0" name="embed_info_hdln" caption="%24%7Bnavigator.embed.headline%7D">
+              <variables>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="28" width="286" height="75" params="16" style="0" name="embed_info_txt" caption="%24%7Bnavigator.embed.info%7D">
+              <variables>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="text_style" value="u_small" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+              <text x="0" y="83" width="286" height="75" params="16" style="0" name="embed_src_txt" caption="${url.prefix}/room/%roomId%">
+                  <variables>
+                      <var key="font_size" value="14" type="uint"/>
+                      <var key="text_style" value="u_small" type="String"/>
+                      <var key="underline" value="true" type="Boolean"/>
+                      <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                      <var key="selectable" value="true" type="Boolean"/>
+                      <var key="word_wrap" value="true" type="Boolean"/>
+                      <var key="spacing" value="0" type="Number"/>
+                      <var key="leading" value="0" type="Number"/>
+                  </variables>
+              </text>
+              <text x="0" y="107" width="286" height="75" params="16" style="0" name="embed_info_direct_txt" caption="%24%7Bnavigator.embed.direct.info%7D">
+                  <variables>
+                      <var key="font_size" value="14" type="uint"/>
+                      <var key="text_style" value="u_small" type="String"/>
+                      <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                      <var key="word_wrap" value="true" type="Boolean"/>
+                      <var key="spacing" value="0" type="Number"/>
+                      <var key="leading" value="0" type="Number"/>
+                  </variables>
+              </text>
+            <input x="0" y="162" width="290" height="24" params="1" style="0" name="embed_src_direct_txt" caption="${url.prefix}/hotel?room=%roomId%" background="true">
+              <variables>
+                <var key="always_show_selection" value="true" type="Boolean"/>
+                <var key="border" value="true" type="Boolean"/>
+                <var key="font_size" value="14" type="uint"/>
+                <var key="text_style" value="u_regular" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </input>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

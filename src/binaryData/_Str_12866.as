@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_12866.bin", mimeType="application/octet-stream")]
+    [Embed(source="HabboToolbarCom_purse_indicator_seasonal_xml.bin", mimeType="application/octet-stream")]
     public class _Str_12866 extends ByteArrayAsset 
     {
     }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="messenger_main_window" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="212" height="405" params="98305" style="2" name="messenger_window" caption="%24%7Bmessenger.title%7D" width_min="102" height_min="200">
+      <variables> 
+        <var key="margin_left" value="0" type="int"/> 
+        <var key="margin_right" value="0" type="int"/> 
+        <var key="margin_bottom" value="0" type="int"/> 
+      </variables> 
+      <children>
+        <container x="1" y="0" width="210" height="305" params="2193" style="0" name="content" caption="content" color="0xffffffff" background="true">
+          <children>
+            <bitmap x="0" y="0" width="210" height="31" params="144" style="0" name="convo_bg" caption="content"/>
+            <container x="0" y="0" width="210" height="600" params="145" style="0" name="conversationstab" caption="conversationstab"/>
+            <container x="5" y="31" width="200" height="269" params="2192" style="0" name="conversation" caption="conversation" background="true" color="0xFFffffff">
+              <children>
+                <container x="0" y="0" width="200" height="32" params="144" style="0" name="hdr" caption="hdr" color="0xffffffff" background="true">
+                  <children>
+                    
+                    <container_button x="36" y="5" width="32" height="22" params="17" style="0" name="button_minimail">
+                     <children>
+                      <bitmap x="8" y="4" width="19" height="14" params="16" style="0" name="icon"/>
+                     </children>
+                     <variables>
+                       <var key="tool_tip_caption" value="${messenger.minimail.tooltip}" type="String" /> 
+                     </variables>
+                    </container_button>
+                    
+                    <container_button x="0" y="5" width="32" height="22" params="17" style="0" name="button_follow_friend">
+                     <children>
+                      <bitmap x="7" y="4" width="16" height="14" params="16" style="0" name="icon"/>
+                     </children>
+                     <variables>
+                       <var key="tool_tip_caption" value="${messenger.followfriend.tooltip}" type="String" /> 
+                     </variables>
+                    </container_button>
+
+                    <container_button x="72" y="5" width="32" height="22" params="17" style="0" name="button_extended_profile">
+                     <children>
+                      <icon x="9" y="6" width="15" height="11" params="16" style="21" name="icon_eye_off"/>
+                     </children>
+                     <variables>
+                        <var key="tool_tip_caption" value="${infostand.profile.link.tooltip}" type="String"/>
+                        <var key="tool_tip_delay" value="100" type="uint"/>
+                     </variables>
+                    </container_button>
+                  
+                    <bitmap x="186" y="6" width="13" height="13" params="81" style="0" name="close" caption="hdr"/>
+                  </children>
+                </container>
+                <container x="0" y="32" width="200" height="236" params="2192" style="0" name="list" caption="list" color="0xFFffffff" background="true">
+                  <children>
+                    <itemlist_vertical x="0" y="0" width="178" height="236" params="2193" style="0" name="msg_list" caption="list" color="0xffffffff" background="true"/>
+                    <scrollbar_vertical x="183" y="0" width="17" height="236" params="2129" style="0" name="scroller" caption="list"/>
+                  </children>
+                </container>
+              </children>
+            </container>
+            <background x="0" y="304" width="210" height="1" params="1168" style="0" name="bg" caption="content" color="0xff000000" background="true"/>
+          </children>
+        </container>
+        <input x="10" y="315" width="190" height="54" params="1169" style="0" name="message_input" caption="" color="0xFFffffff" background="true">
+          <variables>
+            <var key="font_face" value="Volter" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_color" value="0" type="uint"/>
+            <var key="always_show_selection" value="true" type="Boolean"/>
+            <var key="embed_fonts" value="true" type="Boolean"/>
+            <var key="mouse_wheel_enabled" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="border_color" value="0xFF888888" type="uint"/>         
+            <var key="border" value="true" type="Boolean"/>
+          </variables>
+        </input>
+      </children>
+    </frame>
+  </window>
+</layout>

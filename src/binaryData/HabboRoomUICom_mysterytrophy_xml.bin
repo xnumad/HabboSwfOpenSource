@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="mysterytrophy" width="475" height="270" version="0.1" uid="B053547A-180F-8C7D-0894-A8B4C3F84135">
+  <window>
+    <frame x="0" y="0" width="475" height="270" params="32801" style="3" name="mysterytrophy_main_container" caption="%24%7Bmysterytrophy.name.title%7D" color="0xff67a3bf">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <background x="1" y="0" width="473" height="100" params="144" style="3" name="mysterytrophy.header.background.border" color="0xffff376275" background="true">
+          <children>
+            <background x="2" y="2" width="469" height="95" params="144" style="3" name="mysterytrophy.header.background.body" color="0xffff0e3f52" background="true"/>
+            <static_bitmap x="3" y="5" width="85" height="93" params="16" style="3" name="mysterytrophy.header.icon">
+              <variables>
+                <var key="asset_uri" value="${image.library.url}client_static/alert_mystTrophy.png" type="String"/>
+                <var key="pivot_point" value="center" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <container x="0" y="0" width="475" height="90" params="16" style="3" name="mysterytrophy.header">
+              <children>
+                <formatted_text x="95" y="11" width="317" height="30" params="16" style="3" name="mysterytrophy.header.title" caption="%24%7Bmysterytrophy.header.title%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="24" type="uint"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="text_style" value="u_headline_big" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+                <formatted_text x="95" y="41" width="354" height="19" params="16" style="3" name="mysterytrophy.header.description" caption="%24%7Bmysterytrophy.header.description%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="2" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </container>
+          </children>
+        </background>
+        <container x="0" y="100" width="475" height="90" params="16" style="3">
+          <children>
+            <border x="17" y="15" width="417" height="65" params="16" style="0" name="input_border">
+              <children>
+                <input x="7" y="6" width="380" height="50" params="1" style="0" name="input" background="true">
+                  <variables>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="max_chars" value="500" type="int"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="max_lines" value="8" type="int"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </input>
+                <static_bitmap x="390" y="20" width="17" height="18" params="16" style="3">
+                  <variables>
+                    <var key="asset_uri" value="common_small_pen" type="String"/>
+                    <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                  </variables>
+                </static_bitmap>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="-1" y="186" width="475" height="51" params="16" style="0" color="0xffeeeeee">
+          <children>
+            <region x="177" y="11" width="101" height="32" params="1041" style="0" name="cancel" treshold="0">
+              <children>
+                <text x="9" y="8" width="83" height="17" params="3280" style="0" name="cancel" caption="%24%7Bgeneric.cancel%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="text_color" value="0x333333" type="hex"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <button_thick x="319" y="10" width="130" height="33" params="132113" style="5" name="ok" caption="%24%7Bgeneric.ok%7D" color="0x0aa00" width_min="130"/>
+          </children>
+        </container>
+      </children>
+      <variables>
+        <var key="margin_left" value="0" type="int"/>
+        <var key="margin_top" value="33" type="int"/>
+        <var key="margin_right" value="0" type="int"/>
+        <var key="margin_bottom" value="3" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="music_inventory_item" width="91" height="104" version="0.1" uid="F6675EDD-42C5-A6D2-00B9-48F8CB7B1FAD">
+  <window>
+    <region x="0" y="0" width="91" height="104" params="17" style="0" treshold="0">
+      <children>
+        <border x="0" y="0" width="91" height="104" params="18" style="0" name="selected" tags="SELECTED"/>
+        <border x="3" y="3" width="85" height="98" params="18" style="2" name="background" color="0x0f1f1f1" tags="BG_COLOR"/>
+        <bitmap x="7" y="7" width="76" height="76" params="18" style="0" name="disk_image"/>
+        <text x="5" y="85" width="80" height="18" params="786640" style="0" name="song_title_text" tags="SONG_TITLE" width_max="80">
+          <variables>
+            <var key="antialias_type" value="advanced" type="String"/>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_face" value="Ubuntu" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+          </variables>
+        </text>
+        <bitmap x="81" y="86" width="6" height="12" params="16" style="0" name="title_fader_bitmap">
+          <variables>
+            <var key="bitmap_asset_name" value="jb_fader" type="String"/>
+          </variables>
+        </bitmap>
+        <container x="3" y="57" width="84" height="44" params="18" style="0" name="action_buttons" tags="BUTTONS">
+          <children>
+            <border x="0" y="0" width="84" height="44" params="16" style="2" color="0x086a762"/>
+            <container_button x="4" y="4" width="36" height="36" params="17" style="0" name="button_play_pause" tags="PLAY_PAUSE">
+              <children>
+                <bitmap x="3" y="3" width="30" height="30" params="3934352" style="0" name="image_button_play_pause"/>
+              </children>
+            </container_button>
+            <container_button x="44" y="4" width="36" height="36" params="17" style="0" name="button_to_playlist" tags="TOPLAYLIST">
+              <children>
+                <bitmap x="3" y="3" width="30" height="30" params="3934352" style="0" name="image_button_to_playlist"/>
+              </children>
+            </container_button>
+          </children>
+        </container>
+      </children>
+    </region>
+  </window>
+</layout>

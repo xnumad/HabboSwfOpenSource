@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="layout_builders_club_addons" width="360" height="508" version="0.1" uid="EAAB4B57-4E53-7579-20C2-E18513718822">
+  <window>
+    <container x="0" y="0" width="360" height="508" params="2064" style="0" name="ctlg_builders_club_addons">
+      <children>
+        <html x="15" y="28" width="276" height="80" params="1" style="3" name="ctlg_description" caption="%3Cb%3EFormatted%3C/b%3E%20text" treshold="0">
+          <variables>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="editable" value="false" type="Boolean"/>
+            <var key="selectable" value="false" type="Boolean"/>
+            <var key="link_target" value="internal" type="String"/>
+          </variables>
+        </html>
+        <static_bitmap x="290" y="316" width="72" height="90" params="16" style="3">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/bc_bottom.png" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <container x="14" y="108" width="300" height="380" params="2064" style="3" name="builderAddonsWidget">
+          <children>
+            <scrollable_itemlist_vertical x="0" y="0" width="287" height="360" params="2064" style="3" name="addons_list">
+              <children>
+                <border x="1" y="0" width="269" height="77" params="16" style="2" color="0xffd7d7cf">
+                  <children>
+                    <border x="5" y="5" width="260" height="25" params="16" style="3" color="0xffafafa9">
+                      <children>
+                        <static_bitmap x="8" y="5" width="15" height="15" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="${image.library.url}/catalogue/icon_193.png" type="String"/>
+                            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+                          </variables>
+                        </static_bitmap>
+                        <text x="33" y="2" width="88" height="21" params="16" style="3" name="item_header" caption="item%20name">
+                          <variables>
+                            <var key="auto_size" value="left" type="String"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_headline_medium" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="sharpness" value="0" type="Number"/>
+                            <var key="thickness" value="0" type="Number"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </border>
+                    <itemlist_horizontal x="9" y="45" width="105" height="24" params="16" style="3">
+                      <children>
+                        <label x="0" y="0" width="28" height="19" params="16" style="3" name="item_price" caption="999">
+                          <variables>
+                            <var key="text_style" value="u_headline_small" type="String"/>
+                          </variables>
+                        </label>
+                        <static_bitmap x="31" y="3" width="15" height="15" params="16" style="3">
+                          <variables>
+                            <var key="asset_uri" value="pursearea_credits_icon" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                        <label x="40" y="0" width="28" height="19" params="16" style="3" name="diamonds_price" caption="999" visible="false">
+                          <variables>
+                            <var key="text_style" value="u_headline_small" type="String"/>
+                          </variables>
+                        </label>
+                        <static_bitmap x="71" y="3" width="15" height="15" params="16" style="3" name="diamonds_icon" visible="false">
+                          <variables>
+                            <var key="asset_uri" value="pursearea_diamond_icon" type="String"/>
+                          </variables>
+                        </static_bitmap>
+                      </children>
+                      <variables>
+                        <var key="spacing" value="3" type="int"/>
+                      </variables>
+                    </itemlist_horizontal>
+                    <button_thick x="123" y="37" width="142" height="35" params="393233" style="5" name="item_buy" caption="item%20purchase%20action" color="0x0a9bc5" width_min="40"/>
+                  </children>
+                </border>
+              </children>
+              <variables>
+                <var key="spacing" value="12" type="int"/>
+              </variables>
+            </scrollable_itemlist_vertical>
+            <label x="0" y="360" width="193" height="17" params="1040" style="3" name="trial_warning" caption="%24%7Bbuilder.addon_page.warning.trial%7D">
+              <variables>
+                <var key="text_style" value="u_bold" type="String"/>
+                <var key="text_color" value="0xcc0000" type="hex"/>
+              </variables>
+            </label>
+          </children>
+        </container>
+        <static_bitmap x="249" y="21" width="111" height="282" params="16" style="3">
+          <variables>
+            <var key="asset_uri" value="${image.library.url}catalogue/bc_top.png" type="String"/>
+            <var key="fit_size_to_contents" value="true" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

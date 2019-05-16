@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="ctlg_default_3x3" width="360" height="460" version="0.1" uid="95EA7539-D4B4-0D1D-3BB3-DAC854013D87">
+  <window>
+    <container x="0" y="0" width="360" height="460" params="16" style="0" color="0x0ff00ff">
+      <children>
+        <container x="0" y="120" width="360" height="180" params="16" style="102" name="productViewWidget"/>
+        <container x="0" y="305" width="360" height="120" params="16" style="102" name="itemGridWidget"/>
+        <container x="0" y="430" width="360" height="30" params="16" style="102" name="purchaseWidget"/>
+        <container x="183" y="123" width="175" height="25" params="0" style="0" name="activityPointDisplayWidget"/>
+        <container x="114" y="118" width="142" height="73" params="16" style="0" name="specialInfoWidget"/>
+        <container x="0" y="120" width="360" height="155" params="16" style="0" name="bundlePurchaseExtraInfoWidget"/>
+        <container x="0" y="275" width="180" height="25" params="147456" style="0" name="spinnerWidget"/>
+        <container x="180" y="275" width="180" height="25" params="147456" style="0" name="totalPriceWidget"/>
+        <container x="187" y="122" width="174" height="40" params="0" style="0" name="limitedItemWidget" visible="false">
+          <children>
+            <widget x="0" y="0" width="200" height="40" params="147472" style="0" name="unique_item_overlay_container">
+              <variables>
+                <var key="widget_type" value="limited_item_overlay_supply" type="String"/>
+              </variables>
+            </widget>
+          </children>
+        </container>
+        <container x="0" y="425" width="360" height="30" params="0" style="3" name="soldLtdItemsWidget"/>
+      </children>
+    </container>
+  </window>
+</layout>

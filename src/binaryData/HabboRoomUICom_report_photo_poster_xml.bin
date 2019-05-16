@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="report_photo_poster" width="595" height="698" version="0.1" uid="FD1C9B97-5B18-859B-D9D6-2DE59E0899FE">
+  <window>
+    <frame x="108" y="1" width="595" height="698" params="33025" style="101" width_min="50" height_min="50">
+      <filters>
+        <DropShadowFilter angle="0" alpha="0.7490196078431373" blurX="80" blurY="80"/>
+      </filters>
+      <children>
+        <text x="9" y="-2" width="166" height="17" params="16" style="100" caption="%24%7Bhelp.report.photo.header%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="text_style" value="il_border" type="String"/>
+            <var key="margin_left" value="10" type="int"/>
+            <var key="margin_right" value="10" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="9" y="19" width="577" height="17" params="16" style="100" caption="%24%7Bhelp.report.photo.body%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="text_style" value="il_border" type="String"/>
+            <var key="margin_left" value="10" type="int"/>
+            <var key="margin_right" value="10" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <bitmap x="137" y="64" width="320" height="320" params="16" style="3" name="selfieLoader"/>
+        <text x="47" y="387" width="500" height="35" params="16" style="3" name="photoCaption">
+          <variables>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <text x="9" y="424" width="500" height="17" params="16" style="100" caption="%24%7Bhelp.report.reasonprompt%7D">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="12" type="uint"/>
+            <var key="text_style" value="il_border" type="String"/>
+            <var key="margin_left" value="10" type="int"/>
+            <var key="margin_right" value="10" type="int"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="multiline" value="true" type="Boolean"/>
+            <var key="word_wrap" value="true" type="Boolean"/>
+            <var key="bold" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <selector x="20" y="445" width="550" height="136" params="147473" style="100" name="reporting_reason">
+          <children>
+            <radiobutton x="0" y="0" width="550" height="16" params="17" style="100" name="130" caption="%24%7Bhelp.report.reason.130%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="20" width="550" height="16" params="17" style="100" name="131" caption="%24%7Bhelp.report.reason.131%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="40" width="550" height="16" params="17" style="100" name="132" caption="%24%7Bhelp.report.reason.132%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="60" width="550" height="16" params="17" style="100" name="133" caption="%24%7Bhelp.report.reason.133%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="80" width="550" height="16" params="17" style="100" name="134" caption="%24%7Bhelp.report.reason.134%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="100" width="550" height="16" params="17" style="100" name="135" caption="%24%7Bhelp.report.reason.135%7D" treshold="0" height_min="16" height_max="16"/>
+            <radiobutton x="0" y="120" width="550" height="16" params="17" style="100" name="136" caption="%24%7Bhelp.report.reason.136%7D" treshold="0" height_min="16" height_max="16"/>
+          </children>
+        </selector>
+        <button x="210" y="580" width="174" height="48" params="393233" style="100" name="report_confirm" caption="%24%7Bhelp.report.photo.button%7D" width_min="0" width_max="196" height_min="48" height_max="48"/>
+      </children>
+      <variables>
+        <var key="margin_left" value="1" type="int"/>
+        <var key="margin_top" value="70" type="int"/>
+        <var key="margin_right" value="1" type="int"/>
+        <var key="margin_bottom" value="1" type="int"/>
+      </variables>
+    </frame>
+  </window>
+</layout>

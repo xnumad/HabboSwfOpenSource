@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="unique_item_overlay_preview" width="40" height="40" version="0.1" uid="8F7B0D9A-1E03-3E2A-490E-359587BA22F8">
+  <window>
+    <container x="0" y="0" width="40" height="40" params="16" style="0" name="limitedItemWidget">
+      <children>
+        <static_bitmap x="5" y="0" width="30" height="30" params="16" style="0" name="plaque">
+          <variables>
+            <var key="asset_uri" value="unique_item_large_tile_upright" type="String"/>
+          </variables>
+        </static_bitmap>
+        <bitmap x="10" y="23" width="20" height="5" params="16" style="0" name="unique_item_edition_size_bitmap">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+        <bitmap x="10" y="16" width="20" height="5" params="16" style="0" name="unique_item_serial_number_bitmap">
+          <variables>
+            <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+          </variables>
+        </bitmap>
+      </children>
+    </container>
+  </window>
+</layout>

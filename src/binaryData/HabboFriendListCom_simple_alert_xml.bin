@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="simple_alert" width="20" height="20" version="0.0">
+  <window>
+    <frame x="0" y="0" width="161" height="157" params="32769" style="0" name="alert_%203" caption="PH Caption">
+      <children>
+        <border x="0" y="0" width="150" height="100" params="98305" style="0" name="border">
+          <children>
+            <text x="5" y="0" width="140" height="140" params="1" style="0" name="body_text" caption="PH loren ipsum dolor pubba hubba duppa papatiti">
+              <variables>
+                <var key="font_face" value="Volter" type="String"/>
+                <var key="font_size" value="9" type="uint"/>
+                <var key="text_color" value="0" type="uint"/>
+                <var key="embed_fonts" value="true" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+              </variables>
+            </text>
+          </children>
+        </border>
+        <button x="47" y="104" width="60" height="21" params="131089" style="0" name="ok" caption="%24%7Bgeneric.ok%7D" width_min="60" width_max="60"/>
+      </children>
+    </frame>
+  </window>
+</layout>

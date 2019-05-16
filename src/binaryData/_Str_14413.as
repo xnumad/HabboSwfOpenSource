@@ -2,7 +2,7 @@
 {
     import mx.core.ByteArrayAsset;
 
-    [Embed(source="_Str_14413.bin", mimeType="application/octet-stream")]
+    [Embed(source="HabboRoomUICom_poll_answer_checkbox_input.bin", mimeType="application/octet-stream")]
     public class _Str_14413 extends ByteArrayAsset 
     {
     }

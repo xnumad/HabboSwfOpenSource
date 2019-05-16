@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="moving_object_floating" width="13" height="25" version="0.1" uid="4FD37518-A801-D089-C9CB-41A9E16DE8EB">
+  <window>
+    <static_bitmap x="0" y="0" width="13" height="25" params="0" style="0">
+      <variables>
+        <var key="stretched_x" value="false" type="Boolean"/>
+        <var key="stretched_y" value="false" type="Boolean"/>
+        <var key="fit_size_to_contents" value="true" type="Boolean"/>
+      </variables>
+    </static_bitmap>
+  </window>
+</layout>

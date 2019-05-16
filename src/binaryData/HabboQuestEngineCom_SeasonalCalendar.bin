@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><layout name="Quest" width="642" height="465" version="0.1" uid="8BA16362-EC83-5778-B44C-B7BE162C83D8">
+  <window>
+    <frame x="0" y="0" width="642" height="465" params="32769" style="3" caption="TBD" color="0xff418db0">
+      <filters>
+        <DropShadowFilter distance="4" alpha="0.34901960784313724" blurX="4" blurY="4"/>
+      </filters>
+      <children>
+        <container x="-2" y="-3" width="640" height="320" params="0" style="0" name="calendar_cont">
+          <children>
+            <bitmap x="0" y="0" width="640" height="320" params="16" style="0" name="background_slice"/>
+            <container x="29" y="0" width="79" height="312" params="16" style="0" name="entity_template" treshold="0">
+              <children>
+                <bitmap x="0" y="0" width="79" height="289" params="16" style="0" name="entity_bitmap"/>
+                <border x="5" y="293" width="67" height="18" params="16" style="3" name="entity_indicator_edge"/>
+                <border x="6" y="294" width="65" height="16" params="16" style="3" name="entity_indicator" color="0x0408030">
+                  <children>
+                    <text x="0" y="-2" width="66" height="18" params="16" style="0" name="entity_indicator_text" caption="date">
+                      <variables>
+                        <var key="auto_size" value="center" type="String"/>
+                        <var key="font_size" value="13" type="uint"/>
+                        <var key="text_color" value="0xffffff" type="hex"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <bitmap x="50" y="3" width="16" height="14" params="16" style="0" name="entity_indicator_status">
+                      <variables>
+                        <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+                      </variables>
+                    </bitmap>
+                  </children>
+                </border>
+                <bitmap x="0" y="53" width="79" height="81" params="16" style="0" name="entity_mouseover"/>
+                <region x="0" y="0" width="79" height="313" params="17" style="0" name="entity_mouse_region" treshold="0"/>
+              </children>
+            </container>
+            <bitmap x="0" y="291" width="43" height="22" params="16" style="0" name="stripe_mask_left"/>
+            <bitmap x="597" y="291" width="43" height="22" params="16" style="0" name="stripe_mask_right"/>
+            <bitmap x="613" y="287" width="20" height="30" params="131089" style="0" name="button_right">
+              <variables>
+                <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+            <bitmap x="6" y="287" width="20" height="30" params="131089" style="0" name="button_left">
+              <variables>
+                <var key="handle_bitmap_disposing" value="false" type="Boolean"/>
+              </variables>
+            </bitmap>
+          </children>
+        </container>
+        <container x="0" y="320" width="636" height="135" params="16" style="0" name="footer_cont">
+          <children>
+            <container x="5" y="1" width="384" height="97" params="16" style="0" name="catalog_promo_cont">
+              <children>
+                <background x="0" y="0" width="384" height="97" params="2192" style="0" name="bg" color="0xffff04bdc8" background="true"/>
+                <background x="2" y="2" width="380" height="93" params="2192" style="0" name="top" color="0xffff95dfe4" background="true"/>
+                <background x="2" y="48" width="380" height="47" params="144" style="0" name="bottom" color="0xffff70d7dd" background="true"/>
+                <container x="106" y="0" width="276" height="97" params="16" style="0" name="promo_info_cont">
+                  <children>
+                    <text x="0" y="7" width="223" height="17" params="16" style="0" name="promo_header" caption="%24%7Bquests.seasonalcalendar.promo.header%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_bold" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <text x="0" y="27" width="4" height="4" params="16" style="0" name="promo_info">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                    <button x="145" y="51" width="110" height="23" params="131089" style="3" name="buy_button" caption="%24%7Bquests.seasonalcalendar.promo.buy%7D" width_min="110" width_max="110"/>
+                    <container x="77" y="71" width="30" height="30" params="16" style="0" name="currency_icon_cont">
+                      <children>
+                        <icon x="0" y="0" width="21" height="20" params="16" style="27" name="currency_icon_1"/>
+                        <icon x="0" y="2" width="18" height="18" params="16" style="29" name="currency_icon_2"/>
+                        <icon x="0" y="0" width="21" height="20" params="16" style="27" name="currency_icon_101"/>
+                      </children>
+                    </container>
+                    <text x="0" y="72" width="223" height="17" params="16" style="0" name="your_balance_txt" caption="%24%7Bquests.seasonalcalendar.promo.balance%7D">
+                      <variables>
+                        <var key="auto_size" value="left" type="String"/>
+                        <var key="text_style" value="u_regular" type="String"/>
+                        <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                        <var key="spacing" value="0" type="Number"/>
+                        <var key="leading" value="0" type="Number"/>
+                      </variables>
+                    </text>
+                  </children>
+                </container>
+                <static_bitmap x="2" y="2" width="93" height="93" params="16" style="0" name="furni_preview_background">
+                  <variables>
+                    <var key="asset_uri" value="${image.library.questing.url}calendar_promobg.png" type="String"/>
+                  </variables>
+                </static_bitmap>
+                <bitmap x="2" y="2" width="93" height="93" params="0" style="0" name="furni_preview"/>
+              </children>
+            </container>
+            <container x="395" y="1" width="235" height="97" params="17" style="0" name="rare_teaser_cont" treshold="0">
+              <children>
+                <background x="0" y="0" width="235" height="97" params="2192" style="0" name="bg" color="0xffff9cb0b6" background="true"/>
+                <background x="2" y="2" width="231" height="93" params="2192" style="0" name="top" color="0xffffd4e4e8" background="true"/>
+                <background x="2" y="48" width="231" height="47" params="144" style="0" name="bottom" color="0xffffc6d7dd" background="true"/>
+                <container x="57" y="28" width="36" height="36" params="16" style="0" name="rare_cont_1">
+                  <children>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="locked_bg" color="0x09cb0b6"/>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="open_bg"/>
+                    <icon x="8" y="6" width="20" height="24" params="16" style="28" name="locked_icon"/>
+                    <static_bitmap x="0" y="0" width="36" height="36" params="16" style="0" name="furni_pic"/>
+                    <region x="0" y="0" width="36" height="36" params="17" style="0" name="click_region" treshold="0"/>
+                  </children>
+                </container>
+                <container x="99" y="28" width="36" height="36" params="16" style="0" name="rare_cont_2">
+                  <children>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="locked_bg" color="0x09cb0b6"/>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="open_bg"/>
+                    <icon x="8" y="6" width="20" height="24" params="16" style="28" name="locked_icon"/>
+                    <static_bitmap x="0" y="0" width="36" height="36" params="16" style="0" name="furni_pic"/>
+                    <region x="0" y="0" width="36" height="36" params="17" style="0" name="click_region" treshold="0"/>
+                  </children>
+                </container>
+                <container x="141" y="28" width="36" height="36" params="16" style="0" name="rare_cont_3">
+                  <children>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="locked_bg" color="0x09cb0b6"/>
+                    <border x="0" y="0" width="36" height="36" params="2192" style="2" name="open_bg"/>
+                    <icon x="8" y="6" width="20" height="24" params="16" style="28" name="locked_icon"/>
+                    <static_bitmap x="0" y="0" width="36" height="36" params="16" style="0" name="furni_pic"/>
+                    <region x="0" y="0" width="36" height="36" params="17" style="0" name="click_region" treshold="0"/>
+                  </children>
+                </container>
+                <text x="0" y="8" width="230" height="16" params="786448" style="0" name="teaser_header" caption="%24%7Bquests.seasonalcalendar.rareteaser.header%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_style" value="u_bold" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+                <text x="11" y="71" width="212" height="16" params="786448" style="0" name="teaser_info" caption="%24%7Bquests.seasonalcalendar.rareteaser.info%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="11" type="uint"/>
+                    <var key="text_style" value="u_regular" type="String"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container>
+          </children>
+        </container>
+      </children>
+    </frame>
+  </window>
+</layout>

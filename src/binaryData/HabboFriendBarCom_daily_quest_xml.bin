@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="landing_view" width="500" height="194" version="0.1" uid="B82FF006-8EE7-CEE6-9E52-2D3F8E7DAA7A">
+  <window>
+    <container x="0" y="0" width="500" height="194" params="16" style="0" color="0x00" background="true">
+      <children>
+        <static_bitmap x="7" y="10" width="12" height="4" params="16" style="100" name="border_bar">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <text x="18" y="3" width="43" height="14" params="16" style="100" name="title_txt" caption="TITLE%20PH">
+          <variables>
+            <var key="auto_size" value="left" type="String"/>
+            <var key="font_size" value="9" type="uint"/>
+            <var key="text_style" value="il_heading_3" type="String"/>
+            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+            <var key="spacing" value="0" type="Number"/>
+            <var key="leading" value="0" type="Number"/>
+          </variables>
+        </text>
+        <static_bitmap x="100" y="10" width="400" height="4" params="16" style="100" name="hdr_line">
+          <variables>
+            <var key="asset_uri" value="illumina_light_border_top_center" type="String"/>
+            <var key="pivot_point" value="center left" type="String"/>
+            <var key="stretched_y" value="false" type="Boolean"/>
+          </variables>
+        </static_bitmap>
+        <static_bitmap x="10" y="10" width="20" height="20" params="16" style="0" name="bitmap">
+            <variables>
+                <var key="stretched_x" value="false" type="Boolean"/>
+                <var key="stretched_y" value="false" type="Boolean"/>
+                <var key="fit_size_to_contents" value="true" type="Boolean"/>
+            </variables>
+        </static_bitmap>
+        <container x="230" y="0" width="270" height="194" params="16" style="0" color="0x00" name="content_container" background="true">
+          <children>
+            <text x="0" y="32" width="94" height="24" params="16" style="100" name="caption_txt" caption="Caption%20PH">
+              <variables>
+                <var key="auto_size" value="left" type="String"/>
+                <var key="font_size" value="18" type="uint"/>
+                <var key="text_style" value="il_heading_1" type="String"/>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="spacing" value="-0.6" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <text x="0" y="61" width="270" height="41" params="16" style="100" name="info_txt" caption="...and%20everything%20must%20go%2C%20so%20get%20yourself%20some%20of%20the%20sweet%2C%20sweet%20plastic%20fantastic%20while%20you%20still%20can%21%20You%20don%27t%20want%20to%20miss%20out%20on%20the%20classics%21">
+              <variables>
+                <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                <var key="word_wrap" value="true" type="Boolean"/>
+                <var key="spacing" value="0" type="Number"/>
+                <var key="leading" value="0" type="Number"/>
+              </variables>
+            </text>
+            <button x="-11" y="91" width="178" height="50" params="131089" style="100" name="accept_button" caption="%24%7Blanding.view.quest.accept%7D"/>
+            <region x="0" y="139" width="253" height="19" params="17" style="100" name="next_quest_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="137" height="14" params="16" style="100" name="next_quest_txt" caption="PH%3A%20Show%20me%20another%20easy%20quest">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <region x="0" y="152" width="253" height="19" params="17" style="100" name="cancel_quest_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="105" height="14" params="16" style="100" name="cancel_quest_txt" caption="%24%7Blanding.view.quest.cancel%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <border x="0" y="101" width="271" height="46" params="16" style="100" name="current_quest_border">
+              <children>
+                <button x="184" y="-2" width="88" height="50" params="131153" style="100" name="go_button" caption="%24%7Blanding.view.quest.go%7D" width_min="88" width_max="88"/>
+                <formatted_text x="13" y="10" width="174" height="34" params="16" style="100" name="current_quest_txt" caption="%24%7Blanding.view.quest.currenttask%7D">
+                  <variables>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="multiline" value="true" type="Boolean"/>
+                    <var key="word_wrap" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </formatted_text>
+              </children>
+            </border>
+          </children>
+        </container>
+        <container x="285" y="3" width="211" height="17" params="16" style="0" name="difficulty_container">
+          <children>
+            <region x="0" y="0" width="100" height="18" params="17" style="0" name="easy_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="98" height="14" params="16" style="100" name="label_txt" caption="%24%7Blanding.view.quest.easy%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+            <static_bitmap x="103" y="0" width="2" height="20" params="2128" style="0" name="divider" blend="0.8">
+              <variables>
+                <var key="asset_uri" value="landing_view_reception_horizontal" type="String"/>
+                <var key="stretched_x" value="false" type="Boolean"/>
+              </variables>
+            </static_bitmap>
+            <region x="112" y="0" width="99" height="18" params="17" style="0" name="hard_region" treshold="0">
+              <children>
+                <text x="0" y="0" width="99" height="14" params="16" style="100" name="label_txt" caption="%24%7Blanding.view.quest.hard%7D">
+                  <variables>
+                    <var key="auto_size" value="left" type="String"/>
+                    <var key="font_size" value="9" type="uint"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="underline" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </region>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>

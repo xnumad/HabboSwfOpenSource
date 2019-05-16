@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<skin name="plain_text_skin" version="0.0">
+
+	<!-- shared variables -->
+	
+	<variables>
+		<variable key="color"	value="0xff000000"	type="uint" />
+		<variable key="blend"	value="0x000000ff"	type="uint" />
+		<variable key="font"	value="Volter"		type="String" />
+	</variables>
+	
+	<!-- the following maps layouts for render states -->
+	
+	<states>
+		<state name="default" layout="text" template="text" />
+	</states>
+	
+	<!-- templates defines regions in bitmap asset -->
+	
+	<templates>
+		<template name="text">
+			<!--
+			<entities>
+				<entity name="text"	type="text">
+					<region>
+						<Rectangle x="0" y="0" width="10" height="10" />
+					</region>
+				</entity>
+			</entities>
+			-->
+		</template>
+	</templates>
+	
+	<!-- markup for layout drawer -->
+	
+	<layouts>
+		<layout name="text" transparent="true">
+			<!--
+			<entities>
+				<entity name="field" id="0">
+					<color>$color</color>
+					<blend>$blend</blend>
+					<region>
+						<Rectangle x="0" y="0" width="10" height="10" />
+					</region>
+					<scale horizontal="strech" vertical="strech" />
+				</entity>
+			</entities>
+			-->
+		</layout>
+	</layouts>
+</skin>

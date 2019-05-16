@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="purchaseButtons" width="175" height="52" version="0.1" uid="8AE4308D-ED7A-2257-67C1-A2043E9E9606">
+  <window>
+    <container x="0" y="0" width="175" height="52" params="0" style="0">
+      <children>
+        <container x="0" y="0" width="175" height="51" params="16" style="0" name="default_buttons">
+          <children>
+            <container_button x="5" y="0" width="160" height="24" params="17" style="3" name="buy_button" color="0x0aa00" width_min="160" width_max="160" height_min="24" height_max="24">
+              <children>
+                <text x="0" y="3" width="160" height="17" params="786448" style="3" name="purchase_label" caption="%24%7Bcatalog.purchase_confirmation.buy%7D" width_min="160" width_max="160">
+                  <variables>
+                    <var key="auto_size" value="center" type="String"/>
+                    <var key="text_color" value="0xffffff" type="hex"/>
+                    <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                    <var key="bold" value="true" type="Boolean"/>
+                    <var key="spacing" value="0" type="Number"/>
+                    <var key="leading" value="0" type="Number"/>
+                  </variables>
+                </text>
+              </children>
+            </container_button>
+            <button x="5" y="28" width="160" height="22" params="131089" style="3" name="gift_button" caption="%24%7Bcatalog.purchase_confirmation.gift%7D" width_min="160" width_max="160" height_min="22" height_max="22"/>
+          </children>
+        </container>
+      </children>
+    </container>
+  </window>
+</layout>
