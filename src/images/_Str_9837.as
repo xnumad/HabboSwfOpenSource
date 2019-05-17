@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_9837.png")]
+    [Embed(source="HabboWindowManagerCom_illumina_horizontal_separator.png")]
     public class _Str_9837 extends BitmapAsset 
     {
     }

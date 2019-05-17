@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_13990.png")]
+    [Embed(source="HabboUserDefinedRoomEventsCom_icon_condition_png.png")]
     public class _Str_13990 extends BitmapAsset 
     {
     }

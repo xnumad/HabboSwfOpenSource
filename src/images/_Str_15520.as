@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_15520.png")]
+    [Embed(source="HabboRoomUICom_dimmer_slider_base.png")]
     public class _Str_15520 extends BitmapAsset 
     {
     }

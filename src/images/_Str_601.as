@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_601.png")]
+    [Embed(source="HabboAvatarRenderLib_user_guide_bubble_png.png")]
     public class _Str_601 extends BitmapAsset 
     {
     }

@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_15512.png")]
+    [Embed(source="HabboFreeFlowChatCom_scrollbar_back.png")]
     public class _Str_15512 extends BitmapAsset 
     {
     }

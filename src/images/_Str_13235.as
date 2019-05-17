@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_13235.png")]
+    [Embed(source="HabboFreeFlowChatCom_style_console_selector_preview.png")]
     public class _Str_13235 extends BitmapAsset 
     {
     }

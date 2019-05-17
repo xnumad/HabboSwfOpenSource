@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_9822.png")]
+    [Embed(source="HabboWindowManagerCom_campaign_calendar_icon.png")]
     public class _Str_9822 extends BitmapAsset 
     {
     }

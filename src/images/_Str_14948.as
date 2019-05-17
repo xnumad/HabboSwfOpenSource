@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_14948.png")]
+    [Embed(source="HabboQuestEngineCom_arrow_back_hilite.png")]
     public class _Str_14948 extends BitmapAsset 
     {
     }

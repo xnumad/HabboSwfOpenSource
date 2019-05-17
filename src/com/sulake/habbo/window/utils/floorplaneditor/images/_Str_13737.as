@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_13737.png")]
+    [Embed(source="FloorPlanPreviewer__Str_12541.png")]
     public class _Str_13737 extends BitmapAsset 
     {
     }

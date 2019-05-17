@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_10818.png")]
+    [Embed(source="HabboWindowManagerCom_help_notification.png")]
     public class _Str_10818 extends BitmapAsset 
     {
     }

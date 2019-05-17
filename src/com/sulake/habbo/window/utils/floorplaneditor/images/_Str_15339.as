@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_15339.png")]
+    [Embed(source="HeightMapEditor__Str_9308.png")]
     public class _Str_15339 extends BitmapAsset 
     {
     }

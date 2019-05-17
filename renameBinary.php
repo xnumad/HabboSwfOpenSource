@@ -73,6 +73,9 @@ foreach ($paths as $path) {
          $doublons[$nameTemplate] = 1;
      }
 
+     if($nameTemplate == "")
+        continue;
+
     $tmp .= $path.": ".$pathDir.'/'.$sourceName.": ". $pathDir.'/'.$nameTemplate.".bin\n";
 
     $deleteFile[] = $pathDir.'/'.$sourceName;
@@ -108,12 +111,12 @@ function researchClassName($oldClassName) {
     
         $data = file_get_contents($path);
     
-        if (strpos($data, ":Class = ".$oldClassName) === false) {
+        if (strpos($data, ":Class = ".$oldClassName.";") === false) {
             continue;
         }
 
         $class = explode('.', $file)[0];
-        $newClassName = explode(" ", explode(":Class = ".$oldClassName, $data)[0]);
+        $newClassName = explode(" ", explode(":Class = ".$oldClassName.";", $data)[0]);
         $newClassName = $newClassName[count($newClassName) - 1];
 
         return $class."_".$newClassName;

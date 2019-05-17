@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-	[Embed(source="_Str_11440.png")] //2006.png
+	[Embed(source="HabboWindowManagerCom_illumina_light_border_frame_png.png")] //2006.png
     public class _Str_11440 extends BitmapAsset 
     {
     }

@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_10328.png")]
+    [Embed(source="HabboWindowManagerCom_toolbar_memenu_settings_sounds_on_color.png")]
     public class _Str_10328 extends BitmapAsset 
     {
     }

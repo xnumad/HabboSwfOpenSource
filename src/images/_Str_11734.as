@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_11734.png")]
+    [Embed(source="HabboWindowManagerCom_illumina_light_clock_background_png.png")]
     public class _Str_11734 extends BitmapAsset 
     {
     }

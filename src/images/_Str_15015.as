@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_15015.png")]
+    [Embed(source="HabboRoomObjectVisualizationLib_snowball_small_png.png")]
     public class _Str_15015 extends BitmapAsset 
     {
     }

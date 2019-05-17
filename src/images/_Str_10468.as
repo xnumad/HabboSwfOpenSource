@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_10468.png")]
+    [Embed(source="HabboWindowManagerCom_toolbar_memenu_minimail_white.png")]
     public class _Str_10468 extends BitmapAsset 
     {
     }

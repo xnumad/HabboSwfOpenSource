@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_11860.png")]
+    [Embed(source="HabboWindowManagerCom_messenger_profile_icon.png")]
     public class _Str_11860 extends BitmapAsset 
     {
     }

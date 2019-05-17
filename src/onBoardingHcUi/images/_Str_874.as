@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_874.png")]
+    [Embed(source="LoaderUI__Str_1325.png")]
     public class _Str_874 extends BitmapAsset 
     {
     }

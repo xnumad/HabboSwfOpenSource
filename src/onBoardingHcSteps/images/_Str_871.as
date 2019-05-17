@@ -2,7 +2,7 @@
 {
     import mx.core.BitmapAsset;
 
-    [Embed(source="_Str_871.png")]
+    [Embed(source="AvatarEditor__Str_1231.png")]
     public class _Str_871 extends BitmapAsset 
     {
     }
