@@ -5,10 +5,10 @@
     import com.sulake.habbo.ui.widget.furniture.friendfurni.FriendFurniConfirmWidget;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import _Str_451._Str_8413;
-    import _Str_451._Str_8746;
-    import _Str_451._Str_8296;
-    import _Str_547._Str_11713;
+    import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8413;
+    import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8746;
+    import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
+    import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
     import flash.events.Event;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;

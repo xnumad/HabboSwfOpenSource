@@ -45,7 +45,7 @@
     import com.sulake.habbo.room.events.RoomEngineTriggerWidgetEvent;
     import com.sulake.habbo.room.events.RoomEngineUseProductEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.furniture._Str_10477;
-    import _Str_295._Str_4406;
+    import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_4406;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.room.events.RoomEngineRoomAdEvent;
     import com.sulake.habbo.room.events.RoomObjectSoundMachineEvent;
@@ -56,7 +56,7 @@
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
     import com.sulake.habbo.room.messages.RoomObjectAvatarSelectedMessage;
-    import _Str_79._Str_10602;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
     import com.sulake.habbo.room.messages.RoomObjectVisibilityUpdateMessage;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5686;
     import com.sulake.habbo.session.IRoomSession;

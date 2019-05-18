@@ -8,7 +8,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6906;
-    import _Str_63._Str_10281;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10281;
     import com.sulake.core.window.IWindow;
     import flash.display.BitmapData;
     import com.sulake.habbo.session.product.IProductData;

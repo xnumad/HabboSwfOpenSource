@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
-    import _Str_530._Str_9665;
+    import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 

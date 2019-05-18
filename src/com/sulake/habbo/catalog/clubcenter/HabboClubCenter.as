@@ -26,14 +26,14 @@
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
     import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
-    import _Str_87._Str_5147;
+    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_7942;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_6941;
     import com.sulake.habbo.catalog.clubcenter.util.BadgeResolver;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_7891;
-    import _Str_63._Str_7373;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7373;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11183;
     import com.sulake.habbo.catalog.purse.IPurse;
     import com.sulake.habbo.catalog.clubcenter.util.ClubStatus;

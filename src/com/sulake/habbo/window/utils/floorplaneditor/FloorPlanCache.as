@@ -3,7 +3,7 @@
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
     import com.sulake.habbo.communication.messages.parser.room.layout._Str_6361;
-    import _Str_446._Str_6566;
+    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
 
     public class FloorPlanCache 
     {

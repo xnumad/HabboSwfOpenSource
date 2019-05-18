@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotCommandConfigurationEvent;
-    import _Str_416._Str_12054;
+    import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054;
     import flash.geom.Point;
 
     public class BotSkillConfigurationViewBase implements BotSkillConfigurationView 

@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
-    import _Str_470._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
     import flash.geom.Point;
     import com.sulake.habbo.freeflowchat.viewer.visualization.PooledChatBubble;
     import com.sulake.habbo.freeflowchat.data.ChatItem;
@@ -60,8 +60,8 @@
     import com.sulake.habbo.session.IRoomSession;
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style.IChatStyleLibrary;
-    import _Str_370._Str_10312;
-    import _Str_370._Str_12096;
+    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_10312;
+    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_12096;
 
     public class HabboFreeFlowChat extends Component implements IHabboFreeFlowChat 
     {

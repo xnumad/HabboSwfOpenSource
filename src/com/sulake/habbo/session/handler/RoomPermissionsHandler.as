@@ -1,8 +1,8 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import _Str_89._Str_7845;
-    import _Str_89._Str_8236;
-    import _Str_89._Str_5266;
+    import com.sulake.habbo.communication.messages.incoming._Str_89._Str_7845;
+    import com.sulake.habbo.communication.messages.incoming._Str_89._Str_8236;
+    import com.sulake.habbo.communication.messages.incoming._Str_89._Str_5266;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.IRoomSession;

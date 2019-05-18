@@ -6,14 +6,14 @@
     import com.sulake.habbo.window.utils._Str_2784;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
-    import _Str_408._Str_7564;
-    import _Str_408._Str_7433;
-    import _Str_408._Str_7599;
+    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
+    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
+    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
     import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7374;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_541._Str_11402;
+    import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.room.ImageResult;

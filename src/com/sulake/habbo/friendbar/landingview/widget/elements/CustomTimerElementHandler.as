@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import _Str_301._Str_9816;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_9816;
 
     public class CustomTimerElementHandler extends AbstractTimerElementHandler 
     {

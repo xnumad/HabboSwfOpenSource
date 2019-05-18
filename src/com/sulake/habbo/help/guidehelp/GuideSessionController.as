@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_9409;
     import com.sulake.habbo.communication.messages.incoming.help._Str_10860;
     import com.sulake.habbo.communication.messages.parser.help._Str_4393;
-    import _Str_388._Str_2849;
+    import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.habbo.help.enum.GuideSessionStateEnum;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7293;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_4553;
@@ -54,7 +54,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.sound.HabboSoundConstants;

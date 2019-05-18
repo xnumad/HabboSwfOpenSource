@@ -9,13 +9,13 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.RoomUserEffectEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_12022;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
-    import _Str_411._Str_7177;
-    import _Str_411._Str_7887;
+    import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7177;
+    import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.avatar.view.AvatarEditorNameChangeView;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
-    import _Str_411._Str_7827;
+    import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7827;
     import com.sulake.core.communication.messages.IMessageEvent;
 
     public class AvatarEditorMessageHandler 

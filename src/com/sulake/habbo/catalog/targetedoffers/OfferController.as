@@ -7,14 +7,14 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
-    import _Str_63._Str_12290;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_12290;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7335;
     import com.sulake.habbo.catalog.targetedoffers.data.TargetedOffer;
     import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
     import com.sulake.habbo.catalog.targetedoffers.data.HabboMallOffer;
-    import _Str_63._Str_6074;
-    import _Str_63._Str_7084;
-    import _Str_63._Str_11313;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_6074;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7084;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_11313;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.catalog.targetedoffers.util.EventLogActions;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;

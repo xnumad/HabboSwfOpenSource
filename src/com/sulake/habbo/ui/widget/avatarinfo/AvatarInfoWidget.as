@@ -60,14 +60,14 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.ui.widget.events._Str_3575;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
-    import _Str_381._Str_4844;
+    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_4844;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillsEnum;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChatterMarkovConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeNameConfiguration;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillConfigurationView;
     import flash.geom.Point;
-    import _Str_461._Str_10953;
-    import _Str_461._Str_12104;
+    import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10953;
+    import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_12104;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
     public class AvatarInfoWidget extends ConversionTrackingWidget implements IUpdateReceiver, IContextMenuParentWidget 

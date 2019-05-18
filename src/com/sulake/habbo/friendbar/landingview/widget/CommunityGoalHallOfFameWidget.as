@@ -4,12 +4,12 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalHallOfFameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
-    import _Str_301._Str_5974;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_5974;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_6257;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
-    import _Str_301._Str_11657;
-    import _Str_223._Str_11298;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_11657;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_11298;
     import com.sulake.habbo.friendbar.landingview.*;
 
     public class CommunityGoalHallOfFameWidget extends UserListWidget 

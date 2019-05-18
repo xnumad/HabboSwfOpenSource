@@ -1,7 +1,7 @@
 ﻿package _Str_434
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import _Str_329._Str_8691;
+    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_8691;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_7846 implements IMessageParser 

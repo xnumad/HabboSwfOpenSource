@@ -26,7 +26,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import sulake.habboclient._Str_5079;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;

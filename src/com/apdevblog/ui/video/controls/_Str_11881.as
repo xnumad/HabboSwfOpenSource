@@ -7,7 +7,7 @@
     import flash.display.Shape;
     import flash.events.MouseEvent;
     import flash.events.Event;
-    import _Str_344.VideoControlsEvent;
+    import com.apdevblog.ui.video.controls.VideoControlsEvent;
 
     public class _Str_11881 extends Sprite 
     {

@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultObjectParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
-    import _Str_91._Str_7844;
+    import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;

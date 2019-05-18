@@ -3,7 +3,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_6996;
-    import _Str_381._Str_11731;
+    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11731;
 
     public class UserDataManager
     {

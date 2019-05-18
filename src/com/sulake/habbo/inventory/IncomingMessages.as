@@ -11,12 +11,12 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCompletedParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6742;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9219;
-    import _Str_433._Str_8269;
+    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
     import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_9041;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
-    import _Str_433._Str_9129;
-    import _Str_87._Str_5147;
+    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
+    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5727;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
-    import _Str_433._Str_8892;
+    import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_9359;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;
@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_7375;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9589;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
-    import _Str_87._Str_8120;
+    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6450;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9259;
@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
-    import _Str_87._Str_8980;
+    import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
     import com.sulake.habbo.communication.messages.parser.inventory.furni._Str_7941;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;

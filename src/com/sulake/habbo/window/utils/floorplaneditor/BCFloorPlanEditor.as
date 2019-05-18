@@ -3,8 +3,8 @@
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
-    import _Str_446._Str_4976;
-    import _Str_446._Str_6566;
+    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
+    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
@@ -14,8 +14,8 @@
     import com.sulake.habbo.communication.messages.parser.catalog._Str_6732;
     import flash.events.TimerEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import _Str_438._Str_8089;
-    import _Str_438._Str_7023;
+    import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
+    import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023;
     import flash.utils.ByteArray;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.InteractiveController;
@@ -23,7 +23,7 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IDropMenuWindow;
-    import _Str_438._Str_7289;
+    import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import flash.events.KeyboardEvent;

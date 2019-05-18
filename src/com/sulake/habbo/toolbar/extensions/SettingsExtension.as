@@ -7,8 +7,9 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
-    import _Str_402._Str_6491;
-    import _Str_402._Str_8732;
+    import com.sulake.habbo.toolbar.extensions._Str_402._Str_8732;
+    import com.sulake.habbo.toolbar.extensions._Str_402._Str_8732;
+    import com.sulake.habbo.toolbar.extensions._Str_402._Str_6491;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.events.WindowEvent;

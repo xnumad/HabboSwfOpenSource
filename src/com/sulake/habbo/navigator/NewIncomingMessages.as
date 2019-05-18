@@ -51,8 +51,8 @@
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
-    import _Str_57._Str_8102;
-    import _Str_57._Str_7413;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_8102;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7413;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6885;
@@ -74,7 +74,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6506;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6683;
-    import _Str_57._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6561;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6355;
@@ -88,7 +88,7 @@
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_4184;
-    import _Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
 

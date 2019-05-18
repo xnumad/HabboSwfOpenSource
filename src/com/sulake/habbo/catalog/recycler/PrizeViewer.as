@@ -10,7 +10,7 @@
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.room.IRoomEngine;
-    import _Str_329._Str_6068;
+    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_6068;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.catalog.viewer.ICatalogPage;
 

@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.window.events.WindowEvent;
-    import _Str_356._Str_10571;
+    import com.sulake.habbo.communication.messages.outgoing._Str_356._Str_10571;
     import com.sulake.core.communication.messages.IMessageEvent;
     import flash.display.BitmapData;
 

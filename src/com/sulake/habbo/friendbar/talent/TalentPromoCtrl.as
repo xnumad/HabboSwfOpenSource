@@ -6,12 +6,12 @@
     import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
     import com.sulake.habbo.communication.messages.incoming.talent._Str_5939;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import _Str_364._Str_10709;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_10709;
     import com.sulake.habbo.communication.messages.parser.talent._Str_7381;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 

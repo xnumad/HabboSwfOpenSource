@@ -3,9 +3,9 @@
     import com.sulake.habbo.catalog.viewer.widgets.ClubGiftWidget;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.catalog.HabboCatalog;
-    import _Str_63._Str_7373;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7373;
     import com.sulake.habbo.catalog.IPurchasableOffer;
-    import _Str_63._Str_10037;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_10037;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.assets.IAssetLibrary;

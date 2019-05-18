@@ -17,11 +17,11 @@
     import __AS3__.vec.Vector;
     import flash.net.URLRequest;
     import com.sulake.core.assets.AssetLoaderStruct;
-    import _Str_483._Str_8332;
+    import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
     import flash.system.Security;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
-    import _Str_499._Str_10855;
+    import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
     import _Str_471._Str_7915;
     import com.sulake.habbo.advertisement.events.InterstitialEvent;
     import flash.display.Bitmap;
@@ -73,7 +73,7 @@
             var k:String = getProperty("ads.domain");
             if (k != "")
             {
-                Security.loadPolicyFile((("http://" + k) + "/crossdomain.xml"));
+                Security.loadPolicyFile((("https://" + k) + "/crossdomain.xml"));
             }
             var adwarningLeftURL:String = getProperty("billboard.adwarning.left.url");
             var adwarningRightURL:String = getProperty("billboard.adwarning.right.url");

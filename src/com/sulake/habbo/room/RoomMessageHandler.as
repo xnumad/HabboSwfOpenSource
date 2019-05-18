@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.room.object.RoomPlaneParser;
-    import _Str_446._Str_4976;
+    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;

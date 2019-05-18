@@ -8,7 +8,7 @@
     import com.apdevblog.model.vo.VideoMetadataVo;
     import flash.display.DisplayObjectContainer;
     import com.apdevblog.ui.video.controls._Str_11881;
-    import _Str_344.VideoControlsEvent;
+    import com.apdevblog.ui.video.controls.VideoControlsEvent;
     import com.apdevblog.utils._Str_3771;
     import flash.events.TimerEvent;
     import flash.events.NetStatusEvent;

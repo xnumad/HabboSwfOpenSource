@@ -5,7 +5,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_416._Str_3365;
+    import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;

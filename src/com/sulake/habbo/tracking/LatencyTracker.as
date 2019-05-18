@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingReportMessageComposer;
     import _Str_524._Str_7576;
-    import _Str_516.PongMessageParser;
+    import com.sulake.habbo.communication.messages.incoming._Str_516.PongMessageParser;
 
     public class LatencyTracker implements IDisposable 
     {

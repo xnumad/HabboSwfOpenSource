@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.catalog.HabboCatalog;
     import flash.display.BitmapData;
-    import _Str_329._Str_6068;
+    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_6068;
     import com.sulake.habbo.session.furniture.IFurnitureData;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.assets.BitmapDataAsset;

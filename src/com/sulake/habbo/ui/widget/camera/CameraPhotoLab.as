@@ -26,8 +26,8 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.tracking.HabboTracking;
-    import _Str_340._Str_5617;
-    import _Str_340._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
     import flash.globalization.DateTimeFormatter;
     import com.sulake.habbo.utils.images.PNGEncoder;
     import flash.utils.ByteArray;

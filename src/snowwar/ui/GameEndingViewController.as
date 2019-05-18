@@ -23,7 +23,7 @@
 	import snowwar._Str_345._SafeStr_1434;
 	import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
 	import snowwar._Str_373._SafeStr_3665;
-	import _Str_57._Str_3570;
+	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
 	import snowwar._Str_400._SafeStr_3624;
 	import snowwar._Str_400._SafeStr_3813;
 	import snowwar._Str_496.Game2GameResult;

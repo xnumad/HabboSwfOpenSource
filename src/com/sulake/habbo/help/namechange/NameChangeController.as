@@ -14,8 +14,8 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.help.enum.HabboHelpTutorialEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_411._Str_12037;
-    import _Str_411._Str_7887;
+    import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;
+    import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6553;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;

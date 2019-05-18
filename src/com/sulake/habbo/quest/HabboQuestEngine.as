@@ -43,9 +43,9 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
-    import _Str_223._Str_11854;
-    import _Str_223._Str_7461;
-    import _Str_223._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_11854;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7461;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
 
     public class HabboQuestEngine extends Component implements IHabboQuestEngine, IUpdateReceiver, ILinkEventTracker 
     {

@@ -7,10 +7,10 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowEvent;
-    import _Str_57._Str_9806;
-    import _Str_57._Str_11893;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_9806;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11893;
     import _Str_471._Str_7007;
-    import _Str_483._Str_9358;
+    import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
 

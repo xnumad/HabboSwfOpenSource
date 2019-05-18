@@ -17,7 +17,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
     import com.sulake.habbo.session.ISessionDataManager;
-    import _Str_57._Str_12239;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_12239;
     import __AS3__.vec.*;
 
     public class RoomToolsWidgetHandler implements IRoomWidgetHandler 

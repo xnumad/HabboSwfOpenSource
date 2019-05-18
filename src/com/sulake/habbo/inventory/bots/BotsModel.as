@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.avatar.IAvatarRenderManager;
     import com.sulake.core.communication.connection.IConnection;
-    import _Str_540._Str_10971;
+    import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
     import com.sulake.habbo.communication.messages.parser.inventory.bots._Str_3013;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import flash.events.Event;

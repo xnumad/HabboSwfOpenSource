@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8320;
-    import _Str_63._Str_9801;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9801;
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.IWidgetWindow;

@@ -23,7 +23,7 @@
     import com.sulake.core.window.components.IDisplayObjectWrapper;
     import com.sulake.core.assets.AssetLoaderStruct;
     import org.openvideoads.vast.model.VideoAdServingTemplate;
-    import _Str_344.VideoControlsEvent;
+    import com.apdevblog.ui.video.controls.VideoControlsEvent;
     import org.openvideoads.vast.model.TrackingEvent;
     import org.openvideoads.vast.model.VideoAdV2;
     import org.openvideoads.vast.model.MediaFile;

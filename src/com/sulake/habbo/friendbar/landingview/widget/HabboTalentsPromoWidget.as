@@ -5,7 +5,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
 
     public class HabboTalentsPromoWidget implements ILandingViewWidget 

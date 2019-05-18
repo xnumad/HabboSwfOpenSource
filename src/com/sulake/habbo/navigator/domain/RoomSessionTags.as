@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.navigator.domain
 {
-    import _Str_57._Str_8348;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_8348;
 
     public class RoomSessionTags 
     {

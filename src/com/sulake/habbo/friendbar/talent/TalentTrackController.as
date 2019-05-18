@@ -29,11 +29,11 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.utils._Str_988;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10302;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
-    import _Str_364._Str_6216;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
     import com.sulake.habbo.communication.messages.parser.users._Str_6540;
     import com.sulake.core.window.components.ITextFieldWindow;

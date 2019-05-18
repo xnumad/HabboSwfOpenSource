@@ -9,8 +9,8 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import _Str_223._Str_7551;
-    import _Str_223._Str_7568;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7551;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7568;
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.core.window.components.IFrameWindow;
 

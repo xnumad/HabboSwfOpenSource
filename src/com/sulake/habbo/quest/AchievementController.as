@@ -11,7 +11,7 @@
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.quest.events.UnseenAchievementsCountUpdateEvent;
-    import outgoing.achievements.RequestAchievementsMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.achievements.RequestAchievementsMessageComposer;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;

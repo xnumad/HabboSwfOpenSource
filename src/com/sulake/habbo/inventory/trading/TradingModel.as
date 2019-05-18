@@ -38,17 +38,17 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.utils._Str_14579;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
-    import _Str_81._Str_11737;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_11737;
     import __AS3__.vec.Vector;
-    import _Str_81._Str_8008;
-    import _Str_81._Str_10352;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_8008;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_10352;
     import com.sulake.habbo.inventory.enum.FurniCategory;
-    import _Str_81._Str_12206;
-    import _Str_81._Str_11093;
-    import _Str_81._Str_10862;
-    import _Str_81._Str_11362;
-    import _Str_81._Str_11536;
-    import _Str_81._Str_10430;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_12206;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_11093;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_10862;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_11362;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_11536;
+    import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_10430;
     import __AS3__.vec.*;
 
     public class TradingModel implements IInventoryModel, IGetImageListener 

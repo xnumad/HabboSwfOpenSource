@@ -10,7 +10,7 @@
     import com.apdevblog.model.vo.VideoMetadataVo;
     import com.apdevblog.utils._Str_3771;
     import flash.events.MouseEvent;
-    import _Str_344.VideoControlsEvent;
+    import com.apdevblog.ui.video.controls.VideoControlsEvent;
 
     public class _Str_8021 extends Sprite 
     {

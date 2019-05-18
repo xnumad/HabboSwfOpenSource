@@ -9,7 +9,7 @@
     import flash.geom.Point;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_5937;
-    import _Str_416._Str_3365;
+    import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 

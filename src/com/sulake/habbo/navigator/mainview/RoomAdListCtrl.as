@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.core.window.IWindow;
-    import _Str_57._Str_11792;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11792;
     import com.sulake.core.window.events.WindowEvent;
 
     public class RoomAdListCtrl extends GuestRoomListCtrl 

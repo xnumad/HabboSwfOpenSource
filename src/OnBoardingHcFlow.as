@@ -24,6 +24,7 @@
     import onBoardingHc._Str_973;
     import images.*;
     import binaryData.*;
+    import fonts.*;
 
     public class OnBoardingHcFlow extends Sprite implements _Str_996, IDisposable 
     {

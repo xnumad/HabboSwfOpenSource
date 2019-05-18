@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
-    import _Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 

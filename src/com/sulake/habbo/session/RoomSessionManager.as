@@ -37,7 +37,7 @@
     import flash.events.Event;
     import com.sulake.room.utils.Vector3d;
     import flash.geom.Point;
-    import _Str_549._Str_9845;
+    import com.sulake.habbo.communication.messages.outgoing._Str_549._Str_9845;
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.habbo.session.handler.BaseHandler;
     import com.sulake.iid.*;

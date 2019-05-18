@@ -4,10 +4,10 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import _Str_223._Str_7551;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7551;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import _Str_223._Str_7461;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7461;
     import com.sulake.core.window.components.ITextWindow;
 
     public class QuestCompleted implements IDisposable 

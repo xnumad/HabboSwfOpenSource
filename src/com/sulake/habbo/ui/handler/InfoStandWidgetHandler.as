@@ -36,12 +36,12 @@
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.ui.widget.events._Str_4831;
     import com.sulake.habbo.ui.widget.infostand.InfoStandFurniData;
-    import _Str_79._Str_11770;
-    import _Str_79._Str_10187;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_11770;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7251;
     import com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
-    import _Str_381._Str_8184;
-    import _Str_79._Str_10794;
+    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_8184;
+    import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10794;
     import com.sulake.habbo.room.object.RoomObjectOperationEnum;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -55,7 +55,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.ui.widget.events._Str_3735;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
-    import _Str_381._Str_11301;
+    import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
     import com.sulake.habbo.friendlist.IFriend;

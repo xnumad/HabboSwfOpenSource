@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.parser.help.data
 {
-    import _Str_388._Str_2849;
+    import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_5959 

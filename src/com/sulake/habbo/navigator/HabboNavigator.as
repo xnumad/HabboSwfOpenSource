@@ -46,9 +46,9 @@
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.utils.HabboWebTools;
-    import _Str_57._Str_11608;
-    import _Str_57._Str_3570;
-    import _Str_57._Str_10878;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11608;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10878;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.core.communication.messages.IMessageComposer;
@@ -68,7 +68,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
-    import _Str_57._Str_7393;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7393;
     import com.sulake.habbo.navigator.inroom.*;
 
     public class HabboNavigator extends Component implements IHabboNavigator, IHabboTransitionalNavigator, ILinkEventTracker 

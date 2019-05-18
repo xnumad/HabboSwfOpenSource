@@ -4,7 +4,7 @@
     import flash.display.Shape;
     import com.apdevblog.utils._Str_3771;
     import flash.events.MouseEvent;
-    import _Str_344.VideoControlsEvent;
+    import com.apdevblog.ui.video.controls.VideoControlsEvent;
 
     public class BtnSound extends Sprite 
     {

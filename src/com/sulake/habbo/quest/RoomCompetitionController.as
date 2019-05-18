@@ -19,15 +19,15 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
-    import _Str_301._Str_7424;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_7424;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
-    import _Str_301._Str_4038;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_4038;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
-    import _Str_364._Str_3075;
-    import _Str_301._Str_10126;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_10126;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IItemGridWindow;
 

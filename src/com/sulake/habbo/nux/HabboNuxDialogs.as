@@ -25,12 +25,12 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
     import com.sulake.habbo.communication.messages.incoming.nux._Str_8566;
-    import _Str_391._Str_6202;
+    import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils._Str_2910;
-    import _Str_428._Str_11372;
-    import _Str_428._Str_4584;
+    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_11372;
+    import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584;
     import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceGiftOfferParser;
     import flash.events.TimerEvent;
     import com.sulake.core.runtime.IHabboConfigurationManager;

@@ -16,7 +16,7 @@
 	import com.sulake.core.window.components.IRegionWindow;
 	import com.sulake.core.window.events.WindowEvent;
 	import com.sulake.core.window.events.WindowMouseEvent;
-	import _Str_57._Str_3570;
+	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
 	import flash.display.BitmapData;
 	import flash.geom.Point;
 	import snowwar.SnowWarEngine;

@@ -3,7 +3,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import _Str_301._Str_9966;
+    import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_9966;
 
     public class GoToCompetitionRoomButtonElementHandler extends AbstractButtonElementHandler 
     {

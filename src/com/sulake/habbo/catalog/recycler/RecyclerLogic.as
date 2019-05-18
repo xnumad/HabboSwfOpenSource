@@ -2,8 +2,8 @@
 {
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.window.IHabboWindowManager;
-    import _Str_329._Str_5376;
-    import _Str_329._Str_4691;
+    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_5376;
+    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_4691;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
 

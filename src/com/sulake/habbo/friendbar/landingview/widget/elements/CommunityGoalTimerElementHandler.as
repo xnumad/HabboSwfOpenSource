@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.widget.GenericWidget;
-    import _Str_223._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4438;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgress;
 
     public class CommunityGoalTimerElementHandler extends AbstractTimerElementHandler 

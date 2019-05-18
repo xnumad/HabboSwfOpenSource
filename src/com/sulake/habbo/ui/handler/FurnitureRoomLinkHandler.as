@@ -20,7 +20,7 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.object.IRoomObjectModel;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
-    import _Str_57._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
     import flash.events.Event;
     import __AS3__.vec.*;
 

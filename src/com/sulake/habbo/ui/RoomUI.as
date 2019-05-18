@@ -100,7 +100,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
-    import _Str_499._Str_11497;
+    import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChangePostureMessage;
     import flash.utils.Timer;
     import flash.events.TimerEvent;

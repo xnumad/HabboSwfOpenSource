@@ -11,7 +11,7 @@
     import com.sulake.habbo.toolbar.ToolbarDisplayExtensionIds;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import _Str_63._Str_7218;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7218;
     import flash.events.TimerEvent;
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;

@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7445;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
-    import _Str_63._Str_7426;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7426;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.room.ImageResult;
     import com.sulake.core.window.components.ITextWindow;

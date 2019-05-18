@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-    import _Str_516.PongMessageParser;
+    import com.sulake.habbo.communication.messages.incoming._Str_516.PongMessageParser;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
     import com.sulake.habbo.communication.enum.HabboHotelViewEvent;

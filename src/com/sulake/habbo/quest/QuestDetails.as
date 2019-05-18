@@ -10,9 +10,9 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import _Str_223._Str_7532;
-    import _Str_223._Str_4916;
-    import _Str_223._Str_7454;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7532;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
 
     public class QuestDetails implements IDisposable 
     {

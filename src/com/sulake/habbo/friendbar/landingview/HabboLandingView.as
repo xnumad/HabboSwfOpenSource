@@ -41,7 +41,7 @@
     import com.sulake.core.window.components.IDesktopWindow;
     import com.sulake.habbo.toolbar.HabboToolbarEnum;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import _Str_84._Str_3719;
+    import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.gamecenter.GameCenterEvent;
     import com.sulake.habbo.catalog.event.CatalogEvent;
@@ -49,11 +49,11 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
-    import _Str_57._Str_12081;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_12081;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_11090;
-    import _Str_550._Str_11999;
+    import com.sulake.habbo.communication.messages.outgoing._Str_550._Str_11999;
     import com.sulake.habbo.session.ISessionDataManager;
 
     public class HabboLandingView extends AbstractView implements IHabboLandingView 

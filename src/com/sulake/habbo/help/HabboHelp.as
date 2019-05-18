@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import com.sulake.core.runtime.IContext;
     import com.sulake.core.assets.IAssetLibrary;
-    import _Str_388._Str_2849;
+    import com.sulake.habbo.help.enum._Str_2849;
     import com.sulake.core.runtime.ComponentDependency;
     import com.sulake.iid.IIDHabboWindowManager;
     import com.sulake.iid.IIDSessionDataManager;
@@ -53,7 +53,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.window.utils._Str_2784;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_10695;
-    import _Str_364._Str_6216;
+    import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_12273;
     import com.sulake.habbo.communication.messages.parser.help.CallForHelpPendingCallsMessageParser;
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;
