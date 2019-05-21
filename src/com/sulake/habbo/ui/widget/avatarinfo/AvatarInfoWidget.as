@@ -1037,7 +1037,7 @@
                             {
                                 return;
                             }
-                            if (RoomEnterEffect._Str_1349())
+                            if (RoomEnterEffect.isRunning())
                             {
                                 if (!this._cachedNewUserHelpView)
                                 {

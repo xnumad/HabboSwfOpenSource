@@ -71,13 +71,13 @@
             this._SafeStr_18723 = [];
             super();
             this._snowWarEngine = k;
-            this._snowWarEngine.roomEngine._Str_4608(RoomObjectCategoryEnum.CONST_202);
+            this._snowWarEngine.roomEngine.addObjectUpdateCategory(RoomObjectCategoryEnum.CONST_202);
         }
 
         public function dispose():void
         {
-            this._snowWarEngine.roomEngine._Str_7482(_SafeStr_18716);
-            this._snowWarEngine.roomEngine._Str_9123(RoomObjectCategoryEnum.CONST_202);
+            this._snowWarEngine.roomEngine.disposeRoom(_SafeStr_18716);
+            this._snowWarEngine.roomEngine.removeObjectUpdateCategory(RoomObjectCategoryEnum.CONST_202);
             if (this._keyboardListener)
             {
                 this._keyboardListener.dispose();

@@ -233,7 +233,7 @@
             }
             if (((_local_7) && (k._Str_1723)))
             {
-                _local_10 = _arg_4._Str_22413._Str_5052(k._Str_1723);
+                _local_10 = _arg_4._Str_22413.getGraphicAssetCollection(k._Str_1723);
                 if (_local_10 != null)
                 {
                     _local_11 = _local_10._Str_17888(_local_7);
@@ -399,10 +399,10 @@
                     _local_12 = _local_11.plane;
                     _local_13 = new Vector.<Point>(0);
                     _local_14 = Vector3d.sum(_local_12.location, _local_12._Str_5424);
-                    _local_15 = _local_8._Str_3045(_local_12.location);
-                    _local_16 = _local_8._Str_3045(_local_14);
-                    _local_17 = _local_8._Str_3045(Vector3d.sum(_local_12.location, _local_12._Str_4968));
-                    _local_18 = _local_8._Str_3045(Vector3d.sum(_local_14, _local_12._Str_4968));
+                    _local_15 = _local_8.getScreenPoint(_local_12.location);
+                    _local_16 = _local_8.getScreenPoint(_local_14);
+                    _local_17 = _local_8.getScreenPoint(Vector3d.sum(_local_12.location, _local_12._Str_4968));
+                    _local_18 = _local_8.getScreenPoint(Vector3d.sum(_local_14, _local_12._Str_4968));
                     _local_13.push(_local_15, _local_16, _local_17, _local_18);
                     _local_19 = 0;
                     _local_20 = 0;

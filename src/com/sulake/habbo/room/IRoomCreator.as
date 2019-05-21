@@ -12,8 +12,8 @@
     public interface IRoomCreator extends IRoomObjectCreator 
     {
         function _Str_10152(_arg_1:int, _arg_2:XML):void;
-        function _Str_2881(_arg_1:int):IRoomInstance;
-        function _Str_7482(_arg_1:int):void;
+        function getRoom(_arg_1:int):IRoomInstance;
+        function disposeRoom(_arg_1:int):void;
         function _Str_19096(_arg_1:int, _arg_2:int):void;
         function _Str_20520(_arg_1:int, _arg_2:String):void;
         function _Str_5146(_arg_1:int):IRoomObjectController;

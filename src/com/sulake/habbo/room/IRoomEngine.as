@@ -85,7 +85,7 @@
         function _Str_5211(_arg_1:int, _arg_2:String=null):String;
         function _Str_19873(_arg_1:int, _arg_2:int):Boolean;
         function _Str_10152(_arg_1:int, _arg_2:XML):void;
-        function _Str_7482(_arg_1:int):void;
+        function disposeRoom(_arg_1:int):void;
         function get _Str_6249():Boolean;
         function set _Str_6374(_arg_1:Boolean):void;
         function get _Str_6374():Boolean;
@@ -93,8 +93,8 @@
         function _Str_22946(_arg_1:int):void;
         function _Str_16048(_arg_1:int, _arg_2:int):void;
         function _Str_21042(_arg_1:int, _arg_2:Boolean):void;
-        function _Str_4608(_arg_1:int):void;
-        function _Str_9123(_arg_1:int):void;
+        function addObjectUpdateCategory(_arg_1:int):void;
+        function removeObjectUpdateCategory(_arg_1:int):void;
         function _Str_16420(_arg_1:int, _arg_2:int, _arg_3:BitmapData, _arg_4:Matrix, _arg_5:Boolean):Boolean;
         function set _Str_9081(_arg_1:Boolean):void;
         function _Str_19596():void;

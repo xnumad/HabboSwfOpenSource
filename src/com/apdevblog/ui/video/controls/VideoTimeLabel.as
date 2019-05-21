@@ -17,7 +17,7 @@
 
         private var _Str_3888:Shape;
         private var _txt:TextField;
-        private var _Str_621:String;
+        private var _state:String;
         private var _Str_7402:VideoMetadataVo;
         private var _Str_4492:Number;
 
@@ -30,7 +30,7 @@
         {
             var _local_6:int;
             this._Str_4492 = k;
-            if (this._Str_621 == VideoTimeLabel.STATECOUNTDOWN)
+            if (this._state == VideoTimeLabel.STATECOUNTDOWN)
             {
                 _local_6 = ((this._Str_7402 != null) ? this._Str_7402.duration : 0);
                 k = (_local_6 - k);
@@ -77,7 +77,7 @@
         {
             mouseChildren = false;
             buttonMode = true;
-            this._Str_621 = VideoTimeLabel.STATECOUNTUP;
+            this._state = VideoTimeLabel.STATECOUNTUP;
             this._Str_4492 = 0;
             this._Str_4149();
             addEventListener(MouseEvent.CLICK, this.onMouseClick, false, 0, true);
@@ -85,13 +85,13 @@
 
         private function _Str_25190():void
         {
-            if (this._Str_621 == VideoTimeLabel.STATECOUNTUP)
+            if (this._state == VideoTimeLabel.STATECOUNTUP)
             {
-                this._Str_621 = VideoTimeLabel.STATECOUNTDOWN;
+                this._state = VideoTimeLabel.STATECOUNTDOWN;
             }
             else
             {
-                this._Str_621 = VideoTimeLabel.STATECOUNTUP;
+                this._state = VideoTimeLabel.STATECOUNTUP;
             }
             this.update(this._Str_4492);
         }

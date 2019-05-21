@@ -37,7 +37,7 @@
     {
         public static const _Str_18629:uint = 1;
         public static const _Str_9039:uint = 2;
-        public static const _Str_4161:uint = 3;
+        public static const SETUP_WITHOUT_COMMUNICATION:uint = 3;
         private static const GENERIC:String = AvatarEditorFigureCategory.GENERIC;//"generic"
 
         private var _windowManager:IHabboWindowManager;
@@ -65,7 +65,7 @@
             }), new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
             {
                 _communication = k;
-            }, ((flags & _Str_4161) == 0)), new ComponentDependency(new IIDAvatarRenderManager(), function (k:IAvatarRenderManager):void
+            }, ((flags & SETUP_WITHOUT_COMMUNICATION) == 0)), new ComponentDependency(new IIDAvatarRenderManager(), function (k:IAvatarRenderManager):void
             {
                 _avatarRenderManager = k;
             }, true, [{

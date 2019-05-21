@@ -92,7 +92,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_21210(k:Function):void
+        public function addObjectEventListener(k:Function):void
         {
             var _local_2:String;
             if (this.functions.indexOf(k) < 0)
@@ -108,7 +108,7 @@
             }
         }
 
-        public function _Str_22490(k:Function):void
+        public function removeObjectEventListener(k:Function):void
         {
             var _local_2:String;
             var _local_3:int = this.functions.indexOf(k);
@@ -140,7 +140,7 @@
             }
         }
 
-        public function _Str_16699(logicKey:String):IRoomObjectEventHandler
+        public function createRoomObjectLogic(logicKey:String):IRoomObjectEventHandler
         {
             var roomObjectLogic:IRoomObjectEventHandler;
             var classDefinition:Class;
@@ -378,7 +378,7 @@
             return null;
         }
 
-        public function _Str_9811():IRoomObjectManager
+        public function createRoomObjectManager():IRoomObjectManager
         {
             return new RoomObjectManager();
         }

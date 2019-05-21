@@ -129,7 +129,7 @@
             while (_local_6 < _local_4.length())
             {
                 _local_10 = _local_4[_local_6];
-                if (XMLValidator._Str_2747(_local_10, _local_5))
+                if (XMLValidator.checkRequiredAttributes(_local_10, _local_5))
                 {
                     _local_11 = parseInt(_local_10.@id);
                     this._directions.push(_local_11);

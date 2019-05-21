@@ -338,7 +338,7 @@
 
         public function _Str_11727():void
         {
-            return this._newNavigator._Str_5942();
+            return this._newNavigator.createRoom();
         }
 
         public function _Str_6822(k:Point=null):void

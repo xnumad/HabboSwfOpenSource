@@ -2,17 +2,17 @@
 {
     public class RoomId 
     {
-        private static const _Str_13456:int = 0x7FFF0000;
+        private static const PREVIEW_ROOM_ID_BASE:int = 0x7FFF0000;
 
 
-        public static function _Str_24114(k:int):int
+        public static function makeRoomPreviewerId(k:int):int
         {
-            return (k & 0xFFFF) + _Str_13456;
+            return (k & 0xFFFF) + PREVIEW_ROOM_ID_BASE;
         }
 
-        public static function _Str_18235(k:int):Boolean
+        public static function isRoomPreviewerId(k:int):Boolean
         {
-            return k >= _Str_13456;
+            return k >= PREVIEW_ROOM_ID_BASE;
         }
     }
 }

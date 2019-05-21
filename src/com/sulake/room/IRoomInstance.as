@@ -11,16 +11,16 @@
         function setString(_arg_1:String, _arg_2:String, _arg_3:Boolean=false):void;
         function dispose():void;
         function update():void;
-        function _Str_5865(_arg_1:int, _arg_2:String, _arg_3:int):IRoomObject;
-        function _Str_3299(_arg_1:int, _arg_2:int):IRoomObject;
-        function _Str_9669(_arg_1:int):Array;
-        function _Str_3915(_arg_1:int, _arg_2:int):Boolean;
-        function _Str_4421(_arg_1:int):int;
-        function _Str_11503(_arg_1:int, _arg_2:String, _arg_3:int):IRoomObject;
-        function _Str_9675(_arg_1:String, _arg_2:int):int;
-        function _Str_5477(_arg_1:int, _arg_2:int):IRoomObject;
-        function _Str_20931(_arg_1:int):int;
-        function _Str_21782(_arg_1:IRoomRendererBase):void;
-        function _Str_11132():IRoomRendererBase;
+        function createRoomObject(_arg_1:int, _arg_2:String, _arg_3:int):IRoomObject;
+        function getObject(_arg_1:int, _arg_2:int):IRoomObject;
+        function getObjects(_arg_1:int):Array;
+        function disposeObject(_arg_1:int, _arg_2:int):Boolean;
+        function getObjectCount(_arg_1:int):int;
+        function getObjectWithIndexAndType(_arg_1:int, _arg_2:String, _arg_3:int):IRoomObject;
+        function getObjectCountForType(_arg_1:String, _arg_2:int):int;
+        function getObjectWithIndex(_arg_1:int, _arg_2:int):IRoomObject;
+        function disposeObjects(_arg_1:int):int;
+        function setRenderer(_arg_1:IRoomRendererBase):void;
+        function getRenderer():IRoomRendererBase;
     }
 }

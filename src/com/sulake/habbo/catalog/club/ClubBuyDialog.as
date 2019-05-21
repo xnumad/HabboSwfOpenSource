@@ -25,11 +25,11 @@
             this._Str_2619 = _arg_2;
             if (k.vip)
             {
-                _local_3 = this._Str_6090("club_buy_vip_item");
+                _local_3 = this.getAssetXML("club_buy_vip_item");
             }
             else
             {
-                _local_3 = this._Str_6090("club_buy_hc_item");
+                _local_3 = this.getAssetXML("club_buy_hc_item");
             }
             this._window = (this._Str_2619.viewer.catalog.windowManager.buildFromXML(_local_3) as IWindowContainer);
             var _local_4:IHabboLocalizationManager = (_arg_2.viewer.catalog as HabboCatalog).localization;
@@ -56,7 +56,7 @@
             HabboCatalog(this._Str_2619.viewer.catalog)._Str_5649(this._Str_2324, this._Str_2619.pageId);
         }
 
-        private function _Str_6090(k:String):XML
+        private function getAssetXML(k:String):XML
         {
             if (((((!(this._Str_2619)) || (!(this._Str_2619.viewer))) || (!(this._Str_2619.viewer.catalog))) || (!(this._Str_2619.viewer.catalog.assets))))
             {

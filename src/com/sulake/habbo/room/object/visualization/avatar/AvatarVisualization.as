@@ -687,7 +687,7 @@
             var _local_5:Boolean;
             var _local_6:int;
             var _local_7:int;
-            if ((((_arg_4) || (!(_Str_7475 == k._Str_3273()))) || (!(this._Str_3406 == _arg_2._Str_3795))))
+            if ((((_arg_4) || (!(_Str_7475 == k._Str_3273()))) || (!(this._Str_3406 == _arg_2.updateId))))
             {
                 _local_5 = _arg_3;
                 _local_6 = (k.getDirection().x - _arg_2.direction.x);
@@ -730,7 +730,7 @@
                     }
                 }
                 _Str_7475 = k._Str_3273();
-                this._Str_3406 = _arg_2._Str_3795;
+                this._Str_3406 = _arg_2.updateId;
                 return _local_5;
             }
             return false;
@@ -973,11 +973,11 @@
                     if (this._Str_16138)
                     {
                         _local_19.relativeDepth = (_local_19.relativeDepth - _Str_17708);
-                        _local_19._Str_4918 = RoomObjectSpriteType._Str_10494;
+                        _local_19._Str_4918 = RoomObjectSpriteType.AVATAR_OWN;
                     }
                     else
                     {
-                        _local_19._Str_4918 = RoomObjectSpriteType._Str_11629;
+                        _local_19._Str_4918 = RoomObjectSpriteType.AVATAR;
                     }
                 }
                 _local_18 = (this._Str_6142(_Str_7651) as TypingBubble);
@@ -1024,7 +1024,7 @@
                         _local_19 = _Str_2505(_local_21);
                         if (_local_19 != null)
                         {
-                            _local_19._Str_4023 = AlphaTolerance._Str_9268;
+                            _local_19._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                             _local_19.visible = true;
                             _local_30 = this._Str_2842._Str_607(_local_23);
                             _local_31 = 0;

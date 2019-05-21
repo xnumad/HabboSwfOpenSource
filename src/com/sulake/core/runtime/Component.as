@@ -24,7 +24,7 @@
         public static const COMPONENT_EVENT_UNLOCKED:String = "COMPONENT_EVENT_UNLOCKED";
         protected static const INTERNAL_EVENT_UNLOCKED:String = "_INTERNAL_EVENT_UNLOCKED";
         public static const COMPONENT_FLAG_NULL:uint = 0;
-        public static const _Str_1158:uint = 1;
+        public static const COMPONENT_FLAG_DISPOSABLE:uint = 1;
         public static const COMPONENT_FLAG_CONTEXT:uint = 2;
         public static const COMPONENT_FLAG_INTERFACE:uint = 4;
 

@@ -37,7 +37,7 @@
             return null;
         }
 
-        public static function _Str_10580(k:String):String
+        public static function getVisualizationType(k:String):String
         {
             switch (k)
             {

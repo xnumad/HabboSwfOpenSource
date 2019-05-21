@@ -45,7 +45,7 @@
         private var _Str_4105:int;
         private var _roomUserData:RoomUserData;
         private var _petData2:RoomUserData;
-        private var _Str_621:int = 0;
+        private var _state:int = 0;
 
         public function BreedMonsterPlantsConfirmationView(k:AvatarInfoWidget)
         {
@@ -95,7 +95,7 @@
             this._Str_4105 = _arg_2;
             this._roomUserData = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(k);
             this._petData2 = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(_arg_2);
-            this._Str_621 = ((_arg_3) ? _Str_15445 : _Str_13053);
+            this._state = ((_arg_3) ? _Str_15445 : _Str_13053);
             this._Str_3248();
             this._window.visible = true;
         }
@@ -163,7 +163,7 @@
             this._Str_2513(ACCEPT_BUTTON, false);
             this._Str_2513(CANCEL_BUTTON, true);
             this._Str_2513(CANCEL_BUTTON, true);
-            switch (this._Str_621)
+            switch (this._state)
             {
                 case _Str_13053:
                     this._Str_2513(DESCRIPTION, true);

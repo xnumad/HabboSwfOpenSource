@@ -219,7 +219,7 @@
                         _local_4.color = this.getSpriteColor(k, _arg_2, this._Str_20708);
                         _local_4.offsetX = (_local_5.offsetX + this.getSpriteXOffset(k, this._Str_2405, _arg_2));
                         _local_4.offsetY = (_local_5.offsetY + this.getSpriteYOffset(k, this._Str_2405, _arg_2));
-                        _local_4._Str_4023 = ((this.getSpriteMouseCapture(k, this._Str_2405, _arg_2)) ? AlphaTolerance._Str_9735 : AlphaTolerance._Str_9268);
+                        _local_4._Str_4023 = ((this.getSpriteMouseCapture(k, this._Str_2405, _arg_2)) ? AlphaTolerance.MATCH_OPAQUE_PIXELS : AlphaTolerance.MATCH_NOTHING);
                         _local_4.blendMode = this._Str_24151(this.getSpriteInk(k, this._Str_2405, _arg_2));
                         _local_6 = this.getSpriteZOffset(k, this._Str_2405, _arg_2);
                         _local_6 = (_local_6 - (_arg_2 * 0.001));
@@ -231,7 +231,7 @@
                         _local_7 = 48;
                         _local_7 = (_local_7 * this._Str_1240);
                         _local_4.alpha = _local_7;
-                        _local_4._Str_4023 = AlphaTolerance._Str_9268;
+                        _local_4._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                         _local_6 = 1;
                     }
                     _local_6 = (_local_6 * _Str_19020);

@@ -45,7 +45,7 @@
 
         override public function get numberOfVariables():int
         {
-            return _SafeStr_3584._SafeStr_12576;
+            return _SafeStr_3584.NUM_OF_VARIABLES;
         }
 
         override public function getVariable(k:int):int
@@ -53,7 +53,7 @@
             switch (k)
             {
                 case 0:
-                    return SnowWarGameObjectData._SafeStr_12569;
+                    return SnowWarGameObjectData.OBJECT_TYPE_TREE;
                 case 1:
                     return _SafeStr_13236;
                 case 2:

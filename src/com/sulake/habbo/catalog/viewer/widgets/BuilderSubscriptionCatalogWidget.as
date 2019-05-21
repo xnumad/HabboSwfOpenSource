@@ -9,7 +9,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetBuilderSubscriptionUpdatedEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
-    import sulake.habboclient._Str_5079;
+    import com.sulake.habboclient._Str_5079;
     import com.sulake.core.window.events.WindowEvent;
 
     public class BuilderSubscriptionCatalogWidget extends CatalogWidget implements IDisposable 

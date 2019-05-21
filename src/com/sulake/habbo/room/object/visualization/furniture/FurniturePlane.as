@@ -263,7 +263,7 @@
                 {
                     _local_6 = 1;
                 }
-                _local_7 = k._Str_8614(this._normal);
+                _local_7 = k.getCoordinatePosition(this._normal);
                 _local_4 = (this._textures.getValue(_local_3) as BitmapData);
                 if (_local_4 == null)
                 {
@@ -298,9 +298,9 @@
                 return false;
             }
             var _local_3:Boolean;
-            if (k._Str_3795 != this._geometryUpdateId)
+            if (k.updateId != this._geometryUpdateId)
             {
-                this._geometryUpdateId = k._Str_3795;
+                this._geometryUpdateId = k.updateId;
                 _local_4 = k.direction;
                 if (((!(_local_4 == null)) && ((((!(_local_4.x == this._geometryDirX)) || (!(_local_4.y == this._geometryDirY))) || (!(_local_4.z == this._geometryDirZ))) || (!(k.scale == this._geometryScale)))))
                 {
@@ -310,7 +310,7 @@
                     this._geometryScale = k.scale;
                     _local_3 = true;
                     _local_5 = 0;
-                    _local_5 = Vector3d.cosAngle(k._Str_14167, this.normal);
+                    _local_5 = Vector3d.cosAngle(k.directionAxis, this.normal);
                     if (_local_5 > -0.001)
                     {
                         if (this._isVisible)
@@ -321,7 +321,7 @@
                         return false;
                     }
                     this._Str_18702(k);
-                    _local_6 = k._Str_4202(this._origin);
+                    _local_6 = k.getScreenPosition(this._origin);
                     _local_7 = _local_6.z;
                     _local_8 = Math.max((this._cornerA.z - _local_7), (this._cornerB.z - _local_7), (this._cornerC.z - _local_7), (this._cornerD.z - _local_7));
                     this._relativeDepth = _local_8;
@@ -369,11 +369,11 @@
 
         private function _Str_18702(k:IRoomGeometry):void
         {
-            this._cornerA._Str_2427(k._Str_4202(this._loc));
-            this._cornerB._Str_2427(k._Str_4202(Vector3d.sum(this._loc, this._rightSide)));
-            this._cornerC._Str_2427(k._Str_4202(Vector3d.sum(Vector3d.sum(this._loc, this._leftSide), this._rightSide)));
-            this._cornerD._Str_2427(k._Str_4202(Vector3d.sum(this._loc, this._leftSide)));
-            this._offset = k._Str_3045(this._origin);
+            this._cornerA._Str_2427(k.getScreenPosition(this._loc));
+            this._cornerB._Str_2427(k.getScreenPosition(Vector3d.sum(this._loc, this._rightSide)));
+            this._cornerC._Str_2427(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._loc, this._leftSide), this._rightSide)));
+            this._cornerD._Str_2427(k.getScreenPosition(Vector3d.sum(this._loc, this._leftSide)));
+            this._offset = k.getScreenPoint(this._origin);
             this._cornerA.x = Math.round(this._cornerA.x);
             this._cornerA.y = Math.round(this._cornerA.y);
             this._cornerB.x = Math.round(this._cornerB.x);

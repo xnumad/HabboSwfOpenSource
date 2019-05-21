@@ -33,7 +33,7 @@
 
     public class SocketConnection extends EventDispatcherWrapper implements IConnection, IDisposable 
     {
-        public static const _Str_16406:int = 10000;
+        public static const DEFAULT_SOCKET_TIMEOUT:int = 10000;
 
         private var _socket:Socket;
         private var _timeOutTimer:Timer;
@@ -57,7 +57,7 @@
             this._messageClassManager = new MessageClassManager();
             this._wireFormat = new EvaWireFormat();
             this.createSocket();
-            this._timeOutTimer = new Timer(_Str_16406, 1);
+            this._timeOutTimer = new Timer(DEFAULT_SOCKET_TIMEOUT, 1);
             this._timeOutTimer.addEventListener(TimerEvent.TIMER, this.onTimeOutTimer);
             this._stateListener = stateListener;
         }

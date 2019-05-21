@@ -36,6 +36,6 @@
     <style id="35" assetId="goat" systemStyle="false" staffOverrideable="true"/>
     <style id="36" assetId="santa" systemStyle="false" staffOverrideable="true"/>
     <style id="37" assetId="ambassador" systemStyle="false" staffOverrideable="true" ambassadorOnly="true"/>
-    <style id="38" assetId="radio" hcOnly="false" systemStyle="false" staffOverrideable="true"/>
+    <style id="38" assetId="radio" hcOnly="false" systemStyle="false" staffOverrideable="false"/>
 
 </chatstyles>

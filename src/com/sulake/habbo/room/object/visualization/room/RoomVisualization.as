@@ -219,11 +219,11 @@
                 {
                     if (((_local_3.type == RoomPlane._Str_3587) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
                     {
-                        _local_4._Str_4023 = AlphaTolerance._Str_9268;
+                        _local_4._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                     }
                     else
                     {
-                        _local_4._Str_4023 = AlphaTolerance._Str_9735;
+                        _local_4._Str_4023 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
                     }
                     if (_local_3.type == RoomPlane._Str_3587)
                     {
@@ -240,7 +240,7 @@
                             _local_4.tag = ("plane@" + (_local_2 + 1));
                         }
                     }
-                    _local_4._Str_4918 = RoomObjectSpriteType._Str_8616;
+                    _local_4._Str_4918 = RoomObjectSpriteType.ROOM_PLANE;
                 }
                 _local_2++;
             }
@@ -579,9 +579,9 @@
         {
             var _local_3:IVector3D;
             var _local_2:Boolean;
-            if (k._Str_3795 != this._Str_3406)
+            if (k.updateId != this._Str_3406)
             {
-                this._Str_3406 = k._Str_3795;
+                this._Str_3406 = k.updateId;
                 this._Str_7253 = null;
                 _local_3 = k.direction;
                 if (((!(_local_3 == null)) && ((((!(_local_3.x == this._Str_7380)) || (!(_local_3.y == this._Str_10109))) || (!(_local_3.z == this._Str_11932))) || (!(k.scale == this._Str_9108)))))

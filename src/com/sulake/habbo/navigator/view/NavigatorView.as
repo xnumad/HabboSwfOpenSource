@@ -383,7 +383,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._habboNewNavigator._Str_5942();
+                this._habboNewNavigator.createRoom();
                 if (this._roomInfoPopup)
                 {
                     this._roomInfoPopup.show(false);

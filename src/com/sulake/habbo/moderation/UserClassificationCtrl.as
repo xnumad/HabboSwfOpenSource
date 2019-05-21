@@ -9,7 +9,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.userclassification._Str_6854;
     import com.sulake.core.window.components.ITextWindow;
-    import _Str_556._Str_10411;
+    import com.sulake.habbo.moderation._Str_556._Str_10411;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 

@@ -1238,7 +1238,7 @@
             }
             this.reset();
             this._Str_25334();
-            if (!XMLValidator._Str_2747(k.tileMap[0], ["width", "height", "wallHeight"]))
+            if (!XMLValidator.checkRequiredAttributes(k.tileMap[0], ["width", "height", "wallHeight"]))
             {
                 return false;
             }
@@ -1271,7 +1271,7 @@
                 while (_local_15 < _local_14.length())
                 {
                     _local_16 = _local_14[_local_15];
-                    if (XMLValidator._Str_2747(_local_16, ["id", "x", "y", "width", "height"]))
+                    if (XMLValidator.checkRequiredAttributes(_local_16, ["id", "x", "y", "width", "height"]))
                     {
                         this._Str_12390(_local_16.@id, _local_16.@x, _local_16.@y, _local_16.@width, _local_16.@height);
                     }

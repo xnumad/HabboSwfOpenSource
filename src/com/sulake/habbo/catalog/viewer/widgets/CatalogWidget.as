@@ -68,7 +68,7 @@
         {
         }
 
-        protected function _Str_6090(k:String):XML
+        protected function getAssetXML(k:String):XML
         {
             if (((((!(this.page)) || (!(this.page.viewer))) || (!(this.page.viewer.catalog))) || (!(this.page.viewer.catalog.assets))))
             {
@@ -88,7 +88,7 @@
             {
                 return;
             }
-            var _local_2:XML = this._Str_6090(k);
+            var _local_2:XML = this.getAssetXML(k);
             if (_local_2 == null)
             {
                 return;

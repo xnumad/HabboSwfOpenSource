@@ -126,7 +126,7 @@
             }
         }
 
-        public function _Str_4608(k:int):void
+        public function addObjectUpdateCategory(k:int):void
         {
             var _local_2:int = this._updateCategories.indexOf(k);
             if (_local_2 >= 0)
@@ -136,7 +136,7 @@
             this._updateCategories.push(k);
         }
 
-        public function _Str_9123(k:int):void
+        public function removeObjectUpdateCategory(k:int):void
         {
             var _local_2:int = this._updateCategories.indexOf(k);
             if (_local_2 >= 0)
@@ -160,10 +160,10 @@
                 _local_4 = this._Str_5927(_local_3);
                 if (_local_4 != null)
                 {
-                    _local_5 = (_local_4._Str_4421() - 1);
+                    _local_5 = (_local_4.getObjectCount() - 1);
                     while (_local_5 >= 0)
                     {
-                        _local_6 = _local_4._Str_5477(_local_5);
+                        _local_6 = _local_4.getObjectWithIndex(_local_5);
                         if (_local_6 != null)
                         {
                             _local_7 = _local_6._Str_2377();
@@ -179,11 +179,11 @@
             }
         }
 
-        public function _Str_5865(k:int, _arg_2:String, _arg_3:int):IRoomObject
+        public function createRoomObject(k:int, _arg_2:String, _arg_3:int):IRoomObject
         {
             if (this._container != null)
             {
-                return this._container._Str_5865(this._id, k, _arg_2, _arg_3);
+                return this._container.createRoomObject(this._id, k, _arg_2, _arg_3);
             }
             return null;
         }
@@ -194,7 +194,7 @@
             var _local_5:IRoomObjectManager = this._Str_23106(_arg_4);
             if (_local_5 != null)
             {
-                _local_6 = _local_5._Str_9478(k, _arg_2, _arg_3);
+                _local_6 = _local_5.createObject(k, _arg_2, _arg_3);
                 if (this._renderer != null)
                 {
                     this._renderer._Str_17585(_local_6);
@@ -204,69 +204,69 @@
             return null;
         }
 
-        public function _Str_3299(k:int, _arg_2:int):IRoomObject
+        public function getObject(k:int, _arg_2:int):IRoomObject
         {
             var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
             if (_local_3 != null)
             {
-                return _local_3._Str_3299(k);
+                return _local_3.getObject(k);
             }
             return null;
         }
 
-        public function _Str_9669(k:int):Array
+        public function getObjects(k:int):Array
         {
             var _local_2:IRoomObjectManager = this._Str_5927(k);
-            return (_local_2) ? _local_2._Str_9669() : [];
+            return (_local_2) ? _local_2.getObjects() : [];
         }
 
-        public function _Str_5477(k:int, _arg_2:int):IRoomObject
+        public function getObjectWithIndex(k:int, _arg_2:int):IRoomObject
         {
             var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
             if (_local_3 != null)
             {
-                return _local_3._Str_5477(k);
+                return _local_3.getObjectWithIndex(k);
             }
             return null;
         }
 
-        public function _Str_4421(k:int):int
+        public function getObjectCount(k:int):int
         {
             var _local_2:IRoomObjectManager = this._Str_5927(k);
             if (_local_2 != null)
             {
-                return _local_2._Str_4421();
+                return _local_2.getObjectCount();
             }
             return 0;
         }
 
-        public function _Str_11503(k:int, _arg_2:String, _arg_3:int):IRoomObject
+        public function getObjectWithIndexAndType(k:int, _arg_2:String, _arg_3:int):IRoomObject
         {
             var _local_4:IRoomObjectManager = this._Str_5927(_arg_3);
             if (_local_4 != null)
             {
-                return _local_4._Str_11503(k, _arg_2);
+                return _local_4.getObjectWithIndexAndType(k, _arg_2);
             }
             return null;
         }
 
-        public function _Str_9675(k:String, _arg_2:int):int
+        public function getObjectCountForType(k:String, _arg_2:int):int
         {
             var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
             if (_local_3 != null)
             {
-                return _local_3._Str_9675(k);
+                return _local_3.getObjectCountForType(k);
             }
             return 0;
         }
 
-        public function _Str_3915(k:int, _arg_2:int):Boolean
+        public function disposeObject(k:int, _arg_2:int):Boolean
         {
             var _local_4:IRoomObject;
             var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
             if (_local_3 != null)
             {
-                _local_4 = _local_3._Str_3299(k);
+                _local_4 = _local_3.getObject(k);
                 if (_local_4 != null)
                 {
                     _local_4.tearDown();
@@ -274,13 +274,13 @@
                     {
                         this._renderer._Str_16309(_local_4);
                     }
-                    return _local_3._Str_3915(k);
+                    return _local_3.disposeObject(k);
                 }
             }
             return false;
         }
 
-        public function _Str_20931(k:int):int
+        public function disposeObjects(k:int):int
         {
             var _local_4:int;
             var _local_5:IRoomObjectController;
@@ -288,11 +288,11 @@
             var _local_3:IRoomObjectManager = this._Str_5927(k);
             if (_local_3 != null)
             {
-                _local_2 = _local_3._Str_4421();
+                _local_2 = _local_3.getObjectCount();
                 _local_4 = 0;
                 while (_local_4 < _local_2)
                 {
-                    _local_5 = (_local_3._Str_5477(_local_4) as IRoomObjectController);
+                    _local_5 = (_local_3.getObjectWithIndex(_local_4) as IRoomObjectController);
                     if (_local_5 != null)
                     {
                         if (this._renderer)
@@ -308,7 +308,7 @@
             return _local_2;
         }
 
-        public function _Str_21782(k:IRoomRendererBase):void
+        public function setRenderer(k:IRoomRendererBase):void
         {
             var _local_4:int;
             var _local_5:int;
@@ -333,11 +333,11 @@
             while (_local_3 >= 0)
             {
                 _local_4 = int(_local_2[_local_3]);
-                _local_5 = this._Str_4421(_local_4);
+                _local_5 = this.getObjectCount(_local_4);
                 _local_6 = (_local_5 - 1);
                 while (_local_6 >= 0)
                 {
-                    _local_7 = (this._Str_5477(_local_6, _local_4) as IRoomObjectController);
+                    _local_7 = (this.getObjectWithIndex(_local_6, _local_4) as IRoomObjectController);
                     if (_local_7 != null)
                     {
                         this._renderer._Str_17585(_local_7);
@@ -348,7 +348,7 @@
             }
         }
 
-        public function _Str_11132():IRoomRendererBase
+        public function getRenderer():IRoomRendererBase
         {
             return this._renderer;
         }
@@ -369,7 +369,7 @@
             {
                 return null;
             }
-            var _local_3:IRoomObjectManager = this._container._Str_9811();
+            var _local_3:IRoomObjectManager = this._container.createRoomObjectManager();
             if (_local_3 != null)
             {
                 this._managers.add(_local_2, _local_3);
@@ -386,7 +386,7 @@
         {
             var _local_3:IRoomObjectManager;
             var _local_2:String = String(k);
-            this._Str_20931(k);
+            this.disposeObjects(k);
             if (this._managers.getValue(_local_2) != null)
             {
                 _local_3 = (this._managers.remove(_local_2) as IRoomObjectManager);
@@ -406,11 +406,11 @@
             var _local_3:int;
             for each (k in this._managers)
             {
-                _local_2 = k._Str_4421();
+                _local_2 = k.getObjectCount();
                 _local_3 = 0;
                 while (_local_3 < _local_2)
                 {
-                    if (!k._Str_5477(_local_3)._Str_3022())
+                    if (!k.getObjectWithIndex(_local_3)._Str_3022())
                     {
                         return true;
                     }

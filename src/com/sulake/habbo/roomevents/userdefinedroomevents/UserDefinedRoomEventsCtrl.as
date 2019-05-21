@@ -294,14 +294,14 @@
             {
                 return;
             }
-            if (!this._Str_3233(this._updated.id))
+            /*if (!this._Str_3233(this._updated.id))
             {
                 this._roomEvents.windowManager.confirm("${wiredfurni.nonowner.change.confirm.title}", "${wiredfurni.nonowner.change.confirm.body}", 0, this._Str_24497);
             }
             else
-            {
+            {*/
                 this.update();
-            }
+            //}
         }
 
         private function _Str_24497(k:_Str_2910, _arg_2:WindowEvent):void

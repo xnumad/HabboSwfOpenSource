@@ -13,7 +13,7 @@
         public static const _Str_13674:int = 0;
 
         private var _Str_1033:AnimatedFurnitureVisualizationData = null;
-        private var _Str_621:int = -1;
+        private var _state:int = -1;
         private var _Str_3566:AnimationStateData;
         private var _Str_16292:int = 0;
         private var _Str_12376:int = 1;
@@ -95,10 +95,10 @@
                     return false;
                 }
                 _local_4 = _local_3.getState(0);
-                if (_local_4 != this._Str_621)
+                if (_local_4 != this._state)
                 {
                     this.setAnimation(_local_4);
-                    this._Str_621 = _local_4;
+                    this._state = _local_4;
                     _local_5 = _local_3.getModel();
                     if (_local_5 != null)
                     {
@@ -132,7 +132,7 @@
                             if (_local_5 > this._Str_16292)
                             {
                                 this._Str_16292 = _local_5;
-                                this.setAnimation(this._Str_621);
+                                this.setAnimation(this._state);
                             }
                         }
                         _local_4 = _local_3.getNumber(RoomObjectVariableEnum.FURNITURE_AUTOMATIC_STATE_INDEX);
@@ -178,7 +178,7 @@
         {
             if (this._Str_1033 != null)
             {
-                this._Str_17687(this._Str_3566, k, (this._Str_621 >= 0));
+                this._Str_17687(this._Str_3566, k, (this._state >= 0));
             }
         }
 

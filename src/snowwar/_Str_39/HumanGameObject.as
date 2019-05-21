@@ -6,7 +6,7 @@
     import snowwar.SnowWarEngine;
     import com.sulake.core.utils.Map;
     import snowwar.SnowWarGameStage;
-    import snowwar._Str_62._SafeStr_2467;
+    import snowwar._Str_62.HumanGameObjectData;
     import snowwar._Str_62.SnowWarGameObjectData;
     import com.sulake.core.runtime.exceptions.Exception;
     import snowwar._Str_254.CollisionDetection;
@@ -53,23 +53,23 @@
         private var _team:int;
         private var _SafeStr_18835:int;
         private var _name:String;
-        private var _SafeStr_12577:String;
+        private var _mission:String;
         private var _figure:String;
-        private var _SafeStr_7874:String;
+        private var _sex:String;
         private var _userId:int;
         private var _SafeStr_18836:int = 0;
         private var _SafeStr_18579:SnowWarEngine;
         private var _SafeStr_18837:Map;
 
-        public function HumanGameObject(k:SnowWarGameStage, _arg_2:_SafeStr_2467, _arg_3:Boolean, _arg_4:SnowWarEngine)
+        public function HumanGameObject(k:SnowWarGameStage, _arg_2:HumanGameObjectData, _arg_3:Boolean, _arg_4:SnowWarEngine)
         {
             this._currentLocation = new Location(0, 0, 0);
             this._moveTarget = new Location(0, 0, 0);
             this._stoppedDir = Direction8.SE;
             super(_arg_2.id, _arg_3);
-            this._SafeStr_7874 = _arg_2._SafeStr_7885;
+            this._sex = _arg_2.sex;
             this._name = _arg_2.name;
-            this._SafeStr_12577 = _arg_2._SafeStr_12578;
+            this._mission = _arg_2.mission;
             this._figure = _arg_2.figure;
             this._team = _arg_2.team;
             this._userId = _arg_2.userId;
@@ -119,9 +119,9 @@
         override public function dispose():void
         {
             super.dispose();
-            this._SafeStr_7874 = "";
+            this._sex = "";
             this._name = "";
-            this._SafeStr_12577 = "";
+            this._mission = "";
             this._figure = "";
             this._team = 0;
             this._userId = 0;
@@ -137,7 +137,7 @@
 
         override public function get numberOfVariables():int
         {
-            return _SafeStr_2467._SafeStr_12576;
+            return HumanGameObjectData.NUM_OF_VARIABLES;
         }
 
         override public function getVariable(k:int):int
@@ -145,7 +145,7 @@
             switch (k)
             {
                 case 0:
-                    return SnowWarGameObjectData._SafeStr_12572;
+                    return SnowWarGameObjectData.OBJECT_TYPE_HUMAN;
                 case 1:
                     return _id;
                 case 2:
@@ -614,9 +614,9 @@
             return this._name;
         }
 
-        public function get _SafeStr_12578():String
+        public function get mission():String
         {
-            return this._SafeStr_12577;
+            return this._mission;
         }
 
         public function get figure():String
@@ -624,9 +624,9 @@
             return this._figure;
         }
 
-        public function get _SafeStr_7885():String
+        public function get sex():String
         {
-            return this._SafeStr_7874;
+            return this._sex;
         }
 
         public function get score():int

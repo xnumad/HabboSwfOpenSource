@@ -27,7 +27,7 @@
     import com.sulake.core.communication.encryption.IEncryption;
     import com.sulake.habbo.communication.encryption.DiffieHellman;
     import com.hurlant.math.BigInteger;
-    import _Str_538._Str_9612;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9636;
     import com.sulake.iid.*;
@@ -112,7 +112,7 @@
         override protected function initComponent():void
         {
             context.events.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED, this._Str_18093);
-            this._connection = this._communication._Str_20941(this);
+            this._connection = this._communication.createConnection(this);
             this._connection.registerMessageClasses(this._messages);
             this._connection.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9088);
             this._connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_7702);
@@ -311,7 +311,7 @@
             return new ArcFour();
         }
 
-        public function _Str_22185(k:BigInteger, _arg_2:BigInteger):_Str_9612
+        public function _Str_22185(k:BigInteger, _arg_2:BigInteger):IKeyExchange
         {
             return new DiffieHellman(k, _arg_2);
         }

@@ -192,11 +192,11 @@
         public function _Str_21530():void
         {
             var k:String;
-            if (RoomEnterEffect._Str_1349())
+            if (RoomEnterEffect.isRunning())
             {
                 if (this._moderationDelayTimer == null)
                 {
-                    this._moderationDelayTimer = new Timer((RoomEnterEffect._Str_17562 + _Str_19032), 1);
+                    this._moderationDelayTimer = new Timer((RoomEnterEffect.totalRunningTime + _Str_19032), 1);
                     this._moderationDelayTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_18481);
                     this._moderationDelayTimer.start();
                 }

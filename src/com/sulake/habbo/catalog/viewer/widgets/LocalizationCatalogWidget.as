@@ -12,7 +12,7 @@
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.catalog.enum.CatalogPageName;
     import com.sulake.habbo.utils.HabboWebTools;
-    import sulake.habboclient._Str_5079;
+    import com.sulake.habboclient._Str_5079;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IBitmapWrapperWindow;

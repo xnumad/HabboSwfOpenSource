@@ -6,6 +6,6 @@
 
     public interface ICoreCommunicationManager extends IUnknown 
     {
-        function _Str_20941(_arg_1:IConnectionStateListener=null):IConnection;
+        function createConnection(_arg_1:IConnectionStateListener=null):IConnection;
     }
 }

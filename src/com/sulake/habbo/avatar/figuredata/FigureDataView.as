@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.avatar.IAvatarImageListener;
     import com.sulake.habbo.window.widgets._Str_4709;
-    import _Str_425._Str_3172;
+    import com.sulake.habbo.room.preview.RoomPreviewer;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.enum.AvatarSetType;
@@ -13,7 +13,7 @@
         public static const _Str_9887:int = 4;
 
         private var _widget:_Str_4709;
-        private var _roomPreviewer:_Str_3172;
+        private var _roomPreviewer:RoomPreviewer;
         private var _model:FigureData;
         private var _figureString:String;
         private var _isDisposed:Boolean;

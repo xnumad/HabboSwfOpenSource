@@ -30,7 +30,7 @@
             }
         }
 
-        public function _Str_9478(k:int, _arg_2:uint, _arg_3:String):IRoomObjectController
+        public function createObject(k:int, _arg_2:uint, _arg_3:String):IRoomObjectController
         {
             var _local_4:RoomObject = new RoomObject(k, _arg_2, _arg_3);
             return this._Str_18784(String(k), _arg_3, _local_4);
@@ -60,29 +60,29 @@
             return _local_3;
         }
 
-        public function _Str_3299(k:int):IRoomObjectController
+        public function getObject(k:int):IRoomObjectController
         {
             var _local_2:IRoomObjectController = (this._objects.getValue(String(k)) as IRoomObjectController);
             return _local_2;
         }
 
-        public function _Str_9669():Array
+        public function getObjects():Array
         {
             return this._objects.getValues();
         }
 
-        public function _Str_5477(k:int):IRoomObjectController
+        public function getObjectWithIndex(k:int):IRoomObjectController
         {
             var _local_2:IRoomObjectController = (this._objects.getWithIndex(k) as IRoomObjectController);
             return _local_2;
         }
 
-        public function _Str_4421():int
+        public function getObjectCount():int
         {
             return this._objects.length;
         }
 
-        public function _Str_9675(k:String):int
+        public function getObjectCountForType(k:String):int
         {
             var _local_2:Map = this._Str_13600(k, false);
             if (_local_2 != null)
@@ -92,7 +92,7 @@
             return 0;
         }
 
-        public function _Str_11503(k:int, _arg_2:String):IRoomObjectController
+        public function getObjectWithIndexAndType(k:int, _arg_2:String):IRoomObjectController
         {
             var _local_4:IRoomObjectController;
             var _local_3:Map = this._Str_13600(_arg_2, false);
@@ -104,7 +104,7 @@
             return null;
         }
 
-        public function _Str_3915(k:int):Boolean
+        public function disposeObject(k:int):Boolean
         {
             var _local_4:String;
             var _local_5:Map;

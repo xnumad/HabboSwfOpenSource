@@ -8,21 +8,21 @@
     public interface IRoomContentLoader 
     {
         function dispose():void;
-        function _Str_20150(_arg_1:String):String;
-        function _Str_14258():Array;
-        function _Str_5136(_arg_1:String):String;
-        function _Str_22212(_arg_1:String):Boolean;
-        function _Str_16108(_arg_1:String, _arg_2:IEventDispatcher):Boolean;
-        function _Str_21307(_arg_1:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean;
-        function _Str_10580(_arg_1:String):String;
-        function _Str_17270(_arg_1:String):String;
-        function _Str_21673(_arg_1:String):Boolean;
-        function _Str_14929(_arg_1:String):XML;
-        function _Str_22742(_arg_1:String):Boolean;
-        function _Str_6090(_arg_1:String):XML;
-        function _Str_24009(_arg_1:String):Boolean;
-        function _Str_16500(_arg_1:String):XML;
-        function _Str_5052(_arg_1:String):IGraphicAssetCollection;
-        function _Str_19903(_arg_1:IRoomObject, _arg_2:String):void;
+        function getPlaceHolderType(_arg_1:String):String;
+        function getPlaceHolderTypes():Array;
+        function getContentType(_arg_1:String):String;
+        function hasInternalContent(_arg_1:String):Boolean;
+        function loadObjectContent(_arg_1:String, _arg_2:IEventDispatcher):Boolean;
+        function insertObjectContent(_arg_1:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean;
+        function getVisualizationType(_arg_1:String):String;
+        function getLogicType(_arg_1:String):String;
+        function hasVisualizationXML(_arg_1:String):Boolean;
+        function getVisualizationXML(_arg_1:String):XML;
+        function hasAssetXML(_arg_1:String):Boolean;
+        function getAssetXML(_arg_1:String):XML;
+        function hasLogicXML(_arg_1:String):Boolean;
+        function getLogicXML(_arg_1:String):XML;
+        function getGraphicAssetCollection(_arg_1:String):IGraphicAssetCollection;
+        function roomObjectCreated(_arg_1:IRoomObject, _arg_2:String):void;
     }
 }

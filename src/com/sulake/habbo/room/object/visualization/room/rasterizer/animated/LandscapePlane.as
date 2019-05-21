@@ -56,9 +56,9 @@
             {
                 return null;
             }
-            var _local_13:Point = _local_12.geometry._Str_3045(new Vector3d(0, 0, 0));
-            var _local_14:Point = _local_12.geometry._Str_3045(new Vector3d(0, 0, 1));
-            var _local_15:Point = _local_12.geometry._Str_3045(new Vector3d(0, 1, 0));
+            var _local_13:Point = _local_12.geometry.getScreenPoint(new Vector3d(0, 0, 0));
+            var _local_14:Point = _local_12.geometry.getScreenPoint(new Vector3d(0, 0, 1));
+            var _local_15:Point = _local_12.geometry.getScreenPoint(new Vector3d(0, 1, 0));
             if ((((!(_local_13 == null)) && (!(_local_14 == null))) && (!(_local_15 == null))))
             {
                 _arg_2 = Math.round(Math.abs((((_local_13.x - _local_15.x) * _arg_2) / _local_12.geometry.scale)));

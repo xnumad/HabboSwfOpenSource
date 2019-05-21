@@ -414,7 +414,7 @@
             {
                 _local_5 = (this._Str_2920.length * k.scale);
                 _local_6 = (this._Str_2943.length * k.scale);
-                _local_7 = k._Str_8614(this._normal);
+                _local_7 = k.getCoordinatePosition(this._normal);
                 _local_4 = this.getTextureIdentifier(k.scale);
                 if (this._Str_5545 != null)
                 {
@@ -498,7 +498,7 @@
                         _local_8 = _local_7._Str_2125(k.scale);
                         if (_local_8 != null)
                         {
-                            _local_9 = k._Str_8614(this._normal);
+                            _local_9 = k.getCoordinatePosition(this._normal);
                             _local_10 = _local_7._Str_21021(k.scale, _local_9);
                             if (_local_10 != null)
                             {
@@ -517,8 +517,8 @@
 
         private function _Str_24802(k:IRoomGeometry):int
         {
-            var _local_2:Point = k._Str_3045(new Vector3d(0, 0, 0));
-            var _local_3:Point = k._Str_3045(new Vector3d(0, 1, 0));
+            var _local_2:Point = k.getScreenPoint(new Vector3d(0, 0, 0));
+            var _local_3:Point = k.getScreenPoint(new Vector3d(0, 1, 0));
             return Math.round((this._Str_2920.length * Math.abs((_local_2.x - _local_3.x))));
         }
 
@@ -551,7 +551,7 @@
                         {
                             if (((this._Str_13946) && (!(layer._Str_8547() == null))))
                             {
-                                normal = geometry._Str_8614(this._normal);
+                                normal = geometry.getCoordinatePosition(this._normal);
                                 cm = layer._Str_8547()._Str_21968(normal);
                                 data = new PlaneDrawingData(maskData, blend(this._color, layer._Str_751()), cm._Str_14945());
                                 Randomizer._Str_17384(this._Str_16308);
@@ -618,7 +618,7 @@
                 return false;
             }
             var geometryChanged:Boolean;
-            if (this._Str_3406 != geometry._Str_3795)
+            if (this._Str_3406 != geometry.updateId)
             {
                 geometryChanged = true;
             }
@@ -633,7 +633,7 @@
             {
                 this._Str_5545 = null;
                 cosAngle = 0;
-                cosAngle = Vector3d.cosAngle(geometry._Str_14167, this.normal);
+                cosAngle = Vector3d.cosAngle(geometry.directionAxis, this.normal);
                 if (cosAngle > -0.001)
                 {
                     if (this._Str_3816)
@@ -646,7 +646,7 @@
                 i = 0;
                 while (i < this._Str_5886.length)
                 {
-                    cosAngle = Vector3d.cosAngle(geometry._Str_14167, this._Str_5886[i]);
+                    cosAngle = Vector3d.cosAngle(geometry.directionAxis, this._Str_5886[i]);
                     if (cosAngle > -0.001)
                     {
                         if (this._Str_3816)
@@ -659,7 +659,7 @@
                     i = (i + 1);
                 }
                 this._Str_18702(geometry);
-                originPos = geometry._Str_4202(this._Str_5221);
+                originPos = geometry.getScreenPosition(this._Str_5221);
                 originZ = originPos.z;
                 relativeDepth = (Math.max(this._Str_2820.z, this._Str_2745.z, this._Str_2639.z, this._Str_2766.z) - originZ);
                 if (this._type == _Str_3258)
@@ -672,7 +672,7 @@
                 }
                 this._relativeDepth = relativeDepth;
                 this._Str_3816 = true;
-                this._Str_3406 = geometry._Str_3795;
+                this._Str_3406 = geometry.updateId;
             }
             if (((geometryChanged) || (this._Str_10518(geometry, timeSinceStartMs))))
             {
@@ -733,11 +733,11 @@
 
         private function _Str_18702(k:IRoomGeometry):void
         {
-            this._Str_2820._Str_2427(k._Str_4202(this._location));
-            this._Str_2745._Str_2427(k._Str_4202(Vector3d.sum(this._location, this._Str_2943)));
-            this._Str_2639._Str_2427(k._Str_4202(Vector3d.sum(Vector3d.sum(this._location, this._Str_2920), this._Str_2943)));
-            this._Str_2766._Str_2427(k._Str_4202(Vector3d.sum(this._location, this._Str_2920)));
-            this._offset = k._Str_3045(this._Str_5221);
+            this._Str_2820._Str_2427(k.getScreenPosition(this._location));
+            this._Str_2745._Str_2427(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2943)));
+            this._Str_2639._Str_2427(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._location, this._Str_2920), this._Str_2943)));
+            this._Str_2766._Str_2427(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2920)));
+            this._offset = k.getScreenPoint(this._Str_5221);
             this._Str_2820.x = Math.round(this._Str_2820.x);
             this._Str_2820.y = Math.round(this._Str_2820.y);
             this._Str_2745.x = Math.round(this._Str_2745.x);
@@ -1052,7 +1052,7 @@
                     this._Str_2730.fillRect(this._Str_2730.rect, 0xFFFFFF);
                 }
                 this._Str_11000(texture);
-                normal = geometry._Str_8614(this._normal);
+                normal = geometry.getCoordinatePosition(this._normal);
                 posX = 0;
                 posY = 0;
                 i = 0;

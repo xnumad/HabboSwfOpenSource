@@ -1181,7 +1181,7 @@
             INCOMING_PACKETS[2293] = _Str_8246;
             INCOMING_PACKETS[230] = QuestMessageEvent;
             INCOMING_PACKETS[2309] = _Str_4129;
-            INCOMING_PACKETS[0x0909] = _Str_16135;
+            INCOMING_PACKETS[2313] = _Str_16135;
             INCOMING_PACKETS[2324] = _Str_7743;
             INCOMING_PACKETS[233] = _Str_8269;
             INCOMING_PACKETS[2335] = _Str_9341;

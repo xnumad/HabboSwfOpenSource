@@ -84,7 +84,7 @@
             }
             catch(error:Error)
             {
-                Habbo.trackLoginStep(_Str_686.CLIENT_INIT_CORE_FAIL);
+                Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_CORE_FAIL);
 				Habbo.trackLoginStep(error.message);
                 Habbo.reportCrash(("Failed to prepare the core: " + error.message), Core.ERROR_CATEGORY_INITIALIZE_CORE, true, error);
                 Core.dispose();
@@ -199,7 +199,7 @@
             catch(error:Error)
             {
 				Habbo.trackLoginStep(error.getStackTrace());
-                Habbo.trackLoginStep(_Str_686.CLIENT_INIT_CORE_FAIL);
+                Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_CORE_FAIL);
                 Core.crash(("Failed to initialize the core: " + error.message), Core.ERROR_CATEGORY_INITIALIZE_CORE, error);
             }
         }
@@ -229,14 +229,14 @@
 
         private function onLocalizationComplete(k:Event):void
         {
-            Habbo.trackLoginStep(_Str_686.CLIENT_INIT_LOCALIZATION_LOADED);
+            Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_LOCALIZATION_LOADED);
             this._completedInitSteps++;
             this.updateProgressBar();
         }
 
         private function onConfigurationComplete(k:IID, _arg_2:Component):void
         {
-            Habbo.trackLoginStep(_Str_686.CLIENT_INIT_CONFIG_LOADED);
+            Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_CONFIG_LOADED);
             this._completedInitSteps++;
             this.updateProgressBar();
         }
@@ -244,7 +244,7 @@
         private function onRoomEngineReady(k:Event):void
         {
             this.roomEngineReady = true;
-            Habbo.trackLoginStep(_Str_686.CLIENT_INIT_ROOM_READY);
+            Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_ROOM_READY);
             if (this._core.getInteger("spaweb", 0) == 1)
             {
                 this.startSendingHeartBeat();
@@ -265,7 +265,7 @@
         private function onCoreRunning(k:Event):void
         {
             this.coreRunning = true;
-            Habbo.trackLoginStep(_Str_686.CLIENT_INIT_CORE_RUNNING);
+            Habbo.trackLoginStep(ClientEnum.CLIENT_INIT_CORE_RUNNING);
             this._completedInitSteps++;
             this.updateProgressBar();
         }

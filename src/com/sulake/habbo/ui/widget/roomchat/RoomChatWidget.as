@@ -261,7 +261,7 @@
 
         private function _Str_21452(k:_Str_3535):void
         {
-            if (((RoomEnterEffect._Str_1349()) && (!(k._Str_3214 == _Str_3535._Str_4349))))
+            if (((RoomEnterEffect.isRunning()) && (!(k._Str_3214 == _Str_3535._Str_4349))))
             {
                 return;
             }

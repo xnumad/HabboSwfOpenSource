@@ -117,7 +117,7 @@
             while (_local_5 < _local_4.length())
             {
                 _local_6 = _local_4[_local_5];
-                if (!XMLValidator._Str_2747(_local_6, _local_2))
+                if (!XMLValidator.checkRequiredAttributes(_local_6, _local_2))
                 {
                     return false;
                 }
@@ -155,7 +155,7 @@
             while (_local_4 < _arg_2.length())
             {
                 _local_5 = _arg_2[_local_4];
-                if (!XMLValidator._Str_2747(_local_5, _local_3))
+                if (!XMLValidator.checkRequiredAttributes(_local_5, _local_3))
                 {
                     return false;
                 }
@@ -235,7 +235,7 @@
             while (_local_6 < _local_5.length())
             {
                 _local_7 = _local_5[_local_6];
-                if (!XMLValidator._Str_2747(_local_7, _local_3))
+                if (!XMLValidator.checkRequiredAttributes(_local_7, _local_3))
                 {
                     return false;
                 }
@@ -250,7 +250,7 @@
                 while (_local_10 < _local_9.length())
                 {
                     _local_11 = _local_9[_local_10];
-                    if (!XMLValidator._Str_2747(_local_11, _local_4))
+                    if (!XMLValidator.checkRequiredAttributes(_local_11, _local_4))
                     {
                         _local_2.dispose();
                         return false;

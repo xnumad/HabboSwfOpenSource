@@ -922,7 +922,7 @@
             {
                 case RoomEngineEvent.INITIALIZED:
                     _local_3._Str_22664(this._Str_17538(k.roomId));
-                    if (((!(this._roomEngine == null)) && (!(RoomId._Str_18235(k.roomId)))))
+                    if (((!(this._roomEngine == null)) && (!(RoomId.isRoomPreviewerId(k.roomId)))))
                     {
                         this._roomEngine._Str_15680(k.roomId);
                     }

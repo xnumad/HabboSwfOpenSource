@@ -102,7 +102,7 @@
 	import snowwar._Str_496._SafeStr_4690;
 	import snowwar._Str_496._SafeStr_4692;
 	import snowwar._Str_62.SnowWarGameObjectData;
-	import snowwar._Str_62._SafeStr_2467;
+	import snowwar._Str_62.HumanGameObjectData;
 	import snowwar._Str_62._SafeStr_3584;
 	import snowwar._Str_62._SafeStr_3585;
 	import snowwar._Str_62._SafeStr_3586;
@@ -418,7 +418,7 @@
         {
             var _local_3:SnowWarGameStage;
             var _local_4:SnowWarGameObjectData;
-            var _local_5:_SafeStr_2467;
+            var _local_5:HumanGameObjectData;
             var _local_6:Boolean;
             var _local_7:HumanGameObject;
             var _local_8:_SafeStr_3587;
@@ -442,8 +442,8 @@
             {
                 switch (_local_4.type)
                 {
-                    case SnowWarGameObjectData._SafeStr_12572:
-                        _local_5 = (_local_4 as _SafeStr_2467);
+                    case SnowWarGameObjectData.OBJECT_TYPE_HUMAN:
+                        _local_5 = (_local_4 as HumanGameObjectData);
                         _local_6 = (_local_5.name == this._snowWarEngine.sessionDataManager.userName);
                         if (_local_6)
                         {
@@ -471,7 +471,7 @@
                         }
                         HabboGamesCom.log(((((("human id:" + _local_5.id) + " x:") + _local_5.x) + " y:") + _local_5.y));
                         break;
-                    case SnowWarGameObjectData._SafeStr_12568:
+                    case SnowWarGameObjectData.OBJECT_TYPE_SNOWBALL:
                         _local_8 = (_local_4 as _SafeStr_3587);
                         _local_9 = new _SafeStr_4035(_local_8.id);
                         _local_10 = (_local_3.getGameObject(_local_8._SafeStr_18040) as HumanGameObject);
@@ -479,19 +479,19 @@
                         _local_3.addActiveGameObject(_local_9._SafeStr_13236, _local_9);
                         HabboGamesCom.log(((("snowball x:" + _local_8.x) + " y:") + _local_8.y));
                         break;
-                    case SnowWarGameObjectData._SafeStr_12571:
+                    case SnowWarGameObjectData.OBJECT_TYPE_SNOWBALL_MACHINE:
                         _local_11 = (_local_4 as _SafeStr_3585);
                         _local_12 = new _SafeStr_4672(_local_11, _local_3);
                         _local_3.addActiveGameObject(_local_11.id, _local_12);
                         HabboGamesCom.log(("machine id:" + _local_11.id));
                         break;
-                    case SnowWarGameObjectData._SafeStr_12570:
+                    case SnowWarGameObjectData.OBJECT_TYPE_SNOWBALL_PILE:
                         _local_13 = (_local_4 as _SafeStr_3586);
                         _local_14 = new _SafeStr_4671(_local_13, _local_3);
                         _local_3.addActiveGameObject(_local_13.id, _local_14);
                         HabboGamesCom.log(("pile id:" + _local_13.id));
                         break;
-                    case SnowWarGameObjectData._SafeStr_12569:
+                    case SnowWarGameObjectData.OBJECT_TYPE_TREE:
                         _local_15 = (_local_4 as _SafeStr_3584);
                         _local_16 = new TreeGameObject(_local_15, _local_3);
                         _local_3.addActiveGameObject(_local_16._SafeStr_13236, _local_16);

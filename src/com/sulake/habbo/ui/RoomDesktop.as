@@ -555,7 +555,7 @@
                 _local_2 = this._roomEngine._Str_4267(this._session.roomId, this.getFirstCanvasId());
                 if (_local_2 != null)
                 {
-                    this._Str_21074(_local_2._Str_8719(), false);
+                    this._Str_21074(_local_2.isZoomedIn(), false);
                 }
             }
             var k:int;
@@ -1284,14 +1284,14 @@
                 if ((_local_4 is RoomWidgetRoomObjectUpdateEvent))
                 {
                     _local_12 = (_local_4 as RoomWidgetRoomObjectUpdateEvent).roomId;
-                    _local_11 = (!(RoomId._Str_18235(_local_12)));
+                    _local_11 = (!(RoomId.isRoomPreviewerId(_local_12)));
                 }
                 else
                 {
                     if ((_local_4 is _Str_3345))
                     {
                         _local_12 = (_local_4 as _Str_3345).roomId;
-                        _local_11 = (!(RoomId._Str_18235(_local_12)));
+                        _local_11 = (!(RoomId.isRoomPreviewerId(_local_12)));
                     }
                 }
                 if (_local_11)
@@ -1338,7 +1338,7 @@
             var _local_2:Rectangle = this._layoutManager._Str_16760;
             var _local_3:int = _local_2.width;
             var _local_4:int = _local_2.height;
-            var _local_5:int = ((this._session.isGameSession) ? RoomGeometry._Str_9929 : RoomGeometry._Str_7213);
+            var _local_5:int = ((this._session.isGameSession) ? RoomGeometry.SCALE_ZOOMED_OUT : RoomGeometry.SCALE_ZOOMED_IN);
             if (this._canvasIDs.indexOf(k) >= 0)
             {
                 return;
@@ -1733,8 +1733,8 @@
                     _local_3 = this._roomEngine._Str_4267(this._session.roomId, this.getFirstCanvasId());
                     if (_local_3 != null)
                     {
-                        this._Str_21074(_local_3._Str_8719(), true);
-                        _local_3._Str_19206();
+                        this._Str_21074(_local_3.isZoomedIn(), true);
+                        _local_3.performZoom();
                     }
                 }
             }

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.window.widgets
 {
     import com.sulake.core.window.utils.PropertyStruct;
-    import _Str_425._Str_3172;
+    import com.sulake.habbo.room.preview.RoomPreviewer;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.core.window.IWindowContainer;
@@ -23,7 +23,7 @@
         private static const ROOM_PREVIEWER_OFFSET_X:String = (ROOM_PREVIEWER + ":offsetx");
         private static const ROOM_PREVIEWER_OFFSET_Y:String = (ROOM_PREVIEWER + ":offsety");
         private static const ROOM_PREVIEWER_ZOOM:String = (ROOM_PREVIEWER + ":zoom");
-        private static const PROPERTY_SCALE:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_SCALE, _Str_3172._Str_6747, PropertyStruct.INT, false, [_Str_3172._Str_8753, _Str_3172._Str_6747]);
+        private static const PROPERTY_SCALE:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_SCALE, RoomPreviewer._Str_6747, PropertyStruct.INT, false, [RoomPreviewer._Str_8753, RoomPreviewer._Str_6747]);
         private static const PROPERTY_OFFSET_X:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_OFFSET_X, 0, PropertyStruct.INT, false);
         private static const PROPERTY_OFFSET_Y:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_OFFSET_Y, 0, PropertyStruct.INT, false);
         private static const PROPERTY_ZOOM:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_ZOOM, 1, PropertyStruct.INT, false);
@@ -34,7 +34,7 @@
         private var _windowManager:HabboWindowManagerComponent;
         private var _root:IWindowContainer;
         private var _roomCanvas:IDisplayObjectWrapper;
-        private var _roomPreviewer:_Str_3172;
+        private var _roomPreviewer:RoomPreviewer;
         private var _scale:int;
         private var _offsetX:int = 0;
         private var _offsetY:int = 0;
@@ -48,7 +48,7 @@
             super();
             this._widgetWindow = k;
             this._windowManager = _arg_2;
-            this._roomPreviewer = new _Str_3172(_arg_2.roomEngine, _Str_12060++);
+            this._roomPreviewer = new RoomPreviewer(_arg_2.roomEngine, _Str_12060++);
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("room_previewer_xml").content as XML)) as IWindowContainer);
             this._roomCanvas = (this._root.findChildByName("room_canvas") as IDisplayObjectWrapper);
             if (this._roomPreviewer)
@@ -187,7 +187,7 @@
             var k:DisplayObject;
             if (this._roomPreviewer)
             {
-                if ((this._scale == _Str_3172._Str_6747))
+                if ((this._scale == RoomPreviewer._Str_6747))
                 {
                     this._roomPreviewer._Str_24734();
                 }
@@ -224,7 +224,7 @@
             this._roomPreviewer._Str_15499();
         }
 
-        public function get _Str_26451():_Str_3172
+        public function get _Str_26451():RoomPreviewer
         {
             return this._roomPreviewer;
         }

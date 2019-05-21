@@ -12,7 +12,7 @@
     {
         private var _Str_3662:Sprite;
         private var _Str_6609:Sprite;
-        private var _Str_621:String;
+        private var _state:String;
 
         public function _Str_9571()
         {
@@ -22,7 +22,7 @@
         public function _Str_3820(k:String):void
         {
             visible = true;
-            this._Str_621 = k;
+            this._state = k;
             switch (k)
             {
                 case _Str_2872.VIDEOSTATEPLAYING:
@@ -77,7 +77,7 @@
             this._Str_4149();
             addEventListener(MouseEvent.MOUSE_OVER, this.onMouseOver, false, 0, true);
             addEventListener(MouseEvent.MOUSE_OUT, this.onMouseOut, false, 0, true);
-            this._Str_621 = _Str_2872.VIDEOSTATEPAUSED;
+            this._state = _Str_2872.VIDEOSTATEPAUSED;
         }
 
         private function onMouseOver(k:MouseEvent):void

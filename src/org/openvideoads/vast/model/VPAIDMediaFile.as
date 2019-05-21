@@ -125,7 +125,7 @@
 
         override public function unload():void
         {
-            if (this._Str_1349())
+            if (this.isRunning())
             {
                 this._Str_7538 = true;
                 this._Str_2339.stopAd();
@@ -148,14 +148,14 @@
             return null;
         }
 
-        public function _Str_1349():Boolean
+        public function isRunning():Boolean
         {
             return (!(this._Str_2339 == null)) && (this._Str_635);
         }
 
         public function _Str_25919():Boolean
         {
-            if (this._Str_1349())
+            if (this.isRunning())
             {
                 return (this._Str_2339.adLinear == false) && (this._Str_2339.adExpanded == false);
             }

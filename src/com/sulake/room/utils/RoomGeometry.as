@@ -5,8 +5,8 @@
 
     public class RoomGeometry implements IRoomGeometry 
     {
-        public static const _Str_7213:Number = 64;
-        public static const _Str_9929:Number = 32;
+        public static const SCALE_ZOOMED_IN:Number = 64;
+        public static const SCALE_ZOOMED_OUT:Number = 32;
 
         private var _updateId:int = 0;
         private var _x:Vector3d;
@@ -44,7 +44,7 @@
             this._Str_24918 = 1;
             this._Str_23594 = 1;
             this._z_scale_internal = (Math.sqrt((1 / 2)) / Math.sqrt((3 / 4)));
-            this._Str_17100 = 1;
+            this.z_scale = 1;
             this.location = new Vector3d(_arg_3.x, _arg_3.y, _arg_3.z);
             this.direction = new Vector3d(_arg_2.x, _arg_2.y, _arg_2.z);
             if (_arg_4 != null)
@@ -72,7 +72,7 @@
         }
 
 
-        public function get _Str_3795():int
+        public function get updateId():int
         {
             return this._updateId;
         }
@@ -82,7 +82,7 @@
             return this._scale / Math.sqrt(0.5);
         }
 
-        public function get _Str_14167():IVector3D
+        public function get directionAxis():IVector3D
         {
             return this._directionAxis;
         }
@@ -119,7 +119,7 @@
             }
         }
 
-        public function set _Str_17100(k:Number):void
+        public function set z_scale(k:Number):void
         {
             if (this._z_scale != (k * this._z_scale_internal))
             {
@@ -242,7 +242,7 @@
             }
         }
 
-        public function _Str_19274(k:IVector3D, _arg_2:IVector3D):void
+        public function setDisplacement(k:IVector3D, _arg_2:IVector3D):void
         {
             var _local_3:String;
             var _local_4:Vector3d;
@@ -311,7 +311,7 @@
             this._updateId++;
         }
 
-        public function _Str_9651(k:IVector3D, _arg_2:Number):void
+        public function adjustLocation(k:IVector3D, _arg_2:Number):void
         {
             if (((k == null) || (this._z == null)))
             {
@@ -322,7 +322,7 @@
             this.location = _local_4;
         }
 
-        public function _Str_8614(k:IVector3D):IVector3D
+        public function getCoordinatePosition(k:IVector3D):IVector3D
         {
             if (k == null)
             {
@@ -335,7 +335,7 @@
             return _local_5;
         }
 
-        public function _Str_4202(k:IVector3D):IVector3D
+        public function getScreenPosition(k:IVector3D):IVector3D
         {
             var _local_2:Vector3d = Vector3d._Str_5385(k, this._loc);
             _local_2.x = (_local_2.x * this._x_scale);
@@ -366,9 +366,9 @@
             return _local_2;
         }
 
-        public function _Str_3045(k:IVector3D):Point
+        public function getScreenPoint(k:IVector3D):Point
         {
-            var _local_2:IVector3D = this._Str_4202(k);
+            var _local_2:IVector3D = this.getScreenPosition(k);
             if (_local_2 == null)
             {
                 return null;
@@ -377,7 +377,7 @@
             return _local_3;
         }
 
-        public function _Str_21466(k:Point, _arg_2:IVector3D, _arg_3:IVector3D, _arg_4:IVector3D):Point
+        public function getPlanePosition(k:Point, _arg_2:IVector3D, _arg_3:IVector3D, _arg_4:IVector3D):Point
         {
             var _local_15:Number;
             var _local_16:Number;
@@ -404,31 +404,31 @@
             return null;
         }
 
-        public function _Str_19206():void
+        public function performZoom():void
         {
-            if (this._Str_8719())
+            if (this.isZoomedIn())
             {
-                this.scale = _Str_9929;
+                this.scale = SCALE_ZOOMED_OUT;
             }
             else
             {
-                this.scale = _Str_7213;
+                this.scale = SCALE_ZOOMED_IN;
             }
         }
 
-        public function _Str_8719():Boolean
+        public function isZoomedIn():Boolean
         {
-            return this.scale == _Str_7213;
+            return this.scale == SCALE_ZOOMED_IN;
         }
 
-        public function _Str_18667():void
+        public function performZoomOut():void
         {
-            this.scale = _Str_9929;
+            this.scale = SCALE_ZOOMED_OUT;
         }
 
-        public function _Str_17302():void
+        public function performZoomIn():void
         {
-            this.scale = _Str_7213;
+            this.scale = SCALE_ZOOMED_IN;
         }
     }
 }

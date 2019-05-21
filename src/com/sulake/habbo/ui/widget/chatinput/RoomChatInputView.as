@@ -297,7 +297,7 @@
         private function _Str_14171():void
         {
             var k:IWindow;
-            if (RoomEnterEffect._Str_1349())
+            if (RoomEnterEffect.isRunning())
             {
                 k = this._widget.windowManager.createWindow("chat_dimmer", "", WindowType.WINDOW_TYPE_BORDER, _Str_3108._Str_9798, ((WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(0, 0, this._chatInputContainerWindow.width, this._chatInputContainerWindow.height), null, 0);
                 k.color = 0;
@@ -306,7 +306,7 @@
                 this._chatInputContainerWindow.invalidate();
                 if (this._removeDimmerTimer == null)
                 {
-                    this._removeDimmerTimer = new Timer(RoomEnterEffect._Str_17562, 1);
+                    this._removeDimmerTimer = new Timer(RoomEnterEffect.totalRunningTime, 1);
                     this._removeDimmerTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
                     this._removeDimmerTimer.start();
                 }

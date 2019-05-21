@@ -3,7 +3,7 @@
     import mx.core.SimpleApplication;
     import com.sulake.bootstrap.RoomManagerBootstrap;
     import com.sulake.iid.IIDRoomManager;
-    import binaryData.*;
+    import binaryData._Str_15505;
 
     public class RoomManagerLib extends SimpleApplication 
     {

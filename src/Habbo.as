@@ -221,7 +221,7 @@
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             this.enableAccessFromJavascript();
             Habbo.PROCESSLOG_ENABLED = (stage.loaderInfo.parameters["processlog.enabled"] == "1");
-            trackLoginStep(_Str_686.CLIENT_INIT_START);
+            trackLoginStep(ClientEnum.CLIENT_INIT_START);
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.quality = StageQuality.LOW;
             stage.align = StageAlign.TOP_LEFT;
@@ -261,7 +261,7 @@
             catch(error:Error)
             {
 				trackLoginStep(error.getStackTrace());
-                trackLoginStep(_Str_686.CLIENT_INIT_SWF_ERROR);
+                trackLoginStep(ClientEnum.CLIENT_INIT_SWF_ERROR);
 				trackLoginStep("Failed to finalize main swf preloading: " + error.message);
                 reportCrash(("Failed to finalize main swf preloading: " + error.message), ERROR_CATEGORY_FINALIZE_PRELOADING, true, error);
             }
@@ -272,7 +272,7 @@
             setTimeout(function ():void
             {
 				trackLoginStep(event.toString());
-                trackLoginStep(_Str_686.CLIENT_INIT_SWF_ERROR);
+                trackLoginStep(ClientEnum.CLIENT_INIT_SWF_ERROR);
 				trackLoginStep(((((("IO error in main swf preloading: " + event.text) + " / URL: ") + root.loaderInfo.loaderURL) + " / HTTP status: ") + _httpStatus));
                 reportCrash(((((("IO error in main swf preloading: " + event.text) + " / URL: ") + root.loaderInfo.loaderURL) + " / HTTP status: ") + _httpStatus), ERROR_CATEGORY_FINALIZE_PRELOADING, true, null);
             }, 50000);
@@ -303,7 +303,7 @@
                 {
                     this._cachedBytesTotal = uint(APPROXIMATE_SWF_SIZE);
                     this._gzipEnvironmentReported = true;
-                    trackLoginStep(_Str_686.CLIENT_GZIP_ENVIRONMENT);
+                    trackLoginStep(ClientEnum.CLIENT_GZIP_ENVIRONMENT);
                 }
             }
             if (root.loaderInfo.bytesTotal != 0)
@@ -382,7 +382,7 @@
             var k:Class;
             var _local_2:DisplayObject;
             this.trackNewReceptionStep(STEP_CLIENT_LOADED);
-            trackLoginStep(_Str_686.CLIENT_INIT_SWF_LOADED);
+            trackLoginStep(ClientEnum.CLIENT_INIT_SWF_LOADED);
             root.loaderInfo.removeEventListener(ProgressEvent.PROGRESS, this.onPreLoadingProgress);
             root.loaderInfo.removeEventListener(HTTPStatusEvent.HTTP_STATUS, this.onPreLoadingStatus);
             root.loaderInfo.removeEventListener(Event.COMPLETE, this.onPreLoadingCompleted);
@@ -726,7 +726,7 @@ import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7827; com.
 import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887; com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
 import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054; com.sulake.habbo.communication.messages.outgoing._Str_416._Str_12054;
 import com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365; com.sulake.habbo.communication.messages.outgoing._Str_416._Str_3365;
-import _Str_425._Str_3172; _Str_425._Str_3172;
+import com.sulake.habbo.room.preview.RoomPreviewer; com.sulake.habbo.room.preview.RoomPreviewer;
 import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856; com.sulake.habbo.communication.messages.outgoing._Str_428._Str_10856;
 import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_11372; com.sulake.habbo.communication.messages.outgoing._Str_428._Str_11372;
 import com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584; com.sulake.habbo.communication.messages.outgoing._Str_428._Str_4584;
@@ -734,9 +734,9 @@ import com.sulake.habbo.communication.messages.incoming._Str_433._Str_16597; com
 import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269; com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
 import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892; com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
 import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129; com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
-import _Str_434._Str_6542; _Str_434._Str_6542;
-import _Str_434._Str_7318; _Str_434._Str_7318;
-import _Str_434._Str_7846; _Str_434._Str_7846;
+import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser; com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
+import com.sulake.habbo.communication.messages.parser.recycler.RecyclerStatusMessageParser; com.sulake.habbo.communication.messages.parser.recycler.RecyclerStatusMessageParser;
+import com.sulake.habbo.communication.messages.parser.recycler.RecyclerPrizesMessageParser; com.sulake.habbo.communication.messages.parser.recycler.RecyclerPrizesMessageParser;
 import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023; com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023;
 import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289; com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
 import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089; com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
@@ -762,7 +762,7 @@ import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_17897; com
 import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18615; com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18615;
 import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18745; com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18745;
 import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870; com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
-import _Str_471._Str_7007; _Str_471._Str_7007;
+import _Str_471.RoomAdErrorMessageParser; _Str_471.RoomAdErrorMessageParser;
 import _Str_471._Str_7915; _Str_471._Str_7915;
 import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332; com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
 import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358; com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
@@ -782,7 +782,7 @@ import _Str_524._Str_7576; _Str_524._Str_7576;
 import com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083; com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083;
 import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665; com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
 import _Str_534._Str_8888; _Str_534._Str_8888;
-import _Str_538._Str_9612; _Str_538._Str_9612;
+import com.sulake.core.communication.handshake.IKeyExchange; com.sulake.core.communication.handshake.IKeyExchange;
 import _Str_539._Str_8895; _Str_539._Str_8895;
 import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971; com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
 import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402; com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
@@ -791,7 +791,7 @@ import com.sulake.habbo.communication.messages.outgoing._Str_549._Str_9845; com.
 import com.sulake.habbo.communication.messages.outgoing._Str_550._Str_11999; com.sulake.habbo.communication.messages.outgoing._Str_550._Str_11999;
 import com.sulake.habbo.communication.messages.outgoing._Str_551._Str_12132; com.sulake.habbo.communication.messages.outgoing._Str_551._Str_12132;
 import _Str_555._Str_11981; _Str_555._Str_11981;
-import _Str_556._Str_10411; _Str_556._Str_10411;
+import com.sulake.habbo.moderation._Str_556._Str_10411; com.sulake.habbo.moderation._Str_556._Str_10411;
 import com.sulake.habbo.communication.messages.outgoing._Str_566._Str_16121; com.sulake.habbo.communication.messages.outgoing._Str_566._Str_16121;
 import com.sulake.habbo.communication.messages.incoming._Str_567._Str_15969; com.sulake.habbo.communication.messages.incoming._Str_567._Str_15969;
 import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10079; com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10079;
@@ -871,7 +871,7 @@ import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7426; com.s
 import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9764; com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9764;
 import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9801; com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9801;
 import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9862; com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9862;
-import _Str_686; _Str_686;
+import ClientEnum; ClientEnum;
 import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078; com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10078;
 import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187; com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10187;
 import com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602; com.sulake.habbo.communication.messages.outgoing._Str_79._Str_10602;
@@ -2706,7 +2706,7 @@ import com.sulake.habbo.communication.enum.HabboCommunicationEvent; com.sulake.h
 import com.sulake.habbo.communication.enum.HabboHotelViewEvent; com.sulake.habbo.communication.enum.HabboHotelViewEvent;
 import com.sulake.habbo.communication.enum.HabboWeb; com.sulake.habbo.communication.enum.HabboWeb;
 import com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum; com.sulake.habbo.communication.enum.TargetedOfferTrackingStateEnum;
-import com.sulake.habbo.communication.enum._Str_10354; com.sulake.habbo.communication.enum._Str_10354;
+import com.sulake.habbo.communication.enum.NoobnessLevelEnum; com.sulake.habbo.communication.enum.NoobnessLevelEnum;
 import com.sulake.habbo.communication.enum._Str_10666; com.sulake.habbo.communication.enum._Str_10666;
 import com.sulake.habbo.communication.enum._Str_6905; com.sulake.habbo.communication.enum._Str_6905;
 import com.sulake.habbo.communication.enum.perk.PerkEnum; com.sulake.habbo.communication.enum.perk.PerkEnum;
@@ -7591,7 +7591,7 @@ import snowwar._Str_496._SafeStr_4692; snowwar._Str_496._SafeStr_4692;
 import snowwar._Str_512.SnowStormFullGameStatusParser; snowwar._Str_512.SnowStormFullGameStatusParser;
 import snowwar._Str_512.SnowStormGameStatusParser; snowwar._Str_512.SnowStormGameStatusParser;
 import snowwar._Str_62.SnowWarGameObjectData; snowwar._Str_62.SnowWarGameObjectData;
-import snowwar._Str_62._SafeStr_2467; snowwar._Str_62._SafeStr_2467;
+import snowwar._Str_62.HumanGameObjectData; snowwar._Str_62.HumanGameObjectData;
 import snowwar._Str_62._SafeStr_3584; snowwar._Str_62._SafeStr_3584;
 import snowwar._Str_62._SafeStr_3585; snowwar._Str_62._SafeStr_3585;
 import snowwar._Str_62._SafeStr_3586; snowwar._Str_62._SafeStr_3586;
@@ -7695,4 +7695,4 @@ import splash.images.PhotoSplashScreen_splashImg8; splash.images.PhotoSplashScre
 import splash.images.PhotoSplashScreen_splashImg9; splash.images.PhotoSplashScreen_splashImg9;
 import splash.images._Str_857; splash.images._Str_857;
 import splash.images._Str_905; splash.images._Str_905;
-import sulake.habboclient._Str_5079; sulake.habboclient._Str_5079;
+import com.sulake.habboclient._Str_5079; com.sulake.habboclient._Str_5079;

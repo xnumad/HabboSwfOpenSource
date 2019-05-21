@@ -219,7 +219,7 @@
             var k:IItemListWindow = (_window.findChildByName("item_list_hc") as IItemListWindow);
             if (k != null)
             {
-                _local_2 = _Str_6090("club_buy_info_item");
+                _local_2 = getAssetXML("club_buy_info_item");
                 _local_3 = page.viewer.catalog.windowManager.buildFromXML(_local_2);
                 k.addListItem(_local_3);
             }

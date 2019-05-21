@@ -395,7 +395,7 @@
             var _local_7:Number = ((this._chatFlowViewer._Str_5128.stage.stageHeight * _local_5) / 2);
             if (((!(_local_4 == null)) && (!(_arg_2 == null))))
             {
-                _local_8 = _local_4._Str_3045(_arg_2);
+                _local_8 = _local_4.getScreenPoint(_arg_2);
                 if (_local_8 != null)
                 {
                     _local_6 = (_local_6 + (_local_8.x * _local_5));

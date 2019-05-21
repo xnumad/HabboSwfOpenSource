@@ -13,8 +13,8 @@
 
         private var _Str_576:int;
         private var _Str_578:String = "";
-        private var _Str_2416:Vector3d;
-        private var _Str_2589:Vector3d;
+        private var _loc:Vector3d;
+        private var _dir:Vector3d;
         private var _Str_17023:Vector3d;
         private var _Str_18908:Vector3d;
         private var _Str_6775:Array;
@@ -28,8 +28,8 @@
         public function RoomObject(k:int, _arg_2:int, _arg_3:String)
         {
             this._Str_576 = k;
-            this._Str_2416 = new Vector3d();
-            this._Str_2589 = new Vector3d();
+            this._loc = new Vector3d();
+            this._dir = new Vector3d();
             this._Str_17023 = new Vector3d();
             this._Str_18908 = new Vector3d();
             this._Str_6775 = new Array(_arg_2);
@@ -49,8 +49,8 @@
 
         public function dispose():void
         {
-            this._Str_2416 = null;
-            this._Str_2589 = null;
+            this._loc = null;
+            this._dir = null;
             this._Str_6775 = null;
             this._Str_14063(null);
             this._Str_8711(null);
@@ -88,13 +88,13 @@
 
         public function getLocation():IVector3D
         {
-            this._Str_17023._Str_2427(this._Str_2416);
+            this._Str_17023._Str_2427(this._loc);
             return this._Str_17023;
         }
 
         public function getDirection():IVector3D
         {
-            this._Str_18908._Str_2427(this._Str_2589);
+            this._Str_18908._Str_2427(this._dir);
             return this._Str_18908;
         }
 
@@ -128,11 +128,11 @@
             {
                 return;
             }
-            if ((((!(this._Str_2416.x == k.x)) || (!(this._Str_2416.y == k.y))) || (!(this._Str_2416.z == k.z))))
+            if ((((!(this._loc.x == k.x)) || (!(this._loc.y == k.y))) || (!(this._loc.z == k.z))))
             {
-                this._Str_2416.x = k.x;
-                this._Str_2416.y = k.y;
-                this._Str_2416.z = k.z;
+                this._loc.x = k.x;
+                this._loc.y = k.y;
+                this._loc.z = k.z;
                 this._Str_2542++;
             }
         }
@@ -143,11 +143,11 @@
             {
                 return;
             }
-            if ((((!(this._Str_2589.x == k.x)) || (!(this._Str_2589.y == k.y))) || (!(this._Str_2589.z == k.z))))
+            if ((((!(this._dir.x == k.x)) || (!(this._dir.y == k.y))) || (!(this._dir.z == k.z))))
             {
-                this._Str_2589.x = (((k.x % 360) + 360) % 360);
-                this._Str_2589.y = (((k.y % 360) + 360) % 360);
-                this._Str_2589.z = (((k.z % 360) + 360) % 360);
+                this._dir.x = (((k.x % 360) + 360) % 360);
+                this._dir.y = (((k.y % 360) + 360) % 360);
+                this._dir.z = (((k.z % 360) + 360) % 360);
                 this._Str_2542++;
             }
         }

@@ -30,7 +30,7 @@
             super.dispose();
         }
 
-        public function _Str_20941(k:IConnectionStateListener=null):IConnection
+        public function createConnection(k:IConnectionStateListener=null):IConnection
         {
             var _local_2:IConnection = new SocketConnection(this, k);
             this._connections.push(_local_2);

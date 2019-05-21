@@ -44,12 +44,12 @@
             }
             var _local_3:Boolean;
             var _local_4:IVector3D = k.getLocation();
-            if (((!(_arg_2._Str_3795 == this._geometryUpdateId)) || (!(k._Str_3273() == this._objectUpdateId))))
+            if (((!(_arg_2.updateId == this._geometryUpdateId)) || (!(k._Str_3273() == this._objectUpdateId))))
             {
                 this._objectUpdateId = k._Str_3273();
-                if (((((!(_arg_2._Str_3795 == this._geometryUpdateId)) || (!(_local_4.x == this._objectUpdateLoc.x))) || (!(_local_4.y == this._objectUpdateLoc.y))) || (!(_local_4.z == this._objectUpdateLoc.z))))
+                if (((((!(_arg_2.updateId == this._geometryUpdateId)) || (!(_local_4.x == this._objectUpdateLoc.x))) || (!(_local_4.y == this._objectUpdateLoc.y))) || (!(_local_4.z == this._objectUpdateLoc.z))))
                 {
-                    this._geometryUpdateId = _arg_2._Str_3795;
+                    this._geometryUpdateId = _arg_2.updateId;
                     this._objectUpdateLoc._Str_2427(_local_4);
                     _local_3 = true;
                 }
@@ -57,7 +57,7 @@
             this._locationChanged = _local_3;
             if (_local_3)
             {
-                _local_5 = _arg_2._Str_4202(_local_4);
+                _local_5 = _arg_2.getScreenPosition(_local_4);
                 if (_local_5 == null)
                 {
                     return null;
@@ -68,7 +68,7 @@
                     _local_7 = new Vector3d(Math.round(_local_4.x), Math.round(_local_4.y), _local_4.z);
                     if (((!(_local_7.x == _local_4.x)) || (!(_local_7.y == _local_4.y))))
                     {
-                        _local_8 = _arg_2._Str_4202(_local_7);
+                        _local_8 = _arg_2.getScreenPosition(_local_7);
                         this._screenLoc._Str_2427(_local_5);
                         if (_local_8 != null)
                         {

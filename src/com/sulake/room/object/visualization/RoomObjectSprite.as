@@ -39,7 +39,7 @@
         public function RoomObjectSprite()
         {
             this._Str_588 = new Point(0, 0);
-            this._Str_13928 = AlphaTolerance._Str_9735;
+            this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
             this._Str_17033 = RoomObjectSpriteType.DEFAULT;
             super();
             this._Str_4848 = _Str_3822++;
@@ -162,7 +162,7 @@
             return this._Str_4848;
         }
 
-        public function get _Str_3795():int
+        public function get updateId():int
         {
             return this._Str_2542;
         }

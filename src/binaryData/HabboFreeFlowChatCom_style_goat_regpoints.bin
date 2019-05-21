@@ -1,6 +1,7 @@
 9sliceXY = 29,19
 9sliceWH = 1,1
 pointerY = 25
+faceXY = 11,12
 textFieldMargins = 28,6,12,7
 textColorRGB = 0x000000
 fontFace = Ubuntu

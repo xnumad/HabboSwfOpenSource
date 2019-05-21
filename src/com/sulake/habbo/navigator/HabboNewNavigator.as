@@ -513,7 +513,7 @@
             this._Str_3310("hotel_view", ("tag:" + k));
         }
 
-        public function _Str_5942():void
+        public function createRoom():void
         {
             this._legacyNavigator._Str_15114.show();
         }

@@ -4,7 +4,7 @@
 
     public class _SafeStr_3587 extends SnowWarGameObjectData 
     {
-        public static const _SafeStr_12576:int = 11;
+        public static const NUM_OF_VARIABLES:int = 11;
         public static const _SafeStr_13247:int = 0;
         public static const _SafeStr_13245:int = 1;
         public static const _SafeStr_13243:int = 2;
@@ -16,7 +16,7 @@
 
         override public function parse(k:IMessageDataWrapper):void
         {
-            _SafeStr_12575(k, _SafeStr_12576);
+            parseVariables(k, NUM_OF_VARIABLES);
         }
 
         public function get x():int

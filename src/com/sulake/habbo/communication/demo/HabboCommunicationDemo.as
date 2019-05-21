@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.Component;
     import com.sulake.core.communication.encryption.rsa.RSAKey;
-    import _Str_538._Str_9612;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import com.sulake.habbo.communication.IHabboCommunicationManager;
     import com.sulake.habbo.window.IHabboWindowManager;
     import flash.events.Event;
@@ -76,7 +76,7 @@
         private var _externalVariablesUrl:String;
         private var _rsa:RSAKey;
         private var _privateKey:String;
-        private var _keyExchange:_Str_9612;
+        private var _keyExchange:IKeyExchange;
         private var _handshakeInProgress:Boolean;
         private var _communication:IHabboCommunicationManager;
         private var _windowManager:IHabboWindowManager;
@@ -330,7 +330,7 @@
             {
                 _local_13 = this._Str_24975(30);
                 this._keyExchange.init(_local_13);
-                _local_16 = this._keyExchange._Str_19483(10);
+                _local_16 = this._keyExchange.getPublicKey(10);
                 if (_local_16.length < 64)
                 {
                     if (((_local_11 == null) || (_local_16.length > _local_11.length)))
@@ -368,8 +368,8 @@
             _local_4.writeBytes(CryptoTools.hexStringToByteArray(_local_3._Str_16514));
             this._rsa.verify(_local_4, _local_5, _local_4.length);
             this._rsa.dispose();
-            this._keyExchange._Str_21719(_local_5.toString(), 10);
-            var _local_6:String = this._keyExchange._Str_16542(16).toUpperCase();
+            this._keyExchange.generateSharedKey(_local_5.toString(), 10);
+            var _local_6:String = this._keyExchange.getSharedKey(16).toUpperCase();
             if (((!(this._keyExchange._Str_20000())) || (!(this._keyExchange._Str_21716()))))
             {
                 return;

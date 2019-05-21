@@ -4,76 +4,76 @@
 
     public class RoomEnterEffect 
     {
-        public static const _Str_14599:int = 0;
-        public static const _Str_11894:int = 1;
-        public static const _Str_14215:int = 2;
-        public static const _Str_12882:int = 3;
-        private static var _Str_621:int = _Str_14599;//0
-        private static var _Str_7125:Boolean = false;
-        private static var _Str_11007:Number;
-        private static var _Str_12311:int = 0;
-        private static var _Str_6886:int = (20 * 1000);//20000
-        private static var _Str_7448:int = 2000;
+        public static const STATE_NOT_INITIALIZED:int = 0;
+        public static const STATE_START_DELAY:int = 1;
+        public static const STATE_RUNNING:int = 2;
+        public static const STATE_OVER:int = 3;
+        private static var _state:int = STATE_NOT_INITIALIZED;//0
+        private static var _visualizationOn:Boolean = false;
+        private static var _currentDelta:Number;
+        private static var _initializationTimeMs:int = 0;
+        private static var _startDelayMs:int = (20 * 1000);//20000
+        private static var _effectDurationMs:int = 2000;
 
 
         public static function init(k:int, _arg_2:int):void
         {
-            _Str_11007 = 0;
-            _Str_6886 = k;
-            _Str_7448 = _arg_2;
-            _Str_12311 = getTimer();
-            _Str_621 = _Str_11894;
+            _currentDelta = 0;
+            _startDelayMs = k;
+            _effectDurationMs = _arg_2;
+            _initializationTimeMs = getTimer();
+            _state = STATE_START_DELAY;
         }
 
-        public static function _Str_23419():void
+        public static function turnVisualizationOn():void
         {
-            if (((_Str_621 == _Str_14599) || (_Str_621 == _Str_12882)))
+            if (((_state == STATE_NOT_INITIALIZED) || (_state == STATE_OVER)))
             {
                 return;
             }
-            var k:int = (getTimer() - _Str_12311);
-            if (k > (_Str_6886 + _Str_7448))
+            var k:int = (getTimer() - _initializationTimeMs);
+            if (k > (_startDelayMs + _effectDurationMs))
             {
-                _Str_621 = _Str_12882;
+                _state = STATE_OVER;
                 return;
             }
-            _Str_7125 = true;
-            if (k < _Str_6886)
+            _visualizationOn = true;
+            if (k < _startDelayMs)
             {
-                _Str_621 = _Str_11894;
+                _state = STATE_START_DELAY;
                 return;
             }
-            _Str_621 = _Str_14215;
-            _Str_11007 = ((k - _Str_6886) / _Str_7448);
+            _state = STATE_RUNNING;
+            _currentDelta = ((k - _startDelayMs) / _effectDurationMs);
         }
 
-        public static function _Str_22392():void
+        public static function turnVisualizationOff():void
         {
-            _Str_7125 = false;
+            _visualizationOn = false;
         }
 
-        public static function _Str_19559():Boolean
+        public static function isVisualizationOn():Boolean
         {
-            return (_Str_7125) && (_Str_1349());
+            return (_visualizationOn) && (isRunning());
         }
 
-        public static function _Str_1349():Boolean
+        public static function isRunning():Boolean
         {
-            if (((_Str_621 == _Str_11894) || (_Str_621 == _Str_14215)))
+            if (((_state == STATE_START_DELAY) || (_state == STATE_RUNNING)))
             {
                 return true;
             }
             return false;
         }
 
-        public static function _Str_16017(k:Number=0, _arg_2:Number=1):Number
+        public static function getDelta(k:Number=0, _arg_2:Number=1):Number
         {
-            return Math.min(Math.max(_Str_11007, k), _arg_2);
+            return Math.min(Math.max(_currentDelta, k), _arg_2);
         }
 
-        public static function get _Str_17562():int
+        public static function get totalRunningTime():int
         {
-            return _Str_6886 + _Str_7448;
+            return _startDelayMs + _effectDurationMs;
         }
     }
 }

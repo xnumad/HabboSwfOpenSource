@@ -382,7 +382,7 @@
             var _local_15:Number = _local_3._Str_24406;
             var _local_16:Number = _local_3._Str_25684;
             var _local_17:Point = new Point(_local_15, _local_16);
-            _local_7 = _arg_2._Str_21466(_local_17, _local_8, _local_9, _local_10);
+            _local_7 = _arg_2.getPlanePosition(_local_17, _local_8, _local_9, _local_10);
             if (_local_7 == null)
             {
                 _local_4.setNumber(RoomObjectVariableEnum.ROOM_SELECTED_PLANE, 0);

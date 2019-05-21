@@ -98,7 +98,7 @@
 
         private function _Str_13309(k:int, _arg_2:int):Number
         {
-            return (k * _arg_2) / RoomGeometry._Str_7213;
+            return (k * _arg_2) / RoomGeometry.SCALE_ZOOMED_IN;
         }
     }
 }

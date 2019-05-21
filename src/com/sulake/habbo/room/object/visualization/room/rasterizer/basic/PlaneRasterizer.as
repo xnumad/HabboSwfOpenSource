@@ -263,7 +263,7 @@
             while (_local_4 < _local_3.length())
             {
                 _local_5 = _local_3[_local_4];
-                if (XMLValidator._Str_2747(_local_5, ["id"]))
+                if (XMLValidator.checkRequiredAttributes(_local_5, ["id"]))
                 {
                     _local_6 = _local_5.@id;
                     if (this._textures.getValue(_local_6) == null)
@@ -274,7 +274,7 @@
                         while (_local_9 < _local_8.length())
                         {
                             _local_10 = _local_8[_local_9];
-                            if (XMLValidator._Str_2747(_local_10, ["assetName"]))
+                            if (XMLValidator.checkRequiredAttributes(_local_10, ["assetName"]))
                             {
                                 _local_11 = PlaneTexture._Str_3268;
                                 _local_12 = PlaneTexture._Str_3271;
@@ -357,7 +357,7 @@
             while (_local_3 < _local_2.length())
             {
                 _local_4 = _local_2[_local_3];
-                if (XMLValidator._Str_2747(_local_4, ["id"]))
+                if (XMLValidator.checkRequiredAttributes(_local_4, ["id"]))
                 {
                     _local_5 = _local_4.@id;
                     _local_6 = new PlaneMaterial();
@@ -563,7 +563,7 @@
                 while (_local_5 < _local_4.length())
                 {
                     _local_6 = _local_4[_local_5];
-                    if (XMLValidator._Str_2747(_local_6, _local_3))
+                    if (XMLValidator.checkRequiredAttributes(_local_6, _local_3))
                     {
                         _local_7 = _local_6.@assetName;
                         _local_2.push(_local_7);
@@ -590,7 +590,7 @@
                 while (_local_5 < _local_4.length())
                 {
                     _local_6 = _local_4[_local_5];
-                    if (XMLValidator._Str_2747(_local_6, _local_3))
+                    if (XMLValidator.checkRequiredAttributes(_local_6, _local_3))
                     {
                         _local_7 = parseInt(_local_6.@x);
                         _local_8 = parseInt(_local_6.@y);
@@ -652,7 +652,7 @@
             while (_local_3 < _arg_2.length())
             {
                 _local_4 = _arg_2[_local_3];
-                if (XMLValidator._Str_2747(_local_4, ["size"]))
+                if (XMLValidator.checkRequiredAttributes(_local_4, ["size"]))
                 {
                     _local_5 = parseInt(_local_4.@size);
                     _local_6 = _local_4.@horizontalAngle;
@@ -677,7 +677,7 @@
                             _local_13 = _local_10[_local_12];
                             _local_14 = null;
                             _local_15 = PlaneVisualizationLayer._Str_6914;
-                            if (XMLValidator._Str_2747(_local_13, ["materialId"]))
+                            if (XMLValidator.checkRequiredAttributes(_local_13, ["materialId"]))
                             {
                                 _local_21 = _local_13.@materialId;
                                 _local_14 = this._Str_8547(_local_21);

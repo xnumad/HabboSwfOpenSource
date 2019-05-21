@@ -52,7 +52,7 @@
             while (_local_6 < _local_5.length())
             {
                 _local_7 = _local_5[_local_6];
-                if (!XMLValidator._Str_2747(_local_7, _local_2))
+                if (!XMLValidator.checkRequiredAttributes(_local_7, _local_2))
                 {
                     return false;
                 }
@@ -66,7 +66,7 @@
                     return false;
                 }
                 _local_13 = _local_12[0];
-                if (!XMLValidator._Str_2747(_local_13, _local_3))
+                if (!XMLValidator.checkRequiredAttributes(_local_13, _local_3))
                 {
                     return false;
                 }

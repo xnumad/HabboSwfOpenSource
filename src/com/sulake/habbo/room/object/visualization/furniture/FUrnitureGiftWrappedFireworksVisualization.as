@@ -13,7 +13,7 @@
 
         private var _Str_9824:int = 0;
         private var _Str_9729:int = 0;
-        private var _Str_621:int = 0;
+        private var _state:int = 0;
 
 
         override public function update(k:IRoomGeometry, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
@@ -49,7 +49,7 @@
 
         override protected function getFrameNumber(k:int, _arg_2:int):int
         {
-            if (this._Str_621 == _Str_17499)
+            if (this._state == _Str_17499)
             {
                 if (_arg_2 <= 1)
                 {
@@ -84,7 +84,7 @@
 
         override protected function setAnimation(k:int):void
         {
-            this._Str_621 = k;
+            this._state = k;
             super.setAnimation(k);
         }
     }

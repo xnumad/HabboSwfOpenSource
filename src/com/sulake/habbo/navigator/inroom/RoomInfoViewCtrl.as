@@ -9,7 +9,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_9806;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11893;
-    import _Str_471._Str_7007;
+    import _Str_471.RoomAdErrorMessageParser;
     import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
@@ -123,19 +123,19 @@
         private function _Str_24049(k:_Str_9358):void
         {
             this._Str_3732();
-            var _local_2:_Str_7007 = k._Str_2273();
+            var _local_2:RoomAdErrorMessageParser = k._Str_2273();
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
             {
                 this._Str_5340._Str_5374(this._Str_2272.getText("roomad.error.0.description"));
-                this._Str_5340._Str_2497(_local_2._Str_20676);
+                this._Str_5340._Str_2497(_local_2.filteredText);
             }
             else
             {
                 if (_local_3 == 1)
                 {
                     this._Str_5951._Str_5374(this._Str_2272.getText("roomad.error.0.description"));
-                    this._Str_5951._Str_2497(_local_2._Str_20676);
+                    this._Str_5951._Str_2497(_local_2.filteredText);
                 }
             }
         }

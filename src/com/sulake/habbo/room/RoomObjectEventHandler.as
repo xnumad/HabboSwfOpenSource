@@ -281,7 +281,7 @@
 
         public function _Str_20330(k:RoomSpriteMouseEvent, _arg_2:IRoomObject, _arg_3:IRoomGeometry):void
         {
-            if (RoomEnterEffect._Str_1349())
+            if (RoomEnterEffect.isRunning())
             {
                 return;
             }
@@ -769,7 +769,7 @@
                 _local_4 = k._Str_16836;
                 _local_5 = k._Str_17676;
                 _local_6 = k._Str_21459;
-                _local_7 = this._roomEngine._Str_2881(_arg_2);
+                _local_7 = this._roomEngine.getRoom(_arg_2);
                 if (_local_7 != null)
                 {
                     _local_8 = this._roomEngine._Str_15934(_arg_2);
@@ -2286,7 +2286,7 @@
                         }
                     }
                     _local_12 = ((((_local_12 / 45) % 8) + 8) % 8);
-                    if (((_local_7.getType() == "free_placement_room") && (this.roomEngine._Str_2881(k)._Str_9675("free_placement_room", RoomObjectCategoryEnum.CONST_10) > 1)))
+                    if (((_local_7.getType() == "free_placement_room") && (this.roomEngine.getRoom(k).getObjectCountForType("free_placement_room", RoomObjectCategoryEnum.CONST_10) > 1)))
                     {
                         this.roomEngine.windowManager.alert("One free placement furni already in room!", "There can be only one free_placement_room furni in a room. See intraweb for instructions on how to use it.", _Str_3023.NULL, null);
                         return;

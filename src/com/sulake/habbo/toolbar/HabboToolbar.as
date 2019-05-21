@@ -514,7 +514,7 @@
         public function _Str_14171(k:IWindowContainer):void
         {
             var _local_2:IWindow;
-            if (RoomEnterEffect._Str_1349())
+            if (RoomEnterEffect.isRunning())
             {
                 if (k == null)
                 {

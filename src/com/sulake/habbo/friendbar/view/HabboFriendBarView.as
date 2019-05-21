@@ -286,7 +286,7 @@
             this._Str_2563.invalidate();
             if (this._Str_2978 == null)
             {
-                this._Str_2978 = new Timer(RoomEnterEffect._Str_17562, 1);
+                this._Str_2978 = new Timer(RoomEnterEffect.totalRunningTime, 1);
                 this._Str_2978.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_5360);
                 this._Str_2978.start();
             }
@@ -508,7 +508,7 @@
                 this._Str_3984.visible = false;
                 this._Str_3984.procedure = this._Str_24861;
             }
-            if (RoomEnterEffect._Str_1349())
+            if (RoomEnterEffect.isRunning())
             {
                 this._Str_25736();
             }

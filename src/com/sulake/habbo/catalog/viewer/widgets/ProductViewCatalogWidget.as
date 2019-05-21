@@ -18,7 +18,7 @@
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSpinnerEvent;
-    import _Str_425._Str_3172;
+    import com.sulake.habbo.room.preview.RoomPreviewer;
     import flash.display.DisplayObject;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.assets.XmlAsset;
@@ -125,7 +125,7 @@
 
         override public function init():Boolean
         {
-            var _local_3:_Str_3172;
+            var _local_3:RoomPreviewer;
             var _local_4:DisplayObject;
             if (!super.init())
             {
@@ -225,7 +225,7 @@
             var _local_3:IPurchasableOffer;
             var _local_4:BitmapData;
             var _local_5:Point;
-            var _local_6:_Str_3172;
+            var _local_6:RoomPreviewer;
             var _local_7:IProduct;
             var _local_8:ImageResult;
             var _local_9:BundleProductContainer;
@@ -751,7 +751,7 @@
 
         private function _Str_19078(k:SetRoomPreviewerStuffDataEvent):void
         {
-            var _local_2:_Str_3172;
+            var _local_2:RoomPreviewer;
             this._Str_17045 = k.stuffData;
             if (this._Str_10575 != null)
             {
@@ -784,7 +784,7 @@
 
         override public function closed():void
         {
-            var k:_Str_3172 = (page.viewer.catalog as HabboCatalog)._Str_26451;
+            var k:RoomPreviewer = (page.viewer.catalog as HabboCatalog)._Str_26451;
             if (k)
             {
                 k._Str_9081 = true;

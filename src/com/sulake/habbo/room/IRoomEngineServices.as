@@ -20,7 +20,7 @@
 
     public interface IRoomEngineServices extends IRoomObjectCreator 
     {
-        function _Str_2881(_arg_1:int):IRoomInstance;
+        function getRoom(_arg_1:int):IRoomInstance;
         function _Str_3321(_arg_1:String):int;
         function getRoomObject(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
         function _Str_3652(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;

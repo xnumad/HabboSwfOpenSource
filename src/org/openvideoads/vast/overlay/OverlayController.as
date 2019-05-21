@@ -662,7 +662,7 @@
         {
             if (this._Str_2962 != null)
             {
-                return this._Str_2962._Str_1349();
+                return this._Str_2962.isRunning();
             }
             return false;
         }

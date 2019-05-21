@@ -41,7 +41,7 @@
     import com.sulake.core.localization.ILocalization;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7351;
     import com.sulake.core.assets.BitmapDataAsset;
-    import _Str_434._Str_6542;
+    import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7427;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7904;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8126;
@@ -213,8 +213,8 @@
 
         private function _Str_17153(k:IMessageEvent):void
         {
-            var _local_2:_Str_6542 = (k as _Str_4691)._Str_2273();
-            if (((_local_2 == null) || (!(_local_2._Str_19919 == _Str_4691._Str_15052))))
+            var _local_2:RecyclerFinishedMessageParser = (k as _Str_4691)._Str_2273();
+            if (((_local_2 == null) || (!(_local_2.recyclerFinishedStatus == _Str_4691._Str_15052))))
             {
                 return;
             }

@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.utils.HabboWebTools;
-    import sulake.habboclient._Str_5079;
+    import com.sulake.habboclient._Str_5079;
 
     public class HabbletLinkHandler implements ILinkEventTracker, IDisposable 
     {

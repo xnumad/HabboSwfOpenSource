@@ -1,9 +1,9 @@
 ﻿package com.sulake.habbo.communication.encryption
 {
-    import _Str_538._Str_9612;
+    import com.sulake.core.communication.handshake.IKeyExchange;
     import com.hurlant.math.BigInteger;
 
-    public class DiffieHellman implements _Str_9612 
+    public class DiffieHellman implements IKeyExchange 
     {
         private var _privateKey:BigInteger;
         private var _publicKey:BigInteger;
@@ -31,20 +31,20 @@
             return true;
         }
 
-        public function _Str_21719(k:String, _arg_2:uint=16):String
+        public function generateSharedKey(k:String, _arg_2:uint=16):String
         {
             this._serverPublicKey = new BigInteger();
             this._serverPublicKey.fromRadix(k, _arg_2);
             this._sharedKey = this._serverPublicKey.modPow(this._privateKey, this._prime);
-            return this._Str_16542(_arg_2);
+            return this.getSharedKey(_arg_2);
         }
 
-        public function _Str_19483(k:uint=16):String
+        public function getPublicKey(k:uint=16):String
         {
             return this._publicKey.toRadix(k);
         }
 
-        public function _Str_16542(k:uint=16):String
+        public function getSharedKey(k:uint=16):String
         {
             return this._sharedKey.toRadix(k);
         }

@@ -76,7 +76,7 @@
             {
                 for each (_local_4 in _local_3._Str_9272._Str_9272)
                 {
-                    if (((!(_local_4.sprite._Str_4918 == RoomObjectSpriteType._Str_8616)) && (!(_local_4.sprite._Str_3582 == ""))))
+                    if (((!(_local_4.sprite._Str_4918 == RoomObjectSpriteType.ROOM_PLANE)) && (!(_local_4.sprite._Str_3582 == ""))))
                     {
                         _local_5 = new RoomObjectSpriteData();
                         _local_5._Str_1577 = _local_3._Str_1577;
@@ -139,7 +139,7 @@
             {
                 for each (_local_4 in _local_3._Str_9272._Str_9272)
                 {
-                    if (_local_4.sprite._Str_4918 == RoomObjectSpriteType._Str_8616)
+                    if (_local_4.sprite._Str_4918 == RoomObjectSpriteType.ROOM_PLANE)
                     {
                         k.push(_local_4);
                     }

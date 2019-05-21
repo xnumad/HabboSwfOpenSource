@@ -581,7 +581,7 @@
                                 _local_17.name = _arg_2;
                             }
                             _local_17.sprite = _local_18;
-                            if (((_local_18._Str_4918 == RoomObjectSpriteType._Str_11629) || (_local_18._Str_4918 == RoomObjectSpriteType._Str_10494)))
+                            if (((_local_18._Str_4918 == RoomObjectSpriteType.AVATAR) || (_local_18._Str_4918 == RoomObjectSpriteType.AVATAR_OWN)))
                             {
                                 _local_17.sprite._Str_3582 = ("avatar_" + k.getId());
                             }
@@ -725,7 +725,7 @@
                     this._Str_20892(_arg_2, k);
                     return true;
                 }
-                if (((_local_4._Str_17574(_local_3._Str_12289, _local_3._Str_3795)) || (RoomEnterEffect._Str_19559())))
+                if (((_local_4._Str_17574(_local_3._Str_12289, _local_3.updateId)) || (RoomEnterEffect.isVisualizationOn())))
                 {
                     _local_4._Str_4023 = _local_3._Str_4023;
                     _local_5 = (_local_3.alpha / 0xFF);
@@ -766,22 +766,22 @@
 
         private function _Str_21914(k:ExtendedSprite, _arg_2:IRoomObjectSprite):void
         {
-            if ((((!(RoomEnterEffect._Str_19559())) || (k.bitmapData == null)) || (_arg_2 == null)))
+            if ((((!(RoomEnterEffect.isVisualizationOn())) || (k.bitmapData == null)) || (_arg_2 == null)))
             {
                 return;
             }
             switch (_arg_2._Str_4918)
             {
-                case RoomObjectSpriteType._Str_10494:
+                case RoomObjectSpriteType.AVATAR_OWN:
                     return;
-                case RoomObjectSpriteType._Str_8616:
-                    k.alpha = RoomEnterEffect._Str_16017(0.9);
+                case RoomObjectSpriteType.ROOM_PLANE:
+                    k.alpha = RoomEnterEffect.getDelta(0.9);
                     return;
-                case RoomObjectSpriteType._Str_11629:
-                    k.alpha = RoomEnterEffect._Str_16017(0.5);
+                case RoomObjectSpriteType.AVATAR:
+                    k.alpha = RoomEnterEffect.getDelta(0.5);
                     return;
                 default:
-                    k.alpha = RoomEnterEffect._Str_16017(0.1);
+                    k.alpha = RoomEnterEffect.getDelta(0.1);
             }
         }
 

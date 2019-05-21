@@ -220,7 +220,7 @@
                                 _local_6 = 0;
                                 _local_7 = 0;
                                 _local_8 = _local_4.getLocation();
-                                _local_9 = _local_5._Str_3045(_local_8);
+                                _local_9 = _local_5.getScreenPoint(_local_8);
                                 if (_local_9 != null)
                                 {
                                     _local_6 = _local_9.x;
@@ -405,7 +405,7 @@
                     this._tempScreenPosVector.x = 0;
                     this._tempScreenPosVector.y = 0;
                     this._tempScreenPosVector.z = 0;
-                    this._primaryCanvasOriginPos = _local_3._Str_3045(this._tempScreenPosVector);
+                    this._primaryCanvasOriginPos = _local_3.getScreenPoint(this._tempScreenPosVector);
                     this._primaryCanvasScale = (_local_3.scale - 10);
                 }
                 _local_5 = "";
@@ -413,7 +413,7 @@
                 this._tempScreenPosVector.x = 0;
                 this._tempScreenPosVector.y = 0;
                 this._tempScreenPosVector.z = 0;
-                _local_7 = _local_3._Str_3045(this._tempScreenPosVector);
+                _local_7 = _local_3.getScreenPoint(this._tempScreenPosVector);
                 if (_local_7 != null)
                 {
                     _local_8 = this._container.roomEngine._Str_7201(_local_2, k);

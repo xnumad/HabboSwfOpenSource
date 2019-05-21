@@ -43,7 +43,7 @@
         function get _Str_4530():Boolean;
         function set _Str_4530(_arg_1:Boolean):void;
         function get _Str_12289():int;
-        function get _Str_3795():int;
+        function get updateId():int;
         function set _Str_4918(_arg_1:int):void;
         function get _Str_4918():int;
         function set _Str_1723(_arg_1:String):void;

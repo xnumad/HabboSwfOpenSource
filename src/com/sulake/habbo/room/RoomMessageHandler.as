@@ -154,7 +154,7 @@
             {
                 if (this._roomCreator != null)
                 {
-                    this._roomCreator._Str_7482(this._currentRoomId);
+                    this._roomCreator.disposeRoom(this._currentRoomId);
                 }
             }
             this._currentRoomId = k;
@@ -519,11 +519,11 @@
                 return;
             }
             var _local_3:ObjectsMessageParser = _local_2._Str_2273();
-            var _local_4:int = _local_3._Str_4421();
+            var _local_4:int = _local_3.getObjectCount();
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_6 = _local_3._Str_3299(_local_5);
+                _local_6 = _local_3.getObject(_local_5);
                 this._Str_18595(this._currentRoomId, _local_6);
                 _local_5++;
             }
@@ -845,7 +845,7 @@
                 return;
             }
             var _local_3:UserUpdateMessageParser = _local_2._Str_2273();
-            var _local_4:IRoomInstance = this._roomCreator._Str_2881(this._currentRoomId);
+            var _local_4:IRoomInstance = this._roomCreator.getRoom(this._currentRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -1112,10 +1112,10 @@
                     this._roomCreator._Str_11976(this._currentRoomId, _local_6.id, _local_6.loc, _local_6.target);
                     if (this._roomCreator)
                     {
-                        _local_9 = this._roomCreator._Str_2881(this._currentRoomId);
+                        _local_9 = this._roomCreator.getRoom(this._currentRoomId);
                         if (_local_9)
                         {
-                            _local_7 = _local_9._Str_3299(_local_6.id, RoomObjectCategoryEnum.CONST_100);
+                            _local_7 = _local_9.getObject(_local_6.id, RoomObjectCategoryEnum.CONST_100);
                         }
                     }
                     if (((!(_local_7 == null)) && (!(_local_7.getType() == RoomObjectUserTypes.MONSTERPLANT))))

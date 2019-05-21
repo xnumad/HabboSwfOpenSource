@@ -93,7 +93,7 @@
             while (_local_5 < _local_4.length())
             {
                 _local_6 = _local_4[_local_5];
-                if (XMLValidator._Str_2747(_local_6, ["id"]))
+                if (XMLValidator.checkRequiredAttributes(_local_6, ["id"]))
                 {
                     _local_7 = _local_6.@id;
                     _local_8 = _local_6.animatedVisualization;
@@ -102,7 +102,7 @@
                     while (_local_10 < _local_8.length())
                     {
                         _local_11 = _local_8[_local_10];
-                        if (XMLValidator._Str_2747(_local_11, ["size"]))
+                        if (XMLValidator.checkRequiredAttributes(_local_11, ["size"]))
                         {
                             _local_12 = parseInt(_local_11.@size);
                             _local_13 = _local_11.@horizontalAngle;
@@ -131,7 +131,7 @@
                                         _local_21 = _local_20;
                                         _local_22 = null;
                                         _local_23 = PlaneVisualizationLayer._Str_6914;
-                                        if (XMLValidator._Str_2747(_local_21, ["materialId"]))
+                                        if (XMLValidator.checkRequiredAttributes(_local_21, ["materialId"]))
                                         {
                                             _local_29 = _local_21.@materialId;
                                             _local_22 = _Str_8547(_local_29);
@@ -175,7 +175,7 @@
                                                 _local_33 = (_local_30[_local_32] as XML);
                                                 if (_local_33 != null)
                                                 {
-                                                    if (XMLValidator._Str_2747(_local_33, _local_2))
+                                                    if (XMLValidator.checkRequiredAttributes(_local_33, _local_2))
                                                     {
                                                         _local_34 = parseInt(_local_33.@id);
                                                         _local_35 = _local_33.@assetId;

@@ -236,7 +236,7 @@
             var _local_10:GraphicAssetPalette;
             for each (_local_2 in k)
             {
-                if (XMLValidator._Str_2747(_local_2, _Str_16434))
+                if (XMLValidator.checkRequiredAttributes(_local_2, _Str_16434))
                 {
                     _local_3 = _local_2.@id;
                     _local_4 = _local_2.@source;

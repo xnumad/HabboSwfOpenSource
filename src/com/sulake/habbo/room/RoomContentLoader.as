@@ -119,7 +119,7 @@
             if (this._waitingForSessionDataManager)
             {
                 this._waitingForSessionDataManager = false;
-                this._Str_9650();
+                this.initFurnitureData();
             }
         }
 
@@ -143,7 +143,7 @@
             this._petLoadNameTemplate = _arg_2.getProperty("pet.dynamic.download.name.template");
             this._configuration = _arg_2;
             this._state = CONST_ONE;
-            this._Str_9650();
+            this.initFurnitureData();
             this._Str_24006(_arg_2);
         }
 
@@ -162,7 +162,7 @@
             this._petLayers = new Map();
         }
 
-        private function _Str_9650():void
+        private function initFurnitureData():void
         {
             if (this._sessionDataManager == null)
             {
@@ -504,7 +504,7 @@
             return RoomObjectCategoryEnum.CONST_MIN2;
         }
 
-        public function _Str_20150(k:String):String
+        public function getPlaceHolderType(k:String):String
         {
             if (this._activeObjects[k] != null)
             {
@@ -521,7 +521,7 @@
             return DEFAULT_PLACE_HOLDER;
         }
 
-        public function _Str_14258():Array
+        public function getPlaceHolderTypes():Array
         {
             return _Str_14101;
         }
@@ -673,14 +673,14 @@
             return _local_2;
         }
 
-        public function _Str_5136(k:String):String
+        public function getContentType(k:String):String
         {
             return k;
         }
 
-        public function _Str_22212(k:String):Boolean
+        public function hasInternalContent(k:String):Boolean
         {
-            k = RoomObjectUserTypes._Str_10580(k);
+            k = RoomObjectUserTypes.getVisualizationType(k);
             if ((((k == RoomObjectVisualizationType.USER) || (k == RoomObjectVisualizationType.GAME_SNOWBALL)) || (k == RoomObjectVisualizationType.GAME_SNOWSPLASH)))
             {
                 return true;
@@ -713,7 +713,7 @@
             var _local_8:int;
             var _local_9:Boolean;
             var _local_10:String;
-            _local_4 = this._Str_5136(k);
+            _local_4 = this.getContentType(k);
             switch (_local_4)
             {
                 case PLACE_HOLDER:
@@ -759,7 +759,7 @@
             return this._assetUrlBase + k;
         }
 
-        public function _Str_21307(k:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean
+        public function insertObjectContent(k:int, _arg_2:int, _arg_3:IAssetLibrary):Boolean
         {
             var _local_6:Event;
             var _local_7:IEventDispatcher;
@@ -872,7 +872,7 @@
             return false;
         }
 
-        public function _Str_16108(k:String, _arg_2:IEventDispatcher):Boolean
+        public function loadObjectContent(k:String, _arg_2:IEventDispatcher):Boolean
         {
             var _local_5:Array;
             var _local_6:int;
@@ -931,7 +931,7 @@
             var _local_4:String;
             var _local_5:Array;
             var _local_2:LibraryLoader = LibraryLoader(k.target);
-            var _local_3:Array = this._Str_14258();
+            var _local_3:Array = this.getPlaceHolderTypes();
             for each (_local_4 in _local_3)
             {
                 _local_5 = this._Str_7376(_local_4);
@@ -1014,7 +1014,7 @@
             var _local_18:String;
             var _local_19:String;
             var _local_2:int = this._pets[k];
-            var _local_3:IGraphicAssetCollection = this._Str_5052(k);
+            var _local_3:IGraphicAssetCollection = this.getGraphicAssetCollection(k);
             if (_local_3 != null)
             {
                 _local_5 = new Map();
@@ -1034,7 +1034,7 @@
                 }
                 this._petColors.add(_local_2, _local_5);
             }
-            var _local_4:XML = this._Str_14929(k);
+            var _local_4:XML = this.getVisualizationXML(k);
             if (_local_4 != null)
             {
                 _local_14 = new Map();
@@ -1067,7 +1067,7 @@
             var _local_4:IGraphicAssetCollection = this._Str_13110(k, _arg_2);
             if (_local_4 != null)
             {
-                _local_5 = this._Str_6090(k);
+                _local_5 = this.getAssetXML(k);
                 if (_local_4._Str_13182(_local_5))
                 {
                     _local_3 = true;
@@ -1100,7 +1100,7 @@
         private function _Str_7711(k:String):IAssetLibrary
         {
             var _local_4:String;
-            var _local_2:String = this._Str_5136(k);
+            var _local_2:String = this.getContentType(k);
             _local_2 = this._Str_20812(_local_2);
             var _local_3:IAssetLibrary = (this._libraries.getValue(this._Str_10970(_local_2)) as IAssetLibrary);
             if (_local_3 == null)
@@ -1108,7 +1108,7 @@
                 _local_4 = this._additionalObjectTypeLibraries.getValue(_local_2);
                 if (_local_4 != null)
                 {
-                    _local_2 = this._Str_5136(_local_4);
+                    _local_2 = this.getContentType(_local_4);
                     _local_3 = (this._libraries.getValue(this._Str_10970(_local_2)) as IAssetLibrary);
                 }
             }
@@ -1117,7 +1117,7 @@
 
         private function _Str_19550(k:String, _arg_2:IEventDispatcher):IAssetLibrary
         {
-            var _local_3:String = this._Str_5136(k);
+            var _local_3:String = this.getContentType(k);
             var _local_4:IAssetLibrary = this._Str_7711(k);
             if (_local_4 != null)
             {
@@ -1135,7 +1135,7 @@
 
         private function _Str_14059(k:String, _arg_2:Boolean=false):IEventDispatcher
         {
-            var _local_3:String = this._Str_5136(k);
+            var _local_3:String = this.getContentType(k);
             if (!_arg_2)
             {
                 return this._events.getValue(_local_3);
@@ -1176,7 +1176,7 @@
             return _local_4;
         }
 
-        public function _Str_10580(k:String):String
+        public function getVisualizationType(k:String):String
         {
             if (k == null)
             {
@@ -1205,7 +1205,7 @@
             return _local_5;
         }
 
-        public function _Str_17270(k:String):String
+        public function getLogicType(k:String):String
         {
             if (k == null)
             {
@@ -1234,32 +1234,32 @@
             return _local_5;
         }
 
-        public function _Str_21673(k:String):Boolean
+        public function hasVisualizationXML(k:String):Boolean
         {
             return this._Str_17109(k, "_visualization");
         }
 
-        public function _Str_14929(k:String):XML
+        public function getVisualizationXML(k:String):XML
         {
             return this._Str_5598(k, "_visualization");
         }
 
-        public function _Str_22742(k:String):Boolean
+        public function hasAssetXML(k:String):Boolean
         {
             return this._Str_17109(k, "_assets");
         }
 
-        public function _Str_6090(k:String):XML
+        public function getAssetXML(k:String):XML
         {
             return this._Str_5598(k, "_assets");
         }
 
-        public function _Str_24009(k:String):Boolean
+        public function hasLogicXML(k:String):Boolean
         {
             return this._Str_17109(k, "_logic");
         }
 
-        public function _Str_16500(k:String):XML
+        public function getLogicXML(k:String):XML
         {
             return this._Str_5598(k, "_logic");
         }
@@ -1271,7 +1271,7 @@
             {
                 return null;
             }
-            var _local_4:String = this._Str_5136(k);
+            var _local_4:String = this.getContentType(k);
             var _local_5:String = this._Str_16356(_local_4);
             var _local_6:IAsset = _local_3.getAssetByName((_local_5 + _arg_2));
             if (_local_6 == null)
@@ -1293,14 +1293,14 @@
             {
                 return false;
             }
-            var _local_4:String = this._Str_5136(k);
+            var _local_4:String = this.getContentType(k);
             var _local_5:String = this._Str_16356(_local_4);
             return _local_3.hasAsset((_local_5 + _arg_2));
         }
 
         public function _Str_16696(k:String, _arg_2:String, _arg_3:BitmapData, _arg_4:Boolean, _arg_5:Boolean=true):Boolean
         {
-            var _local_6:IGraphicAssetCollection = this._Str_5052(k);
+            var _local_6:IGraphicAssetCollection = this.getGraphicAssetCollection(k);
             if (_local_6 != null)
             {
                 return _local_6.addAsset(_arg_2, _arg_3, _arg_4, 0, 0, false, false);
@@ -1310,7 +1310,7 @@
 
         private function _Str_13110(k:String, _arg_2:IAssetLibrary):IGraphicAssetCollection
         {
-            var _local_3:IGraphicAssetCollection = this._Str_5052(k);
+            var _local_3:IGraphicAssetCollection = this.getGraphicAssetCollection(k);
             if (_local_3 != null)
             {
                 return _local_3;
@@ -1328,13 +1328,13 @@
             return _local_3;
         }
 
-        public function _Str_5052(k:String):IGraphicAssetCollection
+        public function getGraphicAssetCollection(k:String):IGraphicAssetCollection
         {
-            var _local_2:String = this._Str_5136(k);
+            var _local_2:String = this.getContentType(k);
             return this._assetCollections.getValue(_local_2) as IGraphicAssetCollection;
         }
 
-        public function _Str_19903(k:IRoomObject, _arg_2:String):void
+        public function roomObjectCreated(k:IRoomObject, _arg_2:String):void
         {
             var _local_3:IRoomObjectController = (k as IRoomObjectController);
             if (((_local_3) && (_local_3.getModelController())))
@@ -1346,7 +1346,7 @@
         private function _Str_23095(k:String):Boolean
         {
             var _local_3:IGraphicAssetCollection;
-            var _local_2:String = this._Str_5136(k);
+            var _local_2:String = this.getContentType(k);
             if (this._assetCollections[_local_2] != null)
             {
                 _local_3 = this._assetCollections.remove(_local_2);
@@ -1361,7 +1361,7 @@
 
         public function _Str_15145():void
         {
-            this._Str_9650();
+            this.initFurnitureData();
         }
 
         public function _Str_21854(k:int, _arg_2:String):void
@@ -1380,7 +1380,7 @@
             var _local_9:int;
             var _local_10:BitmapDataAsset;
             var k:int = this._assetCollections.length;
-            var _local_4:Array = this._Str_14258();
+            var _local_4:Array = this.getPlaceHolderTypes();
             var _local_5:int = (k - 1);
             while (_local_5 > -1)
             {
@@ -1449,7 +1449,7 @@
 
         public function _Str_26341(k:String):String
         {
-            var _local_2:String = this._Str_5136(k);
+            var _local_2:String = this.getContentType(k);
             if (((((((_local_2 == PLACE_HOLDER) || (_local_2 == WALL_PLACE_HOLDER)) || (_local_2 == PET_PLACE_HOLDER)) || (_local_2 == ROOM)) || (_local_2 == TILE_CURSOR)) || (_local_2 == SELECTION_ARROW)))
             {
                 return null;

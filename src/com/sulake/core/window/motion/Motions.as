@@ -131,7 +131,7 @@
             return null;
         }
 
-        public static function get _Str_1349():Boolean
+        public static function get isRunning():Boolean
         {
             return (_Str_5307) ? _Str_5307.running : false;
         }

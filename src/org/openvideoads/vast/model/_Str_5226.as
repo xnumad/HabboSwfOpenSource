@@ -35,7 +35,7 @@
         function startVPAID(_arg_1:Number=-1, _arg_2:Number=-1, _arg_3:String="normal", _arg_4:Boolean=false, _arg_5:String=null):void;
         function getVPAID():_Str_5844;
         function _Str_12035():Object;
-        function _Str_1349():Boolean;
+        function isRunning():Boolean;
         function _Str_17184(_arg_1:int):void;
         function enableMaxDurationTimeout():void;
         function _Str_18747():void;

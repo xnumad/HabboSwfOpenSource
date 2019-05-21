@@ -21,12 +21,12 @@
 
     public class RoomManager extends Component implements IRoomManager, IRoomInstanceContainer 
     {
-        public static const _Str_9994:int = -1;
-        public static const _Str_16337:int = 0;
-        public static const _Str_16443:int = 1;
-        public static const _Str_13904:int = 2;
-        public static const _Str_9846:int = 3;
-        private static const _Str_18280:int = 40;
+        public static const ROOM_MANAGER_ERROR:int = -1;
+        public static const ROOM_MANAGER_LOADING:int = 0;
+        public static const ROOM_MANAGER_LOADED:int = 1;
+        public static const ROOM_MANAGER_INITIALIZING:int = 2;
+        public static const ROOM_MANAGER_INITIALIZED:int = 3;
+        private static const CONTENT_PROCESSING_TIME_LIMIT_MILLISECONDS:int = 40;
 
         private var _rooms:Map;
         private var _contentLoader:IRoomContentLoader;
@@ -79,7 +79,7 @@
         override protected function initComponent():void
         {
             var k:XML;
-            this._state = _Str_16443;
+            this._state = ROOM_MANAGER_LOADED;
             if (this._initializationData != null)
             {
                 k = this._initializationData;
@@ -117,7 +117,7 @@
         public function initialize(k:XML, _arg_2:IRoomManagerListener):Boolean
         {
             var _local_5:String;
-            if (this._state == _Str_16337)
+            if (this._state == ROOM_MANAGER_LOADING)
             {
                 if (this._initializationData != null)
                 {
@@ -127,7 +127,7 @@
                 this._listener = _arg_2;
                 return true;
             }
-            if (this._state >= _Str_13904)
+            if (this._state >= ROOM_MANAGER_INITIALIZING)
             {
                 return false;
             }
@@ -141,23 +141,23 @@
             }
             this._updateInterval = 50;
             this._listener = _arg_2;
-            var _local_3:Array = this._contentLoader._Str_14258();
+            var _local_3:Array = this._contentLoader.getPlaceHolderTypes();
             var _local_4:int;
             while (_local_4 < _local_3.length)
             {
                 _local_5 = _local_3[_local_4];
                 if (this._initialLoadList.indexOf(_local_5) < 0)
                 {
-                    this._contentLoader._Str_16108(_local_5, events);
+                    this._contentLoader.loadObjectContent(_local_5, events);
                     this._initialLoadList.push(_local_5);
                 }
                 _local_4++;
             }
-            this._state = _Str_13904;
+            this._state = ROOM_MANAGER_INITIALIZING;
             return true;
         }
 
-        public function _Str_22189(k:IRoomContentLoader):void
+        public function setContentLoader(k:IRoomContentLoader):void
         {
             if (this._contentLoader != null)
             {
@@ -166,7 +166,7 @@
             this._contentLoader = k;
         }
 
-        public function _Str_4608(k:int):void
+        public function addObjectUpdateCategory(k:int):void
         {
             var _local_4:RoomInstance;
             var _local_2:int = this._updateCategories.indexOf(k);
@@ -181,13 +181,13 @@
                 _local_4 = (this._rooms.getWithIndex(_local_3) as RoomInstance);
                 if (_local_4 != null)
                 {
-                    _local_4._Str_4608(k);
+                    _local_4.addObjectUpdateCategory(k);
                 }
                 _local_3--;
             }
         }
 
-        public function _Str_9123(k:int):void
+        public function removeObjectUpdateCategory(k:int):void
         {
             var _local_4:RoomInstance;
             var _local_2:int = this._updateCategories.indexOf(k);
@@ -202,16 +202,16 @@
                 _local_4 = (this._rooms.getWithIndex(_local_3) as RoomInstance);
                 if (_local_4 != null)
                 {
-                    _local_4._Str_9123(k);
+                    _local_4.removeObjectUpdateCategory(k);
                 }
                 _local_3--;
             }
         }
 
-        public function _Str_5942(k:String, _arg_2:XML):IRoomInstance
+        public function createRoom(k:String, _arg_2:XML):IRoomInstance
         {
             var _local_5:int;
-            if (this._state < _Str_9846)
+            if (this._state < ROOM_MANAGER_INITIALIZED)
             {
                 throw (new RoomManagerException());
             }
@@ -225,28 +225,28 @@
             while (_local_4 >= 0)
             {
                 _local_5 = this._updateCategories[_local_4];
-                _local_3._Str_4608(_local_5);
+                _local_3.addObjectUpdateCategory(_local_5);
                 _local_4--;
             }
             return _local_3;
         }
 
-        public function _Str_2881(k:String):IRoomInstance
+        public function getRoom(k:String):IRoomInstance
         {
             return this._rooms.getValue(k) as IRoomInstance;
         }
 
-        public function _Str_19091(k:int):IRoomInstance
+        public function getRoomWithIndex(k:int):IRoomInstance
         {
             return this._rooms.getWithIndex(k);
         }
 
-        public function _Str_20300():int
+        public function getRoomCount():int
         {
             return this._rooms.length;
         }
 
-        public function _Str_7482(k:String):Boolean
+        public function disposeRoom(k:String):Boolean
         {
             var _local_2:IRoomInstance = (this._rooms.remove(k) as IRoomInstance);
             if (_local_2 != null)
@@ -257,13 +257,13 @@
             return false;
         }
 
-        public function _Str_5865(k:String, _arg_2:int, _arg_3:String, _arg_4:int):IRoomObject
+        public function createRoomObject(k:String, _arg_2:int, _arg_3:String, _arg_4:int):IRoomObject
         {
-            if (this._state < _Str_9846)
+            if (this._state < ROOM_MANAGER_INITIALIZED)
             {
                 throw (new RoomManagerException());
             }
-            var _local_5:IRoomInstance = this._Str_2881(k);
+            var _local_5:IRoomInstance = this.getRoom(k);
             if (_local_5 == null)
             {
                 return null;
@@ -284,24 +284,24 @@
             var _local_11:String;
             var _local_12:String = _arg_3;
             var _local_13:Boolean;
-            if (!this._contentLoader._Str_22212(_arg_3))
+            if (!this._contentLoader.hasInternalContent(_arg_3))
             {
-                _local_7 = this._contentLoader._Str_5052(_arg_3);
+                _local_7 = this._contentLoader.getGraphicAssetCollection(_arg_3);
                 if (_local_7 == null)
                 {
                     _local_13 = true;
-                    this._contentLoader._Str_16108(_arg_3, events);
-                    _local_12 = this._contentLoader._Str_20150(_arg_3);
-                    _local_7 = this._contentLoader._Str_5052(_local_12);
+                    this._contentLoader.loadObjectContent(_arg_3, events);
+                    _local_12 = this._contentLoader.getPlaceHolderType(_arg_3);
+                    _local_7 = this._contentLoader.getGraphicAssetCollection(_local_12);
                 }
-                _local_8 = this._contentLoader._Str_14929(_local_12);
-                _local_9 = this._contentLoader._Str_16500(_local_12);
+                _local_8 = this._contentLoader.getVisualizationXML(_local_12);
+                _local_9 = this._contentLoader.getLogicXML(_local_12);
                 if (((_local_8 == null) || (_local_7 == null)))
                 {
                     return null;
                 }
-                _local_10 = this._contentLoader._Str_10580(_local_12);
-                _local_11 = this._contentLoader._Str_17270(_local_12);
+                _local_10 = this._contentLoader.getVisualizationType(_local_12);
+                _local_11 = this._contentLoader.getLogicType(_local_12);
             }
             else
             {
@@ -318,7 +318,7 @@
             var _local_17:IRoomObjectGraphicVisualization = this._visualizationFactory._Str_17646(_local_10);
             if (_local_17 == null)
             {
-                _local_5._Str_3915(_arg_2, _arg_4);
+                _local_5.disposeObject(_arg_2, _arg_4);
                 return null;
             }
             _local_17._Str_2697 = _local_7;
@@ -327,11 +327,11 @@
             _local_18 = this._visualizationFactory._Str_16399(_local_12, _local_10, _local_8);
             if (!_local_17.initialize(_local_18))
             {
-                _local_5._Str_3915(_arg_2, _arg_4);
+                _local_5.disposeObject(_arg_2, _arg_4);
                 return null;
             }
             _local_16._Str_14063(_local_17);
-            var _local_19:IRoomObjectEventHandler = this._objectFactory._Str_16699(_local_11);
+            var _local_19:IRoomObjectEventHandler = this._objectFactory.createRoomObjectLogic(_local_11);
             _local_16._Str_8711(_local_19);
             if (((!(_local_19 == null)) && (!(_local_9 == null))))
             {
@@ -341,24 +341,24 @@
             {
                 _local_16._Str_17972(true);
             }
-            this._contentLoader._Str_19903(_local_16, k);
+            this._contentLoader.roomObjectCreated(_local_16, k);
             return _local_16;
         }
 
-        public function _Str_9811():IRoomObjectManager
+        public function createRoomObjectManager():IRoomObjectManager
         {
             if (this._objectFactory != null)
             {
-                return this._objectFactory._Str_9811();
+                return this._objectFactory.createRoomObjectManager();
             }
             return null;
         }
 
-        public function _Str_19453(k:String):Boolean
+        public function isContentAvailable(k:String):Boolean
         {
             if (this._contentLoader != null)
             {
-                if (this._contentLoader._Str_5052(k) != null)
+                if (this._contentLoader.getGraphicAssetCollection(k) != null)
                 {
                     return true;
                 }
@@ -373,16 +373,16 @@
             {
                 return;
             }
-            if (this._state == _Str_9994)
+            if (this._state == ROOM_MANAGER_ERROR)
             {
                 return;
             }
             if (this._contentLoader == null)
             {
-                this._state = _Str_9994;
+                this._state = ROOM_MANAGER_ERROR;
                 return;
             }
-            if (this._contentLoader._Str_5052(k) != null)
+            if (this._contentLoader.getGraphicAssetCollection(k) != null)
             {
                 _local_2 = this._initialLoadList.indexOf(k);
                 if (_local_2 >= 0)
@@ -391,17 +391,17 @@
                 }
                 if (this._initialLoadList.length == 0)
                 {
-                    this._state = _Str_9846;
+                    this._state = ROOM_MANAGER_INITIALIZED;
                     if (this._listener != null)
                     {
-                        this._listener._Str_18483(true);
+                        this._listener.roomManagerInitialized(true);
                     }
                 }
             }
             else
             {
-                this._state = _Str_9994;
-                this._listener._Str_18483(false);
+                this._state = ROOM_MANAGER_ERROR;
+                this._listener.roomManagerInitialized(false);
             }
         }
 
@@ -416,7 +416,7 @@
             {
                 if (this._listener != null)
                 {
-                    this._listener._Str_11314(null, false);
+                    this._listener.contentLoaded(null, false);
                 }
                 return;
             }
@@ -441,34 +441,34 @@
             {
                 _local_2 = this._unprocessedLoadedContentTypes[0];
                 this._unprocessedLoadedContentTypes.splice(0, 1);
-                if (!this._contentLoader._Str_21673(_local_2))
+                if (!this._contentLoader.hasVisualizationXML(_local_2))
                 {
                     if (this._listener != null)
                     {
-                        this._listener._Str_11314(_local_2, false);
+                        this._listener.contentLoaded(_local_2, false);
                     }
                     return;
                 }
-                _local_3 = this._contentLoader._Str_5052(_local_2);
+                _local_3 = this._contentLoader.getGraphicAssetCollection(_local_2);
                 if (_local_3 == null)
                 {
                     if (this._listener != null)
                     {
-                        this._listener._Str_11314(_local_2, false);
+                        this._listener.contentLoaded(_local_2, false);
                     }
                     return;
                 }
                 this._Str_24592(_local_2);
                 if (this._listener != null)
                 {
-                    this._listener._Str_11314(_local_2, true);
+                    this._listener.contentLoaded(_local_2, true);
                 }
                 if (this._initialLoadList.length > 0)
                 {
                     this._Str_23673(_local_2);
                 }
                 _local_4 = getTimer();
-                if ((((_local_4 - k) >= _Str_18280) && (this._limitContentProcessing)))
+                if ((((_local_4 - k) >= CONTENT_PROCESSING_TIME_LIMIT_MILLISECONDS) && (this._limitContentProcessing)))
                 {
                     this._skipContentProcessingForNextFrame = true;
                     return;
@@ -500,8 +500,8 @@
             {
                 return;
             }
-            var _local_5:String = this._contentLoader._Str_10580(k);
-            var _local_6:String = this._contentLoader._Str_17270(k);
+            var _local_5:String = this._contentLoader.getVisualizationType(k);
+            var _local_6:String = this._contentLoader.getLogicType(k);
             var _local_8:int = (this._rooms.length - 1);
             while (_local_8 >= 0)
             {
@@ -513,22 +513,22 @@
                     _local_12 = false;
                     for each (_local_13 in _local_11)
                     {
-                        _local_14 = _local_9._Str_9675(k, _local_13);
+                        _local_14 = _local_9.getObjectCountForType(k, _local_13);
                         _local_15 = (_local_14 - 1);
                         while (_local_15 >= 0)
                         {
-                            _local_16 = (_local_9._Str_11503(_local_15, k, _local_13) as IRoomObjectController);
+                            _local_16 = (_local_9.getObjectWithIndexAndType(_local_15, k, _local_13) as IRoomObjectController);
                             if (_local_16 != null)
                             {
                                 if (!_local_7)
                                 {
-                                    _local_2 = this._contentLoader._Str_14929(k);
+                                    _local_2 = this._contentLoader.getVisualizationXML(k);
                                     if (_local_2 == null)
                                     {
                                         return;
                                     }
-                                    _local_3 = this._contentLoader._Str_16500(k);
-                                    _local_4 = this._contentLoader._Str_5052(k);
+                                    _local_3 = this._contentLoader.getLogicXML(k);
+                                    _local_4 = this._contentLoader.getGraphicAssetCollection(k);
                                     if (_local_4 == null)
                                     {
                                         return;
@@ -542,12 +542,12 @@
                                     _local_17.setExternalBaseUrls(context.configuration.getProperty("stories.image_url_base"), context.configuration.getProperty("extra_data_service_url"), context.configuration.getBoolean("extra_data_batches_enabled"));
                                     if (!_local_17.initialize(_local_7))
                                     {
-                                        _local_9._Str_3915(_local_16.getId(), _local_13);
+                                        _local_9.disposeObject(_local_16.getId(), _local_13);
                                     }
                                     else
                                     {
                                         _local_16._Str_14063(_local_17);
-                                        _local_18 = this._objectFactory._Str_16699(_local_6);
+                                        _local_18 = this._objectFactory.createRoomObjectLogic(_local_6);
                                         _local_16._Str_8711(_local_18);
                                         if (_local_18 != null)
                                         {
@@ -556,14 +556,14 @@
                                         _local_16._Str_17972(true);
                                         if (this._listener != null)
                                         {
-                                            this._listener._Str_19486(_local_10, _local_16.getId(), _local_13);
+                                            this._listener.objectInitialized(_local_10, _local_16.getId(), _local_13);
                                             _local_12 = true;
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    _local_9._Str_3915(_local_16.getId(), _local_13);
+                                    _local_9.disposeObject(_local_16.getId(), _local_13);
                                 }
                             }
                             _local_15--;
@@ -571,7 +571,7 @@
                     }
                     if (((!(_local_9._Str_21086())) && (_local_12)))
                     {
-                        this._listener._Str_17652(_local_10);
+                        this._listener.objectsInitialized(_local_10);
                     }
                 }
                 _local_8--;

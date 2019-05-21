@@ -21,14 +21,14 @@
             return true;
         }
 
-        public function _Str_4421():int
+        public function getObjectCount():int
         {
             return this._objects.length;
         }
 
-        public function _Str_3299(k:int):_Str_3292
+        public function getObject(k:int):_Str_3292
         {
-            if (((k < 0) || (k >= this._Str_4421())))
+            if (((k < 0) || (k >= this.getObjectCount())))
             {
                 return null;
             }

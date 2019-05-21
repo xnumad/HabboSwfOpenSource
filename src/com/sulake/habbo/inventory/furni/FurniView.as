@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
-    import _Str_425._Str_3172;
+    import com.sulake.habbo.room.preview.RoomPreviewer;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.inventory.items.GroupItem;
     import com.sulake.habbo.inventory.items.FurnitureItem;
@@ -69,7 +69,7 @@
         private var _extendRentPeriodButton:IButtonWindow;
         private var _buyRentedItemButton:IButtonWindow;
         private var _isInitialized:Boolean = false;
-        private var _roomPreviewer:_Str_3172;
+        private var _roomPreviewer:RoomPreviewer;
         private var _rentablesPlacementSelection:int = 0;
 
         public function FurniView(k:FurniModel, _arg_2:MarketplaceModel, _arg_3:IHabboWindowManager, _arg_4:IAssetLibrary, _arg_5:IRoomEngine)

@@ -107,7 +107,7 @@
             return null;
         }
 
-        public function _Str_1349():Boolean
+        public function isRunning():Boolean
         {
             return (this._Str_20288()) && (this._Str_635);
         }

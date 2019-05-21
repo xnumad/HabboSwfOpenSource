@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import _Str_434._Str_6542;
+    import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
 
     public class _Str_4691 extends MessageEvent implements IMessageEvent 
     {
@@ -11,12 +11,12 @@
 
         public function _Str_4691(k:Function)
         {
-            super(k, _Str_6542);
+            super(k, RecyclerFinishedMessageParser);
         }
 
-        public function _Str_2273():_Str_6542
+        public function _Str_2273():RecyclerFinishedMessageParser
         {
-            return _parser as _Str_6542;
+            return _parser as RecyclerFinishedMessageParser;
         }
     }
 }

@@ -37,7 +37,7 @@
             while (_local_3 < _local_2.length())
             {
                 _local_4 = _local_2[_local_3];
-                if (XMLValidator._Str_2747(_local_4, ["id"]))
+                if (XMLValidator.checkRequiredAttributes(_local_4, ["id"]))
                 {
                     _local_5 = _local_4.@id;
                     _local_6 = _local_4.visualization;

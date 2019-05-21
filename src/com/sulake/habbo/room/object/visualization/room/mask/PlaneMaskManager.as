@@ -86,7 +86,7 @@
             while (_local_6 < _local_5.length())
             {
                 _local_7 = _local_5[_local_6];
-                if (XMLValidator._Str_2747(_local_7, _local_3))
+                if (XMLValidator.checkRequiredAttributes(_local_7, _local_3))
                 {
                     _local_8 = _local_7.@id;
                     if (this._masks.getValue(_local_8) == null)
@@ -97,7 +97,7 @@
                         while (_local_11 < _local_10.length())
                         {
                             _local_12 = _local_10[_local_11];
-                            if (XMLValidator._Str_2747(_local_12, _local_4))
+                            if (XMLValidator.checkRequiredAttributes(_local_12, _local_4))
                             {
                                 _local_13 = parseInt(_local_12.@size);
                                 _local_14 = _local_9._Str_24540(_local_13);
@@ -135,7 +135,7 @@
             while (_local_5 < k.length())
             {
                 _local_6 = k[_local_5];
-                if (XMLValidator._Str_2747(_local_6, ["assetName"]))
+                if (XMLValidator.checkRequiredAttributes(_local_6, ["assetName"]))
                 {
                     _local_7 = PlaneMaskVisualization._Str_3268;
                     _local_8 = PlaneMaskVisualization._Str_3271;

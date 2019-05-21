@@ -5,8 +5,6 @@
 
     public class _Str_11981 
     {
-
-
         public static function _Str_21471(k:IPurchasableOffer, _arg_2:IWindow):void
         {
             if (((k == null) || (_arg_2 == null)))

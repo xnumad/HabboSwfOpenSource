@@ -10,7 +10,7 @@
         private var _Str_5995:String;
         private var _x:int = 0;
         private var _y:int = 0;
-        private var _Str_2589:int = 0;
+        private var _dir:int = 0;
 
         public function _Str_6790(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:int)
         {
@@ -19,7 +19,7 @@
             this._Str_5995 = _arg_3;
             this._x = _arg_4;
             this._y = _arg_5;
-            this._Str_2589 = _arg_6;
+            this._dir = _arg_6;
         }
 
         public function dispose():void
@@ -31,7 +31,7 @@
             switch (this._Str_3014)
             {
                 case RoomObjectCategoryEnum.CONST_10:
-                    return [((((((this._Str_2319 + " ") + this._x) + " ") + this._y) + " ") + this._Str_2589)];
+                    return [((((((this._Str_2319 + " ") + this._x) + " ") + this._y) + " ") + this._dir)];
                 case RoomObjectCategoryEnum.CONST_20:
                     return [((this._Str_2319 + " ") + this._Str_5995)];
                 default:

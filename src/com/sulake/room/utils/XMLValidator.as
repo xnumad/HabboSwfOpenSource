@@ -2,9 +2,7 @@
 {
     public class XMLValidator 
     {
-
-
-        public static function _Str_2747(k:Object, _arg_2:Array):Boolean
+        public static function checkRequiredAttributes(k:Object, _arg_2:Array):Boolean
         {
             var _local_4:XML;
             var _local_5:XMLList;

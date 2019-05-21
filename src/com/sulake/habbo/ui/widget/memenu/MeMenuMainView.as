@@ -24,7 +24,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetAvatarEditorMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenCatalogMessage;
     import com.sulake.habbo.utils.HabboWebTools;
-    import sulake.habboclient._Str_5079;
+    import com.sulake.habboclient._Str_5079;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.habbo.tracking.HabboTracking;

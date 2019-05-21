@@ -38,7 +38,7 @@
     import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
-    import com.sulake.habbo.communication.enum._Str_10354;
+    import com.sulake.habbo.communication.enum.NoobnessLevelEnum;
     import com.sulake.habbo.communication.messages.parser.handshake._Str_4139;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.users._Str_5856;
@@ -78,12 +78,12 @@
 
     public class SessionDataManager extends Component implements ISessionDataManager 
     {
-        public static const _Str_4161:uint = 1;
+        public static const SETUP_WITHOUT_COMMUNICATION:uint = 1;
 
         private var _communicationManager:IHabboCommunicationManager;
         private var _windowManager:IHabboWindowManager;
         private var _roomSessionManager:IRoomSessionManager;
-        private var _Str_6715:PerkManager;
+        private var _perkManager:PerkManager;
         private var _userId:int;
         private var _name:String;
         private var _figure:String;
@@ -98,15 +98,15 @@
         private var _Str_20046:Boolean;
         private var _Str_8842:Boolean;
         private var _Str_2804:Dictionary;
-        private var _Str_5571:ProductDataParser;
+        private var _productParser:ProductDataParser;
         private var _Str_3789:Map;
         private var _Str_3347:Map;
         private var _Str_5556:Map;
-        private var _Str_4798:FurnitureDataParser;
+        private var _furnitureParser:FurnitureDataParser;
         private var _Str_7432:_Str_8883;
-        private var _Str_4822:BadgeImageManager;
-        private var _Str_21127:HabboGroupInfoManager;
-        private var _Str_11263:IgnoredUsersManager;
+        private var _badgeImageManager:BadgeImageManager;
+        private var _habboGroupInfoManager:HabboGroupInfoManager;
+        private var _ignoredUsersManager:IgnoredUsersManager;
         private var _localizationManager:IHabboLocalizationManager;
         private var _Str_7186:Boolean = false;
         private var _Str_8233:Array;
@@ -140,7 +140,7 @@
             }, false), new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
             {
                 _communicationManager = k;
-            }, ((flags & _Str_4161) == 0)), new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
+            }, ((flags & SETUP_WITHOUT_COMMUNICATION) == 0)), new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
                 "type":Event.COMPLETE,
                 "callback":this.onConfigurationComplete
             }]), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
@@ -158,9 +158,9 @@
             this._Str_3789 = new Map();
             this._Str_3347 = new Map();
             this._Str_5556 = new Map();
-            this._Str_9650();
-            this._Str_24520();
-            this._Str_23799();
+            this.initFurnitureData();
+            this.initProductData();
+            this.initBadgeImageManager();
         }
 
         override protected function initComponent():void
@@ -187,9 +187,9 @@
             }
             this._Str_25790 = [];
             this._Str_7432 = new _Str_8883(this);
-            this._Str_21127 = new HabboGroupInfoManager(this);
-            this._Str_11263 = new IgnoredUsersManager(this);
-            this._Str_6715 = new PerkManager(this);
+            this._habboGroupInfoManager = new HabboGroupInfoManager(this);
+            this._ignoredUsersManager = new IgnoredUsersManager(this);
+            this._perkManager = new PerkManager(this);
             this._Str_8233 = [];
             this._Str_6042 = [];
         }
@@ -215,48 +215,48 @@
                 this._Str_5556.dispose();
                 this._Str_5556 = null;
             }
-            if (this._Str_6715)
+            if (this._perkManager)
             {
-                this._Str_6715.dispose();
-                this._Str_6715 = null;
+                this._perkManager.dispose();
+                this._perkManager = null;
             }
             this._Str_6042 = null;
-            if (this._Str_4798)
+            if (this._furnitureParser)
             {
-                this._Str_4798.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
-                this._Str_4798.dispose();
-                this._Str_4798 = null;
+                this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+                this._furnitureParser.dispose();
+                this._furnitureParser = null;
             }
-            if (this._Str_5571)
+            if (this._productParser)
             {
-                this._Str_5571.removeEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
-                this._Str_5571.dispose();
-                this._Str_5571 = null;
+                this._productParser.removeEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
+                this._productParser.dispose();
+                this._productParser = null;
             }
             super.dispose();
         }
 
-        private function _Str_23799():void
+        private function initBadgeImageManager():void
         {
-            if (this._Str_4822 != null)
+            if (this._badgeImageManager != null)
             {
                 return;
             }
-            this._Str_4822 = new BadgeImageManager(assets, events, this);
+            this._badgeImageManager = new BadgeImageManager(assets, events, this);
         }
 
-        private function _Str_9650():void
+        private function initFurnitureData():void
         {
             var k:String;
             var _local_2:int;
             var _local_3:String;
-            if (this._Str_4798)
+            if (this._furnitureParser)
             {
-                this._Str_4798.dispose();
-                this._Str_4798 = null;
+                this._furnitureParser.dispose();
+                this._furnitureParser = null;
             }
-            this._Str_4798 = new FurnitureDataParser(this._Str_3789, this._Str_3347, this._Str_5556, this._localizationManager);
-            this._Str_4798.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+            this._furnitureParser = new FurnitureDataParser(this._Str_3789, this._Str_3347, this._Str_5556, this._localizationManager);
+            this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             if (propertyExists("furnidata.load.url"))
             {
                 k = getProperty("furnidata.load.url");
@@ -264,31 +264,31 @@
                 {
                     _local_2 = k.lastIndexOf("/");
                     _local_3 = k.substring(0, _local_2);
-                    this._Str_4798._Str_12194(((_local_3 + "/") + this._Str_8546));
+                    this._furnitureParser._Str_12194(((_local_3 + "/") + this._Str_8546));
                 }
                 else
                 {
-                    this._Str_4798._Str_12194(k);
+                    this._furnitureParser._Str_12194(k);
                 }
             }
         }
 
-        private function _Str_24520():void
+        private function initProductData():void
         {
-            if (this._Str_5571)
+            if (this._productParser)
             {
-                this._Str_5571.dispose();
-                this._Str_5571 = null;
+                this._productParser.dispose();
+                this._productParser = null;
             }
             var k:String = getProperty("productdata.load.url");
-            this._Str_5571 = new ProductDataParser(k, this._Str_2804);
-            this._Str_5571.addEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
+            this._productParser = new ProductDataParser(k, this._Str_2804);
+            this._productParser.addEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
         }
 
         private function _Str_17783(k:Event=null):void
         {
             var _local_2:IFurniDataListener;
-            this._Str_4798.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+            this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             this._Str_20020 = true;
             if (((this._Str_11656) && (!(this._Str_12845))))
             {
@@ -312,7 +312,7 @@
         private function _Str_25667(k:NoobnessLevelMessageEvent):void
         {
             this._Str_7106 = k._Str_17519;
-            if (this._Str_7106 != _Str_10354._Str_13601)
+            if (this._Str_7106 != NoobnessLevelEnum.OLD_IDENTITY)
             {
                 context.configuration.setProperty("new.identity", "1");
             }
@@ -332,7 +332,7 @@
             this._realName = _local_3.realName;
             this._Str_7394 = _local_3._Str_11198;
             this._Str_9602 = _local_3._Str_21338;
-            this._Str_11263._Str_25475();
+            this._ignoredUsersManager._Str_25475();
         }
 
         private function _Str_5174(k:IMessageEvent):void
@@ -495,12 +495,12 @@
 
         public function get _Str_14040():Boolean
         {
-            return !(this._Str_7106 == _Str_10354._Str_13601);
+            return !(this._Str_7106 == NoobnessLevelEnum.OLD_IDENTITY);
         }
 
         public function get _Str_6986():Boolean
         {
-            return this._Str_7106 == _Str_10354._Str_16717;
+            return this._Str_7106 == NoobnessLevelEnum.REAL_NOOB;
         }
 
         public function get userId():int
@@ -591,32 +591,32 @@
 
         public function getBadgeImage(k:String):BitmapData
         {
-            return this._Str_4822.getBadgeImage(k);
+            return this._badgeImageManager.getBadgeImage(k);
         }
 
         public function _Str_20021(k:String):BitmapData
         {
-            return this._Str_4822._Str_19714(k);
+            return this._badgeImageManager._Str_19714(k);
         }
 
         public function _Str_5831(k:String):String
         {
-            return this._Str_4822._Str_5831(k);
+            return this._badgeImageManager._Str_5831(k);
         }
 
         public function _Str_19992(k:String):String
         {
-            return this._Str_4822._Str_19435(k);
+            return this._badgeImageManager._Str_19435(k);
         }
 
         public function _Str_18459(k:String):BitmapData
         {
-            return this._Str_4822.getBadgeImage(k, BadgeImageManager.NORMAL_BADGE, false);
+            return this._badgeImageManager.getBadgeImage(k, BadgeImageManager.NORMAL_BADGE, false);
         }
 
         public function _Str_15979(k:String):BadgeInfo
         {
-            return this._Str_4822._Str_15979(k);
+            return this._badgeImageManager._Str_15979(k);
         }
 
         private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
@@ -626,7 +626,7 @@
 
         public function _Str_17173(k:int):String
         {
-            return this._Str_21127._Str_17775(k);
+            return this._habboGroupInfoManager._Str_17775(k);
         }
 
         public function send(k:IMessageComposer):void
@@ -636,22 +636,22 @@
 
         public function getGroupBadgeImage(k:String):BitmapData
         {
-            return this._Str_4822.getBadgeImage(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager.getBadgeImage(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_17218(k:String):BitmapData
         {
-            return this._Str_4822._Str_19714(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager._Str_19714(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_15583(k:String):String
         {
-            return this._Str_4822._Str_5831(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager._Str_5831(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_19687(k:String):String
         {
-            return this._Str_4822._Str_19435(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager._Str_19435(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_4701():Boolean
@@ -666,17 +666,17 @@
 
         public function _Str_3655(k:String):Boolean
         {
-            return this._Str_11263._Str_3655(k);
+            return this._ignoredUsersManager._Str_3655(k);
         }
 
         public function _Str_10249(k:String):void
         {
-            this._Str_11263._Str_10249(k);
+            this._ignoredUsersManager._Str_10249(k);
         }
 
         public function _Str_14353(k:String):void
         {
-            this._Str_11263._Str_14353(k);
+            this._ignoredUsersManager._Str_14353(k);
         }
 
         public function get _Str_3577():int
@@ -925,7 +925,7 @@
         private function _Str_18413(k:Event):void
         {
             var _local_2:IProductDataListener;
-            this._Str_5571.removeEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
+            this._productParser.removeEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
             this._Str_7186 = true;
             for each (_local_2 in this._Str_8233)
             {
@@ -1006,7 +1006,7 @@
             this._Str_3789 = new Map();
             this._Str_3347 = new Map();
             this._Str_5556 = new Map();
-            this._Str_9650();
+            this.initFurnitureData();
         }
 
         public function _Str_20401(k:IFurniDataListener):void
@@ -1075,17 +1075,17 @@
 
         public function get _Str_22295():Boolean
         {
-            return (!(this._Str_6715 == null)) && (this._Str_6715._Str_992);
+            return (!(this._perkManager == null)) && (this._perkManager._Str_992);
         }
 
         public function isPerkAllowed(k:String):Boolean
         {
-            return this._Str_6715.isPerkAllowed(k);
+            return this._perkManager.isPerkAllowed(k);
         }
 
         public function _Str_15321(k:String):String
         {
-            return this._Str_6715._Str_15321(k);
+            return this._perkManager._Str_15321(k);
         }
 
         public function get currentTalentTrack():String
