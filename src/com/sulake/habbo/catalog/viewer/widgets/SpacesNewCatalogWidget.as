@@ -142,7 +142,7 @@
             var _local_5:int;
             for each (k in page.offers)
             {
-                if (((k._Str_3837 == Offer.PRICING_MODEL_SINGLE) || (k._Str_3837 == Offer.PRICING_MODEL_MULTI)))
+                if (((k.pricingModel == Offer.PRICING_MODEL_SINGLE) || (k.pricingModel == Offer.PRICING_MODEL_MULTI)))
                 {
                     _local_2 = k.product;
                     if (_local_2 != null)
@@ -152,7 +152,7 @@
                         {
                             if (_local_2._Str_2686 != null)
                             {
-                                _local_4 = _local_2._Str_2686._Str_3177;
+                                _local_4 = _local_2._Str_2686.className;
                                 _local_5 = this._groupNames.indexOf(_local_4);
                                 if (this._groupNames.indexOf(_local_4) == -1)
                                 {

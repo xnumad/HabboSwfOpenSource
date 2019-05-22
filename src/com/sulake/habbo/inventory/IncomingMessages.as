@@ -476,7 +476,7 @@
             var _local_4:BadgesModel = this._inventory._Str_7962;
             if (_local_4 != null)
             {
-                _local_4.updateBadge(_local_3.data._Str_2494, false, _local_3.data.badgeId);
+                _local_4.updateBadge(_local_3.data.badgeCode, false, _local_3.data.badgeId);
                 _local_4._Str_24079(_local_3.data._Str_24720);
                 _local_4._Str_2491();
             }
@@ -488,7 +488,7 @@
             var _local_3:BadgesModel = this._inventory._Str_7962;
             if (_local_3 != null)
             {
-                _local_3.updateBadge(_local_2._Str_2494, false, _local_2.badgeId);
+                _local_3.updateBadge(_local_2.badgeCode, false, _local_2.badgeId);
                 _local_3._Str_2491();
             }
         }
@@ -686,7 +686,7 @@
         private function _Str_20661(k:int):Boolean
         {
             var _local_2:IFurnitureData = this._inventory._Str_3414(k, ProductTypeEnum.WALL);
-            return (_local_2) && (_local_2._Str_11813);
+            return (_local_2) && (_local_2.isExternalImageType);
         }
 
         private function _Str_23644(k:IMessageEvent):void

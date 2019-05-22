@@ -37,9 +37,9 @@
             for each (_local_5 in page.offers)
             {
                 _local_6 = (_local_2.clone() as IWindowContainer);
-                _local_6.findChildByName("item_header").caption = _local_5._Str_8112;
+                _local_6.findChildByName("item_header").caption = _local_5.localizationName;
                 _local_6.findChildByName("item_price").caption = _local_5.priceInCredits.toString();
-                _local_6.findChildByName("item_buy").caption = _local_5._Str_7274;
+                _local_6.findChildByName("item_buy").caption = _local_5.localizationDescription;
                 _local_6.findChildByName("item_buy").id = _local_3;
                 if (_local_5.priceInActivityPoints > 0)
                 {

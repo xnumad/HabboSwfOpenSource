@@ -267,10 +267,10 @@
                 this._Str_3889.visible = false;
                 this._Str_3889.destroyGridItems();
             }
-            this._Str_3160.caption = _local_3._Str_8112;
-            this._Str_3938.caption = _local_3._Str_7274;
+            this._Str_3160.caption = _local_3.localizationName;
+            this._Str_3938.caption = _local_3.localizationDescription;
             this._Str_3938.y = (this._Str_3160.y + this._Str_3160.height);
-            if ((((this._habboCatalog._Str_7593) && (_local_3._Str_3809)) && (this._Str_21871)))
+            if ((((this._habboCatalog._Str_7593) && (_local_3.bundlePurchaseAllowed)) && (this._Str_21871)))
             {
                 this._Str_24064();
                 this._Str_25636(_local_3);
@@ -295,9 +295,9 @@
                     this._Str_3004 = null;
                 }
             }
-            if (((!(_local_3._Str_2494 == null)) && (!(_local_3._Str_2494 == ""))))
+            if (((!(_local_3.badgeCode == null)) && (!(_local_3.badgeCode == ""))))
             {
-                this._habboCatalog.utils._Str_22321(_local_3._Str_2494, _window, 6, 38, true, false);
+                this._habboCatalog.utils._Str_22321(_local_3.badgeCode, _window, 6, 38, true, false);
             }
             else
             {
@@ -310,9 +310,9 @@
                     this._habboCatalog.utils._Str_23233(_window);
                 }
             }
-            if (ProductImageConfiguration._Str_17970(_local_3._Str_2696))
+            if (ProductImageConfiguration._Str_17970(_local_3.localizationId))
             {
-                this._Str_6504(ProductImageConfiguration._Str_2643[_local_3._Str_2696]);
+                this._Str_6504(ProductImageConfiguration._Str_2643[_local_3.localizationId]);
                 if (this._Str_3864 != null)
                 {
                     this._Str_3864.visible = false;
@@ -322,7 +322,7 @@
             {
                 _local_5 = new Point(0, 0);
                 _local_6 = this._habboCatalog._Str_26451;
-                switch (_local_3._Str_3837)
+                switch (_local_3.pricingModel)
                 {
                     case Offer.PRICING_MODEL_BUNDLE:
                         _local_4 = this._Str_17061.clone();
@@ -371,7 +371,7 @@
                                     {
                                         _local_11 = this._habboCatalog.sessionDataManager._Str_3411(_local_7._Str_2686.id);
                                         _local_12 = new Vector.<int>(0);
-                                        _local_13 = _local_11._Str_4558.split(",");
+                                        _local_13 = _local_11.customParams.split(",");
                                         for each (_local_14 in _local_13)
                                         {
                                             if ((page.viewer.catalog as HabboCatalog).avatarRenderManager.isValidFigureSetForGender(parseInt(_local_14), (page.viewer.catalog as HabboCatalog).sessionDataManager.gender))
@@ -390,7 +390,7 @@
                                 else
                                 {
                                     _local_8 = page.viewer.roomEngine.getFurnitureImage(_local_7._Str_2941, new Vector3d(90, 0, 0), 64, this, 0, _local_7._Str_2415, -1, -1, this._Str_17045);
-                                    _local_3._Str_3413 = _local_8.id;
+                                    _local_3.previewCallbackId = _local_8.id;
                                 }
                                 break;
                             case ProductTypeEnum.WALL:
@@ -410,7 +410,7 @@
                                     if (_local_7._Str_2686.category == _Str_3432)
                                     {
                                         _local_21 = this._habboCatalog._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
-                                        _local_6._Str_12087(_local_21.id, new Vector3d(90, 0, 0), _local_21._Str_4558);
+                                        _local_6._Str_12087(_local_21.id, new Vector3d(90, 0, 0), _local_21.customParams);
                                     }
                                 }
                                 else
@@ -422,7 +422,7 @@
                                     else
                                     {
                                         _local_8 = page.viewer.roomEngine.getWallItemImage(_local_7._Str_2941, new Vector3d(90, 0, 0), 64, this, 0, _local_7._Str_2415);
-                                        _local_3._Str_3413 = _local_8.id;
+                                        _local_3.previewCallbackId = _local_8.id;
                                     }
                                 }
                                 break;
@@ -509,7 +509,7 @@
                         }
                         break;
                     default:
-                        Logger.log(("[ProductViewCatalogWidget] Unknown pricing model" + _local_3._Str_3837));
+                        Logger.log(("[ProductViewCatalogWidget] Unknown pricing model" + _local_3.pricingModel));
                 }
                 this._Str_3234(_local_4, true, _local_5);
             }
@@ -532,7 +532,7 @@
             _local_2.activityPointType = k.activityPointType;
             _local_2.priceActivityPoints = k.priceInActivityPoints;
             _local_2.priceCredits = k.priceInCredits;
-            _local_2._Str_2494 = k._Str_2494;
+            _local_2.badgeCode = k.badgeCode;
             events.dispatchEvent(new CatalogWidgetBundleDisplayExtraInfoEvent(CatalogWidgetBundleDisplayExtraInfoEvent.CWPPEIE_RESET, _local_2));
         }
 
@@ -658,10 +658,10 @@
             }
             for each (_local_3 in page.offers)
             {
-                if (_local_3._Str_3413 == k)
+                if (_local_3.previewCallbackId == k)
                 {
                     this._Str_3234(_arg_2, true);
-                    _local_3._Str_3413 = 0;
+                    _local_3.previewCallbackId = 0;
                     break;
                 }
             }

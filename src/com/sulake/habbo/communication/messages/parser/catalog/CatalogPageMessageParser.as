@@ -45,7 +45,7 @@
             return this._offers;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }

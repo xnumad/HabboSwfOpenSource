@@ -61,7 +61,7 @@
             this._priceActivityPoints = k;
         }
 
-        public function set _Str_2494(k:String):void
+        public function set badgeCode(k:String):void
         {
             this._badgeCode = k;
         }
@@ -101,7 +101,7 @@
             return this._activityPointType;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return this._badgeCode;
         }

@@ -787,7 +787,7 @@
 
         public function _Str_18074(k:int, _arg_2:int, _arg_3:String="", _arg_4:int=1):void
         {
-            if (((this._Str_3064 == null) || (!(this._Str_3064._Str_2451 == _arg_2))))
+            if (((this._Str_3064 == null) || (!(this._Str_3064.offerId == _arg_2))))
             {
                 this.send(new _Str_11783(k, _arg_2, _arg_3, _arg_4));
             }
@@ -877,13 +877,13 @@
             var _local_14:ICatalogNode;
             if (_arg_2 == CatalogNavigator._Str_5778)
             {
-                _local_11 = this._Str_3361._Str_5719(k._Str_2451, true);
+                _local_11 = this._Str_3361._Str_5719(k.offerId, true);
                 if (_local_11 != null)
                 {
                     _arg_2 = _local_11[0].pageId;
                 }
             }
-            Logger.log(("buy: " + [_arg_4, k._Str_2451, _arg_3]));
+            Logger.log(("buy: " + [_arg_4, k.offerId, _arg_3]));
             var _local_9:int = k.priceInCredits;
             var _local_10:int = k.priceInActivityPoints;
             if (this._Str_7593)
@@ -1584,32 +1584,33 @@
             var _local_4:String = k.toLowerCase().replace(" ", "");
             for each (_local_5 in this._Str_2509)
             {
-                if (((this._catalogType == CatalogType.BUILDER) && (!(_local_5._Str_6098))))
+                if (((this._catalogType == CatalogType.BUILDER) && (!(_local_5.availableForBuildersClub))))
                 {
                 }
                 else
                 {
-                    if (((this._catalogType == CatalogType.NORMAL) && (_local_5._Str_22146)))
+                    if (((this._catalogType == CatalogType.NORMAL) && (_local_5.excludedFromDynamic)))
                     {
                     }
                     else
                     {
-                        _local_6 = [_local_5._Str_2772, _local_5.description, _local_5._Str_3177].join(" ");
-                        _local_6 = _local_6.replace(/ /gi, "");
-                        if ((((this._catalogType == CatalogType.BUILDER) && (_local_5._Str_3473 == _Str_12843)) && (_local_5._Str_3693 == _Str_12843)))
+                        _local_6 = [_local_5.className, _local_5.localizedName, _local_5.description].join(" ");
+                        _local_6 = _local_6.replace(/ /gi, "").toLowerCase();
+
+                        if (((this._catalogType == CatalogType.BUILDER) && (_local_5.purchaseOfferId == _Str_12843)) && (_local_5.rentOfferId == _Str_12843))
                         {
-                            if (((!(_local_5._Str_13246 == "")) && (_local_2.indexOf(_local_5._Str_13246) < 0)))
+                            if (((!(_local_5.furniLine == "")) && (_local_2.indexOf(_local_5.furniLine) < 0)))
                             {
                                 if (_local_6.indexOf(_local_4) >= 0)
                                 {
-                                    _local_2.push(_local_5._Str_13246);
+                                    _local_2.push(_local_5.furniLine);
                                 }
                             }
                         }
                         else
                         {
-                            _local_7 = this._Str_3361._Str_5719(_local_5._Str_3473, true);
-                            _local_8 = this._Str_3361._Str_5719(_local_5._Str_3693, true);
+                            _local_7 = this._Str_3361._Str_5719(_local_5.purchaseOfferId, true);
+                            _local_8 = this._Str_3361._Str_5719(_local_5.rentOfferId, true);
                             if (((!(_local_7 == null)) || ((this._catalogType == CatalogType.NORMAL) && (!(_local_8 == null)))))
                             {
                                 if (_local_6.indexOf(_local_4) >= 0)
@@ -1795,24 +1796,24 @@
             var _local_5:Array = _local_2.localization.images.concat();
             var _local_6:Array = _local_2.localization.texts.concat();
             var _local_7:IPageLocalization = new PageLocalization(_local_5, _local_6);
-            var _local_8:int = _local_2._Str_2451;
+            var _local_8:int = _local_2.offerId;
             var _local_9:Boolean = _local_2.acceptSeasonCurrencyAsCredits;
             var _local_10:Vector.<IPurchasableOffer> = new Vector.<IPurchasableOffer>(0);
             for each (_local_11 in _local_2.offers)
             {
                 _local_12 = new Vector.<IProduct>(0);
-                _local_13 = this.getProductData(_local_11._Str_2696);
+                _local_13 = this.getProductData(_local_11.localizationId);
                 for each (_local_14 in _local_11.products)
                 {
                     _local_16 = this._Str_3414(_local_14._Str_6164, _local_14._Str_2588);
                     _local_12.push(new Product(_local_14._Str_2588, _local_14._Str_6164, _local_14._Str_2415, _local_14.productCount, _local_13, _local_16, this, _local_14._Str_18468, _local_14.uniqueLimitedItemSeriesSize, _local_14.uniqueLimitedItemsLeft));
                 }
-                if (((_local_12.length == 0) && (!(HabboCatalogUtils._Str_21831(_local_11._Str_2696)))))
+                if (((_local_12.length == 0) && (!(HabboCatalogUtils._Str_21831(_local_11.localizationId)))))
                 {
                 }
                 else
                 {
-                    _local_15 = new Offer(_local_11._Str_2451, _local_11._Str_2696, _local_11._Str_14263, _local_11.priceInCredits, _local_11.priceInActivityPoints, _local_11.activityPointType, _local_11._Str_4236, _local_11.clubLevel, _local_12, _local_11._Str_3809, this);
+                    _local_15 = new Offer(_local_11.offerId, _local_11.localizationId, _local_11._Str_14263, _local_11.priceInCredits, _local_11.priceInActivityPoints, _local_11.activityPointType, _local_11.giftable, _local_11.clubLevel, _local_12, _local_11.bundlePurchaseAllowed, this);
                     if (((!(_local_15.productContainer == null)) && (this._Str_19704(_local_15))))
                     {
                         _local_10.push(_local_15);
@@ -1836,7 +1837,7 @@
 
         private function _Str_19704(k:Offer):Boolean
         {
-            return (this._catalogType == CatalogType.NORMAL) || ((!(k._Str_3837 == Offer.PRICING_MODEL_BUNDLE)) && (!(k._Str_3837 == Offer.PRICING_MODEL_MULTI)));
+            return (this._catalogType == CatalogType.NORMAL) || ((!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE)) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI)));
         }
 
         private function _Str_12366(k:IMessageEvent):void
@@ -1888,7 +1889,7 @@
             var _local_7:String;
             var _local_2:_Str_7677 = (k as _Str_7677);
             var _local_3:_Str_7635 = _local_2._Str_2273();
-            events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer._Str_2696));
+            events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)
             {
                 if (((!(this._Str_4151)) && (!(this._purchaseConfirmationDialog._Str_23564()))))
@@ -2341,7 +2342,7 @@
 
         public function isDraggable(k:IPurchasableOffer):Boolean
         {
-            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession._Str_2781) || ((this._roomSession._Str_3672) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this._Str_19136(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k._Str_3837 == Offer.PRICING_MODEL_BUNDLE))) && (!(k._Str_3837 == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product._Str_2588 == ProductTypeEnum.EFFECT))) && (!(k.product._Str_2588 == ProductTypeEnum.HABBO_CLUB));
+            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession._Str_2781) || ((this._roomSession._Str_3672) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this._Str_19136(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product._Str_2588 == ProductTypeEnum.EFFECT))) && (!(k.product._Str_2588 == ProductTypeEnum.HABBO_CLUB));
         }
 
         public function _Str_19136(k:IPurchasableOffer):int
@@ -2429,7 +2430,7 @@
                     _local_5 = RoomObjectCategoryEnum.CONST_20;
                     break;
             }
-            var _local_6:Boolean = this._roomEngine._Str_5346(RoomObjectPlacementSource.CATALOG, -(_arg_2._Str_2451), _local_5, _local_4._Str_2941, ((_local_4._Str_2415) ? _local_4._Str_2415.toString() : null));
+            var _local_6:Boolean = this._roomEngine._Str_5346(RoomObjectPlacementSource.CATALOG, -(_arg_2.offerId), _local_5, _local_4._Str_2941, ((_local_4._Str_2415) ? _local_4._Str_2415.toString() : null));
             if (_local_6)
             {
                 this._Str_3644 = _arg_2;
@@ -2553,7 +2554,7 @@
                 _local_4 = false;
                 if (_local_2 == RoomObjectCategoryEnum.CONST_20)
                 {
-                    switch (_local_3._Str_2686._Str_3177)
+                    switch (_local_3._Str_2686.className)
                     {
                         case "floor":
                         case "wallpaper":
@@ -2590,12 +2591,12 @@
                         {
                             if (_local_2 == RoomObjectCategoryEnum.CONST_20)
                             {
-                                switch (_local_3._Str_2686._Str_3177)
+                                switch (_local_3._Str_2686.className)
                                 {
                                     case "floor":
                                     case "wallpaper":
                                     case "landscape":
-                                        this._Str_21839(_local_3._Str_2686._Str_3177, _local_3._Str_2415);
+                                        this._Str_21839(_local_3._Str_2686.className, _local_3._Str_2415);
                                         break;
                                     default:
                                         this._roomEngine._Str_9493(k.roomId, k._Str_1577, _local_3._Str_2941, new Vector3d(k.x, k.y, k.z), new Vector3d((k.direction * 45), 0, 0), 0, k._Str_4766, 0);
@@ -2612,7 +2613,7 @@
                         _local_7 = this._Str_3644.page.pageId;
                         if (_local_7 == CatalogNavigator._Str_5778)
                         {
-                            _local_8 = this._Str_3361._Str_5719(this._Str_3644._Str_2451, true);
+                            _local_8 = this._Str_3361._Str_5719(this._Str_3644.offerId, true);
                             if (_local_8 != null)
                             {
                                 _local_7 = _local_8[0].pageId;
@@ -2621,10 +2622,10 @@
                         switch (_local_2)
                         {
                             case RoomObjectCategoryEnum.CONST_10:
-                                this.send(new _Str_12382(_local_7, this._Str_3644._Str_2451, _local_3._Str_2415, k.x, k.y, k.direction));
+                                this.send(new _Str_12382(_local_7, this._Str_3644.offerId, _local_3._Str_2415, k.x, k.y, k.direction));
                                 break;
                             case RoomObjectCategoryEnum.CONST_20:
-                                this.send(new _Str_11648(_local_7, this._Str_3644._Str_2451, _local_3._Str_2415, k._Str_7031));
+                                this.send(new _Str_11648(_local_7, this._Str_3644.offerId, _local_3._Str_2415, k._Str_7031));
                                 break;
                         }
                         if (this._Str_21515)
@@ -2654,7 +2655,7 @@
         {
             if (this._placedObjectPurchaseData)
             {
-                if (this._placedObjectPurchaseData._Str_2451 != k._Str_2451)
+                if (this._placedObjectPurchaseData.offerId != k.offerId)
                 {
                     this._Str_4663();
                 }
@@ -2677,7 +2678,7 @@
                 {
                     if (this._placedObjectPurchaseData.category == RoomObjectCategoryEnum.CONST_20)
                     {
-                        switch (this._placedObjectPurchaseData.furniData._Str_3177)
+                        switch (this._placedObjectPurchaseData.furniData.className)
                         {
                             case "floor":
                             case "wallpaper":
@@ -2895,7 +2896,7 @@
 
         public function _Str_26111(k:IPurchasableOffer):void
         {
-            this.send(new _Str_12467(k._Str_2451));
+            this.send(new _Str_12467(k.offerId));
         }
 
         public function _Str_24636(k:int):void
@@ -2970,16 +2971,16 @@
             var _local_4:_Str_2853 = _local_3.products[0];
             if (_local_4._Str_18468)
             {
-                this._catalogViewer._Str_3854._Str_19621(_local_3._Str_2451, _local_4.uniqueLimitedItemsLeft);
+                this._catalogViewer._Str_3854._Str_19621(_local_3.offerId, _local_4.uniqueLimitedItemsLeft);
             }
             var _local_5:Vector.<IProduct> = new Vector.<IProduct>(0);
-            var _local_6:IProductData = this.getProductData(_local_3._Str_2696);
+            var _local_6:IProductData = this.getProductData(_local_3.localizationId);
             for each (_local_4 in _local_3.products)
             {
                 _local_8 = this._Str_3414(_local_4._Str_6164, _local_4._Str_2588);
                 _local_5.push(new Product(_local_4._Str_2588, _local_4._Str_6164, _local_4._Str_2415, _local_4.productCount, _local_6, _local_8, this, _local_4._Str_18468, _local_4.uniqueLimitedItemSeriesSize, _local_4.uniqueLimitedItemsLeft));
             }
-            _local_7 = new Offer(_local_3._Str_2451, _local_3._Str_2696, _local_3._Str_14263, _local_3.priceInCredits, _local_3.priceInActivityPoints, _local_3.activityPointType, _local_3._Str_4236, _local_3.clubLevel, _local_5, _local_3._Str_3809, this);
+            _local_7 = new Offer(_local_3.offerId, _local_3.localizationId, _local_3._Str_14263, _local_3.priceInCredits, _local_3.priceInActivityPoints, _local_3.activityPointType, _local_3.giftable, _local_3.clubLevel, _local_5, _local_3.bundlePurchaseAllowed, this);
             if (!this._Str_19704(_local_7))
             {
                 _local_7.dispose();

@@ -184,7 +184,7 @@
         private function _Str_24464(k:AchievementResolutionCompletedMessageEvent):void
         {
             var _local_2:AchievementResolutionCompletedMessageParser = k._Str_2273();
-            this._questEngine._Str_10255._Str_25733(_local_2._Str_2494, _local_2._Str_22541);
+            this._questEngine._Str_10255._Str_25733(_local_2.badgeCode, _local_2._Str_22541);
         }
 
         private function _Str_12011(k:IMessageEvent):void
@@ -206,7 +206,7 @@
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
             var _local_3:_Str_5519 = _local_2._Str_2273();
-            var _local_4:String = this._questEngine.localization._Str_21634(_local_3.data._Str_2494);
+            var _local_4:String = this._questEngine.localization._Str_21634(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));
             this._questEngine._Str_10255._Str_11598(_local_3.data);
         }

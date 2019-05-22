@@ -257,7 +257,7 @@
                     if (_local_2.category == FurniCategory._Str_3432)
                     {
                         _local_19 = this._model.controller._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
-                        this._roomPreviewer._Str_12087(_local_19.id, new Vector3d(90, 0, 0), _local_19._Str_4558);
+                        this._roomPreviewer._Str_12087(_local_19.id, new Vector3d(90, 0, 0), _local_19.customParams);
                     }
                 }
                 else
@@ -539,9 +539,9 @@
                 }
             }
             var _local_9:* = (_local_4.flatId > -1);
-            var _local_10:Boolean = ((((_local_4.rentable) && (_local_8)) && (_local_5)) && (_local_5._Str_8116));
-            var _local_11:Boolean = ((((_local_4.rentable) && (_local_8)) && (_local_5)) && (_local_5._Str_7629));
-            if (((_local_5) && (_local_5._Str_11813)))
+            var _local_10:Boolean = ((((_local_4.rentable) && (_local_8)) && (_local_5)) && (_local_5.rentCouldBeUsedForBuyout));
+            var _local_11:Boolean = ((((_local_4.rentable) && (_local_8)) && (_local_5)) && (_local_5.purchaseCouldBeUsedForBuyout));
+            if (((_local_5) && (_local_5.isExternalImageType)))
             {
                 _local_6 = false;
             }

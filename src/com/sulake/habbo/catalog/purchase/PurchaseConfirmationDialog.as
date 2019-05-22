@@ -108,21 +108,21 @@
         {
             this._catalog = (k as HabboCatalog);
             this._roomEngine = _arg_2;
-            this._offerId = _arg_3._Str_2451;
+            this._offerId = _arg_3.offerId;
             this._pageId = _arg_4;
             this._extraParameter = _arg_5;
             this._stuffData = _arg_7;
             this._friends = _arg_8;
             this._userName = _arg_9;
             this._quantity = _arg_6;
-            this._bundleDiscountEnabled = ((this._catalog.discountEnabled) ? _arg_3._Str_3809 : false);
+            this._bundleDiscountEnabled = ((this._catalog.discountEnabled) ? _arg_3.bundlePurchaseAllowed : false);
             if (((_arg_3 is Offer) && (!(_arg_3.product == null))))
             {
                 this._productType = _arg_3.product._Str_2588;
             }
             else
             {
-                if (((_arg_3 is ClubBuyOfferData) || (HabboCatalogUtils._Str_21831(_arg_3._Str_2696))))
+                if (((_arg_3 is ClubBuyOfferData) || (HabboCatalogUtils._Str_21831(_arg_3.localizationId))))
                 {
                     this._productType = ProductTypeEnum.HABBO_CLUB;
                 }
@@ -271,8 +271,8 @@
             var _local_4:ITextWindow = (this._window.findChildByName("product_name") as ITextWindow);
             if (_local_4 != null)
             {
-                _local_7 = this._catalog.getProductData(k._Str_2696);
-                _local_4.text = ((_local_7 == null) ? k._Str_2696 : _local_7.name);
+                _local_7 = this._catalog.getProductData(k.localizationId);
+                _local_4.text = ((_local_7 == null) ? k.localizationId : _local_7.name);
             }
             var _local_5:ITextWindow = (this._window.findChildByName("quantity") as ITextWindow);
             if (_local_5 != null)
@@ -294,9 +294,9 @@
             if (_local_6 != null)
             {
                 _local_9 = false;
-                if (ProductImageConfiguration._Str_17970(k._Str_2696))
+                if (ProductImageConfiguration._Str_17970(k.localizationId))
                 {
-                    _local_10 = ProductImageConfiguration._Str_2643[k._Str_2696];
+                    _local_10 = ProductImageConfiguration._Str_2643[k.localizationId];
                     _local_11 = (this._assets.getAssetByName(_local_10) as BitmapDataAsset);
                     if (_local_11)
                     {
@@ -395,7 +395,7 @@
             {
                 return;
             }
-            var _local_2:IProductData = this._catalog.getProductData(k._Str_2696);
+            var _local_2:IProductData = this._catalog.getProductData(k.localizationId);
             var _local_3:String = ((_local_2 == null) ? "" : _local_2.name);
             this._catalog.windowManager.registerLocalizationParameter("catalog.purchase.confirmation.dialog.costs", "offer_name", _local_3);
         }
@@ -805,7 +805,7 @@
                 else
                 {
                     _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_22731);
-                    _local_5.findChildByName("color").color = _local_4._Str_6866[0];
+                    _local_5.findChildByName("color").color = _local_4.colours[0];
                     _local_5.id = _local_3;
                     k._Str_2816(_local_5);
                 }

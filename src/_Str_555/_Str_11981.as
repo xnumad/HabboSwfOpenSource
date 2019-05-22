@@ -11,7 +11,7 @@
             {
                 return;
             }
-            _arg_2.caption = ((k._Str_6539) ? "${catalog.purchase_confirmation.rent}" : "${catalog.purchase_confirmation.buy}");
+            _arg_2.caption = ((k.isRentOffer) ? "${catalog.purchase_confirmation.rent}" : "${catalog.purchase_confirmation.buy}");
         }
     }
 }

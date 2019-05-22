@@ -281,20 +281,17 @@
             {
                 this._floorItems.add(k.id, k);
             }
-            else
+            else if (k.type == FurnitureData.I)
             {
-                if (k.type == FurnitureData.I)
-                {
-                    this._wallItems.add(k.id, k);
-                }
+                this._wallItems.add(k.id, k);
             }
-            var _local_2:Array = this._itemIds[k._Str_3177];
+            var _local_2:Array = this._itemIds[k.className];
             if (_local_2 == null)
             {
                 _local_2 = [];
-                this._itemIds.add(k._Str_3177, _local_2);
+                this._itemIds.add(k.className, _local_2);
             }
-            _local_2[k._Str_6687] = k.id;
+            _local_2[k.colourIndex] = k.id;
         }
 
         private function _Str_25693(k:AssetLoaderEvent):void
@@ -309,14 +306,14 @@
             {
                 if (k.type == FurnitureData.S)
                 {
-                    this._localization.updateLocalization(("roomItem.name." + k.id), k._Str_2772);
+                    this._localization.updateLocalization(("roomItem.name." + k.id), k.localizedName);
                     this._localization.updateLocalization(("roomItem.desc." + k.id), k.description);
                 }
                 else
                 {
                     if (k.type == FurnitureData.I)
                     {
-                        this._localization.updateLocalization(("wallItem.name." + k.id), k._Str_2772);
+                        this._localization.updateLocalization(("wallItem.name." + k.id), k.localizedName);
                         this._localization.updateLocalization(("wallItem.desc." + k.id), k.description);
                     }
                 }

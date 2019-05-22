@@ -430,7 +430,7 @@
             {
                 return;
             }
-            var _local_6:Array = _local_5._Str_4558.split(" ");
+            var _local_6:Array = _local_5.customParams.split(" ");
             var _local_7:int = ((_local_6.length > 0) ? parseInt(_local_6[0]) : -1);
             if (_local_7 == -1)
             {
@@ -458,7 +458,7 @@
             }
             var _local_5:int = this._container.getFurnitureOwnerId(_local_3);
             var _local_6:IFurnitureData = this._Str_4536(_local_3);
-            var _local_7:Array = _local_6._Str_4558.split(" ");
+            var _local_7:Array = _local_6.customParams.split(" ");
             var _local_8:int = ((_local_7.length > 0) ? parseInt(_local_7[0]) : -1);
             if (_local_8 == -1)
             {

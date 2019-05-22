@@ -195,7 +195,7 @@
             var _local_6:Array = [];
             if (k.priceInCredits > 0)
             {
-                _local_5 = this._Str_4488(k._Str_3809, k.priceInCredits, _arg_2);
+                _local_5 = this._Str_4488(k.bundlePurchaseAllowed, k.priceInCredits, _arg_2);
                 _local_4 = ((_arg_3) ? this._habboCatalog._Str_19095() : -1);
                 _local_6.push({
                     "amount":_local_5,
@@ -204,7 +204,7 @@
             }
             if (k.priceInActivityPoints > 0)
             {
-                _local_5 = this._Str_4488(k._Str_3809, k.priceInActivityPoints, _arg_2);
+                _local_5 = this._Str_4488(k.bundlePurchaseAllowed, k.priceInActivityPoints, _arg_2);
                 _local_6.push({
                     "amount":_local_5,
                     "unit":k.activityPointType
@@ -226,12 +226,12 @@
             var _local_4:Map = new Map();
             if (k.priceInCredits > 0)
             {
-                _local_3 = this._Str_4488(k._Str_3809, k.priceInCredits, _arg_2);
+                _local_3 = this._Str_4488(k.bundlePurchaseAllowed, k.priceInCredits, _arg_2);
                 _local_4.add(CREDIT, {"amount":_local_3});
             }
             if (k.priceInActivityPoints > 0)
             {
-                _local_3 = this._Str_4488(k._Str_3809, k.priceInActivityPoints, _arg_2);
+                _local_3 = this._Str_4488(k.bundlePurchaseAllowed, k.priceInActivityPoints, _arg_2);
                 _local_4.add(ACTIVITYPOINT, {
                     "amount":_local_3,
                     "activityPointType":k.activityPointType

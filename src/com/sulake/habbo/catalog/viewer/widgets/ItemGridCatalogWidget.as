@@ -201,15 +201,15 @@
                     }
                     else
                     {
-                        _local_3 = _local_5.product._Str_2686._Str_5379.split("*")[0];
-                        _local_4 = int(_local_5.product._Str_2686._Str_5379.split("*")[1]);
+                        _local_3 = _local_5.product._Str_2686.fullName.split("*")[0];
+                        _local_4 = int(_local_5.product._Str_2686.fullName.split("*")[1]);
                         if (!this._Str_8284[_local_3])
                         {
                             this._Str_8284[_local_3] = [];
                         }
-                        if (_local_5.product._Str_2686._Str_6866)
+                        if (_local_5.product._Str_2686.colours)
                         {
-                            for each (_local_6 in _local_5.product._Str_2686._Str_6866)
+                            for each (_local_6 in _local_5.product._Str_2686.colours)
                             {
                                 if (_local_6 != 0xFFFFFF)
                                 {
@@ -238,7 +238,7 @@
             {
                 this._Str_7360(_local_5.gridItem, (!(_local_2.indexOf(_local_5) == -1)));
                 _local_5.gridItem.grid = this;
-                if (_local_5._Str_3837 == Offer.PRICING_MODEL_BUNDLE)
+                if (_local_5.pricingModel == Offer.PRICING_MODEL_BUNDLE)
                 {
                     this._Str_18734++;
                     if ((_local_5.productContainer is BundleProductContainer))
@@ -251,11 +251,11 @@
 
         private function _Str_24008(k:IPurchasableOffer, _arg_2:IPurchasableOffer):int
         {
-            if (((!(k.product._Str_2686._Str_6687)) || (!(_arg_2.product._Str_2686._Str_6687))))
+            if (((!(k.product._Str_2686.colourIndex)) || (!(_arg_2.product._Str_2686.colourIndex))))
             {
                 return 1;
             }
-            if (k.product._Str_2686._Str_6687 > _arg_2.product._Str_2686._Str_6687)
+            if (k.product._Str_2686.colourIndex > _arg_2.product._Str_2686.colourIndex)
             {
                 return 1;
             }
@@ -268,7 +268,7 @@
 
         private function _Str_24106(k:IPurchasableOffer, _arg_2:IPurchasableOffer):int
         {
-            if (k.product._Str_2686._Str_3177 > _arg_2.product._Str_2686._Str_3177)
+            if (k.product._Str_2686.className > _arg_2.product._Str_2686.className)
             {
                 return 1;
             }
@@ -388,7 +388,7 @@
             this._Str_18623 = k._Str_3916;
             this._selectedGuildColor1 = k.color1;
             this._selectedGuildColor2 = k.color2;
-            this._Str_19595 = k._Str_2494;
+            this._Str_19595 = k.badgeCode;
             this._Str_2448.destroyGridItems();
             for each (_local_2 in page.offers)
             {
@@ -424,10 +424,10 @@
             }
             _local_4 = this._Str_2448._Str_3373(_local_2.gridItem.view);
             this._Str_25239(_local_2);
-            var _local_5:String = ((_local_2.product._Str_2686._Str_5379.split("*")[0] + "*") + (k.index + 1));
+            var _local_5:String = ((_local_2.product._Str_2686.fullName.split("*")[0] + "*") + (k.index + 1));
             for each (_local_3 in page.offers)
             {
-                if (_local_3.product._Str_2686._Str_5379 == _local_5)
+                if (_local_3.product._Str_2686.fullName == _local_5)
                 {
                     this._Str_2448._Str_12115(_local_3.gridItem.view, _local_4);
                     this.select(_local_3.gridItem, false);
@@ -451,7 +451,7 @@
             {
                 return [];
             }
-            return this._Str_8284[k.product._Str_2686._Str_5379.split("*")[0]];
+            return this._Str_8284[k.product._Str_2686.fullName.split("*")[0]];
         }
 
         private function _Str_25049():int
@@ -469,7 +469,7 @@
             {
                 return 0;
             }
-            return Math.max((k.product._Str_2686._Str_6687 - 1), 0);
+            return Math.max((k.product._Str_2686.colourIndex - 1), 0);
         }
     }
 }

@@ -68,7 +68,7 @@
             return this._badgeId;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return this._Str_2722;
         }

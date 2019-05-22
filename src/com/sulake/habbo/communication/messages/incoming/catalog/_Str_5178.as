@@ -17,7 +17,7 @@
             this._Str_693 = k.readBoolean();
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._Str_2507;
         }

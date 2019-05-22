@@ -46,7 +46,7 @@
             return this._badge;
         }
 
-        public function get _Str_2772():String
+        public function get localizedName():String
         {
             return this._Str_12218;
         }

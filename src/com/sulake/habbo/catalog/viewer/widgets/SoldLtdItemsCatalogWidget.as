@@ -52,7 +52,7 @@
             }
             if (page.mode == CatalogPage._Str_7035)
             {
-                _local_2 = this._catalog._Str_3361._Str_5719(k.offer._Str_2451);
+                _local_2 = this._catalog._Str_3361._Str_5719(k.offer.offerId);
                 if (!_local_2)
                 {
                     _local_2 = new Vector.<ICatalogNode>(0);

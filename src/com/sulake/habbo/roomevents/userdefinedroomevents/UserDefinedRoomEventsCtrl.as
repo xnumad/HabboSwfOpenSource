@@ -465,7 +465,7 @@
                 Logger.log(("COULD NOT FIND FURNIDATA FOR " + k));
                 return "NAME: " + k;
             }
-            return _local_2._Str_2772;
+            return _local_2.localizedName;
         }
 
         private function _Str_23026(k:int):String

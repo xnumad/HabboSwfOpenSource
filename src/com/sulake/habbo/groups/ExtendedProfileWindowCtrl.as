@@ -191,7 +191,7 @@
                 _local_3.findChildByName("make_favourite").id = _local_2.groupId;
                 _local_4 = _Str_2402(IWidgetWindow(_local_3.findChildByName("group_pic_bitmap")).widget);
                 _local_4.type = _Str_4387.GROUP;
-                _local_4.badgeId = _local_2._Str_2494;
+                _local_4.badgeId = _local_2.badgeCode;
                 _local_4.groupId = _local_2.groupId;
                 this._groupsList.addListItem(_local_3);
             }

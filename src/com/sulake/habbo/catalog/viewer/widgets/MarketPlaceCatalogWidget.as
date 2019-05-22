@@ -561,7 +561,7 @@
                 switch (_arg_2.name)
                 {
                     case "buy_button":
-                        this._Str_2552._Str_18095(_local_5._Str_2451);
+                        this._Str_2552._Str_18095(_local_5.offerId);
                         return;
                     case "more_button":
                         this._Str_5386(_local_5);
@@ -846,7 +846,7 @@
                         this._Str_22046();
                         return;
                     case "buy_button":
-                        this._Str_2552._Str_18095(this._selectedOffer._Str_2451);
+                        this._Str_2552._Str_18095(this._selectedOffer.offerId);
                         return;
                 }
                 return;

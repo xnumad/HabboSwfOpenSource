@@ -349,18 +349,18 @@
             for each (_local_2 in k)
             {
                 _local_3 = _local_2.id;
-                _local_4 = _local_2._Str_3177;
-                if (_local_2._Str_19292)
+                _local_4 = _local_2.className;
+                if (_local_2.hasIndexedColor)
                 {
-                    _local_4 = ((_local_4 + "*") + _local_2._Str_6687);
+                    _local_4 = ((_local_4 + "*") + _local_2.colourIndex);
                 }
                 _local_5 = _local_2.revision;
-                _local_6 = _local_2._Str_19731;
+                _local_6 = _local_2.adUrl;
                 if (((!(_local_6 == null)) && (_local_6.length > 0)))
                 {
                     this._objectTypeAdURLs.add(_local_4, _local_6);
                 }
-                _local_7 = _local_2._Str_3177;
+                _local_7 = _local_2.className;
                 if (_local_2.type == "s")
                 {
                     this._activeObjectTypes.add(_local_3, _local_4);

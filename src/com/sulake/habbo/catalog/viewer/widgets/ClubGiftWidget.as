@@ -192,16 +192,16 @@
             for each (_local_6 in _local_2)
             {
                 _local_7 = new Vector.<IProduct>(0);
-                _local_8 = this._controller.catalog.getProductData(_local_6._Str_2696);
+                _local_8 = this._controller.catalog.getProductData(_local_6.localizationId);
                 for each (_local_9 in _local_6.products)
                 {
                     _local_11 = this._controller.catalog._Str_3414(_local_9._Str_6164, _local_9._Str_2588);
                     _local_12 = new Product(_local_9._Str_2588, _local_9._Str_6164, _local_9._Str_2415, _local_9.productCount, _local_8, _local_11, this._catalog);
                     _local_7.push(_local_12);
                 }
-                k = new Offer(_local_6._Str_2451, _local_6._Str_2696, _local_6._Str_14263, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6._Str_4236, _local_6.clubLevel, _local_7, _local_6._Str_3809, this._catalog);
+                k = new Offer(_local_6.offerId, _local_6.localizationId, _local_6._Str_14263, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6.giftable, _local_6.clubLevel, _local_7, _local_6.bundlePurchaseAllowed, this._catalog);
                 k.page = page;
-                _local_10 = (_local_3.getValue(k._Str_2451) as _Str_5178);
+                _local_10 = (_local_3.getValue(k.offerId) as _Str_5178);
                 _local_5 = this._Str_6850(k, _local_10);
                 if (!_local_5)
                 {
@@ -209,7 +209,7 @@
                 else
                 {
                     _local_4.addListItem(_local_5);
-                    this._offers.add(k._Str_2451, k);
+                    this._offers.add(k.offerId, k);
                 }
             }
         }
@@ -297,7 +297,7 @@
                 {
                     _local_9.disable();
                 }
-                _local_9.id = k._Str_2451;
+                _local_9.id = k.offerId;
             }
             var _local_10:IProductContainer = k.productContainer;
             if (!_local_10)
@@ -314,7 +314,7 @@
                 _local_10.view = _local_11;
                 _local_10.initProductIcon(page.viewer.roomEngine);
                 _local_11.procedure = this._Str_24976;
-                _local_11.id = k._Str_2451;
+                _local_11.id = k.offerId;
             }
             return _local_3;
         }

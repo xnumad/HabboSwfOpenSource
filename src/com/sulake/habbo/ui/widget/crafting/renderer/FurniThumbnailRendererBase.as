@@ -34,7 +34,7 @@
             this.updateItemCount();
             this._window.procedure = this._Str_780;
             var _local_4:IRegionWindow = (_arg_2.findChildByName("tooltip") as IRegionWindow);
-            _local_4._Str_2613 = k._Str_2686._Str_2772;
+            _local_4._Str_2613 = k._Str_2686.localizedName;
         }
 
         public function dispose():void

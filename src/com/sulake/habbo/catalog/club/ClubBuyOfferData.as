@@ -69,7 +69,7 @@
             this._extraParameter = k;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }
@@ -139,7 +139,7 @@
             return this._page;
         }
 
-        public function get _Str_13933():String
+        public function get priceType():String
         {
             return Offer.PRICE_TYPE_CREDITS;
         }
@@ -159,7 +159,7 @@
             return null;
         }
 
-        public function get _Str_2696():String
+        public function get localizationId():String
         {
             return this._productCode;
         }
@@ -184,31 +184,31 @@
             return this._extraDays;
         }
 
-        public function get _Str_3809():Boolean
+        public function get bundlePurchaseAllowed():Boolean
         {
             return false;
         }
 
-        public function get _Str_6539():Boolean
+        public function get isRentOffer():Boolean
         {
             return false;
         }
 
-        public function get _Str_4236():Boolean
+        public function get giftable():Boolean
         {
             return this._giftable;
         }
 
-        public function get _Str_3837():String
+        public function get pricingModel():String
         {
             return "";
         }
 
-        public function set _Str_3413(k:int):void
+        public function set previewCallbackId(k:int):void
         {
         }
 
-        public function get _Str_3413():int
+        public function get previewCallbackId():int
         {
             return 0;
         }
@@ -218,19 +218,19 @@
             return 0;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return "";
         }
 
-        public function get _Str_8112():String
+        public function get localizationName():String
         {
-            return ("${" + this._Str_2696) + "}";
+            return ("${" + this.localizationId) + "}";
         }
 
-        public function get _Str_7274():String
+        public function get localizationDescription():String
         {
-            return ("${" + this._Str_2696) + "}";
+            return ("${" + this.localizationId) + "}";
         }
     }
 }

@@ -196,7 +196,7 @@
                 _local_3++;
             }
             var _local_4:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
-            _local_4.badgeId = this._data._Str_2494;
+            _local_4.badgeId = this._data.badgeCode;
             _local_4.groupId = this._data.groupId;
             this._manager.localization.registerParameter("group.members.pageinfo", "amount", ("" + this._data._Str_21931));
             this._manager.localization.registerParameter("group.members.pageinfo", "page", ("" + (this._data._Str_3544 + 1)));

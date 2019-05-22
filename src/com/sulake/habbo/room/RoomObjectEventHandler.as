@@ -1165,7 +1165,7 @@
             {
                 return null;
             }
-            if ((((_local_3._Str_21111) || (_local_3._Str_18804)) || (_local_3._Str_20178)))
+            if ((((_local_3.canStandOn) || (_local_3.canSitOn)) || (_local_3.canLayOn)))
             {
                 _local_4 = k.getModel();
                 if (_local_4 == null)
@@ -1197,7 +1197,7 @@
                     return null;
                 }
                 _local_11 = this._roomEngine._Str_7682().geometry.scale;
-                _local_12 = _local_3._Str_18804;
+                _local_12 = _local_3.canSitOn;
                 _local_13 = ((_local_12) ? 0.5 : 0);
                 _local_14 = ((((_local_11 / 2) + _arg_2._Str_4595) + _arg_2.localX) / (_local_11 / 4));
                 _local_15 = (((_arg_2._Str_4534 + _arg_2.localY) + (((_local_9 - _local_13) * _local_11) / 2)) / (_local_11 / 4));

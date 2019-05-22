@@ -72,22 +72,22 @@
             return this._id;
         }
 
-        public function get _Str_3177():String
+        public function get className():String
         {
             return this._className;
         }
 
-        public function get _Str_5379():String
+        public function get fullName():String
         {
             return this._fullName;
         }
 
-        public function get _Str_19292():Boolean
+        public function get hasIndexedColor():Boolean
         {
             return this._hasIndexedColor;
         }
 
-        public function get _Str_6687():int
+        public function get colourIndex():int
         {
             return this._colourIndex;
         }
@@ -97,27 +97,27 @@
             return this._revision;
         }
 
-        public function get _Str_25012():int
+        public function get tileSizeX():int
         {
             return this._tileSizeX;
         }
 
-        public function get _Str_24992():int
+        public function get tileSizeY():int
         {
             return this._tileSizeY;
         }
 
-        public function get _Str_24774():int
+        public function get tileSizeZ():int
         {
             return this._tileSizeZ;
         }
 
-        public function get _Str_6866():Array
+        public function get colours():Array
         {
             return this._colours;
         }
 
-        public function get _Str_2772():String
+        public function get localizedName():String
         {
             return this._localizedName;
         }
@@ -127,17 +127,17 @@
             return this._description;
         }
 
-        public function get _Str_19731():String
+        public function get adUrl():String
         {
             return this._adUrl;
         }
 
-        public function get _Str_3473():int
+        public function get purchaseOfferId():int
         {
             return this._purchaseOfferId;
         }
 
-        public function get _Str_4558():String
+        public function get customParams():String
         {
             return this._customParams;
         }
@@ -147,57 +147,57 @@
             return this._category;
         }
 
-        public function set _Str_3177(k:String):void
+        public function set className(k:String):void
         {
             this._className = k;
         }
 
-        public function get _Str_3693():int
+        public function get rentOfferId():int
         {
             return this._rentOfferId;
         }
 
-        public function get _Str_7629():Boolean
+        public function get purchaseCouldBeUsedForBuyout():Boolean
         {
             return this._purchaseCouldBeUsedForBuyout;
         }
 
-        public function get _Str_8116():Boolean
+        public function get rentCouldBeUsedForBuyout():Boolean
         {
             return this._rentCouldBeUsedForBuyout;
         }
 
-        public function get _Str_6098():Boolean
+        public function get availableForBuildersClub():Boolean
         {
             return this._availableForBuildersClub;
         }
 
-        public function get _Str_21111():Boolean
+        public function get canStandOn():Boolean
         {
             return this._canStandOn;
         }
 
-        public function get _Str_18804():Boolean
+        public function get canSitOn():Boolean
         {
             return this._canSitOn;
         }
 
-        public function get _Str_20178():Boolean
+        public function get canLayOn():Boolean
         {
             return this._canLayOn;
         }
 
-        public function get _Str_11813():Boolean
+        public function get isExternalImageType():Boolean
         {
             return !(this._className.indexOf("external_image") == -1);
         }
 
-        public function get _Str_22146():Boolean
+        public function get excludedFromDynamic():Boolean
         {
             return this._excludedFromDynamic;
         }
 
-        public function get _Str_13246():String
+        public function get furniLine():String
         {
             return this._furniLine;
         }

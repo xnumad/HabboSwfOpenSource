@@ -29,7 +29,7 @@
             this._Str_4620 = _arg_10;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._Str_2507;
         }

@@ -221,7 +221,7 @@
                     this._Str_3515(ICheckBoxWindow(_arg_2)._Str_2365);
                     return;
                 case "buy_button":
-                    this._catalog._Str_20655(this._offer._Str_2451);
+                    this._catalog._Str_20655(this._offer.offerId);
                     this.hide();
                     return;
                 case "header_button_close":

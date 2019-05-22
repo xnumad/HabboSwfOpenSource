@@ -554,7 +554,7 @@
         private function _Str_25489(k:_Str_3660):void
         {
             var _local_2:_Str_5519 = k._Str_2273();
-            this._Str_3754("achievement", "achievement", [_local_2.data._Str_2494]);
+            this._Str_3754("achievement", "achievement", [_local_2.data.badgeCode]);
         }
 
         private function _Str_24390(k:CatalogPageOpenedEvent):void

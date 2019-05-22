@@ -18,7 +18,7 @@
             this._chosenColourAssetName = _arg_4;
         }
 
-        public function get _Str_6866():Array
+        public function get colours():Array
         {
             return this._colours;
         }

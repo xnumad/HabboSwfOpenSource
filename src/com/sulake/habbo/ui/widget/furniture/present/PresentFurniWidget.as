@@ -390,8 +390,8 @@
                 _local_2 = (_Str_2470 as FurniturePresentWidgetHandler).container.sessionDataManager._Str_4531(this._classId);
                 if (_local_2 != null)
                 {
-                    _local_3 = _local_2._Str_3177;
-                    k = (((_local_3 == FLOOR) || (_local_2._Str_3177 == LANDSCAPE)) || (_local_2._Str_3177 == WALLPAPER));
+                    _local_3 = _local_2.className;
+                    k = (((_local_3 == FLOOR) || (_local_2.className == LANDSCAPE)) || (_local_2.className == WALLPAPER));
                 }
             }
             return k;

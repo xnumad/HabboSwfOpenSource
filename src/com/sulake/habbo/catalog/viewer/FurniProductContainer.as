@@ -41,13 +41,13 @@
         override public function activate():void
         {
             super.activate();
-            if (((this._furnitureData._Str_3693 > -1) && (!(catalog.catalogType == CatalogType.BUILDER))))
+            if (((this._furnitureData.rentOfferId > -1) && (!(catalog.catalogType == CatalogType.BUILDER))))
             {
-                catalog.sendGetProductOffer(this._furnitureData._Str_3693);
+                catalog.sendGetProductOffer(this._furnitureData.rentOfferId);
             }
             else
             {
-                catalog.sendGetProductOffer(this._furnitureData._Str_3473);
+                catalog.sendGetProductOffer(this._furnitureData.purchaseOfferId);
             }
         }
 

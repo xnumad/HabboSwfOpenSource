@@ -166,12 +166,12 @@
             this._Str_7053 = k;
         }
 
-        public function get _Str_3413():int
+        public function get previewCallbackId():int
         {
             return this._Str_3412;
         }
 
-        public function set _Str_3413(k:int):void
+        public function set previewCallbackId(k:int):void
         {
             this._Str_3412 = k;
         }

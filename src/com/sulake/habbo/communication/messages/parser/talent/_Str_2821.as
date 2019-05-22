@@ -45,7 +45,7 @@
             return this._Str_8741;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return this._Str_2722;
         }
@@ -62,7 +62,7 @@
 
         public function _Str_24120():Boolean
         {
-            switch (this._Str_2494)
+            switch (this.badgeCode)
             {
                 case _Str_13382:
                 case _Str_7735:

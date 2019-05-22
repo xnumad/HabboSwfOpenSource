@@ -266,7 +266,7 @@
             var _local_4:Array = this.widget.handler.container.sessionDataManager._Str_19930(k);
             for each (_local_5 in _local_4)
             {
-                _local_6 = _local_5._Str_4558.split(" ");
+                _local_6 = _local_5.customParams.split(" ");
                 _local_7 = (((_local_6) && (_local_6.length >= 1)) ? parseInt(_local_6[0]) : -1);
                 if (_local_7 == _arg_2)
                 {
@@ -279,14 +279,14 @@
 
         private function openCatalogPage(k:IFurnitureData):Boolean
         {
-            if ((((this._Str_2276 == null) || (k == null)) || (k._Str_3473 < 0)))
+            if ((((this._Str_2276 == null) || (k == null)) || (k.purchaseOfferId < 0)))
             {
                 return false;
             }
-            this._Str_2276._Str_10210(k._Str_3473, CatalogType.NORMAL);
+            this._Str_2276._Str_10210(k.purchaseOfferId, CatalogType.NORMAL);
             if (((this._Str_2421) && (!(this._Str_2421.disposed))))
             {
-                this._Str_2421.trackGoogle("infostandCatalogButton", "offer", k._Str_3473);
+                this._Str_2421.trackGoogle("infostandCatalogButton", "offer", k.purchaseOfferId);
             }
             return true;
         }

@@ -45,7 +45,7 @@
             while (_local_3 < _local_2)
             {
                 _local_4 = new _Str_5178(k);
-                this._Str_5759.add(_local_4._Str_2451, _local_4);
+                this._Str_5759.add(_local_4.offerId, _local_4);
                 _local_3++;
             }
             return true;

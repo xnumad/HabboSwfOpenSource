@@ -36,12 +36,12 @@
         private function _Str_3115(k:SelectProductEvent):void
         {
             var _local_2:_Str_2402;
-            if (((!(disposed)) && (k.offer._Str_2494)))
+            if (((!(disposed)) && (k.offer.badgeCode)))
             {
                 _local_2 = (IWidgetWindow(_window.findChildByName("badge")).widget as _Str_2402);
                 if (_local_2 != null)
                 {
-                    _local_2.badgeId = k.offer._Str_2494;
+                    _local_2.badgeId = k.offer.badgeCode;
                 }
             }
         }

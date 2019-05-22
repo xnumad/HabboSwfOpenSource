@@ -91,7 +91,7 @@
         {
             var _local_5:String;
             var _local_2:BitmapData = new BitmapData(10, 10);
-            this._widget.localizations.registerParameter("useproduct.widget.title.plant_seed", "name", this._furnitureData._Str_2772);
+            this._widget.localizations.registerParameter("useproduct.widget.title.plant_seed", "name", this._furnitureData.localizedName);
             if (!this._window)
             {
                 _local_5 = "use_product_widget_frame_plant_seed_xml";
@@ -99,7 +99,7 @@
                 this._Str_2471(HEADER_BUTTON_CLOSE);
                 this._window.center();
             }
-            this._widget.localizations.registerParameter("useproduct.widget.text.plant_seed", "productName", this._furnitureData._Str_2772);
+            this._widget.localizations.registerParameter("useproduct.widget.text.plant_seed", "productName", this._furnitureData.localizedName);
             var _local_3:IFrameWindow = (this._window as IFrameWindow);
             _local_3.content.removeChildAt(0);
             var _local_4:IWindowContainer = this.createWindow(k);
@@ -142,7 +142,7 @@
             {
                 return null;
             }
-            var _local_2:Array = k._Str_4558.split(" ");
+            var _local_2:Array = k.customParams.split(" ");
             switch (k.category)
             {
                 case FurniCategory.MONSTERPLANT_SEED:

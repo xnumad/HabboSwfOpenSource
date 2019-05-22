@@ -80,12 +80,12 @@
             this._page = k;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }
 
-        public function get _Str_2696():String
+        public function get localizationId():String
         {
             return this._localizationId;
         }
@@ -105,7 +105,7 @@
             return this._activityPointType;
         }
 
-        public function get _Str_4236():Boolean
+        public function get giftable():Boolean
         {
             return this._giftable;
         }
@@ -125,32 +125,32 @@
             return this._productContainer as IGridItem;
         }
 
-        public function get _Str_3837():String
+        public function get pricingModel():String
         {
             return this._pricingModel;
         }
 
-        public function get _Str_13933():String
+        public function get priceType():String
         {
             return this._priceType;
         }
 
-        public function get _Str_3413():int
+        public function get previewCallbackId():int
         {
             return this._previewCallbackId;
         }
 
-        public function set _Str_3413(k:int):void
+        public function set previewCallbackId(k:int):void
         {
             this._previewCallbackId = k;
         }
 
-        public function get _Str_3809():Boolean
+        public function get bundlePurchaseAllowed():Boolean
         {
             return this._bundlePurchaseAllowed;
         }
 
-        public function get _Str_6539():Boolean
+        public function get isRentOffer():Boolean
         {
             return this._isRentOffer;
         }
@@ -260,30 +260,30 @@
             var _local_5:IFurnitureData;
             var _local_6:Product;
             var k:Vector.<IProduct> = new Vector.<IProduct>(0);
-            var _local_2:IProductData = this._catalog.getProductData(this._Str_2696);
+            var _local_2:IProductData = this._catalog.getProductData(this.localizationId);
             for each (_local_3 in this._productContainer.products)
             {
                 _local_5 = this._catalog._Str_3414(_local_3._Str_2941, _local_3._Str_2588);
                 _local_6 = new Product(_local_3._Str_2588, _local_3._Str_2941, _local_3._Str_2415, _local_3.productCount, _local_2, _local_5, this._catalog);
                 k.push(_local_6);
             }
-            _local_4 = new Offer(this._Str_2451, this._Str_2696, this._Str_6539, this.priceInCredits, this.priceInActivityPoints, this.activityPointType, this._Str_4236, this.clubLevel, k, this._Str_3809, this._catalog);
+            _local_4 = new Offer(this.offerId, this.localizationId, this.isRentOffer, this.priceInCredits, this.priceInActivityPoints, this.activityPointType, this.giftable, this.clubLevel, k, this.bundlePurchaseAllowed, this._catalog);
             _local_4.page = this.page;
             return _local_4;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return this._badgeCode;
         }
 
-        public function get _Str_8112():String
+        public function get localizationName():String
         {
             var k:IProductData = this._catalog.getProductData(this._localizationId);
             return (k) ? k.name : (("${" + this._localizationId) + "}");
         }
 
-        public function get _Str_7274():String
+        public function get localizationDescription():String
         {
             var k:IProductData = this._catalog.getProductData(this._localizationId);
             return (k) ? k.description : (("${" + this._localizationId) + "}");

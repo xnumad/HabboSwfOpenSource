@@ -111,7 +111,7 @@
                 return;
             }
             _local_2 = k.offer;
-            var _local_3:IProductData = page.viewer.catalog.getProductData(_local_2._Str_2696);
+            var _local_3:IProductData = page.viewer.catalog.getProductData(_local_2.localizationId);
             if (_local_3 != null)
             {
                 _local_4 = (("${" + _local_3.name) + "}");
@@ -119,8 +119,8 @@
             }
             else
             {
-                _local_4 = (("${" + _local_2._Str_2696) + "}");
-                _local_5 = (("${" + _local_2._Str_2696) + "}");
+                _local_4 = (("${" + _local_2.localizationId) + "}");
+                _local_5 = (("${" + _local_2.localizationId) + "}");
             }
             this._Str_3160.caption = _local_4;
             this._Str_3938.caption = _local_5;
@@ -128,18 +128,18 @@
             this._Str_3004 = this._habboCatalog.utils._Str_7075(k.offer, _window, this._Str_3004, this._Str_2466, -6, true, 6);
             var _local_7:Point = new Point(0, 0);
             _local_8 = (page.viewer.catalog as HabboCatalog).roomEngine;
-            switch (_local_2._Str_3837)
+            switch (_local_2.pricingModel)
             {
                 case Offer.PRICING_MODEL_SINGLE:
                 case Offer.PRICING_MODEL_MULTI:
                     _local_9 = _local_2.product;
                     _local_11 = _local_9._Str_2686;
-                    if (((_local_11 == null) || (_local_11._Str_4558 == null)))
+                    if (((_local_11 == null) || (_local_11.customParams == null)))
                     {
                         Logger.log(("[PetPreviewCatalogWidget] Unsupported product: " + _local_9._Str_2588));
                         break;
                     }
-                    _local_12 = _local_11._Str_4558;
+                    _local_12 = _local_11.customParams;
                     _local_13 = _local_12.split(" ");
                     if (_local_13.length < 1)
                     {
@@ -228,12 +228,12 @@
                     }
                     if (_local_10 != null)
                     {
-                        _local_2._Str_3413 = _local_10.id;
+                        _local_2.previewCallbackId = _local_10.id;
                         _local_6 = _local_10.data;
                     }
                     break;
                 default:
-                    Logger.log(("[PetPreviewCatalogWidget] Unknown pricing model" + _local_2._Str_3837));
+                    Logger.log(("[PetPreviewCatalogWidget] Unknown pricing model" + _local_2.pricingModel));
             }
             this._Str_3234(_local_6, true, _local_7);
             _window.invalidate();
@@ -255,10 +255,10 @@
             {
                 for each (_local_3 in page.offers)
                 {
-                    if (_local_3._Str_3413 == k)
+                    if (_local_3.previewCallbackId == k)
                     {
                         this._Str_3234(_arg_2, true);
-                        _local_3._Str_3413 = 0;
+                        _local_3.previewCallbackId = 0;
                         break;
                     }
                 }

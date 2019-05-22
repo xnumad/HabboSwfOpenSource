@@ -38,12 +38,12 @@
             this._bundlePurchaseAllowed = k.readBoolean();
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }
 
-        public function get _Str_2696():String
+        public function get localizationId():String
         {
             return this._localizationId;
         }
@@ -78,12 +78,12 @@
             return this._clubLevel;
         }
 
-        public function get _Str_4236():Boolean
+        public function get giftable():Boolean
         {
             return this._giftable;
         }
 
-        public function get _Str_3809():Boolean
+        public function get bundlePurchaseAllowed():Boolean
         {
             return this._bundlePurchaseAllowed;
         }

@@ -86,13 +86,13 @@
                 return false;
             }
             var _local_2:IPurchasableOffer = page.offers[0];
-            this._selectedTypeIndex = this._Str_18763(_local_2._Str_2696);
+            this._selectedTypeIndex = this._Str_18763(_local_2.localizationId);
             if (this._selectedTypeIndex >= 8)
             {
                 return false;
             }
-            this._Str_16879(_local_2._Str_2696);
-            this._selectedProductCode = _local_2._Str_2696;
+            this._Str_16879(_local_2.localizationId);
+            this._selectedProductCode = _local_2.localizationId;
             this._Str_25742();
             this._offers.add(this._selectedTypeIndex, _local_2);
             events.addEventListener(CatalogWidgetEvent.SELECT_PRODUCT, this._Str_3115);

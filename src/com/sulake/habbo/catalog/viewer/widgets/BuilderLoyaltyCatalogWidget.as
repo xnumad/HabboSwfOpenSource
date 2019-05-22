@@ -34,9 +34,9 @@
             for each (_local_4 in page.offers)
             {
                 _local_5 = (_local_2.clone() as IWindowContainer);
-                _local_5.findChildByName("item_header").caption = _local_4._Str_8112;
+                _local_5.findChildByName("item_header").caption = _local_4.localizationName;
                 this._catalog.utils._Str_6455((_local_5.findChildByName("item_cost_box") as IWindowContainer), _local_4);
-                _local_5.findChildByName("item_buy").caption = _local_4._Str_7274;
+                _local_5.findChildByName("item_buy").caption = _local_4.localizationDescription;
                 _local_5.findChildByName("item_buy").id = _local_3;
                 _local_3++;
                 k.addListItem(_local_5);

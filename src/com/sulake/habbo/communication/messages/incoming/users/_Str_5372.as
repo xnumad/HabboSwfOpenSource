@@ -126,7 +126,7 @@
             return this._Str_21056;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return this._Str_2722;
         }

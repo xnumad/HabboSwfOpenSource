@@ -14,7 +14,7 @@
             this._localizationId = k;
         }
 
-        public function get _Str_2696():String
+        public function get localizationId():String
         {
             return this._localizationId;
         }

@@ -190,7 +190,7 @@
                 Logger.log(("selecting offer " + k));
                 for each (_local_2 in this._offers)
                 {
-                    if (_local_2._Str_2451 == k)
+                    if (_local_2.offerId == k)
                     {
                         _local_3 = _local_2.gridItem;
                         this._Str_11744.select(_local_3, true);
@@ -602,7 +602,7 @@
             var _local_3:IPurchasableOffer;
             for each (_local_3 in this._offers)
             {
-                if (_local_3._Str_2451 == k)
+                if (_local_3.offerId == k)
                 {
                     _local_3.product.uniqueLimitedItemsLeft = _arg_2;
                     this._Str_5564.dispatchEvent(new ProductOfferUpdatedEvent(_local_3));

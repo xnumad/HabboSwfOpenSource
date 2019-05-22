@@ -89,13 +89,13 @@
                 return false;
             }
             var k:IPurchasableOffer = page.offers[0];
-            this._selectedTypeIndex = this._Str_18763(k._Str_2696);
+            this._selectedTypeIndex = this._Str_18763(k.localizationId);
             if (this._selectedTypeIndex < 8)
             {
                 return false;
             }
-            this._selectedProductCode = k._Str_2696;
-            this._Str_16879(k._Str_2696);
+            this._selectedProductCode = k.localizationId;
+            this._Str_16879(k.localizationId);
             if (((!(this._availablePalettes == null)) && (this._availablePalettes.length > 0)))
             {
                 this._selectedPaletteIndex = 0;

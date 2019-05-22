@@ -1263,7 +1263,7 @@
         private function _Str_22524(k:FurnitureItem):Boolean
         {
             var _local_2:IFurnitureData = this._catalog._Str_3414(k.type, ProductTypeEnum.WALL);
-            return (_local_2) && (_local_2._Str_11813);
+            return (_local_2) && (_local_2.isExternalImageType);
         }
 
         private function _Str_24099():void

@@ -92,7 +92,7 @@
             switch (_arg_2.name)
             {
                 case "select_button":
-                    this._controller._Str_11237(this._offer._Str_2696);
+                    this._controller._Str_11237(this._offer.localizationId);
                     return;
                 case "header_button_close":
                 case "cancel_button":

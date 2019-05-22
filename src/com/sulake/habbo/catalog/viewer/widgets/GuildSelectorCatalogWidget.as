@@ -156,7 +156,7 @@
         {
             if ((((page) && (page.offers)) && (page.offers.length > 0)))
             {
-                page.selectOffer(Offer(page.offers[0])._Str_2451);
+                page.selectOffer(Offer(page.offers[0]).offerId);
             }
         }
 
@@ -183,8 +183,8 @@
 
         protected function selectGroup(k:_Str_3266):void
         {
-            page.dispatchWidgetEvent(new CatalogWidgetGuildSelectedEvent(k.groupId, k._Str_5845, k._Str_6659, k._Str_2494));
-            page.dispatchWidgetEvent(new SetRoomPreviewerStuffDataEvent(this._Str_17425(k.groupId, k._Str_5845, k._Str_6659, k._Str_2494)));
+            page.dispatchWidgetEvent(new CatalogWidgetGuildSelectedEvent(k.groupId, k._Str_5845, k._Str_6659, k.badgeCode));
+            page.dispatchWidgetEvent(new SetRoomPreviewerStuffDataEvent(this._Str_17425(k.groupId, k._Str_5845, k._Str_6659, k.badgeCode)));
             events.dispatchEvent(new SetExtraPurchaseParameterEvent(k.groupId.toString()));
         }
 

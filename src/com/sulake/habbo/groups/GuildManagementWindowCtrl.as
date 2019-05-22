@@ -746,7 +746,7 @@
             }
             else
             {
-                _local_2.badgeId = this._data._Str_2494;
+                _local_2.badgeId = this._data.badgeCode;
                 _local_2.groupId = this._data.groupId;
                 k.visible = true;
                 k.invalidate();

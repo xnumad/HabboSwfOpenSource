@@ -148,12 +148,12 @@
             return this._expiration;
         }
 
-        public function set _Str_3473(k:int):void
+        public function set purchaseOfferId(k:int):void
         {
             this._Str_6693 = k;
         }
 
-        public function get _Str_3473():int
+        public function get purchaseOfferId():int
         {
             return this._Str_6693;
         }
@@ -228,42 +228,42 @@
             return this._Str_5135;
         }
 
-        public function set _Str_3693(k:int):void
+        public function set rentOfferId(k:int):void
         {
             this._Str_6586 = k;
         }
 
-        public function get _Str_3693():int
+        public function get rentOfferId():int
         {
             return this._Str_6586;
         }
 
-        public function get _Str_7629():Boolean
+        public function get purchaseCouldBeUsedForBuyout():Boolean
         {
             return this._Str_9981;
         }
 
-        public function set _Str_7629(k:Boolean):void
+        public function set purchaseCouldBeUsedForBuyout(k:Boolean):void
         {
             this._Str_9981 = k;
         }
 
-        public function get _Str_8116():Boolean
+        public function get rentCouldBeUsedForBuyout():Boolean
         {
             return this._Str_11465;
         }
 
-        public function set _Str_8116(k:Boolean):void
+        public function set rentCouldBeUsedForBuyout(k:Boolean):void
         {
             this._Str_11465 = k;
         }
 
-        public function get _Str_6098():Boolean
+        public function get availableForBuildersClub():Boolean
         {
             return this._Str_6871;
         }
 
-        public function set _Str_6098(k:Boolean):void
+        public function set availableForBuildersClub(k:Boolean):void
         {
             this._Str_6871 = k;
         }

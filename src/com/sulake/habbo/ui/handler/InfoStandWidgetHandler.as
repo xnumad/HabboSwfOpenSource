@@ -209,7 +209,7 @@
             var _local_2:_Str_2974 = k.data;
             if (this._widget.furniData.groupId == _local_2.groupId)
             {
-                this._widget._Str_21463._Str_5235 = _local_2._Str_2494;
+                this._widget._Str_21463._Str_5235 = _local_2.badgeCode;
                 this._widget._Str_21463.groupName = _local_2.groupName;
             }
         }
@@ -597,7 +597,7 @@
             {
                 if (((_Str_6093._Str_7070(furniId)) && (this._container.catalog._Str_11754)))
                 {
-                    if (this._widget.furniData._Str_6098)
+                    if (this._widget.furniData.availableForBuildersClub)
                     {
                         this._container.roomEngine._Str_3571(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                     }
@@ -669,7 +669,7 @@
                         {
                             return null;
                         }
-                        _local_3 = _local_12._Str_2772;
+                        _local_3 = _local_12.localizedName;
                         _local_5 = _local_7.getId();
                         _local_6 = _local_12.id;
                     }
@@ -1042,16 +1042,16 @@
                 }
                 if (_local_15 != null)
                 {
-                    _local_3.name = _local_15._Str_2772;
+                    _local_3.name = _local_15.localizedName;
                     _local_3.description = _local_15.description;
-                    _local_3._Str_3473 = _local_15._Str_3473;
-                    _local_3._Str_7629 = _local_15._Str_7629;
-                    _local_3._Str_3693 = _local_15._Str_3693;
-                    _local_3._Str_8116 = _local_15._Str_8116;
-                    _local_3._Str_6098 = _local_15._Str_6098;
+                    _local_3.purchaseOfferId = _local_15.purchaseOfferId;
+                    _local_3.purchaseCouldBeUsedForBuyout = _local_15.purchaseCouldBeUsedForBuyout;
+                    _local_3.rentOfferId = _local_15.rentOfferId;
+                    _local_3.rentCouldBeUsedForBuyout = _local_15.rentCouldBeUsedForBuyout;
+                    _local_3.availableForBuildersClub = _local_15.availableForBuildersClub;
                     if (((!(this._container._Str_10421 == null)) && (k.category == RoomObjectCategoryEnum.CONST_10)))
                     {
-                        this._container._Str_10421._Str_15677(_local_4.getId(), _local_15._Str_2772);
+                        this._container._Str_10421._Str_15677(_local_4.getId(), _local_15.localizedName);
                     }
                 }
             }

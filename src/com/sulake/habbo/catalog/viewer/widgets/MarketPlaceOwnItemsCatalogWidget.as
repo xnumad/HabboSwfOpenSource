@@ -414,7 +414,7 @@
                     _local_6 = (_local_5.getWithIndex(_local_4) as MarketPlaceOfferData);
                     if (_local_6)
                     {
-                        this._Str_2552._Str_19634(_local_6._Str_2451);
+                        this._Str_2552._Str_19634(_local_6.offerId);
                     }
                 }
             }

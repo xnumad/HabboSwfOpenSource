@@ -232,7 +232,7 @@
             {
                 return;
             }
-            this._Str_5311(((this._selectedProduct._Str_2686) ? this._selectedProduct._Str_2686._Str_2772 : ""));
+            this._Str_5311(((this._selectedProduct._Str_2686) ? this._selectedProduct._Str_2686.localizedName : ""));
             this.handler._Str_25388(this._selectedProduct._Str_2716);
         }
 

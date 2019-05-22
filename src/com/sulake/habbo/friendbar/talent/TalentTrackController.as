@@ -356,7 +356,7 @@
                     {
                         _local_8.addListItem(_local_18);
                     }
-                    if (((_local_20._Str_2494 == _Str_2821._Str_7735) && (_local_20.state == TalentTrack._Str_6707)))
+                    if (((_local_20.badgeCode == _Str_2821._Str_7735) && (_local_20.state == TalentTrack._Str_6707)))
                     {
                         _local_19.push(_local_18);
                     }
@@ -479,7 +479,7 @@
         {
             var _local_3:IWindowContainer;
             var _local_6:IRegionWindow;
-            if (((_arg_2._Str_2494 == null) || (_arg_2._Str_2494 == "")))
+            if (((_arg_2.badgeCode == null) || (_arg_2.badgeCode == "")))
             {
                 return null;
             }
@@ -487,18 +487,18 @@
             {
                 case TalentTrack._Str_9390:
                     _local_3 = IWindowContainer(this._taskAchievedTemplate.clone());
-                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2._Str_2494;
+                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     break;
                 case TalentTrack._Str_6707:
                     _local_3 = IWindowContainer(this._taskOngoingTemplate.clone());
-                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2._Str_2494;
+                    _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     _local_3.findChildByName("task_progress_fg").width = _Str_988._Str_1452(_arg_2._Str_7605, 0, _arg_2._Str_15676, 0, 48);
                     _local_6 = (_local_3.findChildByName("task_ongoing_region") as IRegionWindow);
                     _local_6.id = _arg_2.achievementId;
-                    if (_arg_2._Str_2494 == _Str_2821._Str_7735)
+                    if (_arg_2.badgeCode == _Str_2821._Str_7735)
                     {
                         _local_6._Str_2613 = "";
-                        _local_6.name = _arg_2._Str_2494;
+                        _local_6.name = _arg_2.badgeCode;
                     }
                     break;
                 case TalentTrack._Str_5241:
@@ -507,8 +507,8 @@
             }
             var _local_4:IWindow = _local_3.findChildByName("title");
             var _local_5:IWindow = _local_3.findChildByName("description");
-            _local_4.caption = this._habboTalent.localizationManager._Str_18132(_arg_2._Str_2494).toUpperCase();
-            _local_5.caption = this._habboTalent.localizationManager._Str_16142(_arg_2._Str_2494);
+            _local_4.caption = this._habboTalent.localizationManager._Str_18132(_arg_2.badgeCode).toUpperCase();
+            _local_5.caption = this._habboTalent.localizationManager._Str_16142(_arg_2.badgeCode);
             if (_local_4.height > 20)
             {
                 _local_4.y = (_local_4.y - 5);
@@ -686,12 +686,12 @@
             var _local_7:Boolean;
             this._Str_8036();
             var _local_2:_Str_2821 = this._talentTrack._Str_17590(k);
-            if ((((_local_2 == null) || (_local_2._Str_2494 == null)) || (_local_2._Str_2494 == "")))
+            if ((((_local_2 == null) || (_local_2.badgeCode == null)) || (_local_2.badgeCode == "")))
             {
                 return;
             }
-            this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2._Str_2494);
-            if (_local_2._Str_2494 == _Str_2821._Str_16378)
+            this._habboTalent.tracking.trackEventLog("Talent", this._Str_19628.name, "talent.progress.show", _local_2.badgeCode);
+            if (_local_2.badgeCode == _Str_2821._Str_16378)
             {
                 this._Str_23046();
                 return;
@@ -700,23 +700,23 @@
             this._taskProgressPopup._Str_2429.procedure = this._Str_22508;
             this._taskProgressPopup.background.procedure = this._Str_22368;
             var _local_3:IWindowContainer = IWindowContainer(this._taskProgressPopup._Str_2429);
-            _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager._Str_16142(_local_2._Str_2494);
-            _local_3.findChildByName("title").caption = this._habboTalent.localizationManager._Str_18132(_local_2._Str_2494);
+            _local_3.findChildByName("instruction").caption = this._habboTalent.localizationManager._Str_16142(_local_2.badgeCode);
+            _local_3.findChildByName("title").caption = this._habboTalent.localizationManager._Str_18132(_local_2.badgeCode);
             _local_3.findChildByName("progress_text").caption = ((((this._habboTalent.localizationManager.getLocalization("talent.track.task.progress.dialog.progress") + " ") + _local_2._Str_7605) + "/") + _local_2._Str_15676);
-            _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2._Str_2494;
+            _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _local_2.badgeCode;
             this._Str_7795().visible = false;
             if (this._habboTalent._Str_9968)
             {
-                _local_5 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2._Str_2494)) + ".description"), "");
-                _local_6 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2._Str_2494)) + ".link"), "");
+                _local_5 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2.badgeCode)) + ".description"), "");
+                _local_6 = this._habboTalent.localizationManager.getLocalization((((("talent.track.task.action." + this._talentTrack.name) + ".") + this._Str_19836(_local_2.badgeCode)) + ".link"), "");
                 _local_7 = ((!(_local_5 == "")) || (!(_local_6 == "")));
                 _local_3.findChildByName("action_separator").visible = _local_7;
                 _local_3.findChildByName("action_title").visible = _local_7;
                 this._Str_2497(_local_3, "action_description", _local_5);
                 this._Str_2497(_local_3, "action_link", _local_6);
-                _local_3.findChildByName("action_link").name = _local_2._Str_2494;
+                _local_3.findChildByName("action_link").name = _local_2.badgeCode;
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
-                if (((_local_2._Str_2494 == _Str_2821._Str_13850) && (this._Str_25273)))
+                if (((_local_2.badgeCode == _Str_2821._Str_13850) && (this._Str_25273)))
                 {
                     this._Str_7795().visible = true;
                     this._Str_7795().findChildByName("change_email_region").procedure = this._Str_23884;

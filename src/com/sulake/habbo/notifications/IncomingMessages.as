@@ -169,9 +169,9 @@
             var _local_2:_Str_3660 = (k as _Str_3660);
             var _local_3:_Str_5519 = _local_2._Str_2273();
             var _local_4:String = this._notifications.localization.getLocalization("achievements.levelup.desc", "");
-            var _local_5:String = this._notifications.localization.getBadgeName(_local_3.data._Str_2494);
-            var _local_6:BitmapData = this._notifications.sessionDataManager._Str_18459(_local_3.data._Str_2494);
-            this._notifications._Str_3069._Str_2822(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data._Str_2494, ("questengine/achievements/" + _local_3.data.category));
+            var _local_5:String = this._notifications.localization.getBadgeName(_local_3.data.badgeCode);
+            var _local_6:BitmapData = this._notifications.sessionDataManager._Str_18459(_local_3.data.badgeCode);
+            this._notifications._Str_3069._Str_2822(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
         }
 
         internal function _Str_16544(k:IMessageEvent):void

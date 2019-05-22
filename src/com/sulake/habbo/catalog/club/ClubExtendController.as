@@ -85,11 +85,11 @@
             }
             if (this._offer.vip)
             {
-                this._catalog._Str_23708(this._offer._Str_2451);
+                this._catalog._Str_23708(this._offer.offerId);
             }
             else
             {
-                this._catalog._Str_24571(this._offer._Str_2451);
+                this._catalog._Str_24571(this._offer.offerId);
             }
             this._Str_4504();
         }

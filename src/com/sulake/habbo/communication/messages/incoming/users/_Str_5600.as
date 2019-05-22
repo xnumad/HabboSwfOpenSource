@@ -107,7 +107,7 @@
             return 0;
         }
 
-        public function get _Str_2494():String
+        public function get badgeCode():String
         {
             return "";
         }

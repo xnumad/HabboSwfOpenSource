@@ -75,7 +75,7 @@
 
         private function _Str_19239(k:SelectProductEvent):void
         {
-            window.visible = k.offer._Str_3809;
+            window.visible = k.offer.bundlePurchaseAllowed;
             this._Str_6654 = k.offer.priceInCredits;
             this._Str_5642 = k.offer.priceInActivityPoints;
             this._Str_10800 = k.offer.activityPointType;

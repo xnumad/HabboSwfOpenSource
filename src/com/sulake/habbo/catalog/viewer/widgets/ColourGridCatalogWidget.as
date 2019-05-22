@@ -76,7 +76,7 @@
             var _local_4:BitmapDataAsset;
             var _local_5:BitmapDataAsset;
             this._colours = [];
-            for each (_local_2 in k._Str_6866)
+            for each (_local_2 in k.colours)
             {
                 this._colours.push([_local_2]);
             }
@@ -97,7 +97,7 @@
             var _local_4:BitmapDataAsset;
             var _local_5:BitmapDataAsset;
             this._colours = [];
-            for each (_local_2 in k._Str_6866)
+            for each (_local_2 in k.colours)
             {
                 this._colours.push(_local_2.slice());
             }

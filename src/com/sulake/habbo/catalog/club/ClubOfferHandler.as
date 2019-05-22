@@ -77,7 +77,7 @@
             var _local_2:int;
             for each (_local_4 in k.offers)
             {
-                _local_5 = new ClubBuyOfferData(_local_4._Str_2451, _local_4._Str_2716, _local_4.priceCredits, _local_4.priceActivityPoints, _local_4._Str_23501, _local_4.vip, _local_4.months, _local_4._Str_15178, _local_4._Str_11224, _local_4.year, _local_4.month, _local_4.day, _local_4._Str_18028);
+                _local_5 = new ClubBuyOfferData(_local_4.offerId, _local_4._Str_2716, _local_4.priceCredits, _local_4.priceActivityPoints, _local_4._Str_23501, _local_4.vip, _local_4.months, _local_4._Str_15178, _local_4._Str_11224, _local_4.year, _local_4.month, _local_4.day, _local_4._Str_18028);
                 this._Str_2397.push(_local_5);
                 if (_local_4.vip)
                 {
@@ -174,7 +174,7 @@
             {
                 return;
             }
-            this._habboCatalog._Str_18074(_arg_2, k._Str_2451);
+            this._habboCatalog._Str_18074(_arg_2, k.offerId);
             this._Str_4504();
         }
 

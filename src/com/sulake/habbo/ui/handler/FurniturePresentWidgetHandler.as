@@ -206,7 +206,7 @@
                                 case ProductTypeEnum.WALL:
                                     if (_local_3 != null)
                                     {
-                                        switch (_local_3._Str_3177)
+                                        switch (_local_3.className)
                                         {
                                             case FLOOR:
                                                 _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_FLOOR, 0, this._container.localization.getLocalization("inventory.furni.item.floor.name"), _local_6, null);
@@ -235,7 +235,7 @@
                                                 {
                                                     if (_local_3 != null)
                                                     {
-                                                        this._name = _local_3._Str_2772;
+                                                        this._name = _local_3.localizedName;
                                                     }
                                                 }
                                                 if (_local_4 != null)
@@ -247,7 +247,7 @@
                                                 _local_4 = this._container.roomEngine.getWallItemIcon(_local_2._Str_2706, this);
                                                 if (_local_3 != null)
                                                 {
-                                                    this._name = _local_3._Str_2772;
+                                                    this._name = _local_3.localizedName;
                                                 }
                                                 if (_local_4 != null)
                                                 {
@@ -292,7 +292,7 @@
                                     {
                                         if (_local_3 != null)
                                         {
-                                            this._name = _local_3._Str_2772;
+                                            this._name = _local_3.localizedName;
                                         }
                                     }
                                     if (_local_4 != null)

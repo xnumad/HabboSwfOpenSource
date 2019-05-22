@@ -54,12 +54,12 @@
             this._flatId = k;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }
 
-        public function set _Str_2451(k:int):void
+        public function set offerId(k:int):void
         {
             this._offerId = k;
         }

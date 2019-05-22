@@ -83,7 +83,7 @@
                             }
                             _local_7 = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
                             _local_8 = this._container.sessionDataManager._Str_3411(_local_7);
-                            _local_9 = ((_local_8 != null) ? _local_8._Str_3177 : "");
+                            _local_9 = ((_local_8 != null) ? _local_8.className : "");
                             _local_10 = ((this._container.roomSession._Str_2781) || (this._container.sessionDataManager._Str_2799));
                             _local_11 = new _Str_3072(_Str_3072.RWEBDUE_PACKAGEINFO, _local_2.id, _local_6, _local_9, _local_10);
                             this._container.events.dispatchEvent(_local_11);
@@ -159,7 +159,7 @@
                             }
                             if (_local_4 != null)
                             {
-                                this._name = _local_4._Str_2772;
+                                this._name = _local_4.localizedName;
                             }
                             if (_local_3 != null)
                             {

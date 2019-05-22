@@ -20,7 +20,7 @@
             this._index = _arg_5;
         }
 
-        public function get _Str_6866():Array
+        public function get colours():Array
         {
             return this._colours;
         }

@@ -106,9 +106,9 @@
                     else
                     {
                         _local_5 = 0;
-                        if (_local_4.indexOf(_local_7._Str_2772) == -1)
+                        if (_local_4.indexOf(_local_7.localizedName) == -1)
                         {
-                            _local_4.push(_local_7._Str_2772);
+                            _local_4.push(_local_7.localizedName);
                         }
                     }
                     _Str_2268.mixerCtrl.addItemToMixer(_local_10, _local_5);

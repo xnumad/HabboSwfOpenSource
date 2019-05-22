@@ -157,7 +157,7 @@
             this._Str_6654 = k.data.priceCredits;
             this._Str_5642 = k.data.priceActivityPoints;
             this._Str_10800 = k.data.activityPointType;
-            this._Str_25522 = k.data._Str_2494;
+            this._Str_25522 = k.data.badgeCode;
             this._Str_4613.clear();
             this._Str_6832 = -1;
             this._Str_6878 = -1;

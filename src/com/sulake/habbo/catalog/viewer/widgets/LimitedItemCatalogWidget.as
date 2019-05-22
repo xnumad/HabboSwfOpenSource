@@ -89,7 +89,7 @@
         private function update(k:IPurchasableOffer, _arg_2:Boolean=false):void
         {
             var _local_3:IProduct;
-            if (((k._Str_3837 == Offer.PRICING_MODEL_SINGLE) && (k.product.isUniqueLimitedItem)))
+            if (((k.pricingModel == Offer.PRICING_MODEL_SINGLE) && (k.product.isUniqueLimitedItem)))
             {
                 _local_3 = k.product;
                 this._Str_17834._Str_13963 = _local_3.uniqueLimitedItemsLeft;
@@ -97,7 +97,7 @@
                 window.visible = true;
                 if (_arg_2)
                 {
-                    this._habboCatalog.sendGetProductOffer(k._Str_2451);
+                    this._habboCatalog.sendGetProductOffer(k.offerId);
                 }
                 this._Str_6632.start();
             }

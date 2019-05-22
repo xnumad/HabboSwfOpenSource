@@ -263,9 +263,9 @@
             this._latestOffers = new Map();
             for each (_local_4 in _local_3.offers)
             {
-                _local_5 = new MarketPlaceOfferData(_local_4._Str_2451, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925, _local_4._Str_4121);
+                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925, _local_4._Str_4121);
                 _local_5._Str_5853 = _local_4._Str_5853;
-                this._latestOffers.add(_local_4._Str_2451, _local_5);
+                this._latestOffers.add(_local_4.offerId, _local_5);
             }
             this._totalItemsFound = _local_3._Str_13564;
             if (this._visualization != null)
@@ -293,9 +293,9 @@
             this._creditsWaiting = _local_3._Str_15236;
             for each (_local_4 in _local_3.offers)
             {
-                _local_5 = new MarketPlaceOfferData(_local_4._Str_2451, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925);
+                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925);
                 _local_5._Str_5853 = _local_4._Str_5853;
-                this._latestOwnOffers.add(_local_4._Str_2451, _local_5);
+                this._latestOwnOffers.add(_local_4.offerId, _local_5);
             }
             if (this._visualization != null)
             {
@@ -349,10 +349,10 @@
                         updateItem = (this._latestOffers.getValue(parser._Str_7501) as MarketPlaceOfferData);
                         if (updateItem)
                         {
-                            updateItem._Str_2451 = parser._Str_2451;
+                            updateItem.offerId = parser.offerId;
                             updateItem.price = parser._Str_24839;
                             updateItem._Str_4121--;
-                            this._latestOffers.add(parser._Str_2451, updateItem);
+                            this._latestOffers.add(parser.offerId, updateItem);
                         }
                         this._latestOffers.remove(parser._Str_7501);
                         this.showConfirmation(this._Str_22006, updateItem);
@@ -393,7 +393,7 @@
             }
             if (parser.success)
             {
-                item = this._latestOwnOffers.remove(parser._Str_2451);
+                item = this._latestOwnOffers.remove(parser.offerId);
                 if (item != null)
                 {
                     item.dispose();
@@ -473,7 +473,7 @@
                 _local_3 = this._catalog._Str_3414(k.furniId, ProductTypeEnum.WALL);
                 if (_local_3)
                 {
-                    _local_4 = _local_3._Str_3177;
+                    _local_4 = _local_3.className;
                     if (((!(_local_4 == null)) && (_local_4 == POSTER)))
                     {
                         _local_2 = true;

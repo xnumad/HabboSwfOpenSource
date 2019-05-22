@@ -107,7 +107,7 @@
                     }
                     this._Str_6402(_local_8);
                     _local_3 = _local_9.getLocalization("crafting.info.product.complete", "crafting.info.product.complete");
-                    _local_4 = _local_8._Str_2772;
+                    _local_4 = _local_8.localizedName;
                     this._Str_8735();
                     break;
                 case CraftingViewStateEnum._Str_9812:
@@ -119,7 +119,7 @@
                     this._Str_6402(_local_8);
                     _local_6 = (_local_7[1] as Vector.<String>);
                     _local_3 = _local_9.getLocalization("crafting.info.product.incomplete", "crafting.info.product.incomplete");
-                    _local_4 = _local_8._Str_2772;
+                    _local_4 = _local_8.localizedName;
                     this._Str_15106("${crafting.status.recipe.incomplete}");
                     break;
                 case CraftingViewStateEnum._Str_15827:
@@ -130,7 +130,7 @@
                     }
                     this._Str_6402(_local_8);
                     _local_3 = _local_9.getLocalization("crafting.info.mixer.notininventory", "crafting.info.mixer.notininventory");
-                    _local_3 = _local_3.replace("%product%", _local_8._Str_2772);
+                    _local_3 = _local_3.replace("%product%", _local_8.localizedName);
                     break;
                 case CraftingViewStateEnum._Str_13842:
                     _local_8 = (_local_7[0] as IFurnitureData);
@@ -140,7 +140,7 @@
                     }
                     this._Str_6402(_local_8);
                     _local_3 = _local_9.getLocalization("crafting.info.result.ok", "crafting.info.result.ok");
-                    _local_4 = _local_8._Str_2772;
+                    _local_4 = _local_8.localizedName;
                     this._Str_6691(false);
                     break;
                 case CraftingViewStateEnum._Str_9671:

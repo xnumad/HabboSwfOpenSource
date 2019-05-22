@@ -88,8 +88,8 @@
             var _local_3:Offer;
             for each (_local_3 in page.offers)
             {
-                _local_4 = this._Str_23368(_local_3._Str_2696);
-                _local_5 = this._Str_19039(_local_3._Str_2696);
+                _local_4 = this._Str_23368(_local_3.localizationId);
+                _local_5 = this._Str_19039(_local_3.localizationId);
                 if (this._trophyOffers.getValue(_local_4) == null)
                 {
                     this._trophyOffers.add(_local_4, new Map());
@@ -149,16 +149,16 @@
                 return;
             }
             var _local_2:IPurchasableOffer = k.offer;
-            var _local_3:IProductData = page.viewer.catalog.getProductData(_local_2._Str_2696);
-            if (ProductImageConfiguration._Str_17970(_local_2._Str_2696))
+            var _local_3:IProductData = page.viewer.catalog.getProductData(_local_2.localizationId);
+            if (ProductImageConfiguration._Str_17970(_local_2.localizationId))
             {
-                this._Str_6504(ProductImageConfiguration._Str_2643[_local_2._Str_2696]);
+                this._Str_6504(ProductImageConfiguration._Str_2643[_local_2.localizationId]);
             }
             else
             {
                 _local_5 = _local_2.product;
                 _local_6 = page.viewer.roomEngine.getFurnitureImage(_local_5._Str_2941, new Vector3d(2, 0, 0), 64, this, 0, _local_5._Str_2415);
-                _local_2._Str_3413 = _local_6.id;
+                _local_2.previewCallbackId = _local_6.id;
                 if (_local_6 != null)
                 {
                     _local_4 = _local_6.data;
@@ -213,9 +213,9 @@
             }
             for each (_local_3 in page.offers)
             {
-                if (_local_3._Str_3413 == k)
+                if (_local_3.previewCallbackId == k)
                 {
-                    _local_3._Str_3413 = 0;
+                    _local_3.previewCallbackId = 0;
                     this._Str_3234(_arg_2, true);
                     break;
                 }

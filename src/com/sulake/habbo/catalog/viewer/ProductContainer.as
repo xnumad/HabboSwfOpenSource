@@ -102,7 +102,7 @@
             {
                 return;
             }
-            if (((((catalog) && (this._Str_2324._Str_2494)) && (!(this._Str_2324._Str_2494 == ""))) && (this._Str_2324.productContainer.products.length > 1)))
+            if (((((catalog) && (this._Str_2324.badgeCode)) && (!(this._Str_2324.badgeCode == ""))) && (this._Str_2324.productContainer.products.length > 1)))
             {
                 this._Str_20490("catalog_icon_badge_included");
             }

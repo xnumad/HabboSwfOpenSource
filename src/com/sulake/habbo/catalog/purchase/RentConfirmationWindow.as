@@ -54,7 +54,7 @@
                 return;
             }
             var _local_2:_Str_7443 = k._Str_2273();
-            if (this._furniData._Str_5379 != _local_2._Str_17878)
+            if (this._furniData.fullName != _local_2._Str_17878)
             {
                 return;
             }
@@ -85,7 +85,7 @@
                 this._window.findChildByName("rental_description").visible = false;
                 this._window.findChildByName("ok_button").caption = "${catalog.purchase_confirmation.buy}";
             }
-            this._window.findChildByName("furni_name").caption = this._furniData._Str_2772;
+            this._window.findChildByName("furni_name").caption = this._furniData.localizedName;
             IItemListWindow(this._window.findChildByName("content_list")).arrangeListItems();
             this._window.center();
             this._window.procedure = this.windowProcedure;
@@ -144,7 +144,7 @@
                 }
             }
             var _local_6:* = (k.type == ProductTypeEnum.WALL);
-            this._catalog.connection.send(new _Str_11532(_local_6, k._Str_5379, _arg_2));
+            this._catalog.connection.send(new _Str_11532(_local_6, k.fullName, _arg_2));
         }
 
         private function get roomEngine():IRoomEngine
@@ -174,7 +174,7 @@
                             this._catalog.connection.send(new _Str_12348(this._stripId, this._isBuyout));
                             break;
                         case _Str_15768:
-                            this._catalog._Str_22641(this._furniData._Str_3693);
+                            this._catalog._Str_22641(this._furniData.rentOfferId);
                             break;
                     }
                     this.close();

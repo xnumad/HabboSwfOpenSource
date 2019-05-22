@@ -152,7 +152,7 @@
         {
             this._appearsInSeconds = k._Str_2273()._Str_23051;
             this._pageId = k._Str_2273().pageId;
-            this._offerId = k._Str_2273()._Str_2451;
+            this._offerId = k._Str_2273().offerId;
             this._productType = k._Str_2273()._Str_2588;
             this.refreshContent();
             this._Str_24349(this._appearsInSeconds);

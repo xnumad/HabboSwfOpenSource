@@ -227,7 +227,7 @@
                     _local_7 = new RoomAdPurchaseData();
                     this._catalog._Str_3064 = _local_7;
                 }
-                _local_7._Str_2451 = _local_6._Str_2451;
+                _local_7.offerId = _local_6.offerId;
                 this._catalog._Str_3064 = _local_7;
                 _local_8 = (window.findChildByName("price_container") as IWindowContainer);
                 this._catalog.utils._Str_6455(_local_8, _local_6);

@@ -56,7 +56,7 @@
             {
                 return "";
             }
-            return this._Str_2509._Str_2772;
+            return this._Str_2509.localizedName;
         }
     }
 }

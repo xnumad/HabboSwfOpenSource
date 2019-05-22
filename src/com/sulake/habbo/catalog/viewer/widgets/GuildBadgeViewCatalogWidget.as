@@ -46,7 +46,7 @@
             var _local_2:_Str_2402 = (IWidgetWindow(_window.findChildByName("badge")).widget as _Str_2402);
             if (_local_2 != null)
             {
-                _local_2.badgeId = k._Str_2494;
+                _local_2.badgeId = k.badgeCode;
                 _local_2.groupId = k._Str_3916;
             }
         }

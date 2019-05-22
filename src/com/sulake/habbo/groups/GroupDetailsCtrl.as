@@ -104,7 +104,7 @@
             this._manager.windowManager.registerLocalizationParameter("group.linktobase", "room_name", _arg_2.roomName);
             this._window.findChildByName("group_room_link").caption = this._manager.localization.getLocalization("group.linktobase");
             var _local_7:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
-            _local_7.badgeId = this._selectedGroup._Str_2494;
+            _local_7.badgeId = this._selectedGroup.badgeCode;
             _local_7.groupId = this._selectedGroup.groupId;
             this._window.findChildByName("join_button").visible = _arg_2._Str_19430;
             this._window.findChildByName("join_button").enable();

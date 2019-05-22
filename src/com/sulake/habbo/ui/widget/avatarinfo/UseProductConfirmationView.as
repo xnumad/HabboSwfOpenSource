@@ -171,11 +171,11 @@
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName(_local_4).content as XML)) as IWindowContainer);
                 this._Str_2471(HEADER_BUTTON_CLOSE);
             }
-            this._widget.localizations.registerParameter("useproduct.widget.text.saddle", "productName", this._furnitureData._Str_2772);
-            this._widget.localizations.registerParameter("useproduct.widget.text.custompart", "productName", this._furnitureData._Str_2772);
-            this._widget.localizations.registerParameter("useproduct.widget.text.custompartshampoo", "productName", this._furnitureData._Str_2772);
-            this._widget.localizations.registerParameter("useproduct.widget.text.shampoo", "productName", this._furnitureData._Str_2772);
-            this._widget.localizations.registerParameter("useproduct.widget.text.revive_monsterplant", "productName", this._furnitureData._Str_2772);
+            this._widget.localizations.registerParameter("useproduct.widget.text.saddle", "productName", this._furnitureData.localizedName);
+            this._widget.localizations.registerParameter("useproduct.widget.text.custompart", "productName", this._furnitureData.localizedName);
+            this._widget.localizations.registerParameter("useproduct.widget.text.custompartshampoo", "productName", this._furnitureData.localizedName);
+            this._widget.localizations.registerParameter("useproduct.widget.text.shampoo", "productName", this._furnitureData.localizedName);
+            this._widget.localizations.registerParameter("useproduct.widget.text.revive_monsterplant", "productName", this._furnitureData.localizedName);
             (this._window as IFrameWindow).content.removeChildAt(0);
             var _local_3:IWindow = this.createWindow(k);
             (this._window as IFrameWindow).content.addChild(_local_3);
@@ -263,7 +263,7 @@
                 return null;
             }
             _local_2 = new PetFigureData(this._petData.figure);
-            _local_3 = k._Str_4558.split(" ");
+            _local_3 = k.customParams.split(" ");
             _local_5 = int(_local_3[0]);
             var _local_9:Array = [];
             switch (k.category)

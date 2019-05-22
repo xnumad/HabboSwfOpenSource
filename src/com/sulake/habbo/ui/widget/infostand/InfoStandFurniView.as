@@ -253,7 +253,7 @@
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276._Str_10210(this._Str_2268.furniData._Str_3693, CatalogType.NORMAL);
+                this._Str_2276._Str_10210(this._Str_2268.furniData.rentOfferId, CatalogType.NORMAL);
             }
         }
 
@@ -404,7 +404,7 @@
             }
             if (_local_3 != null)
             {
-                _local_2 = new RoomWidgetFurniActionMessage(_local_3, this._Str_2268.furniData.id, this._Str_2268.furniData.category, this._Str_2268.furniData._Str_3473, _local_4);
+                _local_2 = new RoomWidgetFurniActionMessage(_local_3, this._Str_2268.furniData.id, this._Str_2268.furniData.category, this._Str_2268.furniData.purchaseOfferId, _local_4);
                 this._Str_2268.messageListener.processWidgetMessage(_local_2);
             }
         }
@@ -418,10 +418,10 @@
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276._Str_10210(this._Str_2268.furniData._Str_3473, CatalogType.NORMAL);
+                this._Str_2276._Str_10210(this._Str_2268.furniData.purchaseOfferId, CatalogType.NORMAL);
                 if (((this._Str_2421) && (!(this._Str_2421.disposed))))
                 {
-                    this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._Str_2268.furniData._Str_3473);
+                    this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._Str_2268.furniData.purchaseOfferId);
                 }
             }
         }
@@ -513,7 +513,7 @@
             this._Str_2304("use", _local_5);
             this._Str_24537(_local_4);
             this._Str_22883((k.groupId > 0));
-            this._Str_22377(k._Str_3233, (k.expiration >= 0), (k._Str_3473 >= 0), (k._Str_3693 >= 0), k._Str_7629, k._Str_8116);
+            this._Str_22377(k._Str_3233, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
             this._Str_2374.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this._Str_9953))) || (_local_5));

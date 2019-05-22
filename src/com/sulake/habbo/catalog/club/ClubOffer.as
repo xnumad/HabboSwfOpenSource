@@ -38,7 +38,7 @@
             this._window.findChildByName("item_header").caption = ((_local_5 != null) ? _local_5.value : "-");
             this._habboCatalog.utils._Str_6455((this._window.findChildByName("item_price") as IWindowContainer), this._Str_2324);
             this._window.findChildByName("item_buy").addEventListener(WindowMouseEvent.CLICK, this._Str_12134);
-            if (k._Str_4236)
+            if (k.giftable)
             {
                 this._window.findChildByName("item_gift").addEventListener(WindowMouseEvent.CLICK, this._Str_18825);
             }

@@ -8,26 +8,26 @@
 
     public interface IPurchasableOffer extends IDisposable 
     {
-        function get _Str_2451():int;
+        function get offerId():int;
         function get priceInActivityPoints():int;
         function get activityPointType():int;
         function get priceInCredits():int;
         function get page():ICatalogPage;
-        function get _Str_13933():String;
+        function get priceType():String;
         function get product():IProduct;
         function get productContainer():IProductContainer;
         function get gridItem():IGridItem;
-        function get _Str_2696():String;
-        function get _Str_3809():Boolean;
-        function get _Str_6539():Boolean;
-        function get _Str_4236():Boolean;
-        function get _Str_3837():String;
-        function set _Str_3413(_arg_1:int):void;
-        function get _Str_3413():int;
+        function get localizationId():String;
+        function get bundlePurchaseAllowed():Boolean;
+        function get isRentOffer():Boolean;
+        function get giftable():Boolean;
+        function get pricingModel():String;
+        function set previewCallbackId(_arg_1:int):void;
+        function get previewCallbackId():int;
         function get clubLevel():int;
-        function get _Str_2494():String;
+        function get badgeCode():String;
         function set page(_arg_1:ICatalogPage):void;
-        function get _Str_8112():String;
-        function get _Str_7274():String;
+        function get localizationName():String;
+        function get localizationDescription():String;
     }
 }

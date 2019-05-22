@@ -177,16 +177,16 @@
                     if (((_arg_4) && (this._furnitureData)))
                     {
                         _local_11 = "";
-                        switch (this._furnitureData._Str_3177)
+                        switch (this._furnitureData.className)
                         {
                             case "floor":
-                                _local_11 = ["th", this._furnitureData._Str_3177, _arg_4.product._Str_2415].join("_");
+                                _local_11 = ["th", this._furnitureData.className, _arg_4.product._Str_2415].join("_");
                                 break;
                             case "wallpaper":
                                 _local_11 = ["th", "wall", _arg_4.product._Str_2415].join("_");
                                 break;
                             case "landscape":
-                                _local_11 = ["th", this._furnitureData._Str_3177, _arg_4.product._Str_2415.replace(".", "_"), "001"].join("_");
+                                _local_11 = ["th", this._furnitureData.className, _arg_4.product._Str_2415.replace(".", "_"), "001"].join("_");
                                 break;
                             default:
                                 _local_10 = _local_9.getWallItemIcon(this._Str_2941, _arg_2, this._extraParam);
@@ -260,9 +260,9 @@
 
         public function get isColorable():Boolean
         {
-            if (((this._furnitureData) && (this._furnitureData._Str_5379)))
+            if (((this._furnitureData) && (this._furnitureData.fullName)))
             {
-                return !(this._furnitureData._Str_5379.indexOf("*") == -1);
+                return !(this._furnitureData.fullName.indexOf("*") == -1);
             }
             return false;
         }

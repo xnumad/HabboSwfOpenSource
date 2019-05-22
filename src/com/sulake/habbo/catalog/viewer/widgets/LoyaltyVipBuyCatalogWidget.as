@@ -134,7 +134,7 @@
             {
                 return;
             }
-            Logger.log(("Offer: " + [offer._Str_2451, offer._Str_2716, offer.priceCredits, offer.vip, offer.months, offer._Str_11224, offer.year, offer.month, offer.day, offer._Str_10047]));
+            Logger.log(("Offer: " + [offer.offerId, offer._Str_2716, offer.priceCredits, offer.vip, offer.months, offer._Str_11224, offer.year, offer.month, offer.day, offer._Str_10047]));
             offer.page = page;
             try
             {

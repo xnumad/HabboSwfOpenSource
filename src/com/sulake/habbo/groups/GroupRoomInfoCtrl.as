@@ -113,7 +113,7 @@
             this._window.findChildByName("group_name_txt").caption = this._group.groupName;
             this._window.findChildByName("info_region").visible = this._expanded;
             var k:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
-            k.badgeId = this._group._Str_2494;
+            k.badgeId = this._group.badgeCode;
             k.groupId = this._group.groupId;
             this._window.x = 0;
             this._window.y = 0;

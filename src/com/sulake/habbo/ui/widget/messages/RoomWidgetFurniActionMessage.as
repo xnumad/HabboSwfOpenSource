@@ -39,7 +39,7 @@
             return this._objectData;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }

@@ -75,7 +75,7 @@
             {
                 case FurniCategory._Str_12534:
                     _local_4 = _Str_10898;
-                    _local_6 = this._furnitureData._Str_4558.split(",");
+                    _local_6 = this._furnitureData.customParams.split(",");
                     for each (_local_7 in _local_6)
                     {
                         if (this._widget.handler.container.avatarRenderManager.isValidFigureSetForGender(parseInt(_local_7), this._widget.handler.container.sessionDataManager.gender))
@@ -88,7 +88,7 @@
                     Logger.log(("[PurchasableClothingConfirmationView.open()] Unsupported furniture category: " + this._furnitureData.category));
             }
             this._newFigureString = this._widget.handler.container.avatarRenderManager.getFigureStringWithFigureIds(this._widget.handler.container.sessionDataManager.figure, this._widget.handler.container.sessionDataManager.gender, _local_5);
-            if (this._widget.handler.container.inventory.hasBoundFigureSetFurniture(this._furnitureData._Str_3177))
+            if (this._widget.handler.container.inventory.hasBoundFigureSetFurniture(this._furnitureData.className))
             {
                 this._widget.handler.container.connection.send(new _Str_4639(this._newFigureString, this._widget.handler.container.sessionDataManager.gender));
             }
@@ -102,7 +102,7 @@
         private function _Str_3248(k:int):void
         {
             var _local_4:String;
-            this._widget.localizations.registerParameter("useproduct.widget.title.bind_clothing", "name", this._furnitureData._Str_2772);
+            this._widget.localizations.registerParameter("useproduct.widget.title.bind_clothing", "name", this._furnitureData.localizedName);
             if (!this._window)
             {
                 _local_4 = "use_product_widget_frame_plant_seed_xml";
@@ -111,7 +111,7 @@
                 this._window.center();
             }
             this._window.caption = "${useproduct.widget.title.bind_clothing}";
-            this._widget.localizations.registerParameter("useproduct.widget.text.bind_clothing", "productName", this._furnitureData._Str_2772);
+            this._widget.localizations.registerParameter("useproduct.widget.text.bind_clothing", "productName", this._furnitureData.localizedName);
             var _local_2:IFrameWindow = (this._window as IFrameWindow);
             _local_2.content.removeChildAt(0);
             var _local_3:IWindowContainer = this.createWindow(k);

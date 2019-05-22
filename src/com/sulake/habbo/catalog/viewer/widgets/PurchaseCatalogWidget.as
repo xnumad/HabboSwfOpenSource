@@ -152,9 +152,9 @@
                 _local_2 = _window.findChildByName("gift_button");
                 if (_local_2 != null)
                 {
-                    _local_2.visible = ((!(this._offer._Str_6539)) && (!(this._noGiftOption)));
+                    _local_2.visible = ((!(this._offer.isRentOffer)) && (!(this._noGiftOption)));
                 }
-                if (!this._offer._Str_4236)
+                if (!this._offer.giftable)
                 {
                     this._Str_4401(false);
                 }
@@ -179,7 +179,7 @@
             var _local_3:Boolean;
             if (k != null)
             {
-                if (k._Str_3837 == Offer.PRICING_MODEL_SINGLE)
+                if (k.pricingModel == Offer.PRICING_MODEL_SINGLE)
                 {
                     _local_2 = this._offer.product;
                     if (((!(_local_2 == null)) && (_local_2.isUniqueLimitedItem)))
@@ -237,7 +237,7 @@
         {
             this._additionalParameters = k.parameter;
             this._Str_10113(this._Str_7923);
-            this._Str_4401(((((!(this._offer == null)) && (this._offer._Str_4236)) && (this._Str_7923)) && (this._quantity == 1)));
+            this._Str_4401(((((!(this._offer == null)) && (this._offer.giftable)) && (this._Str_7923)) && (this._quantity == 1)));
         }
 
         private function _Str_8396(event:WindowMouseEvent, isGift:Boolean=false):void
@@ -252,7 +252,7 @@
             {
                 if (this._offer != null)
                 {
-                    if (((!(this._catalog._Str_3064 == null)) && (this._catalog._Str_3064._Str_2451 == this._offer._Str_2451)))
+                    if (((!(this._catalog._Str_3064 == null)) && (this._catalog._Str_3064.offerId == this._offer.offerId)))
                     {
                         if (this._catalog._Str_3064.flatId == 0)
                         {
@@ -317,7 +317,7 @@
             {
                 if (((!(this._offer == null)) && (this._Str_7923)))
                 {
-                    this._Str_4401(this._offer._Str_4236);
+                    this._Str_4401(this._offer.giftable);
                 }
             }
         }

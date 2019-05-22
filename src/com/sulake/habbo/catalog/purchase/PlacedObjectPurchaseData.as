@@ -47,7 +47,7 @@
 
         private function _Str_25851(k:IPurchasableOffer):void
         {
-            this._offerId = k._Str_2451;
+            this._offerId = k.offerId;
             this._productClassId = k.product._Str_2941;
             this._productData = k.product._Str_8554;
             this._furniData = k.product._Str_2686;
@@ -94,7 +94,7 @@
             return this._direction;
         }
 
-        public function get _Str_2451():int
+        public function get offerId():int
         {
             return this._offerId;
         }

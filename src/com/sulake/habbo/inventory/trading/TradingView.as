@@ -874,7 +874,7 @@
                 return false;
             }
             var _local_2:IFurnitureData = this._tradingModel._Str_8308()._Str_3414(k.type, ProductTypeEnum.WALL);
-            return (_local_2) && (_local_2._Str_11813);
+            return (_local_2) && (_local_2.isExternalImageType);
         }
 
         private function _Str_19943(k:GroupItem, _arg_2:String, _arg_3:Boolean, _arg_4:int=-1, _arg_5:Boolean=false):String

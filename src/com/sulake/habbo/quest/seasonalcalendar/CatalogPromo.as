@@ -162,12 +162,12 @@
         private function _Str_22066(k:_Str_7445):void
         {
             this._window.findChildByName("buy_button").enable();
-            var _local_2:IProductData = this._questEngine.sessionDataManager.getProductData(k.offer._Str_2696);
+            var _local_2:IProductData = this._questEngine.sessionDataManager.getProductData(k.offer.localizationId);
             if (_local_2 != null)
             {
                 ITextWindow(this._window.findChildByName("promo_info")).text = _local_2.name;
                 this._pageId = k.pageId;
-                this._offerId = k.offer._Str_2451;
+                this._offerId = k.offer.offerId;
                 if (k.offer.products.length > 0)
                 {
                     this._productData = _Str_2853(k.offer.products[0]);
