@@ -78,10 +78,10 @@
             this._SafeStr_18872 = _arg_4;
             this._SafeStr_18882 = new Map();
             this._SafeStr_18761 = ((this._SafeStr_18579.config.getBoolean("games.buy.x.games.enabled")) ? _SafeStr_18752 : _SafeStr_18751);
-            if (((this._SafeStr_18579.catalog._Str_12955.enabled) && (this._SafeStr_18579.config.getBoolean("games.buy.x.games.video.enabled"))))
+            if (((this._SafeStr_18579.catalog.videoOffers.enabled) && (this._SafeStr_18579.config.getBoolean("games.buy.x.games.video.enabled"))))
             {
                 this._SafeStr_18761 = _SafeStr_18753;
-                this._SafeStr_18579.catalog._Str_12955.load(this);
+                this._SafeStr_18579.catalog.videoOffers.load(this);
             }
             k.roomUI.visible = false;
             k.windowManager.getDesktop(1).visible = false;

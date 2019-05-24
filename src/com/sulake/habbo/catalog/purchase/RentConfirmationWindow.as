@@ -61,12 +61,12 @@
             this._isBuyout = _local_2.buyout;
             if (this._catalog.getPurse().credits < _local_2.priceInCredits)
             {
-                this._catalog._Str_7857();
+                this._catalog.showNotEnoughCreditsAlert();
                 return;
             }
             if (this._catalog.getPurse()._Str_5590(_local_2.activityPointType) < _local_2.priceInActivityPoints)
             {
-                this._catalog._Str_12433(_local_2.activityPointType);
+                this._catalog.getHabboClubOffers(_local_2.activityPointType);
                 return;
             }
             this._window = (this._catalog.windowManager.buildFromXML((this._catalog.assets.getAssetByName("rent_confirmation").content as XML)) as IWindowContainer);

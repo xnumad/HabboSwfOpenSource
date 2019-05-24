@@ -328,7 +328,7 @@
             {
                 for each (k in this._messageEvents)
                 {
-                    this._communication._Str_2778(k);
+                    this._communication.removeHabboConnectionMessageEvent(k);
                 }
             }
             this._performanceTracker = null;
@@ -451,7 +451,7 @@
                     ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_DATA, _local_4);
                 }
             }
-            this._communication._Str_19659();
+            this._communication.setMessageQueueErrorDebugData();
             ErrorReportStorage.addDebugData("Flash memory usage", (("Memory usage: " + Math.round((System.totalMemory / (0x0400 * 0x0400)))) + " MB"));
         }
 

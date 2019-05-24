@@ -13,14 +13,14 @@
         function get mode():int;
         function set mode(_arg_1:int):void;
         function get port():int;
-        function _Str_18204():void;
-        function _Str_14453(_arg_1:String):void;
+        function updateHostParameters():void;
+        function initConnection(_arg_1:String):void;
         function _Str_23491():void;
         function addHabboConnectionMessageEvent(_arg_1:IMessageEvent):IMessageEvent;
-        function _Str_2778(_arg_1:IMessageEvent):void;
-        function _Str_20482(_arg_1:String, _arg_2:String):IHabboWebLogin;
-        function _Str_16220():IEncryption;
-        function _Str_22185(_arg_1:BigInteger, _arg_2:BigInteger):IKeyExchange;
-        function _Str_19659():void;
+        function removeHabboConnectionMessageEvent(_arg_1:IMessageEvent):void;
+        function habboWebLogin(_arg_1:String, _arg_2:String):IHabboWebLogin;
+        function initializeEncryption():IEncryption;
+        function initializeKeyExchange(_arg_1:BigInteger, _arg_2:BigInteger):IKeyExchange;
+        function setMessageQueueErrorDebugData():void;
     }
 }

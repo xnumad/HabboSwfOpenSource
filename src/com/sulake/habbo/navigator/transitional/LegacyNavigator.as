@@ -423,9 +423,9 @@
             return this._oldNavigator.getProperty(k, _arg_2);
         }
 
-        public function get _Str_7781():Boolean
+        public function get isDoorModeOverriddenInCurrentRoom():Boolean
         {
-            return this._oldNavigator._Str_7781;
+            return this._oldNavigator.isDoorModeOverriddenInCurrentRoom;
         }
 
         public function _Str_4051(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void

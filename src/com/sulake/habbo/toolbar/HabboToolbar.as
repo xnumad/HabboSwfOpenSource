@@ -474,7 +474,7 @@
         private function _Str_19309():void
         {
             var k:Boolean = ((!(this._Str_9485())) || (!(getBoolean("new.identity.hide.ui"))));
-            if ((((this._catalog._Str_12955.enabled) && (getBoolean("toolbar.extension.video.promo.enabled"))) && (k)))
+            if ((((this._catalog.videoOffers.enabled) && (getBoolean("toolbar.extension.video.promo.enabled"))) && (k)))
             {
                 this._videoOfferExtension = new VideoOfferExtension(this);
             }

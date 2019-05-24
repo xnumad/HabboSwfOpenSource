@@ -128,12 +128,12 @@
             }
             if (this._userObjectEvent != null)
             {
-                this._toolbar.communicationManager._Str_2778(this._userObjectEvent);
+                this._toolbar.communicationManager.removeHabboConnectionMessageEvent(this._userObjectEvent);
                 this._userObjectEvent = null;
             }
             if (this._userChangeMessageEvent != null)
             {
-                this._toolbar.communicationManager._Str_2778(this._userChangeMessageEvent);
+                this._toolbar.communicationManager.removeHabboConnectionMessageEvent(this._userChangeMessageEvent);
                 this._userChangeMessageEvent = null;
             }
             this._toolbar = null;

@@ -276,7 +276,7 @@
 
         private function openCatalogPage(k:ICatalogNode):void
         {
-            this._catalog._Str_8756(k.pageId, -1, this._catalogType);
+            this._catalog.loadCatalogPage(k.pageId, -1, this._catalogType);
             this._catalog.events.dispatchEvent(new CatalogPageOpenedEvent(k.pageId, k.localization));
         }
 
@@ -285,7 +285,7 @@
             var _local_2:ICatalogNode = this._Str_10014(k);
             if (((!(_local_2 == null)) && (_local_2.visible)))
             {
-                this._catalog._Str_8756(_local_2.pageId, -1, this._catalogType);
+                this._catalog.loadCatalogPage(_local_2.pageId, -1, this._catalogType);
                 this._Str_18195(_local_2);
             }
             else
@@ -304,7 +304,7 @@
             var _local_4:Vector.<ICatalogNode>;
             if (!this._Str_3961)
             {
-                this._catalog._Str_9617(k, _arg_2, this._catalogType);
+                this._catalog.openCatalogPageById(k, _arg_2, this._catalogType);
             }
             else
             {
@@ -322,7 +322,7 @@
                 }
                 if (_local_3 != null)
                 {
-                    this._catalog._Str_8756(_local_3.pageId, _arg_2, this._catalogType);
+                    this._catalog.loadCatalogPage(_local_3.pageId, _arg_2, this._catalogType);
                     this._Str_18195(_local_3);
                 }
             }
@@ -334,7 +334,7 @@
             var _local_3:ICatalogNode;
             if (!this._Str_3961)
             {
-                this._catalog._Str_9617(_Str_5778, k, this._catalogType);
+                this._catalog.openCatalogPageById(_Str_5778, k, this._catalogType);
             }
             else
             {
@@ -342,7 +342,7 @@
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2[0];
-                    this._catalog._Str_8756(_local_3.pageId, k, this._catalogType);
+                    this._catalog.loadCatalogPage(_local_3.pageId, k, this._catalogType);
                     this._Str_18195(_local_3);
                 }
             }
@@ -411,7 +411,7 @@
                 return;
             }
             Logger.log((((("Load front page: " + k.localization) + "(") + k.pageId) + ")"));
-            this._catalog._Str_8756(k.pageId, -1, this._catalogType);
+            this._catalog.loadCatalogPage(k.pageId, -1, this._catalogType);
         }
 
         private function _Str_19504(k:ICatalogNode):ICatalogNode

@@ -15,7 +15,7 @@
         function get _Str_6682():Boolean;
         function get _Str_8836():Boolean;
         function get _Str_6338():int;
-        function get _Str_11415():Boolean;
+        function get tradingActive():Boolean;
         function get _Str_25019():Boolean;
         function get _Str_3455():IUnseenItemTracker;
         function _Str_15524(_arg_1:Array):Array;
@@ -35,7 +35,7 @@
         function _Str_16351(_arg_1:String):void;
         function _Str_20251(_arg_1:Boolean):void;
         function _Str_15313():int;
-        function _Str_11363(_arg_1:int):Boolean;
+        function returnInventoryFurniFromRecycler(_arg_1:int):Boolean;
         function _Str_7938(_arg_1:int):Boolean;
         function _Str_21312(_arg_1:int):Boolean;
         function _Str_14439(_arg_1:int):Boolean;

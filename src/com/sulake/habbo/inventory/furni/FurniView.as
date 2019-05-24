@@ -527,7 +527,7 @@
             {
                 return;
             }
-            var _local_5:IFurnitureData = this._model.controller._Str_3414(_local_4.type, ((_local_4._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            var _local_5:IFurnitureData = this._model.controller.getFurnitureData(_local_4.type, ((_local_4._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
             var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller._Str_2627._Str_4701()))) && (!(_local_2)));
             var _local_7:Boolean = (((this._model._Str_7411) && (k)) && (((((_local_4.category == FurniCategory._Str_6096) || (_local_4.category == FurniCategory._Str_7297)) || (_local_4.category == FurniCategory._Str_7954)) || (_local_4.category == FurniCategory._Str_7696)) || (_local_4.category == FurniCategory._Str_6915)));
             var _local_8:Boolean = true;

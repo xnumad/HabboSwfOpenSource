@@ -38,8 +38,8 @@
             }
             if (this._sessionDataManager.communication)
             {
-                this._sessionDataManager.communication._Str_2778(this._roomReadyMessageEvent);
-                this._sessionDataManager.communication._Str_2778(this._habboGroupBadgesMessageEvent);
+                this._sessionDataManager.communication.removeHabboConnectionMessageEvent(this._roomReadyMessageEvent);
+                this._sessionDataManager.communication.removeHabboConnectionMessageEvent(this._habboGroupBadgesMessageEvent);
             }
             this._badges = null;
             this._sessionDataManager = null;

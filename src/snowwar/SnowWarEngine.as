@@ -1334,13 +1334,13 @@
 
         public function _SafeStr_13226(k:String):void
         {
-            //this._catalog._SafeStr_6513(); //TODO: Purchasing game tokens.
+            //this._catalog.buySnowWarTokensOffer(); //TODO: Purchasing game tokens.
             this._SafeStr_7665(k);
         }
 
         public function _SafeStr_13227(k:String):Boolean
         {
-            var _local_2:Boolean = this._catalog._Str_12955.launch(VideoOfferTypeEnum._SafeStr_7697);
+            var _local_2:Boolean = this._catalog.videoOffers.launch(VideoOfferTypeEnum._SafeStr_7697);
             this._SafeStr_7665(k);
             return _local_2;
         }

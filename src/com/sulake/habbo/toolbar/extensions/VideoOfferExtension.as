@@ -53,7 +53,7 @@
             }
             if (((!(this._promoClosed)) && (!(this._view))))
             {
-                this._toolbar.catalog._Str_12955.load(this);
+                this._toolbar.catalog.videoOffers.load(this);
             }
         }
 
@@ -198,7 +198,7 @@
 
         private function _Str_13315(k:WindowMouseEvent):void
         {
-            if (!this._toolbar.catalog._Str_12955.launch(VideoOfferTypeEnum._Str_17371))
+            if (!this._toolbar.catalog.videoOffers.launch(VideoOfferTypeEnum._Str_17371))
             {
                 this._Str_2669();
             }

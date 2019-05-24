@@ -567,7 +567,7 @@
                 return;
             }
             var _local_5:String = this._data._Str_2678.roomName;
-            this._catalog._Str_20241("room_ad", k, _arg_2, _local_5, _arg_3, _arg_4);
+            this._catalog.openRoomAdCatalogPageInExtendedMode("room_ad", k, _arg_2, _local_5, _arg_3, _arg_4);
         }
 
         private function _Str_3304(k:HabboToolbarEvent):void
@@ -861,9 +861,9 @@
             }
         }
 
-        public function get _Str_7781():Boolean
+        public function get isDoorModeOverriddenInCurrentRoom():Boolean
         {
-            return this._catalog._Str_7781;
+            return this._catalog.isDoorModeOverriddenInCurrentRoom;
         }
 
         public function isPerkAllowed(k:String):Boolean

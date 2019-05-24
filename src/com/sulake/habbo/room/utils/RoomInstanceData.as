@@ -160,7 +160,7 @@
             }
         }
 
-        public function _Str_3414():FurnitureData
+        public function getFurnitureData():FurnitureData
         {
             if (this._furnitureStack.length > 0)
             {

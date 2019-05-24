@@ -196,10 +196,10 @@
             var _local_2:IFurnitureData;
             if ((((!(this._Str_2276 == null)) && (this._Str_2268)) && (this._Str_2268.furniData)))
             {
-                _local_2 = this._Str_3414(this._Str_2268.furniData);
+                _local_2 = this.getFurnitureData(this._Str_2268.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276._Str_10356(_local_2, true, this._Str_2268.furniData.id);
+                    this._Str_2276.openRentConfirmationWindow(_local_2, true, this._Str_2268.furniData.id);
                 }
             }
         }
@@ -209,10 +209,10 @@
             var _local_2:IFurnitureData;
             if ((((!(this._Str_2276 == null)) && (this._Str_2268)) && (this._Str_2268.furniData)))
             {
-                _local_2 = this._Str_3414(this._Str_2268.furniData);
+                _local_2 = this.getFurnitureData(this._Str_2268.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276._Str_10356(_local_2, false, this._Str_2268.furniData.id);
+                    this._Str_2276.openRentConfirmationWindow(_local_2, false, this._Str_2268.furniData.id);
                 }
             }
         }
@@ -228,7 +228,7 @@
             return _local_3;
         }
 
-        private function _Str_3414(k:InfoStandFurniData):IFurnitureData
+        private function getFurnitureData(k:InfoStandFurniData):IFurnitureData
         {
             var _local_5:IFurnitureData;
             var _local_2:IRoomObject = this.getRoomObject(k.id);
@@ -253,7 +253,7 @@
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276._Str_10210(this._Str_2268.furniData.rentOfferId, CatalogType.NORMAL);
+                this._Str_2276.openCatalogPageByOfferId(this._Str_2268.furniData.rentOfferId, CatalogType.NORMAL);
             }
         }
 
@@ -418,7 +418,7 @@
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276._Str_10210(this._Str_2268.furniData.purchaseOfferId, CatalogType.NORMAL);
+                this._Str_2276.openCatalogPageByOfferId(this._Str_2268.furniData.purchaseOfferId, CatalogType.NORMAL);
                 if (((this._Str_2421) && (!(this._Str_2421.disposed))))
                 {
                     this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._Str_2268.furniData.purchaseOfferId);

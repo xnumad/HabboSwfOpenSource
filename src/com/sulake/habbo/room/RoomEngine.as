@@ -765,7 +765,7 @@
                 _local_5 = 0;
                 _local_6 = null;
                 _local_7 = false;
-                while ((_local_6 = _local_4._Str_3414()) != null)
+                while ((_local_6 = _local_4.getFurnitureData()) != null)
                 {
                     _local_7 = this._Str_20365(_local_4.roomId, _local_6.id, _local_6);
                     if ((++_local_5 % _local_2) == 0)
@@ -1685,7 +1685,7 @@
             {
                 return null;
             }
-            _local_9._Str_20737 = this._roomObjectEventHandler;
+            _local_9.mouseListener = this._roomObjectEventHandler;
             if (_local_9.geometry != null)
             {
                 _local_9.geometry.z_scale = _local_7.getNumber(RoomVariableEnum.ROOM_Z_SCALE);
@@ -2009,7 +2009,7 @@
                 }
                 if (!this._Str_25871(_local_9, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7))
                 {
-                    if (!_local_9._Str_21232(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8))
+                    if (!_local_9.handleMouseEvent(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8))
                     {
                         _local_14 = "";
                         if (_arg_4 == MouseEvent.CLICK)

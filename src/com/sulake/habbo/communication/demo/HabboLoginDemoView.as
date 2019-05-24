@@ -262,7 +262,7 @@
                         Logger.log(((("Key not defined: " + localKey) + ". Using default value: ") + this._defaultPropertyValues[originalKey]));
                     }
                 }
-                this._habboLogin.communication._Str_18204();
+                this._habboLogin.communication.updateHostParameters();
             }
             this._window.findChildByName("login_btn").enable();
             event.stopPropagation();
@@ -405,7 +405,7 @@
                 _local_2 = _local_2.replace("http://", "");
                 _local_2 = _local_2.replace("https://", "");
             }
-            var _local_3:IHabboWebLogin = this._habboLogin.communication._Str_20482(this.name, this.password);
+            var _local_3:IHabboWebLogin = this._habboLogin.communication.habboWebLogin(this.name, this.password);
             this._parsedTicket = new SSOTicket(this._habboLogin.assets, _local_3, _local_2, k);
             this._parsedTicket.addEventListener(SSOTicket.SUCCESS, this._Str_14732);
             this._parsedTicket.addEventListener(SSOTicket.FAILURE, this._Str_15342);

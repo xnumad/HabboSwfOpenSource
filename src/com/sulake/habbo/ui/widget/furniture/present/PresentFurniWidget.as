@@ -699,7 +699,7 @@
         {
             if (!this._Str_4649())
             {
-                this._catalog._Str_17069 = this._senderName;
+                this._catalog.giftReceiver = this._senderName;
             }
             this._catalog.openCatalogPage(CatalogPageName.GIFT_SHOP);
         }

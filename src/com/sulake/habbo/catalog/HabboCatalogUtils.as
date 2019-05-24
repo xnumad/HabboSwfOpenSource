@@ -513,7 +513,7 @@
             }
         }
 
-        public function _Str_13308(k:String, _arg_2:int, _arg_3:IBitmapWrapperWindow):void
+        public function displayProductIcon(k:String, _arg_2:int, _arg_3:IBitmapWrapperWindow):void
         {
             var _local_4:ImageResult;
             var _local_5:Vector.<IBitmapWrapperWindow>;

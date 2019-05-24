@@ -127,12 +127,12 @@
             }
             if (this._floorHeightMapMessageEvent != null)
             {
-                this._windowManager.communication._Str_2778(this._floorHeightMapMessageEvent);
-                this._windowManager.communication._Str_2778(this._entryTileDataMessageEvent);
-                this._windowManager.communication._Str_2778(this._occupiedTilesMessageEvent);
-                this._windowManager.communication._Str_2778(this._roomVisualizationSettingsMessageEvent);
-                this._windowManager.communication._Str_2778(this._buildersClubSubscriptionStatusMessageEvent);
-                this._windowManager.communication._Str_2778(this._perkAllowancesMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._floorHeightMapMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._entryTileDataMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._occupiedTilesMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._roomVisualizationSettingsMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._buildersClubSubscriptionStatusMessageEvent);
+                this._windowManager.communication.removeHabboConnectionMessageEvent(this._perkAllowancesMessageEvent);
                 this._floorHeightMapMessageEvent = null;
                 this._entryTileDataMessageEvent = null;
                 this._occupiedTilesMessageEvent = null;

@@ -72,10 +72,10 @@
         private function createWindow():void
         {
             this._SafeStr_18761 = ((this._snowWarEngine.config.getBoolean("games.buy.x.games.enabled")) ? _SafeStr_18752 : _SafeStr_18751);
-            if (((this._snowWarEngine.catalog._Str_12955.enabled) && (this._snowWarEngine.config.getBoolean("games.buy.x.games.video.enabled"))))
+            if (((this._snowWarEngine.catalog.videoOffers.enabled) && (this._snowWarEngine.config.getBoolean("games.buy.x.games.video.enabled"))))
             {
                 this._SafeStr_18761 = _SafeStr_18753;
-                this._snowWarEngine.catalog._Str_12955.load(this);
+                this._snowWarEngine.catalog.videoOffers.load(this);
             }
             this._mainWindow = (WindowUtils.createWindow("games_main", 1) as IWindowContainer);
             this._mainWindow.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this._SafeStr_9859);

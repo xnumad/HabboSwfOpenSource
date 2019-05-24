@@ -121,7 +121,7 @@
             {
                 for each (k in this._messageEvents)
                 {
-                    this._communication._Str_2778(k);
+                    this._communication.removeHabboConnectionMessageEvent(k);
                 }
             }
             this._messageEvents = null;

@@ -263,7 +263,7 @@
             var _local_2:IProductData = this._catalog.getProductData(this.localizationId);
             for each (_local_3 in this._productContainer.products)
             {
-                _local_5 = this._catalog._Str_3414(_local_3._Str_2941, _local_3._Str_2588);
+                _local_5 = this._catalog.getFurnitureData(_local_3._Str_2941, _local_3._Str_2588);
                 _local_6 = new Product(_local_3._Str_2588, _local_3._Str_2941, _local_3._Str_2415, _local_3.productCount, _local_2, _local_5, this._catalog);
                 k.push(_local_6);
             }

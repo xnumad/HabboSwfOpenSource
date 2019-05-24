@@ -873,7 +873,7 @@
             {
                 return false;
             }
-            var _local_2:IFurnitureData = this._tradingModel._Str_8308()._Str_3414(k.type, ProductTypeEnum.WALL);
+            var _local_2:IFurnitureData = this._tradingModel._Str_8308().getFurnitureData(k.type, ProductTypeEnum.WALL);
             return (_local_2) && (_local_2.isExternalImageType);
         }
 

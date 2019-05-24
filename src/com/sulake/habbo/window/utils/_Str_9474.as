@@ -35,7 +35,7 @@
         {
             if (this._habboWindowManagerComponent.communication != null)
             {
-                this._habboWindowManagerComponent.communication._Str_2778(this._Str_16606);
+                this._habboWindowManagerComponent.communication.removeHabboConnectionMessageEvent(this._Str_16606);
             }
             this._habboWindowManagerComponent = null;
         }

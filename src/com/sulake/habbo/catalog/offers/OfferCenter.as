@@ -235,7 +235,7 @@
             var _local_2:IWindowContainer = (this._rewardTemplate.clone() as IWindowContainer);
             _local_2.findChildByName("reward_date").caption = new Date().toLocaleString();
             _local_2.findChildByName("reward_name").caption = k.name;
-            this._catalog._Str_13308(k.contentType, k._Str_2706, IBitmapWrapperWindow(_local_2.findChildByName("reward_icon")));
+            this._catalog.displayProductIcon(k.contentType, k._Str_2706, IBitmapWrapperWindow(_local_2.findChildByName("reward_icon")));
             return _local_2;
         }
 

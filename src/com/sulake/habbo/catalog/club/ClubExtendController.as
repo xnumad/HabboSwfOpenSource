@@ -80,7 +80,7 @@
             }
             if (this._catalog.getPurse().credits < this._offer.priceCredits)
             {
-                this._catalog._Str_7857();
+                this._catalog.showNotEnoughCreditsAlert();
                 return;
             }
             if (this._offer.vip)

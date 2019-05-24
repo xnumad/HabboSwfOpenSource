@@ -202,7 +202,7 @@
             if (this._ssoTicket)
             {
                 this._communication.mode = _Str_6905._Str_4282;
-                this._communication._Str_14453(_Str_6905.HABBO);
+                this._communication.initConnection(_Str_6905.HABBO);
             }
             else
             {
@@ -235,7 +235,7 @@
             if (((k) && (!(this._ssoTicket))))
             {
                 this._ssoTicket = k;
-                this._communication._Str_14453(_Str_6905.HABBO);
+                this._communication.initConnection(_Str_6905.HABBO);
             }
         }
 
@@ -322,7 +322,7 @@
                 Core.crash("Invalid DH prime and generator", Core.ERROR_CATEGORY_COMMMUNICATION_INIT);
                 return;
             }
-            this._keyExchange = this._communication._Str_22185(_local_8, _local_9);
+            this._keyExchange = this._communication.initializeKeyExchange(_local_8, _local_9);
             var _local_11:String;
             var _local_12:int = 10;
             var _local_13:String;
@@ -376,11 +376,11 @@
             }
             var _local_7:ByteArray = CryptoTools.hexStringToByteArray(_local_6);
             _local_7.position = 0;
-            var _local_8:IEncryption = this._communication._Str_16220();
+            var _local_8:IEncryption = this._communication.initializeEncryption();
             _local_8.init(_local_7);
             if (_local_3._Str_17893)
             {
-                _local_9 = this._communication._Str_16220();
+                _local_9 = this._communication.initializeEncryption();
                 _local_9.init(_local_7);
             }
             _local_2.setEncryption(_local_8, _local_9);
@@ -636,7 +636,7 @@
         {
             this._Str_7280(HabboCommunicationEvent.INIT);
             this._communication.mode = _Str_6905._Str_4282;
-            this._communication._Str_14453(_Str_6905.HABBO);
+            this._communication.initConnection(_Str_6905.HABBO);
         }
 
         private function _Str_25641(k:Event):void

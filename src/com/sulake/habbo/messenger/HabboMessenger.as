@@ -120,7 +120,7 @@
             {
                 for each (k in this._Str_2432)
                 {
-                    this._communicationManager._Str_2778(k);
+                    this._communicationManager.removeHabboConnectionMessageEvent(k);
                 }
             }
             super.dispose();

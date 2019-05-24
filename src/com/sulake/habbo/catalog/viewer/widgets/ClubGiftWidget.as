@@ -195,7 +195,7 @@
                 _local_8 = this._controller.catalog.getProductData(_local_6.localizationId);
                 for each (_local_9 in _local_6.products)
                 {
-                    _local_11 = this._controller.catalog._Str_3414(_local_9._Str_6164, _local_9._Str_2588);
+                    _local_11 = this._controller.catalog.getFurnitureData(_local_9._Str_6164, _local_9._Str_2588);
                     _local_12 = new Product(_local_9._Str_2588, _local_9._Str_6164, _local_9._Str_2415, _local_9.productCount, _local_8, _local_11, this._catalog);
                     _local_7.push(_local_12);
                 }

@@ -29,7 +29,7 @@
                 }
                 else
                 {
-                    _local_6 = _arg_2._Str_3414(_local_4._Str_6270, _local_4._Str_7585);
+                    _local_6 = _arg_2.getFurnitureData(_local_4._Str_6270, _local_4._Str_7585);
                     _local_5 = new _Str_3903(_local_4._Str_7585, _local_4._Str_6270, _local_6, this._Str_6714, _arg_2);
                 }
                 this._prizes.push(_local_5);

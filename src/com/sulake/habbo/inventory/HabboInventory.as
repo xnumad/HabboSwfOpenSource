@@ -662,7 +662,7 @@
             _local_3._Str_24442(k);
         }
 
-        public function get _Str_11415():Boolean
+        public function get tradingActive():Boolean
         {
             return (this._Str_3957 == null) ? false : this._Str_3957.running;
         }
@@ -687,7 +687,7 @@
             return (this._Str_5568 != null) ? this._Str_5568._Str_22697() : 0;
         }
 
-        public function _Str_11363(k:int):Boolean
+        public function returnInventoryFurniFromRecycler(k:int):Boolean
         {
             return (this._Str_5568 != null) ? this._Str_5568._Str_23825(k) : false;
         }
@@ -882,7 +882,7 @@
             return this._currentCategoryId;
         }
 
-        public function _Str_3414(k:int, _arg_2:String):IFurnitureData
+        public function getFurnitureData(k:int, _arg_2:String):IFurnitureData
         {
             var _local_3:IFurnitureData;
             if (this._sessionDataManager == null)

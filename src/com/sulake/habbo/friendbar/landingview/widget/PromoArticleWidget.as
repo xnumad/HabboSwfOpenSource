@@ -69,7 +69,7 @@
         {
             if (((this._articlesListener) && (this._landingView)))
             {
-                this._landingView.communicationManager._Str_2778(this._articlesListener);
+                this._landingView.communicationManager.removeHabboConnectionMessageEvent(this._articlesListener);
                 this._articlesListener.dispose();
                 this._articlesListener = null;
             }

@@ -685,7 +685,7 @@
 
         private function _Str_20661(k:int):Boolean
         {
-            var _local_2:IFurnitureData = this._inventory._Str_3414(k, ProductTypeEnum.WALL);
+            var _local_2:IFurnitureData = this._inventory.getFurnitureData(k, ProductTypeEnum.WALL);
             return (_local_2) && (_local_2.isExternalImageType);
         }
 

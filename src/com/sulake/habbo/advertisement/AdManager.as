@@ -108,7 +108,7 @@
             }
             if (this._communicationManager != null)
             {
-                this._communicationManager._Str_2778(this._interstitialMessageEvent);
+                this._communicationManager.removeHabboConnectionMessageEvent(this._interstitialMessageEvent);
                 this._interstitialMessageEvent = null;
             }
             if (this._roomAdWarningImageLeft)

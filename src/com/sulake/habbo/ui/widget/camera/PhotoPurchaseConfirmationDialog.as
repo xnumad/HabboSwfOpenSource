@@ -136,12 +136,12 @@
             var _local_3:IPurse = this._widget.catalog.getPurse();
             if (_local_3.credits < k)
             {
-                this._widget.catalog._Str_7857();
+                this._widget.catalog.showNotEnoughCreditsAlert();
                 return false;
             }
             if (_local_3._Str_5590(ActivityPointTypeEnum._Str_4627) < _arg_2)
             {
-                this._widget.catalog._Str_12433(ActivityPointTypeEnum._Str_4627);
+                this._widget.catalog.getHabboClubOffers(ActivityPointTypeEnum._Str_4627);
                 return false;
             }
             return true;

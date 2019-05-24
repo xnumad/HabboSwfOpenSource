@@ -30,7 +30,7 @@
         {
             if (this._landingView)
             {
-                this._landingView.communicationManager._Str_2778(new CommunityGoalProgressMessageEvent(this._Str_5286));
+                this._landingView.communicationManager.removeHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
                 this._landingView = null;
             }
             if (this._pollTimer)

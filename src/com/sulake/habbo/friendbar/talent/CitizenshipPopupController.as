@@ -50,7 +50,7 @@
         {
             if (((!(this._habboTalent == null)) && (!(this._habboTalent.disposed))))
             {
-                this._habboTalent.communicationManager._Str_2778(this._messageEvent);
+                this._habboTalent.communicationManager.removeHabboConnectionMessageEvent(this._messageEvent);
             }
             this._messageEvent = null;
         }

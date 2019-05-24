@@ -37,7 +37,7 @@
             if (!this.disposed)
             {
                 this._habboLandingView.roomEngine.events.removeEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this._Str_13249);
-                this._habboLandingView.communicationManager._Str_2778(new _Str_6906(this._Str_21615));
+                this._habboLandingView.communicationManager.removeHabboConnectionMessageEvent(new _Str_6906(this._Str_21615));
                 this._habboLandingView = null;
                 this._container = null;
             }

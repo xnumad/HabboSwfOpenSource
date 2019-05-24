@@ -559,7 +559,7 @@
             }
             if (this._communication != null)
             {
-                this._communication._Str_2778(this._perkAllowancesMessageEvent);
+                this._communication.removeHabboConnectionMessageEvent(this._perkAllowancesMessageEvent);
                 this._perkAllowancesMessageEvent = null;
             }
             if (this._desktops != null)

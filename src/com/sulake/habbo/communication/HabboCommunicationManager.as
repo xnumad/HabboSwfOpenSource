@@ -117,7 +117,7 @@
             this._connection.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9088);
             this._connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_7702);
             this._connection.addEventListener(Event.CONNECT, this._Str_8489);
-            this._Str_18204();
+            this.updateHostParameters();
             if (this._connectionRequested)
             {
                 this._Str_16453();
@@ -138,7 +138,7 @@
             super.dispose();
         }
 
-        public function _Str_18204():void
+        public function updateHostParameters():void
         {
             var _local_5:String;
             var _local_8:String;
@@ -210,7 +210,7 @@
             }
         }
 
-        public function _Str_14453(k:String):void
+        public function initConnection(k:String):void
         {
             switch (k)
             {
@@ -238,7 +238,7 @@
             return k;
         }
 
-        public function _Str_2778(k:IMessageEvent):void
+        public function removeHabboConnectionMessageEvent(k:IMessageEvent):void
         {
             if (this._connection)
             {
@@ -246,7 +246,7 @@
             }
         }
 
-        public function _Str_20482(k:String, _arg_2:String):IHabboWebLogin
+        public function habboWebLogin(k:String, _arg_2:String):IHabboWebLogin
         {
             var _local_3:String = "";
             _local_3 = getProperty("url.prefix");
@@ -301,17 +301,17 @@
             ErrorReportStorage.addDebugData("MESSAGE_QUEUE", this._handledMessageIds);
         }
 
-        public function _Str_19659():void
+        public function setMessageQueueErrorDebugData():void
         {
             ErrorReportStorage.addDebugData("MESSAGE_QUEUE", this._handledMessageIds);
         }
 
-        public function _Str_16220():IEncryption
+        public function initializeEncryption():IEncryption
         {
             return new ArcFour();
         }
 
-        public function _Str_22185(k:BigInteger, _arg_2:BigInteger):IKeyExchange
+        public function initializeKeyExchange(k:BigInteger, _arg_2:BigInteger):IKeyExchange
         {
             return new DiffieHellman(k, _arg_2);
         }

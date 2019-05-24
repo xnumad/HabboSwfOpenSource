@@ -174,7 +174,7 @@
             return this._geometry;
         }
 
-        public function set _Str_20737(k:IRoomRenderingCanvasMouseListener):void
+        public function set mouseListener(k:IRoomRenderingCanvasMouseListener):void
         {
             this._mouseListener = k;
         }
@@ -1002,7 +1002,7 @@
             return "";
         }
 
-        public function _Str_21232(k:int, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean, _arg_7:Boolean):Boolean
+        public function handleMouseEvent(k:int, _arg_2:int, _arg_3:String, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean, _arg_7:Boolean):Boolean
         {
             k = (k - this._screenOffsetX);
             _arg_2 = (_arg_2 - this._screenOffsetY);

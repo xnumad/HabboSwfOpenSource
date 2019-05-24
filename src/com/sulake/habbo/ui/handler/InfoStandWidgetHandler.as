@@ -595,7 +595,7 @@
         {
             if (this._container != null)
             {
-                if (((_Str_6093._Str_7070(furniId)) && (this._container.catalog._Str_11754)))
+                if (((_Str_6093._Str_7070(furniId)) && (this._container.catalog.buildersClubEnabled)))
                 {
                     if (this._widget.furniData.availableForBuildersClub)
                     {

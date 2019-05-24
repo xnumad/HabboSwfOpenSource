@@ -174,8 +174,8 @@
             {
                 if (((!(_local_2)) && (!(this._habboGroupBadgesMessageEvent == null))))
                 {
-                    this._windowManager.communication._Str_2778(this._groupDetailsChangedMessageEvent);
-                    this._windowManager.communication._Str_2778(this._habboGroupBadgesMessageEvent);
+                    this._windowManager.communication.removeHabboConnectionMessageEvent(this._groupDetailsChangedMessageEvent);
+                    this._windowManager.communication.removeHabboConnectionMessageEvent(this._habboGroupBadgesMessageEvent);
                     this._groupDetailsChangedMessageEvent = null;
                     this._habboGroupBadgesMessageEvent = null;
                 }

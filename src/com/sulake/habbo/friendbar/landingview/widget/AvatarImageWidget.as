@@ -36,12 +36,12 @@
         {
             if (this._userObjectEvent != null)
             {
-                this._landingView.communicationManager._Str_2778(this._userObjectEvent);
+                this._landingView.communicationManager.removeHabboConnectionMessageEvent(this._userObjectEvent);
                 this._userObjectEvent = null;
             }
             if (this._userChangeMessageEvent != null)
             {
-                this._landingView.communicationManager._Str_2778(this._userChangeMessageEvent);
+                this._landingView.communicationManager.removeHabboConnectionMessageEvent(this._userChangeMessageEvent);
                 this._userChangeMessageEvent = null;
             }
             if (this._landingView != null)

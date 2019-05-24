@@ -162,7 +162,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView.catalog._Str_9617(this._pageId, this._offerId, CatalogType.NORMAL);
+                this._landingView.catalog.openCatalogPageById(this._pageId, this._offerId, CatalogType.NORMAL);
                 this._landingView.tracking.trackGoogle("landingView", "click_goToNextLimitedCatalogPage");
             }
         }

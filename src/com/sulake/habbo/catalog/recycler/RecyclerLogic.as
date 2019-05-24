@@ -72,7 +72,7 @@
                 return;
             }
             this._Str_2271 = k;
-            this._habboCatalog._Str_20292();
+            this._habboCatalog.getRecyclerStatus();
         }
 
         public function activate():void
@@ -85,7 +85,7 @@
 
         public function cancel():void
         {
-            this._habboCatalog._Str_6903(false);
+            this._habboCatalog.setupInventoryForRecycler(false);
             var k:int;
             while (k < this._Str_7638)
             {
@@ -123,7 +123,7 @@
                         return;
                     }
                     this._Str_2271._Str_19869();
-                    this._habboCatalog._Str_6903(true);
+                    this._habboCatalog.setupInventoryForRecycler(true);
                     this._Str_21753();
                     this._Str_15040();
                     this._Str_8448();
@@ -134,7 +134,7 @@
                         return;
                     }
                     this._Str_2271._Str_17679();
-                    this._habboCatalog._Str_6903(false);
+                    this._habboCatalog.setupInventoryForRecycler(false);
                     return;
                 case _Str_5376._Str_16908:
                     if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
@@ -142,7 +142,7 @@
                         return;
                     }
                     this._Str_2271._Str_19627(_arg_2);
-                    this._habboCatalog._Str_6903(false);
+                    this._habboCatalog.setupInventoryForRecycler(false);
                     return;
             }
         }
@@ -178,7 +178,7 @@
                     }
                     break;
             }
-            this._habboCatalog._Str_6903(false);
+            this._habboCatalog.setupInventoryForRecycler(false);
         }
 
         public function _Str_18924(k:int):_Str_3718
@@ -223,7 +223,7 @@
                     return;
                 }
             }
-            var itemId:int = this._habboCatalog._Str_21040();
+            var itemId:int = this._habboCatalog.requestInventoryFurniToRecycler();
             if (itemId == 0)
             {
                 this._windowManager.alert("${generic.alert.title}", "${recycler.alert.non.recyclable}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
@@ -247,7 +247,7 @@
             {
                 return;
             }
-            if (!this._habboCatalog._Str_11363(this._Str_3602[k].id))
+            if (!this._habboCatalog.returnInventoryFurniFromRecycler(this._Str_3602[k].id))
             {
                 return;
             }
@@ -277,13 +277,13 @@
                 k.push(_local_3.id);
                 _local_2++;
             }
-            this._habboCatalog._Str_21779(k);
+            this._habboCatalog.sendRecycleItems(k);
             this._Str_2271._Str_20090();
         }
 
         public function _Str_18562():Boolean
         {
-            if (((!(this.ready)) || (!(this._habboCatalog._Str_18865))))
+            if (((!(this.ready)) || (!(this._habboCatalog.privateRoomSessionActive))))
             {
                 return false;
             }
@@ -310,7 +310,7 @@
 
         private function _Str_21753():void
         {
-            if (((!(this._habboCatalog._Str_18865)) && (this.ready)))
+            if (((!(this._habboCatalog.privateRoomSessionActive)) && (this.ready)))
             {
                 this._windowManager.alert("${generic.alert.title}", "${recycler.alert.privateroom}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
                 {
@@ -361,7 +361,7 @@
 
         private function _Str_22951():Boolean
         {
-            return this._habboCatalog._Str_11415;
+            return this._habboCatalog.tradingActive;
         }
 
         public function _Str_22273(k:Array):void
@@ -381,7 +381,7 @@
         {
             if (this._Str_3154 == null)
             {
-                this._habboCatalog._Str_16716();
+                this._habboCatalog.getRecyclerPrizes();
                 return null;
             }
             return this._Str_3154;

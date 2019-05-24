@@ -36,8 +36,8 @@
             }
             if (this._sessionDataManager.communication)
             {
-                this._sessionDataManager.communication._Str_2778(this._ignoreResultMessageEvent);
-                this._sessionDataManager.communication._Str_2778(this._ignoredUsersMessageEvent);
+                this._sessionDataManager.communication.removeHabboConnectionMessageEvent(this._ignoreResultMessageEvent);
+                this._sessionDataManager.communication.removeHabboConnectionMessageEvent(this._ignoredUsersMessageEvent);
             }
             this._ignoreResultMessageEvent = null;
             this._ignoredUsersMessageEvent = null;

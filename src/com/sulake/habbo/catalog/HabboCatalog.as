@@ -460,7 +460,7 @@
             return this._questEngine;
         }
 
-        public function get _Str_12955():IVideoOfferManager
+        public function get videoOffers():IVideoOfferManager
         {
             return this._videoOfferManager;
         }
@@ -611,7 +611,7 @@
             {
                 for each (k in this._Str_2432)
                 {
-                    this._communicationManager._Str_2778(k);
+                    this._communicationManager.removeHabboConnectionMessageEvent(k);
                 }
             }
             if (this._videoOfferManager)
@@ -764,7 +764,7 @@
             this.connection.send(k);
         }
 
-        public function _Str_8756(k:int, _arg_2:int, _arg_3:String):void
+        public function loadCatalogPage(k:int, _arg_2:int, _arg_3:String):void
         {
             this._Str_9330 = true;
             this._Str_17093 = k;
@@ -774,7 +774,7 @@
         public function _Str_22641(k:int, _arg_2:String="", _arg_3:int=1):void
         {
             var _local_5:Vector.<ICatalogNode>;
-            var _local_4:ICatalogNavigator = this._Str_6290(CatalogType.NORMAL);
+            var _local_4:ICatalogNavigator = this.getCatalogNavigator(CatalogType.NORMAL);
             if (_local_4 != null)
             {
                 _local_5 = _local_4._Str_5719(k, true);
@@ -831,22 +831,22 @@
             this.send(new _Str_12242(k, _arg_2));
         }
 
-        public function _Str_20292():void
+        public function getRecyclerStatus():void
         {
             this.send(new _Str_11638());
         }
 
-        public function _Str_16716():void
+        public function getRecyclerPrizes():void
         {
             this.send(new _Str_11776());
         }
 
-        public function _Str_21779(k:Array):void
+        public function sendRecycleItems(k:Array):void
         {
             this.send(new _Str_12504(k));
         }
 
-        public function set _Str_17069(k:String):void
+        public function set giftReceiver(k:String):void
         {
             this._Str_17309 = k;
         }
@@ -856,7 +856,7 @@
             return getInteger("seasonalcurrencyindicator.currency", 1);
         }
 		
-		public function _SafeStr_6513():void
+		public function buySnowWarTokensOffer():void
         {
             /*if (this._SafeStr_6561 != null)
             {
@@ -893,12 +893,12 @@
             }
             if (((_local_9 > 0) && (_local_9 > this._purse.credits)))
             {
-                this._Str_7857();
+                this.showNotEnoughCreditsAlert();
                 return;
             }
             if (((_local_10 > 0) && (_local_10 > this._purse._Str_5590(k.activityPointType))))
             {
-                this._Str_12433(k.activityPointType);
+                this.getHabboClubOffers(k.activityPointType);
                 return;
             }
             if (((k is Offer) || (this._Str_14119)))
@@ -986,7 +986,7 @@
             this._Str_3361.openPage(k);
         }
 
-        public function _Str_20241(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Date, _arg_6:int):void
+        public function openRoomAdCatalogPageInExtendedMode(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Date, _arg_6:int):void
         {
             var _local_7:int = this._Str_17093;
             this._Str_4339 = new RoomAdPurchaseData();
@@ -1006,14 +1006,14 @@
             }
         }
 
-        public function _Str_10210(k:int, _arg_2:String):void
+        public function openCatalogPageByOfferId(k:int, _arg_2:String):void
         {
-            this._Str_9617(CatalogNavigator._Str_5778, k, _arg_2);
+            this.openCatalogPageById(CatalogNavigator._Str_5778, k, _arg_2);
         }
 
-        public function _Str_9617(k:int, _arg_2:int, _arg_3:String):void
+        public function openCatalogPageById(k:int, _arg_2:int, _arg_3:String):void
         {
-            if ((((this._Str_2684) && (!(this._Str_5309 == null))) && (this._Str_6290(_arg_3)._Str_3961)))
+            if ((((this._Str_2684) && (!(this._Str_5309 == null))) && (this.getCatalogNavigator(_arg_3)._Str_3961)))
             {
                 this.toggleCatalog(_arg_3, true, false);
                 this._catalogViewer._Str_21608();
@@ -1027,7 +1027,7 @@
             }
         }
 
-        public function _Str_22930(k:String):void
+        public function openInventoryCategory(k:String):void
         {
             if (this._inventory == null)
             {
@@ -1041,7 +1041,7 @@
             HabboWebTools.openWebPageAndMinimizeClient(getProperty(_Str_5079.WEB_SHOP_RELATIVEURL));
         }
 
-        public function _Str_6903(k:Boolean):void
+        public function setupInventoryForRecycler(k:Boolean):void
         {
             if (this._inventory == null)
             {
@@ -1050,21 +1050,21 @@
             this._inventory._Str_20251(k);
         }
 
-        public function get _Str_18865():Boolean
+        public function get privateRoomSessionActive():Boolean
         {
             return this._Str_17838;
         }
 
-        public function get _Str_11415():Boolean
+        public function get tradingActive():Boolean
         {
             if (this._inventory == null)
             {
                 return false;
             }
-            return this._inventory._Str_11415;
+            return this._inventory.tradingActive;
         }
 
-        public function _Str_21040():int
+        public function requestInventoryFurniToRecycler():int
         {
             if (this._inventory == null)
             {
@@ -1073,13 +1073,13 @@
             return this._inventory._Str_15313();
         }
 
-        public function _Str_11363(k:int):Boolean
+        public function returnInventoryFurniFromRecycler(k:int):Boolean
         {
             if (this._inventory == null)
             {
                 return false;
             }
-            return this._inventory._Str_11363(k);
+            return this._inventory.returnInventoryFurniFromRecycler(k);
         }
 
         public function getProductData(k:String):IProductData
@@ -1087,7 +1087,7 @@
             return this._sessionDataManager.getProductData(k);
         }
 
-        public function _Str_3414(k:int, _arg_2:String):IFurnitureData
+        public function getFurnitureData(k:int, _arg_2:String):IFurnitureData
         {
             var _local_3:IFurnitureData;
             if (_arg_2 == ProductTypeEnum.FLOOR)
@@ -1149,7 +1149,7 @@
             return this._Str_6818;
         }
 
-        public function _Str_13179(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
+        public function getPublicMarketPlaceOffers(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
         {
             this.send(new _Str_11584(k, _arg_2, _arg_3, _arg_4));
         }
@@ -1164,27 +1164,27 @@
             this.send(new _Str_12488());
         }
 
-        public function _Str_21303():void
+        public function getOwnMarketPlaceOffers():void
         {
             this.send(new _Str_9940());
         }
 
-        public function _Str_20655(k:int):void
+        public function buyMarketPlaceOffer(k:int):void
         {
             this.send(new _Str_11685(k));
         }
 
-        public function _Str_20790():void
+        public function redeemSoldMarketPlaceOffers():void
         {
             this.send(new _Str_12361());
         }
 
-        public function _Str_20643(k:int):void
+        public function redeemExpiredMarketPlaceOffer(k:int):void
         {
             this.send(new _Str_11296(k));
         }
 
-        public function _Str_19762(k:int, _arg_2:int):void
+        public function getMarketplaceItemStats(k:int, _arg_2:int):void
         {
             if (!this._communicationManager)
             {
@@ -1299,7 +1299,7 @@
             }
         }
 
-        public function get _Str_11754():Boolean
+        public function get buildersClubEnabled():Boolean
         {
             return getBoolean("builders.club.enabled");
         }
@@ -1307,7 +1307,7 @@
         public function toggleCatalog(k:String, _arg_2:Boolean=false, _arg_3:Boolean=true):void
         {
             var _local_5:ITextFieldWindow;
-            if (((!(this._sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))) && (!(this._Str_11754))))
+            if (((!(this._sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))) && (!(this.buildersClubEnabled))))
             {
                 k = CatalogType.NORMAL;
             }
@@ -1388,7 +1388,7 @@
             }
             if (this._recyclerLogic != null)
             {
-                this._Str_6903(((this._recyclerLogic.active) && (this._Str_11577())));
+                this.setupInventoryForRecycler(((this._recyclerLogic.active) && (this._Str_11577())));
             }
             if (((_local_4) && (!(this._Str_3361 == null))))
             {
@@ -1670,7 +1670,7 @@
         private function _Str_24043():void
         {
             this._recyclerLogic = new RecyclerLogic(this, this._windowManager);
-            this._Str_16716();
+            this.getRecyclerPrizes();
         }
 
         private function _Str_24591():void
@@ -1737,13 +1737,13 @@
             if (((!(this._recyclerLogic == null)) && (this._Str_9089() == "recycler")))
             {
                 this._recyclerLogic.cancel();
-                this._Str_6903(false);
+                this.setupInventoryForRecycler(false);
             }
         }
 
         private function _Str_25188(k:CatalogPagesListEvent):void
         {
-            var _local_2:ICatalogNavigator = this._Str_6290(k.catalogType);
+            var _local_2:ICatalogNavigator = this.getCatalogNavigator(k.catalogType);
             if (_local_2 == null)
             {
                 return;
@@ -1805,7 +1805,7 @@
                 _local_13 = this.getProductData(_local_11.localizationId);
                 for each (_local_14 in _local_11.products)
                 {
-                    _local_16 = this._Str_3414(_local_14._Str_6164, _local_14._Str_2588);
+                    _local_16 = this.getFurnitureData(_local_14._Str_6164, _local_14._Str_2588);
                     _local_12.push(new Product(_local_14._Str_2588, _local_14._Str_6164, _local_14._Str_2415, _local_14.productCount, _local_13, _local_16, this, _local_14._Str_18468, _local_14.uniqueLimitedItemSeriesSize, _local_14.uniqueLimitedItemsLeft));
                 }
                 if (((_local_12.length == 0) && (!(HabboCatalogUtils._Str_21831(_local_11.localizationId)))))
@@ -1930,13 +1930,13 @@
             var _local_3:_Str_7888 = _local_2._Str_2273();
             if (_local_3._Str_16424)
             {
-                this._Str_7857();
+                this.showNotEnoughCreditsAlert();
             }
             else
             {
                 if (_local_3._Str_24352)
                 {
-                    this._Str_12433(_local_3.activityPointType);
+                    this.getHabboClubOffers(_local_3.activityPointType);
                 }
             }
             if (this._purchaseConfirmationDialog != null)
@@ -1963,7 +1963,7 @@
             }
         }
 
-        public function _Str_7857():void
+        public function showNotEnoughCreditsAlert():void
         {
             if (!this._windowManager)
             {
@@ -1972,7 +1972,7 @@
             this._windowManager.confirm("${catalog.alert.notenough.title}", "${catalog.alert.notenough.credits.description}", 0, this._Str_23433);
         }
 
-        public function _Str_12433(k:int):void
+        public function getHabboClubOffers(k:int):void
         {
             var _local_2:String = ("catalog.alert.notenough.activitypoints.title." + k);
             var _local_3:String = ("catalog.alert.notenough.activitypoints.description." + k);
@@ -2448,7 +2448,7 @@
             {
                 return;
             }
-            if (((this._Str_11754) && ((!(this._Str_2684)) || (!(this._Str_6290(CatalogType.BUILDER)._Str_3961)))))
+            if (((this.buildersClubEnabled) && ((!(this._Str_2684)) || (!(this.getCatalogNavigator(CatalogType.BUILDER)._Str_3961)))))
             {
                 this.init();
                 this._Str_16894(CatalogType.BUILDER);
@@ -2977,7 +2977,7 @@
             var _local_6:IProductData = this.getProductData(_local_3.localizationId);
             for each (_local_4 in _local_3.products)
             {
-                _local_8 = this._Str_3414(_local_4._Str_6164, _local_4._Str_2588);
+                _local_8 = this.getFurnitureData(_local_4._Str_6164, _local_4._Str_2588);
                 _local_5.push(new Product(_local_4._Str_2588, _local_4._Str_6164, _local_4._Str_2415, _local_4.productCount, _local_6, _local_8, this, _local_4._Str_18468, _local_4.uniqueLimitedItemSeriesSize, _local_4.uniqueLimitedItemsLeft));
             }
             _local_7 = new Offer(_local_3.offerId, _local_3.localizationId, _local_3._Str_14263, _local_3.priceInCredits, _local_3.priceInActivityPoints, _local_3.activityPointType, _local_3.giftable, _local_3.clubLevel, _local_5, _local_3.bundlePurchaseAllowed, this);
@@ -3085,7 +3085,7 @@
             }
             if (this._utils)
             {
-                if (!this._Str_6290(CatalogType.NORMAL)._Str_3961)
+                if (!this.getCatalogNavigator(CatalogType.NORMAL)._Str_3961)
                 {
                     this._Str_16894(CatalogType.NORMAL);
                 }
@@ -3098,12 +3098,12 @@
             return (this._catalogViewer == null) ? null : this._catalogViewer._Str_3854;
         }
 
-        public function _Str_13308(k:String, _arg_2:int, _arg_3:IBitmapWrapperWindow):void
+        public function displayProductIcon(k:String, _arg_2:int, _arg_3:IBitmapWrapperWindow):void
         {
-            this._utils._Str_13308(k, _arg_2, _arg_3);
+            this._utils.displayProductIcon(k, _arg_2, _arg_3);
         }
 
-        public function _Str_10356(k:IFurnitureData, _arg_2:Boolean, _arg_3:int=-1, _arg_4:int=-1, _arg_5:Boolean=false):void
+        public function openRentConfirmationWindow(k:IFurnitureData, _arg_2:Boolean, _arg_3:int=-1, _arg_4:int=-1, _arg_5:Boolean=false):void
         {
             if (this._Str_8700 == null)
             {
@@ -3179,14 +3179,14 @@
             return this._catalogType;
         }
 
-        public function _Str_6290(k:String):ICatalogNavigator
+        public function getCatalogNavigator(k:String):ICatalogNavigator
         {
             return (this._Str_5309 != null) ? this._Str_5309[k] : null;
         }
 
         public function get _Str_3361():ICatalogNavigator
         {
-            return this._Str_6290(this._catalogType);
+            return this.getCatalogNavigator(this._catalogType);
         }
 
         public function get _Str_24159():int
@@ -3214,12 +3214,12 @@
             return this._Str_16084 - ((getTimer() - this._Str_12490) / 1000);
         }
 
-        public function get _Str_7781():Boolean
+        public function get isDoorModeOverriddenInCurrentRoom():Boolean
         {
             var k:int;
             var _local_4:IRoomObject;
             var _local_5:IRoomObject;
-            if (((!(this._Str_11754)) || (this._Str_10140 > 0)))
+            if (((!(this.buildersClubEnabled)) || (this._Str_10140 > 0)))
             {
                 return false;
             }

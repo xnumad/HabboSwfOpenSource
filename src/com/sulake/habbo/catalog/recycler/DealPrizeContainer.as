@@ -30,7 +30,7 @@
             while (_local_4 < k.length)
             {
                 _local_7 = k[_local_4];
-                _local_8 = _arg_3._Str_3414(_local_7._Str_6270, _local_7._Str_7585);
+                _local_8 = _arg_3.getFurnitureData(_local_7._Str_6270, _local_7._Str_7585);
                 this._Str_16536.push(_local_8);
                 _local_4++;
             }

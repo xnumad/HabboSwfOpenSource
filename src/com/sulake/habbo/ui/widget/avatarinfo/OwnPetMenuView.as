@@ -283,7 +283,7 @@
             {
                 return false;
             }
-            this._Str_2276._Str_10210(k.purchaseOfferId, CatalogType.NORMAL);
+            this._Str_2276.openCatalogPageByOfferId(k.purchaseOfferId, CatalogType.NORMAL);
             if (((this._Str_2421) && (!(this._Str_2421.disposed))))
             {
                 this._Str_2421.trackGoogle("infostandCatalogButton", "offer", k.purchaseOfferId);

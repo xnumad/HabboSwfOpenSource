@@ -118,7 +118,7 @@
             {
                 for each (k in this._messageEvents)
                 {
-                    this._communicationManager._Str_2778(k);
+                    this._communicationManager.removeHabboConnectionMessageEvent(k);
                 }
             }
             if (((!(this._sessionDataManager == null)) && (this._sessionDataManager.events)))

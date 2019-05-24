@@ -159,7 +159,7 @@
             var k:IHabboCommunicationManager = this._navigator.communication;
             for each (_local_2 in this._messageListeners)
             {
-                k._Str_2778(_local_2);
+                k.removeHabboConnectionMessageEvent(_local_2);
             }
             this._messageListeners = [];
         }

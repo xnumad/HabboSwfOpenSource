@@ -47,7 +47,7 @@
             }
             if (this._sessionDataManager.communication)
             {
-                this._sessionDataManager.communication._Str_2778(this._perkAllowancesMessageEvent);
+                this._sessionDataManager.communication.removeHabboConnectionMessageEvent(this._perkAllowancesMessageEvent);
             }
             this._perkAllowancesMessageEvent = null;
             this._sessionDataManager = null;

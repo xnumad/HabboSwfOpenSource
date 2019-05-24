@@ -123,7 +123,7 @@
         {
             if (this._catalog)
             {
-                this._catalog._Str_13179(-1, -1, k, -1);
+                this._catalog.getPublicMarketPlaceOffers(-1, -1, k, -1);
             }
         }
 
@@ -131,7 +131,7 @@
         {
             if (this._catalog)
             {
-                this._catalog._Str_13179(k, -1, "", -1);
+                this._catalog.getPublicMarketPlaceOffers(k, -1, "", -1);
             }
         }
 
@@ -143,7 +143,7 @@
             this._sortOrder = _arg_4;
             if (this._catalog)
             {
-                this._catalog._Str_13179(k, _arg_2, _arg_3, _arg_4);
+                this._catalog.getPublicMarketPlaceOffers(k, _arg_2, _arg_3, _arg_4);
             }
         }
 
@@ -156,7 +156,7 @@
         {
             if (this._catalog)
             {
-                this._catalog._Str_21303();
+                this._catalog.getOwnMarketPlaceOffers();
             }
         }
 
@@ -166,7 +166,7 @@
             {
                 this._statsRequestTypeId = _arg_2;
                 this._statsRequestCategoryId = k;
-                this._catalog._Str_19762(k, _arg_2);
+                this._catalog.getMarketplaceItemStats(k, _arg_2);
             }
         }
 
@@ -183,7 +183,7 @@
             }
             if (this._catalog.getPurse().credits < _local_2.price)
             {
-                this._catalog._Str_7857();
+                this._catalog.showNotEnoughCreditsAlert();
                 return;
             }
             this.showConfirmation(this._Str_19658, _local_2);
@@ -193,7 +193,7 @@
         {
             if (this._catalog)
             {
-                this._catalog._Str_20643(k);
+                this._catalog.redeemExpiredMarketPlaceOffer(k);
             }
         }
 
@@ -221,7 +221,7 @@
             }
             if (this._catalog)
             {
-                this._catalog._Str_20790();
+                this._catalog.redeemSoldMarketPlaceOffers();
             }
             if (this._visualization != null)
             {
@@ -470,7 +470,7 @@
             var _local_2:Boolean;
             if (((k._Str_4120 == 2) && (!(k.extraData == null))))
             {
-                _local_3 = this._catalog._Str_3414(k.furniId, ProductTypeEnum.WALL);
+                _local_3 = this._catalog.getFurnitureData(k.furniId, ProductTypeEnum.WALL);
                 if (_local_3)
                 {
                     _local_4 = _local_3.className;

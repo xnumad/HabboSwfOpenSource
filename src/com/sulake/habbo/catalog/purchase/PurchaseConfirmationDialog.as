@@ -797,7 +797,7 @@
             var _local_2:IWindowContainer = (this._catalog.utils.createWindow("gift_palette_item") as IWindowContainer);
             for each (_local_3 in this._stuffTypes)
             {
-                _local_4 = this._catalog._Str_3414(_local_3, ProductTypeEnum.FLOOR);
+                _local_4 = this._catalog.getFurnitureData(_local_3, ProductTypeEnum.FLOOR);
                 _local_5 = (_local_2.clone() as IWindowContainer);
                 if (((!(_local_4)) || (!(_local_5))))
                 {
@@ -877,7 +877,7 @@
         {
             this._Str_24635();
             this._Str_4401(false);
-            this._catalog._Str_17069 = null;
+            this._catalog.giftReceiver = null;
             this._catalog._Str_4663();
         }
 

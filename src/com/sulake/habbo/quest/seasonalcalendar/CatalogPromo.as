@@ -154,7 +154,7 @@
                 Logger.log("Buy button clicked");
                 if (this._offerId != -1)
                 {
-                    this._questEngine.catalog._Str_9617(this._pageId, this._offerId, CatalogType.NORMAL);
+                    this._questEngine.catalog.openCatalogPageById(this._pageId, this._offerId, CatalogType.NORMAL);
                 }
             }
         }

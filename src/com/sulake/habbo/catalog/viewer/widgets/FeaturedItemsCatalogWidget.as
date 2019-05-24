@@ -109,7 +109,7 @@
                         this._catalog.openCatalogPage(_local_4._Str_17029, CatalogType.NORMAL);
                         return;
                     case _Str_3920._Str_15225:
-                        this._catalog._Str_10210(_local_4._Str_24645, CatalogType.NORMAL);
+                        this._catalog.openCatalogPageByOfferId(_local_4._Str_24645, CatalogType.NORMAL);
                         return;
                 }
             }

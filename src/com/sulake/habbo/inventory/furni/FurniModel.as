@@ -1008,8 +1008,8 @@
             {
                 return;
             }
-            var _local_3:IFurnitureData = this._controller._Str_3414(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
-            this._catalog._Str_10356(_local_3, false, -1, _local_2.id);
+            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            this._catalog.openRentConfirmationWindow(_local_3, false, -1, _local_2.id);
         }
 
         public function _Str_22829():void
@@ -1024,8 +1024,8 @@
             {
                 return;
             }
-            var _local_3:IFurnitureData = this._controller._Str_3414(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
-            this._catalog._Str_10356(_local_3, true, -1, _local_2.id);
+            var _local_3:IFurnitureData = this._controller.getFurnitureData(_local_2.type, ((_local_2._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
+            this._catalog.openRentConfirmationWindow(_local_3, true, -1, _local_2.id);
         }
 
         private function _Str_18724(k:GroupItem):void
@@ -1262,7 +1262,7 @@
 
         private function _Str_22524(k:FurnitureItem):Boolean
         {
-            var _local_2:IFurnitureData = this._catalog._Str_3414(k.type, ProductTypeEnum.WALL);
+            var _local_2:IFurnitureData = this._catalog.getFurnitureData(k.type, ProductTypeEnum.WALL);
             return (_local_2) && (_local_2.isExternalImageType);
         }
 
