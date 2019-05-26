@@ -16,7 +16,7 @@
         public function MeMenuSoundSettingsSlider(settingsItem:*, _arg_2:IWindowContainer, _arg_3:IAssetLibrary, minValue:Number=0, maxValue:Number=1)
         {
             this._settingsItem = settingsItem;
-            this._sliderContainer = _sliderContainer;
+            this._sliderContainer = _arg_2;
             this._minValue = minValue;
             this._maxValue = maxValue;
             this.displaySlider();

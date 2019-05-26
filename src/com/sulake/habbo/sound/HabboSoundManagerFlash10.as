@@ -426,7 +426,7 @@
         {
             if (this._connection != null)
             {
-                this._connection.send(new _Str_11698(int((this._traxVolume * 100)), int((this._furniVolume * 100)), int((this._genericVolume * 100))));
+                this._connection.send(new _Str_11698((this._traxVolume * 100), (this._furniVolume * 100), (this._genericVolume * 100)));
             }
         }
 

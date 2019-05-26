@@ -16,7 +16,7 @@
         private var _Str_578:int;
         private var _Str_3026:Number;
         private var _window:IWindowContainer;
-        private var _Str_2461:MeMenuSoundSettingsSlider;
+        private var _slider:MeMenuSoundSettingsSlider;
         private var _Str_3002:_Str_6491;
 
         public function _Str_4019(k:_Str_6491, _arg_2:int, _arg_3:IWindowContainer):void
@@ -26,7 +26,7 @@
             this._Str_578 = _arg_2;
             this._Str_3002 = k;
             this._window = _arg_3;
-            this._Str_2461 = new MeMenuSoundSettingsSlider(this, (this._window.findChildByName("volume_container") as IWindowContainer), k.toolbar.assets, 0, 1);
+            this._slider = new MeMenuSoundSettingsSlider(this, (this._window.findChildByName("volume_container") as IWindowContainer), k.toolbar.assets, 0, 1);
             _local_4 = this._window.findChildByName("sounds_off");
             if (_local_4 != null)
             {
@@ -44,10 +44,10 @@
         {
             if (!this.disposed)
             {
-                if (this._Str_2461)
+                if (this._slider)
                 {
-                    this._Str_2461.dispose();
-                    this._Str_2461 = null;
+                    this._slider.dispose();
+                    this._slider = null;
                 }
                 if (this._window)
                 {
@@ -119,7 +119,7 @@
 
         public function _Str_2526(k:Number):void
         {
-            this._Str_2461.setValue(k);
+            this._slider.setValue(k);
             this._Str_5039();
         }
     }
