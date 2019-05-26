@@ -2,7 +2,7 @@
 
 -TvYoutube disabled box and thumbnail fixed
 
--Camera fixed
+-Camera fixed (for WibboEmulator)
 
 -Background crash fixed
 
@@ -20,6 +20,6 @@
 
 -Remove confirm Wired save (accred)
 
--Research furni catalog fixed
+-Research furni bug catalog fixed
 
--Sound setting fixed
+-Sound setting bug fixed
