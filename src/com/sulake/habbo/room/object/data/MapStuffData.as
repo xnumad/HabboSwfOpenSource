@@ -45,14 +45,14 @@
         override public function initializeFromRoomObjectModel(k:IRoomObjectModel):void
         {
             super.initializeFromRoomObjectModel(k);
-            this._data = k._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA);
+            this._data = k.getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
         }
 
         override public function writeRoomObjectModel(k:IRoomObjectModelController):void
         {
             super.writeRoomObjectModel(k);
             k.setNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT, FORMAT_KEY);
-            k._Str_17971(RoomObjectVariableEnum.FURNITURE_DATA, this._data);
+            k.setStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA, this._data);
         }
 
         override public function getLegacyString():String

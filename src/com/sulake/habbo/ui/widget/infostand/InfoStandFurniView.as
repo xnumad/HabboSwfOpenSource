@@ -534,7 +534,7 @@
             {
                 return;
             }
-            var _local_2:Array = k.getModel()._Str_9417(RoomObjectVariableEnum.FURNITURE_CUSTOM_VARIABLES);
+            var _local_2:Array = k.getModel().getStringArray(RoomObjectVariableEnum.FURNITURE_CUSTOM_VARIABLES);
             this._Str_4258.visible = ((!(_local_2 == null)) && (_local_2.length > 0));
             if (!this._Str_4258.visible)
             {
@@ -542,7 +542,7 @@
             }
             var _local_3:IItemListWindow = (this._Str_4258.findChildByName("variable_list") as IItemListWindow);
             _local_3._Str_2724();
-            var _local_4:Map = k.getModel()._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA);
+            var _local_4:Map = k.getModel().getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             for each (_local_5 in _local_2)
             {
                 _local_6 = (this._Str_21812.clone() as IWindowContainer);

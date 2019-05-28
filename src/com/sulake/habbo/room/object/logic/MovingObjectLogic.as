@@ -45,7 +45,7 @@
             super.object = k;
             if (k != null)
             {
-                this._loc._Str_2427(k.getLocation());
+                this._loc.assign(k.getLocation());
             }
         }
 
@@ -68,7 +68,7 @@
             super.processUpdateMessage(k);
             if (k.loc != null)
             {
-                this._loc._Str_2427(k.loc);
+                this._loc.assign(k.loc);
             }
             var _local_2:RoomObjectMoveUpdateMessage = (k as RoomObjectMoveUpdateMessage);
             if (_local_2 == null)
@@ -81,8 +81,8 @@
                 {
                     _local_3 = _local_2._Str_7569;
                     this._changeTime = this._lastUpdateTime;
-                    this._locDelta._Str_2427(_local_3);
-                    this._locDelta._Str_15193(this._loc);
+                    this._locDelta.assign(_local_3);
+                    this._locDelta.sub(this._loc);
                 }
             }
         }
@@ -129,13 +129,13 @@
                 }
                 if (this._locDelta.length > 0)
                 {
-                    _Str_6784._Str_2427(this._locDelta);
-                    _Str_6784._Str_6038((_local_4 / Number(this._updateInterval)));
+                    _Str_6784.assign(this._locDelta);
+                    _Str_6784.mul((_local_4 / Number(this._updateInterval)));
                     _Str_6784.add(this._loc);
                 }
                 else
                 {
-                    _Str_6784._Str_2427(this._loc);
+                    _Str_6784.assign(this._loc);
                 }
                 if (_local_2 != null)
                 {

@@ -15,7 +15,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectStateChangedEvent.STATE_CHANGE];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function mouseEvent(k:RoomSpriteMouseEvent, _arg_2:IRoomGeometry):void
@@ -32,7 +32,7 @@
             switch (k.type)
             {
                 case MouseEvent.DOUBLE_CLICK:
-                    switch (k._Str_4216)
+                    switch (k.spriteTag)
                     {
                         case "start_stop":
                             _local_3 = new RoomObjectStateChangedEvent(RoomObjectStateChangedEvent.STATE_CHANGE, object, 1);

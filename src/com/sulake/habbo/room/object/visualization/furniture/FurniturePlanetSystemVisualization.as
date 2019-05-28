@@ -39,7 +39,7 @@
         {
             var _local_2:FurniturePlanetSystemVisualizationPlanetObject;
             var _local_3:int;
-            if (((this._planetIndex == null) && (_Str_3008 > 0)))
+            if (((this._planetIndex == null) && (spriteCount > 0)))
             {
                 if (!this._Str_18684())
                 {
@@ -111,7 +111,7 @@
             while (_local_8 < _local_6)
             {
                 _local_9 = _local_5[_local_8];
-                _local_7 = _Str_2505(_local_8);
+                _local_7 = getSprite(_local_8);
                 if (_local_7 != null)
                 {
                     this._Str_24868(_local_9.@name, _local_8, _local_9.@parent, Number(_local_9.@radius), Number(_local_9.@arcspeed), Number(_local_9.@arcoffset), Number(_local_9.@height));

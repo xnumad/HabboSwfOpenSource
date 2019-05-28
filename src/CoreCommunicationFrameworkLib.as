@@ -7,7 +7,7 @@
 
     public class CoreCommunicationFrameworkLib extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_15174;
+        public static var manifest:Class = CoreCommunicationFrameworkLib_manifest;
         public static var requiredClasses:Array = new Array(CoreCommunicationManagerBootstrap, IIDCoreCommunicationManager);
     }
 }

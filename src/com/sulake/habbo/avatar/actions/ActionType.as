@@ -46,12 +46,12 @@
             return this._prevents;
         }
 
-        public function get _Str_1891():Boolean
+        public function get preventHeadTurn():Boolean
         {
             return this._preventHeadTurn;
         }
 
-        public function get _Str_801():Boolean
+        public function get isAnimated():Boolean
         {
             return this._isAnimated;
         }

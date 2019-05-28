@@ -19,7 +19,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectWidgetRequestEvent.BACKGROUND_COLOR, RoomObjectHSLColorEnableEvent.ROHSLCEE_ROOM_BACKGROUND_COLOR];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void

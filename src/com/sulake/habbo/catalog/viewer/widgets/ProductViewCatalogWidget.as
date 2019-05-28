@@ -479,7 +479,7 @@
                                                 {
                                                     if (_local_33.id == "avatar")
                                                     {
-                                                        _local_34 = _local_28._Str_607(_local_33);
+                                                        _local_34 = _local_28.getLayerData(_local_33);
                                                         _local_5.x = _local_34.dx;
                                                         _local_5.y = _local_34.dy;
                                                     }
@@ -574,11 +574,11 @@
             for each (_local_6 in _arg_2._Str_754())
             {
                 _local_7 = _window.getChildIndex(this._Str_2466);
-                _local_8 = _arg_2._Str_607(_local_6);
+                _local_8 = _arg_2.getLayerData(_local_6);
                 _local_9 = 0;
-                _local_10 = _local_6._Str_809(_arg_2.getDirection());
-                _local_11 = _local_6._Str_739(_arg_2.getDirection());
-                _local_12 = _local_6._Str_839(_arg_2.getDirection());
+                _local_10 = _local_6.getDirectionOffsetX(_arg_2.getDirection());
+                _local_11 = _local_6.getDirectionOffsetY(_arg_2.getDirection());
+                _local_12 = _local_6.getDirectionOffsetZ(_arg_2.getDirection());
                 _local_13 = 0;
                 if (!_arg_5)
                 {
@@ -594,13 +594,13 @@
                         continue;
                     }
                 }
-                if (_local_6._Str_949)
+                if (_local_6.hasDirections)
                 {
                     _local_13 = _arg_2.getDirection();
                 }
                 if (_local_8 != null)
                 {
-                    _local_9 = _local_8._Str_891;
+                    _local_9 = _local_8.animationFrame;
                     _local_10 = (_local_10 + _local_8.dx);
                     _local_11 = (_local_11 + _local_8.dy);
                     _local_13 = (_local_13 + _local_8.dd);

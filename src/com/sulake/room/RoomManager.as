@@ -315,31 +315,31 @@
             {
                 return null;
             }
-            var _local_17:IRoomObjectGraphicVisualization = this._visualizationFactory._Str_17646(_local_10);
+            var _local_17:IRoomObjectGraphicVisualization = this._visualizationFactory.createRoomObjectVisualization(_local_10);
             if (_local_17 == null)
             {
                 _local_5.disposeObject(_arg_2, _arg_4);
                 return null;
             }
-            _local_17._Str_2697 = _local_7;
+            _local_17.assetCollection = _local_7;
             _local_17.setExternalBaseUrls(context.configuration.getProperty("stories.image_url_base"), context.configuration.getProperty("extra_data_service_url"), context.configuration.getBoolean("extra_data_batches_enabled"));
             var _local_18:IRoomObjectVisualizationData;
-            _local_18 = this._visualizationFactory._Str_16399(_local_12, _local_10, _local_8);
+            _local_18 = this._visualizationFactory.getRoomObjectVisualizationData(_local_12, _local_10, _local_8);
             if (!_local_17.initialize(_local_18))
             {
                 _local_5.disposeObject(_arg_2, _arg_4);
                 return null;
             }
-            _local_16._Str_14063(_local_17);
+            _local_16.setVisualization(_local_17);
             var _local_19:IRoomObjectEventHandler = this._objectFactory.createRoomObjectLogic(_local_11);
-            _local_16._Str_8711(_local_19);
+            _local_16.setEventHandler(_local_19);
             if (((!(_local_19 == null)) && (!(_local_9 == null))))
             {
                 _local_19.initialize(_local_9);
             }
             if (!_local_13)
             {
-                _local_16._Str_17972(true);
+                _local_16.setInitialized(true);
             }
             this._contentLoader.roomObjectCreated(_local_16, k);
             return _local_16;
@@ -533,12 +533,12 @@
                                     {
                                         return;
                                     }
-                                    _local_7 = this._visualizationFactory._Str_16399(k, _local_5, _local_2);
+                                    _local_7 = this._visualizationFactory.getRoomObjectVisualizationData(k, _local_5, _local_2);
                                 }
-                                _local_17 = this._visualizationFactory._Str_17646(_local_5);
+                                _local_17 = this._visualizationFactory.createRoomObjectVisualization(_local_5);
                                 if (_local_17 != null)
                                 {
-                                    _local_17._Str_2697 = _local_4;
+                                    _local_17.assetCollection = _local_4;
                                     _local_17.setExternalBaseUrls(context.configuration.getProperty("stories.image_url_base"), context.configuration.getProperty("extra_data_service_url"), context.configuration.getBoolean("extra_data_batches_enabled"));
                                     if (!_local_17.initialize(_local_7))
                                     {
@@ -546,14 +546,14 @@
                                     }
                                     else
                                     {
-                                        _local_16._Str_14063(_local_17);
+                                        _local_16.setVisualization(_local_17);
                                         _local_18 = this._objectFactory.createRoomObjectLogic(_local_6);
-                                        _local_16._Str_8711(_local_18);
+                                        _local_16.setEventHandler(_local_18);
                                         if (_local_18 != null)
                                         {
                                             _local_18.initialize(_local_3);
                                         }
-                                        _local_16._Str_17972(true);
+                                        _local_16.setInitialized(true);
                                         if (this._listener != null)
                                         {
                                             this._listener.objectInitialized(_local_10, _local_16.getId(), _local_13);

@@ -15,17 +15,17 @@
             this._startFrame = _arg_3;
         }
 
-        public function get _Str_695():String
+        public function get actionType():String
         {
             return this._actionType;
         }
 
-        public function get _Str_727():String
+        public function get actionParameter():String
         {
             return this._actionParameter;
         }
 
-        public function get _Str_742():IActionDefinition
+        public function get definition():IActionDefinition
         {
             return this._definition;
         }
@@ -39,12 +39,12 @@
             return (this._definition.id + "_") + this._actionParameter;
         }
 
-        public function set _Str_727(k:String):void
+        public function set actionParameter(k:String):void
         {
             this._actionParameter = k;
         }
 
-        public function set _Str_742(k:IActionDefinition):void
+        public function set definition(k:IActionDefinition):void
         {
             this._definition = k;
         }
@@ -56,17 +56,17 @@
             this._definition = null;
         }
 
-        public function get _Str_664():int
+        public function get startFrame():int
         {
             return this._startFrame;
         }
 
-        public function get _Str_707():String
+        public function get overridingAction():String
         {
             return this._overridingAction;
         }
 
-        public function set _Str_707(k:String):void
+        public function set overridingAction(k:String):void
         {
             this._overridingAction = k;
         }

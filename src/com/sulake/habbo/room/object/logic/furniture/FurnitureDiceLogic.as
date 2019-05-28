@@ -15,7 +15,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectFurnitureActionEvent.DICE_ACTIVATE, RoomObjectFurnitureActionEvent.DICE_OFF];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function initialize(k:XML):void
@@ -67,13 +67,13 @@
                         }
                         else
                         {
-                            if ((((k._Str_4216 == "activate") || (object.getState(0) == 0)) || (object.getState(0) == 100)))
+                            if ((((k.spriteTag == "activate") || (object.getState(0) == 0)) || (object.getState(0) == 100)))
                             {
                                 _local_3 = new RoomObjectFurnitureActionEvent(RoomObjectFurnitureActionEvent.DICE_ACTIVATE, object);
                             }
                             else
                             {
-                                if (k._Str_4216 == "deactivate")
+                                if (k.spriteTag == "deactivate")
                                 {
                                     _local_3 = new RoomObjectFurnitureActionEvent(RoomObjectFurnitureActionEvent.DICE_OFF, object);
                                 }

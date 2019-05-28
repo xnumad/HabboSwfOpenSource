@@ -28,7 +28,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectWidgetRequestEvent.INERNAL_LINK]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectWidgetRequestEvent.INERNAL_LINK]);
         }
     }
 }

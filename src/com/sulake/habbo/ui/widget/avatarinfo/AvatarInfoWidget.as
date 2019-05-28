@@ -807,11 +807,11 @@
             var _local_5:IRoomObject;
             var _local_6:RoomUserData;
             var _local_2:int = this.handler.container.roomSession.roomId;
-            var _local_3:int = this.handler.container.roomEngine._Str_3391(_local_2, RoomObjectCategoryEnum.CONST_100);
+            var _local_3:int = this.handler.container.roomEngine.getRoomObjectCount(_local_2, RoomObjectCategoryEnum.CONST_100);
             var _local_4:int;
             while (_local_4 < _local_3)
             {
-                _local_5 = this.handler.container.roomEngine._Str_3652(_local_2, _local_4, RoomObjectCategoryEnum.CONST_100);
+                _local_5 = this.handler.container.roomEngine.getRoomObjectWithIndex(_local_2, _local_4, RoomObjectCategoryEnum.CONST_100);
                 _local_6 = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_local_5.getId());
                 if (((_local_6 == null) || (!(_local_6.type == RoomObjectTypeEnum.PET))))
                 {
@@ -1590,11 +1590,11 @@
             var k:int = this.handler.container.sessionDataManager.userId;
             var _local_2:int = this.handler.roomEngine.activeRoomId;
             var _local_3:int = RoomObjectCategoryEnum.CONST_100;
-            var _local_4:int = this.handler.roomEngine._Str_3391(_local_2, _local_3);
+            var _local_4:int = this.handler.roomEngine.getRoomObjectCount(_local_2, _local_3);
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_6 = this.handler.roomEngine._Str_3652(_local_2, _local_5, RoomObjectCategoryEnum.CONST_100);
+                _local_6 = this.handler.roomEngine.getRoomObjectWithIndex(_local_2, _local_5, RoomObjectCategoryEnum.CONST_100);
                 if (_local_6 != null)
                 {
                     _local_7 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_6.getId());

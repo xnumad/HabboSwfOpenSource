@@ -20,9 +20,9 @@
 
     public class _Str_7787 implements ILinkEventTracker 
     {
-        public static var _Str_18774:Class = _Str_15989;
-        public static var _Str_20822:Class = _Str_18463;
-        public static var _Str_15204:Class = _Str_17756;
+        public static var _Str_18774:Class = _Str_7787__Str_18774;
+        public static var _Str_20822:Class = _Str_7787__Str_20822;
+        public static var _Str_15204:Class = _Str_7787__Str_15204;
         public static var styleSheet:StyleSheet = _Str_14895();
 
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;

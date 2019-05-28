@@ -29,8 +29,8 @@
     public class ProfilerOutput implements IDevTool 
     {
         private static const _Str_1870:Point = new Point();
-        private static var _Str_15863:Class = _Str_17301;
-        private static var _Str_15882:Class = _Str_18508;
+        private static var _Str_15863:Class = ProfilerOutput__Str_15863;
+        private static var _Str_15882:Class = ProfilerOutput__Str_15882;
 
         private var _disposed:Boolean = false;
         private var _profilerComponent:IProfiler;

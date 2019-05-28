@@ -6,17 +6,17 @@
         function get state():String;
         function get precedence():int;
         function get activePartSet():String;
-        function get _Str_779():Boolean;
-        function get _Str_804():Boolean;
-        function get _Str_778():String;
+        function get isMain():Boolean;
+        function get isDefault():Boolean;
+        function get assetPartDefinition():String;
         function get lay():String;
-        function get _Str_868():String;
-        function get _Str_861():Boolean;
-        function get _Str_812():Boolean;
-        function _Str_801(_arg_1:String):Boolean;
-        function _Str_733(_arg_1:String=""):Array;
-        function _Str_715(_arg_1:String=""):Boolean;
-        function _Str_772(_arg_1:String, _arg_2:int, _arg_3:Array):void;
-        function _Str_805(_arg_1:String, _arg_2:int):Array;
+        function get geometryType():String;
+        function get isAnimation():Boolean;
+        function get startFromFrameZero():Boolean;
+        function isAnimated(_arg_1:String):Boolean;
+        function getPrevents(_arg_1:String=""):Array;
+        function getPreventHeadTurn(_arg_1:String=""):Boolean;
+        function setOffsets(_arg_1:String, _arg_2:int, _arg_3:Array):void;
+        function getOffsets(_arg_1:String, _arg_2:int):Array;
     }
 }

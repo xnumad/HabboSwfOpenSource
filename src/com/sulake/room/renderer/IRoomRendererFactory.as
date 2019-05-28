@@ -4,6 +4,6 @@
 
     public interface IRoomRendererFactory extends IUnknown 
     {
-        function _Str_19555():IRoomRenderer;
+        function createRenderer():IRoomRenderer;
     }
 }

@@ -12,10 +12,10 @@
 
     public class ColorButton extends _Str_951 
     {
-        private static const _Str_1682:Class = _Str_863;
-        private static const _Str_1631:Class = _Str_763;
-        private static const _Str_1164:Class = _Str_904;
-        private static const _Str_1254:Class = _Str_911;
+        private static const _Str_1682:Class = ColorButton__Str_1682;
+        private static const _Str_1631:Class = ColorButton__Str_1631;
+        private static const _Str_1164:Class = ColorButton__Str_1164;
+        private static const _Str_1254:Class = ColorButton__Str_1254;
 
         private var _index:int = 0;
         private var _club:Boolean = false;

@@ -10,7 +10,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_19555():IRoomRenderer
+        public function createRenderer():IRoomRenderer
         {
             var k:RoomRenderer = new RoomRenderer(this);
             return k;

@@ -10,18 +10,18 @@
 
     public class NineSplitSprite 
     {
-        private static const _Str_2137:Class = _Str_850;
-        private static const _Str_1905:Class = _Str_721;
-        private static const _Str_1879:Class = _Str_952;
-        private static const _Str_1290:Class = _Str_716;
-        private static const _Str_1071:Class = _Str_26476;
-        private static const _Str_1597:Class = _Str_745;
-        private static const _Str_1844:Class = _Str_894;
-        private static const _Str_1026:Class = _Str_758;
-        private static const _Str_2007:Class = _Str_753;
-        private static const _Str_1839:Class = _Str_884;
-        private static const _Str_1716:Class = _Str_870;
-        private static const _Str_1051:Class = _Str_641;
+        private static const _Str_2137:Class = NineSplitSprite__Str_2137;
+        private static const _Str_1905:Class = NineSplitSprite__Str_1905;
+        private static const _Str_1879:Class = NineSplitSprite__Str_1879;
+        private static const _Str_1290:Class = NineSplitSprite__Str_1290;
+        private static const _Str_1071:Class = NineSplitSprite__Str_1071;
+        private static const _Str_1597:Class = NineSplitSprite__Str_1597;
+        private static const _Str_1844:Class = NineSplitSprite__Str_1844;
+        private static const _Str_1026:Class = NineSplitSprite__Str_1026;
+        private static const _Str_2007:Class = NineSplitSprite__Str_2007;
+        private static const _Str_1839:Class = NineSplitSprite__Str_1839;
+        private static const _Str_1716:Class = NineSplitSprite__Str_1716;
+        private static const _Str_1051:Class = NineSplitSprite__Str_1051;
         private static const _Str_1346:Bitmap = new _Str_2137();
         public static const _Str_2262:Bitmap = new _Str_1905();
         private static const _Str_1706:Bitmap = new _Str_1879();

@@ -104,11 +104,11 @@
             }
             var k:int = this._container.roomSession.roomId;
             var _local_2:Array = [];
-            var _local_4:int = this._container.roomEngine._Str_3391(k, RoomObjectCategoryEnum.CONST_100);
+            var _local_4:int = this._container.roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_100);
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_3 = this._container.roomEngine._Str_3652(k, _local_5, RoomObjectCategoryEnum.CONST_100);
+                _local_3 = this._container.roomEngine.getRoomObjectWithIndex(k, _local_5, RoomObjectCategoryEnum.CONST_100);
                 _local_6 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_3.getId());
                 if (_local_6 != null)
                 {

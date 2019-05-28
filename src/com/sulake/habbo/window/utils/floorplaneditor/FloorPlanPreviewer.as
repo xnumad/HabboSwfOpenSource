@@ -20,13 +20,13 @@
         public static var tile_preview_7:Class = FloorPlanPreviewer_tile_preview_7;
         public static var tile_preview_8:Class = FloorPlanPreviewer_tile_preview_8;
         public static var tile_preview_9:Class = FloorPlanPreviewer_tile_preview_9;
-        public static var _Str_13785:Class = _Str_13903;
-        public static var _Str_12541:Class = _Str_13737;
-        public static var _Str_15592:Class = _Str_13384;
-        public static var _Str_15443:Class = _Str_12902;
-        public static var _Str_14220:Class = _Str_15841;
-        public static var _Str_15140:Class = _Str_13385;
-        public static var _Str_14517:Class = _Str_15873;
+        public static var _Str_13785:Class = FloorPlanPreviewer__Str_13785;
+        public static var _Str_12541:Class = FloorPlanPreviewer__Str_12541;
+        public static var _Str_15592:Class = FloorPlanPreviewer__Str_15592;
+        public static var _Str_15443:Class = FloorPlanPreviewer__Str_15443;
+        public static var _Str_14220:Class = FloorPlanPreviewer__Str_14220;
+        public static var _Str_15140:Class = FloorPlanPreviewer__Str_15140;
+        public static var _Str_14517:Class = FloorPlanPreviewer__Str_14517;
 
         private var _bcFloorPlanEditor:BCFloorPlanEditor;
         private var _tileImages:Vector.<BitmapData>;

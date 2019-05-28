@@ -34,15 +34,15 @@
             this._masks = [];
             super();
             this._loc = new Vector3d();
-            this._loc._Str_2427(_arg_2);
+            this._loc.assign(_arg_2);
             this._leftSide = new Vector3d();
-            this._leftSide._Str_2427(_arg_3);
+            this._leftSide.assign(_arg_3);
             this._rightSide = new Vector3d();
-            this._rightSide._Str_2427(_arg_4);
+            this._rightSide.assign(_arg_4);
             this._type = k;
             if (((!(_arg_3 == null)) && (!(_arg_4 == null))))
             {
-                this._normal = Vector3d._Str_7423(_arg_3, _arg_4);
+                this._normal = Vector3d.crossProduct(_arg_3, _arg_4);
                 _local_6 = 0;
                 _local_7 = 0;
                 _local_8 = 0;
@@ -87,8 +87,8 @@
                     if (((!(_local_12 == null)) && (_local_12.length > 0)))
                     {
                         _local_13 = new Vector3d();
-                        _local_13._Str_2427(_local_12);
-                        _local_13._Str_6038((1 / _local_13.length));
+                        _local_13.assign(_local_12);
+                        _local_13.mul((1 / _local_13.length));
                         this._secondaryNormals.push(_local_13);
                     }
                     _local_11++;
@@ -143,7 +143,7 @@
                 return null;
             }
             var _local_2:Vector3d = new Vector3d();
-            _local_2._Str_2427((this._secondaryNormals[k] as IVector3D));
+            _local_2.assign((this._secondaryNormals[k] as IVector3D));
             return _local_2;
         }
 

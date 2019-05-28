@@ -77,7 +77,7 @@
             return !(this._numberDataList[k] == null);
         }
 
-        public function _Str_25340(k:String):Boolean
+        public function hasNumberArray(k:String):Boolean
         {
             return !(this._numberArrayDataList[k] == null);
         }
@@ -87,7 +87,7 @@
             return !(this._stringDataList[k] == null);
         }
 
-        public function _Str_24437(k:String):Boolean
+        public function hasStringArray(k:String):Boolean
         {
             return !(this._stringArrayDataList[k] == null);
         }
@@ -112,7 +112,7 @@
             return _local_2;
         }
 
-        public function _Str_9417(k:String):Array
+        public function getStringArray(k:String):Array
         {
             var _local_2:Array = this._stringArrayDataList[k];
             if (_local_2 != null)
@@ -122,12 +122,12 @@
             return _local_2;
         }
 
-        public function _Str_6183(k:String):Map
+        public function getStringToStringMap(k:String):Map
         {
             var _local_5:int;
             var _local_2:Map = new Map();
-            var _local_3:Array = this._Str_9417((ROMC_MAP_KEYS_ + k));
-            var _local_4:Array = this._Str_9417((ROMC_MAP_VALUES_ + k));
+            var _local_3:Array = this.getStringArray((ROMC_MAP_KEYS_ + k));
+            var _local_4:Array = this.getStringArray((ROMC_MAP_VALUES_ + k));
             if ((((!(_local_3 == null)) && (!(_local_4 == null))) && (_local_3.length == _local_4.length)))
             {
                 _local_5 = 0;
@@ -278,7 +278,7 @@
             this._updateID++;
         }
 
-        public function _Str_17971(k:String, _arg_2:Map, _arg_3:Boolean=false):void
+        public function setStringToStringMap(k:String, _arg_2:Map, _arg_3:Boolean=false):void
         {
             if (_arg_2 == null)
             {
@@ -288,7 +288,7 @@
             this.setStringArray((ROMC_MAP_VALUES_ + k), _arg_2.getValues(), _arg_3);
         }
 
-        public function _Str_3273():int
+        public function getUpdateID():int
         {
             return this._updateID;
         }

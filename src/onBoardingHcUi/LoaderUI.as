@@ -19,15 +19,15 @@
 
     public class LoaderUI 
     {
-        private static const _Str_1249:Class = _Str_654;
+        private static const _Str_1249:Class = LoaderUI__Str_1249;
         public static var ubuntu_regular:Class = _Str_771;
         public static var ubuntu_bold:Class = _Str_955;
         public static var ubuntu_italic:Class = _Str_1000;
         public static var ubuntu_bold_italic:Class = _Str_666;
-        private static const _Str_1115:Class = _Str_876;
-        private static const _Str_1325:Class = _Str_874;
-        private static const _Str_2054:Class = _Str_684;
-        private static const _Str_1832:Class = _Str_908;
+        private static const _Str_1115:Class = LoaderUI__Str_1115;
+        private static const _Str_1325:Class = LoaderUI__Str_1325;
+        private static const _Str_2054:Class = LoaderUI__Str_2054;
+        private static const _Str_1832:Class = LoaderUI__Str_1832;
         public static const _Str_2056:int = 1;
         public static const _Str_1585:int = 2;
         public static const L:String = "l";

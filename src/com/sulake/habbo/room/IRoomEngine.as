@@ -16,7 +16,7 @@
     public interface IRoomEngine extends IUnknown 
     {
         function get events():IEventDispatcher;
-        function get _Str_3022():Boolean;
+        function get isInitialized():Boolean;
         function get activeRoomId():int;
         function _Str_14750(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):DisplayObject;
         function _Str_5041(_arg_1:int, _arg_2:int, _arg_3:Number, _arg_4:Point=null, _arg_5:Point=null, _arg_6:Boolean=false, _arg_7:Boolean=false, _arg_8:Boolean=false):void;
@@ -44,9 +44,9 @@
         function getRoomObjectBoundingRectangle(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int):Rectangle;
         function _Str_6960(_arg_1:int, _arg_2:int, _arg_3:int, _arg_4:int=-1):Point;
         function _Str_21858(_arg_1:int):Rectangle;
-        function _Str_3391(_arg_1:int, _arg_2:int):int;
+        function getRoomObjectCount(_arg_1:int, _arg_2:int):int;
         function getRoomObject(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
-        function _Str_3652(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
+        function getRoomObjectWithIndex(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
         function _Str_3571(_arg_1:int, _arg_2:int, _arg_3:String):Boolean;
         function _Str_20856(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:Map):Boolean;
         function _Str_12849(_arg_1:int, _arg_2:int, _arg_3:String, _arg_4:String):Boolean;

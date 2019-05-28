@@ -15,7 +15,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectWidgetRequestEvent.MYSTERYTROPHY_OPEN_DIALOG]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectWidgetRequestEvent.MYSTERYTROPHY_OPEN_DIALOG]);
         }
 
         override public function useObject():void

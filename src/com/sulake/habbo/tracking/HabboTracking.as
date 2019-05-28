@@ -701,8 +701,8 @@
                 _local_2 = null;
                 if (this._roomEngine != null)
                 {
-                    _local_3 = this._roomEngine._Str_3391(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_100);
-                    _local_4 = (this._roomEngine._Str_3391(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_10) + this._roomEngine._Str_3391(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_20));
+                    _local_3 = this._roomEngine.getRoomObjectCount(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_100);
+                    _local_4 = (this._roomEngine.getRoomObjectCount(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_10) + this._roomEngine.getRoomObjectCount(this._roomEngine.activeRoomId, RoomObjectCategoryEnum.CONST_20));
                     _local_2 = ((("Avatars: " + _local_3) + ", Objects: ") + _local_4);
                 }
                 this.trackEventLog("ClientPerformance", String(this._framerateTracker.frameRate), "fps", _local_2, this._fpsTrackingRoomId);

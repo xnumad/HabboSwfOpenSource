@@ -30,12 +30,12 @@
             return this._disposed;
         }
 
-        public function get _Str_12010():String
+        public function get roomObjectVariableAccurateZ():String
         {
             return this._roomObjectVariableAccurateZ;
         }
 
-        public function set _Str_12010(k:String):void
+        public function set roomObjectVariableAccurateZ(k:String):void
         {
             this._roomObjectVariableAccurateZ = k;
         }
@@ -80,7 +80,7 @@
             this._objects.reset();
         }
 
-        public function _Str_16543(k:IRoomObject):String
+        public function getRoomObjectIdentifier(k:IRoomObject):String
         {
             if (k != null)
             {
@@ -89,19 +89,19 @@
             return null;
         }
 
-        public function _Str_17585(k:IRoomObject):void
+        public function feedRoomObject(k:IRoomObject):void
         {
             if (k == null)
             {
                 return;
             }
-            this._objects.add(this._Str_16543(k), k);
+            this._objects.add(this.getRoomObjectIdentifier(k), k);
         }
 
-        public function _Str_16309(k:IRoomObject):void
+        public function removeRoomObject(k:IRoomObject):void
         {
             var _local_4:RoomSpriteCanvas;
-            var _local_2:String = this._Str_16543(k);
+            var _local_2:String = this.getRoomObjectIdentifier(k);
             this._objects.remove(_local_2);
             var _local_3:int;
             while (_local_3 < this._canvases.length)
@@ -120,17 +120,17 @@
             return this._objects.getValue(k) as IRoomObject;
         }
 
-        public function _Str_3652(k:int):IRoomObject
+        public function getRoomObjectWithIndex(k:int):IRoomObject
         {
             return this._objects.getWithIndex(k) as IRoomObject;
         }
 
-        public function _Str_19106(k:int):String
+        public function getRoomObjectIdWithIndex(k:int):String
         {
             return this._objects.getKey(k) as String;
         }
 
-        public function _Str_3391():int
+        public function getRoomObjectCount():int
         {
             return this._objects.length;
         }
@@ -152,7 +152,7 @@
             }
         }
 
-        public function _Str_22057(k:int, _arg_2:int, _arg_3:int, _arg_4:int):IRoomRenderingCanvas
+        public function createCanvas(k:int, _arg_2:int, _arg_3:int, _arg_4:int):IRoomRenderingCanvas
         {
             var _local_6:RoomGeometry;
             var _local_5:IRoomRenderingCanvas = (this._canvases.getValue(String(k)) as IRoomRenderingCanvas);
@@ -176,13 +176,13 @@
             return new RoomSpriteCanvas(this, k, _arg_2, _arg_3, _arg_4);
         }
 
-        public function _Str_1664(k:int):IRoomRenderingCanvas
+        public function getCanvas(k:int):IRoomRenderingCanvas
         {
             var _local_2:IRoomRenderingCanvas = (this._canvases.getValue(String(k)) as IRoomRenderingCanvas);
             return _local_2;
         }
 
-        public function _Str_25191(k:int):Boolean
+        public function disposeCanvas(k:int):Boolean
         {
             var _local_2:RoomSpriteCanvas = (this._canvases.remove(String(k)) as RoomSpriteCanvas);
             if (_local_2 != null)

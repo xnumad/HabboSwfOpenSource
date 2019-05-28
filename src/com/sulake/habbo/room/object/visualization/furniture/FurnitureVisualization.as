@@ -107,7 +107,7 @@
             this._Str_7588 = [];
             this._Str_7703 = [];
             this._Str_7624 = [];
-            this._Str_3773(0);
+            this.createSprites(0);
         }
 
         override public function initialize(k:IRoomObjectVisualizationData):Boolean
@@ -151,8 +151,8 @@
             if (((_local_5) || (!(_local_7 == 0))))
             {
                 this.updateSprites(_local_6, _local_5, _local_7);
-                _Str_3289 = _local_6;
-                _Str_6936();
+                _currentScale = _local_6;
+                increaseUpdateId();
             }
         }
 
@@ -160,13 +160,13 @@
         {
             var _local_4:int;
             var _local_5:int;
-            if (this._Str_3416 != _Str_3008)
+            if (this._Str_3416 != spriteCount)
             {
-                _Str_3773(this._Str_3416);
+                createSprites(this._Str_3416);
             }
             if (_arg_2)
             {
-                _local_4 = (_Str_3008 - 1);
+                _local_4 = (spriteCount - 1);
                 while (_local_4 >= 0)
                 {
                     this._Str_7421(k, _local_4);
@@ -195,7 +195,7 @@
             var _local_6:Number;
             var _local_7:int;
             var _local_3:String = this.getSpriteAssetName(k, _arg_2);
-            var _local_4:IRoomObjectSprite = _Str_2505(_arg_2);
+            var _local_4:IRoomObjectSprite = getSprite(_arg_2);
             if (((!(_local_4 == null)) && (!(_local_3 == null))))
             {
                 _local_5 = this.getAsset(_local_3, _arg_2);
@@ -206,7 +206,7 @@
                     _local_4.asset = (_local_5.asset.content as BitmapData);
                     if (_local_5.asset.content == null)
                     {
-                        _Str_3603++;
+                        _modelUpdateID++;
                     }
                     _local_4.flipH = _local_5.flipH;
                     _local_4.flipV = _local_5.flipV;
@@ -303,7 +303,7 @@
             {
                 return false;
             }
-            if ((((!(_Str_7475 == _local_3._Str_3273())) || (!(k == _Str_3289))) || (!(_arg_2 == this._Str_20921))))
+            if ((((!(_objectUpdateID == _local_3.getUpdateID())) || (!(k == _currentScale))) || (!(_arg_2 == this._Str_20921))))
             {
                 _local_4 = (_local_3.getDirection().x - (_arg_2 + 135));
                 _local_4 = (((_local_4 % 360) + 360) % 360);
@@ -312,9 +312,9 @@
                     _local_5 = this._Str_594._Str_15687(k, _local_4);
                     this.direction = _local_5;
                 }
-                _Str_7475 = _local_3._Str_3273();
+                _objectUpdateID = _local_3.getUpdateID();
                 this._Str_20921 = _arg_2;
-                _Str_3289 = k;
+                _currentScale = k;
                 this._Str_24917(k, this._Str_2405);
                 return true;
             }
@@ -334,7 +334,7 @@
             {
                 return false;
             }
-            if (_Str_3603 != _local_3._Str_3273())
+            if (_modelUpdateID != _local_3.getUpdateID())
             {
                 this._Str_20708 = _local_3.getNumber(RoomObjectVariableEnum.FURNITURE_COLOR);
                 _local_4 = _local_3.getNumber(RoomObjectVariableEnum.FURNITURE_ALPHA_MULTIPLIER);
@@ -350,7 +350,7 @@
                 this._Str_3944 = this.getAdClickUrl(_local_3);
                 this._Str_6190 = (((!(this._Str_3944 == null)) && (!(this._Str_3944 == ""))) && (this._Str_3944.indexOf("http") == 0));
                 this._Str_20044 = _local_3.getNumber(RoomObjectVariableEnum.FURNITURE_LIFT_AMOUNT);
-                _Str_3603 = _local_3._Str_3273();
+                _modelUpdateID = _local_3.getUpdateID();
                 return true;
             }
             return false;
@@ -411,9 +411,9 @@
         protected function getAsset(k:String, _arg_2:int=-1):IGraphicAsset
         {
             var _local_3:IGraphicAsset;
-            if (_Str_2697 != null)
+            if (assetCollection != null)
             {
-                _local_3 = _Str_2697.getAsset(k);
+                _local_3 = assetCollection.getAsset(k);
                 return _local_3;
             }
             return null;

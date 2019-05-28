@@ -68,7 +68,7 @@
 
         public function _Str_23932(k:int, _arg_2:int, _arg_3:IRoomObject):void
         {
-            if (!_arg_3._Str_3022())
+            if (!_arg_3.isInitialized())
             {
                 Logger.log("Assigning non initialized object to tile object map!");
                 return;
@@ -83,7 +83,7 @@
         {
             var _local_8:IRoomObject;
             var _local_10:int;
-            if ((((k == null) || (k.getModel() == null)) || (!(k._Str_3022()))))
+            if ((((k == null) || (k.getModel() == null)) || (!(k.isInitialized()))))
             {
                 return;
             }

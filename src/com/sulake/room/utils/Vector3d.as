@@ -24,7 +24,7 @@
             return _local_3;
         }
 
-        public static function _Str_5385(k:IVector3D, _arg_2:IVector3D):Vector3d
+        public static function dif(k:IVector3D, _arg_2:IVector3D):Vector3d
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -44,7 +44,7 @@
             return _local_3;
         }
 
-        public static function _Str_18283(k:IVector3D, _arg_2:IVector3D):Number
+        public static function dotProduct(k:IVector3D, _arg_2:IVector3D):Number
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -53,7 +53,7 @@
             return ((k.x * _arg_2.x) + (k.y * _arg_2.y)) + (k.z * _arg_2.z);
         }
 
-        public static function _Str_7423(k:IVector3D, _arg_2:IVector3D):Vector3d
+        public static function crossProduct(k:IVector3D, _arg_2:IVector3D):Vector3d
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -63,7 +63,7 @@
             return _local_3;
         }
 
-        public static function _Str_4733(k:IVector3D, _arg_2:IVector3D):Number
+        public static function scalarProjection(k:IVector3D, _arg_2:IVector3D):Number
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -88,10 +88,10 @@
             {
                 return 0;
             }
-            return Vector3d._Str_18283(k, _arg_2) / _local_3;
+            return Vector3d.dotProduct(k, _arg_2) / _local_3;
         }
 
-        public static function _Str_15471(k:IVector3D, _arg_2:IVector3D):Boolean
+        public static function isEqual(k:IVector3D, _arg_2:IVector3D):Boolean
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -147,7 +147,7 @@
             this._length = NaN;
         }
 
-        public function _Str_9096():void
+        public function negate():void
         {
             this._x = -(this._x);
             this._y = -(this._y);
@@ -166,7 +166,7 @@
             this._length = NaN;
         }
 
-        public function _Str_15193(k:IVector3D):void
+        public function sub(k:IVector3D):void
         {
             if (k == null)
             {
@@ -178,7 +178,7 @@
             this._length = NaN;
         }
 
-        public function _Str_6038(k:Number):void
+        public function mul(k:Number):void
         {
             this._x = (this._x * k);
             this._y = (this._y * k);
@@ -197,7 +197,7 @@
             }
         }
 
-        public function _Str_2427(k:IVector3D):void
+        public function assign(k:IVector3D):void
         {
             if (k == null)
             {

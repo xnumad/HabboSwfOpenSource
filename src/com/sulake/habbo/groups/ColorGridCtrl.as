@@ -37,7 +37,7 @@
             return this._selectedColorIndex;
         }
 
-        public function get _Str_3022():Boolean
+        public function get isInitialized():Boolean
         {
             return (!(this._colorData == null)) && (!(this._colorGrid == null));
         }
@@ -142,7 +142,7 @@
 
         public function _Str_6434(k:int):void
         {
-            if (!this._Str_3022)
+            if (!this.isInitialized)
             {
                 return;
             }

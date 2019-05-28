@@ -13,9 +13,9 @@
 
     public class _Str_951 extends Sprite 
     {
-        private static const _Str_1272:Class = _Str_900;
-        private static const _Str_1046:Class = _Str_841;
-        private static const _Str_1828:Class = _Str_643;
+        private static const _Str_1272:Class = _Str_951__Str_1272;
+        private static const _Str_1046:Class = _Str_951__Str_1046;
+        private static const _Str_1828:Class = _Str_951__Str_1828;
 
         private var _Str_622:String;
         protected var _Str_873:Rectangle;

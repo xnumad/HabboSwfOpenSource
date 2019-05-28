@@ -27,7 +27,7 @@
         private function _Str_24266(k:Number):void
         {
             this.updateLayerCount(data.getLayerCount(k));
-            _Str_3773(((data.getLayerCount(k) * this._sizeX) * this._sizeY));
+            createSprites(((data.getLayerCount(k) * this._sizeX) * this._sizeY));
             updateSprites(k, true, 0);
         }
 

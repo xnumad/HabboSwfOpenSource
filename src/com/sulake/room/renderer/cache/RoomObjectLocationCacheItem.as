@@ -44,13 +44,13 @@
             }
             var _local_3:Boolean;
             var _local_4:IVector3D = k.getLocation();
-            if (((!(_arg_2.updateId == this._geometryUpdateId)) || (!(k._Str_3273() == this._objectUpdateId))))
+            if (((!(_arg_2.updateId == this._geometryUpdateId)) || (!(k.getUpdateID() == this._objectUpdateId))))
             {
-                this._objectUpdateId = k._Str_3273();
+                this._objectUpdateId = k.getUpdateID();
                 if (((((!(_arg_2.updateId == this._geometryUpdateId)) || (!(_local_4.x == this._objectUpdateLoc.x))) || (!(_local_4.y == this._objectUpdateLoc.y))) || (!(_local_4.z == this._objectUpdateLoc.z))))
                 {
                     this._geometryUpdateId = _arg_2.updateId;
-                    this._objectUpdateLoc._Str_2427(_local_4);
+                    this._objectUpdateLoc.assign(_local_4);
                     _local_3 = true;
                 }
             }
@@ -69,7 +69,7 @@
                     if (((!(_local_7.x == _local_4.x)) || (!(_local_7.y == _local_4.y))))
                     {
                         _local_8 = _arg_2.getScreenPosition(_local_7);
-                        this._screenLoc._Str_2427(_local_5);
+                        this._screenLoc.assign(_local_5);
                         if (_local_8 != null)
                         {
                             this._screenLoc.z = _local_8.z;
@@ -77,12 +77,12 @@
                     }
                     else
                     {
-                        this._screenLoc._Str_2427(_local_5);
+                        this._screenLoc.assign(_local_5);
                     }
                 }
                 else
                 {
-                    this._screenLoc._Str_2427(_local_5);
+                    this._screenLoc.assign(_local_5);
                 }
                 this._screenLoc.x = Math.round(this._screenLoc.x);
                 this._screenLoc.y = Math.round(this._screenLoc.y);

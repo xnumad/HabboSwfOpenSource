@@ -31,7 +31,7 @@
             this._buttonDown = _arg_7;
         }
 
-        public function get _Str_3463():String
+        public function get eventId():String
         {
             return this._eventId;
         }
@@ -66,12 +66,12 @@
             return this._localY;
         }
 
-        public function get _Str_4595():int
+        public function get spriteOffsetX():int
         {
             return this._spriteOffsetX;
         }
 
-        public function get _Str_4534():int
+        public function get spriteOffsetY():int
         {
             return this._spriteOffsetY;
         }
@@ -86,12 +86,12 @@
             this._localY = k;
         }
 
-        public function set _Str_4595(k:int):void
+        public function set spriteOffsetX(k:int):void
         {
             this._spriteOffsetX = k;
         }
 
-        public function set _Str_4534(k:int):void
+        public function set spriteOffsetY(k:int):void
         {
             this._spriteOffsetY = k;
         }

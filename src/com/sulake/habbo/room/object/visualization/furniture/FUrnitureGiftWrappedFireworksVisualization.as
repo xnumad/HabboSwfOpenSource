@@ -68,7 +68,7 @@
             var _local_3:int = _Str_3033(k);
             var _local_4:String = type;
             var _local_5:String = "";
-            if (_arg_2 < (_Str_3008 - 1))
+            if (_arg_2 < (spriteCount - 1))
             {
                 _local_5 = String.fromCharCode(("a".charCodeAt() + _arg_2));
             }

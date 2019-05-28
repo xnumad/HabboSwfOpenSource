@@ -18,11 +18,11 @@
         {
             super(k, _arg_2, _arg_3, _arg_10, _arg_11, _arg_12, _arg_13, _arg_14, _arg_15);
             this._wallLoc = new Vector3d();
-            this._wallLoc._Str_2427(_arg_4);
+            this._wallLoc.assign(_arg_4);
             this._wallWd = new Vector3d();
-            this._wallWd._Str_2427(_arg_5);
+            this._wallWd.assign(_arg_5);
             this._wallHt = new Vector3d();
-            this._wallHt._Str_2427(_arg_6);
+            this._wallHt.assign(_arg_6);
             this._x = _arg_7;
             this._y = _arg_8;
             this._direction = _arg_9;

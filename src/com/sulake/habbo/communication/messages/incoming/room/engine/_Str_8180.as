@@ -11,12 +11,12 @@
             this._Str_1638 = _arg_2;
         }
 
-        public function get _Str_695():String
+        public function get actionType():String
         {
             return this._Str_1659;
         }
 
-        public function get _Str_727():String
+        public function get actionParameter():String
         {
             return this._Str_1638;
         }

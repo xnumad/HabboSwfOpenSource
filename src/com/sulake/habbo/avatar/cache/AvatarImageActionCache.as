@@ -97,18 +97,18 @@
             {
                 k = this._Str_1233;
             }
-            if (k._Str_707 != null)
+            if (k.overridingAction != null)
             {
-                return this._Str_586.getValue(k._Str_707) as AvatarImageBodyPartCache;
+                return this._Str_586.getValue(k.overridingAction) as AvatarImageBodyPartCache;
             }
             return this._Str_586.getValue(k.id) as AvatarImageBodyPartCache;
         }
 
         public function _Str_1765(k:IActiveActionData, _arg_2:AvatarImageBodyPartCache):void
         {
-            if (k._Str_707 != null)
+            if (k.overridingAction != null)
             {
-                this._Str_586.add(k._Str_707, _arg_2);
+                this._Str_586.add(k.overridingAction, _arg_2);
             }
             else
             {

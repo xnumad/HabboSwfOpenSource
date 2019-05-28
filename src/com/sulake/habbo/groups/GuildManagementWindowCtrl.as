@@ -188,7 +188,7 @@
                 {
                     this._manager.trackGoogle("groupPurchase", "step3_colors");
                 }
-                if (!this._primaryColorCtrl._Str_3022)
+                if (!this._primaryColorCtrl.isInitialized)
                 {
                     this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager._Str_3058._Str_17665);
                     if (this._data._Str_2811)
@@ -200,7 +200,7 @@
                         this._primaryColorCtrl._Str_6434(this._manager._Str_3058._Str_23172(this._badgeEditorCtrl._Str_23897));
                     }
                 }
-                if (!this._secondaryColorCtrl._Str_3022)
+                if (!this._secondaryColorCtrl.isInitialized)
                 {
                     this._secondaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_secondary_color_selector", this._manager._Str_3058._Str_16298);
                     if (this._data._Str_2811)
@@ -216,7 +216,7 @@
             }
             if (this._step == _Str_12047)
             {
-                if (!this._settingsCtrl._Str_3022)
+                if (!this._settingsCtrl.isInitialized)
                 {
                     this._settingsCtrl.refresh(this._data);
                 }
@@ -270,7 +270,7 @@
                     _local_2.bitmap = k;
                 }
             }
-            if (this._primaryColorCtrl._Str_3022)
+            if (this._primaryColorCtrl.isInitialized)
             {
                 _local_3 = this._primaryColorCtrl._Str_10058();
                 _local_4 = this._window.findChildByName("badge_preview_primary_color_top");
@@ -279,7 +279,7 @@
                     _local_4.color = _local_3.color;
                 }
             }
-            if (this._secondaryColorCtrl._Str_3022)
+            if (this._secondaryColorCtrl.isInitialized)
             {
                 _local_5 = this._secondaryColorCtrl._Str_10058();
                 _local_6 = this._window.findChildByName("badge_preview_secondary_color_top");
@@ -410,11 +410,11 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if (this._primaryColorCtrl._Str_3022)
+                if (this._primaryColorCtrl.isInitialized)
                 {
                     this._primaryColorCtrl._Str_6434(this._data._Str_7342);
                 }
-                if (this._secondaryColorCtrl._Str_3022)
+                if (this._secondaryColorCtrl.isInitialized)
                 {
                     this._secondaryColorCtrl._Str_6434(this._data._Str_7590);
                 }
@@ -599,8 +599,8 @@
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case _Str_7447:
-                    _local_4 = ((this._primaryColorCtrl._Str_3022) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
-                    _local_5 = ((this._secondaryColorCtrl._Str_3022) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
+                    _local_4 = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
+                    _local_5 = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
                     this._manager.send(new _Str_11165(this._data.groupId, _local_4, _local_5));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
@@ -617,8 +617,8 @@
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
             var _local_3:_Str_2866 = this._Str_19886();
             var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data._Str_6089);
-            var _local_5:int = ((this._primaryColorCtrl._Str_3022) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
-            var _local_6:int = ((this._secondaryColorCtrl._Str_3022) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
+            var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
+            var _local_6:int = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
             this._alertedBaseRoomId = 0;
             this._manager.send(new CreateGuildMessageComposer(k, _local_2, _local_3.roomId, _local_5, _local_6, _local_4));
         }

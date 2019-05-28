@@ -224,7 +224,7 @@
             return false;
         }
 
-        public function _Str_20162(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void
+        public function loadRoomAdImage(k:int, _arg_2:int, _arg_3:int, _arg_4:String, _arg_5:String):void
         {
             var _local_9:IAsset;
             var _local_10:BitmapData;

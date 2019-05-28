@@ -150,7 +150,7 @@
             {
                 if (this._cachedBitmapData != null)
                 {
-                    if (((((this._cachedBitmapData.height == height) && (Vector3d._Str_15471(this._cachedBitmapNormal, normal))) && (this._cachedBitmapDataOffsetX == offsetX)) && (this._cachedBitmapDataOffsetY == offsetY)))
+                    if (((((this._cachedBitmapData.height == height) && (Vector3d.isEqual(this._cachedBitmapNormal, normal))) && (this._cachedBitmapDataOffsetX == offsetX)) && (this._cachedBitmapDataOffsetY == offsetY)))
                     {
                         return this._cachedBitmapData;
                     }
@@ -185,7 +185,7 @@
                     return null;
                 }
             }
-            this._cachedBitmapNormal._Str_2427(normal);
+            this._cachedBitmapNormal.assign(normal);
             this._cachedBitmapDataOffsetX = offsetX;
             this._cachedBitmapDataOffsetY = offsetY;
             if (this._cells.length == 0)

@@ -23,8 +23,8 @@
         function getRoom(_arg_1:int):IRoomInstance;
         function _Str_3321(_arg_1:String):int;
         function getRoomObject(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
-        function _Str_3652(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
-        function _Str_3391(_arg_1:int, _arg_2:int):int;
+        function getRoomObjectWithIndex(_arg_1:int, _arg_2:int, _arg_3:int):IRoomObject;
+        function getRoomObjectCount(_arg_1:int, _arg_2:int):int;
         function _Str_6650(_arg_1:int, _arg_2:int, _arg_3:Boolean=true):void;
         function _Str_16645(_arg_1:int, _arg_2:int, _arg_3:Boolean, _arg_4:String=null, _arg_5:IStuffData=null, _arg_6:int=-1, _arg_7:int=-1, _arg_8:String=null):void;
         function _Str_7972(_arg_1:Boolean):void;

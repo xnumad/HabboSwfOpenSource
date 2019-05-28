@@ -7,7 +7,7 @@
 
     public class HabboRoomSessionManagerLib extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_12522;
+        public static var manifest:Class = HabboRoomSessionManagerLib_manifest;
         public static var requiredClasses:Array = new Array(RoomSessionManagerBootstrap, IIDHabboRoomSessionManager);
     }
 }

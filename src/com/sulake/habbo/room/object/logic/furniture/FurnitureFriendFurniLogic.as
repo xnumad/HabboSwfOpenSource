@@ -28,7 +28,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectWidgetRequestEvent.FRIEND_FURNITURE_ENGRAVING]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectWidgetRequestEvent.FRIEND_FURNITURE_ENGRAVING]);
         }
 
         override public function initialize(k:XML):void

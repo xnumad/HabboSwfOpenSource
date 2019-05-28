@@ -9,7 +9,7 @@
     public class HabboSessionDataManagerLib extends SimpleApplication 
     {
         public static var requiredClasses:Array = new Array(SessionDataManagerBootstrap, IIDSessionDataManager);
-        public static var manifest:Class = _Str_13276;
-        public static var loading_icon:Class = _Str_15736;
+        public static var manifest:Class = HabboSessionDataManagerLib_manifest;
+        public static var loading_icon:Class = HabboSessionDataManagerLib_loading_icon;
     }
 }

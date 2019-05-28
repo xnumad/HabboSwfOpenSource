@@ -15,12 +15,12 @@
             this._objectId = k;
         }
 
-        public function get _Str_4216():String
+        public function get spriteTag():String
         {
             return this._spriteTag;
         }
 
-        public function set _Str_4216(k:String):void
+        public function set spriteTag(k:String):void
         {
             this._spriteTag = k;
         }

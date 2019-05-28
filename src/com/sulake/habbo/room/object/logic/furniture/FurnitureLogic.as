@@ -60,7 +60,7 @@
                 k.push(RoomObjectWidgetRequestEvent.OPEN_FURNI_CONTEXT_MENU);
                 k.push(RoomObjectWidgetRequestEvent.CLOSE_FURNI_CONTEXT_MENU);
             }
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function dispose():void
@@ -196,11 +196,11 @@
                 case MouseEvent.MOUSE_MOVE:
                     if (eventDispatcher != null)
                     {
-                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_MOVE, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_MOVE, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                         (_local_4 as RoomObjectMouseEvent).localX = k.localX;
                         (_local_4 as RoomObjectMouseEvent).localY = k.localY;
-                        (_local_4 as RoomObjectMouseEvent)._Str_4595 = k._Str_4595;
-                        (_local_4 as RoomObjectMouseEvent)._Str_4534 = k._Str_4534;
+                        (_local_4 as RoomObjectMouseEvent).spriteOffsetX = k.spriteOffsetX;
+                        (_local_4 as RoomObjectMouseEvent).spriteOffsetY = k.spriteOffsetY;
                         eventDispatcher.dispatchEvent(_local_4);
                     }
                     return;
@@ -213,11 +213,11 @@
                         }
                         if (eventDispatcher != null)
                         {
-                            _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_ENTER, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                            _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_ENTER, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                             (_local_4 as RoomObjectMouseEvent).localX = k.localX;
                             (_local_4 as RoomObjectMouseEvent).localY = k.localY;
-                            (_local_4 as RoomObjectMouseEvent)._Str_4595 = k._Str_4595;
-                            (_local_4 as RoomObjectMouseEvent)._Str_4534 = k._Str_4534;
+                            (_local_4 as RoomObjectMouseEvent).spriteOffsetX = k.spriteOffsetX;
+                            (_local_4 as RoomObjectMouseEvent).spriteOffsetY = k.spriteOffsetY;
                             eventDispatcher.dispatchEvent(_local_4);
                         }
                         this._mouseOver = true;
@@ -232,11 +232,11 @@
                         }
                         if (eventDispatcher != null)
                         {
-                            _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_LEAVE, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                            _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_LEAVE, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                             (_local_4 as RoomObjectMouseEvent).localX = k.localX;
                             (_local_4 as RoomObjectMouseEvent).localY = k.localY;
-                            (_local_4 as RoomObjectMouseEvent)._Str_4595 = k._Str_4595;
-                            (_local_4 as RoomObjectMouseEvent)._Str_4534 = k._Str_4534;
+                            (_local_4 as RoomObjectMouseEvent).spriteOffsetX = k.spriteOffsetX;
+                            (_local_4 as RoomObjectMouseEvent).spriteOffsetY = k.spriteOffsetY;
                             eventDispatcher.dispatchEvent(_local_4);
                         }
                         this._mouseOver = false;
@@ -248,11 +248,11 @@
                 case MouseEvent.CLICK:
                     if (eventDispatcher != null)
                     {
-                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_CLICK, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_CLICK, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                         (_local_4 as RoomObjectMouseEvent).localX = k.localX;
                         (_local_4 as RoomObjectMouseEvent).localY = k.localY;
-                        (_local_4 as RoomObjectMouseEvent)._Str_4595 = k._Str_4595;
-                        (_local_4 as RoomObjectMouseEvent)._Str_4534 = k._Str_4534;
+                        (_local_4 as RoomObjectMouseEvent).spriteOffsetX = k.spriteOffsetX;
+                        (_local_4 as RoomObjectMouseEvent).spriteOffsetY = k.spriteOffsetY;
                         eventDispatcher.dispatchEvent(_local_4);
                     }
                     if ((((!(eventDispatcher == null)) && (!(_local_5 == null))) && (_local_5.indexOf("http") == 0)))
@@ -271,7 +271,7 @@
                 case MouseEvent.MOUSE_DOWN:
                     if (eventDispatcher != null)
                     {
-                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_DOWN, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                        _local_4 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_DOWN, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                         eventDispatcher.dispatchEvent(_local_4);
                     }
                     return;

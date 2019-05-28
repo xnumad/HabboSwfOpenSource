@@ -37,7 +37,7 @@
         override public function initializeFromRoomObjectModel(k:IRoomObjectModel):void
         {
             super.initializeFromRoomObjectModel(k);
-            this._data = k._Str_9417(RoomObjectVariableEnum.FURNITURE_DATA);
+            this._data = k.getStringArray(RoomObjectVariableEnum.FURNITURE_DATA);
         }
 
         override public function writeRoomObjectModel(k:IRoomObjectModelController):void

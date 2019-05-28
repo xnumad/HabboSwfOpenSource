@@ -30,7 +30,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectSamplePlaybackEvent.ROPSPE_PLAY_SAMPLE, RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_DISPOSED, RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_INITIALIZED];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function initialize(k:XML):void

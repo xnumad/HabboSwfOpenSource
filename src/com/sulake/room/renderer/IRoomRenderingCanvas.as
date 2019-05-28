@@ -9,7 +9,7 @@
 
     public interface IRoomRenderingCanvas 
     {
-        function set _Str_21906(_arg_1:Boolean):void;
+        function set useMask(_arg_1:Boolean):void;
         function initialize(_arg_1:int, _arg_2:int):void;
         function get width():int;
         function get height():int;

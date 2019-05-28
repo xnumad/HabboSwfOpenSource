@@ -60,13 +60,13 @@
 
         public static function getIntersectionVector(k:IVector3D, _arg_2:IVector3D, _arg_3:IVector3D, _arg_4:IVector3D):IVector3D
         {
-            var _local_5:Number = Vector3d._Str_18283(_arg_2, _arg_4);
+            var _local_5:Number = Vector3d.dotProduct(_arg_2, _arg_4);
             if (Math.abs(_local_5) < 1E-5)
             {
                 return null;
             }
-            var _local_6:Vector3d = Vector3d._Str_5385(k, _arg_3);
-            var _local_7:Number = (-(Vector3d._Str_18283(_arg_4, _local_6)) / _local_5);
+            var _local_6:Vector3d = Vector3d.dif(k, _arg_3);
+            var _local_7:Number = (-(Vector3d.dotProduct(_arg_4, _local_6)) / _local_5);
             var _local_8:Vector3d = Vector3d.sum(k, Vector3d.product(_arg_2, _local_7));
             return _local_8;
         }
@@ -89,7 +89,7 @@
 
         public function get location():IVector3D
         {
-            this._location._Str_2427(this._loc);
+            this._location.assign(this._loc);
             this._location.x = (this._location.x * this._x_scale);
             this._location.y = (this._location.y * this._y_scale);
             this._location.z = (this._location.z * this._z_scale);
@@ -155,7 +155,7 @@
             var _local_2:Number = this._loc.x;
             var _local_3:Number = this._loc.y;
             var _local_4:Number = this._loc.z;
-            this._loc._Str_2427(k);
+            this._loc.assign(k);
             this._loc.x = (this._loc.x / this._x_scale);
             this._loc.y = (this._loc.y / this._y_scale);
             this._loc.z = (this._loc.z / this._z_scale);
@@ -183,8 +183,8 @@
             var _local_2:Number = this._dir.x;
             var _local_3:Number = this._dir.y;
             var _local_4:Number = this._dir.z;
-            this._dir._Str_2427(k);
-            this._direction._Str_2427(k);
+            this._dir.assign(k);
+            this._direction.assign(k);
             if ((((!(this._dir.x == _local_2)) || (!(this._dir.y == _local_3))) || (!(this._dir.z == _local_4))))
             {
                 this._updateId++;
@@ -212,17 +212,17 @@
                 _local_23 = Vector3d.sum(Vector3d.product(_local_18, _local_21), Vector3d.product(_local_19, _local_22));
                 _local_24 = Vector3d.sum(Vector3d.product(_local_18, -(_local_22)), Vector3d.product(_local_19, _local_21));
                 _local_25 = new Vector3d(_local_20.x, _local_20.y, _local_20.z);
-                this._x._Str_2427(_local_23);
-                this._y._Str_2427(_local_24);
-                this._z._Str_2427(_local_25);
-                this._directionAxis._Str_2427(this._z);
+                this._x.assign(_local_23);
+                this._y.assign(_local_24);
+                this._z.assign(_local_25);
+                this._directionAxis.assign(this._z);
             }
             else
             {
-                this._x._Str_2427(_local_18);
-                this._y._Str_2427(_local_19);
-                this._z._Str_2427(_local_20);
-                this._directionAxis._Str_2427(this._z);
+                this._x.assign(_local_18);
+                this._y.assign(_local_19);
+                this._z.assign(_local_20);
+                this._directionAxis.assign(this._z);
             }
         }
 
@@ -255,7 +255,7 @@
                 _local_3 = ((((int(Math.round(k.x)) + "_") + int(Math.round(k.y))) + "_") + int(Math.round(k.z)));
                 this._displacements.remove(_local_3);
                 _local_4 = new Vector3d();
-                _local_4._Str_2427(_arg_2);
+                _local_4.assign(_arg_2);
                 this._displacements.add(_local_3, _local_4);
                 this._updateId++;
             }
@@ -302,11 +302,11 @@
                 _local_20 = Vector3d.sum(Vector3d.product(_local_15, _local_18), Vector3d.product(_local_16, _local_19));
                 _local_21 = Vector3d.sum(Vector3d.product(_local_15, -(_local_19)), Vector3d.product(_local_16, _local_18));
                 _local_22 = new Vector3d(_local_17.x, _local_17.y, _local_17.z);
-                this._depth._Str_2427(_local_22);
+                this._depth.assign(_local_22);
             }
             else
             {
-                this._depth._Str_2427(_local_17);
+                this._depth.assign(_local_17);
             }
             this._updateId++;
         }
@@ -328,37 +328,37 @@
             {
                 return null;
             }
-            var _local_2:Number = Vector3d._Str_4733(k, this._x);
-            var _local_3:Number = Vector3d._Str_4733(k, this._y);
-            var _local_4:Number = Vector3d._Str_4733(k, this._z);
+            var _local_2:Number = Vector3d.scalarProjection(k, this._x);
+            var _local_3:Number = Vector3d.scalarProjection(k, this._y);
+            var _local_4:Number = Vector3d.scalarProjection(k, this._z);
             var _local_5:Vector3d = new Vector3d(_local_2, _local_3, _local_4);
             return _local_5;
         }
 
         public function getScreenPosition(k:IVector3D):IVector3D
         {
-            var _local_2:Vector3d = Vector3d._Str_5385(k, this._loc);
+            var _local_2:Vector3d = Vector3d.dif(k, this._loc);
             _local_2.x = (_local_2.x * this._x_scale);
             _local_2.y = (_local_2.y * this._y_scale);
             _local_2.z = (_local_2.z * this._z_scale);
-            var _local_3:Number = Vector3d._Str_4733(_local_2, this._depth);
+            var _local_3:Number = Vector3d.scalarProjection(_local_2, this._depth);
             if (((_local_3 < this._clipNear) || (_local_3 > this._clipFar)))
             {
                 return null;
             }
-            var _local_4:Number = Vector3d._Str_4733(_local_2, this._x);
-            var _local_5:Number = -(Vector3d._Str_4733(_local_2, this._y));
+            var _local_4:Number = Vector3d.scalarProjection(_local_2, this._x);
+            var _local_5:Number = -(Vector3d.scalarProjection(_local_2, this._y));
             _local_4 = (_local_4 * this._scale);
             _local_5 = (_local_5 * this._scale);
             var _local_6:IVector3D = this._Str_22923(k);
             if (_local_6 != null)
             {
-                _local_2 = Vector3d._Str_5385(k, this._loc);
+                _local_2 = Vector3d.dif(k, this._loc);
                 _local_2.add(_local_6);
                 _local_2.x = (_local_2.x * this._x_scale);
                 _local_2.y = (_local_2.y * this._y_scale);
                 _local_2.z = (_local_2.z * this._z_scale);
-                _local_3 = Vector3d._Str_4733(_local_2, this._depth);
+                _local_3 = Vector3d.scalarProjection(_local_2, this._depth);
             }
             _local_2.x = _local_4;
             _local_2.y = _local_5;
@@ -391,14 +391,14 @@
             var _local_10:Vector3d = new Vector3d((_arg_2.x * this._x_scale), (_arg_2.y * this._y_scale), (_arg_2.z * this._z_scale));
             var _local_11:Vector3d = new Vector3d((_arg_3.x * this._x_scale), (_arg_3.y * this._y_scale), (_arg_3.z * this._z_scale));
             var _local_12:Vector3d = new Vector3d((_arg_4.x * this._x_scale), (_arg_4.y * this._y_scale), (_arg_4.z * this._z_scale));
-            var _local_13:IVector3D = Vector3d._Str_7423(_local_11, _local_12);
+            var _local_13:IVector3D = Vector3d.crossProduct(_local_11, _local_12);
             var _local_14:Vector3d = new Vector3d();
-            _local_14._Str_2427(RoomGeometry.getIntersectionVector(_local_8, _local_9, _local_10, _local_13));
+            _local_14.assign(RoomGeometry.getIntersectionVector(_local_8, _local_9, _local_10, _local_13));
             if (_local_14 != null)
             {
-                _local_14._Str_15193(_local_10);
-                _local_15 = ((Vector3d._Str_4733(_local_14, _arg_3) / _local_11.length) * _arg_3.length);
-                _local_16 = ((Vector3d._Str_4733(_local_14, _arg_4) / _local_12.length) * _arg_4.length);
+                _local_14.sub(_local_10);
+                _local_15 = ((Vector3d.scalarProjection(_local_14, _arg_3) / _local_11.length) * _arg_3.length);
+                _local_16 = ((Vector3d.scalarProjection(_local_14, _arg_4) / _local_12.length) * _arg_4.length);
                 return new Point(_local_15, _local_16);
             }
             return null;

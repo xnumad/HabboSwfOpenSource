@@ -53,7 +53,7 @@
 
         private function _Str_25236():void
         {
-            if (_Str_2697 == null)
+            if (assetCollection == null)
             {
                 return;
             }
@@ -64,8 +64,8 @@
             }
             else
             {
-                _Str_2697.disposeAsset(this._Str_15493(64));
-                _Str_2697.disposeAsset(this._Str_15493(32));
+                assetCollection.disposeAsset(this._Str_15493(64));
+                assetCollection.disposeAsset(this._Str_15493(32));
             }
             this._Str_16232 = false;
             this._Str_21698 = direction;
@@ -78,7 +78,7 @@
             var _local_6:BitmapData;
             var _local_7:String;
             var _local_3:int;
-            while (_local_3 < _Str_3008)
+            while (_local_3 < spriteCount)
             {
                 if (getSpriteTag(_arg_2, direction, _local_3) == THUMBNAIL)
                 {
@@ -88,8 +88,8 @@
                     {
                         _local_6 = this._Str_25562(k, _local_5);
                         _local_7 = this._Str_15493(_arg_2);
-                        _Str_2697.disposeAsset(_local_7);
-                        _Str_2697.addAsset(_local_7, _local_6, true, _local_5.offsetX, _local_5.offsetY);
+                        assetCollection.disposeAsset(_local_7);
+                        assetCollection.addAsset(_local_7, _local_6, true, _local_5.offsetX, _local_5.offsetY);
                     }
                     return;
                 }

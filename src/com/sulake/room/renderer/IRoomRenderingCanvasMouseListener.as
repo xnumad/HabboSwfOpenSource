@@ -6,6 +6,6 @@
 
     public interface IRoomRenderingCanvasMouseListener 
     {
-        function _Str_20330(_arg_1:RoomSpriteMouseEvent, _arg_2:IRoomObject, _arg_3:IRoomGeometry):void;
+        function processRoomCanvasMouseEvent(_arg_1:RoomSpriteMouseEvent, _arg_2:IRoomObject, _arg_3:IRoomGeometry):void;
     }
 }

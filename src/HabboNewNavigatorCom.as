@@ -7,11 +7,11 @@
 
     public class HabboNewNavigatorCom extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_15436;
-        public static var navigator_frame_2_xml:Class = _Str_13853;
-        public static var room_info_popup_bubble_xml:Class = _Str_15433;
-        public static var property_xml:Class = _Str_15740;
-        public static var tag_xml:Class = _Str_13009;
+        public static var manifest:Class = HabboNewNavigatorCom_manifest;
+        public static var navigator_frame_2_xml:Class = HabboNewNavigatorCom_navigator_frame_2_xml;
+        public static var room_info_popup_bubble_xml:Class = HabboNewNavigatorCom_room_info_popup_bubble_xml;
+        public static var property_xml:Class = HabboNewNavigatorCom_property_xml;
+        public static var tag_xml:Class = HabboNewNavigatorCom_tag_xml;
         public static var requiredClasses:Array = new Array(HabboNewNavigatorBootstrap, IIDHabboNewNavigator);
     }
 }

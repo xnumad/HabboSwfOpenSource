@@ -192,7 +192,7 @@
                                                 }
                                                 _local_32++;
                                             }
-                                            _local_18._Str_23489(_local_19, _local_31, _Str_2697);
+                                            _local_18._Str_23489(_local_19, _local_31, assetCollection);
                                         }
                                     }
                                     _local_19++;

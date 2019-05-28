@@ -73,7 +73,7 @@
             {
                 _local_4 = new HighScoreData();
                 _local_4.score = k.getNumber((RoomObjectVariableEnum.FURNITURE_HIGHSCORE_DATA_ENTRY_BASE_SCORE_ + _local_3));
-                _local_4.users = k._Str_9417((RoomObjectVariableEnum.FURNITURE_HIGHSCORE_DATA_ENTRY_BASE_USERS_ + _local_3));
+                _local_4.users = k.getStringArray((RoomObjectVariableEnum.FURNITURE_HIGHSCORE_DATA_ENTRY_BASE_USERS_ + _local_3));
                 this._entries.push(_local_4);
                 _local_3++;
             }

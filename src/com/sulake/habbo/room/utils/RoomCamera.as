@@ -120,7 +120,7 @@
 
         public function set _Str_16185(k:IVector3D):void
         {
-            this._targetObjectLoc._Str_2427(k);
+            this._targetObjectLoc.assign(k);
         }
 
         public function set _Str_16562(k:int):void
@@ -191,8 +191,8 @@
             }
             if ((((!(this._targetLoc.x == k.x)) || (!(this._targetLoc.y == k.y))) || (!(this._targetLoc.z == k.z))))
             {
-                this._targetLoc._Str_2427(k);
-                _local_2 = Vector3d._Str_5385(this._targetLoc, this._currentLoc);
+                this._targetLoc.assign(k);
+                _local_2 = Vector3d.dif(this._targetLoc, this._currentLoc);
                 this._moveDistance = _local_2.length;
                 this._maintainPreviousMoveSpeed = true;
             }
@@ -211,7 +211,7 @@
                 return;
             }
             this._currentLoc = new Vector3d();
-            this._currentLoc._Str_2427(k);
+            this._currentLoc.assign(k);
         }
 
         public function _Str_25467(k:IVector3D):void
@@ -220,7 +220,7 @@
             {
                 this._currentLoc = new Vector3d();
             }
-            this._currentLoc._Str_2427(k);
+            this._currentLoc.assign(k);
         }
 
         public function update(k:uint, _arg_2:Number):void
@@ -239,7 +239,7 @@
                     this._targetLoc = null;
                     return;
                 }
-                _local_3 = Vector3d._Str_5385(this._targetLoc, this._currentLoc);
+                _local_3 = Vector3d.dif(this._targetLoc, this._currentLoc);
                 if (_local_3.length > this._moveDistance)
                 {
                     this._moveDistance = _local_3.length;
@@ -273,7 +273,7 @@
                     }
                     this._previousMoveSpeed = _local_7;
                     _local_3.div(_local_3.length);
-                    _local_3._Str_6038(_local_7);
+                    _local_3.mul(_local_7);
                     this._currentLoc = Vector3d.sum(this._currentLoc, _local_3);
                 }
             }

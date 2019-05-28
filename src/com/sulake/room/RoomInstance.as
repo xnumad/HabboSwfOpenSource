@@ -166,7 +166,7 @@
                         _local_6 = _local_4.getObjectWithIndex(_local_5);
                         if (_local_6 != null)
                         {
-                            _local_7 = _local_6._Str_2377();
+                            _local_7 = _local_6.getEventHandler();
                             if (_local_7 != null)
                             {
                                 _local_7.update(k);
@@ -197,7 +197,7 @@
                 _local_6 = _local_5.createObject(k, _arg_2, _arg_3);
                 if (this._renderer != null)
                 {
-                    this._renderer._Str_17585(_local_6);
+                    this._renderer.feedRoomObject(_local_6);
                 }
                 return _local_6;
             }
@@ -272,7 +272,7 @@
                     _local_4.tearDown();
                     if (this._renderer)
                     {
-                        this._renderer._Str_16309(_local_4);
+                        this._renderer.removeRoomObject(_local_4);
                     }
                     return _local_3.disposeObject(k);
                 }
@@ -297,7 +297,7 @@
                     {
                         if (this._renderer)
                         {
-                            this._renderer._Str_16309(_local_5);
+                            this._renderer.removeRoomObject(_local_5);
                         }
                         _local_5.dispose();
                     }
@@ -340,7 +340,7 @@
                     _local_7 = (this.getObjectWithIndex(_local_6, _local_4) as IRoomObjectController);
                     if (_local_7 != null)
                     {
-                        this._renderer._Str_17585(_local_7);
+                        this._renderer.feedRoomObject(_local_7);
                     }
                     _local_6--;
                 }
@@ -410,7 +410,7 @@
                 _local_3 = 0;
                 while (_local_3 < _local_2)
                 {
-                    if (!k.getObjectWithIndex(_local_3)._Str_3022())
+                    if (!k.getObjectWithIndex(_local_3).isInitialized())
                     {
                         return true;
                     }

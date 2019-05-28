@@ -220,9 +220,9 @@
             return null;
         }
 
-        public function _Str_2125(k:IVector3D):String
+        public function getAliasByName(k:IVector3D):String
         {
-            return (this._texture == null) ? null : this._texture._Str_2125(k);
+            return (this._texture == null) ? null : this._texture.getAliasByName(k);
         }
     }
 }

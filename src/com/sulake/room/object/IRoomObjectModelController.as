@@ -8,6 +8,6 @@
         function setString(_arg_1:String, _arg_2:String, _arg_3:Boolean=false):void;
         function setNumberArray(_arg_1:String, _arg_2:Array, _arg_3:Boolean=false):void;
         function setStringArray(_arg_1:String, _arg_2:Array, _arg_3:Boolean=false):void;
-        function _Str_17971(_arg_1:String, _arg_2:Map, _arg_3:Boolean=false):void;
+        function setStringToStringMap(_arg_1:String, _arg_2:Map, _arg_3:Boolean=false):void;
     }
 }

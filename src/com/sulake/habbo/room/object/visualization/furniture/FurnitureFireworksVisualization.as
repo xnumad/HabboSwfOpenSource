@@ -48,7 +48,7 @@
                 }
                 else
                 {
-                    if (((!(k == _Str_3289)) || (!(this._particleSystems[k] == this._currentParticleSystem))))
+                    if (((!(k == _currentScale)) || (!(this._particleSystems[k] == this._currentParticleSystem))))
                     {
                         _local_4 = this._particleSystems[k];
                         _local_4._Str_17988(this._currentParticleSystem);

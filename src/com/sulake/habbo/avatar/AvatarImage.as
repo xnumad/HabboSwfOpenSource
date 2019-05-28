@@ -56,7 +56,7 @@
         private var _Str_1724:int = 0;
         private var _Str_1005:int = 0;
         private var _Str_1535:Boolean;
-        private var _Str_1786:Array;
+        private var _layersInUse:Array;
         private var _Str_1222:Boolean;
         private var _Str_2091:Boolean = false;
         private var _Str_2143:Boolean = false;
@@ -101,7 +101,7 @@
             this.setDirection(_Str_1501, _Str_1301);
             this._Str_614 = new Array();
             this._Str_612 = new ActiveActionData(AvatarAction.POSTURE_STAND);
-            this._Str_612._Str_742 = this._Str_581._Str_1675(DEFAULT);
+            this._Str_612.definition = this._Str_581._Str_1675(DEFAULT);
             this._Str_1632();
             this._Str_864 = new Map();
         }
@@ -203,7 +203,7 @@
 
         public function _Str_754():Array
         {
-            return this._Str_1786;
+            return this._layersInUse;
         }
 
         public function _Str_781():Array
@@ -211,7 +211,7 @@
             return this._Str_903;
         }
 
-        public function _Str_607(k:ISpriteDataContainer):IAnimationLayerData
+        public function getLayerData(k:ISpriteDataContainer):IAnimationLayerData
         {
             return this._Str_581._Str_1881(k.animation.id, this._Str_1724, k.id);
         }
@@ -248,11 +248,11 @@
             {
                 for each (k in this._Str_1163)
                 {
-                    if (((k._Str_695 == "fx") && ((((k._Str_727 == "33") || (k._Str_727 == "34")) || (k._Str_727 == "35")) || (k._Str_727 == "36"))))
+                    if (((k.actionType == "fx") && ((((k.actionParameter == "33") || (k.actionParameter == "34")) || (k.actionParameter == "35")) || (k.actionParameter == "36"))))
                     {
                         return (this._Str_1668 + this._Str_1306) + 0;
                     }
-                    if (((k._Str_695 == "fx") && ((k._Str_727 == "38") || (k._Str_727 == "39"))))
+                    if (((k.actionType == "fx") && ((k.actionParameter == "38") || (k.actionParameter == "39"))))
                     {
                         _local_2 = (this._Str_1724 % 11);
                         return (((this._Str_1668 + "_") + this._Str_1374) + this._Str_1306) + _local_2;
@@ -282,12 +282,12 @@
             {
                 return;
             }
-            var _local_2:AvatarCanvas = this._Str_581._Str_1664(this._Str_842, this._Str_1708._Str_742._Str_868);
+            var _local_2:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
             if (_local_2 == null)
             {
                 return;
             }
-            var _local_3:Array = this._Str_755(k, this._Str_1708._Str_742._Str_868, this._Str_1668);
+            var _local_3:Array = this._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
             var _local_6:int = (_local_3.length - 1);
             while (_local_6 >= 0)
             {
@@ -333,7 +333,7 @@
                     return this._Str_671;
                 }
             }
-            var _local_5:AvatarCanvas = this._Str_581._Str_1664(this._Str_842, this._Str_1708._Str_742._Str_868);
+            var _local_5:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
             if (_local_5 == null)
             {
                 return null;
@@ -347,7 +347,7 @@
                 this._Str_671 = new BitmapData(_local_5.width, _local_5.height, true, 0);
                 this._Str_1586 = false;
             }
-            var _local_6:Array = this._Str_755(k, this._Str_1708._Str_742._Str_868, this._Str_1668);
+            var _local_6:Array = this._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
             this._Str_671.lock();
             this._Str_671.fillRect(this._Str_671.rect, 0);
             var _local_11:Boolean = true;
@@ -373,7 +373,7 @@
             this._Str_1535 = false;
             if (this._Str_2121 != null)
             {
-                if (this._Str_2121._Str_832)
+                if (this._Str_2121.paletteIsGrayscale)
                 {
                     _local_13 = this._Str_1894(this._Str_671);
                     if (this._Str_671)
@@ -434,13 +434,13 @@
             {
                 this._Str_962();
             }
-            var _local_3:AvatarCanvas = this._Str_581._Str_1664(this._Str_842, this._Str_1708._Str_742._Str_868);
+            var _local_3:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
             if (_local_3 == null)
             {
                 return null;
             }
             var _local_4:BitmapData = new BitmapData(_local_3.width, _local_3.height, true, 0xFFFFFF);
-            var _local_5:Array = this._Str_581._Str_755(k, this._Str_1708._Str_742._Str_868, this._Str_1668);
+            var _local_5:Array = this._Str_581._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
             var _local_11:Rectangle = new Rectangle();
             var _local_12:int = (_local_5.length - 1);
             while (_local_12 >= 0)
@@ -531,11 +531,11 @@
             {
                 for each (k in this._Str_1163)
                 {
-                    if (k._Str_695 == AvatarAction.EFFECT)
+                    if (k.actionType == AvatarAction.EFFECT)
                     {
-                        if (!this._Str_1210._Str_992(parseInt(k._Str_727)))
+                        if (!this._Str_1210._Str_992(parseInt(k.actionParameter)))
                         {
-                            this._Str_1210._Str_1914(parseInt(k._Str_727), this);
+                            this._Str_1210._Str_1914(parseInt(k.actionParameter), this);
                         }
                     }
                 }
@@ -645,7 +645,7 @@
             while (_local_4 < this._Str_614.length)
             {
                 _local_3 = this._Str_614[_local_4];
-                if (((_local_3._Str_695 == k) && (_local_3._Str_727 == _arg_2)))
+                if (((_local_3.actionType == k) && (_local_3.actionParameter == _arg_2)))
                 {
                     return;
                 }
@@ -663,12 +663,12 @@
         {
             this._Str_2091 = false;
             this._Str_1222 = false;
-            this._Str_1786 = [];
+            this._layersInUse = [];
             this._Str_2121 = null;
             this._Str_1005 = 0;
             this._Str_581._Str_2101(this);
             this._Str_1708 = this._Str_612;
-            this._Str_1708._Str_742 = this._Str_612._Str_742;
+            this._Str_1708.definition = this._Str_612.definition;
             this._Str_741(this._Str_612);
             return true;
         }
@@ -684,8 +684,8 @@
             }
             for each (_local_3 in this._Str_1163)
             {
-                _local_2 = this._Str_581._Str_2018(_local_3._Str_695);
-                if (((!(_local_2 == null)) && (_local_2._Str_715(_local_3._Str_727))))
+                _local_2 = this._Str_581._Str_2018(_local_3.actionType);
+                if (((!(_local_2 == null)) && (_local_2.getPreventHeadTurn(_local_3.actionParameter))))
                 {
                     k = true;
                 }
@@ -717,10 +717,10 @@
                 this._Str_903 = this._Str_581._Str_781(this._Str_1163, this._Str_842, this._Str_1668);
                 for each (_local_4 in this._Str_1163)
                 {
-                    this._Str_1306 = (this._Str_1306 + (_local_4._Str_695 + _local_4._Str_727));
-                    if (_local_4._Str_695 == AvatarAction.EFFECT)
+                    this._Str_1306 = (this._Str_1306 + (_local_4.actionType + _local_4.actionParameter));
+                    if (_local_4.actionType == AvatarAction.EFFECT)
                     {
-                        _local_5 = parseInt(_local_4._Str_727);
+                        _local_5 = parseInt(_local_4.actionParameter);
                         if (this._Str_1514 != _local_5)
                         {
                             _local_2 = true;
@@ -765,13 +765,13 @@
             var _local_4:Array = new Array();
             for each (k in this._Str_1163)
             {
-                _local_4.push(k._Str_695);
+                _local_4.push(k.actionType);
             }
             for each (k in this._Str_1163)
             {
-                if ((((k) && (k._Str_742)) && (k._Str_742._Str_861)))
+                if ((((k) && (k.definition)) && (k.definition.isAnimation)))
                 {
-                    _local_2 = this._Str_581._Str_720(((k._Str_742.state + ".") + k._Str_727));
+                    _local_2 = this._Str_581.getAnimation(((k.definition.state + ".") + k.actionParameter));
                     if (((_local_2) && (_local_2._Str_1892())))
                     {
                         _local_5 = _local_2._Str_1571();
@@ -781,7 +781,7 @@
                             {
                                 if (_local_4.indexOf(_local_6) >= 0)
                                 {
-                                    k._Str_707 = _local_2._Str_707(_local_6);
+                                    k.overridingAction = _local_2.overridingAction(_local_6);
                                 }
                             }
                         }
@@ -794,25 +794,25 @@
             }
             for each (k in this._Str_1163)
             {
-                if (!((!(k)) || (!(k._Str_742))))
+                if (!((!(k)) || (!(k.definition))))
                 {
-                    if (((k._Str_742._Str_861) && (k._Str_727 == "")))
+                    if (((k.definition.isAnimation) && (k.actionParameter == "")))
                     {
-                        k._Str_727 = "1";
+                        k.actionParameter = "1";
                     }
                     this._Str_1496(k, _local_3);
-                    if (k._Str_742._Str_861)
+                    if (k.definition.isAnimation)
                     {
-                        this._Str_1222 = k._Str_742._Str_801(k._Str_727);
-                        _local_2 = this._Str_581._Str_720(((k._Str_742.state + ".") + k._Str_727));
+                        this._Str_1222 = k.definition.isAnimated(k.actionParameter);
+                        _local_2 = this._Str_581.getAnimation(((k.definition.state + ".") + k.actionParameter));
                         if (_local_2 != null)
                         {
-                            this._Str_1786 = this._Str_1786.concat(_local_2._Str_786);
-                            if (_local_2._Str_776())
+                            this._layersInUse = this._layersInUse.concat(_local_2.spriteData);
+                            if (_local_2.hasDirectionData())
                             {
                                 this._Str_1005 = _local_2._Str_1493.offset;
                             }
-                            if (_local_2._Str_872())
+                            if (_local_2.hasAvatarData())
                             {
                                 this._Str_2121 = _local_2._Str_1475;
                             }
@@ -824,18 +824,18 @@
 
         private function _Str_1496(k:IActiveActionData, _arg_2:int):void
         {
-            if (((k == null) || (k._Str_742 == null)))
+            if (((k == null) || (k.definition == null)))
             {
                 return;
             }
-            if (k._Str_742._Str_778 == "")
+            if (k.definition.assetPartDefinition == "")
             {
                 return;
             }
-            if (k._Str_742._Str_779)
+            if (k.definition.isMain)
             {
                 this._Str_1708 = k;
-                this._Str_586._Str_2014(k._Str_742._Str_868);
+                this._Str_586._Str_2014(k.definition.geometryType);
             }
             this._Str_586._Str_1565(k, _arg_2);
             this._Str_1535 = true;
@@ -847,14 +847,14 @@
             {
                 return;
             }
-            if (k._Str_742._Str_778 == "")
+            if (k.definition.assetPartDefinition == "")
             {
                 return;
             }
-            if (k._Str_742._Str_779)
+            if (k.definition.isMain)
             {
                 this._Str_1708 = k;
-                this._Str_586._Str_2014(k._Str_742._Str_868);
+                this._Str_586._Str_2014(k.definition.geometryType);
             }
             this._Str_586._Str_741(k);
             this._Str_1535 = true;
@@ -932,7 +932,7 @@
 
         public function get _Str_792():String
         {
-            return this._Str_1708._Str_695;
+            return this._Str_1708.actionType;
         }
 
         public function _Str_869(k:int):void

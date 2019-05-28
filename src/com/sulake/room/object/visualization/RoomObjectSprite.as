@@ -30,8 +30,8 @@
         private var _Str_8253:Boolean = false;
         private var _Str_13928:int;
         private var _Str_6190:Boolean = false;
-        private var _Str_2542:int = 0;
-        private var _Str_4848:int = 0;
+        private var _updateID:int = 0;
+        private var _instanceId:int = 0;
         private var _filters:Array = null;
         protected var _Str_17033:int;
         private var _Str_3796:String;
@@ -42,7 +42,7 @@
             this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
             this._Str_17033 = RoomObjectSpriteType.DEFAULT;
             super();
-            this._Str_4848 = _Str_3822++;
+            this._instanceId = _Str_3822++;
         }
 
         public function dispose():void
@@ -159,12 +159,12 @@
 
         public function get _Str_12289():int
         {
-            return this._Str_4848;
+            return this._instanceId;
         }
 
         public function get updateId():int
         {
-            return this._Str_2542;
+            return this._updateID;
         }
 
         public function get filters():Array
@@ -214,7 +214,7 @@
                 this._height = k.height;
             }
             this._asset = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set assetName(k:String):void
@@ -224,7 +224,7 @@
                 return;
             }
             this._assetName = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set visible(k:Boolean):void
@@ -234,7 +234,7 @@
                 return;
             }
             this._visible = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set tag(k:String):void
@@ -244,7 +244,7 @@
                 return;
             }
             this._tag = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set alpha(k:int):void
@@ -255,7 +255,7 @@
                 return;
             }
             this._alpha = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set color(k:int):void
@@ -266,7 +266,7 @@
                 return;
             }
             this._color = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set blendMode(k:String):void
@@ -276,7 +276,7 @@
                 return;
             }
             this._blendMode = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set filters(k:Array):void
@@ -286,7 +286,7 @@
                 return;
             }
             this._filters = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set flipH(k:Boolean):void
@@ -296,7 +296,7 @@
                 return;
             }
             this._flipH = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set flipV(k:Boolean):void
@@ -306,7 +306,7 @@
                 return;
             }
             this._flipV = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set direction(k:int):void
@@ -321,7 +321,7 @@
                 return;
             }
             this._Str_588.x = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set offsetY(k:int):void
@@ -331,7 +331,7 @@
                 return;
             }
             this._Str_588.y = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set relativeDepth(k:Number):void
@@ -341,7 +341,7 @@
                 return;
             }
             this._relativeDepth = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set _Str_4593(k:Boolean):void
@@ -351,7 +351,7 @@
                 return;
             }
             this._Str_8253 = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function set _Str_4530(k:Boolean):void
@@ -361,7 +361,7 @@
                 return;
             }
             this._Str_6190 = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function get _Str_4023():int
@@ -376,7 +376,7 @@
                 return;
             }
             this._Str_13928 = k;
-            this._Str_2542++;
+            this._updateID++;
         }
 
         public function get _Str_3582():String

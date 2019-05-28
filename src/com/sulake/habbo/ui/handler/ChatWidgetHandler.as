@@ -423,7 +423,7 @@
                     }
                     if (((!(_local_7.x == this._primaryCanvasOriginPos.x)) || (!(_local_7.y == this._primaryCanvasOriginPos.y))))
                     {
-                        _local_9 = PointMath._Str_15193(_local_7, PointMath._Str_6038(this._primaryCanvasOriginPos, _local_4));
+                        _local_9 = PointMath.sub(_local_7, PointMath.mul(this._primaryCanvasOriginPos, _local_4));
                         if (((!(_local_9.x == 0)) || (!(_local_9.y == 0))))
                         {
                             _local_5 = _Str_3040.RWRVUE_ROOM_VIEW_POSITION_CHANGED;

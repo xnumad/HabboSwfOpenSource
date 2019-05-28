@@ -50,7 +50,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectMouseEvent.ROE_MOUSE_MOVE, RoomObjectMouseEvent.ROE_MOUSE_CLICK];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function dispose():void
@@ -158,9 +158,9 @@
                     this._color = _local_3;
                     this._Str_3576 = _local_4;
                 }
-                _local_5 = ColorConverter._Str_22130(_local_3);
+                _local_5 = ColorConverter.rgbToHSL(_local_3);
                 _local_5 = ((_local_5 & 0xFFFF00) + _local_4);
-                _local_3 = ColorConverter._Str_13949(_local_5);
+                _local_3 = ColorConverter.hslToRGB(_local_5);
                 _local_6 = (object.getModel() as IRoomObjectModelController);
                 if (_local_6 == null)
                 {
@@ -349,7 +349,7 @@
                 return;
             }
             var _local_5:int;
-            var _local_6:String = _local_3._Str_4216;
+            var _local_6:String = _local_3.spriteTag;
             if (((!(_local_6 == null)) && (_local_6.indexOf("@") >= 0)))
             {
                 _local_5 = parseInt(_local_6.substr((_local_6.indexOf("@") + 1)));
@@ -379,8 +379,8 @@
             {
                 return;
             }
-            var _local_15:Number = _local_3._Str_24406;
-            var _local_16:Number = _local_3._Str_25684;
+            var _local_15:Number = _local_3.screenX;
+            var _local_16:Number = _local_3.screenY;
             var _local_17:Point = new Point(_local_15, _local_16);
             _local_7 = _arg_2.getPlanePosition(_local_17, _local_8, _local_9, _local_10);
             if (_local_7 == null)
@@ -430,7 +430,7 @@
                     {
                         if (_local_12 == RoomPlaneData._Str_6072)
                         {
-                            _local_24 = new RoomObjectTileMouseEvent(_local_25, object, k._Str_3463, _local_19, _local_20, _local_21, k.altKey, k.ctrlKey, k.shiftKey);
+                            _local_24 = new RoomObjectTileMouseEvent(_local_25, object, k.eventId, _local_19, _local_20, _local_21, k.altKey, k.ctrlKey, k.shiftKey);
                         }
                         else
                         {
@@ -447,7 +447,7 @@
                                 }
                                 _local_27 = ((_local_9.length * _local_7.x) / _local_13);
                                 _local_28 = ((_local_10.length * _local_7.y) / _local_14);
-                                _local_24 = new RoomObjectWallMouseEvent(_local_25, object, k._Str_3463, _local_8, _local_9, _local_10, _local_27, _local_28, _local_26);
+                                _local_24 = new RoomObjectWallMouseEvent(_local_25, object, k.eventId, _local_8, _local_9, _local_10, _local_27, _local_28, _local_26);
                             }
                         }
                         if (_local_24 != null)

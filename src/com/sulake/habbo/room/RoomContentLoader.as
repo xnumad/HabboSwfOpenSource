@@ -1064,7 +1064,7 @@
                 return false;
             }
             var _local_3:Boolean;
-            var _local_4:IGraphicAssetCollection = this._Str_13110(k, _arg_2);
+            var _local_4:IGraphicAssetCollection = this.createGraphicAssetCollection(k, _arg_2);
             if (_local_4 != null)
             {
                 _local_5 = this.getAssetXML(k);
@@ -1308,7 +1308,7 @@
             return false;
         }
 
-        private function _Str_13110(k:String, _arg_2:IAssetLibrary):IGraphicAssetCollection
+        private function createGraphicAssetCollection(k:String, _arg_2:IAssetLibrary):IGraphicAssetCollection
         {
             var _local_3:IGraphicAssetCollection = this.getGraphicAssetCollection(k);
             if (_local_3 != null)
@@ -1319,7 +1319,7 @@
             {
                 return null;
             }
-            _local_3 = this._visualizationFactory._Str_13110();
+            _local_3 = this._visualizationFactory.createGraphicAssetCollection();
             if (_local_3 != null)
             {
                 _local_3.assetLibrary = _arg_2;

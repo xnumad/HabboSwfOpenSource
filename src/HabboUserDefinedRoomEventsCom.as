@@ -8,24 +8,24 @@
 
     public class HabboUserDefinedRoomEventsCom extends SimpleApplication 
     {
-        public static var icon_action_png:Class = _Str_12555;
-        public static var icon_condition_png:Class = _Str_13990;
-        public static var icon_trigger_png:Class = _Str_13709;
+        public static var icon_action_png:Class = HabboUserDefinedRoomEventsCom_icon_action_png;
+        public static var icon_condition_png:Class = HabboUserDefinedRoomEventsCom_icon_condition_png;
+        public static var icon_trigger_png:Class = HabboUserDefinedRoomEventsCom_icon_trigger_png;
         public static var move_0_png:Class = HabboUserDefinedRoomEventsCom_move_0_png;
         public static var move_2_png:Class = HabboUserDefinedRoomEventsCom_move_2_png;
         public static var move_4_png:Class = HabboUserDefinedRoomEventsCom_move_4_png;
         public static var move_6_png:Class = HabboUserDefinedRoomEventsCom_move_6_png;
-        public static var move_diag_png:Class = _Str_14512;
-        public static var move_rnd_png:Class = _Str_12544;
-        public static var move_vrt_png:Class = _Str_12907;
-        public static var rotate_ccw_png:Class = _Str_14915;
-        public static var rotate_cw_png:Class = _Str_15449;
-        public static var slider_bg_png:Class = _Str_13888;
-        public static var slider_obj_png:Class = _Str_13167;
-        public static var manifest:Class = _Str_15169;
-        public static var ude_main_xml:Class = _Str_13535;
-        public static var ude_help_xml:Class = _Str_15639;
-        public static var ude_slider_xml:Class = _Str_14279;
+        public static var move_diag_png:Class = HabboUserDefinedRoomEventsCom_move_diag_png;
+        public static var move_rnd_png:Class = HabboUserDefinedRoomEventsCom_move_rnd_png;
+        public static var move_vrt_png:Class = HabboUserDefinedRoomEventsCom_move_vrt_png;
+        public static var rotate_ccw_png:Class = HabboUserDefinedRoomEventsCom_rotate_ccw_png;
+        public static var rotate_cw_png:Class = HabboUserDefinedRoomEventsCom_rotate_cw_png;
+        public static var slider_bg_png:Class = HabboUserDefinedRoomEventsCom_slider_bg_png;
+        public static var slider_obj_png:Class = HabboUserDefinedRoomEventsCom_slider_obj_png;
+        public static var manifest:Class = HabboUserDefinedRoomEventsCom_manifest;
+        public static var ude_main_xml:Class = HabboUserDefinedRoomEventsCom_ude_main_xml;
+        public static var ude_help_xml:Class = HabboUserDefinedRoomEventsCom_ude_help_xml;
+        public static var ude_slider_xml:Class = HabboUserDefinedRoomEventsCom_ude_slider_xml;
         public static var ude_trigger_inputs_0_xml:Class = HabboUserDefinedRoomEventsCom_ude_trigger_inputs_0_xml;
         public static var ude_trigger_inputs_3_xml:Class = HabboUserDefinedRoomEventsCom_ude_trigger_inputs_3_xml;
         public static var ude_trigger_inputs_6_xml:Class = HabboUserDefinedRoomEventsCom_ude_trigger_inputs_6_xml;

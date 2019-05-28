@@ -75,7 +75,7 @@
             return this._colorMap.getValue("alphas") as Array;
         }
 
-        public function get _Str_832():Boolean
+        public function get paletteIsGrayscale():Boolean
         {
             return this._paletteIsGrayscale;
         }

@@ -12,7 +12,7 @@
         override protected function getThumbnailURL():String
         {
             var k:IRoomObjectModel = object.getModel();
-            var _local_2:Map = k._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA);
+            var _local_2:Map = k.getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             
             return _local_2.getValue(THUMBNAIL_URL);
         }

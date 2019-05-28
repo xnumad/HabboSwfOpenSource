@@ -79,12 +79,12 @@
             var _local_4:IRoomObjectSprite;
             if (k)
             {
-                _local_2 = (k._Str_5222() as IRoomObjectSpriteVisualization);
+                _local_2 = (k.getVisualization() as IRoomObjectSpriteVisualization);
                 Logger.log(("Furni visualization: " + _local_2));
                 _local_3 = 0;
-                while (_local_3 < _local_2._Str_3008)
+                while (_local_3 < _local_2.spriteCount)
                 {
-                    _local_4 = _local_2._Str_2505(_local_3);
+                    _local_4 = _local_2.getSprite(_local_3);
                     if (_local_4.blendMode != BlendMode.ADD)
                     {
                         _local_4.filters = this._selectionShader;
@@ -101,12 +101,12 @@
             var _local_4:IRoomObjectSprite;
             if (k)
             {
-                _local_2 = (k._Str_5222() as IRoomObjectSpriteVisualization);
+                _local_2 = (k.getVisualization() as IRoomObjectSpriteVisualization);
                 Logger.log(("Furni visualization: " + _local_2));
                 _local_3 = 0;
-                while (_local_3 < _local_2._Str_3008)
+                while (_local_3 < _local_2.spriteCount)
                 {
-                    _local_4 = _local_2._Str_2505(_local_3);
+                    _local_4 = _local_2.getSprite(_local_3);
                     _local_4.filters = [];
                     _local_3++;
                 }

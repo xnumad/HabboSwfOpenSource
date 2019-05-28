@@ -89,7 +89,7 @@
             {
                 _local_3._Str_10047 = true;
             }
-            this._Str_2397.sort(this._Str_1763);
+            this._Str_2397.sort(this.orderByPrecedence);
             if (this._visualization != null)
             {
                 this._visualization.reset();
@@ -260,7 +260,7 @@
             return this._habboCatalog.getPurse();
         }
 
-        private function _Str_1763(k:ClubBuyOfferData, _arg_2:ClubBuyOfferData):Number
+        private function orderByPrecedence(k:ClubBuyOfferData, _arg_2:ClubBuyOfferData):Number
         {
             var _local_3:Number = k.months;
             var _local_4:Number = _arg_2.months;

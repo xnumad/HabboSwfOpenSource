@@ -42,19 +42,19 @@
         {
             this._origin = new Vector3d();
             this._loc = new Vector3d();
-            this._loc._Str_2427(k);
+            this._loc.assign(k);
             this._leftSide = new Vector3d();
-            this._leftSide._Str_2427(_arg_2);
+            this._leftSide.assign(_arg_2);
             this._rightSide = new Vector3d();
-            this._rightSide._Str_2427(_arg_3);
+            this._rightSide.assign(_arg_3);
             this._leftSideOriginal = new Vector3d();
-            this._leftSideOriginal._Str_2427(_arg_2);
+            this._leftSideOriginal.assign(_arg_2);
             this._rightSideOriginal = new Vector3d();
-            this._rightSideOriginal._Str_2427(_arg_3);
-            this._normal = Vector3d._Str_7423(this._leftSide, this._rightSide);
+            this._rightSideOriginal.assign(_arg_3);
+            this._normal = Vector3d.crossProduct(this._leftSide, this._rightSide);
             if (this._normal.length > 0)
             {
-                this._normal._Str_6038((1 / this._normal.length));
+                this._normal.mul((1 / this._normal.length));
             }
             this._offset = new Point();
             this._cornerA = new Vector3d();
@@ -164,15 +164,15 @@
             {
                 if (!k)
                 {
-                    this._leftSide._Str_2427(this._leftSideOriginal);
-                    this._rightSide._Str_2427(this._rightSideOriginal);
+                    this._leftSide.assign(this._leftSideOriginal);
+                    this._rightSide.assign(this._rightSideOriginal);
                 }
                 else
                 {
-                    this._leftSide._Str_2427(this._leftSideOriginal);
-                    this._leftSide._Str_6038((this._rightSideOriginal.length / this._leftSideOriginal.length));
-                    this._rightSide._Str_2427(this._rightSideOriginal);
-                    this._rightSide._Str_6038((this._leftSideOriginal.length / this._rightSideOriginal.length));
+                    this._leftSide.assign(this._leftSideOriginal);
+                    this._leftSide.mul((this._rightSideOriginal.length / this._leftSideOriginal.length));
+                    this._rightSide.assign(this._rightSideOriginal);
+                    this._rightSide.mul((this._leftSideOriginal.length / this._rightSideOriginal.length));
                 }
                 this._geometryUpdateId = -1;
                 this._geometryDirX = (this._geometryDirX - 1);
@@ -369,10 +369,10 @@
 
         private function _Str_18702(k:IRoomGeometry):void
         {
-            this._cornerA._Str_2427(k.getScreenPosition(this._loc));
-            this._cornerB._Str_2427(k.getScreenPosition(Vector3d.sum(this._loc, this._rightSide)));
-            this._cornerC._Str_2427(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._loc, this._leftSide), this._rightSide)));
-            this._cornerD._Str_2427(k.getScreenPosition(Vector3d.sum(this._loc, this._leftSide)));
+            this._cornerA.assign(k.getScreenPosition(this._loc));
+            this._cornerB.assign(k.getScreenPosition(Vector3d.sum(this._loc, this._rightSide)));
+            this._cornerC.assign(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._loc, this._leftSide), this._rightSide)));
+            this._cornerD.assign(k.getScreenPosition(Vector3d.sum(this._loc, this._leftSide)));
             this._offset = k.getScreenPoint(this._origin);
             this._cornerA.x = Math.round(this._cornerA.x);
             this._cornerA.y = Math.round(this._cornerA.y);

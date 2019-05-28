@@ -26,9 +26,9 @@
 
         override public function dispose():void
         {
-            if (((this._Str_4571) && (_Str_2697)))
+            if (((this._Str_4571) && (assetCollection)))
             {
-                _Str_2697.disposeAsset(this._Str_4571);
+                assetCollection.disposeAsset(this._Str_4571);
                 this._Str_4571 = null;
             }
             super.dispose();
@@ -129,7 +129,7 @@
                             _local_4 = _local_2.getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_IMAGE_STATUS);
                             if (_local_4 == 1)
                             {
-                                _local_5 = _Str_2697.getAsset(_local_3);
+                                _local_5 = assetCollection.getAsset(_local_3);
                                 if (_local_5 != null)
                                 {
                                     _local_6 = (_local_5.asset.content as BitmapData);
@@ -171,7 +171,7 @@
             var _local_3:int = _Str_3033(k);
             var _local_4:String = type;
             var _local_5:String = "";
-            if (_arg_2 < (_Str_3008 - 1))
+            if (_arg_2 < (spriteCount - 1))
             {
                 _local_5 = String.fromCharCode(("a".charCodeAt() + _arg_2));
             }
@@ -204,7 +204,7 @@
             {
                 return;
             }
-            var _local_2:IGraphicAsset = _Str_2697.getAsset(this._Str_2991);
+            var _local_2:IGraphicAsset = assetCollection.getAsset(this._Str_2991);
             if (_local_2 == null)
             {
                 return;
@@ -212,7 +212,7 @@
             var _local_3:int = object.getState(0);
             var _local_4:int = _Str_3033(k);
             var _local_5:String = ((((this._Str_2991 + "_") + _local_4) + "_") + _local_3);
-            var _local_6:IGraphicAsset = _Str_2697.getAsset(_local_5);
+            var _local_6:IGraphicAsset = assetCollection.getAsset(_local_5);
             if (_local_6 != null)
             {
                 return;
@@ -274,10 +274,10 @@
             }
             if (this._Str_4571)
             {
-                _Str_2697.disposeAsset(this._Str_4571);
+                assetCollection.disposeAsset(this._Str_4571);
             }
             this._Str_4571 = _local_5;
-            var _local_14:Boolean = _Str_2697.addAsset(_local_5, _local_9, true, _local_10, _local_11, _local_12, _local_13);
+            var _local_14:Boolean = assetCollection.addAsset(_local_5, _local_9, true, _local_10, _local_11, _local_12, _local_13);
             if (!_local_14)
             {
                 Logger.log(("could not add asset for image " + _local_5));

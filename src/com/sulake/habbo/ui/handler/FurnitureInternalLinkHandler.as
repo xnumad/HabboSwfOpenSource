@@ -60,7 +60,7 @@
                         if (_local_3 != null)
                         {
                             _local_4 = _local_3.getModel();
-                            _local_5 = _local_4._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA).getValue(INTERNALLINK);
+                            _local_5 = _local_4.getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA).getValue(INTERNALLINK);
                             if (((_local_5 == null) || (_local_5.length == 0)))
                             {
                                 _local_5 = _local_4.getString(RoomObjectVariableEnum.FURNITURE_INTERNAL_LINK);

@@ -105,7 +105,7 @@
             super.dispose();
         }
 
-        public function _Str_17646(k:String):IRoomObjectGraphicVisualization
+        public function createRoomObjectVisualization(k:String):IRoomObjectGraphicVisualization
         {
             var _local_2:Class;
             switch (k)
@@ -235,7 +235,7 @@
             return null;
         }
 
-        public function _Str_16399(k:String, _arg_2:String, _arg_3:XML):IRoomObjectVisualizationData
+        public function getRoomObjectVisualizationData(k:String, _arg_2:String, _arg_3:XML):IRoomObjectVisualizationData
         {
             var _local_6:IRoomObjectVisualizationData;
             var _local_7:AvatarVisualizationData;
@@ -353,7 +353,7 @@
             return null;
         }
 
-        public function _Str_13110():IGraphicAssetCollection
+        public function createGraphicAssetCollection():IGraphicAssetCollection
         {
             return new GraphicAssetCollection();
         }

@@ -91,7 +91,7 @@
             }
             if (this._cachedBitmapNormal != null)
             {
-                this._cachedBitmapNormal._Str_2427(new Vector3d());
+                this._cachedBitmapNormal.assign(new Vector3d());
             }
             if (this._layers != null)
             {
@@ -177,7 +177,7 @@
             {
                 try
                 {
-                    if ((((this._cachedBitmapData.width == width) && (this._cachedBitmapData.height == height)) && (Vector3d._Str_15471(this._cachedBitmapNormal, normal))))
+                    if ((((this._cachedBitmapData.width == width) && (this._cachedBitmapData.height == height)) && (Vector3d.isEqual(this._cachedBitmapNormal, normal))))
                     {
                         if (!this._Str_20530)
                         {
@@ -227,7 +227,7 @@
             {
                 canvas = this._cachedBitmapData;
             }
-            this._cachedBitmapNormal._Str_2427(normal);
+            this._cachedBitmapNormal.assign(normal);
             var i:int;
             while (i < this._layers.length)
             {

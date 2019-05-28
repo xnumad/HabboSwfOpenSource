@@ -47,7 +47,7 @@
             if (_arg_3 != null)
             {
                 this._action = new ActiveActionData(_arg_3.state, this.base);
-                this._action._Str_742 = _arg_3;
+                this._action.definition = _arg_3;
             }
         }
 
@@ -73,7 +73,7 @@
             return this._id;
         }
 
-        public function get _Str_891():int
+        public function get animationFrame():int
         {
             return this._animationFrame;
         }

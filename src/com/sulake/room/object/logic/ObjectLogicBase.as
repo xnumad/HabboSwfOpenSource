@@ -26,7 +26,7 @@
             return [];
         }
 
-        protected function _Str_2414(k:Array, _arg_2:Array):Array
+        protected function getAllEventTypes(k:Array, _arg_2:Array):Array
         {
             var _local_4:String;
             var _local_3:Array = k.concat();
@@ -53,7 +53,7 @@
             }
             if (this._object != null)
             {
-                this._object._Str_8711(null);
+                this._object.setEventHandler(null);
             }
             if (k == null)
             {
@@ -63,7 +63,7 @@
             else
             {
                 this._object = k;
-                this._object._Str_8711(this);
+                this._object.setEventHandler(this);
             }
         }
 

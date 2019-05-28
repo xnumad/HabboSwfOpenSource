@@ -41,7 +41,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectRoomAdEvent.RORAE_ROOM_AD_LOAD_IMAGE];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void

@@ -363,8 +363,8 @@
             var _local_8:IRoomObject = this._SafeStr_18733(_local_4);
             if (_local_8 != null)
             {
-                _local_11 = (_local_8._Str_5222() as IRoomObjectSpriteVisualization);
-                _local_11._Str_2505(0).alpha = ((k._SafeStr_18748) ? 100 : 0xFF);
+                _local_11 = (_local_8.getVisualization() as IRoomObjectSpriteVisualization);
+                _local_11.getSprite(0).alpha = ((k._SafeStr_18748) ? 100 : 0xFF);
                 _local_12 = (!(k.team == this._snowWarEngine._SafeStr_13187().team));
                 if (_local_12)
                 {
@@ -446,11 +446,11 @@
             var _local_4:IRoomObjectSprite;
             if (k)
             {
-                _local_2 = (k._Str_5222() as IRoomObjectSpriteVisualization);
+                _local_2 = (k.getVisualization() as IRoomObjectSpriteVisualization);
                 _local_3 = 0;
-                while (_local_3 < _local_2._Str_3008)
+                while (_local_3 < _local_2.spriteCount)
                 {
-                    _local_4 = _local_2._Str_2505(_local_3);
+                    _local_4 = _local_2.getSprite(_local_3);
                     _local_4.blendMode = BlendMode.HARDLIGHT;
                     _local_3++;
                 }
@@ -464,11 +464,11 @@
             var _local_4:IRoomObjectSprite;
             if (k)
             {
-                _local_2 = (k._Str_5222() as IRoomObjectSpriteVisualization);
+                _local_2 = (k.getVisualization() as IRoomObjectSpriteVisualization);
                 _local_3 = 0;
-                while (_local_3 < _local_2._Str_3008)
+                while (_local_3 < _local_2.spriteCount)
                 {
-                    _local_4 = _local_2._Str_2505(_local_3);
+                    _local_4 = _local_2.getSprite(_local_3);
                     _local_4.visible = false;
                     _local_3++;
                 }

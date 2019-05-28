@@ -105,7 +105,7 @@
             return this._view.isActive;
         }
 
-        public function get _Str_3022():Boolean
+        public function get isInitialized():Boolean
         {
             return this._isInitialized;
         }

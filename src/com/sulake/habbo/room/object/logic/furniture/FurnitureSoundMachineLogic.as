@@ -15,7 +15,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectFurnitureActionEvent.SOUND_MACHINE_START, RoomObjectFurnitureActionEvent.SOUND_MACHINE_STOP, RoomObjectFurnitureActionEvent.SOUND_MACHINE_DISPOSE, RoomObjectFurnitureActionEvent.SOUND_MACHINE_INIT];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function dispose():void

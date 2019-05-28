@@ -177,24 +177,24 @@
             var _local_5:int = _local_4.getDirection();
             var _local_6:int = _arg_2;
             var _local_7:IActiveActionData = _local_4._Str_2244();
-            if (_local_7._Str_742._Str_812)
+            if (_local_7.definition.startFromFrameZero)
             {
-                _local_6 = (_local_6 - _local_7._Str_664);
+                _local_6 = (_local_6 - _local_7.startFrame);
             }
             var _local_8:IActiveActionData = _local_7;
             var _local_9:Array = [];
             var _local_10:Map = new Map();
             var _local_11:Point = new Point();
-            if (!((!(_local_7)) || (!(_local_7._Str_742))))
+            if (!((!(_local_7)) || (!(_local_7.definition))))
             {
-                if (_local_7._Str_742._Str_861)
+                if (_local_7.definition.isAnimation)
                 {
                     _local_15 = _local_5;
-                    _local_16 = this._structure._Str_720(((_local_7._Str_742.state + ".") + _local_7._Str_727));
-                    _local_17 = (_arg_2 - _local_7._Str_664);
+                    _local_16 = this._structure.getAnimation(((_local_7.definition.state + ".") + _local_7.actionParameter));
+                    _local_17 = (_arg_2 - _local_7.startFrame);
                     if (_local_16 != null)
                     {
-                        _local_18 = _local_16._Str_607(_local_17, k, _local_7._Str_707);
+                        _local_18 = _local_16.getLayerData(_local_17, k, _local_7.overridingAction);
                         if (_local_18 != null)
                         {
                             _local_15 = (_local_5 + _local_18.dd);
@@ -236,7 +236,7 @@
                                 _local_11.x = (_local_18.dx / 2);
                                 _local_11.y = (_local_18.dy / 2);
                             }
-                            _local_6 = _local_18._Str_891;
+                            _local_6 = _local_18.animationFrame;
                             if (_local_18.action != null)
                             {
                                 _local_7 = _local_18.action;
@@ -258,7 +258,7 @@
                             }
                             _local_10 = _local_18.items;
                         }
-                        _local_9 = _local_16._Str_652;
+                        _local_9 = _local_16.removeData;
                     }
                 }
             }
@@ -343,7 +343,7 @@
             }
             if (!this._canvas)
             {
-                this._canvas = this._structure._Str_1664(this._scale, this._geometryType);
+                this._canvas = this._structure.getCanvas(this._scale, this._geometryType);
                 if (!this._canvas)
                 {
                     return null;
@@ -351,8 +351,8 @@
             }
             var _local_6:int = k;
             var _local_7:Boolean = AvatarDirectionAngle._Str_1859[k];
-            var _local_10:String = _arg_4._Str_742._Str_778;
-            var _local_11:String = _arg_4._Str_742.state;
+            var _local_10:String = _arg_4.definition.assetPartDefinition;
+            var _local_11:String = _arg_4.definition.state;
             var _local_12:Boolean = true;
             var _local_13:int = (_arg_2.length - 1);
             _local_9 = _local_13;
@@ -370,9 +370,9 @@
                         if (animationFrame)
                         {
                             _local_23 = animationFrame.number;
-                            if (((animationFrame._Str_778) && (!(animationFrame._Str_778 == ""))))
+                            if (((animationFrame.assetPartDefinition) && (!(animationFrame.assetPartDefinition == ""))))
                             {
-                                _local_10 = animationFrame._Str_778;
+                                _local_10 = animationFrame.assetPartDefinition;
                             }
                         }
                         else
@@ -514,7 +514,7 @@
                                 if (_arg_5)
                                 {
                                     _local_31 = new RoomObjectSpriteData();
-                                    _local_31.name = this._assets._Str_2125(_local_24);
+                                    _local_31.name = this._assets.getAliasByName(_local_24);
                                     _local_31.x = (-(_local_28.x) - 33);
                                     _local_31.y = -(_local_28.y);
                                     _local_31.z = (this._serverRenderData.length * -0.0001);

@@ -58,7 +58,7 @@
                         _local_7 = parseInt(_local_10.@x);
                         _local_8 = parseInt(_local_10.@y);
                         _local_9 = Number(_local_10.@z);
-                        _local_2._Str_772(_local_5, _local_6, new Array(_local_7, _local_8, _local_9));
+                        _local_2.setOffsets(_local_5, _local_6, new Array(_local_7, _local_8, _local_9));
                     }
                 }
             }
@@ -91,7 +91,7 @@
             }
             for each (k in this._actions)
             {
-                if (k._Str_804)
+                if (k.isDefault)
                 {
                     this._defaultAction = k;
                     return k;
@@ -110,10 +110,10 @@
             while (_local_7 < k.length)
             {
                 _local_5 = (k[_local_7] as ActiveActionData);
-                _local_6 = (this._actions[_local_5._Str_695] as ActionDefinition);
-                if (((!(_local_6 == null)) && (!(_local_6._Str_805(_arg_2, _arg_3) == null))))
+                _local_6 = (this._actions[_local_5.actionType] as ActionDefinition);
+                if (((!(_local_6 == null)) && (!(_local_6.getOffsets(_arg_2, _arg_3) == null))))
                 {
-                    _local_4 = _local_6._Str_805(_arg_2, _arg_3);
+                    _local_4 = _local_6.getOffsets(_arg_2, _arg_3);
                 }
                 _local_7++;
             }
@@ -128,14 +128,14 @@
             var _local_2:Array = new Array();
             for each (_local_3 in k)
             {
-                _local_4 = this._actions[_local_3._Str_695];
+                _local_4 = this._actions[_local_3.actionType];
                 if (_local_4 != null)
                 {
-                    _local_3._Str_742 = _local_4;
+                    _local_3.definition = _local_4;
                     _local_2.push(_local_3);
                 }
             }
-            _local_2.sort(this._Str_1763);
+            _local_2.sort(this.orderByPrecedence);
             return _local_2;
         }
 
@@ -151,10 +151,10 @@
             while (_local_6 < k.length)
             {
                 _local_4 = (k[_local_6] as ActiveActionData);
-                _local_5 = (this._actions[_local_4._Str_695] as ActionDefinition);
+                _local_5 = (this._actions[_local_4.actionType] as ActionDefinition);
                 if (_local_5 != null)
                 {
-                    _local_3 = _local_3.concat(_local_5._Str_733(_local_4._Str_727));
+                    _local_3 = _local_3.concat(_local_5.getPrevents(_local_4.actionParameter));
                 }
                 _local_6++;
             }
@@ -162,10 +162,10 @@
             while (_local_6 < k.length)
             {
                 _local_4 = (k[_local_6] as ActiveActionData);
-                _local_7 = _local_4._Str_695;
-                if (_local_4._Str_695 == "fx")
+                _local_7 = _local_4.actionType;
+                if (_local_4.actionType == "fx")
                 {
-                    _local_7 = (_local_7 + ("." + _local_4._Str_727));
+                    _local_7 = (_local_7 + ("." + _local_4.actionParameter));
                 }
                 if (_local_3.indexOf(_local_7) == -1)
                 {
@@ -176,10 +176,10 @@
             return _local_2;
         }
 
-        private function _Str_1763(k:IActiveActionData, _arg_2:IActiveActionData):Number
+        private function orderByPrecedence(k:IActiveActionData, _arg_2:IActiveActionData):Number
         {
-            var _local_3:Number = k._Str_742.precedence;
-            var _local_4:Number = _arg_2._Str_742.precedence;
+            var _local_3:Number = k.definition.precedence;
+            var _local_4:Number = _arg_2.definition.precedence;
             if (_local_3 < _local_4)
             {
                 return 1;

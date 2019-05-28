@@ -107,7 +107,7 @@
             return _local_4;
         }
 
-        public function _Str_2125(k:int):String
+        public function getAliasByName(k:int):String
         {
             return this._assetNames.getValue(k);
         }

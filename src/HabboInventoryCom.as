@@ -9,17 +9,17 @@
     public class HabboInventoryCom extends SimpleApplication 
     {
         public static var requiredClasses:Array = new Array(HabboInventoryBootstrap, IIDHabboInventory);
-        public static var manifest:Class = _Str_13473;
-        public static var inventory_xml:Class = _Str_12539;
-        public static var inventory_thumb_xml:Class = _Str_15585;
-        public static var inventory_thumb_credits_xml:Class = _Str_13392;
-        public static var inventory_effects_xml:Class = _Str_14286;
-        public static var inventory_trading_xml:Class = _Str_13184;
-        public static var inventory_trading_minimized_xml:Class = _Str_12952;
-        public static var buy_marketplace_tokens_xml:Class = _Str_15802;
-        public static var make_marketplace_offer_xml:Class = _Str_13470;
-        public static var marketplace_no_credits_xml:Class = _Str_14036;
-        public static var unseen_item_symbol_xml:Class = _Str_14114;
+        public static var manifest:Class = HabboInventoryCom_manifest;
+        public static var inventory_xml:Class = HabboInventoryCom_inventory_xml;
+        public static var inventory_thumb_xml:Class = HabboInventoryCom_inventory_thumb_xml;
+        public static var inventory_thumb_credits_xml:Class = HabboInventoryCom_inventory_thumb_credits_xml;
+        public static var inventory_effects_xml:Class = HabboInventoryCom_inventory_effects_xml;
+        public static var inventory_trading_xml:Class = HabboInventoryCom_inventory_trading_xml;
+        public static var inventory_trading_minimized_xml:Class = HabboInventoryCom_inventory_trading_minimized_xml;
+        public static var buy_marketplace_tokens_xml:Class = HabboInventoryCom_buy_marketplace_tokens_xml;
+        public static var make_marketplace_offer_xml:Class = HabboInventoryCom_make_marketplace_offer_xml;
+        public static var marketplace_no_credits_xml:Class = HabboInventoryCom_marketplace_no_credits_xml;
+        public static var unseen_item_symbol_xml:Class = HabboInventoryCom_unseen_item_symbol_xml;
         public static var fx_icon_1_png:Class = HabboInventoryCom_fx_icon_1_png;
         public static var fx_icon_2_png:Class = HabboInventoryCom_fx_icon_2_png;
         public static var fx_icon_3_png:Class = HabboInventoryCom_fx_icon_3_png;
@@ -174,8 +174,8 @@
         public static var fx_icon_186_png:Class = HabboInventoryCom_fx_icon_186_png;
         public static var fx_icon_191_png:Class = HabboInventoryCom_fx_icon_191_png;
         public static var fx_icon_192_png:Class = HabboInventoryCom_fx_icon_192_png;
-        public static var item_popup_xml:Class = _Str_12808;
-        public static var popup_arrow_left_png:Class = _Str_15879;
-        public static var popup_arrow_right_png:Class = _Str_15396;
+        public static var item_popup_xml:Class = HabboInventoryCom_item_popup_xml;
+        public static var popup_arrow_left_png:Class = HabboInventoryCom_popup_arrow_left_png;
+        public static var popup_arrow_right_png:Class = HabboInventoryCom_popup_arrow_right_png;
     }
 }

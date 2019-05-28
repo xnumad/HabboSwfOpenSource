@@ -12,7 +12,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectFurnitureActionEvent.MOUSE_BUTTON, RoomObjectFurnitureActionEvent.MOUSE_ARROW];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function mouseEvent(k:RoomSpriteMouseEvent, _arg_2:IRoomGeometry):void

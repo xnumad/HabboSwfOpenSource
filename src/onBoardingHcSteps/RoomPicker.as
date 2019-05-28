@@ -18,8 +18,8 @@
 
     public class RoomPicker implements IDisposable 
     {
-        private static const _Str_2261:Class = _Str_898;
-        private static const _Str_1971:Class = _Str_858;
+        private static const _Str_2261:Class = RoomPicker__Str_2261;
+        private static const _Str_1971:Class = RoomPicker__Str_1971;
         private static const NEWUSERRECEPTION_CHOOSEROOM:String = "NewUserReception.chooseRoom";
         private static const NEWUSERRECEPTIONCHOOSEROOMRESPONSE:String = "newUserReceptionChooseRoomResponse";
         private static const NEWUSERRECEPTIONCHOOSEROOMFAILED:String = "newUserReceptionChooseRoomFailed";

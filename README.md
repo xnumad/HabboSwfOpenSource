@@ -23,3 +23,5 @@
 -Research furni bug catalog fixed
 
 -Sound setting bug fixed
+
+-Rename all img and binary file correctly name (95%)

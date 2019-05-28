@@ -71,7 +71,7 @@
             return null;
         }
 
-        public function _Str_2125(k:IVector3D):String
+        public function getAliasByName(k:IVector3D):String
         {
             var _local_2:PlaneTextureBitmap = this._Str_21702(k);
             return (_local_2 == null) ? null : _local_2.assetName;

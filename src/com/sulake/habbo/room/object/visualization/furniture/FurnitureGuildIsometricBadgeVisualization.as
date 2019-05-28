@@ -37,7 +37,7 @@
 
         private function _Str_21773(k:String):BitmapData
         {
-            var _local_2:IGraphicAsset = _Str_2697.getAsset(k);
+            var _local_2:IGraphicAsset = assetCollection.getAsset(k);
             if (((_local_2 == null) || (_local_2.asset == null)))
             {
                 return null;

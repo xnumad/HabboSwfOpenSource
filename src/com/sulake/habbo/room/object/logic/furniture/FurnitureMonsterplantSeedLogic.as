@@ -15,7 +15,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectWidgetRequestEvent.MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectWidgetRequestEvent.MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG]);
         }
 
         override public function useObject():void

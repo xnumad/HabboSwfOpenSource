@@ -66,7 +66,7 @@
             return this._id;
         }
 
-        public function get _Str_779():Boolean
+        public function get isMain():Boolean
         {
             var _local_1:AvatarSet;
             if (this._isMain)
@@ -75,7 +75,7 @@
             }
             for each (_local_1 in this._avatarSets)
             {
-                if (_local_1._Str_779)
+                if (_local_1.isMain)
                 {
                     return true;
                 }

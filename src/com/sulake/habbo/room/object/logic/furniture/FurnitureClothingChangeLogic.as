@@ -17,7 +17,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectWidgetRequestEvent.CLOTHING_CHANGE];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function initialize(k:XML):void

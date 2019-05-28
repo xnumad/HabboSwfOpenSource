@@ -9,7 +9,7 @@
     public class HabboConfigurationCom extends SimpleApplication 
     {
         public static var requiredClasses:Array = new Array(HabboConfigurationManagerBootstrap, IIDHabboConfigurationManager, HabboConfigurationManager);
-        public static var manifest:Class = _Str_14563;
-        public static var localization_configuration:Class = _Str_13614;
+        public static var manifest:Class = HabboConfigurationCom_manifest;
+        public static var localization_configuration:Class = HabboConfigurationCom_localization_configuration;
     }
 }

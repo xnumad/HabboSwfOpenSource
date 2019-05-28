@@ -39,7 +39,7 @@
             return this._data;
         }
 
-        protected function get _Str_2697():IGraphicAssetCollection
+        protected function get assetCollection():IGraphicAssetCollection
         {
             return this._assetCollection;
         }
@@ -225,7 +225,7 @@
             var k:XMLList = this.data.textures;
             if (k.length() > 0)
             {
-                this._Str_24250(k[0], this._Str_2697);
+                this._Str_24250(k[0], this.assetCollection);
             }
             var _local_2:XMLList = this.data.materials;
             if (_local_2.length() > 0)
@@ -308,7 +308,7 @@
                                         {
                                             if (_local_16.flipH)
                                             {
-                                                _local_18 = Rasterizer._Str_16640(_local_18);
+                                                _local_18 = Rasterizer.getFlipHBitmapData(_local_18);
                                             }
                                             else
                                             {

@@ -36,7 +36,7 @@
                 if (k.loc != null)
                 {
                     _local_4 = object.getLocation();
-                    _local_5 = Vector3d._Str_5385(k.loc, _local_4);
+                    _local_5 = Vector3d.dif(k.loc, _local_4);
                     if (_local_5 != null)
                     {
                         if (((Math.abs(_local_5.x) < 2) && (Math.abs(_local_5.y) < 2)))
@@ -106,9 +106,9 @@
         {
             if (object != null)
             {
-                this._oldLocation._Str_2427(object.getLocation());
+                this._oldLocation.assign(object.getLocation());
                 super.update(k);
-                if (Vector3d._Str_5385(object.getLocation(), this._oldLocation).length == 0)
+                if (Vector3d.dif(object.getLocation(), this._oldLocation).length == 0)
                 {
                     if (object.getState(0) != _Str_13582)
                     {

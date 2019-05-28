@@ -50,7 +50,7 @@
             return this._blend;
         }
 
-        public function get _Str_1096():Boolean
+        public function get isBlended():Boolean
         {
             return !(this._blend == 1);
         }

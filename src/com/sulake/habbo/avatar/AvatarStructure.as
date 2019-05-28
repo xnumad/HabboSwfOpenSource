@@ -184,12 +184,12 @@
 
         public function _Str_1881(k:String, _arg_2:int, _arg_3:String):AnimationLayerData
         {
-            return this._animationManager._Str_607(k, _arg_2, _arg_3) as AnimationLayerData;
+            return this._animationManager.getLayerData(k, _arg_2, _arg_3) as AnimationLayerData;
         }
 
-        public function _Str_720(k:String):Animation
+        public function getAnimation(k:String):Animation
         {
-            return this._animationManager._Str_720(k) as Animation;
+            return this._animationManager.getAnimation(k) as Animation;
         }
 
         public function _Str_1675(k:String):ActionDefinition
@@ -218,7 +218,7 @@
             var _local_2:int;
             for each (_local_3 in k)
             {
-                _local_2 = Math.max(_local_2, this._animationData._Str_1408(_local_3._Str_742));
+                _local_2 = Math.max(_local_2, this._animationData._Str_1408(_local_3.definition));
             }
             return _local_2;
         }
@@ -247,9 +247,9 @@
             return this._actionManager._Str_781(k, _arg_2, _arg_3);
         }
 
-        public function _Str_1664(k:String, _arg_2:String):AvatarCanvas
+        public function getCanvas(k:String, _arg_2:String):AvatarCanvas
         {
-            return this._geometry._Str_1664(k, _arg_2);
+            return this._geometry.getCanvas(k, _arg_2);
         }
 
         public function _Str_2101(k:IAvatarImage):void
@@ -270,21 +270,21 @@
             var _local_14:String;
             var _local_3:Array = [];
             var _local_4:Array = new Array();
-            var _local_5:String = k._Str_742._Str_868;
-            if (k._Str_742._Str_861)
+            var _local_5:String = k.definition.geometryType;
+            if (k.definition.isAnimation)
             {
-                _local_7 = ((k._Str_742.state + ".") + k._Str_727);
-                _local_8 = (this._animationManager._Str_720(_local_7) as Animation);
+                _local_7 = ((k.definition.state + ".") + k.actionParameter);
+                _local_8 = (this._animationManager.getAnimation(_local_7) as Animation);
                 if (_local_8 != null)
                 {
-                    _local_3 = _local_8._Str_1065(0, k._Str_707);
-                    if (_local_8._Str_706())
+                    _local_3 = _local_8._Str_1065(0, k.overridingAction);
+                    if (_local_8.hasAddData())
                     {
                         _local_11 = <item id="" x="0" y="0" z="0" radius="0.01" nx="0" ny="0" nz="-1" double="1"/>
                         ;
                         _local_12 = <part/>
                         ;
-                        for each (_local_13 in _local_8._Str_687)
+                        for each (_local_13 in _local_8.addData)
                         {
                             _local_6 = this._geometry._Str_1919(_local_5, _local_13.align);
                             if (_local_6 != null)
@@ -320,7 +320,7 @@
             }
             else
             {
-                _local_3 = this._partSetsData._Str_1795(k._Str_742);
+                _local_3 = this._partSetsData._Str_1795(k.definition);
                 for each (_local_14 in _local_3)
                 {
                     _local_6 = this._geometry._Str_1701(_local_5, _local_14, _arg_2);
@@ -349,7 +349,7 @@
 
         public function _Str_1888(k:IActiveActionData, _arg_2:int, _arg_3:int, _arg_4:String):Point
         {
-            var _local_5:AnimationAction = this._animationData._Str_2244(k._Str_742);
+            var _local_5:AnimationAction = this._animationData._Str_2244(k.definition);
             if (_local_5)
             {
                 return _local_5._Str_1888(_arg_2, _arg_3, _arg_4);
@@ -397,18 +397,18 @@
             {
                 return [];
             }
-            var _local_9:Array = this._partSetsData._Str_1795(_arg_3._Str_742);
+            var _local_9:Array = this._partSetsData._Str_1795(_arg_3.definition);
             var _local_11:Array = new Array();
             var _local_14:Array = [0];
-            var _local_15:AnimationAction = this._animationData._Str_2244(_arg_3._Str_742);
-            if (_arg_3._Str_742._Str_861)
+            var _local_15:AnimationAction = this._animationData._Str_2244(_arg_3.definition);
+            if (_arg_3.definition.isAnimation)
             {
-                _local_24 = ((_arg_3._Str_742.state + ".") + _arg_3._Str_727);
-                _local_10 = (this._animationManager._Str_720(_local_24) as Animation);
+                _local_24 = ((_arg_3.definition.state + ".") + _arg_3.actionParameter);
+                _local_10 = (this._animationManager.getAnimation(_local_24) as Animation);
                 if (_local_10 != null)
                 {
-                    _local_14 = this._Str_1768(_local_10._Str_2185(_arg_3._Str_707));
-                    for each (_local_25 in _local_10._Str_1065(0, _arg_3._Str_707))
+                    _local_14 = this._Str_1768(_local_10._Str_2185(_arg_3.overridingAction));
+                    for each (_local_25 in _local_10._Str_1065(0, _arg_3.overridingAction))
                     {
                         if (_local_25 == k)
                         {
@@ -464,7 +464,7 @@
                                     {
                                         _local_20 = _local_14;
                                     }
-                                    _local_34 = _arg_3._Str_742;
+                                    _local_34 = _arg_3.definition;
                                     if (_local_9.indexOf(_local_33.type) == -1)
                                     {
                                         _local_34 = this._defaultAction;
@@ -540,7 +540,7 @@
                         {
                             _local_20 = _local_14;
                         }
-                        _local_18 = new AvatarImagePartContainer(k, _local_12, _local_41, _local_39, _local_20, _arg_3._Str_742, (!(_local_39 == null)), -1, _local_12, false, 1);
+                        _local_18 = new AvatarImagePartContainer(k, _local_12, _local_41, _local_39, _local_20, _arg_3.definition, (!(_local_39 == null)), -1, _local_12, false, 1);
                         _local_22.push(_local_18);
                     }
                     else
@@ -559,9 +559,9 @@
                                 if (_local_13._Str_1583)
                                 {
                                     _local_47 = "1";
-                                    if (_arg_3._Str_727 != "")
+                                    if (_arg_3.actionParameter != "")
                                     {
-                                        _local_47 = _arg_3._Str_727;
+                                        _local_47 = _arg_3.actionParameter;
                                     }
                                     if (_local_13._Str_2234())
                                     {
@@ -572,7 +572,7 @@
                                         _local_48 = _local_10._Str_1550(_local_12);
                                         if (_local_48 != null)
                                         {
-                                            _local_45 = _local_48._Str_1096;
+                                            _local_45 = _local_48.isBlended;
                                             _local_46 = _local_48.blend;
                                         }
                                     }
@@ -592,7 +592,7 @@
                                     {
                                         _local_20 = _local_14;
                                     }
-                                    _local_18 = new AvatarImagePartContainer(k, _local_12, _local_47, null, _local_20, _arg_3._Str_742, false, -1, _local_12, _local_45, _local_46);
+                                    _local_18 = new AvatarImagePartContainer(k, _local_12, _local_47, null, _local_20, _arg_3.definition, false, -1, _local_12, _local_45, _local_46);
                                     _local_22.push(_local_18);
                                 }
                             }

@@ -96,11 +96,11 @@
             }
             var k:int = this._container.roomSession.roomId;
             var _local_2:Array = [];
-            var _local_8:int = this._container.roomEngine._Str_3391(k, RoomObjectCategoryEnum.CONST_10);
+            var _local_8:int = this._container.roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_10);
             _local_3 = 0;
             while (_local_3 < _local_8)
             {
-                _local_7 = this._container.roomEngine._Str_3652(k, _local_3, RoomObjectCategoryEnum.CONST_10);
+                _local_7 = this._container.roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.CONST_10);
                 if (_local_7 != null)
                 {
                     _local_4 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
@@ -117,11 +117,11 @@
                 }
                 _local_3++;
             }
-            _local_8 = this._container.roomEngine._Str_3391(k, RoomObjectCategoryEnum.CONST_20);
+            _local_8 = this._container.roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_20);
             _local_3 = 0;
             while (_local_3 < _local_8)
             {
-                _local_7 = this._container.roomEngine._Str_3652(k, _local_3, RoomObjectCategoryEnum.CONST_20);
+                _local_7 = this._container.roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.CONST_20);
                 if (_local_7 != null)
                 {
                     _local_9 = _local_7.getType();

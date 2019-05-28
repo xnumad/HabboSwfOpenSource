@@ -25,7 +25,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectWidgetRequestEvent.PRESENT];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void

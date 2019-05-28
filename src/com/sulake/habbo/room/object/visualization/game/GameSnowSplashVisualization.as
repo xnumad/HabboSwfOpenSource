@@ -24,16 +24,16 @@
         {
             var _local_2:BitmapDataAsset;
             this._data = (k as GameObjectVisualization);
-            _Str_3773(1);
+            createSprites(1);
             _local_2 = (this._data.assets.getAssetByName(FRAME_ASSET_NAMES[this._frameNumber]) as BitmapDataAsset);
-            _Str_2505(0).asset = (_local_2.content as BitmapData);
+            getSprite(0).asset = (_local_2.content as BitmapData);
             return true;
         }
 
         override public function update(k:IRoomGeometry, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
         {
             this._frameNumber++;
-            _Str_2505(0).asset = ((this._Str_22837) ? null : (this._data.assets.getAssetByName(FRAME_ASSET_NAMES[this._frameNumber]).content as BitmapData));
+            getSprite(0).asset = ((this._Str_22837) ? null : (this._data.assets.getAssetByName(FRAME_ASSET_NAMES[this._frameNumber]).content as BitmapData));
         }
     }
 }

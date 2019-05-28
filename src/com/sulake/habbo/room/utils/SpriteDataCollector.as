@@ -31,7 +31,7 @@
         private static const _Str_17558:int = 30;
 
         private var _Str_6409:Number;
-        private var _Str_3008:int = 0;
+        private var spriteCount:int = 0;
         private var _Str_18433:int = 0;
 
 
@@ -49,7 +49,7 @@
                     _local_5 = _arg_2.getRoomObject(_arg_2.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.CONST_10);
                     if (_local_5 != null)
                     {
-                        _local_6 = IRoomObjectSpriteVisualization(_local_5._Str_5222()).getSpriteList();
+                        _local_6 = IRoomObjectSpriteVisualization(_local_5.getVisualization()).getSpriteList();
                         if (_local_6 != null)
                         {
                             for each (_local_7 in _local_6)
@@ -155,7 +155,7 @@
             {
                 if (_local_8.getId() != _arg_4)
                 {
-                    _local_11 = IRoomObjectSpriteVisualization(_local_8._Str_5222()).getSpriteList();
+                    _local_11 = IRoomObjectSpriteVisualization(_local_8.getVisualization()).getSpriteList();
                     if (_local_11)
                     {
                         _local_12 = 0;
@@ -202,7 +202,7 @@
                     {
                         this._Str_6409 = _local_9.z;
                     }
-                    this._Str_3008++;
+                    this.spriteCount++;
                 }
             }
             _local_10 = JSON.stringify(_local_5);
@@ -319,7 +319,7 @@
             {
                 _local_9 = ((this._Str_6409) ? this._Str_6409 : 0);
             }
-            _local_9 = (_local_9 + ((this._Str_3008 * 1.776104) + (_arg_3.length * 2.31743)));
+            _local_9 = (_local_9 + ((this.spriteCount * 1.776104) + (_arg_3.length * 2.31743)));
             var _local_10:IPlaneDrawingData = new PlaneDrawingData(null, _arg_2);
             _local_10.cornerPoints = _local_8;
             _local_10.z = _local_9;
@@ -388,7 +388,7 @@
             var _local_23:IPlaneDrawingData;
             var _local_5:Array = [];
             var _local_6:IRoomObject = _arg_3.getRoomObject(_arg_3.activeRoomId, RoomEngine._Str_7416, RoomObjectCategoryEnum.CONST_0);
-            var _local_7:IPlaneVisualization = (_local_6._Str_5222() as IPlaneVisualization);
+            var _local_7:IPlaneVisualization = (_local_6.getVisualization() as IPlaneVisualization);
             if (_local_7)
             {
                 _local_8 = _arg_2.geometry;

@@ -251,9 +251,9 @@
                         {
                             this._Str_16209(k);
                             _local_5 = (this._roomEngine.getRoomObject(k, _arg_2, _arg_3) as IRoomObjectController);
-                            if (((!(_local_5 == null)) && (!(_local_5._Str_2377() == null))))
+                            if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
                             {
-                                _local_5._Str_2377().processUpdateMessage(new RoomObjectSelectedMessage(true));
+                                _local_5.getEventHandler().processUpdateMessage(new RoomObjectSelectedMessage(true));
                                 this._selectedObjectId = _arg_2;
                                 this._selectedObjectCategory = _arg_3;
                             }
@@ -270,16 +270,16 @@
             if (this._selectedObjectId != -1)
             {
                 _local_2 = (this._roomEngine.getRoomObject(k, this._selectedObjectId, this._selectedObjectCategory) as IRoomObjectController);
-                if (((!(_local_2 == null)) && (!(_local_2._Str_2377() == null))))
+                if (((!(_local_2 == null)) && (!(_local_2.getEventHandler() == null))))
                 {
-                    _local_2._Str_2377().processUpdateMessage(new RoomObjectSelectedMessage(false));
+                    _local_2.getEventHandler().processUpdateMessage(new RoomObjectSelectedMessage(false));
                     this._selectedObjectId = -1;
                     this._selectedObjectCategory = RoomObjectCategoryEnum.CONST_MIN2;
                 }
             }
         }
 
-        public function _Str_20330(k:RoomSpriteMouseEvent, _arg_2:IRoomObject, _arg_3:IRoomGeometry):void
+        public function processRoomCanvasMouseEvent(k:RoomSpriteMouseEvent, _arg_2:IRoomObject, _arg_3:IRoomGeometry):void
         {
             if (RoomEnterEffect.isRunning())
             {
@@ -307,7 +307,7 @@
                 }
             }
             var _local_7:String = this._Str_18648(_local_5, k.type);
-            if (_local_7 == k._Str_3463)
+            if (_local_7 == k.eventId)
             {
                 if ((((((k.type == MouseEvent.CLICK) || (k.type == MouseEvent.DOUBLE_CLICK)) || (k.type == MouseEvent.MOUSE_DOWN)) || (k.type == MouseEvent.MOUSE_UP)) || (k.type == MouseEvent.MOUSE_MOVE)))
                 {
@@ -316,14 +316,14 @@
             }
             else
             {
-                if (k._Str_3463 != null)
+                if (k.eventId != null)
                 {
-                    this._Str_11142(_local_5, k.type, k._Str_3463);
+                    this._Str_11142(_local_5, k.type, k.eventId);
                 }
             }
-            if (_arg_2._Str_11182() != null)
+            if (_arg_2.getMouseHandler() != null)
             {
-                _arg_2._Str_11182().mouseEvent(k, _arg_3);
+                _arg_2.getMouseHandler().mouseEvent(k, _arg_3);
             }
         }
 
@@ -520,7 +520,7 @@
             var _local_6:int = k._Str_1577;
             var _local_7:String = k._Str_1723;
             var _local_8:int = this._roomEngine._Str_3321(_local_7);
-            var _local_9:String = k._Str_3463;
+            var _local_9:String = k.eventId;
             var _local_10:RoomObjectTileMouseEvent = (k as RoomObjectTileMouseEvent);
             var _local_11:RoomObjectWallMouseEvent = (k as RoomObjectWallMouseEvent);
             var _local_12:Boolean;
@@ -709,7 +709,7 @@
             if (this._roomEngine != null)
             {
                 _local_7 = this._roomEngine._Str_9577(_arg_2);
-                if (((!(_local_7 == null)) && (!(_local_7._Str_2377() == null))))
+                if (((!(_local_7 == null)) && (!(_local_7.getEventHandler() == null))))
                 {
                     if ((k is RoomObjectTileMouseEvent))
                     {
@@ -726,10 +726,10 @@
                         }
                         else
                         {
-                            _local_8 = new RoomObjectTileCursorUpdateMessage(null, 0, false, k._Str_3463);
+                            _local_8 = new RoomObjectTileCursorUpdateMessage(null, 0, false, k.eventId);
                         }
                     }
-                    _local_7._Str_2377().processUpdateMessage(_local_8);
+                    _local_7.getEventHandler().processUpdateMessage(_local_8);
                 }
             }
             switch (_local_3)
@@ -761,10 +761,10 @@
             var _local_12:Number;
             if (this._whereYouClickIsWhereYouGo)
             {
-                return new RoomObjectTileCursorUpdateMessage(new Vector3d(k._Str_16836, k._Str_17676, k._Str_21459), 0, true, k._Str_3463);
+                return new RoomObjectTileCursorUpdateMessage(new Vector3d(k._Str_16836, k._Str_17676, k._Str_21459), 0, true, k.eventId);
             }
             var _local_3:IRoomObjectController = this._roomEngine._Str_9577(_arg_2);
-            if (((!(_local_3 == null)) && (!(_local_3._Str_2377() == null))))
+            if (((!(_local_3 == null)) && (!(_local_3.getEventHandler() == null))))
             {
                 _local_4 = k._Str_16836;
                 _local_5 = k._Str_17676;
@@ -783,9 +783,9 @@
                             {
                                 _local_11 = _local_10._Str_2754(_local_4, _local_5);
                                 _local_12 = this._roomEngine._Str_5364(_arg_2)._Str_2754(_local_4, _local_5);
-                                return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), (_local_11 - _local_12), true, k._Str_3463);
+                                return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), (_local_11 - _local_12), true, k.eventId);
                             }
-                            return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), 0, true, k._Str_3463);
+                            return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_4, _local_5, _local_6), 0, true, k.eventId);
                         }
                     }
                 }
@@ -815,7 +815,7 @@
                             _local_7 = _local_5.x;
                             _local_8 = _local_5.y;
                             _local_9 = _local_5.z;
-                            return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_7, _local_8, _local_4.getLocation().z), _local_9, true, _arg_3._Str_3463);
+                            return new RoomObjectTileCursorUpdateMessage(new Vector3d(_local_7, _local_8, _local_4.getLocation().z), _local_9, true, _arg_3.eventId);
                         }
                     }
                 }
@@ -856,7 +856,7 @@
                     if (_local_6)
                     {
                         _local_7 = new RoomObjectDataUpdateMessage(0, null);
-                        _local_6._Str_2377().processUpdateMessage(_local_7);
+                        _local_6.getEventHandler().processUpdateMessage(_local_7);
                     }
                 }
             }
@@ -1199,8 +1199,8 @@
                 _local_11 = this._roomEngine._Str_7682().geometry.scale;
                 _local_12 = _local_3.canSitOn;
                 _local_13 = ((_local_12) ? 0.5 : 0);
-                _local_14 = ((((_local_11 / 2) + _arg_2._Str_4595) + _arg_2.localX) / (_local_11 / 4));
-                _local_15 = (((_arg_2._Str_4534 + _arg_2.localY) + (((_local_9 - _local_13) * _local_11) / 2)) / (_local_11 / 4));
+                _local_14 = ((((_local_11 / 2) + _arg_2.spriteOffsetX) + _arg_2.localX) / (_local_11 / 4));
+                _local_15 = (((_arg_2.spriteOffsetY + _arg_2.localY) + (((_local_9 - _local_13) * _local_11) / 2)) / (_local_11 / 4));
                 _local_16 = ((_local_14 + (2 * _local_15)) / 4);
                 _local_17 = ((_local_14 - (2 * _local_15)) / 4);
                 _local_18 = Math.floor((_local_5 + _local_16));
@@ -1262,15 +1262,15 @@
                 switch (k.type)
                 {
                     case RoomObjectWidgetRequestEvent.OPEN_WIDGET:
-                        _local_7 = IRoomObjectController(k.object)._Str_2377().widget;
+                        _local_7 = IRoomObjectController(k.object).getEventHandler().widget;
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.OPEN_WIDGET, _arg_2, _local_3, _local_5, _local_7));
                         return;
                     case RoomObjectWidgetRequestEvent.CLOSE_WIDGET:
-                        _local_7 = IRoomObjectController(k.object)._Str_2377().widget;
+                        _local_7 = IRoomObjectController(k.object).getEventHandler().widget;
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.CLOSE_WIDGET, _arg_2, _local_3, _local_5, _local_7));
                         return;
                     case RoomObjectWidgetRequestEvent.OPEN_FURNI_CONTEXT_MENU:
-                        _local_8 = IRoomObjectController(k.object)._Str_2377().contextMenu;
+                        _local_8 = IRoomObjectController(k.object).getEventHandler().contextMenu;
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.RETWE_OPEN_FURNI_CONTEXT_MENU, _arg_2, _local_3, _local_5, _local_8));
                         return;
                     case RoomObjectWidgetRequestEvent.CLOSE_FURNI_CONTEXT_MENU:
@@ -1689,11 +1689,11 @@
             var _local_5:int = this._roomEngine._Str_3321(_local_4);
             var _local_6:IRoomObjectController = (this._roomEngine.getRoomObject(_arg_2, _local_3, _local_5) as IRoomObjectController);
             var _local_7:IRoomObjectController = this._roomEngine._Str_17216(_arg_2);
-            if ((((!(_local_6 == null)) && (!(_local_7 == null))) && (!(_local_7._Str_2377() == null))))
+            if ((((!(_local_6 == null)) && (!(_local_7 == null))) && (!(_local_7.getEventHandler() == null))))
             {
                 _local_8 = _local_6.getLocation();
                 _local_9 = new RoomObjectUpdateMessage(_local_8, null);
-                _local_7._Str_2377().processUpdateMessage(_local_9);
+                _local_7.getEventHandler().processUpdateMessage(_local_9);
             }
         }
 
@@ -1709,11 +1709,11 @@
                 return false;
             }
             var _local_6:Vector3d = new Vector3d();
-            _local_6._Str_2427(k.getDirection());
+            _local_6.assign(k.getDirection());
             k.setDirection(_arg_2.dir);
             var _local_7:Vector3d = new Vector3d(_arg_3, _arg_4, 0);
             var _local_8:Vector3d = new Vector3d();
-            _local_8._Str_2427(k.getDirection());
+            _local_8.assign(k.getDirection());
             var _local_9:Vector3d = this._Str_21004(k, _local_7, _arg_2.loc, _arg_2.dir, _arg_5);
             if (_local_9 == null)
             {
@@ -1839,7 +1839,7 @@
                 if (_local_6.x == _arg_4.x)
                 {
                     _local_15 = new Vector3d();
-                    _local_15._Str_2427(_arg_3);
+                    _local_15.assign(_arg_3);
                     return _local_15;
                 }
             }
@@ -1943,18 +1943,18 @@
             }
             var _local_4:int = RoomObjectCategoryEnum.CONST_100;
             var _local_5:IRoomObjectController = (this._roomEngine.getRoomObject(k, this._selectedAvatarId, _local_4) as IRoomObjectController);
-            if (((!(_local_5 == null)) && (!(_local_5._Str_2377() == null))))
+            if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
             {
-                _local_5._Str_2377().processUpdateMessage(new RoomObjectAvatarSelectedMessage(false));
+                _local_5.getEventHandler().processUpdateMessage(new RoomObjectAvatarSelectedMessage(false));
                 this._selectedAvatarId = -1;
             }
             var _local_6:Boolean;
             if (_arg_3)
             {
                 _local_5 = (this._roomEngine.getRoomObject(k, _arg_2, _local_4) as IRoomObjectController);
-                if (((!(_local_5 == null)) && (!(_local_5._Str_2377() == null))))
+                if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
                 {
-                    _local_5._Str_2377().processUpdateMessage(new RoomObjectAvatarSelectedMessage(true));
+                    _local_5.getEventHandler().processUpdateMessage(new RoomObjectAvatarSelectedMessage(true));
                     _local_6 = true;
                     this._selectedAvatarId = _arg_2;
                     try
@@ -1967,15 +1967,15 @@
                 }
             }
             var _local_7:IRoomObjectController = this._roomEngine._Str_17216(k);
-            if (((!(_local_7 == null)) && (!(_local_7._Str_2377() == null))))
+            if (((!(_local_7 == null)) && (!(_local_7.getEventHandler() == null))))
             {
                 if (((_local_6) && (!(this._roomEngine._Str_10583()))))
                 {
-                    _local_7._Str_2377().processUpdateMessage(new RoomObjectVisibilityUpdateMessage(RoomObjectVisibilityUpdateMessage.ROVUM_ENABLED));
+                    _local_7.getEventHandler().processUpdateMessage(new RoomObjectVisibilityUpdateMessage(RoomObjectVisibilityUpdateMessage.ROVUM_ENABLED));
                 }
                 else
                 {
-                    _local_7._Str_2377().processUpdateMessage(new RoomObjectVisibilityUpdateMessage(RoomObjectVisibilityUpdateMessage.ROVUM_DISABLED));
+                    _local_7.getEventHandler().processUpdateMessage(new RoomObjectVisibilityUpdateMessage(RoomObjectVisibilityUpdateMessage.ROVUM_DISABLED));
                 }
             }
         }
@@ -2496,7 +2496,7 @@
 			if (this._roomEngine._Str_6374)
             {
                 _local_4 = this._roomEngine._Str_9577(_arg_3);
-                if (((!(_local_4 == null)) && (!(_local_4._Str_2377() == null))))
+                if (((!(_local_4 == null)) && (!(_local_4.getEventHandler() == null))))
                 {
                     _local_5 = (this._roomEngine.getRoomObject(_arg_3, k, RoomObjectCategoryEnum.CONST_100) as IRoomObjectController);
                     _local_6 = null;
@@ -2507,7 +2507,7 @@
                         _local_9 = _local_7.y;
                         _local_10 = _local_7.z;
                         _local_6 = new RoomObjectUpdateMessage(new Vector3d(_local_8, _local_9, _local_10), null);
-                        _local_4._Str_2377().processUpdateMessage(_local_6);
+                        _local_4.getEventHandler().processUpdateMessage(_local_6);
                     }
                 }
                 this._roomEngine._Str_19439._SafeStr_7625(k, _arg_2.altKey, _arg_2.shiftKey);

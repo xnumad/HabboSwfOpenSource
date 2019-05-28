@@ -122,7 +122,7 @@
             return this._data._Str_7959;
         }
 
-        public function get _Str_3022():Boolean
+        public function get isInitialized():Boolean
         {
             return !(this._data == null);
         }

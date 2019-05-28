@@ -16,6 +16,6 @@
         function getImage(_arg_1:int, _arg_2:int):BitmapData;
         function get boundingRectangle():Rectangle;
         function getInstanceId():int;
-        function _Str_3273():int;
+        function getUpdateID():int;
     }
 }

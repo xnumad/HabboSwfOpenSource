@@ -44,8 +44,8 @@
 
     public class BCFloorPlanEditor implements IUpdateReceiver 
     {
-        public static var _Str_13244:Class = _Str_17915;
-        public static var _Str_12857:Class = _Str_16776;
+        public static var _Str_13244:Class = BCFloorPlanEditor__Str_13244;
+        public static var _Str_12857:Class = BCFloorPlanEditor__Str_12857;
         private static const _Str_15936:uint = 2000;
         private static const _Str_14397:int = 16;
 

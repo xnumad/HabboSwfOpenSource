@@ -71,7 +71,7 @@
             }
         }
 
-        public function _Str_772(k:String, _arg_2:int, _arg_3:Array):void
+        public function setOffsets(k:String, _arg_2:int, _arg_3:Array):void
         {
             if (this._canvasOffsets == null)
             {
@@ -85,7 +85,7 @@
             _local_4.add(_arg_2, _arg_3);
         }
 
-        public function _Str_805(k:String, _arg_2:int):Array
+        public function getOffsets(k:String, _arg_2:int):Array
         {
             if (this._canvasOffsets == null)
             {
@@ -129,7 +129,7 @@
 
         public function toString():String
         {
-            return ((((((((((((((((((((((("[ActionDefinition]\n" + "id:           ") + this.id) + "\n") + "state:        ") + this.state) + "\n") + "main:         ") + this._Str_779) + "\n") + "default:      ") + this._Str_804) + "\n") + "geometry:     ") + this.state) + "\n") + "precedence:   ") + this.precedence) + "\n") + "activepartset:") + this.activePartSet) + "\n") + "activepartdef:") + this._Str_778) + "";
+            return ((((((((((((((((((((((("[ActionDefinition]\n" + "id:           ") + this.id) + "\n") + "state:        ") + this.state) + "\n") + "main:         ") + this.isMain) + "\n") + "default:      ") + this.isDefault) + "\n") + "geometry:     ") + this.state) + "\n") + "precedence:   ") + this.precedence) + "\n") + "activepartset:") + this.activePartSet) + "\n") + "activepartdef:") + this.assetPartDefinition) + "";
         }
 
         public function get id():String
@@ -152,17 +152,17 @@
             return this._activePartSet;
         }
 
-        public function get _Str_779():Boolean
+        public function get isMain():Boolean
         {
             return this._isMain;
         }
 
-        public function get _Str_804():Boolean
+        public function get isDefault():Boolean
         {
             return this._isDefault;
         }
 
-        public function get _Str_778():String
+        public function get assetPartDefinition():String
         {
             return this._assetPartDefinition;
         }
@@ -172,22 +172,22 @@
             return this._lay;
         }
 
-        public function get _Str_868():String
+        public function get geometryType():String
         {
             return this._geometryType;
         }
 
-        public function get _Str_861():Boolean
+        public function get isAnimation():Boolean
         {
             return this._isAnimation;
         }
 
-        public function _Str_733(k:String=""):Array
+        public function getPrevents(k:String=""):Array
         {
             return this._prevents.concat(this._Str_1889(k));
         }
 
-        public function _Str_715(k:String=""):Boolean
+        public function getPreventHeadTurn(k:String=""):Boolean
         {
             if (k == "")
             {
@@ -196,12 +196,12 @@
             var _local_2:ActionType = this._types[k];
             if (_local_2 != null)
             {
-                return _local_2._Str_1891;
+                return _local_2.preventHeadTurn;
             }
             return this._preventHeadTurn;
         }
 
-        public function _Str_801(k:String):Boolean
+        public function isAnimated(k:String):Boolean
         {
             if (k == "")
             {
@@ -210,12 +210,12 @@
             var _local_2:ActionType = this._types[k];
             if (_local_2 != null)
             {
-                return _local_2._Str_801;
+                return _local_2.isAnimated;
             }
             return true;
         }
 
-        public function get _Str_812():Boolean
+        public function get startFromFrameZero():Boolean
         {
             return this._startFromFrameZero;
         }

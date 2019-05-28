@@ -30,7 +30,7 @@
             {
                 this._loc = new Vector3d();
             }
-            this._loc._Str_2427(k);
+            this._loc.assign(k);
         }
 
         public function get type():String

@@ -87,17 +87,17 @@
             super();
             this._Str_16308 = _arg_8;
             this._Str_5221 = new Vector3d();
-            this._Str_5221._Str_2427(k);
+            this._Str_5221.assign(k);
             this._location = new Vector3d();
-            this._location._Str_2427(_arg_2);
+            this._location.assign(_arg_2);
             this._Str_2920 = new Vector3d();
-            this._Str_2920._Str_2427(_arg_3);
+            this._Str_2920.assign(_arg_3);
             this._Str_2943 = new Vector3d();
-            this._Str_2943._Str_2427(_arg_4);
-            this._normal = Vector3d._Str_7423(this._Str_2920, this._Str_2943);
+            this._Str_2943.assign(_arg_4);
+            this._normal = Vector3d.crossProduct(this._Str_2920, this._Str_2943);
             if (this._normal.length > 0)
             {
-                this._normal._Str_6038((1 / this._normal.length));
+                this._normal.mul((1 / this._normal.length));
             }
             if (_arg_7 != null)
             {
@@ -108,7 +108,7 @@
                     if (_local_14 != null)
                     {
                         _local_15 = new Vector3d();
-                        _local_15._Str_2427(_local_14);
+                        _local_15.assign(_local_14);
                         this._Str_5886.push(_local_15);
                     }
                     _local_13++;
@@ -495,7 +495,7 @@
                     _local_7 = this._Str_4795._Str_8361(_local_2.type);
                     if (_local_7 != null)
                     {
-                        _local_8 = _local_7._Str_2125(k.scale);
+                        _local_8 = _local_7.getAliasByName(k.scale);
                         if (_local_8 != null)
                         {
                             _local_9 = k.getCoordinatePosition(this._normal);
@@ -560,7 +560,7 @@
                                     assetNames = [];
                                     for each (cell in column._Str_22299())
                                     {
-                                        name = cell._Str_2125(normal);
+                                        name = cell.getAliasByName(normal);
                                         if (name != null)
                                         {
                                             assetNames.push(name);
@@ -733,10 +733,10 @@
 
         private function _Str_18702(k:IRoomGeometry):void
         {
-            this._Str_2820._Str_2427(k.getScreenPosition(this._location));
-            this._Str_2745._Str_2427(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2943)));
-            this._Str_2639._Str_2427(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._location, this._Str_2920), this._Str_2943)));
-            this._Str_2766._Str_2427(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2920)));
+            this._Str_2820.assign(k.getScreenPosition(this._location));
+            this._Str_2745.assign(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2943)));
+            this._Str_2639.assign(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._location, this._Str_2920), this._Str_2943)));
+            this._Str_2766.assign(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2920)));
             this._offset = k.getScreenPoint(this._Str_5221);
             this._Str_2820.x = Math.round(this._Str_2820.x);
             this._Str_2820.y = Math.round(this._Str_2820.y);

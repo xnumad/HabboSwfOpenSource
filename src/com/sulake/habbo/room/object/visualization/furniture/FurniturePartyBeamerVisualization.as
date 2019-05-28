@@ -31,12 +31,12 @@
             {
                 this._Str_25137(k);
             }
-            _local_2 = _Str_2505(2);
+            _local_2 = getSprite(2);
             if (_local_2 != null)
             {
                 this._animOffsetIndex[0] = this._Str_21664(k, 0);
             }
-            _local_2 = _Str_2505(3);
+            _local_2 = getSprite(3);
             if (_local_2 != null)
             {
                 this._animOffsetIndex[1] = this._Str_21664(k, 1);

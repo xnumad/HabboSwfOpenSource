@@ -7,7 +7,7 @@
 
     public class HabboTrackingLib extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_10456;
+        public static var manifest:Class = HabboTrackingLib_manifest;
         public static var requiredClasses:Array = new Array(HabboTrackingBootstrap, IIDHabboTracking);
     }
 }

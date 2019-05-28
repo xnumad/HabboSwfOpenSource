@@ -16,7 +16,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectDataRequestEvent.RODRE_CURRENT_USER_ID]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectDataRequestEvent.RODRE_CURRENT_USER_ID]);
         }
 
         override public function update(k:int):void
@@ -27,7 +27,7 @@
                 eventDispatcher.dispatchEvent(new RoomObjectDataRequestEvent(RoomObjectDataRequestEvent.RODRE_CURRENT_USER_ID, object));
             }
             var _local_2:IRoomObjectModel = object.getModel();
-            var _local_3:String = _local_2._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA).getValue("renterId");
+            var _local_3:String = _local_2.getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA).getValue("renterId");
             var _local_4:Number = _local_2.getNumber(RoomObjectVariableEnum.SESSION_CURRENT_USER_ID);
             if (_local_3 != null)
             {

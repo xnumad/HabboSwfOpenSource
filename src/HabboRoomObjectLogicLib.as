@@ -7,7 +7,7 @@
 
     public class HabboRoomObjectLogicLib extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_12706;
+        public static var manifest:Class = HabboRoomObjectLogicLib_manifest;
         public static var requiredClasses:Array = new Array(RoomObjectFactoryBootstrap, IIDRoomObjectFactory);
     }
 }

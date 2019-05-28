@@ -15,7 +15,7 @@
 
         override public function getEventTypes():Array
         {
-            return _Str_2414(super.getEventTypes(), [RoomObjectDataRequestEvent.RODRE_URL_PREFIX]);
+            return getAllEventTypes(super.getEventTypes(), [RoomObjectDataRequestEvent.RODRE_URL_PREFIX]);
         }
 
         override public function update(k:int):void

@@ -8,11 +8,11 @@
 
     public class HabboRoomObjectVisualizationLib extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_13938;
-        public static var pet_experience_bubble_png:Class = _Str_13988;
-        public static var snowball_small_png:Class = _Str_15015;
-        public static var snowball_small_shadow_png:Class = _Str_13424;
-        public static var snowball_big_png:Class = _Str_13103;
+        public static var manifest:Class = HabboRoomObjectVisualizationLib_manifest;
+        public static var pet_experience_bubble_png:Class = HabboRoomObjectVisualizationLib_pet_experience_bubble_png;
+        public static var snowball_small_png:Class = HabboRoomObjectVisualizationLib_snowball_small_png;
+        public static var snowball_small_shadow_png:Class = HabboRoomObjectVisualizationLib_snowball_small_shadow_png;
+        public static var snowball_big_png:Class = HabboRoomObjectVisualizationLib_snowball_big_png;
         public static var snowball_splash_1:Class = HabboRoomObjectVisualizationLib_snowball_splash_1;
         public static var snowball_splash_2:Class = HabboRoomObjectVisualizationLib_snowball_splash_2;
         public static var snowball_splash_3:Class = HabboRoomObjectVisualizationLib_snowball_splash_3;

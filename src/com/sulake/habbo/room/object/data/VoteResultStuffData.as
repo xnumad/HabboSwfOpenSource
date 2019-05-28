@@ -31,13 +31,13 @@
             var data:Map = new Map();
             data.add(S, this._state);
             data.add(R, this._result.toString());
-            k._Str_17971(RoomObjectVariableEnum.FURNITURE_DATA, data);
+            k.setStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA, data);
         }
 
         override public function initializeFromRoomObjectModel(k:IRoomObjectModel):void
         {
             super.initializeFromRoomObjectModel(k);
-            var _local_2:Map = k._Str_6183(RoomObjectVariableEnum.FURNITURE_DATA);
+            var _local_2:Map = k.getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             this._state = _local_2.getValue(S);
             this._result = int(_local_2.getValue(R));
         }

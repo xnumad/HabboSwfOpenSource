@@ -98,7 +98,7 @@
             }
             if (this._canvasId >= 0)
             {
-                this._roomSprite = this._visualization._Str_2505(this._canvasId);
+                this._roomSprite = this._visualization.getSprite(this._canvasId);
                 if (((this._roomSprite) && (this._roomSprite.asset)))
                 {
                     if (((this._roomSprite.width <= 1) || (this._roomSprite.height <= 1)))
@@ -165,7 +165,7 @@
             {
                 if (this._currentEmitter._Str_9107 >= 0)
                 {
-                    this._visualization._Str_2505(this._currentEmitter._Str_9107).visible = false;
+                    this._visualization.getSprite(this._currentEmitter._Str_9107).visible = false;
                 }
             }
         }
@@ -197,7 +197,7 @@
             {
                 if (this._currentEmitter._Str_9107 >= 0)
                 {
-                    this._visualization._Str_2505(this._currentEmitter._Str_9107).visible = false;
+                    this._visualization.getSprite(this._currentEmitter._Str_9107).visible = false;
                 }
                 if (!this._canvas)
                 {
@@ -303,7 +303,7 @@
                     _local_22 = [];
                     for each (_local_25 in _local_24.frame)
                     {
-                        _local_23 = this._visualization._Str_2697.getAsset(_local_25.@name);
+                        _local_23 = this._visualization.assetCollection.getAsset(_local_25.@name);
                         _local_22.push(_local_23);
                     }
                     _local_8._Str_24892(_local_19, _local_20, _local_22, _local_21);

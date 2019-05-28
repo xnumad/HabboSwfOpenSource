@@ -135,7 +135,7 @@
                     _local_3 = true;
                 }
             }
-            if (this._inventory._Str_3022)
+            if (this._inventory.isInitialized)
             {
                 this._inventory._Str_6956();
                 this._inventory._Str_2834._Str_22285();

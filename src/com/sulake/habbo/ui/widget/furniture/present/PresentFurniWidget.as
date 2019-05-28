@@ -873,11 +873,11 @@
                 k = this._roomEngine.activeRoomId;
                 if (this._placedItemType == ProductTypeEnum.PET)
                 {
-                    _local_2 = this._roomEngine._Str_3391(k, RoomObjectCategoryEnum.CONST_100);
+                    _local_2 = this._roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_100);
                     _local_3 = 0;
                     while (_local_3 < _local_2)
                     {
-                        _local_4 = this._roomEngine._Str_3652(k, _local_3, RoomObjectCategoryEnum.CONST_100);
+                        _local_4 = this._roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.CONST_100);
                         _local_5 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                         if (((!(_local_5 == null)) && (_local_5._Str_2394 == this._placedItemId)))
                         {

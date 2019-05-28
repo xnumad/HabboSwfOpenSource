@@ -112,7 +112,7 @@
             }
             var k:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName("color_preview_bitmap"));
             var _local_2:BitmapData = new BitmapData(k.width, k.height, false);
-            var _local_3:uint = ColorConverter._Str_13949(((((this._hue & 0xFF) << 16) + ((this._saturation & 0xFF) << 8)) + (this._lightness & 0xFF)));
+            var _local_3:uint = ColorConverter.hslToRGB(((((this._hue & 0xFF) << 16) + ((this._saturation & 0xFF) << 8)) + (this._lightness & 0xFF)));
             _local_2.fillRect(_local_2.rect, _local_3);
             k.bitmap = _local_2;
         }

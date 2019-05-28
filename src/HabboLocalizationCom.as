@@ -12,6 +12,6 @@
     public class HabboLocalizationCom extends SimpleApplication 
     {
         public static var requiredClasses:Array = new Array(HabboLocalizationManagerBootstrap, IIDCoreLocalizationManager, IIDHabboLocalizationManager, ICoreLocalizationManager, IHabboLocalizationManager, HabboLocalizationManager);
-        public static var manifest:Class = _Str_10296;
+        public static var manifest:Class = HabboLocalizationCom_manifest;
     }
 }

@@ -30,8 +30,8 @@
             this._id = k;
             this._typeId = _arg_2;
             this._type = _arg_3;
-            this._loc._Str_2427(_arg_4);
-            this._dir._Str_2427(_arg_5);
+            this._loc.assign(_arg_4);
+            this._dir.assign(_arg_5);
             this._state = _arg_6;
             this._data = _arg_7;
             this._extra = _arg_8;

@@ -4,20 +4,20 @@
 
     public class RoomObjectSortableSpriteCacheItem 
     {
-        private var _Str_1786:Array;
+        private var _layersInUse:Array;
         private var _updateId1:int = -1;
         private var _updateId2:int = -1;
         private var _isEmpty:Boolean = false;
 
         public function RoomObjectSortableSpriteCacheItem()
         {
-            this._Str_1786 = [];
+            this._layersInUse = [];
             super();
         }
 
-        public function get _Str_3008():int
+        public function get spriteCount():int
         {
-            return this._Str_1786.length;
+            return this._layersInUse.length;
         }
 
         public function get isEmpty():Boolean
@@ -30,19 +30,19 @@
             this._Str_20276(0);
         }
 
-        public function _Str_12937(k:SortableSprite):void
+        public function addSprite(k:SortableSprite):void
         {
-            this._Str_1786.push(k);
+            this._layersInUse.push(k);
         }
 
-        public function _Str_2505(k:int):SortableSprite
+        public function getSprite(k:int):SortableSprite
         {
-            return this._Str_1786[k];
+            return this._layersInUse[k];
         }
 
         public function get _Str_9272():Array
         {
-            return this._Str_1786;
+            return this._layersInUse;
         }
 
         public function _Str_17574(k:int, _arg_2:int):Boolean
@@ -60,21 +60,21 @@
         {
             var _local_2:int;
             var _local_3:SortableSprite;
-            if (k < this._Str_1786.length)
+            if (k < this._layersInUse.length)
             {
                 _local_2 = k;
-                while (_local_2 < this._Str_1786.length)
+                while (_local_2 < this._layersInUse.length)
                 {
-                    _local_3 = this._Str_1786[_local_2];
+                    _local_3 = this._layersInUse[_local_2];
                     if (_local_3)
                     {
                         _local_3.dispose();
                     }
                     _local_2++;
                 }
-                this._Str_1786.splice(k, (this._Str_1786.length - k));
+                this._layersInUse.splice(k, (this._layersInUse.length - k));
             }
-            if (this._Str_1786.length == 0)
+            if (this._layersInUse.length == 0)
             {
                 this._isEmpty = true;
             }

@@ -176,7 +176,7 @@
             return this._overriddenActions.getKeys();
         }
 
-        public function _Str_707(k:String):String
+        public function overridingAction(k:String):String
         {
             if (!this._overriddenActions)
             {
@@ -238,7 +238,7 @@
             return _local_3;
         }
 
-        public function _Str_607(k:int, _arg_2:String, _arg_3:String=null):AnimationLayerData
+        public function getLayerData(k:int, _arg_2:String, _arg_3:String=null):AnimationLayerData
         {
             var _local_4:AnimationLayerData;
             var _local_5:AddDataContainer;
@@ -262,17 +262,17 @@
             return null;
         }
 
-        public function _Str_872():Boolean
+        public function hasAvatarData():Boolean
         {
             return !(this._avatarData == null);
         }
 
-        public function _Str_776():Boolean
+        public function hasDirectionData():Boolean
         {
             return !(this._directionData == null);
         }
 
-        public function _Str_706():Boolean
+        public function hasAddData():Boolean
         {
             return !(this._addData == null);
         }
@@ -298,7 +298,7 @@
             return this._id;
         }
 
-        public function get _Str_786():Array
+        public function get spriteData():Array
         {
             return (this._spriteData) ? this._spriteData : _Str_2211;
         }
@@ -313,12 +313,12 @@
             return this._directionData;
         }
 
-        public function get _Str_652():Array
+        public function get removeData():Array
         {
             return (this._removeData) ? this._removeData : _Str_2211;
         }
 
-        public function get _Str_687():Array
+        public function get addData():Array
         {
             return (this._addData) ? this._addData : _Str_2211;
         }

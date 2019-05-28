@@ -6,7 +6,7 @@
     {
         function get ink():int;
         function get colorTransform():ColorTransform;
-        function get _Str_832():Boolean;
+        function get paletteIsGrayscale():Boolean;
         function get reds():Array;
         function get greens():Array;
         function get blues():Array;

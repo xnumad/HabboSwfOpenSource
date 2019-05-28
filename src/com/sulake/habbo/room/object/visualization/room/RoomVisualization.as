@@ -200,7 +200,7 @@
                 return false;
             }
             this._Str_594 = (k as RoomVisualizationData);
-            this._Str_594._Str_6703(_Str_2697);
+            this._Str_594._Str_6703(assetCollection);
             return true;
         }
 
@@ -209,12 +209,12 @@
             var _local_3:RoomPlane;
             var _local_4:IRoomObjectSprite;
             var k:int = this._Str_2540.length;
-            _Str_3773(k);
+            createSprites(k);
             var _local_2:int;
             while (_local_2 < k)
             {
                 _local_3 = (this._Str_2540[_local_2] as RoomPlane);
-                _local_4 = _Str_2505(_local_2);
+                _local_4 = getSprite(_local_2);
                 if (((((!(_local_4 == null)) && (!(_local_3 == null))) && (!(_local_3._Str_5424 == null))) && (!(_local_3._Str_4968 == null))))
                 {
                     if (((_local_3.type == RoomPlane._Str_3587) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
@@ -301,7 +301,7 @@
                 _local_13 = null;
                 if ((((!(_local_8 == null)) && (!(_local_9 == null))) && (!(_local_10 == null))))
                 {
-                    _local_14 = Vector3d._Str_7423(_local_9, _local_10);
+                    _local_14 = Vector3d.crossProduct(_local_9, _local_10);
                     _local_6 = ((_local_6 * 7613) + 517);
                     _local_13 = null;
                     if (_local_12 == RoomPlaneData._Str_6072)
@@ -548,7 +548,7 @@
                 while (_local_10 < this._Str_4864.length)
                 {
                     _local_11 = this._Str_6648[_local_10];
-                    _local_12 = _Str_2505(_local_11);
+                    _local_12 = getSprite(_local_11);
                     _local_13 = (this._Str_4864[_local_10] as RoomPlane);
                     if ((((!(_local_12 == null)) && (!(_local_13 == null))) && (!(_local_13.type == RoomPlane._Str_3272))))
                     {
@@ -569,9 +569,9 @@
                     }
                     _local_10++;
                 }
-                _Str_6936();
+                increaseUpdateId();
             }
-            _Str_3603 = _local_7._Str_3273();
+            _modelUpdateID = _local_7.getUpdateID();
             this._Str_4631 = _local_9;
         }
 
@@ -602,7 +602,7 @@
             var _local_4:uint;
             var _local_5:Boolean;
             var _local_2:Boolean;
-            if (_Str_3603 != k._Str_3273())
+            if (_modelUpdateID != k.getUpdateID())
             {
                 _local_3 = k.getString(RoomObjectVariableEnum.ROOM_PLANE_MASK_XML);
                 if (_local_3 != this._Str_16710)
@@ -638,7 +638,7 @@
             var _local_5:Boolean;
             var _local_6:Boolean;
             var _local_7:Boolean;
-            if (_Str_3603 != k._Str_3273())
+            if (_modelUpdateID != k.getUpdateID())
             {
                 _local_2 = k.getString(RoomObjectVariableEnum.ROOM_WALL_TYPE);
                 _local_3 = k.getString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
@@ -657,7 +657,7 @@
         {
             var _local_2:Number;
             var _local_3:Number;
-            if (_Str_3603 != k._Str_3273())
+            if (_modelUpdateID != k.getUpdateID())
             {
                 _local_2 = k.getNumber(RoomObjectVariableEnum.ROOM_FLOOR_THICKNESS);
                 _local_3 = k.getNumber(RoomObjectVariableEnum.ROOM_WALL_THICKNESS);
@@ -675,7 +675,7 @@
         private function _Str_18134(k:IRoomObjectModel):Boolean
         {
             var _local_2:Number;
-            if (_Str_3603 != k._Str_3273())
+            if (_modelUpdateID != k.getUpdateID())
             {
                 _local_2 = k.getNumber(RoomObjectVariableEnum.ROOM_FLOOR_HOLE_UPDATE_TIME);
                 if (((!(isNaN(_local_2))) && (!(_local_2 == this._Str_19240))))
@@ -799,7 +799,7 @@
                 {
                     _local_10 = this._Str_6648[_local_9];
                 }
-                _local_11 = _Str_2505(_local_10);
+                _local_11 = getSprite(_local_10);
                 if (_local_11 != null)
                 {
                     _local_12 = (_local_6[_local_9] as RoomPlane);
@@ -943,14 +943,14 @@
                         {
                             if ((((!(_local_3 == null)) && (!(_local_3.location == null))) && (!(_local_3.normal == null))))
                             {
-                                _local_14 = Vector3d._Str_5385(_local_11, _local_3.location);
-                                _local_15 = Math.abs(Vector3d._Str_4733(_local_14, _local_3.normal));
+                                _local_14 = Vector3d.dif(_local_11, _local_3.location);
+                                _local_15 = Math.abs(Vector3d.scalarProjection(_local_14, _local_3.normal));
                                 if (_local_15 < 0.01)
                                 {
                                     if (((!(_local_3._Str_5424 == null)) && (!(_local_3._Str_4968 == null))))
                                     {
-                                        _local_16 = Vector3d._Str_4733(_local_14, _local_3._Str_5424);
-                                        _local_17 = Vector3d._Str_4733(_local_14, _local_3._Str_4968);
+                                        _local_16 = Vector3d.scalarProjection(_local_14, _local_3._Str_5424);
+                                        _local_17 = Vector3d.scalarProjection(_local_14, _local_3._Str_4968);
                                         if (((_local_3.type == RoomPlane._Str_3587) || ((_local_3.type == RoomPlane._Str_3272) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
                                         {
                                             _local_3._Str_24569(_local_10, _local_16, _local_17);

@@ -3,13 +3,13 @@
     public interface IActiveActionData 
     {
         function get id():String;
-        function get _Str_695():String;
-        function get _Str_727():String;
-        function set _Str_727(_arg_1:String):void;
-        function get _Str_664():int;
-        function get _Str_742():IActionDefinition;
-        function set _Str_742(_arg_1:IActionDefinition):void;
-        function get _Str_707():String;
-        function set _Str_707(_arg_1:String):void;
+        function get actionType():String;
+        function get actionParameter():String;
+        function set actionParameter(_arg_1:String):void;
+        function get startFrame():int;
+        function get definition():IActionDefinition;
+        function set definition(_arg_1:IActionDefinition):void;
+        function get overridingAction():String;
+        function set overridingAction(_arg_1:String):void;
     }
 }

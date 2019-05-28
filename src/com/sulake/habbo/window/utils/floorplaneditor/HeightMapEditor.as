@@ -14,10 +14,10 @@
 
     public class HeightMapEditor 
     {
-        public static var _Str_9308:Class = _Str_15339;
-        public static var _Str_8636:Class = _Str_12720;
-        public static var _Str_14896:Class = _Str_14273;
-        public static var _Str_14803:Class = _Str_15580;
+        public static var _Str_9308:Class = HeightMapEditor__Str_9308;
+        public static var _Str_8636:Class = HeightMapEditor__Str_8636;
+        public static var _Str_14896:Class = HeightMapEditor__Str_14896;
+        public static var _Str_14803:Class = HeightMapEditor__Str_14803;
         public static const _Str_7283:int = 30;
 
         private var _Str_2594:BCFloorPlanEditor;

@@ -165,20 +165,20 @@
 
         override public function getImage(k:int, _arg_2:int):BitmapData
         {
-            if (!_Str_2697)
+            if (!assetCollection)
             {
                 return new BitmapData(1, 1, true, 0);
             }
             var _local_3:String = _Str_12961(_arg_2, 32);
-            if (((_Str_2697.getAsset(_local_3) == null) && (object)))
+            if (((assetCollection.getAsset(_local_3) == null) && (object)))
             {
                 _local_3 = (object.getType() + "_icon_a");
             }
-            if (_Str_2697.getAsset(_local_3) == null)
+            if (assetCollection.getAsset(_local_3) == null)
             {
                 return new BitmapData(1, 1, true, 0);
             }
-            var _local_4:Object = _Str_2697.getAsset(_local_3).asset.content;
+            var _local_4:Object = assetCollection.getAsset(_local_3).asset.content;
             if (!_local_4)
             {
                 return new BitmapData(1, 1, true, 0);

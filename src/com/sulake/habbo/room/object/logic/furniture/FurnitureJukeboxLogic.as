@@ -23,7 +23,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectFurnitureActionEvent.JUKEBOX_START, RoomObjectFurnitureActionEvent.JUKEBOX_MACHINE_STOP, RoomObjectFurnitureActionEvent.JUKEBOX_DISPOSE, RoomObjectFurnitureActionEvent.JUKEBOX_INIT, RoomObjectWidgetRequestEvent.JUKEBOX_PLAYLIST_EDITOR];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function dispose():void

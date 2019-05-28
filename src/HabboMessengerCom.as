@@ -8,22 +8,22 @@
 
     public class HabboMessengerCom extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_15590;
-        public static var close_png:Class = _Str_15078;
-        public static var convo_bg_png:Class = _Str_14649;
-        public static var follow_friend_png:Class = _Str_14618;
-        public static var minimail_png:Class = _Str_14864;
-        public static var next_png:Class = _Str_15410;
-        public static var prev_png:Class = _Str_15326;
-        public static var resize_png:Class = _Str_13295;
-        public static var tab_bg_hilite_png:Class = _Str_13823;
-        public static var tab_bg_next_png:Class = _Str_14033;
-        public static var tab_bg_sel_png:Class = _Str_12842;
-        public static var tab_bg_unsel_png:Class = _Str_13477;
-        public static var main_window_xml:Class = _Str_14075;
-        public static var msg_entry_xml:Class = _Str_13462;
-        public static var tab_entry_xml:Class = _Str_15807;
-        public static var messenger_xml:Class = _Str_14068;
+        public static var manifest:Class = HabboMessengerCom_manifest;
+        public static var close_png:Class = HabboMessengerCom_close_png;
+        public static var convo_bg_png:Class = HabboMessengerCom_convo_bg_png;
+        public static var follow_friend_png:Class = HabboMessengerCom_follow_friend_png;
+        public static var minimail_png:Class = HabboMessengerCom_minimail_png;
+        public static var next_png:Class = HabboMessengerCom_next_png;
+        public static var prev_png:Class = HabboMessengerCom_prev_png;
+        public static var resize_png:Class = HabboMessengerCom_resize_png;
+        public static var tab_bg_hilite_png:Class = HabboMessengerCom_tab_bg_hilite_png;
+        public static var tab_bg_next_png:Class = HabboMessengerCom_tab_bg_next_png;
+        public static var tab_bg_sel_png:Class = HabboMessengerCom_tab_bg_sel_png;
+        public static var tab_bg_unsel_png:Class = HabboMessengerCom_tab_bg_unsel_png;
+        public static var main_window_xml:Class = HabboMessengerCom_main_window_xml;
+        public static var msg_entry_xml:Class = HabboMessengerCom_msg_entry_xml;
+        public static var tab_entry_xml:Class = HabboMessengerCom_tab_entry_xml;
+        public static var messenger_xml:Class = HabboMessengerCom_messenger_xml;
         public static var requiredClasses:Array = new Array(HabboMessengerBootstrap, IIDHabboMessenger);
     }
 }

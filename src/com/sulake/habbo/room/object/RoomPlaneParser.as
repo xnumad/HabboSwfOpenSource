@@ -943,7 +943,7 @@
                     _local_17 = ((this.wallHeight + Math.min(_Str_13826, this._Str_7678)) - _local_13);
                     _local_18 = Vector3d.product(_local_11, -(_local_10));
                     _local_19 = new Vector3d(0, 0, _local_17);
-                    _local_16 = Vector3d._Str_5385(_local_16, _local_18);
+                    _local_16 = Vector3d.dif(_local_16, _local_18);
                     _local_20 = this._Str_20164(_local_8, k._Str_19138(_local_7), _arg_2);
                     if (_local_20 >= 0)
                     {
@@ -1173,7 +1173,7 @@
             this._Str_3453(RoomPlaneData._Str_7988, k, _arg_2, _arg_3, [_arg_4]);
             var _local_8:Number = (_Str_6429 * this._wallThicknessMultiplier);
             var _local_9:Number = (_Str_6100 * this._floorThicknessMultiplier);
-            var _local_10:Vector3d = Vector3d._Str_7423(_arg_2, _arg_3);
+            var _local_10:Vector3d = Vector3d.crossProduct(_arg_2, _arg_3);
             var _local_11:Vector3d = Vector3d.product(_local_10, ((1 / _local_10.length) * -(_local_8)));
             this._Str_3453(RoomPlaneData._Str_6206, Vector3d.sum(k, _arg_3), _arg_2, _local_11, [_local_10, _arg_4]);
             if (_arg_5)
@@ -1201,7 +1201,7 @@
             {
                 _local_9 = (_Str_6100 * this._floorThicknessMultiplier);
                 _local_10 = new Vector3d(0, 0, _local_9);
-                _local_11 = Vector3d._Str_5385(k, _local_10);
+                _local_11 = Vector3d.dif(k, _local_10);
                 if (_arg_6)
                 {
                     this._Str_3453(RoomPlaneData._Str_6072, _local_11, _arg_2, _local_10);

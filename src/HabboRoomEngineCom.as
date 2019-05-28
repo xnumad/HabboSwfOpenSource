@@ -7,7 +7,7 @@
 
     public class HabboRoomEngineCom extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_13623;
+        public static var manifest:Class = HabboRoomEngineCom_manifest;
         public static var requiredClasses:Array = new Array(RoomEngineBootstrap, IIDRoomEngine);
     }
 }

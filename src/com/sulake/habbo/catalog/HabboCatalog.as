@@ -954,7 +954,7 @@
 
         private function _Str_22913():void
         {
-            if ((((!(this._roomEngine == null)) && (this._roomEngine._Str_3022)) && (getBoolean("catalog.furniture.animation"))))
+            if ((((!(this._roomEngine == null)) && (this._roomEngine.isInitialized)) && (getBoolean("catalog.furniture.animation"))))
             {
                 if (this._Str_2616 == null)
                 {
@@ -2373,11 +2373,11 @@
             }
             if (this._Str_10140 <= 0)
             {
-                _local_2 = this.roomEngine._Str_3391(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_100);
+                _local_2 = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_100);
                 _local_3 = 0;
                 while (_local_3 < _local_2)
                 {
-                    _local_4 = this.roomEngine._Str_3652(this.roomSession.roomId, _local_3, RoomObjectCategoryEnum.CONST_100);
+                    _local_4 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, _local_3, RoomObjectCategoryEnum.CONST_100);
                     _local_5 = this.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                     if (((((!(_local_5 == null)) && (_local_5.type == RoomObjectTypeEnum.HABBO)) && (!(_local_5._Str_2713 == this.roomSession._Str_3871))) && (!(_local_5._Str_3853))))
                     {
@@ -3223,22 +3223,22 @@
             {
                 return false;
             }
-            var _local_2:int = this.roomEngine._Str_3391(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_10);
+            var _local_2:int = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_10);
             k = 0;
             while (k < _local_2)
             {
-                _local_4 = this.roomEngine._Str_3652(this.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10);
+                _local_4 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10);
                 if (_Str_6093._Str_7070(_local_4.getId()))
                 {
                     return true;
                 }
                 k++;
             }
-            var _local_3:int = this.roomEngine._Str_3391(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_20);
+            var _local_3:int = this.roomEngine.getRoomObjectCount(this.roomSession.roomId, RoomObjectCategoryEnum.CONST_20);
             k = 0;
             while (k < _local_3)
             {
-                _local_5 = this.roomEngine._Str_3652(this.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_20);
+                _local_5 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_20);
                 if (_Str_6093._Str_7070(_local_5.getId()))
                 {
                     return true;

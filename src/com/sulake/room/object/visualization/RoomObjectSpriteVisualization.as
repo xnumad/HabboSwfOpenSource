@@ -14,53 +14,53 @@
     {
         private static var _Str_3822:int = 0;
 
-        private var _Str_1786:Array;
+        private var _layersInUse:Array;
         private var _object:IRoomObject;
-        private var _Str_4089:IGraphicAssetCollection;
-        protected var _Str_7475:int = -1;
-        protected var _Str_3603:int = -1;
-        protected var _Str_3289:int = -1;
-        private var _Str_4848:int = 0;
-        private var _Str_2542:int = 0;
+        private var _assetCollection:IGraphicAssetCollection;
+        protected var _objectUpdateID:int = -1;
+        protected var _modelUpdateID:int = -1;
+        protected var _currentScale:int = -1;
+        private var _instanceId:int = 0;
+        private var _updateID:int = 0;
 
         public function RoomObjectSpriteVisualization()
         {
-            this._Str_4848 = _Str_3822++;
-            this._Str_1786 = [];
+            this._instanceId = _Str_3822++;
+            this._layersInUse = [];
             this._object = null;
-            this._Str_4089 = null;
+            this._assetCollection = null;
         }
 
         public function dispose():void
         {
             var k:RoomObjectSprite;
-            if (this._Str_1786 != null)
+            if (this._layersInUse != null)
             {
-                while (this._Str_1786.length > 0)
+                while (this._layersInUse.length > 0)
                 {
-                    k = (this._Str_1786[0] as RoomObjectSprite);
+                    k = (this._layersInUse[0] as RoomObjectSprite);
                     if (k != null)
                     {
                         k.dispose();
                     }
-                    this._Str_1786.pop();
+                    this._layersInUse.pop();
                 }
-                this._Str_1786 = null;
+                this._layersInUse = null;
             }
             this._object = null;
-            this._Str_2697 = null;
+            this.assetCollection = null;
         }
 
-        public function set _Str_2697(k:IGraphicAssetCollection):void
+        public function set assetCollection(k:IGraphicAssetCollection):void
         {
-            if (this._Str_4089 != null)
+            if (this._assetCollection != null)
             {
-                this._Str_4089._Str_19942();
+                this._assetCollection._Str_19942();
             }
-            this._Str_4089 = k;
-            if (this._Str_4089 != null)
+            this._assetCollection = k;
+            if (this._assetCollection != null)
             {
-                this._Str_4089._Str_9215();
+                this._assetCollection._Str_9215();
             }
         }
 
@@ -68,80 +68,80 @@
         {
         }
 
-        public function get _Str_2697():IGraphicAssetCollection
+        public function get assetCollection():IGraphicAssetCollection
         {
-            return this._Str_4089;
+            return this._assetCollection;
         }
 
-        public function _Str_3273():int
+        public function getUpdateID():int
         {
-            return this._Str_2542;
+            return this._updateID;
         }
 
         public function getInstanceId():int
         {
-            return this._Str_4848;
+            return this._instanceId;
         }
 
-        protected function _Str_3773(k:int):void
+        protected function createSprites(k:int):void
         {
             var _local_2:RoomObjectSprite;
-            while (this._Str_1786.length > k)
+            while (this._layersInUse.length > k)
             {
-                _local_2 = (this._Str_1786[(this._Str_1786.length - 1)] as RoomObjectSprite);
+                _local_2 = (this._layersInUse[(this._layersInUse.length - 1)] as RoomObjectSprite);
                 if (_local_2 != null)
                 {
                     _local_2.dispose();
                 }
-                this._Str_1786.pop();
+                this._layersInUse.pop();
             }
-            while (this._Str_1786.length < k)
+            while (this._layersInUse.length < k)
             {
                 _local_2 = new RoomObjectSprite();
-                this._Str_1786.push(_local_2);
+                this._layersInUse.push(_local_2);
             }
         }
 
-        public function _Str_12937():IRoomObjectSprite
+        public function addSprite():IRoomObjectSprite
         {
-            return this._Str_23271(this._Str_1786.length);
+            return this.addSpriteAt(this._layersInUse.length);
         }
 
-        public function _Str_23271(k:int):IRoomObjectSprite
+        public function addSpriteAt(k:int):IRoomObjectSprite
         {
             var _local_2:IRoomObjectSprite = new RoomObjectSprite();
-            if (k >= this._Str_1786.length)
+            if (k >= this._layersInUse.length)
             {
-                this._Str_1786.push(_local_2);
+                this._layersInUse.push(_local_2);
             }
             else
             {
-                this._Str_1786.splice(k, 0, _local_2);
+                this._layersInUse.splice(k, 0, _local_2);
             }
             return _local_2;
         }
 
-        public function _Str_26355(k:IRoomObjectSprite):void
+        public function removeSprite(k:IRoomObjectSprite):void
         {
-            var _local_2:int = this._Str_1786.indexOf(k);
+            var _local_2:int = this._layersInUse.indexOf(k);
             if (_local_2 == -1)
             {
                 throw (new Error("Trying to remove non-existing sprite!"));
             }
-            this._Str_1786.splice(_local_2, 1);
+            this._layersInUse.splice(_local_2, 1);
             RoomObjectSprite(k).dispose();
         }
 
-        public function get _Str_3008():int
+        public function get spriteCount():int
         {
-            return this._Str_1786.length;
+            return this._layersInUse.length;
         }
 
-        public function _Str_2505(k:int):IRoomObjectSprite
+        public function getSprite(k:int):IRoomObjectSprite
         {
-            if (((k >= 0) && (k < this._Str_1786.length)))
+            if (((k >= 0) && (k < this._layersInUse.length)))
             {
-                return this._Str_1786[k];
+                return this._layersInUse[k];
             }
             return null;
         }
@@ -160,16 +160,16 @@
         {
         }
 
-        protected function _Str_6936():void
+        protected function increaseUpdateId():void
         {
-            this._Str_2542++;
+            this._updateID++;
         }
 
         protected function reset():void
         {
-            this._Str_7475 = 0xFFFFFFFF;
-            this._Str_3603 = 0xFFFFFFFF;
-            this._Str_3289 = -1;
+            this._objectUpdateID = 0xFFFFFFFF;
+            this._modelUpdateID = 0xFFFFFFFF;
+            this._currentScale = -1;
         }
 
         public function getSpriteList():Array
@@ -203,7 +203,7 @@
             {
                 return null;
             }
-            var count:int = this._Str_3008;
+            var count:int = this.spriteCount;
             var objectSprite:IRoomObjectSprite;
             var spriteList:Array = [];
             var index:int;
@@ -211,7 +211,7 @@
             index = 0;
             while (index < count)
             {
-                objectSprite = this._Str_2505(index);
+                objectSprite = this.getSprite(index);
                 if (((!(objectSprite == null)) && (objectSprite.visible)))
                 {
                     data = objectSprite.asset;
@@ -298,7 +298,7 @@
         public function get boundingRectangle():Rectangle
         {
             var _local_6:Point;
-            var k:int = this._Str_3008;
+            var k:int = this.spriteCount;
             var _local_2:IRoomObjectSprite;
             var _local_3:Rectangle = new Rectangle();
             var _local_4:int;
@@ -306,7 +306,7 @@
             _local_4 = 0;
             while (_local_4 < k)
             {
-                _local_2 = this._Str_2505(_local_4);
+                _local_2 = this.getSprite(_local_4);
                 if (((!(_local_2 == null)) && (_local_2.visible)))
                 {
                     _local_5 = _local_2.asset;

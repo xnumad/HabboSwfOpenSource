@@ -241,7 +241,7 @@
             this._Str_7058 = k;
         }
 
-        public function get _Str_3022():Boolean
+        public function get isInitialized():Boolean
         {
             return this._Str_5254;
         }
@@ -717,14 +717,14 @@
             {
                 _local_3 = this._Str_5146(k);
                 _local_4 = this._Str_7222(k, _arg_2);
-                if (((((!(_local_4 == null)) && (!(_local_4.getModel() == null))) && (!(_local_3 == null))) && (!(_local_3._Str_2377() == null))))
+                if (((((!(_local_4 == null)) && (!(_local_4.getModel() == null))) && (!(_local_3 == null))) && (!(_local_3.getEventHandler() == null))))
                 {
                     _local_5 = RoomObjectRoomFloorHoleUpdateMessage.RORPFHUM_ADD;
                     _local_6 = _local_4.getLocation().x;
                     _local_7 = _local_4.getLocation().y;
                     _local_8 = _local_4.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_SIZE_X);
                     _local_9 = _local_4.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_SIZE_Y);
-                    _local_3._Str_2377().processUpdateMessage(new RoomObjectRoomFloorHoleUpdateMessage(_local_5, _arg_2, _local_6, _local_7, _local_8, _local_9));
+                    _local_3.getEventHandler().processUpdateMessage(new RoomObjectRoomFloorHoleUpdateMessage(_local_5, _arg_2, _local_6, _local_7, _local_8, _local_9));
                 }
             }
         }
@@ -736,10 +736,10 @@
             if (_arg_2 >= 0)
             {
                 _local_3 = this._Str_5146(k);
-                if (((!(_local_3 == null)) && (!(_local_3._Str_2377() == null))))
+                if (((!(_local_3 == null)) && (!(_local_3.getEventHandler() == null))))
                 {
                     _local_4 = RoomObjectRoomFloorHoleUpdateMessage.RORPFHUM_REMOVE;
-                    _local_3._Str_2377().processUpdateMessage(new RoomObjectRoomFloorHoleUpdateMessage(_local_4, _arg_2));
+                    _local_3.getEventHandler().processUpdateMessage(new RoomObjectRoomFloorHoleUpdateMessage(_local_4, _arg_2));
                 }
             }
         }
@@ -916,11 +916,11 @@
                     {
                         _local_8.reset();
                     }
-                    if (((((((!(_local_8._Str_7609 == _local_12)) || (!(_local_8._Str_7902 == _local_13))) || (!(_local_8.scale == _local_7.scale))) || (!(_local_8._Str_16377 == _local_7.updateId))) || (!(Vector3d._Str_15471(_arg_3, _local_8._Str_16185)))) || (_local_8._Str_12536)))
+                    if (((((((!(_local_8._Str_7609 == _local_12)) || (!(_local_8._Str_7902 == _local_13))) || (!(_local_8.scale == _local_7.scale))) || (!(_local_8._Str_16377 == _local_7.updateId))) || (!(Vector3d.isEqual(_arg_3, _local_8._Str_16185)))) || (_local_8._Str_12536)))
                     {
                         _local_8._Str_16185 = _arg_3;
                         _local_15 = new Vector3d();
-                        _local_15._Str_2427(_arg_3);
+                        _local_15.assign(_arg_3);
                         _local_15.x = Math.round(_local_15.x);
                         _local_15.y = Math.round(_local_15.y);
                         _local_16 = (_local_9.getNumber(RoomVariableEnum.ROOM_MIN_X) - 0.5);
@@ -1429,26 +1429,26 @@
                     }
                 }
             }
-            if (((!(_local_9 == null)) && (!(_local_9._Str_2377() == null))))
+            if (((!(_local_9 == null)) && (!(_local_9.getEventHandler() == null))))
             {
-                _local_9._Str_2377().initialize(_arg_2);
+                _local_9.getEventHandler().initialize(_arg_2);
                 _local_17 = null;
                 if (_arg_3 != null)
                 {
                     _local_17 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_FLOOR_UPDATE, _arg_3);
-                    _local_9._Str_2377().processUpdateMessage(_local_17);
+                    _local_9.getEventHandler().processUpdateMessage(_local_17);
                     _local_7.setString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE, _arg_3);
                 }
                 if (_arg_4 != null)
                 {
                     _local_17 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_WALL_UPDATE, _arg_4);
-                    _local_9._Str_2377().processUpdateMessage(_local_17);
+                    _local_9.getEventHandler().processUpdateMessage(_local_17);
                     _local_7.setString(RoomObjectVariableEnum.ROOM_WALL_TYPE, _arg_4);
                 }
                 if (_arg_5 != null)
                 {
                     _local_17 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_LANDSCAPE_UPDATE, _arg_5);
-                    _local_9._Str_2377().processUpdateMessage(_local_17);
+                    _local_9.getEventHandler().processUpdateMessage(_local_17);
                     _local_7.setString(RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE, _arg_5);
                 }
                 if (_arg_2 != null)
@@ -1472,7 +1472,7 @@
                                 _local_28 = ("door_" + _local_21);
                                 _local_29 = new Vector3d(_local_23, _local_24, _local_25);
                                 _local_20 = new RoomObjectRoomMaskUpdateMessage(RoomObjectRoomMaskUpdateMessage.RORMUM_ADD_MASK, _local_28, _local_27, _local_29, RoomObjectRoomMaskUpdateMessage.HOLE);
-                                _local_9._Str_2377().processUpdateMessage(_local_20);
+                                _local_9.getEventHandler().processUpdateMessage(_local_20);
                                 if (((_local_26 == 90) || (_local_26 == 180)))
                                 {
                                     if (_local_26 == 90)
@@ -1536,7 +1536,7 @@
                 }
                 return true;
             }
-            if (_local_6._Str_2377() == null)
+            if (_local_6.getEventHandler() == null)
             {
                 return false;
             }
@@ -1548,7 +1548,7 @@
                     _local_7.setString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE, _arg_2);
                 }
                 _local_8 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_FLOOR_UPDATE, _arg_2);
-                _local_6._Str_2377().processUpdateMessage(_local_8);
+                _local_6.getEventHandler().processUpdateMessage(_local_8);
             }
             if (_arg_3 != null)
             {
@@ -1557,7 +1557,7 @@
                     _local_7.setString(RoomObjectVariableEnum.ROOM_WALL_TYPE, _arg_3);
                 }
                 _local_8 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_WALL_UPDATE, _arg_3);
-                _local_6._Str_2377().processUpdateMessage(_local_8);
+                _local_6.getEventHandler().processUpdateMessage(_local_8);
             }
             if (_arg_4 != null)
             {
@@ -1566,7 +1566,7 @@
                     _local_7.setString(RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE, _arg_4);
                 }
                 _local_8 = new RoomObjectRoomUpdateMessage(RoomObjectRoomUpdateMessage.RORUM_ROOM_LANDSCAPE_UPDATE, _arg_4);
-                _local_6._Str_2377().processUpdateMessage(_local_8);
+                _local_6.getEventHandler().processUpdateMessage(_local_8);
             }
             return true;
         }
@@ -1574,13 +1574,13 @@
         public function _Str_17804(k:int, _arg_2:uint, _arg_3:int, _arg_4:Boolean):Boolean
         {
             var _local_5:IRoomObjectController = this._Str_5146(k);
-            if (((_local_5 == null) || (_local_5._Str_2377() == null)))
+            if (((_local_5 == null) || (_local_5.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_6:RoomObjectRoomColorUpdateMessage;
             _local_6 = new RoomObjectRoomColorUpdateMessage(RoomObjectRoomColorUpdateMessage.RORCUM_BACKGROUND_COLOR, _arg_2, _arg_3, _arg_4);
-            _local_5._Str_2377().processUpdateMessage(_local_6);
+            _local_5.getEventHandler().processUpdateMessage(_local_6);
             events.dispatchEvent(new RoomBackgroundColorEvent(k, _arg_2, _arg_3, _arg_4));
             return true;
         }
@@ -1588,7 +1588,7 @@
         public function _Str_19727(k:int, _arg_2:Boolean, _arg_3:int, _arg_4:int, _arg_5:int):Boolean
         {
             var _local_6:IRoomObjectController = this._Str_5146(k);
-            if (((_local_6 == null) || (_local_6._Str_2377() == null)))
+            if (((_local_6 == null) || (_local_6.getEventHandler() == null)))
             {
                 return false;
             }
@@ -1599,30 +1599,30 @@
         public function _Str_15359(k:int, _arg_2:Boolean, _arg_3:Boolean=true):Boolean
         {
             var _local_4:IRoomObjectController = this._Str_5146(k);
-            if (((_local_4 == null) || (_local_4._Str_2377() == null)))
+            if (((_local_4 == null) || (_local_4.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_5:RoomObjectRoomPlaneVisibilityUpdateMessage;
             _local_5 = new RoomObjectRoomPlaneVisibilityUpdateMessage(RoomObjectRoomPlaneVisibilityUpdateMessage.RORPVUM_WALL_VISIBILITY, _arg_2);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             _local_5 = new RoomObjectRoomPlaneVisibilityUpdateMessage(RoomObjectRoomPlaneVisibilityUpdateMessage.RORPVUM_FLOOR_VISIBILITY, _arg_3);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             return true;
         }
 
         public function _Str_21918(k:int, _arg_2:Number, _arg_3:Number):Boolean
         {
             var _local_4:IRoomObjectController = this._Str_5146(k);
-            if (((_local_4 == null) || (_local_4._Str_2377() == null)))
+            if (((_local_4 == null) || (_local_4.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_5:RoomObjectRoomPlanePropertyUpdateMessage;
             _local_5 = new RoomObjectRoomPlanePropertyUpdateMessage(RoomObjectRoomPlanePropertyUpdateMessage.RORPPUM_WALL_THICKNESS, _arg_2);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             _local_5 = new RoomObjectRoomPlanePropertyUpdateMessage(RoomObjectRoomPlanePropertyUpdateMessage.RORPVUM_FLOOR_THICKNESS, _arg_3);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             return true;
         }
 
@@ -1672,15 +1672,15 @@
             var _local_8:IRoomRenderer = (_local_7.getRenderer() as IRoomRenderer);
             if (_local_8 == null)
             {
-                _local_8 = this._Str_18956._Str_19555();
+                _local_8 = this._Str_18956.createRenderer();
             }
             if (_local_8 == null)
             {
                 return null;
             }
-            _local_8._Str_12010 = RoomObjectVariableEnum.OBJECT_ACCURATE_Z_VALUE;
+            _local_8.roomObjectVariableAccurateZ = RoomObjectVariableEnum.OBJECT_ACCURATE_Z_VALUE;
             _local_7.setRenderer(_local_8);
-            var _local_9:IRoomRenderingCanvas = _local_8._Str_22057(_arg_2, _arg_3, _arg_4, _arg_5);
+            var _local_9:IRoomRenderingCanvas = _local_8.createCanvas(_arg_2, _arg_3, _arg_4, _arg_5);
             if (_local_9 == null)
             {
                 return null;
@@ -1775,7 +1775,7 @@
             {
                 return null;
             }
-            var _local_6:IRoomRenderingCanvas = _local_5._Str_1664(_arg_2);
+            var _local_6:IRoomRenderingCanvas = _local_5.getCanvas(_arg_2);
             return _local_6;
         }
 
@@ -1797,7 +1797,7 @@
             {
                 return;
             }
-            _local_4._Str_21906 = _arg_3;
+            _local_4.useMask = _arg_3;
         }
 
         private function _Str_25261(k:int, _arg_2:int):Rectangle
@@ -2232,7 +2232,7 @@
             }
         }
 
-        public function _Str_3391(k:int, _arg_2:int):int
+        public function getRoomObjectCount(k:int, _arg_2:int):int
         {
             if (!this._Str_5254)
             {
@@ -2275,7 +2275,7 @@
             return _local_2.getObjects(k);
         }
 
-        public function _Str_3652(k:int, _arg_2:int, _arg_3:int):IRoomObject
+        public function getRoomObjectWithIndex(k:int, _arg_2:int, _arg_3:int):IRoomObject
         {
             if (!this._Str_5254)
             {
@@ -2380,7 +2380,7 @@
             var _local_3:IRoomObject = this.getRoomObject(this._activeRoomId, k, _arg_2);
             if (_local_3 != null)
             {
-                _local_4 = (_local_3._Str_11182() as IRoomObjectEventHandler);
+                _local_4 = (_local_3.getMouseHandler() as IRoomObjectEventHandler);
                 if (_local_4 != null)
                 {
                     _local_4.useObject();
@@ -2546,10 +2546,10 @@
         {
             var _local_4:RoomObjectDataUpdateMessage;
             var _local_3:IRoomObjectController = this._Str_9577(k);
-            if (((!(_local_3 == null)) && (!(_local_3._Str_2377() == null))))
+            if (((!(_local_3 == null)) && (!(_local_3.getEventHandler() == null))))
             {
                 _local_4 = new RoomObjectDataUpdateMessage(_arg_2, null);
-                _local_3._Str_2377().processUpdateMessage(_local_4);
+                _local_3.getEventHandler().processUpdateMessage(_local_4);
             }
         }
 
@@ -2557,10 +2557,10 @@
         {
             var _local_4:RoomObjectTileCursorUpdateMessage;
             var _local_3:IRoomObjectController = this._Str_9577(k);
-            if (((!(_local_3 == null)) && (!(_local_3._Str_2377() == null))))
+            if (((!(_local_3 == null)) && (!(_local_3.getEventHandler() == null))))
             {
                 _local_4 = new RoomObjectTileCursorUpdateMessage(null, 0, _arg_2, "", true);
-                _local_3._Str_2377().processUpdateMessage(_local_4);
+                _local_3.getEventHandler().processUpdateMessage(_local_4);
             }
         }
 
@@ -2654,7 +2654,7 @@
             {
                 this._Str_5538(k, _arg_2, RoomObjectCategoryEnum.CONST_10);
             }
-            if (((_local_8._Str_3022()) && (_arg_3._Str_23171)))
+            if (((_local_8.isInitialized()) && (_arg_3._Str_23171)))
             {
                 this._Str_21543(k, _local_8);
             }
@@ -2684,9 +2684,9 @@
                 _local_7 = StuffDataFactory._Str_6438(_local_6);
                 _local_7.initializeFromRoomObjectModel(_local_4.getModel());
                 _local_8 = new RoomObjectDataUpdateMessage(_local_5, _local_7);
-                if (_local_4._Str_2377() != null)
+                if (_local_4.getEventHandler() != null)
                 {
-                    _local_4._Str_2377().processUpdateMessage(_local_8);
+                    _local_4.getEventHandler().processUpdateMessage(_local_8);
                 }
             }
         }
@@ -2699,10 +2699,10 @@
             {
                 return false;
             }
-            if (((!(_local_6 == null)) && (!(_local_6._Str_2377() == null))))
+            if (((!(_local_6 == null)) && (!(_local_6.getEventHandler() == null))))
             {
                 _local_7 = new RoomObjectModelDataUpdateMessage(_arg_4, _arg_5);
-                _local_6._Str_2377().processUpdateMessage(_local_7);
+                _local_6.getEventHandler().processUpdateMessage(_local_7);
             }
             return true;
         }
@@ -2716,10 +2716,10 @@
             }
             var _local_9:RoomObjectUpdateMessage = new RoomObjectUpdateMessage(_arg_3, _arg_4);
             var _local_10:RoomObjectDataUpdateMessage = new RoomObjectDataUpdateMessage(_arg_5, _arg_6, _arg_7);
-            if (((!(_local_8 == null)) && (!(_local_8._Str_2377() == null))))
+            if (((!(_local_8 == null)) && (!(_local_8.getEventHandler() == null))))
             {
-                _local_8._Str_2377().processUpdateMessage(_local_9);
-                _local_8._Str_2377().processUpdateMessage(_local_10);
+                _local_8.getEventHandler().processUpdateMessage(_local_9);
+                _local_8.getEventHandler().processUpdateMessage(_local_10);
             }
             return true;
         }
@@ -2732,10 +2732,10 @@
             {
                 return false;
             }
-            if (((!(_local_4 == null)) && (!(_local_4._Str_2377() == null))))
+            if (((!(_local_4 == null)) && (!(_local_4.getEventHandler() == null))))
             {
                 _local_5 = new RoomObjectHeightUpdateMessage(null, null, _arg_3);
-                _local_4._Str_2377().processUpdateMessage(_local_5);
+                _local_4.getEventHandler().processUpdateMessage(_local_5);
             }
             return true;
         }
@@ -2748,10 +2748,10 @@
             {
                 return false;
             }
-            if (((!(_local_5 == null)) && (!(_local_5._Str_2377() == null))))
+            if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
             {
                 _local_6 = new RoomObjectMoveUpdateMessage(_arg_3, _arg_4, null, (!(_arg_4 == null)));
-                _local_5._Str_2377().processUpdateMessage(_local_6);
+                _local_5.getEventHandler().processUpdateMessage(_local_6);
             }
             return true;
         }
@@ -2921,10 +2921,10 @@
             var _local_9:LegacyStuffData = new LegacyStuffData();
             _local_9.setString(_arg_6);
             var _local_10:RoomObjectDataUpdateMessage = new RoomObjectDataUpdateMessage(_arg_5, _local_9);
-            if (((!(_local_7 == null)) && (!(_local_7._Str_2377() == null))))
+            if (((!(_local_7 == null)) && (!(_local_7.getEventHandler() == null))))
             {
-                _local_7._Str_2377().processUpdateMessage(_local_8);
-                _local_7._Str_2377().processUpdateMessage(_local_10);
+                _local_7.getEventHandler().processUpdateMessage(_local_8);
+                _local_7.getEventHandler().processUpdateMessage(_local_10);
             }
             this._Str_6650(k, _arg_2);
             return true;
@@ -2961,9 +2961,9 @@
                 _local_5 = new RoomObjectRoomMaskUpdateMessage(RoomObjectRoomMaskUpdateMessage._Str_10260, _local_4);
             }
             var _local_7:IRoomObjectController = this._Str_5146(k);
-            if ((((!(_local_7 == null)) && (!(_local_7._Str_2377() == null))) && (!(_local_5 == null))))
+            if ((((!(_local_7 == null)) && (!(_local_7.getEventHandler() == null))) && (!(_local_5 == null))))
             {
-                _local_7._Str_2377().processUpdateMessage(_local_5);
+                _local_7.getEventHandler().processUpdateMessage(_local_5);
             }
         }
 
@@ -2975,9 +2975,9 @@
                 return false;
             }
             var _local_5:RoomObjectItemDataUpdateMessage = new RoomObjectItemDataUpdateMessage(_arg_3);
-            if (((!(_local_4 == null)) && (!(_local_4._Str_2377() == null))))
+            if (((!(_local_4 == null)) && (!(_local_4.getEventHandler() == null))))
             {
-                _local_4._Str_2377().processUpdateMessage(_local_5);
+                _local_4.getEventHandler().processUpdateMessage(_local_5);
             }
             return true;
         }
@@ -3002,10 +3002,10 @@
             {
                 return false;
             }
-            if (_local_4._Str_2377() != null)
+            if (_local_4.getEventHandler() != null)
             {
                 _local_5 = new RoomObjectMoveUpdateMessage(_arg_3, null, null);
-                _local_4._Str_2377().processUpdateMessage(_local_5);
+                _local_4.getEventHandler().processUpdateMessage(_local_5);
             }
             this._Str_6650(k, _arg_2);
             return true;
@@ -3075,14 +3075,14 @@
             {
                 return false;
             }
-            if (((!(_local_9 == null)) && (!(_local_9._Str_2377() == null))))
+            if (((!(_local_9 == null)) && (!(_local_9.getEventHandler() == null))))
             {
                 _local_10 = new RoomObjectAvatarUpdateMessage(this._Str_16219(k, _arg_3), null, _arg_4, _arg_5, false, 0);
-                _local_9._Str_2377().processUpdateMessage(_local_10);
+                _local_9.getEventHandler().processUpdateMessage(_local_10);
                 if (_arg_7 != null)
                 {
                     _local_11 = new RoomObjectAvatarFigureUpdateMessage(_arg_7);
-                    _local_9._Str_2377().processUpdateMessage(_local_11);
+                    _local_9.getEventHandler().processUpdateMessage(_local_11);
                 }
             }
             if (events != null)
@@ -3095,7 +3095,7 @@
         public function _Str_11976(k:int, _arg_2:int, _arg_3:IVector3D, _arg_4:IVector3D, _arg_5:Boolean=false, _arg_6:Number=0, _arg_7:IVector3D=null, _arg_8:Number=NaN):Boolean
         {
             var _local_9:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if ((((_local_9 == null) || (_local_9._Str_2377() == null)) || (_local_9.getModel() == null)))
+            if ((((_local_9 == null) || (_local_9.getEventHandler() == null)) || (_local_9.getModel() == null)))
             {
                 return false;
             }
@@ -3112,7 +3112,7 @@
                 _arg_8 = _local_9.getModel().getNumber(RoomObjectVariableEnum.HEAD_DIRECTION);
             }
             var _local_10:RoomObjectUpdateMessage = new RoomObjectAvatarUpdateMessage(this._Str_16219(k, _arg_3), this._Str_16219(k, _arg_4), _arg_7, _arg_8, _arg_5, _arg_6);
-            _local_9._Str_2377().processUpdateMessage(_local_10);
+            _local_9.getEventHandler().processUpdateMessage(_local_10);
             if ((((this.roomSessionManager) && (this.roomSessionManager.getSession(k))) && (_arg_2 == this.roomSessionManager.getSession(k)._Str_3871)))
             {
                 this._Str_15508.events.dispatchEvent(new RoomToObjectOwnAvatarMoveEvent(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, _arg_4));
@@ -3123,43 +3123,43 @@
         public function _Str_17118(k:int, _arg_2:int, _arg_3:String):Boolean
         {
             var _local_4:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_4 == null) || (_local_4._Str_2377() == null)))
+            if (((_local_4 == null) || (_local_4.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_5:RoomObjectUpdateStateMessage = new RoomObjectAvatarFlatControlUpdateMessage(_arg_3);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             return true;
         }
 
         public function _Str_21118(k:int, _arg_2:int):Boolean
         {
             var _local_3:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_3 == null) || (_local_3._Str_2377() == null)))
+            if (((_local_3 == null) || (_local_3.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_4:RoomObjectUpdateMessage = new RoomObjectAvatarOwnMessage();
-            _local_3._Str_2377().processUpdateMessage(_local_4);
+            _local_3.getEventHandler().processUpdateMessage(_local_4);
             return true;
         }
 
         public function _Str_7543(k:int, _arg_2:int, _arg_3:String, _arg_4:String=null, _arg_5:String=null, _arg_6:Boolean=false):Boolean
         {
             var _local_7:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_7 == null) || (_local_7._Str_2377() == null)))
+            if (((_local_7 == null) || (_local_7.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_8:RoomObjectUpdateStateMessage = new RoomObjectAvatarFigureUpdateMessage(_arg_3, _arg_4, _arg_5, _arg_6);
-            _local_7._Str_2377().processUpdateMessage(_local_8);
+            _local_7.getEventHandler().processUpdateMessage(_local_8);
             return true;
         }
 
         public function _Str_3689(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String=null):Boolean
         {
             var _local_6:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_6 == null) || (_local_6._Str_2377() == null)))
+            if (((_local_6 == null) || (_local_6.getEventHandler() == null)))
             {
                 return false;
             }
@@ -3206,54 +3206,54 @@
                     _local_7 = new RoomObjectAvatarGuideStatusUpdateMessage(_arg_4);
                     break;
             }
-            _local_6._Str_2377().processUpdateMessage(_local_7);
+            _local_6.getEventHandler().processUpdateMessage(_local_7);
             return true;
         }
 
         public function _Str_7176(k:int, _arg_2:int, _arg_3:String, _arg_4:String=""):Boolean
         {
             var _local_5:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_5 == null) || (_local_5._Str_2377() == null)))
+            if (((_local_5 == null) || (_local_5.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_6:RoomObjectUpdateStateMessage = new RoomObjectAvatarPostureUpdateMessage(_arg_3, _arg_4);
-            _local_5._Str_2377().processUpdateMessage(_local_6);
+            _local_5.getEventHandler().processUpdateMessage(_local_6);
             return true;
         }
 
         public function _Str_9104(k:int, _arg_2:int, _arg_3:int):Boolean
         {
             var _local_4:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_4 == null) || (_local_4._Str_2377() == null)))
+            if (((_local_4 == null) || (_local_4.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_5:RoomObjectUpdateStateMessage = new RoomObjectAvatarGestureUpdateMessage(_arg_3);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             return true;
         }
 
         public function _Str_19224(k:int, _arg_2:int, _arg_3:String):Boolean
         {
             var _local_4:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_4 == null) || (_local_4._Str_2377() == null)))
+            if (((_local_4 == null) || (_local_4.getEventHandler() == null)))
             {
                 return false;
             }
             var _local_5:RoomObjectUpdateStateMessage = new RoomObjectAvatarPetGestureUpdateMessage(_arg_3);
-            _local_4._Str_2377().processUpdateMessage(_local_5);
+            _local_4.getEventHandler().processUpdateMessage(_local_5);
             return true;
         }
 
         public function _Str_12204(k:int, _arg_2:int, _arg_3:int, _arg_4:int=0):Boolean
         {
             var _local_5:IRoomObjectController = this._Str_5566(k, _arg_2);
-            if (((_local_5 == null) || (_local_5._Str_2377() == null)))
+            if (((_local_5 == null) || (_local_5.getEventHandler() == null)))
             {
                 return false;
             }
-            _local_5._Str_2377().processUpdateMessage(new RoomObjectAvatarEffectUpdateMessage(_arg_3, _arg_4));
+            _local_5.getEventHandler().processUpdateMessage(new RoomObjectAvatarEffectUpdateMessage(_arg_3, _arg_4));
             return true;
         }
 
@@ -3590,7 +3590,7 @@
                     _local_9.wallHeight = _local_8;
                     _local_9._Str_12919();
                     _local_11 = _local_9._Str_5598();
-                    k._Str_2377().initialize(_local_11);
+                    k.getEventHandler().initialize(_local_11);
                     k.getModelController().setString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE, _local_4);
                     k.getModelController().setString(RoomObjectVariableEnum.ROOM_WALL_TYPE, _local_5);
                     k.getModelController().setString(RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE, _local_6);
@@ -3599,7 +3599,7 @@
                         _local_13 = null;
                         _local_14 = (RoomObjectCategoryEnum.CONST_20 + "_1");
                         _local_13 = new RoomObjectRoomMaskUpdateMessage(RoomObjectRoomMaskUpdateMessage.RORMUM_ADD_MASK, _local_14, _local_7, new Vector3d(2.5, 0.5, 2));
-                        k._Str_2377().processUpdateMessage(_local_13);
+                        k.getEventHandler().processUpdateMessage(_local_13);
                     }
                     _local_9.dispose();
                 }
@@ -3704,7 +3704,7 @@
             }
             _local_15 = (_local_15 + 1);
             var _local_17:IRoomObjectController = (_local_14.createRoomObject(_local_15, k, _local_16) as IRoomObjectController);
-            if ((((_local_17 == null) || (_local_17.getModelController() == null)) || (_local_17._Str_2377() == null)))
+            if ((((_local_17 == null) || (_local_17.getModelController() == null)) || (_local_17.getEventHandler() == null)))
             {
                 return _local_13;
             }
@@ -3748,7 +3748,7 @@
             }
             _local_17.setDirection(_arg_3);
             var _local_19:IRoomObjectSpriteVisualization;
-            _local_19 = (_local_17._Str_5222() as IRoomObjectSpriteVisualization);
+            _local_19 = (_local_17.getVisualization() as IRoomObjectSpriteVisualization);
             if (_local_19 == null)
             {
                 _local_14.disposeObject(_local_15, _local_16);
@@ -3764,9 +3764,9 @@
                 {
                     _local_23 = new RoomObjectDataUpdateMessage(_arg_9, _arg_8);
                 }
-                if (_local_17._Str_2377() != null)
+                if (_local_17.getEventHandler() != null)
                 {
-                    _local_17._Str_2377().processUpdateMessage(_local_23);
+                    _local_17.getEventHandler().processUpdateMessage(_local_23);
                 }
             }
             var _local_20:RoomGeometry = new RoomGeometry(_arg_4, new Vector3d(-135, 30, 0), new Vector3d(11, 11, 5));
@@ -3812,7 +3812,7 @@
                 _local_6 = this.getRoomObject(k, _arg_2, _arg_3);
                 if (_local_6 != null)
                 {
-                    _local_7 = _local_6._Str_5222();
+                    _local_7 = _local_6.getVisualization();
                     if (_local_7 != null)
                     {
                         _local_8 = _local_7.boundingRectangle;
@@ -3966,7 +3966,7 @@
                     _local_10 = _local_9.getId();
                     _local_11 = null;
                     _local_12 = null;
-                    _local_12 = (_local_9._Str_5222() as IRoomObjectSpriteVisualization);
+                    _local_12 = (_local_9.getVisualization() as IRoomObjectSpriteVisualization);
                     if (_local_12 != null)
                     {
                         _local_14 = _local_9.getModel().getNumber(RoomObjectVariableEnum.IMAGE_QUERY_SCALE);
@@ -4025,7 +4025,7 @@
                 this._Str_6650(_local_4, _arg_2);
             }
             var _local_5:IRoomObjectController = (this.getRoomObject(_local_4, _arg_2, _arg_3) as IRoomObjectController);
-            if ((((!(_local_5 == null)) && (!(_local_5.getModel() == null))) && (!(_local_5._Str_2377() == null))))
+            if ((((!(_local_5 == null)) && (!(_local_5.getModel() == null))) && (!(_local_5.getEventHandler() == null))))
             {
                 if (!isNaN(_local_5.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT)))
                 {
@@ -4034,7 +4034,7 @@
                     _local_7.initializeFromRoomObjectModel(_local_5.getModel());
                     _local_8 = _local_5.getState(0);
                     _local_9 = new RoomObjectDataUpdateMessage(_local_8, _local_7);
-                    _local_5._Str_2377().processUpdateMessage(_local_9);
+                    _local_5.getEventHandler().processUpdateMessage(_local_9);
                 }
                 if (events != null)
                 {
@@ -4114,7 +4114,7 @@
                 }
                 _local_3 = null;
                 _local_3 = new RoomObjectRoomAdUpdateMessage(RoomObjectRoomAdUpdateMessage.RORUM_ROOM_AD_ACTIVATE, RoomObjectVariableEnum.ROOM_AD_IMAGE_ASSET, k.clickUrl);
-                _local_2._Str_2377().processUpdateMessage(_local_3);
+                _local_2.getEventHandler().processUpdateMessage(_local_3);
             }
         }
 
@@ -4122,7 +4122,7 @@
         {
             if (this._adManager != null)
             {
-                this._adManager._Str_20162(k, _arg_2, _arg_3, _arg_4, _arg_5);
+                this._adManager.loadRoomAdImage(k, _arg_2, _arg_3, _arg_4, _arg_5);
             }
         }
 
@@ -4135,7 +4135,7 @@
                 return;
             }
             var _local_3:IRoomObjectController = this._Str_7222(k.roomId, k.objectId);
-            if (((_local_3 == null) || (_local_3._Str_2377() == null)))
+            if (((_local_3 == null) || (_local_3.getEventHandler() == null)))
             {
                 return;
             }
@@ -4154,7 +4154,7 @@
             }
             if (_local_4 != null)
             {
-                _local_3._Str_2377().processUpdateMessage(_local_4);
+                _local_3.getEventHandler().processUpdateMessage(_local_4);
             }
         }
 
@@ -4194,7 +4194,7 @@
             {
                 _local_6 = this._Str_7222(k, _arg_2);
             }
-            if (((_local_6 == null) || (_local_6._Str_2377() == null)))
+            if (((_local_6 == null) || (_local_6.getEventHandler() == null)))
             {
                 return;
             }
@@ -4226,7 +4226,7 @@
             var _local_9:RoomObjectGroupBadgeUpdateMessage = new RoomObjectGroupBadgeUpdateMessage(_arg_4, _local_8);
             if (_local_9 != null)
             {
-                _local_6._Str_2377().processUpdateMessage(_local_9);
+                _local_6.getEventHandler().processUpdateMessage(_local_9);
             }
         }
 
@@ -4265,9 +4265,9 @@
                 this._Str_19877(_local_4.object, k.badgeId, _local_4._Str_14095);
                 _local_5 = ((_local_4._Str_14095) ? this._sessionDataManager._Str_15583 : this._sessionDataManager._Str_5831);
                 _local_6 = new RoomObjectGroupBadgeUpdateMessage(k.badgeId, String(_local_5.call(null, k.badgeId)));
-                if (((!(_local_6 == null)) && (!(_local_4.object._Str_2377() == null))))
+                if (((!(_local_6 == null)) && (!(_local_4.object.getEventHandler() == null))))
                 {
-                    _local_4.object._Str_2377().processUpdateMessage(_local_6);
+                    _local_4.object.getEventHandler().processUpdateMessage(_local_6);
                 }
                 _local_3++;
             }
@@ -4445,10 +4445,10 @@
             {
                 return false;
             }
-            if (_local_6._Str_2377())
+            if (_local_6.getEventHandler())
             {
                 _local_7 = new RoomObjectUpdateMessage(_arg_3, null);
-                _local_6._Str_2377().processUpdateMessage(_local_7);
+                _local_6.getEventHandler().processUpdateMessage(_local_7);
             }
             return true;
         }
@@ -4457,7 +4457,7 @@
         {
             var _local_5:IRoomObjectController = this.getObject(this._Str_2573(k), _arg_2, _arg_4);
             var _local_6:RoomObjectUpdateMessage = new RoomObjectUpdateMessage(_arg_3, null);
-            _local_5._Str_2377().processUpdateMessage(_local_6);
+            _local_5.getEventHandler().processUpdateMessage(_local_6);
             return true;
         }
 		
@@ -4472,10 +4472,10 @@
             var _local_9:_Str_2664 = new _Str_2664();
             _local_9.setString(_arg_6);
             var _local_10:RoomObjectDataUpdateMessage = new RoomObjectDataUpdateMessage(_arg_5, _local_9);
-            if (((!(_local_7 == null)) && (!(_local_7._Str_2377() == null))))
+            if (((!(_local_7 == null)) && (!(_local_7.getEventHandler() == null))))
             {
-                _local_7._Str_2377().processUpdateMessage(_local_8);
-                _local_7._Str_2377().processUpdateMessage(_local_10);
+                _local_7.getEventHandler().processUpdateMessage(_local_8);
+                _local_7.getEventHandler().processUpdateMessage(_local_10);
             }
             this._Str_6650(k, _arg_2);
             return true;

@@ -35,7 +35,7 @@
             }
         }
 
-        public function _Str_809(k:int):int
+        public function getDirectionOffsetX(k:int):int
         {
             if (k < this._dx.length)
             {
@@ -44,7 +44,7 @@
             return 0;
         }
 
-        public function _Str_739(k:int):int
+        public function getDirectionOffsetY(k:int):int
         {
             if (k < this._dy.length)
             {
@@ -53,7 +53,7 @@
             return 0;
         }
 
-        public function _Str_839(k:int):int
+        public function getDirectionOffsetZ(k:int):int
         {
             if (k < this._dz.length)
             {
@@ -82,12 +82,12 @@
             return this._member;
         }
 
-        public function get _Str_949():Boolean
+        public function get hasDirections():Boolean
         {
             return this._hasDirections;
         }
 
-        public function get _Str_767():Boolean
+        public function get hasStaticY():Boolean
         {
             return this._hasStaticY;
         }

@@ -38,7 +38,7 @@
             return this._type;
         }
 
-        public function get _Str_3463():String
+        public function get eventId():String
         {
             return this._eventId;
         }
@@ -48,17 +48,17 @@
             return this._canvasId;
         }
 
-        public function get _Str_4216():String
+        public function get spriteTag():String
         {
             return this._spriteTag;
         }
 
-        public function get _Str_24406():Number
+        public function get screenX():Number
         {
             return this._screenX;
         }
 
-        public function get _Str_25684():Number
+        public function get screenY():Number
         {
             return this._screenY;
         }
@@ -93,22 +93,22 @@
             return this._buttonDown;
         }
 
-        public function get _Str_4595():int
+        public function get spriteOffsetX():int
         {
             return this._spriteOffsetX;
         }
 
-        public function set _Str_4595(k:int):void
+        public function set spriteOffsetX(k:int):void
         {
             this._spriteOffsetX = k;
         }
 
-        public function get _Str_4534():int
+        public function get spriteOffsetY():int
         {
             return this._spriteOffsetY;
         }
 
-        public function set _Str_4534(k:int):void
+        public function set spriteOffsetY(k:int):void
         {
             this._spriteOffsetY = k;
         }

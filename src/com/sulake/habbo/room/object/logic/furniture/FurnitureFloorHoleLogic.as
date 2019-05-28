@@ -29,7 +29,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectFloorHoleEvent.ROFHO_ADD_HOLE, RoomObjectFloorHoleEvent.ROFHO_REMOVE_HOLE];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
@@ -64,7 +64,7 @@
                         }
                     }
                 }
-                this._currentLoc._Str_2427(_local_3);
+                this._currentLoc.assign(_local_3);
             }
         }
 

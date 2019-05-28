@@ -16,7 +16,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectWidgetRequestEvent.STICKIE, RoomObjectFurnitureActionEvent.STICKIE];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function get widget():String

@@ -61,7 +61,7 @@
         protected function _Str_18024():void
         {
             var k:int = 1;
-            _Str_3773(k);
+            createSprites(k);
         }
 
         protected function initializePlanes():void
@@ -90,7 +90,7 @@
             var _local_8:Vector3d = new Vector3d(-0.5, -0.5, 0);
             if ((((!(_local_8 == null)) && (!(_local_6 == null))) && (!(_local_7 == null))))
             {
-                _local_9 = Vector3d._Str_7423(_local_6, _local_7);
+                _local_9 = Vector3d.crossProduct(_local_6, _local_7);
                 _local_10 = new FurniturePlane(_local_8, _local_6, _local_7);
                 _local_10.color = 0xFFFF00;
                 this._planes.push(_local_10);
@@ -193,7 +193,7 @@
                 {
                     _local_8 = null;
                 }
-                _local_10 = _Str_2505(_local_5);
+                _local_10 = getSprite(_local_5);
                 if (_local_10 != null)
                 {
                     if (_local_9 != null)

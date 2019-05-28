@@ -42,9 +42,9 @@
             {
                 this._Str_594 = null;
                 this._disposed = true;
-                if (((this._Str_4571) && (_Str_2697)))
+                if (((this._Str_4571) && (assetCollection)))
                 {
-                    _Str_2697.disposeAsset(this._Str_4571);
+                    assetCollection.disposeAsset(this._Str_4571);
                     this._Str_4571 = null;
                 }
                 super.dispose();
@@ -95,16 +95,16 @@
                         _local_2.dispose();
                         _local_3 = this._Str_23643(this._Str_842);
                         _local_3.setDirection(AvatarSetType.FULL, direction);
-                        _Str_2697.addAsset(this._Str_10185(), _local_3.getImage(AvatarSetType.FULL, true), true);
+                        assetCollection.addAsset(this._Str_10185(), _local_3.getImage(AvatarSetType.FULL, true), true);
                         this._Str_15405 = true;
                         return;
                     }
                     _local_2.setDirection(AvatarSetType.FULL, direction);
                     if (this._Str_4571)
                     {
-                        _Str_2697.disposeAsset(this._Str_4571);
+                        assetCollection.disposeAsset(this._Str_4571);
                     }
-                    _Str_2697.addAsset(this._Str_10185(), _local_2.getImage(AvatarSetType.FULL, true), true);
+                    assetCollection.addAsset(this._Str_10185(), _local_2.getImage(AvatarSetType.FULL, true), true);
                     this._Str_4571 = this._Str_10185();
                     this._Str_15405 = true;
                     _local_2.dispose();
@@ -205,7 +205,7 @@
             var _local_4:String = getSpriteTag(k, _arg_2, _arg_3);
             if (((_local_4 == AVATAR_IMAGE) && (this._Str_13016())))
             {
-                return -(_Str_2505(_arg_3).width) / 2;
+                return -(getSprite(_arg_3).width) / 2;
             }
             return super.getSpriteXOffset(k, _arg_2, _arg_3);
         }
@@ -215,7 +215,7 @@
             var _local_4:String = getSpriteTag(k, _arg_2, _arg_3);
             if (((_local_4 == AVATAR_IMAGE) && (this._Str_13016())))
             {
-                return -(_Str_2505(_arg_3).height);
+                return -(getSprite(_arg_3).height);
             }
             return super.getSpriteYOffset(k, _arg_2, _arg_3);
         }

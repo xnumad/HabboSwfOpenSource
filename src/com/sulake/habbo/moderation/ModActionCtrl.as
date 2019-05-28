@@ -265,7 +265,7 @@
             }
             var _local_3:int = this._Str_5384[this._Str_3643.selection];
             _local_4 = _Str_3610[this._Str_8957.selection];
-            switch (_local_4._Str_695)
+            switch (_local_4.actionType)
             {
                 case ModActionDefinition.ALERT:
                     if (!this._Str_2327._Str_3325._Str_18465)

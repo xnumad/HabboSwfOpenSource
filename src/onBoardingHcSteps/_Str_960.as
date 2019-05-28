@@ -12,7 +12,7 @@
 
     public class _Str_960 extends Sprite implements IDisposable 
     {
-        private static const _Str_1382:Class = _Str_702;
+        private static const _Str_1382:Class = _Str_960__Str_1382;
 
         private var _Str_1416:BitmapData;
         private var _disposed:Boolean;

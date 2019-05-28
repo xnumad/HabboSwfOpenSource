@@ -243,11 +243,11 @@
                 _local_6 = ((("mask_" + _arg_3) + "_0_") + _Str_3514(_arg_4, _arg_5));
                 k.addAsset(_local_6, _arg_2, false);
                 _local_6 = ((("mask_" + _arg_3) + "_3_") + _Str_3514(_arg_5, _arg_4));
-                k.addAsset(_local_6, Rasterizer._Str_20706(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipVBitmapData(_arg_2), false);
                 _local_6 = ((("mask_" + _arg_3) + "_4_") + _Str_3514(_arg_4, _arg_5));
-                k.addAsset(_local_6, Rasterizer._Str_20356(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipHVBitmapData(_arg_2), false);
                 _local_6 = ((("mask_" + _arg_3) + "_7_") + _Str_3514(_arg_5, _arg_4));
-                k.addAsset(_local_6, Rasterizer._Str_16640(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipHBitmapData(_arg_2), false);
             }
         }
 
@@ -260,11 +260,11 @@
                 _local_6 = ((("mask_" + _arg_3) + "_1_") + _Str_3514(_arg_4, _arg_5));
                 k.addAsset(_local_6, _arg_2, false);
                 _local_6 = ((("mask_" + _arg_3) + "_2_") + _Str_3514(_arg_5, _arg_4));
-                k.addAsset(_local_6, Rasterizer._Str_20706(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipVBitmapData(_arg_2), false);
                 _local_6 = ((("mask_" + _arg_3) + "_5_") + _Str_3514(_arg_4, _arg_5));
-                k.addAsset(_local_6, Rasterizer._Str_20356(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipHVBitmapData(_arg_2), false);
                 _local_6 = ((("mask_" + _arg_3) + "_6_") + _Str_3514(_arg_5, _arg_4));
-                k.addAsset(_local_6, Rasterizer._Str_16640(_arg_2), false);
+                k.addAsset(_local_6, Rasterizer.getFlipHBitmapData(_arg_2), false);
             }
         }
 

@@ -17,7 +17,7 @@
         {
             var k:Array = [];
             k.push(RoomObjectWidgetRequestEvent.PET_PRODUCT_MENU);
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function mouseEvent(k:RoomSpriteMouseEvent, _arg_2:IRoomGeometry):void

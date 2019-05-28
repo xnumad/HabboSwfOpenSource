@@ -9,14 +9,14 @@
         function getId():int;
         function getInstanceId():int;
         function getType():String;
-        function _Str_3022():Boolean;
+        function isInitialized():Boolean;
         function getLocation():IVector3D;
         function getDirection():IVector3D;
         function getModel():IRoomObjectModel;
-        function _Str_5222():IRoomObjectVisualization;
-        function _Str_11182():IRoomObjectMouseHandler;
+        function getVisualization():IRoomObjectVisualization;
+        function getMouseHandler():IRoomObjectMouseHandler;
         function getState(_arg_1:int):int;
-        function _Str_3273():int;
+        function getUpdateID():int;
         function tearDown():void;
     }
 }

@@ -19,17 +19,17 @@
             return true;
         }
 
-        public function _Str_720(k:String):IAnimation
+        public function getAnimation(k:String):IAnimation
         {
             return this._animations[k];
         }
 
-        public function _Str_607(k:String, _arg_2:int, _arg_3:String):IAnimationLayerData
+        public function getLayerData(k:String, _arg_2:int, _arg_3:String):IAnimationLayerData
         {
             var _local_4:Animation = (this._animations[k] as Animation);
             if (_local_4 != null)
             {
-                return _local_4._Str_607(_arg_2, _arg_3);
+                return _local_4.getLayerData(_arg_2, _arg_3);
             }
             return null;
         }

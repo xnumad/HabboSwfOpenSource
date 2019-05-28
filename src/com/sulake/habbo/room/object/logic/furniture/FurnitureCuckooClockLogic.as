@@ -14,7 +14,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND_AT_PITCH];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void

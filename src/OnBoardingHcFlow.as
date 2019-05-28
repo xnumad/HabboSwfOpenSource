@@ -35,8 +35,8 @@
         public static var ubuntu_bold:Class = _Str_596;
         public static var ubuntu_italic:Class = _Str_605;
         public static var ubuntu_bold_italic:Class = _Str_600;
-        public static var _Str_2240:Class = _Str_636;
-        private static const _Str_1278:Class = _Str_619;
+        public static var _Str_2240:Class = OnBoardingHcFlow__Str_2240;
+        private static const _Str_1278:Class = OnBoardingHcFlow__Str_1278;
 
         private var _Str_803:_Str_960;
         private var _Str_1095:AvatarEditor;

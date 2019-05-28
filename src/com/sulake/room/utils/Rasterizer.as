@@ -6,8 +6,6 @@
 
     public class Rasterizer 
     {
-
-
         public static function line(k:BitmapData, _arg_2:Point, _arg_3:Point, _arg_4:int):void
         {
             var _local_5:int;
@@ -66,7 +64,7 @@
             k.unlock();
         }
 
-        public static function _Str_16640(k:BitmapData):BitmapData
+        public static function getFlipHBitmapData(k:BitmapData):BitmapData
         {
             if (k == null)
             {
@@ -81,7 +79,7 @@
             return _local_2;
         }
 
-        public static function _Str_20706(k:BitmapData):BitmapData
+        public static function getFlipVBitmapData(k:BitmapData):BitmapData
         {
             if (k == null)
             {
@@ -96,7 +94,7 @@
             return _local_2;
         }
 
-        public static function _Str_20356(k:BitmapData):BitmapData
+        public static function getFlipHVBitmapData(k:BitmapData):BitmapData
         {
             if (k == null)
             {

@@ -59,18 +59,18 @@
             this._aliases[k] = _local_6;
         }
 
-        public function _Str_1044(k:String):Boolean
+        public function hasAlias(k:String):Boolean
         {
             var _local_2:AssetAlias = (this._aliases[k] as AssetAlias);
             return !(_local_2 == null);
         }
 
-        public function _Str_2125(k:String):String
+        public function getAliasByName(k:String):String
         {
             var _local_4:AssetAlias;
             var _local_2:String = k;
             var _local_3:int = 5;
-            while (((this._Str_1044(_local_2)) && (_local_3 >= 0)))
+            while (((this.hasAlias(_local_2)) && (_local_3 >= 0)))
             {
                 _local_4 = (this._aliases[_local_2] as AssetAlias);
                 _local_2 = _local_4.link;
@@ -81,7 +81,7 @@
 
         public function getAssetByName(k:String):IAsset
         {
-            k = this._Str_2125(k);
+            k = this.getAliasByName(k);
             var _local_2:IAsset = this._assets.getAssetByName(k);
             return _local_2;
         }

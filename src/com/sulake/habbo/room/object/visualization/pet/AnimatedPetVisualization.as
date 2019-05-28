@@ -172,27 +172,27 @@
             {
                 return false;
             }
-            if (_local_3._Str_3273() != _Str_3603)
+            if (_local_3.getUpdateID() != _modelUpdateID)
             {
                 _local_4 = _local_3.getString(RoomObjectVariableEnum.FIGURE_POSTURE);
                 _local_5 = _local_3.getString(RoomObjectVariableEnum.FIGURE_GESTURE);
                 _local_6 = _local_3.getNumber(RoomObjectVariableEnum.FIGURE_POSTURE);
                 if (!isNaN(_local_6))
                 {
-                    _local_16 = this._animationData._Str_17398(_Str_3289);
+                    _local_16 = this._animationData._Str_17398(_currentScale);
                     if (_local_16 > 0)
                     {
-                        _local_4 = this._animationData._Str_14207(_Str_3289, (_local_6 % _local_16), true);
+                        _local_4 = this._animationData._Str_14207(_currentScale, (_local_6 % _local_16), true);
                         _local_5 = null;
                     }
                 }
                 _local_7 = _local_3.getNumber(RoomObjectVariableEnum.FIGURE_GESTURE);
                 if (!isNaN(_local_7))
                 {
-                    _local_17 = this._animationData._Str_16869(_Str_3289);
+                    _local_17 = this._animationData._Str_16869(_currentScale);
                     if (_local_17 > 0)
                     {
-                        _local_5 = this._animationData._Str_17844(_Str_3289, (_local_7 % _local_17));
+                        _local_5 = this._animationData._Str_17844(_currentScale, (_local_7 % _local_17));
                     }
                 }
                 this._Str_14314(_local_4, _local_5);
@@ -238,7 +238,7 @@
                     this._color = _local_15;
                 }
                 this._headOnly = (_local_3.getNumber(RoomObjectVariableEnum.PET_HEAD_ONLY) > 0);
-                _Str_3603 = _local_3._Str_3273();
+                _modelUpdateID = _local_3.getUpdateID();
                 return true;
             }
             return false;
@@ -263,7 +263,7 @@
                     {
                         this._experienceTimeStamp = 0;
                     }
-                    _local_3 = _Str_2505((_Str_3008 - 1));
+                    _local_3 = getSprite((spriteCount - 1));
                     if (_local_3 != null)
                     {
                         if (this._experienceData.alpha > 0)
@@ -290,17 +290,17 @@
             if (k != this._posture)
             {
                 this._posture = k;
-                _local_3 = this._animationData._Str_17648(_Str_3289, k);
+                _local_3 = this._animationData._Str_17648(_currentScale, k);
                 this._Str_16058(_Str_16082, _local_3);
             }
-            if (this._animationData._Str_18284(_Str_3289, k))
+            if (this._animationData._Str_18284(_currentScale, k))
             {
                 _arg_2 = null;
             }
             if (_arg_2 != this._gesture)
             {
                 this._gesture = _arg_2;
-                _local_3 = this._animationData._Str_18268(_Str_3289, _arg_2);
+                _local_3 = this._animationData._Str_18268(_currentScale, _arg_2);
                 this._Str_16058(_Str_17658, _local_3);
             }
         }
@@ -500,7 +500,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_7:IGraphicAsset;
-            if (_Str_2697 != null)
+            if (assetCollection != null)
             {
                 _local_3 = this._customLayerIds.indexOf(_arg_2);
                 _local_4 = this._paletteName;
@@ -516,7 +516,7 @@
                 {
                     k = (k + ("_" + _local_5));
                 }
-                _local_7 = _Str_2697.getAssetWithPalette(k, _local_4);
+                _local_7 = assetCollection.getAssetWithPalette(k, _local_4);
                 return _local_7;
             }
             return null;
@@ -544,7 +544,7 @@
             {
                 return null;
             }
-            var _local_3:int = _Str_3008;
+            var _local_3:int = spriteCount;
             if (_arg_2 < (_local_3 - _Str_7490))
             {
                 _local_4 = _Str_3033(k);
@@ -568,7 +568,7 @@
 
         override protected function getSpriteColor(k:int, _arg_2:int, _arg_3:int):int
         {
-            if (_arg_2 < (_Str_3008 - _Str_7490))
+            if (_arg_2 < (spriteCount - _Str_7490))
             {
                 return this._color;
             }
@@ -590,8 +590,8 @@
             var _local_3:Boolean;
             if (this._headSprites[k] == null)
             {
-                _local_2 = (this._animationData._Str_6014(_Str_3289, DirectionData._Str_9471, k) == HEAD);
-                _local_3 = (this._animationData._Str_6014(_Str_3289, DirectionData._Str_9471, k) == HAIR);
+                _local_2 = (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == HEAD);
+                _local_3 = (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == HAIR);
                 if (((_local_2) || (_local_3)))
                 {
                     this._headSprites[k] = true;
@@ -609,9 +609,9 @@
             var _local_2:String;
             if (this._nonHeadSprites[k] == null)
             {
-                if (k < (_Str_3008 - (1 + _Str_7490)))
+                if (k < (spriteCount - (1 + _Str_7490)))
                 {
-                    _local_2 = this._animationData._Str_6014(_Str_3289, DirectionData._Str_9471, k);
+                    _local_2 = this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k);
                     if (((((!(_local_2 == null)) && (_local_2.length > 0)) && (!(_local_2 == HEAD))) && (!(_local_2 == HAIR))))
                     {
                         this._nonHeadSprites[k] = true;
@@ -633,7 +633,7 @@
         {
             if (this._saddleSprites[k] == null)
             {
-                if (this._animationData._Str_6014(_Str_3289, DirectionData._Str_9471, k) == SADDLE)
+                if (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == SADDLE)
                 {
                     this._saddleSprites[k] = true;
                 }

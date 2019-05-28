@@ -33,11 +33,11 @@
         override public function dispose():void
         {
             var k:int;
-            if (_Str_2697 != null)
+            if (assetCollection != null)
             {
                 for each (k in this._createdInstanceMaskSizes)
                 {
-                    ShoreMaskCreatorUtility._Str_23481(object.getInstanceId(), k, _Str_2697);
+                    ShoreMaskCreatorUtility._Str_23481(object.getInstanceId(), k, assetCollection);
                 }
                 this._createdInstanceMaskSizes = [];
             }
@@ -91,7 +91,7 @@
             {
                 return this._shoreSpriteIndex;
             }
-            var _local_2:int = (_Str_3008 - 1);
+            var _local_2:int = (spriteCount - 1);
             while (_local_2 >= 0)
             {
                 if (getSpriteTag(k, direction, _local_2) == SHORE)
@@ -109,14 +109,14 @@
         private function _Str_18133(k:int):IGraphicAsset
         {
             var _local_2:String = super.getSpriteAssetName(k, this._Str_18416(k));
-            var _local_3:IGraphicAsset = _Str_2697.getAsset(_local_2);
+            var _local_3:IGraphicAsset = assetCollection.getAsset(_local_2);
             return _local_3;
         }
 
         private function _Str_18302(k:int):IGraphicAsset
         {
             var _local_2:int = _Str_3033(k);
-            var _local_3:IGraphicAsset = ShoreMaskCreatorUtility._Str_18302(object.getInstanceId(), _local_2, _Str_2697, this._Str_18133(k));
+            var _local_3:IGraphicAsset = ShoreMaskCreatorUtility._Str_18302(object.getInstanceId(), _local_2, assetCollection, this._Str_18133(k));
             if (_local_3 != null)
             {
                 if (this._createdInstanceMaskSizes.indexOf(_local_2) < 0)
@@ -467,7 +467,7 @@
 
         private function _Str_18695(k:Number):Boolean
         {
-            return ShoreMaskCreatorUtility._Str_18695(_Str_3033(k), _Str_2697, this._Str_18133(k));
+            return ShoreMaskCreatorUtility._Str_18695(_Str_3033(k), assetCollection, this._Str_18133(k));
         }
 
         private function _Str_22891(k:int, _arg_2:int, _arg_3:Number):BitmapData
@@ -480,7 +480,7 @@
                 }
                 this._maskBitmapData = ShoreMaskCreatorUtility._Str_22325(k, _arg_2);
             }
-            return ShoreMaskCreatorUtility._Str_25776(this._maskBitmapData, _Str_3033(_arg_3), this._hasBorder, this._borderType, _Str_2697);
+            return ShoreMaskCreatorUtility._Str_25776(this._maskBitmapData, _Str_3033(_arg_3), this._hasBorder, this._borderType, assetCollection);
         }
 
         private function _Str_22976(k:Number):Boolean

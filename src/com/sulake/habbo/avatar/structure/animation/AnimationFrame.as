@@ -16,7 +16,7 @@
             return this._number;
         }
 
-        public function get _Str_778():String
+        public function get assetPartDefinition():String
         {
             return this._assetPartDefinition;
         }

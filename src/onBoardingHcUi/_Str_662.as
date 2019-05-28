@@ -9,10 +9,10 @@
 
     public class _Str_662 extends _Str_951 
     {
-        private static const _Str_1141:Class = _Str_691;
-        private static const _Str_2209:Class = _Str_934;
-        private static const _Str_1957:Class = _Str_800;
-        private static const _Str_1124:Class = _Str_736;
+        private static const _Str_1141:Class = _Str_662__Str_1141;
+        private static const _Str_2209:Class = _Str_662__Str_2209;
+        private static const _Str_1957:Class = _Str_662__Str_1957;
+        private static const _Str_1124:Class = _Str_662__Str_1124;
 
         private var _icon:BitmapData;
 

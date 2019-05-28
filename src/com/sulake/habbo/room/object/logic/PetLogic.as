@@ -48,7 +48,7 @@
         override public function getEventTypes():Array
         {
             var k:Array = [RoomObjectMouseEvent.ROE_MOUSE_CLICK, RoomObjectMoveEvent.ROME_POSITION_CHANGED];
-            return _Str_2414(super.getEventTypes(), k);
+            return getAllEventTypes(super.getEventTypes(), k);
         }
 
         override public function dispose():void
@@ -206,7 +206,7 @@
                         {
                             if (eventDispatcher != null)
                             {
-                                _local_8 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_DOWN, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                                _local_8 = new RoomObjectMouseEvent(RoomObjectMouseEvent.ROE_MOUSE_DOWN, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                                 eventDispatcher.dispatchEvent(_local_8);
                             }
                         }
@@ -217,7 +217,7 @@
             {
                 if (eventDispatcher != null)
                 {
-                    _local_8 = new RoomObjectMouseEvent(_local_6, object, k._Str_3463, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+                    _local_8 = new RoomObjectMouseEvent(_local_6, object, k.eventId, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
                     eventDispatcher.dispatchEvent(_local_8);
                 }
             }
@@ -283,7 +283,7 @@
                         {
                             this._reportedLoc = new Vector3d();
                         }
-                        this._reportedLoc._Str_2427(_local_2);
+                        this._reportedLoc.assign(_local_2);
                         _local_3 = new RoomObjectMoveEvent(RoomObjectMoveEvent.ROME_POSITION_CHANGED, object);
                         eventDispatcher.dispatchEvent(_local_3);
                     }

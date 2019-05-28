@@ -25,9 +25,9 @@
             this._category = _arg_2;
             this._operation = _arg_3;
             this._loc = new Vector3d();
-            this._loc._Str_2427(_arg_4);
+            this._loc.assign(_arg_4);
             this._dir = new Vector3d();
-            this._dir._Str_2427(_arg_5);
+            this._dir.assign(_arg_5);
             this._typeId = _arg_6;
             this._instanceData = _arg_7;
             this._stuffData = _arg_8;

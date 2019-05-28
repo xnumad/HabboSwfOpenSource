@@ -104,12 +104,12 @@
             var _local_2:AvatarSet = this._avatarSet._Str_1498(k);
             if (_local_2 != null)
             {
-                return _local_2._Str_779;
+                return _local_2.isMain;
             }
             return false;
         }
 
-        public function _Str_1664(k:String, _arg_2:String):AvatarCanvas
+        public function getCanvas(k:String, _arg_2:String):AvatarCanvas
         {
             var _local_4:AvatarCanvas;
             var _local_3:Dictionary = this._canvases[k];

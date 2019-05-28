@@ -113,7 +113,7 @@
             var _local_6:String;
             if (this._container != null)
             {
-                _local_6 = this._container._Str_12010;
+                _local_6 = this._container.roomObjectVariableAccurateZ;
             }
             this._eventCache = new Map();
             this._roomObjectCache = new RoomObjectCache(_local_6);
@@ -179,7 +179,7 @@
             this._mouseListener = k;
         }
 
-        public function set _Str_21906(k:Boolean):void
+        public function set useMask(k:Boolean):void
         {
             if (((k) && (!(this._useMask))))
             {
@@ -405,7 +405,7 @@
             }
             this._Str_24182(k);
             this._bitmapDataCache.compress();
-            var _local_4:int = this._container._Str_3391();
+            var _local_4:int = this._container.getRoomObjectCount();
             var _local_5:int;
             var _local_6:int;
             var _local_7:String = "";
@@ -425,10 +425,10 @@
             _local_5 = 0;
             while (_local_5 < _local_4)
             {
-                _local_8 = this._container._Str_3652(_local_5);
+                _local_8 = this._container.getRoomObjectWithIndex(_local_5);
                 if (_local_8 != null)
                 {
-                    _local_7 = this._container._Str_19106(_local_5);
+                    _local_7 = this._container.getRoomObjectIdWithIndex(_local_5);
                     _local_6 = (_local_6 + this._Str_24532(_local_8, _local_7, k, _arg_2, _local_6));
                 }
                 _local_5++;
@@ -514,7 +514,7 @@
         private function _Str_24532(k:IRoomObject, _arg_2:String, _arg_3:int, _arg_4:Boolean, _arg_5:int):int
         {
             var _local_22:BitmapData;
-            var _local_6:IRoomObjectSpriteVisualization = (k._Str_5222() as IRoomObjectSpriteVisualization);
+            var _local_6:IRoomObjectSpriteVisualization = (k.getVisualization() as IRoomObjectSpriteVisualization);
             if (_local_6 == null)
             {
                 this._roomObjectCache._Str_18669(_arg_2);
@@ -536,11 +536,11 @@
             {
                 _arg_4 = true;
             }
-            if (((!(_local_9._Str_17574(_local_6.getInstanceId(), _local_6._Str_3273()))) && (!(_arg_4))))
+            if (((!(_local_9._Str_17574(_local_6.getInstanceId(), _local_6.getUpdateID()))) && (!(_arg_4))))
             {
-                return _local_9._Str_3008;
+                return _local_9.spriteCount;
             }
-            var _local_12:int = _local_6._Str_3008;
+            var _local_12:int = _local_6.spriteCount;
             var _local_13:int = _local_10.x;
             var _local_14:int = _local_10.y;
             var _local_15:Number = _local_10.z;
@@ -562,7 +562,7 @@
             var _local_21:int;
             while (_local_21 < _local_12)
             {
-                _local_18 = _local_6._Str_2505(_local_21);
+                _local_18 = _local_6.getSprite(_local_21);
                 if (((!(_local_18 == null)) && (_local_18.visible)))
                 {
                     _local_22 = _local_18.asset;
@@ -572,11 +572,11 @@
                         _local_20 = ((_local_14 + _local_18.offsetY) + this._screenOffsetY);
                         if (this._Str_22622(_local_19, _local_20, _local_22.width, _local_22.height))
                         {
-                            _local_17 = _local_9._Str_2505(_local_16);
+                            _local_17 = _local_9.getSprite(_local_16);
                             if (_local_17 == null)
                             {
                                 _local_17 = new SortableSprite();
-                                _local_9._Str_12937(_local_17);
+                                _local_9.addSprite(_local_17);
                                 this._sortableSpriteList.push(_local_17);
                                 _local_17.name = _arg_2;
                             }
@@ -651,7 +651,7 @@
             return true;
         }
 
-        protected function _Str_2505(k:int):ExtendedSprite
+        protected function getSprite(k:int):ExtendedSprite
         {
             if (((k < 0) || (k >= this._spriteCount)))
             {
@@ -711,7 +711,7 @@
                 return true;
             }
             var _local_3:IRoomObjectSprite = _arg_2.sprite;
-            var _local_4:ExtendedSprite = this._Str_2505(k);
+            var _local_4:ExtendedSprite = this.getSprite(k);
             if (_local_4 != null)
             {
                 if (_local_4._Str_4593 != _local_3._Str_4593)
@@ -802,7 +802,7 @@
                 _local_4 = (this._spriteCount - 1);
                 while (_local_4 >= k)
                 {
-                    _local_3 = this._Str_2505(_local_4);
+                    _local_3 = this.getSprite(_local_4);
                     this._Str_21974(_local_3, _arg_2);
                     _local_4--;
                 }
@@ -1044,7 +1044,7 @@
             _local_14 = (this._Str_21597 - 1);
             while (_local_14 >= 0)
             {
-                _local_10 = this._Str_2505(_local_14);
+                _local_10 = this.getSprite(_local_14);
                 if (((!(_local_10 == null)) && (_local_10._Str_4530)))
                 {
                     if (_local_10.hitTest((k - _local_10.x), (_arg_2 - _local_10.y)))
@@ -1081,7 +1081,7 @@
             _local_14 = (this._Str_21597 - 1);
             while (_local_14 >= 0)
             {
-                _local_10 = (this._Str_2505(_local_14) as ExtendedSprite);
+                _local_10 = (this.getSprite(_local_14) as ExtendedSprite);
                 if (((!(_local_10 == null)) && (_local_10.hitTestPoint((k - _local_10.x), (_arg_2 - _local_10.y)))))
                 {
                     if (((_local_10._Str_4530) && ((_arg_3 == MouseEvent.CLICK) || (_arg_3 == MouseEvent.DOUBLE_CLICK))))
@@ -1096,21 +1096,21 @@
                             _local_13 = (this._mouseActiveObjects.getValue(_local_9) as ObjectMouseData);
                             if (_local_13 != null)
                             {
-                                if (_local_13._Str_4216 != _local_16)
+                                if (_local_13.spriteTag != _local_16)
                                 {
-                                    _local_11 = this._Str_11609(0, 0, 0, 0, MouseEvent.ROLL_OUT, _local_13._Str_4216, _arg_4, _arg_5, _arg_6, _arg_7);
+                                    _local_11 = this._Str_11609(0, 0, 0, 0, MouseEvent.ROLL_OUT, _local_13.spriteTag, _arg_4, _arg_5, _arg_6, _arg_7);
                                     this._Str_14715(_local_11, _local_9);
                                 }
                             }
-                            if (((_arg_3 == MouseEvent.MOUSE_MOVE) && ((_local_13 == null) || (!(_local_13._Str_4216 == _local_16)))))
+                            if (((_arg_3 == MouseEvent.MOUSE_MOVE) && ((_local_13 == null) || (!(_local_13.spriteTag == _local_16)))))
                             {
                                 _local_11 = this._Str_11609(k, _arg_2, (k - _local_10.x), (_arg_2 - _local_10.y), MouseEvent.ROLL_OVER, _local_16, _arg_4, _arg_5, _arg_6, _arg_7);
                             }
                             else
                             {
                                 _local_11 = this._Str_11609(k, _arg_2, (k - _local_10.x), (_arg_2 - _local_10.y), _arg_3, _local_16, _arg_4, _arg_5, _arg_6, _arg_7);
-                                _local_11._Str_4595 = _local_10._Str_14797;
-                                _local_11._Str_4534 = _local_10._Str_13379;
+                                _local_11.spriteOffsetX = _local_10._Str_14797;
+                                _local_11.spriteOffsetY = _local_10._Str_13379;
                             }
                             if (_local_13 == null)
                             {
@@ -1118,7 +1118,7 @@
                                 _local_13._Str_1577 = _local_9;
                                 this._mouseActiveObjects.add(_local_9, _local_13);
                             }
-                            _local_13._Str_4216 = _local_16;
+                            _local_13.spriteTag = _local_16;
                             if ((((!(_arg_3 == MouseEvent.MOUSE_MOVE)) || (!(k == this._mouseOldX))) || (!(_arg_2 == this._mouseOldY))))
                             {
                                 this._Str_14715(_local_11, _local_9);
@@ -1151,7 +1151,7 @@
                     _local_13 = (this._mouseActiveObjects.remove(_local_9) as ObjectMouseData);
                     if (_local_13 != null)
                     {
-                        _local_11 = this._Str_11609(0, 0, 0, 0, MouseEvent.ROLL_OUT, _local_13._Str_4216, _arg_4, _arg_5, _arg_6, _arg_7);
+                        _local_11 = this._Str_11609(0, 0, 0, 0, MouseEvent.ROLL_OUT, _local_13.spriteTag, _arg_4, _arg_5, _arg_6, _arg_7);
                         this._Str_14715(_local_11, _local_9);
                     }
                 }
@@ -1199,11 +1199,11 @@
                     {
                         if (this._mouseListener != null)
                         {
-                            this._mouseListener._Str_20330(_local_4, _local_5, this.geometry);
+                            this._mouseListener.processRoomCanvasMouseEvent(_local_4, _local_5, this.geometry);
                         }
                         else
                         {
-                            _local_6 = _local_5._Str_11182();
+                            _local_6 = _local_5.getMouseHandler();
                             if (_local_6 != null)
                             {
                                 _local_6.mouseEvent(_local_4, this._geometry);

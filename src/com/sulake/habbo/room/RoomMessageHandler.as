@@ -880,44 +880,44 @@
                     _local_18 = _local_7.actions.length;
                     for each (_local_19 in _local_7.actions)
                     {
-                        switch (_local_19._Str_695)
+                        switch (_local_19.actionType)
                         {
                             case "flatctrl":
-                                this._roomCreator._Str_17118(this._currentRoomId, _local_7.id, _local_19._Str_727);
+                                this._roomCreator._Str_17118(this._currentRoomId, _local_7.id, _local_19.actionParameter);
                                 break;
                             case "sign":
                                 if (_local_18 == 1)
                                 {
                                     _local_12 = false;
                                 }
-                                this._roomCreator._Str_3689(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.FIGURE_SIGN, int(_local_19._Str_727));
+                                this._roomCreator._Str_3689(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.FIGURE_SIGN, int(_local_19.actionParameter));
                                 break;
                             case "gst":
                                 if (_local_18 == 1)
                                 {
                                     _local_12 = false;
                                 }
-                                this._roomCreator._Str_19224(this._currentRoomId, _local_7.id, _local_19._Str_727);
+                                this._roomCreator._Str_19224(this._currentRoomId, _local_7.id, _local_19.actionParameter);
                                 break;
                             case "wav":
                             case "mv":
                                 _local_17 = true;
                                 _local_13 = true;
-                                _local_14 = _local_19._Str_695;
-                                _local_15 = _local_19._Str_727;
+                                _local_14 = _local_19.actionType;
+                                _local_15 = _local_19.actionParameter;
                                 break;
                             case "swim":
                                 _local_16 = true;
                                 _local_13 = true;
-                                _local_14 = _local_19._Str_695;
-                                _local_15 = _local_19._Str_727;
+                                _local_14 = _local_19.actionType;
+                                _local_15 = _local_19.actionParameter;
                                 break;
                             case "trd":
                                 break;
                             default:
                                 _local_13 = true;
-                                _local_14 = _local_19._Str_695;
-                                _local_15 = _local_19._Str_727;
+                                _local_14 = _local_19.actionType;
+                                _local_15 = _local_19.actionParameter;
                         }
                     }
                     if (((!(_local_17)) && (_local_16)))

@@ -154,7 +154,7 @@
             {
                 return null;
             }
-            var k:IRoomObjectSprite = _Str_2505(_Str_14111);
+            var k:IRoomObjectSprite = getSprite(_Str_14111);
             if (k)
             {
                 _local_2 = new RoomObjectSpriteData();
@@ -169,20 +169,20 @@
             for each (_local_4 in this._Str_2842._Str_754())
             {
                 _local_6 = new RoomObjectSpriteData();
-                _local_7 = this._Str_2842._Str_607(_local_4);
+                _local_7 = this._Str_2842.getLayerData(_local_4);
                 _local_8 = 0;
                 _local_9 = this._Str_2842.getDirection();
-                _local_10 = _local_4._Str_809(_local_9);
-                _local_11 = _local_4._Str_739(_local_9);
-                _local_12 = _local_4._Str_839(_local_9);
+                _local_10 = _local_4.getDirectionOffsetX(_local_9);
+                _local_11 = _local_4.getDirectionOffsetY(_local_9);
+                _local_12 = _local_4.getDirectionOffsetZ(_local_9);
                 _local_13 = 0;
-                if (_local_4._Str_949)
+                if (_local_4.hasDirections)
                 {
                     _local_13 = _local_9;
                 }
                 if (_local_7 != null)
                 {
-                    _local_8 = _local_7._Str_891;
+                    _local_8 = _local_7.animationFrame;
                     _local_10 = (_local_10 + _local_7.dx);
                     _local_11 = (_local_11 + _local_7.dy);
                     _local_13 = (_local_13 + _local_7.dd);
@@ -210,7 +210,7 @@
                 {
                     _local_6.x = ((-(_local_16.offset.x) - (_local_14 / 2)) + _local_10);
                     _local_6.y = (-(_local_16.offset.y) + _local_11);
-                    if (_local_4._Str_767)
+                    if (_local_4.hasStaticY)
                     {
                         _local_6.y = (_local_6.y + ((this._Str_7508 * _local_14) / (2 * _Str_12370)));
                     }
@@ -221,11 +221,11 @@
                     _local_6.name = _local_15;
                     if (this._Str_8935)
                     {
-                        _local_6.z = (_Str_9235 - ((0.001 * _Str_3008) * _local_12));
+                        _local_6.z = (_Str_9235 - ((0.001 * spriteCount) * _local_12));
                     }
                     else
                     {
-                        _local_6.z = ((-0.001 * _Str_3008) * _local_12);
+                        _local_6.z = ((-0.001 * spriteCount) * _local_12);
                     }
                     _local_17 = _local_16.rectangle;
                     if (_local_17 == null)
@@ -242,7 +242,7 @@
                 }
             }
             _local_5 = this._Str_2842._Str_920;
-            if (((!(_local_5 == null)) && (_local_5._Str_832)))
+            if (((!(_local_5 == null)) && (_local_5.paletteIsGrayscale)))
             {
                 _local_18 = _local_5.reds[0].toString();
                 for each (_local_19 in _local_3)
@@ -278,7 +278,7 @@
         override public function initialize(k:IRoomObjectVisualizationData):Boolean
         {
             this._Str_8256 = (k as AvatarVisualizationData);
-            _Str_3773(_Str_11587);
+            createSprites(_Str_11587);
             return true;
         }
 
@@ -290,7 +290,7 @@
             var _local_7:String;
             var _local_8:IAvatarAddition;
             var _local_9:String;
-            if (k._Str_3273() != _Str_3603)
+            if (k.getUpdateID() != _modelUpdateID)
             {
                 _local_4 = false;
                 _local_5 = false;
@@ -559,7 +559,7 @@
                     this._Str_16138 = _local_5;
                     _local_4 = true;
                 }
-                _Str_3603 = k._Str_3273();
+                _modelUpdateID = k.getUpdateID();
                 return _local_4;
             }
             return false;
@@ -597,7 +597,7 @@
             this._Str_6736.reset();
             this._Str_5861.reset();
             this._Str_2842 = null;
-            _local_2 = _Str_2505(_Str_9540);
+            _local_2 = getSprite(_Str_9540);
             if (_local_2 != null)
             {
                 _local_2.asset = null;
@@ -687,7 +687,7 @@
             var _local_5:Boolean;
             var _local_6:int;
             var _local_7:int;
-            if ((((_arg_4) || (!(_Str_7475 == k._Str_3273()))) || (!(this._Str_3406 == _arg_2.updateId))))
+            if ((((_arg_4) || (!(_objectUpdateID == k.getUpdateID()))) || (!(this._Str_3406 == _arg_2.updateId))))
             {
                 _local_5 = _arg_3;
                 _local_6 = (k.getDirection().x - _arg_2.direction.x);
@@ -729,7 +729,7 @@
                         this._Str_2842._Str_880(AvatarSetType.HEAD, _local_7);
                     }
                 }
-                _Str_7475 = k._Str_3273();
+                _objectUpdateID = k.getUpdateID();
                 this._Str_3406 = _arg_2.updateId;
                 return _local_5;
             }
@@ -740,7 +740,7 @@
         {
             var _local_4:int;
             var _local_5:int;
-            var _local_2:IRoomObjectSprite = _Str_2505(_Str_14111);
+            var _local_2:IRoomObjectSprite = getSprite(_Str_14111);
             this._Str_6428 = null;
             var _local_3:Boolean = (((this._posture == "mv") || (this._posture == "std")) || ((this._posture == "sit") && (this._Str_6643)));
             if (this._Str_5192 == _Str_17502)
@@ -750,7 +750,7 @@
             if (_local_3)
             {
                 _local_2.visible = true;
-                if (((this._Str_6428 == null) || (!(k == _Str_3289))))
+                if (((this._Str_6428 == null) || (!(k == _currentScale))))
                 {
                     _local_4 = 0;
                     _local_5 = 0;
@@ -843,9 +843,9 @@
             var _local_11:int = this._Str_5192;
             var _local_12:Boolean;
             var _local_13:Boolean = this.updateModel(_local_6, _local_7, _arg_3);
-            if ((((_local_13) || (!(_local_7 == _Str_3289))) || (this._Str_2842 == null)))
+            if ((((_local_13) || (!(_local_7 == _currentScale))) || (this._Str_2842 == null)))
             {
-                if (_local_7 != _Str_3289)
+                if (_local_7 != _currentScale)
                 {
                     _local_9 = true;
                     this._Str_14314(_local_7);
@@ -862,7 +862,7 @@
                         return;
                     }
                     _local_8 = true;
-                    _local_17 = _Str_2505(_Str_9540);
+                    _local_17 = getSprite(_Str_9540);
                     if ((((_local_17) && (this._Str_2842)) && (this._Str_2842.isPlaceholder())))
                     {
                         _local_17.alpha = 150;
@@ -891,10 +891,10 @@
                     _local_14 = this._Str_16697;
                     for each (_local_18 in this._Str_3663)
                     {
-                        _local_18.update(_Str_2505(_local_14++), _local_7);
+                        _local_18.update(getSprite(_local_14++), _local_7);
                     }
                 }
-                _Str_3289 = _local_7;
+                _currentScale = _local_7;
             }
             else
             {
@@ -905,9 +905,9 @@
                 _local_14 = this._Str_16697;
                 for each (_local_18 in this._Str_3663)
                 {
-                    if (_local_18.animate(_Str_2505(_local_14++)))
+                    if (_local_18.animate(getSprite(_local_14++)))
                     {
-                        _Str_6936();
+                        increaseUpdateId();
                     }
                 }
             }
@@ -919,7 +919,7 @@
             }
             if (((_local_15) || (_local_16)))
             {
-                _Str_6936();
+                increaseUpdateId();
                 this._Str_12697--;
                 this._Str_14276--;
                 if (((((this._Str_14276 <= 0) || (_local_9)) || (_local_13)) || (_local_8)))
@@ -936,7 +936,7 @@
                 {
                     _local_20 = _Str_18338;
                 }
-                _local_19 = _Str_2505(_Str_9540);
+                _local_19 = getSprite(_Str_9540);
                 if (_local_19 != null)
                 {
                     _local_24 = ((_local_6.getNumber(RoomObjectVariableEnum.FIGURE_HIGHLIGHT_ENABLE) == 1) && (_local_6.getNumber(RoomObjectVariableEnum.FIGURE_HIGHLIGHT) == 1));
@@ -999,10 +999,10 @@
                 {
                     if (_local_23.id == AVATAR)
                     {
-                        _local_19 = _Str_2505(_Str_9540);
-                        _local_27 = this._Str_2842._Str_607(_local_23);
-                        _local_28 = _local_23._Str_809(_local_22);
-                        _local_29 = _local_23._Str_739(_local_22);
+                        _local_19 = getSprite(_Str_9540);
+                        _local_27 = this._Str_2842.getLayerData(_local_23);
+                        _local_28 = _local_23.getDirectionOffsetX(_local_22);
+                        _local_29 = _local_23.getDirectionOffsetY(_local_22);
                         if (_local_27 != null)
                         {
                             _local_28 = (_local_28 + _local_27.dx);
@@ -1021,24 +1021,24 @@
                     }
                     else
                     {
-                        _local_19 = _Str_2505(_local_21);
+                        _local_19 = getSprite(_local_21);
                         if (_local_19 != null)
                         {
                             _local_19._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                             _local_19.visible = true;
-                            _local_30 = this._Str_2842._Str_607(_local_23);
+                            _local_30 = this._Str_2842.getLayerData(_local_23);
                             _local_31 = 0;
-                            _local_32 = _local_23._Str_809(_local_22);
-                            _local_33 = _local_23._Str_739(_local_22);
-                            _local_34 = _local_23._Str_839(_local_22);
+                            _local_32 = _local_23.getDirectionOffsetX(_local_22);
+                            _local_33 = _local_23.getDirectionOffsetY(_local_22);
+                            _local_34 = _local_23.getDirectionOffsetZ(_local_22);
                             _local_35 = 0;
-                            if (_local_23._Str_949)
+                            if (_local_23.hasDirections)
                             {
                                 _local_35 = _local_22;
                             }
                             if (_local_30 != null)
                             {
-                                _local_31 = _local_30._Str_891;
+                                _local_31 = _local_30.animationFrame;
                                 _local_32 = (_local_32 + _local_30.dx);
                                 _local_33 = (_local_33 + _local_30.dy);
                                 _local_35 = (_local_35 + _local_30.dd);
@@ -1065,7 +1065,7 @@
                             _local_19.asset = (_local_37.content as BitmapData);
                             _local_19.offsetX = ((-(_local_37.offset.x) - (_local_7 / 2)) + _local_32);
                             _local_19.offsetY = (-(_local_37.offset.y) + _local_33);
-                            if (_local_23._Str_767)
+                            if (_local_23.hasStaticY)
                             {
                                 _local_19.offsetY = (_local_19.offsetY + ((this._Str_7508 * _local_7) / (2 * _Str_12370)));
                             }
@@ -1075,11 +1075,11 @@
                             }
                             if (this._Str_8935)
                             {
-                                _local_19.relativeDepth = (_Str_9235 - ((0.001 * _Str_3008) * _local_34));
+                                _local_19.relativeDepth = (_Str_9235 - ((0.001 * spriteCount) * _local_34));
                             }
                             else
                             {
-                                _local_19.relativeDepth = (_Str_11358 - ((0.001 * _Str_3008) * _local_34));
+                                _local_19.relativeDepth = (_Str_11358 - ((0.001 * spriteCount) * _local_34));
                             }
                             if (_local_23.ink == 33)
                             {
@@ -1165,16 +1165,16 @@
                     _local_2++;
                 }
             }
-            if (_local_2 != _Str_3008)
+            if (_local_2 != spriteCount)
             {
-                _Str_3773(_local_2);
+                createSprites(_local_2);
             }
             this._Str_16697 = _local_2;
             if (this._Str_3663)
             {
                 for each (_local_5 in this._Str_3663)
                 {
-                    _local_6 = _Str_12937();
+                    _local_6 = addSprite();
                 }
             }
         }

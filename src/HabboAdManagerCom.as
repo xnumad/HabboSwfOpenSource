@@ -7,7 +7,7 @@
 
     public class HabboAdManagerCom extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_12854;
+        public static var manifest:Class = HabboAdManagerCom_manifest;
         public static var requiredClasses:Array = new Array(AdManagerBootstrap, IIDHabboAdManager);
     }
 }

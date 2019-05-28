@@ -10,18 +10,18 @@
 
     public class HabboGamesCom extends SimpleApplication 
     {
-        public static var manifest:Class = _Str_14606;
-        public static var game_center_view_generic_xml:Class = _Str_14492;
-        public static var game_center_leaderboard_view_xml:Class = _Str_15867;
-        public static var game_center_teaser_view_xml:Class = _Str_15783;
-        public static var game_center_waiting_game_view_xml:Class = _Str_12844;
-        public static var game_achievement_entry_xml:Class = _Str_14026;
-        public static var game_leaderboard_entry_xml:Class = _Str_13023;
-        public static var game_leaderboard_entry_small_xml:Class = _Str_15084;
-        public static const game_center_icon_selected:Class = _Str_14311;
-        public static const game_center_speech_bubble:Class = _Str_12762;
-        public static const game_center_reward_star:Class = _Str_14614;
-        public static var game_center_lucky_loser_entry_xml:Class = _Str_12545;
+        public static var manifest:Class = HabboGamesCom_manifest;
+        public static var game_center_view_generic_xml:Class = HabboGamesCom_game_center_view_generic_xml;
+        public static var game_center_leaderboard_view_xml:Class = HabboGamesCom_game_center_leaderboard_view_xml;
+        public static var game_center_teaser_view_xml:Class = HabboGamesCom_game_center_teaser_view_xml;
+        public static var game_center_waiting_game_view_xml:Class = HabboGamesCom_game_center_waiting_game_view_xml;
+        public static var game_achievement_entry_xml:Class = HabboGamesCom_game_achievement_entry_xml;
+        public static var game_leaderboard_entry_xml:Class = HabboGamesCom_game_leaderboard_entry_xml;
+        public static var game_leaderboard_entry_small_xml:Class = HabboGamesCom_game_leaderboard_entry_small_xml;
+        public static const game_center_icon_selected:Class = HabboGamesCom_game_center_icon_selected;
+        public static const game_center_speech_bubble:Class = HabboGamesCom_game_center_speech_bubble;
+        public static const game_center_reward_star:Class = HabboGamesCom_game_center_reward_star;
+        public static var game_center_lucky_loser_entry_xml:Class = HabboGamesCom_game_center_lucky_loser_entry_xml;
 	
 		
 		/**

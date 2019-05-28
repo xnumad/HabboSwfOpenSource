@@ -1514,9 +1514,9 @@
             {
                 return;
             }
-            var _local_6:int = ColorConverter._Str_22130(k);
+            var _local_6:int = ColorConverter.rgbToHSL(k);
             _local_6 = ((_local_6 & 0xFFFF00) + _arg_2);
-            k = ColorConverter._Str_13949(_local_6);
+            k = ColorConverter.hslToRGB(_local_6);
             this._roomColor = k;
             _local_5.graphics.clear();
             _local_5.graphics.beginFill(k);
@@ -1526,7 +1526,7 @@
 
         public function _Str_18812(k:int, _arg_2:int, _arg_3:int):void
         {
-            this._roomBackgroundColor = ColorConverter._Str_13949(((((k & 0xFF) << 16) + ((_arg_2 & 0xFF) << 8)) + (_arg_3 & 0xFF)));
+            this._roomBackgroundColor = ColorConverter.hslToRGB(((((k & 0xFF) << 16) + ((_arg_2 & 0xFF) << 8)) + (_arg_3 & 0xFF)));
             var _local_4:IWindowContainer = (this._layoutManager._Str_19928() as IWindowContainer);
             if (_local_4 == null)
             {

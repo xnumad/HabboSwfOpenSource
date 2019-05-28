@@ -631,7 +631,7 @@
                 k = this._roomEngine.getRoomObject(this._Str_2733, _Str_3109, RoomObjectCategoryEnum.CONST_100);
                 if (k)
                 {
-                    _local_2 = k._Str_5222();
+                    _local_2 = k.getVisualization();
                     if (_local_2)
                     {
                         return _local_2.getImage(0xFFFFFF, -1);
@@ -643,7 +643,7 @@
 
         public function get _Str_2949():Boolean
         {
-            return (!(this._roomEngine == null)) && (this._roomEngine._Str_3022);
+            return (!(this._roomEngine == null)) && (this._roomEngine.isInitialized);
         }
     }
 }

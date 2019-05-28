@@ -91,7 +91,7 @@
             return ((this._view) && (!(this._view.parent == null))) && (this._view.visible);
         }
 
-        public function get _Str_3022():Boolean
+        public function get isInitialized():Boolean
         {
             return this._isInitialized;
         }

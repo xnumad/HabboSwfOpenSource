@@ -34,7 +34,7 @@
             return this._name;
         }
 
-        public function get _Str_695():int
+        public function get actionType():int
         {
             return this._actionType;
         }

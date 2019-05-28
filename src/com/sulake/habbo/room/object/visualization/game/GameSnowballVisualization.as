@@ -28,11 +28,11 @@
         {
             var _local_2:BitmapDataAsset;
             this._Str_594 = (k as GameObjectVisualization);
-            _Str_3773(2);
+            createSprites(2);
             _local_2 = (this._Str_594.assets.getAssetByName(SNOWBALL_SMALL_PNG) as BitmapDataAsset);
-            _Str_2505(0).asset = (_local_2.content as BitmapData);
+            getSprite(0).asset = (_local_2.content as BitmapData);
             _local_2 = (this._Str_594.assets.getAssetByName(SNOWBALL_SMALL_SHADOW_PNG) as BitmapDataAsset);
-            this._Str_6286 = _Str_2505(1);
+            this._Str_6286 = getSprite(1);
             this._Str_6286.asset = (_local_2.content as BitmapData);
             this._Str_6286.alpha = 100;
             this._Str_6286.relativeDepth = 1;

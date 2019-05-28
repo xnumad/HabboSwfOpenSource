@@ -21,8 +21,8 @@
         private var _roomObjectModel:RoomObjectModel;
         private var _visualization:IRoomObjectVisualization;
         private var _roomObjectLogic:IRoomObjectEventHandler;
-        private var _Str_2542:int;
-        private var _Str_4848:int = 0;
+        private var _updateID:int;
+        private var _instanceId:int = 0;
         private var _Str_2367:Boolean = false;
 
         public function RoomObject(k:int, _arg_2:int, _arg_3:String)
@@ -43,8 +43,8 @@
             this._roomObjectModel = new RoomObjectModel();
             this._visualization = null;
             this._roomObjectLogic = null;
-            this._Str_2542 = 0;
-            this._Str_4848 = _Str_3822++;
+            this._updateID = 0;
+            this._instanceId = _Str_3822++;
         }
 
         public function dispose():void
@@ -52,8 +52,8 @@
             this._loc = null;
             this._dir = null;
             this._Str_6775 = null;
-            this._Str_14063(null);
-            this._Str_8711(null);
+            this.setVisualization(null);
+            this.setEventHandler(null);
             if (this._roomObjectModel != null)
             {
                 this._roomObjectModel.dispose();
@@ -61,12 +61,12 @@
             }
         }
 
-        public function _Str_17972(k:Boolean):void
+        public function setInitialized(k:Boolean):void
         {
             this._Str_2367 = k;
         }
 
-        public function _Str_3022():Boolean
+        public function isInitialized():Boolean
         {
             return this._Str_2367;
         }
@@ -78,7 +78,7 @@
 
         public function getInstanceId():int
         {
-            return this._Str_4848;
+            return this._instanceId;
         }
 
         public function getType():String
@@ -88,13 +88,13 @@
 
         public function getLocation():IVector3D
         {
-            this._Str_17023._Str_2427(this._loc);
+            this._Str_17023.assign(this._loc);
             return this._Str_17023;
         }
 
         public function getDirection():IVector3D
         {
-            this._Str_18908._Str_2427(this._dir);
+            this._Str_18908.assign(this._dir);
             return this._Str_18908;
         }
 
@@ -117,7 +117,7 @@
             return -1;
         }
 
-        public function _Str_5222():IRoomObjectVisualization
+        public function getVisualization():IRoomObjectVisualization
         {
             return this._visualization;
         }
@@ -133,7 +133,7 @@
                 this._loc.x = k.x;
                 this._loc.y = k.y;
                 this._loc.z = k.z;
-                this._Str_2542++;
+                this._updateID++;
             }
         }
 
@@ -148,7 +148,7 @@
                 this._dir.x = (((k.x % 360) + 360) % 360);
                 this._dir.y = (((k.y % 360) + 360) % 360);
                 this._dir.z = (((k.z % 360) + 360) % 360);
-                this._Str_2542++;
+                this._updateID++;
             }
         }
 
@@ -159,14 +159,14 @@
                 if (this._Str_6775[_arg_2] != k)
                 {
                     this._Str_6775[_arg_2] = k;
-                    this._Str_2542++;
+                    this._updateID++;
                 }
                 return true;
             }
             return false;
         }
 
-        public function _Str_14063(k:IRoomObjectVisualization):void
+        public function setVisualization(k:IRoomObjectVisualization):void
         {
             if (k != this._visualization)
             {
@@ -182,7 +182,7 @@
             }
         }
 
-        public function _Str_8711(k:IRoomObjectEventHandler):void
+        public function setEventHandler(k:IRoomObjectEventHandler):void
         {
             if (k == this._roomObjectLogic)
             {
@@ -201,19 +201,19 @@
             }
         }
 
-        public function _Str_2377():IRoomObjectEventHandler
+        public function getEventHandler():IRoomObjectEventHandler
         {
             return this._roomObjectLogic;
         }
 
-        public function _Str_3273():int
+        public function getUpdateID():int
         {
-            return this._Str_2542;
+            return this._updateID;
         }
 
-        public function _Str_11182():IRoomObjectMouseHandler
+        public function getMouseHandler():IRoomObjectMouseHandler
         {
-            return this._Str_2377();
+            return this.getEventHandler();
         }
 
         public function tearDown():void

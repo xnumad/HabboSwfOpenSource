@@ -18,7 +18,7 @@
         function _Str_953(_arg_1:int=1):void;
         function _Str_797():String;
         function _Str_754():Array;
-        function _Str_607(_arg_1:ISpriteDataContainer):IAnimationLayerData;
+        function getLayerData(_arg_1:ISpriteDataContainer):IAnimationLayerData;
         function getAsset(_arg_1:String):BitmapDataAsset;
         function getDirection():int;
         function _Str_784():IAvatarFigureContainer;

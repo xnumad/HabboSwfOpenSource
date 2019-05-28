@@ -187,7 +187,7 @@
             {
                 if (this._cachedBitmapData != null)
                 {
-                    if ((((this._cachedBitmapData.width == width) && (this._cachedBitmapData.height == height)) && (Vector3d._Str_15471(this._cachedBitmapNormal, normal))))
+                    if ((((this._cachedBitmapData.width == width) && (this._cachedBitmapData.height == height)) && (Vector3d.isEqual(this._cachedBitmapNormal, normal))))
                     {
                         if (canvas != null)
                         {
@@ -216,7 +216,7 @@
                 }
             }
             this._isCached = true;
-            this._cachedBitmapNormal._Str_2427(normal);
+            this._cachedBitmapNormal.assign(normal);
             if (!useTexture)
             {
                 this._cachedBitmapHeight = height;
