@@ -25,7 +25,7 @@
             return this._session;
         }
 
-        public function get _Str_24993():Boolean
+        public function get openLandingPage():Boolean
         {
             return this._openLandingPage;
         }

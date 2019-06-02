@@ -6,10 +6,10 @@
 
     public class GameClickTarget implements IAvatarAddition 
     {
-        private static const _Str_3098:int = 46;
-        private static const _Str_2790:int = 60;
-        private static const _Str_18919:int = -23;
-        private static const _Str_16719:int = -48;
+        private static const WIDTH:int = 46;
+        private static const HEIGHT:int = 60;
+        private static const OFFSET_X:int = -23;
+        private static const OFFSET_Y:int = -48;
 
         private var _id:int = -1;
         private var _bitmap:BitmapData;
@@ -52,12 +52,12 @@
             }
             if (!this._bitmap)
             {
-                this._bitmap = new BitmapData(_Str_3098, _Str_2790, true, 0);
+                this._bitmap = new BitmapData(WIDTH, HEIGHT, true, 0);
             }
             k.visible = true;
             k.asset = this._bitmap;
-            k.offsetX = _Str_18919;
-            k.offsetY = _Str_16719;
+            k.offsetX = OFFSET_X;
+            k.offsetY = OFFSET_Y;
             k._Str_4023 = AlphaTolerance.MATCH_ALL_PIXELS;
         }
     }

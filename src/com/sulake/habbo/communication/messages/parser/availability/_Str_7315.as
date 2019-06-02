@@ -10,7 +10,7 @@
         private var _duration:int = 15;
 
 
-        public function get _Str_24179():Boolean
+        public function get isInMaintenance():Boolean
         {
             return this._Str_20855;
         }

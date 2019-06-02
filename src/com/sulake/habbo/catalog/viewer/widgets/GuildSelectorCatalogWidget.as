@@ -113,14 +113,14 @@
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                this._Str_4025._Str_16478(0);
+                this._Str_4025.removeMenuItemAt(0);
                 _local_5++;
             }
             var _local_6:int;
             while (_local_6 < this._Str_14021.length)
             {
                 _local_7 = this._Str_14021[_local_6];
-                this._Str_4025._Str_15679(this._Str_23230(_local_7));
+                this._Str_4025.addMenuItem(this._Str_23230(_local_7));
                 if (_local_7.favourite)
                 {
                     _local_2 = _local_6;

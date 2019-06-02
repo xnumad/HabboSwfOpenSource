@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
-    import com.sulake.habbo.ui.widget.enums.ContextMenuType;
+    import com.sulake.habbo.ui.widget.enums.ContextMenuEnum;
     import com.sulake.habbo.room.events.RoomObjectWidgetRequestEvent;
     import com.sulake.room.events.RoomObjectEvent;
 
@@ -10,7 +10,7 @@
 
         override public function get contextMenu():String
         {
-            return ContextMenuType.MONSTERPLANT_SEED;
+            return ContextMenuEnum.MONSTERPLANT_SEED;
         }
 
         override public function getEventTypes():Array

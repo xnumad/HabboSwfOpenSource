@@ -7,7 +7,7 @@
     {
         function get offerId():int;
         function get furniId():int;
-        function get _Str_4120():int;
+        function get furniType():int;
         function get extraData():String;
         function get stuffData():IStuffData;
         function get price():int;

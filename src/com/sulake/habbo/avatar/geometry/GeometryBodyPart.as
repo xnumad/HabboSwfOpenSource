@@ -26,7 +26,7 @@
             }
         }
 
-        public function _Str_1883(k:IAvatarImage):Array
+        public function getDynamicParts(k:IAvatarImage):Array
         {
             var _local_3:GeometryItem;
             var _local_2:Array = [];
@@ -43,7 +43,7 @@
             return _local_2;
         }
 
-        public function _Str_1456(k:IAvatarImage):Array
+        public function getPartIds(k:IAvatarImage):Array
         {
             var _local_2:GeometryItem;
             var _local_3:Array = [];
@@ -67,7 +67,7 @@
             return _local_3;
         }
 
-        public function _Str_2004(k:IAvatarImage):Boolean
+        public function removeDynamicParts(k:IAvatarImage):Boolean
         {
             var _local_2:String;
             if (this._dynamicParts[k] !== undefined)
@@ -82,10 +82,10 @@
             return true;
         }
 
-        public function _Str_2020(k:XML, _arg_2:IAvatarImage):Boolean
+        public function addPart(k:XML, _arg_2:IAvatarImage):Boolean
         {
             var _local_3:String = String(k.@id);
-            if (this._Str_2030(_local_3, _arg_2))
+            if (this.hasPart(_local_3, _arg_2))
             {
                 return false;
             }
@@ -97,7 +97,7 @@
             return true;
         }
 
-        public function _Str_2030(k:String, _arg_2:IAvatarImage):Boolean
+        public function hasPart(k:String, _arg_2:IAvatarImage):Boolean
         {
             var _local_3:GeometryItem = this._parts[k];
             if (((_local_3 == null) && (!(this._dynamicParts[_arg_2] === undefined))))
@@ -118,7 +118,7 @@
             {
                 if (_local_6 != null)
                 {
-                    _local_6._Str_1101(k);
+                    _local_6.applyTransform(k);
                     _local_5 = _local_6._Str_1522(_arg_2);
                     _local_7.push([_local_5, _local_6]);
                 }
@@ -127,12 +127,12 @@
             {
                 if (_local_6 != null)
                 {
-                    _local_6._Str_1101(k);
+                    _local_6.applyTransform(k);
                     _local_5 = _local_6._Str_1522(_arg_2);
                     _local_7.push([_local_5, _local_6]);
                 }
             }
-            _local_7.sort(this._Str_1574);
+            _local_7.sort(this.orderParts);
             for each (_local_9 in _local_7)
             {
                 _local_6 = (_local_9[1] as GeometryItem);
@@ -143,8 +143,8 @@
 
         public function _Str_1522(k:Vector3D):Number
         {
-            var _local_2:Number = Math.abs(((k.z - this._Str_1604.z) - this._radius));
-            var _local_3:Number = Math.abs(((k.z - this._Str_1604.z) + this._radius));
+            var _local_2:Number = Math.abs(((k.z - this.transformedLocation.z) - this._radius));
+            var _local_3:Number = Math.abs(((k.z - this.transformedLocation.z) + this._radius));
             return Math.min(_local_2, _local_3);
         }
 
@@ -153,7 +153,7 @@
             return this._id;
         }
 
-        private function _Str_1574(k:Array, _arg_2:Array):Number
+        private function orderParts(k:Array, _arg_2:Array):Number
         {
             var _local_3:Number = (k[0] as Number);
             var _local_4:Number = (_arg_2[0] as Number);

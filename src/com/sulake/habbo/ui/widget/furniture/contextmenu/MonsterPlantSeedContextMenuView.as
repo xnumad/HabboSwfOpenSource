@@ -91,7 +91,7 @@
             }
         }
 
-        public function set _Str_4093(k:int):void
+        public function set objectCategory(k:int):void
         {
             this._objectCategory = k;
         }

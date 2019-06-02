@@ -25,7 +25,7 @@
         private const _Str_10527:int = 85;
         private const _Str_16997:int = 190;
         private const _Str_6907:uint = 150;
-        private const _Str_1488:uint = 108;
+        private const MAX_HEIGHT:uint = 108;
         private const _Str_10539:int = 28;
         private const _Str_11116:int = 15;
 
@@ -65,7 +65,7 @@
             this._component = _arg_6;
             this._chatItem = k;
             this._style = _arg_2;
-            this._background = _arg_2._Str_9574(_arg_5);
+            this._background = _arg_2.getNewBackgroundSprite(_arg_5);
             this._pointer = ((_arg_2._Str_4931) ? null : new Bitmap(_arg_2.pointer));
             this._useDesktopMargins = _arg_8;
             var _local_10:int = _Str_7976;
@@ -94,12 +94,12 @@
             this._textField.embedFonts = true;
             this._textField.gridFitType = GridFitType.PIXEL;
             this._textField.cacheAsBitmap = true;
-            this._textField.defaultTextFormat = _arg_2._Str_5640;
+            this._textField.defaultTextFormat = _arg_2.textFormat;
             this._textField.styleSheet = this._style.styleSheet;
             this._textField.addEventListener(TextEvent.LINK, this._Str_10834);
 			this._textField.background = true;
-            var _local_12:* = (k._Str_3214 == RoomSessionChatEvent._Str_4014);
-            var _local_13:* = (k._Str_3214 == RoomSessionChatEvent._Str_4264);
+            var _local_12:* = (k.chatType == RoomSessionChatEvent.CHAT_TYPE_SPEAK);
+            var _local_13:* = (k.chatType == RoomSessionChatEvent.CHAT_TYPE_SHOUT);
             var _local_14:Boolean = (((!(_local_12)) && (!(_local_13))) && (!(this._style._Str_4931)));
             if (_local_14)
             {
@@ -134,7 +134,7 @@
             var _local_17:int = ((this._textField.textHeight + _arg_2.textFieldMargins.y) + _arg_2.textFieldMargins.height);
             if (!this._style.isSystemStyle)
             {
-                _local_17 = Math.min(this._Str_1488, _local_17);
+                _local_17 = Math.min(this.MAX_HEIGHT, _local_17);
             }
             if (_arg_9 != -1)
             {
@@ -175,12 +175,12 @@
             this._textField.x = _arg_2.textFieldMargins.x;
             this._textField.y = _arg_2.textFieldMargins.y;
             addChild(this._textField);
-            if (((!(this._style.isSystemStyle)) && (this._textField.textHeight > this._Str_1488)))
+            if (((!(this._style.isSystemStyle)) && (this._textField.textHeight > this.MAX_HEIGHT)))
             {
                 this._clipMask = new Sprite();
                 this._clipMask.graphics.clear();
-                this._clipMask.graphics.beginFill(this._textField.textColor);
-                this._clipMask.graphics.drawRect(0, 0, (this._textField.textWidth + 5), (this._Str_1488 - _arg_2.textFieldMargins.height));
+                this._clipMask.graphics.beginFill(0xFFFFFF);//(this._textField.textColor);
+                this._clipMask.graphics.drawRect(0, 0, (this._textField.textWidth + 5), (this.MAX_HEIGHT - _arg_2.textFieldMargins.height));
                 this._textField.mask = this._clipMask;
                 addChild(this._clipMask);
             }
@@ -227,7 +227,7 @@
 
         public function get _Str_22234():Number
         {
-            return (this._style.isSystemStyle) ? height : Math.min(this._Str_1488, height);
+            return (this._style.isSystemStyle) ? height : Math.min(this.MAX_HEIGHT, height);
         }
 
         private function onAddedToStage(k:Event):void

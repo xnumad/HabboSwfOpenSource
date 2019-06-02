@@ -156,7 +156,7 @@
             }
             if (this._sessionDataManager != null)
             {
-                this._sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._achievementController._Str_6753);
+                this._sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._achievementController.onBadgeImageReady);
                 this._sessionDataManager.release(new IIDSessionDataManager());
                 this._sessionDataManager = null;
             }
@@ -264,7 +264,7 @@
                 return;
             }
             this._sessionDataManager = (_arg_2 as ISessionDataManager);
-            this._sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._achievementController._Str_6753);
+            this._sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._achievementController.onBadgeImageReady);
         }
 
         private function onHelpReady(k:IID=null, _arg_2:IUnknown=null):void
@@ -378,7 +378,7 @@
             }
         }
 
-        public function _Str_6822(k:_Str_2455):void
+        public function openNavigator(k:_Str_2455):void
         {
             var _local_3:String;
             var _local_2:Boolean = this._Str_17631((k._Str_5688() + ".searchtag"));
@@ -437,11 +437,11 @@
             {
                 if (k._Str_3378 == HabboToolbarIconEnum.QUESTS)
                 {
-                    this._questController._Str_3259();
+                    this._questController.onToolbarClick();
                 }
                 if (k._Str_3378 == HabboToolbarIconEnum.ACHIEVEMENTS)
                 {
-                    this._achievementController._Str_3259();
+                    this._achievementController.onToolbarClick();
                 }
             }
         }
@@ -497,7 +497,7 @@
 
         public function _Str_23424():Boolean
         {
-            return this._questController._Str_20198._Str_2719();
+            return this._questController._Str_20198.isVisible();
         }
 
         public function _Str_23055(k:_Str_2455):String
@@ -629,7 +629,7 @@
             var _local_4:int;
             while (_local_4 < _Str_16236)
             {
-                _local_3._Str_18784(new Twinkle(this._twinkleImages, _local_2));
+                _local_3.addObject(new Twinkle(this._twinkleImages, _local_2));
                 _local_2 = (_local_2 + _Str_16080);
                 _local_4++;
             }
@@ -731,10 +731,10 @@
                     }
                     return;
                 case "calendar":
-                    this._questController._Str_13628._Str_3259();
+                    this._questController._Str_13628.onToolbarClick();
                     return;
                 case "quests":
-                    this._questController._Str_3259();
+                    this._questController.onToolbarClick();
                     return;
                 default:
                     Logger.log(("QuestEngine unknown link-type received: " + _local_2[1]));

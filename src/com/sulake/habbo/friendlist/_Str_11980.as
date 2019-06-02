@@ -86,14 +86,14 @@
             var _local_3:IWindow = _local_2.findChildByName("bg_region");
             _local_3.visible = true;
             _local_3.procedure = this._Str_6514;
-            _local_3.id = k._Str_7048;
+            _local_3.id = k.requesterUserId;
             _local_2.findChildByName("user_info_region").visible = true;
             _Str_3521._Str_3927(false, _local_2);
-            this._habboFriendList._Str_6498(_local_2, "requester_name_text", true, k._Str_6445);
+            this._habboFriendList._Str_6498(_local_2, "requester_name_text", true, k.requesterName);
             if (k.state == FriendRequest._Str_5035)
             {
-                this._habboFriendList._Str_17821(_local_2, "accept", true, this._Str_22888, k._Str_2951);
-                this._habboFriendList._Str_17821(_local_2, "reject", true, this._Str_23925, k._Str_2951);
+                this._habboFriendList._Str_17821(_local_2, "accept", true, this._Str_22888, k.requestId);
+                this._habboFriendList._Str_17821(_local_2, "reject", true, this._Str_23925, k.requestId);
             }
             else
             {
@@ -182,7 +182,7 @@
                 return;
             }
             var _local_3:AcceptFriendMessageComposer = new AcceptFriendMessageComposer();
-            _local_3._Str_19900(_local_2._Str_2951);
+            _local_3.addAcceptedRequest(_local_2.requestId);
             this._habboFriendList.send(_local_3);
             this._Str_6657(_local_2);
             this.refresh();
@@ -205,12 +205,12 @@
             {
                 if (((!(_local_2.state == FriendRequest._Str_7320)) && (!(_local_2.state == FriendRequest._Str_7073))))
                 {
-                    k._Str_19900(_local_2._Str_2951);
+                    k.addAcceptedRequest(_local_2.requestId);
                     _local_2.state = FriendRequest._Str_7320;
                     this._Str_6657(_local_2);
                     if (((this._habboFriendList) && (this._habboFriendList.events)))
                     {
-                        this._habboFriendList.events.dispatchEvent(new _Str_2948(_Str_2948.FRE_ACCEPTED, _local_2._Str_2951));
+                        this._habboFriendList.events.dispatchEvent(new _Str_2948(_Str_2948.FRE_ACCEPTED, _local_2.requestId));
                     }
                 }
             }
@@ -239,7 +239,7 @@
             }
             _local_2.state = FriendRequest._Str_7073;
             var _local_3:DeclineFriendMessageComposer = new DeclineFriendMessageComposer();
-            _local_3._Str_23255(k);
+            _local_3.addDeclinedRequest(k);
             this._habboFriendList.send(_local_3);
             this._Str_6657(_local_2);
             this.refresh();
@@ -262,7 +262,7 @@
                     this._Str_6657(_local_2);
                     if (((this._habboFriendList) && (this._habboFriendList.events)))
                     {
-                        this._habboFriendList.events.dispatchEvent(new _Str_2948(_Str_2948.FRE_DECLINED, _local_2._Str_2951));
+                        this._habboFriendList.events.dispatchEvent(new _Str_2948(_Str_2948.FRE_DECLINED, _local_2.requestId));
                     }
                 }
             }

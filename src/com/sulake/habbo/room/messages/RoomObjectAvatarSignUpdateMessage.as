@@ -9,7 +9,7 @@
             this._signType = k;
         }
 
-        public function get _Str_23207():int
+        public function get signType():int
         {
             return this._signType;
         }

@@ -60,7 +60,7 @@
             this._Str_2397 = [];
         }
 
-        public function _Str_14328(k:_Str_6792):void
+        public function onOffers(k:_Str_6792):void
         {
             var _local_3:ClubBuyOfferData;
             var _local_4:_Str_5442;
@@ -77,7 +77,7 @@
             var _local_2:int;
             for each (_local_4 in k.offers)
             {
-                _local_5 = new ClubBuyOfferData(_local_4.offerId, _local_4._Str_2716, _local_4.priceCredits, _local_4.priceActivityPoints, _local_4._Str_23501, _local_4.vip, _local_4.months, _local_4._Str_15178, _local_4._Str_11224, _local_4.year, _local_4.month, _local_4.day, _local_4._Str_18028);
+                _local_5 = new ClubBuyOfferData(_local_4.offerId, _local_4.productCode, _local_4.priceCredits, _local_4.priceActivityPoints, _local_4._Str_23501, _local_4.vip, _local_4.months, _local_4._Str_15178, _local_4._Str_11224, _local_4.year, _local_4.month, _local_4.day, _local_4._Str_18028);
                 this._Str_2397.push(_local_5);
                 if (_local_4.vip)
                 {
@@ -152,12 +152,12 @@
             }
         }
 
-        public function _Str_7410(k:IVipBuyCatalogWidget):void
+        public function registerVisualization(k:IVipBuyCatalogWidget):void
         {
             this._visualization = k;
         }
 
-        public function _Str_8093(k:int):void
+        public function requestOffers(k:int):void
         {
             this._habboCatalog._Str_17905(k);
         }
@@ -190,9 +190,9 @@
         public function _Str_25808():int
         {
             var k:int = HabboClubLevelEnum._Str_3159;
-            if (this._habboCatalog.getPurse()._Str_13571)
+            if (this._habboCatalog.getPurse().hasClubLeft)
             {
-                k = ((this._habboCatalog.getPurse()._Str_3738) ? HabboClubLevelEnum._Str_2575 : HabboClubLevelEnum._Str_2964);
+                k = ((this._habboCatalog.getPurse().isVIP) ? HabboClubLevelEnum._Str_2575 : HabboClubLevelEnum._Str_2964);
             }
             return k;
         }

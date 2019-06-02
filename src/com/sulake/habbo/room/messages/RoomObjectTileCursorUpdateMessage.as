@@ -29,7 +29,7 @@
             return this._visible;
         }
 
-        public function get _Str_20637():String
+        public function get sourceEventId():String
         {
             return this._sourceEventId;
         }

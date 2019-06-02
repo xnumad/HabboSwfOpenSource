@@ -5,14 +5,14 @@
 
     public class ExpressionAddition implements IExpressionAddition 
     {
-        protected var _Str_576:int;
+        protected var _id:int;
         protected var _Str_1070:AvatarVisualization;
         private var _type:int = -1;
 
         public function ExpressionAddition(k:int, _arg_2:int, _arg_3:AvatarVisualization)
         {
             this._type = _arg_2;
-            this._Str_576 = k;
+            this._id = k;
             this._Str_1070 = _arg_3;
         }
 
@@ -23,7 +23,7 @@
 
         public function get id():int
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function get disposed():Boolean

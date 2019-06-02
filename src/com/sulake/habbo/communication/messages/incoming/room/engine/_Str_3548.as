@@ -46,7 +46,7 @@
             this._Str_2479 = true;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._Str_2775;
         }
@@ -246,12 +246,12 @@
             }
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._Str_2592;
         }
 
-        public function set _Str_2481(k:int):void
+        public function set ownerId(k:int):void
         {
             if (!this._Str_2479)
             {
@@ -298,12 +298,12 @@
             }
         }
 
-        public function get _Str_2886():Boolean
+        public function get isRiding():Boolean
         {
             return this._Str_3253;
         }
 
-        public function set _Str_2886(k:Boolean):void
+        public function set isRiding(k:Boolean):void
         {
             if (!this._Str_2479)
             {
@@ -311,12 +311,12 @@
             }
         }
 
-        public function get _Str_2934():Boolean
+        public function get canBreed():Boolean
         {
             return this._Str_3101;
         }
 
-        public function set _Str_2934(k:Boolean):void
+        public function set canBreed(k:Boolean):void
         {
             if (!this._Str_2479)
             {
@@ -324,12 +324,12 @@
             }
         }
 
-        public function get _Str_3068():Boolean
+        public function get canHarvest():Boolean
         {
             return this._Str_3297;
         }
 
-        public function set _Str_3068(k:Boolean):void
+        public function set canHarvest(k:Boolean):void
         {
             if (!this._Str_2479)
             {
@@ -337,12 +337,12 @@
             }
         }
 
-        public function get _Str_2898():Boolean
+        public function get canRevive():Boolean
         {
             return this._Str_3284;
         }
 
-        public function set _Str_2898(k:Boolean):void
+        public function set canRevive(k:Boolean):void
         {
             if (!this._Str_2479)
             {
@@ -350,12 +350,12 @@
             }
         }
 
-        public function get _Str_2921():Boolean
+        public function get hasBreedingPermission():Boolean
         {
             return this._Str_3095;
         }
 
-        public function set _Str_2921(k:Boolean):void
+        public function set hasBreedingPermission(k:Boolean):void
         {
             if (!this._Str_2479)
             {

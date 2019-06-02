@@ -231,7 +231,7 @@
             {
                 if (this._toolbar.events)
                 {
-                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
                 }
                 this._toolbar.release(new IIDHabboToolbar());
                 this._toolbar = null;
@@ -326,7 +326,7 @@
         private function onHabboToolbarReady(k:IID=null, _arg_2:IUnknown=null):void
         {
             this._toolbar = (_arg_2 as IHabboToolbar);
-            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
         }
 
         private function onHabboCatalogReady(k:IID=null, _arg_2:IUnknown=null):void
@@ -389,7 +389,7 @@
 
         public function _Str_22499():void
         {
-            var k:String = GameConfigurations._Str_3077(this.promotedGameId());
+            var k:String = GameConfigurations.getNameId(this.promotedGameId());
             if ((((!(k == null)) && (!(this._Str_19843))) && (this._Str_19735 == 0)))
             {
                 this._Str_19843 = true;
@@ -499,7 +499,7 @@
             }
         }
 
-        private function _Str_3259(k:HabboToolbarEvent):void
+        private function onToolbarClick(k:HabboToolbarEvent):void
         {
             switch (k._Str_3378)
             {
@@ -575,10 +575,10 @@
             }
             this._toolbar.updateVisibility(HabboToolbarEnum.HTE_STATE_HOTEL_VIEW);
             this._Str_2368.initialize(_arg_2, _arg_3);
-            this._Str_3777(GameConfigurations._Str_3077(_arg_2), k);
+            this._Str_3777(GameConfigurations.getNameId(_arg_2), k);
             if (this._navigator)
             {
-                this._navigator._Str_7852();
+                this._navigator.closeNavigator();
             }
         }
 
@@ -602,7 +602,7 @@
             var _local_12:LoaderContext;
             if (!PlayerVersionCheck.isVersionAtLeast(_arg_7, _arg_8))
             {
-                this._Str_3777(GameConfigurations._Str_3077(k), "versionCheckFailed");
+                this._Str_3777(GameConfigurations.getNameId(k), "versionCheckFailed");
                 this.send(new _Str_8138(k));
                 this._localizationManager.registerParameter("gamecenter.flash_version_required", "version", ((_arg_7 + ".") + _arg_8));
                 this.alert("${gamecenter.flash_version_required}");
@@ -663,7 +663,7 @@
             this._Str_21692 = _local_13.frameRate;
             this._Str_4091 = k;
             this._Str_17758 = EMBEDDED;
-            this._Str_3777(GameConfigurations._Str_3077(k), "loadGameClient");
+            this._Str_3777(GameConfigurations.getNameId(k), "loadGameClient");
             this.inventory._Str_3455._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
             if (this._Str_2368)
             {
@@ -682,7 +682,7 @@
             this._Str_4091 = k;
             this._Str_17758 = IFRAME;
             this._Str_3852 = _arg_2;
-            this._Str_3777(GameConfigurations._Str_3077(k), "loadGameClient");
+            this._Str_3777(GameConfigurations.getNameId(k), "loadGameClient");
             this.inventory._Str_3455._Str_18075(UnseenItemCategoryEnum.GAMES, [k]);
             if (this._Str_2368)
             {
@@ -732,7 +732,7 @@
 
         public function _Str_22015():void
         {
-            this._Str_3777(GameConfigurations._Str_3077(this._Str_4091), "gameClientLoaded");
+            this._Str_3777(GameConfigurations.getNameId(this._Str_4091), "gameClientLoaded");
         }
 
         private function _Str_1001(k:Event=null):void
@@ -821,7 +821,7 @@
 				};
 			}
             this._Str_9452 = k;
-            this._Str_3777(GameConfigurations._Str_3077(k), "joinPlayerQueue");
+            this._Str_3777(GameConfigurations.getNameId(k), "joinPlayerQueue");
         }
 
         private function _Str_20329():void
@@ -843,7 +843,7 @@
             this._Str_20329();
             this.send(new _Str_12297(k, _arg_2));
             this._Str_9452 = k;
-            this._Str_3777(GameConfigurations._Str_3077(k), "joinPlayerQueue", "", _arg_2);
+            this._Str_3777(GameConfigurations.getNameId(k), "joinPlayerQueue", "", _arg_2);
             if (this._Str_2368)
             {
                 this._Str_2368._Str_19498(k);
@@ -865,7 +865,7 @@
             }
             if (((this._Str_4091 > -1) && (this._Str_3852 == _arg_2)))
             {
-                this._Str_3777(GameConfigurations._Str_3077(this._Str_4091), _arg_3);
+                this._Str_3777(GameConfigurations.getNameId(this._Str_4091), _arg_3);
                 this._Str_4091 = -1;
                 Core.instance.resume();
                 switch (this._Str_17758)
@@ -877,7 +877,7 @@
                         this._Str_24319();
                         break;
                 }
-                if (GameConfigurations._Str_3077(k) == "elisa_habbo_stories")
+                if (GameConfigurations.getNameId(k) == "elisa_habbo_stories")
                 {
                     if (this._landingView)
                     {
@@ -892,7 +892,7 @@
                     if (this._Str_2368)
                     {
                         this._Str_2368.activate(k, false);
-                        this._Str_3777(GameConfigurations._Str_3077(k), "showGameCenter.gameEnd");
+                        this._Str_3777(GameConfigurations.getNameId(k), "showGameCenter.gameEnd");
                     }
                 }
                 this.send(new _Str_8138(k));
@@ -944,7 +944,7 @@
 
         public function _Str_22863(k:int):String
         {
-            return GameConfigurations._Str_3077(k);
+            return GameConfigurations.getNameId(k);
         }
 
         public function getGameId(k:String):int
@@ -954,7 +954,7 @@
 
         public function getGameAssetURL(k:int, _arg_2:String):String
         {
-            return GameConfigurations._Str_9843(k, _arg_2);
+            return GameConfigurations.getAssetUrl(k, _arg_2);
         }
 
         private function _Str_6861(k:UncaughtErrorEvent):void

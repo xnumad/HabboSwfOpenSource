@@ -183,7 +183,7 @@
             {
                 this._Str_2611.id = k;
             }
-            _Str_576 = k;
+            _id = k;
         }
 
         override public function get id():String
@@ -199,7 +199,7 @@
                     return this._Str_8143.id;
                 }
             }
-            return _Str_576;
+            return _id;
         }
 
         public function set _Str_6281(k:String):void

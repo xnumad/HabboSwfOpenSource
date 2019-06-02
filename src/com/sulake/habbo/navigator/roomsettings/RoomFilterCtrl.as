@@ -77,7 +77,7 @@
             }
             if (this._badWordList)
             {
-                this._badWordList._Str_2659();
+                this._badWordList.removeListItems();
                 this._Str_20699();
             }
         }
@@ -207,7 +207,7 @@
         private function onBgMouseClick(k:WindowEvent):void
         {
             this._selectedRow = k.target.parent.id;
-            this._Str_17449((k.target._Str_9450("badwords_itemlist") as IItemListWindow));
+            this._Str_17449((k.target.findParentByName("badwords_itemlist") as IItemListWindow));
         }
 
         private function _Str_18088(k:WindowEvent):void
@@ -241,7 +241,7 @@
             }
             if (this._badWordList)
             {
-                this._badWordList._Str_2659();
+                this._badWordList.removeListItems();
                 this._badWordList.dispose();
                 this._badWordList = null;
             }

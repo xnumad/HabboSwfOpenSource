@@ -119,7 +119,7 @@
             {
                 if ((_local_4 is IItemListWindow))
                 {
-                    (_local_4 as IItemListWindow)._Str_7438("bitmap", _local_5, -1);
+                    (_local_4 as IItemListWindow).groupListItemsWithTag("bitmap", _local_5, -1);
                 }
                 else
                 {
@@ -209,7 +209,7 @@
             {
                 if ((k is IItemListWindow))
                 {
-                    (k as IItemListWindow)._Str_7438("stroke", _local_3, 10);
+                    (k as IItemListWindow).groupListItemsWithTag("stroke", _local_3, 10);
                 }
                 else
                 {

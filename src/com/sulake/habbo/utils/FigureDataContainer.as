@@ -111,7 +111,7 @@
             return [];
         }
 
-        public function _Str_1008():String
+        public function getFigureString():String
         {
             var _local_3:String;
             var _local_4:int;

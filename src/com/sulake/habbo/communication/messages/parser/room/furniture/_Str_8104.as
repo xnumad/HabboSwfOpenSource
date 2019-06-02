@@ -19,22 +19,22 @@
             return this._Str_2625;
         }
 
-        public function get _Str_2706():int
+        public function get classId():int
         {
             return this._Str_2825;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._Str_2570;
         }
 
-        public function get _Str_5200():int
+        public function get placedItemId():int
         {
             return this._Str_3054;
         }
 
-        public function get _Str_5057():String
+        public function get placedItemType():String
         {
             return this._Str_3970;
         }
@@ -44,7 +44,7 @@
             return this._Str_3224;
         }
 
-        public function get _Str_17075():String
+        public function get petFigureString():String
         {
             return this._Str_10229;
         }

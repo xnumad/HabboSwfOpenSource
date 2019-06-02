@@ -26,12 +26,12 @@
             return this._stuffId;
         }
 
-        public function get _Str_2706():int
+        public function get classId():int
         {
             return this._Str_2825;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._Str_2570;
         }

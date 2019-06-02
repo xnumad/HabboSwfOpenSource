@@ -3,7 +3,7 @@
     import com.sulake.room.object.logic.ObjectLogicBase;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.room.object.IRoomObjectController;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.messages.RoomObjectMoveUpdateMessage;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.room.object.IRoomObjectModelController;
@@ -11,8 +11,8 @@
 
     public class MovingObjectLogic extends ObjectLogicBase 
     {
-        public static const _Str_10732:int = 500;
-        private static var _Str_6784:Vector3d = new Vector3d();
+        public static const DEFAULT_UPDATE_INTERVAL:int = 500;
+        private static var helper_vector:Vector3d = new Vector3d();
 
         private var _locDelta:Vector3d;
         private var _loc:Vector3d;
@@ -28,7 +28,7 @@
             super();
         }
 
-        protected function get _Str_20511():int
+        protected function get lastUpdateTime():int
         {
             return this._lastUpdateTime;
         }
@@ -49,7 +49,7 @@
             }
         }
 
-        protected function set _Str_6769(k:int):void
+        protected function set moveUpdateInterval(k:int):void
         {
             if (k <= 0)
             {
@@ -60,7 +60,7 @@
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
         {
-            var _local_3:IVector3D;
+            var _local_3:IVector3d;
             if (k == null)
             {
                 return;
@@ -87,7 +87,7 @@
             }
         }
 
-        protected function getLocationOffset():IVector3D
+        protected function getLocationOffset():IVector3d
         {
             return null;
         }
@@ -95,7 +95,7 @@
         override public function update(k:int):void
         {
             var _local_4:int;
-            var _local_2:IVector3D = this.getLocationOffset();
+            var _local_2:IVector3d = this.getLocationOffset();
             var _local_3:IRoomObjectModelController = object.getModelController();
             if (_local_3 != null)
             {
@@ -129,21 +129,21 @@
                 }
                 if (this._locDelta.length > 0)
                 {
-                    _Str_6784.assign(this._locDelta);
-                    _Str_6784.mul((_local_4 / Number(this._updateInterval)));
-                    _Str_6784.add(this._loc);
+                    helper_vector.assign(this._locDelta);
+                    helper_vector.mul((_local_4 / Number(this._updateInterval)));
+                    helper_vector.add(this._loc);
                 }
                 else
                 {
-                    _Str_6784.assign(this._loc);
+                    helper_vector.assign(this._loc);
                 }
                 if (_local_2 != null)
                 {
-                    _Str_6784.add(_local_2);
+                    helper_vector.add(_local_2);
                 }
                 if (object != null)
                 {
-                    object.setLocation(_Str_6784);
+                    object.setLocation(helper_vector);
                 }
                 if (_local_4 == this._updateInterval)
                 {

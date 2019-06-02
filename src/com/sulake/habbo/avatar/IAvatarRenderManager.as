@@ -26,7 +26,7 @@
         function _Str_889(_arg_1:IAvatarFigureContainer, _arg_2:IAvatarImageListener):void;
         function _Str_723():IAnimationManager;
         function get events():IEventDispatcher;
-        function _Str_746():void;
+        function resetAssetManager():void;
         function _Str_932(_arg_1:IAvatarFigureContainer, _arg_2:String, _arg_3:Array=null):int;
         function _Str_672():Array;
         function get _Str_906():Dictionary;

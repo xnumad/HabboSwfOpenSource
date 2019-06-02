@@ -48,7 +48,7 @@
 
         public function _Str_12925(k:int):void
         {
-            this._tabContext.selector._Str_2520(this._tabContext._Str_3363(k));
+            this._tabContext.selector.setSelected(this._tabContext._Str_3363(k));
         }
 
         private function _Str_17441():void

@@ -69,9 +69,9 @@
             if (this._tabs)
             {
                 k = 0;
-                while (k < this._tabs._Str_6010)
+                while (k < this._tabs.numSelectables)
                 {
-                    _local_2 = this._tabs._Str_5066(k);
+                    _local_2 = this._tabs.getSelectableAt(k);
                     if ((_local_2 is ISelectableWindow))
                     {
                         _local_2.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_18701);
@@ -113,7 +113,7 @@
             {
                 return;
             }
-            events.dispatchEvent(new SetExtraPurchaseParameterEvent(_local_3.product._Str_2415));
+            events.dispatchEvent(new SetExtraPurchaseParameterEvent(_local_3.product.extraParam));
             this._groupIndex[this._selectedGroup] = (this._groups[this._selectedGroup] as Vector.<IPurchasableOffer>).indexOf(_local_3);
             this._Str_21108();
         }
@@ -130,7 +130,7 @@
             {
                 return;
             }
-            events.dispatchEvent(new CatalogWidgetUpdateRoomPreviewEvent(_local_5.product._Str_2415, _local_4.product._Str_2415, _local_6.product._Str_2415, 64));
+            events.dispatchEvent(new CatalogWidgetUpdateRoomPreviewEvent(_local_5.product.extraParam, _local_4.product.extraParam, _local_6.product.extraParam, 64));
         }
 
         private function _Str_24932():Boolean
@@ -147,12 +147,12 @@
                     _local_2 = k.product;
                     if (_local_2 != null)
                     {
-                        _local_3 = _local_2._Str_2941;
-                        if (((_local_2._Str_2588 == ProductTypeEnum.WALL) || (_local_2._Str_2588 == ProductTypeEnum.FLOOR)))
+                        _local_3 = _local_2.productClassId;
+                        if (((_local_2.productType == ProductTypeEnum.WALL) || (_local_2.productType == ProductTypeEnum.FLOOR)))
                         {
-                            if (_local_2._Str_2686 != null)
+                            if (_local_2.furnitureData != null)
                             {
-                                _local_4 = _local_2._Str_2686.className;
+                                _local_4 = _local_2.furnitureData.className;
                                 _local_5 = this._groupNames.indexOf(_local_4);
                                 if (this._groupNames.indexOf(_local_4) == -1)
                                 {
@@ -191,7 +191,7 @@
             var _local_2:ISelectableWindow = (k.target as ISelectableWindow);
             if (_local_2)
             {
-                _local_3 = this._tabs._Str_8283(_local_2);
+                _local_3 = this._tabs.getSelectableIndex(_local_2);
                 Logger.log(("select: " + [_local_2.name, _local_3]));
                 this.switchCategory(_local_2.name);
             }
@@ -209,7 +209,7 @@
             {
                 return;
             }
-            this._tabs._Str_2520(this._tabs._Str_5050(k));
+            this._tabs.setSelected(this._tabs.getSelectableByName(k));
             var _local_2:int = -1;
             switch (k)
             {

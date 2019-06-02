@@ -73,7 +73,7 @@
             }
             if (((!(_local_6 == null)) && (!(this._container.roomEngine == null))))
             {
-                _local_7 = this._container.roomEngine._Str_5211(_local_6.type);
+                _local_7 = this._container.roomEngine.getWallItemType(_local_6.type);
                 if (_local_7.match("post_it_"))
                 {
                     _local_5 = _local_7;

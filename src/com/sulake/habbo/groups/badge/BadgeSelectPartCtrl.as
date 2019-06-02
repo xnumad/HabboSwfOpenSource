@@ -94,7 +94,7 @@
             return k;
         }
 
-        public function _Str_12194():void
+        public function loadData():void
         {
             var k:_Str_3740;
             if (((!(this._badgeBaseParts == null)) || (!(this._badgeLayerParts == null))))

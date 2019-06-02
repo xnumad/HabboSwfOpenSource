@@ -1,15 +1,15 @@
 ﻿package com.sulake.habbo.room.object
 {
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomPlaneData 
     {
-        public static const _Str_12684:int = 0;
-        public static const _Str_6072:int = 1;
-        public static const _Str_6206:int = 2;
-        public static const _Str_7988:int = 3;
-        public static const _Str_18788:int = 4;
+        public static const PLANE_UNDEFINED:int = 0;
+        public static const PLANE_FLOOR:int = 1;
+        public static const PLANE_WALL:int = 2;
+        public static const PLANE_LANDSCAPE:int = 3;
+        public static const PLANE_BILLBOARD:int = 4;
 
         private var _type:int = 0;
         private var _loc:Vector3d = null;
@@ -20,7 +20,7 @@
         private var _secondaryNormals:Array;
         private var _masks:Array;
 
-        public function RoomPlaneData(k:int, _arg_2:IVector3D, _arg_3:IVector3D, _arg_4:IVector3D, _arg_5:Array)
+        public function RoomPlaneData(k:int, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:Array)
         {
             var _local_6:Number;
             var _local_7:Number;
@@ -28,7 +28,7 @@
             var _local_9:Number;
             var _local_10:Number;
             var _local_11:int;
-            var _local_12:IVector3D;
+            var _local_12:IVector3d;
             var _local_13:Vector3d;
             this._secondaryNormals = [];
             this._masks = [];
@@ -101,32 +101,32 @@
             return this._type;
         }
 
-        public function get loc():IVector3D
+        public function get loc():IVector3d
         {
             return this._loc;
         }
 
-        public function get _Str_5424():IVector3D
+        public function get _Str_5424():IVector3d
         {
             return this._leftSide;
         }
 
-        public function get _Str_4968():IVector3D
+        public function get _Str_4968():IVector3d
         {
             return this._rightSide;
         }
 
-        public function get normal():IVector3D
+        public function get normal():IVector3d
         {
             return this._normal;
         }
 
-        public function get _Str_25207():IVector3D
+        public function get normalDirection():IVector3d
         {
             return this._normalDirection;
         }
 
-        public function get _Str_20277():int
+        public function get secondaryNormalCount():int
         {
             return this._secondaryNormals.length;
         }
@@ -136,14 +136,14 @@
             return this._masks.length;
         }
 
-        public function _Str_22585(k:int):IVector3D
+        public function getSecondaryNormal(k:int):IVector3d
         {
-            if (((k < 0) || (k >= this._Str_20277)))
+            if (((k < 0) || (k >= this.secondaryNormalCount)))
             {
                 return null;
             }
             var _local_2:Vector3d = new Vector3d();
-            _local_2.assign((this._secondaryNormals[k] as IVector3D));
+            _local_2.assign((this._secondaryNormals[k] as IVector3d));
             return _local_2;
         }
 
@@ -153,7 +153,7 @@
             this._masks.push(_local_5);
         }
 
-        private function _Str_8361(k:int):RoomPlaneMaskData
+        private function getMask(k:int):RoomPlaneMaskData
         {
             if (((k < 0) || (k >= this._Str_6845)))
             {
@@ -162,9 +162,9 @@
             return this._masks[k];
         }
 
-        public function _Str_25133(k:int):Number
+        public function getMaskLeftSideLoc(k:int):Number
         {
-            var _local_2:RoomPlaneMaskData = this._Str_8361(k);
+            var _local_2:RoomPlaneMaskData = this.getMask(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_5120;
@@ -172,9 +172,9 @@
             return -1;
         }
 
-        public function _Str_23609(k:int):Number
+        public function getMaskRightSideLoc(k:int):Number
         {
-            var _local_2:RoomPlaneMaskData = this._Str_8361(k);
+            var _local_2:RoomPlaneMaskData = this.getMask(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_4659;
@@ -182,9 +182,9 @@
             return -1;
         }
 
-        public function _Str_25097(k:int):Number
+        public function getMaskLeftSideLength(k:int):Number
         {
-            var _local_2:RoomPlaneMaskData = this._Str_8361(k);
+            var _local_2:RoomPlaneMaskData = this.getMask(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_9124;
@@ -192,9 +192,9 @@
             return -1;
         }
 
-        public function _Str_25617(k:int):Number
+        public function getMaskRightSideLength(k:int):Number
         {
-            var _local_2:RoomPlaneMaskData = this._Str_8361(k);
+            var _local_2:RoomPlaneMaskData = this.getMask(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_12156;

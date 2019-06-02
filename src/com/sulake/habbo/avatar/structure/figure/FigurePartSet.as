@@ -33,7 +33,7 @@
             for each (_local_3 in k.part)
             {
                 _local_5 = new FigurePart(_local_3);
-                _local_6 = this._Str_1032(_local_5);
+                _local_6 = this.indexOfPartType(_local_5);
                 if (_local_6 != -1)
                 {
                     this._parts.splice(_local_6, 0, _local_5);
@@ -60,7 +60,7 @@
             this._hiddenLayers = null;
         }
 
-        private function _Str_1032(k:FigurePart):int
+        private function indexOfPartType(k:FigurePart):int
         {
             var _local_3:FigurePart;
             var _local_2:int;

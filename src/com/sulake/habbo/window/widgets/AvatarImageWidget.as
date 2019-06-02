@@ -114,11 +114,11 @@
             {
                 return k;
             }
-            k.push(_Str_3804._Str_2551(this._figure));
-            k.push(_Str_3527._Str_2551(this._scale));
-            k.push(_Str_15271._Str_2551(this._onlyHead));
-            k.push(_Str_13004._Str_2551(this._cropped));
-            k.push(_Str_4346._Str_2551(_Str_3257[this._direction]));
+            k.push(_Str_3804.withValue(this._figure));
+            k.push(_Str_3527.withValue(this._scale));
+            k.push(_Str_15271.withValue(this._onlyHead));
+            k.push(_Str_13004.withValue(this._cropped));
+            k.push(_Str_4346.withValue(_Str_3257[this._direction]));
             return k;
         }
 

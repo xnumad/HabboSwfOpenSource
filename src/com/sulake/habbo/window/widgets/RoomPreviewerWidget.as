@@ -23,7 +23,7 @@
         private static const ROOM_PREVIEWER_OFFSET_X:String = (ROOM_PREVIEWER + ":offsetx");
         private static const ROOM_PREVIEWER_OFFSET_Y:String = (ROOM_PREVIEWER + ":offsety");
         private static const ROOM_PREVIEWER_ZOOM:String = (ROOM_PREVIEWER + ":zoom");
-        private static const PROPERTY_SCALE:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_SCALE, RoomPreviewer._Str_6747, PropertyStruct.INT, false, [RoomPreviewer._Str_8753, RoomPreviewer._Str_6747]);
+        private static const PROPERTY_SCALE:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_SCALE, RoomPreviewer.SCALE_NORMAL, PropertyStruct.INT, false, [RoomPreviewer.SCALE_SMALL, RoomPreviewer.SCALE_NORMAL]);
         private static const PROPERTY_OFFSET_X:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_OFFSET_X, 0, PropertyStruct.INT, false);
         private static const PROPERTY_OFFSET_Y:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_OFFSET_Y, 0, PropertyStruct.INT, false);
         private static const PROPERTY_ZOOM:PropertyStruct = new PropertyStruct(ROOM_PREVIEWER_ZOOM, 1, PropertyStruct.INT, false);
@@ -56,7 +56,7 @@
                 this._root.addEventListener(WindowMouseEvent.CLICK, this._Str_24167);
                 this._root.addEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_25015);
                 this._roomPreviewer.reset(false);
-                _local_3 = this._roomPreviewer._Str_3478(this._roomCanvas.width, this._roomCanvas.height);
+                _local_3 = this._roomPreviewer.getRoomCanvas(this._roomCanvas.width, this._roomCanvas.height);
                 if (_local_3 != null)
                 {
                     this._roomCanvas.setDisplayObject(_local_3);
@@ -65,7 +65,7 @@
             this._widgetWindow._Str_2429 = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
-            this._roomPreviewer._Str_6976(this._root.width, this._root.height);
+            this._roomPreviewer.modifyRoomCanvas(this._root.width, this._root.height);
         }
 
         public function get scale():int
@@ -119,10 +119,10 @@
             {
                 return k;
             }
-            k.push(PROPERTY_SCALE._Str_2551(this._scale));
-            k.push(PROPERTY_OFFSET_X._Str_2551(this._offsetX));
-            k.push(PROPERTY_OFFSET_Y._Str_2551(this._offsetY));
-            k.push(PROPERTY_ZOOM._Str_2551(this._zoom));
+            k.push(PROPERTY_SCALE.withValue(this._scale));
+            k.push(PROPERTY_OFFSET_X.withValue(this._offsetX));
+            k.push(PROPERTY_OFFSET_Y.withValue(this._offsetY));
+            k.push(PROPERTY_ZOOM.withValue(this._zoom));
             return k;
         }
 
@@ -187,13 +187,13 @@
             var k:DisplayObject;
             if (this._roomPreviewer)
             {
-                if ((this._scale == RoomPreviewer._Str_6747))
+                if ((this._scale == RoomPreviewer.SCALE_NORMAL))
                 {
-                    this._roomPreviewer._Str_24734();
+                    this._roomPreviewer.zoomIn();
                 }
                 else
                 {
-                    this._roomPreviewer._Str_23820();
+                    this._roomPreviewer.zoomOut();
                 }
                 this._roomPreviewer._Str_16605 = new Point(this._offsetX, this._offsetY);
                 k = this._roomCanvas.getDisplayObject();
@@ -216,7 +216,7 @@
         {
             var _local_3:int = k.window.width;
             var _local_4:int = k.window.height;
-            this._roomPreviewer._Str_6976(_local_3, _local_4);
+            this._roomPreviewer.modifyRoomCanvas(_local_3, _local_4);
         }
 
         private function _Str_24167(k:WindowMouseEvent):void

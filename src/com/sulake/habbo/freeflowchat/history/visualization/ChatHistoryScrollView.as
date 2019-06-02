@@ -350,7 +350,7 @@
             {
                 return;
             }
-            this._component._Str_6973(k.roomId, k.userId);
+            this._component.selectAvatar(k.roomId, k.userId);
         }
 
         private function _Str_23554(k:BitmapSpriteWithUserId):void
@@ -359,7 +359,7 @@
             {
                 return;
             }
-            if (((!(k._Str_6123)) || (this._component.sessionDataManager._Str_3655(k.userName))))
+            if (((!(k._Str_6123)) || (this._component.sessionDataManager.isIgnored(k.userName))))
             {
                 if (this._currentIgnored != null)
                 {
@@ -392,7 +392,7 @@
             k.dispose();
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
             {
-                this._component.sessionDataManager._Str_10249(this._currentIgnored.userName);
+                this._component.sessionDataManager.ignoreUser(this._currentIgnored.userName);
             }
             if (this._currentIgnored != null)
             {

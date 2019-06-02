@@ -129,7 +129,7 @@
                                 _local_13 = true;
                                 _local_14 = 32;
                                 _local_15 = 2;
-                                _local_7 = this._Str_2641(_local_10, _local_15, _local_13, _local_14, _local_12);
+                                _local_7 = this.getPetImage(_local_10, _local_15, _local_13, _local_14, _local_12);
                                 break;
                             case RoomObjectTypeEnum.HABBO:
                                 _local_7 = this._Str_7081(_local_10);
@@ -138,38 +138,38 @@
                     }
                 }
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_5821)
+            if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_RESPECT)
             {
                 k.text = ((this._component.localizations) ? this._component.localizations.getLocalizationWithParams("widgets.chatbubble.respect", "", "username", _local_5) : "");
             }
             else
             {
-                if (k._Str_3214 == RoomSessionChatEvent._Str_6081)
+                if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_PETRESPECT)
                 {
                     k.text = ((this._component.localizations) ? this._component.localizations.getLocalizationWithParams("widget.chatbubble.petrespect", "", "petname", _local_5) : "");
                 }
                 else
                 {
-                    if (k._Str_3214 == RoomSessionChatEvent._Str_5958)
+                    if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_PETTREAT)
                     {
                         k.text = ((this._component.localizations) ? this._component.localizations.getLocalizationWithParams("widget.chatbubble.pettreat", "", "petname", _local_5) : "");
                     }
                 }
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_8971)
+            if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED)
             {
                 _local_16 = "widget.chatbubble.handitem";
-                _local_17 = this._component.localizations.getLocalization(("handitem" + k._Str_2415), ("handitem" + k._Str_2415));
+                _local_17 = this._component.localizations.getLocalization(("handitem" + k.extraParam), ("handitem" + k.extraParam));
                 this._component.localizations.registerParameter(_local_16, "username", _local_5);
                 this._component.localizations.registerParameter(_local_16, "handitem", _local_17);
                 k.text = this._component.localizations.getLocalizationRaw(_local_16).value;
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_8909)
+            if (k.chatType == RoomSessionChatEvent._Str_8909)
             {
                 _local_18 = "widget.chatbubble.mutetime";
-                _local_19 = String((k._Str_2415 % 60));
-                _local_20 = String(((k._Str_2415 > 0) ? Math.floor(((k._Str_2415 % 3600) / 60)) : 0));
-                _local_21 = String(((k._Str_2415 > 0) ? Math.floor((k._Str_2415 / 3600)) : 0));
+                _local_19 = String((k.extraParam % 60));
+                _local_20 = String(((k.extraParam > 0) ? Math.floor(((k.extraParam % 3600) / 60)) : 0));
+                _local_21 = String(((k.extraParam > 0) ? Math.floor((k.extraParam / 3600)) : 0));
                 this._component.localizations.registerParameter(_local_18, "hours", _local_21);
                 this._component.localizations.registerParameter(_local_18, "minutes", _local_20);
                 this._component.localizations.registerParameter(_local_18, "seconds", _local_19);
@@ -184,13 +184,13 @@
                 _local_8 = new PooledChatBubble(this._component);
             }
             this._Str_20462(k, _local_3);
-            var _local_9:Object = _local_3._Str_5640.color;
+            var _local_9:Object = _local_3.textFormat.color;
             ChatColours._Str_25637(k, _local_3);
             _local_8.chatItem = k;
             _local_8.style = _local_3;
             _local_8.face = _local_7;
             _local_8._Str_19209(_local_5, ((k._Str_15133) ? uint(k._Str_15133) : _local_6), this._component._Str_22462);
-            _local_3._Str_5640.color = _local_9;
+            _local_3.textFormat.color = _local_9;
             return _local_8;
         }
 
@@ -198,7 +198,7 @@
         {
             var _local_5:PooledChatBubble;
             var _local_2:IChatStyleInternal = new BlankStyle();
-            var _local_3:RoomSessionChatEvent = new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, null, -1, "", RoomSessionChatEvent._Str_4349);
+            var _local_3:RoomSessionChatEvent = new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, null, -1, "", RoomSessionChatEvent.CHAT_TYPE_WHISPER);
             var _local_4:ChatItem = new ChatItem(_local_3, getTimer());
             if (this._chatBubblePool.length > 0)
             {
@@ -265,7 +265,7 @@
                                 _local_13 = false;
                                 _local_14 = 64;
                                 _local_15 = 2;
-                                _local_6 = this._Str_2641(_local_10, _local_15, _local_13, _local_14, _local_12);
+                                _local_6 = this.getPetImage(_local_10, _local_15, _local_13, _local_14, _local_12);
                                 break;
                             case RoomObjectTypeEnum.BOT:
                             case RoomObjectTypeEnum.RENTABLE_BOT:
@@ -276,40 +276,40 @@
                     }
                 }
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_5821)
+            if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_RESPECT)
             {
                 k.text = ((this._component.localizations) ? "" : this._component.localizations.getLocalizationWithParams("widgets.chatbubble.respect", "", "username", _local_4));
                 _local_7 = false;
             }
             else
             {
-                if (k._Str_3214 == RoomSessionChatEvent._Str_6081)
+                if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_PETRESPECT)
                 {
                     k.text = ((this._component.localizations) ? "" : this._component.localizations.getLocalizationWithParams("widget.chatbubble.petrespect", "", "petname", _local_4));
                     _local_7 = false;
                 }
                 else
                 {
-                    if (k._Str_3214 == RoomSessionChatEvent._Str_5958)
+                    if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_PETTREAT)
                     {
                         k.text = ((this._component.localizations) ? "" : this._component.localizations.getLocalizationWithParams("widget.chatbubble.pettreat", "", "petname", _local_4));
                         _local_7 = false;
                     }
                 }
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_8971)
+            if (k.chatType == RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED)
             {
                 _local_16 = "widget.chatbubble.handitem";
-                _local_17 = this._component.localizations.getLocalizationWithParams(("handitem" + k._Str_2415), ("handitem" + k._Str_2415));
+                _local_17 = this._component.localizations.getLocalizationWithParams(("handitem" + k.extraParam), ("handitem" + k.extraParam));
                 k.text = this._component.localizations.getLocalizationWithParams(_local_16, "", "username", _local_4, "handitem", _local_17);
                 _local_7 = false;
             }
-            if (k._Str_3214 == RoomSessionChatEvent._Str_8909)
+            if (k.chatType == RoomSessionChatEvent._Str_8909)
             {
                 _local_18 = "widget.chatbubble.mutetime";
-                _local_19 = String((k._Str_2415 % 60));
-                _local_20 = String(((k._Str_2415 > 0) ? Math.floor(((k._Str_2415 % 3600) / 60)) : 0));
-                _local_21 = String(((k._Str_2415 > 0) ? Math.floor((k._Str_2415 / 3600)) : 0));
+                _local_19 = String((k.extraParam % 60));
+                _local_20 = String(((k.extraParam > 0) ? Math.floor(((k.extraParam % 3600) / 60)) : 0));
+                _local_21 = String(((k.extraParam > 0) ? Math.floor((k.extraParam / 3600)) : 0));
                 this._component.localizations.registerParameter(_local_18, "hours", _local_21);
                 this._component.localizations.registerParameter(_local_18, "minutes", _local_20);
                 this._component.localizations.registerParameter(_local_18, "seconds", _local_19);
@@ -317,7 +317,6 @@
                 _local_7 = false;
             }
             this._Str_20462(k, _local_2);
-			//ChatColours._Str_25637(k, _local_2);
             var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettingsParser._Str_12581);
 			var _local_9:BitmapData = new BitmapData(_local_8.width, _local_8.height, true, 0);
             _local_8._Str_23014(_local_9);
@@ -371,7 +370,7 @@
             return _local_3;
         }
 
-        private function _Str_2641(k:String, _arg_2:int, _arg_3:Boolean, _arg_4:int=64, _arg_5:String=null):BitmapData
+        private function getPetImage(k:String, _arg_2:int, _arg_3:Boolean, _arg_4:int=64, _arg_5:String=null):BitmapData
         {
             var _local_7:PetFigureData;
             var _local_8:int;
@@ -385,13 +384,13 @@
                 _local_8 = _local_7.typeId;
                 _local_9 = 0;
                 _local_10 = false;
-                _local_11 = this._component.roomEngine._Str_2641(_local_8, _local_7.paletteId, _local_7.color, new Vector3d((_arg_2 * 45)), _arg_4, this, _local_10, _local_9, _local_7._Str_3542, _arg_5);
+                _local_11 = this._component.roomEngine.getPetImage(_local_8, _local_7.paletteId, _local_7.color, new Vector3d((_arg_2 * 45)), _arg_4, this, _local_10, _local_9, _local_7._Str_3542, _arg_5);
                 if (_local_11 != null)
                 {
                     _local_6 = _local_11.data;
                     if (_local_11.id > 0)
                     {
-                        this._petImageIdToFigureString.add(_local_11.id, _local_7._Str_4217);
+                        this._petImageIdToFigureString.add(_local_11.id, _local_7.figureString);
                     }
                 }
                 this._avatarColorCache.add(k, _local_7.color);
@@ -466,7 +465,7 @@
             }
         }
 
-        public function get _Str_5329():ChatStyleLibrary
+        public function get chatStyleLibrary():ChatStyleLibrary
         {
             return this._chatStyleLibrary;
         }

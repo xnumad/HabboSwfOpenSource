@@ -335,7 +335,7 @@
             }
             this._gridView = new AvatarEditorGridView((this._editorContent.findChildByName("grid_container") as IWindowContainer));
             this._effectsGridView = new AvatarEditorGridViewEffects((this._editorContent.findChildByName("grid_container") as IWindowContainer));
-            this._tabContainer.selector._Str_2520(this._tabContainer._Str_3363(0));
+            this._tabContainer.selector.setSelected(this._tabContainer._Str_3363(0));
             this.update();
         }
 
@@ -470,7 +470,7 @@
             _local_2.addChild(_local_4);
             this._editor._Str_25043(k);
             this._currentViewId = k;
-            this._tabContainer.selector._Str_2520(this._tabContainer._Str_19493(k));
+            this._tabContainer.selector.setSelected(this._tabContainer._Str_19493(k));
         }
 
         public function _Str_3328(k:WindowEvent, _arg_2:IWindow):void
@@ -478,7 +478,7 @@
             var _local_3:String;
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
             {
-                _local_3 = (_arg_2 as ITabContextWindow).selector._Str_2657().name;
+                _local_3 = (_arg_2 as ITabContextWindow).selector.getSelected().name;
                 if (_local_3 != this._currentViewId)
                 {
                     this._editor._Str_14039(_local_3);

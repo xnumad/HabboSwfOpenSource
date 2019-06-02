@@ -8,11 +8,11 @@
         function get selection():int;
         function set selection(_arg_1:int):void;
         function get numMenuItems():int;
-        function _Str_15679(_arg_1:IWindow):IWindow;
-        function _Str_17284(_arg_1:IWindow, _arg_2:int):IWindow;
-        function _Str_15940(_arg_1:IWindow):int;
-        function _Str_16005(_arg_1:int):IWindow;
-        function _Str_18001(_arg_1:IWindow):IWindow;
-        function _Str_16478(_arg_1:int):IWindow;
+        function addMenuItem(_arg_1:IWindow):IWindow;
+        function addMenuItemAt(_arg_1:IWindow, _arg_2:int):IWindow;
+        function getMenuItemIndex(_arg_1:IWindow):int;
+        function getMenuItemAt(_arg_1:int):IWindow;
+        function removeMenuItem(_arg_1:IWindow):IWindow;
+        function removeMenuItemAt(_arg_1:int):IWindow;
     }
 }

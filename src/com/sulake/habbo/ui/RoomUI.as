@@ -205,127 +205,127 @@
                 "callback":this._Str_9331
             }, {
                 "type":RoomEngineObjectEvent.SELECTED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.DESELECTED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.ADDED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.REMOVED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.PLACED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.REQUEST_MOVE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.REQUEST_ROTATE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.MOUSE_ENTER,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineObjectEvent.MOUSE_LEAVE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.OPEN_WIDGET,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.CLOSE_WIDGET,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_OPEN_FURNI_CONTEXT_MENU,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_CLOSE_FURNI_CONTEXT_MENU,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CREDITFURNI,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_STICKIE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_PRESENT,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_TROPHY,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_TEASER,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ECOTRONBOX,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_PLACEHOLDER,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_DIMMER,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineRoomAdEvent.FURNI_CLICK,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineRoomAdEvent.FURNI_DOUBLE_CLICK,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineRoomAdEvent.TOOLTIP_SHOW,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineRoomAdEvent.TOOLTIP_HIDE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REMOVE_DIMMER,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CLOTHING_CHANGE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_PLAYLIST_EDITOR,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_MANNEQUIN,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_BACKGROUND_COLOR,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_INVENTORY,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_ROOM,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomObjectSoundMachineEvent.JUKEBOX_DISPOSE,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ACHIEVEMENT_RESOLUTION_ENGRAVING,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_BADGE_DISPLAY_ENGRAVING,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ACHIEVEMENT_RESOLUTION_FAILED,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_FRIEND_FURNITURE_ENGRAVING,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIGH_SCORE_DISPLAY,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIDE_HIGH_SCORE_DISPLAY,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_INTERNAL_LINK,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }, {
                 "type":RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ROOM_LINK,
-                "callback":this._Str_2660
+                "callback":this.roomObjectEventHandler
             }]), new ComponentDependency(new IIDHabboRoomSessionManager(), function (k:IRoomSessionManager):void
             {
                 _roomSessionManager = k;
@@ -630,7 +630,7 @@
                 case RoomSessionEvent.ENDED:
                     if (k.session != null)
                     {
-                        this._Str_17382(this._Str_2573(k.session.roomId));
+                        this._Str_17382(this.getRoomIdentifier(k.session.roomId));
                         if (k.session.isGameSession)
                         {
                             this._friendBar.visible = true;
@@ -641,11 +641,11 @@
                         }
                         else
                         {
-                            if (k._Str_24993)
+                            if (k.openLandingPage)
                             {
                                 if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager._Str_6986)))
                                 {
-                                    if (((this._navigator.enteredGuestRoomData) && (this._navigator.enteredGuestRoomData._Str_2738 == RoomSettingsData._Str_5316)))
+                                    if (((this._navigator.enteredGuestRoomData) && (this._navigator.enteredGuestRoomData._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY)))
                                     {
                                         this._navigator.goToHomeRoom();
                                     }
@@ -697,7 +697,7 @@
             }
             if (k.session != null)
             {
-                _local_2 = this._Str_2573(k.session.roomId);
+                _local_2 = this.getRoomIdentifier(k.session.roomId);
                 _local_3 = this.getDesktop(_local_2);
                 if (_local_3 != null)
                 {
@@ -760,7 +760,7 @@
 
         private function _Str_25109(k:InterstitialEvent):void
         {
-            var _local_2:String = this._Str_2573(this._interstitialRoomId);
+            var _local_2:String = this.getRoomIdentifier(this._interstitialRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
@@ -776,7 +776,7 @@
 
         private function _Str_21850(k:FriendBarResizeEvent):void
         {
-            var _local_2:String = this._Str_2573(this._roomEngine.activeRoomId);
+            var _local_2:String = this.getRoomIdentifier(this._roomEngine.activeRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
@@ -797,7 +797,7 @@
             {
                 this._communication.connection.send(new _Str_11497());
             }
-            var _local_2:String = this._Str_2573(this._interstitialRoomId);
+            var _local_2:String = this.getRoomIdentifier(this._interstitialRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
@@ -812,7 +812,7 @@
 
         private function _Str_24555(k:AdEvent):void
         {
-            var _local_2:String = this._Str_2573(k.roomId);
+            var _local_2:String = this.getRoomIdentifier(k.roomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
@@ -833,7 +833,7 @@
             }
             if (this._isInRoom)
             {
-                _local_3 = this._Str_2573(this._roomEngine.activeRoomId);
+                _local_3 = this.getRoomIdentifier(this._roomEngine.activeRoomId);
                 _local_4 = (this.getDesktop(_local_3) as RoomDesktop);
                 if (_local_4 != null)
                 {
@@ -844,7 +844,7 @@
 
         private function _Str_25540(k:TimerEvent):void
         {
-            var _local_2:RoomDesktop = (this.getDesktop(this._Str_2573(this._roomEngine.activeRoomId)) as RoomDesktop);
+            var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(this._roomEngine.activeRoomId)) as RoomDesktop);
             if (((_local_2) && (this._freeFlowChat.displayObject)))
             {
                 _local_2._Str_6642._Str_10173().setDisplayObject(this._freeFlowChat.displayObject);
@@ -859,7 +859,7 @@
             var _local_4:IRoomSession;
             if (((k.type == RoomEngineEvent.GAME_MODE) || (k.type == RoomEngineEvent.NORMAL_MODE)))
             {
-                _local_2 = this._Str_2573(k.roomId);
+                _local_2 = this.getRoomIdentifier(k.roomId);
                 _local_3 = (this.getDesktop(_local_2) as RoomDesktop);
                 if (_local_3 != null)
                 {
@@ -875,7 +875,7 @@
                         _local_4 = this._roomSessionManager.getSession(this._interstitialRoomId);
                         if (_local_4 != null)
                         {
-                            _local_4._Str_5941(AvatarExpressionEnum._Str_6989._Str_6677);
+                            _local_4._Str_5941(AvatarExpressionEnum.IDLE.ordinal);
                         }
                     }
                     this._interstitialActive = false;
@@ -900,7 +900,7 @@
             {
                 return;
             }
-            var _local_2:String = this._Str_2573(k.roomId);
+            var _local_2:String = this.getRoomIdentifier(k.roomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 == null)
             {
@@ -924,7 +924,7 @@
                     _local_3._Str_22664(this._Str_17538(k.roomId));
                     if (((!(this._roomEngine == null)) && (!(RoomId.isRoomPreviewerId(k.roomId)))))
                     {
-                        this._roomEngine._Str_15680(k.roomId);
+                        this._roomEngine.setActiveRoom(k.roomId);
                     }
                     _local_3._Str_22861(RoomWidgetEnum.ROOM_QUEUE);
                     _local_3._Str_2548(RoomWidgetEnum.CHAT_WIDGET);
@@ -1010,7 +1010,7 @@
                     {
                         return;
                     }
-                    if (_local_5._Str_11464)
+                    if (_local_5.bgOnly)
                     {
                         _local_3._Str_16960(0x000000, 0xFF);
                     }
@@ -1044,23 +1044,23 @@
             }
         }
 
-        private function _Str_2660(k:RoomEngineObjectEvent):void
+        private function roomObjectEventHandler(k:RoomEngineObjectEvent):void
         {
             if (this._roomEngine == null)
             {
                 return;
             }
-            var _local_2:String = this._Str_2573(k.roomId);
+            var _local_2:String = this.getRoomIdentifier(k.roomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
-                _local_3._Str_2660(k);
+                _local_3.roomObjectEventHandler(k);
             }
         }
 
         private function _Str_20532(k:Event):void
         {
-            var _local_2:RoomDesktop = (this.getDesktop(this._Str_2573(0)) as RoomDesktop);
+            var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(0)) as RoomDesktop);
             if (_local_2)
             {
                 _local_2._Str_2485(k);
@@ -1077,7 +1077,7 @@
             {
                 return null;
             }
-            var _local_2:String = this._Str_2573(k.roomId);
+            var _local_2:String = this.getRoomIdentifier(k.roomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
             if (_local_3 != null)
             {
@@ -1127,7 +1127,7 @@
 
         public function get _Str_10612():IDisplayObjectWrapper
         {
-            var k:RoomDesktop = (this.getDesktop(this._Str_2573(this._roomEngine.activeRoomId)) as RoomDesktop);
+            var k:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(this._roomEngine.activeRoomId)) as RoomDesktop);
             if (((!(k)) || (!(k._Str_6642))))
             {
                 return null;
@@ -1176,14 +1176,14 @@
             }
         }
 
-        private function _Str_2573(k:int):String
+        private function getRoomIdentifier(k:int):String
         {
             return "hard_coded_room_id";
         }
 
         public function set visible(k:Boolean):void
         {
-            var _local_2:RoomDesktop = this._desktops.getValue(this._Str_2573(this._roomEngine.activeRoomId));
+            var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
                 _local_2.visible = k;
@@ -1192,7 +1192,7 @@
 
         public function _Str_25327(k:String):void
         {
-            var _local_2:RoomDesktop = this._desktops.getValue(this._Str_2573(this._roomEngine.activeRoomId));
+            var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
                 _local_2._Str_2485(new _Str_6310(k));
@@ -1201,7 +1201,7 @@
 
         public function _Str_9753(k:int, _arg_2:String, _arg_3:uint, _arg_4:int):void
         {
-            var _local_5:RoomDesktop = this._desktops.getValue(this._Str_2573(this._roomEngine.activeRoomId));
+            var _local_5:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_5 != null)
             {
                 _local_5._Str_9753(k, _arg_2, _arg_3, _arg_4);
@@ -1210,7 +1210,7 @@
 
         public function _Str_21446(k:MouseEvent):Boolean
         {
-            var _local_2:RoomDesktop = this._desktops.getValue(this._Str_2573(this._roomEngine.activeRoomId));
+            var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
                 return _local_2._Str_25373(k, 0);
@@ -1268,11 +1268,11 @@
             return this._toolbar;
         }
 
-        public function get _Str_5329():IChatStyleLibrary
+        public function get chatStyleLibrary():IChatStyleLibrary
         {
             if (this._freeFlowChat)
             {
-                return this._freeFlowChat._Str_5329;
+                return this._freeFlowChat.chatStyleLibrary;
             }
             return null;
         }

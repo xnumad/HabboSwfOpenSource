@@ -453,21 +453,21 @@
             }
         }
 
-        public function _Str_8024():void
+        public function showOwnRooms():void
         {
         }
 
-        public function _Str_9718(k:Point):void
+        public function showToolbarHover(k:Point):void
         {
         }
 
-        public function _Str_12014(k:Boolean):void
+        public function hideToolbarHover(k:Boolean):void
         {
         }
 
-        public function get _Str_992():Boolean
+        public function get isReady():Boolean
         {
-            return (!(this._contextContainer == null)) && (this._contextContainer._Str_992());
+            return (!(this._contextContainer == null)) && (this._contextContainer.isReady());
         }
 
         public function get _Str_7014():ContextContainer
@@ -596,7 +596,7 @@
 
         public function goToHomeRoom():void
         {
-            this.goToRoom(this._legacyNavigator.data._Str_3374, "external");
+            this.goToRoom(this._legacyNavigator.data.homeRoomId, "external");
         }
 
         public function trackEventLog(k:String, _arg_2:String, _arg_3:String="", _arg_4:int=0):void
@@ -623,7 +623,7 @@
             return this._habboHelp;
         }
 
-        public function _Str_12234(k:String):void
+        public function performTextSearch(k:String):void
         {
         }
 
@@ -631,7 +631,7 @@
         {
         }
 
-        public function _Str_11462(k:int, _arg_2:int):void
+        public function performCompetitionRoomsSearch(k:int, _arg_2:int):void
         {
         }
     }

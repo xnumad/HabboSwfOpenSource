@@ -68,7 +68,7 @@
             _Str_3007 = k;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (_Str_3007) && (_Str_3007.visible);
         }

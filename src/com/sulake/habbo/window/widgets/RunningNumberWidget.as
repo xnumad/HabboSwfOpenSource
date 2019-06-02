@@ -80,10 +80,10 @@
             {
                 return k;
             }
-            k.push(_Str_14856._Str_2551(this._Str_4157));
-            k.push(_Str_6446._Str_2551(this._Str_4157));
-            k.push(_Str_5707._Str_2551(this._Str_4056));
-            k.push(_Str_14116._Str_2551(this._Str_9087));
+            k.push(_Str_14856.withValue(this._Str_4157));
+            k.push(_Str_6446.withValue(this._Str_4157));
+            k.push(_Str_5707.withValue(this._Str_4056));
+            k.push(_Str_14116.withValue(this._Str_9087));
             return k;
         }
 

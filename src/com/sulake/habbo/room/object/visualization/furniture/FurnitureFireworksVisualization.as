@@ -94,7 +94,7 @@
 
         override protected function getSpriteYOffset(k:int, _arg_2:int, _arg_3:int):int
         {
-            if (((this._currentParticleSystem) && (this._currentParticleSystem._Str_25727(_arg_3))))
+            if (((this._currentParticleSystem) && (this._currentParticleSystem.controlsSprite(_arg_3))))
             {
                 return this._currentParticleSystem.getSpriteYOffset(k, _arg_2, _arg_3);
             }
@@ -134,7 +134,7 @@
                 {
                     _local_6 = int(_local_7.@size);
                     _local_5 = new FurnitureParticleSystem(this);
-                    _local_5._Str_25307(_local_7);
+                    _local_5.parseData(_local_7);
                     this._particleSystems[_local_6] = _local_5;
                 }
             }

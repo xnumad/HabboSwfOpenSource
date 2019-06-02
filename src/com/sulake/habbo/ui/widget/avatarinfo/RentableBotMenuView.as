@@ -15,7 +15,7 @@
 
     public class RentableBotMenuView extends AvatarContextInfoButtonView 
     {
-        protected var _Str_594:RentableBotInfoData;
+        protected var _data:RentableBotInfoData;
 
         public function RentableBotMenuView(k:AvatarInfoWidget)
         {
@@ -25,7 +25,7 @@
 
         public static function setup(k:RentableBotMenuView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:RentableBotInfoData):void
         {
-            k._Str_594 = _arg_6;
+            k._data = _arg_6;
             AvatarContextInfoButtonView.setup(k, _arg_2, _arg_3, _arg_4, _arg_5, false);
         }
 
@@ -37,7 +37,7 @@
                 window.removeEventListener(WindowMouseEvent.OVER, _Str_2743);
                 window.removeEventListener(WindowMouseEvent.OUT, _Str_2743);
             }
-            this._Str_594 = null;
+            this._data = null;
             super.dispose();
         }
 
@@ -47,7 +47,7 @@
             var _local_8:Array;
             var _local_9:IWindowContainer;
             var _local_10:int;
-            if (((!(window)) || (!(this._Str_594))))
+            if (((!(window)) || (!(this._data))))
             {
                 return;
             }
@@ -67,24 +67,24 @@
                 k.getListItemAt(_local_5).visible = false;
                 _local_5++;
             }
-            var _local_6:Boolean = ((this._Str_594._Str_3246) || (this._Str_594._Str_3529));
-            _Str_2304("pick", ((this._Str_594._Str_2899) ? ((this._Str_594._Str_2899.indexOf(BotSkillsEnum._Str_17261) == -1) && (_local_6)) : _local_6));
-            if (this._Str_594._Str_2899)
+            var _local_6:Boolean = ((this._data._Str_3246) || (this._data._Str_3529));
+            _Str_2304("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum._Str_17261) == -1) && (_local_6)) : _local_6));
+            if (this._data._Str_2899)
             {
-                _Str_2304("donate_to_all", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
-                _Str_2304("donate_to_user", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
-                if (this._Str_594._Str_3246)
+                _Str_2304("donate_to_all", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
+                _Str_2304("donate_to_user", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
+                if (this._data._Str_3246)
                 {
-                    _Str_2304("change_bot_name", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
-                    _Str_2304("change_bot_motto", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
-                    _Str_2304("dress_up", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
-                    _Str_2304("random_walk", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
-                    _Str_2304("setup_chat", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
-                    _Str_2304("dance", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.DANCE) == -1)));
+                    _Str_2304("change_bot_name", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
+                    _Str_2304("change_bot_motto", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
+                    _Str_2304("dress_up", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
+                    _Str_2304("random_walk", (!(this._data._Str_2899.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
+                    _Str_2304("setup_chat", (!(this._data._Str_2899.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
+                    _Str_2304("dance", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DANCE) == -1)));
                 }
-                _Str_2304("nux_take_tour", (!(this._Str_594._Str_2899.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
+                _Str_2304("nux_take_tour", (!(this._data._Str_2899.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
             }
-            for each (_local_7 in this._Str_594._Str_10833)
+            for each (_local_7 in this._data._Str_10833)
             {
                 if (_local_7.id == BotSkillsEnum._Str_18934)
                 {
@@ -121,7 +121,7 @@
                                 _local_9.visible = true;
                                 _local_9.name = ("nux_proceed_" + _local_10);
                                 _local_9.findChildByName("label").caption = _local_8[0];
-                                k._Str_3015(_local_9, ((k._Str_3156(k.getListItemByName("nux_proceed_1")) + _local_10) - 1));
+                                k.addListItemAt(_local_9, ((k.getListItemIndex(k.getListItemByName("nux_proceed_1")) + _local_10) - 1));
                             }
                         }
                     }
@@ -203,53 +203,53 @@
                     {
                         case "pick":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_5937(this._Str_594.id));
+                            this.widget.handler.container.connection.send(new _Str_5937(this._data.id));
                             break;
                         case "setup_chat":
                             _local_3 = true;
                             _local_5 = new Rectangle();
                             window.getGlobalRectangle(_local_5);
                             _local_4 = new Point((_local_5.x + (_local_5.width / 2)), (_local_5.y + _local_5.height));
-                            this.widget._Str_21992(this._Str_594.id, BotSkillsEnum.SETUP_CHAT, _local_4);
+                            this.widget._Str_21992(this._data.id, BotSkillsEnum.SETUP_CHAT, _local_4);
                             break;
                         case "random_walk":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.RANDOM_WALK, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.RANDOM_WALK, ""));
                             break;
                         case "dress_up":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.DRESS_UP, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DRESS_UP, ""));
                             break;
                         case "dance":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.DANCE, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DANCE, ""));
                             break;
                         case "donate_to_all":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.DONATE_TO_ALL, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DONATE_TO_ALL, ""));
                             break;
                         case "donate_to_user":
                             _local_3 = true;
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.DONATE_TO_USER, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.DONATE_TO_USER, ""));
                             break;
                         case "nux_take_tour":
                             _local_3 = true;
                             this.widget.component.context.createLinkEvent("help/tour");
-                            this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum.NUX_TAKE_TOUR, ""));
+                            this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.NUX_TAKE_TOUR, ""));
                             break;
                         case "change_bot_motto":
                             _local_3 = true;
                             _local_5 = new Rectangle();
                             window.getGlobalRectangle(_local_5);
                             _local_4 = new Point((_local_5.x + (_local_5.width / 2)), (_local_5.y + _local_5.height));
-                            this.widget._Str_21992(this._Str_594.id, BotSkillsEnum.CHANGE_BOT_MOTTO, _local_4);
+                            this.widget._Str_21992(this._data.id, BotSkillsEnum.CHANGE_BOT_MOTTO, _local_4);
 							break;
 						case "change_bot_name":
                             _local_3 = true;
                             _local_5 = new Rectangle();
                             window.getGlobalRectangle(_local_5);
                             _local_4 = new Point((_local_5.x + (_local_5.width / 2)), (_local_5.y + _local_5.height));
-                            this.widget._Str_21992(this._Str_594.id, BotSkillsEnum.CHANGE_BOT_NAME, _local_4);
+                            this.widget._Str_21992(this._data.id, BotSkillsEnum.CHANGE_BOT_NAME, _local_4);
                             break;
                     }
                     if (_arg_2.parent.name.indexOf(":link ") != -1)
@@ -261,7 +261,7 @@
                     if (_arg_2.parent.name.indexOf("nux_proceed_") != -1)
                     {
                         _local_7 = _arg_2.parent.name.substr(12, (_arg_2.parent.name.length - 12));
-                        this.widget.handler.container.connection.send(new _Str_3365(this._Str_594.id, BotSkillsEnum._Str_14917, _local_7));
+                        this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum._Str_14917, _local_7));
                         _local_3 = true;
                     }
                 }

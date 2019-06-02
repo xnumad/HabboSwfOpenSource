@@ -22,7 +22,7 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
-    import _Str_471._Str_7915;
+    import com.sulake.habbo.communication.messages.parser.advertisement._Str_7915;
     import com.sulake.habbo.advertisement.events.InterstitialEvent;
     import flash.display.Bitmap;
     import com.sulake.core.assets.IAsset;
@@ -84,14 +84,14 @@
                 adwarningRightURL = (imageLibraryURL + adwarningRightURL);
                 urlRequest = new URLRequest(adwarningLeftURL);
                 asset = assets.loadAssetFromFile("adWarningL", urlRequest, "image/png");
-                asset.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_24013);
+                asset.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.interstitialLoaderEventHandler);
                 urlRequest = new URLRequest(adwarningRightURL);
                 asset = assets.loadAssetFromFile("adWarningRight", urlRequest, "image/png");
-                asset.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_24705);
+                asset.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.adWarningLeftReady);
             }
             if (ExternalInterface.available)
             {
-                ExternalInterface.addCallback(INTERSTITIALCOMPLETED, this._Str_23732);
+                ExternalInterface.addCallback(INTERSTITIALCOMPLETED, this.disposeAsset);
             }
         }
 
@@ -163,32 +163,32 @@
             }
         }
 
-        private function _Str_23732(k:String):void
+        private function disposeAsset(k:String):void
         {
             events.dispatchEvent(new InterstitialEvent(InterstitialEvent.INTERSTITIAL_COMPLETE, k));
         }
 
-        private function _Str_24013(k:AssetLoaderEvent):void
+        private function interstitialLoaderEventHandler(k:AssetLoaderEvent):void
         {
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             var _local_3:Bitmap = (_local_2.assetLoader.content as Bitmap);
             if (_local_3 != null)
             {
-                this._roomAdWarningImageLeft = this._Str_22238(_local_3.bitmapData);
+                this._roomAdWarningImageLeft = this.emulateBackgroundTransparency(_local_3.bitmapData);
             }
         }
 
-        private function _Str_24705(k:AssetLoaderEvent):void
+        private function adWarningLeftReady(k:AssetLoaderEvent):void
         {
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             var _local_3:Bitmap = (_local_2.assetLoader.content as Bitmap);
             if (_local_3 != null)
             {
-                this._roomAdWarningImageRight = this._Str_22238(_local_3.bitmapData);
+                this._roomAdWarningImageRight = this.emulateBackgroundTransparency(_local_3.bitmapData);
             }
         }
 
-        private function _Str_22238(k:BitmapData):BitmapData
+        private function emulateBackgroundTransparency(k:BitmapData):BitmapData
         {
             var _local_4:int;
             var _local_5:uint;
@@ -215,7 +215,7 @@
             return _local_2;
         }
 
-        private function _Str_23817(k:Bitmap):Boolean
+        private function isValidAdImage(k:Bitmap):Boolean
         {
             if ((((!(k == null)) && (!(k.bitmapData == null))) && ((k.width > 1) || (k.height > 1))))
             {
@@ -241,7 +241,7 @@
                     _local_10 = (_local_9.content as BitmapData);
                     if (_local_10 != null)
                     {
-                        this._Str_18051(_local_10.clone(), k, _arg_2, _arg_3, _arg_4, _arg_5);
+                        this.dispatchImageAsset(_local_10.clone(), k, _arg_2, _arg_3, _arg_4, _arg_5);
                     }
                 }
                 return;
@@ -256,7 +256,7 @@
             {
                 for each (_local_11 in _local_6)
                 {
-                    if ((((_local_11.roomId == k) && (_local_11._Str_1577 == _arg_2)) && (_local_11._Str_4093 == _arg_3)))
+                    if ((((_local_11.roomId == k) && (_local_11._Str_1577 == _arg_2)) && (_local_11.objectCategory == _arg_3)))
                     {
                         return;
                     }
@@ -265,11 +265,11 @@
             _local_6.push(new AdImageRequest(k, _arg_4, _arg_5, _arg_2, _arg_3));
             var _local_7:URLRequest = new URLRequest(_arg_4);
             var _local_8:AssetLoaderStruct = assets.loadAssetFromFile(_arg_4, _local_7, "image/png");
-            _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23942);
-            _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_23544);
+            _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.adWarningRightReady);
+            _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onBillboardImageReady);
         }
 
-        private function _Str_23942(k:AssetLoaderEvent):void
+        private function adWarningRightReady(k:AssetLoaderEvent):void
         {
             var _local_5:BitmapData;
             var _local_6:AdImageRequest;
@@ -280,20 +280,20 @@
             {
                 return;
             }
-            if (this._Str_23817(_local_3))
+            if (this.isValidAdImage(_local_3))
             {
                 _local_5 = _local_3.bitmapData;
                 if (_local_5 != null)
                 {
                     for each (_local_6 in _local_4)
                     {
-                        this._Str_18051(_local_5.clone(), _local_6.roomId, _local_6._Str_1577, _local_6._Str_4093, _local_6._Str_6349, _local_6._Str_21152);
+                        this.dispatchImageAsset(_local_5.clone(), _local_6.roomId, _local_6._Str_1577, _local_6.objectCategory, _local_6.imageURL, _local_6.clickURL);
                     }
                 }
             }
         }
 
-        private function _Str_18051(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:String):void
+        private function dispatchImageAsset(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String, _arg_6:String):void
         {
             if (events != null)
             {
@@ -301,7 +301,7 @@
             }
         }
 
-        private function _Str_23544(k:AssetLoaderEvent):void
+        private function onBillboardImageReady(k:AssetLoaderEvent):void
         {
             var _local_4:AdImageRequest;
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
@@ -312,7 +312,7 @@
             }
             for each (_local_4 in _local_3)
             {
-                this._Str_18051(null, _local_4.roomId, _local_4._Str_1577, _local_4._Str_4093, _local_4._Str_6349, _local_4._Str_21152);
+                this.dispatchImageAsset(null, _local_4.roomId, _local_4._Str_1577, _local_4.objectCategory, _local_4.imageURL, _local_4.clickURL);
             }
         }
     }

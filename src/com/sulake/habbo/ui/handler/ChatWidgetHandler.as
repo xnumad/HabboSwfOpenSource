@@ -17,7 +17,7 @@
     import com.sulake.habbo.game.events.GameChatEvent;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.utils.IRoomGeometry;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.session.RoomUserData;
     import flash.events.Event;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
@@ -170,7 +170,7 @@
             var _local_5:IRoomGeometry;
             var _local_6:Number;
             var _local_7:Number;
-            var _local_8:IVector3D;
+            var _local_8:IVector3d;
             var _local_9:Point;
             var _local_10:RoomUserData;
             var _local_11:String;
@@ -213,7 +213,7 @@
                         _local_4 = this._container.roomEngine.getRoomObject(_local_3.session.roomId, _local_3.userId, RoomObjectCategoryEnum.CONST_100);
                         if (_local_4 != null)
                         {
-                            _local_5 = this._container.roomEngine._Str_4267(_local_3.session.roomId, this._container.getFirstCanvasId());
+                            _local_5 = this._container.roomEngine.getRoomCanvasGeometry(_local_3.session.roomId, this._container.getFirstCanvasId());
                             if (_local_5 != null)
                             {
                                 this._Str_20006();
@@ -225,7 +225,7 @@
                                 {
                                     _local_6 = _local_9.x;
                                     _local_7 = _local_9.y;
-                                    _local_24 = this._container.roomEngine._Str_7201(_local_3.session.roomId, this._container.getFirstCanvasId());
+                                    _local_24 = this._container.roomEngine.getRoomCanvasScreenOffset(_local_3.session.roomId, this._container.getFirstCanvasId());
                                     if (_local_24 != null)
                                     {
                                         _local_6 = (_local_6 + _local_24.x);
@@ -240,7 +240,7 @@
                                 _local_15 = 2;
                                 _local_16 = true;
                                 _local_17 = null;
-                                _local_18 = _local_3._Str_3214;
+                                _local_18 = _local_3.chatType;
                                 _local_19 = _local_3.style;
                                 _local_20 = 0;
                                 _local_21 = -1;
@@ -256,7 +256,7 @@
                                             {
                                                 _local_17 = _local_26.getModel().getString(RoomObjectVariableEnum.FIGURE_POSTURE);
                                             }
-                                            _local_13 = this._Str_2641(_local_25, _local_15, _local_16, _local_14, _local_17);
+                                            _local_13 = this.getPetImage(_local_25, _local_15, _local_16, _local_14, _local_17);
                                             _local_21 = new PetFigureData(_local_25).typeId;
                                             break;
                                         case RoomObjectTypeEnum.HABBO:
@@ -271,10 +271,10 @@
                                     _local_11 = _local_10.name;
                                 }
                                 _local_22 = _local_3.text;
-                                if (_local_18 == RoomSessionChatEvent._Str_8971)
+                                if (_local_18 == RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED)
                                 {
                                     _local_27 = "widget.chatbubble.handitem";
-                                    _local_28 = this._container.localization.getLocalization(("handitem" + _local_3._Str_2415), ("handitem" + _local_3._Str_2415));
+                                    _local_28 = this._container.localization.getLocalization(("handitem" + _local_3.extraParam), ("handitem" + _local_3.extraParam));
                                     this._container.localization.registerParameter(_local_27, "username", _local_11);
                                     this._container.localization.registerParameter(_local_27, "handitem", _local_28);
                                     _local_22 = this._container.localization.getLocalizationRaw(_local_27).value;
@@ -283,31 +283,31 @@
                                 if (_local_18 == RoomSessionChatEvent._Str_8909)
                                 {
                                     _local_29 = "widget.chatbubble.mutetime";
-                                    _local_30 = String((_local_3._Str_2415 % 60));
-                                    _local_31 = String(((_local_3._Str_2415 > 0) ? Math.floor(((_local_3._Str_2415 % 3600) / 60)) : 0));
-                                    _local_32 = String(((_local_3._Str_2415 > 0) ? Math.floor((_local_3._Str_2415 / 3600)) : 0));
+                                    _local_30 = String((_local_3.extraParam % 60));
+                                    _local_31 = String(((_local_3.extraParam > 0) ? Math.floor(((_local_3.extraParam % 3600) / 60)) : 0));
+                                    _local_32 = String(((_local_3.extraParam > 0) ? Math.floor((_local_3.extraParam / 3600)) : 0));
                                     this._container.localization.registerParameter(_local_29, "hours", _local_32);
                                     this._container.localization.registerParameter(_local_29, "minutes", _local_31);
                                     this._container.localization.registerParameter(_local_29, "seconds", _local_30);
                                     _local_22 = this._container.localization.getLocalizationRaw(_local_29).value;
                                     _local_19 = SystemChatStyleEnum.GENERIC;
                                 }
-                                if ((((_local_18 == RoomSessionChatEvent._Str_6065) || (_local_18 == RoomSessionChatEvent._Str_5998)) || (_local_18 == RoomSessionChatEvent._Str_5904)))
+                                if ((((_local_18 == RoomSessionChatEvent.CHAT_TYPE_PETREVIVE) || (_local_18 == RoomSessionChatEvent.CHAT_TYPE_PET_REBREED_FERTILIZE)) || (_local_18 == RoomSessionChatEvent.CHAT_TYPE_PET_SPEED_FERTILIZE)))
                                 {
                                     _local_33 = "widget.chatbubble.petrevived";
-                                    if (_local_18 == RoomSessionChatEvent._Str_5998)
+                                    if (_local_18 == RoomSessionChatEvent.CHAT_TYPE_PET_REBREED_FERTILIZE)
                                     {
                                         _local_33 = "widget.chatbubble.petrefertilized";
                                     }
                                     else
                                     {
-                                        if (_local_18 == RoomSessionChatEvent._Str_5904)
+                                        if (_local_18 == RoomSessionChatEvent.CHAT_TYPE_PET_SPEED_FERTILIZE)
                                         {
                                             _local_33 = "widget.chatbubble.petspeedfertilized";
                                         }
                                     }
                                     _local_34 = "";
-                                    _local_35 = this._Str_13861(_local_3._Str_2415);
+                                    _local_35 = this._Str_13861(_local_3.extraParam);
                                     if (_local_35 != null)
                                     {
                                         _local_36 = _local_3.session.userDataManager.getUserDataByIndex(_local_35.getId());
@@ -392,7 +392,7 @@
             }
             var k:int = this._container.getFirstCanvasId();
             var _local_2:int = this._container.roomSession.roomId;
-            var _local_3:RoomGeometry = (this._container.roomEngine._Str_4267(_local_2, k) as RoomGeometry);
+            var _local_3:RoomGeometry = (this._container.roomEngine.getRoomCanvasGeometry(_local_2, k) as RoomGeometry);
             if (_local_3 != null)
             {
                 _local_4 = 1;
@@ -416,7 +416,7 @@
                 _local_7 = _local_3.getScreenPoint(this._tempScreenPosVector);
                 if (_local_7 != null)
                 {
-                    _local_8 = this._container.roomEngine._Str_7201(_local_2, k);
+                    _local_8 = this._container.roomEngine.getRoomCanvasScreenOffset(_local_2, k);
                     if (_local_8 != null)
                     {
                         _local_7.offset(_local_8.x, _local_8.y);
@@ -469,7 +469,7 @@
             }
         }
 
-        private function _Str_2641(k:String, _arg_2:int, _arg_3:Boolean, _arg_4:int=64, _arg_5:String=null):BitmapData
+        private function getPetImage(k:String, _arg_2:int, _arg_3:Boolean, _arg_4:int=64, _arg_5:String=null):BitmapData
         {
             var _local_7:PetFigureData;
             var _local_8:int;
@@ -483,13 +483,13 @@
                 _local_8 = _local_7.typeId;
                 _local_9 = 0;
                 _local_10 = (!(_local_8 == 15));
-                _local_11 = this._container.roomEngine._Str_2641(_local_8, _local_7.paletteId, _local_7.color, new Vector3d((_arg_2 * 45)), _arg_4, this, _local_10, _local_9, _local_7._Str_3542, _arg_5);
+                _local_11 = this._container.roomEngine.getPetImage(_local_8, _local_7.paletteId, _local_7.color, new Vector3d((_arg_2 * 45)), _arg_4, this, _local_10, _local_9, _local_7._Str_3542, _arg_5);
                 if (_local_11 != null)
                 {
                     _local_6 = _local_11.data;
                     if (_local_11.id > 0)
                     {
-                        this._petImageIdToFigureString.add(_local_11.id, _local_7._Str_4217);
+                        this._petImageIdToFigureString.add(_local_11.id, _local_7.figureString);
                     }
                 }
             }

@@ -14,7 +14,7 @@
         public function ChatEventHandler(k:HabboHelp)
         {
             this._component = k;
-            this._component.roomSessionManager.events.addEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this._Str_7971);
+            this._component.roomSessionManager.events.addEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this.onRoomChat);
         }
 
         public function dispose():void
@@ -23,7 +23,7 @@
             {
                 if (this._component)
                 {
-                    this._component.roomSessionManager.events.removeEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this._Str_7971);
+                    this._component.roomSessionManager.events.removeEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this.onRoomChat);
                     this._component = null;
                 }
             }
@@ -34,7 +34,7 @@
             return this._component == null;
         }
 
-        private function _Str_7971(k:RoomSessionChatEvent):void
+        private function onRoomChat(k:RoomSessionChatEvent):void
         {
             var _local_2:RoomUserData = this._component.roomSessionManager.getSession(k.session.roomId).userDataManager.getUserDataByIndex(k.userId);
             var _local_3:_Str_2370 = this._component.navigator.enteredGuestRoomData;

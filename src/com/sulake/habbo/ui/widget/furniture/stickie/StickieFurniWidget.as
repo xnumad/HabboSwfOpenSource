@@ -86,7 +86,7 @@
         {
             this._Str_2718(false);
             this._Str_2319 = k._Str_1577;
-            this._Str_3796 = k._Str_1723;
+            this._Str_3796 = k.objectType;
             this._text = k.text;
             this._Str_3062 = k._Str_10471;
             this._Str_2278 = k.controller;

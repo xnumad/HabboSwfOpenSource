@@ -354,7 +354,7 @@
                 return;
             }
             var _local_3:TextStyle = TextStyleManager.getStyle(_arg_2.name);
-            if (((_local_3) && (!(_local_3._Str_1451(_arg_2)))))
+            if (((_local_3) && (!(_local_3.equals(_arg_2)))))
             {
                 _local_3 = TextStyleManager.findMatchingTextStyle(_arg_2.toString());
             }
@@ -1010,7 +1010,7 @@
             return new Rectangle((this._Str_7995 * this.maxScrollH), (this._Str_3375 * this.maxScrollV), width, height);
         }
 
-        public function get _Str_2614():Rectangle
+        public function get visibleRegion():Rectangle
         {
             return new Rectangle(0, 0, (this.maxScrollH + width), (this.maxScrollV + height));
         }
@@ -1430,33 +1430,33 @@
         {
             var k:Array = super.properties;
             var _local_2:TextStyle = TextStyleManager.getStyle(this._Str_4040);
-            k.push(_Str_2340(PropertyKeys.ALWAYS_SHOW_SELECTION, this._Str_2309.alwaysShowSelection));
+            k.push(createProperty(PropertyKeys.ALWAYS_SHOW_SELECTION, this._Str_2309.alwaysShowSelection));
             k.push(new PropertyStruct(PropertyKeys.ANTIALIAS_TYPE, this._Str_2309.antiAliasType, PropertyStruct.STRING, (!(this._Str_2309.antiAliasType == _local_2.antiAliasType)), PropertyKeys.ANTIALIAS_TYPE_RANGE));
-            k.push(_Str_2340(PropertyKeys.AUTO_SIZE, this._Str_4318));
-            k.push(_Str_2340(PropertyKeys.BORDER, this._Str_2309.border));
-            k.push(_Str_2340(PropertyKeys.BORDER_COLOR, this._Str_2309.borderColor));
+            k.push(createProperty(PropertyKeys.AUTO_SIZE, this._Str_4318));
+            k.push(createProperty(PropertyKeys.BORDER, this._Str_2309.border));
+            k.push(createProperty(PropertyKeys.BORDER_COLOR, this._Str_2309.borderColor));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._Str_3778, PropertyStruct.HEX, (!(this._Str_3778 == uint(_local_2.etchingColor)))));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_POSITION, this._Str_5717, PropertyStruct.STRING, (!(this._Str_5717 == String(_local_2.etchingPosition))), PropertyKeys.ETCHING_POSITION_RANGE));
-            k.push(_Str_2340(PropertyKeys.CONDENSE_WHITE, this._Str_2309.condenseWhite));
+            k.push(createProperty(PropertyKeys.CONDENSE_WHITE, this._Str_2309.condenseWhite));
             k.push(new PropertyStruct(PropertyKeys.FONT_FACE, this.defaultTextFormat.font, PropertyStruct.STRING, (!(this.defaultTextFormat.font == _local_2.fontFamily))));
             k.push(new PropertyStruct(PropertyKeys.FONT_SIZE, this.defaultTextFormat.size, PropertyStruct.UINT, (!(this.defaultTextFormat.size == _local_2.fontSize))));
-            k.push(_Str_2340(PropertyKeys.GRID_FIT_TYPE, this._Str_2309.gridFitType));
-            var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : _Str_3692(PropertyKeys.TEXT_COLOR).value));
+            k.push(createProperty(PropertyKeys.GRID_FIT_TYPE, this._Str_2309.gridFitType));
+            var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : getDefaultProperty(PropertyKeys.TEXT_COLOR).value));
             k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, this._Str_2309.textColor, PropertyStruct.HEX, (!(this._Str_2309.textColor == _local_3))));
-            k.push(_Str_2340(PropertyKeys.TEXT_STYLE, this._Str_4040));
-            k.push(_Str_2340(PropertyKeys.MARGIN_LEFT, this._Str_2480.left));
-            k.push(_Str_2340(PropertyKeys.MARGIN_TOP, this._Str_2480.top));
-            k.push(_Str_2340(PropertyKeys.MARGIN_RIGHT, this._Str_2480.right));
-            k.push(_Str_2340(PropertyKeys.MARGIN_BOTTOM, this._Str_2480.bottom));
-            k.push(_Str_2340(PropertyKeys.MOUSE_WHEEL_ENABLED, this._Str_2309.mouseWheelEnabled));
-            k.push(_Str_2340(PropertyKeys.MAX_CHARS, this._Str_2309.maxChars));
-            k.push(_Str_2340(PropertyKeys.MULTILINE, this._Str_2309.multiline));
-            k.push(_Str_2340(PropertyKeys.RESTRICT, this._Str_2309.restrict));
+            k.push(createProperty(PropertyKeys.TEXT_STYLE, this._Str_4040));
+            k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._Str_2480.left));
+            k.push(createProperty(PropertyKeys.MARGIN_TOP, this._Str_2480.top));
+            k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._Str_2480.right));
+            k.push(createProperty(PropertyKeys.MARGIN_BOTTOM, this._Str_2480.bottom));
+            k.push(createProperty(PropertyKeys.MOUSE_WHEEL_ENABLED, this._Str_2309.mouseWheelEnabled));
+            k.push(createProperty(PropertyKeys.MAX_CHARS, this._Str_2309.maxChars));
+            k.push(createProperty(PropertyKeys.MULTILINE, this._Str_2309.multiline));
+            k.push(createProperty(PropertyKeys.RESTRICT, this._Str_2309.restrict));
             k.push(new PropertyStruct(PropertyKeys.SHARPNESS, this._Str_2309.sharpness, PropertyStruct.NUMBER, (!(this._Str_2309.sharpness == _local_2.sharpness))));
             k.push(new PropertyStruct(PropertyKeys.THICKNESS, this._Str_2309.thickness, PropertyStruct.NUMBER, (!(this._Str_2309.thickness == _local_2.thickness))));
-            k.push(_Str_2340(PropertyKeys.WORD_WRAP, this._Str_2309.wordWrap));
-            k.push(_Str_2340(PropertyKeys.MAX_LINES, this._Str_9760));
-            k.push(_Str_2340(PropertyKeys.OVERFLOW_REPLACE, this._Str_15348));
+            k.push(createProperty(PropertyKeys.WORD_WRAP, this._Str_2309.wordWrap));
+            k.push(createProperty(PropertyKeys.MAX_LINES, this._Str_9760));
+            k.push(createProperty(PropertyKeys.OVERFLOW_REPLACE, this._Str_15348));
             k.push(new PropertyStruct(PropertyKeys.BOLD, (!(this._Str_2309.defaultTextFormat.bold == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.bold == (_local_2.fontWeight == FontStyle.BOLD)))));
             k.push(new PropertyStruct(PropertyKeys.ITALIC, (!(this._Str_2309.defaultTextFormat.italic == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.italic == (_local_2.fontStyle == FontStyle.ITALIC)))));
             k.push(new PropertyStruct(PropertyKeys.UNDERLINE, (!(this._Str_2309.defaultTextFormat.underline == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.underline == (_local_2.textDecoration == "underline")))));
@@ -1497,7 +1497,7 @@
             _Str_18207(this, k);
         }
 
-        public function _Str_25655():void
+        public function resetExplicitStyle():void
         {
             this._Str_3808 = new TextStyle();
         }

@@ -22,8 +22,8 @@
             this._products = products;
             this._assetLib = new AssetLibrary("ProductDataParserAssetLib");
             var _local_3:AssetLoaderStruct = this._assetLib.loadAssetFromFile(url, new URLRequest(url), "text/plain");
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23987);
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_22996);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.parseProductsData);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.productsDataError);
         }
 
         override public function dispose():void
@@ -37,7 +37,7 @@
             this._products = null;
         }
 
-        private function _Str_23987(k:Event):void
+        private function parseProductsData(k:Event):void
         {
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             if (_local_2 == null)
@@ -121,7 +121,7 @@
             dispatchEvent(new Event(PDP_PRODUCT_DATA_READY));
         }
 
-        private function _Str_22996(k:AssetLoaderEvent):void
+        private function productsDataError(k:AssetLoaderEvent):void
         {
             HabboWebTools.logEventLog(("productdata download error " + k.status));
             Core.error("Could not download productdata", true, Core.ERROR_CATEGORY_PRODUCT_DATA);

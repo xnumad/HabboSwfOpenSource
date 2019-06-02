@@ -8,7 +8,7 @@
     import flash.display.BitmapData;
     import flash.geom.Point;
     import flash.geom.Matrix;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneMaskManager 
     {
@@ -60,10 +60,10 @@
                 return;
             }
             this._assetCollection = k;
-            this._Str_22834(this.data, k);
+            this.parseMasks(this.data, k);
         }
 
-        private function _Str_22834(k:XML, _arg_2:IGraphicAssetCollection):void
+        private function parseMasks(k:XML, _arg_2:IGraphicAssetCollection):void
         {
             var _local_7:XML;
             var _local_8:String;
@@ -100,7 +100,7 @@
                             if (XMLValidator.checkRequiredAttributes(_local_12, _local_4))
                             {
                                 _local_13 = parseInt(_local_12.@size);
-                                _local_14 = _local_9._Str_24540(_local_13);
+                                _local_14 = _local_9.createMaskVisualization(_local_13);
                                 if (_local_14 != null)
                                 {
                                     _local_15 = _local_12.bitmap;
@@ -137,10 +137,10 @@
                 _local_6 = k[_local_5];
                 if (XMLValidator.checkRequiredAttributes(_local_6, ["assetName"]))
                 {
-                    _local_7 = PlaneMaskVisualization._Str_3268;
-                    _local_8 = PlaneMaskVisualization._Str_3271;
-                    _local_9 = PlaneMaskVisualization._Str_3268;
-                    _local_10 = PlaneMaskVisualization._Str_3271;
+                    _local_7 = PlaneMaskVisualization.MIN_NORMAL_COORDINATE_VALUE;
+                    _local_8 = PlaneMaskVisualization.MAX_NORMAL_COORDINATE_VALUE;
+                    _local_9 = PlaneMaskVisualization.MIN_NORMAL_COORDINATE_VALUE;
+                    _local_10 = PlaneMaskVisualization.MAX_NORMAL_COORDINATE_VALUE;
                     if (String(_local_6.@normalMinX) != "")
                     {
                         _local_7 = parseFloat(_local_6.@normalMinX);
@@ -165,7 +165,7 @@
                         {
                             _local_4 = _local_11;
                         }
-                        _arg_2._Str_16790(_local_12, _local_7, _local_8, _local_9, _local_10);
+                        _arg_2.addBitmap(_local_12, _local_7, _local_8, _local_9, _local_10);
                     }
                 }
                 _local_5++;
@@ -173,7 +173,7 @@
             return _local_4;
         }
 
-        public function _Str_17859(k:BitmapData, _arg_2:String, _arg_3:Number, _arg_4:IVector3D, _arg_5:int, _arg_6:int):Boolean
+        public function updateMask(k:BitmapData, _arg_2:String, _arg_3:Number, _arg_4:IVector3d, _arg_5:int, _arg_6:int):Boolean
         {
             var _local_8:IGraphicAsset;
             var _local_9:BitmapDataAsset;
@@ -187,7 +187,7 @@
             var _local_7:PlaneMask = (this._masks.getValue(_arg_2) as PlaneMask);
             if (_local_7 != null)
             {
-                _local_8 = _local_7._Str_21021(_arg_3, _arg_4);
+                _local_8 = _local_7.getGraphicAsset(_arg_3, _arg_4);
                 if (_local_8 != null)
                 {
                     _local_9 = (_local_8.asset as BitmapDataAsset);
@@ -222,7 +222,7 @@
             return true;
         }
 
-        public function _Str_8361(k:String):PlaneMask
+        public function getMask(k:String):PlaneMask
         {
             return this._masks.getValue(k) as PlaneMask;
         }

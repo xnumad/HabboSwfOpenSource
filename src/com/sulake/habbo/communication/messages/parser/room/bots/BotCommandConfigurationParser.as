@@ -15,7 +15,7 @@
             return this._botId;
         }
 
-        public function get _Str_18899():int
+        public function get commandId():int
         {
             return this._commandId;
         }

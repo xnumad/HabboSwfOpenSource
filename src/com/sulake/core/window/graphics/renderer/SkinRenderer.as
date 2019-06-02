@@ -28,7 +28,7 @@
                 "x":0,
                 "y":-1
             }
-            _Str_3766[TextStyle._Str_3825] = {
+            _Str_3766[TextStyle.TOP_RIGHT] = {
                 "x":1,
                 "y":-1
             }
@@ -40,7 +40,7 @@
                 "x":1,
                 "y":0
             }
-            _Str_3766[TextStyle._Str_3658] = {
+            _Str_3766[TextStyle.BOTTOM_LEFT] = {
                 "x":-1,
                 "y":1
             }
@@ -48,7 +48,7 @@
                 "x":0,
                 "y":1
             }
-            _Str_3766[TextStyle._Str_3964] = {
+            _Str_3766[TextStyle.BOTTOM_RIGHT] = {
                 "x":1,
                 "y":1
             }

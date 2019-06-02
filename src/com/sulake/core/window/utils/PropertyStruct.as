@@ -60,17 +60,17 @@
             return this._range;
         }
 
-        public function _Str_19447(k:String):PropertyStruct
+        public function withNameSpace(k:String):PropertyStruct
         {
             return new PropertyStruct(((k + ":") + this._key), this._value, this._type, this._valid, this._range);
         }
 
-        public function _Str_20623():PropertyStruct
+        public function withoutNameSpace():PropertyStruct
         {
             return new PropertyStruct(this._key.replace(/.*:/, ""), this._value, this._type, this._valid, this._range);
         }
 
-        public function _Str_2551(k:Object):PropertyStruct
+        public function withValue(k:Object):PropertyStruct
         {
             var _local_3:Array;
             var _local_4:Array;

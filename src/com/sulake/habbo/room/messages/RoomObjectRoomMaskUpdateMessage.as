@@ -2,12 +2,12 @@
 {
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomObjectRoomMaskUpdateMessage extends RoomObjectUpdateMessage 
     {
         public static const RORMUM_ADD_MASK:String = "RORMUM_ADD_MASK";
-        public static const _Str_10260:String = "RORMUM_ADD_MASK";
+        public static const REMOVE_MASK:String = "RORMUM_ADD_MASK";
         public static const DOOR:String = "door";
         public static const WINDOW:String = "window";
         public static const HOLE:String = "hole";
@@ -18,7 +18,7 @@
         private var _maskLoc:Vector3d = null;
         private var _maskCategory:String = "window";
 
-        public function RoomObjectRoomMaskUpdateMessage(k:String, _arg_2:String, _arg_3:String=null, _arg_4:IVector3D=null, _arg_5:String="window")
+        public function RoomObjectRoomMaskUpdateMessage(k:String, _arg_2:String, _arg_3:String=null, _arg_4:IVector3d=null, _arg_5:String="window")
         {
             super(null, null);
             this._type = k;
@@ -36,22 +36,22 @@
             return this._type;
         }
 
-        public function get _Str_20498():String
+        public function get maskId():String
         {
             return this._maskId;
         }
 
-        public function get _Str_25853():String
+        public function get maskType():String
         {
             return this._maskType;
         }
 
-        public function get _Str_22823():IVector3D
+        public function get maskLocation():IVector3d
         {
             return this._maskLoc;
         }
 
-        public function get _Str_24290():String
+        public function get maskCategory():String
         {
             return this._maskCategory;
         }

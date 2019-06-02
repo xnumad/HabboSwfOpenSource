@@ -5,17 +5,17 @@
     public class _Str_12242 implements IMessageComposer 
     {
         private var _name:String;
-        private var _Str_578:int;
+        private var _type:int;
 
         public function _Str_12242(k:String, _arg_2:int)
         {
             this._name = k;
-            this._Str_578 = _arg_2;
+            this._type = _arg_2;
         }
 
         public function getMessageArray():Array
         {
-            return [this._name, this._Str_578];
+            return [this._name, this._type];
         }
 
         public function dispose():void

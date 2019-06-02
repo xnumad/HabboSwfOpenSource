@@ -77,28 +77,28 @@
             }
             k.addMessageEvent(new _Str_4085(this._Str_10523));
             k.addMessageEvent(new _Str_4914(this._Str_16267));
-            k.addMessageEvent(new UserBadgesEvent(this._Str_12065));
-            k.addMessageEvent(new _Str_4129(this._Str_11371));
+            k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
+            k.addMessageEvent(new _Str_4129(this.onDoorbell));
             k.addMessageEvent(new _Str_3084(this._Str_5174));
-            k.addMessageEvent(new _Str_4150(this._Str_10148));
-            k.addMessageEvent(new PetInfoMessageEvent(this._Str_8034));
-            k.addMessageEvent(new PetTrainingPanelEvent(this._Str_24543));
-            k.addMessageEvent(new PetPlacingErrorEvent(this._Str_25065));
+            k.addMessageEvent(new _Str_4150(this.onUserNameChange));
+            k.addMessageEvent(new PetInfoMessageEvent(this.onPetInfo));
+            k.addMessageEvent(new PetTrainingPanelEvent(this.onEnabledPetCommands));
+            k.addMessageEvent(new PetPlacingErrorEvent(this.onPetPlacingError));
             k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
-            k.addMessageEvent(new PetBreedingResultEvent(this._Str_14312));
-            k.addMessageEvent(new _Str_7734(this._Str_12723));
-            k.addMessageEvent(new PetStatusUpdateEvent(this._Str_12831));
-            k.addMessageEvent(new PetLevelUpdateEvent(this._Str_14639));
+            k.addMessageEvent(new PetBreedingResultEvent(this.onPetBreedingResult));
+            k.addMessageEvent(new _Str_7734(this.onPetBreedingEvent));
+            k.addMessageEvent(new PetStatusUpdateEvent(this.onPetStatusUpdate));
+            k.addMessageEvent(new PetLevelUpdateEvent(this.onPetLevelUpdate));
             k.addMessageEvent(new _Str_9293(this._Str_25414));
             k.addMessageEvent(new _Str_9336(this._Str_24337));
             k.addMessageEvent(new _Str_9632(this._Str_22690));
-            k.addMessageEvent(new BotErrorEvent(this._Str_23402));
+            k.addMessageEvent(new BotErrorEvent(this.onBotError));
             k.addMessageEvent(new _Str_4841(this._Str_22755));
-            k.addMessageEvent(new _Str_5619(this._Str_18858));
-            k.addMessageEvent(new _Str_7839(this._Str_24224));
+            k.addMessageEvent(new _Str_5619(this.onDance));
+            k.addMessageEvent(new _Str_7839(this.onFavoriteMembershipUpdate));
         }
 
-        private function _Str_24224(k:IMessageEvent):void
+        private function onFavoriteMembershipUpdate(k:IMessageEvent):void
         {
             var _local_5:RoomSessionFavouriteGroupUpdateEvent;
             var _local_2:_Str_7301 = _Str_7839(k)._Str_2273();
@@ -107,16 +107,16 @@
             {
                 return;
             }
-            var _local_4:RoomUserData = _local_3.userDataManager.getUserDataByIndex(_local_2._Str_2707);
+            var _local_4:RoomUserData = _local_3.userDataManager.getUserDataByIndex(_local_2.roomIndex);
             if (_local_4 == null)
             {
                 return;
             }
-            _local_4._Str_4592 = ("" + _local_2._Str_3094);
-            _local_4.groupName = _local_2._Str_14525;
+            _local_4._Str_4592 = ("" + _local_2.habboGroupId);
+            _local_4.groupName = _local_2.habboGroupName;
             if (((listener) && (listener.events)))
             {
-                _local_5 = new RoomSessionFavouriteGroupUpdateEvent(_local_3, _local_2._Str_2707, _local_2._Str_3094, _local_2.status, _local_2._Str_14525);
+                _local_5 = new RoomSessionFavouriteGroupUpdateEvent(_local_3, _local_2.roomIndex, _local_2.habboGroupId, _local_2.status, _local_2.habboGroupName);
                 listener.events.dispatchEvent(_local_5);
             }
         }
@@ -138,10 +138,10 @@
             }
             var _local_5:Vector.<RoomUserData> = new Vector.<RoomUserData>(0);
             var _local_6:int;
-            while (_local_6 < _local_3._Str_12722())
+            while (_local_6 < _local_3.getUserCount())
             {
                 _local_7 = _local_3._Str_5126(_local_6);
-                _local_8 = new RoomUserData(_local_7._Str_2707);
+                _local_8 = new RoomUserData(_local_7.roomIndex);
                 _local_8.name = _local_7.name;
                 _local_8.custom = _local_7.custom;
                 _local_8.activityPoints = _local_7.activityPoints;
@@ -152,19 +152,19 @@
                 _local_8.groupName = _local_7.groupName;
                 _local_8._Str_7043 = _local_7._Str_7043;
                 _local_8._Str_3344 = _local_7._Str_3344;
-                _local_8.ownerId = _local_7._Str_2481;
+                _local_8.ownerId = _local_7.ownerId;
                 _local_8.ownerName = _local_7.ownerName;
                 _local_8.rarityLevel = _local_7.rarityLevel;
                 _local_8._Str_4799 = _local_7._Str_4799;
-                _local_8._Str_2886 = _local_7._Str_2886;
-                _local_8._Str_2934 = _local_7._Str_2934;
-                _local_8._Str_3068 = _local_7._Str_3068;
-                _local_8._Str_2898 = _local_7._Str_2898;
-                _local_8._Str_2921 = _local_7._Str_2921;
+                _local_8.isRiding = _local_7.isRiding;
+                _local_8.canBreed = _local_7.canBreed;
+                _local_8.canHarvest = _local_7.canHarvest;
+                _local_8.canRevive = _local_7.canRevive;
+                _local_8.hasBreedingPermission = _local_7.hasBreedingPermission;
                 _local_8._Str_3897 = _local_7._Str_3897;
                 _local_8._Str_2899 = _local_7._Str_2899;
                 _local_8._Str_3853 = _local_7._Str_3853;
-                if (_local_4.userDataManager.getUserData(_local_7._Str_2707) == null)
+                if (_local_4.userDataManager.getUserData(_local_7.roomIndex) == null)
                 {
                     _local_5.push(_local_8);
                 }
@@ -187,10 +187,10 @@
                 return;
             }
             var _local_4:int = (_local_2._Str_2273() as _Str_6367).id;
-            _local_3.userDataManager._Str_16002(_local_4);
+            _local_3.userDataManager.removeUserDataByRoomIndex(_local_4);
         }
 
-        private function _Str_12065(k:IMessageEvent):void
+        private function onUserBadges(k:IMessageEvent):void
         {
             var _local_2:UserBadgesEvent = (k as UserBadgesEvent);
             if (_local_2 == null)
@@ -202,11 +202,11 @@
             {
                 return;
             }
-            _local_3.userDataManager._Str_20068(_local_2.userId, _local_2.badges);
+            _local_3.userDataManager.setUserBadges(_local_2.userId, _local_2.badges);
             listener.events.dispatchEvent(new RoomSessionUserBadgesEvent(_local_3, _local_2.userId, _local_2.badges));
         }
 
-        private function _Str_11371(k:IMessageEvent):void
+        private function onDoorbell(k:IMessageEvent):void
         {
             var _local_2:_Str_4129 = (k as _Str_4129);
             if (_local_2 == null)
@@ -240,13 +240,13 @@
             if (_local_2.id >= 0)
             {
                 session.userDataManager.updateFigure(_local_2.id, _local_2.figure, _local_2._Str_3344, false, false);
-                session.userDataManager._Str_20627(_local_2.id, _local_2._Str_9690);
-                session.userDataManager._Str_21163(_local_2.id, _local_2.activityPoints);
-                listener.events.dispatchEvent(new RoomSessionUserFigureUpdateEvent(session, _local_2.id, _local_2.figure, _local_2._Str_3344, _local_2._Str_9690, _local_2.activityPoints));
+                session.userDataManager.updateCustom(_local_2.id, _local_2.customInfo);
+                session.userDataManager.updateAchievementScore(_local_2.id, _local_2.activityPoints);
+                listener.events.dispatchEvent(new RoomSessionUserFigureUpdateEvent(session, _local_2.id, _local_2.figure, _local_2._Str_3344, _local_2.customInfo, _local_2.activityPoints));
             }
         }
 
-        private function _Str_10148(k:IMessageEvent):void
+        private function onUserNameChange(k:IMessageEvent):void
         {
             var _local_2:_Str_4150 = (k as _Str_4150);
             if (_local_2 == null)
@@ -259,10 +259,10 @@
             {
                 return;
             }
-            _local_4.userDataManager._Str_19386(_local_3.id, _local_3._Str_16428);
+            _local_4.userDataManager.updateNameByIndex(_local_3.id, _local_3._Str_16428);
         }
 
-        private function _Str_8034(k:IMessageEvent):void
+        private function onPetInfo(k:IMessageEvent):void
         {
             var _local_2:IRoomSession = listener.getSession(_Str_2569);
             if (_local_2 == null)
@@ -319,15 +319,15 @@
                 return;
             }
             var _local_5:String = _local_3.figureData.figuredata;
-            var _local_6:int = _local_3._Str_2707;
+            var _local_6:int = _local_3.roomIndex;
             var _local_7:int = _local_3._Str_2508;
             var _local_8:Boolean = _local_3._Str_4799;
-            var _local_9:Boolean = _local_3._Str_2886;
+            var _local_9:Boolean = _local_3.isRiding;
             _local_4.userDataManager.updateFigure(_local_6, _local_5, "", _local_8, _local_9);
             listener.events.dispatchEvent(new RoomSessionPetFigureUpdateEvent(_local_4, _local_7, _local_5));
         }
 
-        private function _Str_14312(k:IMessageEvent):void
+        private function onPetBreedingResult(k:IMessageEvent):void
         {
             var _local_2:PetBreedingResultEvent = (k as PetBreedingResultEvent);
             if (_local_2 == null)
@@ -355,7 +355,7 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionConfirmPetBreedingEvent(_local_3, _local_2._Str_12369, _local_2.pet1, _local_2.pet2, _local_2._Str_10346, _local_2._Str_24905));
+            listener.events.dispatchEvent(new RoomSessionConfirmPetBreedingEvent(_local_3, _local_2.nestId, _local_2.pet1, _local_2.pet2, _local_2.rarityCategories, _local_2._Str_24905));
         }
 
         private function _Str_24337(k:_Str_9336):void
@@ -370,7 +370,7 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionConfirmPetBreedingResultEvent(_local_3, _local_2._Str_12769, _local_2.result));
+            listener.events.dispatchEvent(new RoomSessionConfirmPetBreedingResultEvent(_local_3, _local_2.breedingNestStuffId, _local_2.result));
         }
 
         private function _Str_22690(k:_Str_9632):void
@@ -384,10 +384,10 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionNestBreedingSuccessEvent(_local_2, k._Str_2273()._Str_2508, k._Str_2273()._Str_16731));
+            listener.events.dispatchEvent(new RoomSessionNestBreedingSuccessEvent(_local_2, k._Str_2273()._Str_2508, k._Str_2273().rarityCategory));
         }
 
-        private function _Str_12723(k:IMessageEvent):void
+        private function onPetBreedingEvent(k:IMessageEvent):void
         {
             var _local_2:_Str_7734 = (k as _Str_7734);
             if (_local_2 == null)
@@ -400,10 +400,10 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionPetBreedingEvent(_local_4, _local_3.state, _local_3._Str_7440, _local_3._Str_7663));
+            listener.events.dispatchEvent(new RoomSessionPetBreedingEvent(_local_4, _local_3.state, _local_3.ownPetId, _local_3.otherPetId));
         }
 
-        private function _Str_12831(k:IMessageEvent):void
+        private function onPetStatusUpdate(k:IMessageEvent):void
         {
             var _local_2:PetStatusUpdateEvent = (k as PetStatusUpdateEvent);
             if (_local_2 == null)
@@ -416,17 +416,17 @@
             {
                 return;
             }
-            var _local_5:int = _local_3._Str_2707;
+            var _local_5:int = _local_3.roomIndex;
             var _local_6:int = _local_3._Str_2508;
-            var _local_7:Boolean = _local_3._Str_3068;
-            var _local_8:Boolean = _local_3._Str_2898;
-            var _local_9:Boolean = _local_3._Str_2934;
-            var _local_10:Boolean = _local_3._Str_2921;
-            _local_4.userDataManager._Str_21936(_local_5, _local_9, _local_7, _local_8, _local_10);
+            var _local_7:Boolean = _local_3.canHarvest;
+            var _local_8:Boolean = _local_3.canRevive;
+            var _local_9:Boolean = _local_3.canBreed;
+            var _local_10:Boolean = _local_3.hasBreedingPermission;
+            _local_4.userDataManager.updatePetBreedingStatus(_local_5, _local_9, _local_7, _local_8, _local_10);
             listener.events.dispatchEvent(new RoomSessionPetStatusUpdateEvent(_local_4, _local_6, _local_9, _local_7, _local_8, _local_10));
         }
 
-        private function _Str_14639(k:IMessageEvent):void
+        private function onPetLevelUpdate(k:IMessageEvent):void
         {
             var _local_2:PetLevelUpdateEvent = (k as PetLevelUpdateEvent);
             if (_local_2 == null)
@@ -439,14 +439,14 @@
             {
                 return;
             }
-            var _local_5:int = _local_3._Str_2707;
+            var _local_5:int = _local_3.roomIndex;
             var _local_6:int = _local_3._Str_2508;
             var _local_7:int = _local_3.level;
-            _local_4.userDataManager._Str_19949(_local_5, _local_7);
+            _local_4.userDataManager.updatePetLevel(_local_5, _local_7);
             listener.events.dispatchEvent(new RoomSessionPetLevelUpdateEvent(_local_4, _local_6, _local_7));
         }
 
-        private function _Str_24543(k:IMessageEvent):void
+        private function onEnabledPetCommands(k:IMessageEvent):void
         {
             var _local_2:IRoomSession = listener.getSession(_Str_2569);
             if (_local_2 == null)
@@ -465,7 +465,7 @@
             }
         }
 
-        private function _Str_25065(k:PetPlacingErrorEvent):void
+        private function onPetPlacingError(k:PetPlacingErrorEvent):void
         {
             var _local_3:String;
             if (((k == null) || (k._Str_2273() == null)))
@@ -504,7 +504,7 @@
             }
         }
 
-        private function _Str_23402(k:BotErrorEvent):void
+        private function onBotError(k:BotErrorEvent):void
         {
             var _local_3:String;
             if (((k == null) || (k._Str_2273() == null)))
@@ -561,10 +561,10 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionFriendRequestEvent(_local_3, _local_4._Str_2951, _local_4._Str_2951, _local_4._Str_6445));
+            listener.events.dispatchEvent(new RoomSessionFriendRequestEvent(_local_3, _local_4.requestId, _local_4.requestId, _local_4.requesterName));
         }
 
-        private function _Str_18858(k:_Str_5619):void
+        private function onDance(k:_Str_5619):void
         {
             var _local_2:_Str_6731 = k._Str_2273();
             var _local_3:IRoomSession = listener.getSession(_Str_2569);

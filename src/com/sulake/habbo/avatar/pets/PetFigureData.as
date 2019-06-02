@@ -14,13 +14,13 @@
         public function PetFigureData(k:String)
         {
             this._typeId = this._Str_19576(k);
-            this._paletteId = this._Str_23127(k);
+            this._paletteId = this.getPaletteId(k);
             this._color = this._Str_751(k);
-            this._headOnly = this._Str_23227(k);
-            var _local_2:Array = this._Str_23697(k);
-            this._customLayerIds = this._Str_24772(_local_2);
-            this._customPartIds = this._Str_23370(_local_2);
-            this._customPaletteIds = this._Str_25750(_local_2);
+            this._headOnly = this.getHeadOnly(k);
+            var _local_2:Array = this.getCustomData(k);
+            this._customLayerIds = this.getCustomLayerIds(_local_2);
+            this._customPartIds = this.getCustomPartIds(_local_2);
+            this._customPaletteIds = this.getCustomPaletteIds(_local_2);
             this._customParts = [];
             var _local_3:int;
             while (_local_3 < this._customLayerIds.length)
@@ -45,17 +45,17 @@
             return this._color;
         }
 
-        public function get _Str_19294():Array
+        public function get customLayerIds():Array
         {
             return this._customLayerIds;
         }
 
-        public function get _Str_19132():Array
+        public function get customPartIds():Array
         {
             return this._customPartIds;
         }
 
-        public function get _Str_21151():Array
+        public function get customPaletteIds():Array
         {
             return this._customPaletteIds;
         }
@@ -65,7 +65,7 @@
             return this._customParts;
         }
 
-        public function _Str_22025(k:int):PetCustomPart
+        public function getCustomPart(k:int):PetCustomPart
         {
             var _local_2:PetCustomPart;
             if (this._customParts != null)
@@ -81,17 +81,17 @@
             return null;
         }
 
-        public function get _Str_22424():Boolean
+        public function get hasCustomParts():Boolean
         {
             return (!(this._customLayerIds == null)) && (this._customLayerIds.length > 0);
         }
 
-        public function get _Str_22434():Boolean
+        public function get headOnly():Boolean
         {
             return this._headOnly;
         }
 
-        public function get _Str_4217():String
+        public function get figureString():String
         {
             var _local_2:PetCustomPart;
             var k:String = ((((this.typeId + " ") + this.paletteId) + " ") + this.color.toString(16));
@@ -103,7 +103,7 @@
             return k;
         }
 
-        private function _Str_23697(k:String):Array
+        private function getCustomData(k:String):Array
         {
             var _local_3:Array;
             var _local_4:int;
@@ -126,7 +126,7 @@
             return _local_2;
         }
 
-        private function _Str_24772(k:Array):Array
+        private function getCustomLayerIds(k:Array):Array
         {
             var _local_2:Array = [];
             var _local_3:int;
@@ -138,7 +138,7 @@
             return _local_2;
         }
 
-        private function _Str_23370(k:Array):Array
+        private function getCustomPartIds(k:Array):Array
         {
             var _local_2:Array = [];
             var _local_3:int;
@@ -150,7 +150,7 @@
             return _local_2;
         }
 
-        private function _Str_25750(k:Array):Array
+        private function getCustomPaletteIds(k:Array):Array
         {
             var _local_2:Array = [];
             var _local_3:int;
@@ -176,7 +176,7 @@
             return 0;
         }
 
-        private function _Str_23127(k:String):int
+        private function getPaletteId(k:String):int
         {
             var _local_2:Array;
             if (k != null)
@@ -204,7 +204,7 @@
             return 0xFFFFFF;
         }
 
-        private function _Str_23227(k:String):Boolean
+        private function getHeadOnly(k:String):Boolean
         {
             var _local_2:Array;
             if (k != null)

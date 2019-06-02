@@ -15,7 +15,7 @@
 
     public class NetworkResource extends Debuggable 
     {
-        protected var _Str_576:String = null;
+        protected var _id:String = null;
         protected var _Str_577:String = null;
         protected var _Str_2230:String = null;
         protected var _Str_582:URLLoader;
@@ -25,7 +25,7 @@
         {
             this._Str_582 = new URLLoader();
             super();
-            this._Str_576 = k;
+            this._id = k;
             this.url = _arg_2;
             this._Str_2230 = _arg_3;
         }
@@ -129,12 +129,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set url(k:String):void
@@ -422,14 +422,14 @@
 
         public function clone():NetworkResource
         {
-            return new NetworkResource(this._Str_576, this._Str_577);
+            return new NetworkResource(this._id, this._Str_577);
         }
 
         override public function toJSObject():Object
         {
             var k:Object = new Object();
             k = {
-                "id":this._Str_576,
+                "id":this._id,
                 "uid":_Str_2995,
                 "url":this._Str_577,
                 "mimeType":this._Str_2230

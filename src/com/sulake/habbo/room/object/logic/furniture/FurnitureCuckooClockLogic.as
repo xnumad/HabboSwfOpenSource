@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.events.RoomObjectPlaySoundIdEvent;
     import com.sulake.habbo.room.messages.RoomObjectDataUpdateMessage;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
@@ -8,7 +8,7 @@
     public class FurnitureCuckooClockLogic extends FurnitureMultistateLogic 
     {
         private var _state:int = -1;
-        private var _loc:IVector3D;
+        private var _loc:IVector3d;
 
 
         override public function getEventTypes():Array

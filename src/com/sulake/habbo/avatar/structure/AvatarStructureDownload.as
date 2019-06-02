@@ -25,7 +25,7 @@
             var _local_4:URLRequest = new URLRequest(_arg_2);
             var _local_5:AssetLoaderStruct = k.loadAssetFromFile(_arg_2, _local_4, "text/plain");
             _local_5.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_1943);
-            _local_5.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_1692);
+            _local_5.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onDataComplete);
         }
 
         private function _Str_1943(event:Event):void
@@ -60,7 +60,7 @@
             dispatchEvent(new Event(AvatarStructureDownload.AVATAR_STRUCTURE_DONE));
         }
 
-        private function _Str_1692(k:Event):void
+        private function onDataComplete(k:Event):void
         {
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             var _local_3:String = "";

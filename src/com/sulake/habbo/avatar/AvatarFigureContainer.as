@@ -58,7 +58,7 @@
             this.partSets().remove(k);
         }
 
-        public function _Str_1008():String
+        public function getFigureString():String
         {
             var _local_2:String;
             var _local_3:Array;

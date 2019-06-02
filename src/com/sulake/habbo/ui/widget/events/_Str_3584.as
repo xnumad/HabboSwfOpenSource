@@ -22,7 +22,7 @@
             return this._Str_2319;
         }
 
-        public function get _Str_4093():int
+        public function get objectCategory():int
         {
             return this._Str_3014;
         }

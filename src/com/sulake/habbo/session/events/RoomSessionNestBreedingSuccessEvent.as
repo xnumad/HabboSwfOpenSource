@@ -16,7 +16,7 @@
             this._rarityCategory = _arg_3;
         }
 
-        public function get _Str_16731():int
+        public function get rarityCategory():int
         {
             return this._rarityCategory;
         }

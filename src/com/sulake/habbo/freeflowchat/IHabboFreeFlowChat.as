@@ -7,7 +7,7 @@
     public interface IHabboFreeFlowChat extends IUnknown 
     {
         function get displayObject():DisplayObject;
-        function get _Str_5329():IChatStyleLibrary;
+        function get chatStyleLibrary():IChatStyleLibrary;
         function get isDisabledInPreferences():Boolean;
         function set isDisabledInPreferences(_arg_1:Boolean):void;
         function get _Str_6984():int;

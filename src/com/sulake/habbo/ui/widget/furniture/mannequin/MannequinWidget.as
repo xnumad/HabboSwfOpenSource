@@ -100,7 +100,7 @@
             this._savedOutfitName = _arg_4;
             var _local_5:IRoomSession = (_Str_2470 as MannequinWidgetHandler).container.roomSession;
             var _local_6:ISessionDataManager = (_Str_2470 as MannequinWidgetHandler).container.sessionDataManager;
-            var _local_7:Boolean = (((_local_5._Str_2781) || (_local_5.roomControllerLevel >= RoomControllerLevel.GUEST)) || (_local_6._Str_2799));
+            var _local_7:Boolean = (((_local_5.isRoomController) || (_local_5.roomControllerLevel >= RoomControllerLevel.GUEST)) || (_local_6._Str_2799));
             var _local_8:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_9:IAvatarFigureContainer = _local_8._Str_718(_arg_2);
             this._mannequinClubLevel = _local_8._Str_932(_local_9, this._mannequinGender, _Str_9402);
@@ -154,7 +154,7 @@
                     this._Str_2471(OUTFIT_NAME_SET);
                     _local_3 = _local_6._Str_718(this._mannequinFigure);
                     this._Str_17455(_local_3);
-                    _local_2 = this.createAvatarImage(_local_3._Str_1008());
+                    _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     this._Str_6655(_local_7);
                     this._Str_23723();
@@ -164,28 +164,28 @@
                     this._Str_2471(BACK_REGION);
                     _local_3 = _local_6._Str_718(_local_5);
                     this._Str_17455(_local_3);
-                    _local_2 = this.createAvatarImage(_local_3._Str_1008());
+                    _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(_local_6._Str_932(_local_3, _local_4.gender, _Str_9402));
                     this._Str_6655(_local_7);
                     break;
                 case _Str_10942:
                     this._Str_2471(WEAR_BUTTON);
                     _local_3 = this._Str_19759(_local_5, this._mannequinFigure);
-                    _local_2 = this.createAvatarImage(_local_3._Str_1008());
+                    _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     this._Str_6655(_local_7);
                     break;
                 case _Str_8565:
                     this._Str_2471(GET_CLUB_BUTTON);
                     _local_3 = this._Str_19759(_local_5, this._mannequinFigure);
-                    _local_2 = this.createAvatarImage(_local_3._Str_1008());
+                    _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     break;
                 case _Str_9053:
                     this._Str_2471(OK_BUTTON);
                     _local_3 = _local_6._Str_718(this._mannequinFigure);
                     this._Str_17455(_local_3);
-                    _local_2 = this.createAvatarImage(_local_3._Str_1008());
+                    _local_2 = this.createAvatarImage(_local_3.getFigureString());
                     this._Str_11068(this._mannequinClubLevel);
                     break;
                 default:

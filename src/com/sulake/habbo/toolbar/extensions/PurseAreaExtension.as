@@ -93,14 +93,14 @@
             var _local_2:IWindow = this._window.findChildByName("ducket_count");
             if (_local_2 != null)
             {
-                _local_2.caption = balanceToString(this._catalog.getPurse()._Str_5590(ActivityPointTypeEnum._Str_4627));
+                _local_2.caption = balanceToString(this._catalog.getPurse().getActivityPointsForType(ActivityPointTypeEnum.DUCKET));
             }
             if (this._toolbar.getBoolean("diamonds.enabled"))
             {
                 _local_3 = this._window.findChildByName("diamond_count");
                 if (_local_3)
                 {
-                    _local_3.caption = balanceToString(this._catalog.getPurse()._Str_5590(ActivityPointTypeEnum._Str_7340));
+                    _local_3.caption = balanceToString(this._catalog.getPurse().getActivityPointsForType(ActivityPointTypeEnum.LOYALTY));
                 }
             }
             else
@@ -131,10 +131,10 @@
             var _local_3:String;
             switch (k.activityPointType)
             {
-                case ActivityPointTypeEnum._Str_4627:
+                case ActivityPointTypeEnum.DUCKET:
                     _local_2 = this._window.findChildByName("ducket_count");
                     break;
-                case ActivityPointTypeEnum._Str_7340:
+                case ActivityPointTypeEnum.LOYALTY:
                     _local_2 = this._window.findChildByName("diamond_count");
                     break;
             }
@@ -144,7 +144,7 @@
             }
         }
 
-        public function _Str_3705(k:String):Rectangle
+        public function getIconLocation(k:String):Rectangle
         {
             var _local_2:Rectangle;
             var _local_3:IWindow = this._window.findChildByName(k);

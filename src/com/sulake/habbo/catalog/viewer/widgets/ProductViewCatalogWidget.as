@@ -96,7 +96,7 @@
                 while (_local_3 < 2)
                 {
                     _local_4 = k.offer.productContainer.products[_local_3];
-                    if (((_local_4._Str_2588 == ProductTypeEnum.EFFECT) && (_local_4._Str_2941 == Product._Str_10915)))
+                    if (((_local_4.productType == ProductTypeEnum.EFFECT) && (_local_4.productClassId == Product._Str_10915)))
                     {
                         _local_2 = true;
                     }
@@ -158,9 +158,9 @@
                 if (((!(this._Str_3605 == null)) && (!(_local_3 == null))))
                 {
                     this._Str_3864.procedure = this._Str_25549;
-                    _local_3._Str_9081 = false;
+                    _local_3.disableUpdate = false;
                     _local_3.reset(false);
-                    _local_4 = _local_3._Str_3478(this._Str_3605.width, this._Str_3605.height);
+                    _local_4 = _local_3.getRoomCanvas(this._Str_3605.width, this._Str_3605.height);
                     if (_local_4 != null)
                     {
                         this._Str_3605.setDisplayObject(_local_4);
@@ -344,7 +344,7 @@
                         _local_7 = _local_3.product;
                         if (((!(this._Str_3864 == null)) && (this._Str_18902)))
                         {
-                            if ((((_local_7._Str_2588 == ProductTypeEnum.FLOOR) || (_local_7._Str_2588 == ProductTypeEnum.WALL)) || (_local_7._Str_2588 == ProductTypeEnum.EFFECT)))
+                            if ((((_local_7.productType == ProductTypeEnum.FLOOR) || (_local_7.productType == ProductTypeEnum.WALL)) || (_local_7.productType == ProductTypeEnum.EFFECT)))
                             {
                                 this._Str_3864.visible = true;
                             }
@@ -356,20 +356,20 @@
                         if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))
                         {
                             _local_6._Str_16605.y = ((_local_7.isUniqueLimitedItem) ? -15 : 0);
-                            _local_6._Str_9081 = false;
+                            _local_6.disableUpdate = false;
                         }
-                        switch (_local_7._Str_2588)
+                        switch (_local_7.productType)
                         {
                             case ProductTypeEnum.FLOOR:
                                 if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))
                                 {
-                                    if (((_local_7 == null) || (_local_7._Str_2686 == null)))
+                                    if (((_local_7 == null) || (_local_7.furnitureData == null)))
                                     {
                                         break;
                                     }
-                                    if (_local_7._Str_2686.category == FurniCategory._Str_12534)
+                                    if (_local_7.furnitureData.category == FurniCategory._Str_12534)
                                     {
-                                        _local_11 = this._habboCatalog.sessionDataManager._Str_3411(_local_7._Str_2686.id);
+                                        _local_11 = this._habboCatalog.sessionDataManager._Str_3411(_local_7.furnitureData.id);
                                         _local_12 = new Vector.<int>(0);
                                         _local_13 = _local_11.customParams.split(",");
                                         for each (_local_14 in _local_13)
@@ -380,54 +380,54 @@
                                             }
                                         }
                                         _local_2 = (page.viewer.catalog as HabboCatalog).avatarRenderManager.getFigureStringWithFigureIds((page.viewer.catalog as HabboCatalog).sessionDataManager.figure, (page.viewer.catalog as HabboCatalog).sessionDataManager.gender, _local_12);
-                                        _local_6._Str_18705(_local_2, _local_7._Str_2941);
+                                        _local_6.addAvatarIntoRoom(_local_2, _local_7.productClassId);
                                     }
                                     else
                                     {
-                                        _local_6._Str_18681(_local_7._Str_2941, new Vector3d(90, 0, 0), this._Str_17045);
+                                        _local_6.addFurnitureIntoRoom(_local_7.productClassId, new Vector3d(90, 0, 0), this._Str_17045);
                                     }
                                 }
                                 else
                                 {
-                                    _local_8 = page.viewer.roomEngine.getFurnitureImage(_local_7._Str_2941, new Vector3d(90, 0, 0), 64, this, 0, _local_7._Str_2415, -1, -1, this._Str_17045);
+                                    _local_8 = page.viewer.roomEngine.getFurnitureImage(_local_7.productClassId, new Vector3d(90, 0, 0), 64, this, 0, _local_7.extraParam, -1, -1, this._Str_17045);
                                     _local_3.previewCallbackId = _local_8.id;
                                 }
                                 break;
                             case ProductTypeEnum.WALL:
-                                if ((((_local_7._Str_2686.category == _Str_3639) || (_local_7._Str_2686.category == _Str_3683)) || (_local_7._Str_2686.category == _Str_3432)))
+                                if ((((_local_7.furnitureData.category == _Str_3639) || (_local_7.furnitureData.category == _Str_3683)) || (_local_7.furnitureData.category == _Str_3432)))
                                 {
-                                    _local_15 = this._habboCatalog.roomEngine._Str_4323(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
-                                    _local_16 = this._habboCatalog.roomEngine._Str_4323(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
-                                    _local_17 = this._habboCatalog.roomEngine._Str_4323(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
+                                    _local_15 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
+                                    _local_16 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
+                                    _local_17 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
                                     _local_15 = (((_local_15) && (_local_15.length > 0)) ? _local_15 : "101");
                                     _local_16 = (((_local_16) && (_local_16.length > 0)) ? _local_16 : "101");
                                     _local_17 = (((_local_17) && (_local_17.length > 0)) ? _local_17 : "1.1");
-                                    _local_6._Str_11035(true, true);
-                                    _local_18 = ((_local_7._Str_2686.category == _Str_3683) ? _local_7._Str_2415 : _local_16);
-                                    _local_19 = ((_local_7._Str_2686.category == _Str_3639) ? _local_7._Str_2415 : _local_15);
-                                    _local_20 = ((_local_7._Str_2686.category == _Str_3432) ? _local_7._Str_2415 : _local_17);
-                                    _local_6._Str_4377(_local_18, _local_19, _local_20);
-                                    if (_local_7._Str_2686.category == _Str_3432)
+                                    _local_6.updateRoomWallsAndFloorVisibility(true, true);
+                                    _local_18 = ((_local_7.furnitureData.category == _Str_3683) ? _local_7.extraParam : _local_16);
+                                    _local_19 = ((_local_7.furnitureData.category == _Str_3639) ? _local_7.extraParam : _local_15);
+                                    _local_20 = ((_local_7.furnitureData.category == _Str_3432) ? _local_7.extraParam : _local_17);
+                                    _local_6.updateObjectRoom(_local_18, _local_19, _local_20);
+                                    if (_local_7.furnitureData.category == _Str_3432)
                                     {
                                         _local_21 = this._habboCatalog._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
-                                        _local_6._Str_12087(_local_21.id, new Vector3d(90, 0, 0), _local_21.customParams);
+                                        _local_6.addWallItemIntoRoom(_local_21.id, new Vector3d(90, 0, 0), _local_21.customParams);
                                     }
                                 }
                                 else
                                 {
                                     if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))
                                     {
-                                        _local_6._Str_12087(_local_7._Str_2941, new Vector3d(90, 0, 0), _local_7._Str_2415);
+                                        _local_6.addWallItemIntoRoom(_local_7.productClassId, new Vector3d(90, 0, 0), _local_7.extraParam);
                                     }
                                     else
                                     {
-                                        _local_8 = page.viewer.roomEngine.getWallItemImage(_local_7._Str_2941, new Vector3d(90, 0, 0), 64, this, 0, _local_7._Str_2415);
+                                        _local_8 = page.viewer.roomEngine.getWallItemImage(_local_7.productClassId, new Vector3d(90, 0, 0), 64, this, 0, _local_7.extraParam);
                                         _local_3.previewCallbackId = _local_8.id;
                                     }
                                 }
                                 break;
                             case ProductTypeEnum.ROBOT:
-                                _local_10 = this._habboCatalog.avatarRenderManager.createAvatarImage(_local_7._Str_2415, AvatarScaleType.LARGE, null);
+                                _local_10 = this._habboCatalog.avatarRenderManager.createAvatarImage(_local_7.extraParam, AvatarScaleType.LARGE, null);
                                 _local_10.appendAction(AvatarAction.GESTURE, AvatarAction.GESTURE_SMILE);
                                 _local_10.setDirection(AvatarSetType.FULL, 4);
                                 _local_10.setDirection(AvatarSetType.HEAD, 3);
@@ -437,7 +437,7 @@
                                 if (((!(_local_6 == null)) && (!(this._Str_3605 == null))))
                                 {
                                     _local_22 = (page.viewer.catalog as HabboCatalog).sessionDataManager.figure;
-                                    _local_6._Str_18705(_local_22, _local_7._Str_2941);
+                                    _local_6.addAvatarIntoRoom(_local_22, _local_7.productClassId);
                                 }
                                 else
                                 {
@@ -461,7 +461,7 @@
                                             _local_28.setDirection(AvatarSetType.HEAD, 3);
                                             _local_28._Str_913();
                                             _local_28.appendAction(AvatarAction.GESTURE, AvatarAction.GESTURE_SMILE);
-                                            _local_28.appendAction(AvatarAction.EFFECT, _local_7._Str_2941);
+                                            _local_28.appendAction(AvatarAction.EFFECT, _local_7.productClassId);
                                             _local_28._Str_962();
                                             _local_28._Str_953(1);
                                             _local_28._Str_953(1);
@@ -501,7 +501,7 @@
                             case ProductTypeEnum.HABBO_CLUB:
                                 break;
                             default:
-                                Logger.log(("[ProductViewCatalogWidget] Unknown Product Type: " + _local_7._Str_2588));
+                                Logger.log(("[ProductViewCatalogWidget] Unknown Product Type: " + _local_7.productType));
                         }
                         if (_local_8 != null)
                         {
@@ -787,7 +787,7 @@
             var k:RoomPreviewer = (page.viewer.catalog as HabboCatalog)._Str_26451;
             if (k)
             {
-                k._Str_9081 = true;
+                k.disableUpdate = true;
             }
         }
 

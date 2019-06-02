@@ -24,7 +24,7 @@
     import com.sulake.room.object.visualization.IRoomObjectSpriteVisualization;
     import com.sulake.room.renderer.cache.RoomObjectLocationCacheItem;
     import com.sulake.room.renderer.cache.RoomObjectSortableSpriteCacheItem;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.visualization.IRoomObjectSprite;
     import com.sulake.room.object.enum.RoomObjectSpriteType;
     import flash.display.PixelSnapping;
@@ -37,7 +37,7 @@
 
     public class RoomSpriteCanvas implements IRoomRenderingCanvas 
     {
-        private static const _Str_1870:Point = new Point(0, 0);
+        private static const ZERO_POINT:Point = new Point(0, 0);
         private static const _Str_7607:int = 50;
         private static const _Str_18257:int = 50;
         private static const _Str_12906:Number = 60;
@@ -384,7 +384,7 @@
 
         public function _Str_17192(k:String):void
         {
-            this._roomObjectCache._Str_18669(k);
+            this._roomObjectCache.removeObjectCache(k);
         }
 
         public function render(k:int, _arg_2:Boolean=false):void
@@ -445,7 +445,7 @@
                 _local_9 = (this._sortableSpriteList[_local_5] as SortableSprite);
                 if (_local_9 != null)
                 {
-                    this._Str_7421(_local_5, _local_9);
+                    this.updateSprite(_local_5, _local_9);
                 }
                 _local_5++;
             }
@@ -508,7 +508,7 @@
 
         protected function _Str_23739(k:String):RoomObjectCacheItem
         {
-            return this._roomObjectCache._Str_23830(k);
+            return this._roomObjectCache.getObjectCache(k);
         }
 
         private function _Str_24532(k:IRoomObject, _arg_2:String, _arg_3:int, _arg_4:Boolean, _arg_5:int):int
@@ -517,21 +517,21 @@
             var _local_6:IRoomObjectSpriteVisualization = (k.getVisualization() as IRoomObjectSpriteVisualization);
             if (_local_6 == null)
             {
-                this._roomObjectCache._Str_18669(_arg_2);
+                this._roomObjectCache.removeObjectCache(_arg_2);
                 return 0;
             }
             var _local_7:RoomObjectCacheItem = this._Str_23739(_arg_2);
             _local_7._Str_1577 = k.getId();
             var _local_8:RoomObjectLocationCacheItem = _local_7.location;
-            var _local_9:RoomObjectSortableSpriteCacheItem = _local_7._Str_9272;
-            var _local_10:IVector3D = _local_8._Str_22968(k, this._geometry);
+            var _local_9:RoomObjectSortableSpriteCacheItem = _local_7.sprites;
+            var _local_10:IVector3d = _local_8.getScreenLocation(k, this._geometry);
             if (_local_10 == null)
             {
-                this._roomObjectCache._Str_18669(_arg_2);
+                this._roomObjectCache.removeObjectCache(_arg_2);
                 return 0;
             }
             _local_6.update(this._geometry, _arg_3, ((!(_local_9.isEmpty)) || (_arg_4)), ((this._skipObjectUpdate) && (this._runningSlow)));
-            var _local_11:Boolean = _local_8._Str_25332;
+            var _local_11:Boolean = _local_8.locationChanged;
             if (_local_11)
             {
                 _arg_4 = true;
@@ -595,7 +595,7 @@
                 }
                 _local_21++;
             }
-            _local_9._Str_20276(_local_16);
+            _local_9.setSpriteCount(_local_16);
             return _local_16;
         }
 
@@ -686,7 +686,7 @@
             _local_3._Str_4530 = _local_4._Str_4530;
             _local_3.smoothing = false;
             _local_3.pixelSnapping = PixelSnapping.ALWAYS;
-            _local_3.bitmapData = this._Str_9335(_local_4.asset, _local_4.assetName, _local_4.flipH, _local_4.flipV, _local_4.color);
+            _local_3.bitmapData = this.getBitmapData(_local_4.asset, _local_4.assetName, _local_4.flipH, _local_4.flipV, _local_4.color);
             this._Str_21914(_local_3, _local_4);
             _local_3._Str_4023 = _local_4._Str_4023;
             if (((_arg_2 < 0) || (_arg_2 >= this._spriteCount)))
@@ -701,7 +701,7 @@
             this._activeSpriteCount++;
         }
 
-        private function _Str_7421(k:int, _arg_2:SortableSprite):Boolean
+        private function updateSprite(k:int, _arg_2:SortableSprite):Boolean
         {
             var _local_5:Number;
             var _local_6:BitmapData;
@@ -720,7 +720,7 @@
                     {
                         this._display.removeChildAt(k);
                         this._spritePool.push(_local_4);
-                        return this._Str_7421(k, _arg_2);
+                        return this.updateSprite(k, _arg_2);
                     }
                     this._Str_20892(_arg_2, k);
                     return true;
@@ -739,7 +739,7 @@
                     _local_4.blendMode = _local_3.blendMode;
                     _local_4._Str_4530 = _local_3._Str_4530;
                     _local_4.filters = _local_3.filters;
-                    _local_6 = this._Str_9335(_local_3.asset, _local_3.assetName, _local_3.flipH, _local_3.flipV, _local_3.color);
+                    _local_6 = this.getBitmapData(_local_3.asset, _local_3.assetName, _local_3.flipH, _local_3.flipV, _local_3.color);
                     if (_local_4.bitmapData != _local_6)
                     {
                         _local_4.bitmapData = _local_6;
@@ -835,7 +835,7 @@
             return _local_2;
         }
 
-        private function _Str_9335(k:BitmapData, _arg_2:String, _arg_3:Boolean, _arg_4:Boolean, _arg_5:int):BitmapData
+        private function getBitmapData(k:BitmapData, _arg_2:String, _arg_3:Boolean, _arg_4:Boolean, _arg_5:int):BitmapData
         {
             _arg_5 = (_arg_5 & 0xFFFFFF);
             if ((((!(_arg_3)) && (!(_arg_4))) && (_arg_5 == 0xFFFFFF)))
@@ -849,7 +849,7 @@
                 _local_7 = ((((_arg_2 + " ") + _arg_5) + ((_arg_3) ? " FH" : "")) + ((_arg_4) ? " FV" : ""));
                 if (_arg_2.length > 0)
                 {
-                    _local_6 = this._bitmapDataCache._Str_9335(_local_7);
+                    _local_6 = this._bitmapDataCache.getBitmapData(_local_7);
                 }
                 if (_local_6 == null)
                 {
@@ -859,7 +859,7 @@
                         _local_6 = this._Str_14460(_local_6, _arg_2, true, _arg_3, _arg_4);
                         if (_arg_2.length > 0)
                         {
-                            this._bitmapDataCache._Str_9885(_local_7, _local_6);
+                            this._bitmapDataCache.addBitmapData(_local_7, _local_6);
                         }
                         return _local_6;
                     }
@@ -869,7 +869,7 @@
                         _local_6 = this._Str_13506(_local_6, "", _arg_5, true);
                         if (_arg_2.length > 0)
                         {
-                            this._bitmapDataCache._Str_9885(_local_7, _local_6);
+                            this._bitmapDataCache.addBitmapData(_local_7, _local_6);
                         }
                         return _local_6;
                     }
@@ -877,7 +877,7 @@
                     _local_6 = this._Str_14460(_local_6, _arg_2, true, _arg_3, _arg_4);
                     if (_arg_2.length > 0)
                     {
-                        this._bitmapDataCache._Str_9885(_local_7, _local_6);
+                        this._bitmapDataCache.addBitmapData(_local_7, _local_6);
                     }
                 }
             }
@@ -908,7 +908,7 @@
             var finalData:ExtendedBitmapData;
             if (name.length > 0)
             {
-                finalData = this._bitmapDataCache._Str_9335(cacheName);
+                finalData = this._bitmapDataCache.getBitmapData(cacheName);
                 if (!allowCreation)
                 {
                     return finalData;
@@ -938,7 +938,7 @@
                 finalData.draw(data, this._flipHorizontalMatrix);
                 if (name.length > 0)
                 {
-                    this._bitmapDataCache._Str_9885(cacheName, finalData);
+                    this._bitmapDataCache.addBitmapData(cacheName, finalData);
                 }
             }
             return finalData;
@@ -956,7 +956,7 @@
             var finalData:ExtendedBitmapData;
             if (name.length > 0)
             {
-                finalData = this._bitmapDataCache._Str_9335(cacheName);
+                finalData = this._bitmapDataCache.getBitmapData(cacheName);
                 if (!allowCreation)
                 {
                     return finalData;
@@ -973,7 +973,7 @@
                 try
                 {
                     finalData = new ExtendedBitmapData(data.width, data.height, true, 0xFFFFFF);
-                    finalData.copyPixels(data, data.rect, _Str_1870);
+                    finalData.copyPixels(data, data.rect, ZERO_POINT);
                 }
                 catch(e:Error)
                 {
@@ -985,7 +985,7 @@
                 finalData.colorTransform(finalData.rect, this._colorTransform);
                 if (name.length > 0)
                 {
-                    this._bitmapDataCache._Str_9885(cacheName, finalData);
+                    this._bitmapDataCache.addBitmapData(cacheName, finalData);
                 }
             }
             return finalData;

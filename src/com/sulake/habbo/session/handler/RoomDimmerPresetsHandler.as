@@ -18,10 +18,10 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_8039(this._Str_25786));
+            k.addMessageEvent(new _Str_8039(this.onRoomDimmerPresets));
         }
 
-        private function _Str_25786(k:IMessageEvent):void
+        private function onRoomDimmerPresets(k:IMessageEvent):void
         {
             var _local_7:_Str_5478;
             var _local_2:_Str_8039 = (k as _Str_8039);
@@ -40,10 +40,10 @@
             var _local_6:int;
             while (_local_6 < _local_3._Str_10888)
             {
-                _local_7 = _local_3._Str_14989(_local_6);
+                _local_7 = _local_3.getPreset(_local_6);
                 if (_local_7 != null)
                 {
-                    _local_5._Str_17287(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
+                    _local_5.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
                 }
                 _local_6++;
             }

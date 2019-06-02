@@ -12,7 +12,7 @@
             this._itemData = k;
         }
 
-        public function get _Str_18505():String
+        public function get itemData():String
         {
             return this._itemData;
         }

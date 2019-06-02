@@ -6,7 +6,7 @@
     public class _Str_6731 implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _Str_4384:int = 0;
+        private var _effectType:int = 0;
 
 
         public function get userId():int
@@ -16,7 +16,7 @@
 
         public function get _Str_8263():int
         {
-            return this._Str_4384;
+            return this._effectType;
         }
 
         public function flush():Boolean
@@ -32,7 +32,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._Str_4384 = k.readInteger();
+            this._effectType = k.readInteger();
             return true;
         }
     }

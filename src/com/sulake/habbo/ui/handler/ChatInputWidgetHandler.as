@@ -136,7 +136,7 @@
                                 }
                                 if (((_local_12.charAt(0) == ":") && (_local_13 == "x")))
                                 {
-                                    _local_14 = this._container.roomEngine._Str_13222();
+                                    _local_14 = this._container.roomEngine.getSelectedAvatarId();
                                     if (_local_14 > -1)
                                     {
                                         _local_15 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_14);
@@ -153,18 +153,18 @@
                                     case ";d":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_7336._Str_6677);
+                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.LAUGH.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "laugh");
                                         }
                                         break;
                                     case "o/":
                                     case "_o/":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_6268._Str_6677);
+                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.WAVE.ordinal);
                                         return null;
                                     case ":kiss":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_5579._Str_6677);
+                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.BLOW.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "blow");
                                             return null;
                                         }
@@ -172,17 +172,17 @@
                                     case ":jump":
                                         if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
                                         {
-                                            this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_16682._Str_6677);
+                                            this._container.roomSession._Str_5941(AvatarExpressionEnum.JUMP.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "jump");
                                             return null;
                                         }
                                         break;
                                     case ":idle":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_6989._Str_6677);
+                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.IDLE.ordinal);
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "idle");
                                         return null;
                                     case "_b":
-                                        this._container.roomSession._Str_5941(AvatarExpressionEnum._Str_6325._Str_6677);
+                                        this._container.roomSession._Str_5941(AvatarExpressionEnum.RESPECT.ordinal);
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "respect");
                                         return null;
                                     case ":sign":
@@ -276,7 +276,7 @@
                                     case ":bcfloor":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.ROOM_OWNER)
                                         {
-                                            this._container.windowManager._Str_18925();
+                                            this._container.windowManager.displayFloorPlanEditor();
                                         }
                                         return null;
                                     case ":lang":
@@ -376,12 +376,12 @@
                                         if (this._mouseToggle)
                                         {
                                             Mouse.hide();
-                                            this._container.roomEngine._Str_16048(this._container.roomEngine.activeRoomId, 0);
+                                            this._container.roomEngine.setTileCursorState(this._container.roomEngine.activeRoomId, 0);
                                         }
                                         else
                                         {
                                             Mouse.show();
-                                            this._container.roomEngine._Str_16048(this._container.roomEngine.activeRoomId, 1);
+                                            this._container.roomEngine.setTileCursorState(this._container.roomEngine.activeRoomId, 1);
                                         }
                                         this._container.roomEngine._Str_21042(this._container.roomEngine.activeRoomId, (!(this._mouseToggle)));
                                         this._mouseToggle = (!(this._mouseToggle));
@@ -409,15 +409,15 @@
                                     }
                                     _local_11 = this._container.freeFlowChat._Str_6984;
                                 }
-                                switch (_local_7._Str_3214)
+                                switch (_local_7.chatType)
                                 {
-                                    case RoomWidgetChatMessage._Str_4014:
+                                    case RoomWidgetChatMessage.CHAT_TYPE_SPEAK:
                                         this._container.roomSession._Str_17917(_local_8, _local_11);
                                         break;
-                                    case RoomWidgetChatMessage._Str_4264:
+                                    case RoomWidgetChatMessage.CHAT_TYPE_SHOUT:
                                         this._container.roomSession._Str_21231(_local_8, _local_11);
                                         break;
-                                    case RoomWidgetChatMessage._Str_4349:
+                                    case RoomWidgetChatMessage.CHAT_TYPE_WHISPER:
                                         this._container.roomSession._Str_19359(_local_7._Str_23716, _local_8, _local_11);
                                         break;
                                 }
@@ -429,7 +429,7 @@
                     _local_6 = (k as RoomWidgetChatSelectAvatarMessage);
                     if (_local_6 != null)
                     {
-                        this._container.roomEngine._Str_6973(_local_6.roomId, _local_6._Str_1577);
+                        this._container.roomEngine.selectAvatar(_local_6.roomId, _local_6._Str_1577);
                         _local_24 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_6._Str_1577);
                         if (_local_24 != null)
                         {

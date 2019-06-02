@@ -113,10 +113,10 @@
 
         public function _Str_15677(k:int, _arg_2:String):void
         {
-            var _local_3:ISelectedRoomObjectData = (this._roomEngine as IRoomEngineServices)._Str_13961(this.roomId);
+            var _local_3:ISelectedRoomObjectData = (this._roomEngine as IRoomEngineServices).getPlacedObjectData(this.roomId);
             if (((_local_3) && (_local_3.id == -(k))))
             {
-                (this._roomEngine as IRoomEngineServices)._Str_18960(this.roomId, null);
+                (this._roomEngine as IRoomEngineServices).setPlacedObjectData(this.roomId, null);
                 return;
             }
             this._userDefinedRoomEventsCtrl._Str_15677(k, _arg_2);

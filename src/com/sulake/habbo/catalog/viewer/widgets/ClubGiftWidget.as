@@ -132,7 +132,7 @@
             var _local_5:IWindow = window.findChildByName("past_club_days");
             if (_local_5)
             {
-                _local_7 = (this._controller.purse._Str_6288 + this._controller.purse._Str_4605);
+                _local_7 = (this._controller.purse.pastClubDays + this._controller.purse.pastVipDays);
                 _local_2 = ((_local_7 >= this._Str_6060) ? "catalog.club_gift.past_club.long" : "catalog.club_gift.past_club");
                 _local_3 = (_local_7 % this._Str_6060);
                 _local_4 = (_local_7 / this._Str_6060);
@@ -143,9 +143,9 @@
             var _local_6:IWindow = window.findChildByName("past_vip_days");
             if (_local_6)
             {
-                _local_2 = ((this._controller.purse._Str_4605 >= this._Str_6060) ? "catalog.club_gift.past_vip.long" : "catalog.club_gift.past_vip");
-                _local_3 = (this._controller.purse._Str_4605 % this._Str_6060);
-                _local_4 = (this._controller.purse._Str_4605 / this._Str_6060);
+                _local_2 = ((this._controller.purse.pastVipDays >= this._Str_6060) ? "catalog.club_gift.past_vip.long" : "catalog.club_gift.past_vip");
+                _local_3 = (this._controller.purse.pastVipDays % this._Str_6060);
+                _local_4 = (this._controller.purse.pastVipDays / this._Str_6060);
                 this._controller.localization.registerParameter(_local_2, "days", _local_3.toString());
                 this._controller.localization.registerParameter(_local_2, "months", _local_4.toString());
                 _local_6.caption = this._controller.localization.getLocalization(_local_2);
@@ -188,18 +188,18 @@
             {
                 return;
             }
-            _local_4._Str_2724();
+            _local_4.destroyListItems();
             for each (_local_6 in _local_2)
             {
                 _local_7 = new Vector.<IProduct>(0);
                 _local_8 = this._controller.catalog.getProductData(_local_6.localizationId);
                 for each (_local_9 in _local_6.products)
                 {
-                    _local_11 = this._controller.catalog.getFurnitureData(_local_9._Str_6164, _local_9._Str_2588);
-                    _local_12 = new Product(_local_9._Str_2588, _local_9._Str_6164, _local_9._Str_2415, _local_9.productCount, _local_8, _local_11, this._catalog);
+                    _local_11 = this._controller.catalog.getFurnitureData(_local_9._Str_6164, _local_9.productType);
+                    _local_12 = new Product(_local_9.productType, _local_9._Str_6164, _local_9.extraParam, _local_9.productCount, _local_8, _local_11, this._catalog);
                     _local_7.push(_local_12);
                 }
-                k = new Offer(_local_6.offerId, _local_6.localizationId, _local_6._Str_14263, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6.giftable, _local_6.clubLevel, _local_7, _local_6.bundlePurchaseAllowed, this._catalog);
+                k = new Offer(_local_6.offerId, _local_6.localizationId, _local_6.isRent, _local_6.priceInCredits, _local_6.priceInActivityPoints, _local_6.activityPointType, _local_6.giftable, _local_6.clubLevel, _local_7, _local_6.bundlePurchaseAllowed, this._catalog);
                 k.page = page;
                 _local_10 = (_local_3.getValue(k.offerId) as _Str_5178);
                 _local_5 = this._Str_6850(k, _local_10);
@@ -235,7 +235,7 @@
             {
                 return null;
             }
-            var _local_5:IProductData = _local_4._Str_8554;
+            var _local_5:IProductData = _local_4.productData;
             if (!_local_5)
             {
                 return null;
@@ -244,11 +244,11 @@
             this._Str_2497(_local_3.findChildByName("gift_desc"), _local_5.description);
             if (_arg_2._Str_12313)
             {
-                _local_6 = (_arg_2._Str_21146 - this._controller.purse._Str_4605);
+                _local_6 = (_arg_2._Str_21146 - this._controller.purse.pastVipDays);
             }
             else
             {
-                _local_6 = (_arg_2._Str_21146 - (this._controller.purse._Str_6288 + this._controller.purse._Str_4605));
+                _local_6 = (_arg_2._Str_21146 - (this._controller.purse.pastClubDays + this._controller.purse.pastVipDays));
             }
             if (((!(_arg_2._Str_608)) && (_local_6 > 0)))
             {
@@ -402,13 +402,13 @@
             {
                 return;
             }
-            switch (_local_3._Str_2588)
+            switch (_local_3.productType)
             {
                 case ProductTypeEnum.FLOOR:
-                    _local_5 = page.viewer.roomEngine.getFurnitureImage(_local_3._Str_2941, new Vector3d(90), 64, null, 0, _local_3._Str_2415);
+                    _local_5 = page.viewer.roomEngine.getFurnitureImage(_local_3.productClassId, new Vector3d(90), 64, null, 0, _local_3.extraParam);
                     break;
                 case ProductTypeEnum.WALL:
-                    _local_5 = page.viewer.roomEngine.getWallItemImage(_local_3._Str_2941, new Vector3d(90), 64, null, 0, _local_3._Str_2415);
+                    _local_5 = page.viewer.roomEngine.getWallItemImage(_local_3.productClassId, new Vector3d(90), 64, null, 0, _local_3.extraParam);
                     break;
                 default:
                     return;
@@ -427,7 +427,7 @@
             _local_4.bitmap.draw(_local_5.data);
             _local_5.data.dispose();
             var _local_6:Point = Point.interpolate(_arg_2.topLeft, _arg_2.bottomRight, 0.5);
-            this._preview._Str_10907(_local_6.subtract(new Point((this._preview.width / 2), (this._preview.height / 2))));
+            this._preview.setGlobalPosition(_local_6.subtract(new Point((this._preview.width / 2), (this._preview.height / 2))));
             this._preview.visible = true;
             this._preview.activate();
         }

@@ -275,8 +275,8 @@
                         break;
                     }
                     _local_16 = _local_3[1];
-                    _local_17 = this._widget.handler.roomEngine._Str_10160(_local_5, _local_16);
-                    _local_18 = this._widget.handler.roomEngine._Str_8639(_local_5, _local_2.paletteId);
+                    _local_17 = this._widget.handler.roomEngine.getPetColorsByTag(_local_5, _local_16);
+                    _local_18 = this._widget.handler.roomEngine.getPetColor(_local_5, _local_2.paletteId);
                     for each (_local_20 in _local_17)
                     {
                         if (_local_20.breed == _local_18.breed)
@@ -285,7 +285,7 @@
                             break;
                         }
                     }
-                    _local_4 = this._widget.handler.roomEngine._Str_2641(_local_2.typeId, _local_12, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_2._Str_3542);
+                    _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_12, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_2._Str_3542);
                     break;
                 case FurniCategory._Str_7297:
                     if (_local_3.length < 4)
@@ -300,7 +300,7 @@
                     while (_local_10 < _local_6.length)
                     {
                         _local_13 = _local_6[_local_10];
-                        _local_15 = _local_2._Str_22025(_local_13);
+                        _local_15 = _local_2.getCustomPart(_local_13);
                         _local_12 = _local_8[_local_10];
                         if (_local_15 != null)
                         {
@@ -309,7 +309,7 @@
                         _local_9.push(new PetCustomPart(_local_13, _local_7[_local_10], _local_12));
                         _local_10++;
                     }
-                    _local_4 = this._widget.handler.roomEngine._Str_2641(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
+                    _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
                     break;
                 case FurniCategory._Str_7954:
                     if (_local_3.length < 3)
@@ -323,7 +323,7 @@
                     while (_local_10 < _local_6.length)
                     {
                         _local_13 = _local_6[_local_10];
-                        _local_15 = _local_2._Str_22025(_local_13);
+                        _local_15 = _local_2.getCustomPart(_local_13);
                         _local_14 = -1;
                         if (_local_15 != null)
                         {
@@ -332,7 +332,7 @@
                         _local_9.push(new PetCustomPart(_local_6[_local_10], _local_14, _local_8[_local_10]));
                         _local_10++;
                     }
-                    _local_4 = this._widget.handler.roomEngine._Str_2641(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
+                    _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
                     break;
                 case FurniCategory._Str_6096:
                     if (_local_3.length < 4)
@@ -356,7 +356,7 @@
                             _local_9.push(_local_21);
                         }
                     }
-                    _local_4 = this._widget.handler.roomEngine._Str_2641(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
+                    _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
                     break;
                 case FurniCategory._Str_8726:
                 case FurniCategory._Str_6915:
@@ -383,7 +383,7 @@
                             }
                         }
                     }
-                    _local_4 = this._widget.handler.roomEngine._Str_2641(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_2._Str_3542, _local_19);
+                    _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_2._Str_3542, _local_19);
                     break;
                 default:
                     Logger.log(("[UseProductConfirmationView] Unsupported furniture category: " + k.category));

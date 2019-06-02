@@ -280,7 +280,7 @@
                 return;
             }
             Logger.log(("* Will buy pet as " + extraParameter));
-            this._catalog._Str_5649(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this._Str_2641());
+            this._catalog._Str_5649(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this.getPetImage());
         }
 
         private function _Str_4902(k:String, _arg_2:String):String
@@ -300,7 +300,7 @@
 
         private function _Str_18999(k:CatalogWidgetSellablePetPalettesEvent):void
         {
-            if (k._Str_2716 == this._selectedProductCode)
+            if (k.productCode == this._selectedProductCode)
             {
                 this._availablePalettes = this._Str_11449(k._Str_13588);
                 this._selectedPaletteIndex = 0;
@@ -335,7 +335,7 @@
             while (_local_3 < this._availablePalettes.length)
             {
                 _local_5 = (this._availablePalettes[_local_3] as _Str_3140);
-                _local_2.push(k.getLocalization(this._Str_9430(this._selectedTypeIndex, _local_5._Str_3343), this._Str_9430(this._selectedTypeIndex, _local_5._Str_3343)));
+                _local_2.push(k.getLocalization(this._Str_9430(this._selectedTypeIndex, _local_5.breedId), this._Str_9430(this._selectedTypeIndex, _local_5.breedId)));
                 _local_3++;
             }
             var _local_4:IDropMenuWindow = (window.findChildByName("type_drop_menu") as IDropMenuWindow);
@@ -357,7 +357,7 @@
             this._Str_4497();
         }
 
-        private function _Str_2641():BitmapData
+        private function getPetImage():BitmapData
         {
             var k:Offer = this._offers.getWithIndex(0);
             if (k == null)
@@ -376,7 +376,7 @@
             var _local_3:int = this._selectedTypeIndex;
             var _local_4:_Str_3140 = (this._availablePalettes[this._selectedPaletteIndex] as _Str_3140);
             var _local_5:int = _local_4.paletteId;
-            var _local_6:ImageResult = this._catalog.roomEngine._Str_2641(_local_3, _local_5, _local_2, new Vector3d(90, 0, 0), 64, this);
+            var _local_6:ImageResult = this._catalog.roomEngine.getPetImage(_local_3, _local_5, _local_2, new Vector3d(90, 0, 0), 64, this);
             if (_local_6 != null)
             {
                 this._imageResultId = _local_6.id;
@@ -392,7 +392,7 @@
             {
                 return;
             }
-            var _local_2:BitmapData = this._Str_2641();
+            var _local_2:BitmapData = this.getPetImage();
             if (_local_2 != null)
             {
                 this._Str_3234(_local_2, true);

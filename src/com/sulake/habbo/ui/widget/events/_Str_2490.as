@@ -40,12 +40,12 @@
             return this._Str_2319;
         }
 
-        public function get _Str_2706():int
+        public function get classId():int
         {
             return this._Str_2825;
         }
 
-        public function set _Str_2706(k:int):void
+        public function set classId(k:int):void
         {
             this._Str_2825 = k;
         }
@@ -85,12 +85,12 @@
             return this._Str_19510;
         }
 
-        public function get _Str_5200():int
+        public function get placedItemId():int
         {
             return this._Str_3054;
         }
 
-        public function set _Str_5200(k:int):void
+        public function set placedItemId(k:int):void
         {
             this._Str_3054 = k;
         }
@@ -105,12 +105,12 @@
             this._Str_3224 = k;
         }
 
-        public function get _Str_5057():String
+        public function get placedItemType():String
         {
             return this._Str_3970;
         }
 
-        public function set _Str_5057(k:String):void
+        public function set placedItemType(k:String):void
         {
             this._Str_3970 = k;
         }

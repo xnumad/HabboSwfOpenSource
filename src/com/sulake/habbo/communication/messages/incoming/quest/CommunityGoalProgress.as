@@ -93,7 +93,7 @@
             return this._Str_12198;
         }
 
-        public function get _Str_4327():String
+        public function get goalCode():String
         {
             return this._Str_3087;
         }

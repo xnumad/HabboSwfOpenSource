@@ -9,7 +9,7 @@
             this._isSleeping = k;
         }
 
-        public function get _Str_19643():Boolean
+        public function get isSleeping():Boolean
         {
             return this._isSleeping;
         }

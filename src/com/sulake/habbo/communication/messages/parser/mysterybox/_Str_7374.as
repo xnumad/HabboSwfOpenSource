@@ -27,7 +27,7 @@
             return this._contentType;
         }
 
-        public function get _Str_2706():int
+        public function get classId():int
         {
             return this._Str_2825;
         }

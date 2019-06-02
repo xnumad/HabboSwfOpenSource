@@ -22,12 +22,12 @@
         private static const HEAD:String = "head";
         private static const SADDLE:String = "saddle";
         private static const HAIR:String = "hair";
-        private static const _Str_7490:int = 1;
-        private static const _Str_13277:int = 1000;
+        private static const ADDITIONAL_SPRITE_COUNT:int = 1;
+        private static const EXPERIENCE_BUBBLE_VISIBLE_IN_MS:int = 1000;
         private static const PET_EXPERIENCE_BUBBLE_PNG:String = "pet_experience_bubble_png";
-        private static const _Str_16082:int = 0;
-        private static const _Str_17658:int = 1;
-        private static const _Str_16677:int = 2;
+        private static const POSTURE_ANIMATION_INDEX:int = 0;
+        private static const GESTURE_ANIMATION_INDEX:int = 1;
+        private static const ANIMATION_INDEX_COUNT:int = 2;
 
         private var _posture:String = "";
         private var _gesture:String = "";
@@ -62,7 +62,7 @@
             this._nonHeadSprites = [];
             this._saddleSprites = [];
             super();
-            while (this._animationStates.length < _Str_16677)
+            while (this._animationStates.length < ANIMATION_INDEX_COUNT)
             {
                 this._animationStates.push(new AnimationStateData());
             }
@@ -127,7 +127,7 @@
         override public function update(k:IRoomGeometry, _arg_2:int, _arg_3:Boolean, _arg_4:Boolean):void
         {
             super.update(k, _arg_2, _arg_3, _arg_4);
-            this._Str_23464(_arg_2);
+            this.updateExperienceBubble(_arg_2);
         }
 
         override protected function updateAnimation(k:Number):int
@@ -195,7 +195,7 @@
                         _local_5 = this._animationData._Str_17844(_currentScale, (_local_7 % _local_17));
                     }
                 }
-                this._Str_14314(_local_4, _local_5);
+                this.validateActions(_local_4, _local_5);
                 _local_8 = _local_3.getNumber(RoomObjectVariableEnum.FURNITURE_ALPHA_MULTIPLIER);
                 if (isNaN(_local_8))
                 {
@@ -208,7 +208,7 @@
                 }
                 this._isSleeping = (_local_3.getNumber(RoomObjectVariableEnum.FIGURE_SLEEP) > 0);
                 _local_9 = _local_3.getNumber(RoomObjectVariableEnum.HEAD_DIRECTION);
-                if (((!(isNaN(_local_9))) && (this._animationData._Str_24101)))
+                if (((!(isNaN(_local_9))) && (this._animationData.isAllowedToTurnHead)))
                 {
                     this._headDirection = _local_9;
                 }
@@ -244,7 +244,7 @@
             return false;
         }
 
-        private function _Str_23464(k:int):void
+        private function updateExperienceBubble(k:int):void
         {
             var _local_2:int;
             var _local_3:IRoomObjectSprite;
@@ -254,10 +254,10 @@
                 if (this._experienceTimeStamp > 0)
                 {
                     _local_2 = (k - this._experienceTimeStamp);
-                    if (_local_2 < _Str_13277)
+                    if (_local_2 < EXPERIENCE_BUBBLE_VISIBLE_IN_MS)
                     {
-                        this._experienceData.alpha = int((Math.sin(((_local_2 / _Str_13277) * Math.PI)) * 0xFF));
-                        this._experienceData._Str_21427(this._experience);
+                        this._experienceData.alpha = int((Math.sin(((_local_2 / EXPERIENCE_BUBBLE_VISIBLE_IN_MS) * Math.PI)) * 0xFF));
+                        this._experienceData.setExperience(this._experience);
                     }
                     else
                     {
@@ -284,14 +284,14 @@
             }
         }
 
-        private function _Str_14314(k:String, _arg_2:String):void
+        private function validateActions(k:String, _arg_2:String):void
         {
             var _local_3:int;
             if (k != this._posture)
             {
                 this._posture = k;
                 _local_3 = this._animationData._Str_17648(_currentScale, k);
-                this._Str_16058(_Str_16082, _local_3);
+                this.setAnimationForIndex(POSTURE_ANIMATION_INDEX, _local_3);
             }
             if (this._animationData._Str_18284(_currentScale, k))
             {
@@ -301,7 +301,7 @@
             {
                 this._gesture = _arg_2;
                 _local_3 = this._animationData._Str_18268(_currentScale, _arg_2);
-                this._Str_16058(_Str_17658, _local_3);
+                this.setAnimationForIndex(GESTURE_ANIMATION_INDEX, _local_3);
             }
         }
 
@@ -313,14 +313,14 @@
 
         override protected function getAdditionalSpriteCount():int
         {
-            return super.getAdditionalSpriteCount() + _Str_7490;
+            return super.getAdditionalSpriteCount() + ADDITIONAL_SPRITE_COUNT;
         }
 
         override protected function setAnimation(k:int):void
         {
         }
 
-        private function _Str_22634(k:int):AnimationStateData
+        private function getAnimationStateData(k:int):AnimationStateData
         {
             var _local_2:AnimationStateData;
             if (((k >= 0) && (k < this._animationStates.length)))
@@ -331,9 +331,9 @@
             return null;
         }
 
-        private function _Str_16058(k:int, _arg_2:int):void
+        private function setAnimationForIndex(k:int, _arg_2:int):void
         {
-            var _local_3:AnimationStateData = this._Str_22634(k);
+            var _local_3:AnimationStateData = this.getAnimationStateData(k);
             if (_local_3 != null)
             {
                 if (_Str_17687(_local_3, _arg_2))
@@ -353,7 +353,7 @@
                 _local_2 = this._animationStates[k];
                 if (_local_2 != null)
                 {
-                    _local_2._Str_21182(_Str_24695);
+                    _local_2.setLayerCount(_Str_24695);
                 }
                 k--;
             }
@@ -385,9 +385,9 @@
                         }
                         else
                         {
-                            if (((AnimationData._Str_10381(_local_5.animationId)) || (AnimationData._Str_11758(_local_5.animationId))))
+                            if (((AnimationData.isTransitionFromAnimation(_local_5.animationId)) || (AnimationData.isTransitionToAnimation(_local_5.animationId))))
                             {
-                                this._Str_16058(_local_4, _local_5._Str_5355);
+                                this.setAnimationForIndex(_local_4, _local_5._Str_5355);
                                 _local_2 = false;
                             }
                         }
@@ -526,7 +526,7 @@
         {
             if (this._animationData == null)
             {
-                return LayerData._Str_7951;
+                return LayerData.DEFAULT_Z_OFFSET;
             }
             var _local_4:Number = this._animationData._Str_8329(k, this.getDirection(k, _arg_3), _arg_3);
             return _local_4;
@@ -536,7 +536,7 @@
         {
             var _local_4:int;
             var _local_5:String;
-            if (((this._headOnly) && (this._Str_24824(_arg_2))))
+            if (((this._headOnly) && (this.isNonHeadSprite(_arg_2))))
             {
                 return null;
             }
@@ -545,16 +545,16 @@
                 return null;
             }
             var _local_3:int = spriteCount;
-            if (_arg_2 < (_local_3 - _Str_7490))
+            if (_arg_2 < (_local_3 - ADDITIONAL_SPRITE_COUNT))
             {
                 _local_4 = _Str_3033(k);
-                if (_arg_2 < (_local_3 - (1 + _Str_7490)))
+                if (_arg_2 < (_local_3 - (1 + ADDITIONAL_SPRITE_COUNT)))
                 {
-                    if (_arg_2 >= FurnitureVisualizationData._Str_8875.length)
+                    if (_arg_2 >= FurnitureVisualizationData.LAYER_NAMES.length)
                     {
                         return null;
                     }
-                    _local_5 = FurnitureVisualizationData._Str_8875[_arg_2];
+                    _local_5 = FurnitureVisualizationData.LAYER_NAMES[_arg_2];
                     if (_local_4 == 1)
                     {
                         return (type + "_icon_") + _local_5;
@@ -568,7 +568,7 @@
 
         override protected function getSpriteColor(k:int, _arg_2:int, _arg_3:int):int
         {
-            if (_arg_2 < (spriteCount - _Str_7490))
+            if (_arg_2 < (spriteCount - ADDITIONAL_SPRITE_COUNT))
             {
                 return this._color;
             }
@@ -577,21 +577,21 @@
 
         private function getDirection(k:int, _arg_2:int):int
         {
-            if (this._Str_23973(_arg_2))
+            if (this.isHeadSprite(_arg_2))
             {
                 return this._animationData._Str_15687(k, this._headDirection);
             }
             return direction;
         }
 
-        private function _Str_23973(k:int):Boolean
+        private function isHeadSprite(k:int):Boolean
         {
             var _local_2:Boolean;
             var _local_3:Boolean;
             if (this._headSprites[k] == null)
             {
-                _local_2 = (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == HEAD);
-                _local_3 = (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == HAIR);
+                _local_2 = (this._animationData._Str_6014(_currentScale, DirectionData.USE_DEFAULT_DIRECTION, k) == HEAD);
+                _local_3 = (this._animationData._Str_6014(_currentScale, DirectionData.USE_DEFAULT_DIRECTION, k) == HAIR);
                 if (((_local_2) || (_local_3)))
                 {
                     this._headSprites[k] = true;
@@ -604,14 +604,14 @@
             return this._headSprites[k];
         }
 
-        private function _Str_24824(k:int):Boolean
+        private function isNonHeadSprite(k:int):Boolean
         {
             var _local_2:String;
             if (this._nonHeadSprites[k] == null)
             {
-                if (k < (spriteCount - (1 + _Str_7490)))
+                if (k < (spriteCount - (1 + ADDITIONAL_SPRITE_COUNT)))
                 {
-                    _local_2 = this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k);
+                    _local_2 = this._animationData._Str_6014(_currentScale, DirectionData.USE_DEFAULT_DIRECTION, k);
                     if (((((!(_local_2 == null)) && (_local_2.length > 0)) && (!(_local_2 == HEAD))) && (!(_local_2 == HAIR))))
                     {
                         this._nonHeadSprites[k] = true;
@@ -633,7 +633,7 @@
         {
             if (this._saddleSprites[k] == null)
             {
-                if (this._animationData._Str_6014(_currentScale, DirectionData._Str_9471, k) == SADDLE)
+                if (this._animationData._Str_6014(_currentScale, DirectionData.USE_DEFAULT_DIRECTION, k) == SADDLE)
                 {
                     this._saddleSprites[k] = true;
                 }

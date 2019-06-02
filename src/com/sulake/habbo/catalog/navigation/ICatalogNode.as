@@ -6,15 +6,15 @@
     {
         function dispose():void;
         function get isOpen():Boolean;
-        function get _Str_8132():int;
-        function get _Str_7841():Boolean;
-        function get _Str_19235():Boolean;
+        function get depth():int;
+        function get isBranch():Boolean;
+        function get isLeaf():Boolean;
         function get visible():Boolean;
         function get localization():String;
         function get pageId():int;
         function get pageName():String;
         function get children():Vector.<ICatalogNode>;
-        function get _Str_15019():Vector.<int>;
+        function get offerIds():Vector.<int>;
         function activate():void;
         function deactivate():void;
         function addChild(_arg_1:ICatalogNode):void;

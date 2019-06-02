@@ -168,7 +168,7 @@
             this._taskLockedTemplate = IWindowContainer(_local_2.removeListItem(_local_2.getListItemByName("task_locked")));
             this._overlayTemplate = this._levelTemplate.removeChild(this._levelTemplate.findChildByName("action_overlay"));
             var _local_3:Boolean = this._habboTalent._Str_9968;
-            for each (_local_4 in TalentEnum._Str_23154)
+            for each (_local_4 in TalentEnum.asArray)
             {
                 _local_7 = (this._panoramaList.getListItemByName((BEGIN_ + _local_4)) as IWindowContainer);
                 if (_local_7 != null)
@@ -197,21 +197,21 @@
             this._window.findChildByName("progress_text").caption = (("${talent.track." + this._talentTrack.name) + ".progress.title}");
             if (((_local_3) && (!(this._talentTrack.name == TalentEnum.CITIZENSHIP))))
             {
-                this._talentTrack._Str_25417();
+                this._talentTrack.removeFirstLevel();
             }
             var _local_5:int;
             var _local_6:int;
             while (_local_6 < this._talentTrack.levels.length)
             {
                 this._Str_25404(this._talentTrack.levels[_local_6], _local_6);
-                if (this._talentTrack.levels[_local_6].state == TalentTrack._Str_6707)
+                if (this._talentTrack.levels[_local_6].state == TalentTrack.STATE_ONGOING)
                 {
                     _local_5 = _local_6;
                 }
                 _local_6++;
             }
             this._talentProgressMeter = new TalentProgressMeter(this._habboTalent, this);
-            this._panoramaList._Str_14121(this._panoramaList.getListItemByName("end_padding"), (this._panoramaList.numListItems - 1));
+            this._panoramaList.setListItemIndex(this._panoramaList.getListItemByName("end_padding"), (this._panoramaList.numListItems - 1));
             this._Str_5127();
             this._Str_19216(_local_5);
         }
@@ -266,8 +266,8 @@
                 _local_14 = IItemListWindow(_local_5.findChildByName("reward_list"));
                 switch (k.state)
                 {
-                    case TalentTrack._Str_9390:
-                    case TalentTrack._Str_6707:
+                    case TalentTrack.STATE_ACHIEVED:
+                    case TalentTrack.STATE_ONGOING:
                         _local_9.color = 4537147;
                         _local_10.visible = false;
                         _local_11.caption = ((this._habboTalent.localizationManager.getLocalization("talent.track.common.unlocked.level.prefix") + " ") + this._habboTalent.localizationManager.getLocalization((((("talent.track." + this._talentTrack.name) + ".level.") + k.level) + ".title")));
@@ -275,7 +275,7 @@
                         _local_13.caption = (((("${talent.track." + this._talentTrack.name) + ".level.") + k.level) + ".unlock}");
                         _local_5.findChildByName("locked").visible = false;
                         break;
-                    case TalentTrack._Str_5241:
+                    case TalentTrack.STATE_LOCKED:
                         _local_9.color = 0xBDBDBD;
                         _local_9.findChildByName("unlocked").visible = false;
                         _local_10.caption = (((("${talent.track." + this._talentTrack.name) + ".level.") + k.level) + ".title}");
@@ -285,7 +285,7 @@
                         _local_5.findChildByName("achieved").visible = false;
                         break;
                 }
-                if (k._Str_14278 == 0)
+                if (k.rewardCount == 0)
                 {
                     _local_15 = Math.max(_Str_5573, Math.max(_local_11.width, _local_10.width));
                     _local_12.width = _local_15;
@@ -298,7 +298,7 @@
                 }
                 else
                 {
-                    if (((k._Str_14278 == 1) && (k._Str_7068.length > 0)))
+                    if (((k.rewardCount == 1) && (k._Str_7068.length > 0)))
                     {
                         _local_15 = Math.max((_Str_5573 + (_Str_3555 * 2)), Math.max(_local_11.width, _local_10.width));
                         _local_12.width = _local_15;
@@ -309,7 +309,7 @@
                     }
                     else
                     {
-                        if (k._Str_14278 == 1)
+                        if (k.rewardCount == 1)
                         {
                             _local_9.width = ((_Str_5573 * 2) + (_Str_3555 * 2));
                             _local_12.width = (_Str_5573 * 2);
@@ -356,7 +356,7 @@
                     {
                         _local_8.addListItem(_local_18);
                     }
-                    if (((_local_20.badgeCode == _Str_2821._Str_7735) && (_local_20.state == TalentTrack._Str_6707)))
+                    if (((_local_20.badgeCode == _Str_2821._Str_7735) && (_local_20.state == TalentTrack.STATE_ONGOING)))
                     {
                         _local_19.push(_local_18);
                     }
@@ -369,8 +369,8 @@
                     _local_21 = this._overlayTemplate.clone();
                     _local_22 = new Point();
                     _local_3.addChild(_local_21);
-                    _local_18._Str_20662(_local_22);
-                    _local_3._Str_14451(_local_22);
+                    _local_18.convertPointFromLocalToGlobalSpace(_local_22);
+                    _local_3.convertPointFromGlobalToLocalSpace(_local_22);
                     _local_21.x = (_local_21.x + _local_22.x);
                     _local_21.y = (_local_21.y + _local_22.y);
                     _local_21.visible = true;
@@ -423,12 +423,12 @@
             var _local_3:IWindowContainer;
             switch (k.state)
             {
-                case TalentTrack._Str_9390:
-                case TalentTrack._Str_6707:
+                case TalentTrack.STATE_ACHIEVED:
+                case TalentTrack.STATE_ONGOING:
                     _local_3 = IWindowContainer(this._rewardAchievedTemplate.clone());
                     _Str_2402(IWidgetWindow(_local_3.findChildByName("achieved")).widget).badgeId = _arg_2._Str_10964;
                     break;
-                case TalentTrack._Str_5241:
+                case TalentTrack.STATE_LOCKED:
                     _local_3 = IWindowContainer(this._rewardLockedTemplate.clone());
                     break;
             }
@@ -436,7 +436,7 @@
             var _local_5:IWindow = ITextWindow(_local_3.findChildByName("description"));
             _local_4.caption = (("${perk." + _arg_2._Str_10964) + ".name}");
             _local_5.caption = (("${perk." + _arg_2._Str_10964) + ".description}");
-            if (k._Str_14278 == 1)
+            if (k.rewardCount == 1)
             {
                 _local_3.width = (_Str_5573 * 2);
                 _local_3.findChildByName("title").width = ((_Str_5573 * 2) - _Str_11612);
@@ -460,14 +460,14 @@
             if (_arg_2._Str_13965 == 0)
             {
                 _local_3 = IWindowContainer(this._rewardProductTemplate.clone());
-                IStaticBitmapWrapperWindow(_local_3.findChildByName("product_icon")).assetUri = (("${image.library.url}talent/reward_product_" + _arg_2._Str_2716.toLowerCase().replace(" ", "_")) + ".png");
+                IStaticBitmapWrapperWindow(_local_3.findChildByName("product_icon")).assetUri = (("${image.library.url}talent/reward_product_" + _arg_2.productCode.toLowerCase().replace(" ", "_")) + ".png");
             }
             else
             {
                 _local_3 = IWindowContainer(this._rewardVipTemplate.clone());
                 _local_3.findChildByName("vip_length").caption = this._habboTalent.localizationManager.getLocalizationWithParams("catalog.vip.item.header.days", "", "num_days", _arg_2._Str_13965);
             }
-            if (k.state == TalentTrack._Str_5241)
+            if (k.state == TalentTrack.STATE_LOCKED)
             {
                 _local_3.color = 0x979797;
                 _local_3.blend = 0.6;
@@ -485,11 +485,11 @@
             }
             switch (_arg_2.state)
             {
-                case TalentTrack._Str_9390:
+                case TalentTrack.STATE_ACHIEVED:
                     _local_3 = IWindowContainer(this._taskAchievedTemplate.clone());
                     _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     break;
-                case TalentTrack._Str_6707:
+                case TalentTrack.STATE_ONGOING:
                     _local_3 = IWindowContainer(this._taskOngoingTemplate.clone());
                     _Str_2402(IWidgetWindow(_local_3.findChildByName("badge")).widget).badgeId = _arg_2.badgeCode;
                     _local_3.findChildByName("task_progress_fg").width = _Str_988._Str_1452(_arg_2._Str_7605, 0, _arg_2._Str_15676, 0, 48);
@@ -501,7 +501,7 @@
                         _local_6.name = _arg_2.badgeCode;
                     }
                     break;
-                case TalentTrack._Str_5241:
+                case TalentTrack.STATE_LOCKED:
                     _local_3 = IWindowContainer(this._taskLockedTemplate.clone());
                     break;
             }
@@ -673,8 +673,8 @@
                 if (_local_2 != null)
                 {
                     Logger.log(this._panoramaList.scrollH);
-                    this._panoramaList.scrollH = _Str_988._Str_1452((_local_2.x - 20), 0, (this._panoramaList._Str_2614.width - this._panoramaList._Str_3707.width), 0, 1);
-                    Logger.log(((((((_local_2.x + " ") + this._panoramaList._Str_2614.width) + " ") + _Str_988._Str_1452(_local_2.x, 0, this._panoramaList._Str_2614.width, 0, 1)) + " ") + this._panoramaList.scrollH));
+                    this._panoramaList.scrollH = _Str_988._Str_1452((_local_2.x - 20), 0, (this._panoramaList.visibleRegion.width - this._panoramaList._Str_3707.width), 0, 1);
+                    Logger.log(((((((_local_2.x + " ") + this._panoramaList.visibleRegion.width) + " ") + _Str_988._Str_1452(_local_2.x, 0, this._panoramaList.visibleRegion.width, 0, 1)) + " ") + this._panoramaList.scrollH));
                 }
             }
         }
@@ -823,7 +823,7 @@
                 case _Str_2821.ROOM_ENTRY_1:
                 case _Str_2821.ROOM_ENTRY_2:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent.navigator._Str_6822(null);
+                    this._habboTalent.navigator.openNavigator(null);
                     return;
                 case _Str_2821._Str_14749:
                     this._Str_8556(_arg_2.name);

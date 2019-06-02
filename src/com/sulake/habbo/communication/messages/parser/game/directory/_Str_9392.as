@@ -6,7 +6,7 @@
     public class _Str_9392 implements IMessageParser 
     {
         public static const _Str_20087:int = 1;
-        public static const _Str_9719:int = 2;
+        public static const DUPLICATE_MACHINEID:int = 2;
         public static const _Str_20332:int = 3;
         public static const _Str_20127:int = 4;
         public static const _Str_20854:int = 5;

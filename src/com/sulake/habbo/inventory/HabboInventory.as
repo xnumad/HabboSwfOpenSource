@@ -95,9 +95,9 @@
             this._figureSetIds = new Vector.<int>(0);
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
-            return this._view._Str_2719;
+            return this._view.isVisible;
         }
 
         public function get _Str_23029():Boolean
@@ -337,7 +337,7 @@
 
         public function get _Str_6338():int
         {
-            return this._purse._Str_4458;
+            return this._purse.minutesUntilExpiration;
         }
 
         public function get clubLevel():int
@@ -346,7 +346,7 @@
             {
                 return HabboClubLevelEnum._Str_3159;
             }
-            if (this._purse._Str_3738)
+            if (this._purse.isVIP)
             {
                 return HabboClubLevelEnum._Str_2575;
             }
@@ -368,10 +368,10 @@
             this._purse.clubPeriods = k;
             this._purse.clubDays = _arg_2;
             this._purse._Str_11984 = _arg_3;
-            this._purse._Str_3738 = _arg_4;
+            this._purse.isVIP = _arg_4;
             this._purse._Str_6682 = _arg_5;
             this._purse._Str_8836 = _arg_6;
-            this._purse._Str_4458 = _arg_7;
+            this._purse.minutesUntilExpiration = _arg_7;
             this._purse._Str_6312 = _arg_8;
             if (((_arg_7 > 0) && (_arg_7 < (((60 * 1000) * 60) * 24))))
             {
@@ -541,7 +541,7 @@
 
         public function _Str_13252():void
         {
-            if (((this._view) && (this._view._Str_2719)))
+            if (((this._view) && (this._view.isVisible)))
             {
                 this._view._Str_15430();
             }
@@ -715,7 +715,7 @@
                 {
                     this._initedInventoryCategories.splice(_local_3, 1);
                 }
-                if (((!(this._view == null)) && (this._view._Str_2719)))
+                if (((!(this._view == null)) && (this._view.isVisible)))
                 {
                     if (k != InventoryCategory.RENTABLES)
                     {
@@ -773,11 +773,11 @@
             }
             if (k.category == FurniCategory._Str_5186)
             {
-                _local_3 = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
+                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
             }
             else
             {
-                _local_3 = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k._Str_2794.toString(), k.stuffData);
+                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k._Str_2794.toString(), k.stuffData);
             }
             return _local_3;
         }
@@ -895,7 +895,7 @@
             }
             if (_arg_2 == ProductTypeEnum.WALL)
             {
-                _local_3 = this._sessionDataManager._Str_4531(k);
+                _local_3 = this._sessionDataManager.getWallItemData(k);
             }
             return _local_3;
         }

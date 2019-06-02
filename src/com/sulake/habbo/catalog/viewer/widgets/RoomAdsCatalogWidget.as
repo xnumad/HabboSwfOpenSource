@@ -63,7 +63,7 @@
             var _local_3:int = this._catalog.getInteger("room_ad.duration.minutes", 120);
             var _local_4:int = this._Str_21550(_local_2, _local_3);
             this._catalog.localization.registerParameter("roomad.catalog_text", "duration", String(_local_4));
-            this._catalog.roomEngine.events.addEventListener(RoomEngineEvent.INITIALIZED, this._Str_9875);
+            this._catalog.roomEngine.events.addEventListener(RoomEngineEvent.INITIALIZED, this.onRoomInitialized);
             this._Str_20930();
             return true;
         }
@@ -102,7 +102,7 @@
             this._categoryMenu.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_23736);
         }
 
-        private function _Str_9875(k:RoomEngineEvent):void
+        private function onRoomInitialized(k:RoomEngineEvent):void
         {
             if (k == null)
             {
@@ -366,7 +366,7 @@
                     k.removeMessageEvent(this._messageListener);
                     this._messageListener = null;
                 }
-                this._catalog.roomEngine.events.removeEventListener(RoomEngineEvent.INITIALIZED, this._Str_9875);
+                this._catalog.roomEngine.events.removeEventListener(RoomEngineEvent.INITIALIZED, this.onRoomInitialized);
                 this._catalog = null;
             }
         }

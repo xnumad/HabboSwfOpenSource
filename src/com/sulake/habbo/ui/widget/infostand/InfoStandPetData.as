@@ -65,7 +65,7 @@
             return this._isOwnPet;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._ownerId;
         }
@@ -145,7 +145,7 @@
             return this._petRespect;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._roomIndex;
         }
@@ -195,7 +195,7 @@
             this._nutrition = k.happyness;
             this._nutritionMax = k.maximumHappyness;
             this._petRespect = k.respect;
-            this._roomIndex = k._Str_2707;
+            this._roomIndex = k.roomIndex;
             this._age = k.age;
             this._breedId = k.unknownRarityLevel;
             this._skillTresholds = k._Str_3307;

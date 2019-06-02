@@ -80,7 +80,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView.navigator._Str_15621(this._targetNetworkId, false);
+                this._landingView.navigator.goToRoomNetwork(this._targetNetworkId, false);
             }
         }
     }

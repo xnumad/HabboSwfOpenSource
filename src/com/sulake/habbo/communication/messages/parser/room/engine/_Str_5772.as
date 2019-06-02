@@ -27,7 +27,7 @@
             return this._Str_4037;
         }
 
-        public function get _Str_9690():String
+        public function get customInfo():String
         {
             return this._Str_8430;
         }

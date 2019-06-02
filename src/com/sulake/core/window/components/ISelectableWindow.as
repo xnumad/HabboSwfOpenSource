@@ -8,6 +8,6 @@
         function get _Str_2365():Boolean;
         function set _Str_2365(_arg_1:Boolean):void;
         function select():Boolean;
-        function _Str_2205():Boolean;
+        function unselect():Boolean;
     }
 }

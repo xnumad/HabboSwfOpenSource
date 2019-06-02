@@ -5,7 +5,7 @@
     import com.sulake.habbo.session.events.RoomSessionChatEvent;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.room.object.IRoomObject;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import flash.utils.getTimer;
     import com.sulake.habbo.game.events.GameChatEvent;
 
@@ -18,7 +18,7 @@
         public function ChatEventHandler(k:HabboFreeFlowChat)
         {
             this._component = k;
-            this._component.roomSessionManager.events.addEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this._Str_7971);
+            this._component.roomSessionManager.events.addEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this.onRoomChat);
         }
 
         public function dispose():void
@@ -27,7 +27,7 @@
             {
                 if (this._component)
                 {
-                    this._component.roomSessionManager.events.removeEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this._Str_7971);
+                    this._component.roomSessionManager.events.removeEventListener(RoomSessionChatEvent.RSCE_CHAT_EVENT, this.onRoomChat);
                     this._component = null;
                 }
             }
@@ -38,10 +38,10 @@
             return this._component == null;
         }
 
-        private function _Str_7971(k:RoomSessionChatEvent):void
+        private function onRoomChat(k:RoomSessionChatEvent):void
         {
             var _local_2:IRoomObject = this._component.roomEngine.getRoomObject(k.session.roomId, k.userId, RoomObjectCategoryEnum.CONST_100);
-            var _local_3:IVector3D;
+            var _local_3:IVector3d;
             if (_local_2 != null)
             {
                 _local_3 = _local_2.getLocation();
@@ -55,14 +55,8 @@
             {
                 this._chatFakeMsIncrementor = 0;
             }
-            this._component._Str_15063(new ChatItem(k, (_local_4 + this._chatFakeMsIncrementor), _local_3, k._Str_2415));
+            this._component._Str_15063(new ChatItem(k, (_local_4 + this._chatFakeMsIncrementor), _local_3, k.extraParam));
             this._lastAddedChatMs = _local_4;
-        }
-
-        private function _Str_20532(k:GameChatEvent):void
-        {
-            var _local_2:RoomSessionChatEvent = new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, null, k.userId, k.message);
-            this._component._Str_15063(new ChatItem(_local_2, getTimer(), null, 0, k._Str_19907, k.color, k.figure, k.name));
         }
     }
 }

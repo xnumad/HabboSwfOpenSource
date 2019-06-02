@@ -99,7 +99,7 @@
 
         private function _Str_6826():Boolean
         {
-            var k:Boolean = this._container.roomSession._Str_2781;
+            var k:Boolean = this._container.roomSession.isRoomController;
             var _local_2:* = (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST);
             var _local_3:Boolean = this._container.sessionDataManager._Str_2799;
             return ((k) || (_local_3)) || (_local_2);

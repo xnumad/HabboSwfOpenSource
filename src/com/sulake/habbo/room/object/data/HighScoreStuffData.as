@@ -18,12 +18,12 @@
         private var _entries:Vector.<HighScoreData>;
 
 
-        public function get _Str_21740():int
+        public function get scoreType():int
         {
             return this._scoreType;
         }
 
-        public function get _Str_19876():int
+        public function get clearType():int
         {
             return this._clearType;
         }
@@ -52,7 +52,7 @@
                 _local_6 = 0;
                 while (_local_6 < _local_5)
                 {
-                    _local_4._Str_17581(k.readString());
+                    _local_4.addUser(k.readString());
                     _local_6++;
                 }
                 this._entries.push(_local_4);

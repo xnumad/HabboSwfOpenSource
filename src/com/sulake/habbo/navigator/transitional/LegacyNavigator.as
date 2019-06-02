@@ -296,9 +296,9 @@
             return this._newNavigator.performTagSearch(k);
         }
 
-        public function _Str_12234(k:String):void
+        public function performTextSearch(k:String):void
         {
-            return this._newNavigator._Str_12234(k);
+            return this._newNavigator.performTextSearch(k);
         }
 
         public function performGuildBaseSearch():void
@@ -306,12 +306,12 @@
             return this._newNavigator._Str_3310("groups");
         }
 
-        public function _Str_11462(k:int, _arg_2:int):void
+        public function performCompetitionRoomsSearch(k:int, _arg_2:int):void
         {
             return this._newNavigator._Str_3310("competition");
         }
 
-        public function _Str_8024():void
+        public function showOwnRooms():void
         {
             return this._newNavigator._Str_3310("myworld_view");
         }
@@ -321,39 +321,39 @@
             this._newNavigator.goToRoom(k);
         }
 
-        public function _Str_12571(k:int):Boolean
+        public function hasRoomRightsButIsNotOwner(k:int):Boolean
         {
-            return this._oldNavigator._Str_12571(k);
+            return this._oldNavigator.hasRoomRightsButIsNotOwner(k);
         }
 
-        public function _Str_13089(k:int):void
+        public function removeRoomRights(k:int):void
         {
-            return this._oldNavigator._Str_13089(k);
+            return this._oldNavigator.removeRoomRights(k);
         }
 
-        public function _Str_15621(k:int, _arg_2:Boolean):void
+        public function goToRoomNetwork(k:int, _arg_2:Boolean):void
         {
-            return this._Str_15621(k, _arg_2);
+            return this.goToRoomNetwork(k, _arg_2);
         }
 
-        public function _Str_11727():void
+        public function startRoomCreation():void
         {
             return this._newNavigator.createRoom();
         }
 
-        public function _Str_6822(k:Point=null):void
+        public function openNavigator(k:Point=null):void
         {
             return this._newNavigator.open();
         }
 
-        public function _Str_7852():void
+        public function closeNavigator():void
         {
             return this._newNavigator.close();
         }
 
-        public function get _Str_3374():int
+        public function get homeRoomId():int
         {
-            return this._oldNavigator._Str_3374;
+            return this._oldNavigator.homeRoomId;
         }
 
         public function get enteredGuestRoomData():_Str_2370
@@ -361,15 +361,15 @@
             return this._oldNavigator.enteredGuestRoomData;
         }
 
-        public function _Str_9718(k:Point):void
+        public function showToolbarHover(k:Point):void
         {
         }
 
-        public function _Str_12014(k:Boolean):void
+        public function hideToolbarHover(k:Boolean):void
         {
         }
 
-        public function _Str_13422():void
+        public function toggleRoomInfoVisibility():void
         {
             if (this._roomInfoViewCtrl)
             {
@@ -377,9 +377,9 @@
             }
         }
 
-        public function _Str_14507():Boolean
+        public function canRateRoom():Boolean
         {
-            return this._oldNavigator._Str_14507();
+            return this._oldNavigator.canRateRoom();
         }
 
         public function queueInterface(k:IID, _arg_2:Function=null):IUnknown

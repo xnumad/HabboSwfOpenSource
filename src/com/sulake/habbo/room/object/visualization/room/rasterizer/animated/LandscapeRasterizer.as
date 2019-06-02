@@ -8,11 +8,11 @@
     import com.sulake.habbo.room.object.visualization.room.rasterizer.basic.PlaneVisualizationLayer;
     import flash.display.BitmapData;
     import com.sulake.habbo.room.object.visualization.room.utils.PlaneBitmapData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class LandscapeRasterizer extends PlaneRasterizer 
     {
-        private static const _Str_3536:int = 500;
+        private static const UPDATE_INTERVAL:int = 500;
 
         private var _landscapeWidth:int = 0;
         private var _landscapeHeight:int = 0;
@@ -42,11 +42,11 @@
             var k:XMLList = data.landscapes;
             if (k.length() > 0)
             {
-                this._Str_25478(k[0]);
+                this.parseLandscapes(k[0]);
             }
         }
 
-        private function _Str_25478(k:XML):void
+        private function parseLandscapes(k:XML):void
         {
             var _local_6:XML;
             var _local_7:String;
@@ -107,21 +107,21 @@
                             _local_12 = parseInt(_local_11.@size);
                             _local_13 = _local_11.@horizontalAngle;
                             _local_14 = _local_11.@verticalAngle;
-                            _local_15 = LandscapePlane._Str_5433;
+                            _local_15 = LandscapePlane.HORIZONTAL_ANGLE_DEFAULT;
                             if (_local_13 != "")
                             {
                                 _local_15 = parseFloat(_local_13);
                             }
-                            _local_16 = LandscapePlane._Str_5509;
+                            _local_16 = LandscapePlane.VERTICAL_ANGLE_DEFAULT;
                             if (_local_14 != "")
                             {
                                 _local_16 = parseFloat(_local_14);
                             }
                             _local_17 = (_local_11.visualizationLayer.length() + _local_11.animationLayer.length());
-                            _local_18 = _local_9._Str_20305(_local_12, _local_17, _Str_17204(_local_12, _local_15, _local_16));
+                            _local_18 = _local_9.createPlaneVisualization(_local_12, _local_17, getGeometry(_local_12, _local_15, _local_16));
                             if (_local_18 != null)
                             {
-                                Randomizer._Str_17384(_local_3);
+                                Randomizer.setSeed(_local_3);
                                 _local_19 = 0;
                                 while (_local_19 < _local_11.children().length())
                                 {
@@ -130,20 +130,20 @@
                                     {
                                         _local_21 = _local_20;
                                         _local_22 = null;
-                                        _local_23 = PlaneVisualizationLayer._Str_6914;
+                                        _local_23 = PlaneVisualizationLayer.ALIGN_DEFAULT;
                                         if (XMLValidator.checkRequiredAttributes(_local_21, ["materialId"]))
                                         {
                                             _local_29 = _local_21.@materialId;
-                                            _local_22 = _Str_8547(_local_29);
+                                            _local_22 = material(_local_29);
                                         }
                                         _local_24 = _local_21.@offset;
-                                        _local_25 = PlaneVisualizationLayer._Str_1934;
+                                        _local_25 = PlaneVisualizationLayer.DEFAULT_OFFSET;
                                         if (_local_24.length > 0)
                                         {
                                             _local_25 = parseInt(_local_24);
                                         }
                                         _local_26 = _local_21.@color;
-                                        _local_27 = LandscapePlane._Str_2531;
+                                        _local_27 = LandscapePlane.DEFAULT_COLOR;
                                         if (_local_26.length > 0)
                                         {
                                             _local_27 = parseInt(_local_26);
@@ -151,7 +151,7 @@
                                         _local_28 = _local_21.@align;
                                         if (_local_28 == "bottom")
                                         {
-                                            _local_23 = PlaneVisualizationLayer._Str_3606;
+                                            _local_23 = PlaneVisualizationLayer.ALIGN_BOTTOM;
                                         }
                                         else
                                         {
@@ -160,7 +160,7 @@
                                                 _local_23 = PlaneVisualizationLayer.ALIGN_TOP;
                                             }
                                         }
-                                        _local_18._Str_21464(_local_19, _local_22, _local_27, _local_23, _local_25);
+                                        _local_18.setLayer(_local_19, _local_22, _local_27, _local_23, _local_25);
                                     }
                                     else
                                     {
@@ -181,8 +181,8 @@
                                                         _local_35 = _local_33.@assetId;
                                                         _local_36 = 0;
                                                         _local_37 = 0;
-                                                        _local_36 = this._Str_21504(_local_33.@x, _local_33.@randomX);
-                                                        _local_37 = this._Str_21504(_local_33.@y, _local_33.@randomY);
+                                                        _local_36 = this.getCoordinateValue(_local_33.@x, _local_33.@randomX);
+                                                        _local_37 = this.getCoordinateValue(_local_33.@y, _local_33.@randomY);
                                                         _local_38 = 0;
                                                         _local_39 = 0;
                                                         _local_38 = parseFloat(_local_33.@speedX);
@@ -192,7 +192,7 @@
                                                 }
                                                 _local_32++;
                                             }
-                                            _local_18._Str_23489(_local_19, _local_31, assetCollection);
+                                            _local_18.setAnimationLayer(_local_19, _local_31, assetCollection);
                                         }
                                     }
                                     _local_19++;
@@ -210,7 +210,7 @@
             }
         }
 
-        private function _Str_21504(k:String, _arg_2:String):Number
+        private function getCoordinateValue(k:String, _arg_2:String):Number
         {
             var _local_4:Number;
             var _local_5:Array;
@@ -227,7 +227,7 @@
             if (_arg_2.length > 0)
             {
                 _local_4 = 10000;
-                _local_5 = Randomizer._Str_1612(1, 0, _local_4);
+                _local_5 = Randomizer.getValues(1, 0, _local_4);
                 _local_6 = (_local_5[0] / _local_4);
                 if (_arg_2.charAt((_arg_2.length - 1)) == "%")
                 {
@@ -238,13 +238,13 @@
             return _local_3;
         }
 
-        override public function render(canvas:BitmapData, id:String, width:Number, height:Number, scale:Number, normal:IVector3D, useTexture:Boolean, offsetX:Number=0, offsetY:Number=0, maxX:Number=0, maxY:Number=0, timeSinceStartMs:int=0):PlaneBitmapData
+        override public function render(canvas:BitmapData, id:String, width:Number, height:Number, scale:Number, normal:IVector3d, useTexture:Boolean, offsetX:Number=0, offsetY:Number=0, maxX:Number=0, maxY:Number=0, timeSinceStartMs:int=0):PlaneBitmapData
         {
             var bitmapData:BitmapData;
-            var landscape:LandscapePlane = (_Str_3491(id) as LandscapePlane);
+            var landscape:LandscapePlane = (getPlane(id) as LandscapePlane);
             if (landscape == null)
             {
-                landscape = (_Str_3491(DEFAULT) as LandscapePlane);
+                landscape = (getPlane(DEFAULT) as LandscapePlane);
             }
             if (landscape == null)
             {
@@ -268,9 +268,9 @@
                 }
             }
             var planeBitmapData:PlaneBitmapData;
-            if (((!(landscape.isStatic(scale))) && (_Str_3536 > 0)))
+            if (((!(landscape.isStatic(scale))) && (UPDATE_INTERVAL > 0)))
             {
-                planeBitmapData = new PlaneBitmapData(bitmapData, ((Math.round((timeSinceStartMs / _Str_3536)) * _Str_3536) + _Str_3536));
+                planeBitmapData = new PlaneBitmapData(bitmapData, ((Math.round((timeSinceStartMs / UPDATE_INTERVAL)) * UPDATE_INTERVAL) + UPDATE_INTERVAL));
             }
             else
             {
@@ -279,7 +279,7 @@
             return planeBitmapData;
         }
 
-        override public function getTextureIdentifier(k:Number, _arg_2:IVector3D):String
+        override public function getTextureIdentifier(k:Number, _arg_2:IVector3d):String
         {
             if (_arg_2 != null)
             {

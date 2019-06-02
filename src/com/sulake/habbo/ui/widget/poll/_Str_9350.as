@@ -19,7 +19,7 @@
         private var _window:IFrameWindow;
         private var _state:String = "POLL_OFFER_STATE_UNKNOWN";
         private var _roomPollWidget:RoomPollWidget;
-        private var _Str_576:int = -1;
+        private var _id:int = -1;
 
         public function _Str_9350(k:int, _arg_2:String, _arg_3:String, _arg_4:RoomPollWidget)
         {
@@ -31,7 +31,7 @@
             var _local_11:ITextWindow;
             var _local_12:ITextWindow;
             super();
-            this._Str_576 = k;
+            this._id = k;
             this._roomPollWidget = _arg_4;
             var _local_5:XmlAsset = (this._roomPollWidget.assets.getAssetByName("poll_offer") as XmlAsset);
             if (_local_5 != null)
@@ -67,7 +67,7 @@
                         _local_10 = (this._window.findChildByName("poll_offer_headline_wrapper") as IItemListWindow);
                         if (_local_10)
                         {
-                            this._window.height = (this._window.height + (_local_10._Str_2614.height - _local_10._Str_3707.height));
+                            this._window.height = (this._window.height + (_local_10.visibleRegion.height - _local_10._Str_3707.height));
                         }
                     }
                     _local_12 = (this._window.findChildByName("poll_offer_summary") as ITextWindow);
@@ -77,7 +77,7 @@
                         _local_10 = (this._window.findChildByName("poll_offer_summary_wrapper") as IItemListWindow);
                         if (_local_10)
                         {
-                            this._window.height = (this._window.height + (_local_10._Str_2614.height - _local_10._Str_3707.height));
+                            this._window.height = (this._window.height + (_local_10.visibleRegion.height - _local_10._Str_3707.height));
                         }
                     }
                 }
@@ -120,7 +120,7 @@
                 return;
             }
             this._state = OK;
-            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_START, this._Str_576));
+            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_START, this._id));
         }
 
         private function _Str_26455(k:WindowEvent):void
@@ -130,8 +130,8 @@
                 return;
             }
             this._state = POLL_OFFER_STATE_CANCEL;
-            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_REJECT, this._Str_576));
-            this._roomPollWidget._Str_12823(this._Str_576);
+            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_REJECT, this._id));
+            this._roomPollWidget._Str_12823(this._id);
         }
 
         private function _Str_22751(k:WindowEvent):void
@@ -141,7 +141,7 @@
                 return;
             }
             this._state = POLL_OFFER_STATE_CANCEL;
-            this._roomPollWidget._Str_12823(this._Str_576);
+            this._roomPollWidget._Str_12823(this._id);
         }
 
         private function onCloseHandler(k:WindowEvent):void
@@ -151,8 +151,8 @@
                 return;
             }
             this._state = POLL_OFFER_STATE_CANCEL;
-            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_REJECT, this._Str_576));
-            this._roomPollWidget._Str_12823(this._Str_576);
+            this._roomPollWidget.messageListener.processWidgetMessage(new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_REJECT, this._id));
+            this._roomPollWidget._Str_12823(this._id);
         }
     }
 }

@@ -5,11 +5,11 @@
 
     public class ChatRecordData 
     {
-        public static const _Str_22117:int = 0;
-        public static const _Str_16239:int = 1;
-        public static const _Str_16666:int = 2;
-        public static const _Str_16166:int = 3;
-        public static const _Str_16975:int = 4;
+        public static const TYPE_SIMPLE:int = 0;
+        public static const TYPE_ROOM_CHAT:int = 1;
+        public static const TYPE_IM_SESSION:int = 2;
+        public static const TYPE_DISCUSSION_THREAD:int = 3;
+        public static const TYPE_DISCUSSION_MESSAGE:int = 4;
         public static const _Str_7751:int = 5;
         public static const _Str_17666:int = 6;
 
@@ -56,7 +56,7 @@
             }
         }
 
-        public function get _Str_24276():int
+        public function get recordType():int
         {
             return this._recordType;
         }
@@ -73,7 +73,7 @@
 
         public function get roomId():int
         {
-            return this._Str_14937("roomId");
+            return this.getInt("roomId");
         }
 
         public function get roomName():String
@@ -83,20 +83,20 @@
 
         public function get groupId():int
         {
-            return this._Str_14937("groupId");
+            return this.getInt("groupId");
         }
 
         public function get threadId():int
         {
-            return this._Str_14937("threadId");
+            return this.getInt("threadId");
         }
 
         public function get messageId():int
         {
-            return this._Str_14937("messageId");
+            return this.getInt("messageId");
         }
 
-        private function _Str_14937(k:String):int
+        private function getInt(k:String):int
         {
             var _local_2:* = this._context[k];
             if (_local_2 == null)

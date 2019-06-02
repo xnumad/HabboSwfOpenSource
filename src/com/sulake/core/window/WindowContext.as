@@ -104,8 +104,8 @@
                 _arg_9 = new Rectangle(0, 0, 800, 600);
             }
             this._Str_2867 = new DesktopController(("_CONTEXT_DESKTOP_" + this._name), this, _arg_9);
-            this._Str_2867._Str_2648.maxWidth = _arg_9.width;
-            this._Str_2867._Str_2648.maxHeight = _arg_9.height;
+            this._Str_2867.limits.maxWidth = _arg_9.width;
+            this._Str_2867.limits.maxHeight = _arg_9.height;
             this._Str_2417.addChild(this._Str_2867.getDisplayObject());
             this._Str_2417.doubleClickEnabled = true;
             this._Str_2417.addEventListener(Event.RESIZE, this._Str_21888);
@@ -196,12 +196,12 @@
             }
         }
 
-        public function _Str_24190():Error
+        public function getLastError():Error
         {
             return this._Str_1984;
         }
 
-        public function _Str_24156():int
+        public function getLastErrorCode():int
         {
             return this._Str_16327;
         }
@@ -216,7 +216,7 @@
             }
         }
 
-        public function _Str_25683():void
+        public function flushError():void
         {
             this._Str_1984 = null;
             this._Str_16327 = -1;
@@ -367,8 +367,8 @@
                 }
                 if (((_local_2 >= 10) && (_local_3 >= 10)))
                 {
-                    this._Str_2867._Str_2648.maxWidth = _local_2;
-                    this._Str_2867._Str_2648.maxHeight = _local_3;
+                    this._Str_2867.limits.maxWidth = _local_2;
+                    this._Str_2867.limits.maxHeight = _local_3;
                     this._Str_2867.width = _local_2;
                     this._Str_2867.height = _local_3;
                 }

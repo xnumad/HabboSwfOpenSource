@@ -192,7 +192,7 @@
             k.addEventListener(_Str_8449.RWUE_WAVE, this._Str_21778);
             k.addEventListener(_Str_9658.RWUE_DANCE, this._Str_19233);
             k.addEventListener(_Str_5638.RWUEUE_UPDATE_EFFECTS, this._Str_19429);
-            k.addEventListener(_Str_9531.RWUE_REQUEST_ME_MENU_TOOLBAR_CLICKED, this._Str_7041);
+            k.addEventListener(_Str_9531.RWUE_REQUEST_ME_MENU_TOOLBAR_CLICKED, this.onToolbarClicked);
             k.addEventListener(_Str_6051.RWUE_AVATAR_EDITOR_CLOSED, this._Str_21383);
             k.addEventListener(_Str_6051.RWUE_HIDE_AVATAR_EDITOR, this._Str_20360);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_21703);
@@ -216,7 +216,7 @@
             k.removeEventListener(_Str_8449.RWUE_WAVE, this._Str_21778);
             k.removeEventListener(_Str_9658.RWUE_DANCE, this._Str_19233);
             k.removeEventListener(_Str_5638.RWUEUE_UPDATE_EFFECTS, this._Str_19429);
-            k.removeEventListener(_Str_9531.RWUE_REQUEST_ME_MENU_TOOLBAR_CLICKED, this._Str_7041);
+            k.removeEventListener(_Str_9531.RWUE_REQUEST_ME_MENU_TOOLBAR_CLICKED, this.onToolbarClicked);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_21703);
             k.removeEventListener(_Str_5907.RWBIUE_HABBO_CLUB, this._Str_20017);
             k.removeEventListener(_Str_6051.RWUE_AVATAR_EDITOR_CLOSED, this._Str_20360);
@@ -277,7 +277,7 @@
             }
         }
 
-        private function _Str_7041(k:_Str_9531):void
+        private function onToolbarClicked(k:_Str_9531):void
         {
             var _local_2:RoomWidgetMeMenuMessage;
             if (this._isActive)

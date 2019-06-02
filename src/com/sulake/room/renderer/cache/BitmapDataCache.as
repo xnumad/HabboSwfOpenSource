@@ -29,7 +29,7 @@
             return this._memUsage;
         }
 
-        public function get _Str_24173():int
+        public function get memLimit():int
         {
             return this._memLimit;
         }
@@ -43,7 +43,7 @@
                 k = this._dataMap.getKeys();
                 for each (_local_2 in k)
                 {
-                    if (!this._Str_3757(_local_2))
+                    if (!this.removeItem(_local_2))
                     {
                         Logger.log((("Failed to remove item " + _local_2) + " from room canvas bitmap cache!"));
                     }
@@ -58,7 +58,7 @@
             var _local_3:Array;
             var k:BitmapDataCacheItem;
             var _local_2:int;
-            if (this._Str_16106 > this._Str_24173)
+            if (this._Str_16106 > this.memLimit)
             {
                 _local_3 = this._dataMap.getValues();
                 _local_3.sortOn("useCount", (Array.DESCENDING | Array.NUMERIC));
@@ -68,7 +68,7 @@
                     k = (_local_3[_local_2] as BitmapDataCacheItem);
                     if (k.useCount <= 1)
                     {
-                        this._Str_3757(k.name);
+                        this.removeItem(k.name);
                     }
                     else
                     {
@@ -76,11 +76,11 @@
                     }
                     _local_2--;
                 }
-                this._Str_24063();
+                this.increaseMemoryLimit();
             }
         }
 
-        private function _Str_24063():void
+        private function increaseMemoryLimit():void
         {
             this._memLimit = (this._memLimit + this._increaseSize);
             if (this._memLimit > this._maxMemory)
@@ -89,7 +89,7 @@
             }
         }
 
-        private function _Str_3757(k:String):Boolean
+        private function removeItem(k:String):Boolean
         {
             if (k == null)
             {
@@ -110,7 +110,7 @@
             return false;
         }
 
-        public function _Str_9335(k:String):ExtendedBitmapData
+        public function getBitmapData(k:String):ExtendedBitmapData
         {
             var _local_2:BitmapDataCacheItem = (this._dataMap.getValue(k) as BitmapDataCacheItem);
             if (_local_2 == null)
@@ -120,7 +120,7 @@
             return _local_2.bitmapData;
         }
 
-        public function _Str_9885(k:String, _arg_2:ExtendedBitmapData):void
+        public function addBitmapData(k:String, _arg_2:ExtendedBitmapData):void
         {
             var _local_4:BitmapData;
             if (_arg_2 == null)

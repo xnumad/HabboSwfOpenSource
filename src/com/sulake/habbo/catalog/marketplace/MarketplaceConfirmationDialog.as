@@ -73,7 +73,7 @@
                 this._window.dispose();
             }
             this._window = (this.createWindow("marketplace_purchase_confirmation") as IFrameWindow);
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             this._window.center();
             var _local_3:ITextWindow = (this._window.findChildByName("header_text") as ITextWindow);
             if (_local_3)
@@ -90,7 +90,7 @@
             _local_3 = (this._window.findChildByName("item_name") as ITextWindow);
             if (_local_3)
             {
-                _local_3.text = ((("$" + "{") + this._marketplace._Str_10102(_arg_2)) + "}");
+                _local_3.text = ((("$" + "{") + this._marketplace.getNameLocalizationKey(_arg_2)) + "}");
             }
             _local_3 = (this._window.findChildByName("item_price") as ITextWindow);
             if (_local_3)
@@ -172,13 +172,13 @@
             }
             if (!this._offer.image)
             {
-                if (this._offer._Str_4120 == 1)
+                if (this._offer.furniType == 1)
                 {
                     k = this._roomEngine.getFurnitureIcon(this._offer.furniId, this);
                 }
                 else
                 {
-                    if (this._offer._Str_4120 == 2)
+                    if (this._offer.furniType == 2)
                     {
                         k = this._roomEngine.getWallItemIcon(this._offer.furniId, this);
                     }
@@ -205,7 +205,7 @@
             }
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k)) || (!(_arg_2))))
             {

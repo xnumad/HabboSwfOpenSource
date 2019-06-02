@@ -49,7 +49,7 @@
             var k:_Str_2740;
             for each (k in this._tabs)
             {
-                k._Str_2520(false);
+                k.setSelected(false);
             }
         }
 
@@ -72,7 +72,7 @@
             if (_local_2 == null)
             {
                 this._tabContentHeight = this._lastTabContentHeight;
-                this._Str_2520(this._Str_19448(k), true);
+                this.setSelected(this._Str_19448(k), true);
             }
             else
             {
@@ -84,16 +84,16 @@
                 }
                 else
                 {
-                    this._Str_2520(this._Str_19448(k), true);
+                    this.setSelected(this._Str_19448(k), true);
                 }
             }
         }
 
-        private function _Str_2520(k:_Str_2740, _arg_2:Boolean):void
+        private function setSelected(k:_Str_2740, _arg_2:Boolean):void
         {
             var _local_3:_Str_2740 = this._Str_14015();
             this._Str_20836();
-            k._Str_2520(_arg_2);
+            k.setSelected(_arg_2);
             if (_arg_2)
             {
                 this._lastSelected = k;

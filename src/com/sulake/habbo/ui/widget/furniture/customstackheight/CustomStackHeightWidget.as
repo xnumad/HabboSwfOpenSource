@@ -16,7 +16,7 @@
     public class CustomStackHeightWidget extends ConversionTrackingWidget 
     {
         private static const _Str_14570:int = 10;
-        private static const _Str_1488:int = 40;
+        private static const MAX_HEIGHT:int = 40;
         private static const _Str_15538:int = 20;
 
         private var _window:IWindowContainer;
@@ -52,7 +52,7 @@
         public function open(k:int, _arg_2:Number):void
         {
             this._Str_2502 = k;
-            _arg_2 = Math.min(_arg_2, _Str_1488);
+            _arg_2 = Math.min(_arg_2, MAX_HEIGHT);
             if (this._window == null)
             {
                 this.createWindow();

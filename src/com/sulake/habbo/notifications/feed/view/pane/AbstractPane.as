@@ -11,7 +11,7 @@
         public static const PANE_VIEW_LEVEL_MODAL:int = 2;
 
         protected var _Str_580:Boolean;
-        protected var _Str_3816:Boolean;
+        protected var _isVisible:Boolean;
         private var _Str_20734:int;
         protected var window:IWindowContainer;
         protected var _Str_2439:NotificationView;
@@ -49,15 +49,15 @@
             return this._Str_20734;
         }
 
-        public function set _Str_2719(k:Boolean):void
+        public function set isVisible(k:Boolean):void
         {
-            this._Str_3816 = k;
-            this.window.visible = this._Str_3816;
+            this._isVisible = k;
+            this.window.visible = this._isVisible;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
-            return this._Str_3816;
+            return this._isVisible;
         }
     }
 }

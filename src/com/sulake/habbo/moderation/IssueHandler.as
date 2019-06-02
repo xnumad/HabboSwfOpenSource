@@ -143,10 +143,10 @@
             }
             var k:IItemListWindow = (this._window.findChildByName("issues_item_list") as IItemListWindow);
             this._issueItemPrototype = (k.getListItemAt(0) as IWindowContainer);
-            k._Str_2659();
+            k.removeListItems();
             var _local_2:IItemListWindow = (this._window.findChildByName("msg_item_list") as IItemListWindow);
             this._messageItemPrototype = (_local_2.getListItemAt(0) as ITextFieldWindow);
-            _local_2._Str_2659();
+            _local_2.removeListItems();
             var _local_3:IWindow = this._window.findChildByTag("close");
             if (_local_3 != null)
             {
@@ -259,7 +259,7 @@
             {
                 return;
             }
-            var _local_5:int = ((((_local_2.height - _local_2._Str_2614.height) + _local_3.height) + _local_4.height) * 0.5);
+            var _local_5:int = ((((_local_2.height - _local_2.visibleRegion.height) + _local_3.height) + _local_4.height) * 0.5);
             _local_2.autoArrangeItems = false;
             _local_3.height = _local_5;
             _local_4.height = _local_5;
@@ -309,7 +309,7 @@
                     _local_3 = 0;
                     while (_local_3 < (_local_5 - _local_6))
                     {
-                        _local_12 = k._Str_2915(0);
+                        _local_12 = k.removeListItemAt(0);
                         _local_12.dispose();
                         _local_3++;
                     }
@@ -383,7 +383,7 @@
                     _local_3 = 0;
                     while (_local_3 < (_local_5 - _local_6))
                     {
-                        _local_9 = k._Str_2915(0);
+                        _local_9 = k.removeListItemAt(0);
                         _local_9.dispose();
                         _local_3++;
                     }

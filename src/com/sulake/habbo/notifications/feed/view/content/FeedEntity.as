@@ -26,7 +26,7 @@
         public static var _Str_11723:IHabboLocalizationManager;
         public static var _Str_2787:IAssetLibrary;
         public static var _Str_11726:NotificationController;
-        private static const _Str_4356:Vector.<FeedEntity> = new Vector.<FeedEntity>();
+        private static const _POOL:Vector.<FeedEntity> = new Vector.<FeedEntity>();
         protected static const CONTENT_LIST:String = "content_list";
         protected static const TITLE:String = "title";
         protected static const MESSAGE:String = "message";
@@ -42,7 +42,7 @@
         protected var _window:IWindowContainer;
         protected var _disposed:Boolean = false;
         protected var _Str_2638:Boolean = false;
-        protected var _Str_576:int = -1;
+        protected var _id:int = -1;
         protected var _Str_15818:int;
         protected var _Str_10954:String;
         protected var _Str_8852:String;
@@ -75,7 +75,7 @@
 
         public static function _Str_2363():FeedEntity
         {
-            var k:FeedEntity = ((_Str_4356.length > 0) ? _Str_4356.pop() : new (FeedEntity)());
+            var k:FeedEntity = ((_POOL.length > 0) ? _POOL.pop() : new (FeedEntity)());
             k._Str_2638 = false;
             return k;
         }
@@ -83,12 +83,12 @@
 
         public function set id(k:int):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():int
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set title(k:String):void
@@ -267,7 +267,7 @@
                     (this._window.findChildByName(ACTION_BUTTON) as IButtonWindow).removeEventListener(WindowMouseEvent.CLICK, this._Str_21462);
                     this._Str_8852 = null;
                     this._Str_2638 = true;
-                    _Str_4356.push(this);
+                    _POOL.push(this);
                 }
             }
         }
@@ -283,7 +283,7 @@
                 }
                 if (this._Str_2638)
                 {
-                    _Str_4356.splice(_Str_4356.indexOf(this), 1);
+                    _POOL.splice(_POOL.indexOf(this), 1);
                     this._Str_2638 = false;
                 }
                 this._disposed = true;

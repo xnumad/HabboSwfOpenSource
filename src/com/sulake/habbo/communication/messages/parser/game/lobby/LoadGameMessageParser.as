@@ -41,12 +41,12 @@
             return this._frameRate;
         }
 
-        public function get _Str_22265():int
+        public function get minMajorVersion():int
         {
             return this._minMajorVersion;
         }
 
-        public function get _Str_22813():int
+        public function get minMinorVersion():int
         {
             return this._minMinorVersion;
         }

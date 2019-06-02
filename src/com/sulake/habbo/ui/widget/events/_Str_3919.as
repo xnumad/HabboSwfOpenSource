@@ -27,22 +27,22 @@
             this._state = k;
         }
 
-        public function get _Str_7440():int
+        public function get ownPetId():int
         {
             return this._Str_6614;
         }
 
-        public function set _Str_7440(k:int):void
+        public function set ownPetId(k:int):void
         {
             this._Str_6614 = k;
         }
 
-        public function get _Str_7663():int
+        public function get otherPetId():int
         {
             return this._Str_6649;
         }
 
-        public function set _Str_7663(k:int):void
+        public function set otherPetId(k:int):void
         {
             this._Str_6649 = k;
         }

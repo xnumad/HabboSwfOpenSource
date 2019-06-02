@@ -10,12 +10,12 @@
         public static const ADVANCED:String = "advanced";
         public static const TOP_LEFT:String = "top-left";
         public static const TOP:String = "top";
-        public static const _Str_3825:String = "top-right";
+        public static const TOP_RIGHT:String = "top-right";
         public static const LEFT:String = "left";
         public static const RIGHT:String = "right";
-        public static const _Str_3658:String = "bottom-left";
+        public static const BOTTOM_LEFT:String = "bottom-left";
         public static const BOTTOM:String = "bottom";
-        public static const _Str_3964:String = "bottom-right";
+        public static const BOTTOM_RIGHT:String = "bottom-right";
 
         public var name:String;
         public var color:Object;
@@ -103,7 +103,7 @@
             return k;
         }
 
-        public function _Str_1451(k:TextStyle):Boolean
+        public function equals(k:TextStyle):Boolean
         {
             return ((((((((((((((this.color == k.color) && (this.fontFamily == k.fontFamily)) && (this.fontSize == k.fontSize)) && (this.fontStyle == k.fontStyle)) && (this.fontWeight == k.fontWeight)) && (this.kerning == k.kerning)) && (this.leading == k.leading)) && (this.letterSpacing == k.letterSpacing)) && (this.textDecoration == k.textDecoration)) && (this.textIndent == k.textIndent)) && (this.antiAliasType == k.antiAliasType)) && (this.sharpness == k.sharpness)) && (this.thickness == k.thickness)) && (this.etchingColor == k.etchingColor)) && (this.etchingPosition == k.etchingPosition);
         }

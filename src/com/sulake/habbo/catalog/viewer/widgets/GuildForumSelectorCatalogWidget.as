@@ -21,7 +21,7 @@
             var _local_4:Boolean = _Str_5363.catalog.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751);
             for each (_local_5 in k)
             {
-                if ((((!(_local_5._Str_21674)) && (!(_local_5._Str_2481 == _local_3))) && (!(_local_4))))
+                if ((((!(_local_5._Str_21674)) && (!(_local_5.ownerId == _local_3))) && (!(_local_4))))
                 {
                 }
                 else

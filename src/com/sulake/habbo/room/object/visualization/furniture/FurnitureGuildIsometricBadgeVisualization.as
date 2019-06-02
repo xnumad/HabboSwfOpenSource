@@ -7,8 +7,8 @@
 
     public class FurnitureGuildIsometricBadgeVisualization extends FurnitureThumbnailVisualization 
     {
-        private static const _Str_7116:String = "COLOR1";
-        private static const _Str_8203:String = "COLOR2";
+        private static const PRIMARY_COLOUR_SPRITE_TAG:String = "COLOR1";
+        private static const SECONDARY_COLOUR_SPRITE_TAG:String = "COLOR2";
         private static const DEFAULT_COLOR_1:int = 0xEEEEEE;
         private static const DEFAULT_COLOR_2:int = 0x4B4B4B;
 
@@ -25,7 +25,7 @@
                 _local_5 = object.getModel().getString(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_ASSET_NAME);
                 if (_local_5 != null)
                 {
-                    _Str_6645(this._Str_21773(_local_5), this._Str_21773((_local_5 + "_32")));
+                    _Str_6645(this.safeGetBitmapAsset(_local_5), this.safeGetBitmapAsset((_local_5 + "_32")));
                 }
             }
             var _local_3:Number = object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_COLOR_1);
@@ -35,7 +35,7 @@
             return _local_2;
         }
 
-        private function _Str_21773(k:String):BitmapData
+        private function safeGetBitmapAsset(k:String):BitmapData
         {
             var _local_2:IGraphicAsset = assetCollection.getAsset(k);
             if (((_local_2 == null) || (_local_2.asset == null)))
@@ -50,9 +50,9 @@
             var _local_4:String = getSpriteTag(k, direction, _arg_2);
             switch (_local_4)
             {
-                case _Str_7116:
+                case PRIMARY_COLOUR_SPRITE_TAG:
                     return this._color1;
-                case _Str_8203:
+                case SECONDARY_COLOUR_SPRITE_TAG:
                     return this._color2;
             }
             return super.getSpriteColor(k, _arg_2, _arg_3);

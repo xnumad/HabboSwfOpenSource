@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class LegacyWallGeometry implements IDisposable 
     {
@@ -118,7 +118,7 @@
             return 0;
         }
 
-        public function getLocation(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String):IVector3D
+        public function getLocation(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:String):IVector3d
         {
             var _local_12:int;
             var _local_6:int;
@@ -196,7 +196,7 @@
             return _local_11;
         }
 
-        public function _Str_24084(k:Number, _arg_2:Number, _arg_3:String):IVector3D
+        public function getLocationOldFormat(k:Number, _arg_2:Number, _arg_3:String):IVector3d
         {
             var _local_4:int;
             var _local_5:int;
@@ -250,7 +250,7 @@
             return this.getLocation(_local_8, _local_9, _local_10, _local_11, _arg_3);
         }
 
-        public function _Str_22875(k:IVector3D, _arg_2:Number):Array
+        public function getOldLocation(k:IVector3d, _arg_2:Number):Array
         {
             if (k == null)
             {
@@ -290,9 +290,9 @@
             return [_local_3, _local_4, _local_5, _local_6, _local_7];
         }
 
-        public function _Str_21860(k:IVector3D, _arg_2:Number):String
+        public function getOldLocationString(k:IVector3d, _arg_2:Number):String
         {
-            var _local_3:Array = this._Str_22875(k, _arg_2);
+            var _local_3:Array = this.getOldLocation(k, _arg_2);
             if (_local_3 == null)
             {
                 return null;
@@ -315,7 +315,7 @@
             return 90;
         }
 
-        public function _Str_24141(k:int, _arg_2:int):Number
+        public function getFloorAltitude(k:int, _arg_2:int):Number
         {
             var _local_3:int;
             _local_3 = this._Str_2754(k, _arg_2);

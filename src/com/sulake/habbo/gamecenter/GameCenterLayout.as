@@ -197,7 +197,7 @@
                 this._playNowUnlimitedButton.addEventListener(WindowMouseEvent.CLICK, this._Str_13877);
                 this._gameListContainer = (this._gameCenterViewWindow.findChildByName("game_icon_list") as IItemListWindow);
                 this._gameListItemBase = (this._gameListContainer.getListItemAt(0) as IWindowContainer);
-                this._gameListContainer._Str_2915(0);
+                this._gameListContainer.removeListItemAt(0);
                 this._gameSelectionIcon = (this._gameListItemBase.findChildByName("selected_icon") as IBitmapWrapperWindow);
                 this._gameListItemBase.removeChild(this._gameSelectionIcon);
                 this._gameListScroller = (this._gameCenterViewWindow.findChildByName("game_icon_list_scroll") as IScrollbarWindow);
@@ -205,7 +205,7 @@
                 this._filterTextField = (this._gameCenterViewWindow.findChildByName("game_center_filter") as ITextFieldWindow);
                 this._filterTextField.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_25099);
                 this._Str_16015();
-                this._Str_2972(this._gameSelectionIcon, this._Str_4913("game_center_icon_selected"));
+                this._Str_2972(this._gameSelectionIcon, this.getBitmap("game_center_icon_selected"));
                 this._gameCenterView.windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
                 this._achievementList = (this._gameCenterViewWindow.findChildByName("achievements_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this._Str_24687));
@@ -247,9 +247,9 @@
             var _local_2:int;
             if (this._gameListContainer)
             {
-                this._gameListContainer._Str_2659();
+                this._gameListContainer.removeListItems();
             }
-            var k:Array = GameConfigurations._Str_16739();
+            var k:Array = GameConfigurations.gameIds();
             for each (_local_2 in k)
             {
                 this._Str_24792(_local_2);
@@ -265,13 +265,13 @@
 
         private function _Str_24792(k:int):void
         {
-            var _local_2:String = GameConfigurations._Str_3077(k);
+            var _local_2:String = GameConfigurations.getNameId(k);
             if ((((!(this._filterTextField == null)) && (!(this._filterTextField.caption == ""))) && (_local_2.toLowerCase().indexOf(this._filterTextField.caption.toLowerCase()) < 0)))
             {
                 return;
             }
             var _local_3:IRegionWindow = (this._gameListItemBase.clone() as IRegionWindow);
-            var _local_4:String = GameConfigurations._Str_9843(k, GameAssetEnum.ICON);
+            var _local_4:String = GameConfigurations.getAssetUrl(k, GameAssetEnum.ICON);
             _local_3.name = _local_2;
             this._gameListContainer.addListItem(_local_3);
             _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_23441);
@@ -320,7 +320,7 @@
             {
                 return;
             }
-            var k:IRectLimiter = this._gameCenterContainer._Str_2648;
+            var k:IRectLimiter = this._gameCenterContainer.limits;
             if (this._gameCenterViewWindow.width > k.maxWidth)
             {
                 this._gameCenterContainer.width = k.maxWidth;
@@ -356,7 +356,7 @@
                 case WindowMouseEvent.CLICK:
                     _local_2 = GameConfigurations.getId(k.target.name);
                     this.selectGame(_local_2, false);
-                    this._gameCenterView._Str_3777(GameConfigurations._Str_3077(_local_2), "showGameCenter.selectGame");
+                    this._gameCenterView._Str_3777(GameConfigurations.getNameId(_local_2), "showGameCenter.selectGame");
                     return;
             }
         }
@@ -391,7 +391,7 @@
 
         private function _Str_6199(k:Boolean):void
         {
-            var _local_2:String = GameConfigurations._Str_3077(this._selectedGame);
+            var _local_2:String = GameConfigurations.getNameId(this._selectedGame);
             this._gameCenterContainer.color = GameConfigurations.getBgColor(this._selectedGame);
             this._themeImage.assetUri = null;
             this._logoImage.assetUri = null;
@@ -399,22 +399,22 @@
             this._storiesEntryContainer.visible = (!(this._gameCenterContainer.visible));
             this._storiesEntryContainer.x = ((this._storiesEntryContainer.desktop.width / 2) - (this._storiesEntryContainer.width / 2));
             this._storiesEntryContainer.y = ((this._storiesEntryContainer.desktop.height / 2) - (this._storiesEntryContainer.height / 2));
-            this._themeImage.assetUri = GameConfigurations._Str_9843(this._selectedGame, GameAssetEnum.THEME);
-            this._logoImage.assetUri = GameConfigurations._Str_9843(this._selectedGame, GameAssetEnum.LOGO);
+            this._themeImage.assetUri = GameConfigurations.getAssetUrl(this._selectedGame, GameAssetEnum.THEME);
+            this._logoImage.assetUri = GameConfigurations.getAssetUrl(this._selectedGame, GameAssetEnum.LOGO);
             this._Str_4343(this._gameCenterViewWindow, "description_title", (("gamecenter." + _local_2) + ".description_title"), true);
             this._Str_4343(this._gameCenterViewWindow, "game_description", (("${gamecenter." + _local_2) + ".description_content}"));
             this._Str_4343(this._gameCenterViewWindow, "achievements_title", "${gamecenter.achievements_title}");
             this._Str_4343(this._gameCenterViewWindow, "leaderboard_title", "${gamecenter.leaderboard_title}");
             this._Str_4343(this._gameCenterViewWindow, "leaderboard_link", "${gamecenter.leaderboard_link}");
             this._Str_4343(this._gameCenterViewWindow, "game_offline_description", "${gamecenter.game_offline}");
-            var _local_3:String = GameConfigurations._Str_22612(this._selectedGame);
+            var _local_3:String = GameConfigurations.getSupportUrl(this._selectedGame);
             var _local_4:String = (((_local_3) && (!(_local_3 == ""))) ? "${gamecenter.support_link_text}" : null);
             this._Str_4343(this._gameCenterViewWindow, "support_link", _local_4);
             this._gameOfflineText.visible = false;
             this._gameCenterView.localization.registerParameter("gamecenter.achievements_title", "game", this._gameCenterView.getLocalization(this._selectedGame));
             this._gameCenterViewWindow.findChildByName("play_now_unlimited_button_text").caption = "${gamecenter.play_now}";
-            this._achievementList._Str_2724();
-            this._leaderboardList._Str_2724();
+            this._achievementList.destroyListItems();
+            this._leaderboardList.destroyListItems();
             this._achievementsContainer.visible = false;
             this._gameCenterView.send(new _Str_12437(this._selectedGame));
             this._leaderboardContainer.visible = false;
@@ -455,7 +455,7 @@
         private function _Str_4343(k:IWindowContainer, _arg_2:String, _arg_3:String=null, _arg_4:Boolean=false):void
         {
             var _local_5:ITextWindow = (k.findChildByName(_arg_2) as ITextWindow);
-            _local_5.textColor = GameConfigurations._Str_24098(this._selectedGame);
+            _local_5.textColor = GameConfigurations.getTextColor(this._selectedGame);
             if (_arg_3)
             {
                 _local_5.caption = ((_arg_4) ? this._gameCenterView.localization.getLocalization(_arg_3, "") : _arg_3);
@@ -472,7 +472,7 @@
             {
                 return;
             }
-            var _local_3:Array = GameConfigurations._Str_16739();
+            var _local_3:Array = GameConfigurations.gameIds();
             if (((!(_local_3)) || (_local_3.length == 0)))
             {
                 return;
@@ -492,7 +492,7 @@
 
         private function _Str_20908(k:int):void
         {
-            var _local_2:IWindowContainer = (this._gameListContainer.getListItemByName(GameConfigurations._Str_3077(k)) as IWindowContainer);
+            var _local_2:IWindowContainer = (this._gameListContainer.getListItemByName(GameConfigurations.getNameId(k)) as IWindowContainer);
             if (_local_2)
             {
                 _local_2.removeChild(this._gameSelectionIcon);
@@ -500,7 +500,7 @@
             }
         }
 
-        private function _Str_4913(k:String):BitmapData
+        private function getBitmap(k:String):BitmapData
         {
             var _local_2:IAsset = this._gameCenterView.assets.getAssetByName(k);
             if (_local_2)
@@ -523,7 +523,7 @@
             var _local_3:UserGameAchievementsMessageParser = (_local_2._Str_2273() as UserGameAchievementsMessageParser);
             if (((this._achievementList) && (_local_3.gameTypeId == this._selectedGame)))
             {
-                this._achievementList._Str_2724();
+                this._achievementList.destroyListItems();
                 if (_local_3.achievements.length > 0)
                 {
                     this._achievementsContainer.visible = true;
@@ -557,7 +557,7 @@
             var _local_3:_Str_4574 = _local_2._Str_2273();
             if (((this._leaderboardList) && (_local_3.gameTypeId == this._selectedGame)))
             {
-                this._leaderboardList._Str_2724();
+                this._leaderboardList.destroyListItems();
                 if (_local_3.leaderboard.length > 0)
                 {
                     _local_6 = _local_3.leaderboard[0];
@@ -615,7 +615,7 @@
             if (((this._luckyLosersList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._gameCenterViewWindow.findChildByName("previous_winner").visible = false;
-                this._luckyLosersList._Str_2724();
+                this._luckyLosersList.destroyListItems();
                 _local_4 = (WindowUtils.createWindow("game_center_lucky_loser_entry_xml") as IWindowContainer);
                 for each (_local_5 in _local_3._Str_24920)
                 {
@@ -715,12 +715,12 @@
 
         private function _Str_21942(k:WindowMouseEvent):void
         {
-            HabboWebTools.openWebPage(GameConfigurations._Str_10694(this._selectedGame)._Str_14248);
+            HabboWebTools.openWebPage(GameConfigurations.getGame(this._selectedGame).supportUrl);
         }
 
         private function _Str_17423(k:WindowMouseEvent):void
         {
-            var _local_2:String = GameConfigurations._Str_3077(this._selectedGame);
+            var _local_2:String = GameConfigurations.getNameId(this._selectedGame);
             var _local_3:String = this._gameCenterView._Str_3479.getProperty(("gamecenter.roomlink." + _local_2));
             if (_local_3)
             {
@@ -763,7 +763,7 @@
             var _local_3:GameStatusMessageParser = _local_2._Str_2273();
             if (_local_3.gameTypeId == this._selectedGame)
             {
-                if (((_local_3._Str_7838) && (!(this._gameCenterView._Str_12938))))
+                if (((_local_3.isOk) && (!(this._gameCenterView._Str_12938))))
                 {
                     this._playNowUnlimitedButton.enable();
                     this._playNowLimitedButton.enable();
@@ -792,9 +792,9 @@
             var _local_3:IWindowContainer;
             var _local_4:IWindowContainer;
             var _local_5:Boolean;
-            for each (_local_2 in GameConfigurations._Str_16739())
+            for each (_local_2 in GameConfigurations.gameIds())
             {
-                _local_3 = (this._gameListContainer.getListItemByName(GameConfigurations._Str_3077(_local_2)) as IWindowContainer);
+                _local_3 = (this._gameListContainer.getListItemByName(GameConfigurations.getNameId(_local_2)) as IWindowContainer);
                 if (_local_3)
                 {
                     _local_4 = (_local_3.findChildByName("unseen_item_container") as IWindowContainer);

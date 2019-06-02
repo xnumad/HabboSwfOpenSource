@@ -36,7 +36,7 @@
         {
             if (!this.disposed)
             {
-                this._habboLandingView.roomEngine.events.removeEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this._Str_13249);
+                this._habboLandingView.roomEngine.events.removeEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this.onRoomEngineInitialized);
                 this._habboLandingView.communicationManager.removeHabboConnectionMessageEvent(new _Str_6906(this._Str_21615));
                 this._habboLandingView = null;
                 this._container = null;
@@ -54,7 +54,7 @@
             this._container.findChildByName("buy_button").procedure = this._Str_25025;
             this._container.visible = false;
             this._habboLandingView.communicationManager.addHabboConnectionMessageEvent(new _Str_6906(this._Str_21615));
-            this._habboLandingView.roomEngine.events.addEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this._Str_13249);
+            this._habboLandingView.roomEngine.events.addEventListener(RoomEngineEvent.ENGINE_INITIALIZED, this.onRoomEngineInitialized);
             this._Str_19551();
         }
 
@@ -73,7 +73,7 @@
             return this._container;
         }
 
-        public function _Str_6674():void
+        public function productDataReady():void
         {
             this.refreshContent();
         }
@@ -87,7 +87,7 @@
         {
         }
 
-        private function _Str_13249(k:RoomEngineEvent):void
+        private function onRoomEngineInitialized(k:RoomEngineEvent):void
         {
             this.refreshContent();
         }
@@ -111,8 +111,8 @@
 
         private function _Str_21615(k:_Str_6906):void
         {
-            this._Str_3032 = k._Str_2273()._Str_2588;
-            this._Str_4261 = k._Str_2273()._Str_2941;
+            this._Str_3032 = k._Str_2273().productType;
+            this._Str_4261 = k._Str_2273().productClassId;
             this._Str_5859 = k._Str_2273()._Str_25710;
             this._Str_7388 = k._Str_2273()._Str_25484;
             this.refreshContent();

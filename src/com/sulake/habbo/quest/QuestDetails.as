@@ -211,7 +211,7 @@
                 {
                     if (this._Str_19961())
                     {
-                        this._questEngine._Str_6822(this._quest);
+                        this._questEngine.openNavigator(this._quest);
                     }
                     else
                     {

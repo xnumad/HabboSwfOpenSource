@@ -9,7 +9,7 @@
         function _Str_3310(_arg_1:String, _arg_2:String="", _arg_3:String=""):void;
         function performTagSearch(_arg_1:String):void;
         function goToRoom(_arg_1:int, _arg_2:String="mainview"):void;
-        function get _Str_992():Boolean;
+        function get isReady():Boolean;
         function get _Str_2559():IHabboNavigator;
         function get _Str_2602():IHabboHelp;
     }

@@ -115,7 +115,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
                 this._SafeStr_4823.addListItem(_local_6);
                 _local_7++;
             }
-            var _local_8:int = Math.max((this._SafeStr_4823._Str_2614.height - this._SafeStr_4823.height), 0);
+            var _local_8:int = Math.max((this._SafeStr_4823.visibleRegion.height - this._SafeStr_4823.height), 0);
             list_container.scale(0, _local_8);
             this._window.scale(0, (_local_4 + _local_8));
             var waiting_text:IWindow = this._window.findChildByName("waiting_text");
@@ -128,7 +128,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 _local_12 = new Point((_local_10.width - this._window.width), (_local_10.height - this._window.height));
                 _local_12.offset(-10, -10);
-                this._window._Str_10907(_local_12);
+                this._window.setGlobalPosition(_local_12);
             }
             this._window.visible = true;
             this._SafeStr_8112 = -1;

@@ -3,9 +3,9 @@
     public class RoomWidgetChatMessage extends RoomWidgetMessage 
     {
         public static const RWCM_MESSAGE_CHAT:String = "RWCM_MESSAGE_CHAT";
-        public static const _Str_4014:int = 0;
-        public static const _Str_4349:int = 1;
-        public static const _Str_4264:int = 2;
+        public static const CHAT_TYPE_SPEAK:int = 0;
+        public static const CHAT_TYPE_WHISPER:int = 1;
+        public static const CHAT_TYPE_SHOUT:int = 2;
 
         private var _chatType:int = 0;
         private var _text:String = "";
@@ -21,7 +21,7 @@
             this._styleId = _arg_5;
         }
 
-        public function get _Str_3214():int
+        public function get chatType():int
         {
             return this._chatType;
         }

@@ -46,7 +46,7 @@
             this._bitmapData = null;
         }
 
-        public function _Str_6729(k:int, _arg_2:int, _arg_3:Number, _arg_4:Number, _arg_5:int):Point
+        public function getPosition(k:int, _arg_2:int, _arg_3:Number, _arg_4:Number, _arg_5:int):Point
         {
             var _local_6:Number = this._x;
             var _local_7:Number = this._y;

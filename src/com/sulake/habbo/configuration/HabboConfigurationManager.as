@@ -23,8 +23,8 @@
 
     public class HabboConfigurationManager extends Component implements IHabboConfigurationManager 
     {
-        private static const _Str_16729:int = 3;
-        private static const _Str_14710:String = "%";
+        private static const INTERPOLATION_DEPTH_LIMIT:int = 3;
+        private static const _environmentId:String = "%";
         private static const FUSELOGIN:String = "fuselogin";
 
         private var _skipExternalConfigurations:Boolean = false;
@@ -42,10 +42,10 @@
             this._skipExternalConfigurations = ((_arg_2 & HabboConfigurationFlags._Str_18739) > 0);
             this._skipLocalizations = ((_arg_2 & HabboConfigurationFlags._Str_18181) > 0);
             this._configurations = new Dictionary();
-            this._Str_23576();
-            this._Str_22408();
-            this._Str_13573();
-            this._Str_25044();
+            this.parseCommonVariables();
+            this.parseLocalizationVariables();
+            this.setDefaults();
+            this.setupDefaultDevelopmentEnvironment();
         }
 
         override protected function get dependencies():Vector.<ComponentDependency>
@@ -60,7 +60,7 @@
         {
         }
 
-        private function _Str_25044():void
+        private function setupDefaultDevelopmentEnvironment():void
         {
             if (this._skipExternalConfigurations)
             {
@@ -72,7 +72,7 @@
                 lock();
                 if (this._skipLocalizations)
                 {
-                    this._Str_20674();
+                    this.initConfigurationDownload();
                 }
             }
         }
@@ -103,7 +103,7 @@
             _local_3 = this.updateUrlProtocol(_local_3);
             if (_arg_2 != null)
             {
-                _local_3 = this._Str_25689(_local_3, _arg_2);
+                _local_3 = this.fillParams(_local_3, _arg_2);
             }
             return _local_3;
         }
@@ -170,7 +170,7 @@
             var _local_2:String = k;
             var _local_3:RegExp = /\${([^}]*)}/g;
             var _local_4:int;
-            while (_local_4 < _Str_16729)
+            while (_local_4 < INTERPOLATION_DEPTH_LIMIT)
             {
                 _local_6 = 0;
                 _local_7 = "";
@@ -202,10 +202,10 @@
 
         private function onLocalizationComplete(k:Event):void
         {
-            this._Str_20674();
+            this.initConfigurationDownload();
         }
 
-        private function _Str_20674():void
+        private function initConfigurationDownload():void
         {
             if (this._initialized)
             {
@@ -217,8 +217,8 @@
             }
             var _local_2:URLRequest = new URLRequest(k);
             var _local_3:AssetLoaderStruct = assets.loadAssetFromFile(k, _local_2, "text/plain");
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_25870);
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_680);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onInitConfiguration);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onConfigurationError);
         }
 
         private function parseConfiguration(k:String):void
@@ -255,7 +255,7 @@
             }
         }
 
-        private function _Str_25689(k:String, _arg_2:Dictionary):String
+        private function fillParams(k:String, _arg_2:Dictionary):String
         {
             var _local_4:int;
             var _local_5:int;
@@ -264,12 +264,12 @@
             var _local_3:int;
             while (_local_3 < 10)
             {
-                _local_4 = k.indexOf(_Str_14710);
+                _local_4 = k.indexOf(_environmentId);
                 if (_local_4 < 0)
                 {
                     break;
                 }
-                _local_5 = k.indexOf(_Str_14710, (_local_4 + 1));
+                _local_5 = k.indexOf(_environmentId, (_local_4 + 1));
                 if (_local_5 < 0)
                 {
                     break;
@@ -282,7 +282,7 @@
             return k;
         }
 
-        private function _Str_680(k:Event=null):void
+        private function onConfigurationError(k:Event=null):void
         {
             var _local_2:AssetLoaderEvent = (k as AssetLoaderEvent);
             var _local_3:int;
@@ -295,7 +295,7 @@
             Core.error((((("Could not load external variables. Failed to load URL " + this.getProperty("external.variables.txt")) + "HTTP status ") + _local_3) + ". Client startup failed!"), true, Core.ERROR_CATEGORY_DOWNLOAD_EXTERNAL_VARIABLES);
         }
 
-        private function _Str_25870(k:Event=null):void
+        private function onInitConfiguration(k:Event=null):void
         {
             var _local_6:int;
             var _local_7:URLRequest;
@@ -334,18 +334,18 @@
                 _local_7 = new URLRequest(_local_5);
                 _local_8 = assets.loadAssetFromFile(_local_5, _local_7, "text/plain");
                 _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23646);
-                _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_25783);
+                _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onInitConfigurationOverride);
             }
             else
             {
                 if (!this._initialized)
                 {
-                    this._Str_17194();
+                    this.configurationsLoaded();
                 }
             }
         }
 
-        private function _Str_17194():void
+        private function configurationsLoaded():void
         {
             if (disposed)
             {
@@ -363,7 +363,7 @@
             events.dispatchEvent(new Event(Event.COMPLETE));
         }
 
-        private function _Str_25783(k:Event):void
+        private function onInitConfigurationOverride(k:Event):void
         {
             if (disposed)
             {
@@ -375,7 +375,7 @@
             {
                 _local_3 = _local_2.status;
             }
-            this._Str_17194();
+            this.configurationsLoaded();
         }
 
         private function _Str_23646(k:Event):void
@@ -399,10 +399,10 @@
             {
                 assets.removeAsset(_local_4).dispose();
             }
-            this._Str_17194();
+            this.configurationsLoaded();
         }
 
-        private function _Str_13573():void
+        private function setDefaults():void
         {
             var _local_2:Array;
             var _local_3:String;
@@ -422,11 +422,11 @@
             }
         }
 
-        private function _Str_25977():void
+        private function parseDevelopmentVariables():void
         {
         }
 
-        private function _Str_23576():void
+        private function parseCommonVariables():void
         {
             var k:TextAsset = (assets.getAssetByName("localization_configuration") as TextAsset);
             this.parseConfiguration(k.content.toString());
@@ -434,7 +434,7 @@
             assets.removeAsset(k);
         }
 
-        private function _Str_22408():void
+        private function parseLocalizationVariables():void
         {
             var _local_4:String;
             var _local_5:String;

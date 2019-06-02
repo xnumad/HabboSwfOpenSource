@@ -32,7 +32,7 @@
             this._users = k;
         }
 
-        public function _Str_17581(k:String):void
+        public function addUser(k:String):void
         {
             this._users.push(k);
         }

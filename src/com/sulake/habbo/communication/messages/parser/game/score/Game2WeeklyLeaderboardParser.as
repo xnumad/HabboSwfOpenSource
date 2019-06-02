@@ -16,22 +16,22 @@
             return this._year;
         }
 
-        public function get _Str_26297():int
+        public function get week():int
         {
             return this._week;
         }
 
-        public function get _Str_25942():int
+        public function get maxOffset():int
         {
             return this._maxOffset;
         }
 
-        public function get _Str_23657():int
+        public function get currentOffset():int
         {
             return this._currentOffset;
         }
 
-        public function get _Str_26115():int
+        public function get minutesUntilReset():int
         {
             return this._minutesUntilReset;
         }

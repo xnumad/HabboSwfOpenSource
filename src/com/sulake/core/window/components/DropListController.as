@@ -20,12 +20,12 @@
             return new DropListIterator(this);
         }
 
-        public function _Str_15679(k:IWindow):IWindow
+        public function addMenuItem(k:IWindow):IWindow
         {
-            return this._Str_17284(k, _Str_3139.length);
+            return this.addMenuItemAt(k, _Str_3139.length);
         }
 
-        public function _Str_17284(k:IWindow, _arg_2:int):IWindow
+        public function addMenuItemAt(k:IWindow, _arg_2:int):IWindow
         {
             if (((k) && (_Str_3139.indexOf(k) == -1)))
             {
@@ -74,12 +74,12 @@
             return null;
         }
 
-        public function _Str_16005(k:int):IWindow
+        public function getMenuItemAt(k:int):IWindow
         {
             return (((!(_Str_3139 == null)) && (k > -1)) && (k < _Str_3139.length)) ? _Str_3139[k] : null;
         }
 
-        public function _Str_18001(k:IWindow):IWindow
+        public function removeMenuItem(k:IWindow):IWindow
         {
             var _local_2:int = _Str_3139.indexOf(k);
             if (_local_2 > -1)
@@ -99,13 +99,13 @@
             return null;
         }
 
-        public function _Str_16478(k:int):IWindow
+        public function removeMenuItemAt(k:int):IWindow
         {
             var _local_2:IWindow = _Str_3139[k];
-            return (_local_2) ? this._Str_18001(_local_2) : null;
+            return (_local_2) ? this.removeMenuItem(_local_2) : null;
         }
 
-        public function _Str_15940(k:IWindow):int
+        public function getMenuItemIndex(k:IWindow):int
         {
             return _Str_3139.indexOf(k);
         }

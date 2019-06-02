@@ -25,7 +25,7 @@
             return true;
         }
 
-        public function get _Str_7241():Boolean
+        public function get onDuty():Boolean
         {
             return this._onDuty;
         }

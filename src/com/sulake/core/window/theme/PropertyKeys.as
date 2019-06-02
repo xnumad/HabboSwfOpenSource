@@ -80,7 +80,7 @@
         public static const THICKNESS:String = "thickness";
         public static const UNDERLINE:String = "underline";
         public static const ANTIALIAS_TYPE_RANGE:Array = [AntiAliasType.NORMAL, AntiAliasType.ADVANCED];
-        public static const ETCHING_POSITION_RANGE:Array = [TextStyle.TOP_LEFT, TextStyle.TOP, TextStyle._Str_3825, TextStyle.LEFT, TextStyle.RIGHT, TextStyle._Str_3658, TextStyle.BOTTOM, TextStyle._Str_3964];
+        public static const ETCHING_POSITION_RANGE:Array = [TextStyle.TOP_LEFT, TextStyle.TOP, TextStyle.TOP_RIGHT, TextStyle.LEFT, TextStyle.RIGHT, TextStyle.BOTTOM_LEFT, TextStyle.BOTTOM, TextStyle.BOTTOM_RIGHT];
         public static const HTML_LINK_TARGET_VALUE:String = LinkTarget.DEFAULT;
         public static const HTML_LINK_TARGET_RANGE:Array = [LinkTarget.DEFAULT, LinkTarget.BLANK, LinkTarget.PARENT, LinkTarget.SELF, LinkTarget.TOP, LinkTarget.INTERNAL];
         public static const PIVOT_POINT_RANGE:Array = PivotPoint.PIVOT_NAMES;

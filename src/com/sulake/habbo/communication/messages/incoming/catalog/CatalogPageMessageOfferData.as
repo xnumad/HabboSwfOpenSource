@@ -52,7 +52,7 @@
             return this._localizationId;
         }
 
-        public function get _Str_14263():Boolean
+        public function get isRent():Boolean
         {
             return this._rent;
         }

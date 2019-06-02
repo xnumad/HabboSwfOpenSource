@@ -23,7 +23,7 @@
             this._bcFloorPlanEditor = k;
         }
 
-        public function _Str_8654(k:_Str_4279):void
+        public function onFloorHeightMap(k:_Str_4279):void
         {
             this._Str_22644(k._Str_2273().text);
         }
@@ -48,7 +48,7 @@
             var _local_2:int;
             this._reservedTiles = [];
             var k:int;
-            while (k < this._Str_7678)
+            while (k < this.floorHeight)
             {
                 this._reservedTiles.push([]);
                 _local_2 = 0;
@@ -194,7 +194,7 @@
             return this._floorWidth;
         }
 
-        public function get _Str_7678():int
+        public function get floorHeight():int
         {
             return this._floorHeight;
         }

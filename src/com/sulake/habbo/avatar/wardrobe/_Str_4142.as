@@ -66,7 +66,7 @@
         private function _Str_13142(k:IWindow):void
         {
             this._view = (k.clone() as IWindowContainer);
-            this._view.procedure = this._Str_3305;
+            this._view.procedure = this.eventHandler;
             this._view.visible = false;
             this._Str_5246 = (this._view.findChildByName("image") as IBitmapWrapperWindow);
         }
@@ -149,7 +149,7 @@
             }
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
@@ -162,7 +162,7 @@
             switch (_arg_2.name)
             {
                 case "set_button":
-                    this._figure = this._habboAvatarEditor.figureData._Str_1008();
+                    this._figure = this._habboAvatarEditor.figureData.getFigureString();
                     this._gender = this._habboAvatarEditor.gender;
                     this._habboAvatarEditor.handler._Str_25374(this._id, this);
                     this._Str_2491();

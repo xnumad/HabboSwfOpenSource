@@ -27,17 +27,17 @@
             return this._objectId;
         }
 
-        public function get _Str_4093():int
+        public function get objectCategory():int
         {
             return this._objectCategory;
         }
 
-        public function get _Str_6349():String
+        public function get imageURL():String
         {
             return this._imageURL;
         }
 
-        public function get _Str_21152():String
+        public function get clickURL():String
         {
             return this._clickURL;
         }

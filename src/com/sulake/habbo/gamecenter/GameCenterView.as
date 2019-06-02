@@ -128,7 +128,7 @@
             {
                 this._layout = new GameCenterLayout(this);
             }
-            if (GameConfigurations._Str_24432(k))
+            if (GameConfigurations.isGameEnabled(k))
             {
                 this.activate(k, _arg_2);
             }
@@ -178,7 +178,7 @@
 
         public function getLocalization(k:int):String
         {
-            var _local_2:String = GameConfigurations._Str_3077(k);
+            var _local_2:String = GameConfigurations.getNameId(k);
             return this.localization.getLocalization((("gamecenter." + _local_2) + ".name"));
         }
 
@@ -215,7 +215,7 @@
                 this._leaderboard = new LeaderboardView(this);
             }
             this._leaderboard.activate(k);
-            this._Str_3777(GameConfigurations._Str_3077(k), "showLeaderboard");
+            this._Str_3777(GameConfigurations.getNameId(k), "showLeaderboard");
         }
 
         public function _Str_26125(k:int):void
@@ -225,7 +225,7 @@
                 this._teaserView = new TeaserView(this);
             }
             this._teaserView.activate(k);
-            this._Str_3777(GameConfigurations._Str_3077(k), "showTeaser");
+            this._Str_3777(GameConfigurations.getNameId(k), "showTeaser");
         }
 
         public function _Str_19498(k:int):void
@@ -291,7 +291,7 @@
         public function _Str_24458(k:int):void
         {
             this._startPlaying = false;
-            var _local_2:String = GameConfigurations._Str_3077(k);
+            var _local_2:String = GameConfigurations.getNameId(k);
             this._gameManager._Str_22538(_local_2, "getVip.clicked.playNow");
         }
 

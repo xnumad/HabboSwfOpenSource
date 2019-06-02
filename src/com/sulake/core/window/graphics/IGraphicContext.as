@@ -22,13 +22,13 @@
         function get _Str_10223():Boolean;
         function set _Str_10223(_arg_1:Boolean):void;
         function _Str_24550(_arg_1:Point):void;
-        function _Str_15011():Rectangle;
+        function getDrawRegion():Rectangle;
         function _Str_15334(_arg_1:Rectangle, _arg_2:Boolean, _arg_3:Rectangle):BitmapData;
         function getDisplayObject():DisplayObject;
         function setDisplayObject(_arg_1:DisplayObject):DisplayObject;
-        function _Str_16259(_arg_1:Point):void;
-        function _Str_12181(_arg_1:Point):void;
-        function _Str_6613():IBitmapDrawable;
+        function getAbsoluteMousePosition(_arg_1:Point):void;
+        function getRelativeMousePosition(_arg_1:Point):void;
+        function fetchDrawBuffer():IBitmapDrawable;
         function _Str_23788(_arg_1:Rectangle):void;
         function get _Str_13711():int;
         function _Str_22175(_arg_1:IGraphicContext):IGraphicContext;

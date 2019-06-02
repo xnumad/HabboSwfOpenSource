@@ -9,7 +9,7 @@
         protected var _Str_671:String = null;
         protected var _Str_6712:String = null;
         protected var _Str_4544:String = null;
-        protected var _Str_1720:int = -1;
+        protected var _width:int = -1;
         protected var _height:int = -1;
         protected var _Str_17493:int = -1;
         protected var _Str_15975:int = -1;
@@ -238,12 +238,12 @@
 
         public function set width(k:int):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:int):void

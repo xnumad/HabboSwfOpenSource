@@ -66,7 +66,7 @@
             this._Str_7406 = new Point(this._Str_2466.x, this._Str_2466.y);
             var k:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._Str_3370 = (k.content as XML);
-            var _local_2:ImageResult = (page.viewer.catalog as HabboCatalog).roomEngine._Str_2641(this._Str_25057, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0);
+            var _local_2:ImageResult = (page.viewer.catalog as HabboCatalog).roomEngine.getPetImage(this._Str_25057, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0);
             if (_local_2 != null)
             {
                 this._Str_3234(_local_2.data, true, new Point(0, 0));
@@ -133,17 +133,17 @@
                 case Offer.PRICING_MODEL_SINGLE:
                 case Offer.PRICING_MODEL_MULTI:
                     _local_9 = _local_2.product;
-                    _local_11 = _local_9._Str_2686;
+                    _local_11 = _local_9.furnitureData;
                     if (((_local_11 == null) || (_local_11.customParams == null)))
                     {
-                        Logger.log(("[PetPreviewCatalogWidget] Unsupported product: " + _local_9._Str_2588));
+                        Logger.log(("[PetPreviewCatalogWidget] Unsupported product: " + _local_9.productType));
                         break;
                     }
                     _local_12 = _local_11.customParams;
                     _local_13 = _local_12.split(" ");
                     if (_local_13.length < 1)
                     {
-                        Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9._Str_2588));
+                        Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
                         break;
                     }
                     _local_14 = int(_local_13[0]);
@@ -153,11 +153,11 @@
                         case FurniCategory._Str_7696:
                             if (_local_13.length < 2)
                             {
-                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9._Str_2588));
+                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
                                 break;
                             }
                             _local_20 = _local_13[1];
-                            _local_21 = _local_8._Str_10160(_local_14, _local_20);
+                            _local_21 = _local_8.getPetColorsByTag(_local_14, _local_20);
                             for each (_local_23 in _local_21)
                             {
                                 if (_local_23.breed == this._Str_25627)
@@ -171,8 +171,8 @@
                                 case PetTypeEnum.HORSE:
                                     _local_24 = 2;
                                     _local_25 = 3;
-                                    _local_26 = _local_8._Str_7761(_local_14, "hair");
-                                    _local_27 = _local_8._Str_7761(_local_14, "tail");
+                                    _local_26 = _local_8.getPetDefaultPalette(_local_14, "hair");
+                                    _local_27 = _local_8.getPetDefaultPalette(_local_14, "tail");
                                     _local_28 = ((_local_26) ? parseInt(_local_26.id) : -1);
                                     _local_29 = ((_local_27) ? parseInt(_local_27.id) : -1);
                                     _local_30 = new PetCustomPart(_local_24, -1, _local_28);
@@ -180,12 +180,12 @@
                                     _local_18 = [_local_30, _local_31];
                                     break;
                             }
-                            _local_10 = _local_8._Str_2641(_local_14, _local_22, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
+                            _local_10 = _local_8.getPetImage(_local_14, _local_22, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
                         case FurniCategory._Str_7297:
                             if (_local_13.length < 4)
                             {
-                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9._Str_2588));
+                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
                                 break;
                             }
                             _local_15 = (_local_13[1] as String).split(",");
@@ -197,12 +197,12 @@
                                 _local_18.push(new PetCustomPart(int(_local_15[_local_19]), int(_local_16[_local_19]), int(_local_17[_local_19])));
                                 _local_19++;
                             }
-                            _local_10 = _local_8._Str_2641(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
+                            _local_10 = _local_8.getPetImage(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
                         case FurniCategory._Str_7954:
                             if (_local_13.length < 3)
                             {
-                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9._Str_2588));
+                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
                                 break;
                             }
                             _local_15 = (_local_13[1] as String).split(",");
@@ -213,18 +213,18 @@
                                 _local_18.push(new PetCustomPart(int(_local_15[_local_19]), this._Str_24699, int(_local_17[_local_19])));
                                 _local_19++;
                             }
-                            _local_10 = _local_8._Str_2641(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
+                            _local_10 = _local_8.getPetImage(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
                         case FurniCategory._Str_6096:
                             if (_local_13.length < 4)
                             {
-                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9._Str_2588));
+                                Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
                             }
                             _local_18.push(new PetCustomPart(int(_local_13[1]), int(_local_13[2]), int(_local_13[3])));
-                            _local_10 = _local_8._Str_2641(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
+                            _local_10 = _local_8.getPetImage(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
                         default:
-                            Logger.log(("[PetPreviewCatalogWidget] Unsupported Product Type: " + _local_9._Str_2588));
+                            Logger.log(("[PetPreviewCatalogWidget] Unsupported Product Type: " + _local_9.productType));
                     }
                     if (_local_10 != null)
                     {

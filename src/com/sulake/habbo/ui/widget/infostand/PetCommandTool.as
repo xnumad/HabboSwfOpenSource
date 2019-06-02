@@ -124,7 +124,7 @@
             return this._currentPetId;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             if (this._commandWindow == null)
             {

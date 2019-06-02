@@ -1,0 +1,26 @@
+//com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser
+
+package com.sulake.habbo.communication.messages.parser.recycler{
+    import com.sulake.core.communication.messages.IMessageParser;
+    import com.sulake.core.communication.messages.IMessageDataWrapper;
+
+    [SecureSWF(rename="true")]
+    public class RecyclerFinishedMessageParser implements IMessageParser {
+
+        private var _recyclerFinishedStatus:int;
+        private var _prizeId:int;
+
+        public function RecyclerFinishedMessageParser();
+
+        public function get recyclerFinishedStatus():int;
+
+        public function get prizeId():int;
+
+        public function flush():Boolean;
+
+        public function parse(k:IMessageDataWrapper):Boolean;
+
+
+    }
+}//package com.sulake.habbo.communication.messages.parser.recycler
+

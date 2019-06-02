@@ -227,7 +227,7 @@
             this._SafeStr_18627();
             this._SafeStr_18619 = _arg_6;
             this._SafeStr_18618 = ((k + "/") + _arg_2);
-            this._SafeStr_18624._Str_25942 = _arg_5;
+            this._SafeStr_18624.maxOffset = _arg_5;
             this._SafeStr_18624.addEntries(_arg_3, _arg_4);
             if (((this._SafeStr_5998 == _SafeStr_18606) && (this.visible)))
             {
@@ -251,7 +251,7 @@
             this._SafeStr_18627();
             this._SafeStr_18619 = _arg_6;
             this._SafeStr_18618 = ((k + "/") + _arg_2);
-            this._SafeStr_18625._Str_25942 = _arg_5;
+            this._SafeStr_18625.maxOffset = _arg_5;
             this._SafeStr_18625.addEntries(_arg_3, _arg_4);
             if (((this._SafeStr_5998 == _SafeStr_18607) && (this.visible)))
             {
@@ -543,7 +543,7 @@
                     {
                         this._SafeStr_18616.visible = true;
                     }
-                    if (this._SafeStr_18624.offset >= this._SafeStr_18624._Str_25942)
+                    if (this._SafeStr_18624.offset >= this._SafeStr_18624.maxOffset)
                     {
                         this._SafeStr_18617.visible = false;
                     }
@@ -561,7 +561,7 @@
                     {
                         this._SafeStr_18616.visible = true;
                     }
-                    if (this._SafeStr_18625.offset >= this._SafeStr_18625._Str_25942)
+                    if (this._SafeStr_18625.offset >= this._SafeStr_18625.maxOffset)
                     {
                         this._SafeStr_18617.visible = false;
                     }
@@ -679,7 +679,7 @@
                 return;
             }
             var _local_3:int;
-            this._SafeStr_5552._Str_2724();
+            this._SafeStr_5552.destroyListItems();
             var _local_4:IWindowContainer = (WindowUtils.createWindow("snowwar_leaderboard_entry") as IWindowContainer);
             while (_local_3 < k.length)
             {

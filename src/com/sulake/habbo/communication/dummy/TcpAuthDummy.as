@@ -16,11 +16,11 @@
         public function TcpAuthDummy(k:String, _arg_2:uint)
         {
             this._socket = new Socket();
-            this._socket.addEventListener(Event.CONNECT, this._Str_8489);
+            this._socket.addEventListener(Event.CONNECT, this.onConnect);
             this._socket.addEventListener(Event.COMPLETE, this.onComplete);
             this._socket.addEventListener(Event.CLOSE, this._Str_2392);
-            this._socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_7702);
-            this._socket.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9088);
+            this._socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onSecurityError);
+            this._socket.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
             this._socket.connect(k, _arg_2);
             this._timeOutTimer = new Timer(3500, 1);
             this._timeOutTimer.addEventListener(TimerEvent.TIMER, this._Str_14338);
@@ -33,7 +33,7 @@
             this._connectionMadeAndClosed = true;
         }
 
-        private function _Str_8489(k:Event):void
+        private function onConnect(k:Event):void
         {
             Logger.log("TcpAuth control socket connected");
             this._Str_11469();
@@ -51,13 +51,13 @@
             this._Str_11469();
         }
 
-        private function _Str_7702(k:SecurityErrorEvent):void
+        private function onSecurityError(k:SecurityErrorEvent):void
         {
             Logger.log("TcpAuth control socket security error");
             this._Str_11469();
         }
 
-        private function _Str_9088(k:IOErrorEvent):void
+        private function onIOError(k:IOErrorEvent):void
         {
             Logger.log("TcpAuth control socket io error");
             this._Str_11469();

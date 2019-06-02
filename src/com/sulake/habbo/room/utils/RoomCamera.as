@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.room.utils
 {
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomCamera 
     {
@@ -34,7 +34,7 @@
             super();
         }
 
-        public function get location():IVector3D
+        public function get location():IVector3d
         {
             return this._currentLoc;
         }
@@ -49,7 +49,7 @@
             return this._targetCategory;
         }
 
-        public function get _Str_16185():IVector3D
+        public function get _Str_16185():IVector3d
         {
             return this._targetObjectLoc;
         }
@@ -104,7 +104,7 @@
             return this._geometryUpdateId;
         }
 
-        public function get _Str_12536():Boolean
+        public function get isMoving():Boolean
         {
             if (((!(this._targetLoc == null)) && (!(this._currentLoc == null))))
             {
@@ -118,7 +118,7 @@
             this._targetId = k;
         }
 
-        public function set _Str_16185(k:IVector3D):void
+        public function set _Str_16185(k:IVector3d):void
         {
             this._targetObjectLoc.assign(k);
         }
@@ -182,7 +182,7 @@
             this._geometryUpdateId = k;
         }
 
-        public function set target(k:IVector3D):void
+        public function set target(k:IVector3d):void
         {
             var _local_2:Vector3d;
             if (this._targetLoc == null)
@@ -204,7 +204,7 @@
             this._currentLoc = null;
         }
 
-        public function _Str_20685(k:IVector3D):void
+        public function initializeLocation(k:IVector3d):void
         {
             if (this._currentLoc != null)
             {
@@ -214,7 +214,7 @@
             this._currentLoc.assign(k);
         }
 
-        public function _Str_25467(k:IVector3D):void
+        public function resetLocation(k:IVector3d):void
         {
             if (this._currentLoc == null)
             {
@@ -284,7 +284,7 @@
             this._geometryUpdateId = -1;
         }
 
-        public function _Str_19465(k:int):void
+        public function activateFollowing(k:int):void
         {
             this._followDuration = k;
         }

@@ -26,7 +26,7 @@
         {
             super(k);
             this._catalog = _arg_2;
-            this._youAreOwnerMessageEvent = new _Str_5266(this._Str_15950);
+            this._youAreOwnerMessageEvent = new _Str_5266(this.onYouAreOwner);
             this._catalog.connection.addMessageEvent(this._youAreOwnerMessageEvent);
         }
 
@@ -70,7 +70,7 @@
             this._Str_2771(false);
         }
 
-        private function _Str_15950(k:_Str_5266):void
+        private function onYouAreOwner(k:_Str_5266):void
         {
             if (this._catalog.catalogType != CatalogType.BUILDER)
             {

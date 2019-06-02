@@ -15,14 +15,14 @@
             super();
         }
 
-        public function get _Str_20256():int
+        public function get objectCount():int
         {
             return this._objects.length;
         }
 
         public function _Str_24113(k:int):_Str_6765
         {
-            if (((k < 0) || (k >= this._Str_20256)))
+            if (((k < 0) || (k >= this.objectCount)))
             {
                 return null;
             }

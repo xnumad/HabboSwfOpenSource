@@ -91,7 +91,7 @@
 
         private function _Str_3714():void
         {
-            var k:Rectangle = this._habboHelp.toolbar._Str_3705(this._targetIconId);
+            var k:Rectangle = this._habboHelp.toolbar.getIconLocation(this._targetIconId);
             var _local_2:IWindow = this._window.findChildByName("arrow");
             var _local_3:IWindow = this._window.findChildByName("arrow_right");
             if (k == null)
@@ -190,7 +190,7 @@
                 case HabboToolbarEvent.HTE_RESIZED:
                     if (this._habboHelp != null)
                     {
-                        _local_2 = this._habboHelp.toolbar._Str_3705(this._targetIconId);
+                        _local_2 = this._habboHelp.toolbar.getIconLocation(this._targetIconId);
                     }
                     if (_local_2 != null)
                     {

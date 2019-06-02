@@ -32,11 +32,11 @@
             if (!_arg_4)
             {
                 this._habboWebLogin.init();
-                this._habboWebLogin.addEventListener(HabboWeb.HABBO_WEB_LOGIN_SUCCESSFUL, this._Str_21593);
+                this._habboWebLogin.addEventListener(HabboWeb.HABBO_WEB_LOGIN_SUCCESSFUL, this.requestClientURL);
             }
             else
             {
-                this._Str_21593();
+                this.requestClientURL();
             }
         }
 
@@ -45,17 +45,17 @@
             return this._ticket;
         }
 
-        public function get _Str_21487():Boolean
+        public function get isFacebookUser():Boolean
         {
             return this._isFacebookUser;
         }
 
-        public function get _Str_16545():String
+        public function get flashClientUrl():String
         {
             return this._flashClientUrl;
         }
 
-        private function _Str_21593(k:Event=null):void
+        private function requestClientURL(k:Event=null):void
         {
             var _local_2:String = this._clientURL;
             if (this._assets.hasAsset(_local_2))
@@ -81,7 +81,7 @@
             var data:String = (loaderStruct.assetLoader.content as String);
             if (data.indexOf('account/reauthenticate"') > -1)
             {
-                this._habboWebLogin._Str_20369();
+                this._habboWebLogin.requestReAuthenticate();
             }
             else
             {

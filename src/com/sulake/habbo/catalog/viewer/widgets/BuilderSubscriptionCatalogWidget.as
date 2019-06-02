@@ -47,7 +47,7 @@
             {
                 return;
             }
-            if (((k > 0) || (this._catalog.getCatalogNavigator(CatalogType.BUILDER)._Str_21310(this._catalog.getProperty("builders_club.try_page")) == null)))
+            if (((k > 0) || (this._catalog.getCatalogNavigator(CatalogType.BUILDER).getOptionalNodeByName(this._catalog.getProperty("builders_club.try_page")) == null)))
             {
                 _local_4.visible = true;
                 _local_2.visible = false;

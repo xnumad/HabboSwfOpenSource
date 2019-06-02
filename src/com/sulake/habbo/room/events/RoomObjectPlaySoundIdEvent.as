@@ -17,7 +17,7 @@
             this._pitch = _arg_4;
         }
 
-        public function get _Str_10535():String
+        public function get soundId():String
         {
             return this._soundId;
         }

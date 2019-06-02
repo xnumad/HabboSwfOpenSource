@@ -40,7 +40,7 @@
             }
         }
 
-        public function _Str_6674():void
+        public function productDataReady():void
         {
             this.show();
         }
@@ -114,7 +114,7 @@
             {
                 this._optionTemplate = (_local_2.getListItemAt(0) as IWindowContainer);
             }
-            _local_2._Str_2659();
+            _local_2.removeListItems();
             var _local_3:String = decodeURI(this._component.localizationManager.getLocalization("nux.gift.selection.separator", ", "));
             var _local_4:int;
             while (_local_4 < k.options.length)
@@ -132,7 +132,7 @@
                     while (_local_13 < _local_5._Str_13979.length)
                     {
                         _local_14 = _local_5._Str_13979[_local_13];
-                        _local_15 = _local_14._Str_2716;
+                        _local_15 = _local_14.productCode;
                         _local_16 = _local_14._Str_14499;
                         if (_local_16 != null)
                         {
@@ -157,7 +157,7 @@
                         _local_13++;
                     }
                 }
-                _local_12 = _local_5._Str_25773;
+                _local_12 = _local_5.roomTemplateName;
                 if (_local_12)
                 {
                     _local_10.assetUri = (this._component.configuration.getProperty("image.library.url") + _local_12);
@@ -186,12 +186,12 @@
             {
                 _local_3 = this._giftOptions[this._currentIndex];
                 _local_4 = (this._frame.findChildByName("nux_gift_selection_list") as IItemListWindow);
-                _local_5 = _local_4._Str_3156(_arg_2.parent);
+                _local_5 = _local_4.getListItemIndex(_arg_2.parent);
                 if (_local_5 == -1)
                 {
                     return;
                 }
-                _local_6 = new _Str_4584(_local_3._Str_18487, _local_3._Str_17245, _local_5);
+                _local_6 = new _Str_4584(_local_3.dayIndex, _local_3.stepIndex, _local_5);
                 this._selectedOptions.push(_local_6);
                 this._currentIndex++;
                 if (this._currentIndex == this._giftOptions.length)

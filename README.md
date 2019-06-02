@@ -24,4 +24,6 @@
 
 -Sound setting bug fixed
 
--Rename all img and binary file correctly name (95%)
+-Rename all img and binary file correctly name (not 100%)
+
+-Raname +2000 function and var (based on the name air, possibility little error)

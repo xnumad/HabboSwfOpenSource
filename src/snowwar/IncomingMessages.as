@@ -734,7 +734,7 @@
             var _local_2:Game2WeeklyLeaderboardParser = k._Str_2273();
             if (this._snowWarEngine.leaderboard)
             {
-                this._snowWarEngine.leaderboard._SafeStr_18635(_local_2.year, _local_2._Str_26297, _local_2.leaderboard, _local_2._Str_26158, _local_2._Str_25942, _local_2._Str_26115);
+                this._snowWarEngine.leaderboard._SafeStr_18635(_local_2.year, _local_2.week, _local_2.leaderboard, _local_2._Str_26158, _local_2.maxOffset, _local_2.minutesUntilReset);
             }
         }
 
@@ -743,7 +743,7 @@
             var _local_2:Game2WeeklyLeaderboardParser = k._Str_2273();
             if (this._snowWarEngine.leaderboard)
             {
-                this._snowWarEngine.leaderboard._SafeStr_18637(_local_2.year, _local_2._Str_26297, _local_2.leaderboard, _local_2._Str_26158, _local_2._Str_25942, _local_2._Str_26115);
+                this._snowWarEngine.leaderboard._SafeStr_18637(_local_2.year, _local_2.week, _local_2.leaderboard, _local_2._Str_26158, _local_2.maxOffset, _local_2.minutesUntilReset);
             }
         }
     }

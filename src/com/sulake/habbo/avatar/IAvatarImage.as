@@ -14,7 +14,7 @@
         function getImage(_arg_1:String, _arg_2:Boolean, _arg_3:Number=1):BitmapData;
         function _Str_1009():Array;
         function setDirection(_arg_1:String, _arg_2:int):void;
-        function _Str_880(_arg_1:String, _arg_2:int):void;
+        function setDirectionAngle(_arg_1:String, _arg_2:int):void;
         function _Str_953(_arg_1:int=1):void;
         function _Str_797():String;
         function _Str_754():Array;

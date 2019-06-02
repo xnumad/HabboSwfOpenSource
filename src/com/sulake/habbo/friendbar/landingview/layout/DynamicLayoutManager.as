@@ -81,11 +81,11 @@
             var _local_6:int = this._layout.landingView._Str_11168;
             var _local_7:int = this._layout.landingView._Str_9931;
             this._leftPane.width = _local_6;
-            this._leftPane._Str_2648.maxWidth = _local_6;
+            this._leftPane.limits.maxWidth = _local_6;
             this._leftDownSlotRoot.width = _local_6;
             this._rightPane.width = _local_7;
             this._rightContainer.width = _local_7;
-            this._rightContainer._Str_2648.maxWidth = _local_7;
+            this._rightContainer.limits.maxWidth = _local_7;
             this._rightDownSlotRoot.width = _local_7;
             this._center.arrangeListItems();
         }
@@ -143,7 +143,7 @@
             {
                 if (_local_3.numListItems < 2)
                 {
-                    _local_3._Str_3015(this._separatorTemplate.clone(), 0);
+                    _local_3.addListItemAt(this._separatorTemplate.clone(), 0);
                 }
                 _local_4 = ITextWindow(IItemListWindow(_local_3.getListItemAt(0)).getListItemByName("separator_title"));
                 _local_4.caption = (("${" + _arg_2) + "}");

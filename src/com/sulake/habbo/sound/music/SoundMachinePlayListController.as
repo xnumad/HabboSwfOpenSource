@@ -193,7 +193,7 @@
         {
         }
 
-        public function _Str_3757(k:int):void
+        public function removeItem(k:int):void
         {
         }
 

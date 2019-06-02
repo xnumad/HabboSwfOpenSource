@@ -107,10 +107,10 @@
             {
                 return k;
             }
-            k.push(_Str_13641._Str_2551(this._Str_6764));
-            k.push(_Str_13288._Str_2551(this.userName));
-            k.push(_Str_3804._Str_2551(this.figure));
-            k.push(_Str_13034._Str_2551(this.message));
+            k.push(_Str_13641.withValue(this._Str_6764));
+            k.push(_Str_13288.withValue(this.userName));
+            k.push(_Str_3804.withValue(this.figure));
+            k.push(_Str_13034.withValue(this.message));
             return k;
         }
 
@@ -214,8 +214,8 @@
                 return;
             }
             this._refreshing = true;
-            this._root._Str_2648.minWidth = this._root.width;
-            this._root._Str_2648.maxWidth = this._root.width;
+            this._root.limits.minWidth = this._root.width;
+            this._root.limits.maxWidth = this._root.width;
             this._root.height = this._bubbleWrapper.bottom;
             this._bubbleWrapper.width = (this._root.width - this._avatarWrapper.width);
             this._message.width = this._bubbleWrapper.width;
@@ -234,7 +234,7 @@
                 this._arrowPoint.x = (this._avatarWrapper.right - this._arrowPoint.width);
                 this._bubbleWrapper.x = this._avatarWrapper.right;
             }
-            this._root._Str_2648.setEmpty();
+            this._root.limits.setEmpty();
             this._arrowPoint.invalidate();
             this._refreshing = false;
         }

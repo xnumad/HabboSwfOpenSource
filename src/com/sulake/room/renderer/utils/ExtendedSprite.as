@@ -10,10 +10,10 @@
         private var _Str_24201:Point;
         private var _tag:String = "";
         private var _identifier:String = "";
-        private var _Str_6190:Boolean = false;
+        private var _clickHandling:Boolean = false;
         private var _Str_8253:Boolean = false;
-        private var _Str_1049:ExtendedBitmapData = null;
-        private var _Str_1720:int = 0;
+        private var _bitmapData:ExtendedBitmapData = null;
+        private var _width:int = 0;
         private var _height:int = 0;
         private var _updateID1:int = -1;
         private var _updateID2:int = -1;
@@ -68,12 +68,12 @@
 
         public function get _Str_4530():Boolean
         {
-            return this._Str_6190;
+            return this._clickHandling;
         }
 
         public function set _Str_4530(k:Boolean):void
         {
-            this._Str_6190 = k;
+            this._clickHandling = k;
         }
 
         public function get _Str_14797():int
@@ -98,10 +98,10 @@
 
         public function dispose():void
         {
-            if (this._Str_1049 != null)
+            if (this._bitmapData != null)
             {
-                this._Str_1049.dispose();
-                this._Str_1049 = null;
+                this._bitmapData.dispose();
+                this._bitmapData = null;
             }
         }
 
@@ -112,25 +112,25 @@
             {
                 return;
             }
-            if (this._Str_1049 != null)
+            if (this._bitmapData != null)
             {
-                this._Str_1049.dispose();
-                this._Str_1049 = null;
+                this._bitmapData.dispose();
+                this._bitmapData = null;
             }
             if (k != null)
             {
-                this._Str_1720 = k.width;
+                this._width = k.width;
                 this._height = k.height;
                 _local_2 = (k as ExtendedBitmapData);
                 if (_local_2 != null)
                 {
                     _local_2._Str_9215();
-                    this._Str_1049 = _local_2;
+                    this._bitmapData = _local_2;
                 }
             }
             else
             {
-                this._Str_1720 = 0;
+                this._width = 0;
                 this._height = 0;
                 this._updateID1 = -1;
                 this._updateID2 = -1;
@@ -146,7 +146,7 @@
                 this._updateID2 = _arg_2;
                 return true;
             }
-            if (((!(this._Str_1049 == null)) && (this._Str_1049.disposed)))
+            if (((!(this._bitmapData == null)) && (this._bitmapData.disposed)))
             {
                 return true;
             }
@@ -164,14 +164,14 @@
             {
                 return false;
             }
-            if (((((k < 0) || (_arg_2 < 0)) || (k >= this._Str_1720)) || (_arg_2 >= this._height)))
+            if (((((k < 0) || (_arg_2 < 0)) || (k >= this._width)) || (_arg_2 >= this._height)))
             {
                 return false;
             }
-            return this._Str_24373(k, _arg_2);
+            return this.hitTestBitmapData(k, _arg_2);
         }
 
-        private function _Str_24373(k:int, _arg_2:int):Boolean
+        private function hitTestBitmapData(k:int, _arg_2:int):Boolean
         {
             var _local_4:uint;
             var _local_3:Boolean;

@@ -63,7 +63,7 @@
 
         public function toggleRoomInfoWindow():void
         {
-            this._navigator._Str_13422();
+            this._navigator.toggleRoomInfoVisibility();
         }
 
         public function goToPrivateRoom(k:int):void
@@ -168,7 +168,7 @@
 
         public function get _Str_5090():Boolean
         {
-            return this._navigator._Str_14507();
+            return this._navigator.canRateRoom();
         }
     }
 }

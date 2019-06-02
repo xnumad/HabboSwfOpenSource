@@ -46,8 +46,8 @@
         private var _petData2:RoomUserData;
         private var _Str_25917:Boolean = false;
         private var _Str_2595:int;
-        private var _Str_4447:Array;
-        private var _Str_6321:int;
+        private var _rarityCategories:Array;
+        private var _resultPetTypeId:int;
 
         public function ConfirmPetBreedingView(k:AvatarInfoWidget)
         {
@@ -99,8 +99,8 @@
             this._petData2 = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             this._roomUserData._Str_3897 = _arg_6;
             this._petData2._Str_3897 = _arg_7;
-            this._Str_4447 = _arg_4;
-            this._Str_6321 = _arg_5;
+            this._rarityCategories = _arg_4;
+            this._resultPetTypeId = _arg_5;
             this._Str_2595 = _arg_3;
             this._Str_3248();
             this._window.visible = true;
@@ -112,7 +112,7 @@
             var _local_8:int;
             var _local_4:PetFigureData = new PetFigureData(k);
             var _local_6:String = "std";
-            var _local_7:ImageResult = this._Str_2268.handler.roomEngine._Str_2641(_local_4.typeId, _local_4.paletteId, _local_4.color, new Vector3d(90), _arg_3, this, true, 0, _local_4._Str_3542, _local_6);
+            var _local_7:ImageResult = this._Str_2268.handler.roomEngine.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color, new Vector3d(90), _arg_3, this, true, 0, _local_4._Str_3542, _local_6);
             if (_local_7 != null)
             {
                 _local_8 = _local_7.id;
@@ -173,14 +173,14 @@
             this._Str_3060(((k != null) ? k : new BitmapData(10, 10)), "preview_image2");
             var _local_2:IBitmapWrapperWindow = (this._windowManager.buildFromXML((this._assets.getAssetByName("pet_breeding_pet_preview_xml").content as XML)) as IBitmapWrapperWindow);
             var _local_3:int = 1;
-            for each (_local_4 in this._Str_4447)
+            for each (_local_4 in this._rarityCategories)
             {
                 this._Str_2268.localizations.registerParameter(("breedpets.confirmation.widget.raritycategory." + _local_3), "percent", _local_4._Str_12554.toString());
                 _local_5 = (this._window.findChildByName(("breeds" + _local_3)) as IItemListWindow);
-                _local_5._Str_2659();
+                _local_5.removeListItems();
                 for each (_local_6 in _local_4.breeds)
                 {
-                    _local_7 = new PetFigureData([this._Str_6321, _local_6].join(" "));
+                    _local_7 = new PetFigureData([this._resultPetTypeId, _local_6].join(" "));
                     _local_8 = (_local_2.clone() as IBitmapWrapperWindow);
                     _local_8.name = ("breed." + _local_6);
                     _local_8.bitmap = new BitmapData(_local_8.width, _local_8.height, true, 0xFFFFFF);
@@ -188,7 +188,7 @@
                     {
                         _local_5.addListItem(_local_8);
                     }
-                    k = this._Str_3993(_local_7._Str_4217, _local_8.name, 64);
+                    k = this._Str_3993(_local_7.figureString, _local_8.name, 64);
                     this._Str_3060(((k != null) ? k : new BitmapData(25, 25, true, 0xFFFFFF)), _local_8.name);
                 }
                 _local_3++;

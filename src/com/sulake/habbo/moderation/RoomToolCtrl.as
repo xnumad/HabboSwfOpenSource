@@ -291,7 +291,7 @@
             {
                 return;
             }
-            this._main.windowTracker.show(new UserInfoFrameCtrl(this._main, this._data._Str_2481), this._frame, false, false, true);
+            this._main.windowTracker.show(new UserInfoFrameCtrl(this._main, this._data.ownerId), this._frame, false, false, true);
         }
 
         private function _Str_22364(k:WindowEvent, _arg_2:IWindow):void

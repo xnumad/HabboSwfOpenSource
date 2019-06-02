@@ -39,7 +39,7 @@
             }
         }
 
-        public function get _Str_2588():String
+        public function get productType():String
         {
             return this._Str_3032;
         }
@@ -49,7 +49,7 @@
             return this._Str_20686;
         }
 
-        public function get _Str_2415():String
+        public function get extraParam():String
         {
             return this._Str_3194;
         }

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
-    import com.sulake.habbo.ui.widget.enums.ContextMenuType;
+    import com.sulake.habbo.ui.widget.enums.ContextMenuEnum;
     import com.sulake.habbo.room.events.RoomObjectWidgetRequestEvent;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.habbo.room.object.data.StringArrayStuffData;
@@ -23,7 +23,7 @@
 
         override public function get contextMenu():String
         {
-            return (this._state == STATE_UNLOCKED) ? ContextMenuType.FRIEND_FURNITURE : ContextMenuType.DUMMY;
+            return (this._state == STATE_UNLOCKED) ? ContextMenuEnum.FRIEND_FURNITURE : ContextMenuEnum.DUMMY;
         }
 
         override public function getEventTypes():Array

@@ -127,8 +127,8 @@
         {
             if (((this._Str_2271 as IInteractiveWindow) && (k)))
             {
-                (this._Str_2271 as IInteractiveWindow)._Str_8475(WindowState.HOVERING, MouseCursorType.DRAG);
-                (this._Str_2271 as IInteractiveWindow)._Str_8475((WindowState.HOVERING | WindowState.ACTIVE), MouseCursorType.DRAG);
+                (this._Str_2271 as IInteractiveWindow).setMouseCursorForState(WindowState.HOVERING, MouseCursorType.DRAG);
+                (this._Str_2271 as IInteractiveWindow).setMouseCursorForState((WindowState.HOVERING | WindowState.ACTIVE), MouseCursorType.DRAG);
             }
         }
 

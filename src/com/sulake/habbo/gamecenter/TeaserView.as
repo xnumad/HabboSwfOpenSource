@@ -124,7 +124,7 @@
 
         private function _Str_20439():String
         {
-            return this._gameCenterView._Str_3479.getProperty(("gamecenter.teaser." + GameConfigurations._Str_3077(this._selectedGame)));
+            return this._gameCenterView._Str_3479.getProperty(("gamecenter.teaser." + GameConfigurations.getNameId(this._selectedGame)));
         }
 
         private function _Str_22482(k:IOErrorEvent):void
@@ -132,7 +132,7 @@
             var _local_2:String;
             if (((this._gameCenterView._Str_3479) && (this._gameCenterView._Str_3479.context)))
             {
-                _local_2 = ((("Failed to load teaser " + this._Str_20439()) + " for game ") + GameConfigurations._Str_3077(this._selectedGame));
+                _local_2 = ((("Failed to load teaser " + this._Str_20439()) + " for game ") + GameConfigurations.getNameId(this._selectedGame));
                 this._gameCenterView._Str_3479.context.error(_local_2, false, k.errorID);
             }
         }

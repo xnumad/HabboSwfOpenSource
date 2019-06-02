@@ -172,7 +172,7 @@
             this.addMessageEvent(new _Str_5269(this._Str_18561));
             this.addMessageEvent(new _Str_3921(this._Str_3702));
             this.addMessageEvent(new _Str_3992(this._Str_7358));
-            this.addMessageEvent(new _Str_2752(this._Str_3012));
+            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new _Str_6633(this._Str_24985));
             this.addMessageEvent(new _Str_5979(this._Str_25619));
             this.addMessageEvent(new _Str_8194(this._Str_16681));
@@ -332,7 +332,7 @@
         private function _Str_24027(k:IMessageEvent):void
         {
             var _local_2:ExtendedProfileData = ExtendedProfileMessageEvent(k).data;
-            if (_local_2._Str_24210)
+            if (_local_2.openProfileWindow)
             {
                 this._extendedProfileWindowCtrl._Str_12511 = true;
                 this._extendedProfileWindowCtrl._Str_12870 = true;
@@ -392,7 +392,7 @@
             this._groupRoomInfoCtrl.close();
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
@@ -446,9 +446,9 @@
             this._groupCreatedWindowCtrl.show(_local_2.groupId);
             this._guildManagementWindowCtrl.close();
             this._groupRoomInfoCtrl._Str_21514 = _local_2.groupId;
-            if (this._roomId != _local_2._Str_6136)
+            if (this._roomId != _local_2.baseRoomId)
             {
-                this._navigator.goToPrivateRoom(_local_2._Str_6136);
+                this._navigator.goToPrivateRoom(_local_2.baseRoomId);
             }
         }
 
@@ -510,7 +510,7 @@
         private function _Str_11640(k:IMessageEvent):void
         {
             var _local_2:_Str_4007 = _Str_3492(k)._Str_2273();
-            this._hasVip = ((_local_2._Str_3738) && (_local_2._Str_4458 > 0));
+            this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));
             this._guildManagementWindowCtrl._Str_23040();
         }
 
@@ -531,7 +531,7 @@
 
         private function _Str_24382(k:UserBadgesEvent):void
         {
-            this._extendedProfileWindowCtrl._Str_12065(k.userId, k.badges);
+            this._extendedProfileWindowCtrl.onUserBadges(k.userId, k.badges);
         }
 
         private function _Str_19848():void

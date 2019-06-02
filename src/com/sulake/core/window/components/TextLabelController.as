@@ -394,23 +394,23 @@
         {
             var k:Array = super.properties;
             var _local_2:TextStyle = TextStyleManager.getStyle(this._textStyleName);
-            k.push(_Str_2340(PropertyKeys.TEXT_STYLE, this._textStyleName));
-            var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : _Str_3692(PropertyKeys.TEXT_COLOR).value));
+            k.push(createProperty(PropertyKeys.TEXT_STYLE, this._textStyleName));
+            var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : getDefaultProperty(PropertyKeys.TEXT_COLOR).value));
             k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, ((this._textColor == null) ? _local_3 : this._textColor), PropertyStruct.HEX, ((!(this._textColor == null)) && (!(this._textColor == _local_3)))));
-            k.push(_Str_2340(PropertyKeys.VERTICAL, this._vertical));
+            k.push(createProperty(PropertyKeys.VERTICAL, this._vertical));
             if (this._margins != null)
             {
-                k.push(_Str_2340(PropertyKeys.MARGIN_LEFT, this._margins.left));
-                k.push(_Str_2340(PropertyKeys.MARGIN_TOP, this._margins.top));
-                k.push(_Str_2340(PropertyKeys.MARGIN_RIGHT, this._margins.right));
-                k.push(_Str_2340(PropertyKeys.MARGIN_BOTTOM, this._margins.bottom));
+                k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._margins.left));
+                k.push(createProperty(PropertyKeys.MARGIN_TOP, this._margins.top));
+                k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._margins.right));
+                k.push(createProperty(PropertyKeys.MARGIN_BOTTOM, this._margins.bottom));
             }
             else
             {
-                k.push(_Str_3692(PropertyKeys.MARGIN_LEFT));
-                k.push(_Str_3692(PropertyKeys.MARGIN_TOP));
-                k.push(_Str_3692(PropertyKeys.MARGIN_RIGHT));
-                k.push(_Str_3692(PropertyKeys.MARGIN_BOTTOM));
+                k.push(getDefaultProperty(PropertyKeys.MARGIN_LEFT));
+                k.push(getDefaultProperty(PropertyKeys.MARGIN_TOP));
+                k.push(getDefaultProperty(PropertyKeys.MARGIN_RIGHT));
+                k.push(getDefaultProperty(PropertyKeys.MARGIN_BOTTOM));
             }
             return k;
         }

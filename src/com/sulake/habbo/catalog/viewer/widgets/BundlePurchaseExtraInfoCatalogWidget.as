@@ -91,7 +91,7 @@
         {
             if (this._Str_6878 != -1)
             {
-                this._Str_4613._Str_3757(this._Str_6878);
+                this._Str_4613.removeItem(this._Str_6878);
                 this._Str_6878 = -1;
             }
         }
@@ -126,7 +126,7 @@
         {
             if (this._Str_6832 != -1)
             {
-                this._Str_4613._Str_3757(this._Str_6832);
+                this._Str_4613.removeItem(this._Str_6832);
                 this._Str_6832 = -1;
             }
         }
@@ -142,7 +142,7 @@
         {
             if (this._Str_9708 != -1)
             {
-                this._Str_4613._Str_3757(this._Str_9708);
+                this._Str_4613.removeItem(this._Str_9708);
                 this._Str_9708 = -1;
             }
         }

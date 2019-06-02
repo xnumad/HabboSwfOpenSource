@@ -57,14 +57,14 @@
         protected static const BUBBLE_BUTTON_ACCEPT:String = "bubble_button_accept";
         protected static const BUBBLE_BUTTON_CLOSE:String = "bubble_button_close";
         protected static const BUBBLE_CLICK_REGION_REJECT:String = "bubble_click_region_reject";
-        private static const _Str_2531:uint = 10338138;
+        private static const DEFAULT_COLOR:uint = 10338138;
         private static const _Str_2841:uint = 13891476;
         private static const _Str_5837:String = null;
         private static const ICON_TAG_NOTIFY:String = "icon_tag_notify";
         private static const ICON_TAG_MESSAGE:String = "icon_tag_message";
         private static const ICON_TAG_GAME:String = "icon_tag_game";
         private static const ICON_TAG_GAME_INVITE:String = "icon_tag_game_invite";
-        private static const _Str_2469:Vector.<FriendEntityTab> = new Vector.<FriendEntityTab>();
+        private static const POOL:Vector.<FriendEntityTab> = new Vector.<FriendEntityTab>();
         private static const _Str_4561:Vector.<IWindowContainer> = new Vector.<IWindowContainer>();
 
         protected var _Str_2568:IFriendEntity;
@@ -78,7 +78,7 @@
         {
             var _local_2:FriendEntityTab;
             var _local_3:FriendNotification;
-            _local_2 = ((_Str_2469.length > 0) ? _Str_2469.pop() : new (FriendEntityTab)());
+            _local_2 = ((POOL.length > 0) ? POOL.pop() : new (FriendEntityTab)());
             _local_2._Str_2638 = false;
             _local_2.friend = k;
             if (k.notifications.length > 0)
@@ -107,7 +107,7 @@
                 _local_3.dispose();
             }
             var _local_4:Array = [];
-            _local_2._Str_7438(NOTIFICATION, _local_4);
+            _local_2.groupListItemsWithTag(NOTIFICATION, _local_4);
             if (_local_4.length > 0)
             {
                 for each (_local_5 in _local_4)
@@ -115,7 +115,7 @@
                     _local_5.parent = null;
                 }
             }
-            k.height = _Str_2790;
+            k.height = HEIGHT;
             k.y = 0;
         }
 
@@ -155,7 +155,7 @@
                     this._Str_4947 = false;
                     this._Str_4018 = "";
                     _Str_2638 = true;
-                    _Str_2469.push(this);
+                    POOL.push(this);
                 }
             }
         }
@@ -258,7 +258,7 @@
                 }
                 if (((((k) && (_Str_11139)) && (_local_5)) && (Motions._Str_9810(window) == null)))
                 {
-                    Motions._Str_4598(new Combo(new EaseOut(new ResizeTo(window, _Str_6722, window.width, _local_2.height), _Str_6252), new EaseOut(new MoveTo(window, _Str_6722, window.x, (_Str_2790 - _local_2.height)), _Str_6252)));
+                    Motions._Str_4598(new Combo(new EaseOut(new ResizeTo(window, _Str_6722, window.width, _local_2.height), _Str_6252), new EaseOut(new MoveTo(window, _Str_6722, window.x, (HEIGHT - _local_2.height)), _Str_6252)));
                 }
                 else
                 {
@@ -266,7 +266,7 @@
                     {
                         window.height = _local_2.height;
                     }
-                    window.y = (_Str_2790 - window.height);
+                    window.y = (HEIGHT - window.height);
                 }
                 super.select(k);
                 if (k)
@@ -315,14 +315,14 @@
         override protected function expose():void
         {
             super.expose();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
             ITextWindow(window.findChildByTag(LABEL)).underline = _Str_3341;
         }
 
         override protected function conceal():void
         {
             super.conceal();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
             ITextWindow(window.findChildByTag(LABEL)).underline = _Str_3341;
         }
 
@@ -364,8 +364,8 @@
             var _local_6:IBubbleWindow = (k.findChildByName(BUBBLE) as IBubbleWindow);
             k.x = 0;
             k.y = 0;
-            k.width = _Str_3098;
-            k.height = _Str_2790;
+            k.width = WIDTH;
+            k.height = HEIGHT;
             k.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             k.addEventListener(WindowMouseEvent.OUT, onMouseOut);
@@ -407,9 +407,9 @@
                 _local_3.removeEventListener(WindowMouseEvent.OUT, onMouseClick);
                 _local_4 = IRegionWindow(k.findChildByName(REGION_PROFILE));
                 _local_4.removeEventListener(WindowMouseEvent.CLICK, this._Str_5926);
-                k.width = _Str_3098;
-                k.height = _Str_2790;
-                k.color = _Str_2531;
+                k.width = WIDTH;
+                k.height = HEIGHT;
+                k.color = DEFAULT_COLOR;
                 _local_5 = IBitmapWrapperWindow(k.findChildByName(CANVAS));
                 _local_5.bitmap = null;
                 ITextWindow(k.findChildByTag("label")).underline = false;
@@ -571,14 +571,14 @@
                 if (_local_4 != _Str_5837)
                 {
                     _local_6 = IItemListWindow(window.findChildByName(ICONS));
-                    if (!_local_6._Str_7139(_local_4))
+                    if (!_local_6.getListItemByTag(_local_4))
                     {
                         _local_7 = _local_3._Str_3614;
                         if (_local_7.tags.indexOf(_local_4) == -1)
                         {
                             _local_7.tags.push(_local_4);
                         }
-                        _local_6._Str_3015(_local_7, 0);
+                        _local_6.addListItemAt(_local_7, 0);
                     }
                 }
             }

@@ -21,14 +21,14 @@
             return true;
         }
 
-        public function _Str_21594():int
+        public function getItemCount():int
         {
             return this._items.length;
         }
 
         public function _Str_2990(k:int):_Str_3079
         {
-            if (((k < 0) || (k >= this._Str_21594())))
+            if (((k < 0) || (k >= this.getItemCount())))
             {
                 return null;
             }
@@ -67,7 +67,7 @@
             while (_local_2 < _local_5)
             {
                 _local_8 = ItemDataParser._Str_9484(k);
-                _local_8.ownerName = _local_3.getValue(_local_8._Str_2481);
+                _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
                 this._items.push(_local_8);
                 _local_2++;
             }

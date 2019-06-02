@@ -107,7 +107,7 @@
             }
             _local_3 = IItemListWindow(k.content.findChildByName("item_list"));
             _local_4 = k.content.findChildByName("scroller");
-            var _local_5:* = (_local_3._Str_2614.height > _local_3.height);
+            var _local_5:* = (_local_3.visibleRegion.height > _local_3.height);
             if (_local_4.visible)
             {
                 if (!_local_5)
@@ -158,7 +158,7 @@
 
         private function _Str_19017():void
         {
-            var k:Tab = this._navigator.tabs._Str_2657();
+            var k:Tab = this._navigator.tabs.getSelected();
             k._Str_5252._Str_8146();
         }
 
@@ -361,19 +361,19 @@
 
         private function _Str_23841():void
         {
-            var k:Tab = this._navigator.tabs._Str_2657();
-            var _local_2:ISelectableWindow = this._tabContext.selector._Str_2657();
+            var k:Tab = this._navigator.tabs.getSelected();
+            var _local_2:ISelectableWindow = this._tabContext.selector.getSelected();
             if (k.button != _local_2)
             {
                 this._ignoreNextTabSelectEvent = true;
-                this._tabContext.selector._Str_2520(k.button);
+                this._tabContext.selector.setSelected(k.button);
             }
         }
 
         private function _Str_6025():void
         {
             Util._Str_2930(this._customContent);
-            var k:Tab = this._navigator.tabs._Str_2657();
+            var k:Tab = this._navigator.tabs.getSelected();
             k._Str_5252._Str_6025(this._customContent);
             if (Util._Str_13639(this._customContent))
             {
@@ -389,7 +389,7 @@
         private function _Str_5920():void
         {
             Util._Str_2930(this._footer);
-            var k:Tab = this._navigator.tabs._Str_2657();
+            var k:Tab = this._navigator.tabs.getSelected();
             k._Str_5252._Str_5920(this._footer);
             this._footer.visible = Util._Str_13639(this._footer);
         }
@@ -397,7 +397,7 @@
         private function _Str_24816(k:Boolean):void
         {
             Util._Str_2930(this._listContent);
-            var _local_2:Tab = this._navigator.tabs._Str_2657();
+            var _local_2:Tab = this._navigator.tabs.getSelected();
             var _local_3:Boolean = ((this._navigator.data._Str_25514) && (_local_2._Str_22642 == Tabs._Str_6358));
             this._Str_25672(k, _local_3);
             this._Str_24977(k, (!(_local_3)));
@@ -494,7 +494,7 @@
             ErrorReportStorage.addDebugData("MainViewCtrl", "Reloading RoomList");
             if ((((this.isOpen()) && (!(this._navigator.data._Str_4518 == null))) && (this._navigator.data._Str_4518.searchType == k)))
             {
-                this._Str_2798(this._navigator.tabs._Str_2657().id, k, "");
+                this._Str_2798(this._navigator.tabs.getSelected().id, k, "");
                 return true;
             }
             return false;
@@ -502,9 +502,9 @@
 
         public function _Str_2798(k:int, _arg_2:int, _arg_3:String="-1", _arg_4:int=1):void
         {
-            var _local_5:Tab = this._navigator.tabs._Str_2657();
+            var _local_5:Tab = this._navigator.tabs.getSelected();
             this._navigator.tabs._Str_13005(k);
-            var _local_6:Tab = this._navigator.tabs._Str_2657();
+            var _local_6:Tab = this._navigator.tabs.getSelected();
             ErrorReportStorage.addDebugData("StartSearch", ((("Start search " + _local_5.id) + " => ") + _local_6.id));
             if (this._phaseOneNavigator)
             {
@@ -640,7 +640,7 @@
                     return new _Str_10574(this._navigator.data._Str_6357);
                 case Tabs._Str_9891:
                     _local_3 = this._navigator.data._Str_4079;
-                    return new _Str_9911(_local_3._Str_7578, _local_3._Str_3544);
+                    return new _Str_9911(_local_3.goalId, _local_3.pageIndex);
                 case Tabs._Str_6358:
                 case Tabs._Str_12070:
                     return new _Str_11181(this._navigator.data._Str_6357, k);

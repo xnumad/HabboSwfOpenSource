@@ -141,9 +141,9 @@
             if (_local_4 != null)
             {
                 events.dispatchEvent(new SelectProductEvent(_local_4));
-                if (((_local_4.product) && (_local_4.product._Str_2588 == ProductTypeEnum.WALL)))
+                if (((_local_4.product) && (_local_4.product.productType == ProductTypeEnum.WALL)))
                 {
-                    events.dispatchEvent(new SetExtraPurchaseParameterEvent(_local_4.product._Str_2415));
+                    events.dispatchEvent(new SetExtraPurchaseParameterEvent(_local_4.product.extraParam));
                 }
             }
             if (_arg_2)
@@ -195,21 +195,21 @@
                 page.offers.sort(this._Str_24008);
                 for each (_local_5 in page.offers)
                 {
-                    if (((!(_local_5.product._Str_2686)) || (!(_local_5.product.isColorable))))
+                    if (((!(_local_5.product.furnitureData)) || (!(_local_5.product.isColorable))))
                     {
                         _local_2.push(_local_5);
                     }
                     else
                     {
-                        _local_3 = _local_5.product._Str_2686.fullName.split("*")[0];
-                        _local_4 = int(_local_5.product._Str_2686.fullName.split("*")[1]);
+                        _local_3 = _local_5.product.furnitureData.fullName.split("*")[0];
+                        _local_4 = int(_local_5.product.furnitureData.fullName.split("*")[1]);
                         if (!this._Str_8284[_local_3])
                         {
                             this._Str_8284[_local_3] = [];
                         }
-                        if (_local_5.product._Str_2686.colours)
+                        if (_local_5.product.furnitureData.colours)
                         {
-                            for each (_local_6 in _local_5.product._Str_2686.colours)
+                            for each (_local_6 in _local_5.product.furnitureData.colours)
                             {
                                 if (_local_6 != 0xFFFFFF)
                                 {
@@ -251,11 +251,11 @@
 
         private function _Str_24008(k:IPurchasableOffer, _arg_2:IPurchasableOffer):int
         {
-            if (((!(k.product._Str_2686.colourIndex)) || (!(_arg_2.product._Str_2686.colourIndex))))
+            if (((!(k.product.furnitureData.colourIndex)) || (!(_arg_2.product.furnitureData.colourIndex))))
             {
                 return 1;
             }
-            if (k.product._Str_2686.colourIndex > _arg_2.product._Str_2686.colourIndex)
+            if (k.product.furnitureData.colourIndex > _arg_2.product.furnitureData.colourIndex)
             {
                 return 1;
             }
@@ -268,7 +268,7 @@
 
         private function _Str_24106(k:IPurchasableOffer, _arg_2:IPurchasableOffer):int
         {
-            if (k.product._Str_2686.className > _arg_2.product._Str_2686.className)
+            if (k.product.furnitureData.className > _arg_2.product.furnitureData.className)
             {
                 return 1;
             }
@@ -424,10 +424,10 @@
             }
             _local_4 = this._Str_2448._Str_3373(_local_2.gridItem.view);
             this._Str_25239(_local_2);
-            var _local_5:String = ((_local_2.product._Str_2686.fullName.split("*")[0] + "*") + (k.index + 1));
+            var _local_5:String = ((_local_2.product.furnitureData.fullName.split("*")[0] + "*") + (k.index + 1));
             for each (_local_3 in page.offers)
             {
-                if (_local_3.product._Str_2686.fullName == _local_5)
+                if (_local_3.product.furnitureData.fullName == _local_5)
                 {
                     this._Str_2448._Str_12115(_local_3.gridItem.view, _local_4);
                     this.select(_local_3.gridItem, false);
@@ -451,7 +451,7 @@
             {
                 return [];
             }
-            return this._Str_8284[k.product._Str_2686.fullName.split("*")[0]];
+            return this._Str_8284[k.product.furnitureData.fullName.split("*")[0]];
         }
 
         private function _Str_25049():int
@@ -469,7 +469,7 @@
             {
                 return 0;
             }
-            return Math.max((k.product._Str_2686.colourIndex - 1), 0);
+            return Math.max((k.product.furnitureData.colourIndex - 1), 0);
         }
     }
 }

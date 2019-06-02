@@ -120,7 +120,7 @@
                 k = this._container.roomEngine.getRoomObject(this._cachedRequest.roomId, this._cachedRequest._Str_1577, this._cachedRequest.category);
                 if (k != null)
                 {
-                    _local_2 = this._container.roomEngine._Str_6960(this._cachedRequest.roomId, this._cachedRequest._Str_1577, this._cachedRequest.category);
+                    _local_2 = this._container.roomEngine.getRoomObjectScreenLocation(this._cachedRequest.roomId, this._cachedRequest._Str_1577, this._cachedRequest.category);
                     if (_local_2 != null)
                     {
                         this._widget._Str_23957(_local_2.x, _local_2.y);

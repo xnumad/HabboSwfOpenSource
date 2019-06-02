@@ -114,7 +114,7 @@
         {
             this._list.arrangeListItems();
             this._window.visible = ((this._list.getListItemAt(0).visible) || (this._list.getListItemAt(1).visible));
-            this._toolbar.extensionView._Str_8848();
+            this._toolbar.extensionView.refreshItemWindow();
         }
     }
 }

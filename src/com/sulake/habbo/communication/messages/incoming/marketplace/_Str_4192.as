@@ -39,7 +39,7 @@
             return this._furniId;
         }
 
-        public function get _Str_4120():int
+        public function get furniType():int
         {
             return this._Str_11835;
         }

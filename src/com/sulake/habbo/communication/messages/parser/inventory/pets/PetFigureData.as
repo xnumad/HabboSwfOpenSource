@@ -44,7 +44,7 @@
             return this._color;
         }
 
-        public function get _Str_3343():int
+        public function get breedId():int
         {
             return this._breedId;
         }
@@ -53,7 +53,7 @@
         {
             var _local_2:int;
             var k:String = ((((this.typeId + " ") + this.paletteId) + " ") + this.color);
-            k = (k + (" " + this._Str_13619));
+            k = (k + (" " + this.customPartCount));
             for each (_local_2 in this._Str_3542)
             {
                 k = (k + (" " + _local_2));
@@ -66,7 +66,7 @@
             return this._customParts;
         }
 
-        public function get _Str_13619():int
+        public function get customPartCount():int
         {
             return this._customPartCount;
         }

@@ -19,7 +19,7 @@
             super(k);
         }
 
-        public function get _Str_21872():Array
+        public function get eventTypes():Array
         {
             return this._eventTypes;
         }

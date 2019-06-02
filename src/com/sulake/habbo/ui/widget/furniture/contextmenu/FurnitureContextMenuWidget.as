@@ -152,7 +152,7 @@
             {
                 this.removeView(this._view, false);
             }
-            this._cachedRandomTeleportContextView._Str_4093 = _arg_2;
+            this._cachedRandomTeleportContextView.objectCategory = _arg_2;
             this._view = this._cachedRandomTeleportContextView;
             FurnitureContextInfoView.setup(this._view, k);
             this._component.registerUpdateReceiver(this, 10);
@@ -165,7 +165,7 @@
             {
                 this.removeView(this._view, false);
             }
-            this._cachedMonsterPlantSeedContextView._Str_4093 = _arg_2;
+            this._cachedMonsterPlantSeedContextView.objectCategory = _arg_2;
             this._view = this._cachedMonsterPlantSeedContextView;
             FurnitureContextInfoView.setup(this._view, k);
             this._component.registerUpdateReceiver(this, 10);
@@ -282,7 +282,7 @@
                 this._cachedUsableFurnitureContextView = new GenericUsableFurnitureContextMenuView(this);
             }
             this._cachedUsableFurnitureContextView.show();
-            this._cachedUsableFurnitureContextView._Str_4093 = _arg_2;
+            this._cachedUsableFurnitureContextView.objectCategory = _arg_2;
             this._view = this._cachedUsableFurnitureContextView;
             FurnitureContextInfoView.setup(this._view, k);
             this._component.registerUpdateReceiver(this, 10);

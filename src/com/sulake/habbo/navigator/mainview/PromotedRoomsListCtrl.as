@@ -141,7 +141,7 @@
                 _local_3 = this._Str_5067(_arg_2);
                 this._navigator.data.roomSessionTags = new RoomSessionTags(_local_3.code, "1");
                 this._navigator.goToPrivateRoom(_local_3._Str_7144.flatId);
-                this._navigator._Str_7852();
+                this._navigator.closeNavigator();
             }
         }
 
@@ -152,7 +152,7 @@
             {
                 _local_3 = this._Str_5067(_arg_2);
                 this._navigator.trackGoogle("extendedProfile", "navigator_promotedRoom");
-                this._navigator.send(new _Str_2553(_local_3._Str_7144._Str_2481));
+                this._navigator.send(new _Str_2553(_local_3._Str_7144.ownerId));
             }
         }
 

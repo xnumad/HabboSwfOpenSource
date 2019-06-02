@@ -8,8 +8,8 @@
         public static const RSQE_QUEUE_STATUS:String = "RSQE_QUEUE_STATUS";
         public static const C:String = "c";
         public static const D:String = "d";
-        public static const _Str_14665:int = 2;
-        public static const _Str_14078:int = 1;
+        public static const QUEUE_TARGET_VISITOR:int = 2;
+        public static const QUEUE_TARGET_SPECTATOR:int = 1;
 
         private var _name:String;
         private var _target:int;
@@ -31,27 +31,27 @@
             return this._isActive;
         }
 
-        public function get _Str_26076():String
+        public function get queueSetName():String
         {
             return this._name;
         }
 
-        public function get _Str_22709():int
+        public function get queueSetTarget():int
         {
             return this._target;
         }
 
-        public function get _Str_14282():Array
+        public function get queueTypes():Array
         {
             return this._queues.getKeys();
         }
 
-        public function _Str_11510(k:String):int
+        public function getQueueSize(k:String):int
         {
             return this._queues.getValue(k);
         }
 
-        public function _Str_17628(k:String, _arg_2:int):void
+        public function addQueue(k:String, _arg_2:int):void
         {
             this._queues.add(k, _arg_2);
         }

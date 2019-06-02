@@ -83,10 +83,10 @@
             this._windowManager = k;
             if (this._windowManager.communication != null)
             {
-                this._floorHeightMapMessageEvent = new _Str_4279(this._Str_8654);
+                this._floorHeightMapMessageEvent = new _Str_4279(this.onFloorHeightMap);
                 this._entryTileDataMessageEvent = new _Str_4976(this._Str_16587);
                 this._occupiedTilesMessageEvent = new _Str_6566(this._Str_18596);
-                this._roomVisualizationSettingsMessageEvent = new _Str_4196(this._Str_12439);
+                this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
                 this._perkAllowancesMessageEvent = new _Str_3277(this.onPerkAllowances);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._floorHeightMapMessageEvent);
@@ -222,8 +222,8 @@
             this._heightMapEditor._Str_9032();
             this._Str_23811(this._heightMapEditor._Str_17977);
             this._Str_20209("add_tile");
-            IItemListWindow(this._editorWindow.findChildByName("heightmap_wrapper"))._Str_6129 = true;
-            IItemListWindow(this._editorWindow.findChildByName("preview_wrapper"))._Str_6129 = true;
+            IItemListWindow(this._editorWindow.findChildByName("heightmap_wrapper")).disableAutodrag = true;
+            IItemListWindow(this._editorWindow.findChildByName("preview_wrapper")).disableAutodrag = true;
             if (((!(this._windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))) && (this._bcSecondsLeft <= 0)))
             {
                 this._editorWindow.findChildByName("save").disable();
@@ -279,7 +279,7 @@
                         this._windowManager.communication.connection.send(new _Str_7289(this._floorPlanCache._Str_21406(), this._floorPlanCache._Str_7642.x, this._floorPlanCache._Str_7642.y, this._floorPlanCache._Str_6184, _Str_8298(this._wallThickness), _Str_8298(this._floorThickness), ((this._Str_18668) ? this._fixedWallsHeight : -1)));
                         break;
                     case "reload":
-                        this._floorPlanCache._Str_8654(this._lastReceivedMapEvent);
+                        this._floorPlanCache.onFloorHeightMap(this._lastReceivedMapEvent);
                         if (this._floorPlanPreviewer)
                         {
                             this._floorPlanPreviewer._Str_3190();
@@ -432,7 +432,7 @@
         {
             if (k == -1)
             {
-                ICheckBoxWindow(this._editorWindow.findChildByName("walls_fixed_height_enabled_checkbox"))._Str_2205();
+                ICheckBoxWindow(this._editorWindow.findChildByName("walls_fixed_height_enabled_checkbox")).unselect();
                 this._Str_17114(false);
             }
             else
@@ -470,10 +470,10 @@
             }
         }
 
-        private function _Str_8654(k:_Str_4279):void
+        private function onFloorHeightMap(k:_Str_4279):void
         {
             this._lastReceivedMapEvent = k;
-            this._floorPlanCache._Str_8654(k);
+            this._floorPlanCache.onFloorHeightMap(k);
             this._fixedWallsHeight = k._Str_2273().fixedWallsHeight;
             if (this._floorPlanPreviewer)
             {
@@ -514,7 +514,7 @@
             }
         }
 
-        private function _Str_12439(k:_Str_4196):void
+        private function onRoomVisualizationSettings(k:_Str_4196):void
         {
             var _local_2:_Str_6347 = k._Str_2273();
             this._floorThickness = this._Str_10107(_local_2._Str_9990);

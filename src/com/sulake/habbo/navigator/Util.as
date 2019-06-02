@@ -206,7 +206,7 @@
         public static function _Str_21690(k:IWindow):Boolean
         {
             var _local_2:Point = new Point();
-            k._Str_12181(_local_2);
+            k.getRelativeMousePosition(_local_2);
             var _local_3:Boolean = ((((_local_2.x >= 0) && (_local_2.y >= 0)) && (_local_2.x < k.width)) && (_local_2.y < k.height));
             return _local_3;
         }

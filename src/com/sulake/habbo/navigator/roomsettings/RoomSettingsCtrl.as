@@ -108,7 +108,7 @@
             return true;
         }
 
-        private static function _Str_9289(k:TextFieldManager, _arg_2:String):void
+        private static function setTag(k:TextFieldManager, _arg_2:String):void
         {
             k._Str_2497(((_arg_2 == null) ? "" : (((_Str_8651) ? "#" : "") + _arg_2)));
         }
@@ -191,7 +191,7 @@
         {
             this.close();
             this._Str_2449 = k;
-            this._Str_2366 = this._Str_2272.data._Str_2678._Str_3094;
+            this._Str_2366 = this._Str_2272.data._Str_2678.habboGroupId;
             this._Str_2272.send(new _Str_7484(this._Str_2449));
             this._Str_2272.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
@@ -377,7 +377,7 @@
         private function _Str_5306(k:int):void
         {
             this._Str_5809 = k;
-            this._Str_2498.selector._Str_2520(ISelectableWindow(this._window.findChildByName(("tab_" + k))));
+            this._Str_2498.selector.setSelected(ISelectableWindow(this._window.findChildByName(("tab_" + k))));
             this._window._Str_7032 = this._Str_20309(this._Str_5809);
         }
 
@@ -546,7 +546,7 @@
                     this._Str_2498._Str_5377(_local_2);
                 }
             }
-            this._Str_2498.selector._Str_2520(ISelectableWindow(this._window.findChildByName(("tab_" + this._Str_5809))));
+            this._Str_2498.selector.setSelected(ISelectableWindow(this._window.findChildByName(("tab_" + this._Str_5809))));
         }
 
         private function _Str_25046():void
@@ -565,13 +565,13 @@
 
         private function _Str_19901():void
         {
-            /*if (this._Str_2272._Str_2627._Str_4701() || this._Str_5809 != _Str_13301)
+            if (this._Str_2272._Str_2627.isAccountSafetyLocked())
             {
                 this._window.findChildByName("remove_link_region").disable();
                 this._window.findChildByName("remove_link").blend = 0.5;
                 this._window.findChildByName("remove_icon").blend = 0.5;
             }
-            else*/
+            else
             {
                 this._window.findChildByName("remove_link_region").enable();
                 this._window.findChildByName("remove_link").blend = 1;
@@ -668,32 +668,32 @@
                 this._window.findChildByName("doormode_override_info").visible = ((this._Str_2272.isDoorModeOverriddenInCurrentRoom) && (!(this._Str_2272._Str_2627.hasSecurity(SecurityLevelEnum._Str_3751))));
                 switch (k._Str_2738)
                 {
-                    case RoomSettingsData._Str_4199:
+                    case RoomSettingsData.DOORMODE_CLOSED:
                         _local_3 = (this._window.findChildByName("doormode_doorbell") as IRadioButtonWindow);
-                        _local_2._Str_2520(_local_3);
+                        _local_2.setSelected(_local_3);
                         break;
-                    case RoomSettingsData._Str_3711:
+                    case RoomSettingsData.DOORMODE_PASSWORD:
                         _local_4 = (this._window.findChildByName("doormode_password") as IRadioButtonWindow);
-                        _local_2._Str_2520(_local_4);
+                        _local_2.setSelected(_local_4);
                         break;
-                    case RoomSettingsData._Str_4775:
+                    case RoomSettingsData.DOORMODE_INVISIBLE:
                         _local_5 = (this._window.findChildByName("doormode_invisible") as IRadioButtonWindow);
-                        _local_2._Str_2520(_local_5);
+                        _local_2.setSelected(_local_5);
                         break;
-                    case RoomSettingsData._Str_5316:
+                    case RoomSettingsData.DOORMODE_NOOBS_ONLY:
                         break;
                     default:
                         _local_6 = (this._window.findChildByName("doormode_open") as IRadioButtonWindow);
-                        _local_2._Str_2520(_local_6);
+                        _local_2.setSelected(_local_6);
                 }
-                this._Str_16749((k._Str_2738 == RoomSettingsData._Str_3711));
+                this._Str_16749((k._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD));
             }
             Logger.log(("CATEGORY ID: " + k._Str_2712));
             this._Str_24436(k._Str_2712);
             this._Str_24623(k._Str_3827);
             this._Str_10439(k);
-            _Str_9289(this._tag1Input, k.tags[0]);
-            _Str_9289(this._tag2Input, k.tags[1]);
+            setTag(this._tag1Input, k.tags[0]);
+            setTag(this._tag2Input, k.tags[1]);
             if (this._Str_7157)
             {
                 if (k._Str_5667)
@@ -702,7 +702,7 @@
                 }
                 else
                 {
-                    this._Str_7157._Str_2205();
+                    this._Str_7157.unselect();
                 }
             }
             if (this._Str_7429)
@@ -713,7 +713,7 @@
                 }
                 else
                 {
-                    this._Str_7429._Str_2205();
+                    this._Str_7429.unselect();
                 }
             }
             if (this._Str_5537)
@@ -724,7 +724,7 @@
                 }
                 else
                 {
-                    this._Str_5537._Str_2205();
+                    this._Str_5537.unselect();
                 }
             }
             if (this._Str_6233)
@@ -735,7 +735,7 @@
                 }
                 else
                 {
-                    this._Str_6233._Str_2205();
+                    this._Str_6233.unselect();
                 }
             }
             if (!this._Str_21757())
@@ -760,7 +760,7 @@
                 }
                 else
                 {
-                    this._Str_5830._Str_2205();
+                    this._Str_5830.unselect();
                 }
             }
             this._Str_15306.selection = k._Str_4965.mode;
@@ -793,7 +793,7 @@
                 default:
                     _local_2 = (this._window.findChildByName("moderation_mute_none") as IRadioButtonWindow);
             }
-            _local_3._Str_2520(_local_2);
+            _local_3.setSelected(_local_2);
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
             switch (k._Str_4418._Str_6332)
             {
@@ -806,7 +806,7 @@
                 default:
                     _local_2 = (this._window.findChildByName("moderation_kick_none") as IRadioButtonWindow);
             }
-            _local_4._Str_2520(_local_2);
+            _local_4.setSelected(_local_2);
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
             switch (k._Str_4418._Str_7772)
             {
@@ -816,7 +816,7 @@
                 default:
                     _local_2 = (this._window.findChildByName("moderation_ban_none") as IRadioButtonWindow);
             }
-            _local_5._Str_2520(_local_2);
+            _local_5.setSelected(_local_2);
         }
 
         private function _Str_21757():Boolean
@@ -929,7 +929,7 @@
             k.name = this._Str_5666.getText();
             k.description = this._Str_7105.getText();
             var _local_2:ISelectorWindow = (this._window.findChildByName("doormode") as ISelectorWindow);
-            var _local_3:IWindow = _local_2._Str_2657();
+            var _local_3:IWindow = _local_2.getSelected();
             if (_local_3 == null)
             {
                 k._Str_2738 = this._roomSettingsData._Str_2738;
@@ -939,19 +939,19 @@
                 switch (_local_3.name)
                 {
                     case "doormode_doorbell":
-                        k._Str_2738 = _Str_3560._Str_4199;
+                        k._Str_2738 = _Str_3560.DOORMODE_CLOSED;
                         break;
                     case "doormode_password":
-                        k._Str_2738 = _Str_3560._Str_3711;
+                        k._Str_2738 = _Str_3560.DOORMODE_PASSWORD;
                         break;
                     case "doormode_invisible":
-                        k._Str_2738 = _Str_3560._Str_4775;
+                        k._Str_2738 = _Str_3560.DOORMODE_INVISIBLE;
                         break;
                     default:
-                        k._Str_2738 = _Str_3560._Str_8178;
+                        k._Str_2738 = _Str_3560.DOORMODE_OPEN;
                 }
             }
-            if (k._Str_2738 == _Str_3560._Str_3711)
+            if (k._Str_2738 == _Str_3560.DOORMODE_PASSWORD)
             {
                 _local_8 = this._Str_4194.getText();
                 _local_9 = this._Str_7349.getText();
@@ -1013,7 +1013,7 @@
         {
             var _local_2:IWindow;
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);
-            _local_2 = _local_3._Str_2657();
+            _local_2 = _local_3.getSelected();
             switch (_local_2.name)
             {
                 case "moderation_mute_rights":
@@ -1023,7 +1023,7 @@
                     k._Str_7688 = _Str_2817._Str_10707;
             }
             var _local_4:ISelectorWindow = (this._window.findChildByName("moderation_kick_selector") as ISelectorWindow);
-            _local_2 = _local_4._Str_2657();
+            _local_2 = _local_4.getSelected();
             switch (_local_2.name)
             {
                 case "moderation_kick_rights":
@@ -1036,7 +1036,7 @@
                     k._Str_6332 = _Str_2817._Str_10707;
             }
             var _local_5:ISelectorWindow = (this._window.findChildByName("moderation_ban_selector") as ISelectorWindow);
-            _local_2 = _local_5._Str_2657();
+            _local_2 = _local_5.getSelected();
             switch (_local_2.name)
             {
                 case "moderation_ban_rights":
@@ -1053,7 +1053,7 @@
             {
                 return;
             }
-            if (this._Str_2449 == this._Str_2272._Str_3374)
+            if (this._Str_2449 == this._Str_2272.homeRoomId)
             {
                 this._Str_2272.windowManager.alert("${navigator.delete.homeroom.title}", "${navigator.delete.homeroom.body}", 0, this._Str_3168);
                 return;
@@ -1101,7 +1101,7 @@
             if (this._Str_2272.data._Str_4518 != null)
             {
                 k = this._Str_2272.data._Str_4518;
-                this._Str_2272._Str_2813._Str_2798(this._Str_2272.tabs._Str_2657().id, k.searchType, k._Str_25185);
+                this._Str_2272._Str_2813._Str_2798(this._Str_2272.tabs.getSelected().id, k.searchType, k._Str_25185);
             }
         }
 
@@ -1130,7 +1130,7 @@
             {
                 return;
             }
-            var k:* = (this._Str_2272.data._Str_2678._Str_3094 > 0);
+            var k:* = (this._Str_2272.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_access_disclaimer").visible = k;
         }
 
@@ -1145,7 +1145,7 @@
             {
                 return;
             }
-            var k:* = (this._Str_2272.data._Str_2678._Str_3094 > 0);
+            var k:* = (this._Str_2272.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_rights_container").visible = k;
             this._window.findChildByName("normal_rights_container").visible = (!(k));
             if (k)
@@ -1160,12 +1160,12 @@
             }
             else
             {
-                _local_2 = this._roomSettingsData._Str_23268;
+                _local_2 = this._roomSettingsData.controllerList;
             }
             var _local_3:String = ITextWindow(this._window.findChildByName("filter_users_input")).text.toLowerCase();
             var _local_4:Array = this._Str_24611();
-            this._Str_8572.refresh(IItemListWindow(this._window.findChildByName("users_with_rights_item_list")), _local_2, _local_3, this._roomSettingsData._Str_21764);
-            this._Str_8896.refresh(IItemListWindow(this._window.findChildByName("friends_item_list")), _local_4, _local_3, this._roomSettingsData._Str_21764);
+            this._Str_8572.refresh(IItemListWindow(this._window.findChildByName("users_with_rights_item_list")), _local_2, _local_3, this._roomSettingsData.highlightedUserId);
+            this._Str_8896.refresh(IItemListWindow(this._window.findChildByName("friends_item_list")), _local_4, _local_3, this._roomSettingsData.highlightedUserId);
             this._Str_2272.registerParameter("navigator.flatctrls.userswithrights", "displayed", ("" + this._Str_8572.userCount));
             this._Str_2272.registerParameter("navigator.flatctrls.friends", "displayed", ("" + this._Str_8896.userCount));
             this._Str_2272.registerParameter("navigator.flatctrls.userswithrights", "total", ("" + _local_2.length));
@@ -1179,14 +1179,14 @@
             {
                 return;
             }
-            if (this._roomSettingsData._Str_24107 == null)
+            if (this._roomSettingsData.bannedUsersById == null)
             {
                 this._Str_2272.send(new _Str_12287(this._roomSettingsData.roomId));
                 k = new Array();
             }
             else
             {
-                k = this._roomSettingsData._Str_25521;
+                k = this._roomSettingsData.bannedUsersList;
             }
             this._Str_7254.refresh(IItemListWindow(this._window.findChildByName("moderation_banned_users")), k, "", 0);
         }

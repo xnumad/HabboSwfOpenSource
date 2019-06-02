@@ -8,8 +8,8 @@
 
     public class FurnitureVoteCounterLogic extends FurnitureMultistateLogic 
     {
-        private static const _Str_3536:int = 33;
-        private static const _Str_5967:int = 1000;
+        private static const UPDATE_INTERVAL:int = 33;
+        private static const MAX_UPDATE_TIME:int = 1000;
 
         private var _total:int = 0;
         private var _lastUpdate:int = 0;
@@ -26,17 +26,17 @@
                 _local_3 = (_local_2.data as VoteResultStuffData);
                 if (_local_3 != null)
                 {
-                    this._Str_24990(_local_3.result);
+                    this.updateTotal(_local_3.result);
                 }
             }
         }
 
-        private function get _Str_8221():int
+        private function get currentTotal():int
         {
             return int(object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_VOTE_COUNTER_COUNT));
         }
 
-        private function _Str_24990(k:int):void
+        private function updateTotal(k:int):void
         {
             var _local_2:int;
             this._total = k;
@@ -46,16 +46,16 @@
                 this._lastUpdate = getTimer();
                 return;
             }
-            if (this._total != this._Str_8221)
+            if (this._total != this.currentTotal)
             {
-                _local_2 = Math.abs((this._total - this._Str_8221));
-                if ((_local_2 * _Str_3536) > _Str_5967)
+                _local_2 = Math.abs((this._total - this.currentTotal));
+                if ((_local_2 * UPDATE_INTERVAL) > MAX_UPDATE_TIME)
                 {
-                    this._updateInterval = (_Str_5967 / _local_2);
+                    this._updateInterval = (MAX_UPDATE_TIME / _local_2);
                 }
                 else
                 {
-                    this._updateInterval = _Str_3536;
+                    this._updateInterval = UPDATE_INTERVAL;
                 }
                 this._lastUpdate = getTimer();
             }
@@ -69,20 +69,20 @@
             super.update(k);
             if (object != null)
             {
-                if (((!(this._Str_8221 == this._total)) && (k >= (this._lastUpdate + this._updateInterval))))
+                if (((!(this.currentTotal == this._total)) && (k >= (this._lastUpdate + this._updateInterval))))
                 {
                     _local_2 = (k - this._lastUpdate);
                     _local_3 = (_local_2 / this._updateInterval);
                     _local_4 = 1;
-                    if (this._total < this._Str_8221)
+                    if (this._total < this.currentTotal)
                     {
                         _local_4 = -1;
                     }
-                    if (_local_3 > (_local_4 * (this._total - this._Str_8221)))
+                    if (_local_3 > (_local_4 * (this._total - this.currentTotal)))
                     {
-                        _local_3 = (_local_4 * (this._total - this._Str_8221));
+                        _local_3 = (_local_4 * (this._total - this.currentTotal));
                     }
-                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_VOTE_COUNTER_COUNT, (this._Str_8221 + (_local_4 * _local_3)));
+                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_VOTE_COUNTER_COUNT, (this.currentTotal + (_local_4 * _local_3)));
                     this._lastUpdate = (k - (_local_2 - (_local_3 * this._updateInterval)));
                 }
             }

@@ -3,7 +3,7 @@
     import com.sulake.room.utils.XMLValidator;
     import flash.display.BitmapData;
     import com.sulake.habbo.room.object.visualization.room.utils.PlaneBitmapData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class WallRasterizer extends PlaneRasterizer 
     {
@@ -42,7 +42,7 @@
                     _local_5 = _local_4.@id;
                     _local_6 = _local_4.visualization;
                     _local_7 = new WallPlane();
-                    _Str_9137(_local_7, _local_6);
+                    parseVisualizations(_local_7, _local_6);
                     if (!_Str_3453(_local_5, _local_7))
                     {
                         _local_7.dispose();
@@ -52,13 +52,13 @@
             }
         }
 
-        override public function render(canvas:BitmapData, id:String, width:Number, height:Number, scale:Number, normal:IVector3D, useTexture:Boolean, offsetX:Number=0, offsetY:Number=0, maxX:Number=0, maxY:Number=0, timeSinceStartMs:int=0):PlaneBitmapData
+        override public function render(canvas:BitmapData, id:String, width:Number, height:Number, scale:Number, normal:IVector3d, useTexture:Boolean, offsetX:Number=0, offsetY:Number=0, maxX:Number=0, maxY:Number=0, timeSinceStartMs:int=0):PlaneBitmapData
         {
             var bitmapData:BitmapData;
-            var wall:WallPlane = (_Str_3491(id) as WallPlane);
+            var wall:WallPlane = (getPlane(id) as WallPlane);
             if (wall == null)
             {
-                wall = (_Str_3491(DEFAULT) as WallPlane);
+                wall = (getPlane(DEFAULT) as WallPlane);
             }
             if (wall == null)
             {
@@ -88,7 +88,7 @@
             return planeBitmapData;
         }
 
-        override public function getTextureIdentifier(k:Number, _arg_2:IVector3D):String
+        override public function getTextureIdentifier(k:Number, _arg_2:IVector3d):String
         {
             if (_arg_2 != null)
             {

@@ -90,14 +90,14 @@
                     _local_8 = _local_6.@override;
                     this._overriddenActions.add(_local_8, _local_7);
                     _local_9 = new Array();
-                    this._Str_1031(_local_9, _local_6.frame, k);
+                    this.parseFrames(_local_9, _local_6.frame, k);
                     this._overrideFrames.add(_local_7, _local_9);
                 }
             }
-            this._Str_1031(this._frames, _arg_2.frame, k);
+            this.parseFrames(this._frames, _arg_2.frame, k);
         }
 
-        private function _Str_1031(k:Array, _arg_2:XMLList, _arg_3:AvatarStructure):void
+        private function parseFrames(k:Array, _arg_2:XMLList, _arg_3:AvatarStructure):void
         {
             var _local_4:Array;
             var _local_5:IActionDefinition;
@@ -158,7 +158,7 @@
             return 0;
         }
 
-        public function _Str_1892():Boolean
+        public function hasOverriddenActions():Boolean
         {
             if (!this._overriddenActions)
             {
@@ -167,7 +167,7 @@
             return this._overriddenActions.length > 0;
         }
 
-        public function _Str_1571():Array
+        public function overriddenActionNames():Array
         {
             if (!this._overriddenActions)
             {
@@ -207,7 +207,7 @@
             return _local_3;
         }
 
-        public function _Str_1065(k:int, _arg_2:String=null):Array
+        public function getAnimatedBodyPartIds(k:int, _arg_2:String=null):Array
         {
             var _local_4:AnimationLayerData;
             var _local_5:AddDataContainer;
@@ -277,7 +277,7 @@
             return !(this._addData == null);
         }
 
-        public function _Str_1550(k:String):AddDataContainer
+        public function getAddData(k:String):AddDataContainer
         {
             var _local_2:AddDataContainer;
             if (this._addData)
@@ -303,12 +303,12 @@
             return (this._spriteData) ? this._spriteData : _Str_2211;
         }
 
-        public function get _Str_1475():AvatarDataContainer
+        public function get avatarData():AvatarDataContainer
         {
             return this._avatarData;
         }
 
-        public function get _Str_1493():DirectionDataContainer
+        public function get directionData():DirectionDataContainer
         {
             return this._directionData;
         }

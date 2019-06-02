@@ -24,11 +24,11 @@
         public function CitizenshipPopupController(k:HabboTalent)
         {
             this._habboTalent = k;
-            this._messageEvent = new _Str_2752(this._Str_3012);
+            this._messageEvent = new _Str_2752(this.onCreditBalance);
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(this._messageEvent);
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             var _local_2:Timer;
             if ((((this._habboTalent._Str_7478) && (!(this._seenPopupDuringSession))) && (this._habboTalent.getBoolean("new.user.citizenship.popup.enabled"))))

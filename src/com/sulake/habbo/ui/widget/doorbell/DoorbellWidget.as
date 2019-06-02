@@ -74,7 +74,7 @@
 
         private function _Str_19983(k:_Str_3436):void
         {
-            this._Str_17581(k.userName);
+            this.addUser(k.userName);
         }
 
         private function _Str_14009(k:_Str_3436):void
@@ -82,7 +82,7 @@
             this._Str_18587(k.userName);
         }
 
-        public function _Str_17581(k:String):void
+        public function addUser(k:String):void
         {
             if (this._users.indexOf(k) != -1)
             {

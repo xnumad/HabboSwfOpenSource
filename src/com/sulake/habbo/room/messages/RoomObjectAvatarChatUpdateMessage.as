@@ -9,7 +9,7 @@
             this._numberOfWords = k;
         }
 
-        public function get _Str_19452():int
+        public function get numberOfWords():int
         {
             return this._numberOfWords;
         }

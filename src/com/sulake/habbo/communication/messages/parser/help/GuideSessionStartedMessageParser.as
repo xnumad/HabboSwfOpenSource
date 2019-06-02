@@ -29,32 +29,32 @@
             return true;
         }
 
-        public function get _Str_7048():int
+        public function get requesterUserId():int
         {
             return this._requesterUserId;
         }
 
-        public function get _Str_6445():String
+        public function get requesterName():String
         {
             return this._requesterName;
         }
 
-        public function get _Str_22457():String
+        public function get requesterFigure():String
         {
             return this._requesterFigure;
         }
 
-        public function get _Str_20217():int
+        public function get guideUserId():int
         {
             return this._guideUserId;
         }
 
-        public function get _Str_4207():String
+        public function get guideName():String
         {
             return this._guideName;
         }
 
-        public function get _Str_6667():String
+        public function get guideFigure():String
         {
             return this._guideFigure;
         }

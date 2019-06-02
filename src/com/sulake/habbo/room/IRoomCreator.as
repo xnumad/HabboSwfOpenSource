@@ -11,20 +11,20 @@
 
     public interface IRoomCreator extends IRoomObjectCreator 
     {
-        function _Str_10152(_arg_1:int, _arg_2:XML):void;
+        function initializeRoom(_arg_1:int, _arg_2:XML):void;
         function getRoom(_arg_1:int):IRoomInstance;
         function disposeRoom(_arg_1:int):void;
-        function _Str_19096(_arg_1:int, _arg_2:int):void;
-        function _Str_20520(_arg_1:int, _arg_2:String):void;
-        function _Str_5146(_arg_1:int):IRoomObjectController;
+        function setOwnUserId(_arg_1:int, _arg_2:int):void;
+        function setWorldType(_arg_1:int, _arg_2:String):void;
+        function getObjectRoom(_arg_1:int):IRoomObjectController;
         function setFurniStackingHeightMap(_arg_1:int, _arg_2:FurniStackingHeightMap):void;
         function getFurniStackingHeightMap(_arg_1:int):FurniStackingHeightMap;
-        function _Str_5364(_arg_1:int):LegacyWallGeometry;
+        function getLegacyGeometry(_arg_1:int):LegacyWallGeometry;
         function _Str_15934(_arg_1:int):TileObjectMap;
-        function _Str_9515(_arg_1:int, _arg_2:String):Number;
-        function _Str_4323(_arg_1:int, _arg_2:String):String;
-        function _Str_21966(_arg_1:int, _arg_2:Boolean):void;
-        function _Str_17722(_arg_1:int, _arg_2:String):void;
+        function getRoomNumberValue(_arg_1:int, _arg_2:String):Number;
+        function getRoomStringValue(_arg_1:int, _arg_2:String):String;
+        function setIsPlayingGame(_arg_1:int, _arg_2:Boolean):void;
+        function refreshTileObjectMap(_arg_1:int, _arg_2:String):void;
         function get configuration():IHabboConfigurationManager;
         function get roomSessionManager():IRoomSessionManager;
         function get sessionDataManager():ISessionDataManager;

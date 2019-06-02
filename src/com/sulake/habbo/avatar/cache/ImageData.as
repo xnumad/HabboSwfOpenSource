@@ -58,7 +58,7 @@
             return this._colorTransform;
         }
 
-        public function get _Str_1567():Rectangle
+        public function get offsetRect():Rectangle
         {
             var k:Rectangle = new Rectangle(0, 0, this._rect.width, this._rect.height);
             k.offset(-(this._regPoint.x), -(this._regPoint.y));

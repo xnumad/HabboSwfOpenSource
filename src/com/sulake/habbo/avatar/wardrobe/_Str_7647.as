@@ -14,15 +14,15 @@
     public class _Str_7647 
     {
         private var _windowManager:IHabboWindowManager;
-        private var _Str_2430:IAssetLibrary;
+        private var _assetLibrary:IAssetLibrary;
         private var _window:IWindowContainer;
         private var _Str_2840:IBitmapWrapperWindow;
 
         public function _Str_7647(k:IHabboWindowManager, _arg_2:IAssetLibrary, _arg_3:Boolean)
         {
             this._windowManager = k;
-            this._Str_2430 = _arg_2;
-            var _local_4:XmlAsset = (this._Str_2430.getAssetByName("Outfit") as XmlAsset);
+            this._assetLibrary = _arg_2;
+            var _local_4:XmlAsset = (this._assetLibrary.getAssetByName("Outfit") as XmlAsset);
             this._window = IWindowContainer(this._windowManager.buildFromXML((_local_4.content as XML)));
             if (this._window != null)
             {
@@ -37,7 +37,7 @@
         public function dispose():void
         {
             this._windowManager = null;
-            this._Str_2430 = null;
+            this._assetLibrary = null;
             if (this._window)
             {
                 this._window.dispose();

@@ -54,7 +54,7 @@
             var _local_4:int;
             while (_local_4 < _arg_2)
             {
-                _local_5 = k._Str_5050(String(_local_4));
+                _local_5 = k.getSelectableByName(String(_local_4));
                 if (_local_5 != null)
                 {
                     _local_5.disable();
@@ -70,7 +70,7 @@
             _local_4 = _arg_2;
             while (_local_4 < 4)
             {
-                _local_5 = k._Str_5050(String(_local_4));
+                _local_5 = k.getSelectableByName(String(_local_4));
                 if (_local_5 != null)
                 {
                     _local_5.enable();
@@ -82,7 +82,7 @@
                     }
                     if (_local_4 == _arg_3)
                     {
-                        k._Str_2520(_local_5);
+                        k.setSelected(_local_5);
                     }
                 }
                 _local_4++;
@@ -92,7 +92,7 @@
 
         private static function _Str_6359(k:ISelectorWindow):int
         {
-            var _local_2:ISelectableWindow = k._Str_2657();
+            var _local_2:ISelectableWindow = k.getSelected();
             if (_local_2 == null)
             {
                 return 0;
@@ -170,9 +170,9 @@
         {
             var _local_3:ISelectableWindow;
             var _local_2:int;
-            while (_local_2 < k._Str_6010)
+            while (_local_2 < k.numSelectables)
             {
-                _local_3 = k._Str_5066(_local_2);
+                _local_3 = k.getSelectableAt(_local_2);
                 _local_3.removeEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_20995);
                 _local_3.addEventListener(WindowEvent.WINDOW_EVENT_SELECTED, this._Str_20995);
                 _local_2++;

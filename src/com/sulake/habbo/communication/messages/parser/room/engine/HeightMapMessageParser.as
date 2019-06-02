@@ -7,25 +7,25 @@
 
     public class HeightMapMessageParser implements IMessageParser 
     {
-        private static const _Str_17076:int = 0x4000;
-        private static const _Str_16556:int = 16383;
+        private static const STACKING_BLOCKED:int = 0x4000;
+        private static const HEIGHT_MASK:int = 16383;
 
         private var _data:Vector.<int>;
         private var _width:int = 0;
         private var _height:int = 0;
 
 
-        public static function _Str_15973(k:int):Number
+        public static function decodeTileHeight(k:int):Number
         {
-            return (k < 0) ? -1 : ((k & _Str_16556) / 0x0100);
+            return (k < 0) ? -1 : ((k & HEIGHT_MASK) / 0x0100);
         }
 
-        public static function _Str_16359(k:int):Boolean
+        public static function decodeIsStackingBlocked(k:int):Boolean
         {
-            return Boolean((k & _Str_17076));
+            return Boolean((k & STACKING_BLOCKED));
         }
 
-        public static function _Str_18699(k:int):Boolean
+        public static function decodeIsRoomTile(k:int):Boolean
         {
             return k >= 0;
         }
@@ -47,16 +47,16 @@
             {
                 return -1;
             }
-            return _Str_15973(this._data[((_arg_2 * this._width) + k)]);
+            return decodeTileHeight(this._data[((_arg_2 * this._width) + k)]);
         }
 
-        public function _Str_25759(k:int, _arg_2:int):Boolean
+        public function getStackingBlocked(k:int, _arg_2:int):Boolean
         {
             if (((((k < 0) || (k >= this._width)) || (_arg_2 < 0)) || (_arg_2 >= this._height)))
             {
                 return true;
             }
-            return _Str_16359(this._data[((_arg_2 * this._width) + k)]);
+            return decodeIsStackingBlocked(this._data[((_arg_2 * this._width) + k)]);
         }
 
         public function _Str_10375(k:int, _arg_2:int):Boolean
@@ -65,7 +65,7 @@
             {
                 return false;
             }
-            return _Str_18699(this._data[((_arg_2 * this._width) + k)]);
+            return decodeIsRoomTile(this._data[((_arg_2 * this._width) + k)]);
         }
 
         public function flush():Boolean

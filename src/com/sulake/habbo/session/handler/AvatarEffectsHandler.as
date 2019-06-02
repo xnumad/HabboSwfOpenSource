@@ -17,7 +17,7 @@
             }
         }
 
-        private function _Str_21372(k:IMessageEvent):void
+        private function onAvatarEffects(k:IMessageEvent):void
         {
             var _local_2:_Str_6450 = (k as _Str_6450);
             var _local_3:_Str_5747 = (_local_2._Str_2273() as _Str_5747);

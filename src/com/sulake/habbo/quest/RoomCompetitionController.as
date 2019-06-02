@@ -110,7 +110,7 @@
             this._remainingVotes = k._Str_2273()._Str_24679;
             var _local_2:Boolean = k._Str_2273()._Str_24414;
             var _local_3:int = k._Str_2273()._Str_3278;
-            this.refreshContent(k._Str_2273()._Str_7578, false, k._Str_2273()._Str_4327, _local_3.toString());
+            this.refreshContent(k._Str_2273().goalId, false, k._Str_2273().goalCode, _local_3.toString());
             this._Str_6512(((_local_3 == _Str_10666._Str_17690) ? this._Str_24392 : this._Str_24761));
             this._Str_4365().procedure = this._Str_24140;
             this._Str_4365().visible = ((this._remainingVotes > 0) && (_local_2));
@@ -119,34 +119,34 @@
 
         public function _Str_17737(k:CompetitionEntrySubmitResultEvent):void
         {
-            if (k._Str_2273().result == CompetitionEntrySubmitResultMessageParser._Str_13075)
+            if (k._Str_2273().result == CompetitionEntrySubmitResultMessageParser.ROOM_TOO_OLD)
             {
                 return;
             }
-            this.refreshContent(k._Str_2273()._Str_7578, true, k._Str_2273()._Str_4327, ("" + k._Str_2273().result));
+            this.refreshContent(k._Str_2273().goalId, true, k._Str_2273().goalCode, ("" + k._Str_2273().result));
             this._result = k._Str_2273().result;
-            if (this._result == CompetitionEntrySubmitResultMessageParser._Str_16674)
+            if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_CONFIRM)
             {
                 this._Str_6512(null);
                 this._Str_4365().procedure = this._Str_25817;
             }
             else
             {
-                if (this._result == CompetitionEntrySubmitResultMessageParser._Str_16754)
+                if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_ACCEPT_RULES)
                 {
                     this._Str_6512(this._Str_16143);
                     this._Str_4365().procedure = this._Str_16362;
                 }
                 else
                 {
-                    if (this._result == CompetitionEntrySubmitResultMessageParser._Str_18467)
+                    if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_SUBMIT)
                     {
                         this._Str_6512(this._Str_16143);
                         this._Str_4365().procedure = this._Str_23403;
                     }
                     else
                     {
-                        if (this._result == CompetitionEntrySubmitResultMessageParser._Str_18708)
+                        if (this._result == CompetitionEntrySubmitResultMessageParser.PREREQUISITES_NOT_MET)
                         {
                             this._Str_6512(this._Str_17730);
                             this._Str_4365().visible = false;
@@ -155,14 +155,14 @@
                         }
                         else
                         {
-                            if (this._result == CompetitionEntrySubmitResultMessageParser._Str_14572)
+                            if (this._result == CompetitionEntrySubmitResultMessageParser.SUBMITTED)
                             {
                                 this._Str_6512(this._Str_16143);
                                 this._Str_4365().procedure = this._Str_2392;
                             }
                             else
                             {
-                                if (this._result == CompetitionEntrySubmitResultMessageParser._Str_16275)
+                                if (this._result == CompetitionEntrySubmitResultMessageParser.ROOM_DOOR_NOT_OPEN)
                                 {
                                     this._Str_6512(null);
                                     this._Str_4365().procedure = null;
@@ -170,7 +170,7 @@
                                 }
                                 else
                                 {
-                                    if (this._result == CompetitionEntrySubmitResultMessageParser._Str_13075)
+                                    if (this._result == CompetitionEntrySubmitResultMessageParser.ROOM_TOO_OLD)
                                     {
                                         this._Str_6512(null);
                                         this._Str_4365().procedure = this._Str_24144;
@@ -229,7 +229,7 @@
             var _local_7:String;
             var _local_8:IWindowContainer;
             var _local_9:ImageResult;
-            var _local_2:Array = k._Str_2273()._Str_23340;
+            var _local_2:Array = k._Str_2273().requiredFurnis;
             var _local_3:int;
             while (_local_3 < _local_2.length)
             {
@@ -245,7 +245,7 @@
                 else
                 {
                     _local_8.visible = true;
-                    _local_8.findChildByName("tick_icon").visible = (!(k._Str_2273()._Str_25798(_local_4)));
+                    _local_8.findChildByName("tick_icon").visible = (!(k._Str_2273().isMissing(_local_4)));
                     _local_9 = this._questEngine.roomEngine.getGenericRoomObjectImage(_local_6, _local_7, new Vector3d(180, 0, 0), 1, this);
                     if (_local_9.id != 0)
                     {
@@ -294,10 +294,10 @@
             this._Str_2497(this._Str_25844(), ("roomcompetition.info." + k), _arg_2);
             this._Str_2497(this._Str_4365(), ("roomcompetition.button." + k), _arg_2);
             this._Str_2497(this._Str_19349(), ("roomcompetition.buttoninfo." + k), _arg_2);
-            this._Str_1136();
+            this.onResize();
         }
 
-        private function _Str_1136():void
+        private function onResize():void
         {
             this._Str_18216().y = ((this._Str_17393().y + this._Str_17393().textHeight) + 5);
         }
@@ -307,7 +307,7 @@
             this.close();
         }
 
-        public function _Str_3012(k:_Str_2752):void
+        public function onCreditBalance(k:_Str_2752):void
         {
             this.close();
             var _local_2:_Str_4522 = k._Str_2273();
@@ -431,7 +431,7 @@
             var _local_3:String;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if (((this._submit) && (this._result == CompetitionEntrySubmitResultMessageParser._Str_14572)))
+                if (((this._submit) && (this._result == CompetitionEntrySubmitResultMessageParser.SUBMITTED)))
                 {
                     this.close();
                     return;
@@ -515,7 +515,7 @@
         {
             if (((!(this._window == null)) && (this._window.visible)))
             {
-                this._Str_1136();
+                this.onResize();
             }
         }
 

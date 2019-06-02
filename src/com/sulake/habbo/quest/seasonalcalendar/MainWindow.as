@@ -73,7 +73,7 @@
             return this._questEngine == null;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (this._window) && (this._window.visible);
         }
@@ -95,7 +95,7 @@
             this.close();
         }
 
-        public function _Str_3259():void
+        public function onToolbarClick():void
         {
             if (!this._window)
             {
@@ -117,7 +117,7 @@
 
         public function _Str_8212(k:Array, _arg_2:Boolean):void
         {
-            if (((!(this._Str_2719())) && (!(_arg_2))))
+            if (((!(this.isVisible())) && (!(_arg_2))))
             {
                 return;
             }

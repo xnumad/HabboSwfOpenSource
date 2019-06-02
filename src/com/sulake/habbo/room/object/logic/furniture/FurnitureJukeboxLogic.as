@@ -46,7 +46,7 @@
             {
                 if (!this._isInitialized)
                 {
-                    this._Str_23462();
+                    this.requestInit();
                 }
                 object.getModelController().setString(RoomWidgetEnumItemExtradataParameter.INFOSTAND_EXTRA_PARAM, RoomWidgetEnumItemExtradataParameter.JUKEBOX);
                 _local_2 = (k as RoomObjectDataUpdateMessage);
@@ -109,7 +109,7 @@
             }
         }
 
-        private function _Str_23462():void
+        private function requestInit():void
         {
             if (((object == null) || (eventDispatcher == null)))
             {

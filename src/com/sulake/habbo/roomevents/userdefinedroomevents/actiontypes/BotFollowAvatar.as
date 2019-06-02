@@ -27,13 +27,13 @@
 
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
-            return [this._Str_4281(k, "type_selector")._Str_2657().id];
+            return [this._Str_4281(k, "type_selector").getSelected().id];
         }
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
             this._Str_2453(k, "bot_name").text = _arg_2.stringData;
-            this._Str_4281(k, "type_selector")._Str_2520(this._Str_10005(k, ("radio_" + _arg_2.intData[0])));
+            this._Str_4281(k, "type_selector").setSelected(this._Str_10005(k, ("radio_" + _arg_2.intData[0])));
         }
 
         override public function get hasSpecialInputs():Boolean

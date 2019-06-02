@@ -34,19 +34,19 @@
     import flash.events.MouseEvent;
     import com.sulake.room.events.RoomSpriteMouseEvent;
     import com.sulake.room.utils.IRoomGeometry;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class AvatarLogic extends MovingObjectLogic 
     {
-        private static const _Str_15117:Number = 1.5;
-        private static const _Str_13364:int = 28;
-        private static const _Str_15351:int = 29;
-        private static const _Str_13733:int = 184;
-        private static const _Str_13094:int = 185;
-        private static const _Str_8860:int = 500;
-        private static const _Str_17923:int = 0;
-        private static const _Str_17345:int = 999;
-        private static const _Str_18842:int = 999999999;
+        private static const WARP_WARN_THRESHOLD:Number = 1.5;
+        private static const EFFECT_TYPE_SPLASH:int = 28;
+        private static const EFFECT_TYPE_SWIM:int = 29;
+        private static const EFFECT_SPLASH_LENGTH:int = 184;
+        private static const CARRY_ITEM_NULL:int = 185;
+        private static const CARRY_ITEM_LAST_CONSUMABLE:int = 500;
+        private static const CARRY_ITEM_EMPTY_HAND:int = 0;
+        private static const CARRY_ITEM_DELAY_BEFORE_USE:int = 999;
+        private static const CARRY_ITEM_EMPTY_HAND_ANIMATION_LENGTH:int = 999999999;
         private static const _Str_18795:int = 5000;
         private static const _Str_17418:int = 1500;
 
@@ -69,7 +69,7 @@
 
         public function AvatarLogic()
         {
-            this._blinkingStartTimeStamp = (getTimer() + this._Str_19950());
+            this._blinkingStartTimeStamp = (getTimer() + this.getBlinkInterval());
         }
 
         override public function getEventTypes():Array
@@ -128,7 +128,7 @@
             if ((k is RoomObjectAvatarPostureUpdateMessage))
             {
                 _local_3 = (k as RoomObjectAvatarPostureUpdateMessage);
-                _local_2.setString(RoomObjectVariableEnum.FIGURE_POSTURE, _local_3._Str_22110);
+                _local_2.setString(RoomObjectVariableEnum.FIGURE_POSTURE, _local_3.postureType);
                 _local_2.setString(RoomObjectVariableEnum.FIGURE_POSTURE_PARAMETER, _local_3.parameter);
                 return;
             }
@@ -136,7 +136,7 @@
             {
                 _local_4 = (k as RoomObjectAvatarChatUpdateMessage);
                 _local_2.setNumber(RoomObjectVariableEnum.FIGURE_TALK, 1);
-                this._talkingEndTimeStamp = (getTimer() + (_local_4._Str_19452 * 1000));
+                this._talkingEndTimeStamp = (getTimer() + (_local_4.numberOfWords * 1000));
                 return;
             }
             if ((k is RoomObjectAvatarTypingUpdateMessage))
@@ -148,21 +148,21 @@
             if ((k is RoomObjectAvatarMutedUpdateMessage))
             {
                 _local_6 = (k as RoomObjectAvatarMutedUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_MUTED, Number(_local_6._Str_25257));
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_MUTED, Number(_local_6.isMuted));
                 return;
             }
             if ((k is RoomObjectAvatarPlayingGameMessage))
             {
                 _local_7 = (k as RoomObjectAvatarPlayingGameMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, Number(_local_7._Str_24016));
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, Number(_local_7.isPlayingGame));
                 return;
             }
             if ((k is RoomObjectAvatarUpdateMessage))
             {
                 _local_8 = (k as RoomObjectAvatarUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.HEAD_DIRECTION, _local_8._Str_14280);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_CAN_STAND_UP, Number(_local_8._Str_10289));
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_VERTICAL_OFFSET, _local_8._Str_23070);
+                _local_2.setNumber(RoomObjectVariableEnum.HEAD_DIRECTION, _local_8.dirHead);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_CAN_STAND_UP, Number(_local_8.canStandUp));
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_VERTICAL_OFFSET, _local_8.baseY);
                 return;
             }
             if ((k is RoomObjectAvatarGestureUpdateMessage))
@@ -174,7 +174,7 @@
             }
             if ((k is RoomObjectAvatarExpressionUpdateMessage))
             {
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_EXPRESSION, RoomObjectAvatarExpressionUpdateMessage(k)._Str_18904);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_EXPRESSION, RoomObjectAvatarExpressionUpdateMessage(k).expressionType);
                 this._animationEndTimeStamp = AvatarAction.getExpressionTime(_local_2.getNumber(RoomObjectVariableEnum.FIGURE_EXPRESSION));
                 if (this._animationEndTimeStamp > -1)
                 {
@@ -191,7 +191,7 @@
             if ((k is RoomObjectAvatarSleepUpdateMessage))
             {
                 _local_11 = (k as RoomObjectAvatarSleepUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SLEEP, Number(_local_11._Str_19643));
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SLEEP, Number(_local_11.isSleeping));
                 return;
             }
             if ((k is RoomObjectAvatarPlayerValueUpdateMessage))
@@ -205,8 +205,8 @@
             {
                 _local_13 = (k as RoomObjectAvatarEffectUpdateMessage);
                 _local_14 = _local_13.effect;
-                _local_15 = _local_13._Str_18601;
-                this._Str_25323(_local_14, _local_15, _local_2);
+                _local_15 = _local_13.delayMilliSeconds;
+                this.updateEffect(_local_14, _local_15, _local_2);
                 return;
             }
             if ((k is RoomObjectAvatarCarryObjectUpdateMessage))
@@ -215,10 +215,10 @@
                 _local_2.setNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_16._Str_2887);
                 _local_2.setNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT, 0);
                 this._carryObjectStartTimeStamp = getTimer();
-                if (_local_16._Str_2887 < _Str_18842)
+                if (_local_16._Str_2887 < CARRY_ITEM_EMPTY_HAND_ANIMATION_LENGTH)
                 {
                     this._carryObjectEndTimeStamp = 0;
-                    this._allowUseCarryObject = (_local_16._Str_2887 <= _Str_17345);
+                    this._allowUseCarryObject = (_local_16._Str_2887 <= CARRY_ITEM_DELAY_BEFORE_USE);
                 }
                 else
                 {
@@ -236,7 +236,7 @@
             if ((k is RoomObjectAvatarSignUpdateMessage))
             {
                 _local_18 = (k as RoomObjectAvatarSignUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SIGN, _local_18._Str_23207);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SIGN, _local_18.signType);
                 this._signEndTimeStamp = (getTimer() + (5 * 1000));
                 return;
             }
@@ -278,7 +278,7 @@
             if ((k is RoomObjectAvatarGuideStatusUpdateMessage))
             {
                 _local_26 = (k as RoomObjectAvatarGuideStatusUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _local_26._Str_24181);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _local_26.guideStatus);
                 return;
             }
             if ((k is RoomObjectAvatarOwnMessage))
@@ -288,35 +288,35 @@
             }
         }
 
-        private function _Str_25323(k:int, _arg_2:int, _arg_3:IRoomObjectModelController):void
+        private function updateEffect(k:int, _arg_2:int, _arg_3:IRoomObjectModelController):void
         {
-            if (k == _Str_13364)
+            if (k == EFFECT_TYPE_SPLASH)
             {
-                this._effectChangeTimeStamp = (getTimer() + _Str_8860);
-                this._newEffect = _Str_15351;
+                this._effectChangeTimeStamp = (getTimer() + CARRY_ITEM_LAST_CONSUMABLE);
+                this._newEffect = EFFECT_TYPE_SWIM;
             }
             else
             {
-                if (k == _Str_13733)
+                if (k == EFFECT_SPLASH_LENGTH)
                 {
-                    this._effectChangeTimeStamp = (getTimer() + _Str_8860);
-                    this._newEffect = _Str_13094;
+                    this._effectChangeTimeStamp = (getTimer() + CARRY_ITEM_LAST_CONSUMABLE);
+                    this._newEffect = CARRY_ITEM_NULL;
                 }
                 else
                 {
-                    if (_arg_3.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT) == _Str_15351)
+                    if (_arg_3.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT) == EFFECT_TYPE_SWIM)
                     {
-                        this._effectChangeTimeStamp = (getTimer() + _Str_8860);
+                        this._effectChangeTimeStamp = (getTimer() + CARRY_ITEM_LAST_CONSUMABLE);
                         this._newEffect = k;
-                        k = _Str_13364;
+                        k = EFFECT_TYPE_SPLASH;
                     }
                     else
                     {
-                        if (_arg_3.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT) == _Str_13094)
+                        if (_arg_3.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT) == CARRY_ITEM_NULL)
                         {
-                            this._effectChangeTimeStamp = (getTimer() + _Str_8860);
+                            this._effectChangeTimeStamp = (getTimer() + CARRY_ITEM_LAST_CONSUMABLE);
                             this._newEffect = k;
-                            k = _Str_13733;
+                            k = EFFECT_SPLASH_LENGTH;
                         }
                         else
                         {
@@ -380,7 +380,7 @@
 
         override public function update(k:int):void
         {
-            var _local_2:IVector3D;
+            var _local_2:IVector3d;
             var _local_3:RoomObjectEvent;
             var _local_4:IRoomObjectModelController;
             super.update(k);
@@ -426,8 +426,8 @@
                 {
                     if (((this._talkingPauseEndTimeStamp == 0) && (this._talkingPauseStartTimeStamp == 0)))
                     {
-                        this._talkingPauseStartTimeStamp = (k + this._Str_23633());
-                        this._talkingPauseEndTimeStamp = (this._talkingPauseStartTimeStamp + this._Str_22648());
+                        this._talkingPauseStartTimeStamp = (k + this.getTalkingPauseInterval());
+                        this._talkingPauseEndTimeStamp = (this._talkingPauseStartTimeStamp + this.getTalkingPauseLength());
                     }
                     else
                     {
@@ -466,7 +466,7 @@
             {
                 if (k > this._carryObjectEndTimeStamp)
                 {
-                    _arg_2.setNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _Str_17923);
+                    _arg_2.setNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, CARRY_ITEM_EMPTY_HAND);
                     _arg_2.setNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT, 0);
                     this._carryObjectStartTimeStamp = (this._carryObjectEndTimeStamp = 0);
                     this._allowUseCarryObject = false;
@@ -489,8 +489,8 @@
             if (k > this._blinkingStartTimeStamp)
             {
                 _arg_2.setNumber(RoomObjectVariableEnum.FIGURE_BLINK, 1);
-                this._blinkingStartTimeStamp = (k + this._Str_19950());
-                this._blinkingEndTimeStamp = (k + this._Str_23607());
+                this._blinkingStartTimeStamp = (k + this.getBlinkInterval());
+                this._blinkingEndTimeStamp = (k + this.getBlinkLength());
             }
             if (((this._blinkingEndTimeStamp > 0) && (k > this._blinkingEndTimeStamp)))
             {
@@ -509,29 +509,29 @@
             }
         }
 
-        private function _Str_23633():int
+        private function getTalkingPauseInterval():int
         {
             return 100 + (Math.random() * 200);
         }
 
-        private function _Str_22648():int
+        private function getTalkingPauseLength():int
         {
             return 75 + (Math.random() * 75);
         }
 
-        private function _Str_19950():int
+        private function getBlinkInterval():int
         {
             return 4500 + (Math.random() * 1000);
         }
 
-        private function _Str_23607():int
+        private function getBlinkLength():int
         {
             return 50 + (Math.random() * 200);
         }
 
-        private function _Str_26252(k:IVector3D):Boolean
+        private function targetIsWarping(k:IVector3d):Boolean
         {
-            var _local_2:IVector3D = object.getLocation();
+            var _local_2:IVector3d = object.getLocation();
             if (k == null)
             {
                 return false;
@@ -540,7 +540,7 @@
             {
                 return false;
             }
-            if (((Math.abs((_local_2.x - k.x)) > _Str_15117) || (Math.abs((_local_2.y - k.y)) > _Str_15117)))
+            if (((Math.abs((_local_2.x - k.x)) > WARP_WARN_THRESHOLD) || (Math.abs((_local_2.y - k.y)) > WARP_WARN_THRESHOLD)))
             {
                 return true;
             }

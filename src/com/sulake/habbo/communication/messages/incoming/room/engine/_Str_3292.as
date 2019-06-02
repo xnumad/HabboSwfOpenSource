@@ -119,12 +119,12 @@
             }
         }
 
-        public function get _Str_7143():Number
+        public function get sizeZ():Number
         {
             return this._Str_5445;
         }
 
-        public function set _Str_7143(k:Number):void
+        public function set sizeZ(k:Number):void
         {
             if (!this._Str_2479)
             {
@@ -197,12 +197,12 @@
             }
         }
 
-        public function get _Str_6698():int
+        public function get expiryTime():int
         {
             return this._Str_6673;
         }
 
-        public function set _Str_6698(k:int):void
+        public function set expiryTime(k:int):void
         {
             if (!this._Str_2479)
             {
@@ -210,22 +210,22 @@
             }
         }
 
-        public function get _Str_4172():int
+        public function get usagePolicy():int
         {
             return this._Str_5135;
         }
 
-        public function set _Str_4172(k:int):void
+        public function set usagePolicy(k:int):void
         {
             this._Str_5135 = k;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._Str_2592;
         }
 
-        public function set _Str_2481(k:int):void
+        public function set ownerId(k:int):void
         {
             this._Str_2592 = k;
         }

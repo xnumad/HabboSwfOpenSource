@@ -42,7 +42,7 @@
             this._stuffTypeSelectionCode = k.readInteger();
         }
 
-        public function get _Str_21824():Boolean
+        public function get stuffTypeSelectionEnabled():Boolean
         {
             return this._stuffTypeSelectionEnabled;
         }

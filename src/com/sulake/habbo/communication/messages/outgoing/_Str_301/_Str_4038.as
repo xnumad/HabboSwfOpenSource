@@ -9,24 +9,24 @@
         public static const _Str_18299:int = 2;
         public static const _Str_15919:int = 3;
 
-        private var _Str_594:Array;
+        private var _data:Array;
 
         public function _Str_4038(k:String, _arg_2:int)
         {
-            this._Str_594 = [];
+            this._data = [];
             super();
-            this._Str_594.push(k);
-            this._Str_594.push(_arg_2);
+            this._data.push(k);
+            this._data.push(_arg_2);
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_594;
+            return this._data;
         }
 
         public function dispose():void
         {
-            this._Str_594 = null;
+            this._data = null;
         }
     }
 }

@@ -65,12 +65,12 @@
             this._Str_2518 = new Array();
         }
 
-        public function set _Str_11964(k:Boolean):void
+        public function set isMaster(k:Boolean):void
         {
             this._Str_10889 = k;
         }
 
-        public function get _Str_11964():Boolean
+        public function get isMaster():Boolean
         {
             return this._Str_10889;
         }
@@ -296,7 +296,7 @@
 
         protected function _Str_12764():Boolean
         {
-            return ((this._Str_11964) && (this.hasAds() == false)) && (this._Str_22097());
+            return ((this.isMaster) && (this.hasAds() == false)) && (this._Str_22097());
         }
 
         public function _Str_13744():void

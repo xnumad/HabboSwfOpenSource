@@ -55,7 +55,7 @@
 
         public function refresh(k:Boolean=true):void
         {
-            this._pagerItemList._Str_2724();
+            this._pagerItemList.destroyListItems();
             this._selectedPage = ((k) ? 0 : this._selectedPage);
             var _local_2:int;
             while (_local_2 < this._navigator._Str_7977._Str_6772.length)

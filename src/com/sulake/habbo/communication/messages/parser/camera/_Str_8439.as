@@ -9,7 +9,7 @@
         private var _Str_16594:Boolean = false;
 
 
-        public function _Str_7838():Boolean
+        public function isOk():Boolean
         {
             return this._Str_4858;
         }

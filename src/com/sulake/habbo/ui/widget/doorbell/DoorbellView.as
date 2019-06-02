@@ -45,7 +45,7 @@
             this._frame.visible = true;
             if (this._list != null)
             {
-                this._list._Str_2724();
+                this._list.destroyListItems();
                 k = 0;
                 while (k < this._doorbell.users.length)
                 {

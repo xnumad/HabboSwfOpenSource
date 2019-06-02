@@ -281,7 +281,7 @@
             var _local_4:int = int.MIN_VALUE;
             var _local_5:int = int.MIN_VALUE;
             _local_7 = 0;
-            while (_local_7 < this._Str_3390._Str_7678)
+            while (_local_7 < this._Str_3390.floorHeight)
             {
                 _local_6 = 0;
                 while (_local_6 < this._Str_3390._Str_17437)
@@ -330,7 +330,7 @@
         {
             var _local_3:Number = ((k / 16) / this._Str_9022);
             var _local_4:Number = ((_arg_2 / 8) / this._Str_9022);
-            var _local_5:Number = this._Str_3390._Str_7678;
+            var _local_5:Number = this._Str_3390.floorHeight;
             var _local_6:int = (_local_4 + (_local_3 - (_local_5 / 2)));
             var _local_7:int = (_local_4 - (_local_3 - (_local_5 / 2)));
             return new Point(_local_6, _local_7);

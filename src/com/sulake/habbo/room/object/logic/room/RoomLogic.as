@@ -19,7 +19,7 @@
     import com.sulake.room.events.RoomSpriteMouseEvent;
     import flash.events.MouseEvent;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.room.events.RoomObjectEvent;
     import com.sulake.habbo.room.object.RoomPlaneData;
@@ -74,7 +74,7 @@
             {
                 return;
             }
-            if (!this._Str_2550._Str_16659(k))
+            if (!this._Str_2550.initializeFromXML(k))
             {
                 return;
             }
@@ -94,7 +94,7 @@
             var _local_2:IRoomObjectModelController;
             var _local_3:XML;
             super.update(k);
-            this._Str_24703(k);
+            this.updateBackgroundColor(k);
             if (this._Str_15050)
             {
                 if (object != null)
@@ -105,14 +105,14 @@
                         _local_3 = this._Str_2550._Str_5598();
                         _local_2.setString(RoomObjectVariableEnum.ROOM_PLANE_XML, _local_3.toString());
                         _local_2.setNumber(RoomObjectVariableEnum.ROOM_FLOOR_HOLE_UPDATE_TIME, k);
-                        this._Str_2550._Str_16659(_local_3);
+                        this._Str_2550.initializeFromXML(_local_3);
                     }
                 }
                 this._Str_15050 = false;
             }
         }
 
-        private function _Str_24703(k:int):void
+        private function updateBackgroundColor(k:int):void
         {
             var _local_2:int;
             var _local_3:int;
@@ -170,7 +170,7 @@
             }
         }
 
-        private function _Str_25486(k:RoomObjectRoomUpdateMessage, _arg_2:IRoomObjectModelController):void
+        private function updatePlaneTypes(k:RoomObjectRoomUpdateMessage, _arg_2:IRoomObjectModelController):void
         {
             switch (k.type)
             {
@@ -197,15 +197,15 @@
             {
                 case RoomObjectRoomMaskUpdateMessage.RORMUM_ADD_MASK:
                     _local_5 = RoomPlaneBitmapMaskData.WINDOW;
-                    if (k._Str_24290 == RoomObjectRoomMaskUpdateMessage.HOLE)
+                    if (k.maskCategory == RoomObjectRoomMaskUpdateMessage.HOLE)
                     {
                         _local_5 = RoomPlaneBitmapMaskData.HOLE;
                     }
-                    this._roomPlaneBitmapMaskParser.addMask(k._Str_20498, k._Str_25853, k._Str_22823, _local_5);
+                    this._roomPlaneBitmapMaskParser.addMask(k.maskId, k.maskType, k.maskLocation, _local_5);
                     _local_4 = true;
                     break;
-                case RoomObjectRoomMaskUpdateMessage._Str_10260:
-                    _local_4 = this._roomPlaneBitmapMaskParser._Str_23574(k._Str_20498);
+                case RoomObjectRoomMaskUpdateMessage.REMOVE_MASK:
+                    _local_4 = this._roomPlaneBitmapMaskParser.removeMask(k.maskId);
                     break;
             }
             if (_local_4)
@@ -216,7 +216,7 @@
             }
         }
 
-        private function _Str_24476(k:RoomObjectRoomPlaneVisibilityUpdateMessage, _arg_2:IRoomObjectModelController):void
+        private function updatePlaneVisibilities(k:RoomObjectRoomPlaneVisibilityUpdateMessage, _arg_2:IRoomObjectModelController):void
         {
             var _local_3:int;
             if (k.visible)
@@ -235,7 +235,7 @@
             }
         }
 
-        private function _Str_23717(k:RoomObjectRoomPlanePropertyUpdateMessage, _arg_2:IRoomObjectModelController):void
+        private function updatePlaneProperties(k:RoomObjectRoomPlanePropertyUpdateMessage, _arg_2:IRoomObjectModelController):void
         {
             switch (k.type)
             {
@@ -253,21 +253,21 @@
             switch (k.type)
             {
                 case RoomObjectRoomFloorHoleUpdateMessage.RORPFHUM_ADD:
-                    this._Str_2550._Str_12390(k.id, k.x, k.y, k.width, k.height);
+                    this._Str_2550.addFloorHole(k.id, k.x, k.y, k.width, k.height);
                     this._Str_15050 = true;
                     return;
                 case RoomObjectRoomFloorHoleUpdateMessage.RORPFHUM_REMOVE:
-                    this._Str_2550._Str_11339(k.id);
+                    this._Str_2550.removeFloorHole(k.id);
                     this._Str_15050 = true;
                     return;
             }
         }
 
-        private function _Str_22563(k:RoomObjectRoomColorUpdateMessage, _arg_2:IRoomObjectModelController):void
+        private function updateColors(k:RoomObjectRoomColorUpdateMessage, _arg_2:IRoomObjectModelController):void
         {
             var _local_3:int = k.color;
             var _local_4:int = k._Str_4272;
-            _arg_2.setNumber(RoomObjectVariableEnum.ROOM_COLORIZE_BG_ONLY, int(k._Str_11464));
+            _arg_2.setNumber(RoomObjectVariableEnum.ROOM_COLORIZE_BG_ONLY, int(k.bgOnly));
             this._Str_14932 = this._color;
             this._Str_17003 = this._Str_3576;
             this._Str_11287 = _local_3;
@@ -290,7 +290,7 @@
             var _local_3:RoomObjectRoomUpdateMessage = (k as RoomObjectRoomUpdateMessage);
             if (_local_3 != null)
             {
-                this._Str_25486(_local_3, _local_2);
+                this.updatePlaneTypes(_local_3, _local_2);
                 return;
             }
             var _local_4:RoomObjectRoomMaskUpdateMessage = (k as RoomObjectRoomMaskUpdateMessage);
@@ -302,13 +302,13 @@
             var _local_5:RoomObjectRoomPlaneVisibilityUpdateMessage = (k as RoomObjectRoomPlaneVisibilityUpdateMessage);
             if (_local_5 != null)
             {
-                this._Str_24476(_local_5, _local_2);
+                this.updatePlaneVisibilities(_local_5, _local_2);
                 return;
             }
             var _local_6:RoomObjectRoomPlanePropertyUpdateMessage = (k as RoomObjectRoomPlanePropertyUpdateMessage);
             if (_local_6 != null)
             {
-                this._Str_23717(_local_6, _local_2);
+                this.updatePlaneProperties(_local_6, _local_2);
                 return;
             }
             var _local_7:RoomObjectRoomFloorHoleUpdateMessage = (k as RoomObjectRoomFloorHoleUpdateMessage);
@@ -319,7 +319,7 @@
             var _local_8:RoomObjectRoomColorUpdateMessage = (k as RoomObjectRoomColorUpdateMessage);
             if (_local_8 != null)
             {
-                this._Str_22563(_local_8, _local_2);
+                this.updateColors(_local_8, _local_2);
                 return;
             }
         }
@@ -364,11 +364,11 @@
             }
             _local_5--;
             var _local_7:Point;
-            var _local_8:IVector3D = this._Str_2550._Str_20362(_local_5);
-            var _local_9:IVector3D = this._Str_2550._Str_16904(_local_5);
-            var _local_10:IVector3D = this._Str_2550._Str_18119(_local_5);
-            var _local_11:IVector3D = this._Str_2550._Str_23741(_local_5);
-            var _local_12:int = this._Str_2550._Str_13037(_local_5);
+            var _local_8:IVector3d = this._Str_2550.getPlaneLocation(_local_5);
+            var _local_9:IVector3d = this._Str_2550.getPlaneLeftSide(_local_5);
+            var _local_10:IVector3d = this._Str_2550.getPlaneRightSide(_local_5);
+            var _local_11:IVector3d = this._Str_2550.getPlaneNormalDirection(_local_5);
+            var _local_12:int = this._Str_2550.getPlaneType(_local_5);
             if (((((_local_8 == null) || (_local_9 == null)) || (_local_10 == null)) || (_local_11 == null)))
             {
                 return;
@@ -428,13 +428,13 @@
                     }
                     if (eventDispatcher != null)
                     {
-                        if (_local_12 == RoomPlaneData._Str_6072)
+                        if (_local_12 == RoomPlaneData.PLANE_FLOOR)
                         {
                             _local_24 = new RoomObjectTileMouseEvent(_local_25, object, k.eventId, _local_19, _local_20, _local_21, k.altKey, k.ctrlKey, k.shiftKey);
                         }
                         else
                         {
-                            if (((_local_12 == RoomPlaneData._Str_6206) || (_local_12 == RoomPlaneData._Str_7988)))
+                            if (((_local_12 == RoomPlaneData.PLANE_WALL) || (_local_12 == RoomPlaneData.PLANE_LANDSCAPE)))
                             {
                                 _local_26 = 90;
                                 if (_local_11 != null)

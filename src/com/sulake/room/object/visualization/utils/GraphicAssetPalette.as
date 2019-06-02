@@ -57,7 +57,7 @@
             this._palette = [];
         }
 
-        public function _Str_24127(k:BitmapData):void
+        public function colorizeBitmap(k:BitmapData):void
         {
             var _local_2:BitmapData = k.clone();
             k.paletteMap(k, k.rect, new Point(0, 0), _Str_4808, this._palette, _Str_4808, _Str_4808);

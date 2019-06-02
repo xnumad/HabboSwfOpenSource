@@ -38,15 +38,15 @@
         {
             var _local_3:int = _arg_2.intData[0];
             var _local_4:int = _arg_2.intData[1];
-            this._Str_19968(k)._Str_2520(this._Str_25584(k, _local_3));
-            this._Str_21784(k)._Str_2520(this._Str_23005(k, _local_4));
+            this._Str_19968(k).setSelected(this._Str_25584(k, _local_3));
+            this._Str_21784(k).setSelected(this._Str_23005(k, _local_4));
         }
 
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
             var _local_2:Array = new Array();
-            var _local_3:int = this._Str_19968(k)._Str_2657().id;
-            var _local_4:int = this._Str_21784(k)._Str_2657().id;
+            var _local_3:int = this._Str_19968(k).getSelected().id;
+            var _local_4:int = this._Str_21784(k).getSelected().id;
             _local_2.push(_local_3);
             _local_2.push(_local_4);
             return _local_2;

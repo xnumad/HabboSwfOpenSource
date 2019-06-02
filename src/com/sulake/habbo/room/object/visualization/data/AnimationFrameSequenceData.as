@@ -22,7 +22,7 @@
             this._isRandom = _arg_2;
         }
 
-        public function get _Str_23165():Boolean
+        public function get isRandom():Boolean
         {
             return this._isRandom;
         }
@@ -58,7 +58,7 @@
             }
         }
 
-        public function _Str_22551(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:DirectionalOffsetData):void
+        public function addFrame(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:DirectionalOffsetData):void
         {
             var _local_7:AnimationFrameData;
             var _local_8:int = 1;
@@ -112,7 +112,7 @@
             return k;
         }
 
-        public function _Str_25161(k:int):int
+        public function getRepeats(k:int):int
         {
             if (((k < 0) || (k >= this._Str_2185)))
             {

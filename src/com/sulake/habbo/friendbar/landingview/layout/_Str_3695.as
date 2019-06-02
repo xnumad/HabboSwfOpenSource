@@ -178,7 +178,7 @@
             this.windowContainer.invalidate();
             if (this._Str_21419 != null)
             {
-                this.landingView.navigator._Str_6822(this._Str_21419);
+                this.landingView.navigator.openNavigator(this._Str_21419);
             }
             this.landingView.send(new _Str_5974(this._Str_4271));
             this.windowContainer.visible = true;

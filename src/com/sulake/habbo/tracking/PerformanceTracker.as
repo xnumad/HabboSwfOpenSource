@@ -42,11 +42,11 @@
                 this._userAgent = "unknown";
             }
             this._garbageMonitor = new GarbageMonitor();
-            this._Str_21509();
+            this.updateGarbageMonitor();
             this._lastReport = getTimer();
         }
 
-        private static function _Str_20395(k:Number, _arg_2:Number):Number
+        private static function differenceInPercents(k:Number, _arg_2:Number):Number
         {
             if (k == _arg_2)
             {
@@ -68,12 +68,12 @@
             return this._flashVersion;
         }
 
-        public function get _Str_24278():int
+        public function get averageUpdateInterval():int
         {
             return this._averageUpdateInterval;
         }
 
-        private function _Str_21509():Object
+        private function updateGarbageMonitor():Object
         {
             var _local_2:Object;
             var k:Array = this._garbageMonitor.list;
@@ -93,9 +93,9 @@
             var _local_6:uint;
             var _local_7:Boolean;
             var _local_8:Number;
-            if (this._Str_24952)
+            if (this.isGarbageMonitored)
             {
-                _local_4 = this._Str_21509();
+                _local_4 = this.updateGarbageMonitor();
                 if (_local_4 != null)
                 {
                     this._gcCount++;
@@ -103,7 +103,7 @@
                 }
             }
             var _local_3:Boolean;
-            if (k > this._Str_25177)
+            if (k > this.slowUpdateLimit)
             {
                 this._slowUpdateCount++;
                 _local_3 = true;
@@ -121,15 +121,15 @@
                     this._averageUpdateInterval = (((this._averageUpdateInterval * (_local_5 - 1)) / _local_5) + (Number(k) / _local_5));
                 }
             }
-            if ((((_arg_2 - this._lastReport) > (this.reportInterval * 1000)) && (this._reportCount < this._Str_24363)))
+            if ((((_arg_2 - this._lastReport) > (this.reportInterval * 1000)) && (this._reportCount < this.reportLimit)))
             {
                 _local_6 = System.totalMemory;
                 Logger.log((((("*** Performance tracker: average frame rate " + (1000 / this._averageUpdateInterval)) + "/s, system memory usage : ") + _local_6) + " bytes"));
                 _local_7 = true;
-                if (((this._Str_25139) && (this._reportCount > 0)))
+                if (((this.useDistribution) && (this._reportCount > 0)))
                 {
-                    _local_8 = _Str_20395(this._lastAverage, this._averageUpdateInterval);
-                    if (_local_8 < this._Str_24935)
+                    _local_8 = differenceInPercents(this._lastAverage, this._averageUpdateInterval);
+                    if (_local_8 < this.meanDevianceLimit)
                     {
                         _local_7 = false;
                     }
@@ -138,13 +138,13 @@
                 if (((_local_7) || (_local_3)))
                 {
                     this._lastAverage = this._averageUpdateInterval;
-                    this._Str_24665(_arg_2);
+                    this.sendReport(_arg_2);
                     this._reportCount++;
                 }
             }
         }
 
-        private function _Str_24665(k:int):void
+        private function sendReport(k:int):void
         {
             var _local_2:int = (k / 1000);
             var _local_3:int = -1;
@@ -156,12 +156,12 @@
             this._slowUpdateCount = 0;
         }
 
-        private function get _Str_24952():Boolean
+        private function get isGarbageMonitored():Boolean
         {
             return this._habboTracking.getBoolean("monitor.garbage.collection");
         }
 
-        private function get _Str_25177():int
+        private function get slowUpdateLimit():int
         {
             return this._habboTracking.getInteger("performancetest.slowupdatelimit", 1000);
         }
@@ -171,17 +171,17 @@
             return this._habboTracking.getInteger("performancetest.interval", 60);
         }
 
-        private function get _Str_24363():int
+        private function get reportLimit():int
         {
             return this._habboTracking.getInteger("performancetest.reportlimit", 10);
         }
 
-        private function get _Str_24935():Number
+        private function get meanDevianceLimit():Number
         {
             return (this._habboTracking.propertyExists("performancetest.distribution.deviancelimit.percent")) ? Number(this._habboTracking.getProperty("performancetest.distribution.deviancelimit.percent")) : 10;
         }
 
-        private function get _Str_25139():Boolean
+        private function get useDistribution():Boolean
         {
             return this._habboTracking.getBoolean("performancetest.distribution.enabled");
         }

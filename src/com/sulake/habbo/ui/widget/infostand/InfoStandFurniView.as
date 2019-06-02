@@ -107,7 +107,7 @@
             if (this._Str_4258 != null)
             {
                 this._Str_4258.procedure = this._Str_25802;
-                this._Str_21812 = IItemListWindow(this._Str_4258.findChildByName("variable_list"))._Str_2915(0);
+                this._Str_21812 = IItemListWindow(this._Str_4258.findChildByName("variable_list")).removeListItemAt(0);
             }
             if (this._Str_2341 != null)
             {
@@ -240,7 +240,7 @@
             var _local_4:int = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
             if (_local_3)
             {
-                _local_5 = this._Str_2268.handler.container.sessionDataManager._Str_4531(_local_4);
+                _local_5 = this._Str_2268.handler.container.sessionDataManager.getWallItemData(_local_4);
             }
             else
             {
@@ -456,11 +456,11 @@
                 return;
             }
             this._Str_2373.arrangeListItems();
-            this._Str_2374.width = this._Str_2374._Str_2614.width;
-            this._Str_2373.height = this._Str_2373._Str_2614.height;
+            this._Str_2374.width = this._Str_2374.visibleRegion.width;
+            this._Str_2373.height = this._Str_2373.visibleRegion.height;
             this._Str_2341.height = (this._Str_2373.height + 20);
             this._window.width = Math.max(this._Str_2341.width, this._Str_2374.width);
-            this._window.height = this._window._Str_2614.height;
+            this._window.height = this._window.visibleRegion.height;
             if (this._Str_2341.width < this._Str_2374.width)
             {
                 this._Str_2341.x = (this._window.width - this._Str_2341.width);
@@ -493,7 +493,7 @@
             var _local_3:Boolean;
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k._Str_3233)) || (k._Str_2781)) || (k._Str_2799)))
+            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k._Str_3233)) || (k.isRoomController)) || (k._Str_2799)))
             {
                 _local_2 = true;
                 _local_3 = (!(k._Str_2770));
@@ -503,7 +503,7 @@
                 _local_4 = true;
             }
             var _local_6:* = (k.roomControllerLevel >= RoomControllerLevel.GUEST);
-            if (((((k._Str_4172 == RoomWidgetFurniInfoUsagePolicyEnum._Str_18353) || ((k._Str_4172 == RoomWidgetFurniInfoUsagePolicyEnum._Str_18194) && (_local_6))) || ((k._Str_2415 == RoomWidgetEnumItemExtradataParameter.JUKEBOX) && (_local_6))) || ((k._Str_2415 == RoomWidgetEnumItemExtradataParameter.USABLE_PRODUCT) && (_local_6))))
+            if (((((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum._Str_18353) || ((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum._Str_18194) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.USABLE_PRODUCT) && (_local_6))))
             {
                 _local_5 = this._Str_2268.config.getBoolean("infostand.use.button.enabled");
             }
@@ -541,7 +541,7 @@
                 return;
             }
             var _local_3:IItemListWindow = (this._Str_4258.findChildByName("variable_list") as IItemListWindow);
-            _local_3._Str_2724();
+            _local_3.destroyListItems();
             var _local_4:Map = k.getModel().getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA);
             for each (_local_5 in _local_2)
             {
@@ -562,7 +562,7 @@
             }
             else
             {
-                if (((k._Str_2781) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
+                if (((k.isRoomController) || (k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN)))
                 {
                     this._Str_5729 = this._Str_20473;
                 }
@@ -640,7 +640,7 @@
             var k:Map = new Map();
             if (this._Str_2268 != null)
             {
-                _local_2 = this._Str_2268.furniData._Str_2415.substr(RoomWidgetEnumItemExtradataParameter.BRANDING_OPTIONS.length);
+                _local_2 = this._Str_2268.furniData.extraParam.substr(RoomWidgetEnumItemExtradataParameter.BRANDING_OPTIONS.length);
                 _local_3 = _local_2.split("\t");
                 if (_local_3 != null)
                 {

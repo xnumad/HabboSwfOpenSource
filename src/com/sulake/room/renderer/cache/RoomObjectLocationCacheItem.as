@@ -1,7 +1,7 @@
 ﻿package com.sulake.room.renderer.cache
 {
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.utils.IRoomGeometry;
 
@@ -22,7 +22,7 @@
             this._screenLoc = new Vector3d();
         }
 
-        public function get _Str_25332():Boolean
+        public function get locationChanged():Boolean
         {
             return this._locationChanged;
         }
@@ -32,18 +32,18 @@
             this._screenLoc = null;
         }
 
-        public function _Str_22968(k:IRoomObject, _arg_2:IRoomGeometry):IVector3D
+        public function getScreenLocation(k:IRoomObject, _arg_2:IRoomGeometry):IVector3d
         {
-            var _local_5:IVector3D;
+            var _local_5:IVector3d;
             var _local_6:Number;
             var _local_7:Vector3d;
-            var _local_8:IVector3D;
+            var _local_8:IVector3d;
             if (((k == null) || (_arg_2 == null)))
             {
                 return null;
             }
             var _local_3:Boolean;
-            var _local_4:IVector3D = k.getLocation();
+            var _local_4:IVector3d = k.getLocation();
             if (((!(_arg_2.updateId == this._geometryUpdateId)) || (!(k.getUpdateID() == this._objectUpdateId))))
             {
                 this._objectUpdateId = k.getUpdateID();

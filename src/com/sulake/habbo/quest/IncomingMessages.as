@@ -62,7 +62,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_3352(this._Str_2960));
             _local_2.addHabboConnectionMessageEvent(new CompetitionEntrySubmitResultEvent(this._Str_17737));
             _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this._Str_3012));
+            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionProgressMessageEvent(this._Str_23911));
             _local_2.addHabboConnectionMessageEvent(new _Str_7630(this._Str_16392));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionsMessageEvent(this._Str_23908));
@@ -138,9 +138,9 @@
             this._isDisposed = true;
         }
 
-        private function _Str_3012(k:_Str_2752):void
+        private function onCreditBalance(k:_Str_2752):void
         {
-            this._questEngine._Str_8189._Str_3012(k);
+            this._questEngine._Str_8189.onCreditBalance(k);
             this._questEngine._Str_6927 = true;
         }
 
@@ -166,7 +166,7 @@
         {
             var _local_2:AchievementsEvent = (k as AchievementsEvent);
             var _local_3:AchievementsParser = (_local_2._Str_2273() as AchievementsParser);
-            this._questEngine._Str_17659._Str_17329(_local_3.achievements, _local_3._Str_16300);
+            this._questEngine._Str_17659._Str_17329(_local_3.achievements, _local_3.defaultCategory);
         }
 
         private function _Str_23908(k:AchievementResolutionsMessageEvent):void
@@ -178,13 +178,13 @@
         private function _Str_23911(k:AchievementResolutionProgressMessageEvent):void
         {
             var _local_2:AchievementResolutionProgressMessageParser = k._Str_2273();
-            this._questEngine._Str_10255._Str_24205(_local_2.stuffId, _local_2.achievementId, _local_2._Str_22928, _local_2._Str_25737, _local_2._Str_18600, _local_2._Str_17028);
+            this._questEngine._Str_10255._Str_24205(_local_2.stuffId, _local_2.achievementId, _local_2.requiredLevelBadgeCode, _local_2.userProgress, _local_2._Str_18600, _local_2._Str_17028);
         }
 
         private function _Str_24464(k:AchievementResolutionCompletedMessageEvent):void
         {
             var _local_2:AchievementResolutionCompletedMessageParser = k._Str_2273();
-            this._questEngine._Str_10255._Str_25733(_local_2.badgeCode, _local_2._Str_22541);
+            this._questEngine._Str_10255._Str_25733(_local_2.badgeCode, _local_2.stuffCode);
         }
 
         private function _Str_12011(k:IMessageEvent):void
@@ -229,7 +229,7 @@
 
         private function _Str_24584(k:_Str_3492):void
         {
-            if (((k._Str_2273()._Str_3738) && (k._Str_2273()._Str_9379 == _Str_4007._Str_12890)))
+            if (((k._Str_2273().isVIP) && (k._Str_2273()._Str_9379 == _Str_4007._Str_12890)))
             {
                 this._questEngine._Str_8189._Str_25159();
             }
@@ -240,7 +240,7 @@
             var _local_3:int;
             var _local_4:Object;
             var _local_2:Dictionary = _Str_5159(k).points;
-            for each (_local_3 in ActivityPointTypeEnum._Str_24355())
+            for each (_local_3 in ActivityPointTypeEnum.values())
             {
                 this._questEngine._Str_3398._Str_4970(_local_3, 0);
             }

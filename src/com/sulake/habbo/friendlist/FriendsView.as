@@ -584,7 +584,7 @@
             var _local_4:int;
             while (_local_4 < k._Str_11426())
             {
-                this._Str_22539(_local_3, _local_4, k._Str_3544, _arg_2);
+                this._Str_22539(_local_3, _local_4, k.pageIndex, _arg_2);
                 _local_4++;
             }
             Util._Str_7173(_local_3, _local_3.width, 15);
@@ -621,7 +621,7 @@
             var _local_5:int = _local_3.id;
             Logger.log(((("Page link clicked: " + _local_4) + ", ") + _local_5));
             var _local_6:_Str_2591 = this._friendList.categories._Str_5067(_local_4);
-            _local_6._Str_3544 = _local_5;
+            _local_6.pageIndex = _local_5;
             this._Str_3836();
         }
     }

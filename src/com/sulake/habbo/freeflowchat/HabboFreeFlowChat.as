@@ -51,7 +51,7 @@
     import com.sulake.habbo.freeflowchat.data.ChatItem;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.room.utils.IRoomGeometry;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import flash.display.DisplayObject;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.ui.IRoomDesktop;
@@ -184,7 +184,7 @@
         override protected function initComponent():void
         {
             this._communication.addHabboConnectionMessageEvent(new _Str_3277(this.onPerkAllowances));
-            this._communication.addHabboConnectionMessageEvent(new _Str_2752(this._Str_3012));
+            this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsEvent(this._Str_25751));
             this._communication.addHabboConnectionMessageEvent(new _Str_3870(this._Str_10366));
@@ -251,7 +251,7 @@
             }
         }
 
-        private function _Str_3012(k:_Str_2752):void
+        private function onCreditBalance(k:_Str_2752):void
         {
             this._roomChangeRecordedInHistory = false;
             this.clear();
@@ -380,7 +380,7 @@
             this._chatFlowViewer._Str_12872(chatBubble, insertPosition);
         }
 
-        public function _Str_21534(k:int, _arg_2:IVector3D):Point
+        public function _Str_21534(k:int, _arg_2:IVector3d):Point
         {
             var _local_8:Point;
             var _local_9:Point;
@@ -389,7 +389,7 @@
                 return new Point(0, 0);
             }
             var _local_3:int = ((HabboComponentFlags._Str_4954(flags)) ? 1 : -1);
-            var _local_4:IRoomGeometry = this.roomEngine._Str_4267(k, _local_3);
+            var _local_4:IRoomGeometry = this.roomEngine.getRoomCanvasGeometry(k, _local_3);
             var _local_5:Number = this.roomEngine._Str_5151(k);
             var _local_6:Number = ((this._chatFlowViewer._Str_5128.stage.stageWidth * _local_5) / 2);
             var _local_7:Number = ((this._chatFlowViewer._Str_5128.stage.stageHeight * _local_5) / 2);
@@ -400,7 +400,7 @@
                 {
                     _local_6 = (_local_6 + (_local_8.x * _local_5));
                     _local_7 = (_local_7 + (_local_8.y * _local_5));
-                    _local_9 = this.roomEngine._Str_7201(k);
+                    _local_9 = this.roomEngine.getRoomCanvasScreenOffset(k);
                     if (_local_9 != null)
                     {
                         _local_6 = (_local_6 + _local_9.x);
@@ -437,15 +437,15 @@
 
         public function _Str_20784(k:int):void
         {
-            this._roomEngine._Str_15268 = k;
+            this._roomEngine.mouseEventsDisabledLeftToX = k;
         }
 
         public function _Str_19178(k:ChatItem):void
         {
-            this._Str_6973(k.roomId, k.userId);
+            this.selectAvatar(k.roomId, k.userId);
         }
 
-        public function _Str_6973(k:int, _arg_2:int):void
+        public function selectAvatar(k:int, _arg_2:int):void
         {
             var _local_5:RoomUserData;
             var _local_6:RoomUserData;
@@ -455,7 +455,7 @@
             }
             var _local_3:IRoomDesktop = this._roomUI.getDesktop("hard_coded_room_id");
             _local_3.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _arg_2, RoomObjectCategoryEnum.CONST_100));
-            this.roomEngine._Str_6973(k, _arg_2);
+            this.roomEngine.selectAvatar(k, _arg_2);
             var _local_4:IRoomSession = this._roomSessionManager.getSession(k);
             if (_local_4)
             {
@@ -490,9 +490,9 @@
             return (this._roomUI) ? this._roomUI._Str_21446(k) : false;
         }
 
-        public function get _Str_5329():IChatStyleLibrary
+        public function get chatStyleLibrary():IChatStyleLibrary
         {
-            return (this._chatBubbleFactory) ? this._chatBubbleFactory._Str_5329 : null;
+            return (this._chatBubbleFactory) ? this._chatBubbleFactory.chatStyleLibrary : null;
         }
 
         public function get isDisabledInPreferences():Boolean

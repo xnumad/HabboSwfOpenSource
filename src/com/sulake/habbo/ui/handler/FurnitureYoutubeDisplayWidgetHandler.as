@@ -77,7 +77,7 @@
         private function _Str_25218(k:_Str_9325):void
         {
             var _local_2:_Str_7559 = k._Str_2273();
-            this._widget._Str_22371(_local_2.furniId, _local_2._Str_18899);
+            this._widget._Str_22371(_local_2.furniId, _local_2.commandId);
         }
 
         private function _Str_24746(k:YoutubeDisplayPlaylistsEvent):void

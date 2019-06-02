@@ -85,7 +85,7 @@
             return this._rewardProducts;
         }
 
-        public function get _Str_14278():int
+        public function get rewardCount():int
         {
             return this._rewardPerks.length + this._rewardProducts.length;
         }
@@ -97,7 +97,7 @@
             var _local_2:Number = 0;
             for each (_local_3 in this._tasks)
             {
-                if (_local_3.state == TalentTrack._Str_9390)
+                if (_local_3.state == TalentTrack.STATE_ACHIEVED)
                 {
                     _local_2 = (_local_2 + k);
                 }

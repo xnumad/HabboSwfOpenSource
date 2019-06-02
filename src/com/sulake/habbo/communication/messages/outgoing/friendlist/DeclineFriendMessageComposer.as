@@ -36,7 +36,7 @@
             return k;
         }
 
-        public function _Str_23255(k:int):void
+        public function addDeclinedRequest(k:int):void
         {
             this._declinedRequestIds.push(k);
         }

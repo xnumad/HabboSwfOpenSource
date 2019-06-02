@@ -42,7 +42,7 @@
         protected var _Str_7726:Boolean = true;
         protected var _Str_2450:Loader = null;
         protected var _Str_2341:Sprite;
-        protected var _Str_1720:Number = 0;
+        protected var _width:Number = 0;
         protected var _height:Number = 0;
         protected var _Str_11697:Boolean = false;
         protected var _Str_3322:_Str_4027 = null;
@@ -142,9 +142,9 @@
         {
             if (scaleX > 1)
             {
-                return this._Str_1720 * scaleX;
+                return this._width * scaleX;
             }
-            return (this._Str_1720) || (super.width);
+            return (this._width) || (super.width);
         }
 
         override public function set width(k:Number):void
@@ -172,7 +172,7 @@
 
         override public function set height(k:Number):void
         {
-            this.setSize(this._Str_1720, k);
+            this.setSize(this._width, k);
         }
 
         public function set _Str_26129(k:Number):void
@@ -181,14 +181,14 @@
             {
                 this._Str_2297.height = k;
             }
-            this.setSize(this._Str_1720, k, false);
+            this.setSize(this._width, k, false);
         }
 
         public function setSize(k:Number, _arg_2:Number, _arg_3:Boolean=true):void
         {
-            this._Str_1720 = k;
+            this._width = k;
             this._height = _arg_2;
-            this._Str_1136();
+            this.onResize();
             if (_arg_3)
             {
                 this._Str_6950();
@@ -525,7 +525,7 @@
             }
         }
 
-        private function _Str_5679():void
+        private function removeListeners():void
         {
             if (this._Str_2297.clickable)
             {
@@ -831,9 +831,9 @@
             if (this._Str_3322.maintainAspectRatio)
             {
                 _local_3 = 1;
-                if (((k > this._Str_1720) && (Math.abs((k - this._Str_1720)) > Math.abs((_arg_2 - this._height)))))
+                if (((k > this._width) && (Math.abs((k - this._width)) > Math.abs((_arg_2 - this._height)))))
                 {
-                    _local_3 = (k / this._Str_1720);
+                    _local_3 = (k / this._width);
                 }
                 else
                 {
@@ -844,9 +844,9 @@
             }
             else
             {
-                if (k > this._Str_1720)
+                if (k > this._width)
                 {
-                    this._Str_2450.width = this._Str_1720;
+                    this._Str_2450.width = this._width;
                 }
                 if (_arg_2 > this._height)
                 {
@@ -868,14 +868,14 @@
                         {
                             if (this._Str_3322.enforceRecommendedSizing)
                             {
-                                if (((this._Str_3322.recommendedHeight > this._height) || (this._Str_3322.recommendedWidth > this._Str_1720)))
+                                if (((this._Str_3322.recommendedHeight > this._height) || (this._Str_3322.recommendedWidth > this._width)))
                                 {
                                     this._Str_19104(this._Str_3322.recommendedWidth, this._Str_3322.recommendedHeight);
                                 }
                             }
                             else
                             {
-                                if (((this._Str_2450.height > this._height) || (this._Str_2450.width > this._Str_1720)))
+                                if (((this._Str_2450.height > this._height) || (this._Str_2450.width > this._width)))
                                 {
                                     this._Str_19104(this._Str_2450.width, this._Str_2450.height);
                                 }
@@ -886,9 +886,9 @@
                             }
                             else
                             {
-                                if (((this._Str_2450.width > 0) && (this._Str_2450.width < this._Str_1720)))
+                                if (((this._Str_2450.width > 0) && (this._Str_2450.width < this._width)))
                                 {
-                                    this._Str_2450.x = (0 + Math.floor(((this._Str_1720 - this._Str_2450.width) / 2)));
+                                    this._Str_2450.x = (0 + Math.floor(((this._width - this._Str_2450.width) / 2)));
                                 }
                                 if (((this._Str_2450.height > 0) && (this._Str_2450.height < this._height)))
                                 {
@@ -1086,7 +1086,7 @@
                     this._text.y = NumberUtils._Str_5288(_local_2[0]);
                     this._text.x = NumberUtils._Str_5288(_local_2[3]);
                     this._text.height = Math.round(((this._height - NumberUtils._Str_5288(_local_2[0])) - NumberUtils._Str_5288(_local_2[2])));
-                    this._text.width = Math.round(((this._Str_1720 - NumberUtils._Str_5288(_local_2[1])) - NumberUtils._Str_5288(_local_2[3])));
+                    this._text.width = Math.round(((this._width - NumberUtils._Str_5288(_local_2[1])) - NumberUtils._Str_5288(_local_2[3])));
                 }
                 else
                 {
@@ -1094,22 +1094,22 @@
                     this._text.y = Math.round(_local_3[0]);
                     this._text.x = Math.round(_local_3[3]);
                     this._text.height = Math.round(((this._height - _local_3[0]) - _local_3[2]));
-                    this._text.width = Math.round(((this._Str_1720 - _local_3[1]) - _local_3[3]));
+                    this._text.width = Math.round(((this._width - _local_3[1]) - _local_3[3]));
                 }
             }
         }
 
-        protected function _Str_1136():void
+        protected function onResize():void
         {
             this._Str_8978();
             if (this._Str_9713)
             {
-                this._Str_9713.width = this._Str_1720;
+                this._Str_9713.width = this._width;
                 this._Str_9713.height = this._height;
             }
             if (this._Str_4922 != null)
             {
-                this._Str_4922.width = this._Str_1720;
+                this._Str_4922.width = this._width;
                 this._Str_4922.height = this._height;
             }
             this.x = 0;
@@ -1148,7 +1148,7 @@
 
         public function hide():void
         {
-            this._Str_5679();
+            this.removeListeners();
             this.visible = false;
         }
 
@@ -1191,7 +1191,7 @@
             {
                 graphics.beginFill(0, 0);
             }
-            GraphicsUtils.drawRoundRectangle(graphics, 0, 0, this._Str_1720, this._height, this.borderRadius);
+            GraphicsUtils.drawRoundRectangle(graphics, 0, 0, this._width, this._height, this.borderRadius);
             graphics.endFill();
             if (this.backgroundGradient)
             {

@@ -10,7 +10,7 @@
             this._rawData = rawData;
         }
 
-        public function get _Str_15310():Boolean
+        public function get isAdmin():Boolean
         {
             return this._isAdmin;
         }

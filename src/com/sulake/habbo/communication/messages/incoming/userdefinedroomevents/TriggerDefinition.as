@@ -31,7 +31,7 @@
             return this._triggerConf;
         }
 
-        public function get _Str_21837():Array
+        public function get conflictingActions():Array
         {
             return this._conflictingActions;
         }

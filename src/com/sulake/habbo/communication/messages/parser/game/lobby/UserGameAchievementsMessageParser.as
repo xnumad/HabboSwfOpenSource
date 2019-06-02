@@ -33,9 +33,9 @@
             return this._achievements.achievements;
         }
 
-        public function get _Str_16300():String
+        public function get defaultCategory():String
         {
-            return this._achievements._Str_16300;
+            return this._achievements.defaultCategory;
         }
     }
 }

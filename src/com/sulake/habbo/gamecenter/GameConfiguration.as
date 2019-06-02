@@ -23,12 +23,12 @@
             }
         }
 
-        public function get _Str_5333():int
+        public function get gameId():int
         {
             return this._gameId;
         }
 
-        public function get _Str_9827():String
+        public function get gameNameId():String
         {
             return this._gameNameId;
         }
@@ -43,12 +43,12 @@
             return this._textColor;
         }
 
-        public function get _Str_15765():String
+        public function get assetUrl():String
         {
             return this._assetUrl;
         }
 
-        public function get _Str_14248():String
+        public function get supportUrl():String
         {
             return this._supportUrl;
         }

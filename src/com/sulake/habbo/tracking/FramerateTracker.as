@@ -18,7 +18,7 @@
             return Math.round((1000 / this._averageUpdateInterval));
         }
 
-        public function _Str_24249(k:uint, _arg_2:int):void
+        public function trackUpdate(k:uint, _arg_2:int):void
         {
             var _local_3:Number;
             this._updateCounter++;

@@ -38,8 +38,8 @@
                 return;
             }
             var _local_3:IWindowContainer = (this.itemList.getListItemAt(0) as IWindowContainer);
-            this.itemList._Str_2659();
-            this.itemList._Str_6129 = true;
+            this.itemList.removeListItems();
+            this.itemList.disableAutodrag = true;
             var _local_4:int = this._Str_6223._Str_8399;
             var _local_5:int;
             while (_local_5 < _local_4)
@@ -51,9 +51,9 @@
             }
             this.itemList.scrollStepH = (_local_3.width / this.itemList.maxScrollH);
             var _local_6:Stage = this._controller.context.displayObjectContainer.stage;
-            _local_6.addEventListener(Event.RESIZE, this._Str_1136);
+            _local_6.addEventListener(Event.RESIZE, this.onResize);
             this.window.procedure = this._Str_3055;
-            this._Str_1136(null);
+            this.onResize(null);
             this._Str_10170(this._controller._Str_6223._Str_5472);
         }
 
@@ -63,7 +63,7 @@
             if (this._modal != null)
             {
                 k = this._controller.context.displayObjectContainer.stage;
-                k.removeEventListener(Event.RESIZE, this._Str_1136);
+                k.removeEventListener(Event.RESIZE, this.onResize);
                 this._modal.dispose();
                 this._modal = null;
             }
@@ -99,7 +99,7 @@
             this._controller._Str_24884();
         }
 
-        private function _Str_1136(k:Event):void
+        private function onResize(k:Event):void
         {
             var _local_2:Stage = this._controller.context.displayObjectContainer.stage;
             this._itemsOnScreen = Math.floor(((_local_2.stageWidth - (_Str_3226 * 2)) / (this._Str_13395 + this._Str_18214)));
@@ -131,7 +131,7 @@
             switch (_arg_2.name)
             {
                 case "btn_present":
-                    _local_3 = this.itemList._Str_3156(k.target.parent);
+                    _local_3 = this.itemList.getListItemIndex(k.target.parent);
                     if (_local_3 < 0)
                     {
                         return;

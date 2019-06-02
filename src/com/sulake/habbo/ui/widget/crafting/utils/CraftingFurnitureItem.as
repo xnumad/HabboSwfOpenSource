@@ -20,12 +20,12 @@
             this._mixerIds = new Vector.<int>(0);
         }
 
-        public function get _Str_2686():IFurnitureData
+        public function get furnitureData():IFurnitureData
         {
             return this._furnitureData;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._productCode;
         }

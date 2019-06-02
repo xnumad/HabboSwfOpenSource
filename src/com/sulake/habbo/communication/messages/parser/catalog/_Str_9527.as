@@ -44,7 +44,7 @@
             return this._Str_2507;
         }
 
-        public function get _Str_2588():String
+        public function get productType():String
         {
             return this._Str_3032;
         }

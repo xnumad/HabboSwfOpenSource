@@ -345,7 +345,7 @@
             return this._windowContextArray[_arg_2].getDesktopWindow().getChildByName(k);
         }
 
-        public function _Str_13465(k:uint=1):IWindow
+        public function getActiveWindow(k:uint=1):IWindow
         {
             return this._windowContextArray[k].getDesktopWindow().getChildAt((this._windowContext.getDesktopWindow().numChildren - 1));
         }
@@ -503,7 +503,7 @@
             }
         }
 
-        public function _Str_14445(k:WindowEvent, _arg_2:IWindow):void
+        public function eventReceived(k:WindowEvent, _arg_2:IWindow):void
         {
             if (_arg_2 != null)
             {
@@ -558,7 +558,7 @@
             return null;
         }
 
-        public function _Str_24004(k:String, _arg_2:Array, _arg_3:int=0):uint
+        public function groupWindowsWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
             var _local_5:IWindowContext;
             var _local_4:uint;
@@ -596,7 +596,7 @@
             return this._avatarRenderer;
         }
 
-        public function get _Str_7720():IResourceManager
+        public function get resourceManager():IResourceManager
         {
             return this._resourceManager;
         }
@@ -651,7 +651,7 @@
             this._hintManager._Str_12248(k);
         }
 
-        public function _Str_18925():void
+        public function displayFloorPlanEditor():void
         {
             if (this._bcfloorPlanEditor == null)
             {
@@ -671,7 +671,7 @@
             }
         }
 
-        public function get _Str_23034():StyleSheet
+        public function get habboPagesStyleSheet():StyleSheet
         {
             return _Str_7787.styleSheet;
         }

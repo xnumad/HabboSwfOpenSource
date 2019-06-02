@@ -18,7 +18,7 @@
             return this._Str_1040.length;
         }
 
-        public function _Str_4290(k:int):String
+        public function getName(k:int):String
         {
             if (((k < 0) || (k >= this._Str_17132)))
             {

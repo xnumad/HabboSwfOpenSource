@@ -108,7 +108,7 @@
                 }
                 if (_local_14._Str_24281())
                 {
-                    WindowRectLimits(this._Str_2648).assign(_local_14.width_min, _local_14.width_max, _local_14.height_min, _local_14.height_max);
+                    WindowRectLimits(this.limits).assign(_local_14.width_min, _local_14.width_max, _local_14.height_min, _local_14.height_max);
                 }
             }
             if (_arg_9)
@@ -294,7 +294,7 @@
             return this._Str_610;
         }
 
-        public function get _Str_2648():IRectLimiter
+        public function get limits():IRectLimiter
         {
             return (this._Str_5058) ? this._Str_5058 : this._Str_5058 = new WindowRectLimits(this);
         }
@@ -698,7 +698,7 @@
                 {
                     if (!this._Str_25369())
                     {
-                        if (this._Str_2767(WindowState.ACTIVE))
+                        if (this.getStateFlag(WindowState.ACTIVE))
                         {
                             this.deactivate();
                         }
@@ -958,12 +958,12 @@
             return !(_context.getWindowParser().parseAndConstruct(k, this, _arg_2) == null);
         }
 
-        public function _Str_6613():IBitmapDrawable
+        public function fetchDrawBuffer():IBitmapDrawable
         {
-            return (testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)) ? ((this._parent != null) ? this._parent._Str_6613() : null) : (this.getGraphicContext(true)._Str_6613());
+            return (testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)) ? ((this._parent != null) ? this._parent.fetchDrawBuffer() : null) : (this.getGraphicContext(true).fetchDrawBuffer());
         }
 
-        public function _Str_15011(k:Rectangle):void
+        public function getDrawRegion(k:Rectangle):void
         {
             if (!testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
             {
@@ -976,7 +976,7 @@
             {
                 if (this._parent != null)
                 {
-                    this._parent._Str_15011(k);
+                    this._parent.getDrawRegion(k);
                     k.x = (k.x + _x);
                     k.y = (k.y + _y);
                     k.width = _w;
@@ -1040,10 +1040,10 @@
                         {
                             return true;
                         }
-                        this._Str_2896(WindowState.PRESSED, true);
+                        this.setStateFlag(WindowState.PRESSED, true);
                         _local_4 = _context.getWindowServices().getMouseListenerService();
                         _local_4.begin(this);
-                        _local_4._Str_21872.push(WindowMouseEvent.UP);
+                        _local_4.eventTypes.push(WindowMouseEvent.UP);
                         _local_4._Str_14321 = MouseListenerType.EVENTS_OUTSIDE_WINDOW;
                         if (testParamFlag(WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TRIGGER))
                         {
@@ -1075,7 +1075,7 @@
                     case WindowMouseEvent.UP:
                         if (testStateFlag(WindowState.PRESSED))
                         {
-                            this._Str_2896(WindowState.PRESSED, false);
+                            this.setStateFlag(WindowState.PRESSED, false);
                         }
                         _context.getWindowServices().getMouseListenerService().end(this);
                         if (testParamFlag(WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET))
@@ -1090,17 +1090,17 @@
                     case WindowMouseEvent.OUT:
                         if (testStateFlag(WindowState.HOVERING))
                         {
-                            this._Str_2896(WindowState.HOVERING, false);
+                            this.setStateFlag(WindowState.HOVERING, false);
                         }
                         if (testStateFlag(WindowState.PRESSED))
                         {
-                            this._Str_2896(WindowState.PRESSED, false);
+                            this.setStateFlag(WindowState.PRESSED, false);
                         }
                         break;
                     case WindowMouseEvent.OVER:
                         if (!testStateFlag(WindowState.HOVERING))
                         {
-                            this._Str_2896(WindowState.HOVERING, true);
+                            this.setStateFlag(WindowState.HOVERING, true);
                         }
                         break;
                     case WindowMouseEvent.WHEEL:
@@ -1284,19 +1284,19 @@
             {
                 this._Str_9367 = DynamicStyleManager.getStyle(_dynamicStyle);
             }
-            if (this._Str_2767(WindowState.DISABLED))
+            if (this.getStateFlag(WindowState.DISABLED))
             {
                 k = WindowState.DISABLED;
             }
             else
             {
-                if (this._Str_2767(WindowState.PRESSED))
+                if (this.getStateFlag(WindowState.PRESSED))
                 {
                     k = WindowState.PRESSED;
                 }
                 else
                 {
-                    if (this._Str_2767(WindowState.HOVERING))
+                    if (this.getStateFlag(WindowState.HOVERING))
                     {
                         k = WindowState.HOVERING;
                     }
@@ -1385,7 +1385,7 @@
             }
         }
 
-        public function _Str_14451(k:Point):void
+        public function convertPointFromGlobalToLocalSpace(k:Point):void
         {
             var _local_2:Number = k.x;
             var _local_3:Number = k.y;
@@ -1404,7 +1404,7 @@
             k.y = (_local_3 - k.y);
         }
 
-        public function _Str_20662(k:Point):void
+        public function convertPointFromLocalToGlobalSpace(k:Point):void
         {
             var _local_2:Number = k.x;
             var _local_3:Number = k.y;
@@ -1423,26 +1423,26 @@
             k.y = (k.y + _local_3);
         }
 
-        public function _Str_12181(k:Point):void
+        public function getRelativeMousePosition(k:Point):void
         {
             this.getGlobalPosition(k);
             k.x = (_context.getDesktopWindow().mouseX - k.x);
             k.y = (_context.getDesktopWindow().mouseY - k.y);
         }
 
-        public function _Str_16259(k:Point):void
+        public function getAbsoluteMousePosition(k:Point):void
         {
             k.x = _context.getDesktopWindow().mouseX;
             k.y = _context.getDesktopWindow().mouseY;
         }
 
-        public function _Str_19977(k:Point):void
+        public function getLocalPosition(k:Point):void
         {
             k.x = _x;
             k.y = _y;
         }
 
-        public function _Str_23972(k:Rectangle):void
+        public function getLocalRectangle(k:Rectangle):void
         {
             k.x = _x;
             k.y = _y;
@@ -1450,12 +1450,12 @@
             k.height = _h;
         }
 
-        public function _Str_21290(k:Point):Boolean
+        public function hitTestLocalPoint(k:Point):Boolean
         {
             return (((k.x >= _x) && (k.x < (_x + _w))) && (k.y >= _y)) && (k.y < (_y + _h));
         }
 
-        public function _Str_24804(k:Rectangle):Boolean
+        public function hitTestLocalRectangle(k:Rectangle):Boolean
         {
             return rectangle.intersects(k);
         }
@@ -1480,7 +1480,7 @@
             }
         }
 
-        public function _Str_10907(k:Point):void
+        public function setGlobalPosition(k:Point):void
         {
             var _local_2:Point = new Point();
             if (this._parent != null)
@@ -1515,7 +1515,7 @@
             k.height = _h;
         }
 
-        public function _Str_21088(k:Rectangle):void
+        public function setGlobalRectangle(k:Rectangle):void
         {
             var _local_2:Point = new Point();
             if (this._parent != null)
@@ -1539,7 +1539,7 @@
             return _local_2.containsPoint(k);
         }
 
-        public function _Str_24756(k:Rectangle):Boolean
+        public function hitTestGlobalRectangle(k:Rectangle):Boolean
         {
             var _local_2:Rectangle = new Rectangle();
             this.getGlobalRectangle(_local_2);
@@ -1604,7 +1604,7 @@
                 {
                     if (((k.x <= _w) && (k.y <= _h)))
                     {
-                        _local_5 = (this.getGraphicContext(true)._Str_6613() as BitmapData);
+                        _local_5 = (this.getGraphicContext(true).fetchDrawBuffer() as BitmapData);
                         if (_local_5 != null)
                         {
                             _local_4 = _local_5.hitTest(_Str_13133, _arg_3, k);
@@ -1634,12 +1634,12 @@
             return true;
         }
 
-        public function _Str_25607():Number
+        public function resolveVerticalScale():Number
         {
             return _h / _initialRect.height;
         }
 
-        public function _Str_23689():Number
+        public function resolveHorizontalScale():Number
         {
             return _w / _initialRect.width;
         }
@@ -1720,12 +1720,12 @@
             }
         }
 
-        public function _Str_2767(k:uint):Boolean
+        public function getStateFlag(k:uint):Boolean
         {
             return !((_state & k) == 0);
         }
 
-        public function _Str_2896(k:uint, _arg_2:Boolean=true):void
+        public function setStateFlag(k:uint, _arg_2:Boolean=true):void
         {
             var _local_3:uint = _state;
             _state = ((_arg_2) ? _state = (_state | k) : _state = (_state & (~(k))));
@@ -1736,12 +1736,12 @@
             }
         }
 
-        public function _Str_24659(k:uint):Boolean
+        public function getStyleFlag(k:uint):Boolean
         {
             return !((_style & k) == 0);
         }
 
-        public function _Str_25383(k:uint, _arg_2:Boolean=true):void
+        public function setStyleFlag(k:uint, _arg_2:Boolean=true):void
         {
             var _local_4:Array;
             var _local_5:uint;
@@ -1765,7 +1765,7 @@
             }
         }
 
-        public function _Str_7560(k:uint):Boolean
+        public function getParamFlag(k:uint):Boolean
         {
             return !((_param & k) == 0);
         }
@@ -1832,7 +1832,7 @@
                         {
                             if (_local_4 == WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER)
                             {
-                                if (((this._parent.width < _local_8) && (this._Str_7560(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))))
+                                if (((this._parent.width < _local_8) && (this.getParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))))
                                 {
                                     _local_6 = 0;
                                 }
@@ -1862,7 +1862,7 @@
                         {
                             if (_local_4 == WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER)
                             {
-                                if (((this._parent.height < _local_9) && (this._Str_7560(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))))
+                                if (((this._parent.height < _local_9) && (this.getParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))))
                                 {
                                     _local_7 = 0;
                                 }
@@ -1944,14 +1944,14 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.LOCKED, true);
+            this.setStateFlag(WindowState.LOCKED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_MINIMIZED, this, null);
             this.update(this, k);
             k.recycle();
             return true;
         }
 
-        public function _Str_22399():Boolean
+        public function maximize():Boolean
         {
             if ((_state & WindowState.LOCKED))
             {
@@ -1965,7 +1965,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.LOCKED, true);
+            this.setStateFlag(WindowState.LOCKED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_MAXIMIZED, this, null);
             this.update(this, k);
             k.recycle();
@@ -1982,7 +1982,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.LOCKED, false);
+            this.setStateFlag(WindowState.LOCKED, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_RESTORED, this, null);
             this.update(this, k);
             k.recycle();
@@ -1999,7 +1999,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.ACTIVE, true);
+            this.setStateFlag(WindowState.ACTIVE, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_ACTIVATED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2008,7 +2008,7 @@
 
         public function deactivate():Boolean
         {
-            if (!this._Str_2767(WindowState.ACTIVE))
+            if (!this.getStateFlag(WindowState.ACTIVE))
             {
                 return true;
             }
@@ -2020,7 +2020,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.ACTIVE, false);
+            this.setStateFlag(WindowState.ACTIVE, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_DEACTIVATED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2029,7 +2029,7 @@
 
         public function lock():Boolean
         {
-            if (this._Str_2767(WindowState.LOCKED))
+            if (this.getStateFlag(WindowState.LOCKED))
             {
                 return true;
             }
@@ -2041,7 +2041,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.LOCKED, true);
+            this.setStateFlag(WindowState.LOCKED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_LOCKED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2050,7 +2050,7 @@
 
         public function unlock():Boolean
         {
-            if (!this._Str_2767(WindowState.LOCKED))
+            if (!this.getStateFlag(WindowState.LOCKED))
             {
                 return true;
             }
@@ -2062,7 +2062,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.LOCKED, false);
+            this.setStateFlag(WindowState.LOCKED, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_UNLOCKED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2071,7 +2071,7 @@
 
         public function enable():Boolean
         {
-            if (!this._Str_2767(WindowState.DISABLED))
+            if (!this.getStateFlag(WindowState.DISABLED))
             {
                 return true;
             }
@@ -2083,7 +2083,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.DISABLED, false);
+            this.setStateFlag(WindowState.DISABLED, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_ENABLED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2092,7 +2092,7 @@
 
         public function disable():Boolean
         {
-            if (this._Str_2767(WindowState.DISABLED))
+            if (this.getStateFlag(WindowState.DISABLED))
             {
                 return true;
             }
@@ -2104,7 +2104,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.DISABLED, true);
+            this.setStateFlag(WindowState.DISABLED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_DISABLED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2113,7 +2113,7 @@
 
         public function focus():Boolean
         {
-            if (this._Str_2767(WindowState.FOCUSED))
+            if (this.getStateFlag(WindowState.FOCUSED))
             {
                 return true;
             }
@@ -2125,7 +2125,7 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.FOCUSED, true);
+            this.setStateFlag(WindowState.FOCUSED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_FOCUSED, this, null);
             this.update(this, k);
             k.recycle();
@@ -2134,7 +2134,7 @@
 
         public function unfocus():Boolean
         {
-            if (!this._Str_2767(WindowState.FOCUSED))
+            if (!this.getStateFlag(WindowState.FOCUSED))
             {
                 return true;
             }
@@ -2146,14 +2146,14 @@
                 return false;
             }
             k.recycle();
-            this._Str_2896(WindowState.FOCUSED, false);
+            this.setStateFlag(WindowState.FOCUSED, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_UNFOCUSED, this, null);
             this.update(this, k);
             k.recycle();
             return true;
         }
 
-        public function _Str_21140(k:Point):IWindow
+        public function getChildUnderPoint(k:Point):IWindow
         {
             var _local_2:Rectangle;
             var _local_3:Boolean;
@@ -2169,7 +2169,7 @@
                 {
                     while (_local_5 > 0)
                     {
-                        _local_4 = WindowController(this._Str_2187[(_local_5 - 1)])._Str_21140(k);
+                        _local_4 = WindowController(this._Str_2187[(_local_5 - 1)]).getChildUnderPoint(k);
                         if (_local_4 != null)
                         {
                             return _local_4;
@@ -2185,7 +2185,7 @@
             return null;
         }
 
-        public function _Str_14790(k:Point, _arg_2:Array):void
+        public function groupChildrenUnderPoint(k:Point, _arg_2:Array):void
         {
             var _local_3:WindowController;
             if (_visible)
@@ -2198,7 +2198,7 @@
                         k.offset(-(_x), -(_y));
                         for each (_local_3 in this._Str_2187)
                         {
-                            _local_3._Str_14790(k, _arg_2);
+                            _local_3.groupChildrenUnderPoint(k, _arg_2);
                         }
                         k.offset(_x, _y);
                     }
@@ -2212,7 +2212,7 @@
                             k.offset(-(_x), -(_y));
                             for each (_local_3 in this._Str_2187)
                             {
-                                _local_3._Str_14790(k, _arg_2);
+                                _local_3.groupChildrenUnderPoint(k, _arg_2);
                             }
                             k.offset(_x, _y);
                         }
@@ -2433,7 +2433,7 @@
             return null;
         }
 
-        public function _Str_6316(k:String):IWindow
+        public function getChildByTag(k:String):IWindow
         {
             var _local_2:IWindow;
             if (this._Str_2187)
@@ -2455,7 +2455,7 @@
             {
                 return this;
             }
-            var _local_2:WindowController = WindowController(this._Str_6316(k));
+            var _local_2:WindowController = WindowController(this.getChildByTag(k));
             if (((_local_2 == null) && (this._Str_2187)))
             {
                 for each (_local_2 in this._Str_2187)
@@ -2620,7 +2620,7 @@
             return _local_5;
         }
 
-        public function _Str_9450(k:String):IWindow
+        public function findParentByName(k:String):IWindow
         {
             if (_name == k)
             {
@@ -2632,7 +2632,7 @@
                 {
                     return this._parent;
                 }
-                return this._parent._Str_9450(k);
+                return this._parent.findParentByName(k);
             }
             return null;
         }
@@ -2657,22 +2657,22 @@
             return true;
         }
 
-        public function _Str_2340(k:String, _arg_2:Object):PropertyStruct
+        public function createProperty(k:String, _arg_2:Object):PropertyStruct
         {
-            return this._Str_8085.get(k)._Str_2551(_arg_2);
+            return this._Str_8085.get(k).withValue(_arg_2);
         }
 
-        public function _Str_3692(k:String):PropertyStruct
+        public function getDefaultProperty(k:String):PropertyStruct
         {
             return this._Str_8085.get(k);
         }
 
         public function _Str_5065():Boolean
         {
-            return !(this._Str_2767(WindowState.DISABLED));
+            return !(this.getStateFlag(WindowState.DISABLED));
         }
 
-        public function _Str_22584(k:Boolean, _arg_2:Array):void
+        public function enableChildren(k:Boolean, _arg_2:Array):void
         {
             var _local_3:String;
             var _local_4:IWindow;
@@ -2693,7 +2693,7 @@
             }
         }
 
-        public function _Str_23584(k:Boolean, _arg_2:Array):void
+        public function activateChildren(k:Boolean, _arg_2:Array):void
         {
             var _local_3:String;
             var _local_4:IWindow;
@@ -2714,7 +2714,7 @@
             }
         }
 
-        public function _Str_8181(k:Boolean, _arg_2:Array):void
+        public function setVisibleChildren(k:Boolean, _arg_2:Array):void
         {
             var _local_3:String;
             var _local_4:IWindow;
@@ -2757,17 +2757,17 @@
             var _local_2:MouseEvent = (k as MouseEvent);
             var _local_3:Point = new Point(_local_2.stageX, _local_2.stageY);
             var _local_4:Array = [];
-            this.desktop._Str_14790(_local_3, _local_4);
+            this.desktop.groupChildrenUnderPoint(_local_3, _local_4);
             while (_local_4.length > 0)
             {
                 _local_6 = _local_4.pop();
                 if (_local_6 == this) break;
-                if (_local_6._Str_7560(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR))
+                if (_local_6.getParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR))
                 {
                     return;
                 }
             }
-            this._Str_12181(_local_3);
+            this.getRelativeMousePosition(_local_3);
             var _local_5:WindowEvent = WindowMouseEvent.allocate(WindowMouseEvent.CLICK, this, null, _local_3.x, _local_3.y, _local_2.stageX, _local_2.stageY, _local_2.altKey, _local_2.ctrlKey, _local_2.shiftKey, _local_2.buttonDown, _local_2.delta);
             if (this._Str_759)
             {

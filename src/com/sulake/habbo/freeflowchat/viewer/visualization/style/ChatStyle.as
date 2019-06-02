@@ -56,7 +56,7 @@
             this._styleSheet = _arg_19;
         }
 
-        public function _Str_9574(k:uint=0xFFFFFF):Sprite
+        public function getNewBackgroundSprite(k:uint=0xFFFFFF):Sprite
         {
             var _local_2:BitmapData;
             var _local_3:uint;
@@ -78,7 +78,7 @@
             return HabboFreeFlowChat._Str_18206(this._scale9Grid, _local_2);
         }
 
-        public function get _Str_5640():TextFormat
+        public function get textFormat():TextFormat
         {
             return this._textFormat;
         }
@@ -123,7 +123,7 @@
             return this._overlap;
         }
 
-        public function get _Str_22091():BitmapData
+        public function get selectorPreview():BitmapData
         {
             return this._selectorPreview;
         }

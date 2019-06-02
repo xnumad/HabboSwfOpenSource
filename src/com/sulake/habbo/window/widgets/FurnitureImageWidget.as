@@ -106,9 +106,9 @@
             {
                 return k;
             }
-            k.push(_Str_17639._Str_2551(this._furnitureType));
-            k.push(_Str_3527._Str_2551(this._scale));
-            k.push(_Str_4346._Str_2551(_Str_3257[this._direction]));
+            k.push(_Str_17639.withValue(this._furnitureType));
+            k.push(_Str_3527.withValue(this._scale));
+            k.push(_Str_4346.withValue(_Str_3257[this._direction]));
             return k;
         }
 
@@ -189,7 +189,7 @@
             if (this._windowManager.roomEngine != null)
             {
                 _local_2 = "std";
-                _local_3 = this._windowManager.roomEngine._Str_19383(this._furnitureType);
+                _local_3 = this._windowManager.roomEngine.getFurnitureTypeId(this._furnitureType);
                 if (this._itemType == _Str_16516)
                 {
                     k = this._windowManager.roomEngine.getFurnitureImage(_local_3, new Vector3d((this._direction * 45), 0, 0), this._scale, this, 0, this._extra, -1, -1, this._stuffData);

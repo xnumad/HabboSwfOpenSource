@@ -79,20 +79,20 @@
             {
                 return false;
             }
-            this._Str_2552._Str_7410(this);
-            this._Str_14789();
+            this._Str_2552.registerVisualization(this);
+            this.displayMainView();
             var k:IItemListWindow = (_window.findChildByName("offer_list") as IItemListWindow);
             this._listItemBase = (k.removeListItem(k.getListItemByName("offer_item")) as IWindowContainer);
             return true;
         }
 
-        public function _Str_6746():void
+        public function listUpdatedNotify():void
         {
             this._Str_22046();
             this._Str_11855();
         }
 
-        public function _Str_13752():void
+        public function updateStats():void
         {
             var _local_6:MarketplaceChart;
             var _local_9:BitmapData;
@@ -122,7 +122,7 @@
             {
                 return;
             }
-            var _local_5:ISelectableWindow = _local_4._Str_2657();
+            var _local_5:ISelectableWindow = _local_4.getSelected();
             if (!_local_5)
             {
                 return;
@@ -176,7 +176,7 @@
             return null;
         }
 
-        public function _Str_14789():void
+        public function displayMainView():void
         {
             _Str_2819(CatalogWidgetEnum.MARKET_PLACE);
             window.procedure = this._Str_17366;
@@ -192,12 +192,12 @@
             {
                 return;
             }
-            var _local_3:ISelectableWindow = _local_2._Str_5050(k);
+            var _local_3:ISelectableWindow = _local_2.getSelectableByName(k);
             if (_local_3 == null)
             {
                 return;
             }
-            _local_2._Str_2520(_local_3);
+            _local_2.setSelected(_local_3);
             var _local_4:IWindowContainer = (_window.findChildByName("search_container") as IWindowContainer);
             if (_local_4 == null)
             {
@@ -314,18 +314,18 @@
             {
                 return;
             }
-            var k:Map = this._Str_2552._Str_15909();
+            var k:Map = this._Str_2552.latestOffers();
             if (!k)
             {
                 return;
             }
-            var _local_2:int = this._Str_2552._Str_13564();
+            var _local_2:int = this._Str_2552.totalItemsFound();
             this._offers = k;
             if (!this._itemList)
             {
                 return;
             }
-            this._itemList._Str_2724();
+            this._itemList.destroyListItems();
             if (!this._listItemBase)
             {
                 return;
@@ -403,12 +403,12 @@
             var _local_3:IWindow = _local_2.findChildByName("item_name");
             if (_local_3 != null)
             {
-                _local_3.caption = ((("$" + "{") + this._Str_2552._Str_10102(k)) + "}");
+                _local_3.caption = ((("$" + "{") + this._Str_2552.getNameLocalizationKey(k)) + "}");
             }
             var _local_4:IWindow = _local_2.findChildByName("item_desc");
             if (_local_4 != null)
             {
-                _local_4.caption = ((("$" + "{") + this._Str_2552._Str_12650(k)) + "}");
+                _local_4.caption = ((("$" + "{") + this._Str_2552.getDescriptionLocalizationKey(k)) + "}");
             }
             var _local_5:IWindow = _local_2.findChildByName("item_price");
             if (_local_5 != null)
@@ -427,7 +427,7 @@
             }
             if (k.image == null)
             {
-                _local_9 = this._Str_6819(k.furniId, k._Str_4120, k.extraData);
+                _local_9 = this._Str_6819(k.furniId, k.furniType, k.extraData);
                 if (((!(_local_9 == null)) && (!(_local_9.data == null))))
                 {
                     k.image = (_local_9.data as BitmapData);
@@ -465,7 +465,7 @@
                 _local_15.visible = true;
                 _local_16.rarityLevel = k.stuffData.rarityLevel;
             }
-            if (this._Str_2552._Str_4701())
+            if (this._Str_2552.isAccountSafetyLocked())
             {
                 _local_17 = _local_2.findChildByName("buy_button");
                 if (_local_17 != null)
@@ -488,7 +488,7 @@
                 return;
             }
             var _local_3:Array = [];
-            if (this._itemList._Str_11845(k, _local_3))
+            if (this._itemList.groupListItemsWithID(k, _local_3))
             {
                 for each (_local_4 in _local_3)
                 {
@@ -551,8 +551,8 @@
                 {
                     return;
                 }
-                _local_3 = this._itemList._Str_3156(k.window.parent);
-                _local_4 = this._Str_2552._Str_15909();
+                _local_3 = this._itemList.getListItemIndex(k.window.parent);
+                _local_4 = this._Str_2552.latestOffers();
                 _local_5 = (_local_4.getWithIndex(_local_3) as MarketPlaceOfferData);
                 if (!_local_5)
                 {
@@ -561,7 +561,7 @@
                 switch (_arg_2.name)
                 {
                     case "buy_button":
-                        this._Str_2552._Str_18095(_local_5.offerId);
+                        this._Str_2552.buyOffer(_local_5.offerId);
                         return;
                     case "more_button":
                         this._Str_5386(_local_5);
@@ -602,12 +602,12 @@
             var _local_4:IWindow = _local_3.findChildByName("item_name");
             if (_local_4)
             {
-                _local_4.caption = ((("$" + "{") + this._Str_2552._Str_10102(k)) + "}");
+                _local_4.caption = ((("$" + "{") + this._Str_2552.getNameLocalizationKey(k)) + "}");
             }
             _local_4 = _local_3.findChildByName("item_description");
             if (_local_4)
             {
-                _local_4.caption = ((("$" + "{") + this._Str_2552._Str_12650(k)) + "}");
+                _local_4.caption = ((("$" + "{") + this._Str_2552.getDescriptionLocalizationKey(k)) + "}");
             }
             _local_4 = _local_3.findChildByName("item_count");
             if (_local_4)
@@ -620,7 +620,7 @@
             _local_2.registerParameter("catalog.marketplace.offer_details.average_price", "average", _local_5);
             if (k.image == null)
             {
-                _local_10 = this._Str_6819(k.furniId, k._Str_4120, k.extraData);
+                _local_10 = this._Str_6819(k.furniId, k.furniType, k.extraData);
                 if (((!(_local_10 == null)) && (!(_local_10.data == null))))
                 {
                     k.image = (_local_10.data as BitmapData);
@@ -640,7 +640,7 @@
             var _local_6:ISelectorWindow = (_local_3.findChildByName("chart_selector") as ISelectorWindow);
             if (_local_6)
             {
-                _local_6._Str_2520(_local_6._Str_5066(0));
+                _local_6.setSelected(_local_6.getSelectableAt(0));
             }
             var _local_7:IBitmapWrapperWindow = (_local_3.findChildByName("chart_bitmap") as IBitmapWrapperWindow);
             if (_local_7)
@@ -670,7 +670,7 @@
             {
                 _local_9.visible = false;
             }
-            if (this._Str_2552._Str_4701())
+            if (this._Str_2552.isAccountSafetyLocked())
             {
                 _local_14 = _local_3.findChildByName("buy_button");
                 if (_local_14 != null)
@@ -678,7 +678,7 @@
                     _local_14.disable();
                 }
             }
-            this._Str_2552._Str_20810(k._Str_4120, k.furniId);
+            this._Str_2552.requestItemStats(k.furniType, k.furniId);
         }
 
         private function _Str_22046():void
@@ -738,7 +738,7 @@
             {
                 _local_4 = this._sortTypes[_local_6.selection];
             }
-            this._Str_2552._Str_8093(k, _local_2, _local_3, _local_4);
+            this._Str_2552.requestOffers(k, _local_2, _local_3, _local_4);
         }
 
         private function _Str_17366(k:WindowEvent, _arg_2:IWindow=null):void
@@ -763,7 +763,7 @@
                         {
                             return;
                         }
-                        _local_6 = _local_5._Str_2657();
+                        _local_6 = _local_5.getSelected();
                         if (!_local_6)
                         {
                             return;
@@ -846,7 +846,7 @@
                         this._Str_22046();
                         return;
                     case "buy_button":
-                        this._Str_2552._Str_18095(this._selectedOffer.offerId);
+                        this._Str_2552.buyOffer(this._selectedOffer.offerId);
                         return;
                 }
                 return;
@@ -857,7 +857,7 @@
                 {
                     case "price_development":
                     case "trade_volume":
-                        this._Str_13752();
+                        this.updateStats();
                         return;
                 }
             }

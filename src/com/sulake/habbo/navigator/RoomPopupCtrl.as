@@ -81,7 +81,7 @@
                 _local_2 = IRegionWindow(this._details.findChildByName("roomsettings_cont"));
                 _local_3 = ITextWindow(this._details.findChildByName("roomsettings"));
                 _local_2.procedure = this._Str_15066;
-                _local_2.visible = ((k) && (this._navigator._Str_2627.userId == this._room._Str_2481));
+                _local_2.visible = ((k) && (this._navigator._Str_2627.userId == this._room.ownerId));
                 Util._Str_7173(_local_2, 1000, 10, 2);
             }
         }
@@ -199,7 +199,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._navigator.trackGoogle("extendedProfile", "navigator_roomPopup");
-                this._navigator.send(new _Str_2553(this._room._Str_2481));
+                this._navigator.send(new _Str_2553(this._room.ownerId));
                 this._Str_14696();
             }
         }
@@ -209,7 +209,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._navigator.trackGoogle("roomInfo", "editRoomSettings");
-                this._navigator._Str_3188._Str_21207(this._room.flatId, this._room._Str_3094);
+                this._navigator._Str_3188._Str_21207(this._room.flatId, this._room.habboGroupId);
                 this._Str_14696();
             }
         }

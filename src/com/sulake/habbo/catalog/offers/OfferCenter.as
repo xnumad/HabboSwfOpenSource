@@ -88,7 +88,7 @@
         private function _Str_22579(k:_Str_7261):void
         {
             var _local_2:_Str_7924 = k._Str_2273();
-            this._Str_23174(_local_2.name, _local_2.contentType, _local_2._Str_2706);
+            this._Str_23174(_local_2.name, _local_2.contentType, _local_2.classId);
         }
 
         public function dispose():void
@@ -142,7 +142,7 @@
             this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("offer_center_xml").content as XML)) as IWindowContainer);
             this._window.procedure = this._Str_2533;
             this._window.center();
-            this._rewardTemplate = IItemListWindow(this._window.findChildByName("reward_list"))._Str_2915(0);
+            this._rewardTemplate = IItemListWindow(this._window.findChildByName("reward_list")).removeListItemAt(0);
             this._Str_22857();
         }
 
@@ -190,7 +190,7 @@
             this._rewards.unshift(_local_4);
             if (this.visible)
             {
-                IItemListWindow(this._window.findChildByName("reward_list"))._Str_3015(this._Str_22016(_local_4), 0);
+                IItemListWindow(this._window.findChildByName("reward_list")).addListItemAt(this._Str_22016(_local_4), 0);
             }
             else
             {
@@ -223,7 +223,7 @@
                 return;
             }
             var k:IItemListWindow = (this._window.findChildByName("reward_list") as IItemListWindow);
-            k._Str_2724();
+            k.destroyListItems();
             for each (_local_2 in this._rewards)
             {
                 k.addListItem(this._Str_22016(_local_2));
@@ -235,7 +235,7 @@
             var _local_2:IWindowContainer = (this._rewardTemplate.clone() as IWindowContainer);
             _local_2.findChildByName("reward_date").caption = new Date().toLocaleString();
             _local_2.findChildByName("reward_name").caption = k.name;
-            this._catalog.displayProductIcon(k.contentType, k._Str_2706, IBitmapWrapperWindow(_local_2.findChildByName("reward_icon")));
+            this._catalog.displayProductIcon(k.contentType, k.classId, IBitmapWrapperWindow(_local_2.findChildByName("reward_icon")));
             return _local_2;
         }
 

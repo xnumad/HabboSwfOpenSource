@@ -11,7 +11,7 @@
 
     public class MouseCursorControl 
     {
-        private static var _Str_578:uint = MouseCursorType.DEFAULT;
+        private static var _type:uint = MouseCursorType.DEFAULT;
         private static var _Str_2691:Stage;
         private static var _Str_2500:Boolean = true;
         private static var _disposed:Boolean = false;
@@ -47,14 +47,14 @@
 
         public static function get type():uint
         {
-            return _Str_578;
+            return _type;
         }
 
         public static function set type(k:uint):void
         {
-            if (_Str_578 != k)
+            if (_type != k)
             {
-                _Str_578 = k;
+                _type = k;
                 _Str_7147 = true;
             }
         }
@@ -96,7 +96,7 @@
             var k:DisplayObject;
             if (_Str_7147)
             {
-                k = _Str_13973[_Str_578];
+                k = _Str_13973[_type];
                 if (k)
                 {
                     if (_Str_3522)
@@ -126,7 +126,7 @@
                         _Str_3522 = null;
                         Mouse.show();
                     }
-                    switch (_Str_578)
+                    switch (_type)
                     {
                         case MouseCursorType.DEFAULT:
                         case MouseCursorType.ARROW:
@@ -162,7 +162,7 @@
             {
                 _Str_3522.x = (k.stageX - 2);
                 _Str_3522.y = k.stageY;
-                if (_Str_578 == MouseCursorType.DEFAULT)
+                if (_type == MouseCursorType.DEFAULT)
                 {
                     _Str_2500 = false;
                     Mouse.show();
@@ -177,7 +177,7 @@
 
         private static function _Str_16609(k:Event):void
         {
-            if (((_Str_3522) && (!(_Str_578 == MouseCursorType.DEFAULT))))
+            if (((_Str_3522) && (!(_type == MouseCursorType.DEFAULT))))
             {
                 Mouse.hide();
                 _Str_2500 = false;

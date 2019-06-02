@@ -23,7 +23,7 @@
             return true;
         }
 
-        public function get _Str_16731():int
+        public function get rarityCategory():int
         {
             return this._Str_5792;
         }

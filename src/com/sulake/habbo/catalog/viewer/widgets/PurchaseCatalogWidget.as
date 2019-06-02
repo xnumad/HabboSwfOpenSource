@@ -194,7 +194,7 @@
 
         private function _Str_10113(k:Boolean):void
         {
-            if (this._catalog.sessionDataManager._Str_4701())
+            if (this._catalog.sessionDataManager.isAccountSafetyLocked())
             {
                 k = false;
             }
@@ -203,7 +203,7 @@
 
         private function _Str_4401(k:Boolean):void
         {
-            if (this._catalog.sessionDataManager._Str_4701())
+            if (this._catalog.sessionDataManager.isAccountSafetyLocked())
             {
                 k = false;
             }

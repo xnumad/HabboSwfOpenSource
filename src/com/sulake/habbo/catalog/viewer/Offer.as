@@ -57,9 +57,9 @@
             this._Str_23871(_arg_9);
             for each (_local_12 in _arg_9)
             {
-                if (_local_12._Str_2588 == ProductTypeEnum.BADGE)
+                if (_local_12.productType == ProductTypeEnum.BADGE)
                 {
-                    this._badgeCode = _local_12._Str_2415;
+                    this._badgeCode = _local_12.extraParam;
                     break;
                 }
             }
@@ -263,8 +263,8 @@
             var _local_2:IProductData = this._catalog.getProductData(this.localizationId);
             for each (_local_3 in this._productContainer.products)
             {
-                _local_5 = this._catalog.getFurnitureData(_local_3._Str_2941, _local_3._Str_2588);
-                _local_6 = new Product(_local_3._Str_2588, _local_3._Str_2941, _local_3._Str_2415, _local_3.productCount, _local_2, _local_5, this._catalog);
+                _local_5 = this._catalog.getFurnitureData(_local_3.productClassId, _local_3.productType);
+                _local_6 = new Product(_local_3.productType, _local_3.productClassId, _local_3.extraParam, _local_3.productCount, _local_2, _local_5, this._catalog);
                 k.push(_local_6);
             }
             _local_4 = new Offer(this.offerId, this.localizationId, this.isRentOffer, this.priceInCredits, this.priceInActivityPoints, this.activityPointType, this.giftable, this.clubLevel, k, this.bundlePurchaseAllowed, this._catalog);

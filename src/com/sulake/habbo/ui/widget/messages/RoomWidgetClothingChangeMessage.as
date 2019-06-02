@@ -23,7 +23,7 @@
             return this._objectId;
         }
 
-        public function get _Str_4093():int
+        public function get objectCategory():int
         {
             return this._objectCategory;
         }

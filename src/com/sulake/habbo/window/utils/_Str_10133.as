@@ -187,7 +187,7 @@
             this._Str_7458.x = (this._Str_5447.width + _Str_4658);
             this._Str_13821.width = this._Str_7458.right;
             this._window.width = (this._Str_7458.right + (2 * _Str_4658));
-            this._Str_7458._Str_2648.minHeight = (this._Str_5447.height + _Str_4658);
+            this._Str_7458.limits.minHeight = (this._Str_5447.height + _Str_4658);
             this._Str_5127();
         }
 

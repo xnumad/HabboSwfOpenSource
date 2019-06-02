@@ -37,7 +37,7 @@
             }
         }
 
-        public function _Str_23928(k:XML):Boolean
+        public function defineAnimations(k:XML):Boolean
         {
             var _local_5:XML;
             var _local_6:int;
@@ -70,17 +70,17 @@
                 if (_local_8.length > 0)
                 {
                     _local_10 = int(_local_8);
-                    _local_6 = AnimationData._Str_12716(_local_10);
+                    _local_6 = AnimationData.getTransitionToAnimationId(_local_10);
                     _local_7 = true;
                 }
                 _local_8 = _local_5.@transitionFrom;
                 if (_local_8.length > 0)
                 {
                     _local_11 = int(_local_8);
-                    _local_6 = AnimationData._Str_18003(_local_11);
+                    _local_6 = AnimationData.getTransitionFromAnimationId(_local_11);
                     _local_7 = true;
                 }
-                _local_9 = this._Str_25799();
+                _local_9 = this.createAnimationData();
                 if (!_local_9.initialize(_local_5))
                 {
                     _local_9.dispose();
@@ -99,7 +99,7 @@
                             _local_13.push(_local_15);
                         }
                     }
-                    _local_9._Str_22313(_local_13);
+                    _local_9.setImmediateChanges(_local_13);
                 }
                 this._animations.add(_local_6, _local_9);
                 if (!_local_7)
@@ -111,7 +111,7 @@
             return true;
         }
 
-        protected function _Str_25799():AnimationData
+        protected function createAnimationData():AnimationData
         {
             return new AnimationData();
         }

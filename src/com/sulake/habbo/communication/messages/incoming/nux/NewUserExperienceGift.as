@@ -31,7 +31,7 @@
             return this._productOfferList;
         }
 
-        public function get _Str_25773():String
+        public function get roomTemplateName():String
         {
             return this._thumbnailUrl;
         }

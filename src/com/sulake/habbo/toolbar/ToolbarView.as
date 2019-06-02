@@ -402,11 +402,11 @@
             switch (k.type)
             {
                 case WindowMouseEvent.OVER:
-                    _local_2 = this._Str_3705(HabboToolbarIconEnum.NAVIGATOR);
-                    this._toolbar.navigator._Str_9718(new Point((_local_2.right + 15), _local_2.y));
+                    _local_2 = this.getIconLocation(HabboToolbarIconEnum.NAVIGATOR);
+                    this._toolbar.navigator.showToolbarHover(new Point((_local_2.right + 15), _local_2.y));
                     return;
                 case WindowMouseEvent.OUT:
-                    this._toolbar.navigator._Str_12014(true);
+                    this._toolbar.navigator.hideToolbarHover(true);
                     return;
             }
         }
@@ -507,7 +507,7 @@
             }
         }
 
-        public function _Str_3705(k:String):Rectangle
+        public function getIconLocation(k:String):Rectangle
         {
             var _local_2:IWindow;
             var _local_3:Rectangle;
@@ -671,7 +671,7 @@
             return Motions._Str_4598(_local_19);
         }
 
-        public function set _Str_7241(k:Boolean):void
+        public function set onDuty(k:Boolean):void
         {
             this._window.findChildByName("guide_icon").visible = k;
         }

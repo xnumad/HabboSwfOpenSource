@@ -44,7 +44,7 @@
                 return;
             }
             this._window = (_arg_3.buildFromXML((_local_6.content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             var _local_7:int = 64;
             var _local_8:int = 3;
             var _local_9:Boolean;
@@ -81,7 +81,7 @@
                     }
                 }
             }
-            var _local_11:BitmapData = k._Str_2641(_arg_2, _local_8, _local_9, this, _local_7, _local_10);
+            var _local_11:BitmapData = k.getPetImage(_arg_2, _local_8, _local_9, this, _local_7, _local_10);
             this._Str_19232(_local_11);
             this._Str_7681();
         }
@@ -100,7 +100,7 @@
             }
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             switch (k.type)
             {
@@ -147,7 +147,7 @@
             }
         }
 
-        public function _Str_2520(k:Boolean):void
+        public function setSelected(k:Boolean):void
         {
             if (this._isSelected != k)
             {

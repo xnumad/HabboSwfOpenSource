@@ -4,22 +4,22 @@
 
     public class _Str_18745 implements IMessageComposer 
     {
-        private var _Str_594:Array;
+        private var _data:Array;
 
         public function _Str_18745()
         {
-            this._Str_594 = [];
+            this._data = [];
             super();
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_594;
+            return this._data;
         }
 
         public function dispose():void
         {
-            this._Str_594 = [];
+            this._data = [];
         }
     }
 }

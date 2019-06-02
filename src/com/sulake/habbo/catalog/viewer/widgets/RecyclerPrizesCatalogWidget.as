@@ -51,7 +51,7 @@
                 return false;
             }
             this._Str_4944 = new PrizeViewer();
-            this._Str_3154 = this.recycler._Str_21988();
+            this._Str_3154 = this.recycler.getPrizeTable();
             if (this._Str_3154 == null)
             {
                 return false;
@@ -111,10 +111,10 @@
             k.grid = this;
             k.setIcon(page.viewer.roomEngine);
             _arg_2._Str_2816(_local_3);
-            _arg_2.height = _arg_2._Str_2614.height;
+            _arg_2.height = _arg_2.visibleRegion.height;
             if ((k is DealPrizeContainer))
             {
-                _arg_2.width = _arg_2._Str_2614.width;
+                _arg_2.width = _arg_2.visibleRegion.width;
             }
         }
 

@@ -16,7 +16,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetUseProductMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
-    import com.sulake.habbo.ui.widget.enums.ContextMenuType;
+    import com.sulake.habbo.ui.widget.enums.ContextMenuEnum;
     import flash.events.Event;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import flash.geom.Rectangle;
@@ -193,22 +193,22 @@
                 case RoomEngineTriggerWidgetEvent.RETWE_OPEN_FURNI_CONTEXT_MENU:
                     switch (_local_2.contextMenu)
                     {
-                        case ContextMenuType.FRIEND_FURNITURE:
+                        case ContextMenuEnum.FRIEND_FURNITURE:
                             this._widget._Str_25158(_local_3);
                             break;
-                        case ContextMenuType.MONSTERPLANT_SEED:
+                        case ContextMenuEnum.MONSTERPLANT_SEED:
                             if (this._container.isOwnerOfFurniture(_local_3))
                             {
                                 this._widget._Str_23088(_local_3, _local_2.category);
                             }
                             break;
-                        case ContextMenuType.MYSTERY_BOX:
+                        case ContextMenuEnum.MYSTERY_BOX:
                             this._widget._Str_25785(_local_3);
                             break;
-                        case ContextMenuType.RANDOM_TELEPORT:
+                        case ContextMenuEnum.RANDOM_TELEPORT:
                             this._widget._Str_23454(_local_3, _local_2.category);
                             break;
-                        case ContextMenuType.PURCHASABLE_CLOTHING:
+                        case ContextMenuEnum.PURCHASABLE_CLOTHING:
                             this._widget._Str_23812(_local_3, _local_2.category);
                             break;
                     }
@@ -230,7 +230,7 @@
 
         public function _Str_22398(k:int):Point
         {
-            return this._container.roomEngine._Str_6960(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10, this._container.getFirstCanvasId());
+            return this._container.roomEngine.getRoomObjectScreenLocation(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10, this._container.getFirstCanvasId());
         }
 
         public function _Str_24389(k:int):void

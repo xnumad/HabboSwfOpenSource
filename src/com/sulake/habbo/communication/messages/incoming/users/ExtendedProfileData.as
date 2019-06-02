@@ -103,12 +103,12 @@
             this._isFriendRequestSent = k;
         }
 
-        public function get _Str_20160():int
+        public function get lastAccessSinceInSeconds():int
         {
             return this._lastAccessSinceInSeconds;
         }
 
-        public function get _Str_24210():Boolean
+        public function get openProfileWindow():Boolean
         {
             return this._openProfileWindow;
         }

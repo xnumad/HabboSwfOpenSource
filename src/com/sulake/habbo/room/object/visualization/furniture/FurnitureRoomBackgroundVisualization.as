@@ -34,23 +34,23 @@
                 _local_3 = 64;
                 _local_4 = k.width;
                 _local_5 = k.height;
-                this._Str_19393(_local_3, _local_5, _local_4);
+                this.addDirectionalOffsets(_local_3, _local_5, _local_4);
                 _local_3 = 32;
                 _local_4 = (_local_4 / 2);
                 _local_5 = (_local_5 / 2);
-                this._Str_19393(_local_3, _local_5, _local_4);
+                this.addDirectionalOffsets(_local_3, _local_5, _local_4);
             }
         }
 
-        private function _Str_19393(k:int, _arg_2:int, _arg_3:int):void
+        private function addDirectionalOffsets(k:int, _arg_2:int, _arg_3:int):void
         {
             var _local_4:int = _Str_3033(k);
             var _local_5:DirectionalOffsetData = new DirectionalOffsetData();
-            _local_5._Str_9421(1, 0, -(_arg_2));
-            _local_5._Str_9421(3, 0, 0);
-            _local_5._Str_9421(5, -(_arg_3), 0);
-            _local_5._Str_9421(7, -(_arg_3), -(_arg_2));
-            _local_5._Str_9421(4, (-(_arg_3) / 2), (-(_arg_2) / 2));
+            _local_5.setOffset(1, 0, -(_arg_2));
+            _local_5.setOffset(3, 0, 0);
+            _local_5.setOffset(5, -(_arg_3), 0);
+            _local_5.setOffset(7, -(_arg_3), -(_arg_2));
+            _local_5.setOffset(4, (-(_arg_3) / 2), (-(_arg_2) / 2));
             this._imageOffsets[_local_4] = _local_5;
         }
 
@@ -64,10 +64,10 @@
                 _local_5 = this._imageOffsets[_local_4];
                 if (_local_5 != null)
                 {
-                    return _local_5._Str_19089(_arg_2, 0) + this._Str_13309(offsetX, k);
+                    return _local_5.getOffsetX(_arg_2, 0) + this.getScaledOffset(offsetX, k);
                 }
             }
-            return super.getSpriteXOffset(k, _arg_2, _arg_3) + this._Str_13309(offsetX, k);
+            return super.getSpriteXOffset(k, _arg_2, _arg_3) + this.getScaledOffset(offsetX, k);
         }
 
         override protected function getSpriteYOffset(k:int, _arg_2:int, _arg_3:int):int
@@ -80,10 +80,10 @@
                 _local_5 = this._imageOffsets[_local_4];
                 if (_local_5 != null)
                 {
-                    return _local_5._Str_21951(_arg_2, 0) + this._Str_13309(offsetY, k);
+                    return _local_5.getOffsetY(_arg_2, 0) + this.getScaledOffset(offsetY, k);
                 }
             }
-            return super.getSpriteYOffset(k, _arg_2, _arg_3) + this._Str_13309(offsetY, k);
+            return super.getSpriteYOffset(k, _arg_2, _arg_3) + this.getScaledOffset(offsetY, k);
         }
 
         override protected function getSpriteZOffset(k:int, _arg_2:int, _arg_3:int):Number
@@ -96,7 +96,7 @@
             return false;
         }
 
-        private function _Str_13309(k:int, _arg_2:int):Number
+        private function getScaledOffset(k:int, _arg_2:int):Number
         {
             return (k * _arg_2) / RoomGeometry.SCALE_ZOOMED_IN;
         }

@@ -163,7 +163,7 @@
             return this._Str_4292(k, _arg_2)[0] == "true";
         }
 
-        public function _Str_10334():Array
+        public function getStyleIds():Array
         {
             return this._styles.getKeys();
         }

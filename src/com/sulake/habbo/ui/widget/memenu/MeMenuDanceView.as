@@ -87,7 +87,7 @@
                         _local_9.name = (("dance_" + _local_7) + "_button");
                         _local_9.caption = (("${widget.memenu.dance" + _local_7) + "}");
                         _local_9.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
-                        _local_4._Str_3015(_local_9, (_local_4.numListItems - 1));
+                        _local_4.addListItemAt(_local_9, (_local_4.numListItems - 1));
                         if (this._widget._Str_4878)
                         {
                             _local_9.disable();

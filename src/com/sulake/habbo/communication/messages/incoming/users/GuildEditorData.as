@@ -2,7 +2,7 @@
 {
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.utils.ColorConverter;
     import __AS3__.vec.*;
 
@@ -86,7 +86,7 @@
             return this._guildSecondaryColors;
         }
 
-        public function _Str_23172(k:int):int
+        public function findMatchingPrimaryColorId(k:int):int
         {
             if (((((k < 0) || (this._badgeColors.length <= 0)) || (this._badgeColors.length < k)) || (this._guildPrimaryColors.length <= 0)))
             {
@@ -95,7 +95,7 @@
             return this._Str_21273(this._badgeColors[k], this._guildPrimaryColors);
         }
 
-        public function _Str_23800(k:int):int
+        public function findMatchingSecondaryColorId(k:int):int
         {
             if (((((k < 0) || (this._badgeColors.length <= 0)) || (this._badgeColors.length < k)) || (this._guildSecondaryColors.length <= 0)))
             {
@@ -106,9 +106,9 @@
 
         private function _Str_21273(k:_Str_2792, _arg_2:Vector.<_Str_2792>):int
         {
-            var _local_7:IVector3D;
+            var _local_7:IVector3d;
             var _local_8:Number;
-            var _local_3:IVector3D = ColorConverter.rgb2CieLab(k.color);
+            var _local_3:IVector3d = ColorConverter.rgb2CieLab(k.color);
             var _local_4:int;
             var _local_5:Number = Number.MAX_VALUE;
             var _local_6:int;

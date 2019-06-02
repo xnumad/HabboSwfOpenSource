@@ -116,11 +116,11 @@
             this._window.procedure = this._Str_3061;
             this._questionPane = IWindowContainer(this._window.findChildByName("question_pane"));
             this._answerList = ISelectorListWindow(this._questionPane.findChildByName("answer_list"));
-            this._answerTemplate = this._answerList._Str_5066(0);
-            this._answerList._Str_10845(this._answerTemplate);
+            this._answerTemplate = this._answerList.getSelectableAt(0);
+            this._answerList.removeSelectable(this._answerTemplate);
             this._analysisPane = IItemListWindow(this._window.findChildByName("analysis_pane"));
             this._explanationTemplate = this._analysisPane.getListItemAt(0);
-            this._analysisPane._Str_2659();
+            this._analysisPane.removeListItems();
             this._analysisPane.spacing = 4;
             this._quizCode = k;
             this._questionIds = _arg_2;
@@ -276,9 +276,9 @@
                     this._window.findChildByName("prev_dimmer").visible = (k <= 0);
                     this._window.findChildByName("next_dimmer").visible = (this._answerIds[this._currentQuestion] == null);
                     this._window.findChildByName("top_indicator").caption = this._habboHelp.localization.getLocalizationWithParams(this._Str_11458("question.page"), "", "current_page", String((k + 1)), "page_count", this._Str_8127.toString());
-                    while (this._answerList._Str_6010 > 0)
+                    while (this._answerList.numSelectables > 0)
                     {
-                        this._answerList._Str_10845(this._answerList._Str_5066(0)).dispose();
+                        this._answerList.removeSelectable(this._answerList.getSelectableAt(0)).dispose();
                     }
                     _local_2 = this._questionIds[this._currentQuestion];
                     _local_3 = [];
@@ -307,7 +307,7 @@
                         while (_local_8 < _local_4)
                         {
                             _local_9 = _local_3.splice(int((Math.random() * _local_3.length)), 1)[0];
-                            this._answerList._Str_13279(_local_9);
+                            this._answerList.addSelectable(_local_9);
                             this._answerOrders[this._currentQuestion].push(int(_local_9.name));
                             _local_8++;
                         }
@@ -316,10 +316,10 @@
                     {
                         for each (_local_10 in this._answerOrders[this._currentQuestion])
                         {
-                            this._answerList._Str_13279(_local_3[_local_10]);
+                            this._answerList.addSelectable(_local_3[_local_10]);
                         }
                     }
-                    _local_5 = this._answerList._Str_5050(String(this._answerIds[this._currentQuestion]));
+                    _local_5 = this._answerList.getSelectableByName(String(this._answerIds[this._currentQuestion]));
                     if (_local_5 != null)
                     {
                         _local_5.select();

@@ -11,7 +11,7 @@
         public function AvatarImageBodyPartCache()
         {
             this._Str_586 = new Map();
-            this._Str_1108(getTimer());
+            this.setDirection(getTimer());
         }
 
         public function dispose():void
@@ -41,12 +41,12 @@
             this._Str_586.add(_local_3, _arg_2);
         }
 
-        public function _Str_1108(k:int):void
+        public function setDirection(k:int):void
         {
             this._Str_1509 = k;
         }
 
-        public function _Str_1815():int
+        public function getDirection():int
         {
             return this._Str_1509;
         }

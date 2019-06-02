@@ -51,7 +51,7 @@
             var _local_4:String = "landing.view.competition.hof.points";
             landingView.localizationManager.registerParameter(_local_4, "points", ("" + _local_3._Str_7605));
             _arg_2.findChildByName("score_txt").caption = getText(_local_4);
-            _arg_2.findChildByName("rank_desc_txt").caption = getText((("landing.view.competition.hof." + this._data._Str_4327) + ".rankdesc.leader"));
+            _arg_2.findChildByName("rank_desc_txt").caption = getText((("landing.view.competition.hof." + this._data.goalCode) + ".rankdesc.leader"));
         }
 
         override protected function getPopupXml():String
@@ -72,7 +72,7 @@
 
         override protected function extraLinkClicked(k:_Str_4106):void
         {
-            landingView.send(new _Str_11657(this._data._Str_4327, k.userId));
+            landingView.send(new _Str_11657(this._data.goalCode, k.userId));
         }
 
         private function _Str_12291(k:_Str_4748):void

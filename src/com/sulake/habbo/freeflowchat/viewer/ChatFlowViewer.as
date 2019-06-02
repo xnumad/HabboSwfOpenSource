@@ -69,7 +69,7 @@
             var _local_5:PooledChatBubble;
             var _local_6:int;
             this._runTime = (this._runTime + k);
-            var _local_2:Point = this._component.roomEngine._Str_7201(this._lastAddedToRoomId);
+            var _local_2:Point = this._component.roomEngine.getRoomCanvasScreenOffset(this._lastAddedToRoomId);
             if (_local_2 != null)
             {
                 if (((!(_local_2.x == this._lastCanvasOffsetX)) && (this._bubbles.length > 0)))

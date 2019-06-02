@@ -6,16 +6,16 @@
     {
         public static const RSCE_CHAT_EVENT:String = "RSCE_CHAT_EVENT";
         public static const RSCE_FLOOD_EVENT:String = "RSCE_FLOOD_EVENT";
-        public static const _Str_4014:int = 0;
-        public static const _Str_4349:int = 1;
-        public static const _Str_4264:int = 2;
-        public static const _Str_5821:int = 3;
-        public static const _Str_6081:int = 4;
-        public static const _Str_8971:int = 5;
-        public static const _Str_5958:int = 6;
-        public static const _Str_6065:int = 7;
-        public static const _Str_5998:int = 8;
-        public static const _Str_5904:int = 9;
+        public static const CHAT_TYPE_SPEAK:int = 0;
+        public static const CHAT_TYPE_WHISPER:int = 1;
+        public static const CHAT_TYPE_SHOUT:int = 2;
+        public static const CHAT_TYPE_RESPECT:int = 3;
+        public static const CHAT_TYPE_PETRESPECT:int = 4;
+        public static const CHAT_TYPE_HAND_ITEM_RECEIVED:int = 5;
+        public static const CHAT_TYPE_PETTREAT:int = 6;
+        public static const CHAT_TYPE_PETREVIVE:int = 7;
+        public static const CHAT_TYPE_PET_REBREED_FERTILIZE:int = 8;
+        public static const CHAT_TYPE_PET_SPEED_FERTILIZE:int = 9;
         public static const _Str_8909:int = 10;
 
         private var _userId:int = 0;
@@ -46,7 +46,7 @@
             return this._text;
         }
 
-        public function get _Str_3214():int
+        public function get chatType():int
         {
             return this._chatType;
         }
@@ -56,7 +56,7 @@
             return this._links;
         }
 
-        public function get _Str_2415():int
+        public function get extraParam():int
         {
             return this._extraParam;
         }

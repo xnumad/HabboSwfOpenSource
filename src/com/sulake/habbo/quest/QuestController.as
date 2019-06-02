@@ -26,16 +26,16 @@
             this._seasonalCalendarWindow = new MainWindow(this._questEngine);
         }
 
-        public function _Str_3259():void
+        public function onToolbarClick():void
         {
             if (this._questEngine._Str_19304())
             {
-                this._seasonalCalendarWindow._Str_3259();
+                this._seasonalCalendarWindow.onToolbarClick();
                 this._questsList.close();
             }
             else
             {
-                this._questsList._Str_3259();
+                this._questsList.onToolbarClick();
             }
         }
 
@@ -62,9 +62,9 @@
             this._nextQuestTimer._Str_5242();
         }
 
-        public function _Str_3012():void
+        public function onCreditBalance():void
         {
-            this._questTracker._Str_3012();
+            this._questTracker.onCreditBalance();
         }
 
         public function _Str_2960():void

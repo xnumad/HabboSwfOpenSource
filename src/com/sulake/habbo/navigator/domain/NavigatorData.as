@@ -80,7 +80,7 @@
             return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_3569)));
         }
 
-        public function _Str_3012(k:_Str_4522):void
+        public function onCreditBalance(k:_Str_4522):void
         {
             this._enteredGuestRoom = null;
             this._currentRoomOwner = false;
@@ -260,7 +260,7 @@
             return this._createdFlatId;
         }
 
-        public function get _Str_3374():int
+        public function get homeRoomId():int
         {
             return this._homeRoomId;
         }
@@ -330,7 +330,7 @@
             this._hotRoomPopupOpen = k;
         }
 
-        public function set _Str_3374(k:int):void
+        public function set homeRoomId(k:int):void
         {
             this._homeRoomId = k;
         }

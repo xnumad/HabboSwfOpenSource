@@ -24,7 +24,7 @@
 
         public function indexOf(k:*):int
         {
-            return this._iterable._Str_3156(k);
+            return this._iterable.getListItemIndex(k);
         }
 
         override flash_proxy function getProperty(k:*):*
@@ -35,7 +35,7 @@
         override flash_proxy function setProperty(k:*, _arg_2:*):void
         {
             var _local_3:IWindow = (_arg_2 as IWindow);
-            var _local_4:int = this._iterable._Str_3156(_local_3);
+            var _local_4:int = this._iterable.getListItemIndex(_local_3);
             if (_local_4 == k)
             {
                 return;
@@ -44,7 +44,7 @@
             {
                 this._iterable.removeListItem(_local_3);
             }
-            this._iterable._Str_3015(_local_3, uint(k));
+            this._iterable.addListItemAt(_local_3, uint(k));
         }
 
         override flash_proxy function nextNameIndex(k:int):int

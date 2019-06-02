@@ -8,7 +8,7 @@
     import com.sulake.habbo.room.object.visualization.room.mask.PlaneMaskManager;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.room.object.visualization.room.utils.PlaneBitmapData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.utils.Canvas;
     import com.sulake.room.utils.IRoomGeometry;
     import com.sulake.habbo.room.object.visualization.room.mask.PlaneMask;
@@ -25,76 +25,76 @@
 
     public class RoomPlane implements IRoomPlane 
     {
-        private static const _Str_1870:Point = new Point(0, 0);
-        public static const _Str_16830:int = 0;
-        public static const _Str_3587:int = 1;
-        public static const _Str_3258:int = 2;
+        private static const ZERO_POINT:Point = new Point(0, 0);
+        public static const TYPE_WALL:int = 0;
+        public static const TYPE_FLOOR:int = 1;
+        public static const TYPE_LANDSCAPE:int = 2;
         public static const _Str_3272:int = 3;
         private static var _Str_10032:int = 1;
 
         private var _disposed:Boolean = false;
-        private var _Str_16308:int = 0;
-        private var _Str_5221:Vector3d = null;
+        private var _randomSeed:int = 0;
+        private var _origin:Vector3d = null;
         private var _location:Vector3d = null;
-        private var _Str_2920:Vector3d = null;
-        private var _Str_2943:Vector3d = null;
+        private var _leftSide:Vector3d = null;
+        private var _rightSide:Vector3d = null;
         private var _normal:Vector3d = null;
-        private var _Str_5886:Array;
-        private var _Str_3406:int = -1;
+        private var _secondaryNormals:Array;
+        private var FLOOR_COLOR:int = -1;
         private var _type:int = 0;
-        private var _Str_3816:Boolean = false;
-        private var _Str_1049:BitmapData = null;
-        private var _Str_13946:Boolean = true;
+        private var _isVisible:Boolean = false;
+        private var _bitmapData:BitmapData = null;
+        private var _hasTexture:Boolean = true;
         private var _offset:Point = null;
         private var _relativeDepth:Number = 0;
         private var _color:uint = 0;
         private var _rasterizer:IPlaneRasterizer = null;
-        private var _Str_4795:PlaneMaskManager = null;
-        private var _Str_576:String = null;
+        private var _maskManager:PlaneMaskManager = null;
+        private var _id:String = null;
         private var _uniqueId:int = 0;
-        private var _Str_20541:Number = 0;
-        private var _Str_19707:Number = 0;
-        private var _Str_21079:Number = 0;
-        private var _Str_22024:Number = 0;
-        private var _Str_2708:Map = null;
-        private var _Str_5545:PlaneBitmapData = null;
-        private var _Str_4542:Boolean = false;
-        private var _Str_4047:Array;
-        private var _Str_5088:Array;
-        private var _Str_4891:Boolean = false;
-        private var _Str_2730:BitmapData = null;
-        private var _Str_3616:BitmapData = null;
-        private var _Str_8341:Array;
-        private var _Str_14495:Array;
-        private var _Str_2820:Vector3d = null;
-        private var _Str_2745:Vector3d = null;
-        private var _Str_2639:Vector3d = null;
-        private var _Str_2766:Vector3d = null;
-        private var _Str_1720:Number = 0;
+        private var _textureOffsetX:Number = 0;
+        private var _textureOffsetY:Number = 0;
+        private var _textureMaxX:Number = 0;
+        private var _textureMaxY:Number = 0;
+        private var _textures:Map = null;
+        private var _activeTexture:PlaneBitmapData = null;
+        private var _useMask:Boolean = false;
+        private var _bitmapMasks:Array;
+        private var _rectangleMasks:Array;
+        private var _maskChanged:Boolean = false;
+        private var _maskBitmapData:BitmapData = null;
+        private var _maskBufferBitmapData:BitmapData = null;
+        private var _bitmapMasksOld:Array;
+        private var _rectangleMasksOld:Array;
+        private var _cornerA:Vector3d = null;
+        private var _cornerB:Vector3d = null;
+        private var _cornerC:Vector3d = null;
+        private var _cornerD:Vector3d = null;
+        private var _width:Number = 0;
         private var _height:Number = 0;
-        private var _Str_7367:Boolean = true;
+        private var _canBeVisible:Boolean = true;
 
-        public function RoomPlane(k:IVector3D, _arg_2:IVector3D, _arg_3:IVector3D, _arg_4:IVector3D, _arg_5:int, _arg_6:Boolean, _arg_7:Array, _arg_8:int, _arg_9:Number=0, _arg_10:Number=0, _arg_11:Number=0, _arg_12:Number=0)
+        public function RoomPlane(k:IVector3d, _arg_2:IVector3d, _arg_3:IVector3d, _arg_4:IVector3d, _arg_5:int, _arg_6:Boolean, _arg_7:Array, _arg_8:int, _arg_9:Number=0, _arg_10:Number=0, _arg_11:Number=0, _arg_12:Number=0)
         {
             var _local_13:int;
-            var _local_14:IVector3D;
+            var _local_14:IVector3d;
             var _local_15:Vector3d;
-            this._Str_5886 = [];
-            this._Str_4047 = [];
-            this._Str_5088 = [];
-            this._Str_8341 = [];
-            this._Str_14495 = [];
+            this._secondaryNormals = [];
+            this._bitmapMasks = [];
+            this._rectangleMasks = [];
+            this._bitmapMasksOld = [];
+            this._rectangleMasksOld = [];
             super();
-            this._Str_16308 = _arg_8;
-            this._Str_5221 = new Vector3d();
-            this._Str_5221.assign(k);
+            this._randomSeed = _arg_8;
+            this._origin = new Vector3d();
+            this._origin.assign(k);
             this._location = new Vector3d();
             this._location.assign(_arg_2);
-            this._Str_2920 = new Vector3d();
-            this._Str_2920.assign(_arg_3);
-            this._Str_2943 = new Vector3d();
-            this._Str_2943.assign(_arg_4);
-            this._normal = Vector3d.crossProduct(this._Str_2920, this._Str_2943);
+            this._leftSide = new Vector3d();
+            this._leftSide.assign(_arg_3);
+            this._rightSide = new Vector3d();
+            this._rightSide.assign(_arg_4);
+            this._normal = Vector3d.crossProduct(this._leftSide, this._rightSide);
             if (this._normal.length > 0)
             {
                 this._normal.mul((1 / this._normal.length));
@@ -104,28 +104,28 @@
                 _local_13 = 0;
                 while (_local_13 < _arg_7.length)
                 {
-                    _local_14 = (_arg_7[_local_13] as IVector3D);
+                    _local_14 = (_arg_7[_local_13] as IVector3d);
                     if (_local_14 != null)
                     {
                         _local_15 = new Vector3d();
                         _local_15.assign(_local_14);
-                        this._Str_5886.push(_local_15);
+                        this._secondaryNormals.push(_local_15);
                     }
                     _local_13++;
                 }
             }
             this._offset = new Point();
             this._type = _arg_5;
-            this._Str_2708 = new Map();
-            this._Str_2820 = new Vector3d();
-            this._Str_2745 = new Vector3d();
-            this._Str_2639 = new Vector3d();
-            this._Str_2766 = new Vector3d();
-            this._Str_20541 = _arg_9;
-            this._Str_19707 = _arg_10;
-            this._Str_21079 = _arg_11;
-            this._Str_22024 = _arg_12;
-            this._Str_4542 = _arg_6;
+            this._textures = new Map();
+            this._cornerA = new Vector3d();
+            this._cornerB = new Vector3d();
+            this._cornerC = new Vector3d();
+            this._cornerD = new Vector3d();
+            this._textureOffsetX = _arg_9;
+            this._textureOffsetY = _arg_10;
+            this._textureMaxX = _arg_11;
+            this._textureMaxY = _arg_12;
+            this._useMask = _arg_6;
             this._uniqueId = _Str_10032++;
         }
 
@@ -137,19 +137,19 @@
 
         public function set _Str_14801(k:Boolean):void
         {
-            if (k != this._Str_7367)
+            if (k != this._canBeVisible)
             {
-                if (!this._Str_7367)
+                if (!this._canBeVisible)
                 {
                     this._Str_11000();
                 }
-                this._Str_7367 = k;
+                this._canBeVisible = k;
             }
         }
 
         public function get _Str_14801():Boolean
         {
-            return this._Str_7367;
+            return this._canBeVisible;
         }
 
         public function get bitmapData():BitmapData
@@ -157,11 +157,11 @@
             var bitmap:BitmapData;
             if (this.visible)
             {
-                if (this._Str_1049 != null)
+                if (this._bitmapData != null)
                 {
                     try
                     {
-                        bitmap = this._Str_1049.clone();
+                        bitmap = this._bitmapData.clone();
                     }
                     catch(e:Error)
                     {
@@ -174,7 +174,7 @@
 
         public function get visible():Boolean
         {
-            return (this._Str_3816) && (this._Str_7367);
+            return (this._isVisible) && (this._canBeVisible);
         }
 
         public function get offset():Point
@@ -202,34 +202,34 @@
             return this._type;
         }
 
-        public function get _Str_5424():IVector3D
+        public function get _Str_5424():IVector3d
         {
-            return this._Str_2920;
+            return this._leftSide;
         }
 
-        public function get _Str_4968():IVector3D
+        public function get _Str_4968():IVector3d
         {
-            return this._Str_2943;
+            return this._rightSide;
         }
 
-        public function get location():IVector3D
+        public function get location():IVector3d
         {
             return this._location;
         }
 
-        public function get normal():IVector3D
+        public function get normal():IVector3d
         {
             return this._normal;
         }
 
         public function get _Str_18448():Boolean
         {
-            return this._Str_13946;
+            return this._hasTexture;
         }
 
         public function set _Str_18448(k:Boolean):void
         {
-            this._Str_13946 = k;
+            this._hasTexture = k;
         }
 
         public function set rasterizer(k:IPlaneRasterizer):void
@@ -239,15 +239,15 @@
 
         public function set _Str_16279(k:PlaneMaskManager):void
         {
-            this._Str_4795 = k;
+            this._maskManager = k;
         }
 
         public function set id(k:String):void
         {
-            if (k != this._Str_576)
+            if (k != this._id)
             {
                 this._Str_11000();
-                this._Str_576 = k;
+                this._id = k;
             }
         }
 
@@ -260,17 +260,17 @@
         {
             var k:int;
             var _local_2:PlaneBitmapData;
-            if (this._Str_1049 != null)
+            if (this._bitmapData != null)
             {
-                this._Str_1049.dispose();
-                this._Str_1049 = null;
+                this._bitmapData.dispose();
+                this._bitmapData = null;
             }
-            if (this._Str_2708 != null)
+            if (this._textures != null)
             {
                 k = 0;
-                while (k < this._Str_2708.length)
+                while (k < this._textures.length)
                 {
-                    _local_2 = (this._Str_2708.getWithIndex(k) as PlaneBitmapData);
+                    _local_2 = (this._textures.getWithIndex(k) as PlaneBitmapData);
                     if (_local_2 != null)
                     {
                         if (_local_2.bitmap != null)
@@ -281,44 +281,44 @@
                     }
                     k++;
                 }
-                this._Str_2708.dispose();
-                this._Str_2708 = null;
+                this._textures.dispose();
+                this._textures = null;
             }
-            this._Str_5545 = null;
+            this._activeTexture = null;
             this._location = null;
-            this._Str_5221 = null;
-            this._Str_2920 = null;
-            this._Str_2943 = null;
+            this._origin = null;
+            this._leftSide = null;
+            this._rightSide = null;
             this._normal = null;
             this._rasterizer = null;
-            this._Str_2820 = null;
-            this._Str_2745 = null;
-            this._Str_2639 = null;
-            this._Str_2766 = null;
-            this._Str_4047 = null;
-            this._Str_5088 = null;
-            if (this._Str_2730 != null)
+            this._cornerA = null;
+            this._cornerB = null;
+            this._cornerC = null;
+            this._cornerD = null;
+            this._bitmapMasks = null;
+            this._rectangleMasks = null;
+            if (this._maskBitmapData != null)
             {
-                this._Str_2730.dispose();
-                this._Str_2730 = null;
+                this._maskBitmapData.dispose();
+                this._maskBitmapData = null;
             }
-            if (this._Str_3616 != null)
+            if (this._maskBufferBitmapData != null)
             {
-                this._Str_3616.dispose();
-                this._Str_3616 = null;
+                this._maskBufferBitmapData.dispose();
+                this._maskBufferBitmapData = null;
             }
             this._disposed = true;
         }
 
-        public function _Str_24896(k:BitmapData):BitmapData
+        public function copyBitmapData(k:BitmapData):BitmapData
         {
             if (this.visible)
             {
-                if (((!(this._Str_1049 == null)) && (!(k == null))))
+                if (((!(this._bitmapData == null)) && (!(k == null))))
                 {
-                    if (((this._Str_1049.width == k.width) && (this._Str_1049.height == k.height)))
+                    if (((this._bitmapData.width == k.width) && (this._bitmapData.height == k.height)))
                     {
-                        k.copyPixels(this._Str_1049, this._Str_1049.rect, _Str_1870);
+                        k.copyPixels(this._bitmapData, this._bitmapData.rect, ZERO_POINT);
                         return k;
                     }
                 }
@@ -328,7 +328,7 @@
 
         private function _Str_17642(k:String, _arg_2:PlaneBitmapData):Boolean
         {
-            var _local_3:PlaneBitmapData = (this._Str_2708.remove(k) as PlaneBitmapData);
+            var _local_3:PlaneBitmapData = (this._textures.remove(k) as PlaneBitmapData);
             if (_local_3 != null)
             {
                 if (((!(_arg_2 == null)) && (!(_arg_2.bitmap == _local_3.bitmap))))
@@ -337,8 +337,8 @@
                 }
                 _local_3.dispose();
             }
-            this._Str_5545 = _arg_2;
-            this._Str_2708.add(k, _arg_2);
+            this._activeTexture = _arg_2;
+            this._textures.add(k, _arg_2);
             return true;
         }
 
@@ -346,12 +346,12 @@
         {
             var _local_2:int;
             var _local_3:PlaneBitmapData;
-            if (this._Str_2708 != null)
+            if (this._textures != null)
             {
                 _local_2 = 0;
-                while (_local_2 < this._Str_2708.length)
+                while (_local_2 < this._textures.length)
                 {
-                    _local_3 = (this._Str_2708.getWithIndex(_local_2) as PlaneBitmapData);
+                    _local_3 = (this._textures.getWithIndex(_local_2) as PlaneBitmapData);
                     if (_local_3 != null)
                     {
                         if (((!(_local_3.bitmap == null)) && (!(_local_3.bitmap == k))))
@@ -362,9 +362,9 @@
                     }
                     _local_2++;
                 }
-                this._Str_2708.reset();
+                this._textures.reset();
             }
-            this._Str_5545 = null;
+            this._activeTexture = null;
         }
 
         private function getTextureIdentifier(k:Number):String
@@ -383,14 +383,14 @@
             {
                 return false;
             }
-            var _local_3:PlaneBitmapData = this._Str_5545;
+            var _local_3:PlaneBitmapData = this._activeTexture;
             if (_local_3 == null)
             {
                 _local_4 = this.getTextureIdentifier(k.scale);
-                _local_3 = (this._Str_2708.getValue(_local_4) as PlaneBitmapData);
+                _local_3 = (this._textures.getValue(_local_4) as PlaneBitmapData);
             }
-            this._Str_19336();
-            if (((this._Str_7367) && (((_local_3 == null) || ((_local_3.timeStamp >= 0) && (_arg_2 > _local_3.timeStamp))) || (this._Str_4891))))
+            this.updateMaskChangeStatus();
+            if (((this._canBeVisible) && (((_local_3 == null) || ((_local_3.timeStamp >= 0) && (_arg_2 > _local_3.timeStamp))) || (this._maskChanged))))
             {
                 return true;
             }
@@ -401,7 +401,7 @@
         {
             var _local_5:Number;
             var _local_6:Number;
-            var _local_7:IVector3D;
+            var _local_7:IVector3d;
             var _local_8:BitmapData;
             var _local_9:BitmapData;
             if (k == null)
@@ -412,17 +412,17 @@
             var _local_4:String;
             if (this._Str_10518(k, _arg_2))
             {
-                _local_5 = (this._Str_2920.length * k.scale);
-                _local_6 = (this._Str_2943.length * k.scale);
+                _local_5 = (this._leftSide.length * k.scale);
+                _local_6 = (this._rightSide.length * k.scale);
                 _local_7 = k.getCoordinatePosition(this._normal);
                 _local_4 = this.getTextureIdentifier(k.scale);
-                if (this._Str_5545 != null)
+                if (this._activeTexture != null)
                 {
-                    _local_3 = this._Str_5545;
+                    _local_3 = this._activeTexture;
                 }
                 else
                 {
-                    _local_3 = (this._Str_2708.getValue(_local_4) as PlaneBitmapData);
+                    _local_3 = (this._textures.getValue(_local_4) as PlaneBitmapData);
                 }
                 _local_8 = null;
                 if (_local_3 != null)
@@ -431,7 +431,7 @@
                 }
                 if (this._rasterizer != null)
                 {
-                    _local_3 = this._rasterizer.render(_local_8, this._Str_576, _local_5, _local_6, k.scale, _local_7, this._Str_13946, this._Str_20541, this._Str_19707, this._Str_21079, this._Str_22024, _arg_2);
+                    _local_3 = this._rasterizer.render(_local_8, this._id, _local_5, _local_6, k.scale, _local_7, this._hasTexture, this._textureOffsetX, this._textureOffsetY, this._textureMaxX, this._textureMaxY, _arg_2);
                     if (_local_3 != null)
                     {
                         if (((!(_local_8 == null)) && (!(_local_3.bitmap == _local_8))))
@@ -447,25 +447,25 @@
                 }
                 if (_local_3 != null)
                 {
-                    this._Str_17859(_local_3.bitmap, k);
+                    this.updateMask(_local_3.bitmap, k);
                     this._Str_17642(_local_4, _local_3);
                 }
             }
             else
             {
-                if (this._Str_5545 != null)
+                if (this._activeTexture != null)
                 {
-                    _local_3 = this._Str_5545;
+                    _local_3 = this._activeTexture;
                 }
                 else
                 {
                     _local_4 = this.getTextureIdentifier(k.scale);
-                    _local_3 = (this._Str_2708.getValue(_local_4) as PlaneBitmapData);
+                    _local_3 = (this._textures.getValue(_local_4) as PlaneBitmapData);
                 }
             }
             if (_local_3 != null)
             {
-                this._Str_5545 = _local_3;
+                this._activeTexture = _local_3;
                 return _local_3.bitmap;
             }
             return null;
@@ -475,10 +475,10 @@
         {
             var _local_7:PlaneMask;
             var _local_8:String;
-            var _local_9:IVector3D;
+            var _local_9:IVector3d;
             var _local_10:IGraphicAsset;
             var _local_11:Point;
-            if (!this._Str_4542)
+            if (!this._useMask)
             {
                 return null;
             }
@@ -487,23 +487,23 @@
             var _local_4:int;
             var _local_5:PlaneDrawingData = new PlaneDrawingData();
             var _local_6:int;
-            while (_local_6 < this._Str_4047.length)
+            while (_local_6 < this._bitmapMasks.length)
             {
-                _local_2 = (this._Str_4047[_local_6] as RoomPlaneBitmapMask);
+                _local_2 = (this._bitmapMasks[_local_6] as RoomPlaneBitmapMask);
                 if (_local_2 != null)
                 {
-                    _local_7 = this._Str_4795._Str_8361(_local_2.type);
+                    _local_7 = this._maskManager.getMask(_local_2.type);
                     if (_local_7 != null)
                     {
                         _local_8 = _local_7.getAliasByName(k.scale);
                         if (_local_8 != null)
                         {
                             _local_9 = k.getCoordinatePosition(this._normal);
-                            _local_10 = _local_7._Str_21021(k.scale, _local_9);
+                            _local_10 = _local_7.getGraphicAsset(k.scale, _local_9);
                             if (_local_10 != null)
                             {
-                                _local_3 = (this._Str_2730.width * (1 - (_local_2._Str_5120 / this._Str_2920.length)));
-                                _local_4 = (this._Str_2730.height * (1 - (_local_2._Str_4659 / this._Str_2943.length)));
+                                _local_3 = (this._maskBitmapData.width * (1 - (_local_2._Str_5120 / this._leftSide.length)));
+                                _local_4 = (this._maskBitmapData.height * (1 - (_local_2._Str_4659 / this._rightSide.length)));
                                 _local_11 = new Point((_local_3 + _local_10.offsetX), (_local_4 + _local_10.offsetY));
                                 _local_5.addMask(_local_8, _local_11, _local_10.flipH, _local_10.flipV);
                             }
@@ -519,7 +519,7 @@
         {
             var _local_2:Point = k.getScreenPoint(new Vector3d(0, 0, 0));
             var _local_3:Point = k.getScreenPoint(new Vector3d(0, 1, 0));
-            return Math.round((this._Str_2920.length * Math.abs((_local_2.x - _local_3.x))));
+            return Math.round((this._leftSide.length * Math.abs((_local_2.x - _local_3.x))));
         }
 
         public function _Str_22136(geometry:IRoomGeometry):Array
@@ -529,32 +529,32 @@
             var layers:Array;
             var layer:PlaneVisualizationLayer;
             var i:int;
-            var normal:IVector3D;
+            var normal:IVector3d;
             var cm:PlaneMaterialCellMatrix;
             var column:PlaneMaterialCellColumn;
             var assetNames:Array;
             var cell:PlaneMaterialCell;
             var name:String;
             var drawingDatas:Array = [];
-            if (this._Str_3816)
+            if (this._isVisible)
             {
                 maskData = null;
                 try
                 {
                     maskData = this._Str_23649(geometry);
-                    layers = this._rasterizer._Str_8988(this._Str_576);
+                    layers = this._rasterizer._Str_8988(this._id);
                     i = 0;
                     while (i < layers.length)
                     {
                         layer = (layers[i] as PlaneVisualizationLayer);
                         if (layer != null)
                         {
-                            if (((this._Str_13946) && (!(layer._Str_8547() == null))))
+                            if (((this._hasTexture) && (!(layer.material() == null))))
                             {
                                 normal = geometry.getCoordinatePosition(this._normal);
-                                cm = layer._Str_8547()._Str_21968(normal);
+                                cm = layer.material().getMaterialCellMatrix(normal);
                                 data = new PlaneDrawingData(maskData, blend(this._color, layer._Str_751()), cm._Str_14945());
-                                Randomizer._Str_17384(this._Str_16308);
+                                Randomizer.setSeed(this._randomSeed);
                                 for each (column in cm._Str_23721(this._Str_24802(geometry)))
                                 {
                                     assetNames = [];
@@ -601,7 +601,7 @@
             return drawingDatas;
         }
 
-        private function _Str_25956(k:PlaneBitmapData):void
+        private function addOutlines(k:PlaneBitmapData):void
         {
         }
 
@@ -609,7 +609,7 @@
         {
             var cosAngle:Number;
             var i:int;
-            var originPos:IVector3D;
+            var originPos:IVector3d;
             var originZ:Number;
             var relativeDepth:Number;
             var texture:BitmapData;
@@ -618,11 +618,11 @@
                 return false;
             }
             var geometryChanged:Boolean;
-            if (this._Str_3406 != geometry.updateId)
+            if (this.FLOOR_COLOR != geometry.updateId)
             {
                 geometryChanged = true;
             }
-            if (((!(geometryChanged)) || (!(this._Str_7367))))
+            if (((!(geometryChanged)) || (!(this._canBeVisible))))
             {
                 if (!this.visible)
                 {
@@ -631,27 +631,27 @@
             }
             if (geometryChanged)
             {
-                this._Str_5545 = null;
+                this._activeTexture = null;
                 cosAngle = 0;
                 cosAngle = Vector3d.cosAngle(geometry.directionAxis, this.normal);
                 if (cosAngle > -0.001)
                 {
-                    if (this._Str_3816)
+                    if (this._isVisible)
                     {
-                        this._Str_3816 = false;
+                        this._isVisible = false;
                         return true;
                     }
                     return false;
                 }
                 i = 0;
-                while (i < this._Str_5886.length)
+                while (i < this._secondaryNormals.length)
                 {
-                    cosAngle = Vector3d.cosAngle(geometry.directionAxis, this._Str_5886[i]);
+                    cosAngle = Vector3d.cosAngle(geometry.directionAxis, this._secondaryNormals[i]);
                     if (cosAngle > -0.001)
                     {
-                        if (this._Str_3816)
+                        if (this._isVisible)
                         {
-                            this._Str_3816 = false;
+                            this._isVisible = false;
                             return true;
                         }
                         return false;
@@ -659,62 +659,62 @@
                     i = (i + 1);
                 }
                 this._Str_18702(geometry);
-                originPos = geometry.getScreenPosition(this._Str_5221);
+                originPos = geometry.getScreenPosition(this._origin);
                 originZ = originPos.z;
-                relativeDepth = (Math.max(this._Str_2820.z, this._Str_2745.z, this._Str_2639.z, this._Str_2766.z) - originZ);
-                if (this._type == _Str_3258)
+                relativeDepth = (Math.max(this._cornerA.z, this._cornerB.z, this._cornerC.z, this._cornerD.z) - originZ);
+                if (this._type == TYPE_LANDSCAPE)
                 {
-                    relativeDepth = (relativeDepth - ((this._location.z + Math.min(0, this._Str_2920.z, this._Str_2943.z)) * 8));
+                    relativeDepth = (relativeDepth - ((this._location.z + Math.min(0, this._leftSide.z, this._rightSide.z)) * 8));
                 }
                 if (this._type == _Str_3272)
                 {
                     relativeDepth = (relativeDepth + 0.02);
                 }
                 this._relativeDepth = relativeDepth;
-                this._Str_3816 = true;
-                this._Str_3406 = geometry.updateId;
+                this._isVisible = true;
+                this.FLOOR_COLOR = geometry.updateId;
             }
             if (((geometryChanged) || (this._Str_10518(geometry, timeSinceStartMs))))
             {
-                if ((((this._Str_1049 == null) || (!(this._Str_1720 == this._Str_1049.width))) || (!(this._height == this._Str_1049.height))))
+                if ((((this._bitmapData == null) || (!(this._width == this._bitmapData.width))) || (!(this._height == this._bitmapData.height))))
                 {
-                    if (this._Str_1049 != null)
+                    if (this._bitmapData != null)
                     {
-                        this._Str_1049.dispose();
-                        this._Str_1049 = null;
-                        if (((this._Str_1720 < 1) || (this._height < 1)))
+                        this._bitmapData.dispose();
+                        this._bitmapData = null;
+                        if (((this._width < 1) || (this._height < 1)))
                         {
                             return true;
                         }
                     }
                     else
                     {
-                        if (((this._Str_1720 < 1) || (this._height < 1)))
+                        if (((this._width < 1) || (this._height < 1)))
                         {
                             return false;
                         }
                     }
                     try
                     {
-                        this._Str_1049 = new BitmapData(this._Str_1720, this._height, true, 0xFFFFFF);
+                        this._bitmapData = new BitmapData(this._width, this._height, true, 0xFFFFFF);
                     }
                     catch(e:Error)
                     {
-                        _Str_1049 = null;
+                        _bitmapData = null;
                         dispose();
                     }
-                    if (this._Str_1049 == null)
+                    if (this._bitmapData == null)
                     {
                         return false;
                     }
-                    this._Str_1049.lock();
+                    this._bitmapData.lock();
                 }
                 else
                 {
-                    this._Str_1049.lock();
-                    this._Str_1049.fillRect(this._Str_1049.rect, 0xFFFFFF);
+                    this._bitmapData.lock();
+                    this._bitmapData.fillRect(this._bitmapData.rect, 0xFFFFFF);
                 }
-                Randomizer._Str_17384(this._Str_16308);
+                Randomizer.setSeed(this._randomSeed);
                 texture = this._Str_10114(geometry, timeSinceStartMs);
                 if (texture != null)
                 {
@@ -725,7 +725,7 @@
                     this.dispose();
                     return false;
                 }
-                this._Str_1049.unlock();
+                this._bitmapData.unlock();
                 return (texture) || (geometryChanged);
             }
             return false;
@@ -733,52 +733,52 @@
 
         private function _Str_18702(k:IRoomGeometry):void
         {
-            this._Str_2820.assign(k.getScreenPosition(this._location));
-            this._Str_2745.assign(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2943)));
-            this._Str_2639.assign(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._location, this._Str_2920), this._Str_2943)));
-            this._Str_2766.assign(k.getScreenPosition(Vector3d.sum(this._location, this._Str_2920)));
-            this._offset = k.getScreenPoint(this._Str_5221);
-            this._Str_2820.x = Math.round(this._Str_2820.x);
-            this._Str_2820.y = Math.round(this._Str_2820.y);
-            this._Str_2745.x = Math.round(this._Str_2745.x);
-            this._Str_2745.y = Math.round(this._Str_2745.y);
-            this._Str_2639.x = Math.round(this._Str_2639.x);
-            this._Str_2639.y = Math.round(this._Str_2639.y);
-            this._Str_2766.x = Math.round(this._Str_2766.x);
-            this._Str_2766.y = Math.round(this._Str_2766.y);
+            this._cornerA.assign(k.getScreenPosition(this._location));
+            this._cornerB.assign(k.getScreenPosition(Vector3d.sum(this._location, this._rightSide)));
+            this._cornerC.assign(k.getScreenPosition(Vector3d.sum(Vector3d.sum(this._location, this._leftSide), this._rightSide)));
+            this._cornerD.assign(k.getScreenPosition(Vector3d.sum(this._location, this._leftSide)));
+            this._offset = k.getScreenPoint(this._origin);
+            this._cornerA.x = Math.round(this._cornerA.x);
+            this._cornerA.y = Math.round(this._cornerA.y);
+            this._cornerB.x = Math.round(this._cornerB.x);
+            this._cornerB.y = Math.round(this._cornerB.y);
+            this._cornerC.x = Math.round(this._cornerC.x);
+            this._cornerC.y = Math.round(this._cornerC.y);
+            this._cornerD.x = Math.round(this._cornerD.x);
+            this._cornerD.y = Math.round(this._cornerD.y);
             this._offset.x = Math.round(this._offset.x);
             this._offset.y = Math.round(this._offset.y);
-            var _local_2:Number = Math.min(this._Str_2820.x, this._Str_2745.x, this._Str_2639.x, this._Str_2766.x);
-            var _local_3:Number = Math.max(this._Str_2820.x, this._Str_2745.x, this._Str_2639.x, this._Str_2766.x);
-            var _local_4:Number = Math.min(this._Str_2820.y, this._Str_2745.y, this._Str_2639.y, this._Str_2766.y);
-            var _local_5:Number = Math.max(this._Str_2820.y, this._Str_2745.y, this._Str_2639.y, this._Str_2766.y);
+            var _local_2:Number = Math.min(this._cornerA.x, this._cornerB.x, this._cornerC.x, this._cornerD.x);
+            var _local_3:Number = Math.max(this._cornerA.x, this._cornerB.x, this._cornerC.x, this._cornerD.x);
+            var _local_4:Number = Math.min(this._cornerA.y, this._cornerB.y, this._cornerC.y, this._cornerD.y);
+            var _local_5:Number = Math.max(this._cornerA.y, this._cornerB.y, this._cornerC.y, this._cornerD.y);
             _local_3 = (_local_3 - _local_2);
             this._offset.x = (this._offset.x - _local_2);
-            this._Str_2820.x = (this._Str_2820.x - _local_2);
-            this._Str_2745.x = (this._Str_2745.x - _local_2);
-            this._Str_2639.x = (this._Str_2639.x - _local_2);
-            this._Str_2766.x = (this._Str_2766.x - _local_2);
+            this._cornerA.x = (this._cornerA.x - _local_2);
+            this._cornerB.x = (this._cornerB.x - _local_2);
+            this._cornerC.x = (this._cornerC.x - _local_2);
+            this._cornerD.x = (this._cornerD.x - _local_2);
             _local_5 = (_local_5 - _local_4);
             this._offset.y = (this._offset.y - _local_4);
-            this._Str_2820.y = (this._Str_2820.y - _local_4);
-            this._Str_2745.y = (this._Str_2745.y - _local_4);
-            this._Str_2639.y = (this._Str_2639.y - _local_4);
-            this._Str_2766.y = (this._Str_2766.y - _local_4);
-            this._Str_1720 = _local_3;
+            this._cornerA.y = (this._cornerA.y - _local_4);
+            this._cornerB.y = (this._cornerB.y - _local_4);
+            this._cornerC.y = (this._cornerC.y - _local_4);
+            this._cornerD.y = (this._cornerD.y - _local_4);
+            this._width = _local_3;
             this._height = _local_5;
         }
 
         private function _Str_17000(k:IRoomGeometry, _arg_2:BitmapData):void
         {
-            if (((((((this._Str_2820 == null) || (this._Str_2745 == null)) || (this._Str_2639 == null)) || (this._Str_2766 == null)) || (_arg_2 == null)) || (this._Str_1049 == null)))
+            if (((((((this._cornerA == null) || (this._cornerB == null)) || (this._cornerC == null)) || (this._cornerD == null)) || (_arg_2 == null)) || (this._bitmapData == null)))
             {
                 return;
             }
-            var _local_3:Number = (this._Str_2766.x - this._Str_2639.x);
-            var _local_4:Number = (this._Str_2766.y - this._Str_2639.y);
-            var _local_5:Number = (this._Str_2745.x - this._Str_2639.x);
-            var _local_6:Number = (this._Str_2745.y - this._Str_2639.y);
-            if (((this._type == _Str_3587) || (this._type == _Str_3272)))
+            var _local_3:Number = (this._cornerD.x - this._cornerC.x);
+            var _local_4:Number = (this._cornerD.y - this._cornerC.y);
+            var _local_5:Number = (this._cornerB.x - this._cornerC.x);
+            var _local_6:Number = (this._cornerB.y - this._cornerC.y);
+            if (((this._type == TYPE_FLOOR) || (this._type == _Str_3272)))
             {
                 if (Math.abs((_local_5 - _arg_2.width)) <= 1)
                 {
@@ -806,7 +806,7 @@
             _local_11.b = _local_8;
             _local_11.c = _local_9;
             _local_11.d = _local_10;
-            _local_11.translate(this._Str_2639.x, this._Str_2639.y);
+            _local_11.translate(this._cornerC.x, this._cornerC.y);
             this.draw(_arg_2, _local_11);
         }
 
@@ -817,9 +817,9 @@
             var _local_5:Number;
             var _local_6:int;
             var _local_7:int;
-            if (this._Str_1049 != null)
+            if (this._bitmapData != null)
             {
-                if (((((((_arg_2.a == 1) && (_arg_2.d == 1)) && (_arg_2.c == 0)) && (!(_arg_2.b == 0))) && (Math.abs(_arg_2.b) <= 1)) && ((this._type == _Str_3587) || (this._type == _Str_3272))))
+                if (((((((_arg_2.a == 1) && (_arg_2.d == 1)) && (_arg_2.c == 0)) && (!(_arg_2.b == 0))) && (Math.abs(_arg_2.b) <= 1)) && ((this._type == TYPE_FLOOR) || (this._type == _Str_3272))))
                 {
                     _local_3 = 0;
                     _local_4 = 0;
@@ -836,7 +836,7 @@
                         _local_5 = (_local_5 + Math.abs(_arg_2.b));
                         if (_local_5 >= 1)
                         {
-                            this._Str_1049.copyPixels(k, new Rectangle((_local_4 + _local_6), 0, (_local_3 - _local_4), k.height), new Point((_arg_2.tx + _local_4), (_arg_2.ty + _local_7)), null, null, true);
+                            this._bitmapData.copyPixels(k, new Rectangle((_local_4 + _local_6), 0, (_local_3 - _local_4), k.height), new Point((_arg_2.tx + _local_4), (_arg_2.ty + _local_7)), null, null, true);
                             _local_4 = _local_3;
                             if (_arg_2.b > 0)
                             {
@@ -851,42 +851,42 @@
                     }
                     if (_local_5 > 0)
                     {
-                        this._Str_1049.copyPixels(k, new Rectangle(_local_4, 0, (_local_3 - _local_4), k.height), new Point((_arg_2.tx + _local_4), (_arg_2.ty + _local_7)), null, null, true);
+                        this._bitmapData.copyPixels(k, new Rectangle(_local_4, 0, (_local_3 - _local_4), k.height), new Point((_arg_2.tx + _local_4), (_arg_2.ty + _local_7)), null, null, true);
                     }
                     return;
                 }
-                this._Str_1049.draw(k, _arg_2, null, null, null, false);
+                this._bitmapData.draw(k, _arg_2, null, null, null, false);
             }
         }
 
-        public function _Str_25213():void
+        public function resetBitmapMasks():void
         {
             if (this._disposed)
             {
                 return;
             }
-            if (this._Str_4542)
+            if (this._useMask)
             {
-                if (this._Str_4047.length == 0)
+                if (this._bitmapMasks.length == 0)
                 {
                     return;
                 }
-                this._Str_4891 = true;
-                this._Str_4047 = [];
+                this._maskChanged = true;
+                this._bitmapMasks = [];
             }
         }
 
-        public function _Str_24569(k:String, _arg_2:Number, _arg_3:Number):Boolean
+        public function addBitmapMask(k:String, _arg_2:Number, _arg_3:Number):Boolean
         {
             var _local_4:RoomPlaneBitmapMask;
             var _local_5:int;
-            if (this._Str_4542)
+            if (this._useMask)
             {
                 _local_4 = null;
                 _local_5 = 0;
-                while (_local_5 < this._Str_4047.length)
+                while (_local_5 < this._bitmapMasks.length)
                 {
-                    _local_4 = (this._Str_4047[_local_5] as RoomPlaneBitmapMask);
+                    _local_4 = (this._bitmapMasks[_local_5] as RoomPlaneBitmapMask);
                     if (_local_4 != null)
                     {
                         if ((((_local_4.type == k) && (_local_4._Str_5120 == _arg_2)) && (_local_4._Str_4659 == _arg_3)))
@@ -897,37 +897,37 @@
                     _local_5++;
                 }
                 _local_4 = new RoomPlaneBitmapMask(k, _arg_2, _arg_3);
-                this._Str_4047.push(_local_4);
-                this._Str_4891 = true;
+                this._bitmapMasks.push(_local_4);
+                this._maskChanged = true;
                 return true;
             }
             return false;
         }
 
-        public function _Str_25934():void
+        public function resetRectangleMasks():void
         {
-            if (this._Str_4542)
+            if (this._useMask)
             {
-                if (this._Str_5088.length == 0)
+                if (this._rectangleMasks.length == 0)
                 {
                     return;
                 }
-                this._Str_4891 = true;
-                this._Str_5088 = [];
+                this._maskChanged = true;
+                this._rectangleMasks = [];
             }
         }
 
-        public function _Str_24758(k:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number):Boolean
+        public function addRectangleMask(k:Number, _arg_2:Number, _arg_3:Number, _arg_4:Number):Boolean
         {
             var _local_5:RoomPlaneRectangleMask;
             var _local_6:int;
-            if (this._Str_4542)
+            if (this._useMask)
             {
                 _local_5 = null;
                 _local_6 = 0;
-                while (_local_6 < this._Str_5088.length)
+                while (_local_6 < this._rectangleMasks.length)
                 {
-                    _local_5 = (this._Str_5088[_local_6] as RoomPlaneRectangleMask);
+                    _local_5 = (this._rectangleMasks[_local_6] as RoomPlaneRectangleMask);
                     if (_local_5 != null)
                     {
                         if (((((_local_5._Str_5120 == k) && (_local_5._Str_4659 == _arg_2)) && (_local_5._Str_9124 == _arg_3)) && (_local_5._Str_12156 == _arg_4)))
@@ -938,18 +938,18 @@
                     _local_6++;
                 }
                 _local_5 = new RoomPlaneRectangleMask(k, _arg_2, _arg_3, _arg_4);
-                this._Str_5088.push(_local_5);
-                this._Str_4891 = true;
+                this._rectangleMasks.push(_local_5);
+                this._maskChanged = true;
                 return true;
             }
             return false;
         }
 
-        private function _Str_19336():void
+        private function updateMaskChangeStatus():void
         {
             var _local_6:Boolean;
             var _local_7:RoomPlaneBitmapMask;
-            if (!this._Str_4891)
+            if (!this._maskChanged)
             {
                 return;
             }
@@ -958,17 +958,17 @@
             var _local_3:Boolean = true;
             var _local_4:RoomPlaneBitmapMask;
             var _local_5:RoomPlaneRectangleMask;
-            if (this._Str_4047.length == this._Str_8341.length)
+            if (this._bitmapMasks.length == this._bitmapMasksOld.length)
             {
-                while (k < this._Str_4047.length)
+                while (k < this._bitmapMasks.length)
                 {
-                    _local_4 = (this._Str_4047[k] as RoomPlaneBitmapMask);
+                    _local_4 = (this._bitmapMasks[k] as RoomPlaneBitmapMask);
                     if (_local_4 != null)
                     {
                         _local_6 = false;
-                        while (_local_2 < this._Str_8341.length)
+                        while (_local_2 < this._bitmapMasksOld.length)
                         {
-                            _local_7 = (this._Str_8341[_local_2] as RoomPlaneBitmapMask);
+                            _local_7 = (this._bitmapMasksOld[_local_2] as RoomPlaneBitmapMask);
                             if (_local_7 != null)
                             {
                                 if ((((_local_7.type == _local_4.type) && (_local_7._Str_5120 == _local_4._Str_5120)) && (_local_7._Str_4659 == _local_4._Str_4659)))
@@ -992,25 +992,25 @@
             {
                 _local_3 = false;
             }
-            if (this._Str_5088.length > this._Str_14495.length)
+            if (this._rectangleMasks.length > this._rectangleMasksOld.length)
             {
                 _local_3 = false;
             }
             if (_local_3)
             {
-                this._Str_4891 = false;
+                this._maskChanged = false;
             }
         }
 
-        private function _Str_17859(texture:BitmapData, geometry:IRoomGeometry):void
+        private function updateMask(texture:BitmapData, geometry:IRoomGeometry):void
         {
-            var normal:IVector3D;
+            var normal:IVector3d;
             var posX:int;
             var posY:int;
             var type:String;
             var wd:int;
             var ht:int;
-            if ((((!(this._Str_4542)) || (((this._Str_4047.length == 0) && (this._Str_5088.length == 0)) && (!(this._Str_4891)))) || (this._Str_4795 == null)))
+            if ((((!(this._useMask)) || (((this._bitmapMasks.length == 0) && (this._rectangleMasks.length == 0)) && (!(this._maskChanged)))) || (this._maskManager == null)))
             {
                 return;
             }
@@ -1022,71 +1022,71 @@
             var rectMask:RoomPlaneRectangleMask;
             var i:int;
             var j:int;
-            this._Str_19336();
+            this.updateMaskChangeStatus();
             var width:Number = texture.width;
             var height:Number = texture.height;
-            if ((((this._Str_2730 == null) || (!(this._Str_2730.width == width))) || (!(this._Str_2730.height == height))))
+            if ((((this._maskBitmapData == null) || (!(this._maskBitmapData.width == width))) || (!(this._maskBitmapData.height == height))))
             {
-                if (this._Str_2730 != null)
+                if (this._maskBitmapData != null)
                 {
-                    this._Str_2730.dispose();
-                    this._Str_2730 = null;
+                    this._maskBitmapData.dispose();
+                    this._maskBitmapData = null;
                 }
                 try
                 {
-                    this._Str_2730 = new BitmapData(width, height, true, 0xFFFFFF);
+                    this._maskBitmapData = new BitmapData(width, height, true, 0xFFFFFF);
                 }
                 catch(e:Error)
                 {
-                    _Str_2730 = null;
+                    _maskBitmapData = null;
                     return;
                 }
-                this._Str_4891 = true;
+                this._maskChanged = true;
             }
-            if (this._Str_4891)
+            if (this._maskChanged)
             {
-                this._Str_8341 = [];
-                this._Str_14495 = [];
-                if (this._Str_2730 != null)
+                this._bitmapMasksOld = [];
+                this._rectangleMasksOld = [];
+                if (this._maskBitmapData != null)
                 {
-                    this._Str_2730.fillRect(this._Str_2730.rect, 0xFFFFFF);
+                    this._maskBitmapData.fillRect(this._maskBitmapData.rect, 0xFFFFFF);
                 }
                 this._Str_11000(texture);
                 normal = geometry.getCoordinatePosition(this._normal);
                 posX = 0;
                 posY = 0;
                 i = 0;
-                while (i < this._Str_4047.length)
+                while (i < this._bitmapMasks.length)
                 {
-                    mask = (this._Str_4047[i] as RoomPlaneBitmapMask);
+                    mask = (this._bitmapMasks[i] as RoomPlaneBitmapMask);
                     if (mask != null)
                     {
-                        posX = (this._Str_2730.width - ((this._Str_2730.width * mask._Str_5120) / this._Str_2920.length));
-                        posY = (this._Str_2730.height - ((this._Str_2730.height * mask._Str_4659) / this._Str_2943.length));
+                        posX = (this._maskBitmapData.width - ((this._maskBitmapData.width * mask._Str_5120) / this._leftSide.length));
+                        posY = (this._maskBitmapData.height - ((this._maskBitmapData.height * mask._Str_4659) / this._rightSide.length));
                         type = mask.type;
-                        this._Str_4795._Str_17859(this._Str_2730, type, geometry.scale, normal, posX, posY);
-                        this._Str_8341.push(new RoomPlaneBitmapMask(type, mask._Str_5120, mask._Str_4659));
+                        this._maskManager.updateMask(this._maskBitmapData, type, geometry.scale, normal, posX, posY);
+                        this._bitmapMasksOld.push(new RoomPlaneBitmapMask(type, mask._Str_5120, mask._Str_4659));
                     }
                     i = (i + 1);
                 }
                 j = 0;
-                while (j < this._Str_5088.length)
+                while (j < this._rectangleMasks.length)
                 {
-                    rectMask = (this._Str_5088[j] as RoomPlaneRectangleMask);
+                    rectMask = (this._rectangleMasks[j] as RoomPlaneRectangleMask);
                     if (rectMask != null)
                     {
-                        posX = (this._Str_2730.width - ((this._Str_2730.width * rectMask._Str_5120) / this._Str_2920.length));
-                        posY = (this._Str_2730.height - ((this._Str_2730.height * rectMask._Str_4659) / this._Str_2943.length));
-                        wd = ((this._Str_2730.width * rectMask._Str_9124) / this._Str_2920.length);
-                        ht = ((this._Str_2730.height * rectMask._Str_12156) / this._Str_2943.length);
-                        this._Str_2730.fillRect(new Rectangle((posX - wd), (posY - ht), wd, ht), 0xFF000000);
-                        this._Str_14495.push(new RoomPlaneRectangleMask(rectMask._Str_9124, rectMask._Str_4659, rectMask._Str_9124, rectMask._Str_12156));
+                        posX = (this._maskBitmapData.width - ((this._maskBitmapData.width * rectMask._Str_5120) / this._leftSide.length));
+                        posY = (this._maskBitmapData.height - ((this._maskBitmapData.height * rectMask._Str_4659) / this._rightSide.length));
+                        wd = ((this._maskBitmapData.width * rectMask._Str_9124) / this._leftSide.length);
+                        ht = ((this._maskBitmapData.height * rectMask._Str_12156) / this._rightSide.length);
+                        this._maskBitmapData.fillRect(new Rectangle((posX - wd), (posY - ht), wd, ht), 0xFF000000);
+                        this._rectangleMasksOld.push(new RoomPlaneRectangleMask(rectMask._Str_9124, rectMask._Str_4659, rectMask._Str_9124, rectMask._Str_12156));
                     }
                     j = (j + 1);
                 }
-                this._Str_4891 = false;
+                this._maskChanged = false;
             }
-            this._Str_24790(texture, this._Str_2730);
+            this._Str_24790(texture, this._maskBitmapData);
         }
 
         private function _Str_24790(texture:BitmapData, mask:BitmapData):void
@@ -1095,30 +1095,30 @@
             {
                 return;
             }
-            if (((!(this._Str_3616 == null)) && ((!(this._Str_3616.width == texture.width)) || (!(this._Str_3616.height == texture.height)))))
+            if (((!(this._maskBufferBitmapData == null)) && ((!(this._maskBufferBitmapData.width == texture.width)) || (!(this._maskBufferBitmapData.height == texture.height)))))
             {
-                this._Str_3616.dispose();
-                this._Str_3616 = null;
+                this._maskBufferBitmapData.dispose();
+                this._maskBufferBitmapData = null;
             }
-            if (this._Str_3616 == null)
+            if (this._maskBufferBitmapData == null)
             {
                 try
                 {
-                    this._Str_3616 = new BitmapData(texture.width, texture.height, true, 0xFFFFFFFF);
+                    this._maskBufferBitmapData = new BitmapData(texture.width, texture.height, true, 0xFFFFFFFF);
                 }
                 catch(e:Error)
                 {
-                    if (_Str_3616)
+                    if (_maskBufferBitmapData)
                     {
-                        _Str_3616.dispose();
+                        _maskBufferBitmapData.dispose();
                     }
-                    _Str_3616 = null;
+                    _maskBufferBitmapData = null;
                     return;
                 }
             }
-            this._Str_3616.copyChannel(texture, texture.rect, _Str_1870, BitmapDataChannel.ALPHA, BitmapDataChannel.RED);
-            this._Str_3616.draw(mask, null, null, BlendMode.DARKEN);
-            texture.copyChannel(this._Str_3616, this._Str_3616.rect, _Str_1870, BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
+            this._maskBufferBitmapData.copyChannel(texture, texture.rect, ZERO_POINT, BitmapDataChannel.ALPHA, BitmapDataChannel.RED);
+            this._maskBufferBitmapData.draw(mask, null, null, BlendMode.DARKEN);
+            texture.copyChannel(this._maskBufferBitmapData, this._maskBufferBitmapData.rect, ZERO_POINT, BitmapDataChannel.RED, BitmapDataChannel.ALPHA);
         }
     }
 }

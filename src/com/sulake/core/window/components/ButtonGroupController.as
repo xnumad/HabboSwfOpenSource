@@ -39,7 +39,7 @@
 
         public function set _Str_2365(k:Boolean):void
         {
-            _Str_2896(WindowState.SELECTED, k);
+            setStateFlag(WindowState.SELECTED, k);
         }
 
         override public function update(k:WindowController, _arg_2:WindowEvent):Boolean
@@ -72,7 +72,7 @@
 
         public function select():Boolean
         {
-            if (_Str_2767(WindowState.SELECTED))
+            if (getStateFlag(WindowState.SELECTED))
             {
                 return true;
             }
@@ -84,16 +84,16 @@
                 return false;
             }
             k.recycle();
-            _Str_2896(WindowState.SELECTED, true);
+            setStateFlag(WindowState.SELECTED, true);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_SELECTED, this, null);
             this.update(this, k);
             k.recycle();
             return true;
         }
 
-        public function _Str_2205():Boolean
+        public function unselect():Boolean
         {
-            if (!_Str_2767(WindowState.SELECTED))
+            if (!getStateFlag(WindowState.SELECTED))
             {
                 return true;
             }
@@ -105,7 +105,7 @@
                 return false;
             }
             k.recycle();
-            _Str_2896(WindowState.SELECTED, false);
+            setStateFlag(WindowState.SELECTED, false);
             k = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_UNSELECTED, this, null);
             this.update(this, k);
             k.recycle();

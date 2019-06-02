@@ -197,7 +197,7 @@
                     }
                     else
                     {
-                        this._primaryColorCtrl._Str_6434(this._manager._Str_3058._Str_23172(this._badgeEditorCtrl._Str_23897));
+                        this._primaryColorCtrl._Str_6434(this._manager._Str_3058.findMatchingPrimaryColorId(this._badgeEditorCtrl._Str_23897));
                     }
                 }
                 if (!this._secondaryColorCtrl.isInitialized)
@@ -209,7 +209,7 @@
                     }
                     else
                     {
-                        this._secondaryColorCtrl._Str_6434(this._manager._Str_3058._Str_23800(this._badgeEditorCtrl._Str_24812));
+                        this._secondaryColorCtrl._Str_6434(this._manager._Str_3058.findMatchingSecondaryColorId(this._badgeEditorCtrl._Str_24812));
                     }
                 }
                 this._window.findChildByName("reset_colors").visible = this._data._Str_2811;
@@ -374,7 +374,7 @@
             this._Str_20884();
             var _local_2:ITabContextWindow = ITabContextWindow(this._window.findChildByName("edit_guild_tab_context"));
             var _local_3:ISelectableWindow = ISelectableWindow(this._window.findChildByName(("edit_tab_" + this._step)));
-            _local_2.selector._Str_2520(_local_3);
+            _local_2.selector.setSelected(_local_3);
             this._window.visible = true;
             this._window.activate();
         }
@@ -453,7 +453,7 @@
             {
                 return;
             }
-            this._manager.navigator._Str_11727();
+            this._manager.navigator.startRoomCreation();
         }
 
         private function _Str_23101(k:WindowEvent, _arg_2:IWindow):void
@@ -655,7 +655,7 @@
             {
                 _local_5 = this._data._Str_6848[_local_4];
                 _local_2.push(_local_5.roomName);
-                if (_local_5.roomId == this._data._Str_6136)
+                if (_local_5.roomId == this._data.baseRoomId)
                 {
                     _local_3 = (_local_4 + 1);
                 }

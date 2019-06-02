@@ -39,7 +39,7 @@
             return this._requestType;
         }
 
-        public function get _Str_2951():int
+        public function get requestId():int
         {
             return this._requestId;
         }

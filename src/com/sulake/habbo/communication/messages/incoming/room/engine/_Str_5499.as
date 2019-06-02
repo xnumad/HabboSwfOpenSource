@@ -80,17 +80,17 @@
             return this._dir;
         }
 
-        public function get _Str_14280():int
+        public function get dirHead():int
         {
             return this._Str_11163;
         }
 
-        public function get _Str_12536():Boolean
+        public function get isMoving():Boolean
         {
             return this._Str_19151;
         }
 
-        public function get _Str_10289():Boolean
+        public function get canStandUp():Boolean
         {
             return this._Str_11245;
         }

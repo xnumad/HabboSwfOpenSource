@@ -27,12 +27,12 @@
             }
         }
 
-        public function get _Str_25942():int
+        public function get maxOffset():int
         {
             return this._SafeStr_21823;
         }
 
-        public function set _Str_25942(k:int):void
+        public function set maxOffset(k:int):void
         {
             this._SafeStr_21823 = k;
         }

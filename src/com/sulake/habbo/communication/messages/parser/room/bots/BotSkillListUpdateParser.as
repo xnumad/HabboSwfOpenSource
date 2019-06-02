@@ -9,7 +9,7 @@
         private var _skillList:Array;
 
 
-        public function get _Str_20091():Array
+        public function get skillList():Array
         {
             return this._skillList;
         }

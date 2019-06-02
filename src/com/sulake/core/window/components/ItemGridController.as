@@ -85,7 +85,7 @@
             {
                 return _Str_7087;
             }
-            return (_Str_2803) ? (0.1 * _Str_2614.height) : (_Str_2614.width / this._Str_3080);
+            return (_Str_2803) ? (0.1 * visibleRegion.height) : (visibleRegion.width / this._Str_3080);
         }
 
         override public function get scrollStepV():Number
@@ -94,7 +94,7 @@
             {
                 return _Str_7859;
             }
-            return (_Str_2803) ? (_Str_2614.height / this._Str_11491) : (0.1 * _Str_2614.width);
+            return (_Str_2803) ? (visibleRegion.height / this._Str_11491) : (0.1 * visibleRegion.width);
         }
 
         public function get _Str_6405():Boolean
@@ -210,7 +210,7 @@
             while (_local_5 < _local_2)
             {
                 _local_3 = (getListItemAt(_local_5) as IItemListWindow);
-                _local_4 = _local_3._Str_12066(k);
+                _local_4 = _local_3.getListItemByID(k);
                 if (_local_4)
                 {
                     return _local_4;
@@ -250,7 +250,7 @@
             while (_local_5 < _local_2)
             {
                 _local_3 = (getChildAt(_local_5) as IItemListWindow);
-                _local_4 = _local_3._Str_7139(k);
+                _local_4 = _local_3.getListItemByTag(k);
                 if (_local_4)
                 {
                     return _local_4;
@@ -267,7 +267,7 @@
             {
                 return -1;
             }
-            return (_local_2._Str_3156(k) * this._Str_3080) + this._Str_22838(_local_2);
+            return (_local_2.getListItemIndex(k) * this._Str_3080) + this._Str_22838(_local_2);
         }
 
         public function _Str_4725(k:IWindow):IWindow
@@ -284,11 +284,11 @@
             var _local_3:IItemListWindow = this._Str_6836(_local_2);
             if (!_Str_2803)
             {
-                _local_3.width = _local_3._Str_2614.width;
+                _local_3.width = _local_3.visibleRegion.width;
             }
             else
             {
-                _local_3.height = _local_3._Str_2614.height;
+                _local_3.height = _local_3.visibleRegion.height;
             }
             return k;
         }
@@ -304,7 +304,7 @@
             {
                 throw (new Error("Item not found in grid!"));
             }
-            _Str_3015(k, _arg_2);
+            addListItemAt(k, _arg_2);
         }
 
         public function _Str_13972(k:IWindow, _arg_2:IWindow):void
@@ -325,7 +325,7 @@
             while (_local_3 < k)
             {
                 _local_2 = IItemListWindow(getListItemAt(_local_3));
-                _local_2._Str_2659();
+                _local_2.removeListItems();
                 if (!_Str_2803)
                 {
                     _local_2.width = 0;
@@ -346,7 +346,7 @@
             while (_local_3 < k)
             {
                 _local_2 = IItemListWindow(getListItemAt(_local_3));
-                _local_2._Str_2724();
+                _local_2.destroyListItems();
                 if (!_Str_2803)
                 {
                     _local_2.width = 0;
@@ -357,7 +357,7 @@
                 }
                 _local_3++;
             }
-            _Str_2724();
+            destroyListItems();
         }
 
         protected function _Str_24723(k:WindowEvent, _arg_2:IWindow):void
@@ -376,7 +376,7 @@
 
         protected function _Str_22838(k:IItemListWindow):int
         {
-            return _Str_3156(k);
+            return getListItemIndex(k);
         }
 
         protected function _Str_6836(k:uint):IItemListWindow
@@ -418,7 +418,7 @@
                     if (_local_3 > 0)
                     {
                         _local_8 = this._Str_6836(((_local_3 > 0) ? (_local_3 - 1) : 0));
-                        _local_9 = _Str_3156(_local_8);
+                        _local_9 = getListItemIndex(_local_8);
                         _local_10 = ((_local_9 > -1) ? (_local_9 == (_local_4 - 1)) : true);
                         if (_local_10)
                         {
@@ -459,7 +459,7 @@
             while (_local_2-- > 0)
             {
                 _local_3 = IItemListWindow(getListItemAt(_local_2));
-                if (_local_3._Str_3156(k) > -1)
+                if (_local_3.getListItemIndex(k) > -1)
                 {
                     return _local_3;
                 }
@@ -481,7 +481,7 @@
             if (_local_2 > 0)
             {
                 _local_4 = this._Str_6836(((_local_2 > 0) ? (_local_2 - 1) : 0));
-                _local_5 = _Str_3156(_local_4);
+                _local_5 = getListItemIndex(_local_4);
                 _local_6 = ((_local_5 > -1) ? (_local_5 == (this._Str_3080 - 1)) : true);
                 if (_local_6)
                 {
@@ -563,10 +563,10 @@
                     _local_7 = this._Str_2830(_local_4);
                     _local_8 = this._Str_16931((_local_4 + 1));
                     _local_5 = this._Str_6836((_local_4 + 1));
-                    _local_5._Str_3015(_local_7, _local_8);
+                    _local_5.addListItemAt(_local_7, _local_8);
                     _local_4--;
                 }
-                this._Str_6836(_arg_2)._Str_3015(k, (_arg_2 / this._Str_3080));
+                this._Str_6836(_arg_2).addListItemAt(k, (_arg_2 / this._Str_3080));
             }
             var _local_10:uint;
             _local_6 = this._Str_3080;
@@ -575,7 +575,7 @@
             {
                 _local_5 = IItemListWindow(getListItemAt(_local_9));
                 _local_5.autoArrangeItems = true;
-                _local_5.height = _local_5._Str_2614.height;
+                _local_5.height = _local_5.visibleRegion.height;
                 _local_10 = Math.max(_local_10, _local_5.height);
                 _local_9++;
             }
@@ -587,7 +587,7 @@
             var _local_7:IWindow;
             var _local_2:uint = this._Str_16931(k);
             var _local_3:IItemListWindow = this._Str_6836(k);
-            var _local_4:IWindow = _local_3._Str_2915(_local_2);
+            var _local_4:IWindow = _local_3.removeListItemAt(_local_2);
             var _local_5:uint = this.numGridItems;
             var _local_6:uint = k;
             if (_local_4 == null)
@@ -605,7 +605,7 @@
                 _local_2 = this._Str_16931(_local_6);
                 _local_7 = this._Str_2830((_local_6 + 1));
                 _local_3 = this._Str_6836(_local_6);
-                _local_3._Str_3015(_local_7, _local_2);
+                _local_3.addListItemAt(_local_7, _local_2);
                 _local_6++;
             }
             var _local_9:uint;
@@ -614,7 +614,7 @@
             {
                 _local_3 = IItemListWindow(getListItemAt(_local_8));
                 _local_3.autoArrangeItems = true;
-                _local_3.height = _local_3._Str_2614.height;
+                _local_3.height = _local_3.visibleRegion.height;
                 _local_9 = Math.max(_local_9, _local_3.height);
                 _local_8++;
             }
@@ -644,7 +644,7 @@
                 while (_local_7 < _local_3)
                 {
                     _local_4 = (getListItemAt(_local_7) as IItemListWindow);
-                    _local_5 = _local_4._Str_2915(0);
+                    _local_5 = _local_4.removeListItemAt(0);
                     _local_2.push(_local_5);
                     if (--k < 1)
                     {
@@ -653,7 +653,7 @@
                     _local_7++;
                 }
             }
-            _Str_2724();
+            destroyListItems();
             this.autoArrangeItems = _local_6;
             for each (_local_5 in _local_2)
             {
@@ -667,7 +667,7 @@
                 {
                     _local_4 = IItemListWindow(getListItemAt(_local_7));
                     _local_4.autoArrangeItems = true;
-                    _local_4.height = _local_4._Str_2614.height;
+                    _local_4.height = _local_4.visibleRegion.height;
                     _local_8 = Math.max(_local_8, _local_4.height);
                     _local_7++;
                 }
@@ -689,7 +689,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.CONTAINER_RESIZE_TO_COLUMNS, this._Str_7858));
+            k.push(createProperty(PropertyKeys.CONTAINER_RESIZE_TO_COLUMNS, this._Str_7858));
             return k;
         }
 

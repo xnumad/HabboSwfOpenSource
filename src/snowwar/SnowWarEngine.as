@@ -480,7 +480,7 @@
                 (context.assets as AssetLibraryCollection).addAssetLibrary(assets);
                 var asset:XmlAsset = (assets.getAssetByName("figure") as XmlAsset);
                 this._avatarRenderManager._Str_882((asset.content as XML));
-                this._avatarRenderManager._Str_746();
+                this._avatarRenderManager.resetAssetManager();
             }
         }
 
@@ -624,11 +624,11 @@
             var _local_2:int = _SafeStr_4031._SafeStr_13233(k.altKey, k.shiftKey);
             if (_local_2 == _SafeStr_4031._SafeStr_13234)
             {
-                this._SafeStr_13189(k._Str_16836, k._Str_17676);
+                this._SafeStr_13189(k.tileXAsInt, k.tileYAsInt);
             }
             else
             {
-                this._SafeStr_13192(k._Str_16836, k._Str_17676, this._SafeStr_13193(_local_2));
+                this._SafeStr_13192(k.tileXAsInt, k.tileYAsInt, this._SafeStr_13193(_local_2));
             }
         }
 
@@ -1079,7 +1079,7 @@
 
         public function onStageEnding():void //_SafeStr_13208
         {
-            this._roomEngine._Str_6374 = false;
+            this._roomEngine.setIsSelectedObjectInValidPosition = false;
             this._gameState = STAGE_ENDED;
             removeUpdateReceiver(this);
             if (this._synchronizedGameArena)

@@ -13,7 +13,7 @@
         public static const _Str_4322:int = 1;
         public static const _Str_4191:int = 2;
 
-        private var _Str_578:int;
+        private var _type:int;
         private var _Str_3026:Number;
         private var _window:IWindowContainer;
         private var _slider:MeMenuSoundSettingsSlider;
@@ -23,7 +23,7 @@
         {
             var _local_4:IWindow;
             super();
-            this._Str_578 = _arg_2;
+            this._type = _arg_2;
             this._Str_3002 = k;
             this._window = _arg_3;
             this._slider = new MeMenuSoundSettingsSlider(this, (this._window.findChildByName("volume_container") as IWindowContainer), k.toolbar.assets, 0, 1);
@@ -65,7 +65,7 @@
         public function saveVolume(k:Number, _arg_2:Boolean):void
         {
             this._Str_3026 = k;
-            switch (this._Str_578)
+            switch (this._type)
             {
                 case _Str_4200:
                     this._Str_3002.saveVolume(k, -1, -1, _arg_2);

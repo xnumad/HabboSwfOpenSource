@@ -83,8 +83,8 @@
             {
                 return k;
             }
-            k.push(_Str_16371._Str_2551(this._normalAsset));
-            k.push(_Str_16062._Str_2551(this._hoverAsset));
+            k.push(_Str_16371.withValue(this._normalAsset));
+            k.push(_Str_16062.withValue(this._hoverAsset));
             if (this._bitmap != null)
             {
                 for each (_local_2 in this._bitmap.properties)

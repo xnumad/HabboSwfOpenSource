@@ -64,7 +64,7 @@
                 this._catalog.showNotEnoughCreditsAlert();
                 return;
             }
-            if (this._catalog.getPurse()._Str_5590(_local_2.activityPointType) < _local_2.priceInActivityPoints)
+            if (this._catalog.getPurse().getActivityPointsForType(_local_2.activityPointType) < _local_2.priceInActivityPoints)
             {
                 this._catalog.getHabboClubOffers(_local_2.activityPointType);
                 return;

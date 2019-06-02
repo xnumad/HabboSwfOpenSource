@@ -909,7 +909,7 @@
                 }
             }
             this._window.procedure = this._Str_13002;
-            this._window.name = ((this._roomEngine._Str_14972(this.type) + ".") + this.category);
+            this._window.name = ((this._roomEngine.getFurnitureType(this.type) + ".") + this.category);
             if (((this.stuffData) && (!(this.stuffData.getLegacyString() == ""))))
             {
                 this._window.name = (this._window.name + (".s" + this.stuffData));

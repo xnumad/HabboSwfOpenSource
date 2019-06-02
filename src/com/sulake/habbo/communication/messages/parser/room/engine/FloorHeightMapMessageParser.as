@@ -43,7 +43,7 @@
         {
             if (((((k < 0) || (k >= this.width)) || (_arg_2 < 0)) || (_arg_2 >= this.height)))
             {
-                return RoomPlaneParser._Str_3134;
+                return RoomPlaneParser.TILE_BLOCKED;
             }
             var _local_3:Array = (this._heightMap[_arg_2] as Array);
             return _local_3[k];
@@ -95,7 +95,7 @@
                 _local_4 = 0;
                 while (_local_4 < _local_9)
                 {
-                    _local_7.push(RoomPlaneParser._Str_3134);
+                    _local_7.push(RoomPlaneParser.TILE_BLOCKED);
                     _local_4++;
                 }
                 this._heightMap.push(_local_7);
@@ -120,7 +120,7 @@
                         }
                         else
                         {
-                            _local_6 = RoomPlaneParser._Str_3134;
+                            _local_6 = RoomPlaneParser.TILE_BLOCKED;
                         }
                         _local_7[_local_4] = _local_6;
                         _local_4++;

@@ -117,21 +117,21 @@
             this._list = null;
         }
 
-        public function _Str_19657(k:NodeData):void
+        public function buildCatalogIndex(k:NodeData):void
         {
             this._index = null;
             this._offersToNodes = new Dictionary();
             this._index = this._Str_20450(k, 0, null);
         }
 
-        public function _Str_17980():void
+        public function showIndex():void
         {
             var k:ICatalogNode;
             if (this._index == null)
             {
                 return;
             }
-            this._list._Str_2659();
+            this._list.removeListItems();
             if (this._topViewSelector != null)
             {
                 this._topViewSelector._Str_17441();
@@ -163,7 +163,7 @@
             {
                 return;
             }
-            this._list._Str_2659();
+            this._list.removeListItems();
             if (((k == null) || (!(k.visible))))
             {
                 return;
@@ -219,7 +219,7 @@
             for each (_local_5 in this._currentNodes)
             {
                 _local_5.deactivate();
-                if (_local_5._Str_8132 < k._Str_8132)
+                if (_local_5.depth < k.depth)
                 {
                     _local_4.push(_local_5);
                 }
@@ -242,7 +242,7 @@
             {
                 this._currentNodes.push(k);
             }
-            if (k._Str_7841)
+            if (k.isBranch)
             {
                 if (((k.parent) && (k.parent is CatalogNodeRenderable)))
                 {
@@ -282,7 +282,7 @@
 
         public function openPage(k:String):void
         {
-            var _local_2:ICatalogNode = this._Str_10014(k);
+            var _local_2:ICatalogNode = this.getNodeByName(k);
             if (((!(_local_2 == null)) && (_local_2.visible)))
             {
                 this._catalog.loadCatalogPage(_local_2.pageId, -1, this._catalogType);
@@ -294,11 +294,11 @@
                 {
                     this._catalog.events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED));
                 }
-                this._Str_13937();
+                this.loadFrontPage();
             }
         }
 
-        public function _Str_15856(k:int, _arg_2:int):void
+        public function openPageById(k:int, _arg_2:int):void
         {
             var _local_3:ICatalogNode;
             var _local_4:Vector.<ICatalogNode>;
@@ -318,7 +318,7 @@
                 }
                 else
                 {
-                    _local_3 = this._Str_11820(k);
+                    _local_3 = this.getNodeById(k);
                 }
                 if (_local_3 != null)
                 {
@@ -328,7 +328,7 @@
             }
         }
 
-        public function _Str_24002(k:int):void
+        public function openPageByOfferId(k:int):void
         {
             var _local_2:Vector.<ICatalogNode>;
             var _local_3:ICatalogNode;
@@ -348,7 +348,7 @@
             }
         }
 
-        public function _Str_14636():void
+        public function deactivateCurrentNode():void
         {
             var k:ICatalogNode;
             for each (k in this._currentNodes)
@@ -364,7 +364,7 @@
             var _local_4:ICatalogNode;
             var _local_3:Vector.<ICatalogNode> = new Vector.<ICatalogNode>(0);
             _Str_12923(k, _arg_2, this._index, _local_3);
-            this._list._Str_2659();
+            this._list.removeListItems();
             for each (_local_4 in _local_3)
             {
                 Logger.log(("Found node: " + [_local_4.pageId, _local_4.pageName, _local_4.localization]));
@@ -381,7 +381,7 @@
             {
                 return;
             }
-            this._Str_14636();
+            this.deactivateCurrentNode();
             var _local_2:ICatalogNode = k.parent;
             while (((!(_local_2 == null)) && (!(_local_2.parent == null))))
             {
@@ -399,7 +399,7 @@
             this.activateNode(k);
         }
 
-        public function _Str_13937():void
+        public function loadFrontPage():void
         {
             if (this._index == null)
             {
@@ -447,7 +447,7 @@
             {
                 _local_5 = new CatalogNodeRenderable(this, k, _arg_2, _arg_3);
             }
-            for each (_local_6 in _local_5._Str_15019)
+            for each (_local_6 in _local_5.offerIds)
             {
                 if ((_local_6 in this._offersToNodes))
                 {
@@ -493,17 +493,17 @@
             return null;
         }
 
-        public function _Str_10014(k:String):ICatalogNode
+        public function getNodeByName(k:String):ICatalogNode
         {
             return (this._index != null) ? this._Str_16317(k, this._index) : null;
         }
 
-        public function _Str_21310(k:String):ICatalogNode
+        public function getOptionalNodeByName(k:String):ICatalogNode
         {
             return (this._index) ? this._Str_16317(k, this._index) : null;
         }
 
-        public function _Str_11820(k:int, _arg_2:ICatalogNode=null):ICatalogNode
+        public function getNodeById(k:int, _arg_2:ICatalogNode=null):ICatalogNode
         {
             var _local_4:ICatalogNode;
             if (_arg_2 == null)
@@ -523,7 +523,7 @@
             {
                 for each (_local_4 in _arg_2.children)
                 {
-                    _local_3 = this._Str_11820(k, _local_4);
+                    _local_3 = this.getNodeById(k, _local_4);
                     if (_local_3 != null)
                     {
                         break;

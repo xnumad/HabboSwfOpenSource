@@ -78,7 +78,7 @@
 
         public function _Str_25916():Boolean
         {
-            return this._Str_2657().id == _Str_6250;
+            return this.getSelected().id == _Str_6250;
         }
 
         public function get tabs():Array
@@ -96,7 +96,7 @@
             }
         }
 
-        public function _Str_2657():Tab
+        public function getSelected():Tab
         {
             var k:Tab;
             for each (k in this._tabs)

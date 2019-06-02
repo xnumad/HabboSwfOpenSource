@@ -101,13 +101,13 @@
             {
                 return k;
             }
-            k.push(_Str_12929._Str_2551(this._type));
-            k.push(_Str_15899._Str_2551(this._badgeId));
+            k.push(_Str_12929.withValue(this._type));
+            k.push(_Str_15899.withValue(this._badgeId));
             for each (_local_2 in this._bitmap.properties)
             {
                 if (_local_2.key != PropertyKeys.ASSET_URI)
                 {
-                    k.push(_local_2._Str_19447(BADGE_IMAGE));
+                    k.push(_local_2.withNameSpace(BADGE_IMAGE));
                 }
             }
             return k;
@@ -131,7 +131,7 @@
                 }
                 if (_local_3.key != ((BADGE_IMAGE + ":") + PropertyKeys.ASSET_URI))
                 {
-                    _local_2.push(_local_3._Str_20623());
+                    _local_2.push(_local_3.withoutNameSpace());
                 }
             }
             this._bitmap.properties = _local_2;
@@ -311,9 +311,9 @@
                 switch (this._type)
                 {
                     case _Str_4387.NORMAL:
-                        if (GameConfigurations._Str_21861(this._badgeId))
+                        if (GameConfigurations.isGameBadge(this._badgeId))
                         {
-                            k = GameConfigurations._Str_21365(this._badgeId);
+                            k = GameConfigurations.getBadgeImageUri(this._badgeId);
                         }
                         else
                         {
@@ -338,7 +338,7 @@
                 return;
             }
             this._badgeId = _arg_2;
-            this._windowManager._Str_7720.removeAsset(this.assetUri);
+            this._windowManager.resourceManager.removeAsset(this.assetUri);
             this.refresh();
         }
 

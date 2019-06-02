@@ -33,11 +33,11 @@
             }
             if (this._Str_6284 == 0)
             {
-                this._Str_13573();
+                this.setDefaults();
             }
         }
 
-        public function _Str_13573():void
+        public function setDefaults():void
         {
             this._Str_6284 = 1;
             this._Str_7862 = 0;

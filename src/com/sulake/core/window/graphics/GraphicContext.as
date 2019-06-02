@@ -89,7 +89,7 @@
             return _Str_2214;
         }
 
-        public static function get _Str_1152():uint
+        public static function get allocatedByteCount():uint
         {
             return _Str_4712;
         }
@@ -188,7 +188,7 @@
             return ('[object GraphicContext name="' + name) + '"]';
         }
 
-        public function _Str_15011():Rectangle
+        public function getDrawRegion():Rectangle
         {
             return this._Str_873.clone();
         }
@@ -250,20 +250,20 @@
             return _local_2;
         }
 
-        public function _Str_16259(k:Point):void
+        public function getAbsoluteMousePosition(k:Point):void
         {
             k.x = stage.mouseX;
             k.y = stage.mouseY;
         }
 
-        public function _Str_12181(k:Point):void
+        public function getRelativeMousePosition(k:Point):void
         {
             var _local_2:DisplayObject = this.getDisplayObject();
             k.x = _local_2.mouseX;
             k.y = _local_2.mouseY;
         }
 
-        public function _Str_6613():IBitmapDrawable
+        public function fetchDrawBuffer():IBitmapDrawable
         {
             var k:Bitmap;
             if (this._Str_7873)

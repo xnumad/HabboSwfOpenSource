@@ -10,11 +10,11 @@
         {
             switch (k)
             {
-                case RoomSettingsData._Str_4199:
+                case RoomSettingsData.DOORMODE_CLOSED:
                     return "newnavigator_doormode_doorbell_small";
-                case RoomSettingsData._Str_3711:
+                case RoomSettingsData.DOORMODE_PASSWORD:
                     return "newnavigator_doormode_password_small";
-                case RoomSettingsData._Str_4775:
+                case RoomSettingsData.DOORMODE_INVISIBLE:
                     return "newnavigator_doormode_invisible_small";
             }
             return "";

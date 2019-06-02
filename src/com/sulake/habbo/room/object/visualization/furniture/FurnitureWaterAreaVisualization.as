@@ -37,7 +37,7 @@
             {
                 for each (k in this._createdInstanceMaskSizes)
                 {
-                    ShoreMaskCreatorUtility._Str_23481(object.getInstanceId(), k, assetCollection);
+                    ShoreMaskCreatorUtility.disposeInstanceMask(object.getInstanceId(), k, assetCollection);
                 }
                 this._createdInstanceMaskSizes = [];
             }
@@ -54,7 +54,7 @@
             if (super.updateObject(k, _arg_2))
             {
                 this._needsShoreUpdate = true;
-                this._Str_24870();
+                this.updateBorderData();
                 return true;
             }
             return false;
@@ -64,9 +64,9 @@
         {
             var _local_3:int;
             var _local_2:int = super.updateAnimation(k);
-            if (this._Str_22976(k))
+            if (this.updateInstanceShoreMask(k))
             {
-                _local_3 = this._Str_18416(k);
+                _local_3 = this.getShoreSpriteIndex(k);
                 _local_2 = (_local_2 | (1 << _local_3));
             }
             return _local_2;
@@ -74,18 +74,18 @@
 
         override protected function getSpriteAssetName(k:int, _arg_2:int):String
         {
-            if (((k == 1) || (!(_arg_2 == this._Str_18416(k)))))
+            if (((k == 1) || (!(_arg_2 == this.getShoreSpriteIndex(k)))))
             {
                 return super.getSpriteAssetName(k, _arg_2);
             }
             if (this._hasSomeBorder)
             {
-                return ShoreMaskCreatorUtility._Str_11218(object.getInstanceId(), _Str_3033(k));
+                return ShoreMaskCreatorUtility.getInstanceMaskName(object.getInstanceId(), _Str_3033(k));
             }
             return null;
         }
 
-        private function _Str_18416(k:int):int
+        private function getShoreSpriteIndex(k:int):int
         {
             if (((this._shoreSpriteScale == k) && (this._shoreSpriteDirection == direction)))
             {
@@ -106,9 +106,9 @@
             return -1;
         }
 
-        private function _Str_18133(k:int):IGraphicAsset
+        private function getShoreAsset(k:int):IGraphicAsset
         {
-            var _local_2:String = super.getSpriteAssetName(k, this._Str_18416(k));
+            var _local_2:String = super.getSpriteAssetName(k, this.getShoreSpriteIndex(k));
             var _local_3:IGraphicAsset = assetCollection.getAsset(_local_2);
             return _local_3;
         }
@@ -116,7 +116,7 @@
         private function _Str_18302(k:int):IGraphicAsset
         {
             var _local_2:int = _Str_3033(k);
-            var _local_3:IGraphicAsset = ShoreMaskCreatorUtility._Str_18302(object.getInstanceId(), _local_2, assetCollection, this._Str_18133(k));
+            var _local_3:IGraphicAsset = ShoreMaskCreatorUtility._Str_18302(object.getInstanceId(), _local_2, assetCollection, this.getShoreAsset(k));
             if (_local_3 != null)
             {
                 if (this._createdInstanceMaskSizes.indexOf(_local_2) < 0)
@@ -127,11 +127,11 @@
             return _local_3;
         }
 
-        private function _Str_24870():void
+        private function updateBorderData():void
         {
-            this._Str_23260();
+            this.resetBorders();
             var k:int = object.getState(0);
-            var _local_2:Array = this._Str_24926();
+            var _local_2:Array = this.getAreaData();
             var _local_3:int = (this._sizeX + 2);
             var _local_4:int = (this._sizeY + 2);
             var _local_5:int;
@@ -174,10 +174,10 @@
                 _local_5--;
             }
             var _local_7:int;
-            _local_7 = this._Str_24566(_local_2, _local_7);
-            _local_7 = this._Str_22423(_local_2, _local_7);
-            _local_7 = this._Str_24789(_local_2, _local_7);
-            _local_7 = this._Str_24121(_local_2, _local_7);
+            _local_7 = this.updateTopBorder(_local_2, _local_7);
+            _local_7 = this.updateRightBorder(_local_2, _local_7);
+            _local_7 = this.updateBottomBorder(_local_2, _local_7);
+            _local_7 = this.updateLeftBorder(_local_2, _local_7);
             this._hasSomeBorder = false;
             _local_5 = 0;
             while (_local_5 < this._hasBorder.length)
@@ -190,7 +190,7 @@
             }
         }
 
-        private function _Str_24566(k:Array, _arg_2:int):int
+        private function updateTopBorder(k:Array, _arg_2:int):int
         {
             var _local_3:int = (this._sizeX + 2);
             var _local_4:Array = k[0];
@@ -205,35 +205,35 @@
                     this._hasBorder[_arg_2] = true;
                     if (((_local_5[(_local_8 - 1)] == false) && (_local_4[(_local_8 - 1)] == false)))
                     {
-                        _local_6 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_6 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_4[(_local_8 - 1)] == true)
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_6 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_6 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
                     if (((_local_5[(_local_8 + 1)] == false) && (_local_4[(_local_8 + 1)] == false)))
                     {
-                        _local_7 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_7 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_4[(_local_8 + 1)] == true)
                         {
-                            _local_7 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_7 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_7 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_7 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
-                    this._borderType[_arg_2] = ShoreMaskCreatorUtility._Str_3514(_local_6, _local_7);
+                    this._borderType[_arg_2] = ShoreMaskCreatorUtility.getBorderType(_local_6, _local_7);
                 }
                 _arg_2++;
                 _local_8++;
@@ -241,7 +241,7 @@
             return _arg_2;
         }
 
-        private function _Str_22423(k:Array, _arg_2:int):int
+        private function updateRightBorder(k:Array, _arg_2:int):int
         {
             var _local_3:int = (this._sizeX + 2);
             var _local_4:int = (this._sizeY + 2);
@@ -261,35 +261,35 @@
                     this._hasBorder[_arg_2] = true;
                     if (((_local_8[(_local_3 - 2)] == false) && (_local_8[(_local_3 - 1)] == false)))
                     {
-                        _local_5 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_5 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_8[(_local_3 - 1)] == true)
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_5 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_5 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
                     if (((_local_9[(_local_3 - 2)] == false) && (_local_9[(_local_3 - 1)] == false)))
                     {
-                        _local_6 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_6 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_9[(_local_3 - 1)] == true)
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_6 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_6 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
-                    this._borderType[_arg_2] = ShoreMaskCreatorUtility._Str_3514(_local_5, _local_6);
+                    this._borderType[_arg_2] = ShoreMaskCreatorUtility.getBorderType(_local_5, _local_6);
                 }
                 _arg_2++;
                 _local_10++;
@@ -297,7 +297,7 @@
             return _arg_2;
         }
 
-        private function _Str_24789(k:Array, _arg_2:int):int
+        private function updateBottomBorder(k:Array, _arg_2:int):int
         {
             var _local_3:int = (this._sizeX + 2);
             var _local_4:int = (this._sizeY + 2);
@@ -313,35 +313,35 @@
                     this._hasBorder[_arg_2] = true;
                     if (((_local_8[(_local_9 + 1)] == false) && (_local_7[(_local_9 + 1)] == false)))
                     {
-                        _local_5 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_5 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_7[(_local_9 + 1)] == true)
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_5 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_5 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
                     if (((_local_8[(_local_9 - 1)] == false) && (_local_7[(_local_9 - 1)] == false)))
                     {
-                        _local_6 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_6 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_7[(_local_9 - 1)] == true)
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_6 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_6 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
-                    this._borderType[_arg_2] = ShoreMaskCreatorUtility._Str_3514(_local_5, _local_6);
+                    this._borderType[_arg_2] = ShoreMaskCreatorUtility.getBorderType(_local_5, _local_6);
                 }
                 _arg_2++;
                 _local_9--;
@@ -349,7 +349,7 @@
             return _arg_2;
         }
 
-        private function _Str_24121(k:Array, _arg_2:int):int
+        private function updateLeftBorder(k:Array, _arg_2:int):int
         {
             var _local_3:int = (this._sizeX + 2);
             var _local_4:int = (this._sizeY + 2);
@@ -369,35 +369,35 @@
                     this._hasBorder[_arg_2] = true;
                     if (((_local_8[1] == false) && (_local_8[0] == false)))
                     {
-                        _local_5 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_5 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_8[0] == true)
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_5 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_5 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_5 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
                     if (((_local_9[1] == false) && (_local_9[0] == false)))
                     {
-                        _local_6 = ShoreMaskCreatorUtility._Str_4832;
+                        _local_6 = ShoreMaskCreatorUtility.OUTER_CUT;
                     }
                     else
                     {
                         if (_local_9[0] == true)
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3534;
+                            _local_6 = ShoreMaskCreatorUtility.INNER_CUT;
                         }
                         else
                         {
-                            _local_6 = ShoreMaskCreatorUtility._Str_3641;
+                            _local_6 = ShoreMaskCreatorUtility.STRAIGHT_CUT;
                         }
                     }
-                    this._borderType[_arg_2] = ShoreMaskCreatorUtility._Str_3514(_local_5, _local_6);
+                    this._borderType[_arg_2] = ShoreMaskCreatorUtility.getBorderType(_local_5, _local_6);
                 }
                 _arg_2++;
                 _local_10--;
@@ -405,7 +405,7 @@
             return _arg_2;
         }
 
-        private function _Str_23260():void
+        private function resetBorders():void
         {
             var _local_2:IRoomObjectModel;
             if (((this._sizeX == 0) || (this._sizeY == 0)))
@@ -424,12 +424,12 @@
             while (k < ((this._sizeX * 2) + (this._sizeY * 2)))
             {
                 this._hasBorder.push(false);
-                this._borderType.push(ShoreMaskCreatorUtility._Str_3641);
+                this._borderType.push(ShoreMaskCreatorUtility.STRAIGHT_CUT);
                 k++;
             }
         }
 
-        private function _Str_24926():Array
+        private function getAreaData():Array
         {
             var k:int = (this._sizeX + 2);
             var _local_2:int = (this._sizeY + 2);
@@ -467,10 +467,10 @@
 
         private function _Str_18695(k:Number):Boolean
         {
-            return ShoreMaskCreatorUtility._Str_18695(_Str_3033(k), assetCollection, this._Str_18133(k));
+            return ShoreMaskCreatorUtility._Str_18695(_Str_3033(k), assetCollection, this.getShoreAsset(k));
         }
 
-        private function _Str_22891(k:int, _arg_2:int, _arg_3:Number):BitmapData
+        private function createShoreMask(k:int, _arg_2:int, _arg_3:Number):BitmapData
         {
             if ((((this._maskBitmapData == null) || (this._maskBitmapData.width < k)) || (this._maskBitmapData.height < _arg_2)))
             {
@@ -478,12 +478,12 @@
                 {
                     this._maskBitmapData.dispose();
                 }
-                this._maskBitmapData = ShoreMaskCreatorUtility._Str_22325(k, _arg_2);
+                this._maskBitmapData = ShoreMaskCreatorUtility.createEmptyMask(k, _arg_2);
             }
-            return ShoreMaskCreatorUtility._Str_25776(this._maskBitmapData, _Str_3033(_arg_3), this._hasBorder, this._borderType, assetCollection);
+            return ShoreMaskCreatorUtility.createShoreMask2x2(this._maskBitmapData, _Str_3033(_arg_3), this._hasBorder, this._borderType, assetCollection);
         }
 
-        private function _Str_22976(k:Number):Boolean
+        private function updateInstanceShoreMask(k:Number):Boolean
         {
             var _local_3:BitmapData;
             var _local_4:BitmapData;
@@ -499,8 +499,8 @@
                 _local_3 = (_local_2.asset.content as BitmapData);
                 if (_local_3 != null)
                 {
-                    _local_4 = this._Str_22891(_local_3.width, _local_3.height, k);
-                    _local_5 = this._Str_18133(k);
+                    _local_4 = this.createShoreMask(_local_3.width, _local_3.height, k);
+                    _local_5 = this.getShoreAsset(k);
                     if (((!(_local_5 == null)) && (!(_local_5.asset == null))))
                     {
                         _local_6 = (_local_5.asset.content as BitmapData);

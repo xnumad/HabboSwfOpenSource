@@ -2,10 +2,10 @@
 {
     public class FurnitureQueueTileVisualization extends FurnitureAnimatedVisualization 
     {
-        private static const _Str_4186:int = 3;
-        private static const _Str_18395:int = 2;
-        private static const _Str_15915:int = 1;
-        private static const _Str_16054:int = 15;
+        private static const ANIMATION_ID_ROLL:int = 3;
+        private static const ANIMATION_ID_ROLL_ONCE:int = 2;
+        private static const ANIMATION_ID_NORMAL:int = 1;
+        private static const ANIMATION_DURATION:int = 15;
 
         private var _stateQueue:Array;
         private var _animationCounter:int;
@@ -18,11 +18,11 @@
 
         override protected function setAnimation(k:int):void
         {
-            if (k == _Str_18395)
+            if (k == ANIMATION_ID_ROLL_ONCE)
             {
                 this._stateQueue = new Array();
-                this._stateQueue.push(_Str_15915);
-                this._animationCounter = _Str_16054;
+                this._stateQueue.push(ANIMATION_ID_NORMAL);
+                this._animationCounter = ANIMATION_DURATION;
             }
             super.setAnimation(k);
         }

@@ -14,7 +14,7 @@
             return this._gameTypeId;
         }
 
-        public function get _Str_25451():int
+        public function get inviterId():int
         {
             return this._inviterId;
         }

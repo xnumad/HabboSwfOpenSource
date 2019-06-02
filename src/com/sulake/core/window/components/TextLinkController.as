@@ -68,7 +68,7 @@
             return this._Str_3681;
         }
 
-        public function _Str_8475(k:uint, _arg_2:uint):uint
+        public function setMouseCursorForState(k:uint, _arg_2:uint):uint
         {
             if (!this._Str_3280)
             {
@@ -86,7 +86,7 @@
             return _local_3;
         }
 
-        public function _Str_6608(k:uint):uint
+        public function getMouseCursorByState(k:uint):uint
         {
             if (!this._Str_3280)
             {
@@ -95,12 +95,12 @@
             return this._Str_3280.getValue(k);
         }
 
-        public function _Str_7991(k:IToolTipWindow):void
+        public function showToolTip(k:IToolTipWindow):void
         {
             throw (new Error("Unimplemented method!"));
         }
 
-        public function _Str_9055():void
+        public function hideToolTip():void
         {
             throw (new Error("Unimplemented method!"));
         }

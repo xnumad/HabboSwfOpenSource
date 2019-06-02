@@ -54,17 +54,17 @@
             }
         }
 
-        public function get _Str_22549():LegacyWallGeometry
+        public function get legacyGeometry():LegacyWallGeometry
         {
             return this._legacyGeometry;
         }
 
-        public function get _Str_16018():TileObjectMap
+        public function get tileObjectMap():TileObjectMap
         {
             return this._tileObjectMap;
         }
 
-        public function get _Str_10974():RoomCamera
+        public function get roomCamera():RoomCamera
         {
             return this._roomCamera;
         }
@@ -151,7 +151,7 @@
             }
         }
 
-        public function _Str_20415(k:FurnitureData):void
+        public function addFurnitureData(k:FurnitureData):void
         {
             if (k != null)
             {
@@ -164,18 +164,18 @@
         {
             if (this._furnitureStack.length > 0)
             {
-                return this._Str_18068(this._furnitureStack.getKey(0));
+                return this.getFurnitureDataWithId(this._furnitureStack.getKey(0));
             }
             return null;
         }
 
-        public function _Str_18068(k:int):FurnitureData
+        public function getFurnitureDataWithId(k:int):FurnitureData
         {
             var _local_2:FurnitureData = this._furnitureStack.remove(k);
             return _local_2;
         }
 
-        public function _Str_25481(k:FurnitureData):void
+        public function addWallItemData(k:FurnitureData):void
         {
             if (k != null)
             {
@@ -184,22 +184,22 @@
             }
         }
 
-        public function _Str_4531():FurnitureData
+        public function getWallItemData():FurnitureData
         {
             if (this._wallItemStack.length > 0)
             {
-                return this._Str_17323(this._wallItemStack.getKey(0));
+                return this.getWallItemDataWithId(this._wallItemStack.getKey(0));
             }
             return null;
         }
 
-        public function _Str_17323(k:int):FurnitureData
+        public function getWallItemDataWithId(k:int):FurnitureData
         {
             var _local_2:FurnitureData = this._wallItemStack.remove(k);
             return _local_2;
         }
 
-        public function _Str_16810(k:String):Boolean
+        public function addButtonMouseCursorOwner(k:String):Boolean
         {
             var _local_2:int = this._mouseButtonCursorOwners.indexOf(k);
             if (_local_2 == -1)
@@ -210,7 +210,7 @@
             return false;
         }
 
-        public function _Str_11959(k:String):Boolean
+        public function removeButtonMouseCursorOwner(k:String):Boolean
         {
             var _local_2:int = this._mouseButtonCursorOwners.indexOf(k);
             if (_local_2 > -1)
@@ -221,7 +221,7 @@
             return false;
         }
 
-        public function _Str_22598():Boolean
+        public function hasButtonMouseCursorOwners():Boolean
         {
             return this._mouseButtonCursorOwners.length > 0;
         }

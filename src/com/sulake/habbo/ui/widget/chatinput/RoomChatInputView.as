@@ -221,14 +221,14 @@
             this._lastContent = "";
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this._Str_3714);
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_ADDED, this._Str_3714);
-            if (((((this._Str_20898()) && (!(this._widget.handler.container.roomSession.isGameSession))) && (!(this._widget.handler.container.freeFlowChat == null))) && (!(this._widget.handler.container.freeFlowChat._Str_5329 == null))))
+            if (((((this._Str_20898()) && (!(this._widget.handler.container.roomSession.isGameSession))) && (!(this._widget.handler.container.freeFlowChat == null))) && (!(this._widget.handler.container.freeFlowChat.chatStyleLibrary == null))))
             {
                 _local_3 = [];
                 _local_4 = this._widget._Str_13265.getProperty("disabled.custom.chat.styles").split(",");
                 _local_5 = this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751);
-                for each (_local_6 in this._widget.handler.container.freeFlowChat._Str_5329._Str_10334())
+                for each (_local_6 in this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyleIds())
                 {
-                    _local_7 = this._widget.handler.container.freeFlowChat._Str_5329.getStyle(_local_6);
+                    _local_7 = this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_6);
                     if (((!(_local_7.isSystemStyle)) && (_local_4.indexOf(_local_6.toString()) == -1)))
                     {
                         if (((_local_7.isHcOnly) && (this._widget.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)))
@@ -259,7 +259,7 @@
             {
                 if ((this._chatInputContainerWindow.findChildByName("chat_input_container") is IItemListWindow))
                 {
-                    IItemListWindow(this._chatInputContainerWindow.findChildByName("chat_input_container"))._Str_2915(0);
+                    IItemListWindow(this._chatInputContainerWindow.findChildByName("chat_input_container")).removeListItemAt(0);
                 }
             }
             this._Str_14171();
@@ -662,7 +662,7 @@
             {
                 return;
             }
-            var _local_2:int = ((k) ? RoomWidgetChatMessage._Str_4264 : RoomWidgetChatMessage._Str_4014);
+            var _local_2:int = ((k) ? RoomWidgetChatMessage.CHAT_TYPE_SHOUT : RoomWidgetChatMessage.CHAT_TYPE_SPEAK);
             var _local_3:String = this._inputField.text;
             var _local_4:Array = _local_3.split(" ");
             var _local_5:String = "";
@@ -670,18 +670,18 @@
             switch (_local_4[0])
             {
                 case this._chatModeIdWhisper:
-                    _local_2 = RoomWidgetChatMessage._Str_4349;
+                    _local_2 = RoomWidgetChatMessage.CHAT_TYPE_WHISPER;
                     _local_5 = _local_4[1];
                     _local_6 = (((this._chatModeIdWhisper + " ") + _local_5) + " ");
                     _local_4.shift();
                     _local_4.shift();
                     break;
                 case this._chatModeIdShout:
-                    _local_2 = RoomWidgetChatMessage._Str_4264;
+                    _local_2 = RoomWidgetChatMessage.CHAT_TYPE_SHOUT;
                     _local_4.shift();
                     break;
                 case this._chatModeIdSpeak:
-                    _local_2 = RoomWidgetChatMessage._Str_4014;
+                    _local_2 = RoomWidgetChatMessage.CHAT_TYPE_SPEAK;
                     _local_4.shift();
                     break;
             }
@@ -764,7 +764,7 @@
             while (_local_2 >= 0)
             {
                 _local_3 = k[_local_2];
-                this._chatStyleSelector._Str_2822(_local_3, this._widget.handler.container.freeFlowChat._Str_5329.getStyle(_local_3)._Str_22091);
+                this._chatStyleSelector._Str_2822(_local_3, this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_3).selectorPreview);
                 _local_2--;
             }
             this._chatStyleSelector._Str_24820();

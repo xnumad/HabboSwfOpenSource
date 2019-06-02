@@ -15,8 +15,8 @@
 
     public class Tab implements ITab 
     {
-        public static var _Str_3098:int = 127;
-        public static var _Str_2790:int = 36;
+        public static var WIDTH:int = 127;
+        public static var HEIGHT:int = 36;
         public static var _Str_2925:IHabboFriendBarData;
         public static var FRIENDS:IHabboFriendsList;
         public static var GAMES:IHabboGameManager;

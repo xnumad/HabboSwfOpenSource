@@ -150,9 +150,9 @@
             this._leaderboardWindow.findChildByName("weekly_top_avatar_score").caption = "";
             this._leaderboardWindow.findChildByName("weekly_top_avatar_score").caption = "";
             this._gameCenterView.registerParameter(this._selectedGame, "gamecenter.full_leaderboard_title");
-            this._thisWeekList._Str_2724();
-            this._lastWeekList._Str_2724();
-            this._ownEntryList._Str_2724();
+            this._thisWeekList.destroyListItems();
+            this._lastWeekList.destroyListItems();
+            this._ownEntryList.destroyListItems();
             this._Str_21845();
             this.send(new _Str_5198(this._selectedGame, 1, 0, 0, 5, 5));
             this._gameCenterView._Str_20681(this);
@@ -192,7 +192,7 @@
             }
             var _local_2:_Str_5142 = (k as _Str_5142);
             var _local_3:Game2WeeklyLeaderboardParser = _local_2._Str_2273();
-            if (_local_3._Str_23657 == 0)
+            if (_local_3.currentOffset == 0)
             {
                 this._Str_17910(this._thisWeekList, _local_3, 10, true);
             }
@@ -222,7 +222,7 @@
             var _local_9:uint;
             if (((k) && (_arg_2.gameTypeId == this._selectedGame)))
             {
-                k._Str_2724();
+                k.destroyListItems();
                 _local_6 = (WindowUtils.createWindow("game_leaderboard_entry_small_xml") as IWindowContainer);
                 _local_7 = 1;
                 for each (_local_8 in _arg_2.leaderboard)

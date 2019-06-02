@@ -141,7 +141,7 @@
                 while (((_local_2 < _Str_13041) && (_local_2 < this._availablePalettes.length)))
                 {
                     _local_3 = this._availablePalettes[_local_2];
-                    _local_4 = this._catalog.roomEngine._Str_8639(this._selectedTypeIndex, _local_3.paletteId);
+                    _local_4 = this._catalog.roomEngine.getPetColor(this._selectedTypeIndex, _local_3.paletteId);
                     if (_local_4 != null)
                     {
                         if (_local_4._Str_5845 == _local_4._Str_6659)
@@ -194,11 +194,11 @@
                 if (((!(this._catalog == null)) && (!(this._catalog.localization == null))))
                 {
                     k = (this._availablePalettes[this._selectedPaletteIndex] as _Str_3140);
-                    return this._catalog.localization.getLocalization(this._Str_9430(this._selectedTypeIndex, k._Str_3343), this._Str_9430(this._selectedTypeIndex, k._Str_3343));
+                    return this._catalog.localization.getLocalization(this._Str_9430(this._selectedTypeIndex, k.breedId), this._Str_9430(this._selectedTypeIndex, k.breedId));
                 }
             }
             k = this._availablePalettes[this._selectedPaletteIndex];
-            return this._Str_9430(this._selectedTypeIndex, k._Str_3343);
+            return this._Str_9430(this._selectedTypeIndex, k.breedId);
         }
 
         private function _Str_8396(k:WindowEvent):void
@@ -271,7 +271,7 @@
                 return;
             }
             Logger.log(("* Will buy pet as " + extraParameter));
-            this._catalog._Str_5649(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this._Str_2641());
+            this._catalog._Str_5649(this._offers.getWithIndex(0), page.pageId, extraParameter, 1, null, null, true, this.getPetImage());
         }
 
         private function _Str_4902(k:String, _arg_2:String):String
@@ -291,7 +291,7 @@
 
         private function _Str_18999(k:CatalogWidgetSellablePetPalettesEvent):void
         {
-            if (k._Str_2716 == this._selectedProductCode)
+            if (k.productCode == this._selectedProductCode)
             {
                 this._availablePalettes = this._Str_11449(k._Str_13588);
                 this._Str_21823();
@@ -318,7 +318,7 @@
             return _local_2;
         }
 
-        private function _Str_2641():BitmapData
+        private function getPetImage():BitmapData
         {
             var _local_2:int;
             var _local_6:IRoomEngine;
@@ -346,10 +346,10 @@
             switch (_local_2)
             {
                 case 15:
-                    _local_11 = _local_6._Str_11046(_local_2, "hair");
-                    _local_12 = _local_6._Str_11046(_local_2, "tail");
-                    _local_13 = _local_6._Str_7761(_local_2, "hair");
-                    _local_14 = _local_6._Str_7761(_local_2, "tail");
+                    _local_11 = _local_6.getPetLayerIdForTag(_local_2, "hair");
+                    _local_12 = _local_6.getPetLayerIdForTag(_local_2, "tail");
+                    _local_13 = _local_6.getPetDefaultPalette(_local_2, "hair");
+                    _local_14 = _local_6.getPetDefaultPalette(_local_2, "tail");
                     _local_15 = ((_local_13) ? parseInt(_local_13.id) : -1);
                     _local_16 = ((_local_14) ? parseInt(_local_14.id) : -1);
                     _local_17 = new PetCustomPart(_local_11, -1, _local_15);
@@ -357,7 +357,7 @@
                     _local_9 = [_local_17, _local_18];
                     break;
             }
-            var _local_10:ImageResult = _local_6._Str_2641(_local_2, _local_4, _local_5, _local_8, 64, this, true, 0, _local_9);
+            var _local_10:ImageResult = _local_6.getPetImage(_local_2, _local_4, _local_5, _local_8, 64, this, true, 0, _local_9);
             if (_local_10 != null)
             {
                 this._imageResultId = _local_10.id;
@@ -373,7 +373,7 @@
             {
                 return;
             }
-            var _local_2:BitmapData = this._Str_2641();
+            var _local_2:BitmapData = this.getPetImage();
             if (_local_2 != null)
             {
                 this._Str_3234(_local_2, true);

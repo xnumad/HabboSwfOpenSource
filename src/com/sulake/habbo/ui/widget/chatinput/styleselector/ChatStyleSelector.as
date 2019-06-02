@@ -120,12 +120,12 @@
         {
             _Str_1007 = k;
             _Str_6012 = true;
-            var _local_2:IChatStyle = this._roomChatInputView.widget._Str_13265._Str_5329.getStyle(k.id);
+            var _local_2:IChatStyle = this._roomChatInputView.widget._Str_13265.chatStyleLibrary.getStyle(k.id);
             if (this._roomChatInputView.window.findChildByName("chat_bg_preview") == null)
             {
                 return;
             }
-            var _local_3:Sprite = _local_2._Str_9574(0xFFFFFF);
+            var _local_3:Sprite = _local_2.getNewBackgroundSprite(0xFFFFFF);
             var _local_4:IDisplayObjectWrapper = IDisplayObjectWrapper(this._roomChatInputView.window.findChildByName("chat_bg_preview"));
             _local_3.width = (_local_4.width + _local_2.overlap.width);
             _local_3.height = ((_local_4.height + _local_2.overlap.y) + _local_2.overlap.height);
@@ -148,7 +148,7 @@
                 this._Str_4357.y = _local_3.y;
                 _local_3.mask = this._Str_4357;
             }
-            this._roomChatInputView._Str_24855((_local_2._Str_5640.color as uint));
+            this._roomChatInputView._Str_24855((_local_2.textFormat.color as uint));
         }
 
         private function get selected():ChatStyleGridEntry

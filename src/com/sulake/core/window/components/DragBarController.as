@@ -36,11 +36,11 @@
             }
             if (this._Str_2734.horizontal)
             {
-                _Str_2648.minWidth = width;
+                limits.minWidth = width;
             }
             else
             {
-                _Str_2648.minHeight = height;
+                limits.minHeight = height;
             }
         }
 

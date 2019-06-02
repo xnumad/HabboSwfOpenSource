@@ -30,7 +30,7 @@
             return true;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._Str_2570;
         }

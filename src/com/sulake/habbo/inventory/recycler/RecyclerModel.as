@@ -18,12 +18,12 @@
         public static const _Str_4158:uint = 1;
 
         private var _habboInventory:HabboInventory;
-        private var _Str_2430:IAssetLibrary;
+        private var _assetLibrary:IAssetLibrary;
         private var _roomEngine:IRoomEngine;
         private var _communicationManager:IHabboCommunicationManager;
         private var _localizationManager:IHabboLocalizationManager;
         private var _disposed:Boolean = false;
-        private var _Str_635:Boolean = false;
+        private var _running:Boolean = false;
         private var _state:uint = 0;
         private var _Str_2338:Map;
 
@@ -31,7 +31,7 @@
         {
             this._habboInventory = k;
             this._communicationManager = _arg_3;
-            this._Str_2430 = _arg_4;
+            this._assetLibrary = _arg_4;
             this._roomEngine = _arg_5;
             this._localizationManager = _arg_6;
         }
@@ -62,7 +62,7 @@
             {
                 this._habboInventory = null;
                 this._communicationManager = null;
-                this._Str_2430 = null;
+                this._assetLibrary = null;
                 this._roomEngine = null;
                 this._localizationManager = null;
                 this._disposed = true;

@@ -2,15 +2,15 @@
 {
     import com.sulake.habbo.room.events.RoomObjectSamplePlaybackEvent;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.messages.RoomObjectDataUpdateMessage;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
 
     public class FurnitureSoundBlockLogic extends FurnitureMultistateLogic 
     {
-        private static const _Str_14751:int = 12;
-        private static const _Str_16982:int = -12;
-        private static const _Str_6825:int = -1;
+        private static const HIGHEST_SEMITONE:int = 12;
+        private static const LOWEST_SEMITONE:int = -12;
+        private static const STATE_UNINITIALIZED:int = -1;
 
         private var _state:int = -1;
         private var _sampleId:int = -1;
@@ -58,16 +58,16 @@
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
         {
             super.processUpdateMessage(k);
-            var _local_2:IVector3D = object.getLocation();
+            var _local_2:IVector3d = object.getLocation();
             var _local_3:RoomObjectDataUpdateMessage = (k as RoomObjectDataUpdateMessage);
             if (_local_3 != null)
             {
-                if (((this._state == _Str_6825) && (object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_REAL_ROOM_OBJECT) == 1)))
+                if (((this._state == STATE_UNINITIALIZED) && (object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_REAL_ROOM_OBJECT) == 1)))
                 {
                     this._lastLocZ = _local_2.z;
                     eventDispatcher.dispatchEvent(new RoomObjectSamplePlaybackEvent(RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_INITIALIZED, object, this._sampleId, this._Str_17428(_local_2.z)));
                 }
-                if (((!(this._state == _Str_6825)) && (!(_local_2 == null))))
+                if (((!(this._state == STATE_UNINITIALIZED)) && (!(_local_2 == null))))
                 {
                     if (this._lastLocZ != _local_2.z)
                     {
@@ -75,7 +75,7 @@
                         this._lastLocZ = _local_2.z;
                     }
                 }
-                if ((((!(this._state == _Str_6825)) && (!(_local_3.state == this._state))) && (!(_local_2 == null))))
+                if ((((!(this._state == STATE_UNINITIALIZED)) && (!(_local_3.state == this._state))) && (!(_local_2 == null))))
                 {
                     this._Str_18183(_local_2.z);
                 }
@@ -93,9 +93,9 @@
         private function _Str_17428(k:Number):Number
         {
             var _local_2:int = (k * 2);
-            if (_local_2 > _Str_14751)
+            if (_local_2 > HIGHEST_SEMITONE)
             {
-                _local_2 = Math.min(0, (_Str_16982 + ((_local_2 - _Str_14751) - 1)));
+                _local_2 = Math.min(0, (LOWEST_SEMITONE + ((_local_2 - HIGHEST_SEMITONE) - 1)));
             }
             return (this._noPitch) ? 1 : Math.pow(2, (_local_2 / 12));
         }

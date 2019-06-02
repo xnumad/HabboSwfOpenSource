@@ -26,7 +26,7 @@
             return this._Str_21672;
         }
 
-        public function get _Str_11464():Boolean
+        public function get bgOnly():Boolean
         {
             return this._Str_6930;
         }

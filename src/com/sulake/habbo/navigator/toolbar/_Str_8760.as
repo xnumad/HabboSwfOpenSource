@@ -37,7 +37,7 @@
             this._localizationManager = k.localization;
             this._window = IWindowContainer(this._habboNavigator.getXmlWindow("toolbar_hover"));
             this._Str_1929 = IItemListWindow(this._window.findChildByName(this._Str_24574));
-            this._Str_13051 = IWindowContainer(this._Str_1929._Str_7139(this._Str_22393));
+            this._Str_13051 = IWindowContainer(this._Str_1929.getListItemByTag(this._Str_22393));
             this._Str_1929.removeListItem(this._Str_13051);
             this._window.addEventListener(WindowMouseEvent.OVER, this._Str_19268);
             this._window.addEventListener(WindowMouseEvent.HOVERING, this._Str_19268);
@@ -67,14 +67,14 @@
 
         private function _Str_23296(k:WindowMouseEvent):void
         {
-            this._habboNavigator._Str_6822();
+            this._habboNavigator.openNavigator();
             this._habboNavigator._Str_10330();
             this._Str_8696();
         }
 
         private function _Str_23229(k:WindowMouseEvent):void
         {
-            var _local_2:int = this._habboNavigator.data._Str_3374;
+            var _local_2:int = this._habboNavigator.data.homeRoomId;
             if (_local_2 > -1)
             {
                 this._habboNavigator.goToPrivateRoom(_local_2);

@@ -577,10 +577,10 @@
             var _local_2:int = (_Str_1041 * _Str_1650);
             var _local_3:int = (_Str_1500 * _Str_1650);
             var _local_4:int = (_local_2 - _local_3);
-            for each (_local_5 in AvatarFigurePartType._Str_1286)
+            for each (_local_5 in AvatarFigurePartType.FIGURE_SETS)
             {
                 _local_6 = k._Str_740(_local_5);
-                _local_7 = k._Str_783(_local_6._Str_734);
+                _local_7 = k.getPalette(_local_6._Str_734);
                 _local_8 = [];
                 _local_9 = [];
                 _local_10 = [];
@@ -602,7 +602,7 @@
         {
             var _local_3:ColorButton = new ColorButton(0, 0, this._Str_1495, 0xFFFFFF, k._Str_915);
             _local_3.name = ((_arg_2 + "_") + k.id);
-            _local_3._Str_1685(k._Str_915);
+            _local_3.setColor(k._Str_915);
             _local_3.index = k.index;
             _local_3.club = (k.clubLevel > 0);
             return _local_3;
@@ -649,7 +649,7 @@
             _local_8 = this._selectedColors[_local_3];
             if (_local_8)
             {
-                _local_8._Str_2205();
+                _local_8.unselect();
             }
             this._selectedColors[_local_3] = k;
             k.select();
@@ -702,7 +702,7 @@
             var _local_2:Array = [];
             var _local_3:IStructureData = this._context._Str_1458._Str_813();
             var _local_4:ISetType = _local_3._Str_740(k);
-            var _local_5:IPalette = _local_3._Str_783(_local_4._Str_734);
+            var _local_5:IPalette = _local_3.getPalette(_local_4._Str_734);
             var _local_7:int;
             if (((_local_4) && (_local_5)))
             {
@@ -787,7 +787,7 @@
                 }
                 else
                 {
-                    _local_2._Str_2205();
+                    _local_2.unselect();
                 }
             }
         }
@@ -800,7 +800,7 @@
             var _local_5:Array = this._Str_1384();
             if (this._selectedFigureSet)
             {
-                this._selectedFigureSet._Str_2205();
+                this._selectedFigureSet.unselect();
             }
             var _local_6:* = (this._selectedFigureSet == k);
             _local_6 = (_local_5.indexOf(_local_4) > -1);

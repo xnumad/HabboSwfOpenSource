@@ -171,7 +171,7 @@
         {
             if (k != null)
             {
-                _Str_22127(k._Str_6349, k.width, k.height, _arg_2, _arg_3, _arg_4, k.maintainAspectRatio, _arg_5);
+                _Str_22127(k.imageURL, k.width, k.height, _arg_2, _arg_3, _arg_4, k.maintainAspectRatio, _arg_5);
             }
         }
     }

@@ -83,7 +83,7 @@
             this._container.findChildByName("user_rank_txt").caption = this.getText(k);
             this._container.findChildByName("user_rank_info_txt").visible = (!(this._data._Str_13028));
             this._container.findChildByName("user_rank_info_txt").caption = this._Str_6273(((this._data._Str_10549 > 0) ? "yourrankinfo" : "youarenotrankedinfo"));
-            IStaticBitmapWrapperWindow(this._container.findChildByName("reward_image")).assetUri = (("${image.library.url}reception/" + this._data._Str_4327) + "Reward.png");
+            IStaticBitmapWrapperWindow(this._container.findChildByName("reward_image")).assetUri = (("${image.library.url}reception/" + this._data.goalCode) + "Reward.png");
         }
 
         private function _Str_15938(k:int):void
@@ -120,7 +120,7 @@
 
         private function _Str_20594(k:String):String
         {
-            return this._Str_1196(((this._data._Str_4327 + ".") + k));
+            return this._Str_1196(((this._data.goalCode + ".") + k));
         }
 
         private function _Str_6273(k:String):String

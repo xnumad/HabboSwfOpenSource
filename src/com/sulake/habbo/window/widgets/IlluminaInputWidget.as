@@ -97,10 +97,10 @@
             {
                 return k;
             }
-            k.push(_Str_15732._Str_2551(this._Str_5167));
-            k.push(_Str_15686._Str_2551(this._Str_6307));
-            k.push(_Str_13245._Str_2551(this.multiline));
-            k.push(_Str_14030._Str_2551(this.maxChars));
+            k.push(_Str_15732.withValue(this._Str_5167));
+            k.push(_Str_15686.withValue(this._Str_6307));
+            k.push(_Str_13245.withValue(this.multiline));
+            k.push(_Str_14030.withValue(this.maxChars));
             return k;
         }
 

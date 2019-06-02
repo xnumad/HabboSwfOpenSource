@@ -4,6 +4,6 @@
 
     public interface IInputEventTracker 
     {
-        function _Str_14445(_arg_1:WindowEvent, _arg_2:IWindow):void;
+        function eventReceived(_arg_1:WindowEvent, _arg_2:IWindow):void;
     }
 }

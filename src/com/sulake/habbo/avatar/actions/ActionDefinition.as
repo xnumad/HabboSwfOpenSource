@@ -99,7 +99,7 @@
             return _local_3.getValue(_arg_2) as Array;
         }
 
-        public function _Str_1350(k:String):String
+        public function getParameterValue(k:String):String
         {
             if (k == "")
             {

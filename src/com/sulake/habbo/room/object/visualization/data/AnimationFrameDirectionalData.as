@@ -19,7 +19,7 @@
         {
             if (this._directionalOffsets != null)
             {
-                return this._directionalOffsets._Str_19089(k, super.getX(k));
+                return this._directionalOffsets.getOffsetX(k, super.getX(k));
             }
             return super.getX(k);
         }
@@ -28,7 +28,7 @@
         {
             if (this._directionalOffsets != null)
             {
-                return this._directionalOffsets._Str_21951(k, super.getY(k));
+                return this._directionalOffsets.getOffsetY(k, super.getY(k));
             }
             return super.getY(k);
         }

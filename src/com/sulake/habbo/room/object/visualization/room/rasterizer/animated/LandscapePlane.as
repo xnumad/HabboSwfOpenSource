@@ -5,13 +5,13 @@
     import flash.display.BitmapData;
     import com.sulake.room.utils.Vector3d;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class LandscapePlane extends Plane 
     {
-        public static const _Str_2531:uint = 0xFFFFFF;
-        public static const _Str_5433:Number = 45;
-        public static const _Str_5509:Number = 30;
+        public static const DEFAULT_COLOR:uint = 0xFFFFFF;
+        public static const HORIZONTAL_ANGLE_DEFAULT:Number = 45;
+        public static const VERTICAL_ANGLE_DEFAULT:Number = 30;
 
         private var _width:int = 0;
         private var _height:int = 0;
@@ -19,10 +19,10 @@
 
         override public function isStatic(k:int):Boolean
         {
-            var _local_2:PlaneVisualization = _Str_6009(k);
+            var _local_2:PlaneVisualization = getPlaneVisualization(k);
             if (_local_2 != null)
             {
-                return !(_local_2._Str_20530);
+                return !(_local_2.hasAnimationLayers);
             }
             return super.isStatic(k);
         }
@@ -44,14 +44,14 @@
             }
         }
 
-        public function render(k:BitmapData, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:IVector3D, _arg_6:Boolean, _arg_7:Number, _arg_8:Number, _arg_9:Number, _arg_10:Number, _arg_11:int):BitmapData
+        public function render(k:BitmapData, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:IVector3d, _arg_6:Boolean, _arg_7:Number, _arg_8:Number, _arg_9:Number, _arg_10:Number, _arg_11:int):BitmapData
         {
             var _local_16:int;
             var _local_17:int;
             var _local_18:int;
             var _local_19:int;
             var _local_20:BitmapData;
-            var _local_12:PlaneVisualization = _Str_6009(_arg_4);
+            var _local_12:PlaneVisualization = getPlaneVisualization(_arg_4);
             if (((_local_12 == null) || (_local_12.geometry == null)))
             {
                 return null;

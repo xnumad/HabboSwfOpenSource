@@ -131,7 +131,7 @@
             this._avatarNameBubbles = new Map();
             this._useProductBubbles = new Map();
             this._breedPetBubbles = new Map();
-            this.handler.roomEngine.events.addEventListener(RoomEngineObjectEvent.ADDED, this._Str_7011);
+            this.handler.roomEngine.events.addEventListener(RoomEngineObjectEvent.ADDED, this.onRoomObjectAdded);
             this.handler.roomEngine.events.addEventListener(RoomEngineObjectEvent.REMOVED, this._Str_4159);
             this.handler.container.inventory.events.addEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this._Str_10320);
             this.handler.widget = this;
@@ -162,7 +162,7 @@
             this._handlePetInfo = k;
         }
 
-        private function _Str_7011(k:RoomEngineObjectEvent):void
+        private function onRoomObjectAdded(k:RoomEngineObjectEvent):void
         {
             var _local_2:RoomUserData;
             if (k.category == RoomObjectCategoryEnum.CONST_100)
@@ -402,7 +402,7 @@
                 this._botSkillsWithCommandsMap.dispose();
                 this._botSkillsWithCommandsMap = null;
             }
-            this.handler.roomEngine.events.removeEventListener(RoomEngineObjectEvent.ADDED, this._Str_7011);
+            this.handler.roomEngine.events.removeEventListener(RoomEngineObjectEvent.ADDED, this.onRoomObjectAdded);
             this.handler.roomEngine.events.removeEventListener(RoomEngineObjectEvent.REMOVED, this._Str_4159);
             this.handler.container.inventory.events.removeEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this._Str_10320);
             this._view = null;
@@ -516,7 +516,7 @@
             {
                 case _Str_5393.RWAIE_AVATAR_INFO:
                     _local_2 = (k as _Str_5393);
-                    this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2._Str_2707 == this.handler.container.roomSession._Str_3871));
+                    this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2.roomIndex == this.handler.container.roomSession._Str_3871));
                     if (_local_2._Str_4330)
                     {
                         this._Str_13909 = true;
@@ -524,14 +524,14 @@
                     }
                     else
                     {
-                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2._Str_2908, _local_2._Str_2707, _local_2._Str_4330, null);
+                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2._Str_2908, _local_2.roomIndex, _local_2._Str_4330, null);
                     }
                     this._isInitialized = true;
                     break;
                 case _Str_3735.RWONE_TYPE:
                     if (_Str_3735(k).category == RoomObjectCategoryEnum.CONST_100)
                     {
-                        this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k)._Str_2908, _Str_3735(k)._Str_2707, false, null);
+                        this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k)._Str_2908, _Str_3735(k).roomIndex, false, null);
                     }
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED:
@@ -634,16 +634,16 @@
                     _local_5 = (k as _Str_4736);
                     _local_6 = new BreedPetsResultData();
                     _local_6.stuffId = _local_5._Str_3713.stuffId;
-                    _local_6._Str_2706 = _local_5._Str_3713._Str_2706;
-                    _local_6._Str_2716 = _local_5._Str_3713._Str_2716;
+                    _local_6.classId = _local_5._Str_3713.classId;
+                    _local_6.productCode = _local_5._Str_3713.productCode;
                     _local_6.userId = _local_5._Str_3713.userId;
                     _local_6.userName = _local_5._Str_3713.userName;
                     _local_6.rarityLevel = _local_5._Str_3713.rarityLevel;
                     _local_6._Str_4788 = _local_5._Str_3713._Str_4788;
                     _local_7 = new BreedPetsResultData();
                     _local_7.stuffId = _local_5.resultData2.stuffId;
-                    _local_7._Str_2706 = _local_5.resultData2._Str_2706;
-                    _local_7._Str_2716 = _local_5.resultData2._Str_2716;
+                    _local_7.classId = _local_5.resultData2.classId;
+                    _local_7.productCode = _local_5.resultData2.productCode;
                     _local_7.userId = _local_5.resultData2.userId;
                     _local_7.userName = _local_5.resultData2.userName;
                     _local_7.rarityLevel = _local_5.resultData2.rarityLevel;
@@ -652,8 +652,8 @@
                     break;
                 case _Str_3919.RWPPBE_PET_BREEDING_:
                     _local_8 = (k as _Str_3919);
-                    _local_9 = this._Str_12418(_local_8._Str_7440);
-                    _local_10 = this._Str_12418(_local_8._Str_7663);
+                    _local_9 = this._Str_12418(_local_8.ownPetId);
+                    _local_10 = this._Str_12418(_local_8.otherPetId);
                     switch (_local_8.state)
                     {
                         case _Str_3919._Str_18166:
@@ -678,7 +678,7 @@
                     break;
                 case _Str_4624.RWPPBE_CONFIRM_PET_BREEDING_:
                     _local_11 = (k as _Str_4624);
-                    this._Str_22316(_local_11.pet1, _local_11.pet2, _local_11._Str_12369, _local_11._Str_10346, _local_11._Str_16867);
+                    this._Str_22316(_local_11.pet1, _local_11.pet2, _local_11.nestId, _local_11.rarityCategories, _local_11.resultPetTypeId);
                     break;
                 case _Str_3962.RWPPBE_CONFIRM_PET_BREEDING_RESULT:
                     _local_12 = (k as _Str_3962);
@@ -741,21 +741,21 @@
                     if (this._rentableBotInfoData)
                     {
                         this._rentableBotInfoData._Str_19891(_local_18._Str_10833);
-                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData._Str_2707, this._rentableBotInfoData, true);
+                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, true);
                     }
                     break;
                 case RoomWidgetRequestBotForceOpenContextMenuEvent.OPEN:
                     _local_19 = (k as RoomWidgetRequestBotForceOpenContextMenuEvent);
                     if (this._rentableBotInfoData)
                     {
-                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData._Str_2707, this._rentableBotInfoData, false, true);
+                        this._Str_16991(this._rentableBotInfoData.id, this._rentableBotInfoData.name, this._rentableBotInfoData.roomIndex, this._rentableBotInfoData, false, true);
                     }
                     else
                     {
                         _local_24 = this.handler.container.roomEngine.activeRoomId;
                         _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager._Str_6958(_local_19._Str_5455, 4);
                         messageListener.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _local_25._Str_2713, RoomObjectCategoryEnum.CONST_100));
-                        this.handler.container.roomEngine._Str_6973(_local_24, _local_25._Str_2713);
+                        this.handler.container.roomEngine.selectAvatar(_local_24, _local_25._Str_2713);
                     }
                     break;
                 case RoomWidgetUpdateInfostandUserEvent.BOT:
@@ -767,7 +767,7 @@
                     {
                         _local_26 = (k as RoomWidgetPetInfostandUpdateEvent);
                         this._petInfoData.populate(_local_26);
-                        this._Str_24751(_local_26.id, _local_26.name, _local_26._Str_2707, this._petInfoData);
+                        this._Str_24751(_local_26.id, _local_26.name, _local_26.roomIndex, this._petInfoData);
                     }
                     break;
                 case _Str_7783.RWUDUE_USER_DATA_UPDATED:
@@ -778,7 +778,7 @@
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.USER_REMOVED:
                     _local_21 = (k as RoomWidgetRoomObjectUpdateEvent);
-                    if (((this._view) && (this._view._Str_2707 == _local_21.id)))
+                    if (((this._view) && (this._view.roomIndex == _local_21.id)))
                     {
                         this.removeView(this._view, false);
                     }
@@ -881,7 +881,7 @@
             return AvatarAction.POSTURE_STAND;
         }
 
-        public function get _Str_10289():Boolean
+        public function get canStandUp():Boolean
         {
             var _local_2:IRoomObjectModel;
             var k:IRoomObject = this._Str_13836();
@@ -930,7 +930,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if ((((((((_arg_6) || (((!(this._view == null)) && (this._view.userId == k)) && (!(_arg_5)))) || (this._view == null)) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view._Str_2707 == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.RENTABLE_BOT))))
+            if ((((((((_arg_6) || (((!(this._view == null)) && (this._view.userId == k)) && (!(_arg_5)))) || (this._view == null)) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.RENTABLE_BOT))))
             {
                 if (this._view)
                 {
@@ -972,7 +972,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if ((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view._Str_2707 == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.PET))))
+            if ((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.PET))))
             {
                 if (this._view)
                 {
@@ -1021,7 +1021,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if (((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view._Str_2707 == _arg_4))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.HABBO))) || (_arg_5)))
+            if (((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_4))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.HABBO))) || (_arg_5)))
             {
                 if (this._view)
                 {
@@ -1076,7 +1076,7 @@
                     }
                     else
                     {
-                        if (!this.handler.roomEngine._Str_6249)
+                        if (!this.handler.roomEngine.getIsSelectedObjectInValidPosition)
                         {
                             if (!this._cachedNameView)
                             {
@@ -1226,7 +1226,7 @@
             if (this._breedPetBubbles[k._Str_2394.toString()] == null)
             {
                 _local_3 = new BreedPetView(this);
-                BreedPetView.setup(_local_3, k._Str_2394, k.name, -1, RoomObjectTypeEnum.PET, _arg_2, k._Str_2934);
+                BreedPetView.setup(_local_3, k._Str_2394, k.name, -1, RoomObjectTypeEnum.PET, _arg_2, k.canBreed);
                 this._breedPetBubbles[k._Str_2394.toString()] = _local_3;
                 this._Str_4556();
             }
@@ -1262,7 +1262,7 @@
             {
                 return;
             }
-            if ((((((this._view) || (this._avatarNameBubbles.length > 0)) || (this._useProductBubbles.length > 0)) || (this._breedPetBubbles.length > 0)) || ((this._decoModeView) && (this._decoModeView._Str_2719))))
+            if ((((((this._view) || (this._avatarNameBubbles.length > 0)) || (this._useProductBubbles.length > 0)) || (this._breedPetBubbles.length > 0)) || ((this._decoModeView) && (this._decoModeView.isVisible))))
             {
                 this._component.registerUpdateReceiver(this, 10);
             }
@@ -1287,7 +1287,7 @@
                 }
                 this._view.update(_local_2.rectangle, _local_2._Str_9337, k);
             }
-            if (((this._decoModeView) && (this._decoModeView._Str_2719())))
+            if (((this._decoModeView) && (this._decoModeView.isVisible())))
             {
                 _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, this._decoModeView.userId, this._decoModeView._Str_2908)) as _Str_3174);
                 if (!_local_2)
@@ -1378,7 +1378,7 @@
             return false;
         }
 
-        public function get _Str_2886():Boolean
+        public function get isRiding():Boolean
         {
             if (this._petInfoData != null)
             {

@@ -8,7 +8,7 @@
     public class ExtraInfoListItem implements IDisposable 
     {
         public static const ALIGN_TOP:int = 0;
-        public static const _Str_3606:int = 1;
+        public static const ALIGN_BOTTOM:int = 1;
         public static const ALIGN_OVERLAY:int = 2;
 
         private var _id:int;

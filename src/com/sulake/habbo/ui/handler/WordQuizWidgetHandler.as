@@ -102,11 +102,11 @@
                     }
                     if (_local_3.value == "0")
                     {
-                        this._container.roomEngine._Str_9104(this._container.roomSession.roomId, _local_4._Str_2713, AvatarAction.getGestureId(AvatarAction.GESTURE_SAD));
+                        this._container.roomEngine.updateObjectUserGesture(this._container.roomSession.roomId, _local_4._Str_2713, AvatarAction.getGestureId(AvatarAction.GESTURE_SAD));
                     }
                     else
                     {
-                        this._container.roomEngine._Str_9104(this._container.roomSession.roomId, _local_4._Str_2713, AvatarAction.getGestureId(AvatarAction.GESTURE_SMILE));
+                        this._container.roomEngine.updateObjectUserGesture(this._container.roomSession.roomId, _local_4._Str_2713, AvatarAction.getGestureId(AvatarAction.GESTURE_SMILE));
                     }
                     break;
                 case RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED:

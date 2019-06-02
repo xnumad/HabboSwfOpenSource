@@ -4,6 +4,6 @@
 
     public interface IProductDataListener extends IDisposable 
     {
-        function _Str_6674():void;
+        function productDataReady():void;
     }
 }

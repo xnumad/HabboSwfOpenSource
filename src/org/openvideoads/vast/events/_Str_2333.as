@@ -45,14 +45,14 @@
         public static const _Str_5708:String = "ova-vpaid-ad-interaction";
         public static const _Str_12726:String = "ova-vpaid-ad-log";
 
-        protected var _Str_594:* = null;
+        protected var _data:* = null;
         protected var _Str_3267:AdSlot = null;
 
         public function _Str_2333(k:String, _arg_2:AdSlot, _arg_3:*=null, _arg_4:Boolean=false, _arg_5:Boolean=false)
         {
             super(k, _arg_4, _arg_5);
             this._Str_3267 = _arg_2;
-            this._Str_594 = _arg_3;
+            this._data = _arg_3;
         }
 
         public function get adSlot():AdSlot
@@ -62,12 +62,12 @@
 
         public function _Str_13568():Boolean
         {
-            return !(this._Str_594 == null);
+            return !(this._data == null);
         }
 
         public function get data():*
         {
-            return this._Str_594;
+            return this._data;
         }
 
         override public function clone():Event

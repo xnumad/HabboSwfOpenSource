@@ -29,7 +29,7 @@
             super("", new Rectangle(k, _arg_2, 44, 46), false, _arg_3, _arg_4);
         }
 
-        public function _Str_1685(k:Number):void
+        public function setColor(k:Number):void
         {
             this._color = k;
             this._mainSprite = new Sprite();
@@ -45,7 +45,7 @@
             super.onAddedToStage(k);
             if (this._color > 0)
             {
-                this._Str_1685(this._color);
+                this.setColor(this._color);
             }
         }
 

@@ -88,11 +88,11 @@
             var _local_2:String = k;
             var _local_3:URLRequest = new URLRequest(k);
             var _local_4:AssetLoaderStruct = assets.loadAssetFromFile(_local_2, _local_3, "text/plain");
-            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_8960);
+            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onLocalizationReady);
             _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onLocalizationFailed);
         }
 
-        private function _Str_8960(k:AssetLoaderEvent):void
+        private function onLocalizationReady(k:AssetLoaderEvent):void
         {
             var _local_3:String;
             var _local_4:IAsset;
@@ -100,7 +100,7 @@
             if (_local_2 != null)
             {
                 _local_3 = _local_2.assetName;
-                this._Str_23458((_local_2.assetLoader.content as String));
+                this.parseLocalizationData((_local_2.assetLoader.content as String));
                 this.events.dispatchEvent(new Event(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED));
                 _local_4 = assets.getAssetByName(_local_3);
                 if (_local_4)
@@ -115,7 +115,7 @@
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             var _local_3:URLRequest = new URLRequest(_local_2.assetLoader.url);
             var _local_4:AssetLoaderStruct = assets.loadAssetFromFile(_local_2.assetLoader.url, _local_3, "text/plain");
-            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_8960);
+            _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onLocalizationReady);
             _local_4.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_23319);
         }
 
@@ -145,7 +145,7 @@
             return _local_3.value;
         }
 
-        private function _Str_25940(k:String, _arg_2:String=""):String
+        private function getRawValue(k:String, _arg_2:String=""):String
         {
             var _local_3:Localization = (this._localizations[k] as Localization);
             if (_local_3 == null)
@@ -170,7 +170,7 @@
             }
         }
 
-        private function _Str_25800():void
+        private function updateAllListeners():void
         {
             var k:Localization;
             for each (k in this._localizations)
@@ -241,7 +241,7 @@
             Logger.log(k);
         }
 
-        protected function _Str_23458(k:String):void
+        protected function parseLocalizationData(k:String):void
         {
             var _local_6:String;
             var _local_7:Array;
@@ -280,7 +280,7 @@
                     }
                 }
             }
-            this._Str_25800();
+            this.updateAllListeners();
         }
     }
 }

@@ -29,7 +29,7 @@
             return k;
         }
 
-        public function _Str_25433(k:int):void
+        public function addInvitedFriend(k:int):void
         {
             this._invitedAvatarIds.push(k);
         }

@@ -83,10 +83,10 @@
             {
                 return k;
             }
-            k.push(_Str_13010._Str_2551(this._style));
-            k.push(_Str_19001._Str_2551(this.size));
-            k.push(_Str_13575._Str_2551(this._position));
-            k.push(_Str_12527._Str_2551(this._mode));
+            k.push(_Str_13010.withValue(this._style));
+            k.push(_Str_19001.withValue(this.size));
+            k.push(_Str_13575.withValue(this._position));
+            k.push(_Str_12527.withValue(this._mode));
             return k;
         }
 
@@ -140,7 +140,7 @@
             {
                 while (k < this.size)
                 {
-                    this._root._Str_2915((this.size - 1));
+                    this._root.removeListItemAt((this.size - 1));
                 }
                 while (k > this.size)
                 {

@@ -86,7 +86,7 @@
             var k:int;
             while (k < this._list.numListItems)
             {
-                this._list.getListItemAt(k).width = (this._list._Str_6920.width - 2);
+                this._list.getListItemAt(k).width = (this._list.scrollableWindow.width - 2);
                 k++;
             }
         }

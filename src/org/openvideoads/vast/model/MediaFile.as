@@ -6,14 +6,14 @@
     public class MediaFile extends Debuggable 
     {
         protected var _Str_577:AdNetworkResource = null;
-        protected var _Str_576:String;
+        protected var _id:String;
         protected var _Str_18599:String;
         protected var _Str_6705:String;
-        protected var _Str_842:Boolean = false;
+        protected var _scale:Boolean = false;
         protected var _Str_6419:Boolean = true;
         protected var _Str_2230:String;
         protected var _Str_15448:int = -1;
-        protected var _Str_1720:String;
+        protected var _width:String;
         protected var _height:String;
         protected var _Str_4949:String = null;
         protected var _Str_5000:String = null;
@@ -26,12 +26,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set _Str_19024(k:TrackedVideoAd):void
@@ -140,13 +140,13 @@
         {
             if (k != null)
             {
-                this._Str_842 = StringUtils._Str_2810(k);
+                this._scale = StringUtils._Str_2810(k);
             }
         }
 
         public function get scale():Boolean
         {
-            return this._Str_842;
+            return this._scale;
         }
 
         public function set maintainAspectRatio(k:*):void
@@ -231,12 +231,12 @@
 
         public function set width(k:String):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():String
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:String):void
@@ -275,15 +275,15 @@
         {
             var k:Object = new Object();
             k = {
-                "id":this._Str_576,
+                "id":this._id,
                 "uid":_Str_2995,
                 "bandwidth":this._Str_18599,
                 "delivery":this._Str_6705,
-                "scale":this._Str_842,
+                "scale":this._scale,
                 "maintainAspectRatio":this._Str_6419,
                 "mimeType":this._Str_2230,
                 "bitRate":this._Str_15448,
-                "width":this._Str_1720,
+                "width":this._width,
                 "height":this._height,
                 "apiFramework":this._Str_4949,
                 "urlId":((this._Str_577 != null) ? this._Str_577.id : null),

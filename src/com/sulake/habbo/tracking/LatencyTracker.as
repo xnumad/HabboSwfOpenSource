@@ -64,11 +64,11 @@
             }
             if ((_arg_2 - this._lastTestTime) > this._testInterval)
             {
-                this._Str_22291();
+                this.testLatency();
             }
         }
 
-        private function _Str_22291():void
+        private function testLatency():void
         {
             this._lastTestTime = getTimer();
             this._timeStampMap.add(this._testId, this._lastTestTime);
@@ -90,8 +90,8 @@
                 return;
             }
             var _local_2:_Str_7576 = k._Str_2273();
-            var _local_3:int = this._timeStampMap.getValue(_local_2._Str_2951);
-            this._timeStampMap.remove(_local_2._Str_2951);
+            var _local_3:int = this._timeStampMap.getValue(_local_2.requestId);
+            this._timeStampMap.remove(_local_2.requestId);
             var _local_4:int = (getTimer() - _local_3);
             this._latencyValues.push(_local_4);
             if (((this._latencyValues.length == this._reportIndex) && (this._reportIndex > 0)))

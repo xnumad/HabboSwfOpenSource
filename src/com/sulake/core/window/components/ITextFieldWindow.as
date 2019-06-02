@@ -15,7 +15,7 @@
         function get selectionEndIndex():int;
         function get restrict():String;
         function set restrict(_arg_1:String):void;
-        function _Str_22496():void;
-        function _Str_24020(_arg_1:int, _arg_2:int):String;
+        function requestChangeEvent():void;
+        function getWordAt(_arg_1:int, _arg_2:int):String;
     }
 }

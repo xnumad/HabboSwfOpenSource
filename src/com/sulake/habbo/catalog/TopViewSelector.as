@@ -53,7 +53,7 @@
 
         public function _Str_12925(k:int):void
         {
-            this._tabContext.selector._Str_2520(this._tabContext._Str_3363(k));
+            this._tabContext.selector.setSelected(this._tabContext._Str_3363(k));
             this._Str_21480(this._tabContext._Str_3363(k));
         }
 
@@ -76,7 +76,7 @@
             {
                 return;
             }
-            var _local_2:ICatalogNode = this._catalog._Str_10014(k.name);
+            var _local_2:ICatalogNode = this._catalog.getNodeByName(k.name);
             if (_local_2 != null)
             {
                 this._catalog._Str_20996(_local_2);

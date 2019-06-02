@@ -15,7 +15,7 @@
 
     public class HabboWebLogin extends EventDispatcherWrapper implements IHabboWebLogin 
     {
-        private static const _Str_21840:URLRequestHeader = new URLRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0.1 FirePHP/0.7.1");
+        private static const userAgentHeader:URLRequestHeader = new URLRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:14.0) Gecko/20100101 Firefox/14.0.1 FirePHP/0.7.1");
 
         private var _loader:URLLoader;
         private var _name:String;
@@ -36,22 +36,22 @@
 
         public function init():void
         {
-            this._Str_24445();
+            this.requestCredentials();
         }
 
-        private function _Str_24445():void
+        private function requestCredentials():void
         {
             var k:String = ((("credentials.username=" + this._name) + "&credentials.password=") + this._password);
             var _local_2:URLRequest = new URLRequest(this._loginURL);
             _local_2.data = new URLVariables(k);
             _local_2.method = URLRequestMethod.POST;
             this._loader = new URLLoader();
-            this._loader.addEventListener(Event.COMPLETE, this._Str_19337);
-            this._Str_16389(this._loader);
+            this._loader.addEventListener(Event.COMPLETE, this.credentialsComplete);
+            this.configureListeners(this._loader);
             this._loader.load(_local_2);
         }
 
-        private function _Str_19337(k:Event=null):void
+        private function credentialsComplete(k:Event=null):void
         {
             var _local_4:String;
             var _local_5:URLRequest;
@@ -64,11 +64,11 @@
                 this._loader.load(_local_5);
                 return;
             }
-            this._loader.removeEventListener(Event.COMPLETE, this._Str_19337);
-            this._Str_5679(this._loader);
+            this._loader.removeEventListener(Event.COMPLETE, this.credentialsComplete);
+            this.removeListeners(this._loader);
             if (_local_3.indexOf("Redirecting") > -1)
             {
-                this._Str_25394();
+                this.requestSecurityCheck();
             }
             else
             {
@@ -104,20 +104,20 @@
             }
         }
 
-        private function _Str_25394():void
+        private function requestSecurityCheck():void
         {
             var k:URLRequest = new URLRequest(this._securityCheckURL);
             this._loader = new URLLoader();
-            this._loader.addEventListener(Event.COMPLETE, this._Str_21739);
-            this._Str_16389(this._loader);
+            this._loader.addEventListener(Event.COMPLETE, this.securityCheckComplete);
+            this.configureListeners(this._loader);
             this._loader.load(k);
         }
 
-        private function _Str_21739(k:Event=null):void
+        private function securityCheckComplete(k:Event=null):void
         {
             var _local_2:URLLoader = URLLoader(k.target);
-            this._loader.removeEventListener(Event.COMPLETE, this._Str_21739);
-            this._Str_5679(this._loader);
+            this._loader.removeEventListener(Event.COMPLETE, this.securityCheckComplete);
+            this.removeListeners(this._loader);
             var _local_3:String = _local_2.data;
             if (_local_3.indexOf("Redirecting") > -1)
             {
@@ -125,23 +125,23 @@
             }
         }
 
-        public function _Str_20369():void
+        public function requestReAuthenticate():void
         {
             var k:String = ("page=%2Fclient&credentials.password=" + this._password);
             var _local_2:URLRequest = new URLRequest(this._reauthenticateURL);
             _local_2.data = new URLVariables(k);
             _local_2.method = URLRequestMethod.POST;
             this._loader = new URLLoader();
-            this._loader.addEventListener(Event.COMPLETE, this._Str_20987);
-            this._Str_16389(this._loader);
+            this._loader.addEventListener(Event.COMPLETE, this.reauthenticateComplete);
+            this.configureListeners(this._loader);
             this._loader.load(_local_2);
         }
 
-        private function _Str_20987(k:Event=null):void
+        private function reauthenticateComplete(k:Event=null):void
         {
             var _local_2:URLLoader = URLLoader(k.target);
-            this._loader.removeEventListener(Event.COMPLETE, this._Str_20987);
-            this._Str_5679(this._loader);
+            this._loader.removeEventListener(Event.COMPLETE, this.reauthenticateComplete);
+            this.removeListeners(this._loader);
             var _local_3:String = _local_2.data;
             if (_local_3.indexOf("Redirecting") > -1)
             {
@@ -149,29 +149,29 @@
             }
         }
 
-        private function _Str_16389(k:IEventDispatcher):void
+        private function configureListeners(k:IEventDispatcher):void
         {
-            k.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_19695);
-            k.addEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_19037);
-            k.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9598);
+            k.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.securityErrorHandler);
+            k.addEventListener(HTTPStatusEvent.HTTP_STATUS, this.httpStatusHandler);
+            k.addEventListener(IOErrorEvent.IO_ERROR, this.ioErrorHandler);
         }
 
-        private function _Str_5679(k:IEventDispatcher):void
+        private function removeListeners(k:IEventDispatcher):void
         {
-            k.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_19695);
-            k.removeEventListener(HTTPStatusEvent.HTTP_STATUS, this._Str_19037);
-            k.removeEventListener(IOErrorEvent.IO_ERROR, this._Str_9598);
+            k.removeEventListener(SecurityErrorEvent.SECURITY_ERROR, this.securityErrorHandler);
+            k.removeEventListener(HTTPStatusEvent.HTTP_STATUS, this.httpStatusHandler);
+            k.removeEventListener(IOErrorEvent.IO_ERROR, this.ioErrorHandler);
         }
 
-        private function _Str_9598(k:IOErrorEvent):void
-        {
-        }
-
-        private function _Str_19037(k:HTTPStatusEvent):void
+        private function ioErrorHandler(k:IOErrorEvent):void
         {
         }
 
-        private function _Str_19695(k:SecurityErrorEvent):void
+        private function httpStatusHandler(k:HTTPStatusEvent):void
+        {
+        }
+
+        private function securityErrorHandler(k:SecurityErrorEvent):void
         {
         }
     }

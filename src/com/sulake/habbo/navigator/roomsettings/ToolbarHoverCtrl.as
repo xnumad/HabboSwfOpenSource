@@ -22,7 +22,7 @@
         override protected function onBgMouseClick(k:WindowEvent):void
         {
             this._Str_6933 = k.target.parent.id;
-            this._Str_17449((k.target._Str_9450("moderation_banned_users") as IItemListWindow));
+            this._Str_17449((k.target.findParentByName("moderation_banned_users") as IItemListWindow));
         }
 
         override protected function getBgColor(k:int, _arg_2:Boolean):uint

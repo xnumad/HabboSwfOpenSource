@@ -245,21 +245,21 @@
             _local_4 = (this._context.create(unescapedXml, null, typeCode, windowStyle, _local_16, _local_17, null, ((window is IIterable) ? null : (window)), _local_22, this.parseProperties(xml.child(VARIABLES)[0]), dynamicStyle, _local_24) as WindowController);
             if (this.hasAttribute(xml, WIDTH_MIN))
             {
-                _local_4._Str_2648.minWidth = int(this.parseAttribute(xml, WIDTH_MIN, variableList, _local_4._Str_2648.minWidth));
+                _local_4.limits.minWidth = int(this.parseAttribute(xml, WIDTH_MIN, variableList, _local_4.limits.minWidth));
             }
             if (this.hasAttribute(xml, WIDTH_MAX))
             {
-                _local_4._Str_2648.maxWidth = int(this.parseAttribute(xml, WIDTH_MAX, variableList, _local_4._Str_2648.maxWidth));
+                _local_4.limits.maxWidth = int(this.parseAttribute(xml, WIDTH_MAX, variableList, _local_4.limits.maxWidth));
             }
             if (this.hasAttribute(xml, HEIGHT_MIN))
             {
-                _local_4._Str_2648.minHeight = int(this.parseAttribute(xml, HEIGHT_MIN, variableList, _local_4._Str_2648.minHeight));
+                _local_4.limits.minHeight = int(this.parseAttribute(xml, HEIGHT_MIN, variableList, _local_4.limits.minHeight));
             }
             if (this.hasAttribute(xml, HEIGHT_MAX))
             {
-                _local_4._Str_2648.maxHeight = int(this.parseAttribute(xml, HEIGHT_MAX, variableList, _local_4._Str_2648.maxHeight));
+                _local_4.limits.maxHeight = int(this.parseAttribute(xml, HEIGHT_MAX, variableList, _local_4.limits.maxHeight));
             }
-            _local_4._Str_2648.limit();
+            _local_4.limits.limit();
             _local_12 = (this.parseAttribute(xml, BACKGROUND, variableList, _local_4.background.toString()) == TRUE);
             _local_11 = Number(this.parseAttribute(xml, BLEND, variableList, _local_4.blend.toString()));
             _local_9 = (this.parseAttribute(xml, CLIPPING, variableList, _local_4.clipping.toString()) == TRUE);
@@ -423,7 +423,7 @@
             var _local_3:String = this._typeCodeToStringTable[k.type];
             var _local_4:uint = k.param;
             var _local_5:uint = k.style;
-            var _local_6:IRectLimiter = k._Str_2648;
+            var _local_6:IRectLimiter = k.limits;
             var _local_7:WindowController = (k as WindowController);
             _local_2 = (_local_2 + ((((((((((((((((((((((((((((((((((("<" + _local_3) + ' x="') + k.x) + '"') + ' y="') + k.y) + '"') + ' width="') + k.width) + '"') + ' height="') + k.height) + '"') + ' params="') + k.param) + '"') + ' style="') + k.style) + '"') + ((k.dynamicStyle != EMPTY) ? ((' dynamic_style="' + k.dynamicStyle) + '"') : EMPTY)) + ((k.name != EMPTY) ? ((' name="' + escape(k.name)) + '"') : EMPTY)) + ((k.caption != EMPTY) ? ((' caption="' + escape(k.caption)) + '"') : EMPTY)) + ((k.id != 0) ? ((' id="' + k.id.toString()) + '"') : EMPTY)) + ((k.color != 0xFFFFFF) ? ((((' color="' + "0x") + k.alpha.toString(16)) + k.color.toString(16)) + '"') : EMPTY)) + ((k.blend != 1) ? ((' blend="' + k.blend.toString()) + '"') : EMPTY)) + ((k.visible != true) ? ((' visible="' + k.visible.toString()) + '"') : EMPTY)) + ((k.clipping != true) ? ((' clipping="' + k.clipping.toString()) + '"') : EMPTY)) + ((k.background != false) ? ((' background="' + k.background.toString()) + '"') : EMPTY)) + ((k.mouseThreshold != 10) ? ((' treshold="' + k.mouseThreshold.toString()) + '"') : EMPTY)) + ((k.tags.length > 0) ? ((' tags="' + escape(k.tags.toString())) + '"') : EMPTY)) + ((_local_6.minWidth > int.MIN_VALUE) ? ((' width_min="' + _local_6.minWidth) + '"') : EMPTY)) + ((_local_6.maxWidth < int.MAX_VALUE) ? ((' width_max="' + _local_6.maxWidth) + '"') : EMPTY)) + ((_local_6.minHeight > int.MIN_VALUE) ? ((' height_min="' + _local_6.minHeight) + '"') : EMPTY)) + ((_local_6.maxHeight < int.MAX_VALUE) ? ((' height_max="' + _local_6.maxHeight) + '"') : EMPTY)) + ">\r"));
             if (((k.filters) && (k.filters.length > 0)))

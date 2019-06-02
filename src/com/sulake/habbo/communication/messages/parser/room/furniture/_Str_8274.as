@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function get _Str_6698():int
+        public function get expiryTime():int
         {
             return this._Str_6673;
         }

@@ -162,10 +162,10 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.SPACING, this._spacing));
-            k.push(_Str_2340(PropertyKeys.VERTICAL, this._vertical));
-            k.push(_Str_2340(PropertyKeys.PADDING_HORIZONTAL, this._horizontalPadding));
-            k.push(_Str_2340(PropertyKeys.PADDING_VERTICAL, this._verticalPadding));
+            k.push(createProperty(PropertyKeys.SPACING, this._spacing));
+            k.push(createProperty(PropertyKeys.VERTICAL, this._vertical));
+            k.push(createProperty(PropertyKeys.PADDING_HORIZONTAL, this._horizontalPadding));
+            k.push(createProperty(PropertyKeys.PADDING_VERTICAL, this._verticalPadding));
             return k;
         }
 

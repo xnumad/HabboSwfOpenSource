@@ -22,7 +22,7 @@
             {
                 this._copy = this._canvas.clone();
             }
-            this._Str_21427(0);
+            this.setExperience(0);
         }
 
         public function dispose():void
@@ -57,7 +57,7 @@
             return this._canvas;
         }
 
-        public function _Str_21427(k:int):void
+        public function setExperience(k:int):void
         {
             if (((this._amount == k) || (this._canvas == null)))
             {

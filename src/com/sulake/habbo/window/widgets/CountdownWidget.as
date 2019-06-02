@@ -112,9 +112,9 @@
             {
                 return k;
             }
-            k.push(_Str_13513._Str_2551(this._running));
-            k.push(_Str_5707._Str_2551(this._Str_4056));
-            k.push(_Str_13149._Str_2551(this.seconds));
+            k.push(_Str_13513.withValue(this._running));
+            k.push(_Str_5707.withValue(this._Str_4056));
+            k.push(_Str_13149.withValue(this.seconds));
             return k;
         }
 
@@ -211,7 +211,7 @@
             k = Math.max(2, Math.min(4, k));
             if (k != this._Str_4056)
             {
-                this._root._Str_2659();
+                this._root.removeListItems();
                 _local_2 = 0;
                 while (_local_2 < k)
                 {

@@ -27,22 +27,22 @@
             return this._petId;
         }
 
-        public function get _Str_2934():Boolean
+        public function get canBreed():Boolean
         {
             return this._canBreed;
         }
 
-        public function get _Str_3068():Boolean
+        public function get canHarvest():Boolean
         {
             return this._canHarvest;
         }
 
-        public function get _Str_2898():Boolean
+        public function get canRevive():Boolean
         {
             return this._canRevive;
         }
 
-        public function get _Str_2921():Boolean
+        public function get hasBreedingPermission():Boolean
         {
             return this._hasBreedingPermission;
         }

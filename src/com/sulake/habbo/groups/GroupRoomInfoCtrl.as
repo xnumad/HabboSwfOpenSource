@@ -55,10 +55,10 @@
             {
                 return;
             }
-            if (k._Str_3094 > 0)
+            if (k.habboGroupId > 0)
             {
-                this._expectedGroupId = k._Str_3094;
-                this._manager.send(new _Str_2863(k._Str_3094, false));
+                this._expectedGroupId = k.habboGroupId;
+                this._manager.send(new _Str_2863(k.habboGroupId, false));
             }
             else
             {

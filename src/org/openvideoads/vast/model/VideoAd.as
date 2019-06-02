@@ -19,7 +19,7 @@
         public static const _Str_16569:String = "linear-vpaid";
         public static const _Str_16642:String = "non-linear-vpaid";
 
-        protected var _Str_576:String;
+        protected var _id:String;
         protected var _Str_9985:String = null;
         protected var _Str_7451:String = null;
         protected var _Str_14340:String;
@@ -104,12 +104,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function setPreferredSelectionCriteria(k:Object):void
@@ -1649,7 +1649,7 @@
         {
             var k:Object = new Object();
             k = {
-                "id":this._Str_576,
+                "id":this._id,
                 "uid":_Str_2995,
                 "adId":this._Str_7451,
                 "inlineAdId":this._Str_9985,

@@ -14,7 +14,7 @@
 
     public class BitmapDataController extends WindowController implements IBitmapDataContainer 
     {
-        protected var _Str_1049:BitmapData;
+        protected var _bitmapData:BitmapData;
         protected var _Str_5534:uint;
         protected var _Str_10541:Boolean;
         protected var _Str_12317:Boolean;
@@ -43,13 +43,13 @@
 
         override public function dispose():void
         {
-            this._Str_1049 = null;
+            this._bitmapData = null;
             super.dispose();
         }
 
         public function get bitmapData():BitmapData
         {
-            return this._Str_1049;
+            return this._bitmapData;
         }
 
         public function get pivotPoint():uint
@@ -168,26 +168,26 @@
 
         protected function _Str_8020():void
         {
-            if (((this._Str_13795) && (!(this._Str_1049 == null))))
+            if (((this._Str_13795) && (!(this._bitmapData == null))))
             {
-                width = Math.abs((this._Str_1049.width * this._Str_8672));
-                height = Math.abs((this._Str_1049.height * this._Str_8540));
+                width = Math.abs((this._bitmapData.width * this._Str_8672));
+                height = Math.abs((this._bitmapData.height * this._Str_8540));
             }
         }
 
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.PIVOT_POINT, PivotPoint.PIVOT_NAMES[this._Str_5534]));
-            k.push(_Str_2340(PropertyKeys.STRETCHED_X, this._Str_10541));
-            k.push(_Str_2340(PropertyKeys.STRETCHED_Y, this._Str_12317));
-            k.push(_Str_2340(PropertyKeys.WRAP_X, this._Str_10479));
-            k.push(_Str_2340(PropertyKeys.WRAP_Y, this._Str_12136));
-            k.push(_Str_2340(PropertyKeys.ZOOM_X, this._Str_8672));
-            k.push(_Str_2340(PropertyKeys.ZOOM_Y, this._Str_8540));
-            k.push(_Str_2340(PropertyKeys.GREYSCALE, this._Str_14793));
-            k.push(_Str_2340(PropertyKeys.ETCHING_COLOR, this._Str_3778));
-            k.push(_Str_2340(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._Str_13795));
+            k.push(createProperty(PropertyKeys.PIVOT_POINT, PivotPoint.PIVOT_NAMES[this._Str_5534]));
+            k.push(createProperty(PropertyKeys.STRETCHED_X, this._Str_10541));
+            k.push(createProperty(PropertyKeys.STRETCHED_Y, this._Str_12317));
+            k.push(createProperty(PropertyKeys.WRAP_X, this._Str_10479));
+            k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
+            k.push(createProperty(PropertyKeys.ZOOM_X, this._Str_8672));
+            k.push(createProperty(PropertyKeys.ZOOM_Y, this._Str_8540));
+            k.push(createProperty(PropertyKeys.GREYSCALE, this._Str_14793));
+            k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._Str_3778));
+            k.push(createProperty(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._Str_13795));
             return k;
         }
 

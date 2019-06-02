@@ -19,7 +19,7 @@
             return this._itemType;
         }
 
-        public function get _Str_2706():int
+        public function get classId():int
         {
             return this._classId;
         }

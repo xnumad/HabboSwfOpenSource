@@ -102,9 +102,9 @@
             {
                 return k;
             }
-            k.push(_Str_3804._Str_2551(this._figure));
-            k.push(_Str_3527._Str_2551(this._scale));
-            k.push(_Str_4346._Str_2551(_Str_3257[this._direction]));
+            k.push(_Str_3804.withValue(this._figure));
+            k.push(_Str_3527.withValue(this._scale));
+            k.push(_Str_4346.withValue(_Str_3257[this._direction]));
             return k;
         }
 
@@ -189,7 +189,7 @@
             if (this._windowManager.roomEngine != null)
             {
                 _local_3 = "std";
-                _local_4 = this._windowManager.roomEngine._Str_2641(k.typeId, k.paletteId, k.color, new Vector3d((this._direction * 45)), this.scale, this, true, 0, k._Str_3542, _local_3);
+                _local_4 = this._windowManager.roomEngine.getPetImage(k.typeId, k.paletteId, k.color, new Vector3d((this._direction * 45)), this.scale, this, true, 0, k._Str_3542, _local_3);
                 if (_local_4 != null)
                 {
                     _local_5 = _local_4.id;

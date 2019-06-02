@@ -251,7 +251,7 @@
             }
             if (this._Str_8318)
             {
-                this._Str_16703(_local_5, 0.2);
+                this.setAlpha(_local_5, 0.2);
             }
             if (this._Str_2779 == null)
             {
@@ -423,7 +423,7 @@
             return k;
         }
 
-        private function _Str_16703(k:BitmapData, _arg_2:Number):BitmapData
+        private function setAlpha(k:BitmapData, _arg_2:Number):BitmapData
         {
             var _local_3:Rectangle = new Rectangle(0, 0, k.width, k.height);
             var _local_4:ColorTransform = new ColorTransform();

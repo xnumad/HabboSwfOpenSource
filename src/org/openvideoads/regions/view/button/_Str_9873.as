@@ -15,7 +15,7 @@
             if (_arg_3 != null)
             {
                 _local_4 = new Loader();
-                _local_5 = new URLRequest(_arg_3._Str_6349);
+                _local_5 = new URLRequest(_arg_3.imageURL);
                 _local_4.load(_local_5);
                 addChild(_local_4);
                 _local_4.x = 0;

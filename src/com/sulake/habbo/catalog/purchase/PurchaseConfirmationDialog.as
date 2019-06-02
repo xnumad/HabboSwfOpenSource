@@ -118,7 +118,7 @@
             this._bundleDiscountEnabled = ((this._catalog.discountEnabled) ? _arg_3.bundlePurchaseAllowed : false);
             if (((_arg_3 is Offer) && (!(_arg_3.product == null))))
             {
-                this._productType = _arg_3.product._Str_2588;
+                this._productType = _arg_3.product.productType;
             }
             else
             {
@@ -166,7 +166,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2588():String
+        public function get productType():String
         {
             return this._productType;
         }
@@ -314,13 +314,13 @@
                         _local_17 = k.product;
                         if (_local_17 != null)
                         {
-                            _local_15 = _local_17._Str_2941;
-                            _local_16 = _local_17._Str_2415;
+                            _local_15 = _local_17.productClassId;
+                            _local_16 = _local_17.extraParam;
                         }
                     }
                     if (_arg_2 == null)
                     {
-                        switch (this._Str_2588)
+                        switch (this.productType)
                         {
                             case ProductTypeEnum.FLOOR:
                                 _local_13 = _local_12.getFurnitureImage(_local_15, new Vector3d(90, 0, 0), 64, this, 0, _local_16, -1, -1, this._stuffData);
@@ -1287,7 +1287,7 @@
             {
                 return;
             }
-            _local_2._Str_2659();
+            _local_2.removeListItems();
             if (k.length == 0)
             {
                 this._Str_6969(false);
@@ -1363,7 +1363,7 @@
             {
                 return;
             }
-            this._Str_10725(_local_3._Str_3156(_local_2));
+            this._Str_10725(_local_3.getListItemIndex(_local_2));
         }
 
         private function _Str_10725(k:int):void

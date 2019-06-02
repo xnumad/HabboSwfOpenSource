@@ -34,16 +34,16 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_5714(this._Str_25145));
+            k.addMessageEvent(new _Str_5714(this.onRoomConnected));
             k.addMessageEvent(new _Str_4265(this._Str_24463));
             k.addMessageEvent(new _Str_3407(this._Str_5963));
-            k.addMessageEvent(new _Str_3352(this._Str_24407));
+            k.addMessageEvent(new _Str_3352(this.onRoomDisconnected));
             k.addMessageEvent(new _Str_4187(this._Str_12114));
             k.addMessageEvent(new _Str_8829(this._Str_23914));
             k.addMessageEvent(new _Str_8292(this._Str_22437));
         }
 
-        private function _Str_25145(k:IMessageEvent):void
+        private function onRoomConnected(k:IMessageEvent):void
         {
             var _local_2:int = _Str_2569;
             if (listener)
@@ -131,7 +131,7 @@
             }
         }
 
-        private function _Str_24407(k:IMessageEvent):void
+        private function onRoomDisconnected(k:IMessageEvent):void
         {
             var _local_2:int = _Str_2569;
             ErrorReportStorage.addDebugData("RoomID", "");
@@ -168,10 +168,10 @@
             {
                 _local_4 = _local_2._Str_25714(_local_9);
                 _local_5 = new RoomSessionQueueEvent(_local_3, _local_4.name, _local_4.target, (_local_4.target == _local_8));
-                _local_7 = _local_4._Str_14282;
+                _local_7 = _local_4.queueTypes;
                 for each (_local_10 in _local_7)
                 {
-                    _local_5._Str_17628(_local_10, _local_4._Str_11510(_local_10));
+                    _local_5.addQueue(_local_10, _local_4.getQueueSize(_local_10));
                 }
                 listener.events.dispatchEvent(_local_5);
             }

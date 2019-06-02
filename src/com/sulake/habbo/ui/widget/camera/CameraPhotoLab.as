@@ -376,7 +376,7 @@
             {
                 _Str_3498.hide();
             }
-            if (this._Str_2268.container.sessionDataManager._Str_4701())
+            if (this._Str_2268.container.sessionDataManager.isAccountSafetyLocked())
             {
                 this._Str_2268.windowManager.alert("${generic.alert.title}", "${notifications.text.safety_locked}", 0, null);
                 if (this._Str_2268.component.getProperty("camera.effects.enabled") != "true")

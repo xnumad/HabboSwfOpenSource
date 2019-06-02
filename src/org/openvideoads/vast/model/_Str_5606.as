@@ -4,7 +4,7 @@
     {
 
 
-        public function get _Str_6349():String
+        public function get imageURL():String
         {
             if (_Str_3366 != null)
             {
@@ -19,7 +19,7 @@
 
         override public function get content():String
         {
-            return this._Str_6349;
+            return this.imageURL;
         }
     }
 }

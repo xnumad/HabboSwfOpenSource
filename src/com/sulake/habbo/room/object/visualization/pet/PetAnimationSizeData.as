@@ -7,7 +7,7 @@
 
     public class PetAnimationSizeData extends AnimationSizeData 
     {
-        public static const _Str_10083:int = -1;
+        public static const ANIMATION_NOT_DEFINED_ID:int = -1;
 
         private var _posturesToAnimations:Map;
         private var _gesturesToAnimations:Map;
@@ -20,7 +20,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_22532(k:XML):Boolean
+        public function definePostures(k:XML):Boolean
         {
             var _local_5:XML;
             var _local_6:String;
@@ -63,7 +63,7 @@
             return true;
         }
 
-        public function _Str_24371(k:XML):Boolean
+        public function defineGestures(k:XML):Boolean
         {
             var _local_5:XML;
             var _local_6:String;
@@ -113,7 +113,7 @@
         {
             if (this._gesturesToAnimations.getValue(k) == null)
             {
-                return _Str_10083;
+                return ANIMATION_NOT_DEFINED_ID;
             }
             var _local_2:int = this._gesturesToAnimations.getValue(k);
             return _local_2;

@@ -16,7 +16,7 @@
             this._appendToFigure = false;
         }
 
-        public function _Str_2234():Boolean
+        public function hasStaticId():Boolean
         {
             return this._staticId >= 0;
         }
@@ -31,7 +31,7 @@
             this._staticId = k;
         }
 
-        public function get _Str_2174():String
+        public function get setType():String
         {
             return this._setType;
         }
@@ -41,7 +41,7 @@
             return this._flippedSetType;
         }
 
-        public function get _Str_1209():String
+        public function get removeSetType():String
         {
             return this._removeSetType;
         }

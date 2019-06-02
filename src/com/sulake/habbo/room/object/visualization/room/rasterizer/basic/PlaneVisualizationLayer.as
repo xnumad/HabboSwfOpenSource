@@ -4,14 +4,14 @@
     import flash.display.BitmapData;
     import flash.geom.ColorTransform;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneVisualizationLayer implements IDisposable 
     {
-        public static const _Str_1934:int = 0;
+        public static const DEFAULT_OFFSET:int = 0;
         public static const ALIGN_TOP:int = 1;
-        public static const _Str_3606:int = 2;
-        public static const _Str_6914:int = ALIGN_TOP;//1
+        public static const ALIGN_BOTTOM:int = 2;
+        public static const ALIGN_DEFAULT:int = ALIGN_TOP;//1
 
         private var _material:PlaneMaterial = null;
         private var _color:uint = 0;
@@ -63,7 +63,7 @@
             }
         }
 
-        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3D, useTexture:Boolean, offsetX:int, offsetY:int):BitmapData
+        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3d, useTexture:Boolean, offsetX:int, offsetY:int):BitmapData
         {
             var tR:Number;
             var tG:Number;
@@ -154,7 +154,7 @@
             return bitmapData;
         }
 
-        public function _Str_8547():PlaneMaterial
+        public function material():PlaneMaterial
         {
             return this._material;
         }

@@ -15,7 +15,7 @@
             super();
         }
 
-        public function get _Str_19411():int
+        public function get userUpdateCount():int
         {
             return this._users.length;
         }
@@ -28,7 +28,7 @@
 
         public function _Str_24400(k:int):_Str_5499
         {
-            if (((k < 0) || (k >= this._Str_19411)))
+            if (((k < 0) || (k >= this.userUpdateCount)))
             {
                 return null;
             }

@@ -2,8 +2,8 @@
 {
     public interface IMarketPlaceVisualization 
     {
-        function _Str_14789():void;
-        function _Str_6746():void;
-        function _Str_13752():void;
+        function displayMainView():void;
+        function listUpdatedNotify():void;
+        function updateStats():void;
     }
 }

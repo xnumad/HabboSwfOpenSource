@@ -120,13 +120,13 @@
             {
                 _local_4 = null;
                 _local_5 = null;
-                if (this._productData._Str_2588 == _Str_2853.I)
+                if (this._productData.productType == _Str_2853.I)
                 {
-                    _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this, 0, this._productData._Str_2415);
+                    _local_5 = this._questEngine.roomEngine.getWallItemImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this, 0, this._productData.extraParam);
                 }
                 else
                 {
-                    if (this._productData._Str_2588 == _Str_2853.S)
+                    if (this._productData.productType == _Str_2853.S)
                     {
                         _local_5 = this._questEngine.roomEngine.getFurnitureImage(this._productData._Str_6164, new Vector3d(90, 0, 0), 64, this);
                     }
@@ -184,7 +184,7 @@
             }
         }
 
-        public function _Str_6674():void
+        public function productDataReady():void
         {
             this._Str_22066(this._cachedDailyOfferMessageEvent);
         }

@@ -90,7 +90,7 @@
             }
             this._Str_4219("gift_content", true);
             var _local_6:String = this.getLocalization((("hccenter.status." + _local_5) + ".info"));
-            _local_6 = _local_6.replace("%timeleft%", this._Str_21064(_arg_2._Str_4458));
+            _local_6 = _local_6.replace("%timeleft%", this._Str_21064(_arg_2.minutesUntilExpiration));
             _local_6 = _local_6.replace("%joindate%", k._Str_25452);
             _local_6 = _local_6.replace("%streakduration%", this._Str_22787(k._Str_25314));
             this._Str_3281("status_info", _local_6);

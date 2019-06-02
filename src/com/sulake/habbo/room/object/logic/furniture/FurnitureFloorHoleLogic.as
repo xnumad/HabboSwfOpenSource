@@ -3,7 +3,7 @@
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.events.RoomObjectFloorHoleEvent;
     import com.sulake.habbo.room.messages.RoomObjectDataUpdateMessage;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
     import com.sulake.room.object.IRoomObjectModel;
     import com.sulake.room.object.IRoomObject;
@@ -11,7 +11,7 @@
 
     public class FurnitureFloorHoleLogic extends FurnitureMultistateLogic 
     {
-        private static const _Str_9306:int = 0;
+        private static const STATE_HOLE:int = 0;
 
         private var _currentState:int = -1;
         private var _currentLoc:Vector3d = null;
@@ -19,7 +19,7 @@
 
         override public function dispose():void
         {
-            if (this._currentState == _Str_9306)
+            if (this._currentState == STATE_HOLE)
             {
                 eventDispatcher.dispatchEvent(new RoomObjectFloorHoleEvent(RoomObjectFloorHoleEvent.ROFHO_REMOVE_HOLE, object));
             }
@@ -35,7 +35,7 @@
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
         {
             var _local_2:RoomObjectDataUpdateMessage;
-            var _local_3:IVector3D;
+            var _local_3:IVector3d;
             var _local_4:int;
             super.processUpdateMessage(k);
             if (object != null)
@@ -44,7 +44,7 @@
                 if (_local_2 != null)
                 {
                     _local_4 = object.getState(0);
-                    this._Str_21445(_local_4);
+                    this.handleStateUpdate(_local_4);
                 }
                 _local_3 = object.getLocation();
                 if (this._currentLoc == null)
@@ -55,7 +55,7 @@
                 {
                     if (((!(_local_3.x == this._currentLoc.x)) || (!(_local_3.y == this._currentLoc.y))))
                     {
-                        if (this._currentState == _Str_9306)
+                        if (this._currentState == STATE_HOLE)
                         {
                             if (eventDispatcher != null)
                             {
@@ -68,19 +68,19 @@
             }
         }
 
-        private function _Str_21445(k:int):void
+        private function handleStateUpdate(k:int):void
         {
             if (k != this._currentState)
             {
                 if (eventDispatcher != null)
                 {
-                    if (k == _Str_9306)
+                    if (k == STATE_HOLE)
                     {
                         eventDispatcher.dispatchEvent(new RoomObjectFloorHoleEvent(RoomObjectFloorHoleEvent.ROFHO_ADD_HOLE, object));
                     }
                     else
                     {
-                        if (this._currentState == _Str_9306)
+                        if (this._currentState == STATE_HOLE)
                         {
                             eventDispatcher.dispatchEvent(new RoomObjectFloorHoleEvent(RoomObjectFloorHoleEvent.ROFHO_REMOVE_HOLE, object));
                         }
@@ -90,7 +90,7 @@
             }
         }
 
-        private function _Str_25016():void
+        private function handleAutomaticStateUpdate():void
         {
             var _local_2:IRoomObjectModel;
             var _local_3:Number;
@@ -106,7 +106,7 @@
                     {
                         _local_4 = _local_3;
                         _local_4 = (_local_4 % 2);
-                        this._Str_21445(_local_4);
+                        this.handleStateUpdate(_local_4);
                     }
                 }
             }
@@ -115,7 +115,7 @@
         override public function update(k:int):void
         {
             super.update(k);
-            this._Str_25016();
+            this.handleAutomaticStateUpdate();
         }
     }
 }

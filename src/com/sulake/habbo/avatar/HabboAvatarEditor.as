@@ -181,13 +181,13 @@
             return this._figureStructureData._Str_740(k);
         }
 
-        public function _Str_783(k:int):IPalette
+        public function getPalette(k:int):IPalette
         {
             if (this._figureStructureData == null)
             {
                 return null;
             }
-            return this._figureStructureData._Str_783(k);
+            return this._figureStructureData.getPalette(k);
         }
 
         public function _Str_2826(k:_Str_5523, _arg_2:Array=null, _arg_3:Boolean=false, _arg_4:String=null, _arg_5:String="generic"):IFrameWindow
@@ -302,7 +302,7 @@
         public function _Str_22528():void
         {
             var _local_3:_Str_4639;
-            var k:String = this.figureData._Str_1008();
+            var k:String = this.figureData.getFigureString();
             var _local_2:String = this.figureData.gender;
             if (this._editorSaver != null)
             {
@@ -385,7 +385,7 @@
             }
             if (_local_8 != null)
             {
-                _local_9 = this._Str_783(_local_8._Str_734);
+                _local_9 = this.getPalette(_local_8._Str_734);
                 if (!_local_9)
                 {
                     return null;
@@ -562,7 +562,7 @@
             var _local_2:ISetType = this._Str_20100(k);
             if (_local_2 != null)
             {
-                _local_3 = this._Str_783(_local_2._Str_734);
+                _local_3 = this.getPalette(_local_2._Str_734);
                 for each (_local_4 in _local_3.colors)
                 {
                     if (((_local_4._Str_608) && (this.clubMemberLevel >= _local_4.clubLevel)))

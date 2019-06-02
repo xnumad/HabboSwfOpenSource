@@ -97,7 +97,7 @@
             if (this._mapLoader)
             {
                 this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onConfigurationComplete);
-                this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_680);
+                this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onConfigurationError);
             }
         }
 
@@ -106,7 +106,7 @@
             if (this._mapLoader)
             {
                 this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onConfigurationComplete);
-                this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_680);
+                this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onConfigurationError);
             }
         }
 
@@ -133,7 +133,7 @@
             this._Str_2252(data);
         }
 
-        private function _Str_680(k:Event):void
+        private function onConfigurationError(k:Event):void
         {
             var _local_2:String;
             var _local_3:URLRequest;
@@ -217,14 +217,14 @@
             Logger.log("Effect download complete...");
             var _local_2:Array = [];
             var _local_5:EffectAssetDownloadLibrary = (k.target as EffectAssetDownloadLibrary);
-            this._structure._Str_2061(_local_5.animation);
+            this._structure.registerAnimation(_local_5.animation);
             for (_local_3 in this._incompleteEffects)
             {
                 _local_8 = true;
                 _local_4 = this._incompleteEffects[_local_3];
                 for each (_local_9 in _local_4)
                 {
-                    if (!_local_9._Str_992)
+                    if (!_local_9.isReady)
                     {
                         _local_8 = false;
                         break;
@@ -238,7 +238,7 @@
                     {
                         if (((!(_local_11 == null)) && (!(_local_11.disposed))))
                         {
-                            _local_11._Str_869(parseInt(_local_3));
+                            _local_11.updateAnimationByFrames(parseInt(_local_3));
                         }
                     }
                     delete this._listeners[_local_3];
@@ -261,9 +261,9 @@
             this._downloadShiftTimer.start();
         }
 
-        public function _Str_992(k:int):Boolean
+        public function isReady(k:int):Boolean
         {
-            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager._Str_992))))
+            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager.isReady))))
             {
                 return false;
             }
@@ -275,7 +275,7 @@
         {
             var _local_4:EffectAssetDownloadLibrary;
             var _local_5:Array;
-            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager._Str_992))))
+            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager.isReady))))
             {
                 this._initDownloadBuffer.push([k, _arg_2]);
                 return;
@@ -303,7 +303,7 @@
             {
                 if (((!(_arg_2 == null)) && (!(_arg_2.disposed))))
                 {
-                    _arg_2._Str_869(k);
+                    _arg_2.updateAnimationByFrames(k);
                     Logger.log(("Effect ready to use: " + k));
                 }
             }
@@ -324,7 +324,7 @@
                 {
                     if (_local_4 != null)
                     {
-                        if (!_local_4._Str_992)
+                        if (!_local_4.isReady)
                         {
                             if (_local_2.indexOf(_local_4) == -1)
                             {
@@ -343,14 +343,14 @@
             while (((this._pendingDownloadQueue.length > 0) && (this._currentDownloads.length < this._Str_589)))
             {
                 k = this._pendingDownloadQueue[0];
-                k._Str_1305();
+                k.startDownloading();
                 this._currentDownloads.push(this._pendingDownloadQueue.shift());
             }
         }
 
         private function _Str_682(k:EffectAssetDownloadLibrary):void
         {
-            if ((((!(k._Str_992)) && (this._pendingDownloadQueue.indexOf(k) == -1)) && (this._currentDownloads.indexOf(k) == -1)))
+            if ((((!(k.isReady)) && (this._pendingDownloadQueue.indexOf(k) == -1)) && (this._currentDownloads.indexOf(k) == -1)))
             {
                 this._pendingDownloadQueue.push(k);
                 this._Str_866();

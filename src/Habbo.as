@@ -762,8 +762,8 @@ import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_17897; com
 import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18615; com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18615;
 import com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18745; com.sulake.habbo.communication.messages.outgoing._Str_465._Str_18745;
 import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870; com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
-import _Str_471.RoomAdErrorMessageParser; _Str_471.RoomAdErrorMessageParser;
-import _Str_471._Str_7915; _Str_471._Str_7915;
+import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser; com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
+import com.sulake.habbo.communication.messages.parser.advertisement._Str_7915; com.sulake.habbo.communication.messages.parser.advertisement._Str_7915;
 import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332; com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
 import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358; com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
 import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639; com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
@@ -5175,7 +5175,7 @@ import com.sulake.habbo.ui.widget.effects.EffectsWidget; com.sulake.habbo.ui.wid
 import com.sulake.habbo.ui.widget.effects._Str_4860; com.sulake.habbo.ui.widget.effects._Str_4860;
 import com.sulake.habbo.ui.widget.enums.AvatarExpressionEnum; com.sulake.habbo.ui.widget.enums.AvatarExpressionEnum;
 import com.sulake.habbo.ui.widget.enums.ChatTypeEnum; com.sulake.habbo.ui.widget.enums.ChatTypeEnum;
-import com.sulake.habbo.ui.widget.enums.ContextMenuType; com.sulake.habbo.ui.widget.enums.ContextMenuType;
+import com.sulake.habbo.ui.widget.enums.ContextMenuEnum; com.sulake.habbo.ui.widget.enums.ContextMenuEnum;
 import com.sulake.habbo.ui.widget.enums.FriendFurniEngravingWidgetTypeEnum; com.sulake.habbo.ui.widget.enums.FriendFurniEngravingWidgetTypeEnum;
 import com.sulake.habbo.ui.widget.enums.PetSupplementEnum; com.sulake.habbo.ui.widget.enums.PetSupplementEnum;
 import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum; com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
@@ -5680,7 +5680,7 @@ import com.sulake.room.renderer.utils.ObjectMouseData; com.sulake.room.renderer.
 import com.sulake.room.renderer.utils.SortableSprite; com.sulake.room.renderer.utils.SortableSprite;
 import com.sulake.room.utils.ColorConverter; com.sulake.room.utils.ColorConverter;
 import com.sulake.room.utils.IRoomGeometry; com.sulake.room.utils.IRoomGeometry;
-import com.sulake.room.utils.IVector3D; com.sulake.room.utils.IVector3D;
+import com.sulake.room.utils.IVector3d; com.sulake.room.utils.IVector3d;
 import com.sulake.room.utils.NumberBank; com.sulake.room.utils.NumberBank;
 import com.sulake.room.utils.PointMath; com.sulake.room.utils.PointMath;
 import com.sulake.room.utils.Rasterizer; com.sulake.room.utils.Rasterizer;

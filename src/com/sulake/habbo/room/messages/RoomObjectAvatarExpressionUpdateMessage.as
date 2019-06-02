@@ -9,7 +9,7 @@
             this._expressionType = k;
         }
 
-        public function get _Str_18904():int
+        public function get expressionType():int
         {
             return this._expressionType;
         }

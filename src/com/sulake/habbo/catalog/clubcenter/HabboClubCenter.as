@@ -304,7 +304,7 @@
             {
                 return ClubStatus.ACTIVE;
             }
-            if (((k._Str_6288 > 0) || (k._Str_4605 > 0)))
+            if (((k.pastClubDays > 0) || (k.pastVipDays > 0)))
             {
                 return ClubStatus.EXPIRED;
             }

@@ -85,7 +85,7 @@
             return this._offers;
         }
 
-        public function get _Str_15236():int
+        public function get creditsWaiting():int
         {
             return this._Str_11581;
         }

@@ -9,7 +9,7 @@
             this._isPlayingGame = k;
         }
 
-        public function get _Str_24016():Boolean
+        public function get isPlayingGame():Boolean
         {
             return this._isPlayingGame;
         }

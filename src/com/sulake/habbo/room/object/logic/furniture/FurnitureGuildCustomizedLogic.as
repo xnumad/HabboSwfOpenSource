@@ -16,8 +16,8 @@
 
     public class FurnitureGuildCustomizedLogic extends FurnitureMultistateLogic 
     {
-        public static const _Str_18293:int = 1;
-        public static const _Str_17707:int = 2;
+        public static const GUILD_ID_STUFFDATA_KEY:int = 1;
+        public static const BADGE_CODE_STUFFDATA_KEY:int = 2;
         public static const COLOR_1_STUFFDATA_KEY:int = 3;
         public static const COLOR_2_STUFFDATA_KEY:int = 4;
 
@@ -39,9 +39,9 @@
                 _local_5 = (_local_2.data as StringArrayStuffData);
                 if (_local_5 != null)
                 {
-                    this.updateGuildId(_local_5.getValue(_Str_18293));
-                    this._Str_25639(_local_5.getValue(_Str_17707));
-                    this._Str_24747(_local_5.getValue(COLOR_1_STUFFDATA_KEY), _local_5.getValue(COLOR_2_STUFFDATA_KEY));
+                    this.updateGuildId(_local_5.getValue(GUILD_ID_STUFFDATA_KEY));
+                    this.updateGuildBadge(_local_5.getValue(BADGE_CODE_STUFFDATA_KEY));
+                    this.updateGuildColors(_local_5.getValue(COLOR_1_STUFFDATA_KEY), _local_5.getValue(COLOR_2_STUFFDATA_KEY));
                 }
             }
             var _local_3:RoomObjectGroupBadgeUpdateMessage = (k as RoomObjectGroupBadgeUpdateMessage);
@@ -92,13 +92,13 @@
             eventDispatcher.dispatchEvent(k);
         }
 
-        private function _Str_24747(k:String, _arg_2:String):void
+        private function updateGuildColors(k:String, _arg_2:String):void
         {
             object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_COLOR_1, parseInt(k, 16));
             object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_COLOR_2, parseInt(_arg_2, 16));
         }
 
-        private function _Str_25639(k:String):void
+        private function updateGuildBadge(k:String):void
         {
             eventDispatcher.dispatchEvent(new RoomObjectBadgeAssetEvent(RoomObjectBadgeAssetEvent.ROGBE_LOAD_BADGE, object, k, true));
         }

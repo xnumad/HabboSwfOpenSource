@@ -72,7 +72,7 @@
             this._waitingGameWindow.invalidate();
             this._waitingGameWindow.visible = true;
             this._Str_6199();
-            this._gameCenterView._Str_3777(GameConfigurations._Str_3077(this._selectedGame), "waitingGame");
+            this._gameCenterView._Str_3777(GameConfigurations.getNameId(this._selectedGame), "waitingGame");
             if (!this._waitingGameTimer)
             {
                 this._waitingGameTimer = new Timer(_Str_7257);
@@ -84,7 +84,7 @@
         private function _Str_6199():void
         {
             this._logoImage.assetUri = null;
-            this._logoImage.assetUri = GameConfigurations._Str_9843(this._selectedGame, GameAssetEnum.LOGO);
+            this._logoImage.assetUri = GameConfigurations.getAssetUrl(this._selectedGame, GameAssetEnum.LOGO);
         }
 
         private function _Str_10599(k:TimerEvent):void
@@ -129,7 +129,7 @@
             this._gameCenterView._Str_10458(this._selectedGame);
             this.disable();
             this._gameCenterView.activate(this._selectedGame, false);
-            this._gameCenterView._Str_3777(GameConfigurations._Str_3077(this._selectedGame), "waitingGameCancel");
+            this._gameCenterView._Str_3777(GameConfigurations.getNameId(this._selectedGame), "waitingGameCancel");
         }
 
         private function createWindow():void

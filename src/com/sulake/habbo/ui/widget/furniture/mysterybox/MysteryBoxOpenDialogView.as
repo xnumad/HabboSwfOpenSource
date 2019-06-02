@@ -60,7 +60,7 @@
         private function _Str_22645(k:_Str_7599):void
         {
             var _local_2:_Str_7374 = k._Str_2273();
-            this._Str_22444(_local_2.contentType, _local_2._Str_2706);
+            this._Str_22444(_local_2.contentType, _local_2.classId);
         }
 
         private function _Str_25850():void

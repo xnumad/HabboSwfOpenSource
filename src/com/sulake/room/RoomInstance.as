@@ -157,7 +157,7 @@
             while (_local_2 >= 0)
             {
                 _local_3 = int(this._updateCategories[_local_2]);
-                _local_4 = this._Str_5927(_local_3);
+                _local_4 = this.getObjectManager(_local_3);
                 if (_local_4 != null)
                 {
                     _local_5 = (_local_4.getObjectCount() - 1);
@@ -188,10 +188,10 @@
             return null;
         }
 
-        public function _Str_23937(k:int, _arg_2:int, _arg_3:String, _arg_4:int):IRoomObject
+        public function createObjectInternal(k:int, _arg_2:int, _arg_3:String, _arg_4:int):IRoomObject
         {
             var _local_6:IRoomObjectController;
-            var _local_5:IRoomObjectManager = this._Str_23106(_arg_4);
+            var _local_5:IRoomObjectManager = this.createObjectManager(_arg_4);
             if (_local_5 != null)
             {
                 _local_6 = _local_5.createObject(k, _arg_2, _arg_3);
@@ -206,7 +206,7 @@
 
         public function getObject(k:int, _arg_2:int):IRoomObject
         {
-            var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
+            var _local_3:IRoomObjectManager = this.getObjectManager(_arg_2);
             if (_local_3 != null)
             {
                 return _local_3.getObject(k);
@@ -216,13 +216,13 @@
 
         public function getObjects(k:int):Array
         {
-            var _local_2:IRoomObjectManager = this._Str_5927(k);
+            var _local_2:IRoomObjectManager = this.getObjectManager(k);
             return (_local_2) ? _local_2.getObjects() : [];
         }
 
         public function getObjectWithIndex(k:int, _arg_2:int):IRoomObject
         {
-            var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
+            var _local_3:IRoomObjectManager = this.getObjectManager(_arg_2);
             if (_local_3 != null)
             {
                 return _local_3.getObjectWithIndex(k);
@@ -232,7 +232,7 @@
 
         public function getObjectCount(k:int):int
         {
-            var _local_2:IRoomObjectManager = this._Str_5927(k);
+            var _local_2:IRoomObjectManager = this.getObjectManager(k);
             if (_local_2 != null)
             {
                 return _local_2.getObjectCount();
@@ -242,7 +242,7 @@
 
         public function getObjectWithIndexAndType(k:int, _arg_2:String, _arg_3:int):IRoomObject
         {
-            var _local_4:IRoomObjectManager = this._Str_5927(_arg_3);
+            var _local_4:IRoomObjectManager = this.getObjectManager(_arg_3);
             if (_local_4 != null)
             {
                 return _local_4.getObjectWithIndexAndType(k, _arg_2);
@@ -252,7 +252,7 @@
 
         public function getObjectCountForType(k:String, _arg_2:int):int
         {
-            var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
+            var _local_3:IRoomObjectManager = this.getObjectManager(_arg_2);
             if (_local_3 != null)
             {
                 return _local_3.getObjectCountForType(k);
@@ -263,7 +263,7 @@
         public function disposeObject(k:int, _arg_2:int):Boolean
         {
             var _local_4:IRoomObject;
-            var _local_3:IRoomObjectManager = this._Str_5927(_arg_2);
+            var _local_3:IRoomObjectManager = this.getObjectManager(_arg_2);
             if (_local_3 != null)
             {
                 _local_4 = _local_3.getObject(k);
@@ -285,7 +285,7 @@
             var _local_4:int;
             var _local_5:IRoomObjectController;
             var _local_2:int;
-            var _local_3:IRoomObjectManager = this._Str_5927(k);
+            var _local_3:IRoomObjectManager = this.getObjectManager(k);
             if (_local_3 != null)
             {
                 _local_2 = _local_3.getObjectCount();
@@ -328,7 +328,7 @@
                 return;
             }
             this._renderer.reset();
-            var _local_2:Array = this._Str_20640();
+            var _local_2:Array = this.getObjectManagerIds();
             var _local_3:int = (_local_2.length - 1);
             while (_local_3 >= 0)
             {
@@ -353,12 +353,12 @@
             return this._renderer;
         }
 
-        public function _Str_20640():Array
+        public function getObjectManagerIds():Array
         {
             return this._managers.getKeys();
         }
 
-        protected function _Str_23106(k:int):IRoomObjectManager
+        protected function createObjectManager(k:int):IRoomObjectManager
         {
             var _local_2:String = String(k);
             if (this._managers.getValue(_local_2) != null)
@@ -377,12 +377,12 @@
             return _local_3;
         }
 
-        protected function _Str_5927(k:int):IRoomObjectManager
+        protected function getObjectManager(k:int):IRoomObjectManager
         {
             return this._managers.getValue(String(k)) as IRoomObjectManager;
         }
 
-        protected function _Str_26425(k:int):Boolean
+        protected function disposeObjectManager(k:int):Boolean
         {
             var _local_3:IRoomObjectManager;
             var _local_2:String = String(k);
@@ -399,7 +399,7 @@
             return false;
         }
 
-        public function _Str_21086():Boolean
+        public function hasUninitializedObjects():Boolean
         {
             var k:RoomObjectManager;
             var _local_2:int;

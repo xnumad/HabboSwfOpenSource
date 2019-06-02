@@ -87,7 +87,7 @@
             return this._container;
         }
 
-        public function _Str_6674():void
+        public function productDataReady():void
         {
             this.refreshContent();
         }
@@ -153,7 +153,7 @@
             this._appearsInSeconds = k._Str_2273()._Str_23051;
             this._pageId = k._Str_2273().pageId;
             this._offerId = k._Str_2273().offerId;
-            this._productType = k._Str_2273()._Str_2588;
+            this._productType = k._Str_2273().productType;
             this.refreshContent();
             this._Str_24349(this._appearsInSeconds);
         }

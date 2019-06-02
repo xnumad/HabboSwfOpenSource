@@ -105,7 +105,7 @@
 
         private function _Str_19397(k:MysteryBoxKeysUpdateEvent):void
         {
-            this._Str_21472(k._Str_18286, k._Str_17811);
+            this._Str_21472(k.boxColor, k.keyColor);
         }
 
         private function get _Str_18883():Boolean

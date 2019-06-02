@@ -45,7 +45,7 @@
             {
                 return;
             }
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             this._toolbar.extensionView.attachExtension(SAFETY_LOCKED_NOTIFICATION, this._window);
             this._linkText = (this._window.findChildByName("unlock_link") as ITextWindow);
             var _local_7:IRegionWindow = (this._window.findChildByName("unlock_link_region") as IRegionWindow);
@@ -75,7 +75,7 @@
             this._catalog = null;
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:String;
             if (k.type != WindowMouseEvent.CLICK)

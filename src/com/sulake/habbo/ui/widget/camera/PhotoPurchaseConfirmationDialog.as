@@ -139,9 +139,9 @@
                 this._widget.catalog.showNotEnoughCreditsAlert();
                 return false;
             }
-            if (_local_3._Str_5590(ActivityPointTypeEnum._Str_4627) < _arg_2)
+            if (_local_3.getActivityPointsForType(ActivityPointTypeEnum.DUCKET) < _arg_2)
             {
-                this._widget.catalog.getHabboClubOffers(ActivityPointTypeEnum._Str_4627);
+                this._widget.catalog.getHabboClubOffers(ActivityPointTypeEnum.DUCKET);
                 return false;
             }
             return true;
@@ -239,7 +239,7 @@
             var _local_5:Number = (_local_4.width / this._image.width);
             var _local_6:Matrix = new Matrix(_local_5, 0, 0, _local_5, 0, 0);
             _local_4.draw(this._image, _local_6);
-            this._widget.component.toolbar._Str_11676(_local_3, _local_4, _local_2.x, _local_2.y);
+            this._widget.component.toolbar.createTransitionToIcon(_local_3, _local_4, _local_2.x, _local_2.y);
             this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.purchase.successful");
             this._window.findChildByName("buy_button").caption = this._widget.localizations.getLocalization("camera.buy.another.button.text");
             this._window.findChildByName("inventory_link_area").visible = true;
@@ -341,7 +341,7 @@
             {
                 return;
             }
-            if (k._Str_2273()._Str_7838())
+            if (k._Str_2273().isOk())
             {
                 this._extraDataId = k._Str_2273()._Str_24023();
                 this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.publish.successful");
@@ -396,7 +396,7 @@
             {
                 return;
             }
-            if (k._Str_2273()._Str_7838())
+            if (k._Str_2273().isOk())
             {
                 this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.competition.submitted.status");
                 this._window.findChildByName("competition_name").caption = this._widget.localizations.getLocalization("camera.competition.submitted.info");

@@ -50,7 +50,7 @@
             super.processUpdateMessage(k);
             if ((k is RoomObjectDataUpdateMessage))
             {
-                this._Str_25604();
+                this.setupImageFromFurnitureData();
             }
             if ((k is RoomObjectRoomAdUpdateMessage))
             {
@@ -68,7 +68,7 @@
             }
         }
 
-        private function _Str_25604():Boolean
+        private function setupImageFromFurnitureData():Boolean
         {
             var _local_8:MapStuffData;
             var _local_9:Number;
@@ -115,15 +115,15 @@
                 }
                 if (!isNaN(parseInt(_local_8.getValue(OFFSETX))))
                 {
-                    k = this._Str_18323(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_X, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_X), parseInt(_local_8.getValue(OFFSETX)));
+                    k = this.updateOffset(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_X, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_X), parseInt(_local_8.getValue(OFFSETX)));
                 }
                 if (!isNaN(parseInt(_local_8.getValue(OFFSETY))))
                 {
-                    k = this._Str_18323(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Y, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Y), parseInt(_local_8.getValue(OFFSETY)));
+                    k = this.updateOffset(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Y, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Y), parseInt(_local_8.getValue(OFFSETY)));
                 }
                 if (!isNaN(parseInt(_local_8.getValue(OFFSETZ))))
                 {
-                    k = this._Str_18323(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Z, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Z), parseInt(_local_8.getValue(OFFSETZ)));
+                    k = this.updateOffset(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Z, object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_BRANDING_OFFSET_Z), parseInt(_local_8.getValue(OFFSETZ)));
                 }
             }
             var _local_2:String = object.getModelController().getString(RoomObjectVariableEnum.FURNITURE_BRANDING_IMAGE_URL);
@@ -171,7 +171,7 @@
             }
         }
 
-        private function _Str_18323(k:String, _arg_2:int, _arg_3:int):Boolean
+        private function updateOffset(k:String, _arg_2:int, _arg_3:int):Boolean
         {
             if (((!(isNaN(_arg_3))) && (!(_arg_2 == _arg_3))))
             {

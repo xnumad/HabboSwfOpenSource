@@ -24,7 +24,7 @@
             return this._type;
         }
 
-        public function get _Str_3343():int
+        public function get breedId():int
         {
             return this._Str_3717;
         }

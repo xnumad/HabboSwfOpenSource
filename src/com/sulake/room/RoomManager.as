@@ -60,7 +60,7 @@
             return this._disposed;
         }
 
-        public function set _Str_26038(k:Boolean):void
+        public function set limitContentProcessing(k:Boolean):void
         {
             this._limitContentProcessing = k;
         }
@@ -309,7 +309,7 @@
                 _local_11 = _arg_3;
             }
             var _local_14:int = 1;
-            var _local_15:IRoomObject = _local_6._Str_23937(_arg_2, _local_14, _arg_3, _arg_4);
+            var _local_15:IRoomObject = _local_6.createObjectInternal(_arg_2, _local_14, _arg_3, _arg_4);
             var _local_16:IRoomObjectController = (_local_15 as IRoomObjectController);
             if (_local_16 == null)
             {
@@ -366,7 +366,7 @@
             return false;
         }
 
-        private function _Str_23673(k:String):void
+        private function processInitialContentLoad(k:String):void
         {
             var _local_2:int;
             if (k == null)
@@ -426,7 +426,7 @@
             }
         }
 
-        private function _Str_24856():void
+        private function processLoadedContentTypes():void
         {
             var _local_2:String;
             var _local_3:IGraphicAssetCollection;
@@ -458,14 +458,14 @@
                     }
                     return;
                 }
-                this._Str_24592(_local_2);
+                this.updateObjectContents(_local_2);
                 if (this._listener != null)
                 {
                     this._listener.contentLoaded(_local_2, true);
                 }
                 if (this._initialLoadList.length > 0)
                 {
-                    this._Str_23673(_local_2);
+                    this.processInitialContentLoad(_local_2);
                 }
                 _local_4 = getTimer();
                 if ((((_local_4 - k) >= CONTENT_PROCESSING_TIME_LIMIT_MILLISECONDS) && (this._limitContentProcessing)))
@@ -476,7 +476,7 @@
             }
         }
 
-        private function _Str_24592(k:String):void
+        private function updateObjectContents(k:String):void
         {
             var _local_2:XML;
             var _local_3:XML;
@@ -509,7 +509,7 @@
                 _local_10 = this._rooms.getKey(_local_8);
                 if (_local_9 != null)
                 {
-                    _local_11 = _local_9._Str_20640();
+                    _local_11 = _local_9.getObjectManagerIds();
                     _local_12 = false;
                     for each (_local_13 in _local_11)
                     {
@@ -569,7 +569,7 @@
                             _local_15--;
                         }
                     }
-                    if (((!(_local_9._Str_21086())) && (_local_12)))
+                    if (((!(_local_9.hasUninitializedObjects())) && (_local_12)))
                     {
                         this._listener.objectsInitialized(_local_10);
                     }
@@ -581,7 +581,7 @@
         public function update(k:uint):void
         {
             var _local_3:RoomInstance;
-            this._Str_24856();
+            this.processLoadedContentTypes();
             var _local_2:int = (this._rooms.length - 1);
             while (_local_2 >= 0)
             {

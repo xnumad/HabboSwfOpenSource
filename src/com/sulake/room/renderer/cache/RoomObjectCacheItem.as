@@ -17,7 +17,7 @@
             return this._location;
         }
 
-        public function get _Str_9272():RoomObjectSortableSpriteCacheItem
+        public function get sprites():RoomObjectSortableSpriteCacheItem
         {
             return this._sprites;
         }

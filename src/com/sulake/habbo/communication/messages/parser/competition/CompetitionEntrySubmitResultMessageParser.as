@@ -6,13 +6,13 @@
 
     public class CompetitionEntrySubmitResultMessageParser implements IMessageParser 
     {
-        public static const _Str_14572:int = 0;
-        public static const _Str_18467:int = 1;
-        public static const _Str_16674:int = 2;
-        public static const _Str_18708:int = 3;
-        public static const _Str_16275:int = 4;
-        public static const _Str_13075:int = 5;
-        public static const _Str_16754:int = 6;
+        public static const SUBMITTED:int = 0;
+        public static const ASK_FOR_SUBMIT:int = 1;
+        public static const ASK_FOR_CONFIRM:int = 2;
+        public static const PREREQUISITES_NOT_MET:int = 3;
+        public static const ROOM_DOOR_NOT_OPEN:int = 4;
+        public static const ROOM_TOO_OLD:int = 5;
+        public static const ASK_FOR_ACCEPT_RULES:int = 6;
 
         private var _goalId:int;
         private var _goalCode:String;
@@ -52,12 +52,12 @@
             return true;
         }
 
-        public function get _Str_7578():int
+        public function get goalId():int
         {
             return this._goalId;
         }
 
-        public function get _Str_4327():String
+        public function get goalCode():String
         {
             return this._goalCode;
         }
@@ -67,12 +67,12 @@
             return this._result;
         }
 
-        public function get _Str_23340():Array
+        public function get requiredFurnis():Array
         {
             return this._requiredFurnis;
         }
 
-        public function _Str_25798(k:String):Boolean
+        public function isMissing(k:String):Boolean
         {
             return !(this._missingFurnis[k] == null);
         }

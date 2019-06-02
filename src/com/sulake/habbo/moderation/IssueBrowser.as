@@ -111,8 +111,8 @@
             {
                 return;
             }
-            var k:ISelectableWindow = this._tabContext.selector._Str_5050("open_issues");
-            this._tabContext.selector._Str_2520(k);
+            var k:ISelectableWindow = this._tabContext.selector.getSelectableByName("open_issues");
+            this._tabContext.selector.setSelected(k);
         }
 
         private function _Str_3734(k:String):void

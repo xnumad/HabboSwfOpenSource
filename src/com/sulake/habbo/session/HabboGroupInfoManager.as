@@ -64,7 +64,7 @@
             }
         }
 
-        public function _Str_17775(k:int):String
+        public function getBadgeId(k:int):String
         {
             return this._badges.getValue(k);
         }

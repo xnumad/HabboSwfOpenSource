@@ -132,7 +132,7 @@
             {
                 return false;
             }
-            if (k._Str_5590(_Str_2956) < (_Str_3539 * _arg_2))
+            if (k.getActivityPointsForType(_Str_2956) < (_Str_3539 * _arg_2))
             {
                 return false;
             }

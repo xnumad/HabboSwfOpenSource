@@ -14,7 +14,7 @@
         private static const STATE_FRAME_A:int = 1;
         private static const STATE_FRAME_B:int = 2;
 
-        protected var _Str_576:int;
+        protected var _id:int;
         protected var _Str_1070:AvatarVisualization;
         private var _asset:BitmapDataAsset;
         private var _startTime:int;
@@ -24,7 +24,7 @@
 
         public function FloatingIdleZ(k:int, _arg_2:AvatarVisualization)
         {
-            this._Str_576 = k;
+            this._id = k;
             this._Str_1070 = _arg_2;
             this._startTime = getTimer();
             this._state = 0;
@@ -32,7 +32,7 @@
 
         public function get id():int
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function get disposed():Boolean
@@ -46,7 +46,7 @@
             this._asset = null;
         }
 
-        protected function _Str_15267(k:int):String
+        protected function getAssetNameForFrame(k:int):String
         {
             var _local_2:String = "left";
             if (((((this._Str_1070.angle == 135) || (this._Str_1070.angle == 180)) || (this._Str_1070.angle == 225)) || (this._Str_1070.angle == 270)))
@@ -68,7 +68,7 @@
                 {
                     this._state = STATE_FRAME_A;
                     this._startTime = getTimer();
-                    this._asset = (this._Str_1070.getAvatarRendererAsset(this._Str_15267(1)) as BitmapDataAsset);
+                    this._asset = (this._Str_1070.getAvatarRendererAsset(this.getAssetNameForFrame(1)) as BitmapDataAsset);
                 }
             }
             if (this._state == STATE_FRAME_A)
@@ -77,7 +77,7 @@
                 {
                     this._state = STATE_FRAME_B;
                     this._startTime = getTimer();
-                    this._asset = (this._Str_1070.getAvatarRendererAsset(this._Str_15267(2)) as BitmapDataAsset);
+                    this._asset = (this._Str_1070.getAvatarRendererAsset(this.getAssetNameForFrame(2)) as BitmapDataAsset);
                 }
             }
             if (this._state == STATE_FRAME_B)
@@ -86,7 +86,7 @@
                 {
                     this._state = STATE_FRAME_A;
                     this._startTime = getTimer();
-                    this._asset = (this._Str_1070.getAvatarRendererAsset(this._Str_15267(1)) as BitmapDataAsset);
+                    this._asset = (this._Str_1070.getAvatarRendererAsset(this.getAssetNameForFrame(1)) as BitmapDataAsset);
                 }
             }
             if (this._asset)
@@ -110,7 +110,7 @@
                 return;
             }
             this._scale = _arg_2;
-            this._asset = (this._Str_1070.getAvatarRendererAsset(this._Str_15267(((this._state == STATE_FRAME_A) ? 1 : 2))) as BitmapDataAsset);
+            this._asset = (this._Str_1070.getAvatarRendererAsset(this.getAssetNameForFrame(((this._state == STATE_FRAME_A) ? 1 : 2))) as BitmapDataAsset);
             var _local_4:int = 64;
             if (_arg_2 < 48)
             {

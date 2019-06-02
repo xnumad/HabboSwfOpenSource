@@ -157,7 +157,7 @@
             var k:int;
             while (k < this._list.numListItems)
             {
-                this._list.getListItemAt(k).width = (this._list._Str_6920.width - 2);
+                this._list.getListItemAt(k).width = (this._list.scrollableWindow.width - 2);
                 k++;
             }
         }
@@ -314,7 +314,7 @@
         {
             var _local_2:int = k.threadId;
             var _local_3:IWindowContainer = (this._list.getListItemByName(("thread_" + _local_2)) as IWindowContainer);
-            var _local_4:int = this._list._Str_3156(_local_3);
+            var _local_4:int = this._list.getListItemIndex(_local_3);
             if (_local_3 != null)
             {
                 this._Str_10311(_local_3, k, _local_4);

@@ -84,7 +84,7 @@
         {
             var _local_2:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(k);
             var _local_3:int = _local_2.assetUri.indexOf(".png");
-            _local_2.assetUri = (((_local_2.assetUri.substr(0, _local_3) + "_") + this._Str_3597._Str_4327) + ".png");
+            _local_2.assetUri = (((_local_2.assetUri.substr(0, _local_3) + "_") + this._Str_3597.goalCode) + ".png");
         }
 
         protected function _Str_7300(k:String, _arg_2:String):void
@@ -92,7 +92,7 @@
             var _local_3:IWindow = this._Str_3186.findChildByName(k);
             if (_local_3 != null)
             {
-                _local_3.caption = (((("${" + _arg_2) + ".") + this._Str_3597._Str_4327) + "}");
+                _local_3.caption = (((("${" + _arg_2) + ".") + this._Str_3597.goalCode) + "}");
             }
         }
 
@@ -110,7 +110,7 @@
         private function _Str_16817():void
         {
             var k:int;
-            if (((!(this._Str_3597 == null)) && (!(this._Str_3597._Str_4327 == null))))
+            if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
             {
                 k = 0;
                 while (k < _Str_5070.length)
@@ -154,9 +154,9 @@
             this._Str_2298.localizationManager.registerParameter(_local_2, "userRank", this._Str_3597._Str_10549.toString());
             this._Str_2298.localizationManager.registerParameter(_local_2, "userAmount", this._Str_3597.personalContributionScore.toString());
             this._Str_2298.localizationManager.registerParameter(_local_2, "totalAmount", this._Str_3597._Str_12030.toString());
-            if (((!(this._Str_3597 == null)) && (!(this._Str_3597._Str_4327 == null))))
+            if (((!(this._Str_3597 == null)) && (!(this._Str_3597.goalCode == null))))
             {
-                this._Str_2298.localizationManager.registerParameter(("landing.view.community.meter." + this._Str_3597._Str_4327), "totalAmount", this._Str_3597._Str_12030.toString());
+                this._Str_2298.localizationManager.registerParameter(("landing.view.community.meter." + this._Str_3597.goalCode), "totalAmount", this._Str_3597._Str_12030.toString());
                 this._Str_7300("community_total_status", "landing.view.community.meter");
                 if (this._Str_11816)
                 {

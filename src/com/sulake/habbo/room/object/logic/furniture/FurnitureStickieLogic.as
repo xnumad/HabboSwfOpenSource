@@ -23,7 +23,7 @@
         override public function initialize(k:XML):void
         {
             super.initialize(k);
-            this._Str_20212();
+            this.setColorIndexFromItemData();
             if (object != null)
             {
                 object.getModelController().setString(RoomObjectVariableEnum.FURNITURE_IS_STICKIE, "");
@@ -42,10 +42,10 @@
                     eventDispatcher.dispatchEvent(_local_2);
                 }
             }
-            this._Str_20212();
+            this.setColorIndexFromItemData();
         }
 
-        protected function _Str_20212():void
+        protected function setColorIndexFromItemData():void
         {
             var k:String;
             var _local_2:Array;

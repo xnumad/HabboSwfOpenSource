@@ -74,7 +74,7 @@
 
         public function set visible(k:Boolean):void
         {
-            if (((k) && (this._habboNewNavigator._Str_992)))
+            if (((k) && (this._habboNewNavigator.isReady)))
             {
                 if (this._Str_4128 == null)
                 {
@@ -255,10 +255,10 @@
             else
             {
                 this._roomInfoPopup._Str_5479(k);
-                if (((!(k._Str_3094 == 0)) && (this._habboNewNavigator._Str_20693(k._Str_3094) == null)))
+                if (((!(k.habboGroupId == 0)) && (this._habboNewNavigator._Str_20693(k.habboGroupId) == null)))
                 {
-                    this._habboNewNavigator._Str_18961(k._Str_3094, false);
-                    this._Str_16641 = k._Str_3094;
+                    this._habboNewNavigator._Str_18961(k.habboGroupId, false);
+                    this._Str_16641 = k.habboGroupId;
                 }
                 this._roomInfoPopup._Str_23392(true, _arg_2, _arg_3);
                 this._habboNewNavigator.trackEventLog("browse.openroominfo", "Results", k.roomName, k.flatId);
@@ -296,20 +296,20 @@
             var _local_3:IItemListWindow = IItemListWindow(k.findChildByName("navigator_entry_tile_container").clone());
             var _local_4:IWindowContainer = IWindowContainer(_local_3.getListItemByName("navigator_entry_tile").clone());
             this._Str_4128._Str_24632 = _local_4;
-            _local_3._Str_2724();
+            _local_3.destroyListItems();
             this._Str_4128._Str_25029 = _local_3;
-            IItemListWindow(k.findChildByName("category_content"))._Str_2724();
+            IItemListWindow(k.findChildByName("category_content")).destroyListItems();
             var _local_5:IWindowContainer = IWindowContainer(k.findChildByName("category_container"));
             this._Str_4787._Str_25135 = IWindowContainer(_local_5.clone());
-            IItemListWindow(k.findChildByName("block_results"))._Str_2915(0);
+            IItemListWindow(k.findChildByName("block_results")).removeListItemAt(0);
             _local_5.destroy();
             var _local_6:IWindowContainer = IWindowContainer(k.findChildByName("category_container_collapsed"));
             this._Str_4787._Str_23119 = IWindowContainer(_local_6.clone());
-            IItemListWindow(k.findChildByName("block_results"))._Str_2915(0);
+            IItemListWindow(k.findChildByName("block_results")).removeListItemAt(0);
             _local_6.destroy();
             var _local_7:IWindowContainer = IWindowContainer(k.findChildByName("no_results_container"));
             this._Str_4787._Str_24754 = IWindowContainer(_local_7.clone());
-            IItemListWindow(k.findChildByName("block_results"))._Str_2915(0);
+            IItemListWindow(k.findChildByName("block_results")).removeListItemAt(0);
             _local_7.destroy();
             this._Str_3208.itemList = IItemListWindow(k.findChildByName("block_results"));
             this._Str_9680.container = IWindowContainer(k.findChildByName("search_tools"));
@@ -317,7 +317,7 @@
             _local_8.findChildByName("quick_link_text").caption = "";
             this._Str_8068.template = IRegionWindow(_local_8.clone());
             this._Str_8068.itemList = IItemListWindow(k.findChildByName("quicklinks_list"));
-            IItemListWindow(k.findChildByName("quicklinks_list"))._Str_2659();
+            IItemListWindow(k.findChildByName("quicklinks_list")).removeListItems();
             _local_8.destroy();
             var _local_9:ITabContextWindow = ITabContextWindow(k.findChildByName("top_view_select_tab_context"));
             var _local_10:ITabButtonWindow = ITabButtonWindow(_local_9._Str_3363(0).clone());
@@ -441,8 +441,8 @@
             {
                 _local_2.visible = false;
                 this._Str_3380.x = this._Str_8802;
-                this._window._Str_2648.minWidth = ((this._window.width - _local_3) + this._Str_8802);
-                this._window._Str_2648.maxWidth = ((this._window.width - _local_3) + this._Str_8802);
+                this._window.limits.minWidth = ((this._window.width - _local_3) + this._Str_8802);
+                this._window.limits.maxWidth = ((this._window.width - _local_3) + this._Str_8802);
                 this._window.width = ((this._window.width - _local_3) + this._Str_8802);
             }
             else
@@ -450,8 +450,8 @@
                 _local_2.visible = true;
                 this._Str_3380.x = this._Str_17392;
                 _local_5 = ((this._window.width + _local_3) - this._Str_8802);
-                this._window._Str_2648.minWidth = ((_local_5 > _Str_6985) ? _Str_6985 : _local_5);
-                this._window._Str_2648.maxWidth = ((_local_5 > _Str_6985) ? _Str_6985 : _local_5);
+                this._window.limits.minWidth = ((_local_5 > _Str_6985) ? _Str_6985 : _local_5);
+                this._window.limits.maxWidth = ((_local_5 > _Str_6985) ? _Str_6985 : _local_5);
                 this._window.width = ((_local_5 > _Str_6985) ? _Str_6985 : _local_5);
             }
             this._Str_3380.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_FIXED, false);

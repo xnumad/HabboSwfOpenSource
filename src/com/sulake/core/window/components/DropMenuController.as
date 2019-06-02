@@ -115,7 +115,7 @@
             _local_4.height = Math.max(_local_4.height, (_arg_2.height - 4));
             if (((_Str_3371 > -1) && (_local_5)))
             {
-                _local_4.getListItemAt(_Str_3371)._Str_2896(WindowState.SELECTED, true);
+                _local_4.getListItemAt(_Str_3371).setStateFlag(WindowState.SELECTED, true);
             }
         }
 
@@ -170,7 +170,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.MENU_ITEM_ARRAY, this._stringArray));
+            k.push(createProperty(PropertyKeys.MENU_ITEM_ARRAY, this._stringArray));
             return k;
         }
 

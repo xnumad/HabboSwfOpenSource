@@ -10,7 +10,7 @@
         private static const _Str_16330:int = 3;
         private static const _Str_18721:int = 4;
 
-        private var _Str_578:int;
+        private var _type:int;
         private var _userId:int;
         private var _userName:String;
         private var _figure:String;
@@ -18,7 +18,7 @@
 
         public function _Str_2891(k:IMessageDataWrapper)
         {
-            this._Str_578 = k.readInteger();
+            this._type = k.readInteger();
             this._userId = k.readInteger();
             this._userName = k.readString();
             this._figure = k.readString();
@@ -37,22 +37,22 @@
 
         public function get admin():Boolean
         {
-            return this._Str_578 == _Str_17015;
+            return this._type == _Str_17015;
         }
 
         public function get owner():Boolean
         {
-            return this._Str_578 == _Str_18346;
+            return this._type == _Str_18346;
         }
 
         public function get member():Boolean
         {
-            return !(this._Str_578 == _Str_16330);
+            return !(this._type == _Str_16330);
         }
 
         public function get blocked():Boolean
         {
-            return this._Str_578 == _Str_18721;
+            return this._type == _Str_18721;
         }
 
         public function get figure():String

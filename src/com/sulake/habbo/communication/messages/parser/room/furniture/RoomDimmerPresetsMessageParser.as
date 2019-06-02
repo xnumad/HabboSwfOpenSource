@@ -25,7 +25,7 @@
             return this._selectedPresetId;
         }
 
-        public function _Str_14989(k:int):_Str_5478
+        public function getPreset(k:int):_Str_5478
         {
             if (((k < 0) || (k >= this._Str_10888)))
             {

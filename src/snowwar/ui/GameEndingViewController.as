@@ -463,7 +463,7 @@
                 default:
                     _local_4._Str_830("ch", 20000, [1]);
             }
-            var _local_6:IAvatarImage = this._SafeStr_18579.avatarRenderManager.createAvatarImage(_local_4._Str_1008(), AvatarScaleType.SMALL, _arg_3, this);
+            var _local_6:IAvatarImage = this._SafeStr_18579.avatarRenderManager.createAvatarImage(_local_4.getFigureString(), AvatarScaleType.SMALL, _arg_3, this);
             if (_local_6)
             {
                 _local_6.setDirection(AvatarSetType.FULL, this._SafeStr_18896(k));
@@ -753,7 +753,7 @@
             var k:int = 1;
             while ((_local_2 = (this._SafeStr_9274.findChildByName((("team" + k++) + "PlayersList")) as IItemListWindow)) != null)
             {
-                _local_2._Str_2724();
+                _local_2.destroyListItems();
             }
         }
 

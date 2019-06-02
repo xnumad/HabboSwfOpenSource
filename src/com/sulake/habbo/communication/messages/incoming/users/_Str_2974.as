@@ -121,7 +121,7 @@
             return this._Str_4514;
         }
 
-        public function get _Str_15310():Boolean
+        public function get isAdmin():Boolean
         {
             return this._Str_14681;
         }

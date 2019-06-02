@@ -149,7 +149,7 @@
                 return;
             }
             _local_2 = 1;
-            while (_local_2 <= this.recycler._Str_11949)
+            while (_local_2 <= this.recycler.numberOfSlots)
             {
                 _local_3 = (window.findChildByName(("slot_bg_" + _local_2)) as IBitmapWrapperWindow);
                 if (_local_3 != null)
@@ -160,7 +160,7 @@
                 _local_2++;
             }
             _local_2 = 1;
-            while (_local_2 <= this.recycler._Str_11949)
+            while (_local_2 <= this.recycler.numberOfSlots)
             {
                 _local_3 = (window.findChildByName(("slot_img_" + _local_2)) as IBitmapWrapperWindow);
                 if (_local_3 != null)
@@ -184,7 +184,7 @@
                 return;
             }
             var k:int;
-            while (k < this.recycler._Str_11949)
+            while (k < this.recycler.numberOfSlots)
             {
                 _local_2 = (window.findChildByName(("slot_img_" + (k + 1))) as IBitmapWrapperWindow);
                 if (_local_2 == null)
@@ -238,7 +238,7 @@
             {
                 return;
             }
-            var _local_4:ISelectedRoomObjectData = _local_3._Str_3637(_local_3.activeRoomId);
+            var _local_4:ISelectedRoomObjectData = _local_3.getSelectedObjectData(_local_3.activeRoomId);
             switch (k.type)
             {
                 case WindowMouseEvent.OUT:
@@ -272,7 +272,7 @@
             {
                 return;
             }
-            var objectData:ISelectedRoomObjectData = roomEngine._Str_3637(roomEngine.activeRoomId);
+            var objectData:ISelectedRoomObjectData = roomEngine.getSelectedObjectData(roomEngine.activeRoomId);
             if (event.type == WindowMouseEvent.UP)
             {
                 if (event.window.name.indexOf("slot_") == 0)
@@ -288,13 +288,13 @@
                             });
                             return;
                         }
-                        this.recycler._Str_21930(slotId, objectData.id, objectData.category, objectData.typeId, objectData._Str_4766);
+                        this.recycler.placeObjectAtSlot(slotId, objectData.id, objectData.category, objectData.typeId, objectData._Str_4766);
                     }
                     else
                     {
-                        this.recycler._Str_10449(slotId);
+                        this.recycler.releaseSlot(slotId);
                     }
-                    roomEngine._Str_8675();
+                    roomEngine.cancelRoomObjectInsert();
                     if (this._Str_4455 != null)
                     {
                         this._Str_4455._Str_16533();
@@ -333,7 +333,7 @@
         {
             if (this.recycler != null)
             {
-                this.recycler._Str_19502();
+                this.recycler.executeRecycler();
             }
         }
 

@@ -34,12 +34,12 @@
             var _local_3:Array = _arg_2.stringData.split(_Str_4332);
             this._Str_2453(k, "bot_name").text = ((_local_3.length >= 1) ? _local_3[0] : "");
             this._Str_2453(k, "chat_message").text = ((_local_3.length == 2) ? _local_3[1] : "");
-            this._Str_4281(k, "type_selector")._Str_2520(this._Str_10005(k, ("radio_" + _arg_2.intData[0])));
+            this._Str_4281(k, "type_selector").setSelected(this._Str_10005(k, ("radio_" + _arg_2.intData[0])));
         }
 
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
-            return [this._Str_4281(k, "type_selector")._Str_2657().id];
+            return [this._Str_4281(k, "type_selector").getSelected().id];
         }
 
         override public function get hasSpecialInputs():Boolean

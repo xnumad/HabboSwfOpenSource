@@ -4,21 +4,21 @@
 
     public class _Str_7393 implements IMessageComposer 
     {
-        private var _Str_578:String;
+        private var _type:String;
 
         public function _Str_7393(k:String):void
         {
-            this._Str_578 = k;
+            this._type = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_578];
+            return [this._type];
         }
 
         public function dispose():void
         {
-            this._Str_578 = null;
+            this._type = null;
         }
     }
 }

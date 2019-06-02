@@ -68,7 +68,7 @@
                 _local_8 = _Str_4638._Str_16439(k);
                 if (_local_8 != null)
                 {
-                    _local_8.ownerName = _local_3.getValue(_local_8._Str_2481);
+                    _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
                     this._objects.push(_local_8);
                 }
                 _local_2++;

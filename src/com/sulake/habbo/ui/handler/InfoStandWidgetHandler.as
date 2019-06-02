@@ -149,12 +149,12 @@
                 if (this._container.roomSessionManager != null)
                 {
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this._Str_8471);
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this._Str_8034);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this._Str_12211);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetFigureUpdateEvent.PET_FIGURE_UPDATE, this._Str_6212);
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this._Str_14312);
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this._Str_12723);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionConfirmPetBreedingEvent.RSPFUE_CONFIRM_PET_BREEDING, this._Str_20173);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this._Str_20716);
                 }
@@ -186,12 +186,12 @@
             if (this._container.roomSessionManager != null)
             {
                 this._container.roomSessionManager.events.addEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this._Str_8471);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this._Str_8034);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this._Str_12211);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetFigureUpdateEvent.PET_FIGURE_UPDATE, this._Str_6212);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this._Str_14312);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this._Str_12723);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingResultEvent.RSPFUE_PET_BREEDING_RESULT, this.onPetBreedingResult);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionPetBreedingEvent.RSPFUE_PET_BREEDING, this.onPetBreedingEvent);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionConfirmPetBreedingEvent.RSPFUE_CONFIRM_PET_BREEDING, this._Str_20173);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionConfirmPetBreedingResultEvent.RSPFUE_CONFIRM_PET_BREEDING_RESULT, this._Str_20716);
             }
@@ -382,10 +382,10 @@
                     this._container.events.dispatchEvent(_local_8);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_IGNORE_USER:
-                    this._container.sessionDataManager._Str_10249(_local_3.name);
+                    this._container.sessionDataManager.ignoreUser(_local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_UNIGNORE_USER:
-                    this._container.sessionDataManager._Str_14353(_local_3.name);
+                    this._container.sessionDataManager.unignoreUser(_local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_KICK_USER:
                     this._container.roomSession._Str_15299(_local_3._Str_2394);
@@ -454,19 +454,19 @@
                     this._container.connection.send(new _Str_10794());
                     break;
                 case RoomWidgetFurniActionMessage.RWFUAM_ROTATE:
-                    this._container.roomEngine._Str_3571(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_MOVE:
-                    this._container.roomEngine._Str_3571(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_MOVE);
+                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_MOVE);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_PICKUP:
                     this._Str_24845(_local_5, _local_6);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_EJECT:
-                    this._container.roomEngine._Str_3571(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_EJECT);
+                    this._container.roomEngine.updateObjectWallItemData(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_EJECT);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_USE:
-                    this._container.roomEngine._Str_19873(_local_5, _local_6);
+                    this._container.roomEngine.useRoomObjectInActiveRoom(_local_5, _local_6);
                     break;
                 case RoomWidgetFurniActionMessage.RWFAM_SAVE_STUFF_DATA:
                     _local_10 = _local_7.objectData;
@@ -487,7 +487,7 @@
                                 }
                             }
                         }
-                        this._container.roomEngine._Str_20856(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_SAVE_STUFF_DATA, _local_19);
+                        this._container.roomEngine.modifyRoomObjectDataWithMap(_local_5, _local_6, RoomObjectOperationEnum.OBJECT_SAVE_STUFF_DATA, _local_19);
                         if (!_local_19.disposed)
                         {
                             _local_19.dispose();
@@ -497,7 +497,7 @@
                 case RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE:
                     if (((!(this._container.roomSession == null)) && (!(this._container.roomSession.userDataManager == null))))
                     {
-                        this._container.roomSession.userDataManager._Str_17612(_local_2);
+                        this._container.roomSession.userDataManager.requestPetInfo(_local_2);
                     }
                     break;
                 case RoomWidgetRoomTagSearchMessage.RWRTSM_ROOM_TAG_SEARCH:
@@ -599,7 +599,7 @@
                 {
                     if (this._widget.furniData.availableForBuildersClub)
                     {
-                        this._container.roomEngine._Str_3571(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                        this._container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                     }
                     else
                     {
@@ -608,14 +608,14 @@
                             k.dispose();
                             if (_arg_2.type == WindowEvent.WINDOW_EVENT_OK)
                             {
-                                _container.roomEngine._Str_3571(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                                _container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                             }
                         });
                     }
                 }
                 else
                 {
-                    this._container.roomEngine._Str_3571(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
+                    this._container.roomEngine.updateObjectWallItemData(furniId, furniCategory, RoomObjectOperationEnum.OBJECT_PICKUP);
                 }
             }
         }
@@ -662,7 +662,7 @@
                         {
                             if (k.category == RoomObjectCategoryEnum.CONST_20)
                             {
-                                _local_12 = this._container.sessionDataManager._Str_4531(_local_11);
+                                _local_12 = this._container.sessionDataManager.getWallItemData(_local_11);
                             }
                         }
                         if (_local_12 == null)
@@ -744,7 +744,7 @@
             {
                 this._container.connection.send(new _Str_11301(k));
             }
-            this._container.roomSession.userDataManager._Str_17612(k);
+            this._container.roomSession.userDataManager.requestPetInfo(k);
         }
 
         private function _Str_22312(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
@@ -761,11 +761,11 @@
             {
                 _local_6._Str_3249 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
-            _local_6._Str_3246 = this._container.roomSession._Str_2781;
+            _local_6._Str_3246 = this._container.roomSession.isRoomController;
             _local_6._Str_3672 = this._container.roomSession._Str_3672;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6._Str_3529 = this._container.sessionDataManager._Str_2799;
-            _local_6._Str_5990 = this._container.roomSession._Str_2781;
+            _local_6._Str_5990 = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
             _local_8.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
             _local_6.badges = _local_8;
@@ -788,7 +788,7 @@
             {
                 _local_5._Str_3249 = _local_6.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
-            _local_5._Str_3246 = this._container.roomSession._Str_2781;
+            _local_5._Str_3246 = this._container.roomSession.isRoomController;
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_5._Str_3529 = this._container.sessionDataManager._Str_2799;
             var _local_7:Array = new Array();
@@ -836,7 +836,7 @@
                 _local_6.realName = this._container.sessionDataManager.realName;
                 _local_6._Str_4330 = this._container.sessionDataManager._Str_11198;
             }
-            _local_6._Str_3246 = this._container.roomSession._Str_2781;
+            _local_6._Str_3246 = this._container.roomSession.isRoomController;
             _local_6._Str_3672 = this._container.roomSession._Str_3672;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6._Str_3529 = this._container.sessionDataManager._Str_2799;
@@ -862,7 +862,7 @@
                     _local_6._Str_6701 = this._Str_23573(_local_6);
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6._Str_6394) + ", Kicked: ") + _local_6._Str_5990) + ", Banned: ") + _local_6._Str_6701));
                 }
-                _local_6._Str_3655 = this._container.sessionDataManager._Str_3655(_arg_4.name);
+                _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
                 _local_6._Str_3577 = this._container.sessionDataManager._Str_3577;
                 _local_10 = (!(this._container.sessionDataManager._Str_22031));
                 _local_11 = this._container.roomSession._Str_3827;
@@ -902,7 +902,7 @@
             _local_6.groupId = int(_arg_4._Str_4592);
             _local_6._Str_5235 = this._container.sessionDataManager._Str_17173(int(_arg_4._Str_4592));
             _local_6.groupName = _arg_4.groupName;
-            _local_6.badges = this._container.roomSession.userDataManager._Str_21323(_arg_4._Str_2394);
+            _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4._Str_2394);
             _local_6.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_6);
             var _local_8:Array = this._container.sessionDataManager._Str_18437(_arg_4._Str_2394);
@@ -1013,7 +1013,7 @@
             var _local_5:IRoomObjectModel = _local_4.getModel();
             if (_local_5.getString(RoomWidgetEnumItemExtradataParameter.INFOSTAND_EXTRA_PARAM) != null)
             {
-                _local_3._Str_2415 = _local_5.getString(RoomWidgetEnumItemExtradataParameter.INFOSTAND_EXTRA_PARAM);
+                _local_3.extraParam = _local_5.getString(RoomWidgetEnumItemExtradataParameter.INFOSTAND_EXTRA_PARAM);
             }
             var _local_6:int = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
             var _local_7:IStuffData = StuffDataFactory._Str_6438(_local_6);
@@ -1037,7 +1037,7 @@
                 {
                     if (k.category == RoomObjectCategoryEnum.CONST_20)
                     {
-                        _local_15 = this._container.sessionDataManager._Str_4531(_local_14);
+                        _local_15 = this._container.sessionDataManager.getWallItemData(_local_14);
                     }
                 }
                 if (_local_15 != null)
@@ -1062,19 +1062,19 @@
             var _local_9:int = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_EXPIRY_TIME);
             var _local_10:int = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_EXPIRTY_TIMESTAMP);
             _local_3.expiration = ((_local_9 < 0) ? _local_9 : Math.max(0, (_local_9 - ((getTimer() - _local_10) / 1000))));
-            var _local_11:ImageResult = this._container.roomEngine._Str_8562(_arg_2, k.id, k.category, new Vector3d(180), 64, null);
+            var _local_11:ImageResult = this._container.roomEngine.getRoomObjectImage(_arg_2, k.id, k.category, new Vector3d(180), 64, null);
             if ((((_local_11.data == null) || (_local_11.data.width > 140)) || (_local_11.data.height > 200)))
             {
-                _local_11 = this._container.roomEngine._Str_8562(_arg_2, k.id, k.category, new Vector3d(180), 1, null);
+                _local_11 = this._container.roomEngine.getRoomObjectImage(_arg_2, k.id, k.category, new Vector3d(180), 1, null);
             }
             _local_3.image = _local_11.data;
             _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.CONST_20);
-            _local_3._Str_2781 = this._container.roomSession._Str_2781;
+            _local_3.isRoomController = this._container.roomSession.isRoomController;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_3._Str_2799 = this._container.sessionDataManager._Str_2799;
             _local_3.ownerId = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_OWNER_ID);
             _local_3.ownerName = _local_5.getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME);
-            _local_3._Str_4172 = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_USAGE_POLICY);
+            _local_3.usagePolicy = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_USAGE_POLICY);
             var _local_12:int = int(_local_5.getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_GUILD_ID));
             if (_local_12 != 0)
             {
@@ -1086,13 +1086,13 @@
                 _local_3._Str_3233 = true;
             }
             this._container.events.dispatchEvent(_local_3);
-            if (((!(_local_3._Str_2415 == null)) && (_local_3._Str_2415.length > 0)))
+            if (((!(_local_3.extraParam == null)) && (_local_3.extraParam.length > 0)))
             {
                 _local_16 = -1;
                 _local_17 = "";
                 _local_18 = "";
                 _local_19 = "";
-                if (_local_3._Str_2415 == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
+                if (_local_3.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
                 {
                     _local_20 = this._musicController._Str_6500();
                     if (_local_20 != null)
@@ -1103,9 +1103,9 @@
                 }
                 else
                 {
-                    if (_local_3._Str_2415.indexOf(RoomWidgetEnumItemExtradataParameter.SONGDISK) == 0)
+                    if (_local_3.extraParam.indexOf(RoomWidgetEnumItemExtradataParameter.SONGDISK) == 0)
                     {
-                        _local_21 = _local_3._Str_2415.substr(RoomWidgetEnumItemExtradataParameter.SONGDISK.length);
+                        _local_21 = _local_3.extraParam.substr(RoomWidgetEnumItemExtradataParameter.SONGDISK.length);
                         _local_16 = parseInt(_local_21);
                         _local_19 = RoomWidgetSongUpdateEvent.DATA_RECEIVED;
                     }
@@ -1187,10 +1187,10 @@
             var _local_3:int = _local_2._Str_2394;
             var _local_4:BitmapData;
             var _local_5:* = (_local_3 == this._container.sessionDataManager.userId);
-            this._widget._Str_17133(_local_3, k.figure, k.activityPoints, k._Str_9690, _local_5);
+            this._widget._Str_17133(_local_3, k.figure, k.activityPoints, k.customInfo, _local_5);
         }
 
-        private function _Str_8034(k:RoomSessionPetInfoUpdateEvent):void
+        private function onPetInfo(k:RoomSessionPetInfoUpdateEvent):void
         {
             var _local_10:Boolean;
             var _local_11:RoomWidgetPetInfostandUpdateEvent;
@@ -1206,7 +1206,7 @@
                 return;
             }
             var _local_4:String = _local_3.figure;
-            var _local_5:int = this._Str_7863(_local_4);
+            var _local_5:int = this.getPetType(_local_4);
             var _local_6:int = this._Str_25548(_local_4);
             var _local_7:String;
             if (_local_5 == PetTypeEnum.MONSTERPLANT)
@@ -1224,7 +1224,7 @@
             var _local_9:BitmapData = (this._cachedPetImages.getValue(_local_8) as BitmapData);
             if (_local_9 == null)
             {
-                _local_9 = this._Str_2641(_local_4, _local_7);
+                _local_9 = this.getPetImage(_local_4, _local_7);
                 this._cachedPetImages.add(_local_8, _local_9);
             }
             if (((!(this._container == null)) && (!(this._container.events == null))))
@@ -1262,7 +1262,7 @@
                 }
                 else
                 {
-                    if ((((_local_12._Str_2781) || (this._container.sessionDataManager._Str_2799)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
+                    if ((((_local_12.isRoomController) || (this._container.sessionDataManager._Str_2799)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
                     {
                         _local_11._Str_5114 = true;
                     }
@@ -1278,7 +1278,7 @@
             var _local_3:BitmapData = (this._cachedPetImages.getValue(_local_2) as BitmapData);
             if (_local_3 == null)
             {
-                _local_3 = this._Str_2641(_local_2);
+                _local_3 = this.getPetImage(_local_2);
                 this._cachedPetImages.add(_local_2, _local_3);
             }
             if (((!(this._container == null)) && (!(this._container.events == null))))
@@ -1288,7 +1288,7 @@
             }
         }
 
-        private function _Str_14312(k:RoomSessionPetBreedingResultEvent):void
+        private function onPetBreedingResult(k:RoomSessionPetBreedingResultEvent):void
         {
             var _local_2:_Str_3801;
             var _local_3:_Str_3801;
@@ -1297,16 +1297,16 @@
             {
                 _local_2 = new _Str_3801();
                 _local_2.stuffId = k._Str_3713.stuffId;
-                _local_2._Str_2706 = k._Str_3713._Str_2706;
-                _local_2._Str_2716 = k._Str_3713._Str_2716;
+                _local_2.classId = k._Str_3713.classId;
+                _local_2.productCode = k._Str_3713.productCode;
                 _local_2.userId = k._Str_3713.userId;
                 _local_2.userName = k._Str_3713.userName;
                 _local_2.rarityLevel = k._Str_3713.rarityLevel;
                 _local_2._Str_4788 = k._Str_3713._Str_4788;
                 _local_3 = new _Str_3801();
                 _local_3.stuffId = k._Str_5840.stuffId;
-                _local_3._Str_2706 = k._Str_5840._Str_2706;
-                _local_3._Str_2716 = k._Str_5840._Str_2716;
+                _local_3.classId = k._Str_5840.classId;
+                _local_3.productCode = k._Str_5840.productCode;
                 _local_3.userId = k._Str_5840.userId;
                 _local_3.userName = k._Str_5840.userName;
                 _local_3.rarityLevel = k._Str_5840.rarityLevel;
@@ -1316,15 +1316,15 @@
             }
         }
 
-        private function _Str_12723(k:RoomSessionPetBreedingEvent):void
+        private function onPetBreedingEvent(k:RoomSessionPetBreedingEvent):void
         {
             var _local_2:_Str_3919;
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
                 _local_2 = new _Str_3919();
                 _local_2.state = k.state;
-                _local_2._Str_7440 = k._Str_7440;
-                _local_2._Str_7663 = k._Str_7663;
+                _local_2.ownPetId = k.ownPetId;
+                _local_2.otherPetId = k.otherPetId;
                 this._container.events.dispatchEvent(_local_2);
             }
         }
@@ -1352,14 +1352,14 @@
                 _local_3.figure = k.pet2.figure;
                 _local_3.owner = k.pet2.owner;
                 _local_4 = [];
-                for each (_local_5 in k._Str_10346)
+                for each (_local_5 in k.rarityCategories)
                 {
                     _local_7 = new _Str_5914();
                     _local_7._Str_12554 = _local_5._Str_12554;
                     _local_7.breeds = _local_5.breeds.concat();
                     _local_4.push(_local_7);
                 }
-                _local_6 = new _Str_4624(k._Str_12369, _local_2, _local_3, _local_4, k._Str_16867);
+                _local_6 = new _Str_4624(k.nestId, _local_2, _local_3, _local_4, k.resultPetTypeId);
                 this._container.events.dispatchEvent(_local_6);
             }
         }
@@ -1369,7 +1369,7 @@
             var _local_2:_Str_3962;
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
-                _local_2 = new _Str_3962(k._Str_12769, k.result);
+                _local_2 = new _Str_3962(k.breedingNestStuffId, k.result);
                 this._container.events.dispatchEvent(_local_2);
             }
         }
@@ -1388,7 +1388,7 @@
         {
             if (this._widget)
             {
-                this._widget._Str_22447(k._Str_2707, k._Str_3094, k.status, k._Str_14525);
+                this._widget._Str_22447(k.roomIndex, k.habboGroupId, k.status, k.habboGroupName);
             }
         }
 
@@ -1396,12 +1396,12 @@
         {
         }
 
-        private function _Str_2641(k:String, _arg_2:String=null):BitmapData
+        private function getPetImage(k:String, _arg_2:String=null):BitmapData
         {
             var _local_3:BitmapData;
             var _local_4:PetFigureData = new PetFigureData(k);
             var _local_5:uint;
-            var _local_6:ImageResult = this._container.roomEngine._Str_2641(_local_4.typeId, _local_4.paletteId, _local_4.color, new Vector3d(90), 64, null, true, _local_5, _local_4._Str_3542, _arg_2);
+            var _local_6:ImageResult = this._container.roomEngine.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color, new Vector3d(90), 64, null, true, _local_5, _local_4._Str_3542, _arg_2);
             if (_local_6 != null)
             {
                 _local_3 = _local_6.data;
@@ -1413,7 +1413,7 @@
             return _local_3;
         }
 
-        private function _Str_7863(k:String):int
+        private function getPetType(k:String):int
         {
             return this._Str_19610(k, 0);
         }
@@ -1423,7 +1423,7 @@
             return this._Str_19610(k, 1);
         }
 
-        private function _Str_8639(k:String):int
+        private function getPetColor(k:String):int
         {
             var _local_2:Array = k.split(" ");
             if (_local_2.length > 2)

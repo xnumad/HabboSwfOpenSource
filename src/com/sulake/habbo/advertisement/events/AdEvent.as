@@ -56,7 +56,7 @@
             return this._adWarningL;
         }
 
-        public function get _Str_25915():BitmapData
+        public function get adWarningR():BitmapData
         {
             return this._adWarningR;
         }

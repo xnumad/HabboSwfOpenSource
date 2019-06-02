@@ -30,23 +30,23 @@
             {
                 if ((k is ISelectableWindow))
                 {
-                    this._Str_2520((k as ISelectableWindow));
+                    this.setSelected((k as ISelectableWindow));
                 }
             }
             return super.update(k, _arg_2);
         }
 
-        public function get _Str_6010():uint
+        public function get numSelectables():uint
         {
             return numChildren;
         }
 
-        public function _Str_2657():ISelectableWindow
+        public function getSelected():ISelectableWindow
         {
             return this._Str_1007 as ISelectableWindow;
         }
 
-        public function _Str_2520(k:ISelectableWindow):void
+        public function setSelected(k:ISelectableWindow):void
         {
             var _local_2:ISelectableWindow;
             if (k != null)
@@ -55,7 +55,7 @@
                 {
                     if (this._Str_1007 != null)
                     {
-                        if (!this._Str_1007._Str_2205())
+                        if (!this._Str_1007.unselect())
                         {
                             return;
                         }
@@ -87,53 +87,53 @@
             }
         }
 
-        public function _Str_13279(k:ISelectableWindow):ISelectableWindow
+        public function addSelectable(k:ISelectableWindow):ISelectableWindow
         {
             var _local_2:ISelectableWindow = ISelectableWindow(addChild(k));
             return _local_2;
         }
 
-        public function _Str_16835(k:ISelectableWindow, _arg_2:int):ISelectableWindow
+        public function addSelectableAt(k:ISelectableWindow, _arg_2:int):ISelectableWindow
         {
             var _local_3:ISelectableWindow = ISelectableWindow(addChildAt(k, _arg_2));
             return _local_3;
         }
 
-        public function _Str_5066(k:int):ISelectableWindow
+        public function getSelectableAt(k:int):ISelectableWindow
         {
             return getChildAt(k) as ISelectableWindow;
         }
 
-        public function _Str_21373(k:uint):ISelectableWindow
+        public function getSelectableByID(k:uint):ISelectableWindow
         {
             return getChildByID(k) as ISelectableWindow;
         }
 
-        public function _Str_24764(k:String):ISelectableWindow
+        public function getSelectableByTag(k:String):ISelectableWindow
         {
-            return _Str_6316(k) as ISelectableWindow;
+            return getChildByTag(k) as ISelectableWindow;
         }
 
-        public function _Str_5050(k:String):ISelectableWindow
+        public function getSelectableByName(k:String):ISelectableWindow
         {
             return getChildByName(k) as ISelectableWindow;
         }
 
-        public function _Str_8283(k:ISelectableWindow):int
+        public function getSelectableIndex(k:ISelectableWindow):int
         {
             return getChildIndex(k);
         }
 
-        public function _Str_10845(k:ISelectableWindow):ISelectableWindow
+        public function removeSelectable(k:ISelectableWindow):ISelectableWindow
         {
             var _local_2:int = getChildIndex(k);
             if (_local_2 > -1)
             {
                 if (k == this._Str_1007)
                 {
-                    if (this._Str_6010 > 1)
+                    if (this.numSelectables > 1)
                     {
-                        this._Str_2520(this._Str_5066(((_local_2 == 0) ? 1 : 0)));
+                        this.setSelected(this.getSelectableAt(((_local_2 == 0) ? 1 : 0)));
                     }
                     else
                     {

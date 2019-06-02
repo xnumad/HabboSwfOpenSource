@@ -7,7 +7,7 @@
     import com.sulake.habbo.room.object.visualization.room.rasterizer.animated.PlaneVisualizationAnimationLayer;
     import com.sulake.room.object.visualization.utils.IGraphicAssetCollection;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneVisualization 
     {
@@ -41,7 +41,7 @@
             return this._geometry;
         }
 
-        public function get _Str_20530():Boolean
+        public function get hasAnimationLayers():Boolean
         {
             return this._hasAnimationLayers;
         }
@@ -117,7 +117,7 @@
             this._isCached = false;
         }
 
-        public function _Str_21464(k:int, _arg_2:PlaneMaterial, _arg_3:uint, _arg_4:int, _arg_5:int=0):Boolean
+        public function setLayer(k:int, _arg_2:PlaneMaterial, _arg_3:uint, _arg_4:int, _arg_5:int=0):Boolean
         {
             if (((k < 0) || (k > this._layers.length)))
             {
@@ -134,7 +134,7 @@
             return true;
         }
 
-        public function _Str_23489(k:int, _arg_2:XML, _arg_3:IGraphicAssetCollection):Boolean
+        public function setAnimationLayer(k:int, _arg_2:XML, _arg_3:IGraphicAssetCollection):Boolean
         {
             if (((k < 0) || (k > this._layers.length)))
             {
@@ -157,7 +157,7 @@
             return this._layers;
         }
 
-        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3D, useTexture:Boolean, offsetX:int=0, offsetY:int=0, maxX:int=0, maxY:int=0, dimensionX:Number=0, dimensionY:Number=0, timeSinceStartMs:int=0):BitmapData
+        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3d, useTexture:Boolean, offsetX:int=0, offsetY:int=0, maxX:int=0, maxY:int=0, dimensionX:Number=0, dimensionY:Number=0, timeSinceStartMs:int=0):BitmapData
         {
             var layer:PlaneVisualizationLayer;
             var animationLayer:PlaneVisualizationAnimationLayer;
@@ -179,7 +179,7 @@
                 {
                     if ((((this._cachedBitmapData.width == width) && (this._cachedBitmapData.height == height)) && (Vector3d.isEqual(this._cachedBitmapNormal, normal))))
                     {
-                        if (!this._Str_20530)
+                        if (!this.hasAnimationLayers)
                         {
                             if (canvas != null)
                             {

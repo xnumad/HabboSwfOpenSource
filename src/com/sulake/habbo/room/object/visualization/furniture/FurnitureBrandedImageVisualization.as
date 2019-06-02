@@ -21,15 +21,15 @@
         protected var offsetX:int;
         protected var offsetY:int;
         protected var offsetZ:int;
-        private var _Str_4571:String;
+        private var _dynamicAssetName:String;
 
 
         override public function dispose():void
         {
-            if (((this._Str_4571) && (assetCollection)))
+            if (((this._dynamicAssetName) && (assetCollection)))
             {
-                assetCollection.disposeAsset(this._Str_4571);
-                this._Str_4571 = null;
+                assetCollection.disposeAsset(this._dynamicAssetName);
+                this._dynamicAssetName = null;
             }
             super.dispose();
             this._Str_2991 = null;
@@ -272,11 +272,11 @@
                 default:
                     Logger.log(("could not handle unknown state " + _local_3));
             }
-            if (this._Str_4571)
+            if (this._dynamicAssetName)
             {
-                assetCollection.disposeAsset(this._Str_4571);
+                assetCollection.disposeAsset(this._dynamicAssetName);
             }
-            this._Str_4571 = _local_5;
+            this._dynamicAssetName = _local_5;
             var _local_14:Boolean = assetCollection.addAsset(_local_5, _local_9, true, _local_10, _local_11, _local_12, _local_13);
             if (!_local_14)
             {

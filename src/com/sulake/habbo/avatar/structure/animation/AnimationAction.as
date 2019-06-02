@@ -6,7 +6,7 @@
 
     public class AnimationAction 
     {
-        public static const _Str_1934:Point = new Point(0, 0);
+        public static const DEFAULT_OFFSET:Point = new Point(0, 0);
 
         private var _id:String;
         private var _actionParts:Dictionary;
@@ -106,7 +106,7 @@
                     _local_7 = _local_8[_arg_3];
                 }
             }
-            return (_local_7 != null) ? _local_7 : _Str_1934;
+            return (_local_7 != null) ? _local_7 : DEFAULT_OFFSET;
         }
     }
 }

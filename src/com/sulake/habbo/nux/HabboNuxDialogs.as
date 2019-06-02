@@ -82,10 +82,10 @@
                 _Str_2422 = k;
             }, false, [{
                 "type":RoomSessionEvent.STARTED,
-                "callback":this._Str_6789
+                "callback":this.onRoomSessionEvent
             }, {
                 "type":RoomSessionEvent.ENDED,
-                "callback":this._Str_6789
+                "callback":this.onRoomSessionEvent
             }])]));
         }
 
@@ -176,17 +176,17 @@
         private function _Str_22466(k:_Str_8566):void
         {
             var _local_2:NewUserExperienceGiftOfferParser = k._Str_2273();
-            this._Str_24881(_local_2._Str_25221);
+            this._Str_24881(_local_2.giftOptions);
         }
 
-        private function _Str_6789(k:RoomSessionEvent):void
+        private function onRoomSessionEvent(k:RoomSessionEvent):void
         {
             var _local_2:uint;
             if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318._Str_6986))))
             {
                 return;
             }
-            if ((((k.type == RoomSessionEvent.STARTED) && (k.session)) && (k.session.roomId == this._Str_2272._Str_3374)))
+            if ((((k.type == RoomSessionEvent.STARTED) && (k.session)) && (k.session.roomId == this._Str_2272.homeRoomId)))
             {
                 _local_2 = (getInteger("nux.noob.lobby.popup.delay", 70) * 1000);
                 this._Str_4439 = new Timer(_local_2, 1);

@@ -14,7 +14,7 @@
             return this._id;
         }
 
-        public function get _Str_18505():String
+        public function get itemData():String
         {
             return this._Str_9228;
         }

@@ -22,16 +22,16 @@
             return this._location;
         }
 
-        public function get _Str_1604():Vector3D
+        public function get transformedLocation():Vector3D
         {
             return this._transformedLocation;
         }
 
-        public function _Str_1101(k:Matrix4x4):void
+        public function applyTransform(k:Matrix4x4):void
         {
             if (this._needsTransformation)
             {
-                this._transformedLocation = k._Str_2186(this._location);
+                this._transformedLocation = k.vectorMultiplication(this._location);
             }
         }
     }

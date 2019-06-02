@@ -75,7 +75,7 @@
             var _local_2:IItemListWindow = IItemListWindow(k.findChildByName("evidence_list"));
             this._roomHeaderPrototype = (_local_2.getListItemAt(0) as IWindowContainer);
             this._contentLinePrototype = (_local_2.getListItemAt(1) as IWindowContainer);
-            _local_2._Str_2659();
+            _local_2.removeListItems();
             this._resizeTimer = new Timer(1000, 1);
             this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
             if (!this._embedded)
@@ -153,7 +153,7 @@
         {
             var k:ChatRecordData;
             this._list.autoArrangeItems = false;
-            this._list._Str_2659();
+            this._list.removeListItems();
             for each (k in this._rooms)
             {
                 this._Str_23244(k);
@@ -173,9 +173,9 @@
             {
                 _local_5.visible = false;
             }
-            switch (k._Str_24276)
+            switch (k.recordType)
             {
-                case ChatRecordData._Str_16239:
+                case ChatRecordData.TYPE_ROOM_CHAT:
                     if (k.roomId > 0)
                     {
                         _local_4.caption = "Room tool";
@@ -200,10 +200,10 @@
                         }
                     }
                     break;
-                case ChatRecordData._Str_16666:
+                case ChatRecordData.TYPE_IM_SESSION:
                     _local_3.caption = "IM session";
                     break;
-                case ChatRecordData._Str_16166:
+                case ChatRecordData.TYPE_DISCUSSION_THREAD:
                     _local_3.caption = "Forum thread";
                     _local_5.visible = true;
                     _local_5.caption = "Open thread";
@@ -211,7 +211,7 @@
                     _local_4.caption = "Delete";
                     new HideDiscussionThread(this._main, this, _local_4, k.groupId, k.threadId);
                     break;
-                case ChatRecordData._Str_16975:
+                case ChatRecordData.TYPE_DISCUSSION_MESSAGE:
                     _local_3.caption = "Forum message";
                     _local_5.visible = true;
                     _local_5.caption = "Open Message";
@@ -448,7 +448,7 @@
         {
             var k:IWindowContainer = IWindowContainer(this._list.parent);
             var _local_2:IWindow = (k.getChildByName("scroller") as IWindow);
-            var _local_3:* = (this._list._Str_2614.height > this._list.height);
+            var _local_3:* = (this._list.visibleRegion.height > this._list.height);
             var _local_4:int = 22;
             if (_local_2.visible)
             {
@@ -482,7 +482,7 @@
             this._issue = null;
             if (this._list != null)
             {
-                this._list._Str_2659();
+                this._list.removeListItems();
                 this._list.dispose();
                 this._list = null;
             }

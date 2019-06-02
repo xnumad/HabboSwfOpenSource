@@ -101,7 +101,7 @@
         private function _Str_23638(k:_Str_8053):void
         {
             this._widget.destroy();
-            if (k._Str_2273()._Str_7838())
+            if (k._Str_2273().isOk())
             {
                 this._container.windowManager.alert("${navigator.thumbnail.camera.title}", "${navigator.thumbnail.camera.success}", _Str_3023.BUTTON_OK, null);
             }

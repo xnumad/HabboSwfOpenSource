@@ -89,7 +89,7 @@
             var _local_3:Number = Math.min(1, (Number(k) / _arg_2));
             if (_local_3 > 0)
             {
-                this._window._Str_8181(true, [ACHIEVED_LEFT, ACHIEVED_MID]);
+                this._window.setVisibleChildren(true, [ACHIEVED_LEFT, ACHIEVED_MID]);
                 this._window.findChildByName(ACHIEVED_RIGHT).visible = (_local_3 == 1);
             }
             this._window.findChildByName(ACHIEVED_MID).width = (this._progressSteps * _local_3);
@@ -131,7 +131,7 @@
         private function _Str_10233():void
         {
             this._window.center();
-            this._window._Str_8181(false, [ACHIEVED_LEFT, ACHIEVED_MID, ACHIEVED_RIGHT]);
+            this._window.setVisibleChildren(false, [ACHIEVED_LEFT, ACHIEVED_MID, ACHIEVED_RIGHT]);
         }
 
         public function close():void

@@ -4,8 +4,8 @@
 
     public class PlaneTextureBitmap 
     {
-        public static const _Str_3268:Number = -1;
-        public static const _Str_3271:Number = 1;
+        public static const MIN_NORMAL_COORDINATE_VALUE:Number = -1;
+        public static const MAX_NORMAL_COORDINATE_VALUE:Number = 1;
 
         private var _bitmap:BitmapData = null;
         private var _normalMinX:Number = -1;

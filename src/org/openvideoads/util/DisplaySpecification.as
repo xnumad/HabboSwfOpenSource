@@ -8,7 +8,7 @@
         public static const NONLINEAR:String = "nonLinear";
 
         protected var _Str_1069:String = null;
-        protected var _Str_1720:int = 0;
+        protected var _width:int = 0;
         protected var _height:int = 0;
         protected var _Str_19252:Boolean = false;
         protected var _Str_11897:Boolean = false;
@@ -87,12 +87,12 @@
 
         public function set width(k:int):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:int):void

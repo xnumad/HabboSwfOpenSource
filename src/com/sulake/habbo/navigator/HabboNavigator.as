@@ -353,7 +353,7 @@
             super.dispose();
         }
 
-        public function _Str_11727():void
+        public function startRoomCreation():void
         {
             this._roomCreateViewCtrl.show();
         }
@@ -363,32 +363,32 @@
             this.send(new _Str_3570(k, false, true));
         }
 
-        public function _Str_13089(k:int):void
+        public function removeRoomRights(k:int):void
         {
             this.send(new _Str_10878(k));
         }
 
-        public function _Str_12571(k:int):Boolean
+        public function hasRoomRightsButIsNotOwner(k:int):Boolean
         {
             var _local_2:IRoomSession;
             if (this._roomSessionManager)
             {
                 _local_2 = this._roomSessionManager.getSession(k);
-                return (_local_2.roomControllerLevel == RoomControllerLevel.GUEST) && (!(_local_2._Str_2781));
+                return (_local_2.roomControllerLevel == RoomControllerLevel.GUEST) && (!(_local_2.isRoomController));
             }
             return false;
         }
 
-        public function _Str_15621(k:int, _arg_2:Boolean):void
+        public function goToRoomNetwork(k:int, _arg_2:Boolean):void
         {
             var _local_3:int;
             if (this._roomSessionManager)
             {
                 this._roomInfoViewCtrl.close();
                 _local_3 = 0;
-                if (((_arg_2) && (this._data._Str_3374 > 0)))
+                if (((_arg_2) && (this._data.homeRoomId > 0)))
                 {
-                    _local_3 = this._data._Str_3374;
+                    _local_3 = this._data.homeRoomId;
                 }
                 this._roomSessionManager._Str_21545(k, _local_3);
             }
@@ -405,19 +405,19 @@
                     this._mainViewCtrl.close();
                 }
                 this._roomSessionManager._Str_10094(k, _arg_3);
-                if (this.tabs._Str_2657())
+                if (this.tabs.getSelected())
                 {
                     _local_5 = ((_arg_4 > -1) ? (_arg_4 + 1) : 0);
-                    switch (this.tabs._Str_2657().id)
+                    switch (this.tabs.getSelected().id)
                     {
                         case Tabs._Str_6250:
-                            this._Str_4051(this.tabs._Str_2657()._Str_5252._Str_5960, "go.official", String(k), _local_5);
+                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.official", String(k), _local_5);
                             return;
                         case Tabs._Str_5203:
-                            this._Str_4051(this.tabs._Str_2657()._Str_5252._Str_5960, "go.me", String(k), _local_5);
+                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.me", String(k), _local_5);
                             return;
                         case Tabs._Str_3866:
-                            this._Str_4051(this.tabs._Str_2657()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
+                            this._Str_4051(this.tabs.getSelected()._Str_5252._Str_5960, "go.rooms", String(k), _local_5);
                             return;
                         case Tabs._Str_6209:
                             this._Str_4051("Events", "go.events", String(k), _local_5);
@@ -432,12 +432,12 @@
 
         public function goToHomeRoom():Boolean
         {
-            if (this._data._Str_3374 < 1)
+            if (this._data.homeRoomId < 1)
             {
                 Logger.log("No home room set while attempting to go to home room");
                 return false;
             }
-            this.goToRoom(this._data._Str_3374, true);
+            this.goToRoom(this._data.homeRoomId, true);
             return true;
         }
 
@@ -577,15 +577,15 @@
                 switch (k._Str_3378)
                 {
                     case HabboToolbarIconEnum.ROOMINFO:
-                        this._Str_13422();
+                        this.toggleRoomInfoVisibility();
                         return;
                     case HabboToolbarIconEnum.NAVIGATOR_ME_TAB:
-                        this._Str_8024();
+                        this.showOwnRooms();
                         return;
                     case HabboToolbarIconEnum.GAMES:
                         if (getBoolean("game.center.enabled"))
                         {
-                            this._Str_7852();
+                            this.closeNavigator();
                         }
                         return;
                     case HabboToolbarIconEnum.HOME:
@@ -595,7 +595,7 @@
             }
         }
 
-        public function _Str_13422():void
+        public function toggleRoomInfoVisibility():void
         {
             if (this._roomCreateViewCtrl)
             {
@@ -618,7 +618,7 @@
             this._mainViewCtrl.mainWindow.activate();
         }
 
-        public function _Str_12234(k:String):void
+        public function performTextSearch(k:String):void
         {
             if (this._mainViewCtrl == null)
             {
@@ -630,7 +630,7 @@
             this._mainViewCtrl._Str_6414._Str_17634._Str_2497(k);
         }
 
-        public function _Str_11462(k:int, _arg_2:int):void
+        public function performCompetitionRoomsSearch(k:int, _arg_2:int):void
         {
             if (((this._mainViewCtrl == null) || ((!(this._data == null)) && (this._data._Str_19838()))))
             {
@@ -653,7 +653,7 @@
             this._mainViewCtrl._Str_6414._Str_17634._Str_2497("");
         }
 
-        public function _Str_8024():void
+        public function showOwnRooms():void
         {
             if (this._mainViewCtrl == null)
             {
@@ -709,11 +709,11 @@
             return this._tracking;
         }
 
-        public function _Str_6822(k:Point=null):void
+        public function openNavigator(k:Point=null):void
         {
         }
 
-        public function _Str_7852():void
+        public function closeNavigator():void
         {
             this._mainViewCtrl.close();
         }
@@ -724,9 +724,9 @@
             this._roomInfoViewCtrl.close();
         }
 
-        public function get _Str_3374():int
+        public function get homeRoomId():int
         {
-            return (this._data) ? this._data._Str_3374 : -1;
+            return (this._data) ? this._data.homeRoomId : -1;
         }
 
         public function get _Str_25806():Boolean
@@ -793,7 +793,7 @@
                 case "search":
                     if (_local_2.length > 2)
                     {
-                        this._Str_12234(_local_2[2]);
+                        this.performTextSearch(_local_2[2]);
                     }
                     return;
                 case "tag":
@@ -806,7 +806,7 @@
                     if (_local_2.length > 2)
                     {
                         this.tabs._Str_13005(Tabs._Str_20758(_local_2[2], Tabs._Str_3866));
-                        this._Str_6822(null);
+                        this.openNavigator(null);
                     }
                     return;
                 case "report":
@@ -836,7 +836,7 @@
             }
         }
 
-        public function _Str_9718(k:Point):void
+        public function showToolbarHover(k:Point):void
         {
             if (!this._toolbarHover)
             {
@@ -845,7 +845,7 @@
             this._toolbarHover.show(k);
         }
 
-        public function _Str_12014(k:Boolean):void
+        public function hideToolbarHover(k:Boolean):void
         {
             if (!this._toolbarHover)
             {
@@ -875,7 +875,7 @@
             return false;
         }
 
-        public function _Str_14507():Boolean
+        public function canRateRoom():Boolean
         {
             if (!this.data)
             {

@@ -81,7 +81,7 @@
         {
             var _local_2:LoadGameMessageParser = k._Str_2273();
             HabboGamesCom.log(((("[BaseJump] load game " + _local_2.gameTypeId) + " url:") + _local_2.url));
-            this._gameManager.loadGameClient(_local_2.gameTypeId, _local_2._Str_12486, _local_2.url, _local_2.quality, _local_2.scaleMode, _local_2.frameRate, _local_2._Str_22265, _local_2._Str_22813, _local_2.params);
+            this._gameManager.loadGameClient(_local_2.gameTypeId, _local_2._Str_12486, _local_2.url, _local_2.quality, _local_2.scaleMode, _local_2.frameRate, _local_2.minMajorVersion, _local_2.minMinorVersion, _local_2.params);
         }
 
         private function _Str_25712(k:LoadGameUrlMessageEvent):void
@@ -128,12 +128,12 @@
         {
             var _local_3:_Str_5486;
             var _local_2:GameListMessageParser = (k.parser as GameListMessageParser);
-            GameConfigurations._Str_22766();
+            GameConfigurations.resetGames();
             for each (_local_3 in _local_2.games)
             {
-                GameConfigurations._Str_24586(new GameConfiguration(_local_3._Str_5333, _local_3._Str_9827, _local_3.bgColor, _local_3.textColor, _local_3._Str_15765, _local_3._Str_14248));
+                GameConfigurations.addGame(new GameConfiguration(_local_3.gameId, _local_3.gameNameId, _local_3.bgColor, _local_3.textColor, _local_3.assetUrl, _local_3.supportUrl));
             }
-            GameConfigurations._Str_25326(this._gameManager.events);
+            GameConfigurations.setGameListInitialized(this._gameManager.events);
         }
 
         private function _Str_25513(k:GameAchievementsMessageEvent):void
@@ -142,18 +142,18 @@
             var _local_4:int;
             var _local_5:String;
             var _local_2:GameAchievementsMessageParser = (k.parser as GameAchievementsMessageParser);
-            GameConfigurations._Str_23671();
+            GameConfigurations.resetBadges();
             for each (_local_3 in _local_2.achievements)
             {
                 _local_4 = 1;
                 while (_local_4 <= _local_3.levels)
                 {
                     _local_5 = (("ACH_" + _local_3._Str_25317) + _local_4);
-                    GameConfigurations._Str_25778(_local_3.gameTypeId, _local_5);
+                    GameConfigurations.addGameAchievementBadge(_local_3.gameTypeId, _local_5);
                     _local_4++;
                 }
             }
-            GameConfigurations._Str_24939(this._gameManager.events);
+            GameConfigurations.setGameAchievementsInitialized(this._gameManager.events);
         }
     }
 }

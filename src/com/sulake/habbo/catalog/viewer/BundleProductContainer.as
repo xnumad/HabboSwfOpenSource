@@ -55,7 +55,7 @@
             var _local_3:IWindowContainer = (catalog.windowManager.buildFromXML(_arg_2) as IWindowContainer);
             for each (_local_4 in offer.productContainer.products)
             {
-                if (_local_4._Str_2588 == ProductTypeEnum.BADGE)
+                if (_local_4.productType == ProductTypeEnum.BADGE)
                 {
                 }
                 else
@@ -68,7 +68,7 @@
                     }
                     k._Str_2816(_local_5);
                     _local_4.view = _local_5;
-                    _local_7 = _local_4._Str_13474(this);
+                    _local_7 = _local_4.initIcon(this);
                     if (_local_7 != null)
                     {
                         _local_7.dispose();

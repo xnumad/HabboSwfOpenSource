@@ -20,7 +20,7 @@
             return this._Str_3770;
         }
 
-        public function get _Str_18601():int
+        public function get delayMilliSeconds():int
         {
             return this._Str_11901;
         }

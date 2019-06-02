@@ -23,19 +23,19 @@
             this._model = k;
             this._widget = (k.avatarEditor.view._Str_25244().widget as _Str_4709);
             this._roomPreviewer = this._widget._Str_26451;
-            this._roomPreviewer._Str_11035(false, false);
+            this._roomPreviewer.updateRoomWallsAndFloorVisibility(false, false);
         }
 
         public function update(k:String, _arg_2:int=0, _arg_3:int=4):void
         {
             var _local_4:IAvatarImage;
             this._figureString = k;
-            if (this._roomPreviewer._Str_2949)
+            if (this._roomPreviewer.isRoomEngineReady)
             {
-                this._roomPreviewer._Str_18705(k, _arg_2);
-                this._roomPreviewer._Str_25062(_arg_3, _arg_3);
-                this._roomPreviewer._Str_9695(true);
-                this._roomPreviewer._Str_22348();
+                this._roomPreviewer.addAvatarIntoRoom(k, _arg_2);
+                this._roomPreviewer.updateAvatarDirection(_arg_3, _arg_3);
+                this._roomPreviewer.updatePreviewRoomView(true);
+                this._roomPreviewer.updateRoomEngine();
             }
             else
             {

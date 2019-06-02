@@ -49,7 +49,7 @@
             return this._position;
         }
 
-        public function get _Str_20736():String
+        public function get itemName():String
         {
             return this._Str_10488;
         }
@@ -79,7 +79,7 @@
             return this._type;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._Str_2570;
         }

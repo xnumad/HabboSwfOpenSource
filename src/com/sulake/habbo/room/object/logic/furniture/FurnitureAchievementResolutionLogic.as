@@ -10,12 +10,12 @@
 
     public class FurnitureAchievementResolutionLogic extends FurnitureBadgeDisplayLogic 
     {
-        public static const _Str_18949:int = 0;
-        public static const _Str_18523:int = 1;
-        public static const _Str_17739:int = 2;
-        public static const _Str_18385:int = 3;
-        private static const _Str_16199:String = "ACH_0";
-        private static const _Str_16076:Number = 2;
+        public static const STATE_RESOLUTION_NOT_STARTED:int = 0;
+        public static const STATE_RESOLUTION_IN_PROGRESS:int = 1;
+        public static const STATE_RESOLUTION_ACHIEVED:int = 2;
+        public static const STATE_RESOLUTION_FAILED:int = 3;
+        private static const ACH_NOT_SET:String = "ACH_0";
+        private static const BADGE_VISIBLE_IN_STATE:Number = 2;
 
 
         override public function getEventTypes():Array
@@ -33,7 +33,7 @@
             {
                 if (_local_2.assetName != "loading_icon")
                 {
-                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_BADGE_VISIBLE_IN_STATE, _Str_16076);
+                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_BADGE_VISIBLE_IN_STATE, BADGE_VISIBLE_IN_STATE);
                 }
             }
             var _local_3:RoomObjectSelectedMessage = (k as RoomObjectSelectedMessage);
@@ -58,14 +58,14 @@
                 k = null;
                 switch (object.getState(0))
                 {
-                    case _Str_18949:
-                    case _Str_18523:
+                    case STATE_RESOLUTION_NOT_STARTED:
+                    case STATE_RESOLUTION_IN_PROGRESS:
                         k = new RoomObjectWidgetRequestEvent(RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_OPEN, object);
                         break;
-                    case _Str_17739:
+                    case STATE_RESOLUTION_ACHIEVED:
                         k = new RoomObjectWidgetRequestEvent(RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_ENGRAVING, object);
                         break;
-                    case _Str_18385:
+                    case STATE_RESOLUTION_FAILED:
                         k = new RoomObjectWidgetRequestEvent(RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_FAILED, object);
                         break;
                 }
@@ -78,7 +78,7 @@
 
         override protected function updateBadge(k:String):void
         {
-            if (k != _Str_16199)
+            if (k != ACH_NOT_SET)
             {
                 super.updateBadge(k);
             }

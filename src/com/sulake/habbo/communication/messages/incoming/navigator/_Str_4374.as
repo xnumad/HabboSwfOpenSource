@@ -20,12 +20,12 @@
             }
         }
 
-        public function get _Str_7578():int
+        public function get goalId():int
         {
             return this._Str_5696;
         }
 
-        public function get _Str_3544():int
+        public function get pageIndex():int
         {
             return this._Str_4347;
         }

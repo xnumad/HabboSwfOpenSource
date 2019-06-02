@@ -39,12 +39,12 @@
             return this._Str_7388;
         }
 
-        public function get _Str_2588():String
+        public function get productType():String
         {
             return this._Str_3032;
         }
 
-        public function get _Str_2941():int
+        public function get productClassId():int
         {
             return this._Str_4261;
         }

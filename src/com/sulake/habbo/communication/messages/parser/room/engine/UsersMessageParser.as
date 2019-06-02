@@ -15,7 +15,7 @@
             super();
         }
 
-        public static function _Str_26109(k:String):String
+        public static function convertOldPetFigure(k:String):String
         {
             var _local_8:int;
             var _local_9:int;
@@ -53,14 +53,14 @@
             return true;
         }
 
-        public function _Str_12722():int
+        public function getUserCount():int
         {
             return this._users.length;
         }
 
         public function _Str_5126(k:int):_Str_3548
         {
-            if (((k < 0) || (k >= this._Str_12722())))
+            if (((k < 0) || (k >= this.getUserCount())))
             {
                 return null;
             }
@@ -116,14 +116,14 @@
                 {
                     _local_14._Str_2394 = _local_4;
                     _local_14._Str_2908 = RoomObjectTypeEnum.HABBO;
-                    _local_14._Str_3344 = this._Str_19853(k.readString());
+                    _local_14._Str_3344 = this.resolveSex(k.readString());
                     _local_14._Str_4592 = ("" + k.readInteger());
                     _local_14._Str_7043 = k.readInteger();
                     _local_14.groupName = k.readString();
                     _local_15 = k.readString();
                     if (_local_15 != "")
                     {
-                        _local_7 = this._Str_24582(_local_15, _local_7, _local_14._Str_3344);
+                        _local_7 = this.convertSwimFigure(_local_15, _local_7, _local_14._Str_3344);
                     }
                     _local_14.figure = _local_7;
                     _local_14.activityPoints = k.readInteger();
@@ -137,15 +137,15 @@
                         _local_14.figure = _local_7;
                         _local_14._Str_2394 = _local_4;
                         _local_14._Str_3882 = k.readInteger().toString();
-                        _local_14._Str_2481 = k.readInteger();
+                        _local_14.ownerId = k.readInteger();
                         _local_14.ownerName = k.readString();
                         _local_14.rarityLevel = k.readInteger();
                         _local_14._Str_4799 = k.readBoolean();
-                        _local_14._Str_2886 = k.readBoolean();
-                        _local_14._Str_2934 = k.readBoolean();
-                        _local_14._Str_3068 = k.readBoolean();
-                        _local_14._Str_2898 = k.readBoolean();
-                        _local_14._Str_2921 = k.readBoolean();
+                        _local_14.isRiding = k.readBoolean();
+                        _local_14.canBreed = k.readBoolean();
+                        _local_14.canHarvest = k.readBoolean();
+                        _local_14.canRevive = k.readBoolean();
+                        _local_14.hasBreedingPermission = k.readBoolean();
                         _local_14._Str_3897 = k.readInteger();
                         _local_14._Str_16593 = k.readString();
                     }
@@ -171,9 +171,9 @@
                             {
                                 _local_14._Str_2908 = RoomObjectTypeEnum.RENTABLE_BOT;
                                 _local_14._Str_2394 = _local_4;
-                                _local_14._Str_3344 = this._Str_19853(k.readString());
+                                _local_14._Str_3344 = this.resolveSex(k.readString());
                                 _local_14.figure = _local_7;
-                                _local_14._Str_2481 = k.readInteger();
+                                _local_14.ownerId = k.readInteger();
                                 _local_14.ownerName = k.readString();
                                 _local_16 = k.readInteger();
                                 if (_local_16 > 0)
@@ -196,7 +196,7 @@
             return true;
         }
 
-        private function _Str_19853(k:String):String
+        private function resolveSex(k:String):String
         {
             if (k.substr(0, 1).toLowerCase() == "f")
             {
@@ -205,7 +205,7 @@
             return _Str_3548.M;
         }
 
-        private function _Str_24582(k:String, _arg_2:String, _arg_3:String):String
+        private function convertSwimFigure(k:String, _arg_2:String, _arg_3:String):String
         {
             var _local_13:String;
             var _local_14:Array;

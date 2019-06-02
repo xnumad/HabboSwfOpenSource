@@ -11,7 +11,7 @@
     import com.sulake.room.object.visualization.IRoomObjectSprite;
     import com.sulake.room.object.enum.AlphaTolerance;
     import com.sulake.room.object.enum.RoomObjectSpriteType;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.room.utils.Vector3d;
@@ -28,84 +28,84 @@
 
     public class RoomVisualization extends RoomObjectSpriteVisualization implements IPlaneVisualization 
     {
-        public static const _Str_18544:int = 0xFFFFFF;
-        public static const _Str_18640:int = 0xDDDDDD;
-        public static const _Str_16664:int = 0xBBBBBB;
-        private static const _Str_14503:int = 0xFFFFFF;
-        private static const _Str_15851:int = 0xCCCCCC;
-        private static const _Str_13715:int = 0x999999;
-        private static const _Str_14868:int = 0x999999;
-        public static const _Str_17403:int = 0xFFFFFF;
-        public static const _Str_16113:int = 0xCCCCCC;
+        public static const FLOOR_COLOR_LEFT:int = 0xFFFFFF;
+        public static const FLOOR_COLOR_RIGHT:int = 0xDDDDDD;
+        public static const WALL_COLOR_TOP:int = 0xBBBBBB;
+        private static const WALL_COLOR_SIDE:int = 0xFFFFFF;
+        private static const WALL_COLOR_BOTTOM:int = 0xCCCCCC;
+        private static const WALL_COLOR_BORDER:int = 0x999999;
+        private static const LANDSCAPE_COLOR_TOP:int = 0x999999;
+        public static const LANDSCAPE_COLOR_SIDE:int = 0xFFFFFF;
+        public static const LANDSCAPE_COLOR_BOTTOM:int = 0xCCCCCC;
         public static const _Str_18370:int = 0x999999;
-        private static const _Str_8621:Number = 1000;
+        private static const ROOM_DEPTH_OFFSET:Number = 1000;
 
         private const _Str_9654:int = 250;
 
-        protected var _Str_594:RoomVisualizationData = null;
-        private var _Str_2430:AssetLibrary = null;
+        protected var _data:RoomVisualizationData = null;
+        private var _assetLibrary:AssetLibrary = null;
         private var _roomPlaneParser:RoomPlaneParser = null;
-        private var _Str_2540:Array;
-        private var _Str_8555:Boolean = false;
-        private var _Str_4864:Array;
-        private var _Str_6648:Array;
-        private var _Str_7253:Rectangle = null;
+        private var _planes:Array;
+        private var _planesInitialized:Boolean = false;
+        private var _visiblePlanes:Array;
+        private var _visiblePlaneSpriteNumbers:Array;
+        private var _boundingRectangle:Rectangle = null;
         private var _roomPlaneBitmapMaskParser:RoomPlaneBitmapMaskParser = null;
-        private var _Str_4577:String = null;
-        private var _Str_4489:String = null;
-        private var _Str_4496:String = null;
-        private var _Str_4215:Number = NaN;
-        private var _Str_4397:Number = NaN;
-        private var _Str_19240:Number = NaN;
-        private var _Str_16710:String = null;
-        private var _Str_4479:uint = 0xFFFFFF;
-        private var _Str_20538:int = 0xFF;
-        private var _Str_19971:int = 0xFF;
-        private var _Str_19611:int = 0xFF;
-        private var _Str_17387:Boolean = true;
-        private var _Str_5928:int = 0;
-        private var _Str_4631:int = -1000;
-        private var _Str_3406:int = -1;
-        private var _Str_7380:Number = 0;
-        private var _Str_10109:Number = 0;
-        private var _Str_11932:Number = 0;
-        private var _Str_9108:Number = 0;
-        private var _Str_4852:Array;
+        private var _wallType:String = null;
+        private var _floorType:String = null;
+        private var _landscapeType:String = null;
+        private var _floorThicknessMultiplier:Number = NaN;
+        private var _wallThicknessMultiplier:Number = NaN;
+        private var _floorHoleUpdateTime:Number = NaN;
+        private var _planeMaskData:String = null;
+        private var _backgroundColor:uint = 0xFFFFFF;
+        private var _backgroundRed:int = 0xFF;
+        private var _backgroundGreen:int = 0xFF;
+        private var _backgroundBlue:int = 0xFF;
+        private var _colorizeBgOnly:Boolean = true;
+        private var _assetUpdateCounter:int = 0;
+        private var _geometryUpdateId:int = -1000;
+        private var FLOOR_COLOR:int = -1;
+        private var _geometryDirX:Number = 0;
+        private var _geometryDirY:Number = 0;
+        private var _geometryDirZ:Number = 0;
+        private var _geometryScale:Number = 0;
+        private var _planeTypeVisibilities:Array;
 
         public function RoomVisualization()
         {
-            this._Str_2540 = [];
-            this._Str_4864 = [];
-            this._Str_6648 = [];
-            this._Str_4852 = [];
+            this._planes = [];
+            this._visiblePlanes = [];
+            this._visiblePlaneSpriteNumbers = [];
+            this._planeTypeVisibilities = [];
             super();
-            this._Str_2430 = new AssetLibrary("room visualization");
+            this._assetLibrary = new AssetLibrary("room visualization");
             this._roomPlaneParser = new RoomPlaneParser();
             this._roomPlaneBitmapMaskParser = new RoomPlaneBitmapMaskParser();
-            this._Str_4852[RoomPlane._Str_16830] = false;
-            this._Str_4852[RoomPlane._Str_3258] = true;
-            this._Str_4852[RoomPlane._Str_3587] = true;
-            this._Str_4852[RoomPlane._Str_3272] = true;
+            this._planeTypeVisibilities[RoomPlane.TYPE_WALL] = false;
+            this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = true;
+            this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR] = true;
+            this._planeTypeVisibilities[RoomPlane._Str_3272] = true;
         }
 
-        public function get _Str_24891():Number
+        public function get floorRelativeDepth():Number
         {
-            return _Str_8621 + 0.1;
+            return ROOM_DEPTH_OFFSET + 0.1;
         }
 
-        public function get _Str_25403():Number
+        public function get wallRelativeDepth():Number
         {
-            return _Str_8621 + 0.5;
+            return ROOM_DEPTH_OFFSET + 0.5;
         }
 
-        public function get _Str_26287():Number
+        public function get wallAdRelativeDepth():Number
         {
-            return _Str_8621 + 0.49;
+            return ROOM_DEPTH_OFFSET + 0.49;
         }
 
         public function get _Str_3828():int
         {
-            return this._Str_2540.length;
+            return this._planes.length;
         }
 
         override public function dispose():void
@@ -113,25 +113,25 @@
             var k:int;
             var _local_2:IAsset;
             super.dispose();
-            if (this._Str_2430 != null)
+            if (this._assetLibrary != null)
             {
                 k = 0;
-                while (k < this._Str_2430.numAssets)
+                while (k < this._assetLibrary.numAssets)
                 {
-                    _local_2 = this._Str_2430.getAssetByIndex(k);
+                    _local_2 = this._assetLibrary.getAssetByIndex(k);
                     if (_local_2 != null)
                     {
                         _local_2.dispose();
                     }
                     k++;
                 }
-                this._Str_2430.dispose();
-                this._Str_2430 = null;
+                this._assetLibrary.dispose();
+                this._assetLibrary = null;
             }
-            this._Str_17346();
-            this._Str_2540 = null;
-            this._Str_4864 = null;
-            this._Str_6648 = null;
+            this.resetRoomPlanes();
+            this._planes = null;
+            this._visiblePlanes = null;
+            this._visiblePlaneSpriteNumbers = null;
             if (this._roomPlaneParser != null)
             {
                 this._roomPlaneParser.dispose();
@@ -142,54 +142,54 @@
                 this._roomPlaneBitmapMaskParser.dispose();
                 this._roomPlaneBitmapMaskParser = null;
             }
-            if (this._Str_594 != null)
+            if (this._data != null)
             {
-                this._Str_594._Str_3355();
-                this._Str_594 = null;
+                this._data._Str_3355();
+                this._data = null;
             }
         }
 
-        private function _Str_17346():void
+        private function resetRoomPlanes():void
         {
             var k:int;
             var _local_2:RoomPlane;
-            if (this._Str_2540 != null)
+            if (this._planes != null)
             {
                 k = 0;
-                while (k < this._Str_2540.length)
+                while (k < this._planes.length)
                 {
-                    _local_2 = (this._Str_2540[k] as RoomPlane);
+                    _local_2 = (this._planes[k] as RoomPlane);
                     if (_local_2 != null)
                     {
                         _local_2.dispose();
                     }
                     k++;
                 }
-                this._Str_2540 = [];
+                this._planes = [];
             }
-            this._Str_8555 = false;
-            this._Str_5928 = (this._Str_5928 + 1);
+            this._planesInitialized = false;
+            this._assetUpdateCounter = (this._assetUpdateCounter + 1);
             this.reset();
         }
 
         override protected function reset():void
         {
             super.reset();
-            this._Str_4577 = null;
-            this._Str_4489 = null;
-            this._Str_4496 = null;
-            this._Str_16710 = null;
-            this._Str_3406 = -1;
-            this._Str_9108 = 0;
+            this._wallType = null;
+            this._floorType = null;
+            this._landscapeType = null;
+            this._planeMaskData = null;
+            this.FLOOR_COLOR = -1;
+            this._geometryScale = 0;
         }
 
         override public function get boundingRectangle():Rectangle
         {
-            if (this._Str_7253 == null)
+            if (this._boundingRectangle == null)
             {
-                this._Str_7253 = super.boundingRectangle;
+                this._boundingRectangle = super.boundingRectangle;
             }
-            return new Rectangle(this._Str_7253.x, this._Str_7253.y, this._Str_7253.width, this._Str_7253.height);
+            return new Rectangle(this._boundingRectangle.x, this._boundingRectangle.y, this._boundingRectangle.width, this._boundingRectangle.height);
         }
 
         override public function initialize(k:IRoomObjectVisualizationData):Boolean
@@ -199,8 +199,8 @@
             {
                 return false;
             }
-            this._Str_594 = (k as RoomVisualizationData);
-            this._Str_594._Str_6703(assetCollection);
+            this._data = (k as RoomVisualizationData);
+            this._data._Str_6703(assetCollection);
             return true;
         }
 
@@ -208,16 +208,16 @@
         {
             var _local_3:RoomPlane;
             var _local_4:IRoomObjectSprite;
-            var k:int = this._Str_2540.length;
+            var k:int = this._planes.length;
             createSprites(k);
             var _local_2:int;
             while (_local_2 < k)
             {
-                _local_3 = (this._Str_2540[_local_2] as RoomPlane);
+                _local_3 = (this._planes[_local_2] as RoomPlane);
                 _local_4 = getSprite(_local_2);
                 if (((((!(_local_4 == null)) && (!(_local_3 == null))) && (!(_local_3._Str_5424 == null))) && (!(_local_3._Str_4968 == null))))
                 {
-                    if (((_local_3.type == RoomPlane._Str_3587) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
+                    if (((_local_3.type == RoomPlane.TYPE_FLOOR) && ((_local_3._Str_5424.length < 1) || (_local_3._Str_4968.length < 1))))
                     {
                         _local_4._Str_4023 = AlphaTolerance.MATCH_NOTHING;
                     }
@@ -225,13 +225,13 @@
                     {
                         _local_4._Str_4023 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
                     }
-                    if (_local_3.type == RoomPlane._Str_3587)
+                    if (_local_3.type == RoomPlane.TYPE_FLOOR)
                     {
                         _local_4.tag = ("plane.wall@" + (_local_2 + 1));
                     }
                     else
                     {
-                        if (_local_3.type == RoomPlane._Str_3258)
+                        if (_local_3.type == RoomPlane.TYPE_LANDSCAPE)
                         {
                             _local_4.tag = ("plane.floor@" + (_local_2 + 1));
                         }
@@ -248,13 +248,13 @@
 
         protected function _Str_25732():void
         {
-            var _local_8:IVector3D;
-            var _local_9:IVector3D;
-            var _local_10:IVector3D;
+            var _local_8:IVector3d;
+            var _local_9:IVector3d;
+            var _local_10:IVector3d;
             var _local_11:Array;
             var _local_12:int;
             var _local_13:RoomPlane;
-            var _local_14:IVector3D;
+            var _local_14:IVector3d;
             var _local_15:Number;
             var _local_16:Number;
             var _local_17:Number;
@@ -264,7 +264,7 @@
             var _local_21:Number;
             var _local_22:Number;
             var _local_23:Number;
-            if (this._Str_8555)
+            if (this._planesInitialized)
             {
                 return;
             }
@@ -273,153 +273,153 @@
             {
                 return;
             }
-            if (!isNaN(this._Str_4215))
+            if (!isNaN(this._floorThicknessMultiplier))
             {
-                this._roomPlaneParser._Str_9990 = this._Str_4215;
+                this._roomPlaneParser._Str_9990 = this._floorThicknessMultiplier;
             }
-            if (!isNaN(this._Str_4397))
+            if (!isNaN(this._wallThicknessMultiplier))
             {
-                this._roomPlaneParser._Str_9955 = this._Str_4397;
+                this._roomPlaneParser._Str_9955 = this._wallThicknessMultiplier;
             }
             var _local_2:String = k.getModel().getString(RoomObjectVariableEnum.ROOM_PLANE_XML);
-            if (!this._roomPlaneParser._Str_16659(new XML(_local_2)))
+            if (!this._roomPlaneParser.initializeFromXML(new XML(_local_2)))
             {
                 return;
             }
-            var _local_3:Number = this._Str_23949();
-            var _local_4:Number = this._Str_23063();
+            var _local_3:Number = this.getLandscapeWidth();
+            var _local_4:Number = this.getLandscapeHeight();
             var _local_5:Number = 0;
             var _local_6:int = k.getModel().getNumber(RoomObjectVariableEnum.ROOM_RANDOM_SEED);
             var _local_7:int;
             while (_local_7 < this._roomPlaneParser._Str_3828)
             {
-                _local_8 = this._roomPlaneParser._Str_20362(_local_7);
-                _local_9 = this._roomPlaneParser._Str_16904(_local_7);
-                _local_10 = this._roomPlaneParser._Str_18119(_local_7);
-                _local_11 = this._roomPlaneParser._Str_24698(_local_7);
-                _local_12 = this._roomPlaneParser._Str_13037(_local_7);
+                _local_8 = this._roomPlaneParser.getPlaneLocation(_local_7);
+                _local_9 = this._roomPlaneParser.getPlaneLeftSide(_local_7);
+                _local_10 = this._roomPlaneParser.getPlaneRightSide(_local_7);
+                _local_11 = this._roomPlaneParser.getPlaneSecondaryNormals(_local_7);
+                _local_12 = this._roomPlaneParser.getPlaneType(_local_7);
                 _local_13 = null;
                 if ((((!(_local_8 == null)) && (!(_local_9 == null))) && (!(_local_10 == null))))
                 {
                     _local_14 = Vector3d.crossProduct(_local_9, _local_10);
                     _local_6 = ((_local_6 * 7613) + 517);
                     _local_13 = null;
-                    if (_local_12 == RoomPlaneData._Str_6072)
+                    if (_local_12 == RoomPlaneData.PLANE_FLOOR)
                     {
                         _local_15 = ((_local_8.x + _local_9.x) + 0.5);
                         _local_16 = ((_local_8.y + _local_10.y) + 0.5);
                         _local_17 = (int(_local_15) - _local_15);
                         _local_18 = (int(_local_16) - _local_16);
-                        _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane._Str_3258, true, _local_11, _local_6, -(_local_17), -(_local_18));
+                        _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_LANDSCAPE, true, _local_11, _local_6, -(_local_17), -(_local_18));
                         if (_local_14.z != 0)
                         {
-                            _local_13.color = _Str_18544;
+                            _local_13.color = FLOOR_COLOR_LEFT;
                         }
                         else
                         {
-                            _local_13.color = ((_local_14.x != 0) ? _Str_16664 : _Str_18640);
+                            _local_13.color = ((_local_14.x != 0) ? WALL_COLOR_TOP : FLOOR_COLOR_RIGHT);
                         }
-                        if (this._Str_594 != null)
+                        if (this._data != null)
                         {
-                            _local_13.rasterizer = this._Str_594._Str_23667;
+                            _local_13.rasterizer = this._data.floorRasterizer;
                         }
                     }
                     else
                     {
-                        if (_local_12 == RoomPlaneData._Str_6206)
+                        if (_local_12 == RoomPlaneData.PLANE_WALL)
                         {
-                            _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane._Str_3587, true, _local_11, _local_6);
+                            _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6);
                             if (((_local_9.length < 1) || (_local_10.length < 1)))
                             {
                                 _local_13._Str_18448 = false;
                             }
                             if (((_local_14.x == 0) && (_local_14.y == 0)))
                             {
-                                _local_13.color = _Str_14868;
+                                _local_13.color = LANDSCAPE_COLOR_TOP;
                             }
                             else
                             {
                                 if (_local_14.y > 0)
                                 {
-                                    _local_13.color = _Str_14503;
+                                    _local_13.color = WALL_COLOR_SIDE;
                                 }
                                 else
                                 {
                                     if (_local_14.y == 0)
                                     {
-                                        _local_13.color = _Str_15851;
+                                        _local_13.color = WALL_COLOR_BOTTOM;
                                     }
                                     else
                                     {
-                                        _local_13.color = _Str_13715;
+                                        _local_13.color = WALL_COLOR_BORDER;
                                     }
                                 }
                             }
-                            if (this._Str_594 != null)
+                            if (this._data != null)
                             {
-                                _local_13.rasterizer = this._Str_594._Str_25596;
+                                _local_13.rasterizer = this._data.wallRasterizer;
                             }
                         }
                         else
                         {
-                            if (_local_12 == RoomPlaneData._Str_7988)
+                            if (_local_12 == RoomPlaneData.PLANE_LANDSCAPE)
                             {
                                 _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane._Str_3272, true, _local_11, _local_6, _local_5, 0, _local_3, _local_4);
                                 if (_local_14.y > 0)
                                 {
-                                    _local_13.color = _Str_17403;
+                                    _local_13.color = LANDSCAPE_COLOR_SIDE;
                                 }
                                 else
                                 {
                                     if (_local_14.y == 0)
                                     {
-                                        _local_13.color = _Str_16113;
+                                        _local_13.color = LANDSCAPE_COLOR_BOTTOM;
                                     }
                                     else
                                     {
                                         _local_13.color = _Str_18370;
                                     }
                                 }
-                                if (this._Str_594 != null)
+                                if (this._data != null)
                                 {
-                                    _local_13.rasterizer = this._Str_594._Str_24979;
+                                    _local_13.rasterizer = this._data.landscapeRasterizer;
                                 }
                                 _local_5 = (_local_5 + _local_9.length);
                             }
                             else
                             {
-                                if (_local_12 == RoomPlaneData._Str_18788)
+                                if (_local_12 == RoomPlaneData.PLANE_BILLBOARD)
                                 {
-                                    _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane._Str_3587, true, _local_11, _local_6);
+                                    _local_13 = new RoomPlane(k.getLocation(), _local_8, _local_9, _local_10, RoomPlane.TYPE_FLOOR, true, _local_11, _local_6);
                                     if (((_local_9.length < 1) || (_local_10.length < 1)))
                                     {
                                         _local_13._Str_18448 = false;
                                     }
                                     if (((_local_14.x == 0) && (_local_14.y == 0)))
                                     {
-                                        _local_13.color = _Str_14868;
+                                        _local_13.color = LANDSCAPE_COLOR_TOP;
                                     }
                                     else
                                     {
                                         if (_local_14.y > 0)
                                         {
-                                            _local_13.color = _Str_14503;
+                                            _local_13.color = WALL_COLOR_SIDE;
                                         }
                                         else
                                         {
                                             if (_local_14.y == 0)
                                             {
-                                                _local_13.color = _Str_15851;
+                                                _local_13.color = WALL_COLOR_BOTTOM;
                                             }
                                             else
                                             {
-                                                _local_13.color = _Str_13715;
+                                                _local_13.color = WALL_COLOR_BORDER;
                                             }
                                         }
                                     }
-                                    if (this._Str_594 != null)
+                                    if (this._data != null)
                                     {
-                                        _local_13.rasterizer = this._Str_594._Str_23913;
+                                        _local_13.rasterizer = this._data.wallAdRasterizr;
                                     }
                                 }
                             }
@@ -427,18 +427,18 @@
                     }
                     if (_local_13 != null)
                     {
-                        _local_13._Str_16279 = this._Str_594._Str_16279;
+                        _local_13._Str_16279 = this._data._Str_16279;
                         _local_19 = 0;
-                        while (_local_19 < this._roomPlaneParser._Str_25447(_local_7))
+                        while (_local_19 < this._roomPlaneParser.getPlaneMaskCount(_local_7))
                         {
-                            _local_20 = this._roomPlaneParser._Str_23769(_local_7, _local_19);
-                            _local_21 = this._roomPlaneParser._Str_23247(_local_7, _local_19);
-                            _local_22 = this._roomPlaneParser._Str_23431(_local_7, _local_19);
-                            _local_23 = this._roomPlaneParser._Str_22914(_local_7, _local_19);
-                            _local_13._Str_24758(_local_20, _local_21, _local_22, _local_23);
+                            _local_20 = this._roomPlaneParser.getPlaneMaskLeftSideLoc(_local_7, _local_19);
+                            _local_21 = this._roomPlaneParser.getPlaneMaskRightSideLoc(_local_7, _local_19);
+                            _local_22 = this._roomPlaneParser.getPlaneMaskLeftSideLength(_local_7, _local_19);
+                            _local_23 = this._roomPlaneParser.getPlaneMaskRightSideLength(_local_7, _local_19);
+                            _local_13.addRectangleMask(_local_20, _local_21, _local_22, _local_23);
                             _local_19++;
                         }
-                        this._Str_2540.push(_local_13);
+                        this._planes.push(_local_13);
                     }
                 }
                 else
@@ -447,22 +447,22 @@
                 }
                 _local_7++;
             }
-            this._Str_8555 = true;
+            this._planesInitialized = true;
             this._Str_18024();
         }
 
-        private function _Str_23949():Number
+        private function getLandscapeWidth():Number
         {
             var _local_3:int;
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             var k:Number = 0;
             var _local_2:int;
             while (_local_2 < this._roomPlaneParser._Str_3828)
             {
-                _local_3 = this._roomPlaneParser._Str_13037(_local_2);
-                if (_local_3 == RoomPlaneData._Str_7988)
+                _local_3 = this._roomPlaneParser.getPlaneType(_local_2);
+                if (_local_3 == RoomPlaneData.PLANE_LANDSCAPE)
                 {
-                    _local_4 = this._roomPlaneParser._Str_16904(_local_2);
+                    _local_4 = this._roomPlaneParser.getPlaneLeftSide(_local_2);
                     k = (k + _local_4.length);
                 }
                 _local_2++;
@@ -470,18 +470,18 @@
             return k;
         }
 
-        private function _Str_23063():Number
+        private function getLandscapeHeight():Number
         {
             var _local_3:int;
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             var k:Number = 0;
             var _local_2:int;
             while (_local_2 < this._roomPlaneParser._Str_3828)
             {
-                _local_3 = this._roomPlaneParser._Str_13037(_local_2);
-                if (_local_3 == RoomPlaneData._Str_7988)
+                _local_3 = this._roomPlaneParser.getPlaneType(_local_2);
+                if (_local_3 == RoomPlaneData.PLANE_LANDSCAPE)
                 {
-                    _local_4 = this._roomPlaneParser._Str_18119(_local_2);
+                    _local_4 = this._roomPlaneParser.getPlaneRightSide(_local_2);
                     if (_local_4.length > k)
                     {
                         k = _local_4.length;
@@ -516,10 +516,10 @@
             {
                 return;
             }
-            var _local_6:Boolean = this._Str_24551(k);
+            var _local_6:Boolean = this.updateGeometry(k);
             var _local_7:IRoomObjectModel = _local_5.getModel();
             var _local_8:Boolean;
-            if (this._Str_23316(_local_7))
+            if (this.updatePlaneThicknesses(_local_7))
             {
                 _local_8 = true;
             }
@@ -528,13 +528,13 @@
                 _local_8 = true;
             }
             this._Str_25732();
-            _local_8 = this._Str_25669(_local_7);
+            _local_8 = this.updateMasksAndColors(_local_7);
             var _local_9:int = _arg_2;
-            if ((((_local_9 < (this._Str_4631 + this._Str_9654)) && (!(_local_6))) && (!(_local_8))))
+            if ((((_local_9 < (this._geometryUpdateId + this._Str_9654)) && (!(_local_6))) && (!(_local_8))))
             {
                 return;
             }
-            if (this._Str_24171(_local_7))
+            if (this.updatePlaneTexturesAndVisibilities(_local_7))
             {
                 _local_8 = true;
             }
@@ -545,19 +545,19 @@
             if (_local_8)
             {
                 _local_10 = 0;
-                while (_local_10 < this._Str_4864.length)
+                while (_local_10 < this._visiblePlanes.length)
                 {
-                    _local_11 = this._Str_6648[_local_10];
+                    _local_11 = this._visiblePlaneSpriteNumbers[_local_10];
                     _local_12 = getSprite(_local_11);
-                    _local_13 = (this._Str_4864[_local_10] as RoomPlane);
+                    _local_13 = (this._visiblePlanes[_local_10] as RoomPlane);
                     if ((((!(_local_12 == null)) && (!(_local_13 == null))) && (!(_local_13.type == RoomPlane._Str_3272))))
                     {
-                        if (this._Str_17387)
+                        if (this._colorizeBgOnly)
                         {
                             _local_14 = _local_13.color;
-                            _local_15 = (((_local_14 & 0xFF) * this._Str_19611) / 0xFF);
-                            _local_16 = ((((_local_14 >> 8) & 0xFF) * this._Str_19971) / 0xFF);
-                            _local_17 = ((((_local_14 >> 16) & 0xFF) * this._Str_20538) / 0xFF);
+                            _local_15 = (((_local_14 & 0xFF) * this._backgroundBlue) / 0xFF);
+                            _local_16 = ((((_local_14 >> 8) & 0xFF) * this._backgroundGreen) / 0xFF);
+                            _local_17 = ((((_local_14 >> 16) & 0xFF) * this._backgroundRed) / 0xFF);
                             _local_18 = (_local_14 >> 24);
                             _local_14 = ((((_local_18 << 24) + (_local_17 << 16)) + (_local_16 << 8)) + _local_15);
                             _local_12.color = _local_14;
@@ -572,31 +572,31 @@
                 increaseUpdateId();
             }
             _modelUpdateID = _local_7.getUpdateID();
-            this._Str_4631 = _local_9;
+            this._geometryUpdateId = _local_9;
         }
 
-        private function _Str_24551(k:IRoomGeometry):Boolean
+        private function updateGeometry(k:IRoomGeometry):Boolean
         {
-            var _local_3:IVector3D;
+            var _local_3:IVector3d;
             var _local_2:Boolean;
-            if (k.updateId != this._Str_3406)
+            if (k.updateId != this.FLOOR_COLOR)
             {
-                this._Str_3406 = k.updateId;
-                this._Str_7253 = null;
+                this.FLOOR_COLOR = k.updateId;
+                this._boundingRectangle = null;
                 _local_3 = k.direction;
-                if (((!(_local_3 == null)) && ((((!(_local_3.x == this._Str_7380)) || (!(_local_3.y == this._Str_10109))) || (!(_local_3.z == this._Str_11932))) || (!(k.scale == this._Str_9108)))))
+                if (((!(_local_3 == null)) && ((((!(_local_3.x == this._geometryDirX)) || (!(_local_3.y == this._geometryDirY))) || (!(_local_3.z == this._geometryDirZ))) || (!(k.scale == this._geometryScale)))))
                 {
-                    this._Str_7380 = _local_3.x;
-                    this._Str_10109 = _local_3.y;
-                    this._Str_11932 = _local_3.z;
-                    this._Str_9108 = k.scale;
+                    this._geometryDirX = _local_3.x;
+                    this._geometryDirY = _local_3.y;
+                    this._geometryDirZ = _local_3.z;
+                    this._geometryScale = k.scale;
                     _local_2 = true;
                 }
             }
             return _local_2;
         }
 
-        private function _Str_25669(k:IRoomObjectModel):Boolean
+        private function updateMasksAndColors(k:IRoomObjectModel):Boolean
         {
             var _local_3:String;
             var _local_4:uint;
@@ -605,32 +605,32 @@
             if (_modelUpdateID != k.getUpdateID())
             {
                 _local_3 = k.getString(RoomObjectVariableEnum.ROOM_PLANE_MASK_XML);
-                if (_local_3 != this._Str_16710)
+                if (_local_3 != this._planeMaskData)
                 {
                     this._Str_15935(_local_3);
-                    this._Str_16710 = _local_3;
+                    this._planeMaskData = _local_3;
                     _local_2 = true;
                 }
                 _local_4 = k.getNumber(RoomObjectVariableEnum.ROOM_BACKGROUND_COLOR);
-                if (_local_4 != this._Str_4479)
+                if (_local_4 != this._backgroundColor)
                 {
-                    this._Str_4479 = _local_4;
-                    this._Str_19611 = (this._Str_4479 & 0xFF);
-                    this._Str_19971 = ((this._Str_4479 >> 8) & 0xFF);
-                    this._Str_20538 = ((this._Str_4479 >> 16) & 0xFF);
+                    this._backgroundColor = _local_4;
+                    this._backgroundBlue = (this._backgroundColor & 0xFF);
+                    this._backgroundGreen = ((this._backgroundColor >> 8) & 0xFF);
+                    this._backgroundRed = ((this._backgroundColor >> 16) & 0xFF);
                     _local_2 = true;
                 }
                 _local_5 = Boolean(k.getNumber(RoomObjectVariableEnum.ROOM_COLORIZE_BG_ONLY));
-                if (_local_5 != this._Str_17387)
+                if (_local_5 != this._colorizeBgOnly)
                 {
-                    this._Str_17387 = _local_5;
+                    this._colorizeBgOnly = _local_5;
                     _local_2 = true;
                 }
             }
             return _local_2;
         }
 
-        private function _Str_24171(k:IRoomObjectModel):Boolean
+        private function updatePlaneTexturesAndVisibilities(k:IRoomObjectModel):Boolean
         {
             var _local_2:String;
             var _local_3:String;
@@ -643,17 +643,17 @@
                 _local_2 = k.getString(RoomObjectVariableEnum.ROOM_WALL_TYPE);
                 _local_3 = k.getString(RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
                 _local_4 = k.getString(RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
-                this._Str_25341(_local_3, _local_2, _local_4);
+                this.updatePlaneTextureTypes(_local_3, _local_2, _local_4);
                 _local_5 = Boolean(k.getNumber(RoomObjectVariableEnum.ROOM_FLOOR_VISIBILITY));
                 _local_6 = Boolean(k.getNumber(RoomObjectVariableEnum.ROOM_WALL_VISIBILITY));
                 _local_7 = Boolean(k.getNumber(RoomObjectVariableEnum.ROOM_LANDSCAPE_VISIBILITY));
-                this._Str_23076(_local_5, _local_6, _local_7);
+                this.updatePlaneTypeVisibilities(_local_5, _local_6, _local_7);
                 return true;
             }
             return false;
         }
 
-        private function _Str_23316(k:IRoomObjectModel):Boolean
+        private function updatePlaneThicknesses(k:IRoomObjectModel):Boolean
         {
             var _local_2:Number;
             var _local_3:Number;
@@ -661,11 +661,11 @@
             {
                 _local_2 = k.getNumber(RoomObjectVariableEnum.ROOM_FLOOR_THICKNESS);
                 _local_3 = k.getNumber(RoomObjectVariableEnum.ROOM_WALL_THICKNESS);
-                if ((((!(isNaN(_local_2))) && (!(isNaN(_local_3)))) && ((!(_local_2 == this._Str_4215)) || (!(_local_3 == this._Str_4397)))))
+                if ((((!(isNaN(_local_2))) && (!(isNaN(_local_3)))) && ((!(_local_2 == this._floorThicknessMultiplier)) || (!(_local_3 == this._wallThicknessMultiplier)))))
                 {
-                    this._Str_4215 = _local_2;
-                    this._Str_4397 = _local_3;
-                    this._Str_17346();
+                    this._floorThicknessMultiplier = _local_2;
+                    this._wallThicknessMultiplier = _local_3;
+                    this.resetRoomPlanes();
                     return true;
                 }
             }
@@ -678,38 +678,38 @@
             if (_modelUpdateID != k.getUpdateID())
             {
                 _local_2 = k.getNumber(RoomObjectVariableEnum.ROOM_FLOOR_HOLE_UPDATE_TIME);
-                if (((!(isNaN(_local_2))) && (!(_local_2 == this._Str_19240))))
+                if (((!(isNaN(_local_2))) && (!(_local_2 == this._floorHoleUpdateTime))))
                 {
-                    this._Str_19240 = _local_2;
-                    this._Str_17346();
+                    this._floorHoleUpdateTime = _local_2;
+                    this.resetRoomPlanes();
                     return true;
                 }
             }
             return false;
         }
 
-        protected function _Str_25341(k:String, _arg_2:String, _arg_3:String):Boolean
+        protected function updatePlaneTextureTypes(k:String, _arg_2:String, _arg_3:String):Boolean
         {
             var _local_5:RoomPlane;
-            if (k != this._Str_4489)
+            if (k != this._floorType)
             {
-                this._Str_4489 = k;
+                this._floorType = k;
             }
             else
             {
                 k = null;
             }
-            if (_arg_2 != this._Str_4577)
+            if (_arg_2 != this._wallType)
             {
-                this._Str_4577 = _arg_2;
+                this._wallType = _arg_2;
             }
             else
             {
                 _arg_2 = null;
             }
-            if (_arg_3 != this._Str_4496)
+            if (_arg_3 != this._landscapeType)
             {
-                this._Str_4496 = _arg_3;
+                this._landscapeType = _arg_3;
             }
             else
             {
@@ -720,18 +720,18 @@
                 return false;
             }
             var _local_4:int;
-            while (_local_4 < this._Str_2540.length)
+            while (_local_4 < this._planes.length)
             {
-                _local_5 = (this._Str_2540[_local_4] as RoomPlane);
+                _local_5 = (this._planes[_local_4] as RoomPlane);
                 if (_local_5 != null)
                 {
-                    if (((_local_5.type == RoomPlane._Str_3258) && (!(k == null))))
+                    if (((_local_5.type == RoomPlane.TYPE_LANDSCAPE) && (!(k == null))))
                     {
                         _local_5.id = k;
                     }
                     else
                     {
-                        if (((_local_5.type == RoomPlane._Str_3587) && (!(_arg_2 == null))))
+                        if (((_local_5.type == RoomPlane.TYPE_FLOOR) && (!(_arg_2 == null))))
                         {
                             _local_5.id = _arg_2;
                         }
@@ -749,15 +749,15 @@
             return true;
         }
 
-        private function _Str_23076(k:Boolean, _arg_2:Boolean, _arg_3:Boolean):void
+        private function updatePlaneTypeVisibilities(k:Boolean, _arg_2:Boolean, _arg_3:Boolean):void
         {
-            if ((((!(k == this._Str_4852[RoomPlane._Str_3258])) || (!(_arg_2 == this._Str_4852[RoomPlane._Str_3587]))) || (!(_arg_3 == this._Str_4852[RoomPlane._Str_3272]))))
+            if ((((!(k == this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE])) || (!(_arg_2 == this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR]))) || (!(_arg_3 == this._planeTypeVisibilities[RoomPlane._Str_3272]))))
             {
-                this._Str_4852[RoomPlane._Str_3258] = k;
-                this._Str_4852[RoomPlane._Str_3587] = _arg_2;
-                this._Str_4852[RoomPlane._Str_3272] = _arg_3;
-                this._Str_4864 = [];
-                this._Str_6648 = [];
+                this._planeTypeVisibilities[RoomPlane.TYPE_LANDSCAPE] = k;
+                this._planeTypeVisibilities[RoomPlane.TYPE_FLOOR] = _arg_2;
+                this._planeTypeVisibilities[RoomPlane._Str_3272] = _arg_3;
+                this._visiblePlanes = [];
+                this._visiblePlaneSpriteNumbers = [];
             }
         }
 
@@ -777,27 +777,27 @@
             {
                 return false;
             }
-            this._Str_5928++;
+            this._assetUpdateCounter++;
             if (_arg_2)
             {
-                this._Str_4864 = [];
-                this._Str_6648 = [];
+                this._visiblePlanes = [];
+                this._visiblePlaneSpriteNumbers = [];
             }
             var _local_5:int = _arg_3;
-            var _local_6:Array = this._Str_4864;
-            if (this._Str_4864.length == 0)
+            var _local_6:Array = this._visiblePlanes;
+            if (this._visiblePlanes.length == 0)
             {
-                _local_6 = this._Str_2540;
+                _local_6 = this._planes;
             }
             var _local_7:Boolean;
-            var _local_8:* = (this._Str_4864.length > 0);
+            var _local_8:* = (this._visiblePlanes.length > 0);
             var _local_9:int;
             while (_local_9 < _local_6.length)
             {
                 _local_10 = _local_9;
                 if (_local_8)
                 {
-                    _local_10 = this._Str_6648[_local_9];
+                    _local_10 = this._visiblePlaneSpriteNumbers[_local_9];
                 }
                 _local_11 = getSprite(_local_10);
                 if (_local_11 != null)
@@ -805,26 +805,26 @@
                     _local_12 = (_local_6[_local_9] as RoomPlane);
                     if (_local_12 != null)
                     {
-                        _local_11._Str_9396 = _local_12.uniqueId;
+                        _local_11.spriteType = _local_12.uniqueId;
                         if (_local_12.update(k, _local_5))
                         {
                             if (_local_12.visible)
                             {
-                                _local_13 = ((_local_12.relativeDepth + this._Str_24891) + (Number(_local_10) / 1000));
-                                if (_local_12.type != RoomPlane._Str_3258)
+                                _local_13 = ((_local_12.relativeDepth + this.floorRelativeDepth) + (Number(_local_10) / 1000));
+                                if (_local_12.type != RoomPlane.TYPE_LANDSCAPE)
                                 {
-                                    _local_13 = ((_local_12.relativeDepth + this._Str_25403) + (Number(_local_10) / 1000));
+                                    _local_13 = ((_local_12.relativeDepth + this.wallRelativeDepth) + (Number(_local_10) / 1000));
                                     if (((_local_12._Str_5424.length < 1) || (_local_12._Str_4968.length < 1)))
                                     {
-                                        _local_13 = (_local_13 + (_Str_8621 * 0.5));
+                                        _local_13 = (_local_13 + (ROOM_DEPTH_OFFSET * 0.5));
                                     }
                                 }
                                 _local_14 = ((("plane " + _local_10) + " ") + k.scale);
-                                this._Str_7421(_local_11, _local_12, _local_14, _local_13);
+                                this.updateSprite(_local_11, _local_12, _local_14, _local_13);
                             }
                             _local_7 = true;
                         }
-                        if (_local_11.visible != ((_local_12.visible) && (this._Str_4852[_local_12.type])))
+                        if (_local_11.visible != ((_local_12.visible) && (this._planeTypeVisibilities[_local_12.type])))
                         {
                             _local_11.visible = (!(_local_11.visible));
                             _local_7 = true;
@@ -833,14 +833,14 @@
                         {
                             if (!_local_8)
                             {
-                                this._Str_4864.push(_local_12);
-                                this._Str_6648.push(_local_9);
+                                this._visiblePlanes.push(_local_12);
+                                this._visiblePlaneSpriteNumbers.push(_local_9);
                             }
                         }
                     }
                     else
                     {
-                        _local_11._Str_9396 = 0;
+                        _local_11.spriteType = 0;
                         if (_local_11.visible)
                         {
                             _local_11.visible = false;
@@ -853,27 +853,27 @@
             return _local_7;
         }
 
-        private function _Str_7421(k:IRoomObjectSprite, _arg_2:RoomPlane, _arg_3:String, _arg_4:Number):void
+        private function updateSprite(k:IRoomObjectSprite, _arg_2:RoomPlane, _arg_3:String, _arg_4:Number):void
         {
             var _local_5:Point = _arg_2.offset;
             k.offsetX = -(_local_5.x);
             k.offsetY = -(_local_5.y);
             k.relativeDepth = _arg_4;
             k.color = _arg_2.color;
-            k.asset = this._Str_22446(_arg_2, _arg_3);
-            k.assetName = ((_arg_3 + "_") + this._Str_5928);
+            k.asset = this.getPlaneBitmap(_arg_2, _arg_3);
+            k.assetName = ((_arg_3 + "_") + this._assetUpdateCounter);
         }
 
-        private function _Str_22446(k:RoomPlane, _arg_2:String):BitmapData
+        private function getPlaneBitmap(k:RoomPlane, _arg_2:String):BitmapData
         {
-            var _local_3:BitmapDataAsset = (this._Str_2430.getAssetByName(_arg_2) as BitmapDataAsset);
+            var _local_3:BitmapDataAsset = (this._assetLibrary.getAssetByName(_arg_2) as BitmapDataAsset);
             if (_local_3 == null)
             {
-                _local_3 = new BitmapDataAsset(this._Str_2430.getAssetTypeDeclarationByClass(BitmapDataAsset));
-                this._Str_2430.setAsset(_arg_2, _local_3);
+                _local_3 = new BitmapDataAsset(this._assetLibrary.getAssetTypeDeclarationByClass(BitmapDataAsset));
+                this._assetLibrary.setAsset(_arg_2, _local_3);
             }
             var _local_4:BitmapData = (_local_3.content as BitmapData);
-            var _local_5:BitmapData = k._Str_24896(_local_4);
+            var _local_5:BitmapData = k.copyBitmapData(_local_4);
             if (_local_5 == null)
             {
                 _local_5 = k.bitmapData;
@@ -895,10 +895,10 @@
         protected function _Str_15935(k:String):void
         {
             var _local_10:String;
-            var _local_11:IVector3D;
+            var _local_11:IVector3d;
             var _local_12:String;
             var _local_13:int;
-            var _local_14:IVector3D;
+            var _local_14:IVector3d;
             var _local_15:Number;
             var _local_16:Number;
             var _local_17:Number;
@@ -914,12 +914,12 @@
             var _local_5:Array = [];
             var _local_6:Boolean;
             var _local_7:int;
-            while (_local_7 < this._Str_2540.length)
+            while (_local_7 < this._planes.length)
             {
-                _local_3 = (this._Str_2540[_local_7] as RoomPlane);
+                _local_3 = (this._planes[_local_7] as RoomPlane);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_25213();
+                    _local_3.resetBitmapMasks();
                     if (_local_3.type == RoomPlane._Str_3272)
                     {
                         _local_4.push(_local_7);
@@ -930,16 +930,16 @@
             var _local_8:int;
             while (_local_8 < this._roomPlaneBitmapMaskParser._Str_6845)
             {
-                _local_10 = this._roomPlaneBitmapMaskParser._Str_21678(_local_8);
-                _local_11 = this._roomPlaneBitmapMaskParser._Str_19038(_local_8);
-                _local_12 = this._roomPlaneBitmapMaskParser._Str_21644(_local_8);
+                _local_10 = this._roomPlaneBitmapMaskParser.getMaskType(_local_8);
+                _local_11 = this._roomPlaneBitmapMaskParser.getMaskLocation(_local_8);
+                _local_12 = this._roomPlaneBitmapMaskParser.getMaskCategory(_local_8);
                 if (_local_11 != null)
                 {
                     _local_13 = 0;
-                    while (_local_13 < this._Str_2540.length)
+                    while (_local_13 < this._planes.length)
                     {
-                        _local_3 = (this._Str_2540[_local_13] as RoomPlane);
-                        if (((_local_3.type == RoomPlane._Str_3587) || (_local_3.type == RoomPlane._Str_3272)))
+                        _local_3 = (this._planes[_local_13] as RoomPlane);
+                        if (((_local_3.type == RoomPlane.TYPE_FLOOR) || (_local_3.type == RoomPlane._Str_3272)))
                         {
                             if ((((!(_local_3 == null)) && (!(_local_3.location == null))) && (!(_local_3.normal == null))))
                             {
@@ -951,9 +951,9 @@
                                     {
                                         _local_16 = Vector3d.scalarProjection(_local_14, _local_3._Str_5424);
                                         _local_17 = Vector3d.scalarProjection(_local_14, _local_3._Str_4968);
-                                        if (((_local_3.type == RoomPlane._Str_3587) || ((_local_3.type == RoomPlane._Str_3272) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
+                                        if (((_local_3.type == RoomPlane.TYPE_FLOOR) || ((_local_3.type == RoomPlane._Str_3272) && (_local_12 == RoomPlaneBitmapMaskData.HOLE))))
                                         {
-                                            _local_3._Str_24569(_local_10, _local_16, _local_17);
+                                            _local_3.addBitmapMask(_local_10, _local_16, _local_17);
                                         }
                                         else
                                         {
@@ -982,7 +982,7 @@
                 _local_18 = _local_4[_local_9];
                 if (_local_5.indexOf(_local_18) < 0)
                 {
-                    _local_3 = (this._Str_2540[_local_18] as RoomPlane);
+                    _local_3 = (this._planes[_local_18] as RoomPlane);
                     _local_3._Str_14801 = false;
                     _local_6 = true;
                 }
@@ -990,8 +990,8 @@
             }
             if (_local_6)
             {
-                this._Str_4864 = [];
-                this._Str_6648 = [];
+                this._visiblePlanes = [];
+                this._visiblePlaneSpriteNumbers = [];
             }
         }
 
@@ -999,7 +999,7 @@
         {
             var _local_2:RoomPlane;
             var k:Vector.<IRoomPlane> = new Vector.<IRoomPlane>(0);
-            for each (_local_2 in this._Str_4864)
+            for each (_local_2 in this._visiblePlanes)
             {
                 k.push(_local_2);
             }

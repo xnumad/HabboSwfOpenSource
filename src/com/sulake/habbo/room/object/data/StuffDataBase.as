@@ -81,7 +81,7 @@
             return (isNaN(k)) ? -1 : int(k);
         }
 
-        public function _Str_15059(key:String):String
+        public function getJSONValue(key:String):String
         {
             var value:String;
             try

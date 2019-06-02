@@ -36,7 +36,7 @@
     public class HabboAvatarEditorManager extends Component implements IHabboAvatarEditor, ILinkEventTracker 
     {
         public static const _Str_18629:uint = 1;
-        public static const _Str_9039:uint = 2;
+        public static const SETUP_WITHOUT_TOOLBAR:uint = 2;
         public static const SETUP_WITHOUT_COMMUNICATION:uint = 3;
         private static const GENERIC:String = AvatarEditorFigureCategory.GENERIC;//"generic"
 
@@ -83,7 +83,7 @@
             }]), new ComponentDependency(new IIDHabboCatalog(), function (k:IHabboCatalog):void
             {
                 _catalog = k;
-            }, ((flags & _Str_9039) == 0)), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
+            }, ((flags & SETUP_WITHOUT_TOOLBAR) == 0)), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionData = k;
             }), new ComponentDependency(new IIDHabboRoomUI(), function (k:IRoomUI):void

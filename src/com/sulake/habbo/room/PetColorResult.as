@@ -2,7 +2,7 @@
 {
     public class PetColorResult 
     {
-        private static const _Str_12950:Array = ["Null", "Black", "White", "Grey", "Red", "Orange", "Pink", "Green", "Lime", "Blue", "Light-Blue", "Dark-Blue", "Yellow", "Brown", "Dark-Brown", "Beige", "Cyan", "Purple", "Gold"];
+        private static const COLOR_TAGS:Array = ["Null", "Black", "White", "Grey", "Red", "Orange", "Pink", "Green", "Lime", "Blue", "Light-Blue", "Dark-Blue", "Yellow", "Brown", "Dark-Brown", "Beige", "Cyan", "Purple", "Gold"];
 
         private var _breed:int;
         private var _tag:String;
@@ -19,7 +19,7 @@
             this._primaryColor = (k & 0xFFFFFF);
             this._secondaryColor = (_arg_2 & 0xFFFFFF);
             this._breed = _arg_3;
-            this._tag = (((_arg_4 > -1) && (_arg_4 < _Str_12950.length)) ? _Str_12950[_arg_4] : "");
+            this._tag = (((_arg_4 > -1) && (_arg_4 < COLOR_TAGS.length)) ? COLOR_TAGS[_arg_4] : "");
             this._id = _arg_5;
             this._isMaster = _arg_6;
             this._layerTags = _arg_7;
@@ -50,12 +50,12 @@
             return this._id;
         }
 
-        public function get _Str_11964():Boolean
+        public function get isMaster():Boolean
         {
             return this._isMaster;
         }
 
-        public function get _Str_24801():Array
+        public function get layerTags():Array
         {
             return this._layerTags;
         }

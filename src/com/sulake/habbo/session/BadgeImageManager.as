@@ -49,55 +49,55 @@
 
         public function getBadgeImage(k:String, _arg_2:String="normal_badge", _arg_3:Boolean=true, _arg_4:Boolean=false):BitmapData
         {
-            var _local_5:BitmapData = this._Str_10735(k, _arg_2, _arg_4);
+            var _local_5:BitmapData = this.getBadgeImageInternal(k, _arg_2, _arg_4);
             if (((!(_local_5)) && (_arg_3)))
             {
-                _local_5 = this._Str_20965();
+                _local_5 = this.getPlaceholder();
             }
             return _local_5;
         }
 
-        public function _Str_19714(k:String, _arg_2:String="normal_badge"):BitmapData
+        public function getSmallBadgeImage(k:String, _arg_2:String="normal_badge"):BitmapData
         {
-            if (((this._Str_10735(k, _arg_2, true) == null) && (!(this._Str_10735(k) == null))))
+            if (((this.getBadgeImageInternal(k, _arg_2, true) == null) && (!(this.getBadgeImageInternal(k) == null))))
             {
-                this._Str_22115((this._Str_9663 + k), k);
+                this.createSmallBadgeBitmap((this._Str_9663 + k), k);
             }
             return this.getBadgeImage(k, _arg_2, false, true);
         }
 
-        public function _Str_15979(k:String):BadgeInfo
+        public function getBadgeImageWithInfo(k:String):BadgeInfo
         {
-            var _local_2:BitmapData = this._Str_10735(k);
-            return (_local_2 != null) ? new BadgeInfo(_local_2, false) : new BadgeInfo(this._Str_20965(), true);
+            var _local_2:BitmapData = this.getBadgeImageInternal(k);
+            return (_local_2 != null) ? new BadgeInfo(_local_2, false) : new BadgeInfo(this.getPlaceholder(), true);
         }
 
-        public function _Str_5831(k:String, _arg_2:String="normal_badge", _arg_3:Boolean=false):String
+        public function getBadgeImageAssetName(k:String, _arg_2:String="normal_badge", _arg_3:Boolean=false):String
         {
             var _local_4:String = ((this._Str_9663 + k) + ((_arg_3) ? "_32" : ""));
             if (this._assets.hasAsset(_local_4))
             {
                 return _local_4;
             }
-            this._Str_10735(k, _arg_2, _arg_3);
+            this.getBadgeImageInternal(k, _arg_2, _arg_3);
             return null;
         }
 
-        public function _Str_19435(k:String, _arg_2:String="normal_badge"):String
+        public function getSmallScaleBadgeAssetName(k:String, _arg_2:String="normal_badge"):String
         {
-            var _local_3:String = this._Str_5831(k, _arg_2, true);
+            var _local_3:String = this.getBadgeImageAssetName(k, _arg_2, true);
             if (_local_3 == null)
             {
-                this._Str_22115((this._Str_9663 + k), k);
+                this.createSmallBadgeBitmap((this._Str_9663 + k), k);
             }
             else
             {
                 return _local_3;
             }
-            return this._Str_5831(k, _arg_2, true);
+            return this.getBadgeImageAssetName(k, _arg_2, true);
         }
 
-        private function _Str_10735(k:String, _arg_2:String="normal_badge", _arg_3:Boolean=false):BitmapData
+        private function getBadgeImageInternal(k:String, _arg_2:String="normal_badge", _arg_3:Boolean=false):BitmapData
         {
             var _local_5:URLRequest;
             var _local_6:String;
@@ -119,9 +119,9 @@
                 case NORMAL_BADGE:
                     if (this._configuration != null)
                     {
-                        if (GameConfigurations._Str_21861(k))
+                        if (GameConfigurations.isGameBadge(k))
                         {
-                            _local_6 = GameConfigurations._Str_21365(k);
+                            _local_6 = GameConfigurations.getBadgeImageUri(k);
                         }
                         else
                         {
@@ -144,17 +144,17 @@
             if (_local_5 != null)
             {
                 _local_8 = this._assets.loadAssetFromFile(_local_4, _local_5, "image/gif");
-                _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_6753);
+                _local_8.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onBadgeImageReady);
             }
             return null;
         }
 
-        private function _Str_20965():BitmapData
+        private function getPlaceholder():BitmapData
         {
             return BitmapData(this._assets.getAssetByName("loading_icon").content).clone();
         }
 
-        private function _Str_6753(k:AssetLoaderEvent):void
+        private function onBadgeImageReady(k:AssetLoaderEvent):void
         {
             var _local_3:String;
             var _local_4:String;
@@ -176,10 +176,10 @@
             }
         }
 
-        private function _Str_22115(k:String, _arg_2:String):void
+        private function createSmallBadgeBitmap(k:String, _arg_2:String):void
         {
             var _local_4:BitmapDataAsset;
-            var _local_3:BitmapData = this._Str_23624(k);
+            var _local_3:BitmapData = this.renderSmallScaleBadgeBitmap(k);
             if (_local_3)
             {
                 _local_4 = new BitmapDataAsset(this._assets.getAssetTypeDeclarationByClass(BitmapDataAsset));
@@ -191,7 +191,7 @@
             }
         }
 
-        private function _Str_23624(k:String):BitmapData
+        private function renderSmallScaleBadgeBitmap(k:String):BitmapData
         {
             var _local_3:BitmapData;
             var _local_4:BitmapData;

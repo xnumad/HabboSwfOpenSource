@@ -45,12 +45,12 @@
             return this._achievementId;
         }
 
-        public function get _Str_22928():String
+        public function get requiredLevelBadgeCode():String
         {
             return this._requiredLevelBadgeCode;
         }
 
-        public function get _Str_25737():int
+        public function get userProgress():int
         {
             return this._userProgress;
         }

@@ -140,8 +140,8 @@
         private function _Str_3248():void
         {
             var _local_8:String;
-            var k:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._Str_3111._Str_2706);
-            var _local_2:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._resultData2._Str_2706);
+            var k:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._Str_3111.classId);
+            var _local_2:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._resultData2.classId);
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.name", "name", ((k != null) ? k.localizedName : ""));
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed2.name", "name", ((_local_2 != null) ? _local_2.localizedName : ""));
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.description", "name", this._Str_3111.userName);
@@ -402,7 +402,7 @@
             var _local_2:IRoomObject = this._Str_8946(k);
             if (_local_2 != null)
             {
-                this._Str_2268.handler.container.roomEngine._Str_3571(_local_2.getId(), RoomObjectCategoryEnum.CONST_10, RoomObjectOperationEnum.OBJECT_PICKUP);
+                this._Str_2268.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.CONST_10, RoomObjectOperationEnum.OBJECT_PICKUP);
                 return true;
             }
             return false;

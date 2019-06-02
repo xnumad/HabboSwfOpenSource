@@ -90,7 +90,7 @@
             {
                 return null;
             }
-            var _local_3:String = k._Str_4290();
+            var _local_3:String = k.getName();
             if (((_local_3 == "") || (!(_local_3))))
             {
                 return null;
@@ -113,7 +113,7 @@
             {
                 if (!_local_8)
                 {
-                    _local_9 = this._Str_19402._Str_3705(_local_3);
+                    _local_9 = this._Str_19402.getIconLocation(_local_3);
                     if (_local_9)
                     {
                         _local_8 = new Rectangle();
@@ -126,7 +126,7 @@
             {
                 if (this._Str_19331)
                 {
-                    _local_10 = this._Str_19331._Str_3705(_local_3);
+                    _local_10 = this._Str_19331.getIconLocation(_local_3);
                     if (_local_10)
                     {
                         _local_8 = new Rectangle();

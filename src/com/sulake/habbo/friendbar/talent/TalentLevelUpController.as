@@ -70,11 +70,11 @@
         private function _Str_16796(k:_Str_5939):void
         {
             var _local_2:TalentLevelUpMessageParser = k._Str_2273();
-            if ((((_local_2.level == 1) && (_local_2._Str_11884 == TalentEnum.HELPER)) && (this._habboTalent._Str_9968)))
+            if ((((_local_2.level == 1) && (_local_2.talentTrackName == TalentEnum.HELPER)) && (this._habboTalent._Str_9968)))
             {
                 return;
             }
-            this._Str_3360(_local_2._Str_11884, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
+            this._Str_3360(_local_2.talentTrackName, _local_2.level, _local_2._Str_8893, _local_2._Str_7068);
         }
 
         public function _Str_3360(k:String, _arg_2:int, _arg_3:Vector.<_Str_3450>, _arg_4:Vector.<_Str_3457>):void
@@ -135,7 +135,7 @@
             if (k._Str_13965 == 0)
             {
                 _local_2 = this._rewardProductTemplate.clone();
-                IStaticBitmapWrapperWindow(_local_2).assetUri = (("${image.library.url}talent/reward_product_" + k._Str_2716.toLowerCase().replace(" ", "_")) + ".png");
+                IStaticBitmapWrapperWindow(_local_2).assetUri = (("${image.library.url}talent/reward_product_" + k.productCode.toLowerCase().replace(" ", "_")) + ".png");
             }
             else
             {

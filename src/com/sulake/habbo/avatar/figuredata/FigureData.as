@@ -119,7 +119,7 @@
             return [this._avatarEditor._Str_24919(k)];
         }
 
-        public function _Str_1008():String
+        public function getFigureString():String
         {
             var _local_3:String;
             var _local_4:int;
@@ -276,7 +276,7 @@
 
         public function _Str_2491():void
         {
-            this._view.update(this._Str_1008(), this._avatarEffectType, this._direction);
+            this._view.update(this.getFigureString(), this._avatarEffectType, this._direction);
         }
 
         public function get view():FigureDataView

@@ -28,7 +28,7 @@
         protected var _Str_3337:ProvidersConfigGroup = null;
         protected var _Str_6569:Boolean = false;
         protected var _Str_4980:* = -1;
-        protected var _Str_1720:int = -1;
+        protected var _width:int = -1;
         protected var _height:int = -1;
         protected var _Str_20878:Boolean = false;
         protected var _Str_15662:Boolean = false;
@@ -520,12 +520,12 @@
 
         public function set width(k:int):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:int):void

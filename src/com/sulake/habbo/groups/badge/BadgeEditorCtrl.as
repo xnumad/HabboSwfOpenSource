@@ -133,7 +133,7 @@
 
         public function _Str_23748(k:HabboGroupsEditorData):void
         {
-            this._badgeSelectPartCtrl._Str_12194();
+            this._badgeSelectPartCtrl.loadData();
             this.createWindow(null, null);
         }
 
@@ -192,7 +192,7 @@
             this._currentLayerOptions = null;
             this._partEditContainer.visible = true;
             this._partSelectContainer.visible = false;
-            this._badgeSelectPartCtrl._Str_12194();
+            this._badgeSelectPartCtrl.loadData();
             var _local_2:int;
             while (_local_2 < this._layers.length)
             {

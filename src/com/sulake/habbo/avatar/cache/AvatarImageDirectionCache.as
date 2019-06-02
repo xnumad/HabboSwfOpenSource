@@ -33,16 +33,16 @@
             return this._partList;
         }
 
-        public function _Str_1629(k:int):AvatarImageBodyPartContainer
+        public function getImageContainer(k:int):AvatarImageBodyPartContainer
         {
-            var _local_2:String = this._Str_2219(k);
+            var _local_2:String = this.getCacheKey(k);
             return this._images[_local_2];
         }
 
-        public function _Str_1924(k:AvatarImageBodyPartContainer, _arg_2:int):void
+        public function updateImageContainer(k:AvatarImageBodyPartContainer, _arg_2:int):void
         {
             var _local_4:AvatarImageBodyPartContainer;
-            var _local_3:String = this._Str_2219(_arg_2);
+            var _local_3:String = this.getCacheKey(_arg_2);
             if (this._images[_local_3])
             {
                 _local_4 = (this._images[_local_3] as AvatarImageBodyPartContainer);
@@ -54,13 +54,13 @@
             this._images[_local_3] = k;
         }
 
-        private function _Str_2219(k:int):String
+        private function getCacheKey(k:int):String
         {
             var _local_3:AvatarImagePartContainer;
             var _local_2:String = "";
             for each (_local_3 in this._partList)
             {
-                _local_2 = (_local_2 + (_local_3._Str_1206(k) + "/"));
+                _local_2 = (_local_2 + (_local_3.getCacheableKey(k) + "/"));
             }
             return _local_2;
         }

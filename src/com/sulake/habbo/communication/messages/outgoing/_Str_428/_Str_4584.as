@@ -13,12 +13,12 @@
             this._Str_20483 = _arg_3;
         }
 
-        public function get _Str_18487():int
+        public function get dayIndex():int
         {
             return this._Str_11197;
         }
 
-        public function get _Str_17245():int
+        public function get stepIndex():int
         {
             return this._Str_10203;
         }

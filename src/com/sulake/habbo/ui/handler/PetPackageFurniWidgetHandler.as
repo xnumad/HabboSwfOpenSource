@@ -77,7 +77,7 @@
                     case RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED:
                         _local_2 = (k as RoomSessionPetPackageEvent);
                         this._objectId = _local_2._Str_1577;
-                        _local_4 = this._Str_2641(_local_2.figureData);
+                        _local_4 = this.getPetImage(_local_2.figureData);
                         _local_5 = ((_local_2.figureData == null) ? -1 : _local_2.figureData.typeId);
                         _local_3 = new _Str_3085(_Str_3085.RWOPPUE_OPEN_PET_PACKAGE_REQUESTED, this._objectId, _local_4, -1, null, _local_5);
                         this._container.events.dispatchEvent(_local_3);
@@ -120,7 +120,7 @@
         {
         }
 
-        private function _Str_2641(k:PetFigureData):BitmapData
+        private function getPetImage(k:PetFigureData):BitmapData
         {
             var _local_2:uint;
             var _local_3:uint;
@@ -129,7 +129,7 @@
             {
                 _local_2 = parseInt(k.color, 16);
                 _local_3 = 0;
-                _local_4 = this._container.roomEngine._Str_2641(k.typeId, k.paletteId, _local_2, new Vector3d(90), 64, this, true, _local_3);
+                _local_4 = this._container.roomEngine.getPetImage(k.typeId, k.paletteId, _local_2, new Vector3d(90), 64, this, true, _local_3);
                 if (_local_4 != null)
                 {
                     return _local_4.data;

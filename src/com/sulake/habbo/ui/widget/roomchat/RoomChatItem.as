@@ -94,7 +94,7 @@
 
         public function _Str_13182(k:_Str_3535):void
         {
-            this._chatType = k._Str_3214;
+            this._chatType = k.chatType;
             this._chatStyle = k.styleId;
             this._senderId = k.userId;
             this._senderName = k.userName;
@@ -130,7 +130,7 @@
             this._senderColor = k;
         }
 
-        public function set _Str_3214(k:int):void
+        public function set chatType(k:int):void
         {
             this._chatType = k;
         }
@@ -367,42 +367,42 @@
                 }
                 this._width = (this._width + nameWindow.width);
             }
-            if (this._chatType == _Str_3535._Str_5821)
+            if (this._chatType == _Str_3535.CHAT_TYPE_RESPECT)
             {
                 textWindow.text = this._localizations.registerParameter("widgets.chatbubble.respect", "username", this._senderName);
                 this._width = _Str_5706;
             }
             else
             {
-                if (this._chatType == _Str_3535._Str_6081)
+                if (this._chatType == _Str_3535.CHAT_TYPE_PETRESPECT)
                 {
                     textWindow.text = this._localizations.registerParameter("widget.chatbubble.petrespect", "petname", this._senderName);
                     this._width = _Str_5706;
                 }
                 else
                 {
-                    if (this._chatType == _Str_3535._Str_5958)
+                    if (this._chatType == _Str_3535.CHAT_TYPE_PETTREAT)
                     {
                         textWindow.text = this._localizations.registerParameter("widget.chatbubble.pettreat", "petname", this._senderName);
                         this._width = _Str_5706;
                     }
                     else
                     {
-                        if (this._chatType == _Str_3535._Str_6065)
+                        if (this._chatType == _Str_3535.CHAT_TYPE_PETREVIVE)
                         {
                             textWindow.text = this.message;
                             this._width = _Str_5706;
                         }
                         else
                         {
-                            if (this._chatType == _Str_3535._Str_5998)
+                            if (this._chatType == _Str_3535.CHAT_TYPE_PET_REBREED_FERTILIZE)
                             {
                                 textWindow.text = this.message;
                                 this._width = _Str_5706;
                             }
                             else
                             {
-                                if (this._chatType == _Str_3535._Str_5904)
+                                if (this._chatType == _Str_3535.CHAT_TYPE_PET_SPEED_FERTILIZE)
                                 {
                                     textWindow.text = this.message;
                                     this._width = _Str_5706;

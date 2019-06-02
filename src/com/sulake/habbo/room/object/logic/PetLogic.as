@@ -19,7 +19,7 @@
     import com.sulake.room.object.IRoomObjectModelController;
     import flash.utils.getTimer;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import flash.events.MouseEvent;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
     import com.sulake.room.events.RoomSpriteMouseEvent;
@@ -113,20 +113,20 @@
                 if ((k is RoomObjectAvatarPostureUpdateMessage))
                 {
                     _local_3 = (k as RoomObjectAvatarPostureUpdateMessage);
-                    _local_2.setString(RoomObjectVariableEnum.FIGURE_POSTURE, _local_3._Str_22110);
+                    _local_2.setString(RoomObjectVariableEnum.FIGURE_POSTURE, _local_3.postureType);
                     return;
                 }
                 if ((k is RoomObjectAvatarUpdateMessage))
                 {
                     _local_4 = (k as RoomObjectAvatarUpdateMessage);
-                    _local_2.setNumber(RoomObjectVariableEnum.HEAD_DIRECTION, _local_4._Str_14280);
+                    _local_2.setNumber(RoomObjectVariableEnum.HEAD_DIRECTION, _local_4.dirHead);
                     return;
                 }
                 if ((k is RoomObjectAvatarChatUpdateMessage))
                 {
                     _local_5 = (k as RoomObjectAvatarChatUpdateMessage);
                     _local_2.setNumber(RoomObjectVariableEnum.FIGURE_TALK, 1);
-                    this._talkingEndTimeStamp = (getTimer() + (_local_5._Str_19452 * 1000));
+                    this._talkingEndTimeStamp = (getTimer() + (_local_5.numberOfWords * 1000));
                     return;
                 }
                 if ((k is RoomObjectAvatarPetGestureUpdateMessage))
@@ -139,7 +139,7 @@
                 if ((k is RoomObjectAvatarSleepUpdateMessage))
                 {
                     _local_7 = (k as RoomObjectAvatarSleepUpdateMessage);
-                    _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SLEEP, Number(_local_7._Str_19643));
+                    _local_2.setNumber(RoomObjectVariableEnum.FIGURE_SLEEP, Number(_local_7.isSleeping));
                     return;
                 }
             }
@@ -167,10 +167,10 @@
                 _local_2.setNumber(RoomObjectVariableEnum.PET_PALETTE_INDEX, _local_12.paletteId);
                 _local_2.setNumber(RoomObjectVariableEnum.PET_COLOR, _local_12.color);
                 _local_2.setNumber(RoomObjectVariableEnum.PET_TYPE, _local_12.typeId);
-                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_LAYER_IDS, _local_12._Str_19294);
-                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_PARTS_IDS, _local_12._Str_19132);
-                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_PALETTE_IDS, _local_12._Str_21151);
-                _local_2.setNumber(RoomObjectVariableEnum.PET_IS_RIDING, ((_local_10._Str_2886) ? 1 : 0));
+                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_LAYER_IDS, _local_12.customLayerIds);
+                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_PARTS_IDS, _local_12.customPartIds);
+                _local_2.setNumberArray(RoomObjectVariableEnum.PET_CUSTOM_PALETTE_IDS, _local_12.customPaletteIds);
+                _local_2.setNumber(RoomObjectVariableEnum.PET_IS_RIDING, ((_local_10.isRiding) ? 1 : 0));
                 return;
             }
         }
@@ -184,7 +184,7 @@
                 return;
             }
             var _local_3:IRoomObjectModelController = object.getModelController();
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             var _local_5:Vector3d;
             var _local_6:String;
             switch (k.type)
@@ -193,7 +193,7 @@
                     _local_6 = RoomObjectMouseEvent.ROE_MOUSE_CLICK;
                     if (this._debugMode)
                     {
-                        this._Str_22525(k);
+                        this.debugMouseEvent(k);
                     }
                     break;
                 case MouseEvent.DOUBLE_CLICK:
@@ -223,7 +223,7 @@
             }
         }
 
-        private function _Str_22525(k:RoomSpriteMouseEvent):void
+        private function debugMouseEvent(k:RoomSpriteMouseEvent):void
         {
             var _local_3:int;
             var _local_2:IRoomObjectModelController = object.getModelController();
@@ -269,7 +269,7 @@
 
         override public function update(k:int):void
         {
-            var _local_2:IVector3D;
+            var _local_2:IVector3d;
             var _local_3:RoomObjectEvent;
             super.update(k);
             if (((this._selected) && (!(object == null))))

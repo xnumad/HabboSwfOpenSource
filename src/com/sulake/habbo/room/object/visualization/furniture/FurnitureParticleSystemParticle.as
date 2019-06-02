@@ -96,7 +96,7 @@
             return this._isEmitter;
         }
 
-        public function get _Str_16034():Boolean
+        public function get isAlive():Boolean
         {
             return this._age <= this._lifeTime;
         }
@@ -169,7 +169,7 @@
             this._lastZ = k;
         }
 
-        public function get _Str_22611():Boolean
+        public function get hasMoved():Boolean
         {
             return this._hasMoved;
         }
@@ -187,7 +187,7 @@
             this._lastX = (k._lastX * _arg_2);
             this._lastY = (k._lastY * _arg_2);
             this._lastZ = (k._lastZ * _arg_2);
-            this._hasMoved = k._Str_22611;
+            this._hasMoved = k.hasMoved;
             this._direction = k._direction;
             this._age = k._age;
             this._lifeTime = k._lifeTime;

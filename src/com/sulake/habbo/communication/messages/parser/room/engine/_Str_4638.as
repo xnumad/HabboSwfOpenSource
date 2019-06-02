@@ -23,7 +23,7 @@
             _local_3.y = k.readInteger();
             _local_3.dir = ((k.readInteger() % 8) * 45);
             _local_3.z = Number(k.readString());
-            _local_3._Str_7143 = Number(k.readString());
+            _local_3.sizeZ = Number(k.readString());
             _local_3._Str_2794 = k.readInteger();
             _local_3.data = _Str_6271(k);
             var _local_5:Number = parseFloat(_local_3.data.getLegacyString());
@@ -31,9 +31,9 @@
             {
                 _local_3.state = int(_local_3.data.getLegacyString());
             }
-            _local_3._Str_6698 = k.readInteger();
-            _local_3._Str_4172 = k.readInteger();
-            _local_3._Str_2481 = k.readInteger();
+            _local_3.expiryTime = k.readInteger();
+            _local_3.usagePolicy = k.readInteger();
+            _local_3.ownerId = k.readInteger();
             if (_local_4 < 0)
             {
                 _local_3._Str_13150 = k.readString();

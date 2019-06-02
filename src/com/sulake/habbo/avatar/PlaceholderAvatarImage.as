@@ -26,7 +26,7 @@
                 _Str_581 = null;
                 _assets = null;
                 _Str_1708 = null;
-                _Str_1710 = null;
+                _figure = null;
                 _Str_2121 = null;
                 _Str_614 = null;
                 if (((!(_Str_1586)) && (_Str_671)))
@@ -83,7 +83,7 @@
                 case AvatarAction.CARRY_OBJECT:
                 case AvatarAction.USE_OBJECT:
                 case AvatarAction.EXPRESSION_BLOW_A_KISS:
-                    super._Str_1182.apply(null, [k].concat(_args));
+                    super.addActionData.apply(null, [k].concat(_args));
                     break;
             }
             return true;

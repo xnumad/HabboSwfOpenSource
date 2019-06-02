@@ -156,7 +156,7 @@
             var _local_8:int = (_local_7 * 2);
             while (_local_6.numListItems > _local_8)
             {
-                _local_6._Str_2915(_local_8);
+                _local_6.removeListItemAt(_local_8);
             }
             k.addChild(_local_6);
         }
@@ -287,7 +287,7 @@
                 {
                     switch (k.activityPointType)
                     {
-                        case ActivityPointTypeEnum._Str_4627:
+                        case ActivityPointTypeEnum.DUCKET:
                             _arg_3.color = 11257559;
                             break;
                         default:

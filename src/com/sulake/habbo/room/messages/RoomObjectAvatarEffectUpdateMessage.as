@@ -16,7 +16,7 @@
             return this._effect;
         }
 
-        public function get _Str_18601():int
+        public function get delayMilliSeconds():int
         {
             return this._delayMilliSeconds;
         }

@@ -465,7 +465,7 @@
         public function _Str_19422(k:_Str_3802):AdServerTemplate
         {
             var _local_2:VideoAdServingTemplate = new VideoAdServingTemplate(k, this, this._Str_20400, this._Str_23137);
-            _local_2._Str_11964 = true;
+            _local_2.isMaster = true;
             return _local_2;
         }
 

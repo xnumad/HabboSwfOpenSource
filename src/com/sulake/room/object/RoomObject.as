@@ -3,7 +3,7 @@
     import com.sulake.room.utils.Vector3d;
     import com.sulake.room.object.visualization.IRoomObjectVisualization;
     import com.sulake.room.object.logic.IRoomObjectEventHandler;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.logic.IRoomObjectMouseHandler;
     import com.sulake.room.utils.*;
 
@@ -11,8 +11,8 @@
     {
         private static var _Str_3822:int = 0;
 
-        private var _Str_576:int;
-        private var _Str_578:String = "";
+        private var _id:int;
+        private var _type:String = "";
         private var _loc:Vector3d;
         private var _dir:Vector3d;
         private var _Str_17023:Vector3d;
@@ -27,7 +27,7 @@
 
         public function RoomObject(k:int, _arg_2:int, _arg_3:String)
         {
-            this._Str_576 = k;
+            this._id = k;
             this._loc = new Vector3d();
             this._dir = new Vector3d();
             this._Str_17023 = new Vector3d();
@@ -39,7 +39,7 @@
                 this._Str_6775[_local_4] = 0;
                 _local_4--;
             }
-            this._Str_578 = _arg_3;
+            this._type = _arg_3;
             this._roomObjectModel = new RoomObjectModel();
             this._visualization = null;
             this._roomObjectLogic = null;
@@ -73,7 +73,7 @@
 
         public function getId():int
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function getInstanceId():int
@@ -83,16 +83,16 @@
 
         public function getType():String
         {
-            return this._Str_578;
+            return this._type;
         }
 
-        public function getLocation():IVector3D
+        public function getLocation():IVector3d
         {
             this._Str_17023.assign(this._loc);
             return this._Str_17023;
         }
 
-        public function getDirection():IVector3D
+        public function getDirection():IVector3d
         {
             this._Str_18908.assign(this._dir);
             return this._Str_18908;
@@ -122,7 +122,7 @@
             return this._visualization;
         }
 
-        public function setLocation(k:IVector3D):void
+        public function setLocation(k:IVector3d):void
         {
             if (k == null)
             {
@@ -137,7 +137,7 @@
             }
         }
 
-        public function setDirection(k:IVector3D):void
+        public function setDirection(k:IVector3d):void
         {
             if (k == null)
             {

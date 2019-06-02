@@ -43,7 +43,7 @@
                 return;
             }
             this._window = (_arg_3.buildFromXML((_local_6.content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             var _local_7:BitmapData = k._Str_20649(_arg_2);
             this._Str_3523(_local_7);
             this._Str_7681();
@@ -63,7 +63,7 @@
             }
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             switch (k.type)
             {
@@ -110,7 +110,7 @@
             }
         }
 
-        public function _Str_2520(k:Boolean):void
+        public function setSelected(k:Boolean):void
         {
             if (this._isSelected != k)
             {

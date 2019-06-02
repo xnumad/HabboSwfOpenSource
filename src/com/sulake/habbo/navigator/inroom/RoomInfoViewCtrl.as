@@ -9,7 +9,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_9806;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11893;
-    import _Str_471.RoomAdErrorMessageParser;
+    import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
     import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;

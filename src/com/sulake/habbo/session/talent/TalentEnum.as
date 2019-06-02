@@ -6,7 +6,7 @@
         public static const CITIZENSHIP:String = "citizenship";
 
 
-        public static function get _Str_23154():Array
+        public static function get asArray():Array
         {
             return [HELPER, CITIZENSHIP];
         }

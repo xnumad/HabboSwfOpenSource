@@ -37,7 +37,7 @@
             }
             else
             {
-                k._Str_2205();
+                k.unselect();
             }
         }
 

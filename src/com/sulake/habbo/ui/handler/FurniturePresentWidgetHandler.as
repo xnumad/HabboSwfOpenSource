@@ -123,7 +123,7 @@
                         }
                         if (this._container.roomEngine != null)
                         {
-                            this._container.roomEngine._Str_20271(this._container.roomEngine.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.CONST_10, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
+                            this._container.roomEngine.changeObjectModelData(this._container.roomEngine.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.CONST_10, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
                         }
                     }
                     break;
@@ -183,19 +183,19 @@
                             _local_4 = null;
                             if (_local_2._Str_2887 == ProductTypeEnum.FLOOR)
                             {
-                                _local_3 = this._container.sessionDataManager._Str_3411(_local_2._Str_2706);
+                                _local_3 = this._container.sessionDataManager._Str_3411(_local_2.classId);
                             }
                             else
                             {
                                 if (_local_2._Str_2887 == ProductTypeEnum.WALL)
                                 {
-                                    _local_3 = this._container.sessionDataManager._Str_4531(_local_2._Str_2706);
+                                    _local_3 = this._container.sessionDataManager.getWallItemData(_local_2.classId);
                                 }
                             }
                             _local_6 = false;
                             if (_local_2._Str_4057)
                             {
-                                _local_8 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, _local_2._Str_5200, RoomObjectCategoryEnum.CONST_10);
+                                _local_8 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, _local_2.placedItemId, RoomObjectCategoryEnum.CONST_10);
                                 if (_local_8 != null)
                                 {
                                     _local_6 = this._container.isOwnerOfFurniture(_local_8);
@@ -218,14 +218,14 @@
                                                 _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_WALLPAPER, 0, this._container.localization.getLocalization("inventory.furni.item.wallpaper.name"), _local_6, null);
                                                 break;
                                             case POSTER:
-                                                _local_9 = _local_2._Str_2716;
+                                                _local_9 = _local_2.productCode;
                                                 _local_10 = null;
                                                 if (_local_9.indexOf("poster") == 0)
                                                 {
                                                     _local_11 = int(_local_9.replace("poster", ""));
                                                     _local_10 = String(_local_11);
                                                 }
-                                                _local_4 = this._container.roomEngine.getWallItemIcon(_local_2._Str_2706, this, _local_10);
+                                                _local_4 = this._container.roomEngine.getWallItemIcon(_local_2.classId, this, _local_10);
                                                 _local_7 = this._container.sessionDataManager.getProductData(_local_9);
                                                 if (_local_7 != null)
                                                 {
@@ -244,7 +244,7 @@
                                                 }
                                                 break;
                                             default:
-                                                _local_4 = this._container.roomEngine.getWallItemIcon(_local_2._Str_2706, this);
+                                                _local_4 = this._container.roomEngine.getWallItemIcon(_local_2.classId, this);
                                                 if (_local_3 != null)
                                                 {
                                                     this._name = _local_3.localizedName;
@@ -260,9 +260,9 @@
                                     _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_CLUB, 0, this._container.localization.getLocalization("widget.furni.present.hc"), false, null);
                                     break;
                                 default:
-                                    if (_local_2._Str_5057 == ProductTypeEnum.PET)
+                                    if (_local_2.placedItemType == ProductTypeEnum.PET)
                                     {
-                                        _local_12 = _local_2._Str_17075;
+                                        _local_12 = _local_2.petFigureString;
                                         if (((!(_local_12 == null)) && (_local_12.length > 0)))
                                         {
                                             _local_13 = new PetFigureData(_local_12);
@@ -272,7 +272,7 @@
                                             {
                                                 _local_15 = 32;
                                             }
-                                            _local_16 = this._container.roomEngine._Str_2641(_local_13.typeId, _local_13.paletteId, _local_13.color, new Vector3d((_local_14 * 45)), _local_15, this, true, 0, _local_13._Str_3542);
+                                            _local_16 = this._container.roomEngine.getPetImage(_local_13.typeId, _local_13.paletteId, _local_13.color, new Vector3d((_local_14 * 45)), _local_15, this, true, 0, _local_13._Str_3542);
                                             if (_local_16 != null)
                                             {
                                                 _local_4 = _local_16;
@@ -281,9 +281,9 @@
                                     }
                                     if (_local_4 == null)
                                     {
-                                        _local_4 = this._container.roomEngine.getFurnitureImage(_local_2._Str_2706, new Vector3d(90), 64, this);
+                                        _local_4 = this._container.roomEngine.getFurnitureImage(_local_2.classId, new Vector3d(90), 64, this);
                                     }
-                                    _local_7 = this._container.sessionDataManager.getProductData(_local_2._Str_2716);
+                                    _local_7 = this._container.sessionDataManager.getProductData(_local_2.productCode);
                                     if (_local_7 != null)
                                     {
                                         this._name = _local_7.name;
@@ -302,11 +302,11 @@
                             }
                             if (_local_5 != null)
                             {
-                                _local_5._Str_2706 = _local_2._Str_2706;
+                                _local_5.classId = _local_2.classId;
                                 _local_5._Str_2887 = _local_2._Str_2887;
-                                _local_5._Str_5200 = _local_2._Str_5200;
+                                _local_5.placedItemId = _local_2.placedItemId;
                                 _local_5._Str_4057 = _local_2._Str_4057;
-                                _local_5._Str_5057 = _local_2._Str_5057;
+                                _local_5.placedItemType = _local_2.placedItemType;
                                 this._container.events.dispatchEvent(_local_5);
                             }
                         }

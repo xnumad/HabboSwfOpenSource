@@ -29,7 +29,7 @@
         protected static const BUTTON_CLOSE:String = "button_close";
         protected static const CLICK_REGION_REJECT:String = "click_region_reject";
         protected static const LINK_REJECT:String = "link_reject";
-        private static const _Str_2531:uint = 16435481;
+        private static const DEFAULT_COLOR:uint = 16435481;
         private static const _Str_2841:uint = 16767334;
         private static const _Str_5223:uint = 16770666;
         private static const _Str_5225:uint = 0xFFFFFF;
@@ -124,13 +124,13 @@
         override protected function expose():void
         {
             super.expose();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
         }
 
         override protected function conceal():void
         {
             super.conceal();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
         }
 
         private function _Str_17362():IWindowContainer
@@ -144,8 +144,8 @@
             var _local_6:IBubbleWindow = (k.findChildByName(BUBBLE) as IBubbleWindow);
             k.x = 0;
             k.y = 0;
-            k.width = _Str_3098;
-            k.height = _Str_2790;
+            k.width = WIDTH;
+            k.height = HEIGHT;
             k.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             k.addEventListener(WindowMouseEvent.OUT, onMouseOut);
@@ -171,7 +171,7 @@
                 _local_9.bitmap = (_local_7.content as BitmapData);
             }
             _local_8.addChild(_local_9);
-            IItemListWindow(k.findChildByName(ICONS))._Str_3015(_local_8, 0);
+            IItemListWindow(k.findChildByName(ICONS)).addListItemAt(_local_8, 0);
             return k;
         }
 
@@ -197,9 +197,9 @@
                 _local_3.removeEventListener(WindowMouseEvent.OUT, onMouseClick);
                 _local_4 = IRegionWindow(k.findChildByName(REGION_PROFILE));
                 _local_4.removeEventListener(WindowMouseEvent.CLICK, _Str_5926);
-                k.width = _Str_3098;
-                k.height = _Str_2790;
-                k.color = _Str_2531;
+                k.width = WIDTH;
+                k.height = HEIGHT;
+                k.color = DEFAULT_COLOR;
                 _local_5 = IBitmapWrapperWindow(k.findChildByName(CANVAS));
                 _local_5.bitmap = null;
                 ITextWindow(k.findChildByTag("label")).underline = false;

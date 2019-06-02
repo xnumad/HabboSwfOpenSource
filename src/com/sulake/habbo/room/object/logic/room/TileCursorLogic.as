@@ -39,7 +39,7 @@
             {
                 return;
             }
-            if (((!(this._Str_16735 == null)) && (this._Str_16735 == _local_2._Str_20637)))
+            if (((!(this._Str_16735 == null)) && (this._Str_16735 == _local_2.sourceEventId)))
             {
                 return;
             }
@@ -69,7 +69,7 @@
                     }
                 }
             }
-            this._Str_16735 = _local_2._Str_20637;
+            this._Str_16735 = _local_2.sourceEventId;
         }
     }
 }

@@ -33,7 +33,7 @@
         protected static const CLICK_AREA_DISCARD:String = "click_area_discard";
         protected static const TEXT_DISCARD:String = "text_discard";
         private static var _Str_4254:FriendRequestsTab;
-        private static const _Str_2531:uint = 4294625561;
+        private static const DEFAULT_COLOR:uint = 4294625561;
         private static const _Str_2841:uint = 0xFFFFD966;
         private static const _Str_16055:uint = 4289431312;
         private static const _Str_16914:uint = 4290616362;
@@ -92,7 +92,7 @@
                             {
                                 while (_local_2.numListItems > 0)
                                 {
-                                    _local_2._Str_2915(0).dispose();
+                                    _local_2.removeListItemAt(0).dispose();
                                 }
                             }
                         }
@@ -181,14 +181,14 @@
         override protected function expose():void
         {
             super.expose();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
             ITextWindow(window.findChildByTag(LABEL)).underline = _Str_3341;
         }
 
         override protected function conceal():void
         {
             super.conceal();
-            window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
             ITextWindow(window.findChildByTag(LABEL)).underline = _Str_3341;
         }
 
@@ -203,8 +203,8 @@
             var _local_6:IBubbleWindow = (k.findChildByName(BUBBLE) as IBubbleWindow);
             k.x = 0;
             k.y = 0;
-            k.width = _Str_3098;
-            k.height = _Str_2790;
+            k.width = WIDTH;
+            k.height = HEIGHT;
             k.addEventListener(WindowMouseEvent.CLICK, onMouseClick);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             k.addEventListener(WindowMouseEvent.OUT, onMouseOut);
@@ -224,7 +224,7 @@
             _local_8.disposesBitmap = false;
             _local_8.bitmap = (_local_7.content as BitmapData);
             var _local_9:IItemListWindow = (_local_6.content.getChildByName(REQUEST_ENTITY_LIST) as IItemListWindow);
-            this._Str_12138 = (_local_9._Str_2915(0) as IWindowContainer);
+            this._Str_12138 = (_local_9.removeListItemAt(0) as IWindowContainer);
             return k;
         }
 
@@ -242,9 +242,9 @@
                 _local_2.removeEventListener(WindowMouseEvent.CLICK, onMouseClick);
                 _local_2.removeEventListener(WindowMouseEvent.OVER, onMouseOver);
                 _local_2.removeEventListener(WindowMouseEvent.OUT, onMouseOut);
-                k.width = _Str_3098;
-                k.height = _Str_2790;
-                k.color = _Str_2531;
+                k.width = WIDTH;
+                k.height = HEIGHT;
+                k.color = DEFAULT_COLOR;
                 _local_3 = IBitmapWrapperWindow(k.findChildByName(CANVAS));
                 if (_local_3)
                 {

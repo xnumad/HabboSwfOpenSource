@@ -293,7 +293,7 @@
             var _local_2:IWindow = this._tabContext._Str_3363(k);
             if (_local_2 != null)
             {
-                this._tabContext.selector._Str_2520((_local_2 as ISelectableWindow));
+                this._tabContext.selector.setSelected((_local_2 as ISelectableWindow));
             }
         }
 
@@ -303,8 +303,8 @@
             {
                 return -1;
             }
-            var k:ISelectableWindow = this._tabContext.selector._Str_2657();
-            return this._tabContext.selector._Str_8283(k);
+            var k:ISelectableWindow = this._tabContext.selector.getSelected();
+            return this._tabContext.selector.getSelectableIndex(k);
         }
 
         private function get _Str_21491():XML
@@ -347,7 +347,7 @@
                 }
                 else
                 {
-                    _local_2._Str_2205();
+                    _local_2.unselect();
                 }
             }
             if (this._alphaSlider != null)

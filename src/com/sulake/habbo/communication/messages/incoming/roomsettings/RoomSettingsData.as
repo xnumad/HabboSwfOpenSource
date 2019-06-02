@@ -4,14 +4,14 @@
 
     public class RoomSettingsData 
     {
-        public static const _Str_8178:int = 0;
-        public static const _Str_4199:int = 1;
-        public static const _Str_3711:int = 2;
-        public static const _Str_4775:int = 3;
-        public static const _Str_5316:int = 4;
-        public static const _Str_21343:int = 0;
-        public static const _Str_20840:int = 1;
-        public static const _Str_26471:int = 2;
+        public static const DOORMODE_OPEN:int = 0;
+        public static const DOORMODE_CLOSED:int = 1;
+        public static const DOORMODE_PASSWORD:int = 2;
+        public static const DOORMODE_INVISIBLE:int = 3;
+        public static const DOORMODE_NOOBS_ONLY:int = 4;
+        public static const TRADEMODE_NOT_ALLOWED:int = 0;
+        public static const TRADEMODE_WITH_CONTROLLER:int = 1;
+        public static const TRADEMODE_ALLOWED:int = 2;
 
         private var _roomId:int;
         private var _name:String;
@@ -42,15 +42,15 @@
         {
             switch (k)
             {
-                case _Str_8178:
+                case DOORMODE_OPEN:
                     return "${navigator.door.mode.open}";
-                case _Str_4199:
+                case DOORMODE_CLOSED:
                     return "${navigator.door.mode.closed}";
-                case _Str_3711:
+                case DOORMODE_PASSWORD:
                     return "${navigator.door.mode.password}";
-                case _Str_4775:
+                case DOORMODE_INVISIBLE:
                     return "${navigator.door.mode.invisible}";
-                case _Str_5316:
+                case DOORMODE_NOOBS_ONLY:
                     return "${navigator.door.mode.noobs_only}";
             }
             return "";
@@ -237,7 +237,7 @@
             this._controllersById = k;
         }
 
-        public function get _Str_23268():Array
+        public function get controllerList():Array
         {
             var k:String;
             var _local_2:int;
@@ -259,7 +259,7 @@
             return this._controllerList;
         }
 
-        public function get _Str_21764():int
+        public function get highlightedUserId():int
         {
             return this._highlightedUserId;
         }
@@ -277,12 +277,12 @@
             this._bannedUsersById[k] = _arg_2;
         }
 
-        public function get _Str_24107():Dictionary
+        public function get bannedUsersById():Dictionary
         {
             return this._bannedUsersById;
         }
 
-        public function get _Str_25521():Array
+        public function get bannedUsersList():Array
         {
             var k:_Str_5423;
             if (this._bannedUsersList == null)

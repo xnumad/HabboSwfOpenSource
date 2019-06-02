@@ -10,9 +10,7 @@
 
     public class BlankStyle implements IChatStyleInternal 
     {
-
-
-        public function _Str_9574(k:uint=0xFFFFFF):Sprite
+        public function getNewBackgroundSprite(k:uint=0xFFFFFF):Sprite
         {
             var _local_2:Sprite = new Sprite();
             _local_2.graphics.clear();
@@ -22,7 +20,7 @@
             return _local_2;
         }
 
-        public function get _Str_5640():TextFormat
+        public function get textFormat():TextFormat
         {
             return new TextFormat();
         }

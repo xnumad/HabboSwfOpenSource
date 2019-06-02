@@ -76,7 +76,7 @@
         {
             this._Str_9023();
             this._Str_2319 = k._Str_1577;
-            this._Str_3014 = k._Str_4093;
+            this._Str_3014 = k.objectCategory;
             this._Str_2337 = k.roomId;
             var _local_2:IAsset = assets.getAssetByName("boygirl");
             var _local_3:XmlAsset = XmlAsset(_local_2);

@@ -5,7 +5,7 @@
 
     public class SortableSprite implements ISortableSprite 
     {
-        public static const _Str_17154:Number = 100000000;
+        public static const Z_INFINITY:Number = 100000000;
 
         private var _x:int = 0;
         private var _y:int = 0;
@@ -17,7 +17,7 @@
         public function dispose():void
         {
             this._sprite = null;
-            this._z = -(_Str_17154);
+            this._z = -(Z_INFINITY);
         }
 
         public function get x():int

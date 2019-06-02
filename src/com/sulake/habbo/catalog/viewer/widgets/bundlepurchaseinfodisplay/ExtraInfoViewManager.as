@@ -108,7 +108,7 @@
             return _local_2.id;
         }
 
-        public function _Str_3757(k:int):void
+        public function removeItem(k:int):void
         {
             var _local_2:ExtraInfoListItem = this._Str_2990(k);
             if (_local_2)
@@ -176,7 +176,7 @@
                 }
                 else
                 {
-                    if (_local_4.alignment == ExtraInfoListItem._Str_3606)
+                    if (_local_4.alignment == ExtraInfoListItem.ALIGN_BOTTOM)
                     {
                         _local_5.y = (_local_2 - _local_5.height);
                         _local_5.y = (_local_5.y + (_local_6 * Math.min(_local_5.height, _Str_13502)));

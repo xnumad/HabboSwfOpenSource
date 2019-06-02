@@ -59,7 +59,7 @@
             }
             var k:IHabboLocalizationManager = this._controller.localization;
             var _local_2:IPurse = this._controller.getPurse();
-            var _local_3:String = (((_local_2._Str_13571) && (_local_2._Str_3738)) ? "extension." : "subscription.");
+            var _local_3:String = (((_local_2.hasClubLeft) && (_local_2.isVIP)) ? "extension." : "subscription.");
             var _local_4:String = ((this._offer.months == 0) ? "days" : "months");
             var _local_5:String = (("catalog.vip.buy.confirm." + _local_3) + _local_4);
             k.registerParameter(_local_5, ("num_" + _local_4), String(((this._offer.months == 0) ? this._offer._Str_15178 : this._offer.months)));

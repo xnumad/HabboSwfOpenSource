@@ -151,7 +151,7 @@
         private function _Str_25107(k:AnimationStateData, _arg_2:int):Boolean
         {
             var _local_3:int = k.animationId;
-            if (((AnimationData._Str_10381(_local_3)) || (AnimationData._Str_11758(_local_3))))
+            if (((AnimationData.isTransitionFromAnimation(_local_3)) || (AnimationData.isTransitionToAnimation(_local_3))))
             {
                 if (_arg_2 == k._Str_5355)
                 {
@@ -167,7 +167,7 @@
         private function _Str_22935(k:AnimationStateData):int
         {
             var _local_2:int = k.animationId;
-            if (((AnimationData._Str_10381(_local_2)) || (AnimationData._Str_11758(_local_2))))
+            if (((AnimationData.isTransitionFromAnimation(_local_2)) || (AnimationData.isTransitionToAnimation(_local_2))))
             {
                 return k._Str_5355;
             }
@@ -198,7 +198,7 @@
                 {
                     if (!this._Str_1033._Str_12484(this._Str_5575, _arg_2, _local_5))
                     {
-                        _local_6 = AnimationData._Str_18003(_local_5);
+                        _local_6 = AnimationData.getTransitionFromAnimationId(_local_5);
                         if (this._Str_1033._Str_6839(this._Str_5575, _local_6))
                         {
                             k._Str_5355 = _arg_2;
@@ -206,7 +206,7 @@
                         }
                         else
                         {
-                            _local_6 = AnimationData._Str_12716(_arg_2);
+                            _local_6 = AnimationData.getTransitionToAnimationId(_arg_2);
                             if (this._Str_1033._Str_6839(this._Str_5575, _local_6))
                             {
                                 k._Str_5355 = _arg_2;
@@ -217,9 +217,9 @@
                 }
                 else
                 {
-                    if (AnimationData._Str_10381(_local_4))
+                    if (AnimationData.isTransitionFromAnimation(_local_4))
                     {
-                        _local_6 = AnimationData._Str_12716(_arg_2);
+                        _local_6 = AnimationData.getTransitionToAnimationId(_arg_2);
                         if (this._Str_1033._Str_6839(this._Str_5575, _local_6))
                         {
                             k._Str_5355 = _arg_2;
@@ -228,11 +228,11 @@
                     }
                     else
                     {
-                        if (!AnimationData._Str_11758(_local_4))
+                        if (!AnimationData.isTransitionToAnimation(_local_4))
                         {
                             if (this.usesAnimationResetting())
                             {
-                                _local_6 = AnimationData._Str_18003(_local_5);
+                                _local_6 = AnimationData.getTransitionFromAnimationId(_local_5);
                                 if (this._Str_1033._Str_6839(this._Str_5575, _local_6))
                                 {
                                     k._Str_5355 = _arg_2;
@@ -240,7 +240,7 @@
                                 }
                                 else
                                 {
-                                    _local_6 = AnimationData._Str_12716(_arg_2);
+                                    _local_6 = AnimationData.getTransitionToAnimationId(_arg_2);
                                     if (this._Str_1033._Str_6839(this._Str_5575, _local_6))
                                     {
                                         k._Str_5355 = _arg_2;
@@ -260,16 +260,16 @@
             return false;
         }
 
-        protected function _Str_6660(k:int):Boolean
+        protected function getLastFramePlayed(k:int):Boolean
         {
-            return this._Str_3566._Str_6660(k);
+            return this._Str_3566.getLastFramePlayed(k);
         }
 
         protected function resetAllAnimationFrames():void
         {
             if (this._Str_3566 != null)
             {
-                this._Str_3566._Str_21182(this._Str_9825);
+                this._Str_3566.setLayerCount(this._Str_9825);
             }
         }
 
@@ -298,7 +298,7 @@
                 _local_2 = this._Str_18198(this._Str_3566, k);
                 if (this._Str_3566._Str_5293)
                 {
-                    if (((AnimationData._Str_10381(this._Str_3566.animationId)) || (AnimationData._Str_11758(this._Str_3566.animationId))))
+                    if (((AnimationData.isTransitionFromAnimation(this._Str_3566.animationId)) || (AnimationData.isTransitionToAnimation(this._Str_3566.animationId))))
                     {
                         this.setAnimation(this._Str_3566._Str_5355);
                         this._Str_3566._Str_5293 = false;
@@ -332,37 +332,37 @@
             var _local_7:int = (this._Str_9825 - 1);
             while (_local_7 >= 0)
             {
-                _local_8 = k._Str_22953(_local_7);
+                _local_8 = k.getAnimationPlayed(_local_7);
                 if (((!(_local_8)) || (this._Str_9006)))
                 {
-                    _local_9 = k._Str_6660(_local_7);
+                    _local_9 = k.getLastFramePlayed(_local_7);
                     _local_10 = k._Str_2259(_local_7);
                     if (_local_10 != null)
                     {
-                        if (((_local_10._Str_20105) && (_local_10._Str_9508 <= this.frameIncrease)))
+                        if (((_local_10.isLastFrame) && (_local_10._Str_9508 <= this.frameIncrease)))
                         {
                             _local_9 = true;
                         }
                     }
                     if ((((this._Str_9006) || (_local_10 == null)) || ((_local_10._Str_9508 >= 0) && ((_local_10._Str_9508 = (_local_10._Str_9508 - this.frameIncrease)) <= 0))))
                     {
-                        _local_11 = AnimationFrame._Str_14684;
+                        _local_11 = AnimationFrame.SEQUENCE_NOT_DEFINED;
                         if (_local_10 != null)
                         {
-                            _local_11 = _local_10._Str_23099;
+                            _local_11 = _local_10.activeSequence;
                         }
-                        if (_local_11 == AnimationFrame._Str_14684)
+                        if (_local_11 == AnimationFrame.SEQUENCE_NOT_DEFINED)
                         {
                             _local_10 = this._Str_1033._Str_2259(_arg_2, _local_4, direction, _local_7, _local_3);
                         }
                         else
                         {
-                            _local_10 = this._Str_1033._Str_7945(_arg_2, _local_4, direction, _local_7, _local_11, (_local_10._Str_25212 + _local_10.repeats), _local_3);
+                            _local_10 = this._Str_1033._Str_7945(_arg_2, _local_4, direction, _local_7, _local_11, (_local_10.activeSequenceOffset + _local_10.repeats), _local_3);
                         }
-                        k._Str_25614(_local_7, _local_10);
+                        k.setFrame(_local_7, _local_10);
                         _local_5 = (_local_5 | _local_6);
                     }
-                    if (((_local_10 == null) || (_local_10._Str_9508 == AnimationFrame._Str_9016)))
+                    if (((_local_10 == null) || (_local_10._Str_9508 == AnimationFrame.FRAME_REPEAT_FOREVER)))
                     {
                         _local_9 = true;
                         _local_8 = true;
@@ -371,8 +371,8 @@
                     {
                         k._Str_5293 = false;
                     }
-                    k._Str_23406(_local_7, _local_9);
-                    k._Str_23248(_local_7, _local_8);
+                    k.setLastFramePlayed(_local_7, _local_9);
+                    k.setAnimationPlayed(_local_7, _local_8);
                 }
                 _local_6 = (_local_6 >> 1);
                 _local_7--;

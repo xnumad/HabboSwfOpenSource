@@ -4,9 +4,9 @@
     {
         private static const ANIMATION_ID_OFFSET_SLOW1:int = 20;
         private static const ANIMATION_ID_OFFSET_SLOW2:int = 10;
-        private static const _Str_7627:int = 31;
-        private static const _Str_4186:int = 32;
-        private static const _Str_11236:int = 30;
+        private static const ANIMATION_ID_START_ROLL:int = 31;
+        private static const ANIMATION_ID_ROLL:int = 32;
+        private static const ANIMATION_ID_OFF:int = 30;
 
         private var _stateQueue:Array;
         private var _running:Boolean = false;
@@ -15,7 +15,7 @@
         {
             this._stateQueue = new Array();
             super();
-            super.setAnimation(_Str_11236);
+            super.setAnimation(ANIMATION_ID_OFF);
         }
 
         override protected function setAnimation(k:int):void
@@ -26,8 +26,8 @@
                 {
                     this._running = true;
                     this._stateQueue = new Array();
-                    this._stateQueue.push(_Str_7627);
-                    this._stateQueue.push(_Str_4186);
+                    this._stateQueue.push(ANIMATION_ID_START_ROLL);
+                    this._stateQueue.push(ANIMATION_ID_ROLL);
                     return;
                 }
             }
@@ -47,16 +47,16 @@
                         this._stateQueue.push((ANIMATION_ID_OFFSET_SLOW1 + k));
                         this._stateQueue.push((ANIMATION_ID_OFFSET_SLOW2 + k));
                     }
-                    this._stateQueue.push(_Str_11236);
+                    this._stateQueue.push(ANIMATION_ID_OFF);
                     return;
                 }
-                super.setAnimation(_Str_11236);
+                super.setAnimation(ANIMATION_ID_OFF);
             }
         }
 
         override protected function updateAnimation(k:Number):int
         {
-            if (super._Str_6660(11))
+            if (super.getLastFramePlayed(11))
             {
                 if (this._stateQueue.length > 0)
                 {

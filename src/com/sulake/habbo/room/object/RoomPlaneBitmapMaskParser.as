@@ -3,7 +3,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.room.utils.XMLValidator;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomPlaneBitmapMaskParser 
     {
@@ -94,14 +94,14 @@
             this._masks.reset();
         }
 
-        public function addMask(k:String, _arg_2:String, _arg_3:IVector3D, _arg_4:String):void
+        public function addMask(k:String, _arg_2:String, _arg_3:IVector3d, _arg_4:String):void
         {
             var _local_5:RoomPlaneBitmapMaskData = new RoomPlaneBitmapMaskData(_arg_2, _arg_3, _arg_4);
             this._masks.remove(k);
             this._masks.add(k, _local_5);
         }
 
-        public function _Str_23574(k:String):Boolean
+        public function removeMask(k:String):Boolean
         {
             var _local_2:RoomPlaneBitmapMaskData = (this._masks.remove(k) as RoomPlaneBitmapMaskData);
             if (_local_2 != null)
@@ -117,16 +117,16 @@
             var _local_3:String;
             var _local_4:String;
             var _local_5:XML;
-            var _local_6:IVector3D;
+            var _local_6:IVector3d;
             var k:XML = <planeMasks/>
             ;
             var _local_2:int;
             while (_local_2 < this._Str_6845)
             {
-                _local_3 = this._Str_21678(_local_2);
-                _local_4 = this._Str_21644(_local_2);
+                _local_3 = this.getMaskType(_local_2);
+                _local_4 = this.getMaskCategory(_local_2);
                 _local_5 = new (XML)((((((('<planeMask id="' + _local_2) + '" type="') + _local_3) + '" category="') + _local_4) + '"/>'));
-                _local_6 = this._Str_19038(_local_2);
+                _local_6 = this.getMaskLocation(_local_2);
                 if (_local_6 != null)
                 {
                     _local_5.appendChild(new (XML)((((((('<location x="' + _local_6.x) + '" y="') + _local_6.y) + '" z="') + _local_6.z) + '"/>')));
@@ -137,7 +137,7 @@
             return k;
         }
 
-        public function _Str_19038(k:int):IVector3D
+        public function getMaskLocation(k:int):IVector3d
         {
             if (((k < 0) || (k >= this._Str_6845)))
             {
@@ -151,7 +151,7 @@
             return null;
         }
 
-        public function _Str_21678(k:int):String
+        public function getMaskType(k:int):String
         {
             if (((k < 0) || (k >= this._Str_6845)))
             {
@@ -165,7 +165,7 @@
             return null;
         }
 
-        public function _Str_21644(k:int):String
+        public function getMaskCategory(k:int):String
         {
             if (((k < 0) || (k >= this._Str_6845)))
             {

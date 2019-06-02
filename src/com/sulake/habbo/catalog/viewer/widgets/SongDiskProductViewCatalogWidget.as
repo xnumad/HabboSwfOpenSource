@@ -136,12 +136,12 @@
                 return;
             }
             var _local_2:IProduct = k.offer.product;
-            if (_local_2._Str_2415.length > 0)
+            if (_local_2.extraParam.length > 0)
             {
-                this._selectedSongId = parseInt(_local_2._Str_2415);
+                this._selectedSongId = parseInt(_local_2.extraParam);
                 if (this._selectedSongId == 0)
                 {
-                    this._officialSongId = _local_2._Str_2415;
+                    this._officialSongId = _local_2.extraParam;
                     if (this._connection)
                     {
                         this._connection.send(new _Str_10944(this._officialSongId));

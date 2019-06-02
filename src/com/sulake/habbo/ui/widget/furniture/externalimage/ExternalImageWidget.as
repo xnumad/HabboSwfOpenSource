@@ -167,7 +167,7 @@
             if (_local_2)
             {
                 this._Str_8722 = k;
-                this._Str_6733 = this._roomEngine._Str_5211(_local_2.type);
+                this._Str_6733 = this._roomEngine.getWallItemType(_local_2.type);
                 this._Str_16159 = true;
                 this._Str_13852.visible = false;
                 this._Str_15263.visible = false;
@@ -642,7 +642,7 @@
                     _local_4 = this._Str_8403.findChildByName("reporting_reason");
                     if (_local_4 != null)
                     {
-                        _local_8 = ISelectorWindow(_local_4)._Str_2657();
+                        _local_8 = ISelectorWindow(_local_4).getSelected();
                         if (_local_8 != null)
                         {
                             _local_3 = int(_local_8.name);

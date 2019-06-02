@@ -2,10 +2,10 @@
 {
     public class AnimationFrame 
     {
-        public static const _Str_9016:int = -1;
-        public static const _Str_14684:int = -1;
-        private static const _Str_17315:int = 3000;
-        private static const _Str_2469:Array = [];
+        public static const FRAME_REPEAT_FOREVER:int = -1;
+        public static const SEQUENCE_NOT_DEFINED:int = -1;
+        private static const POOL_SIZE_LIMIT:int = 3000;
+        private static const POOL:Array = [];
 
         private var _id:int = 0;
         private var _x:int = 0;
@@ -21,7 +21,7 @@
 
         public static function _Str_2363(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:Boolean, _arg_7:int=-1, _arg_8:int=0):AnimationFrame
         {
-            var _local_9:AnimationFrame = ((_Str_2469.length > 0) ? _Str_2469.pop() : new (AnimationFrame)());
+            var _local_9:AnimationFrame = ((POOL.length > 0) ? POOL.pop() : new (AnimationFrame)());
             _local_9._isRecycled = false;
             _local_9._id = k;
             _local_9._x = _arg_2;
@@ -34,7 +34,7 @@
             _local_9._repeats = _arg_4;
             if (_arg_5 < 0)
             {
-                _arg_5 = _Str_9016;
+                _arg_5 = FRAME_REPEAT_FOREVER;
             }
             _local_9._frameRepeats = _arg_5;
             _local_9._remainingFrameRepeats = _arg_5;
@@ -71,12 +71,12 @@
             return this._repeats;
         }
 
-        public function get _Str_26059():int
+        public function get frameRepeats():int
         {
             return this._frameRepeats;
         }
 
-        public function get _Str_20105():Boolean
+        public function get isLastFrame():Boolean
         {
             return this._isLastFrame;
         }
@@ -85,7 +85,7 @@
         {
             if (this._frameRepeats < 0)
             {
-                return _Str_9016;
+                return FRAME_REPEAT_FOREVER;
             }
             return this._remainingFrameRepeats;
         }
@@ -103,12 +103,12 @@
             this._remainingFrameRepeats = k;
         }
 
-        public function get _Str_23099():int
+        public function get activeSequence():int
         {
             return this._activeSequence;
         }
 
-        public function get _Str_25212():int
+        public function get activeSequenceOffset():int
         {
             return this._activeSequenceOffset;
         }
@@ -118,9 +118,9 @@
             if (!this._isRecycled)
             {
                 this._isRecycled = true;
-                if (_Str_2469.length < _Str_17315)
+                if (POOL.length < POOL_SIZE_LIMIT)
                 {
-                    _Str_2469.push(this);
+                    POOL.push(this);
                 }
             }
         }

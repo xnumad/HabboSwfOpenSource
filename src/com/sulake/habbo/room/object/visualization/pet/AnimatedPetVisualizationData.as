@@ -54,7 +54,7 @@
                     _local_3 = (k as PetAnimationSizeData);
                     if (_local_3 != null)
                     {
-                        if (!_local_3._Str_22532(_arg_2))
+                        if (!_local_3.definePostures(_arg_2))
                         {
                             return false;
                         }
@@ -64,7 +64,7 @@
                     _local_3 = (k as PetAnimationSizeData);
                     if (_local_3 != null)
                     {
-                        if (!_local_3._Str_24371(_arg_2))
+                        if (!_local_3.defineGestures(_arg_2))
                         {
                             return false;
                         }
@@ -81,17 +81,17 @@
 
         public function _Str_17648(k:int, _arg_2:String):int
         {
-            var _local_3:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_3:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_3 != null)
             {
                 return _local_3._Str_17648(_arg_2);
             }
-            return PetAnimationSizeData._Str_10083;
+            return PetAnimationSizeData.ANIMATION_NOT_DEFINED_ID;
         }
 
         public function _Str_18284(k:int, _arg_2:String):Boolean
         {
-            var _local_3:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_3:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_3 != null)
             {
                 return _local_3._Str_18284(_arg_2);
@@ -101,17 +101,17 @@
 
         public function _Str_18268(k:int, _arg_2:String):int
         {
-            var _local_3:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_3:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_3 != null)
             {
                 return _local_3._Str_18268(_arg_2);
             }
-            return PetAnimationSizeData._Str_10083;
+            return PetAnimationSizeData.ANIMATION_NOT_DEFINED_ID;
         }
 
         public function _Str_14207(k:int, _arg_2:int, _arg_3:Boolean):String
         {
-            var _local_4:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_4:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_4 != null)
             {
                 return _local_4._Str_14207(_arg_2, _arg_3);
@@ -121,7 +121,7 @@
 
         public function _Str_17844(k:int, _arg_2:int):String
         {
-            var _local_3:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_3:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_3 != null)
             {
                 return _local_3._Str_17844(_arg_2);
@@ -131,13 +131,13 @@
 
         public function _Str_17976(k:int, _arg_2:int):String
         {
-            var _local_3:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_3:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             return (_local_3 == null) ? null : _local_3._Str_17976(_arg_2);
         }
 
         public function _Str_17398(k:int):int
         {
-            var _local_2:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_2:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_2 != null)
             {
                 return _local_2._Str_17398();
@@ -147,7 +147,7 @@
 
         public function _Str_16869(k:int):int
         {
-            var _local_2:PetAnimationSizeData = (_Str_2735(k) as PetAnimationSizeData);
+            var _local_2:PetAnimationSizeData = (getSizeData(k) as PetAnimationSizeData);
             if (_local_2 != null)
             {
                 return _local_2._Str_16869();
@@ -155,7 +155,7 @@
             return 0;
         }
 
-        public function get _Str_24101():Boolean
+        public function get isAllowedToTurnHead():Boolean
         {
             return this._isAllowedToTurnHead;
         }

@@ -92,7 +92,7 @@
             return this._offers;
         }
 
-        public function get _Str_13564():int
+        public function get totalItemsFound():int
         {
             return this._Str_11687;
         }

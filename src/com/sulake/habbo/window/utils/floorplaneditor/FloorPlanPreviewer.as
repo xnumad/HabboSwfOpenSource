@@ -85,7 +85,7 @@
             var _local_4:int = int.MIN_VALUE;
             var _local_5:int = int.MIN_VALUE;
             _local_7 = 0;
-            while (_local_7 < this._floorPlan._Str_7678)
+            while (_local_7 < this._floorPlan.floorHeight)
             {
                 _local_6 = 0;
                 while (_local_6 < this._floorPlan._Str_17437)
@@ -128,8 +128,8 @@
                 }
                 _local_7++;
             }
-            var _local_8:int = Math.min(((_local_4 - _local_2) + 18), TrackedBitmapData._Str_1343);
-            var _local_9:int = Math.min(((_local_5 - _local_3) + 18), TrackedBitmapData._Str_1343);
+            var _local_8:int = Math.min(((_local_4 - _local_2) + 18), TrackedBitmapData.MIN_HEIGHT);
+            var _local_9:int = Math.min(((_local_5 - _local_3) + 18), TrackedBitmapData.MIN_HEIGHT);
             var _local_10:BitmapData = new BitmapData(_local_8, _local_9, false, 0xFFFFFFFF);
             var _local_11:Point = new Point(-(_local_2), -(_local_3));
             for each (_local_12 in k)

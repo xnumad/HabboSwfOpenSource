@@ -11,14 +11,14 @@
         public function ClickSignConfig(k:Object=null)
         {
             super(null);
-            _Str_576 = "reserved-click-me-prompt";
+            _id = "reserved-click-me-prompt";
             _Str_7287 = "CENTER";
             _Str_12474 = "CENTER";
-            _Str_1720 = 250;
+            _width = 250;
             _height = 32;
             _Str_11028 = 0.5;
             _Str_10333 = 20;
-            _Str_4479 = "#000000";
+            _backgroundColor = "#000000";
             _Str_616 = ".smalltext { font-size:12; }";
             _Str_4544 = '<p class="smalltext" align="center">CLICK FOR MORE INFORMATION</p>';
             _Str_12703 = 0.75;

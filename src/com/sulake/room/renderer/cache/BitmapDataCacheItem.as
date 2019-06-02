@@ -35,7 +35,7 @@
             {
                 return 0;
             }
-            return this._bitmapData._Str_22752;
+            return this._bitmapData.referenceCount;
         }
 
         public function get name():String

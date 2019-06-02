@@ -141,7 +141,7 @@
             {
                 return _Str_2942;
             }
-            var k:int = (this._toolbar.extensionView._Str_18930 + _Str_2942);
+            var k:int = (this._toolbar.extensionView.screenHeight + _Str_2942);
             if (this._viewItems.length == 0)
             {
                 return k;
@@ -164,7 +164,7 @@
         public function _Str_22079(k:Event):void
         {
             var _local_4:HabboNotificationItemView;
-            var _local_2:int = (this._toolbar.extensionView._Str_18930 + _Str_2942);
+            var _local_2:int = (this._toolbar.extensionView.screenHeight + _Str_2942);
             var _local_3:int;
             while (_local_3 < this._viewItems.length)
             {

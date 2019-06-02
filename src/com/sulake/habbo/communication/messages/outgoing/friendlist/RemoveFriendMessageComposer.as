@@ -26,7 +26,7 @@
             return k;
         }
 
-        public function _Str_19849(k:int):void
+        public function addRemovedFriend(k:int):void
         {
             this._removedAvatarIds.push(k);
         }

@@ -1,6 +1,6 @@
 ﻿package com.sulake.room.object
 {
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.visualization.IRoomObjectVisualization;
     import com.sulake.room.object.logic.IRoomObjectMouseHandler;
 
@@ -10,8 +10,8 @@
         function getInstanceId():int;
         function getType():String;
         function isInitialized():Boolean;
-        function getLocation():IVector3D;
-        function getDirection():IVector3D;
+        function getLocation():IVector3d;
+        function getDirection():IVector3d;
         function getModel():IRoomObjectModel;
         function getVisualization():IRoomObjectVisualization;
         function getMouseHandler():IRoomObjectMouseHandler;

@@ -45,7 +45,7 @@
             this._userNameFilter = k.readString();
         }
 
-        private static function _Str_21128(k:int, _arg_2:Array):void
+        private static function removeFromArray(k:int, _arg_2:Array):void
         {
             var _local_3:int;
             var _local_4:_Str_2891;
@@ -74,7 +74,7 @@
             return this._groupName;
         }
 
-        public function get _Str_6136():int
+        public function get baseRoomId():int
         {
             return this._baseRoomId;
         }
@@ -84,17 +84,17 @@
             return this._badgeCode;
         }
 
-        public function get _Str_21931():int
+        public function get totalEntries():int
         {
             return this._totalEntries;
         }
 
-        public function get _Str_19517():int
+        public function get pageSize():int
         {
             return this._pageSize;
         }
 
-        public function get _Str_3544():int
+        public function get pageIndex():int
         {
             return this._pageIndex;
         }
@@ -109,12 +109,12 @@
             return this._entries;
         }
 
-        public function get _Str_9282():Boolean
+        public function get allowedToManage():Boolean
         {
             return this._allowedToManage;
         }
 
-        public function get _Str_21371():String
+        public function get userNameFilter():String
         {
             return this._userNameFilter;
         }
@@ -144,7 +144,7 @@
 
         public function remove(k:int):void
         {
-            _Str_21128(k, this._entries);
+            removeFromArray(k, this._entries);
             delete this._usersById[k];
         }
 

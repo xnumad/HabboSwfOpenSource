@@ -41,7 +41,7 @@
 
         public function get _Str_19867():int
         {
-            return int(Math.floor(_Str_988._Str_1028(this._talentTrack._Str_15231, 0, this.width)));
+            return int(Math.floor(_Str_988._Str_1028(this._talentTrack.progressPerLevel, 0, this.width)));
         }
 
         private function _Str_24296():void

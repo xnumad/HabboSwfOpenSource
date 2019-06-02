@@ -53,7 +53,7 @@
             return true;
         }
 
-        public function _Str_17775(k:String):int
+        public function getBadgeId(k:String):int
         {
             return this._Str_4833.getValue(k);
         }

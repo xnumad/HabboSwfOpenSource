@@ -86,7 +86,7 @@
             return this._Str_21722;
         }
 
-        public function get _Str_6136():int
+        public function get baseRoomId():int
         {
             return this._Str_6739;
         }

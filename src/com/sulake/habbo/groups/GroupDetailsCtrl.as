@@ -127,8 +127,8 @@
             _local_10.visible = (((this._selectedGroup._Str_6444) && (this._manager._Str_25533)) && ((this._selectedGroup._Str_3233) || (this._manager.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))));
             _local_10.y = ((_local_9.visible) ? (_local_9.y + 16) : _local_8.y);
             this._window.findChildByName("you_are_owner_region").visible = ((this._selectedGroup._Str_6444) && (this._selectedGroup._Str_3233));
-            this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup._Str_15310)) && (!(this._selectedGroup._Str_3233)));
-            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == _Str_2974._Str_8362) && (!((this._selectedGroup._Str_15310) || (this._selectedGroup._Str_3233)))));
+            this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup.isAdmin)) && (!(this._selectedGroup._Str_3233)));
+            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == _Str_2974._Str_8362) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup._Str_3233)))));
             this._Str_11257(0).visible = false;
             this._Str_11257(1).visible = false;
             this._Str_11257(2).visible = false;

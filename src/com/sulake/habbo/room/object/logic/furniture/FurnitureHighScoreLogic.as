@@ -10,7 +10,7 @@
 
     public class FurnitureHighScoreLogic extends FurnitureLogic 
     {
-        private static const _Str_15991:int = 1;
+        private static const SHOW_WIDGET_IN_STATE:int = 1;
 
         private var _state:int = -1;
 
@@ -39,7 +39,7 @@
             var _local_2:RoomObjectDataUpdateMessage = (k as RoomObjectDataUpdateMessage);
             if (_local_2 != null)
             {
-                if (_local_2.state == _Str_15991)
+                if (_local_2.state == SHOW_WIDGET_IN_STATE)
                 {
                     eventDispatcher.dispatchEvent(new RoomObjectWidgetRequestEvent(RoomObjectWidgetRequestEvent.HIGH_SCORE_DISPLAY, object));
                 }

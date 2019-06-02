@@ -90,7 +90,7 @@
             this._errorPopup.findChildByName("border").width = (_local_2.width + 15);
             this._errorPopup.width = (_local_2.width + 15);
             var _local_3:Point = new Point();
-            this._input._Str_19977(_local_3);
+            this._input.getLocalPosition(_local_3);
             this._errorPopup.x = _local_3.x;
             this._errorPopup.y = ((_local_3.y - this._errorPopup.height) + 3);
             var _local_4:IWindow = this._errorPopup.findChildByName("popup_arrow_down");

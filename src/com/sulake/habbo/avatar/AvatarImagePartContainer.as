@@ -58,7 +58,7 @@
             return _local_2;
         }
 
-        public function _Str_2258(k:int):AnimationFrame
+        public function getAnimationFrame(k:int):AnimationFrame
         {
             var _local_2:int = (k % this._frames.length);
             if (((this._frames) && (this._frames.length > _local_2)))
@@ -71,7 +71,7 @@
             return null;
         }
 
-        public function _Str_1206(k:int):String
+        public function getCacheableKey(k:int):String
         {
             var _local_3:AnimationFrame;
             var _local_2:int = (k % this._frames.length);
@@ -86,12 +86,12 @@
             return (this._Str_1502 + ":") + _local_2;
         }
 
-        public function get _Str_1360():String
+        public function get bodyPartId():String
         {
             return this._bodyPartId;
         }
 
-        public function get _Str_1669():String
+        public function get partType():String
         {
             return this._partType;
         }
@@ -121,22 +121,22 @@
             return this._isColorable;
         }
 
-        public function get _Str_1406():int
+        public function get paletteMapId():int
         {
             return this._paletteMapId;
         }
 
-        public function get _Str_1666():String
+        public function get flippedPartType():String
         {
             return this._flippedPartType;
         }
 
-        public function get _Str_1184():Boolean
+        public function get isBlendable():Boolean
         {
             return this._isBlendable;
         }
 
-        public function get _Str_1989():ColorTransform
+        public function get blendTransform():ColorTransform
         {
             return this._blendTransform;
         }

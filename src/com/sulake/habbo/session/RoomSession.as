@@ -211,9 +211,9 @@
                 this._state = RoomSessionEvent.STARTED;
                 if (this._openConnectionComposer)
                 {
-                    return this._Str_23938();
+                    return this.sendPredefinedOpenConnection();
                 }
-                return this._Str_24308();
+                return this.sendOpenFlatConnectionMessage();
             }
             return false;
         }
@@ -230,7 +230,7 @@
             }
         }
 
-        private function _Str_24308():Boolean
+        private function sendOpenFlatConnectionMessage():Boolean
         {
             if (this._connection == null)
             {
@@ -240,7 +240,7 @@
             return true;
         }
 
-        private function _Str_23938():Boolean
+        private function sendPredefinedOpenConnection():Boolean
         {
             if (this._connection == null)
             {
@@ -547,12 +547,12 @@
             this._ownUserRoomId = k;
         }
 
-        public function set _Str_2781(k:Boolean):void
+        public function set isRoomController(k:Boolean):void
         {
             this._isRoomOwner = k;
         }
 
-        public function get _Str_2781():Boolean
+        public function get isRoomController():Boolean
         {
             return this._isRoomOwner;
         }
@@ -602,7 +602,7 @@
 
         public function get _Str_19282():Boolean
         {
-            return this._doorMode == RoomSettingsData._Str_5316;
+            return this._doorMode == RoomSettingsData.DOORMODE_NOOBS_ONLY;
         }
 
         public function set _Str_2738(k:int):void

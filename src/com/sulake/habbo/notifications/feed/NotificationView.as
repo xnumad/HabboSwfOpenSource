@@ -167,7 +167,7 @@
                 return;
             }
             this.closePaneLevel(_local_2._Str_16687);
-            _local_2._Str_2719 = true;
+            _local_2.isVisible = true;
         }
 
         public function closePaneLevel(k:int):void
@@ -177,7 +177,7 @@
             {
                 if (_local_2._Str_16687 == k)
                 {
-                    _local_2._Str_2719 = false;
+                    _local_2.isVisible = false;
                 }
             }
         }
@@ -201,7 +201,7 @@
             var _local_2:IPane = (this._views.getValue(PANE_SETTINGS) as IPane);
             if (_local_2)
             {
-                if (_local_2._Str_2719)
+                if (_local_2.isVisible)
                 {
                     this.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
                 }
@@ -217,7 +217,7 @@
             var _local_2:IPane = (this._views.getValue(PANE_INFO) as IPane);
             if (_local_2)
             {
-                if (_local_2._Str_2719)
+                if (_local_2.isVisible)
                 {
                     this.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
                 }

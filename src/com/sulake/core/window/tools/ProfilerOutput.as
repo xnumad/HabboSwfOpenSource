@@ -28,7 +28,7 @@
 
     public class ProfilerOutput implements IDevTool 
     {
-        private static const _Str_1870:Point = new Point();
+        private static const ZERO_POINT:Point = new Point();
         private static var _Str_15863:Class = ProfilerOutput__Str_15863;
         private static var _Str_15882:Class = ProfilerOutput__Str_15882;
 
@@ -231,7 +231,7 @@
             var _local_7:IWindow = (_local_5.findChildByName("text") as IWindow);
             _local_7.caption = (((((((padAlign(_local_6, 28, " ", false) + "|") + padAlign(String(k.rounds), 8, " ", true)) + "|") + padAlign(String(k.latest), 8, " ", true)) + "|") + padAlign(String(k.total), 8, " ", true)) + "|\r");
             _local_5.findChildByName("caption").caption = k.caption;
-            _local_5.findChildByName("check")._Str_2896(WindowState.SELECTED, (!(k.paused)));
+            _local_5.findChildByName("check").setStateFlag(WindowState.SELECTED, (!(k.paused)));
             this._windowToTaskMap.add(_local_5, k);
             if (!k.paused)
             {
@@ -261,7 +261,7 @@
             var _local_6:int = ((_local_5 > _local_3.height) ? _local_3.height : _local_5);
             _local_4.x = (_local_4.x + 1);
             _local_4.width--;
-            _local_3.copyPixels(_local_3, _local_4, _Str_1870);
+            _local_3.copyPixels(_local_3, _local_4, ZERO_POINT);
             _local_4.x = (_local_4.x + (_local_4.width - 2));
             _local_4.y = (_local_4.y + (_local_4.height - _local_6));
             _local_4.width = 1;
@@ -287,7 +287,7 @@
             var _local_3:ProfilerAgentTask = this._windowToTaskMap.getValue(_local_2.parent);
             if (_local_3)
             {
-                _local_3.paused = (!(_local_2._Str_2767(WindowState.SELECTED)));
+                _local_3.paused = (!(_local_2.getStateFlag(WindowState.SELECTED)));
             }
         }
     }

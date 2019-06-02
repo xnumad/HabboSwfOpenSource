@@ -12,9 +12,9 @@
 
     public class GraphicAssetCollection implements IGraphicAssetCollection 
     {
-        private static const _Str_16583:int = 10;
-        private static const _Str_16434:Array = ["id", "source"];
-        private static const _Str_17649:Boolean = false;
+        private static const PALETTE_ASSET_DISPOSE_THRESHOLD:int = 10;
+        private static const PALETTE_ATTRIBUTES:Array = ["id", "source"];
+        private static const USE_LAZY_ASSETS:Boolean = false;
 
         private var _assets:Map;
         private var _library:IAssetLibrary;
@@ -58,7 +58,7 @@
             }
             if (this._paletteAssetNames != null)
             {
-                this._Str_19859();
+                this.disposePaletteAssets();
                 this._paletteAssetNames = null;
             }
             if (this._assets != null)
@@ -101,7 +101,7 @@
             {
                 this._referenceCount = 0;
                 this._referenceTimeStamp = getTimer();
-                this._Str_19859(false);
+                this.disposePaletteAssets(false);
             }
         }
 
@@ -129,20 +129,20 @@
             var _local_3:XMLList = k.palette;
             if (_local_3 != null)
             {
-                this._Str_24717(_local_3);
+                this.definePalettes(_local_3);
             }
-            if (_Str_17649)
+            if (USE_LAZY_ASSETS)
             {
-                this._Str_23434(_local_2);
+                this.defineAssetsLazy(_local_2);
             }
             else
             {
-                this._Str_23990(_local_2);
+                this.defineAssets(_local_2);
             }
             return true;
         }
 
-        private function _Str_23434(k:XMLList):void
+        private function defineAssetsLazy(k:XMLList):void
         {
             var _local_2:XML;
             var _local_3:String;
@@ -156,7 +156,7 @@
             }
         }
 
-        private function _Str_23990(k:XMLList):void
+        private function defineAssets(k:XMLList):void
         {
             var _local_4:XML;
             var _local_5:String;
@@ -208,13 +208,13 @@
                     _local_12 = this._library.getAssetByName(_local_6);
                     if (_local_12 != null)
                     {
-                        _local_13 = this._Str_722(_local_5, _local_6, _local_12, _local_7, _local_8, _local_10, _local_11, _local_9);
+                        _local_13 = this.createAsset(_local_5, _local_6, _local_12, _local_7, _local_8, _local_10, _local_11, _local_9);
                         if (!_local_13)
                         {
                             _local_14 = this.getAsset(_local_5);
                             if (((!(_local_14 == null)) && (!(_local_14.assetName == _local_14._Str_3582))))
                             {
-                                _local_13 = this._Str_20611(_local_5, _local_6, _local_12, _local_7, _local_8, _local_10, _local_11, _local_9);
+                                _local_13 = this.replaceAsset(_local_5, _local_6, _local_12, _local_7, _local_8, _local_10, _local_11, _local_9);
                             }
                         }
                     }
@@ -223,7 +223,7 @@
             }
         }
 
-        private function _Str_24717(k:XMLList):void
+        private function definePalettes(k:XMLList):void
         {
             var _local_2:XML;
             var _local_3:String;
@@ -236,7 +236,7 @@
             var _local_10:GraphicAssetPalette;
             for each (_local_2 in k)
             {
-                if (XMLValidator.checkRequiredAttributes(_local_2, _Str_16434))
+                if (XMLValidator.checkRequiredAttributes(_local_2, PALETTE_ATTRIBUTES))
                 {
                     _local_3 = _local_2.@id;
                     _local_4 = _local_2.@source;
@@ -272,7 +272,7 @@
             }
         }
 
-        protected function _Str_722(k:String, _arg_2:String, _arg_3:IAsset, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Number, _arg_7:Number, _arg_8:Boolean):Boolean
+        protected function createAsset(k:String, _arg_2:String, _arg_3:IAsset, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Number, _arg_7:Number, _arg_8:Boolean):Boolean
         {
             if (this._assets[k] != null)
             {
@@ -287,7 +287,7 @@
             return true;
         }
 
-        protected function _Str_20611(k:String, _arg_2:String, _arg_3:IAsset, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Number, _arg_7:Number, _arg_8:Boolean):Boolean
+        protected function replaceAsset(k:String, _arg_2:String, _arg_3:IAsset, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Number, _arg_7:Number, _arg_8:Boolean):Boolean
         {
             var _local_9:GraphicAsset = this._assets.remove(k);
             if (_local_9 != null)
@@ -298,7 +298,7 @@
             {
                 delete this._lazyAssetTable[k];
             }
-            return this._Str_722(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8);
+            return this.createAsset(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8);
         }
 
         public function getAsset(k:String):IGraphicAsset
@@ -351,14 +351,14 @@
                 _local_10 = this._library.getAssetByName(_local_4);
                 if (_local_10 != null)
                 {
-                    if (this._Str_722(k, _local_4, _local_10, _local_5, _local_6, _local_8, _local_9, _local_7))
+                    if (this.createAsset(k, _local_4, _local_10, _local_5, _local_6, _local_8, _local_9, _local_7))
                     {
                         return this._assets[k];
                     }
                     _local_11 = this.getAsset(k);
                     if (((!(_local_11 == null)) && (!(_local_11.assetName == _local_11._Str_3582))))
                     {
-                        if (!this._Str_20611(k, _local_4, _local_10, _local_5, _local_6, _local_8, _local_9, _local_7))
+                        if (!this.replaceAsset(k, _local_4, _local_10, _local_5, _local_6, _local_8, _local_9, _local_7))
                         {
                             return null;
                         }
@@ -386,18 +386,18 @@
                     return _local_5;
                 }
                 _local_6 = ((_local_5._Str_3582 + "@") + _arg_2);
-                _local_7 = this._Str_13770(_local_6);
+                _local_7 = this.getLibraryAsset(_local_6);
                 if (_local_7 == null)
                 {
                     _local_8 = (_local_5.asset.content as BitmapData);
                     if (_local_8 != null)
                     {
-                        _local_9 = this._Str_783(_arg_2);
+                        _local_9 = this.getPalette(_arg_2);
                         if (_local_9 != null)
                         {
                             _local_10 = _local_8.clone();
-                            _local_9._Str_24127(_local_10);
-                            _local_7 = this._Str_23586(_local_6, _local_10);
+                            _local_9.colorizeBitmap(_local_10);
+                            _local_7 = this.addLibraryAsset(_local_6, _local_10);
                             if (_local_7 == null)
                             {
                                 _local_10.dispose();
@@ -411,7 +411,7 @@
                     }
                 }
                 this._paletteAssetNames.push(_local_3);
-                this._Str_722(_local_3, _local_6, _local_7, _local_5.flipH, _local_5.flipV, _local_5._Str_20249, _local_5._Str_19351, false);
+                this.createAsset(_local_3, _local_6, _local_7, _local_5.flipH, _local_5.flipV, _local_5._Str_20249, _local_5._Str_19351, false);
                 _local_4 = this.getAsset(_local_3);
             }
             return _local_4;
@@ -424,7 +424,7 @@
 
         public function _Str_20963(k:String):Array
         {
-            var _local_2:GraphicAssetPalette = this._Str_783(k);
+            var _local_2:GraphicAssetPalette = this.getPalette(k);
             if (_local_2 != null)
             {
                 return [_local_2._Str_5845, _local_2._Str_6659];
@@ -437,7 +437,7 @@
             return this._paletteXMLs[k];
         }
 
-        private function _Str_783(k:String):GraphicAssetPalette
+        private function getPalette(k:String):GraphicAssetPalette
         {
             var _local_2:GraphicAssetPalette = this._palettes[k];
             return _local_2;
@@ -454,13 +454,13 @@
             {
                 return false;
             }
-            var _local_8:BitmapDataAsset = this._Str_13770(k);
+            var _local_8:BitmapDataAsset = this.getLibraryAsset(k);
             if (_local_8 == null)
             {
                 _local_8 = new BitmapDataAsset(this._library.getAssetTypeDeclarationByClass(BitmapDataAsset));
                 this._library.setAsset(k, _local_8);
                 _local_8.setUnknownContent(_arg_2);
-                return this._Str_722(k, k, _local_8, _arg_6, _arg_7, _arg_4, _arg_5, false);
+                return this.createAsset(k, k, _local_8, _arg_6, _arg_7, _arg_4, _arg_5, false);
             }
             if (_arg_3)
             {
@@ -481,7 +481,7 @@
             var _local_2:GraphicAsset = this._assets.remove(k);
             if (_local_2 != null)
             {
-                _local_3 = this._Str_13770(_local_2._Str_3582);
+                _local_3 = this.getLibraryAsset(_local_2._Str_3582);
                 if (_local_3 != null)
                 {
                     this._library.removeAsset(_local_3);
@@ -495,15 +495,15 @@
             }
         }
 
-        private function _Str_13770(k:String):BitmapDataAsset
+        private function getLibraryAsset(k:String):BitmapDataAsset
         {
             var _local_2:BitmapDataAsset = (this._library.getAssetByName(k) as BitmapDataAsset);
             return _local_2;
         }
 
-        private function _Str_23586(k:String, _arg_2:BitmapData):BitmapDataAsset
+        private function addLibraryAsset(k:String, _arg_2:BitmapData):BitmapDataAsset
         {
-            var _local_3:BitmapDataAsset = this._Str_13770(k);
+            var _local_3:BitmapDataAsset = this.getLibraryAsset(k);
             if (_local_3 == null)
             {
                 _local_3 = new BitmapDataAsset(this._library.getAssetTypeDeclarationByClass(BitmapDataAsset));
@@ -514,12 +514,12 @@
             return null;
         }
 
-        private function _Str_19859(k:Boolean=true):void
+        private function disposePaletteAssets(k:Boolean=true):void
         {
             var _local_2:String;
             if (this._paletteAssetNames != null)
             {
-                if (((k) || (this._paletteAssetNames.length > _Str_16583)))
+                if (((k) || (this._paletteAssetNames.length > PALETTE_ASSET_DISPOSE_THRESHOLD)))
                 {
                     for each (_local_2 in this._paletteAssetNames)
                     {

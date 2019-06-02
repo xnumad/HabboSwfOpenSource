@@ -436,7 +436,7 @@
             this.addMessageEvent(new _Str_11155(this._Str_24610));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
-            this.addMessageEvent(new _Str_2752(this._Str_3012));
+            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new _Str_5578(this._Str_17604));
             this.addMessageEvent(new _Str_7391(this._Str_22418));
             this._chatEventHandler = new ChatEventHandler(this);
@@ -703,7 +703,7 @@
                 if (this._friendList.getFriend(this._callForHelpManager._Str_2662) != null)
                 {
                     k = new RemoveFriendMessageComposer();
-                    k._Str_19849(this._callForHelpManager._Str_2662);
+                    k.addRemovedFriend(this._callForHelpManager._Str_2662);
                     this._Str_2488(k);
                 }
             }
@@ -714,7 +714,7 @@
             var _local_4:_Str_3548;
             var _local_2:UsersMessageParser = _Str_4085(k)._Str_2273();
             var _local_3:int;
-            while (_local_3 < _local_2._Str_12722())
+            while (_local_3 < _local_2.getUserCount())
             {
                 _local_4 = _local_2._Str_5126(_local_3);
                 if (((!(_local_4._Str_2394 == this._Str_6240)) && (_local_4._Str_2908 == RoomObjectTypeEnum.HABBO)))
@@ -752,7 +752,7 @@
             return this._instantMessageRegistry;
         }
 
-        private function _Str_3012(k:_Str_2752):void
+        private function onCreditBalance(k:_Str_2752):void
         {
             var _local_2:_Str_4522 = _Str_2752(k)._Str_2273();
             this._currentRoomId = _local_2._Str_6550;

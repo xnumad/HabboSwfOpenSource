@@ -16,9 +16,9 @@
             return this._parser as _Str_8786;
         }
 
-        public function get _Str_16772():String
+        public function get machineID():String
         {
-            return this._Str_2273()._Str_16772;
+            return this._Str_2273().machineID;
         }
     }
 }

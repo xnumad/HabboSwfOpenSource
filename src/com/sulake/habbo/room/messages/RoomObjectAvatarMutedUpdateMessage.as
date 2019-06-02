@@ -9,7 +9,7 @@
             this._isMuted = k;
         }
 
-        public function get _Str_25257():Boolean
+        public function get isMuted():Boolean
         {
             return this._isMuted;
         }

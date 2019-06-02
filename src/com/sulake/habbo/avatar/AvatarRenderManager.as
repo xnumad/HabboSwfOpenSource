@@ -71,15 +71,15 @@
             var k:XML = <actions><action id="Default" precedence="1000" state="std" main="1" isdefault="1" geometrytype="vertical" activepartset="figure" assetpartdefinition="std"/></actions>
             ;
             this._structure = new AvatarStructure(this);
-            this._structure._Str_1825(((assets.hasAsset("HabboAvatarGeometry")) ? (assets.getAssetByName("HabboAvatarGeometry").content as XML) : null));
-            this._structure._Str_1296(((assets.hasAsset("HabboAvatarPartSets")) ? (assets.getAssetByName("HabboAvatarPartSets").content as XML) : null));
-            this._structure._Str_1060(assets, k);
-            this._structure._Str_2229(((assets.hasAsset("HabboAvatarAnimation")) ? (assets.getAssetByName("HabboAvatarAnimation").content as XML) : null));
-            this._structure._Str_1569(((assets.hasAsset("HabboAvatarFigure")) ? (assets.getAssetByName("HabboAvatarFigure").content as XML) : null));
+            this._structure.initGeometry(((assets.hasAsset("HabboAvatarGeometry")) ? (assets.getAssetByName("HabboAvatarGeometry").content as XML) : null));
+            this._structure.initPartSets(((assets.hasAsset("HabboAvatarPartSets")) ? (assets.getAssetByName("HabboAvatarPartSets").content as XML) : null));
+            this._structure.initActions(assets, k);
+            this._structure.initAnimation(((assets.hasAsset("HabboAvatarAnimation")) ? (assets.getAssetByName("HabboAvatarAnimation").content as XML) : null));
+            this._structure.initFigureData(((assets.hasAsset("HabboAvatarFigure")) ? (assets.getAssetByName("HabboAvatarFigure").content as XML) : null));
             this._Str_1200();
             this._aliasCollection = new AssetAliasCollection(this, (context.assets as AssetLibraryCollection));
             this._aliasCollection.init();
-            this._Str_1893();
+            this.createStructure();
         }
 
         private function _Str_1200():void
@@ -87,10 +87,10 @@
             var k:* = (getProperty("flash.dynamic.avatar.download.url") + "HabboAvatarActions.xml");
             var _local_2:URLRequest = new URLRequest(k);
             var _local_3:AssetLoaderStruct = assets.loadAssetFromFile("HabboAvatarActions", _local_2, "text/xml");
-            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_1641);
+            _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onAvatarAssetsLibraryReady);
         }
 
-        private function _Str_1641(k:Event=null):void
+        private function onAvatarAssetsLibraryReady(k:Event=null):void
         {
             if (this._structure == null)
             {
@@ -100,7 +100,7 @@
             ;
             this._structure._Str_1620(((assets.hasAsset("HabboAvatarActions")) ? (assets.getAssetByName("HabboAvatarActions").content as XML) : _local_2));
             this._actionsAreReady = true;
-            this._Str_1893();
+            this.createStructure();
         }
 
         override public function dispose():void
@@ -192,19 +192,19 @@
             }
             this._structureReady = true;
             this._structure.init();
-            this._Str_1893();
+            this.createStructure();
         }
 
         private function _Str_1656(k:Event=null):void
         {
             this._figureMapReady = true;
-            this._Str_1893();
+            this.createStructure();
         }
 
         private function _Str_1528(k:Event=null):void
         {
             this._effectMapReady = true;
-            this._Str_1893();
+            this.createStructure();
         }
 
         public function get _Str_906():Dictionary
@@ -216,7 +216,7 @@
             return null;
         }
 
-        private function _Str_1893():void
+        private function createStructure():void
         {
             if (!this._isReady)
             {
@@ -239,7 +239,7 @@
             {
                 return false;
             }
-            return this._avatarAssetDownloadManager._Str_992(k);
+            return this._avatarAssetDownloadManager.isReady(k);
         }
 
         public function _Str_889(k:IAvatarFigureContainer, _arg_2:IAvatarImageListener):void
@@ -266,7 +266,7 @@
             {
                 this.validateAvatarFigure(figureContainer, gender);
             }
-            if (((this._mode == RenderMode.LOCAL_ONLY) || (this._avatarAssetDownloadManager._Str_992(figureContainer))))
+            if (((this._mode == RenderMode.LOCAL_ONLY) || (this._avatarAssetDownloadManager.isReady(figureContainer))))
             {
                 return new AvatarImage(this._structure, this._aliasCollection, figureContainer, _arg_2, this._effectAssetDownloadManager, _arg_5);
             }
@@ -311,7 +311,7 @@
             {
                 _local_4._Str_2088(_local_6.type, _local_6.id, _local_4.getColourIds(_local_6.type));
             }
-            return _local_4._Str_1008();
+            return _local_4.getFigureString();
         }
 
         private function _Str_1667(k:Vector.<int>):Vector.<IFigurePartSet>
@@ -349,7 +349,7 @@
         {
             if (this._structure)
             {
-                return this._structure._Str_1733(k, _arg_2);
+                return this._structure.getMandatorySetTypeIds(k, _arg_2);
             }
             return null;
         }
@@ -391,7 +391,7 @@
                 ErrorReportStorage.addDebugData("AvatarRenderManager", "validateAvatarFigure: structure is null!");
             }
             var _local_4:int = 2;
-            var _local_5:Array = this._structure._Str_1733(_arg_2, _local_4);
+            var _local_5:Array = this._structure.getMandatorySetTypeIds(_arg_2, _local_4);
             if (_local_5)
             {
                 figureData = this._structure.figureData;
@@ -462,7 +462,7 @@
                 else
                 {
                     _local_4 = Math.max(_local_11.clubLevel, _local_4);
-                    _local_12 = _local_5._Str_783(_local_7._Str_734);
+                    _local_12 = _local_5.getPalette(_local_7._Str_734);
                     _local_13 = k._Str_815(_local_6);
                     for each (_local_14 in _local_13)
                     {
@@ -473,7 +473,7 @@
             }
             if (_arg_3 == null)
             {
-                _arg_3 = this._structure._Str_1695(AvatarSetType.FULL);
+                _arg_3 = this._structure.getBodyPartsUnordered(AvatarSetType.FULL);
             }
             for each (_local_9 in _arg_3)
             {
@@ -486,12 +486,12 @@
             return _local_4;
         }
 
-        public function _Str_746():void
+        public function resetAssetManager():void
         {
             this._aliasCollection.reset();
         }
 
-        public function get _Str_992():Boolean
+        public function get isReady():Boolean
         {
             return this._isReady;
         }

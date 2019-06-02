@@ -25,17 +25,17 @@
             return this._target;
         }
 
-        public function get _Str_14282():Array
+        public function get queueTypes():Array
         {
             return this._Str_5811.getKeys();
         }
 
-        public function _Str_11510(k:String):int
+        public function getQueueSize(k:String):int
         {
             return this._Str_5811.getValue(k);
         }
 
-        public function _Str_17628(k:String, _arg_2:int):void
+        public function addQueue(k:String, _arg_2:int):void
         {
             this._Str_5811.add(k, _arg_2);
         }

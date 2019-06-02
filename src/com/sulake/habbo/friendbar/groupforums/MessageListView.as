@@ -164,7 +164,7 @@
             var _local_3:Boolean;
             if (this._list.numListItems > 0)
             {
-                this._list._Str_2724();
+                this._list.destroyListItems();
             }
             this._list.invalidate();
             var k:int = this._controller._Str_16072(this._messagesListData.threadId);
@@ -185,9 +185,9 @@
             {
                 return;
             }
-            var k:Number = this._list._Str_6920.width;
+            var k:Number = this._list.scrollableWindow.width;
             this._Str_19591();
-            if (this._list._Str_6920.width != k)
+            if (this._list.scrollableWindow.width != k)
             {
                 this._Str_19591();
             }
@@ -208,7 +208,7 @@
                 _local_2 = IWindowContainer(this._list.getListItemAt(k));
                 _local_3 = (_local_2.findChildByName("texts_container") as IWindowContainer);
                 _local_4 = IWindowContainer(_local_2.findChildByName("message_text_container"));
-                _local_2.width = (this._list._Str_6920.width - 2);
+                _local_2.width = (this._list.scrollableWindow.width - 2);
                 _local_5 = 2;
                 _local_6 = 0;
                 while (_local_6 < _local_4.numChildren)
@@ -280,11 +280,11 @@
             {
                 return;
             }
-            var _local_4:int = this._list._Str_3156(_local_3);
+            var _local_4:int = this._list.getListItemIndex(_local_3);
             this._adding = true;
             this._list.autoArrangeItems = false;
-            this._list._Str_2915(_local_4);
-            this._list._Str_3015(this._Str_6850(k), _local_4);
+            this._list.removeListItemAt(_local_4);
+            this._list.addListItemAt(this._Str_6850(k), _local_4);
             this._adding = false;
             this._Str_18220();
         }

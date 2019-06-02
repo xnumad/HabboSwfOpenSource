@@ -191,7 +191,7 @@
                     {
                         while (_local_3.numListItems > 0)
                         {
-                            _local_3._Str_2915(0);
+                            _local_3.removeListItemAt(0);
                         }
                         if (((this._Str_3371 < this.numMenuItems) && (this._Str_3371 > -1)))
                         {
@@ -221,7 +221,7 @@
             }
             else
             {
-                this._Str_3565._Str_21088(k);
+                this._Str_3565.setGlobalRectangle(k);
             }
             this._Str_3565.activate();
             return this._Str_3565;
@@ -249,7 +249,7 @@
                 _local_6.value = _local_12;
                 _local_6.width = _local_6.value.width;
                 _local_6.height = _local_6.value.height;
-                _local_6._Str_2648.minWidth = _local_7;
+                _local_6.limits.minWidth = _local_7;
                 _local_8 = Math.max(_local_8, _local_6.width);
                 _local_9 = (_local_9 + _local_6.height);
                 _local_4.addListItem(_local_6);
@@ -261,7 +261,7 @@
                 _local_10 = 0;
                 while (_local_10 < _local_5)
                 {
-                    _local_4.getListItemAt(_local_10)._Str_2648.minWidth = _local_8;
+                    _local_4.getListItemAt(_local_10).limits.minWidth = _local_8;
                     _local_10++;
                 }
             }
@@ -283,7 +283,7 @@
             _local_4.height = Math.max(_local_4.height, (_arg_2.height - 4));
             if (((this._Str_3371 > -1) && (_local_5)))
             {
-                _local_4.getListItemAt(this._Str_3371)._Str_2896(WindowState.SELECTED, true);
+                _local_4.getListItemAt(this._Str_3371).setStateFlag(WindowState.SELECTED, true);
             }
         }
 
@@ -358,7 +358,7 @@
 
         private function _Str_22124(k:WindowEvent):void
         {
-            if (_Str_2767(WindowState.DISABLED))
+            if (getStateFlag(WindowState.DISABLED))
             {
                 return;
             }
@@ -463,7 +463,7 @@
 
         public function open():Boolean
         {
-            if (_Str_2767(WindowState.DEFAULT))
+            if (getStateFlag(WindowState.DEFAULT))
             {
                 return true;
             }
@@ -484,7 +484,7 @@
 
         public function close():Boolean
         {
-            if (!_Str_2767(WindowState.DEFAULT))
+            if (!getStateFlag(WindowState.DEFAULT))
             {
                 return true;
             }
@@ -511,8 +511,8 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.OPEN_UPWARD, this._Str_16910));
-            k.push(_Str_2340(PropertyKeys.KEEP_OPEN_ON_DEACTIVATE, this._Str_14725));
+            k.push(createProperty(PropertyKeys.OPEN_UPWARD, this._Str_16910));
+            k.push(createProperty(PropertyKeys.KEEP_OPEN_ON_DEACTIVATE, this._Str_14725));
             return k;
         }
 

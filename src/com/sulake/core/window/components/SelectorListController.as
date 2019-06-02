@@ -63,12 +63,12 @@
                 return;
             }
             this._Str_12981 = true;
-            var k:uint = _Str_6010;
+            var k:uint = numSelectables;
             var _local_3:int;
             _local_4 = 0;
             while (_local_4 < k)
             {
-                _local_2 = _Str_5066(_local_4);
+                _local_2 = getSelectableAt(_local_4);
                 if (this._vertical)
                 {
                     _local_2.y = _local_3;
@@ -87,8 +87,8 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.SPACING, this._Str_2981));
-            k.push(_Str_2340(PropertyKeys.VERTICAL, this._vertical));
+            k.push(createProperty(PropertyKeys.SPACING, this._Str_2981));
+            k.push(createProperty(PropertyKeys.VERTICAL, this._vertical));
             return k;
         }
 

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
-    import com.sulake.habbo.ui.widget.enums.ContextMenuType;
+    import com.sulake.habbo.ui.widget.enums.ContextMenuEnum;
 
     public class FurnitureRandomTeleportLogic extends FurnitureMultistateLogic 
     {
@@ -8,7 +8,7 @@
 
         override public function get contextMenu():String
         {
-            return ContextMenuType.RANDOM_TELEPORT;
+            return ContextMenuEnum.RANDOM_TELEPORT;
         }
     }
 }

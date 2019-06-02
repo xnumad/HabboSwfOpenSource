@@ -110,7 +110,7 @@
             {
                 return k;
             }
-            k.push(_Str_15640._Str_2551(this._vertical));
+            k.push(_Str_15640.withValue(this._vertical));
             return k;
         }
 

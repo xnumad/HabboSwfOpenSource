@@ -33,7 +33,7 @@
         private static const _Str_16983:int = 5;
         private static var _Str_14704:Boolean = false;
 
-        private var _Str_594:AvatarInfoData;
+        private var _data:AvatarInfoData;
         private var _Str_1069:int;
 
         public function OwnAvatarMenuView(k:AvatarInfoWidget)
@@ -44,7 +44,7 @@
 
         public static function setup(k:OwnAvatarMenuView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:AvatarInfoData):void
         {
-            k._Str_594 = _arg_6;
+            k._data = _arg_6;
             if ((((!(_Str_14704)) && (k.widget.configuration.getInteger("new.identity", 0) > 0)) && (k.widget.configuration.getBoolean("new.user.reception.enabled"))))
             {
                 k._Str_1069 = _Str_2906;
@@ -74,7 +74,7 @@
 
         override public function dispose():void
         {
-            this._Str_594 = null;
+            this._data = null;
             super.dispose();
         }
 
@@ -143,7 +143,7 @@
         {
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if ((((!(_window)) || (!(this._Str_594))) || (!(_Str_2374))))
+            if ((((!(_window)) || (!(this._data))) || (!(_Str_2374))))
             {
                 return;
             }
@@ -159,8 +159,8 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    _Str_2304("change_name", this._Str_594._Str_4330);
-                    _Str_2304("decorate", ((this._Str_22241()) && ((this._Str_594.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._Str_594._Str_3246))));
+                    _Str_2304("change_name", this._data._Str_4330);
+                    _Str_2304("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data._Str_3246))));
                     _Str_2304("change_looks");
                     _Str_2304("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
                     _Str_2304("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
@@ -169,7 +169,7 @@
                     {
                         _Str_2304("effects", (!(_local_3)));
                     }
-                    _Str_2304("handitem", (((this._Str_594._Str_8826 > 0) && (this._Str_594._Str_8826 < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
+                    _Str_2304("handitem", (((this._data._Str_8826 > 0) && (this._data._Str_8826 < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
                     _local_4 = this.widget.configuration.getBoolean("avatar.expressions_menu.enabled");
                     _Str_2304(((_local_4) ? "expressions" : "wave"));
                     _local_5 = this.widget.configuration.getBoolean("avatar.signs.enabled");
@@ -199,7 +199,7 @@
                     if ((((this.widget.configuration.getBoolean("avatar.sitting.enabled")) && (!(this.widget._Str_12708))) && (!(_local_3))))
                     {
                         _Str_2304("sit", (this.widget._Str_22586 == AvatarAction.POSTURE_STAND));
-                        _Str_2304("stand", this.widget._Str_10289);
+                        _Str_2304("stand", this.widget.canStandUp);
                     }
                     _Str_2304("back");
                     break;
@@ -307,21 +307,21 @@
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "stand");
                             break;
                         case "wave":
-                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum._Str_6268);
+                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum.WAVE);
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "wave");
                             break;
                         case "blow":
-                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum._Str_5579);
+                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum.BLOW);
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "blow");
                             break;
                         case "jump":
                             break;
                         case "laugh":
-                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum._Str_7336);
+                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum.LAUGH);
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "laugh");
                             break;
                         case "idle":
-                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum._Str_6989);
+                            _local_4 = new RoomWidgetAvatarExpressionMessage(AvatarExpressionEnum.IDLE);
                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "click", "idle");
                             break;
                         case "dance_menu":

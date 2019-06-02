@@ -77,22 +77,22 @@
             return this._Str_19758;
         }
 
-        public function get _Str_3738():Boolean
+        public function get isVIP():Boolean
         {
             return this._Str_6923;
         }
 
-        public function get _Str_6288():int
+        public function get pastClubDays():int
         {
             return this._Str_11060;
         }
 
-        public function get _Str_4605():int
+        public function get pastVipDays():int
         {
             return this._Str_11826;
         }
 
-        public function get _Str_4458():int
+        public function get minutesUntilExpiration():int
         {
             return this._Str_6262;
         }

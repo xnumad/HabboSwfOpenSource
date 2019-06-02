@@ -40,7 +40,7 @@
         override public function get properties():Array
         {
             var k:Array = ((this._widget != null) ? this._widget.properties : []);
-            k.unshift(_Str_2340(PropertyKeys.WIDGET_TYPE, this._Str_9477));
+            k.unshift(createProperty(PropertyKeys.WIDGET_TYPE, this._Str_9477));
             return super.properties.concat(k);
         }
 

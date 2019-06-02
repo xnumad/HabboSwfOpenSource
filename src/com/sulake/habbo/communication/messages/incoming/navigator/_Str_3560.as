@@ -2,11 +2,11 @@
 {
     public class _Str_3560 
     {
-        public static const _Str_8178:int = 0;
-        public static const _Str_4199:int = 1;
-        public static const _Str_3711:int = 2;
-        public static const _Str_4775:int = 3;
-        public static const _Str_5316:int = 4;
+        public static const DOORMODE_OPEN:int = 0;
+        public static const DOORMODE_CLOSED:int = 1;
+        public static const DOORMODE_PASSWORD:int = 2;
+        public static const DOORMODE_INVISIBLE:int = 3;
+        public static const DOORMODE_NOOBS_ONLY:int = 4;
 
         private var _Str_21354:Boolean;
         private var _Str_4321:int;

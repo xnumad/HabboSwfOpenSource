@@ -30,10 +30,10 @@
                     this._actions[_local_3] = _local_4;
                 }
             }
-            this._Str_1767();
+            this.parseActionOffsets();
         }
 
-        private function _Str_1767():void
+        private function parseActionOffsets():void
         {
             var k:ActiveActionData;
             var _local_2:ActionDefinition;
@@ -82,7 +82,7 @@
             return this._actions[k];
         }
 
-        public function _Str_1027():ActionDefinition
+        public function getDefaultAction():ActionDefinition
         {
             var k:ActionDefinition;
             if (this._defaultAction)
@@ -120,7 +120,7 @@
             return _local_4;
         }
 
-        public function _Str_711(k:Array):Array
+        public function isHeadTurnPreventedByAction(k:Array):Array
         {
             var _local_3:IActiveActionData;
             var _local_4:ActionDefinition;

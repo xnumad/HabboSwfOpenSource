@@ -51,7 +51,7 @@
                 _local_3 = this._setTypes[String(_local_2.@type)];
                 if (_local_3 != null)
                 {
-                    _local_3._Str_1874(_local_2);
+                    _local_3.cleanUp(_local_2);
                 }
                 else
                 {
@@ -98,7 +98,7 @@
             return false;
         }
 
-        public function _Str_1733(k:String, _arg_2:int):Array
+        public function getMandatorySetTypeIds(k:String, _arg_2:int):Array
         {
             var _local_4:SetType;
             var _local_3:Array = new Array();
@@ -127,7 +127,7 @@
             return this._setTypes[k];
         }
 
-        public function _Str_783(k:int):IPalette
+        public function getPalette(k:int):IPalette
         {
             return this._palettes[String(k)];
         }

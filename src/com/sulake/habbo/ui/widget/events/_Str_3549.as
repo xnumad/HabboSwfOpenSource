@@ -17,7 +17,7 @@
             this._userName = _arg_4;
         }
 
-        public function get _Str_2951():int
+        public function get requestId():int
         {
             return this._Str_2914;
         }

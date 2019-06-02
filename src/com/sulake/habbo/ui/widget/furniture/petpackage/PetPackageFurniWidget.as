@@ -235,7 +235,7 @@
             {
                 return;
             }
-            var name:String = this._Str_4290();
+            var name:String = this.getName();
             if (((name == null) || (name.length < 1)))
             {
                 windowManager.alert("${widgets.petpackage.alert.petname.title}", "${catalog.alert.petname.short}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
@@ -252,7 +252,7 @@
             }
         }
 
-        private function _Str_4290():String
+        private function getName():String
         {
             var k:ITextFieldWindow;
             if (this._window)

@@ -93,7 +93,7 @@
             this._hasIgnited = k._hasIgnited;
         }
 
-        public function _Str_24892(k:int, _arg_2:Boolean, _arg_3:Array, _arg_4:Boolean):void
+        public function configureParticle(k:int, _arg_2:Boolean, _arg_3:Array, _arg_4:Boolean):void
         {
             var _local_5:Dictionary = new Dictionary();
             _local_5["lifeTime"] = k;
@@ -110,12 +110,12 @@
             {
                 if (this.age > 1)
                 {
-                    this._Str_19068(this, this.direction);
+                    this.releaseParticles(this, this.direction);
                 }
             }
         }
 
-        private function _Str_19068(k:FurnitureParticleSystemParticle, _arg_2:Vector3D=null):void
+        private function releaseParticles(k:FurnitureParticleSystemParticle, _arg_2:Vector3D=null):void
         {
             var _local_4:FurnitureParticleSystemParticle;
             var _local_5:Dictionary;
@@ -128,26 +128,26 @@
             var _local_3:Vector3D = new Vector3D();
             var _local_7:Boolean;
             var _local_8:Boolean;
-            _local_5 = this._Str_23904();
+            _local_5 = this.getRandomParticleConfiguration();
             var _local_10:int;
             while (_local_10 < this._particlesPerFrame)
             {
                 switch (this._explosionShape)
                 {
                     case CONE:
-                        _local_3.x = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.x = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
                         _local_3.y = -(Math.random() + 1);
-                        _local_3.z = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.z = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
                         break;
                     case PLANE:
-                        _local_3.x = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.x = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
                         _local_3.y = 0;
-                        _local_3.z = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.z = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
                         break;
                     case SPHERE:
-                        _local_3.x = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
-                        _local_3.y = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
-                        _local_3.z = ((this._Str_7471(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.x = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.y = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
+                        _local_3.z = ((this.randomBoolean(0.5)) ? Math.random() : -(Math.random()));
                         break;
                 }
                 _local_3.normalize();
@@ -172,7 +172,7 @@
             }
         }
 
-        private function _Str_23904():Dictionary
+        private function getRandomParticleConfiguration():Dictionary
         {
             var k:int = int(Math.floor((Math.random() * this._particleConfigurations.length)));
             return this._particleConfigurations[k];
@@ -181,25 +181,25 @@
         override public function update():void
         {
             super.update();
-            this._Str_25039();
-            this._Str_25400();
-            this._Str_23140();
-            if (((!(_Str_16034)) && (this._emittedParticles < this._maxNumberOfParticles)))
+            this.accumulateForces();
+            this.verlet();
+            this.satisfyConstraints();
+            if (((!(isAlive)) && (this._emittedParticles < this._maxNumberOfParticles)))
             {
                 if ((this.age % this._burstPulse) == 0)
                 {
-                    this._Str_19068(this, this.direction);
+                    this.releaseParticles(this, this.direction);
                 }
             }
         }
 
-        public function _Str_25400():void
+        public function verlet():void
         {
             var _local_2:FurnitureParticleSystemParticle;
             var _local_3:Number;
             var _local_4:Number;
             var _local_5:Number;
-            if (((_Str_16034) || (this._emittedParticles < this._maxNumberOfParticles)))
+            if (((isAlive) || (this._emittedParticles < this._maxNumberOfParticles)))
             {
                 _local_3 = this.x;
                 _local_4 = this.y;
@@ -224,7 +224,7 @@
                 _local_2._Str_10744 = _local_3;
                 _local_2._Str_12459 = _local_4;
                 _local_2._Str_11680 = _local_5;
-                if (((_local_2.y > 10) || (!(_local_2._Str_16034))))
+                if (((_local_2.y > 10) || (!(_local_2.isAlive))))
                 {
                     k.push(_local_2);
                 }
@@ -239,11 +239,11 @@
             }
         }
 
-        private function _Str_23140():void
+        private function satisfyConstraints():void
         {
         }
 
-        private function _Str_25039():void
+        private function accumulateForces():void
         {
             var k:FurnitureParticleSystemParticle;
             for each (k in this._particles)
@@ -256,17 +256,17 @@
             return this._particles;
         }
 
-        public function get _Str_22727():Boolean
+        public function get hasIgnited():Boolean
         {
             return this._hasIgnited;
         }
 
-        private function _Str_7471(k:Number):Boolean
+        private function randomBoolean(k:Number):Boolean
         {
             return Math.random() < k;
         }
 
-        public function get _Str_9107():int
+        public function get roomObjectSpriteId():int
         {
             return this._roomObjectSpriteId;
         }

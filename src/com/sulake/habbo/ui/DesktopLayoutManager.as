@@ -113,7 +113,7 @@
             {
                 return null;
             }
-            var _local_6:IWindowContainer = (this._layoutContainer._Str_6316(_local_4) as IWindowContainer);
+            var _local_6:IWindowContainer = (this._layoutContainer.getChildByTag(_local_4) as IWindowContainer);
             return _local_6;
         }
 
@@ -156,7 +156,7 @@
             {
                 return false;
             }
-            var _local_2:IWindowContainer = (this._layoutContainer._Str_6316(ROOM_VIEW) as IWindowContainer);
+            var _local_2:IWindowContainer = (this._layoutContainer.getChildByTag(ROOM_VIEW) as IWindowContainer);
             if (_local_2 == null)
             {
                 return false;

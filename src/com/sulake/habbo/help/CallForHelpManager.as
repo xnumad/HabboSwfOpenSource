@@ -284,12 +284,12 @@
             var _local_4:ISelectorWindow = ISelectorWindow(this._window.findChildByName("topic_selector"));
             if (_local_4 != null)
             {
-                _local_5 = _local_4._Str_5050(("" + this._incomingTopic));
+                _local_5 = _local_4.getSelectableByName(("" + this._incomingTopic));
                 if (_local_5 != null)
                 {
-                    _local_4._Str_2520(_local_5);
+                    _local_4.setSelected(_local_5);
                 }
-                _local_6 = _local_4._Str_5050("123");
+                _local_6 = _local_4.getSelectableByName("123");
                 if (((!(_local_6 == null)) && (this._habboHelp._Str_16486)))
                 {
                     _local_6.visible = false;
@@ -354,7 +354,7 @@
             var _local_6:Boolean;
             var k:IItemListWindow = (this._window.findChildByName("user_list") as IItemListWindow);
             var _local_2:IWindowContainer = (k.getListItemAt(0) as IWindowContainer);
-            k._Str_2659();
+            k.removeListItems();
             var _local_3:int;
             for each (_local_4 in this._habboHelp._Str_17447._Str_20328())
             {
@@ -371,7 +371,7 @@
                 }
                 _local_5.findChildByName("room_name").caption = ((_local_4.roomName != "") ? this._habboHelp.localization.getLocalizationWithParams("help.emergency.main.step.two.room.name", "", "room_name", _local_4.roomName) : "");
                 _Str_2483(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_4.figure;
-                k._Str_3015(_local_5, _local_3);
+                k.addListItemAt(_local_5, _local_3);
                 if (_local_6)
                 {
                     _local_3 = 1;
@@ -574,7 +574,7 @@
                 return false;
             }
             this._topicIndex = 0;
-            var _local_2:ISelectableWindow = ISelectorWindow(this._window.findChildByName("topic_selector"))._Str_2657();
+            var _local_2:ISelectableWindow = ISelectorWindow(this._window.findChildByName("topic_selector")).getSelected();
             if (_local_2 != null)
             {
                 this._topicIndex = int(_local_2.name);

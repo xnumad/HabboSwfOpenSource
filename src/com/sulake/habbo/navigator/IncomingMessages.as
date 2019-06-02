@@ -128,7 +128,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
             _local_2.addHabboConnectionMessageEvent(new _Str_2929(this._Str_4428));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4129(this._Str_11371));
+            _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
             _local_2.addHabboConnectionMessageEvent(new _Str_3492(this._Str_11640));
@@ -157,7 +157,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this._Str_3012));
+            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this._Str_23354));
             _local_2.addHabboConnectionMessageEvent(new _Str_8002(this._Str_22797));
@@ -198,11 +198,11 @@
         private function _Str_4297(k:IMessageEvent):void
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
-            if (_local_2._Str_6124 >= SecurityLevelEnum._Str_3569)
+            if (_local_2.securityLevel >= SecurityLevelEnum._Str_3569)
             {
                 this._navigator.data._Str_15161 = true;
             }
-            if (_local_2._Str_6124 >= SecurityLevelEnum._Str_8629)
+            if (_local_2.securityLevel >= SecurityLevelEnum._Str_8629)
             {
                 this._navigator.data._Str_14374 = true;
             }
@@ -269,11 +269,11 @@
             }
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             var _local_2:_Str_4522 = _Str_2752(k)._Str_2273();
             Logger.log("Navigator: entering room");
-            this.data._Str_3012(_local_2);
+            this.data.onCreditBalance(_local_2);
             this._Str_20233();
             this._navigator._Str_4012.close();
             this._navigator.send(new _Str_3570(_local_2._Str_6550, true, false));
@@ -301,7 +301,7 @@
                     this._Str_19492();
                 }
                 this.data._Str_11597 = 0;
-                if (((!(this.data._Str_2678 == null)) && (this.data._Str_2678._Str_3094 > 0)))
+                if (((!(this.data._Str_2678 == null)) && (this.data._Str_2678.habboGroupId > 0)))
                 {
                     this._navigator._Str_5048.expanded = false;
                     this._navigator._Str_5048.refresh();
@@ -316,19 +316,19 @@
             {
                 if (_local_2._Str_18882)
                 {
-                    if (((_local_2.data._Str_2738 == RoomSettingsData._Str_4199) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                    if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_CLOSED) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                     {
                         this._navigator.doorbell.show(_local_2.data);
                     }
                     else
                     {
-                        if (((_local_2.data._Str_2738 == RoomSettingsData._Str_3711) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                        if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                         {
                             this._navigator._Str_7174.show(_local_2.data);
                         }
                         else
                         {
-                            if (((((_local_2.data._Str_2738 == RoomSettingsData._Str_5316) && (!(this._navigator._Str_2627._Str_4050))) && (!(this._navigator._Str_2627._Str_6986))) && (!(this._navigator._Str_2627._Str_2799))))
+                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator._Str_2627._Str_4050))) && (!(this._navigator._Str_2627._Str_6986))) && (!(this._navigator._Str_2627._Str_2799))))
                             {
                                 return;
                             }
@@ -361,7 +361,7 @@
             this._navigator.goToRoom(_local_2.flatId, true);
             this._navigator._Str_2813._Str_8316(Tabs._Str_4869);
             this._navigator._Str_10330();
-            this._navigator._Str_7852();
+            this._navigator.closeNavigator();
         }
 
         private function _Str_22297(k:IMessageEvent):void
@@ -404,9 +404,9 @@
             var _local_8:int;
             var _local_9:Boolean;
             var _local_2:_Str_7002 = _Str_5633(k)._Str_2273();
-            Logger.log(("Got navigator settings: " + _local_2._Str_3374));
+            Logger.log(("Got navigator settings: " + _local_2.homeRoomId));
             var _local_3:* = (!(this._navigator.data._Str_17024));
-            this._navigator.data._Str_3374 = _local_2._Str_3374;
+            this._navigator.data.homeRoomId = _local_2.homeRoomId;
             this._navigator.data._Str_17024 = true;
             this._navigator._Str_2813.refresh();
             var _local_4:int = -1;
@@ -438,7 +438,7 @@
                         if (!_local_7)
                         {
                             _local_8 = _local_2._Str_17213;
-                            if (_local_8 != this._navigator.data._Str_3374)
+                            if (_local_8 != this._navigator.data.homeRoomId)
                             {
                                 this._navigator.goToRoom(_local_8, true);
                             }
@@ -655,7 +655,7 @@
             }
         }
 
-        private function _Str_11371(k:IMessageEvent):void
+        private function onDoorbell(k:IMessageEvent):void
         {
             var _local_2:_Str_4129 = (k as _Str_4129);
             if (_local_2 == null)
@@ -725,7 +725,7 @@
 
         private function _Str_18130(k:_Str_5891):void
         {
-            this._navigator._Str_11727();
+            this._navigator.startRoomCreation();
         }
 
         private function _Str_20233():void

@@ -167,7 +167,7 @@
 
         public function _Str_5913(k:String):void
         {
-            if (((k == InventoryCategory.PETS) && (this._controller._Str_2719)))
+            if (((k == InventoryCategory.PETS) && (this._controller.isVisible)))
             {
                 this._controller.events.dispatchEvent(new Event(HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_PETS));
             }
@@ -180,7 +180,7 @@
 
         public function _Str_5100():void
         {
-            if (this._view._Str_2719)
+            if (this._view.isVisible)
             {
                 this._Str_4409();
             }
@@ -210,10 +210,10 @@
                     _local_4 = ("grw" + _local_3.level);
                 }
             }
-            if (this._controller.roomSession._Str_2781)
+            if (this._controller.roomSession.isRoomController)
             {
                 _local_5 = (_local_3.id * -1);
-                this._isPlacing = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, _local_5, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.PET, _local_3._Str_4217, null, -1, -1, _local_4);
+                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_5, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.PET, _local_3.figureString, null, -1, -1, _local_4);
                 this._controller._Str_13252();
                 return this._isPlacing;
             }

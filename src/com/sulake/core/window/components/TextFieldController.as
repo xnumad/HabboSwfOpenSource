@@ -33,7 +33,7 @@
         protected var _Str_3422:String = "";
         protected var _Str_4476:Boolean = false;
         protected var _Str_9948:Boolean = false;
-        protected var _Str_2684:Boolean = false;
+        protected var _initialized:Boolean = false;
         protected var _Str_6131:Array;
         protected var _Str_12892:Boolean;
 
@@ -57,7 +57,7 @@
             _Str_2309.addEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
             _Str_2309.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
             _Str_3781 = false;
-            this._Str_2684 = true;
+            this._initialized = true;
         }
 
         public static function _Str_22243(k:String):Array
@@ -169,22 +169,22 @@
             return this._Str_3681;
         }
 
-        public function _Str_8475(k:uint, _arg_2:uint):uint
+        public function setMouseCursorForState(k:uint, _arg_2:uint):uint
         {
             throw (new Error("Unimplemented method!"));
         }
 
-        public function _Str_6608(k:uint):uint
+        public function getMouseCursorByState(k:uint):uint
         {
             throw (new Error("Unimplemented method!"));
         }
 
-        public function _Str_7991(k:IToolTipWindow):void
+        public function showToolTip(k:IToolTipWindow):void
         {
             throw (new Error("Unimplemented method!"));
         }
 
-        public function _Str_9055():void
+        public function hideToolTip():void
         {
             throw (new Error("Unimplemented method!"));
         }
@@ -318,7 +318,7 @@
             var k:Point;
             var _local_2:Point;
             var _local_3:Point;
-            if (((this._Str_2684) && (!(autoSize == TextFieldAutoSize.NONE))))
+            if (((this._initialized) && (!(autoSize == TextFieldAutoSize.NONE))))
             {
                 if (((!(_w == _Str_2309.width)) || (!(_h == _Str_2309.height))))
                 {
@@ -453,7 +453,7 @@
                 }
                 for each (tracker in _context.inputEventTrackers)
                 {
-                    tracker._Str_14445(windowEvent, this);
+                    tracker.eventReceived(windowEvent, this);
                 }
                 windowEvent.recycle();
             }
@@ -478,7 +478,7 @@
                 }
                 for each (tracker in _context.inputEventTrackers)
                 {
-                    tracker._Str_14445(windowEvent, this);
+                    tracker.eventReceived(windowEvent, this);
                 }
                 windowEvent.recycle();
             }
@@ -488,7 +488,7 @@
             }
         }
 
-        public function _Str_22496():void
+        public function requestChangeEvent():void
         {
             this._Str_16912(null);
         }
@@ -515,7 +515,7 @@
             {
                 if (event.type == FocusEvent.FOCUS_IN)
                 {
-                    if (!_Str_2767(WindowState.FOCUSED))
+                    if (!getStateFlag(WindowState.FOCUSED))
                     {
                         this.focus();
                     }
@@ -524,7 +524,7 @@
                 {
                     if (event.type == FocusEvent.FOCUS_OUT)
                     {
-                        if (_Str_2767(WindowState.FOCUSED))
+                        if (getStateFlag(WindowState.FOCUSED))
                         {
                             this.unfocus();
                         }
@@ -541,7 +541,7 @@
         {
             try
             {
-                if (_Str_2767(WindowState.FOCUSED))
+                if (getStateFlag(WindowState.FOCUSED))
                 {
                     this.unfocus();
                 }
@@ -555,11 +555,11 @@
         override public function get properties():Array
         {
             var k:Array = InteractiveController._Str_8987(this, super.properties);
-            k.push(_Str_2340(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
-            k.push(_Str_2340(PropertyKeys.FOCUS_CAPTURER, this._Str_9948));
-            k.push(_Str_2340(PropertyKeys.SELECTABLE, _Str_2309.selectable));
-            k.push(_Str_2340(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
-            k.push(_Str_2340(PropertyKeys.DISPLAY_RAW, _Str_5517));
+            k.push(createProperty(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
+            k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, this._Str_9948));
+            k.push(createProperty(PropertyKeys.SELECTABLE, _Str_2309.selectable));
+            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
+            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
             return k;
         }
 
@@ -620,7 +620,7 @@
             super.localization = _Str_8027(((_Str_5517) ? _caption : k));
         }
 
-        public function _Str_24020(k:int, _arg_2:int):String
+        public function getWordAt(k:int, _arg_2:int):String
         {
             var _local_8:int;
             var _local_9:int;

@@ -20,7 +20,7 @@
             return this._slotId;
         }
 
-        public function get _Str_4217():String
+        public function get figureString():String
         {
             return this._Str_3704;
         }

@@ -8,25 +8,25 @@
         public static const _Str_8664:int = 1;
         public static const _Str_9186:int = 2;
 
-        private var _Str_594:Array;
+        private var _data:Array;
 
         public function _Str_4844(k:int, _arg_2:int, _arg_3:int)
         {
-            this._Str_594 = [];
+            this._data = [];
             super();
-            this._Str_594.push(k);
-            this._Str_594.push(_arg_2);
-            this._Str_594.push(_arg_3);
+            this._data.push(k);
+            this._data.push(_arg_2);
+            this._data.push(_arg_3);
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_594;
+            return this._data;
         }
 
         public function dispose():void
         {
-            this._Str_594 = null;
+            this._data = null;
         }
     }
 }

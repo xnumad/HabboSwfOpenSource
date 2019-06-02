@@ -95,14 +95,14 @@
         private function onAddedToStage(k:Event):void
         {
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            stage.addEventListener(Event.RESIZE, this._Str_1136);
+            stage.addEventListener(Event.RESIZE, this.onResize);
             this._Str_1370();
             this._Str_1214 = new Timer(750);
             this._Str_1214.addEventListener(TimerEvent.TIMER, this._Str_1187);
             this._Str_1214.start();
         }
 
-        private function _Str_1136(k:Event):void
+        private function onResize(k:Event):void
         {
             this._Str_1370();
         }
@@ -172,7 +172,7 @@
             var k:Stage = stage;
             if (k != null)
             {
-                k.removeEventListener(Event.RESIZE, this._Str_1136);
+                k.removeEventListener(Event.RESIZE, this.onResize);
             }
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             removeEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);

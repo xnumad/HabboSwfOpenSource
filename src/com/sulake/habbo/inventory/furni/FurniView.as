@@ -86,7 +86,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
             return ((this._view) && (!(this._view.parent == null))) && (this._view.visible);
         }
@@ -236,41 +236,41 @@
                     _local_2 = _local_6._Str_3205();
                 }
                 k = true;
-                _local_9 = this._roomEngine._Str_5211(_local_2.type);
+                _local_9 = this._roomEngine.getWallItemType(_local_2.type);
                 this._view.findChildByName("nextItemButton").visible = (this._view.findChildByName("viewItemButton").visible = ((_local_9) && (!(_local_9.indexOf("external_image_wallitem") == -1))));
                 this._view.findChildByName("furni_preview_widget").visible = true;
-                _local_10 = this._roomEngine._Str_4323(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
-                _local_11 = this._roomEngine._Str_4323(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
-                _local_12 = this._roomEngine._Str_4323(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
+                _local_10 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
+                _local_11 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
+                _local_12 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_LANDSCAPE_TYPE);
                 _local_10 = (((_local_10) && (_local_10.length > 0)) ? _local_10 : "101");
                 _local_11 = (((_local_11) && (_local_11.length > 0)) ? _local_11 : "101");
                 _local_12 = (((_local_12) && (_local_12.length > 0)) ? _local_12 : "1.1");
                 this._roomPreviewer.reset(false);
-                this._roomPreviewer._Str_4377(_local_11, _local_10, _local_12);
+                this._roomPreviewer.updateObjectRoom(_local_11, _local_10, _local_12);
                 if ((((_local_2.category == FurniCategory._Str_3639) || (_local_2.category == FurniCategory._Str_3683)) || (_local_2.category == FurniCategory._Str_3432)))
                 {
-                    this._roomPreviewer._Str_11035(true, true);
+                    this._roomPreviewer.updateRoomWallsAndFloorVisibility(true, true);
                     _local_16 = ((_local_2.category == FurniCategory._Str_3683) ? _local_6.stuffData.getLegacyString() : _local_11);
                     _local_17 = ((_local_2.category == FurniCategory._Str_3639) ? _local_6.stuffData.getLegacyString() : _local_10);
                     _local_18 = ((_local_2.category == FurniCategory._Str_3432) ? _local_6.stuffData.getLegacyString() : _local_12);
-                    this._roomPreviewer._Str_4377(_local_16, _local_17, _local_18);
+                    this._roomPreviewer.updateObjectRoom(_local_16, _local_17, _local_18);
                     if (_local_2.category == FurniCategory._Str_3432)
                     {
                         _local_19 = this._model.controller._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
-                        this._roomPreviewer._Str_12087(_local_19.id, new Vector3d(90, 0, 0), _local_19.customParams);
+                        this._roomPreviewer.addWallItemIntoRoom(_local_19.id, new Vector3d(90, 0, 0), _local_19.customParams);
                     }
                 }
                 else
                 {
                     if (_local_6._Str_2770)
                     {
-                        this._roomPreviewer._Str_11035(true, true);
-                        this._roomPreviewer._Str_12087(_local_6.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
+                        this._roomPreviewer.updateRoomWallsAndFloorVisibility(true, true);
+                        this._roomPreviewer.addWallItemIntoRoom(_local_6.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
                     }
                     else
                     {
-                        this._roomPreviewer._Str_11035(false, true);
-                        this._roomPreviewer._Str_18681(_local_6.type, new Vector3d(90, 0, 0), _local_6.stuffData, _local_6._Str_2794.toString());
+                        this._roomPreviewer.updateRoomWallsAndFloorVisibility(false, true);
+                        this._roomPreviewer.addFurnitureIntoRoom(_local_6.type, new Vector3d(90, 0, 0), _local_6.stuffData, _local_6._Str_2794.toString());
                     }
                 }
                 _local_3 = (this._view.findChildByName("tradeable_icon") as IStaticBitmapWrapperWindow);
@@ -372,9 +372,9 @@
             if (((_local_6) && (_local_2)))
             {
                 this._view.findChildByName("furni_name").caption = _local_6.name;
-                if (((_local_2) && (this._roomEngine._Str_5211(_local_2.type) == "external_image_wallitem")))
+                if (((_local_2) && (this._roomEngine.getWallItemType(_local_2.type) == "external_image_wallitem")))
                 {
-                    this._view.findChildByName("furni_description").caption = _local_2.stuffData._Str_15059("m");
+                    this._view.findChildByName("furni_description").caption = _local_2.stuffData.getJSONValue("m");
                 }
                 else
                 {
@@ -420,11 +420,11 @@
             var _local_2:FurnitureItem = k._Str_3205();
             if (_local_2._Str_2770)
             {
-                this._roomPreviewer._Str_12087(_local_2.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
+                this._roomPreviewer.addWallItemIntoRoom(_local_2.type, new Vector3d(90, 0, 0), _local_2.stuffData.getLegacyString());
             }
             else
             {
-                this._roomPreviewer._Str_18681(_local_2.type, new Vector3d(90, 0, 0), _local_2.stuffData);
+                this._roomPreviewer.addFurnitureIntoRoom(_local_2.type, new Vector3d(90, 0, 0), _local_2.stuffData);
             }
             this._placeInRoomButton.disable();
             this._offerInTradingButton.disable();
@@ -506,7 +506,7 @@
         {
             var k:IWidgetWindow = (this._view.findChildByName("furni_preview_widget") as IWidgetWindow);
             var _local_2:_Str_4709 = ((this._view.findChildByName("furni_preview_widget") as IWidgetWindow).widget as _Str_4709);
-            _local_2._Str_26451._Str_6976(k.width, k.height);
+            _local_2._Str_26451.modifyRoomCanvas(k.width, k.height);
         }
 
         private function _Str_20866(k:Boolean):void
@@ -528,7 +528,7 @@
                 return;
             }
             var _local_5:IFurnitureData = this._model.controller.getFurnitureData(_local_4.type, ((_local_4._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
-            var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller._Str_2627._Str_4701()))) && (!(_local_2)));
+            var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller._Str_2627.isAccountSafetyLocked()))) && (!(_local_2)));
             var _local_7:Boolean = (((this._model._Str_7411) && (k)) && (((((_local_4.category == FurniCategory._Str_6096) || (_local_4.category == FurniCategory._Str_7297)) || (_local_4.category == FurniCategory._Str_7954)) || (_local_4.category == FurniCategory._Str_7696)) || (_local_4.category == FurniCategory._Str_6915)));
             var _local_8:Boolean = true;
             if (_local_4.rentable)
@@ -706,7 +706,7 @@
                         {
                             _local_4 = _local_3._Str_3205();
                         }
-                        this._roomEngine._Str_11714(_local_4.ref, _local_4.type, _local_4.id);
+                        this._roomEngine.showUseProductSelection(_local_4.ref, _local_4.type, _local_4.id);
                         break;
                     case "goto_room_btn":
                         this._model._Str_10094();
@@ -723,7 +723,7 @@
                         this._model._Str_25554();
                         break;
                     case "use_btn":
-                        this._model._Str_11714();
+                        this._model.showUseProductSelection();
                         break;
                     case "extendrent_btn":
                         this._model._Str_25502();
@@ -857,7 +857,7 @@
         {
             if (this._roomPreviewer != null)
             {
-                this._roomPreviewer._Str_9695();
+                this._roomPreviewer.updatePreviewRoomView();
             }
         }
     }

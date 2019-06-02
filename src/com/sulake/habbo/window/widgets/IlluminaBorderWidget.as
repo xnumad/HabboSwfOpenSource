@@ -97,7 +97,7 @@
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("illumina_border_xml").content as XML)) as IWindowContainer);
             this._canvas = (this._root.getChildByName("canvas") as IBitmapWrapperWindow);
             this._children = (this._root.getChildByName("children") as IWindowContainer);
-            this._Str_10365 = String(this._widgetWindow._Str_3692(_Str_7804).value);
+            this._Str_10365 = String(this._widgetWindow.getDefaultProperty(_Str_7804).value);
             this._widgetWindow.addEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_2832);
             this._widgetWindow.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
             this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
@@ -170,18 +170,18 @@
             {
                 return k;
             }
-            k.push(this._widgetWindow._Str_2340(_Str_7804, this._borderStyle));
-            k.push(_Str_13216._Str_2551(this._contentChild));
-            k.push(_Str_13095._Str_2551(this._contentPadding));
-            k.push(_Str_12566._Str_2551(this._sidePadding));
-            k.push(_Str_15722._Str_2551(this._childMargin));
-            k.push(_Str_14919._Str_2551(this._topLeftChild));
-            k.push(_Str_15429._Str_2551(this._topCenterChild));
-            k.push(_Str_15053._Str_2551(this._topRightChild));
-            k.push(_Str_15265._Str_2551(this._bottomLeftChild));
-            k.push(_Str_14659._Str_2551(this._bottomCenterChild));
-            k.push(_Str_13511._Str_2551(this._bottomRightChild));
-            k.push(_Str_15456._Str_2551(this._landingViewMode));
+            k.push(this._widgetWindow.createProperty(_Str_7804, this._borderStyle));
+            k.push(_Str_13216.withValue(this._contentChild));
+            k.push(_Str_13095.withValue(this._contentPadding));
+            k.push(_Str_12566.withValue(this._sidePadding));
+            k.push(_Str_15722.withValue(this._childMargin));
+            k.push(_Str_14919.withValue(this._topLeftChild));
+            k.push(_Str_15429.withValue(this._topCenterChild));
+            k.push(_Str_15053.withValue(this._topRightChild));
+            k.push(_Str_15265.withValue(this._bottomLeftChild));
+            k.push(_Str_14659.withValue(this._bottomCenterChild));
+            k.push(_Str_13511.withValue(this._bottomRightChild));
+            k.push(_Str_15456.withValue(this._landingViewMode));
             return k;
         }
 
@@ -415,7 +415,7 @@
             {
                 return;
             }
-            this._root._Str_2648.setEmpty();
+            this._root.limits.setEmpty();
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
             var k:IWindow = this._children.getChildByName(this._contentChild);
@@ -426,15 +426,15 @@
                 this._resizingWidget = true;
                 if (this._widgetWindow.testParamFlag(WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN))
                 {
-                    this._root._Str_2648.minWidth = _local_6;
-                    this._root._Str_2648.minHeight = _local_7;
+                    this._root.limits.minWidth = _local_6;
+                    this._root.limits.minHeight = _local_7;
                 }
                 if (this._widgetWindow.testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
                 {
-                    this._root._Str_2648.minWidth = _local_6;
-                    this._root._Str_2648.minHeight = _local_7;
-                    this._root._Str_2648.maxWidth = _local_6;
-                    this._root._Str_2648.maxHeight = _local_7;
+                    this._root.limits.minWidth = _local_6;
+                    this._root.limits.minHeight = _local_7;
+                    this._root.limits.maxWidth = _local_6;
+                    this._root.limits.maxHeight = _local_7;
                 }
                 this._resizingWidget = false;
             }

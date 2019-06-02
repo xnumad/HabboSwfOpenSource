@@ -117,13 +117,13 @@
             switch (_arg_2.name)
             {
                 case "check_name_button":
-                    this._manager.handler.checkName(this._Str_4290());
+                    this._manager.handler.checkName(this.getName());
                     this._Str_13481();
                     return;
             }
         }
 
-        private function _Str_4290():String
+        private function getName():String
         {
             var k:ITextFieldWindow;
             if (this._window)

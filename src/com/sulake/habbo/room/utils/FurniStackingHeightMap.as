@@ -39,45 +39,45 @@
             this._height = 0;
         }
 
-        private function _Str_9520(k:int, _arg_2:int):Boolean
+        private function validPosition(k:int, _arg_2:int):Boolean
         {
             return (((k >= 0) && (k < this._width)) && (_arg_2 >= 0)) && (_arg_2 < this._height);
         }
 
         public function _Str_2754(k:int, _arg_2:int):Number
         {
-            return (this._Str_9520(k, _arg_2)) ? this._heightMap[((_arg_2 * this._width) + k)] : 0;
+            return (this.validPosition(k, _arg_2)) ? this._heightMap[((_arg_2 * this._width) + k)] : 0;
         }
 
         public function _Str_3982(k:int, _arg_2:int, _arg_3:Number):void
         {
-            if (this._Str_9520(k, _arg_2))
+            if (this.validPosition(k, _arg_2))
             {
                 this._heightMap[((_arg_2 * this._width) + k)] = _arg_3;
             }
         }
 
-        public function _Str_19289(k:int, _arg_2:int, _arg_3:Boolean):void
+        public function setStackingBlocked(k:int, _arg_2:int, _arg_3:Boolean):void
         {
-            if (this._Str_9520(k, _arg_2))
+            if (this.validPosition(k, _arg_2))
             {
                 this._isNotStackable[((_arg_2 * this._width) + k)] = _arg_3;
             }
         }
 
-        public function _Str_19832(k:int, _arg_2:int, _arg_3:Boolean):void
+        public function setIsRoomTile(k:int, _arg_2:int, _arg_3:Boolean):void
         {
-            if (this._Str_9520(k, _arg_2))
+            if (this.validPosition(k, _arg_2))
             {
                 this._isRoomTile[((_arg_2 * this._width) + k)] = _arg_3;
             }
         }
 
-        public function _Str_20406(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Boolean, _arg_10:Number=-1):Boolean
+        public function validateLocation(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Boolean, _arg_10:Number=-1):Boolean
         {
             var _local_12:int;
             var _local_13:int;
-            if (((!(this._Str_9520(k, _arg_2))) || (!(this._Str_9520(((k + _arg_3) - 1), ((_arg_2 + _arg_4) - 1))))))
+            if (((!(this.validPosition(k, _arg_2))) || (!(this.validPosition(((k + _arg_3) - 1), ((_arg_2 + _arg_4) - 1))))))
             {
                 return false;
             }

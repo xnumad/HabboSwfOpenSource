@@ -54,8 +54,8 @@
             }
             this._offers = [];
             this._controller = this._catalog._Str_18172();
-            this._controller._Str_7410(this);
-            this._controller._Str_8093(ClubOfferRequestSource._Str_15727);
+            this._controller.registerVisualization(this);
+            this._controller.requestOffers(ClubOfferRequestSource._Str_15727);
             return true;
         }
 
@@ -134,7 +134,7 @@
             {
                 return;
             }
-            Logger.log(("Offer: " + [offer.offerId, offer._Str_2716, offer.priceCredits, offer.vip, offer.months, offer._Str_11224, offer.year, offer.month, offer.day, offer._Str_10047]));
+            Logger.log(("Offer: " + [offer.offerId, offer.productCode, offer.priceCredits, offer.vip, offer.months, offer._Str_11224, offer.year, offer.month, offer.day, offer._Str_10047]));
             offer.page = page;
             try
             {

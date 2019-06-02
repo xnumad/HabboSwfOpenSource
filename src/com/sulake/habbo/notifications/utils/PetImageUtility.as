@@ -19,7 +19,7 @@
             _Str_2280 = null;
         }
 
-        public function _Str_2641(k:int, _arg_2:int, _arg_3:String, _arg_4:int=3, _arg_5:Boolean=false, _arg_6:int=32, _arg_7:String=null):BitmapData
+        public function getPetImage(k:int, _arg_2:int, _arg_3:String, _arg_4:int=3, _arg_5:Boolean=false, _arg_6:int=32, _arg_7:String=null):BitmapData
         {
             if (_Str_2280 == null)
             {
@@ -33,7 +33,7 @@
             }
             var _local_9:uint = parseInt(_arg_3, 16);
             var _local_10:uint;
-            var _local_11:ImageResult = _Str_2280._Str_2641(k, _arg_2, _local_9, new Vector3d((45 * _arg_4)), _arg_6, null, _arg_5, _local_10, null, _arg_7);
+            var _local_11:ImageResult = _Str_2280.getPetImage(k, _arg_2, _local_9, new Vector3d((45 * _arg_4)), _arg_6, null, _arg_5, _local_10, null, _arg_7);
             if (_local_11 != null)
             {
                 _local_8 = _local_11.data;

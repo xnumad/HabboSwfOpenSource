@@ -114,14 +114,14 @@
                 _local_7 = getSprite(_local_8);
                 if (_local_7 != null)
                 {
-                    this._Str_24868(_local_9.@name, _local_8, _local_9.@parent, Number(_local_9.@radius), Number(_local_9.@arcspeed), Number(_local_9.@arcoffset), Number(_local_9.@height));
+                    this.addPlanet(_local_9.@name, _local_8, _local_9.@parent, Number(_local_9.@radius), Number(_local_9.@arcspeed), Number(_local_9.@arcoffset), Number(_local_9.@height));
                 }
                 _local_8++;
             }
             return true;
         }
 
-        private function _Str_24868(k:String, _arg_2:int, _arg_3:String, _arg_4:Number, _arg_5:Number, _arg_6:Number, _arg_7:Number):void
+        private function addPlanet(k:String, _arg_2:int, _arg_3:String, _arg_4:Number, _arg_5:Number, _arg_6:Number, _arg_7:Number):void
         {
             var _local_9:FurniturePlanetSystemVisualizationPlanetObject;
             if (this._planetIndex == null)
@@ -129,7 +129,7 @@
                 return;
             }
             var _local_8:FurniturePlanetSystemVisualizationPlanetObject = new FurniturePlanetSystemVisualizationPlanetObject(k, _arg_2, _arg_4, _arg_5, _arg_6, _arg_7);
-            _local_9 = this._Str_25356(_arg_3);
+            _local_9 = this.getPlanet(_arg_3);
             if (_local_9 != null)
             {
                 _local_9.addChild(_local_8);
@@ -141,7 +141,7 @@
             }
         }
 
-        private function _Str_25356(k:String):FurniturePlanetSystemVisualizationPlanetObject
+        private function getPlanet(k:String):FurniturePlanetSystemVisualizationPlanetObject
         {
             var _local_2:FurniturePlanetSystemVisualizationPlanetObject;
             var _local_3:int;
@@ -152,9 +152,9 @@
                 {
                     return _local_2;
                 }
-                if (_local_2._Str_18814(k))
+                if (_local_2.hasChild(k))
                 {
-                    return _local_2._Str_21378(k);
+                    return _local_2.getChild(k);
                 }
                 _local_3++;
             }

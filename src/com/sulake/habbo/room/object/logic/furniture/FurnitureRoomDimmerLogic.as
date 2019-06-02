@@ -53,7 +53,7 @@
             super.dispose();
         }
 
-        private function _Str_20393(k:String):void
+        private function dispatchColorUpdateEvent(k:String):void
         {
             var _local_3:int;
             var _local_4:int;
@@ -69,7 +69,7 @@
             var _local_2:Array = k.split(",");
             if (_local_2.length >= 5)
             {
-                _local_3 = this._Str_22111(k);
+                _local_3 = this.readState(k);
                 _local_4 = parseInt(_local_2[1]);
                 _local_5 = parseInt(_local_2[2]);
                 _local_6 = _local_2[3];
@@ -89,7 +89,7 @@
             }
         }
 
-        private function _Str_22111(k:String):int
+        private function readState(k:String):int
         {
             var _local_3:int;
             if (k == null)
@@ -115,9 +115,9 @@
                 {
                     if (object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_REAL_ROOM_OBJECT) == 1)
                     {
-                        this._Str_20393(_local_2.data.getLegacyString());
+                        this.dispatchColorUpdateEvent(_local_2.data.getLegacyString());
                     }
-                    _local_3 = this._Str_22111(_local_2.data.getLegacyString());
+                    _local_3 = this.readState(_local_2.data.getLegacyString());
                     _local_2 = new RoomObjectDataUpdateMessage(_local_3, _local_2.data);
                     super.processUpdateMessage(_local_2);
                 }
@@ -138,7 +138,7 @@
                     if (((!(_local_2 == null)) && (_local_2.length > 0)))
                     {
                         object.getModelController().setString(RoomObjectVariableEnum.FURNITURE_DATA, "");
-                        this._Str_20393(_local_2);
+                        this.dispatchColorUpdateEvent(_local_2);
                     }
                 }
             }

@@ -22,19 +22,19 @@
         private const _Str_18535:Number = 0.2;
 
         protected var _Str_2268:CraftingWidget;
-        protected var _Str_594:CraftingFurnitureItem;
+        protected var _data:CraftingFurnitureItem;
         protected var _window:IWindowContainer;
 
         public function FurniThumbnailRendererBase(k:CraftingFurnitureItem, _arg_2:IWindowContainer, _arg_3:CraftingWidget)
         {
             this._Str_2268 = _arg_3;
             this._window = _arg_2;
-            this._Str_594 = k;
-            this._Str_6402(this._Str_2686);
+            this._data = k;
+            this._Str_6402(this.furnitureData);
             this.updateItemCount();
             this._window.procedure = this._Str_780;
             var _local_4:IRegionWindow = (_arg_2.findChildByName("tooltip") as IRegionWindow);
-            _local_4._Str_2613 = k._Str_2686.localizedName;
+            _local_4._Str_2613 = k.furnitureData.localizedName;
         }
 
         public function dispose():void
@@ -139,12 +139,12 @@
 
         public function get content():CraftingFurnitureItem
         {
-            return this._Str_594;
+            return this._data;
         }
 
-        protected function get _Str_2686():IFurnitureData
+        protected function get furnitureData():IFurnitureData
         {
-            return (this.content) ? this.content._Str_2686 : null;
+            return (this.content) ? this.content.furnitureData : null;
         }
 
         public function get window():IWindowContainer

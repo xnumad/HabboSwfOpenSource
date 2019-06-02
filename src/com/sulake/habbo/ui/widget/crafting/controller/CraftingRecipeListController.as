@@ -117,11 +117,11 @@
             }
             if (_local_3)
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15345, this._craftableProduct._Str_2686);
+                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15345, this._craftableProduct.furnitureData);
             }
             else
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_9812, this._craftableProduct._Str_2686, _local_4);
+                _Str_2268.setInfoState(CraftingViewStateEnum._Str_9812, this._craftableProduct.furnitureData, _local_4);
             }
         }
 

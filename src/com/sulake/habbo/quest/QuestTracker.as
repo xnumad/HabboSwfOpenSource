@@ -118,7 +118,7 @@
             }
         }
 
-        public function _Str_3012():void
+        public function onCreditBalance():void
         {
             var _local_3:int;
             var k:* = (this._questEngine.getInteger("new.identity", 0) > 0);
@@ -408,7 +408,7 @@
             return this._window.width + _Str_16708;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (this._window) && (this._window.visible);
         }

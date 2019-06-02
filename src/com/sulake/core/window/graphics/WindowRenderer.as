@@ -479,7 +479,7 @@
                 _local_3 = this._Str_6641.pop();
                 if (!k.disposed)
                 {
-                    _local_5 = (k._Str_6613() as BitmapData);
+                    _local_5 = (k.fetchDrawBuffer() as BitmapData);
                     for each (_local_2 in _local_3)
                     {
                         this._Str_9131.x = k.renderingX;
@@ -564,7 +564,7 @@
                                 if (_local_7.testParamFlag(WindowParam.WINDOW_PARAM_FORCE_CLIPPING))
                                 {
                                     _arg_2.offset(-(_local_7.x), -(_local_7.y));
-                                    this._Str_17598(_local_7, _arg_2, _arg_3, (_local_7._Str_6613() as BitmapData));
+                                    this._Str_17598(_local_7, _arg_2, _arg_3, (_local_7.fetchDrawBuffer() as BitmapData));
                                     _arg_2.offset(_local_7.x, _local_7.y);
                                 }
                                 else

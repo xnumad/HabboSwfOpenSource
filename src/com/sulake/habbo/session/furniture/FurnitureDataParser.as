@@ -44,14 +44,14 @@
             this._itemIds = null;
         }
 
-        public function _Str_12194(k:String):void
+        public function loadData(k:String):void
         {
             var _local_2:AssetLoaderStruct = this._assetLib.loadAssetFromFile(k, new URLRequest(k), "text/plain");
-            _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_22637);
-            _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_25693);
+            _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.parseFurnitureData);
+            _local_2.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.furnitureDataError);
         }
 
-        private function _Str_22637(k:AssetLoaderEvent):void
+        private function parseFurnitureData(k:AssetLoaderEvent):void
         {
             var _local_2:AssetLoaderStruct = (k.target as AssetLoaderStruct);
             if (_local_2 == null)
@@ -94,21 +94,21 @@
             categoryTypes = xmlData.roomitemtypes;
             for each (itemXml in categoryTypes.furnitype)
             {
-                furniData = this._Str_25055(itemXml);
-                this._Str_18753(furniData);
-                this._Str_18923(furniData);
+                furniData = this.parseFloorItem(itemXml);
+                this.storeItem(furniData);
+                this.registerFurnitureLocalization(furniData);
             }
             categoryTypes = xmlData.wallitemtypes;
             for each (itemXml in categoryTypes.furnitype)
             {
-                furniData = this._Str_22303(itemXml);
-                this._Str_18753(furniData);
-                this._Str_18923(furniData);
+                furniData = this.parseWallItem(itemXml);
+                this.storeItem(furniData);
+                this.registerFurnitureLocalization(furniData);
             }
             dispatchEvent(new Event(FDP_FURNITURE_DATA_READY));
         }
 
-        private function _Str_25055(k:XML):FurnitureData
+        private function parseFloorItem(k:XML):FurnitureData
         {
             var _local_4:XML;
             var _local_5:String;
@@ -140,7 +140,7 @@
             return _local_10;
         }
 
-        private function _Str_22303(k:XML):FurnitureData
+        private function parseWallItem(k:XML):FurnitureData
         {
             var _local_2:int = parseInt(k.@id);
             var _local_3:FurnitureData = new FurnitureData(FurnitureData.I, _local_2, k.@classname, k.@classname, k.name, k.description, k.revision, 0, 0, 0, null, false, 0, k.adurl, k.offerid, (k.buyout == "1"), k.rentofferid, (k.rentbuyout == "1"), (k.bc == "1"), null, k.specialtype, false, false, false, (k.excludeddynamic == "1"), k.furniline);
@@ -197,8 +197,8 @@
                     _local_9 = _local_9.replace(/\[{1,}/mg, "");
                     _local_9 = _local_9.replace(/\]{1,}/mg, "");
                     _local_10 = _local_9.split('"');
-                    this._Str_19167(_local_10, ", ");
-                    this._Str_19167(_local_10, ",");
+                    this.removePatternFrom(_local_10, ", ");
+                    this.removePatternFrom(_local_10, ",");
                     _local_10.splice(0, 1);
                     _local_10.splice((_local_10.length - 1), 1);
                     if (_local_10.length < 18)
@@ -267,15 +267,15 @@
                         }
                     }
                     _local_40 = new FurnitureData(_local_11, _local_12, _local_13, _local_15, _local_25, _local_26, _local_18, _local_19, _local_20, _local_21, _local_22, _local_17, _local_16, _local_27, _local_28, _local_29, _local_30, _local_31, _local_34, _local_32, _local_33, _local_35, _local_36, _local_37, _local_38, "");
-                    this._Str_18753(_local_40);
-                    this._Str_18923(_local_40);
+                    this.storeItem(_local_40);
+                    this.registerFurnitureLocalization(_local_40);
                 }
                 _local_6++;
             }
             dispatchEvent(new Event(FDP_FURNITURE_DATA_READY));
         }
 
-        private function _Str_18753(k:FurnitureData):void
+        private function storeItem(k:FurnitureData):void
         {
             if (k.type == FurnitureData.S)
             {
@@ -294,13 +294,13 @@
             _local_2[k.colourIndex] = k.id;
         }
 
-        private function _Str_25693(k:AssetLoaderEvent):void
+        private function furnitureDataError(k:AssetLoaderEvent):void
         {
             HabboWebTools.logEventLog(("furnituredata download error " + k.status));
             Core.error("Could not download furnidata definition", true, Core.ERROR_CATEGORY_FURNIDATA_DOWNLOAD);
         }
 
-        private function _Str_18923(k:FurnitureData):void
+        private function registerFurnitureLocalization(k:FurnitureData):void
         {
             if (this._localization != null)
             {
@@ -320,7 +320,7 @@
             }
         }
 
-        private function _Str_19167(k:Array, _arg_2:Object):void
+        private function removePatternFrom(k:Array, _arg_2:Object):void
         {
             var _local_3:int;
             while (_local_3 < k.length)

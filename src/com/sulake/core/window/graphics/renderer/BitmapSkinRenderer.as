@@ -311,7 +311,7 @@
             return _local_4;
         }
 
-        private function _Str_1592(k:BitmapData, _arg_2:Rectangle, _arg_3:uint):void
+        private function drawBorders(k:BitmapData, _arg_2:Rectangle, _arg_3:uint):void
         {
             var _local_4:int;
             var _local_5:int = (_arg_2.bottom - 1);

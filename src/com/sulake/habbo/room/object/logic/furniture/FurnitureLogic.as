@@ -18,14 +18,14 @@
     import com.sulake.habbo.room.messages.RoomObjectDataUpdateMessage;
     import com.sulake.habbo.room.messages.RoomObjectHeightUpdateMessage;
     import com.sulake.habbo.room.messages.RoomObjectItemDataUpdateMessage;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.messages.RoomObjectMoveUpdateMessage;
     import com.sulake.habbo.room.messages.RoomObjectSelectedMessage;
 
     public class FurnitureLogic extends MovingObjectLogic 
     {
-        private static const _Str_8908:int = 8;
-        private static const _Str_15672:Number = (1 / 16);//0.0625
+        private static const BOUNCE_STEPS:int = 8;
+        private static const BOUNCE_STEP_HEIGHT:Number = (1 / 16);//0.0625
 
         private var _mouseOver:Boolean = false;
         private var _sizeX:Number = 0;
@@ -318,11 +318,11 @@
                 {
                     _local_2.setString(RoomObjectVariableEnum.FURNITURE_EXTRAS, String(k._Str_2794));
                 }
-                _local_2.setNumber(RoomObjectVariableEnum.FURNITURE_STATE_UPDATE_TIME, _Str_20511);
+                _local_2.setNumber(RoomObjectVariableEnum.FURNITURE_STATE_UPDATE_TIME, lastUpdateTime);
             }
         }
 
-        private function _Str_24336(k:RoomObjectHeightUpdateMessage):void
+        private function handleHeightUpdateMessage(k:RoomObjectHeightUpdateMessage):void
         {
             var _local_2:IRoomObjectModelController = object.getModelController();
             if (_local_2 != null)
@@ -331,19 +331,19 @@
             }
         }
 
-        private function _Str_22912(k:RoomObjectItemDataUpdateMessage):void
+        private function handleItemDataUpdateMessage(k:RoomObjectItemDataUpdateMessage):void
         {
             var _local_2:IRoomObjectModelController = object.getModelController();
             if (_local_2 != null)
             {
-                _local_2.setString(RoomObjectVariableEnum.FURNITURE_ITEMDATA, k._Str_18505);
+                _local_2.setString(RoomObjectVariableEnum.FURNITURE_ITEMDATA, k.itemData);
             }
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
         {
-            var _local_6:IVector3D;
-            var _local_7:IVector3D;
+            var _local_6:IVector3d;
+            var _local_7:IVector3d;
             var _local_8:String;
             var _local_2:RoomObjectDataUpdateMessage = (k as RoomObjectDataUpdateMessage);
             if (_local_2 != null)
@@ -354,13 +354,13 @@
             var _local_3:RoomObjectHeightUpdateMessage = (k as RoomObjectHeightUpdateMessage);
             if (_local_3 != null)
             {
-                this._Str_24336(_local_3);
+                this.handleHeightUpdateMessage(_local_3);
                 return;
             }
             var _local_4:RoomObjectItemDataUpdateMessage = (k as RoomObjectItemDataUpdateMessage);
             if (_local_4 != null)
             {
-                this._Str_22912(_local_4);
+                this.handleItemDataUpdateMessage(_local_4);
                 return;
             }
             this._mouseOver = false;
@@ -388,26 +388,26 @@
             super.processUpdateMessage(k);
         }
 
-        override protected function getLocationOffset():IVector3D
+        override protected function getLocationOffset():IVector3d
         {
             if (this._bouncingStep > 0)
             {
                 this._locationOffset.x = 0;
                 this._locationOffset.y = 0;
-                if (this._bouncingStep <= (_Str_8908 / 2))
+                if (this._bouncingStep <= (BOUNCE_STEPS / 2))
                 {
-                    this._locationOffset.z = (_Str_15672 * this._bouncingStep);
+                    this._locationOffset.z = (BOUNCE_STEP_HEIGHT * this._bouncingStep);
                 }
                 else
                 {
-                    if (this._bouncingStep <= _Str_8908)
+                    if (this._bouncingStep <= BOUNCE_STEPS)
                     {
                         if (this._storedRotateMessage)
                         {
                             super.processUpdateMessage(this._storedRotateMessage);
                             this._storedRotateMessage = null;
                         }
-                        this._locationOffset.z = (_Str_15672 * (_Str_8908 - this._bouncingStep));
+                        this._locationOffset.z = (BOUNCE_STEP_HEIGHT * (BOUNCE_STEPS - this._bouncingStep));
                     }
                 }
                 return this._locationOffset;
@@ -421,7 +421,7 @@
             if (this._bouncingStep > 0)
             {
                 this._bouncingStep++;
-                if (this._bouncingStep > _Str_8908)
+                if (this._bouncingStep > BOUNCE_STEPS)
                 {
                     this._bouncingStep = 0;
                 }

@@ -15,27 +15,27 @@
 
         public function _Str_13181(k:int):void
         {
-            if (((!(this.enabled)) || (this._Str_22094 <= 0)))
+            if (((!(this.enabled)) || (this.warningInterval <= 0)))
             {
                 return;
             }
             this._warningCount++;
-            this._Str_21304(k);
+            this.reportWarningsAsNeeded(k);
         }
 
         public function update(k:int):void
         {
-            this._Str_21304(k);
+            this.reportWarningsAsNeeded(k);
         }
 
-        private function _Str_21304(k:int):void
+        private function reportWarningsAsNeeded(k:int):void
         {
             var _local_2:LagWarningReportMessageComposer;
             if (this._warningCount == 0)
             {
                 return;
             }
-            if (((this._lastWarning == 0) || ((k - this._lastWarning) > this._Str_22094)))
+            if (((this._lastWarning == 0) || ((k - this._lastWarning) > this.warningInterval)))
             {
                 _local_2 = new LagWarningReportMessageComposer(this._warningCount);
                 this._habboTracking.send(_local_2);
@@ -49,7 +49,7 @@
             return this._habboTracking.getBoolean("lagWarningLog.enabled");
         }
 
-        private function get _Str_22094():int
+        private function get warningInterval():int
         {
             return this._habboTracking.getInteger("lagWarningLog.interval.seconds", 10) * 1000;
         }

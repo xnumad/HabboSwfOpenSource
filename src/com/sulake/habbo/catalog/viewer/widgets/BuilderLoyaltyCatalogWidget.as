@@ -29,7 +29,7 @@
             }
             _window.procedure = this._Str_2533;
             var k:IItemListWindow = (_window.findChildByName("loyalty_list") as IItemListWindow);
-            var _local_2:IWindow = k._Str_2915(0);
+            var _local_2:IWindow = k.removeListItemAt(0);
             var _local_3:int;
             for each (_local_4 in page.offers)
             {

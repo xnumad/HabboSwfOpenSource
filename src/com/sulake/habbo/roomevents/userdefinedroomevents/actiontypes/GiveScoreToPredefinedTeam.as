@@ -18,13 +18,13 @@
         {
             super.onEditStart(k, _arg_2);
             var _local_3:int = _arg_2.intData[2];
-            this._Str_6616(k)._Str_2520(this._Str_9779(k, _local_3));
+            this._Str_6616(k).setSelected(this._Str_9779(k, _local_3));
         }
 
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
             var _local_2:Array = super.readIntegerParamsFromForm(k);
-            _local_2.push(this._Str_6616(k)._Str_2657().id);
+            _local_2.push(this._Str_6616(k).getSelected().id);
             return _local_2;
         }
 

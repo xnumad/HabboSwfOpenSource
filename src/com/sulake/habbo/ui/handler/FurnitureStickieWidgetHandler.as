@@ -83,7 +83,7 @@
                             {
                                 _local_8 = _local_7;
                             }
-                            _local_10 = ((this._container.roomSession._Str_2781) || (this._container.sessionDataManager._Str_2799));
+                            _local_10 = ((this._container.roomSession.isRoomController) || (this._container.sessionDataManager._Str_2799));
                             _local_11 = new _Str_4863(_Str_4863.RWSDUE_STICKIE_DATA, _local_2.id, _local_3.getType(), _local_9, _local_8, _local_10);
                             this._container.events.dispatchEvent(_local_11);
                         }
@@ -97,7 +97,7 @@
                     }
                     if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._container.roomEngine._Str_12849(_local_4._Str_1577, RoomObjectCategoryEnum.CONST_20, _local_4._Str_10471, _local_4.text);
+                        this._container.roomEngine.modifyRoomObjectData(_local_4._Str_1577, RoomObjectCategoryEnum.CONST_20, _local_4._Str_10471, _local_4.text);
                     }
                     break;
                 case RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE:
@@ -108,7 +108,7 @@
                     }
                     if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._container.roomEngine._Str_13020(_local_5._Str_1577, RoomObjectCategoryEnum.CONST_20);
+                        this._container.roomEngine.deleteRoomObject(_local_5._Str_1577, RoomObjectCategoryEnum.CONST_20);
                     }
                     break;
             }

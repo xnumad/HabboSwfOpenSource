@@ -82,7 +82,7 @@
             var k:IWindowContainer = (this._offer.page.viewer.catalog.windowManager.buildFromXML(this._gridItemLayout) as IWindowContainer);
             for each (_local_2 in this._offer.productContainer.products)
             {
-                if (_local_2._Str_2588 == ProductTypeEnum.BADGE)
+                if (_local_2.productType == ProductTypeEnum.BADGE)
                 {
                 }
                 else
@@ -95,7 +95,7 @@
                     }
                     this._itemGrid._Str_2816(_local_3);
                     _local_2.view = _local_3;
-                    _local_5 = _local_2._Str_13474(this);
+                    _local_5 = _local_2.initIcon(this);
                     if (_local_5 != null)
                     {
                         _local_5.dispose();

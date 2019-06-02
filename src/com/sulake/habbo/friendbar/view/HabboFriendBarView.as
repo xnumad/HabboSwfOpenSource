@@ -336,7 +336,7 @@
             _local_4 = _local_3;
             while (_local_4 > 0)
             {
-                _local_2._Str_2915((_local_4 - 1));
+                _local_2.removeListItemAt((_local_4 - 1));
                 _local_4--;
             }
             while (this._Str_2868.length > 0)
@@ -598,7 +598,7 @@
                     }
                     if (_local_8)
                     {
-                        _local_9 = (_local_3._Str_12066(_local_2.id) as IWindowContainer);
+                        _local_9 = (_local_3.getListItemByID(_local_2.id) as IWindowContainer);
                         if (_local_9)
                         {
                             _local_10 = (_local_9.getChildByName(PIECES) as IItemListWindow);
@@ -696,7 +696,7 @@
             }
         }
 
-        public function _Str_3705(k:String):IWindowContainer
+        public function getIconLocation(k:String):IWindowContainer
         {
             var _local_2:IWindowContainer;
             _local_2 = IWindowContainer(this._Str_2563.findChildByName(k));

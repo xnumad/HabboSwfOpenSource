@@ -7,10 +7,10 @@
 
     public class UserDataManager
     {
-        private static const _Str_18230:int = 1;
-        private static const _Str_17049:int = 2;
-        private static const _Str_21410:int = 3;
-        private static const _Str_16137:int = 4;
+        private static const TYPE_USER:int = 1;
+        private static const TYPE_PET:int = 2;
+        private static const TYPE_BOT:int = 3;
+        private static const TYPE_RENTABLE_BOT:int = 4;
 
         private var _userDataByType:Map;
         private var _userDataByRoomIndex:Map;
@@ -42,7 +42,7 @@
 
         public function getUserData(k:int):RoomUserData
         {
-            return this._Str_6958(k, _Str_18230);
+            return this._Str_6958(k, TYPE_USER);
         }
 
         public function _Str_6958(k:int, _arg_2:int):RoomUserData
@@ -74,7 +74,7 @@
             return null;
         }
 
-        public function _Str_21323(k:int):Array
+        public function getUserBadges(k:int):Array
         {
             if (this._connection != null)
             {
@@ -94,7 +94,7 @@
             {
                 return;
             }
-            this._Str_16002(k._Str_2713);
+            this.removeUserDataByRoomIndex(k._Str_2713);
             var _local_2:Map = this._userDataByType.getValue(k.type);
             if (_local_2 == null)
             {
@@ -105,7 +105,7 @@
             this._userDataByRoomIndex.add(k._Str_2713, k);
         }
 
-        public function _Str_16002(k:int):void
+        public function removeUserDataByRoomIndex(k:int):void
         {
             var _local_3:Map;
             var _local_4:RoomUserData;
@@ -123,7 +123,7 @@
             }
         }
 
-        public function _Str_20068(k:int, _arg_2:Array):void
+        public function setUserBadges(k:int, _arg_2:Array):void
         {
             this._userBadges.remove(k);
             this._userBadges.add(k, _arg_2);
@@ -137,11 +137,11 @@
                 _local_6.figure = _arg_2;
                 _local_6._Str_3344 = _arg_3;
                 _local_6._Str_4799 = _arg_4;
-                _local_6._Str_2886 = _arg_5;
+                _local_6.isRiding = _arg_5;
             }
         }
 
-        public function _Str_19949(k:int, _arg_2:int):void
+        public function updatePetLevel(k:int, _arg_2:int):void
         {
             var _local_3:RoomUserData = this.getUserDataByIndex(k);
             if (_local_3 != null)
@@ -150,19 +150,19 @@
             }
         }
 
-        public function _Str_21936(k:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean):void
+        public function updatePetBreedingStatus(k:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean):void
         {
             var _local_6:RoomUserData = this.getUserDataByIndex(k);
             if (_local_6 != null)
             {
-                _local_6._Str_2934 = _arg_2;
-                _local_6._Str_3068 = _arg_3;
-                _local_6._Str_2898 = _arg_4;
-                _local_6._Str_2921 = _arg_5;
+                _local_6.canBreed = _arg_2;
+                _local_6.canHarvest = _arg_3;
+                _local_6.canRevive = _arg_4;
+                _local_6.hasBreedingPermission = _arg_5;
             }
         }
 
-        public function _Str_20627(k:int, _arg_2:String):void
+        public function updateCustom(k:int, _arg_2:String):void
         {
             var _local_3:RoomUserData = this.getUserDataByIndex(k);
             if (_local_3 != null)
@@ -171,7 +171,7 @@
             }
         }
 
-        public function _Str_21163(k:int, _arg_2:int):void
+        public function updateAchievementScore(k:int, _arg_2:int):void
         {
             var _local_3:RoomUserData = this.getUserDataByIndex(k);
             if (_local_3 != null)
@@ -180,7 +180,7 @@
             }
         }
 
-        public function _Str_19386(k:int, _arg_2:String):void
+        public function updateNameByIndex(k:int, _arg_2:String):void
         {
             var _local_3:RoomUserData = this.getUserDataByIndex(k);
             if (_local_3 != null)
@@ -191,15 +191,15 @@
 
         public function _Str_8631(k:int):RoomUserData
         {
-            return this._Str_6958(k, _Str_17049);
+            return this._Str_6958(k, TYPE_PET);
         }
 
         public function _Str_17237(k:int):RoomUserData
         {
-            return this._Str_6958(k, _Str_16137);
+            return this._Str_6958(k, TYPE_RENTABLE_BOT);
         }
 
-        public function _Str_17612(k:int):void
+        public function requestPetInfo(k:int):void
         {
             var _local_2:RoomUserData = this._Str_8631(k);
             if (((!(_local_2 == null)) && (!(this._connection == null))))

@@ -62,7 +62,7 @@
                     {
                         return null;
                     }
-                    this._container.friendList.acceptFriendRequest(_local_2._Str_2951);
+                    this._container.friendList.acceptFriendRequest(_local_2.requestId);
                     break;
                 case RoomWidgetFriendRequestMessage.RWFRM_DECLINE:
                     _local_3 = (k as RoomWidgetFriendRequestMessage);
@@ -70,7 +70,7 @@
                     {
                         return null;
                     }
-                    this._container.friendList.declineFriendRequest(_local_3._Str_2951);
+                    this._container.friendList.declineFriendRequest(_local_3.requestId);
                     break;
             }
             return null;
@@ -104,7 +104,7 @@
                         return;
                     }
                     _local_3 = _Str_3549.RWFRUE_SHOW_FRIEND_REQUEST;
-                    _local_2 = new _Str_3549(_local_3, _local_4._Str_2951, _local_4.userId, _local_4.userName);
+                    _local_2 = new _Str_3549(_local_3, _local_4.requestId, _local_4.userId, _local_4.userName);
                     break;
                 case _Str_2948.FRE_ACCEPTED:
                 case _Str_2948.FRE_DECLINED:
@@ -114,7 +114,7 @@
                         return;
                     }
                     _local_3 = _Str_3549.RWFRUE_HIDE_FRIEND_REQUEST;
-                    _local_2 = new _Str_3549(_local_3, _local_5._Str_2951);
+                    _local_2 = new _Str_3549(_local_3, _local_5.requestId);
                     break;
             }
             if (_local_2)

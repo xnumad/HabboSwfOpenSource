@@ -19,11 +19,11 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_8382(this._Str_22270));
-            k.addMessageEvent(new _Str_8241(this._Str_24986));
+            k.addMessageEvent(new _Str_8382(this.onOpenPetPackageRequested));
+            k.addMessageEvent(new _Str_8241(this.onOpenPetPackageResult));
         }
 
-        private function _Str_22270(k:IMessageEvent):void
+        private function onOpenPetPackageRequested(k:IMessageEvent):void
         {
             var _local_2:_Str_7736 = (k as _Str_8382)._Str_2273();
             if (_local_2 == null)
@@ -41,7 +41,7 @@
             }
         }
 
-        private function _Str_24986(k:IMessageEvent):void
+        private function onOpenPetPackageResult(k:IMessageEvent):void
         {
             var _local_2:_Str_8050 = (k as _Str_8241)._Str_2273();
             if (_local_2 == null)

@@ -173,7 +173,7 @@
             return _Str_2470 as RoomToolsWidgetHandler;
         }
 
-        public function _Str_3705(k:String):IWindow
+        public function getIconLocation(k:String):IWindow
         {
             var _local_2:IWindow = this._Str_2617.window.findChildByName(k);
             return _local_2;

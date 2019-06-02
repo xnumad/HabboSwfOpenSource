@@ -7,9 +7,9 @@
 
     public class TalentTrack 
     {
-        public static const _Str_5241:int = 0;
-        public static const _Str_6707:int = 1;
-        public static const _Str_9390:int = 2;
+        public static const STATE_LOCKED:int = 0;
+        public static const STATE_ONGOING:int = 1;
+        public static const STATE_ACHIEVED:int = 2;
 
         private var _name:String;
         private var _currentLevelIndex:int;
@@ -27,7 +27,7 @@
             {
                 _local_4 = new TalentTrackLevel();
                 _local_4.parse(k);
-                if (_local_4.state == _Str_6707)
+                if (_local_4.state == STATE_ONGOING)
                 {
                     this._currentLevelIndex = _local_3;
                 }
@@ -43,7 +43,7 @@
             var _local_2:_Str_2821;
             for each (_local_3 in this._levels)
             {
-                if (_local_3.state != TalentTrack._Str_5241)
+                if (_local_3.state != TalentTrack.STATE_LOCKED)
                 {
                     _local_4 = _local_3._Str_17590(k);
                     if (_local_4 != null)
@@ -65,7 +65,7 @@
             return this._levels;
         }
 
-        public function get _Str_15231():Number
+        public function get progressPerLevel():Number
         {
             if (this._levels.length > 0)
             {
@@ -80,21 +80,21 @@
             if (this._levels.length > 0)
             {
                 k = this._levels[this._currentLevelIndex].levelProgress;
-                return _Str_988._Str_2040(((this._currentLevelIndex * this._Str_15231) + (k * this._Str_15231)));
+                return _Str_988._Str_2040(((this._currentLevelIndex * this.progressPerLevel) + (k * this.progressPerLevel)));
             }
             return 0;
         }
 
-        public function get _Str_26094():Number
+        public function get progressForCurrentLevel():Number
         {
             if (this._levels.length > 0)
             {
-                return this._currentLevelIndex * this._Str_15231;
+                return this._currentLevelIndex * this.progressPerLevel;
             }
             return 0;
         }
 
-        public function _Str_25417():void
+        public function removeFirstLevel():void
         {
             this._levels.shift();
             this._currentLevelIndex = Math.max(0, (this._currentLevelIndex - 1));

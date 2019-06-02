@@ -88,9 +88,9 @@
             this._parentWindow = k;
             this._colorData = _arg_3;
             this._colorGrid = (this._parentWindow.findChildByName(_arg_2) as IItemGridWindow);
-            this._backgroundBitmap = this._Str_4913("color_chooser_bg");
-            this._foregroundBitmap = this._Str_4913("color_chooser_fg");
-            this._selectedColorBitmap = this._Str_4913("color_chooser_selected");
+            this._backgroundBitmap = this.getBitmap("color_chooser_bg");
+            this._foregroundBitmap = this.getBitmap("color_chooser_fg");
+            this._selectedColorBitmap = this.getBitmap("color_chooser_selected");
             for each (_local_4 in this._colorData)
             {
                 _local_5 = (this._manager.getXmlWindow("badge_color_item") as IWindowContainer);
@@ -178,7 +178,7 @@
             return null;
         }
 
-        private function _Str_4913(k:String):BitmapData
+        private function getBitmap(k:String):BitmapData
         {
             var _local_3:BitmapData;
             var _local_2:BitmapDataAsset = (this._manager.assets.getAssetByName(k) as BitmapDataAsset);

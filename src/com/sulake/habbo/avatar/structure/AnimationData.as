@@ -42,14 +42,14 @@
             return true;
         }
 
-        public function _Str_2244(k:IActionDefinition):AnimationAction
+        public function getAction(k:IActionDefinition):AnimationAction
         {
             return this._actions[k.id];
         }
 
-        public function _Str_1408(k:IActionDefinition):int
+        public function getFrameCount(k:IActionDefinition):int
         {
-            var _local_2:AnimationAction = this._Str_2244(k);
+            var _local_2:AnimationAction = this.getAction(k);
             if (!_local_2)
             {
                 return 0;

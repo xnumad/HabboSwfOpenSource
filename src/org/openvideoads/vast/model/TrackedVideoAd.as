@@ -8,7 +8,7 @@
 
     public class TrackedVideoAd extends Debuggable 
     {
-        protected var _Str_576:String;
+        protected var _id:String;
         protected var _Str_9867:String;
         protected var _Str_3053:Array;
         protected var _Str_3772:Array;
@@ -16,7 +16,7 @@
         protected var _Str_9886:Array;
         protected var _Str_4662:Array;
         protected var _Str_4070:VideoAd = null;
-        protected var _Str_842:Boolean = false;
+        protected var _scale:Boolean = false;
         protected var _Str_6419:Boolean = false;
         protected var _Str_6407:int = -1;
         protected var _index:int = -1;
@@ -68,12 +68,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set uid(k:String):void
@@ -113,12 +113,12 @@
 
         public function set scale(k:*):void
         {
-            this._Str_842 = StringUtils._Str_2810(k);
+            this._scale = StringUtils._Str_2810(k);
         }
 
         public function get scale():Boolean
         {
-            return this._Str_842;
+            return this._scale;
         }
 
         public function set maintainAspectRatio(k:*):void
@@ -417,11 +417,11 @@
             {
                 _local_2 = k;
             }
-            _local_2.id = this._Str_576;
+            _local_2.id = this._id;
             _local_2.uid = _Str_2995;
             _local_2._Str_18431 = this._Str_9867;
             _local_2.parentAdContainer = this._Str_4070;
-            _local_2.scale = this._Str_842;
+            _local_2.scale = this._scale;
             _local_2.maintainAspectRatio = this._Str_6419;
             _local_2.recommendedMinDuration = this._Str_6407;
             _local_2.index = this._index;
@@ -450,13 +450,13 @@
             var k:Object = new Object();
             k = {
                 "adId":this._Str_9867,
-                "id":this._Str_576,
+                "id":this._id,
                 "uid":_Str_2995,
                 "trackingEvents":ArrayUtils._Str_6975(this._Str_3053),
                 "clickThroughs":ArrayUtils._Str_6975(this._Str_3772),
                 "clickTracking":ArrayUtils._Str_6975(this._Str_4684),
                 "customClicks":ArrayUtils._Str_6975(this._Str_4662),
-                "scale":this._Str_842,
+                "scale":this._scale,
                 "maintainAspectRatio":this._Str_6419,
                 "recommendedMinDuration":this._Str_6407,
                 "index":this._index,

@@ -17,22 +17,22 @@
             this._Str_6967 = this._Str_2914;
         }
 
-        public function get _Str_2951():int
+        public function get requestId():int
         {
             return this._Str_2914;
         }
 
-        public function get _Str_6445():String
+        public function get requesterName():String
         {
             return this._Str_6234;
         }
 
-        public function get _Str_7048():int
+        public function get requesterUserId():int
         {
             return this._Str_6967;
         }
 
-        public function get _Str_4217():String
+        public function get figureString():String
         {
             return this._Str_3704;
         }

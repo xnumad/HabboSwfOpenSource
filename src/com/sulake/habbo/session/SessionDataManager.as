@@ -172,7 +172,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_4150(this._Str_10148));
+                this._communicationManager.addHabboConnectionMessageEvent(new _Str_4150(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_9281(this._Str_23236));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
@@ -264,11 +264,11 @@
                 {
                     _local_2 = k.lastIndexOf("/");
                     _local_3 = k.substring(0, _local_2);
-                    this._furnitureParser._Str_12194(((_local_3 + "/") + this._Str_8546));
+                    this._furnitureParser.loadData(((_local_3 + "/") + this._Str_8546));
                 }
                 else
                 {
-                    this._furnitureParser._Str_12194(k);
+                    this._furnitureParser.loadData(k);
                 }
             }
         }
@@ -304,8 +304,8 @@
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             this._clubLevel = _local_2.clubLevel;
-            this._Str_8385 = _local_2._Str_6124;
-            this._Str_16966 = Math.max(this._Str_16966, _local_2._Str_6124);
+            this._Str_8385 = _local_2.securityLevel;
+            this._Str_16966 = Math.max(this._Str_16966, _local_2.securityLevel);
             this._Str_4890 = _local_2._Str_4050;
         }
 
@@ -332,7 +332,7 @@
             this._realName = _local_3.realName;
             this._Str_7394 = _local_3._Str_11198;
             this._Str_9602 = _local_3._Str_21338;
-            this._ignoredUsersManager._Str_25475();
+            this._ignoredUsersManager.initIgnoreList();
         }
 
         private function _Str_5174(k:IMessageEvent):void
@@ -361,7 +361,7 @@
             HabboWebTools.updateFigure(this._figure);
         }
 
-        private function _Str_10148(k:IMessageEvent):void
+        private function onUserNameChange(k:IMessageEvent):void
         {
             var _local_2:_Str_4150 = (k as _Str_4150);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -390,8 +390,8 @@
         private function _Str_23478(k:_Str_9310):void
         {
             var _local_2:_Str_7765 = k._Str_2273();
-            this._Str_18582 = _local_2._Str_18286;
-            this._Str_18348 = _local_2._Str_17811;
+            this._Str_18582 = _local_2.boxColor;
+            this._Str_18348 = _local_2.keyColor;
             events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._Str_18582, this._Str_18348));
         }
 
@@ -596,17 +596,17 @@
 
         public function _Str_20021(k:String):BitmapData
         {
-            return this._badgeImageManager._Str_19714(k);
+            return this._badgeImageManager.getSmallBadgeImage(k);
         }
 
-        public function _Str_5831(k:String):String
+        public function getBadgeImageAssetName(k:String):String
         {
-            return this._badgeImageManager._Str_5831(k);
+            return this._badgeImageManager.getBadgeImageAssetName(k);
         }
 
         public function _Str_19992(k:String):String
         {
-            return this._badgeImageManager._Str_19435(k);
+            return this._badgeImageManager.getSmallScaleBadgeAssetName(k);
         }
 
         public function _Str_18459(k:String):BitmapData
@@ -614,9 +614,9 @@
             return this._badgeImageManager.getBadgeImage(k, BadgeImageManager.NORMAL_BADGE, false);
         }
 
-        public function _Str_15979(k:String):BadgeInfo
+        public function getBadgeImageWithInfo(k:String):BadgeInfo
         {
-            return this._badgeImageManager._Str_15979(k);
+            return this._badgeImageManager.getBadgeImageWithInfo(k);
         }
 
         private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
@@ -626,7 +626,7 @@
 
         public function _Str_17173(k:int):String
         {
-            return this._habboGroupInfoManager._Str_17775(k);
+            return this._habboGroupInfoManager.getBadgeId(k);
         }
 
         public function send(k:IMessageComposer):void
@@ -641,20 +641,20 @@
 
         public function _Str_17218(k:String):BitmapData
         {
-            return this._badgeImageManager._Str_19714(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager.getSmallBadgeImage(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_15583(k:String):String
         {
-            return this._badgeImageManager._Str_5831(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager.getBadgeImageAssetName(k, BadgeImageManager.GROUP_BADGE);
         }
 
         public function _Str_19687(k:String):String
         {
-            return this._badgeImageManager._Str_19435(k, BadgeImageManager.GROUP_BADGE);
+            return this._badgeImageManager.getSmallScaleBadgeAssetName(k, BadgeImageManager.GROUP_BADGE);
         }
 
-        public function _Str_4701():Boolean
+        public function isAccountSafetyLocked():Boolean
         {
             return this._Str_9602;
         }
@@ -664,19 +664,19 @@
             return this._communicationManager;
         }
 
-        public function _Str_3655(k:String):Boolean
+        public function isIgnored(k:String):Boolean
         {
-            return this._ignoredUsersManager._Str_3655(k);
+            return this._ignoredUsersManager.isIgnored(k);
         }
 
-        public function _Str_10249(k:String):void
+        public function ignoreUser(k:String):void
         {
-            this._ignoredUsersManager._Str_10249(k);
+            this._ignoredUsersManager.ignoreUser(k);
         }
 
-        public function _Str_14353(k:String):void
+        public function unignoreUser(k:String):void
         {
-            this._ignoredUsersManager._Str_14353(k);
+            this._ignoredUsersManager.unignoreUser(k);
         }
 
         public function get _Str_3577():int
@@ -747,7 +747,7 @@
             return _local_2;
         }
 
-        public function _Str_4531(k:int):IFurnitureData
+        public function getWallItemData(k:int):IFurnitureData
         {
             if (this._Str_3347 == null)
             {
@@ -783,7 +783,7 @@
             if (((!(_local_3 == null)) && (_arg_2 <= (_local_3.length - 1))))
             {
                 _local_4 = _local_3[_arg_2];
-                return this._Str_4531(_local_4);
+                return this.getWallItemData(_local_4);
             }
             return null;
         }
@@ -818,7 +818,7 @@
             {
                 return;
             }
-            if ((((session._Str_2781) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -842,7 +842,7 @@
             {
                 return;
             }
-            if ((((session._Str_2781) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.eject_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -866,7 +866,7 @@
             {
                 return;
             }
-            if (((_local_2._Str_2781) || (this._Str_2799)))
+            if (((_local_2.isRoomController) || (this._Str_2799)))
             {
                 this.sendSpecialCommandMessage(":ejectpets");
             }
@@ -883,7 +883,7 @@
             {
                 return;
             }
-            if ((((session._Str_2781) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all_bc}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -913,7 +913,7 @@
         {
             if (this._Str_7186)
             {
-                k._Str_6674();
+                k.productDataReady();
                 return;
             }
             if (((k) && (this._Str_8233.indexOf(k) == -1)))
@@ -931,7 +931,7 @@
             {
                 if (((!(_local_2 == null)) && (!(_local_2.disposed))))
                 {
-                    _local_2._Str_6674();
+                    _local_2.productDataReady();
                 }
             }
             this._Str_8233 = [];
@@ -1075,7 +1075,7 @@
 
         public function get _Str_22295():Boolean
         {
-            return (!(this._perkManager == null)) && (this._perkManager._Str_992);
+            return (!(this._perkManager == null)) && (this._perkManager.isReady);
         }
 
         public function isPerkAllowed(k:String):Boolean
@@ -1083,9 +1083,9 @@
             return this._perkManager.isPerkAllowed(k);
         }
 
-        public function _Str_15321(k:String):String
+        public function getPerkErrorMessage(k:String):String
         {
-            return this._perkManager._Str_15321(k);
+            return this._perkManager.getPerkErrorMessage(k);
         }
 
         public function get currentTalentTrack():String

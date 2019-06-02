@@ -22,7 +22,7 @@
             }
             if (this._inventoryId == 0)
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15827, _Str_2686);
+                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15827, furnitureData);
                 return;
             }
             if (_Str_2268.inSecretRecipeMode)
@@ -35,7 +35,7 @@
         {
             if (this._inventoryId != 0)
             {
-                _Str_594.returnItemToInventory(this._inventoryId);
+                _data.returnItemToInventory(this._inventoryId);
             }
             this.dispose();
         }

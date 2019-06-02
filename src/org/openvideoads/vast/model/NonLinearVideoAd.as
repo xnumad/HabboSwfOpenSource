@@ -8,7 +8,7 @@
 
     public class NonLinearVideoAd extends TrackedVideoAd 
     {
-        protected var _Str_1720:int = -1;
+        protected var _width:int = -1;
         protected var _height:int = -1;
         protected var _Str_5165:int = -1;
         protected var _Str_5160:int = -1;
@@ -67,22 +67,22 @@
         {
             if (typeof(k) == "string")
             {
-                this._Str_1720 = parseInt(k);
+                this._width = parseInt(k);
             }
             else
             {
-                this._Str_1720 = k;
+                this._width = k;
             }
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function _Str_17410():Boolean
         {
-            return this._Str_1720 > -1;
+            return this._width > -1;
         }
 
         public function set height(k:*):void
@@ -522,7 +522,7 @@
             {
                 return _arg_2 == this._height;
             }
-            if (k == this._Str_1720)
+            if (k == this._width)
             {
                 return _arg_2 == this._height;
             }
@@ -560,13 +560,13 @@
                     {
                         return 0;
                     }
-                    if (((this._height > _arg_2) || (this._Str_1720 > k)))
+                    if (((this._height > _arg_2) || (this._width > k)))
                     {
                         return -1;
                     }
-                    if (this._Str_1720 > 0)
+                    if (this._width > 0)
                     {
-                        return k - this._Str_1720;
+                        return k - this._width;
                     }
                     return -1;
                 }
@@ -709,7 +709,7 @@
             {
                 _local_2 = k;
             }
-            _local_2.width = this._Str_1720;
+            _local_2.width = this._width;
             _local_2.height = this._height;
             _local_2.expandedWidth = this._Str_5165;
             _local_2.expandedHeight = this._Str_5160;
@@ -719,7 +719,7 @@
             _local_2.apiFramework = this._Str_4949;
             _local_2.url = this._Str_577;
             _local_2.codeBlock = this._Str_3366;
-            _local_2.scale = _Str_842;
+            _local_2.scale = _scale;
             _local_2._Str_21348(this._Str_5280);
             return super.clone(_local_2);
         }
@@ -727,11 +727,11 @@
         override public function toJSObject():Object
         {
             var k:Object = super.toJSObject();
-            k.width = this._Str_1720;
+            k.width = this._width;
             k.height = this._height;
             k.expandedWidth = this._Str_5165;
             k.expandedHeight = this._Str_5160;
-            k.scale = _Str_842;
+            k.scale = _scale;
             k.resourceType = this._Str_3532;
             k.creativeType = this._Str_4009;
             k.apiFramework = this._Str_4949;

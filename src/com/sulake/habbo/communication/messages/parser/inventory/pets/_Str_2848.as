@@ -42,17 +42,17 @@
             return this._figureData.color;
         }
 
-        public function get _Str_3343():int
+        public function get breedId():int
         {
-            return this._figureData._Str_3343;
+            return this._figureData.breedId;
         }
 
-        public function get _Str_13619():int
+        public function get customPartCount():int
         {
-            return this._figureData._Str_13619;
+            return this._figureData.customPartCount;
         }
 
-        public function get _Str_4217():String
+        public function get figureString():String
         {
             return this._figureData.figuredata;
         }

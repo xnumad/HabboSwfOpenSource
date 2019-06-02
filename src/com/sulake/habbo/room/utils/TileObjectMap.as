@@ -2,7 +2,7 @@
 {
     import __AS3__.vec.Vector;
     import com.sulake.room.object.IRoomObject;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import __AS3__.vec.*;
 
@@ -46,7 +46,7 @@
             this.clear();
             for each (_local_2 in k)
             {
-                this._Str_21192(_local_2);
+                this.addRoomObject(_local_2);
             }
         }
 
@@ -57,7 +57,7 @@
             this._height = 0;
         }
 
-        public function _Str_19056(k:int, _arg_2:int):IRoomObject
+        public function getObjectInTile(k:int, _arg_2:int):IRoomObject
         {
             if (((((k >= 0) && (k < this._width)) && (_arg_2 >= 0)) && (_arg_2 < this._height)))
             {
@@ -66,7 +66,7 @@
             return null;
         }
 
-        public function _Str_23932(k:int, _arg_2:int, _arg_3:IRoomObject):void
+        public function setObjectInTile(k:int, _arg_2:int, _arg_3:IRoomObject):void
         {
             if (!_arg_3.isInitialized())
             {
@@ -79,7 +79,7 @@
             }
         }
 
-        public function _Str_21192(k:IRoomObject):void
+        public function addRoomObject(k:IRoomObject):void
         {
             var _local_8:IRoomObject;
             var _local_10:int;
@@ -87,12 +87,12 @@
             {
                 return;
             }
-            var _local_2:IVector3D = k.getLocation();
+            var _local_2:IVector3d = k.getLocation();
             if (_local_2 == null)
             {
                 return;
             }
-            var _local_3:IVector3D = k.getDirection();
+            var _local_3:IVector3d = k.getDirection();
             if (_local_3 == null)
             {
                 return;
@@ -121,10 +121,10 @@
                 _local_10 = _local_2.x;
                 while (_local_10 < (_local_2.x + _local_4))
                 {
-                    _local_8 = this._Str_19056(_local_10, _local_9);
+                    _local_8 = this.getObjectInTile(_local_10, _local_9);
                     if (((!(_local_8)) || ((!(_local_8 == k)) && (_local_8.getLocation().z <= _local_2.z))))
                     {
-                        this._Str_23932(_local_10, _local_9, k);
+                        this.setObjectInTile(_local_10, _local_9, k);
                     }
                     _local_10++;
                 }

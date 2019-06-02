@@ -13,7 +13,7 @@
         protected var _Str_5185:String = null;
         protected var _Str_8143:Object = null;
         protected var _Str_5787:VideoAdServingTemplate;
-        protected var _Str_576:String = null;
+        protected var _id:String = null;
         protected var _Str_6606:String = null;
         protected var _Str_25531:Array;
         protected var _Str_3421:Array;
@@ -301,12 +301,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = this.id;
+            this._id = this.id;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set adSystem(k:String):void

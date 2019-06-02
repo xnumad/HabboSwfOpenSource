@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.room.object
 {
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomPlaneBitmapMaskData 
     {
@@ -12,19 +12,19 @@
         private var _type:String = null;
         private var _category:String = null;
 
-        public function RoomPlaneBitmapMaskData(type:String, loc:IVector3D, category:String)
+        public function RoomPlaneBitmapMaskData(type:String, loc:IVector3d, category:String)
         {
             this.type = type;
             this.loc = loc;
             this.category = category;
         }
 
-        public function get loc():IVector3D
+        public function get loc():IVector3d
         {
             return this._loc;
         }
 
-        public function set loc(k:IVector3D):void
+        public function set loc(k:IVector3d):void
         {
             if (this._loc == null)
             {

@@ -56,12 +56,12 @@
             this._clubPeriods = k;
         }
 
-        public function get _Str_13571():Boolean
+        public function get hasClubLeft():Boolean
         {
             return (this._clubDays > 0) || (this._clubPeriods > 0);
         }
 
-        public function get _Str_3738():Boolean
+        public function get isVIP():Boolean
         {
             return this._isVIP;
         }
@@ -76,28 +76,28 @@
             this._isExpiring = k;
         }
 
-        public function set _Str_3738(k:Boolean):void
+        public function set isVIP(k:Boolean):void
         {
             this._isVIP = k;
         }
 
-        public function get _Str_6288():int
+        public function get pastClubDays():int
         {
             return this._pastClubDays;
         }
 
-        public function set _Str_6288(k:int):void
+        public function set pastClubDays(k:int):void
         {
             this._lastUpdated = getTimer();
             this._pastClubDays = k;
         }
 
-        public function get _Str_4605():int
+        public function get pastVipDays():int
         {
             return this._pastVipDays;
         }
 
-        public function set _Str_4605(k:int):void
+        public function set pastVipDays(k:int):void
         {
             this._lastUpdated = getTimer();
             this._pastVipDays = k;
@@ -114,18 +114,18 @@
             this._activityPoints = k;
         }
 
-        public function _Str_5590(k:int):int
+        public function getActivityPointsForType(k:int):int
         {
             return this._activityPoints[k];
         }
 
-        public function set _Str_4458(k:int):void
+        public function set minutesUntilExpiration(k:int):void
         {
             this._lastUpdated = getTimer();
             this._minutesUntilExpiration = k;
         }
 
-        public function get _Str_4458():int
+        public function get minutesUntilExpiration():int
         {
             var k:int = ((getTimer() - this._lastUpdated) / (1000 * 60));
             var _local_2:int = (this._minutesUntilExpiration - k);

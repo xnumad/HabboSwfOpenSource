@@ -39,7 +39,7 @@
             this._pages = _arg_2;
             if (this._pages)
             {
-                this._pageTemplate = (this._pages._Str_2915(0) as IRegionWindow);
+                this._pageTemplate = (this._pages.removeListItemAt(0) as IRegionWindow);
             }
         }
 
@@ -211,7 +211,7 @@
                 {
                     _local_2.removeEventListener(WindowMouseEvent.CLICK, this._Str_12810);
                 }
-                this._pages._Str_2724();
+                this._pages.destroyListItems();
                 _local_3 = 0;
                 while (_local_3 < k)
                 {

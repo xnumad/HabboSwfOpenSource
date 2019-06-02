@@ -18,7 +18,7 @@
             var _local_2:int = 1;
             while (_local_2 <= _Str_17361)
             {
-                this._questEngine.windowManager._Str_7720.retrieveAsset(_Str_15489(_local_2), null);
+                this._questEngine.windowManager.resourceManager.retrieveAsset(_Str_15489(_local_2), null);
                 _local_2++;
             }
         }

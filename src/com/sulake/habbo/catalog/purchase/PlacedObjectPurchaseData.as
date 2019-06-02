@@ -48,10 +48,10 @@
         private function _Str_25851(k:IPurchasableOffer):void
         {
             this._offerId = k.offerId;
-            this._productClassId = k.product._Str_2941;
-            this._productData = k.product._Str_8554;
-            this._furniData = k.product._Str_2686;
-            this._extraParameter = k.product._Str_2415;
+            this._productClassId = k.product.productClassId;
+            this._productData = k.product.productData;
+            this._furniData = k.product.furnitureData;
+            this._extraParameter = k.product.extraParam;
         }
 
         public function toString():String
@@ -99,7 +99,7 @@
             return this._offerId;
         }
 
-        public function get _Str_2941():int
+        public function get productClassId():int
         {
             return this._productClassId;
         }

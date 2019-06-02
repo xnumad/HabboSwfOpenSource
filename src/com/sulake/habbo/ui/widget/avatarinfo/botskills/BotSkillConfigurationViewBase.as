@@ -100,7 +100,7 @@
 
         private function _Str_22412(k:BotCommandConfigurationEvent):void
         {
-            if (((k._Str_2273()._Str_5455 == this._Str_2753) && (k._Str_2273()._Str_18899 == this.skillType)))
+            if (((k._Str_2273()._Str_5455 == this._Str_2753) && (k._Str_2273().commandId == this.skillType)))
             {
                 this.parseConfiguration(k._Str_2273().data);
             }

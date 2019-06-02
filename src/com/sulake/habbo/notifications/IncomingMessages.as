@@ -79,7 +79,7 @@
             this._notifications = k;
             this._communication = _arg_2;
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_4953(this._Str_16544));
+            this.addMessageEvent(new _Str_4953(this.onRespectNotification));
             this.addMessageEvent(new _Str_8665(this._Str_24393));
             this.addMessageEvent(new _Str_3660(this._Str_11598));
             this.addMessageEvent(new _Str_8414(this._Str_24449));
@@ -88,7 +88,7 @@
             this.addMessageEvent(new _Str_9354(this._Str_22529));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
-            this.addMessageEvent(new _Str_5714(this._Str_3012));
+            this.addMessageEvent(new _Str_5714(this.onCreditBalance));
             this.addMessageEvent(new _Str_7321(this._Str_24670));
             this.addMessageEvent(new _Str_4691(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
@@ -103,7 +103,7 @@
             this.addMessageEvent(new _Str_8670(this._Str_24546));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
             this.addMessageEvent(new PetScratchFailedEvent(this._Str_18116));
-            this.addMessageEvent(new _Str_2752(this._Str_3012));
+            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this._Str_23488));
 			this.addMessageEvent(new SimpleAlertMessageParser(this.alertMessageHandler));
             this._notifications.activate();
@@ -174,7 +174,7 @@
             this._notifications._Str_3069._Str_2822(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
         }
 
-        internal function _Str_16544(k:IMessageEvent):void
+        internal function onRespectNotification(k:IMessageEvent):void
         {
             var _local_3:ILocalization;
             var _local_4:ILocalization;
@@ -351,7 +351,7 @@
             if (_local_3)
             {
                 _local_4 = _local_2.figureData;
-                _local_5 = this._notifications._Str_21924._Str_2641(_local_4.typeId, _local_4.paletteId, _local_4.color);
+                _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
                 this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
@@ -377,12 +377,12 @@
             if (_local_3)
             {
                 _local_4 = _local_2.pet;
-                _local_5 = this._notifications._Str_21924._Str_2641(_local_4.typeId, _local_4.paletteId, _local_4.color);
+                _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
                 this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             this._notifications._Str_3069._Str_21530();
         }
@@ -488,7 +488,7 @@
                 return;
             }
             var _local_5:String = this._notifications.localization.getLocalization("notifications.text.club_gift.received");
-            var _local_6:BitmapData = this._notifications._Str_24642._Str_23662(_local_4._Str_2588, _local_4._Str_6164, _local_4._Str_2415);
+            var _local_6:BitmapData = this._notifications._Str_24642._Str_23662(_local_4.productType, _local_4._Str_6164, _local_4.extraParam);
             this._notifications._Str_3069._Str_2822(_local_5, NotificationType.INFO, _local_6);
         }
 
@@ -502,7 +502,7 @@
             }
             switch (k.type)
             {
-                case ActivityPointTypeEnum._Str_7340:
+                case ActivityPointTypeEnum.LOYALTY:
                     _local_2 = this._notifications.localization.getLocalizationWithParams("notifications.text.loyalty.received", "", "amount", k.change);
                     _local_3 = (this._notifications.assets.getAssetByName("if_icon_diamond_png").content as BitmapData);
                     break;

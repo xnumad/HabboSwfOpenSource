@@ -409,11 +409,11 @@
                     this._Str_16586();
                     return;
                 case "check_name_button":
-                    this._controller.checkName(this._Str_4290());
+                    this._controller.checkName(this.getName());
                     this._Str_13481();
                     return;
                 case "select_name_button":
-                    _local_5 = this._Str_4290();
+                    _local_5 = this.getName();
                     if (_local_5.length < 1)
                     {
                         return;
@@ -444,7 +444,7 @@
             }
         }
 
-        private function _Str_4290():String
+        private function getName():String
         {
             var k:ITextFieldWindow;
             if (this._window)

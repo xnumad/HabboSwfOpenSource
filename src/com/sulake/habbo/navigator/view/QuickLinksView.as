@@ -42,7 +42,7 @@
         {
             var _local_3:IRegionWindow;
             var _local_4:ITextWindow;
-            this._itemList._Str_2659();
+            this._itemList.removeListItems();
             this._linkSearches = [];
             this._searchIds = [];
             var _local_2:int;

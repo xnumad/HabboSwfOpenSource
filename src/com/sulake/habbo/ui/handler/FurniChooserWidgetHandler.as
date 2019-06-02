@@ -133,7 +133,7 @@
                     else
                     {
                         _local_4 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                        _local_5 = this._container.sessionDataManager._Str_4531(_local_4);
+                        _local_5 = this._container.sessionDataManager.getWallItemData(_local_4);
                         if (((!(_local_5 == null)) && (_local_5.localizedName.length > 0)))
                         {
                             _local_6 = _local_5.localizedName;

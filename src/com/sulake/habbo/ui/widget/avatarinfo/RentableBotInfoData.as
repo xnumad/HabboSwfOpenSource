@@ -26,7 +26,7 @@
             this._id = k;
         }
 
-        public function set _Str_2707(k:int):void
+        public function set roomIndex(k:int):void
         {
             this._roomIndex = k;
         }
@@ -36,12 +36,12 @@
             return this._id;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._roomIndex;
         }
 
-        public function get _Str_3655():Boolean
+        public function get isIgnored():Boolean
         {
             return this._isIgnored;
         }
@@ -61,7 +61,7 @@
             return this._carryItemType;
         }
 
-        public function set _Str_3655(k:Boolean):void
+        public function set isIgnored(k:Boolean):void
         {
             this._isIgnored = k;
         }
@@ -113,7 +113,7 @@
                 this._botSkillsWithCommands = new Array(0);
             }
             this.id = k._Str_2394;
-            this._Str_2707 = k._Str_3313;
+            this.roomIndex = k._Str_3313;
             this._Str_3246 = k._Str_3246;
             this._Str_3529 = k._Str_3529;
             this._Str_8826 = k._Str_3249;

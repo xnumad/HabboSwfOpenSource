@@ -9,7 +9,7 @@
             this._guideStatus = k;
         }
 
-        public function get _Str_24181():int
+        public function get guideStatus():int
         {
             return this._guideStatus;
         }

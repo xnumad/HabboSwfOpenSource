@@ -218,7 +218,7 @@
             }
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (this._window) && (this._window.visible);
         }
@@ -289,15 +289,15 @@
 
         private function disable(k:int):void
         {
-            this._window._Str_8181(false, [SAVE_BUTTON]);
-            this._window._Str_8181(true, [DISABLED_REASON]);
+            this._window.setVisibleChildren(false, [SAVE_BUTTON]);
+            this._window.setVisibleChildren(true, [DISABLED_REASON]);
             this._window.findChildByName(DISABLED_REASON).caption = (("${resolution.disabled." + k) + "}");
         }
 
         public function enable():void
         {
-            this._window._Str_8181(true, [SAVE_BUTTON]);
-            this._window._Str_8181(false, [DISABLED_REASON]);
+            this._window.setVisibleChildren(true, [SAVE_BUTTON]);
+            this._window.setVisibleChildren(false, [DISABLED_REASON]);
         }
 
         private function _Str_25036(k:WindowEvent, _arg_2:IWindow):void

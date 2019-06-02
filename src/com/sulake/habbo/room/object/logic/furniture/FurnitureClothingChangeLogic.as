@@ -28,7 +28,7 @@
                 return;
             }
             var _local_2:String = object.getModel().getString(RoomObjectVariableEnum.FURNITURE_DATA);
-            this._Str_21347(_local_2);
+            this.updateClothingData(_local_2);
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
@@ -41,12 +41,12 @@
                 _local_3 = _local_2.data;
                 if (_local_3 != null)
                 {
-                    this._Str_21347(_local_3.getLegacyString());
+                    this.updateClothingData(_local_3.getLegacyString());
                 }
             }
         }
 
-        private function _Str_21347(k:String):void
+        private function updateClothingData(k:String):void
         {
             var _local_2:Array;
             if (((!(k == null)) && (k.length > 0)))

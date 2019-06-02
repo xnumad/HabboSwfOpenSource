@@ -5,7 +5,7 @@
 
     public class _Str_7700 implements IMessageParser 
     {
-        private var _Str_594:IMessageDataWrapper;
+        private var _data:IMessageDataWrapper;
         private var _Str_3431:int;
         private var _x:int;
         private var _y:int;
@@ -19,9 +19,9 @@
                 return false;
             }
             this._Str_3431--;
-            this._x = this._Str_594.readByte();
-            this._y = this._Str_594.readByte();
-            this._Str_2196 = this._Str_594.readShort();
+            this._x = this._data.readByte();
+            this._y = this._data.readByte();
+            this._Str_2196 = this._data.readShort();
             return true;
         }
 
@@ -37,23 +37,23 @@
 
         public function get _Str_9852():Number
         {
-            return HeightMapMessageParser._Str_15973(this._Str_2196);
+            return HeightMapMessageParser.decodeTileHeight(this._Str_2196);
         }
 
         public function get window3():Boolean
         {
-            return HeightMapMessageParser._Str_16359(this._Str_2196);
+            return HeightMapMessageParser.decodeIsStackingBlocked(this._Str_2196);
         }
 
         public function get _Str_10375():Boolean
         {
-            return HeightMapMessageParser._Str_18699(this._Str_2196);
+            return HeightMapMessageParser.decodeIsRoomTile(this._Str_2196);
         }
 
         public function flush():Boolean
         {
             this._Str_3431 = 0;
-            this._Str_594 = null;
+            this._data = null;
             return true;
         }
 
@@ -63,7 +63,7 @@
             {
                 return false;
             }
-            this._Str_594 = k;
+            this._data = k;
             this._Str_3431 = k.readByte();
             return true;
         }

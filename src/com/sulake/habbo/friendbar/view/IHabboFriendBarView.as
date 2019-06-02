@@ -19,6 +19,6 @@
         function _Str_25574(_arg_1:Boolean):void;
         function removeMessengerNotifications():void;
         function get _Str_20387():int;
-        function _Str_3705(_arg_1:String):IWindowContainer;
+        function getIconLocation(_arg_1:String):IWindowContainer;
     }
 }

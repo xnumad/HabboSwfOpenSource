@@ -251,7 +251,7 @@
             this.refresh();
         }
 
-        public function _Str_2205():void
+        public function unselect():void
         {
             this._Str_1055 = false;
             this._Str_1007 = false;

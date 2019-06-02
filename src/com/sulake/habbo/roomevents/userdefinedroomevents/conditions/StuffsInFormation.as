@@ -34,7 +34,7 @@
         {
             var _local_2:Array = new Array();
             _local_2.push(int(this._slider.getValue()));
-            _local_2.push(this._Str_21596(k)._Str_2657().id);
+            _local_2.push(this._Str_21596(k).getSelected().id);
             return _local_2;
         }
 
@@ -52,7 +52,7 @@
         {
             this._slider._Str_2526(_arg_2.intData[0]);
             var _local_3:int = _arg_2.intData[1];
-            this._Str_21596(k)._Str_2520(this._Str_24795(k, _local_3));
+            this._Str_21596(k).setSelected(this._Str_24795(k, _local_3));
         }
 
         override public function get hasSpecialInputs():Boolean

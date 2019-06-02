@@ -35,9 +35,9 @@
             super(_arg_3);
             for each (_local_5 in _arg_2)
             {
-                if (_local_5._Str_2588 != ProductTypeEnum.BADGE)
+                if (_local_5.productType != ProductTypeEnum.BADGE)
                 {
-                    _local_4 = _local_5._Str_2415;
+                    _local_4 = _local_5.extraParam;
                     break;
                 }
             }
@@ -114,7 +114,7 @@
                     while (_local_2 < 2)
                     {
                         _local_3 = this._Str_2324.productContainer.products[_local_2];
-                        if (((_local_3._Str_2588 == ProductTypeEnum.EFFECT) && (_local_3._Str_2941 == Product._Str_10915)))
+                        if (((_local_3.productType == ProductTypeEnum.EFFECT) && (_local_3.productClassId == Product._Str_10915)))
                         {
                             this._Str_20490("catalog_icon_ninja_effect_included");
                         }
@@ -183,9 +183,9 @@
             {
                 for each (_local_2 in this.products)
                 {
-                    if (((_local_2._Str_2588 == ProductTypeEnum.ROBOT) && (_local_2._Str_2415 == k)))
+                    if (((_local_2.productType == ProductTypeEnum.ROBOT) && (_local_2.extraParam == k)))
                     {
-                        setIconImage(_Str_12672(_local_2._Str_2415, this), true);
+                        setIconImage(_Str_12672(_local_2.extraParam, this), true);
                         return;
                     }
                 }

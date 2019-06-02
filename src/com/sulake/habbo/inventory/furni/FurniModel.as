@@ -337,7 +337,7 @@
                 }
             }
             var _local_8:String = "center";
-            var _local_9:String = this._roomEngine._Str_14972(k);
+            var _local_9:String = this._roomEngine.getFurnitureType(k);
             if (this._bottomAlignedFurniture.indexOf(_local_9) > -1)
             {
                 _local_8 = "bottom";
@@ -368,7 +368,7 @@
 
         public function _Str_5913(k:String):void
         {
-            if (this._controller._Str_2719)
+            if (this._controller.isVisible)
             {
                 Logger.log(("FurniMode.categorySwitch: " + k));
                 switch (k)
@@ -393,7 +393,7 @@
 
         public function _Str_5100():void
         {
-            if (this._view._Str_2719)
+            if (this._view.isVisible)
             {
                 this._Str_4409();
             }
@@ -692,7 +692,7 @@
         {
             if (this._itemIdInFurniPlacing > -1)
             {
-                this._roomEngine._Str_8675();
+                this._roomEngine.cancelRoomObjectInsert();
                 this._isObjectMoverRequested = false;
                 this._itemIdInFurniPlacing = -1;
             }
@@ -886,7 +886,7 @@
             this._controller._Str_13252();
         }
 
-        public function _Str_11714():void
+        public function showUseProductSelection():void
         {
             var _local_2:IFurnitureItem;
             var k:GroupItem = this._Str_3968();
@@ -895,7 +895,7 @@
                 _local_2 = k._Str_3205();
                 if (_local_2)
                 {
-                    this._roomEngine._Str_11714(_local_2.ref, _local_2.type);
+                    this._roomEngine.showUseProductSelection(_local_2.ref, _local_2.type);
                 }
             }
         }
@@ -1038,7 +1038,7 @@
             this._furniData.push(k);
         }
 
-        private function _Str_3757(k:GroupItem):void
+        private function removeItem(k:GroupItem):void
         {
             var _local_2:int = this._furniData.indexOf(k);
             if (_local_2 > -1)
@@ -1049,7 +1049,7 @@
 
         private function _Str_21263(k:GroupItem):void
         {
-            this._Str_3757(k);
+            this.removeItem(k);
             this._Str_18724(k);
         }
 
@@ -1242,11 +1242,11 @@
             }
             if (((k.category == FurniCategory._Str_5186) || (this._Str_22524(k))))
             {
-                _local_3 = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
+                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
             }
             else
             {
-                _local_3 = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k._Str_2794.toString(), k.stuffData);
+                _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k._Str_2794.toString(), k.stuffData);
             }
             if (_local_3)
             {

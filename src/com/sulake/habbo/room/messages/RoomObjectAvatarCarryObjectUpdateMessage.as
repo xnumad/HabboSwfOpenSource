@@ -16,7 +16,7 @@
             return this._itemType;
         }
 
-        public function get _Str_20736():String
+        public function get itemName():String
         {
             return this._itemName;
         }

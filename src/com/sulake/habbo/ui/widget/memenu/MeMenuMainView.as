@@ -314,10 +314,10 @@
                         this._widget.messageListener.processWidgetMessage(new RoomWidgetDanceMessage(RoomWidgetDanceMessage._Str_13814));
                         this._widget._Str_4107 = false;
                     }
-                    _local_4 = AvatarExpressionEnum._Str_6268;
+                    _local_4 = AvatarExpressionEnum.WAVE;
                     if (_local_3 == "blow")
                     {
-                        _local_4 = AvatarExpressionEnum._Str_5579;
+                        _local_4 = AvatarExpressionEnum.BLOW;
                     }
                     this._widget.messageListener.processWidgetMessage(new RoomWidgetAvatarExpressionMessage(_local_4));
                     this._widget.hide();

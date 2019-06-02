@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_8082;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7802;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7918;
@@ -148,7 +148,7 @@
             this._latestEntryTileEvent = null;
         }
 
-        public function _Str_22159(k:int):void
+        public function setCurrentRoom(k:int):void
         {
             if (this._currentRoomId != 0)
             {
@@ -161,13 +161,13 @@
             this._latestEntryTileEvent = null;
         }
 
-        public function _Str_22689():void
+        public function resetCurrentRoom():void
         {
             this._currentRoomId = 0;
             this._latestEntryTileEvent = null;
         }
 
-        private function _Str_5256(k:int):int
+        private function getRoomId(k:int):int
         {
             return this._currentRoomId;
         }
@@ -181,55 +181,55 @@
             if (k != null)
             {
                 this._connection = k;
-                k.addMessageEvent(new UserObjectEvent(this._Str_23359));
+                k.addMessageEvent(new UserObjectEvent(this.onOwnUserEvent));
                 k.addMessageEvent(new _Str_3407(this._Str_5963));
-                k.addMessageEvent(new _Str_7999(this._Str_24594));
+                k.addMessageEvent(new _Str_7999(this.onRoomProperty));
                 k.addMessageEvent(new _Str_4976(this._Str_16587));
-                k.addMessageEvent(new _Str_4279(this._Str_8654));
-                k.addMessageEvent(new _Str_7242(this._Str_24494));
-                k.addMessageEvent(new _Str_7777(this._Str_24160));
-                k.addMessageEvent(new _Str_4196(this._Str_12439));
-                k.addMessageEvent(new _Str_6253(this._Str_24827));
-                k.addMessageEvent(new _Str_7849(this._Str_23879));
-                k.addMessageEvent(new _Str_5843(this._Str_23523));
+                k.addMessageEvent(new _Str_4279(this.onFloorHeightMap));
+                k.addMessageEvent(new _Str_7242(this.onHeightMap));
+                k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
+                k.addMessageEvent(new _Str_4196(this.onRoomVisualizationSettings));
+                k.addMessageEvent(new _Str_6253(this.onFurnitureAliases));
+                k.addMessageEvent(new _Str_7849(this.onObjects));
+                k.addMessageEvent(new _Str_5843(this.onObjectAdd));
                 k.addMessageEvent(new _Str_7527(this.onObjectUpdate));
-                k.addMessageEvent(new _Str_8234(this._Str_25536));
-                k.addMessageEvent(new _Str_8080(this._Str_23727));
+                k.addMessageEvent(new _Str_8234(this.onObjectDataUpdate));
+                k.addMessageEvent(new _Str_8080(this.onObjectsDataUpdate));
                 k.addMessageEvent(new _Str_4408(this._Str_16200));
-                k.addMessageEvent(new _Str_8064(this._Str_25458));
-                k.addMessageEvent(new _Str_7704(this._Str_22769));
-                k.addMessageEvent(new _Str_8204(this._Str_25200));
-                k.addMessageEvent(new _Str_7464(this._Str_24180));
-                k.addMessageEvent(new _Str_7291(this._Str_22693));
+                k.addMessageEvent(new _Str_8064(this.onItems));
+                k.addMessageEvent(new _Str_7704(this.onItemAdd));
+                k.addMessageEvent(new _Str_8204(this.onItemRemove));
+                k.addMessageEvent(new _Str_7464(this.onItemUpdate));
+                k.addMessageEvent(new _Str_7291(this.onItemDataUpdate));
                 k.addMessageEvent(new _Str_4085(this._Str_10523));
-                k.addMessageEvent(new _Str_7817(this._Str_24034));
+                k.addMessageEvent(new _Str_7817(this.onUserUpdate));
                 k.addMessageEvent(new _Str_4914(this._Str_16267));
                 k.addMessageEvent(new _Str_3084(this._Str_5174));
-                k.addMessageEvent(new _Str_7641(this._Str_24817));
-                k.addMessageEvent(new _Str_5619(this._Str_18858));
-                k.addMessageEvent(new RoomUserEffectEvent(this._Str_22601));
-                k.addMessageEvent(new _Str_7216(this._Str_24306));
-                k.addMessageEvent(new _Str_7050(this._Str_25519));
-                k.addMessageEvent(new _Str_8069(this._Str_25867));
-                k.addMessageEvent(new _Str_7350(this._Str_24212));
-                k.addMessageEvent(new _Str_4642(this._Str_18055));
-                k.addMessageEvent(new _Str_4826(this._Str_18055));
-                k.addMessageEvent(new RoomUserShoutEvent(this._Str_18055));
-                k.addMessageEvent(new _Str_7436(this._Str_25021));
-                k.addMessageEvent(new _Str_8183(this._Str_25367));
-                k.addMessageEvent(new _Str_7657(this._Str_24119));
-                k.addMessageEvent(new PetExperienceEvent(this._Str_24271));
+                k.addMessageEvent(new _Str_7641(this.onExpression));
+                k.addMessageEvent(new _Str_5619(this.onDance));
+                k.addMessageEvent(new RoomUserEffectEvent(this.onAvatarEffect));
+                k.addMessageEvent(new _Str_7216(this.onAvatarSleep));
+                k.addMessageEvent(new _Str_7050(this.onCarryObject));
+                k.addMessageEvent(new _Str_8069(this.onUseObject));
+                k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
+                k.addMessageEvent(new _Str_4642(this.onChat));
+                k.addMessageEvent(new _Str_4826(this.onChat));
+                k.addMessageEvent(new RoomUserShoutEvent(this.onChat));
+                k.addMessageEvent(new _Str_7436(this.onTypingStatus));
+                k.addMessageEvent(new _Str_8183(this.onDiceValue));
+                k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
+                k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
                 k.addMessageEvent(new _Str_8714(this._Str_24325));
-                k.addMessageEvent(new _Str_7743(this._Str_22890));
+                k.addMessageEvent(new _Str_7743(this.onGamePlayerNumberValue));
                 k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
-                k.addMessageEvent(new _Str_5459(this._Str_16085));
+                k.addMessageEvent(new _Str_5459(this.onIgnoreResult));
                 k.addMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
                 k.addMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
             }
         }
 
-        private function _Str_23359(k:IMessageEvent):void
+        private function onOwnUserEvent(k:IMessageEvent):void
         {
             var _local_2:UserObjectEvent = (k as UserObjectEvent);
             if (_local_2 == null)
@@ -253,12 +253,12 @@
             var _local_3:_Str_5199 = _local_2._Str_2273();
             if (this._currentRoomId != _local_3.roomId)
             {
-                this._Str_22159(_local_3.roomId);
+                this.setCurrentRoom(_local_3.roomId);
             }
             var _local_4:String = _local_3.roomType;
             if (this._roomCreator != null)
             {
-                this._roomCreator._Str_20520(_local_3.roomId, _local_4);
+                this._roomCreator.setWorldType(_local_3.roomId, _local_4);
             }
             if (this._initialConnection)
             {
@@ -271,7 +271,7 @@
             }
         }
 
-        private function _Str_24827(k:IMessageEvent):void
+        private function onFurnitureAliases(k:IMessageEvent):void
         {
             var _local_2:_Str_6253;
             var _local_3:_Str_6431;
@@ -293,9 +293,9 @@
                     _local_5 = 0;
                     while (_local_5 < _local_4)
                     {
-                        _local_6 = _local_3._Str_4290(_local_5);
+                        _local_6 = _local_3.getName(_local_5);
                         _local_7 = _local_3._Str_24465(_local_5);
-                        this._roomCreator._Str_12966(_local_6, _local_7);
+                        this._roomCreator.setRoomObjectAlias(_local_6, _local_7);
                         _local_5++;
                     }
                 }
@@ -303,7 +303,7 @@
             k.connection.send(new _Str_7716());
         }
 
-        private function _Str_24494(k:IMessageEvent):void
+        private function onHeightMap(k:IMessageEvent):void
         {
             var _local_8:int;
             var _local_9:Number;
@@ -329,11 +329,11 @@
                 while (_local_8 < _local_4)
                 {
                     _local_9 = _local_3._Str_2754(_local_8, _local_7);
-                    _local_10 = _local_3._Str_25759(_local_8, _local_7);
+                    _local_10 = _local_3.getStackingBlocked(_local_8, _local_7);
                     _local_11 = _local_3._Str_10375(_local_8, _local_7);
                     _local_6._Str_3982(_local_8, _local_7, _local_9);
-                    _local_6._Str_19289(_local_8, _local_7, _local_10);
-                    _local_6._Str_19832(_local_8, _local_7, _local_11);
+                    _local_6.setStackingBlocked(_local_8, _local_7, _local_10);
+                    _local_6.setIsRoomTile(_local_8, _local_7, _local_11);
                     _local_8++;
                 }
                 _local_7++;
@@ -341,7 +341,7 @@
             this._roomCreator.setFurniStackingHeightMap(this._currentRoomId, _local_6);
         }
 
-        private function _Str_24160(k:IMessageEvent):void
+        private function onHeightMapUpdate(k:IMessageEvent):void
         {
             var _local_5:int;
             var _local_6:int;
@@ -365,13 +365,13 @@
                 _local_5 = _local_3.x;
                 _local_6 = _local_3.y;
                 _local_4._Str_3982(_local_5, _local_6, _local_3._Str_9852);
-                _local_4._Str_19289(_local_5, _local_6, _local_3.window3);
-                _local_4._Str_19832(_local_5, _local_6, _local_3._Str_10375);
+                _local_4.setStackingBlocked(_local_5, _local_6, _local_3.window3);
+                _local_4.setIsRoomTile(_local_5, _local_6, _local_3._Str_10375);
             }
-            this._roomCreator._Str_17722(this._currentRoomId, "RoomMessageHandler.onHeightMapUpdate()");
+            this._roomCreator.refreshTileObjectMap(this._currentRoomId, "RoomMessageHandler.onHeightMapUpdate()");
         }
 
-        private function _Str_12439(k:IMessageEvent):void
+        private function onRoomVisualizationSettings(k:IMessageEvent):void
         {
             var _local_2:_Str_4196 = (k as _Str_4196);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -385,12 +385,12 @@
             var _local_7:Number = _local_3._Str_9990;
             if (this._roomCreator != null)
             {
-                this._roomCreator._Str_15359(this._currentRoomId, _local_4, _local_5);
-                this._roomCreator._Str_21918(this._currentRoomId, _local_6, _local_7);
+                this._roomCreator.updateObjectRoomVisibilities(this._currentRoomId, _local_4, _local_5);
+                this._roomCreator.updateObjectRoomPlaneThicknesses(this._currentRoomId, _local_6, _local_7);
             }
         }
 
-        private function _Str_24594(k:IMessageEvent):void
+        private function onRoomProperty(k:IMessageEvent):void
         {
             var _local_2:_Str_7999 = (k as _Str_7999);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -403,7 +403,7 @@
             var _local_6:String = _local_3._Str_5109;
             if (this._roomCreator != null)
             {
-                this._roomCreator._Str_4377(this._currentRoomId, _local_4, _local_5, _local_6);
+                this._roomCreator.updateObjectRoom(this._currentRoomId, _local_4, _local_5, _local_6);
             }
         }
 
@@ -412,7 +412,7 @@
             this._latestEntryTileEvent = k;
         }
 
-        private function _Str_8654(k:IMessageEvent):void
+        private function onFloorHeightMap(k:IMessageEvent):void
         {
             var _local_17:int;
             var _local_18:int;
@@ -427,7 +427,7 @@
             {
                 return;
             }
-            var _local_4:LegacyWallGeometry = this._roomCreator._Str_5364(this._currentRoomId);
+            var _local_4:LegacyWallGeometry = this._roomCreator.getLegacyGeometry(this._currentRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -435,7 +435,7 @@
             this._planeParser.reset();
             var _local_5:int = _local_3.width;
             var _local_6:int = _local_3.height;
-            this._planeParser._Str_13735(_local_5, _local_6);
+            this._planeParser.initializeTileMap(_local_5, _local_6);
             var _local_7:Number = -1;
             var _local_8:Number = -1;
             var _local_9:Number = 0;
@@ -457,16 +457,16 @@
                 while (_local_17 < _local_5)
                 {
                     _local_18 = _local_3._Str_2754(_local_17, _local_13);
-                    if ((((((_local_13 > 0) && (_local_13 < (_local_6 - 1))) || ((_local_17 > 0) && (_local_17 < (_local_5 - 1)))) && (!(_local_18 == RoomPlaneParser._Str_3134))) && ((_local_11 == null) || ((_local_17 == _local_11.x) && (_local_13 == _local_11.y)))))
+                    if ((((((_local_13 > 0) && (_local_13 < (_local_6 - 1))) || ((_local_17 > 0) && (_local_17 < (_local_5 - 1)))) && (!(_local_18 == RoomPlaneParser.TILE_BLOCKED))) && ((_local_11 == null) || ((_local_17 == _local_11.x) && (_local_13 == _local_11.y)))))
                     {
-                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser._Str_3134) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser._Str_3134)) && (_local_3._Str_2754(_local_17, (_local_13 + 1)) == RoomPlaneParser._Str_3134)))
+                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3._Str_2754(_local_17, (_local_13 + 1)) == RoomPlaneParser.TILE_BLOCKED)))
                         {
                             _local_7 = (_local_17 + 0.5);
                             _local_8 = _local_13;
                             _local_9 = _local_18;
                             _local_10 = 90;
                         }
-                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser._Str_3134) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser._Str_3134)) && (_local_3._Str_2754((_local_17 + 1), _local_13) == RoomPlaneParser._Str_3134)))
+                        if ((((_local_3._Str_2754(_local_17, (_local_13 - 1)) == RoomPlaneParser.TILE_BLOCKED) && (_local_3._Str_2754((_local_17 - 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)) && (_local_3._Str_2754((_local_17 + 1), _local_13) == RoomPlaneParser.TILE_BLOCKED)))
                         {
                             _local_7 = _local_17;
                             _local_8 = (_local_13 + 0.5);
@@ -480,10 +480,10 @@
                 _local_13++;
             }
             this._planeParser._Str_3982(Math.floor(_local_7), Math.floor(_local_8), _local_9);
-            this._planeParser._Str_12919(_local_2._Str_2273().fixedWallsHeight);
+            this._planeParser.initializeFromTileData(_local_2._Str_2273().fixedWallsHeight);
             this._planeParser._Str_3982(Math.floor(_local_7), Math.floor(_local_8), (_local_9 + this._planeParser.wallHeight));
             _local_4.scale = _local_3.scale;
-            _local_4.initialize(_local_5, _local_6, this._planeParser._Str_7678);
+            _local_4.initialize(_local_5, _local_6, this._planeParser.floorHeight);
             var _local_14:int = (_local_3.height - 1);
             while (_local_14 >= 0)
             {
@@ -498,7 +498,7 @@
             var _local_15:XML = this._planeParser._Str_5598();
             var _local_16:XML = new (XML)((("<doors>" + (((((((('<door x="' + _local_7) + '" y="') + _local_8) + '" z="') + _local_9) + '" dir="') + _local_10) + '"/>')) + "</doors>"));
             _local_15.appendChild(_local_16);
-            this._roomCreator._Str_10152(this._currentRoomId, _local_15);
+            this._roomCreator.initializeRoom(this._currentRoomId, _local_15);
             if (this._tempViralHolder.objectData)
             {
                 this._Str_18595(this._currentRoomId, this._tempViralHolder.objectData);
@@ -510,7 +510,7 @@
             }
         }
 
-        private function _Str_23879(k:IMessageEvent):void
+        private function onObjects(k:IMessageEvent):void
         {
             var _local_6:_Str_3292;
             var _local_2:_Str_7849 = (k as _Str_7849);
@@ -529,7 +529,7 @@
             }
         }
 
-        private function _Str_23523(k:IMessageEvent):void
+        private function onObjectAdd(k:IMessageEvent):void
         {
             var _local_2:_Str_5843 = (k as _Str_5843);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -543,8 +543,8 @@
 
         private function onObjectUpdate(k:IMessageEvent):void
         {
-            var _local_5:IVector3D;
-            var _local_6:IVector3D;
+            var _local_5:IVector3d;
+            var _local_6:IVector3d;
             var _local_2:_Str_7527 = (k as _Str_7527);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
             {
@@ -560,13 +560,13 @@
             {
                 _local_5 = new Vector3d(_local_4.x, _local_4.y, _local_4.z);
                 _local_6 = new Vector3d(_local_4.dir);
-                this._roomCreator._Str_5858(this._currentRoomId, _local_4.id, _local_5, _local_6, _local_4.state, _local_4.data, _local_4._Str_2794);
-                this._roomCreator._Str_18240(this._currentRoomId, _local_4.id, _local_4._Str_7143);
-                this._roomCreator._Str_19287(this._currentRoomId, _local_4.id, _local_4._Str_6698);
+                this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4.id, _local_5, _local_6, _local_4.state, _local_4.data, _local_4._Str_2794);
+                this._roomCreator.updateObjectFurnitureHeight(this._currentRoomId, _local_4.id, _local_4.sizeZ);
+                this._roomCreator.updateObjectFurnitureExpiryTime(this._currentRoomId, _local_4.id, _local_4.expiryTime);
             }
         }
 
-        private function _Str_25536(k:IMessageEvent):void
+        private function onObjectDataUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_8234 = (k as _Str_8234);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -581,10 +581,10 @@
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.state;
             var _local_6:IStuffData = _local_3.data;
-            this._roomCreator._Str_5858(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
+            this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
         }
 
-        private function _Str_23727(k:IMessageEvent):void
+        private function onObjectsDataUpdate(k:IMessageEvent):void
         {
             var _local_5:_Str_6765;
             var _local_6:int;
@@ -601,7 +601,7 @@
             }
             var _local_3:ObjectsDataUpdateMessageParser = _local_2._Str_2273();
             var _local_4:int;
-            while (_local_4 < _local_3._Str_20256)
+            while (_local_4 < _local_3.objectCount)
             {
                 _local_5 = _local_3._Str_24113(_local_4);
                 if (_local_5 != null)
@@ -609,7 +609,7 @@
                     _local_6 = _local_5.id;
                     _local_7 = _local_5.state;
                     _local_8 = _local_5.data;
-                    this._roomCreator._Str_5858(this._currentRoomId, _local_6, null, null, _local_7, _local_8);
+                    this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_6, null, null, _local_7, _local_8);
                 }
                 _local_4++;
             }
@@ -635,12 +635,12 @@
             {
                 setTimeout(function ():void
                 {
-                    _roomCreator._Str_6737(_currentRoomId, id, ((parser.isExpired) ? -1 : parser.pickerId), true);
+                    _roomCreator.disposeObjectFurniture(_currentRoomId, id, ((parser.isExpired) ? -1 : parser.pickerId), true);
                 }, delay);
             }
             else
             {
-                this._roomCreator._Str_6737(this._currentRoomId, id, ((parser.isExpired) ? -1 : parser.pickerId), true);
+                this._roomCreator.disposeObjectFurniture(this._currentRoomId, id, ((parser.isExpired) ? -1 : parser.pickerId), true);
             }
         }
 
@@ -650,19 +650,19 @@
             {
                 return;
             }
-            var _local_3:IVector3D = new Vector3d(_arg_2.x, _arg_2.y, _arg_2.z);
-            var _local_4:IVector3D = new Vector3d(_arg_2.dir);
+            var _local_3:IVector3d = new Vector3d(_arg_2.x, _arg_2.y, _arg_2.z);
+            var _local_4:IVector3d = new Vector3d(_arg_2.dir);
             if (_arg_2._Str_13150 != null)
             {
-                this._roomCreator._Str_19916(k, _arg_2.id, _arg_2._Str_13150, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794);
+                this._roomCreator.addObjectFurnitureByName(k, _arg_2.id, _arg_2._Str_13150, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794);
             }
             else
             {
-                this._roomCreator._Str_8303(k, _arg_2.id, _arg_2.type, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794, _arg_2._Str_6698, _arg_2._Str_4172, _arg_2._Str_2481, _arg_2.ownerName, true, true, _arg_2._Str_7143);
+                this._roomCreator.addObjectFurniture(k, _arg_2.id, _arg_2.type, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794, _arg_2.expiryTime, _arg_2.usagePolicy, _arg_2.ownerId, _arg_2.ownerName, true, true, _arg_2.sizeZ);
             }
         }
 
-        private function _Str_25458(k:IMessageEvent):void
+        private function onItems(k:IMessageEvent):void
         {
             var _local_6:_Str_3079;
             var _local_2:_Str_8064 = (k as _Str_8064);
@@ -671,7 +671,7 @@
                 return;
             }
             var _local_3:ItemsMessageParser = _local_2._Str_2273();
-            var _local_4:int = _local_3._Str_21594();
+            var _local_4:int = _local_3.getItemCount();
             var _local_5:int;
             while (_local_5 < _local_4)
             {
@@ -681,7 +681,7 @@
             }
         }
 
-        private function _Str_22769(k:IMessageEvent):void
+        private function onItemAdd(k:IMessageEvent):void
         {
             var _local_2:_Str_7704 = (k as _Str_7704);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -696,7 +696,7 @@
             }
         }
 
-        private function _Str_25200(k:IMessageEvent):void
+        private function onItemRemove(k:IMessageEvent):void
         {
             var _local_2:_Str_8204 = (k as _Str_8204);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -708,20 +708,20 @@
                 return;
             }
             var _local_3:_Str_7124 = _local_2._Str_2273();
-            this._roomCreator._Str_7974(this._currentRoomId, _local_3.itemId, _local_3.pickerId);
+            this._roomCreator.disposeObjectWallItem(this._currentRoomId, _local_3.itemId, _local_3.pickerId);
         }
 
-        private function _Str_24180(k:IMessageEvent):void
+        private function onItemUpdate(k:IMessageEvent):void
         {
-            var _local_6:IVector3D;
-            var _local_7:IVector3D;
+            var _local_6:IVector3d;
+            var _local_7:IVector3d;
             var _local_2:_Str_7464 = (k as _Str_7464);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
             {
                 return;
             }
             var _local_3:_Str_7749 = _local_2._Str_2273();
-            var _local_4:LegacyWallGeometry = this._roomCreator._Str_5364(this._currentRoomId);
+            var _local_4:LegacyWallGeometry = this._roomCreator.getLegacyGeometry(this._currentRoomId);
             if (((this._roomCreator == null) || (_local_4 == null)))
             {
                 return;
@@ -731,12 +731,12 @@
             {
                 _local_6 = _local_4.getLocation(_local_5._Str_15139, _local_5._Str_15569, _local_5.localX, _local_5.localY, _local_5.dir);
                 _local_7 = new Vector3d(_local_4.getDirection(_local_5.dir));
-                this._roomCreator._Str_17748(this._currentRoomId, _local_5.id, _local_6, _local_7, _local_5.state, _local_5.data);
-                this._roomCreator._Str_21020(this._currentRoomId, _local_5.id, _local_5.secondsToExpiration);
+                this._roomCreator.updateObjectWallItem(this._currentRoomId, _local_5.id, _local_6, _local_7, _local_5.state, _local_5.data);
+                this._roomCreator.updateObjectWallItemExpiryTime(this._currentRoomId, _local_5.id, _local_5.secondsToExpiration);
             }
         }
 
-        private function _Str_22693(k:IMessageEvent):void
+        private function onItemDataUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_7291 = (k as _Str_7291);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -744,7 +744,7 @@
                 return;
             }
             var _local_3:_Str_8155 = _local_2._Str_2273();
-            this._roomCreator._Str_19904(this._currentRoomId, _local_3.id, _local_3._Str_18505);
+            this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
         private function _Str_19994(k:int, _arg_2:_Str_3079):void
@@ -753,29 +753,29 @@
             {
                 return;
             }
-            var _local_3:LegacyWallGeometry = this._roomCreator._Str_5364(k);
+            var _local_3:LegacyWallGeometry = this._roomCreator.getLegacyGeometry(k);
             if (_local_3 == null)
             {
                 return;
             }
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             if (!_arg_2._Str_22379)
             {
                 _local_4 = _local_3.getLocation(_arg_2._Str_15139, _arg_2._Str_15569, _arg_2.localX, _arg_2.localY, _arg_2.dir);
             }
             else
             {
-                _local_4 = _local_3._Str_24084(_arg_2.y, _arg_2.z, _arg_2.dir);
+                _local_4 = _local_3.getLocationOldFormat(_arg_2.y, _arg_2.z, _arg_2.dir);
             }
-            var _local_5:IVector3D = new Vector3d(_local_3.getDirection(_arg_2.dir));
-            this._roomCreator._Str_9493(k, _arg_2.id, _arg_2.type, _local_4, _local_5, _arg_2.state, _arg_2.data, _arg_2._Str_4172, _arg_2._Str_2481, _arg_2.ownerName, _arg_2.secondsToExpiration);
+            var _local_5:IVector3d = new Vector3d(_local_3.getDirection(_arg_2.dir));
+            this._roomCreator.addObjectWallItem(k, _arg_2.id, _arg_2.type, _local_4, _local_5, _arg_2.state, _arg_2.data, _arg_2.usagePolicy, _arg_2.ownerId, _arg_2.ownerName, _arg_2.secondsToExpiration);
         }
 
         private function _Str_10523(k:IMessageEvent):void
         {
             var _local_5:_Str_3548;
-            var _local_6:IVector3D;
-            var _local_7:IVector3D;
+            var _local_6:IVector3d;
+            var _local_7:IVector3d;
             var _local_8:int;
             var _local_2:_Str_4085 = (k as _Str_4085);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -788,7 +788,7 @@
             }
             var _local_3:UsersMessageParser = _local_2._Str_2273();
             var _local_4:int;
-            while (_local_4 < _local_3._Str_12722())
+            while (_local_4 < _local_3.getUserCount())
             {
                 _local_5 = _local_3._Str_5126(_local_4);
                 if (_local_5 != null)
@@ -796,37 +796,37 @@
                     _local_6 = new Vector3d(_local_5.x, _local_5.y, _local_5.z);
                     _local_7 = new Vector3d(_local_5.dir);
                     _local_8 = _local_5._Str_2908;
-                    this._roomCreator._Str_11865(this._currentRoomId, _local_5._Str_2707, _local_6, _local_7, _local_5.dir, _local_8, _local_5.figure);
+                    this._roomCreator.addObjectUser(this._currentRoomId, _local_5.roomIndex, _local_6, _local_7, _local_5.dir, _local_8, _local_5.figure);
                     if (_local_5._Str_2394 == this._ownUserId)
                     {
-                        this._roomCreator._Str_19096(this._currentRoomId, _local_5._Str_2707);
-                        this._roomCreator._Str_21118(this._currentRoomId, _local_5._Str_2707);
+                        this._roomCreator.setOwnUserId(this._currentRoomId, _local_5.roomIndex);
+                        this._roomCreator.updateObjectUserOwnUserAvatar(this._currentRoomId, _local_5.roomIndex);
                     }
-                    this._roomCreator._Str_7543(this._currentRoomId, _local_5._Str_2707, _local_5.figure, _local_5._Str_3344, _local_5._Str_3882, _local_5._Str_2886);
-                    if (RoomObjectUserTypes._Str_4290(_local_8) == RoomObjectUserTypes.PET)
+                    this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_5.roomIndex, _local_5.figure, _local_5._Str_3344, _local_5._Str_3882, _local_5.isRiding);
+                    if (RoomObjectUserTypes.getName(_local_8) == RoomObjectUserTypes.PET)
                     {
-                        if (this._roomCreator._Str_18909(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
+                        if (this._roomCreator.getWallItemTypeId(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
                         {
-                            this._roomCreator._Str_7176(this._currentRoomId, _local_5._Str_2707, _local_5._Str_16593);
+                            this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_5.roomIndex, _local_5._Str_16593);
                         }
                     }
                     if (this._roomCreator.configuration.getBoolean("avatar.ignored.bubble.enabled"))
                     {
-                        this._roomCreator._Str_3689(this._currentRoomId, _local_5._Str_2707, RoomObjectVariableEnum.FIGURE_IS_MUTED, Number(this._roomCreator.sessionDataManager._Str_3655(_local_5.name)));
+                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_5.roomIndex, RoomObjectVariableEnum.FIGURE_IS_MUTED, Number(this._roomCreator.sessionDataManager.isIgnored(_local_5.name)));
                     }
                 }
                 _local_4++;
             }
-            this._Str_12825();
+            this.updateGuideMarker();
         }
 
-        private function _Str_24034(k:IMessageEvent):void
+        private function onUserUpdate(k:IMessageEvent):void
         {
             var _local_7:_Str_5499;
             var _local_8:Number;
-            var _local_9:IVector3D;
-            var _local_10:IVector3D;
-            var _local_11:IVector3D;
+            var _local_9:IVector3d;
+            var _local_10:IVector3d;
+            var _local_11:IVector3d;
             var _local_12:Boolean;
             var _local_13:Boolean;
             var _local_14:String;
@@ -852,7 +852,7 @@
             }
             var _local_5:Number = _local_4.getNumber(RoomVariableEnum.ROOM_Z_SCALE);
             var _local_6:int;
-            while (_local_6 < _local_3._Str_19411)
+            while (_local_6 < _local_3.userUpdateCount)
             {
                 _local_7 = _local_3._Str_24400(_local_6);
                 if (_local_7 != null)
@@ -865,16 +865,16 @@
                     _local_9 = new Vector3d(_local_7.x, _local_7.y, (_local_7.z + _local_8));
                     _local_10 = new Vector3d(_local_7.dir);
                     _local_11 = null;
-                    if (_local_7._Str_12536)
+                    if (_local_7.isMoving)
                     {
                         _local_11 = new Vector3d(_local_7._Str_24054, _local_7._Str_24331, _local_7._Str_25822);
                     }
-                    this._roomCreator._Str_11976(this._currentRoomId, _local_7.id, _local_9, _local_11, _local_7._Str_10289, _local_8, _local_10, _local_7._Str_14280);
+                    this._roomCreator.updateObjectUser(this._currentRoomId, _local_7.id, _local_9, _local_11, _local_7.canStandUp, _local_8, _local_10, _local_7.dirHead);
                     _local_12 = true;
                     _local_13 = false;
                     _local_14 = RoomObjectVariableEnum.STD;
                     _local_15 = "";
-                    this._roomCreator._Str_17118(this._currentRoomId, _local_7.id, null);
+                    this._roomCreator.updateObjectPetGesture(this._currentRoomId, _local_7.id, null);
                     _local_16 = false;
                     _local_17 = false;
                     _local_18 = _local_7.actions.length;
@@ -883,14 +883,14 @@
                         switch (_local_19.actionType)
                         {
                             case "flatctrl":
-                                this._roomCreator._Str_17118(this._currentRoomId, _local_7.id, _local_19.actionParameter);
+                                this._roomCreator.updateObjectPetGesture(this._currentRoomId, _local_7.id, _local_19.actionParameter);
                                 break;
                             case "sign":
                                 if (_local_18 == 1)
                                 {
                                     _local_12 = false;
                                 }
-                                this._roomCreator._Str_3689(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.FIGURE_SIGN, int(_local_19.actionParameter));
+                                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.FIGURE_SIGN, int(_local_19.actionParameter));
                                 break;
                             case "gst":
                                 if (_local_18 == 1)
@@ -927,19 +927,19 @@
                     }
                     if (_local_13)
                     {
-                        this._roomCreator._Str_7176(this._currentRoomId, _local_7.id, _local_14, _local_15);
+                        this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_7.id, _local_14, _local_15);
                     }
                     else
                     {
                         if (_local_12)
                         {
-                            this._roomCreator._Str_7176(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.STD, "");
+                            this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_7.id, RoomObjectVariableEnum.STD, "");
                         }
                     }
                 }
                 _local_6++;
             }
-            this._Str_12825();
+            this.updateGuideMarker();
         }
 
         private function _Str_16267(k:IMessageEvent):void
@@ -954,8 +954,8 @@
                 return;
             }
             var _local_3:_Str_6367 = _local_2._Str_2273();
-            this._roomCreator._Str_9451(this._currentRoomId, _local_3.id);
-            this._Str_12825();
+            this._roomCreator.disposeObjectUser(this._currentRoomId, _local_3.id);
+            this.updateGuideMarker();
         }
 
         private function _Str_5174(k:IMessageEvent):void
@@ -965,7 +965,7 @@
             {
                 return;
             }
-            this._roomCreator._Str_7543(this._currentRoomId, _local_2.id, _local_2.figure, _local_2._Str_3344);
+            this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_2.id, _local_2.figure, _local_2._Str_3344);
         }
 
         private function _Str_6212(k:IMessageEvent):void
@@ -976,10 +976,10 @@
                 return;
             }
             var _local_3:PetFigureUpdateParser = _local_2._Str_2273();
-            this._roomCreator._Str_7543(this._currentRoomId, _local_3._Str_2707, _local_3.figureData.figuredata, "", "", _local_3._Str_2886);
+            this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_3.roomIndex, _local_3.figureData.figuredata, "", "", _local_3.isRiding);
         }
 
-        private function _Str_24817(k:IMessageEvent):void
+        private function onExpression(k:IMessageEvent):void
         {
             var _local_2:_Str_7641 = (k as _Str_7641);
             if (_local_2 == null)
@@ -995,10 +995,10 @@
             {
                 return;
             }
-            this._roomCreator._Str_3689(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_EXPRESSION, _local_3._Str_18904);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_EXPRESSION, _local_3.expressionType);
         }
 
-        private function _Str_18858(k:IMessageEvent):void
+        private function onDance(k:IMessageEvent):void
         {
             var _local_2:_Str_5619 = (k as _Str_5619);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -1010,10 +1010,10 @@
                 return;
             }
             var _local_3:_Str_6731 = _local_2._Str_2273();
-            this._roomCreator._Str_3689(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_DANCE, _local_3._Str_8263);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_DANCE, _local_3._Str_8263);
         }
 
-        private function _Str_22601(k:IMessageEvent):void
+        private function onAvatarEffect(k:IMessageEvent):void
         {
             var _local_2:RoomUserEffectEvent = (k as RoomUserEffectEvent);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -1025,10 +1025,10 @@
                 return;
             }
             var _local_3:_Str_7571 = _local_2._Str_2273();
-            this._roomCreator._Str_12204(this._currentRoomId, _local_3.userId, _local_3._Str_6815, _local_3._Str_18601);
+            this._roomCreator.updateObjectUserEffect(this._currentRoomId, _local_3.userId, _local_3._Str_6815, _local_3.delayMilliSeconds);
         }
 
-        private function _Str_24306(k:IMessageEvent):void
+        private function onAvatarSleep(k:IMessageEvent):void
         {
             var _local_2:_Str_7216 = (k as _Str_7216);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -1045,10 +1045,10 @@
             {
                 _local_4 = 0;
             }
-            this._roomCreator._Str_3689(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_SLEEP, _local_4);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_SLEEP, _local_4);
         }
 
-        private function _Str_25519(k:IMessageEvent):void
+        private function onCarryObject(k:IMessageEvent):void
         {
             var _local_2:_Str_6708;
             if (this._roomCreator == null)
@@ -1058,11 +1058,11 @@
             if ((k is _Str_7050))
             {
                 _local_2 = (k as _Str_7050)._Str_2273();
-                this._roomCreator._Str_3689(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2._Str_2887);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2._Str_2887);
             }
         }
 
-        private function _Str_25867(k:IMessageEvent):void
+        private function onUseObject(k:IMessageEvent):void
         {
             var _local_2:_Str_6590;
             if (this._roomCreator == null)
@@ -1072,11 +1072,11 @@
             if ((k is _Str_8069))
             {
                 _local_2 = (k as _Str_8069)._Str_2273();
-                this._roomCreator._Str_3689(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_2._Str_2887);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_2._Str_2887);
             }
         }
 
-        private function _Str_24212(k:IMessageEvent):void
+        private function onSlideUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_6340;
             var _local_3:Array;
@@ -1093,8 +1093,8 @@
             if ((k is _Str_7350))
             {
                 _local_2 = (k as _Str_7350)._Str_2273();
-                this._roomCreator._Str_5858(this._currentRoomId, _local_2.id, null, null, 1, null);
-                this._roomCreator._Str_5858(this._currentRoomId, _local_2.id, null, null, 2, null);
+                this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 1, null);
+                this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 2, null);
                 _local_3 = _local_2._Str_24284;
                 _local_4 = 0;
                 while (_local_4 < _local_3.length)
@@ -1102,14 +1102,14 @@
                     _local_5 = _local_3[_local_4];
                     if (_local_5 != null)
                     {
-                        this._roomCreator._Str_21600(this._currentRoomId, _local_5.id, _local_5.loc, _local_5.target);
+                        this._roomCreator.updateObjectFurnitureLocation(this._currentRoomId, _local_5.id, _local_5.loc, _local_5.target);
                     }
                     _local_4++;
                 }
                 if (_local_2.avatar != null)
                 {
                     _local_6 = _local_2.avatar;
-                    this._roomCreator._Str_11976(this._currentRoomId, _local_6.id, _local_6.loc, _local_6.target);
+                    this._roomCreator.updateObjectUser(this._currentRoomId, _local_6.id, _local_6.loc, _local_6.target);
                     if (this._roomCreator)
                     {
                         _local_9 = this._roomCreator.getRoom(this._currentRoomId);
@@ -1129,13 +1129,13 @@
                                 _local_8 = "std";
                                 break;
                         }
-                        this._roomCreator._Str_7176(this._currentRoomId, _local_6.id, _local_8);
+                        this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_6.id, _local_8);
                     }
                 }
             }
         }
 
-        private function _Str_18055(k:IMessageEvent):void
+        private function onChat(k:IMessageEvent):void
         {
             var _local_2:RoomUserShoutMessageParser;
             if (this._roomCreator == null)
@@ -1169,11 +1169,11 @@
             {
                 return;
             }
-            this._roomCreator._Str_9104(this._currentRoomId, _local_2.userId, _local_2.gesture);
-            this._roomCreator._Str_3689(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_TALK, Math.ceil((_local_2.text.length / 10)));
+            this._roomCreator.updateObjectUserGesture(this._currentRoomId, _local_2.userId, _local_2.gesture);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_TALK, Math.ceil((_local_2.text.length / 10)));
         }
 
-        private function _Str_25021(k:IMessageEvent):void
+        private function onTypingStatus(k:IMessageEvent):void
         {
             var _local_2:_Str_7436 = (k as _Str_7436);
             if (_local_2 == null)
@@ -1186,20 +1186,20 @@
             {
                 _local_4 = 0;
             }
-            this._roomCreator._Str_3689(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_IS_TYPING, _local_4);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_IS_TYPING, _local_4);
         }
 
-        private function _Str_24271(k:PetExperienceEvent):void
+        private function onPetExperience(k:PetExperienceEvent):void
         {
             if (k == null)
             {
                 return;
             }
             var _local_2:PetExperienceParser = k._Str_2273();
-            this._roomCreator._Str_3689(this._currentRoomId, _local_2._Str_24821, RoomObjectVariableEnum.FIGURE_GAINED_EXPERIENCE, _local_2._Str_18578);
+            this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.petRoomIndex, RoomObjectVariableEnum.FIGURE_GAINED_EXPERIENCE, _local_2._Str_18578);
         }
 
-        private function _Str_25367(k:IMessageEvent):void
+        private function onDiceValue(k:IMessageEvent):void
         {
             var _local_2:_Str_8183 = (k as _Str_8183);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -1214,10 +1214,10 @@
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.value;
             var _local_6:IStuffData = new LegacyStuffData();
-            this._roomCreator._Str_5858(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
+            this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
         }
 
-        private function _Str_24119(k:IMessageEvent):void
+        private function onOneWayDoorStatus(k:IMessageEvent):void
         {
             var _local_2:_Str_7657 = (k as _Str_7657);
             if (((_local_2 == null) || (_local_2._Str_2273() == null)))
@@ -1232,7 +1232,7 @@
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.status;
             var _local_6:IStuffData = new LegacyStuffData();
-            this._roomCreator._Str_5858(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
+            this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
         }
 
         private function _Str_24325(k:_Str_8714):void
@@ -1243,10 +1243,10 @@
             }
             var _local_2:_Str_7187 = k._Str_2273();
             var _local_3:Boolean = _local_2.isPlaying;
-            this._roomCreator._Str_21966(this._currentRoomId, _local_3);
+            this._roomCreator.setIsPlayingGame(this._currentRoomId, _local_3);
         }
 
-        private function _Str_22890(k:IMessageEvent):void
+        private function onGamePlayerNumberValue(k:IMessageEvent):void
         {
             var _local_2:_Str_6864;
             var _local_3:int;
@@ -1257,12 +1257,12 @@
             if ((k is _Str_7743))
             {
                 _local_2 = (k as _Str_7743)._Str_2273();
-                _local_3 = this._Str_5256(0);
-                this._roomCreator._Str_3689(_local_3, _local_2.userId, RoomObjectVariableEnum.FIGURE_NUMBER_VALUE, _local_2.value);
+                _local_3 = this.getRoomId(0);
+                this._roomCreator.updateObjectUserAction(_local_3, _local_2.userId, RoomObjectVariableEnum.FIGURE_NUMBER_VALUE, _local_2.value);
             }
         }
 
-        private function _Str_16085(k:IMessageEvent):void
+        private function onIgnoreResult(k:IMessageEvent):void
         {
             if (!this._roomCreator.configuration.getBoolean("avatar.ignored.bubble.enabled"))
             {
@@ -1276,10 +1276,10 @@
                 {
                     case 1:
                     case 2:
-                        this._roomCreator._Str_3689(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 1);
+                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 1);
                         return;
                     case 3:
-                        this._roomCreator._Str_3689(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 0);
+                        this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3._Str_2713, RoomObjectVariableEnum.FIGURE_IS_MUTED, 0);
                         return;
                 }
             }
@@ -1288,37 +1288,37 @@
         private function onGuideSessionStarted(k:IMessageEvent):void
         {
             var _local_2:GuideSessionStartedMessageParser = (k.parser as GuideSessionStartedMessageParser);
-            this._guideId = _local_2._Str_20217;
-            this._requesterId = _local_2._Str_7048;
-            this._Str_12825();
+            this._guideId = _local_2.guideUserId;
+            this._requesterId = _local_2.requesterUserId;
+            this.updateGuideMarker();
         }
 
         private function onGuideSessionEnded(k:IMessageEvent):void
         {
-            this._Str_19477();
+            this.removeGuideMarker();
         }
 
         private function onGuideSessionError(k:IMessageEvent):void
         {
-            this._Str_19477();
+            this.removeGuideMarker();
         }
 
-        private function _Str_12825():void
+        private function updateGuideMarker():void
         {
             var k:int = this._roomCreator.sessionDataManager.userId;
-            this._Str_15318(this._guideId, ((this._requesterId == k) ? AvatarGuideStatus.GUIDE : AvatarGuideStatus.NONE));
-            this._Str_15318(this._requesterId, ((this._guideId == k) ? AvatarGuideStatus.REQUESTER : AvatarGuideStatus.NONE));
+            this.setUserGuideStatus(this._guideId, ((this._requesterId == k) ? AvatarGuideStatus.GUIDE : AvatarGuideStatus.NONE));
+            this.setUserGuideStatus(this._requesterId, ((this._guideId == k) ? AvatarGuideStatus.REQUESTER : AvatarGuideStatus.NONE));
         }
 
-        private function _Str_19477():void
+        private function removeGuideMarker():void
         {
-            this._Str_15318(this._guideId, AvatarGuideStatus.NONE);
-            this._Str_15318(this._requesterId, AvatarGuideStatus.NONE);
+            this.setUserGuideStatus(this._guideId, AvatarGuideStatus.NONE);
+            this.setUserGuideStatus(this._requesterId, AvatarGuideStatus.NONE);
             this._guideId = -1;
             this._requesterId = -1;
         }
 
-        private function _Str_15318(k:int, _arg_2:int):void
+        private function setUserGuideStatus(k:int, _arg_2:int):void
         {
             if (((!(this._roomCreator)) || (!(this._roomCreator.roomSessionManager))))
             {
@@ -1332,7 +1332,7 @@
             var _local_4:RoomUserData = _local_3.userDataManager._Str_6958(k, RoomObjectTypeEnum.HABBO);
             if (_local_4 != null)
             {
-                this._roomCreator._Str_3689(this._currentRoomId, _local_4._Str_2713, RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _arg_2);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_4._Str_2713, RoomObjectVariableEnum.FIGURE_GUIDE_STATUS, _arg_2);
             }
         }
     }

@@ -109,7 +109,7 @@
             this._Str_17945 = k;
         }
 
-        public function get _Str_6920():IWindow
+        public function get scrollableWindow():IWindow
         {
             return this;
         }
@@ -119,7 +119,7 @@
             return new Rectangle((this._Str_6178 * this.maxScrollH), (this._Str_5996 * this.maxScrollV), width, height);
         }
 
-        public function get _Str_2614():Rectangle
+        public function get visibleRegion():Rectangle
         {
             return this._container.rectangle;
         }
@@ -325,7 +325,7 @@
             return k;
         }
 
-        public function _Str_3015(k:IWindow, _arg_2:uint):IWindow
+        public function addListItemAt(k:IWindow, _arg_2:uint):IWindow
         {
             k = this._container.addChildAt(k, _arg_2);
             this._Str_4024();
@@ -337,7 +337,7 @@
             return this._container.getChildAt(k);
         }
 
-        public function _Str_12066(k:uint):IWindow
+        public function getListItemByID(k:uint):IWindow
         {
             return this._container.getChildByID(k);
         }
@@ -347,12 +347,12 @@
             return this._container.getChildByName(k);
         }
 
-        public function _Str_7139(k:String):IWindow
+        public function getListItemByTag(k:String):IWindow
         {
-            return this._container._Str_6316(k);
+            return this._container.getChildByTag(k);
         }
 
-        public function _Str_3156(k:IWindow):int
+        public function getListItemIndex(k:IWindow):int
         {
             return this._container.getChildIndex(k);
         }
@@ -367,40 +367,40 @@
             return k;
         }
 
-        public function _Str_2915(k:int):IWindow
+        public function removeListItemAt(k:int):IWindow
         {
             var _local_2:IWindow = this._container.removeChildAt(k);
             return _local_2;
         }
 
-        public function _Str_14121(k:IWindow, _arg_2:int):void
+        public function setListItemIndex(k:IWindow, _arg_2:int):void
         {
             this._container.setChildIndex(k, _arg_2);
         }
 
-        public function _Str_17868(k:IWindow, _arg_2:IWindow):void
+        public function swapListItems(k:IWindow, _arg_2:IWindow):void
         {
             this._container.swapChildren(k, _arg_2);
             this._Str_4024();
         }
 
-        public function _Str_16328(k:int, _arg_2:int):void
+        public function swapListItemsAt(k:int, _arg_2:int):void
         {
             this._container.swapChildrenAt(k, _arg_2);
             this._Str_4024();
         }
 
-        public function _Str_11845(k:uint, _arg_2:Array, _arg_3:int=0):uint
+        public function groupListItemsWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint
         {
             return this._container.groupChildrenWithID(k, _arg_2, _arg_3);
         }
 
-        public function _Str_7438(k:String, _arg_2:Array, _arg_3:int=0):uint
+        public function groupListItemsWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
             return this._container.groupChildrenWithTag(k, _arg_2, _arg_3);
         }
 
-        public function _Str_2659():void
+        public function removeListItems():void
         {
             this._Str_4816 = true;
             while (this.numListItems > 0)
@@ -411,7 +411,7 @@
             this._Str_4024();
         }
 
-        public function _Str_2724():void
+        public function destroyListItems():void
         {
             this._Str_4816 = true;
             while (this.numListItems > 0)
@@ -652,12 +652,12 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.SPACING, this._Str_2981));
-            k.push(_Str_2340(PropertyKeys.AUTO_ARRANGE_ITEMS, this._Str_9264));
-            k.push(_Str_2340(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
-            k.push(_Str_2340(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
-            k.push(_Str_2340(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._Str_7087));
-            k.push(_Str_2340(PropertyKeys.SCROLL_STEP_VERTICAL, this._Str_7859));
+            k.push(createProperty(PropertyKeys.SPACING, this._Str_2981));
+            k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._Str_9264));
+            k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
+            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
+            k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._Str_7087));
+            k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._Str_7859));
             return k;
         }
 
@@ -691,12 +691,12 @@
             super.properties = k;
         }
 
-        public function _Str_13999():void
+        public function stopDragging():void
         {
             this._Str_11276 = false;
         }
 
-        public function set _Str_6129(k:Boolean):void
+        public function set disableAutodrag(k:Boolean):void
         {
             this._Str_19909 = k;
         }

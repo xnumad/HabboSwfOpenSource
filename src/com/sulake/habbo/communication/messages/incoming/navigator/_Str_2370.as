@@ -87,7 +87,7 @@
             this._allowPets = ((_local_4 & this.ALLOWPETS_BITMASK) > 0);
             this._displayRoomEntryAd = ((_local_4 & this.DISPLAYROOMENTRYAD_BITMASK) > 0);
             this._thumbnail = new _Str_5224(null);
-            this._thumbnail._Str_13573();
+            this._thumbnail.setDefaults();
         }
 
         public function dispose():void
@@ -120,7 +120,7 @@
             return this._showOwner;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._ownerId;
         }
@@ -170,7 +170,7 @@
             return this._categoryId;
         }
 
-        public function get _Str_3094():int
+        public function get habboGroupId():int
         {
             return this._habboGroupId;
         }

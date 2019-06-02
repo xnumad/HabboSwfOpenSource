@@ -60,7 +60,7 @@
             }
         }
 
-        public function _Str_6674():void
+        public function productDataReady():void
         {
             this._catalog.connection.send(new _Str_12290());
         }

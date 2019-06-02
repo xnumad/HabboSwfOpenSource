@@ -49,7 +49,7 @@
         private static const ROOM:String = "room";
         private static const TILE_CURSOR:String = "tile_cursor";
         private static const SELECTION_ARROW:String = "selection_arrow";
-        private static const _Str_14101:Array = [PLACE_HOLDER, WALL_PLACE_HOLDER, PET_PLACE_HOLDER, ROOM, TILE_CURSOR, SELECTION_ARROW];
+        private static const PLACE_HOLDER_TYPES_GPU:Array = [PLACE_HOLDER, WALL_PLACE_HOLDER, PET_PLACE_HOLDER, ROOM, TILE_CURSOR, SELECTION_ARROW];
         private static const _Str_20672:Array = [PLACE_HOLDER, WALL_PLACE_HOLDER, PET_PLACE_HOLDER, ROOM, SELECTION_ARROW];
         private static const CONST_20000:int = 20000;
         private static const CONST_30000:int = 30000;
@@ -128,7 +128,7 @@
             return this._isDisposed;
         }
 
-        public function set _Str_25534(k:IRoomObjectVisualizationFactory):void
+        public function set visualizationFactory(k:IRoomObjectVisualizationFactory):void
         {
             this._visualizationFactory = k;
         }
@@ -175,10 +175,10 @@
                 return;
             }
             this._sessionDataManager._Str_20401(this);
-            this._Str_24418(k);
+            this.populateFurniData(k);
             this._dataInitialized = true;
             this._Str_23030();
-            this._Str_22984();
+            this.continueInitilization();
         }
 
         public function dispose():void
@@ -337,7 +337,7 @@
             return (this._ignoredFurniTypes) ? (!(this._ignoredFurniTypes.indexOf(k) == -1)) : false;
         }
 
-        private function _Str_24418(k:Vector.<IFurnitureData>):void
+        private function populateFurniData(k:Vector.<IFurnitureData>):void
         {
             var _local_2:IFurnitureData;
             var _local_3:int;
@@ -401,7 +401,7 @@
             }
         }
 
-        private function _Str_22984():void
+        private function continueInitilization():void
         {
             if (this._dataInitialized)
             {
@@ -413,7 +413,7 @@
             }
         }
 
-        public function _Str_12966(k:String, _arg_2:String):void
+        public function setRoomObjectAlias(k:String, _arg_2:String):void
         {
             if (this._objectAliases != null)
             {
@@ -427,7 +427,7 @@
             }
         }
 
-        private function _Str_16356(k:String):String
+        private function getRoomObjectAlias(k:String):String
         {
             var _local_2:String;
             if (this._objectAliases != null)
@@ -441,7 +441,7 @@
             return _local_2;
         }
 
-        private function _Str_20812(k:String):String
+        private function getRoomObjectOriginalName(k:String):String
         {
             var _local_2:String;
             if (this._objectOriginalNames != null)
@@ -455,7 +455,7 @@
             return _local_2;
         }
 
-        public function _Str_11880(k:String):int
+        public function getObjectCategory(k:String):int
         {
             if (k == null)
             {
@@ -523,28 +523,28 @@
 
         public function getPlaceHolderTypes():Array
         {
-            return _Str_14101;
+            return PLACE_HOLDER_TYPES_GPU;
         }
 
-        public function _Str_9963(k:int):String
+        public function getActiveObjectType(k:int):String
         {
             var _local_2:String = (this._activeObjectTypes.getValue(k) as String);
-            return this._Str_19506(_local_2);
+            return this.getObjectType(_local_2);
         }
 
-        public function _Str_25706(k:String):int
+        public function getActiveObjectTypeId(k:String):int
         {
             return this._activeObjectTypeIds.getValue(k);
         }
 
-        public function _Str_5211(k:int, _arg_2:String=null):String
+        public function getWallItemType(k:int, _arg_2:String=null):String
         {
             var _local_3:String = (this._wallItemTypes.getValue(k) as String);
             if (((_local_3 == "poster") && (!(_arg_2 == null))))
             {
                 _local_3 = (_local_3 + _arg_2);
             }
-            return this._Str_19506(_local_3);
+            return this.getObjectType(_local_3);
         }
 
         public function _Str_26208(k:String):int
@@ -552,18 +552,18 @@
             return this._wallItemTypeIds.getValue(k);
         }
 
-        public function _Str_7863(k:int):String
+        public function getPetType(k:int):String
         {
             var _local_2:String = (this._petTypes.getValue(k) as String);
             return _local_2;
         }
 
-        public function _Str_18909(k:String):int
+        public function getWallItemTypeId(k:String):int
         {
             return this._pets[k];
         }
 
-        public function _Str_8639(k:int, _arg_2:int):PetColorResult
+        public function getPetColor(k:int, _arg_2:int):PetColorResult
         {
             var _local_3:Map = this._petColors[k];
             if (_local_3 != null)
@@ -573,7 +573,7 @@
             return null;
         }
 
-        public function _Str_10160(k:int, _arg_2:String):Array
+        public function getPetColorsByTag(k:int, _arg_2:String):Array
         {
             var _local_5:PetColorResult;
             var _local_3:Map = this._petColors[k];
@@ -591,7 +591,7 @@
             return _local_4;
         }
 
-        public function _Str_11046(k:int, _arg_2:String, _arg_3:int=64):int
+        public function getPetLayerIdForTag(k:int, _arg_2:String, _arg_3:int=64):int
         {
             var _local_5:Dictionary;
             var _local_4:Map = this._petLayers[k];
@@ -606,7 +606,7 @@
             return -1;
         }
 
-        public function _Str_7761(k:int, _arg_2:String):PetColorResult
+        public function getPetDefaultPalette(k:int, _arg_2:String):PetColorResult
         {
             var _local_4:PetColorResult;
             var _local_3:Map = this._petColors[k];
@@ -614,7 +614,7 @@
             {
                 for each (_local_4 in _local_3.getValues())
                 {
-                    if (((_local_4._Str_24801.indexOf(_arg_2) > -1) && (_local_4._Str_11964)))
+                    if (((_local_4.layerTags.indexOf(_arg_2) > -1) && (_local_4.isMaster)))
                     {
                         return _local_4;
                     }
@@ -623,19 +623,19 @@
             return null;
         }
 
-        public function _Str_14037(k:int):int
+        public function getActiveObjectColorIndex(k:int):int
         {
             var _local_2:String = (this._activeObjectTypes.getValue(k) as String);
-            return this._Str_19752(_local_2);
+            return this.getObjectColorIndex(_local_2);
         }
 
-        public function _Str_8870(k:int):int
+        public function getWallItemColorIndex(k:int):int
         {
             var _local_2:String = (this._wallItemTypes.getValue(k) as String);
-            return this._Str_19752(_local_2);
+            return this.getObjectColorIndex(_local_2);
         }
 
-        public function _Str_12550(k:String):String
+        public function getRoomObjectAdURL(k:String):String
         {
             if (this._objectTypeAdURLs.getValue(k) != null)
             {
@@ -644,7 +644,7 @@
             return "";
         }
 
-        private function _Str_19506(k:String):String
+        private function getObjectType(k:String):String
         {
             if (k == null)
             {
@@ -658,7 +658,7 @@
             return k;
         }
 
-        private function _Str_19752(k:String):int
+        private function getObjectColorIndex(k:String):int
         {
             if (k == null)
             {
@@ -688,10 +688,10 @@
             return false;
         }
 
-        private function _Str_21201(k:String):int
+        private function getObjectRevision(k:String):int
         {
             var _local_3:int;
-            var _local_2:int = this._Str_11880(k);
+            var _local_2:int = this.getObjectCategory(k);
             if (((_local_2 == RoomObjectCategoryEnum.CONST_10) || (_local_2 == RoomObjectCategoryEnum.CONST_20)))
             {
                 if (k.indexOf("poster") == 0)
@@ -704,7 +704,7 @@
             return 0;
         }
 
-        private function _Str_7376(k:String, _arg_2:String=null, _arg_3:Boolean=false):Array
+        private function getObjectContentURLs(k:String, _arg_2:String=null, _arg_3:Boolean=false):Array
         {
             var _local_4:String;
             var _local_5:int;
@@ -717,25 +717,25 @@
             switch (_local_4)
             {
                 case PLACE_HOLDER:
-                    return [this._Str_8689("PlaceHolderFurniture.swf")];
+                    return [this.getAssetLibraryName("PlaceHolderFurniture.swf")];
                 case WALL_PLACE_HOLDER:
-                    return [this._Str_8689("PlaceHolderWallItem.swf")];
+                    return [this.getAssetLibraryName("PlaceHolderWallItem.swf")];
                 case PET_PLACE_HOLDER:
-                    return [this._Str_8689("PlaceHolderPet.swf")];
+                    return [this.getAssetLibraryName("PlaceHolderPet.swf")];
                 case ROOM:
-                    return [this._Str_8689("HabboRoomContent.swf")];
+                    return [this.getAssetLibraryName("HabboRoomContent.swf")];
                 case TILE_CURSOR:
-                    return [this._Str_8689("TileCursor.swf")];
+                    return [this.getAssetLibraryName("TileCursor.swf")];
                 case SELECTION_ARROW:
-                    return [this._Str_8689("SelectionArrow.swf")];
+                    return [this.getAssetLibraryName("SelectionArrow.swf")];
                 default:
-                    _local_5 = this._Str_11880(_local_4);
+                    _local_5 = this.getObjectCategory(_local_4);
                     if (((_local_5 == RoomObjectCategoryEnum.CONST_10) || (_local_5 == RoomObjectCategoryEnum.CONST_20)))
                     {
-                        _local_6 = this._Str_16356(_local_4);
+                        _local_6 = this.getRoomObjectAlias(_local_4);
                         _local_7 = ((_arg_3) ? this._iconLoadNameTemplate : this._furniLoadNameTemplate);
                         _local_7 = _local_7.replace(/%typeid%/, _local_6);
-                        _local_8 = this._Str_21201(_local_4);
+                        _local_8 = this.getObjectRevision(_local_4);
                         _local_7 = _local_7.replace(/%revision%/, _local_8);
                         if (_arg_3)
                         {
@@ -754,7 +754,7 @@
             return [];
         }
 
-        private function _Str_8689(k:String):String
+        private function getAssetLibraryName(k:String):String
         {
             return this._assetUrlBase + k;
         }
@@ -763,7 +763,7 @@
         {
             var _local_6:Event;
             var _local_7:IEventDispatcher;
-            var _local_4:String = this._Str_21364(_arg_3);
+            var _local_4:String = this.getAssetLibraryType(_arg_3);
             switch (_arg_2)
             {
                 case RoomObjectCategoryEnum.CONST_10:
@@ -776,11 +776,11 @@
                 default:
                     throw (new Error((("Registering content library for unsupported category " + _arg_2) + "!")));
             }
-            var _local_5:AssetLibraryCollection = (this._Str_19550(_local_4, null) as AssetLibraryCollection);
+            var _local_5:AssetLibraryCollection = (this.addAssetLibraryCollection(_local_4, null) as AssetLibraryCollection);
             if (_local_5)
             {
                 _local_5.addAssetLibrary(_arg_3);
-                if (this._Str_16326(_local_4, _arg_3))
+                if (this.initializeGraphicAssetCollection(_local_4, _arg_3))
                 {
                     switch (_arg_2)
                     {
@@ -800,7 +800,7 @@
                             throw (new Error((("Registering content library for unsupported category " + _arg_2) + "!")));
                     }
                     _local_6 = new RoomContentLoadedEvent(RoomContentLoadedEvent.RCLE_SUCCESS, _local_4);
-                    _local_7 = this._Str_14059(_local_4, true);
+                    _local_7 = this.getAssetLibraryEventDispatcher(_local_4, true);
                     if (_local_7)
                     {
                         _local_7.dispatchEvent(_local_6);
@@ -822,11 +822,11 @@
             }
             if (_local_3 != null)
             {
-                _local_4 = this._Str_7376(_local_3, _arg_2, true);
+                _local_4 = this.getObjectContentURLs(_local_3, _arg_2, true);
             }
             else
             {
-                _local_4 = this._Str_7376(k, _arg_2, true);
+                _local_4 = this.getObjectContentURLs(k, _arg_2, true);
             }
             if (_local_4.length > 0)
             {
@@ -835,7 +835,7 @@
             return null;
         }
 
-        public function _Str_25864(k:int, _arg_2:String, _arg_3:String, _arg_4:IEventDispatcher):Boolean
+        public function loadThumbnailContent(k:int, _arg_2:String, _arg_3:String, _arg_4:IEventDispatcher):Boolean
         {
             var _local_6:Array;
             var _local_7:int;
@@ -850,11 +850,11 @@
             }
             if (_local_5 != null)
             {
-                _local_6 = this._Str_7376(_local_5, _arg_3, true);
+                _local_6 = this.getObjectContentURLs(_local_5, _arg_3, true);
             }
             else
             {
-                _local_6 = this._Str_7376(_arg_2, _arg_3, true);
+                _local_6 = this.getObjectContentURLs(_arg_2, _arg_3, true);
             }
             if (((!(_local_6 == null)) && (_local_6.length > 0)))
             {
@@ -885,11 +885,11 @@
                 _local_3 = k;
                 k = _local_3.split(",")[0];
             }
-            if (((!(this._Str_7711(k) == null)) || (!(this._Str_14059(k) == null))))
+            if (((!(this.getAssetLibrary(k) == null)) || (!(this.getAssetLibraryEventDispatcher(k) == null))))
             {
                 return false;
             }
-            var _local_4:AssetLibraryCollection = (this._Str_19550(k, _arg_2) as AssetLibraryCollection);
+            var _local_4:AssetLibraryCollection = (this.addAssetLibraryCollection(k, _arg_2) as AssetLibraryCollection);
             if (_local_4 == null)
             {
                 return false;
@@ -901,11 +901,11 @@
             }
             if (_local_3 != null)
             {
-                _local_5 = this._Str_7376(_local_3);
+                _local_5 = this.getObjectContentURLs(_local_3);
             }
             else
             {
-                _local_5 = this._Str_7376(k);
+                _local_5 = this.getObjectContentURLs(k);
             }
             if (((!(_local_5 == null)) && (_local_5.length > 0)))
             {
@@ -917,7 +917,7 @@
                     _local_8 = _local_5[_local_6];
                     _local_9 = _local_8;
                     _local_4.loadFromFile(_local_7, true);
-                    _local_7.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this._Str_25245);
+                    _local_7.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this.onContentLoadError);
                     _local_7.load(new URLRequest(_local_9));
                     _local_6++;
                 }
@@ -926,7 +926,7 @@
             return false;
         }
 
-        private function _Str_25245(k:Event):void
+        private function onContentLoadError(k:Event):void
         {
             var _local_4:String;
             var _local_5:Array;
@@ -934,7 +934,7 @@
             var _local_3:Array = this.getPlaceHolderTypes();
             for each (_local_4 in _local_3)
             {
-                _local_5 = this._Str_7376(_local_4);
+                _local_5 = this.getObjectContentURLs(_local_4);
                 if ((((_local_5.length > 0) && (!(_local_2.url == null))) && (_local_2.url.indexOf(_local_5[0]) == 0)))
                 {
                     Core.crash(("Failed to load asset: " + _local_2.url), Core.ERROR_CATEGORY_DOWNLOAD_CRITICAL_ASSET);
@@ -954,7 +954,7 @@
             if ((k.target is AssetLoaderStruct))
             {
                 _local_2 = (k.target as AssetLoaderStruct);
-                this._iconListener._Str_21889(_local_2.assetLoader.id, _local_2.assetName, true);
+                this._iconListener.iconLoaded(_local_2.assetLoader.id, _local_2.assetName, true);
             }
             else
             {
@@ -963,25 +963,25 @@
                 {
                     return;
                 }
-                this._Str_24606(_local_3);
+                this.processLoadedLibrary(_local_3);
             }
         }
 
-        private function _Str_24606(k:IAssetLibrary):void
+        private function processLoadedLibrary(k:IAssetLibrary):void
         {
             var _local_2:RoomContentLoadedEvent;
             var _local_3:Boolean;
-            var _local_4:String = this._Str_21364(k);
-            _local_4 = this._Str_20812(_local_4);
+            var _local_4:String = this.getAssetLibraryType(k);
+            _local_4 = this.getRoomObjectOriginalName(_local_4);
             if (_local_4 != null)
             {
-                _local_3 = this._Str_16326(_local_4, k);
+                _local_3 = this.initializeGraphicAssetCollection(_local_4, k);
             }
             if (_local_3)
             {
                 if (this._pets[_local_4] != null)
                 {
-                    this._Str_22493(_local_4);
+                    this.extractPetDataFromLoadedContent(_local_4);
                 }
                 _local_2 = new RoomContentLoadedEvent(RoomContentLoadedEvent.RCLE_SUCCESS, _local_4);
             }
@@ -989,14 +989,14 @@
             {
                 _local_2 = new RoomContentLoadedEvent(RoomContentLoadedEvent.RCLE_FAILURE, _local_4);
             }
-            var _local_5:IEventDispatcher = this._Str_14059(_local_4, true);
+            var _local_5:IEventDispatcher = this.getAssetLibraryEventDispatcher(_local_4, true);
             if (((!(_local_5 == null)) && (!(_local_2 == null))))
             {
                 _local_5.dispatchEvent(_local_2);
             }
         }
 
-        private function _Str_22493(k:String):void
+        private function extractPetDataFromLoadedContent(k:String):void
         {
             var _local_5:Map;
             var _local_6:Array;
@@ -1056,7 +1056,7 @@
             }
         }
 
-        private function _Str_16326(k:String, _arg_2:IAssetLibrary):Boolean
+        private function initializeGraphicAssetCollection(k:String, _arg_2:IAssetLibrary):Boolean
         {
             var _local_5:XML;
             if (((k == null) || (_arg_2 == null)))
@@ -1074,17 +1074,17 @@
                 }
                 else
                 {
-                    this._Str_23095(k);
+                    this.disposeGraphicAssetCollection(k);
                 }
             }
             return _local_3;
         }
 
-        public function _Str_26092(k:String, _arg_2:String):Boolean
+        public function extractObjectContent(k:String, _arg_2:String):Boolean
         {
-            var _local_3:IAssetLibrary = this._Str_7711(k);
+            var _local_3:IAssetLibrary = this.getAssetLibrary(k);
             this._additionalObjectTypeLibraries.add(_arg_2, k);
-            if (this._Str_16326(_arg_2, _local_3))
+            if (this.initializeGraphicAssetCollection(_arg_2, _local_3))
             {
                 return true;
             }
@@ -1097,11 +1097,11 @@
             return RCL_PREFIX + k;
         }
 
-        private function _Str_7711(k:String):IAssetLibrary
+        private function getAssetLibrary(k:String):IAssetLibrary
         {
             var _local_4:String;
             var _local_2:String = this.getContentType(k);
-            _local_2 = this._Str_20812(_local_2);
+            _local_2 = this.getRoomObjectOriginalName(_local_2);
             var _local_3:IAssetLibrary = (this._libraries.getValue(this._Str_10970(_local_2)) as IAssetLibrary);
             if (_local_3 == null)
             {
@@ -1115,10 +1115,10 @@
             return _local_3;
         }
 
-        private function _Str_19550(k:String, _arg_2:IEventDispatcher):IAssetLibrary
+        private function addAssetLibraryCollection(k:String, _arg_2:IEventDispatcher):IAssetLibrary
         {
             var _local_3:String = this.getContentType(k);
-            var _local_4:IAssetLibrary = this._Str_7711(k);
+            var _local_4:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_4 != null)
             {
                 return _local_4;
@@ -1126,14 +1126,14 @@
             var _local_5:String = this._Str_10970(_local_3);
             _local_4 = new AssetLibraryCollection(_local_5);
             this._libraries.add(_local_5, _local_4);
-            if (((!(_arg_2 == null)) && (this._Str_14059(k) == null)))
+            if (((!(_arg_2 == null)) && (this.getAssetLibraryEventDispatcher(k) == null)))
             {
                 this._events.add(_local_3, _arg_2);
             }
             return _local_4;
         }
 
-        private function _Str_14059(k:String, _arg_2:Boolean=false):IEventDispatcher
+        private function getAssetLibraryEventDispatcher(k:String, _arg_2:Boolean=false):IEventDispatcher
         {
             var _local_3:String = this.getContentType(k);
             if (!_arg_2)
@@ -1143,7 +1143,7 @@
             return this._events.remove(_local_3);
         }
 
-        private function _Str_26069(k:AssetLoaderStruct):String
+        private function getIconAssetType(k:AssetLoaderStruct):String
         {
             if (k == null)
             {
@@ -1156,7 +1156,7 @@
             return (_local_4 > 0) ? ((_local_5 + "*") + _local_4) : _local_5;
         }
 
-        private function _Str_21364(k:IAssetLibrary):String
+        private function getAssetLibraryType(k:IAssetLibrary):String
         {
             if (k == null)
             {
@@ -1182,7 +1182,7 @@
             {
                 return null;
             }
-            var _local_2:IAssetLibrary = this._Str_7711(k);
+            var _local_2:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_2 == null)
             {
                 return null;
@@ -1211,7 +1211,7 @@
             {
                 return null;
             }
-            var _local_2:IAssetLibrary = this._Str_7711(k);
+            var _local_2:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_2 == null)
             {
                 return null;
@@ -1236,7 +1236,7 @@
 
         public function hasVisualizationXML(k:String):Boolean
         {
-            return this._Str_17109(k, "_visualization");
+            return this.hasXML(k, "_visualization");
         }
 
         public function getVisualizationXML(k:String):XML
@@ -1246,7 +1246,7 @@
 
         public function hasAssetXML(k:String):Boolean
         {
-            return this._Str_17109(k, "_assets");
+            return this.hasXML(k, "_assets");
         }
 
         public function getAssetXML(k:String):XML
@@ -1256,7 +1256,7 @@
 
         public function hasLogicXML(k:String):Boolean
         {
-            return this._Str_17109(k, "_logic");
+            return this.hasXML(k, "_logic");
         }
 
         public function getLogicXML(k:String):XML
@@ -1266,13 +1266,13 @@
 
         private function _Str_5598(k:String, _arg_2:String):XML
         {
-            var _local_3:IAssetLibrary = this._Str_7711(k);
+            var _local_3:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_3 == null)
             {
                 return null;
             }
             var _local_4:String = this.getContentType(k);
-            var _local_5:String = this._Str_16356(_local_4);
+            var _local_5:String = this.getRoomObjectAlias(_local_4);
             var _local_6:IAsset = _local_3.getAssetByName((_local_5 + _arg_2));
             if (_local_6 == null)
             {
@@ -1286,15 +1286,15 @@
             return _local_7;
         }
 
-        private function _Str_17109(k:String, _arg_2:String):Boolean
+        private function hasXML(k:String, _arg_2:String):Boolean
         {
-            var _local_3:IAssetLibrary = this._Str_7711(k);
+            var _local_3:IAssetLibrary = this.getAssetLibrary(k);
             if (_local_3 == null)
             {
                 return false;
             }
             var _local_4:String = this.getContentType(k);
-            var _local_5:String = this._Str_16356(_local_4);
+            var _local_5:String = this.getRoomObjectAlias(_local_4);
             return _local_3.hasAsset((_local_5 + _arg_2));
         }
 
@@ -1343,7 +1343,7 @@
             }
         }
 
-        private function _Str_23095(k:String):Boolean
+        private function disposeGraphicAssetCollection(k:String):Boolean
         {
             var _local_3:IGraphicAssetCollection;
             var _local_2:String = this.getContentType(k);
@@ -1364,13 +1364,13 @@
             this.initFurnitureData();
         }
 
-        public function _Str_21854(k:int, _arg_2:String):void
+        public function setActiveObjectType(k:int, _arg_2:String):void
         {
             this._activeObjectTypes.remove(k);
             this._activeObjectTypes.add(k, _arg_2);
         }
 
-        public function _Str_25952():void
+        public function compressAssets():void
         {
             var _local_2:IGraphicAssetCollection;
             var _local_3:String;
@@ -1427,7 +1427,7 @@
             while (_local_5 > -1)
             {
                 _local_3 = this._assetCollections.getKey(_local_5);
-                if (_Str_14101.indexOf(_local_3) < 0)
+                if (PLACE_HOLDER_TYPES_GPU.indexOf(_local_3) < 0)
                 {
                     _local_2 = this._assetCollections.getValue(_local_3);
                     if (((_local_2._Str_20679() < 1) && ((_local_4 - _local_2._Str_21431()) >= CONST_20000)))
@@ -1454,21 +1454,21 @@
             {
                 return null;
             }
-            var _local_3:int = this._Str_11880(_local_2);
+            var _local_3:int = this.getObjectCategory(_local_2);
             if (((!(_local_3 == RoomObjectCategoryEnum.CONST_10)) && (!(_local_3 == RoomObjectCategoryEnum.CONST_20))))
             {
                 return null;
             }
-            var _local_4:int = this._Str_21201(_local_2);
+            var _local_4:int = this.getObjectRevision(_local_2);
             return ((((("room_content/" + k) + "/") + _local_4) + "/") + k) + ".swf";
         }
 
-        public function set _Str_22526(k:IAssetLibrary):void
+        public function set iconAssets(k:IAssetLibrary):void
         {
             this._iconAssets = k;
         }
 
-        public function set _Str_23096(k:IRoomContentListener):void
+        public function set iconListener(k:IRoomContentListener):void
         {
             this._iconListener = k;
         }

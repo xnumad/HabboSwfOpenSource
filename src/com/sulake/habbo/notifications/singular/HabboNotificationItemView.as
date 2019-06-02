@@ -116,9 +116,9 @@
             {
                 return;
             }
-            if (k._Str_13039 != null)
+            if (k.badgeImage != null)
             {
-                this._Str_20154(k._Str_13039);
+                this._Str_20154(k.badgeImage);
             }
         }
 

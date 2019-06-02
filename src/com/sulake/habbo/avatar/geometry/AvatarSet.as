@@ -34,12 +34,12 @@
             _local_6 = this._bodyParts.concat();
             for each (_local_3 in this._avatarSets)
             {
-                _local_6 = _local_6.concat(_local_3._Str_755());
+                _local_6 = _local_6.concat(_local_3.getBodyParts());
             }
             this._allBodyParts = _local_6;
         }
 
-        public function _Str_1498(k:String):AvatarSet
+        public function findAvatarSet(k:String):AvatarSet
         {
             var _local_2:AvatarSet;
             if (k == this._id)
@@ -48,7 +48,7 @@
             }
             for each (_local_2 in this._avatarSets)
             {
-                if (_local_2._Str_1498(k) != null)
+                if (_local_2.findAvatarSet(k) != null)
                 {
                     return _local_2;
                 }
@@ -56,7 +56,7 @@
             return null;
         }
 
-        public function _Str_755():Array
+        public function getBodyParts():Array
         {
             return this._allBodyParts.concat();
         }

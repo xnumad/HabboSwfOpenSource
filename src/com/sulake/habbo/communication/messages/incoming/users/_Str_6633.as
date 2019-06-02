@@ -11,9 +11,9 @@
             super(k, _Str_6592);
         }
 
-        public function get _Str_6136():int
+        public function get baseRoomId():int
         {
-            return _Str_6592(_parser)._Str_6136;
+            return _Str_6592(_parser).baseRoomId;
         }
 
         public function get groupId():int

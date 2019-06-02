@@ -35,7 +35,7 @@
         override protected function initComponent():void
         {
             super.initComponent();
-            this._Str_25442();
+            this.configureLocalizationLocations();
             if (this._skipExternals)
             {
                 events.dispatchEvent(new Event(Event.COMPLETE));
@@ -48,7 +48,7 @@
 
         private function _Str_18093(k:Event):void
         {
-            this._Str_17540();
+            this.requestLocalizationInit();
         }
 
         public function getLocalizationWithParams(k:String, _arg_2:String="", ... _args):String
@@ -90,8 +90,8 @@
         public function _Str_18132(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
-            var _local_3:String = this._Str_12424([("badge_name_al_" + k), ("badge_name_al_" + _local_2.base), ("badge_name_" + k), ("badge_name_" + _local_2.base)]);
-            this.registerParameter(_local_3, "roman", this._Str_12918(_local_2.level));
+            var _local_3:String = this.getExistingKey([("badge_name_al_" + k), ("badge_name_al_" + _local_2.base), ("badge_name_" + k), ("badge_name_" + _local_2.base)]);
+            this.registerParameter(_local_3, "roman", this.getRomanNumeral(_local_2.level));
             var _local_4:String = this.getLocalization(_local_3);
             return (_local_4 != null) ? _local_4 : "";
         }
@@ -99,17 +99,17 @@
         public function _Str_23690(k:String, _arg_2:int):String
         {
             var _local_3:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
-            var _local_4:String = this._Str_12424([("badge_desc_al_" + k), ("badge_desc_al_" + _local_3.base), ("badge_desc_" + k), ("badge_desc_" + _local_3.base)]);
+            var _local_4:String = this.getExistingKey([("badge_desc_al_" + k), ("badge_desc_al_" + _local_3.base), ("badge_desc_" + k), ("badge_desc_" + _local_3.base)]);
             this.registerParameter(_local_4, "limit", ("" + _arg_2));
-            this.registerParameter(_local_4, "roman", this._Str_12918(_local_3.level));
+            this.registerParameter(_local_4, "roman", this.getRomanNumeral(_local_3.level));
             return this.getLocalization(_local_4);
         }
 
         public function _Str_16142(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
-            var _local_3:String = this._Str_12424([("badge_instruction_" + _local_2.base)]);
-            this.registerParameter(_local_3, "limit", ("" + this._Str_19539(k)));
+            var _local_3:String = this.getExistingKey([("badge_instruction_" + _local_2.base)]);
+            this.registerParameter(_local_3, "limit", ("" + this.getBadgePointLimit(k)));
             var _local_4:String = this.getLocalization(_local_3);
             return (_local_4 != null) ? _local_4 : "";
         }
@@ -123,17 +123,17 @@
         public function getBadgeName(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
-            var _local_3:String = this._Str_21023(this._Str_12424([("badge_name_" + k), ("badge_name_" + _local_2.base)]));
-            this.registerParameter(_local_3, "roman", this._Str_12918(_local_2.level));
+            var _local_3:String = this._Str_21023(this.getExistingKey([("badge_name_" + k), ("badge_name_" + _local_2.base)]));
+            this.registerParameter(_local_3, "roman", this.getRomanNumeral(_local_2.level));
             return this.getLocalization(_local_3);
         }
 
         public function getBadgeDesc(k:String):String
         {
             var _local_2:BadgeBaseAndLevel = new BadgeBaseAndLevel(k);
-            var _local_3:String = this._Str_21023(this._Str_12424([("badge_desc_" + k), ("badge_desc_" + _local_2.base)]));
-            this.registerParameter(_local_3, "limit", ("" + this._Str_19539(k)));
-            this.registerParameter(_local_3, "roman", this._Str_12918(_local_2.level));
+            var _local_3:String = this._Str_21023(this.getExistingKey([("badge_desc_" + k), ("badge_desc_" + _local_2.base)]));
+            this.registerParameter(_local_3, "limit", ("" + this.getBadgePointLimit(k)));
+            this.registerParameter(_local_3, "roman", this.getRomanNumeral(_local_2.level));
             return this.getLocalization(_local_3);
         }
 
@@ -163,7 +163,7 @@
             printNonExistingKeys();
         }
 
-        private function _Str_25442():void
+        private function configureLocalizationLocations():void
         {
             var _local_2:String;
             var _local_3:String;
@@ -181,19 +181,19 @@
             }
         }
 
-        private function _Str_17540():void
+        private function requestLocalizationInit():void
         {
             var k:String = getProperty("external.texts.txt");
-            events.addEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this._Str_21743);
+            events.addEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this.onLocalizationLoaded);
             super.loadLocalizationFromURL(k);
         }
 
-        private function _Str_19539(k:String):int
+        private function getBadgePointLimit(k:String):int
         {
             return this._badgePointLimits[k];
         }
 
-        private function _Str_12424(k:Array):String
+        private function getExistingKey(k:Array):String
         {
             var _local_2:String;
             var _local_3:String;
@@ -208,12 +208,12 @@
             return "";//k[0];
         }
 
-        private function _Str_12918(k:int):String
+        private function getRomanNumeral(k:int):String
         {
             return this._romanNumerals[Math.max(0, (k - 1))];
         }
 
-        private function _Str_25992():void
+        private function parseDevelopmentLocalizations():void
         {
         }
 
@@ -223,14 +223,14 @@
             super.onLocalizationFailed(k);
         }
 
-        public function _Str_21743(k:Event):void
+        public function onLocalizationLoaded(k:Event):void
         {
             var _local_2:String;
-            events.removeEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this._Str_21743);
+            events.removeEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this.onLocalizationLoaded);
             if (propertyExists("external.override.texts.txt"))
             {
                 _local_2 = getProperty("external.override.texts.txt");
-                events.addEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this._Str_19353);
+                events.addEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this.onLocalizationOverrideLoaded);
                 super.loadLocalizationFromURL(_local_2);
             }
             else
@@ -239,9 +239,9 @@
             }
         }
 
-        public function _Str_19353(k:Event):void
+        public function onLocalizationOverrideLoaded(k:Event):void
         {
-            events.removeEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this._Str_19353);
+            events.removeEventListener(LocalizationEvent.LOCALIZATION_EVENT_LOCALIZATION_LOADED, this.onLocalizationOverrideLoaded);
             events.dispatchEvent(new Event(Event.COMPLETE));
         }
     }

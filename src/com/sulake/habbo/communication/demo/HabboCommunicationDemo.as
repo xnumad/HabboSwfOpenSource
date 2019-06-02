@@ -169,7 +169,7 @@
             this._ssoTicket = k;
         }
 
-        public function set _Str_16545(k:String):void
+        public function set flashClientUrl(k:String):void
         {
             this._flashClientUrl = k;
         }
@@ -180,9 +180,9 @@
             if (k != null)
             {
                 k.addEventListener(Event.CONNECT, this._Str_25793);
-                k.addEventListener(Event.CLOSE, this._Str_25641);
+                k.addEventListener(Event.CLOSE, this.onParsedTicketSuccess);
             }
-            this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this._Str_17750));
+            this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
             this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this._Str_24721));
             this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_22456));
             this._communication.addHabboConnectionMessageEvent(new ConnectionErrorEvent(this._Str_24454));
@@ -230,7 +230,7 @@
             }
         }
 
-        public function _Str_25891(k:String):void
+        public function initWithSSO(k:String):void
         {
             if (((k) && (!(this._ssoTicket))))
             {
@@ -239,7 +239,7 @@
             }
         }
 
-        public function _Str_19062(k:String, _arg_2:String, _arg_3:int=0):void
+        public function sendTryLogin(k:String, _arg_2:String, _arg_3:int=0):void
         {
         }
 
@@ -287,11 +287,11 @@
             if (_local_2 != null)
             {
                 this._Str_25592();
-                this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED);
+                this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED);
                 this._handshakeInProgress = true;
-                this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING);
+                this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING);
                 _local_2.sendUnencrypted(new _Str_10198());
-                this._Str_23186(_local_2);
+                this.sendConnectionParameters(_local_2);
             }
         }
 
@@ -385,11 +385,11 @@
             }
             _local_2.setEncryption(_local_8, _local_9);
             this._handshakeInProgress = false;
-            this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED);
-            this._Str_23186(_local_2);
+            this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED);
+            this.sendConnectionParameters(_local_2);
         }
 
-        private function _Str_23186(k:IConnection):void
+        private function sendConnectionParameters(k:IConnection):void
         {
             var _local_4:SharedObject;
             var _local_5:_Str_7957;
@@ -419,7 +419,7 @@
         {
             var _local_2:IConnection = k.connection;
             var _local_3:AuthenticationOKMessageEvent = (k as AuthenticationOKMessageEvent);
-            this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED);
+            this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED);
             var _local_4:_Str_8322 = new _Str_8322();
             _local_2.send(_local_4);
             var _local_5:EventLogMessageComposer = new EventLogMessageComposer("Login", "socket", "client.auth_ok");
@@ -432,7 +432,7 @@
             }
         }
 
-        private function _Str_17750(event:IMessageEvent):void
+        private function onGenericError(event:IMessageEvent):void
         {
             var parser:_Str_6053 = (event as GenericErrorEvent)._Str_2273();
             switch (parser.errorCode)
@@ -470,7 +470,7 @@
             try
             {
                 _local_2 = SharedObject.getLocal(FUSELOGIN, "/");
-                _local_2.data.machineid = k._Str_16772;
+                _local_2.data.machineid = k.machineID;
                 _local_2.flush();
             }
             catch(e:Error)
@@ -492,7 +492,7 @@
                 _local_2 = getProperty("roomviewer.login.name");
                 _local_3 = getProperty("roomviewer.login.password");
                 _local_4 = k._Str_2273()._Str_20644.getKey(0);
-                this._Str_19062(_local_2, _local_3, _local_4);
+                this.sendTryLogin(_local_2, _local_3, _local_4);
             }
             else
             {
@@ -566,14 +566,14 @@
             }
             if (this._handshakeInProgress)
             {
-                this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL);
+                this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL);
             }
             this._logoutInProgress = true;
             var _local_2:String = getProperty("logout.url");
             if (_local_2.length > 0)
             {
-                _local_2 = this._Str_25108(_local_2, k.reasonString);
-                _local_2 = this._Str_20024(_local_2);
+                _local_2 = this.setReasonProperty(_local_2, k.reasonString);
+                _local_2 = this.setOriginProperty(_local_2);
                 _local_2 = (_local_2 + ("&id=" + k.reason));
                 if (context.configuration.getInteger("spaweb", 0) == 1)
                 {
@@ -586,7 +586,7 @@
             }
         }
 
-        private function _Str_25108(k:String, _arg_2:String):String
+        private function setReasonProperty(k:String, _arg_2:String):String
         {
             if (k.indexOf("%reason%") != -1)
             {
@@ -595,7 +595,7 @@
             return k;
         }
 
-        private function _Str_20024(k:String):String
+        private function setOriginProperty(k:String):String
         {
             if (k.indexOf("%origin%") != -1)
             {
@@ -604,7 +604,7 @@
             return k;
         }
 
-        private function _Str_7280(k:String):void
+        private function dispatchLoginStepEvent(k:String):void
         {
             if (((Component(context) == null) || (Component(context).events == null)))
             {
@@ -634,12 +634,12 @@
 
         private function _Str_24041(k:Event=null):void
         {
-            this._Str_7280(HabboCommunicationEvent.INIT);
+            this.dispatchLoginStepEvent(HabboCommunicationEvent.INIT);
             this._communication.mode = _Str_6905._Str_4282;
             this._communication.initConnection(_Str_6905.HABBO);
         }
 
-        private function _Str_25641(k:Event):void
+        private function onParsedTicketSuccess(k:Event):void
         {
             var _local_2:String;
             if (this._Str_4954)
@@ -648,7 +648,7 @@
             }
             if (this._handshakeInProgress)
             {
-                this._Str_7280(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL);
+                this.dispatchLoginStepEvent(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL);
             }
             if (ExternalInterface.available)
             {
@@ -657,7 +657,7 @@
             if (((k.type == Event.CLOSE) && (!(this._logoutInProgress))))
             {
                 _local_2 = getProperty("logout.disconnect.url");
-                _local_2 = this._Str_20024(_local_2);
+                _local_2 = this.setOriginProperty(_local_2);
                 if (context.configuration.getInteger("spaweb", 0) == 1)
                 {
                     HabboWebTools.send(-1, HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL);

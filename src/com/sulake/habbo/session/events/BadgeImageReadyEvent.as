@@ -22,7 +22,7 @@
             return this._badgeId;
         }
 
-        public function get _Str_13039():BitmapData
+        public function get badgeImage():BitmapData
         {
             return this._image;
         }

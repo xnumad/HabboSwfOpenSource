@@ -178,12 +178,12 @@
             return this._Str_3437;
         }
 
-        public function set _Str_3655(k:Boolean):void
+        public function set isIgnored(k:Boolean):void
         {
             this._Str_6028 = k;
         }
 
-        public function get _Str_3655():Boolean
+        public function get isIgnored():Boolean
         {
             return this._Str_6028;
         }

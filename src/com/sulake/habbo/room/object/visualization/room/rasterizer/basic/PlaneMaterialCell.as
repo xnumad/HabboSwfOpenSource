@@ -3,7 +3,7 @@
     import flash.display.BitmapData;
     import com.sulake.room.object.visualization.utils.IGraphicAsset;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.geom.Matrix;
     import flash.geom.Rectangle;
@@ -89,12 +89,12 @@
             }
         }
 
-        public function _Str_9599(k:IVector3D):int
+        public function getHeight(k:IVector3d):int
         {
             var _local_2:BitmapData;
             if (this._texture != null)
             {
-                _local_2 = this._texture._Str_4913(k);
+                _local_2 = this._texture.getBitmap(k);
                 if (_local_2 != null)
                 {
                     return _local_2.height;
@@ -103,7 +103,7 @@
             return 0;
         }
 
-        public function render(normal:IVector3D, textureOffsetX:int, textureOffsetY:int):BitmapData
+        public function render(normal:IVector3d, textureOffsetX:int, textureOffsetY:int):BitmapData
         {
             var bitmap:BitmapData;
             var sourceBitmap:BitmapData;
@@ -124,7 +124,7 @@
             var offsetX:int;
             if (this._texture != null)
             {
-                bitmap = this._texture._Str_4913(normal);
+                bitmap = this._texture.getBitmap(normal);
                 try
                 {
                     if (((!(bitmap == null)) && ((!(textureOffsetX == 0)) || (!(textureOffsetY == 0)))))
@@ -172,7 +172,7 @@
                         }
                         limitMin = Math.min(this._extraItemCount, this._extraItemOffsets.length);
                         limitMax = Math.max(this._extraItemCount, this._extraItemOffsets.length);
-                        offsetIndexes = Randomizer._Str_23572(this._extraItemCount, limitMax);
+                        offsetIndexes = Randomizer.getArray(this._extraItemCount, limitMax);
                         i = 0;
                         while (i < limitMin)
                         {
@@ -220,7 +220,7 @@
             return null;
         }
 
-        public function getAliasByName(k:IVector3D):String
+        public function getAliasByName(k:IVector3d):String
         {
             return (this._texture == null) ? null : this._texture.getAliasByName(k);
         }

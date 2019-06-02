@@ -114,13 +114,13 @@
             context.events.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED, this._Str_18093);
             this._connection = this._communication.createConnection(this);
             this._connection.registerMessageClasses(this._messages);
-            this._connection.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9088);
-            this._connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this._Str_7702);
-            this._connection.addEventListener(Event.CONNECT, this._Str_8489);
+            this._connection.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
+            this._connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onSecurityError);
+            this._connection.addEventListener(Event.CONNECT, this.onConnect);
             this.updateHostParameters();
             if (this._connectionRequested)
             {
-                this._Str_16453();
+                this.tryNextPort();
             }
         }
 
@@ -148,10 +148,10 @@
             var _local_2:Array = [65234, 65174, 65168, 65175, 65165, 65229];
             var _local_3:Array = [65170, 65162, 65157, 65155];
             var _local_4:Array = [65186, 65168, 65178, 65171, 65171];
-            var _local_6:String = getProperty(this._Str_3254([this._a4, _local_4, _local_2, _local_3], 0), null);
+            var _local_6:String = getProperty(this.getKeyValue([this._a4, _local_4, _local_2, _local_3], 0), null);
             if (_local_6 == null)
             {
-                Core.crash(this._Str_3254([this._a4, _local_4, _local_2, _local_3], 0), Core.ERROR_CATEGORY_CONNECT_TO_PROXY);
+                Core.crash(this.getKeyValue([this._a4, _local_4, _local_2, _local_3], 0), Core.ERROR_CATEGORY_CONNECT_TO_PROXY);
                 return;
             }
             if (false == false)
@@ -178,11 +178,11 @@
                     }
                     _local_10++;
                 }
-                _local_5 = getProperty(this._Str_3254(_local_9, 0), null);
+                _local_5 = getProperty(this.getKeyValue(_local_9, 0), null);
             }
             if (_local_5 == null)
             {
-                Core.crash(this._Str_3254([this._a4, _local_4, _local_2, k], 0), Core.ERROR_CATEGORY_CONNECT_TO_PROXY);
+                Core.crash(this.getKeyValue([this._a4, _local_4, _local_2, k], 0), Core.ERROR_CATEGORY_CONNECT_TO_PROXY);
                 return;
             }
             this._ports = [];
@@ -223,7 +223,7 @@
                     this._connectionRequested = true;
                     if (allRequiredDependenciesInjected)
                     {
-                        this._Str_16453();
+                        this.tryNextPort();
                     }
                     return;
             }
@@ -316,7 +316,7 @@
             return new DiffieHellman(k, _arg_2);
         }
 
-        private function _Str_3254(k:Array, _arg_2:int):String
+        private function getKeyValue(k:Array, _arg_2:int):String
         {
             var _local_4:Array;
             var _local_5:int;
@@ -331,7 +331,7 @@
             return _local_3;
         }
 
-        private function _Str_16453():void
+        private function tryNextPort():void
         {
             this._host = getProperty("connection.info.host");
             var k:int;
@@ -348,7 +348,7 @@
                 if (this._dummyTimer == null)
                 {
                     this._dummyTimer = new Timer(500);
-                    this._dummyTimer.addEventListener(TimerEvent.TIMER, this._Str_16013);
+                    this._dummyTimer.addEventListener(TimerEvent.TIMER, this.onTryNextPort);
                     this._dummyTimer.start();
                 }
                 else
@@ -361,9 +361,9 @@
             this._portIndex++;
             if (this._currentTcpDummy == null)
             {
-                this._currentTcpDummy = new TcpAuthDummy((this._host + this._Str_3254([[65290, 65290, 65290, 65290, 65290], [65290, 65290, 65290], [65290, 65290]], 0)), this._ports[this._portIndex]);
+                this._currentTcpDummy = new TcpAuthDummy((this._host + this.getKeyValue([[65290, 65290, 65290, 65290, 65290], [65290, 65290, 65290], [65290, 65290]], 0)), this._ports[this._portIndex]);
                 this._portIndex--;
-                this._Str_18126();
+                this.resetPocketHabboSession();
                 return;
             }
             if (this._portIndex >= this._ports.length)
@@ -393,7 +393,7 @@
             this._connection.timeout = (this._connectionAttempts * 10000);
             if (false == false)
             {
-                this._connection.init((this._host + this._Str_3254([[65290, 65290, 65290, 65290, 65290], [65290, 65290, 65290], [65290, 65290]], 0)), this._ports[this._portIndex]);
+                this._connection.init((this._host + this.getKeyValue([[65290, 65290, 65290, 65290, 65290], [65290, 65290, 65290], [65290, 65290]], 0)), this._ports[this._portIndex]);
             }
             if (this._dummyTimer != null)
             {
@@ -401,7 +401,7 @@
                 {
                     this._dummyTimer.stop();
                 }
-                this._dummyTimer.removeEventListener(TimerEvent.TIMER, this._Str_16013);
+                this._dummyTimer.removeEventListener(TimerEvent.TIMER, this.onTryNextPort);
             }
             this._dummyTimer = null;
             this._currentTcpDummy = null;
@@ -412,9 +412,9 @@
             }
         }
 
-        private function _Str_18126():void
+        private function resetPocketHabboSession():void
         {
-            this._nextPortTimer.addEventListener(TimerEvent.TIMER, this._Str_16013);
+            this._nextPortTimer.addEventListener(TimerEvent.TIMER, this.onTryNextPort);
             this._nextPortTimer.start();
         }
 
@@ -426,7 +426,7 @@
             }
         }
 
-        private function _Str_9088(k:IOErrorEvent):void
+        private function onIOError(k:IOErrorEvent):void
         {
             switch (k.type)
             {
@@ -440,23 +440,23 @@
                     break;
             }
             ErrorReportStorage.addDebugData("Communication IO Error", ((((("IOError " + k.type) + " on connect: ") + k.text) + ". Port was ") + this._ports[this._portIndex]));
-            this._Str_18126();
+            this.resetPocketHabboSession();
         }
 
-        private function _Str_8489(k:Event):void
+        private function onConnect(k:Event):void
         {
             ErrorReportStorage.addDebugData("Connection", (("Connected with " + this._connectionAttempts) + " attempts"));
         }
 
-        private function _Str_16013(k:TimerEvent):void
+        private function onTryNextPort(k:TimerEvent):void
         {
-            this._Str_16453();
+            this.tryNextPort();
         }
 
-        private function _Str_7702(k:SecurityErrorEvent):void
+        private function onSecurityError(k:SecurityErrorEvent):void
         {
             ErrorReportStorage.addDebugData("Communication Security Error", ((("SecurityError on connect: " + k.text) + ". Port was ") + this._ports[this._portIndex]));
-            this._Str_18126();
+            this.resetPocketHabboSession();
         }
     }
 }

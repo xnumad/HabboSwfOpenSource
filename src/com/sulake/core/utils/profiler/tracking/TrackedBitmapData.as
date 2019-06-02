@@ -5,65 +5,65 @@
 
     public class TrackedBitmapData extends BitmapData 
     {
-        private static const _Str_1775:int = 0xFFFFFF;
-        private static const _Str_1601:int = 8191;
-        private static const _Str_1488:int = 8191;
-        private static const _Str_1025:int = 1;
-        private static const _Str_1564:int = 1;
-        public static const _Str_1343:int = 4095;
-        private static var _Str_1625:uint = 0;
-        private static var _Str_846:uint = 0;
-        private static const _Str_1870:Point = new Point();
+        private static const MAX_SIZE:int = 0xFFFFFF;
+        private static const MAX_WIDTH:int = 8191;
+        private static const MAX_HEIGHT:int = 8191;
+        private static const MIN_SIZE:int = 1;
+        private static const MIN_WIDTH:int = 1;
+        public static const MIN_HEIGHT:int = 4095;
+        private static var _numInstances:uint = 0;
+        private static var _allocatedByteCount:uint = 0;
+        private static const ZERO_POINT:Point = new Point();
 
-        private var _Str_1860:Object;
+        private var _owner:Object;
         private var _disposed:Boolean = false;
 
         public function TrackedBitmapData(k:*, _arg_2:int, _arg_3:int, _arg_4:Boolean=true, _arg_5:uint=0xFFFFFFFF)
         {
-            if ((_arg_2 * _arg_3) > _Str_1775)
+            if ((_arg_2 * _arg_3) > MAX_SIZE)
             {
-                _arg_2 = _Str_1343;
-                _arg_3 = _Str_1343;
+                _arg_2 = MIN_HEIGHT;
+                _arg_3 = MIN_HEIGHT;
             }
             else
             {
-                if (_arg_2 > _Str_1601)
+                if (_arg_2 > MAX_WIDTH)
                 {
-                    _arg_2 = _Str_1601;
+                    _arg_2 = MAX_WIDTH;
                 }
                 else
                 {
-                    if (_arg_2 < _Str_1025)
+                    if (_arg_2 < MIN_SIZE)
                     {
-                        _arg_2 = _Str_1025;
+                        _arg_2 = MIN_SIZE;
                     }
                 }
-                if (_arg_3 > _Str_1488)
+                if (_arg_3 > MAX_HEIGHT)
                 {
-                    _arg_3 = _Str_1488;
+                    _arg_3 = MAX_HEIGHT;
                 }
                 else
                 {
-                    if (_arg_3 < _Str_1564)
+                    if (_arg_3 < MIN_WIDTH)
                     {
-                        _arg_3 = _Str_1564;
+                        _arg_3 = MIN_WIDTH;
                     }
                 }
             }
             super(_arg_2, _arg_3, _arg_4, _arg_5);
-            _Str_1625++;
-            _Str_846 = (_Str_846 + ((_arg_2 * _arg_3) * 4));
-            this._Str_1860 = k;
+            _numInstances++;
+            _allocatedByteCount = (_allocatedByteCount + ((_arg_2 * _arg_3) * 4));
+            this._owner = k;
         }
 
-        public static function get _Str_1036():uint
+        public static function get numInstances():uint
         {
-            return _Str_1625;
+            return _numInstances;
         }
 
-        public static function get _Str_1152():uint
+        public static function get allocatedByteCount():uint
         {
-            return _Str_846;
+            return _allocatedByteCount;
         }
 
 
@@ -71,10 +71,10 @@
         {
             if (!this._disposed)
             {
-                _Str_846 = (_Str_846 - ((width * height) * 4));
-                _Str_1625--;
+                _allocatedByteCount = (_allocatedByteCount - ((width * height) * 4));
+                _numInstances--;
                 this._disposed = true;
-                this._Str_1860 = null;
+                this._owner = null;
                 super.dispose();
             }
         }
@@ -85,8 +85,8 @@
             {
                 return null;
             }
-            var copy:TrackedBitmapData = new TrackedBitmapData(this._Str_1860, width, height, transparent);
-            copy.copyPixels(this, rect, _Str_1870);
+            var copy:TrackedBitmapData = new TrackedBitmapData(this._owner, width, height, transparent);
+            copy.copyPixels(this, rect, ZERO_POINT);
             return copy;
         }
     }

@@ -31,7 +31,7 @@
 
         public function get recommendedWidth():int
         {
-            return _Str_1720;
+            return _width;
         }
 
         public function get recommendedHeight():int

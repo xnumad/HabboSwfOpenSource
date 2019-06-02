@@ -17,10 +17,10 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_9591(this._Str_25269));
+            k.addMessageEvent(new _Str_9591(this.onPresentOpened));
         }
 
-        private function _Str_25269(k:IMessageEvent):void
+        private function onPresentOpened(k:IMessageEvent):void
         {
             var _local_2:_Str_8104 = (k as _Str_9591)._Str_2273();
             if (_local_2 == null)
@@ -34,7 +34,7 @@
             }
             if (((listener) && (listener.events)))
             {
-                listener.events.dispatchEvent(new RoomSessionPresentEvent(RoomSessionPresentEvent.RSPE_PRESENT_OPENED, _local_3, _local_2._Str_2706, _local_2._Str_2887, _local_2._Str_2716, _local_2._Str_5200, _local_2._Str_5057, _local_2._Str_4057, _local_2._Str_17075));
+                listener.events.dispatchEvent(new RoomSessionPresentEvent(RoomSessionPresentEvent.RSPE_PRESENT_OPENED, _local_3, _local_2.classId, _local_2._Str_2887, _local_2.productCode, _local_2.placedItemId, _local_2.placedItemType, _local_2._Str_4057, _local_2.petFigureString));
             }
         }
     }

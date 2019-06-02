@@ -186,7 +186,7 @@
                 }
                 if (((!(this._toolbar == null)) && (!(this._toolbar.events == null))))
                 {
-                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
                 }
                 if (this._errorLayout)
                 {
@@ -281,7 +281,7 @@
             }
         }
 
-        private function _Str_3259(k:HabboToolbarEvent):void
+        private function onToolbarClick(k:HabboToolbarEvent):void
         {
             switch (k._Str_3378)
             {
@@ -312,7 +312,7 @@
 
         override protected function initComponent():void
         {
-            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             this._catalog.events.addEventListener(CatalogEvent.CATALOG_INVISIBLE_PAGE_VISITED, this._Str_24288);
             if (this._Str_13959())
             {

@@ -33,12 +33,12 @@
             return this._type;
         }
 
-        public function get _Str_25459():int
+        public function get delayInPulses():int
         {
             return this._delayInPulses;
         }
 
-        public function get _Str_22128():Array
+        public function get conflictingTriggers():Array
         {
             return this._conflictingTriggers;
         }

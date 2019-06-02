@@ -48,7 +48,7 @@
             {
                 return k;
             }
-            k.push(_Str_18738._Str_2551(this.rarityLevel));
+            k.push(_Str_18738.withValue(this.rarityLevel));
             return k;
         }
 

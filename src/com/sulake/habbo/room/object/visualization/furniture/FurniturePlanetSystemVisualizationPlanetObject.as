@@ -4,7 +4,7 @@
 
     public class FurniturePlanetSystemVisualizationPlanetObject 
     {
-        private static const _Str_16759:Number = 30;
+        private static const SYSTEM_TEMPO:Number = 30;
 
         private var _index:int;
         private var _name:String;
@@ -51,8 +51,8 @@
         public function update(k:Array, _arg_2:Vector3d, _arg_3:Number):void
         {
             var _local_4:FurniturePlanetSystemVisualizationPlanetObject;
-            this._position = (this._position + (this._arcSpeed / _Str_16759));
-            k[this._index] = this._Str_24988(_arg_2, _arg_3);
+            this._position = (this._position + (this._arcSpeed / SYSTEM_TEMPO));
+            k[this._index] = this.getPositionVector(_arg_2, _arg_3);
             var _local_5:int;
             while (_local_5 < this._children.length)
             {
@@ -62,7 +62,7 @@
             }
         }
 
-        public function _Str_24988(k:Vector3d, _arg_2:Number):Vector3d
+        public function getPositionVector(k:Vector3d, _arg_2:Number):Vector3d
         {
             var _local_3:Number = (this._radius * Math.cos((this._position + this._arcOffset)));
             var _local_4:Number = (this._radius * Math.sin((this._position + this._arcOffset)));
@@ -85,7 +85,7 @@
             }
         }
 
-        public function _Str_18814(k:String):Boolean
+        public function hasChild(k:String):Boolean
         {
             var _local_2:FurniturePlanetSystemVisualizationPlanetObject;
             var _local_3:int;
@@ -96,7 +96,7 @@
                 {
                     return true;
                 }
-                if (_local_2._Str_18814(k))
+                if (_local_2.hasChild(k))
                 {
                     return true;
                 }
@@ -105,7 +105,7 @@
             return false;
         }
 
-        public function _Str_21378(k:String):FurniturePlanetSystemVisualizationPlanetObject
+        public function getChild(k:String):FurniturePlanetSystemVisualizationPlanetObject
         {
             var _local_2:FurniturePlanetSystemVisualizationPlanetObject;
             var _local_3:int;
@@ -116,9 +116,9 @@
                 {
                     return _local_2;
                 }
-                if (_local_2._Str_18814(k))
+                if (_local_2.hasChild(k))
                 {
-                    return _local_2._Str_21378(k);
+                    return _local_2.getChild(k);
                 }
                 _local_3++;
             }

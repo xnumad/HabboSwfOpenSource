@@ -11,7 +11,7 @@
             this._parameter = _arg_2;
         }
 
-        public function get _Str_22110():String
+        public function get postureType():String
         {
             return this._postureType;
         }

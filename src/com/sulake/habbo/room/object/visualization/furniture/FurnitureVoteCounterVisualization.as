@@ -8,7 +8,7 @@
         private static const ONES_SPRITE:String = "ones_sprite";
         private static const TENS_SPRITE:String = "tens_sprite";
         private static const HUNDREDS_SPRITE:String = "hundreds_sprite";
-        private static const _Str_17839:int = -1;
+        private static const HIDE_COUNTER_SCORE:int = -1;
 
 
         override protected function updateObject(k:Number, _arg_2:Number):Boolean
@@ -40,7 +40,7 @@
             var _local_6:String;
             var _local_4:IRoomObjectModel = object.getModel();
             var _local_5:int = _local_4.getNumber(RoomObjectVariableEnum.FURNITURE_VOTE_COUNTER_COUNT);
-            if (_local_5 == _Str_17839)
+            if (_local_5 == HIDE_COUNTER_SCORE)
             {
                 _local_6 = getSpriteTag(k, _arg_2, _arg_3);
                 switch (_local_6)

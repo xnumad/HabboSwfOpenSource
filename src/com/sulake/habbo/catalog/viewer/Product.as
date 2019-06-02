@@ -59,7 +59,7 @@
             var _local_2:Vector.<IProduct> = new Vector.<IProduct>(0);
             for each (_local_3 in k)
             {
-                if (((!(_local_3._Str_2588 == ProductTypeEnum.BADGE)) && (!((_local_3._Str_2588 == ProductTypeEnum.EFFECT) && (_local_3._Str_2941 == _Str_10915)))))
+                if (((!(_local_3.productType == ProductTypeEnum.BADGE)) && (!((_local_3.productType == ProductTypeEnum.EFFECT) && (_local_3.productClassId == _Str_10915)))))
                 {
                     _local_2.push(_local_3);
                 }
@@ -68,22 +68,22 @@
         }
 
 
-        public function get _Str_2588():String
+        public function get productType():String
         {
             return this._productType;
         }
 
-        public function get _Str_2941():int
+        public function get productClassId():int
         {
             return this._productClassId;
         }
 
-        public function set _Str_2415(k:String):void
+        public function set extraParam(k:String):void
         {
             this._extraParam = k;
         }
 
-        public function get _Str_2415():String
+        public function get extraParam():String
         {
             return this._extraParam;
         }
@@ -93,12 +93,12 @@
             return this._productCount;
         }
 
-        public function get _Str_8554():IProductData
+        public function get productData():IProductData
         {
             return this._productData;
         }
 
-        public function get _Str_2686():IFurnitureData
+        public function get furnitureData():IFurnitureData
         {
             return this._furnitureData;
         }
@@ -137,12 +137,12 @@
             this._furnitureData = null;
             if (((catalog) && (catalog.sessionDataManager)))
             {
-                catalog.sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._Str_6753);
+                catalog.sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this.onBadgeImageReady);
             }
             super.dispose();
         }
 
-        public function _Str_13474(k:IProductContainer, _arg_2:IGetImageListener=null, _arg_3:IAvatarImageListener=null, _arg_4:IPurchasableOffer=null, _arg_5:IBitmapWrapperWindow=null, _arg_6:IStuffData=null, _arg_7:Function=null):BitmapData
+        public function initIcon(k:IProductContainer, _arg_2:IGetImageListener=null, _arg_3:IAvatarImageListener=null, _arg_4:IPurchasableOffer=null, _arg_5:IBitmapWrapperWindow=null, _arg_6:IStuffData=null, _arg_7:Function=null):BitmapData
         {
             var _local_9:IRoomEngine;
             var _local_10:ImageResult;
@@ -171,7 +171,7 @@
             switch (this._productType)
             {
                 case ProductTypeEnum.FLOOR:
-                    _local_10 = _local_9.getFurnitureIcon(this._Str_2941, _arg_2, null, _arg_6);
+                    _local_10 = _local_9.getFurnitureIcon(this.productClassId, _arg_2, null, _arg_6);
                     break;
                 case ProductTypeEnum.WALL:
                     if (((_arg_4) && (this._furnitureData)))
@@ -180,36 +180,36 @@
                         switch (this._furnitureData.className)
                         {
                             case "floor":
-                                _local_11 = ["th", this._furnitureData.className, _arg_4.product._Str_2415].join("_");
+                                _local_11 = ["th", this._furnitureData.className, _arg_4.product.extraParam].join("_");
                                 break;
                             case "wallpaper":
-                                _local_11 = ["th", "wall", _arg_4.product._Str_2415].join("_");
+                                _local_11 = ["th", "wall", _arg_4.product.extraParam].join("_");
                                 break;
                             case "landscape":
-                                _local_11 = ["th", this._furnitureData.className, _arg_4.product._Str_2415.replace(".", "_"), "001"].join("_");
+                                _local_11 = ["th", this._furnitureData.className, _arg_4.product.extraParam.replace(".", "_"), "001"].join("_");
                                 break;
                             default:
-                                _local_10 = _local_9.getWallItemIcon(this._Str_2941, _arg_2, this._extraParam);
+                                _local_10 = _local_9.getWallItemIcon(this.productClassId, _arg_2, this._extraParam);
                         }
                         catalog.setImageFromAsset(_arg_5, _local_11, _arg_7);
                     }
                     else
                     {
-                        _local_10 = _local_9.getWallItemIcon(this._Str_2941, _arg_2, this._extraParam);
+                        _local_10 = _local_9.getWallItemIcon(this.productClassId, _arg_2, this._extraParam);
                     }
                     break;
                 case ProductTypeEnum.EFFECT:
-                    _local_8 = catalog.getPixelEffectIcon(this._Str_2941);
+                    _local_8 = catalog.getPixelEffectIcon(this.productClassId);
                     if (_arg_2 == this)
                     {
                         this.setIconImage(_local_8, true);
                     }
                     break;
                 case ProductTypeEnum.HABBO_CLUB:
-                    _local_8 = catalog.getSubscriptionProductIcon(this._Str_2941);
+                    _local_8 = catalog.getSubscriptionProductIcon(this.productClassId);
                     break;
                 case ProductTypeEnum.BADGE:
-                    catalog.sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._Str_6753);
+                    catalog.sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this.onBadgeImageReady);
                     _local_8 = catalog.sessionDataManager.getBadgeImage(this._extraParam);
                     this._productContainer = k;
                     break;
@@ -218,7 +218,7 @@
                     setIconImage(_local_8, false);
                     break;
                 default:
-                    Logger.log(("[Product] Can not yet handle this type of product: " + this._Str_2588));
+                    Logger.log(("[Product] Can not yet handle this type of product: " + this.productType));
             }
             if (_local_10 != null)
             {
@@ -243,16 +243,16 @@
         {
         }
 
-        private function _Str_6753(k:BadgeImageReadyEvent):void
+        private function onBadgeImageReady(k:BadgeImageReadyEvent):void
         {
             if (!disposed)
             {
                 if (((this._productType == ProductTypeEnum.BADGE) && (k.badgeId == this._extraParam)))
                 {
-                    ProductGridItem(this._productContainer).setIconImage(k._Str_13039, false);
+                    ProductGridItem(this._productContainer).setIconImage(k.badgeImage, false);
                     if (((catalog) && (catalog.sessionDataManager)))
                     {
-                        catalog.sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._Str_6753);
+                        catalog.sessionDataManager.events.removeEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this.onBadgeImageReady);
                     }
                 }
             }

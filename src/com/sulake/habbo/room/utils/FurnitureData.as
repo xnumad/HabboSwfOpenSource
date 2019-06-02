@@ -2,7 +2,7 @@
 {
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class FurnitureData 
     {
@@ -22,7 +22,7 @@
         private var _realRoomObject:Boolean = true;
         private var _sizeZ:Number;
 
-        public function FurnitureData(k:int, _arg_2:int, _arg_3:String, _arg_4:IVector3D, _arg_5:IVector3D, _arg_6:int, _arg_7:IStuffData, _arg_8:Number=NaN, _arg_9:int=-1, _arg_10:int=0, _arg_11:int=0, _arg_12:String="", _arg_13:Boolean=true, _arg_14:Boolean=true, _arg_15:Number=-1)
+        public function FurnitureData(k:int, _arg_2:int, _arg_3:String, _arg_4:IVector3d, _arg_5:IVector3d, _arg_6:int, _arg_7:IStuffData, _arg_8:Number=NaN, _arg_9:int=-1, _arg_10:int=0, _arg_11:int=0, _arg_12:String="", _arg_13:Boolean=true, _arg_14:Boolean=true, _arg_15:Number=-1)
         {
             this._loc = new Vector3d();
             this._dir = new Vector3d();
@@ -59,12 +59,12 @@
             return this._type;
         }
 
-        public function get loc():IVector3D
+        public function get loc():IVector3d
         {
             return this._loc;
         }
 
-        public function get dir():IVector3D
+        public function get dir():IVector3d
         {
             return this._dir;
         }
@@ -84,17 +84,17 @@
             return this._extra;
         }
 
-        public function get _Str_6698():int
+        public function get expiryTime():int
         {
             return this._expiryTime;
         }
 
-        public function get _Str_4172():int
+        public function get usagePolicy():int
         {
             return this._usagePolicy;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._ownerId;
         }
@@ -104,17 +104,17 @@
             return this._ownerName;
         }
 
-        public function get _Str_23171():Boolean
+        public function get synchronized():Boolean
         {
             return this._synchronized;
         }
 
-        public function get _Str_21012():Boolean
+        public function get realRoomObject():Boolean
         {
             return this._realRoomObject;
         }
 
-        public function get _Str_7143():Number
+        public function get sizeZ():Number
         {
             return this._sizeZ;
         }

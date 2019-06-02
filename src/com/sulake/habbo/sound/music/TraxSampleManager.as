@@ -81,7 +81,7 @@
             var _local_3:URLRequest = new URLRequest(_local_2);
             var _local_4:Sound = new Sound();
             _local_4.addEventListener(Event.COMPLETE, this._Str_18059);
-            _local_4.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9598);
+            _local_4.addEventListener(IOErrorEvent.IO_ERROR, this.ioErrorHandler);
             _local_4.load(_local_3);
             this._loadingSamples.add(_local_4, k);
         }
@@ -97,7 +97,7 @@
             this._loadedSamples.push(_local_2);
         }
 
-        private function _Str_9598(k:Event):void
+        private function ioErrorHandler(k:Event):void
         {
             this._soundManager.events.dispatchEvent(new TraxSongLoadEvent(TraxSongLoadEvent.TSLE_TRAX_LOAD_FAILED, this._soundManager._Str_18031));
             this._loadErrorCallback.call();

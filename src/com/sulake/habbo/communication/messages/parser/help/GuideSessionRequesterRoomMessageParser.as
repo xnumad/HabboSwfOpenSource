@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function _Str_19871():int
+        public function getRequesterRoomId():int
         {
             return this._requesterRoomId;
         }

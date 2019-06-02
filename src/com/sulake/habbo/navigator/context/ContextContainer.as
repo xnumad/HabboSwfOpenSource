@@ -55,7 +55,7 @@
             this._savedSearches = k;
         }
 
-        public function _Str_992():Boolean
+        public function isReady():Boolean
         {
             return !(this._topLevelSearchesQuicklinks == null);
         }

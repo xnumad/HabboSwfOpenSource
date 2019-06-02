@@ -132,7 +132,7 @@
             return _local_9;
         }
 
-        public function _Str_10334():Array
+        public function getStyleIds():Array
         {
             return this._styles.getKeys();
         }
@@ -142,7 +142,7 @@
             var _local_2:int;
             var _local_3:ChatBubbleStyle;
             var k:Array = new Array();
-            for each (_local_2 in this._Str_10334())
+            for each (_local_2 in this.getStyleIds())
             {
                 _local_3 = this._styles.getValue(_local_2);
                 if (((!(_local_3.isSystemStyle)) && (!(_local_3.isStaffOverrideable))))
@@ -158,7 +158,7 @@
             var _local_2:int;
             var _local_3:ChatBubbleStyle;
             var k:Array = new Array();
-            for each (_local_2 in this._Str_10334())
+            for each (_local_2 in this.getStyleIds())
             {
                 _local_3 = this._styles.getValue(_local_2);
                 if (_local_3.isStaffOverrideable)

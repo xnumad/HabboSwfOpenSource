@@ -13,7 +13,7 @@
             {
                 return true;
             }
-            var _local_4:String = k._Str_15321(_arg_3);
+            var _local_4:String = k.getPerkErrorMessage(_arg_3);
             _arg_2.simpleAlert("${perkmissing.title}", "${perkmissing.caption}", (("${" + _local_4) + "}"));
             return false;
         }

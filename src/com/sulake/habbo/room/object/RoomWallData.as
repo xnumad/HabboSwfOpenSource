@@ -2,7 +2,7 @@
 {
     import com.sulake.room.utils.Vector3d;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class RoomWallData 
     {
@@ -48,7 +48,7 @@
 
         public function _Str_17862(k:Point, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:Boolean):void
         {
-            if (((this._addDuplicates) || (this._Str_22484(k, _arg_2, _arg_3, _arg_4, _arg_5))))
+            if (((this._addDuplicates) || (this.checkIsNotDuplicate(k, _arg_2, _arg_3, _arg_4, _arg_5))))
             {
                 this._corners.push(k);
                 this._directions.push(_arg_2);
@@ -62,7 +62,7 @@
             }
         }
 
-        private function _Str_22484(k:Point, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:Boolean):Boolean
+        private function checkIsNotDuplicate(k:Point, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:Boolean):Boolean
         {
             var _local_6:int;
             while (_local_6 < this._count)
@@ -81,18 +81,18 @@
             return this._count;
         }
 
-        public function _Str_10778(k:int):Point
+        public function getCorner(k:int):Point
         {
             return this._corners[k];
         }
 
-        public function _Str_19138(k:int):Point
+        public function getEndPoint(k:int):Point
         {
-            this._Str_23674();
+            this.calculateWallEndPoints();
             return this._endPoints[k];
         }
 
-        public function _Str_13743(k:int):int
+        public function getLength(k:int):int
         {
             return this._lengths[k];
         }
@@ -102,37 +102,37 @@
             return this._directions[k];
         }
 
-        public function _Str_25208(k:int):Boolean
+        public function getBorder(k:int):Boolean
         {
             return this._borders[k];
         }
 
-        public function _Str_10019(k:int):Boolean
+        public function getHideWall(k:int):Boolean
         {
             return this._hideWalls[k];
         }
 
-        public function _Str_17084(k:int):Boolean
+        public function getLeftTurn(k:int):Boolean
         {
             return this._leftTurns[k];
         }
 
-        public function _Str_25455(k:int):Boolean
+        public function getManuallyLeftCut(k:int):Boolean
         {
             return this._manuallyLeftCut[k];
         }
 
-        public function _Str_24163(k:int):Boolean
+        public function getManuallyRightCut(k:int):Boolean
         {
             return this._manuallyRightCut[k];
         }
 
-        public function _Str_15901(k:int, _arg_2:Boolean):void
+        public function setHideWall(k:int, _arg_2:Boolean):void
         {
             this._hideWalls[k] = _arg_2;
         }
 
-        public function _Str_24531(k:int, _arg_2:int):void
+        public function setLength(k:int, _arg_2:int):void
         {
             if (_arg_2 < this._lengths[k])
             {
@@ -141,9 +141,9 @@
             }
         }
 
-        public function _Str_23976(k:int, _arg_2:int):void
+        public function moveCorner(k:int, _arg_2:int):void
         {
-            var _local_3:IVector3D;
+            var _local_3:IVector3d;
             if (((_arg_2 > 0) && (_arg_2 < this._lengths[k])))
             {
                 _local_3 = _Str_5077[this.getDirection(k)];
@@ -153,12 +153,12 @@
             }
         }
 
-        private function _Str_23674():void
+        private function calculateWallEndPoints():void
         {
             var k:int;
             var _local_2:Point;
             var _local_3:Point;
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             var _local_5:int;
             if (this._endPoints.length != this.count)
             {
@@ -166,10 +166,10 @@
                 k = 0;
                 while (k < this.count)
                 {
-                    _local_2 = this._Str_10778(k);
+                    _local_2 = this.getCorner(k);
                     _local_3 = new Point(_local_2.x, _local_2.y);
                     _local_4 = RoomWallData._Str_5077[this.getDirection(k)];
-                    _local_5 = this._Str_13743(k);
+                    _local_5 = this.getLength(k);
                     _local_3.x = (_local_3.x + (_local_4.x * _local_5));
                     _local_3.y = (_local_3.y + (_local_4.y * _local_5));
                     this._endPoints.push(_local_3);

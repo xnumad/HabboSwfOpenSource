@@ -61,7 +61,7 @@
             }
         }
 
-        public function _Str_20305(k:int, _arg_2:int, _arg_3:IRoomGeometry):PlaneVisualization
+        public function createPlaneVisualization(k:int, _arg_2:int, _arg_3:IRoomGeometry):PlaneVisualization
         {
             if (this._planeVisualizations.getValue(String(k)) != null)
             {
@@ -94,7 +94,7 @@
             return _local_2;
         }
 
-        protected function _Str_6009(k:int):PlaneVisualization
+        protected function getPlaneVisualization(k:int):PlaneVisualization
         {
             if (k == this._lastSize)
             {
@@ -115,7 +115,7 @@
 
         public function _Str_8988():Array
         {
-            return this._Str_6009(this._lastSize)._Str_8988();
+            return this.getPlaneVisualization(this._lastSize)._Str_8988();
         }
     }
 }

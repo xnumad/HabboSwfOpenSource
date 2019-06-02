@@ -33,10 +33,10 @@
         public function createObject(k:int, _arg_2:uint, _arg_3:String):IRoomObjectController
         {
             var _local_4:RoomObject = new RoomObject(k, _arg_2, _arg_3);
-            return this._Str_18784(String(k), _arg_3, _local_4);
+            return this.addObject(String(k), _arg_3, _local_4);
         }
 
-        private function _Str_18784(k:String, _arg_2:String, _arg_3:IRoomObjectController):IRoomObjectController
+        private function addObject(k:String, _arg_2:String, _arg_3:IRoomObjectController):IRoomObjectController
         {
             if (this._objects.getValue(k) != null)
             {
@@ -44,12 +44,12 @@
                 return null;
             }
             this._objects.add(k, _arg_3);
-            var _local_4:Map = this._Str_13600(_arg_2);
+            var _local_4:Map = this.getObjectsForType(_arg_2);
             _local_4.add(k, _arg_3);
             return _arg_3;
         }
 
-        private function _Str_13600(k:String, _arg_2:Boolean=true):Map
+        private function getObjectsForType(k:String, _arg_2:Boolean=true):Map
         {
             var _local_3:Map = this._objectsPerType.getValue(k);
             if (((_local_3 == null) && (_arg_2)))
@@ -84,7 +84,7 @@
 
         public function getObjectCountForType(k:String):int
         {
-            var _local_2:Map = this._Str_13600(k, false);
+            var _local_2:Map = this.getObjectsForType(k, false);
             if (_local_2 != null)
             {
                 return _local_2.length;
@@ -95,7 +95,7 @@
         public function getObjectWithIndexAndType(k:int, _arg_2:String):IRoomObjectController
         {
             var _local_4:IRoomObjectController;
-            var _local_3:Map = this._Str_13600(_arg_2, false);
+            var _local_3:Map = this.getObjectsForType(_arg_2, false);
             if (_local_3 != null)
             {
                 _local_4 = (_local_3.getWithIndex(k) as IRoomObjectController);
@@ -113,7 +113,7 @@
             if (_local_3 != null)
             {
                 _local_4 = _local_3.getType();
-                _local_5 = this._Str_13600(_local_4, false);
+                _local_5 = this.getObjectsForType(_local_4, false);
                 if (_local_5 != null)
                 {
                     _local_5.remove(_local_2);

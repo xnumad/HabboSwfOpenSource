@@ -9,7 +9,7 @@
     {
         protected var _Str_19957:String;
         protected var _Str_616:String = null;
-        protected var _Str_576:String = null;
+        protected var _id:String = null;
         protected var _Str_2341:String = null;
         protected var _Str_10333:int = -1;
         protected var _Str_17448:int = -1;
@@ -19,7 +19,7 @@
         protected var _Str_18917:* = null;
         protected var _Str_1416:String = null;
         protected var _Str_17542:String = null;
-        protected var _Str_4479:String = null;
+        protected var _backgroundColor:String = null;
         protected var _Str_20596:String = null;
         protected var _Str_2728:CloseButtonConfig;
         protected var _Str_11028:Number = -1;
@@ -124,12 +124,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set style(k:String):void
@@ -253,13 +253,13 @@
         public function _Str_11493():void
         {
             this._Str_803 = "transparent";
-            this._Str_4479 = "transparent";
+            this._backgroundColor = "transparent";
         }
 
         public function _Str_12711():void
         {
             this._Str_803 = this._Str_20337;
-            this._Str_4479 = this._Str_20596;
+            this._backgroundColor = this._Str_20596;
         }
 
         public function set backgroundRepeat(k:String):void
@@ -309,18 +309,18 @@
 
         public function set backgroundColor(k:String):void
         {
-            this._Str_4479 = k;
+            this._backgroundColor = k;
             this._Str_20596 = k;
         }
 
         public function get backgroundColor():String
         {
-            return this._Str_4479;
+            return this._backgroundColor;
         }
 
         public function _Str_15500():Boolean
         {
-            return !(this._Str_4479 == null);
+            return !(this._backgroundColor == null);
         }
 
         public function set opacity(k:Number):void

@@ -25,7 +25,7 @@
             this._Str_17873.init(k);
         }
 
-        public function _Str_2520(k:Boolean):void
+        public function setSelected(k:Boolean):void
         {
             if (k)
             {

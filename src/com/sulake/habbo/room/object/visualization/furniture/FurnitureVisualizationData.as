@@ -9,8 +9,8 @@
 
     public class FurnitureVisualizationData implements IRoomObjectVisualizationData 
     {
-        public static const _Str_7946:int = 1000;
-        public static const _Str_8875:Array = new Array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+        public static const LAYER_LIMIT:int = 1000;
+        public static const LAYER_NAMES:Array = new Array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
 
         private var _sizeDatas:Map;
         private var _sizes:Array;
@@ -168,19 +168,19 @@
             switch (String(_arg_2.name()))
             {
                 case "layers":
-                    if (!k._Str_22886(_arg_2))
+                    if (!k.defineLayers(_arg_2))
                     {
                         return false;
                     }
                     break;
                 case "directions":
-                    if (!k._Str_22896(_arg_2))
+                    if (!k.defineDirections(_arg_2))
                     {
                         return false;
                     }
                     break;
                 case "colors":
-                    if (!k._Str_22971(_arg_2))
+                    if (!k.defineColors(_arg_2))
                     {
                         return false;
                     }
@@ -237,7 +237,7 @@
 
         public function getLayerCount(k:int):int
         {
-            var _local_2:SizeData = this._Str_2735(k);
+            var _local_2:SizeData = this.getSizeData(k);
             if (_local_2 != null)
             {
                 return _local_2.layerCount;
@@ -247,7 +247,7 @@
 
         public function _Str_15687(k:int, _arg_2:int):int
         {
-            var _local_3:SizeData = this._Str_2735(k);
+            var _local_3:SizeData = this.getSizeData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_15687(_arg_2);
@@ -257,85 +257,85 @@
 
         public function _Str_6014(k:int, _arg_2:int, _arg_3:int):String
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_6014(_arg_2, _arg_3);
             }
-            return LayerData._Str_12249;
+            return LayerData.DEFAULT_TAG;
         }
 
         public function _Str_10682(k:int, _arg_2:int, _arg_3:int):int
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_10682(_arg_2, _arg_3);
             }
-            return LayerData._Str_7943;
+            return LayerData.DEFAULT_INK;
         }
 
         public function _Str_11350(k:int, _arg_2:int, _arg_3:int):int
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_11350(_arg_2, _arg_3);
             }
-            return LayerData._Str_8655;
+            return LayerData.DEFAULT_ALPHA;
         }
 
         public function _Str_751(k:int, _arg_2:int, _arg_3:int):int
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_751(_arg_2, _arg_3);
             }
-            return ColorData._Str_2531;
+            return ColorData.DEFAULT_COLOR;
         }
 
         public function _Str_12280(k:int, _arg_2:int, _arg_3:int):Boolean
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_12280(_arg_2, _arg_3);
             }
-            return LayerData._Str_9888;
+            return LayerData.DEFAULT_IGNORE_MOUSE;
         }
 
         public function _Str_10372(k:int, _arg_2:int, _arg_3:int):int
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_10372(_arg_2, _arg_3);
             }
-            return LayerData._Str_9326;
+            return LayerData.DEFAULT_X_OFFSET;
         }
 
         public function _Str_10926(k:int, _arg_2:int, _arg_3:int):int
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_10926(_arg_2, _arg_3);
             }
-            return LayerData._Str_9412;
+            return LayerData.DEFAULT_Y_OFFSET;
         }
 
         public function _Str_8329(k:int, _arg_2:int, _arg_3:int):Number
         {
-            var _local_4:SizeData = this._Str_2735(k);
+            var _local_4:SizeData = this.getSizeData(k);
             if (_local_4 != null)
             {
                 return _local_4._Str_8329(_arg_2, _arg_3);
             }
-            return LayerData._Str_7951;
+            return LayerData.DEFAULT_Z_OFFSET;
         }
 
-        protected function _Str_2735(k:int):SizeData
+        protected function getSizeData(k:int):SizeData
         {
             if (k == this._lastSizeDataScale)
             {

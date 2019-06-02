@@ -36,17 +36,17 @@
             return false;
         }
 
-        public function get _Str_8132():int
+        public function get depth():int
         {
             return this._depth;
         }
 
-        public function get _Str_7841():Boolean
+        public function get isBranch():Boolean
         {
             return this._children.length > 0;
         }
 
-        public function get _Str_19235():Boolean
+        public function get isLeaf():Boolean
         {
             return this._children.length == 0;
         }
@@ -76,7 +76,7 @@
             return this._children;
         }
 
-        public function get _Str_15019():Vector.<int>
+        public function get offerIds():Vector.<int>
         {
             return this._offerIds;
         }

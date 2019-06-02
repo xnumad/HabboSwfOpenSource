@@ -8,17 +8,17 @@
         protected static const ICON:String = "icon";
         protected static const HEADER:String = "header";
         private static const NEW_OPEN_MESSENGER_TAB_XML:String = "new_open_messenger_tab_xml";
-        private static const _Str_2531:uint = 8374494;
+        private static const DEFAULT_COLOR:uint = 8374494;
         private static const _Str_2841:uint = 9560569;
         private static const _Str_20489:int = 10;
-        private static const _Str_2469:Array = [];
+        private static const POOL:Array = [];
         private static const _Str_4440:Array = [];
 
 
         public static function _Str_2363():NewOpenMessengerTab
         {
             var k:NewOpenMessengerTab;
-            k = ((_Str_2469.length > 0) ? _Str_2469.pop() : new (NewOpenMessengerTab)());
+            k = ((POOL.length > 0) ? POOL.pop() : new (NewOpenMessengerTab)());
             k._Str_2638 = false;
             k._window = k._Str_18310();
             return k;
@@ -31,7 +31,7 @@
             k.addEventListener(WindowMouseEvent.CLICK, this._Str_3369);
             k.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             k.addEventListener(WindowMouseEvent.OUT, onMouseOut);
-            k.height = _Str_2790;
+            k.height = HEIGHT;
             return k;
         }
 
@@ -43,8 +43,8 @@
                 k.removeEventListener(WindowMouseEvent.CLICK, onMouseClick);
                 k.removeEventListener(WindowMouseEvent.OVER, onMouseOver);
                 k.removeEventListener(WindowMouseEvent.OUT, onMouseOut);
-                k.width = _Str_3098;
-                k.height = _Str_2790;
+                k.width = WIDTH;
+                k.height = HEIGHT;
                 if (_Str_4440.indexOf(k) == -1)
                 {
                     _Str_4440.push(k);
@@ -64,7 +64,7 @@
                         _window = null;
                     }
                     _Str_2638 = true;
-                    _Str_2469.push(this);
+                    POOL.push(this);
                 }
             }
         }
@@ -72,13 +72,13 @@
         override protected function expose():void
         {
             super.expose();
-            _window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            _window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
         }
 
         override protected function conceal():void
         {
             super.conceal();
-            _window.color = ((_Str_3341) ? _Str_2841 : _Str_2531);
+            _window.color = ((_Str_3341) ? _Str_2841 : DEFAULT_COLOR);
         }
 
         private function _Str_3369(k:WindowMouseEvent):void

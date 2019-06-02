@@ -69,7 +69,7 @@
 
         public function get active():Boolean
         {
-            return (this.visible) && (this._window._Str_2767(WindowState.ACTIVE));
+            return (this.visible) && (this._window.getStateFlag(WindowState.ACTIVE));
         }
 
         public function get disposed():Boolean

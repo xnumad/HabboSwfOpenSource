@@ -15,7 +15,7 @@
         public var alpha:Number;
         public var width:int;
         public var height:int;
-        public var _Str_1723:String;
+        public var objectType:String;
         public var posture:String;
     }
 }

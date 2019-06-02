@@ -123,22 +123,22 @@
             this._guideId = k;
         }
 
-        public function get _Str_4207():String
+        public function get guideName():String
         {
             return this._guideName;
         }
 
-        public function set _Str_4207(k:String):void
+        public function set guideName(k:String):void
         {
             this._guideName = k;
         }
 
-        public function get _Str_6667():String
+        public function get guideFigure():String
         {
             return this._guideFigure;
         }
 
-        public function set _Str_6667(k:String):void
+        public function set guideFigure(k:String):void
         {
             this._guideFigure = k;
         }

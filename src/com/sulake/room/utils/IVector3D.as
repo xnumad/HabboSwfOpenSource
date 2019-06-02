@@ -1,6 +1,6 @@
 ﻿package com.sulake.room.utils
 {
-    public interface IVector3D 
+    public interface IVector3d 
     {
         function get x():Number;
         function get y():Number;

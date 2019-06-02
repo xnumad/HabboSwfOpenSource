@@ -19,10 +19,10 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_2929(this._Str_24576));
+            k.addMessageEvent(new _Str_2929(this.onRoomResult));
         }
 
-        private function _Str_24576(k:IMessageEvent):void
+        private function onRoomResult(k:IMessageEvent):void
         {
             var _local_2:_Str_2929 = (k as _Str_2929);
             if (_local_2 == null)
@@ -41,7 +41,7 @@
             }
             var _local_5:_Str_2370 = _local_3.data;
             _local_4._Str_3827 = _local_5._Str_3827;
-            _local_4._Str_3672 = (!(_local_5._Str_3094 == 0));
+            _local_4._Str_3672 = (!(_local_5.habboGroupId == 0));
             _local_4._Str_2738 = _local_5._Str_2738;
             _local_4._Str_9439 = _local_5._Str_5667;
             _local_4._Str_4418 = _local_3._Str_4418;

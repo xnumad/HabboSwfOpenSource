@@ -22,7 +22,7 @@
         override public function initProductIcon(k:IRoomEngine, _arg_2:IStuffData=null):void
         {
             var _local_3:IProduct = _Str_6851;
-            var _local_4:BitmapData = _local_3._Str_13474(this, this, this, (offer as IPurchasableOffer), _icon, _arg_2, this._Str_6676);
+            var _local_4:BitmapData = _local_3.initIcon(this, this, this, (offer as IPurchasableOffer), _icon, _arg_2, this._Str_6676);
             this.setIconImage(_local_4, true);
         }
 

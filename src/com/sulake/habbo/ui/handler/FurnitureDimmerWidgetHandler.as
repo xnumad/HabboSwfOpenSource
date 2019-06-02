@@ -83,7 +83,7 @@
                     {
                         return null;
                     }
-                    this._container.roomEngine._Str_17804(_local_2, _local_3.color, _local_3._Str_5123, _local_3._Str_11464);
+                    this._container.roomEngine.updateObjectRoomColor(_local_2, _local_3.color, _local_3._Str_5123, _local_3.bgOnly);
                     break;
             }
             return null;
@@ -91,7 +91,7 @@
 
         private function _Str_6826():Boolean
         {
-            var k:Boolean = this._container.roomSession._Str_2781;
+            var k:Boolean = this._container.roomSession.isRoomController;
             var _local_2:* = (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST);
             var _local_3:Boolean = this._container.sessionDataManager._Str_2799;
             return ((k) || (_local_3)) || (_local_2);
@@ -127,10 +127,10 @@
                     _local_6 = 0;
                     while (_local_6 < _local_2._Str_10888)
                     {
-                        _local_7 = _local_2._Str_14989(_local_6);
+                        _local_7 = _local_2.getPreset(_local_6);
                         if (_local_7 != null)
                         {
-                            _local_3._Str_17287(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
+                            _local_3.storePreset(_local_7.id, _local_7.type, _local_7.color, _local_7._Str_4272);
                         }
                         _local_6++;
                     }

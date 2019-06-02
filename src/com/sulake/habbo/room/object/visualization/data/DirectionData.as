@@ -2,7 +2,7 @@
 {
     public class DirectionData 
     {
-        public static const _Str_9471:int = -1;
+        public static const USE_DEFAULT_DIRECTION:int = -1;
 
         private var _layers:Array;
 
@@ -30,7 +30,7 @@
             return this._layers.length;
         }
 
-        private function _Str_3933(k:int):LayerData
+        private function getLayer(k:int):LayerData
         {
             if (((k < 0) || (k >= this.layerCount)))
             {
@@ -41,17 +41,17 @@
 
         public function _Str_6014(k:int):String
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2.tag;
             }
-            return LayerData._Str_12249;
+            return LayerData.DEFAULT_TAG;
         }
 
-        public function _Str_9289(k:int, _arg_2:String):void
+        public function setTag(k:int, _arg_2:String):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3.tag = _arg_2;
@@ -60,17 +60,17 @@
 
         public function _Str_10682(k:int):int
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2.ink;
             }
-            return LayerData._Str_7943;
+            return LayerData.DEFAULT_INK;
         }
 
-        public function _Str_16985(k:int, _arg_2:int):void
+        public function setInk(k:int, _arg_2:int):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3.ink = _arg_2;
@@ -79,17 +79,17 @@
 
         public function _Str_11350(k:int):int
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2.alpha;
             }
-            return LayerData._Str_8655;
+            return LayerData.DEFAULT_ALPHA;
         }
 
-        public function _Str_16703(k:int, _arg_2:int):void
+        public function setAlpha(k:int, _arg_2:int):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3.alpha = _arg_2;
@@ -98,17 +98,17 @@
 
         public function _Str_12280(k:int):Boolean
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2.ignoreMouse;
             }
-            return LayerData._Str_9888;
+            return LayerData.DEFAULT_IGNORE_MOUSE;
         }
 
         public function window1(k:int, _arg_2:Boolean):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3.ignoreMouse = _arg_2;
@@ -117,17 +117,17 @@
 
         public function _Str_10372(k:int):int
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_11051;
             }
-            return LayerData._Str_9326;
+            return LayerData.DEFAULT_X_OFFSET;
         }
 
-        public function _Str_24958(k:int, _arg_2:int):void
+        public function setXOffset(k:int, _arg_2:int):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3._Str_11051 = _arg_2;
@@ -136,17 +136,17 @@
 
         public function _Str_10926(k:int):int
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_10285;
             }
-            return LayerData._Str_9412;
+            return LayerData.DEFAULT_Y_OFFSET;
         }
 
-        public function _Str_24307(k:int, _arg_2:int):void
+        public function setYOffset(k:int, _arg_2:int):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3._Str_10285 = _arg_2;
@@ -155,17 +155,17 @@
 
         public function _Str_8329(k:int):Number
         {
-            var _local_2:LayerData = this._Str_3933(k);
+            var _local_2:LayerData = this.getLayer(k);
             if (_local_2 != null)
             {
                 return _local_2._Str_12320;
             }
-            return LayerData._Str_7951;
+            return LayerData.DEFAULT_Z_OFFSET;
         }
 
-        public function _Str_24059(k:int, _arg_2:Number):void
+        public function setZOffset(k:int, _arg_2:Number):void
         {
-            var _local_3:LayerData = this._Str_3933(k);
+            var _local_3:LayerData = this.getLayer(k);
             if (_local_3 != null)
             {
                 _local_3._Str_12320 = _arg_2;
@@ -187,8 +187,8 @@
             var _local_4:int;
             while (_local_4 < this.layerCount)
             {
-                _local_2 = this._Str_3933(_local_4);
-                _local_3 = k._Str_3933(_local_4);
+                _local_2 = this.getLayer(_local_4);
+                _local_3 = k.getLayer(_local_4);
                 if (_local_2)
                 {
                     _local_2._Str_17122(_local_3);

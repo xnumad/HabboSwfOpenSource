@@ -109,7 +109,7 @@
             else
             {
                 k.findChildByName("txt_price_activityPoints").caption = "0";
-                this._Str_9646("activityPoints_icon", k, ActivityPointTypeEnum._Str_7340);
+                this._Str_9646("activityPoints_icon", k, ActivityPointTypeEnum.LOYALTY);
             }
         }
 

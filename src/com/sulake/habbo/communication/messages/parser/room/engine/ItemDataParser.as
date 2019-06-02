@@ -108,8 +108,8 @@
                     }
                 }
             }
-            _local_11._Str_4172 = _local_7;
-            _local_11._Str_2481 = _local_8;
+            _local_11.usagePolicy = _local_7;
+            _local_11.ownerId = _local_8;
             _local_11.secondsToExpiration = _local_6;
             return _local_11;
         }

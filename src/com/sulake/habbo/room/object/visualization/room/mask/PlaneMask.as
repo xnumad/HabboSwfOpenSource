@@ -2,7 +2,7 @@
 {
     import com.sulake.core.utils.Map;
     import com.sulake.room.object.visualization.utils.IGraphicAsset;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneMask 
     {
@@ -44,7 +44,7 @@
             this._sizes = null;
         }
 
-        public function _Str_24540(k:int):PlaneMaskVisualization
+        public function createMaskVisualization(k:int):PlaneMaskVisualization
         {
             if (this._maskVisualizations.getValue(String(k)) != null)
             {
@@ -77,7 +77,7 @@
             return _local_2;
         }
 
-        protected function _Str_24650(k:int):PlaneMaskVisualization
+        protected function getMaskVisualization(k:int):PlaneMaskVisualization
         {
             if (k == this._lastSize)
             {
@@ -96,9 +96,9 @@
             return this._lastMaskVisualization;
         }
 
-        public function _Str_21021(k:Number, _arg_2:IVector3D):IGraphicAsset
+        public function getGraphicAsset(k:Number, _arg_2:IVector3d):IGraphicAsset
         {
-            var _local_3:PlaneMaskVisualization = this._Str_24650(k);
+            var _local_3:PlaneMaskVisualization = this.getMaskVisualization(k);
             if (_local_3 == null)
             {
                 return null;

@@ -17,7 +17,7 @@
         protected var _Str_9660:ISelectorListWindow;
         protected var _Str_17833:IWindowContainer;
         private var _Str_12981:Boolean = false;
-        private var _Str_2684:Boolean = false;
+        private var _initialized:Boolean = false;
 
         public function TabContextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -30,7 +30,7 @@
                 _local_13.style = _style;
                 _local_13.procedure = this._Str_20308;
             }
-            this._Str_2684 = true;
+            this._initialized = true;
         }
 
         public function get selector():ISelectorListWindow
@@ -57,47 +57,47 @@
 
         public function get iterator():IIterator
         {
-            return (this._Str_2684) ? this.selector.iterator : null;
+            return (this._initialized) ? this.selector.iterator : null;
         }
 
         public function get _Str_4277():uint
         {
-            return this._Str_9660._Str_6010;
+            return this._Str_9660.numSelectables;
         }
 
         public function _Str_5377(k:ITabButtonWindow):ITabButtonWindow
         {
-            return this.selector._Str_13279(k) as ITabButtonWindow;
+            return this.selector.addSelectable(k) as ITabButtonWindow;
         }
 
         public function _Str_25454(k:ITabButtonWindow, _arg_2:uint):ITabButtonWindow
         {
-            return this.selector._Str_16835(k, _arg_2) as ITabButtonWindow;
+            return this.selector.addSelectableAt(k, _arg_2) as ITabButtonWindow;
         }
 
         public function _Str_5897(k:ITabButtonWindow):void
         {
-            this.selector._Str_10845(k);
+            this.selector.removeSelectable(k);
         }
 
         public function _Str_3363(k:uint):ITabButtonWindow
         {
-            return this.selector._Str_5066(k) as ITabButtonWindow;
+            return this.selector.getSelectableAt(k) as ITabButtonWindow;
         }
 
         public function _Str_19493(k:String):ITabButtonWindow
         {
-            return this.selector._Str_5050(k) as ITabButtonWindow;
+            return this.selector.getSelectableByName(k) as ITabButtonWindow;
         }
 
         public function _Str_20824(k:uint):ITabButtonWindow
         {
-            return this.selector._Str_21373(k) as ITabButtonWindow;
+            return this.selector.getSelectableByID(k) as ITabButtonWindow;
         }
 
         public function _Str_23344(k:ITabButtonWindow):uint
         {
-            return this.selector._Str_8283(k);
+            return this.selector.getSelectableIndex(k);
         }
 
         private function _Str_20308(k:WindowEvent, _arg_2:IWindow):void

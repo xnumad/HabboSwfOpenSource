@@ -82,7 +82,7 @@
             {
                 if (getSpriteTag(_arg_2, direction, _local_3) == THUMBNAIL)
                 {
-                    _local_4 = (_Str_18363(_arg_2, _local_3, false) + getFrameNumber(_arg_2, _local_3));
+                    _local_4 = (getSpriteAssetNameWithoutFrame(_arg_2, _local_3, false) + getFrameNumber(_arg_2, _local_3));
                     _local_5 = getAsset(_local_4, _local_3);
                     if (_local_5 != null)
                     {

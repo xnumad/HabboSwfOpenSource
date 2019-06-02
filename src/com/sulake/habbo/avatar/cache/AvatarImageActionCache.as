@@ -24,7 +24,7 @@
             var _local_3:AvatarImageBodyPartCache = this._Str_1961(this._Str_1233);
             if (_local_3 != null)
             {
-                _local_3._Str_1108(_arg_2);
+                _local_3.setDirection(_arg_2);
             }
             this._Str_1233 = k;
         }
@@ -62,7 +62,7 @@
                 _local_4 = (this._Str_586.getValue(_local_6) as AvatarImageBodyPartCache);
                 if (_local_4 != null)
                 {
-                    _local_3 = _local_4._Str_1815();
+                    _local_3 = _local_4.getDirection();
                     if ((_arg_2 - _local_3) >= k)
                     {
                         _local_4.dispose();
@@ -72,7 +72,7 @@
             }
         }
 
-        public function _Str_2244():IActiveActionData
+        public function getAction():IActiveActionData
         {
             return this._Str_1233;
         }

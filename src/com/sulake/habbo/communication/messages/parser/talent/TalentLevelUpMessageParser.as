@@ -45,7 +45,7 @@
             return true;
         }
 
-        public function get _Str_11884():String
+        public function get talentTrackName():String
         {
             return this._talentTrackName;
         }

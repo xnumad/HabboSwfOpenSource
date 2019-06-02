@@ -26,7 +26,7 @@
             return k;
         }
 
-        public function _Str_19900(k:int):void
+        public function addAcceptedRequest(k:int):void
         {
             this._acceptedRequestIds.push(k);
         }

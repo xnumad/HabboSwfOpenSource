@@ -33,7 +33,7 @@
         override public function update(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
             super.update(k);
-            this._songId = this._Str_24806(k._Str_2415);
+            this._songId = this._Str_24806(k.extraParam);
         }
 
         public function _Str_17571(k:RoomWidgetSongUpdateEvent):void

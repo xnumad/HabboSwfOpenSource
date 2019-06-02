@@ -37,7 +37,7 @@
             return this._gender;
         }
 
-        public function get _Str_9690():String
+        public function get customInfo():String
         {
             return this._customInfo;
         }

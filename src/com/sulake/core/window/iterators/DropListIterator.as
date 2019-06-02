@@ -24,27 +24,27 @@
 
         public function indexOf(k:*):int
         {
-            return this._iterable._Str_15940(k);
+            return this._iterable.getMenuItemIndex(k);
         }
 
         override flash_proxy function getProperty(k:*):*
         {
-            return this._iterable._Str_16005(uint(k));
+            return this._iterable.getMenuItemAt(uint(k));
         }
 
         override flash_proxy function setProperty(k:*, _arg_2:*):void
         {
             var _local_3:IWindow = (_arg_2 as IWindow);
-            var _local_4:int = this._iterable._Str_15940(_local_3);
+            var _local_4:int = this._iterable.getMenuItemIndex(_local_3);
             if (_local_4 == k)
             {
                 return;
             }
             if (_local_4 > -1)
             {
-                this._iterable._Str_18001(_local_3);
+                this._iterable.removeMenuItem(_local_3);
             }
-            this._iterable._Str_17284(_local_3, k);
+            this._iterable.addMenuItemAt(_local_3, k);
         }
 
         override flash_proxy function nextNameIndex(k:int):int
@@ -54,7 +54,7 @@
 
         override flash_proxy function nextValue(k:int):*
         {
-            return this._iterable._Str_16005((uint(k) - 1));
+            return this._iterable.getMenuItemAt((uint(k) - 1));
         }
     }
 }

@@ -108,12 +108,12 @@
             return this._Str_21073;
         }
 
-        public function set _Str_2781(k:Boolean):void
+        public function set isRoomController(k:Boolean):void
         {
             this._Str_7750 = k;
         }
 
-        public function get _Str_2781():Boolean
+        public function get isRoomController():Boolean
         {
             return this._Str_7750;
         }
@@ -158,12 +158,12 @@
             return this._Str_6693;
         }
 
-        public function set _Str_2415(k:String):void
+        public function set extraParam(k:String):void
         {
             this._Str_3194 = k;
         }
 
-        public function get _Str_2415():String
+        public function get extraParam():String
         {
             return this._Str_3194;
         }
@@ -218,12 +218,12 @@
             return this._ownerName;
         }
 
-        public function set _Str_4172(k:int):void
+        public function set usagePolicy(k:int):void
         {
             this._Str_5135 = k;
         }
 
-        public function get _Str_4172():int
+        public function get usagePolicy():int
         {
             return this._Str_5135;
         }

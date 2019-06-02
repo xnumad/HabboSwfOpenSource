@@ -29,7 +29,7 @@
         {
             if (this._frameCount < 0)
             {
-                this._Str_20944();
+                this.calculateLength();
             }
             return this._frameCount;
         }
@@ -50,14 +50,14 @@
             this._frameSequences = [];
         }
 
-        public function _Str_22292(k:int, _arg_2:Boolean):AnimationFrameSequenceData
+        public function addFrameSequence(k:int, _arg_2:Boolean):AnimationFrameSequenceData
         {
             var _local_3:AnimationFrameSequenceData = new AnimationFrameSequenceData(k, _arg_2);
             this._frameSequences.push(_local_3);
             return _local_3;
         }
 
-        public function _Str_20944():void
+        public function calculateLength():void
         {
             var _local_2:AnimationFrameSequenceData;
             this._frameCount = 0;
@@ -109,7 +109,7 @@
                     }
                     _local_5++;
                 }
-                return this._Str_16508(k, _local_3, _local_5, (_arg_2 - _local_7), _local_4);
+                return this.getFrameFromSpecificSequence(k, _local_3, _local_5, (_arg_2 - _local_7), _local_4);
             }
             _local_5 = int((this._frameSequences.length * Math.random()));
             _local_3 = (this._frameSequences[_local_5] as AnimationFrameSequenceData);
@@ -118,7 +118,7 @@
                 return null;
             }
             _arg_2 = 0;
-            return this._Str_16508(k, _local_3, _local_5, _arg_2, false);
+            return this.getFrameFromSpecificSequence(k, _local_3, _local_5, _arg_2, false);
         }
 
         public function _Str_7945(k:int, _arg_2:int, _arg_3:int, _arg_4:int):AnimationFrame
@@ -134,12 +134,12 @@
                 {
                     return this._Str_2259(k, _arg_4);
                 }
-                return this._Str_16508(k, _local_5, _arg_2, _arg_3, false);
+                return this.getFrameFromSpecificSequence(k, _local_5, _arg_2, _arg_3, false);
             }
             return null;
         }
 
-        private function _Str_16508(k:int, _arg_2:AnimationFrameSequenceData, _arg_3:int, _arg_4:int, _arg_5:Boolean):AnimationFrame
+        private function getFrameFromSpecificSequence(k:int, _arg_2:AnimationFrameSequenceData, _arg_3:int, _arg_4:int, _arg_5:Boolean):AnimationFrame
         {
             var _local_6:int;
             var _local_7:AnimationFrameData;
@@ -174,15 +174,15 @@
                 _local_12 = _local_7.repeats;
                 if (_local_12 > 1)
                 {
-                    _local_12 = _arg_2._Str_25161(_local_6);
+                    _local_12 = _arg_2.getRepeats(_local_6);
                 }
                 _local_13 = (this._frameRepeat * _local_12);
                 if (_arg_5)
                 {
-                    _local_13 = AnimationFrame._Str_9016;
+                    _local_13 = AnimationFrame.FRAME_REPEAT_FOREVER;
                 }
                 _local_14 = false;
-                if (((!(this._isRandom)) && (!(_arg_2._Str_23165))))
+                if (((!(this._isRandom)) && (!(_arg_2.isRandom))))
                 {
                     if (((_arg_3 == (this._frameSequences.length - 1)) && (_arg_4 == (_arg_2._Str_2185 - 1))))
                     {

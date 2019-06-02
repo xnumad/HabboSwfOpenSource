@@ -76,7 +76,7 @@
             this._window = (windowManager.buildFromXML(XML(assets.getAssetByName("video_viewer_xml").content)) as IWindowContainer);
             if (k)
             {
-                this._itemTemplate = IItemListWindow(this._window.findChildByName("playlists"))._Str_2915(0);
+                this._itemTemplate = IItemListWindow(this._window.findChildByName("playlists")).removeListItemAt(0);
             }
             else
             {
@@ -393,7 +393,7 @@
             {
                 return;
             }
-            _local_4._Str_2724();
+            _local_4.destroyListItems();
             this._selectedItem = null;
             for each (_local_5 in _arg_2)
             {

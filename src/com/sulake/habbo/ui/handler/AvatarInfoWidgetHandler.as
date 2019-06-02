@@ -110,7 +110,7 @@
         {
             if ((((this._container) && (this._container.toolbar)) && (this._container.toolbar.events)))
             {
-                this._container.toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_7041);
+                this._container.toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClicked);
             }
             if ((((this._container) && (this._container.sessionDataManager)) && (this._container.sessionDataManager.events)))
             {
@@ -118,8 +118,8 @@
             }
             if ((((this._container) && (this._container.roomSessionManager)) && (this._container.roomSessionManager.events)))
             {
-                this._container.roomSessionManager.events.removeEventListener(RoomSessionPetStatusUpdateEvent.RSPFUE_PET_STATUS_UPDATE, this._Str_12831);
-                this._container.roomSessionManager.events.removeEventListener(RoomSessionPetLevelUpdateEvent.RSPLUE_PET_LEVEL_UPDATE, this._Str_14639);
+                this._container.roomSessionManager.events.removeEventListener(RoomSessionPetStatusUpdateEvent.RSPFUE_PET_STATUS_UPDATE, this.onPetStatusUpdate);
+                this._container.roomSessionManager.events.removeEventListener(RoomSessionPetLevelUpdateEvent.RSPLUE_PET_LEVEL_UPDATE, this.onPetLevelUpdate);
                 this._container.roomSessionManager.events.removeEventListener(RoomSessionNestBreedingSuccessEvent.RSPFUE_NEST_BREEDING_SUCCESS, this._Str_20584);
             }
             if (((this._container) && (this._container.connection)))
@@ -146,7 +146,7 @@
             }
             if ((((this._container) && (this._container.toolbar)) && (this._container.toolbar.events)))
             {
-                this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_7041);
+                this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClicked);
             }
             if ((((this._container) && (this._container.sessionDataManager)) && (this._container.sessionDataManager.events)))
             {
@@ -154,9 +154,9 @@
             }
             if ((((this._container) && (this._container.roomSessionManager)) && (this._container.roomSessionManager.events)))
             {
-                this._container.roomSessionManager.events.addEventListener(RoomSessionPetStatusUpdateEvent.RSPFUE_PET_STATUS_UPDATE, this._Str_12831);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionPetStatusUpdateEvent.RSPFUE_PET_STATUS_UPDATE, this.onPetStatusUpdate);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionNestBreedingSuccessEvent.RSPFUE_NEST_BREEDING_SUCCESS, this._Str_20584);
-                this._container.roomSessionManager.events.addEventListener(RoomSessionPetLevelUpdateEvent.RSPLUE_PET_LEVEL_UPDATE, this._Str_14639);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionPetLevelUpdateEvent.RSPLUE_PET_LEVEL_UPDATE, this.onPetLevelUpdate);
             }
             if (((this._container) && (this._container.connection)))
             {
@@ -175,7 +175,7 @@
             }
         }
 
-        private function _Str_7041(k:HabboToolbarEvent):void
+        private function onToolbarClicked(k:HabboToolbarEvent):void
         {
             if (k._Str_3378 == HabboToolbarIconEnum.MEMENU)
             {
@@ -195,7 +195,7 @@
             this._widget.close();
         }
 
-        private function _Str_12831(k:RoomSessionPetStatusUpdateEvent):void
+        private function onPetStatusUpdate(k:RoomSessionPetStatusUpdateEvent):void
         {
             var _local_2:Boolean;
             var _local_3:Boolean;
@@ -205,10 +205,10 @@
             var _local_7:_Str_4828;
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
-                _local_2 = k._Str_2934;
-                _local_3 = k._Str_3068;
-                _local_4 = k._Str_2898;
-                _local_5 = k._Str_2921;
+                _local_2 = k.canBreed;
+                _local_3 = k.canHarvest;
+                _local_4 = k.canRevive;
+                _local_5 = k.hasBreedingPermission;
                 _local_6 = this._Str_19958(k._Str_2508);
                 if (_local_6 == null)
                 {
@@ -220,7 +220,7 @@
             }
         }
 
-        private function _Str_14639(k:RoomSessionPetLevelUpdateEvent):void
+        private function onPetLevelUpdate(k:RoomSessionPetLevelUpdateEvent):void
         {
             var _local_2:int;
             var _local_3:RoomUserData;
@@ -358,7 +358,7 @@
                     }
                     return;
                 case RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_INVENTORY:
-                    this._Str_23199((k as RoomEngineUseProductEvent)._Str_22515, (k as RoomEngineUseProductEvent)._Str_23797);
+                    this._Str_23199((k as RoomEngineUseProductEvent).inventoryStripId, (k as RoomEngineUseProductEvent).furnitureTypeId);
                     return;
                 case RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_ROOM:
                     this._Str_23807((k as RoomEngineUseProductEvent)._Str_1577);
@@ -397,7 +397,7 @@
         {
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
-                this._widget._Str_24481(k._Str_2508, k._Str_16731);
+                this._widget._Str_24481(k._Str_2508, k.rarityCategory);
             }
         }
 
@@ -500,21 +500,21 @@
                         {
                             if (_arg_4 == FurniCategory._Str_6915)
                             {
-                                if (!_local_12._Str_2898)
+                                if (!_local_12.canRevive)
                                 {
                                     continue;
                                 }
                             }
                             if (_arg_4 == FurniCategory._Str_8726)
                             {
-                                if ((((_local_12._Str_3897 < _local_10) || (_local_12._Str_2898)) || (_local_12._Str_2934)))
+                                if ((((_local_12._Str_3897 < _local_10) || (_local_12.canRevive)) || (_local_12.canBreed)))
                                 {
                                     continue;
                                 }
                             }
                             if (_arg_4 == FurniCategory._Str_9449)
                             {
-                                if (((_local_12._Str_3897 >= _local_10) || (_local_12._Str_2898)))
+                                if (((_local_12._Str_3897 >= _local_10) || (_local_12.canRevive)))
                                 {
                                     continue;
                                 }
@@ -546,12 +546,12 @@
                 }
                 else
                 {
-                    if (!_local_10._Str_2934)
+                    if (!_local_10.canBreed)
                     {
                     }
                     else
                     {
-                        if (((!(_local_10._Str_2921)) && (!(_local_10.ownerId == _arg_5))))
+                        if (((!(_local_10.hasBreedingPermission)) && (!(_local_10.ownerId == _arg_5))))
                         {
                         }
                         else

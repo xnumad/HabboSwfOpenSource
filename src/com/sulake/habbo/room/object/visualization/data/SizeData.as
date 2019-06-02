@@ -5,8 +5,8 @@
 
     public class SizeData 
     {
-        public static const _Str_7946:int = 1000;
-        public static const _Str_18866:int = 0;
+        public static const LAYER_LIMIT:int = 1000;
+        public static const DEFAULT_DIRECTION:int = 0;
 
         private var _layerCount:int = 0;
         private var _angle:int = 360;
@@ -22,9 +22,9 @@
             {
                 k = 0;
             }
-            if (k > _Str_7946)
+            if (k > LAYER_LIMIT)
             {
-                k = _Str_7946;
+                k = LAYER_LIMIT;
             }
             this._layerCount = k;
             if (_arg_2 < 1)
@@ -91,17 +91,17 @@
             return this._layerCount;
         }
 
-        public function _Str_22886(k:XML):Boolean
+        public function defineLayers(k:XML):Boolean
         {
             if (k == null)
             {
                 return false;
             }
             var _local_2:XMLList = k.layer;
-            return this._Str_19820(this._defaultDirection, _local_2);
+            return this.defineDirection(this._defaultDirection, _local_2);
         }
 
-        public function _Str_22896(k:XML):Boolean
+        public function defineDirections(k:XML):Boolean
         {
             var _local_6:XML;
             var _local_7:int;
@@ -129,7 +129,7 @@
                 }
                 _local_3 = new DirectionData(this.layerCount);
                 _local_3._Str_17122(this._defaultDirection);
-                this._Str_19820(_local_3, _local_8);
+                this.defineDirection(_local_3, _local_8);
                 this._directions.add(String(_local_7), _local_3);
                 this._lastDirection = -1;
                 this._lastDirectionData = null;
@@ -138,7 +138,7 @@
             return true;
         }
 
-        private function _Str_19820(k:DirectionData, _arg_2:XMLList):Boolean
+        private function defineDirection(k:DirectionData, _arg_2:XMLList):Boolean
         {
             var _local_5:XML;
             var _local_6:int;
@@ -167,25 +167,25 @@
                 _local_7 = _local_5.@tag;
                 if (_local_7.length > 0)
                 {
-                    k._Str_9289(_local_6, _local_7);
+                    k.setTag(_local_6, _local_7);
                 }
                 _local_8 = _local_5.@ink;
                 switch (_local_8)
                 {
                     case "ADD":
-                        k._Str_16985(_local_6, LayerData._Str_15822);
+                        k.setInk(_local_6, LayerData.INK_ADD);
                         break;
                     case "SUBTRACT":
-                        k._Str_16985(_local_6, LayerData._Str_12715);
+                        k.setInk(_local_6, LayerData.INK_SUBTRACT);
                         break;
                     case "DARKEN":
-                        k._Str_16985(_local_6, LayerData._Str_12864);
+                        k.setInk(_local_6, LayerData.INK_DARKEN);
                         break;
                 }
                 _local_7 = _local_5.@alpha;
                 if (_local_7.length > 0)
                 {
-                    k._Str_16703(_local_6, int(_local_7));
+                    k.setAlpha(_local_6, int(_local_7));
                 }
                 _local_7 = _local_5.@ignoreMouse;
                 if (_local_7.length > 0)
@@ -196,25 +196,25 @@
                 _local_7 = _local_5.@x;
                 if (_local_7.length > 0)
                 {
-                    k._Str_24958(_local_6, int(_local_7));
+                    k.setXOffset(_local_6, int(_local_7));
                 }
                 _local_7 = _local_5.@y;
                 if (_local_7.length > 0)
                 {
-                    k._Str_24307(_local_6, int(_local_7));
+                    k.setYOffset(_local_6, int(_local_7));
                 }
                 _local_7 = _local_5.@z;
                 if (_local_7.length > 0)
                 {
                     _local_10 = int(_local_7);
-                    k._Str_24059(_local_6, (Number(_local_10) / -1000));
+                    k.setZOffset(_local_6, (Number(_local_10) / -1000));
                 }
                 _local_4++;
             }
             return true;
         }
 
-        public function _Str_22971(k:XML):Boolean
+        public function defineColors(k:XML):Boolean
         {
             var _local_7:XML;
             var _local_8:String;
@@ -257,7 +257,7 @@
                     }
                     _local_12 = int(_local_11.@id);
                     _local_13 = parseInt(_local_11.@color, 16);
-                    _local_2._Str_1685(_local_13, _local_12);
+                    _local_2.setColor(_local_13, _local_12);
                     _local_10++;
                 }
                 if (_local_2 != null)
@@ -301,10 +301,10 @@
             {
                 return int(this._directions.getKey(_local_4));
             }
-            return _Str_18866;
+            return DEFAULT_DIRECTION;
         }
 
-        private function _Str_7931(k:int):DirectionData
+        private function getDirectionData(k:int):DirectionData
         {
             if (((k == this._lastDirection) && (!(this._lastDirectionData == null))))
             {
@@ -324,34 +324,34 @@
         public function _Str_6014(k:int, _arg_2:int):String
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_6014(_arg_2);
             }
-            return LayerData._Str_12249;
+            return LayerData.DEFAULT_TAG;
         }
 
         public function _Str_10682(k:int, _arg_2:int):int
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_10682(_arg_2);
             }
-            return LayerData._Str_7943;
+            return LayerData.DEFAULT_INK;
         }
 
         public function _Str_11350(k:int, _arg_2:int):int
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_11350(_arg_2);
             }
-            return LayerData._Str_8655;
+            return LayerData.DEFAULT_ALPHA;
         }
 
         public function _Str_751(k:int, _arg_2:int):uint
@@ -361,51 +361,51 @@
             {
                 return _local_3._Str_751(k);
             }
-            return ColorData._Str_2531;
+            return ColorData.DEFAULT_COLOR;
         }
 
         public function _Str_12280(k:int, _arg_2:int):Boolean
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_12280(_arg_2);
             }
-            return LayerData._Str_9888;
+            return LayerData.DEFAULT_IGNORE_MOUSE;
         }
 
         public function _Str_10372(k:int, _arg_2:int):int
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_10372(_arg_2);
             }
-            return LayerData._Str_9326;
+            return LayerData.DEFAULT_X_OFFSET;
         }
 
         public function _Str_10926(k:int, _arg_2:int):int
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_10926(_arg_2);
             }
-            return LayerData._Str_9412;
+            return LayerData.DEFAULT_Y_OFFSET;
         }
 
         public function _Str_8329(k:int, _arg_2:int):Number
         {
             var _local_3:DirectionData;
-            _local_3 = this._Str_7931(k);
+            _local_3 = this.getDirectionData(k);
             if (_local_3 != null)
             {
                 return _local_3._Str_8329(_arg_2);
             }
-            return LayerData._Str_7951;
+            return LayerData.DEFAULT_Z_OFFSET;
         }
     }
 }

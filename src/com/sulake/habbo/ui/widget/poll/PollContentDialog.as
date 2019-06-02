@@ -180,7 +180,7 @@
                     _local_3 = (this._window.findChildByName("poll_content_wrapper") as IItemListWindow);
                     if (_local_3 != null)
                     {
-                        _local_5 = (_local_3._Str_2614.height - _local_3._Str_3707.height);
+                        _local_5 = (_local_3.visibleRegion.height - _local_3._Str_3707.height);
                         this._window.height = (this._window.height + _local_5);
                         this._window.center();
                     }
@@ -247,7 +247,7 @@
                 _local_3 = (this._window.findChildByName("poll_answer_selector") as ISelectorWindow);
                 if (_local_3)
                 {
-                    _local_4 = _local_3._Str_2657();
+                    _local_4 = _local_3.getSelected();
                     if (_local_4)
                     {
                         _local_5 = k._Str_6909[_local_4.id];

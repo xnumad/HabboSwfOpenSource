@@ -57,7 +57,7 @@
         protected var _Str_12489:int = 0;
         protected var _Str_18297:int = 0;
         protected var _Str_20735:AdSlot = null;
-        protected var _Str_1860:AdSchedule = null;
+        protected var _owner:AdSchedule = null;
         protected var _Str_15504:Boolean = true;
         protected var _Str_3384:AdServerConfig = null;
         protected var _Str_3426:Boolean = false;
@@ -81,7 +81,7 @@
                 "height":250
             });
             super(k, _arg_3, _arg_4, _arg_6, null, _arg_12, _arg_10, _arg_11, false, null, _arg_17, _arg_18, _arg_19, _arg_20, _arg_21, _arg_22, null, _arg_24, _arg_27, _arg_5);
-            this._Str_1860 = _arg_2;
+            this._owner = _arg_2;
             _Str_7240 = _arg_5;
             this._Str_12489 = _arg_5;
             this._Str_15246 = _arg_7;
@@ -265,7 +265,7 @@
 
         override public function get streamID():String
         {
-            return _Str_576;
+            return _id;
         }
 
         public function get adSlotID():String
@@ -854,7 +854,7 @@
                     "deliveryType":_Str_4101,
                     "mimeType":_Str_2230,
                     "bitrate":_Str_4980,
-                    "width":_Str_1720,
+                    "width":_width,
                     "height":_height
                 });
             }
@@ -1285,7 +1285,7 @@
             this._Str_18270 = true;
             if (this._Str_2384 != null)
             {
-                k = new _Str_3019(_Str_2335, _Str_1720, _height);
+                k = new _Str_3019(_Str_2335, _width, _height);
                 this._Str_2384.processStartCompanionAdEvent(k);
             }
         }
@@ -1296,7 +1296,7 @@
             this._Str_18270 = false;
             if (this._Str_2384 != null)
             {
-                k = new _Str_3019(_Str_2335, _Str_1720, _height);
+                k = new _Str_3019(_Str_2335, _width, _height);
                 this._Str_2384.processStopCompanionAdEvent(k);
             }
         }
@@ -1714,7 +1714,7 @@
 
         public function clone(k:int=0):AdSlot
         {
-            var _local_2:AdSlot = new AdSlot(_parent, this._Str_1860, _Str_2335, _Str_2987, _Str_7240, (_Str_576 + "-c"), this._Str_15246, this._Str_2539, this._Str_15880, _Str_2467, _Str_10178, _Str_990, this._Str_3124, this._Str_13174, null, this._Str_6910, _Str_4718, _Str_4101, _Str_4980, _Str_4538, _Str_3744, _Str_3869, this._Str_3908, _Str_4797, this._Str_15504, this._Str_23197, _Str_2466, this._Str_5097, this._Str_8738);
+            var _local_2:AdSlot = new AdSlot(_parent, this._owner, _Str_2335, _Str_2987, _Str_7240, (_id + "-c"), this._Str_15246, this._Str_2539, this._Str_15880, _Str_2467, _Str_10178, _Str_990, this._Str_3124, this._Str_13174, null, this._Str_6910, _Str_4718, _Str_4101, _Str_4980, _Str_4538, _Str_3744, _Str_3869, this._Str_3908, _Str_4797, this._Str_15504, this._Str_23197, _Str_2466, this._Str_5097, this._Str_8738);
             _local_2._Str_20694 = this._Str_12489;
             _local_2._Str_6097 = this._Str_5596;
             _local_2._Str_25791(this);
@@ -1725,7 +1725,7 @@
         {
             var k:Object = new Object();
             k = {
-                "id":_Str_576,
+                "id":_id,
                 "uid":_Str_2995,
                 "type":this._Str_22554(),
                 "position":this._Str_2539,

@@ -177,7 +177,7 @@
         {
             if (this._window != null)
             {
-                this._listWindow._Str_2724();
+                this._listWindow.destroyListItems();
                 this._forumsListView = null;
                 this._threadListView = null;
                 this._messageListView = null;
@@ -186,7 +186,7 @@
             {
                 this._window = (this._controller.windowManager.buildFromXML(XML(new HabboFriendBarCom.groupforum_main_view_xml())) as IFrameWindow);
                 this._listWindow = (this._window.findChildByName("scrollable_message_list") as IScrollableListWindow);
-                this._listWindow._Str_6920.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_25680, 100);
+                this._listWindow.scrollableWindow.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_25680, 100);
                 this._window.center();
                 this._window.y = _Str_17065;
                 this._txtElement = this._window.findChildByName("page_info");

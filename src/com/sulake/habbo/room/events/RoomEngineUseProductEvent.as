@@ -15,12 +15,12 @@
             this._furnitureTypeId = _arg_6;
         }
 
-        public function get _Str_22515():int
+        public function get inventoryStripId():int
         {
             return this._inventoryStripId;
         }
 
-        public function get _Str_23797():int
+        public function get furnitureTypeId():int
         {
             return this._furnitureTypeId;
         }

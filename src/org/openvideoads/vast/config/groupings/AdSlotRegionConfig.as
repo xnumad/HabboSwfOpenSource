@@ -11,7 +11,7 @@
     {
         protected var _Str_4373:Boolean = false;
         protected var _Str_21590:Boolean = false;
-        protected var _Str_1720:int = -1;
+        protected var _width:int = -1;
         protected var _height:int = -1;
         protected var _Str_21979:Array = null;
         protected var _Str_2442:Object = null;
@@ -216,17 +216,17 @@
         {
             if ((k is String))
             {
-                this._Str_1720 = parseInt(k);
+                this._width = parseInt(k);
             }
             else
             {
-                this._Str_1720 = k;
+                this._width = k;
             }
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function hasHeightSpecified():Boolean

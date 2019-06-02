@@ -16,7 +16,7 @@
         protected static const _Str_17719:int = 3;
         protected static const ALIGN_TOP:int = 4;
         protected static const _Str_8656:int = 8;
-        protected static const _Str_3606:int = 18;
+        protected static const ALIGN_BOTTOM:int = 18;
         protected static const _Str_18320:int = 18;
 
         private var _disposed:Boolean = false;
@@ -141,7 +141,7 @@
                         case _Str_8656:
                             this._Str_6692.y = ((this._Str_1868.bitmap.height / 2) - (k.height / 2));
                             break;
-                        case _Str_3606:
+                        case ALIGN_BOTTOM:
                             this._Str_6692.y = (this._Str_1868.bitmap.height - k.height);
                             break;
                     }

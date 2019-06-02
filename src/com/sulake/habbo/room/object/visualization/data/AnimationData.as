@@ -5,9 +5,9 @@
 
     public class AnimationData 
     {
-        public static const _Str_20620:int = 0;
-        private static const _Str_14602:int = 1000000;
-        private static const _Str_11349:int = 2000000;
+        public static const DEFAULT_FRAME_NUMBER:int = 0;
+        private static const TRANSITION_TO_ANIMATION_OFFSET:int = 1000000;
+        private static const TRANSITION_FROM_ANIMATION_OFFSET:int = 2000000;
 
         private var _layers:Map = null;
         private var _frameCount:int = -1;
@@ -19,24 +19,24 @@
             this._layers = new Map();
         }
 
-        public static function _Str_12716(k:int):int
+        public static function getTransitionToAnimationId(k:int):int
         {
-            return _Str_14602 + k;
+            return TRANSITION_TO_ANIMATION_OFFSET + k;
         }
 
-        public static function _Str_18003(k:int):int
+        public static function getTransitionFromAnimationId(k:int):int
         {
-            return _Str_11349 + k;
+            return TRANSITION_FROM_ANIMATION_OFFSET + k;
         }
 
-        public static function _Str_11758(k:int):Boolean
+        public static function isTransitionToAnimation(k:int):Boolean
         {
-            return (k >= _Str_14602) && (k < _Str_11349);
+            return (k >= TRANSITION_TO_ANIMATION_OFFSET) && (k < TRANSITION_FROM_ANIMATION_OFFSET);
         }
 
-        public static function _Str_10381(k:int):Boolean
+        public static function isTransitionFromAnimation(k:int):Boolean
         {
-            return k >= _Str_11349;
+            return k >= TRANSITION_FROM_ANIMATION_OFFSET;
         }
 
 
@@ -62,7 +62,7 @@
             this._immediateChanges = null;
         }
 
-        public function _Str_22313(k:Array):void
+        public function setImmediateChanges(k:Array):void
         {
             this._immediateChanges = k;
         }
@@ -124,7 +124,7 @@
                     _local_8 = int(_local_11);
                 }
                 _local_9 = (!(int(_local_5.@random) == 0));
-                if (!this._Str_22260(_local_6, _local_7, _local_8, _local_9, _local_5))
+                if (!this.addLayer(_local_6, _local_7, _local_8, _local_9, _local_5))
                 {
                     return false;
                 }
@@ -133,7 +133,7 @@
             return true;
         }
 
-        private function _Str_22260(k:int, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:XML):Boolean
+        private function addLayer(k:int, _arg_2:int, _arg_3:int, _arg_4:Boolean, _arg_5:XML):Boolean
         {
             var _local_11:XML;
             var _local_12:int;
@@ -167,7 +167,7 @@
                 {
                     _local_13 = true;
                 }
-                _local_15 = _local_6._Str_22292(_local_12, _local_13);
+                _local_15 = _local_6.addFrameSequence(_local_12, _local_13);
                 _local_16 = _local_11.frame;
                 _local_17 = 0;
                 while (_local_17 < _local_16.length())
@@ -183,14 +183,14 @@
                     _local_21 = int(_local_18.@y);
                     _local_22 = int(_local_18.@randomX);
                     _local_23 = int(_local_18.@randomY);
-                    _local_24 = this._Str_24818(_local_18);
-                    _local_15._Str_22551(_local_19, _local_20, _local_21, _local_22, _local_23, _local_24);
+                    _local_24 = this.readDirectionalOffsets(_local_18);
+                    _local_15.addFrame(_local_19, _local_20, _local_21, _local_22, _local_23, _local_24);
                     _local_17++;
                 }
                 _local_15.initialize();
                 _local_9++;
             }
-            _local_6._Str_20944();
+            _local_6.calculateLength();
             this._layers.add(k, _local_6);
             var _local_10:int = _local_6._Str_2185;
             if (_local_10 > this._frameCount)
@@ -200,7 +200,7 @@
             return true;
         }
 
-        private function _Str_24818(k:XML):DirectionalOffsetData
+        private function readDirectionalOffsets(k:XML):DirectionalOffsetData
         {
             var _local_4:Array;
             var _local_5:XML;
@@ -230,7 +230,7 @@
                         {
                             _local_2 = new DirectionalOffsetData();
                         }
-                        _local_2._Str_9421(_local_9, _local_10, _local_11);
+                        _local_2.setOffset(_local_9, _local_10, _local_11);
                     }
                     _local_7++;
                 }

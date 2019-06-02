@@ -20,17 +20,17 @@
             this._status = _arg_4;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._roomIndex;
         }
 
-        public function get _Str_3094():int
+        public function get habboGroupId():int
         {
             return this._habboGroupId;
         }
 
-        public function get _Str_14525():String
+        public function get habboGroupName():String
         {
             return this._habboGroupName;
         }

@@ -198,7 +198,7 @@
 
         private function _Str_13315(k:WindowMouseEvent):void
         {
-            if (!this._toolbar.catalog.videoOffers.launch(VideoOfferTypeEnum._Str_17371))
+            if (!this._toolbar.catalog.videoOffers.launch(VideoOfferTypeEnum.CREDIT))
             {
                 this._Str_2669();
             }

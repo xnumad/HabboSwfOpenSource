@@ -110,7 +110,7 @@
             var _local_3:int;
             while (_local_3 < this._palettes.length)
             {
-                _local_4 = this._Str_783(_local_3);
+                _local_4 = this.getPalette(_local_3);
                 if (_local_4)
                 {
                     if (k.length > _local_3)
@@ -177,7 +177,7 @@
 
         public function _Str_17959(k:int, _arg_2:int):AvatarEditorGridColorItem
         {
-            var _local_3:Array = this._Str_783(_arg_2);
+            var _local_3:Array = this.getPalette(_arg_2);
             if (!_local_3)
             {
                 return null;
@@ -205,7 +205,7 @@
 
         private function _Str_23284(k:int, _arg_2:int):void
         {
-            var _local_3:Array = this._Str_783(_arg_2);
+            var _local_3:Array = this.getPalette(_arg_2);
             if (!_local_3)
             {
                 return;
@@ -303,7 +303,7 @@
 
         public function _Str_13355(k:int):AvatarEditorGridColorItem
         {
-            var _local_2:Array = this._Str_783(k);
+            var _local_2:Array = this.getPalette(k);
             if (((!(_local_2)) || (_local_2.length <= this._paletteIndexes[k])))
             {
                 return null;
@@ -326,7 +326,7 @@
             return this._parts;
         }
 
-        public function _Str_783(k:int):Array
+        public function getPalette(k:int):Array
         {
             if (!this._paletteIndexes)
             {
@@ -437,7 +437,7 @@
             var _local_2:Array = new Array();
             var _local_3:Array = this._Str_16788();
             var _local_4:Boolean;
-            var _local_5:Array = this._Str_783(0);
+            var _local_5:Array = this.getPalette(0);
             var _local_6:int = _Str_21219(_local_5, k);
             if (_local_6 == -1)
             {

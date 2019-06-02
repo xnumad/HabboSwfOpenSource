@@ -45,7 +45,7 @@
             }
             this._itemListWindow = (window.findChildByName("itemlist_featured") as IItemListWindow);
             this._template = (this._itemListWindow.getListItemByName("featured_item_template") as IWindowContainer);
-            this._itemListWindow._Str_2659();
+            this._itemListWindow.removeListItems();
             if (((this._catalog._Str_5320 == null) || (this._catalog._Str_5320.length == 0)))
             {
                 return true;
@@ -71,7 +71,7 @@
             var _local_5:String;
             var _local_6:IStaticBitmapWrapperWindow;
             var _local_3:ITextWindow = (_arg_2.findChildByName("item_title") as ITextWindow);
-            _local_3.text = k._Str_20736;
+            _local_3.text = k.itemName;
             if (((!(k._Str_15933 == null)) && (!(k._Str_15933 == ""))))
             {
                 _local_5 = this._catalog.context.configuration.getProperty("image.library.url");
@@ -92,7 +92,7 @@
             var _local_4:_Str_3920;
             if (k.type == WindowMouseEvent.DOWN)
             {
-                _local_3 = this._itemListWindow._Str_3156(_arg_2.parent);
+                _local_3 = this._itemListWindow.getListItemIndex(_arg_2.parent);
                 _local_3 = ((_local_3 < 0) ? 0 : (_local_3 + 1));
                 _local_4 = this._catalog._Str_5320[_local_3];
                 switch (_local_4.type)

@@ -42,7 +42,7 @@
                 this._paletteIsGrayscale = false;
             }
             this._colorTransform = new ColorTransform(this._redMultiplier, this._greenMultiplier, this._blueMultiplier, this._alphaMultiplier);
-            this._colorMap = this._Str_1181(this._backGround, this._foreGround);
+            this._colorMap = this.generatePaletteMapForGrayscale(this._backGround, this._foreGround);
         }
 
         public function get ink():int
@@ -80,7 +80,7 @@
             return this._paletteIsGrayscale;
         }
 
-        private function _Str_1181(k:uint, _arg_2:uint):Map
+        private function generatePaletteMapForGrayscale(k:uint, _arg_2:uint):Map
         {
             var _local_3:* = ((k >> 24) & 0xFF);
             var _local_4:* = ((k >> 16) & 0xFF);

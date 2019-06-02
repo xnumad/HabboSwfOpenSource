@@ -5,16 +5,16 @@
     public class _Str_3535 extends RoomWidgetUpdateEvent 
     {
         public static const RWCUE_EVENT_CHAT:String = "RWCUE_EVENT_CHAT";
-        public static const _Str_4014:int = 0;
-        public static const _Str_4349:int = 1;
-        public static const _Str_4264:int = 2;
-        public static const _Str_5821:int = 3;
-        public static const _Str_6081:int = 4;
+        public static const CHAT_TYPE_SPEAK:int = 0;
+        public static const CHAT_TYPE_WHISPER:int = 1;
+        public static const CHAT_TYPE_SHOUT:int = 2;
+        public static const CHAT_TYPE_RESPECT:int = 3;
+        public static const CHAT_TYPE_PETRESPECT:int = 4;
         public static const _Str_15836:int = 5;
-        public static const _Str_5958:int = 6;
-        public static const _Str_6065:int = 7;
-        public static const _Str_5998:int = 8;
-        public static const _Str_5904:int = 9;
+        public static const CHAT_TYPE_PETTREAT:int = 6;
+        public static const CHAT_TYPE_PETREVIVE:int = 7;
+        public static const CHAT_TYPE_PET_REBREED_FERTILIZE:int = 8;
+        public static const CHAT_TYPE_PET_SPEED_FERTILIZE:int = 9;
         public static const _Str_21809:int = 10;
         public static const _Str_19381:int = 11;
         public static const _Str_19852:int = 12;
@@ -63,7 +63,7 @@
             return this._text;
         }
 
-        public function get _Str_3214():int
+        public function get chatType():int
         {
             return this._Str_3230;
         }

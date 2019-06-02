@@ -231,7 +231,7 @@
             while (_local_3 < _local_2.length)
             {
                 _local_4 = _local_2[_local_3];
-                k._Str_24768(_local_4.badgeId);
+                k.addActivatedBadge(_local_4.badgeId);
                 _local_3++;
             }
             this._communication.connection.send(k);
@@ -346,7 +346,7 @@
 
         public function _Str_5100():void
         {
-            if (this._view._Str_2719)
+            if (this._view.isVisible)
             {
                 this._Str_4409();
             }
@@ -354,7 +354,7 @@
 
         public function _Str_5913(k:String):void
         {
-            if (((k == InventoryCategory.BADGES) && (this._controller._Str_2719)))
+            if (((k == InventoryCategory.BADGES) && (this._controller.isVisible)))
             {
                 this._controller.events.dispatchEvent(new Event(HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_BADGES));
             }

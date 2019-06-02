@@ -5,7 +5,7 @@
 
     public class TradingCloseParser implements IMessageParser 
     {
-        public static const _Str_16410:int = 1;
+        public static const ERROR_WHILE_COMMIT:int = 1;
 
         private var _userId:int;
         private var _reason:int;

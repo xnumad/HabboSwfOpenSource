@@ -36,11 +36,11 @@
         private static const CHANNELS_BLUE:String = "CHANNELS_BLUE";
         private static const CHANNELS_SATURATED:String = "CHANNELS_SATURATED";
         private static const DEFAULT:String = "Default";
-        private static const _Str_1301:int = 2;
-        private static const _Str_1501:String = AvatarSetType.FULL;//"full"
+        private static const DEFAULT_DIR:int = 2;
+        private static const DEFAULT_AVATAR_SET:String = AvatarSetType.FULL;//"full"
 
         protected var _Str_581:AvatarStructure;
-        protected var _Str_842:String;
+        protected var _scale:String;
         protected var _Str_1668:int;
         protected var _Str_1374:int;
         protected var _Str_1708:IActiveActionData;
@@ -48,30 +48,30 @@
         protected var _Str_903:Array;
         protected var _assets:AssetAliasCollection;
         protected var _Str_586:AvatarImageCache;
-        protected var _Str_1710:AvatarFigureContainer;
+        protected var _figure:AvatarFigureContainer;
         protected var _Str_2121:IAvatarDataContainer;
         protected var _Str_614:Array;
         protected var _Str_671:BitmapData;
-        private var _Str_612:IActiveActionData;
-        private var _Str_1724:int = 0;
-        private var _Str_1005:int = 0;
-        private var _Str_1535:Boolean;
+        private var _defaultAction:IActiveActionData;
+        private var _frameCounter:int = 0;
+        private var _directionOffset:int = 0;
+        private var _useTextures:Boolean;
         private var _layersInUse:Array;
-        private var _Str_1222:Boolean;
-        private var _Str_2091:Boolean = false;
-        private var _Str_2143:Boolean = false;
+        private var _gpuMode:Boolean;
+        private var _isAnimating:Boolean = false;
+        private var _animationHasResetOnToggle:Boolean = false;
         private var _Str_1163:Array;
-        private var _Str_1566:String;
-        private var _Str_1306:String;
-        private var _Str_864:Map;
+        private var _lastActionsStr:String;
+        private var _currentActionsStr:String;
+        private var _fullImageCache:Map;
         protected var _Str_1586:Boolean = false;
-        private var _Str_2042:Boolean;
-        private var _Str_1514:int = -1;
-        private var _Str_2146:int;
+        private var _actionsSorted:Boolean;
+        private var _effectIdInUse:int = -1;
+        private var _animFrameCount:int;
         private var _Str_1945:Array;
-        private var _Str_1949:int = -1;
-        private var _Str_1499:String = null;
-        private var _Str_1992:String = null;
+        private var _cachedBodyPartsDirection:int = -1;
+        private var _cachedBodyPartsGeometryType:String = null;
+        private var _cachedBodyPartsAvatarSet:String = null;
         private var _Str_1210:EffectAssetDownloadManager;
         private var _Str_1153:_Str_936;
 
@@ -81,34 +81,34 @@
             this._Str_614 = [];
             this._Str_1945 = [];
             super();
-            this._Str_1535 = true;
+            this._useTextures = true;
             this._Str_1210 = _arg_5;
             this._Str_581 = k;
             this._assets = _arg_2;
-            this._Str_842 = _arg_4;
+            this._scale = _arg_4;
             this._Str_1153 = _arg_6;
-            if (this._Str_842 == null)
+            if (this._scale == null)
             {
-                this._Str_842 = AvatarScaleType.LARGE;
+                this._scale = AvatarScaleType.LARGE;
             }
             if (_arg_3 == null)
             {
                 _arg_3 = new AvatarFigureContainer("hr-893-45.hd-180-2.ch-210-66.lg-270-82.sh-300-91.wa-2007-.ri-1-");
                 Logger.log("Using default avatar figure");
             }
-            this._Str_1710 = _arg_3;
-            this._Str_586 = new AvatarImageCache(this._Str_581, this, this._assets, this._Str_842);
-            this.setDirection(_Str_1501, _Str_1301);
+            this._figure = _arg_3;
+            this._Str_586 = new AvatarImageCache(this._Str_581, this, this._assets, this._scale);
+            this.setDirection(DEFAULT_AVATAR_SET, DEFAULT_DIR);
             this._Str_614 = new Array();
-            this._Str_612 = new ActiveActionData(AvatarAction.POSTURE_STAND);
-            this._Str_612.definition = this._Str_581._Str_1675(DEFAULT);
+            this._defaultAction = new ActiveActionData(AvatarAction.POSTURE_STAND);
+            this._defaultAction.definition = this._Str_581._Str_1675(DEFAULT);
             this._Str_1632();
-            this._Str_864 = new Map();
+            this._fullImageCache = new Map();
         }
 
         public function _Str_1009():Array
         {
-            this._Str_1972(AvatarSetType.FULL);
+            this.errorThis(AvatarSetType.FULL);
             return this._Str_586._Str_1009();
         }
 
@@ -120,7 +120,7 @@
                 this._Str_581 = null;
                 this._assets = null;
                 this._Str_1708 = null;
-                this._Str_1710 = null;
+                this._figure = null;
                 this._Str_2121 = null;
                 this._Str_614 = null;
                 if (this._Str_671)
@@ -132,14 +132,14 @@
                     this._Str_586.dispose();
                     this._Str_586 = null;
                 }
-                if (this._Str_864)
+                if (this._fullImageCache)
                 {
-                    for each (k in this._Str_864)
+                    for each (k in this._fullImageCache)
                     {
                         k.dispose();
                     }
-                    this._Str_864.dispose();
-                    this._Str_864 = null;
+                    this._fullImageCache.dispose();
+                    this._fullImageCache = null;
                 }
                 this._Str_671 = null;
                 this._Str_903 = null;
@@ -154,22 +154,22 @@
 
         public function _Str_784():IAvatarFigureContainer
         {
-            return this._Str_1710;
+            return this._figure;
         }
 
         public function _Str_797():String
         {
-            return this._Str_842;
+            return this._scale;
         }
 
         public function _Str_867(k:String):IPartColor
         {
-            return this._Str_581._Str_867(this._Str_1710, k);
+            return this._Str_581._Str_867(this._figure, k);
         }
 
         public function setDirection(k:String, _arg_2:int):void
         {
-            _arg_2 = (_arg_2 + this._Str_1005);
+            _arg_2 = (_arg_2 + this._directionOffset);
             if (_arg_2 < AvatarDirectionAngle._Str_1562)
             {
                 _arg_2 = (AvatarDirectionAngle._Str_1257 + (_arg_2 + 1));
@@ -184,17 +184,17 @@
             }
             if (((k == AvatarSetType.HEAD) || (k == AvatarSetType.FULL)))
             {
-                if (((k == AvatarSetType.HEAD) && (this._Str_1285())))
+                if (((k == AvatarSetType.HEAD) && (this.resetActions())))
                 {
                     _arg_2 = this._Str_1668;
                 }
                 this._Str_1374 = _arg_2;
             }
             this._Str_586.setDirection(k, _arg_2);
-            this._Str_1535 = true;
+            this._useTextures = true;
         }
 
-        public function _Str_880(k:String, _arg_2:int):void
+        public function setDirectionAngle(k:String, _arg_2:int):void
         {
             var _local_3:int;
             _local_3 = (_arg_2 / 45);
@@ -213,26 +213,26 @@
 
         public function getLayerData(k:ISpriteDataContainer):IAnimationLayerData
         {
-            return this._Str_581._Str_1881(k.animation.id, this._Str_1724, k.id);
+            return this._Str_581.getBodyPartData(k.animation.id, this._frameCounter, k.id);
         }
 
         public function _Str_953(k:int=1):void
         {
-            this._Str_1724 = (this._Str_1724 + k);
-            this._Str_1535 = true;
+            this._frameCounter = (this._frameCounter + k);
+            this._useTextures = true;
         }
 
         public function _Str_833():void
         {
-            this._Str_1724 = 0;
-            this._Str_1535 = true;
+            this._frameCounter = 0;
+            this._useTextures = true;
         }
 
-        private function _Str_1469():String
+        private function getFullImageCacheKey():String
         {
             var k:IActiveActionData;
             var _local_2:int;
-            if (!this._Str_2042)
+            if (!this._actionsSorted)
             {
                 return null;
             }
@@ -240,9 +240,9 @@
             {
                 if (this._Str_1708 == "std")
                 {
-                    return this._Str_1668 + this._Str_1306;
+                    return this._Str_1668 + this._currentActionsStr;
                 }
-                return (this._Str_1668 + this._Str_1306) + (this._Str_1724 % 4);
+                return (this._Str_1668 + this._currentActionsStr) + (this._frameCounter % 4);
             }
             if (this._Str_1163.length == 2)
             {
@@ -250,31 +250,31 @@
                 {
                     if (((k.actionType == "fx") && ((((k.actionParameter == "33") || (k.actionParameter == "34")) || (k.actionParameter == "35")) || (k.actionParameter == "36"))))
                     {
-                        return (this._Str_1668 + this._Str_1306) + 0;
+                        return (this._Str_1668 + this._currentActionsStr) + 0;
                     }
                     if (((k.actionType == "fx") && ((k.actionParameter == "38") || (k.actionParameter == "39"))))
                     {
-                        _local_2 = (this._Str_1724 % 11);
-                        return (((this._Str_1668 + "_") + this._Str_1374) + this._Str_1306) + _local_2;
+                        _local_2 = (this._frameCounter % 11);
+                        return (((this._Str_1668 + "_") + this._Str_1374) + this._currentActionsStr) + _local_2;
                     }
                 }
             }
             return null;
         }
 
-        private function _Str_755(k:String, _arg_2:String, _arg_3:int):Array
+        private function getBodyParts(k:String, _arg_2:String, _arg_3:int):Array
         {
-            if ((((!(_arg_3 == this._Str_1949)) || (!(_arg_2 == this._Str_1499))) || (!(k == this._Str_1992))))
+            if ((((!(_arg_3 == this._cachedBodyPartsDirection)) || (!(_arg_2 == this._cachedBodyPartsGeometryType))) || (!(k == this._cachedBodyPartsAvatarSet))))
             {
-                this._Str_1949 = _arg_3;
-                this._Str_1499 = _arg_2;
-                this._Str_1992 = k;
-                this._Str_1945 = this._Str_581._Str_755(k, _arg_2, _arg_3);
+                this._cachedBodyPartsDirection = _arg_3;
+                this._cachedBodyPartsGeometryType = _arg_2;
+                this._cachedBodyPartsAvatarSet = k;
+                this._Str_1945 = this._Str_581.getBodyParts(k, _arg_2, _arg_3);
             }
             return this._Str_1945;
         }
 
-        public function _Str_1972(k:String):void
+        public function errorThis(k:String):void
         {
             var _local_4:String;
             var _local_5:AvatarImageBodyPartContainer;
@@ -282,17 +282,17 @@
             {
                 return;
             }
-            var _local_2:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
+            var _local_2:AvatarCanvas = this._Str_581.getCanvas(this._scale, this._Str_1708.definition.geometryType);
             if (_local_2 == null)
             {
                 return;
             }
-            var _local_3:Array = this._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
+            var _local_3:Array = this.getBodyParts(k, this._Str_1708.definition.geometryType, this._Str_1668);
             var _local_6:int = (_local_3.length - 1);
             while (_local_6 >= 0)
             {
                 _local_4 = _local_3[_local_6];
-                _local_5 = this._Str_586._Str_1629(_local_4, this._Str_1724, true);
+                _local_5 = this._Str_586.getImageContainer(_local_4, this._frameCounter, true);
                 _local_6--;
             }
         }
@@ -306,7 +306,7 @@
             var _local_13:BitmapData;
             var _local_14:BitmapData;
             var _local_15:Matrix;
-            if (!this._Str_1535)
+            if (!this._useTextures)
             {
                 return this._Str_671;
             }
@@ -314,16 +314,16 @@
             {
                 return null;
             }
-            if (!this._Str_2143)
+            if (!this._animationHasResetOnToggle)
             {
                 this._Str_962();
             }
-            var _local_4:String = this._Str_1469();
+            var _local_4:String = this.getFullImageCacheKey();
             if (_local_4 != null)
             {
                 if (this.getFullImage(_local_4))
                 {
-                    this._Str_1535 = false;
+                    this._useTextures = false;
                     if (_arg_2)
                     {
                         return (this.getFullImage(_local_4) as BitmapData).clone();
@@ -333,7 +333,7 @@
                     return this._Str_671;
                 }
             }
-            var _local_5:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
+            var _local_5:AvatarCanvas = this._Str_581.getCanvas(this._scale, this._Str_1708.definition.geometryType);
             if (_local_5 == null)
             {
                 return null;
@@ -347,7 +347,7 @@
                 this._Str_671 = new BitmapData(_local_5.width, _local_5.height, true, 0);
                 this._Str_1586 = false;
             }
-            var _local_6:Array = this._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
+            var _local_6:Array = this.getBodyParts(k, this._Str_1708.definition.geometryType, this._Str_1668);
             this._Str_671.lock();
             this._Str_671.fillRect(this._Str_671.rect, 0);
             var _local_11:Boolean = true;
@@ -355,10 +355,10 @@
             while (_local_12 >= 0)
             {
                 _local_7 = _local_6[_local_12];
-                _local_8 = this._Str_586._Str_1629(_local_7, this._Str_1724);
+                _local_8 = this._Str_586.getImageContainer(_local_7, this._frameCounter);
                 if (_local_8)
                 {
-                    _local_11 = ((_local_11) && (_local_8._Str_1807));
+                    _local_11 = ((_local_11) && (_local_8.isCacheable));
                     _local_9 = _local_8.image;
                     _local_10 = _local_8._Str_1076.add(_local_5.offset);
                     if (((_local_9) && (_local_10)))
@@ -370,12 +370,12 @@
                 _local_12--;
             }
             this._Str_671.unlock();
-            this._Str_1535 = false;
+            this._useTextures = false;
             if (this._Str_2121 != null)
             {
                 if (this._Str_2121.paletteIsGrayscale)
                 {
-                    _local_13 = this._Str_1894(this._Str_671);
+                    _local_13 = this.convertToGrayscale(this._Str_671);
                     if (this._Str_671)
                     {
                         this._Str_671.dispose();
@@ -430,23 +430,23 @@
             {
                 return null;
             }
-            if (!this._Str_2143)
+            if (!this._animationHasResetOnToggle)
             {
                 this._Str_962();
             }
-            var _local_3:AvatarCanvas = this._Str_581.getCanvas(this._Str_842, this._Str_1708.definition.geometryType);
+            var _local_3:AvatarCanvas = this._Str_581.getCanvas(this._scale, this._Str_1708.definition.geometryType);
             if (_local_3 == null)
             {
                 return null;
             }
             var _local_4:BitmapData = new BitmapData(_local_3.width, _local_3.height, true, 0xFFFFFF);
-            var _local_5:Array = this._Str_581._Str_755(k, this._Str_1708.definition.geometryType, this._Str_1668);
+            var _local_5:Array = this._Str_581.getBodyParts(k, this._Str_1708.definition.geometryType, this._Str_1668);
             var _local_11:Rectangle = new Rectangle();
             var _local_12:int = (_local_5.length - 1);
             while (_local_12 >= 0)
             {
                 _local_7 = _local_5[_local_12];
-                _local_8 = this._Str_586._Str_1629(_local_7, this._Str_1724);
+                _local_8 = this._Str_586.getImageContainer(_local_7, this._frameCounter);
                 if (_local_8 != null)
                 {
                     _local_9 = _local_8.image;
@@ -493,17 +493,17 @@
 
         protected function getFullImage(k:String):BitmapData
         {
-            return this._Str_864[k];
+            return this._fullImageCache[k];
         }
 
         protected function cacheFullImage(k:String, _arg_2:BitmapData):void
         {
-            if (this._Str_864.getValue(k))
+            if (this._fullImageCache.getValue(k))
             {
-                (this._Str_864.getValue(k) as BitmapData).dispose();
-                this._Str_864.remove(k);
+                (this._fullImageCache.getValue(k) as BitmapData).dispose();
+                this._fullImageCache.remove(k);
             }
-            this._Str_864[k] = _arg_2;
+            this._fullImageCache[k] = _arg_2;
         }
 
         public function getAsset(k:String):BitmapDataAsset
@@ -519,28 +519,28 @@
         public function _Str_913():void
         {
             this._Str_614 = new Array();
-            this._Str_2143 = false;
-            this._Str_1306 = "";
-            this._Str_2042 = false;
+            this._animationHasResetOnToggle = false;
+            this._currentActionsStr = "";
+            this._actionsSorted = false;
         }
 
         public function _Str_962():void
         {
             var k:ActiveActionData;
-            if (this._Str_711())
+            if (this.isHeadTurnPreventedByAction())
             {
                 for each (k in this._Str_1163)
                 {
                     if (k.actionType == AvatarAction.EFFECT)
                     {
-                        if (!this._Str_1210._Str_992(parseInt(k.actionParameter)))
+                        if (!this._Str_1210.isReady(parseInt(k.actionParameter)))
                         {
                             this._Str_1210._Str_1914(parseInt(k.actionParameter), this);
                         }
                     }
                 }
                 this._Str_1632();
-                this._Str_1679();
+                this.setActionsToParts();
             }
         }
 
@@ -548,7 +548,7 @@
         {
             var _local_3:String;
             var _local_4:ActionDefinition;
-            this._Str_2143 = false;
+            this._animationHasResetOnToggle = false;
             if (((!(_args == null)) && (_args.length > 0)))
             {
                 _local_3 = _args[0];
@@ -568,9 +568,9 @@
                                 this.setDirection(AvatarSetType.FULL, 2);
                             }
                         case AvatarAction.POSTURE_WALK:
-                            this._Str_2042 = true;
+                            this._actionsSorted = true;
                         case AvatarAction.POSTURE_STAND:
-                            this._Str_2042 = true;
+                            this._actionsSorted = true;
                         case AvatarAction.POSTURE_SWIM:
                         case AvatarAction.POSTURE_FLOAT:
                         case AvatarAction.POSTURE_SIT:
@@ -579,10 +579,10 @@
                         case AvatarAction.SNOWWAR_DIE_BACK:
                         case AvatarAction.SNOWWAR_PICK:
                         case AvatarAction.SNOWWAR_THROW:
-                            this._Str_1182(_local_3);
+                            this.addActionData(_local_3);
                             break;
                         default:
-                            this._Str_1591(("appendAction() >> UNKNOWN POSTURE TYPE: " + _local_3));
+                            this.logThis(("appendAction() >> UNKNOWN POSTURE TYPE: " + _local_3));
                     }
                     break;
                 case AvatarAction.GESTURE:
@@ -592,16 +592,16 @@
                         case AvatarAction.GESTURE_SAD:
                         case AvatarAction.GESTURE_SMILE:
                         case AvatarAction.GESTURE_SURPRISED:
-                            this._Str_1182(_local_3);
+                            this.addActionData(_local_3);
                             break;
                         default:
-                            this._Str_1591(("appendAction() >> UNKNOWN GESTURE TYPE: " + _local_3));
+                            this.logThis(("appendAction() >> UNKNOWN GESTURE TYPE: " + _local_3));
                     }
                     break;
                 case AvatarAction.EFFECT:
                     if (((((((_local_3 == "33") || (_local_3 == "34")) || (_local_3 == "35")) || (_local_3 == "36")) || (_local_3 == "38")) || (_local_3 == "39")))
                     {
-                        this._Str_2042 = true;
+                        this._actionsSorted = true;
                     }
                 case AvatarAction.DANCE:
                 case AvatarAction.TALK:
@@ -616,25 +616,25 @@
                 case AvatarAction.EXPRESSION_SNOWBOARD_OLLIE:
                 case AvatarAction.EXPRESSION_SNOWBORD_360:
                 case AvatarAction.EXPRESSION_RIDE_JUMP:
-                    this._Str_1182(k, _local_3);
+                    this.addActionData(k, _local_3);
                     break;
                 case AvatarAction.CARRY_OBJECT:
                 case AvatarAction.USE_OBJECT:
                     _local_4 = this._Str_581._Str_2018(k);
                     if (_local_4 != null)
                     {
-                        this._Str_1511(("appendAction:" + [_local_3, "->", _local_4._Str_1350(_local_3)]));
-                        _local_3 = _local_4._Str_1350(_local_3);
+                        this.setUniqueIdentifier(("appendAction:" + [_local_3, "->", _local_4.getParameterValue(_local_3)]));
+                        _local_3 = _local_4.getParameterValue(_local_3);
                     }
-                    this._Str_1182(k, _local_3);
+                    this.addActionData(k, _local_3);
                     break;
                 default:
-                    this._Str_1591(("appendAction() >> UNKNOWN ACTION TYPE: " + k));
+                    this.logThis(("appendAction() >> UNKNOWN ACTION TYPE: " + k));
             }
             return true;
         }
 
-        protected function _Str_1182(k:String, _arg_2:String=""):void
+        protected function addActionData(k:String, _arg_2:String=""):void
         {
             var _local_3:ActiveActionData;
             if (this._Str_614 == null)
@@ -651,29 +651,29 @@
                 }
                 _local_4++;
             }
-            this._Str_614.push(new ActiveActionData(k, _arg_2, this._Str_1724));
+            this._Str_614.push(new ActiveActionData(k, _arg_2, this._frameCounter));
         }
 
         public function _Str_899():Boolean
         {
-            return (this._Str_1222) || (this._Str_2146 > 1);
+            return (this._gpuMode) || (this._animFrameCount > 1);
         }
 
         private function _Str_1632():Boolean
         {
-            this._Str_2091 = false;
-            this._Str_1222 = false;
+            this._isAnimating = false;
+            this._gpuMode = false;
             this._layersInUse = [];
             this._Str_2121 = null;
-            this._Str_1005 = 0;
+            this._directionOffset = 0;
             this._Str_581._Str_2101(this);
-            this._Str_1708 = this._Str_612;
-            this._Str_1708.definition = this._Str_612.definition;
-            this._Str_741(this._Str_612);
+            this._Str_1708 = this._defaultAction;
+            this._Str_1708.definition = this._defaultAction.definition;
+            this.resetBodyPartCache(this._defaultAction);
             return true;
         }
 
-        private function _Str_1285():Boolean
+        private function resetActions():Boolean
         {
             var _local_2:IActionDefinition;
             var _local_3:ActiveActionData;
@@ -693,65 +693,65 @@
             return k;
         }
 
-        private function _Str_711():Boolean
+        private function isHeadTurnPreventedByAction():Boolean
         {
             var _local_2:Boolean;
             var _local_3:Boolean;
             var _local_4:ActiveActionData;
             var _local_5:int;
             var k:Boolean;
-            this._Str_1306 = "";
-            this._Str_1163 = this._Str_581._Str_711(this._Str_614);
-            this._Str_2146 = this._Str_581._Str_1936(this._Str_1163);
+            this._currentActionsStr = "";
+            this._Str_1163 = this._Str_581.isHeadTurnPreventedByAction(this._Str_614);
+            this._animFrameCount = this._Str_581._Str_1936(this._Str_1163);
             if (this._Str_1163 == null)
             {
                 this._Str_903 = new Array(0, 0, 0);
-                if (this._Str_1566 != "")
+                if (this._lastActionsStr != "")
                 {
                     k = true;
-                    this._Str_1566 = "";
+                    this._lastActionsStr = "";
                 }
             }
             else
             {
-                this._Str_903 = this._Str_581._Str_781(this._Str_1163, this._Str_842, this._Str_1668);
+                this._Str_903 = this._Str_581._Str_781(this._Str_1163, this._scale, this._Str_1668);
                 for each (_local_4 in this._Str_1163)
                 {
-                    this._Str_1306 = (this._Str_1306 + (_local_4.actionType + _local_4.actionParameter));
+                    this._currentActionsStr = (this._currentActionsStr + (_local_4.actionType + _local_4.actionParameter));
                     if (_local_4.actionType == AvatarAction.EFFECT)
                     {
                         _local_5 = parseInt(_local_4.actionParameter);
-                        if (this._Str_1514 != _local_5)
+                        if (this._effectIdInUse != _local_5)
                         {
                             _local_2 = true;
                         }
-                        this._Str_1514 = _local_5;
+                        this._effectIdInUse = _local_5;
                         _local_3 = true;
                     }
                 }
                 if (!_local_3)
                 {
-                    if (this._Str_1514 > -1)
+                    if (this._effectIdInUse > -1)
                     {
                         _local_2 = true;
                     }
-                    this._Str_1514 = -1;
+                    this._effectIdInUse = -1;
                 }
                 if (_local_2)
                 {
                     this._Str_586._Str_1086(0);
                 }
-                if (this._Str_1566 != this._Str_1306)
+                if (this._lastActionsStr != this._currentActionsStr)
                 {
                     k = true;
-                    this._Str_1566 = this._Str_1306;
+                    this._lastActionsStr = this._currentActionsStr;
                 }
             }
-            this._Str_2143 = true;
+            this._animationHasResetOnToggle = true;
             return k;
         }
 
-        private function _Str_1679():void
+        private function setActionsToParts():void
         {
             var k:ActiveActionData;
             var _local_2:Animation;
@@ -772,9 +772,9 @@
                 if ((((k) && (k.definition)) && (k.definition.isAnimation)))
                 {
                     _local_2 = this._Str_581.getAnimation(((k.definition.state + ".") + k.actionParameter));
-                    if (((_local_2) && (_local_2._Str_1892())))
+                    if (((_local_2) && (_local_2.hasOverriddenActions())))
                     {
-                        _local_5 = _local_2._Str_1571();
+                        _local_5 = _local_2.overriddenActionNames();
                         if (_local_5)
                         {
                             for each (_local_6 in _local_5)
@@ -788,7 +788,7 @@
                     }
                     if (((_local_2) && (_local_2.resetOnToggle)))
                     {
-                        this._Str_2091 = true;
+                        this._isAnimating = true;
                     }
                 }
             }
@@ -803,18 +803,18 @@
                     this._Str_1496(k, _local_3);
                     if (k.definition.isAnimation)
                     {
-                        this._Str_1222 = k.definition.isAnimated(k.actionParameter);
+                        this._gpuMode = k.definition.isAnimated(k.actionParameter);
                         _local_2 = this._Str_581.getAnimation(((k.definition.state + ".") + k.actionParameter));
                         if (_local_2 != null)
                         {
                             this._layersInUse = this._layersInUse.concat(_local_2.spriteData);
                             if (_local_2.hasDirectionData())
                             {
-                                this._Str_1005 = _local_2._Str_1493.offset;
+                                this._directionOffset = _local_2.directionData.offset;
                             }
                             if (_local_2.hasAvatarData())
                             {
-                                this._Str_2121 = _local_2._Str_1475;
+                                this._Str_2121 = _local_2.avatarData;
                             }
                         }
                     }
@@ -835,13 +835,13 @@
             if (k.definition.isMain)
             {
                 this._Str_1708 = k;
-                this._Str_586._Str_2014(k.definition.geometryType);
+                this._Str_586.setGeometryType(k.definition.geometryType);
             }
             this._Str_586._Str_1565(k, _arg_2);
-            this._Str_1535 = true;
+            this._useTextures = true;
         }
 
-        private function _Str_741(k:IActiveActionData):void
+        private function resetBodyPartCache(k:IActiveActionData):void
         {
             if (k == null)
             {
@@ -854,10 +854,10 @@
             if (k.definition.isMain)
             {
                 this._Str_1708 = k;
-                this._Str_586._Str_2014(k.definition.geometryType);
+                this._Str_586.setGeometryType(k.definition.geometryType);
             }
-            this._Str_586._Str_741(k);
-            this._Str_1535 = true;
+            this._Str_586.resetBodyPartCache(k);
+            this._useTextures = true;
         }
 
         public function get _Str_920():IAvatarDataContainer
@@ -865,7 +865,7 @@
             return this._Str_2121;
         }
 
-        private function _Str_1894(k:BitmapData, _arg_2:String="CHANNELS_EQUAL"):BitmapData
+        private function convertToGrayscale(k:BitmapData, _arg_2:String="CHANNELS_EQUAL"):BitmapData
         {
             var _local_3:Number = 0.33;
             var _local_4:Number = 0.33;
@@ -907,11 +907,11 @@
             return _local_9;
         }
 
-        private function _Str_1591(k:String):void
+        private function logThis(k:String):void
         {
         }
 
-        private function _Str_1511(k:String):void
+        private function setUniqueIdentifier(k:String):void
         {
         }
 
@@ -922,12 +922,12 @@
 
         public function _Str_998():void
         {
-            this._Str_1566 = "";
+            this._lastActionsStr = "";
         }
 
         public function get _Str_677():Boolean
         {
-            return this._Str_2091;
+            return this._isAnimating;
         }
 
         public function get _Str_792():String
@@ -935,17 +935,17 @@
             return this._Str_1708.actionType;
         }
 
-        public function _Str_869(k:int):void
+        public function updateAnimationByFrames(k:int):void
         {
-            if (k == this._Str_1514)
+            if (k == this._effectIdInUse)
             {
                 this._Str_1632();
-                this._Str_1679();
-                this._Str_2091 = true;
-                this._Str_1535 = true;
+                this.setActionsToParts();
+                this._isAnimating = true;
+                this._useTextures = true;
                 if (this._Str_1153)
                 {
-                    this._Str_1153._Str_869(k);
+                    this._Str_1153.updateAnimationByFrames(k);
                 }
             }
         }

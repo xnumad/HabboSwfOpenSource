@@ -23,7 +23,7 @@
             return true;
         }
 
-        public function get _Str_22541():String
+        public function get stuffCode():String
         {
             return this._stuffCode;
         }

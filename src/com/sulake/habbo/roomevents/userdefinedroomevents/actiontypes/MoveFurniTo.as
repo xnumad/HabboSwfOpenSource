@@ -28,7 +28,7 @@
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
             var _local_2:Array = new Array();
-            _local_2.push(this._Str_19308(k)._Str_2657().id);
+            _local_2.push(this._Str_19308(k).getSelected().id);
             _local_2.push(int(this._slider.getValue()));
             return _local_2;
         }
@@ -48,7 +48,7 @@
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
             var _local_3:int = _arg_2.intData[0];
-            this._Str_19308(k)._Str_2520(this._Str_24416(k, _local_3));
+            this._Str_19308(k).setSelected(this._Str_24416(k, _local_3));
             this._slider._Str_2526(_arg_2.intData[1]);
         }
 

@@ -56,7 +56,7 @@
             return false;
         }
 
-        public function _Str_1795(k:IActionDefinition):Array
+        public function getActiveParts(k:IActionDefinition):Array
         {
             var _local_2:ActivePartSet = this._activePartSets[k.activePartSet];
             if (_local_2 != null)
@@ -66,12 +66,12 @@
             return [];
         }
 
-        public function _Str_1102(k:String):PartDefinition
+        public function getPartDefinition(k:String):PartDefinition
         {
             return this._parts[k] as PartDefinition;
         }
 
-        public function _Str_1520(k:XML):PartDefinition
+        public function addPartDefinition(k:XML):PartDefinition
         {
             var _local_2:String = String(k.@["set-type"]);
             if (this._parts[_local_2] == null)
@@ -86,12 +86,12 @@
             return this._parts;
         }
 
-        public function get _Str_1979():Dictionary
+        public function get activePartSets():Dictionary
         {
             return this._activePartSets;
         }
 
-        public function _Str_1113(k:ActionDefinition):ActivePartSet
+        public function getActivePartSet(k:ActionDefinition):ActivePartSet
         {
             return this._activePartSets[k.activePartSet] as ActivePartSet;
         }

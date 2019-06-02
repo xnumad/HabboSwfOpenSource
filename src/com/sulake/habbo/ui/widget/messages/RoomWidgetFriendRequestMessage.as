@@ -13,7 +13,7 @@
             this._requestId = _arg_2;
         }
 
-        public function get _Str_2951():int
+        public function get requestId():int
         {
             return this._requestId;
         }

@@ -114,7 +114,7 @@
                 _local_3 = (this._slots.getValue(_local_4.slotId) as _Str_4142);
                 if (_local_3)
                 {
-                    _local_3.update(_local_4._Str_4217, _local_4.gender, this._Str_21478(_local_3.id));
+                    _local_3.update(_local_4.figureString, _local_4.gender, this._Str_21478(_local_3.id));
                 }
             }
         }

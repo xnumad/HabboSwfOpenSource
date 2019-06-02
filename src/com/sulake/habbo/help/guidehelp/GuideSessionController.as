@@ -263,7 +263,7 @@
         private function _window9(k:_Str_8903):void
         {
             var _local_2:_Str_7652 = k._Str_2273();
-            this._onDuty = _local_2._Str_7241;
+            this._onDuty = _local_2.onDuty;
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guidesonduty", "amount", _local_2._Str_24740.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.helpersonduty", "amount", _local_2._Str_25148.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guardiansonduty", "amount", _local_2._Str_24092.toString());
@@ -336,12 +336,12 @@
                 return;
             }
             var _local_2:GuideSessionStartedMessageParser = (k.parser as GuideSessionStartedMessageParser);
-            this._sessionData.userId = _local_2._Str_7048;
-            this._sessionData.userName = _local_2._Str_6445;
-            this._sessionData._Str_7586 = _local_2._Str_22457;
-            this._sessionData._Str_5587 = _local_2._Str_20217;
-            this._sessionData._Str_4207 = _local_2._Str_4207;
-            this._sessionData._Str_6667 = _local_2._Str_6667;
+            this._sessionData.userId = _local_2.requesterUserId;
+            this._sessionData.userName = _local_2.requesterName;
+            this._sessionData._Str_7586 = _local_2.requesterFigure;
+            this._sessionData._Str_5587 = _local_2.guideUserId;
+            this._sessionData.guideName = _local_2.guideName;
+            this._sessionData.guideFigure = _local_2.guideFigure;
             this._lastTypingInfo = false;
             if (this._sessionData._Str_5908())
             {
@@ -363,11 +363,11 @@
             var _local_2:GuideSessionEndedMessageParser = (k.parser as GuideSessionEndedMessageParser);
             if (this._sessionData._Str_5908())
             {
-                this._Str_23339(_local_2._Str_22176);
+                this._Str_23339(_local_2.endReason);
             }
             else
             {
-                if (_local_2._Str_22176 == GuideSessionData._Str_14462)
+                if (_local_2.endReason == GuideSessionData._Str_14462)
                 {
                     this._window4();
                 }
@@ -388,11 +388,11 @@
             var _local_2:GuideSessionErrorMessageParser = k._Str_2273();
             switch (_local_2.errorCode)
             {
-                case GuideSessionErrorMessageParser._Str_18013:
+                case GuideSessionErrorMessageParser.ERROR_GUIDES_REJECT:
                     this._Str_22553();
                     return;
-                case GuideSessionErrorMessageParser._Str_17457:
-                case GuideSessionErrorMessageParser._Str_18342:
+                case GuideSessionErrorMessageParser.ERROR_NOT_ENOUGH_GUIDES:
+                case GuideSessionErrorMessageParser.ERROR_NOT_ENOUGH_VOTES:
                     this._Str_24880("guide.bully.request.error.not_enough_guardians");
                     return;
                 default:
@@ -413,8 +413,8 @@
             var _local_3:int = _local_2.senderId;
             if (_local_3 == this._sessionData._Str_5587)
             {
-                _local_4 = this._sessionData._Str_4207;
-                _local_5 = this._sessionData._Str_6667;
+                _local_4 = this._sessionData.guideName;
+                _local_5 = this._sessionData.guideFigure;
             }
             else
             {
@@ -444,13 +444,13 @@
                 return;
             }
             var _local_2:GuideSessionRequesterRoomMessageParser = (k.parser as GuideSessionRequesterRoomMessageParser);
-            if (_local_2._Str_19871() > 0)
+            if (_local_2.getRequesterRoomId() > 0)
             {
-                this._habboHelp.roomSessionManager._Str_10094(_local_2._Str_19871());
+                this._habboHelp.roomSessionManager._Str_10094(_local_2.getRequesterRoomId());
             }
             else
             {
-                this._Str_5863(this._sessionData._Str_5587, this._sessionData._Str_4207, this._sessionData._Str_6667, this._habboHelp.localization.getLocalization("guide.help.request.guide.ongoing.user.not.in.room.error", ""), false, _Str_7012);
+                this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalization("guide.help.request.guide.ongoing.user.not.in.room.error", ""), false, _Str_7012);
             }
         }
 
@@ -464,7 +464,7 @@
             var _local_2:GuideSessionInvitedToGuideRoomMessageParser = (k.parser as GuideSessionInvitedToGuideRoomMessageParser);
             if (this._sessionData._Str_5908())
             {
-                if (_local_2._Str_5256() > 0)
+                if (_local_2.getRoomId() > 0)
                 {
                     this._Str_14185(_Str_12638, this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.error.invite.success", "", "name", this._sessionData.userName));
                 }
@@ -475,9 +475,9 @@
             }
             else
             {
-                if (_local_2._Str_5256() > 0)
+                if (_local_2.getRoomId() > 0)
                 {
-                    this._Str_5863(this._sessionData._Str_5587, this._sessionData._Str_4207, this._sessionData._Str_6667, this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.visit.guide.request.message", "", "name", this._sessionData._Str_4207, "roomname", _local_2._Str_22514()), true, _Str_13205, _local_2._Str_5256());
+                    this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.visit.guide.request.message", "", "name", this._sessionData.guideName, "roomname", _local_2.getRoomName()), true, _Str_13205, _local_2.getRoomId());
                 }
             }
         }
@@ -668,7 +668,7 @@
                 _local_5 = this._window.findChildByName("request_description_wrapper");
                 _local_6 = (this._window.findChildByName("request_description") as ITextWindow);
                 _local_7 = (this._window.findChildByName("itemlist") as IItemListWindow);
-                _local_7._Str_3015(_local_6, _local_7._Str_3156(_local_5));
+                _local_7.addListItemAt(_local_6, _local_7.getListItemIndex(_local_5));
                 _local_7.removeListItem(_local_5);
                 _local_6.x = this._window.findChildByName("request_title").x;
                 _local_6.margins.top = 10;
@@ -911,11 +911,11 @@
             {
                 this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, false, _Str_7012);
             }
-            this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.title", "", "name", this._sessionData._Str_4207);
-            this._window.findChildByName("guide_name_link").caption = this._sessionData._Str_4207;
+            this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.title", "", "name", this._sessionData.guideName);
+            this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
             var k:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             k._Str_8859 = this;
-            k._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData._Str_4207);
+            k._Str_6307 = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.ongoing.input.help", "", "name", this._sessionData.guideName);
             k.maxChars = this._habboHelp.getInteger("guide.help.request.max.chat.message.length", 150);
         }
 
@@ -952,7 +952,7 @@
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_GUIDE_DISCONNECTED;
             this._Str_2826(this._Str_25007, true);
-            this._window.findChildByName("guide_name_link").caption = this._sessionData._Str_4207;
+            this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
         private function _Str_25007(k:WindowEvent, _arg_2:IWindow):void
@@ -993,7 +993,7 @@
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_FEEDBACK;
             this._Str_2826(this._Str_25707, false);
-            this._window.findChildByName("guide_name_link").caption = this._sessionData._Str_4207;
+            this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
         private function _Str_25707(k:WindowEvent, _arg_2:IWindow):void
@@ -1131,7 +1131,7 @@
             var _local_8:IWindow = this._window.findChildByName("reported_user_template");
             var _local_9:IWindow = this._window.findChildByName("other_user_template");
             var _local_10:IWindow = this._window.findChildByName("separator_template");
-            _local_7._Str_2659();
+            _local_7.removeListItems();
             var _local_11:int = -1;
             var _local_12:IWindowContainer;
             for each (_local_13 in _arg_2.split("\r"))
@@ -1592,7 +1592,7 @@
             var _local_2:IItemListWindow = IItemListWindow(this._window.findChildByName("chat_list"));
             if (k)
             {
-                _local_2._Str_3015(k, (_local_2.numListItems - 1));
+                _local_2.addListItemAt(k, (_local_2.numListItems - 1));
             }
             _local_2.scrollV = 1;
             _local_2.arrangeListItems();
@@ -1625,7 +1625,7 @@
                     }
                     else
                     {
-                        this._Str_5863(this._sessionData._Str_5587, this._sessionData._Str_4207, this._sessionData._Str_6667, _arg_2, true, _Str_7012);
+                        this._Str_5863(this._sessionData._Str_5587, this._sessionData.guideName, this._sessionData.guideFigure, _arg_2, true, _Str_7012);
                     }
             }
         }
@@ -1657,7 +1657,7 @@
         private function _Str_10865(k:Boolean):void
         {
             this._onDuty = k;
-            this._habboHelp.toolbar._Str_7241 = k;
+            this._habboHelp.toolbar.onDuty = k;
         }
 
         private function _Str_21639():void

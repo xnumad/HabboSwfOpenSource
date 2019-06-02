@@ -8,41 +8,41 @@
 
     public class GraphicAsset implements IGraphicAsset 
     {
-        private static const _Str_4356:Vector.<GraphicAsset> = new Vector.<GraphicAsset>();
+        private static const _POOL:Vector.<GraphicAsset> = new Vector.<GraphicAsset>();
 
         private var _assetName:String;
-        private var _Str_11397:String;
+        private var _libraryAssetName:String;
         private var _asset:BitmapDataAsset;
         private var _flipH:Boolean;
         private var _flipV:Boolean;
         private var _usesPalette:Boolean;
-        private var _Str_2756:int;
-        private var _Str_2543:int;
-        private var _Str_1720:int;
+        private var _offsetX:int;
+        private var _offsetY:int;
+        private var _width:int;
         private var _height:int;
-        private var _Str_2684:Boolean;
+        private var _initialized:Boolean;
 
 
         public static function _Str_2363(k:String, _arg_2:String, _arg_3:IAsset, _arg_4:Boolean, _arg_5:Boolean, _arg_6:int, _arg_7:int, _arg_8:Boolean=false):GraphicAsset
         {
-            var _local_9:GraphicAsset = ((_Str_4356.length > 0) ? _Str_4356.pop() : new (GraphicAsset)());
+            var _local_9:GraphicAsset = ((_POOL.length > 0) ? _POOL.pop() : new (GraphicAsset)());
             _local_9._assetName = k;
-            _local_9._Str_11397 = _arg_2;
+            _local_9._libraryAssetName = _arg_2;
             var _local_10:BitmapDataAsset = (_arg_3 as BitmapDataAsset);
             if (_local_10 != null)
             {
                 _local_9._asset = _local_10;
-                _local_9._Str_2684 = false;
+                _local_9._initialized = false;
             }
             else
             {
                 _local_9._asset = null;
-                _local_9._Str_2684 = true;
+                _local_9._initialized = true;
             }
             _local_9._flipH = _arg_4;
             _local_9._flipV = _arg_5;
-            _local_9._Str_2756 = _arg_6;
-            _local_9._Str_2543 = _arg_7;
+            _local_9._offsetX = _arg_6;
+            _local_9._offsetY = _arg_7;
             _local_9._usesPalette = _arg_8;
             return _local_9;
         }
@@ -51,21 +51,21 @@
         public function recycle():void
         {
             this._asset = null;
-            _Str_4356.push(this);
+            _POOL.push(this);
         }
 
         private function initialize():void
         {
             var k:BitmapData;
-            if (((!(this._Str_2684)) && (!(this._asset == null))))
+            if (((!(this._initialized)) && (!(this._asset == null))))
             {
                 k = (this._asset.content as BitmapData);
                 if (k != null)
                 {
-                    this._Str_1720 = k.width;
+                    this._width = k.width;
                     this._height = k.height;
                 }
-                this._Str_2684 = true;
+                this._initialized = true;
             }
         }
 
@@ -82,7 +82,7 @@
         public function get width():int
         {
             this.initialize();
-            return this._Str_1720;
+            return this._width;
         }
 
         public function get height():int
@@ -98,7 +98,7 @@
 
         public function get _Str_3582():String
         {
-            return this._Str_11397;
+            return this._libraryAssetName;
         }
 
         public function get asset():IAsset
@@ -115,28 +115,28 @@
         {
             if (!this._flipH)
             {
-                return this._Str_2756;
+                return this._offsetX;
             }
-            return -(this.width + this._Str_2756);
+            return -(this.width + this._offsetX);
         }
 
         public function get offsetY():int
         {
             if (!this._flipV)
             {
-                return this._Str_2543;
+                return this._offsetY;
             }
-            return -(this.height + this._Str_2543);
+            return -(this.height + this._offsetY);
         }
 
         public function get _Str_20249():int
         {
-            return this._Str_2756;
+            return this._offsetX;
         }
 
         public function get _Str_19351():int
         {
-            return this._Str_2543;
+            return this._offsetY;
         }
     }
 }

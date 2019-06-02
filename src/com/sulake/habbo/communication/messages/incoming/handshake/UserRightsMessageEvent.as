@@ -16,9 +16,9 @@
             return (this._parser as _Str_7573).clubLevel;
         }
 
-        public function get _Str_6124():int
+        public function get securityLevel():int
         {
-            return (this._parser as _Str_7573)._Str_6124;
+            return (this._parser as _Str_7573).securityLevel;
         }
 
         public function get _Str_4050():Boolean

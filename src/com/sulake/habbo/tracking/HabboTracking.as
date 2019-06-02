@@ -63,7 +63,7 @@
 
     public class HabboTracking extends Component implements IHabboTracking, IUpdateReceiver 
     {
-        private static const _Str_14403:uint = 11;
+        private static const ERROR_DATA_FLAG_COUNT:uint = 11;
         private static var _Str_1229:HabboTracking;
 
         private var _communication:IHabboCommunicationManager;
@@ -92,9 +92,9 @@
             {
                 _Str_1229 = this;
             }
-            this._errorContextFlags = new Array(_Str_14403);
+            this._errorContextFlags = new Array(ERROR_DATA_FLAG_COUNT);
             var _local_4:uint;
-            while (_local_4 < _Str_14403)
+            while (_local_4 < ERROR_DATA_FLAG_COUNT)
             {
                 this._errorContextFlags[_local_4] = 0;
                 _local_4++;
@@ -128,7 +128,7 @@
             {
                 if (k != null)
                 {
-                    _Str_2861(1, 0);
+                    setErrorContextFlag(1, 0);
                 }
             }, false, [{
                 "type":Event.COMPLETE,
@@ -137,149 +137,149 @@
             {
                 if (k != null)
                 {
-                    _Str_2861(1, 1);
+                    setErrorContextFlag(1, 1);
                 }
             }, false), new ComponentDependency(new IIDHabboWindowManager(), null, false, [{
                 "type":_Str_5209.HABBO_WINDOW_TRACKING_EVENT_INPUT,
-                "callback":this._Str_16630
+                "callback":this.onWindowTrackingEvent
             }, {
                 "type":_Str_5209.HABBO_WINDOW_TRACKING_EVENT_RENDER,
-                "callback":this._Str_16630
+                "callback":this.onWindowTrackingEvent
             }, {
                 "type":_Str_5209.HABBO_WINDOW_TRACKING_EVENT_SLEEP,
-                "callback":this._Str_16630
+                "callback":this.onWindowTrackingEvent
             }]), new ComponentDependency(new IIDHabboNavigator(), null, false, [{
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_CLOSED,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_EVENTS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ROOMS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ME,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCH,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_OFFICIAL,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FAVOURITES,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FRIENDS_ROOMS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_HISTORY,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_ROOMS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_OFFICIALROOMS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_POPULAR_ROOMS,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TAG_SEARCH,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TEXT_SEARCH,
-                "callback":this._Str_3899
+                "callback":this.onNavigatorTrackingEvent
             }, {
                 "type":HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_CLOSED,
-                "callback":this._Str_12636
+                "callback":this.onRoomSettingsTrackingEvent
             }, {
                 "type":HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT,
-                "callback":this._Str_12636
+                "callback":this.onRoomSettingsTrackingEvent
             }, {
                 "type":HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_ADVANCED,
-                "callback":this._Str_12636
+                "callback":this.onRoomSettingsTrackingEvent
             }, {
                 "type":HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_THUMBS,
-                "callback":this._Str_12636
+                "callback":this.onRoomSettingsTrackingEvent
             }, {
                 "type":HabboToolbarEvent.HTIE_ICON_ZOOM,
-                "callback":this._Str_25845
+                "callback":this.onZoomToggle
             }]), new ComponentDependency(new IIDHabboCatalog(), null, false, [{
                 "type":CatalogPageOpenedEvent.CATALOG_PAGE_OPENED,
-                "callback":this._Str_24390
+                "callback":this.onCatalogPageOpened
             }, {
                 "type":HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_OPEN,
-                "callback":this._Str_17536
+                "callback":this.onCatalogTrackingEvent
             }, {
                 "type":HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_CLOSE,
-                "callback":this._Str_17536
+                "callback":this.onCatalogTrackingEvent
             }, {
                 "type":CatalogFurniPurchaseEvent.CATALOG_FURNI_PURCHASE,
-                "callback":this._Str_17536
+                "callback":this.onCatalogTrackingEvent
             }]), new ComponentDependency(new IIDHabboInventory(), null, false, [{
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_CLOSED,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }, {
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_FURNI,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }, {
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_POSTERS,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }, {
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_BADGES,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }, {
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_ACHIEVEMENTS,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }, {
                 "type":HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_TRADING,
-                "callback":this._Str_9292
+                "callback":this.onInventoryTrackingEvent
             }]), new ComponentDependency(new IIDHabboFriendList(), null, false, [{
                 "type":_Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_CLOSED,
-                "callback":this._Str_11563
+                "callback":this.onFriendlistTrackingEvent
             }, {
                 "type":_Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_FRIENDS,
-                "callback":this._Str_11563
+                "callback":this.onFriendlistTrackingEvent
             }, {
                 "type":_Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_SEARCH,
-                "callback":this._Str_11563
+                "callback":this.onFriendlistTrackingEvent
             }, {
                 "type":_Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_REQUEST,
-                "callback":this._Str_11563
+                "callback":this.onFriendlistTrackingEvent
             }, {
                 "type":_Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_MINIMZED,
-                "callback":this._Str_11563
+                "callback":this.onFriendlistTrackingEvent
             }]), new ComponentDependency(new IIDHabboHelp(), null, false, [{
                 "type":HabboHelpTrackingEvent.HABBO_HELP_TRACKING_EVENT_CLOSED,
-                "callback":this._Str_19684
+                "callback":this.onHelpTrackingEvent
             }, {
                 "type":HabboHelpTrackingEvent.HABBO_HELP_TRACKING_EVENT_DEFAULT,
-                "callback":this._Str_19684
+                "callback":this.onHelpTrackingEvent
             }]), new ComponentDependency(new IIDRoomEngine(), function (k:IRoomEngine):void
             {
                 _roomEngine = k;
             }, false, [{
                 "type":RoomObjectRoomAdEvent.RORAE_ROOM_AD_FURNI_CLICK,
-                "callback":this._Str_24538
+                "callback":this.onRoomAdClick
             }, {
                 "type":RoomEngineEvent.INITIALIZED,
-                "callback":this._Str_19755
+                "callback":this.onRoomAction
             }, {
                 "type":RoomEngineEvent.DISPOSED,
-                "callback":this._Str_19755
+                "callback":this.onRoomAction
             }]), new ComponentDependency(new IIDHabboAdManager(), null, false, [{
                 "type":AdEvent.ROOM_AD_SHOW,
-                "callback":this._Str_25443
+                "callback":this.onRoomAdLoad
             }]), new ComponentDependency(new IIDHabboToolbar(), null, false, [{
                 "type":HabboToolbarEvent.HTE_TOOLBAR_CLICK,
-                "callback":this._Str_3259
+                "callback":this.onToolbarClick
             }])]));
         }
 
@@ -291,20 +291,20 @@
             this._lagWarningLogger = new LagWarningLogger(this);
             this._toolbarClickTracker = new ToolbarClickTracker(this);
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new AuthenticationOKMessageEvent(this._Str_24808));
-            this.addMessageEvent(new _Str_2752(this._Str_3012));
+            this.addMessageEvent(new AuthenticationOKMessageEvent(this.onAuthOK));
+            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new _Str_3660(this._Str_25489));
             this.addMessageEvent(new PongMessageParser(this._Str_17172));
             var k:IEventDispatcher = Component(context).events;
-            k.addEventListener(HabboCommunicationEvent.INIT, this._Str_7495);
-            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED, this._Str_7495);
-            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING, this._Str_7495);
-            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED, this._Str_7495);
-            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL, this._Str_7495);
-            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED, this._Str_7495);
-            k.addEventListener(HabboHotelViewEvent.HHVE_START_LOAD, this._Str_16240);
-            k.addEventListener(HabboHotelViewEvent.ERROR, this._Str_16240);
-            k.addEventListener(HabboHotelViewEvent.HHVE_LOADED, this._Str_16240);
+            k.addEventListener(HabboCommunicationEvent.INIT, this.onConnectionEvent);
+            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED, this.onConnectionEvent);
+            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKING, this.onConnectionEvent);
+            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED, this.onConnectionEvent);
+            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKE_FAIL, this.onConnectionEvent);
+            k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED, this.onConnectionEvent);
+            k.addEventListener(HabboHotelViewEvent.HHVE_START_LOAD, this.onHotelViewEvent);
+            k.addEventListener(HabboHotelViewEvent.ERROR, this.onHotelViewEvent);
+            k.addEventListener(HabboHotelViewEvent.HHVE_LOADED, this.onHotelViewEvent);
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -342,18 +342,18 @@
             if (this._fpsTrackingTimer)
             {
                 this._fpsTrackingTimer.stop();
-                this._fpsTrackingTimer.removeEventListener(TimerEvent.TIMER, this._Str_17965);
+                this._fpsTrackingTimer.removeEventListener(TimerEvent.TIMER, this.onRoomActionTimerEvent);
                 this._fpsTrackingTimer = null;
             }
             super.dispose();
         }
 
-        private function _Str_2861(k:uint, _arg_2:uint):void
+        private function setErrorContextFlag(k:uint, _arg_2:uint):void
         {
             this._errorContextFlags[_arg_2] = k;
         }
 
-        private function _Str_16240(k:Event):void
+        private function onHotelViewEvent(k:Event):void
         {
             switch (k.type)
             {
@@ -369,7 +369,7 @@
             }
         }
 
-        private function _Str_7495(k:Event):void
+        private function onConnectionEvent(k:Event):void
         {
             switch (k.type)
             {
@@ -386,37 +386,37 @@
                     this.trackLoginStep(HabboLoginTrackingStep.CLIENT_INIT_HANDSHAKE_FAIL);
                     break;
                 case HabboCommunicationEvent.HABBO_CONNECTION_EVENT_HANDSHAKED:
-                    this._Str_2861(2, 0);
+                    this.setErrorContextFlag(2, 0);
                     this.trackLoginStep(HabboLoginTrackingStep.CLIENT_INIT_HANDSHAKE_OK);
                     break;
                 case HabboCommunicationEvent.HABBO_CONNECTION_EVENT_AUTHENTICATED:
-                    this._Str_2861(3, 0);
+                    this.setErrorContextFlag(3, 0);
                     this.loadConversionTrackingFrame();
                     this.trackLoginStep(HabboLoginTrackingStep.CLIENT_INIT_AUTH_OK);
                     break;
             }
-            Component(context).events.removeEventListener(k.type, this._Str_7495);
+            Component(context).events.removeEventListener(k.type, this.onConnectionEvent);
         }
 
-        private function _Str_16630(k:Event):void
+        private function onWindowTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case _Str_5209.HABBO_WINDOW_TRACKING_EVENT_SLEEP:
-                    this._Str_2861(0, 3);
+                    this.setErrorContextFlag(0, 3);
                     return;
                 case _Str_5209.HABBO_WINDOW_TRACKING_EVENT_RENDER:
-                    this._Str_2861(1, 3);
+                    this.setErrorContextFlag(1, 3);
                     return;
                 case _Str_5209.HABBO_WINDOW_TRACKING_EVENT_INPUT:
-                    this._Str_2861(2, 3);
+                    this.setErrorContextFlag(2, 3);
                     return;
             }
         }
 
         private function onError(k:ErrorEvent):void
         {
-            this._Str_23498(k);
+            this.storeErrorDetails(k);
             if (k.critical)
             {
                 this._crashed = true;
@@ -424,7 +424,7 @@
             this.logError(context.root.getLastErrorMessage());
         }
 
-        private function _Str_23498(k:ErrorEvent):void
+        private function storeErrorDetails(k:ErrorEvent):void
         {
             var _local_3:uint;
             var _local_4:String;
@@ -439,7 +439,7 @@
             if (this._performanceTracker != null)
             {
                 ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_VARIABLE_FLASH_VERSION, this._performanceTracker.flashVersion);
-                ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_VARIABLE_AVERAGE_UPDATE_INTERVAL, String(this._performanceTracker._Str_24278));
+                ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_VARIABLE_AVERAGE_UPDATE_INTERVAL, String(this._performanceTracker.averageUpdateInterval));
             }
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_DESC, k.message);
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.ERROR_CAT, String(k.category));
@@ -455,27 +455,27 @@
             ErrorReportStorage.addDebugData("Flash memory usage", (("Memory usage: " + Math.round((System.totalMemory / (0x0400 * 0x0400)))) + " MB"));
         }
 
-        private function _Str_3899(k:Event):void
+        private function onNavigatorTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_CLOSED:
-                    this._Str_2861(0, 4);
+                    this.setErrorContextFlag(0, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_EVENTS:
-                    this._Str_2861(1, 4);
+                    this.setErrorContextFlag(1, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ROOMS:
-                    this._Str_2861(2, 4);
+                    this.setErrorContextFlag(2, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_ME:
-                    this._Str_2861(3, 4);
+                    this.setErrorContextFlag(3, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_OFFICIAL:
-                    this._Str_2861(4, 4);
+                    this.setErrorContextFlag(4, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCH:
-                    this._Str_2861(5, 4);
+                    this.setErrorContextFlag(5, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FAVOURITES:
                     this._Str_3754("navigator", "my_favorites");
@@ -510,43 +510,43 @@
             }
         }
 
-        private function _Str_12636(k:Event):void
+        private function onRoomSettingsTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_CLOSED:
-                    this._Str_2861(0, 7);
+                    this.setErrorContextFlag(0, 7);
                     return;
                 case HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT:
-                    this._Str_2861(1, 7);
+                    this.setErrorContextFlag(1, 7);
                     return;
                 case HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_ADVANCED:
-                    this._Str_2861(2, 7);
+                    this.setErrorContextFlag(2, 7);
                     return;
             }
         }
 
-        private function _Str_9292(k:Event):void
+        private function onInventoryTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_CLOSED:
-                    this._Str_2861(0, 5);
+                    this.setErrorContextFlag(0, 5);
                     return;
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_FURNI:
-                    this._Str_2861(1, 5);
+                    this.setErrorContextFlag(1, 5);
                     return;
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_POSTERS:
-                    this._Str_2861(2, 5);
+                    this.setErrorContextFlag(2, 5);
                     return;
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_BADGES:
-                    this._Str_2861(3, 5);
+                    this.setErrorContextFlag(3, 5);
                     return;
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_ACHIEVEMENTS:
-                    this._Str_2861(4, 5);
+                    this.setErrorContextFlag(4, 5);
                     return;
                 case HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_TRADING:
-                    this._Str_2861(5, 5);
+                    this.setErrorContextFlag(5, 5);
                     return;
             }
         }
@@ -557,60 +557,60 @@
             this._Str_3754("achievement", "achievement", [_local_2.data.badgeCode]);
         }
 
-        private function _Str_24390(k:CatalogPageOpenedEvent):void
+        private function onCatalogPageOpened(k:CatalogPageOpenedEvent):void
         {
-            this._Str_3754("catalogue", "page", [k._Str_23803]);
+            this._Str_3754("catalogue", "page", [k.pageLocalization]);
         }
 
-        private function _Str_17536(k:Event):void
+        private function onCatalogTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_OPEN:
-                    this._Str_2861(1, 9);
+                    this.setErrorContextFlag(1, 9);
                     return;
                 case HabboCatalogTrackingEvent.HABBO_CATALOG_TRACKING_EVENT_CLOSE:
-                    this._Str_2861(0, 9);
+                    this.setErrorContextFlag(0, 9);
                     return;
             }
         }
 
-        private function _Str_11563(k:Event):void
+        private function onFriendlistTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case _Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_CLOSED:
-                    this._Str_2861(0, 6);
+                    this.setErrorContextFlag(0, 6);
                     return;
                 case _Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_FRIENDS:
-                    this._Str_2861(1, 6);
+                    this.setErrorContextFlag(1, 6);
                     return;
                 case _Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_SEARCH:
-                    this._Str_2861(2, 6);
+                    this.setErrorContextFlag(2, 6);
                     return;
                 case _Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_REQUEST:
-                    this._Str_2861(3, 6);
+                    this.setErrorContextFlag(3, 6);
                     return;
                 case _Str_3797.HABBO_FRIENDLIST_TRACKING_EVENT_MINIMZED:
-                    this._Str_2861(4, 6);
+                    this.setErrorContextFlag(4, 6);
                     return;
             }
         }
 
-        private function _Str_19684(k:Event):void
+        private function onHelpTrackingEvent(k:Event):void
         {
             switch (k.type)
             {
                 case HabboHelpTrackingEvent.HABBO_HELP_TRACKING_EVENT_CLOSED:
-                    this._Str_2861(0, 10);
+                    this.setErrorContextFlag(0, 10);
                     return;
                 case HabboHelpTrackingEvent.HABBO_HELP_TRACKING_EVENT_DEFAULT:
-                    this._Str_2861(1, 10);
+                    this.setErrorContextFlag(1, 10);
                     return;
             }
         }
 
-        private function _Str_24808(k:IMessageEvent):void
+        private function onAuthOK(k:IMessageEvent):void
         {
             this._Str_3754("authentication", "authok");
         }
@@ -623,7 +623,7 @@
             }
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             if (!this._anyRoomsVisited)
             {
@@ -644,17 +644,17 @@
             }
         }
 
-        private function _Str_25443(k:AdEvent):void
+        private function onRoomAdLoad(k:AdEvent):void
         {
-            this._Str_3754("room_ad", "show", [this._Str_20183(k.clickUrl)]);
+            this._Str_3754("room_ad", "show", [this.getAliasFromAdTechUrl(k.clickUrl)]);
         }
 
-        private function _Str_24538(k:RoomObjectRoomAdEvent):void
+        private function onRoomAdClick(k:RoomObjectRoomAdEvent):void
         {
-            this._Str_3754("room_ad", "click", [this._Str_20183(k.clickUrl)]);
+            this._Str_3754("room_ad", "click", [this.getAliasFromAdTechUrl(k.clickUrl)]);
         }
 
-        private function _Str_20183(k:String):String
+        private function getAliasFromAdTechUrl(k:String):String
         {
             var _local_2:Array = k.match(/;alias=([^;]+)/);
             if (((!(_local_2 == null)) && (_local_2.length > 1)))
@@ -664,7 +664,7 @@
             return "unknown";
         }
 
-        private function _Str_19755(k:RoomEngineEvent):void
+        private function onRoomAction(k:RoomEngineEvent):void
         {
             if (k.type == RoomEngineEvent.INITIALIZED)
             {
@@ -672,7 +672,7 @@
                 {
                     this._fpsTrackingRoomId = k.roomId;
                     this._fpsTrackingTimer = new Timer((60 * 1000), 1);
-                    this._fpsTrackingTimer.addEventListener(TimerEvent.TIMER, this._Str_17965);
+                    this._fpsTrackingTimer.addEventListener(TimerEvent.TIMER, this.onRoomActionTimerEvent);
                     this._fpsTrackingTimer.start();
                 }
             }
@@ -682,7 +682,7 @@
                 {
                     if (this._fpsTrackingTimer)
                     {
-                        this._fpsTrackingTimer.removeEventListener(TimerEvent.TIMER, this._Str_17965);
+                        this._fpsTrackingTimer.removeEventListener(TimerEvent.TIMER, this.onRoomActionTimerEvent);
                         this._fpsTrackingTimer.stop();
                         this._fpsTrackingTimer = null;
                         this._fpsTrackingRoomId = -1;
@@ -691,7 +691,7 @@
             }
         }
 
-        private function _Str_17965(k:TimerEvent):void
+        private function onRoomActionTimerEvent(k:TimerEvent):void
         {
             var _local_2:String;
             var _local_3:int;
@@ -710,7 +710,7 @@
             }
         }
 
-        private function _Str_3259(k:HabboToolbarEvent):void
+        private function onToolbarClick(k:HabboToolbarEvent):void
         {
             if (this._toolbarClickTracker)
             {
@@ -718,7 +718,7 @@
             }
         }
 
-        private function _Str_25845(k:HabboToolbarEvent):void
+        private function onZoomToggle(k:HabboToolbarEvent):void
         {
             if (this._toolbarClickTracker)
             {
@@ -894,7 +894,7 @@
             }
             if (this._framerateTracker != null)
             {
-                this._framerateTracker._Str_24249(k, this._currentTime);
+                this._framerateTracker.trackUpdate(k, this._currentTime);
             }
             if (this._lagWarningLogger != null)
             {

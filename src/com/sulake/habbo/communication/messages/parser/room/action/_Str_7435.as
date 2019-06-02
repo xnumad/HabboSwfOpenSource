@@ -6,7 +6,7 @@
     public class _Str_7435 implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _Str_5043:int = -1;
+        private var _mouseHighlight:int = -1;
 
 
         public function get userId():int
@@ -14,15 +14,15 @@
             return this._userId;
         }
 
-        public function get _Str_18904():int
+        public function get expressionType():int
         {
-            return this._Str_5043;
+            return this._mouseHighlight;
         }
 
         public function flush():Boolean
         {
             this._userId = 0;
-            this._Str_5043 = -1;
+            this._mouseHighlight = -1;
             return true;
         }
 
@@ -33,7 +33,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._Str_5043 = k.readInteger();
+            this._mouseHighlight = k.readInteger();
             return true;
         }
     }

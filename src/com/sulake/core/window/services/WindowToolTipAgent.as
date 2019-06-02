@@ -47,7 +47,7 @@
                 if (this._Str_5194 == null)
                 {
                     this._Str_5194 = new Timer(this._Str_3681, 1);
-                    this._Str_5194.addEventListener(TimerEvent.TIMER, this._Str_7991);
+                    this._Str_5194.addEventListener(TimerEvent.TIMER, this.showToolTip);
                 }
                 this._Str_5194.reset();
                 this._Str_5194.start();
@@ -60,10 +60,10 @@
             if (this._Str_5194 != null)
             {
                 this._Str_5194.stop();
-                this._Str_5194.removeEventListener(TimerEvent.TIMER, this._Str_7991);
+                this._Str_5194.removeEventListener(TimerEvent.TIMER, this.showToolTip);
                 this._Str_5194 = null;
             }
-            this._Str_9055();
+            this.hideToolTip();
             return super.end(k);
         }
 
@@ -82,7 +82,7 @@
             }
         }
 
-        protected function _Str_7991(k:TimerEvent):void
+        protected function showToolTip(k:TimerEvent):void
         {
             var _local_2:Point;
             if (this._Str_5194 != null)
@@ -111,7 +111,7 @@
             }
         }
 
-        protected function _Str_9055():void
+        protected function hideToolTip():void
         {
             if (((!(this._Str_3468 == null)) && (!(this._Str_3468.disposed))))
             {

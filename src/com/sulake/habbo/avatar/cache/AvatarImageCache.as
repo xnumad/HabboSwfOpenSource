@@ -101,7 +101,7 @@
             }
         }
 
-        public function _Str_741(k:IActiveActionData):void
+        public function resetBodyPartCache(k:IActiveActionData):void
         {
             var _local_2:AvatarImageActionCache;
             for each (_local_2 in this._cache)
@@ -117,7 +117,7 @@
         {
             var _local_4:AvatarImageActionCache;
             var _local_5:String;
-            var _local_3:Array = this._structure._Str_1695(k);
+            var _local_3:Array = this._structure.getBodyPartsUnordered(k);
             for each (_local_5 in _local_3)
             {
                 _local_4 = this._Str_1050(_local_5);
@@ -143,7 +143,7 @@
             }
         }
 
-        public function _Str_2014(k:String):void
+        public function setGeometryType(k:String):void
         {
             if (this._geometryType == k)
             {
@@ -160,7 +160,7 @@
             this._canvas = null;
         }
 
-        public function _Str_1629(k:String, _arg_2:int, _arg_3:Boolean=false):AvatarImageBodyPartContainer
+        public function getImageContainer(k:String, _arg_2:int, _arg_3:Boolean=false):AvatarImageBodyPartContainer
         {
             var _local_15:int;
             var _local_16:Animation;
@@ -176,7 +176,7 @@
             }
             var _local_5:int = _local_4.getDirection();
             var _local_6:int = _arg_2;
-            var _local_7:IActiveActionData = _local_4._Str_2244();
+            var _local_7:IActiveActionData = _local_4.getAction();
             if (_local_7.definition.startFromFrameZero)
             {
                 _local_6 = (_local_6 - _local_7.startFrame);
@@ -275,16 +275,16 @@
                 _local_13 = new AvatarImageDirectionCache(_local_19);
                 _local_12._Str_2168(_local_5, _local_13);
             }
-            var _local_14:AvatarImageBodyPartContainer = _local_13._Str_1629(_local_6);
+            var _local_14:AvatarImageBodyPartContainer = _local_13.getImageContainer(_local_6);
             if (((_local_14 == null) || (_arg_3)))
             {
                 _local_20 = _local_13._Str_1699();
                 _local_14 = this._Str_1834(_local_5, _local_20, _local_6, _local_7, _arg_3);
                 if (((!(_local_14 == null)) && (!(_arg_3))))
                 {
-                    if (_local_14._Str_1807)
+                    if (_local_14.isCacheable)
                     {
-                        _local_13._Str_1924(_local_14, _local_6);
+                        _local_13.updateImageContainer(_local_14, _local_6);
                     }
                 }
                 else
@@ -359,14 +359,14 @@
             while (_local_9 >= 0)
             {
                 partContainer = (_arg_2[_local_9] as AvatarImagePartContainer);
-                if (!((k == 7) && ((partContainer._Str_1669 == "fc") || (partContainer._Str_1669 == "ey"))))
+                if (!((k == 7) && ((partContainer.partType == "fc") || (partContainer.partType == "ey"))))
                 {
-                    if (!((partContainer._Str_1669 == "ri") && (partContainer._Str_1502 == null)))
+                    if (!((partContainer.partType == "ri") && (partContainer._Str_1502 == null)))
                     {
-                        _local_19 = partContainer._Str_1360;
-                        _local_20 = partContainer._Str_1669;
+                        _local_19 = partContainer.bodyPartId;
+                        _local_20 = partContainer.partType;
                         _local_21 = partContainer._Str_1502;
-                        animationFrame = partContainer._Str_2258(_arg_3);
+                        animationFrame = partContainer.getAnimationFrame(_arg_3);
                         if (animationFrame)
                         {
                             _local_23 = animationFrame.number;
@@ -449,9 +449,9 @@
                                                                     }
                                                                 }
                                                             }
-                                                            if (partContainer._Str_1666 != _local_20)
+                                                            if (partContainer.flippedPartType != _local_20)
                                                             {
-                                                                _local_20 = partContainer._Str_1666;
+                                                                _local_20 = partContainer.flippedPartType;
                                                             }
                                                         }
                                                     }
@@ -495,9 +495,9 @@
                                 {
                                     this._colorTransform.redMultiplier = (this._colorTransform.greenMultiplier = (this._colorTransform.blueMultiplier = (this._colorTransform.alphaMultiplier = 1)));
                                 }
-                                if (partContainer._Str_1184)
+                                if (partContainer.isBlendable)
                                 {
-                                    this._colorTransform.concat(partContainer._Str_1989);
+                                    this._colorTransform.concat(partContainer.blendTransform);
                                     _local_27 = true;
                                 }
                                 _local_28 = bitmapAsset.offset.clone();
@@ -595,7 +595,7 @@
             _local_3 = new Rectangle();
             for each (_local_4 in k)
             {
-                _local_3 = _local_3.union(_local_4._Str_1567);
+                _local_3 = _local_3.union(_local_4.offsetRect);
             }
             _local_6 = new Point(-(_local_3.left), -(_local_3.top));
             _local_7 = new BitmapData(_local_3.width, _local_3.height, true, 0xFFFFFF);
@@ -640,7 +640,7 @@
             return new ImageData(_local_7, _local_7.rect, _local_6, _arg_2, null);
         }
 
-        private function _Str_1592(k:BitmapData, _arg_2:Rectangle, _arg_3:uint):void
+        private function drawBorders(k:BitmapData, _arg_2:Rectangle, _arg_3:uint):void
         {
             var _local_4:int;
             var _local_5:int = (_arg_2.bottom - 1);

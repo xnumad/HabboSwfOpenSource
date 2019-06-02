@@ -15,7 +15,7 @@
             this._Str_3759 = _arg_6;
         }
 
-        public function get _Str_10535():String
+        public function get soundId():String
         {
             return this._Str_11691;
         }

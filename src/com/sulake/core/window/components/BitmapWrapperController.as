@@ -22,16 +22,16 @@
 
         public function get bitmap():BitmapData
         {
-            return _Str_1049;
+            return _bitmapData;
         }
 
         public function set bitmap(k:BitmapData):void
         {
-            if ((((this._handleDisposing) && (_Str_1049)) && (!(k == _Str_1049))))
+            if ((((this._handleDisposing) && (_bitmapData)) && (!(k == _bitmapData))))
             {
-                _Str_1049.dispose();
+                _bitmapData.dispose();
             }
-            _Str_1049 = k;
+            _bitmapData = k;
             _Str_8020();
             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
         }
@@ -64,7 +64,7 @@
         override public function clone():IWindow
         {
             var controller:BitmapWrapperController = (super.clone() as BitmapWrapperController);
-            controller._Str_1049 = (((this._handleDisposing) && (_Str_1049)) ? _Str_1049.clone() : _Str_1049);
+            controller._bitmapData = (((this._handleDisposing) && (_bitmapData)) ? _bitmapData.clone() : _bitmapData);
             controller._handleDisposing = this._handleDisposing;
             controller._bitmapAssetName = this._bitmapAssetName;
             return controller;
@@ -72,13 +72,13 @@
 
         override public function dispose():void
         {
-            if (_Str_1049)
+            if (_bitmapData)
             {
                 if (this._handleDisposing)
                 {
-                    _Str_1049.dispose();
+                    _bitmapData.dispose();
                 }
-                _Str_1049 = null;
+                _bitmapData = null;
             }
             super.dispose();
         }
@@ -86,8 +86,8 @@
         override public function get properties():Array
         {
             var properties:Array = super.properties;
-            properties.unshift(_Str_2340(PropertyKeys.HANDLE_BITMAP_DISPOSING, this._handleDisposing));
-            properties.unshift(_Str_2340(PropertyKeys.BITMAP_ASSET_NAME, this._bitmapAssetName));
+            properties.unshift(createProperty(PropertyKeys.HANDLE_BITMAP_DISPOSING, this._handleDisposing));
+            properties.unshift(createProperty(PropertyKeys.BITMAP_ASSET_NAME, this._bitmapAssetName));
             return properties;
         }
 

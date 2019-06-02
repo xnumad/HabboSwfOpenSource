@@ -333,12 +333,12 @@
         {
             var k:Object = new Object();
             k = {
-                "id":_Str_576,
+                "id":_id,
                 "adId":_Str_9867,
                 "uid":_Str_2995,
                 "divId":this._Str_7470,
                 "altText":this._Str_13750,
-                "width":_Str_1720,
+                "width":_width,
                 "height":_height,
                 "resourceType":_Str_3532,
                 "creativeType":_Str_4009,

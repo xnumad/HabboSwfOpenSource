@@ -83,10 +83,10 @@
             {
                 this._Str_2669();
             }
-            if (((!(_arg_3._Str_19876 == _Str_8951)) && (!(_arg_3._Str_21740 == _Str_8951))))
+            if (((!(_arg_3.clearType == _Str_8951)) && (!(_arg_3.scoreType == _Str_8951))))
             {
-                _local_6 = HighScoreFurniWidgetHandler(_Str_2470).container.localization.getLocalization(("high.score.display.cleartype." + _Str_18147[_arg_3._Str_19876]));
-                _local_7 = HighScoreFurniWidgetHandler(_Str_2470).container.localization.getLocalization(("high.score.display.scoretype." + _Str_18189[_arg_3._Str_21740]));
+                _local_6 = HighScoreFurniWidgetHandler(_Str_2470).container.localization.getLocalization(("high.score.display.cleartype." + _Str_18147[_arg_3.clearType]));
+                _local_7 = HighScoreFurniWidgetHandler(_Str_2470).container.localization.getLocalization(("high.score.display.scoretype." + _Str_18189[_arg_3.scoreType]));
                 HighScoreFurniWidgetHandler(_Str_2470).container.localization.registerParameter("high.score.display.caption", "cleartype", _local_6);
                 HighScoreFurniWidgetHandler(_Str_2470).container.localization.registerParameter("high.score.display.caption", "scoretype", _local_7);
             }

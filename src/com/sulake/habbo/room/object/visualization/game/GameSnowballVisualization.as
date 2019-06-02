@@ -14,7 +14,7 @@
         private static const SNOWBALL_SMALL_SHADOW_PNG:String = "snowball_small_shadow_png";
         private static const _Str_18767:int = 16;
 
-        private var _Str_594:GameObjectVisualization;
+        private var _data:GameObjectVisualization;
         private var _Str_6286:IRoomObjectSprite;
 
 
@@ -27,11 +27,11 @@
         override public function initialize(k:IRoomObjectVisualizationData):Boolean
         {
             var _local_2:BitmapDataAsset;
-            this._Str_594 = (k as GameObjectVisualization);
+            this._data = (k as GameObjectVisualization);
             createSprites(2);
-            _local_2 = (this._Str_594.assets.getAssetByName(SNOWBALL_SMALL_PNG) as BitmapDataAsset);
+            _local_2 = (this._data.assets.getAssetByName(SNOWBALL_SMALL_PNG) as BitmapDataAsset);
             getSprite(0).asset = (_local_2.content as BitmapData);
-            _local_2 = (this._Str_594.assets.getAssetByName(SNOWBALL_SMALL_SHADOW_PNG) as BitmapDataAsset);
+            _local_2 = (this._data.assets.getAssetByName(SNOWBALL_SMALL_SHADOW_PNG) as BitmapDataAsset);
             this._Str_6286 = getSprite(1);
             this._Str_6286.asset = (_local_2.content as BitmapData);
             this._Str_6286.alpha = 100;

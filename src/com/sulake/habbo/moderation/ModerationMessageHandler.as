@@ -79,7 +79,7 @@
             _local_2.addMessageEvent(new _Str_7898(this._Str_25868));
             _local_2.addMessageEvent(new _Str_7799(this._Str_22589));
             _local_2.addMessageEvent(new _Str_7632(this._Str_16877));
-            _local_2.addMessageEvent(new _Str_2752(this._Str_3012));
+            _local_2.addMessageEvent(new _Str_2752(this.onCreditBalance));
             _local_2.addMessageEvent(new _Str_3352(this._Str_2960));
             _local_2.addMessageEvent(new _Str_9341(this._Str_24593));
             _local_2.addMessageEvent(new _Str_8083(this._Str_25353));
@@ -292,7 +292,7 @@
             this._moderationManager._Str_22921 = _local_3;
         }
 
-        private function _Str_3012(k:_Str_2752):void
+        private function onCreditBalance(k:_Str_2752):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:_Str_4522 = k._Str_2273();

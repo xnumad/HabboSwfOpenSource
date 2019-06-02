@@ -282,7 +282,7 @@
             var _local_9:IWindow;
             while (this._list.numListItems > 0)
             {
-                _local_6 = this._list._Str_2915(0);
+                _local_6 = this._list.removeListItemAt(0);
                 _local_6.destroy();
             }
             for each (k in this._layouts)

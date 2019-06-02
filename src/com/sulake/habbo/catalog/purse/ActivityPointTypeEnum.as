@@ -4,9 +4,9 @@
 
     public class ActivityPointTypeEnum 
     {
-        public static const _Str_4627:int = 0;
-        public static const _Str_17089:int = 3;
-        public static const _Str_7340:int = 5;
+        public static const DUCKET:int = 0;
+        public static const SUBSCRIPTION_GIFT_POINTS:int = 3;
+        public static const LOYALTY:int = 5;
         public static const SEASONAL_1:int = 101;
         public static const SEASONAL_2:int = 102;
         public static const SEASONAL_3:int = 103;
@@ -17,9 +17,9 @@
         public static const NO_OP_4:int = 4;
 
 
-        public static function _Str_24355():Array
+        public static function values():Array
         {
-            return [_Str_4627, SEASONAL_1, SEASONAL_2, SEASONAL_3, SEASONAL_4, SEASONAL_5, NO_OP_1, NO_OP_2, NO_OP_4];
+            return [DUCKET, SEASONAL_1, SEASONAL_2, SEASONAL_3, SEASONAL_4, SEASONAL_5, NO_OP_1, NO_OP_2, NO_OP_4];
         }
 
         public static function _Str_5251(k:int, _arg_2:IHabboConfigurationManager, _arg_3:Boolean, _arg_4:Boolean=false):int
@@ -29,15 +29,15 @@
             {
                 return (_arg_3) ? 34 : 35;
             }
-            if (k == _Str_4627)
+            if (k == DUCKET)
             {
                 return (_arg_3) ? 32 : 33;
             }
-            if (k == _Str_17089)
+            if (k == SUBSCRIPTION_GIFT_POINTS)
             {
                 return (_arg_3) ? 36 : 37;
             }
-            if (k == _Str_7340)
+            if (k == LOYALTY)
             {
                 if (_arg_2.getBoolean("diamonds.enabled"))
                 {
@@ -49,7 +49,7 @@
             return _arg_2.getInteger(_local_5, 0);
         }
 
-        public static function _Str_2719(k:int):Boolean
+        public static function isVisible(k:int):Boolean
         {
             if ([NO_OP_1, NO_OP_2, NO_OP_4].indexOf(k) != 1)
             {

@@ -38,7 +38,7 @@
         {
             k._data = _arg_6;
             var _local_7:Boolean = k.widget._Str_3859;
-            var _local_8:Boolean = k.widget._Str_2886;
+            var _local_8:Boolean = k.widget.isRiding;
             if (k.widget._Str_20290())
             {
                 k._mode = _Str_13388;
@@ -104,7 +104,7 @@
             }
             var _local_4:IRoomSession = this.widget.handler.roomSession;
             var _local_5:ISessionDataManager = this.widget.handler.container.sessionDataManager;
-            if ((((_local_4._Str_2781) || (_local_5._Str_2799)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((_local_4.isRoomController) || (_local_5._Str_2799)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 _Str_2304("pick_up");
             }

@@ -6,8 +6,8 @@
 
     public class FurnitureScoreLogic extends FurnitureLogic 
     {
-        private static const _Str_3536:int = 50;
-        private static const _Str_5967:int = 3000;
+        private static const UPDATE_INTERVAL:int = 50;
+        private static const MAX_UPDATE_TIME:int = 3000;
 
         private var _Str_3295:int = 0;
         private var _Str_5063:int = 0;
@@ -37,13 +37,13 @@
                 {
                     _local_3 = -(_local_3);
                 }
-                if ((_local_3 * _Str_3536) > _Str_5967)
+                if ((_local_3 * UPDATE_INTERVAL) > MAX_UPDATE_TIME)
                 {
-                    this._Str_3464 = (_Str_5967 / _local_3);
+                    this._Str_3464 = (MAX_UPDATE_TIME / _local_3);
                 }
                 else
                 {
-                    this._Str_3464 = _Str_3536;
+                    this._Str_3464 = UPDATE_INTERVAL;
                 }
                 this._Str_5063 = getTimer();
             }

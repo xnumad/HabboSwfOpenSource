@@ -70,7 +70,7 @@
         public static function _Str_21849(k:String, _arg_2:IWindow):void
         {
             var _local_4:int;
-            Logger.log((((((((k + _arg_2) + " (") + _arg_2.width) + ", ") + _arg_2.height) + "), ") + _arg_2._Str_7560(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)));
+            Logger.log((((((((k + _arg_2) + " (") + _arg_2.width) + ", ") + _arg_2.height) + "), ") + _arg_2.getParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)));
             var _local_3:IWindowContainer = (_arg_2 as IWindowContainer);
             if (_local_3 != null)
             {

@@ -35,7 +35,7 @@
             this._Str_3359 = new Map();
             this._habboToolbar = k;
             this._toolbarView = _arg_2;
-            this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+            this._habboToolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             var _local_3:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_view_xml") as XmlAsset);
             this._window = (this._habboToolbar.windowManager.buildFromXML((_local_3.content as XML), 2) as IWindowContainer);
             this._Str_7348 = new MeMenuNewIconLoader(this._habboToolbar);
@@ -82,7 +82,7 @@
                                 _local_5 = this._habboToolbar.navigator;
                                 if (_local_5 != null)
                                 {
-                                    _local_5._Str_8024();
+                                    _local_5.showOwnRooms();
                                 }
                                 break;
                             case "talents":
@@ -108,7 +108,7 @@
             }
         }
 
-        private function _Str_3259(k:HabboToolbarEvent):void
+        private function onToolbarClick(k:HabboToolbarEvent):void
         {
             if (this._Str_21344)
             {
@@ -173,7 +173,7 @@
             }
             this._Str_7348.dispose();
             this._Str_7348 = null;
-            this._habboToolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3259);
+            this._habboToolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onToolbarClick);
             this._toolbarView = null;
             this._habboToolbar = null;
         }

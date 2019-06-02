@@ -60,25 +60,25 @@
             this._clubHasEverBeenMember = k;
         }
 
-        public function get _Str_3738():Boolean
+        public function get isVIP():Boolean
         {
             return this._isVIP;
         }
 
-        public function set _Str_3738(k:Boolean):void
+        public function set isVIP(k:Boolean):void
         {
             this._lastUpdated = getTimer();
             this._isVIP = k;
         }
 
-        public function get _Str_4458():int
+        public function get minutesUntilExpiration():int
         {
             var k:int = ((getTimer() - this._lastUpdated) / (1000 * 60));
             var _local_2:int = (this._minutesUntilExpiration - k);
             return (_local_2 > 0) ? _local_2 : 0;
         }
 
-        public function set _Str_4458(k:int):void
+        public function set minutesUntilExpiration(k:int):void
         {
             this._lastUpdated = getTimer();
             this._minutesUntilExpiration = k;

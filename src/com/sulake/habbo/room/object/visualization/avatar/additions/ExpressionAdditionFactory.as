@@ -11,7 +11,7 @@
         public static const IDLE:int = 5;
 
 
-        public static function _Str_24515(k:int, _arg_2:int, _arg_3:AvatarVisualization):IExpressionAddition
+        public static function make(k:int, _arg_2:int, _arg_3:AvatarVisualization):IExpressionAddition
         {
             switch (_arg_2)
             {

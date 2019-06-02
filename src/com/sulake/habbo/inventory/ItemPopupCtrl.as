@@ -139,14 +139,14 @@
                     if (_arg_4 != null)
                     {
                         this._expectingExtImage = true;
-                        _local_11 = _arg_4._Str_15059("id");
+                        _local_11 = _arg_4.getJSONValue("id");
                         if (!StringUtils.isEmpty(_local_11))
                         {
                             this._Str_17989(_local_11);
                         }
                         else
                         {
-                            _local_12 = _arg_4._Str_15059("w");
+                            _local_12 = _arg_4.getJSONValue("w");
                             if (!StringUtils.isEmpty(_local_12))
                             {
                                 _local_13 = (this._tradingModel._Str_8308().getProperty("stories.image_url_base") + _local_12);

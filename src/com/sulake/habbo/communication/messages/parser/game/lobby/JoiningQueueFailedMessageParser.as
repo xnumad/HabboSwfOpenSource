@@ -5,7 +5,7 @@
 
     public class JoiningQueueFailedMessageParser implements IMessageParser 
     {
-        public static const _Str_9719:int = 1;
+        public static const DUPLICATE_MACHINEID:int = 1;
 
         private var _gameTypeId:int;
         private var _reason:int;

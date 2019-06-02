@@ -125,7 +125,7 @@
             if (_local_2)
             {
                 _local_3 = _styleSheetMap[_local_2.name];
-                if (((_local_3) && (_local_3._Str_1451(_local_2))))
+                if (((_local_3) && (_local_3.equals(_local_2))))
                 {
                     return _local_3;
                 }

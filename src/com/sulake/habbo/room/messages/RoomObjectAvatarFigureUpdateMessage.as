@@ -30,7 +30,7 @@
             return this._gender;
         }
 
-        public function get _Str_2886():Boolean
+        public function get isRiding():Boolean
         {
             return this._isRiding;
         }

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
     import com.sulake.room.utils.Vector3d;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.messages.RoomObjectMoveUpdateMessage;
     import com.sulake.habbo.room.messages.RoomObjectDataUpdateMessage;
     import com.sulake.room.messages.RoomObjectUpdateMessage;
@@ -9,23 +9,23 @@
 
     public class FurniturePushableLogic extends FurnitureMultistateLogic 
     {
-        private static const _Str_13582:int = 0;
-        private static const _Str_20134:int = 1;
-        private static const _Str_14385:int = 10;
+        private static const ANIMATION_NOT_MOVING:int = 0;
+        private static const ANIMATION_MOVING:int = 1;
+        private static const MAX_ANIMATION_COUNT:int = 10;
 
         private var _oldLocation:Vector3d = null;
 
         public function FurniturePushableLogic()
         {
-            _Str_6769 = _Str_10732;
+            moveUpdateInterval = DEFAULT_UPDATE_INTERVAL;
             this._oldLocation = new Vector3d();
         }
 
         override public function processUpdateMessage(k:RoomObjectUpdateMessage):void
         {
-            var _local_4:IVector3D;
-            var _local_5:IVector3D;
-            var _local_6:IVector3D;
+            var _local_4:IVector3d;
+            var _local_5:IVector3d;
+            var _local_6:IVector3d;
             if (k == null)
             {
                 return;
@@ -63,36 +63,36 @@
             {
                 if (_local_3.state > 0)
                 {
-                    _Str_6769 = (_Str_10732 / this._Str_23160(_local_3.state));
+                    moveUpdateInterval = (DEFAULT_UPDATE_INTERVAL / this.getUpdateIntervalValue(_local_3.state));
                 }
                 else
                 {
-                    _Str_6769 = 1;
+                    moveUpdateInterval = 1;
                 }
                 this._Str_9796(_local_3);
                 return;
             }
-            if (((_local_2) && (_local_2._Str_24236)))
+            if (((_local_2) && (_local_2.isSlideUpdate)))
             {
-                _Str_6769 = _Str_10732;
+                moveUpdateInterval = DEFAULT_UPDATE_INTERVAL;
             }
             super.processUpdateMessage(k);
         }
 
-        protected function _Str_23160(k:int):int
+        protected function getUpdateIntervalValue(k:int):int
         {
-            return k / _Str_14385;
+            return k / MAX_ANIMATION_COUNT;
         }
 
-        protected function _Str_23668(k:int):int
+        protected function getAnimationValue(k:int):int
         {
-            return k % _Str_14385;
+            return k % MAX_ANIMATION_COUNT;
         }
 
         private function _Str_9796(k:RoomObjectDataUpdateMessage):void
         {
             var _local_3:LegacyStuffData;
-            var _local_2:int = this._Str_23668(k.state);
+            var _local_2:int = this.getAnimationValue(k.state);
             if (_local_2 != k.state)
             {
                 _local_3 = new LegacyStuffData();
@@ -110,9 +110,9 @@
                 super.update(k);
                 if (Vector3d.dif(object.getLocation(), this._oldLocation).length == 0)
                 {
-                    if (object.getState(0) != _Str_13582)
+                    if (object.getState(0) != ANIMATION_NOT_MOVING)
                     {
-                        object.setState(_Str_13582, 0);
+                        object.setState(ANIMATION_NOT_MOVING, 0);
                     }
                 }
             }

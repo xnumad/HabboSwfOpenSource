@@ -325,7 +325,7 @@
             if (_local_2._Str_5019 != null)
             {
                 Logger.log(("ENTERING ROOM: " + _local_2._Str_5019.flatId));
-                if (_local_2._Str_5019._Str_2738 == _Str_3560._Str_3711)
+                if (_local_2._Str_5019._Str_2738 == _Str_3560.DOORMODE_PASSWORD)
                 {
                     this._navigator._Str_7174.show(_local_2._Str_5019);
                 }

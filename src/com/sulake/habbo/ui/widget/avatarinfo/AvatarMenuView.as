@@ -90,14 +90,14 @@
             {
                 _Str_2304("moderate", this.moderateMenuHasContent());
                 _Str_2304("friend", this._data.canBeAskedForAFriend);
-                _Str_2304("ignore", (!(this._data._Str_3655)));
-                _Str_2304("unignore", this._data._Str_3655);
+                _Str_2304("ignore", (!(this._data.isIgnored)));
+                _Str_2304("unignore", this._data.isIgnored);
                 _Str_2304("report", ((this.widget.configuration) && (this.widget.configuration.getBoolean("infostand.report.show"))));
                 _local_4 = this._data._Str_3577;
                 this.widget.localizations.registerParameter("infostand.button.respect", "count", _local_4.toString());
                 _Str_2304("respect", (_local_4 > 0));
                 _local_5 = this.widget.handler;
-                _local_6 = _local_5.container.sessionDataManager._Str_4701();
+                _local_6 = _local_5.container.sessionDataManager.isAccountSafetyLocked();
                 _Str_2304("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data._Str_5751))));
                 switch (this._data._Str_6622)
                 {
@@ -289,13 +289,13 @@
                         case "ignore":
                             _arg_2.parent.visible = false;
                             window.findChildByName("unignore").visible = true;
-                            this._data._Str_3655 = true;
+                            this._data.isIgnored = true;
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_IGNORE_USER;
                             break;
                         case "unignore":
                             _arg_2.parent.visible = false;
                             window.findChildByName("ignore").visible = true;
-                            this._data._Str_3655 = false;
+                            this._data.isIgnored = false;
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_UNIGNORE_USER;
                             break;
                         case "kick":

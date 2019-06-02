@@ -69,7 +69,7 @@
             }
         }
 
-        public static function _Str_6608(k:uint):uint
+        public static function getMouseCursorByState(k:uint):uint
         {
             var _local_2:uint = _Str_4392.length;
             while (_local_2-- > 0)
@@ -88,7 +88,7 @@
             var _local_5:Point;
             var _local_6:Boolean;
             _local_5 = new Point(k.stageX, k.stageY);
-            _arg_2._Str_14451(_local_5);
+            _arg_2.convertPointFromGlobalToLocalSpace(_local_5);
             switch (k.type)
             {
                 case MouseEvent.MOUSE_MOVE:
@@ -251,10 +251,10 @@
                         {
                             try
                             {
-                                mouseCursorType = IInteractiveWindow(this._Str_3275)._Str_6608(this._Str_3275.state);
+                                mouseCursorType = IInteractiveWindow(this._Str_3275).getMouseCursorByState(this._Str_3275.state);
                                 if (mouseCursorType == MouseCursorType.DEFAULT)
                                 {
-                                    mouseCursorType = _Str_6608(this._Str_3275.state);
+                                    mouseCursorType = getMouseCursorByState(this._Str_3275.state);
                                 }
                             }
                             catch(e:Error)
@@ -298,7 +298,7 @@
             }
             var _local_4:Boolean;
             var _local_5:Point = new Point(_arg_2.stageX, _arg_2.stageY);
-            k._Str_14451(_local_5);
+            k.convertPointFromGlobalToLocalSpace(_local_5);
             if (_arg_2.type == MouseEvent.MOUSE_UP)
             {
                 if (k != this._Str_3558)
@@ -315,7 +315,7 @@
                 }
                 else
                 {
-                    _local_4 = (!(k._Str_21290(_local_5)));
+                    _local_4 = (!(k.hitTestLocalPoint(_local_5)));
                 }
             }
             if (!_local_4)
@@ -361,7 +361,7 @@
             var _local_8:Boolean = k.update(k, _local_7);
             for each (_local_9 in this._Str_8811)
             {
-                _local_9._Str_14445(_local_7, k);
+                _local_9.eventReceived(_local_7, k);
             }
             _local_7.recycle();
             if (((!(_local_8)) && (!(_arg_3))))

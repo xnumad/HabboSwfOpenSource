@@ -63,7 +63,7 @@
             {
                 throw (new Error("Failed to construct settings window from XML!"));
             }
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             this._window.x = (this._toolbarView.window.width + 10);
             this._window.y = (this._toolbarView.window.bottom - this._window.height);
             if (((!(ExternalInterface.available)) || (!(this._widget.toolbar.getProperty("has.identity") == "1"))))
@@ -77,7 +77,7 @@
             this._window.findChildByName("chat_settings").visible = true;
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

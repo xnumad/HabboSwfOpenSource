@@ -28,7 +28,7 @@
 
     public class ApdevVideoPlayer extends Sprite 
     {
-        public static const _Str_1025:int = 140;
+        public static const MIN_SIZE:int = 140;
         public static const _Str_17157:int = 2000;
 
         private var _Str_5336:Sprite;
@@ -165,7 +165,7 @@
             }
         }
 
-        public function _Str_6729():Number
+        public function getPosition():Number
         {
             var k:Number = 0;
             if (((!(this._Str_3167 == null)) && (!(this._Str_4245 == null))))
@@ -213,11 +213,11 @@
             this._autoPlay = false;
             this._Str_18114 = false;
             this._Str_18354 = (this._Str_16161 = false);
-            if (k < ApdevVideoPlayer._Str_1025)
+            if (k < ApdevVideoPlayer.MIN_SIZE)
             {
                 _local_3 = ((_arg_2 > 0) ? (k / _arg_2) : (4 / 3));
-                this._Str_4901 = ApdevVideoPlayer._Str_1025;
-                this._Str_4960 = (ApdevVideoPlayer._Str_1025 / _local_3);
+                this._Str_4901 = ApdevVideoPlayer.MIN_SIZE;
+                this._Str_4960 = (ApdevVideoPlayer.MIN_SIZE / _local_3);
             }
             else
             {

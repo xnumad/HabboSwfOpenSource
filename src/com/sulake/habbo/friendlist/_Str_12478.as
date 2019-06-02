@@ -52,7 +52,7 @@
             var _local_3:RemoveFriendMessageComposer = new RemoveFriendMessageComposer();
             for each (_local_4 in this._Str_1007)
             {
-                _local_3._Str_19849(_local_4.id);
+                _local_3.addRemovedFriend(_local_4.id);
             }
             friendList.send(_local_3);
             this.dispose();

@@ -157,7 +157,7 @@
             else
             {
                 _local_5 = _local_2.product;
-                _local_6 = page.viewer.roomEngine.getFurnitureImage(_local_5._Str_2941, new Vector3d(2, 0, 0), 64, this, 0, _local_5._Str_2415);
+                _local_6 = page.viewer.roomEngine.getFurnitureImage(_local_5.productClassId, new Vector3d(2, 0, 0), 64, this, 0, _local_5.extraParam);
                 _local_2.previewCallbackId = _local_6.id;
                 if (_local_6 != null)
                 {

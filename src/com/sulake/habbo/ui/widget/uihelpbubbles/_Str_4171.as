@@ -18,7 +18,7 @@
     {
         private var _window:IWindowContainer;
         private var _Str_2268:UiHelpBubblesWidget;
-        private var _Str_576:String;
+        private var _id:String;
         private var _Str_6304:Point;
         private var _Str_19278:String;
         private var _Str_13653:Boolean;
@@ -34,7 +34,7 @@
         public function _Str_4171(k:UiHelpBubblesWidget, _arg_2:_Str_5419, _arg_3:Boolean)
         {
             this._Str_2268 = k;
-            this._Str_576 = _arg_2.name;
+            this._id = _arg_2.name;
             this._Str_19278 = _arg_2.text;
             this._Str_13653 = _arg_3;
             this._Str_20666 = _arg_2._Str_16803;
@@ -146,7 +146,7 @@
             {
                 this._Str_2757.visible = false;
             }
-            this._Str_2268._Str_14683(this._Str_576);
+            this._Str_2268._Str_14683(this._id);
         }
 
         private function _Str_16126(k:WindowMouseEvent):void
@@ -160,7 +160,7 @@
             {
                 this._Str_2757.visible = false;
             }
-            this._Str_2268._Str_14683(this._Str_576);
+            this._Str_2268._Str_14683(this._id);
         }
 
         public function _Str_21122(k:Rectangle):void
@@ -230,9 +230,9 @@
             return this._window;
         }
 
-        public function _Str_4290():String
+        public function getName():String
         {
-            return this._Str_576;
+            return this._id;
         }
     }
 }

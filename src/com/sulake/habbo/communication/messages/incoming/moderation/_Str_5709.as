@@ -57,7 +57,7 @@
             return this._Str_21059;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._Str_2592;
         }

@@ -176,7 +176,7 @@
             var _local_5:IWindowContainer;
             var k:* = (this._data.userId == this._manager._Str_3251);
             this._groupsList.visible = (this._data.guilds.length > 0);
-            this._groupsList._Str_2724();
+            this._groupsList.destroyListItems();
             for each (_local_2 in this._data.guilds)
             {
                 _local_3 = IWindowContainer(this._groupsListEntryTemplate.clone());
@@ -232,8 +232,8 @@
             this._manager.localization.registerParameter("extendedprofile.username", "username", this._data.userName);
             this._manager.localization.registerParameter("extendedprofile.created", "created", this._data.creationDate);
             this._manager.localization.registerParameter("extendedprofile.activitypoints", "activitypoints", this._data.activityPoints.toString());
-            this._manager.localization.registerParameter("extendedprofile.last.login", "lastlogin", FriendlyTime.format(this._manager.localization, this._data._Str_20160, ".ago"));
-            this._window.findChildByName("user_last_login").visible = (this._data._Str_20160 > -1);
+            this._manager.localization.registerParameter("extendedprofile.last.login", "lastlogin", FriendlyTime.format(this._manager.localization, this._data.lastAccessSinceInSeconds, ".ago"));
+            this._window.findChildByName("user_last_login").visible = (this._data.lastAccessSinceInSeconds > -1);
             this._Str_16592();
             var _local_2:* = (this._data.friendCount > -1);
             var _local_3:Boolean = (((this._data.isFriend) && (_local_2)) || (k));
@@ -314,7 +314,7 @@
             }
         }
 
-        public function _Str_12065(k:int, _arg_2:Array):void
+        public function onUserBadges(k:int, _arg_2:Array):void
         {
             var _local_3:int;
             var _local_4:_Str_2402;

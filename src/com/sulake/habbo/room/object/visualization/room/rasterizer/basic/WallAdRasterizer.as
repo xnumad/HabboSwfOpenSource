@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.room.object.visualization.room.rasterizer.basic
 {
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.utils.XMLValidator;
     import flash.display.BitmapData;
     import com.sulake.habbo.room.object.visualization.room.utils.PlaneBitmapData;
@@ -9,7 +9,7 @@
     {
 
 
-        override public function getTextureIdentifier(k:Number, _arg_2:IVector3D):String
+        override public function getTextureIdentifier(k:Number, _arg_2:IVector3d):String
         {
             return String(k);
         }
@@ -47,8 +47,8 @@
                     _local_5 = _local_4.@id;
                     _local_6 = _local_4.visualization;
                     _local_7 = new WallPlane();
-                    _Str_9137(_local_7, _local_6);
-                    if (_Str_3491(_local_5) == null)
+                    parseVisualizations(_local_7, _local_6);
+                    if (getPlane(_local_5) == null)
                     {
                         _Str_3453(_local_5, _local_7);
                     }
@@ -61,12 +61,12 @@
             }
         }
 
-        override public function render(k:BitmapData, _arg_2:String, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:IVector3D, _arg_7:Boolean, _arg_8:Number=0, _arg_9:Number=0, _arg_10:Number=0, _arg_11:Number=0, _arg_12:int=0):PlaneBitmapData
+        override public function render(k:BitmapData, _arg_2:String, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:IVector3d, _arg_7:Boolean, _arg_8:Number=0, _arg_9:Number=0, _arg_10:Number=0, _arg_11:Number=0, _arg_12:int=0):PlaneBitmapData
         {
-            var _local_13:WallPlane = (_Str_3491(_arg_2) as WallPlane);
+            var _local_13:WallPlane = (getPlane(_arg_2) as WallPlane);
             if (_local_13 == null)
             {
-                _local_13 = (_Str_3491(DEFAULT) as WallPlane);
+                _local_13 = (getPlane(DEFAULT) as WallPlane);
             }
             if (_local_13 == null)
             {

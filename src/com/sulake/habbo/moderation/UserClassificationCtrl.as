@@ -49,7 +49,7 @@
             this._frame = IFrameWindow(this._main.getXmlWindow("userclassification_frame"));
             this._list = IItemListWindow(this._frame.findChildByName("userclassification_list"));
             this._row = (this._list.getListItemAt(0) as IWindowContainer);
-            this._list._Str_2659();
+            this._list.removeListItems();
             this._frame.procedure = this._Str_7142;
             var k:IWindow = this._frame.findChildByTag("close");
             k.procedure = this._Str_2392;
@@ -170,7 +170,7 @@
         {
             var _local_2:IWindowContainer = IWindowContainer(this._list.parent);
             var _local_3:IWindow = (_local_2.getChildByName("scroller") as IWindow);
-            var _local_4:* = (this._list._Str_2614.height > this._list.height);
+            var _local_4:* = (this._list.visibleRegion.height > this._list.height);
             var _local_5:int = 17;
             if (_local_3.visible)
             {
@@ -200,7 +200,7 @@
             this._disposed = true;
             if (this._list != null)
             {
-                this._list._Str_2659();
+                this._list.removeListItems();
                 this._list.dispose();
                 this._list = null;
             }

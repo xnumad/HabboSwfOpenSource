@@ -106,7 +106,7 @@
             var _local_7:int;
             var _local_3:PetFigureData = new PetFigureData(k);
             var _local_5:String = "std";
-            var _local_6:ImageResult = this._Str_2268.handler.roomEngine._Str_2641(_local_3.typeId, _local_3.paletteId, _local_3.color, new Vector3d(90), 64, this, true, 0, _local_3._Str_3542, _local_5);
+            var _local_6:ImageResult = this._Str_2268.handler.roomEngine.getPetImage(_local_3.typeId, _local_3.paletteId, _local_3.color, new Vector3d(90), 64, this, true, 0, _local_3._Str_3542, _local_5);
             if (_local_6 != null)
             {
                 _local_7 = _local_6.id;

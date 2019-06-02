@@ -87,6 +87,6 @@
         function getTextFormat(_arg_1:int=-1, _arg_2:int=-1):TextFormat;
         function replaceText(_arg_1:int, _arg_2:int, _arg_3:String):void;
         function setTextFormat(_arg_1:TextFormat, _arg_2:int=-1, _arg_3:int=-1):void;
-        function _Str_25655():void;
+        function resetExplicitStyle():void;
     }
 }

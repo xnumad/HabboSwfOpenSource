@@ -38,7 +38,7 @@
             this._position = new Point(Math.round((Math.random() * _Str_14372.x)), Math.round((Math.random() * _Str_14372.y)));
         }
 
-        public function _Str_6729(k:int):Point
+        public function getPosition(k:int):Point
         {
             return this._position;
         }
@@ -48,7 +48,7 @@
             return this._Str_2259(k) == _Str_14452;
         }
 
-        public function _Str_4913(k:int):BitmapData
+        public function getBitmap(k:int):BitmapData
         {
             var _local_2:int = this._Str_2259(k);
             var _local_3:BitmapData = this._twinkleImages.getImage(_Str_15029[_local_2]);

@@ -4,7 +4,7 @@
 
     public interface IHabboWebLogin extends IEventDispatcher 
     {
-        function _Str_20369():void;
+        function requestReAuthenticate():void;
         function init():void;
     }
 }

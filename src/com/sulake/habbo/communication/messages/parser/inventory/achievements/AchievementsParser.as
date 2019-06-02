@@ -35,7 +35,7 @@
             return this._achievements;
         }
 
-        public function get _Str_16300():String
+        public function get defaultCategory():String
         {
             return this._Str_19269;
         }

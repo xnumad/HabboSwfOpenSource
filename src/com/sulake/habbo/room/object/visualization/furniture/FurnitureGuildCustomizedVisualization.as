@@ -6,29 +6,29 @@
 
     public class FurnitureGuildCustomizedVisualization extends FurnitureAnimatedVisualization 
     {
-        public static const _Str_7116:String = "COLOR1";
-        public static const _Str_8203:String = "COLOR2";
+        public static const PRIMARY_COLOUR_SPRITE_TAG:String = "COLOR1";
+        public static const SECONDARY_COLOUR_SPRITE_TAG:String = "COLOR2";
         public static const DEFAULT_COLOR_1:int = 0xEEEEEE;
         public static const DEFAULT_COLOR_2:int = 0x4B4B4B;
         private static const BADGE:String = "BADGE";
 
         private var _color1:int;
         private var _color2:int;
-        private var _Str_5025:String = "";
-        private var _Str_6767:String = "";
+        private var _badgeAssetNameNormalScale:String = "";
+        private var _badgeAssetNameSmallScale:String = "";
 
 
         override protected function updateModel(k:Number):Boolean
         {
             var _local_5:String;
             var _local_2:Boolean = super.updateModel(k);
-            if (this._Str_5025 == "")
+            if (this._badgeAssetNameNormalScale == "")
             {
                 _local_5 = object.getModel().getString(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_ASSET_NAME);
                 if (_local_5 != null)
                 {
-                    this._Str_5025 = _local_5;
-                    this._Str_6767 = (this._Str_5025 + "_32");
+                    this._badgeAssetNameNormalScale = _local_5;
+                    this._badgeAssetNameSmallScale = (this._badgeAssetNameNormalScale + "_32");
                 }
             }
             var _local_3:Number = object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_COLOR_1);
@@ -43,9 +43,9 @@
             var _local_4:String = getSpriteTag(k, direction, _arg_2);
             switch (_local_4)
             {
-                case _Str_7116:
+                case PRIMARY_COLOUR_SPRITE_TAG:
                     return this._color1;
-                case _Str_8203:
+                case SECONDARY_COLOUR_SPRITE_TAG:
                     return this._color2;
             }
             return super.getSpriteColor(k, _arg_2, _arg_3);
@@ -58,9 +58,9 @@
             {
                 if (k == 32)
                 {
-                    return this._Str_6767;
+                    return this._badgeAssetNameSmallScale;
                 }
-                return this._Str_5025;
+                return this._badgeAssetNameNormalScale;
             }
             return super.getSpriteAssetName(k, _arg_2);
         }

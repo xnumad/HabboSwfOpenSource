@@ -17,32 +17,32 @@
             this._tileZ = _arg_6;
         }
 
-        public function get _Str_17349():Number
+        public function get tileX():Number
         {
             return this._tileX;
         }
 
-        public function get _Str_18149():Number
+        public function get tileY():Number
         {
             return this._tileY;
         }
 
-        public function get _Str_25901():Number
+        public function get tileZ():Number
         {
             return this._tileZ;
         }
 
-        public function get _Str_16836():int
+        public function get tileXAsInt():int
         {
             return this._tileX + 0.499;
         }
 
-        public function get _Str_17676():int
+        public function get tileYAsInt():int
         {
             return this._tileY + 0.499;
         }
 
-        public function get _Str_21459():int
+        public function get tileZAsInt():int
         {
             return this._tileZ + 0.499;
         }

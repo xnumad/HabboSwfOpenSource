@@ -155,9 +155,9 @@
                 this._userPrototype = (this._usersList.getListItemAt(0) as IWindowContainer);
                 this._reasonPrototype = (this._reasonsList.getListItemAt(0) as IWindowContainer);
                 this._chatPrototype = (this._chatList.getListItemAt(0) as IWindowContainer);
-                this._usersList._Str_2659();
-                this._reasonsList._Str_2659();
-                this._chatList._Str_2659();
+                this._usersList.removeListItems();
+                this._reasonsList.removeListItems();
+                this._chatList.removeListItems();
                 _Str_2789(IWidgetWindow(this._view.findChildByName("help_message")).widget).maxChars = _Str_5003;
                 this._Str_14598();
             }
@@ -453,7 +453,7 @@
             var _local_4:Vector.<ChatRegistryItem>;
             var _local_5:IWindowContainer;
             var _local_6:Boolean;
-            this._usersList._Str_2659();
+            this._usersList.removeListItems();
             var k:int;
             var _local_2:Boolean;
             for each (_local_3 in this._habboHelp._Str_17447._Str_20328())
@@ -477,7 +477,7 @@
                     }
                     _local_5.findChildByName("room_name").caption = ((_local_3.roomName != "") ? this._habboHelp.localization.getLocalizationWithParams("help.emergency.main.step.two.room.name", "", "room_name", _local_3.roomName) : "");
                     _Str_2483(IWidgetWindow(_local_5.findChildByName("user_avatar")).widget).figure = _local_3.figure;
-                    this._usersList._Str_3015(_local_5, k);
+                    this._usersList.addListItemAt(_local_5, k);
                     if (_local_6)
                     {
                         k = 1;
@@ -525,7 +525,7 @@
         {
             var k:CallForHelpCategoryData;
             var _local_2:IWindowContainer;
-            this._reasonsList._Str_2724();
+            this._reasonsList.destroyListItems();
             for each (k in this._habboHelp._Str_9001)
             {
                 _local_2 = (this._reasonPrototype.clone() as IWindowContainer);
@@ -560,7 +560,7 @@
             }
             if (((_local_2) && (_local_2.length > 0)))
             {
-                this._reasonsList._Str_2724();
+                this._reasonsList.destroyListItems();
                 _local_4 = this._reasonsList.height;
                 this._reasonsList.height = 0;
                 this._reasonsList.height = _local_4;
@@ -598,7 +598,7 @@
             var _local_3:IWindowContainer;
             var _local_4:ITextLinkWindow;
             var _local_5:ICheckBoxWindow;
-            this._chatList._Str_2659();
+            this._chatList.removeListItems();
             this._habboHelp._Str_3531._Str_7724 = true;
             var k:Vector.<ChatRegistryItem> = ((this._habboHelp._Str_2662 > 0) ? this._habboHelp._Str_3531._Str_5150(this._habboHelp._Str_2662) : this._habboHelp._Str_3531._Str_6828());
             Logger.log(((("Found chat items: " + k.length) + " from user:") + this._habboHelp._Str_2662));
@@ -684,7 +684,7 @@
             var _local_2:InstantMessageRegistryItem;
             var _local_3:IWindowContainer;
             var _local_4:ICheckBoxWindow;
-            this._chatList._Str_2659();
+            this._chatList.removeListItems();
             this._habboHelp._Str_3977._Str_7724 = true;
             var k:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977._Str_5150(this._habboHelp._Str_2662);
             for each (_local_2 in k)

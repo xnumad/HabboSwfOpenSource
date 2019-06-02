@@ -125,7 +125,7 @@
             this._manager.windowManager.alert("${group.membermgmt.fail.title}", _local_5, 0, null);
             if (((((!(this._data == null)) && (this._data.groupId == _local_2._Str_3916)) && (!(this._window == null))) && (this._window.visible)))
             {
-                this._Str_5312(this._data._Str_3544);
+                this._Str_5312(this._data.pageIndex);
             }
         }
 
@@ -134,7 +134,7 @@
             var _local_2:_Str_6584 = _Str_6584(k);
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2._Str_2273()._Str_3916)))
             {
-                this._Str_5312(this._data._Str_3544);
+                this._Str_5312(this._data.pageIndex);
             }
         }
 
@@ -143,7 +143,7 @@
             var _local_2:_Str_6668 = _Str_7472(k)._Str_2273();
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.groupId)))
             {
-                this._Str_5312(this._data._Str_3544);
+                this._Str_5312(this._data.pageIndex);
             }
         }
 
@@ -190,7 +190,7 @@
             var k:IWindowContainer = IWindowContainer(this._window.findChildByName("members_cont"));
             var _local_2:Array = this._data.entries;
             var _local_3:int;
-            while (_local_3 < this._data._Str_19517)
+            while (_local_3 < this._data.pageSize)
             {
                 this._Str_2966(k, _local_3, _local_2[_local_3]);
                 _local_3++;
@@ -198,8 +198,8 @@
             var _local_4:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
             _local_4.badgeId = this._data.badgeCode;
             _local_4.groupId = this._data.groupId;
-            this._manager.localization.registerParameter("group.members.pageinfo", "amount", ("" + this._data._Str_21931));
-            this._manager.localization.registerParameter("group.members.pageinfo", "page", ("" + (this._data._Str_3544 + 1)));
+            this._manager.localization.registerParameter("group.members.pageinfo", "amount", ("" + this._data.totalEntries));
+            this._manager.localization.registerParameter("group.members.pageinfo", "page", ("" + (this._data.pageIndex + 1)));
             this._manager.localization.registerParameter("group.members.pageinfo", "totalPages", ("" + this._data.totalPages));
             this._window.findChildByName("previous_page_button").visible = this._Str_24227();
             this._window.findChildByName("next_page_button").visible = this._Str_25422();
@@ -270,7 +270,7 @@
             k.findChildByName("icon_owner").visible = _arg_2.owner;
             this._Str_18115(_arg_2.member, _arg_2.admin, k);
             var _local_3:IWindow = k.findChildByName("admin_container");
-            _local_3.visible = ((!(_local_5)) && ((_arg_2.admin) || (this._data._Str_9282)));
+            _local_3.visible = ((!(_local_5)) && ((_arg_2.admin) || (this._data.allowedToManage)));
             var _local_4:IRegionWindow = IRegionWindow(k.findChildByName("bg_region"));
             _local_4.id = _arg_2.userId;
             this._Str_17814(false, k);
@@ -278,14 +278,14 @@
             _local_5 = (_arg_2.userId == this._manager._Str_3251);
             var _local_6:IRegionWindow = IRegionWindow(k.findChildByName("remove_region"));
             _local_6._Str_2613 = this._manager.localization.getLocalization(((_arg_2.member) ? "group.members.kick" : "group.members.reject"));
-            _local_6.visible = ((((!(_arg_2.owner)) && (!(_local_5))) && (this._data._Str_9282)) && (!(_arg_2.blocked)));
+            _local_6.visible = ((((!(_arg_2.owner)) && (!(_local_5))) && (this._data.allowedToManage)) && (!(_arg_2.blocked)));
             _local_6.id = _arg_2.userId;
-            var _local_7:Boolean = ((((((_arg_2.member) && (!(_arg_2.owner))) && (!(_local_5))) && (this._data._Str_9282)) && (this._manager.getBoolean("group.blocking.enabled"))) && (!(_arg_2.blocked)));
+            var _local_7:Boolean = ((((((_arg_2.member) && (!(_arg_2.owner))) && (!(_local_5))) && (this._data.allowedToManage)) && (this._manager.getBoolean("group.blocking.enabled"))) && (!(_arg_2.blocked)));
             var _local_8:IRegionWindow = IRegionWindow(k.findChildByName("block_region"));
             _local_8._Str_2613 = this._manager.localization.getLocalization("group.members.block");
             _local_8.visible = _local_7;
             _local_8.id = _arg_2.userId;
-            var _local_9:Boolean = ((!(_local_5)) && (this._data._Str_9282));
+            var _local_9:Boolean = ((!(_local_5)) && (this._data.allowedToManage));
             var _local_10:IRegionWindow = IRegionWindow(k.findChildByName("action_link_region"));
             _local_10.visible = _local_9;
             _local_10.id = _arg_2.userId;
@@ -534,7 +534,7 @@
             {
                 return;
             }
-            this._Str_5312(this._Str_13408((this._data._Str_3544 + 1)));
+            this._Str_5312(this._Str_13408((this._data.pageIndex + 1)));
         }
 
         private function _Str_23530(k:WindowEvent, _arg_2:IWindow):void
@@ -543,22 +543,22 @@
             {
                 return;
             }
-            this._Str_5312(this._Str_13408((this._data._Str_3544 - 1)));
+            this._Str_5312(this._Str_13408((this._data.pageIndex - 1)));
         }
 
         private function _Str_24227():Boolean
         {
-            return !(this._data._Str_3544 == this._Str_13408((this._data._Str_3544 - 1)));
+            return !(this._data.pageIndex == this._Str_13408((this._data.pageIndex - 1)));
         }
 
         private function _Str_25422():Boolean
         {
-            return !(this._data._Str_3544 == this._Str_13408((this._data._Str_3544 + 1)));
+            return !(this._data.pageIndex == this._Str_13408((this._data.pageIndex + 1)));
         }
 
         private function _Str_13408(k:int):int
         {
-            var _local_2:int = Math.ceil((this._data._Str_21931 / this._data._Str_19517));
+            var _local_2:int = Math.ceil((this._data.totalEntries / this._data.pageSize));
             return Math.max(0, Math.min(k, (_local_2 - 1)));
         }
 
@@ -572,7 +572,7 @@
             var k:Array = new Array();
             k.push("${group.members.search.all}");
             k.push("${group.members.search.admins}");
-            if (this._data._Str_9282)
+            if (this._data.allowedToManage)
             {
                 k.push("${group.members.search.pending}");
                 if (this._manager.getBoolean("group.blocking.enabled"))
@@ -583,7 +583,7 @@
             var _local_2:IDropMenuWindow = this._Str_19469();
             _local_2.procedure = null;
             _local_2.populate(k);
-            _local_2.selection = ((this._data._Str_9282) ? this._data.searchType : Math.min(this._data.searchType, 1));
+            _local_2.selection = ((this._data.allowedToManage) ? this._data.searchType : Math.min(this._data.searchType, 1));
             _local_2.procedure = this._Str_22754;
         }
 
@@ -591,9 +591,9 @@
         {
             var k:ITextFieldWindow = this._userNameFilter.input;
             k.procedure = null;
-            if (this._userNameFilter.getText() != this._data._Str_21371)
+            if (this._userNameFilter.getText() != this._data.userNameFilter)
             {
-                this._userNameFilter._Str_2497(this._data._Str_21371);
+                this._userNameFilter._Str_2497(this._data.userNameFilter);
             }
             k.procedure = this._Str_23009;
             this._searchTimer.stop();

@@ -4,15 +4,15 @@
     {
         private static const ANIMATION_ID_OFFSET_SLOW1:int = 10;
         private static const ANIMATION_ID_OFFSET_SLOW2:int = 20;
-        private static const _Str_7627:int = 31;
-        private static const _Str_4186:int = 32;
+        private static const ANIMATION_ID_START_ROLL:int = 31;
+        private static const ANIMATION_ID_ROLL:int = 32;
 
-        private var _Str_2749:Array;
-        private var _Str_635:Boolean = false;
+        private var _stateQueue:Array;
+        private var _running:Boolean = false;
 
         public function FurnitureHabbowheelVisualization()
         {
-            this._Str_2749 = new Array();
+            this._stateQueue = new Array();
             super();
         }
 
@@ -20,24 +20,24 @@
         {
             if (k == -1)
             {
-                if (!this._Str_635)
+                if (!this._running)
                 {
-                    this._Str_635 = true;
-                    this._Str_2749 = new Array();
-                    this._Str_2749.push(_Str_7627);
-                    this._Str_2749.push(_Str_4186);
+                    this._running = true;
+                    this._stateQueue = new Array();
+                    this._stateQueue.push(ANIMATION_ID_START_ROLL);
+                    this._stateQueue.push(ANIMATION_ID_ROLL);
                     return;
                 }
             }
             if (((k > 0) && (k <= ANIMATION_ID_OFFSET_SLOW1)))
             {
-                if (this._Str_635)
+                if (this._running)
                 {
-                    this._Str_635 = false;
-                    this._Str_2749 = new Array();
-                    this._Str_2749.push((ANIMATION_ID_OFFSET_SLOW1 + k));
-                    this._Str_2749.push((ANIMATION_ID_OFFSET_SLOW2 + k));
-                    this._Str_2749.push(k);
+                    this._running = false;
+                    this._stateQueue = new Array();
+                    this._stateQueue.push((ANIMATION_ID_OFFSET_SLOW1 + k));
+                    this._stateQueue.push((ANIMATION_ID_OFFSET_SLOW2 + k));
+                    this._stateQueue.push(k);
                     return;
                 }
                 super.setAnimation(k);
@@ -46,11 +46,11 @@
 
         override protected function updateAnimation(k:Number):int
         {
-            if ((((super._Str_6660(1)) && (super._Str_6660(2))) && (super._Str_6660(3))))
+            if ((((super.getLastFramePlayed(1)) && (super.getLastFramePlayed(2))) && (super.getLastFramePlayed(3))))
             {
-                if (this._Str_2749.length > 0)
+                if (this._stateQueue.length > 0)
                 {
-                    super.setAnimation(this._Str_2749.shift());
+                    super.setAnimation(this._stateQueue.shift());
                 }
             }
             return super.updateAnimation(k);

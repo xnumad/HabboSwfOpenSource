@@ -45,7 +45,7 @@
         protected var _Str_12307:int = 65;
         protected var _Str_9374:Boolean = false;
         protected var _Str_4442:OverlayView = null;
-        protected var _Str_635:Boolean = false;
+        protected var _running:Boolean = false;
         protected var _Str_9771:Boolean = false;
         protected var _Str_7538:Boolean = false;
         protected var _Str_18032:Boolean = false;
@@ -58,9 +58,9 @@
 
         public function get recommendedWidth():int
         {
-            if (_Str_1720 != null)
+            if (_width != null)
             {
-                return parseInt(_Str_1720);
+                return parseInt(_width);
             }
             return -1;
         }
@@ -130,7 +130,7 @@
                 this._Str_7538 = true;
                 this._Str_2339.stopAd();
             }
-            this._Str_5679();
+            this.removeListeners();
             if (this._Str_7544())
             {
                 this._Str_4442._Str_13579();
@@ -150,7 +150,7 @@
 
         public function isRunning():Boolean
         {
-            return (!(this._Str_2339 == null)) && (this._Str_635);
+            return (!(this._Str_2339 == null)) && (this._running);
         }
 
         public function _Str_25919():Boolean
@@ -322,7 +322,7 @@
 
         protected function _Str_16122():void
         {
-            this._Str_635 = true;
+            this._running = true;
             if (this._Str_7602 != null)
             {
                 this._Str_7602(new _Str_2291(_Str_2291.AdStarted));
@@ -331,7 +331,7 @@
 
         protected function _Str_4213(k:String):void
         {
-            this._Str_635 = false;
+            this._running = false;
             if (this._Str_7072 != null)
             {
                 this._Str_7072(new _Str_2291(_Str_2291.AdError, k));
@@ -348,7 +348,7 @@
 
         protected function _Str_18050(k:String):void
         {
-            this._Str_635 = false;
+            this._running = false;
             if (this._Str_7754 != null)
             {
                 this._Str_7754(new _Str_2291(k, {"terminated":this._Str_7538}));
@@ -516,7 +516,7 @@
             return null;
         }
 
-        protected function _Str_5679():void
+        protected function removeListeners():void
         {
             if (this._Str_2339 != null)
             {

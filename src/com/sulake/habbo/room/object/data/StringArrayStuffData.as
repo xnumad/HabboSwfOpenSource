@@ -9,7 +9,7 @@
     public class StringArrayStuffData extends StuffDataBase implements IStuffData 
     {
         public static const FORMAT_KEY:int = StuffDataFormatKeyEnum.STRING_ARRAY_TYPE_KEY;
-        private static const _Str_5769:int = 0;
+        private static const STATE_DEFAULT_INDEX:int = 0;
 
         private var _data:Array;
 
@@ -53,7 +53,7 @@
             {
                 return "";
             }
-            return this._data[_Str_5769];
+            return this._data[STATE_DEFAULT_INDEX];
         }
 
         public function getValue(k:int):String
@@ -80,7 +80,7 @@
             var _local_3:int;
             while (_local_3 < this._data.length)
             {
-                if (_local_3 == _Str_5769)
+                if (_local_3 == STATE_DEFAULT_INDEX)
                 {
                 }
                 else

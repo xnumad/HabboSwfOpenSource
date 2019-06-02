@@ -29,7 +29,7 @@
             return true;
         }
 
-        public function get _Str_25221():Vector.<NewUserExperienceGiftOptions>
+        public function get giftOptions():Vector.<NewUserExperienceGiftOptions>
         {
             return this._giftOptions;
         }

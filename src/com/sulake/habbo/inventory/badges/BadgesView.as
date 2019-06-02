@@ -38,7 +38,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
             return ((this._view) && (!(this._view.parent == null))) && (this._view.visible);
         }

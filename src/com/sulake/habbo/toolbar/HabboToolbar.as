@@ -384,7 +384,7 @@
                 default:
                     return;
             }
-            if (this._Str_3705(_local_4) != null)
+            if (this.getIconLocation(_local_4) != null)
             {
                 this._habboHelp._Str_8205(_local_4, _local_3, _local_5, _local_6);
             }
@@ -440,7 +440,7 @@
 					if (getBoolean("seasoncurrencyindicator." + i + ".enabled"))
 					{
 						this._seasonalCurrencyExtension = new SeasonalCurrencyIndicator(this, this._windowManager, assets, this._catalog, this._localization, i);
-						k = new PurseEvent(PurseEvent.CATALOG_PURSE_ACTIVITY_POINT_BALANCE, this._catalog.getPurse()._Str_5590(i), i);
+						k = new PurseEvent(PurseEvent.CATALOG_PURSE_ACTIVITY_POINT_BALANCE, this._catalog.getPurse().getActivityPointsForType(i), i);
 						this._seasonalCurrencyExtension._Str_21326(k);
 					}
 				};
@@ -495,7 +495,7 @@
             {
                 this._settingsExtension.window.visible = (!(this._settingsExtension.window.visible));
             }
-            this.extensionView._Str_8848();
+            this.extensionView.refreshItemWindow();
         }
 
         private function _Str_5360(k:TimerEvent):void
@@ -573,23 +573,23 @@
             }
         }
 
-        public function _Str_3705(k:String):Rectangle
+        public function getIconLocation(k:String):Rectangle
         {
             var _local_2:Rectangle;
             if (k == HabboToolbarIconEnum.EXT_GROUP)
             {
-                _local_2 = this._extensionView._Str_3705(k);
+                _local_2 = this._extensionView.getIconLocation(k);
             }
             else
             {
                 if (this._view)
                 {
-                    _local_2 = this._view._Str_3705(k);
+                    _local_2 = this._view.getIconLocation(k);
                 }
             }
             if (((!(_local_2)) && (this._purseExtension)))
             {
-                _local_2 = this._purseExtension._Str_3705(k);
+                _local_2 = this._purseExtension.getIconLocation(k);
             }
             return _local_2;
         }
@@ -699,7 +699,7 @@
             return this._soundManager;
         }
 
-        public function _Str_11676(k:String, _arg_2:BitmapData, _arg_3:int, _arg_4:int):Motion
+        public function createTransitionToIcon(k:String, _arg_2:BitmapData, _arg_3:int, _arg_4:int):Motion
         {
             if (((this._view) && (!(this._view.disposed))))
             {
@@ -724,7 +724,7 @@
             return getInteger("new.identity", 0) > 0;
         }
 
-        public function _Str_24811(k:String, _arg_2:Boolean):void
+        public function setIconVisibility(k:String, _arg_2:Boolean):void
         {
             if (this._view)
             {
@@ -796,11 +796,11 @@
             }
         }
 
-        public function set _Str_7241(k:Boolean):void
+        public function set onDuty(k:Boolean):void
         {
             if (this._view != null)
             {
-                this._view._Str_7241 = k;
+                this._view.onDuty = k;
             }
         }
 
@@ -830,7 +830,7 @@
             }
         }
 
-        public function get _Str_20519():int
+        public function get toolBarAreaWidth():int
         {
             if (this._view)
             {

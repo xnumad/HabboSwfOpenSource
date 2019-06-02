@@ -29,10 +29,10 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.SPACING, this.spacing));
-            k.push(_Str_2340(PropertyKeys.AUTO_ARRANGE_ITEMS, this.autoArrangeItems));
-            k.push(_Str_2340(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_3640));
-            k.push(_Str_2340(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_3583));
+            k.push(createProperty(PropertyKeys.SPACING, this.spacing));
+            k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this.autoArrangeItems));
+            k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_3640));
+            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_3583));
             return k;
         }
 
@@ -111,9 +111,9 @@
             return this._Str_2448._Str_3707;
         }
 
-        public function get _Str_2614():Rectangle
+        public function get visibleRegion():Rectangle
         {
-            return this._Str_2448._Str_2614;
+            return this._Str_2448.visibleRegion;
         }
 
         public function get scrollStepH():Number

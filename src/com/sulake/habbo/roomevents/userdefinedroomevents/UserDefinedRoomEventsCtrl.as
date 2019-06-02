@@ -221,7 +221,7 @@
             if ((this._updated as ActionDefinition) != null)
             {
                 _local_5 = ActionDefinition(this._updated);
-                _local_6 = _local_5._Str_25459;
+                _local_6 = _local_5.delayInPulses;
                 this._delaySlider._Str_2526(_local_6);
             }
             this._Str_23934();
@@ -234,7 +234,7 @@
             this._Str_17281().visible = false;
             this._Str_21281().visible = false;
             this._Str_21929().visible = false;
-            if (this._updated._Str_21824)
+            if (this._updated.stuffTypeSelectionEnabled)
             {
                 _local_2 = this._Str_3959();
                 if (((_local_2.requiresFurni == _Str_4991) || (_local_2.requiresFurni == _Str_5430)))
@@ -404,7 +404,7 @@
 
         private function _Str_18067():int
         {
-            if (!this._updated._Str_21824)
+            if (!this._updated.stuffTypeSelectionEnabled)
             {
                 return 0;
             }
@@ -534,13 +534,13 @@
                 return;
             }
             var k:ActionDefinition = ActionDefinition(this._updated);
-            if (k._Str_22128.length < 1)
+            if (k.conflictingTriggers.length < 1)
             {
                 return;
             }
             var _local_2:String = "";
             var _local_3:Boolean = true;
-            for each (_local_4 in k._Str_22128)
+            for each (_local_4 in k.conflictingTriggers)
             {
                 _local_2 = (_local_2 + (((((_local_3) ? "" : ", ") + "'") + this._Str_16874(_local_4)) + "'"));
                 _local_3 = false;
@@ -557,13 +557,13 @@
                 return;
             }
             var k:TriggerDefinition = TriggerDefinition(this._updated);
-            if (k._Str_21837.length < 1)
+            if (k.conflictingActions.length < 1)
             {
                 return;
             }
             var _local_2:String = "";
             var _local_3:Boolean = true;
-            for each (_local_4 in k._Str_21837)
+            for each (_local_4 in k.conflictingActions)
             {
                 _local_2 = (_local_2 + (((((_local_3) ? "" : ", ") + "'") + this._Str_16874(_local_4)) + "'"));
                 _local_3 = false;

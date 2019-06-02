@@ -51,7 +51,7 @@
             return (this._Str_14201) && (this._Str_12921);
         }
 
-        public function get _Str_11949():int
+        public function get numberOfSlots():int
         {
             return this._Str_7638;
         }
@@ -89,7 +89,7 @@
             var k:int;
             while (k < this._Str_7638)
             {
-                this._Str_10449(k);
+                this.releaseSlot(k);
                 k++;
             }
             this._Str_6624 = _Str_13868;
@@ -100,7 +100,7 @@
             var k:int;
             while (k < this._Str_7638)
             {
-                this._Str_10449(k);
+                this.releaseSlot(k);
                 k++;
             }
             this._Str_15040();
@@ -194,7 +194,7 @@
             return this._Str_3602[k];
         }
 
-        public function _Str_21930(slotId:int, id:int, category:int, typeId:int, xxxExtra:String):void
+        public function placeObjectAtSlot(slotId:int, id:int, category:int, typeId:int, xxxExtra:String):void
         {
             var oldObjectData:_Str_3718;
             var newSlotId:int;
@@ -237,7 +237,7 @@
             this._Str_8448();
         }
 
-        public function _Str_10449(k:int):void
+        public function releaseSlot(k:int):void
         {
             if (!this.ready)
             {
@@ -256,10 +256,10 @@
             this._Str_8448();
         }
 
-        public function _Str_19502():void
+        public function executeRecycler():void
         {
             var _local_3:_Str_3718;
-            if (!this._Str_18562())
+            if (!this.isReadyToRecycle())
             {
                 return;
             }
@@ -281,7 +281,7 @@
             this._Str_2271._Str_20090();
         }
 
-        public function _Str_18562():Boolean
+        public function isReadyToRecycle():Boolean
         {
             if (((!(this.ready)) || (!(this._habboCatalog.privateRoomSessionActive))))
             {
@@ -334,7 +334,7 @@
             {
                 return;
             }
-            this._Str_2271._Str_20203(this._Str_18562());
+            this._Str_2271._Str_20203(this.isReadyToRecycle());
         }
 
         private function _Str_23847():Boolean
@@ -377,7 +377,7 @@
             }
         }
 
-        public function _Str_21988():Array
+        public function getPrizeTable():Array
         {
             if (this._Str_3154 == null)
             {

@@ -53,7 +53,7 @@
             this._sessionDataManager = null;
         }
 
-        public function get _Str_992():Boolean
+        public function get isReady():Boolean
         {
             return this._ready;
         }
@@ -63,7 +63,7 @@
             return (k in this._perks) && (this._perks[k].isAllowed);
         }
 
-        public function _Str_15321(k:String):String
+        public function getPerkErrorMessage(k:String):String
         {
             var _local_2:_Str_3818 = this._perks[k];
             return (_local_2 != null) ? _local_2.errorMessage : "";

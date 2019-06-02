@@ -36,7 +36,7 @@
         public function set itemList(k:IItemListWindow):void
         {
             this._itemList = k;
-            this._itemList._Str_6129 = true;
+            this._itemList.disableAutodrag = true;
         }
 
         public function set _Str_24528(k:CategoryElementFactory):void
@@ -57,7 +57,7 @@
             this._currentWindowsInItemList = new Dictionary();
             this._searchCodeShowMore = new Dictionary();
             this._searchCodeViewMode = new Dictionary();
-            this._itemList._Str_2724();
+            this._itemList.destroyListItems();
             if (this._navigator._Str_3440._Str_11413._Str_7385.length == 0)
             {
                 this._itemList.addListItem(this._categoryElementFactory._Str_24646());
@@ -161,11 +161,11 @@
 
         private function _Str_18512(k:int, _arg_2:Boolean):void
         {
-            var _local_3:int = this._itemList._Str_3156(this._currentWindowsInItemList[k]);
-            this._itemList._Str_2915(_local_3);
+            var _local_3:int = this._itemList.getListItemIndex(this._currentWindowsInItemList[k]);
+            this._itemList.removeListItemAt(_local_3);
             var _local_4:IWindow = this._Str_20272(k, _arg_2);
             _local_4.id = k;
-            this._itemList._Str_3015(_local_4, _local_3);
+            this._itemList.addListItemAt(_local_4, _local_3);
             this._currentWindowsInItemList[k] = _local_4;
         }
     }

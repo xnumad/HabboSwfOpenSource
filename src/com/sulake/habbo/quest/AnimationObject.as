@@ -6,8 +6,8 @@
 
     public interface AnimationObject extends IDisposable 
     {
-        function _Str_6729(_arg_1:int):Point;
-        function _Str_4913(_arg_1:int):BitmapData;
+        function getPosition(_arg_1:int):Point;
+        function getBitmap(_arg_1:int):BitmapData;
         function _Str_22065(_arg_1:int):Boolean;
         function _Str_21940():void;
     }

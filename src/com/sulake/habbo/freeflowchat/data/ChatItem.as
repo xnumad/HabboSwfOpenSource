@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.freeflowchat.data
 {
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.session.events.RoomSessionChatEvent;
 
     public class ChatItem 
@@ -12,16 +12,16 @@
         private var _chatType:int;
         private var _links:Array;
         private var _style:int;
-        private var _userLocation:IVector3D;
+        private var _userLocation:IVector3d;
         private var _forcedColor:*;
         private var _forcedScreenLocation:*;
         private var _forcedFigure:String;
         private var _forcedUserName:String;
         private var _extraParam:int;
 
-        public function ChatItem(k:RoomSessionChatEvent, _arg_2:int, _arg_3:IVector3D=null, _arg_4:int=0, _arg_5:*=null, _arg_6:*=null, _arg_7:String=null, _arg_8:String=null)
+        public function ChatItem(k:RoomSessionChatEvent, _arg_2:int, _arg_3:IVector3d=null, _arg_4:int=0, _arg_5:*=null, _arg_6:*=null, _arg_7:String=null, _arg_8:String=null)
         {
-            this._chatType = RoomSessionChatEvent._Str_4014;
+            this._chatType = RoomSessionChatEvent.CHAT_TYPE_SPEAK;
             super();
             this._timestamp = _arg_2;
             this._userLocation = _arg_3;
@@ -35,7 +35,7 @@
                 this._roomId = 1;
             }
             this._text = k.text;
-            this._chatType = k._Str_3214;
+            this._chatType = k.chatType;
             this._style = k.style;
             this._links = new Array(k.links);
             this._forcedColor = _arg_6;
@@ -60,7 +60,7 @@
             return this._text;
         }
 
-        public function get _Str_3214():int
+        public function get chatType():int
         {
             return this._chatType;
         }
@@ -80,7 +80,7 @@
             return this._timestamp;
         }
 
-        public function get _Str_20712():IVector3D
+        public function get _Str_20712():IVector3d
         {
             return this._userLocation;
         }
@@ -105,7 +105,7 @@
             return this._forcedUserName;
         }
 
-        public function get _Str_2415():int
+        public function get extraParam():int
         {
             return this._extraParam;
         }

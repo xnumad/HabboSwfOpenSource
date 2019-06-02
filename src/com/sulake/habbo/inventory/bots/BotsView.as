@@ -59,7 +59,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
             return ((this._view) && (!(this._view.parent == null))) && (this._view.visible);
         }
@@ -86,7 +86,7 @@
             this._Str_6511();
         }
 
-        public function _Str_3757(k:int):void
+        public function removeItem(k:int):void
         {
             if (!this._isInitialized)
             {
@@ -161,12 +161,12 @@
             }
             if (this._selectedGridItem != null)
             {
-                this._selectedGridItem._Str_2520(false);
+                this._selectedGridItem.setSelected(false);
             }
             this._selectedGridItem = k;
             if (this._selectedGridItem != null)
             {
-                this._selectedGridItem._Str_2520(true);
+                this._selectedGridItem.setSelected(true);
             }
             this._Str_3190(k);
         }
@@ -276,7 +276,7 @@
             {
                 if (_local_2.indexOf(_local_3) == -1)
                 {
-                    this._Str_3757(_local_3);
+                    this.removeItem(_local_3);
                 }
             }
             for each (_local_3 in _local_2)
@@ -412,7 +412,7 @@
             if (this._model.roomSession != null)
             {
                 _local_8 = this._model.roomSession._Str_18311;
-                _local_9 = this._model.roomSession._Str_2781;
+                _local_9 = this._model.roomSession.isRoomController;
             }
             var _local_10:String = "";
             if (!_local_9)

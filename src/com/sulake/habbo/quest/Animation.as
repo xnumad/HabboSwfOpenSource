@@ -42,7 +42,7 @@
             return this._canvas == null;
         }
 
-        public function _Str_18784(k:AnimationObject):void
+        public function addObject(k:AnimationObject):void
         {
             this._sprites.push(k);
         }
@@ -89,10 +89,10 @@
                     if (!_local_2._Str_22065(this._timeElapsedSinceStart))
                     {
                         k = true;
-                        _local_3 = _local_2._Str_4913(this._timeElapsedSinceStart);
+                        _local_3 = _local_2.getBitmap(this._timeElapsedSinceStart);
                         if (_local_3 != null)
                         {
-                            this._canvas.bitmap.copyPixels(_local_3, _local_3.rect, _local_2._Str_6729(this._timeElapsedSinceStart));
+                            this._canvas.bitmap.copyPixels(_local_3, _local_3.rect, _local_2.getPosition(this._timeElapsedSinceStart));
                         }
                     }
                 }

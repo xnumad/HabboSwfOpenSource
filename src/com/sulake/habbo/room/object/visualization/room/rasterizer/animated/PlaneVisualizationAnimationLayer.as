@@ -6,7 +6,7 @@
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.room.object.visualization.utils.IGraphicAssetCollection;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneVisualizationAnimationLayer implements IDisposable 
     {
@@ -97,7 +97,7 @@
             }
         }
 
-        public function render(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:IVector3D, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Number, _arg_10:Number, _arg_11:int):BitmapData
+        public function render(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:IVector3d, _arg_5:int, _arg_6:int, _arg_7:int, _arg_8:int, _arg_9:Number, _arg_10:Number, _arg_11:int):BitmapData
         {
             var _local_12:int;
             var _local_13:AnimationItem;
@@ -126,7 +126,7 @@
                     _local_13 = (this._items[_local_12] as AnimationItem);
                     if (_local_13 != null)
                     {
-                        _local_14 = _local_13._Str_6729(_arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
+                        _local_14 = _local_13.getPosition(_arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
                         _local_14.x = (_local_14.x - _arg_5);
                         _local_14.y = (_local_14.y - _arg_6);
                         if (_local_13.bitmapData != null)

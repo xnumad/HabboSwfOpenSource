@@ -119,7 +119,7 @@
             Logger.log(((("Error loading xml: " + this._videoUrl) + ", ") + k));
         }
 
-        private function _Str_7702(k:SecurityErrorEvent):void
+        private function onSecurityError(k:SecurityErrorEvent):void
         {
         }
 
@@ -345,7 +345,7 @@
             var _local_2:Number;
             if (this._videoPlayer)
             {
-                _local_2 = this._videoPlayer._Str_6729();
+                _local_2 = this._videoPlayer.getPosition();
                 if (this._videoPlayer._Str_3404 == _Str_2872.VIDEOSTATEPLAYING)
                 {
                     if (((this._PreviousPosition < 0.25) && (_local_2 >= 0.25)))

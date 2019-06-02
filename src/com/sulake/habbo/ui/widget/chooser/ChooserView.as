@@ -61,7 +61,7 @@
             {
                 return;
             }
-            this._itemList._Str_2724();
+            this._itemList.destroyListItems();
             var _local_3:XmlAsset = XmlAsset(this._widget.assets.getAssetByName("chooser_item"));
             if (_local_3 == null)
             {
@@ -191,7 +191,7 @@
             }
         }
 
-        public function _Str_3757(k:int, _arg_2:int):void
+        public function removeItem(k:int, _arg_2:int):void
         {
             var _local_3:_Str_3405;
             if (((this._items == null) || (this._itemList == null)))

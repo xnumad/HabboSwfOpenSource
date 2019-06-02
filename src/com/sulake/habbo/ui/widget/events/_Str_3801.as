@@ -3,8 +3,8 @@
     public class _Str_3801 
     {
         public var stuffId:int;
-        public var _Str_2706:int;
-        public var _Str_2716:String;
+        public var classId:int;
+        public var productCode:String;
         public var userId:int;
         public var userName:String;
         public var rarityLevel:int;

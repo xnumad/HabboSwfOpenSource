@@ -1,6 +1,6 @@
 ﻿package com.sulake.room.utils
 {
-    public class Vector3d implements IVector3D 
+    public class Vector3d implements IVector3d 
     {
         private var _x:Number;
         private var _y:Number;
@@ -14,7 +14,7 @@
             this._z = _arg_3;
         }
 
-        public static function sum(k:IVector3D, _arg_2:IVector3D):Vector3d
+        public static function sum(k:IVector3d, _arg_2:IVector3d):Vector3d
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -24,7 +24,7 @@
             return _local_3;
         }
 
-        public static function dif(k:IVector3D, _arg_2:IVector3D):Vector3d
+        public static function dif(k:IVector3d, _arg_2:IVector3d):Vector3d
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -34,7 +34,7 @@
             return _local_3;
         }
 
-        public static function product(k:IVector3D, _arg_2:Number):Vector3d
+        public static function product(k:IVector3d, _arg_2:Number):Vector3d
         {
             if (k == null)
             {
@@ -44,7 +44,7 @@
             return _local_3;
         }
 
-        public static function dotProduct(k:IVector3D, _arg_2:IVector3D):Number
+        public static function dotProduct(k:IVector3d, _arg_2:IVector3d):Number
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -53,7 +53,7 @@
             return ((k.x * _arg_2.x) + (k.y * _arg_2.y)) + (k.z * _arg_2.z);
         }
 
-        public static function crossProduct(k:IVector3D, _arg_2:IVector3D):Vector3d
+        public static function crossProduct(k:IVector3d, _arg_2:IVector3d):Vector3d
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -63,7 +63,7 @@
             return _local_3;
         }
 
-        public static function scalarProjection(k:IVector3D, _arg_2:IVector3D):Number
+        public static function scalarProjection(k:IVector3d, _arg_2:IVector3d):Number
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -77,7 +77,7 @@
             return -1;
         }
 
-        public static function cosAngle(k:IVector3D, _arg_2:IVector3D):Number
+        public static function cosAngle(k:IVector3d, _arg_2:IVector3d):Number
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -91,7 +91,7 @@
             return Vector3d.dotProduct(k, _arg_2) / _local_3;
         }
 
-        public static function isEqual(k:IVector3D, _arg_2:IVector3D):Boolean
+        public static function isEqual(k:IVector3d, _arg_2:IVector3d):Boolean
         {
             if (((k == null) || (_arg_2 == null)))
             {
@@ -154,7 +154,7 @@
             this._z = -(this._z);
         }
 
-        public function add(k:IVector3D):void
+        public function add(k:IVector3d):void
         {
             if (k == null)
             {
@@ -166,7 +166,7 @@
             this._length = NaN;
         }
 
-        public function sub(k:IVector3D):void
+        public function sub(k:IVector3d):void
         {
             if (k == null)
             {
@@ -197,7 +197,7 @@
             }
         }
 
-        public function assign(k:IVector3D):void
+        public function assign(k:IVector3d):void
         {
             if (k == null)
             {

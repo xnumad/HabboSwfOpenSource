@@ -4,7 +4,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.utils.Map;
     import flash.geom.Point;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.utils.IRoomGeometry;
     import flash.geom.Matrix;
     import flash.geom.Rectangle;
@@ -38,7 +38,7 @@
         private var _width:Number = 0;
         private var _height:Number = 0;
 
-        public function FurniturePlane(k:IVector3D, _arg_2:IVector3D, _arg_3:IVector3D)
+        public function FurniturePlane(k:IVector3d, _arg_2:IVector3d, _arg_3:IVector3d)
         {
             this._origin = new Vector3d();
             this._loc = new Vector3d();
@@ -101,22 +101,22 @@
             this._color = k;
         }
 
-        public function get _Str_5424():IVector3D
+        public function get _Str_5424():IVector3d
         {
             return this._leftSide;
         }
 
-        public function get _Str_4968():IVector3D
+        public function get _Str_4968():IVector3d
         {
             return this._rightSide;
         }
 
-        public function get location():IVector3D
+        public function get location():IVector3d
         {
             return this._loc;
         }
 
-        public function get normal():IVector3D
+        public function get normal():IVector3d
         {
             return this._normal;
         }
@@ -158,7 +158,7 @@
             this._cornerD = null;
         }
 
-        public function _Str_19768(k:Boolean):void
+        public function setRotation(k:Boolean):void
         {
             if (k != this._rotated)
             {
@@ -244,7 +244,7 @@
         {
             var _local_5:Number;
             var _local_6:Number;
-            var _local_7:IVector3D;
+            var _local_7:IVector3d;
             if (k == null)
             {
                 return null;
@@ -287,9 +287,9 @@
 
         public function update(k:IRoomGeometry, _arg_2:int):Boolean
         {
-            var _local_4:IVector3D;
+            var _local_4:IVector3d;
             var _local_5:Number;
-            var _local_6:IVector3D;
+            var _local_6:IVector3d;
             var _local_7:Number;
             var _local_8:Number;
             var _local_9:BitmapData;

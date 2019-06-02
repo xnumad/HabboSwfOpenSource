@@ -50,11 +50,11 @@
             var _local_2:_Str_4142;
             if (this._slotList)
             {
-                this._slotList._Str_2659();
+                this._slotList.removeListItems();
             }
             if (this._vipSlotList)
             {
-                this._vipSlotList._Str_2659();
+                this._vipSlotList.removeListItems();
             }
             var k:Array = this._model._Str_22986;
             var _local_3:int;

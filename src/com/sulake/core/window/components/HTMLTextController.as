@@ -271,12 +271,12 @@
         override public function get properties():Array
         {
             var k:Array = InteractiveController._Str_8987(this, super.properties);
-            k.push(_Str_2340(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
-            k.push(_Str_2340(PropertyKeys.FOCUS_CAPTURER, _Str_9948));
-            k.push(_Str_2340(PropertyKeys.SELECTABLE, _Str_2309.selectable));
-            k.push(_Str_2340(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
-            k.push(_Str_2340(PropertyKeys.DISPLAY_RAW, _Str_5517));
-            k.push(_Str_2340(PropertyKeys.LINK_TARGET, this._Str_9241));
+            k.push(createProperty(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
+            k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, _Str_9948));
+            k.push(createProperty(PropertyKeys.SELECTABLE, _Str_2309.selectable));
+            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
+            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
+            k.push(createProperty(PropertyKeys.LINK_TARGET, this._Str_9241));
             return k;
         }
 

@@ -51,7 +51,7 @@
             this._purchaseOfferId = k;
         }
 
-        public function set _Str_2415(k:String):void
+        public function set extraParam(k:String):void
         {
             this._extraParam = k;
         }
@@ -66,7 +66,7 @@
             this._groupId = k;
         }
 
-        public function set _Str_2481(k:int):void
+        public function set ownerId(k:int):void
         {
             this._ownerId = k;
         }
@@ -106,7 +106,7 @@
             return this._purchaseOfferId;
         }
 
-        public function get _Str_2415():String
+        public function get extraParam():String
         {
             return this._extraParam;
         }
@@ -121,7 +121,7 @@
             return this._groupId;
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._ownerId;
         }
@@ -154,11 +154,11 @@
             this.description = k.description;
             this.image = k.image;
             this.purchaseOfferId = k.purchaseOfferId;
-            this._Str_2415 = k._Str_2415;
+            this.extraParam = k.extraParam;
             this.stuffData = k.stuffData;
             this.groupId = k.groupId;
             this.ownerName = k.ownerName;
-            this._Str_2481 = k.ownerId;
+            this.ownerId = k.ownerId;
             this.rentOfferId = k.rentOfferId;
             this._availableForBuildersClub = k.availableForBuildersClub;
         }

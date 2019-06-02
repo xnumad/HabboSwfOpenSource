@@ -120,7 +120,7 @@
                 _local_6 = 0;
                 while (_local_6 < this._Str_6331)
                 {
-                    _local_7 = _local_3._Str_783(_local_6);
+                    _local_7 = _local_3.getPalette(_local_6);
                     _local_4 = (this._paletteGrids[_local_6] as IItemGridWindow);
                     if (!((!(_local_7)) || (!(_local_4))))
                     {

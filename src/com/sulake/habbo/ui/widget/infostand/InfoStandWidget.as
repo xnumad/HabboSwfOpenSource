@@ -337,21 +337,21 @@
         private function furniUpdateHandler(updateEvent:RoomWidgetFurniInfostandUpdateEvent):void
         {
             this.furniData._Str_5479(updateEvent);
-            if (updateEvent._Str_2415 == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
+            if (updateEvent.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX)
             {
                 this._jukeboxView.update(updateEvent);
                 this._Str_3734(JUKEBOX_VIEW);
             }
             else
             {
-                if (updateEvent._Str_2415.indexOf(RoomWidgetEnumItemExtradataParameter.SONGDISK) != -1)
+                if (updateEvent.extraParam.indexOf(RoomWidgetEnumItemExtradataParameter.SONGDISK) != -1)
                 {
                     this._songDiskView.update(updateEvent);
                     this._Str_3734(SONGDISK_VIEW);
                 }
                 else
                 {
-                    if (updateEvent._Str_2415.indexOf(RoomWidgetEnumItemExtradataParameter.CRACKABLE_FURNI) != -1)
+                    if (updateEvent.extraParam.indexOf(RoomWidgetEnumItemExtradataParameter.CRACKABLE_FURNI) != -1)
                     {
                         this._crackableFurniView.update(updateEvent);
                         this._Str_3734(CRACKABLE_FURNI_VIEW);
@@ -520,7 +520,7 @@
                     }
                     if ((((!(this._petView == null)) && (!(this._petView.window == null))) && (this._petView.window.visible)))
                     {
-                        _local_2 = (k.id == this._petData._Str_2707);
+                        _local_2 = (k.id == this._petData.roomIndex);
                         break;
                     }
                     if ((((!(this._botView == null)) && (!(this._botView.window == null))) && (this._botView.window.visible)))

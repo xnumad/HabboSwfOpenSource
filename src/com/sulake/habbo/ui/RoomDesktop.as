@@ -522,9 +522,9 @@
             this._roomEngine = k;
             if (((!(this._roomEngine == null)) && (!(this._roomEngine.events == null))))
             {
-                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_SUCCESS, this._Str_6860);
-                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_FAILURE, this._Str_6860);
-                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_CANCEL, this._Str_6860);
+                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_SUCCESS, this.onRoomContentLoaded);
+                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_FAILURE, this.onRoomContentLoaded);
+                this._roomEngine.events.addEventListener(RoomContentLoadedEvent.RCLE_CANCEL, this.onRoomContentLoaded);
             }
         }
 
@@ -552,7 +552,7 @@
             var _local_5:IRoomWidget;
             if (((!(this._roomEngine == null)) && (!(this._session == null))))
             {
-                _local_2 = this._roomEngine._Str_4267(this._session.roomId, this.getFirstCanvasId());
+                _local_2 = this._roomEngine.getRoomCanvasGeometry(this._session.roomId, this.getFirstCanvasId());
                 if (_local_2 != null)
                 {
                     this._Str_21074(_local_2.isZoomedIn(), false);
@@ -629,9 +629,9 @@
             this._layoutManager = null;
             if (((!(this._roomEngine == null)) && (!(this._roomEngine.events == null))))
             {
-                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_SUCCESS, this._Str_6860);
-                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_FAILURE, this._Str_6860);
-                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_CANCEL, this._Str_6860);
+                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_SUCCESS, this.onRoomContentLoaded);
+                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_FAILURE, this.onRoomContentLoaded);
+                this._roomEngine.events.removeEventListener(RoomContentLoadedEvent.RCLE_CANCEL, this.onRoomContentLoaded);
             }
             this._roomEngine = null;
             this._roomSessionManager = null;
@@ -671,9 +671,9 @@
             if (this._session != null)
             {
                 _local_3 = this._session.userDataManager._Str_17237(_local_2._Str_5455);
-                _local_3._Str_7594 = k._Str_2273()._Str_20091.concat();
+                _local_3._Str_7594 = k._Str_2273().skillList.concat();
             }
-            this.events.dispatchEvent(new _Str_5375(_local_2._Str_5455, _local_2._Str_20091));
+            this.events.dispatchEvent(new _Str_5375(_local_2._Str_5455, _local_2.skillList));
         }
 
         private function _Str_25865(k:BotForceOpenContextMenuEvent):void
@@ -703,7 +703,7 @@
             }
         }
 
-        private function _Str_6860(k:RoomContentLoadedEvent):void
+        private function onRoomContentLoaded(k:RoomContentLoadedEvent):void
         {
             if (((this._pendingResources == null) || (this._pendingResources.length == 0)))
             {
@@ -1105,7 +1105,7 @@
             return _local_2;
         }
 
-        public function _Str_2660(k:RoomEngineObjectEvent):void
+        public function roomObjectEventHandler(k:RoomEngineObjectEvent):void
         {
             var _local_6:String;
             var _local_7:IRoomObject;
@@ -1182,13 +1182,13 @@
                 case RoomEngineObjectEvent.REQUEST_MOVE:
                     if (this._Str_21292(k.roomId, k._Str_1577, k.category))
                     {
-                        this._roomEngine._Str_3571(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
+                        this._roomEngine.updateObjectWallItemData(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
                     }
                     break;
                 case RoomEngineObjectEvent.REQUEST_ROTATE:
                     if (this._Str_21292(k.roomId, k._Str_1577, k.category))
                     {
-                        this._roomEngine._Str_3571(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                        this._roomEngine.updateObjectWallItemData(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     }
                     break;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CREDITFURNI:
@@ -1347,18 +1347,18 @@
             {
                 return;
             }
-            var _local_6:DisplayObject = this._roomEngine._Str_14750(this._session.roomId, k, _local_3, _local_4, _local_5);
+            var _local_6:DisplayObject = this._roomEngine.createRoomCanvas(this._session.roomId, k, _local_3, _local_4, _local_5);
             if (_local_6 == null)
             {
                 return;
             }
-            var _local_7:RoomGeometry = (this._roomEngine._Str_4267(this._session.roomId, k) as RoomGeometry);
+            var _local_7:RoomGeometry = (this._roomEngine.getRoomCanvasGeometry(this._session.roomId, k) as RoomGeometry);
             if (_local_7 != null)
             {
-                _local_14 = this._roomEngine._Str_9515(this._session.roomId, RoomVariableEnum.ROOM_MIN_X);
-                _local_15 = this._roomEngine._Str_9515(this._session.roomId, RoomVariableEnum.ROOM_MAX_X);
-                _local_16 = this._roomEngine._Str_9515(this._session.roomId, RoomVariableEnum.ROOM_MIN_Y);
-                _local_17 = this._roomEngine._Str_9515(this._session.roomId, RoomVariableEnum.ROOM_MAX_Y);
+                _local_14 = this._roomEngine.getRoomNumberValue(this._session.roomId, RoomVariableEnum.ROOM_MIN_X);
+                _local_15 = this._roomEngine.getRoomNumberValue(this._session.roomId, RoomVariableEnum.ROOM_MAX_X);
+                _local_16 = this._roomEngine.getRoomNumberValue(this._session.roomId, RoomVariableEnum.ROOM_MIN_Y);
+                _local_17 = this._roomEngine.getRoomNumberValue(this._session.roomId, RoomVariableEnum.ROOM_MAX_Y);
                 _local_18 = ((_local_14 + _local_15) / 2);
                 _local_19 = ((_local_16 + _local_17) / 2);
                 _local_20 = 20;
@@ -1631,14 +1631,14 @@
                 _local_4.getGlobalPosition(_local_5);
                 _local_6 = (_local_2.stageX - _local_5.x);
                 _local_7 = (_local_2.stageY - _local_5.y);
-                this._roomEngine._Str_15680(this._session.roomId);
-                this._roomEngine._Str_17601(this._canvasIDs[0], _local_6, _local_7, _local_3, _local_2.altKey, _local_2.ctrlKey, _local_2.shiftKey, _local_2.buttonDown);
+                this._roomEngine.setActiveRoom(this._session.roomId);
+                this._roomEngine.handleRoomCanvasMouseEvent(this._canvasIDs[0], _local_6, _local_7, _local_3, _local_2.altKey, _local_2.ctrlKey, _local_2.shiftKey, _local_2.buttonDown);
             }
             if (((_local_3 == MouseEvent.MOUSE_MOVE) && (!(this._roomAdTooltip == null))))
             {
                 _local_8 = new Point(_local_2.stageX, _local_2.stageY);
                 _local_8.offset((-(this._roomAdTooltip.width) / 2), 15);
-                this._roomAdTooltip._Str_10907(_local_8);
+                this._roomAdTooltip.setGlobalPosition(_local_8);
             }
         }
 
@@ -1648,16 +1648,16 @@
             this._roomCanvasWrapper.getGlobalPosition(_local_2);
             var _local_3:int = (k.stageX - _local_2.x);
             var _local_4:int = (k.stageY - _local_2.y);
-            this._roomEngine._Str_15680(this._session.roomId);
+            this._roomEngine.setActiveRoom(this._session.roomId);
             k.stopImmediatePropagation();
-            this._roomEngine._Str_17601(this._canvasIDs[0], _local_3, _local_4, k.type, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
+            this._roomEngine.handleRoomCanvasMouseEvent(this._canvasIDs[0], _local_3, _local_4, k.type, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
         }
 
         private function _Str_17251(k:WindowEvent):void
         {
             var _local_2:IWindow = k.window;
             this._roomViewContainerRect = _local_2.rectangle;
-            this._roomEngine._Str_6976(this._session.roomId, this._canvasIDs[0], _local_2.width, _local_2.height);
+            this._roomEngine.modifyRoomCanvas(this._session.roomId, this._canvasIDs[0], _local_2.width, _local_2.height);
             if (this._resizeTimer == null)
             {
                 this._resizeTimer = new Timer(_Str_17829, 1);
@@ -1730,7 +1730,7 @@
                 }
                 else
                 {
-                    _local_3 = this._roomEngine._Str_4267(this._session.roomId, this.getFirstCanvasId());
+                    _local_3 = this._roomEngine.getRoomCanvasGeometry(this._session.roomId, this.getFirstCanvasId());
                     if (_local_3 != null)
                     {
                         this._Str_21074(_local_3.isZoomedIn(), true);

@@ -37,7 +37,7 @@
             {
                 if (!this._isInitialized)
                 {
-                    this._Str_25801();
+                    this.requestInitialize();
                 }
                 _local_2 = (k as RoomObjectDataUpdateMessage);
                 if (_local_2 == null)
@@ -63,7 +63,7 @@
             }
         }
 
-        private function _Str_25801():void
+        private function requestInitialize():void
         {
             if (((object == null) || (eventDispatcher == null)))
             {

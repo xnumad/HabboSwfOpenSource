@@ -56,12 +56,12 @@
             return this._placedInRoom;
         }
 
-        public function get _Str_23888():Boolean
+        public function get placedOnFloor():Boolean
         {
             return this._placedOnFloor;
         }
 
-        public function get _Str_23432():Boolean
+        public function get placedOnWall():Boolean
         {
             return this._placedOnWall;
         }

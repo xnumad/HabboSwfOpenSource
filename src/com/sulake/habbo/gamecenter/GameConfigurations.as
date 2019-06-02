@@ -13,38 +13,38 @@
         private static const _LOGO:String = "_logo";
         private static const _THEME:String = "_theme";
         private static const _PNG:String = ".png";
-        private static var _Str_3765:Vector.<GameConfiguration> = new Vector.<GameConfiguration>();
-        private static var _Str_2516:Map = new Map();
-        private static var _Str_11787:Boolean;
-        private static var _Str_10256:Boolean;
+        private static var _games:Vector.<GameConfiguration> = new Vector.<GameConfiguration>();
+        private static var _badges:Map = new Map();
+        private static var _gameListInitialized:Boolean;
+        private static var _gameAchievementsInitialized:Boolean;
 
 
-        public static function _Str_22766():void
+        public static function resetGames():void
         {
-            _Str_3765 = new Vector.<GameConfiguration>();
+            _games = new Vector.<GameConfiguration>();
         }
 
-        public static function _Str_23671():void
+        public static function resetBadges():void
         {
-            _Str_2516 = new Map();
+            _badges = new Map();
         }
 
-        public static function _Str_24586(k:GameConfiguration):void
+        public static function addGame(k:GameConfiguration):void
         {
-            _Str_3765.push(k);
+            _games.push(k);
         }
 
-        public static function _Str_25778(k:int, _arg_2:String):void
+        public static function addGameAchievementBadge(k:int, _arg_2:String):void
         {
-            _Str_2516.add(_arg_2, k);
+            _badges.add(_arg_2, k);
         }
 
-        public static function _Str_10694(k:int):GameConfiguration
+        public static function getGame(k:int):GameConfiguration
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
                     return _local_2;
                 }
@@ -52,13 +52,13 @@
             return null;
         }
 
-        public static function _Str_16739():Array
+        public static function gameIds():Array
         {
             var _local_2:GameConfiguration;
             var k:Array = new Array();
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                k.push(_local_2._Str_5333);
+                k.push(_local_2.gameId);
             }
             return k;
         }
@@ -66,35 +66,35 @@
         public static function getId(k:String):int
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_9827 == k)
+                if (_local_2.gameNameId == k)
                 {
-                    return _local_2._Str_5333;
+                    return _local_2.gameId;
                 }
             }
             return -1;
         }
 
-        public static function _Str_3077(k:int):String
+        public static function getNameId(k:int):String
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
-                    return _local_2._Str_9827;
+                    return _local_2.gameNameId;
                 }
             }
             return null;
         }
 
-        public static function _Str_24432(k:int):Boolean
+        public static function isGameEnabled(k:int):Boolean
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
                     return true;
                 }
@@ -105,9 +105,9 @@
         public static function getBgColor(k:int):uint
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
                     return _local_2.bgColor;
                 }
@@ -115,12 +115,12 @@
             return 4287878387;
         }
 
-        public static function _Str_24098(k:int):uint
+        public static function getTextColor(k:int):uint
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
                     return _local_2.textColor;
                 }
@@ -128,28 +128,28 @@
             return 0;
         }
 
-        public static function _Str_22612(k:int):String
+        public static function getSupportUrl(k:int):String
         {
             var _local_2:GameConfiguration;
-            for each (_local_2 in _Str_3765)
+            for each (_local_2 in _games)
             {
-                if (_local_2._Str_5333 == k)
+                if (_local_2.gameId == k)
                 {
-                    return _local_2._Str_14248;
+                    return _local_2.supportUrl;
                 }
             }
             return null;
         }
 
-        public static function _Str_9843(k:int, _arg_2:String):String
+        public static function getAssetUrl(k:int, _arg_2:String):String
         {
-            var _local_3:GameConfiguration = _Str_10694(k);
+            var _local_3:GameConfiguration = getGame(k);
             if (!_local_3)
             {
                 return "";
             }
-            var _local_4:String = _local_3._Str_15765;
-            _local_4 = (_local_4 + _local_3._Str_9827);
+            var _local_4:String = _local_3.assetUrl;
+            _local_4 = (_local_4 + _local_3.gameNameId);
             switch (_arg_2)
             {
                 case GameAssetEnum.ICON:
@@ -169,46 +169,46 @@
             return _local_4;
         }
 
-        public static function _Str_21861(k:String):Boolean
+        public static function isGameBadge(k:String):Boolean
         {
-            return !(_Str_2516.getKeys().indexOf(k) == -1);
+            return !(_badges.getKeys().indexOf(k) == -1);
         }
 
-        public static function _Str_21365(k:String):String
+        public static function getBadgeImageUri(k:String):String
         {
-            var _local_2:int = _Str_2516.getValue(k);
-            var _local_3:GameConfiguration = _Str_10694(_local_2);
+            var _local_2:int = _badges.getValue(k);
+            var _local_3:GameConfiguration = getGame(_local_2);
             if (!_local_3)
             {
                 return ("${image.library.url}album1584/" + k) + ".gif";
             }
-            return ((_local_3._Str_15765 + k) + _PNG).toLowerCase();
+            return ((_local_3.assetUrl + k) + _PNG).toLowerCase();
         }
 
-        public static function _Str_25326(k:IEventDispatcher):void
+        public static function setGameListInitialized(k:IEventDispatcher):void
         {
-            _Str_11787 = true;
-            _Str_13446(k);
+            _gameListInitialized = true;
+            checkInitialization(k);
         }
 
-        public static function _Str_24939(k:IEventDispatcher):void
+        public static function setGameAchievementsInitialized(k:IEventDispatcher):void
         {
-            _Str_10256 = true;
-            _Str_13446(k);
+            _gameAchievementsInitialized = true;
+            checkInitialization(k);
         }
 
         public static function get _Str_3961():Boolean
         {
-            return (_Str_11787) && (_Str_10256);
+            return (_gameListInitialized) && (_gameAchievementsInitialized);
         }
 
         public static function set _Str_3961(k:Boolean):void
         {
-            _Str_11787 = k;
-            _Str_10256 = k;
+            _gameListInitialized = k;
+            _gameAchievementsInitialized = k;
         }
 
-        private static function _Str_13446(k:IEventDispatcher):void
+        private static function checkInitialization(k:IEventDispatcher):void
         {
             if (_Str_3961)
             {

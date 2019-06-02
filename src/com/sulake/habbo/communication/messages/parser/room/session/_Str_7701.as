@@ -49,7 +49,7 @@
                 _local_8 = 0;
                 while (_local_8 < _local_3)
                 {
-                    _local_4._Str_17628(k.readString(), k.readInteger());
+                    _local_4.addQueue(k.readString(), k.readInteger());
                     _local_8++;
                 }
                 this._Str_9564.add(_local_4.target, _local_4);

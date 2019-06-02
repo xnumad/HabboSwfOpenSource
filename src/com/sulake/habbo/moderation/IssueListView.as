@@ -26,7 +26,7 @@
             this._issueBrowser = _arg_2;
             this._list = _arg_3;
             this._listItem = (_arg_3.getListItemAt(0) as IWindowContainer);
-            _arg_3._Str_2659();
+            _arg_3.removeListItems();
             this._issueListLimit = k._Str_25472;
         }
 
@@ -48,7 +48,7 @@
             }
             if (((k == null) || (k.length == 0)))
             {
-                this._list._Str_2724();
+                this._list.destroyListItems();
                 return;
             }
             k.sortOn(["highestPriority", "issueAgeInMilliseconds"], [Array.NUMERIC, Array.NUMERIC]);
@@ -75,7 +75,7 @@
                     _local_2 = 0;
                     while (_local_2 < (_local_4 - _local_5))
                     {
-                        _local_9 = this._list._Str_2915(0);
+                        _local_9 = this._list.removeListItemAt(0);
                         _local_9.dispose();
                         _local_2++;
                     }

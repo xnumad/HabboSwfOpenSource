@@ -71,7 +71,7 @@
         private var _Str_16304:Number = 0;
         private var _Str_7165:Point;
         private var _Str_2701:RoomChatHistoryViewer;
-        private var _Str_1222:Boolean = false;
+        private var _gpuMode:Boolean = false;
         private var _Str_17185:Boolean = false;
         private var _Str_2296:Component = null;
         private var _configurationManager:IHabboConfigurationManager;
@@ -121,7 +121,7 @@
             this._Str_2496.color = 33554431;
             this._Str_2496.tags.push("room_widget_chat");
             this._Str_4396 = (_arg_2.createWindow("chat_contentlist", "", WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL, _Str_3108.NULL, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_RELATIVE_SCALE_STRETCH), new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IItemListWindow);
-            this._Str_4396._Str_6129 = true;
+            this._Str_4396.disableAutodrag = true;
             this._Str_2496.addChild(this._Str_4396);
             this._Str_3454 = (_arg_2.createWindow("chat_active_content", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle(0, 0, 200, this._Str_3991), null, 0) as IWindowContainer);
             this._Str_3454.clipping = false;
@@ -207,7 +207,7 @@
                 this._Str_10568 = -1;
                 this._Str_22131();
             }
-            if (this._Str_1222)
+            if (this._gpuMode)
             {
                 _local_2 = ((k / _Str_16411) * _Str_17318);
                 if ((_local_2 + this._Str_8808) > this._Str_9513)
@@ -261,7 +261,7 @@
 
         private function _Str_21452(k:_Str_3535):void
         {
-            if (((RoomEnterEffect.isRunning()) && (!(k._Str_3214 == _Str_3535._Str_4349))))
+            if (((RoomEnterEffect.isRunning()) && (!(k.chatType == _Str_3535.CHAT_TYPE_WHISPER))))
             {
                 return;
             }
@@ -280,7 +280,7 @@
             _local_7._Str_23108 = _arg_5;
             if (_arg_6)
             {
-                _local_7._Str_3214 = _Str_3535._Str_15836;
+                _local_7.chatType = _Str_3535._Str_15836;
             }
             _local_7._Str_13126();
             this._Str_21167(_local_7);
@@ -342,7 +342,7 @@
 
         private function _Str_19076():void
         {
-            if (this._Str_1222)
+            if (this._gpuMode)
             {
                 return;
             }
@@ -515,23 +515,23 @@
 
         private function _Str_22131():void
         {
-            if (this._Str_1222)
+            if (this._gpuMode)
             {
                 return;
             }
             this._Str_19863();
-            this._Str_1222 = true;
+            this._gpuMode = true;
         }
 
         private function _Str_21950():void
         {
-            this._Str_1222 = false;
+            this._gpuMode = false;
         }
 
         private function _Str_19863():void
         {
             var _local_4:RoomChatItem;
-            if (this._Str_1222)
+            if (this._gpuMode)
             {
                 return;
             }
@@ -1027,7 +1027,7 @@
 
         public function _Str_20437():void
         {
-            this._Str_4396._Str_13999();
+            this._Str_4396.stopDragging();
             var k:Number = (this._Str_2496.bottom - RoomChatHistoryPulldown._Str_3788);
             if (k < this._Str_8959)
             {
@@ -1102,7 +1102,7 @@
             return this.handler.container.roomSession.isGameSession;
         }
 
-        public function _Str_3757(k:RoomChatItem):void
+        public function removeItem(k:RoomChatItem):void
         {
             var _local_2:int;
             _local_2 = this._Str_2338.indexOf(k);

@@ -97,12 +97,12 @@
             {
                 return k;
             }
-            k.push(_Str_12653._Str_2551(this._limit));
+            k.push(_Str_12653.withValue(this._limit));
             for each (_local_2 in this._bitmap.properties)
             {
                 if (_local_2.key != PropertyKeys.ASSET_URI)
                 {
-                    k.push(_local_2._Str_19447(PIXEL_LIMIT));
+                    k.push(_local_2.withNameSpace(PIXEL_LIMIT));
                 }
             }
             return k;
@@ -123,7 +123,7 @@
                 }
                 if (_local_3.key != ((PIXEL_LIMIT + ":") + PropertyKeys.ASSET_URI))
                 {
-                    _local_2.push(_local_3._Str_20623());
+                    _local_2.push(_local_3.withoutNameSpace());
                 }
             }
             this._bitmap.properties = _local_2;

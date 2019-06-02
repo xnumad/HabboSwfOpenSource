@@ -70,7 +70,7 @@
             var k:IProductData;
             if (((this._offer) && (this._offer.product)))
             {
-                k = this._offer.product._Str_8554;
+                k = this._offer.product.productData;
                 if (k)
                 {
                     return k.name;

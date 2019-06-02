@@ -4,14 +4,14 @@
     {
         protected var _Str_5970:Number;
         protected var _Str_6324:String;
-        protected var _Str_576:String;
+        protected var _id:String;
         protected var _Str_18606:Boolean = false;
 
         public function _Str_2460(k:Number, _arg_2:String, _arg_3:String=null)
         {
             this._Str_5970 = k;
             this._Str_6324 = _arg_2;
-            this._Str_576 = _arg_3;
+            this._id = _arg_3;
         }
 
         public function get milliseconds():Number
@@ -31,7 +31,7 @@
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set _Str_20299(k:Boolean):void

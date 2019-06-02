@@ -18,7 +18,7 @@
             this._result = _arg_2;
         }
 
-        public function get _Str_12769():int
+        public function get breedingNestStuffId():int
         {
             return this._Str_6143;
         }

@@ -491,11 +491,11 @@
             var _local_2:RoomEnginePlaySoundEvent = RoomEnginePlaySoundEvent(k);
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND)
             {
-                this._Str_4375(_local_2._Str_10535);
+                this._Str_4375(_local_2.soundId);
             }
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH)
             {
-                this._Str_20382(_local_2._Str_10535, _local_2._Str_4740);
+                this._Str_20382(_local_2.soundId, _local_2._Str_4740);
             }
         }
 

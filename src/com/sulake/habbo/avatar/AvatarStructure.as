@@ -79,7 +79,7 @@
             this._mandatorySetTypeIds = new Dictionary();
         }
 
-        public function _Str_1825(k:XML):void
+        public function initGeometry(k:XML):void
         {
             if (!k)
             {
@@ -88,23 +88,23 @@
             this._geometry = new AvatarModelGeometry(k);
         }
 
-        public function _Str_1060(k:IAssetLibrary, _arg_2:XML):void
+        public function initActions(k:IAssetLibrary, _arg_2:XML):void
         {
             if (!_arg_2)
             {
                 return;
             }
             this._actionManager = new AvatarActionManager(k, _arg_2);
-            this._defaultAction = this._actionManager._Str_1027();
+            this._defaultAction = this._actionManager.getDefaultAction();
         }
 
         public function _Str_1620(k:XML):void
         {
             this._actionManager._Str_1620(k);
-            this._defaultAction = this._actionManager._Str_1027();
+            this._defaultAction = this._actionManager.getDefaultAction();
         }
 
-        public function _Str_1296(k:XML):Boolean
+        public function initPartSets(k:XML):Boolean
         {
             if (!k)
             {
@@ -112,14 +112,14 @@
             }
             if (this._partSetsData.parse(k))
             {
-                this._partSetsData._Str_1102("ri")._Str_1583 = true;
-                this._partSetsData._Str_1102("li")._Str_1583 = true;
+                this._partSetsData.getPartDefinition("ri")._Str_1583 = true;
+                this._partSetsData.getPartDefinition("li")._Str_1583 = true;
                 return true;
             }
             return false;
         }
 
-        public function _Str_2229(k:XML):Boolean
+        public function initAnimation(k:XML):Boolean
         {
             if (!k)
             {
@@ -128,7 +128,7 @@
             return this._animationData.parse(k);
         }
 
-        public function _Str_1569(k:XML):Boolean
+        public function initFigureData(k:XML):Boolean
         {
             if (!k)
             {
@@ -151,15 +151,15 @@
                 if (k.hasAsset((_arg_2 + _local_5)))
                 {
                     _local_4 = (k.getAssetByName((_arg_2 + _local_5)).content as XML);
-                    this._animationManager._Str_2061(this, _local_4);
+                    this._animationManager.registerAnimation(this, _local_4);
                 }
                 _local_5++;
             }
         }
 
-        public function _Str_2061(k:XML):void
+        public function registerAnimation(k:XML):void
         {
-            this._animationManager._Str_2061(this, k);
+            this._animationManager.registerAnimation(this, k);
         }
 
         public function _Str_867(k:IAvatarFigureContainer, _arg_2:String, _arg_3:int=0):IPartColor
@@ -174,7 +174,7 @@
             {
                 return null;
             }
-            var _local_6:IPalette = this._figureData._Str_783(_local_5._Str_734);
+            var _local_6:IPalette = this._figureData.getPalette(_local_5._Str_734);
             if (!_local_6)
             {
                 return null;
@@ -182,7 +182,7 @@
             return _local_6._Str_751(_local_4[_arg_3]);
         }
 
-        public function _Str_1881(k:String, _arg_2:int, _arg_3:String):AnimationLayerData
+        public function getBodyPartData(k:String, _arg_2:int, _arg_3:String):AnimationLayerData
         {
             return this._animationManager.getLayerData(k, _arg_2, _arg_3) as AnimationLayerData;
         }
@@ -207,9 +207,9 @@
             return this._geometry._Str_1939(k);
         }
 
-        public function _Str_711(k:Array):Array
+        public function isHeadTurnPreventedByAction(k:Array):Array
         {
-            return this._actionManager._Str_711(k);
+            return this._actionManager.isHeadTurnPreventedByAction(k);
         }
 
         public function _Str_1936(k:Array):int
@@ -218,12 +218,12 @@
             var _local_2:int;
             for each (_local_3 in k)
             {
-                _local_2 = Math.max(_local_2, this._animationData._Str_1408(_local_3.definition));
+                _local_2 = Math.max(_local_2, this._animationData.getFrameCount(_local_3.definition));
             }
             return _local_2;
         }
 
-        public function _Str_1733(k:String, _arg_2:int):Array
+        public function getMandatorySetTypeIds(k:String, _arg_2:int):Array
         {
             if (!this._mandatorySetTypeIds[k])
             {
@@ -233,7 +233,7 @@
             {
                 return this._mandatorySetTypeIds[k][_arg_2];
             }
-            this._mandatorySetTypeIds[k][_arg_2] = this._figureData._Str_1733(k, _arg_2);
+            this._mandatorySetTypeIds[k][_arg_2] = this._figureData.getMandatorySetTypeIds(k, _arg_2);
             return this._mandatorySetTypeIds[k][_arg_2];
         }
 
@@ -277,7 +277,7 @@
                 _local_8 = (this._animationManager.getAnimation(_local_7) as Animation);
                 if (_local_8 != null)
                 {
-                    _local_3 = _local_8._Str_1065(0, k.overridingAction);
+                    _local_3 = _local_8.getAnimatedBodyPartIds(0, k.overridingAction);
                     if (_local_8.hasAddData())
                     {
                         _local_11 = <item id="" x="0" y="0" z="0" radius="0.01" nx="0" ny="0" nz="-1" double="1"/>
@@ -286,13 +286,13 @@
                         ;
                         for each (_local_13 in _local_8.addData)
                         {
-                            _local_6 = this._geometry._Str_1919(_local_5, _local_13.align);
+                            _local_6 = this._geometry.getBodyPart(_local_5, _local_13.align);
                             if (_local_6 != null)
                             {
                                 _local_11.@id = _local_13.id;
-                                _local_6._Str_2020(_local_11, _arg_2);
+                                _local_6.addPart(_local_11, _arg_2);
                                 _local_12.@["set-type"] = _local_13.id;
-                                _local_10 = this._partSetsData._Str_1520(_local_12);
+                                _local_10 = this._partSetsData.addPartDefinition(_local_12);
                                 _local_10._Str_1583 = true;
                                 if (_local_13.base == "")
                                 {
@@ -308,7 +308,7 @@
                 }
                 for each (_local_9 in _local_3)
                 {
-                    _local_6 = this._geometry._Str_1919(_local_5, _local_9);
+                    _local_6 = this._geometry.getBodyPart(_local_5, _local_9);
                     if (_local_6 != null)
                     {
                         if (_local_4.indexOf(_local_6.id) == -1)
@@ -320,10 +320,10 @@
             }
             else
             {
-                _local_3 = this._partSetsData._Str_1795(k.definition);
+                _local_3 = this._partSetsData.getActiveParts(k.definition);
                 for each (_local_14 in _local_3)
                 {
-                    _local_6 = this._geometry._Str_1701(_local_5, _local_14, _arg_2);
+                    _local_6 = this._geometry.getBodyPartOfItem(_local_5, _local_14, _arg_2);
                     if (_local_6 != null)
                     {
                         if (_local_4.indexOf(_local_6.id) == -1)
@@ -336,12 +336,12 @@
             return _local_4;
         }
 
-        public function _Str_1695(k:String):Array
+        public function getBodyPartsUnordered(k:String):Array
         {
-            return this._geometry._Str_1307(k);
+            return this._geometry.getBodyPartIdsInAvatarSet(k);
         }
 
-        public function _Str_755(k:String, _arg_2:String, _arg_3:int):Array
+        public function getBodyParts(k:String, _arg_2:String, _arg_3:int):Array
         {
             var _local_4:Number = AvatarDirectionAngle._Str_2204[_arg_3];
             return this._geometry._Str_2250(k, _local_4, _arg_2);
@@ -349,12 +349,12 @@
 
         public function _Str_1888(k:IActiveActionData, _arg_2:int, _arg_3:int, _arg_4:String):Point
         {
-            var _local_5:AnimationAction = this._animationData._Str_2244(k.definition);
+            var _local_5:AnimationAction = this._animationData.getAction(k.definition);
             if (_local_5)
             {
                 return _local_5._Str_1888(_arg_2, _arg_3, _arg_4);
             }
-            return AnimationAction._Str_1934;
+            return AnimationAction.DEFAULT_OFFSET;
         }
 
         public function _Str_713(k:String, _arg_2:IAvatarFigureContainer, _arg_3:IActiveActionData, _arg_4:String, _arg_5:int, _arg_6:Array, _arg_7:IAvatarImage, _arg_8:Map=null):Array
@@ -397,25 +397,25 @@
             {
                 return [];
             }
-            var _local_9:Array = this._partSetsData._Str_1795(_arg_3.definition);
+            var _local_9:Array = this._partSetsData.getActiveParts(_arg_3.definition);
             var _local_11:Array = new Array();
             var _local_14:Array = [0];
-            var _local_15:AnimationAction = this._animationData._Str_2244(_arg_3.definition);
+            var _local_15:AnimationAction = this._animationData.getAction(_arg_3.definition);
             if (_arg_3.definition.isAnimation)
             {
                 _local_24 = ((_arg_3.definition.state + ".") + _arg_3.actionParameter);
                 _local_10 = (this._animationManager.getAnimation(_local_24) as Animation);
                 if (_local_10 != null)
                 {
-                    _local_14 = this._Str_1768(_local_10._Str_2185(_arg_3.overridingAction));
-                    for each (_local_25 in _local_10._Str_1065(0, _arg_3.overridingAction))
+                    _local_14 = this.getPopulatedFrameArray(_local_10._Str_2185(_arg_3.overridingAction));
+                    for each (_local_25 in _local_10.getAnimatedBodyPartIds(0, _arg_3.overridingAction))
                     {
                         if (_local_25 == k)
                         {
-                            _local_26 = this._geometry._Str_1919(_arg_4, _local_25);
+                            _local_26 = this._geometry.getBodyPart(_arg_4, _local_25);
                             if (_local_26 != null)
                             {
-                                for each (_local_27 in _local_26._Str_1883(_arg_7))
+                                for each (_local_27 in _local_26.getDynamicParts(_arg_7))
                                 {
                                     _local_9.push(_local_27.id);
                                 }
@@ -437,7 +437,7 @@
                 _local_30 = this._figureData._Str_740(_local_17);
                 if (_local_30)
                 {
-                    _local_31 = this._figureData._Str_783(_local_30._Str_734);
+                    _local_31 = this._figureData.getPalette(_local_30._Str_734);
                     if (_local_31)
                     {
                         _local_32 = _local_30._Str_1020(_local_28);
@@ -469,7 +469,7 @@
                                     {
                                         _local_34 = this._defaultAction;
                                     }
-                                    _local_13 = this._partSetsData._Str_1102(_local_33.type);
+                                    _local_13 = this._partSetsData.getPartDefinition(_local_33.type);
                                     _local_35 = ((_local_13 == null) ? _local_33.type : _local_13._Str_1693);
                                     if (_local_35 == "")
                                     {
@@ -496,7 +496,7 @@
                 _local_40 = ((_arg_8) && (_arg_8[_local_12]));
                 for each (_local_23 in _local_11)
                 {
-                    if (_local_23._Str_1669 == _local_12)
+                    if (_local_23.partType == _local_12)
                     {
                         if (_local_40)
                         {
@@ -547,13 +547,13 @@
                     {
                         if (_local_9.indexOf(_local_12) > -1)
                         {
-                            _local_44 = this._geometry._Str_1701(_arg_4, _local_12, _arg_7);
+                            _local_44 = this._geometry.getBodyPartOfItem(_arg_4, _local_12, _arg_7);
                             if (k != _local_44.id)
                             {
                             }
                             else
                             {
-                                _local_13 = this._partSetsData._Str_1102(_local_12);
+                                _local_13 = this._partSetsData.getPartDefinition(_local_12);
                                 _local_45 = false;
                                 _local_46 = 1;
                                 if (_local_13._Str_1583)
@@ -563,13 +563,13 @@
                                     {
                                         _local_47 = _arg_3.actionParameter;
                                     }
-                                    if (_local_13._Str_2234())
+                                    if (_local_13.hasStaticId())
                                     {
                                         _local_47 = _local_13._Str_1734.toString();
                                     }
                                     if (_local_10 != null)
                                     {
-                                        _local_48 = _local_10._Str_1550(_local_12);
+                                        _local_48 = _local_10.getAddData(_local_12);
                                         if (_local_48 != null)
                                         {
                                             _local_45 = _local_48.isBlended;
@@ -618,7 +618,7 @@
             return this._renderManager;
         }
 
-        private function _Str_1768(k:int):Array
+        private function getPopulatedFrameArray(k:int):Array
         {
             var _local_2:Array = new Array();
             var _local_3:int;
@@ -630,7 +630,7 @@
             return _local_2;
         }
 
-        public function _Str_1336(k:Stage):void
+        public function displayGeometry(k:Stage):void
         {
             var _local_9:String;
             var _local_10:GeometryBodyPart;
@@ -646,9 +646,9 @@
             var _local_6:Number = 200;
             var _local_7:TextField = new TextField();
             var _local_8:Matrix = new Matrix();
-            for each (_local_9 in this._geometry._Str_1307("full"))
+            for each (_local_9 in this._geometry.getBodyPartIdsInAvatarSet("full"))
             {
-                _local_10 = this._geometry._Str_1919("vertical", _local_9);
+                _local_10 = this._geometry.getBodyPart("vertical", _local_9);
                 Logger.log(("Drawing bodypart : " + _local_9));
                 if (_local_10 != null)
                 {

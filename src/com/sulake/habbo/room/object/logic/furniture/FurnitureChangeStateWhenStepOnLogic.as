@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.room.object.logic.furniture
 {
     import com.sulake.habbo.room.events.RoomToObjectOwnAvatarMoveEvent;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
 
     public class FurnitureChangeStateWhenStepOnLogic extends FurnitureLogic 
@@ -11,27 +11,27 @@
         override public function initialize(k:XML):void
         {
             super.initialize(k);
-            eventDispatcher.addEventListener(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, this._Str_19358);
+            eventDispatcher.addEventListener(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, this.onOwnAvatarMove);
         }
 
         override public function tearDown():void
         {
-            eventDispatcher.removeEventListener(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, this._Str_19358);
+            eventDispatcher.removeEventListener(RoomToObjectOwnAvatarMoveEvent.ROAME_MOVE_TO, this.onOwnAvatarMove);
             super.tearDown();
         }
 
-        private function _Str_19358(k:RoomToObjectOwnAvatarMoveEvent):void
+        private function onOwnAvatarMove(k:RoomToObjectOwnAvatarMoveEvent):void
         {
             var _local_3:int;
             var _local_4:int;
-            var _local_5:IVector3D;
+            var _local_5:IVector3d;
             var _local_6:int;
             var _local_7:int;
             if (object == null)
             {
                 return;
             }
-            var _local_2:IVector3D = object.getLocation();
+            var _local_2:IVector3d = object.getLocation();
             if (k._Str_7569)
             {
                 _local_3 = object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_SIZE_X);

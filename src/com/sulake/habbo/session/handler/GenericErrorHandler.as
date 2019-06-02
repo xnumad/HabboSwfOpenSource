@@ -18,10 +18,10 @@
             {
                 return;
             }
-            k.addMessageEvent(new GenericErrorEvent(this._Str_17750));
+            k.addMessageEvent(new GenericErrorEvent(this.onGenericError));
         }
 
-        private function _Str_17750(k:IMessageEvent):void
+        private function onGenericError(k:IMessageEvent):void
         {
             var _local_4:String;
             var _local_2:_Str_6053 = (k as GenericErrorEvent)._Str_2273();

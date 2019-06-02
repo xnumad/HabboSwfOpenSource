@@ -44,7 +44,7 @@
             return this._Str_3021;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._Str_2775;
         }

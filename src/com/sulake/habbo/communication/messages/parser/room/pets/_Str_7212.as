@@ -10,7 +10,7 @@
         private var _level:int;
 
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._Str_2775;
         }

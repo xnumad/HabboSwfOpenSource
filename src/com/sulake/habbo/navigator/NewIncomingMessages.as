@@ -128,7 +128,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4910(this._Str_16568)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5017(this._Str_17226)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this._Str_11371)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_9455(this._Str_25622)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021)));
@@ -237,11 +237,11 @@
             if (this._navigator)
             {
                 _local_2 = UserRightsMessageEvent(k);
-                if (_local_2._Str_6124 >= SecurityLevelEnum._Str_3569)
+                if (_local_2.securityLevel >= SecurityLevelEnum._Str_3569)
                 {
                     this._navigator.data._Str_15161 = true;
                 }
-                if (_local_2._Str_6124 >= SecurityLevelEnum._Str_8629)
+                if (_local_2.securityLevel >= SecurityLevelEnum._Str_8629)
                 {
                     this._navigator.data._Str_14374 = true;
                 }
@@ -325,7 +325,7 @@
             LegacyNavigator(this._navigator._Str_2559).goToRoom(_local_2.flatId, true);
             LegacyNavigator(this._navigator._Str_2559)._Str_2813._Str_8316(Tabs._Str_4869);
             LegacyNavigator(this._navigator._Str_2559)._Str_10330();
-            LegacyNavigator(this._navigator._Str_2559)._Str_7852();
+            LegacyNavigator(this._navigator._Str_2559).closeNavigator();
         }
 
         private function _Str_22297(k:IMessageEvent):void
@@ -461,7 +461,7 @@
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8351(_local_2.roomId, _local_2.userId);
         }
 
-        private function _Str_11371(k:IMessageEvent):void
+        private function onDoorbell(k:IMessageEvent):void
         {
             var _local_2:_Str_4129 = (k as _Str_4129);
             if (_local_2 == null)
@@ -531,7 +531,7 @@
 
         private function _Str_18130(k:_Str_5891):void
         {
-            LegacyNavigator(this._navigator._Str_2559)._Str_11727();
+            LegacyNavigator(this._navigator._Str_2559).startRoomCreation();
         }
 
         private function _Str_20233():void

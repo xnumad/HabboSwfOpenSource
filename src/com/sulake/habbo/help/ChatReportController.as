@@ -135,11 +135,11 @@
             var _local_3:IItemListWindow = (this._window.findChildByName("room_items") as IItemListWindow);
             var _local_4:IWindowContainer = (_local_3.getListItemAt(0) as IWindowContainer);
             var _local_5:IWindowContainer = (this._habboHelp.getXmlWindow("chat_report_item") as IWindowContainer);
-            _local_3._Str_2659();
+            _local_3.removeListItems();
             var _local_6:IWindowContainer = (_local_4.clone() as IWindowContainer);
-            _local_3._Str_3015(_local_6, 0);
+            _local_3.addListItemAt(_local_6, 0);
             var _local_7:IItemListWindow = (_local_6.findChildByName("chat_items") as IItemListWindow);
-            _local_7._Str_2659();
+            _local_7.removeListItems();
             this._habboHelp._Str_3977._Str_7724 = true;
             var _local_8:Vector.<InstantMessageRegistryItem> = this._habboHelp._Str_3977._Str_5150(_arg_2);
             for each (_local_9 in _local_8)
@@ -172,7 +172,7 @@
             var _local_3:IItemListWindow = (this._window.findChildByName("room_items") as IItemListWindow);
             var _local_4:IWindowContainer = (_local_3.getListItemAt(0) as IWindowContainer);
             var _local_5:IWindowContainer = (this._habboHelp.getXmlWindow("chat_report_item") as IWindowContainer);
-            _local_3._Str_2659();
+            _local_3.removeListItems();
             this._habboHelp._Str_3531._Str_7724 = true;
             var _local_9:Vector.<ChatRegistryItem> = ((_arg_2 > 0) ? this._habboHelp._Str_3531._Str_5150(_arg_2) : this._habboHelp._Str_3531._Str_6828());
             for each (_local_10 in _local_9)
@@ -187,9 +187,9 @@
                         _local_6 = _local_10.roomId;
                         _local_7 = (_local_4.clone() as IWindowContainer);
                         _local_7.findChildByName("room_name").caption = ("Room: " + _local_10.roomName);
-                        _local_3._Str_3015(_local_7, 0);
+                        _local_3.addListItemAt(_local_7, 0);
                         _local_8 = (_local_7.findChildByName("chat_items") as IItemListWindow);
-                        _local_8._Str_2659();
+                        _local_8.removeListItems();
                     }
                     _local_11 = (_local_5.clone() as IWindowContainer);
                     _local_12 = (_local_11.getChildByName("text") as ITextWindow);

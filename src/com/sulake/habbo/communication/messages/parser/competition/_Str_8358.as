@@ -26,12 +26,12 @@
             return true;
         }
 
-        public function get _Str_7578():int
+        public function get goalId():int
         {
             return this._Str_5696;
         }
 
-        public function get _Str_4327():String
+        public function get goalCode():String
         {
             return this._Str_3087;
         }

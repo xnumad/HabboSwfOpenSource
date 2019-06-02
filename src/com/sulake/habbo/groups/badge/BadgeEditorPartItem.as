@@ -60,8 +60,8 @@
                 this._composite = new BitmapData(_Str_6696, _Str_6533);
                 this._fileName = (((this._sourceUrl + "badgepart_") + this._fileName) + ".png");
                 this._maskFileName = (((this._sourceUrl + "badgepart_") + this._maskFileName) + ".png");
-                this._manager.windowManager._Str_7720.retrieveAsset(this._fileName, this);
-                this._manager.windowManager._Str_7720.retrieveAsset(this._maskFileName, this);
+                this._manager.windowManager.resourceManager.retrieveAsset(this._fileName, this);
+                this._manager.windowManager.resourceManager.retrieveAsset(this._maskFileName, this);
             }
         }
 
@@ -77,7 +77,7 @@
 
         public function receiveAsset(k:IAsset, _arg_2:String):void
         {
-            var _local_3:IResourceManager = this._manager.windowManager._Str_7720;
+            var _local_3:IResourceManager = this._manager.windowManager.resourceManager;
             if (_local_3.isSameAsset(this._fileName, _arg_2))
             {
                 this._image = (k.content as BitmapData);
@@ -152,7 +152,7 @@
             this._colorTransform.redMultiplier = (_local_2.red / 0xFF);
             this._colorTransform.greenMultiplier = (_local_2.green / 0xFF);
             this._colorTransform.blueMultiplier = (_local_2.blue / 0xFF);
-            var _local_3:Point = this._Str_6729(k);
+            var _local_3:Point = this.getPosition(k);
             this._composite.dispose();
             this._composite = new BitmapData(_Str_6696, _Str_6533, true, 0);
             this._composite.copyPixels(this._image, this._image.rect, _local_3);
@@ -164,7 +164,7 @@
             return this._composite;
         }
 
-        private function _Str_6729(k:BadgeLayerOptions):Point
+        private function getPosition(k:BadgeLayerOptions):Point
         {
             var _local_2:Number = (((_Str_12924 * k._Str_7460) + (_Str_12924 / 2)) - (this._image.width / 2));
             var _local_3:Number = (((_Str_15025 * k._Str_8051) + (_Str_15025 / 2)) - (this._image.height / 2));

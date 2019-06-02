@@ -49,7 +49,7 @@
             if (k != this._animationId)
             {
                 this._animationId = k;
-                this._Str_19535(false);
+                this.resetAnimationFrames(false);
             }
         }
 
@@ -65,24 +65,24 @@
 
         public function dispose():void
         {
-            this._Str_20421();
+            this.recycleFrames();
             this._frames = null;
             this._lastFramePlayed = null;
             this._animationPlayed = null;
         }
 
-        public function _Str_21182(k:int):void
+        public function setLayerCount(k:int):void
         {
             this._layerCount = k;
-            this._Str_19535();
+            this.resetAnimationFrames();
         }
 
-        public function _Str_19535(k:Boolean=true):void
+        public function resetAnimationFrames(k:Boolean=true):void
         {
             var _local_3:AnimationFrame;
             if (((k) || (this._frames == null)))
             {
-                this._Str_20421();
+                this.recycleFrames();
                 this._frames = [];
             }
             this._lastFramePlayed = [];
@@ -102,7 +102,7 @@
                     if (_local_3 != null)
                     {
                         _local_3.recycle();
-                        this._frames[_local_2] = AnimationFrame._Str_2363(_local_3.id, _local_3.x, _local_3.y, _local_3.repeats, 0, _local_3._Str_20105);
+                        this._frames[_local_2] = AnimationFrame._Str_2363(_local_3.id, _local_3.x, _local_3.y, _local_3.repeats, 0, _local_3.isLastFrame);
                     }
                 }
                 this._lastFramePlayed[_local_2] = false;
@@ -111,7 +111,7 @@
             }
         }
 
-        private function _Str_20421():void
+        private function recycleFrames():void
         {
             var k:AnimationFrame;
             if (this._frames != null)
@@ -135,7 +135,7 @@
             return null;
         }
 
-        public function _Str_25614(k:int, _arg_2:AnimationFrame):void
+        public function setFrame(k:int, _arg_2:AnimationFrame):void
         {
             var _local_3:AnimationFrame;
             if (((k >= 0) && (k < this._layerCount)))
@@ -149,7 +149,7 @@
             }
         }
 
-        public function _Str_22953(k:int):Boolean
+        public function getAnimationPlayed(k:int):Boolean
         {
             if (((k >= 0) && (k < this._layerCount)))
             {
@@ -158,7 +158,7 @@
             return true;
         }
 
-        public function _Str_23248(k:int, _arg_2:Boolean):void
+        public function setAnimationPlayed(k:int, _arg_2:Boolean):void
         {
             if (((k >= 0) && (k < this._layerCount)))
             {
@@ -166,7 +166,7 @@
             }
         }
 
-        public function _Str_6660(k:int):Boolean
+        public function getLastFramePlayed(k:int):Boolean
         {
             if (((k >= 0) && (k < this._layerCount)))
             {
@@ -175,7 +175,7 @@
             return true;
         }
 
-        public function _Str_23406(k:int, _arg_2:Boolean):void
+        public function setLastFramePlayed(k:int, _arg_2:Boolean):void
         {
             if (((k >= 0) && (k < this._layerCount)))
             {

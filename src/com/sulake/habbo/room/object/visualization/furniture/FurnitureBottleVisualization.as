@@ -4,7 +4,7 @@
     {
         private static const ANIMATION_ID_OFFSET_SLOW1:int = 20;
         private static const ANIMATION_ID_OFFSET_SLOW2:int = 9;
-        private static const _Str_4186:int = -1;
+        private static const ANIMATION_ID_ROLL:int = -1;
 
         private var _stateQueue:Array;
         private var _running:Boolean = false;
@@ -23,7 +23,7 @@
                 {
                     this._running = true;
                     this._stateQueue = new Array();
-                    this._stateQueue.push(_Str_4186);
+                    this._stateQueue.push(ANIMATION_ID_ROLL);
                     return;
                 }
             }
@@ -44,7 +44,7 @@
 
         override protected function updateAnimation(k:Number):int
         {
-            if (super._Str_6660(0))
+            if (super.getLastFramePlayed(0))
             {
                 if (this._stateQueue.length > 0)
                 {

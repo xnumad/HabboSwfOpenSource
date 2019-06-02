@@ -59,8 +59,8 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3549.RWFRUE_SHOW_FRIEND_REQUEST, this._Str_3305);
-            k.addEventListener(_Str_3549.RWFRUE_HIDE_FRIEND_REQUEST, this._Str_3305);
+            k.addEventListener(_Str_3549.RWFRUE_SHOW_FRIEND_REQUEST, this.eventHandler);
+            k.addEventListener(_Str_3549.RWFRUE_HIDE_FRIEND_REQUEST, this.eventHandler);
             super.registerUpdateEvents(k);
         }
 
@@ -70,11 +70,11 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3549.RWFRUE_SHOW_FRIEND_REQUEST, this._Str_3305);
-            k.removeEventListener(_Str_3549.RWFRUE_HIDE_FRIEND_REQUEST, this._Str_3305);
+            k.removeEventListener(_Str_3549.RWFRUE_SHOW_FRIEND_REQUEST, this.eventHandler);
+            k.removeEventListener(_Str_3549.RWFRUE_HIDE_FRIEND_REQUEST, this.eventHandler);
         }
 
-        private function _Str_3305(k:_Str_3549):void
+        private function eventHandler(k:_Str_3549):void
         {
             if (!k)
             {
@@ -83,10 +83,10 @@
             switch (k.type)
             {
                 case _Str_3549.RWFRUE_SHOW_FRIEND_REQUEST:
-                    this._Str_8472(k._Str_2951, new FriendRequestDialog(this, k._Str_2951, k.userId, k.userName));
+                    this._Str_8472(k.requestId, new FriendRequestDialog(this, k.requestId, k.userId, k.userName));
                     break;
                 case _Str_3549.RWFRUE_HIDE_FRIEND_REQUEST:
-                    this._Str_7667(k._Str_2951);
+                    this._Str_7667(k.requestId);
                     break;
             }
             this._Str_4556();

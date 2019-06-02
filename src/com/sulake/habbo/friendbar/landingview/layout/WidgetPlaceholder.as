@@ -13,7 +13,7 @@
         private var _Str_2268:ILandingViewWidget;
         private var _Str_17931:String;
         private var _Str_18534:IWindowContainer;
-        private var _Str_2684:Boolean;
+        private var _initialized:Boolean;
         private var _Str_3157:_Str_3198;
 
         public function WidgetPlaceholder(k:ILandingViewWidget, _arg_2:String, _arg_3:_Str_3198, _arg_4:IWindowContainer=null)
@@ -46,9 +46,9 @@
         {
             var _local_3:IWindow;
             var _local_2:IWindowContainer = IWindowContainer(k.findChildByName("content_background"));
-            if (!this._Str_2684)
+            if (!this._initialized)
             {
-                this._Str_2684 = true;
+                this._initialized = true;
                 if (this._Str_17931 != null)
                 {
                     _local_3 = _local_2.getChildByName(this._Str_17931);

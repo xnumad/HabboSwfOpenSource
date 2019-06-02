@@ -32,22 +32,22 @@
             return this._initialized;
         }
 
-        public function get _Str_23667():IPlaneRasterizer
+        public function get floorRasterizer():IPlaneRasterizer
         {
             return this._floorRasterizer;
         }
 
-        public function get _Str_25596():IPlaneRasterizer
+        public function get wallRasterizer():IPlaneRasterizer
         {
             return this._wallRasterizer;
         }
 
-        public function get _Str_23913():WallAdRasterizer
+        public function get wallAdRasterizr():WallAdRasterizer
         {
             return this._wallAdRasterizer;
         }
 
-        public function get _Str_24979():IPlaneRasterizer
+        public function get landscapeRasterizer():IPlaneRasterizer
         {
             return this._landscapeRasterizer;
         }

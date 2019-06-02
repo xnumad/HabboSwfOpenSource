@@ -25,12 +25,12 @@
             return true;
         }
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._Str_2775;
         }
 
-        public function get _Str_3094():int
+        public function get habboGroupId():int
         {
             return this._Str_6639;
         }
@@ -40,7 +40,7 @@
             return this._status;
         }
 
-        public function get _Str_14525():String
+        public function get habboGroupName():String
         {
             return this._Str_11227;
         }

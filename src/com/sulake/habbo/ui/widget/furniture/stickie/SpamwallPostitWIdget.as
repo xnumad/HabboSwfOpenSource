@@ -49,7 +49,7 @@
             _Str_2718(false);
             _Str_2319 = k._Str_1577;
             this._location = k.location;
-            _Str_3796 = k._Str_1723;
+            _Str_3796 = k.objectType;
             _text = "";
             _Str_3062 = "FFFF33";
             _Str_2278 = true;

@@ -48,7 +48,7 @@
             {
                 return;
             }
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             this._toolbar.extensionView.attachExtension(CLUB_GIFT_NOTIFICATION, this._window);
             this._linkText = (this._window.findChildByName("cancel_link") as ITextWindow);
             var _local_7:IRegionWindow = (this._window.findChildByName("cancel_link_region") as IRegionWindow);
@@ -57,7 +57,7 @@
                 _local_7.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
                 _local_7.addEventListener(WindowMouseEvent.OUT, this.onMouseOut);
             }
-            if (this._catalog.getPurse()._Str_3738)
+            if (this._catalog.getPurse().isVIP)
             {
                 this._Str_5997(_Str_3830);
             }
@@ -104,7 +104,7 @@
             _local_3.bitmap = _local_4;
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

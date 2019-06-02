@@ -236,7 +236,7 @@
                 case RoomWidgetAvatarExpressionMessage.RWCM_MESSAGE_AVATAR_EXPRESSION:
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_5941(RoomWidgetAvatarExpressionMessage(k).animation._Str_6677);
+                        this._container.roomSession._Str_5941(RoomWidgetAvatarExpressionMessage(k).animation.ordinal);
                     }
                     break;
                 case RoomWidgetDanceMessage.RWCM_MESSAGE_DANCE:
@@ -328,7 +328,7 @@
                 case RoomWidgetShowOwnRoomsMessage.RWSORM_SHOW_OWN_ROOMS:
                     if (this._container != null)
                     {
-                        this._container.navigator._Str_8024();
+                        this._container.navigator.showOwnRooms();
                     }
                     break;
                 case RoomWidgetMeMenuMessage.RWMMM_MESSAGE_ME_MENU_OPENED:
@@ -359,7 +359,7 @@
                             return null;
                         }
                         _local_15 = 0;
-                        this._container.roomEngine._Str_6973(_local_15, _local_14._Str_2713);
+                        this._container.roomEngine.selectAvatar(_local_15, _local_14._Str_2713);
                     }
                     break;
                 case RoomWidgetAvatarEditorMessage.RWCM_OPEN_AVATAR_EDITOR:

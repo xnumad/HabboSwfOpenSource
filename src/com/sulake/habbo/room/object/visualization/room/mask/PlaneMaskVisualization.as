@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.room.object.visualization.room.mask
 {
     import com.sulake.room.object.visualization.utils.IGraphicAsset;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class PlaneMaskVisualization 
     {
-        public static const _Str_3268:Number = -1;
-        public static const _Str_3271:Number = 1;
+        public static const MIN_NORMAL_COORDINATE_VALUE:Number = -1;
+        public static const MAX_NORMAL_COORDINATE_VALUE:Number = 1;
 
         private var _bitmaps:Array;
 
@@ -36,13 +36,13 @@
             }
         }
 
-        public function _Str_16790(k:IGraphicAsset, _arg_2:Number=-1, _arg_3:Number=1, _arg_4:Number=-1, _arg_5:Number=1):void
+        public function addBitmap(k:IGraphicAsset, _arg_2:Number=-1, _arg_3:Number=1, _arg_4:Number=-1, _arg_5:Number=1):void
         {
             var _local_6:PlaneMaskBitmap = new PlaneMaskBitmap(k, _arg_2, _arg_3, _arg_4, _arg_5);
             this._bitmaps.push(_local_6);
         }
 
-        public function getAsset(k:IVector3D):IGraphicAsset
+        public function getAsset(k:IVector3d):IGraphicAsset
         {
             var _local_3:PlaneMaskBitmap;
             if (k == null)

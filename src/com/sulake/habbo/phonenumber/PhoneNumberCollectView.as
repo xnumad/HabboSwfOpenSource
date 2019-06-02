@@ -98,7 +98,7 @@
             var _local_8:IDropListWindow = IDropListWindow(this._window.findChildByName("country_list"));
             for each (_local_9 in this._locales)
             {
-                _local_8._Str_15679(this._Str_23781(_local_9.code, _local_9.name));
+                _local_8.addMenuItem(this._Str_23781(_local_9.code, _local_9.name));
             }
             if (_local_8.numMenuItems > 0)
             {

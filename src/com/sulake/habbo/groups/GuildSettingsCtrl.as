@@ -46,16 +46,16 @@
             switch (this._data._Str_4830)
             {
                 case _Str_6787:
-                    this._guildSelector._Str_2520(this._guildRegular);
+                    this._guildSelector.setSelected(this._guildRegular);
                     break;
                 case _Str_6562:
-                    this._guildSelector._Str_2520(this._guildExclusive);
+                    this._guildSelector.setSelected(this._guildExclusive);
                     break;
                 case _Str_7780:
-                    this._guildSelector._Str_2520(this._guildClosed);
+                    this._guildSelector.setSelected(this._guildClosed);
                     break;
                 default:
-                    this._guildSelector._Str_2520(this._guildRegular);
+                    this._guildSelector.setSelected(this._guildRegular);
             }
             if (this._data._Str_7959 == GuildSettingsCtrl._Str_14996)
             {
@@ -63,7 +63,7 @@
             }
             else
             {
-                this._membersHaveRights._Str_2205();
+                this._membersHaveRights.unselect();
             }
             this._guildSelector.invalidate();
         }

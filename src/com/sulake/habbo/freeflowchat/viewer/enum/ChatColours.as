@@ -15,7 +15,7 @@
             {
                 if (k.text.indexOf(_local_3[0]) == 0)
                 {
-                    _arg_2._Str_5640.color = _local_3[1];
+                    _arg_2.textFormat.color = _local_3[1];
                     k.text = k.text.substr(_local_3[0].length);
                 }
             }

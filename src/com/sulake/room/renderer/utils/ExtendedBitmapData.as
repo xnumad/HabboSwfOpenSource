@@ -5,7 +5,7 @@
 
     public class ExtendedBitmapData extends BitmapData 
     {
-        private static const _Str_1870:Point = new Point(0, 0);
+        private static const ZERO_POINT:Point = new Point(0, 0);
 
         private var _referenceCount:int = 0;
         private var _disposed:Boolean = false;
@@ -15,7 +15,7 @@
             super(k, _arg_2, _arg_3, _arg_4);
         }
 
-        public function get _Str_22752():int
+        public function get referenceCount():int
         {
             return this._referenceCount;
         }
@@ -49,7 +49,7 @@
             try
             {
                 data = new ExtendedBitmapData(width, height, true, 0xFFFFFF);
-                data.copyPixels(this, rect, _Str_1870, null, null, true);
+                data.copyPixels(this, rect, ZERO_POINT, null, null, true);
             }
             catch(e:Error)
             {

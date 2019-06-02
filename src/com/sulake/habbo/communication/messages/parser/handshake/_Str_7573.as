@@ -28,7 +28,7 @@
             return this._clubLevel;
         }
 
-        public function get _Str_6124():int
+        public function get securityLevel():int
         {
             return this._Str_8385;
         }

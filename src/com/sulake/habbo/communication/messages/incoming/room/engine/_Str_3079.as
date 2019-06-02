@@ -172,12 +172,12 @@
             }
         }
 
-        public function get _Str_4172():int
+        public function get usagePolicy():int
         {
             return this._Str_5135;
         }
 
-        public function set _Str_4172(k:int):void
+        public function set usagePolicy(k:int):void
         {
             if (!this._Str_2479)
             {
@@ -185,12 +185,12 @@
             }
         }
 
-        public function get _Str_2481():int
+        public function get ownerId():int
         {
             return this._Str_2592;
         }
 
-        public function set _Str_2481(k:int):void
+        public function set ownerId(k:int):void
         {
             if (!this._Str_2479)
             {

@@ -5,11 +5,11 @@
 
     public class GuideSessionErrorMessageParser implements IMessageParser 
     {
-        public static const _Str_21105:int = 0;
-        public static const _Str_18013:int = 1;
-        public static const _Str_17457:int = 2;
-        public static const _Str_18342:int = 3;
-        public static const _Str_21172:int = 4;
+        public static const ERROR_GENERIC:int = 0;
+        public static const ERROR_GUIDES_REJECT:int = 1;
+        public static const ERROR_NOT_ENOUGH_GUIDES:int = 2;
+        public static const ERROR_NOT_ENOUGH_VOTES:int = 3;
+        public static const ERROR_NO_CHATLOG_FOUND:int = 4;
 
         private var _errorCode:int;
 

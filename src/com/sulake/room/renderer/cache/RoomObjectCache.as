@@ -44,7 +44,7 @@
             }
         }
 
-        public function _Str_23830(k:String):RoomObjectCacheItem
+        public function getObjectCache(k:String):RoomObjectCacheItem
         {
             var _local_2:RoomObjectCacheItem = (this._data.getValue(k) as RoomObjectCacheItem);
             if (_local_2 == null)
@@ -55,7 +55,7 @@
             return _local_2;
         }
 
-        public function _Str_18669(k:String):void
+        public function removeObjectCache(k:String):void
         {
             var _local_2:RoomObjectCacheItem = (this._data.remove(k) as RoomObjectCacheItem);
             if (_local_2 != null)
@@ -74,7 +74,7 @@
             var _local_2:Array = this._data.getValues();
             for each (_local_3 in _local_2)
             {
-                for each (_local_4 in _local_3._Str_9272._Str_9272)
+                for each (_local_4 in _local_3.sprites.sprites)
                 {
                     if (((!(_local_4.sprite._Str_4918 == RoomObjectSpriteType.ROOM_PLANE)) && (!(_local_4.sprite._Str_3582 == ""))))
                     {
@@ -90,7 +90,7 @@
                         _local_5.blendMode = _local_4.sprite.blendMode;
                         _local_5.width = _local_4.sprite.width;
                         _local_5.height = _local_4.sprite.height;
-                        _local_5._Str_1723 = _local_4.sprite._Str_1723;
+                        _local_5.objectType = _local_4.sprite.objectType;
                         _local_5.posture = _local_4.sprite._Str_8401;
                         _local_6 = this._Str_23710(_local_4.sprite);
                         if (_local_6)
@@ -100,7 +100,7 @@
                         if ((((((_local_6) || (_local_5.name.indexOf("%image.library.url%") >= 0)) || (_local_5.name.indexOf("%group.badge.url%") >= 0)) && (_local_5.width <= _Str_14703)) && (_local_5.height <= _Str_14703)))
                         {
                             _local_5.color = Canvas._Str_23439(_local_4.sprite.asset).toString();
-                            if (_local_4.sprite._Str_1723.indexOf("external_image_wallitem") == 0)
+                            if (_local_4.sprite.objectType.indexOf("external_image_wallitem") == 0)
                             {
                                 _local_5.frame = true;
                             }
@@ -114,15 +114,15 @@
 
         private function _Str_23710(k:IRoomObjectSprite):Boolean
         {
-            if (!k._Str_1723)
+            if (!k.objectType)
             {
                 return false;
             }
-            if (((k._Str_1723.indexOf("external_image_wallitem") == 0) && (k.tag == "THUMBNAIL")))
+            if (((k.objectType.indexOf("external_image_wallitem") == 0) && (k.tag == "THUMBNAIL")))
             {
                 return true;
             }
-            if (((k._Str_1723.indexOf("guild_forum") == 0) && (k.tag == "THUMBNAIL")))
+            if (((k.objectType.indexOf("guild_forum") == 0) && (k.tag == "THUMBNAIL")))
             {
                 return true;
             }
@@ -137,7 +137,7 @@
             var _local_2:Array = this._data.getValues();
             for each (_local_3 in _local_2)
             {
-                for each (_local_4 in _local_3._Str_9272._Str_9272)
+                for each (_local_4 in _local_3.sprites.sprites)
                 {
                     if (_local_4.sprite._Str_4918 == RoomObjectSpriteType.ROOM_PLANE)
                     {

@@ -96,18 +96,18 @@
                 _roomEngine = k;
             }, ((flags & _Str_17871) == 0), [{
                 "type":RoomEngineEvent.ENGINE_INITIALIZED,
-                "callback":this._Str_13249
+                "callback":this.onRoomEngineInitialized
             }])]));
         }
 
         override protected function initComponent():void
         {
-            this._Str_23703();
+            this.createHandlers();
             if (((this._roomViewerMode) && (!(this._communication == null))))
             {
-                this._communication.addHabboConnectionMessageEvent(new _Str_4196(this._Str_12439));
+                this._communication.addHabboConnectionMessageEvent(new _Str_4196(this.onRoomVisualizationSettings));
             }
-            this._Str_19152();
+            this.executePendingSessionRequest();
         }
 
         override public function dispose():void
@@ -151,13 +151,13 @@
             super.dispose();
         }
 
-        private function _Str_13249(k:RoomEngineEvent):void
+        private function onRoomEngineInitialized(k:RoomEngineEvent):void
         {
             this._roomEngineReady = true;
-            this._Str_19152();
+            this.executePendingSessionRequest();
         }
 
-        private function _Str_23703():void
+        private function createHandlers():void
         {
             var k:IConnection;
             if (this._communication)
@@ -179,16 +179,16 @@
             }
         }
 
-        private function _Str_19152():void
+        private function executePendingSessionRequest():void
         {
             if (((this._Str_3961) && (!(this._pendingSessionRequest == null))))
             {
-                this._Str_16060(this._pendingSessionRequest);
+                this.createSession(this._pendingSessionRequest);
                 this._pendingSessionRequest = null;
             }
         }
 
-        private function _Str_12439(k:_Str_4196):void
+        private function onRoomVisualizationSettings(k:_Str_4196):void
         {
             var _local_3:int;
             var _local_4:int;
@@ -210,18 +210,18 @@
                 _local_5 = 2;
                 _local_6 = 0x0400;
                 _local_7 = 0x0300;
-                _local_8 = this._roomEngine._Str_14750(_local_2.roomId, _local_3, _local_6, _local_7, 64);
+                _local_8 = this._roomEngine.createRoomCanvas(_local_2.roomId, _local_3, _local_6, _local_7, 64);
                 if (_local_8 != null)
                 {
                     context.displayObjectContainer.addChild(_local_8);
-                    context.displayObjectContainer.addEventListener(Event.RESIZE, this._Str_1136);
-                    this._roomEngine._Str_18414(_local_2.roomId, _local_3, true);
-                    _local_9 = this._roomEngine._Str_4267(_local_2.roomId, _local_3);
+                    context.displayObjectContainer.addEventListener(Event.RESIZE, this.onResize);
+                    this._roomEngine.setRoomCanvasMask(_local_2.roomId, _local_3, true);
+                    _local_9 = this._roomEngine.getRoomCanvasGeometry(_local_2.roomId, _local_3);
                     if (_local_9 != null)
                     {
                         _local_9.adjustLocation(new Vector3d(_local_4, _local_5, 0), 30);
                     }
-                    this._roomEngine._Str_16921(_local_2.roomId, _local_3, new Point(0, -400));
+                    this._roomEngine.setRoomCanvasScreenOffset(_local_2.roomId, _local_3, new Point(0, -400));
                 }
                 if (((!(this._freeFlowChat == null)) && (this._freeFlowChat.displayObject)))
                 {
@@ -230,7 +230,7 @@
             }
         }
 
-        private function _Str_1136(k:Event):void
+        private function onResize(k:Event):void
         {
             if (!this._roomViewerMode)
             {
@@ -241,7 +241,7 @@
             {
                 return;
             }
-            this._roomEngine._Str_6976(_local_2.roomId, 1, context.displayObjectContainer.width, context.displayObjectContainer.height);
+            this._roomEngine.modifyRoomCanvas(_local_2.roomId, 1, context.displayObjectContainer.width, context.displayObjectContainer.height);
         }
 
         public function _Str_10094(k:int, _arg_2:String="", _arg_3:String=""):Boolean
@@ -251,7 +251,7 @@
             _local_4._Str_18062 = _arg_2;
             _local_4._Str_17752 = _arg_3;
             _local_4.habboTracking = this._habboTracking;
-            return this._Str_16060(_local_4);
+            return this.createSession(_local_4);
         }
 
         public function _Str_21545(k:int, _arg_2:int):Boolean
@@ -261,17 +261,17 @@
             _local_3._Str_18062 = "";
             _local_3.habboTracking = this._habboTracking;
             _local_3._Str_21443 = new _Str_9845(k, _arg_2);
-            return this._Str_16060(_local_3);
+            return this.createSession(_local_3);
         }
 
-        private function _Str_16060(k:RoomSession):Boolean
+        private function createSession(k:RoomSession):Boolean
         {
             if (!this._Str_3961)
             {
                 this._pendingSessionRequest = k;
                 return false;
             }
-            var _local_2:String = this._Str_2573(k.roomId);
+            var _local_2:String = this.getRoomIdentifier(k.roomId);
             this._sessionStarting = true;
             if (this._sessions.getValue(_local_2) != null)
             {
@@ -282,7 +282,7 @@
             events.dispatchEvent(new RoomSessionEvent(RoomSessionEvent.CREATED, k));
             if (this._roomViewerMode)
             {
-                this._roomEngine.events.addEventListener("RCLE_SUCCESS", this._Str_6860);
+                this._roomEngine.events.addEventListener("RCLE_SUCCESS", this.onRoomContentLoaded);
                 this._pendingResources = new Array();
                 this._viewerSession = k;
                 if (this._pendingResources.length == 0)
@@ -293,7 +293,7 @@
             return true;
         }
 
-        private function _Str_6860(k:Event):void
+        private function onRoomContentLoaded(k:Event):void
         {
             if (((this._pendingResources == null) || (this._pendingResources.length == 0)))
             {
@@ -324,7 +324,7 @@
             {
                 this._sessionStarting = false;
                 events.dispatchEvent(new RoomSessionEvent(RoomSessionEvent.STARTED, k));
-                this._Str_19380(k);
+                this.updateHandlers(k);
             }
             else
             {
@@ -342,13 +342,13 @@
             k.habboTracking = this._habboTracking;
             k.isGameSession = true;
             k.connection = this._communication.connection;
-            this._sessions.add(this._Str_2573(k.roomId), k);
+            this._sessions.add(this.getRoomIdentifier(k.roomId), k);
             events.dispatchEvent(new RoomSessionEvent(RoomSessionEvent.CREATED, k));
         }
 
         public function _Str_22920():void
         {
-            var k:String = this._Str_2573(1);
+            var k:String = this.getRoomIdentifier(1);
             var _local_2:RoomSession = this._sessions.getValue(k);
             if (((_local_2) && (_local_2.isGameSession)))
             {
@@ -377,30 +377,30 @@
         public function sessionReinitialize(k:int, _arg_2:int):void
         {
             var _local_5:RoomSession;
-            var _local_3:String = this._Str_2573(k);
+            var _local_3:String = this.getRoomIdentifier(k);
             var _local_4:RoomSession = (this._sessions.remove(_local_3) as RoomSession);
             if (_local_4 != null)
             {
                 _local_4.reset(_arg_2);
-                _local_3 = this._Str_2573(_arg_2);
+                _local_3 = this.getRoomIdentifier(_arg_2);
                 _local_5 = this._sessions.remove(_local_3);
                 if (_local_5 != null)
                 {
                 }
                 this._sessions.add(_local_3, _local_4);
-                this._Str_19380(_local_4);
+                this.updateHandlers(_local_4);
             }
         }
 
         public function getSession(k:int):IRoomSession
         {
-            var _local_2:String = this._Str_2573(k);
+            var _local_2:String = this.getRoomIdentifier(k);
             return this._sessions.getValue(_local_2) as IRoomSession;
         }
 
         public function _Str_7613(k:int, _arg_2:Boolean=true):void
         {
-            var _local_3:String = this._Str_2573(k);
+            var _local_3:String = this.getRoomIdentifier(k);
             var _local_4:RoomSession = (this._sessions.remove(_local_3) as RoomSession);
             if (_local_4 != null)
             {
@@ -409,7 +409,7 @@
             }
         }
 
-        private function _Str_19380(k:IRoomSession):void
+        private function updateHandlers(k:IRoomSession):void
         {
             var _local_2:int;
             var _local_3:BaseHandler;
@@ -428,7 +428,7 @@
             }
         }
 
-        private function _Str_2573(k:int):String
+        private function getRoomIdentifier(k:int):String
         {
             return "hard_coded_room_id";
         }

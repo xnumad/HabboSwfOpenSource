@@ -36,7 +36,7 @@
             if (_arg_2 != null)
             {
                 _arg_2.offset((-(this._window.width) / 2), (-(this._window.height) / 2));
-                this._window._Str_10907(_arg_2);
+                this._window.setGlobalPosition(_arg_2);
             }
             this._window.visible = true;
             this._window.activate();

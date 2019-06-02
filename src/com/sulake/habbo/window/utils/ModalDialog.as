@@ -48,7 +48,7 @@
                 _Str_2277 = k;
                 _Str_2691 = _Str_2277.context.displayObjectContainer.stage;
                 _container = (_Str_20664.create("", "", WindowType.WINDOW_TYPE_CONTAINER, 0, 0, new Rectangle(0, 0, 1, 1), null, null, 0) as IWindowContainer);
-                _Str_2691.addEventListener(Event.RESIZE, _Str_1136);
+                _Str_2691.addEventListener(Event.RESIZE, onResize);
                 _Str_2691.addEventListener(Event.ENTER_FRAME, _Str_749);
             }
         }
@@ -150,7 +150,7 @@
             }
         }
 
-        private static function _Str_1136(k:Event):void
+        private static function onResize(k:Event):void
         {
             if (((_container == null) || (_container.numChildren <= 0)))
             {

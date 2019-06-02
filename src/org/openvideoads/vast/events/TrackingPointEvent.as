@@ -15,14 +15,14 @@
         public static const BS:String = "BS";
         public static const ES:String = "ES";
 
-        protected var _Str_594:Object = null;
+        protected var _data:Object = null;
 
         public function TrackingPointEvent(k:String, _arg_2:Object=null, _arg_3:Boolean=false, _arg_4:Boolean=false)
         {
             super(k, _arg_3, _arg_4);
             if (_arg_2 != null)
             {
-                this._Str_594 = _arg_2;
+                this._data = _arg_2;
             }
         }
 
@@ -47,37 +47,37 @@
 
         public function _Str_13568():Boolean
         {
-            return !(this._Str_594 == null);
+            return !(this._data == null);
         }
 
         public function set data(k:Object):void
         {
-            this._Str_594 = k;
+            this._data = k;
         }
 
         public function get data():Object
         {
-            return this._Str_594;
+            return this._data;
         }
 
         public function _Str_24608():Boolean
         {
-            return (!(this._Str_594 == null)) && (this.data is _Str_2460);
+            return (!(this._data == null)) && (this.data is _Str_2460);
         }
 
         public function get trackingPoint():_Str_2460
         {
-            return this._Str_594 as _Str_2460;
+            return this._data as _Str_2460;
         }
 
         override public function clone():Event
         {
-            return new TrackingPointEvent(type, this._Str_594, bubbles, cancelable);
+            return new TrackingPointEvent(type, this._data, bubbles, cancelable);
         }
 
         override public function toString():String
         {
-            return this._Str_594.toString();
+            return this._data.toString();
         }
     }
 }

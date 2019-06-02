@@ -46,7 +46,7 @@
                 _local_2.visible = false;
                 return;
             }
-            var _local_3:int = this._navigator.data._Str_4079._Str_3544;
+            var _local_3:int = this._navigator.data._Str_4079.pageIndex;
             var _local_4:int = this._navigator.data._Str_4079._Str_8849;
             var _local_5:int = (_local_3 + 1);
             if (_local_4 < 2)
@@ -69,7 +69,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (!(this._navigator.data._Str_4079 == null))))
             {
-                this._navigator._Str_11462(this._navigator.data._Str_4079._Str_7578, (this._navigator.data._Str_4079._Str_3544 + 1));
+                this._navigator.performCompetitionRoomsSearch(this._navigator.data._Str_4079.goalId, (this._navigator.data._Str_4079.pageIndex + 1));
             }
         }
 
@@ -77,7 +77,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (!(this._navigator.data._Str_4079 == null))))
             {
-                this._navigator._Str_11462(this._navigator.data._Str_4079._Str_7578, (this._navigator.data._Str_4079._Str_3544 - 1));
+                this._navigator.performCompetitionRoomsSearch(this._navigator.data._Str_4079.goalId, (this._navigator.data._Str_4079.pageIndex - 1));
             }
         }
 

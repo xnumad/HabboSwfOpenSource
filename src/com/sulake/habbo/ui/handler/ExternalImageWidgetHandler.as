@@ -90,13 +90,13 @@
         {
             if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
             {
-                this._container.roomEngine._Str_13020(k, RoomObjectCategoryEnum.CONST_20);
+                this._container.roomEngine.deleteRoomObject(k, RoomObjectCategoryEnum.CONST_20);
             }
         }
 
-        public function _Str_2781():Boolean
+        public function isRoomController():Boolean
         {
-            return this._container.roomSession._Str_2781;
+            return this._container.roomSession.isRoomController;
         }
 
         public function _Str_19701():Boolean

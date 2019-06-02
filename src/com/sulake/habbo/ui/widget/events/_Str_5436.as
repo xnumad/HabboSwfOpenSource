@@ -26,7 +26,7 @@
             return this._Str_2319;
         }
 
-        public function get _Str_1723():String
+        public function get objectType():String
         {
             return this._Str_3796;
         }

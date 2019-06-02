@@ -60,7 +60,7 @@
                 this._Str_14783();
             }
             k.addListItem(this._window);
-            if (_Str_7841)
+            if (isBranch)
             {
                 if (this._childList == null)
                 {
@@ -75,7 +75,7 @@
         public function _Str_19623(k:IItemListWindow):void
         {
             k.removeListItem(this._window);
-            if (_Str_7841)
+            if (isBranch)
             {
                 k.removeListItem(this._childList);
             }
@@ -98,7 +98,7 @@
             var k:IWindow;
             this._Str_21358();
             this._isOpen = true;
-            if (((_Str_7841) && (!(this._window == null))))
+            if (((isBranch) && (!(this._window == null))))
             {
                 k = this._window.findChildByTag("DOWNBTN");
                 if (k != null)
@@ -113,7 +113,7 @@
             var k:IWindow;
             this._Str_19979();
             this._isOpen = false;
-            if (((_Str_7841) && (!(this._window == null))))
+            if (((isBranch) && (!(this._window == null))))
             {
                 k = this._window.findChildByTag("DOWNBTN");
                 if (k != null)
@@ -209,7 +209,7 @@
 
         private function createWindow():void
         {
-            this._window = (navigator.getItemTemplate(_Str_8132).clone() as IWindowContainer);
+            this._window = (navigator.getItemTemplate(depth).clone() as IWindowContainer);
             var k:ITextWindow = (this._window.findChildByTag("ITEM_TITLE") as ITextWindow);
             var _local_2:IWindow = this._window.findChildByTag("DOWNBTN");
             if (k != null)
@@ -225,20 +225,20 @@
             }
             if (_local_2 != null)
             {
-                _local_2.visible = (!(_Str_19235));
+                _local_2.visible = (!(isLeaf));
             }
             IStaticBitmapWrapperWindow(this._window.findChildByName("icon")).assetUri = ((navigator.catalog.imageGalleryHost + _Str_4856) + ".png");
             if (navigator.isDeepHierarchy)
             {
-                if (_Str_8132 == 1)
+                if (depth == 1)
                 {
                     this._window.findChildByName("icon").visible = false;
                     this._window.findChildByTag("ITEM_TITLE").x = 0;
                 }
-                if (_Str_8132 > 3)
+                if (depth > 3)
                 {
-                    this._window.findChildByName("icon").visible = _Str_7841;
-                    this._window.findChildByTag("ITEM_TITLE").x = (42 + (5 * (_Str_8132 - 3)));
+                    this._window.findChildByName("icon").visible = isBranch;
+                    this._window.findChildByTag("ITEM_TITLE").x = (42 + (5 * (depth - 3)));
                 }
             }
             this._window.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);

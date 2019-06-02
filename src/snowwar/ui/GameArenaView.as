@@ -10,7 +10,7 @@
 	import com.sulake.habbo.room.object.RoomObjectVariableEnum;
 	import com.sulake.habbo.room.object.RoomPlaneParser;
 	import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
-	import com.sulake.room.utils.IVector3D;
+	import com.sulake.room.utils.IVector3d;
 	import com.sulake.room.utils.Vector3d;
 	import com.sulake.room.object.IRoomObject;
 	import com.sulake.room.object.IRoomObjectController;
@@ -116,33 +116,33 @@
             var _local_12:IStuffData;
             var _local_13:int;
             var _local_14:Number;
-            this._snowWarEngine.roomEngine._Str_6374 = true;
+            this._snowWarEngine.roomEngine.setIsSelectedObjectInValidPosition = true;
             var k:SnowWarGameStage = (this._snowWarEngine.synchronizedGameArena.synchronizedGameStage() as SnowWarGameStage);
             var _local_2:SnowWarGameStageMessageParser = k._SafeStr_18703;
             var _local_3:Array = k.tileMap();
             var _local_4:RoomPlaneParser = new RoomPlaneParser();
-            _local_4._Str_13735(_local_2.width, _local_2.height);
+            _local_4.initializeTileMap(_local_2.width, _local_2.height);
             var _local_5:int;
             while (_local_5 < _local_2.height)
             {
                 _local_7 = 0;
                 while (_local_7 < _local_2.width)
                 {
-                    _local_4._Str_3982(_local_7, _local_5, ((_local_3[_local_5][_local_7] == null) ? RoomPlaneParser._Str_5500 : 0));
+                    _local_4._Str_3982(_local_7, _local_5, ((_local_3[_local_5][_local_7] == null) ? RoomPlaneParser.TILE_HOLE : 0));
                     _local_7++;
                 }
                 _local_5++;
             }
-            _local_4._Str_12919();
-            this._snowWarEngine.roomEngine._Str_10152(_SafeStr_18716, _local_4._Str_5598());
-            (this._snowWarEngine.roomEngine as IRoomCreator)._Str_15359(_SafeStr_18716, false);
+            _local_4.initializeFromTileData();
+            this._snowWarEngine.roomEngine.initializeRoom(_SafeStr_18716, _local_4._Str_5598());
+            (this._snowWarEngine.roomEngine as IRoomCreator).updateObjectRoomVisibilities(_SafeStr_18716, false);
             _local_4.dispose();
             for each (_local_6 in k._SafeStr_18703.fuseObjects)
             {
                 _local_8 = (_local_6.altitude / Tile.STEP_COST);
                 _local_9 = new Vector3d(_local_6.x, _local_6.y, _local_8);
                 _local_10 = new Vector3d((_local_6.direction * 45));
-                _local_11 = this._snowWarEngine.roomEngine._Str_19383(_local_6.name);
+                _local_11 = this._snowWarEngine.roomEngine.getFurnitureTypeId(_local_6.name);
                 _local_12 = _local_6.extradata;
                 _local_13 = 0;
                 _local_14 = parseInt(_local_12.getLegacyString());
@@ -150,7 +150,7 @@
                 {
                     _local_13 = int(_local_14);
                 }
-                this._snowWarEngine.roomEngine._Str_8303(_SafeStr_18716, _local_6.id, _local_11, _local_9, _local_10, _local_13, _local_12);
+                this._snowWarEngine.roomEngine.addObjectFurniture(_SafeStr_18716, _local_6.id, _local_11, _local_9, _local_10, _local_13, _local_12);
             }
             this._snowWarEngine.roomUI.visible = false;
             this._stage = this._snowWarEngine.context.displayObjectContainer.stage;
@@ -191,7 +191,7 @@
             var _local_15:int;
             var _local_16:int;
             var _local_17:IRoomObject;
-            var _local_18:IVector3D;
+            var _local_18:IVector3d;
             var _local_19:*;
             var _local_20:HumanGameObject;
             var _local_21:_SafeStr_4035;
@@ -220,7 +220,7 @@
                 _local_15 = this._SafeStr_18721.indexOf(_local_14);
                 if (_local_15 > -1)
                 {
-                    this._snowWarEngine.roomEngine._Str_9451(_SafeStr_18716, _local_14);
+                    this._snowWarEngine.roomEngine.disposeObjectUser(_SafeStr_18716, _local_14);
                     this._SafeStr_18721.splice(_local_15, 1);
                 }
                 _local_16 = this._SafeStr_18722.indexOf(_local_14);
@@ -228,7 +228,7 @@
                 {
                     _local_17 = this._snowWarEngine.roomEngine.getRoomObject(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.CONST_201);
                     _local_18 = _local_17.getLocation();
-                    this._snowWarEngine.roomEngine._Str_9104(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.CONST_201);
+                    this._snowWarEngine.roomEngine.updateObjectUserGesture(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.CONST_201);
                     this._SafeStr_18722.splice(_local_16, 1);
                     if (!SnowWarGameObject(_local_4).isActive)
                     {
@@ -247,7 +247,7 @@
                 _local_19 = this._SafeStr_18723[_local_5];
                 if ((_local_3 - _local_19.time) >= _SafeStr_18720)
                 {
-                    this._snowWarEngine.roomEngine._Str_9104(_SafeStr_18716, _local_19.id, _local_19.category);
+                    this._snowWarEngine.roomEngine.updateObjectUserGesture(_SafeStr_18716, _local_19.id, _local_19.category);
                     this._SafeStr_18723.splice(_local_5, 1);
                 }
                 _local_5--;
@@ -310,7 +310,7 @@
                 }
             }
             var _local_9:HumanGameObject = this._snowWarEngine._SafeStr_13187();
-            this._snowWarEngine.roomEngine._Str_12204(_SafeStr_18716, _local_9._SafeStr_13236, ((_local_9.team == 1) ? _SafeStr_18718 : _SafeStr_18717));
+            this._snowWarEngine.roomEngine.updateObjectUserEffect(_SafeStr_18716, _local_9._SafeStr_13236, ((_local_9.team == 1) ? _SafeStr_18718 : _SafeStr_18717));
         }
 
         private function _SafeStr_18728(k:HumanGameObject):void
@@ -324,7 +324,7 @@
             var _local_4:int = k._SafeStr_13236;
             var _local_5:int = k._SafeStr_18743();
             var _local_6:int = Direction360.direction8ToDirection360Value(Direction8.fromIndex(_local_5));
-            var _local_7:IVector3D = new Vector3d(_local_6, 0, 0);
+            var _local_7:IVector3d = new Vector3d(_local_6, 0, 0);
             if (this._SafeStr_18721.indexOf(_local_4) == -1)
             {
                 _local_9 = this._snowWarEngine.avatarRenderManager._Str_718(k.figure);
@@ -339,9 +339,9 @@
                     default:
                         _local_9._Str_830("ch", 20000, [1]);
                 }
-                this._snowWarEngine.roomEngine._Str_11865(_SafeStr_18716, _local_4, new Vector3d(_local_2, _local_3, 0), _local_7, _local_6, 1, _local_9._Str_1008());
-                this._snowWarEngine.roomEngine._Str_7176(_SafeStr_18716, _local_4, "std");
-                this._snowWarEngine.roomEngine._Str_3689(_SafeStr_18716, _local_4, RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, 1);
+                this._snowWarEngine.roomEngine.addObjectUser(_SafeStr_18716, _local_4, new Vector3d(_local_2, _local_3, 0), _local_7, _local_6, 1, _local_9.getFigureString());
+                this._snowWarEngine.roomEngine.updateObjectUserPosture(_SafeStr_18716, _local_4, "std");
+                this._snowWarEngine.roomEngine.updateObjectUserAction(_SafeStr_18716, _local_4, RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, 1);
                 this._SafeStr_18721.push(_local_4);
                 switch (k._SafeStr_18745)
                 {
@@ -355,10 +355,10 @@
             }
             else
             {
-                this._snowWarEngine.roomEngine._Str_11976(_SafeStr_18716, _local_4, new Vector3d(_local_2, _local_3, 0), new Vector3d(_local_2, _local_3, 0), false, 0, _local_7, _local_6);
-                this._snowWarEngine.roomEngine._Str_7176(_SafeStr_18716, _local_4, k.posture);
+                this._snowWarEngine.roomEngine.updateObjectUser(_SafeStr_18716, _local_4, new Vector3d(_local_2, _local_3, 0), new Vector3d(_local_2, _local_3, 0), false, 0, _local_7, _local_6);
+                this._snowWarEngine.roomEngine.updateObjectUserPosture(_SafeStr_18716, _local_4, k.posture);
                 _local_10 = ((!(k.posture == AvatarAction.SNOWWAR_DIE_BACK)) && (!(k.posture == AvatarAction.SNOWWAR_DIE_FRONT)));
-                this._snowWarEngine.roomEngine._Str_3689(_SafeStr_18716, _local_4, RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, int(_local_10));
+                this._snowWarEngine.roomEngine.updateObjectUserAction(_SafeStr_18716, _local_4, RoomObjectVariableEnum.FIGURE_IS_PLAYING_GAME, int(_local_10));
             }
             var _local_8:IRoomObject = this._SafeStr_18733(_local_4);
             if (_local_8 != null)
@@ -368,13 +368,13 @@
                 _local_12 = (!(k.team == this._snowWarEngine._SafeStr_13187().team));
                 if (_local_12)
                 {
-                    if (((((this._snowWarEngine.roomEngine as IRoomEngineServices)._Str_24152 == _local_4) && (!(k._SafeStr_18748))) && (!(k._SafeStr_18749()))))
+                    if (((((this._snowWarEngine.roomEngine as IRoomEngineServices).playerUnderCursor == _local_4) && (!(k._SafeStr_18748))) && (!(k._SafeStr_18749()))))
                     {
-                        this._snowWarEngine.roomEngine._Str_12204(_SafeStr_18716, _local_4, _SafeStr_18719);
+                        this._snowWarEngine.roomEngine.updateObjectUserEffect(_SafeStr_18716, _local_4, _SafeStr_18719);
                     }
                     else
                     {
-                        this._snowWarEngine.roomEngine._Str_12204(_SafeStr_18716, _local_4, 0);
+                        this._snowWarEngine.roomEngine.updateObjectUserEffect(_SafeStr_18716, _local_4, 0);
                     }
                 }
             }
@@ -406,7 +406,7 @@
             var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.CONST_10) as IRoomObjectController);
             if (_local_3.getState(0) != k._SafeStr_18035)
             {
-                _local_2._Str_5858(_SafeStr_18716, k._SafeStr_18032, null, null, k._SafeStr_18035, null);
+                _local_2.updateObjectFurniture(_SafeStr_18716, k._SafeStr_18032, null, null, k._SafeStr_18035, null);
                 _local_3.setState(k._SafeStr_18035, 0);
             }
         }
@@ -418,7 +418,7 @@
             var _local_4:int = (k._SafeStr_18034 - k._SafeStr_18035);
             if (((_local_3) && (!(_local_3.getState(0) == _local_4))))
             {
-                _local_2._Str_5858(_SafeStr_18716, k._SafeStr_18032, null, null, _local_4, null);
+                _local_2.updateObjectFurniture(_SafeStr_18716, k._SafeStr_18032, null, null, _local_4, null);
                 _local_3.setState(_local_4, 0);
             }
         }
@@ -429,7 +429,7 @@
             var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.CONST_10) as IRoomObjectController);
             if (((_local_3) && (!(_local_3.getState(0) == k.hits))))
             {
-                _local_2._Str_5858(_SafeStr_18716, k._SafeStr_18032, null, null, k.hits, null);
+                _local_2.updateObjectFurniture(_SafeStr_18716, k._SafeStr_18032, null, null, k.hits, null);
                 _local_3.setState(k.hits, 0);
             }
         }
@@ -506,7 +506,7 @@
                 default:
                     _local_2 = 0;
             }
-            this._snowWarEngine.roomEngine._Str_16048(_SafeStr_18716, _local_2);
+            this._snowWarEngine.roomEngine.setTileCursorState(_SafeStr_18716, _local_2);
         }
 
         public function _SafeStr_13225():void

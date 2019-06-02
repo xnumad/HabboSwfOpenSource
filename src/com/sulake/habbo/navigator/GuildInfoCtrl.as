@@ -41,7 +41,7 @@
                 k.addChild(_local_4);
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_23405);
             }
-            if (((_arg_2 == null) || (_arg_2._Str_3094 < 1)))
+            if (((_arg_2 == null) || (_arg_2.habboGroupId < 1)))
             {
                 _local_4.visible = false;
                 return;
@@ -51,8 +51,8 @@
             _local_4.findChildByName("guild_base_txt").caption = this._navigator.getText("navigator.guildbase");
             var _local_5:_Str_2402 = (IWidgetWindow(k.findChildByName("guild_badge")).widget as _Str_2402);
             _local_5.badgeId = _arg_2._Str_7146;
-            _local_5.groupId = _arg_2._Str_3094;
-            this._groupId = _arg_2._Str_3094;
+            _local_5.groupId = _arg_2.habboGroupId;
+            this._groupId = _arg_2.habboGroupId;
         }
 
         private function _Str_23405(k:WindowEvent):void

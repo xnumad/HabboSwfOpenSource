@@ -6,7 +6,7 @@
 
     public class AdServerConfig extends Debuggable 
     {
-        protected var _Str_576:String = "";
+        protected var _id:String = "";
         protected var _Str_5295:String = "direct";
         protected var _Str_7775:Boolean = false;
         protected var _Str_14740:Boolean = false;
@@ -69,7 +69,7 @@
             {
                 if (k.id != undefined)
                 {
-                    this._Str_576 = k.id;
+                    this._id = k.id;
                 }
                 if (k.type != undefined)
                 {
@@ -660,7 +660,7 @@
 
         public function matchesId(k:String):Boolean
         {
-            if (this._Str_576 == null)
+            if (this._id == null)
             {
                 return k == null;
             }
@@ -668,17 +668,17 @@
             {
                 return false;
             }
-            return this._Str_576.toUpperCase() == k.toUpperCase();
+            return this._id.toUpperCase() == k.toUpperCase();
         }
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set partnerId(k:String):void

@@ -19,7 +19,7 @@
         public const _Str_26086:String = "streaming";
         public const _Str_26113:String = "progressive";
 
-        protected var _Str_576:String = null;
+        protected var _id:String = null;
         protected var _Str_2987:int;
         protected var _Str_14603:String;
         protected var _Str_990:String = "00:00:00";
@@ -30,7 +30,7 @@
         protected var _Str_4718:String = "any";
         protected var _Str_2230:String = null;
         protected var _Str_4980:* = -1;
-        protected var _Str_1720:int = -1;
+        protected var _width:int = -1;
         protected var _height:int = -1;
         protected var _Str_8898:Boolean = false;
         protected var _Str_2846:String = null;
@@ -65,7 +65,7 @@
             this._Str_2335 = _arg_2;
             this._Str_2987 = _arg_3;
             this._Str_3649 = new TrackingTable(_arg_4, _arg_3, _arg_20);
-            this._Str_576 = _arg_4;
+            this._id = _arg_4;
             this._Str_14603 = _arg_5;
             this.startTime = _arg_6;
             this._Str_2467 = _arg_7;
@@ -112,12 +112,12 @@
 
         public function set id(k:String):void
         {
-            this._Str_576 = k;
+            this._id = k;
         }
 
         public function get id():String
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function set _Str_26434(k:Boolean):void
@@ -301,12 +301,12 @@
 
         public function set width(k:int):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:int):void
@@ -439,9 +439,9 @@
 
         public function _Str_26312(k:String):Boolean
         {
-            if (this._Str_576 != null)
+            if (this._id != null)
             {
-                return StringUtils._Str_4861(this._Str_576, k);
+                return StringUtils._Str_4861(this._id, k);
             }
             return false;
         }

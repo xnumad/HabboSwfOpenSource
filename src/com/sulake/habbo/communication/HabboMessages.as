@@ -1472,7 +1472,7 @@
 			INCOMING_PACKETS[5004] = SnowStormUnusedAlertGenericEvent; //SnowStormUnusedAlertGenericComposer
 			INCOMING_PACKETS[5005] = SnowStormLongDataEvent; //SnowStormLongDataComposer										UPDATE STATE TO 0 / 7
 			INCOMING_PACKETS[5006] = SnowStormGameEndedEvent; //SnowStormGameEndedComposer
-			INCOMING_PACKETS[5007] = SnowStormGenericErrorEvent; //SnowStormGenericErrorComposer <- Does the same albeit different function as 5028
+			INCOMING_PACKETS[5007] = SnowStormGenericErrorEvent; //SnowStormGenericErrorComposer
 			INCOMING_PACKETS[5008] = SnowStormQuePlayerAddedEvent; //SnowStormQuePlayerAddedComposer								UPDATE STATE TO 0
 			INCOMING_PACKETS[5009] = SnowStormPlayAgainEvent; //SnowStormPlayAgainComposer
 			INCOMING_PACKETS[5010] = SnowStormGamesLeftEvent; //SnowStormGamesLeftComposer

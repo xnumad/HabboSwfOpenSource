@@ -88,8 +88,8 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.DIRECTION, this._direction));
-            k.push(_Str_2340(PropertyKeys.POINTER_OFFSET, this._pointerOffset));
+            k.push(createProperty(PropertyKeys.DIRECTION, this._direction));
+            k.push(createProperty(PropertyKeys.POINTER_OFFSET, this._pointerOffset));
             return k;
         }
 

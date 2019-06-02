@@ -128,7 +128,7 @@
 
         private function _Str_10475(k:_Str_2370):Boolean
         {
-            return (!(k == null)) && (k.flatId == this._Str_2272.data._Str_3374);
+            return (!(k == null)) && (k.flatId == this._Str_2272.data.homeRoomId);
         }
 
         private function _Str_22403():void
@@ -173,7 +173,7 @@
             _local_3.text = k.roomName;
             _local_3.height = (_local_3.textHeight + 5);
             var _local_4:ITextWindow = ITextWindow(this.find("owner_name"));
-            if (((k._Str_6938) && (k._Str_2481 > 0)))
+            if (((k._Str_6938) && (k.ownerId > 0)))
             {
                 this.find("owner_name_cont").visible = true;
                 _local_4.visible = true;
@@ -285,7 +285,7 @@
             this._Str_2786(this.find("embed_src_txt"), this._Str_23461);
             this._Str_2786(this.find("staff_pick_button"), this._Str_22695);
             this._Str_2786(this.find("room_report_button"), this._Str_24254);
-            this._Str_2272.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._Str_2272._Str_12571(this._Str_2272.data._Str_2678.flatId), null, 0);
+            this._Str_2272.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._Str_2272.hasRoomRightsButIsNotOwner(this._Str_2272.data._Str_2678.flatId), null, 0);
             this._Str_2272.refreshButton(IRegionWindow(this.find("make_home_region")), "make_home", true, null, 0);
             this._Str_2272.refreshButton(IRegionWindow(this.find("favourite_region")), "favourite", true, null, 0);
             this._Str_2272.refreshButton(IRegionWindow(this.find("make_favourite_region")), "make_favourite", true, null, 0);
@@ -419,7 +419,7 @@
         private function _Str_23389(k:WindowEvent):void
         {
             this._Str_2272.trackGoogle("roomInfo", "floorPlanEditor");
-            this._Str_2272.windowManager._Str_18925();
+            this._Str_2272.windowManager.displayFloorPlanEditor();
             this.close();
         }
 
@@ -448,7 +448,7 @@
 
         private function _Str_25186(k:WindowEvent):void
         {
-            this._Str_2272._Str_13089(this._Str_2272.enteredGuestRoomData.flatId);
+            this._Str_2272.removeRoomRights(this._Str_2272.enteredGuestRoomData.flatId);
             this.find("remove_rights_region").visible = false;
         }
 
@@ -478,7 +478,7 @@
             (this._Str_2272.windowManager as Component).context.createLinkEvent("roomThumbnailCamera/open");
             this.close();
             var _local_2:* = ((this._Str_2272.getProperty("navigator.thumbnail.url_base") + this._Str_2272.data._Str_2678.flatId) + ".png");
-            this._Str_2272.windowManager._Str_7720.removeAsset(_local_2);
+            this._Str_2272.windowManager.resourceManager.removeAsset(_local_2);
             this._Str_2272.trackGoogle("roomInfo", "addThumbnail");
         }
 
@@ -525,7 +525,7 @@
             {
                 this._Str_2272.trackGoogle("roomInfo", "extendedProfile");
                 this._Str_2272.trackGoogle("extendedProfile", "navigator_roomInfo");
-                this._Str_2272.send(new _Str_2553(this._Str_2272.data._Str_2678._Str_2481));
+                this._Str_2272.send(new _Str_2553(this._Str_2272.data._Str_2678.ownerId));
             }
         }
     }

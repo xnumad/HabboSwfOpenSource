@@ -13,7 +13,7 @@
         protected var _Str_7287:String = "TOP";
         protected var _Str_18757:Number = 0;
         protected var _Str_12474:String = "left";
-        protected var _Str_1720:*;
+        protected var _width:*;
         protected var _height:*;
         protected var _Str_5165:Number = -1;
         protected var _Str_5160:Number = -1;
@@ -71,7 +71,7 @@
                 }
                 if (k.width != undefined)
                 {
-                    this._Str_1720 = k.width;
+                    this._width = k.width;
                 }
                 if (k.height != undefined)
                 {
@@ -155,12 +155,12 @@
 
         public function set width(k:*):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():*
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:*):void

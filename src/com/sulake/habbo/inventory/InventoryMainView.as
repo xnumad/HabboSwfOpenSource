@@ -53,14 +53,14 @@
             this._windowManager = _arg_2;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
             return (this._mainWindow) ? this._mainWindow.visible : false;
         }
 
         public function get isActive():Boolean
         {
-            return (this._mainWindow) ? this._mainWindow._Str_2767(WindowState.ACTIVE) : false;
+            return (this._mainWindow) ? this._mainWindow.getStateFlag(WindowState.ACTIVE) : false;
         }
 
         public function get _Str_11062():IWindowContainer
@@ -312,7 +312,7 @@
             var _local_3:String;
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
             {
-                _local_3 = ITabContextWindow(_arg_2).selector._Str_2657().name;
+                _local_3 = ITabContextWindow(_arg_2).selector.getSelected().name;
                 if (_local_3 != this._lastViewId)
                 {
                     this._Str_25305(this._lastViewId);
@@ -338,7 +338,7 @@
                     {
                         if (_arg_2.name == "titlebar")
                         {
-                            this._mainWindow.height = this._mainWindow._Str_2648.minHeight;
+                            this._mainWindow.height = this._mainWindow.limits.minHeight;
                         }
                     }
                 }
@@ -492,7 +492,7 @@
             {
                 return;
             }
-            _local_3.selector._Str_2520(_local_3.selector._Str_5050(k));
+            _local_3.selector.setSelected(_local_3.selector.getSelectableByName(k));
             this._Str_24643();
         }
 
@@ -504,12 +504,12 @@
             if (k != null)
             {
                 _local_2 = 0;
-                while (_local_2 < k._Str_11949)
+                while (_local_2 < k.numberOfSlots)
                 {
                     _local_3 = k._Str_18924(_local_2);
                     if (_local_3 != null)
                     {
-                        k._Str_10449(_local_2);
+                        k.releaseSlot(_local_2);
                     }
                     _local_2++;
                 }
@@ -518,14 +518,14 @@
 
         private function enableScaling():void
         {
-            this._mainWindow.height = this._mainWindow._Str_2648.minHeight;
+            this._mainWindow.height = this._mainWindow.limits.minHeight;
             this._mainWindow.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TARGET, true);
             this._mainWindow.findChildByName("top_content").setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH, true);
         }
 
         private function _Str_22922():void
         {
-            this._mainWindow.height = this._mainWindow._Str_2648.minHeight;
+            this._mainWindow.height = this._mainWindow.limits.minHeight;
             this._mainWindow.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TARGET, false);
             this._mainWindow.findChildByName("top_content").setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH, false);
         }
@@ -618,7 +618,7 @@
             var _local_4:IWindowContainer = (this._mainWindow.findChildByName(_local_3) as IWindowContainer);
             if (_local_4)
             {
-                _local_5 = (_local_4._Str_6316("TITLE") as ILabelWindow);
+                _local_5 = (_local_4.getChildByTag("TITLE") as ILabelWindow);
                 if (_local_5)
                 {
                     if (k.visible)

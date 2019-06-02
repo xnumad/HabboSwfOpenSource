@@ -2,16 +2,16 @@
 {
     public class LayerData 
     {
-        public static const _Str_12249:String = "";
-        public static const _Str_7943:int = 0;
-        public static const _Str_8655:int = 0xFF;
-        public static const _Str_9888:Boolean = false;
-        public static const _Str_9326:int = 0;
-        public static const _Str_9412:int = 0;
-        public static const _Str_7951:int = 0;
-        public static const _Str_15822:int = 1;
-        public static const _Str_12715:int = 2;
-        public static const _Str_12864:int = 3;
+        public static const DEFAULT_TAG:String = "";
+        public static const DEFAULT_INK:int = 0;
+        public static const DEFAULT_ALPHA:int = 0xFF;
+        public static const DEFAULT_IGNORE_MOUSE:Boolean = false;
+        public static const DEFAULT_X_OFFSET:int = 0;
+        public static const DEFAULT_Y_OFFSET:int = 0;
+        public static const DEFAULT_Z_OFFSET:int = 0;
+        public static const INK_ADD:int = 1;
+        public static const INK_SUBTRACT:int = 2;
+        public static const INK_DARKEN:int = 3;
 
         private var _tag:String = "";
         private var _ink:int = 0;

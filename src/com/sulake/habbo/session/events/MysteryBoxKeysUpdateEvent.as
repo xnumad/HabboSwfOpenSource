@@ -16,12 +16,12 @@
             this._keyColor = _arg_2;
         }
 
-        public function get _Str_18286():String
+        public function get boxColor():String
         {
             return this._boxColor;
         }
 
-        public function get _Str_17811():String
+        public function get keyColor():String
         {
             return this._keyColor;
         }

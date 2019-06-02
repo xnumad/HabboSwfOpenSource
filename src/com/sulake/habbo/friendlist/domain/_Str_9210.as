@@ -70,7 +70,7 @@
             var _local_2:FriendRequest;
             for each (_local_2 in this._requests)
             {
-                if (_local_2._Str_2951 == k)
+                if (_local_2.requestId == k)
                 {
                     return _local_2;
                 }
@@ -83,7 +83,7 @@
             var _local_2:FriendRequest;
             for each (_local_2 in this._requests)
             {
-                if (_local_2._Str_7048 == k)
+                if (_local_2.requesterUserId == k)
                 {
                     return _local_2;
                 }

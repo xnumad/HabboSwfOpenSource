@@ -10,7 +10,7 @@
         function initializeFromRoomObjectModel(_arg_1:IRoomObjectModel):void;
         function writeRoomObjectModel(_arg_1:IRoomObjectModelController):void;
         function getLegacyString():String;
-        function _Str_15059(_arg_1:String):String;
+        function getJSONValue(_arg_1:String):String;
         function compare(_arg_1:IStuffData):Boolean;
         function set flags(_arg_1:int):void;
         function get uniqueSerialNumber():int;

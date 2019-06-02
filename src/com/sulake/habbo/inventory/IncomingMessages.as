@@ -134,7 +134,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
             this._com.addHabboConnectionMessageEvent(new _Str_5147(this._Str_18002));
-            this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this._Str_12065));
+            this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
             this._com.addHabboConnectionMessageEvent(new _Str_5727(this._Str_16010));
             this._com.addHabboConnectionMessageEvent(new _Str_5714(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9517(this._Str_25747));
@@ -157,14 +157,14 @@
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
             this._com.addHabboConnectionMessageEvent(new _Str_8120(this._Str_23620));
             this._com.addHabboConnectionMessageEvent(new _Str_5946(this._Str_16617));
-            this._com.addHabboConnectionMessageEvent(new _Str_6450(this._Str_21372));
+            this._com.addHabboConnectionMessageEvent(new _Str_6450(this.onAvatarEffects));
             this._com.addHabboConnectionMessageEvent(new _Str_9259(this._Str_24135));
             this._com.addHabboConnectionMessageEvent(new FurniListAddOrUpdateEvent(this._Str_23121));
             this._com.addHabboConnectionMessageEvent(new _Str_6022(this._Str_16181));
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
-            this._com.addHabboConnectionMessageEvent(new _Str_2752(this._Str_3012));
+            this._com.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
             this._com.addHabboConnectionMessageEvent(new _Str_8980(this._Str_25648));
@@ -289,7 +289,7 @@
             _local_3._Str_22816(_local_4, _local_5);
         }
 
-        public function _Str_21372(k:IMessageEvent):void
+        public function onAvatarEffects(k:IMessageEvent):void
         {
             var _local_6:_Str_5511;
             var _local_7:Effect;
@@ -405,7 +405,7 @@
             var _local_2:_Str_4007 = (k as _Str_3492)._Str_2273();
             if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
             {
-                this._inventory._Str_23808(_local_2._Str_17546, _local_2._Str_14465, _local_2._Str_24419, _local_2._Str_3738, (_local_2._Str_9379 == _Str_4007._Str_14729), (_local_2._Str_9379 == _Str_4007._Str_15916), _local_2._Str_4458, _local_2._Str_6312);
+                this._inventory._Str_23808(_local_2._Str_17546, _local_2._Str_14465, _local_2._Str_24419, _local_2.isVIP, (_local_2._Str_9379 == _Str_4007._Str_14729), (_local_2._Str_9379 == _Str_4007._Str_15916), _local_2.minutesUntilExpiration, _local_2._Str_6312);
                 this._inventory.events.dispatchEvent(new HabboInventoryHabboClubEvent());
             }
         }
@@ -431,7 +431,7 @@
             for each (_local_5 in _local_6)
             {
                 _local_8 = (_local_7.indexOf(_local_5) > -1);
-                _local_9 = _local_2._Str_17775(_local_5);
+                _local_9 = _local_2.getBadgeId(_local_5);
                 _local_3.updateBadge(_local_5, _local_8, _local_9);
             }
             _local_3._Str_22395();
@@ -449,7 +449,7 @@
             }
         }
 
-        public function _Str_12065(k:IMessageEvent):void
+        public function onUserBadges(k:IMessageEvent):void
         {
             var _local_4:String;
             var _local_2:UserBadgesEvent = (k as UserBadgesEvent);
@@ -839,7 +839,7 @@
                 return;
             }
             var _local_3:_Str_7906 = k._Str_2273();
-            _local_2._Str_3757(_local_3.itemId);
+            _local_2.removeItem(_local_3.itemId);
         }
 
         private function _Str_23929(k:_Str_8892):void
@@ -967,7 +967,7 @@
             this._inventory._Str_22773(k._Str_2273()._Str_23010, k._Str_2273()._parser9);
         }
 
-        private function _Str_3012(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             if (this._inventory.getBoolean("effects.reactivate.on.room.entry"))
             {

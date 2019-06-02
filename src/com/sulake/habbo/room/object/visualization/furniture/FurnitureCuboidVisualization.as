@@ -3,7 +3,7 @@
     import com.sulake.room.object.visualization.RoomObjectSpriteVisualization;
     import com.sulake.core.assets.AssetLibrary;
     import com.sulake.room.object.visualization.IRoomObjectVisualizationData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.room.utils.Vector3d;
@@ -66,7 +66,7 @@
 
         protected function initializePlanes():void
         {
-            var _local_9:IVector3D;
+            var _local_9:IVector3d;
             var _local_10:FurniturePlane;
             if (this._planesInitialized)
             {
@@ -161,11 +161,11 @@
                     _local_11 = _local_3.getDirection().x;
                     if ((((_local_11 / 45) == 2) || ((_local_11 / 45) == 6)))
                     {
-                        _local_9._Str_19768(true);
+                        _local_9.setRotation(true);
                     }
                     else
                     {
-                        _local_9._Str_19768(false);
+                        _local_9.setRotation(false);
                     }
                     if (_local_9.update(k, _local_4))
                     {

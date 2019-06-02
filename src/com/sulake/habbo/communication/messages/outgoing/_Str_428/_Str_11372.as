@@ -16,8 +16,8 @@
             this._array.push((k.length * 3));
             for each (_local_2 in k)
             {
-                this._array.push(_local_2._Str_18487);
-                this._array.push(_local_2._Str_17245);
+                this._array.push(_local_2.dayIndex);
+                this._array.push(_local_2.stepIndex);
                 this._array.push(_local_2._Str_22800);
             }
         }

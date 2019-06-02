@@ -8,14 +8,14 @@
     public class ShowsPlaylistConfigGroup extends Debuggable implements _Str_6835 
     {
         protected var _Str_577:String = null;
-        protected var _Str_578:int = 5;
+        protected var _type:int = 5;
         protected var _Str_2519:_Str_4575 = null;
 
         public function ShowsPlaylistConfigGroup(k:Object)
         {
             if (k.type != undefined)
             {
-                this._Str_578 = _Str_7812.getType(k.type);
+                this._type = _Str_7812.getType(k.type);
             }
             if (((!(k.url == undefined)) || (!(k.file == undefined))))
             {
@@ -26,9 +26,9 @@
 
         protected function _Str_24471():void
         {
-            if (this._Str_578 != -1)
+            if (this._type != -1)
             {
-                this._Str_2519 = _Str_7812._Str_19936(this._Str_578);
+                this._Str_2519 = _Str_7812._Str_19936(this._type);
                 this._Str_2519._Str_16925(this._Str_577, this);
             }
         }
@@ -49,12 +49,12 @@
 
         public function set type(k:int):void
         {
-            this._Str_578 = k;
+            this._type = k;
         }
 
         public function get type():int
         {
-            return this._Str_578;
+            return this._type;
         }
 
         public function _Str_10087():Array

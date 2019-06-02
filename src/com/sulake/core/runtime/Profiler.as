@@ -47,12 +47,12 @@
 
         public function get numTrackedBitmapDataInstances():uint
         {
-            return TrackedBitmapData._Str_1036;
+            return TrackedBitmapData.numInstances;
         }
 
         public function get numTrackedBitmapDataBytes():uint
         {
-            return TrackedBitmapData._Str_1152;
+            return TrackedBitmapData.allocatedByteCount;
         }
 
         override public function dispose():void
@@ -91,7 +91,7 @@
             this.getProfilerAgentForReceiver(k).update(_arg_2);
         }
 
-        public function get _Str_2024():uint
+        public function get numProfilerAgents():uint
         {
             var _local_2:Object;
             var k:uint;

@@ -29,7 +29,7 @@
             {
                 if (this._Str_5983)
                 {
-                    _Str_1049.dispose();
+                    _bitmapData.dispose();
                 }
                 super.dispose();
             }
@@ -51,9 +51,9 @@
             {
                 if (this._Str_5983)
                 {
-                    _Str_1049.dispose();
+                    _bitmapData.dispose();
                 }
-                _Str_1049 = null;
+                _bitmapData = null;
                 this._Str_5983 = false;
                 _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
             }
@@ -80,22 +80,22 @@
             {
                 return;
             }
-            if (_Str_1049 != _local_4)
+            if (_bitmapData != _local_4)
             {
                 if (this._Str_5983)
                 {
-                    _Str_1049.dispose();
+                    _bitmapData.dispose();
                 }
                 this._Str_5983 = false;
                 _local_5 = _local_3.rectangle;
                 if (((_local_4.width == _local_5.width) && (_local_4.height == _local_5.height)))
                 {
-                    _Str_1049 = _local_4;
+                    _bitmapData = _local_4;
                 }
                 else
                 {
-                    _Str_1049 = new BitmapData(_local_5.width, _local_5.height);
-                    _Str_1049.copyPixels(_local_4, _local_5, new Point(0, 0));
+                    _bitmapData = new BitmapData(_local_5.width, _local_5.height);
+                    _bitmapData.copyPixels(_local_4, _local_5, new Point(0, 0));
                     this._Str_5983 = true;
                 }
                 _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
@@ -108,11 +108,11 @@
             var k:StaticBitmapController = (super.clone() as StaticBitmapController);
             if (this._Str_5983)
             {
-                k._Str_1049 = _Str_1049.clone();
+                k._bitmapData = _bitmapData.clone();
             }
             else
             {
-                k._Str_1049 = _Str_1049;
+                k._bitmapData = _bitmapData;
             }
             k._Str_6902 = this._Str_6902;
             k._Str_5983 = this._Str_5983;
@@ -122,7 +122,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.unshift(_Str_2340(PropertyKeys.ASSET_URI, this._Str_6902));
+            k.unshift(createProperty(PropertyKeys.ASSET_URI, this._Str_6902));
             return k;
         }
 

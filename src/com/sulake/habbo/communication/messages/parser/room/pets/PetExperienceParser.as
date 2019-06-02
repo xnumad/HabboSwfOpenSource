@@ -15,7 +15,7 @@
             return this._petId;
         }
 
-        public function get _Str_24821():int
+        public function get petRoomIndex():int
         {
             return this._petRoomIndex;
         }

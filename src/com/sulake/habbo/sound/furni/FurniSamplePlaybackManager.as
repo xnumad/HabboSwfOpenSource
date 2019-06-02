@@ -161,7 +161,7 @@
             var _local_4:URLRequest = new URLRequest(_local_3);
             var _local_5:Sound = new Sound();
             _local_5.addEventListener(Event.COMPLETE, this._Str_18059);
-            _local_5.addEventListener(IOErrorEvent.IO_ERROR, this._Str_9598);
+            _local_5.addEventListener(IOErrorEvent.IO_ERROR, this.ioErrorHandler);
             _local_5.load(_local_4);
             this._loadingSamples.add(_local_5, _arg_2);
         }
@@ -185,7 +185,7 @@
             this._loadingSamples.remove(_local_2);
         }
 
-        private function _Str_9598(k:IOErrorEvent):void
+        private function ioErrorHandler(k:IOErrorEvent):void
         {
             Logger.log(((("Error loading sound " + k.target) + " text ") + k.text));
         }

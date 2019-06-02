@@ -518,7 +518,7 @@
             if (this._Str_19444)
             {
                 _local_2 = k._Str_2273().req;
-                this._friendRequests.push(new FriendRequest(_local_2._Str_2951, _local_2._Str_6445, _local_2._Str_4217));
+                this._friendRequests.push(new FriendRequest(_local_2.requestId, _local_2.requesterName, _local_2.figureString));
                 events.dispatchEvent(new FriendRequestUpdateEvent());
             }
         }
@@ -532,7 +532,7 @@
                 _local_2 = k._Str_2273()._Str_17539;
                 for each (_local_3 in _local_2)
                 {
-                    this._friendRequests.push(new FriendRequest(_local_3._Str_2951, _local_3._Str_6445, _local_3._Str_4217));
+                    this._friendRequests.push(new FriendRequest(_local_3.requestId, _local_3.requesterName, _local_3.figureString));
                 }
                 events.dispatchEvent(new FriendRequestUpdateEvent());
             }
@@ -540,7 +540,7 @@
 
         private function _Str_14893(k:_Str_2948):void
         {
-            this._Str_15774(k._Str_2951);
+            this._Str_15774(k.requestId);
         }
 
         private function _Str_18650(k:_Str_4851):void
@@ -584,10 +584,10 @@
         private function _Str_25411(k:GameInviteMessageEvent):void
         {
             var _local_2:GameInviteMessageParser = k._Str_2273();
-            var _local_3:String = GameConfigurations._Str_3077(_local_2.gameTypeId);
+            var _local_3:String = GameConfigurations.getNameId(_local_2.gameTypeId);
             if (_local_3)
             {
-                this._Str_14341(String(_local_2._Str_25451), FriendNotification._Str_6669, _local_3, false, true);
+                this._Str_14341(String(_local_2.inviterId), FriendNotification._Str_6669, _local_3, false, true);
             }
         }
 

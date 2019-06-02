@@ -24,12 +24,12 @@
             }
         }
 
-        public function get _Str_18487():int
+        public function get dayIndex():int
         {
             return this._dayIndex;
         }
 
-        public function get _Str_17245():int
+        public function get stepIndex():int
         {
             return this._stepIndex;
         }

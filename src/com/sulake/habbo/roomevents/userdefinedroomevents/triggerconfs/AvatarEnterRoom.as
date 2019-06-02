@@ -35,13 +35,13 @@
         {
             if (_arg_2.stringData != "")
             {
-                this._Str_4281()._Str_2520(this._Str_14247());
+                this._Str_4281().setSelected(this._Str_14247());
                 this._Str_2453().text = _arg_2.stringData;
                 this._Str_2453().visible = true;
             }
             else
             {
-                this._Str_4281()._Str_2520(this._Str_16153());
+                this._Str_4281().setSelected(this._Str_16153());
                 this._Str_2453().text = "";
                 this._Str_2453().visible = false;
             }

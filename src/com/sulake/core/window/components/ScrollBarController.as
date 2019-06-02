@@ -123,11 +123,11 @@
             }
             if (_local_2 == null)
             {
-                k.push(_Str_3692(PropertyKeys.SCROLLABLE));
+                k.push(getDefaultProperty(PropertyKeys.SCROLLABLE));
             }
             else
             {
-                k.push(_Str_2340(PropertyKeys.SCROLLABLE, _local_2));
+                k.push(createProperty(PropertyKeys.SCROLLABLE, _local_2));
             }
             return k;
         }
@@ -325,7 +325,7 @@
             {
                 if (this._horizontal)
                 {
-                    k = (this._Str_2566._Str_3707.width / this._Str_2566._Str_2614.width);
+                    k = (this._Str_2566._Str_3707.width / this._Str_2566.visibleRegion.width);
                     if (k > 1)
                     {
                         k = 1;
@@ -336,7 +336,7 @@
                 }
                 else
                 {
-                    k = (this._Str_2566._Str_3707.height / this._Str_2566._Str_2614.height);
+                    k = (this._Str_2566._Str_3707.height / this._Str_2566.visibleRegion.height);
                     if (k > 1)
                     {
                         k = 1;
@@ -500,7 +500,7 @@
             }
             if (this._Str_9086 != null)
             {
-                k = (_Str_9450(this._Str_9086) as IScrollableWindow);
+                k = (findParentByName(this._Str_9086) as IScrollableWindow);
                 if ((((k == null) && (_parent is IWindowContainer)) && (!(_parent is IDesktopWindow))))
                 {
                     k = (IWindowContainer(_parent).findChildByName(this._Str_9086) as IScrollableWindow);

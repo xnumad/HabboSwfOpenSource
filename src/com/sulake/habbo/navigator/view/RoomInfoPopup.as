@@ -159,7 +159,7 @@
             this._window.findChildByName("room_name").caption = this._guestRoomData.roomName;
             this._window.findChildByName("room_desc").caption = this._guestRoomData.description;
             this._window.findChildByName("owner_name").caption = this._guestRoomData.ownerName;
-            this._window.findChildByName("room_owner_region").id = this._guestRoomData._Str_2481;
+            this._window.findChildByName("room_owner_region").id = this._guestRoomData.ownerId;
             this._window.findChildByName("room_owner_region").procedure = this._Str_24359;
             this._window.findChildByName("favorite_region").procedure = this._Str_24499;
             this._window.findChildByName("home_region").procedure = this._Str_24346;
@@ -167,7 +167,7 @@
             this._window.findChildByName("settings_container").visible = (this._guestRoomData.ownerName == this._navigator._Str_2627.userName);
             if (((this._navigator.context.configuration.getBoolean("room.report.enabled")) && (!(this._guestRoomData.ownerName == this._navigator._Str_2627.userName))))
             {
-                this._window.findChildByName("report_region").id = this._guestRoomData._Str_2481;
+                this._window.findChildByName("report_region").id = this._guestRoomData.ownerId;
                 this._window.findChildByName("report_region").procedure = this._Str_24003;
                 this._window.findChildByName("report_region").visible = true;
                 this._window.findChildByName("report_container").visible = true;
@@ -189,10 +189,10 @@
             {
                 _Str_2402(IWidgetWindow(this._window.findChildByName("room_group_badge")).widget).badgeId = this._guestRoomData._Str_7146;
                 this._window.findChildByName("group_name").caption = this._guestRoomData.groupName;
-                this._window.findChildByName("group_name").id = this._guestRoomData._Str_3094;
-                this._window.findChildByName("room_group_region").id = this._guestRoomData._Str_3094;
+                this._window.findChildByName("group_name").id = this._guestRoomData.habboGroupId;
+                this._window.findChildByName("room_group_region").id = this._guestRoomData.habboGroupId;
                 this._window.findChildByName("room_group_region").procedure = this._Str_25360;
-                _local_8 = this._navigator._Str_20693(this._guestRoomData._Str_3094);
+                _local_8 = this._navigator._Str_20693(this._guestRoomData.habboGroupId);
                 if (_local_8)
                 {
                     if (_local_8._Str_3233)
@@ -201,7 +201,7 @@
                     }
                     else
                     {
-                        if (_local_8._Str_15310)
+                        if (_local_8.isAdmin)
                         {
                             IStaticBitmapWrapperWindow(this._window.findChildByName("group_mode_admin")).assetUri = "newnavigator_icon_group_admin";
                         }
@@ -233,7 +233,7 @@
             _local_2.arrangeListItems();
             this._displayedTags = new Vector.<String>(0);
             var _local_6:IItemListWindow = IItemListWindow(this._window.findChildByName("tag_list"));
-            _local_6._Str_2724();
+            _local_6.destroyListItems();
             var _local_7:int;
             while (_local_7 < this._guestRoomData.tags.length)
             {
@@ -273,7 +273,7 @@
 
         private function _Str_25406():void
         {
-            IItemListWindow(this._window.findChildByName("properties"))._Str_2724();
+            IItemListWindow(this._window.findChildByName("properties")).destroyListItems();
         }
 
         private function _Str_16458(k:String, _arg_2:String, _arg_3:String):void
@@ -342,7 +342,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = LegacyNavigator(this._navigator._Str_2559)._Str_3188;
-                _local_3._Str_21207(this._guestRoomData.flatId, this._guestRoomData._Str_3094);
+                _local_3._Str_21207(this._guestRoomData.flatId, this._guestRoomData.habboGroupId);
                 this.destroy();
             }
         }

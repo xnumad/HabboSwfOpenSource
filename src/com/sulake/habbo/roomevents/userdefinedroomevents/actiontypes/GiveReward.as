@@ -59,7 +59,7 @@
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
             var _local_2:Array = new Array();
-            _local_2.push(this._Str_20392(k)._Str_2657().id);
+            _local_2.push(this._Str_20392(k).getSelected().id);
             _local_2.push(((this._Str_8311(k)._Str_2365) ? 1 : 0));
             _local_2.push(((this._Str_11667(k)._Str_2365) ? this._prizeLimitSlider.getValue() : 0));
             var _local_3:int = int(this._Str_18135(k).caption);
@@ -161,7 +161,7 @@
             }
             else
             {
-                this._Str_18678(_arg_2)._Str_2205();
+                this._Str_18678(_arg_2).unselect();
             }
         }
 
@@ -206,7 +206,7 @@
         {
             var _local_9:IWindowContainer;
             var _local_3:int = _arg_2.intData[0];
-            this._Str_20392(k)._Str_2520(this._Str_23398(k, _local_3));
+            this._Str_20392(k).setSelected(this._Str_23398(k, _local_3));
             if (((_local_3 > 0) && (_arg_2.intData.length == 4)))
             {
                 this._Str_18135(k).caption = String(_arg_2.intData[3]);
@@ -222,7 +222,7 @@
             }
             else
             {
-                this._Str_8311(k)._Str_2205();
+                this._Str_8311(k).unselect();
             }
             var _local_5:int = _arg_2.intData[2];
             if (_local_5 > 0)
@@ -232,7 +232,7 @@
             }
             else
             {
-                this._Str_11667(k)._Str_2205();
+                this._Str_11667(k).unselect();
             }
             this._Str_19833(k);
             var _local_6:Array = _arg_2.stringData.split(";");

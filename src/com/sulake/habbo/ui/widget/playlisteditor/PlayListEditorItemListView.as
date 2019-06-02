@@ -34,7 +34,7 @@
             {
                 return;
             }
-            this._itemListWindow._Str_2724();
+            this._itemListWindow.destroyListItems();
         }
 
         public function refresh(k:Array, _arg_2:int):void
@@ -54,7 +54,7 @@
             }
             this._previousItemPlaying = -1;
             this._items = new Array();
-            this._itemListWindow._Str_2724();
+            this._itemListWindow.destroyListItems();
             for each (_local_3 in k)
             {
                 _local_4 = _local_3.name;
@@ -134,7 +134,7 @@
                     {
                         this._selectedItem.deselect();
                     }
-                    _local_4 = this._itemListWindow._Str_3156(k.window);
+                    _local_4 = this._itemListWindow.getListItemIndex(k.window);
                     if (_local_4 != -1)
                     {
                         this._selectedItemIndex = _local_4;

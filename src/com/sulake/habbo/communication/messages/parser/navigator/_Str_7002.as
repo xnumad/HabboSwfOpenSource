@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_3374():int
+        public function get homeRoomId():int
         {
             return this._Str_7066;
         }

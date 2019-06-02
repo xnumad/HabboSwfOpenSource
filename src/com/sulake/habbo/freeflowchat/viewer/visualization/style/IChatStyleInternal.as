@@ -9,8 +9,8 @@
 
     public interface IChatStyleInternal 
     {
-        function _Str_9574(_arg_1:uint=0xFFFFFF):Sprite;
-        function get _Str_5640():TextFormat;
+        function getNewBackgroundSprite(_arg_1:uint=0xFFFFFF):Sprite;
+        function get textFormat():TextFormat;
         function get styleSheet():StyleSheet;
         function get pointer():BitmapData;
         function get _Str_8470():int;

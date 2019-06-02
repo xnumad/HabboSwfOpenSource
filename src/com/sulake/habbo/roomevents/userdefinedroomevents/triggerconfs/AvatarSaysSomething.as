@@ -36,11 +36,11 @@
             this._Str_2453(k).text = _arg_2.stringData;
             if (((_arg_2.intData.length > 0) && (_arg_2.intData[0] == 1)))
             {
-                this._Str_4281(k)._Str_2520(this._Str_20767(k));
+                this._Str_4281(k).setSelected(this._Str_20767(k));
             }
             else
             {
-                this._Str_4281(k)._Str_2520(this._Str_16153(k));
+                this._Str_4281(k).setSelected(this._Str_16153(k));
             }
         }
 

@@ -138,7 +138,7 @@
                 if (_local_3.indexOf(_local_2) == -1)
                 {
                     this._items.remove(_local_2);
-                    this._view._Str_3757(_local_2);
+                    this._view.removeItem(_local_2);
                 }
             }
             for each (_local_2 in _local_3)
@@ -151,10 +151,10 @@
             }
         }
 
-        public function _Str_3757(k:int):void
+        public function removeItem(k:int):void
         {
             this._items.remove(k);
-            this._view._Str_3757(k);
+            this._view.removeItem(k);
             this._view._Str_3820();
         }
 
@@ -165,7 +165,7 @@
 
         public function _Str_5913(k:String):void
         {
-            if (((k == InventoryCategory.BOTS) && (this._controller._Str_2719)))
+            if (((k == InventoryCategory.BOTS) && (this._controller.isVisible)))
             {
                 this._controller.events.dispatchEvent(new Event(HabboInventoryTrackingEvent.HABBO_INVENTORY_TRACKING_EVENT_BOTS));
             }
@@ -178,7 +178,7 @@
 
         public function _Str_5100():void
         {
-            if (this._view._Str_2719)
+            if (this._view.isVisible)
             {
                 this._Str_4409();
             }
@@ -200,10 +200,10 @@
             {
                 return false;
             }
-            if (this._controller.roomSession._Str_2781)
+            if (this._controller.roomSession.isRoomController)
             {
                 _local_4 = (_local_3.id * -1);
-                this._isPlacing = this._roomEngine._Str_5346(RoomObjectPlacementSource.INVENTORY, _local_4, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.RENTABLE_BOT, _local_3.figure);
+                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_4, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.RENTABLE_BOT, _local_3.figure);
                 this._controller._Str_13252();
                 return this._isPlacing;
             }

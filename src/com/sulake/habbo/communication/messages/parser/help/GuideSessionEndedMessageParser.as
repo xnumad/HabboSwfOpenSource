@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function get _Str_22176():int
+        public function get endReason():int
         {
             return this._endReason;
         }

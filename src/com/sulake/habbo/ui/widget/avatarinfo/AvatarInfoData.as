@@ -24,7 +24,7 @@
         private var _isAmbassador:Boolean = false;
 
 
-        public function get _Str_3655():Boolean
+        public function get isIgnored():Boolean
         {
             return this._isIgnored;
         }
@@ -99,7 +99,7 @@
             return this._targetRoomControllerLevel;
         }
 
-        public function set _Str_3655(k:Boolean):void
+        public function set isIgnored(k:Boolean):void
         {
             this._isIgnored = k;
         }
@@ -205,7 +205,7 @@
             this._canBeMuted = k._Str_6394;
             this._canTrade = k._Str_5751;
             this._canTradeReason = k._Str_6622;
-            this._isIgnored = k._Str_3655;
+            this._isIgnored = k.isIgnored;
             this._respectLeft = k._Str_3577;
             this._isOwnUser = (k.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
             this._allowNameChange = k._Str_4330;

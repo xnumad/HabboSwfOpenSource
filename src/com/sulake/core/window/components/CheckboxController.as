@@ -35,7 +35,7 @@
                     case WindowMouseEvent.UP:
                         if (_Str_2365)
                         {
-                            _Str_2205();
+                            unselect();
                         }
                         else
                         {

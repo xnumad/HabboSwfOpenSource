@@ -146,12 +146,12 @@
                         return;
                     }
                     this._objectId = k._Str_1577;
-                    this._classId = k._Str_2706;
+                    this._classId = k.classId;
                     this._itemType = k._Str_2887;
                     this._text = k.text;
                     this._controller = k.controller;
-                    this._placedItemId = k._Str_5200;
-                    this._placedItemType = k._Str_5057;
+                    this._placedItemId = k.placedItemId;
+                    this._placedItemType = k.placedItemType;
                     this._placedInRoom = k._Str_4057;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_floor");
@@ -162,12 +162,12 @@
                         return;
                     }
                     this._objectId = k._Str_1577;
-                    this._classId = k._Str_2706;
+                    this._classId = k.classId;
                     this._itemType = k._Str_2887;
                     this._text = k.text;
                     this._controller = k.controller;
-                    this._placedItemId = k._Str_5200;
-                    this._placedItemType = k._Str_5057;
+                    this._placedItemId = k.placedItemId;
+                    this._placedItemType = k.placedItemType;
                     this._placedInRoom = k._Str_4057;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_landscape");
@@ -178,12 +178,12 @@
                         return;
                     }
                     this._objectId = k._Str_1577;
-                    this._classId = k._Str_2706;
+                    this._classId = k.classId;
                     this._itemType = k._Str_2887;
                     this._text = k.text;
                     this._controller = k.controller;
-                    this._placedItemId = k._Str_5200;
-                    this._placedItemType = k._Str_5057;
+                    this._placedItemId = k.placedItemId;
+                    this._placedItemType = k.placedItemType;
                     this._placedInRoom = k._Str_4057;
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_wallpaper");
@@ -194,7 +194,7 @@
                         return;
                     }
                     this._objectId = k._Str_1577;
-                    this._classId = k._Str_2706;
+                    this._classId = k.classId;
                     this._itemType = k._Str_2887;
                     this._text = k.text;
                     this._controller = k.controller;
@@ -207,12 +207,12 @@
                         return;
                     }
                     this._objectId = k._Str_1577;
-                    this._classId = k._Str_2706;
+                    this._classId = k.classId;
                     this._itemType = k._Str_2887;
                     this._text = k.text;
                     this._controller = k.controller;
-                    this._placedItemId = k._Str_5200;
-                    this._placedItemType = k._Str_5057;
+                    this._placedItemId = k.placedItemId;
+                    this._placedItemType = k.placedItemType;
                     this._placedInRoom = k._Str_4057;
                     this._Str_10146();
                     this._Str_9278(k._Str_11625);
@@ -387,7 +387,7 @@
             var k:Boolean;
             if (this._itemType == ProductTypeEnum.WALL)
             {
-                _local_2 = (_Str_2470 as FurniturePresentWidgetHandler).container.sessionDataManager._Str_4531(this._classId);
+                _local_2 = (_Str_2470 as FurniturePresentWidgetHandler).container.sessionDataManager.getWallItemData(this._classId);
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.className;
@@ -558,7 +558,7 @@
                     _local_5 = this._roomEngine.getRoomObject(_local_3, this._placedItemId, _local_4);
                     if (_local_5 != null)
                     {
-                        this._roomEngine._Str_3571(_local_5.getId(), _local_4, RoomObjectOperationEnum.OBJECT_PICKUP);
+                        this._roomEngine.updateObjectWallItemData(_local_5.getId(), _local_4, RoomObjectOperationEnum.OBJECT_PICKUP);
                     }
                 }
             }

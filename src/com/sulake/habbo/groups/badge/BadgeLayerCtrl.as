@@ -76,7 +76,7 @@
             }
             else
             {
-                k._Str_3015(this._layerWindow, 0);
+                k.addListItemAt(this._layerWindow, 0);
             }
         }
 

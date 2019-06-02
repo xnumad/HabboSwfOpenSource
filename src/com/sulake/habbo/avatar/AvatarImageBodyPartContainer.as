@@ -17,10 +17,10 @@
             this._image = k;
             this._regPoint = _arg_2;
             this._isCacheable = _arg_3;
-            this._Str_1225();
+            this.cleanPoints();
         }
 
-        public function get _Str_1807():Boolean
+        public function get isCacheable():Boolean
         {
             return this._isCacheable;
         }
@@ -53,7 +53,7 @@
         public function _Str_1387(k:Point):void
         {
             this._regPoint = k;
-            this._Str_1225();
+            this.cleanPoints();
         }
 
         public function get _Str_1076():Point
@@ -64,10 +64,10 @@
         public function set offset(k:Point):void
         {
             this._offset = k;
-            this._Str_1225();
+            this.cleanPoints();
         }
 
-        private function _Str_1225():void
+        private function cleanPoints():void
         {
             this._regPoint.x = int(this._regPoint.x);
             this._regPoint.y = int(this._regPoint.y);

@@ -71,7 +71,7 @@
             return this._questEngine == null;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (this._window) && (this._window.visible);
         }
@@ -89,7 +89,7 @@
             this.close();
         }
 
-        public function _Str_3259():void
+        public function onToolbarClick():void
         {
             if (!this._window)
             {
@@ -120,7 +120,7 @@
                     this._quests.push(_local_3);
                 }
             }
-            if (((!(this._Str_2719())) && (!(_arg_2))))
+            if (((!(this.isVisible())) && (!(_arg_2))))
             {
                 return;
             }
@@ -256,9 +256,9 @@
             k.findChildByName("campaign_header_txt").caption = this._questEngine._Str_15926(_arg_2);
             k.findChildByName("completion_txt").caption = ((_arg_2._Str_18579 + "/") + _arg_2._Str_25129);
             this._questEngine._Str_19396(k, _arg_2, true);
-            this._Str_1685(k, "bg", _arg_2.accepted, 4290944315, 4284769380);
-            this._Str_1685(k, "bg_top", _arg_2.accepted, 0xFFFFD788, 4290427578);
-            this._Str_1685(k, "bg_bottom", _arg_2.accepted, 0xFFFFC758, 4289440683);
+            this.setColor(k, "bg", _arg_2.accepted, 4290944315, 4284769380);
+            this.setColor(k, "bg_top", _arg_2.accepted, 0xFFFFD788, 4290427578);
+            this.setColor(k, "bg_bottom", _arg_2.accepted, 0xFFFFC758, 4289440683);
             k.findChildByName("completion_bg_red_bitmap").visible = ((!(_arg_2._Str_6695)) && (_arg_2._Str_18579 < 1));
             k.findChildByName("completion_bg_blue_bitmap").visible = ((!(_arg_2._Str_6695)) && (_arg_2._Str_18579 > 0));
             k.findChildByName("completion_bg_green_bitmap").visible = _arg_2._Str_6695;
@@ -281,8 +281,8 @@
             k.findChildByName("cancel_region").visible = _arg_2.accepted;
             k.findChildByName("accept_button").visible = (!(_arg_2.accepted));
             k.findChildByName("accept_button").id = _arg_2.id;
-            this._Str_1685(k, null, _arg_2.accepted, 15982264, 0xC8C8C8);
-            this._Str_1685(k, "quest_header", _arg_2.accepted, 15577658, 0x8D8D8D);
+            this.setColor(k, null, _arg_2.accepted, 15982264, 0xC8C8C8);
+            this.setColor(k, "quest_header", _arg_2.accepted, 15577658, 0x8D8D8D);
             ITextWindow(k.findChildByName("quest_header_txt")).textColor = ((_arg_2.accepted) ? 0xFFFFFFFF : 4281808695);
             this._questEngine._Str_19955(k, _arg_2);
             this._questEngine._Str_19816((_arg_2._Str_3935 < 1), k, _arg_2.activityPointType, _arg_2._Str_12939);
@@ -349,7 +349,7 @@
             this._questEngine.send(new _Str_7454());
         }
 
-        private function _Str_1685(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:uint, _arg_5:uint):void
+        private function setColor(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:uint, _arg_5:uint):void
         {
             ((_arg_2 == null) ? k : k.findChildByName(_arg_2)).color = ((_arg_3) ? _arg_4 : _arg_5);
         }

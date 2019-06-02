@@ -210,7 +210,7 @@
             return _local_11;
         }
 
-        public static function rgb2xyz(k:int):IVector3D
+        public static function rgb2xyz(k:int):IVector3d
         {
             var _local_2:Number = (((k >> 16) & 0xFF) / 0xFF);
             var _local_3:Number = (((k >> 8) & 0xFF) / 0xFF);
@@ -245,7 +245,7 @@
             return new Vector3d((((_local_2 * 0.4124) + (_local_3 * 0.3576)) + (_local_4 * 0.1805)), (((_local_2 * 0.2126) + (_local_3 * 0.7152)) + (_local_4 * 0.0722)), (((_local_2 * 0.0193) + (_local_3 * 0.1192)) + (_local_4 * 0.9505)));
         }
 
-        public static function xyz2CieLab(k:IVector3D):IVector3D
+        public static function xyz2CieLab(k:IVector3d):IVector3d
         {
             var _local_2:Number = (k.x / 95.047);
             var _local_3:Number = (k.y / 100);
@@ -277,7 +277,7 @@
             return new Vector3d(((116 * _local_3) - 16), (500 * (_local_2 - _local_3)), (200 * (_local_3 - _local_4)));
         }
 
-        public static function rgb2CieLab(k:int):IVector3D
+        public static function rgb2CieLab(k:int):IVector3d
         {
             return ColorConverter.xyz2CieLab(ColorConverter.rgb2xyz(k));
         }

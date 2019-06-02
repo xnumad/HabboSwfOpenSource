@@ -92,7 +92,7 @@
             return this._catalog.localization;
         }
 
-        public function _Str_7410(k:IMarketPlaceVisualization=null):void
+        public function registerVisualization(k:IMarketPlaceVisualization=null):void
         {
             if (k == null)
             {
@@ -119,7 +119,7 @@
             this._confirmationDialog.showConfirmation(k, _arg_2);
         }
 
-        public function _Str_24036(k:String):void
+        public function requestOffersByName(k:String):void
         {
             if (this._catalog)
             {
@@ -127,7 +127,7 @@
             }
         }
 
-        public function _Str_23282(k:int):void
+        public function requestOffersByPrice(k:int):void
         {
             if (this._catalog)
             {
@@ -135,7 +135,7 @@
             }
         }
 
-        public function _Str_8093(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
+        public function requestOffers(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
         {
             this._minPrice = k;
             this._maxPrice = _arg_2;
@@ -147,12 +147,12 @@
             }
         }
 
-        public function _Str_18887():void
+        public function refreshOffers():void
         {
-            this._Str_8093(this._minPrice, this._maxPrice, this._searchString, this._sortOrder);
+            this.requestOffers(this._minPrice, this._maxPrice, this._searchString, this._sortOrder);
         }
 
-        public function _Str_21939():void
+        public function requestOwnItems():void
         {
             if (this._catalog)
             {
@@ -160,7 +160,7 @@
             }
         }
 
-        public function _Str_20810(k:int, _arg_2:int):void
+        public function requestItemStats(k:int, _arg_2:int):void
         {
             if (this._catalog)
             {
@@ -170,7 +170,7 @@
             }
         }
 
-        public function _Str_18095(k:int):void
+        public function buyOffer(k:int):void
         {
             if ((((!(this._latestOffers)) || (!(this._catalog))) || (!(this._catalog.getPurse()))))
             {
@@ -189,7 +189,7 @@
             this.showConfirmation(this._Str_19658, _local_2);
         }
 
-        public function _Str_19634(k:int):void
+        public function redeemExpiredOffer(k:int):void
         {
             if (this._catalog)
             {
@@ -197,7 +197,7 @@
             }
         }
 
-        public function _Str_21640():void
+        public function redeemSoldOffers():void
         {
             var _local_2:int;
             var _local_3:MarketPlaceOfferData;
@@ -225,7 +225,7 @@
             }
             if (this._visualization != null)
             {
-                this._visualization._Str_6746();
+                this._visualization.listUpdatedNotify();
             }
         }
 
@@ -245,7 +245,7 @@
             }
         }
 
-        public function _Str_14328(k:IMessageEvent):void
+        public function onOffers(k:IMessageEvent):void
         {
             var _local_4:_Str_4192;
             var _local_5:MarketPlaceOfferData;
@@ -263,18 +263,18 @@
             this._latestOffers = new Map();
             for each (_local_4 in _local_3.offers)
             {
-                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925, _local_4._Str_4121);
+                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925, _local_4._Str_4121);
                 _local_5._Str_5853 = _local_4._Str_5853;
                 this._latestOffers.add(_local_4.offerId, _local_5);
             }
-            this._totalItemsFound = _local_3._Str_13564;
+            this._totalItemsFound = _local_3.totalItemsFound;
             if (this._visualization != null)
             {
-                this._visualization._Str_6746();
+                this._visualization.listUpdatedNotify();
             }
         }
 
-        public function _Str_20942(k:IMessageEvent):void
+        public function onOwnOffers(k:IMessageEvent):void
         {
             var _local_4:_Str_4192;
             var _local_5:MarketPlaceOfferData;
@@ -290,20 +290,20 @@
             }
             this._Str_13241(this._latestOwnOffers);
             this._latestOwnOffers = new Map();
-            this._creditsWaiting = _local_3._Str_15236;
+            this._creditsWaiting = _local_3.creditsWaiting;
             for each (_local_4 in _local_3.offers)
             {
-                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4._Str_4120, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925);
+                _local_5 = new MarketPlaceOfferData(_local_4.offerId, _local_4.furniId, _local_4.furniType, _local_4.extraData, _local_4.stuffData, _local_4.price, _local_4.status, _local_4._Str_3925);
                 _local_5._Str_5853 = _local_4._Str_5853;
                 this._latestOwnOffers.add(_local_4.offerId, _local_5);
             }
             if (this._visualization != null)
             {
-                this._visualization._Str_6746();
+                this._visualization.listUpdatedNotify();
             }
         }
 
-        public function _Str_20544(event:IMessageEvent):void
+        public function onBuyResult(event:IMessageEvent):void
         {
             var item:MarketPlaceOfferData;
             var updateItem:MarketPlaceOfferData;
@@ -319,7 +319,7 @@
             }
             if (parser.result == 1)
             {
-                this._Str_18887();
+                this.refreshOffers();
             }
             else
             {
@@ -332,7 +332,7 @@
                     }
                     if (this._visualization != null)
                     {
-                        this._visualization._Str_6746();
+                        this._visualization.listUpdatedNotify();
                     }
                     if (this._windowManager != null)
                     {
@@ -358,7 +358,7 @@
                         this.showConfirmation(this._Str_22006, updateItem);
                         if (this._visualization != null)
                         {
-                            this._visualization._Str_6746();
+                            this._visualization.listUpdatedNotify();
                         }
                     }
                     else
@@ -378,7 +378,7 @@
             }
         }
 
-        public function _Str_21141(event:IMessageEvent):void
+        public function onCancelResult(event:IMessageEvent):void
         {
             var item:MarketPlaceOfferData;
             var cancelEvent:_Str_6345 = (event as _Str_6345);
@@ -400,7 +400,7 @@
                 }
                 if (this._visualization != null)
                 {
-                    this._visualization._Str_6746();
+                    this._visualization.listUpdatedNotify();
                 }
             }
             else
@@ -415,17 +415,17 @@
             }
         }
 
-        public function _Str_15909():Map
+        public function latestOffers():Map
         {
             return this._latestOffers;
         }
 
-        public function _Str_18294():Map
+        public function latestOwnOffers():Map
         {
             return this._latestOwnOffers;
         }
 
-        public function _Str_13564():int
+        public function totalItemsFound():int
         {
             return this._totalItemsFound;
         }
@@ -439,7 +439,7 @@
             this._itemStats = k;
             if (this._visualization != null)
             {
-                this._visualization._Str_13752();
+                this._visualization.updateStats();
             }
         }
 
@@ -448,7 +448,7 @@
             return this._itemStats;
         }
 
-        public function get _Str_15236():int
+        public function get creditsWaiting():int
         {
             return this._creditsWaiting;
         }
@@ -468,7 +468,7 @@
             var _local_3:IFurnitureData;
             var _local_4:String;
             var _local_2:Boolean;
-            if (((k._Str_4120 == 2) && (!(k.extraData == null))))
+            if (((k.furniType == 2) && (!(k.extraData == null))))
             {
                 _local_3 = this._catalog.getFurnitureData(k.furniId, ProductTypeEnum.WALL);
                 if (_local_3)
@@ -483,7 +483,7 @@
             return _local_2;
         }
 
-        public function _Str_10102(k:IMarketPlaceOfferData):String
+        public function getNameLocalizationKey(k:IMarketPlaceOfferData):String
         {
             var _local_2:String = "";
             if (k != null)
@@ -494,13 +494,13 @@
                 }
                 else
                 {
-                    if (k._Str_4120 == MarketPlaceOfferData._Str_3258)
+                    if (k.furniType == MarketPlaceOfferData.TYPE_LANDSCAPE)
                     {
                         _local_2 = ("roomItem.name." + k.furniId);
                     }
                     else
                     {
-                        if (k._Str_4120 == MarketPlaceOfferData._Str_3587)
+                        if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
                         {
                             _local_2 = ("wallItem.name." + k.furniId);
                         }
@@ -510,7 +510,7 @@
             return _local_2;
         }
 
-        public function _Str_12650(k:IMarketPlaceOfferData):String
+        public function getDescriptionLocalizationKey(k:IMarketPlaceOfferData):String
         {
             var _local_2:String = "";
             if (k != null)
@@ -521,13 +521,13 @@
                 }
                 else
                 {
-                    if (k._Str_4120 == MarketPlaceOfferData._Str_3258)
+                    if (k.furniType == MarketPlaceOfferData.TYPE_LANDSCAPE)
                     {
                         _local_2 = ("roomItem.desc." + k.furniId);
                     }
                     else
                     {
-                        if (k._Str_4120 == MarketPlaceOfferData._Str_3587)
+                        if (k.furniType == MarketPlaceOfferData.TYPE_FLOOR)
                         {
                             _local_2 = ("wallItem.desc." + k.furniId);
                         }
@@ -537,11 +537,11 @@
             return _local_2;
         }
 
-        public function _Str_4701():Boolean
+        public function isAccountSafetyLocked():Boolean
         {
             if (this._catalog)
             {
-                return this._catalog.sessionDataManager._Str_4701();
+                return this._catalog.sessionDataManager.isAccountSafetyLocked();
             }
             return false;
         }

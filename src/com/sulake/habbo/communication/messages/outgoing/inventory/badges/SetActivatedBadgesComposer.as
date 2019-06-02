@@ -13,7 +13,7 @@
             this._badgeArr = new Array();
         }
 
-        public function _Str_24768(k:String):void
+        public function addActivatedBadge(k:String):void
         {
             if (this._badgeArr.length >= this._Str_20506)
             {

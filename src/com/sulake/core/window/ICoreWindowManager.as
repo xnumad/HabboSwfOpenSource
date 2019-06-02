@@ -15,6 +15,6 @@
         function notify(_arg_1:String, _arg_2:String, _arg_3:Function, _arg_4:uint=0):INotify;
         function _Str_14038(_arg_1:String):IWindow;
         function _Str_15444(_arg_1:String):IWindow;
-        function _Str_24004(_arg_1:String, _arg_2:Array, _arg_3:int=0):uint;
+        function groupWindowsWithTag(_arg_1:String, _arg_2:Array, _arg_3:int=0):uint;
     }
 }

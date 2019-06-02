@@ -31,12 +31,12 @@
                 _local_2.data.writeRoomObjectModel(object.getModelController());
                 if (object.getModelController().getNumber(RoomObjectVariableEnum.FURNITURE_REAL_ROOM_OBJECT) == 1)
                 {
-                    this._Str_24776();
+                    this.setupObject();
                 }
             }
         }
 
-        private function _Str_24776():void
+        private function setupObject():void
         {
             if (((object == null) || (object.getModelController() == null)))
             {

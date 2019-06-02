@@ -50,7 +50,7 @@
             return this._Str_12337;
         }
 
-        public function get _Str_6920():IWindow
+        public function get scrollableWindow():IWindow
         {
             return this._Str_2338;
         }
@@ -179,9 +179,9 @@
             return this._Str_2338._Str_3707;
         }
 
-        public function get _Str_2614():Rectangle
+        public function get visibleRegion():Rectangle
         {
-            return this._Str_2338._Str_2614;
+            return this._Str_2338.visibleRegion;
         }
 
         public function get scrollStepH():Number
@@ -254,9 +254,9 @@
             return this._Str_2338.addListItem(k);
         }
 
-        public function _Str_3015(k:IWindow, _arg_2:uint):IWindow
+        public function addListItemAt(k:IWindow, _arg_2:uint):IWindow
         {
-            return this._Str_2338._Str_3015(k, _arg_2);
+            return this._Str_2338.addListItemAt(k, _arg_2);
         }
 
         public function getListItemAt(k:uint):IWindow
@@ -264,9 +264,9 @@
             return this._Str_2338.getListItemAt(k);
         }
 
-        public function _Str_12066(k:uint):IWindow
+        public function getListItemByID(k:uint):IWindow
         {
-            return this._Str_2338._Str_12066(k);
+            return this._Str_2338.getListItemByID(k);
         }
 
         public function getListItemByName(k:String):IWindow
@@ -274,14 +274,14 @@
             return this._Str_2338.getListItemByName(k);
         }
 
-        public function _Str_7139(k:String):IWindow
+        public function getListItemByTag(k:String):IWindow
         {
-            return this._Str_2338._Str_7139(k);
+            return this._Str_2338.getListItemByTag(k);
         }
 
-        public function _Str_3156(k:IWindow):int
+        public function getListItemIndex(k:IWindow):int
         {
-            return this._Str_2338._Str_3156(k);
+            return this._Str_2338.getListItemIndex(k);
         }
 
         public function removeListItem(k:IWindow):IWindow
@@ -289,44 +289,44 @@
             return this._Str_2338.removeListItem(k);
         }
 
-        public function _Str_2915(k:int):IWindow
+        public function removeListItemAt(k:int):IWindow
         {
-            return this._Str_2338._Str_2915(k);
+            return this._Str_2338.removeListItemAt(k);
         }
 
-        public function _Str_14121(k:IWindow, _arg_2:int):void
+        public function setListItemIndex(k:IWindow, _arg_2:int):void
         {
-            this._Str_2338._Str_14121(k, _arg_2);
+            this._Str_2338.setListItemIndex(k, _arg_2);
         }
 
-        public function _Str_17868(k:IWindow, _arg_2:IWindow):void
+        public function swapListItems(k:IWindow, _arg_2:IWindow):void
         {
-            this._Str_2338._Str_17868(k, _arg_2);
+            this._Str_2338.swapListItems(k, _arg_2);
         }
 
-        public function _Str_16328(k:int, _arg_2:int):void
+        public function swapListItemsAt(k:int, _arg_2:int):void
         {
-            this._Str_2338._Str_16328(k, _arg_2);
+            this._Str_2338.swapListItemsAt(k, _arg_2);
         }
 
-        public function _Str_11845(k:uint, _arg_2:Array, _arg_3:int=0):uint
+        public function groupListItemsWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint
         {
-            return this._Str_2338._Str_11845(k, _arg_2, _arg_3);
+            return this._Str_2338.groupListItemsWithID(k, _arg_2, _arg_3);
         }
 
-        public function _Str_7438(k:String, _arg_2:Array, _arg_3:int=0):uint
+        public function groupListItemsWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
-            return this._Str_2338._Str_7438(k, _arg_2, _arg_3);
+            return this._Str_2338.groupListItemsWithTag(k, _arg_2, _arg_3);
         }
 
-        public function _Str_2659():void
+        public function removeListItems():void
         {
-            this._Str_2338._Str_2659();
+            this._Str_2338.removeListItems();
         }
 
-        public function _Str_2724():void
+        public function destroyListItems():void
         {
-            this._Str_2338._Str_2724();
+            this._Str_2338.destroyListItems();
         }
 
         public function arrangeListItems():void
@@ -334,14 +334,14 @@
             this._Str_2338.arrangeListItems();
         }
 
-        public function _Str_13999():void
+        public function stopDragging():void
         {
-            this._Str_2338._Str_13999();
+            this._Str_2338.stopDragging();
         }
 
-        public function set _Str_6129(k:Boolean):void
+        public function set disableAutodrag(k:Boolean):void
         {
-            this._Str_2338._Str_6129 = k;
+            this._Str_2338.disableAutodrag = k;
         }
 
         public function get _Str_8004():Boolean
@@ -351,16 +351,16 @@
 
         public function set _Str_8004(k:Boolean):void
         {
-            this._Str_2338._Str_6129 = k;
+            this._Str_2338.disableAutodrag = k;
         }
 
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(_Str_2340(PropertyKeys.SPACING, this.spacing));
-            k.push(_Str_2340(PropertyKeys.AUTO_ARRANGE_ITEMS, this.autoArrangeItems));
-            k.push(_Str_2340(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_3640));
-            k.push(_Str_2340(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_3583));
+            k.push(createProperty(PropertyKeys.SPACING, this.spacing));
+            k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this.autoArrangeItems));
+            k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_3640));
+            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_3583));
             return k;
         }
 

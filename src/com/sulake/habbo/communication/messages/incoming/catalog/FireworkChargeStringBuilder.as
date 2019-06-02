@@ -68,7 +68,7 @@ package com.sulake.habbo.communication.messages.incoming.catalog
                 localization.registerParameter(key, _local_6, dataWrapper._SafeStr_5944.toString());
                 this._cost = _local_7.value;
                 localization.registerParameter(key, "credits", _local_5);
-                localization.registerParameter(key, _local_6, catalog.getPurse()._Str_5590(dataWrapper._SafeStr_5945).toString());
+                localization.registerParameter(key, _local_6, catalog.getPurse().getActivityPointsForType(dataWrapper._SafeStr_5945).toString());
                 this._balance = _local_7.value;
             }
         }

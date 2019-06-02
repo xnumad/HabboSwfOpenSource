@@ -18,12 +18,12 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_7845(this._Str_22887));
-            k.addMessageEvent(new _Str_8236(this._Str_25416));
-            k.addMessageEvent(new _Str_5266(this._Str_15950));
+            k.addMessageEvent(new _Str_7845(this.onYouAreController));
+            k.addMessageEvent(new _Str_8236(this.onYouAreNotController));
+            k.addMessageEvent(new _Str_5266(this.onYouAreOwner));
         }
 
-        private function _Str_22887(k:IMessageEvent):void
+        private function onYouAreController(k:IMessageEvent):void
         {
             var _local_2:_Str_7845 = (k as _Str_7845);
             if (_local_2 == null)
@@ -38,7 +38,7 @@
             _local_3.roomControllerLevel = _local_2._Str_2273().roomControllerLevel;
         }
 
-        private function _Str_25416(k:IMessageEvent):void
+        private function onYouAreNotController(k:IMessageEvent):void
         {
             var _local_2:_Str_8236 = (k as _Str_8236);
             if (_local_2 == null)
@@ -53,7 +53,7 @@
             _local_3.roomControllerLevel = RoomControllerLevel.NONE;
         }
 
-        private function _Str_15950(k:IMessageEvent):void
+        private function onYouAreOwner(k:IMessageEvent):void
         {
             var _local_2:_Str_5266 = (k as _Str_5266);
             if (_local_2 == null)
@@ -65,7 +65,7 @@
             {
                 return;
             }
-            _local_3._Str_2781 = true;
+            _local_3.isRoomController = true;
         }
     }
 }

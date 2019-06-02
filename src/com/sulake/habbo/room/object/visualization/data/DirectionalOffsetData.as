@@ -14,7 +14,7 @@
             super();
         }
 
-        public function _Str_19089(k:int, _arg_2:int):int
+        public function getOffsetX(k:int, _arg_2:int):int
         {
             if (this._offsetX[k] == null)
             {
@@ -23,7 +23,7 @@
             return this._offsetX[k];
         }
 
-        public function _Str_21951(k:int, _arg_2:int):int
+        public function getOffsetY(k:int, _arg_2:int):int
         {
             if (this._offsetY[k] == null)
             {
@@ -32,7 +32,7 @@
             return this._offsetY[k];
         }
 
-        public function _Str_9421(k:int, _arg_2:int, _arg_3:int):void
+        public function setOffset(k:int, _arg_2:int, _arg_3:int):void
         {
             this._offsetX[k] = _arg_2;
             this._offsetY[k] = _arg_3;

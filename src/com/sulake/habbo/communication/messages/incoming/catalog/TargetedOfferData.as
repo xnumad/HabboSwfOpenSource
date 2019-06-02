@@ -7,9 +7,9 @@
 
     public class TargetedOfferData 
     {
-        protected var _Str_576:int;
+        protected var _id:int;
         protected var _Str_679:String;
-        protected var _Str_578:int;
+        protected var _type:int;
         protected var _Str_2495:String;
         protected var _Str_1858:String;
         protected var _Str_2991:String;
@@ -27,14 +27,14 @@
         {
             if (k != null)
             {
-                this._Str_576 = k.id;
+                this._id = k.id;
                 this._Str_679 = k.identifier;
-                this._Str_578 = k.type;
+                this._type = k.type;
                 this._Str_2495 = k.title;
                 this._Str_1858 = k.description;
                 this._Str_2991 = k.imageUrl;
                 this._Str_18782 = k._Str_13452;
-                this._Str_2570 = k._Str_2716;
+                this._Str_2570 = k.productCode;
                 this._Str_9772 = k.purchaseLimit;
                 this._Str_4678 = k.expirationTime;
                 this._Str_3594 = k.priceInCredits;
@@ -48,7 +48,7 @@
         public function parse(k:IMessageDataWrapper):TargetedOfferData
         {
             this._Str_9163 = k.readInteger();
-            this._Str_576 = k.readInteger();
+            this._id = k.readInteger();
             this._Str_679 = k.readString();
             this._Str_2570 = k.readString();
             this._Str_3594 = k.readInteger();
@@ -61,7 +61,7 @@
             this._Str_1858 = k.readString();
             this._Str_2991 = k.readString();
             this._Str_18782 = k.readString();
-            this._Str_578 = k.readInteger();
+            this._type = k.readInteger();
             this._Str_11962 = new Vector.<String>(0);
             var _local_3:int = k.readInteger();
             var _local_4:int;
@@ -80,7 +80,7 @@
 
         public function get id():int
         {
-            return this._Str_576;
+            return this._id;
         }
 
         public function get identifier():String
@@ -90,7 +90,7 @@
 
         public function get type():int
         {
-            return this._Str_578;
+            return this._type;
         }
 
         public function get title():String
@@ -113,7 +113,7 @@
             return this._Str_18782;
         }
 
-        public function get _Str_2716():String
+        public function get productCode():String
         {
             return this._Str_2570;
         }

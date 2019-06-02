@@ -21,7 +21,7 @@
             return this._pageId;
         }
 
-        public function get _Str_23803():String
+        public function get pageLocalization():String
         {
             return this._pageLocalization;
         }

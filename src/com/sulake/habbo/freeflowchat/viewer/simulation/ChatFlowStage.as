@@ -105,7 +105,7 @@
                 _local_2 = new ChatBubbleSimulationEntity(k, this._lineByLineMode);
             }
             var _local_3:Point = new Point((k._Str_11643.x - (_local_2._Str_6163.width / 2)), this._component._Str_9270._Str_12498);
-            var _local_4:Point = this._component.roomEngine._Str_7201(k.roomId);
+            var _local_4:Point = this._component.roomEngine.getRoomCanvasScreenOffset(k.roomId);
             if (_local_4 != null)
             {
                 _local_3.x = (_local_3.x - _local_4.x);

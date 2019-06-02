@@ -4,22 +4,22 @@
 
     public class _Str_12037 implements IMessageComposer 
     {
-        private var _Str_594:Array;
+        private var _data:Array;
 
         public function _Str_12037(k:String)
         {
-            this._Str_594 = new Array();
-            this._Str_594.push(k);
+            this._data = new Array();
+            this._data.push(k);
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_594;
+            return this._data;
         }
 
         public function dispose():void
         {
-            this._Str_594 = null;
+            this._data = null;
         }
     }
 }

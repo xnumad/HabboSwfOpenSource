@@ -82,7 +82,7 @@
             var _local_2:SendRoomInviteMessageComposer = new SendRoomInviteMessageComposer(k);
             for each (_local_3 in this._Str_1007)
             {
-                _local_2._Str_25433(_local_3.id);
+                _local_2.addInvitedFriend(_local_3.id);
             }
             friendList.resetLastRoomInvitationTime();
             friendList.send(_local_2);

@@ -35,7 +35,7 @@
             return this._light;
         }
 
-        public function get _Str_11464():Boolean
+        public function get bgOnly():Boolean
         {
             return this._bgOnly;
         }

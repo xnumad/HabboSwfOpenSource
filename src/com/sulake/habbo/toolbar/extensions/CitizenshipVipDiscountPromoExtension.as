@@ -108,7 +108,7 @@
                     this._expirationTimer.start();
                 }
                 this._Str_6881();
-                if (!this._toolbar.extensionView._Str_20929(ToolbarDisplayExtensionIds.VIP_QUESTS))
+                if (!this._toolbar.extensionView.hasExtension(ToolbarDisplayExtensionIds.VIP_QUESTS))
                 {
                     this._toolbar.extensionView.attachExtension(ToolbarDisplayExtensionIds.CLUB_PROMO, this._view, ExtensionFixedSlotsEnum._Str_8642);
                 }

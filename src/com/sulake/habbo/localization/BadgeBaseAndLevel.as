@@ -8,7 +8,7 @@
         public function BadgeBaseAndLevel(k:String)
         {
             var _local_2:int = (k.length - 1);
-            while (((_local_2 > 0) && (this._Str_25656(k.charAt(_local_2)))))
+            while (((_local_2 > 0) && (this.isNumber(k.charAt(_local_2)))))
             {
                 _local_2--;
             }
@@ -20,7 +20,7 @@
             }
         }
 
-        private function _Str_25656(k:String):Boolean
+        private function isNumber(k:String):Boolean
         {
             var _local_2:int = k.charCodeAt(0);
             return (_local_2 >= 48) && (_local_2 <= 57);

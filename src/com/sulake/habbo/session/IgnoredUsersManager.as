@@ -23,7 +23,7 @@
             this._sessionDataManager = k;
             if (this._sessionDataManager.communication)
             {
-                this._ignoreResultMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_5459(this._Str_16085));
+                this._ignoreResultMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_5459(this.onIgnoreResult));
                 this._ignoredUsersMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_9184(this._Str_24424));
             }
         }
@@ -44,7 +44,7 @@
             this._sessionDataManager = null;
         }
 
-        public function _Str_25475():void
+        public function initIgnoreList():void
         {
             this._sessionDataManager.send(new _Str_10288(this._sessionDataManager.userName));
         }
@@ -54,7 +54,7 @@
             this._ignoredUsers = k._Str_16804;
         }
 
-        private function _Str_16085(k:_Str_5459):void
+        private function onIgnoreResult(k:_Str_5459):void
         {
             var _local_2:String = k.name;
             switch (k.result)
@@ -62,19 +62,19 @@
                 case 0:
                     return;
                 case 1:
-                    this._Str_19721(_local_2);
+                    this.addUserToIgnoreList(_local_2);
                     return;
                 case 2:
-                    this._Str_19721(_local_2);
+                    this.addUserToIgnoreList(_local_2);
                     this._ignoredUsers.shift();
                     return;
                 case 3:
-                    this._Str_23631(_local_2);
+                    this.removeUserFromIgnoreList(_local_2);
                     return;
             }
         }
 
-        private function _Str_19721(k:String):void
+        private function addUserToIgnoreList(k:String):void
         {
             if (this._ignoredUsers.indexOf(k) < 0)
             {
@@ -82,7 +82,7 @@
             }
         }
 
-        private function _Str_23631(k:String):void
+        private function removeUserFromIgnoreList(k:String):void
         {
             var _local_2:int = this._ignoredUsers.indexOf(k);
             if (_local_2 >= 0)
@@ -91,22 +91,22 @@
             }
         }
 
-        public function _Str_26106(k:int):void
+        public function ignoreUserId(k:int):void
         {
             this._sessionDataManager.send(new _Str_5697(k));
         }
 
-        public function _Str_10249(k:String):void
+        public function ignoreUser(k:String):void
         {
             this._sessionDataManager.send(new _Str_10793(k));
         }
 
-        public function _Str_14353(k:String):void
+        public function unignoreUser(k:String):void
         {
             this._sessionDataManager.send(new _Str_10785(k));
         }
 
-        public function _Str_3655(k:String):Boolean
+        public function isIgnored(k:String):Boolean
         {
             return this._ignoredUsers.indexOf(k) >= 0;
         }

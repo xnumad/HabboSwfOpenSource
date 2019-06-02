@@ -43,7 +43,7 @@
             {
                 this._nextState = _local_2;
                 this._nextStateExtra = k._Str_2794;
-                this._nextStateTimeStamp = (_Str_20511 + _local_3);
+                this._nextStateTimeStamp = (lastUpdateTime + _local_3);
             }
         }
 

@@ -30,7 +30,7 @@
             this._size = 0;
         }
 
-        public function _Str_19709():int
+        public function reserveNumber():int
         {
             var k:int;
             if (this._freeNumbers.length > 0)
@@ -42,7 +42,7 @@
             return -1;
         }
 
-        public function _Str_15187(k:int):void
+        public function freeNumber(k:int):void
         {
             var _local_2:int = this._reservedNumbers.indexOf(k);
             if (_local_2 >= 0)

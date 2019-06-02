@@ -21,12 +21,12 @@
             return true;
         }
 
-        public function _Str_5256():int
+        public function getRoomId():int
         {
             return this._roomId;
         }
 
-        public function _Str_22514():String
+        public function getRoomName():String
         {
             return this._roomName;
         }

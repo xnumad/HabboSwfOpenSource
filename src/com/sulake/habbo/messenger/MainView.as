@@ -82,7 +82,7 @@
             this._chatNotificationTemplate = (this._conversationList.getListItemByName("msg_notification") as IWindowContainer);
             this._chatInvitationTemplate = (this._conversationList.getListItemByName("msg_invitation") as IWindowContainer);
             this._chatInfoTemplate = (this._conversationList.getListItemByName("msg_info") as IWindowContainer);
-            this._conversationList._Str_2659();
+            this._conversationList.removeListItems();
             _Str_2789(IWidgetWindow(this._frame.findChildByName("input_widget")).widget)._Str_8859 = this;
             this._pendingMessages = new Array();
         }
@@ -421,7 +421,7 @@
                         _arg_2._Str_19910(_local_6.message);
                         if (k == this._currentConversationId)
                         {
-                            this._conversationList._Str_2915((this._conversationList.numListItems - 1));
+                            this._conversationList.removeListItemAt((this._conversationList.numListItems - 1));
                         }
                     }
                 }
@@ -447,7 +447,7 @@
                         _arg_2._Str_19910(_local_6.message);
                         if (k == this._currentConversationId)
                         {
-                            this._conversationList._Str_2915((this._conversationList.numListItems - 1));
+                            this._conversationList.removeListItemAt((this._conversationList.numListItems - 1));
                         }
                     }
                 }
@@ -534,8 +534,8 @@
                 case ChatEntry._Str_12682:
                     _local_4 = (this._chatInfoTemplate.clone() as IWindowContainer);
                     _local_5 = _local_4.findChildByName("content");
-                    _local_5._Str_2648.minWidth = this._Str_5428;
-                    _local_5._Str_2648.maxWidth = this._Str_5428;
+                    _local_5.limits.minWidth = this._Str_5428;
+                    _local_5.limits.maxWidth = this._Str_5428;
                     _local_5.caption = k.message;
                     return _local_4;
                 case ChatEntry._Str_10130:
@@ -626,8 +626,8 @@
                         break;
                     case "msg_info":
                         _local_3 = IWindowContainer(_local_2).findChildByName("content");
-                        _local_3._Str_2648.minWidth = this._Str_5428;
-                        _local_3._Str_2648.maxWidth = this._Str_5428;
+                        _local_3.limits.minWidth = this._Str_5428;
+                        _local_3.limits.maxWidth = this._Str_5428;
                         break;
                 }
                 _local_2.width = this._Str_5428;
@@ -650,7 +650,7 @@
         private function _Str_21370():void
         {
             this._populatingList = true;
-            this._conversationList._Str_2724();
+            this._conversationList.destroyListItems();
             var k:Array = this._chatEntries[this._currentConversationId];
             if (k == null)
             {
@@ -670,13 +670,13 @@
 
         private function _Str_25362():void
         {
-            if (-(this._conversationList._Str_2614.y) > _Str_18765)
+            if (-(this._conversationList.visibleRegion.y) > _Str_18765)
             {
                 return;
             }
             this._populatingList = true;
             var k:Number = this._conversationList.scrollV;
-            var _local_2:int = this._conversationList._Str_2614.height;
+            var _local_2:int = this._conversationList.visibleRegion.height;
             var _local_3:Array = this._chatEntries[this._currentConversationId];
             if (_local_3 == null)
             {
@@ -687,12 +687,12 @@
             var _local_6:int = Math.max(0, (_local_4 - _Str_13145));
             while (_local_6 < _local_4)
             {
-                this._conversationList._Str_3015(this._Str_20924(_local_3[_local_6]), _local_5);
+                this._conversationList.addListItemAt(this._Str_20924(_local_3[_local_6]), _local_5);
                 _local_5++;
                 _local_6++;
             }
             this._conversationList.arrangeListItems();
-            this._conversationList.scrollV = (1 - ((_local_2 * (1 - k)) / this._conversationList._Str_2614.height));
+            this._conversationList.scrollV = (1 - ((_local_2 * (1 - k)) / this._conversationList.visibleRegion.height));
             this._populatingList = false;
         }
 

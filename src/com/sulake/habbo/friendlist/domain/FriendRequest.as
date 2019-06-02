@@ -20,9 +20,9 @@
 
         public function FriendRequest(k:_Str_3742)
         {
-            this._requestId = k._Str_2951;
-            this._requesterName = k._Str_6445;
-            this._requesterUserId = k._Str_7048;
+            this._requestId = k.requestId;
+            this._requesterName = k.requesterName;
+            this._requesterUserId = k.requesterUserId;
         }
 
         public function dispose():void
@@ -44,17 +44,17 @@
             return this._disposed;
         }
 
-        public function get _Str_2951():int
+        public function get requestId():int
         {
             return this._requestId;
         }
 
-        public function get _Str_6445():String
+        public function get requesterName():String
         {
             return this._requesterName;
         }
 
-        public function get _Str_7048():int
+        public function get requesterUserId():int
         {
             return this._requesterUserId;
         }

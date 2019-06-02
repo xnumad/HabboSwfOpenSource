@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import _Str_471.RoomAdErrorMessageParser;
+    import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
 
     public class _Str_9358 extends MessageEvent implements IMessageEvent 
     {

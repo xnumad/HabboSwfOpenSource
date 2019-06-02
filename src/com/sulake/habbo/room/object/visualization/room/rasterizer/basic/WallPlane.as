@@ -3,18 +3,18 @@
     import com.sulake.room.utils.Vector3d;
     import flash.geom.Point;
     import flash.display.BitmapData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class WallPlane extends Plane 
     {
-        public static const _Str_2531:uint = 0xFFFFFF;
-        public static const _Str_5433:Number = 45;
-        public static const _Str_5509:Number = 30;
+        public static const DEFAULT_COLOR:uint = 0xFFFFFF;
+        public static const HORIZONTAL_ANGLE_DEFAULT:Number = 45;
+        public static const VERTICAL_ANGLE_DEFAULT:Number = 30;
 
 
-        public function render(k:BitmapData, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:IVector3D, _arg_6:Boolean):BitmapData
+        public function render(k:BitmapData, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:IVector3d, _arg_6:Boolean):BitmapData
         {
-            var _local_7:PlaneVisualization = _Str_6009(_arg_4);
+            var _local_7:PlaneVisualization = getPlaneVisualization(_arg_4);
             if (((_local_7 == null) || (_local_7.geometry == null)))
             {
                 return null;

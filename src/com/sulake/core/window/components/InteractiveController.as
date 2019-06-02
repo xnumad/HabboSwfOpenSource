@@ -104,16 +104,16 @@
 
         public static function _Str_8987(k:IInteractiveWindow, _arg_2:Array):Array
         {
-            _arg_2.push(k._Str_2340(PropertyKeys.TOOL_TIP_CAPTION, k._Str_2613));
-            _arg_2.push(k._Str_2340(PropertyKeys.TOOL_TIP_DELAY, k._Str_3099));
-            _arg_2.push(k._Str_2340(PropertyKeys.TOOL_TIP_IS_DYNAMIC, k._Str_4074));
+            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_CAPTION, k._Str_2613));
+            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_DELAY, k._Str_3099));
+            _arg_2.push(k.createProperty(PropertyKeys.TOOL_TIP_IS_DYNAMIC, k._Str_4074));
             return _arg_2;
         }
 
 
         public function set _Str_2613(k:String):void
         {
-            this._Str_3422 = ((k == null) ? String(_Str_3692(PropertyKeys.TOOL_TIP_CAPTION).value) : k);
+            this._Str_3422 = ((k == null) ? String(getDefaultProperty(PropertyKeys.TOOL_TIP_CAPTION).value) : k);
         }
 
         public function get _Str_2613():String
@@ -131,7 +131,7 @@
             return this._Str_3681;
         }
 
-        public function _Str_8475(k:uint, _arg_2:uint):uint
+        public function setMouseCursorForState(k:uint, _arg_2:uint):uint
         {
             if (testStateFlag(WindowState.DISABLED))
             {
@@ -153,7 +153,7 @@
             return _local_3;
         }
 
-        public function _Str_6608(k:uint):uint
+        public function getMouseCursorByState(k:uint):uint
         {
             if (!this._Str_3280)
             {
@@ -171,11 +171,11 @@
             return super.update(k, _arg_2);
         }
 
-        public function _Str_7991(k:IToolTipWindow):void
+        public function showToolTip(k:IToolTipWindow):void
         {
         }
 
-        public function _Str_9055():void
+        public function hideToolTip():void
         {
         }
 

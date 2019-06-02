@@ -110,10 +110,10 @@
             }
             this._buttonsContainer.width = this._buttonsContainer.width;
             this._buttonsContainer.visible = (this._buttonsContainer.width > 0);
-            this._infoElements.height = this._infoElements._Str_2614.height;
+            this._infoElements.height = this._infoElements.visibleRegion.height;
             this._border.height = (this._infoElements.height + 20);
             this._window.width = Math.max(this._border.width, this._buttonsContainer.width);
-            this._window.height = this._window._Str_2614.height;
+            this._window.height = this._window.visibleRegion.height;
             if (this._border.width < this._buttonsContainer.width)
             {
                 this._border.x = (this._window.width - this._border.width);
@@ -206,7 +206,7 @@
             this._currentPetId = k.id;
             this._petData.remove(k.id);
             this._petData.add(k.id, k);
-            if ((((this._petCommadTool) && (this._petCommadTool._Str_2719())) && (k._Str_5175)))
+            if ((((this._petCommadTool) && (this._petCommadTool.isVisible())) && (k._Str_5175)))
             {
                 _local_5 = this._Str_16104(k.level, k._Str_3307);
                 _local_6 = (k.experience / k._Str_4095);
@@ -706,7 +706,7 @@
             {
                 if (((_local_3 == RoomWidgetFurniActionMessage.RWFAM_MOVE) || (_local_3 == RoomWidgetFurniActionMessage.RWFUAM_ROTATE)))
                 {
-                    _local_6 = this._widget.petData._Str_2707;
+                    _local_6 = this._widget.petData.roomIndex;
                     _local_7 = RoomObjectCategoryEnum.CONST_100;
                     _local_2 = new RoomWidgetFurniActionMessage(_local_3, _local_6, _local_7, -1, _local_5);
                     this._widget.messageListener.processWidgetMessage(_local_2);

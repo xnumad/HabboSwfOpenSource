@@ -27,7 +27,7 @@
             return -1;
         }
 
-        public function get _Str_1723():String
+        public function get objectType():String
         {
             if (this._object != null)
             {

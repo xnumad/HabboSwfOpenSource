@@ -14,12 +14,12 @@
             this._numberValue = _arg_2;
         }
 
-        public function get _Str_23619():String
+        public function get numberKey():String
         {
             return this._numberKey;
         }
 
-        public function get _Str_22870():int
+        public function get numberValue():int
         {
             return this._numberValue;
         }

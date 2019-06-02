@@ -57,13 +57,13 @@
             {
                 return false;
             }
-            this._Str_14789();
+            this.displayMainView();
             var _local_2:IItemListWindow = (_window.findChildByName("item_list") as IItemListWindow);
             this._itemTemplates.add(MarketPlaceOfferState._Str_15376, _local_2.removeListItem(_local_2.getListItemByName("ongoing_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_8295, _local_2.removeListItem(_local_2.getListItemByName("sold_item")));
             this._itemTemplates.add(MarketPlaceOfferState._Str_6495, _local_2.removeListItem(_local_2.getListItemByName("expired_item")));
-            this._Str_2552._Str_7410(this);
-            this._Str_2552._Str_21939();
+            this._Str_2552.registerVisualization(this);
+            this._Str_2552.requestOwnItems();
             this._Str_10239(this._Str_11360);
             this._Str_21553(false);
             return true;
@@ -82,13 +82,13 @@
             }
         }
 
-        public function _Str_6746():void
+        public function listUpdatedNotify():void
         {
             if (this._Str_2552 == null)
             {
                 return;
             }
-            this._Str_11855(this._Str_2552._Str_18294());
+            this._Str_11855(this._Str_2552.latestOwnOffers());
         }
 
         private function _Str_10239(k:int, _arg_2:int=-1):void
@@ -180,7 +180,7 @@
             {
                 return;
             }
-            _local_3._Str_2724();
+            _local_3.destroyListItems();
             var _local_5:int;
             var _local_6:Array = k.getKeys();
             if (!_local_6)
@@ -206,12 +206,12 @@
                         _local_13 = _local_12.findChildByName("item_name");
                         if (_local_13 != null)
                         {
-                            _local_13.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552._Str_10102(_local_11)) + "}") : "");
+                            _local_13.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552.getNameLocalizationKey(_local_11)) + "}") : "");
                         }
                         _local_14 = _local_12.findChildByName("item_desc");
                         if (_local_14 != null)
                         {
-                            _local_14.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552._Str_12650(_local_11)) + "}") : "");
+                            _local_14.caption = ((this._Str_2552 != null) ? ((("$" + "{") + this._Str_2552.getDescriptionLocalizationKey(_local_11)) + "}") : "");
                         }
                         _local_15 = _local_12.findChildByName("item_price");
                         if (_local_15 != null)
@@ -256,7 +256,7 @@
                         }
                         if (_local_11.image == null)
                         {
-                            _local_25 = this._Str_6819(_local_11.furniId, _local_11._Str_4120, _local_11.extraData);
+                            _local_25 = this._Str_6819(_local_11.furniId, _local_11.furniType, _local_11.extraData);
                             if (((!(_local_25 == null)) && (!(_local_25.data == null))))
                             {
                                 _local_11.image = (_local_25.data as BitmapData);
@@ -309,7 +309,7 @@
                 {
                     _local_8.enable();
                     _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "count", _local_5.toString());
-                    _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "credits", this._Str_2552._Str_15236.toString());
+                    _local_2.registerParameter("catalog.marketplace.redeem.get_credits", "credits", this._Str_2552.creditsWaiting.toString());
                     _local_9.caption = ("$" + "{catalog.marketplace.redeem.get_credits}");
                 }
                 else
@@ -320,7 +320,7 @@
             }
         }
 
-        public function _Str_14789():void
+        public function displayMainView():void
         {
             _Str_2819(CatalogWidgetEnum.MARKET_PLACE_OWN_ITEMS);
             window.procedure = this._Str_17366;
@@ -338,7 +338,7 @@
                 return;
             }
             var _local_3:Array = [];
-            if (this._itemList._Str_11845(k, _local_3))
+            if (this._itemList.groupListItemsWithID(k, _local_3))
             {
                 for each (_local_4 in _local_3)
                 {
@@ -405,8 +405,8 @@
                     {
                         return;
                     }
-                    _local_4 = _local_3._Str_3156(k.window.parent);
-                    _local_5 = this._Str_2552._Str_18294();
+                    _local_4 = _local_3.getListItemIndex(k.window.parent);
+                    _local_5 = this._Str_2552.latestOwnOffers();
                     if (!_local_5)
                     {
                         return;
@@ -414,7 +414,7 @@
                     _local_6 = (_local_5.getWithIndex(_local_4) as MarketPlaceOfferData);
                     if (_local_6)
                     {
-                        this._Str_2552._Str_19634(_local_6.offerId);
+                        this._Str_2552.redeemExpiredOffer(_local_6.offerId);
                     }
                 }
             }
@@ -433,14 +433,14 @@
                     case "redeem_sold":
                         if (this._Str_2552)
                         {
-                            this._Str_2552._Str_21640();
+                            this._Str_2552.redeemSoldOffers();
                         }
                         return;
                 }
             }
         }
 
-        public function _Str_13752():void
+        public function updateStats():void
         {
         }
     }

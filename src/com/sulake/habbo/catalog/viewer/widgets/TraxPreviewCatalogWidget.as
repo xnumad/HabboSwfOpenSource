@@ -74,9 +74,9 @@
             }
             var _local_2:Boolean;
             var _local_3:IProduct = k.offer.product;
-            if (_local_3._Str_2415.length > 0)
+            if (_local_3.extraParam.length > 0)
             {
-                this._selectedSongId = parseInt(_local_3._Str_2415);
+                this._selectedSongId = parseInt(_local_3.extraParam);
                 _local_2 = true;
             }
             if (this._playButton != null)

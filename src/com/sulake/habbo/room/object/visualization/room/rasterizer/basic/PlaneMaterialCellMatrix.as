@@ -3,24 +3,24 @@
     import flash.display.BitmapData;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.object.visualization.room.utils.Randomizer;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
     import flash.geom.Rectangle;
     import flash.geom.Point;
 
     public class PlaneMaterialCellMatrix 
     {
-        public static const _Str_7916:int = 1;
-        public static const _Str_6087:int = 2;
-        public static const _Str_6114:int = 3;
-        public static const _Str_6187:int = 4;
-        public static const _Str_6063:int = 5;
-        public static const _Str_9127:int = 6;
-        public static const _Str_18632:int = _Str_7916;//1
-        public static const _Str_3268:Number = -1;
-        public static const _Str_3271:Number = 1;
+        public static const REPEAT_MODE_ALL:int = 1;
+        public static const REPEAT_MODE_BORDERS:int = 2;
+        public static const REPEAT_MODE_CENTER:int = 3;
+        public static const REPEAT_MODE_FIRST:int = 4;
+        public static const REPEAT_MODE_LAST:int = 5;
+        public static const REPEAT_MODE_RANDOM:int = 6;
+        public static const REPEAT_MODE_DEFAULT:int = REPEAT_MODE_ALL;//1
+        public static const MIN_NORMAL_COORDINATE_VALUE:Number = -1;
+        public static const MAX_NORMAL_COORDINATE_VALUE:Number = 1;
         public static const ALIGN_TOP:int = 1;
-        public static const _Str_3606:int = 2;
-        public static const _Str_6914:int = ALIGN_TOP;//1
+        public static const ALIGN_BOTTOM:int = 2;
+        public static const ALIGN_DEFAULT:int = ALIGN_TOP;//1
 
         private var _columns:Array;
         private var _repeatMode:int = 1;
@@ -55,7 +55,7 @@
             this._normalMaxX = _arg_5;
             this._normalMinY = _arg_6;
             this._normalMaxY = _arg_7;
-            if (this._repeatMode == _Str_9127)
+            if (this._repeatMode == REPEAT_MODE_RANDOM)
             {
                 this._isStatic = false;
             }
@@ -63,7 +63,7 @@
 
         private static function _Str_12526(k:int):int
         {
-            var _local_2:Array = Randomizer._Str_1612(1, 0, (k * 17631));
+            var _local_2:Array = Randomizer.getValues(1, 0, (k * 17631));
             return _local_2[0] % k;
         }
 
@@ -90,7 +90,7 @@
 
         public function _Str_14945():Boolean
         {
-            return this._align == _Str_3606;
+            return this._align == ALIGN_BOTTOM;
         }
 
         public function get isStatic():Boolean
@@ -143,7 +143,7 @@
             this._isCached = false;
         }
 
-        public function _Str_22372(k:int, _arg_2:int, _arg_3:Array, _arg_4:int=1):Boolean
+        public function createColumn(k:int, _arg_2:int, _arg_3:Array, _arg_4:int=1):Boolean
         {
             if (((k < 0) || (k >= this._columns.length)))
             {
@@ -163,7 +163,7 @@
             return true;
         }
 
-        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3D, useTexture:Boolean, offsetX:int, offsetY:int, topAlign:Boolean):BitmapData
+        public function render(canvas:BitmapData, width:int, height:int, normal:IVector3d, useTexture:Boolean, offsetX:int, offsetY:int, topAlign:Boolean):BitmapData
         {
             var column:PlaneMaterialCellColumn;
             var columnBitmapData:BitmapData;
@@ -191,7 +191,7 @@
                     {
                         if (canvas != null)
                         {
-                            this._Str_17578(canvas, this._cachedBitmapHeight, offsetY, topAlign);
+                            this.copyCachedBitmapOnCanvas(canvas, this._cachedBitmapHeight, offsetY, topAlign);
                             return canvas;
                         }
                         return this._cachedBitmapData;
@@ -237,7 +237,7 @@
                 }
                 if (canvas != null)
                 {
-                    this._Str_17578(canvas, height, offsetY, topAlign);
+                    this.copyCachedBitmapOnCanvas(canvas, height, offsetY, topAlign);
                     return canvas;
                 }
                 return this._cachedBitmapData;
@@ -281,20 +281,20 @@
             var maxColumnHeight:int;
             switch (this._repeatMode)
             {
-                case _Str_6087:
+                case REPEAT_MODE_BORDERS:
                     maxColumnHeight = this._Str_18476(this._cachedBitmapData, columns);
                     break;
-                case _Str_6114:
+                case REPEAT_MODE_CENTER:
                     maxColumnHeight = this._Str_17295(this._cachedBitmapData, columns);
                     break;
-                case _Str_6187:
+                case REPEAT_MODE_FIRST:
                     maxColumnHeight = this._Str_18019(this._cachedBitmapData, columns);
                     break;
-                case _Str_6063:
+                case REPEAT_MODE_LAST:
                     maxColumnHeight = this._Str_16099(this._cachedBitmapData, columns);
                     break;
-                case _Str_9127:
-                    maxColumnHeight = this._Str_25678(this._cachedBitmapData, columns);
+                case REPEAT_MODE_RANDOM:
+                    maxColumnHeight = this.renderRepeatRandom(this._cachedBitmapData, columns);
                     break;
                 default:
                     maxColumnHeight = this._Str_18711(this._cachedBitmapData, columns);
@@ -302,13 +302,13 @@
             this._cachedBitmapHeight = maxColumnHeight;
             if (canvas != null)
             {
-                this._Str_17578(canvas, maxColumnHeight, offsetY, topAlign);
+                this.copyCachedBitmapOnCanvas(canvas, maxColumnHeight, offsetY, topAlign);
                 return canvas;
             }
             return this._cachedBitmapData;
         }
 
-        private function _Str_17578(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:Boolean):void
+        private function copyCachedBitmapOnCanvas(k:BitmapData, _arg_2:int, _arg_3:int, _arg_4:Boolean):void
         {
             if ((((k == null) || (this._cachedBitmapData == null)) || (k == this._cachedBitmapData)))
             {
@@ -330,7 +330,7 @@
             k.copyPixels(this._cachedBitmapData, _local_5, new Point(0, _arg_3), null, null, true);
         }
 
-        private function _Str_25859(k:Array):int
+        private function getColumnsWidth(k:Array):int
         {
             var _local_4:BitmapData;
             if (((k == null) || (k.length == 0)))
@@ -351,7 +351,7 @@
             return _local_2;
         }
 
-        private function _Str_4606(k:BitmapData, _arg_2:Array, _arg_3:int, _arg_4:Boolean):Point
+        private function renderColumns(k:BitmapData, _arg_2:Array, _arg_3:int, _arg_4:Boolean):Point
         {
             var _local_8:int;
             if ((((_arg_2 == null) || (_arg_2.length == 0)) || (k == null)))
@@ -378,7 +378,7 @@
                         _arg_3 = (_arg_3 - _local_6.width);
                     }
                     _local_8 = 0;
-                    if (this._align == _Str_3606)
+                    if (this._align == ALIGN_BOTTOM)
                     {
                         _local_8 = (k.height - _local_6.height);
                     }
@@ -409,14 +409,14 @@
                 return 0;
             }
             var _local_3:int;
-            var _local_4:int = this._Str_25859(_arg_2);
+            var _local_4:int = this.getColumnsWidth(_arg_2);
             var _local_5:int;
             if (_local_4 > k.width)
             {
             }
             while (_local_5 < k.width)
             {
-                _local_6 = this._Str_4606(k, _arg_2, _local_5, true);
+                _local_6 = this.renderColumns(k, _arg_2, _local_5, true);
                 _local_5 = _local_6.x;
                 if (_local_6.y > _local_3)
                 {
@@ -463,7 +463,7 @@
             }
             var _local_8:* = ((k.width - _local_6) >> 1);
             var _local_9:Point;
-            _local_9 = this._Str_4606(k, _local_5, _local_8, true);
+            _local_9 = this.renderColumns(k, _local_5, _local_8, true);
             var _local_10:int = _local_9.x;
             if (_local_9.y > _local_3)
             {
@@ -475,7 +475,7 @@
                 _local_5 = [_local_4];
                 while (_local_8 >= 0)
                 {
-                    _local_9 = this._Str_4606(k, _local_5, _local_8, false);
+                    _local_9 = this.renderColumns(k, _local_5, _local_8, false);
                     _local_8 = _local_9.x;
                     if (_local_9.y > _local_3)
                     {
@@ -489,7 +489,7 @@
                 _local_5 = [_local_4];
                 while (_local_10 < k.height)
                 {
-                    _local_9 = this._Str_4606(k, _local_5, _local_10, true);
+                    _local_9 = this.renderColumns(k, _local_5, _local_10, true);
                     _local_10 = _local_9.x;
                     if (_local_9.y > _local_3)
                     {
@@ -563,7 +563,7 @@
                     _local_18 = [_local_4];
                     while (_local_12 < _local_17)
                     {
-                        _local_10 = this._Str_4606(k, _local_18, _local_12, true);
+                        _local_10 = this.renderColumns(k, _local_18, _local_12, true);
                         _local_12 = _local_10.x;
                         if (_local_10.y > _local_3)
                         {
@@ -573,12 +573,12 @@
                 }
             }
             _local_12 = 0;
-            _local_10 = this._Str_4606(k, _local_5, _local_12, true);
+            _local_10 = this.renderColumns(k, _local_5, _local_12, true);
             if (_local_10.y > _local_3)
             {
                 _local_3 = _local_10.y;
             }
-            _local_10 = this._Str_4606(k, _local_6, _local_13, false);
+            _local_10 = this.renderColumns(k, _local_6, _local_13, false);
             if (_local_10.y > _local_3)
             {
                 _local_3 = _local_10.y;
@@ -596,7 +596,7 @@
             var _local_3:int;
             var _local_4:BitmapData;
             var _local_5:int = k.width;
-            var _local_6:Point = this._Str_4606(k, _arg_2, _local_5, false);
+            var _local_6:Point = this.renderColumns(k, _arg_2, _local_5, false);
             _local_5 = _local_6.x;
             if (_local_6.y > _local_3)
             {
@@ -608,7 +608,7 @@
                 _local_7 = [_local_4];
                 while (_local_5 >= 0)
                 {
-                    _local_6 = this._Str_4606(k, _local_7, _local_5, false);
+                    _local_6 = this.renderColumns(k, _local_7, _local_5, false);
                     _local_5 = _local_6.x;
                     if (_local_6.y > _local_3)
                     {
@@ -629,7 +629,7 @@
             var _local_3:int;
             var _local_4:BitmapData;
             var _local_5:int;
-            var _local_6:Point = this._Str_4606(k, _arg_2, _local_5, true);
+            var _local_6:Point = this.renderColumns(k, _arg_2, _local_5, true);
             _local_5 = _local_6.x;
             if (_local_6.y > _local_3)
             {
@@ -641,7 +641,7 @@
                 _local_7 = [_local_4];
                 while (_local_5 < k.width)
                 {
-                    _local_6 = this._Str_4606(k, _local_7, _local_5, true);
+                    _local_6 = this.renderColumns(k, _local_7, _local_5, true);
                     _local_5 = _local_6.x;
                     if (_local_6.y > _local_3)
                     {
@@ -652,7 +652,7 @@
             return _local_3;
         }
 
-        private function _Str_25678(k:BitmapData, _arg_2:Array):int
+        private function renderRepeatRandom(k:BitmapData, _arg_2:Array):int
         {
             var _local_6:Array;
             var _local_7:Point;
@@ -669,7 +669,7 @@
                 if (_local_4 != null)
                 {
                     _local_6 = [_local_4];
-                    _local_7 = this._Str_4606(k, _local_6, _local_5, true);
+                    _local_7 = this.renderColumns(k, _local_6, _local_5, true);
                     _local_5 = _local_7.x;
                     if (_local_7.y > _local_3)
                     {
@@ -689,7 +689,7 @@
             var _local_2:Array;
             var _local_3:int;
             var _local_4:PlaneMaterialCellColumn;
-            if (this._repeatMode == _Str_9127)
+            if (this._repeatMode == REPEAT_MODE_RANDOM)
             {
                 _local_2 = [];
                 _local_3 = 0;

@@ -19,12 +19,12 @@
 
         public function get length():uint
         {
-            return this._iterable._Str_6010;
+            return this._iterable.numSelectables;
         }
 
         public function indexOf(k:*):int
         {
-            return this._iterable._Str_8283(k);
+            return this._iterable.getSelectableIndex(k);
         }
 
         override flash_proxy function getProperty(k:*):*
@@ -38,16 +38,16 @@
             var _local_3:ISelectableWindow = (_arg_2 as ISelectableWindow);
             if (_local_3)
             {
-                _local_4 = this._iterable._Str_8283(_local_3);
+                _local_4 = this._iterable.getSelectableIndex(_local_3);
                 if (_local_4 == k)
                 {
                     return;
                 }
                 if (_local_4 > -1)
                 {
-                    this._iterable._Str_10845(_local_3);
+                    this._iterable.removeSelectable(_local_3);
                 }
-                this._iterable._Str_16835(_local_3, uint(k));
+                this._iterable.addSelectableAt(_local_3, uint(k));
             }
             else
             {
@@ -66,12 +66,12 @@
 
         override flash_proxy function nextNameIndex(k:int):int
         {
-            return (k < this._iterable._Str_6010) ? (k + 1) : 0;
+            return (k < this._iterable.numSelectables) ? (k + 1) : 0;
         }
 
         override flash_proxy function nextValue(k:int):*
         {
-            return this._iterable._Str_5066((uint(k) - 1));
+            return this._iterable.getSelectableAt((uint(k) - 1));
         }
     }
 }

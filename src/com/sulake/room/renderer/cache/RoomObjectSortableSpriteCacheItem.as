@@ -27,7 +27,7 @@
 
         public function dispose():void
         {
-            this._Str_20276(0);
+            this.setSpriteCount(0);
         }
 
         public function addSprite(k:SortableSprite):void
@@ -40,7 +40,7 @@
             return this._layersInUse[k];
         }
 
-        public function get _Str_9272():Array
+        public function get sprites():Array
         {
             return this._layersInUse;
         }
@@ -56,7 +56,7 @@
             return false;
         }
 
-        public function _Str_20276(k:int):void
+        public function setSpriteCount(k:int):void
         {
             var _local_2:int;
             var _local_3:SortableSprite;

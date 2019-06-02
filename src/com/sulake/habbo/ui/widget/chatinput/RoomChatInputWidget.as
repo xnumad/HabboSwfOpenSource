@@ -105,7 +105,7 @@
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_20658);
             k.addEventListener(_Str_4831.RWWCIDE_CHAT_INPUT_CONTENT, this._Str_20741);
             k.addEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this._Str_3746);
-            k.addEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this._Str_13369);
+            k.addEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this.onFloodControl);
             super.registerUpdateEvents(k);
         }
 
@@ -118,7 +118,7 @@
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_20658);
             k.removeEventListener(_Str_4831.RWWCIDE_CHAT_INPUT_CONTENT, this._Str_20741);
             k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this._Str_3746);
-            k.removeEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this._Str_13369);
+            k.removeEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this.onFloodControl);
         }
 
         private function _Str_20658(k:RoomWidgetRoomObjectUpdateEvent):void
@@ -184,7 +184,7 @@
             {
                 return 1000;
             }
-            return this._roomUi.toolbar._Str_20519;
+            return this._roomUi.toolbar.toolBarAreaWidth;
         }
 
         public function _Str_22730():int
@@ -202,7 +202,7 @@
             return this._selectedUserName;
         }
 
-        public function _Str_13369(k:_Str_6300):void
+        public function onFloodControl(k:_Str_6300):void
         {
             this._floodBlocked = true;
             Logger.log((("Enabling flood blocking for " + k.seconds) + " seconds"));

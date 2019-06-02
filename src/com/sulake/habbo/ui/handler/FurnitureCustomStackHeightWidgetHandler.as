@@ -116,7 +116,7 @@
 
         private function _Str_6826(k:IRoomObject=null):Boolean
         {
-            var _local_2:Boolean = this._container.roomSession._Str_2781;
+            var _local_2:Boolean = this._container.roomSession.isRoomController;
             var _local_3:* = (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST);
             var _local_4:Boolean = this._container.sessionDataManager._Str_2799;
             var _local_5:Boolean = ((k) && (this._container.isOwnerOfFurniture(k)));

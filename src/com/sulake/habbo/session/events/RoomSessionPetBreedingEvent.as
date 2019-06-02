@@ -23,12 +23,12 @@
             return this._state;
         }
 
-        public function get _Str_7440():int
+        public function get ownPetId():int
         {
             return this._ownPetId;
         }
 
-        public function get _Str_7663():int
+        public function get otherPetId():int
         {
             return this._otherPetId;
         }

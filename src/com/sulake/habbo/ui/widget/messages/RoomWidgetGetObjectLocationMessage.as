@@ -20,7 +20,7 @@
             return this._objectId;
         }
 
-        public function get _Str_1723():int
+        public function get objectType():int
         {
             return this._objectType;
         }

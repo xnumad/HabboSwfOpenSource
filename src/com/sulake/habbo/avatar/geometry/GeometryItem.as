@@ -20,8 +20,8 @@
 
         public function _Str_1522(k:Vector3D):Number
         {
-            var _local_2:Number = Math.abs(((k.z - this._Str_1604.z) - this._radius));
-            var _local_3:Number = Math.abs(((k.z - this._Str_1604.z) + this._radius));
+            var _local_2:Number = Math.abs(((k.z - this.transformedLocation.z) - this._radius));
+            var _local_3:Number = Math.abs(((k.z - this.transformedLocation.z) + this._radius));
             return Math.min(_local_2, _local_3);
         }
 
@@ -35,18 +35,18 @@
             return this._normal;
         }
 
-        public function get _Str_2207():Boolean
+        public function get isDoubleSided():Boolean
         {
             return this._isDoubleSided;
         }
 
         public function toString():String
         {
-            var k:String = ((((this._id + ": ") + this.location) + " - ") + this._Str_1604);
+            var k:String = ((((this._id + ": ") + this.location) + " - ") + this.transformedLocation);
             return k;
         }
 
-        public function get _Str_1457():Boolean
+        public function get isDynamic():Boolean
         {
             return this._isDynamic;
         }

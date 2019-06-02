@@ -43,7 +43,7 @@
             {
                 return;
             }
-            this._Str_17540();
+            this.requestLocalizationInit();
             this._window = IFrameWindow(this._roomEvents.getXmlWindow("ude_help"));
             this._helpContainer = IWindowContainer(this.find(this._window, "help_container"));
             this._buttonPrevious = (this._helpContainer.findChildByName("button_previous") as IContainerButtonWindow);
@@ -147,7 +147,7 @@
             this.openPage();
         }
 
-        private function _Str_17540():void
+        private function requestLocalizationInit():void
         {
             var _local_2:ILocalization;
             var _local_3:ILocalization;

@@ -4,7 +4,7 @@
 
     public interface IMouseListenerService 
     {
-        function get _Str_21872():Array;
+        function get eventTypes():Array;
         function get _Str_14321():uint;
         function set _Str_14321(_arg_1:uint):void;
         function dispose():void;

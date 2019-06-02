@@ -8,7 +8,7 @@
         function get groupId():int;
         function get groupName():String;
         function get _Str_17501():String;
-        function get _Str_6136():int;
+        function get baseRoomId():int;
         function get _Str_7342():int;
         function get _Str_7590():int;
         function get _Str_6089():Array;

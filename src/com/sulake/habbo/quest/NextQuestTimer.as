@@ -153,7 +153,7 @@
             return 0;
         }
 
-        public function _Str_2719():Boolean
+        public function isVisible():Boolean
         {
             return (this._window) && (this._window.visible);
         }

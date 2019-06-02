@@ -12,7 +12,7 @@
             this._animations = new Dictionary();
         }
 
-        public function _Str_2061(k:AvatarStructure, _arg_2:XML):Boolean
+        public function registerAnimation(k:AvatarStructure, _arg_2:XML):Boolean
         {
             var _local_3:String = String(_arg_2.@name);
             this._animations[_local_3] = new Animation(k, _arg_2);

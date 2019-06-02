@@ -13,7 +13,7 @@
         protected var _Str_1518:String = null;
         protected var _Str_2442:String = "reserved-system-message";
         protected var _Str_15582:String;
-        protected var _Str_578:String = "STATIC";
+        protected var _type:String = "STATIC";
 
         public function AdNoticeConfig(k:Object=null)
         {
@@ -55,18 +55,18 @@
             {
                 if (k.toUpperCase() == "STATIC")
                 {
-                    this._Str_578 = "STATIC";
+                    this._type = "STATIC";
                 }
                 else
                 {
-                    this._Str_578 = "COUNTDOWN";
+                    this._type = "COUNTDOWN";
                 }
             }
         }
 
         public function get type():String
         {
-            return this._Str_578;
+            return this._type;
         }
 
         public function _Str_23309():Boolean
@@ -98,7 +98,7 @@
         {
             if (this._Str_1518 == null)
             {
-                if (this._Str_578 == "STATIC")
+                if (this._type == "STATIC")
                 {
                     this._Str_1518 = _Str_19027;
                 }

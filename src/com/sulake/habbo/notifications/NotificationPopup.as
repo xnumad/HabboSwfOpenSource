@@ -41,7 +41,7 @@
             {
                 return;
             }
-            this._window.procedure = this._Str_3305;
+            this._window.procedure = this.eventHandler;
             this._window.center();
             var _local_5:XmlAsset = (_arg_2.getAssetByName("motd_notification_item_xml") as XmlAsset);
             if (_local_5 == null)
@@ -70,7 +70,7 @@
             this._localizationManager = null;
         }
 
-        private function _Str_3305(k:WindowEvent, _arg_2:IWindow):void
+        private function eventHandler(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

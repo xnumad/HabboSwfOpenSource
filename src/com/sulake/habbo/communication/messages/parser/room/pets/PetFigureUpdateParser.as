@@ -13,7 +13,7 @@
         private var _Str_3253:Boolean;
 
 
-        public function get _Str_2707():int
+        public function get roomIndex():int
         {
             return this._Str_2775;
         }
@@ -33,7 +33,7 @@
             return this._Str_6842;
         }
 
-        public function get _Str_2886():Boolean
+        public function get isRiding():Boolean
         {
             return this._Str_3253;
         }

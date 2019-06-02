@@ -81,7 +81,7 @@
 
         private function _Str_4297(k:UserRightsMessageEvent):void
         {
-            if (k._Str_6124 >= SecurityLevelEnum._Str_18829)
+            if (k.securityLevel >= SecurityLevelEnum._Str_18829)
             {
                 this._enabled = false;
                 this._Str_21648();

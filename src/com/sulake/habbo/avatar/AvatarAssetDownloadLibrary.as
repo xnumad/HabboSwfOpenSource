@@ -43,37 +43,37 @@
             super.dispose();
         }
 
-        public function _Str_1305():void
+        public function startDownloading():void
         {
             this._state = _Str_997;
             var k:URLRequest = new URLRequest(this._downloadUrl);
             var _local_2:LibraryLoader = new LibraryLoader();
             this._assets.loadFromFile(_local_2, true);
-            _local_2.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_COMPLETE, this._Str_631);
-            _local_2.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this._Str_979);
+            _local_2.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_COMPLETE, this.onLoaderComplete);
+            _local_2.addEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this.onLoaderError);
             _local_2.load(k);
         }
 
-        private function _Str_979(k:LibraryLoaderEvent):void
+        private function onLoaderError(k:LibraryLoaderEvent):void
         {
             Core.error(((((((((("Could not load avatar asset library " + this._libraryName) + " from URL ") + this._downloadUrl) + " HTTP status ") + k.status) + " bytes loaded ") + k.bytesLoaded) + "/") + k.bytesTotal), false, Core.ERROR_CATEGORY_DOWNLOAD_LIBRARY);
         }
 
-        private function _Str_631(k:Event):void
+        private function onLoaderComplete(k:Event):void
         {
             var _local_2:LibraryLoader = (k.target as LibraryLoader);
-            _local_2.removeEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_COMPLETE, this._Str_631);
-            _local_2.removeEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this._Str_979);
+            _local_2.removeEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_COMPLETE, this.onLoaderComplete);
+            _local_2.removeEventListener(LibraryLoaderEvent.LIBRARY_LOADER_EVENT_ERROR, this.onLoaderError);
             this._state = _Str_599;
             dispatchEvent(new Event(Event.COMPLETE));
         }
 
-        public function get _Str_1134():String
+        public function get libraryName():String
         {
             return this._libraryName;
         }
 
-        public function get _Str_992():Boolean
+        public function get isReady():Boolean
         {
             return this._state == _Str_599;
         }
@@ -81,7 +81,7 @@
         public function toString():String
         {
             var k:String = this._libraryName;
-            k = (k + ((this._Str_992) ? "[x]" : "[ ]"));
+            k = (k + ((this.isReady) ? "[x]" : "[ ]"));
             return k;
         }
     }

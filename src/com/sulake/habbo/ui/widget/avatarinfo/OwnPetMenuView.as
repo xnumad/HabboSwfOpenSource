@@ -32,7 +32,7 @@
         private static const _Str_5938:int = 2;
         private static const _Str_10946:int = 3;
 
-        private var _Str_594:PetInfoData;
+        private var _data:PetInfoData;
         private var _Str_1069:int;
         private var _Str_11220:IFurnitureData;
         private var _Str_18260:IFurnitureData;
@@ -49,9 +49,9 @@
 
         public static function setup(k:OwnPetMenuView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:PetInfoData):void
         {
-            k._Str_594 = _arg_6;
+            k._data = _arg_6;
             var _local_7:Boolean = k.widget._Str_3859;
-            var _local_8:Boolean = k.widget._Str_2886;
+            var _local_8:Boolean = k.widget.isRiding;
             if (k.widget._Str_20290())
             {
                 k._Str_1069 = _Str_10946;
@@ -80,7 +80,7 @@
 
         override public function dispose():void
         {
-            this._Str_594 = null;
+            this._data = null;
             this._Str_11220 = null;
             this._Str_18260 = null;
             this._Str_2276 = null;
@@ -131,7 +131,7 @@
             var _local_6:int;
             var _local_7:IRoomObject;
             var _local_8:int;
-            if ((((!(_window)) || (!(this._Str_594))) || (!(_Str_2374))))
+            if ((((!(_window)) || (!(this._data))) || (!(_Str_2374))))
             {
                 return;
             }
@@ -148,10 +148,10 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    _Str_2304("respect", (this._Str_594._Str_2985 > 0));
+                    _Str_2304("respect", (this._data._Str_2985 > 0));
                     _Str_2304("train");
                     _Str_2304("pick_up");
-                    if (this._Str_594._Str_4355 == PetTypeEnum.HORSE)
+                    if (this._data._Str_4355 == PetTypeEnum.HORSE)
                     {
                         this._Str_11220 = this._Str_20669(FurniCategory._Str_6096, PetTypeEnum.HORSE);
                         if (this._Str_11220 != null)
@@ -161,35 +161,35 @@
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.bear.enabled"))
                     {
-                        if (this._Str_594._Str_4355 == PetTypeEnum.BEAR)
+                        if (this._data._Str_4355 == PetTypeEnum.BEAR)
                         {
                             _Str_2304("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.terrier.enabled"))
                     {
-                        if (this._Str_594._Str_4355 == PetTypeEnum.TERRIER)
+                        if (this._data._Str_4355 == PetTypeEnum.TERRIER)
                         {
                             _Str_2304("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.cat.enabled"))
                     {
-                        if (this._Str_594._Str_4355 == PetTypeEnum.CAT)
+                        if (this._data._Str_4355 == PetTypeEnum.CAT)
                         {
                             _Str_2304("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.dog.enabled"))
                     {
-                        if (this._Str_594._Str_4355 == PetTypeEnum.DOG)
+                        if (this._data._Str_4355 == PetTypeEnum.DOG)
                         {
                             _Str_2304("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.pig.enabled"))
                     {
-                        if (this._Str_594._Str_4355 == PetTypeEnum.PIG)
+                        if (this._data._Str_4355 == PetTypeEnum.PIG)
                         {
                             _Str_2304("breed");
                         }
@@ -200,39 +200,39 @@
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
                         _Str_2304("toggle_riding_permission");
-                        this._Str_13657("toggle_riding_permission", ((this._Str_594 != null) ? (this._Str_594.publiclyRideable == PetAccessRightTypeEnum._Str_18396) : false));
+                        this._Str_13657("toggle_riding_permission", ((this._data != null) ? (this._data.publiclyRideable == PetAccessRightTypeEnum._Str_18396) : false));
                     }
-                    _Str_2304("respect", (this._Str_594._Str_2985 > 0));
+                    _Str_2304("respect", (this._data._Str_2985 > 0));
                     _Str_2304("train");
                     _Str_2304("pick_up");
                     _Str_2304("saddle_off");
                     break;
                 case _Str_5938:
                     _Str_2304("dismount");
-                    _Str_2304("respect", (this._Str_594._Str_2985 > 0));
+                    _Str_2304("respect", (this._data._Str_2985 > 0));
                     break;
                 case _Str_10946:
                     _Str_2304("pick_up");
-                    if (this._Str_594.dead)
+                    if (this._data.dead)
                     {
                         this._Str_18260 = this._Str_20669(FurniCategory._Str_6915, PetTypeEnum.MONSTERPLANT);
                         _Str_2304("revive");
-                        if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession._Str_2781)))
+                        if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession.isRoomController)))
                         {
                             _Str_2304("compost");
                         }
                     }
                     else
                     {
-                        _local_4 = (this._Str_594.energy as Number);
-                        _local_5 = (this._Str_594.maximumEnergy as Number);
+                        _local_4 = (this._data.energy as Number);
+                        _local_5 = (this._data.maximumEnergy as Number);
                         _Str_2304("treat", true, ((_local_4 / _local_5) < 0.98));
-                        if (this._Str_594.level == this._Str_594.maximumLevel)
+                        if (this._data.level == this._data.maximumLevel)
                         {
-                            if (this._Str_594.breedable)
+                            if (this._data.breedable)
                             {
                                 _Str_2304("toggle_breeding_permission");
-                                this._Str_13657("toggle_breeding_permission", this._Str_594.publiclyBreedable);
+                                this._Str_13657("toggle_breeding_permission", this._data.publiclyBreedable);
                                 _Str_2304("breed");
                             }
                         }
@@ -252,7 +252,7 @@
                     }
                 }
             }
-            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._Str_594._Str_2985.toString());
+            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data._Str_2985.toString());
             _Str_2374.autoArrangeItems = true;
             _Str_2374.visible = true;
         }
@@ -341,7 +341,7 @@
             }
             else
             {
-                _local_3._Str_2205();
+                _local_3.unselect();
             }
         }
 
@@ -385,7 +385,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "respect":
-                            this._Str_594._Str_2985--;
+                            this._data._Str_2985--;
                             this._Str_2771();
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, this._Str_2508);
                             break;
@@ -433,7 +433,7 @@
                                 _local_7 = RoomWidgetPetCommandMessage._Str_16282;
                                 _local_8 = ("pet.command." + _local_7);
                                 _local_9 = _Str_2268.catalog.localization.getLocalization(_local_8);
-                                _local_4 = new RoomWidgetPetCommandMessage(RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND, this._Str_594.id, ((this._Str_594.name + " ") + _local_9));
+                                _local_4 = new RoomWidgetPetCommandMessage(RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND, this._data.id, ((this._data.name + " ") + _local_9));
                             }
                             else
                             {

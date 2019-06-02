@@ -36,7 +36,7 @@
         {
             super.blend = k;
             var _local_2:IWindow = getChildByName(_BTN_TEXT);
-            var _local_3:Boolean = _Str_2767(WindowState.DISABLED);
+            var _local_3:Boolean = getStateFlag(WindowState.DISABLED);
             if (_local_2 != null)
             {
                 _local_2.blend = ((_local_3) ? (k / 2) : k);

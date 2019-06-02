@@ -80,7 +80,7 @@
                         _local_3 = _local_2.getModel();
                         if (_local_3 != null)
                         {
-                            _local_7 = (((this._container.roomSession._Str_2781) || (this._container.sessionDataManager._Str_2799)) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST));
+                            _local_7 = (((this._container.roomSession.isRoomController) || (this._container.sessionDataManager._Str_2799)) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST));
                             if (_local_7)
                             {
                                 _local_4 = new _Str_3584(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, _local_5.id, _local_5.category, _local_5.roomId);
@@ -91,7 +91,7 @@
                     break;
                 case RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR:
                     _local_6 = (k as RoomWidgetClothingChangeMessage);
-                    _local_2 = this._container.roomEngine.getRoomObject(_local_6.roomId, _local_6._Str_1577, _local_6._Str_4093);
+                    _local_2 = this._container.roomEngine.getRoomObject(_local_6.roomId, _local_6._Str_1577, _local_6.objectCategory);
                     if (_local_2 != null)
                     {
                         _local_3 = _local_2.getModel();
@@ -116,7 +116,7 @@
                             if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_7195, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
                             {
                                 this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId._Str_7195, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
-                                _local_4 = new _Str_3584(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, _local_6._Str_1577, _local_6._Str_4093, _local_6.roomId);
+                                _local_4 = new _Str_3584(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, _local_6._Str_1577, _local_6.objectCategory, _local_6.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
                         }

@@ -106,7 +106,7 @@
             if (this._mapLoader)
             {
                 this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onConfigurationComplete);
-                this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_680);
+                this._mapLoader.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onConfigurationError);
             }
         }
 
@@ -115,11 +115,11 @@
             if (this._mapLoader)
             {
                 this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this.onConfigurationComplete);
-                this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this._Str_680);
+                this._mapLoader.removeEventListener(AssetLoaderEvent.ASSETLOADEREVENTERROR, this.onConfigurationError);
             }
         }
 
-        private function _Str_680(k:Event):void
+        private function onConfigurationError(k:Event):void
         {
             var _local_2:String;
             var _local_3:URLRequest;
@@ -222,9 +222,9 @@
             }
         }
 
-        public function _Str_992(k:IAvatarFigureContainer):Boolean
+        public function isReady(k:IAvatarFigureContainer):Boolean
         {
-            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager._Str_992))))
+            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager.isReady))))
             {
                 return false;
             }
@@ -236,12 +236,12 @@
         {
             var _local_5:AvatarAssetDownloadLibrary;
             var _local_6:Array;
-            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager._Str_992))))
+            if (((!(this._isInitReady)) || (!(this._structure.avatarRenderManager.isReady))))
             {
                 this._initDownloadBuffer.push([k, _arg_2]);
                 return;
             }
-            var _local_3:String = k._Str_1008();
+            var _local_3:String = k.getFigureString();
             var _local_4:Array = this._Str_708(k);
             if (_local_4.length > 0)
             {
@@ -291,7 +291,7 @@
                 _local_4 = this._incompleteFigures[_local_3];
                 for each (_local_8 in _local_4)
                 {
-                    if (!_local_8._Str_992)
+                    if (!_local_8.isReady)
                     {
                         _local_7 = false;
                         break;
@@ -319,7 +319,7 @@
             while (_local_6 < this._currentDownloads.length)
             {
                 _local_5 = this._currentDownloads[_local_6];
-                if (_local_5._Str_1134 == (k.target as AvatarAssetDownloadLibrary)._Str_1134)
+                if (_local_5.libraryName == (k.target as AvatarAssetDownloadLibrary).libraryName)
                 {
                     this._currentDownloads.splice(_local_6, 1);
                 }
@@ -372,7 +372,7 @@
                                 {
                                     if (_local_12 != null)
                                     {
-                                        if (!_local_12._Str_992)
+                                        if (!_local_12.isReady)
                                         {
                                             if (_local_2.indexOf(_local_12) == -1)
                                             {
@@ -395,14 +395,14 @@
             while (((this._pendingDownloadQueue.length > 0) && (this._currentDownloads.length < this._Str_589)))
             {
                 k = this._pendingDownloadQueue[0];
-                k._Str_1305();
+                k.startDownloading();
                 this._currentDownloads.push(this._pendingDownloadQueue.shift());
             }
         }
 
         private function _Str_682(k:AvatarAssetDownloadLibrary):void
         {
-            if ((((!(k._Str_992)) && (this._pendingDownloadQueue.indexOf(k) == -1)) && (this._currentDownloads.indexOf(k) == -1)))
+            if ((((!(k.isReady)) && (this._pendingDownloadQueue.indexOf(k) == -1)) && (this._currentDownloads.indexOf(k) == -1)))
             {
                 this._pendingDownloadQueue.push(k);
                 this._Str_866();

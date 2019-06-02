@@ -30,13 +30,13 @@
             this._selectedPresetId = k;
         }
 
-        public function _Str_17287(k:int, _arg_2:int, _arg_3:int, _arg_4:int):void
+        public function storePreset(k:int, _arg_2:int, _arg_3:int, _arg_4:int):void
         {
             var _local_5:RoomSessionDimmerPresetsEventPresetItem = new RoomSessionDimmerPresetsEventPresetItem(k, _arg_2, _arg_3, _arg_4);
             this._presets[(k - 1)] = _local_5;
         }
 
-        public function _Str_14989(k:int):RoomSessionDimmerPresetsEventPresetItem
+        public function getPreset(k:int):RoomSessionDimmerPresetsEventPresetItem
         {
             if (((k < 0) || (k >= this._presets.count)))
             {

@@ -616,7 +616,7 @@
                                     return;
                                 }
                                 _local_2 = (k as TradingCloseEvent);
-                                if (_local_2._Str_2273().reason == TradingCloseParser._Str_16410)
+                                if (_local_2._Str_2273().reason == TradingCloseParser.ERROR_WHILE_COMMIT)
                                 {
                                     if (this._inventory.getBoolean("trading.commiterror.enabled"))
                                     {

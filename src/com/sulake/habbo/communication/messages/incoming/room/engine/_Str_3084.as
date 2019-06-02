@@ -26,9 +26,9 @@
             return (_parser as _Str_5772)._Str_3344;
         }
 
-        public function get _Str_9690():String
+        public function get customInfo():String
         {
-            return (_parser as _Str_5772)._Str_9690;
+            return (_parser as _Str_5772).customInfo;
         }
 
         public function get activityPoints():int

@@ -149,7 +149,7 @@
             var _local_6:ISelectableWindow = (this._window.findChildByName("useExistingSession") as ISelectableWindow);
             if (_local_6)
             {
-                _local_6._Str_2205();
+                _local_6.unselect();
             }
             if (this._habboLogin.getBoolean("try.existing.session"))
             {
@@ -158,7 +158,7 @@
                 this._Str_15685(WindowEvent.allocate(WindowEvent.WINDOW_EVENT_OK, this._window, null, false));
             }
             var _local_7:IItemListWindow = (this._window.findChildByName("list") as IItemListWindow);
-            this._userListItem = _local_7._Str_2915(0);
+            this._userListItem = _local_7.removeListItemAt(0);
             var _local_8:XmlAsset = (this._habboLogin.assets.getAssetByName("login_environment_list_item") as XmlAsset);
             this._environmentItem = this._habboLogin.windowManager.buildFromXML((_local_8.content as XML));
             if (((false) || (false)))
@@ -171,14 +171,14 @@
                 _local_13 = 0;
                 while (_local_13 < _local_12)
                 {
-                    this._environmentList._Str_16478(0);
+                    this._environmentList.removeMenuItemAt(0);
                     _local_13++;
                 }
                 for each (_local_14 in _local_11)
                 {
                     _local_15 = (this._environmentItem.clone() as IWindowContainer);
                     _local_15.findChildByName("title").caption = _local_14;
-                    this._environmentList._Str_15679(_local_15);
+                    this._environmentList.addMenuItem(_local_15);
                 }
                 this._environmentList.selection = _local_9.indexOf(_local_10);
                 this._environmentList.procedure = this._Str_25559;
@@ -387,7 +387,7 @@
             {
                 return;
             }
-            this._habboLogin._Str_19062(this.name, this.password, _arg_2.id);
+            this._habboLogin.sendTryLogin(this.name, this.password, _arg_2.id);
         }
 
         private function _Str_23540(k:Boolean):void
@@ -414,12 +414,12 @@
         private function _Str_14732(k:Event):void
         {
             Logger.log(("Got ticket: " + this._parsedTicket.ticket));
-            Logger.log(("Has Facebook: " + this._parsedTicket._Str_21487));
-            if (this._parsedTicket._Str_21487)
+            Logger.log(("Has Facebook: " + this._parsedTicket.isFacebookUser));
+            if (this._parsedTicket.isFacebookUser)
             {
                 this._habboLogin.setProperty("facebook.user", "1");
             }
-            this._habboLogin._Str_16545 = this._parsedTicket._Str_16545;
+            this._habboLogin.flashClientUrl = this._parsedTicket.flashClientUrl;
             this._habboLogin._Str_25272 = this._parsedTicket.ticket;
             this._parsedTicket.removeEventListener(SSOTicket.SUCCESS, this._Str_14732);
             this._parsedTicket.removeEventListener(SSOTicket.FAILURE, this._Str_15342);

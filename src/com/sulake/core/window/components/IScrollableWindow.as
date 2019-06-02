@@ -16,6 +16,6 @@
         function get maxScrollH():int;
         function get maxScrollV():int;
         function get _Str_3707():Rectangle; //visibleRegion
-        function get _Str_2614():Rectangle;
+        function get visibleRegion():Rectangle;
     }
 }

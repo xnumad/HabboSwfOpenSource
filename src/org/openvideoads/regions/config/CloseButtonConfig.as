@@ -4,11 +4,11 @@
 
     public class CloseButtonConfig extends Debuggable 
     {
-        protected var _Str_578:String = "crosshair";
+        protected var _type:String = "crosshair";
         protected var _color:String = "#FFFFFF";
         protected var _Str_2699:Boolean = true;
         protected var _Str_8441:String = null;
-        protected var _Str_1720:int = 15;
+        protected var _width:int = 15;
         protected var _height:int = 15;
 
         public function CloseButtonConfig(k:Object=null)
@@ -23,7 +23,7 @@
         {
             if (k.type != undefined)
             {
-                this._Str_578 = k.type;
+                this._type = k.type;
             }
             if (k.color != undefined)
             {
@@ -39,7 +39,7 @@
             }
             if (k.width != undefined)
             {
-                this._Str_1720 = k.width;
+                this._width = k.width;
             }
             if (k.height != undefined)
             {
@@ -49,26 +49,26 @@
 
         public function set type(k:String):void
         {
-            this._Str_578 = k;
+            this._type = k;
         }
 
         public function get type():String
         {
-            if (this._Str_578 != null)
+            if (this._type != null)
             {
-                return this._Str_578.toUpperCase();
+                return this._type.toUpperCase();
             }
-            return this._Str_578;
+            return this._type;
         }
 
         public function set width(k:int):void
         {
-            this._Str_1720 = k;
+            this._width = k;
         }
 
         public function get width():int
         {
-            return this._Str_1720;
+            return this._width;
         }
 
         public function set height(k:int):void
@@ -101,12 +101,12 @@
             return this._Str_2699;
         }
 
-        public function set _Str_6349(k:String):void
+        public function set imageURL(k:String):void
         {
             this._Str_8441 = k;
         }
 
-        public function get _Str_6349():String
+        public function get imageURL():String
         {
             return this._Str_8441;
         }

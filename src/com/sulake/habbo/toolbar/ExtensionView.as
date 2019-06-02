@@ -80,7 +80,7 @@
             return (this._itemWindow) && (this._itemWindow.visible);
         }
 
-        public function get _Str_18930():uint
+        public function get screenHeight():uint
         {
             if (!this._itemWindow)
             {
@@ -110,13 +110,13 @@
                 if (this._itemWindow)
                 {
                     this._toolbar._Str_14171((_arg_2 as IWindowContainer));
-                    this._Str_8848();
+                    this.refreshItemWindow();
                 }
                 this._Str_21932();
             }
         }
 
-        public function _Str_20929(k:String):Boolean
+        public function hasExtension(k:String):Boolean
         {
             return !(this._items.getValue(k) == null);
         }
@@ -131,11 +131,11 @@
             return "";
         }
 
-        public function _Str_8848():void
+        public function refreshItemWindow():void
         {
             var k:IWindow;
             var _local_2:String;
-            this._itemWindow._Str_2659();
+            this._itemWindow.removeListItems();
             for each (k in this._itemWindowElements)
             {
                 _local_2 = this._Str_23065(k);
@@ -198,7 +198,7 @@
                     if (this._itemWindow)
                     {
                         this._toolbar._Str_15912(_local_2);
-                        this._Str_8848();
+                        this.refreshItemWindow();
                     }
                 }
                 this._items.remove(k);
@@ -238,7 +238,7 @@
             }
         }
 
-        public function _Str_3705(k:String):Rectangle
+        public function getIconLocation(k:String):Rectangle
         {
             var _local_2:IWindow;
             var _local_3:Rectangle;
@@ -275,7 +275,7 @@
         public function set landingView(k:Boolean):void
         {
             this._landingView = k;
-            this._Str_8848();
+            this.refreshItemWindow();
         }
 
         public function set extraMargin(k:int):void

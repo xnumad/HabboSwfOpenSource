@@ -16,7 +16,7 @@
     {
         private var _habboNotifications:HabboNotifications;
         private var _Str_2440:_Str_2784;
-        private var _Str_578:String;
+        private var _type:String;
         private var _Str_4071:Map;
 
         public function MOTDNotification(k:HabboNotifications, _arg_2:String, _arg_3:Map)
@@ -25,7 +25,7 @@
             var _local_12:IWindow;
             super();
             this._habboNotifications = k;
-            this._Str_578 = _arg_2;
+            this._type = _arg_2;
             this._Str_4071 = _arg_3;
             var _local_4:String = this._Str_5512("title", true);
             var _local_5:String = this._Str_5512("message", true).replace(/\\r/g, "\r");
@@ -73,7 +73,7 @@
             this._Str_2440.dispose();
             this._Str_2440 = null;
             this._habboNotifications = null;
-            this._Str_578 = null;
+            this._type = null;
             this._Str_4071 = null;
         }
 
@@ -108,7 +108,7 @@
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (_arg_2.name == "illustration")
                     {
-                        _arg_2.parent._Str_2648.minHeight = _arg_2.height;
+                        _arg_2.parent.limits.minHeight = _arg_2.height;
                     }
                     return;
             }
@@ -116,7 +116,7 @@
 
         private function _Str_5512(k:String, _arg_2:Boolean):String
         {
-            return this._habboNotifications._Str_5512(this._Str_4071, this._Str_578, k, _arg_2);
+            return this._habboNotifications._Str_5512(this._Str_4071, this._type, k, _arg_2);
         }
     }
 }

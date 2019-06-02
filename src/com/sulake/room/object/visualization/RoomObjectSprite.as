@@ -11,7 +11,7 @@
 
         private var _asset:BitmapData = null;
         private var _assetName:String = "";
-        private var _Str_11397:String = "";
+        private var _libraryAssetName:String = "";
         private var _Str_20770:String = null;
         private var _Str_20092:String = null;
         private var _visible:Boolean = true;
@@ -29,7 +29,7 @@
         private var _Str_19048:int = 0;
         private var _Str_8253:Boolean = false;
         private var _Str_13928:int;
-        private var _Str_6190:Boolean = false;
+        private var _clickHandling:Boolean = false;
         private var _updateID:int = 0;
         private var _instanceId:int = 0;
         private var _filters:Array = null;
@@ -154,7 +154,7 @@
 
         public function get _Str_4530():Boolean
         {
-            return this._Str_6190;
+            return this._clickHandling;
         }
 
         public function get _Str_12289():int
@@ -177,22 +177,22 @@
             return this._Str_17033;
         }
 
-        public function get _Str_1723():String
+        public function get objectType():String
         {
             return this._Str_3796;
         }
 
-        public function set _Str_1723(k:String):void
+        public function set objectType(k:String):void
         {
             this._Str_3796 = k;
         }
 
-        public function get _Str_9396():int
+        public function get spriteType():int
         {
             return this._Str_19048;
         }
 
-        public function set _Str_9396(k:int):void
+        public function set spriteType(k:int):void
         {
             this._Str_19048 = k;
         }
@@ -356,11 +356,11 @@
 
         public function set _Str_4530(k:Boolean):void
         {
-            if (this._Str_6190 == k)
+            if (this._clickHandling == k)
             {
                 return;
             }
-            this._Str_6190 = k;
+            this._clickHandling = k;
             this._updateID++;
         }
 
@@ -381,12 +381,12 @@
 
         public function get _Str_3582():String
         {
-            return this._Str_11397;
+            return this._libraryAssetName;
         }
 
         public function set _Str_3582(k:String):void
         {
-            this._Str_11397 = k;
+            this._libraryAssetName = k;
         }
     }
 }

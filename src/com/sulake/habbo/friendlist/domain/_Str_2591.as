@@ -168,7 +168,7 @@
             return this._open;
         }
 
-        public function get _Str_3544():int
+        public function get pageIndex():int
         {
             return this._Str_4347;
         }
@@ -193,7 +193,7 @@
             this._received = k;
         }
 
-        public function set _Str_3544(k:int):void
+        public function set pageIndex(k:int):void
         {
             this._Str_4347 = k;
         }

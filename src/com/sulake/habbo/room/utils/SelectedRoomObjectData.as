@@ -3,7 +3,7 @@
     import com.sulake.habbo.room.ISelectedRoomObjectData;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.room.utils.IVector3D;
+    import com.sulake.room.utils.IVector3d;
 
     public class SelectedRoomObjectData implements ISelectedRoomObjectData 
     {
@@ -19,7 +19,7 @@
         private var _animFrame:int = -1;
         private var _posture:String = null;
 
-        public function SelectedRoomObjectData(k:int, _arg_2:int, _arg_3:String, _arg_4:IVector3D, _arg_5:IVector3D, _arg_6:int=0, _arg_7:String=null, _arg_8:IStuffData=null, _arg_9:int=-1, _arg_10:int=-1, _arg_11:String=null)
+        public function SelectedRoomObjectData(k:int, _arg_2:int, _arg_3:String, _arg_4:IVector3d, _arg_5:IVector3d, _arg_6:int=0, _arg_7:String=null, _arg_8:IStuffData=null, _arg_9:int=-1, _arg_10:int=-1, _arg_11:String=null)
         {
             this._id = k;
             this._category = _arg_2;

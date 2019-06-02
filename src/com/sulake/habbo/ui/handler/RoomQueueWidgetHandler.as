@@ -64,10 +64,10 @@
                     this._container.roomSession._Str_20268();
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_SPECTATOR_QUEUE:
-                    this._container.roomSession._Str_11375(RoomSessionQueueEvent._Str_14078);
+                    this._container.roomSession._Str_11375(RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR);
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CHANGE_TO_VISITOR_QUEUE:
-                    this._container.roomSession._Str_11375(RoomSessionQueueEvent._Str_14665);
+                    this._container.roomSession._Str_11375(RoomSessionQueueEvent.QUEUE_TARGET_VISITOR);
                     break;
                 case RoomWidgetRoomQueueMessage.RWRQM_CLUB_LINK:
                     if (this._container.catalog != null)
@@ -105,12 +105,12 @@
                     {
                         return;
                     }
-                    switch (_local_2._Str_22709)
+                    switch (_local_2.queueSetTarget)
                     {
-                        case RoomSessionQueueEvent._Str_14665:
+                        case RoomSessionQueueEvent.QUEUE_TARGET_VISITOR:
                             _local_3 = _Str_3879.RWRQUE_VISITOR_QUEUE_STATUS;
                             break;
-                        case RoomSessionQueueEvent._Str_14078:
+                        case RoomSessionQueueEvent.QUEUE_TARGET_SPECTATOR:
                             _local_3 = _Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS;
                             break;
                     }
@@ -123,23 +123,23 @@
                     {
                         _local_4 = (this._container.inventory.clubDays > 0);
                     }
-                    _local_5 = _local_2._Str_14282;
+                    _local_5 = _local_2.queueTypes;
                     _local_7 = false;
                     if (_local_5.length > 1)
                     {
-                        if (((_local_4) && (!(_local_2._Str_14282.indexOf(RoomSessionQueueEvent.C) == -1))))
+                        if (((_local_4) && (!(_local_2.queueTypes.indexOf(RoomSessionQueueEvent.C) == -1))))
                         {
-                            _local_6 = (_local_2._Str_11510(RoomSessionQueueEvent.C) + 1);
+                            _local_6 = (_local_2.getQueueSize(RoomSessionQueueEvent.C) + 1);
                             _local_7 = true;
                         }
                         else
                         {
-                            _local_6 = (_local_2._Str_11510(RoomSessionQueueEvent.D) + 1);
+                            _local_6 = (_local_2.getQueueSize(RoomSessionQueueEvent.D) + 1);
                         }
                     }
                     else
                     {
-                        _local_6 = (_local_2._Str_11510(_local_5[0]) + 1);
+                        _local_6 = (_local_2.getQueueSize(_local_5[0]) + 1);
                     }
                     _local_8 = new _Str_3879(_local_3, _local_6, _local_4, _local_2.isActive, _local_7);
                     this._container.events.dispatchEvent(_local_8);

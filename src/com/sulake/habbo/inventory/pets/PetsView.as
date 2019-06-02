@@ -59,7 +59,7 @@
             return this._disposed;
         }
 
-        public function get _Str_2719():Boolean
+        public function get isVisible():Boolean
         {
             return ((this._view) && (!(this._view.parent == null))) && (this._view.visible);
         }
@@ -161,12 +161,12 @@
             }
             if (this._selectedGridItem != null)
             {
-                this._selectedGridItem._Str_2520(false);
+                this._selectedGridItem.setSelected(false);
             }
             this._selectedGridItem = k;
             if (this._selectedGridItem != null)
             {
-                this._selectedGridItem._Str_2520(true);
+                this._selectedGridItem.setSelected(true);
             }
             this._Str_3190(k);
         }
@@ -207,7 +207,7 @@
             }
         }
 
-        public function _Str_2641(k:_Str_2848, _arg_2:int, _arg_3:Boolean, _arg_4:PetsGridItem=null, _arg_5:int=64, _arg_6:String=null):BitmapData
+        public function getPetImage(k:_Str_2848, _arg_2:int, _arg_3:Boolean, _arg_4:PetsGridItem=null, _arg_5:int=64, _arg_6:String=null):BitmapData
         {
             var _local_7:PetFigureData = k.figureData;
             var _local_8:BitmapData;
@@ -215,12 +215,12 @@
             var _local_10:uint;
             var _local_11:Array = [];
             var _local_12:int;
-            while (_local_12 < (_local_7._Str_13619 * 3))
+            while (_local_12 < (_local_7.customPartCount * 3))
             {
                 _local_11.push(new PetCustomPart(_local_7._Str_3542[_local_12], _local_7._Str_3542[(_local_12 + 1)], _local_7._Str_3542[(_local_12 + 2)]));
                 _local_12 = (_local_12 + 3);
             }
-            var _local_13:ImageResult = this._roomEngine._Str_2641(_local_7.typeId, _local_7.paletteId, _local_9, new Vector3d((_arg_2 * 45)), _arg_5, this, _arg_3, _local_10, _local_11, _arg_6);
+            var _local_13:ImageResult = this._roomEngine.getPetImage(_local_7.typeId, _local_7.paletteId, _local_9, new Vector3d((_arg_2 * 45)), _arg_5, this, _arg_3, _local_10, _local_11, _arg_6);
             if (_local_13 != null)
             {
                 _local_8 = _local_13.data;
@@ -416,7 +416,7 @@
                         _local_9 = ("grw" + _local_16.level);
                     }
                 }
-                _local_2 = this._Str_2641(_local_16, _local_7, _local_8, null, _local_6, _local_9);
+                _local_2 = this.getPetImage(_local_16, _local_7, _local_8, null, _local_6, _local_9);
                 _local_5 = true;
             }
             var _local_10:IBitmapWrapperWindow = (this._view.findChildByName("preview_image") as IBitmapWrapperWindow);
@@ -443,7 +443,7 @@
             if (this._model.roomSession != null)
             {
                 _local_12 = this._model.roomSession._Str_9439;
-                _local_13 = this._model.roomSession._Str_2781;
+                _local_13 = this._model.roomSession.isRoomController;
             }
             var _local_14:String = "";
             if (!_local_13)

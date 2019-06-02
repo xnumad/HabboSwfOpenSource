@@ -40,9 +40,9 @@
             var _local_3:RoomObjectModelDataUpdateMessage = (k as RoomObjectModelDataUpdateMessage);
             if (_local_3 != null)
             {
-                if (_local_3._Str_23619 == RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION)
+                if (_local_3.numberKey == RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION)
                 {
-                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, _local_3._Str_22870);
+                    object.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, _local_3.numberValue);
                 }
             }
         }
@@ -65,12 +65,12 @@
             {
                 object.getModelController().setString(RoomObjectVariableEnum.FURNITURE_DATA, k.getValue(MESSAGE));
             }
-            this._Str_18008(RoomObjectVariableEnum.FURNITURE_TYPE_ID, k.getValue(PRODUCT_CODE));
-            this._Str_18008(RoomObjectVariableEnum.FURNITURE_PURCHASER_NAME, k.getValue(PURCHASER_NAME));
-            this._Str_18008(RoomObjectVariableEnum.FURNITURE_PURCHASER_FIGURE, k.getValue(PURCHASER_FIGURE));
+            this.setObjectVariable(RoomObjectVariableEnum.FURNITURE_TYPE_ID, k.getValue(PRODUCT_CODE));
+            this.setObjectVariable(RoomObjectVariableEnum.FURNITURE_PURCHASER_NAME, k.getValue(PURCHASER_NAME));
+            this.setObjectVariable(RoomObjectVariableEnum.FURNITURE_PURCHASER_FIGURE, k.getValue(PURCHASER_FIGURE));
         }
 
-        private function _Str_18008(k:String, _arg_2:String):void
+        private function setObjectVariable(k:String, _arg_2:String):void
         {
             if (_arg_2 != null)
             {

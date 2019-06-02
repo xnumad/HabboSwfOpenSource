@@ -76,7 +76,7 @@
             }
             this._currentEmitter = null;
             this._hasIgnited = false;
-            this._Str_17286();
+            this.updateCanvas();
         }
 
         public function setAnimation(k:int):void
@@ -87,10 +87,10 @@
             }
             this._currentEmitter = this._emitters[k];
             this._hasIgnited = false;
-            this._Str_17286();
+            this.updateCanvas();
         }
 
-        private function _Str_17286():void
+        private function updateCanvas():void
         {
             if (!this._currentEmitter)
             {
@@ -134,18 +134,18 @@
 
         public function getSpriteYOffset(k:int, _arg_2:int, _arg_3:int):int
         {
-            if (((this._currentEmitter) && (this._currentEmitter._Str_9107 == _arg_3)))
+            if (((this._currentEmitter) && (this._currentEmitter.roomObjectSpriteId == _arg_3)))
             {
                 return this._currentEmitter.y * this._scaleMultiplier;
             }
             return 0;
         }
 
-        public function _Str_25727(k:int):Boolean
+        public function controlsSprite(k:int):Boolean
         {
             if (this._currentEmitter)
             {
-                return this._currentEmitter._Str_9107 == k;
+                return this._currentEmitter.roomObjectSpriteId == k;
             }
             return false;
         }
@@ -163,9 +163,9 @@
             }
             if (this._hasIgnited)
             {
-                if (this._currentEmitter._Str_9107 >= 0)
+                if (this._currentEmitter.roomObjectSpriteId >= 0)
                 {
-                    this._visualization.getSprite(this._currentEmitter._Str_9107).visible = false;
+                    this._visualization.getSprite(this._currentEmitter.roomObjectSpriteId).visible = false;
                 }
             }
         }
@@ -187,7 +187,7 @@
             var k:Number = 10;
             var _local_2:Number = 0;
             var _local_8:int;
-            if (((!(this._hasIgnited)) && (this._currentEmitter._Str_22727)))
+            if (((!(this._hasIgnited)) && (this._currentEmitter.hasIgnited)))
             {
                 this._hasIgnited = true;
             }
@@ -195,13 +195,13 @@
             this._currentEmitter.update();
             if (this._hasIgnited)
             {
-                if (this._currentEmitter._Str_9107 >= 0)
+                if (this._currentEmitter.roomObjectSpriteId >= 0)
                 {
-                    this._visualization.getSprite(this._currentEmitter._Str_9107).visible = false;
+                    this._visualization.getSprite(this._currentEmitter.roomObjectSpriteId).visible = false;
                 }
                 if (!this._canvas)
                 {
-                    this._Str_17286();
+                    this.updateCanvas();
                 }
                 this._canvas.lock();
                 if (this._blackOverlayAlphaTransform.alphaMultiplier == 1)
@@ -244,7 +244,7 @@
             }
         }
 
-        public function _Str_25307(k:XML):void
+        public function parseData(k:XML):void
         {
             var _local_3:IRoomObjectSprite;
             var _local_4:XML;
@@ -306,7 +306,7 @@
                         _local_23 = this._visualization.assetCollection.getAsset(_local_25.@name);
                         _local_22.push(_local_23);
                     }
-                    _local_8._Str_24892(_local_19, _local_20, _local_22, _local_21);
+                    _local_8.configureParticle(_local_19, _local_20, _local_22, _local_21);
                 }
                 _local_8.setup(_local_9, _local_10, _local_13, new Vector3D(0, _local_14, 0), _local_15, _local_16, _local_17, _local_18, _local_12, _local_11);
             }

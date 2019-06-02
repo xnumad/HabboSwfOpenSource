@@ -36,7 +36,7 @@
             this._partSets = null;
         }
 
-        public function _Str_1874(k:XML):void
+        public function cleanUp(k:XML):void
         {
             var _local_2:XML;
             var _local_3:String;

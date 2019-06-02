@@ -44,7 +44,7 @@
 
         public function ExtraInfoDiscountValueItem(k:int, _arg_2:ExtraInfoItemData, _arg_3:HabboCatalog)
         {
-            super(null, k, _arg_2, _Str_3606, true);
+            super(null, k, _arg_2, ALIGN_BOTTOM, true);
             this._catalog = _arg_3;
             this._starAnimationTimer = new Timer(150);
             this._starAnimationTimer.addEventListener(TimerEvent.TIMER, this._Str_20433);
