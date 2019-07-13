@@ -7,7 +7,6 @@
     {
         public static const COLOUR_ARRAY:Array = [["@red@", 9115929], ["@cyan@", 0x7F7F], ["@blue@", 19609], ["@green@", 0x8000], ["@purple@", 0x4C004C]];
 
-
         public static function _Str_25637(k:ChatItem, _arg_2:ChatStyle):void
         {
             var _local_3:Array;

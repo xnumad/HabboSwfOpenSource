@@ -1,6 +1,7 @@
 ﻿package com.sulake.room.utils
 {
     import flash.geom.Point;
+    import com.sulake.room.utils.IVector3d;
 
     public interface IRoomGeometry 
     {
