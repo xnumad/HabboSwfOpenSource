@@ -137,7 +137,7 @@
             this._userView._Str_21116();
             if (_arg_2 != -1)
             {
-                _local_6 = this.handler.container.sessionDataManager._Str_17173(_arg_2);
+                _local_6 = this.handler.container.sessionDataManager.getGroupBadgeId(_arg_2);
                 this.userData.groupId = _arg_2;
                 this.userData._Str_5235 = _local_6;
                 this.userData.groupName = _arg_4;

@@ -440,6 +440,11 @@
             }
         }
 
+        public function getPreviewImage():BitmapData
+        {
+            return this._Str_2726.bitmap.clone();
+        }
+
         private function _Str_24738(k:MouseEvent):void
         {
             var _local_4:DateTimeFormatter;

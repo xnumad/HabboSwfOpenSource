@@ -39,7 +39,7 @@
 
         private function onCreditBalance(k:IMessageEvent):void
         {
-            if (((((this._habboHelp._Str_19829) && (this._habboHelp._Str_7478)) && (!(this._seenTourPopupDuringSession))) && (!(this._habboHelp.sessionDataManager._Str_6986))))
+            if (((((this._habboHelp._Str_19829) && (this._habboHelp._Str_7478)) && (!(this._seenTourPopupDuringSession))) && (!(this._habboHelp.sessionDataManager.isAnyRoomController))))
             {
                 this._popupTimer = new Timer(this._Str_17155(), 1);
                 this._popupTimer.addEventListener(TimerEvent.TIMER, this._Str_22650);

@@ -104,7 +104,7 @@
                 if (_local_7 != null)
                 {
                     _local_4 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                    _local_5 = this._container.sessionDataManager._Str_3411(_local_4);
+                    _local_5 = this._container.sessionDataManager.getFloorItemData(_local_4);
                     if (_local_5 != null)
                     {
                         _local_6 = _local_5.localizedName;
@@ -148,7 +148,7 @@
                 _local_3++;
             }
             _local_2.sort(this._Str_16552);
-            this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT, _local_2, this._container.sessionDataManager._Str_2799));
+            this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT, _local_2, this._container.sessionDataManager.isGodMode));
         }
 
         private function _Str_16552(k:_Str_3405, _arg_2:_Str_3405):int

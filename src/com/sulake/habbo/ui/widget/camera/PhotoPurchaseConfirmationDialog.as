@@ -60,10 +60,10 @@
         private var _purchaseCount:int = 0;
         private var _photoId:String;
 
-        public function PhotoPurchaseConfirmationDialog(k:CameraWidget, _arg_2:String)
+        public function PhotoPurchaseConfirmationDialog(k:CameraWidget, caption:String)
         {
             this._widget = k;
-            this._caption = _arg_2;
+            this._caption = caption;
             this._window = (this._widget.getXmlWindow("photo_purchase_confirmation") as IWindowContainer);
             var _local_3:IItemListWindow = ((this._window as IFrameWindow).content.getChildByName("contentlist") as IItemListWindow);
             if (k.component.getBoolean("camera.competition.enabled"))
@@ -99,7 +99,7 @@
 
         private function UploadPhoto():void
         {
-            var PhotoImage:BitmapData = this._widget.viewFinder.getPreviewImage();
+            var PhotoImage:BitmapData = this._widget.photoLab.getPreviewImage();
             if(PhotoImage == null)
             {
                 this._widget._Str_10821("photoPurchaseCancel");

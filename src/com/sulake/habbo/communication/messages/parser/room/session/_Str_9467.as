@@ -5,8 +5,6 @@
 
     public class _Str_9467 implements IMessageParser 
     {
-
-
         public function flush():Boolean
         {
             return true;

@@ -97,12 +97,12 @@
             var _local_5:IRoomObject = this._widget.handler.roomEngine.getRoomObject(_local_4, k, RoomObjectCategoryEnum.CONST_10);
             if (_local_5 != null)
             {
-                this._furnitureData = this._widget.handler._Str_4536(_local_5);
+                this._furnitureData = this._widget.handler.getFurniData(_local_5);
                 this._requestObjectId = _local_5.getId();
             }
             else
             {
-                this._furnitureData = this._widget.handler.container.sessionDataManager._Str_3411(k);
+                this._furnitureData = this._widget.handler.container.sessionDataManager.getFloorItemData(k);
                 this._requestObjectId = _arg_3;
             }
             this._targetRoomObjectId = _arg_2;

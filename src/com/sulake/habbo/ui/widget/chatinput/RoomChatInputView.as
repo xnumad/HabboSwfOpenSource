@@ -81,7 +81,7 @@
             this._typingTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_20723);
             this._idleTimer = new Timer(10000, 1);
             this._idleTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_20169);
-            this._isNoob = ((this.sessionDataManager._Str_14040) || (this.sessionDataManager._Str_6986));
+            this._isNoob = ((this.sessionDataManager.nameChangeAllowed) || (this.sessionDataManager.isAnyRoomController));
             if (this._isNoob)
             {
                 _local_2 = k.handler.container.config;

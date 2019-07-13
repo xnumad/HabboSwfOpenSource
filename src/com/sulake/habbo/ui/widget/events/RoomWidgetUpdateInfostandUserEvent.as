@@ -168,12 +168,12 @@
             return this._canBeAskedForAFriend;
         }
 
-        public function set _Str_3577(k:int):void
+        public function set petRespectLeft(k:int):void
         {
             this._Str_3437 = k;
         }
 
-        public function get _Str_3577():int
+        public function get petRespectLeft():int
         {
             return this._Str_3437;
         }

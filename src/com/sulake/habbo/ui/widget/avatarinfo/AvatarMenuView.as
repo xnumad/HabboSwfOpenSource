@@ -93,7 +93,7 @@
                 _Str_2304("ignore", (!(this._data.isIgnored)));
                 _Str_2304("unignore", this._data.isIgnored);
                 _Str_2304("report", ((this.widget.configuration) && (this.widget.configuration.getBoolean("infostand.report.show"))));
-                _local_4 = this._data._Str_3577;
+                _local_4 = this._data.petRespectLeft;
                 this.widget.localizations.registerParameter("infostand.button.respect", "count", _local_4.toString());
                 _Str_2304("respect", (_local_4 > 0));
                 _local_5 = this.widget.handler;
@@ -276,10 +276,10 @@
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_SEND_FRIEND_REQUEST;
                             break;
                         case "respect":
-                            this._data._Str_3577--;
-                            _local_6 = this._data._Str_3577;
+                            this._data.petRespectLeft--;
+                            _local_6 = this._data.petRespectLeft;
                             this.widget.localizations.registerParameter("infostand.button.respect", "count", _local_6.toString());
-                            _Str_2304("respect", (this._data._Str_3577 > 0));
+                            _Str_2304("respect", (this._data.petRespectLeft > 0));
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_RESPECT_USER;
                             if (_local_6 > 0)
                             {

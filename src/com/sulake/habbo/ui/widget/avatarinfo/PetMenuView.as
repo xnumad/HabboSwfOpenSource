@@ -104,7 +104,7 @@
             }
             var _local_4:IRoomSession = this.widget.handler.roomSession;
             var _local_5:ISessionDataManager = this.widget.handler.container.sessionDataManager;
-            if ((((_local_4.isRoomController) || (_local_5._Str_2799)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((_local_4.isRoomController) || (_local_5.isGodMode)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 _Str_2304("pick_up");
             }

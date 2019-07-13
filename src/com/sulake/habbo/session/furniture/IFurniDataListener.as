@@ -4,6 +4,6 @@
 
     public interface IFurniDataListener extends IDisposable 
     {
-        function _Str_15145():void;
+        function furniDataReady():void;
     }
 }

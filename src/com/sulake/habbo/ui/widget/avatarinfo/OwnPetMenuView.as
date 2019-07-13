@@ -263,7 +263,7 @@
             var _local_6:Array;
             var _local_7:int;
             var _local_3:IFurnitureData;
-            var _local_4:Array = this.widget.handler.container.sessionDataManager._Str_19930(k);
+            var _local_4:Array = this.widget.handler.container.sessionDataManager.getFloorItemsDataByCategory(k);
             for each (_local_5 in _local_4)
             {
                 _local_6 = _local_5.customParams.split(" ");

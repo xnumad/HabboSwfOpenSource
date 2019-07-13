@@ -179,7 +179,7 @@
                 if (this._cachedDailyOfferMessageEvent == null)
                 {
                     this._cachedDailyOfferMessageEvent = k;
-                    this._questEngine.sessionDataManager._Str_16650(this);
+                    this._questEngine.sessionDataManager.addProductsReadyEventListener(this);
                 }
             }
         }

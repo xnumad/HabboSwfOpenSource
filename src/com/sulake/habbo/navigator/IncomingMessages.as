@@ -328,7 +328,7 @@
                         }
                         else
                         {
-                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator._Str_2627._Str_4050))) && (!(this._navigator._Str_2627._Str_6986))) && (!(this._navigator._Str_2627._Str_2799))))
+                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator._Str_2627._Str_4050))) && (!(this._navigator._Str_2627.isAnyRoomController))) && (!(this._navigator._Str_2627.isGodMode))))
                             {
                                 return;
                             }

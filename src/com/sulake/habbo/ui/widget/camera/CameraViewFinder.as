@@ -69,11 +69,6 @@
             this._Str_5658.visible = false;
         }
 
-        public function getPreviewImage():BitmapData
-        {
-            return this._Str_2726.bitmap;
-        }
-
         public function dispose():void
         {
             if (this._disposed)

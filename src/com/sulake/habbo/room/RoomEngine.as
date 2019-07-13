@@ -4198,7 +4198,7 @@
             {
                 return;
             }
-            var _local_7:Function = ((_arg_5) ? this._sessionDataManager._Str_15583 : this._sessionDataManager.getBadgeImageAssetName);
+            var _local_7:Function = ((_arg_5) ? this._sessionDataManager.getGroupBadgeAssetName : this._sessionDataManager.getBadgeImageAssetName);
             var _local_8:String = _local_7.call(null, _arg_4);
             if (!_local_8)
             {
@@ -4232,10 +4232,10 @@
 
         private function addBadgeGraphicAssets(k:IRoomObjectController, _arg_2:String, _arg_3:Boolean=false):void
         {
-            var _local_4:Function = ((_arg_3) ? this._sessionDataManager._Str_15583 : this._sessionDataManager.getBadgeImageAssetName);
-            var _local_5:Function = ((_arg_3) ? this._sessionDataManager._Str_19687 : this._sessionDataManager._Str_19992);
+            var _local_4:Function = ((_arg_3) ? this._sessionDataManager.getGroupBadgeAssetName : this._sessionDataManager.getBadgeImageAssetName);
+            var _local_5:Function = ((_arg_3) ? this._sessionDataManager.getGroupBadgeSmallAssetName : this._sessionDataManager.getBadgeImageSmallAssetName);
             var _local_6:Function = ((_arg_3) ? this._sessionDataManager.getGroupBadgeImage : this._sessionDataManager.getBadgeImage);
-            var _local_7:Function = ((_arg_3) ? this._sessionDataManager._Str_17218 : this._sessionDataManager._Str_20021);
+            var _local_7:Function = ((_arg_3) ? this._sessionDataManager.getGroupBadgeSmallImage : this._sessionDataManager.getBadgeSmallImage);
             var _local_8:String = String(_local_4.call(null, _arg_2));
             var _local_9:BitmapData = BitmapData(_local_6.call(null, _arg_2));
             this._roomContentLoader._Str_16696(k.getType(), _local_8, _local_9, false);
@@ -4263,7 +4263,7 @@
             {
                 _local_4 = _local_2[_local_3];
                 this.addBadgeGraphicAssets(_local_4.object, k.badgeId, _local_4._Str_14095);
-                _local_5 = ((_local_4._Str_14095) ? this._sessionDataManager._Str_15583 : this._sessionDataManager.getBadgeImageAssetName);
+                _local_5 = ((_local_4._Str_14095) ? this._sessionDataManager.getGroupBadgeAssetName : this._sessionDataManager.getBadgeImageAssetName);
                 _local_6 = new RoomObjectGroupBadgeUpdateMessage(k.badgeId, String(_local_5.call(null, k.badgeId)));
                 if (((!(_local_6 == null)) && (!(_local_4.object.getEventHandler() == null))))
                 {
@@ -4406,7 +4406,7 @@
                 _local_8 = this._roomSessionManager.getSession(this._activeRoomId)._Str_3871;
             }
             var _local_9:SpriteDataCollector = new SpriteDataCollector();
-            var _local_10:String = _local_9._Str_4536(k, _local_7, this, _local_8);
+            var _local_10:String = _local_9.getFurniData(k, _local_7, this, _local_8);
             var _local_11:String = _local_9._Str_24177(this);
             var _local_12:Array = _local_9._Str_22985(k, _local_7, this, _arg_2);
             if (_arg_5)

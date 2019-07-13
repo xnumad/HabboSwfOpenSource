@@ -372,10 +372,10 @@
                     this._container.friendList._Str_14642(_local_2, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_RESPECT_USER:
-                    this._container.sessionDataManager._Str_20136(_local_2);
+                    this._container.sessionDataManager.giveRespect(_local_2);
                     break;
                 case RoomWidgetUserActionMessage._Str_6480:
-                    this._container.sessionDataManager._Str_21665(_local_2);
+                    this._container.sessionDataManager.givePetRespect(_local_2);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_WHISPER_USER:
                     _local_8 = new _Str_4831(_Str_4831.WHISPER, _local_3.name);
@@ -415,7 +415,7 @@
                     this._container.inventory._Str_20389(_local_9._Str_2713, _local_9.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_OPEN_HOME_PAGE:
-                    this._container.sessionDataManager._Str_21275(_local_3._Str_2394, _local_3.name);
+                    this._container.sessionDataManager.ejectAllFurniture(_local_3._Str_2394, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PICKUP_PET:
                     this._container.roomSession._Str_13781(_local_2);
@@ -656,7 +656,7 @@
                         _local_11 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
                         if (k.category == RoomObjectCategoryEnum.CONST_10)
                         {
-                            _local_12 = this._container.sessionDataManager._Str_3411(_local_11);
+                            _local_12 = this._container.sessionDataManager.getFloorItemData(_local_11);
                         }
                         else
                         {
@@ -764,7 +764,7 @@
             _local_6._Str_3246 = this._container.roomSession.isRoomController;
             _local_6._Str_3672 = this._container.roomSession._Str_3672;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6._Str_3529 = this._container.sessionDataManager._Str_2799;
+            _local_6._Str_3529 = this._container.sessionDataManager.isGodMode;
             _local_6._Str_5990 = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
             _local_8.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
@@ -790,7 +790,7 @@
             }
             _local_5._Str_3246 = this._container.roomSession.isRoomController;
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_5._Str_3529 = this._container.sessionDataManager._Str_2799;
+            _local_5._Str_3529 = this._container.sessionDataManager.isGodMode;
             var _local_7:Array = new Array();
             _local_7.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
             _local_5.badges = _local_7;
@@ -839,7 +839,7 @@
             _local_6._Str_3246 = this._container.roomSession.isRoomController;
             _local_6._Str_3672 = this._container.roomSession._Str_3672;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6._Str_3529 = this._container.sessionDataManager._Str_2799;
+            _local_6._Str_3529 = this._container.sessionDataManager.isGodMode;
             _local_6._Str_18096 = this._container.sessionDataManager._Str_4050;
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
             {
@@ -863,8 +863,8 @@
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6._Str_6394) + ", Kicked: ") + _local_6._Str_5990) + ", Banned: ") + _local_6._Str_6701));
                 }
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
-                _local_6._Str_3577 = this._container.sessionDataManager._Str_3577;
-                _local_10 = (!(this._container.sessionDataManager._Str_22031));
+                _local_6.petRespectLeft = this._container.sessionDataManager.petRespectLeft;
+                _local_10 = (!(this._container.sessionDataManager.systemShutDown));
                 _local_11 = this._container.roomSession._Str_3827;
                 if (!_local_10)
                 {
@@ -896,16 +896,16 @@
                     _local_6._Str_6622 = RoomWidgetUpdateInfostandUserEvent._Str_13798;
                 }
                 _local_12 = this._container.sessionDataManager.userId;
-                _local_13 = this._container.sessionDataManager._Str_18437(_local_12);
+                _local_13 = this._container.sessionDataManager.getUserTags(_local_12);
                 this._Str_16287(_local_12, _local_13);
             }
             _local_6.groupId = int(_arg_4._Str_4592);
-            _local_6._Str_5235 = this._container.sessionDataManager._Str_17173(int(_arg_4._Str_4592));
+            _local_6._Str_5235 = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4._Str_4592));
             _local_6.groupName = _arg_4.groupName;
             _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4._Str_2394);
             _local_6.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_6);
-            var _local_8:Array = this._container.sessionDataManager._Str_18437(_arg_4._Str_2394);
+            var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4._Str_2394);
             this._Str_16287(_arg_4._Str_2394, _local_8);
             this._container._Str_8097._Str_14387(_arg_4._Str_2394);
             this._container.connection.send(new _Str_8049(_arg_4._Str_2394));
@@ -1031,7 +1031,7 @@
                 _local_14 = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
                 if (k.category == RoomObjectCategoryEnum.CONST_10)
                 {
-                    _local_15 = this._container.sessionDataManager._Str_3411(_local_14);
+                    _local_15 = this._container.sessionDataManager.getFloorItemData(_local_14);
                 }
                 else
                 {
@@ -1071,7 +1071,7 @@
             _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.CONST_20);
             _local_3.isRoomController = this._container.roomSession.isRoomController;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_3._Str_2799 = this._container.sessionDataManager._Str_2799;
+            _local_3.isGodMode = this._container.sessionDataManager.isGodMode;
             _local_3.ownerId = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_OWNER_ID);
             _local_3.ownerName = _local_5.getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME);
             _local_3.usagePolicy = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_USAGE_POLICY);
@@ -1262,7 +1262,7 @@
                 }
                 else
                 {
-                    if ((((_local_12.isRoomController) || (this._container.sessionDataManager._Str_2799)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
+                    if ((((_local_12.isRoomController) || (this._container.sessionDataManager.isGodMode)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
                     {
                         _local_11._Str_5114 = true;
                     }

@@ -17,13 +17,13 @@
         private var _selectionHighlighter:IWindow;
         private var _isUnseen:Boolean;
 
-        public function Badge(k:String, _arg_2:IWindowContainer, _arg_3:Boolean)
+        public function Badge(badgeId:String, window:IWindowContainer, isUnseen:Boolean)
         {
-            this._badgeId = k;
-            this._window = _arg_2;
+            this._badgeId = badgeId;
+            this._window = window;
             this._selectionHighlighter = this._window.findChildByTag("BG_COLOR");
-            this._isUnseen = _arg_3;
-            _Str_2402(IWidgetWindow(this._window.findChildByName("badge")).widget).badgeId = k;
+            this._isUnseen = isUnseen;
+            _Str_2402(IWidgetWindow(this._window.findChildByName("badge")).widget).badgeId = badgeId;
             this._window.findChildByName("badge").visible = true;
             this._Str_2365 = false;
         }

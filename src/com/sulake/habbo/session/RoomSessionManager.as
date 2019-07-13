@@ -421,7 +421,7 @@
                     _local_3 = (this._handlers[_local_2] as BaseHandler);
                     if (_local_3 != null)
                     {
-                        _local_3._Str_2569 = k.roomId;
+                        _local_3._xxxRoomId = k.roomId;
                     }
                     _local_2++;
                 }

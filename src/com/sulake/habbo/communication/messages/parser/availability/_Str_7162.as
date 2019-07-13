@@ -20,7 +20,7 @@
             return this._Str_18253;
         }
 
-        public function get _Str_11656():Boolean
+        public function get isRealNoob():Boolean
         {
             return this._Str_8842;
         }

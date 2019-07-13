@@ -9,7 +9,7 @@
         private var _connection:IConnection;
         private var _listener:IRoomHandlerListener;
         private var _disposed:Boolean = false;
-        public var _Str_2569:int;
+        public var _xxxRoomId:int;
 
         public function BaseHandler(connection:IConnection, listener:IRoomHandlerListener)
         {

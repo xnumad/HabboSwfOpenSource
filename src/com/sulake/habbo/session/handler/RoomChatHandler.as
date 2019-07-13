@@ -54,7 +54,7 @@
                 _local_2 = (k as _Str_4642);
                 if (((_local_2) && (_local_2._Str_2273())))
                 {
-                    _local_3 = listener.getSession(_Str_2569);
+                    _local_3 = listener.getSession(_xxxRoomId);
                     if (_local_3 == null)
                     {
                         return;
@@ -81,7 +81,7 @@
             var _local_2:_Str_4953 = (k as _Str_4953);
             if (((listener) && (listener.events)))
             {
-                _local_3 = listener.getSession(_Str_2569);
+                _local_3 = listener.getSession(_xxxRoomId);
                 if (_local_3 == null)
                 {
                     return;
@@ -109,7 +109,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -139,7 +139,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -177,7 +177,7 @@
             var _local_2:IRoomSession;
             if (((listener) && (listener.events)))
             {
-                _local_2 = listener.getSession(_Str_2569);
+                _local_2 = listener.getSession(_xxxRoomId);
                 if (_local_2)
                 {
                     listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, k._Str_16798, "", RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED, SystemChatStyleEnum.GENERIC, null, k._Str_17975));
@@ -190,7 +190,7 @@
             var _local_2:IRoomSession;
             if (((listener) && (listener.events)))
             {
-                _local_2 = listener.getSession(_Str_2569);
+                _local_2 = listener.getSession(_xxxRoomId);
                 if (_local_2)
                 {
                     listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, _local_2._Str_3871, "", RoomSessionChatEvent._Str_8909, SystemChatStyleEnum.GENERIC, null, k._Str_18555));
@@ -210,7 +210,7 @@
                 _local_2 = (k as _Str_4826);
                 if (((_local_2) && (_local_2._Str_2273())))
                 {
-                    _local_3 = listener.getSession(_Str_2569);
+                    _local_3 = listener.getSession(_xxxRoomId);
                     if (_local_3 == null)
                     {
                         return;
@@ -235,7 +235,7 @@
                 _local_2 = (k as RoomUserShoutEvent);
                 if (((_local_2) && (_local_2._Str_2273())))
                 {
-                    _local_3 = listener.getSession(_Str_2569);
+                    _local_3 = listener.getSession(_xxxRoomId);
                     if (_local_3 == null)
                     {
                         return;
@@ -256,7 +256,7 @@
             if (((listener) && (listener.events)))
             {
                 _local_2 = (k as _Str_8743)._Str_2273();
-                _local_3 = listener.getSession(_Str_2569);
+                _local_3 = listener.getSession(_xxxRoomId);
                 if (_local_3 == null)
                 {
                     return;

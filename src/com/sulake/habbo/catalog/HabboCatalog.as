@@ -590,7 +590,7 @@
             this._Str_19190 = this._Str_10258();
             this._videoOfferManager = new VideoOfferManager(this);
             this._Str_13406 = new OfferController(this);
-            this._Str_2509 = this._sessionDataManager._Str_4536(this);
+            this._Str_2509 = this._sessionDataManager.getFurniData(this);
             this._Str_19956 = null;
         }
 
@@ -1092,7 +1092,7 @@
             var _local_3:IFurnitureData;
             if (_arg_2 == ProductTypeEnum.FLOOR)
             {
-                _local_3 = this._sessionDataManager._Str_3411(k);
+                _local_3 = this._sessionDataManager.getFloorItemData(k);
             }
             if (_arg_2 == ProductTypeEnum.WALL)
             {
@@ -1114,7 +1114,7 @@
             }
             if (_arg_2 == ProductTypeEnum.WALL)
             {
-                _local_4 = this._sessionDataManager._Str_14102(k);
+                _local_4 = this._sessionDataManager.getWallItemDataByName(k);
             }
             return _local_4;
         }
@@ -1634,9 +1634,9 @@
             this._Str_3361.filter(_local_4, _local_2);
         }
 
-        public function _Str_15145():void
+        public function furniDataReady():void
         {
-            this._Str_2509 = this._sessionDataManager._Str_4536(this);
+            this._Str_2509 = this._sessionDataManager.getFurniData(this);
             this._Str_19956 = null;
         }
 

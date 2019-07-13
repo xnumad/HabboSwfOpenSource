@@ -102,7 +102,7 @@
         {
             var _local_5:RoomSessionFavouriteGroupUpdateEvent;
             var _local_2:_Str_7301 = _Str_7839(k)._Str_2273();
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -131,7 +131,7 @@
                 return;
             }
             var _local_3:UsersMessageParser = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -181,7 +181,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -197,7 +197,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -217,7 +217,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -232,7 +232,7 @@
             {
                 return;
             }
-            var session:IRoomSession = listener.getSession(_Str_2569);
+            var session:IRoomSession = listener.getSession(_xxxRoomId);
             if (session == null)
             {
                 return;
@@ -254,7 +254,7 @@
                 return;
             }
             var _local_3:_Str_5856 = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -264,7 +264,7 @@
 
         private function onPetInfo(k:IMessageEvent):void
         {
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -313,7 +313,7 @@
                 return;
             }
             var _local_3:PetFigureUpdateParser = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -335,7 +335,7 @@
                 return;
             }
             var _local_3:PetBreedingResultParser = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -350,7 +350,7 @@
                 return;
             }
             var _local_2:_Str_6719 = (k.parser as _Str_6719);
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -365,7 +365,7 @@
                 return;
             }
             var _local_2:_Str_6256 = (k.parser as _Str_6256);
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -379,7 +379,7 @@
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -395,7 +395,7 @@
                 return;
             }
             var _local_3:_Str_7523 = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -411,7 +411,7 @@
                 return;
             }
             var _local_3:PetStatusUpdateParser = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -434,7 +434,7 @@
                 return;
             }
             var _local_3:_Str_7212 = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;
@@ -448,7 +448,7 @@
 
         private function onEnabledPetCommands(k:IMessageEvent):void
         {
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -472,7 +472,7 @@
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -511,7 +511,7 @@
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -551,7 +551,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (!_local_3)
             {
                 return;
@@ -567,7 +567,7 @@
         private function onDance(k:_Str_5619):void
         {
             var _local_2:_Str_6731 = k._Str_2273();
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             listener.events.dispatchEvent(new RoomSessionDanceEvent(_local_3, _local_2.userId, _local_2._Str_8263));
         }
     }

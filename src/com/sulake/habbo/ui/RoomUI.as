@@ -643,7 +643,7 @@
                         {
                             if (k.openLandingPage)
                             {
-                                if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager._Str_6986)))
+                                if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager.isAnyRoomController)))
                                 {
                                     if (((this._navigator.enteredGuestRoomData) && (this._navigator.enteredGuestRoomData._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY)))
                                     {
@@ -670,7 +670,7 @@
 
         private function _Str_19696(k:IRoomSession):void
         {
-            if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager._Str_6986)))
+            if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager.isAnyRoomController)))
             {
                 if (((k) && (k._Str_19282)))
                 {

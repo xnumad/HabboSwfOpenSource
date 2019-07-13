@@ -1,0 +1,2722 @@
+PongMessageParser > 
+            this._Str_2914 = k.readInteger();
+            return true;
+        
+CraftableProductsEvent > 
+			var _local_3:int;
+            var _local_2:int = k.readInteger();
+            _local_3 = 0;
+            while (_local_3 < _local_2)
+            
+ConnectionErrorEvent > 
+            this._messageId = k.readInteger();
+            this._errorCode = k.readInteger();
+            this._timestamp = k.readString();
+            return true;
+        
+GuideSessionPartnerIsTypingEvent > 
+            this._isTyping = k.readBoolean();
+            return true;
+        
+CatalogPagesListEvent > 
+            this._root = new NodeData(k);
+            this._unknownBoolean = k.readBoolean();
+            this._catalogType = k.readString();
+            return true;
+        
+_Str_8292 > 
+            return true;
+        
+RoomUserShoutEvent > 
+            var _local_3:int;
+            if (k == null)
+            
+FurniListAddOrUpdateEvent > 
+            this._items = new Vector.<InventoryItemParser>(0);
+			this._items.push(new InventoryItemParser(k));
+            return true;
+        
+_Str_12108 > 
+            return true;
+        
+HotelWillCloseInMinutesEvent > 
+            this._minutes = k.readInteger();
+            return true;
+        
+SimplePollResultsEvent > 
+            var key:String;
+            var value:int;
+            this._pollId = k.readInteger();
+            this._results = new Map();
+            var count:int = k.readInteger();
+            var index:int;
+            while (index < count)
+            
+GuildForumThreadsEvent > 
+            this._groupId = k.readInteger();
+            this._startIndex = k.readInteger();
+            this._amount = k.readInteger();
+            var _local_2:int;
+            while (_local_2 < this.amount)
+            
+UserBadgesEvent > 
+            var slotId:int;
+            var badgeCode:String;
+            this._userId = k.readInteger();
+            var count:int = k.readInteger();
+            var index:int;
+            while (index < count)
+            
+WiredConditionDataEvent > 
+            this._definition = new ConditionDefinition(k);
+            return true;
+        
+PetBoughtNotificationEvent > 
+            this._gift = k.readBoolean();
+            this._pet = new _Str_2848(k);
+            return true;
+        
+YoutubeDisplayPlaylistsEvent > 
+            this._furniId = k.readInteger();
+            var count:int = k.readInteger();
+            this._playlists = new Vector.<YoutubePlayListNode>(0);
+            var index:int;
+            while (index < count)
+            
+CallForHelpPendingCallsEvent > 
+            var _local_3:int;
+            var _local_4:Object;
+            this._callArray = new Array();
+            var _local_2:int = k.readInteger();
+            while (_local_3 < _local_2)
+            
+SeasonalQuestsMessageEvent > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+PetScratchFailedEvent > 
+            this._currentAge = k.readInteger();
+            this._requiredAge = k.readInteger();
+            return true;
+        
+JukeBoxPlayListAddSongEvent > 
+            this._entry = new SongEntry(k.readInteger(), k.readInteger(), k.readString(), k.readString());
+            return true;
+        
+WiredSavedEvent > 
+            return true;
+        
+PetTrainingPanelEvent > 
+		
+            if (k == null)
+            
+RoomUserEffectEvent > 
+            if (k == null)
+            
+CompetitionEntrySubmitResultEvent > 
+            this._goalId = k.readInteger();
+            this._goalCode = k.readString();
+            this._result = k.readInteger();
+            this._requiredFurnis = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+ChangeNameUpdateEvent > 
+            this._Str_3145 = k.readInteger();
+            this._name = k.readString();
+            var _local_2:int = k.readInteger();
+            this._Str_5895 = new Array();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7472 > 
+            this._groupId = k.readInteger();
+            this._requester = new _Str_2891(k);
+            return true;
+        
+TargetedOfferEvent > 
+            this._data = new TargetedOfferData().parse(k);
+            return true;
+        
+RoomChatSettingsEvent > 
+            this._Str_5898 = new RoomChatSettingsParser(k);
+            return true;
+        
+GuildMembersEvent > 
+            this._data = new GuildMemberData(k);
+            return true;
+        
+_Str_9397 > 
+            this._Str_8140 = k.readString();
+            this._level = k.readInteger();
+            this._Str_6392 = k.readInteger();
+            return true;
+        
+_Str_8800 > 
+            this._success = k.readBoolean();
+            return true;
+        
+_Str_3352 > 
+            return true;
+        
+_Str_9208 > 
+            return true;
+        
+_Str_6160 > 
+            this._status = k.readInteger();
+            return true;
+        
+_Str_8527 > 
+            this._Str_2698 = [];
+            this._Str_2306 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9184 > 
+            this._Str_4523 = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5771 > 
+            this._roomId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_4279 > 
+            var _local_11:String;
+            if (k == null)
+            
+_Str_3992 > 
+            this._flatId = k.readInteger();
+            this._Str_17603 = k.readString();
+            Logger.log(((("FLAT CREATED: " + this._flatId) + ", ") + this._Str_17603));
+            return true;
+        
+_Str_5683 > 
+            this._flatId = k.readInteger();
+            this._userId = k.readInteger();
+            return true;
+        
+_Str_5371 > 
+            this._Str_4858 = k.readBoolean();
+            this._Str_17043 = k.readString();
+            return true;
+        
+_Str_7272 > 
+            this._Str_18318 = k.readString();
+            this._Str_21920 = k.readInteger();
+            return true;
+        
+_Str_8695 > 
+            this._data = new _Str_5709(k);
+            return true;
+        
+InitDiffieHandshakeEvent > 
+            this._Str_21611 = k.readString();
+            this._Str_22105 = k.readString();
+            return true;
+        
+_Str_6521 > 
+            this._Str_20855 = k.readBoolean();
+            this._Str_20082 = k.readInteger();
+            if (k.bytesAvailable)
+            
+_Str_8892 > 
+            this._item = new _Str_3013(k);
+            this._Str_12302 = k.readBoolean();
+            return true;
+        
+_Str_6022 > 
+            this._result = k.readInteger();
+            return true;
+        
+_Str_8064 > 
+            var _local_2:int;
+            var _local_6:int;
+            var _local_7:String;
+            var _local_8:_Str_3079;
+            if (k == null)
+            
+GuideSessionDetachedEvent > 
+            return true;
+        
+_Str_9631 > 
+            this._Str_7881 = k.readString();
+            this._Str_2808 = k.readInteger();
+            return true;
+        
+_Str_8078 > 
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_8731 > 
+            this._furniId = k.readInteger();
+            this._videoId = k.readString();
+            this._Str_21563 = k.readInteger();
+            this._Str_20588 = k.readInteger();
+            this._state = k.readInteger();
+            return true;
+        
+_Str_9097 > 
+            this._Str_18898 = k.readInteger();
+            this._Str_8977 = k.readString();
+            return true;
+        
+WiredEffectDataEvent > 
+            this._definition = new ActionDefinition(k);
+            return true;
+        
+_Str_9665 > 
+            this._Str_19446 = k.readBoolean();
+            return true;
+        
+_Str_17532 > 
+            this._itemId = k.readInteger();
+            return true;
+        
+_Str_4642 > 
+            var _local_3:int;
+            if (k == null)
+            
+_Str_9041 > 
+            var _local_3:int;
+            var _local_2:int = k.readInteger();
+            _local_3 = 0;
+            while (_local_3 < _local_2)
+            
+_Str_5417 > 
+            this._Str_16456 = k.readInteger();
+            this._Str_12494 = k.readInteger();
+            this._Str_19123 = k.readInteger();
+            if (k.bytesAvailable)
+            
+_Str_8080 > 
+            var _local_4:int;
+            var _local_5:IStuffData;
+            var _local_6:int;
+            var _local_7:Number;
+            if (k == null)
+            
+_Str_5006 > 
+            this._data = new _Str_5546(k);
+            return true;
+        
+GuideSessionEndedEvent > 
+            this._endReason = k.readInteger();
+            return true;
+        
+_Str_5093 > 
+            this._groupId = k.readInteger();
+            return true;
+        
+_Str_7050 > 
+            if (k == null)
+            
+LeftQueueMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            return true;
+        
+UniqueMachineIDEvent > 
+            this._Str_8149 = k.readString();
+            return true;
+        
+_Str_5993 > 
+            this._roomSettingsData = new RoomSettingsData();
+            this._roomSettingsData.roomId = k.readInteger();
+            this._roomSettingsData.name = k.readString();
+            this._roomSettingsData.description = k.readString();
+            this._roomSettingsData._Str_2738 = k.readInteger();
+            this._roomSettingsData._Str_2712 = k.readInteger();
+            this._roomSettingsData._Str_5552 = k.readInteger();
+            this._roomSettingsData._Str_13128 = k.readInteger();
+            this._roomSettingsData.tags = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9359 > 
+            this._id = k.readInteger();
+            this._Str_19661 = k.readInteger();
+            return true;
+        
+_Str_9145 > 
+            this._result = k.readInteger();
+            this._nameValidationInfo = k.readString();
+            return true;
+        
+_Str_6109 > 
+            this._limit = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8409 > 
+            return true;
+        
+_Str_6906 > 
+            this._Str_3032 = k.readString();
+            this._Str_4261 = k.readInteger();
+            this._Str_5859 = k.readInteger();
+            this._Str_7388 = k.readInteger();
+            return true;
+        
+_Str_5843 > 
+            if (k == null)
+            
+_Str_9445 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8903 > 
+            this._onDuty = k.readBoolean();
+            this._Str_21395 = k.readInteger();
+            this._Str_20463 = k.readInteger();
+            this._Str_20900 = k.readInteger();
+            return true;
+        
+_Str_16338 > 
+            var _local_2:int;
+            var _local_3:String;
+            this._data = new Map();
+            var _local_4:int = k.readInteger();
+            var _local_5:int;
+            while (_local_5 < _local_4)
+            
+PetBreedingResultEvent > 
+            this._Str_3111 = this._Str_19638(k);
+            this._Str_11472 = this._Str_19638(k);
+            return true;
+        
+_Str_9325 > 
+            this._furniId = k.readInteger();
+            this._Str_9152 = k.readInteger();
+            return true;
+        
+_Str_6030 > 
+            this._roomId = k.readInteger();
+            this._errorCode = k.readInteger();
+            this._info = k.readString();
+            return true;
+        
+_Str_7323 > 
+            this._info = k.readString();
+            return true;
+        
+_Str_5728 > 
+            this._nodes = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9150 > 
+            this._Str_5236 = k.readInteger();
+            this._Str_5029 = k.readInteger();
+            this._Str_4111 = k.readInteger();
+            this._Str_5130 = k.readInteger();
+            return true;
+        
+_Str_4851 > 
+            this._senderId = k.readInteger();
+            this._Str_2992 = k.readString();
+            this._Str_12466 = k.readInteger();
+            if (k.bytesAvailable)
+            
+_Str_6908 > 
+            this._Str_2926 = k.readInteger();
+            return true;
+        
+GuideSessionAttachedEvent > 
+            this._Str_19490 = k.readBoolean();
+            this._Str_21721 = k.readInteger();
+            this._Str_21548 = k.readString();
+            this._Str_21391 = k.readInteger();
+            return true;
+        
+_Str_8002 > 
+            this._roomId = k.readInteger();
+            return true;
+        
+GenericErrorEvent > 
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_5567 > 
+            this._Str_19675 = k.readInteger();
+            this._Str_20837 = k.readInteger();
+            this._Str_21180 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+BotCommandConfigurationEvent > 
+            this._botId = k.readInteger();
+            this._commandId = k.readInteger();
+            this._data = k.readString();
+            return true;
+        
+_Str_9336 > 
+            this._Str_6143 = k.readInteger();
+            this._result = k.readInteger();
+            return true;
+        
+_Str_7641 > 
+            if (k == null)
+            
+_Str_9312 > 
+            this._roomId = k.readInteger();
+            this._roomName = k.readString();
+            this._Str_5786 = k.readInteger();
+            return true;
+        
+_Str_7817 > 
+            var _local_4:int;
+            var _local_5:Number;
+            var _local_6:Number;
+            var _local_7:Number;
+            var _local_8:Number;
+            var _local_9:int;
+            var _local_10:int;
+            var _local_11:String;
+            var _local_12:Boolean;
+            var _local_13:int;
+            var _local_14:int;
+            var _local_15:Array;
+            var _local_16:Number;
+            var _local_17:Number;
+            var _local_18:Number;
+            var _local_19:Boolean;
+            var _local_20:Array;
+            var _local_21:int;
+            var _local_22:_Str_5499;
+            var _local_23:String;
+            var _local_24:Array;
+            var _local_25:String;
+            var _local_26:String;
+            var _local_27:Array;
+            var _local_28:Number;
+            var _local_29:Number;
+            if (k == null)
+            
+_Str_9121 > 
+            this._Str_19533 = k.readString();
+            return true;
+        
+_Str_16258 > 
+            return false;
+        
+_Str_17947 > 
+            return true;
+        
+_Str_4976 > 
+            this._x = k.readInteger();
+            this._y = k.readInteger();
+            this._dir = k.readInteger();
+            return true;
+        
+_Str_9354 > 
+            this._message = k.readString();
+            return true;
+        
+GameAchievementsMessageEvent > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_6:int;
+            var _local_7:int;
+            var _local_8:String;
+            var _local_9:int;
+            this._achievements = new Vector.<_Str_5597>();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_3921 > 
+            this._data = new _Str_2974(k);
+            return true;
+        
+UnloadGameMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._gameClientId = k.readString();
+            return true;
+        
+_Str_7436 > 
+            if (k == null)
+            
+_Str_6253 > 
+            var _local_4:String;
+            var _local_5:String;
+            this._Str_1040.reset();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_16653 > 
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_4748 > 
+            this._Str_4271 = k.readString();
+            this._code = k.readString();
+            return true;
+        
+_Str_7734 > 
+            this._state = k.readInteger();
+            this._Str_6614 = k.readInteger();
+            this._Str_6649 = k.readInteger();
+            return true;
+        
+_Str_8135 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_6:String;
+            var _local_7:String;
+            this._Str_17090 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7632 > 
+            this._data = new _Str_6294(k);
+            return true;
+        
+_Str_9358 > 
+            this._errorCode = k.readInteger();
+            this._filteredText = k.readString();
+            return true;
+        
+_Str_8069 > 
+            if (k == null)
+            
+_Str_7849 > 
+            var _local_2:int;
+            var _local_6:int;
+            var _local_7:String;
+            var _local_8:_Str_3292;
+            if (k == null)
+            
+_Str_4585 > 
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_8054 > 
+            this._key = k.readString();
+            return true;
+        
+_Str_7216 > 
+            if (k == null)
+            
+_Str_8332 > 
+            this._Str_18536 = k.readBoolean();
+            return true;
+        
+_Str_9204 > 
+            this._result = k.readInteger();
+            return true;
+        
+_Str_5727 > 
+            this._enabled = k.readBoolean();
+            this._commission = k.readInteger();
+            this._credits = k.readInteger();
+            this._advertisements = k.readInteger();
+            this._minimumPrice = k.readInteger();
+            this._maximumPrice = k.readInteger();
+            this._offerTime = k.readInteger();
+            this._displayTime = k.readInteger();
+            return true;
+        
+_Str_8464 > 
+            this._status = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8791 > 
+            this._stuffId = k.readInteger();
+            return true;
+        
+_Str_5051 > 
+            this._data = new _Str_3579(k);
+            return true;
+        
+GuideSessionRequesterRoomEvent > 
+            this._requesterRoomId = k.readInteger();
+            return true;
+        
+_Str_9518 > 
+            this._groupId = k.readInteger();
+            this._thread = GuildForumThread.parse(k);
+            return true;
+        
+_Str_5264 > 
+            this._Str_21494 = k.readBoolean();
+            if (k.bytesAvailable)
+            
+_Str_7746 > 
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_5881 > 
+            this._roomId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5979 > 
+            this._userId = k.readInteger();
+            this._Str_11781 = k.readInteger();
+            return true;
+        
+QuestDailyMessageEvent > 
+            var _local_2:Boolean = k.readBoolean();
+            if (_local_2)
+            
+_Str_7445 > 
+            this._pageId = k.readInteger();
+            this._Str_8357 = new CatalogPageMessageOfferData(k);
+            return true;
+        
+_Str_9583 > 
+            this._message = k.readString();
+            this._url = k.readString();
+            return true;
+        
+PetStatusUpdateEvent > 
+            this._Str_2775 = k.readInteger();
+            this._Str_2388 = k.readInteger();
+            this._Str_3101 = k.readBoolean();
+            this._Str_3297 = k.readBoolean();
+            this._Str_3284 = k.readBoolean();
+            this._Str_3095 = k.readBoolean();
+            return true;
+        
+_Str_11459 > 
+            return true;
+        
+PetFigureUpdateEvent > 
+            this._Str_2775 = k.readInteger();
+            this._Str_2388 = k.readInteger();
+            this._figureData = new PetFigureData(k);
+            this._Str_6842 = k.readBoolean();
+            this._Str_3253 = k.readBoolean();
+            return true;
+        
+_Str_16380 > 
+            this._flatId = k.readInteger();
+            this._Str_3145 = k.readInteger();
+            return true;
+        
+_Str_17034 > 
+            this._Str_16515 = k.readString();
+            if (this._Str_16515 != "")
+            
+_Str_5720 > 
+            this._type = k.readInteger();
+            this._duration = k.readInteger();
+            this._Str_5145 = k.readBoolean();
+            return true;
+        
+AchievementsScoreEvent > 
+            this._score = k.readInteger();
+            return true;
+        
+_Str_17148 > 
+            return false;
+        
+_Str_8670 > 
+            var _local_4:String;
+            var _local_5:String;
+            this._type = k.readString();
+            this._parameters = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7464 > 
+            if (k == null)
+            
+_Str_5017 > 
+            this._data = new _Str_4587(k);
+            return true;
+        
+_Str_5269 > 
+            var _local_4:_Str_4838;
+            this._userId = k.readInteger();
+            this._Str_3998 = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5159 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8667 > 
+            this._link = k.readString();
+            return true;
+        
+_Str_8312 > 
+            this._message = k.readString();
+            this._url = k.readString();
+            return true;
+        
+_Str_3407 > 
+            this._roomType = k.readString();
+            this._roomId = k.readInteger();
+            return true;
+        
+_Str_6344 > 
+            this._result = k.readInteger();
+            this._Str_21768 = k.readInteger();
+            this._Str_20780 = k.readInteger();
+            this._Str_8508 = k.readInteger();
+            return true;
+        
+_Str_9281 > 
+            this._isOpen = k.readBoolean();
+            this._Str_18253 = k.readBoolean();
+            if (k.bytesAvailable)
+            
+_Str_7321 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8033 > 
+            this._Str_6673 = k.readInteger();
+            return true;
+        
+_Str_9630 > 
+            this._groupId = k.readInteger();
+            this._threadId = k.readInteger();
+            this._message = _Str_2814._Str_4933(k);
+            return true;
+        
+_Str_5617 > 
+            this._Str_4858 = k.readBoolean();
+            this._Str_16901 = k.readInteger();
+            if (((this._Str_4858) && (k.bytesAvailable)))
+            
+_Str_5891 > 
+            return true;
+        
+_Str_5459 > 
+            this._result = k.readInteger();
+            this._name = k.readString();
+            return true;
+        
+_Str_6213 > 
+            this._flatId = k.readInteger();
+            this._data = new _Str_4114(k);
+            return true;
+        
+_Str_9550 > 
+            this._pet = new _Str_2848(k);
+            this._Str_12302 = k.readBoolean();
+            return true;
+        
+_Str_9435 > 
+            var _local_2:int;
+            var _local_3:Array;
+            var _local_6:int;
+            var _local_7:int;
+            this._Str_1636 = new Map();
+            var _local_4:int = k.readInteger();
+            var _local_5:int;
+            while (_local_5 < _local_4)
+            
+AchievementEvent > 
+            this._achievement = new Achievement(k);
+            return true;
+        
+CraftingRecipesAvailableEvent > 
+            this._count = k.readInteger();
+            this._hasRecipes = k.readBoolean();
+            return true;
+        
+_Str_7261 > 
+            this._contentType = k.readString();
+            this._Str_2825 = k.readInteger();
+            this._name = k.readString();
+            this._description = k.readString();
+            return true;
+        
+_Str_18557 > 
+            this._reason = k.readInteger();
+            return true;
+        
+PetExperienceEvent > 
+            if (k == null)
+            
+_Str_8194 > 
+            this._data = new _Str_5600(k);
+            return true;
+        
+_Str_4150 > 
+            this._Str_7992 = k.readInteger();
+            this._id = k.readInteger();
+            this._Str_6487 = k.readString();
+            return true;
+        
+_Str_7704 > 
+            if (k == null)
+            
+_Str_8414 > 
+            this._Str_19631 = k.readInteger();
+            return true;
+        
+GuideSessionInvitedToGuideRoomEvent > 
+            this._roomId = k.readInteger();
+            this._roomName = k.readString();
+            return true;
+        
+_Str_5142 > 
+            this._year = k.readInteger();
+            this._week = k.readInteger();
+            this._maxOffset = k.readInteger();
+            this._currentOffset = k.readInteger();
+            this._minutesUntilReset = k.readInteger();
+            return super.parse(k);
+        
+_Str_7291 > 
+            if (k == null)
+            
+_Str_8829 > 
+            var _local_3:int;
+            var _local_4:_Str_5002;
+            var _local_6:String;
+            var _local_7:int;
+            var _local_8:int;
+            this._Str_9564.reset();
+            var _local_2:int = k.readInteger();
+            var _local_5:int;
+            while (_local_5 < _local_2)
+            
+_Str_4841 > 
+            this._req = new _Str_3742(k);
+            return true;
+        
+GameListMessageEvent > 
+            var _local_4:int;
+            var _local_5:String;
+            var _local_6:String;
+            var _local_7:uint;
+            var _local_8:String;
+            var _local_9:uint;
+            var _local_10:String;
+            var _local_11:String;
+            this._games = new Vector.<_Str_5486>();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7391 > 
+            this._Str_21269 = k.readBoolean();
+            this._Str_20966 = k.readBoolean();
+            this._Str_19378 = k.readString();
+            this._Str_19998 = k.readInteger();
+            k.readInteger();
+            this._Str_21197 = k.readString();
+            this._Str_20631 = k.readString();
+            this._Str_19322 = k.readInteger();
+            this._Str_22000 = k.readString();
+            this._Str_19157 = k.readInteger();
+            k.readInteger();
+            this._Str_21458 = k.readBoolean();
+            if (k.bytesAvailable)
+            
+_Str_5345 > 
+            this._type = k.readInteger();
+            return true;
+        
+_Str_5619 > 
+            if (k == null)
+            
+_Str_7597 > 
+            var _local_2:int;
+            this._Str_5208 = [];
+            this._Str_3691 = [];
+            this._Str_4062 = [];
+            this._Str_8259 = [];
+            this._Str_21168 = k.readBoolean();
+            this._Str_19335 = k.readInteger();
+            var _local_3:int = k.readInteger();
+            _local_2 = 0;
+            while (_local_2 < _local_3)
+            
+_Str_8141 > 
+            this._data = new GuildEditorData(k);
+            return true;
+        
+_Str_17347 > 
+            this._status = k.readInteger();
+            this._Str_21469 = k.readInteger();
+            this._Str_21518 = k.readInteger();
+            this._Str_7940 = k.readInteger();
+            return true;
+        
+JoinedQueueMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            return true;
+        
+UserGameAchievementsMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._achievements = new AchievementsParser();
+            this._achievements.parse(k);
+            return true;
+        
+_Str_18356 > 
+            this._year = k.readInteger();
+            this._week = k.readInteger();
+            this._maxOffset = k.readInteger();
+            this._currentOffset = k.readInteger();
+            this._minutesUntilReset = k.readInteger();
+            return super.parse(k);
+        
+_Str_4508 > 
+            this._amount = k.readInteger();
+            this._change = k.readInteger();
+            this._type = k.readInteger();
+            return true;
+        
+_Str_12157 > 
+            return true;
+        
+_Str_8246 > 
+            this._result = k.readInteger();
+            return true;
+        
+QuestMessageEvent > 
+            this._quest = new _Str_2455(k);
+            return true;
+        
+_Str_4129 > 
+            this._userName = k.readString();
+            return true;
+        
+_Str_16135 > 
+            this._itemId = k.readInteger();
+            return true;
+        
+_Str_7743 > 
+            this._userId = k.readInteger();
+            this._value = k.readInteger();
+            return true;
+        
+_Str_8269 > 
+            this._itemId = k.readInteger();
+            return true;
+        
+_Str_9341 > 
+            this._userId = k.readInteger();
+            this._success = k.readBoolean();
+            return true;
+        
+_Str_7288 > 
+            this._Str_9586 = new _Str_4615(k);
+            return true;
+        
+_Str_9687 > 
+            if (k == null)
+            
+_Str_7657 > 
+            if (k == null)
+            
+_Str_8905 > 
+            this._Str_7869 = k.readInteger();
+            return true;
+        
+_Str_8382 > 
+            if (k == null)
+            
+_Str_8236 > 
+            return true;
+        
+_Str_5458 > 
+            var _local_3:int;
+            var _local_4:String;
+            var _local_2:int = k.readInteger();
+            this._badges = new Map();
+            var _local_5:int;
+            while (_local_5 < _local_2)
+            
+_Str_7706 > 
+            this._offers = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5010 > 
+            this._figure = k.readString();
+            this._gender = k.readString();
+            if (this._gender)
+            
+_Str_6584 > 
+            this._Str_2994 = k.readInteger();
+            this._userId = k.readInteger();
+            return true;
+        
+_Str_7999 > 
+            var _local_2:String = k.readString();
+            var _local_3:String = k.readString();
+            switch (_local_2)
+            
+_Str_7365 > 
+            var _local_4:int;
+            var _local_5:String;
+            var _local_6:Boolean;
+            var _local_7:_Str_2866;
+            this._rooms = new Array();
+            this._Str_6052 = k.readBoolean();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+AuthenticationOKMessageEvent > 
+            return true;
+        
+_Str_8120 > 
+            this._badgeId = k.readInteger();
+            this._Str_2722 = k.readString();
+            return true;
+        
+_Str_18853 > 
+            var _local_2:int;
+            var _local_3:String;
+            var _local_4:int;
+            var _local_5:int;
+            this._Str_9619 = new Map();
+            this._Str_8840 = new Map();
+            _local_5 = k.readInteger();
+            _local_4 = 0;
+            while (_local_4 < _local_5)
+            
+_Str_8980 > 
+            var _local_4:String;
+            var _local_5:int;
+            var _local_6:int;
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7618 > 
+            this._pageName = k.readString();
+            this._Str_5158 = k.readInteger();
+            this._image = k.readString();
+            return true;
+        
+_Str_5795 > 
+            this._flatId = k.readInteger();
+            this._Str_20029 = k.readBoolean();
+            return true;
+        
+CommunityGoalProgressMessageEvent > 
+            this._data = new CommunityGoalProgress(k);
+            return true;
+        
+_Str_9632 > 
+            this._Str_2388 = k.readInteger();
+            this._Str_5792 = k.readInteger();
+            return true;
+        
+_Str_8526 > 
+            this._groupId = k.readInteger();
+            this._thread = GuildForumThread.parse(k);
+            return true;
+        
+_Str_9003 > 
+            this._campaignCalendarData = new CampaignCalendarData();
+            this._campaignCalendarData.parse(k);
+            return true;
+        
+_Str_5038 > 
+            this._Str_19797 = k.readBoolean();
+            return true;
+        
+_Str_8234 > 
+            if (k == null)
+            
+_Str_9045 > 
+            this._Str_17229 = k.readBoolean();
+            this._productName = k.readString();
+            this._customImage = k.readString();
+            this._Str_6002 = k.readString();
+            return true;
+        
+_Str_3277 > 
+            var _local_4:_Str_3818;
+            this._perks = new Vector.<_Str_3818>();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8879 > 
+            var key:String;
+            var value:int;
+            this._userId = k.readInteger();
+            this._value = k.readString();
+            this._Str_4154 = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5212 > 
+            this._Str_20547 = k.readBoolean();
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_7922 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8524 > 
+            this._reason = k.readInteger();
+            return true;
+        
+LoadGameUrlMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._gameClientId = k.readString();
+            this._url = k.readString();
+            return true;
+        
+_Str_11645 > 
+            this._gameTypeId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_6896 > 
+            this._Str_2994 = k.readInteger();
+            this._data = new _Str_2891(k);
+            return true;
+        
+_Str_4914 > 
+            if (k == null)
+            
+QuestionEvent > 
+            var _local_2:int;
+            var _local_3:Array;
+            var _local_4:Array;
+            var _local_5:int;
+            this._pollType = k.readString();
+            this._pollId = k.readInteger();
+            this._questionId = k.readInteger();
+            this._duration = k.readInteger();
+            this._question = new Dictionary();
+            this._question["id"] = k.readInteger();
+            this._question["number"] = k.readInteger();
+            this._question["type"] = k.readInteger();
+            this._question["content"] = k.readString();
+            if (((this._question["type"] == 1) || (this._question["type"] == 2)))
+            
+_Str_17379 > 
+            this._pageId = k.readInteger();
+            this._pageName = k.readString();
+            this._Str_5158 = k.readInteger();
+            this._image = k.readString();
+            return true;
+        
+_Str_9538 > 
+            this._Str_13064 = k.readInteger();
+            return true;
+        
+_Str_9455 > 
+            this._Str_16531 = new SearchResultSet(k);
+            return true;
+        
+_Str_7080 > 
+            this._data = new _Str_5018(k);
+            return true;
+        
+_Str_4408 > 
+            if (k == null)
+            
+_Str_4826 > 
+            var _local_3:int;
+            if (k == null)
+            
+_Str_8288 > 
+            this._email = k.readString();
+            this._Str_4340 = k.readBoolean();
+            this._Str_10981 = k.readBoolean();
+            this._furniId = k.readInteger();
+            this._Str_10840 = k.readBoolean();
+            return true;
+        
+_Str_8039 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_6:String;
+            var _local_7:int;
+            var _local_8:int;
+            var _local_9:_Str_5478;
+            var _local_2:int = k.readInteger();
+            this._selectedPresetId = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+UserObjectEvent > 
+            this._id = k.readInteger();
+            this._name = k.readString();
+            this._figure = k.readString();
+            this._Str_4037 = k.readString();
+            this._Str_7867 = k.readString();
+            this._realName = k.readString();
+            this._Str_21976 = k.readBoolean();
+            this._Str_7278 = k.readInteger();
+            this._Str_3437 = k.readInteger();
+            this._Str_3973 = k.readInteger();
+            this._Str_21322 = k.readBoolean();
+            this._Str_20853 = k.readString();
+            this._Str_7394 = k.readBoolean();
+            this._Str_9602 = k.readBoolean();
+            return true;
+        
+_Str_5134 > 
+            this._data = new _Str_5078(k);
+            var _local_2:int = k.readInteger();
+            if (_local_2 > 0)
+            
+ConcurrentUsersGoalProgressMessageEvent > 
+            this._state = k.readInteger();
+            this._userCount = k.readInteger();
+            this._Str_5422 = k.readInteger();
+            return true;
+        
+_Str_7242 > 
+            if (k == null)
+            
+_Str_18296 > 
+            var _local_2:Map;
+            var _local_3:int;
+            var _local_4:String;
+            var _local_5:int;
+            this._data = new Map();
+            var _local_6:int = k.readInteger();
+            var _local_7:int;
+            while (_local_7 < _local_6)
+            
+HotelClosesAndWillOpenAtEvent > 
+            this._openHour = k.readInteger();
+            this._openMinute = k.readInteger();
+            this._userThrownOutAtClose = k.readBoolean();
+            return true;
+        
+_Str_8785 > 
+            this._Str_3912 = k.readString();
+            this._Str_6079 = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+CraftingRecipeEvent > 
+			var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9038 > 
+            this._Str_6036 = k.readInteger();
+            this._accountId = k.readInteger();
+            this._Str_18848 = new _Str_6380(k);
+            return true;
+        
+_Str_7027 > 
+            return true;
+        
+_Str_8482 > 
+            this._respect = k.readInteger();
+            this._Str_19471 = k.readInteger();
+            this._Str_2522 = new _Str_2848(k);
+            return true;
+        
+_Str_5641 > 
+            this._Str_18741 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            Logger.log(((("Received friend requests: " + this._Str_18741) + ", ") + _local_2));
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_4035 > 
+            var _local_5:int;
+            var _local_6:int;
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_11571 > 
+            this._Str_20485 = k.readInteger();
+            return true;
+        
+_Str_6633 > 
+            this._Str_6739 = k.readInteger();
+            this._groupId = k.readInteger();
+            return true;
+        
+_Str_4953 > 
+            this._userId = k.readInteger();
+            this._Str_7278 = k.readInteger();
+            return true;
+        
+_Str_9362 > 
+            this._furniId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            this._height = (_local_2 / 100);
+            return true;
+        
+_Str_16028 > 
+            var _local_3:int;
+            var _local_4:String;
+            this._data = new Map();
+            this._Str_2629 = k.readInteger();
+            this._description = k.readString();
+            var _local_2:int = k.readInteger();
+            var _local_5:int;
+            while (_local_5 < _local_2)
+            
+PetLevelUpdateEvent > 
+            this._Str_2775 = k.readInteger();
+            this._Str_2388 = k.readInteger();
+            this._level = k.readInteger();
+            return true;
+        
+_Str_9310 > 
+            this._Str_9099 = k.readString();
+            this._Str_8398 = k.readString();
+            return true;
+        
+_Str_9504 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9413 > 
+            this._data = new _Str_5467(k);
+            return true;
+        
+_Str_6944 > 
+            this._type = k.readInteger();
+            this._Str_4653 = k.readInteger();
+            this._duration = k.readInteger();
+            this._Str_5145 = k.readBoolean();
+            return true;
+        
+_Str_5633 > 
+            this._Str_7066 = k.readInteger();
+            this._Str_8048 = k.readInteger();
+            return true;
+        
+_Str_9537 > 
+            this._Str_18491 = k.readInteger();
+            this._Str_19995 = k.readInteger();
+            this._Str_8208 = k.readInteger();
+            return true;
+        
+_Str_5416 > 
+            this._gameTypeId = k.readInteger();
+            this._Str_7940 = k.readInteger();
+            this._Str_21057 = k.readInteger();
+            return true;
+        
+_Str_5752 > 
+            this._roomId = k.readInteger();
+            this._errorCode = k.readInteger();
+            return true;
+        
+PetInfoMessageEvent > 
+            if (k == null)
+            
+PetPlacingErrorEvent > 
+            if (k == null)
+            
+_Str_9419 > 
+            this._Str_3912 = k.readString();
+            this._Str_5004 = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5834 > 
+            this._Str_3930 = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+BotForceOpenContextMenuEvent > 
+            this._botId = k.readInteger();
+            return true;
+        
+_Str_8693 > 
+            var _local_3:PollQuestion;
+            var _local_4:int;
+            var _local_5:int;
+            this._id = k.readInteger();
+            this._Str_5879 = k.readString();
+            this._Str_4781 = k.readString();
+            this._Str_5366 = k.readInteger();
+            this._Str_5432 = new Array();
+            var _local_2:int;
+            while (_local_2 < this._Str_5366)
+            
+_Str_8179 > 
+            this._Str_10244 = k.readString();
+            this._Str_22220 = k.readBoolean();
+            return true;
+        
+_Str_10860 > 
+            return true;
+        
+_Str_9509 > 
+            this._Str_9742 = k.readInteger();
+            this._totalAmount = k.readInteger();
+            this._startIndex = k.readInteger();
+            this._amount = k.readInteger();
+            this._forums = new Array();
+            var _local_2:int;
+            while (_local_2 < this.amount)
+            
+CommunityGoalHallOfFameMessageEvent > 
+            this._data = new CommunityGoalHallOfFameData(k);
+            return true;
+        
+_Str_8331 > 
+            this._Str_2381 = _Str_3372._Str_4933(k);
+            return true;
+        
+QuestCancelledMessageEvent > 
+            this._expired = k.readBoolean();
+            return true;
+        
+JoiningQueueFailedMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_8333 > 
+            this._errorCode = k.readInteger();
+            return true;
+        
+AchievementsEvent > 
+            this._achievements = new Array();
+            var count:int = k.readInteger();
+            var index:int;
+            while (index < count)
+            
+_Str_8406 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8552 > 
+            this._Str_3764 = k.readString();
+            this._Str_5400 = k.readInteger();
+            this._message = k.readString();
+            return true;
+        
+_Str_9129 > 
+            var _local_4:_Str_3013;
+            this._items = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_6994 > 
+            this._gameTypeId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_16667 > 
+            this._leaderBoard = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8469 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7456 > 
+            this._groupId = k.readInteger();
+            return true;
+        
+_Str_3873 > 
+            this._Str_6580 = k.readInteger();
+            this._Str_6945 = k.readInteger();
+            this._Str_14849 = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_18475 > 
+            this._userId = k.readInteger();
+            return true;
+        
+_Str_7889 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_6:String;
+            var _local_7:_Str_2484;
+            this._issues = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_6821 > 
+            return true;
+        
+_Str_7079 > 
+            var _local_2:int = k.readInteger();
+            this._prizeLevels = new Array();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_17782 > 
+            return false;
+        
+_Str_9383 > 
+            this._Str_6036 = parseInt(k.readString());
+            return true;
+        
+_Str_7564 > 
+            return true;
+        
+_Str_7350 > 
+            var _local_7:int;
+            var _local_8:_Str_3381;
+            var _local_9:Vector3d;
+            var _local_10:Vector3d;
+            var _local_11:Number;
+            var _local_12:Number;
+            if (k == null)
+            
+_Str_8204 > 
+            if (k == null)
+            
+GuideSessionStartedEvent > 
+            this._requesterUserId = k.readInteger();
+            this._requesterName = k.readString();
+            this._requesterFigure = k.readString();
+            this._guideUserId = k.readInteger();
+            this._guideName = k.readString();
+            this._guideFigure = k.readString();
+            return true;
+        
+_Str_8758 > 
+            this._groupId = k.readInteger();
+            this._threadId = k.readInteger();
+            this._message = _Str_2814._Str_4933(k);
+            return true;
+        
+_Str_5766 > 
+            this._Str_15801 = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5578 > 
+            this._callForHelpCategories = new Vector.<CallForHelpCategoryData>();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9047 > 
+            this._Str_2388 = k.readInteger();
+            return true;
+        
+_Str_6345 > 
+            this._Str_2507 = k.readInteger();
+            this._success = k.readBoolean();
+            return true;
+        
+_Str_9409 > 
+            this._Str_16293 = k.readInteger();
+            this._Str_16057 = k.readInteger();
+            this._Str_15073 = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9216 > 
+            this._data = new _Str_4528(k);
+            return true;
+        
+_Str_7309 > 
+            this._enabled = k.readBoolean();
+            return true;
+        
+_Str_8429 > 
+            this._result = k.readInteger();
+            return true;
+        
+_Str_16527 > 
+            this._Str_3128 = k.readInteger();
+            this._Str_17066 = k.readString();
+            return true;
+        
+_Str_8674 > 
+            if (k == null)
+            
+_Str_5711 > 
+            this._flatId = k.readInteger();
+            return true;
+        
+_Str_9393 > 
+            var _local_4:_Str_5988;
+            this._state = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+CommunityGoalEarnedPrizesMessageEvent > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8784 > 
+            this._Str_2570 = k.readString();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8801 > 
+            this._productDescription = k.readString();
+            this._productName = k.readString();
+            return true;
+        
+_Str_8339 > 
+            this._errorCode = k.readInteger();
+            this._userId = k.readInteger();
+            this._message = k.readString();
+            return true;
+        
+_Str_7199 > 
+            var _local_2:int;
+            var _local_3:String;
+            var _local_4:String;
+            var _local_5:String;
+            var _local_6:int;
+            var _local_7:String;
+            var _local_10:_Str_5724;
+            var _local_8:int = k.readInteger();
+            var _local_9:int;
+            while (_local_9 < _local_8)
+            
+AchievementResolutionProgressMessageEvent > 
+            this._stuffId = k.readInteger();
+            this._achievementId = k.readInteger();
+            this._requiredLevelBadgeCode = k.readString();
+            this._userProgress = k.readInteger();
+            this._totalProgress = k.readInteger();
+            this._endTime = k.readInteger();
+            return true;
+        
+_Str_7898 > 
+            this._data = new _Str_7284(k);
+            return true;
+        
+_Str_9560 > 
+            this._Str_8357 = new CatalogPageMessageOfferData(k);
+            return true;
+        
+_Str_5266 > 
+            return true;
+        
+_Str_7248 > 
+            this._Str_18029 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int = -1;
+            var _local_4:int = -1;
+            var _local_5:int;
+            while (_local_5 < _local_2)
+            
+_Str_6450 > 
+            var _local_4:_Str_5511;
+            this._effects = new Array();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7839 > 
+            this._Str_2775 = k.readInteger();
+            this._Str_6639 = k.readInteger();
+            this._status = k.readInteger();
+            this._Str_11227 = k.readString();
+            return true;
+        
+_Str_7229 > 
+            this._Str_2673 = new TalentTrack();
+            this._Str_2673.parse(k);
+            return true;
+        
+_Str_5655 > 
+            this._roomId = k.readInteger();
+            this._userId = k.readInteger();
+            return true;
+        
+_Str_8183 > 
+            if (k == null)
+            
+_Str_5376 > 
+            this._recyclerStatus = k.readInteger();
+            this._recyclerTimeoutSeconds = k.readInteger();
+            return true;
+        
+_Str_7799 > 
+            this._data = new ChatRecordData(k);
+            return true;
+        
+_Str_9507 > 
+            this._Str_2388 = k.readInteger();
+            this._userId = k.readInteger();
+            this._Str_19754 = k.readInteger();
+            return true;
+        
+_Str_9074 > 
+            this._Str_14988 = k.readInteger();
+            if (this._Str_14988 == _Str_15134)
+            
+_Str_12022 > 
+            this._type = k.readInteger();
+            return true;
+        
+UserCreditsEvent > 
+            this._balance = int(k.readString());
+            return true;
+        
+_Str_8029 > 
+            return true;
+        
+_Str_7104 > 
+            this._Str_4167 = k.readBoolean();
+            this._Str_6880 = k.readString();
+            this._buyout = k.readBoolean();
+            this._priceInCredits = k.readInteger();
+            this._priceInActivityPoints = k.readInteger();
+            this._activityPointType = k.readInteger();
+            return true;
+        
+_Str_7630 > 
+            this._Str_5696 = k.readInteger();
+            this._Str_3087 = k.readString();
+            this._Str_3145 = k.readInteger();
+            this._Str_19041 = k.readInteger();
+            return true;
+        
+_Str_8022 > 
+            this._year = k.readInteger();
+            this._week = k.readInteger();
+            this._maxOffset = k.readInteger();
+            this._currentOffset = k.readInteger();
+            this._minutesUntilReset = k.readInteger();
+            return super.parse(k);
+        
+_Str_9259 > 
+            var _local_4:_Str_2848;
+            this._Str_6580 = k.readInteger();
+            this._Str_6945 = k.readInteger();
+            this._Str_8680 = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+IdentityAccountsEvent > 
+            this._Str_8999 = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8702 > 
+            this._Str_17150 = k.readInteger();
+            this._Str_17360 = k.readInteger();
+            return true;
+        
+_Str_4196 > 
+            if (k == null)
+            
+_Str_7811 > 
+            this._Str_16670 = k.readBoolean();
+            this._Str_16491 = k.readInteger();
+            this._Str_20575 = (this._Str_16491 === 0);
+            this._renterId = k.readInteger();
+            this._Str_18360 = k.readString();
+            this._Str_22009 = k.readInteger();
+            this._price = k.readInteger();
+            if (!this._Str_16670)
+            
+_Str_8191 > 
+            this._year = k.readInteger();
+            this._week = k.readInteger();
+            this._maxOffset = k.readInteger();
+            this._currentOffset = k.readInteger();
+            this._minutesUntilReset = k.readInteger();
+            return super.parse(k);
+        
+_Str_8566 > 
+            var _local_2:int = k.readInteger();
+            this._giftOptions = new Vector.<NewUserExperienceGiftOptions>();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8053 > 
+            if (k.bytesAvailable)
+            
+_Str_9065 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int = k.readInteger();
+            var _local_4:int = k.readInteger();
+            var _local_5:int = k.readInteger();
+            var _local_6:Number = k.readInteger();
+            var _local_7:int = k.readInteger();
+            var _local_8:int = k.readInteger();
+            var _local_9:int = k.readInteger();
+            var _local_10:String = k.readString();
+            var _local_11:int = k.readInteger();
+            var _local_12:String = k.readString();
+            var _local_13:int = k.readInteger();
+            var _local_14:String = k.readString();
+            var _local_15:String = k.readString();
+            var _local_16:int = k.readInteger();
+            var _local_17:int = k.readInteger();
+            var _local_18:Array = [];
+            var _local_19:int;
+            while (_local_19 < _local_17)
+            
+QuestsMessageEvent > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7620 > 
+            this._resultType = k.readInteger();
+            this._Str_2992 = k.readString();
+            return true;
+        
+_Str_8454 > 
+            return true;
+        
+LoadGameMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._gameClientId = k.readString();
+            this._url = k.readString();
+            this._quality = k.readString();
+            this._scaleMode = k.readString();
+            this._frameRate = k.readInteger();
+            this._minMajorVersion = k.readInteger();
+            this._minMinorVersion = k.readInteger();
+            this._params = new Object();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_16597 > 
+            this._Str_10056 = k.readBoolean();
+            this._item = new _Str_3013(k);
+            return true;
+        
+_Str_7565 > 
+            this._url = k.readString();
+            return true;
+        
+_Str_7599 > 
+            this._contentType = k.readString();
+            this._Str_2825 = k.readInteger();
+            return true;
+        
+HotelClosedAndOpensEvent > 
+            this._openHour = k.readInteger();
+            this._openMinute = k.readInteger();
+            return true;
+        
+NoobnessLevelMessageEvent > 
+            this._Str_7106 = k.readInteger();
+            return true;
+        
+_Str_4085 > 
+            var _local_4:int;
+            var _local_5:String;
+            var _local_6:String;
+            var _local_7:String;
+            var _local_8:int;
+            var _local_9:int;
+            var _local_10:int;
+            var _local_11:String;
+            var _local_12:int;
+            var _local_13:int;
+            var _local_14:_Str_3548;
+            var _local_15:String;
+            var _local_16:int;
+            var _local_17:Array;
+            var _local_18:int;
+            this._users = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8413 > 
+            this._stuffId = k.readInteger();
+            this._Str_4514 = k.readBoolean();
+            return true;
+        
+_Str_8530 > 
+            return true;
+        
+_Str_7086 > 
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_7527 > 
+            if (k == null)
+            
+_Str_9492 > 
+            this._Str_3145 = k.readInteger();
+            this._Str_21340 = k.readInteger();
+            return true;
+        
+_Str_4265 > 
+            this._userName = k.readString();
+            return true;
+        
+_Str_8499 > 
+            this._id = k.readInteger();
+            this._type = k.readString();
+            this._headline = k.readString();
+            this._summary = k.readString();
+            return true;
+        
+_Str_7837 > 
+            this._message = k.readString();
+            return true;
+        
+_Str_8665 > 
+            this._Str_2992 = k.readString();
+            return true;
+        
+GameStatusMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._status = k.readInteger();
+            return true;
+        
+_Str_8746 > 
+            this._stuffId = k.readInteger();
+            return true;
+        
+_Str_9458 > 
+            this._Str_11781 = k.readInteger();
+            return true;
+        
+WiredTriggerDataEvent > 
+            this._Str_4948 = new TriggerDefinition(k);
+            return true;
+        
+_Str_8237 > 
+            this._Str_8579 = k.readBoolean();
+            this._Str_6987 = k.readInteger();
+            return true;
+        
+_Str_18906 > 
+            this._leaderBoard = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_4696 > 
+            this._senderId = k.readInteger();
+            this._Str_2992 = k.readString();
+            return true;
+        
+_Str_7662 > 
+            this._Str_9271 = k.readInteger();
+            this._Str_8408 = k.readInteger();
+            if (k.bytesAvailable > 0)
+            
+_Str_7169 > 
+            var _local_2:int;
+            var _local_3:int;
+            var _local_4:int;
+            var _local_5:int;
+            var _local_7:IStuffData;
+            var _local_8:int;
+            var _local_9:int;
+            var _local_10:int;
+            var _local_13:_Str_4192;
+            this._offers = new Array();
+            var _local_6:String = "";
+            this._Str_11581 = k.readInteger();
+            var _local_11:int = k.readInteger();
+            var _local_12:int;
+            while (_local_12 < _local_11)
+            
+CompleteDiffieHandshakeEvent > 
+            this._Str_20319 = k.readString();
+            if (k.bytesAvailable)
+            
+_Str_8939 > 
+            this._Str_21617 = k.readInteger();
+            return true;
+        
+ExtendedProfileMessageEvent > 
+            this._data = new ExtendedProfileData(k);
+            return true;
+        
+_Str_5514 > 
+            this._Str_17433 = k.readBoolean();
+            this._Str_19031 = k.readBoolean();
+            if (k.bytesAvailable)
+            
+_Str_15952 > 
+            this._Str_16950 = k.readInteger();
+            return true;
+        
+_Str_3084 > 
+            this._id = k.readInteger();
+            this._figure = k.readString();
+            this._Str_4037 = k.readString();
+            this._Str_8430 = k.readString();
+            this._activityPoints = k.readInteger();
+            if (this._Str_4037)
+            
+_Str_9217 > 
+            this._Str_8997 = k.readString();
+            this._Str_21095 = k.readInteger();
+            return true;
+        
+PingMessageEvent > 
+            return true;
+        
+EpicPopupMessageEvent > 
+            this._Str_18748 = k.readString();
+            return true;
+        
+_Str_5767 > 
+            this._data = new _Str_4374(k);
+            return true;
+        
+_Str_6375 > 
+            this._Str_2324 = new _Str_5335(k);
+            return true;
+        
+_Str_7878 > 
+            this._data = new _Str_5372(k);
+            return true;
+        
+_Str_8305 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_7832 > 
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_6566 > 
+            var _local_4:int;
+            var _local_5:int;
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+DisconnectReasonEvent > 
+            if (k.bytesAvailable)
+            
+UserRightsMessageEvent > 
+            this._clubLevel = k.readInteger();
+            this._Str_8385 = k.readInteger();
+            this._Str_4890 = k.readBoolean();
+            return true;
+        
+_Str_17054 > 
+            this._Str_19201 = k.readInteger();
+            return true;
+        
+_Str_7452 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_9995 > 
+            return true;
+        
+_Str_8320 > 
+            this._Str_6800 = k.readInteger();
+            this._pageId = k.readInteger();
+            this._Str_2507 = k.readInteger();
+            this._Str_3032 = k.readString();
+            return true;
+        
+_Str_8714 > 
+            this._isPlaying = k.readBoolean();
+            return true;
+        
+_Str_9229 > 
+            var _local_2:int;
+            var _local_3:int;
+            this._errorCode = k.readInteger();
+            if (this._errorCode == 1)
+            
+_Str_15969 > 
+            this._roomType = k.readString();
+            this._roomId = k.readInteger();
+            return true;
+        
+_Str_4691 > 
+            this._recyclerFinishedStatus = k.readInteger();
+            this._prizeId = k.readInteger();
+            return true;
+        
+_Str_8016 > 
+            this._Str_18881 = k.readInteger();
+            this._Str_17672 = k.readInteger();
+            this._Str_17103 = k.readInteger();
+            this._Str_17651 = k.readInteger();
+            this._Str_18380 = k.readInteger();
+            return true;
+        
+_Str_6001 > 
+            this._rating = k.readInteger();
+            this._Str_10405 = k.readBoolean();
+            return true;
+        
+_Str_9446 > 
+            var _local_3:_Str_2814;
+            this._groupId = k.readInteger();
+            this._threadId = k.readInteger();
+            this._startIndex = k.readInteger();
+            this._amount = k.readInteger();
+            var _local_2:int;
+            while (_local_2 < this._amount)
+            
+_Str_3870 > 
+            this._Str_9898 = k.readInteger();
+            this._Str_2909 = k.readInteger();
+            this._Str_2933 = k.readInteger();
+            this._Str_17293 = k.readBoolean();
+            this._Str_9090 = k.readBoolean();
+            this._Str_17826 = k.readBoolean();
+            this._Str_3790 = k.readInteger();
+            this._Str_6387 = k.readInteger();
+            return true;
+        
+_Str_8763 > 
+            this._Str_5236 = k.readInteger();
+            this._Str_5029 = k.readInteger();
+            this._Str_4111 = k.readInteger();
+            this._Str_5130 = k.readInteger();
+            this._Str_16883 = k.readBoolean();
+            this._Str_18619 = k.readInteger();
+            return true;
+        
+_Str_4910 > 
+            this._data = new _Str_4081(k);
+            return true;
+        
+_Str_9517 > 
+            this._result = k.readInteger();
+            this._Str_19825 = k.readInteger();
+            return true;
+        
+_Str_8241 > 
+            if (k == null)
+            
+_Str_7777 > 
+            if (k == null)
+            
+_Str_9591 > 
+            if (k == null)
+            
+_Str_6232 > 
+            this._Str_3145 = k.readInteger();
+            this._name = k.readString();
+            var _local_2:int = k.readInteger();
+            this._Str_5895 = new Array();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8743 > 
+            if (k == null)
+            
+_Str_7433 > 
+            return true;
+        
+_Str_17595 > 
+            this._isOpen = (k.readInteger() > 0);
+            this._Str_16145 = k.readInteger();
+            return true;
+        
+_Str_8088 > 
+            this._data = new _Str_7965(k);
+            return true;
+        
+_Str_5948 > 
+            this._email = k.readString();
+            this._Str_4340 = k.readBoolean();
+            this._Str_10981 = k.readBoolean();
+            return true;
+        
+CraftingResultEvent > 
+            this._success = k.readBoolean();
+            if (this._success)
+            
+_Str_5425 > 
+            var _local_3:int;
+            var _local_4:_Str_5178;
+            this._Str_10647 = k.readInteger();
+            this._Str_5369 = k.readInteger();
+            this._offers = new Array();
+            var _local_2:int = k.readInteger();
+            _local_3 = 0;
+            while (_local_3 < _local_2)
+            
+_Str_9293 > 
+            this._nestId = k.readInteger();
+            this._pet1 = new _Str_3763(k);
+            this._pet2 = new _Str_3763(k);
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5939 > 
+            var _local_2:int;
+            this._talentTrackName = k.readString();
+            this._level = k.readInteger();
+            this._rewardPerks = new Vector.<_Str_3450>();
+            var _local_3:int = k.readInteger();
+            _local_2 = 0;
+            while (_local_2 < _local_3)
+            
+BotErrorEvent > 
+            if (k == null)
+            
+_Str_9157 > 
+            this._products = new Array();
+            this._Str_2570 = k.readString();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+AchievementResolutionsMessageEvent > 
+            this._stuffId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8563 > 
+            return false;
+        
+GuideSessionErrorEvent > 
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_7697 > 
+            var _local_2:int;
+            var _local_3:int;
+            var _local_4:int;
+            var _local_5:int;
+            var _local_8:int;
+            var _local_9:int;
+            var _local_10:int;
+            var _local_11:int;
+            var _local_14:_Str_4192;
+            this._offers = new Array();
+            var _local_6:String = "";
+            var _local_7:IStuffData;
+            var _local_12:int = k.readInteger();
+            var _local_13:int;
+            while (_local_13 < _local_12)
+            
+_Str_2929 > 
+            this._enterRoom = k.readBoolean();
+            this._data = new _Str_2370(k);
+            this._roomForward = k.readBoolean();
+            this._staffPick = k.readBoolean();
+            this._isGroupMember = k.readBoolean();
+            var _local_2:Boolean = k.readBoolean();
+            this._roomModerationSettings = new _Str_2817(k);
+            this._data._Str_12127 = _local_2;
+            this._data._Str_16504 = k.readBoolean();
+            this._chatSettings = new RoomChatSettingsParser(k);
+            return true;
+        
+BotSkillListUpdateEvent > 
+            this._botId = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8418 > 
+            this._errorCode = k.readString();
+            return true;
+        
+_Str_5147 > 
+            var _local_2:int;
+            var _local_3:String;
+            var _local_8:int;
+            this._Str_13713 = new Array();
+            this._Str_4833 = new Map();
+            var _local_4:int = k.readInteger();
+            var _local_5:int;
+            while (_local_5 < _local_4)
+            
+_Str_5946 > 
+            this._Str_5049 = k.readInteger();
+            this._Str_10039 = k.readInteger();
+            this._Str_10803 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            this._Str_8270 = [];
+            this._Str_9670 = [];
+            this._Str_8961 = [];
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_8747 > 
+            this._Str_18965 = k.readInteger();
+            return true;
+        
+AchievementResolutionCompletedMessageEvent > 
+            this._stuffCode = k.readString();
+            this._badgeCode = k.readString();
+            return true;
+        
+_Str_2752 > 
+            this._Str_21881 = k.readInteger();
+            this._owner = k.readBoolean();
+            return true;
+        
+_Str_5714 > 
+            return true;
+        
+_Str_16789 > 
+            this._Str_2507 = k.readInteger();
+            this._Str_21271 = k.readBoolean();
+            return true;
+        
+_Str_7294 > 
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_11155 > 
+            return true;
+        
+_Str_8296 > 
+            this._stuffId = k.readInteger();
+            return true;
+        
+_Str_7845 > 
+            if (k == null)
+            
+IsFirstLoginOfDayEvent > 
+            this._Str_12080 = k.readBoolean();
+            return true;
+        
+_Str_8427 > 
+            this._Str_3145 = k.readInteger();
+            this._Str_21295 = k.readInteger();
+            return true;
+        
+_Str_8504 > 
+            this._pageId = k.readInteger();
+            this._catalogType = k.readString();
+            this._layoutCode = k.readString();
+            this._localization = new _Str_7089(k);
+            this._offers = new Vector.<CatalogPageMessageOfferData>(0);
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_3660 > 
+            this._data = new _Str_6768(k);
+            return true;
+        
+_Str_6293 > 
+            this._Str_2994 = k.readInteger();
+            this._reason = k.readInteger();
+            return true;
+        
+_Str_8596 > 
+            this._Str_20845 = k.readInteger();
+            return true;
+        
+_Str_7883 > 
+            this._flatId = k.readInteger();
+            return true;
+        
+GuideSessionEvent > 
+            this._Str_21558 = k.readString();
+            this._senderId = k.readInteger();
+            return true;
+        
+_Str_9048 > 
+            this._Str_2388 = k.readInteger();
+            this._petName = k.readString();
+            this._level = k.readInteger();
+            this._figureData = new PetFigureData(k);
+            return true;
+        
+_Str_7677 > 
+            this._offer = new PurchaseOKMessageOfferData(k);
+            return true;
+        
+_Str_16892 > 
+            this._position = k.readInteger();
+            return true;
+        
+_Str_7417 > 
+            this._userId = k.readInteger();
+            return true;
+        
+_Str_4187 > 
+            if (k.bytesAvailable)
+            
+_Str_8535 > 
+            this._Str_19500 = k.readInteger();
+            this._errorCode = k.readInteger();
+            return true;
+        
+_Str_7759 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5763 > 
+            this._reason = k.readInteger();
+            if (this._reason == 3)
+            
+GameInviteMessageEvent > 
+            this._gameTypeId = k.readInteger();
+            this._inviterId = k.readInteger();
+            return true;
+        
+_Str_6132 > 
+            if (k == null)
+            
+_Str_9151 > 
+            this._Str_3145 = k.readInteger();
+            this._Str_8208 = k.readInteger();
+            return true;
+        
+_Str_8337 > 
+            this._Str_19723 = k.readInteger();
+            this._Str_2992 = k.readString();
+            return true;
+        
+_Str_5081 > 
+            this._roomId = k.readInteger();
+            return true;
+        
+QuestCompletedMessageEvent > 
+            this._Str_8460 = new _Str_2455(k);
+            this._Str_21098 = k.readBoolean();
+            return true;
+        
+_Str_3492 > 
+            this._productName = k.readString();
+            this._Str_19265 = k.readInteger();
+            this._Str_19345 = k.readInteger();
+            this._Str_19583 = k.readInteger();
+            this._Str_22116 = k.readInteger();
+            this._Str_19758 = k.readBoolean();
+            this._Str_6923 = k.readBoolean();
+            this._Str_11060 = k.readInteger();
+            this._Str_11826 = k.readInteger();
+            this._Str_6262 = k.readInteger();
+            if (k.bytesAvailable)
+            
+_Str_8083 > 
+            var _local_3:int;
+            var _local_4:String;
+            var _local_5:String;
+            var _local_2:int = k.readInteger();
+            this._Str_8683 = new Map();
+            this._Str_8623 = new Map();
+            var _local_6:int;
+            while (_local_6 < _local_2)
+            
+_Str_8109 > 
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+_Str_5581 > 
+            var _local_4:InventoryItemParser;
+            this._Str_6580 = k.readInteger();
+            this._Str_6945 = k.readInteger();
+            this._Str_8344 = new Map();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+SnowStormGameStartedEvent > 
+            this._SafeStr_18794 = new _SafeStr_4018(k);
+            return true;
+        
+SnowStormQuePositionEvent > 
+            this._position = k.readInteger();
+            return true;
+        
+SnowStormStartBlockTickerEvent > 
+            this._SafeStr_21835 = k.readInteger();
+            return true;
+        
+StartLobbyCounterEvent > 
+            this._SafeStr_21848 = k.readInteger();
+            return true;
+        
+SnowStormUnusedAlertGenericEvent > 
+            this._reason = k.readInteger();
+            return true;
+        
+SnowStormLongDataEvent > 
+            this._SafeStr_21881 = new _SafeStr_4018(k);
+            return true;
+        
+SnowStormGameEndedEvent > 
+            return false;
+        
+SnowStormGenericErrorEvent > 
+            this._reason = k.readInteger();
+            return true;
+        
+SnowStormQuePlayerAddedEvent > 
+            this._user = new _SafeStr_4032(k);
+            this._SafeStr_21892 = k.readBoolean();
+            return true;
+        
+SnowStormPlayAgainEvent > 
+            return false;
+        
+SnowStormGamesLeftEvent > 
+            this._gameTypeId = k.readInteger();
+            this._SafeStr_13166 = k.readInteger();
+            this._SafeStr_18570 = k.readInteger();
+            return true;
+        
+SnowStormQuePlayerRemovedEvent > 
+            this._userId = k.readInteger();
+            return true;
+        
+SnowStormGamesInformationEvent > 
+            this._status = k.readInteger();
+            this._timeTillNextGame = k.readInteger();
+            this._userId = k.readInteger();
+            this._gamesLeft = k.readInteger();
+            return true;
+        
+SnowStormLongData2Event > 
+            this._SafeStr_21881 = new _SafeStr_4018(k);
+            return true;
+        
+_SafeStr_3929 > 
+            return false;
+        
+SnowStormGameStatusEvent > 
+            this._status = new _SafeStr_4692(k);
+            return true;
+        
+SnowStormFullGameStatusEvent > 
+            this._SafeStr_21831 = new _SafeStr_4690(k);
+            return true;
+        
+SnowStormOnStageStartEvent > 
+            this._SafeStr_12655 = k.readInteger();
+            this._roomType = k.readString();
+            this._SafeStr_12657 = k.readInteger();
+            this._SafeStr_12654 = new _SafeStr_3610(k);
+            return true;
+        
+SnowStormIntializeGameArenaViewEvent > 
+            this._SafeStr_12655 = k.readInteger();
+            return true;
+        
+SnowStormRejoinPreviousRoomEvent > 
+            this._SafeStr_13167 = k.readInteger();
+            return true;
+        
+_SafeStr_3669 > 
+            this._SafeStr_14869 = new Game2PlayerData();
+            this._SafeStr_14869.parse(k);
+            return true;
+        
+SnowStormLevelDataEvent > 
+            var _local_4:Game2PlayerData;
+            this._SafeStr_12655 = k.readInteger();
+            this._SafeStr_18595 = k.readInteger();
+            this._SafeStr_18581 = k.readInteger();
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+SnowStormOnGameEndingEvent > 
+            var _local_2:int;
+            this._SafeStr_21840 = k.readInteger();
+            this._SafeStr_18872 = new Game2GameResult(k);
+            var _local_3:int = k.readInteger();
+            _local_2 = 0;
+            while (_local_2 < _local_3)
+            
+SnowStormUserChatMessageEvent > 
+            this._SafeStr_9687 = k.readInteger();
+            this._SafeStr_21819 = k.readString();
+            return true;
+        
+SnowStormOnStageRunningEvent > 
+            this._time = k.readInteger();
+            return true;
+        
+SnowStormOnStageEndingEvent > 
+            this._SafeStr_21840 = k.readInteger();
+            return true;
+        
+SnowStormIntializedPlayersEvent > 
+            this._SafeStr_21868 = k.readInteger();
+            this._SafeStr_21869 = [];
+            var _local_2:int = k.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+SnowStormOnPlayerExitedArenaEvent > 
+            this._SafeStr_9687 = k.readInteger();
+            this._SafeStr_21883 = k.readInteger();
+            return true;
+        
+SnowStormGenericErrorEvent2 > 
+            this._SafeStr_15636 = k.readInteger();
+            return true;
+        
+SnowStormUserRematchedEvent > 
+            this._SafeStr_9687 = k.readInteger();
+            return true;
+        
+SimpleAlertMessageParser > 
+			this._alertMessage = k.readString();
+			
+			if (k.bytesAvailable)
+			
+StartRoomPollEvent > 
+            this._question = _arg_1.readString();
+            this._choices = [];
+            var _local_2:int = _arg_1.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+RoomPollResultEvent > 
+            this._question = _arg_1.readString();
+            this._choices = [];
+            this._SafeStr_7651 = [];
+            var _local_2:int = _arg_1.readInteger();
+            var _local_3:int;
+            while (_local_3 < _local_2)
+            
+FireworkChargeDataEvent > 
+			this._fireworkChargeData = new FireworkChargeData(_arg_1);
+			return true;
+		

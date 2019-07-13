@@ -45,7 +45,7 @@
 
         private function onRoomConnected(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_2569;
+            var _local_2:int = _xxxRoomId;
             if (listener)
             {
                 listener.sessionUpdate(_local_2, RoomSessionHandler.RS_CONNECTED);
@@ -55,7 +55,7 @@
         private function _Str_24463(k:_Str_4265):void
         {
             var _local_5:IRoomSession;
-            var _local_2:int = _Str_2569;
+            var _local_2:int = _xxxRoomId;
             var _local_3:_Str_5762 = k._Str_2273();
             if (_local_3 == null)
             {
@@ -82,7 +82,7 @@
         private function _Str_5963(k:IMessageEvent):void
         {
             var _local_5:_Str_5199;
-            var _local_2:int = _Str_2569;
+            var _local_2:int = _xxxRoomId;
             var _local_3:int = _local_2;
             var _local_4:_Str_3407 = (k as _Str_3407);
             if (_local_4 != null)
@@ -104,7 +104,7 @@
         private function _Str_12114(k:_Str_4187):void
         {
             var _local_5:IRoomSession;
-            var _local_2:int = _Str_2569;
+            var _local_2:int = _xxxRoomId;
             var _local_3:_Str_5700 = k._Str_2273();
             if (_local_3 == null)
             {
@@ -133,7 +133,7 @@
 
         private function onRoomDisconnected(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_2569;
+            var _local_2:int = _xxxRoomId;
             ErrorReportStorage.addDebugData("RoomID", "");
             if (listener)
             {
@@ -157,7 +157,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;
@@ -183,7 +183,7 @@
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;

@@ -244,7 +244,7 @@
             }
             else
             {
-                _local_5 = this._Str_2268.handler.container.sessionDataManager._Str_3411(_local_4);
+                _local_5 = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(_local_4);
             }
             return _local_5;
         }
@@ -493,12 +493,12 @@
             var _local_3:Boolean;
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k._Str_3233)) || (k.isRoomController)) || (k._Str_2799)))
+            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k._Str_3233)) || (k.isRoomController)) || (k.isGodMode)))
             {
                 _local_2 = true;
                 _local_3 = (!(k._Str_2770));
             }
-            if (k._Str_2799)
+            if (k.isGodMode)
             {
                 _local_4 = true;
             }
@@ -556,7 +556,7 @@
         private function _Str_25151(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
             this._Str_5729 = this._Str_9953;
-            if (((k._Str_3233) || (k._Str_2799)))
+            if (((k._Str_3233) || (k.isGodMode)))
             {
                 this._Str_5729 = this._Str_22051;
             }

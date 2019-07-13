@@ -29,7 +29,7 @@
             {
                 return;
             }
-            var _local_3:IRoomSession = listener.getSession(_Str_2569);
+            var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
                 return;

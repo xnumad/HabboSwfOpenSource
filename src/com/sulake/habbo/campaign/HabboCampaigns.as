@@ -139,7 +139,7 @@
             }
             else
             {
-                _local_4 = this._sessionDataManager._Str_14102(_arg_2);
+                _local_4 = this._sessionDataManager.getWallItemDataByName(_arg_2);
                 if (_local_4)
                 {
                     _local_3 = this._roomEngine.getWallItemIcon(_local_4.id, k);
@@ -197,9 +197,9 @@
             return this._calendarData;
         }
 
-        public function get _Str_2799():Boolean
+        public function get isGodMode():Boolean
         {
-            return this._sessionDataManager._Str_2799;
+            return this._sessionDataManager.isGodMode;
         }
 
         public function get localizationManager():IHabboLocalizationManager

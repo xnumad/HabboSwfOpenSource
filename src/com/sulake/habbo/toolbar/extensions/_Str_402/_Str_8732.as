@@ -92,7 +92,7 @@
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox"))._Str_2365;
                     this._habboToolbar.connection.send(new _Str_11774(_local_4));
-                    this._habboToolbar.sessionDataManager._Str_21481(_local_4);
+                    this._habboToolbar.sessionDataManager.setGodMode(_local_4);
                     return;
                 case "btn_reset_phone_number_collection":
                     this._window.findChildByName("btn_reset_phone_number_collection").visible = false;

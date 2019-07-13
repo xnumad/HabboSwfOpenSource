@@ -1095,7 +1095,7 @@
                     if (_local_4.getNumber(RoomObjectVariableEnum.FURNITURE_SELECTION_DISABLE) == 1)
                     {
                         _local_2 = true;
-                        if (this._sessionDataManager._Str_2799)
+                        if (this._sessionDataManager.isGodMode)
                         {
                             _local_2 = false;
                         }
@@ -1303,7 +1303,7 @@
 
         private function _Str_21292(k:int, _arg_2:int, _arg_3:int):Boolean
         {
-            return ((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager._Str_2799)) || (this.isOwnerOfFurniture(this._roomEngine.getRoomObject(k, _arg_2, _arg_3)));
+            return ((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager.isGodMode)) || (this.isOwnerOfFurniture(this._roomEngine.getRoomObject(k, _arg_2, _arg_3)));
         }
 
         public function _Str_9500(k:RoomEngineEvent):void
@@ -1859,14 +1859,14 @@
             switch (k.type)
             {
                 case RoomEngineRoomAdEvent.FURNI_CLICK:
-                    if (((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager._Str_2799)))
+                    if (((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager.isGodMode)))
                     {
                         return;
                     }
                     HabboWebTools.openWebPage(_local_4);
                     return;
                 case RoomEngineRoomAdEvent.FURNI_DOUBLE_CLICK:
-                    if ((((!(this._session.roomControllerLevel)) >= RoomControllerLevel.GUEST) && (!(this._sessionDataManager._Str_2799))))
+                    if ((((!(this._session.roomControllerLevel)) >= RoomControllerLevel.GUEST) && (!(this._sessionDataManager.isGodMode))))
                     {
                         return;
                     }

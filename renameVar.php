@@ -39,6 +39,9 @@ foreach ($paths as $path => $data) {
         continue;
 
     $nameClass = explode('.', $file)[0];
+
+    if($nameClass != "AvatarDirectionAngle")
+        continue;
     
     $varsListOld = getVarsList($data);
     if(count($varsListOld) == 0)
@@ -49,10 +52,12 @@ foreach ($paths as $path => $data) {
     if(count($varsListNew) == 0)
         continue;
 
+    //print_r($varsListNew);
+
     $diffCount = abs(count($varsListNew) - count($varsListOld));
 
     if ($diffCount >= 3) {
-        //$tmp .= $nameClass.": " .count($functionListNew)." - ". count($functionListOld)."\n";
+        $tmp .= $nameClass.": " .count($functionListNew)." - ". count($functionListOld)."\n";
         continue;
     }
 
@@ -60,8 +65,8 @@ foreach ($paths as $path => $data) {
         $old = $varsListOld[$i];
         $newName = getNewName($varsListNew, $varsListOld, $old['param']);
 
-        if(strpos($old['name'], "_Str_") === FALSE || $newName == "")
-            continue;
+        //if(strpos($old['name'], "_Str_") === FALSE || $newName == "")
+            //continue;
 
         $keyOld = $old['name'];
         $keyNew = $newName;

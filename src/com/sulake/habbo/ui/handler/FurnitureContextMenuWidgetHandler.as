@@ -130,14 +130,14 @@
             return (this._container) ? this._container.roomSession : null;
         }
 
-        public function _Str_4536(k:IRoomObject):IFurnitureData
+        public function getFurniData(k:IRoomObject):IFurnitureData
         {
             var _local_2:IFurnitureData;
             var _local_3:int;
             if (k)
             {
                 _local_3 = k.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                _local_2 = this._container.sessionDataManager._Str_3411(_local_3);
+                _local_2 = this._container.sessionDataManager.getFloorItemData(_local_3);
             }
             return _local_2;
         }

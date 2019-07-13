@@ -459,7 +459,7 @@
 
         private function _Str_16874(k:int):String
         {
-            var _local_2:IFurnitureData = this._roomEvents.sessionDataManager._Str_3411(k);
+            var _local_2:IFurnitureData = this._roomEvents.sessionDataManager.getFloorItemData(k);
             if (_local_2 == null)
             {
                 Logger.log(("COULD NOT FIND FURNIDATA FOR " + k));
@@ -470,7 +470,7 @@
 
         private function _Str_23026(k:int):String
         {
-            var _local_2:IFurnitureData = this._roomEvents.sessionDataManager._Str_3411(k);
+            var _local_2:IFurnitureData = this._roomEvents.sessionDataManager.getFloorItemData(k);
             if (_local_2 == null)
             {
                 Logger.log(("COULD NOT FIND FURNIDATA FOR " + k));

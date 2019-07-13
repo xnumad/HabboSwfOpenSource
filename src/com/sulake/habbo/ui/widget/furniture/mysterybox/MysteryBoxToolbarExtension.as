@@ -48,7 +48,7 @@
             var _local_2:ISessionDataManager = this._handler.container.sessionDataManager;
             _local_2.events.addEventListener(MysteryBoxKeysUpdateEvent.MBKE_UPDATE, this._Str_19397);
             this._Str_16216(this._Str_18883);
-            this._Str_21472(_local_2._Str_17491, _local_2._Str_17927);
+            this._Str_21472(_local_2.mysteryBoxColor, _local_2.mysteryKeyColor);
         }
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void

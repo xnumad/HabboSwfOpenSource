@@ -290,12 +290,12 @@
             var _local_2:IFurniDataListener;
             this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             this._Str_20020 = true;
-            if (((this._Str_11656) && (!(this._Str_12845))))
+            if (((this.isRealNoob) && (!(this._Str_12845))))
             {
                 this._Str_12845 = true;
                 for each (_local_2 in this._Str_6042)
                 {
-                    _local_2._Str_15145();
+                    _local_2.furniDataReady();
                 }
             }
         }
@@ -325,7 +325,7 @@
             this._userId = _local_3.id;
             this._name = _local_3.name;
             this._Str_7278 = _local_3._Str_10295;
-            this._Str_3437 = _local_3._Str_3577;
+            this._Str_3437 = _local_3.petRespectLeft;
             this._Str_3973 = _local_3._Str_2985;
             this._figure = _local_3.figure;
             this._gender = _local_3._Str_3344;
@@ -433,13 +433,13 @@
             }
             this._Str_20692 = _local_2.isOpen;
             this._Str_20046 = _local_2._Str_22557;
-            this._Str_8842 = _local_2._Str_11656;
-            if ((((this._Str_11656) && (this._Str_20020)) && (!(this._Str_12845))))
+            this._Str_8842 = _local_2.isRealNoob;
+            if ((((this.isRealNoob) && (this._Str_20020)) && (!(this._Str_12845))))
             {
                 this._Str_12845 = true;
                 for each (_local_3 in this._Str_6042)
                 {
-                    _local_3._Str_15145();
+                    _local_3.furniDataReady();
                 }
             }
         }
@@ -459,17 +459,17 @@
             this._Str_9602 = (_local_2.status == _Str_5768._Str_16052);
         }
 
-        public function get _Str_25698():Boolean
+        public function get systemOpen():Boolean
         {
             return this._Str_20692;
         }
 
-        public function get _Str_22031():Boolean
+        public function get systemShutDown():Boolean
         {
             return this._Str_20046;
         }
 
-        public function get _Str_11656():Boolean
+        public function get isRealNoob():Boolean
         {
             if (((((false) || (false)) || (false)) || (false)))
             {
@@ -493,12 +493,12 @@
             return this._clubLevel;
         }
 
-        public function get _Str_14040():Boolean
+        public function get nameChangeAllowed():Boolean
         {
             return !(this._Str_7106 == NoobnessLevelEnum.OLD_IDENTITY);
         }
 
-        public function get _Str_6986():Boolean
+        public function get isAnyRoomController():Boolean
         {
             return this._Str_7106 == NoobnessLevelEnum.REAL_NOOB;
         }
@@ -523,7 +523,7 @@
             return this._figure;
         }
 
-        public function get _Str_2799():Boolean
+        public function get isGodMode():Boolean
         {
             return this._Str_8385 >= SecurityLevelEnum._Str_3569;
         }
@@ -538,7 +538,7 @@
             return this._Str_20255;
         }
 
-        public function _Str_21481(k:Boolean):void
+        public function setGodMode(k:Boolean):void
         {
             this._Str_17475 = k;
         }
@@ -584,7 +584,7 @@
             this._communicationManager.connection.send(new _Str_9930(this._Str_3790));
         }
 
-        public function _Str_18437(k:int):Array
+        public function getUserTags(k:int):Array
         {
             return this._Str_7432._Str_24368(k);
         }
@@ -594,7 +594,7 @@
             return this._badgeImageManager.getBadgeImage(k);
         }
 
-        public function _Str_20021(k:String):BitmapData
+        public function getBadgeSmallImage(k:String):BitmapData
         {
             return this._badgeImageManager.getSmallBadgeImage(k);
         }
@@ -604,12 +604,12 @@
             return this._badgeImageManager.getBadgeImageAssetName(k);
         }
 
-        public function _Str_19992(k:String):String
+        public function getBadgeImageSmallAssetName(k:String):String
         {
             return this._badgeImageManager.getSmallScaleBadgeAssetName(k);
         }
 
-        public function _Str_18459(k:String):BitmapData
+        public function requestBadgeImage(k:String):BitmapData
         {
             return this._badgeImageManager.getBadgeImage(k, BadgeImageManager.NORMAL_BADGE, false);
         }
@@ -624,7 +624,7 @@
             k.dispose();
         }
 
-        public function _Str_17173(k:int):String
+        public function getGroupBadgeId(k:int):String
         {
             return this._habboGroupInfoManager.getBadgeId(k);
         }
@@ -639,17 +639,17 @@
             return this._badgeImageManager.getBadgeImage(k, BadgeImageManager.GROUP_BADGE);
         }
 
-        public function _Str_17218(k:String):BitmapData
+        public function getGroupBadgeSmallImage(k:String):BitmapData
         {
             return this._badgeImageManager.getSmallBadgeImage(k, BadgeImageManager.GROUP_BADGE);
         }
 
-        public function _Str_15583(k:String):String
+        public function getGroupBadgeAssetName(k:String):String
         {
             return this._badgeImageManager.getBadgeImageAssetName(k, BadgeImageManager.GROUP_BADGE);
         }
 
-        public function _Str_19687(k:String):String
+        public function getGroupBadgeSmallAssetName(k:String):String
         {
             return this._badgeImageManager.getSmallScaleBadgeAssetName(k, BadgeImageManager.GROUP_BADGE);
         }
@@ -679,7 +679,7 @@
             this._ignoredUsersManager.unignoreUser(k);
         }
 
-        public function get _Str_3577():int
+        public function get petRespectLeft():int
         {
             return this._Str_3437;
         }
@@ -689,7 +689,7 @@
             return this._Str_3973;
         }
 
-        public function _Str_20136(k:int):void
+        public function giveRespect(k:int):void
         {
             if (((k >= 0) && (this._Str_3437 > 0)))
             {
@@ -698,12 +698,12 @@
             }
         }
 
-        public function _Str_19464():void
+        public function giveRespectFailed():void
         {
             this._Str_3437 = (this._Str_3437 + 1);
         }
 
-        public function _Str_21665(k:int):void
+        public function givePetRespect(k:int):void
         {
             if (((k >= 0) && (this._Str_3973 > 0)))
             {
@@ -721,7 +721,7 @@
             return this._Str_2804[k];
         }
 
-        public function _Str_3411(k:int):IFurnitureData
+        public function getFloorItemData(k:int):IFurnitureData
         {
             if (this._Str_3789 == null)
             {
@@ -730,7 +730,7 @@
             return this._Str_3789.getValue(k.toString());
         }
 
-        public function _Str_19930(k:int):Array
+        public function getFloorItemsDataByCategory(k:int):Array
         {
             var _local_3:IFurnitureData;
             var _local_2:Array = [];
@@ -767,12 +767,12 @@
             if (((!(_local_3 == null)) && (_arg_2 <= (_local_3.length - 1))))
             {
                 _local_4 = _local_3[_arg_2];
-                return this._Str_3411(_local_4);
+                return this.getFloorItemData(_local_4);
             }
             return null;
         }
 
-        public function _Str_14102(k:String, _arg_2:int=0):IFurnitureData
+        public function getWallItemDataByName(k:String, _arg_2:int=0):IFurnitureData
         {
             var _local_4:int;
             if (this._Str_5556 == null)
@@ -788,7 +788,7 @@
             return null;
         }
 
-        public function _Str_21275(userId:int, userName:String):void
+        public function ejectAllFurniture(userId:int, userName:String):void
         {
             var urlString:String;
             if (propertyExists("link.format.userpage"))
@@ -807,7 +807,7 @@
             }
         }
 
-        public function _Str_21655(roomId:int):void
+        public function openHabboHomePage(roomId:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {
@@ -818,7 +818,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this.isGodMode)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -842,7 +842,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this.isGodMode)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.eject_all}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -855,7 +855,7 @@
             }
         }
 
-        public function _Str_22197(k:int):void
+        public function pickAllFurniture(k:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {
@@ -866,13 +866,13 @@
             {
                 return;
             }
-            if (((_local_2.isRoomController) || (this._Str_2799)))
+            if (((_local_2.isRoomController) || (this.isGodMode)))
             {
                 this.sendSpecialCommandMessage(":ejectpets");
             }
         }
 
-        public function _Str_21742(roomId:int):void
+        public function ejectPets(roomId:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {
@@ -883,7 +883,7 @@
             {
                 return;
             }
-            if ((((session.isRoomController) || (this._Str_2799)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((session.isRoomController) || (this.isGodMode)) || (session.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 this._windowManager.confirm("${generic.alert.title}", "${room.confirm.pick_all_bc}", 0, function (k:_Str_2910, _arg_2:WindowEvent):void
                 {
@@ -909,7 +909,7 @@
             return false;
         }
 
-        public function _Str_16650(k:IProductDataListener):void
+        public function addProductsReadyEventListener(k:IProductDataListener):void
         {
             if (this._Str_7186)
             {
@@ -1009,7 +1009,7 @@
             this.initFurnitureData();
         }
 
-        public function _Str_20401(k:IFurniDataListener):void
+        public function removeFurniDataListener(k:IFurniDataListener):void
         {
             if (!this._Str_6042)
             {
@@ -1022,7 +1022,7 @@
             }
         }
 
-        public function _Str_4536(k:IFurniDataListener):Vector.<IFurnitureData>
+        public function getFurniData(k:IFurniDataListener):Vector.<IFurnitureData>
         {
             if (((this._Str_3789 == null) || (this._Str_3789.length == 0)))
             {
@@ -1093,12 +1093,12 @@
             return ((getBoolean("talent.track.citizenship.enabled")) && (!(this.isPerkAllowed(PerkEnum.CITIZEN)))) ? TalentEnum.CITIZENSHIP : TalentEnum.HELPER;
         }
 
-        public function get _Str_17491():String
+        public function get mysteryBoxColor():String
         {
             return this._Str_18582;
         }
 
-        public function get _Str_17927():String
+        public function get mysteryKeyColor():String
         {
             return this._Str_18348;
         }

@@ -204,16 +204,16 @@
                                         }
                                         return null;
                                     case ":pickall":
-                                        this._container.sessionDataManager._Str_21655(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.openHabboHomePage(this._container.roomSession.roomId);
                                         return null;
                                     case ":pickallbc":
-                                        this._container.sessionDataManager._Str_21742(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.ejectPets(this._container.roomSession.roomId);
                                         return null;
                                     case ":ejectall":
                                         this._container.sessionDataManager._Str_21775(this._container.roomSession.roomId, _local_8);
                                         return null;
                                     case ":ejectpets":
-                                        this._container.sessionDataManager._Str_22197(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.pickAllFurniture(this._container.roomSession.roomId);
                                         return null;
                                     case ":moonwalk":
                                         this._container.sessionDataManager.sendSpecialCommandMessage(":moonwalk");

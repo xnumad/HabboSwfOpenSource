@@ -85,7 +85,7 @@
             return this._Str_7278;
         }
 
-        public function get _Str_3577():int
+        public function get petRespectLeft():int
         {
             return this._Str_3437;
         }

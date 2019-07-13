@@ -397,7 +397,7 @@
         {
             if (this._sessionDataManager)
             {
-                return this._sessionDataManager._Str_17218(k);
+                return this._sessionDataManager.getGroupBadgeSmallImage(k);
             }
             return null;
         }

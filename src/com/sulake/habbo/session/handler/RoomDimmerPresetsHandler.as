@@ -30,7 +30,7 @@
                 return;
             }
             var _local_3:RoomDimmerPresetsMessageParser = _local_2._Str_2273();
-            var _local_4:IRoomSession = listener.getSession(_Str_2569);
+            var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
                 return;

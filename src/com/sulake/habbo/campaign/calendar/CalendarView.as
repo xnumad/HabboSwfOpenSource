@@ -180,7 +180,7 @@
                 _local_2++;
             }
             CalendarSpinnerUtil._Str_25753(this, this._selectedIndex);
-            if (this._controller._Str_2799)
+            if (this._controller.isGodMode)
             {
                 _local_3 = (this.window.findChildByName("btn_force_open") as IButtonWindow);
                 _local_3.visible = true;

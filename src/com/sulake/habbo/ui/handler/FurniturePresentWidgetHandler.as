@@ -183,7 +183,7 @@
                             _local_4 = null;
                             if (_local_2._Str_2887 == ProductTypeEnum.FLOOR)
                             {
-                                _local_3 = this._container.sessionDataManager._Str_3411(_local_2.classId);
+                                _local_3 = this._container.sessionDataManager.getFloorItemData(_local_2.classId);
                             }
                             else
                             {

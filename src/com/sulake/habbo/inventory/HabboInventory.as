@@ -891,7 +891,7 @@
             }
             if (_arg_2 == ProductTypeEnum.FLOOR)
             {
-                _local_3 = this._sessionDataManager._Str_3411(k);
+                _local_3 = this._sessionDataManager.getFloorItemData(k);
             }
             if (_arg_2 == ProductTypeEnum.WALL)
             {
@@ -913,7 +913,7 @@
             }
             if (_arg_2 == ProductTypeEnum.WALL)
             {
-                _local_4 = this._sessionDataManager._Str_14102(k);
+                _local_4 = this._sessionDataManager.getWallItemDataByName(k);
             }
             return _local_4;
         }

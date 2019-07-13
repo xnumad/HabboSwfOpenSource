@@ -37,7 +37,7 @@
             this._catalog.connection.addMessageEvent(new TargetedOfferEvent(this._Str_25111));
             this._catalog.connection.addMessageEvent(new _Str_9208(this._Str_22594));
             this._catalog.events.addEventListener(PurseUpdateEvent.CATALOG_PURSE_UPDATE, this._Str_14817);
-            this._catalog.sessionDataManager._Str_16650(this);
+            this._catalog.sessionDataManager.addProductsReadyEventListener(this);
         }
 
         public function get catalog():HabboCatalog

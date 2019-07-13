@@ -52,7 +52,7 @@
             this._groupBadgeId = k;
         }
 
-        public function set _Str_3577(k:int):void
+        public function set petRespectLeft(k:int):void
         {
             this._respectLeft = k;
         }
@@ -107,7 +107,7 @@
             return this._groupBadgeId;
         }
 
-        public function get _Str_3577():int
+        public function get petRespectLeft():int
         {
             return this._respectLeft;
         }
@@ -145,7 +145,7 @@
             this.groupId = k.groupId;
             this.groupName = k.groupName;
             this._Str_5235 = k._Str_5235;
-            this._Str_3577 = k._Str_3577;
+            this.petRespectLeft = k.petRespectLeft;
             this._Str_3249 = k._Str_3249;
             this._Str_3313 = k._Str_3313;
             this.type = k.type;

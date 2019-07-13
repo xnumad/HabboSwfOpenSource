@@ -40,8 +40,8 @@ foreach ($paths as $path => $data) {
 
     $nameClass = explode('.', $file)[0];
 
-    //if($nameClass != "RoomEngine")
-        //continue;
+    if($nameClass != "ISessionDataManager")
+        continue;
 
     $functionListOld = getFunctionList($data);
     if(count($functionListOld) == 0)
@@ -56,7 +56,7 @@ foreach ($paths as $path => $data) {
 
     if ($diffCount >= 8) {
         //$tmp .= $nameClass.": " .count($functionListNew)." - ". count($functionListOld)."\n";
-        continue;
+        //continue;
     }
 
     for($i = 0; $i < count($functionListOld); $i++) {

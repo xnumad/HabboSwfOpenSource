@@ -401,14 +401,14 @@
             }
         }
 
-        public function _Str_4536(k:IRoomObject):IFurnitureData
+        public function getFurniData(k:IRoomObject):IFurnitureData
         {
             var _local_2:IFurnitureData;
             var _local_3:int;
             if (k)
             {
                 _local_3 = k.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                _local_2 = this._container.sessionDataManager._Str_3411(_local_3);
+                _local_2 = this._container.sessionDataManager.getFloorItemData(_local_3);
             }
             return _local_2;
         }
@@ -425,7 +425,7 @@
             }
             var _local_3:int = this._container.roomSession.roomId;
             var _local_4:int = this._container.sessionDataManager.userId;
-            var _local_5:IFurnitureData = this._container.sessionDataManager._Str_3411(_arg_2);
+            var _local_5:IFurnitureData = this._container.sessionDataManager.getFloorItemData(_arg_2);
             if (!_local_5)
             {
                 return;
@@ -457,7 +457,7 @@
                 return;
             }
             var _local_5:int = this._container.getFurnitureOwnerId(_local_3);
-            var _local_6:IFurnitureData = this._Str_4536(_local_3);
+            var _local_6:IFurnitureData = this.getFurniData(_local_3);
             var _local_7:Array = _local_6.customParams.split(" ");
             var _local_8:int = ((_local_7.length > 0) ? parseInt(_local_7[0]) : -1);
             if (_local_8 == -1)
@@ -610,7 +610,7 @@
             {
                 case 4:
                 case 5:
-                    this._container.sessionDataManager._Str_19464();
+                    this._container.sessionDataManager.giveRespectFailed();
                     return;
             }
         }

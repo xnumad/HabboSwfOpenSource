@@ -140,8 +140,8 @@
         private function _Str_3248():void
         {
             var _local_8:String;
-            var k:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._Str_3111.classId);
-            var _local_2:IFurnitureData = this._Str_2268.handler.container.sessionDataManager._Str_3411(this._resultData2.classId);
+            var k:IFurnitureData = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(this._Str_3111.classId);
+            var _local_2:IFurnitureData = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(this._resultData2.classId);
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.name", "name", ((k != null) ? k.localizedName : ""));
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed2.name", "name", ((_local_2 != null) ? _local_2.localizedName : ""));
             this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.description", "name", this._Str_3111.userName);

@@ -137,7 +137,7 @@
         }
 
 
-        public function _Str_4536(k:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, _arg_4:int):String
+        public function getFurniData(k:Rectangle, _arg_2:IRoomRenderingCanvas, _arg_3:RoomEngine, _arg_4:int):String
         {
             var _local_8:IRoomObject;
             var _local_9:RoomObjectSpriteData;

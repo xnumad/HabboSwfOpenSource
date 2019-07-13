@@ -64,7 +64,7 @@
             return this._amIAnyRoomController;
         }
 
-        public function get _Str_3577():int
+        public function get petRespectLeft():int
         {
             return this._respectLeft;
         }
@@ -149,7 +149,7 @@
             this._amIAnyRoomController = k;
         }
 
-        public function set _Str_3577(k:int):void
+        public function set petRespectLeft(k:int):void
         {
             this._respectLeft = k;
         }
@@ -206,7 +206,7 @@
             this._canTrade = k._Str_5751;
             this._canTradeReason = k._Str_6622;
             this._isIgnored = k.isIgnored;
-            this._respectLeft = k._Str_3577;
+            this._respectLeft = k.petRespectLeft;
             this._isOwnUser = (k.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
             this._allowNameChange = k._Str_4330;
             this._isGuildRoom = k._Str_3672;

@@ -61,7 +61,7 @@
             {
                 this._furniChooser = new ChooserView(this, "${widget.chooser.furni.title}");
             }
-            this._furniChooser.populate(k.items, k._Str_2799);
+            this._furniChooser.populate(k.items, k.isGodMode);
         }
 
         private function _Str_14687(k:RoomWidgetRoomObjectUpdateEvent):void

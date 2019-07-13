@@ -82,7 +82,7 @@
             IStaticBitmapWrapperWindow(this._window.findChildByName("needed_base")).assetUri = ((_local_2) ? "mysterybox_key_base" : "mysterybox_box_base");
             IStaticBitmapWrapperWindow(this._window.findChildByName("needed_overlay")).assetUri = ((_local_2) ? "mysterybox_key_overlay" : "mysterybox_box_overlay");
             var _local_4:ISessionDataManager = this._widget.handler.container.sessionDataManager;
-            var _local_5:String = ((_local_2) ? _local_4._Str_17491 : _local_4._Str_17927);
+            var _local_5:String = ((_local_2) ? _local_4.mysteryBoxColor : _local_4.mysteryKeyColor);
             if (((_local_5 == null) || (_local_5 == "")))
             {
                 return;

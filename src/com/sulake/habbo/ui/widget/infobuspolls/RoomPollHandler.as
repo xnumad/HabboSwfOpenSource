@@ -30,7 +30,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;
@@ -49,7 +49,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 return;
             }
-            var _local_2:IRoomSession = listener.getSession(_Str_2569);
+            var _local_2:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_2 == null)
             {
                 return;

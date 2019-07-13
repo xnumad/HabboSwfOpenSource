@@ -20,7 +20,7 @@
             return this._items;
         }
 
-        public function get _Str_2799():Boolean
+        public function get isGodMode():Boolean
         {
             return this._Str_10043;
         }

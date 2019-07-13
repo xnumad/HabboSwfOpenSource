@@ -46,7 +46,7 @@
             var _local_5:String = _arg_4.getProperty("camera.launch.ui.position");
             this._Str_2617._Str_23347(((this.handler.container.sessionDataManager.isPerkAllowed(PerkEnum.CAMERA)) && ((StringUtils.isEmpty(_local_5)) || (_local_5 == "room-menu"))));
             this._Str_2617._Str_21132(this.handler._Str_5090);
-            this._Str_2617.setCollapsed(((this.handler.sessionDataManager._Str_14040) || (!(this.handler.sessionDataManager._Str_8444 & UIFlags._Str_13691))));
+            this._Str_2617.setCollapsed(((this.handler.sessionDataManager.nameChangeAllowed) || (!(this.handler.sessionDataManager._Str_8444 & UIFlags._Str_13691))));
         }
 
         override public function dispose():void

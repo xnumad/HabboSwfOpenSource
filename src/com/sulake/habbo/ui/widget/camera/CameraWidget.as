@@ -52,9 +52,9 @@
             }
         }
 
-        public function get viewFinder():CameraViewFinder
+        public function get photoLab():CameraPhotoLab
         {
-            return this._viewFinder;
+            return this._photoLab;
         }
 
         public function get catalog():IHabboCatalog
@@ -179,7 +179,7 @@
             this._photoLab = new CameraPhotoLab(this);
             this._photoLab._Str_23895(k);
         }
-
+        
         public function _Str_25345(k:String, _arg_2:Boolean=false):void
         {
             if (this._photoLab)

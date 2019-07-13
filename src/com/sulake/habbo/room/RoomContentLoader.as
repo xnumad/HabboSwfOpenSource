@@ -169,12 +169,12 @@
                 this._waitingForSessionDataManager = true;
                 return;
             }
-            var k:Vector.<IFurnitureData> = this._sessionDataManager._Str_4536(this);
+            var k:Vector.<IFurnitureData> = this._sessionDataManager.getFurniData(this);
             if (k == null)
             {
                 return;
             }
-            this._sessionDataManager._Str_20401(this);
+            this._sessionDataManager.removeFurniDataListener(this);
             this.populateFurniData(k);
             this._dataInitialized = true;
             this._Str_23030();
@@ -1359,7 +1359,7 @@
             return false;
         }
 
-        public function _Str_15145():void
+        public function furniDataReady():void
         {
             this.initFurnitureData();
         }

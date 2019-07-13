@@ -30,7 +30,7 @@
             {
                 return null;
             }
-            var _local_4:BitmapData = _arg_3._Str_18459(k);
+            var _local_4:BitmapData = _arg_3.requestBadgeImage(k);
             if (_local_4 == null)
             {
                 _arg_3.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, _arg_2);

@@ -100,7 +100,7 @@
             this._savedOutfitName = _arg_4;
             var _local_5:IRoomSession = (_Str_2470 as MannequinWidgetHandler).container.roomSession;
             var _local_6:ISessionDataManager = (_Str_2470 as MannequinWidgetHandler).container.sessionDataManager;
-            var _local_7:Boolean = (((_local_5.isRoomController) || (_local_5.roomControllerLevel >= RoomControllerLevel.GUEST)) || (_local_6._Str_2799));
+            var _local_7:Boolean = (((_local_5.isRoomController) || (_local_5.roomControllerLevel >= RoomControllerLevel.GUEST)) || (_local_6.isGodMode));
             var _local_8:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_9:IAvatarFigureContainer = _local_8._Str_718(_arg_2);
             this._mannequinClubLevel = _local_8._Str_932(_local_9, this._mannequinGender, _Str_9402);

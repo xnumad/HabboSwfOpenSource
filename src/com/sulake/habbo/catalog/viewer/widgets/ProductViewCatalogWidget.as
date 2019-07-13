@@ -369,7 +369,7 @@
                                     }
                                     if (_local_7.furnitureData.category == FurniCategory._Str_12534)
                                     {
-                                        _local_11 = this._habboCatalog.sessionDataManager._Str_3411(_local_7.furnitureData.id);
+                                        _local_11 = this._habboCatalog.sessionDataManager.getFloorItemData(_local_7.furnitureData.id);
                                         _local_12 = new Vector.<int>(0);
                                         _local_13 = _local_11.customParams.split(",");
                                         for each (_local_14 in _local_13)

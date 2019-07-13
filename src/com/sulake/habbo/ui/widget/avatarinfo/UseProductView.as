@@ -72,11 +72,11 @@
             var _local_2:IRoomObject = this.widget.handler.roomEngine.getRoomObject(k, this._useProductItem._Str_3710, RoomObjectCategoryEnum.CONST_10);
             if (_local_2 != null)
             {
-                _local_3 = this.widget.handler._Str_4536(_local_2);
+                _local_3 = this.widget.handler.getFurniData(_local_2);
             }
             else
             {
-                _local_3 = this.widget.handler.container.sessionDataManager._Str_3411(this._useProductItem._Str_3710);
+                _local_3 = this.widget.handler.container.sessionDataManager.getFloorItemData(this._useProductItem._Str_3710);
             }
             if (!_local_3)
             {
