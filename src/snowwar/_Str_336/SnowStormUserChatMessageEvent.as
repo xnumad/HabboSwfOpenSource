@@ -11,7 +11,7 @@
             super(k, SnowStormUserChatMessageParser);
         }
 
-        public function _Str_2273():SnowStormUserChatMessageParser
+        public function getParser():SnowStormUserChatMessageParser
         {
             return _parser as SnowStormUserChatMessageParser;
         }

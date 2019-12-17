@@ -56,7 +56,7 @@
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
-            var _local_3:_Str_5762 = k._Str_2273();
+            var _local_3:_Str_5762 = k.getParser();
             if (_local_3 == null)
             {
                 return;
@@ -87,7 +87,7 @@
             var _local_4:_Str_3407 = (k as _Str_3407);
             if (_local_4 != null)
             {
-                _local_5 = _local_4._Str_2273();
+                _local_5 = _local_4.getParser();
                 if (_local_5 != null)
                 {
                     _local_3 = _local_5.roomId;
@@ -105,7 +105,7 @@
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
-            var _local_3:_Str_5700 = k._Str_2273();
+            var _local_3:_Str_5700 = k.getParser();
             if (_local_3 == null)
             {
                 return;
@@ -152,7 +152,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7701 = k._Str_2273();
+            var _local_2:_Str_7701 = k.getParser();
             if (_local_2 == null)
             {
                 return;

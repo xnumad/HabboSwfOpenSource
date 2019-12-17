@@ -667,18 +667,18 @@
         private function _Str_23048(k:BotSkillListUpdateEvent):void
         {
             var _local_3:RoomUserData;
-            var _local_2:BotSkillListUpdateParser = k._Str_2273();
+            var _local_2:BotSkillListUpdateParser = k.getParser();
             if (this._session != null)
             {
                 _local_3 = this._session.userDataManager._Str_17237(_local_2._Str_5455);
-                _local_3._Str_7594 = k._Str_2273().skillList.concat();
+                _local_3._Str_7594 = k.getParser().skillList.concat();
             }
             this.events.dispatchEvent(new _Str_5375(_local_2._Str_5455, _local_2.skillList));
         }
 
         private function _Str_25865(k:BotForceOpenContextMenuEvent):void
         {
-            var _local_2:BotForceOpenContextMenuParser = k._Str_2273();
+            var _local_2:BotForceOpenContextMenuParser = k.getParser();
             this.events.dispatchEvent(new RoomWidgetRequestBotForceOpenContextMenuEvent(_local_2._Str_5455));
         }
 

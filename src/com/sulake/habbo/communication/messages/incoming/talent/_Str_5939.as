@@ -11,7 +11,7 @@
             super(k, TalentLevelUpMessageParser);
         }
 
-        public function _Str_2273():TalentLevelUpMessageParser
+        public function getParser():TalentLevelUpMessageParser
         {
             return _parser as TalentLevelUpMessageParser;
         }

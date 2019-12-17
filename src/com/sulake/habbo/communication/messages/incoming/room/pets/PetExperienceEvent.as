@@ -11,7 +11,7 @@
             super(k, PetExperienceParser);
         }
 
-        public function _Str_2273():PetExperienceParser
+        public function getParser():PetExperienceParser
         {
             return _parser as PetExperienceParser;
         }

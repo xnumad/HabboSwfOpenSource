@@ -37,7 +37,7 @@
             {
                 return;
             }
-            var _local_3:QuestionParser = k._Str_2273();
+            var _local_3:QuestionParser = k.getParser();
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION, _local_2, _local_3._Str_5213);
             _local_4.question = _local_3.question;
             _local_4.duration = _local_3.duration;
@@ -59,7 +59,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7466 = k._Str_2273();
+            var _local_3:_Str_7466 = k.getParser();
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED, _local_2, _local_3.userId);
             _local_4.value = _local_3.value;
             _local_4.userId = _local_3.userId;
@@ -79,7 +79,7 @@
             {
                 return;
             }
-            var _local_3:SimplePollResultsMessageParser = k._Str_2273();
+            var _local_3:SimplePollResultsMessageParser = k.getParser();
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED, _local_2);
             _local_4._Str_3218 = _local_3.pollId;
             _local_4._Str_4036 = _local_3.results;

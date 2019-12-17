@@ -125,7 +125,7 @@
             var _local_3:Boolean;
             var _local_4:int;
             var _local_5:Array;
-            var _local_2:_Str_7601 = k._Str_2273();
+            var _local_2:_Str_7601 = k.getParser();
             for each (_local_4 in _local_2._Str_17858())
             {
                 _local_5 = _local_2._Str_24396(_local_4);

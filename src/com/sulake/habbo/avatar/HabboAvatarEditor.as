@@ -399,7 +399,7 @@
                 _local_12 = this._Str_24175();
                 for each (_local_13 in _local_9.colors)
                 {
-                    if (((_local_13._Str_608) && ((_local_12) || (this.clubMemberLevel >= _local_13.clubLevel))))
+                    if (((_local_13.isSelectable) && ((_local_12) || (this.clubMemberLevel >= _local_13.clubLevel))))
                     {
                         _local_20 = 0;
                         while (_local_20 < _Str_6331)
@@ -462,11 +462,11 @@
                             _local_28 = true;
                         }
                     }
-                    if ((((_local_6._Str_608) && (_local_28)) && ((_local_12) || (this.clubMemberLevel >= _local_6.clubLevel))))
+                    if ((((_local_6.isSelectable) && (_local_28)) && ((_local_12) || (this.clubMemberLevel >= _local_6.clubLevel))))
                     {
                         _local_29 = (this.clubMemberLevel < _local_6.clubLevel);
                         _local_30 = true;
-                        if (_local_6._Str_651)
+                        if (_local_6.isSellable)
                         {
                             _local_30 = (((this.manager.inventory) && (this._manager.inventory._Str_14439(_local_6.id))) || (this._Str_16064()));
                         }
@@ -565,7 +565,7 @@
                 _local_3 = this.getPalette(_local_2._Str_734);
                 for each (_local_4 in _local_3.colors)
                 {
-                    if (((_local_4._Str_608) && (this.clubMemberLevel >= _local_4.clubLevel)))
+                    if (((_local_4.isSelectable) && (this.clubMemberLevel >= _local_4.clubLevel)))
                     {
                         return _local_4.id;
                     }
@@ -578,8 +578,8 @@
         {
             var _local_3:Number = ((k.partSet == null) ? -1 : Number(k.partSet.clubLevel));
             var _local_4:Number = ((_arg_2.partSet == null) ? -1 : Number(_arg_2.partSet.clubLevel));
-            var _local_5:Boolean = ((k.partSet == null) ? false : k.partSet._Str_651);
-            var _local_6:Boolean = ((_arg_2.partSet == null) ? false : _arg_2.partSet._Str_651);
+            var _local_5:Boolean = ((k.partSet == null) ? false : k.partSet.isSellable);
+            var _local_6:Boolean = ((_arg_2.partSet == null) ? false : _arg_2.partSet.isSellable);
             if (((_local_5) && (!(_local_6))))
             {
                 return 1;
@@ -611,8 +611,8 @@
         {
             var _local_3:Number = ((k.partSet == null) ? 9999999999 : Number(k.partSet.clubLevel));
             var _local_4:Number = ((_arg_2.partSet == null) ? 9999999999 : Number(_arg_2.partSet.clubLevel));
-            var _local_5:Boolean = ((k.partSet == null) ? false : k.partSet._Str_651);
-            var _local_6:Boolean = ((_arg_2.partSet == null) ? false : _arg_2.partSet._Str_651);
+            var _local_5:Boolean = ((k.partSet == null) ? false : k.partSet.isSellable);
+            var _local_6:Boolean = ((_arg_2.partSet == null) ? false : _arg_2.partSet.isSellable);
             if (((_local_5) && (!(_local_6))))
             {
                 return 1;

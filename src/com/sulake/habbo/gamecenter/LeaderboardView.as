@@ -179,7 +179,7 @@
                 return;
             }
             var _local_2:_Str_8022 = (k as _Str_8022);
-            this._Str_17910(this._thisWeekList, _local_2._Str_2273(), 10, false);
+            this._Str_17910(this._thisWeekList, _local_2.getParser(), 10, false);
         }
 
         private function _Str_25832(k:IMessageEvent):void
@@ -191,7 +191,7 @@
                 return;
             }
             var _local_2:_Str_5142 = (k as _Str_5142);
-            var _local_3:Game2WeeklyLeaderboardParser = _local_2._Str_2273();
+            var _local_3:Game2WeeklyLeaderboardParser = _local_2.getParser();
             if (_local_3.currentOffset == 0)
             {
                 this._Str_17910(this._thisWeekList, _local_3, 10, true);

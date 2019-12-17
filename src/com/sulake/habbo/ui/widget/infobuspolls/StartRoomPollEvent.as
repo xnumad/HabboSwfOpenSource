@@ -13,7 +13,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             super(k, RoomPollDataParser);
         }
 		
-		public function _Str_2273():RoomPollDataParser
+		public function getParser():RoomPollDataParser
 		{
 			return this._parser as RoomPollDataParser;
 		}

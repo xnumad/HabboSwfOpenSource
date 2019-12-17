@@ -97,10 +97,12 @@
                 {
                     messageLength = buffer.readInt();
                 }
+
                 if (messageLength < 2)// || (messageLength > MAX_DATA)))
                 {
-                    throw (new Error(("Invalid message length " + messageLength)));
+                    return null;//throw (new Error(("Invalid message length " + messageLength)));
                 }
+                
                 if (buffer.bytesAvailable < messageLength)
                 {
                     buffer.position = readerIndex;

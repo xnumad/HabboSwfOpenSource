@@ -201,7 +201,7 @@
         private function _Str_11630(k:IMessageEvent):void
         {
             var _local_2:_Str_5581 = (k as _Str_5581);
-            if (((_local_2) && (_local_2._Str_2273()._Str_9600 == 0)))
+            if (((_local_2) && (_local_2.getParser()._Str_9600 == 0)))
             {
                 if (this._container != null)
                 {

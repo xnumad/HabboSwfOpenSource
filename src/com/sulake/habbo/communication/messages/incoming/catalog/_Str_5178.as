@@ -27,7 +27,7 @@
             return this._Str_6052;
         }
 
-        public function get _Str_608():Boolean
+        public function get isSelectable():Boolean
         {
             return this._Str_693;
         }

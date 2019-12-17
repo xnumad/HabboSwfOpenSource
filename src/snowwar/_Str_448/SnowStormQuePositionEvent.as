@@ -11,7 +11,7 @@
             super(k, SnowStormQuePositionParser);
         }
 
-        public function _Str_2273():SnowStormQuePositionParser
+        public function getParser():SnowStormQuePositionParser
         {
             return this._parser as SnowStormQuePositionParser;
         }

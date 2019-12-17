@@ -12,25 +12,25 @@
 
         public function get _Str_4963():int
         {
-            return this._Str_2273()._Str_4963;
+            return this.getParser()._Str_4963;
         }
 
         public function get _Str_16764():Boolean
         {
-            return this._Str_2273()._Str_16764;
+            return this.getParser()._Str_16764;
         }
 
         public function get _Str_17613():int
         {
-            return this._Str_2273()._Str_17613;
+            return this.getParser()._Str_17613;
         }
 
         public function get _Str_13374():Boolean
         {
-            return this._Str_2273()._Str_13374;
+            return this.getParser()._Str_13374;
         }
 
-        public function _Str_2273():_Str_9589
+        public function getParser():_Str_9589
         {
             return _parser as _Str_9589;
         }

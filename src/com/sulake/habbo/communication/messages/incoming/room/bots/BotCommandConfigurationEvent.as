@@ -11,7 +11,7 @@
             super(k, BotCommandConfigurationParser);
         }
 
-        public function _Str_2273():BotCommandConfigurationParser
+        public function getParser():BotCommandConfigurationParser
         {
             return _parser as BotCommandConfigurationParser;
         }

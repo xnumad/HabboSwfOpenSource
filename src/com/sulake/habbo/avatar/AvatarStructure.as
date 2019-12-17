@@ -443,14 +443,14 @@
                         _local_32 = _local_30._Str_1020(_local_28);
                         if (_local_32)
                         {
-                            _arg_6 = _arg_6.concat(_local_32._Str_790);
-                            for each (_local_33 in _local_32._Str_806)
+                            _arg_6 = _arg_6.concat(_local_32.hiddenLayers);
+                            for each (_local_33 in _local_32.parts)
                             {
                                 if (_local_16.indexOf(_local_33.type) > -1)
                                 {
                                     if (_local_15 != null)
                                     {
-                                        _local_19 = _local_15._Str_989(_local_33.type);
+                                        _local_19 = _local_15.getPart(_local_33.type);
                                         if (_local_19 != null)
                                         {
                                             _local_20 = _local_19.frames;
@@ -526,7 +526,7 @@
                         }
                         if (_local_15 != null)
                         {
-                            _local_19 = _local_15._Str_989(_local_12);
+                            _local_19 = _local_15.getPart(_local_12);
                             if (_local_19 != null)
                             {
                                 _local_20 = _local_19.frames;
@@ -578,7 +578,7 @@
                                     }
                                     if (_local_15 != null)
                                     {
-                                        _local_19 = _local_15._Str_989(_local_12);
+                                        _local_19 = _local_15.getPart(_local_12);
                                         if (_local_19 != null)
                                         {
                                             _local_20 = _local_19.frames;

@@ -570,7 +570,7 @@
                 }
                 else
                 {
-                    if (((TradingOpenFailedEvent(k)._Str_2273().reason == TradingOpenFailedEventParser._Str_18150) || (TradingOpenFailedEvent(k)._Str_2273().reason == TradingOpenFailedEventParser._Str_18383)))
+                    if (((TradingOpenFailedEvent(k).getParser().reason == TradingOpenFailedEventParser._Str_18150) || (TradingOpenFailedEvent(k).getParser().reason == TradingOpenFailedEventParser._Str_18383)))
                     {
                         this._tradingView._Str_17682(TradingView._Str_14838);
                     }
@@ -616,7 +616,7 @@
                                     return;
                                 }
                                 _local_2 = (k as TradingCloseEvent);
-                                if (_local_2._Str_2273().reason == TradingCloseParser.ERROR_WHILE_COMMIT)
+                                if (_local_2.getParser().reason == TradingCloseParser.ERROR_WHILE_COMMIT)
                                 {
                                     if (this._inventory.getBoolean("trading.commiterror.enabled"))
                                     {
@@ -625,7 +625,7 @@
                                 }
                                 else
                                 {
-                                    if (_local_2._Str_2273()._Str_4963 != this._ownUserIndex)
+                                    if (_local_2.getParser()._Str_4963 != this._ownUserIndex)
                                     {
                                         this._tradingView._Str_17682(TradingView._Str_15599);
                                     }

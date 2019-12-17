@@ -20,7 +20,7 @@
         private function onAvatarEffects(k:IMessageEvent):void
         {
             var _local_2:_Str_6450 = (k as _Str_6450);
-            var _local_3:_Str_5747 = (_local_2._Str_2273() as _Str_5747);
+            var _local_3:_Str_5747 = (_local_2.getParser() as _Str_5747);
             Logger.log(("Received active avatar effects: " + _local_3.effects));
             if (((listener) && (listener.events)))
             {

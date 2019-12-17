@@ -10,7 +10,7 @@
             super(k, RoomUserShoutMessageParser);
         }
 
-        public function _Str_2273():RoomUserShoutMessageParser
+        public function getParser():RoomUserShoutMessageParser
         {
             return _parser as RoomUserShoutMessageParser;
         }

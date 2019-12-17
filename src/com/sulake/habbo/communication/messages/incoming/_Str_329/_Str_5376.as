@@ -15,7 +15,7 @@
             super(k, RecyclerStatusMessageParser);
         }
 
-        public function _Str_2273():RecyclerStatusMessageParser
+        public function getParser():RecyclerStatusMessageParser
         {
             return _parser as RecyclerStatusMessageParser;
         }

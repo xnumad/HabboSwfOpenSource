@@ -35,7 +35,7 @@
             {
                 return;
             }
-            _local_3.roomControllerLevel = _local_2._Str_2273().roomControllerLevel;
+            _local_3.roomControllerLevel = _local_2.getParser().roomControllerLevel;
         }
 
         private function onYouAreNotController(k:IMessageEvent):void

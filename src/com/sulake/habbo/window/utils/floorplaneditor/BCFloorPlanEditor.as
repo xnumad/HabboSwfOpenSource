@@ -153,7 +153,7 @@
 
         private function _Str_22764(k:_Str_5417):void
         {
-            var _local_2:_Str_6732 = k._Str_2273();
+            var _local_2:_Str_6732 = k.getParser();
             this._bcSecondsLeft = _local_2._Str_3709;
             if (!this._bcSecondsCountdownTimer)
             {
@@ -474,7 +474,7 @@
         {
             this._lastReceivedMapEvent = k;
             this._floorPlanCache.onFloorHeightMap(k);
-            this._fixedWallsHeight = k._Str_2273().fixedWallsHeight;
+            this._fixedWallsHeight = k.getParser().fixedWallsHeight;
             if (this._floorPlanPreviewer)
             {
                 this._floorPlanPreviewer._Str_3190();
@@ -495,7 +495,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5770 = k._Str_2273();
+            var _local_2:_Str_5770 = k.getParser();
             this._floorPlanCache._Str_7642 = new Point(_local_2.x, _local_2.y);
             this._floorPlanCache._Str_6184 = _local_2.dir;
             if (this._heightMapEditor)
@@ -516,7 +516,7 @@
 
         private function onRoomVisualizationSettings(k:_Str_4196):void
         {
-            var _local_2:_Str_6347 = k._Str_2273();
+            var _local_2:_Str_6347 = k.getParser();
             this._floorThickness = this._Str_10107(_local_2._Str_9990);
             this._wallThickness = this._Str_10107(_local_2._Str_9955);
             this._Str_21392();
@@ -524,7 +524,7 @@
 
         private function onPerkAllowances(k:_Str_3277):void
         {
-            var _local_2:PerkAllowancesMessageParser = k._Str_2273();
+            var _local_2:PerkAllowancesMessageParser = k.getParser();
             this._largeFloorPlansAllowed = _local_2.isPerkAllowed(PerkEnum.BUILDER_AT_WORK);
         }
 
@@ -638,7 +638,7 @@
         {
             if (this._lastReceivedMapEvent)
             {
-                return this._lastReceivedMapEvent._Str_2273().text;
+                return this._lastReceivedMapEvent.getParser().text;
             }
             return "";
         }

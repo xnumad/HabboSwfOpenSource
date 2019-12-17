@@ -11,7 +11,7 @@
             super(k, BotSkillListUpdateParser);
         }
 
-        public function _Str_2273():BotSkillListUpdateParser
+        public function getParser():BotSkillListUpdateParser
         {
             return _parser as BotSkillListUpdateParser;
         }

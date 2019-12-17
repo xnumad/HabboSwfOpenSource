@@ -10,7 +10,7 @@
             super(k, Game2WeeklyLeaderboardParser);
         }
 
-        public function _Str_2273():Game2WeeklyLeaderboardParser
+        public function getParser():Game2WeeklyLeaderboardParser
         {
             return this._parser as Game2WeeklyLeaderboardParser;
         }

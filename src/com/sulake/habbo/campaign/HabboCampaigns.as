@@ -81,13 +81,13 @@
 
         private function _Str_25846(k:_Str_9003):void
         {
-            var _local_2:_Str_7028 = k._Str_2273();
+            var _local_2:_Str_7028 = k.getParser();
             this._calendarData = _local_2.getCampaignCalenderData();
         }
 
         private function _Str_24922(k:_Str_9045):void
         {
-            var _local_2:_Str_7637 = k._Str_2273();
+            var _local_2:_Str_7637 = k.getParser();
             if (_local_2._Str_22341)
             {
                 this._Str_16700(_local_2.productName, _local_2.customImage, _local_2._Str_8979);

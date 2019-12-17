@@ -11,7 +11,7 @@
             super(k, WiredSavedMessageParser);
         }
 
-        public function _Str_2273():WiredSavedMessageParser
+        public function getParser():WiredSavedMessageParser
         {
             return this._parser as WiredSavedMessageParser;
         }

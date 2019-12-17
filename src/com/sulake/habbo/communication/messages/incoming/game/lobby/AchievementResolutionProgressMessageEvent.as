@@ -11,7 +11,7 @@
             super(k, AchievementResolutionProgressMessageParser);
         }
 
-        public function _Str_2273():AchievementResolutionProgressMessageParser
+        public function getParser():AchievementResolutionProgressMessageParser
         {
             return this._parser as AchievementResolutionProgressMessageParser;
         }

@@ -22,7 +22,7 @@
 
         private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
         {
-            var _local_2:CommunityGoalProgress = k._Str_2273().data;
+            var _local_2:CommunityGoalProgress = k.getParser().data;
             _Str_14169(((_local_2._Str_13028) ? 0 : _local_2._Str_24637));
         }
     }

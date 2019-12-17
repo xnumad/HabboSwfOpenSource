@@ -105,7 +105,7 @@
 
         private function _Str_3241(k:UserObjectEvent):void
         {
-            this.renderAvatar(k._Str_2273().figure);
+            this.renderAvatar(k.getParser().figure);
         }
 
         private function _Str_5174(k:_Str_3084):void

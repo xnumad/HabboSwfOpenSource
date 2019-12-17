@@ -11,7 +11,7 @@
             super(k, GuideSessionErrorMessageParser);
         }
 
-        public function _Str_2273():GuideSessionErrorMessageParser
+        public function getParser():GuideSessionErrorMessageParser
         {
             return _parser as GuideSessionErrorMessageParser;
         }

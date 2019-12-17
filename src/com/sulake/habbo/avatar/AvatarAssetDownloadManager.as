@@ -362,7 +362,7 @@
                     _local_8 = _local_6._Str_1020(_local_7);
                     if (_local_8)
                     {
-                        for each (_local_9 in _local_8._Str_806)
+                        for each (_local_9 in _local_8.parts)
                         {
                             _local_10 = ((_local_9.type + ":") + _local_9.id);
                             _local_11 = this._figureMap[_local_10];

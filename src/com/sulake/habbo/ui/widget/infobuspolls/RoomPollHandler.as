@@ -36,7 +36,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
                 return;
             }
 			
-            var _local_3:RoomPollDataParser = _arg_1._Str_2273();
+            var _local_3:RoomPollDataParser = _arg_1.getParser();
             _local_4 = new RoomSessionPollEvent(RoomSessionPollEvent.VOTE_QUESTION, _local_2, _local_3.question, _local_3.choices);
             listener.events.dispatchEvent(_local_4);
 			Habbo.trackLoginStep("TEST ROOM POLL HANDLER 1");
@@ -54,7 +54,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
             {
                 return;
             }
-            var _local_3:RoomPollResultParser = _arg_1._Str_2273();
+            var _local_3:RoomPollResultParser = _arg_1.getParser();
             _local_4 = new RoomSessionPollEvent(RoomSessionPollEvent.VOTE_RESULT, _local_2, _local_3.question, _local_3.choices, _local_3._SafeStr_4173, _local_3._SafeStr_4174);
             listener.events.dispatchEvent(_local_4);
 			Habbo.trackLoginStep("TEST ROOM POLL HANDLER 2");

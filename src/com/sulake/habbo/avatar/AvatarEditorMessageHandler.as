@@ -80,7 +80,7 @@
             {
                 return;
             }
-            var _local_4:_Str_6537 = k._Str_2273();
+            var _local_4:_Str_6537 = k.getParser();
             if (_local_4._Str_3278 == ChangeNameUpdateEvent._Str_5797)
             {
                 _local_3._Str_16320 = _local_4.name;
@@ -153,7 +153,7 @@
             if (_local_2)
             {
                 _local_2.effects.reset();
-                _local_2.figureData.avatarEffectType = k._Str_2273().type;
+                _local_2.figureData.avatarEffectType = k.getParser().type;
                 _local_2.figureData._Str_2491();
             }
         }
@@ -169,7 +169,7 @@
             if (_local_2)
             {
                 _local_2.effects.reset();
-                _local_3 = k._Str_2273().type;
+                _local_3 = k.getParser().type;
                 if (_local_2.figureData.avatarEffectType == _local_3)
                 {
                     _local_2.figureData.avatarEffectType = -1;
@@ -185,9 +185,9 @@
                 return;
             }
             var _local_2:HabboAvatarEditor = this._controller._Str_6435(AvatarEditorInstanceId._Str_3350);
-            if ((((_local_2) && (!(this._controller._Str_6647 == null))) && (k._Str_2273().userId == this._controller._Str_6647.roomSession._Str_3871)))
+            if ((((_local_2) && (!(this._controller._Str_6647 == null))) && (k.getParser().userId == this._controller._Str_6647.roomSession._Str_3871)))
             {
-                _local_2.figureData.avatarEffectType = k._Str_2273()._Str_6815;
+                _local_2.figureData.avatarEffectType = k.getParser()._Str_6815;
                 _local_2.figureData._Str_2491();
             }
         }
@@ -201,7 +201,7 @@
             var _local_2:HabboAvatarEditor = this._controller._Str_6435(AvatarEditorInstanceId._Str_3350);
             if (_local_2)
             {
-                _local_2.figureData.avatarEffectType = k._Str_2273().type;
+                _local_2.figureData.avatarEffectType = k.getParser().type;
                 _local_2.figureData._Str_2491();
             }
         }

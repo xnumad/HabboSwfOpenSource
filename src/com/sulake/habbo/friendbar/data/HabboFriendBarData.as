@@ -432,7 +432,7 @@
 
         private function _Str_5276(k:IMessageEvent):void
         {
-            this._Str_25150(_Str_3873(k)._Str_2273()._Str_16756);
+            this._Str_25150(_Str_3873(k).getParser()._Str_16756);
         }
 
         private function _Str_4132(k:IMessageEvent):void
@@ -440,7 +440,7 @@
             var _local_3:FriendEntity;
             var _local_4:FriendParser;
             var _local_8:int;
-            var _local_2:_Str_4925 = _Str_4035(k)._Str_2273();
+            var _local_2:_Str_4925 = _Str_4035(k).getParser();
             var _local_5:Array = _local_2._Str_12515;
             var _local_6:Array = _local_2._Str_20668;
             var _local_7:Array = _local_2._Str_14430;
@@ -517,7 +517,7 @@
             var _local_2:_Str_3742;
             if (this._Str_19444)
             {
-                _local_2 = k._Str_2273().req;
+                _local_2 = k.getParser().req;
                 this._friendRequests.push(new FriendRequest(_local_2.requestId, _local_2.requesterName, _local_2.figureString));
                 events.dispatchEvent(new FriendRequestUpdateEvent());
             }
@@ -529,7 +529,7 @@
             var _local_3:_Str_3742;
             if (this._Str_19444)
             {
-                _local_2 = k._Str_2273()._Str_17539;
+                _local_2 = k.getParser()._Str_17539;
                 for each (_local_3 in _local_2)
                 {
                     this._friendRequests.push(new FriendRequest(_local_3.requestId, _local_3.requesterName, _local_3.figureString));
@@ -545,7 +545,7 @@
 
         private function _Str_18650(k:_Str_4851):void
         {
-            var _local_2:_Str_6189 = k._Str_2273();
+            var _local_2:_Str_6189 = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
             var _local_3:Boolean = true;
             if (this._habboMessengerComponent)
@@ -572,7 +572,7 @@
 
         private function _Str_10457(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k._Str_2273();
+            var _local_2:_Str_5791 = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
             if (((this._habboMessengerComponent) && (!(this._habboMessengerComponent.isOpen()))))
             {
@@ -583,7 +583,7 @@
 
         private function _Str_25411(k:GameInviteMessageEvent):void
         {
-            var _local_2:GameInviteMessageParser = k._Str_2273();
+            var _local_2:GameInviteMessageParser = k.getParser();
             var _local_3:String = GameConfigurations.getNameId(_local_2.gameTypeId);
             if (_local_3)
             {
@@ -593,7 +593,7 @@
 
         private function _Str_15197(k:_Str_8552):void
         {
-            var _local_2:_Str_7819 = k._Str_2273();
+            var _local_2:_Str_7819 = k.getParser();
             var _local_3:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));
             var _local_4:* = (!(_local_2._Str_3293 == FriendNotification._Str_9572));
             var _local_5:* = (!(_local_2._Str_3293 == FriendNotification._Str_5815));

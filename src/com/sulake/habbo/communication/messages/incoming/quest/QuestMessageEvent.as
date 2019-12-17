@@ -11,7 +11,7 @@
             super(k, QuestParser);
         }
 
-        public function _Str_2273():QuestParser
+        public function getParser():QuestParser
         {
             return _parser as QuestParser;
         }

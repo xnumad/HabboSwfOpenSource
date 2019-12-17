@@ -38,9 +38,9 @@
 
         private function _Str_16345(k:ConcurrentUsersGoalProgressMessageEvent):void
         {
-            this._state = k._Str_2273().state;
-            this._userCount = k._Str_2273().userCount;
-            this._userCountGoal = k._Str_2273()._Str_21827;
+            this._state = k.getParser().state;
+            this._userCount = k.getParser().userCount;
+            this._userCountGoal = k.getParser()._Str_21827;
             var _local_2:int = ((this._userCount / this._userCountGoal) * 100);
             _local_2 = Math.max(20, Math.min(100, _local_2));
             _local_2 = (Math.floor((_local_2 / 10)) * 10);

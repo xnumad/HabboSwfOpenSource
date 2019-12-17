@@ -29,7 +29,7 @@
             {
                 return;
             }
-            var _local_3:_Str_4537 = _local_2._Str_2273();
+            var _local_3:_Str_4537 = _local_2.getParser();
             if (_local_3._Str_18882)
             {
                 return;

@@ -10,7 +10,7 @@
             super(k, YoutubeDisplayPlaylistsMessageParser);
         }
 
-        public function _Str_2273():YoutubeDisplayPlaylistsMessageParser
+        public function getParser():YoutubeDisplayPlaylistsMessageParser
         {
             return parser as YoutubeDisplayPlaylistsMessageParser;
         }

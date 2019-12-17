@@ -178,7 +178,7 @@
 
         public function _Str_25001(k:_Str_5581):void
         {
-            var _local_2:_Str_7941 = k._Str_2273();
+            var _local_2:_Str_7941 = k.getParser();
             if (_local_2 == null)
             {
                 return;
@@ -213,7 +213,7 @@
             var _local_5:FurnitureItem;
             var _local_6:InventoryItemParser;
             var _local_7:GroupItem;
-            var _local_2:FurniListAddOrUpdateParser = (k as FurniListAddOrUpdateEvent)._Str_2273();
+            var _local_2:FurniListAddOrUpdateParser = (k as FurniListAddOrUpdateEvent).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -248,7 +248,7 @@
 
         public function _Str_25700(k:IMessageEvent):void
         {
-            var _local_2:_Str_8074 = (k as _Str_6908)._Str_2273();
+            var _local_2:_Str_8074 = (k as _Str_6908).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -274,7 +274,7 @@
 
         public function _Str_23887(k:IMessageEvent):void
         {
-            var _local_2:_Str_7548 = (k as _Str_9359)._Str_2273();
+            var _local_2:_Str_7548 = (k as _Str_9359).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -302,7 +302,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5747 = (k as _Str_6450)._Str_2273();
+            var _local_3:_Str_5747 = (k as _Str_6450).getParser();
             if (_local_3 == null)
             {
                 return;
@@ -347,7 +347,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7398 = (k as _Str_6944)._Str_2273();
+            var _local_3:_Str_7398 = (k as _Str_6944).getParser();
             if (_local_3 == null)
             {
                 return;
@@ -373,7 +373,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8175 = (k as _Str_5720)._Str_2273();
+            var _local_3:_Str_8175 = (k as _Str_5720).getParser();
             if (_local_3 == null)
             {
                 return;
@@ -390,7 +390,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7054 = (k as _Str_5345)._Str_2273();
+            var _local_3:_Str_7054 = (k as _Str_5345).getParser();
             if (_local_3 == null)
             {
                 return;
@@ -402,7 +402,7 @@
 
         public function _Str_23143(k:IMessageEvent):void
         {
-            var _local_2:_Str_4007 = (k as _Str_3492)._Str_2273();
+            var _local_2:_Str_4007 = (k as _Str_3492).getParser();
             if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
             {
                 this._inventory._Str_23808(_local_2._Str_17546, _local_2._Str_14465, _local_2._Str_24419, _local_2.isVIP, (_local_2._Str_9379 == _Str_4007._Str_14729), (_local_2._Str_9379 == _Str_4007._Str_15916), _local_2.minutesUntilExpiration, _local_2._Str_6312);
@@ -416,7 +416,7 @@
             var _local_5:String;
             var _local_8:Boolean;
             var _local_9:int;
-            var _local_2:_Str_6941 = (k as _Str_5147)._Str_2273();
+            var _local_2:_Str_6941 = (k as _Str_5147).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -442,7 +442,7 @@
         public function _Str_25648(k:IMessageEvent):void
         {
             var _local_3:_Str_7446;
-            var _local_2:_Str_7305 = (k as _Str_8980)._Str_2273();
+            var _local_2:_Str_7305 = (k as _Str_8980).getParser();
             for each (_local_3 in _local_2.data)
             {
                 this._inventory.localization._Str_20202(_local_3.badgeId, _local_3.limit);
@@ -472,7 +472,7 @@
         public function _Str_25294(k:IMessageEvent):void
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
-            var _local_3:_Str_5519 = _local_2._Str_2273();
+            var _local_3:_Str_5519 = _local_2.getParser();
             var _local_4:BadgesModel = this._inventory._Str_7962;
             if (_local_4 != null)
             {
@@ -484,7 +484,7 @@
 
         public function _Str_23620(k:IMessageEvent):void
         {
-            var _local_2:_Str_7491 = _Str_8120(k)._Str_2273();
+            var _local_2:_Str_7491 = _Str_8120(k).getParser();
             var _local_3:BadgesModel = this._inventory._Str_7962;
             if (_local_3 != null)
             {
@@ -496,12 +496,12 @@
         public function _Str_18065(k:IMessageEvent):void
         {
             var _local_2:AchievementsScoreEvent = (k as AchievementsScoreEvent);
-            var _local_3:AchievementsScoreParser = (_local_2._Str_2273() as AchievementsScoreParser);
+            var _local_3:AchievementsScoreParser = (_local_2.getParser() as AchievementsScoreParser);
             if (_local_3 == null)
             {
                 return;
             }
-            this._inventory.localization.registerParameter("achievements_score_description", "score", _local_3.score.toString());
+            this._inventory.localization.registerParameter("achievements_score_description", "score", _local_3.score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         }
 
         private function _Str_22556(k:IMessageEvent):void
@@ -733,7 +733,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8090 = k._Str_2273();
+            var _local_3:_Str_8090 = k.getParser();
             if (this._petMsgFragments == null)
             {
                 this._petMsgFragments = new Vector.<Map>(_local_3._Str_7430, true);
@@ -760,7 +760,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8182 = k._Str_2273();
+            var _local_3:_Str_8182 = k.getParser();
             _local_2._Str_9947(_local_3.pet);
             if (_local_3._Str_19947())
             {
@@ -775,12 +775,12 @@
             }
             var _local_2:String = "${gotobreedingnestfailure.getnest}";
             var _local_3:Function = this._Str_23001;
-            if (k._Str_2273().reason == _Str_7486._Str_17785)
+            if (k.getParser().reason == _Str_7486._Str_17785)
             {
                 _local_2 = "${gotobreedingnestfailure.getfood}";
                 _local_3 = this._Str_25255;
             }
-            this._inventory.windowManager.simpleAlert("${gotobreedingnestfailure.caption}", "${gotobreedingnestfailure.subtitle}", (("${gotobreedingnestfailure.message." + k._Str_2273().reason) + "}"), _local_2, "", null, null, _local_3);
+            this._inventory.windowManager.simpleAlert("${gotobreedingnestfailure.caption}", "${gotobreedingnestfailure.subtitle}", (("${gotobreedingnestfailure.message." + k.getParser().reason) + "}"), _local_2, "", null, null, _local_3);
         }
 
         private function _Str_23001():void
@@ -806,7 +806,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7183 = k._Str_2273();
+            var _local_3:_Str_7183 = k.getParser();
             _local_2._Str_12321(_local_3._Str_2508);
         }
 
@@ -821,7 +821,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7631 = k._Str_2273();
+            var _local_3:_Str_7631 = k.getParser();
             _local_2._Str_23563(_local_3.items);
             this._inventory._Str_5943(InventoryCategory.BOTS);
             _local_2._Str_11524();
@@ -838,7 +838,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7906 = k._Str_2273();
+            var _local_3:_Str_7906 = k.getParser();
             _local_2.removeItem(_local_3.itemId);
         }
 
@@ -857,7 +857,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6995 = k._Str_2273();
+            var _local_3:_Str_6995 = k.getParser();
             _local_2._Str_2822(_local_3.item);
         }
 
@@ -872,7 +872,7 @@
             {
                 return;
             }
-            var _local_3:MarketplaceConfigurationMessageParser = k._Str_2273();
+            var _local_3:MarketplaceConfigurationMessageParser = k.getParser();
             _local_2.enabled = _local_3.enabled;
             _local_2.commission = _local_3.commission;
             _local_2.credits = _local_3.credits;
@@ -900,7 +900,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7065 = k._Str_2273();
+            var _local_3:_Str_7065 = k.getParser();
             _local_2._Str_23766(_local_3._Str_3278, _local_3._Str_24601);
         }
 
@@ -915,7 +915,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6596 = k._Str_2273();
+            var _local_3:_Str_6596 = k.getParser();
             _local_2._Str_24514(_local_3.result);
         }
 
@@ -930,7 +930,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6774 = k._Str_2273();
+            var _local_3:_Str_6774 = k.getParser();
             _local_2._Str_22836(_local_3._Str_9431, _local_3._Str_8798, _local_3._Str_3925);
         }
 
@@ -964,7 +964,7 @@
 
         private function _Str_25862(k:_Str_9041):void
         {
-            this._inventory._Str_22773(k._Str_2273()._Str_23010, k._Str_2273()._parser9);
+            this._inventory._Str_22773(k.getParser()._Str_23010, k.getParser()._parser9);
         }
 
         private function onCreditBalance(k:IMessageEvent):void

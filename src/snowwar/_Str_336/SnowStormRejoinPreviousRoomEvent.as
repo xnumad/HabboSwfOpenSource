@@ -11,7 +11,7 @@
             super(k, SnowStormRejoinPreviousRoomParser);
         }
 
-        public function _Str_2273():SnowStormRejoinPreviousRoomParser
+        public function getParser():SnowStormRejoinPreviousRoomParser
         {
             return _parser as SnowStormRejoinPreviousRoomParser;
         }

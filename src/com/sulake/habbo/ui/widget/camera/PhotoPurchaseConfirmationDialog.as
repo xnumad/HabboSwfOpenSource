@@ -341,9 +341,9 @@
             {
                 return;
             }
-            if (k._Str_2273().isOk())
+            if (k.getParser().isOk())
             {
-                this._extraDataId = k._Str_2273()._Str_24023();
+                this._extraDataId = k.getParser()._Str_24023();
                 this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.publish.successful");
                 this._window.findChildByName("publish_explanation").caption = this._widget.localizations.getLocalization("camera.publish.successful");
                 this._window.findChildByName("publish_detailed_explanation").caption = this._widget.localizations.getLocalization("camera.publish.success.short.info");
@@ -357,7 +357,7 @@
             }
             else
             {
-                _local_2 = k._Str_2273()._Str_25098();
+                _local_2 = k.getParser()._Str_25098();
                 _local_3 = ((_local_2 / 60) + 1);
                 _local_4 = this._widget.localizations.registerParameter("camera.publish.wait", "minutes", _local_3.toString());
                 this._widget.windowManager.alert("${generic.alert.title}", _local_4, 0, null);
@@ -396,21 +396,21 @@
             {
                 return;
             }
-            if (k._Str_2273().isOk())
+            if (k.getParser().isOk())
             {
                 this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("camera.competition.submitted.status");
                 this._window.findChildByName("competition_name").caption = this._widget.localizations.getLocalization("camera.competition.submitted.info");
             }
             else
             {
-                if (k._Str_2273()._Str_19783() == "too-many-submits")
+                if (k.getParser()._Str_19783() == "too-many-submits")
                 {
                     this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("generic.failed");
                     this._window.findChildByName("competition_name").caption = this._widget.localizations.getLocalization("camera.competition.limit.info");
                 }
                 else
                 {
-                    if (k._Str_2273()._Str_19783() == "email-not-verified")
+                    if (k.getParser()._Str_19783() == "email-not-verified")
                     {
                         this._competitionSubmitted = false;
                         this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("generic.failed");

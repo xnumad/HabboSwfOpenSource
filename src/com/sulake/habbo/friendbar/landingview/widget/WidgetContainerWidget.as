@@ -111,9 +111,9 @@
 
         private function _Str_12291(k:_Str_4748):void
         {
-            if (((k._Str_2273()._Str_18517 == this._schedulingStr) && (!(this.disposed))))
+            if (((k.getParser()._Str_18517 == this._schedulingStr) && (!(this.disposed))))
             {
-                this._Str_22315(k._Str_2273().code);
+                this._Str_22315(k.getParser().code);
                 this.refreshContent();
             }
         }

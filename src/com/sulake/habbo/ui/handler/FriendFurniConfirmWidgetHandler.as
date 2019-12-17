@@ -77,17 +77,17 @@
 
         private function _Str_22615(k:_Str_8413):void
         {
-            this._widget.open(k._Str_2273().stuffId, k._Str_2273()._Str_3233);
+            this._widget.open(k.getParser().stuffId, k.getParser()._Str_3233);
         }
 
         private function _Str_23555(k:_Str_8746):void
         {
-            this._widget._Str_25728(k._Str_2273().stuffId);
+            this._widget._Str_25728(k.getParser().stuffId);
         }
 
         private function _Str_23369(k:_Str_8296):void
         {
-            this._widget.close(k._Str_2273().stuffId);
+            this._widget.close(k.getParser().stuffId);
         }
 
         public function get type():String

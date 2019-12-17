@@ -11,7 +11,7 @@
             super(k, SnowStormStartBlockTickerParser);
         }
 
-        public function _Str_2273():SnowStormStartBlockTickerParser
+        public function getParser():SnowStormStartBlockTickerParser
         {
             return this._parser as SnowStormStartBlockTickerParser;
         }

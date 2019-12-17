@@ -10,7 +10,7 @@
             super(k, CollapsedCategoriesMessageParser);
         }
 
-        public function _Str_2273():CollapsedCategoriesMessageParser
+        public function getParser():CollapsedCategoriesMessageParser
         {
             return parser as CollapsedCategoriesMessageParser;
         }

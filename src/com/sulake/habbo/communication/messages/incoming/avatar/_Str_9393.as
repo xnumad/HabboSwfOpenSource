@@ -14,19 +14,19 @@
             super(k, _Str_9423);
         }
 
-        private function _Str_2273():_Str_9423
+        private function getParser():_Str_9423
         {
             return this._parser as _Str_9423;
         }
 
         public function get _Str_17746():Array
         {
-            return this._Str_2273()._Str_17746;
+            return this.getParser()._Str_17746;
         }
 
         public function get state():int
         {
-            return this._Str_2273().state;
+            return this.getParser().state;
         }
     }
 }

@@ -37,7 +37,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7882 = k._Str_2273();
+            var _local_3:_Str_7882 = k.getParser();
             _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_OFFER, _local_2, _local_3.id);
             _local_4.summary = _local_3.headline;
             _local_4.summary = _local_3.summary;
@@ -56,7 +56,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7270 = k._Str_2273();
+            var _local_3:_Str_7270 = k.getParser();
             _local_4 = new _Str_3051(_Str_3051.ERROR, _local_2, -1);
             _local_4.headline = "???";
             _local_4.summary = "???";
@@ -75,7 +75,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7203 = k._Str_2273();
+            var _local_3:_Str_7203 = k.getParser();
             _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_CONTENT, _local_2, _local_3.id);
             _local_4._Str_6013 = _local_3._Str_6013;
             _local_4._Str_5838 = _local_3._Str_5838;

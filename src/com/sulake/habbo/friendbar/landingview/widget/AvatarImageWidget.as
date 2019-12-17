@@ -69,7 +69,7 @@
 
         private function _Str_3241(k:UserObjectEvent):void
         {
-            this._Str_7815(k._Str_2273().figure);
+            this._Str_7815(k.getParser().figure);
         }
 
         private function _Str_5174(k:IMessageEvent):void

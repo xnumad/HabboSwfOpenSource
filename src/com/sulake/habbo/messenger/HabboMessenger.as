@@ -141,7 +141,7 @@
 
         private function _Str_10366(k:_Str_3870):void
         {
-            this._Str_9090 = k._Str_2273()._Str_22473;
+            this._Str_9090 = k.getParser()._Str_22473;
         }
 
         public function _Str_16882():Boolean
@@ -225,7 +225,7 @@
 
         private function _Str_18650(k:_Str_4851):void
         {
-            var _local_2:_Str_6189 = k._Str_2273();
+            var _local_2:_Str_6189 = k.getParser();
             Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));
             if (this._Str_2439 != null)
             {
@@ -239,7 +239,7 @@
 
         private function _Str_10457(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k._Str_2273();
+            var _local_2:_Str_5791 = k.getParser();
             if (this._Str_2439 != null)
             {
                 this._Str_2439._Str_24937(_local_2.senderId, _local_2._Str_3460);
@@ -260,7 +260,7 @@
 
         private function _Str_17683(k:IMessageEvent):void
         {
-            var _local_2:_Str_7091 = (k as _Str_8339)._Str_2273();
+            var _local_2:_Str_7091 = (k as _Str_8339).getParser();
             if (this._Str_2439 != null)
             {
                 this._Str_2439._Str_17683(_local_2.userId, _local_2.errorCode, _local_2.message);

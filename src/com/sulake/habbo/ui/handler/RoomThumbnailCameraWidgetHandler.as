@@ -101,13 +101,13 @@
         private function _Str_23638(k:_Str_8053):void
         {
             this._widget.destroy();
-            if (k._Str_2273().isOk())
+            if (k.getParser().isOk())
             {
                 this._container.windowManager.alert("${navigator.thumbnail.camera.title}", "${navigator.thumbnail.camera.success}", _Str_3023.BUTTON_OK, null);
             }
             else
             {
-                if (k._Str_2273()._Str_25428())
+                if (k.getParser()._Str_25428())
                 {
                     this._container.windowManager.alert("${generic.alert.title}", "${camera.render.count.info}", 0, null);
                 }

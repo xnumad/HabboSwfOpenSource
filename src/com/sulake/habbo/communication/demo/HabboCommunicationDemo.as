@@ -410,8 +410,7 @@
             k.send(new _Str_10368(_local_2, _Str_20552(), _local_3.join("/")));
             if (((this._ssoTicket) && (this._ssoTicket.length > 0)))
             {
-                _local_5 = new _Str_7957(this._ssoTicket);
-                k.send(_local_5);
+                k.send(new _Str_7957(this._ssoTicket));
             }
         }
 
@@ -434,7 +433,7 @@
 
         private function onGenericError(event:IMessageEvent):void
         {
-            var parser:_Str_6053 = (event as GenericErrorEvent)._Str_2273();
+            var parser:_Str_6053 = (event as GenericErrorEvent).getParser();
             switch (parser.errorCode)
             {
                 case -3:
@@ -491,21 +490,21 @@
             {
                 _local_2 = getProperty("roomviewer.login.name");
                 _local_3 = getProperty("roomviewer.login.password");
-                _local_4 = k._Str_2273()._Str_20644.getKey(0);
+                _local_4 = k.getParser()._Str_20644.getKey(0);
                 this.sendTryLogin(_local_2, _local_3, _local_4);
             }
             else
             {
                 if (this._view)
                 {
-                    this._view._Str_13771(k._Str_2273()._Str_20644);
+                    this._view._Str_13771(k.getParser()._Str_20644);
                 }
             }
         }
 
         private function _Str_24454(event:IMessageEvent):void
         {
-            var parser:ConnectionErrorMessageParser = (event as ConnectionErrorEvent)._Str_2273();
+            var parser:ConnectionErrorMessageParser = (event as ConnectionErrorEvent).getParser();
             var errorCode:int = parser.errorCode;
             var messageId:int = parser.messageId;
             var time:String = parser.timestamp;

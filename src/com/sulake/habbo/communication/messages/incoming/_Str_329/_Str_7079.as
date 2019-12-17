@@ -11,7 +11,7 @@
             super(k, RecyclerPrizesMessageParser);
         }
 
-        public function _Str_2273():RecyclerPrizesMessageParser
+        public function getParser():RecyclerPrizesMessageParser
         {
             return _parser as RecyclerPrizesMessageParser;
         }

@@ -88,7 +88,7 @@
 
         private function _Str_23120(k:_Str_9419):void
         {
-            var _local_2:_Str_8043 = k._Str_2273();
+            var _local_2:_Str_8043 = k.getParser();
             this._habboHelp._Str_24844();
             this._habboHelp._Str_21195();
             this._Str_3360(_local_2._Str_21852, _local_2._Str_25814);
@@ -96,7 +96,7 @@
 
         private function _Str_24077(k:_Str_8785):void
         {
-            var _local_2:_Str_7308 = k._Str_2273();
+            var _local_2:_Str_7308 = k.getParser();
             this._questionIdsForWrongAnswers = _local_2._Str_23947;
             if (this._questionIdsForWrongAnswers.length == 0)
             {

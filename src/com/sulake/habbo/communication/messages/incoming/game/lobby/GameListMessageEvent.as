@@ -11,7 +11,7 @@
             super(k, GameListMessageParser);
         }
 
-        public function _Str_2273():GameListMessageParser
+        public function getParser():GameListMessageParser
         {
             return this._parser as GameListMessageParser;
         }

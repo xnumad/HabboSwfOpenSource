@@ -11,7 +11,7 @@
             super(k, StartLobbyCounterParser);
         }
 
-        public function _Str_2273():StartLobbyCounterParser
+        public function getParser():StartLobbyCounterParser
         {
             return this._parser as StartLobbyCounterParser;
         }

@@ -98,7 +98,7 @@
             var _local_4:_Str_5046;
             if (this._landingView)
             {
-                _local_2 = k._Str_2273().data;
+                _local_2 = k.getParser().data;
                 _local_3 = IWidgetWindow(this._window.findChildByName("running_number_widget"));
                 _local_4 = _Str_5046(_local_3.widget);
                 if (this._counter_initialized)

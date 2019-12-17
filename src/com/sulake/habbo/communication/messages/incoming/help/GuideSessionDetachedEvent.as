@@ -11,7 +11,7 @@
             super(k, GuideSessionDetachedMessageParser);
         }
 
-        public function _Str_2273():GuideSessionDetachedMessageParser
+        public function getParser():GuideSessionDetachedMessageParser
         {
             return _parser as GuideSessionDetachedMessageParser;
         }

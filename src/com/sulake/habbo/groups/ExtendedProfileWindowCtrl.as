@@ -231,7 +231,7 @@
             this._window.findChildByName("status").invalidate();
             this._manager.localization.registerParameter("extendedprofile.username", "username", this._data.userName);
             this._manager.localization.registerParameter("extendedprofile.created", "created", this._data.creationDate);
-            this._manager.localization.registerParameter("extendedprofile.activitypoints", "activitypoints", this._data.activityPoints.toString());
+            this._manager.localization.registerParameter("extendedprofile.activitypoints", "activitypoints", this._data.activityPoints.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
             this._manager.localization.registerParameter("extendedprofile.last.login", "lastlogin", FriendlyTime.format(this._manager.localization, this._data.lastAccessSinceInSeconds, ".ago"));
             this._window.findChildByName("user_last_login").visible = (this._data.lastAccessSinceInSeconds > -1);
             this._Str_16592();

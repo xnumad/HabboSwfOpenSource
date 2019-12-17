@@ -132,13 +132,13 @@
             {
                 return;
             }
-            if (!k._Str_2273().isActive())
+            if (!k.getParser().isActive())
             {
                 this._widget.hide();
                 return;
             }
             this._widget._Str_22471();
-            this._widget._Str_24786(k._Str_2273().recipes, k._Str_2273().ingredients, this._container.roomEngine, this._container.sessionDataManager);
+            this._widget._Str_24786(k.getParser().recipes, k.getParser().ingredients, this._container.roomEngine, this._container.sessionDataManager);
             this._inventoryDirty = false;
         }
 
@@ -150,7 +150,7 @@
 
         private function _Str_24394(k:CraftingRecipeEvent):void
         {
-            this._widget._Str_23442(k._Str_2273().ingredients);
+            this._widget._Str_23442(k.getParser().ingredients);
         }
 
         public function _Str_25351(k:Vector.<int>):void
@@ -160,7 +160,7 @@
 
         private function _Str_23175(k:CraftingRecipesAvailableEvent):void
         {
-            this._widget._Str_11931._Str_25724(k._Str_2273().count, k._Str_2273().hasRecipes);
+            this._widget._Str_11931._Str_25724(k.getParser().count, k.getParser().hasRecipes);
         }
 
         public function _Str_23985():void
@@ -187,7 +187,7 @@
             var _local_2:CraftingResultObjectParser;
             var _local_3:IFurnitureData;
             this._craftingInProgress = false;
-            if (!k._Str_2273().success)
+            if (!k.getParser().success)
             {
                 this._widget._Str_14796();
                 this._inventoryDirty = false;
@@ -197,7 +197,7 @@
             else
             {
                 this._widget._Str_14796();
-                _local_2 = k._Str_2273().result;
+                _local_2 = k.getParser().result;
                 _local_3 = this._container.sessionDataManager.getFloorItemDataByName(_local_2.itemName);
                 if (!_local_3)
                 {

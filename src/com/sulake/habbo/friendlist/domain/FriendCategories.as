@@ -115,7 +115,7 @@
             status = 0;
             try
             {
-                p = (event as _Str_4035)._Str_2273();
+                p = (event as _Str_4035).getParser();
                 status = 1;
                 this._Str_22561(p._Str_22635);
                 status = 2;

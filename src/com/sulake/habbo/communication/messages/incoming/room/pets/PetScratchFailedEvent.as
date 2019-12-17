@@ -11,7 +11,7 @@
             super(k, PetScratchFailedMessageParser);
         }
 
-        public function _Str_2273():PetScratchFailedMessageParser
+        public function getParser():PetScratchFailedMessageParser
         {
             return _parser as PetScratchFailedMessageParser;
         }

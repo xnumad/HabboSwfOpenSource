@@ -11,7 +11,7 @@
             super(k, SnowStormUnusedAlertGenericParser);
         }
 
-        public function _Str_2273():SnowStormUnusedAlertGenericParser
+        public function getParser():SnowStormUnusedAlertGenericParser
         {
             return this._parser as SnowStormUnusedAlertGenericParser;
         }

@@ -50,7 +50,7 @@
 
         private function _Str_24581(k:EpicPopupMessageEvent):void
         {
-            this._Str_8168(k._Str_2273()._Str_24035);
+            this._Str_8168(k.getParser()._Str_24035);
         }
 
         public function _Str_8168(k:String):void

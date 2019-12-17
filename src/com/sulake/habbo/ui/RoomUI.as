@@ -837,7 +837,7 @@
                 _local_4 = (this.getDesktop(_local_3) as RoomDesktop);
                 if (_local_4 != null)
                 {
-                    _local_4._Str_2485(new _Str_9973(k._Str_2273().isPerkAllowed(PerkEnum.MOUSE_ZOOM)));
+                    _local_4._Str_2485(new _Str_9973(k.getParser().isPerkAllowed(PerkEnum.MOUSE_ZOOM)));
                 }
             }
         }

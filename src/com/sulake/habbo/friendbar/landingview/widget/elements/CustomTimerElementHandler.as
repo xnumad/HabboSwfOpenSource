@@ -25,9 +25,9 @@
 
         private function _Str_24489(k:_Str_9217):void
         {
-            if (k._Str_2273()._Str_23288 == this._timeStr)
+            if (k.getParser()._Str_23288 == this._timeStr)
             {
-                _Str_14169(k._Str_2273()._Str_25497);
+                _Str_14169(k.getParser()._Str_25497);
             }
         }
     }

@@ -14,7 +14,7 @@ package com.sulake.habbo.communication.messages.incoming.catalog
             super(k, FireworkChargeDataParser);
         }
 
-        public function _Str_2273():FireworkChargeDataParser
+        public function getParser():FireworkChargeDataParser
         {
             return this._parser as FireworkChargeDataParser;
         }

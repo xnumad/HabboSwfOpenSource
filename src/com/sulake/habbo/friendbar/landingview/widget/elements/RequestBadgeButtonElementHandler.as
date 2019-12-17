@@ -47,9 +47,9 @@
 
         private function _Str_9863(k:_Str_8179):void
         {
-            if (k._Str_2273()._Str_25181 == this._badgeRequestCode)
+            if (k.getParser()._Str_25181 == this._badgeRequestCode)
             {
-                window.visible = (!(k._Str_2273()._Str_25366));
+                window.visible = (!(k.getParser()._Str_25366));
             }
         }
 

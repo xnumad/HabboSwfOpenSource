@@ -68,7 +68,7 @@
 
         private function _Str_23765(k:_Str_9397):void
         {
-            var _local_2:_Str_7381 = k._Str_2273();
+            var _local_2:_Str_7381 = k.getParser();
             if (_local_2.talentTrackName == this._Str_7925)
             {
                 this._maxLevel = _local_2._Str_16859;
@@ -79,7 +79,7 @@
 
         private function _Str_16796(k:_Str_5939):void
         {
-            var _local_2:TalentLevelUpMessageParser = k._Str_2273();
+            var _local_2:TalentLevelUpMessageParser = k.getParser();
             if (_local_2.talentTrackName == this._Str_7925)
             {
                 this._level = _local_2.level;

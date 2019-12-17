@@ -11,7 +11,7 @@
             super(k, GameStatusMessageParser);
         }
 
-        public function _Str_2273():GameStatusMessageParser
+        public function getParser():GameStatusMessageParser
         {
             return this._parser as GameStatusMessageParser;
         }

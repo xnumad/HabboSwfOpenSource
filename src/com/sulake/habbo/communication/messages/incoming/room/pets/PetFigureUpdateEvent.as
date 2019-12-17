@@ -11,7 +11,7 @@
             super(k, PetFigureUpdateParser);
         }
 
-        public function _Str_2273():PetFigureUpdateParser
+        public function getParser():PetFigureUpdateParser
         {
             return _parser as PetFigureUpdateParser;
         }

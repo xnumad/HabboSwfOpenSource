@@ -11,7 +11,7 @@
             super(k, SeasonalQuestsParser);
         }
 
-        public function _Str_2273():SeasonalQuestsParser
+        public function getParser():SeasonalQuestsParser
         {
             return _parser as SeasonalQuestsParser;
         }

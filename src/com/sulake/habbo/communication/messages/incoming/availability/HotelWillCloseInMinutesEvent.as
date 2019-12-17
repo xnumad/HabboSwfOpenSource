@@ -11,7 +11,7 @@
             super(k, HotelWillCloseInMinutesMessageParser);
         }
 
-        public function _Str_2273():HotelWillCloseInMinutesMessageParser
+        public function getParser():HotelWillCloseInMinutesMessageParser
         {
             return _parser as HotelWillCloseInMinutesMessageParser;
         }

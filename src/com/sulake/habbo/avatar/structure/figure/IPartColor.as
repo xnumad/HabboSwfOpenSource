@@ -15,6 +15,6 @@
         function get id():int;
         function get index():int;
         function get clubLevel():int;
-        function get _Str_608():Boolean;
+        function get isSelectable():Boolean;
     }
 }

@@ -18,7 +18,7 @@
             this._isDynamic = _arg_2;
         }
 
-        public function _Str_1522(k:Vector3D):Number
+        public function getDistance(k:Vector3D):Number
         {
             var _local_2:Number = Math.abs(((k.z - this.transformedLocation.z) - this._radius));
             var _local_3:Number = Math.abs(((k.z - this.transformedLocation.z) + this._radius));

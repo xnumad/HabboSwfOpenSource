@@ -431,10 +431,10 @@
 
         private function _Str_12291(k:_Str_4748):void
         {
-            if (((k._Str_2273()._Str_18517 == this._Str_4271) && (this.landingView)))
+            if (((k.getParser()._Str_18517 == this._Str_4271) && (this.landingView)))
             {
-                this._Str_22475(k._Str_2273().code);
-                this.movingBackgroundObjects._Str_23132 = k._Str_2273().code;
+                this._Str_22475(k.getParser().code);
+                this.movingBackgroundObjects._Str_23132 = k.getParser().code;
                 this.movingBackgroundObjects.initialize(this.windowContainer);
             }
         }

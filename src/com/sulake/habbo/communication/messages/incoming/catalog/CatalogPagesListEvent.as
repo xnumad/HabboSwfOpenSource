@@ -11,24 +11,24 @@
             super(k, CatalogPagesListMessageParser);
         }
 
-        public function _Str_2273():CatalogPagesListMessageParser
+        public function getParser():CatalogPagesListMessageParser
         {
             return this._parser as CatalogPagesListMessageParser;
         }
 
         public function get root():NodeData
         {
-            return this._Str_2273().root;
+            return this.getParser().root;
         }
 
         public function get _Str_16264():Boolean
         {
-            return this._Str_2273().unknownBoolean;
+            return this.getParser().unknownBoolean;
         }
 
         public function get catalogType():String
         {
-            return this._Str_2273().catalogType;
+            return this.getParser().catalogType;
         }
     }
 }

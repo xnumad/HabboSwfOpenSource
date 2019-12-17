@@ -92,7 +92,7 @@
             this._model = k;
             this._categoryId = _arg_2;
             this._partGrid._Str_3956();
-            if (_local_3._Str_806.length == 0)
+            if (_local_3.parts.length == 0)
             {
                 this._title.visible = true;
                 this._notification.visible = true;
@@ -105,7 +105,7 @@
                 {
                     _local_4._Str_3956();
                 }
-                for each (_local_5 in _local_3._Str_806)
+                for each (_local_5 in _local_3.parts)
                 {
                     if (_local_5)
                     {

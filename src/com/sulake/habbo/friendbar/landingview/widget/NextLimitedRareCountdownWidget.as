@@ -150,10 +150,10 @@
 
         private function _Str_23091(k:_Str_8320):void
         {
-            this._appearsInSeconds = k._Str_2273()._Str_23051;
-            this._pageId = k._Str_2273().pageId;
-            this._offerId = k._Str_2273().offerId;
-            this._productType = k._Str_2273().productType;
+            this._appearsInSeconds = k.getParser()._Str_23051;
+            this._pageId = k.getParser().pageId;
+            this._offerId = k.getParser().offerId;
+            this._productType = k.getParser().productType;
             this.refreshContent();
             this._Str_24349(this._appearsInSeconds);
         }

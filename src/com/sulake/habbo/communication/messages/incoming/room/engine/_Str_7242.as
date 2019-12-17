@@ -10,7 +10,7 @@
             super(k, HeightMapMessageParser);
         }
 
-        public function _Str_2273():HeightMapMessageParser
+        public function getParser():HeightMapMessageParser
         {
             return _parser as HeightMapMessageParser;
         }

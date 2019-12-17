@@ -11,7 +11,7 @@
             super(k, LeftQueueMessageParser);
         }
 
-        public function _Str_2273():LeftQueueMessageParser
+        public function getParser():LeftQueueMessageParser
         {
             return this._parser as LeftQueueMessageParser;
         }

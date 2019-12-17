@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_9806;
     import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11893;
     import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_483._Str_9358;
+    import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorMessage;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.IWindow;
 
@@ -120,10 +120,10 @@
             }
         }
 
-        private function _Str_24049(k:_Str_9358):void
+        private function _Str_24049(k:RoomAdErrorMessage):void
         {
             this._Str_3732();
-            var _local_2:RoomAdErrorMessageParser = k._Str_2273();
+            var _local_2:RoomAdErrorMessageParser = k.getParser();
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
             {
@@ -168,7 +168,7 @@
             this._Str_5951 = new TextFieldManager(this._Str_2272, this._Str_2453("event_desc"), 100);
             this._Str_5340.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._Str_5951.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
-            this._Str_2272.communication.addHabboConnectionMessageEvent(new _Str_9358(this._Str_24049));
+            this._Str_2272.communication.addHabboConnectionMessageEvent(new RoomAdErrorMessage(this._Str_24049));
             this._window.center();
         }
 

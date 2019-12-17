@@ -14,7 +14,7 @@
             super(k, RecyclerFinishedMessageParser);
         }
 
-        public function _Str_2273():RecyclerFinishedMessageParser
+        public function getParser():RecyclerFinishedMessageParser
         {
             return _parser as RecyclerFinishedMessageParser;
         }

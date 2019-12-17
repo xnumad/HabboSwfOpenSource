@@ -10,7 +10,7 @@
             super(k, NavigatorMetaDataParser);
         }
 
-        public function _Str_2273():NavigatorMetaDataParser
+        public function getParser():NavigatorMetaDataParser
         {
             return parser as NavigatorMetaDataParser;
         }

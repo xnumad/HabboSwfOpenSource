@@ -11,7 +11,7 @@
             super(k, SimplePollResultsMessageParser);
         }
 
-        public function _Str_2273():SimplePollResultsMessageParser
+        public function getParser():SimplePollResultsMessageParser
         {
             return _parser as SimplePollResultsMessageParser;
         }

@@ -25,7 +25,7 @@
 
         public function onFloorHeightMap(k:_Str_4279):void
         {
-            this._Str_22644(k._Str_2273().text);
+            this._Str_22644(k.getParser().text);
         }
 
         public function _Str_18596(k:_Str_6566):void
@@ -34,7 +34,7 @@
             var _local_3:Object;
             if (this._floorPlanCache)
             {
-                _local_2 = k._Str_2273();
+                _local_2 = k.getParser();
                 this._Str_24995();
                 for each (_local_3 in _local_2._Str_24835)
                 {

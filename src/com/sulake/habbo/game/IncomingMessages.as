@@ -67,40 +67,40 @@
 
         private function _Str_24534(k:JoinedQueueMessageEvent):void
         {
-            var _local_2:JoinedQueueMessageParser = k._Str_2273();
+            var _local_2:JoinedQueueMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] joined queue for game " + _local_2.gameTypeId));
         }
 
         private function _Str_22378(k:LeftQueueMessageEvent):void
         {
-            var _local_2:LeftQueueMessageParser = k._Str_2273();
+            var _local_2:LeftQueueMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] left queue for game " + _local_2.gameTypeId));
         }
 
         private function _Str_22979(k:LoadGameMessageEvent):void
         {
-            var _local_2:LoadGameMessageParser = k._Str_2273();
+            var _local_2:LoadGameMessageParser = k.getParser();
             HabboGamesCom.log(((("[BaseJump] load game " + _local_2.gameTypeId) + " url:") + _local_2.url));
             this._gameManager.loadGameClient(_local_2.gameTypeId, _local_2._Str_12486, _local_2.url, _local_2.quality, _local_2.scaleMode, _local_2.frameRate, _local_2.minMajorVersion, _local_2.minMinorVersion, _local_2.params);
         }
 
         private function _Str_25712(k:LoadGameUrlMessageEvent):void
         {
-            var _local_2:LoadGameUrlMessageParser = k._Str_2273();
+            var _local_2:LoadGameUrlMessageParser = k.getParser();
             HabboGamesCom.log(((("[BaseJump] load game url " + _local_2.gameTypeId) + " url:") + _local_2.url));
             this._gameManager._Str_19055(_local_2.gameTypeId, _local_2._Str_12486, _local_2.url);
         }
 
         private function _Str_25361(k:UnloadGameMessageEvent):void
         {
-            var _local_2:UnloadGameMessageParser = k._Str_2273();
+            var _local_2:UnloadGameMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] unload game " + _local_2.gameTypeId));
             this._gameManager._Str_8716(_local_2.gameTypeId, _local_2._Str_12486, "unloadGameClient");
         }
 
         private function _Str_16577(k:_Str_5416):void
         {
-            var _local_2:_Str_6554 = k._Str_2273();
+            var _local_2:_Str_6554 = k.getParser();
             if (_local_2.gameTypeId == this._gameManager.promotedGameId())
             {
                 this._gameManager._Str_23215(_local_2._Str_22319);

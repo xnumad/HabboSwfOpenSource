@@ -11,7 +11,7 @@
             super(k, EpicPopupParser);
         }
 
-        public function _Str_2273():EpicPopupParser
+        public function getParser():EpicPopupParser
         {
             return _parser as EpicPopupParser;
         }

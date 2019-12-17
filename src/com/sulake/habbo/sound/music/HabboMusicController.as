@@ -571,7 +571,7 @@
             var _local_11:int;
             var _local_12:int;
             var _local_2:_Str_7199 = (k as _Str_7199);
-            var _local_3:_Str_6929 = (_local_2._Str_2273() as _Str_6929);
+            var _local_3:_Str_6929 = (_local_2.getParser() as _Str_6929);
             var _local_4:Array = _local_3._Str_25090;
             var _local_5:int;
             while (_local_5 < _local_4.length)
@@ -703,7 +703,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_2:_Str_7922 = (k as _Str_7922);
-            var _local_3:_Str_6477 = (_local_2._Str_2273() as _Str_6477);
+            var _local_3:_Str_6477 = (_local_2.getParser() as _Str_6477);
             this._songDiskInventory.reset();
             var _local_4:int;
             while (_local_4 < _local_3._Str_22284)

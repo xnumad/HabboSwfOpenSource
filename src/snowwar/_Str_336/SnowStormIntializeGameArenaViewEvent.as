@@ -11,7 +11,7 @@
             super(k, SnowStormIntializeGameArenaViewParser);
         }
 
-        public function _Str_2273():SnowStormIntializeGameArenaViewParser
+        public function getParser():SnowStormIntializeGameArenaViewParser
         {
             return _parser as SnowStormIntializeGameArenaViewParser;
         }

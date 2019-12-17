@@ -236,7 +236,7 @@
             {
                 return;
             }
-            var _local_3:_Str_4139 = _local_2._Str_2273();
+            var _local_3:_Str_4139 = _local_2.getParser();
             if (_local_3 != null)
             {
                 this._ownUserId = _local_3.id;
@@ -246,11 +246,11 @@
         private function _Str_5963(k:IMessageEvent):void
         {
             var _local_2:_Str_3407 = (k as _Str_3407);
-            if ((((_local_2 == null) || (_local_2._Str_2273() == null)) || (k.connection == null)))
+            if ((((_local_2 == null) || (_local_2.getParser() == null)) || (k.connection == null)))
             {
                 return;
             }
-            var _local_3:_Str_5199 = _local_2._Str_2273();
+            var _local_3:_Str_5199 = _local_2.getParser();
             if (this._currentRoomId != _local_3.roomId)
             {
                 this.setCurrentRoom(_local_3.roomId);
@@ -282,11 +282,11 @@
             if (this._roomCreator != null)
             {
                 _local_2 = (k as _Str_6253);
-                if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+                if (((_local_2 == null) || (_local_2.getParser() == null)))
                 {
                     return;
                 }
-                _local_3 = _local_2._Str_2273();
+                _local_3 = _local_2.getParser();
                 if (_local_3 != null)
                 {
                     _local_4 = _local_3._Str_17132;
@@ -310,7 +310,7 @@
             var _local_10:Boolean;
             var _local_11:Boolean;
             var _local_2:_Str_7242 = (k as _Str_7242);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -318,7 +318,7 @@
             {
                 return;
             }
-            var _local_3:HeightMapMessageParser = _local_2._Str_2273();
+            var _local_3:HeightMapMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.width;
             var _local_5:int = _local_3.height;
             var _local_6:FurniStackingHeightMap = new FurniStackingHeightMap(_local_4, _local_5);
@@ -346,7 +346,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_2:_Str_7777 = (k as _Str_7777);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -354,7 +354,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7700 = _local_2._Str_2273();
+            var _local_3:_Str_7700 = _local_2.getParser();
             var _local_4:FurniStackingHeightMap = this._roomCreator.getFurniStackingHeightMap(this._currentRoomId);
             if (_local_4 == null)
             {
@@ -374,11 +374,11 @@
         private function onRoomVisualizationSettings(k:IMessageEvent):void
         {
             var _local_2:_Str_4196 = (k as _Str_4196);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_6347 = _local_2._Str_2273();
+            var _local_3:_Str_6347 = _local_2.getParser();
             var _local_4:* = (!(_local_3._Str_22900));
             var _local_5:Boolean = true;
             var _local_6:Number = _local_3._Str_9955;
@@ -393,11 +393,11 @@
         private function onRoomProperty(k:IMessageEvent):void
         {
             var _local_2:_Str_7999 = (k as _Str_7999);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_7512 = _local_2._Str_2273();
+            var _local_3:_Str_7512 = _local_2.getParser();
             var _local_4:String = _local_3._Str_5207;
             var _local_5:String = _local_3._Str_5259;
             var _local_6:String = _local_3._Str_5109;
@@ -418,11 +418,11 @@
             var _local_18:int;
             var _local_19:int;
             var _local_2:_Str_4279 = (k as _Str_4279);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:FloorHeightMapMessageParser = _local_2._Str_2273();
+            var _local_3:FloorHeightMapMessageParser = _local_2.getParser();
             if (this._roomCreator == null)
             {
                 return;
@@ -443,7 +443,7 @@
             var _local_11:_Str_5770;
             if (this._latestEntryTileEvent != null)
             {
-                _local_11 = this._latestEntryTileEvent._Str_2273();
+                _local_11 = this._latestEntryTileEvent.getParser();
             }
             var _local_12:FurniStackingHeightMap = this._roomCreator.getFurniStackingHeightMap(this._currentRoomId);
             if (_local_12 == null)
@@ -480,7 +480,7 @@
                 _local_13++;
             }
             this._planeParser._Str_3982(Math.floor(_local_7), Math.floor(_local_8), _local_9);
-            this._planeParser.initializeFromTileData(_local_2._Str_2273().fixedWallsHeight);
+            this._planeParser.initializeFromTileData(_local_2.getParser().fixedWallsHeight);
             this._planeParser._Str_3982(Math.floor(_local_7), Math.floor(_local_8), (_local_9 + this._planeParser.wallHeight));
             _local_4.scale = _local_3.scale;
             _local_4.initialize(_local_5, _local_6, this._planeParser.floorHeight);
@@ -514,11 +514,11 @@
         {
             var _local_6:_Str_3292;
             var _local_2:_Str_7849 = (k as _Str_7849);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:ObjectsMessageParser = _local_2._Str_2273();
+            var _local_3:ObjectsMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.getObjectCount();
             var _local_5:int;
             while (_local_5 < _local_4)
@@ -532,11 +532,11 @@
         private function onObjectAdd(k:IMessageEvent):void
         {
             var _local_2:_Str_5843 = (k as _Str_5843);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_8082 = _local_2._Str_2273();
+            var _local_3:_Str_8082 = _local_2.getParser();
             var _local_4:_Str_3292 = _local_3.data;
             this._Str_18595(this._currentRoomId, _local_4);
         }
@@ -546,7 +546,7 @@
             var _local_5:IVector3d;
             var _local_6:IVector3d;
             var _local_2:_Str_7527 = (k as _Str_7527);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -554,7 +554,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7802 = _local_2._Str_2273();
+            var _local_3:_Str_7802 = _local_2.getParser();
             var _local_4:_Str_3292 = _local_3.data;
             if (_local_4 != null)
             {
@@ -569,7 +569,7 @@
         private function onObjectDataUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_8234 = (k as _Str_8234);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -577,7 +577,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7918 = _local_2._Str_2273();
+            var _local_3:_Str_7918 = _local_2.getParser();
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.state;
             var _local_6:IStuffData = _local_3.data;
@@ -591,7 +591,7 @@
             var _local_7:int;
             var _local_8:IStuffData;
             var _local_2:_Str_8080 = (k as _Str_8080);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -599,7 +599,7 @@
             {
                 return;
             }
-            var _local_3:ObjectsDataUpdateMessageParser = _local_2._Str_2273();
+            var _local_3:ObjectsDataUpdateMessageParser = _local_2.getParser();
             var _local_4:int;
             while (_local_4 < _local_3.objectCount)
             {
@@ -620,7 +620,7 @@
             var parser:_Str_5317;
             var id:int;
             var objectRemoveEvent:_Str_4408 = (event as _Str_4408);
-            if (((objectRemoveEvent == null) || (objectRemoveEvent._Str_2273() == null)))
+            if (((objectRemoveEvent == null) || (objectRemoveEvent.getParser() == null)))
             {
                 return;
             }
@@ -628,7 +628,7 @@
             {
                 return;
             }
-            parser = objectRemoveEvent._Str_2273();
+            parser = objectRemoveEvent.getParser();
             id = parser.id;
             var delay:int = parser.delay;
             if (delay > 0)
@@ -666,11 +666,11 @@
         {
             var _local_6:_Str_3079;
             var _local_2:_Str_8064 = (k as _Str_8064);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:ItemsMessageParser = _local_2._Str_2273();
+            var _local_3:ItemsMessageParser = _local_2.getParser();
             var _local_4:int = _local_3.getItemCount();
             var _local_5:int;
             while (_local_5 < _local_4)
@@ -684,11 +684,11 @@
         private function onItemAdd(k:IMessageEvent):void
         {
             var _local_2:_Str_7704 = (k as _Str_7704);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_7298 = _local_2._Str_2273();
+            var _local_3:_Str_7298 = _local_2.getParser();
             var _local_4:_Str_3079 = _local_3.data;
             if (_local_4 != null)
             {
@@ -699,7 +699,7 @@
         private function onItemRemove(k:IMessageEvent):void
         {
             var _local_2:_Str_8204 = (k as _Str_8204);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -707,7 +707,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7124 = _local_2._Str_2273();
+            var _local_3:_Str_7124 = _local_2.getParser();
             this._roomCreator.disposeObjectWallItem(this._currentRoomId, _local_3.itemId, _local_3.pickerId);
         }
 
@@ -716,11 +716,11 @@
             var _local_6:IVector3d;
             var _local_7:IVector3d;
             var _local_2:_Str_7464 = (k as _Str_7464);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_7749 = _local_2._Str_2273();
+            var _local_3:_Str_7749 = _local_2.getParser();
             var _local_4:LegacyWallGeometry = this._roomCreator.getLegacyGeometry(this._currentRoomId);
             if (((this._roomCreator == null) || (_local_4 == null)))
             {
@@ -739,11 +739,11 @@
         private function onItemDataUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_7291 = (k as _Str_7291);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_8155 = _local_2._Str_2273();
+            var _local_3:_Str_8155 = _local_2.getParser();
             this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
@@ -778,7 +778,7 @@
             var _local_7:IVector3d;
             var _local_8:int;
             var _local_2:_Str_4085 = (k as _Str_4085);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -786,7 +786,7 @@
             {
                 return;
             }
-            var _local_3:UsersMessageParser = _local_2._Str_2273();
+            var _local_3:UsersMessageParser = _local_2.getParser();
             var _local_4:int;
             while (_local_4 < _local_3.getUserCount())
             {
@@ -836,7 +836,7 @@
             var _local_18:uint;
             var _local_19:_Str_8180;
             var _local_2:_Str_7817 = (k as _Str_7817);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -844,7 +844,7 @@
             {
                 return;
             }
-            var _local_3:UserUpdateMessageParser = _local_2._Str_2273();
+            var _local_3:UserUpdateMessageParser = _local_2.getParser();
             var _local_4:IRoomInstance = this._roomCreator.getRoom(this._currentRoomId);
             if (_local_4 == null)
             {
@@ -945,7 +945,7 @@
         private function _Str_16267(k:IMessageEvent):void
         {
             var _local_2:_Str_4914 = (k as _Str_4914);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -953,7 +953,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6367 = _local_2._Str_2273();
+            var _local_3:_Str_6367 = _local_2.getParser();
             this._roomCreator.disposeObjectUser(this._currentRoomId, _local_3.id);
             this.updateGuideMarker();
         }
@@ -975,7 +975,7 @@
             {
                 return;
             }
-            var _local_3:PetFigureUpdateParser = _local_2._Str_2273();
+            var _local_3:PetFigureUpdateParser = _local_2.getParser();
             this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_3.roomIndex, _local_3.figureData.figuredata, "", "", _local_3.isRiding);
         }
 
@@ -990,7 +990,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7435 = _local_2._Str_2273();
+            var _local_3:_Str_7435 = _local_2.getParser();
             if (_local_3 == null)
             {
                 return;
@@ -1001,7 +1001,7 @@
         private function onDance(k:IMessageEvent):void
         {
             var _local_2:_Str_5619 = (k as _Str_5619);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -1009,14 +1009,14 @@
             {
                 return;
             }
-            var _local_3:_Str_6731 = _local_2._Str_2273();
+            var _local_3:_Str_6731 = _local_2.getParser();
             this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_DANCE, _local_3._Str_8263);
         }
 
         private function onAvatarEffect(k:IMessageEvent):void
         {
             var _local_2:RoomUserEffectEvent = (k as RoomUserEffectEvent);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -1024,14 +1024,14 @@
             {
                 return;
             }
-            var _local_3:_Str_7571 = _local_2._Str_2273();
+            var _local_3:_Str_7571 = _local_2.getParser();
             this._roomCreator.updateObjectUserEffect(this._currentRoomId, _local_3.userId, _local_3._Str_6815, _local_3.delayMilliSeconds);
         }
 
         private function onAvatarSleep(k:IMessageEvent):void
         {
             var _local_2:_Str_7216 = (k as _Str_7216);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -1039,7 +1039,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7555 = _local_2._Str_2273();
+            var _local_3:_Str_7555 = _local_2.getParser();
             var _local_4:int = 1;
             if (!_local_3._Str_25565)
             {
@@ -1057,7 +1057,7 @@
             }
             if ((k is _Str_7050))
             {
-                _local_2 = (k as _Str_7050)._Str_2273();
+                _local_2 = (k as _Str_7050).getParser();
                 this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2._Str_2887);
             }
         }
@@ -1071,7 +1071,7 @@
             }
             if ((k is _Str_8069))
             {
-                _local_2 = (k as _Str_8069)._Str_2273();
+                _local_2 = (k as _Str_8069).getParser();
                 this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_2._Str_2887);
             }
         }
@@ -1092,7 +1092,7 @@
             }
             if ((k is _Str_7350))
             {
-                _local_2 = (k as _Str_7350)._Str_2273();
+                _local_2 = (k as _Str_7350).getParser();
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 1, null);
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 2, null);
                 _local_3 = _local_2._Str_24284;
@@ -1145,13 +1145,13 @@
             var _local_3:IRoomSession = this._roomCreator.roomSessionManager.getSession(this._currentRoomId);
             if ((k is _Str_4642))
             {
-                _local_2 = (k as _Str_4642)._Str_2273();
+                _local_2 = (k as _Str_4642).getParser();
             }
             else
             {
                 if ((k is _Str_4826))
                 {
-                    _local_2 = (k as _Str_4826)._Str_2273();
+                    _local_2 = (k as _Str_4826).getParser();
                     if ((((_local_2) && (_local_3)) && (_local_2.userId == _local_3._Str_3871)))
                     {
                         return;
@@ -1161,7 +1161,7 @@
                 {
                     if ((k is RoomUserShoutEvent))
                     {
-                        _local_2 = (k as RoomUserShoutEvent)._Str_2273();
+                        _local_2 = (k as RoomUserShoutEvent).getParser();
                     }
                 }
             }
@@ -1180,7 +1180,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8185 = _local_2._Str_2273();
+            var _local_3:_Str_8185 = _local_2.getParser();
             var _local_4:int = 1;
             if (!_local_3._Str_7319)
             {
@@ -1195,14 +1195,14 @@
             {
                 return;
             }
-            var _local_2:PetExperienceParser = k._Str_2273();
+            var _local_2:PetExperienceParser = k.getParser();
             this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.petRoomIndex, RoomObjectVariableEnum.FIGURE_GAINED_EXPERIENCE, _local_2._Str_18578);
         }
 
         private function onDiceValue(k:IMessageEvent):void
         {
             var _local_2:_Str_8183 = (k as _Str_8183);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -1210,7 +1210,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7612 = _local_2._Str_2273();
+            var _local_3:_Str_7612 = _local_2.getParser();
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.value;
             var _local_6:IStuffData = new LegacyStuffData();
@@ -1220,7 +1220,7 @@
         private function onOneWayDoorStatus(k:IMessageEvent):void
         {
             var _local_2:_Str_7657 = (k as _Str_7657);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
@@ -1228,7 +1228,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7431 = _local_2._Str_2273();
+            var _local_3:_Str_7431 = _local_2.getParser();
             var _local_4:int = _local_3.id;
             var _local_5:int = _local_3.status;
             var _local_6:IStuffData = new LegacyStuffData();
@@ -1241,7 +1241,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7187 = k._Str_2273();
+            var _local_2:_Str_7187 = k.getParser();
             var _local_3:Boolean = _local_2.isPlaying;
             this._roomCreator.setIsPlayingGame(this._currentRoomId, _local_3);
         }
@@ -1256,7 +1256,7 @@
             }
             if ((k is _Str_7743))
             {
-                _local_2 = (k as _Str_7743)._Str_2273();
+                _local_2 = (k as _Str_7743).getParser();
                 _local_3 = this.getRoomId(0);
                 this._roomCreator.updateObjectUserAction(_local_3, _local_2.userId, RoomObjectVariableEnum.FIGURE_NUMBER_VALUE, _local_2.value);
             }

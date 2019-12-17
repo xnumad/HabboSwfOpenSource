@@ -87,7 +87,7 @@
 
         private function _Str_22579(k:_Str_7261):void
         {
-            var _local_2:_Str_7924 = k._Str_2273();
+            var _local_2:_Str_7924 = k.getParser();
             this._Str_23174(_local_2.name, _local_2.contentType, _local_2.classId);
         }
 

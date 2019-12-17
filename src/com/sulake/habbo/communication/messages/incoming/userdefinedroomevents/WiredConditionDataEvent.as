@@ -11,7 +11,7 @@
             super(k, WiredConditionDataMessageParser);
         }
 
-        public function _Str_2273():WiredConditionDataMessageParser
+        public function getParser():WiredConditionDataMessageParser
         {
             return this._parser as WiredConditionDataMessageParser;
         }

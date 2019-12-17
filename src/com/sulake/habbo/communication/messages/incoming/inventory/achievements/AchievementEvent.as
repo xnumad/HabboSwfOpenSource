@@ -11,7 +11,7 @@
             super(k, AchievementParser);
         }
 
-        public function _Str_2273():AchievementParser
+        public function getParser():AchievementParser
         {
             return _parser as AchievementParser;
         }

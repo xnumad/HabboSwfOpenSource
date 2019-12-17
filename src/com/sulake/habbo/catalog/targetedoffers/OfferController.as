@@ -67,7 +67,7 @@
 
         private function _Str_25111(k:TargetedOfferEvent):void
         {
-            var _local_2:_Str_7335 = k._Str_2273();
+            var _local_2:_Str_7335 = k.getParser();
             var _local_3:TargetedOffer = new TargetedOffer(_local_2.data);
             if (_local_3._Str_11180 == TargetedOfferTrackingStateEnum._Str_6027)
             {

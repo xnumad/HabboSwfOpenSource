@@ -11,7 +11,7 @@
             super(k, QuestCancelledParser);
         }
 
-        public function _Str_2273():QuestCancelledParser
+        public function getParser():QuestCancelledParser
         {
             return _parser as QuestCancelledParser;
         }

@@ -11,7 +11,7 @@
             super(k, PetPlacingErrorParser);
         }
 
-        public function _Str_2273():PetPlacingErrorParser
+        public function getParser():PetPlacingErrorParser
         {
             return _parser as PetPlacingErrorParser;
         }

@@ -11,7 +11,7 @@
             super(k, NewUserExperienceGiftOfferParser);
         }
 
-        public function _Str_2273():NewUserExperienceGiftOfferParser
+        public function getParser():NewUserExperienceGiftOfferParser
         {
             return _parser as NewUserExperienceGiftOfferParser;
         }

@@ -188,7 +188,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6553 = k._Str_2273();
+            var _local_2:_Str_6553 = k.getParser();
             if (_local_2 == null)
             {
                 return;
@@ -213,7 +213,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6537 = k._Str_2273();
+            var _local_2:_Str_6537 = k.getParser();
             if (_local_2._Str_3278 == ChangeNameUpdateEvent._Str_5797)
             {
                 this._nameChangeView._Str_16320 = _local_2.name;
@@ -226,14 +226,14 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k)._Str_2273();
+            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
             this._ownUserId = _local_2.id;
             this._ownUserName = _local_2.name;
         }
 
         private function onUserNameChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_5856 = _Str_4150(k)._Str_2273();
+            var _local_2:_Str_5856 = _Str_4150(k).getParser();
             if (this._ownUserId == _local_2._Str_5277)
             {
                 this._ownUserName = _local_2._Str_16428;

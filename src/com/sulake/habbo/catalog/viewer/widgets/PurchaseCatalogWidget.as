@@ -13,7 +13,7 @@
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetSpinnerEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetPurchaseOverrideEvent;
     import com.sulake.core.window.IWindow;
-    import _Str_555._Str_11981;
+    import com.sulake.habbo.catalog.purchase._Str_11981;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.IProduct;
     import com.sulake.habbo.catalog.viewer.Offer;

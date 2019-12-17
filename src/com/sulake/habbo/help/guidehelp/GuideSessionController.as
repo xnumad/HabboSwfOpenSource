@@ -262,7 +262,7 @@
 
         private function _window9(k:_Str_8903):void
         {
-            var _local_2:_Str_7652 = k._Str_2273();
+            var _local_2:_Str_7652 = k.getParser();
             this._onDuty = _local_2.onDuty;
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.guidesonduty", "amount", _local_2._Str_24740.toString());
             this._habboHelp.localization.registerParameter("guide.help.guide.tool.helpersonduty", "amount", _local_2._Str_25148.toString());
@@ -385,7 +385,7 @@
             {
                 return;
             }
-            var _local_2:GuideSessionErrorMessageParser = k._Str_2273();
+            var _local_2:GuideSessionErrorMessageParser = k.getParser();
             switch (_local_2.errorCode)
             {
                 case GuideSessionErrorMessageParser.ERROR_GUIDES_REJECT:
@@ -485,7 +485,7 @@
         private function onGuideSessionPartnerIsTyping(k:IMessageEvent):void
         {
             Logger.log("onGuideSessionPartnerIsTyping");
-            var _local_2:GuideSessionPartnerIsTypingMessageParser = GuideSessionPartnerIsTypingEvent(k)._Str_2273();
+            var _local_2:GuideSessionPartnerIsTypingMessageParser = GuideSessionPartnerIsTypingEvent(k).getParser();
             this._Str_19579(_local_2._Str_7319);
         }
 
@@ -494,7 +494,7 @@
             var _local_2:PerkAllowancesMessageParser;
             if (this._sessionData._Str_3201 == GuideSessionStateEnum.GUIDE_TOOL)
             {
-                _local_2 = k._Str_2273();
+                _local_2 = k.getParser();
                 if (!_local_2.isPerkAllowed(PerkEnum.USE_GUIDE_TOOL))
                 {
                     if (this._onDuty)
@@ -509,12 +509,12 @@
 
         private function _Str_23266(k:_Str_8747):void
         {
-            this._Str_22573(k._Str_2273()._Str_23730);
+            this._Str_22573(k.getParser()._Str_23730);
         }
 
         private function _Str_24700(k:_Str_9097):void
         {
-            var _local_2:_Str_7083 = k._Str_2273();
+            var _local_2:_Str_7083 = k.getParser();
             this._Str_23588(_local_2._Str_23086, _local_2._Str_17106);
         }
 
@@ -524,12 +524,12 @@
             {
                 return;
             }
-            this._Str_19514((this._window.findChildByName("results") as IItemListWindow), k._Str_2273().status);
+            this._Str_19514((this._window.findChildByName("results") as IItemListWindow), k.getParser().status);
         }
 
         private function _Str_22443(k:_Str_9409):void
         {
-            var _local_2:_Str_7534 = k._Str_2273();
+            var _local_2:_Str_7534 = k.getParser();
             this._Str_22460(_local_2._Str_22263, _local_2._Str_25395, _local_2._Str_24620);
         }
 

@@ -11,7 +11,7 @@
             super(k, SnowStormOnPlayerExitedArenaParser);
         }
 
-        public function _Str_2273():SnowStormOnPlayerExitedArenaParser
+        public function getParser():SnowStormOnPlayerExitedArenaParser
         {
             return _parser as SnowStormOnPlayerExitedArenaParser;
         }

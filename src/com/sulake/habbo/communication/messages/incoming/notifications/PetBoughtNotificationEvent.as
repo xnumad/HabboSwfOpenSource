@@ -11,7 +11,7 @@
             super(k, PetBoughtNotificationMessageParser);
         }
 
-        public function _Str_2273():PetBoughtNotificationMessageParser
+        public function getParser():PetBoughtNotificationMessageParser
         {
             return _parser as PetBoughtNotificationMessageParser;
         }

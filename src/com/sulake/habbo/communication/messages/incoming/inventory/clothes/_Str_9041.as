@@ -11,7 +11,7 @@
             super(k, FigureSetIdsMessageParser);
         }
 
-        public function _Str_2273():FigureSetIdsMessageParser
+        public function getParser():FigureSetIdsMessageParser
         {
             return _parser as FigureSetIdsMessageParser;
         }

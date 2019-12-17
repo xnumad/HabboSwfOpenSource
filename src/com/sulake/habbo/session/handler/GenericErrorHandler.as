@@ -24,7 +24,7 @@
         private function onGenericError(k:IMessageEvent):void
         {
             var _local_4:String;
-            var _local_2:_Str_6053 = (k as GenericErrorEvent)._Str_2273();
+            var _local_2:_Str_6053 = (k as GenericErrorEvent).getParser();
             if (_local_2 == null)
             {
                 return;

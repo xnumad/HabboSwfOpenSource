@@ -241,10 +241,10 @@
         {
             if (((this._chatHistoryBuffer) && (!(this._roomChangeRecordedInHistory))))
             {
-                this._chatHistoryBuffer._Str_24587(k._Str_2273().data);
+                this._chatHistoryBuffer._Str_24587(k.getParser().data);
             }
             this._roomChangeRecordedInHistory = true;
-            this._roomChatSettings = k._Str_2273()._Str_4965;
+            this._roomChatSettings = k.getParser()._Str_4965;
             if (this._chatFlowStage)
             {
                 this._chatFlowStage._Str_18127();
@@ -259,7 +259,7 @@
 
         private function _Str_25751(k:RoomChatSettingsEvent):void
         {
-            this._roomChatSettings = k._Str_2273()._Str_4965;
+            this._roomChatSettings = k.getParser()._Str_4965;
             if (((this._isInRoom) && (this._chatFlowStage)))
             {
                 this._chatFlowStage._Str_18127();
@@ -268,8 +268,8 @@
 
         private function _Str_10366(k:_Str_3870):void
         {
-            this._freeFlowDisabled = k._Str_2273()._Str_25556;
-            this._preferedChatStyle = k._Str_2273()._Str_6984;
+            this._freeFlowDisabled = k.getParser()._Str_25556;
+            this._preferedChatStyle = k.getParser()._Str_6984;
         }
 
         public function _Str_19756():BitmapData

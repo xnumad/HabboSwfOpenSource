@@ -616,7 +616,7 @@
         {
             var _local_3:String;
             var _local_4:int;
-            var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsEvent(k)._Str_2273();
+            var _local_2:CallForHelpPendingCallsMessageParser = CallForHelpPendingCallsEvent(k).getParser();
             if (((_local_2.count == 0) || ((this._reportType == _Str_7161) && (_local_2.count < 3))))
             {
                 this._Str_24430();
@@ -645,7 +645,7 @@
 
         private function _Str_23107(k:_Str_9074):void
         {
-            var _local_2:_Str_5731 = k._Str_2273();
+            var _local_2:_Str_5731 = k.getParser();
             switch (_local_2._Str_23632)
             {
                 case _Str_5731._Str_17350:
@@ -686,7 +686,7 @@
 
         private function _Str_24314(k:_Str_9121):void
         {
-            this._windowManager.simpleAlert("${help.emergency.global_mute.caption}", "${help.emergency.global_mute.subtitle}", "${help.emergency.global_mute.message}", "${help.emergency.global_mute.link}", k._Str_2273()._Str_23798);
+            this._windowManager.simpleAlert("${help.emergency.global_mute.caption}", "${help.emergency.global_mute.subtitle}", "${help.emergency.global_mute.message}", "${help.emergency.global_mute.link}", k.getParser()._Str_23798);
         }
 
         public function get friendList():IHabboFriendsList
@@ -712,7 +712,7 @@
         private function _Str_10523(k:IMessageEvent):void
         {
             var _local_4:_Str_3548;
-            var _local_2:UsersMessageParser = _Str_4085(k)._Str_2273();
+            var _local_2:UsersMessageParser = _Str_4085(k).getParser();
             var _local_3:int;
             while (_local_3 < _local_2.getUserCount())
             {
@@ -727,13 +727,13 @@
 
         private function _Str_5963(k:IMessageEvent):void
         {
-            var _local_2:_Str_5199 = _Str_3407(k)._Str_2273();
+            var _local_2:_Str_5199 = _Str_3407(k).getParser();
             this._userRegistry._Str_19528(_local_2.roomId, "");
         }
 
         private function _Str_24404(k:IMessageEvent):void
         {
-            var _local_2:_Str_4537 = _Str_2929(k)._Str_2273();
+            var _local_2:_Str_4537 = _Str_2929(k).getParser();
             this._userRegistry._Str_19528(_local_2.data.flatId, _local_2.data.roomName);
         }
 
@@ -754,13 +754,13 @@
 
         private function onCreditBalance(k:_Str_2752):void
         {
-            var _local_2:_Str_4522 = _Str_2752(k)._Str_2273();
+            var _local_2:_Str_4522 = _Str_2752(k).getParser();
             this._currentRoomId = _local_2._Str_6550;
         }
 
         private function _Str_17604(k:_Str_5578):void
         {
-            var _local_2:CfhTopicsInitMessageParser = k._Str_2273();
+            var _local_2:CfhTopicsInitMessageParser = k.getParser();
             this._callForHelpCategories = _local_2._Str_9001;
         }
 

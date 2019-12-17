@@ -10,7 +10,7 @@
             super(k, _Str_8291);
         }
 
-        public function _Str_2273():_Str_8291
+        public function getParser():_Str_8291
         {
             return this._parser as _Str_8291;
         }

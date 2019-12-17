@@ -11,7 +11,7 @@
             super(k, CraftingResultMessageParser);
         }
 
-        public function _Str_2273():CraftingResultMessageParser
+        public function getParser():CraftingResultMessageParser
         {
             return _parser as CraftingResultMessageParser;
         }

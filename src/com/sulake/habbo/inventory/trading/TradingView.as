@@ -477,8 +477,8 @@
 
         public function _Str_24174(k:TradingOpenFailedEvent):void
         {
-            var _local_2:String = ("inventory.trading.openfail." + k._Str_2273().reason);
-            this._windowManager.registerLocalizationParameter(_local_2, "otherusername", k._Str_2273()._Str_17035);
+            var _local_2:String = ("inventory.trading.openfail." + k.getParser().reason);
+            this._windowManager.registerLocalizationParameter(_local_2, "otherusername", k.getParser()._Str_17035);
             this._windowManager.simpleAlert("${inventory.trading.openfail.title}", "${inventory.trading.openfail.caption}", (("${" + _local_2) + "}"));
         }
 

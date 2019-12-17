@@ -11,19 +11,19 @@
             super(k, _Str_8365);
         }
 
-        public function _Str_2273():_Str_8365
+        public function getParser():_Str_8365
         {
             return this._parser as _Str_8365;
         }
 
         public function get _Str_17070():Boolean
         {
-            return this._Str_2273()._Str_17070;
+            return this.getParser()._Str_17070;
         }
 
         public function get _Str_12669():String
         {
-            return this._Str_2273()._Str_12669;
+            return this.getParser()._Str_12669;
         }
     }
 }

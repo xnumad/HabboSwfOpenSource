@@ -654,13 +654,13 @@
 
         private function _Str_25659(k:IMessageEvent):void
         {
-            var _local_2:_Str_7877 = _Str_7837(k)._Str_2273();
+            var _local_2:_Str_7877 = _Str_7837(k).getParser();
             this._habboHelp.windowManager.alert("${help.cfh.reply.title}", _local_2.message, 0, null);
         }
 
         private function _Str_23792(k:IMessageEvent):void
         {
-            var _local_2:_Str_7322 = _Str_7620(k)._Str_2273();
+            var _local_2:_Str_7322 = _Str_7620(k).getParser();
             var _local_3:int = _local_2.resultType;
             var _local_4:String = _local_2._Str_3460;
             switch (_local_3)
@@ -682,7 +682,7 @@
 
         private function _Str_25598(k:_Str_8337):void
         {
-            var _local_2:_Str_7865 = k._Str_2273();
+            var _local_2:_Str_7865 = k.getParser();
             var _local_3:String = _local_2._Str_3460;
             if (_local_3 == "")
             {

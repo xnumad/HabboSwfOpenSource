@@ -18,7 +18,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7223 = k._Str_2273();
+            var _local_2:_Str_7223 = k.getParser();
             if (_local_2 == null)
             {
                 return;

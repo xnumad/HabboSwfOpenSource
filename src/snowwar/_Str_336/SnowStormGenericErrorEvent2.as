@@ -11,7 +11,7 @@
             super(k, SnowStormGenericErrorParser2);
         }
 
-        public function _Str_2273():SnowStormGenericErrorParser2
+        public function getParser():SnowStormGenericErrorParser2
         {
             return _parser as SnowStormGenericErrorParser2;
         }

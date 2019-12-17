@@ -61,7 +61,7 @@
 
         private function _Str_22591(k:CommunityGoalHallOfFameMessageEvent):void
         {
-            this._data = k._Str_2273().data;
+            this._data = k.getParser().data;
             refreshContent();
         }
 
@@ -77,11 +77,11 @@
 
         private function _Str_12291(k:_Str_4748):void
         {
-            var _local_2:String = k._Str_2273().code;
-            if ((((k._Str_2273()._Str_18517 == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))
+            var _local_2:String = k.getParser().code;
+            if ((((k.getParser()._Str_18517 == this._schedulingStr) && (!(_local_2 == ""))) && (!(disposed))))
             {
                 this._Str_23146(_local_2);
-                landingView.send(new _Str_11298(k._Str_2273().code));
+                landingView.send(new _Str_11298(k.getParser().code));
             }
         }
 

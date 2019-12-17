@@ -12,45 +12,45 @@
 
         public function get _Str_15162():int
         {
-            return this._Str_2273()._Str_15162;
+            return this.getParser()._Str_15162;
         }
 
         public function get _Str_18215():int
         {
-            return this._Str_2273()._Str_18215;
+            return this.getParser()._Str_18215;
         }
 
         public function get _Str_14946():int
         {
-            return this._Str_2273()._Str_14946;
+            return this.getParser()._Str_14946;
         }
 
         public function get _Str_13801():int
         {
-            return this._Str_2273()._Str_13801;
+            return this.getParser()._Str_13801;
         }
 
         public function get _Str_15709():int
         {
-            return this._Str_2273()._Str_15709;
+            return this.getParser()._Str_15709;
         }
 
         public function get _Str_9138():int
         {
-            return this._Str_2273()._Str_9138;
+            return this.getParser()._Str_9138;
         }
 
         public function get _Str_17841():Array
         {
-            return this._Str_2273()._Str_17841;
+            return this.getParser()._Str_17841;
         }
 
         public function get _Str_17465():Array
         {
-            return this._Str_2273()._Str_17465;
+            return this.getParser()._Str_17465;
         }
 
-        public function _Str_2273():_Str_9219
+        public function getParser():_Str_9219
         {
             return _parser as _Str_9219;
         }

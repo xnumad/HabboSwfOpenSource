@@ -132,7 +132,7 @@
         public function _Str_25572(k:IMessageEvent):void
         {
             var _local_2:_Str_6584 = _Str_6584(k);
-            if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2._Str_2273()._Str_3916)))
+            if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser()._Str_3916)))
             {
                 this._Str_5312(this._data.pageIndex);
             }
@@ -140,7 +140,7 @@
 
         public function _Str_22705(k:IMessageEvent):void
         {
-            var _local_2:_Str_6668 = _Str_7472(k)._Str_2273();
+            var _local_2:_Str_6668 = _Str_7472(k).getParser();
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.groupId)))
             {
                 this._Str_5312(this._data.pageIndex);

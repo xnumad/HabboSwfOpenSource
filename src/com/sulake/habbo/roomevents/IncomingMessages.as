@@ -54,31 +54,31 @@
 
         private function _Str_24104(k:IMessageEvent):void
         {
-            var _local_2:_Str_7362 = (k as _Str_8791)._Str_2273();
+            var _local_2:_Str_7362 = (k as _Str_8791).getParser();
             this._roomEvents.send(new OpenMessageComposer(_local_2.stuffId));
         }
 
         private function _Str_22337(k:IMessageEvent):void
         {
-            var _local_2:WiredTriggerDataMessageParser = (k as WiredTriggerDataEvent)._Str_2273();
+            var _local_2:WiredTriggerDataMessageParser = (k as WiredTriggerDataEvent).getParser();
             this._roomEvents._Str_7247._Str_18351(_local_2._Str_10812);
         }
 
         private function _Str_23979(k:IMessageEvent):void
         {
-            var _local_2:WiredEffectDataMessageParser = (k as WiredEffectDataEvent)._Str_2273();
+            var _local_2:WiredEffectDataMessageParser = (k as WiredEffectDataEvent).getParser();
             this._roomEvents._Str_7247._Str_18351(_local_2.definition);
         }
 
         private function _Str_23144(k:IMessageEvent):void
         {
-            var _local_2:WiredConditionDataMessageParser = (k as WiredConditionDataEvent)._Str_2273();
+            var _local_2:WiredConditionDataMessageParser = (k as WiredConditionDataEvent).getParser();
             this._roomEvents._Str_7247._Str_18351(_local_2.definition);
         }
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = (k as UserObjectEvent)._Str_2273();
+            var _local_2:_Str_4139 = (k as UserObjectEvent).getParser();
             this._roomEvents.userName = _local_2.name;
         }
 
@@ -89,14 +89,14 @@
 
         private function _Str_16200(k:IMessageEvent):void
         {
-            var _local_2:_Str_5317 = (k as _Str_4408)._Str_2273();
+            var _local_2:_Str_5317 = (k as _Str_4408).getParser();
             Logger.log(((("Received object remove event: " + _local_2.id) + ", ") + _local_2.isExpired));
             this._roomEvents._Str_7247._Str_25654(_local_2.id);
         }
 
         private function _Str_23600(k:IMessageEvent):void
         {
-            var _local_2:_Str_7138 = _Str_4585(k)._Str_2273();
+            var _local_2:_Str_7138 = _Str_4585(k).getParser();
             if (_local_2.reason == _Str_4585._Str_18436)
             {
                 this._roomEvents.windowManager.alert(this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.title"), this._roomEvents.localization.getLocalization("wiredfurni.rewardsuccess.body"), 0, null);
@@ -116,7 +116,7 @@
 
         private function _Str_25729(k:IMessageEvent):void
         {
-            var _local_2:_Str_7758 = _Str_7323(k)._Str_2273();
+            var _local_2:_Str_7758 = _Str_7323(k).getParser();
             this._roomEvents.windowManager.alert("Update failed", _local_2.info, 0, null);
         }
 

@@ -10,7 +10,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_2273():TradingYouAreNotAllowedParser
+        public function getParser():TradingYouAreNotAllowedParser
         {
             return _parser as TradingYouAreNotAllowedParser;
         }

@@ -38,12 +38,12 @@
 
         private function _Str_25116(k:_Str_9538):void
         {
-            this.show(k._Str_2273()._Str_5961);
+            this.show(k.getParser()._Str_5961);
         }
 
         private function _Str_22825(k:_Str_8429):void
         {
-            this.show(k._Str_2273()._Str_5961);
+            this.show(k.getParser()._Str_5961);
         }
 
         public function show(k:String):void

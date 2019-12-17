@@ -423,14 +423,14 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = (k as UserObjectEvent)._Str_2273();
+            var _local_2:_Str_4139 = (k as UserObjectEvent).getParser();
             this._Str_3764 = int(_local_2.id);
         }
 
         private function _Str_5276(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
-            var _local_2:_Str_6720 = (k as _Str_3873)._Str_2273();
+            var _local_2:_Str_6720 = (k as _Str_3873).getParser();
             for each (_local_3 in _local_2._Str_16756)
             {
                 this._Str_5982.push(_local_3);
@@ -470,7 +470,7 @@
             var _local_3:_Str_5148;
             var _local_4:_Str_2591;
             this._view = new _Str_7249(this);
-            var _local_2:_Str_7185 = (k as _Str_5567)._Str_2273();
+            var _local_2:_Str_7185 = (k as _Str_5567).getParser();
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
             {
@@ -552,7 +552,7 @@
         private function _Str_24954(k:IMessageEvent):void
         {
             var _local_3:_Str_3742;
-            var _local_2:_Str_7531 = (k as _Str_5641)._Str_2273();
+            var _local_2:_Str_7531 = (k as _Str_5641).getParser();
             this._friendRequests._Str_20199(false);
             for each (_local_3 in _local_2._Str_17539)
             {
@@ -568,7 +568,7 @@
         private function _Str_16886(k:IMessageEvent):void
         {
             Logger.log("Received new friend request");
-            var _local_2:_Str_6246 = (k as _Str_4841)._Str_2273();
+            var _local_2:_Str_6246 = (k as _Str_4841).getParser();
             var _local_3:FriendRequest = new FriendRequest(_local_2.req);
             this._friendRequests._Str_24807(_local_3);
             var _local_4:_Str_2740 = this._tabs._Str_4403(_Str_2777._Str_3798);
@@ -579,7 +579,7 @@
         private function _Str_22373(k:IMessageEvent):void
         {
             var _local_3:_Str_7034;
-            var _local_2:_Str_7071 = (k as _Str_7759)._Str_2273();
+            var _local_2:_Str_7071 = (k as _Str_7759).getParser();
             for each (_local_3 in _local_2._Str_22533)
             {
                 this.friendRequests._Str_25626(_local_3.senderId);
@@ -589,14 +589,14 @@
 
         private function _Str_23021(k:IMessageEvent):void
         {
-            var _local_2:_Str_8159 = (k as _Str_8109)._Str_2273();
+            var _local_2:_Str_8159 = (k as _Str_8109).getParser();
             this._Str_17300._Str_22668(_local_2.friends, _local_2.others);
             this._view.refresh("search");
         }
 
         private function _Str_23472(k:IMessageEvent):void
         {
-            var _local_2:_Str_7276 = (k as _Str_8535)._Str_2273();
+            var _local_2:_Str_7276 = (k as _Str_8535).getParser();
             this._Str_20985(_local_2.errorCode, _local_2._Str_23408);
         }
 
@@ -625,7 +625,7 @@
 
         private function _Str_22762(k:IMessageEvent):void
         {
-            var _local_2:_Str_7324 = (k as _Str_9229)._Str_2273();
+            var _local_2:_Str_7324 = (k as _Str_9229).getParser();
             var _local_3:String = ((("Received room invite error: errorCode: " + _local_2.errorCode) + ", recipients: ") + Util.arrayToString(_local_2._Str_25393));
             this.simpleAlert("${friendlist.alert.title}", _local_3);
         }
@@ -638,7 +638,7 @@
 
         private function _Str_24032(k:IMessageEvent):void
         {
-            var _local_2:_Str_7159 = (k as _Str_8333)._Str_2273();
+            var _local_2:_Str_7159 = (k as _Str_8333).getParser();
             var _local_3:String = this._Str_25719(_local_2.errorCode);
             Logger.log(((("Received follow friend failed: " + _local_2.errorCode) + ", ") + _local_3));
             this.simpleAlert("${friendlist.alert.title}", _local_3);

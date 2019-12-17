@@ -11,7 +11,7 @@
             super(k, MarketplaceConfigurationMessageParser);
         }
 
-        public function _Str_2273():MarketplaceConfigurationMessageParser
+        public function getParser():MarketplaceConfigurationMessageParser
         {
             return _parser as MarketplaceConfigurationMessageParser;
         }

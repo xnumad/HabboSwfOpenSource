@@ -11,7 +11,7 @@
             super(k, SnowStormOnGameEndingParser);
         }
 
-        public function _Str_2273():SnowStormOnGameEndingParser
+        public function getParser():SnowStormOnGameEndingParser
         {
             return _parser as SnowStormOnGameEndingParser;
         }

@@ -11,7 +11,7 @@
             super(k, SnowStormLevelDataParser);
         }
 
-        public function _Str_2273():SnowStormLevelDataParser
+        public function getParser():SnowStormLevelDataParser
         {
             return _parser as SnowStormLevelDataParser;
         }

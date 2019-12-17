@@ -22,7 +22,7 @@
         {
             var _local_3:String;
             var _local_4:String;
-            var _local_2:_Str_6189 = k._Str_2273();
+            var _local_2:_Str_6189 = k.getParser();
             if (((_local_2.senderId < 0) && (!(_local_2.extraData == null))))
             {
                 _local_3 = _local_2.extraData.split("/")[2];
@@ -37,7 +37,7 @@
 
         public function _Str_10457(k:_Str_4696):void
         {
-            var _local_2:_Str_5791 = k._Str_2273();
+            var _local_2:_Str_5791 = k.getParser();
             this._component._Str_3977._Str_2822(_local_2.senderId, "", _local_2._Str_3460);
         }
 

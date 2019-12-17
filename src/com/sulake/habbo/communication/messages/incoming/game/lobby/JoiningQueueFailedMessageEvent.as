@@ -11,7 +11,7 @@
             super(k, JoiningQueueFailedMessageParser);
         }
 
-        public function _Str_2273():JoiningQueueFailedMessageParser
+        public function getParser():JoiningQueueFailedMessageParser
         {
             return this._parser as JoiningQueueFailedMessageParser;
         }

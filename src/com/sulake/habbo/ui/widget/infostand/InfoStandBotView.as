@@ -227,7 +227,7 @@
             {
                 return;
             }
-            _local_2.text = String(k);
+            _local_2.text = k.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
 
         public function set _Str_3249(k:int):void

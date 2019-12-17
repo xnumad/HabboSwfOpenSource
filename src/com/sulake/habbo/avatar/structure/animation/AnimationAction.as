@@ -71,7 +71,7 @@
             }
         }
 
-        public function _Str_989(k:String):AnimationActionPart
+        public function getPart(k:String):AnimationActionPart
         {
             return this._actionParts[k] as AnimationActionPart;
         }
@@ -81,7 +81,7 @@
             return this._id;
         }
 
-        public function get _Str_806():Dictionary
+        public function get parts():Dictionary
         {
             return this._actionParts;
         }

@@ -605,7 +605,7 @@
 
         public function _Str_22329(k:_Str_6132):void
         {
-            var _local_2:int = k._Str_2273().code;
+            var _local_2:int = k.getParser().code;
             switch (_local_2)
             {
                 case 4:

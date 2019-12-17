@@ -11,7 +11,7 @@
             super(k, CallForHelpPendingCallsMessageParser);
         }
 
-        public function _Str_2273():CallForHelpPendingCallsMessageParser
+        public function getParser():CallForHelpPendingCallsMessageParser
         {
             return _parser as CallForHelpPendingCallsMessageParser;
         }

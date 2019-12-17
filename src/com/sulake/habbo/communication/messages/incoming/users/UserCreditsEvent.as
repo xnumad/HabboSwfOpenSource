@@ -11,7 +11,7 @@
             super(k, UserCreditsMessageParser);
         }
 
-        public function _Str_2273():UserCreditsMessageParser
+        public function getParser():UserCreditsMessageParser
         {
             return this._parser as UserCreditsMessageParser;
         }

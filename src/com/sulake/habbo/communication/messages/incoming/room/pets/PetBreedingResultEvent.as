@@ -11,7 +11,7 @@
             super(k, PetBreedingResultParser);
         }
 
-        public function _Str_2273():PetBreedingResultParser
+        public function getParser():PetBreedingResultParser
         {
             return _parser as PetBreedingResultParser;
         }

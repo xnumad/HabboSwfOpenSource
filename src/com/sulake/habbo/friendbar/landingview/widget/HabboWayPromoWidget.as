@@ -59,7 +59,7 @@
 
         private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
         {
-            this._completions = k._Str_2273().data._Str_12030;
+            this._completions = k.getParser().data._Str_12030;
             this.refreshContent();
         }
 

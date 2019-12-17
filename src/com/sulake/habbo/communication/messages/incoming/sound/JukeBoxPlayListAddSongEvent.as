@@ -11,7 +11,7 @@
             super(k, JukeBoxPlayListAddSongMessageParser);
         }
 
-        public function _Str_2273():JukeBoxPlayListAddSongMessageParser
+        public function getParser():JukeBoxPlayListAddSongMessageParser
         {
             return this._parser as JukeBoxPlayListAddSongMessageParser;
         }

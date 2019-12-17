@@ -438,7 +438,7 @@
 
         private function onPerkAllowances(k:_Str_3277):void
         {
-            var _local_2:PerkAllowancesMessageParser = k._Str_2273();
+            var _local_2:PerkAllowancesMessageParser = k.getParser();
             this._Str_8899(_local_2.isPerkAllowed(PerkEnum.USE_GUIDE_TOOL));
         }
 

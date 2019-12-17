@@ -11,7 +11,7 @@
             super(k, _Str_9516);
         }
 
-        public function _Str_2273():_Str_9516
+        public function getParser():_Str_9516
         {
             return this._parser as _Str_9516;
         }

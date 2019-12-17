@@ -11,7 +11,7 @@
             super(k, PetStatusUpdateParser);
         }
 
-        public function _Str_2273():PetStatusUpdateParser
+        public function getParser():PetStatusUpdateParser
         {
             return _parser as PetStatusUpdateParser;
         }

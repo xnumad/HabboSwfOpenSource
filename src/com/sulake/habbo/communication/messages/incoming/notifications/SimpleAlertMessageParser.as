@@ -14,7 +14,7 @@ package com.sulake.habbo.communication.messages.incoming.notifications
 			super(k, SimpleAlertMessage);
 		}
 		
-		public function _Str_2273():SimpleAlertMessage
+		public function getParser():SimpleAlertMessage
         {
             return _parser as SimpleAlertMessage;
         }

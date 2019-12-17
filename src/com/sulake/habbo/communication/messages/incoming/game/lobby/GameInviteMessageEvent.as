@@ -11,7 +11,7 @@
             super(k, GameInviteMessageParser);
         }
 
-        public function _Str_2273():GameInviteMessageParser
+        public function getParser():GameInviteMessageParser
         {
             return this._parser as GameInviteMessageParser;
         }

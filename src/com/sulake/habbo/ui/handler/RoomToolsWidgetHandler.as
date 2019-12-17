@@ -43,7 +43,7 @@
         private function _Str_4428(k:IMessageEvent):void
         {
             var _local_4:String;
-            var _local_2:_Str_4537 = _Str_2929(k)._Str_2273();
+            var _local_2:_Str_4537 = _Str_2929(k).getParser();
             var _local_3:_Str_2370 = _local_2.data;
             if (_local_3)
             {

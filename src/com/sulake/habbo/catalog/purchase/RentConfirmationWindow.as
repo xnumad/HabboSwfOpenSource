@@ -53,7 +53,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7443 = k._Str_2273();
+            var _local_2:_Str_7443 = k.getParser();
             if (this._furniData.fullName != _local_2._Str_17878)
             {
                 return;

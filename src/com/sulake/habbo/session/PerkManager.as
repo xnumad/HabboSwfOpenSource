@@ -72,7 +72,7 @@
         private function onPerkAllowances(k:_Str_3277):void
         {
             var _local_2:_Str_3818;
-            for each (_local_2 in k._Str_2273()._Str_23301())
+            for each (_local_2 in k.getParser()._Str_23301())
             {
                 this._perks[_local_2.code] = _local_2;
             }

@@ -111,10 +111,10 @@
 
         private function _Str_21615(k:_Str_6906):void
         {
-            this._Str_3032 = k._Str_2273().productType;
-            this._Str_4261 = k._Str_2273().productClassId;
-            this._Str_5859 = k._Str_2273()._Str_25710;
-            this._Str_7388 = k._Str_2273()._Str_25484;
+            this._Str_3032 = k.getParser().productType;
+            this._Str_4261 = k.getParser().productClassId;
+            this._Str_5859 = k.getParser()._Str_25710;
+            this._Str_7388 = k.getParser()._Str_25484;
             this.refreshContent();
         }
 

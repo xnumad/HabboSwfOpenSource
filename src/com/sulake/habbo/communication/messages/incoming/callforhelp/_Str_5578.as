@@ -11,7 +11,7 @@
             super(k, CfhTopicsInitMessageParser);
         }
 
-        public function _Str_2273():CfhTopicsInitMessageParser
+        public function getParser():CfhTopicsInitMessageParser
         {
             return _parser as CfhTopicsInitMessageParser;
         }

@@ -11,7 +11,7 @@
             super(k, GuildForumThreadsParser);
         }
 
-        public function _Str_2273():GuildForumThreadsParser
+        public function getParser():GuildForumThreadsParser
         {
             return this._parser as GuildForumThreadsParser;
         }

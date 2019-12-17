@@ -22,7 +22,7 @@
 
         private function onPresentOpened(k:IMessageEvent):void
         {
-            var _local_2:_Str_8104 = (k as _Str_9591)._Str_2273();
+            var _local_2:_Str_8104 = (k as _Str_9591).getParser();
             if (_local_2 == null)
             {
                 return;

@@ -17,7 +17,7 @@
             }
         }
 
-        public function get _Str_806():Array
+        public function get parts():Array
         {
             return this._parts;
         }

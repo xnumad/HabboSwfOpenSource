@@ -10,7 +10,7 @@
             super(k, ObjectsMessageParser);
         }
 
-        public function _Str_2273():ObjectsMessageParser
+        public function getParser():ObjectsMessageParser
         {
             return _parser as ObjectsMessageParser;
         }

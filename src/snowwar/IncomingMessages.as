@@ -167,7 +167,7 @@
 
         private function _SafeStr_18917(k:SnowStormLevelDataEvent):void
         {
-            var _local_2:SnowStormLevelDataParser = k._Str_2273();
+            var _local_2:SnowStormLevelDataParser = k.getParser();
             this._snowWarEngine.initializeGameArena(_local_2._SafeStr_12658, _local_2.fieldName, _local_2._SafeStr_13274, _local_2._SafeStr_13266);
             var _local_3:SynchronizedGameArena = this._snowWarEngine.synchronizedGameArena;
             var _local_4:SynchronizedGameStage = _local_3.synchronizedGameStage();
@@ -177,7 +177,7 @@
 
         private function _SafeStr_18924(k:SnowStormGenericErrorEvent):void
         {
-            var _local_2:SnowStormGenericErrorParser = k._Str_2273();
+            var _local_2:SnowStormGenericErrorParser = k.getParser();
             var _local_3:String = "snowwar.error.generic";
             switch (_local_2.reason)
             {
@@ -199,25 +199,25 @@
 
         private function _SafeStr_18922(k:_SafeStr_3669):void
         {
-            var _local_2:_SafeStr_4568 = k._Str_2273();
+            var _local_2:_SafeStr_4568 = k.getParser();
             var _local_3:Game2PlayerData = _local_2.player;
         }
 
         private function _SafeStr_18923(k:SnowStormIntializeGameArenaViewEvent):void
         {
-            var _local_2:SnowStormIntializeGameArenaViewParser = k._Str_2273();
+            var _local_2:SnowStormIntializeGameArenaViewParser = k.getParser();
             this._snowWarEngine.initializeGameArenaView();
         }
 
         private function _SafeStr_18915(k:SnowStormIntializedPlayersEvent):void
         {
-            var _local_2:SnowStormIntializedPlayersParser = k._Str_2273();
+            var _local_2:SnowStormIntializedPlayersParser = k.getParser();
             this._snowWarEngine.playersInitialized(_local_2._SafeStr_18960, _local_2._SafeStr_18961);
         }
 
         private function _SafeStr_18916(k:SnowStormOnStageStartEvent):void
         {
-            var _local_2:SnowStormOnStageStartParser = k._Str_2273();
+            var _local_2:SnowStormOnStageStartParser = k.getParser();
             HabboGamesCom.log(("[HabbosnowWarEngine] On stage start: " + _local_2._SafeStr_12659));
             var _local_3:_SafeStr_3610 = _local_2._SafeStr_7508;
             this._SafeStr_18945(_local_3);
@@ -226,14 +226,14 @@
 
         private function _SafeStr_18921(k:SnowStormOnStageRunningEvent):void
         {
-            var _local_2:SnowStormOnStageRunningParser = k._Str_2273();
+            var _local_2:SnowStormOnStageRunningParser = k.getParser();
             HabboGamesCom.log(("[HabbosnowWarEngine] On stage running: " + _local_2.time));
             this._snowWarEngine.onStageRunning(_local_2.time);
         }
 
         private function _SafeStr_18928(k:SnowStormOnStageEndingEvent):void
         {
-            var _local_2:SnowStormOnStageEndingParser = k._Str_2273();
+            var _local_2:SnowStormOnStageEndingParser = k.getParser();
             HabboGamesCom.log(("[HabbosnowWarEngine] On stage ending: " + _local_2._SafeStr_18963));
             if (_local_2._SafeStr_18963 == 0)
             {
@@ -243,34 +243,34 @@
 
         private function _SafeStr_18937(k:SnowStormOnGameEndingEvent):void
         {
-            var _local_2:SnowStormOnGameEndingParser = k._Str_2273();
+            var _local_2:SnowStormOnGameEndingParser = k.getParser();
             HabboGamesCom.log(("[HabbosnowWarEngine] On game ending: " + _local_2._SafeStr_18963));
             this._snowWarEngine.onGameEnding(_local_2._SafeStr_18963, _local_2._SafeStr_18964, _local_2._SafeStr_18965, _local_2._SafeStr_18966);
         }
 
         private function _SafeStr_18929(k:SnowStormOnPlayerExitedArenaEvent):void
         {
-            var _local_2:SnowStormOnPlayerExitedArenaParser = k._Str_2273();
+            var _local_2:SnowStormOnPlayerExitedArenaParser = k.getParser();
             HabboGamesCom.log(((("[HabbosnowWarEngine] On player exited arena. userId:" + _local_2.userId) + " gameObjectId:") + _local_2._SafeStr_18967));
         }
 
         private function _SafeStr_18925(k:SnowStormRejoinPreviousRoomEvent):void
         {
-            var _local_2:SnowStormRejoinPreviousRoomParser = k._Str_2273();
+            var _local_2:SnowStormRejoinPreviousRoomParser = k.getParser();
             HabboGamesCom.log(("Rejoin game! Room Before game: " + _local_2.rejoinRoom));
             this._snowWarEngine.setRejoinRoom(_local_2.rejoinRoom);
         }
 
         private function _SafeStr_18942(k:SnowStormUserRematchedEvent):void
         {
-            var _local_2:SnowStormUserRematchedParser = k._Str_2273();
+            var _local_2:SnowStormUserRematchedParser = k.getParser();
             HabboGamesCom.log((("User " + _local_2.userId) + " rematches"));
             this._snowWarEngine.rematchPlayer(_local_2.userId);
         }
 
         private function _SafeStr_18938(k:SnowStormGamesInformationEvent):void
         {
-            var _local_2:SnowStormGamesInformationParser = k._Str_2273();
+            var _local_2:SnowStormGamesInformationParser = k.getParser();
             if (_local_2.status == SnowStormGamesInformationParser._SafeStr_18968)
             {
                 this._snowWarEngine.gameMainViewController._SafeStr_18778(_local_2.timeTillNextGame);
@@ -287,21 +287,21 @@
 
         private function _SafeStr_13119(k:SnowStormGamesLeftEvent):void
         {
-            var _local_2:SnowStormGamesLeftParser = k._Str_2273();
+            var _local_2:SnowStormGamesLeftParser = k.getParser();
             HabboGamesCom.log(((("FREE GAMES LEFT: " + _local_2._SafeStr_13224) + " OR HAS UNLIMITED GAMES: ") + _local_2._SafeStr_13223));
             this._snowWarEngine._SafeStr_13221(_local_2.gameTypeId, _local_2._SafeStr_13223, _local_2._SafeStr_13224);
         }
 
         private function _SafeStr_18926(k:SnowStormLongDataEvent):void
         {
-            var _local_2:SnowStormLongDataParser = k._Str_2273();
+            var _local_2:SnowStormLongDataParser = k.getParser();
             var _local_3:_SafeStr_4018 = _local_2._SafeStr_18970;
             this._snowWarEngine.onLongDataReceived(_local_3);
         }
 
         private function _SafeStr_10644(k:SnowStormGameStartedEvent):void
         {
-            var _local_2:SnowStormGameStartedParser = k._Str_2273();
+            var _local_2:SnowStormGameStartedParser = k.getParser();
             HabboGamesCom.log("Game started!");
 			try
 			{
@@ -315,7 +315,7 @@
 
         private function _SafeStr_18940(k:StartLobbyCounterEvent):void
         {
-            var _local_2:StartLobbyCounterParser = k._Str_2273();
+            var _local_2:StartLobbyCounterParser = k.getParser();
             HabboGamesCom.log(("Start Lobby Counter: " + _local_2._SafeStr_18972));
             this._snowWarEngine.onStartLobbyCounter(_local_2._SafeStr_18972);
         }
@@ -332,7 +332,7 @@
 
         private function _SafeStr_18919(k:SnowStormQuePositionEvent):void
         {
-            var _local_2:SnowStormQuePositionParser = k._Str_2273();
+            var _local_2:SnowStormQuePositionParser = k.getParser();
             if (this._snowWarEngine.gameLobbyViewController)
             {
                 this._snowWarEngine.gameLobbyViewController._SafeStr_18591 = _local_2.position;
@@ -341,19 +341,19 @@
 
         private function _SafeStr_18944(k:SnowStormQuePlayerAddedEvent):void
         {
-            var _local_2:SnowStormQuePlayerAddedParser = k._Str_2273();
+            var _local_2:SnowStormQuePlayerAddedParser = k.getParser();
             this._snowWarEngine._SafeStr_13219(_local_2.user);
         }
 
         private function _SafeStr_18939(k:SnowStormQuePlayerRemovedEvent):void
         {
-            var _local_2:SnowStormQuePlayerRemovedParser = k._Str_2273();
+            var _local_2:SnowStormQuePlayerRemovedParser = k.getParser();
             this._snowWarEngine._SafeStr_13220(_local_2.userId);
         }
 
         private function _SafeStr_18935(k:SnowStormLongData2Event):void
         {
-            var _local_2:SnowStormLongData2Parser = k._Str_2273();
+            var _local_2:SnowStormLongData2Parser = k.getParser();
             var _local_3:_SafeStr_4018 = _local_2._SafeStr_18970;
             HabboGamesCom.log(("Long data received: " + [_local_3.fieldName, _local_3._SafeStr_13274, _local_3._SafeStr_13275]));
             this._snowWarEngine.onLongDataReceived(_local_3);
@@ -361,7 +361,7 @@
 
         private function _SafeStr_18936(k:SnowStormGenericErrorEvent):void
         {
-            var _local_2:SnowStormGenericErrorParser = k._Str_2273();
+            var _local_2:SnowStormGenericErrorParser = k.getParser();
             var errorCode:String = "snowwar.error.generic";
             switch (_local_2.reason)
             {
@@ -386,14 +386,14 @@
 
         private function _SafeStr_18932(k:SnowStormStartBlockTickerEvent):void
         {
-            var _local_2:SnowStormStartBlockTickerParser = k._Str_2273();
+            var _local_2:SnowStormStartBlockTickerParser = k.getParser();
             this._snowWarEngine.gameMainViewController._SafeStr_18778(_local_2._SafeStr_18976);
         }
 
         private function _SafeStr_18943(k:SnowStormFullGameStatusEvent):void
         {
             var _local_5:_SafeStr_4692;
-            var _local_2:SnowStormFullGameStatusParser = k._Str_2273();
+            var _local_2:SnowStormFullGameStatusParser = k.getParser();
             var gameArena:SynchronizedGameArena = this._snowWarEngine.synchronizedGameArena;
             HabboGamesCom.log("On full game status: ");
             var _local_4:_SafeStr_4690 = _local_2._SafeStr_18977;
@@ -409,7 +409,7 @@
 
         private function _SafeStr_18518(k:SnowStormGameStatusEvent):void
         {
-            var _local_2:SnowStormGameStatusParser = k._Str_2273();
+            var _local_2:SnowStormGameStatusParser = k.getParser();
             HabboGamesCom.log("[HabbosnowWarEngine] On game status: ");
             this._SafeStr_18946(_local_2.status);
         }
@@ -689,7 +689,7 @@
 
         private function _SafeStr_18934(k:SnowStormUserChatMessageEvent):void
         {
-            var _local_2:SnowStormUserChatMessageParser = k._Str_2273();
+            var _local_2:SnowStormUserChatMessageParser = k.getParser();
             this._snowWarEngine._SafeStr_13216(_local_2.userId, _local_2._SafeStr_18212);
         }
 
@@ -713,7 +713,7 @@
 
         private function _SafeStr_18933(k:_Str_18356):void
         {
-            var _local_2:_Str_4574 = k._Str_2273();
+            var _local_2:_Str_4574 = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18636(_local_2.leaderboard, _local_2._Str_26158);
@@ -722,7 +722,7 @@
 
         private function _SafeStr_18941(k:_Str_5142):void
         {
-            var _local_2:_Str_4574 = k._Str_2273();
+            var _local_2:_Str_4574 = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18634(_local_2.leaderboard, _local_2._Str_26158);
@@ -731,7 +731,7 @@
 
         private function _SafeStr_18918(k:_Str_8022):void
         {
-            var _local_2:Game2WeeklyLeaderboardParser = k._Str_2273();
+            var _local_2:Game2WeeklyLeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18635(_local_2.year, _local_2.week, _local_2.leaderboard, _local_2._Str_26158, _local_2.maxOffset, _local_2.minutesUntilReset);
@@ -740,7 +740,7 @@
 
         private function _SafeStr_18914(k:_Str_8191):void
         {
-            var _local_2:Game2WeeklyLeaderboardParser = k._Str_2273();
+            var _local_2:Game2WeeklyLeaderboardParser = k.getParser();
             if (this._snowWarEngine.leaderboard)
             {
                 this._snowWarEngine.leaderboard._SafeStr_18637(_local_2.year, _local_2.week, _local_2.leaderboard, _local_2._Str_26158, _local_2.maxOffset, _local_2.minutesUntilReset);

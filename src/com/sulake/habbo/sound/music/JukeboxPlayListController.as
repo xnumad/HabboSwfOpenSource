@@ -153,7 +153,7 @@
         private function _Str_25253(k:IMessageEvent):void
         {
             var _local_2:_Str_8016 = (k as _Str_8016);
-            var _local_3:_Str_6377 = (_local_2._Str_2273() as _Str_6377);
+            var _local_3:_Str_6377 = (_local_2.getParser() as _Str_6377);
             Logger.log(((((("Received Now Playing message with: " + _local_3._Str_9166) + ", ") + _local_3._Str_17943) + ", ") + _local_3._Str_19692));
             this._isPlaying = (!(_local_3._Str_9166 == -1));
             if (_local_3._Str_9166 >= 0)
@@ -179,7 +179,7 @@
             var _local_6:int;
             var _local_7:SongDataEntry;
             var _local_2:_Str_7248 = (k as _Str_7248);
-            var _local_3:_Str_6513 = (_local_2._Str_2273() as _Str_6513);
+            var _local_3:_Str_6513 = (_local_2.getParser() as _Str_6513);
             Logger.log(("Received Jukebox song disks (=playlist) message, length of playlist: " + _local_3._Str_14484.length));
             this._entries = new Array();
             var _local_4:int;

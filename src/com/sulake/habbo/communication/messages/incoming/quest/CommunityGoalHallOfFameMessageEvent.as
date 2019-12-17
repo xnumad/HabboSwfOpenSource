@@ -11,7 +11,7 @@
             super(k, CommunityGoalHallOfFameParser);
         }
 
-        public function _Str_2273():CommunityGoalHallOfFameParser
+        public function getParser():CommunityGoalHallOfFameParser
         {
             return _parser as CommunityGoalHallOfFameParser;
         }

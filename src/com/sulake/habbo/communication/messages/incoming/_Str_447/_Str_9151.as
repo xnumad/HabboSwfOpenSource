@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import _Str_449._Str_8993;
+    import com.sulake.habbo.communication.messages.parser._Str_449._Str_8993;
 
     public class _Str_9151 extends MessageEvent implements IMessageEvent 
     {
@@ -11,7 +11,7 @@
             super(k, _Str_8993);
         }
 
-        public function _Str_2273():_Str_8993
+        public function getParser():_Str_8993
         {
             return _parser as _Str_8993;
         }

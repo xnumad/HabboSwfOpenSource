@@ -11,7 +11,7 @@
             super(k, SnowStormLongData2Parser);
         }
 
-        public function _Str_2273():SnowStormLongData2Parser
+        public function getParser():SnowStormLongData2Parser
         {
             return this._parser as SnowStormLongData2Parser;
         }

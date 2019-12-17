@@ -61,7 +61,7 @@
             var _local_2:ActivePartSet = this._activePartSets[k.activePartSet];
             if (_local_2 != null)
             {
-                return _local_2._Str_806;
+                return _local_2.parts;
             }
             return [];
         }
@@ -81,7 +81,7 @@
             return this._parts[_local_2];
         }
 
-        public function get _Str_806():Dictionary
+        public function get parts():Dictionary
         {
             return this._parts;
         }

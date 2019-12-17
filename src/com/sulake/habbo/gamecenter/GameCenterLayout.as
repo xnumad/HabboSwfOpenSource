@@ -520,7 +520,7 @@
             var _local_9:IWindowContainer;
             var _local_10:_Str_2402;
             var _local_2:UserGameAchievementsMessageEvent = (k as UserGameAchievementsMessageEvent);
-            var _local_3:UserGameAchievementsMessageParser = (_local_2._Str_2273() as UserGameAchievementsMessageParser);
+            var _local_3:UserGameAchievementsMessageParser = (_local_2.getParser() as UserGameAchievementsMessageParser);
             if (((this._achievementList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._achievementList.destroyListItems();
@@ -554,7 +554,7 @@
             var _local_7:IWindowContainer;
             var _local_8:IBitmapWrapperWindow;
             var _local_2:_Str_8191 = (k as _Str_8191);
-            var _local_3:_Str_4574 = _local_2._Str_2273();
+            var _local_3:_Str_4574 = _local_2.getParser();
             if (((this._leaderboardList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._leaderboardList.destroyListItems();
@@ -594,7 +594,7 @@
         {
             var _local_4:_Str_3326;
             var _local_2:_Str_5142 = (k as _Str_5142);
-            var _local_3:Game2WeeklyLeaderboardParser = _local_2._Str_2273();
+            var _local_3:Game2WeeklyLeaderboardParser = _local_2.getParser();
             if (((_local_3.gameTypeId == this._selectedGame) && (_local_3.leaderboard.length > 0)))
             {
                 _local_4 = _local_3.leaderboard[0];
@@ -611,7 +611,7 @@
             var _local_5:_Str_7552;
             var _local_6:IWindowContainer;
             var _local_2:_Str_6994 = (k as _Str_6994);
-            var _local_3:_Str_7341 = _local_2._Str_2273();
+            var _local_3:_Str_7341 = _local_2.getParser();
             if (((this._luckyLosersList) && (_local_3.gameTypeId == this._selectedGame)))
             {
                 this._gameCenterViewWindow.findChildByName("previous_winner").visible = false;
@@ -732,7 +732,7 @@
         {
             var _local_4:IHabboLocalizationManager;
             var _local_2:_Str_5416 = (k as _Str_5416);
-            var _local_3:_Str_6554 = _local_2._Str_2273();
+            var _local_3:_Str_6554 = _local_2.getParser();
             if (_local_3.gameTypeId == this._selectedGame)
             {
                 _local_4 = this._gameCenterView.localization;
@@ -760,7 +760,7 @@
         private function _Str_25204(k:IMessageEvent):void
         {
             var _local_2:GameStatusMessageEvent = (k as GameStatusMessageEvent);
-            var _local_3:GameStatusMessageParser = _local_2._Str_2273();
+            var _local_3:GameStatusMessageParser = _local_2.getParser();
             if (_local_3.gameTypeId == this._selectedGame)
             {
                 if (((_local_3.isOk) && (!(this._gameCenterView._Str_12938))))

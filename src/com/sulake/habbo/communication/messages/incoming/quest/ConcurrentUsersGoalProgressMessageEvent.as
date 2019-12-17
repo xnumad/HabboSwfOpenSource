@@ -11,7 +11,7 @@
             super(k, ConcurrentUsersGoalProgressParser);
         }
 
-        public function _Str_2273():ConcurrentUsersGoalProgressParser
+        public function getParser():ConcurrentUsersGoalProgressParser
         {
             return _parser as ConcurrentUsersGoalProgressParser;
         }

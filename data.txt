@@ -584,7 +584,7 @@ _Str_7632 >
             this._data = new _Str_6294(k);
             return true;
         
-_Str_9358 > 
+RoomAdErrorMessage > 
             this._errorCode = k.readInteger();
             this._filteredText = k.readString();
             return true;

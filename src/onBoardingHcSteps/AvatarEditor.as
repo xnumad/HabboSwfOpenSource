@@ -586,7 +586,7 @@
                 _local_10 = [];
                 for each (_local_11 in _local_7.colors)
                 {
-                    if (((_local_11._Str_608) && ((_local_10.length + _local_9.length) < _local_2)))
+                    if (((_local_11.isSelectable) && ((_local_10.length + _local_9.length) < _local_2)))
                     {
                         _local_9.push(this._Str_1378(_local_11, _local_5));
                     }
@@ -713,17 +713,17 @@
                     {
                         _local_8 = this._showHcItems;
                     }
-                    if ((((_local_8) && (_local_6._Str_653)) && ((_local_6.gender == this._gender) || (_local_6.gender == U))))
+                    if ((((_local_8) && (_local_6.isPreSelectable)) && ((_local_6.gender == this._gender) || (_local_6.gender == U))))
                     {
                         _local_9 = 0;
-                        for each (_local_10 in _local_6._Str_806)
+                        for each (_local_10 in _local_6.parts)
                         {
                             _local_9 = Math.max(_local_9, _local_10._Str_827);
                         }
                         _local_11 = [];
                         for each (_local_12 in _local_5.colors)
                         {
-                            if (_local_12._Str_608)
+                            if (_local_12.isSelectable)
                             {
                                 _local_11.push(_local_12);
                             }

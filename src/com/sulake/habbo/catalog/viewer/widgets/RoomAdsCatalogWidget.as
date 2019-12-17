@@ -209,7 +209,7 @@
                 return;
             }
             var _local_2:_Str_7365 = (k as _Str_7365);
-            var _local_3:_Str_8067 = _local_2._Str_2273();
+            var _local_3:_Str_8067 = _local_2.getParser();
             var _local_4:IDropMenuWindow = (window.findChildByName("room_drop_menu") as IDropMenuWindow);
             this._rooms = _local_3.rooms;
             this._isVip = _local_3._Str_12313;

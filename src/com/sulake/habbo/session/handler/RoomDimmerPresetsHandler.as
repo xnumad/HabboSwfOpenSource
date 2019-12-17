@@ -25,11 +25,11 @@
         {
             var _local_7:_Str_5478;
             var _local_2:_Str_8039 = (k as _Str_8039);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:RoomDimmerPresetsMessageParser = _local_2._Str_2273();
+            var _local_3:RoomDimmerPresetsMessageParser = _local_2.getParser();
             var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {

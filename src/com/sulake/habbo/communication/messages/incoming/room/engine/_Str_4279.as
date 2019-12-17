@@ -10,7 +10,7 @@
             super(k, FloorHeightMapMessageParser);
         }
 
-        public function _Str_2273():FloorHeightMapMessageParser
+        public function getParser():FloorHeightMapMessageParser
         {
             return _parser as FloorHeightMapMessageParser;
         }

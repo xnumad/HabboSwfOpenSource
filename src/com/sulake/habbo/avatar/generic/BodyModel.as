@@ -77,7 +77,7 @@
             }
             _local_4._Str_20245(_local_2);
             _local_4._Str_17669(_local_3);
-            for each (_local_5 in _local_4._Str_806)
+            for each (_local_5 in _local_4.parts)
             {
                 _local_6 = _Str_2278.figureData.getFigureStringWithFace(_local_5.id);
                 _local_7 = _Str_2278.manager.avatarRenderManager.createAvatarImage(_local_6, AvatarScaleType.LARGE, null, this);

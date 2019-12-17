@@ -11,7 +11,7 @@
             super(k, CatalogPageMessageParser);
         }
 
-        public function _Str_2273():CatalogPageMessageParser
+        public function getParser():CatalogPageMessageParser
         {
             return this._parser as CatalogPageMessageParser;
         }

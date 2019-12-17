@@ -1786,7 +1786,7 @@
             var _local_14:_Str_2853;
             var _local_15:Offer;
             var _local_16:IFurnitureData;
-            var _local_2:CatalogPageMessageParser = k._Str_2273();
+            var _local_2:CatalogPageMessageParser = k.getParser();
             if (_local_2.catalogType != this._catalogType)
             {
                 return;
@@ -1853,7 +1853,7 @@
         private function _Str_19518(k:IMessageEvent):void
         {
             var _local_2:_Str_8078 = (k as _Str_8078);
-            var _local_3:_Str_7694 = _local_2._Str_2273();
+            var _local_3:_Str_7694 = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = ((_local_4 > 0) ? (("${catalog.alert.purchaseerror.description." + _local_4) + "}") : "${catalog.alert.purchaseerror.description}");
             this._windowManager.alert("${catalog.alert.purchaseerror.title}", _local_5, 0, this._Str_7211);
@@ -1867,7 +1867,7 @@
         private function _Str_23734(k:IMessageEvent):void
         {
             var _local_2:_Str_7086 = (k as _Str_7086);
-            var _local_3:_Str_7823 = _local_2._Str_2273();
+            var _local_3:_Str_7823 = _local_2.getParser();
             var _local_4:int = _local_3.errorCode;
             var _local_5:String = "";
             switch (_local_4)
@@ -1888,7 +1888,7 @@
             var _local_6:Point;
             var _local_7:String;
             var _local_2:_Str_7677 = (k as _Str_7677);
-            var _local_3:_Str_7635 = _local_2._Str_2273();
+            var _local_3:_Str_7635 = _local_2.getParser();
             events.dispatchEvent(new CatalogFurniPurchaseEvent(_local_3.offer.localizationId));
             if (this._purchaseConfirmationDialog != null)
             {
@@ -1927,7 +1927,7 @@
         private function _Str_24443(k:IMessageEvent):void
         {
             var _local_2:_Str_5514 = (k as _Str_5514);
-            var _local_3:_Str_7888 = _local_2._Str_2273();
+            var _local_3:_Str_7888 = _local_2.getParser();
             if (_local_3._Str_16424)
             {
                 this.showNotEnoughCreditsAlert();
@@ -2020,14 +2020,14 @@
             {
                 return;
             }
-            var _local_2:_Str_7205 = k._Str_2273();
+            var _local_2:_Str_7205 = k.getParser();
             this._catalogViewer.dispatchWidgetEvent(new CatalogWidgetApproveNameResultEvent(_local_2.result, _local_2.nameValidationInfo));
         }
 
         private function _Str_7504(k:IMessageEvent):void
         {
             var _local_2:UserCreditsEvent = (k as UserCreditsEvent);
-            var _local_3:UserCreditsMessageParser = _local_2._Str_2273();
+            var _local_3:UserCreditsMessageParser = _local_2.getParser();
             this._purse.credits = _local_3.balance;
             this._Str_12017();
             if (((!(this._Str_19689)) && (!(this._soundManager == null))))
@@ -2070,7 +2070,7 @@
         private function _Str_11640(k:IMessageEvent):void
         {
             var _local_3:Boolean;
-            var _local_2:_Str_4007 = (k as _Str_3492)._Str_2273();
+            var _local_2:_Str_4007 = (k as _Str_3492).getParser();
             this._purse.clubDays = Math.max(0, _local_2._Str_14465);
             this._purse.clubPeriods = Math.max(0, _local_2._Str_17546);
             this._purse.isVIP = _local_2.isVIP;
@@ -2105,7 +2105,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7459 = k._Str_2273();
+            var _local_2:_Str_7459 = k.getParser();
             if (!_local_2)
             {
                 return;
@@ -2115,7 +2115,7 @@
 
         private function _Str_24950(k:IMessageEvent):void
         {
-            var _local_2:RecyclerStatusMessageParser = (k as _Str_5376)._Str_2273();
+            var _local_2:RecyclerStatusMessageParser = (k as _Str_5376).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
             {
                 return;
@@ -2125,7 +2125,7 @@
 
         private function _Str_17153(k:IMessageEvent):void
         {
-            var _local_2:RecyclerFinishedMessageParser = (k as _Str_4691)._Str_2273();
+            var _local_2:RecyclerFinishedMessageParser = (k as _Str_4691).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
             {
                 return;
@@ -2135,7 +2135,7 @@
 
         private function _Str_23749(k:IMessageEvent):void
         {
-            var _local_2:RecyclerPrizesMessageParser = (k as _Str_7079)._Str_2273();
+            var _local_2:RecyclerPrizesMessageParser = (k as _Str_7079).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
             {
                 return;
@@ -2190,7 +2190,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6774 = k._Str_2273();
+            var _local_2:_Str_6774 = k.getParser();
             if (!_local_2)
             {
                 return;
@@ -2213,7 +2213,7 @@
             {
                 return;
             }
-            var _local_2:MarketplaceConfigurationMessageParser = k._Str_2273();
+            var _local_2:MarketplaceConfigurationMessageParser = k.getParser();
             if (!_local_2)
             {
                 return;
@@ -2227,7 +2227,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6596 = k._Str_2273();
+            var _local_2:_Str_6596 = k.getParser();
             if (!_local_2)
             {
                 return;
@@ -2240,7 +2240,7 @@
 
         private function _Str_23194(k:_Str_7706):void
         {
-            var _local_2:_Str_6792 = k._Str_2273();
+            var _local_2:_Str_6792 = k.getParser();
             if (((!(this._Str_5949 == null)) && ((((_local_2.source == ClubOfferRequestSource._Str_15734) || (_local_2.source == ClubOfferRequestSource._Str_12589)) || (_local_2.source == ClubOfferRequestSource._Str_15001)) || (_local_2.source == ClubOfferRequestSource._Str_15727))))
             {
                 this._Str_5949.onOffers(_local_2);
@@ -2265,7 +2265,7 @@
 
         private function _Str_23837(k:_Str_8784):void
         {
-            var _local_2:_Str_7118 = k._Str_2273();
+            var _local_2:_Str_7118 = k.getParser();
             this._Str_7969.remove(_local_2.productCode);
             var _local_3:Array = _local_2._Str_13588;
             if (_local_3 != null)
@@ -2943,7 +2943,7 @@
 
         private function _Str_22941(k:_Str_7288):void
         {
-            var _local_2:_Str_7779 = k._Str_2273();
+            var _local_2:_Str_7779 = k.getParser();
             this._Str_9586 = _local_2._Str_5195;
             this._utils._Str_24024();
         }
@@ -2962,7 +2962,7 @@
         {
             var _local_7:Offer;
             var _local_8:IFurnitureData;
-            var _local_2:_Str_7328 = k._Str_2273();
+            var _local_2:_Str_7328 = k.getParser();
             var _local_3:CatalogPageMessageOfferData = _local_2._Str_17889;
             if (((!(_local_3)) || (_local_3.products.length == 0)))
             {
@@ -3003,7 +3003,7 @@
 
         private function _Str_24973(k:_Str_5417):void
         {
-            var _local_2:_Str_6732 = k._Str_2273();
+            var _local_2:_Str_6732 = k.getParser();
             this._Str_16097 = _local_2._Str_15864;
             this._Str_19671 = _local_2._Str_24094;
             this._Str_14644 = _local_2._Str_3709;
@@ -3022,7 +3022,7 @@
 
         private function _Str_23753(k:_Str_9458):void
         {
-            this._Str_18106 = k._Str_2273()._Str_10882;
+            this._Str_18106 = k.getParser()._Str_10882;
             if (this._Str_3854 != null)
             {
                 this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());
@@ -3270,7 +3270,7 @@
 
 		private function onFireworkChargeHandler(_arg_1:FireworkChargeDataEvent):void
         {
-            var parser:FireworkChargeDataParser = _arg_1._Str_2273();
+            var parser:FireworkChargeDataParser = _arg_1.getParser();
             if (((this._fireworkChargeDialog == null) || (this._fireworkChargeDialog.disposed)))
             {
                 this._fireworkChargeDialog = new FireworksChargeConfirmationDialog(this, this._localization);

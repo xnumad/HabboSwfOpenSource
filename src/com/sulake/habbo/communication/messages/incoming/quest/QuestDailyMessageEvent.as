@@ -11,7 +11,7 @@
             super(k, QuestDailyParser);
         }
 
-        public function _Str_2273():QuestDailyParser
+        public function getParser():QuestDailyParser
         {
             return _parser as QuestDailyParser;
         }

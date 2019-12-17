@@ -40,7 +40,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7148 = k._Str_2273();
+            var _local_2:_Str_7148 = k.getParser();
             this._offer = _local_2.offer();
             this.showConfirmation();
             if (this._catalog.connection)

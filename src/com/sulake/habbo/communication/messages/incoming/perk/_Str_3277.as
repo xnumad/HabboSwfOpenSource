@@ -11,7 +11,7 @@
             super(k, PerkAllowancesMessageParser);
         }
 
-        public function _Str_2273():PerkAllowancesMessageParser
+        public function getParser():PerkAllowancesMessageParser
         {
             return _parser as PerkAllowancesMessageParser;
         }

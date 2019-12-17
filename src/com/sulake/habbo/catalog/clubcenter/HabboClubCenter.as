@@ -210,7 +210,7 @@
 
         private function _Str_22489(k:_Str_9216):void
         {
-            var _local_2:_Str_7942 = k._Str_2273();
+            var _local_2:_Str_7942 = k.getParser();
             this._data = _local_2.data;
             this._dataPending = false;
             this._dataTimestamp = getTimer();
@@ -219,7 +219,7 @@
 
         private function _Str_18504(k:_Str_5425):void
         {
-            this._giftsAvailable = k._Str_2273()._Str_7574;
+            this._giftsAvailable = k.getParser()._Str_7574;
             this.populate();
         }
 
@@ -235,7 +235,7 @@
 
         public function _Str_18002(k:IMessageEvent):void
         {
-            var _local_2:_Str_6941 = (k as _Str_5147)._Str_2273();
+            var _local_2:_Str_6941 = (k as _Str_5147).getParser();
             this._badgeId = ((BadgeResolver._Str_25437(_local_2._Str_21415())) || (BadgeResolver._Str_16636));
         }
 

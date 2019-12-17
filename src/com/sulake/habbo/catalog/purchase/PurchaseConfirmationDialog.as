@@ -31,7 +31,7 @@
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
     import com.sulake.habbo.avatar.enum.AvatarSetType;
     import com.sulake.habbo.avatar.enum.AvatarAction;
-    import _Str_555._Str_11981;
+    import com.sulake.habbo.catalog.purchase._Str_11981;
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.IWindow;

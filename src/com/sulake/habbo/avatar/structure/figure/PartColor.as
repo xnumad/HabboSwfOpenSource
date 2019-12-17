@@ -89,7 +89,7 @@
             return this._clubLevel;
         }
 
-        public function get _Str_608():Boolean
+        public function get isSelectable():Boolean
         {
             return this._isSelectable;
         }

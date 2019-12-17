@@ -175,7 +175,7 @@
 
         private function _Str_22466(k:_Str_8566):void
         {
-            var _local_2:NewUserExperienceGiftOfferParser = k._Str_2273();
+            var _local_2:NewUserExperienceGiftOfferParser = k.getParser();
             this._Str_24881(_local_2.giftOptions);
         }
 

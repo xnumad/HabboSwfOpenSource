@@ -11,7 +11,7 @@
             super(k, FurniListAddOrUpdateParser);
         }
 
-        public function _Str_2273():FurniListAddOrUpdateParser
+        public function getParser():FurniListAddOrUpdateParser
         {
             return this._parser as FurniListAddOrUpdateParser;
         }

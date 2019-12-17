@@ -11,7 +11,7 @@
             super(callback, _Str_7888);
         }
 
-        public function _Str_2273():_Str_7888
+        public function getParser():_Str_7888
         {
             return this._parser as _Str_7888;
         }

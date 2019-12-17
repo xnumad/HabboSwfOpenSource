@@ -88,7 +88,7 @@
 
         public function _Str_23893(k:_Str_6132):void
         {
-            var _local_2:int = k._Str_2273().code;
+            var _local_2:int = k.getParser().code;
             if (this._widget)
             {
                 switch (_local_2)

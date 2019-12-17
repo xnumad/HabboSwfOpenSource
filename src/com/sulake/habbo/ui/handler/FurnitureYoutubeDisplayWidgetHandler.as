@@ -70,19 +70,19 @@
 
         private function _Str_23173(k:_Str_8731):void
         {
-            var _local_2:_Str_8063 = k._Str_2273();
+            var _local_2:_Str_8063 = k.getParser();
             this._widget.showVideo(_local_2.furniId, _local_2.videoId, _local_2._Str_25795, _local_2._Str_23507, _local_2.state);
         }
 
         private function _Str_25218(k:_Str_9325):void
         {
-            var _local_2:_Str_7559 = k._Str_2273();
+            var _local_2:_Str_7559 = k.getParser();
             this._widget._Str_22371(_local_2.furniId, _local_2.commandId);
         }
 
         private function _Str_24746(k:YoutubeDisplayPlaylistsEvent):void
         {
-            var _local_2:YoutubeDisplayPlaylistsMessageParser = k._Str_2273();
+            var _local_2:YoutubeDisplayPlaylistsMessageParser = k.getParser();
             this._widget._Str_24455(_local_2.furniId, _local_2.playlists, _local_2.unknownString);
         }
 

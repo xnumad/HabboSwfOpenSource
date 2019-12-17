@@ -11,7 +11,7 @@
             super(k, SnowStormGameEndedParser);
         }
 
-        public function _Str_2273():SnowStormGameEndedParser
+        public function getParser():SnowStormGameEndedParser
         {
             return this._parser as SnowStormGameEndedParser;
         }

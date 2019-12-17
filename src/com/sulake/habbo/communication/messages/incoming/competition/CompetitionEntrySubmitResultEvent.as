@@ -11,7 +11,7 @@
             super(k, CompetitionEntrySubmitResultMessageParser);
         }
 
-        public function _Str_2273():CompetitionEntrySubmitResultMessageParser
+        public function getParser():CompetitionEntrySubmitResultMessageParser
         {
             return _parser as CompetitionEntrySubmitResultMessageParser;
         }

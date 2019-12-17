@@ -119,7 +119,7 @@
                 if (_local_6 != null)
                 {
                     _local_6.applyTransform(k);
-                    _local_5 = _local_6._Str_1522(_arg_2);
+                    _local_5 = _local_6.getDistance(_arg_2);
                     _local_7.push([_local_5, _local_6]);
                 }
             }
@@ -128,7 +128,7 @@
                 if (_local_6 != null)
                 {
                     _local_6.applyTransform(k);
-                    _local_5 = _local_6._Str_1522(_arg_2);
+                    _local_5 = _local_6.getDistance(_arg_2);
                     _local_7.push([_local_5, _local_6]);
                 }
             }
@@ -141,7 +141,7 @@
             return _local_8;
         }
 
-        public function _Str_1522(k:Vector3D):Number
+        public function getDistance(k:Vector3D):Number
         {
             var _local_2:Number = Math.abs(((k.z - this.transformedLocation.z) - this._radius));
             var _local_3:Number = Math.abs(((k.z - this.transformedLocation.z) + this._radius));

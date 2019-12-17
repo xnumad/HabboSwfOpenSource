@@ -254,7 +254,7 @@
             {
                 return;
             }
-            var _local_3:_Str_4738 = (_local_2._Str_2273() as _Str_4738);
+            var _local_3:_Str_4738 = (_local_2.getParser() as _Str_4738);
             if (_local_3 == null)
             {
                 return;
@@ -283,7 +283,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6982 = (_local_2._Str_2273() as _Str_6982);
+            var _local_3:_Str_6982 = (_local_2.getParser() as _Str_6982);
             if (_local_3 == null)
             {
                 return;
@@ -312,7 +312,7 @@
             {
                 return;
             }
-            var parser:_Str_6144 = (buyEvent._Str_2273() as _Str_6144);
+            var parser:_Str_6144 = (buyEvent.getParser() as _Str_6144);
             if (parser == null)
             {
                 return;
@@ -386,7 +386,7 @@
             {
                 return;
             }
-            var parser:_Str_5775 = (cancelEvent._Str_2273() as _Str_5775);
+            var parser:_Str_5775 = (cancelEvent.getParser() as _Str_5775);
             if (parser == null)
             {
                 return;

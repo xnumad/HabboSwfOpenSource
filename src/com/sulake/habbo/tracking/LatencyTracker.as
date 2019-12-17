@@ -5,7 +5,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingReportMessageComposer;
-    import _Str_524._Str_7576;
+    import com.sulake.habbo.communication.messages.parser._Str_524._Str_7576;
     import com.sulake.habbo.communication.messages.incoming._Str_516.PongMessageParser;
 
     public class LatencyTracker implements IDisposable 
@@ -89,7 +89,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7576 = k._Str_2273();
+            var _local_2:_Str_7576 = k.getParser();
             var _local_3:int = this._timeStampMap.getValue(_local_2.requestId);
             this._timeStampMap.remove(_local_2.requestId);
             var _local_4:int = (getTimer() - _local_3);

@@ -117,20 +117,20 @@
             var _local_2:IWindowContainer = this._Str_7795();
             if (_local_2 != null)
             {
-                this._Str_16767().text = k._Str_2273().email;
-                _local_2.findChildByName("unverified_container").visible = (!(k._Str_2273()._Str_5738));
-                _local_2.findChildByName("verified_txt").visible = k._Str_2273()._Str_5738;
+                this._Str_16767().text = k.getParser().email;
+                _local_2.findChildByName("unverified_container").visible = (!(k.getParser()._Str_5738));
+                _local_2.findChildByName("verified_txt").visible = k.getParser()._Str_5738;
             }
         }
 
         private function _Str_17386(k:_Str_9204):void
         {
-            this._Str_16375(true, k._Str_2273().result);
+            this._Str_16375(true, k.getParser().result);
         }
 
         private function _Str_24186(k:_Str_7229):void
         {
-            var _local_2:_Str_7210 = k._Str_2273();
+            var _local_2:_Str_7210 = k.getParser();
             this._talentTrack = _local_2._Str_23534();
             this.createWindow();
         }

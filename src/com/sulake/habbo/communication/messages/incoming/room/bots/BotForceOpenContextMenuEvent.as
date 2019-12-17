@@ -11,7 +11,7 @@
             super(k, BotForceOpenContextMenuParser);
         }
 
-        public function _Str_2273():BotForceOpenContextMenuParser
+        public function getParser():BotForceOpenContextMenuParser
         {
             return _parser as BotForceOpenContextMenuParser;
         }

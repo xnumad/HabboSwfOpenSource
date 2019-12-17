@@ -12,10 +12,10 @@
 
         public function get _Str_4963():int
         {
-            return this._Str_2273()._Str_4963;
+            return this.getParser()._Str_4963;
         }
 
-        public function _Str_2273():TradingCloseParser
+        public function getParser():TradingCloseParser
         {
             return _parser as TradingCloseParser;
         }

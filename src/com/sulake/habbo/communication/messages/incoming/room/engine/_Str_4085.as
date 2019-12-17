@@ -11,7 +11,7 @@
             super(k, UsersMessageParser);
         }
 
-        public function _Str_2273():UsersMessageParser
+        public function getParser():UsersMessageParser
         {
             return _parser as UsersMessageParser;
         }

@@ -11,7 +11,7 @@
             super(k, SnowStormQuePlayerAddedParser);
         }
 
-        public function _Str_2273():SnowStormQuePlayerAddedParser
+        public function getParser():SnowStormQuePlayerAddedParser
         {
             return this._parser as SnowStormQuePlayerAddedParser;
         }

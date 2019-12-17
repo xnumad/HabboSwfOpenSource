@@ -222,7 +222,7 @@
             for each (_local_7 in _local_5)
             {
                 _local_7.applyTransform(this._transformation);
-                _local_9 = _local_7._Str_1522(this._camera);
+                _local_9 = _local_7.getDistance(this._camera);
                 _local_6.push([_local_9, _local_7]);
             }
             _local_6.sort(this.orderByDistance);

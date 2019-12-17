@@ -69,7 +69,7 @@
 
         private function _Str_16796(k:_Str_5939):void
         {
-            var _local_2:TalentLevelUpMessageParser = k._Str_2273();
+            var _local_2:TalentLevelUpMessageParser = k.getParser();
             if ((((_local_2.level == 1) && (_local_2.talentTrackName == TalentEnum.HELPER)) && (this._habboTalent._Str_9968)))
             {
                 return;

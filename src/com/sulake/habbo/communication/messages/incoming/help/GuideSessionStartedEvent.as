@@ -11,7 +11,7 @@
             super(k, GuideSessionStartedMessageParser);
         }
 
-        public function _Str_2273():GuideSessionStartedMessageParser
+        public function getParser():GuideSessionStartedMessageParser
         {
             return _parser as GuideSessionStartedMessageParser;
         }

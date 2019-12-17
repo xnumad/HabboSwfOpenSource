@@ -136,7 +136,7 @@
 
         private function _Str_24116(k:_Str_8332):void
         {
-            var _local_2:_Str_7915 = k._Str_2273();
+            var _local_2:_Str_7915 = k.getParser();
             if (((_local_2) && (_local_2._Str_24162)))
             {
                 if (ExternalInterface.available)

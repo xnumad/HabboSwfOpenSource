@@ -11,7 +11,7 @@
             super(k, LoadGameUrlMessageParser);
         }
 
-        public function _Str_2273():LoadGameUrlMessageParser
+        public function getParser():LoadGameUrlMessageParser
         {
             return this._parser as LoadGameUrlMessageParser;
         }

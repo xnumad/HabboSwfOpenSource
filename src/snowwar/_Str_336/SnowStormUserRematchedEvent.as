@@ -11,7 +11,7 @@
             super(k, SnowStormUserRematchedParser);
         }
 
-        public function _Str_2273():SnowStormUserRematchedParser
+        public function getParser():SnowStormUserRematchedParser
         {
             return _parser as SnowStormUserRematchedParser;
         }

@@ -11,7 +11,7 @@
             super(k, GuideSessionPartnerIsTypingMessageParser);
         }
 
-        public function _Str_2273():GuideSessionPartnerIsTypingMessageParser
+        public function getParser():GuideSessionPartnerIsTypingMessageParser
         {
             return _parser as GuideSessionPartnerIsTypingMessageParser;
         }

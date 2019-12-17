@@ -88,7 +88,7 @@
             }
             if (_arg_3 != null)
             {
-                _local_8 = _arg_3._Str_806;
+                _local_8 = _arg_3.parts;
                 for each (_local_7 in _local_8)
                 {
                     this._Str_18982 = Math.max(this._Str_18982, _local_7._Str_827);
@@ -242,7 +242,7 @@
             if (this._partSet)
             {
                 _local_2.visible = (this._partSet.clubLevel > 0);
-                _local_3.visible = this._partSet._Str_651;
+                _local_3.visible = this._partSet.isSellable;
             }
             else
             {
@@ -273,7 +273,7 @@
                 this._Str_6176 = null;
                 return false;
             }
-            if ((((!(this.partSet)) || (!(this.partSet._Str_806))) || (this.partSet._Str_806.length == 0)))
+            if ((((!(this.partSet)) || (!(this.partSet.parts))) || (this.partSet.parts.length == 0)))
             {
                 this._Str_6176 = null;
                 return false;
@@ -291,7 +291,7 @@
             var _local_6:int;
             var _local_7:Boolean;
             var _local_8:Rectangle = new Rectangle();
-            for each (_local_2 in this.partSet._Str_806)
+            for each (_local_2 in this.partSet.parts)
             {
                 if (_local_7)
                 {
@@ -369,7 +369,7 @@
             k = new BitmapData(this._Str_6176.width, this._Str_6176.height, true, 0xFFFFFF);
             var _local_6:int;
             var _local_7:Boolean;
-            var _local_8:Array = this.partSet._Str_806.concat().sort(this._Str_25408);
+            var _local_8:Array = this.partSet.parts.concat().sort(this._Str_25408);
             for each (_local_2 in _local_8)
             {
                 _local_4 = null;

@@ -108,7 +108,7 @@
 
         private function _Str_3241(k:UserObjectEvent):void
         {
-            this._Str_5693(k._Str_2273().figure);
+            this._Str_5693(k.getParser().figure);
         }
 
         private function _Str_8471(k:_Str_5010):void

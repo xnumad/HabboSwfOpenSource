@@ -11,7 +11,7 @@
             super(k, UserGameAchievementsMessageParser);
         }
 
-        public function _Str_2273():UserGameAchievementsMessageParser
+        public function getParser():UserGameAchievementsMessageParser
         {
             return this._parser as UserGameAchievementsMessageParser;
         }

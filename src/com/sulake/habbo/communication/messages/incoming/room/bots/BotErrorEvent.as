@@ -11,7 +11,7 @@
             super(k, BotErrorParser);
         }
 
-        public function _Str_2273():BotErrorParser
+        public function getParser():BotErrorParser
         {
             return _parser as BotErrorParser;
         }

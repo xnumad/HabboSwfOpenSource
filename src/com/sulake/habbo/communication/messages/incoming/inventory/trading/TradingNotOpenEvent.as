@@ -10,7 +10,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_2273():TradingNotOpenParser
+        public function getParser():TradingNotOpenParser
         {
             return _parser as TradingNotOpenParser;
         }

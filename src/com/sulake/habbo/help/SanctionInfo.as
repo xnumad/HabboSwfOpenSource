@@ -48,7 +48,7 @@
             this._window = (this._habboHelp.getXmlWindow("sanction_info") as IWindowContainer);
             this._window.center();
             this._window.procedure = this._Str_3545;
-            var _local_2:_Str_7692 = k._Str_2273();
+            var _local_2:_Str_7692 = k.getParser();
             if (_local_2._Str_22005 == "cfh.reason.EMPTY")
             {
                 this._window.findChildByName("no_sanction_info").visible = true;

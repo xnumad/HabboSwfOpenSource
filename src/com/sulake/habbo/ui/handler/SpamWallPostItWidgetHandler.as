@@ -62,7 +62,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7128 = k._Str_2273();
+            var _local_2:_Str_7128 = k.getParser();
             var _local_3:int = _local_2.itemId;
             var _local_4:String = _local_2.location;
             var _local_5:String = "post_it";

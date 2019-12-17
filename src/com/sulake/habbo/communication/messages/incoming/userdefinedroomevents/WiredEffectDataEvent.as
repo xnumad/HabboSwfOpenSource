@@ -11,7 +11,7 @@
             super(k, WiredEffectDataMessageParser);
         }
 
-        public function _Str_2273():WiredEffectDataMessageParser
+        public function getParser():WiredEffectDataMessageParser
         {
             return this._parser as WiredEffectDataMessageParser;
         }

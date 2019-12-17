@@ -11,14 +11,14 @@
             super(k, _Str_8786);
         }
 
-        private function _Str_2273():_Str_8786
+        private function getParser():_Str_8786
         {
             return this._parser as _Str_8786;
         }
 
         public function get machineID():String
         {
-            return this._Str_2273().machineID;
+            return this.getParser().machineID;
         }
     }
 }

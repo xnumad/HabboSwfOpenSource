@@ -258,7 +258,7 @@
             var _local_3:IRoomObject;
             if (this._widget != null)
             {
-                _local_2 = k._Str_2273();
+                _local_2 = k.getParser();
                 _local_3 = this.getRoomObject(_local_2._Str_1577);
                 if (_local_3 != null)
                 {

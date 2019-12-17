@@ -11,7 +11,7 @@
             super(k, HotelClosedAndOpensMessageParser);
         }
 
-        public function _Str_2273():HotelClosedAndOpensMessageParser
+        public function getParser():HotelClosedAndOpensMessageParser
         {
             return _parser as HotelClosedAndOpensMessageParser;
         }

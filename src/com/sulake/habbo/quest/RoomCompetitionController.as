@@ -107,10 +107,10 @@
 
         public function _Str_16392(k:_Str_7630):void
         {
-            this._remainingVotes = k._Str_2273()._Str_24679;
-            var _local_2:Boolean = k._Str_2273()._Str_24414;
-            var _local_3:int = k._Str_2273()._Str_3278;
-            this.refreshContent(k._Str_2273().goalId, false, k._Str_2273().goalCode, _local_3.toString());
+            this._remainingVotes = k.getParser()._Str_24679;
+            var _local_2:Boolean = k.getParser()._Str_24414;
+            var _local_3:int = k.getParser()._Str_3278;
+            this.refreshContent(k.getParser().goalId, false, k.getParser().goalCode, _local_3.toString());
             this._Str_6512(((_local_3 == _Str_10666._Str_17690) ? this._Str_24392 : this._Str_24761));
             this._Str_4365().procedure = this._Str_24140;
             this._Str_4365().visible = ((this._remainingVotes > 0) && (_local_2));
@@ -119,12 +119,12 @@
 
         public function _Str_17737(k:CompetitionEntrySubmitResultEvent):void
         {
-            if (k._Str_2273().result == CompetitionEntrySubmitResultMessageParser.ROOM_TOO_OLD)
+            if (k.getParser().result == CompetitionEntrySubmitResultMessageParser.ROOM_TOO_OLD)
             {
                 return;
             }
-            this.refreshContent(k._Str_2273().goalId, true, k._Str_2273().goalCode, ("" + k._Str_2273().result));
-            this._result = k._Str_2273().result;
+            this.refreshContent(k.getParser().goalId, true, k.getParser().goalCode, ("" + k.getParser().result));
+            this._result = k.getParser().result;
             if (this._result == CompetitionEntrySubmitResultMessageParser.ASK_FOR_CONFIRM)
             {
                 this._Str_6512(null);
@@ -229,7 +229,7 @@
             var _local_7:String;
             var _local_8:IWindowContainer;
             var _local_9:ImageResult;
-            var _local_2:Array = k._Str_2273().requiredFurnis;
+            var _local_2:Array = k.getParser().requiredFurnis;
             var _local_3:int;
             while (_local_3 < _local_2.length)
             {
@@ -245,7 +245,7 @@
                 else
                 {
                     _local_8.visible = true;
-                    _local_8.findChildByName("tick_icon").visible = (!(k._Str_2273().isMissing(_local_4)));
+                    _local_8.findChildByName("tick_icon").visible = (!(k.getParser().isMissing(_local_4)));
                     _local_9 = this._questEngine.roomEngine.getGenericRoomObjectImage(_local_6, _local_7, new Vector3d(180, 0, 0), 1, this);
                     if (_local_9.id != 0)
                     {
@@ -310,7 +310,7 @@
         public function onCreditBalance(k:_Str_2752):void
         {
             this.close();
-            var _local_2:_Str_4522 = k._Str_2273();
+            var _local_2:_Str_4522 = k.getParser();
             var _local_3:Boolean = ((this._questEngine.getInteger("new.identity", 0) == 0) || (!(this._questEngine.getBoolean("new.identity.hide.ui"))));
             if (((!(this._dontShowAgain)) && (_local_3)))
             {

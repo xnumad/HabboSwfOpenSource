@@ -22,7 +22,7 @@
         public function _Str_5276(k:IMessageEvent):void
         {
             var _local_3:FriendParser;
-            var _local_2:_Str_6720 = (k as _Str_3873)._Str_2273();
+            var _local_2:_Str_6720 = (k as _Str_3873).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -37,7 +37,7 @@
         {
             var _local_3:int;
             var _local_4:FriendParser;
-            var _local_2:_Str_4925 = (k as _Str_4035)._Str_2273();
+            var _local_2:_Str_4925 = (k as _Str_4035).getParser();
             for each (_local_3 in _local_2._Str_12515)
             {
                 this._namesById[_local_3] = null;

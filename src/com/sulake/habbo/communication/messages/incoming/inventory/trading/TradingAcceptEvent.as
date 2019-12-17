@@ -12,15 +12,15 @@
 
         public function get _Str_4963():int
         {
-            return this._Str_2273()._Str_4963;
+            return this.getParser()._Str_4963;
         }
 
         public function get _Str_15794():Boolean
         {
-            return this._Str_2273()._Str_15794;
+            return this.getParser()._Str_15794;
         }
 
-        public function _Str_2273():TradingAcceptParser
+        public function getParser():TradingAcceptParser
         {
             return _parser as TradingAcceptParser;
         }

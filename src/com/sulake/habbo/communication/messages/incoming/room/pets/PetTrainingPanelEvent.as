@@ -11,7 +11,7 @@
             super(k, PetTrainingPanelMessageParser);
         }
 
-        public function _Str_2273():PetTrainingPanelMessageParser
+        public function getParser():PetTrainingPanelMessageParser
         {
             return _parser as PetTrainingPanelMessageParser;
         }

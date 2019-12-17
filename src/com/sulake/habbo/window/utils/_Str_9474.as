@@ -20,7 +20,7 @@
 
         private function _Str_23532(k:_Str_8054):void
         {
-            var _local_2:String = k._Str_2273().key;
+            var _local_2:String = k.getParser().key;
             if (((_local_2 == null) || (_local_2 == "")))
             {
                 this._habboWindowManagerComponent.hideHint();

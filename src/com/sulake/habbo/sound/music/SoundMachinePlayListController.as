@@ -335,7 +335,7 @@
             var _local_6:SongDataEntry;
             var _local_8:int;
             var _local_2:_Str_8135 = (k as _Str_8135);
-            var _local_3:_Str_6369 = (_local_2._Str_2273() as _Str_6369);
+            var _local_3:_Str_6369 = (_local_2.getParser() as _Str_6369);
             var _local_4:int = _local_3._Str_23052;
             var _local_5:Array = this._Str_22257(_local_3._Str_24122);
             if (((_local_5 == null) || (_local_5.length == 0)))
@@ -382,7 +382,7 @@
         private function _Str_23767(k:IMessageEvent):void
         {
             var _local_2:JukeBoxPlayListAddSongEvent = (k as JukeBoxPlayListAddSongEvent);
-            var _local_3:JukeBoxPlayListAddSongMessageParser = (_local_2._Str_2273() as JukeBoxPlayListAddSongMessageParser);
+            var _local_3:JukeBoxPlayListAddSongMessageParser = (_local_2.getParser() as JukeBoxPlayListAddSongMessageParser);
             var _local_4:SongDataEntry = new SongDataEntry(_local_3.entry.id, _local_3.entry.length, _local_3.entry.name, _local_3.entry.creator, null);
             if (_local_4 == null)
             {

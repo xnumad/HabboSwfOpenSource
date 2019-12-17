@@ -11,7 +11,7 @@
             super(k, CommunityGoalEarnedPrizesParser);
         }
 
-        public function _Str_2273():CommunityGoalEarnedPrizesParser
+        public function getParser():CommunityGoalEarnedPrizesParser
         {
             return this._parser as CommunityGoalEarnedPrizesParser;
         }

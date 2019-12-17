@@ -5,11 +5,11 @@
       <children>
         <border x="0" y="0" width="192" height="76" params="16" style="9" color="0x0686661"/>
         <border x="3" y="3" width="186" height="69" params="16" style="3" color="0x0201e19" blend="0.8" visible="false"/>
-        <itemlist_vertical x="7" y="9" width="52" height="55" params="3145728" style="0" name="purse_itemlist" height_max="62">
+        <itemlist_vertical x="7" y="19" width="110" height="55" params="3145728" style="0" name="purse_itemlist" height_max="62">
           <children>
-            <region x="0" y="0" width="52" height="19" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="diamond_count_button" treshold="0">
+            <region x="0" y="0" width="110" height="19" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="diamond_count_button" treshold="0">
               <children>
-                <text x="25" y="2" width="10" height="17" params="262160" style="3" name="diamond_count" caption="0" tags="%23icon">
+                <text x="80" y="2" width="10" height="17" params="262160" style="3" name="diamond_count" caption="0" tags="%23icon">
                   <variables>
                     <var key="auto_size" value="left" type="String"/>
                     <var key="etching_color" value="0x45000000" type="hex"/>
@@ -21,7 +21,7 @@
                     <var key="leading" value="0" type="Number"/>
                   </variables>
                 </text>
-                <static_bitmap x="36" y="2" width="15" height="15" params="18" style="3" treshold="0" tags="%23icon">
+                <static_bitmap x="91" y="2" width="15" height="15" params="18" style="3" treshold="0" tags="%23icon">
                   <variables>
                     <var key="asset_uri" value="pursearea_diamond_icon" type="String"/>
                     <var key="stretched_x" value="false" type="Boolean"/>
@@ -34,9 +34,9 @@
                 <var key="tool_tip_caption" value="${achievements.activitypoint.5}" type="String"/>
               </variables>
             </region>
-            <region x="0" y="19" width="52" height="19" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="credit_count_button" treshold="0">
+            <region x="0" y="19" width="110" height="19" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="credit_count_button" treshold="0">
               <children>
-                <text x="25" y="2" width="10" height="17" params="262160" style="3" name="credit_count" caption="0" tags="%23icon">
+                <text x="80" y="2" width="10" height="17" params="262160" style="3" name="credit_count" caption="0" tags="%23icon">
                   <variables>
                     <var key="auto_size" value="left" type="String"/>
                     <var key="etching_color" value="0x45000000" type="hex"/>
@@ -48,7 +48,7 @@
                     <var key="leading" value="0" type="Number"/>
                   </variables>
                 </text>
-                <static_bitmap x="36" y="2" width="15" height="15" params="18" style="3" treshold="0" tags="%23icon">
+                <static_bitmap x="91" y="2" width="15" height="15" params="18" style="3" treshold="0" tags="%23icon">
                   <variables>
                     <var key="asset_uri" value="pursearea_credits_icon" type="String"/>
                     <var key="stretched_x" value="false" type="Boolean"/>
@@ -61,9 +61,9 @@
                 <var key="tool_tip_caption" value="${purse_coins}" type="String"/>
               </variables>
             </region>
-            <region x="0" y="38" width="52" height="17" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="ducket_count_button" clipping="false" treshold="0">
+            <region x="0" y="38" width="0" height="17" params="1" style="3" dynamic_style="brightness_and_shadow_under" name="ducket_count_button" clipping="false" treshold="0">
               <children>
-                <text x="25" y="2" width="10" height="17" params="262160" style="3" name="ducket_count" caption="0" tags="%23icon">
+                <text x="80" y="2" width="10" height="17" params="262160" style="3" name="ducket_count" caption="0" tags="%23icon">
                   <variables>
                     <var key="auto_size" value="left" type="String"/>
                     <var key="etching_color" value="0x45000000" type="hex"/>
@@ -75,7 +75,7 @@
                     <var key="leading" value="0" type="Number"/>
                   </variables>
                 </text>
-                <static_bitmap x="36" y="2" width="15" height="15" params="16" style="3" treshold="0" tags="%23icon">
+                <static_bitmap x="91" y="2" width="15" height="15" params="16" style="3" treshold="0" tags="%23icon">
                   <variables>
                     <var key="asset_uri" value="pursearea_duckets_icon" type="String"/>
                     <var key="stretched_x" value="false" type="Boolean"/>
@@ -93,8 +93,8 @@
             <var key="resize_on_item_update" value="true" type="Boolean"/>
           </variables>
         </itemlist_vertical>
-        <border x="64" y="7" width="48" height="62" params="16" style="2" color="0x03b3933" blend="0.8"/>
-        <region x="64" y="12" width="48" height="54" params="1" style="0" dynamic_style="brightness_and_shadow_under" name="hc_join_button" treshold="0">
+        <border x="64" y="7" width="0" height="62" params="16" style="2" color="0x03b3933" blend="0.8"/>
+        <region x="64" y="12" width="0" height="54" params="1" style="0" dynamic_style="brightness_and_shadow_under" name="hc_join_button" treshold="0">
           <children>
             <label x="12" y="27" width="25" height="17" params="786640" style="3" name="join" caption="join" visible="false" tags="%23icon">
               <variables>

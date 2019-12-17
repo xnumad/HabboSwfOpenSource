@@ -109,7 +109,7 @@
 
         private function _Str_5286(k:CommunityGoalProgressMessageEvent):void
         {
-            this._data = k._Str_2273().data;
+            this._data = k.getParser().data;
             this.refreshContent();
         }
 
@@ -137,7 +137,7 @@
 
         private function _Str_3241(k:UserObjectEvent):void
         {
-            this._figure = k._Str_2273().figure;
+            this._figure = k.getParser().figure;
             this._Str_7815();
         }
 

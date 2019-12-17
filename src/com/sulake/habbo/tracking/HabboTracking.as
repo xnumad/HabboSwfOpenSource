@@ -553,7 +553,7 @@
 
         private function _Str_25489(k:_Str_3660):void
         {
-            var _local_2:_Str_5519 = k._Str_2273();
+            var _local_2:_Str_5519 = k.getParser();
             this._Str_3754("achievement", "achievement", [_local_2.data.badgeCode]);
         }
 
@@ -630,7 +630,7 @@
                 this.trackLoginStep(HabboLoginTrackingStep.CLIENT_INIT_ROOM_ENTER);
                 this._anyRoomsVisited = true;
             }
-            var _local_2:_Str_4522 = _Str_2752(k)._Str_2273();
+            var _local_2:_Str_4522 = _Str_2752(k).getParser();
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.LAST_ROOM, String(_local_2._Str_6550));
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.IN_ROOM, String(true));
             this._Str_3754("navigator", "private", [_local_2._Str_6550]);

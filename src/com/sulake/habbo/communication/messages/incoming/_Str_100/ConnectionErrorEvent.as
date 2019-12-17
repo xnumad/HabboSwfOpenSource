@@ -11,7 +11,7 @@
             super(k, ConnectionErrorMessageParser);
         }
 
-        public function _Str_2273():ConnectionErrorMessageParser
+        public function getParser():ConnectionErrorMessageParser
         {
             return this._parser as ConnectionErrorMessageParser;
         }

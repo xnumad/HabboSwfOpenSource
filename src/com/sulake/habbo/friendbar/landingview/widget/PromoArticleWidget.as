@@ -246,7 +246,7 @@
         {
             var _local_2:_Str_4053;
             this._articles = [];
-            for each (_local_2 in k._Str_2273()._Str_23579)
+            for each (_local_2 in k.getParser()._Str_23579)
             {
                 this._articles.push(_local_2);
             }

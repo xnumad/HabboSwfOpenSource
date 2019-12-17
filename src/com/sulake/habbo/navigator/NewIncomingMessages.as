@@ -166,27 +166,27 @@
 
         private function _Str_25034(k:_Str_8406):void
         {
-            this._navigator.initialize(k._Str_2273());
+            this._navigator.initialize(k.getParser());
         }
 
         private function _Str_25622(k:_Str_9455):void
         {
-            this._navigator._Str_20936(new _Str_4173(k._Str_2273()._Str_22419));
+            this._navigator._Str_20936(new _Str_4173(k.getParser()._Str_22419));
         }
 
         private function _Str_23664(k:_Str_8469):void
         {
-            this._navigator._Str_23125(k._Str_2273());
+            this._navigator._Str_23125(k.getParser());
         }
 
         private function _Str_23882(k:_Str_8763):void
         {
-            this._navigator._Str_23415(k._Str_2273());
+            this._navigator._Str_23415(k.getParser());
         }
 
         private function _Str_11632(k:_Str_8305):void
         {
-            this._navigator._Str_11632(k._Str_2273());
+            this._navigator._Str_11632(k.getParser());
         }
 
         private function _Str_3702(k:_Str_3921):void
@@ -196,7 +196,7 @@
 
         private function _Str_18969(k:_Str_9445):void
         {
-            this._navigator._Str_18969(k._Str_2273()._Str_8273);
+            this._navigator._Str_18969(k.getParser()._Str_8273);
         }
 
         private function get data():NavigatorData
@@ -207,7 +207,7 @@
         private function _Str_17199(k:IMessageEvent):void
         {
             var _local_2:_Str_5038 = (k as _Str_5038);
-            var _local_3:_Str_6564 = _local_2._Str_2273();
+            var _local_3:_Str_6564 = _local_2.getParser();
             var _local_4:_Str_2370 = this._navigator.data._Str_2678;
             if (_local_4 != null)
             {
@@ -225,7 +225,7 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k)._Str_2273();
+            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
             this._navigator.data._Str_3251 = _local_2.id;
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_8102());
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_7413());
@@ -250,14 +250,14 @@
 
         private function _Str_18837(k:IMessageEvent):void
         {
-            var _local_2:_Str_6885 = _Str_5006(k)._Str_2273();
+            var _local_2:_Str_6885 = _Str_5006(k).getParser();
             this.data._Str_7267 = _local_2.data;
             Logger.log(("Received Categories with user count: " + this.data._Str_7267.categoryToCurrentUserCountMap.length));
         }
 
         private function _Str_16321(k:IMessageEvent):void
         {
-            var _local_2:_Str_6320 = _Str_5134(k)._Str_2273();
+            var _local_2:_Str_6320 = _Str_5134(k).getParser();
             this.data._Str_5645 = _local_2.data;
             this.data._Str_5653 = _local_2._Str_5653;
             this.data._Str_5482 = _local_2._Str_5482;
@@ -266,21 +266,21 @@
 
         private function _Str_16568(k:IMessageEvent):void
         {
-            var _local_2:_Str_4081 = _Str_4910(k)._Str_2273().data;
+            var _local_2:_Str_4081 = _Str_4910(k).getParser().data;
             this.data._Str_4518 = _local_2;
             Logger.log(("Received GuestRoomSearch: " + ((this.data._Str_4518.rooms) ? this.data._Str_4518.rooms.length : " no rooms")));
         }
 
         private function _Str_17226(k:IMessageEvent):void
         {
-            var _local_2:_Str_4587 = _Str_5017(k)._Str_2273().data;
+            var _local_2:_Str_4587 = _Str_5017(k).getParser().data;
             this.data._Str_6697 = _local_2;
             Logger.log(("Received popular room tags: " + this.data._Str_6697.tags.length));
         }
 
         private function _Str_17647(k:IMessageEvent):void
         {
-            var _local_2:_Str_6918 = _Str_5051(k)._Str_2273();
+            var _local_2:_Str_6918 = _Str_5051(k).getParser();
             Logger.log(((("Got room event: " + _local_2.data._Str_13361) + ", ") + _local_2.data.eventName));
             this.data._Str_4112 = ((_local_2.data._Str_13361 > 0) ? _local_2.data : null);
             LegacyNavigator(this._navigator._Str_2559)._Str_5048.refresh();
@@ -295,7 +295,7 @@
         private function _Str_17011(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:_Str_6280 = _Str_5212(k)._Str_2273();
+            var _local_2:_Str_6280 = _Str_5212(k).getParser();
             Logger.log(("CAN CREATE EVENT: " + _local_2._Str_13420));
             if (_local_2._Str_13420)
             {
@@ -319,7 +319,7 @@
 
         private function _Str_7358(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = _Str_3992(k)._Str_2273();
+            var _local_2:_Str_5936 = _Str_3992(k).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ((("Flat created: " + _local_2.flatId) + ", ") + _local_2._Str_18439));
             this.data._Str_11597 = _local_2.flatId;
             LegacyNavigator(this._navigator._Str_2559).goToRoom(_local_2.flatId, true);
@@ -351,7 +351,7 @@
 
         private function _Str_16709(k:IMessageEvent):void
         {
-            var _local_2:_Str_6478 = (k as _Str_5728)._Str_2273();
+            var _local_2:_Str_6478 = (k as _Str_5728).getParser();
             this._navigator.data.categories = _local_2.nodes;
             var _local_3:RoomsTabPageDecorator = RoomsTabPageDecorator(LegacyNavigator(this._navigator._Str_2559).tabs._Str_9436(Tabs._Str_3866)._Str_5252);
             _local_3._Str_19000();
@@ -359,7 +359,7 @@
 
         private function _Str_15947(k:IMessageEvent):void
         {
-            var _local_2:_Str_6276 = (k as _Str_5766)._Str_2273();
+            var _local_2:_Str_6276 = (k as _Str_5766).getParser();
             this._navigator.data._Str_10701 = _local_2._Str_10701;
         }
 
@@ -368,7 +368,7 @@
             var parser:_Str_4697;
             try
             {
-                parser = (event as _Str_5993)._Str_2273();
+                parser = (event as _Str_5993).getParser();
                 LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_15066(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data._Str_5552) + ", ") + parser.data._Str_13128));
             }
@@ -380,46 +380,46 @@
 
         private function _Str_9592(k:IMessageEvent):void
         {
-            var _local_2:_Str_6830 = (k as _Str_5834)._Str_2273();
+            var _local_2:_Str_6830 = (k as _Str_5834).getParser();
             LegacyNavigator(this._navigator._Str_2559)._Str_6472._Str_9592(_local_2._Str_13264);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2._Str_13264));
         }
 
         private function _Str_18344(k:IMessageEvent):void
         {
-            var _local_2:_Str_6295 = (k as _Str_5752)._Str_2273();
+            var _local_2:_Str_6295 = (k as _Str_5752).getParser();
         }
 
         private function _Str_12021(k:IMessageEvent):void
         {
-            var _local_2:_Str_6506 = (k as _Str_5081)._Str_2273();
+            var _local_2:_Str_6506 = (k as _Str_5081).getParser();
             ErrorReportStorage.addDebugData("IncomingEvent", ("Room settings saved: " + _local_2.roomId));
             LegacyNavigator(this._navigator._Str_2559)._Str_2813._Str_8316(Tabs._Str_4869);
         }
 
         private function _Str_8265(k:IMessageEvent):void
         {
-            var _local_2:_Str_4043 = (k as _Str_6030)._Str_2273();
+            var _local_2:_Str_4043 = (k as _Str_6030).getParser();
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8265(_local_2.roomId, _local_2.errorCode, _local_2.info);
         }
 
         private function _Str_18125(k:IMessageEvent):void
         {
-            var _local_2:_Str_6683 = (k as _Str_5711)._Str_2273();
+            var _local_2:_Str_6683 = (k as _Str_5711).getParser();
             Logger.log(("ROOM UPDATED: " + _local_2.flatId));
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_3570(_local_2.flatId, false, false));
         }
 
         private function _Str_8561(k:IMessageEvent):void
         {
-            var _local_2:_Str_6043 = (k as _Str_6109)._Str_2273();
+            var _local_2:_Str_6043 = (k as _Str_6109).getParser();
             Logger.log(((("Received favourites: " + _local_2.limit) + ", ") + _local_2._Str_13809.length));
             this._navigator.data._Str_8561(_local_2);
         }
 
         private function _Str_16972(k:IMessageEvent):void
         {
-            var _local_2:_Str_6561 = (k as _Str_5795)._Str_2273();
+            var _local_2:_Str_6561 = (k as _Str_5795).getParser();
             Logger.log(((("Received favourite changed: " + _local_2.flatId) + ", ") + _local_2._Str_13819));
             this.data._Str_21350(_local_2.flatId, _local_2._Str_13819);
             LegacyNavigator(this._navigator._Str_2559)._Str_4012.reload();
@@ -428,35 +428,35 @@
 
         private function _Str_8576(k:IMessageEvent):void
         {
-            var _local_2:_Str_6355 = (k as _Str_5771)._Str_2273();
+            var _local_2:_Str_6355 = (k as _Str_5771).getParser();
             Logger.log(((("Got flat controllers: " + _local_2.roomId) + ", ") + _local_2._Str_8349.length));
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8576(_local_2.roomId, _local_2._Str_8349);
         }
 
         private function _Str_9346(k:IMessageEvent):void
         {
-            var _local_2:_Str_6824 = (k as _Str_6213)._Str_2273();
+            var _local_2:_Str_6824 = (k as _Str_6213).getParser();
             Logger.log(((((("Flat controller added: " + _local_2.flatId) + ", ") + _local_2.data.userId) + ", ") + _local_2.data.userName));
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_9346(_local_2.flatId, _local_2.data);
         }
 
         private function _Str_8484(k:IMessageEvent):void
         {
-            var _local_2:_Str_6887 = (k as _Str_5683)._Str_2273();
+            var _local_2:_Str_6887 = (k as _Str_5683).getParser();
             Logger.log(((("Flat controller removed: " + _local_2.flatId) + ", ") + _local_2.userId));
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8484(_local_2.flatId, _local_2.userId);
         }
 
         private function _Str_8907(k:IMessageEvent):void
         {
-            var _local_2:_Str_6752 = (k as _Str_5881)._Str_2273();
+            var _local_2:_Str_6752 = (k as _Str_5881).getParser();
             Logger.log(((("Got Banned users for room: " + _local_2.roomId) + ", ") + _local_2._Str_14901.length));
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8907(_local_2.roomId, _local_2._Str_14901);
         }
 
         private function _Str_8351(k:IMessageEvent):void
         {
-            var _local_2:_Str_6587 = (k as _Str_5655)._Str_2273();
+            var _local_2:_Str_6587 = (k as _Str_5655).getParser();
             Logger.log(((("User was unbanned from room. User Id: " + _local_2.userId) + " Room Id: ") + _local_2.roomId));
             LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_8351(_local_2.roomId, _local_2.userId);
         }
@@ -482,7 +482,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5762 = _local_2._Str_2273();
+            var _local_3:_Str_5762 = _local_2.getParser();
             if (((!(_local_3 == null)) && ((_local_3.userName == null) || (_local_3.userName.length == 0))))
             {
                 LegacyNavigator(this._navigator._Str_2559).doorbell.hide();
@@ -491,7 +491,7 @@
 
         private function _Str_17265(k:IMessageEvent):void
         {
-            var _local_2:_Str_6990 = (k as _Str_6001)._Str_2273();
+            var _local_2:_Str_6990 = (k as _Str_6001).getParser();
             Logger.log(("Received room rating: " + _local_2.rating));
             this.data._Str_15395 = _local_2.rating;
             this.data._Str_5090 = _local_2._Str_5090;
@@ -500,7 +500,7 @@
 
         private function _Str_12114(k:IMessageEvent):void
         {
-            var _local_2:_Str_5700 = (k as _Str_4187)._Str_2273();
+            var _local_2:_Str_5700 = (k as _Str_4187).getParser();
             if (((_local_2.userName == null) || (_local_2.userName == "")))
             {
                 LegacyNavigator(this._navigator._Str_2559).doorbell._Str_20293();
@@ -520,7 +520,7 @@
 
         private function _Str_26467(k:_Str_5767):void
         {
-            this.data._Str_4079 = k._Str_2273().data;
+            this.data._Str_4079 = k.getParser().data;
         }
 
         private function _Str_14669(k:int):void
@@ -575,7 +575,7 @@
         private function _Str_18891(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:_Str_4184 = (k as _Str_5763)._Str_2273();
+            var _local_2:_Str_4184 = (k as _Str_5763).getParser();
             Logger.log(("FAILED TO CONNECT: REASON: " + _local_2.reason));
             switch (_local_2.reason)
             {

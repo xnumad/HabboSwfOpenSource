@@ -10,7 +10,7 @@
             super(k, NavigatorLiftedRoomsParser);
         }
 
-        public function _Str_2273():NavigatorLiftedRoomsParser
+        public function getParser():NavigatorLiftedRoomsParser
         {
             return parser as NavigatorLiftedRoomsParser;
         }

@@ -11,7 +11,7 @@
             super(k, GameAchievementsMessageParser);
         }
 
-        public function _Str_2273():GameAchievementsMessageParser
+        public function getParser():GameAchievementsMessageParser
         {
             return this._parser as GameAchievementsMessageParser;
         }

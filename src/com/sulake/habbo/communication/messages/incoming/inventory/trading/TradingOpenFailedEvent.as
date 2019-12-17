@@ -10,7 +10,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_2273():TradingOpenFailedEventParser
+        public function getParser():TradingOpenFailedEventParser
         {
             return _parser as TradingOpenFailedEventParser;
         }

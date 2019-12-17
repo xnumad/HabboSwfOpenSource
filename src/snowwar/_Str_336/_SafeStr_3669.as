@@ -11,7 +11,7 @@
             super(k, _SafeStr_4568);
         }
 
-        public function _Str_2273():_SafeStr_4568
+        public function getParser():_SafeStr_4568
         {
             return _parser as _SafeStr_4568;
         }

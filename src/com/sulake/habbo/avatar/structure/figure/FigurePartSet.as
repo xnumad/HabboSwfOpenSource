@@ -76,7 +76,7 @@
             return -1;
         }
 
-        public function _Str_989(k:String, _arg_2:int):IFigurePart
+        public function getPart(k:String, _arg_2:int):IFigurePart
         {
             var _local_3:FigurePart;
             for each (_local_3 in this._parts)
@@ -114,27 +114,27 @@
             return this._isColorable;
         }
 
-        public function get _Str_608():Boolean
+        public function get isSelectable():Boolean
         {
             return this._isSelectable;
         }
 
-        public function get _Str_806():Array
+        public function get parts():Array
         {
             return this._parts;
         }
 
-        public function get _Str_790():Array
+        public function get hiddenLayers():Array
         {
             return this._hiddenLayers;
         }
 
-        public function get _Str_653():Boolean
+        public function get isPreSelectable():Boolean
         {
             return this._isPreSelectable;
         }
 
-        public function get _Str_651():Boolean
+        public function get isSellable():Boolean
         {
             return this._isSellable;
         }

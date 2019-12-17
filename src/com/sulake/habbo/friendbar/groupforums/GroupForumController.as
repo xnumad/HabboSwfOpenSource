@@ -303,7 +303,7 @@
 
         private function _Str_22851(k:_Str_9509):void
         {
-            var _local_2:_Str_5953 = k._Str_2273();
+            var _local_2:_Str_5953 = k.getParser();
             var _local_3:ForumsListData = new ForumsListData(_local_2);
             if (((!(this._forumData == null)) && (this._lastReadMessageId > 0)))
             {
@@ -338,7 +338,7 @@
         {
             var _local_3:Map;
             var _local_4:String;
-            var _local_2:_Str_3372 = k._Str_2273()._Str_22345;
+            var _local_2:_Str_3372 = k.getParser()._Str_22345;
             if (this._requestedGroupID != _local_2.groupId)
             {
                 return;
@@ -371,7 +371,7 @@
 
         private function _Str_24478(k:GuildForumThreadsEvent):void
         {
-            var _local_2:GuildForumThreadsParser = k._Str_2273();
+            var _local_2:GuildForumThreadsParser = k.getParser();
             if (((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))))
             {
                 return;
@@ -395,7 +395,7 @@
         private function _Str_25777(k:_Str_9446):void
         {
             var _local_6:_Str_2814;
-            var _local_2:_Str_7217 = k._Str_2273();
+            var _local_2:_Str_7217 = k.getParser();
             if ((((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))) || (this._threadsListData == null)))
             {
                 return;
@@ -444,7 +444,7 @@
         private function _Str_22869(k:_Str_9518):void
         {
             var _local_3:_Str_2807;
-            var _local_2:_Str_5956 = _Str_5956(k._Str_2273());
+            var _local_2:_Str_5956 = _Str_5956(k.getParser());
             if (this._composeMessageView)
             {
                 this._composeMessageView.dispose();
@@ -491,7 +491,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5975 = _Str_5975(k._Str_2273());
+            var _local_2:_Str_5975 = _Str_5975(k.getParser());
             if ((((this._forumData == null) || (!(_local_2.groupId == this._forumData.groupId))) || (!(_local_2.threadId == this._currentThreadID))))
             {
                 return;
@@ -551,7 +551,7 @@
 
         private function _Str_25325(k:_Str_8526):void
         {
-            var _local_2:_Str_8101 = k._Str_2273();
+            var _local_2:_Str_8101 = k.getParser();
             if (((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))))
             {
                 return;
@@ -601,7 +601,7 @@
         private function _parser8(k:_Str_8758):void
         {
             var _local_6:_Str_2814;
-            var _local_2:_Str_7149 = k._Str_2273();
+            var _local_2:_Str_7149 = k.getParser();
             if ((((this._forumData == null) || (!(this._forumData.groupId == _local_2.groupId))) || (!(this._currentThreadID == _local_2.threadId))))
             {
                 return;
@@ -781,7 +781,7 @@
 
         private function _Str_23952(k:_Str_8905):void
         {
-            this._Str_7256(k._Str_2273()._Str_9052);
+            this._Str_7256(k.getParser()._Str_9052);
         }
     }
 }

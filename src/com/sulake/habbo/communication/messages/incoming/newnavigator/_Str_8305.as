@@ -10,7 +10,7 @@
             super(k, NavigatorSavedSearchesParser);
         }
 
-        public function _Str_2273():NavigatorSavedSearchesParser
+        public function getParser():NavigatorSavedSearchesParser
         {
             return parser as NavigatorSavedSearchesParser;
         }

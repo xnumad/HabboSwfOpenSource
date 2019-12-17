@@ -100,9 +100,9 @@
 
         private function _Str_23954(k:_Str_7662):void
         {
-            this._creditPrice = k._Str_2273()._Str_23524();
-            this._ducketPrice = k._Str_2273()._Str_22790();
-            this._publishDucketPrice = k._Str_2273()._Str_22604();
+            this._creditPrice = k.getParser()._Str_23524();
+            this._ducketPrice = k.getParser()._Str_22790();
+            this._publishDucketPrice = k.getParser()._Str_22604();
         }
 
         private function _Str_16050(k:_Str_7027):void
@@ -135,7 +135,7 @@
             {
                 return;
             }
-            var _local_2:String = k._Str_2273().url;
+            var _local_2:String = k.getParser().url;
             this._widget._Str_16763(_local_2);
         }
 

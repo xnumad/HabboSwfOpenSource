@@ -11,7 +11,7 @@
             super(k, JoinedQueueMessageParser);
         }
 
-        public function _Str_2273():JoinedQueueMessageParser
+        public function getParser():JoinedQueueMessageParser
         {
             return this._parser as JoinedQueueMessageParser;
         }

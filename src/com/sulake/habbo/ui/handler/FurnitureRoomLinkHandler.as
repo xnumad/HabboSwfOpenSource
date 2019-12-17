@@ -62,7 +62,7 @@
             var message:String;
             var roomName:String;
             var ownerName:String;
-            var p:_Str_4537 = _Str_2929(event)._Str_2273();
+            var p:_Str_4537 = _Str_2929(event).getParser();
             var roomData:_Str_2370 = p.data;
             if (((roomData) && (roomData.flatId == this._roomIdToEnter)))
             {

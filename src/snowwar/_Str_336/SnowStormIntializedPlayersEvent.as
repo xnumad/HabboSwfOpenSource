@@ -11,7 +11,7 @@
             super(k, SnowStormIntializedPlayersParser);
         }
 
-        public function _Str_2273():SnowStormIntializedPlayersParser
+        public function getParser():SnowStormIntializedPlayersParser
         {
             return _parser as SnowStormIntializedPlayersParser;
         }

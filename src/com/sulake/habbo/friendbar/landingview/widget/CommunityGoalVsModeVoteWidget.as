@@ -65,7 +65,7 @@
 
         private function _Str_9863(k:_Str_9665):void
         {
-            if (k._Str_2273()._Str_23568)
+            if (k.getParser()._Str_23568)
             {
                 this._Str_16270();
             }

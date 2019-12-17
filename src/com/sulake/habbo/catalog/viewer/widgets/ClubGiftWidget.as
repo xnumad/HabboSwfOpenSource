@@ -250,7 +250,7 @@
             {
                 _local_6 = (_arg_2._Str_21146 - (this._controller.purse.pastClubDays + this._controller.purse.pastVipDays));
             }
-            if (((!(_arg_2._Str_608)) && (_local_6 > 0)))
+            if (((!(_arg_2.isSelectable)) && (_local_6 > 0)))
             {
                 if (_arg_2._Str_12313)
                 {
@@ -289,7 +289,7 @@
             var _local_9:IButtonWindow = (_local_3.findChildByName("select_button") as IButtonWindow);
             if (_local_9)
             {
-                if (((_arg_2._Str_608) && (this._controller._Str_7574 > 0)))
+                if (((_arg_2.isSelectable) && (this._controller._Str_7574 > 0)))
                 {
                     _local_9.enable();
                 }

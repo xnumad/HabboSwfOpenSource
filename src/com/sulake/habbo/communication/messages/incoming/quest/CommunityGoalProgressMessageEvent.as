@@ -11,7 +11,7 @@
             super(k, CommunityGoalProgressParser);
         }
 
-        public function _Str_2273():CommunityGoalProgressParser
+        public function getParser():CommunityGoalProgressParser
         {
             return _parser as CommunityGoalProgressParser;
         }

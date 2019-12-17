@@ -64,7 +64,7 @@
 		
 		public static function balanceToString(value:int):String
 		{
-			var suffix:String = "";
+			/*var suffix:String = "";
 			var resultValue:int = value;
 			if (value >= 1000000)
 			{
@@ -77,7 +77,9 @@
 				suffix = "K";
 			}
 			
-			return "" + resultValue.toString() + suffix;
+			return "" + resultValue.toString() + suffix;*/
+
+            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 		}
 
         private function _Str_25439():void

@@ -334,7 +334,7 @@
 
         private function _Str_18511(k:_Str_5633):void
         {
-            if (k._Str_2273()._Str_17213 <= 0)
+            if (k.getParser()._Str_17213 <= 0)
             {
                 this._Str_15971();
             }

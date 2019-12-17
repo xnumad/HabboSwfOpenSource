@@ -11,7 +11,7 @@
             super(k, WiredTriggerDataMessageParser);
         }
 
-        public function _Str_2273():WiredTriggerDataMessageParser
+        public function getParser():WiredTriggerDataMessageParser
         {
             return this._parser as WiredTriggerDataMessageParser;
         }

@@ -10,7 +10,7 @@
             super(k, UserUpdateMessageParser);
         }
 
-        public function _Str_2273():UserUpdateMessageParser
+        public function getParser():UserUpdateMessageParser
         {
             return _parser as UserUpdateMessageParser;
         }

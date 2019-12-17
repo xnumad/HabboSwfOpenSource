@@ -11,7 +11,7 @@
             super(k, CraftableProductsMessageParser);
         }
 
-        public function _Str_2273():CraftableProductsMessageParser
+        public function getParser():CraftableProductsMessageParser
         {
             return _parser as CraftableProductsMessageParser;
         }

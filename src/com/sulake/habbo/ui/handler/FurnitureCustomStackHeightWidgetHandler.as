@@ -38,7 +38,7 @@
 
         private function _Str_23242(k:_Str_9362):void
         {
-            var _local_2:_Str_7848 = k._Str_2273();
+            var _local_2:_Str_7848 = k.getParser();
             if (((this._widget) && (this._Str_6826())))
             {
                 this._widget._Str_24760(_local_2.furniId, _local_2.height);

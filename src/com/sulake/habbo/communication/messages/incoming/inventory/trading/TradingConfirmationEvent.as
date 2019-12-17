@@ -10,7 +10,7 @@
             super(k, _arg_2);
         }
 
-        public function _Str_2273():TradingConfirmationParser
+        public function getParser():TradingConfirmationParser
         {
             return _parser as TradingConfirmationParser;
         }

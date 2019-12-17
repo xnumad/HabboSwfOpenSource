@@ -46,8 +46,8 @@
 
         private function _Str_9863(k:_Str_8237):void
         {
-            this._isPartOf = k._Str_2273()._Str_25348;
-            this._targetId = k._Str_2273()._Str_10760;
+            this._isPartOf = k.getParser()._Str_25348;
+            this._targetId = k.getParser()._Str_10760;
             if (this._isPartOf)
             {
                 window.caption = (("${" + this._submittedKey) + "}");

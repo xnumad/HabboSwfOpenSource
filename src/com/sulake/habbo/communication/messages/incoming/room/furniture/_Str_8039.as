@@ -10,7 +10,7 @@
             super(k, RoomDimmerPresetsMessageParser);
         }
 
-        public function _Str_2273():RoomDimmerPresetsMessageParser
+        public function getParser():RoomDimmerPresetsMessageParser
         {
             return _parser as RoomDimmerPresetsMessageParser;
         }

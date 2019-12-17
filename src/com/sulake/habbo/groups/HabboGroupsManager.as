@@ -396,7 +396,7 @@
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
-            var _local_2:_Str_4522 = _Str_2752(k)._Str_2273();
+            var _local_2:_Str_4522 = _Str_2752(k).getParser();
             this._roomId = _local_2._Str_6550;
         }
 
@@ -430,13 +430,13 @@
 
         private function _Str_3241(k:IMessageEvent):void
         {
-            var _local_2:_Str_4139 = UserObjectEvent(k)._Str_2273();
+            var _local_2:_Str_4139 = UserObjectEvent(k).getParser();
             this._avatarId = _local_2.id;
         }
 
         private function _Str_7358(k:IMessageEvent):void
         {
-            var _local_2:_Str_5936 = _Str_3992(k)._Str_2273();
+            var _local_2:_Str_5936 = _Str_3992(k).getParser();
             this._guildManagementWindowCtrl._Str_7358(_local_2.flatId, _local_2._Str_18439);
         }
 
@@ -509,14 +509,14 @@
 
         private function _Str_11640(k:IMessageEvent):void
         {
-            var _local_2:_Str_4007 = _Str_3492(k)._Str_2273();
+            var _local_2:_Str_4007 = _Str_3492(k).getParser();
             this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));
             this._guildManagementWindowCtrl._Str_23040();
         }
 
         private function _Str_4428(k:IMessageEvent):void
         {
-            var _local_2:_Str_4537 = _Str_2929(k)._Str_2273();
+            var _local_2:_Str_4537 = _Str_2929(k).getParser();
             if (_local_2._Str_15487)
             {
                 this._groupRoomInfoCtrl._Str_4428(_local_2.data);

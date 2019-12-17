@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7868;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7908;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
-    import _Str_521._Str_7418;
+    import com.sulake.habbo.communication.messages.parser._Str_521._Str_7418;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.userclassification._Str_6854;
     import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7060;
@@ -93,7 +93,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5460 = k._Str_2273();
+            var _local_2:_Str_5460 = k.getParser();
             if (_local_2 == null)
             {
                 return;
@@ -110,7 +110,7 @@
             {
                 return;
             }
-            var _local_2:_Str_8164 = k._Str_2273();
+            var _local_2:_Str_8164 = k.getParser();
             if (((_local_2 == null) || (_local_2.data == null)))
             {
                 return;
@@ -132,14 +132,14 @@
             var _local_2:_Str_6924;
             if (((this._moderationManager) && (this._moderationManager.issueManager)))
             {
-                _local_2 = k._Str_2273();
+                _local_2 = k.getParser();
                 this._moderationManager.issueManager._Str_21909(_local_2._Str_17736, _local_2._Str_18137, _local_2._Str_17903, _local_2._Str_4971);
             }
         }
 
         private function _Str_24562(event:_Str_7889):void
         {
-            var parser:_Str_6763 = event._Str_2273();
+            var parser:_Str_6763 = event.getParser();
             if (parser == null)
             {
                 return;
@@ -175,7 +175,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7250 = k._Str_2273();
+            var _local_2:_Str_7250 = k.getParser();
             if (_local_2 == null)
             {
                 return;
@@ -186,7 +186,7 @@
         private function _Str_3746(k:_Str_9413):void
         {
             var _local_3:IUserInfoListener;
-            var _local_2:_Str_7467 = k._Str_2273();
+            var _local_2:_Str_7467 = k.getParser();
             Logger.log(((("GOT USER INFO: " + _local_2.data.userId) + ", ") + _local_2.data._Str_16987));
             for each (_local_3 in this._userInfoListeners)
             {
@@ -197,7 +197,7 @@
         private function _Str_4428(k:_Str_8695):void
         {
             var _local_3:RoomToolCtrl;
-            var _local_2:_Str_8106 = k._Str_2273();
+            var _local_2:_Str_8106 = k.getParser();
             for each (_local_3 in this._roomInfoListeners)
             {
                 _local_3._Str_4428(_local_2.data);
@@ -206,7 +206,7 @@
 
         private function _Str_22300(k:_Str_8088):void
         {
-            var _local_2:_Str_8235 = k._Str_2273();
+            var _local_2:_Str_8235 = k.getParser();
             var _local_3:Array = new Array();
             _local_3.push(_local_2.data._Str_17106);
             var _local_4:Dictionary = new Dictionary();
@@ -217,7 +217,7 @@
 
         private function _Str_22589(k:_Str_7799):void
         {
-            var _local_2:_Str_7868 = k._Str_2273();
+            var _local_2:_Str_7868 = k.getParser();
             var _local_3:Array = new Array();
             _local_3.push(_local_2.data);
             var _local_4:Dictionary = new Dictionary();
@@ -226,7 +226,7 @@
 
         private function _Str_25868(k:_Str_7898):void
         {
-            var _local_2:_Str_7908 = k._Str_2273();
+            var _local_2:_Str_7908 = k.getParser();
             var _local_3:Dictionary = new Dictionary();
             _local_3[_local_2.data.userId] = 0;
             this._Str_6773(("User Chatlog: " + _local_2.data.userName), WindowTracker._Str_15435, _local_2.data.userId, _local_2.data.rooms, _local_3);
@@ -245,7 +245,7 @@
         private function _Str_16877(k:_Str_7632):void
         {
             var _local_3:RoomVisitsCtrl;
-            var _local_2:_Str_7621 = k._Str_2273();
+            var _local_2:_Str_7621 = k.getParser();
             var _local_4:Array = this._roomVisitsListeners.concat();
             for each (_local_3 in _local_4)
             {
@@ -259,7 +259,7 @@
             var _local_8:int;
             var _local_9:UserClassificationCtrl;
             var _local_10:Array;
-            var _local_2:_Str_7418 = (k as _Str_8083)._Str_2273();
+            var _local_2:_Str_7418 = (k as _Str_8083).getParser();
             var _local_4:Map = _local_2._Str_24757;
             var _local_5:Map = _local_2._Str_24895;
             var _local_6:int = 1;
@@ -279,7 +279,7 @@
 
         private function _Str_23004(k:_Str_9038):void
         {
-            var _local_2:_Str_7060 = k._Str_2273();
+            var _local_2:_Str_7060 = k.getParser();
             Logger.log(("Got sanction data..." + [_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198]));
             this._moderationManager.issueManager._Str_24202(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
         }
@@ -287,7 +287,7 @@
         private function _Str_17604(k:_Str_5578):void
         {
             var _local_3:Vector.<CallForHelpCategoryData>;
-            var _local_2:CfhTopicsInitMessageParser = k._Str_2273();
+            var _local_2:CfhTopicsInitMessageParser = k.getParser();
             _local_3 = _local_2._Str_9001;
             this._moderationManager._Str_22921 = _local_3;
         }
@@ -295,7 +295,7 @@
         private function onCreditBalance(k:_Str_2752):void
         {
             var _local_3:RoomToolCtrl;
-            var _local_2:_Str_4522 = k._Str_2273();
+            var _local_2:_Str_4522 = k.getParser();
             this._moderationManager._Str_14758 = _local_2._Str_6550;
             this._moderationManager._Str_17887._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)
@@ -317,7 +317,7 @@
 
         private function _Str_24593(k:_Str_9341):void
         {
-            var _local_2:_Str_8084 = k._Str_2273();
+            var _local_2:_Str_8084 = k.getParser();
             Logger.log(((("GOT MOD ACTION RESULT: " + _local_2.userId) + ", ") + _local_2.success));
             if (_local_2.success)
             {

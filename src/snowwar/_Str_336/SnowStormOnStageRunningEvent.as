@@ -11,7 +11,7 @@
             super(k, SnowStormOnStageRunningParser);
         }
 
-        public function _Str_2273():SnowStormOnStageRunningParser
+        public function getParser():SnowStormOnStageRunningParser
         {
             return _parser as SnowStormOnStageRunningParser;
         }

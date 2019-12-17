@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.incoming._Str_530
 {
     import com.sulake.core.communication.messages.MessageEvent;
-    import _Str_539._Str_8895;
+    import com.sulake.habbo.communication.messages.parser._Str_539._Str_8895;
 
     public class _Str_9665 extends MessageEvent 
     {
@@ -10,7 +10,7 @@
             super(k, _Str_8895);
         }
 
-        public function _Str_2273():_Str_8895
+        public function getParser():_Str_8895
         {
             return _parser as _Str_8895;
         }

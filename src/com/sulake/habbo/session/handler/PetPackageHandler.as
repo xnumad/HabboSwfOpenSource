@@ -25,7 +25,7 @@
 
         private function onOpenPetPackageRequested(k:IMessageEvent):void
         {
-            var _local_2:_Str_7736 = (k as _Str_8382)._Str_2273();
+            var _local_2:_Str_7736 = (k as _Str_8382).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -43,7 +43,7 @@
 
         private function onOpenPetPackageResult(k:IMessageEvent):void
         {
-            var _local_2:_Str_8050 = (k as _Str_8241)._Str_2273();
+            var _local_2:_Str_8050 = (k as _Str_8241).getParser();
             if (_local_2 == null)
             {
                 return;

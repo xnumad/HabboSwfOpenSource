@@ -134,7 +134,7 @@
 
         private function _Str_23318(k:_Str_8427):void
         {
-            switch (k._Str_2273()._Str_3278)
+            switch (k.getParser()._Str_3278)
             {
                 case PhoneNumberStatusEnum._Str_9489:
                     this._Str_7383();
@@ -143,7 +143,7 @@
                 case PhoneNumberStatusEnum._Str_11502:
                 case PhoneNumberStatusEnum._Str_13360:
                     this._Str_7383();
-                    this._Str_15062 = (k._Str_2273()._Str_24596 + getTimer());
+                    this._Str_15062 = (k.getParser()._Str_24596 + getTimer());
                     this._Str_13939();
                     return;
                 case PhoneNumberStatusEnum.ERROR:
@@ -161,15 +161,15 @@
                             this._Str_17799(false);
                         }
                     }
-                    this._Str_2277.alert("${generic.alert.title}", (("${phone.number.collect.error." + k._Str_2273()._Str_3278) + "}"), 0, null);
-                    this._Str_9469._Str_16661(k._Str_2273()._Str_3278);
+                    this._Str_2277.alert("${generic.alert.title}", (("${phone.number.collect.error." + k.getParser()._Str_3278) + "}"), 0, null);
+                    this._Str_9469._Str_16661(k.getParser()._Str_3278);
                     return;
             }
         }
 
         private function _Str_22688(k:_Str_9151):void
         {
-            switch (k._Str_2273()._Str_3278)
+            switch (k.getParser()._Str_3278)
             {
                 case PhoneNumberStatusEnum._Str_9489:
                 case PhoneNumberStatusEnum.OK:
@@ -178,7 +178,7 @@
                 case PhoneNumberStatusEnum.ERROR:
                     if (((!(this._Str_8160)) && (!(this._Str_9578))))
                     {
-                        this._Str_15062 = (getTimer() + k._Str_2273()._Str_17328);
+                        this._Str_15062 = (getTimer() + k.getParser()._Str_17328);
                         this._Str_13939();
                     }
                     else
@@ -188,15 +188,15 @@
                             this._Str_16951(false);
                         }
                     }
-                    this._Str_9578._Str_16661(k._Str_2273()._Str_3278);
+                    this._Str_9578._Str_16661(k.getParser()._Str_3278);
                     return;
             }
         }
 
         private function _Str_24899(k:_Str_9537):void
         {
-            var _local_2:int = k._Str_2273()._Str_24164;
-            var _local_3:int = k._Str_2273()._Str_24357;
+            var _local_2:int = k.getParser()._Str_24164;
+            var _local_3:int = k.getParser()._Str_24357;
             context.configuration.setProperty("phone.collection.status", _local_2.toString());
             context.configuration.setProperty("phone.verification.status", _local_3.toString());
             if (_local_2 == ClientPhoneVerificationStatusEnum._Str_9095)
@@ -212,7 +212,7 @@
                 }
                 else
                 {
-                    this._Str_15062 = (k._Str_2273()._Str_17328 + getTimer());
+                    this._Str_15062 = (k.getParser()._Str_17328 + getTimer());
                     this._Str_13939();
                 }
                 return;

@@ -11,7 +11,7 @@
             super(k, QuestionParser);
         }
 
-        public function _Str_2273():QuestionParser
+        public function getParser():QuestionParser
         {
             return _parser as QuestionParser;
         }

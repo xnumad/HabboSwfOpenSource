@@ -88,7 +88,7 @@
 
         private function _Str_5657(k:IMessageEvent):void
         {
-            var _local_2:QuestCompletedParser = (k as QuestCompletedMessageEvent)._Str_2273();
+            var _local_2:QuestCompletedParser = (k as QuestCompletedMessageEvent).getParser();
             Logger.log(((("Quest Completed: " + _local_2._Str_8257._Str_6549) + " quest: ") + _local_2._Str_8257.id));
             this._questEngine._Str_3398._Str_5657(_local_2._Str_8257, _local_2._Str_23243);
             if (this._questEngine._Str_7575(_local_2._Str_8257))
@@ -101,7 +101,7 @@
         {
             Logger.log("Quest Cancelled: ");
             this._questEngine._Str_3398._Str_5242();
-            if (QuestCancelledMessageEvent(k)._Str_2273().expired)
+            if (QuestCancelledMessageEvent(k).getParser().expired)
             {
                 this._questEngine.windowManager.alert("${quests.expired.title}", "${quests.expired.body}", 0, null);
             }
@@ -109,21 +109,21 @@
 
         private function _Str_8212(k:IMessageEvent):void
         {
-            var _local_2:QuestsParser = (k as QuestsMessageEvent)._Str_2273();
+            var _local_2:QuestsParser = (k as QuestsMessageEvent).getParser();
             Logger.log(((("Got Quests: " + _local_2.quests) + ", ") + _local_2._Str_2826));
             this._questEngine.events.dispatchEvent(new QuestsListEvent(QuestsListEvent.QUESTS, _local_2.quests, _local_2._Str_2826));
         }
 
         private function _Str_12986(k:IMessageEvent):void
         {
-            var _local_2:SeasonalQuestsParser = (k as SeasonalQuestsMessageEvent)._Str_2273();
+            var _local_2:SeasonalQuestsParser = (k as SeasonalQuestsMessageEvent).getParser();
             Logger.log(("Got seasonal Quests: " + _local_2.quests));
             this._questEngine.events.dispatchEvent(new QuestsListEvent(QuestsListEvent.QE_QUESTS_SEASONAL, _local_2.quests, true));
         }
 
         private function _Str_4750(k:IMessageEvent):void
         {
-            var _local_2:QuestParser = (k as QuestMessageEvent)._Str_2273();
+            var _local_2:QuestParser = (k as QuestMessageEvent).getParser();
             Logger.log(("Got Quest: " + _local_2.quest));
             this._questEngine._Str_3398._Str_4750(_local_2.quest);
         }
@@ -165,32 +165,32 @@
         private function _Str_17329(k:IMessageEvent):void
         {
             var _local_2:AchievementsEvent = (k as AchievementsEvent);
-            var _local_3:AchievementsParser = (_local_2._Str_2273() as AchievementsParser);
+            var _local_3:AchievementsParser = (_local_2.getParser() as AchievementsParser);
             this._questEngine._Str_17659._Str_17329(_local_3.achievements, _local_3.defaultCategory);
         }
 
         private function _Str_23908(k:AchievementResolutionsMessageEvent):void
         {
-            var _local_2:AchievementResolutionsMessageParser = k._Str_2273();
+            var _local_2:AchievementResolutionsMessageParser = k.getParser();
             this._questEngine._Str_10255._Str_23538(_local_2.stuffId, _local_2.achievements, _local_2._Str_17028);
         }
 
         private function _Str_23911(k:AchievementResolutionProgressMessageEvent):void
         {
-            var _local_2:AchievementResolutionProgressMessageParser = k._Str_2273();
+            var _local_2:AchievementResolutionProgressMessageParser = k.getParser();
             this._questEngine._Str_10255._Str_24205(_local_2.stuffId, _local_2.achievementId, _local_2.requiredLevelBadgeCode, _local_2.userProgress, _local_2._Str_18600, _local_2._Str_17028);
         }
 
         private function _Str_24464(k:AchievementResolutionCompletedMessageEvent):void
         {
-            var _local_2:AchievementResolutionCompletedMessageParser = k._Str_2273();
+            var _local_2:AchievementResolutionCompletedMessageParser = k.getParser();
             this._questEngine._Str_10255._Str_25733(_local_2.badgeCode, _local_2.stuffCode);
         }
 
         private function _Str_12011(k:IMessageEvent):void
         {
             var _local_2:AchievementEvent = (k as AchievementEvent);
-            var _local_3:AchievementParser = (_local_2._Str_2273() as AchievementParser);
+            var _local_3:AchievementParser = (_local_2.getParser() as AchievementParser);
             this._questEngine._Str_17659._Str_12011(_local_3.achievement);
             this._questEngine._Str_10255._Str_12011(_local_3.achievement);
         }
@@ -198,14 +198,30 @@
         private function _Str_18065(k:IMessageEvent):void
         {
             var _local_2:AchievementsScoreEvent = (k as AchievementsScoreEvent);
-            var _local_3:AchievementsScoreParser = (_local_2._Str_2273() as AchievementsScoreParser);
-            this._questEngine.localization.registerParameter("achievements.categories.score", "score", _local_3.score.toString());
+            var _local_3:AchievementsScoreParser = (_local_2.getParser() as AchievementsScoreParser);
+
+            this._questEngine.localization.registerParameter("achievements.categories.score", "score", _local_3.score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+        }
+
+        private function formattingNumber(number: String): String
+        {
+            var result: String = "";
+            for(var i: Number = number.length; i > 0; i--)
+            {
+                var char: String = number.charAt(number.length - i);
+
+                if(i % 3 === 0 && i != number.length) result += " " + char;
+                
+                else result += char;
+            }
+
+            return result;
         }
 
         private function _Str_11598(k:IMessageEvent):void
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
-            var _local_3:_Str_5519 = _local_2._Str_2273();
+            var _local_3:_Str_5519 = _local_2.getParser();
             var _local_4:String = this._questEngine.localization._Str_21634(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));
             this._questEngine._Str_10255._Str_11598(_local_3.data);
@@ -213,7 +229,7 @@
 
         private function _Str_22814(k:IMessageEvent):void
         {
-            var _local_2:_Str_7264 = (k as IsFirstLoginOfDayEvent)._Str_2273();
+            var _local_2:_Str_7264 = (k as IsFirstLoginOfDayEvent).getParser();
             this._questEngine._Str_25830(_local_2._Str_18128);
         }
 
@@ -229,7 +245,7 @@
 
         private function _Str_24584(k:_Str_3492):void
         {
-            if (((k._Str_2273().isVIP) && (k._Str_2273()._Str_9379 == _Str_4007._Str_12890)))
+            if (((k.getParser().isVIP) && (k.getParser()._Str_9379 == _Str_4007._Str_12890)))
             {
                 this._questEngine._Str_8189._Str_25159();
             }

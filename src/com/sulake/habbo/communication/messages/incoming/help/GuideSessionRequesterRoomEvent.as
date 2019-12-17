@@ -11,7 +11,7 @@
             super(k, GuideSessionRequesterRoomMessageParser);
         }
 
-        public function _Str_2273():GuideSessionRequesterRoomMessageParser
+        public function getParser():GuideSessionRequesterRoomMessageParser
         {
             return _parser as GuideSessionRequesterRoomMessageParser;
         }

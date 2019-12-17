@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7765;
     import com.sulake.habbo.session.events.MysteryBoxKeysUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
-    import _Str_505._Str_5515;
+    import com.sulake.habbo.communication.messages.parser._Str_505._Str_5515;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_6831;
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
@@ -321,7 +321,7 @@
         private function _Str_3241(k:IMessageEvent):void
         {
             var _local_2:UserObjectEvent = (k as UserObjectEvent);
-            var _local_3:_Str_4139 = _local_2._Str_2273();
+            var _local_3:_Str_4139 = _local_2.getParser();
             this._userId = _local_3.id;
             this._name = _local_3.name;
             this._Str_7278 = _local_3._Str_10295;
@@ -364,11 +364,11 @@
         private function onUserNameChange(k:IMessageEvent):void
         {
             var _local_2:_Str_4150 = (k as _Str_4150);
-            if (((_local_2 == null) || (_local_2._Str_2273() == null)))
+            if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
             }
-            var _local_3:_Str_5856 = _local_2._Str_2273();
+            var _local_3:_Str_5856 = _local_2.getParser();
             if (_local_3._Str_5277 == this._userId)
             {
                 this._name = _local_3._Str_16428;
@@ -379,7 +379,7 @@
 
         private function _Str_18227(k:ChangeNameUpdateEvent):void
         {
-            var _local_2:_Str_6553 = k._Str_2273();
+            var _local_2:_Str_6553 = k.getParser();
             if (_local_2._Str_3278 == ChangeNameUpdateEvent._Str_5797)
             {
                 this._Str_7394 = false;
@@ -389,7 +389,7 @@
 
         private function _Str_23478(k:_Str_9310):void
         {
-            var _local_2:_Str_7765 = k._Str_2273();
+            var _local_2:_Str_7765 = k.getParser();
             this._Str_18582 = _local_2.boxColor;
             this._Str_18348 = _local_2.keyColor;
             events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._Str_18582, this._Str_18348));
@@ -411,7 +411,7 @@
 
         private function _Str_10366(k:_Str_3870):void
         {
-            var _local_2:_Str_5515 = (k._Str_2273() as _Str_5515);
+            var _local_2:_Str_5515 = (k.getParser() as _Str_5515);
             this._Str_17475 = _local_2._Str_23253;
             this._Str_3790 = _local_2._Str_8444;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
@@ -419,14 +419,14 @@
 
         private function _Str_16302(k:_Str_5948):void
         {
-            var _local_2:_Str_6831 = (k._Str_2273() as _Str_6831);
+            var _local_2:_Str_6831 = (k.getParser() as _Str_6831);
             this._Str_20255 = _local_2._Str_5738;
         }
 
         private function _Str_23236(k:IMessageEvent):void
         {
             var _local_3:IFurniDataListener;
-            var _local_2:_Str_7162 = (k as _Str_9281)._Str_2273();
+            var _local_2:_Str_7162 = (k as _Str_9281).getParser();
             if (_local_2 == null)
             {
                 return;
@@ -455,7 +455,7 @@
 
         private function _Str_18012(k:_Str_6160):void
         {
-            var _local_2:_Str_5768 = k._Str_2273();
+            var _local_2:_Str_5768 = k.getParser();
             this._Str_9602 = (_local_2.status == _Str_5768._Str_16052);
         }
 
@@ -940,11 +940,11 @@
         private function _Str_5963(k:IMessageEvent):void
         {
             var _local_2:_Str_3407 = (k as _Str_3407);
-            if ((((_local_2 == null) || (_local_2._Str_2273() == null)) || (k.connection == null)))
+            if ((((_local_2 == null) || (_local_2.getParser() == null)) || (k.connection == null)))
             {
                 return;
             }
-            var _local_3:_Str_5199 = _local_2._Str_2273();
+            var _local_3:_Str_5199 = _local_2.getParser();
             HabboWebTools.roomVisited(_local_3.roomId);
         }
 
