@@ -5,23 +5,23 @@
 
     public class _Str_10714 implements IMessageComposer, IDisposable 
     {
-        private var _Str_2156:Array;
+        private var messageArray:Array;
 
         public function _Str_10714(k:int)
         {
-            this._Str_2156 = [];
+            this.messageArray = [];
             super();
-            this._Str_2156.push(k);
+            this.messageArray.push(k);
         }
 
         public function getMessageArray():Array
         {
-            return this._Str_2156;
+            return this.messageArray;
         }
 
         public function dispose():void
         {
-            this._Str_2156 = null;
+            this.messageArray = null;
         }
 
         public function get disposed():Boolean

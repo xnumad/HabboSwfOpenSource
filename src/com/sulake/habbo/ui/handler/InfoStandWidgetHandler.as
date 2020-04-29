@@ -302,6 +302,7 @@
             k.push(RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_10MIN);
             k.push(RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_60MIN);
             k.push(RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_18HOUR);
+            k.push(RoomWidgetUserActionMessage.GROUP_WHISPER);
             return k;
         }
 
@@ -587,6 +588,11 @@
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_18HOUR:
                     this._container.roomSession._Str_5984(_local_3._Str_2394, 1080);
                     break;
+                case RoomWidgetUserActionMessage.GROUP_WHISPER:
+                    _local_8 = new _Str_4831(_Str_4831.WHISPER, "groupe");
+                    this._container.sessionDataManager.whiperGroup(_local_3.name);
+                    this._container.events.dispatchEvent(_local_8);
+                    break;
             }
             return null;
         }
@@ -761,11 +767,11 @@
             {
                 _local_6._Str_3249 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
-            _local_6._Str_3246 = this._container.roomSession.isRoomController;
-            _local_6._Str_3672 = this._container.roomSession._Str_3672;
+            _local_6.amIOwner = this._container.roomSession.isRoomController;
+            _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6._Str_3529 = this._container.sessionDataManager.isGodMode;
-            _local_6._Str_5990 = this._container.roomSession.isRoomController;
+            _local_6.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
+            _local_6.canBeKicked = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
             _local_8.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
             _local_6.badges = _local_8;
@@ -788,9 +794,9 @@
             {
                 _local_5._Str_3249 = _local_6.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
-            _local_5._Str_3246 = this._container.roomSession.isRoomController;
+            _local_5.amIOwner = this._container.roomSession.isRoomController;
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_5._Str_3529 = this._container.sessionDataManager.isGodMode;
+            _local_5.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
             var _local_7:Array = new Array();
             _local_7.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
             _local_5.badges = _local_7;
@@ -834,12 +840,12 @@
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.OWN_USER)
             {
                 _local_6.realName = this._container.sessionDataManager.realName;
-                _local_6._Str_4330 = this._container.sessionDataManager._Str_11198;
+                _local_6.allowNameChange = this._container.sessionDataManager._Str_11198;
             }
-            _local_6._Str_3246 = this._container.roomSession.isRoomController;
-            _local_6._Str_3672 = this._container.roomSession._Str_3672;
+            _local_6.amIOwner = this._container.roomSession.isRoomController;
+            _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6._Str_3529 = this._container.sessionDataManager.isGodMode;
+            _local_6.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
             _local_6._Str_18096 = this._container.sessionDataManager._Str_4050;
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
             {
@@ -855,12 +861,12 @@
                     _local_14 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_FLAT_CONTROL);
                     if (!isNaN(_local_14))
                     {
-                        _local_6._Str_5599 = _local_14;
+                        _local_6.targetRoomControllerLevel = _local_14;
                     }
-                    _local_6._Str_6394 = this._Str_23100(_local_6);
-                    _local_6._Str_5990 = this._Str_22729(_local_6);
-                    _local_6._Str_6701 = this._Str_23573(_local_6);
-                    Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6._Str_6394) + ", Kicked: ") + _local_6._Str_5990) + ", Banned: ") + _local_6._Str_6701));
+                    _local_6.canBeMuted = this._Str_23100(_local_6);
+                    _local_6.canBeKicked = this._Str_22729(_local_6);
+                    _local_6.canBeBanned = this._Str_23573(_local_6);
+                    Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6.canBeMuted) + ", Kicked: ") + _local_6.canBeKicked) + ", Banned: ") + _local_6.canBeBanned));
                 }
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
                 _local_6.petRespectLeft = this._container.sessionDataManager.petRespectLeft;
@@ -868,32 +874,32 @@
                 _local_11 = this._container.roomSession._Str_3827;
                 if (!_local_10)
                 {
-                    _local_6._Str_5751 = false;
+                    _local_6.canTrade = false;
                 }
                 else
                 {
                     switch (_local_11)
                     {
                         default:
-                            _local_6._Str_5751 = false;
+                            _local_6.canTrade = false;
                             break;
                         case RoomTradingLevelEnum._Str_14475:
                             _local_15 = ((!(_local_6.roomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.roomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
-                            _local_16 = ((!(_local_6._Str_5599 == RoomControllerLevel.NONE)) && (!(_local_6._Str_5599 == RoomControllerLevel.GUILD_MEMBER)));
-                            _local_6._Str_5751 = ((_local_15) || (_local_16));
+                            _local_16 = ((!(_local_6.targetRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.targetRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
+                            _local_6.canTrade = ((_local_15) || (_local_16));
                             break;
                         case RoomTradingLevelEnum._Str_9173:
-                            _local_6._Str_5751 = true;
+                            _local_6.canTrade = true;
                     }
                 }
-                _local_6._Str_6622 = RoomWidgetUpdateInfostandUserEvent._Str_18400;
+                _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_18400;
                 if (!_local_10)
                 {
-                    _local_6._Str_6622 = RoomWidgetUpdateInfostandUserEvent._Str_14161;
+                    _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_14161;
                 }
                 if (_local_11 != RoomTradingLevelEnum._Str_9173)
                 {
-                    _local_6._Str_6622 = RoomWidgetUpdateInfostandUserEvent._Str_13798;
+                    _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_13798;
                 }
                 _local_12 = this._container.sessionDataManager.userId;
                 _local_13 = this._container.sessionDataManager.getUserTags(_local_12);
@@ -970,12 +976,12 @@
             {
                 _local_3 = _arg_2(k, _local_4);
             }
-            return (_local_3) && (k._Str_5599 < RoomControllerLevel.ROOM_OWNER);
+            return (_local_3) && (k.targetRoomControllerLevel < RoomControllerLevel.ROOM_OWNER);
         }
 
         private function _Str_9213(k:RoomWidgetUpdateInfostandUserEvent):Boolean
         {
-            if (k._Str_3672)
+            if (k.isGuildRoom)
             {
                 return k.roomControllerLevel >= RoomControllerLevel.GUILD_ADMIN;
             }

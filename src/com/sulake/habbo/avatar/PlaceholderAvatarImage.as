@@ -27,7 +27,7 @@
                 _assets = null;
                 _Str_1708 = null;
                 _figure = null;
-                _Str_2121 = null;
+                _avatarDataContainer = null;
                 _Str_614 = null;
                 if (((!(_Str_1586)) && (_Str_671)))
                 {

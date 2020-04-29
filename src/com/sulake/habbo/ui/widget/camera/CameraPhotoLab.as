@@ -199,7 +199,7 @@
             _local_6 = (this._window.findChildByName("slider_container") as IWindowContainer);
             this._Str_5076 = new CameraFxStrengthSlider(this, _local_6, this._Str_2268.windowManager.assets);
             this._Str_5076.disable();
-            CameraEffect._Str_24241(this._Str_5076._Str_797());
+            CameraEffect._Str_24241(this._Str_5076.scale());
             this._Str_20709(CameraEffect.COLORMATRIX);
         }
 

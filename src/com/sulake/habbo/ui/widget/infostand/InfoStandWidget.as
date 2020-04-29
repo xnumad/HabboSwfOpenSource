@@ -416,7 +416,7 @@
 
         private function userTagsUpdatedHandler(updateEvent:RoomWidgetUserTagsUpdateEvent):void
         {
-            if (updateEvent._Str_11453)
+            if (updateEvent.isOwnUser)
             {
                 this._ownTags = updateEvent.tags;
             }
@@ -424,7 +424,7 @@
             {
                 return;
             }
-            if (updateEvent._Str_11453)
+            if (updateEvent.isOwnUser)
             {
                 this._userView._Str_17290(updateEvent.tags);
             }

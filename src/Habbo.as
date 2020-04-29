@@ -388,7 +388,7 @@
             nextFrame();
 
             HabboMain;
-
+			
             var componentClass:Class = (getDefinitionByName("HabboMain") as Class);
 
             if (componentClass)
@@ -543,9 +543,5 @@
                 }
             }
         }
-
-
     }
-	
-	
 }

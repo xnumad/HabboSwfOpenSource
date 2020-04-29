@@ -188,22 +188,22 @@
             return this._Str_6028;
         }
 
-        public function set _Str_3246(k:Boolean):void
+        public function set amIOwner(k:Boolean):void
         {
             this._Str_4026 = k;
         }
 
-        public function get _Str_3246():Boolean
+        public function get amIOwner():Boolean
         {
             return this._Str_4026;
         }
 
-        public function set _Str_3672(k:Boolean):void
+        public function set isGuildRoom(k:Boolean):void
         {
             this._Str_6139 = k;
         }
 
-        public function get _Str_3672():Boolean
+        public function get isGuildRoom():Boolean
         {
             return this._Str_6139;
         }
@@ -218,72 +218,72 @@
             return this._roomControllerLevel;
         }
 
-        public function set _Str_3529(k:Boolean):void
+        public function set amIAnyRoomController(k:Boolean):void
         {
             this._Str_4028 = k;
         }
 
-        public function get _Str_3529():Boolean
+        public function get amIAnyRoomController():Boolean
         {
             return this._Str_4028;
         }
 
-        public function set _Str_5751(k:Boolean):void
+        public function set canTrade(k:Boolean):void
         {
             this._Str_8973 = k;
         }
 
-        public function get _Str_5751():Boolean
+        public function get canTrade():Boolean
         {
             return this._Str_8973;
         }
 
-        public function set _Str_6622(k:int):void
+        public function set canTradeReason(k:int):void
         {
             this._Str_8910 = k;
         }
 
-        public function get _Str_6622():int
+        public function get canTradeReason():int
         {
             return this._Str_8910;
         }
 
-        public function set _Str_5990(k:Boolean):void
+        public function set canBeKicked(k:Boolean):void
         {
             this._Str_9070 = k;
         }
 
-        public function get _Str_5990():Boolean
+        public function get canBeKicked():Boolean
         {
             return this._Str_9070;
         }
 
-        public function set _Str_6701(k:Boolean):void
+        public function set canBeBanned(k:Boolean):void
         {
             this._Str_8457 = k;
         }
 
-        public function get _Str_6701():Boolean
+        public function get canBeBanned():Boolean
         {
             return this._Str_8457;
         }
 
-        public function get _Str_6394():Boolean
+        public function get canBeMuted():Boolean
         {
             return this._Str_8831;
         }
 
-        public function set _Str_6394(k:Boolean):void
+        public function set canBeMuted(k:Boolean):void
         {
             this._Str_8831 = k;
         }
 
-        public function set _Str_5599(k:int):void
+        public function set targetRoomControllerLevel(k:int):void
         {
             this._Str_8858 = k;
         }
 
-        public function get _Str_5599():int
+        public function get targetRoomControllerLevel():int
         {
             return this._Str_8858;
         }
@@ -328,12 +328,12 @@
             return this._realName;
         }
 
-        public function set _Str_4330(k:Boolean):void
+        public function set allowNameChange(k:Boolean):void
         {
             this._Str_3947 = k;
         }
 
-        public function get _Str_4330():Boolean
+        public function get allowNameChange():Boolean
         {
             return this._Str_3947;
         }

@@ -21,7 +21,7 @@
 	<style id="20" assetId="sausagedog" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="21" assetId="firingmylazer" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="22" assetId="dragon" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
-	<style id="23" assetId="staff" systemStyle="false" staffOverrideable="true"/>
+	<style id="23" assetId="staff" systemStyle="false" staffOverrideable="true" allowHTML="true"/>
 	<style id="24" assetId="bats" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="25" assetId="console" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
 	<style id="26" assetId="steampunk_pipe" systemStyle="false" hcOnly="false" staffOverrideable="true"/>
@@ -35,6 +35,7 @@
     <style id="34" assetId="notification" systemStyle="true" staffOverrideable="false"/>
     <style id="35" assetId="goat" systemStyle="false" staffOverrideable="true"/>
     <style id="36" assetId="santa" systemStyle="false" staffOverrideable="true"/>
+    <style id="37" assetId="ambassador" systemStyle="false" staffOverrideable="true" ambassadorOnly="true"/>
     <style id="37" assetId="ambassador" systemStyle="false" staffOverrideable="true" ambassadorOnly="true"/>
     <style id="38" assetId="radio" hcOnly="false" systemStyle="false" staffOverrideable="false"/>
 

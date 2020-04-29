@@ -95,12 +95,12 @@
             this._ownerName = k;
         }
 
-        public function set _Str_3246(k:Boolean):void
+        public function set amIOwner(k:Boolean):void
         {
             this._Str_4026 = k;
         }
 
-        public function get _Str_3246():Boolean
+        public function get amIOwner():Boolean
         {
             return this._Str_4026;
         }
@@ -115,12 +115,12 @@
             return this._roomControllerLevel;
         }
 
-        public function set _Str_3529(k:Boolean):void
+        public function set amIAnyRoomController(k:Boolean):void
         {
             this._Str_4028 = k;
         }
 
-        public function get _Str_3529():Boolean
+        public function get amIAnyRoomController():Boolean
         {
             return this._Str_4028;
         }

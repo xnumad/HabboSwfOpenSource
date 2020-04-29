@@ -517,14 +517,14 @@
                 case _Str_5393.RWAIE_AVATAR_INFO:
                     _local_2 = (k as _Str_5393);
                     this._isRoomEnteredOwnAvatarHighlight = (((!(this._isInitialized)) && (!(this.handler.container.roomSession == null))) && (_local_2.roomIndex == this.handler.container.roomSession._Str_3871));
-                    if (_local_2._Str_4330)
+                    if (_local_2.allowNameChange)
                     {
                         this._Str_13909 = true;
                         this._Str_19679();
                     }
                     else
                     {
-                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2._Str_2908, _local_2.roomIndex, _local_2._Str_4330, null);
+                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2._Str_2908, _local_2.roomIndex, _local_2.allowNameChange, null);
                     }
                     this._isInitialized = true;
                     break;
@@ -586,7 +586,7 @@
                     {
                         if (RoomWidgetRoomObjectUpdateEvent(k).id == this._lastRollOverId)
                         {
-                            if (((this._view) && (!(this._view._Str_4330))))
+                            if (((this._view) && (!(this._view.allowNameChange))))
                             {
                                 this.removeView(this._view, false);
                                 this._lastRollOverId = -1;
@@ -709,7 +709,7 @@
                     _local_13 = (k as RoomWidgetUpdateInfostandUserEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
-                    this._Str_12674(_local_13._Str_2394, _local_13.name, _local_13._Str_2908, _local_13._Str_3313, this._userInfoData._Str_4330, _local_14);
+                    this._Str_12674(_local_13._Str_2394, _local_13.name, _local_13._Str_2908, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT:
                     _local_15 = (k as RoomWidgetRentrableBotInfostandUpdateEvent);
@@ -1031,7 +1031,7 @@
                 {
                     if (_local_7)
                     {
-                        if (_arg_6._Str_11453)
+                        if (_arg_6.isOwnUser)
                         {
                             if (this._Str_5249)
                             {

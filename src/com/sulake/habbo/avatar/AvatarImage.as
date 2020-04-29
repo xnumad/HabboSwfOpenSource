@@ -49,7 +49,7 @@
         protected var _assets:AssetAliasCollection;
         protected var _Str_586:AvatarImageCache;
         protected var _figure:AvatarFigureContainer;
-        protected var _Str_2121:IAvatarDataContainer;
+        protected var _avatarDataContainer:IAvatarDataContainer;
         protected var _Str_614:Array;
         protected var _Str_671:BitmapData;
         private var _defaultAction:IActiveActionData;
@@ -72,7 +72,7 @@
         private var _cachedBodyPartsDirection:int = -1;
         private var _cachedBodyPartsGeometryType:String = null;
         private var _cachedBodyPartsAvatarSet:String = null;
-        private var _Str_1210:EffectAssetDownloadManager;
+        private var _effectAssetDownloadManager:EffectAssetDownloadManager;
         private var _Str_1153:_Str_936;
 
         public function AvatarImage(k:AvatarStructure, _arg_2:AssetAliasCollection, _arg_3:AvatarFigureContainer, _arg_4:String, _arg_5:EffectAssetDownloadManager, _arg_6:_Str_936)
@@ -82,7 +82,7 @@
             this._Str_1945 = [];
             super();
             this._useTextures = true;
-            this._Str_1210 = _arg_5;
+            this._effectAssetDownloadManager = _arg_5;
             this._Str_581 = k;
             this._assets = _arg_2;
             this._scale = _arg_4;
@@ -121,7 +121,7 @@
                 this._assets = null;
                 this._Str_1708 = null;
                 this._figure = null;
-                this._Str_2121 = null;
+                this._avatarDataContainer = null;
                 this._Str_614 = null;
                 if (this._Str_671)
                 {
@@ -157,7 +157,7 @@
             return this._figure;
         }
 
-        public function _Str_797():String
+        public function scale():String
         {
             return this._scale;
         }
@@ -310,14 +310,17 @@
             {
                 return this._Str_671;
             }
+			
             if (this._Str_1708 == null)
             {
                 return null;
             }
+			
             if (!this._animationHasResetOnToggle)
             {
                 this._Str_962();
             }
+			
             var _local_4:String = this.getFullImageCacheKey();
             if (_local_4 != null)
             {
@@ -333,11 +336,13 @@
                     return this._Str_671;
                 }
             }
+			
             var _local_5:AvatarCanvas = this._Str_581.getCanvas(this._scale, this._Str_1708.definition.geometryType);
             if (_local_5 == null)
             {
                 return null;
             }
+			
             if ((((this._Str_1586) || (this._Str_671 == null)) || ((!(this._Str_671.width == _local_5.width)) || (!(this._Str_671.height == _local_5.height)))))
             {
                 if (((!(this._Str_671 == null)) && (!(this._Str_1586))))
@@ -347,6 +352,7 @@
                 this._Str_671 = new BitmapData(_local_5.width, _local_5.height, true, 0);
                 this._Str_1586 = false;
             }
+			
             var _local_6:Array = this.getBodyParts(k, this._Str_1708.definition.geometryType, this._Str_1668);
             this._Str_671.lock();
             this._Str_671.fillRect(this._Str_671.rect, 0);
@@ -371,9 +377,9 @@
             }
             this._Str_671.unlock();
             this._useTextures = false;
-            if (this._Str_2121 != null)
+            if (this._avatarDataContainer != null)
             {
-                if (this._Str_2121.paletteIsGrayscale)
+                if (this._avatarDataContainer.paletteIsGrayscale)
                 {
                     _local_13 = this.convertToGrayscale(this._Str_671);
                     if (this._Str_671)
@@ -381,7 +387,7 @@
                         this._Str_671.dispose();
                     }
                     this._Str_671 = _local_13;
-                    this._Str_671.paletteMap(this._Str_671, this._Str_671.rect, new Point(0, 0), this._Str_2121.reds, [], []);
+                    this._Str_671.paletteMap(this._Str_671, this._Str_671.rect, new Point(0, 0), this._avatarDataContainer.reds, [], []);
                 }
                 else
                 {
@@ -533,9 +539,9 @@
                 {
                     if (k.actionType == AvatarAction.EFFECT)
                     {
-                        if (!this._Str_1210.isReady(parseInt(k.actionParameter)))
+                        if (!this._effectAssetDownloadManager.isReady(parseInt(k.actionParameter)))
                         {
-                            this._Str_1210._Str_1914(parseInt(k.actionParameter), this);
+                            this._effectAssetDownloadManager._Str_1914(parseInt(k.actionParameter), this);
                         }
                     }
                 }
@@ -664,7 +670,7 @@
             this._isAnimating = false;
             this._gpuMode = false;
             this._layersInUse = [];
-            this._Str_2121 = null;
+            this._avatarDataContainer = null;
             this._directionOffset = 0;
             this._Str_581._Str_2101(this);
             this._Str_1708 = this._defaultAction;
@@ -814,7 +820,7 @@
                             }
                             if (_local_2.hasAvatarData())
                             {
-                                this._Str_2121 = _local_2.avatarData;
+                                this._avatarDataContainer = _local_2.avatarData;
                             }
                         }
                     }
@@ -860,9 +866,9 @@
             this._useTextures = true;
         }
 
-        public function get _Str_920():IAvatarDataContainer
+        public function get AvatarDataContainer():IAvatarDataContainer
         {
-            return this._Str_2121;
+            return this._avatarDataContainer;
         }
 
         private function convertToGrayscale(k:BitmapData, _arg_2:String="CHANNELS_EQUAL"):BitmapData

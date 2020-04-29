@@ -538,7 +538,7 @@
             }
             for each (_local_2 in k)
             {
-                if ((((this._Str_17244) && ((_local_2.id == _Str_7004) || (_local_2.id == _Str_8841))) || ((this._Str_2366 > 0) && (_local_2.id == _Str_8841))))
+                if ((this._Str_17244) && ((_local_2.id == _Str_7004)))// || (_local_2.id == _Str_8841))) || ((this._Str_2366 > 0) && (_local_2.id == _Str_8841))))
                 {
                 }
                 else
@@ -1130,7 +1130,7 @@
             {
                 return;
             }
-            var k:* = (this._Str_2272.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = (this._Str_2272.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_access_disclaimer").visible = k;
         }
 
@@ -1145,7 +1145,7 @@
             {
                 return;
             }
-            var k:* = (this._Str_2272.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = false;//(this._Str_2272.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_rights_container").visible = k;
             this._window.findChildByName("normal_rights_container").visible = (!(k));
             if (k)

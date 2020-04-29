@@ -2342,7 +2342,7 @@
 
         public function isDraggable(k:IPurchasableOffer):Boolean
         {
-            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomController) || ((this._roomSession._Str_3672) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this._Str_19136(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
+            return ((((((((getBoolean("catalog.drag_and_drop")) && (!(this._roomSession == null))) && ((this._catalogViewer._Str_3854 == null) || (this._catalogViewer._Str_3854._Str_21031))) && (((this._catalogType == CatalogType.NORMAL) && ((this._roomSession.isRoomController) || ((this._roomSession.isGuildRoom) && (this._roomSession.roomControllerLevel >= RoomControllerLevel.GUILD_MEMBER)))) || ((this._catalogType == CatalogType.BUILDER) && (this._Str_19136(k) == BuilderFurniPlaceableStatus._Str_8891)))) && (!(k.pricingModel == Offer.PRICING_MODEL_BUNDLE))) && (!(k.pricingModel == Offer.PRICING_MODEL_MULTI))) && (!(k.product == null))) && (!(k.product.productType == ProductTypeEnum.EFFECT))) && (!(k.product.productType == ProductTypeEnum.HABBO_CLUB));
         }
 
         public function _Str_19136(k:IPurchasableOffer):int
@@ -2367,7 +2367,7 @@
             {
                 return BuilderFurniPlaceableStatus._Str_10467;
             }
-            if (((this.roomSession._Str_3672) && (!(getBoolean("builders.club.furniture.placement.group.room.enabled")))))
+            if (((this.roomSession.isGuildRoom) && (!(getBoolean("builders.club.furniture.placement.group.room.enabled")))))
             {
                 return BuilderFurniPlaceableStatus._Str_14160;
             }

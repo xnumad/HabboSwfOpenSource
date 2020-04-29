@@ -10,7 +10,7 @@
           <children>
             <tab_button x="0" y="0" width="185" height="32" params="17" style="3" name="tab_1" caption="%24%7Bnavigator.roomsettings.tab.1%7D" id="1"/>
             <tab_button x="185" y="0" width="185" height="32" params="17" style="3" name="tab_2" caption="%24%7Bnavigator.roomsettings.tab.2%7D" id="2"/>
-            <tab_button x="370" y="0" width="185" height="32" params="131089" style="3" name="tab_3" caption="%24%7Bnavigator.roomsettings.tab.3%7D" id="3"/>
+            <tab_button x="370" y="0" width="185" height="32" params="17" style="3" name="tab_3" caption="%24%7Bnavigator.roomsettings.tab.3%7D" id="3"/>
             <tab_button x="555" y="0" width="186" height="32" params="17" style="3" name="tab_4" caption="%24%7Bnavigator.roomsettings.tab.4%7D" id="4"/>
             <tab_button x="741" y="0" width="185" height="32" params="17" style="3" name="tab_5" caption="%24%7Bnavigator.roomsettings.tab.5%7D" id="5"/>
           </children>

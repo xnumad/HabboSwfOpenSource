@@ -590,12 +590,12 @@
             this._tradeMode = k;
         }
 
-        public function get _Str_3672():Boolean
+        public function get isGuildRoom():Boolean
         {
             return this._isGuildRoom;
         }
 
-        public function set _Str_3672(k:Boolean):void
+        public function set isGuildRoom(k:Boolean):void
         {
             this._isGuildRoom = k;
         }

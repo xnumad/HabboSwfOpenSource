@@ -1,3 +1,9 @@
+-Add Whiper group
+
+-RC4 activate
+
+-Remove Ducket in purse, formatting achievements score and credits, enable give/remove rights in group room
+
 -ModTool icon hidden for player
 
 -TvYoutube disabled box and thumbnail fixed

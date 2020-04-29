@@ -469,7 +469,7 @@
                                             _local_29 = new Point(0, 0);
                                             if (_local_26 != null)
                                             {
-                                                _local_32 = _local_28._Str_920;
+                                                _local_32 = _local_28.AvatarDataContainer;
                                                 if (_local_32 != null)
                                                 {
                                                 }
@@ -613,7 +613,7 @@
                 {
                     _local_13 = (_local_13 - 8);
                 }
-                _local_14 = ((((((_arg_2._Str_797() + "_") + _local_6.member) + "_") + _local_13) + "_") + _local_9);
+                _local_14 = ((((((_arg_2.scale() + "_") + _local_6.member) + "_") + _local_13) + "_") + _local_9);
                 _local_15 = _arg_2.getAsset(_local_14);
                 if (_local_15 == null)
                 {

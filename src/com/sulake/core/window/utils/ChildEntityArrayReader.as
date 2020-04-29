@@ -5,28 +5,28 @@
 
     public class ChildEntityArrayReader implements IChildEntityArrayReader 
     {
-        protected var _Str_2156:Vector.<IChildEntity>;
+        protected var messageArray:Vector.<IChildEntity>;
 
         public function ChildEntityArrayReader()
         {
-            this._Str_2156 = new Vector.<IChildEntity>();
+            this.messageArray = new Vector.<IChildEntity>();
             super();
         }
 
         public function get numChildren():int
         {
-            return this._Str_2156.length;
+            return this.messageArray.length;
         }
 
         public function getChildAt(k:int):IChildEntity
         {
-            return this._Str_2156[k];
+            return this.messageArray[k];
         }
 
         public function getChildByID(k:int):IChildEntity
         {
             var _local_2:IChildEntity;
-            for each (_local_2 in this._Str_2156)
+            for each (_local_2 in this.messageArray)
             {
                 if (_local_2.id == k)
                 {
@@ -39,7 +39,7 @@
         public function getChildByName(k:String):IChildEntity
         {
             var _local_2:IChildEntity;
-            for each (_local_2 in this._Str_2156)
+            for each (_local_2 in this.messageArray)
             {
                 if (_local_2.name == k)
                 {
@@ -51,14 +51,14 @@
 
         public function getChildIndex(k:IChildEntity):int
         {
-            return this._Str_2156.indexOf(k);
+            return this.messageArray.indexOf(k);
         }
 
         public function groupChildrenWithID(k:uint, _arg_2:Array):uint
         {
             var _local_3:IChildEntity;
             var _local_4:uint;
-            for each (_local_3 in this._Str_2156)
+            for each (_local_3 in this.messageArray)
             {
                 if (_local_3.id == k)
                 {

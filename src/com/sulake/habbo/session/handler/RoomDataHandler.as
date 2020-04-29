@@ -41,7 +41,7 @@
             }
             var _local_5:_Str_2370 = _local_3.data;
             _local_4._Str_3827 = _local_5._Str_3827;
-            _local_4._Str_3672 = (!(_local_5.habboGroupId == 0));
+            _local_4.isGuildRoom = (!(_local_5.habboGroupId == 0));
             _local_4._Str_2738 = _local_5._Str_2738;
             _local_4._Str_9439 = _local_5._Str_5667;
             _local_4._Str_4418 = _local_3._Str_4418;

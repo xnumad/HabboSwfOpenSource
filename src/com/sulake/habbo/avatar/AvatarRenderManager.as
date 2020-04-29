@@ -59,9 +59,9 @@
         override protected function get dependencies():Vector.<ComponentDependency>
         {
             return ((this._inNuxFlow) ? super.dependencies : (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
-"type":Event.COMPLETE,
-"callback":this.onConfigurationComplete
-}])])));
+			"type":Event.COMPLETE,
+			"callback":this.onConfigurationComplete
+			}])])));
         }
 
         override protected function initComponent():void

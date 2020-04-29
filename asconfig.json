@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"source-path": [
+			"src"
+		],
+		"output": "bin/CoompileHabbo.swf",
+		"default-frame-rate": 30,
+		"default-background-color": "#FFFFFF",
+		"default-size": {
+			"width": 800,
+			"height": 600
+		},
+		"target-player": "25.0",
+		"accessible": false,
+		"benchmark": false,
+		"optimize": true,
+		"show-unused-type-selector-warnings": true,
+		"strict": true,
+		"use-network": true,
+		"use-resource-bundle-metadata": true,
+		"warnings": true,
+		"verbose-stacktraces": false,
+		"static-link-runtime-shared-libraries": true
+	},
+	"files": [
+		"src/Habbo.as"
+	]
+}

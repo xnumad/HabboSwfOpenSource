@@ -40,7 +40,7 @@
             return this._Str_2775;
         }
 
-        public function get _Str_4330():Boolean
+        public function get allowNameChange():Boolean
         {
             return this._Str_3947;
         }

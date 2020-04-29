@@ -48,7 +48,7 @@
             this._sliderContainer.visible = true;
         }
 
-        public function _Str_797():int
+        public function scale():int
         {
             return this._referenceWidth;
         }

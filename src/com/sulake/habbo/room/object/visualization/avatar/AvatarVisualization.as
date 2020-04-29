@@ -204,7 +204,7 @@
                         _local_13 = (_local_13 - 8);
                     }
                 }
-                _local_15 = ((((((this._activeAvatarImage._Str_797() + "_") + _local_4.member) + "_") + _local_13) + "_") + _local_8);
+                _local_15 = ((((((this._activeAvatarImage.scale() + "_") + _local_4.member) + "_") + _local_13) + "_") + _local_8);
                 _local_16 = this._activeAvatarImage.getAsset(_local_15);
                 if (_local_16 != null)
                 {
@@ -241,7 +241,7 @@
                     _local_3.push(_local_6);
                 }
             }
-            _local_5 = this._activeAvatarImage._Str_920;
+            _local_5 = this._activeAvatarImage.AvatarDataContainer;
             if (((!(_local_5 == null)) && (_local_5.paletteIsGrayscale)))
             {
                 _local_18 = _local_5.reds[0].toString();
@@ -1059,7 +1059,7 @@
                                     _local_35 = (_local_35 - 8);
                                 }
                             }
-                            _local_36 = ((((((this._activeAvatarImage._Str_797() + "_") + _local_23.member) + "_") + _local_35) + "_") + _local_31);
+                            _local_36 = ((((((this._activeAvatarImage.scale() + "_") + _local_23.member) + "_") + _local_35) + "_") + _local_31);
                             _local_37 = this._activeAvatarImage.getAsset(_local_36);
                             if (_local_37 == null) continue;
                             _local_19.asset = (_local_37.content as BitmapData);

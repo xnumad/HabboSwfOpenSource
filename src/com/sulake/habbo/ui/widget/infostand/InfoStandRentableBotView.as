@@ -127,7 +127,7 @@
             this._Str_2304("whisper", false);
             this._Str_2304("ignore", false);
             this._Str_2304("unignore", false);
-            this._Str_2304("pick", ((k.ownerId > -1) && ((k._Str_3246) || (k._Str_3529))));
+            this._Str_2304("pick", ((k.ownerId > -1) && ((k.amIOwner) || (k.amIAnyRoomController))));
             this.updateWindow();
         }
 

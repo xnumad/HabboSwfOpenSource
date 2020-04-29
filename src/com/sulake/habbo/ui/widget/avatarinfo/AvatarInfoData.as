@@ -29,22 +29,22 @@
             return this._isIgnored;
         }
 
-        public function get _Str_5751():Boolean
+        public function get canTrade():Boolean
         {
             return this._canTrade;
         }
 
-        public function get _Str_6622():int
+        public function get canTradeReason():int
         {
             return this._canTradeReason;
         }
 
-        public function get _Str_5990():Boolean
+        public function get canBeKicked():Boolean
         {
             return this._canBeKicked;
         }
 
-        public function get _Str_6701():Boolean
+        public function get canBeBanned():Boolean
         {
             return this._canBeBanned;
         }
@@ -54,12 +54,12 @@
             return this._canBeAskedAsFriend;
         }
 
-        public function get _Str_3246():Boolean
+        public function get amIOwner():Boolean
         {
             return this._amIOwner;
         }
 
-        public function get _Str_3529():Boolean
+        public function get amIAnyRoomController():Boolean
         {
             return this._amIAnyRoomController;
         }
@@ -69,22 +69,22 @@
             return this._respectLeft;
         }
 
-        public function get _Str_11453():Boolean
+        public function get isOwnUser():Boolean
         {
             return this._isOwnUser;
         }
 
-        public function get _Str_4330():Boolean
+        public function get allowNameChange():Boolean
         {
             return this._allowNameChange;
         }
 
-        public function get _Str_3672():Boolean
+        public function get isGuildRoom():Boolean
         {
             return this._isGuildRoom;
         }
 
-        public function get _Str_8826():int
+        public function get carryItemType():int
         {
             return this._carryItemType;
         }
@@ -94,7 +94,7 @@
             return this._myRoomControllerLevel;
         }
 
-        public function get _Str_5599():int
+        public function get targetRoomControllerLevel():int
         {
             return this._targetRoomControllerLevel;
         }
@@ -104,32 +104,32 @@
             this._isIgnored = k;
         }
 
-        public function set _Str_5751(k:Boolean):void
+        public function set canTrade(k:Boolean):void
         {
             this._canTrade = k;
         }
 
-        public function set _Str_6622(k:int):void
+        public function set canTradeReason(k:int):void
         {
             this._canTradeReason = k;
         }
 
-        public function set _Str_5990(k:Boolean):void
+        public function set canBeKicked(k:Boolean):void
         {
             this._canBeKicked = k;
         }
 
-        public function set _Str_6701(k:Boolean):void
+        public function set canBeBanned(k:Boolean):void
         {
             this._canBeBanned = k;
         }
 
-        public function get _Str_6394():Boolean
+        public function get canBeMuted():Boolean
         {
             return this._canBeMuted;
         }
 
-        public function set _Str_6394(k:Boolean):void
+        public function set canBeMuted(k:Boolean):void
         {
             this._canBeMuted = k;
         }
@@ -139,12 +139,12 @@
             this._canBeAskedAsFriend = k;
         }
 
-        public function set _Str_3246(k:Boolean):void
+        public function set amIOwner(k:Boolean):void
         {
             this._amIOwner = k;
         }
 
-        public function set _Str_3529(k:Boolean):void
+        public function set amIAnyRoomController(k:Boolean):void
         {
             this._amIAnyRoomController = k;
         }
@@ -154,22 +154,22 @@
             this._respectLeft = k;
         }
 
-        public function set _Str_11453(k:Boolean):void
+        public function set isOwnUser(k:Boolean):void
         {
             this._isOwnUser = k;
         }
 
-        public function set _Str_4330(k:Boolean):void
+        public function set allowNameChange(k:Boolean):void
         {
             this._allowNameChange = k;
         }
 
-        public function set _Str_3672(k:Boolean):void
+        public function set isGuildRoom(k:Boolean):void
         {
             this._isGuildRoom = k;
         }
 
-        public function set _Str_8826(k:int):void
+        public function set carryItemType(k:int):void
         {
             this._carryItemType = k;
         }
@@ -179,7 +179,7 @@
             this._myRoomControllerLevel = k;
         }
 
-        public function set _Str_5599(k:int):void
+        public function set targetRoomControllerLevel(k:int):void
         {
             this._targetRoomControllerLevel = k;
         }
@@ -196,21 +196,21 @@
 
         public function populate(k:RoomWidgetUpdateInfostandUserEvent):void
         {
-            this._amIAnyRoomController = k._Str_3529;
+            this._amIAnyRoomController = k.amIAnyRoomController;
             this._myRoomControllerLevel = k.roomControllerLevel;
-            this._amIOwner = k._Str_3246;
+            this._amIOwner = k.amIOwner;
             this._canBeAskedAsFriend = k.canBeAskedForAFriend;
-            this._canBeKicked = k._Str_5990;
-            this._canBeBanned = k._Str_6701;
-            this._canBeMuted = k._Str_6394;
-            this._canTrade = k._Str_5751;
-            this._canTradeReason = k._Str_6622;
+            this._canBeKicked = k.canBeKicked;
+            this._canBeBanned = k.canBeBanned;
+            this._canBeMuted = k.canBeMuted;
+            this._canTrade = k.canTrade;
+            this._canTradeReason = k.canTradeReason;
             this._isIgnored = k.isIgnored;
             this._respectLeft = k.petRespectLeft;
             this._isOwnUser = (k.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
-            this._allowNameChange = k._Str_4330;
-            this._isGuildRoom = k._Str_3672;
-            this._targetRoomControllerLevel = k._Str_5599;
+            this._allowNameChange = k.allowNameChange;
+            this._isGuildRoom = k.isGuildRoom;
+            this._targetRoomControllerLevel = k.targetRoomControllerLevel;
             this._carryItemType = k._Str_3249;
             this._isFriend = k.isFriend;
             this._isAmbassador = k._Str_18096;

@@ -57,8 +57,8 @@
         function set isRoomController(_arg_1:Boolean):void;
         function set roomControllerLevel(_arg_1:int):void;
         function get roomControllerLevel():int;
-        function get _Str_3672():Boolean;
-        function set _Str_3672(_arg_1:Boolean):void;
+        function get isGuildRoom():Boolean;
+        function set isGuildRoom(_arg_1:Boolean):void;
         function get _Str_19282():Boolean;
         function set _Str_2738(_arg_1:int):void;
         function get _Str_3827():int;

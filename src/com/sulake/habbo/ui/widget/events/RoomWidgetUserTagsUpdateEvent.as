@@ -26,7 +26,7 @@
             return this._tags;
         }
 
-        public function get _Str_11453():Boolean
+        public function get isOwnUser():Boolean
         {
             return this._Str_8426;
         }

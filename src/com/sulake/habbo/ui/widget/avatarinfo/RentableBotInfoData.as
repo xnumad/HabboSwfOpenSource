@@ -46,17 +46,17 @@
             return this._isIgnored;
         }
 
-        public function get _Str_3246():Boolean
+        public function get amIOwner():Boolean
         {
             return this._amIOwner;
         }
 
-        public function get _Str_3529():Boolean
+        public function get amIAnyRoomController():Boolean
         {
             return this._amIAnyRoomController;
         }
 
-        public function get _Str_8826():int
+        public function get carryItemType():int
         {
             return this._carryItemType;
         }
@@ -66,17 +66,17 @@
             this._isIgnored = k;
         }
 
-        public function set _Str_3246(k:Boolean):void
+        public function set amIOwner(k:Boolean):void
         {
             this._amIOwner = k;
         }
 
-        public function set _Str_3529(k:Boolean):void
+        public function set amIAnyRoomController(k:Boolean):void
         {
             this._amIAnyRoomController = k;
         }
 
-        public function set _Str_8826(k:int):void
+        public function set carryItemType(k:int):void
         {
             this._carryItemType = k;
         }
@@ -114,9 +114,9 @@
             }
             this.id = k._Str_2394;
             this.roomIndex = k._Str_3313;
-            this._Str_3246 = k._Str_3246;
-            this._Str_3529 = k._Str_3529;
-            this._Str_8826 = k._Str_3249;
+            this.amIOwner = k.amIOwner;
+            this.amIAnyRoomController = k.amIAnyRoomController;
+            this.carryItemType = k._Str_3249;
             this._Str_2899 = k._Str_2899;
             this._name = k.name;
         }

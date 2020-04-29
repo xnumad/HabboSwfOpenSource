@@ -45,6 +45,7 @@
         function getGroupBadgeSmallAssetName(_arg_1:String):String;
         function isAccountSafetyLocked():Boolean;
         function isIgnored(_arg_1:String):Boolean;
+        function whiperGroup(_arg_1:String):void;
         function ignoreUser(_arg_1:String):void;
         function unignoreUser(_arg_1:String):void;
         function get petRespectLeft():int;

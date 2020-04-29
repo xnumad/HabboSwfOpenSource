@@ -16,7 +16,7 @@
         function setDirection(_arg_1:String, _arg_2:int):void;
         function setDirectionAngle(_arg_1:String, _arg_2:int):void;
         function _Str_953(_arg_1:int=1):void;
-        function _Str_797():String;
+        function scale():String;
         function _Str_754():Array;
         function getLayerData(_arg_1:ISpriteDataContainer):IAnimationLayerData;
         function getAsset(_arg_1:String):BitmapDataAsset;
@@ -28,7 +28,7 @@
         function _Str_913():void;
         function _Str_962():void;
         function appendAction(_arg_1:String, ... _args):Boolean;
-        function get _Str_920():IAvatarDataContainer;
+        function get AvatarDataContainer():IAvatarDataContainer;
         function isPlaceholder():Boolean;
         function _Str_998():void;
         function get _Str_677():Boolean;

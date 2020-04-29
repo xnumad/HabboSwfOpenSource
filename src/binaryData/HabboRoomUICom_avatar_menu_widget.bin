@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><layout name="avatar_menu_widget" width="151" height="1273" version="0.1" uid="4567E775-0F5A-6C0E-0FC5-D0045B44A925">
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="avatar_menu_widget" width="151" height="1273" version="0.1" uid="4567E775-0F5A-6C0E-0FC5-D0045B44A925">
   <window>
     <bubble x="0" y="-260" width="151" height="1273" params="1048865" style="0" color="0x06e6b67" treshold="0">
       <children>
@@ -85,7 +86,28 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="81" width="137" height="26" params="144" style="3" name="respect" color="0x00" tags="action">
+
+              <container x="1" y="81" width="137" height="26" params="144" style="3" name="group" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="137" height="16" params="144" style="0" name="label" caption="%24%7Binfostand.button.group_whisper%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+
+                <container x="1" y="108" width="137" height="26" params="144" style="3" name="respect" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
                       <children>
@@ -104,7 +126,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="108" width="137" height="26" params="144" style="3" name="blow" color="0x00" tags="action">
+                <container x="1" y="135" width="137" height="26" params="144" style="3" name="blow" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
                       <children>
@@ -123,7 +145,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="135" width="137" height="26" params="144" style="3" name="perform" color="0x00" tags="action">
+                <container x="1" y="162" width="137" height="26" params="144" style="3" name="perform" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
                       <children>
@@ -143,7 +165,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="162" width="137" height="26" params="144" style="3" name="relationship" color="0x00" tags="action">
+                <container x="1" y="189" width="137" height="26" params="144" style="3" name="relationship" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
                       <children>
@@ -163,7 +185,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="189" width="137" height="26" params="144" style="3" name="kick" color="0x00" tags="moderate">
+                <container x="1" y="216" width="137" height="26" params="144" style="3" name="kick" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -182,7 +204,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="216" width="137" height="26" params="144" style="3" name="mute" color="0x00" tags="moderate">
+                <container x="1" y="243" width="137" height="26" params="144" style="3" name="mute" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -202,7 +224,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="243" width="137" height="26" params="144" style="3" name="mute_2min" color="0x00" tags="moderate">
+                <container x="1" y="270" width="137" height="26" params="144" style="3" name="mute_2min" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -221,7 +243,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="270" width="137" height="26" params="144" style="3" name="mute_5min" color="0x00" tags="moderate">
+                <container x="1" y="297" width="137" height="26" params="144" style="3" name="mute_5min" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -240,7 +262,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="297" width="137" height="26" params="144" style="3" name="mute_10min" color="0x00" tags="moderate">
+                <container x="1" y="324" width="137" height="26" params="144" style="3" name="mute_10min" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -259,7 +281,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="324" width="137" height="26" params="144" style="3" name="ban_with_duration" color="0x00" tags="moderate">
+                <container x="1" y="351" width="137" height="26" params="144" style="3" name="ban_with_duration" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -279,7 +301,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="351" width="137" height="26" params="144" style="3" name="ban_hour" color="0x00" tags="moderate">
+                <container x="1" y="378" width="137" height="26" params="144" style="3" name="ban_hour" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -298,7 +320,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="378" width="137" height="26" params="144" style="3" name="ban_day" color="0x00" tags="moderate">
+                <container x="1" y="405" width="137" height="26" params="144" style="3" name="ban_day" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -317,7 +339,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="405" width="137" height="26" params="144" style="3" name="perm_ban" color="0x00" tags="moderate">
+                <container x="1" y="432" width="137" height="26" params="144" style="3" name="perm_ban" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -336,7 +358,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="432" width="137" height="26" params="144" style="3" name="give_rights" color="0x00" tags="moderate">
+                <container x="1" y="459" width="137" height="26" params="144" style="3" name="give_rights" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -355,7 +377,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="459" width="137" height="26" params="144" style="3" name="remove_rights" color="0x00" tags="moderate">
+                <container x="1" y="486" width="137" height="26" params="144" style="3" name="remove_rights" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -374,7 +396,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="486" width="137" height="26" params="144" style="3" name="unignore" color="0x00" tags="moderate">
+                <container x="1" y="513" width="137" height="26" params="144" style="3" name="unignore" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -393,7 +415,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="513" width="137" height="26" params="144" style="3" name="ignore" color="0x00" tags="moderate">
+                <container x="1" y="540" width="137" height="26" params="144" style="3" name="ignore" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -412,7 +434,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="540" width="137" height="26" params="144" style="3" name="report" color="0x00" tags="moderate">
+                <container x="1" y="567" width="137" height="26" params="144" style="3" name="report" color="0x00" tags="moderate">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="moderate">
                       <children>
@@ -431,7 +453,7 @@
                     </container_button>
                   </children>
                 </container>
-                <container x="1" y="567" width="137" height="26" params="144" style="3" name="moderate" color="0x00" tags="action">
+                <container x="1" y="594" width="137" height="26" params="144" style="3" name="moderate" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
                       <children>
@@ -451,7 +473,7 @@
                     </container_button>
                   </children>
                 </container>
-                <itemgrid_vertical x="1" y="594" width="137" height="25" params="144" style="0" name="relationship_grid" tags="grid">
+                <itemgrid_vertical x="1" y="621" width="137" height="25" params="144" style="0" name="relationship_grid" tags="grid">
                   <children>
                     <container x="0" y="0" width="45" height="25" params="16" style="0" name="relationship_heart">
                       <children>
@@ -564,7 +586,46 @@
                       </children>
                     </container_button>
                   </children>
-                </container>                <container x="1" y="701" width="137" height="26" params="144" style="3" name="change_bot_name" color="0x00" tags="action">                  <children>                    <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">                      <children>                        <text x="3" y="9" width="137" height="16" params="144" style="0" name="label" caption="%24%7Bavatar.widget.change_bot_name%7D">                          <variables>                            <var key="auto_size" value="center" type="String"/>                            <var key="font_size" value="11" type="uint"/>                            <var key="text_color" value="0xffffff" type="hex"/>                            <var key="text_style" value="u_regular" type="String"/>                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>                            <var key="underline" value="true" type="Boolean"/>                            <var key="spacing" value="0" type="Number"/>                            <var key="leading" value="0" type="Number"/>                          </variables>                        </text>                      </children>                    </container_button>                  </children>                </container>                <container x="1" y="728" width="137" height="26" params="144" style="3" name="change_bot_motto" color="0x00" tags="action">                  <children>                    <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">                      <children>                        <text x="3" y="9" width="137" height="16" params="144" style="0" name="label" caption="%24%7Bavatar.widget.change_bot_motto%7D">                          <variables>                            <var key="auto_size" value="center" type="String"/>                            <var key="font_size" value="11" type="uint"/>                            <var key="text_color" value="0xffffff" type="hex"/>                            <var key="text_style" value="u_regular" type="String"/>                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>                            <var key="spacing" value="0" type="Number"/>                            <var key="leading" value="0" type="Number"/>                          </variables>                        </text>                      </children>                    </container_button>                  </children>                </container>
+                </container>
+                <container x="1" y="701" width="137" height="26" params="144" style="3" name="change_bot_name" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="137" height="16" params="144" style="0" name="label" caption="%24%7Bavatar.widget.change_bot_name%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="underline" value="true" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
+                <container x="1" y="728" width="137" height="26" params="144" style="3" name="change_bot_motto" color="0x00" tags="action">
+                  <children>
+                    <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
+                      <children>
+                        <text x="3" y="9" width="137" height="16" params="144" style="0" name="label" caption="%24%7Bavatar.widget.change_bot_motto%7D">
+                          <variables>
+                            <var key="auto_size" value="center" type="String"/>
+                            <var key="font_size" value="11" type="uint"/>
+                            <var key="text_color" value="0xffffff" type="hex"/>
+                            <var key="text_style" value="u_regular" type="String"/>
+                            <var key="mouse_wheel_enabled" value="false" type="Boolean"/>
+                            <var key="spacing" value="0" type="Number"/>
+                            <var key="leading" value="0" type="Number"/>
+                          </variables>
+                        </text>
+                      </children>
+                    </container_button>
+                  </children>
+                </container>
                 <container x="1" y="755" width="137" height="26" params="144" style="3" name="dress_up" color="0x00" tags="action">
                   <children>
                     <container_button x="-3" y="-4" width="143" height="35" params="2193" style="3" name="button" color="0x02d2a27" tags="action">
@@ -955,7 +1016,7 @@
                 <var key="resize_on_item_update" value="true" type="Boolean"/>
               </variables>
             </itemlist_vertical>
-            <region x="4" y="1270" width="136" height="18" params="1169" style="0" name="minimize" treshold="0">
+            <region x="4" y="1297" width="136" height="18" params="1169" style="0" name="minimize" treshold="0">
               <children>
                 <icon x="62" y="7" width="13" height="10" params="208" style="7" name="icon"/>
               </children>

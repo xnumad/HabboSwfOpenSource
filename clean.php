@@ -30,21 +30,18 @@ foreach ($paths as $path) {
         continue;
 
     $ext = explode('.', $file)[1];
-    if ($ext !== "as")
-        continue;
+    if ($ext !== "as") continue;
 
     $data = file_get_contents($path);
 
-    if (strpos($data, '[Embed(') === false)
-        continue;
+    if (strpos($data, '[Embed(') === false) continue;
 
     $sourceName = "";
-    if (strpos($data, 'source="') !== false) {
-        $sourceName = explode('"', explode('source="', $data)[1])[0];
-    }
+    if (strpos($data, 'source="') === false) continue;
 
-    if ($sourceName == "")
-        continue;
+    $sourceName = explode('"', explode('source="', $data)[1])[0];
+
+    if ($sourceName == "") continue;
 
     $sourceExt = explode('.', $sourceName)[1];
     if ($sourceExt != "ttf") {
@@ -77,11 +74,11 @@ foreach ($paths as $path) {
         //$deleteFile[] = $pathDir.'/'.$sourceName;
 }
 
-//foreach($deleteFile as $file) {
+foreach($deleteFile as $file) {
     //unlink($file);
-//}
+}
 
-//file_put_contents("tmp.txt", $tmp);
+file_put_contents("tmp.txt", $tmp);
 
 function getTypeDir($sourceExt) {
     if ($sourceExt == 'png')

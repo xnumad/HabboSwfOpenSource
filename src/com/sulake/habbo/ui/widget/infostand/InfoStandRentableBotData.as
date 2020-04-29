@@ -44,12 +44,12 @@
             this._userRoomId = k;
         }
 
-        public function set _Str_3246(k:Boolean):void
+        public function set amIOwner(k:Boolean):void
         {
             this._amIOwner = k;
         }
 
-        public function set _Str_3529(k:Boolean):void
+        public function set amIAnyRoomController(k:Boolean):void
         {
             this._amIAnyRoomController = k;
         }
@@ -79,12 +79,12 @@
             return this._userRoomId;
         }
 
-        public function get _Str_3246():Boolean
+        public function get amIOwner():Boolean
         {
             return this._amIOwner;
         }
 
-        public function get _Str_3529():Boolean
+        public function get amIAnyRoomController():Boolean
         {
             return this._amIAnyRoomController;
         }
@@ -106,8 +106,8 @@
             this.badges = k.badges;
             this._Str_3249 = k._Str_3249;
             this._Str_3313 = k._Str_3313;
-            this._Str_3246 = k._Str_3246;
-            this._Str_3529 = k._Str_3529;
+            this.amIOwner = k.amIOwner;
+            this.amIAnyRoomController = k.amIAnyRoomController;
             this._Str_2899 = k._Str_2899;
         }
     }

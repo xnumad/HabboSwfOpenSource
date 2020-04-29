@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><layout name="furni_view" width="429" height="497" version="0.1" uid="7093FB25-BA90-F4A0-8830-2C0B7A06AAF6">
+<?xml version="1.0" encoding="UTF-8"?>
+<layout name="furni_view" width="429" height="497" version="0.1" uid="7093FB25-BA90-F4A0-8830-2C0B7A06AAF6">
   <window>
     <itemlist_vertical x="0" y="0" width="429" height="497" params="16" style="0">
       <children>

@@ -58,7 +58,7 @@
                 }
                 else
                 {
-                    if (((_arg_6._Str_4330) && (k.widget._Str_13909)))
+                    if (((_arg_6.allowNameChange) && (k.widget._Str_13909)))
                     {
                         k._Str_1069 = _Str_14313;
                     }
@@ -159,8 +159,8 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    _Str_2304("change_name", this._data._Str_4330);
-                    _Str_2304("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data._Str_3246))));
+                    _Str_2304("change_name", this._data.allowNameChange);
+                    _Str_2304("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
                     _Str_2304("change_looks");
                     _Str_2304("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
                     _Str_2304("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
@@ -169,7 +169,7 @@
                     {
                         _Str_2304("effects", (!(_local_3)));
                     }
-                    _Str_2304("handitem", (((this._data._Str_8826 > 0) && (this._data._Str_8826 < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
+                    _Str_2304("handitem", (((this._data.carryItemType > 0) && (this._data.carryItemType < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
                     _local_4 = this.widget.configuration.getBoolean("avatar.expressions_menu.enabled");
                     _Str_2304(((_local_4) ? "expressions" : "wave"));
                     _local_5 = this.widget.configuration.getBoolean("avatar.signs.enabled");

@@ -53,6 +53,7 @@
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
     import com.sulake.habbo.communication.messages.parser.users._Str_5768;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
+    import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
     import flash.display.BitmapData;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
@@ -662,6 +663,11 @@
         public function get communication():IHabboCommunicationManager
         {
             return this._communicationManager;
+        }
+
+        public function whiperGroup(name:String):void
+        {
+            this.send(new WhiperGroupComposer(name));
         }
 
         public function isIgnored(k:String):Boolean

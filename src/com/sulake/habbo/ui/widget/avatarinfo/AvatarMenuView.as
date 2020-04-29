@@ -98,8 +98,8 @@
                 _Str_2304("respect", (_local_4 > 0));
                 _local_5 = this.widget.handler;
                 _local_6 = _local_5.container.sessionDataManager.isAccountSafetyLocked();
-                _Str_2304("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data._Str_5751))));
-                switch (this._data._Str_6622)
+                _Str_2304("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data.canTrade))));
+                switch (this._data.canTradeReason)
                 {
                     case RoomWidgetUpdateInfostandUserEvent._Str_14161:
                         _local_7 = "${infostand.button.trade.tooltip.shutdown}";
@@ -112,6 +112,7 @@
                 }
                 IInteractiveWindow(IWindowContainer(k.getListItemByName("trade")).getChildByName("button"))._Str_2613 = _local_7;
                 _Str_2304("whisper");
+                _Str_2304("group");
                 if (this.widget.configuration.getBoolean("handitem.give.enabled"))
                 {
                     _local_8 = _local_5.container.roomSession._Str_3871;
@@ -130,9 +131,9 @@
             }
             if (this._Str_1069 == _Str_15297)
             {
-                _Str_2304("kick", this._data._Str_5990);
-                _Str_2304("ban_with_duration", this._data._Str_6701);
-                _Str_2304("mute", this._data._Str_6394);
+                _Str_2304("kick", this._data.canBeKicked);
+                _Str_2304("ban_with_duration", this._data.canBeBanned);
+                _Str_2304("mute", this._data.canBeMuted);
                 _Str_2304("give_rights", this.isShowGiveRights());
                 _Str_2304("remove_rights", this.isShowRemoveRights());
                 _Str_2304("actions");
@@ -178,17 +179,17 @@
 
         private function moderateMenuHasContent():Boolean
         {
-            return ((((this._data._Str_5990) || (this._data._Str_6701)) || (this._data._Str_6394)) || (this.isShowGiveRights())) || (this.isShowRemoveRights());
+            return ((((this._data.canBeKicked) || (this._data.canBeBanned)) || (this._data.canBeMuted)) || (this.isShowGiveRights())) || (this.isShowRemoveRights());
         }
 
         private function isShowGiveRights():Boolean
         {
-            return ((this._data._Str_3246) && (this._data._Str_5599 < RoomControllerLevel.GUEST)) && (!(this._data._Str_3672));
+            return ((this._data.amIOwner) && (this._data.targetRoomControllerLevel < RoomControllerLevel.GUEST));// && (!(this._data.isGuildRoom));
         }
 
         private function isShowRemoveRights():Boolean
         {
-            return ((this._data._Str_3246) && (this._data._Str_5599 == RoomControllerLevel.GUEST)) && (!(this._data._Str_3672));
+            return ((this._data.amIOwner) && (this._data.targetRoomControllerLevel == RoomControllerLevel.GUEST));// && (!(this._data.isGuildRoom));
         }
 
         override protected function updateWindow():void
@@ -269,6 +270,9 @@
                     {
                         case "whisper":
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_WHISPER_USER;
+                            break;
+                        case "group":
+                            _local_5 = RoomWidgetUserActionMessage.GROUP_WHISPER;
                             break;
                         case "friend":
                             _arg_2.disable();
