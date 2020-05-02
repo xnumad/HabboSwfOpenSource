@@ -35,28 +35,28 @@
 
         override public function initializeFromIncomingMessage(k:IMessageDataWrapper):void
         {
-            var _local_4:HighScoreData;
-            var _local_5:int;
-            var _local_6:int;
+            var highscoredata:HighScoreData;
+            var amountUsers:int;
+            var iterator2:int;
             this._entries = new Vector.<HighScoreData>();
             this._state = k.readString();
             this._scoreType = k.readInteger();
             this._clearType = k.readInteger();
-            var _local_2:int = k.readInteger();
-            var _local_3:int;
-            while (_local_3 < _local_2)
+            var scoresAmount:int = k.readInteger();
+            var iterator:int;
+            while (iterator < scoresAmount)
             {
-                _local_4 = new HighScoreData();
-                _local_4.score = k.readInteger();
-                _local_5 = k.readInteger();
-                _local_6 = 0;
-                while (_local_6 < _local_5)
+                highscoredata = new HighScoreData();
+                highscoredata.score = k.readInteger();
+                amountUsers= k.readInteger();
+                iterator2 = 0;
+                while (iterator2 < amountUsers)
                 {
-                    _local_4.addUser(k.readString());
-                    _local_6++;
+                    highscoredata.addUser(k.readString());
+                    iterator2++;
                 }
-                this._entries.push(_local_4);
-                _local_3++;
+                this._entries.push(highscoredata);
+                iterator++;
             }
         }
 

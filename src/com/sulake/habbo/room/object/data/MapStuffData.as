@@ -27,17 +27,17 @@
 
         override public function initializeFromIncomingMessage(k:IMessageDataWrapper):void
         {
-            var _local_4:String;
-            var _local_5:String;
+            var key:String;
+            var value:String;
             this._data = new Map();
-            var _local_2:int = k.readInteger();
-            var _local_3:int;
-            while (_local_3 < _local_2)
+            var amount:int = k.readInteger();
+            var iterator:int;
+            while (iterator < amount)
             {
-                _local_4 = k.readString();
-                _local_5 = k.readString();
-                this._data.add(_local_4, _local_5);
-                _local_3++;
+                key = k.readString();
+                value = k.readString();
+                this._data.add(key, value);
+                iterator++;
             }
             super.initializeFromIncomingMessage(k);
         }

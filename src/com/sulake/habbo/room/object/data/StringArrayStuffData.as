@@ -21,15 +21,15 @@
 
         override public function initializeFromIncomingMessage(k:IMessageDataWrapper):void
         {
-            var _local_4:String;
+            var readout:String;
             this._data = new Array();
-            var _local_2:int = k.readInteger();
-            var _local_3:int;
-            while (_local_3 < _local_2)
+            var amount:int = k.readInteger();
+            var iterator:int;
+            while (iterator < amount)
             {
-                _local_4 = k.readString();
-                this._data.push(_local_4);
-                _local_3++;
+                readout = k.readString();
+                this._data.push(readout);
+                iterator++;
             }
             super.initializeFromIncomingMessage(k);
         }
