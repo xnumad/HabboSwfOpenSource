@@ -665,7 +665,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7373;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7384;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_7426;
-	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9764;
+	import com.sulake.habbo.communication.messages.outgoing._Str_63.RequestCatalogPage;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9801;
 	import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9862;
 	import com.sulake.habbo.communication.messages.incoming.help.*;
@@ -1926,7 +1926,7 @@
             OUTGOING_PACKETS[3997] = _Str_4348;
             OUTGOING_PACKETS[4000] = _Str_10198;
             OUTGOING_PACKETS[410] = _Str_9801;
-            OUTGOING_PACKETS[412] = _Str_9764;
+            OUTGOING_PACKETS[412] = RequestCatalogPage;
             OUTGOING_PACKETS[418] = _Str_12034;
             OUTGOING_PACKETS[433] = _Str_9911;
             OUTGOING_PACKETS[434] = _Str_11296;

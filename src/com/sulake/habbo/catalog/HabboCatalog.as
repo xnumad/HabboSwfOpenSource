@@ -127,7 +127,7 @@
     import com.sulake.habbo.catalog.navigation.ICatalogNavigator;
     import com.sulake.core.Core;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_9764;
+    import com.sulake.habbo.communication.messages.outgoing._Str_63.RequestCatalogPage;
     import com.sulake.habbo.catalog.navigation.ICatalogNode;
     import com.sulake.habbo.catalog.enum.CatalogType;
     import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_11783;
@@ -247,7 +247,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_11294;
     import com.sulake.habbo.communication.messages.outgoing._Str_63._Str_11905;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7779;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7328;
+    import com.sulake.habbo.communication.messages.parser.catalog.CatalogSearchResultParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.SelectProductEvent;
     import com.sulake.habbo.catalog.viewer.widgets.events.SetExtraPurchaseParameterEvent;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_6732;
@@ -768,7 +768,7 @@
         {
             this._Str_9330 = true;
             this._Str_17093 = k;
-            this.send(new _Str_9764(k, _arg_2, _arg_3));
+            this.send(new RequestCatalogPage(k, _arg_2, _arg_3));
         }
 
         public function _Str_22641(k:int, _arg_2:String="", _arg_3:int=1):void
@@ -2962,7 +2962,7 @@
         {
             var _local_7:Offer;
             var _local_8:IFurnitureData;
-            var _local_2:_Str_7328 = k.getParser();
+            var _local_2:CatalogSearchResultParser = k.getParser();
             var _local_3:CatalogPageMessageOfferData = _local_2._Str_17889;
             if (((!(_local_3)) || (_local_3.products.length == 0)))
             {

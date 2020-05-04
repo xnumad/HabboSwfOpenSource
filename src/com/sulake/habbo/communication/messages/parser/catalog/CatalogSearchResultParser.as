@@ -4,9 +4,9 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPageMessageOfferData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7328 implements IMessageParser 
+    public class CatalogSearchResultParser implements IMessageParser
     {
-        private var _Str_8357:CatalogPageMessageOfferData;
+        private var offerData:CatalogPageMessageOfferData;
 
 
         public function flush():Boolean
@@ -16,13 +16,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_8357 = new CatalogPageMessageOfferData(k);
+            this.offerData = new CatalogPageMessageOfferData(k);
             return true;
         }
 
         public function get _Str_17889():CatalogPageMessageOfferData
         {
-            return this._Str_8357;
+            return this.offerData;
         }
     }
 }

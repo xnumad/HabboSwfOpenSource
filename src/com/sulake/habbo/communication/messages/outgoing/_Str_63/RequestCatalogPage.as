@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_9764 implements IMessageComposer 
+    public class RequestCatalogPage implements IMessageComposer 
     {
         private var _array:Array;
 
-        public function _Str_9764(k:int, _arg_2:int, _arg_3:String)
+        public function RequestCatalogPage(_pageId:int, _usuallyMinusOne:int, _catalogType:String)
         {
-            this._array = [k, _arg_2, _arg_3];
+            this._array = [_pageId, _usuallyMinusOne, _catalogType];
         }
 
         public function dispose():void
