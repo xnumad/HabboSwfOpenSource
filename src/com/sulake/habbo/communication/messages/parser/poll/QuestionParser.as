@@ -13,7 +13,7 @@
         private var _question:Dictionary = null;
 
 
-        public function get _Str_5302():String
+        public function get pollType():String
         {
             return this._pollType;
         }
