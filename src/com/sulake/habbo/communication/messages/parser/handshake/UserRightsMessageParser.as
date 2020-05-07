@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7573 implements IMessageParser 
+    public class UserRightsMessageParser implements IMessageParser 
     {
         private var _clubLevel:int;
         private var _Str_8385:int;
