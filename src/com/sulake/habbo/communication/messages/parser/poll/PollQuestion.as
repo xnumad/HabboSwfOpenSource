@@ -36,12 +36,12 @@
             this._questionId = k;
         }
 
-        public function get _Str_7200():int
+        public function get questionType():int
         {
             return this._questionType;
         }
 
-        public function set _Str_7200(k:int):void
+        public function set questionType(k:int):void
         {
             this._questionType = k;
         }

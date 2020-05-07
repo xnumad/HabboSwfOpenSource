@@ -87,12 +87,12 @@
             var pollQuestion:PollQuestion = new PollQuestion();
             pollQuestion._Str_3218 = k.readInteger();
             pollQuestion.sortOrder = k.readInteger();
-            pollQuestion._Str_7200 = k.readInteger();
+            pollQuestion.questionType = k.readInteger();
             pollQuestion._Str_18860 = k.readString();
             pollQuestion._Str_18099 = k.readInteger();
             pollQuestion._Str_22139 = k.readInteger();
             pollQuestion._Str_16828 = k.readInteger();
-            if (((pollQuestion._Str_7200 == 1) || (pollQuestion._Str_7200 == 2)))
+            if (((pollQuestion.questionType == 1) || (pollQuestion.questionType == 2)))
             {
                 _local_3 = 0;
                 while (_local_3 < pollQuestion._Str_16828)

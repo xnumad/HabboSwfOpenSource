@@ -160,7 +160,7 @@
                         }
                         _local_2.invalidate();
                     }
-                    switch (this._currentQuestion._Str_7200)
+                    switch (this._currentQuestion.questionType)
                     {
                         case QuestionType._Str_7537:
                             this._Str_24518(_local_2, this._currentQuestion._Str_6909);
@@ -411,7 +411,7 @@
                 question = this._questions[this._question];
             }
             this._nextQuestionType = PollQuestion._Str_12458;
-            switch (question._Str_7200)
+            switch (question.questionType)
             {
                 case QuestionType._Str_7537:
                     answerArray = this._Str_23831(question);
@@ -442,7 +442,7 @@
                     answerArray = this._Str_23417();
                     break;
                 default:
-                    throw (new Error((("Unknown poll question type: " + question._Str_7200) + "!")));
+                    throw (new Error((("Unknown poll question type: " + question.questionType) + "!")));
             }
             var answers:Array = new Array();
             var message:RoomWidgetPollMessage = new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_ANSWER, this._id);
