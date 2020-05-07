@@ -76,12 +76,12 @@
             this._questionCategory = k;
         }
 
-        public function get _Str_22139():int
+        public function get questionAnswerType():int
         {
             return this._questionAnswerType;
         }
 
-        public function set _Str_22139(k:int):void
+        public function set questionAnswerType(k:int):void
         {
             this._questionAnswerType = k;
         }

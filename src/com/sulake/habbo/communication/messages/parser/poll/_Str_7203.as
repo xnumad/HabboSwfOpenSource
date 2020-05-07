@@ -90,7 +90,7 @@
             pollQuestion.questionType = k.readInteger();
             pollQuestion.questionText = k.readString();
             pollQuestion.questionCategory = k.readInteger();
-            pollQuestion._Str_22139 = k.readInteger();
+            pollQuestion.questionAnswerType = k.readInteger();
             pollQuestion._Str_16828 = k.readInteger();
             if (((pollQuestion.questionType == 1) || (pollQuestion.questionType == 2)))
             {
