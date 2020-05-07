@@ -86,12 +86,12 @@
             this._questionAnswerType = k;
         }
 
-        public function get _Str_16828():int
+        public function get questionAnswerCount():int
         {
             return this._questionAnswerCount;
         }
 
-        public function set _Str_16828(k:int):void
+        public function set questionAnswerCount(k:int):void
         {
             this._questionAnswerCount = k;
         }
