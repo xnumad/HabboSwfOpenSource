@@ -204,7 +204,7 @@
                 while (_local_2 < k.children.length)
                 {
                     _local_3 = k.children[_local_2];
-                    if (((_local_3) && (_local_3._Str_18099 == this._nextQuestionType)))
+                    if (((_local_3) && (_local_3.questionCategory == this._nextQuestionType)))
                     {
                         this._parentQuestionId = -1;
                         return _local_3;

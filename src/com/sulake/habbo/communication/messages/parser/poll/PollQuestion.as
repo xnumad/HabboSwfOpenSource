@@ -66,12 +66,12 @@
             this._questionText = k;
         }
 
-        public function get _Str_18099():int
+        public function get questionCategory():int
         {
             return this._questionCategory;
         }
 
-        public function set _Str_18099(k:int):void
+        public function set questionCategory(k:int):void
         {
             this._questionCategory = k;
         }
