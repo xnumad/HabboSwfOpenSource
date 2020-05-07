@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8786 implements IMessageParser 
+    public class UniqueMachineIDParser implements IMessageParser 
     {
         private var _Str_8149:String;
 
-        public function _Str_8786()
+        public function UniqueMachineIDParser()
         {
             this._Str_8149 = "";
         }
