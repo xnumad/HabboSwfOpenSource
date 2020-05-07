@@ -140,7 +140,7 @@
                     k = (this._window.findChildByName("poll_question_text") as ITextWindow);
                     if (k != null)
                     {
-                        k.text = this._currentQuestion._Str_18860;
+                        k.text = this._currentQuestion.questionText;
                     }
                     k = (this._window.findChildByName("poll_question_number") as ITextWindow);
                     if (k != null)

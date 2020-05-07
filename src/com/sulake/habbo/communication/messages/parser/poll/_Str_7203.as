@@ -88,7 +88,7 @@
             pollQuestion._Str_3218 = k.readInteger();
             pollQuestion.sortOrder = k.readInteger();
             pollQuestion.questionType = k.readInteger();
-            pollQuestion._Str_18860 = k.readString();
+            pollQuestion.questionText = k.readString();
             pollQuestion._Str_18099 = k.readInteger();
             pollQuestion._Str_22139 = k.readInteger();
             pollQuestion._Str_16828 = k.readInteger();

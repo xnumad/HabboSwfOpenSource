@@ -56,12 +56,12 @@
             this._sortOrder = sortOrder;
         }
 
-        public function get _Str_18860():String
+        public function get questionText():String
         {
             return this._questionText;
         }
 
-        public function set _Str_18860(k:String):void
+        public function set questionText(k:String):void
         {
             this._questionText = k;
         }
