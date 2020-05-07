@@ -53,7 +53,7 @@
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_10368;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_8322;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_6053;
+    import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
@@ -433,7 +433,7 @@
 
         private function onGenericError(event:IMessageEvent):void
         {
-            var parser:_Str_6053 = (event as GenericErrorEvent).getParser();
+            var parser:GenericErrorParser = (event as GenericErrorEvent).getParser();
             switch (parser.errorCode)
             {
                 case -3:

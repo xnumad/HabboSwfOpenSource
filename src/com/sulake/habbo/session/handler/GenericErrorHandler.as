@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_6053;
+    import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.events.RoomSessionErrorMessageEvent;
     import com.sulake.habbo.session.enum.GenericErrorEnum;
@@ -24,7 +24,7 @@
         private function onGenericError(k:IMessageEvent):void
         {
             var _local_4:String;
-            var _local_2:_Str_6053 = (k as GenericErrorEvent).getParser();
+            var _local_2:GenericErrorParser = (k as GenericErrorEvent).getParser();
             if (_local_2 == null)
             {
                 return;

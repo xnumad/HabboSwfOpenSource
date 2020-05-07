@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_6053;
+    import com.sulake.habbo.communication.messages.parser.handshake.GenericErrorParser;
 
     public class GenericErrorEvent extends MessageEvent implements IMessageEvent 
     {
         public function GenericErrorEvent(k:Function)
         {
-            super(k, _Str_6053);
+            super(k, GenericErrorParser);
         }
 
-        public function getParser():_Str_6053
+        public function getParser():GenericErrorParser
         {
-            return this._parser as _Str_6053;
+            return this._parser as GenericErrorParser;
         }
     }
 }
