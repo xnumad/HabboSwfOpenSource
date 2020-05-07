@@ -163,10 +163,10 @@
                     switch (this._currentQuestion.questionType)
                     {
                         case QuestionType._Str_7537:
-                            this._Str_24518(_local_2, this._currentQuestion._Str_6909);
+                            this._Str_24518(_local_2, this._currentQuestion.questionChoices);
                             break;
                         case QuestionType._Str_7059:
-                            this._parser6(_local_2, this._currentQuestion._Str_6909);
+                            this._parser6(_local_2, this._currentQuestion.questionChoices);
                             break;
                         case QuestionType._Str_13062:
                             this._Str_22247(_local_2);
@@ -250,7 +250,7 @@
                     _local_4 = _local_3.getSelected();
                     if (_local_4)
                     {
-                        _local_5 = k._Str_6909[_local_4.id];
+                        _local_5 = k.questionChoices[_local_4.id];
                         if (this._npsPoll)
                         {
                             this._nextQuestionType = _local_5._Str_19972;
@@ -304,7 +304,7 @@
                             {
                                 if (_local_6.testStateFlag(WindowState.SELECTED))
                                 {
-                                    _local_2.push(k._Str_6909[_local_4].value);
+                                    _local_2.push(k.questionChoices[_local_4].value);
                                 }
                             }
                         }
@@ -426,7 +426,7 @@
                         });
                         return;
                     }
-                    if (answerArray.length > question._Str_6909.length)
+                    if (answerArray.length > question.questionChoices.length)
                     {
                         this._widget.windowManager.alert("${win_error}", "${poll_alert_invalid_selection}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
                         {
@@ -447,7 +447,7 @@
             var answers:Array = new Array();
             var message:RoomWidgetPollMessage = new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_ANSWER, this._id);
             message._Str_3218 = question._Str_3218;
-            if (question._Str_6909.length > 0)
+            if (question.questionChoices.length > 0)
             {
                 for each (answerValue in answerArray)
                 {

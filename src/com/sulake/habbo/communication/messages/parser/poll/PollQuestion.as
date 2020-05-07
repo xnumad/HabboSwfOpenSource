@@ -106,12 +106,12 @@
             this._children = children;
         }
 
-        public function get _Str_6909():Vector.<_Str_4224>
+        public function get questionChoices():Vector.<_Str_4224>
         {
             return this._questionChoices;
         }
 
-        public function set _Str_6909(k:Vector.<_Str_4224>):void
+        public function set questionChoices(k:Vector.<_Str_4224>):void
         {
             this._questionChoices = k;
         }
