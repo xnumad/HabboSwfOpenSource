@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8280 implements IMessageParser 
+    public class InitDiffieHandshakeParser implements IMessageParser 
     {
         private var _Str_21611:String;
         private var _Str_22105:String;
