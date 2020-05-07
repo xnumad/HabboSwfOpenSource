@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9060 implements IMessageParser 
+    public class IdentityAccountsParser implements IMessageParser 
     {
         private var _Str_8999:Map;
 
