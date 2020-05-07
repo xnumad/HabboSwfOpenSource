@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8602 implements IMessageParser 
+    public class CompleteDiffieHandshakeParser implements IMessageParser 
     {
         private var _Str_20319:String;
         private var _Str_19896:Boolean = false;
