@@ -7,7 +7,7 @@
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.events._Str_3051;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.communication.messages.parser.poll._Str_7882;
+    import com.sulake.habbo.communication.messages.parser.poll.PollStartParser;
     import com.sulake.habbo.communication.messages.parser.poll._Str_7270;
     import com.sulake.habbo.communication.messages.parser.poll._Str_7203;
 
@@ -37,7 +37,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7882 = k.getParser();
+            var _local_3:PollStartParser = k.getParser();
             _local_4 = new _Str_3051(_Str_3051.RSPE_POLL_OFFER, _local_2, _local_3.id);
             _local_4.summary = _local_3.headline;
             _local_4.summary = _local_3.summary;

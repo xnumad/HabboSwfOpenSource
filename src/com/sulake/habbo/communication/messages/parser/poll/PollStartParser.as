@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7882 implements IMessageParser 
+    public class PollStartParser implements IMessageParser 
     {
         private var _id:int = -1;
         private var _type:String = "";
