@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7264 implements IMessageParser 
+    public class IsFirstLoginOfDayParser implements IMessageParser 
     {
-        private var _Str_12080:Boolean;
+        private var isFirstLoginOfDay:Boolean;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_12080 = k.readBoolean();
+            this.isFirstLoginOfDay = k.readBoolean();
             return true;
         }
 
         public function get _Str_18128():Boolean
         {
-            return this._Str_12080;
+            return this.isFirstLoginOfDay;
         }
     }
 }

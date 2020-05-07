@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.achievements.AchievementsScoreParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
-    import com.sulake.habbo.communication.messages.parser.handshake._Str_7264;
+    import com.sulake.habbo.communication.messages.parser.handshake.IsFirstLoginOfDayParser;
     import com.sulake.habbo.communication.messages.parser.users._Str_4007;
     import flash.utils.Dictionary;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
@@ -229,7 +229,7 @@
 
         private function _Str_22814(k:IMessageEvent):void
         {
-            var _local_2:_Str_7264 = (k as IsFirstLoginOfDayEvent).getParser();
+            var _local_2:IsFirstLoginOfDayParser = (k as IsFirstLoginOfDayEvent).getParser();
             this._questEngine._Str_25830(_local_2._Str_18128);
         }
 
