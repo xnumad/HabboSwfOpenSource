@@ -922,7 +922,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.*;
 	import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
-	import com.sulake.habbo.communication.messages.incoming.poll.PollStartEvent;
+	import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8563;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8693;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
@@ -1358,7 +1358,7 @@
             INCOMING_PACKETS[3776] = _Str_7527;
             INCOMING_PACKETS[378] = _Str_9492;
             INCOMING_PACKETS[3783] = _Str_4265;
-            INCOMING_PACKETS[3785] = PollStartEvent;
+            INCOMING_PACKETS[3785] = PollOfferEvent;
             INCOMING_PACKETS[3796] = _Str_7837;
             INCOMING_PACKETS[3801] = _Str_8665;
             INCOMING_PACKETS[3805] = GameStatusMessageEvent;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.session.handler
 {
     import com.sulake.habbo.communication.messages.incoming.poll._Str_8693;
-    import com.sulake.habbo.communication.messages.incoming.poll.PollStartEvent;
+    import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
     import com.sulake.habbo.communication.messages.incoming.poll._Str_8563;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -21,11 +21,11 @@
                 return;
             }
             k.addMessageEvent(new _Str_8693(this._Str_25602));
-            k.addMessageEvent(new PollStartEvent(this._Str_23305));
+            k.addMessageEvent(new PollOfferEvent(this._Str_23305));
             k.addMessageEvent(new _Str_8563(this._Str_22261));
         }
 
-        private function _Str_23305(k:PollStartEvent):void
+        private function _Str_23305(k:PollOfferEvent):void
         {
             var _local_4:_Str_3051;
             if (!k)

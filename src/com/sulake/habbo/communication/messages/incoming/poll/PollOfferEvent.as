@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.poll.PollStartParser;
 
-    public class PollStartEvent extends MessageEvent implements IMessageEvent 
+    public class PollOfferEvent extends MessageEvent implements IMessageEvent 
     {
-        public function PollStartEvent(k:Function)
+        public function PollOfferEvent(k:Function)
         {
             super(k, PollStartParser);
         }
