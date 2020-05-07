@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_15432 implements IMessageParser 
+    public class PingMessageParser implements IMessageParser 
     {
         public function flush():Boolean
         {
