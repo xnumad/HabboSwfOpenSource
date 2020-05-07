@@ -28,8 +28,8 @@
         {
             var _local_2:Map;
             var _local_3:int;
-            var _local_4:String;
-            var _local_5:int;
+            var name:String;
+            var count:int;
             this._data = new Map();
             var _local_6:int = k.readInteger();
             var _local_7:int;
@@ -37,10 +37,10 @@
             {
                 _local_2 = new Map();
                 _local_3 = k.readInteger();
-                _local_4 = k.readString();
-                _local_5 = k.readInteger();
-                _local_2.add("name", _local_4);
-                _local_2.add("count", _local_5);
+                name = k.readString();
+                count = k.readInteger();
+                _local_2.add("name", name);
+                _local_2.add("count", count);
                 this._data.add(_local_3, _local_2);
                 _local_7++;
             }
