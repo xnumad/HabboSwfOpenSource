@@ -18,7 +18,7 @@
             return this._pollType;
         }
 
-        public function get _Str_5213():int
+        public function get pollId():int
         {
             return this._pollId;
         }
