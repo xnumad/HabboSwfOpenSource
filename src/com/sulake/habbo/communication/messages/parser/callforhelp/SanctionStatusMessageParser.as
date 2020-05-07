@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7692 implements IMessageParser 
+    public class SanctionStatusMessageParser implements IMessageParser
     {
         private var _Str_21269:Boolean;
         private var _Str_20966:Boolean;

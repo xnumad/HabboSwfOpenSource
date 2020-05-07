@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_5578;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_7391;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.IWindow;
@@ -438,7 +438,7 @@
             this.addMessageEvent(new _Str_9074(this._Str_23107));
             this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new _Str_5578(this._Str_17604));
-            this.addMessageEvent(new _Str_7391(this._Str_22418));
+            this.addMessageEvent(new SanctionStatusEvent(this._Str_22418));
             this._chatEventHandler = new ChatEventHandler(this);
             this._guideHelpManager = new GuideHelpManager(this);
             this._callForHelpManager = new CallForHelpManager(this);
@@ -862,7 +862,7 @@
             this._Str_2488(new _Str_11701(k));
         }
 
-        private function _Str_22418(k:_Str_7391):void
+        private function _Str_22418(k:SanctionStatusEvent):void
         {
             this._sanctionInfo._Str_2826(k);
         }

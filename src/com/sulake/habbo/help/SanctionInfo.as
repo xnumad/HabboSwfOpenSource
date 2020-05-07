@@ -2,11 +2,11 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7692;
+    import com.sulake.habbo.communication.messages.parser.callforhelp.SanctionStatusMessageParser;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.utils.StringUtil;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_7391;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -41,14 +41,14 @@
             return this._disposed;
         }
 
-        public function _Str_2826(k:_Str_7391):void
+        public function _Str_2826(k:SanctionStatusEvent):void
         {
             this.dispose();
             this._disposed = false;
             this._window = (this._habboHelp.getXmlWindow("sanction_info") as IWindowContainer);
             this._window.center();
             this._window.procedure = this._Str_3545;
-            var _local_2:_Str_7692 = k.getParser();
+            var _local_2:SanctionStatusMessageParser = k.getParser();
             if (_local_2._Str_22005 == "cfh.reason.EMPTY")
             {
                 this._window.findChildByName("no_sanction_info").visible = true;
