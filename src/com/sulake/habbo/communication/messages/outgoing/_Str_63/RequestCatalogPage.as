@@ -6,9 +6,9 @@
     {
         private var _array:Array;
 
-        public function RequestCatalogPage(_pageId:int, _usuallyMinusOne:int, _catalogType:String)
+        public function RequestCatalogPage(_pageId:int, _offerId:int, _catalogType:String)
         {
-            this._array = [_pageId, _usuallyMinusOne, _catalogType];
+            this._array = [_pageId, _offerId, _catalogType];
         }
 
         public function dispose():void
