@@ -86,7 +86,7 @@
                 this._offers.push(new CatalogPageMessageOfferData(k));
                 _local_3++;
             }
-            this._offerId = k.readInteger();
+            this._offerId = k.readInteger(); //usually -1, whyever would a CatalogPage have an offerId anyways?
             this._acceptSeasonCurrencyAsCredits = k.readBoolean();
             if (k.bytesAvailable)
             {
