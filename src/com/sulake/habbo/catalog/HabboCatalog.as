@@ -290,35 +290,35 @@
         private var _Str_5309:Dictionary;
         private var _purse:Purse;
         private var _recyclerLogic:RecyclerLogic;
-        private var _Str_3633:IMarketPlace;
+        private var _marketplace:IMarketPlace;
         private var _mainContainer:IWindowContainer;
         private var _purchaseConfirmationDialog:PurchaseConfirmationDialog;
         private var _Str_17309:String;
         private var _Str_14119:Boolean;
         private var _Str_19689:Boolean = true;
         private var _Str_17838:Boolean = false;
-        private var _Str_20242:GiftWrappingConfiguration;
-        private var _Str_10284:ClubGiftController;
-        private var _Str_5949:ClubOfferHandler;
-        private var _Str_6818:ClubExtendController;
+        private var _giftWrappingConfiguration:GiftWrappingConfiguration;
+        private var _clubGiftController:ClubGiftController;
+        private var _clubOfferHandler:ClubOfferHandler;
+        private var _clubExtendController:ClubExtendController;
         private var _Str_7969:Map;
         private var _Str_4151:Boolean = false;
-        private var _Str_3644:IPurchasableOffer;
+        private var _purchasableOffer:IPurchasableOffer;
         private var _Str_8970:_Str_4431;
         private var _placedObjectPurchaseData:PlacedObjectPurchaseData;
         private var _Str_7793:Boolean;
         private var _Str_19190:Boolean;
-        private var _Str_2616:RoomPreviewer;
-        private var _Str_5439:GuildMembershipsController;
-        private var _Str_13406:OfferController;
+        private var _roomPreviewer:RoomPreviewer;
+        private var _guildMembershipsController:GuildMembershipsController;
+        private var _offerController:OfferController;
         private var _utils:HabboCatalogUtils;
         private var _Str_13637:Boolean = false;
         private var _Str_8001:String = null;
         private var _Str_9586:_Str_4615 = null;
-        private var _Str_4643:RequestedPage;
-        private var _Str_17093:int;
-        private var _Str_4339:RoomAdPurchaseData;
-        private var _Str_8700:RentConfirmationWindow;
+        private var _requestedPage:RequestedPage;
+        private var _pageId:int;
+        private var _roomAdPurchaseData:RoomAdPurchaseData;
+        private var _rentConfirmationWindow:RentConfirmationWindow;
         private var _Str_2432:Vector.<IMessageEvent>;
         private var _catalogType:String = "NORMAL";
         private var _Str_2509:Vector.<IFurnitureData>;
@@ -345,7 +345,7 @@
             this._purse = new Purse();
             this._utils = new HabboCatalogUtils(this);
             registerUpdateReceiver(this, 1);
-            this._Str_4643 = new RequestedPage();
+            this._requestedPage = new RequestedPage();
             k.attachComponent(new HabboClubCenter(k, 0, _arg_3), [new IIDHabboClubCenter()]);
         }
 
@@ -423,7 +423,7 @@
 
         public function get _Str_22272():GiftWrappingConfiguration
         {
-            return this._Str_20242;
+            return this._giftWrappingConfiguration;
         }
 
         public function get roomEngine():IRoomEngine
@@ -438,11 +438,11 @@
 
         public function get _Str_26451():RoomPreviewer
         {
-            if (this._Str_2616 == null)
+            if (this._roomPreviewer == null)
             {
                 this._Str_22913();
             }
-            return this._Str_2616;
+            return this._roomPreviewer;
         }
 
         public function get navigator():IHabboNavigator
@@ -589,7 +589,7 @@
             this._sessionDataManager.loadProductData(this);
             this._Str_19190 = this._Str_10258();
             this._videoOfferManager = new VideoOfferManager(this);
-            this._Str_13406 = new OfferController(this);
+            this._offerController = new OfferController(this);
             this._Str_2509 = this._sessionDataManager.getFurniData(this);
             this._Str_19956 = null;
         }
@@ -637,16 +637,16 @@
                 this._recyclerLogic = null;
             }
             this._purse = null;
-            this._Str_3633 = null;
-            if (this._Str_5949 != null)
+            this._marketplace = null;
+            if (this._clubOfferHandler != null)
             {
-                this._Str_5949.dispose();
-                this._Str_5949 = null;
+                this._clubOfferHandler.dispose();
+                this._clubOfferHandler = null;
             }
-            if (this._Str_6818 != null)
+            if (this._clubExtendController != null)
             {
-                this._Str_6818.dispose();
-                this._Str_6818 = null;
+                this._clubExtendController.dispose();
+                this._clubExtendController = null;
             }
             if (this._Str_7969 != null)
             {
@@ -654,37 +654,37 @@
                 this._Str_7969 = null;
             }
             this._roomSession = null;
-            if (this._Str_8700 != null)
+            if (this._rentConfirmationWindow != null)
             {
-                this._Str_8700.dispose();
-                this._Str_8700 = null;
+                this._rentConfirmationWindow.dispose();
+                this._rentConfirmationWindow = null;
             }
             this._Str_4663();
             this._Str_4151 = false;
             this._Str_8970 = null;
-            if (this._Str_2616 != null)
+            if (this._roomPreviewer != null)
             {
-                this._Str_2616.dispose();
-                this._Str_2616 = null;
+                this._roomPreviewer.dispose();
+                this._roomPreviewer = null;
             }
-            if (this._Str_5439 != null)
+            if (this._guildMembershipsController != null)
             {
-                this._Str_5439.dispose();
-                this._Str_5439 = null;
+                this._guildMembershipsController.dispose();
+                this._guildMembershipsController = null;
             }
             if (this._utils != null)
             {
                 this._utils.dispose();
                 this._utils = null;
             }
-            if (this._Str_4643)
+            if (this._requestedPage)
             {
-                this._Str_4643 = null;
+                this._requestedPage = null;
             }
-            if (this._Str_13406)
+            if (this._offerController)
             {
-                this._Str_13406.dispose();
-                this._Str_13406 = null;
+                this._offerController.dispose();
+                this._offerController = null;
             }
             super.dispose();
         }
@@ -767,7 +767,7 @@
         public function loadCatalogPage(k:int, _arg_2:int, _arg_3:String):void
         {
             this._Str_9330 = true;
-            this._Str_17093 = k;
+            this._pageId = k;
             this.send(new RequestCatalogPage(k, _arg_2, _arg_3));
         }
 
@@ -793,9 +793,9 @@
             }
             else
             {
-                if (((this._Str_4339._Str_8314) && (this._Str_4339.expirationTime.getTime() < new Date().getTime())))
+                if (((this._roomAdPurchaseData._Str_8314) && (this._roomAdPurchaseData.expirationTime.getTime() < new Date().getTime())))
                 {
-                    this._Str_4339._Str_8314 = false;
+                    this._roomAdPurchaseData._Str_8314 = false;
                 }
                 this.send(new _Str_10613(k, _arg_2, this._Str_3064.flatId, this._Str_3064.name, this._Str_3064._Str_8314, this._Str_3064.description, this._Str_3064._Str_2712));
             }
@@ -818,12 +818,12 @@
 
         public function get _Str_3064():RoomAdPurchaseData
         {
-            return this._Str_4339;
+            return this._roomAdPurchaseData;
         }
 
         public function set _Str_3064(k:RoomAdPurchaseData):void
         {
-            this._Str_4339 = k;
+            this._roomAdPurchaseData = k;
         }
 
         public function _Str_19478(k:String, _arg_2:int):void
@@ -936,7 +936,7 @@
                     }
                     if (_arg_2 >= 0)
                     {
-                        this._Str_5949.showConfirmation((k as ClubBuyOfferData), _arg_2);
+                        this._clubOfferHandler.showConfirmation((k as ClubBuyOfferData), _arg_2);
                     }
                 }
             }
@@ -956,9 +956,9 @@
         {
             if ((((!(this._roomEngine == null)) && (this._roomEngine.isInitialized)) && (getBoolean("catalog.furniture.animation"))))
             {
-                if (this._Str_2616 == null)
+                if (this._roomPreviewer == null)
                 {
-                    this._Str_2616 = new RoomPreviewer(this._roomEngine);
+                    this._roomPreviewer = new RoomPreviewer(this._roomEngine);
                 }
             }
         }
@@ -980,7 +980,7 @@
             this.toggleCatalog(((_arg_2 == null) ? CatalogType.NORMAL : _arg_2), true, false);
             if ((((!(this._initialized)) || (this._Str_5309 == null)) || (!(this._Str_3361._Str_3961))))
             {
-                this._Str_4643._Str_23666 = k;
+                this._requestedPage._Str_23666 = k;
                 return;
             }
             this._Str_3361.openPage(k);
@@ -988,16 +988,16 @@
 
         public function openRoomAdCatalogPageInExtendedMode(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:Date, _arg_6:int):void
         {
-            var _local_7:int = this._Str_17093;
-            this._Str_4339 = new RoomAdPurchaseData();
-            this._Str_4339.name = _arg_2;
-            this._Str_4339._Str_8314 = true;
-            this._Str_4339._Str_16649 = this._roomEngine.activeRoomId;
-            this._Str_4339.description = _arg_3;
-            this._Str_4339.flatId = this._roomEngine.activeRoomId;
-            this._Str_4339.roomName = _arg_4;
-            this._Str_4339.expirationTime = _arg_5;
-            this._Str_4339._Str_2712 = _arg_6;
+            var _local_7:int = this._pageId;
+            this._roomAdPurchaseData = new RoomAdPurchaseData();
+            this._roomAdPurchaseData.name = _arg_2;
+            this._roomAdPurchaseData._Str_8314 = true;
+            this._roomAdPurchaseData._Str_16649 = this._roomEngine.activeRoomId;
+            this._roomAdPurchaseData.description = _arg_3;
+            this._roomAdPurchaseData.flatId = this._roomEngine.activeRoomId;
+            this._roomAdPurchaseData.roomName = _arg_4;
+            this._roomAdPurchaseData.expirationTime = _arg_5;
+            this._roomAdPurchaseData._Str_2712 = _arg_6;
             this.openCatalogPage(k);
             var _local_8:ICatalogNode = this._Str_3361.getNodeByName(k);
             if (((!(_local_8 == null)) && (_local_8.pageId == _local_7)))
@@ -1022,8 +1022,8 @@
             else
             {
                 this.toggleCatalog(_arg_3);
-                this._Str_4643._Str_22771 = k;
-                this._Str_4643._Str_7501 = _arg_2;
+                this._requestedPage._Str_22771 = k;
+                this._requestedPage._Str_7501 = _arg_2;
             }
         }
 
@@ -1131,22 +1131,22 @@
 
         public function getMarketPlace():IMarketPlace
         {
-            return this._Str_3633;
+            return this._marketplace;
         }
 
         public function _Str_24953():ClubGiftController
         {
-            return this._Str_10284;
+            return this._clubGiftController;
         }
 
         public function _Str_18172():ClubOfferHandler
         {
-            return this._Str_5949;
+            return this._clubOfferHandler;
         }
 
         public function _Str_25905():ClubExtendController
         {
-            return this._Str_6818;
+            return this._clubExtendController;
         }
 
         public function getPublicMarketPlaceOffers(k:int, _arg_2:int, _arg_3:String, _arg_4:int):void
@@ -1195,7 +1195,7 @@
 
         public function _Str_16509():GuildMembershipsController
         {
-            return this._Str_5439;
+            return this._guildMembershipsController;
         }
 
         public function getPixelEffectIcon(k:int):BitmapData
@@ -1675,41 +1675,41 @@
 
         private function _Str_24591():void
         {
-            if (this._Str_3633 == null)
+            if (this._marketplace == null)
             {
-                this._Str_3633 = new MarketPlaceLogic(this, this._windowManager, this._roomEngine);
+                this._marketplace = new MarketPlaceLogic(this, this._windowManager, this._roomEngine);
             }
         }
 
         private function _Str_22724():void
         {
-            if (this._Str_10284 == null)
+            if (this._clubGiftController == null)
             {
-                this._Str_10284 = new ClubGiftController(this);
+                this._clubGiftController = new ClubGiftController(this);
             }
         }
 
         private function _Str_23448():void
         {
-            if (this._Str_5949 == null)
+            if (this._clubOfferHandler == null)
             {
-                this._Str_5949 = new ClubOfferHandler(this, this.connection);
+                this._clubOfferHandler = new ClubOfferHandler(this, this.connection);
             }
         }
 
         private function _Str_23722():void
         {
-            if (this._Str_6818 == null)
+            if (this._clubExtendController == null)
             {
-                this._Str_6818 = new ClubExtendController(this);
+                this._clubExtendController = new ClubExtendController(this);
             }
         }
 
         private function _Str_25337():void
         {
-            if (this._Str_5439 == null)
+            if (this._guildMembershipsController == null)
             {
-                this._Str_5439 = new GuildMembershipsController(this);
+                this._guildMembershipsController = new GuildMembershipsController(this);
             }
         }
 
@@ -1754,7 +1754,7 @@
             {
                 _local_2.showIndex();
             }
-            switch (this._Str_4643._Str_3989)
+            switch (this._requestedPage._Str_3989)
             {
                 case RequestedPage._Str_10657:
                     if (((((this._Str_7793) && (this._Str_19190)) && (!(this._Str_25184))) && (k.catalogType == CatalogType.NORMAL)))
@@ -1768,12 +1768,12 @@
                     }
                     return;
                 case RequestedPage._Str_13019:
-                    _local_2.openPageById(this._Str_4643.requestId, this._Str_4643._Str_7501);
-                    this._Str_4643._Str_21345();
+                    _local_2.openPageById(this._requestedPage.requestId, this._requestedPage._Str_7501);
+                    this._requestedPage._Str_21345();
                     return;
                 case RequestedPage._Str_15706:
-                    _local_2.openPage(this._Str_4643._Str_22486);
-                    this._Str_4643._Str_21345();
+                    _local_2.openPage(this._requestedPage._Str_22486);
+                    this._requestedPage._Str_21345();
                     return;
             }
         }
@@ -1828,7 +1828,7 @@
             {
                 this._Str_8752 = _local_2._Str_5320;
             }
-            if (((!(this._catalogViewer == null)) && (this._Str_17093 == _local_3)))
+            if (((!(this._catalogViewer == null)) && (this._pageId == _local_3)))
             {
                 this._catalogViewer._Str_19388(_local_3, _local_4, _local_7, _local_10, _local_8, _local_9);
             }
@@ -2101,7 +2101,7 @@
 
         private function _Str_18504(k:_Str_5425):void
         {
-            if (((!(k)) || (!(this._Str_10284))))
+            if (((!(k)) || (!(this._clubGiftController))))
             {
                 return;
             }
@@ -2110,7 +2110,7 @@
             {
                 return;
             }
-            this._Str_10284._Str_24745(_local_2._Str_12860, _local_2._Str_7574, _local_2.offers, _local_2._Str_24398);
+            this._clubGiftController._Str_24745(_local_2._Str_12860, _local_2._Str_7574, _local_2.offers, _local_2._Str_24398);
         }
 
         private function _Str_24950(k:IMessageEvent):void
@@ -2145,33 +2145,33 @@
 
         private function _Str_25346(k:IMessageEvent):void
         {
-            if (this._Str_3633 != null)
+            if (this._marketplace != null)
             {
-                this._Str_3633.onOffers(k);
+                this._marketplace.onOffers(k);
             }
         }
 
         private function _Str_25537(k:IMessageEvent):void
         {
-            if (this._Str_3633 != null)
+            if (this._marketplace != null)
             {
-                this._Str_3633.onOwnOffers(k);
+                this._marketplace.onOwnOffers(k);
             }
         }
 
         private function _Str_23861(k:IMessageEvent):void
         {
-            if (this._Str_3633 != null)
+            if (this._marketplace != null)
             {
-                this._Str_3633.onBuyResult(k);
+                this._marketplace.onBuyResult(k);
             }
         }
 
         private function _Str_24794(k:IMessageEvent):void
         {
-            if (this._Str_3633 != null)
+            if (this._marketplace != null)
             {
-                this._Str_3633.onCancelResult(k);
+                this._marketplace.onCancelResult(k);
             }
         }
 
@@ -2181,12 +2181,12 @@
             {
                 return;
             }
-            this._Str_20242 = new GiftWrappingConfiguration(k);
+            this._giftWrappingConfiguration = new GiftWrappingConfiguration(k);
         }
 
         private function _Str_16617(k:_Str_5946):void
         {
-            if (((!(k)) || (!(this._Str_3633))))
+            if (((!(k)) || (!(this._marketplace))))
             {
                 return;
             }
@@ -2204,12 +2204,12 @@
             _local_3._Str_11956 = _local_2._Str_11956;
             _local_3._Str_9431 = _local_2._Str_9431;
             _local_3._Str_8798 = _local_2._Str_8798;
-            this._Str_3633._Str_10038 = _local_3;
+            this._marketplace._Str_10038 = _local_3;
         }
 
         private function _Str_16010(k:_Str_5727):void
         {
-            if (((!(k)) || (!(this._Str_3633))))
+            if (((!(k)) || (!(this._marketplace))))
             {
                 return;
             }
@@ -2218,12 +2218,12 @@
             {
                 return;
             }
-            this._Str_3633._Str_5014 = _local_2.displayTime;
+            this._marketplace._Str_5014 = _local_2.displayTime;
         }
 
         private function _Str_16181(k:_Str_6022):void
         {
-            if (((!(k)) || (!(this._Str_3633))))
+            if (((!(k)) || (!(this._marketplace))))
             {
                 return;
             }
@@ -2234,16 +2234,16 @@
             }
             if (_local_2.result == 1)
             {
-                this._Str_3633.refreshOffers();
+                this._marketplace.refreshOffers();
             }
         }
 
         private function _Str_23194(k:_Str_7706):void
         {
             var _local_2:_Str_6792 = k.getParser();
-            if (((!(this._Str_5949 == null)) && ((((_local_2.source == ClubOfferRequestSource._Str_15734) || (_local_2.source == ClubOfferRequestSource._Str_12589)) || (_local_2.source == ClubOfferRequestSource._Str_15001)) || (_local_2.source == ClubOfferRequestSource._Str_15727))))
+            if (((!(this._clubOfferHandler == null)) && ((((_local_2.source == ClubOfferRequestSource._Str_15734) || (_local_2.source == ClubOfferRequestSource._Str_12589)) || (_local_2.source == ClubOfferRequestSource._Str_15001)) || (_local_2.source == ClubOfferRequestSource._Str_15727))))
             {
-                this._Str_5949.onOffers(_local_2);
+                this._clubOfferHandler.onOffers(_local_2);
             }
         }
 
@@ -2253,9 +2253,9 @@
             {
                 this.init();
             }
-            if (this._Str_6818)
+            if (this._clubExtendController)
             {
-                this._Str_6818._Str_24854(k);
+                this._clubExtendController._Str_24854(k);
             }
         }
 
@@ -2433,7 +2433,7 @@
             var _local_6:Boolean = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.CATALOG, -(_arg_2.offerId), _local_5, _local_4.productClassId, ((_local_4.extraParam) ? _local_4.extraParam.toString() : null));
             if (_local_6)
             {
-                this._Str_3644 = _arg_2;
+                this._purchasableOffer = _arg_2;
                 this._Str_8970 = k;
                 this._Str_15729();
                 this._Str_4151 = true;
@@ -2471,7 +2471,7 @@
             if (((this._Str_4151) && (k.type == FriendBarSelectionEvent.FBVE_FRIEND_SELECTED)))
             {
                 this._Str_4663(true);
-                if (((this._Str_3644 == null) || (this._Str_3644.disposed)))
+                if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this._Str_7529();
                     return;
@@ -2511,7 +2511,7 @@
             if (((this._Str_4151) && (k.type == RoomEngineObjectEvent.PLACED_ON_USER)))
             {
                 this._Str_4663(true);
-                if (((this._Str_3644 == null) || (this._Str_3644.disposed)))
+                if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this._Str_7529();
                     return;
@@ -2544,13 +2544,13 @@
             if (((this._Str_4151) && (k.type == RoomEngineObjectEvent.PLACED)))
             {
                 this._Str_4663(true);
-                if (((this._Str_3644 == null) || (this._Str_3644.disposed)))
+                if (((this._purchasableOffer == null) || (this._purchasableOffer.disposed)))
                 {
                     this._Str_7529();
                     return;
                 }
                 _local_2 = k.category;
-                _local_3 = this._Str_3644.product;
+                _local_3 = this._purchasableOffer.product;
                 _local_4 = false;
                 if (_local_2 == RoomObjectCategoryEnum.CONST_20)
                 {
@@ -2574,7 +2574,7 @@
                     this._Str_7529();
                     return;
                 }
-                this._placedObjectPurchaseData = new PlacedObjectPurchaseData(k.roomId, k._Str_1577, k.category, k._Str_7031, k.x, k.y, k.direction, this._Str_3644);
+                this._placedObjectPurchaseData = new PlacedObjectPurchaseData(k.roomId, k._Str_1577, k.category, k._Str_7031, k.x, k.y, k.direction, this._purchasableOffer);
                 _local_5 = this._Str_8970;
                 if (_local_5 != null)
                 {
@@ -2610,10 +2610,10 @@
                         }
                         return;
                     case CatalogType.BUILDER:
-                        _local_7 = this._Str_3644.page.pageId;
+                        _local_7 = this._purchasableOffer.page.pageId;
                         if (_local_7 == CatalogNavigator._Str_5778)
                         {
-                            _local_8 = this._Str_3361._Str_5719(this._Str_3644.offerId, true);
+                            _local_8 = this._Str_3361._Str_5719(this._purchasableOffer.offerId, true);
                             if (_local_8 != null)
                             {
                                 _local_7 = _local_8[0].pageId;
@@ -2622,15 +2622,15 @@
                         switch (_local_2)
                         {
                             case RoomObjectCategoryEnum.CONST_10:
-                                this.send(new _Str_12382(_local_7, this._Str_3644.offerId, _local_3.extraParam, k.x, k.y, k.direction));
+                                this.send(new _Str_12382(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k.x, k.y, k.direction));
                                 break;
                             case RoomObjectCategoryEnum.CONST_20:
-                                this.send(new _Str_11648(_local_7, this._Str_3644.offerId, _local_3.extraParam, k._Str_7031));
+                                this.send(new _Str_11648(_local_7, this._purchasableOffer.offerId, _local_3.extraParam, k._Str_7031));
                                 break;
                         }
                         if (this._Str_21515)
                         {
-                            this._Str_8289(_local_5, this._Str_3644, true);
+                            this._Str_8289(_local_5, this._purchasableOffer, true);
                         }
                         else
                         {
@@ -2701,11 +2701,11 @@
 
         public function _Str_5298():void
         {
-            if (this._Str_3644 != null)
+            if (this._purchasableOffer != null)
             {
                 this._roomEngine.cancelRoomObjectInsert();
                 this._Str_4151 = false;
-                this._Str_3644 = null;
+                this._purchasableOffer = null;
             }
         }
 
@@ -2843,9 +2843,9 @@
         {
             var _local_2:Number;
             var _local_3:Number;
-            if (this._Str_2616 != null)
+            if (this._roomPreviewer != null)
             {
-                this._Str_2616.updatePreviewRoomView();
+                this._roomPreviewer.updatePreviewRoomView();
             }
             if ((getTimer() - this._Str_19072) > 500)
             {
@@ -2860,9 +2860,9 @@
 
         public function _Str_24089(k:_Str_7452):void
         {
-            if (this._Str_5439)
+            if (this._guildMembershipsController)
             {
-                this._Str_5439._Str_23306(k);
+                this._guildMembershipsController._Str_23306(k);
             }
         }
 
@@ -2883,9 +2883,9 @@
 
         private function _Str_15960(k:GuildSettingsChangedInManageEvent):void
         {
-            if (this._Str_5439)
+            if (this._guildMembershipsController)
             {
-                this._Str_5439._Str_15960(k._Str_3916);
+                this._guildMembershipsController._Str_15960(k._Str_3916);
             }
         }
 
@@ -2994,9 +2994,9 @@
                 {
                     this._catalogViewer._Str_3854.dispatchWidgetEvent(new SetExtraPurchaseParameterEvent(_local_7.product.extraParam));
                 }
-                if (((this._Str_4151) && (this._Str_3644)))
+                if (((this._Str_4151) && (this._purchasableOffer)))
                 {
-                    this._Str_3644 = _local_7;
+                    this._purchasableOffer = _local_7;
                 }
             }
         }
@@ -3105,11 +3105,11 @@
 
         public function openRentConfirmationWindow(k:IFurnitureData, _arg_2:Boolean, _arg_3:int=-1, _arg_4:int=-1, _arg_5:Boolean=false):void
         {
-            if (this._Str_8700 == null)
+            if (this._rentConfirmationWindow == null)
             {
-                this._Str_8700 = new RentConfirmationWindow(this);
+                this._rentConfirmationWindow = new RentConfirmationWindow(this);
             }
-            this._Str_8700.show(k, _arg_2, _arg_3, _arg_4, _arg_5);
+            this._rentConfirmationWindow.show(k, _arg_2, _arg_3, _arg_4, _arg_5);
         }
 
         public function get roomSession():IRoomSession
