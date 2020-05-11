@@ -507,7 +507,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10157;
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10397;
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10574;
-	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10588;
+	import com.sulake.habbo.communication.messages.outgoing._Str_57.CreateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10878;
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11143;
 	import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11181;
@@ -1755,7 +1755,7 @@
             OUTGOING_PACKETS[2742] = _Str_7827;
             OUTGOING_PACKETS[2746] = _Str_11701;
             OUTGOING_PACKETS[2750] = _Str_7551;
-            OUTGOING_PACKETS[2752] = _Str_10588;
+            OUTGOING_PACKETS[2752] = CreateFlatMessageComposer;
             OUTGOING_PACKETS[2755] = _Str_11879;
             OUTGOING_PACKETS[2758] = _Str_10157;
             OUTGOING_PACKETS[2760] = _Str_11362;

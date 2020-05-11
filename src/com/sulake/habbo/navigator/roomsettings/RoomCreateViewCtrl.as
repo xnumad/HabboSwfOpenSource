@@ -26,7 +26,7 @@
     import com.sulake.core.window.enum.WindowType;
     import com.sulake.habbo.window.enum._Str_3108;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_10588;
+    import com.sulake.habbo.communication.messages.outgoing._Str_57.CreateFlatMessageComposer;
     import __AS3__.vec.*;
     import com.sulake.habbo.navigator.*;
 
@@ -461,7 +461,7 @@
             {
                 return;
             }
-            this._navigator.send(new _Str_10588(_local_2, _local_3, _local_4, _local_6, _local_5, _local_9));
+            this._navigator.send(new CreateFlatMessageComposer(_local_2, _local_3, _local_4, _local_6, _local_5, _local_9));
         }
 
         private function close():void
