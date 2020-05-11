@@ -924,7 +924,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8563;
-	import com.sulake.habbo.communication.messages.incoming.poll._Str_8693;
+	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10314;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
@@ -1265,7 +1265,7 @@
             INCOMING_PACKETS[2927] = _Str_9419;
             INCOMING_PACKETS[2937] = _Str_5834;
             INCOMING_PACKETS[296] = BotForceOpenContextMenuEvent;
-            INCOMING_PACKETS[2997] = _Str_8693;
+            INCOMING_PACKETS[2997] = PollContentsEvent;
             INCOMING_PACKETS[2998] = _Str_8179;
             INCOMING_PACKETS[30] = _Str_10860;
             INCOMING_PACKETS[3001] = _Str_9509;

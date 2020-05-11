@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.poll._Str_8693;
+    import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
     import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
     import com.sulake.habbo.communication.messages.incoming.poll._Str_8563;
     import com.sulake.core.communication.connection.IConnection;
@@ -20,7 +20,7 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_8693(this._Str_25602));
+            k.addMessageEvent(new PollContentsEvent(this._Str_25602));
             k.addMessageEvent(new PollOfferEvent(this._Str_23305));
             k.addMessageEvent(new _Str_8563(this._Str_22261));
         }
@@ -63,7 +63,7 @@
             listener.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_25602(k:_Str_8693):void
+        private function _Str_25602(k:PollContentsEvent):void
         {
             var _local_4:_Str_3051;
             if (!k)
