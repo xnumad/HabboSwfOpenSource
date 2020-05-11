@@ -78,7 +78,7 @@
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 748, "u"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 438, "v"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 540, "t"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 0x0200, "w"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 512, "w"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 396, "x"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 440, "y"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 456, "z"));
@@ -87,7 +87,7 @@
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 1044, "2"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 183, "3"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 254, "4"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 0x0400, "5"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 1024, "5"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 801, "6"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 354, "7"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 888, "8"));
