@@ -97,7 +97,7 @@
             var _local_15:RoomUserData;
             var _local_16:String;
             var _local_17:_Str_2370;
-            var userNameToKick:RoomUserData;
+            var userToKick:RoomUserData;
             var _local_19:RoomUserData;
             var _local_20:RoomUserData;
             var _local_21:HabboToolbarEvent;
@@ -254,10 +254,10 @@
                                     case ":kick":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            userNameToKick = this._container.roomSession.userDataManager._Str_10979(_local_13);
-                                            if (userNameToKick)
+                                            userToKick = this._container.roomSession.userDataManager._Str_10979(_local_13);
+                                            if (userToKick)
                                             {
-                                                this._container.roomSession.kickUser(userNameToKick._Str_2394);
+                                                this._container.roomSession.kickUser(userToKick._Str_2394);
                                             }
                                         }
                                         return null;
