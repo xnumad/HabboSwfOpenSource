@@ -448,7 +448,7 @@
             var k:IDropMenuWindow = (this._view.findChildByName("filter.options") as IDropMenuWindow);
             var _local_2:IDropMenuWindow = (this._view.findChildByName("placement.options") as IDropMenuWindow);
             var _local_3:String = this._view.findChildByName("filter").caption;
-            var _local_4:String = k._Str_4487()[k.selection];
+            var _local_4:String = k.items()[k.selection];
             this._grid._Str_25694(k.selection, _local_4, this._model._Str_22702, _local_3, _local_2.selection);
         }
 

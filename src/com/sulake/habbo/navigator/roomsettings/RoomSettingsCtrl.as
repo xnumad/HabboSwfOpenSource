@@ -973,7 +973,7 @@
             var _local_6:IDropMenuWindow = (this._window.findChildByName("tradesettings") as IDropMenuWindow);
             k._Str_3827 = _local_6.selection;
             var _local_7:IDropMenuWindow = (this._window.findChildByName("maxvisitors") as IDropMenuWindow);
-            k._Str_5552 = _local_7._Str_4487()[_local_7.selection];
+            k._Str_5552 = _local_7.items()[_local_7.selection];
             k._Str_5667 = this._Str_7157._Str_2365;
             k._Str_7595 = this._Str_7429._Str_2365;
             k._Str_7273 = this._Str_5537._Str_2365;

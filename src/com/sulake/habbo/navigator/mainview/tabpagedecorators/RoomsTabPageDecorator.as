@@ -127,13 +127,13 @@
             }
             if (((this._filter) && (!(this._filter.disposed))))
             {
-                this._navigator._Str_4051(this._filter._Str_4487()[this._filter.selection], "category.view");
+                this._navigator._Str_4051(this._filter.items()[this._filter.selection], "category.view");
             }
         }
 
         public function get _Str_5960():String
         {
-            return ((this._filter) && (!(this._filter.disposed))) ? this._filter._Str_4487()[this._filter.selection] : null;
+            return ((this._filter) && (!(this._filter.disposed))) ? this._filter.items()[this._filter.selection] : null;
         }
 
         public function _Str_8025(k:int):void

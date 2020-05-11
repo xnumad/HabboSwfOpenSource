@@ -146,7 +146,7 @@
             }
         }
 
-        public function _Str_4487():Array
+        public function items():Array
         {
             var _local_2:int;
             var k:Array = [];

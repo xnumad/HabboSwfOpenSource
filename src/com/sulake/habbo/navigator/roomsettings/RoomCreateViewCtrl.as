@@ -444,7 +444,7 @@
             var _roomName:String = this._roomNameInput.getText();
             var _roomDesc:String = this._roomDescInput.getText();
             var _local_4:String = ("model_" + this._selectedLayout.name);
-            var _maxVisitors:int = parseInt(this._maxVisitors._Str_4487()[this._maxVisitors.selection]);
+            var _maxVisitors:int = parseInt(this._maxVisitors.items()[this._maxVisitors.selection]);
             var _local_6:int;
             var _local_7:int;
             for each (_local_8 in this._selectableAndVisibleCategories)

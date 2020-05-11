@@ -89,7 +89,7 @@
             var _local_2:IWindow = k.target;
             if ((_local_2 is IDropMenuWindow))
             {
-                this._navigator._Str_4051(IDropMenuWindow(_local_2)._Str_4487()[IDropMenuWindow(_local_2).selection], "category.view");
+                this._navigator._Str_4051(IDropMenuWindow(_local_2).items()[IDropMenuWindow(_local_2).selection], "category.view");
             }
         }
 
@@ -110,7 +110,7 @@
 
         public function get _Str_5960():String
         {
-            return ((this._filter) && (!(this._filter.disposed))) ? this._filter._Str_4487()[this._filter.selection] : null;
+            return ((this._filter) && (!(this._filter.disposed))) ? this._filter.items()[this._filter.selection] : null;
         }
 
         public function _Str_8025(k:int):void

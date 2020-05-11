@@ -27,7 +27,7 @@
 
         private function _Str_17055(k:IWindowContainer):int
         {
-            var _local_2:Array = this._Str_5671(k, "menu_handitem")._Str_4487();
+            var _local_2:Array = this._Str_5671(k, "menu_handitem").items();
             var _local_3:int = this._Str_5671(k, "menu_handitem").selection;
             if (_local_3 == -1)
             {
@@ -38,7 +38,7 @@
 
         private function _Str_18464(k:IWindowContainer, _arg_2:int):void
         {
-            var _local_3:Array = this._Str_5671(k, "menu_handitem")._Str_4487();
+            var _local_3:Array = this._Str_5671(k, "menu_handitem").items();
             var _local_4:int = -1;
             var _local_5:int;
             while (_local_5 < _local_3.length)

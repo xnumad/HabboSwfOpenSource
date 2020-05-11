@@ -9,6 +9,6 @@
         function get numMenuItems():int;
         function populate(_arg_1:Array):void;
         function _Str_24893(_arg_1:Vector.<String>):void;
-        function _Str_4487():Array;
+        function items():Array;
     }
 }
