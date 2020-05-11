@@ -9,7 +9,7 @@
 
         public function SaveRoomSettingsMessageComposer(k:SaveableRoomSettingsData)
         {
-            var _local_2:Array;
+            var tags:Array;
             var _local_3:String;
             var _local_4:String;
             this.messageArray = new Array();
@@ -23,16 +23,16 @@
             this.messageArray.push(k._Str_2712);
             if (k.tags)
             {
-                _local_2 = [];
+                tags = [];
                 for each (_local_3 in k.tags)
                 {
                     if (((_local_3) && (!(_local_3 === ""))))
                     {
-                        _local_2.push(_local_3);
+                        tags.push(_local_3);
                     }
                 }
-                this.messageArray.push(_local_2.length);
-                for each (_local_4 in _local_2)
+                this.messageArray.push(tags.length);
+                for each (_local_4 in tags)
                 {
                     this.messageArray.push(_local_4);
                 }
