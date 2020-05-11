@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7203 implements IMessageParser 
+    public class PollContentsParser implements IMessageParser 
     {
         private var _id:int = -1;
         private var _Str_5879:String = "";
@@ -66,12 +66,12 @@
             var _local_2:int;
             while (_local_2 < this._Str_5366)
             {
-                _local_3 = this._Str_19332(k);
+                _local_3 = this.parsePollQuestion(k);
                 _local_4 = k.readInteger();
                 _local_5 = 0;
                 while (_local_5 < _local_4)
                 {
-                    _local_3.children.push(this._Str_19332(k));
+                    _local_3.children.push(this.parsePollQuestion(k));
                     _local_5++;
                 }
                 this._Str_5432.push(_local_3);
@@ -81,7 +81,7 @@
             return true;
         }
 
-        private function _Str_19332(k:IMessageDataWrapper):PollQuestion
+        private function parsePollQuestion(k:IMessageDataWrapper):PollQuestion
         {
             var _local_3:int;
             var pollQuestion:PollQuestion = new PollQuestion();
