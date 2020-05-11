@@ -40,7 +40,7 @@
         private var _Str_8910:int = 0;
         private var _Str_8858:int = 0;
         private var _isFriend:Boolean = false;
-        private var _Str_4890:Boolean = false;
+        private var isAmbassador:Boolean = false;
 
         public function RoomWidgetUpdateInfostandUserEvent(k:String, _arg_2:Boolean=false, _arg_3:Boolean=false)
         {
@@ -350,12 +350,12 @@
 
         public function get _Str_18096():Boolean
         {
-            return this._Str_4890;
+            return this.isAmbassador;
         }
 
         public function set _Str_18096(k:Boolean):void
         {
-            this._Str_4890 = k;
+            this.isAmbassador = k;
         }
     }
 }
