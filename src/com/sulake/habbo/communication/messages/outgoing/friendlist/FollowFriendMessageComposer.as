@@ -2,11 +2,11 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_10757 implements IMessageComposer 
+    public class FollowFriendMessageComposer implements IMessageComposer 
     {
         private var _Str_5549:String;
 
-        public function _Str_10757(k:String)
+        public function FollowFriendMessageComposer(k:String)
         {
             this._Str_5549 = k;
         }

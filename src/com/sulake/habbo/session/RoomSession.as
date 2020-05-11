@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
     import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
-    import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10757;
+    import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10514;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_9893;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
@@ -402,7 +402,7 @@
 
         public function _Str_21026(k:String):void
         {
-            this._connection.send(new _Str_10757(k));
+            this._connection.send(new FollowFriendMessageComposer(k));
         }
 
         public function _Str_18152(k:int):void

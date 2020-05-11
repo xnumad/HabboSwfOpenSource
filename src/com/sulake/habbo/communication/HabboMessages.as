@@ -805,7 +805,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.DeclineFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.SendRoomInviteMessageComposer;
-	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10757;
+	import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11418;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11696;
@@ -1786,7 +1786,7 @@
             OUTGOING_PACKETS[295] = LatencyPingRequestMessageComposer;
             OUTGOING_PACKETS[2950] = _Str_8070;
             OUTGOING_PACKETS[2959] = _Str_11266;
-            OUTGOING_PACKETS[2970] = _Str_10757;
+            OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
             OUTGOING_PACKETS[2977] = _Str_12037;
             OUTGOING_PACKETS[2991] = _Str_2863;
             OUTGOING_PACKETS[2996] = _Str_10514;
