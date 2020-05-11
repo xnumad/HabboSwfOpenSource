@@ -60,7 +60,7 @@
         function getFloorItemDataByName(_arg_1:String, _arg_2:int=0):IFurnitureData;
         function getWallItemDataByName(_arg_1:String, _arg_2:int=0):IFurnitureData;
         function ejectAllFurniture(_arg_1:int, _arg_2:String):void;
-        function openHabboHomePage(_arg_1:int):void;
+        function pickall(_arg_1:int):void;
         function _Str_21775(_arg_1:int, _arg_2:String):void;
         function pickAllFurniture(_arg_1:int):void;
         function loadProductData(_arg_1:IProductDataListener=null):Boolean;

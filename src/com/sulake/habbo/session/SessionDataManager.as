@@ -813,7 +813,7 @@
             }
         }
 
-        public function openHabboHomePage(roomId:int):void
+        public function pickall(roomId:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {

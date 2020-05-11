@@ -204,7 +204,7 @@
                                         }
                                         return null;
                                     case ":pickall":
-                                        this._container.sessionDataManager.openHabboHomePage(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.pickall(this._container.roomSession.roomId);
                                         return null;
                                     case ":pickallbc":
                                         this._container.sessionDataManager.ejectPets(this._container.roomSession.roomId);
