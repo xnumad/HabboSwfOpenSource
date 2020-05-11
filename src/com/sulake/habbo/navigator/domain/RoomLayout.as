@@ -9,11 +9,11 @@
         private var _name:String;
         private var _view:IWindowContainer;
 
-        public function RoomLayout(k:int, _arg_2:int, _arg_3:String)
+        public function RoomLayout(_level:int, _tileSize:int, _name:String)
         {
-            this._level = k;
-            this._tileSize = _arg_2;
-            this._name = _arg_3;
+            this._level = _level;
+            this._tileSize = _tileSize;
+            this._name = _name;
         }
 
         public function get requiredClubLevel():int
