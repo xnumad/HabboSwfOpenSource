@@ -8,7 +8,7 @@
     import com.sulake.habbo.session.events._Str_3051;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.poll.PollOfferParser;
-    import com.sulake.habbo.communication.messages.parser.poll._Str_7270;
+    import com.sulake.habbo.communication.messages.parser.poll.PollErrorParser;
     import com.sulake.habbo.communication.messages.parser.poll.PollContentsParser;
 
     public class PollHandler extends BaseHandler 
@@ -56,7 +56,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7270 = k.getParser();
+            var _local_3:PollErrorParser = k.getParser();
             _local_4 = new _Str_3051(_Str_3051.ERROR, _local_2, -1);
             _local_4.headline = "???";
             _local_4.summary = "???";
