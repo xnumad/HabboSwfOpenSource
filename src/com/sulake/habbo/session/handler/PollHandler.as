@@ -20,12 +20,12 @@
             {
                 return;
             }
-            k.addMessageEvent(new PollContentsEvent(this._Str_25602));
-            k.addMessageEvent(new PollOfferEvent(this._Str_23305));
-            k.addMessageEvent(new PollErrorEvent(this._Str_22261));
+            k.addMessageEvent(new PollContentsEvent(this.parsePollContentsEvent));
+            k.addMessageEvent(new PollOfferEvent(this.parsePollOfferEvent));
+            k.addMessageEvent(new PollErrorEvent(this.parsePollErrorEvent));
         }
 
-        private function _Str_23305(k:PollOfferEvent):void
+        private function parsePollOfferEvent(k:PollOfferEvent):void
         {
             var _local_4:_Str_3051;
             if (!k)
@@ -44,7 +44,7 @@
             listener.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_22261(k:PollErrorEvent):void
+        private function parsePollErrorEvent(k:PollErrorEvent):void
         {
             var _local_4:_Str_3051;
             if (!k)
@@ -63,7 +63,7 @@
             listener.events.dispatchEvent(_local_4);
         }
 
-        private function _Str_25602(k:PollContentsEvent):void
+        private function parsePollContentsEvent(k:PollContentsEvent):void
         {
             var _local_4:_Str_3051;
             if (!k)
