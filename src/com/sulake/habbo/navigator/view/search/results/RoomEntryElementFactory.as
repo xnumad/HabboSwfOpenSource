@@ -13,8 +13,8 @@
     import com.sulake.habbo.window.utils._Str_18430;
     import com.sulake.core.window.events.WindowEvent;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_5262;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.components.IRegionWindow;
 
     public class RoomEntryElementFactory 

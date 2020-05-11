@@ -20,9 +20,9 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.navigator.roomsettings.RoomSettingsCtrl;
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_4893;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_5262;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7911;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
     import __AS3__.vec.*;
 
     public class RoomInfoPopup 

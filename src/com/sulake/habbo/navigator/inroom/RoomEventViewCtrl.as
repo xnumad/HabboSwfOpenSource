@@ -20,12 +20,12 @@
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.navigator.SimpleAlertView;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11661;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7911;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11662;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
 

@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import flash.utils.Timer;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7214;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
     import com.sulake.core.window.components.ITextWindow;
     import flash.geom.Point;
     import flash.events.TimerEvent;

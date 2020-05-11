@@ -49,7 +49,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_12081;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_12081;
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_11090;

@@ -17,8 +17,8 @@
     import com.sulake.core.window.IWindow;
     import flash.geom.Point;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_5262;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_4893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.*;
     import com.sulake.core.window.components.*;
     import com.sulake.core.window.events.*;

@@ -7,7 +7,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7214;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7214;
     import com.sulake.core.window.events.*;
 
     public class MyRoomsTabPageDecorator implements ITabPageDecorator 

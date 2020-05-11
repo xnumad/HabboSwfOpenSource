@@ -7,8 +7,8 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_9806;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_11893;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9806;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11893;
     import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
     import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorMessage;
     import com.sulake.core.window.events.WindowMouseEvent;

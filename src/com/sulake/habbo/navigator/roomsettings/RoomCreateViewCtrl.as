@@ -26,7 +26,7 @@
     import com.sulake.core.window.enum.WindowType;
     import com.sulake.habbo.window.enum._Str_3108;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57.CreateFlatMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
     import __AS3__.vec.*;
     import com.sulake.habbo.navigator.*;
 

@@ -53,10 +53,10 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11429;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9950;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_7393;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7393;
     import com.sulake.habbo.utils.Base64;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing._Str_57._Str_3570;
+    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
