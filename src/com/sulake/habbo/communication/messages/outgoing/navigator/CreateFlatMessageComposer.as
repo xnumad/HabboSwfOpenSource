@@ -7,16 +7,16 @@
     {
         private var _array:Array;
 
-        public function CreateFlatMessageComposer(k:String, _arg_2:String, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:int)
+        public function CreateFlatMessageComposer(roomName:String, roomDesc:String, roomLayout:String, selectedFlatCategoryNodeId:int, maxVisitors:int, roomTradeSetting:int)
         {
             this._array = new Array();
             super();
-            this._array.push(k);
-            this._array.push(_arg_2);
-            this._array.push(_arg_3);
-            this._array.push(_arg_4);
-            this._array.push(_arg_5);
-            this._array.push(_arg_6);
+            this._array.push(roomName);
+            this._array.push(roomDesc);
+            this._array.push(roomLayout);
+            this._array.push(selectedFlatCategoryNodeId);
+            this._array.push(maxVisitors);
+            this._array.push(roomTradeSetting);
         }
 
         public function getMessageArray():Array
