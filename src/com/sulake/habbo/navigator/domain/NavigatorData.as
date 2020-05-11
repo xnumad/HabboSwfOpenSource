@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5546;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4253;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6043;
     import com.sulake.habbo.communication.messages.incoming.navigator.*;
@@ -362,7 +362,7 @@
 
         public function set categories(k:Array):void
         {
-            var _local_2:_Str_2802;
+            var _local_2:FlatCategory;
             this._allCategories = k;
             this._visibleCategories = new Array();
             for each (_local_2 in this._allCategories)
@@ -384,9 +384,9 @@
             return this._visibleCategories;
         }
 
-        public function _Str_26045(k:int):_Str_2802
+        public function _Str_26045(k:int):FlatCategory
         {
-            var _local_2:_Str_2802;
+            var _local_2:FlatCategory;
             for each (_local_2 in this._allCategories)
             {
                 if (_local_2._Str_4760 == k)

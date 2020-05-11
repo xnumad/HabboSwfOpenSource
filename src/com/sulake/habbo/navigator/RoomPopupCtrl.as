@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.utils._Str_3521;
     import com.sulake.habbo.utils.FriendlyTime;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.core.window.events.WindowEvent;
@@ -182,7 +182,7 @@
 
         private function _Str_23067(k:int):String
         {
-            var _local_2:_Str_2802;
+            var _local_2:FlatCategory;
             for each (_local_2 in navigator.data.allCategories)
             {
                 if (_local_2._Str_4760 == k)

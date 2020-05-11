@@ -19,7 +19,7 @@
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.habbo.navigator.Util;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -183,7 +183,7 @@
 
         private function _Str_23605():void
         {
-            var _local_2:_Str_2802;
+            var _local_2:FlatCategory;
             this._categoryMenu = (this._content.findChildByName("categories_list") as IDropMenuWindow);
             var k:Array = new Array();
             this._selectableAndVisibleCategories = [];
@@ -439,7 +439,7 @@
 
         private function _Str_23902(k:WindowEvent):void
         {
-            var roomCategory:_Str_2802;
+            var roomCategory:FlatCategory;
             var roomTradeSetting:int;
             var _roomName:String = this._roomNameInput.getText();
             var _roomDesc:String = this._roomDescInput.getText();

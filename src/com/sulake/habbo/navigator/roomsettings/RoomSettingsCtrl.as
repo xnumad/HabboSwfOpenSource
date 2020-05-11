@@ -30,7 +30,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
     import com.sulake.habbo.session.HabboClubLevelEnum;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_6251;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
     import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_10403;
@@ -853,7 +853,7 @@
 
         private function _Str_24436(k:int):void
         {
-            var _local_6:_Str_2802;
+            var _local_6:FlatCategory;
             var _local_2:IDropMenuWindow = (this._window.findChildByName("categories") as IDropMenuWindow);
             var _local_3:Array = [];
             var _local_4:int;
@@ -885,9 +885,9 @@
             _local_2.selection = k;
         }
 
-        private function _Str_25335(k:int, _arg_2:int):_Str_2802
+        private function _Str_25335(k:int, _arg_2:int):FlatCategory
         {
-            var _local_4:_Str_2802;
+            var _local_4:FlatCategory;
             var _local_3:int;
             for each (_local_4 in this._Str_2272.data.allCategories)
             {
@@ -968,7 +968,7 @@
                 }
             }
             var _local_4:IDropMenuWindow = (this._window.findChildByName("categories") as IDropMenuWindow);
-            var _local_5:_Str_2802 = this._Str_25335(this._roomSettingsData._Str_2712, _local_4.selection);
+            var _local_5:FlatCategory = this._Str_25335(this._roomSettingsData._Str_2712, _local_4.selection);
             k._Str_2712 = _local_5._Str_4760;
             var _local_6:IDropMenuWindow = (this._window.findChildByName("tradesettings") as IDropMenuWindow);
             k._Str_3827 = _local_6.selection;

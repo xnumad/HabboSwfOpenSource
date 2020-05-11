@@ -2,22 +2,22 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2802 
+    public class FlatCategory 
     {
-        private var _Str_19281:int;
-        private var _Str_18480:String;
+        private var _nodeId:int;
+        private var _nodeName:String;
         private var _visible:Boolean;
-        private var _Str_20025:Boolean;
+        private var _automatic:Boolean;
         private var _Str_21646:String;
         private var _Str_13882:String;
         private var _Str_22231:Boolean;
 
-        public function _Str_2802(k:IMessageDataWrapper)
+        public function FlatCategory(k:IMessageDataWrapper)
         {
-            this._Str_19281 = k.readInteger();
-            this._Str_18480 = k.readString();
+            this._nodeId = k.readInteger();
+            this._nodeName = k.readString();
             this._visible = k.readBoolean();
-            this._Str_20025 = k.readBoolean();
+            this._automatic = k.readBoolean();
             this._Str_21646 = k.readString();
             this._Str_13882 = k.readString();
             this._Str_22231 = k.readBoolean();
@@ -25,12 +25,12 @@
 
         public function get _Str_4760():int
         {
-            return this._Str_19281;
+            return this._nodeId;
         }
 
         public function get _Str_20353():String
         {
-            return this._Str_18480;
+            return this._nodeName;
         }
 
         public function get visible():Boolean
@@ -40,7 +40,7 @@
 
         public function get _Str_15540():Boolean
         {
-            return this._Str_20025;
+            return this._automatic;
         }
 
         public function get _Str_13024():Boolean
@@ -60,7 +60,7 @@
 
         public function get _Str_14718():String
         {
-            return (this._Str_13882 == "") ? this._Str_18480 : (("${navigator.flatcategory.global." + this._Str_13882) + "}");
+            return (this._Str_13882 == "") ? this._nodeName : (("${navigator.flatcategory.global." + this._Str_13882) + "}");
         }
     }
 }

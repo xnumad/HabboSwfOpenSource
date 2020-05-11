@@ -6,7 +6,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IScrollbarWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.navigator.Util;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -41,7 +41,7 @@
 
         public function refresh():void
         {
-            var _local_7:_Str_2802;
+            var _local_7:FlatCategory;
             var _local_8:IWindowContainer;
             var _local_9:int;
             var _local_10:int;
@@ -80,7 +80,7 @@
             }
         }
 
-        public function _Str_2966(k:IWindowContainer, _arg_2:_Str_2802, _arg_3:int, _arg_4:int):void
+        public function _Str_2966(k:IWindowContainer, _arg_2:FlatCategory, _arg_3:int, _arg_4:int):void
         {
             k.findChildByName("category_name_txt").caption = _arg_2._Str_14718;
             k.findChildByName("arrow_right_icon").visible = true;
@@ -97,7 +97,7 @@
 
         private function _Str_16433(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_3:_Str_2802;
+            var _local_3:FlatCategory;
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._navigator.data.allCategories[_arg_2.id];

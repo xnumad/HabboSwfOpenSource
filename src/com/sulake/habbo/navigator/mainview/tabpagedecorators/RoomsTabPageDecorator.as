@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.core.window.events.*;
 
@@ -34,7 +34,7 @@
 
         public function _Str_19000():void
         {
-            var _local_2:_Str_2802;
+            var _local_2:FlatCategory;
             if (((this._filter == null) || (this._filter.disposed)))
             {
                 return;
@@ -86,7 +86,7 @@
         private function _Str_2798():void
         {
             var _local_2:int;
-            var _local_3:_Str_2802;
+            var _local_3:FlatCategory;
             var _local_4:int;
             var k:int = (((this._filter) && (!(this._filter.disposed))) ? this._filter.selection : this._Str_18823);
             Logger.log(("Room filter changed: " + k));

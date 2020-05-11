@@ -3,7 +3,7 @@
     import com.sulake.habbo.navigator.IHabboTransitionalNavigator;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.window.utils._Str_2784;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2802;
+    import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -29,9 +29,9 @@
 
         public function show(k:int):void
         {
-            var _local_5:_Str_2802;
+            var _local_5:FlatCategory;
             var _local_6:Array;
-            var _local_7:_Str_2802;
+            var _local_7:FlatCategory;
             this.close();
             this._dialog = this._navigator.windowManager.buildModalDialogFromXML((this._navigator.assets.getAssetByName("enforce_category_xml").content as XML));
             this._window = (this._dialog._Str_2429 as IFrameWindow);
@@ -81,7 +81,7 @@
                 switch (_arg_2.name)
                 {
                     case "ok":
-                        _local_3 = _Str_2802(this._visibleAndSelectableCategories[Math.max(0, this._categorySelection)])._Str_4760;
+                        _local_3 = FlatCategory(this._visibleAndSelectableCategories[Math.max(0, this._categorySelection)])._Str_4760;
                         this._navigator.communication.connection.send(new _Str_11937(this._navigator.data._Str_20386, _local_3, this._tradeModeSelection));
                         this.close();
                         break;
