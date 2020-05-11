@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11858;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10397;
-    import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11143;
+    import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11329;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_9956;
@@ -534,7 +534,7 @@
                 {
                     if (_arg_4 != _Str_13989)
                     {
-                        this._navigator.send(new _Str_11143(this._navigator.data._Str_6357));
+                        this._navigator.send(new GetOfficialRoomsMessageComposer(this._navigator.data._Str_6357));
                     }
                 }
             }

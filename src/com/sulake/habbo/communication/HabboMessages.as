@@ -509,7 +509,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10574;
 	import com.sulake.habbo.communication.messages.outgoing.navigator.CreateFlatMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_10878;
-	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11143;
+	import com.sulake.habbo.communication.messages.outgoing.navigator.GetOfficialRoomsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11181;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11269;
 	import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11329;
@@ -1542,7 +1542,7 @@
             OUTGOING_PACKETS[1202] = _Str_9918;
             OUTGOING_PACKETS[1210] = _Str_11941;
             OUTGOING_PACKETS[1224] = _Str_15943;
-            OUTGOING_PACKETS[1229] = _Str_11143;
+            OUTGOING_PACKETS[1229] = GetOfficialRoomsMessageComposer;
             OUTGOING_PACKETS[1232] = _Str_18426;
             OUTGOING_PACKETS[1251] = CraftSecretComposer;
             OUTGOING_PACKETS[1258] = _Str_6790;
