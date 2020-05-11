@@ -400,7 +400,7 @@
             this._connection.send(new _Str_5756(k));
         }
 
-        public function _Str_21026(k:String):void
+        public function visit(k:String):void
         {
             this._connection.send(new FollowFriendMessageComposer(k));
         }
