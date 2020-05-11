@@ -869,11 +869,11 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_9893;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.*;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_10403;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11937;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomCategoryAndTradeSettingsComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_12287;
-	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_6117;
+	import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7286;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_7484;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_9786;
@@ -1548,7 +1548,7 @@
             OUTGOING_PACKETS[1258] = _Str_6790;
             OUTGOING_PACKETS[1262] = _Str_10312;
             OUTGOING_PACKETS[1263] = _Str_10352;
-            OUTGOING_PACKETS[1265] = _Str_11937;
+            OUTGOING_PACKETS[1265] = UpdateRoomCategoryAndTradeSettingsComposer;
             OUTGOING_PACKETS[1276] = SendRoomInviteMessageComposer;
             OUTGOING_PACKETS[1296] = _Str_8147;
             OUTGOING_PACKETS[1299] = _Str_10856;
@@ -1633,7 +1633,7 @@
             OUTGOING_PACKETS[1945] = _Str_12438;
             OUTGOING_PACKETS[1954] = _Str_9950;
             OUTGOING_PACKETS[196] = _Str_3075;
-            OUTGOING_PACKETS[1969] = _Str_10403;
+            OUTGOING_PACKETS[1969] = SaveRoomSettingsMessageComposer;
             OUTGOING_PACKETS[1975] = _Str_11695;
             OUTGOING_PACKETS[1982] = RenderRoomThumbnailMessageComposer;
             OUTGOING_PACKETS[1986] = _Str_12054;
@@ -1790,7 +1790,7 @@
             OUTGOING_PACKETS[2977] = _Str_12037;
             OUTGOING_PACKETS[2991] = _Str_2863;
             OUTGOING_PACKETS[2996] = _Str_10514;
-            OUTGOING_PACKETS[3001] = _Str_6117;
+            OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
             OUTGOING_PACKETS[3005] = _Str_5009;
             OUTGOING_PACKETS[3027] = _Str_8102;
             OUTGOING_PACKETS[3045] = UpdateThreadMessageComposer;

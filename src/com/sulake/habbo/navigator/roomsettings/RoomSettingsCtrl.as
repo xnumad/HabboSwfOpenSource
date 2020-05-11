@@ -31,9 +31,9 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.communication.messages.incoming.navigator.FlatCategory;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_6251;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveableRoomSettingsData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_10403;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
@@ -924,7 +924,7 @@
             {
                 return;
             }
-            var k:_Str_6251 = new _Str_6251();
+            var k:SaveableRoomSettingsData = new SaveableRoomSettingsData();
             k.roomId = this._roomSettingsData.roomId;
             k.name = this._Str_5666.getText();
             k.description = this._Str_7105.getText();
@@ -992,7 +992,7 @@
             k._Str_16006 = this._Str_6390.selection;
             this._Str_3732();
             this._Str_15710 = k.roomId;
-            this._Str_2272.send(new _Str_10403(k));
+            this._Str_2272.send(new SaveRoomSettingsMessageComposer(k));
         }
 
         private function _Str_21352(k:TextFieldManager, _arg_2:Array):void
@@ -1009,7 +1009,7 @@
             }
         }
 
-        private function _Str_24511(k:_Str_6251):void
+        private function _Str_24511(k:SaveableRoomSettingsData):void
         {
             var _local_2:IWindow;
             var _local_3:ISelectorWindow = (this._window.findChildByName("moderation_mute_selector") as ISelectorWindow);

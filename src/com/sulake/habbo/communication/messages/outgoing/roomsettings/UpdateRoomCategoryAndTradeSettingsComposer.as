@@ -3,20 +3,15 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_6117 implements IMessageComposer, IDisposable 
+    public class UpdateRoomCategoryAndTradeSettingsComposer implements IMessageComposer, IDisposable 
     {
-        public static var _Str_16408:Boolean = true;
-        public static var _Str_16962:Boolean = false;
-
         private var messageArray:Array;
 
-        public function _Str_6117(k:int, _arg_2:Boolean, _arg_3:String)
+        public function UpdateRoomCategoryAndTradeSettingsComposer(k:int, _arg_2:int, _arg_3:int)
         {
             this.messageArray = new Array();
             super();
-            this.messageArray.push(k);
-            this.messageArray.push(_arg_2);
-            this.messageArray.push(_arg_3);
+            this.messageArray = [k, _arg_2, _arg_3];
         }
 
         public function getMessageArray():Array
@@ -31,7 +26,7 @@
 
         public function get disposed():Boolean
         {
-            return false;
+            return this.messageArray == null;
         }
     }
 }

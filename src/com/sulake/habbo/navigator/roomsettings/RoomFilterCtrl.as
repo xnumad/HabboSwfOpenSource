@@ -9,7 +9,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_6117;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomFilterMessageComposer;
     import com.sulake.core.window.components.IRegionWindow;
 
     public class RoomFilterCtrl implements IDisposable 
@@ -136,7 +136,7 @@
         {
             if (((!(this._badWordField == null)) && (this._badWordField.text.length > 0)))
             {
-                this._navigator.send(new _Str_6117(this._flatId, _Str_6117._Str_16408, k));
+                this._navigator.send(new UpdateRoomFilterMessageComposer(this._flatId, UpdateRoomFilterMessageComposer._Str_16408, k));
                 this._navigator.send(new _Str_7286(this._flatId));
                 this._badWordField.text = "bobba";
             }
@@ -161,7 +161,7 @@
             {
                 this._badWords.splice(this._badWords.indexOf(_local_3), 1);
             }
-            this._navigator.send(new _Str_6117(this._flatId, _Str_6117._Str_16962, _local_3));
+            this._navigator.send(new UpdateRoomFilterMessageComposer(this._flatId, UpdateRoomFilterMessageComposer._Str_16962, _local_3));
         }
 
         private function _Str_17449(k:IItemListWindow):void

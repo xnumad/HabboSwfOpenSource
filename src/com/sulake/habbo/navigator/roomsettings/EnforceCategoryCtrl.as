@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.IDropMenuWindow;
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11937;
+    import com.sulake.habbo.communication.messages.outgoing.roomsettings.UpdateRoomCategoryAndTradeSettingsComposer;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -82,7 +82,7 @@
                 {
                     case "ok":
                         _local_3 = FlatCategory(this._visibleAndSelectableCategories[Math.max(0, this._categorySelection)]).nodeId;
-                        this._navigator.communication.connection.send(new _Str_11937(this._navigator.data._Str_20386, _local_3, this._tradeModeSelection));
+                        this._navigator.communication.connection.send(new UpdateRoomCategoryAndTradeSettingsComposer(this._navigator.data._Str_20386, _local_3, this._tradeModeSelection));
                         this.close();
                         break;
                 }

@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_10403 implements IMessageComposer, IDisposable 
+    public class SaveRoomSettingsMessageComposer implements IMessageComposer, IDisposable 
     {
         private var messageArray:Array;
 
-        public function _Str_10403(k:_Str_6251)
+        public function SaveRoomSettingsMessageComposer(k:SaveableRoomSettingsData)
         {
             var _local_2:Array;
             var _local_3:String;

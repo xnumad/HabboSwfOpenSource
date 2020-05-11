@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.outgoing.roomsettings
 {
-    public class _Str_6251 
+    public class SaveableRoomSettingsData 
     {
         private var _roomId:int;
         private var _name:String;
