@@ -441,10 +441,10 @@
         {
             var _local_8:_Str_2802;
             var _local_9:int;
-            var _local_2:String = this._roomNameInput.getText();
-            var _local_3:String = this._roomDescInput.getText();
+            var _roomName:String = this._roomNameInput.getText();
+            var _roomDesc:String = this._roomDescInput.getText();
             var _local_4:String = ("model_" + this._selectedLayout.name);
-            var _local_5:int = parseInt(this._maxVisitors._Str_4487()[this._maxVisitors.selection]);
+            var _maxVisitors:int = parseInt(this._maxVisitors._Str_4487()[this._maxVisitors.selection]);
             var _local_6:int;
             var _local_7:int;
             for each (_local_8 in this._selectableAndVisibleCategories)
@@ -461,7 +461,7 @@
             {
                 return;
             }
-            this._navigator.send(new CreateFlatMessageComposer(_local_2, _local_3, _local_4, _local_6, _local_5, _local_9));
+            this._navigator.send(new CreateFlatMessageComposer(_roomName, _roomDesc, _local_4, _local_6, _maxVisitors, _local_9));
         }
 
         private function close():void
