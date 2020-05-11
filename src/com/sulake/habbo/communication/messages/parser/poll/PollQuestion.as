@@ -18,12 +18,12 @@
         private var _questionAnswerType:int;
         private var _questionAnswerCount:int;
         private var _children:Vector.<PollQuestion>;
-        private var _questionChoices:Vector.<_Str_4224>;
+        private var _questionChoices:Vector.<QuestionChoice>;
 
         public function PollQuestion()
         {
             this._children = new Vector.<PollQuestion>();
-            this._questionChoices = new Vector.<_Str_4224>();
+            this._questionChoices = new Vector.<QuestionChoice>();
         }
 
         public function get _Str_3218():int
@@ -106,12 +106,12 @@
             this._children = children;
         }
 
-        public function get questionChoices():Vector.<_Str_4224>
+        public function get questionChoices():Vector.<QuestionChoice>
         {
             return this._questionChoices;
         }
 
-        public function set questionChoices(k:Vector.<_Str_4224>):void
+        public function set questionChoices(k:Vector.<QuestionChoice>):void
         {
             this._questionChoices = k;
         }

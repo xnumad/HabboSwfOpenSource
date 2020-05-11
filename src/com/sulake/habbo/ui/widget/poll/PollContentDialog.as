@@ -11,7 +11,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.communication.enum.poll.QuestionType;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.parser.poll._Str_4224;
+    import com.sulake.habbo.communication.messages.parser.poll.QuestionChoice;
     import com.sulake.core.window.components.ISelectorWindow;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
@@ -221,7 +221,7 @@
             return null;
         }
 
-        private function _Str_24518(k:IWindowContainer, _arg_2:Vector.<_Str_4224>):void
+        private function _Str_24518(k:IWindowContainer, _arg_2:Vector.<QuestionChoice>):void
         {
             var _local_3:XmlAsset = (this._widget.assets.getAssetByName("poll_answer_radiobutton_input") as XmlAsset);
             if (!_local_3)
@@ -240,7 +240,7 @@
         {
             var _local_3:ISelectorWindow;
             var _local_4:ISelectableWindow;
-            var _local_5:_Str_4224;
+            var _local_5:QuestionChoice;
             var _local_2:Array = new Array();
             if (this._window != null)
             {
@@ -266,7 +266,7 @@
             return _local_2;
         }
 
-        private function _parser6(k:IWindowContainer, _arg_2:Vector.<_Str_4224>):void
+        private function _parser6(k:IWindowContainer, _arg_2:Vector.<QuestionChoice>):void
         {
             var _local_3:XmlAsset = (this._widget.assets.getAssetByName("poll_answer_checkbox_input") as XmlAsset);
             if (!_local_3)
@@ -315,7 +315,7 @@
             return _local_2;
         }
 
-        private function _Str_21700(k:Vector.<_Str_4224>, _arg_2:IWindowContainer):void
+        private function _Str_21700(k:Vector.<QuestionChoice>, _arg_2:IWindowContainer):void
         {
             var _local_4:IWindowContainer;
             var _local_5:int;

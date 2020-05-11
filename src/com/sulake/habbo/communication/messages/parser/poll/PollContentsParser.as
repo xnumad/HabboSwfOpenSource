@@ -97,7 +97,7 @@
                 _local_3 = 0;
                 while (_local_3 < pollQuestion.questionAnswerCount)
                 {
-                    pollQuestion.questionChoices.push(new _Str_4224(k.readString(), k.readString(), k.readInteger()));
+                    pollQuestion.questionChoices.push(new QuestionChoice(k.readString(), k.readString(), k.readInteger()));
                     _local_3++;
                 }
             }
