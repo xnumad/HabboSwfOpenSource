@@ -389,34 +389,34 @@
                     this._container.sessionDataManager.unignoreUser(_local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_KICK_USER:
-                    this._container.roomSession.kickUser(_local_3._Str_2394);
+                    this._container.roomSession.kickUser(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_DAY:
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_HOUR:
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_PERM:
-                    this._container.roomSession._Str_20746(_local_3._Str_2394, k.type);
+                    this._container.roomSession._Str_20746(_local_3.id, k.type);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_2MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 2);
+                    this._container.roomSession._Str_5984(_local_3.id, 2);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_5MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 5);
+                    this._container.roomSession._Str_5984(_local_3.id, 5);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_10MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 10);
+                    this._container.roomSession._Str_5984(_local_3.id, 10);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_RIGHTS:
-                    this._container.roomSession._Str_20139(_local_3._Str_2394);
+                    this._container.roomSession._Str_20139(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TAKE_RIGHTS:
-                    this._container.roomSession._Str_21257(_local_3._Str_2394);
+                    this._container.roomSession._Str_21257(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_START_TRADING:
                     _local_9 = this._container.roomSession.userDataManager.getUserData(_local_4.userId);
                     this._container.inventory._Str_20389(_local_9._Str_2713, _local_9.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_OPEN_HOME_PAGE:
-                    this._container.sessionDataManager.ejectAllFurniture(_local_3._Str_2394, _local_3.name);
+                    this._container.sessionDataManager.ejectAllFurniture(_local_3.id, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PICKUP_PET:
                     this._container.roomSession._Str_13781(_local_2);
@@ -571,22 +571,22 @@
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_AMBASSADOR_ALERT_USER:
-                    this._container.roomSession._Str_18152(_local_3._Str_2394);
+                    this._container.roomSession._Str_18152(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_AMBASSADOR_KICK_USER:
-                    this._container.roomSession.kickUser(_local_3._Str_2394);
+                    this._container.roomSession.kickUser(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_2MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 2);
+                    this._container.roomSession._Str_5984(_local_3.id, 2);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_10MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 10);
+                    this._container.roomSession._Str_5984(_local_3.id, 10);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_60MIN:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 60);
+                    this._container.roomSession._Str_5984(_local_3.id, 60);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_18HOUR:
-                    this._container.roomSession._Str_5984(_local_3._Str_2394, 1080);
+                    this._container.roomSession._Str_5984(_local_3.id, 1080);
                     break;
                 case RoomWidgetUserActionMessage.GROUP_WHISPER:
                     _local_8 = new _Str_4831(_Str_4831.WHISPER, "groupe");
@@ -693,7 +693,7 @@
                     _local_3 = _local_9.name;
                     _local_4 = _local_9.type;
                     _local_5 = _local_9._Str_2713;
-                    _local_6 = _local_9._Str_2394;
+                    _local_6 = _local_9.id;
                     break;
             }
             if (_local_3 != null)
@@ -726,7 +726,7 @@
                     switch (_local_3.type)
                     {
                         case RoomObjectTypeEnum.PET:
-                            this._Str_25299(_local_3._Str_2394);
+                            this._Str_25299(_local_3.id);
                             break;
                         case RoomObjectTypeEnum.HABBO:
                             this._Str_22722(_local_2, k.id, k.category, _local_3);
@@ -759,7 +759,7 @@
             var _local_6:RoomWidgetUpdateInfostandUserEvent = new RoomWidgetUpdateInfostandUserEvent(_local_5);
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
-            _local_6._Str_2394 = _arg_4._Str_2394;
+            _local_6.id = _arg_4.id;
             _local_6._Str_3313 = _arg_2;
             _local_6._Str_2908 = _arg_4.type;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
@@ -784,7 +784,7 @@
             var _local_5:RoomWidgetRentrableBotInfostandUpdateEvent = new RoomWidgetRentrableBotInfostandUpdateEvent();
             _local_5.name = _arg_4.name;
             _local_5.motto = _arg_4.custom;
-            _local_5._Str_2394 = _arg_4._Str_2394;
+            _local_5.id = _arg_4.id;
             _local_5._Str_3313 = _arg_2;
             _local_5.ownerId = _arg_4.ownerId;
             _local_5.ownerName = _arg_4.ownerName;
@@ -817,7 +817,7 @@
             var _local_15:Boolean;
             var _local_16:Boolean;
             _local_5 = RoomWidgetUpdateInfostandUserEvent.OWN_USER;
-            if (_arg_4._Str_2394 != this._container.sessionDataManager.userId)
+            if (_arg_4.id != this._container.sessionDataManager.userId)
             {
                 _local_5 = RoomWidgetUpdateInfostandUserEvent.PEER;
             }
@@ -829,7 +829,7 @@
             {
                 _local_6.activityPoints = _arg_4.activityPoints;
             }
-            _local_6._Str_2394 = _arg_4._Str_2394;
+            _local_6.id = _arg_4.id;
             _local_6._Str_3313 = _arg_2;
             _local_6._Str_2908 = RoomObjectTypeEnum.HABBO;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
@@ -849,8 +849,8 @@
             _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
             {
-                _local_6.canBeAskedForAFriend = this._container.friendList.canBeAskedForAFriend(_arg_4._Str_2394);
-                _local_9 = this._container.friendList.getFriend(_arg_4._Str_2394);
+                _local_6.canBeAskedForAFriend = this._container.friendList.canBeAskedForAFriend(_arg_4.id);
+                _local_9 = this._container.friendList.getFriend(_arg_4.id);
                 if (_local_9 != null)
                 {
                     _local_6.realName = _local_9.realName;
@@ -908,13 +908,13 @@
             _local_6.groupId = int(_arg_4._Str_4592);
             _local_6._Str_5235 = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4._Str_4592));
             _local_6.groupName = _arg_4.groupName;
-            _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4._Str_2394);
+            _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4.id);
             _local_6.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_6);
-            var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4._Str_2394);
-            this._Str_16287(_arg_4._Str_2394, _local_8);
-            this._container._Str_8097._Str_14387(_arg_4._Str_2394);
-            this._container.connection.send(new _Str_8049(_arg_4._Str_2394));
+            var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4.id);
+            this._Str_16287(_arg_4.id, _local_8);
+            this._container._Str_8097._Str_14387(_arg_4.id);
+            this._container.connection.send(new _Str_8049(_arg_4.id));
         }
 
         private function _Str_23100(userInfo:RoomWidgetUpdateInfostandUserEvent):Boolean
@@ -1190,7 +1190,7 @@
             {
                 return;
             }
-            var _local_3:int = _local_2._Str_2394;
+            var _local_3:int = _local_2.id;
             var _local_4:BitmapData;
             var _local_5:* = (_local_3 == this._container.sessionDataManager.userId);
             this._widget._Str_17133(_local_3, k.figure, k.activityPoints, k.customInfo, _local_5);

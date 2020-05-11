@@ -2111,7 +2111,7 @@
                                     _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                                     if (_local_11 != null)
                                     {
-                                        this._roomEngine.connection.send(new _Str_8026(_local_11._Str_2394, _local_6, _local_7, _local_8));
+                                        this._roomEngine.connection.send(new _Str_8026(_local_11.id, _local_6, _local_7, _local_8));
                                     }
                                 }
                             }
@@ -2136,7 +2136,7 @@
                         if (_local_10 != null)
                         {
                             _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
-                            _local_10._Str_13781(_local_11._Str_2394);
+                            _local_10._Str_13781(_local_11.id);
                         }
                     }
                     break;
@@ -2149,7 +2149,7 @@
                             _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                             if (_local_11 != null)
                             {
-                                this._roomEngine.connection.send(new _Str_5937(_local_11._Str_2394));
+                                this._roomEngine.connection.send(new _Str_5937(_local_11.id));
                             }
                         }
                     }
@@ -2191,7 +2191,7 @@
                                     _local_11 = _local_10.userDataManager.getUserDataByIndex(_arg_2);
                                     if (_local_11 != null)
                                     {
-                                        this._roomEngine.connection.send(new _Str_8026(_local_11._Str_2394, _local_6, _local_7, _local_8));
+                                        this._roomEngine.connection.send(new _Str_8026(_local_11.id, _local_6, _local_7, _local_8));
                                     }
                                 }
                             }

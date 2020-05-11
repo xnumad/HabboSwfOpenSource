@@ -465,7 +465,7 @@
                     _local_6 = this._roomSessionManager.getSession(k).userDataManager.getUserDataByIndex(_arg_2);
                     if (((_local_6) && (this._moderation)))
                     {
-                        this._moderation._Str_9380(_local_5._Str_2394, _local_6.name);
+                        this._moderation._Str_9380(_local_5.id, _local_6.name);
                     }
                 }
             }

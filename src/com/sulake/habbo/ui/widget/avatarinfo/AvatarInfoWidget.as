@@ -601,7 +601,7 @@
                         if (((!(_local_3 == null)) && (!(this._petInfoData == null))))
                         {
                             _local_22 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_3._Str_2508);
-                            if (((!(_local_22 == null)) && (_local_22._Str_2394 == this._petInfoData.id)))
+                            if (((!(_local_22 == null)) && (_local_22.id == this._petInfoData.id)))
                             {
                                 this.removeView(this._view, true);
                             }
@@ -619,7 +619,7 @@
                         if (((!(_local_4 == null)) && (!(this._petInfoData == null))))
                         {
                             _local_23 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_4._Str_2508);
-                            if (((!(_local_23 == null)) && (_local_23._Str_2394 == this._petInfoData.id)))
+                            if (((!(_local_23 == null)) && (_local_23.id == this._petInfoData.id)))
                             {
                                 this.removeView(this._view, true);
                             }
@@ -709,7 +709,7 @@
                     _local_13 = (k as RoomWidgetUpdateInfostandUserEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
-                    this._Str_12674(_local_13._Str_2394, _local_13.name, _local_13._Str_2908, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
+                    this._Str_12674(_local_13.id, _local_13.name, _local_13._Str_2908, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT:
                     _local_15 = (k as RoomWidgetRentrableBotInfostandUpdateEvent);
@@ -723,17 +723,17 @@
                     {
                         return;
                     }
-                    _local_17 = _local_16.userDataManager._Str_17237(_local_15._Str_2394);
+                    _local_17 = _local_16.userDataManager._Str_17237(_local_15.id);
                     if (!_local_17)
                     {
                         return;
                     }
-                    this._botSkillsWithCommandsMap[_local_15._Str_2394.toString()] = _local_17._Str_7594;
+                    this._botSkillsWithCommandsMap[_local_15.id.toString()] = _local_17._Str_7594;
                     if (((this._rentableBotInfoData) && (_local_17._Str_7594)))
                     {
                         this._rentableBotInfoData._Str_19891(_local_17._Str_7594);
                     }
-                    this._Str_16991(_local_15._Str_2394, _local_15.name, _local_15._Str_3313, this._rentableBotInfoData);
+                    this._Str_16991(_local_15.id, _local_15.name, _local_15._Str_3313, this._rentableBotInfoData);
                     break;
                 case _Str_5375.RWRBSLUE_SKILL_LIST:
                     _local_18 = (k as _Str_5375);
@@ -760,7 +760,7 @@
                     break;
                 case RoomWidgetUpdateInfostandUserEvent.BOT:
                     _local_20 = (k as RoomWidgetUpdateInfostandUserEvent);
-                    this._Str_12674(_local_20._Str_2394, _local_20.name, _local_20._Str_2908, _local_20._Str_3313, false, null);
+                    this._Str_12674(_local_20.id, _local_20.name, _local_20._Str_2908, _local_20._Str_3313, false, null);
                     break;
                 case RoomWidgetPetInfostandUpdateEvent.PET_INFO:
                     if (this._handlePetInfo)
@@ -818,7 +818,7 @@
                 }
                 else
                 {
-                    if (_local_6._Str_2394 == k)
+                    if (_local_6.id == k)
                     {
                         return _local_5.getId();
                     }
@@ -1190,7 +1190,7 @@
             if (this._avatarNameBubbles[k.name] == null)
             {
                 _local_3 = new UserNameView(this);
-                UserNameView.setup(_local_3, k._Str_2394, k.name, -1, RoomObjectTypeEnum.HABBO, _arg_2);
+                UserNameView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.HABBO, _arg_2);
                 this._avatarNameBubbles[k.name] = _local_3;
                 this._Str_4556();
             }
@@ -1211,11 +1211,11 @@
         private function _Str_22799(k:RoomUserData, _arg_2:_Str_3858):void
         {
             var _local_3:UseProductView;
-            if (this._useProductBubbles[k._Str_2394.toString()] == null)
+            if (this._useProductBubbles[k.id.toString()] == null)
             {
                 _local_3 = new UseProductView(this);
-                UseProductView.setup(_local_3, k._Str_2394, k.name, -1, RoomObjectTypeEnum.PET, _arg_2);
-                this._useProductBubbles[k._Str_2394.toString()] = _local_3;
+                UseProductView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.PET, _arg_2);
+                this._useProductBubbles[k.id.toString()] = _local_3;
                 this._Str_4556();
             }
         }
@@ -1223,11 +1223,11 @@
         private function _Str_24936(k:RoomUserData, _arg_2:_Str_3858):void
         {
             var _local_3:BreedPetView;
-            if (this._breedPetBubbles[k._Str_2394.toString()] == null)
+            if (this._breedPetBubbles[k.id.toString()] == null)
             {
                 _local_3 = new BreedPetView(this);
-                BreedPetView.setup(_local_3, k._Str_2394, k.name, -1, RoomObjectTypeEnum.PET, _arg_2, k.canBreed);
-                this._breedPetBubbles[k._Str_2394.toString()] = _local_3;
+                BreedPetView.setup(_local_3, k.id, k.name, -1, RoomObjectTypeEnum.PET, _arg_2, k.canBreed);
+                this._breedPetBubbles[k.id.toString()] = _local_3;
                 this._Str_4556();
             }
         }
@@ -1600,7 +1600,7 @@
                     _local_7 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_6.getId());
                     if (_local_7 != null)
                     {
-                        if (_local_7._Str_2394 == k)
+                        if (_local_7.id == k)
                         {
                             return _local_6;
                         }
@@ -1668,7 +1668,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_8664, _local_3._Str_2394, _local_4._Str_2394));
+                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_8664, _local_3.id, _local_4.id));
             }
         }
 
@@ -1678,7 +1678,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_9186, _local_3._Str_2394, _local_4._Str_2394));
+                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_9186, _local_3.id, _local_4.id));
             }
         }
 
@@ -1688,7 +1688,7 @@
             var _local_4:RoomUserData = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             if (((_local_3) && (_local_4)))
             {
-                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_17533, _local_3._Str_2394, _local_4._Str_2394));
+                this.handler.container.connection.send(new _Str_4844(_Str_4844._Str_17533, _local_3.id, _local_4.id));
             }
         }
 

@@ -9,7 +9,7 @@
         private var _figure:String = "";
         private var _custom:String = "";
         private var _activityPoints:int;
-        private var _Str_4900:int = 0;
+        private var _id:int = 0;
         private var _Str_11874:String = "";
         private var _Str_11729:int = 0;
         private var _groupName:String = "";
@@ -97,14 +97,14 @@
             this._custom = k;
         }
 
-        public function get _Str_2394():int
+        public function get id():int
         {
-            return this._Str_4900;
+            return this._id;
         }
 
-        public function set _Str_2394(k:int):void
+        public function set id(k:int):void
         {
-            this._Str_4900 = k;
+            this._id = k;
         }
 
         public function get _Str_4592():String

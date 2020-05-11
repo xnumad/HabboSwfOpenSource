@@ -101,7 +101,7 @@
                 _local_2 = new Map();
                 this._userDataByType.add(k.type, _local_2);
             }
-            _local_2.add(k._Str_2394, k);
+            _local_2.add(k.id, k);
             this._userDataByRoomIndex.add(k._Str_2713, k);
         }
 
@@ -115,7 +115,7 @@
                 _local_3 = this._userDataByType.getValue(_local_2.type);
                 if (_local_3 != null)
                 {
-                    _local_4 = _local_3.remove(_local_2._Str_2394);
+                    _local_4 = _local_3.remove(_local_2.id);
                     if (_local_4 != null)
                     {
                     }
@@ -204,7 +204,7 @@
             var _local_2:RoomUserData = this._Str_8631(k);
             if (((!(_local_2 == null)) && (!(this._connection == null))))
             {
-                this._connection.send(new _Str_11731(_local_2._Str_2394));
+                this._connection.send(new _Str_11731(_local_2.id));
             }
         }
 
@@ -214,7 +214,7 @@
             var k:Array = new Array();
             for each (_local_2 in this._userDataByRoomIndex)
             {
-                k.push(_local_2._Str_2394);
+                k.push(_local_2.id);
             }
             return k;
         }

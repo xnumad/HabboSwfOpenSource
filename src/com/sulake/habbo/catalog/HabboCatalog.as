@@ -2458,7 +2458,7 @@
                 _local_2 = this._Str_22062(k);
                 if (_local_2 != null)
                 {
-                    events.dispatchEvent(new CatalogUserEvent(CatalogEvent.CATALOG_USER_SELECTED, _local_2._Str_2394, _local_2.name));
+                    events.dispatchEvent(new CatalogUserEvent(CatalogEvent.CATALOG_USER_SELECTED, _local_2.id, _local_2.name));
                 }
             }
         }

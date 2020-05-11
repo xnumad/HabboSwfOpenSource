@@ -235,7 +235,7 @@
             var _local_4:String = "";
             var _local_5:uint;
             var _local_6:BitmapData = _local_2._Str_3093;
-            var _local_7:* = (!((_local_3 == null) || (_local_3._Str_2394 == this._accountId)));
+            var _local_7:* = (!((_local_3 == null) || (_local_3.id == this._accountId)));
             if (((k._Str_15251) || (k._Str_14270)))
             {
                 if (!_local_6)

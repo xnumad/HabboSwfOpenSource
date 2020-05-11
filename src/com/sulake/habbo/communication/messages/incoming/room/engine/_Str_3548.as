@@ -181,12 +181,12 @@
             }
         }
 
-        public function get _Str_2394():int
+        public function get id():int
         {
             return this._id;
         }
 
-        public function set _Str_2394(k:int):void
+        public function set id(k:int):void
         {
             if (!this._Str_2479)
             {

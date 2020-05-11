@@ -257,7 +257,7 @@
                                             userToKick = this._container.roomSession.userDataManager._Str_10979(_local_13);
                                             if (userToKick)
                                             {
-                                                this._container.roomSession.kickUser(userToKick._Str_2394);
+                                                this._container.roomSession.kickUser(userToKick.id);
                                             }
                                         }
                                         return null;
@@ -268,7 +268,7 @@
                                             _local_19 = this._container.roomSession.userDataManager._Str_10979(_local_13);
                                             if (_local_19)
                                             {
-                                                this._container.roomSession._Str_5984(_local_19._Str_2394, 2);
+                                                this._container.roomSession._Str_5984(_local_19.id, 2);
                                             }
                                         }
                                         return null;
@@ -320,7 +320,7 @@
                                             _local_20 = this._container.roomSession.userDataManager._Str_10979(_local_13);
                                             if (_local_20)
                                             {
-                                                this._container.roomSession._Str_18152(_local_20._Str_2394);
+                                                this._container.roomSession._Str_18152(_local_20.id);
                                             }
                                         }
                                         return null;
@@ -433,7 +433,7 @@
                         _local_24 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_6._Str_1577);
                         if (_local_24 != null)
                         {
-                            this._container._Str_15532._Str_9380(_local_24._Str_2394, _local_6.userName, _local_24.figure, _local_24._Str_3344);
+                            this._container._Str_15532._Str_9380(_local_24.id, _local_6.userName, _local_24.figure, _local_24._Str_3344);
                         }
                     }
                     break;

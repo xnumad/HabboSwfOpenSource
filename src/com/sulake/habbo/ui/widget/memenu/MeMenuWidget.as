@@ -244,7 +244,7 @@
 
         private function _Str_3746(k:RoomWidgetUpdateInfostandUserEvent):void
         {
-            this._userId = k._Str_2394;
+            this._userId = k.id;
         }
 
         private function _Str_21972(k:_Str_3963):void

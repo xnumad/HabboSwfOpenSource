@@ -593,7 +593,7 @@
                 }
                 else
                 {
-                    if (_local_6._Str_2394 == k)
+                    if (_local_6.id == k)
                     {
                         return _local_6;
                     }

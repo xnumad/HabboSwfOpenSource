@@ -147,7 +147,7 @@
                 _local_8.activityPoints = _local_7.activityPoints;
                 _local_8.figure = _local_7.figure;
                 _local_8.type = _local_7._Str_2908;
-                _local_8._Str_2394 = _local_7._Str_2394;
+                _local_8.id = _local_7.id;
                 _local_8._Str_4592 = _local_7._Str_4592;
                 _local_8.groupName = _local_7.groupName;
                 _local_8._Str_7043 = _local_7._Str_7043;

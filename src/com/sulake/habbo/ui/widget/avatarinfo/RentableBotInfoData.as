@@ -108,11 +108,11 @@
 
         public function populate(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
         {
-            if (k._Str_2394 != this.id)
+            if (k.id != this.id)
             {
                 this._botSkillsWithCommands = new Array(0);
             }
-            this.id = k._Str_2394;
+            this.id = k.id;
             this.roomIndex = k._Str_3313;
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;

@@ -454,7 +454,7 @@
                     this.close();
                     break;
                 case SAVE_BUTTON:
-                    _local_2 = new RoomWidgetUseProductMessage(RoomWidgetUseProductMessage.RWUPM_PET_PRODUCT, this._requestObjectId, this._petData._Str_2394);
+                    _local_2 = new RoomWidgetUseProductMessage(RoomWidgetUseProductMessage.RWUPM_PET_PRODUCT, this._requestObjectId, this._petData.id);
                     this.close();
                     break;
             }

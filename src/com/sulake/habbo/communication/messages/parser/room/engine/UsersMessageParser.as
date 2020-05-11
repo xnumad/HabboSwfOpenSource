@@ -114,7 +114,7 @@
                 this._users.push(_local_14);
                 if (_local_13 == 1)
                 {
-                    _local_14._Str_2394 = _local_4;
+                    _local_14.id = _local_4;
                     _local_14._Str_2908 = RoomObjectTypeEnum.HABBO;
                     _local_14._Str_3344 = this.resolveSex(k.readString());
                     _local_14._Str_4592 = ("" + k.readInteger());
@@ -135,7 +135,7 @@
                     {
                         _local_14._Str_2908 = RoomObjectTypeEnum.PET;
                         _local_14.figure = _local_7;
-                        _local_14._Str_2394 = _local_4;
+                        _local_14.id = _local_4;
                         _local_14._Str_3882 = k.readInteger().toString();
                         _local_14.ownerId = k.readInteger();
                         _local_14.ownerName = k.readString();
@@ -154,7 +154,7 @@
                         if (_local_13 == 3)
                         {
                             _local_14._Str_2908 = RoomObjectTypeEnum.BOT;
-                            _local_14._Str_2394 = (_local_8 * -1);
+                            _local_14.id = (_local_8 * -1);
                             if (_local_7.indexOf("/") == -1)
                             {
                                 _local_14.figure = _local_7;
@@ -170,7 +170,7 @@
                             if (_local_13 == 4)
                             {
                                 _local_14._Str_2908 = RoomObjectTypeEnum.RENTABLE_BOT;
-                                _local_14._Str_2394 = _local_4;
+                                _local_14.id = _local_4;
                                 _local_14._Str_3344 = this.resolveSex(k.readString());
                                 _local_14.figure = _local_7;
                                 _local_14.ownerId = k.readInteger();

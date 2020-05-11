@@ -1134,7 +1134,7 @@
                         _local_8 = this._session.userDataManager.getUserDataByIndex(_local_2);
                         if (((!(_local_8 == null)) && (_local_8.type == RoomObjectTypeEnum.HABBO)))
                         {
-                            this._moderation._Str_9380(_local_8._Str_2394, _local_8.name);
+                            this._moderation._Str_9380(_local_8.id, _local_8.name);
                         }
                     }
                     break;

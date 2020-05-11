@@ -139,7 +139,7 @@
 
         public function _Str_5479(k:RoomWidgetUpdateInfostandUserEvent):void
         {
-            this.userId = k._Str_2394;
+            this.userId = k.id;
             this.userName = k.name;
             this.badges = k.badges;
             this.groupId = k.groupId;

@@ -302,7 +302,7 @@
                     }
                     else
                     {
-                        this._Str_2268._Str_23246(this._Str_2595, _local_2, this._roomUserData._Str_2394, this._petData2._Str_2394);
+                        this._Str_2268._Str_23246(this._Str_2595, _local_2, this._roomUserData.id, this._petData2.id);
                         this.disable();
                     }
                     return;

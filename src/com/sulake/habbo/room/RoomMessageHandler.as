@@ -797,7 +797,7 @@
                     _local_7 = new Vector3d(_local_5.dir);
                     _local_8 = _local_5._Str_2908;
                     this._roomCreator.addObjectUser(this._currentRoomId, _local_5.roomIndex, _local_6, _local_7, _local_5.dir, _local_8, _local_5.figure);
-                    if (_local_5._Str_2394 == this._ownUserId)
+                    if (_local_5.id == this._ownUserId)
                     {
                         this._roomCreator.setOwnUserId(this._currentRoomId, _local_5.roomIndex);
                         this._roomCreator.updateObjectUserOwnUserAvatar(this._currentRoomId, _local_5.roomIndex);

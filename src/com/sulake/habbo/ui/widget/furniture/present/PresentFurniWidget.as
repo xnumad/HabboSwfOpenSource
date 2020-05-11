@@ -879,7 +879,7 @@
                     {
                         _local_4 = this._roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.CONST_100);
                         _local_5 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
-                        if (((!(_local_5 == null)) && (_local_5._Str_2394 == this._placedItemId)))
+                        if (((!(_local_5 == null)) && (_local_5.id == this._placedItemId)))
                         {
                             this._roomEngine._Str_5538(k, _local_5._Str_2713, RoomObjectCategoryEnum.CONST_100);
                             break;

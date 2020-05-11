@@ -101,7 +101,7 @@
 
         public function _Str_5479(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
         {
-            this.userId = k._Str_2394;
+            this.userId = k.id;
             this.name = k.name;
             this.badges = k.badges;
             this._Str_3249 = k._Str_3249;

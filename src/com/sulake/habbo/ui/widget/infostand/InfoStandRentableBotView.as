@@ -107,7 +107,7 @@
 
         public function update(k:RoomWidgetRentrableBotInfostandUpdateEvent):void
         {
-            this._botId = k._Str_2394;
+            this._botId = k.id;
             this._Str_9667(NAME_TEXT, true, k.name);
             this._Str_9667(DESCRIPTION_TEXT, true, k.motto);
             if (k.ownerId > -1)
