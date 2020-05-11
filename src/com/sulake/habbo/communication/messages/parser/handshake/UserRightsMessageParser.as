@@ -6,7 +6,7 @@
     public class UserRightsMessageParser implements IMessageParser 
     {
         private var _clubLevel:int;
-        private var _Str_8385:int;
+        private var _securityLevel:int;
         private var isAmbassador:Boolean;
 
 
@@ -18,7 +18,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._clubLevel = k.readInteger();
-            this._Str_8385 = k.readInteger();
+            this._securityLevel = k.readInteger();
             this.isAmbassador = k.readBoolean();
             return true;
         }
@@ -30,7 +30,7 @@
 
         public function get securityLevel():int
         {
-            return this._Str_8385;
+            return this._securityLevel;
         }
 
         public function get isAmbassador():Boolean

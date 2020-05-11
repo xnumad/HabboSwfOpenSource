@@ -113,7 +113,7 @@
         private var _Str_8233:Array;
         private var _Str_6042:Array;
         private var _clubLevel:int;
-        private var _Str_8385:int;
+        private var _securityLevel:int;
         private var _Str_16966:int = 0;
         private var _Str_7106:int = -1;
         private var isAmbassador:Boolean;
@@ -305,7 +305,7 @@
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             this._clubLevel = _local_2.clubLevel;
-            this._Str_8385 = _local_2.securityLevel;
+            this._securityLevel = _local_2.securityLevel;
             this._Str_16966 = Math.max(this._Str_16966, _local_2.securityLevel);
             this.isAmbassador = _local_2.isAmbassador;
         }
@@ -481,7 +481,7 @@
 
         public function hasSecurity(k:int):Boolean
         {
-            return this._Str_8385 >= k;
+            return this._securityLevel >= k;
         }
 
         public function get _Str_8500():int
@@ -526,7 +526,7 @@
 
         public function get isGodMode():Boolean
         {
-            return this._Str_8385 >= SecurityLevelEnum._Str_3569;
+            return this._securityLevel >= SecurityLevelEnum._Str_3569;
         }
 
         public function get isAmbassador():Boolean
