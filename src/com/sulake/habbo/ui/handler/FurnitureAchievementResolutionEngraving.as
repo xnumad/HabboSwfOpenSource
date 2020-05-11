@@ -12,7 +12,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
 
-    public class _Str_10181 implements IRoomWidgetHandler 
+    public class FurnitureAchievementResolutionEngraving implements IRoomWidgetHandler 
     {
         private var _disposed:Boolean = false;
         private var _container:IRoomWidgetHandlerContainer = null;

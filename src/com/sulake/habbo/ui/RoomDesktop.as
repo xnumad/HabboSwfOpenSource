@@ -94,7 +94,7 @@
     import com.sulake.habbo.ui.handler.CameraWidgetHandler;
     import com.sulake.habbo.ui.handler.FurnitureBackgroundColorWidgetHandler;
     import com.sulake.habbo.ui.handler.CustomUserNotificationWidgetHandler;
-    import com.sulake.habbo.ui.handler._Str_10181;
+    import com.sulake.habbo.ui.handler.FurnitureAchievementResolutionEngraving;
     import com.sulake.habbo.ui.handler.FriendFurniConfirmWidgetHandler;
     import com.sulake.habbo.ui.handler.FriendFurniEngravingWidgetHandler;
     import com.sulake.habbo.ui.handler.HighScoreFurniWidgetHandler;
@@ -865,7 +865,7 @@
                     widgetHandler = new CustomUserNotificationWidgetHandler();
                     break;
                 case RoomWidgetEnum.FURNI_ACHIEVEMENT_RESOLUTION_ENGRAVING:
-                    widgetHandler = new _Str_10181();
+                    widgetHandler = new FurnitureAchievementResolutionEngraving();
                     break;
                 case RoomWidgetEnum.FRIEND_FURNI_CONFIRM:
                     widgetHandler = new FriendFurniConfirmWidgetHandler();
