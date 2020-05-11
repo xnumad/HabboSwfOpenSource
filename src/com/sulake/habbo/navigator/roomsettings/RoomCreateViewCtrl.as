@@ -445,13 +445,13 @@
             var _roomDesc:String = this._roomDescInput.getText();
             var _roomLayout:String = ("model_" + this._selectedLayout.name);
             var _maxVisitors:int = parseInt(this._maxVisitors.items()[this._maxVisitors.selection]);
-            var selectedRoomCategory:int;
+            var selectedFlatCategoryNodeId:int;
             var i:int;
             for each (_flatCategory in this._selectableAndVisibleCategories)
             {
                 if (this._categoryMenu.selection == i)
                 {
-                    selectedRoomCategory = _flatCategory.nodeId;
+                    selectedFlatCategoryNodeId = _flatCategory.nodeId;
                     break;
                 }
                 i++;
@@ -461,7 +461,7 @@
             {
                 return;
             }
-            this._navigator.send(new CreateFlatMessageComposer(_roomName, _roomDesc, _roomLayout, selectedRoomCategory, _maxVisitors, roomTradeSetting));
+            this._navigator.send(new CreateFlatMessageComposer(_roomName, _roomDesc, _roomLayout, selectedFlatCategoryNodeId, _maxVisitors, roomTradeSetting));
         }
 
         private function close():void
