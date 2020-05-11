@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.poll.PollErrorParser;
 
-    public class _Str_8563 extends MessageEvent implements IMessageEvent 
+    public class PollErrorEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_8563(k:Function)
+        public function PollErrorEvent(k:Function)
         {
             super(k, PollErrorParser);
         }

@@ -923,7 +923,7 @@
 	import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollOfferEvent;
-	import com.sulake.habbo.communication.messages.incoming.poll._Str_8563;
+	import com.sulake.habbo.communication.messages.incoming.poll.PollErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.PollContentsEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll._Str_8879;
 	import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10314;
@@ -1418,7 +1418,7 @@
             INCOMING_PACKETS[639] = BotErrorEvent;
             INCOMING_PACKETS[659] = _Str_9157;
             INCOMING_PACKETS[66] = AchievementResolutionsMessageEvent;
-            INCOMING_PACKETS[662] = _Str_8563;
+            INCOMING_PACKETS[662] = PollErrorEvent;
             INCOMING_PACKETS[673] = GuideSessionErrorEvent;
             INCOMING_PACKETS[680] = _Str_7697;
             INCOMING_PACKETS[687] = _Str_2929;
