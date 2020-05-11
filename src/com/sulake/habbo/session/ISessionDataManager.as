@@ -27,7 +27,7 @@
         function get gender():String;
         function get _Str_11198():Boolean;
         function get isGodMode():Boolean;
-        function get _Str_4050():Boolean;
+        function get isAmbassador():Boolean;
         function get _Str_22301():Boolean;
         function get mysteryBoxColor():String;
         function get mysteryKeyColor():String;

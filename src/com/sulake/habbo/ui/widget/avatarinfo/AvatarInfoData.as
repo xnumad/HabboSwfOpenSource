@@ -189,7 +189,7 @@
             return this._isFriend;
         }
 
-        public function get _Str_4050():Boolean
+        public function get isAmbassador():Boolean
         {
             return this._isAmbassador;
         }

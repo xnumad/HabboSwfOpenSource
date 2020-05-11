@@ -33,7 +33,7 @@
             return this._Str_8385;
         }
 
-        public function get _Str_4050():Boolean
+        public function get isAmbassador():Boolean
         {
             return this._Str_4890;
         }

@@ -846,7 +846,7 @@
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
-            _local_6._Str_18096 = this._container.sessionDataManager._Str_4050;
+            _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
             {
                 _local_6.canBeAskedForAFriend = this._container.friendList.canBeAskedForAFriend(_arg_4._Str_2394);

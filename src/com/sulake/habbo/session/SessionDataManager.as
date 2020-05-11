@@ -307,7 +307,7 @@
             this._clubLevel = _local_2.clubLevel;
             this._Str_8385 = _local_2.securityLevel;
             this._Str_16966 = Math.max(this._Str_16966, _local_2.securityLevel);
-            this._Str_4890 = _local_2._Str_4050;
+            this._Str_4890 = _local_2.isAmbassador;
         }
 
         private function _Str_25667(k:NoobnessLevelMessageEvent):void
@@ -529,7 +529,7 @@
             return this._Str_8385 >= SecurityLevelEnum._Str_3569;
         }
 
-        public function get _Str_4050():Boolean
+        public function get isAmbassador():Boolean
         {
             return this._Str_4890;
         }

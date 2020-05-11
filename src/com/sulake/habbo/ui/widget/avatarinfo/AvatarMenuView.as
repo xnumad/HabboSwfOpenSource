@@ -174,7 +174,7 @@
 
         private function ambassadorMenuHasContent():Boolean
         {
-            return this._data._Str_4050;
+            return this._data.isAmbassador;
         }
 
         private function moderateMenuHasContent():Boolean

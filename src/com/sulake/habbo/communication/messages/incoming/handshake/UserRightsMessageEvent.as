@@ -21,9 +21,9 @@
             return (this._parser as UserRightsMessageParser).securityLevel;
         }
 
-        public function get _Str_4050():Boolean
+        public function get isAmbassador():Boolean
         {
-            return (this._parser as UserRightsMessageParser)._Str_4050;
+            return (this._parser as UserRightsMessageParser).isAmbassador;
         }
     }
 }

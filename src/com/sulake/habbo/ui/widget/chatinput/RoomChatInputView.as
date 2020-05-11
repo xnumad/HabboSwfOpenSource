@@ -247,7 +247,7 @@
                     {
                         _local_3.push(_local_6);
                     }
-                    if (((_local_7.isAmbassadorOnly) && ((_local_5) || (this._widget.handler.container.sessionDataManager._Str_4050))))
+                    if (((_local_7.isAmbassadorOnly) && ((_local_5) || (this._widget.handler.container.sessionDataManager.isAmbassador))))
                     {
                         _local_3.push(_local_6);
                     }

@@ -190,14 +190,14 @@
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "sign", null, int(_local_13));
                                         return null;
                                     case ":chooser":
-                                        if ((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_13617))) || (this._container.sessionDataManager._Str_4050)))
+                                        if ((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_13617))) || (this._container.sessionDataManager.isAmbassador)))
                                         {
                                             _local_9 = new RoomWidgetRequestWidgetMessage(RoomWidgetRequestWidgetMessage.RWRWM_USER_CHOOSER);
                                             this._container.processWidgetMessage(_local_9);
                                         }
                                         return null;
                                     case ":furni":
-                                        if (((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_13617))) || (this._container.sessionDataManager._Str_4050)))
+                                        if (((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_13617))) || (this._container.sessionDataManager.isAmbassador)))
                                         {
                                             _local_9 = new RoomWidgetRequestWidgetMessage(RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER);
                                             this._container.processWidgetMessage(_local_9);
@@ -296,13 +296,13 @@
                                         }
                                         return null;
                                     case ":anew":
-                                        if (((this._container.sessionDataManager._Str_4050) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
                                             this._container.roomSession._Str_16989("new");
                                         }
                                         return null;
                                     case ":avisit":
-                                        if (((this._container.sessionDataManager._Str_4050) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
                                             if ("group" == _local_13)
                                             {
@@ -315,7 +315,7 @@
                                         }
                                         return null;
                                     case ":aalert":
-                                        if (((this._container.sessionDataManager._Str_4050) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
                                             _local_20 = this._container.roomSession.userDataManager._Str_10979(_local_13);
                                             if (_local_20)
