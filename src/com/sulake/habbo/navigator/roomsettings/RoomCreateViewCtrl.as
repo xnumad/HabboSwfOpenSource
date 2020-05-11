@@ -439,29 +439,29 @@
 
         private function _Str_23902(k:WindowEvent):void
         {
-            var _local_8:_Str_2802;
-            var _local_9:int;
+            var roomCategory:_Str_2802;
+            var roomTradeSetting:int;
             var _roomName:String = this._roomNameInput.getText();
             var _roomDesc:String = this._roomDescInput.getText();
             var _local_4:String = ("model_" + this._selectedLayout.name);
             var _maxVisitors:int = parseInt(this._maxVisitors.items()[this._maxVisitors.selection]);
-            var _local_6:int;
-            var _local_7:int;
-            for each (_local_8 in this._selectableAndVisibleCategories)
+            var selectedRoomCategory:int;
+            var i:int;
+            for each (roomCategory in this._selectableAndVisibleCategories)
             {
-                if (this._categoryMenu.selection == _local_7)
+                if (this._categoryMenu.selection == i)
                 {
-                    _local_6 = _local_8._Str_4760;
+                    selectedRoomCategory = roomCategory._Str_4760;
                     break;
                 }
-                _local_7++;
+                i++;
             }
-            _local_9 = this._tradeSettings.selection;
+            roomTradeSetting = this._tradeSettings.selection;
             if (!this._Str_17505())
             {
                 return;
             }
-            this._navigator.send(new CreateFlatMessageComposer(_roomName, _roomDesc, _local_4, _local_6, _maxVisitors, _local_9));
+            this._navigator.send(new CreateFlatMessageComposer(_roomName, _roomDesc, _local_4, selectedRoomCategory, _maxVisitors, roomTradeSetting));
         }
 
         private function close():void
