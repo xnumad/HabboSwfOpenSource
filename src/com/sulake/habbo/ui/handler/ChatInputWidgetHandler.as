@@ -257,7 +257,7 @@
                                             userNameToKick = this._container.roomSession.userDataManager._Str_10979(_local_13);
                                             if (userNameToKick)
                                             {
-                                                this._container.roomSession._Str_15299(userNameToKick._Str_2394);
+                                                this._container.roomSession.kickUser(userNameToKick._Str_2394);
                                             }
                                         }
                                         return null;

@@ -389,7 +389,7 @@
                     this._container.sessionDataManager.unignoreUser(_local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_KICK_USER:
-                    this._container.roomSession._Str_15299(_local_3._Str_2394);
+                    this._container.roomSession.kickUser(_local_3._Str_2394);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_DAY:
                 case RoomWidgetUserActionMessage.RWUAM_BAN_USER_HOUR:
@@ -574,7 +574,7 @@
                     this._container.roomSession._Str_18152(_local_3._Str_2394);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_AMBASSADOR_KICK_USER:
-                    this._container.roomSession._Str_15299(_local_3._Str_2394);
+                    this._container.roomSession.kickUser(_local_3._Str_2394);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_2MIN:
                     this._container.roomSession._Str_5984(_local_3._Str_2394, 2);
