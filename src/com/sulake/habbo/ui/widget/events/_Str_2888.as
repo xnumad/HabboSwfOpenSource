@@ -13,7 +13,7 @@
         private var _Str_5879:String = "";
         private var _Str_4781:String = "";
         private var _Str_5432:Array = null;
-        private var _Str_20371:String = "";
+        private var _pollType:String = "";
         private var _Str_4353:Boolean = false;
 
         public function _Str_2888(k:int, _arg_2:String, _arg_3:Boolean=false, _arg_4:Boolean=false)
@@ -89,12 +89,12 @@
 
         public function get pollType():String
         {
-            return this._Str_20371;
+            return this._pollType;
         }
 
         public function set pollType(k:String):void
         {
-            this._Str_20371 = k;
+            this._pollType = k;
         }
 
         public function get _Str_6196():Boolean
