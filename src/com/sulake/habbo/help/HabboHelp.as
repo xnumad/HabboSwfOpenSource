@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_5578;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -437,7 +437,7 @@
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
             this.addMessageEvent(new _Str_2752(this.onCreditBalance));
-            this.addMessageEvent(new _Str_5578(this._Str_17604));
+            this.addMessageEvent(new CfhTopicsInitEvent(this._Str_17604));
             this.addMessageEvent(new SanctionStatusEvent(this._Str_22418));
             this._chatEventHandler = new ChatEventHandler(this);
             this._guideHelpManager = new GuideHelpManager(this);
@@ -758,7 +758,7 @@
             this._currentRoomId = _local_2._Str_6550;
         }
 
-        private function _Str_17604(k:_Str_5578):void
+        private function _Str_17604(k:CfhTopicsInitEvent):void
         {
             var _local_2:CfhTopicsInitMessageParser = k.getParser();
             this._callForHelpCategories = _local_2._Str_9001;

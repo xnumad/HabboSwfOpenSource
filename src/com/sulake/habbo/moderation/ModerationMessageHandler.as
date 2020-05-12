@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
     import com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
-    import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_5578;
+    import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8164;
@@ -84,7 +84,7 @@
             _local_2.addMessageEvent(new _Str_9341(this._Str_24593));
             _local_2.addMessageEvent(new _Str_8083(this._Str_25353));
             _local_2.addMessageEvent(new _Str_9038(this._Str_23004));
-            _local_2.addMessageEvent(new _Str_5578(this._Str_17604));
+            _local_2.addMessageEvent(new CfhTopicsInitEvent(this._Str_17604));
         }
 
         private function _Str_25409(k:_Str_9065):void
@@ -284,7 +284,7 @@
             this._moderationManager.issueManager._Str_24202(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
         }
 
-        private function _Str_17604(k:_Str_5578):void
+        private function _Str_17604(k:CfhTopicsInitEvent):void
         {
             var _local_3:Vector.<CallForHelpCategoryData>;
             var _local_2:CfhTopicsInitMessageParser = k.getParser();

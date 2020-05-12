@@ -87,7 +87,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionCompletedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionProgressMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.lobby.GameListMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_5578;
+	import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
 	import com.sulake.habbo.communication.messages.incoming.sound.JukeBoxPlayListAddSongEvent;
@@ -1297,7 +1297,7 @@
             INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
             INCOMING_PACKETS[324] = _Str_8758;
             INCOMING_PACKETS[3244] = _Str_5766;
-            INCOMING_PACKETS[325] = _Str_5578;
+            INCOMING_PACKETS[325] = CfhTopicsInitEvent;
             INCOMING_PACKETS[3253] = _Str_9047;
             INCOMING_PACKETS[3264] = _Str_6345;
             INCOMING_PACKETS[3276] = _Str_9409;
