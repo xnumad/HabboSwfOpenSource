@@ -23,7 +23,7 @@
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9445;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9455;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_10763;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_11277;
@@ -1068,7 +1068,7 @@
             INCOMING_PACKETS[1517] = _Str_8409;
             INCOMING_PACKETS[1533] = _Str_6906;
             INCOMING_PACKETS[1534] = _Str_5843;
-            INCOMING_PACKETS[1543] = _Str_9445;
+            INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;
             INCOMING_PACKETS[1548] = _Str_8903;
             INCOMING_PACKETS[1551] = _Str_16338;
             INCOMING_PACKETS[1553] = PetBreedingResultEvent;

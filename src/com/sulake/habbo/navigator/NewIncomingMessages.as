@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_7883;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9445;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.CollapsedCategoriesEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5763;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
@@ -139,7 +139,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_7883(this._Str_17243)));
-            this._messageListeners.push(k.connection.addMessageEvent(new _Str_9445(this._Str_18969)));
+            this._messageListeners.push(k.connection.addMessageEvent(new CollapsedCategoriesEvent(this._Str_18969)));
             this._messageListeners.push(k.connection.addMessageEvent(new _Str_3921(this._Str_3702)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5763(this._Str_18891)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
@@ -194,7 +194,7 @@
             this._navigator._Str_3702(k.data);
         }
 
-        private function _Str_18969(k:_Str_9445):void
+        private function _Str_18969(k:CollapsedCategoriesEvent):void
         {
             this._navigator._Str_18969(k.getParser()._Str_8273);
         }

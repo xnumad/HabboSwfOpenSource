@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.newnavigator.CollapsedCategoriesMessageParser;
 
-    public class _Str_9445 extends MessageEvent 
+    public class CollapsedCategoriesEvent extends MessageEvent 
     {
-        public function _Str_9445(k:Function)
+        public function CollapsedCategoriesEvent(k:Function)
         {
             super(k, CollapsedCategoriesMessageParser);
         }
