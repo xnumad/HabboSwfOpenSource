@@ -1501,7 +1501,7 @@
 			INCOMING_PACKETS[5028] = SnowStormGenericErrorEvent2; //SnowStormGenericErrorComposer
 			INCOMING_PACKETS[5029] = SnowStormUserRematchedEvent; //SnowStormUserRematchedComposer
 			
-			INCOMING_PACKETS[5100] = SimpleAlertMessageParser;
+			INCOMING_PACKETS[5100] = SimpleAlertMessageEvent;
 			INCOMING_PACKETS[5200] = StartRoomPollEvent;
 			INCOMING_PACKETS[5201] = RoomPollResultEvent;
 			INCOMING_PACKETS[5210] = FireworkChargeDataEvent

@@ -1,8 +1,8 @@
 ﻿package com.sulake.habbo.notifications
 {
     import com.sulake.habbo.communication.IHabboCommunicationManager;
-	import com.sulake.habbo.communication.messages.incoming.notifications.SimpleAlertMessage;
 	import com.sulake.habbo.communication.messages.incoming.notifications.SimpleAlertMessageParser;
+	import com.sulake.habbo.communication.messages.incoming.notifications.SimpleAlertMessageEvent;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_4953;
@@ -105,7 +105,7 @@
             this.addMessageEvent(new PetScratchFailedEvent(this._Str_18116));
             this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this._Str_23488));
-			this.addMessageEvent(new SimpleAlertMessageParser(this.alertMessageHandler));
+			this.addMessageEvent(new SimpleAlertMessageEvent(this.alertMessageHandler));
             this._notifications.activate();
         }
 
@@ -412,7 +412,7 @@
 		
 		private function alertMessageHandler(k:IMessageEvent):void
 		{
-			var packet:SimpleAlertMessage = (k as SimpleAlertMessageParser).getParser();
+			var packet:SimpleAlertMessageParser = (k as SimpleAlertMessageEvent).getParser();
 			var titleMessage:String = "${notifications.broadcast.title}";
 			
 			if (packet.titleMessage)
