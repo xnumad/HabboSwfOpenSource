@@ -2,14 +2,14 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2848 
+    public class Pet 
     {
         private var _id:int;
         private var _name:String;
         private var _figureData:PetFigureData;
         private var _level:int;
 
-        public function _Str_2848(k:IMessageDataWrapper)
+        public function Pet(k:IMessageDataWrapper)
         {
             this._id = k.readInteger();
             this._name = k.readString();

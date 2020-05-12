@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.users
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_2848;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_7994 implements IMessageParser 
@@ -10,7 +10,7 @@
 
         private var _respect:int;
         private var _Str_19471:int;
-        private var _Str_2522:_Str_2848;
+        private var _Str_2522:Pet;
 
 
         public function flush():Boolean
@@ -23,7 +23,7 @@
         {
             this._respect = k.readInteger();
             this._Str_19471 = k.readInteger();
-            this._Str_2522 = new _Str_2848(k);
+            this._Str_2522 = new Pet(k);
             return true;
         }
 
@@ -37,7 +37,7 @@
             return this._respect;
         }
 
-        public function get _Str_6175():_Str_2848
+        public function get _Str_6175():Pet
         {
             return this._Str_2522;
         }

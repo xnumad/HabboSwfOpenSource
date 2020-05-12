@@ -52,7 +52,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetFigureData;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_7160;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_2848;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBoughtNotificationMessageParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_6671;
     import com.sulake.habbo.window.enum.FrankIllustration;
@@ -359,7 +359,7 @@
         private function _Str_25804(k:PetBoughtNotificationEvent):void
         {
             var _local_3:ILocalization;
-            var _local_4:_Str_2848;
+            var _local_4:Pet;
             var _local_5:BitmapData;
             if (k == null)
             {

@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10323;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_2848;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import flash.events.Event;
     import com.sulake.habbo.inventory.events.HabboInventoryTrackingEvent;
@@ -119,7 +119,7 @@
             return this._pets;
         }
 
-        public function _Str_9947(k:_Str_2848):void
+        public function _Str_9947(k:Pet):void
         {
             if (this._pets.add(k.id, k))
             {
@@ -193,7 +193,7 @@
         public function _Str_6675(k:int, _arg_2:Boolean=false):Boolean
         {
             var _local_5:int;
-            var _local_3:_Str_2848 = this._Str_22756(k);
+            var _local_3:Pet = this._Str_22756(k);
             if (_local_3 == null)
             {
                 return false;
@@ -237,9 +237,9 @@
             this._view.update();
         }
 
-        private function _Str_22756(k:int):_Str_2848
+        private function _Str_22756(k:int):Pet
         {
-            var _local_2:_Str_2848;
+            var _local_2:Pet;
             for each (_local_2 in this._pets)
             {
                 if (_local_2.id == k)

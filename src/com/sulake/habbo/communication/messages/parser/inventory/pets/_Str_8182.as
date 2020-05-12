@@ -5,7 +5,7 @@
 
     public class _Str_8182 implements IMessageParser 
     {
-        private var _pet:_Str_2848;
+        private var _pet:Pet;
         private var _Str_12302:Boolean;
 
 
@@ -17,12 +17,12 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._pet = new _Str_2848(k);
+            this._pet = new Pet(k);
             this._Str_12302 = k.readBoolean();
             return true;
         }
 
-        public function get pet():_Str_2848
+        public function get pet():Pet
         {
             return this._pet;
         }

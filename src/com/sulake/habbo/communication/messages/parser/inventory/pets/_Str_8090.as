@@ -23,7 +23,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:_Str_2848;
+            var _local_4:Pet;
             this._Str_6580 = k.readInteger();
             this._Str_6945 = k.readInteger();
             this._Str_8680 = new Map();
@@ -31,7 +31,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_2848(k);
+                _local_4 = new Pet(k);
                 this._Str_8680.add(_local_4.id, _local_4);
                 _local_3++;
             }

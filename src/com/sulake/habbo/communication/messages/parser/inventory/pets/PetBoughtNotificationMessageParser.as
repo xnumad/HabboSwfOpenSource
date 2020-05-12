@@ -6,7 +6,7 @@
     public class PetBoughtNotificationMessageParser implements IMessageParser 
     {
         private var _gift:Boolean;
-        private var _pet:_Str_2848;
+        private var _pet:Pet;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._gift = k.readBoolean();
-            this._pet = new _Str_2848(k);
+            this._pet = new Pet(k);
             return true;
         }
 
@@ -26,7 +26,7 @@
             return this._gift;
         }
 
-        public function get pet():_Str_2848
+        public function get pet():Pet
         {
             return this._pet;
         }

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.inventory.pets
 {
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_2848;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.window.IWindow;
@@ -18,7 +18,7 @@
         private static const _Str_4072:int = 0xCCCCCC;
         private static const _Str_4169:int = 10275685;
 
-        private var _petData:_Str_2848;
+        private var _petData:Pet;
         private var _window:IWindowContainer;
         private var _assets:IAssetLibrary;
         private var _selectionHighlighter:IWindow;
@@ -28,7 +28,7 @@
         private var _isMouseDown:Boolean;
         private var _isUnseen:Boolean;
 
-        public function PetsGridItem(k:PetsView, _arg_2:_Str_2848, _arg_3:IHabboWindowManager, _arg_4:IAssetLibrary, _arg_5:Boolean)
+        public function PetsGridItem(k:PetsView, _arg_2:Pet, _arg_3:IHabboWindowManager, _arg_4:IAssetLibrary, _arg_5:Boolean)
         {
             if (((((k == null) || (_arg_2 == null)) || (_arg_3 == null)) || (_arg_4 == null)))
             {
@@ -179,7 +179,7 @@
             return this._window;
         }
 
-        public function get pet():_Str_2848
+        public function get pet():Pet
         {
             return this._petData;
         }

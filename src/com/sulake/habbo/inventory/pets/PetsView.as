@@ -8,7 +8,7 @@
     import com.sulake.core.window.components.IItemGridWindow;
     import com.sulake.habbo.room.IRoomEngine;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets._Str_2848;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetFigureData;
     import flash.display.BitmapData;
     import com.sulake.habbo.avatar.pets.PetCustomPart;
@@ -105,7 +105,7 @@
             }
         }
 
-        public function _Str_9947(k:_Str_2848):void
+        public function _Str_9947(k:Pet):void
         {
             if (!this._isInitialized)
             {
@@ -207,7 +207,7 @@
             }
         }
 
-        public function getPetImage(k:_Str_2848, _arg_2:int, _arg_3:Boolean, _arg_4:PetsGridItem=null, _arg_5:int=64, _arg_6:String=null):BitmapData
+        public function getPetImage(k:Pet, _arg_2:int, _arg_3:Boolean, _arg_4:PetsGridItem=null, _arg_5:int=64, _arg_6:String=null):BitmapData
         {
             var _local_7:PetFigureData = k.figureData;
             var _local_8:BitmapData;
@@ -316,7 +316,7 @@
             {
                 return;
             }
-            var _local_2:_Str_2848 = this._selectedGridItem.pet;
+            var _local_2:Pet = this._selectedGridItem.pet;
             if (_local_2 == null)
             {
                 return;
@@ -381,7 +381,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_5:Boolean;
-            var _local_16:_Str_2848;
+            var _local_16:Pet;
             var _local_17:BitmapData;
             if (this._view == null)
             {
