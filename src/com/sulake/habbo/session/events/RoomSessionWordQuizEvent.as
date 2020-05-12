@@ -41,12 +41,12 @@
             this._pollType = k;
         }
 
-        public function get _Str_5213():int
+        public function get pollId():int
         {
             return this._pollId;
         }
 
-        public function set _Str_5213(k:int):void
+        public function set pollId(k:int):void
         {
             this._pollId = k;
         }

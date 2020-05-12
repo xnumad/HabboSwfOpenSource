@@ -43,7 +43,7 @@
             _local_4.duration = _local_3.duration;
             _local_4.pollType = _local_3.pollType;
             _local_4._Str_3218 = _local_3._Str_3218;
-            _local_4._Str_5213 = _local_3.pollId;
+            _local_4.pollId = _local_3.pollId;
             listener.events.dispatchEvent(_local_4);
         }
 
