@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.HeightMapMessageParser;
 
-    public class _Str_7242 extends MessageEvent 
+    public class HeightMapEvent extends MessageEvent 
     {
-        public function _Str_7242(k:Function)
+        public function HeightMapEvent(k:Function)
         {
             super(k, HeightMapMessageParser);
         }

@@ -437,7 +437,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7242;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7291;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
@@ -1235,7 +1235,7 @@
             INCOMING_PACKETS[2725] = UserObjectEvent;
             INCOMING_PACKETS[2726] = _Str_5134;
             INCOMING_PACKETS[2737] = ConcurrentUsersGoalProgressMessageEvent;
-            INCOMING_PACKETS[2753] = _Str_7242;
+            INCOMING_PACKETS[2753] = HeightMapEvent;
             INCOMING_PACKETS[2756] = _Str_18296;
             INCOMING_PACKETS[2771] = HotelClosesAndWillOpenAtEvent;
             INCOMING_PACKETS[2772] = _Str_8785;
