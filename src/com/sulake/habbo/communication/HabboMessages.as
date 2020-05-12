@@ -321,7 +321,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_4150;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_4953;
+	import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_5093;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_5269;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_5458;
@@ -1247,7 +1247,7 @@
             INCOMING_PACKETS[2800] = _Str_4035;
             INCOMING_PACKETS[2803] = _Str_11571;
             INCOMING_PACKETS[2808] = _Str_6633;
-            INCOMING_PACKETS[2815] = _Str_4953;
+            INCOMING_PACKETS[2815] = RoomUserRespect;
             INCOMING_PACKETS[0x0B00] = _Str_9362;
             INCOMING_PACKETS[2819] = _Str_16028;
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;

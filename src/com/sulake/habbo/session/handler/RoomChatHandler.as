@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.Chat;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Shout;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4953;
+    import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
     import com.sulake.habbo.communication.messages.incoming.users._Str_9507;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8743;
@@ -34,7 +34,7 @@
             k.addMessageEvent(new Chat(this.onRoomChat));
             k.addMessageEvent(new Whisper(this.onRoomWhisper));
             k.addMessageEvent(new Shout(this.onRoomShout));
-            k.addMessageEvent(new _Str_4953(this.onRespectNotification));
+            k.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             k.addMessageEvent(new _Str_8482(this._Str_23513));
             k.addMessageEvent(new _Str_9507(this._Str_23073));
             k.addMessageEvent(new _Str_8743(this.onFloodControl));
@@ -78,7 +78,7 @@
             var _local_5:int;
             var _local_6:RoomUserData;
             var _local_7:String;
-            var _local_2:_Str_4953 = (k as _Str_4953);
+            var _local_2:RoomUserRespect = (k as RoomUserRespect);
             if (((listener) && (listener.events)))
             {
                 _local_3 = listener.getSession(_xxxRoomId);

@@ -5,7 +5,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.SimpleAlertMessageEvent;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4953;
+    import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8414;
@@ -79,7 +79,7 @@
             this._notifications = k;
             this._communication = _arg_2;
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_4953(this.onRespectNotification));
+            this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             this.addMessageEvent(new _Str_8665(this._Str_24393));
             this.addMessageEvent(new _Str_3660(this._Str_11598));
             this.addMessageEvent(new _Str_8414(this._Str_24449));
@@ -178,7 +178,7 @@
         {
             var _local_3:ILocalization;
             var _local_4:ILocalization;
-            var _local_2:_Str_4953 = (k as _Str_4953);
+            var _local_2:RoomUserRespect = (k as RoomUserRespect);
             if (this._notifications.sessionDataManager.userId == _local_2.userId)
             {
                 this._notifications.localization.registerParameter("notifications.text.respect.2", "count", String(_local_2._Str_10295));
