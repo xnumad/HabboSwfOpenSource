@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent3;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.Chat;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent2;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
@@ -212,7 +212,7 @@
                 k.addMessageEvent(new _Str_7050(this.onCarryObject));
                 k.addMessageEvent(new _Str_8069(this.onUseObject));
                 k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
-                k.addMessageEvent(new RoomUserShoutEvent3(this.onChat));
+                k.addMessageEvent(new Chat(this.onChat));
                 k.addMessageEvent(new RoomUserShoutEvent2(this.onChat));
                 k.addMessageEvent(new RoomUserShoutEvent(this.onChat));
                 k.addMessageEvent(new _Str_7436(this.onTypingStatus));
@@ -1143,9 +1143,9 @@
                 return;
             }
             var _local_3:IRoomSession = this._roomCreator.roomSessionManager.getSession(this._currentRoomId);
-            if ((k is RoomUserShoutEvent3))
+            if ((k is Chat))
             {
-                _local_2 = (k as RoomUserShoutEvent3).getParser();
+                _local_2 = (k as Chat).getParser();
             }
             else
             {
