@@ -48,7 +48,7 @@
             }
         }
 
-        public function _Str_9380(k:int, _arg_2:String, figure:String=null, gender:String=null):void
+        public function userSelected(k:int, _arg_2:String, figure:String=null, gender:String=null):void
         {
             if (this._frame == null)
             {

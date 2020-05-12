@@ -132,10 +132,10 @@
             super.dispose();
         }
 
-        public function _Str_9380(k:int, _arg_2:String, figure:String=null, gender:String=null):void
+        public function userSelected(k:int, _arg_2:String, figure:String=null, gender:String=null):void
         {
             Logger.log(((("USER SELECTED: " + k) + ", ") + _arg_2));
-            this._Str_8885._Str_9380(k, _arg_2, figure, gender);
+            this._Str_8885.userSelected(k, _arg_2, figure, gender);
         }
 		
 		public function setVisible(visible:Boolean):void

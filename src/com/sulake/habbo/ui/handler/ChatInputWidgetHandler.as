@@ -433,7 +433,7 @@
                         _local_24 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_6._Str_1577);
                         if (_local_24 != null)
                         {
-                            this._container.moderation._Str_9380(_local_24.id, _local_6.userName, _local_24.figure, _local_24._Str_3344);
+                            this._container.moderation.userSelected(_local_24.id, _local_6.userName, _local_24.figure, _local_24._Str_3344);
                         }
                     }
                     break;
