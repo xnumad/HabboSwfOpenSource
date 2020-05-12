@@ -789,7 +789,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_5159;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
@@ -1136,7 +1136,7 @@
             INCOMING_PACKETS[2009] = _Str_7464;
             INCOMING_PACKETS[2012] = _Str_5017;
             INCOMING_PACKETS[2016] = _Str_5269;
-            INCOMING_PACKETS[2018] = _Str_5159;
+            INCOMING_PACKETS[2018] = ActivityPointsEvent;
             INCOMING_PACKETS[2023] = _Str_8667;
             INCOMING_PACKETS[2024] = _Str_6742;
             INCOMING_PACKETS[2030] = _Str_8312;

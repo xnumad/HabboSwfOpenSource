@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
     import com.sulake.habbo.communication.messages.incoming.handshake.IsFirstLoginOfDayEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestCompletedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_5159;
+    import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestCancelledMessageEvent;
     import com.sulake.habbo.communication.messages.parser.quest.QuestCompletedParser;
@@ -76,7 +76,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5843(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new IsFirstLoginOfDayEvent(this._Str_22814));
             _local_2.addHabboConnectionMessageEvent(new QuestCompletedMessageEvent(this._Str_5657));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5159(this._Str_4970));
+            _local_2.addHabboConnectionMessageEvent(new ActivityPointsEvent(this._Str_4970));
             _local_2.addHabboConnectionMessageEvent(new AchievementsEvent(this._Str_17329));
             _local_2.addHabboConnectionMessageEvent(new QuestCancelledMessageEvent(this._Str_5242));
         }
@@ -255,7 +255,7 @@
         {
             var _local_3:int;
             var _local_4:Object;
-            var _local_2:Dictionary = _Str_5159(k).points;
+            var _local_2:Dictionary = ActivityPointsEvent(k).points;
             for each (_local_3 in ActivityPointTypeEnum.values())
             {
                 this._questEngine._Str_3398._Str_4970(_local_3, 0);

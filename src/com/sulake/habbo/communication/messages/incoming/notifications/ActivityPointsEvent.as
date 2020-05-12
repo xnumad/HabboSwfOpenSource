@@ -5,9 +5,9 @@
     import com.sulake.habbo.communication.messages.parser.notifications.ActivityPointsMessageParser;
     import flash.utils.Dictionary;
 
-    public class _Str_5159 extends MessageEvent implements IMessageEvent 
+    public class ActivityPointsEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_5159(k:Function)
+        public function ActivityPointsEvent(k:Function)
         {
             super(k, ActivityPointsMessageParser);
         }

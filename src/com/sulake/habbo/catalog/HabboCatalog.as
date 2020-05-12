@@ -105,7 +105,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_5159;
+    import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
     import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_7452;
@@ -567,7 +567,7 @@
             this.addMessageEvent(new _Str_7169(this._Str_25537));
             this.addMessageEvent(new _Str_5417(this._Str_24973));
             this.addMessageEvent(new _Str_6344(this._Str_23861));
-            this.addMessageEvent(new _Str_5159(this._Str_4970));
+            this.addMessageEvent(new ActivityPointsEvent(this._Str_4970));
             this.addMessageEvent(new _Str_5264(this._Str_12366));
             this.addMessageEvent(new UserCreditsEvent(this._Str_7504));
             this.addMessageEvent(new _Str_7452(this._Str_24089));
@@ -2056,7 +2056,7 @@
         {
             var _local_3:String;
             var _local_4:int;
-            var _local_2:_Str_5159 = (k as _Str_5159);
+            var _local_2:ActivityPointsEvent = (k as ActivityPointsEvent);
             this._purse._Str_18527 = _local_2.points;
             this._Str_12017();
             for (_local_3 in _local_2.points)
