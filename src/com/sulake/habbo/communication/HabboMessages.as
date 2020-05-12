@@ -967,8 +967,8 @@
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
-	import com.sulake.habbo.communication.messages.outgoing._Str_96._Str_12173;
-	import com.sulake.habbo.communication.messages.outgoing._Str_96._Str_12472;
+	import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12173;
+	import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12472;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftableProductsEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipeEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;

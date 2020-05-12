@@ -24,8 +24,8 @@
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
     import com.sulake.habbo.communication.messages.parser.campaign._Str_7028;
     import com.sulake.habbo.communication.messages.parser.campaign._Str_7637;
-    import com.sulake.habbo.communication.messages.outgoing._Str_96._Str_12472;
-    import com.sulake.habbo.communication.messages.outgoing._Str_96._Str_12173;
+    import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12472;
+    import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12173;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.room.ImageResult;
     import com.sulake.habbo.session.furniture.IFurnitureData;
