@@ -33,7 +33,7 @@
             return this._gesture;
         }
 
-        public function get _Str_20074():int
+        public function get animationLength():int
         {
             return this._animationLength;
         }

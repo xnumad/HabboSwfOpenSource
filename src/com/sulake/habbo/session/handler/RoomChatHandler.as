@@ -62,9 +62,9 @@
                     _local_4 = RoomSessionChatEvent.RSCE_CHAT_EVENT;
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_SPEAK;
                     _local_6 = _local_2.getParser();
-                    if (_local_6._Str_20074 != -1)
+                    if (_local_6.animationLength != -1)
                     {
-                        _local_3._Str_20236(_local_6._Str_20074);
+                        _local_3._Str_20236(_local_6.animationLength);
                     }
                     listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6.userId, _local_6.text, _local_5, _local_6.styleId, _local_6.links));
                 }
