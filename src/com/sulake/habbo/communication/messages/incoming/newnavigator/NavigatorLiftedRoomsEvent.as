@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorLiftedRoomsParser;
 
-    public class _Str_8469 extends MessageEvent 
+    public class NavigatorLiftedRoomsEvent extends MessageEvent 
     {
-        public function _Str_8469(k:Function)
+        public function NavigatorLiftedRoomsEvent(k:Function)
         {
             super(k, NavigatorLiftedRoomsParser);
         }

@@ -21,7 +21,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8469;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorLiftedRoomsEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9445;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9455;
@@ -1281,7 +1281,7 @@
             INCOMING_PACKETS[3086] = _Str_9129;
             INCOMING_PACKETS[3097] = _Str_6994;
             INCOMING_PACKETS[3099] = _Str_16667;
-            INCOMING_PACKETS[3104] = _Str_8469;
+            INCOMING_PACKETS[3104] = NavigatorLiftedRoomsEvent;
             INCOMING_PACKETS[3128] = TradingNotOpenEvent;
             INCOMING_PACKETS[3129] = _Str_7456;
             INCOMING_PACKETS[3130] = _Str_3873;
