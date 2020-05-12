@@ -41,7 +41,7 @@
             _local_4 = new RoomSessionWordQuizEvent(RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION, _local_2, _local_3.pollId);
             _local_4.question = _local_3.question;
             _local_4.duration = _local_3.duration;
-            _local_4._Str_5302 = _local_3.pollType;
+            _local_4.pollType = _local_3.pollType;
             _local_4._Str_3218 = _local_3._Str_3218;
             _local_4._Str_5213 = _local_3.pollId;
             listener.events.dispatchEvent(_local_4);

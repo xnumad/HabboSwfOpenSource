@@ -31,12 +31,12 @@
             return this._id;
         }
 
-        public function get _Str_5302():String
+        public function get pollType():String
         {
             return this._pollType;
         }
 
-        public function set _Str_5302(k:String):void
+        public function set pollType(k:String):void
         {
             this._pollType = k;
         }

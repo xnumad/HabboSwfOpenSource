@@ -119,7 +119,7 @@
                     _local_3 = new _Str_3149(_local_2.id, _Str_3149.RWPUW_NEW_QUESTION);
                     _local_3.question = _local_2.question;
                     _local_3.duration = _local_2.duration;
-                    _local_3._Str_5302 = _local_2._Str_5302;
+                    _local_3._Str_5302 = _local_2.pollType;
                     _local_3._Str_3218 = _local_2._Str_3218;
                     _local_3._Str_5213 = _local_2._Str_5213;
                     break;
