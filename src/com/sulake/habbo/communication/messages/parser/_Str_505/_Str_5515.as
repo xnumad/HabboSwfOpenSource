@@ -10,7 +10,7 @@
         private var _Str_9898:int;
         private var _Str_17293:Boolean;
         private var _Str_9090:Boolean;
-        private var _Str_17826:Boolean;
+        private var _roomCameraFollowUser:Boolean;
         private var _Str_3790:int;
         private var _Str_6387:int;
 
@@ -40,9 +40,9 @@
             return this._Str_9090;
         }
 
-        public function get _Str_23253():Boolean
+        public function get roomCameraFollowUser():Boolean
         {
-            return this._Str_17826;
+            return this._roomCameraFollowUser;
         }
 
         public function get _Str_8444():int
@@ -58,7 +58,7 @@
         public function flush():Boolean
         {
             this._Str_17293 = false;
-            this._Str_17826 = false;
+            this._roomCameraFollowUser = false;
             this._Str_3790 = 0;
             this._Str_6387 = 0;
             return true;
@@ -71,7 +71,7 @@
             this._Str_2933 = k.readInteger();
             this._Str_17293 = k.readBoolean();
             this._Str_9090 = k.readBoolean();
-            this._Str_17826 = k.readBoolean();
+            this._roomCameraFollowUser = k.readBoolean();
             this._Str_3790 = k.readInteger();
             this._Str_6387 = k.readInteger();
             return true;

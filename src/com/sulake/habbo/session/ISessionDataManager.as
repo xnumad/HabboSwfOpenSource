@@ -73,8 +73,8 @@
         function get currentTalentTrack():String;
         function pickallBC(_arg_1:int):void;
         function removeFurniDataListener(_arg_1:IFurniDataListener):void;
-        function setGodMode(_arg_1:Boolean):void;
-        function get _Str_18110():Boolean;
+        function roomCameraFollowUser(_arg_1:Boolean):void;
+        function get roomCameraFollowUser():Boolean;
         function setFriendBarState(_arg_1:Boolean):void;
         function setRoomToolsState(_arg_1:Boolean):void;
         function get _Str_8444():int;

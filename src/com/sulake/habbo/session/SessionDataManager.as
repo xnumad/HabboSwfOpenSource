@@ -118,7 +118,7 @@
         private var _Str_7106:int = -1;
         private var isAmbassador:Boolean;
         private var _Str_20255:Boolean;
-        private var _Str_17475:Boolean;
+        private var _roomCameraFollowUser:Boolean;
         private var _Str_3790:int;
         private var _Str_9602:Boolean = false;
         private var _Str_18582:String;
@@ -413,7 +413,7 @@
         private function _Str_10366(k:_Str_3870):void
         {
             var _local_2:_Str_5515 = (k.getParser() as _Str_5515);
-            this._Str_17475 = _local_2._Str_23253;
+            this._roomCameraFollowUser = _local_2.roomCameraFollowUser;
             this._Str_3790 = _local_2._Str_8444;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
         }
@@ -539,14 +539,14 @@
             return this._Str_20255;
         }
 
-        public function setGodMode(k:Boolean):void
+        public function roomCameraFollowUser(k:Boolean):void
         {
-            this._Str_17475 = k;
+            this._roomCameraFollowUser = k;
         }
 
-        public function get _Str_18110():Boolean
+        public function get roomCameraFollowUser():Boolean
         {
-            return this._Str_17475;
+            return this._roomCameraFollowUser;
         }
 
         public function setFriendBarState(k:Boolean):void
