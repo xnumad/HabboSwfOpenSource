@@ -34,7 +34,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4438;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_5085;
-	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
+	import com.sulake.habbo.communication.messages.outgoing._Str_223.RejectQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7461;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7541;
@@ -1697,7 +1697,7 @@
             OUTGOING_PACKETS[2343] = _Str_11812;
             OUTGOING_PACKETS[2384] = _Str_10650;
             OUTGOING_PACKETS[2388] = _Str_10678;
-            OUTGOING_PACKETS[2397] = _Str_7454;
+            OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
             OUTGOING_PACKETS[2399] = _Str_8040;
             OUTGOING_PACKETS[2407] = _Str_11584;
             OUTGOING_PACKETS[2408] = PurchasePhotoMessageComposer;

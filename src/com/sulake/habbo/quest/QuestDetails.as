@@ -12,7 +12,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223.RejectQuestMessageComposer;
 
     public class QuestDetails implements IDisposable 
     {
@@ -265,7 +265,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._questEngine.send(new _Str_7454());
+                this._questEngine.send(new RejectQuestMessageComposer());
             }
         }
     }
