@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8064;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8204;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
@@ -196,7 +196,7 @@
                 k.addMessageEvent(new _Str_8234(this.onObjectDataUpdate));
                 k.addMessageEvent(new _Str_8080(this.onObjectsDataUpdate));
                 k.addMessageEvent(new _Str_4408(this._Str_16200));
-                k.addMessageEvent(new _Str_8064(this.onItems));
+                k.addMessageEvent(new ItemsEvent(this.onItems));
                 k.addMessageEvent(new _Str_7704(this.onItemAdd));
                 k.addMessageEvent(new _Str_8204(this.onItemRemove));
                 k.addMessageEvent(new _Str_7464(this.onItemUpdate));
@@ -665,7 +665,7 @@
         private function onItems(k:IMessageEvent):void
         {
             var _local_6:_Str_3079;
-            var _local_2:_Str_8064 = (k as _Str_8064);
+            var _local_2:ItemsEvent = (k as ItemsEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

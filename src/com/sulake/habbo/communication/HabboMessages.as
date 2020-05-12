@@ -448,7 +448,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7839;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8064;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8204;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
@@ -1041,7 +1041,7 @@
             INCOMING_PACKETS[1350] = _Str_6521;
             INCOMING_PACKETS[1352] = _Str_8892;
             INCOMING_PACKETS[1359] = _Str_6022;
-            INCOMING_PACKETS[1369] = _Str_8064;
+            INCOMING_PACKETS[1369] = ItemsEvent;
             INCOMING_PACKETS[1373] = TradingCloseEvent;
             INCOMING_PACKETS[138] = GuideSessionDetachedEvent;
             INCOMING_PACKETS[1381] = _Str_9631;

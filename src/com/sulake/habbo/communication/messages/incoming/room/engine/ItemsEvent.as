@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
 
-    public class _Str_8064 extends MessageEvent 
+    public class ItemsEvent extends MessageEvent 
     {
-        public function _Str_8064(k:Function)
+        public function ItemsEvent(k:Function)
         {
             super(k, ItemsMessageParser);
         }
