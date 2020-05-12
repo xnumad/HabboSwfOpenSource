@@ -36,7 +36,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_5085;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7461;
-	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7532;
+	import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7541;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7551;
 	import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7568;
@@ -1881,7 +1881,7 @@
             OUTGOING_PACKETS[359] = _Str_4406;
             OUTGOING_PACKETS[3591] = _Str_12393;
             OUTGOING_PACKETS[3593] = _Str_8228;
-            OUTGOING_PACKETS[3604] = _Str_7532;
+            OUTGOING_PACKETS[3604] = AcceptQuestMessageComposer;
             OUTGOING_PACKETS[3605] = _Str_12224;
             OUTGOING_PACKETS[3608] = _Str_5686;
             OUTGOING_PACKETS[3617] = _Str_10710;

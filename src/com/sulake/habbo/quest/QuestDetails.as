@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7532;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
     import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
 
@@ -246,7 +246,7 @@
             {
                 if (this._questEngine._Str_6927)
                 {
-                    this._questEngine.send(new _Str_7532(this._quest.id));
+                    this._questEngine.send(new AcceptQuestMessageComposer(this._quest.id));
                 }
                 else
                 {

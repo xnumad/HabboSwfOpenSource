@@ -15,7 +15,7 @@
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.help.enum.WelcomeNotificationAlignment;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7532;
+    import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7454;
     import com.sulake.habbo.window.utils._Str_2418;
 
@@ -335,7 +335,7 @@
             }
             var _local_3:int = _arg_2.id;
             Logger.log(("Accept quest: " + _local_3));
-            this._questEngine.send(new _Str_7532(_local_3));
+            this._questEngine.send(new AcceptQuestMessageComposer(_local_3));
             this._window.visible = false;
         }
 
