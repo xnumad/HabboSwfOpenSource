@@ -878,7 +878,7 @@
             }
         }
 
-        public function ejectPets(roomId:int):void
+        public function pickallBC(roomId:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {
