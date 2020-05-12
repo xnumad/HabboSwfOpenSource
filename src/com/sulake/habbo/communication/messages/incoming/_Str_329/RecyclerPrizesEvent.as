@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerPrizesMessageParser;
 
-    public class _Str_7079 extends MessageEvent implements IMessageEvent 
+    public class RecyclerPrizesEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_7079(k:Function)
+        public function RecyclerPrizesEvent(k:Function)
         {
             super(k, RecyclerPrizesMessageParser);
         }

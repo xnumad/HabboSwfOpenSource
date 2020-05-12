@@ -116,7 +116,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
     import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_7079;
+    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerPrizesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;
@@ -578,7 +578,7 @@
             this.addMessageEvent(new _Str_9560(this._Str_25412));
             this.addMessageEvent(new _Str_6345(this._Str_24794));
             this.addMessageEvent(new RecyclerStatusEvent(this._Str_24950));
-            this.addMessageEvent(new _Str_7079(this._Str_23749));
+            this.addMessageEvent(new RecyclerPrizesEvent(this._Str_23749));
             this.addMessageEvent(new _Str_5946(this._Str_16617));
             this.addMessageEvent(new _Str_5514(this._Str_24443));
             this.addMessageEvent(new _Str_6375(this._Str_23226));
@@ -2135,7 +2135,7 @@
 
         private function _Str_23749(k:IMessageEvent):void
         {
-            var _local_2:RecyclerPrizesMessageParser = (k as _Str_7079).getParser();
+            var _local_2:RecyclerPrizesMessageParser = (k as RecyclerPrizesEvent).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
             {
                 return;

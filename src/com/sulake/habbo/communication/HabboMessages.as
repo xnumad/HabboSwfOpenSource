@@ -162,7 +162,7 @@
 	import com.sulake.core.utils.SingleWriteMap;
 	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_7079;
+	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerPrizesEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
@@ -1288,7 +1288,7 @@
             INCOMING_PACKETS[3138] = _Str_18475;
             INCOMING_PACKETS[3150] = _Str_7889;
             INCOMING_PACKETS[3151] = _Str_6821;
-            INCOMING_PACKETS[3164] = _Str_7079;
+            INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
             INCOMING_PACKETS[3191] = _Str_17782;
             INCOMING_PACKETS[3192] = _Str_9383;
             INCOMING_PACKETS[3201] = _Str_7564;
