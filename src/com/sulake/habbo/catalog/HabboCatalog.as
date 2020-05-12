@@ -99,7 +99,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7697;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8504;
-    import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5727;
+    import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8784;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_7169;
@@ -561,7 +561,7 @@
             this.addMessageEvent(new CatalogPagesListEvent(this._Str_25188));
             this.addMessageEvent(new _Str_7697(this._Str_25346));
             this.addMessageEvent(new _Str_8504(this._Str_11267));
-            this.addMessageEvent(new _Str_5727(this._Str_16010));
+            this.addMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
             this.addMessageEvent(new _Str_3352(this._Str_2960));
             this.addMessageEvent(new _Str_8784(this._Str_23837));
             this.addMessageEvent(new _Str_7169(this._Str_25537));
@@ -2207,7 +2207,7 @@
             this._marketplace._Str_10038 = _local_3;
         }
 
-        private function _Str_16010(k:_Str_5727):void
+        private function _Str_16010(k:MarketplaceConfigurationEvent):void
         {
             if (((!(k)) || (!(this._marketplace))))
             {

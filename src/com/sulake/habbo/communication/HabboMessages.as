@@ -98,7 +98,7 @@
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8016;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_8135;
 	import com.sulake.habbo.communication.messages.incoming.sound._Str_9631;
-	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5727;
+	import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6344;
@@ -1111,7 +1111,7 @@
             INCOMING_PACKETS[1797] = _Str_7216;
             INCOMING_PACKETS[1808] = _Str_8332;
             INCOMING_PACKETS[1815] = _Str_9204;
-            INCOMING_PACKETS[1823] = _Str_5727;
+            INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
             INCOMING_PACKETS[1829] = _Str_8464;
             INCOMING_PACKETS[1830] = _Str_8791;
             INCOMING_PACKETS[1840] = _Str_5051;
