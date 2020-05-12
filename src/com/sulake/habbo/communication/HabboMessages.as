@@ -844,7 +844,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.*;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_4642;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent3;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent2;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
@@ -1051,7 +1051,7 @@
             INCOMING_PACKETS[1434] = WiredEffectDataEvent;
             INCOMING_PACKETS[1435] = _Str_9665;
             INCOMING_PACKETS[1437] = _Str_17532;
-            INCOMING_PACKETS[1446] = _Str_4642;
+            INCOMING_PACKETS[1446] = RoomUserShoutEvent3;
             INCOMING_PACKETS[1450] = FigureSetIdsEvent;
             INCOMING_PACKETS[1452] = _Str_5417;
             INCOMING_PACKETS[1453] = _Str_8080;
@@ -2036,3 +2036,4 @@
         }
     }
 }
+
