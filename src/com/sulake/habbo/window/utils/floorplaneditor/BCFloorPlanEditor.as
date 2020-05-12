@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
@@ -50,7 +50,7 @@
         private static const _Str_14397:int = 16;
 
         private var _windowManager:HabboWindowManagerComponent;
-        private var _floorHeightMapMessageEvent:_Str_4279;
+        private var _floorHeightMapMessageEvent:FloorHeightMapEvent;
         private var _entryTileDataMessageEvent:_Str_4976;
         private var _occupiedTilesMessageEvent:_Str_6566;
         private var _roomVisualizationSettingsMessageEvent:_Str_4196;
@@ -60,7 +60,7 @@
         private var _floorPlanPreviewer:FloorPlanPreviewer;
         private var _heightMapEditor:HeightMapEditor;
         private var _importExportDialog:ImportExportDialog;
-        private var _lastReceivedMapEvent:_Str_4279;
+        private var _lastReceivedMapEvent:FloorHeightMapEvent;
         private var _editorWindow:IFrameWindow;
         private var _drawModes:Array;
         private var _drawMode:String;
@@ -83,7 +83,7 @@
             this._windowManager = k;
             if (this._windowManager.communication != null)
             {
-                this._floorHeightMapMessageEvent = new _Str_4279(this.onFloorHeightMap);
+                this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
                 this._entryTileDataMessageEvent = new _Str_4976(this._Str_16587);
                 this._occupiedTilesMessageEvent = new _Str_6566(this._Str_18596);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
@@ -470,7 +470,7 @@
             }
         }
 
-        private function onFloorHeightMap(k:_Str_4279):void
+        private function onFloorHeightMap(k:FloorHeightMapEvent):void
         {
             this._lastReceivedMapEvent = k;
             this._floorPlanCache.onFloorHeightMap(k);

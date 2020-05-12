@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7242;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
@@ -185,7 +185,7 @@
                 k.addMessageEvent(new _Str_3407(this._Str_5963));
                 k.addMessageEvent(new _Str_7999(this.onRoomProperty));
                 k.addMessageEvent(new _Str_4976(this._Str_16587));
-                k.addMessageEvent(new _Str_4279(this.onFloorHeightMap));
+                k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
                 k.addMessageEvent(new _Str_7242(this.onHeightMap));
                 k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
                 k.addMessageEvent(new _Str_4196(this.onRoomVisualizationSettings));
@@ -417,7 +417,7 @@
             var _local_17:int;
             var _local_18:int;
             var _local_19:int;
-            var _local_2:_Str_4279 = (k as _Str_4279);
+            var _local_2:FloorHeightMapEvent = (k as FloorHeightMapEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

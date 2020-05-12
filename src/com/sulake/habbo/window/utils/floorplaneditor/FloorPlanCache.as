@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.window.utils.floorplaneditor
 {
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.parser.room.layout._Str_6361;
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
 
@@ -23,7 +23,7 @@
             this._bcFloorPlanEditor = k;
         }
 
-        public function onFloorHeightMap(k:_Str_4279):void
+        public function onFloorHeightMap(k:FloorHeightMapEvent):void
         {
             this._Str_22644(k.getParser().text);
         }
