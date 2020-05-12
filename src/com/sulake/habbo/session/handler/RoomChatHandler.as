@@ -12,7 +12,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.communication.messages.parser.room.chat.RoomUserShoutMessageParser;
+    import com.sulake.habbo.communication.messages.parser.room.chat.RoomUserMessageParser;
     import com.sulake.habbo.session.events.RoomSessionChatEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.RoomUserData;
@@ -48,7 +48,7 @@
             var _local_3:IRoomSession;
             var _local_4:String;
             var _local_5:int;
-            var _local_6:RoomUserShoutMessageParser;
+            var _local_6:RoomUserMessageParser;
             if (((listener) && (listener.events)))
             {
                 _local_2 = (k as Chat);
@@ -204,7 +204,7 @@
             var _local_3:IRoomSession;
             var _local_4:String;
             var _local_5:int;
-            var _local_6:RoomUserShoutMessageParser;
+            var _local_6:RoomUserMessageParser;
             if (((listener) && (listener.events)))
             {
                 _local_2 = (k as Whisper);
@@ -229,7 +229,7 @@
             var _local_3:IRoomSession;
             var _local_4:String;
             var _local_5:int;
-            var _local_6:RoomUserShoutMessageParser;
+            var _local_6:RoomUserMessageParser;
             if (((listener) && (listener.events)))
             {
                 _local_2 = (k as Shout);
