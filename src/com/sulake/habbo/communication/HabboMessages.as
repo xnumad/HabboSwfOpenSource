@@ -170,7 +170,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_9217;
 	import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
-	import com.sulake.habbo.communication.messages.incoming.nux._Str_8566;
+	import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_16667;
 	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
@@ -1339,7 +1339,7 @@
             INCOMING_PACKETS[3547] = _Str_4196;
             INCOMING_PACKETS[3559] = _Str_7811;
             INCOMING_PACKETS[3560] = _Str_8191;
-            INCOMING_PACKETS[3575] = _Str_8566;
+            INCOMING_PACKETS[3575] = NewUserExperienceGiftOfferEvent;
             INCOMING_PACKETS[3595] = _Str_8053;
             INCOMING_PACKETS[3609] = _Str_9065;
             INCOMING_PACKETS[3625] = QuestsMessageEvent;

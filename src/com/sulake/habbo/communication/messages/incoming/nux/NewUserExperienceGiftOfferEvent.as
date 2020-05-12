@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.nux.NewUserExperienceGiftOfferParser;
 
-    public class _Str_8566 extends MessageEvent implements IMessageEvent 
+    public class NewUserExperienceGiftOfferEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_8566(k:Function)
+        public function NewUserExperienceGiftOfferEvent(k:Function)
         {
             super(k, NewUserExperienceGiftOfferParser);
         }

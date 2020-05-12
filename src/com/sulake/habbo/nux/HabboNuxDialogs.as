@@ -24,7 +24,7 @@
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
-    import com.sulake.habbo.communication.messages.incoming.nux._Str_8566;
+    import com.sulake.habbo.communication.messages.incoming.nux.NewUserExperienceGiftOfferEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
     import com.sulake.core.window.events.WindowEvent;
@@ -108,7 +108,7 @@
             if (this._Str_2310)
             {
                 this._Str_2310.addMessageEvent(new _Str_8454(this._Str_23208));
-                this._Str_2310.addMessageEvent(new _Str_8566(this._Str_22466));
+                this._Str_2310.addMessageEvent(new NewUserExperienceGiftOfferEvent(this._Str_22466));
             }
             context.addLinkEventTracker(this);
         }
@@ -173,7 +173,7 @@
             this._Str_22781();
         }
 
-        private function _Str_22466(k:_Str_8566):void
+        private function _Str_22466(k:NewUserExperienceGiftOfferEvent):void
         {
             var _local_2:NewUserExperienceGiftOfferParser = k.getParser();
             this._Str_24881(_local_2.giftOptions);
