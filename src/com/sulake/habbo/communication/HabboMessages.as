@@ -173,7 +173,7 @@
 	import com.sulake.habbo.communication.messages.incoming.nux._Str_8566;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_11645;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_16667;
-	import com.sulake.habbo.communication.messages.incoming.game.score._Str_18356;
+	import com.sulake.habbo.communication.messages.incoming.game.score.Game2WeeklyLeaderboardEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_18906;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
@@ -1176,7 +1176,7 @@
             INCOMING_PACKETS[2246] = _Str_17347;
             INCOMING_PACKETS[2260] = JoinedQueueMessageEvent;
             INCOMING_PACKETS[2265] = UserGameAchievementsMessageEvent;
-            INCOMING_PACKETS[2270] = _Str_18356;
+            INCOMING_PACKETS[2270] = Game2WeeklyLeaderboardEvent;
             INCOMING_PACKETS[2275] = _Str_4508;
             INCOMING_PACKETS[2278] = _Str_12157;
             INCOMING_PACKETS[2293] = _Str_8246;
