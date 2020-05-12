@@ -1102,7 +1102,7 @@
             _local_3._Str_25206 = this._adManager;
             _local_3.localization = this._localization;
             _local_3._Str_2602 = this._habboHelp;
-            _local_3._Str_15532 = this._moderation;
+            _local_3.moderation = this._moderation;
             _local_3.config = this;
             _local_3._Str_2476 = this._soundManager;
             _local_3.habboTracking = this._habboTracking;

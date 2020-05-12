@@ -346,7 +346,7 @@
             return this._messenger;
         }
 
-        public function get _Str_15532():IHabboModeration
+        public function get moderation():IHabboModeration
         {
             return this._moderation;
         }
@@ -472,7 +472,7 @@
             this._habboHelp = k;
         }
 
-        public function set _Str_15532(k:IHabboModeration):void
+        public function set moderation(k:IHabboModeration):void
         {
             this._moderation = k;
         }

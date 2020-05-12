@@ -57,7 +57,7 @@
         function get config():IHabboConfigurationManager;
         function get _Str_2476():IHabboSoundManager;
         function get messenger():IHabboMessenger;
-        function get _Str_15532():IHabboModeration;
+        function get moderation():IHabboModeration;
         function get windowManager():IHabboWindowManager;
         function get _Str_10421():IHabboUserDefinedRoomEvents;
         function get connection():IConnection;
