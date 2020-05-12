@@ -109,7 +109,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10594;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_11836;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_12297;
+	import com.sulake.habbo.communication.messages.outgoing._Str_295.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_12437;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_4406;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_7312;
@@ -1897,7 +1897,7 @@
             OUTGOING_PACKETS[3775] = _Str_11713;
             OUTGOING_PACKETS[3782] = _Str_17077;
             OUTGOING_PACKETS[3786] = _Str_12273;
-            OUTGOING_PACKETS[3802] = _Str_12297;
+            OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;
             OUTGOING_PACKETS[3817] = _Str_4893;
             OUTGOING_PACKETS[3835] = _Str_10852;
             OUTGOING_PACKETS[3839] = _Str_7290;

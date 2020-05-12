@@ -29,7 +29,7 @@
 	import com.sulake.core.assets.IAssetLibrary;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_11836;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_12297;
+	import com.sulake.habbo.communication.messages.outgoing._Str_295.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8040;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8138;
@@ -841,7 +841,7 @@
         public function acceptGameInvite(k:int, _arg_2:int):void
         {
             this._Str_20329();
-            this.send(new _Str_12297(k, _arg_2));
+            this.send(new AcceptGameInviteMessageComposer(k, _arg_2));
             this._Str_9452 = k;
             this._Str_3777(GameConfigurations.getNameId(k), "joinPlayerQueue", "", _arg_2);
             if (this._Str_2368)
