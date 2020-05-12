@@ -845,7 +845,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat.*;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_4642;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_4826;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomUserShoutEvent2;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
@@ -1228,7 +1228,7 @@
             INCOMING_PACKETS[2690] = _Str_9455;
             INCOMING_PACKETS[2696] = _Str_7080;
             INCOMING_PACKETS[2703] = _Str_4408;
-            INCOMING_PACKETS[2704] = _Str_4826;
+            INCOMING_PACKETS[2704] = RoomUserShoutEvent2;
             INCOMING_PACKETS[2707] = _Str_8288;
             INCOMING_PACKETS[2710] = _Str_8039;
             INCOMING_PACKETS[2720] = TradingConfirmationEvent;
