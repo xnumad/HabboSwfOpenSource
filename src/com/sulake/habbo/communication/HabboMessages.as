@@ -291,7 +291,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
 	import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
-	import com.sulake.habbo.communication.messages.incoming.talent._Str_5939;
+	import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
 	import com.sulake.habbo.communication.messages.incoming.talent._Str_9397;
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7023;
@@ -1414,7 +1414,7 @@
             INCOMING_PACKETS[618] = CraftingResultEvent;
             INCOMING_PACKETS[619] = _Str_5425;
             INCOMING_PACKETS[634] = _Str_9293;
-            INCOMING_PACKETS[638] = _Str_5939;
+            INCOMING_PACKETS[638] = TalentLevelUpEvent;
             INCOMING_PACKETS[639] = BotErrorEvent;
             INCOMING_PACKETS[659] = _Str_9157;
             INCOMING_PACKETS[66] = AchievementResolutionsMessageEvent;

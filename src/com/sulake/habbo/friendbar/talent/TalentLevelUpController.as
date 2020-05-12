@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.talent._Str_5939;
+    import com.sulake.habbo.communication.messages.incoming.talent.TalentLevelUpEvent;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
     import com.sulake.habbo.session.talent.TalentEnum;
     import com.sulake.habbo.communication.messages.parser.talent._Str_3450;
@@ -64,10 +64,10 @@
 
         public function initialize():void
         {
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_5939(this._Str_16796));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new TalentLevelUpEvent(this._Str_16796));
         }
 
-        private function _Str_16796(k:_Str_5939):void
+        private function _Str_16796(k:TalentLevelUpEvent):void
         {
             var _local_2:TalentLevelUpMessageParser = k.getParser();
             if ((((_local_2.level == 1) && (_local_2.talentTrackName == TalentEnum.HELPER)) && (this._habboTalent._Str_9968)))

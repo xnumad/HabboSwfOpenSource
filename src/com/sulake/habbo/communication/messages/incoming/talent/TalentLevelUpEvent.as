@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.talent.TalentLevelUpMessageParser;
 
-    public class _Str_5939 extends MessageEvent implements IMessageEvent 
+    public class TalentLevelUpEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_5939(k:Function)
+        public function TalentLevelUpEvent(k:Function)
         {
             super(k, TalentLevelUpMessageParser);
         }
