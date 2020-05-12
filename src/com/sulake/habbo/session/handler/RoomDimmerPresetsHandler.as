@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8039;
+    import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_5478;
@@ -18,13 +18,13 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_8039(this.onRoomDimmerPresets));
+            k.addMessageEvent(new RoomDimmerPresetsEvent(this.onRoomDimmerPresets));
         }
 
         private function onRoomDimmerPresets(k:IMessageEvent):void
         {
             var _local_7:_Str_5478;
-            var _local_2:_Str_8039 = (k as _Str_8039);
+            var _local_2:RoomDimmerPresetsEvent = (k as RoomDimmerPresetsEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

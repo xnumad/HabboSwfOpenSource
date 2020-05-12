@@ -774,7 +774,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7746;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7811;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8033;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8039;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomDimmerPresetsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8241;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8288;
@@ -1230,7 +1230,7 @@
             INCOMING_PACKETS[2703] = _Str_4408;
             INCOMING_PACKETS[2704] = RoomUserShoutEvent2;
             INCOMING_PACKETS[2707] = _Str_8288;
-            INCOMING_PACKETS[2710] = _Str_8039;
+            INCOMING_PACKETS[2710] = RoomDimmerPresetsEvent;
             INCOMING_PACKETS[2720] = TradingConfirmationEvent;
             INCOMING_PACKETS[2725] = UserObjectEvent;
             INCOMING_PACKETS[2726] = _Str_5134;
