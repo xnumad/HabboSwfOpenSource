@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionRequesterRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionInvitedToGuideRoomEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionPartnerIsTypingEvent;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8903;
     import com.sulake.habbo.communication.messages.incoming.help._Str_8747;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9097;
@@ -158,7 +158,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionRequesterRoomEvent(this.onGuideSessionRequesterRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionInvitedToGuideRoomEvent(this.onGuideSessionInvitedToGuideRoom));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new GuideSessionPartnerIsTypingEvent(this.onGuideSessionPartnerIsTyping));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_3277(this.onPerkAllowances));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8903(this._window9));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_8747(this._Str_23266));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_9097(this._Str_24700));
@@ -489,7 +489,7 @@
             this._Str_19579(_local_2._Str_7319);
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:PerkAllowancesMessageParser;
             if (this._sessionData._Str_3201 == GuideSessionStateEnum.GUIDE_TOOL)

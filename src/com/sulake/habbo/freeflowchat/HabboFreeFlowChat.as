@@ -41,7 +41,7 @@
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.iid.IIDHabboWindowManager;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
@@ -183,14 +183,14 @@
 
         override protected function initComponent():void
         {
-            this._communication.addHabboConnectionMessageEvent(new _Str_3277(this.onPerkAllowances));
+            this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsEvent(this._Str_25751));
             this._communication.addHabboConnectionMessageEvent(new _Str_3870(this._Str_10366));
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:Boolean = this._perkAllowed;
             this._perkAllowed = true;

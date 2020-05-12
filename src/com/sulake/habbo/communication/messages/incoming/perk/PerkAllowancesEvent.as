@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.perk.PerkAllowancesMessageParser;
 
-    public class _Str_3277 extends MessageEvent implements IMessageEvent 
+    public class PerkAllowancesEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_3277(k:Function)
+        public function PerkAllowancesEvent(k:Function)
         {
             super(k, PerkAllowancesMessageParser);
         }

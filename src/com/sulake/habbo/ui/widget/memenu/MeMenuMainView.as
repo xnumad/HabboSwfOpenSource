@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.XmlAsset;
@@ -39,7 +39,7 @@
         private var _widget:MeMenuWidget;
         private var _window:IWindowContainer;
         private var _icons:Dictionary;
-        private var _perkAllowancesMessageEvent:_Str_3277;
+        private var _perkAllowancesMessageEvent:PerkAllowancesEvent;
         private var _config:IHabboConfigurationManager;
 
         public function MeMenuMainView(k:IHabboConfigurationManager)
@@ -65,7 +65,7 @@
             this._icons["talents_icon"] = ["compass_white", "compass_color"];
             this._icons["guide_icon"] = ["lighthouse_white", "lighthouse_color"];
             this._widget = k;
-            this._perkAllowancesMessageEvent = new _Str_3277(this.onPerkAllowances);
+            this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
             this._widget.handler.container.connection.addMessageEvent(this._perkAllowancesMessageEvent);
             this.createWindow(_arg_2);
         }
@@ -436,7 +436,7 @@
             }
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:PerkAllowancesMessageParser = k.getParser();
             this._Str_8899(_local_2.isPerkAllowed(PerkEnum.USE_GUIDE_TOOL));

@@ -94,7 +94,7 @@
     import com.sulake.iid.IIDHabboMessenger;
     import com.sulake.iid.IIDHabboFreeFlowChat;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.toolbar.HabboToolbarEnum;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
     import com.sulake.habbo.session.IRoomSession;
@@ -541,7 +541,7 @@
 
         override protected function initComponent():void
         {
-            this._perkAllowancesMessageEvent = this._communication.addHabboConnectionMessageEvent(new _Str_3277(this.onPerkAllowances));
+            this._perkAllowancesMessageEvent = this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
         }
 
         override public function dispose():void
@@ -820,7 +820,7 @@
             }
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:Timer;
             var _local_3:String;

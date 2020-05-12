@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageEvent;
     import flash.utils.Dictionary;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.parser.perk._Str_3818;
     import com.sulake.habbo.session.events.PerksUpdatedEvent;
 
@@ -21,7 +21,7 @@
             this._sessionDataManager = k;
             if (this._sessionDataManager.communication)
             {
-                this._perkAllowancesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_3277(this.onPerkAllowances));
+                this._perkAllowancesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             }
         }
 
@@ -69,7 +69,7 @@
             return (_local_2 != null) ? _local_2.errorMessage : "";
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:_Str_3818;
             for each (_local_2 in k.getParser()._Str_23301())

@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
-    import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+    import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.core.window.components.IFrameWindow;
     import flash.utils.Timer;
     import com.sulake.habbo.room.events.RoomEngineEvent;
@@ -55,7 +55,7 @@
         private var _occupiedTilesMessageEvent:_Str_6566;
         private var _roomVisualizationSettingsMessageEvent:_Str_4196;
         private var _buildersClubSubscriptionStatusMessageEvent:_Str_5417;
-        private var _perkAllowancesMessageEvent:_Str_3277;
+        private var _perkAllowancesMessageEvent:PerkAllowancesEvent;
         private var _floorPlanCache:FloorPlanCache;
         private var _floorPlanPreviewer:FloorPlanPreviewer;
         private var _heightMapEditor:HeightMapEditor;
@@ -88,7 +88,7 @@
                 this._occupiedTilesMessageEvent = new _Str_6566(this._Str_18596);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
-                this._perkAllowancesMessageEvent = new _Str_3277(this.onPerkAllowances);
+                this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._floorHeightMapMessageEvent);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._buildersClubSubscriptionStatusMessageEvent);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._entryTileDataMessageEvent);
@@ -522,7 +522,7 @@
             this._Str_21392();
         }
 
-        private function onPerkAllowances(k:_Str_3277):void
+        private function onPerkAllowances(k:PerkAllowancesEvent):void
         {
             var _local_2:PerkAllowancesMessageParser = k.getParser();
             this._largeFloorPlansAllowed = _local_2.isPerkAllowed(PerkEnum.BUILDER_AT_WORK);

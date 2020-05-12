@@ -268,7 +268,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_9310;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
-	import com.sulake.habbo.communication.messages.incoming.perk._Str_3277;
+	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;
 	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7177;
 	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7827;
@@ -1213,7 +1213,7 @@
             INCOMING_PACKETS[2547] = _Str_8234;
             INCOMING_PACKETS[2551] = _Str_9045;
             INCOMING_PACKETS[2568] = TradingAcceptEvent;
-            INCOMING_PACKETS[2586] = _Str_3277;
+            INCOMING_PACKETS[2586] = PerkAllowancesEvent;
             INCOMING_PACKETS[2589] = _Str_8879;
             INCOMING_PACKETS[2599] = _Str_5212;
             INCOMING_PACKETS[2602] = _Str_7922;
