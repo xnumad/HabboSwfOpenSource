@@ -13,7 +13,7 @@
         private var _name:String = "";
         private var _motto:String = "";
         private var _activityPoints:int;
-        private var _Str_4900:int = 0;
+        private var _id:int = 0;
         private var _xp:int = 0;
         private var _Str_3021:int;
         private var _figure:String = "";
@@ -80,12 +80,12 @@
 
         public function set _Str_2394(k:int):void
         {
-            this._Str_4900 = k;
+            this._id = k;
         }
 
         public function get _Str_2394():int
         {
-            return this._Str_4900;
+            return this._id;
         }
 
         public function set xp(k:int):void

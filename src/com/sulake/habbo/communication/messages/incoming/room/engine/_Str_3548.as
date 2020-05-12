@@ -16,7 +16,7 @@
         private var _figure:String = "";
         private var _custom:String = "";
         private var _activityPoints:int;
-        private var _Str_4900:int = 0;
+        private var _id:int = 0;
         private var _Str_11874:String = "";
         private var _Str_11729:int = 0;
         private var _groupName:String = "";
@@ -183,14 +183,14 @@
 
         public function get _Str_2394():int
         {
-            return this._Str_4900;
+            return this._id;
         }
 
         public function set _Str_2394(k:int):void
         {
             if (!this._Str_2479)
             {
-                this._Str_4900 = k;
+                this._id = k;
             }
         }
 

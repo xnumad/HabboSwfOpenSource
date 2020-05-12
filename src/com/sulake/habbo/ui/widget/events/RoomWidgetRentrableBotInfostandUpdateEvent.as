@@ -7,7 +7,7 @@
 
         private var _name:String = "";
         private var _motto:String = "";
-        private var _Str_4900:int = 0;
+        private var _id:int = 0;
         private var _figure:String = "";
         private var _badges:Array;
         private var _Str_5228:int = 0;
@@ -47,12 +47,12 @@
 
         public function set _Str_2394(k:int):void
         {
-            this._Str_4900 = k;
+            this._id = k;
         }
 
         public function get _Str_2394():int
         {
-            return this._Str_4900;
+            return this._id;
         }
 
         public function set figure(k:String):void
