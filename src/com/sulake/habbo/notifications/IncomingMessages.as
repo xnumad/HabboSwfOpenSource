@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.PetBoughtNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
-    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
+    import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9048;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9312;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;

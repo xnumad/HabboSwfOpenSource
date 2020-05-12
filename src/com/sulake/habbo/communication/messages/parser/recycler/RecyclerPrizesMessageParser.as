@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.recycler
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_8691;
+    import com.sulake.habbo.communication.messages.incoming.recycler._Str_8691;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class RecyclerPrizesMessageParser implements IMessageParser 

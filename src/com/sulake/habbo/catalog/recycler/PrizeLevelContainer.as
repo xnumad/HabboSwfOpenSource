@@ -1,8 +1,8 @@
 ﻿package com.sulake.habbo.catalog.recycler
 {
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_7352;
+    import com.sulake.habbo.communication.messages.incoming.recycler._Str_7352;
     import com.sulake.habbo.session.furniture.IFurnitureData;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_8691;
+    import com.sulake.habbo.communication.messages.incoming.recycler._Str_8691;
     import com.sulake.habbo.catalog.HabboCatalog;
 
     public class PrizeLevelContainer 

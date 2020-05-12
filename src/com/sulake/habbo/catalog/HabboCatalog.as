@@ -89,7 +89,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
-    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
+    import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
@@ -115,8 +115,8 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
-    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerPrizesEvent;
+    import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
+    import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_5946;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_6375;

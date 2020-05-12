@@ -160,9 +160,9 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.utils.SingleWriteMap;
-	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerPrizesEvent;
+	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
+	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerStatusEvent;
+	import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerPrizesEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
