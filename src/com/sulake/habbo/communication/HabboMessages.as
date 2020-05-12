@@ -161,7 +161,7 @@
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.utils.SingleWriteMap;
 	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_5376;
+	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_7079;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
@@ -1323,7 +1323,7 @@
             INCOMING_PACKETS[3406] = _Str_7229;
             INCOMING_PACKETS[3429] = _Str_5655;
             INCOMING_PACKETS[3431] = _Str_8183;
-            INCOMING_PACKETS[3433] = _Str_5376;
+            INCOMING_PACKETS[3433] = RecyclerStatusEvent;
             INCOMING_PACKETS[3434] = _Str_7799;
             INCOMING_PACKETS[3441] = _Str_9507;
             INCOMING_PACKETS[3463] = _Str_9074;

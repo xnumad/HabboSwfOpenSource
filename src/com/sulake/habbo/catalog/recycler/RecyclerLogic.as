@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.window.IHabboWindowManager;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_5376;
+    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerStatusEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
@@ -38,7 +38,7 @@
 
         private function get _Str_12921():Boolean
         {
-            return !(this._Str_16884 == _Str_5376._Str_14635);
+            return !(this._Str_16884 == RecyclerStatusEvent._Str_14635);
         }
 
         private function get ready():Boolean
@@ -116,7 +116,7 @@
             }
             switch (this._Str_16884)
             {
-                case _Str_5376._Str_16635:
+                case RecyclerStatusEvent._Str_16635:
                     this._Str_6624 = _Str_9243;
                     if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
                     {
@@ -128,7 +128,7 @@
                     this._Str_15040();
                     this._Str_8448();
                     return;
-                case _Str_5376._Str_14635:
+                case RecyclerStatusEvent._Str_14635:
                     if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
                     {
                         return;
@@ -136,7 +136,7 @@
                     this._Str_2271._Str_17679();
                     this._habboCatalog.setupInventoryForRecycler(false);
                     return;
-                case _Str_5376._Str_16908:
+                case RecyclerStatusEvent._Str_16908:
                     if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
                     {
                         return;
