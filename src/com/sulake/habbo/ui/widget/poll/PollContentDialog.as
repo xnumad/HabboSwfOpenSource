@@ -446,7 +446,7 @@
             }
             var answers:Array = new Array();
             var message:RoomWidgetPollMessage = new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_ANSWER, this._id);
-            message._Str_3218 = question._Str_3218;
+            message.questionId = question.questionId;
             if (question.questionChoices.length > 0)
             {
                 for each (answerValue in answerArray)

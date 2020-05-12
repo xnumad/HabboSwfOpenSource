@@ -85,7 +85,7 @@
         {
             var _local_3:int;
             var pollQuestion:PollQuestion = new PollQuestion();
-            pollQuestion._Str_3218 = k.readInteger();
+            pollQuestion.questionId = k.readInteger();
             pollQuestion.sortOrder = k.readInteger();
             pollQuestion.questionType = k.readInteger();
             pollQuestion.questionText = k.readString();

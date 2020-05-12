@@ -58,7 +58,7 @@
                     this._container.roomSession._Str_20499(_local_2.id);
                     break;
                 case RoomWidgetPollMessage.RWPM_ANSWER:
-                    this._container.roomSession._Str_19069(_local_2.id, _local_2._Str_3218, _local_2.answers);
+                    this._container.roomSession._Str_19069(_local_2.id, _local_2.questionId, _local_2.answers);
                     break;
             }
             return null;

@@ -164,7 +164,7 @@
         private function _Str_21218(k:_Str_3149):void
         {
             this._Str_19108();
-            if ((((this._view) && (this._question)) && (this._question.id == k._Str_3218)))
+            if ((((this._view) && (this._question)) && (this._question.id == k.questionId)))
             {
                 this._view._Str_21186(k._Str_4036);
             }
@@ -382,7 +382,7 @@
                 return;
             }
             var _local_2:RoomWidgetPollMessage = new RoomWidgetPollMessage(RoomWidgetPollMessage.RWPM_ANSWER, this._pollId);
-            _local_2._Str_3218 = (this._question["id"] as int);
+            _local_2.questionId = (this._question["id"] as int);
             var _local_3:Array = [];
             _local_3.push(("" + k));
             _local_2.answers = _local_3;

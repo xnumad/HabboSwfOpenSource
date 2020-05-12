@@ -112,7 +112,7 @@
                 case RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED:
                     _local_3 = new _Str_3149(_local_2.id, _Str_3149.RWPUW_QUESION_FINSIHED);
                     _local_3._pollId = _local_2.pollId;
-                    _local_3._Str_3218 = _local_2._Str_3218;
+                    _local_3.questionId = _local_2.questionId;
                     _local_3._Str_4036 = _local_2._Str_4036;
                     break;
                 case RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION:
@@ -120,7 +120,7 @@
                     _local_3.question = _local_2.question;
                     _local_3.duration = _local_2.duration;
                     _local_3.pollType = _local_2.pollType;
-                    _local_3._Str_3218 = _local_2._Str_3218;
+                    _local_3.questionId = _local_2.questionId;
                     _local_3._pollId = _local_2.pollId;
                     break;
             }

@@ -26,12 +26,12 @@
             this._questionChoices = new Vector.<QuestionChoice>();
         }
 
-        public function get _Str_3218():int
+        public function get questionId():int
         {
             return this._questionId;
         }
 
-        public function set _Str_3218(k:int):void
+        public function set questionId(k:int):void
         {
             this._questionId = k;
         }

@@ -9,7 +9,7 @@
         private var _Str_17066:String;
 
 
-        public function get _Str_3218():int
+        public function get questionId():int
         {
             return this._questionId;
         }
