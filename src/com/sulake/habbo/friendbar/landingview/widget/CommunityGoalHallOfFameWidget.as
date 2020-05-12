@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest._Str_4106;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_11657;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_11298;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_11298;
     import com.sulake.habbo.friendbar.landingview.*;
 
     public class CommunityGoalHallOfFameWidget extends UserListWidget 

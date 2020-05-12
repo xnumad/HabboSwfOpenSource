@@ -40,7 +40,7 @@
     import flash.utils.Dictionary;
     import com.sulake.habbo.friendlist.domain.Friend;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11418;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_10763;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_10763;
     import flash.geom.Point;
     import com.sulake.habbo.friendlist.domain._Str_2740;
     import flash.display.BitmapData;

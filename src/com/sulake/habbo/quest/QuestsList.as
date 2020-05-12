@@ -15,8 +15,8 @@
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.help.enum.WelcomeNotificationAlignment;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223.AcceptQuestMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223.RejectQuestMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.quest.AcceptQuestMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.quest.RejectQuestMessageComposer;
     import com.sulake.habbo.window.utils._Str_2418;
 
     public class QuestsList implements IDisposable 

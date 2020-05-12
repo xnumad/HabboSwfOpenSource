@@ -1,14 +1,14 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_223
+﻿package com.sulake.habbo.communication.messages.outgoing.quest
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class RejectQuestMessageComposer implements IMessageComposer 
+    public class _Str_7541 implements IMessageComposer 
     {
 
 
         public function getMessageArray():Array
         {
-            return new Array();
+            return [];
         }
 
         public function dispose():void

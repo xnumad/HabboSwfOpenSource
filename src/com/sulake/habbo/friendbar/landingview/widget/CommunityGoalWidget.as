@@ -11,7 +11,7 @@
     import com.sulake.core.runtime.Component;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4438;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4438;
     import com.sulake.habbo.communication.messages.parser.quest.CommunityGoalProgressParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;

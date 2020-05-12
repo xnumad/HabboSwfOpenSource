@@ -9,14 +9,14 @@
     import com.sulake.habbo.communication.messages.incoming.quest._Str_2455;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestDailyMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_5085;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_5085;
     import com.sulake.habbo.communication.messages.parser.quest.QuestDailyParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_4916;
-    import com.sulake.habbo.communication.messages.outgoing._Str_223._Str_7541;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_4916;
+    import com.sulake.habbo.communication.messages.outgoing.quest._Str_7541;
 
     public class DailyQuestElementHandler implements IElementHandler, IFloatingElement, IDisposable 
     {
