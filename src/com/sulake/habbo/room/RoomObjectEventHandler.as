@@ -1935,7 +1935,7 @@
             }
         }
 
-        public function setSelectedAvatar(k:int, _arg_2:int, _arg_3:Boolean):void
+        public function setSelectedAvatar(k:int, id:int, _arg_3:Boolean):void
         {
             if (this._roomEngine == null)
             {
@@ -1951,12 +1951,12 @@
             var _local_6:Boolean;
             if (_arg_3)
             {
-                _local_5 = (this._roomEngine.getRoomObject(k, _arg_2, _local_4) as IRoomObjectController);
+                _local_5 = (this._roomEngine.getRoomObject(k, id, _local_4) as IRoomObjectController);
                 if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
                 {
                     _local_5.getEventHandler().processUpdateMessage(new RoomObjectAvatarSelectedMessage(true));
                     _local_6 = true;
-                    this._selectedAvatarId = _arg_2;
+                    this._selectedAvatarId = id;
                     try
                     {
                         this._roomEngine.connection.send(new _Str_10602(_local_5.getLocation().x, _local_5.getLocation().y));
