@@ -3,7 +3,7 @@
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.communication.messages.incoming._Str_329._Str_5376;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_4691;
+    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
 
@@ -160,13 +160,13 @@
             }
             switch (status)
             {
-                case _Str_4691._Str_15052:
+                case RecyclerFinishedEvent._Str_15052:
                     if (this._Str_2271 != null)
                     {
                         this._Str_2271._Str_20131();
                     }
                     break;
-                case _Str_4691._Str_18717:
+                case RecyclerFinishedEvent._Str_18717:
                     Logger.log("* Recycler finished with FAILURE");
                     this._windowManager.alert("${generic.alert.title}", "${recycler.info.closed}", 0, function (k:_Str_2418, _arg_2:WindowEvent):void
                     {

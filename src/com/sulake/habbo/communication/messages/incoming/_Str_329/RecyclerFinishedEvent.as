@@ -4,12 +4,12 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
 
-    public class _Str_4691 extends MessageEvent implements IMessageEvent 
+    public class RecyclerFinishedEvent extends MessageEvent implements IMessageEvent 
     {
         public static const _Str_15052:int = 1;
         public static const _Str_18717:int = 2;
 
-        public function _Str_4691(k:Function)
+        public function RecyclerFinishedEvent(k:Function)
         {
             super(k, RecyclerFinishedMessageParser);
         }

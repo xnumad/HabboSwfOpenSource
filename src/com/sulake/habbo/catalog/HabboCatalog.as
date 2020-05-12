@@ -89,7 +89,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_4691;
+    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
@@ -551,7 +551,7 @@
             this.addMessageEvent(new _Str_7677(this._Str_16050));
             this.addMessageEvent(new _Str_4508(this._Str_17254));
             this.addMessageEvent(new _Str_8801(this._Str_25682));
-            this.addMessageEvent(new _Str_4691(this._Str_17153));
+            this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
             this.addMessageEvent(new _Str_8530(this._Str_24685));
             this.addMessageEvent(new _Str_7086(this._Str_23734));
@@ -2125,7 +2125,7 @@
 
         private function _Str_17153(k:IMessageEvent):void
         {
-            var _local_2:RecyclerFinishedMessageParser = (k as _Str_4691).getParser();
+            var _local_2:RecyclerFinishedMessageParser = (k as RecyclerFinishedEvent).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
             {
                 return;

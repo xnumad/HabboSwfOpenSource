@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.PetBoughtNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
-    import com.sulake.habbo.communication.messages.incoming._Str_329._Str_4691;
+    import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9048;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9312;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
@@ -90,7 +90,7 @@
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
             this.addMessageEvent(new _Str_5714(this.onCreditBalance));
             this.addMessageEvent(new _Str_7321(this._Str_24670));
-            this.addMessageEvent(new _Str_4691(this._Str_17153));
+            this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
             this.addMessageEvent(new _Str_9312(this._Str_24490));
             this.addMessageEvent(new _Str_9995(this._Str_24460));
@@ -213,8 +213,8 @@
 
         private function _Str_17153(k:IMessageEvent):void
         {
-            var _local_2:RecyclerFinishedMessageParser = (k as _Str_4691).getParser();
-            if (((_local_2 == null) || (!(_local_2.recyclerFinishedStatus == _Str_4691._Str_15052))))
+            var _local_2:RecyclerFinishedMessageParser = (k as RecyclerFinishedEvent).getParser();
+            if (((_local_2 == null) || (!(_local_2.recyclerFinishedStatus == RecyclerFinishedEvent._Str_15052))))
             {
                 return;
             }

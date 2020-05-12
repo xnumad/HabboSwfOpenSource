@@ -160,7 +160,7 @@
 	import com.sulake.habbo.communication.messages.incoming.groupforums._Str_9630;
 	import com.sulake.core.utils.Map;
 	import com.sulake.core.utils.SingleWriteMap;
-	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_4691;
+	import com.sulake.habbo.communication.messages.incoming._Str_329.RecyclerFinishedEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_5376;
 	import com.sulake.habbo.communication.messages.incoming._Str_329._Str_7079;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
@@ -1394,7 +1394,7 @@
             INCOMING_PACKETS[448] = _Str_8714;
             INCOMING_PACKETS[462] = _Str_9229;
             INCOMING_PACKETS[463] = _Str_15969;
-            INCOMING_PACKETS[468] = _Str_4691;
+            INCOMING_PACKETS[468] = RecyclerFinishedEvent;
             INCOMING_PACKETS[469] = _Str_8016;
             INCOMING_PACKETS[482] = _Str_6001;
             INCOMING_PACKETS[509] = _Str_9446;
