@@ -1,12 +1,12 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_94
+﻿package com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_5945 implements IMessageComposer 
+    public class _Str_11266 implements IMessageComposer 
     {
         private var _type:int;
 
-        public function _Str_5945(k:int)
+        public function _Str_11266(k:int)
         {
             this._type = k;
         }

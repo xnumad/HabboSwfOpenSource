@@ -8,8 +8,8 @@
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.outgoing._Str_94._Str_11266;
-    import com.sulake.habbo.communication.messages.outgoing._Str_94._Str_5945;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
+    import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
     import com.sulake.habbo.inventory.IAvatarEffect;
     import com.sulake.core.window.IWindowContainer;
 

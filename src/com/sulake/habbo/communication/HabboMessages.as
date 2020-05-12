@@ -962,8 +962,8 @@
 	import com.sulake.habbo.communication.messages.outgoing.poll.PollAnswerComposer;
 	import com.sulake.habbo.communication.messages.outgoing.poll._Str_11290;
 	import com.sulake.habbo.communication.messages.outgoing.poll._Str_12165;
-	import com.sulake.habbo.communication.messages.outgoing._Str_94._Str_11266;
-	import com.sulake.habbo.communication.messages.outgoing._Str_94._Str_5945;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_11266;
+	import com.sulake.habbo.communication.messages.outgoing.inventory.avatareffect._Str_5945;
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
@@ -2036,4 +2036,3 @@
         }
     }
 }
-
