@@ -213,7 +213,7 @@
                                         this._container.sessionDataManager.ejectAll(this._container.roomSession.roomId, _local_8);
                                         return null;
                                     case ":ejectpets":
-                                        this._container.sessionDataManager.pickAllFurniture(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.ejectPets(this._container.roomSession.roomId);
                                         return null;
                                     case ":moonwalk":
                                         this._container.sessionDataManager.sendSpecialCommandMessage(":moonwalk");

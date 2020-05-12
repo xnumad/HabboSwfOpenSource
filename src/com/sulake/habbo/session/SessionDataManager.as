@@ -861,7 +861,7 @@
             }
         }
 
-        public function pickAllFurniture(k:int):void
+        public function ejectPets(k:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {

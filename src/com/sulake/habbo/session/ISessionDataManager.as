@@ -62,7 +62,7 @@
         function ejectAllFurniture(_arg_1:int, _arg_2:String):void;
         function pickall(_arg_1:int):void;
         function ejectAll(_arg_1:int, _arg_2:String):void;
-        function pickAllFurniture(_arg_1:int):void;
+        function ejectPets(_arg_1:int):void;
         function loadProductData(_arg_1:IProductDataListener=null):Boolean;
         function getFurniData(_arg_1:IFurniDataListener):Vector.<IFurnitureData>;
         function addProductsReadyEventListener(_arg_1:IProductDataListener):void;
