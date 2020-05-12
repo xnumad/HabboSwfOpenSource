@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomUserShoutMessageParser;
 
-    public class RoomUserShoutEvent2 extends MessageEvent 
+    public class Whisper extends MessageEvent 
     {
-        public function RoomUserShoutEvent2(k:Function)
+        public function Whisper(k:Function)
         {
             super(k, RoomUserShoutMessageParser);
         }
