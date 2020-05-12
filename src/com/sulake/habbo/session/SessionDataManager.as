@@ -837,7 +837,7 @@
             }
         }
 
-        public function _Str_21775(roomId:int, message:String):void
+        public function ejectAll(roomId:int, message:String):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {

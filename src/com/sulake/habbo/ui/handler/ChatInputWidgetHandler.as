@@ -210,7 +210,7 @@
                                         this._container.sessionDataManager.pickallBC(this._container.roomSession.roomId);
                                         return null;
                                     case ":ejectall":
-                                        this._container.sessionDataManager._Str_21775(this._container.roomSession.roomId, _local_8);
+                                        this._container.sessionDataManager.ejectAll(this._container.roomSession.roomId, _local_8);
                                         return null;
                                     case ":ejectpets":
                                         this._container.sessionDataManager.pickAllFurniture(this._container.roomSession.roomId);
