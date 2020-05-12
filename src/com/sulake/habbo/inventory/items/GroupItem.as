@@ -127,12 +127,12 @@
             this._Str_1352 = k;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return this._Str_1007;
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             if (this._Str_1007 != k)
             {
@@ -805,7 +805,7 @@
             {
                 return;
             }
-            this._window.findChildByName("outline").visible = this._Str_2365;
+            this._window.findChildByName("outline").visible = this.Selected;
         }
 
         private function _Str_12824():void
@@ -868,7 +868,7 @@
                     return;
                 case WindowMouseEvent.DOWN:
                     this._Str_2307._Str_19669();
-                    this._Str_2365 = true;
+                    this.Selected = true;
                     this._Str_8894 = true;
                     this._Str_2307._Str_2944();
                     this._Str_2307._Str_21498 = this;

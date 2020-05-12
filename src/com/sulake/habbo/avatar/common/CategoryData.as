@@ -132,11 +132,11 @@
                         if (_local_2._Str_3420.id == _local_5)
                         {
                             this._paletteIndexes[_local_3] = _local_6;
-                            _local_2._Str_2365 = true;
+                            _local_2.Selected = true;
                         }
                         else
                         {
-                            _local_2._Str_2365 = false;
+                            _local_2.Selected = false;
                         }
                         _local_6++;
                     }
@@ -159,7 +159,7 @@
                 _local_2 = this._parts[this._selectedPartIndex];
                 if (_local_2)
                 {
-                    _local_2._Str_2365 = false;
+                    _local_2.Selected = false;
                 }
             }
             if (this._parts.length > k)
@@ -167,7 +167,7 @@
                 _local_3 = (this._parts[k] as AvatarEditorGridPartItem);
                 if (_local_3)
                 {
-                    _local_3._Str_2365 = true;
+                    _local_3.Selected = true;
                     this._selectedPartIndex = k;
                     return _local_3;
                 }
@@ -193,7 +193,7 @@
             {
                 return null;
             }
-            _local_4._Str_2365 = true;
+            _local_4.Selected = true;
             this._Str_19574();
             return _local_4;
         }
@@ -219,7 +219,7 @@
             {
                 return;
             }
-            _local_4._Str_2365 = false;
+            _local_4.Selected = false;
         }
 
         public function _Str_11211():Array

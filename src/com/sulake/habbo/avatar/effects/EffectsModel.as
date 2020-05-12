@@ -57,7 +57,7 @@
                     if (_local_4.type == _local_3)
                     {
                         _local_5 = IHabboAvatarEditorAvatarEffect(_local_4);
-                        _local_5._Str_2365 = true;
+                        _local_5.Selected = true;
                         break;
                     }
                 }
@@ -73,7 +73,7 @@
                 else
                 {
                     _local_5 = IHabboAvatarEditorAvatarEffect(this.effects[(_arg_2 - 1)]);
-                    _local_5._Str_2365 = true;
+                    _local_5.Selected = true;
                     controller.setAvatarEffectType(_local_5.type);
                 }
             }

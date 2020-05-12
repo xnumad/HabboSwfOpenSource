@@ -30,7 +30,7 @@
             }
             var k:ICheckBoxWindow = (this._window.findChildByName("prefer_old_chat_checkbox") as ICheckBoxWindow);
             this._widget.window.visible = true;
-            this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences = ((!(k == null)) && (k._Str_2365));
+            this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences = ((!(k == null)) && (k.Selected));
             this._window.dispose();
             this._window = null;
             this._widget = null;
@@ -51,7 +51,7 @@
                 _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
                 _local_2++;
             }
-            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox"))._Str_2365 = this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences;
+            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences;
         }
 
         private function _Str_2608(k:WindowMouseEvent):void
@@ -64,7 +64,7 @@
                     this.dispose();
                     return;
                 case "prefer_old_chat_checkbox":
-                    this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences = ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox"))._Str_2365;
+                    this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences = ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected;
                     if (!this._widget.widget.toolbar.freeFlowChat.isDisabledInPreferences)
                     {
                         if (this._widget.widget.toolbar._Str_12052._Str_10612 != null)

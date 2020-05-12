@@ -257,7 +257,7 @@
 
         private function get _Str_18668():Boolean
         {
-            return ICheckBoxWindow(this._editorWindow.findChildByName("walls_fixed_height_enabled_checkbox"))._Str_2365;
+            return ICheckBoxWindow(this._editorWindow.findChildByName("walls_fixed_height_enabled_checkbox")).Selected;
         }
 
         private function _Str_16600(k:WindowEvent, _arg_2:IWindow):void

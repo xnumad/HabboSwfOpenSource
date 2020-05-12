@@ -111,7 +111,7 @@
                     {
                         this._partGrid._Str_2816(_local_5.view);
                         _local_5.view.addEventListener(WindowMouseEvent.CLICK, this._Str_22871);
-                        if (_local_5._Str_2365)
+                        if (_local_5.Selected)
                         {
                             this._Str_5614(_local_5._Str_17445);
                         }

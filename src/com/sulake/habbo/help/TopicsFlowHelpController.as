@@ -623,7 +623,7 @@
                     _local_3.id = _local_2.index;
                     _local_3.procedure = this._Str_18834;
                     _local_5 = (_local_3.findChildByName("chat_check") as ICheckBoxWindow);
-                    _local_5._Str_2365 = _local_2.selected;
+                    _local_5.Selected = _local_2.selected;
                     this._chatList.addListItem(_local_3);
                 }
             }
@@ -675,7 +675,7 @@
                     this._habboHelp._Str_3469 = _local_5.roomId;
                 }
                 _local_5.selected = (!(_local_5.selected));
-                _local_4._Str_2365 = _local_5.selected;
+                _local_4.Selected = _local_5.selected;
             }
         }
 
@@ -694,7 +694,7 @@
                 _local_3.id = _local_2.index;
                 _local_3.procedure = this._Str_17227;
                 _local_4 = (_local_3.findChildByName("chat_check") as ICheckBoxWindow);
-                _local_4._Str_2365 = _local_2.selected;
+                _local_4.Selected = _local_2.selected;
                 this._chatList.addListItem(_local_3);
             }
         }
@@ -724,7 +724,7 @@
                 if (_local_5)
                 {
                     _local_5.selected = (!(_local_5.selected));
-                    _local_4._Str_2365 = _local_5.selected;
+                    _local_4.Selected = _local_5.selected;
                 }
             }
         }

@@ -410,7 +410,7 @@
                             _local_5 = this._Str_18445("toggle_riding_permission");
                             if (_local_5 != null)
                             {
-                                this._Str_13657("toggle_riding_permission", (!(_local_5._Str_2365)));
+                                this._Str_13657("toggle_riding_permission", (!(_local_5.Selected)));
                             }
                             break;
                         case "toggle_breeding_permission":
@@ -418,7 +418,7 @@
                             _local_5 = this._Str_18445("toggle_breeding_permission");
                             if (_local_5 != null)
                             {
-                                this._Str_13657("toggle_breeding_permission", (!(_local_5._Str_2365)));
+                                this._Str_13657("toggle_breeding_permission", (!(_local_5.Selected)));
                             }
                             break;
                         case "dismount":

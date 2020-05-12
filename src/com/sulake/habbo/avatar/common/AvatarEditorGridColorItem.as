@@ -77,12 +77,12 @@
             return this._window;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return this._isSelected;
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             this._isSelected = k;
             this._border.assetUri = ((this._isSelected) ? _Str_9541 : _Str_14698);

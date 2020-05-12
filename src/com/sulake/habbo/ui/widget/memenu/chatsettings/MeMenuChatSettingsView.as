@@ -25,7 +25,7 @@
         {
             var k:RoomWidgetStoreSettingsMessage = new RoomWidgetStoreSettingsMessage(RoomWidgetStoreSettingsMessage.RWSSM_STORE_CHAT);
             var _local_2:ICheckBoxWindow = (this._window.findChildByName("prefer_old_chat_checkbox") as ICheckBoxWindow);
-            k._Str_12967 = ((!(_local_2 == null)) && (_local_2._Str_2365));
+            k._Str_12967 = ((!(_local_2 == null)) && (_local_2.Selected));
             this._widget.messageListener.processWidgetMessage(k);
             this._window.dispose();
             this._window = null;
@@ -52,7 +52,7 @@
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
                 _local_3++;
             }
-            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox"))._Str_2365 = this._widget.handler.container.freeFlowChat.isDisabledInPreferences;
+            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._widget.handler.container.freeFlowChat.isDisabledInPreferences;
         }
 
         private function _Str_2608(k:WindowMouseEvent):void

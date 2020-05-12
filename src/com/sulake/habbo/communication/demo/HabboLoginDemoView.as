@@ -75,7 +75,7 @@
             var k:ISelectableWindow = (this._window.findChildByName("useTicket") as ISelectableWindow);
             if (k != null)
             {
-                return k._Str_2365;
+                return k.Selected;
             }
             return false;
         }
@@ -89,7 +89,7 @@
             var k:ISelectableWindow = (this._window.findChildByName("useExistingSession") as ISelectableWindow);
             if (k != null)
             {
-                return k._Str_2365;
+                return k.Selected;
             }
             return false;
         }

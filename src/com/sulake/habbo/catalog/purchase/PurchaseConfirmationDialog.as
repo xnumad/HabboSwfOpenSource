@@ -364,7 +364,7 @@
             var _local_2:ICheckBoxWindow = (k.target as ICheckBoxWindow);
             if (_local_2 != null)
             {
-                this._Str_3515(_local_2._Str_2365);
+                this._Str_3515(_local_2.Selected);
             }
         }
 
@@ -525,7 +525,7 @@
                     k = (this._window.findChildByName("show_face_checkbox") as ICheckBoxWindow);
                     if (k != null)
                     {
-                        return k._Str_2365;
+                        return k.Selected;
                     }
                 }
                 return false;

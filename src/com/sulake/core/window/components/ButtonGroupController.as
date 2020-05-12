@@ -32,12 +32,12 @@
             return null;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return testStateFlag(WindowState.SELECTED);
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             setStateFlag(WindowState.SELECTED, k);
         }

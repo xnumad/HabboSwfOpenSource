@@ -546,7 +546,7 @@
             {
                 _local_3._Str_6126 = true;
             }
-            if (_local_3._Str_2365)
+            if (_local_3.Selected)
             {
                 this._view._Str_2944();
             }
@@ -584,7 +584,7 @@
                         {
                             this._view.grid._Str_9854(_local_3);
                         }
-                        if (_local_3._Str_2365)
+                        if (_local_3.Selected)
                         {
                             this._Str_14744();
                         }
@@ -632,7 +632,7 @@
             {
                 if (_local_2.window == k)
                 {
-                    _local_2._Str_2365 = true;
+                    _local_2.Selected = true;
                     _local_2._Str_4405 = -1;
                     break;
                 }
@@ -653,7 +653,7 @@
             var k:GroupItem;
             for each (k in this._furniData)
             {
-                if (k._Str_2365)
+                if (k.Selected)
                 {
                     return k;
                 }
@@ -666,7 +666,7 @@
             var k:GroupItem;
             for each (k in this._furniData)
             {
-                k._Str_2365 = false;
+                k.Selected = false;
             }
         }
 
@@ -1276,7 +1276,7 @@
                 _local_2 = this._furniData.indexOf(k);
                 if (_local_2 > -1)
                 {
-                    k._Str_2365 = true;
+                    k.Selected = true;
                     k._Str_4405 = -1;
                 }
             }

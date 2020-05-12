@@ -121,7 +121,7 @@
                     return;
                 case "emergency_button":
                     _local_3 = (IWindowContainer(this._helpDialog._Str_2429).findChildByName("leave_room") as ICheckBoxWindow);
-                    if (((!(_local_3 == null)) && (_local_3._Str_2365)))
+                    if (((!(_local_3 == null)) && (_local_3.Selected)))
                     {
                         this._habboHelp._Str_2488(new _Str_3719());
                     }

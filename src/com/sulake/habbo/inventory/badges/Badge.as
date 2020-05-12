@@ -25,7 +25,7 @@
             this._isUnseen = isUnseen;
             _Str_2402(IWidgetWindow(this._window.findChildByName("badge")).widget).badgeId = badgeId;
             this._window.findChildByName("badge").visible = true;
-            this._Str_2365 = false;
+            this.Selected = false;
         }
 
         public function get badgeId():String
@@ -38,7 +38,7 @@
             return this._isInUse;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return this._isSelected;
         }
@@ -53,7 +53,7 @@
             this._isInUse = k;
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             this._isSelected = k;
             if (this._selectionHighlighter == null)
@@ -69,7 +69,7 @@
             if (this._isUnseen != k)
             {
                 this._isUnseen = k;
-                this._Str_2365 = this._isSelected;
+                this.Selected = this._isSelected;
             }
         }
     }

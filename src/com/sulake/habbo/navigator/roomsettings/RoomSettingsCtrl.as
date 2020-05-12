@@ -974,11 +974,11 @@
             k._Str_3827 = _local_6.selection;
             var _local_7:IDropMenuWindow = (this._window.findChildByName("maxvisitors") as IDropMenuWindow);
             k._Str_5552 = _local_7.items()[_local_7.selection];
-            k._Str_5667 = this._Str_7157._Str_2365;
-            k._Str_7595 = this._Str_7429._Str_2365;
-            k._Str_7273 = this._Str_5537._Str_2365;
-            k._Str_18547 = this._Str_6233._Str_2365;
-            k._Str_7455 = this._Str_5830._Str_2365;
+            k._Str_5667 = this._Str_7157.Selected;
+            k._Str_7595 = this._Str_7429.Selected;
+            k._Str_7273 = this._Str_5537.Selected;
+            k._Str_18547 = this._Str_6233.Selected;
+            k._Str_7455 = this._Str_5830.Selected;
             k._Str_5962 = (this._Str_6424.selection - 2);
             k._Str_6205 = (this._Str_6508.selection - 2);
             k.tags = new Array();

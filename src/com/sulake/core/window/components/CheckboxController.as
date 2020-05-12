@@ -33,7 +33,7 @@
                 switch (_arg_2.type)
                 {
                     case WindowMouseEvent.UP:
-                        if (_Str_2365)
+                        if (Selected)
                         {
                             unselect();
                         }

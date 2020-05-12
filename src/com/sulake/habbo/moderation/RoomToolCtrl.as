@@ -350,11 +350,11 @@
                 this._main.windowManager.alert("Alert", "You must input a message to the user", 0, this._Str_3168);
                 return;
             }
-            var _local_2:int = this._Str_25499(k, this._kickCb._Str_2365);
+            var _local_2:int = this._Str_25499(k, this._kickCb.Selected);
             this._main.connection.send(new _Str_5691(_local_2, this._msgInput.text, ""));
-            if ((((this._lockCb._Str_2365) || (this._changeNameCb._Str_2365)) || (this._kickCb._Str_2365)))
+            if ((((this._lockCb.Selected) || (this._changeNameCb.Selected)) || (this._kickCb.Selected)))
             {
-                this._main.connection.send(new _Str_12412(this._data.flatId, this._lockCb._Str_2365, this._changeNameCb._Str_2365, this._kickCb._Str_2365));
+                this._main.connection.send(new _Str_12412(this._data.flatId, this._lockCb.Selected, this._changeNameCb.Selected, this._kickCb.Selected));
             }
             this.dispose();
         }

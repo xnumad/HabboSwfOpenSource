@@ -214,7 +214,7 @@
                     {
                         return;
                     }
-                    if (_local_4._Str_2365)
+                    if (_local_4.Selected)
                     {
                         this._Str_7660 = 2;
                     }

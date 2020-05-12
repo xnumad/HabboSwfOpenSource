@@ -7,6 +7,6 @@
         function get _Str_3709():int;
         function get duration():int;
         function get isActive():Boolean;
-        function get _Str_2365():Boolean;
+        function get Selected():Boolean;
     }
 }

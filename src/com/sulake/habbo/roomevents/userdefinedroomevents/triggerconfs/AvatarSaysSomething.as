@@ -17,7 +17,7 @@
         override public function readIntegerParamsFromForm(k:IWindowContainer):Array
         {
             var _local_2:Array = new Array();
-            _local_2.push(((this._Str_20767(k)._Str_2365) ? 1 : 0));
+            _local_2.push(((this._Str_20767(k).Selected) ? 1 : 0));
             return _local_2;
         }
 

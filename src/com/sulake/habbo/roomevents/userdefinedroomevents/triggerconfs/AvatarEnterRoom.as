@@ -21,7 +21,7 @@
         override public function readStringParamFromForm(k:IWindowContainer):String
         {
             var _local_2:String = this._Str_2453().text;
-            return (this._Str_14247()._Str_2365) ? _local_2 : "";
+            return (this._Str_14247().Selected) ? _local_2 : "";
         }
 
         override public function onInit(k:IWindowContainer, _arg_2:HabboUserDefinedRoomEvents):void

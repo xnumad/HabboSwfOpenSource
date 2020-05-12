@@ -246,7 +246,7 @@
                 _local_3 = (this._badges[_local_2] as Badge);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_2365 = (_local_3.badgeId == k);
+                    _local_3.Selected = (_local_3.badgeId == k);
                 }
                 _local_2++;
             }
@@ -264,7 +264,7 @@
             if (((!(_local_2 == null)) && (_local_2.length > 0)))
             {
                 k = (_local_2[0] as Badge);
-                k._Str_2365 = true;
+                k.Selected = true;
                 this._Str_2491();
                 return;
             }
@@ -272,7 +272,7 @@
             if (((!(_local_3 == null)) && (_local_3.length > 0)))
             {
                 k = (_local_3[0] as Badge);
-                k._Str_2365 = true;
+                k.Selected = true;
                 this._Str_2491();
             }
         }
@@ -285,7 +285,7 @@
             while (_local_3 < _local_2.length)
             {
                 _local_4 = _local_2[_local_3];
-                if (_local_4._Str_2365)
+                if (_local_4.Selected)
                 {
                     return _local_4;
                 }

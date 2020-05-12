@@ -609,9 +609,9 @@
                     {
                         case WindowEvent.WINDOW_EVENT_SELECTED:
                             this._Str_13929(true);
-                            this._handleHelperRequests = (this._window.findChildByName("handle_helper_tickets") as ICheckBoxWindow)._Str_2365;
-                            this._handleGuardianRequests = ((!(this._window.findChildByName("handle_guardian_tickets") == null)) && ((this._window.findChildByName("handle_guardian_tickets") as ICheckBoxWindow)._Str_2365));
-                            this._handleGuideRequests = (this._window.findChildByName("handle_guide_tickets") as ICheckBoxWindow)._Str_2365;
+                            this._handleHelperRequests = (this._window.findChildByName("handle_helper_tickets") as ICheckBoxWindow).Selected;
+                            this._handleGuardianRequests = ((!(this._window.findChildByName("handle_guardian_tickets") == null)) && ((this._window.findChildByName("handle_guardian_tickets") as ICheckBoxWindow).Selected));
+                            this._handleGuideRequests = (this._window.findChildByName("handle_guide_tickets") as ICheckBoxWindow).Selected;
                             if ((((!(this._handleHelperRequests)) && (!(this._handleGuardianRequests))) && (!(this._handleGuideRequests))))
                             {
                                 this._habboHelp.windowManager.simpleAlert("${guide.help.guide.tool.noqueueselected.caption}", "${guide.help.guide.tool.noqueueselected.subtitle}", "${guide.help.guide.tool.noqueueselected.message}");
@@ -1505,7 +1505,7 @@
         {
             var _local_2:ICheckBoxWindow = ICheckBoxWindow(this._window.findChildByName("guide_tool_duty"));
             this._Str_10865(k);
-            _local_2._Str_2365 = k;
+            _local_2.Selected = k;
             if (k)
             {
                 _local_2.caption = this._habboHelp.localization.getLocalization("guide.help.guide.tool.duty.on", "");
@@ -1526,7 +1526,7 @@
             var _local_3:ICheckBoxWindow = (this._window.findChildByName(k) as ICheckBoxWindow);
             if (_local_3 != null)
             {
-                _local_3._Str_2365 = _arg_2;
+                _local_3.Selected = _arg_2;
             }
         }
 

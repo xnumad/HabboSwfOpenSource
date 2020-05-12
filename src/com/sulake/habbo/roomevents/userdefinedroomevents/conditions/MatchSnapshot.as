@@ -77,7 +77,7 @@
 
         private function _Str_7329(k:ICheckBoxWindow):int
         {
-            return (k._Str_2365) ? 1 : 0;
+            return (k.Selected) ? 1 : 0;
         }
     }
 }

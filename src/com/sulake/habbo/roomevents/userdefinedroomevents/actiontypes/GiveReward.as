@@ -40,7 +40,7 @@
                 _local_6 = IWindowContainer(_local_3.getChildAt(_local_5));
                 if (_local_6.visible)
                 {
-                    _local_7 = this._Str_22801(_local_6, this._Str_8311(k)._Str_2365);
+                    _local_7 = this._Str_22801(_local_6, this._Str_8311(k).Selected);
                     if (_local_7 != null)
                     {
                         return _local_7;
@@ -60,8 +60,8 @@
         {
             var _local_2:Array = new Array();
             _local_2.push(this._Str_20392(k).getSelected().id);
-            _local_2.push(((this._Str_8311(k)._Str_2365) ? 1 : 0));
-            _local_2.push(((this._Str_11667(k)._Str_2365) ? this._prizeLimitSlider.getValue() : 0));
+            _local_2.push(((this._Str_8311(k).Selected) ? 1 : 0));
+            _local_2.push(((this._Str_11667(k).Selected) ? this._prizeLimitSlider.getValue() : 0));
             var _local_3:int = int(this._Str_18135(k).caption);
             _local_2.push(((_local_3 >= 1) ? _local_3 : 1));
             return _local_2;
@@ -139,7 +139,7 @@
         {
             var _local_2:String = this._Str_17924(k).text;
             var _local_3:String = this._Str_11801(k).text;
-            var _local_4:Boolean = this._Str_18678(k)._Str_2365;
+            var _local_4:Boolean = this._Str_18678(k).Selected;
             _local_2 = this._Str_19618(_local_2, ";", "");
             _local_2 = this._Str_19618(_local_2, ",", "");
             if (_local_2 == "")
@@ -346,7 +346,7 @@
 
         private function _Str_19833(k:IWindowContainer):void
         {
-            var _local_2:Boolean = this._Str_11667(k)._Str_2365;
+            var _local_2:Boolean = this._Str_11667(k).Selected;
             k.findChildByName("prize_limit_warning_txt").visible = (!(_local_2));
             this._Str_21165(k).visible = _local_2;
             this._Str_21816(((_local_2) ? ("" + this._prizeLimitSlider.getValue()) : ""));
@@ -377,7 +377,7 @@
         {
             var _local_5:IWindowContainer;
             var _local_2:IWindowContainer = IWindowContainer(k.findChildByName("rewards_container"));
-            var _local_3:Boolean = this._Str_8311(k)._Str_2365;
+            var _local_3:Boolean = this._Str_8311(k).Selected;
             k.findChildByName("propability_txt").visible = (!(_local_3));
             var _local_4:int;
             while (_local_4 < this._Str_12675)

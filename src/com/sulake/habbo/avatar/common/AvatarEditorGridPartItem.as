@@ -158,12 +158,12 @@
             return this._view;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return this._Str_2968;
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             this._Str_2968 = k;
             this._Str_8768();

@@ -56,7 +56,7 @@
             return this._isInUse;
         }
 
-        public function get _Str_2365():Boolean
+        public function get Selected():Boolean
         {
             return this._isSelected;
         }
@@ -112,7 +112,7 @@
             this._permanent = k;
         }
 
-        public function set _Str_2365(k:Boolean):void
+        public function set Selected(k:Boolean):void
         {
             this._isSelected = k;
         }

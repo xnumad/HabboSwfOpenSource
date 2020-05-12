@@ -100,25 +100,25 @@
         private function set _Str_14755(k:Boolean):void
         {
             var _local_2:ICheckBoxWindow = ICheckBoxWindow(window.findChildByName("auto_chat_checkbox"));
-            _local_2._Str_2365 = k;
+            _local_2.Selected = k;
             _local_2.activate();
         }
 
         private function get _Str_14755():Boolean
         {
-            return ICheckBoxWindow(window.findChildByName("auto_chat_checkbox"))._Str_2365;
+            return ICheckBoxWindow(window.findChildByName("auto_chat_checkbox")).Selected;
         }
 
         private function set _Str_15838(k:Boolean):void
         {
             var _local_2:ICheckBoxWindow = ICheckBoxWindow(window.findChildByName("markov_checkbox"));
-            _local_2._Str_2365 = k;
+            _local_2.Selected = k;
             _local_2.activate();
         }
 
         private function get _Str_15838():Boolean
         {
-            return ICheckBoxWindow(window.findChildByName("markov_checkbox"))._Str_2365;
+            return ICheckBoxWindow(window.findChildByName("markov_checkbox")).Selected;
         }
 
         private function set _Str_12879(k:int):void

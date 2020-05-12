@@ -230,7 +230,7 @@
             var _local_2:Effect = this._Str_5810(k);
             if (_local_2 != null)
             {
-                if (_local_2._Str_2365)
+                if (_local_2.Selected)
                 {
                     this.setEffectDeselected(k);
                 }
@@ -253,7 +253,7 @@
             if (_local_2 != null)
             {
                 this._Str_22710(false);
-                _local_2._Str_2365 = true;
+                _local_2.Selected = true;
                 this._Str_4879();
             }
         }
@@ -263,7 +263,7 @@
             var _local_2:Effect = this._Str_5810(k);
             if (_local_2 != null)
             {
-                _local_2._Str_2365 = false;
+                _local_2.Selected = false;
                 this._Str_4879();
             }
         }
@@ -275,7 +275,7 @@
             while (_local_2 < this._effects.length)
             {
                 _local_3 = this._effects[_local_2];
-                _local_3._Str_2365 = false;
+                _local_3.Selected = false;
                 _local_2++;
             }
             if (k)
@@ -292,7 +292,7 @@
             while (_local_3 < _local_2.length)
             {
                 _local_4 = _local_2[_local_3];
-                if (_local_4._Str_2365)
+                if (_local_4.Selected)
                 {
                     return _local_4;
                 }

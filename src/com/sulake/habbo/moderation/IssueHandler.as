@@ -583,7 +583,7 @@
                 return;
             }
             var k:ICheckBoxWindow = (this._window.findChildByName("handle_next_checkbox") as ICheckBoxWindow);
-            if (((!(k == null)) && (k._Str_2365)))
+            if (((!(k == null)) && (k.Selected)))
             {
                 this._moderationManager.issueManager._Str_15446("issue handler pick next");
             }

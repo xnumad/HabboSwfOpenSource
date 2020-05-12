@@ -104,7 +104,7 @@
             switch (_arg_2.name)
             {
                 case "spending_disclaimer":
-                    this._Str_3515(ICheckBoxWindow(_arg_2)._Str_2365);
+                    this._Str_3515(ICheckBoxWindow(_arg_2).Selected);
                     return;
                 case "select_button":
                     this._controller.catalog._Str_22294();

@@ -580,7 +580,7 @@
             if (k)
             {
                 this._selection = k;
-                this._selection._Str_2365 = true;
+                this._selection.Selected = true;
             }
         }
 
@@ -588,7 +588,7 @@
         {
             if (this._selection)
             {
-                this._selection._Str_2365 = false;
+                this._selection.Selected = false;
                 this._selection = null;
             }
         }

@@ -75,7 +75,7 @@
                         _local_5 = _local_2[k];
                         if (_local_5 != null)
                         {
-                            _local_6 = this._Str_18563(_local_5._Str_3093, _local_5._Str_2365);
+                            _local_6 = this._Str_18563(_local_5._Str_3093, _local_5.Selected);
                             this._listImage.copyPixels(_local_6, _local_6.rect, new Point((_local_4 * this._thumbWidth), (_local_3 * this._thumbHeight)), null, null, true);
                         }
                         k++;
@@ -103,7 +103,7 @@
             {
                 _local_2 = new BitmapData(this._listImage.width, this._listImage.height);
             }
-            var _local_5:BitmapData = this._Str_18563(k._Str_3093, k._Str_2365);
+            var _local_5:BitmapData = this._Str_18563(k._Str_3093, k.Selected);
             _local_2.copyPixels(_local_5, _local_5.rect, new Point(0, 0), null, null, true);
             _local_4 = new Rectangle(0, 0, (this._thumbWidth * (this._columnsMax - 1)), this._thumbHeight);
             _local_2.copyPixels(this._listImage, _local_4, new Point(this._thumbWidth, 0), null, null, true);
@@ -122,7 +122,7 @@
             }
             var _local_3:Point = this._Str_13073(k);
             var _local_4:Point = new Point((_local_3.x * this._thumbWidth), (_local_3.y * this._thumbHeight));
-            var _local_5:BitmapData = this._Str_18563(_arg_2._Str_3093, _arg_2._Str_2365);
+            var _local_5:BitmapData = this._Str_18563(_arg_2._Str_3093, _arg_2.Selected);
             this._listImage.copyPixels(_local_5, _local_5.rect, _local_4, null, null, true);
         }
 
