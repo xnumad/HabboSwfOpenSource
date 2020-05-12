@@ -19,7 +19,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8305;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorSavedSearchesEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8469;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
@@ -1382,7 +1382,7 @@
             INCOMING_PACKETS[3954] = _Str_5767;
             INCOMING_PACKETS[3964] = _Str_6375;
             INCOMING_PACKETS[3965] = _Str_7878;
-            INCOMING_PACKETS[3984] = _Str_8305;
+            INCOMING_PACKETS[3984] = NavigatorSavedSearchesEvent;
             INCOMING_PACKETS[3988] = _Str_7832;
             INCOMING_PACKETS[3990] = _Str_6566;
             INCOMING_PACKETS[4000] = DisconnectReasonEvent;

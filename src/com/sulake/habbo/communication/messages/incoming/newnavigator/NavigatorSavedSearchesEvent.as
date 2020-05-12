@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
 
-    public class _Str_8305 extends MessageEvent 
+    public class NavigatorSavedSearchesEvent extends MessageEvent 
     {
-        public function _Str_8305(k:Function)
+        public function NavigatorSavedSearchesEvent(k:Function)
         {
             super(k, NavigatorSavedSearchesParser);
         }
