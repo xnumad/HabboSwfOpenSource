@@ -28,7 +28,7 @@
 	import com.sulake.habbo.help.enum.WelcomeNotificationAlignment;
 	import com.sulake.core.assets.IAssetLibrary;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_11836;
+	import com.sulake.habbo.communication.messages.outgoing._Str_295.JoinPlayerQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_7312;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8040;
@@ -814,7 +814,7 @@
 			}
 			else
 			{
-				this.send(new _Str_11836(k));
+				this.send(new JoinPlayerQueueMessageComposer(k));
 				if (this._Str_2368)
 				{
 					this._Str_2368._Str_19498(k);

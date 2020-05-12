@@ -108,7 +108,7 @@
 	import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10594;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_10650;
-	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_11836;
+	import com.sulake.habbo.communication.messages.outgoing._Str_295.JoinPlayerQueueMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295.AcceptGameInviteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_12437;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_4406;
@@ -1577,7 +1577,7 @@
             OUTGOING_PACKETS[1444] = _Str_10862;
             OUTGOING_PACKETS[1445] = _Str_17897;
             OUTGOING_PACKETS[1450] = _Str_12123;
-            OUTGOING_PACKETS[1458] = _Str_11836;
+            OUTGOING_PACKETS[1458] = JoinPlayerQueueMessageComposer;
             OUTGOING_PACKETS[1461] = _Str_11774;
             OUTGOING_PACKETS[1472] = _Str_12318;
             OUTGOING_PACKETS[1474] = _Str_10643;
