@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.chat.RoomUserShoutMessageParser;
 
-    public class RoomUserShoutEvent extends MessageEvent 
+    public class Shout extends MessageEvent 
     {
-        public function RoomUserShoutEvent(k:Function)
+        public function Shout(k:Function)
         {
             super(k, RoomUserShoutMessageParser);
         }
