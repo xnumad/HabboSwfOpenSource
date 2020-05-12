@@ -392,7 +392,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_498._Str_11812;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
-	import com.sulake.habbo.communication.messages.incoming._Str_516.PongMessageParser;
+	import com.sulake.habbo.communication.messages.incoming._Str_516.PongEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083;
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
@@ -992,7 +992,7 @@
         private static const OUTGOING_PACKETS:Map = new SingleWriteMap();
 
         {
-            INCOMING_PACKETS[10] = PongMessageParser;
+            INCOMING_PACKETS[10] = PongEvent;
             INCOMING_PACKETS[1000] = CraftableProductsEvent;
             INCOMING_PACKETS[1001] = TradingCompletedEvent;
             INCOMING_PACKETS[1004] = ConnectionErrorEvent;

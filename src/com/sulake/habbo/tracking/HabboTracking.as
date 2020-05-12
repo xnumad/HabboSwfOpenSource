@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-    import com.sulake.habbo.communication.messages.incoming._Str_516.PongMessageParser;
+    import com.sulake.habbo.communication.messages.incoming._Str_516.PongEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.communication.enum.HabboCommunicationEvent;
     import com.sulake.habbo.communication.enum.HabboHotelViewEvent;
@@ -294,7 +294,7 @@
             this.addMessageEvent(new AuthenticationOKMessageEvent(this.onAuthOK));
             this.addMessageEvent(new _Str_2752(this.onCreditBalance));
             this.addMessageEvent(new _Str_3660(this._Str_25489));
-            this.addMessageEvent(new PongMessageParser(this._Str_17172));
+            this.addMessageEvent(new PongEvent(this._Str_17172));
             var k:IEventDispatcher = Component(context).events;
             k.addEventListener(HabboCommunicationEvent.INIT, this.onConnectionEvent);
             k.addEventListener(HabboCommunicationEvent.HABBO_CONNECTION_EVENT_ESTABLISHED, this.onConnectionEvent);
@@ -615,7 +615,7 @@
             this._Str_3754("authentication", "authok");
         }
 
-        private function _Str_17172(k:PongMessageParser):void
+        private function _Str_17172(k:PongEvent):void
         {
             if (this._latencyTracker != null)
             {
