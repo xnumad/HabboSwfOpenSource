@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4085;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
@@ -75,7 +75,7 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_4085(this._Str_10523));
+            k.addMessageEvent(new UsersEvent(this._Str_10523));
             k.addMessageEvent(new _Str_4914(this._Str_16267));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
@@ -125,7 +125,7 @@
         {
             var _local_7:_Str_3548;
             var _local_8:RoomUserData;
-            var _local_2:_Str_4085 = (k as _Str_4085);
+            var _local_2:UsersEvent = (k as UsersEvent);
             if (_local_2 == null)
             {
                 return;

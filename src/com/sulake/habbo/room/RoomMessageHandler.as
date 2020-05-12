@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8204;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7291;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4085;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7817;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
@@ -201,7 +201,7 @@
                 k.addMessageEvent(new _Str_8204(this.onItemRemove));
                 k.addMessageEvent(new _Str_7464(this.onItemUpdate));
                 k.addMessageEvent(new _Str_7291(this.onItemDataUpdate));
-                k.addMessageEvent(new _Str_4085(this._Str_10523));
+                k.addMessageEvent(new UsersEvent(this._Str_10523));
                 k.addMessageEvent(new _Str_7817(this.onUserUpdate));
                 k.addMessageEvent(new _Str_4914(this._Str_16267));
                 k.addMessageEvent(new _Str_3084(this._Str_5174));
@@ -777,7 +777,7 @@
             var _local_6:IVector3d;
             var _local_7:IVector3d;
             var _local_8:int;
-            var _local_2:_Str_4085 = (k as _Str_4085);
+            var _local_2:UsersEvent = (k as UsersEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

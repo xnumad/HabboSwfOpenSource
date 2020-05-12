@@ -37,7 +37,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.iid.IIDHabboSoundManager;
     import com.sulake.iid.IIDHabboFriendList;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4085;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
@@ -429,7 +429,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_4085(this._Str_10523));
+            this.addMessageEvent(new UsersEvent(this._Str_10523));
             this.addMessageEvent(new _Str_3407(this._Str_5963));
             this.addMessageEvent(new _Str_2929(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this._Str_23679));
@@ -712,7 +712,7 @@
         private function _Str_10523(k:IMessageEvent):void
         {
             var _local_4:_Str_3548;
-            var _local_2:UsersMessageParser = _Str_4085(k).getParser();
+            var _local_2:UsersMessageParser = UsersEvent(k).getParser();
             var _local_3:int;
             while (_local_3 < _local_2.getUserCount())
             {

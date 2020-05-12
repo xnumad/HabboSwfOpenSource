@@ -430,7 +430,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4085;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4279;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
@@ -1351,7 +1351,7 @@
             INCOMING_PACKETS[3712] = _Str_7599;
             INCOMING_PACKETS[3728] = HotelClosedAndOpensEvent;
             INCOMING_PACKETS[3738] = NoobnessLevelMessageEvent;
-            INCOMING_PACKETS[374] = _Str_4085;
+            INCOMING_PACKETS[374] = UsersEvent;
             INCOMING_PACKETS[3753] = _Str_8413;
             INCOMING_PACKETS[377] = _Str_8530;
             INCOMING_PACKETS[3770] = _Str_7086;
