@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.clothing.FigureSetIdsMessageParser;
 
-    public class _Str_9041 extends MessageEvent implements IMessageEvent 
+    public class FigureSetIdsEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_9041(k:Function)
+        public function FigureSetIdsEvent(k:Function)
         {
             super(k, FigureSetIdsMessageParser);
         }

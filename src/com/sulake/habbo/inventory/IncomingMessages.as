@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9219;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
-    import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_9041;
+    import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_9129;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
@@ -130,7 +130,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_6742(this._Str_25320, _Str_9219));
             this._com.addHabboConnectionMessageEvent(new _Str_8269(this._Str_24595));
             this._com.addHabboConnectionMessageEvent(new _Str_6821(this._Str_18656));
-            this._com.addHabboConnectionMessageEvent(new _Str_9041(this._Str_25862));
+            this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
             this._com.addHabboConnectionMessageEvent(new _Str_4187(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9129(this._Str_23613));
             this._com.addHabboConnectionMessageEvent(new _Str_5147(this._Str_18002));
@@ -962,7 +962,7 @@
             }
         }
 
-        private function _Str_25862(k:_Str_9041):void
+        private function _Str_25862(k:FigureSetIdsEvent):void
         {
             this._inventory._Str_22773(k.getParser()._Str_23010, k.getParser()._parser9);
         }

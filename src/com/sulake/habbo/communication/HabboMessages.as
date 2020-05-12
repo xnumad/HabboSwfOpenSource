@@ -357,7 +357,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_16135;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_17532;
-	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_9041;
+	import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.*;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_16380;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
@@ -1052,7 +1052,7 @@
             INCOMING_PACKETS[1435] = _Str_9665;
             INCOMING_PACKETS[1437] = _Str_17532;
             INCOMING_PACKETS[1446] = _Str_4642;
-            INCOMING_PACKETS[1450] = _Str_9041;
+            INCOMING_PACKETS[1450] = FigureSetIdsEvent;
             INCOMING_PACKETS[1452] = _Str_5417;
             INCOMING_PACKETS[1453] = _Str_8080;
             INCOMING_PACKETS[1455] = _Str_5006;
