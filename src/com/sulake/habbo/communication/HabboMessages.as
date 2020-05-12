@@ -20,7 +20,7 @@
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
 	import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8305;
-	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8406;
+	import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8469;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8763;
 	import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_9445;
@@ -1275,7 +1275,7 @@
             INCOMING_PACKETS[3035] = JoiningQueueFailedMessageEvent;
             INCOMING_PACKETS[3048] = _Str_8333;
             INCOMING_PACKETS[305] = AchievementsEvent;
-            INCOMING_PACKETS[3052] = _Str_8406;
+            INCOMING_PACKETS[3052] = NavigatorMetaDataEvent;
             INCOMING_PACKETS[3058] = TradingYouAreNotAllowedEvent;
             INCOMING_PACKETS[3082] = _Str_8552;
             INCOMING_PACKETS[3086] = _Str_9129;

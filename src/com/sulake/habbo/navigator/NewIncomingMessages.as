@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5763;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
-    import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_8406;
+    import com.sulake.habbo.communication.messages.incoming.newnavigator.NavigatorMetaDataEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
@@ -144,7 +144,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5763(this._Str_18891)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947)));
-            this._messageListeners.push(k.connection.addMessageEvent(new _Str_8406(this._Str_25034)));
+            this._messageListeners.push(k.connection.addMessageEvent(new NavigatorMetaDataEvent(this._Str_25034)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5767(this._Str_26467)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358)));
@@ -164,7 +164,7 @@
             this._messageListeners = [];
         }
 
-        private function _Str_25034(k:_Str_8406):void
+        private function _Str_25034(k:NavigatorMetaDataEvent):void
         {
             this._navigator.initialize(k.getParser());
         }

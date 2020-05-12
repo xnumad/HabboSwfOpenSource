@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorMetaDataParser;
 
-    public class _Str_8406 extends MessageEvent 
+    public class NavigatorMetaDataEvent extends MessageEvent 
     {
-        public function _Str_8406(k:Function)
+        public function NavigatorMetaDataEvent(k:Function)
         {
             super(k, NavigatorMetaDataParser);
         }
