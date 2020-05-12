@@ -849,7 +849,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8743;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControl;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
@@ -1406,7 +1406,7 @@
             INCOMING_PACKETS[558] = _Str_7777;
             INCOMING_PACKETS[56] = _Str_9591;
             INCOMING_PACKETS[563] = _Str_6232;
-            INCOMING_PACKETS[566] = _Str_8743;
+            INCOMING_PACKETS[566] = FloodControl;
             INCOMING_PACKETS[596] = _Str_7433;
             INCOMING_PACKETS[600] = _Str_17595;
             INCOMING_PACKETS[607] = _Str_8088;
