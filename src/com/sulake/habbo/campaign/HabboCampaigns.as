@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
     import com.sulake.habbo.communication.messages.parser.campaign._Str_7028;
     import com.sulake.habbo.communication.messages.parser.campaign._Str_7637;
-    import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12472;
+    import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer1;
     import com.sulake.habbo.communication.messages.outgoing.campaign._Str_12173;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.room.ImageResult;
@@ -97,7 +97,7 @@
         public function _Str_23249(k:int):void
         {
             this._dayAttempted = k;
-            this._communicationManager.connection.send(new _Str_12472(this._calendarData._Str_11123, k));
+            this._communicationManager.connection.send(new OpenCampaignCalendarDoorComposer1(this._calendarData._Str_11123, k));
         }
 
         public function _Str_22750(k:int):void
