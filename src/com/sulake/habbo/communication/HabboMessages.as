@@ -967,8 +967,8 @@
 	import com.sulake.habbo.communication.messages.incoming.campaign.*;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9003;
 	import com.sulake.habbo.communication.messages.incoming.campaign._Str_9045;
-	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer2;
-	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer1;
+	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorComposer;
+	import com.sulake.habbo.communication.messages.outgoing.campaign.OpenCampaignCalendarDoorAsStaffComposer;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftableProductsEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipeEvent;
 	import com.sulake.habbo.communication.messages.incoming.crafting.CraftingRecipesAvailableEvent;
@@ -1675,7 +1675,7 @@
             OUTGOING_PACKETS[2235] = _Str_10078;
             OUTGOING_PACKETS[2248] = _Str_11777;
             OUTGOING_PACKETS[2249] = _Str_7285;
-            OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorComposer1;
+            OUTGOING_PACKETS[2257] = OpenCampaignCalendarDoorAsStaffComposer;
             OUTGOING_PACKETS[2264] = _Str_12153;
             OUTGOING_PACKETS[2266] = _Str_9956;
             OUTGOING_PACKETS[2267] = _Str_12287;
@@ -1908,7 +1908,7 @@
             OUTGOING_PACKETS[3863] = _Str_11093;
             OUTGOING_PACKETS[3872] = _Str_11277;
             OUTGOING_PACKETS[3878] = _Str_10288;
-            OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer2;
+            OUTGOING_PACKETS[3889] = OpenCampaignCalendarDoorComposer;
             OUTGOING_PACKETS[389] = _Str_12437;
             OUTGOING_PACKETS[3898] = _Str_10528;
             OUTGOING_PACKETS[3899] = _Str_11187;

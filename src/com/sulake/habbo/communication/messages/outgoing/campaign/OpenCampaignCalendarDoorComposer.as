@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class OpenCampaignCalendarDoorComposer2 implements IMessageComposer, IDisposable 
+    public class OpenCampaignCalendarDoorComposer implements IMessageComposer, IDisposable 
     {
         private var _array:Array;
 
-        public function OpenCampaignCalendarDoorComposer2(k:String, _arg_2:int)
+        public function OpenCampaignCalendarDoorComposer(k:String, _arg_2:int)
         {
             this._array = new Array();
             super();
