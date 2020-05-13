@@ -142,7 +142,7 @@
                     }
                     else
                     {
-                        this._controller._Str_23249(this._selectedIndex);
+                        this._controller.OpenCampaignCalendarDoor1(this._selectedIndex);
                     }
                     return;
                 case "btn_back":
