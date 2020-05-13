@@ -152,7 +152,7 @@
                     this._Str_10170((this._selectedIndex + 1));
                     return;
                 case "btn_force_open":
-                    this._controller._Str_22750(this._selectedIndex);
+                    this._controller.OpenCampaignCalendarDoor2(this._selectedIndex);
                     return;
                 case "header_button_close":
                     this.hide();

@@ -100,7 +100,7 @@
             this._communicationManager.connection.send(new OpenCampaignCalendarDoorComposer1(this._calendarData._Str_11123, k));
         }
 
-        public function _Str_22750(k:int):void
+        public function OpenCampaignCalendarDoor2(k:int):void
         {
             this._dayAttempted = k;
             this._communicationManager.connection.send(new OpenCampaignCalendarDoorComposer2(this._calendarData._Str_11123, k));
