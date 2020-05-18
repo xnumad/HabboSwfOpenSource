@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_470
+﻿package com.sulake.habbo.communication.messages.incoming.preferences
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;

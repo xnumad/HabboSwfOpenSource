@@ -23,7 +23,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.iid.IIDHabboHelp;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
-    import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;

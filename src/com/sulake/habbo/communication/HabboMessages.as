@@ -354,7 +354,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9507;
-	import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
+	import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_16135;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_17532;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;

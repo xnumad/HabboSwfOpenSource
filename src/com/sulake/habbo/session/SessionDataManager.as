@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
-    import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
     import com.sulake.habbo.communication.enum.NoobnessLevelEnum;

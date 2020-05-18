@@ -23,7 +23,7 @@
     import com.sulake.core.runtime.IID;
     import com.sulake.core.runtime.IUnknown;
     import com.sulake.habbo.sound.music.HabboMusicController;
-    import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
     import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11698;

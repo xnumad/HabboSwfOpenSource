@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_470._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
     import flash.geom.Point;
     import com.sulake.habbo.freeflowchat.viewer.visualization.PooledChatBubble;
     import com.sulake.habbo.freeflowchat.data.ChatItem;
