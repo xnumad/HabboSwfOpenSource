@@ -18,7 +18,7 @@
 
         public function _Str_24368(k:int):Array
         {
-            var _local_3:IConnection;
+            var connection:IConnection;
             var _local_2:Array = (this._Str_17483.getValue(k) as Array);
             if (_local_2 != null)
             {
@@ -26,10 +26,10 @@
             }
             if (this._sessionDataManager.communication)
             {
-                _local_3 = this._sessionDataManager.communication.connection;
-                if (_local_3)
+                connection = this._sessionDataManager.communication.connection;
+                if (connection)
                 {
-                    _local_3.send(new _Str_12283(k));
+                    connection.send(new _Str_12283(k));
                 }
             }
             return null;
