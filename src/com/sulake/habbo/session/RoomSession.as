@@ -420,7 +420,7 @@
             this._connection.send(new _Str_11568(k, _arg_2, this.roomId));
         }
 
-        public function _Str_5984(k:int, _arg_2:int):void
+        public function muteUser(k:int, _arg_2:int):void
         {
             this._connection.send(new _Str_11259(k, _arg_2, this.roomId));
         }

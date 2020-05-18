@@ -397,13 +397,13 @@
                     this._container.roomSession._Str_20746(_local_3.id, k.type);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_2MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 2);
+                    this._container.roomSession.muteUser(_local_3.id, 2);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_5MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 5);
+                    this._container.roomSession.muteUser(_local_3.id, 5);
                     break;
                 case RoomWidgetUserActionMessage.MUTE_USER_10MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 10);
+                    this._container.roomSession.muteUser(_local_3.id, 10);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_RIGHTS:
                     this._container.roomSession._Str_20139(_local_3.id);
@@ -577,16 +577,16 @@
                     this._container.roomSession.kickUser(_local_3.id);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_2MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 2);
+                    this._container.roomSession.muteUser(_local_3.id, 2);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_10MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 10);
+                    this._container.roomSession.muteUser(_local_3.id, 10);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_60MIN:
-                    this._container.roomSession._Str_5984(_local_3.id, 60);
+                    this._container.roomSession.muteUser(_local_3.id, 60);
                     break;
                 case RoomWidgetUserActionMessage.AMBASSADOR_MUTE_USER_18HOUR:
-                    this._container.roomSession._Str_5984(_local_3.id, 1080);
+                    this._container.roomSession.muteUser(_local_3.id, 1080);
                     break;
                 case RoomWidgetUserActionMessage.GROUP_WHISPER:
                     _local_8 = new _Str_4831(_Str_4831.WHISPER, "groupe");

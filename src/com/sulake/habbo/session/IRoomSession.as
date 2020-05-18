@@ -35,7 +35,7 @@
         function sendAmbassadorAlert(_arg_1:int):void;
         function kickUser(_arg_1:int):void;
         function _Str_20746(_arg_1:int, _arg_2:String):void;
-        function _Str_5984(_arg_1:int, _arg_2:int):void;
+        function muteUser(_arg_1:int, _arg_2:int):void;
         function _Str_20139(_arg_1:int):void;
         function _Str_21257(_arg_1:int):void;
         function _Str_20488(_arg_1:String, _arg_2:Boolean):void;

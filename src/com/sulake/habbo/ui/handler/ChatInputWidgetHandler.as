@@ -268,7 +268,7 @@
                                             userToMute = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (userToMute)
                                             {
-                                                this._container.roomSession._Str_5984(userToMute.id, 2);
+                                                this._container.roomSession.muteUser(userToMute.id, 2);
                                             }
                                         }
                                         return null;
