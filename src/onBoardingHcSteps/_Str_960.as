@@ -16,7 +16,7 @@
 
         private var _backgroundImage:BitmapData;
         private var _disposed:Boolean;
-        private var _Str_2111:Sprite;
+        private var _lines:Sprite;
 
         public function _Str_960()
         {
@@ -44,10 +44,10 @@
 
         protected function onAddedToStage(k:Event):void
         {
-            this._Str_2111 = new Sprite();
+            this._lines = new Sprite();
             var _local_2:Bitmap = new _Str_1382();
             this._backgroundImage = _local_2.bitmapData;
-            addChild(this._Str_2111);
+            addChild(this._lines);
             this.resize();
         }
 
@@ -77,12 +77,12 @@
                 _local_6 = SpreadMethod.PAD;
                 graphics.beginGradientFill(k, _local_2, _local_3, _local_4, _local_5, _local_6);
                 graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
-                if (this._Str_2111 != null)
+                if (this._lines != null)
                 {
-                    this._Str_2111.graphics.clear();
-                    this._Str_2111.graphics.beginBitmapFill(this._backgroundImage);
-                    this._Str_2111.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
-                    this._Str_2111.graphics.endFill();
+                    this._lines.graphics.clear();
+                    this._lines.graphics.beginBitmapFill(this._backgroundImage);
+                    this._lines.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
+                    this._lines.graphics.endFill();
                 }
             }
         }
