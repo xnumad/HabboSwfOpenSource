@@ -5,14 +5,14 @@
 
     public class PhoneCollectionStateParser implements IMessageParser 
     {
-        private var _Str_18491:int;
+        private var _phoneStatusCode:int;
         private var _Str_19995:int;
         private var _millisecondsToAllowProcessReset:int;
 
 
         public function get _Str_24357():int
         {
-            return this._Str_18491;
+            return this._phoneStatusCode;
         }
 
         public function get _Str_24164():int
@@ -27,14 +27,14 @@
 
         public function flush():Boolean
         {
-            this._Str_18491 = -1;
+            this._phoneStatusCode = -1;
             this._millisecondsToAllowProcessReset = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_18491 = k.readInteger();
+            this._phoneStatusCode = k.readInteger();
             this._Str_19995 = k.readInteger();
             this._millisecondsToAllowProcessReset = k.readInteger();
             return true;
