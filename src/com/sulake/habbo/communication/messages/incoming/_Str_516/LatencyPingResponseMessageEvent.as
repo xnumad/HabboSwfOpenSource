@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_524.PongMessageParser;
+    import com.sulake.habbo.communication.messages.parser._Str_524.LatencyPingResponseMessageParser;
 
     public class LatencyPingResponseMessageEvent extends MessageEvent implements IMessageEvent 
     {
         public function LatencyPingResponseMessageEvent(k:Function)
         {
-            super(k, PongMessageParser);
+            super(k, LatencyPingResponseMessageParser);
         }
 
-        public function getParser():PongMessageParser
+        public function getParser():LatencyPingResponseMessageParser
         {
-            return _parser as PongMessageParser;
+            return _parser as LatencyPingResponseMessageParser;
         }
     }
 }

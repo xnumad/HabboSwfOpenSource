@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class PongMessageParser implements IMessageParser 
+    public class LatencyPingResponseMessageParser implements IMessageParser 
     {
         private var _Str_2914:int;
 
