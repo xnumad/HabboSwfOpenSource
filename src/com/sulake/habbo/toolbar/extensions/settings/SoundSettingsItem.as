@@ -7,7 +7,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
 
-    public class _Str_4019 implements IDisposable 
+    public class SoundSettingsItem implements IDisposable 
     {
         public static const _Str_4200:int = 0;
         public static const _Str_4322:int = 1;
@@ -19,7 +19,7 @@
         private var _slider:MeMenuSoundSettingsSlider;
         private var _meMenuSoundSettingsView:_Str_6491;
 
-        public function _Str_4019(k:_Str_6491, _arg_2:int, _arg_3:IWindowContainer):void
+        public function SoundSettingsItem(k:_Str_6491, _arg_2:int, _arg_3:IWindowContainer):void
         {
             var _local_4:IWindow;
             super();

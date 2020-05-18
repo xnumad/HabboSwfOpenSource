@@ -10,9 +10,9 @@
     public class _Str_6491 
     {
         private var _window:IWindowContainer;
-        private var _Str_3499:_Str_4019;
-        private var _Str_3471:_Str_4019;
-        private var _Str_3474:_Str_4019;
+        private var _Str_3499:SoundSettingsItem;
+        private var _Str_3471:SoundSettingsItem;
+        private var _Str_3474:SoundSettingsItem;
         private var _Str_4165:BitmapData;
         private var _Str_4181:BitmapData;
         private var _Str_4163:BitmapData;
@@ -109,9 +109,9 @@
                 _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
                 _local_3++;
             }
-            this._Str_3499 = new _Str_4019(this, _Str_4019._Str_4200, this._Str_10739);
-            this._Str_3471 = new _Str_4019(this, _Str_4019._Str_4322, this._Str_12386);
-            this._Str_3474 = new _Str_4019(this, _Str_4019._Str_4191, this._Str_12408);
+            this._Str_3499 = new SoundSettingsItem(this, SoundSettingsItem._Str_4200, this._Str_10739);
+            this._Str_3471 = new SoundSettingsItem(this, SoundSettingsItem._Str_4322, this._Str_12386);
+            this._Str_3474 = new SoundSettingsItem(this, SoundSettingsItem._Str_4191, this._Str_12408);
             this._Str_7269();
         }
 
