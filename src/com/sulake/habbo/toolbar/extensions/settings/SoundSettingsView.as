@@ -10,66 +10,66 @@
     public class SoundSettingsView 
     {
         private var _window:IWindowContainer;
-        private var _Str_3499:SoundSettingsItem;
-        private var _Str_3471:SoundSettingsItem;
-        private var _Str_3474:SoundSettingsItem;
-        private var _Str_4165:BitmapData;
-        private var _Str_4181:BitmapData;
-        private var _Str_4163:BitmapData;
-        private var _Str_4116:BitmapData;
-        private var _Str_3050:Number = 1;
-        private var _Str_2909:Number = 1;
-        private var _Str_2933:Number = 1;
-        private var _habboToolbar:HabboToolbar;
+        private var _uiSoundsSettings:SoundSettingsItem;
+        private var _furniSoundsSettings:SoundSettingsItem;
+        private var _traxSoundsSettings:SoundSettingsItem;
+        private var _soundsOffIconColor:BitmapData;
+        private var _soundsOffIconWhite:BitmapData;
+        private var _soundsOnIconColor:BitmapData;
+        private var _soundsOnIconWhite:BitmapData;
+        private var _genericVolume:Number = 1;
+        private var _furniVolume:Number = 1;
+        private var _traxVolume:Number = 1;
+        private var _toolbar:HabboToolbar;
 
         public function SoundSettingsView(k:HabboToolbar)
         {
-            this._habboToolbar = k;
+            this._toolbar = k;
             this.createWindow();
         }
 
         public function dispose():void
         {
-            this.saveVolume(this._Str_3050, this._Str_2909, this._Str_2933);
+            this.saveVolume(this._genericVolume, this._furniVolume, this._traxVolume);
             if (this._window != null)
             {
                 this._window.dispose();
             }
             this._window = null;
-            if (this._Str_3499 != null)
+            if (this._uiSoundsSettings != null)
             {
-                this._Str_3499.dispose();
+                this._uiSoundsSettings.dispose();
             }
-            this._Str_3499 = null;
-            if (this._Str_3471 != null)
+            this._uiSoundsSettings = null;
+            if (this._furniSoundsSettings != null)
             {
-                this._Str_3471.dispose();
+                this._furniSoundsSettings.dispose();
             }
-            this._Str_3471 = null;
-            if (this._Str_3474 != null)
+            this._furniSoundsSettings = null;
+            if (this._traxSoundsSettings != null)
             {
-                this._Str_3474.dispose();
+                this._traxSoundsSettings.dispose();
             }
-            this._Str_3474 = null;
-            if (this._Str_4165)
+            this._traxSoundsSettings = null;
+            if (this._soundsOffIconColor)
             {
-                this._Str_4165.dispose();
-                this._Str_4165 = null;
+                this._soundsOffIconColor.dispose();
+                this._soundsOffIconColor = null;
             }
-            if (this._Str_4181)
+            if (this._soundsOffIconWhite)
             {
-                this._Str_4181.dispose();
-                this._Str_4181 = null;
+                this._soundsOffIconWhite.dispose();
+                this._soundsOffIconWhite = null;
             }
-            if (this._Str_4163)
+            if (this._soundsOnIconColor)
             {
-                this._Str_4163.dispose();
-                this._Str_4163 = null;
+                this._soundsOnIconColor.dispose();
+                this._soundsOnIconColor = null;
             }
-            if (this._Str_4116)
+            if (this._soundsOnIconWhite)
             {
-                this._Str_4116.dispose();
-                this._Str_4116 = null;
+                this._soundsOnIconWhite.dispose();
+                this._soundsOnIconWhite = null;
             }
         }
 
@@ -80,28 +80,28 @@
 
         public function _Str_7269():void
         {
-            this._Str_3050 = this._habboToolbar._Str_2476._Str_3960;
-            this._Str_2909 = this._habboToolbar._Str_2476.furniVolume;
-            this._Str_2933 = this._habboToolbar._Str_2476.traxVolume;
-            if (this._Str_3499 != null)
+            this._genericVolume = this._toolbar._Str_2476._Str_3960;
+            this._furniVolume = this._toolbar._Str_2476.furniVolume;
+            this._traxVolume = this._toolbar._Str_2476.traxVolume;
+            if (this._uiSoundsSettings != null)
             {
-                this._Str_3499.setValue(this._Str_3050);
+                this._uiSoundsSettings.setValue(this._genericVolume);
             }
-            if (this._Str_3471 != null)
+            if (this._furniSoundsSettings != null)
             {
-                this._Str_3471.setValue(this._Str_2909);
+                this._furniSoundsSettings.setValue(this._furniVolume);
             }
-            if (this._Str_3474 != null)
+            if (this._traxSoundsSettings != null)
             {
-                this._Str_3474.setValue(this._Str_2933);
+                this._traxSoundsSettings.setValue(this._traxVolume);
             }
         }
 
         private function createWindow():void
         {
             var _local_2:IWindow;
-            var k:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_sound_settings_xml") as XmlAsset);
-            this._window = (this._habboToolbar.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
+            var k:XmlAsset = (this._toolbar.assets.getAssetByName("me_menu_sound_settings_xml") as XmlAsset);
+            this._window = (this._toolbar.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
             var _local_3:int;
             while (_local_3 < this._window.numChildren)
             {
@@ -109,9 +109,9 @@
                 _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_3++;
             }
-            this._Str_3499 = new SoundSettingsItem(this, SoundSettingsItem._Str_4200, this._Str_10739);
-            this._Str_3471 = new SoundSettingsItem(this, SoundSettingsItem._Str_4322, this._Str_12386);
-            this._Str_3474 = new SoundSettingsItem(this, SoundSettingsItem._Str_4191, this._Str_12408);
+            this._uiSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4200, this._Str_10739);
+            this._furniSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4322, this._Str_12386);
+            this._traxSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4191, this._Str_12408);
             this._Str_7269();
         }
 
@@ -132,22 +132,22 @@
 
         public function saveVolume(k:Number, _arg_2:Number, _arg_3:Number, _arg_4:Boolean=true):void
         {
-            var _local_5:Number = ((_arg_2 != -1) ? _arg_2 : this._Str_2909);
-            var _local_6:Number = ((k != -1) ? k : this._Str_3050);
-            var _local_7:Number = ((_arg_3 != -1) ? _arg_3 : this._Str_2933);
+            var _local_5:Number = ((_arg_2 != -1) ? _arg_2 : this._furniVolume);
+            var _local_6:Number = ((k != -1) ? k : this._genericVolume);
+            var _local_7:Number = ((_arg_3 != -1) ? _arg_3 : this._traxVolume);
             if (_arg_4)
             {
-                if (this._habboToolbar == null)
+                if (this._toolbar == null)
                 {
                     return;
                 }
-                this._habboToolbar._Str_2476.furniVolume = _local_5;
-                this._habboToolbar._Str_2476._Str_3960 = _local_6;
-                this._habboToolbar._Str_2476.traxVolume = _local_7;
+                this._toolbar._Str_2476.furniVolume = _local_5;
+                this._toolbar._Str_2476._Str_3960 = _local_6;
+                this._toolbar._Str_2476.traxVolume = _local_7;
             }
             else
             {
-                this._habboToolbar._Str_2476._Str_15711(_local_6, _local_5, _local_7);
+                this._toolbar._Str_2476._Str_15711(_local_6, _local_5, _local_7);
             }
         }
 
@@ -172,27 +172,27 @@
 
         public function get _Str_14098():BitmapData
         {
-            return this._Str_4165;
+            return this._soundsOffIconColor;
         }
 
         public function get _Str_14044():BitmapData
         {
-            return this._Str_4181;
+            return this._soundsOffIconWhite;
         }
 
         public function get _Str_13595():BitmapData
         {
-            return this._Str_4163;
+            return this._soundsOnIconColor;
         }
 
         public function get _Str_15177():BitmapData
         {
-            return this._Str_4116;
+            return this._soundsOnIconWhite;
         }
 
         public function get toolbar():HabboToolbar
         {
-            return this._habboToolbar;
+            return this._toolbar;
         }
     }
 }
