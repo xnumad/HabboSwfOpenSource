@@ -27,12 +27,12 @@
             this._traxVolume = k;
         }
 
-        public function get _Str_3488():Number
+        public function get furniVolume():Number
         {
             return this._furniVolume;
         }
 
-        public function set _Str_3488(k:Number):void
+        public function set furniVolume(k:Number):void
         {
             this._furniVolume = k;
         }

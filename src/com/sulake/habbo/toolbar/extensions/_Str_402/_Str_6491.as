@@ -81,7 +81,7 @@
         public function _Str_7269():void
         {
             this._Str_3050 = this._habboToolbar._Str_2476._Str_3960;
-            this._Str_2909 = this._habboToolbar._Str_2476._Str_3488;
+            this._Str_2909 = this._habboToolbar._Str_2476.furniVolume;
             this._Str_2933 = this._habboToolbar._Str_2476.traxVolume;
             if (this._Str_3499 != null)
             {
@@ -141,7 +141,7 @@
                 {
                     return;
                 }
-                this._habboToolbar._Str_2476._Str_3488 = _local_5;
+                this._habboToolbar._Str_2476.furniVolume = _local_5;
                 this._habboToolbar._Str_2476._Str_3960 = _local_6;
                 this._habboToolbar._Str_2476.traxVolume = _local_7;
             }

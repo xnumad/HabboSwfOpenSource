@@ -91,12 +91,12 @@
             this._Str_16207();
         }
 
-        public function get _Str_3488():Number
+        public function get furniVolume():Number
         {
             return this._furniVolume;
         }
 
-        public function set _Str_3488(k:Number):void
+        public function set furniVolume(k:Number):void
         {
             this._Str_9171(this._genericVolume, k, this._traxVolume);
             this._Str_16207();

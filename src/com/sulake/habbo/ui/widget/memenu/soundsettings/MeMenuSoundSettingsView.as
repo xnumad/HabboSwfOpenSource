@@ -88,7 +88,7 @@
         public function _Str_7269(k:_Str_3963):void
         {
             this._genericVolume = k._Str_16610;
-            this._furniVolume = k._Str_3488;
+            this._furniVolume = k.furniVolume;
             this._traxVolume = k.traxVolume;
             if (this._uiSoundsSettings != null)
             {
@@ -177,7 +177,7 @@
                 _local_5 = new RoomWidgetStoreSettingsMessage(RoomWidgetStoreSettingsMessage.RWSSM_PREVIEW_SOUND);
             }
             _local_5._Str_3960 = ((k != -1) ? k : this._genericVolume);
-            _local_5._Str_3488 = ((_arg_2 != -1) ? _arg_2 : this._furniVolume);
+            _local_5.furniVolume = ((_arg_2 != -1) ? _arg_2 : this._furniVolume);
             _local_5.traxVolume = ((_arg_3 != -1) ? _arg_3 : this._traxVolume);
             this._widget.messageListener.processWidgetMessage(_local_5);
         }

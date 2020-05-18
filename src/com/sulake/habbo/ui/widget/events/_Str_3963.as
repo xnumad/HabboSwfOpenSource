@@ -21,7 +21,7 @@
             return this._Str_9898;
         }
 
-        public function get _Str_3488():Number
+        public function get furniVolume():Number
         {
             return this._Str_2909;
         }
