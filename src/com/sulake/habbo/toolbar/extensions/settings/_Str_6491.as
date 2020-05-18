@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.toolbar.extensions._Str_402
+﻿package com.sulake.habbo.toolbar.extensions.settings
 {
     import com.sulake.core.window.IWindowContainer;
     import flash.display.BitmapData;
