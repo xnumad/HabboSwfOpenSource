@@ -14,7 +14,7 @@
     {
         private static const _Str_1382:Class = _Str_960__Str_1382;
 
-        private var _Str_1416:BitmapData;
+        private var _backgroundImage:BitmapData;
         private var _disposed:Boolean;
         private var _Str_2111:Sprite;
 
@@ -46,7 +46,7 @@
         {
             this._Str_2111 = new Sprite();
             var _local_2:Bitmap = new _Str_1382();
-            this._Str_1416 = _local_2.bitmapData;
+            this._backgroundImage = _local_2.bitmapData;
             addChild(this._Str_2111);
             this.resize();
         }
@@ -80,7 +80,7 @@
                 if (this._Str_2111 != null)
                 {
                     this._Str_2111.graphics.clear();
-                    this._Str_2111.graphics.beginBitmapFill(this._Str_1416);
+                    this._Str_2111.graphics.beginBitmapFill(this._backgroundImage);
                     this._Str_2111.graphics.drawRect(0, 0, stage.stageWidth, stage.stageHeight);
                     this._Str_2111.graphics.endFill();
                 }

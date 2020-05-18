@@ -17,7 +17,7 @@
         protected var _Str_803:String = null;
         protected var _Str_20337:String = null;
         protected var _Str_18917:* = null;
-        protected var _Str_1416:String = null;
+        protected var _backgroundImage:String = null;
         protected var _Str_17542:String = null;
         protected var _backgroundColor:String = null;
         protected var _Str_20596:String = null;
@@ -294,17 +294,17 @@
 
         public function set backgroundImage(k:String):void
         {
-            this._Str_1416 = k;
+            this._backgroundImage = k;
         }
 
         public function get backgroundImage():String
         {
-            return this._Str_1416;
+            return this._backgroundImage;
         }
 
         public function _Str_26209():Boolean
         {
-            return !(this._Str_1416 == null);
+            return !(this._backgroundImage == null);
         }
 
         public function set backgroundColor(k:String):void
