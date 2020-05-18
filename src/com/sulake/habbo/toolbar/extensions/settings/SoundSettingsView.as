@@ -109,9 +109,9 @@
                 _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_3++;
             }
-            this._uiSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4200, this._Str_10739);
-            this._furniSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4322, this._Str_12386);
-            this._traxSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4191, this._Str_12408);
+            this._uiSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4200, this.uiVolumeContainer);
+            this._furniSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4322, this.furniVolumeContainer);
+            this._traxSoundsSettings = new SoundSettingsItem(this, SoundSettingsItem._Str_4191, this.traxVolumeContainer);
             this._Str_7269();
         }
 
@@ -151,41 +151,41 @@
             }
         }
 
-        public function _Str_6111(k:String, _arg_2:int):void
+        public function updateUnseenItemCount(k:String, _arg_2:int):void
         {
         }
 
-        public function get _Str_10739():IWindowContainer
+        public function get uiVolumeContainer():IWindowContainer
         {
             return this._window.findChildByName("ui_volume_container") as IWindowContainer;
         }
 
-        public function get _Str_12386():IWindowContainer
+        public function get furniVolumeContainer():IWindowContainer
         {
             return this._window.findChildByName("furni_volume_container") as IWindowContainer;
         }
 
-        public function get _Str_12408():IWindowContainer
+        public function get traxVolumeContainer():IWindowContainer
         {
             return this._window.findChildByName("trax_volume_container") as IWindowContainer;
         }
 
-        public function get _Str_14098():BitmapData
+        public function get soundsOffIconColor():BitmapData
         {
             return this._soundsOffIconColor;
         }
 
-        public function get _Str_14044():BitmapData
+        public function get soundsOffIconWhite():BitmapData
         {
             return this._soundsOffIconWhite;
         }
 
-        public function get _Str_13595():BitmapData
+        public function get soundsOnIconColor():BitmapData
         {
             return this._soundsOnIconColor;
         }
 
-        public function get _Str_15177():BitmapData
+        public function get soundsOnIconWhite():BitmapData
         {
             return this._soundsOnIconWhite;
         }
