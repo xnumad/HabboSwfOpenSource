@@ -68,8 +68,8 @@
             }
             this._Str_2271 = (this._Str_13142("welcome_gift_widget") as IWindowContainer);
             this._Str_2271.center();
-            this._Str_3209("image_bg", "yellow_highlight");
-            this._Str_3209("gift_image", "giftbox_full");
+            this.setBitmap("image_bg", "yellow_highlight");
+            this.setBitmap("gift_image", "giftbox_full");
             if (this._Str_4340)
             {
                 this._Str_6469(this._Str_13122);
@@ -123,21 +123,21 @@
             {
                 case this._Str_10705:
                     this._Str_8459(this._Str_2271.findChildByName("edit"), this._Str_23358);
-                    this._Str_3209("email_icon", "email_icon");
+                    this.setBitmap("email_icon", "email_icon");
                     this._Str_4180("title", "${welcome.gift.title.email.unverified}");
                     this._Str_4180("text", "${welcome.gift.text.email.unverified}");
                     this._Str_2271.findChildByName("edit_text").visible = this._Str_5694;
                     this._Str_2271.findChildByName("edit").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, this._Str_5694);
                     break;
                 case this._Str_13122:
-                    this._Str_3209("email_icon", "ok_icon");
+                    this.setBitmap("email_icon", "ok_icon");
                     this._Str_4180("title", "${welcome.gift.title.email.verified}");
                     this._Str_4180("text", "${welcome.gift.text.email.verified}");
                     break;
                 case this._Str_16369:
                     this._Str_8459(this._Str_2271.findChildByName("cancel_email_change"), this._Str_23425);
                     this._Str_8459(this._Str_2271.findChildByName("save_email"), this._Str_23235);
-                    this._Str_3209("email_icon", "email_icon");
+                    this.setBitmap("email_icon", "email_icon");
                     this._Str_19208("save_email", this._Str_5694);
                     _local_6 = (this._Str_2271.findChildByName("email_input") as ITextFieldWindow);
                     _local_6.caption = this._Str_4540;
@@ -180,7 +180,7 @@
             }
         }
 
-        private function _Str_3209(k:String, _arg_2:String):void
+        private function setBitmap(k:String, _arg_2:String):void
         {
             var _local_3:IBitmapWrapperWindow = (this._Str_2271.findChildByName(k) as IBitmapWrapperWindow);
             var _local_4:BitmapDataAsset = (_assets.getAssetByName(_arg_2) as BitmapDataAsset);

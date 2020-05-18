@@ -1939,18 +1939,18 @@
             {
                 return null;
             }
-            this._Str_3209(_local_2.findChildByName("top_left"), "spec_top_left_png");
-            this._Str_3209(_local_2.findChildByName("top_middle"), "spec_top_middle_png");
-            this._Str_3209(_local_2.findChildByName("top_right"), "spec_top_right_png");
-            this._Str_3209(_local_2.findChildByName("middle_left"), "spec_middle_left_png");
-            this._Str_3209(_local_2.findChildByName("middle_right"), "spec_middle_right_png");
-            this._Str_3209(_local_2.findChildByName("bottom_left"), "spec_bottom_left_png");
-            this._Str_3209(_local_2.findChildByName("bottom_middle"), "spec_bottom_middle_png");
-            this._Str_3209(_local_2.findChildByName("bottom_right"), "spec_bottom_right_png");
+            this.setBitmap(_local_2.findChildByName("top_left"), "spec_top_left_png");
+            this.setBitmap(_local_2.findChildByName("top_middle"), "spec_top_middle_png");
+            this.setBitmap(_local_2.findChildByName("top_right"), "spec_top_right_png");
+            this.setBitmap(_local_2.findChildByName("middle_left"), "spec_middle_left_png");
+            this.setBitmap(_local_2.findChildByName("middle_right"), "spec_middle_right_png");
+            this.setBitmap(_local_2.findChildByName("bottom_left"), "spec_bottom_left_png");
+            this.setBitmap(_local_2.findChildByName("bottom_middle"), "spec_bottom_middle_png");
+            this.setBitmap(_local_2.findChildByName("bottom_right"), "spec_bottom_right_png");
             return _local_2;
         }
 
-        private function _Str_3209(k:IWindow, _arg_2:String):void
+        private function setBitmap(k:IWindow, _arg_2:String):void
         {
             var _local_3:IBitmapWrapperWindow = (k as IBitmapWrapperWindow);
             if (((_local_3 == null) || (this._assets == null)))

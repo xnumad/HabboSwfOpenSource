@@ -84,13 +84,13 @@
         {
             if (this._volume == 0)
             {
-                this._Str_3209("sounds_on_icon", "sounds_on_white");
-                this._Str_3209("sounds_off_icon", "sounds_off_color");
+                this.setBitmap("sounds_on_icon", "sounds_on_white");
+                this.setBitmap("sounds_off_icon", "sounds_off_color");
             }
             else
             {
-                this._Str_3209("sounds_on_icon", "sounds_on_color");
-                this._Str_3209("sounds_off_icon", "sounds_off_white");
+                this.setBitmap("sounds_on_icon", "sounds_on_color");
+                this.setBitmap("sounds_off_icon", "sounds_off_white");
             }
         }
 
@@ -111,7 +111,7 @@
             }
         }
 
-        private function _Str_3209(k:String, _arg_2:String):void
+        private function setBitmap(k:String, _arg_2:String):void
         {
             IStaticBitmapWrapperWindow(this._window.findChildByName(k)).assetUri = ("toolbar_memenu_settings_" + _arg_2);
         }
