@@ -85,15 +85,15 @@
             this._Str_2933 = this._habboToolbar._Str_2476.traxVolume;
             if (this._Str_3499 != null)
             {
-                this._Str_3499._Str_2526(this._Str_3050);
+                this._Str_3499.setValue(this._Str_3050);
             }
             if (this._Str_3471 != null)
             {
-                this._Str_3471._Str_2526(this._Str_2909);
+                this._Str_3471.setValue(this._Str_2909);
             }
             if (this._Str_3474 != null)
             {
-                this._Str_3474._Str_2526(this._Str_2933);
+                this._Str_3474.setValue(this._Str_2933);
             }
         }
 

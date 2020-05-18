@@ -33,7 +33,7 @@
             _local_5 = BitmapDataAsset(k.assets.getAssetByName("dimmer_slider_button"));
             this._Str_2751 = BitmapData(_local_5.content);
             this._Str_4995();
-            this._Str_2526(_arg_4);
+            this.setValue(_arg_4);
         }
 
         public function dispose():void
@@ -44,7 +44,7 @@
             this._Str_2751 = null;
         }
 
-        public function _Str_2526(k:int):void
+        public function setValue(k:int):void
         {
             if (this._Str_2571 == null)
             {

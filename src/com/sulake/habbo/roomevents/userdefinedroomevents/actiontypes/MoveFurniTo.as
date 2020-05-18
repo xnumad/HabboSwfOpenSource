@@ -37,7 +37,7 @@
         {
             this._roomEvents = _arg_2;
             this._slider = new SliderWindowController(_arg_2, this._Str_2453(k), _arg_2.assets, 1, 5, 1);
-            this._slider._Str_2526(1);
+            this._slider.setValue(1);
             this._slider.addEventListener(Event.CHANGE, this.onSliderChange);
             _arg_2.refreshButton(k, "move_0", true, null, 0);
             _arg_2.refreshButton(k, "move_2", true, null, 0);
@@ -49,7 +49,7 @@
         {
             var _local_3:int = _arg_2.intData[0];
             this._Str_19308(k).setSelected(this._Str_24416(k, _local_3));
-            this._slider._Str_2526(_arg_2.intData[1]);
+            this._slider.setValue(_arg_2.intData[1]);
         }
 
         override public function get hasSpecialInputs():Boolean

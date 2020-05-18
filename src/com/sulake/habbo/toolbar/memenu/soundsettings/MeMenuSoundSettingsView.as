@@ -92,15 +92,15 @@
             this._traxVolume = this._widget.widget.toolbar._Str_2476.traxVolume;
             if (this._uiSoundsSettings != null)
             {
-                this._uiSoundsSettings._Str_2526(this._genericVolume);
+                this._uiSoundsSettings.setValue(this._genericVolume);
             }
             if (this._furniSoundsSettings != null)
             {
-                this._furniSoundsSettings._Str_2526(this._furniVolume);
+                this._furniSoundsSettings.setValue(this._furniVolume);
             }
             if (this._traxSoundsSettings != null)
             {
-                this._traxSoundsSettings._Str_2526(this._traxVolume);
+                this._traxSoundsSettings.setValue(this._traxVolume);
             }
         }
 

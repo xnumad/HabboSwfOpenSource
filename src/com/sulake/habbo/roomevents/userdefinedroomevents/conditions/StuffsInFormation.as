@@ -42,7 +42,7 @@
         {
             this._roomEvents = _arg_2;
             this._slider = new SliderWindowController(_arg_2, this._Str_2453(k), _arg_2.assets, 2, 10, 1);
-            this._slider._Str_2526(3);
+            this._slider.setValue(3);
             this._slider.addEventListener(Event.CHANGE, this.onSliderChange);
             _arg_2.refreshButton(k, "move_diag", true, null, 0);
             _arg_2.refreshButton(k, "move_vrt", true, null, 0);
@@ -50,7 +50,7 @@
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
-            this._slider._Str_2526(_arg_2.intData[0]);
+            this._slider.setValue(_arg_2.intData[0]);
             var _local_3:int = _arg_2.intData[1];
             this._Str_21596(k).setSelected(this._Str_24795(k, _local_3));
         }

@@ -162,9 +162,9 @@
             }
         }
 
-        public function _Str_2526(k:Number):void
+        public function setValue(k:Number):void
         {
-            this._slider._Str_2526(k);
+            this._slider.setValue(k);
             this.updateSoundIcons();
         }
     }

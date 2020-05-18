@@ -525,7 +525,7 @@
             if (k._Str_25234())
             {
                 this._Str_5076.enable();
-                this._Str_5076._Str_2526(k.value);
+                this._Str_5076.setValue(k.value);
                 this._Str_19878();
             }
             else

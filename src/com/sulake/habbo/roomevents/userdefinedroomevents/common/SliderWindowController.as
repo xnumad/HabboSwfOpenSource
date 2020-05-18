@@ -46,7 +46,7 @@
             this._sliderButton = null;
         }
 
-        public function _Str_2526(k:Number, _arg_2:Boolean=true):void
+        public function setValue(k:Number, _arg_2:Boolean=true):void
         {
             k = Math.max(this._minValue, k);
             k = Math.min(this._maxValue, k);
@@ -120,7 +120,7 @@
             {
                 _local_3 = this._Str_23515(_arg_2.x);
                 _local_4 = (Math.round((_local_3 / this._snapInterval)) * this._snapInterval);
-                this._Str_2526(_local_4, false);
+                this.setValue(_local_4, false);
             }
         }
 
@@ -133,7 +133,7 @@
                 if (this._snapInterval != 0)
                 {
                     _local_3 = (this._currentValue + this._snapInterval);
-                    this._Str_2526(_local_3);
+                    this.setValue(_local_3);
                 }
             }
         }
@@ -147,7 +147,7 @@
                 if (this._snapInterval != 0)
                 {
                     _local_3 = (this._currentValue - this._snapInterval);
-                    this._Str_2526(_local_3);
+                    this.setValue(_local_3);
                 }
             }
         }

@@ -116,7 +116,7 @@
             IStaticBitmapWrapperWindow(this._window.findChildByName(k)).assetUri = ("toolbar_memenu_settings_" + _arg_2);
         }
 
-        public function _Str_2526(k:Number):void
+        public function setValue(k:Number):void
         {
             this._slider.setValue(k);
             this.updateSoundIcons();

@@ -138,7 +138,7 @@
             this.find(this._configureContainer, "apply_snapshot_txt").mouseThreshold = 0;
             this._delaySlider = new SliderWindowController(this._roomEvents, IWindowContainer(this.find(this._configureContainer, "delay_slider_container")), this._roomEvents.assets, 0, 20, 1);
             this._delaySlider.addEventListener(Event.CHANGE, this._Str_25230);
-            this._delaySlider._Str_2526(0);
+            this._delaySlider.setValue(0);
             this.setIcon("configure_container", "icon_trigger", "trigger_icon_bitmap");
             this.setIcon("configure_container", "icon_action", "action_icon_bitmap");
             this.setIcon("configure_container", "icon_condition", "condition_icon_bitmap");
@@ -222,7 +222,7 @@
             {
                 _local_5 = ActionDefinition(this._updated);
                 _local_6 = _local_5.delayInPulses;
-                this._delaySlider._Str_2526(_local_6);
+                this._delaySlider.setValue(_local_6);
             }
             this._Str_23934();
             this.refresh();

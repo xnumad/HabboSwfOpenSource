@@ -40,7 +40,7 @@
             this._sliderButton = null;
         }
 
-        public function _Str_2526(k:int):void
+        public function setValue(k:int):void
         {
             if (this._sliderContainer == null)
             {
@@ -56,13 +56,13 @@
         public function set min(k:Number):void
         {
             this._minValue = k;
-            this._Str_2526(this._view._Str_7404);
+            this.setValue(this._view._Str_7404);
         }
 
         public function set max(k:Number):void
         {
             this._maxValue = k;
-            this._Str_2526(this._view._Str_7404);
+            this.setValue(this._view._Str_7404);
         }
 
         private function _Str_5687(k:int):int

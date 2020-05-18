@@ -273,7 +273,7 @@
             this._selectedBrightness = _local_2._Str_4272;
             if (this._alphaSlider != null)
             {
-                this._alphaSlider._Str_2526(this._selectedBrightness);
+                this._alphaSlider.setValue(this._selectedBrightness);
             }
             this._selectedColorIndex = this.colors.indexOf(_local_2.color);
             if (this._colorGrid != null)
@@ -371,7 +371,7 @@
             this._selectedBrightness = k;
             if (this._alphaSlider != null)
             {
-                this._alphaSlider._Str_2526(k);
+                this._alphaSlider.setValue(k);
             }
             this._widget._Str_12547();
         }

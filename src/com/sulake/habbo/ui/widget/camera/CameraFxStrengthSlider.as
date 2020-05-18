@@ -53,7 +53,7 @@
             return this._referenceWidth;
         }
 
-        public function _Str_2526(k:int):void
+        public function setValue(k:int):void
         {
             var _local_2:IWindow;
             if (this._sliderContainer != null)
@@ -90,7 +90,7 @@
             if (((k.type == WindowMouseEvent.DOWN) && (_arg_2.name == "shaft_click_area")))
             {
                 _local_3 = (WindowMouseEvent(k).localX - this._referenceX);
-                this._Str_2526(_local_3);
+                this.setValue(_local_3);
                 this._view._Str_21214(_local_3);
             }
         }

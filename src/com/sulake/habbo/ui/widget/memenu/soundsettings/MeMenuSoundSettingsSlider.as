@@ -37,7 +37,7 @@
             this._sliderButton = null;
         }
 
-        public function _Str_2526(k:Number):void
+        public function setValue(k:Number):void
         {
             if (this._sliderContainer == null)
             {

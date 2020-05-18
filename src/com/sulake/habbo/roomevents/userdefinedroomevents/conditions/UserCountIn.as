@@ -36,18 +36,18 @@
             this._roomEvents = _arg_2;
             this._minSlider = new SliderWindowController(_arg_2, this._Str_23213(k), _arg_2.assets, 1, 50, 1);
             this._minSlider.addEventListener(Event.CHANGE, this._Str_23138);
-            this._minSlider._Str_2526(1);
+            this._minSlider.setValue(1);
             this._maxSlider = new SliderWindowController(_arg_2, this._Str_25609(k), _arg_2.assets, 1, 50, 1);
             this._maxSlider.addEventListener(Event.CHANGE, this._Str_25837);
-            this._maxSlider._Str_2526(50);
+            this._maxSlider.setValue(50);
         }
 
         override public function onEditStart(k:IWindowContainer, _arg_2:Triggerable):void
         {
             var _local_3:int = _arg_2.intData[0];
             var _local_4:int = _arg_2.intData[1];
-            this._minSlider._Str_2526(_local_3);
-            this._maxSlider._Str_2526(_local_4);
+            this._minSlider.setValue(_local_3);
+            this._maxSlider.setValue(_local_4);
         }
 
         override public function get hasSpecialInputs():Boolean

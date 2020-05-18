@@ -186,7 +186,7 @@
             this._roomEvents = _arg_2;
             this._prizeLimitSlider = new SliderWindowController(_arg_2, this._Str_21165(k), _arg_2.assets, 1, 1000, 1);
             this._prizeLimitSlider.addEventListener(Event.CHANGE, this.onSliderChange);
-            this._prizeLimitSlider._Str_2526(1);
+            this._prizeLimitSlider.setValue(1);
             this._Str_11667(k).procedure = this._Str_23342;
             this._Str_8311(k).procedure = this._Str_22410;
             k.findChildByName("add_reward_txt").procedure = this._Str_24613;
@@ -227,7 +227,7 @@
             var _local_5:int = _arg_2.intData[2];
             if (_local_5 > 0)
             {
-                this._prizeLimitSlider._Str_2526(_local_5);
+                this._prizeLimitSlider.setValue(_local_5);
                 this._Str_11667(k).select();
             }
             else
