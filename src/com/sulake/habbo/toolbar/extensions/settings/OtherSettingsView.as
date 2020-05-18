@@ -50,7 +50,7 @@
             this._window.findChildByName("disable_room_camera_follow_checkbox").visible = (this._window.findChildByName("disable_room_camera_follow_label").visible = this._toolbar.getBoolean("room.camera.follow_user"));
             if (this._toolbar.getBoolean("room.camera.follow_user"))
             {
-                ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._toolbar.sessionDataManager.roomCameraFollowUser;
+                ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._toolbar.sessionDataManager.roomCameraFollowDisabled;
             }
             var _local_4:Boolean = this._toolbar.getBoolean("sms.identity.verification.enabled");
             var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum._Str_4917) == PhoneNumberStatusEnum._Str_9489);
@@ -92,7 +92,7 @@
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected;
                     this._toolbar.connection.send(new _Str_11774(_local_4));
-                    this._toolbar.sessionDataManager.roomCameraFollowUser(_local_4);
+                    this._toolbar.sessionDataManager.roomCameraFollowDisabled(_local_4);
                     return;
                 case "btn_reset_phone_number_collection":
                     this._window.findChildByName("btn_reset_phone_number_collection").visible = false;
