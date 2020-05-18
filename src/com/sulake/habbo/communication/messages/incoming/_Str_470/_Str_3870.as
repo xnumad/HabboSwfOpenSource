@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
+    import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
 
     public class _Str_3870 extends MessageEvent implements IMessageEvent 
     {

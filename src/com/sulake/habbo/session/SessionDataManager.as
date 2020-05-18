@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7765;
     import com.sulake.habbo.session.events.MysteryBoxKeysUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
+    import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_6831;
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;

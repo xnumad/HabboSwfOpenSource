@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11698;
-    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
+    import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
     import com.sulake.core.communication.messages.IMessageEvent;
 
     public class HabboSoundManagerFlash10 extends Component implements IHabboSoundManager, IUpdateReceiver 

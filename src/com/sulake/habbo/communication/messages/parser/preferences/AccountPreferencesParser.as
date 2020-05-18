@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.parser._Str_505
+﻿package com.sulake.habbo.communication.messages.parser.preferences
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
