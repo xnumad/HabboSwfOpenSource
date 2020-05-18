@@ -78,7 +78,7 @@
                 k = (this._windowManager.buildFromXML((_local_2.content as XML), 1) as IBorderWindow);
                 if (k)
                 {
-                    IButtonWindow(k.findChildByName("quests_button").addEventListener(WindowMouseEvent.CLICK, this._Str_2608));
+                    IButtonWindow(k.findChildByName("quests_button").addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked));
                     IRegionWindow(k.findChildByName("minimize_region")).addEventListener(WindowMouseEvent.CLICK, this._Str_12174);
                     IRegionWindow(k.findChildByName("maximize_region")).addEventListener(WindowMouseEvent.CLICK, this._Str_12174);
                     this._originalHeight = k.height;
@@ -100,7 +100,7 @@
             }
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             if (this._connection)
             {

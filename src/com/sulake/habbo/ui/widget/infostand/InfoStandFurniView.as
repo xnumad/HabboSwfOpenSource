@@ -126,7 +126,7 @@
                 while (_local_7 < this._Str_2374.numListItems)
                 {
                     _local_4 = this._Str_2374.getListItemAt(_local_7);
-                    _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                    _local_4.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                     _local_7++;
                 }
             }
@@ -366,7 +366,7 @@
             this.updateWindow();
         }
 
-        protected function _Str_2608(k:WindowMouseEvent):void
+        protected function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:RoomWidgetMessage;
             var _local_3:String;

@@ -16,7 +16,7 @@
             super(k);
             if (this._button)
             {
-                this._button.removeEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                this._button.removeEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
         }
 
@@ -27,11 +27,11 @@
                 return false;
             }
             this._button = (window.findChildByName("start_guild_purchase") as IButtonWindow);
-            this._button.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+            this._button.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             return true;
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             if (HabboTracking.getInstance() != null)
             {

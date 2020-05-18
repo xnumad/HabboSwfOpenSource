@@ -241,12 +241,12 @@
                     this._window.findChildByTag("ITEM_TITLE").x = (42 + (5 * (depth - 3)));
                 }
             }
-            this._window.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+            this._window.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             this._window.addEventListener(WindowMouseEvent.OVER, this._Str_23473);
             this._window.addEventListener(WindowMouseEvent.OUT, this._Str_25078);
             if (_local_2 != null)
             {
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
         }
 
@@ -306,7 +306,7 @@
             }
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             navigator.activateNode(this);
         }

@@ -341,7 +341,7 @@
             this._buttonsContainer.groupChildrenWithTag("CMD_BUTTON", _local_4, -1);
             for each (_local_5 in _local_4)
             {
-                _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_5.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             _local_6 = (this._border.findChildByName("petrespect_icon") as IBitmapWrapperWindow);
             if (_local_6 != null)
@@ -649,7 +649,7 @@
             this.updateWindow();
         }
 
-        protected function _Str_2608(k:WindowMouseEvent):void
+        protected function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:RoomWidgetMessage;
             var _local_3:String;

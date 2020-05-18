@@ -115,7 +115,7 @@
             while (_local_3 < this._window.numChildren)
             {
                 _local_2 = this._window.getChildAt(_local_3);
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_3++;
             }
             this._uiSoundsSettings = new MeMenuSoundSettingsItem(this, MeMenuSoundSettingsItem._Str_4200, this._Str_10739);
@@ -124,7 +124,7 @@
             this._Str_7269();
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

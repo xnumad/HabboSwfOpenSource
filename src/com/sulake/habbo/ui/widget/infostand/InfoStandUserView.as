@@ -128,7 +128,7 @@
                 _local_8 = (_local_7.content as BitmapData);
                 _local_2.bitmap = new BitmapData(_local_2.width, _local_2.height, true, 0);
                 _local_2.bitmap.copyPixels(_local_8, _local_8.rect, new Point(0, 0));
-                _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             this._Str_2268.mainContainer.addChild(this._window);
             var _local_3:IWindow = this._Str_2341.findChildByTag("close");
@@ -617,7 +617,7 @@
             _local_3.textColor = this._Str_17178;
         }
 
-        protected function _Str_2608(k:WindowMouseEvent):void
+        protected function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:RoomWidgetMessage;
             var _local_3:String;

@@ -122,7 +122,7 @@
             while (_local_4 < this._window.numChildren)
             {
                 _local_3 = this._window.getChildAt(_local_4);
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_4++;
             }
             _local_5 = (this._widget.assets.getAssetByName("sounds_off_color") as BitmapDataAsset);
@@ -151,7 +151,7 @@
             this._widget.messageListener.processWidgetMessage(new RoomWidgetGetSettingsMessage(RoomWidgetGetSettingsMessage.RWGSM_GET_SETTINGS));
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

@@ -213,7 +213,7 @@
             while (_local_7 < this._window.numChildren)
             {
                 _local_6 = this._window.getChildAt(_local_7);
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_6.addEventListener(WindowMouseEvent.OVER, this._Str_21994);
                 _local_6.addEventListener(WindowMouseEvent.OUT, this._Str_21994);
                 _local_7++;
@@ -288,7 +288,7 @@
             }
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_4:AvatarExpressionEnum;
             var _local_5:String;

@@ -42,7 +42,7 @@
             while (_local_2 < this._window.numChildren)
             {
                 _local_3 = this._window.getChildAt(_local_2);
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_2++;
             }
             ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._toolbar.freeFlowChat.isDisabledInPreferences;
@@ -61,7 +61,7 @@
             this._window.findChildByName("btn_reset_phone_number_collection").visible = _local_9;
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_4:Boolean;
             var _local_2:IWindow = (k.target as IWindow);

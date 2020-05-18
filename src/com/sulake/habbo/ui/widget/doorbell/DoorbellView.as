@@ -82,12 +82,12 @@
             _local_6 = _local_4.findChildByName("accept");
             if (_local_6 != null)
             {
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             _local_6 = _local_4.findChildByName("deny");
             if (_local_6 != null)
             {
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             return _local_4;
         }
@@ -127,7 +127,7 @@
             this._doorbell._Str_23961();
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:String = k.window.parent.name;
             switch (k.window.name)

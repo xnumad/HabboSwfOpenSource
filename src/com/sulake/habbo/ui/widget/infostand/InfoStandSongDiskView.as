@@ -76,7 +76,7 @@
                 while (_local_10 < _Str_2374.numListItems)
                 {
                     _local_4 = _Str_2374.getListItemAt(_local_10);
-                    _local_4.addEventListener(WindowMouseEvent.CLICK, _Str_2608);
+                    _local_4.addEventListener(WindowMouseEvent.CLICK, onButtonClicked);
                     _local_10++;
                 }
             }

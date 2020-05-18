@@ -62,7 +62,7 @@
                 }
                 else
                 {
-                    _local_9.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                    _local_9.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 }
             }
             _local_4 = (this._window.findChildByName("buttonContainer") as IItemListWindow);
@@ -86,7 +86,7 @@
                         _local_9 = (this._widget.windowManager.buildFromXML((_local_5.content as XML)) as IWindow);
                         _local_9.name = (("dance_" + _local_7) + "_button");
                         _local_9.caption = (("${widget.memenu.dance" + _local_7) + "}");
-                        _local_9.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                        _local_9.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                         _local_4.addListItemAt(_local_9, (_local_4.numListItems - 1));
                         if (this._widget._Str_4878)
                         {
@@ -107,7 +107,7 @@
             }
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_3:String;
             var _local_4:Array;

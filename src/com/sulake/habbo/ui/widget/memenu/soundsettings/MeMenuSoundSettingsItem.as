@@ -30,14 +30,14 @@
             _local_4 = this._window.findChildByName("sounds_off");
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_20465);
                 _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_20868);
             }
             _local_4 = this._window.findChildByName("sounds_on");
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_20465);
                 _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_20868);
             }
@@ -136,7 +136,7 @@
             }
         }
 
-        private function _Str_2608(k:WindowMouseEvent):void
+        private function onButtonClicked(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

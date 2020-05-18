@@ -217,7 +217,7 @@
             this._buttonsContainer.groupChildrenWithTag("CMD_BUTTON", _local_4, -1);
             for each (_local_5 in _local_4)
             {
-                _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
+                _local_5.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
             for each (_local_6 in _local_4)
             {
@@ -266,7 +266,7 @@
             _local_2.badgeId = k;
         }
 
-        protected function _Str_2608(k:WindowMouseEvent):void
+        protected function onButtonClicked(k:WindowMouseEvent):void
         {
             if (k.target.name == "pick")
             {
