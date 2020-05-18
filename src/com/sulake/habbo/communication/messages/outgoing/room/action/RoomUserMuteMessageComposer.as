@@ -8,11 +8,11 @@
         private var _Str_2337:int = 0;
         private var _Str_22053:int;
 
-        public function RoomUserMuteMessageComposer(k:int, _arg_2:int, _arg_3:int=0)
+        public function RoomUserMuteMessageComposer(userId:int, minutes:int, roomId:int=0)
         {
-            this._Str_2306 = k;
-            this._Str_2337 = _arg_3;
-            this._Str_22053 = _arg_2;
+            this._Str_2306 = userId;
+            this._Str_2337 = roomId;
+            this._Str_22053 = minutes;
         }
 
         public function dispose():void
