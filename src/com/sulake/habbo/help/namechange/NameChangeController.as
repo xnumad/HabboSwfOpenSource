@@ -193,7 +193,7 @@
             {
                 return;
             }
-            if (_local_2._Str_3278 == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
             {
                 this._Str_25375(_local_2.name);
                 this._Str_5574();
@@ -202,7 +202,7 @@
             {
                 if (this._nameChangeView)
                 {
-                    this._nameChangeView._Str_14489(_local_2._Str_3278, _local_2.name, _local_2._Str_14643);
+                    this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2._Str_14643);
                 }
             }
         }
@@ -214,13 +214,13 @@
                 return;
             }
             var _local_2:_Str_6537 = k.getParser();
-            if (_local_2._Str_3278 == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
             {
                 this._nameChangeView._Str_16320 = _local_2.name;
             }
             else
             {
-                this._nameChangeView._Str_14489(_local_2._Str_3278, _local_2.name, _local_2._Str_14643);
+                this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2._Str_14643);
             }
         }
 

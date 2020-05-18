@@ -561,8 +561,8 @@
         {
             var _local_3:AlertView;
             var _local_2:_Str_7400 = (k as _Str_9492).getParser();
-            Logger.log(((("Can create room: " + _local_2._Str_3278) + ", ") + _local_2._Str_20396));
-            if (_local_2._Str_3278 == 0)
+            Logger.log(((("Can create room: " + _local_2.resultCode) + ", ") + _local_2._Str_20396));
+            if (_local_2.resultCode == 0)
             {
                 this._navigator._Str_15114.show();
             }

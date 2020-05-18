@@ -81,13 +81,13 @@
                 return;
             }
             var _local_4:_Str_6537 = k.getParser();
-            if (_local_4._Str_3278 == ChangeNameUpdateEvent._Str_5797)
+            if (_local_4.resultCode == ChangeNameUpdateEvent._Str_5797)
             {
                 _local_3._Str_16320 = _local_4.name;
             }
             else
             {
-                _local_3._Str_14489(_local_4._Str_3278, _local_4.name, _local_4._Str_14643);
+                _local_3._Str_14489(_local_4.resultCode, _local_4.name, _local_4._Str_14643);
             }
         }
 

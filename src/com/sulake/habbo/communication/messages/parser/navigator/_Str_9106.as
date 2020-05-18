@@ -26,7 +26,7 @@
             return this._flatId;
         }
 
-        public function get _Str_3278():int
+        public function get resultCode():int
         {
             return this._resultCode;
         }

@@ -109,7 +109,7 @@
         {
             this._remainingVotes = k.getParser()._Str_24679;
             var _local_2:Boolean = k.getParser()._Str_24414;
-            var _local_3:int = k.getParser()._Str_3278;
+            var _local_3:int = k.getParser().resultCode;
             this.refreshContent(k.getParser().goalId, false, k.getParser().goalCode, _local_3.toString());
             this._Str_6512(((_local_3 == _Str_10666._Str_17690) ? this._Str_24392 : this._Str_24761));
             this._Str_4365().procedure = this._Str_24140;

@@ -134,7 +134,7 @@
 
         private function _Str_23318(k:_Str_8427):void
         {
-            switch (k.getParser()._Str_3278)
+            switch (k.getParser().resultCode)
             {
                 case PhoneNumberStatusEnum._Str_9489:
                     this._Str_7383();
@@ -161,15 +161,15 @@
                             this._Str_17799(false);
                         }
                     }
-                    this._Str_2277.alert("${generic.alert.title}", (("${phone.number.collect.error." + k.getParser()._Str_3278) + "}"), 0, null);
-                    this._Str_9469._Str_16661(k.getParser()._Str_3278);
+                    this._Str_2277.alert("${generic.alert.title}", (("${phone.number.collect.error." + k.getParser().resultCode) + "}"), 0, null);
+                    this._Str_9469._Str_16661(k.getParser().resultCode);
                     return;
             }
         }
 
         private function _Str_22688(k:_Str_9151):void
         {
-            switch (k.getParser()._Str_3278)
+            switch (k.getParser().resultCode)
             {
                 case PhoneNumberStatusEnum._Str_9489:
                 case PhoneNumberStatusEnum.OK:
@@ -188,7 +188,7 @@
                             this._Str_16951(false);
                         }
                     }
-                    this._Str_9578._Str_16661(k.getParser()._Str_3278);
+                    this._Str_9578._Str_16661(k.getParser().resultCode);
                     return;
             }
         }

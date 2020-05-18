@@ -381,7 +381,7 @@
         private function _Str_18227(k:ChangeNameUpdateEvent):void
         {
             var _local_2:_Str_6553 = k.getParser();
-            if (_local_2._Str_3278 == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
             {
                 this._Str_7394 = false;
                 events.dispatchEvent(new UserNameUpdateEvent(_local_2.name));

@@ -9,7 +9,7 @@
         private var _Str_8208:int;
 
 
-        public function get _Str_3278():int
+        public function get resultCode():int
         {
             return this._resultCode;
         }
