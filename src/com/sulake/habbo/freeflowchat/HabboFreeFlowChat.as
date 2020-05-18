@@ -45,7 +45,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
-    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import flash.geom.Point;
     import com.sulake.habbo.freeflowchat.viewer.visualization.PooledChatBubble;
     import com.sulake.habbo.freeflowchat.data.ChatItem;
@@ -187,7 +187,7 @@
             this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsEvent(this._Str_25751));
-            this._communication.addHabboConnectionMessageEvent(new _Str_3870(this._Str_10366));
+            this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
         }
 
         private function onPerkAllowances(k:PerkAllowancesEvent):void
@@ -266,7 +266,7 @@
             }
         }
 
-        private function _Str_10366(k:_Str_3870):void
+        private function _Str_10366(k:AccountPreferencesEvent):void
         {
             this._freeFlowDisabled = k.getParser()._Str_25556;
             this._preferedChatStyle = k.getParser()._Str_6984;

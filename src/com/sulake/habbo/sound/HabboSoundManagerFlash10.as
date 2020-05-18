@@ -23,7 +23,7 @@
     import com.sulake.core.runtime.IID;
     import com.sulake.core.runtime.IUnknown;
     import com.sulake.habbo.sound.music.HabboMusicController;
-    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11698;
@@ -392,7 +392,7 @@
             this._onDemandSamplePlaybackManager = new FurniSamplePlaybackManager(this, this._roomEngine.events);
             this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND, this._Str_15803);
             this._roomEngine.events.addEventListener(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, this._Str_15803);
-            this._connection.addMessageEvent(new _Str_3870(this._Str_24903));
+            this._connection.addMessageEvent(new AccountPreferencesEvent(this._Str_24903));
             this._connection.send(new _Str_10678());
         }
 
@@ -452,7 +452,7 @@
 
         private function _Str_24903(k:IMessageEvent):void
         {
-            var _local_2:_Str_3870 = (k as _Str_3870);
+            var _local_2:AccountPreferencesEvent = (k as AccountPreferencesEvent);
             var _local_3:AccountPreferencesParser = (_local_2.getParser() as AccountPreferencesParser);
             var _local_4:Number = _local_3._Str_16610;
             if (_local_4 == 1)

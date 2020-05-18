@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
-    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
     import com.sulake.habbo.communication.enum.NoobnessLevelEnum;
@@ -183,7 +183,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this._Str_25667));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8667(this._Str_25064));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_3870(this._Str_10366));
+                this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5948(this._Str_16302));
             }
             this._Str_25790 = [];
@@ -410,7 +410,7 @@
             context.createLinkEvent(k.link);
         }
 
-        private function _Str_10366(k:_Str_3870):void
+        private function _Str_10366(k:AccountPreferencesEvent):void
         {
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._roomCameraFollowUser = _local_2.roomCameraFollowUser;

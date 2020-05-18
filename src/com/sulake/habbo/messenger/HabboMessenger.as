@@ -23,7 +23,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.iid.IIDHabboHelp;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_5567;
-    import com.sulake.habbo.communication.messages.incoming.preferences._Str_3870;
+    import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11459;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_11571;
     import com.sulake.habbo.messenger.events.MiniMailMessageEvent;
@@ -96,7 +96,7 @@
         {
             this._Str_2432 = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new _Str_5567(this._Str_19006));
-            this.addMessageEvent(new _Str_3870(this._Str_10366));
+            this.addMessageEvent(new AccountPreferencesEvent(this._Str_10366));
             if (getBoolean("client.minimail.embed.enabled"))
             {
                 this.addMessageEvent(new _Str_11459(this._Str_23193));
@@ -139,7 +139,7 @@
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._Str_9588));
         }
 
-        private function _Str_10366(k:_Str_3870):void
+        private function _Str_10366(k:AccountPreferencesEvent):void
         {
             this._Str_9090 = k.getParser()._Str_22473;
         }
