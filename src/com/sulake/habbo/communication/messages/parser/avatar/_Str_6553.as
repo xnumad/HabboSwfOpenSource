@@ -5,14 +5,14 @@
 
     public class _Str_6553 implements IMessageParser 
     {
-        private var _Str_3145:int = -1;
+        private var _resultCode:int = -1;
         private var _name:String;
         private var _Str_5895:Array;
 
 
         public function get _Str_3278():int
         {
-            return this._Str_3145;
+            return this._resultCode;
         }
 
         public function get name():String
@@ -27,7 +27,7 @@
 
         public function flush():Boolean
         {
-            this._Str_3145 = -1;
+            this._resultCode = -1;
             this._name = "";
             this._Str_5895 = null;
             return true;
@@ -35,7 +35,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_3145 = k.readInteger();
+            this._resultCode = k.readInteger();
             this._name = k.readString();
             var _local_2:int = k.readInteger();
             this._Str_5895 = new Array();

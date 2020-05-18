@@ -5,13 +5,13 @@
 
     public class TryPhoneNumberResultParser implements IMessageParser 
     {
-        private var _Str_3145:int;
+        private var _resultCode:int;
         private var _Str_21295:int;
 
 
         public function get _Str_3278():int
         {
-            return this._Str_3145;
+            return this._resultCode;
         }
 
         public function get _Str_24596():int
@@ -21,13 +21,13 @@
 
         public function flush():Boolean
         {
-            this._Str_3145 = -1;
+            this._resultCode = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_3145 = k.readInteger();
+            this._resultCode = k.readInteger();
             this._Str_21295 = k.readInteger();
             return true;
         }

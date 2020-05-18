@@ -8,7 +8,7 @@
     {
         private var _Str_5696:int;
         private var _Str_3087:String;
-        private var _Str_3145:int;
+        private var _resultCode:int;
         private var _Str_19041:int;
 
 
@@ -21,7 +21,7 @@
         {
             this._Str_5696 = k.readInteger();
             this._Str_3087 = k.readString();
-            this._Str_3145 = k.readInteger();
+            this._resultCode = k.readInteger();
             this._Str_19041 = k.readInteger();
             return true;
         }
@@ -38,7 +38,7 @@
 
         public function get _Str_24414():Boolean
         {
-            return this._Str_3145 == _Str_10666._Str_17462;
+            return this._resultCode == _Str_10666._Str_17462;
         }
 
         public function get _Str_24679():int
@@ -48,7 +48,7 @@
 
         public function get _Str_3278():int
         {
-            return this._Str_3145;
+            return this._resultCode;
         }
     }
 }
