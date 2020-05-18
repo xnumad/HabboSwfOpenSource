@@ -17,12 +17,12 @@
             super(k);
         }
 
-        public function get _Str_3410():Number
+        public function get traxVolume():Number
         {
             return this._traxVolume;
         }
 
-        public function set _Str_3410(k:Number):void
+        public function set traxVolume(k:Number):void
         {
             this._traxVolume = k;
         }

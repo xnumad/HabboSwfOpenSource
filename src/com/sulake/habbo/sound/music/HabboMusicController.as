@@ -637,7 +637,7 @@
                 Logger.log(("Waiting previous song to stop before playing song " + _arg_2));
                 return true;
             }
-            _local_5._Str_3206 = this._soundManager._Str_3410;
+            _local_5._Str_3206 = this._soundManager.traxVolume;
             var _local_6:Number = _Str_14214;
             var _local_7:Number = 0;
             var _local_8:Number = 2;

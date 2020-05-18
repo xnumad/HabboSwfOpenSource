@@ -89,7 +89,7 @@
         {
             this._genericVolume = k._Str_16610;
             this._furniVolume = k._Str_3488;
-            this._traxVolume = k._Str_3410;
+            this._traxVolume = k.traxVolume;
             if (this._uiSoundsSettings != null)
             {
                 this._uiSoundsSettings._Str_2526(this._genericVolume);
@@ -178,7 +178,7 @@
             }
             _local_5._Str_3960 = ((k != -1) ? k : this._genericVolume);
             _local_5._Str_3488 = ((_arg_2 != -1) ? _arg_2 : this._furniVolume);
-            _local_5._Str_3410 = ((_arg_3 != -1) ? _arg_3 : this._traxVolume);
+            _local_5.traxVolume = ((_arg_3 != -1) ? _arg_3 : this._traxVolume);
             this._widget.messageListener.processWidgetMessage(_local_5);
         }
 

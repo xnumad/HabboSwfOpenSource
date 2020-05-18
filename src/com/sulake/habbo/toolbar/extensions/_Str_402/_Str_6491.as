@@ -82,7 +82,7 @@
         {
             this._Str_3050 = this._habboToolbar._Str_2476._Str_3960;
             this._Str_2909 = this._habboToolbar._Str_2476._Str_3488;
-            this._Str_2933 = this._habboToolbar._Str_2476._Str_3410;
+            this._Str_2933 = this._habboToolbar._Str_2476.traxVolume;
             if (this._Str_3499 != null)
             {
                 this._Str_3499._Str_2526(this._Str_3050);
@@ -143,7 +143,7 @@
                 }
                 this._habboToolbar._Str_2476._Str_3488 = _local_5;
                 this._habboToolbar._Str_2476._Str_3960 = _local_6;
-                this._habboToolbar._Str_2476._Str_3410 = _local_7;
+                this._habboToolbar._Str_2476.traxVolume = _local_7;
             }
             else
             {

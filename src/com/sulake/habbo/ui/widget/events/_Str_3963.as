@@ -26,7 +26,7 @@
             return this._Str_2909;
         }
 
-        public function get _Str_3410():Number
+        public function get traxVolume():Number
         {
             return this._Str_2933;
         }

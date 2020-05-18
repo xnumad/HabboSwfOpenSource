@@ -80,12 +80,12 @@
             this._Str_16207();
         }
 
-        public function get _Str_3410():Number
+        public function get traxVolume():Number
         {
             return this._traxVolume;
         }
 
-        public function set _Str_3410(k:Number):void
+        public function set traxVolume(k:Number):void
         {
             this._Str_9171(this._genericVolume, this._furniVolume, k);
             this._Str_16207();

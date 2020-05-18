@@ -6,10 +6,10 @@
     public interface IHabboSoundManager extends IUnknown 
     {
         function set _Str_3960(_arg_1:Number):void;
-        function set _Str_3410(_arg_1:Number):void;
+        function set traxVolume(_arg_1:Number):void;
         function set _Str_3488(_arg_1:Number):void;
         function get _Str_3960():Number;
-        function get _Str_3410():Number;
+        function get traxVolume():Number;
         function get _Str_3488():Number;
         function get _Str_2774():IHabboMusicController;
         function _Str_4375(_arg_1:String, _arg_2:int=0):void;

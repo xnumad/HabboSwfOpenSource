@@ -89,7 +89,7 @@
         {
             this._genericVolume = this._widget.widget.toolbar._Str_2476._Str_3960;
             this._furniVolume = this._widget.widget.toolbar._Str_2476._Str_3488;
-            this._traxVolume = this._widget.widget.toolbar._Str_2476._Str_3410;
+            this._traxVolume = this._widget.widget.toolbar._Str_2476.traxVolume;
             if (this._uiSoundsSettings != null)
             {
                 this._uiSoundsSettings._Str_2526(this._genericVolume);
@@ -153,7 +153,7 @@
                 }
                 this._widget.widget.toolbar._Str_2476._Str_3488 = _local_5;
                 this._widget.widget.toolbar._Str_2476._Str_3960 = _local_6;
-                this._widget.widget.toolbar._Str_2476._Str_3410 = _local_7;
+                this._widget.widget.toolbar._Str_2476.traxVolume = _local_7;
             }
             else
             {
