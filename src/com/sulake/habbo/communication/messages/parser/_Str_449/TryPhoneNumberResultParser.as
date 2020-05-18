@@ -6,7 +6,7 @@
     public class TryPhoneNumberResultParser implements IMessageParser 
     {
         private var _resultCode:int;
-        private var _Str_21295:int;
+        private var _millisToAllowProcessReset:int;
 
 
         public function get resultCode():int
@@ -16,7 +16,7 @@
 
         public function get _Str_24596():int
         {
-            return this._Str_21295;
+            return this._millisToAllowProcessReset;
         }
 
         public function flush():Boolean
@@ -28,7 +28,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._resultCode = k.readInteger();
-            this._Str_21295 = k.readInteger();
+            this._millisToAllowProcessReset = k.readInteger();
             return true;
         }
     }
