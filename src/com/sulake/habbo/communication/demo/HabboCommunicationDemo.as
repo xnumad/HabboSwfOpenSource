@@ -57,7 +57,7 @@
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.handshake._Str_9307;
-    import com.sulake.habbo.communication.messages.parser.error.ConnectionErrorMessageParser;
+    import com.sulake.habbo.communication.messages.parser.error.ErrorReportMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
     import com.sulake.habbo.utils.Base64;
@@ -504,7 +504,7 @@
 
         private function _Str_24454(event:IMessageEvent):void
         {
-            var parser:ConnectionErrorMessageParser = (event as ErrorReportEvent).getParser();
+            var parser:ErrorReportMessageParser = (event as ErrorReportEvent).getParser();
             var errorCode:int = parser.errorCode;
             var messageId:int = parser.messageId;
             var time:String = parser.timestamp;
