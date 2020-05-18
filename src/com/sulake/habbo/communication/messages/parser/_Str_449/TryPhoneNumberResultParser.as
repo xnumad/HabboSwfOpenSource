@@ -14,7 +14,7 @@
             return this._resultCode;
         }
 
-        public function get _Str_24596():int
+        public function get millisToAllowProcessReset():int
         {
             return this._millisToAllowProcessReset;
         }

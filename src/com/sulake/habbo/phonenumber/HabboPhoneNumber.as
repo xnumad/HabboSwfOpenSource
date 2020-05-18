@@ -143,7 +143,7 @@
                 case PhoneNumberStatusEnum._Str_11502:
                 case PhoneNumberStatusEnum._Str_13360:
                     this._Str_7383();
-                    this._Str_15062 = (k.getParser()._Str_24596 + getTimer());
+                    this._Str_15062 = (k.getParser().millisToAllowProcessReset + getTimer());
                     this._Str_13939();
                     return;
                 case PhoneNumberStatusEnum.ERROR:
