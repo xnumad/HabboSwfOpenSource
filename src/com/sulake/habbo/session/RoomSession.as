@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
     import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.FollowFriendMessageComposer;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10514;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
@@ -407,7 +407,7 @@
 
         public function sendAmbassadorAlert(k:int):void
         {
-            this._connection.send(new _Str_10514(k));
+            this._connection.send(new AmbassadorAlertMessageComposer(k));
         }
 
         public function kickUser(k:int):void

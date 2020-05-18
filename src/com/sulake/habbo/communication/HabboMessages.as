@@ -860,7 +860,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10514;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.AmbassadorAlertMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
@@ -1789,7 +1789,7 @@
             OUTGOING_PACKETS[2970] = FollowFriendMessageComposer;
             OUTGOING_PACKETS[2977] = _Str_12037;
             OUTGOING_PACKETS[2991] = _Str_2863;
-            OUTGOING_PACKETS[2996] = _Str_10514;
+            OUTGOING_PACKETS[2996] = AmbassadorAlertMessageComposer;
             OUTGOING_PACKETS[3001] = UpdateRoomFilterMessageComposer;
             OUTGOING_PACKETS[3005] = _Str_5009;
             OUTGOING_PACKETS[3027] = _Str_8102;
