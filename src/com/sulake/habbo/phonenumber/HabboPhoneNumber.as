@@ -16,9 +16,9 @@
     import com.sulake.iid.IIDHabboLocalizationManager;
     import com.sulake.iid.IIDHabboToolbar;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_447.TryPhoneNumberResultMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_447.TryVerificationCodeResultMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_9957;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_10410;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;

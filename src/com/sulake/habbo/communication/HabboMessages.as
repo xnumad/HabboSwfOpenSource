@@ -300,9 +300,9 @@
 	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
-	import com.sulake.habbo.communication.messages.incoming._Str_447.TryPhoneNumberResultMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_447.TryVerificationCodeResultMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8413;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8746;
