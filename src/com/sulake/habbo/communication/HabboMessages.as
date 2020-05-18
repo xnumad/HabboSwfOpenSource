@@ -300,7 +300,7 @@
 	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
-	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_8427;
+	import com.sulake.habbo.communication.messages.incoming._Str_447.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_447.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
@@ -1436,7 +1436,7 @@
             INCOMING_PACKETS[770] = _Str_8296;
             INCOMING_PACKETS[780] = _Str_7845;
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;
-            INCOMING_PACKETS[800] = _Str_8427;
+            INCOMING_PACKETS[800] = TryPhoneNumberResultMessageEvent;
             INCOMING_PACKETS[804] = _Str_8504;
             INCOMING_PACKETS[806] = _Str_3660;
             INCOMING_PACKETS[818] = _Str_6293;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser._Str_449.TryPhoneNumberResultParser;
 
-    public class _Str_8427 extends MessageEvent implements IMessageEvent 
+    public class TryPhoneNumberResultMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_8427(k:Function)
+        public function TryPhoneNumberResultMessageEvent(k:Function)
         {
             super(k, TryPhoneNumberResultParser);
         }
