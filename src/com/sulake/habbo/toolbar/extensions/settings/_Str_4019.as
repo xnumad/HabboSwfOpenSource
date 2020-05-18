@@ -14,17 +14,17 @@
         public static const _Str_4191:int = 2;
 
         private var _type:int;
-        private var _Str_3026:Number;
+        private var _volume:Number;
         private var _window:IWindowContainer;
         private var _slider:MeMenuSoundSettingsSlider;
-        private var _Str_3002:_Str_6491;
+        private var _meMenuSoundSettingsView:_Str_6491;
 
         public function _Str_4019(k:_Str_6491, _arg_2:int, _arg_3:IWindowContainer):void
         {
             var _local_4:IWindow;
             super();
             this._type = _arg_2;
-            this._Str_3002 = k;
+            this._meMenuSoundSettingsView = k;
             this._window = _arg_3;
             this._slider = new MeMenuSoundSettingsSlider(this, (this._window.findChildByName("volume_container") as IWindowContainer), k.toolbar.assets, 0, 1);
             _local_4 = this._window.findChildByName("sounds_off");
@@ -59,31 +59,31 @@
 
         public function get disposed():Boolean
         {
-            return this._Str_3002 == null;
+            return this._meMenuSoundSettingsView == null;
         }
 
         public function saveVolume(k:Number, _arg_2:Boolean):void
         {
-            this._Str_3026 = k;
+            this._volume = k;
             switch (this._type)
             {
                 case _Str_4200:
-                    this._Str_3002.saveVolume(k, -1, -1, _arg_2);
+                    this._meMenuSoundSettingsView.saveVolume(k, -1, -1, _arg_2);
                     break;
                 case _Str_4322:
-                    this._Str_3002.saveVolume(-1, k, -1, _arg_2);
+                    this._meMenuSoundSettingsView.saveVolume(-1, k, -1, _arg_2);
                     break;
                 case _Str_4191:
-                    this._Str_3002.saveVolume(-1, -1, k, _arg_2);
+                    this._meMenuSoundSettingsView.saveVolume(-1, -1, k, _arg_2);
                     break;
             }
             this._Str_5039();
-            this._Str_3002._Str_7269();
+            this._meMenuSoundSettingsView._Str_7269();
         }
 
         private function _Str_5039():void
         {
-            if (this._Str_3026 == 0)
+            if (this._volume == 0)
             {
                 this._Str_3209("sounds_on_icon", "sounds_on_white");
                 this._Str_3209("sounds_off_icon", "sounds_off_color");
