@@ -15,11 +15,11 @@
     public class OtherSettingsView 
     {
         private var _window:IWindowContainer;
-        private var _habboToolbar:HabboToolbar;
+        private var _toolbar:HabboToolbar;
 
         public function OtherSettingsView(k:HabboToolbar)
         {
-            this._habboToolbar = k;
+            this._toolbar = k;
             this.createWindow();
         }
 
@@ -35,8 +35,8 @@
 
         private function createWindow():void
         {
-            var k:XmlAsset = (this._habboToolbar.assets.getAssetByName("me_menu_other_settings_xml") as XmlAsset);
-            this._window = (this._habboToolbar.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
+            var k:XmlAsset = (this._toolbar.assets.getAssetByName("me_menu_other_settings_xml") as XmlAsset);
+            this._window = (this._toolbar.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
             var _local_2:int;
             var _local_3:IWindow;
             while (_local_2 < this._window.numChildren)
@@ -45,18 +45,18 @@
                 _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_2608);
                 _local_2++;
             }
-            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._habboToolbar.freeFlowChat.isDisabledInPreferences;
-            ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected = this._habboToolbar.messenger._Str_16882();
-            this._window.findChildByName("disable_room_camera_follow_checkbox").visible = (this._window.findChildByName("disable_room_camera_follow_label").visible = this._habboToolbar.getBoolean("room.camera.follow_user"));
-            if (this._habboToolbar.getBoolean("room.camera.follow_user"))
+            ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._toolbar.freeFlowChat.isDisabledInPreferences;
+            ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected = this._toolbar.messenger._Str_16882();
+            this._window.findChildByName("disable_room_camera_follow_checkbox").visible = (this._window.findChildByName("disable_room_camera_follow_label").visible = this._toolbar.getBoolean("room.camera.follow_user"));
+            if (this._toolbar.getBoolean("room.camera.follow_user"))
             {
-                ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._habboToolbar.sessionDataManager.roomCameraFollowUser;
+                ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected = this._toolbar.sessionDataManager.roomCameraFollowUser;
             }
-            var _local_4:Boolean = this._habboToolbar.getBoolean("sms.identity.verification.enabled");
-            var _local_5:* = (this._habboToolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum._Str_4917) == PhoneNumberStatusEnum._Str_9489);
-            var _local_6:* = (this._habboToolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_9095);
-            var _local_7:Boolean = this._habboToolbar.getBoolean("sms.identity.verification.button.enabled");
-            var _local_8:* = (this._habboToolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_4917);
+            var _local_4:Boolean = this._toolbar.getBoolean("sms.identity.verification.enabled");
+            var _local_5:* = (this._toolbar.getInteger("phone.verification.status", PhoneNumberStatusEnum._Str_4917) == PhoneNumberStatusEnum._Str_9489);
+            var _local_6:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_9095);
+            var _local_7:Boolean = this._toolbar.getBoolean("sms.identity.verification.button.enabled");
+            var _local_8:* = (this._toolbar.getInteger("phone.collection.status", ClientPhoneVerificationStatusEnum._Str_4917) == ClientPhoneVerificationStatusEnum._Str_4917);
             var _local_9:Boolean = (((_local_4) && (!(_local_5))) && ((_local_6) || ((_local_7) && (_local_8))));
             this._window.findChildByName("btn_reset_phone_number_collection").visible = _local_9;
         }
@@ -72,31 +72,31 @@
                     this.dispose();
                     return;
                 case "prefer_old_chat_checkbox":
-                    this._habboToolbar.freeFlowChat.isDisabledInPreferences = ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected;
-                    if (!this._habboToolbar.freeFlowChat.isDisabledInPreferences)
+                    this._toolbar.freeFlowChat.isDisabledInPreferences = ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected;
+                    if (!this._toolbar.freeFlowChat.isDisabledInPreferences)
                     {
-                        if (((!(this._habboToolbar._Str_12052._Str_10612 == null)) && (!(this._habboToolbar.freeFlowChat.displayObject == null))))
+                        if (((!(this._toolbar._Str_12052._Str_10612 == null)) && (!(this._toolbar.freeFlowChat.displayObject == null))))
                         {
-                            this._habboToolbar._Str_12052._Str_10612.setDisplayObject(this._habboToolbar.freeFlowChat.displayObject);
+                            this._toolbar._Str_12052._Str_10612.setDisplayObject(this._toolbar.freeFlowChat.displayObject);
                         }
                     }
                     else
                     {
-                        this._habboToolbar.freeFlowChat.clear();
+                        this._toolbar.freeFlowChat.clear();
                     }
                     return;
                 case "ignore_room_invites_checkbox":
-                    this._habboToolbar.messenger._Str_19823(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
-                    this._habboToolbar.connection.send(new _Str_10960(this._habboToolbar.messenger._Str_16882()));
+                    this._toolbar.messenger._Str_19823(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
+                    this._toolbar.connection.send(new _Str_10960(this._toolbar.messenger._Str_16882()));
                     return;
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected;
-                    this._habboToolbar.connection.send(new _Str_11774(_local_4));
-                    this._habboToolbar.sessionDataManager.roomCameraFollowUser(_local_4);
+                    this._toolbar.connection.send(new _Str_11774(_local_4));
+                    this._toolbar.sessionDataManager.roomCameraFollowUser(_local_4);
                     return;
                 case "btn_reset_phone_number_collection":
                     this._window.findChildByName("btn_reset_phone_number_collection").visible = false;
-                    this._habboToolbar.connection.send(new _Str_7498());
+                    this._toolbar.connection.send(new _Str_7498());
                     return;
             }
         }
