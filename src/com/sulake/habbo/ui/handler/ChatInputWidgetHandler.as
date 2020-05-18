@@ -320,7 +320,7 @@
                                             userToAlert = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (userToAlert)
                                             {
-                                                this._container.roomSession._Str_18152(userToAlert.id);
+                                                this._container.roomSession.sendAmbassadorAlert(userToAlert.id);
                                             }
                                         }
                                         return null;
