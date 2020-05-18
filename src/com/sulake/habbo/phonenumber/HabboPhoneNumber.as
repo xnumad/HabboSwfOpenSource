@@ -18,7 +18,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_447._Str_8427;
-    import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9151;
+    import com.sulake.habbo.communication.messages.incoming._Str_447.TryVerificationCodeResultMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_9957;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_10410;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_6202;
@@ -73,7 +73,7 @@
                 this._Str_2310 = this._Str_2355.connection;
                 this._Str_2310.addMessageEvent(new PhoneCollectionStateMessageEvent(this._Str_24899));
                 this._Str_2310.addMessageEvent(new _Str_8427(this._Str_23318));
-                this._Str_2310.addMessageEvent(new _Str_9151(this._Str_22688));
+                this._Str_2310.addMessageEvent(new TryVerificationCodeResultMessageEvent(this._Str_22688));
             }
         }
 
@@ -167,7 +167,7 @@
             }
         }
 
-        private function _Str_22688(k:_Str_9151):void
+        private function _Str_22688(k:TryVerificationCodeResultMessageEvent):void
         {
             switch (k.getParser().resultCode)
             {

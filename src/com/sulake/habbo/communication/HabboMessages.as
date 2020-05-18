@@ -301,7 +301,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
 	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_8427;
-	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9151;
+	import com.sulake.habbo.communication.messages.incoming._Str_447.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8413;
@@ -1453,7 +1453,7 @@
             INCOMING_PACKETS[899] = _Str_5763;
             INCOMING_PACKETS[904] = GameInviteMessageEvent;
             INCOMING_PACKETS[909] = _Str_6132;
-            INCOMING_PACKETS[91] = _Str_9151;
+            INCOMING_PACKETS[91] = TryVerificationCodeResultMessageEvent;
             INCOMING_PACKETS[934] = _Str_8337;
             INCOMING_PACKETS[948] = _Str_5081;
             INCOMING_PACKETS[949] = QuestCompletedMessageEvent;
