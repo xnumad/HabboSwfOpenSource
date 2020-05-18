@@ -5,39 +5,39 @@
 
     public class _Str_5515 implements IMessageParser 
     {
-        private var _Str_2933:int;
-        private var _Str_2909:int;
-        private var _Str_9898:int;
-        private var _Str_17293:Boolean;
-        private var _Str_9090:Boolean;
+        private var _traxVolume:int;
+        private var _furniVolume:int;
+        private var _uiVolume:int;
+        private var _freeFlowChatDisabled:Boolean;
+        private var _roomInvitesIgnored:Boolean;
         private var _roomCameraFollowUser:Boolean;
-        private var _Str_3790:int;
-        private var _Str_6387:int;
+        private var _uiFlags:int;
+        private var _preferedChatStyle:int;
 
 
         public function get _Str_3410():int
         {
-            return this._Str_2933;
+            return this._traxVolume;
         }
 
         public function get _Str_3488():int
         {
-            return this._Str_2909;
+            return this._furniVolume;
         }
 
         public function get _Str_16610():int
         {
-            return this._Str_9898;
+            return this._uiVolume;
         }
 
         public function get _Str_25556():Boolean
         {
-            return this._Str_17293;
+            return this._freeFlowChatDisabled;
         }
 
         public function get _Str_22473():Boolean
         {
-            return this._Str_9090;
+            return this._roomInvitesIgnored;
         }
 
         public function get roomCameraFollowUser():Boolean
@@ -47,33 +47,33 @@
 
         public function get _Str_8444():int
         {
-            return this._Str_3790;
+            return this._uiFlags;
         }
 
         public function get _Str_6984():int
         {
-            return this._Str_6387;
+            return this._preferedChatStyle;
         }
 
         public function flush():Boolean
         {
-            this._Str_17293 = false;
+            this._freeFlowChatDisabled = false;
             this._roomCameraFollowUser = false;
-            this._Str_3790 = 0;
-            this._Str_6387 = 0;
+            this._uiFlags = 0;
+            this._preferedChatStyle = 0;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_9898 = k.readInteger();
-            this._Str_2909 = k.readInteger();
-            this._Str_2933 = k.readInteger();
-            this._Str_17293 = k.readBoolean();
-            this._Str_9090 = k.readBoolean();
+            this._uiVolume = k.readInteger();
+            this._furniVolume = k.readInteger();
+            this._traxVolume = k.readInteger();
+            this._freeFlowChatDisabled = k.readBoolean();
+            this._roomInvitesIgnored = k.readBoolean();
             this._roomCameraFollowUser = k.readBoolean();
-            this._Str_3790 = k.readInteger();
-            this._Str_6387 = k.readInteger();
+            this._uiFlags = k.readInteger();
+            this._preferedChatStyle = k.readInteger();
             return true;
         }
     }
