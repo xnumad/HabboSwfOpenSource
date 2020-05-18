@@ -195,7 +195,7 @@
 
         private function _Str_24899(k:_Str_9537):void
         {
-            var _local_2:int = k.getParser()._Str_24164;
+            var _local_2:int = k.getParser().collectionStatusCode;
             var _local_3:int = k.getParser().phoneStatusCode;
             context.configuration.setProperty("phone.collection.status", _local_2.toString());
             context.configuration.setProperty("phone.verification.status", _local_3.toString());

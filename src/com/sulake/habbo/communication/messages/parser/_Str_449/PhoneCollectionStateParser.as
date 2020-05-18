@@ -15,7 +15,7 @@
             return this._phoneStatusCode;
         }
 
-        public function get _Str_24164():int
+        public function get collectionStatusCode():int
         {
             return this._collectionStatusCode;
         }
