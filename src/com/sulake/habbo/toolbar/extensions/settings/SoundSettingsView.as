@@ -7,7 +7,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.events.WindowMouseEvent;
 
-    public class _Str_6491 
+    public class SoundSettingsView 
     {
         private var _window:IWindowContainer;
         private var _Str_3499:SoundSettingsItem;
@@ -22,7 +22,7 @@
         private var _Str_2933:Number = 1;
         private var _habboToolbar:HabboToolbar;
 
-        public function _Str_6491(k:HabboToolbar)
+        public function SoundSettingsView(k:HabboToolbar)
         {
             this._habboToolbar = k;
             this.createWindow();

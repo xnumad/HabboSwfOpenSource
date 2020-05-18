@@ -9,7 +9,7 @@
     import com.sulake.habbo.toolbar.ExtensionFixedSlotsEnum;
     import com.sulake.habbo.toolbar.extensions.settings.OtherSettingsView;
     import com.sulake.habbo.toolbar.extensions.settings.OtherSettingsView;
-    import com.sulake.habbo.toolbar.extensions.settings._Str_6491;
+    import com.sulake.habbo.toolbar.extensions.settings.SoundSettingsView;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.core.window.events.WindowEvent;
@@ -80,7 +80,7 @@
 
         private function _Str_24026():void
         {
-            var k:_Str_6491 = new _Str_6491(this._toolbar);
+            var k:SoundSettingsView = new SoundSettingsView(this._toolbar);
             var _local_2:IWindowContainer = this._toolbar.windowManager.getDesktop(1);
             _local_2.addChild(k.window);
             k.window.x = ((_local_2.width - k.window.width) - 200);

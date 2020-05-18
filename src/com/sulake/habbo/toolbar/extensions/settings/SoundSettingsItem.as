@@ -17,9 +17,9 @@
         private var _volume:Number;
         private var _window:IWindowContainer;
         private var _slider:MeMenuSoundSettingsSlider;
-        private var _meMenuSoundSettingsView:_Str_6491;
+        private var _meMenuSoundSettingsView:SoundSettingsView;
 
-        public function SoundSettingsItem(k:_Str_6491, _arg_2:int, _arg_3:IWindowContainer):void
+        public function SoundSettingsItem(k:SoundSettingsView, _arg_2:int, _arg_3:IWindowContainer):void
         {
             var _local_4:IWindow;
             super();
