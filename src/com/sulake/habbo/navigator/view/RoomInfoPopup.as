@@ -322,7 +322,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._navigator._Str_2602.reportRoom(this._guestRoomData.flatId, this._guestRoomData.roomName, this._guestRoomData.description);
+                this._navigator.habboHelp.reportRoom(this._guestRoomData.flatId, this._guestRoomData.roomName, this._guestRoomData.description);
                 this.destroy();
             }
         }

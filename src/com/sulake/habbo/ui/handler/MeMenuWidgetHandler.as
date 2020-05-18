@@ -100,10 +100,10 @@
                 {
                     this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
                 }
-                if ((((this._container._Str_2602) && (!(this._container._Str_2602.disposed))) && (this._container._Str_2602.events)))
+                if ((((this._container.habboHelp) && (!(this._container.habboHelp.disposed))) && (this._container.habboHelp.events)))
                 {
-                    this._container._Str_2602.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
-                    this._container._Str_2602.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
+                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
+                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
                 }
                 if ((((this._container.catalog) && (!(this._container.catalog.disposed))) && (this._container.catalog.events)))
                 {
@@ -131,10 +131,10 @@
             {
                 this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
             }
-            if (this._container._Str_2602 != null)
+            if (this._container.habboHelp != null)
             {
-                this._container._Str_2602.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
-                this._container._Str_2602.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
+                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
+                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
             }
             this._catalog = this._container.catalog;
             if (this._container.catalog != null)
@@ -368,9 +368,9 @@
                     {
                         this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true);
                         this._container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
-                        if (((this._container._Str_2602) && (this._container._Str_2602.events)))
+                        if (((this._container.habboHelp) && (this._container.habboHelp.events)))
                         {
-                            this._container._Str_2602.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTE_DONE_AVATAR_EDITOR_OPENING));
+                            this._container.habboHelp.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTE_DONE_AVATAR_EDITOR_OPENING));
                         }
                     }
                     break;
@@ -389,9 +389,9 @@
                     this._container.events.dispatchEvent(new _Str_3963(_Str_3963.RWSUE_SETTINGS, this._container._Str_2476._Str_3410, this._container._Str_2476._Str_3488, this._container._Str_2476._Str_3960));
                     break;
                 case RoomWidgetAvatarEditorMessage.RWAEM_AVATAR_EDITOR_VIEW_DISPOSED:
-                    if (((this._container._Str_2602) && (this._container._Str_2602.events)))
+                    if (((this._container.habboHelp) && (this._container.habboHelp.events)))
                     {
-                        this._container._Str_2602.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTE_DONE_AVATAR_EDITOR_CLOSING));
+                        this._container.habboHelp.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTE_DONE_AVATAR_EDITOR_CLOSING));
                     }
                     break;
                 case RoomWidgetStoreSettingsMessage.RWSSM_STORE_CHAT:

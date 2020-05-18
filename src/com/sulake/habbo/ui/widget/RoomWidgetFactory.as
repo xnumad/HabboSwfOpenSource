@@ -163,7 +163,7 @@
                 case RoomWidgetEnum.ROOM_TOOLS:
                     return new RoomToolsWidget(_arg_2, windowManager, assets, this._roomUI);
                 case RoomWidgetEnum.EXTERNAL_IMAGE:
-                    return new ExternalImageWidget(_arg_2, windowManager, assets, this._roomUI.localization, this._roomUI.inventory, this._roomUI._Str_2602, this._roomUI.roomEngine, this._roomUI);
+                    return new ExternalImageWidget(_arg_2, windowManager, assets, this._roomUI.localization, this._roomUI.inventory, this._roomUI.habboHelp, this._roomUI.roomEngine, this._roomUI);
                 case RoomWidgetEnum.WORD_QUIZZ:
                     return new WordQuizWidget(_arg_2, windowManager, assets, this._roomUI.localization);
                 case RoomWidgetEnum.UI_HELP_BUBBLE:

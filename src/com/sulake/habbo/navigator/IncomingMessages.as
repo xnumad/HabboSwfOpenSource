@@ -388,7 +388,7 @@
             var _local_2:_Str_5654 = _Str_7272(k).getParser();
             if (this._navigator._Str_25806)
             {
-                this._navigator._Str_2602.reportRoom(_local_2._Str_12434, this._navigator._Str_23036, "");
+                this._navigator.habboHelp.reportRoom(_local_2._Str_12434, this._navigator._Str_23036, "");
             }
             else
             {

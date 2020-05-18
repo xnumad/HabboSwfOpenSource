@@ -30,7 +30,7 @@
 
         public function HelpController(k:GuideHelpManager)
         {
-            this._habboHelp = k._Str_2602;
+            this._habboHelp = k.habboHelp;
             this._guideHelp = k;
         }
 
@@ -56,7 +56,7 @@
         {
             if (((this._helpDialog == null) && (!(this.disposed))))
             {
-                this._helpDialog = this._guideHelp._Str_2602._Str_4804("main_help");
+                this._helpDialog = this._guideHelp.habboHelp._Str_4804("main_help");
                 this._helpDialog._Str_2429.procedure = this._Str_18394;
             }
         }
@@ -137,7 +137,7 @@
             if (((this._tourPopup == null) && (!(this.disposed))))
             {
                 this._tourPopupShowTime = getTimer();
-                this._tourPopup = (this._guideHelp._Str_2602.getXmlWindow("welcome_tour_popup") as IWindowContainer);
+                this._tourPopup = (this._guideHelp.habboHelp.getXmlWindow("welcome_tour_popup") as IWindowContainer);
                 this._tourPopup.center();
                 this._tourPopup.y = (this._tourPopup.y * 0.25);
                 this._tourPopup.procedure = this._Str_23264;

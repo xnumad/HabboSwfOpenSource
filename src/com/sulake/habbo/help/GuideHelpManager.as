@@ -32,7 +32,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
         }
 
-        public function get _Str_2602():HabboHelp
+        public function get habboHelp():HabboHelp
         {
             return this._habboHelp;
         }

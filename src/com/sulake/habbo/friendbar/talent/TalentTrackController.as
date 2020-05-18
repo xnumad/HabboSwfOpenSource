@@ -646,7 +646,7 @@
                     return;
                 case _Str_2821._Str_7735:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent._Str_2602._Str_8723();
+                    this._habboTalent.habboHelp._Str_8723();
                     return;
             }
         }
@@ -805,7 +805,7 @@
                     return;
                 case _Str_2821._Str_13382:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent._Str_2602.showHabboWay();
+                    this._habboTalent.habboHelp.showHabboWay();
                     return;
                 case _Str_2821._Str_17723:
                     this._Str_8556(_arg_2.name);
@@ -818,7 +818,7 @@
                     return;
                 case _Str_2821._Str_7735:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent._Str_2602._Str_8723();
+                    this._habboTalent.habboHelp._Str_8723();
                     return;
                 case _Str_2821.ROOM_ENTRY_1:
                 case _Str_2821.ROOM_ENTRY_2:
@@ -855,7 +855,7 @@
                 this._Str_2669();
                 this._Str_8036();
                 this._habboTalent.send(new _Str_6216());
-                this._habboTalent._Str_2602._Str_18271();
+                this._habboTalent.habboHelp._Str_18271();
                 this._habboTalent.tracking.trackEventLog("Help", "", "tour.new_user.accept");
                 this._habboTalent.tracking.trackGoogle("newbieTourWindow", "click_acceptTour");
             }

@@ -53,7 +53,7 @@
         function get avatarEditor():IHabboAvatarEditor;
         function get catalog():IHabboCatalog;
         function get localization():IHabboLocalizationManager;
-        function get _Str_2602():IHabboHelp;
+        function get habboHelp():IHabboHelp;
         function get config():IHabboConfigurationManager;
         function get _Str_2476():IHabboSoundManager;
         function get messenger():IHabboMessenger;

@@ -326,7 +326,7 @@
             return this._localization;
         }
 
-        public function get _Str_2602():IHabboHelp
+        public function get habboHelp():IHabboHelp
         {
             return this._habboHelp;
         }
@@ -467,7 +467,7 @@
             this._localization = k;
         }
 
-        public function set _Str_2602(k:IHabboHelp):void
+        public function set habboHelp(k:IHabboHelp):void
         {
             this._habboHelp = k;
         }

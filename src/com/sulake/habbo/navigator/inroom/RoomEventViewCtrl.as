@@ -462,7 +462,7 @@
         {
             this._Str_2272.trackGoogle("roomInfo", "reportRoom");
             var _local_2:_Str_2370 = this._Str_2272.data._Str_2678;
-            this._Str_2272._Str_2602.reportRoom(_local_2.flatId, _local_2.roomName, _local_2.description);
+            this._Str_2272.habboHelp.reportRoom(_local_2.flatId, _local_2.roomName, _local_2.description);
             this.close();
         }
 

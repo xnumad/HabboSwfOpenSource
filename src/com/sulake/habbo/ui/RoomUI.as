@@ -1101,7 +1101,7 @@
             _local_3.catalog = this._catalog;
             _local_3._Str_25206 = this._adManager;
             _local_3.localization = this._localization;
-            _local_3._Str_2602 = this._habboHelp;
+            _local_3.habboHelp = this._habboHelp;
             _local_3.moderation = this._moderation;
             _local_3.config = this;
             _local_3._Str_2476 = this._soundManager;
@@ -1282,7 +1282,7 @@
             return this._freeFlowChat;
         }
 
-        public function get _Str_2602():IHabboHelp
+        public function get habboHelp():IHabboHelp
         {
             return this._habboHelp;
         }

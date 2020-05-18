@@ -45,7 +45,7 @@
         function get localization():IHabboLocalizationManager;
         function get _Str_7596():OfficialRoomEntryManager;
         function get toolbar():IHabboToolbar;
-        function get _Str_2602():IHabboHelp;
+        function get habboHelp():IHabboHelp;
         function get _Str_5048():RoomEventInfoCtrl;
         function get _Str_6472():RoomFilterCtrl;
         function get roomSessionManager():IRoomSessionManager;

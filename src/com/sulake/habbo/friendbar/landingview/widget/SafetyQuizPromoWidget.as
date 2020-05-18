@@ -31,7 +31,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (_arg_2.name == "safety_quiz_button")))
             {
-                this._landingView._Str_2602._Str_8723();
+                this._landingView.habboHelp._Str_8723();
             }
         }
 

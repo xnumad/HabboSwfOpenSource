@@ -11,6 +11,6 @@
         function goToRoom(_arg_1:int, _arg_2:String="mainview"):void;
         function get isReady():Boolean;
         function get _Str_2559():IHabboNavigator;
-        function get _Str_2602():IHabboHelp;
+        function get habboHelp():IHabboHelp;
     }
 }

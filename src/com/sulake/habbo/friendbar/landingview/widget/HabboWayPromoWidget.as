@@ -53,7 +53,7 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._landingView._Str_2602.showHabboWay();
+                this._landingView.habboHelp.showHabboWay();
             }
         }
 

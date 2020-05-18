@@ -48,7 +48,7 @@
             this._notificationQueue = new Array();
             this._styleConfiguration = new Map();
             this._achievementNotifications = new Dictionary();
-            this._alertDialogManager = new HabboAlertDialogManager(this._notifications.windowManager, this._notifications.localization, this._notifications._Str_2602);
+            this._alertDialogManager = new HabboAlertDialogManager(this._notifications.windowManager, this._notifications.localization, this._notifications.habboHelp);
             var _local_2:IAsset = this._notifications.assetLibrary.getAssetByName("habbo_notifications_config_xml");
             var _local_3:XmlAsset = XmlAsset(_local_2);
             if (_local_3 != null)

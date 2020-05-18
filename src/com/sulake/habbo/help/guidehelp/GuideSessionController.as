@@ -131,7 +131,7 @@
         {
             this._windowPosition = new Point(120, 80);
             super();
-            this._habboHelp = k._Str_2602;
+            this._habboHelp = k.habboHelp;
             this._guideHelp = k;
             this._sessionData = new GuideSessionData();
             this._chatMsg = IWidgetWindow(this._habboHelp.getXmlWindow("chat_msg"));
@@ -1417,7 +1417,7 @@
                 this.closeWindow();
             }
             Logger.log(("Opening window " + this._sessionData._Str_3201));
-            this._window = (this._guideHelp._Str_2602.getXmlWindow(this._sessionData._Str_3201) as IWindowContainer);
+            this._window = (this._guideHelp.habboHelp.getXmlWindow(this._sessionData._Str_3201) as IWindowContainer);
             this._window.position = this._windowPosition;
             this._window.procedure = k;
             this._window.findChildByName("header_button_close").visible = _arg_2;

@@ -529,12 +529,12 @@
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_REPORT:
-                    if (((this._container == null) || (this._container._Str_2602 == null))) break;
+                    if (((this._container == null) || (this._container.habboHelp == null))) break;
                     if (_local_3 == null) break;
-                    this._container._Str_2602._Str_6694(_local_2, -1, null);
+                    this._container.habboHelp._Str_6694(_local_2, -1, null);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_REPORT_CFH_OTHER:
-                    this._container._Str_2602._Str_6694(_local_2, 124, null);
+                    this._container.habboHelp._Str_6694(_local_2, 124, null);
                     break;
                 case RoomWidgetPetCommandMessage.RWPCM_REQUEST_PET_COMMANDS:
                     _local_14 = (k as RoomWidgetPetCommandMessage);

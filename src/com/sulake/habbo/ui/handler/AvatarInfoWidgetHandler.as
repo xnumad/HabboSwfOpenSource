@@ -292,7 +292,7 @@
                     this._Str_19177();
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_START_NAME_CHANGE:
-                    this._container._Str_2602._Str_1131();
+                    this._container.habboHelp._Str_1131();
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE:
                     this._widget._Str_25663 = false;

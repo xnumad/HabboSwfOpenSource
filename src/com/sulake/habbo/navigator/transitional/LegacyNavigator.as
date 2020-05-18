@@ -155,9 +155,9 @@
             return this._oldNavigator.toolbar;
         }
 
-        public function get _Str_2602():IHabboHelp
+        public function get habboHelp():IHabboHelp
         {
-            return this._oldNavigator._Str_2602;
+            return this._oldNavigator.habboHelp;
         }
 
         public function get _Str_5048():RoomEventInfoCtrl

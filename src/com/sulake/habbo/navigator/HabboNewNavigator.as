@@ -618,7 +618,7 @@
             this.trackEventLog("browse.toggleviewmode", "ViewMode", "", _arg_2);
         }
 
-        public function get _Str_2602():IHabboHelp
+        public function get habboHelp():IHabboHelp
         {
             return this._habboHelp;
         }
