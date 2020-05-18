@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.error.ConnectionErrorMessageParser;
 
-    public class ConnectionErrorEvent extends MessageEvent implements IMessageEvent 
+    public class ErrorReportEvent extends MessageEvent implements IMessageEvent 
     {
-        public function ConnectionErrorEvent(k:Function)
+        public function ErrorReportEvent(k:Function)
         {
             super(k, ConnectionErrorMessageParser);
         }

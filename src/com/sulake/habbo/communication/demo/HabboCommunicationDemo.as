@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.PingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.error.ConnectionErrorEvent;
+    import com.sulake.habbo.communication.messages.incoming.error.ErrorReportEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UniqueMachineIDEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.InitDiffieHandshakeEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.IdentityAccountsEvent;
@@ -185,7 +185,7 @@
             this._communication.addHabboConnectionMessageEvent(new GenericErrorEvent(this.onGenericError));
             this._communication.addHabboConnectionMessageEvent(new PingMessageEvent(this._Str_24721));
             this._communication.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_22456));
-            this._communication.addHabboConnectionMessageEvent(new ConnectionErrorEvent(this._Str_24454));
+            this._communication.addHabboConnectionMessageEvent(new ErrorReportEvent(this._Str_24454));
             this._communication.addHabboConnectionMessageEvent(new UniqueMachineIDEvent(this._Str_22966));
             this._communication.addHabboConnectionMessageEvent(new InitDiffieHandshakeEvent(this._Str_22382));
             this._communication.addHabboConnectionMessageEvent(new IdentityAccountsEvent(this._Str_23715));
@@ -504,7 +504,7 @@
 
         private function _Str_24454(event:IMessageEvent):void
         {
-            var parser:ConnectionErrorMessageParser = (event as ConnectionErrorEvent).getParser();
+            var parser:ConnectionErrorMessageParser = (event as ErrorReportEvent).getParser();
             var errorCode:int = parser.errorCode;
             var messageId:int = parser.messageId;
             var time:String = parser.timestamp;

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication
 {
-	import com.sulake.habbo.communication.messages.incoming.error.ConnectionErrorEvent;
+	import com.sulake.habbo.communication.messages.incoming.error.ErrorReportEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalEarnedPrizesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.ConcurrentUsersGoalProgressMessageEvent;
@@ -995,7 +995,7 @@
             INCOMING_PACKETS[10] = LatencyPingResponseMessageEvent;
             INCOMING_PACKETS[1000] = CraftableProductsEvent;
             INCOMING_PACKETS[1001] = TradingCompletedEvent;
-            INCOMING_PACKETS[1004] = ConnectionErrorEvent;
+            INCOMING_PACKETS[1004] = ErrorReportEvent;
             INCOMING_PACKETS[1016] = GuideSessionPartnerIsTypingEvent;
             INCOMING_PACKETS[1032] = CatalogPagesListEvent;
             INCOMING_PACKETS[1033] = _Str_8292;
