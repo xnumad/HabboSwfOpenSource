@@ -17,7 +17,7 @@
     import __AS3__.vec.Vector;
     import flash.net.URLRequest;
     import com.sulake.core.assets.AssetLoaderStruct;
-    import com.sulake.habbo.communication.messages.incoming._Str_483.InterstitialMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
     import flash.system.Security;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;

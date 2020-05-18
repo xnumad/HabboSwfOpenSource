@@ -381,8 +381,8 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
-	import com.sulake.habbo.communication.messages.incoming._Str_483.InterstitialMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorEvent;
+	import com.sulake.habbo.communication.messages.incoming.advertisement.InterstitialMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.advertisement.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
