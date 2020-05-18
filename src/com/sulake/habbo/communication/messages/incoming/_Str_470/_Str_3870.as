@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_505._Str_5515;
+    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
 
     public class _Str_3870 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_3870(k:Function)
         {
-            super(k, _Str_5515);
+            super(k, AccountPreferencesParser);
         }
 
-        public function getParser():_Str_5515
+        public function getParser():AccountPreferencesParser
         {
-            return this._parser as _Str_5515;
+            return this._parser as AccountPreferencesParser;
         }
     }
 }

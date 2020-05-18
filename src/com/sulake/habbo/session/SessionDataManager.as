@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7765;
     import com.sulake.habbo.session.events.MysteryBoxKeysUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_505._Str_5515;
+    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_6831;
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
@@ -412,7 +412,7 @@
 
         private function _Str_10366(k:_Str_3870):void
         {
-            var _local_2:_Str_5515 = (k.getParser() as _Str_5515);
+            var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._roomCameraFollowUser = _local_2.roomCameraFollowUser;
             this._Str_3790 = _local_2._Str_8444;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));

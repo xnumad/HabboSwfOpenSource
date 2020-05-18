@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11698;
-    import com.sulake.habbo.communication.messages.parser._Str_505._Str_5515;
+    import com.sulake.habbo.communication.messages.parser._Str_505.AccountPreferencesParser;
     import com.sulake.core.communication.messages.IMessageEvent;
 
     public class HabboSoundManagerFlash10 extends Component implements IHabboSoundManager, IUpdateReceiver 
@@ -453,7 +453,7 @@
         private function _Str_24903(k:IMessageEvent):void
         {
             var _local_2:_Str_3870 = (k as _Str_3870);
-            var _local_3:_Str_5515 = (_local_2.getParser() as _Str_5515);
+            var _local_3:AccountPreferencesParser = (_local_2.getParser() as AccountPreferencesParser);
             var _local_4:Number = _local_3._Str_16610;
             if (_local_4 == 1)
             {

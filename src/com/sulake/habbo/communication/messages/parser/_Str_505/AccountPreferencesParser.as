@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5515 implements IMessageParser 
+    public class AccountPreferencesParser implements IMessageParser 
     {
         private var _traxVolume:int;
         private var _furniVolume:int;
