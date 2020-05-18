@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10514;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_9893;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11259;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
     import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
@@ -422,7 +422,7 @@
 
         public function muteUser(userId:int, minutes:int):void
         {
-            this._connection.send(new _Str_11259(userId, minutes, this.roomId));
+            this._connection.send(new RoomUserMuteMessageComposer(userId, minutes, this.roomId));
         }
 
         public function _Str_20139(k:int):void

@@ -861,7 +861,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10514;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11259;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11661;
@@ -1863,7 +1863,7 @@
             OUTGOING_PACKETS[3456] = _Str_9462;
             OUTGOING_PACKETS[3457] = EventLogMessageComposer;
             OUTGOING_PACKETS[3483] = _Str_6074;
-            OUTGOING_PACKETS[3485] = _Str_11259;
+            OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;
             OUTGOING_PACKETS[3492] = _Str_11783;
             OUTGOING_PACKETS[3493] = _Str_10536;
             OUTGOING_PACKETS[3498] = _Str_11141;
