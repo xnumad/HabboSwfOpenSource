@@ -37,7 +37,7 @@
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
-            this._Str_5039();
+            this.updateSoundIcons();
         }
 
         public function dispose():void
@@ -77,11 +77,11 @@
                     this._meMenuSoundSettingsView.saveVolume(-1, -1, k, _arg_2);
                     break;
             }
-            this._Str_5039();
+            this.updateSoundIcons();
             this._meMenuSoundSettingsView._Str_7269();
         }
 
-        private function _Str_5039():void
+        private function updateSoundIcons():void
         {
             if (this._volume == 0)
             {
@@ -120,7 +120,7 @@
         public function _Str_2526(k:Number):void
         {
             this._slider.setValue(k);
-            this._Str_5039();
+            this.updateSoundIcons();
         }
     }
 }

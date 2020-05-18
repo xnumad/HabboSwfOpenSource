@@ -41,7 +41,7 @@
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_20465);
                 _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_20868);
             }
-            this._Str_5039();
+            this.updateSoundIcons();
         }
 
         public function dispose():void
@@ -81,10 +81,10 @@
                     this._meMenuSoundSettingsView.saveVolume(-1, -1, k, _arg_2);
                     break;
             }
-            this._Str_5039();
+            this.updateSoundIcons();
         }
 
-        private function _Str_5039():void
+        private function updateSoundIcons():void
         {
             if (this._volume == 0)
             {
@@ -165,7 +165,7 @@
         public function _Str_2526(k:Number):void
         {
             this._slider._Str_2526(k);
-            this._Str_5039();
+            this.updateSoundIcons();
         }
     }
 }
