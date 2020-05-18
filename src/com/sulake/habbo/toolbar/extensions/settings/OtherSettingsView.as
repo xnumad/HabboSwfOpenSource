@@ -12,12 +12,12 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11774;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 
-    public class _Str_8732 
+    public class OtherSettingsView 
     {
         private var _window:IWindowContainer;
         private var _habboToolbar:HabboToolbar;
 
-        public function _Str_8732(k:HabboToolbar)
+        public function OtherSettingsView(k:HabboToolbar)
         {
             this._habboToolbar = k;
             this.createWindow();
