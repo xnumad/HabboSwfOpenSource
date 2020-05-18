@@ -141,7 +141,7 @@
 
         private function _Str_10366(k:AccountPreferencesEvent):void
         {
-            this._Str_9090 = k.getParser()._Str_22473;
+            this._Str_9090 = k.getParser().roomInvitesIgnored;
         }
 
         public function _Str_16882():Boolean

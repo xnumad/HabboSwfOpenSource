@@ -15,27 +15,27 @@
         private var _preferedChatStyle:int;
 
 
-        public function get _Str_3410():int
+        public function get traxVolume():int
         {
             return this._traxVolume;
         }
 
-        public function get _Str_3488():int
+        public function get furniVolume():int
         {
             return this._furniVolume;
         }
 
-        public function get _Str_16610():int
+        public function get uiVolume():int
         {
             return this._uiVolume;
         }
 
-        public function get _Str_25556():Boolean
+        public function get freeFlowChatDisabled():Boolean
         {
             return this._freeFlowChatDisabled;
         }
 
-        public function get _Str_22473():Boolean
+        public function get roomInvitesIgnored():Boolean
         {
             return this._roomInvitesIgnored;
         }
@@ -45,12 +45,12 @@
             return this._roomCameraFollowUser;
         }
 
-        public function get _Str_8444():int
+        public function get uiFlags():int
         {
             return this._uiFlags;
         }
 
-        public function get _Str_6984():int
+        public function get preferedChatStyle():int
         {
             return this._preferedChatStyle;
         }

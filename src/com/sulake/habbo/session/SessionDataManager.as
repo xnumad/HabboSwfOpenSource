@@ -414,7 +414,7 @@
         {
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._roomCameraFollowUser = _local_2.roomCameraFollowUser;
-            this._Str_3790 = _local_2._Str_8444;
+            this._Str_3790 = _local_2.uiFlags;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
         }
 

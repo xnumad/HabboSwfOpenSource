@@ -454,12 +454,12 @@
         {
             var _local_2:AccountPreferencesEvent = (k as AccountPreferencesEvent);
             var _local_3:AccountPreferencesParser = (_local_2.getParser() as AccountPreferencesParser);
-            var _local_4:Number = _local_3._Str_16610;
+            var _local_4:Number = _local_3.uiVolume;
             if (_local_4 == 1)
             {
                 _local_4 = 100;
             }
-            this._Str_9171((_local_4 / 100), (_local_3._Str_3488 / 100), (_local_3._Str_3410 / 100));
+            this._Str_9171((_local_4 / 100), (_local_3.furniVolume / 100), (_local_3.traxVolume / 100));
         }
 
         private function _Str_23975():void

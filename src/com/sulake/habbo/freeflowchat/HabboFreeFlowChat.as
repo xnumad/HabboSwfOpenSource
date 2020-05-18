@@ -268,8 +268,8 @@
 
         private function _Str_10366(k:AccountPreferencesEvent):void
         {
-            this._freeFlowDisabled = k.getParser()._Str_25556;
-            this._preferedChatStyle = k.getParser()._Str_6984;
+            this._freeFlowDisabled = k.getParser().freeFlowChatDisabled;
+            this._preferedChatStyle = k.getParser().preferedChatStyle;
         }
 
         public function _Str_19756():BitmapData
