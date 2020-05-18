@@ -98,7 +98,7 @@
             var _local_16:String;
             var _local_17:_Str_2370;
             var userToKick:RoomUserData;
-            var _local_19:RoomUserData;
+            var userToMute:RoomUserData;
             var _local_20:RoomUserData;
             var _local_21:HabboToolbarEvent;
             var _local_22:Date;
@@ -265,10 +265,10 @@
                                     case ":mute":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            _local_19 = this._container.roomSession.userDataManager._Str_10979(_local_13);
-                                            if (_local_19)
+                                            userToMute = this._container.roomSession.userDataManager._Str_10979(_local_13);
+                                            if (userToMute)
                                             {
-                                                this._container.roomSession._Str_5984(_local_19.id, 2);
+                                                this._container.roomSession._Str_5984(userToMute.id, 2);
                                             }
                                         }
                                         return null;
