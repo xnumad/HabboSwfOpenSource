@@ -3,7 +3,7 @@
     import flash.display.Sprite;
     import onBoardingHc._Str_996;
     import com.sulake.core.runtime.IDisposable;
-    import onBoardingHcSteps._Str_960;
+    import onBoardingHcSteps.Background;
     import onBoardingHcSteps.AvatarEditor;
     import onBoardingHc.NameChangeDialog;
     import onBoardingHcSteps.RoomPicker;
@@ -38,7 +38,7 @@
         public static var _Str_2240:Class = OnBoardingHcFlow__Str_2240;
         private static const _Str_1278:Class = OnBoardingHcFlow__Str_1278;
 
-        private var _Str_803:_Str_960;
+        private var _Str_803:Background;
         private var _Str_1095:AvatarEditor;
         private var _Str_1952:Sprite;
         private var _Str_907:NameChangeDialog;
@@ -134,7 +134,7 @@
         public function init(k:String):void
         {
             stage.addEventListener(Event.RESIZE, this._Str_1001);
-            this._Str_803 = new _Str_960();
+            this._Str_803 = new Background();
             addChild(this._Str_803);
             this._Str_1170 = new Sprite();
             addChild(this._Str_1170);

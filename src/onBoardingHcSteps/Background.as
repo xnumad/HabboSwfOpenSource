@@ -10,15 +10,15 @@
     import flash.display.SpreadMethod;
     import onBoardingHcSteps.images.*;
 
-    public class _Str_960 extends Sprite implements IDisposable 
+    public class Background extends Sprite implements IDisposable 
     {
-        private static const _Str_1382:Class = _Str_960__Str_1382;
+        private static const _Str_1382:Class = Background__Str_1382;
 
         private var _backgroundImage:BitmapData;
         private var _disposed:Boolean;
         private var _lines:Sprite;
 
-        public function _Str_960()
+        public function Background()
         {
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
             addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
