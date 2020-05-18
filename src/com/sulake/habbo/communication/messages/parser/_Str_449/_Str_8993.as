@@ -14,7 +14,7 @@
             return this._resultCode;
         }
 
-        public function get _Str_17328():int
+        public function get millisecondsToAllowProcessReset():int
         {
             return this._millisecondsToAllowProcessReset;
         }

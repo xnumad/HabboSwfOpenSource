@@ -178,7 +178,7 @@
                 case PhoneNumberStatusEnum.ERROR:
                     if (((!(this._Str_8160)) && (!(this._Str_9578))))
                     {
-                        this._Str_15062 = (getTimer() + k.getParser()._Str_17328);
+                        this._Str_15062 = (getTimer() + k.getParser().millisecondsToAllowProcessReset);
                         this._Str_13939();
                     }
                     else
@@ -212,7 +212,7 @@
                 }
                 else
                 {
-                    this._Str_15062 = (k.getParser()._Str_17328 + getTimer());
+                    this._Str_15062 = (k.getParser().millisecondsToAllowProcessReset + getTimer());
                     this._Str_13939();
                 }
                 return;

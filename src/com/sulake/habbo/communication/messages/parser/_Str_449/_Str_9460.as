@@ -20,7 +20,7 @@
             return this._Str_19995;
         }
 
-        public function get _Str_17328():int
+        public function get millisecondsToAllowProcessReset():int
         {
             return this._millisecondsToAllowProcessReset;
         }
