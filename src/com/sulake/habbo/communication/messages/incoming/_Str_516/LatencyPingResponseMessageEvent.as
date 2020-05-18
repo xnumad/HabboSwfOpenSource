@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser._Str_524.PongMessageParser;
 
-    public class PongEvent extends MessageEvent implements IMessageEvent 
+    public class LatencyPingResponseMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function PongEvent(k:Function)
+        public function LatencyPingResponseMessageEvent(k:Function)
         {
             super(k, PongMessageParser);
         }

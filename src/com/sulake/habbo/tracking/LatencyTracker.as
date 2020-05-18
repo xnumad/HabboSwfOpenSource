@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingRequestMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.tracking.LatencyPingReportMessageComposer;
     import com.sulake.habbo.communication.messages.parser._Str_524.PongMessageParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_516.PongEvent;
+    import com.sulake.habbo.communication.messages.incoming._Str_516.LatencyPingResponseMessageEvent;
 
     public class LatencyTracker implements IDisposable 
     {
@@ -76,7 +76,7 @@
             this._testId++;
         }
 
-        public function _Str_17172(k:PongEvent):void
+        public function _Str_17172(k:LatencyPingResponseMessageEvent):void
         {
             var _local_5:int;
             var _local_6:int;
