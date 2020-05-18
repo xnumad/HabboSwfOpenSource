@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8993 implements IMessageParser 
+    public class TryVerificationCodeResultParser implements IMessageParser 
     {
         private var _resultCode:int;
         private var _millisecondsToAllowProcessReset:int;
