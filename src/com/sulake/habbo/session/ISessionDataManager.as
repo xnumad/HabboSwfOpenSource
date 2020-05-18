@@ -77,6 +77,6 @@
         function get roomCameraFollowUser():Boolean;
         function setFriendBarState(_arg_1:Boolean):void;
         function setRoomToolsState(_arg_1:Boolean):void;
-        function get _Str_8444():int;
+        function get uiFlags():int;
     }
 }

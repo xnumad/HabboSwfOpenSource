@@ -841,7 +841,7 @@
 
         private function _Str_10326(k:SessionDataPreferencesEvent):void
         {
-            if (!(k._Str_8444 & UIFlags._Str_14290))
+            if (!(k.uiFlags & UIFlags._Str_14290))
             {
                 if (!this._Str_3312)
                 {

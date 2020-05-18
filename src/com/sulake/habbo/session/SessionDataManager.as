@@ -559,7 +559,7 @@
             this._Str_19986(UIFlags._Str_13691, k);
         }
 
-        public function get _Str_8444():int
+        public function get uiFlags():int
         {
             return this._Str_3790;
         }

@@ -14,7 +14,7 @@
             super(APUE_UPDATED, _arg_2, _arg_3);
         }
 
-        public function get _Str_8444():int
+        public function get uiFlags():int
         {
             return this._uiFlags;
         }
