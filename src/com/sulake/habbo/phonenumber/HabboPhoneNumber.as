@@ -16,7 +16,7 @@
     import com.sulake.iid.IIDHabboLocalizationManager;
     import com.sulake.iid.IIDHabboToolbar;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9537;
+    import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_447._Str_8427;
     import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9151;
     import com.sulake.habbo.communication.messages.outgoing._Str_391._Str_9957;
@@ -71,7 +71,7 @@
             if (getBoolean("sms.identity.verification.enabled"))
             {
                 this._Str_2310 = this._Str_2355.connection;
-                this._Str_2310.addMessageEvent(new _Str_9537(this._Str_24899));
+                this._Str_2310.addMessageEvent(new PhoneCollectionStateMessageEvent(this._Str_24899));
                 this._Str_2310.addMessageEvent(new _Str_8427(this._Str_23318));
                 this._Str_2310.addMessageEvent(new _Str_9151(this._Str_22688));
             }
@@ -193,7 +193,7 @@
             }
         }
 
-        private function _Str_24899(k:_Str_9537):void
+        private function _Str_24899(k:PhoneCollectionStateMessageEvent):void
         {
             var _local_2:int = k.getParser().collectionStatusCode;
             var _local_3:int = k.getParser().phoneStatusCode;

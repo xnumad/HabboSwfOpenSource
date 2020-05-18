@@ -302,7 +302,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
 	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_8427;
 	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9151;
-	import com.sulake.habbo.communication.messages.incoming._Str_447._Str_9537;
+	import com.sulake.habbo.communication.messages.incoming._Str_447.PhoneCollectionStateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8413;
 	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8746;
@@ -1257,7 +1257,7 @@
             INCOMING_PACKETS[2867] = _Str_6944;
             INCOMING_PACKETS[2873] = _Str_15990; //Unknown Trading Event
             INCOMING_PACKETS[2875] = _Str_5633;
-            INCOMING_PACKETS[2890] = _Str_9537;
+            INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;
             INCOMING_PACKETS[2893] = _Str_5416;
             INCOMING_PACKETS[2897] = _Str_5752;
             INCOMING_PACKETS[2901] = PetInfoMessageEvent;
