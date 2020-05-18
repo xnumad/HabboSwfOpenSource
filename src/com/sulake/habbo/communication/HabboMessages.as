@@ -381,7 +381,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
-	import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
+	import com.sulake.habbo.communication.messages.incoming._Str_483.InterstitialMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
@@ -1109,7 +1109,7 @@
             INCOMING_PACKETS[178] = _Str_4585;
             INCOMING_PACKETS[1787] = _Str_8054;
             INCOMING_PACKETS[1797] = _Str_7216;
-            INCOMING_PACKETS[1808] = _Str_8332;
+            INCOMING_PACKETS[1808] = InterstitialMessageEvent;
             INCOMING_PACKETS[1815] = _Str_9204;
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
             INCOMING_PACKETS[1829] = _Str_8464;

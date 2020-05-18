@@ -17,7 +17,7 @@
     import __AS3__.vec.Vector;
     import flash.net.URLRequest;
     import com.sulake.core.assets.AssetLoaderStruct;
-    import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
+    import com.sulake.habbo.communication.messages.incoming._Str_483.InterstitialMessageEvent;
     import flash.system.Security;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
@@ -69,7 +69,7 @@
             var urlRequest:URLRequest;
             var asset:AssetLoaderStruct;
             this._billboardImageLoaders = new Map();
-            this._interstitialMessageEvent = this._communicationManager.addHabboConnectionMessageEvent(new _Str_8332(this._Str_24116));
+            this._interstitialMessageEvent = this._communicationManager.addHabboConnectionMessageEvent(new InterstitialMessageEvent(this._Str_24116));
             var k:String = getProperty("ads.domain");
             if (k != "")
             {
@@ -134,7 +134,7 @@
             this._communicationManager.connection.send(new _Str_10855());
         }
 
-        private function _Str_24116(k:_Str_8332):void
+        private function _Str_24116(k:InterstitialMessageEvent):void
         {
             var _local_2:_Str_7915 = k.getParser();
             if (((_local_2) && (_local_2._Str_24162)))
