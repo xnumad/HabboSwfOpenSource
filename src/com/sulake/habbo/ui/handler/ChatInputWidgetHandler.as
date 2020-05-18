@@ -254,7 +254,7 @@
                                     case ":kick":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            userToKick = this._container.roomSession.userDataManager._Str_10979(commandArgument);
+                                            userToKick = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (userToKick)
                                             {
                                                 this._container.roomSession.kickUser(userToKick.id);
@@ -265,7 +265,7 @@
                                     case ":mute":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            userToMute = this._container.roomSession.userDataManager._Str_10979(commandArgument);
+                                            userToMute = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (userToMute)
                                             {
                                                 this._container.roomSession._Str_5984(userToMute.id, 2);
@@ -317,7 +317,7 @@
                                     case ":aalert":
                                         if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
-                                            _local_20 = this._container.roomSession.userDataManager._Str_10979(commandArgument);
+                                            _local_20 = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (_local_20)
                                             {
                                                 this._container.roomSession._Str_18152(_local_20.id);

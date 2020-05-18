@@ -61,7 +61,7 @@
             return this._userDataByRoomIndex.getValue(k);
         }
 
-        public function _Str_10979(k:String):RoomUserData
+        public function getUserDataByName(k:String):RoomUserData
         {
             var _local_2:RoomUserData;
             for each (_local_2 in this._userDataByRoomIndex)

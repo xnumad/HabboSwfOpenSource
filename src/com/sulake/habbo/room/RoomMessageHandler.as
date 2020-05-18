@@ -1269,7 +1269,7 @@
                 return;
             }
             var _local_2:_Str_5459 = (k as _Str_5459);
-            var _local_3:RoomUserData = this._roomCreator.roomSessionManager.getSession(this._currentRoomId).userDataManager._Str_10979(_local_2.name);
+            var _local_3:RoomUserData = this._roomCreator.roomSessionManager.getSession(this._currentRoomId).userDataManager.getUserDataByName(_local_2.name);
             if (_local_3 != null)
             {
                 switch (_local_2.result)
