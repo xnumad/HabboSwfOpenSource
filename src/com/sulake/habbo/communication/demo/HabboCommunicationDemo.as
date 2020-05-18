@@ -24,7 +24,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.GenericErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.PingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_100.ConnectionErrorEvent;
+    import com.sulake.habbo.communication.messages.incoming.error.ConnectionErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UniqueMachineIDEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.InitDiffieHandshakeEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.IdentityAccountsEvent;

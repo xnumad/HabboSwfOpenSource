@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication
 {
-	import com.sulake.habbo.communication.messages.incoming._Str_100.ConnectionErrorEvent;
+	import com.sulake.habbo.communication.messages.incoming.error.ConnectionErrorEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalEarnedPrizesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.quest.ConcurrentUsersGoalProgressMessageEvent;
