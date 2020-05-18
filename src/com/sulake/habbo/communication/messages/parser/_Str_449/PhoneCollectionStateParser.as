@@ -10,7 +10,7 @@
         private var _millisecondsToAllowProcessReset:int;
 
 
-        public function get _Str_24357():int
+        public function get phoneStatusCode():int
         {
             return this._phoneStatusCode;
         }
