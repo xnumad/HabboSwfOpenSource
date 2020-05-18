@@ -92,7 +92,7 @@
             var _local_10:Array;
             var _local_11:int;
             var _local_12:String;
-            var _local_13:String;
+            var commandArgument:String;
             var _local_14:int;
             var _local_15:RoomUserData;
             var _local_16:String;
@@ -129,12 +129,12 @@
                             if (_local_10.length > 0)
                             {
                                 _local_12 = _local_10[0];
-                                _local_13 = "";
+                                commandArgument = "";
                                 if (_local_10.length > 1)
                                 {
-                                    _local_13 = _local_10[1];
+                                    commandArgument = _local_10[1];
                                 }
-                                if (((_local_12.charAt(0) == ":") && (_local_13 == "x")))
+                                if (((_local_12.charAt(0) == ":") && (commandArgument == "x")))
                                 {
                                     _local_14 = this._container.roomEngine.getSelectedAvatarId();
                                     if (_local_14 > -1)
@@ -142,7 +142,7 @@
                                         _local_15 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_14);
                                         if (_local_15 != null)
                                         {
-                                            _local_13 = _local_15.name;
+                                            commandArgument = _local_15.name;
                                             _local_8 = _local_7.text.replace(" x", (" " + _local_15.name));
                                         }
                                     }
@@ -186,8 +186,8 @@
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "respect");
                                         return null;
                                     case ":sign":
-                                        this._container.roomSession._Str_16233(int(_local_13));
-                                        HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "sign", null, int(_local_13));
+                                        this._container.roomSession._Str_16233(int(commandArgument));
+                                        HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "sign", null, int(commandArgument));
                                         return null;
                                     case ":chooser":
                                         if ((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_13617))) || (this._container.sessionDataManager.isAmbassador)))
@@ -254,7 +254,7 @@
                                     case ":kick":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            userToKick = this._container.roomSession.userDataManager._Str_10979(_local_13);
+                                            userToKick = this._container.roomSession.userDataManager._Str_10979(commandArgument);
                                             if (userToKick)
                                             {
                                                 this._container.roomSession.kickUser(userToKick.id);
@@ -265,7 +265,7 @@
                                     case ":mute":
                                         if (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)
                                         {
-                                            userToMute = this._container.roomSession.userDataManager._Str_10979(_local_13);
+                                            userToMute = this._container.roomSession.userDataManager._Str_10979(commandArgument);
                                             if (userToMute)
                                             {
                                                 this._container.roomSession._Str_5984(userToMute.id, 2);
@@ -280,18 +280,18 @@
                                         }
                                         return null;
                                     case ":lang":
-                                        (this._container.localization as ICoreLocalizationManager).activateLocalizationDefinition(_local_13);
+                                        (this._container.localization as ICoreLocalizationManager).activateLocalizationDefinition(commandArgument);
                                         return null;
                                     case ":uc":
                                         if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
                                         {
-                                            if (_local_13 == "hotel")
+                                            if (commandArgument == "hotel")
                                             {
                                                 this._container.roomSession._Str_21574(_local_10[2]);
                                             }
                                             else
                                             {
-                                                this._container.roomSession._Str_16989(_local_13);
+                                                this._container.roomSession._Str_16989(commandArgument);
                                             }
                                         }
                                         return null;
@@ -304,7 +304,7 @@
                                     case ":avisit":
                                         if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
-                                            if ("group" == _local_13)
+                                            if ("group" == commandArgument)
                                             {
                                                 (this._container.roomEngine as Component).context.createLinkEvent("navigator/goto/predefined_group_lobby");
                                             }
@@ -317,7 +317,7 @@
                                     case ":aalert":
                                         if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
-                                            _local_20 = this._container.roomSession.userDataManager._Str_10979(_local_13);
+                                            _local_20 = this._container.roomSession.userDataManager._Str_10979(commandArgument);
                                             if (_local_20)
                                             {
                                                 this._container.roomSession._Str_18152(_local_20.id);
@@ -327,22 +327,22 @@
                                     case ":visit":
                                         if (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)
                                         {
-                                            this._container.roomSession.visit(_local_13);
+                                            this._container.roomSession.visit(commandArgument);
                                         }
                                         return null;
                                     case ":roomid":
                                         if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
                                         {
-											if (_local_13 != null && _local_13 != "")
+											if (commandArgument != null && commandArgument != "")
 											{
-												this._container.roomSession._Str_19906(parseInt(_local_13));
+												this._container.roomSession._Str_19906(parseInt(commandArgument));
 											}
                                         }
                                         return null;
                                     case ":link":
                                         break;
                                     case ":zoom":
-                                        this._container.roomEngine.events.dispatchEvent(new RoomZoomEvent(this._container.roomEngine.activeRoomId, Number(_local_13)));
+                                        this._container.roomEngine.events.dispatchEvent(new RoomZoomEvent(this._container.roomEngine.activeRoomId, Number(commandArgument)));
                                         return null;
                                     case ":cam":
                                     case ":camera":
