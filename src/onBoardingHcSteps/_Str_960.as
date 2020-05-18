@@ -51,7 +51,7 @@
             this.resize();
         }
 
-        protected function _Str_1546(k:Event):void
+        protected function stageChangeResize(k:Event):void
         {
             this.resize();
         }
