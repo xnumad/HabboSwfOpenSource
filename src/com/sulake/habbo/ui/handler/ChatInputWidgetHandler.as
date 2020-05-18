@@ -99,7 +99,7 @@
             var _local_17:_Str_2370;
             var userToKick:RoomUserData;
             var userToMute:RoomUserData;
-            var _local_20:RoomUserData;
+            var userToAlert:RoomUserData;
             var _local_21:HabboToolbarEvent;
             var _local_22:Date;
             var _local_23:String;
@@ -317,10 +317,10 @@
                                     case ":aalert":
                                         if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
                                         {
-                                            _local_20 = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
-                                            if (_local_20)
+                                            userToAlert = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
+                                            if (userToAlert)
                                             {
-                                                this._container.roomSession._Str_18152(_local_20.id);
+                                                this._container.roomSession._Str_18152(userToAlert.id);
                                             }
                                         }
                                         return null;
