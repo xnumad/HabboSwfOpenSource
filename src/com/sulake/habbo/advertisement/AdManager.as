@@ -22,7 +22,7 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
-    import com.sulake.habbo.communication.messages.parser.advertisement._Str_7915;
+    import com.sulake.habbo.communication.messages.parser.advertisement.InterstitialMessageParser;
     import com.sulake.habbo.advertisement.events.InterstitialEvent;
     import flash.display.Bitmap;
     import com.sulake.core.assets.IAsset;
@@ -136,7 +136,7 @@
 
         private function _Str_24116(k:InterstitialMessageEvent):void
         {
-            var _local_2:_Str_7915 = k.getParser();
+            var _local_2:InterstitialMessageParser = k.getParser();
             if (((_local_2) && (_local_2._Str_24162)))
             {
                 if (ExternalInterface.available)
