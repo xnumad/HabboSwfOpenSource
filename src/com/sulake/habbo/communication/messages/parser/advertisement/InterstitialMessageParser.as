@@ -8,7 +8,7 @@
         private var _canShowInterstitial:Boolean;
 
 
-        public function get _Str_24162():Boolean
+        public function get canShowInterstitial():Boolean
         {
             return this._canShowInterstitial;
         }

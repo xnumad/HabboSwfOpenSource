@@ -137,7 +137,7 @@
         private function _Str_24116(k:InterstitialMessageEvent):void
         {
             var _local_2:InterstitialMessageParser = k.getParser();
-            if (((_local_2) && (_local_2._Str_24162)))
+            if (((_local_2) && (_local_2.canShowInterstitial)))
             {
                 if (ExternalInterface.available)
                 {
