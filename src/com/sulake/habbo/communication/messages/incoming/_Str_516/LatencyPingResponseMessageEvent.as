@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_524.LatencyPingResponseMessageParser;
+    import com.sulake.habbo.communication.messages.parser.tracking.LatencyPingResponseMessageParser;
 
     public class LatencyPingResponseMessageEvent extends MessageEvent implements IMessageEvent 
     {
