@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser._Str_449.PhoneCollectionStateParser;
+    import com.sulake.habbo.communication.messages.parser.gifts.PhoneCollectionStateParser;
 
     public class PhoneCollectionStateMessageEvent extends MessageEvent implements IMessageEvent 
     {
