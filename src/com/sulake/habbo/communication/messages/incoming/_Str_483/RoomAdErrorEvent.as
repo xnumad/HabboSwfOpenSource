@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.advertisement.RoomAdErrorMessageParser;
 
-    public class RoomAdErrorMessage extends MessageEvent implements IMessageEvent 
+    public class RoomAdErrorEvent extends MessageEvent implements IMessageEvent 
     {
-        public function RoomAdErrorMessage(k:Function)
+        public function RoomAdErrorEvent(k:Function)
         {
             super(k, RoomAdErrorMessageParser);
         }

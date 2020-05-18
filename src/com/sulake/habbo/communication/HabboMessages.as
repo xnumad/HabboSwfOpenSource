@@ -382,7 +382,7 @@
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
 	import com.sulake.habbo.communication.messages.incoming._Str_483._Str_8332;
-	import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorMessage;
+	import com.sulake.habbo.communication.messages.incoming._Str_483.RoomAdErrorEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_484._Str_4639;
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9884;
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
@@ -1103,7 +1103,7 @@
             INCOMING_PACKETS[1746] = _Str_7734;
             INCOMING_PACKETS[1748] = _Str_8135;
             INCOMING_PACKETS[1752] = _Str_7632;
-            INCOMING_PACKETS[1759] = RoomAdErrorMessage;
+            INCOMING_PACKETS[1759] = RoomAdErrorEvent;
             INCOMING_PACKETS[1774] = _Str_8069;
             INCOMING_PACKETS[1778] = _Str_7849;
             INCOMING_PACKETS[178] = _Str_4585;
