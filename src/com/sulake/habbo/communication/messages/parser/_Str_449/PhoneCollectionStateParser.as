@@ -6,7 +6,7 @@
     public class PhoneCollectionStateParser implements IMessageParser 
     {
         private var _phoneStatusCode:int;
-        private var _Str_19995:int;
+        private var _collectionStatusCode:int;
         private var _millisecondsToAllowProcessReset:int;
 
 
@@ -17,7 +17,7 @@
 
         public function get _Str_24164():int
         {
-            return this._Str_19995;
+            return this._collectionStatusCode;
         }
 
         public function get millisecondsToAllowProcessReset():int
@@ -35,7 +35,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._phoneStatusCode = k.readInteger();
-            this._Str_19995 = k.readInteger();
+            this._collectionStatusCode = k.readInteger();
             this._millisecondsToAllowProcessReset = k.readInteger();
             return true;
         }
