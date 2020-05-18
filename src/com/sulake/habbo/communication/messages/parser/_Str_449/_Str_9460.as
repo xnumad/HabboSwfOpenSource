@@ -7,7 +7,7 @@
     {
         private var _Str_18491:int;
         private var _Str_19995:int;
-        private var _Str_8208:int;
+        private var _millisecondsToAllowProcessReset:int;
 
 
         public function get _Str_24357():int
@@ -22,13 +22,13 @@
 
         public function get _Str_17328():int
         {
-            return this._Str_8208;
+            return this._millisecondsToAllowProcessReset;
         }
 
         public function flush():Boolean
         {
             this._Str_18491 = -1;
-            this._Str_8208 = -1;
+            this._millisecondsToAllowProcessReset = -1;
             return true;
         }
 
@@ -36,7 +36,7 @@
         {
             this._Str_18491 = k.readInteger();
             this._Str_19995 = k.readInteger();
-            this._Str_8208 = k.readInteger();
+            this._millisecondsToAllowProcessReset = k.readInteger();
             return true;
         }
     }
