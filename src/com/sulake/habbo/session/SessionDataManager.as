@@ -413,7 +413,7 @@
         private function _Str_10366(k:AccountPreferencesEvent):void
         {
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
-            this._roomCameraFollowUser = _local_2.roomCameraFollowUser;
+            this._roomCameraFollowUser = _local_2.roomCameraFollowDisabled;
             this._Str_3790 = _local_2.uiFlags;
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
         }

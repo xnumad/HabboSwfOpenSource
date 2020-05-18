@@ -10,7 +10,7 @@
         private var _uiVolume:int;
         private var _freeFlowChatDisabled:Boolean;
         private var _roomInvitesIgnored:Boolean;
-        private var _roomCameraFollowUser:Boolean;
+        private var _roomCameraFollowDisabled:Boolean;
         private var _uiFlags:int;
         private var _preferedChatStyle:int;
 
@@ -40,9 +40,9 @@
             return this._roomInvitesIgnored;
         }
 
-        public function get roomCameraFollowUser():Boolean
+        public function get roomCameraFollowDisabled():Boolean
         {
-            return this._roomCameraFollowUser;
+            return this._roomCameraFollowDisabled;
         }
 
         public function get uiFlags():int
@@ -58,7 +58,7 @@
         public function flush():Boolean
         {
             this._freeFlowChatDisabled = false;
-            this._roomCameraFollowUser = false;
+            this._roomCameraFollowDisabled = false;
             this._uiFlags = 0;
             this._preferedChatStyle = 0;
             return true;
@@ -71,7 +71,7 @@
             this._traxVolume = k.readInteger();
             this._freeFlowChatDisabled = k.readBoolean();
             this._roomInvitesIgnored = k.readBoolean();
-            this._roomCameraFollowUser = k.readBoolean();
+            this._roomCameraFollowDisabled = k.readBoolean();
             this._uiFlags = k.readInteger();
             this._preferedChatStyle = k.readInteger();
             return true;
