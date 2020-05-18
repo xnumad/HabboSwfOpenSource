@@ -5,23 +5,23 @@
 
     public class InterstitialMessageParser implements IMessageParser 
     {
-        private var _Str_18536:Boolean;
+        private var _canShowInterstitial:Boolean;
 
 
         public function get _Str_24162():Boolean
         {
-            return this._Str_18536;
+            return this._canShowInterstitial;
         }
 
         public function flush():Boolean
         {
-            this._Str_18536 = false;
+            this._canShowInterstitial = false;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_18536 = k.readBoolean();
+            this._canShowInterstitial = k.readBoolean();
             return true;
         }
     }
