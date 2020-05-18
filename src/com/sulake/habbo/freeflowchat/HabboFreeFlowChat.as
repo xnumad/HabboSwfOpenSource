@@ -506,12 +506,12 @@
             this._communication.connection.send(new _Str_10312(this._freeFlowDisabled));
         }
 
-        public function get _Str_6984():int
+        public function get preferedChatStyle():int
         {
             return this._preferedChatStyle;
         }
 
-        public function set _Str_6984(k:int):void
+        public function set preferedChatStyle(k:int):void
         {
             this._preferedChatStyle = k;
             this._communication.connection.send(new _Str_12096(this._preferedChatStyle));

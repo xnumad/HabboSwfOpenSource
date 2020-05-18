@@ -10,8 +10,8 @@
         function get chatStyleLibrary():IChatStyleLibrary;
         function get isDisabledInPreferences():Boolean;
         function set isDisabledInPreferences(_arg_1:Boolean):void;
-        function get _Str_6984():int;
-        function set _Str_6984(_arg_1:int):void;
+        function get preferedChatStyle():int;
+        function set preferedChatStyle(_arg_1:int):void;
         function clear():void;
         function toggleVisibility():void;
     }

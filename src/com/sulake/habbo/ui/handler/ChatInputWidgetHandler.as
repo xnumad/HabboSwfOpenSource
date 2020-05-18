@@ -403,11 +403,11 @@
                             {
                                 if (this._container.freeFlowChat != null)
                                 {
-                                    if (((!(this._container.freeFlowChat._Str_6984 == _local_7.styleId)) && (!(_local_7.styleId == -1))))
+                                    if (((!(this._container.freeFlowChat.preferedChatStyle == _local_7.styleId)) && (!(_local_7.styleId == -1))))
                                     {
-                                        this._container.freeFlowChat._Str_6984 = _local_7.styleId;
+                                        this._container.freeFlowChat.preferedChatStyle = _local_7.styleId;
                                     }
-                                    _local_11 = this._container.freeFlowChat._Str_6984;
+                                    _local_11 = this._container.freeFlowChat.preferedChatStyle;
                                 }
                                 switch (_local_7.chatType)
                                 {
