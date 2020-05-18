@@ -867,7 +867,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11661;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_9893;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.*;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings.SaveRoomSettingsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomsettings._Str_11252;
@@ -1553,7 +1553,7 @@
             OUTGOING_PACKETS[1296] = _Str_8147;
             OUTGOING_PACKETS[1299] = _Str_10856;
             OUTGOING_PACKETS[1314] = _Str_7738;
-            OUTGOING_PACKETS[1320] = _Str_9893;
+            OUTGOING_PACKETS[1320] = RoomUserKickMessageComposer;
             OUTGOING_PACKETS[1325] = _Str_11631;
             OUTGOING_PACKETS[1328] = _Str_10642;
             OUTGOING_PACKETS[1334] = _Str_7424;
