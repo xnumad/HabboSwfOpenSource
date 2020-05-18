@@ -49,10 +49,10 @@
             this.active = true;
             mouseChildren = false;
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
             stage.removeEventListener(MouseEvent.MOUSE_UP, this._Str_1703);
             removeEventListener(MouseEvent.MOUSE_DOWN, this._Str_780);

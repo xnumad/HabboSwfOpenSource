@@ -17,10 +17,10 @@
             this._Str_1129 = new BitmapData(2, 2, true, (uint((k * 0xFF)) << 24));
             this._Str_1129.setPixel32(0, 0, ((uint((_local_3 * 0xFF)) << 24) + (_local_4 * 65793)));
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
             stage.removeEventListener(Event.RESIZE, this._Str_1001);
         }

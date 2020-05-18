@@ -63,7 +63,7 @@
             this._textField = new TextField();
             this._clipMask = new Sprite();
             this.addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            this.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            this.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
         public function set chatItem(k:ChatItem):void
@@ -290,7 +290,7 @@
             this.addEventListener(MouseEvent.CLICK, this.onMouseClick);
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
             this.removeEventListener(MouseEvent.CLICK, this.onMouseClick);
         }

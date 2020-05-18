@@ -21,7 +21,7 @@
         public function _Str_960()
         {
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
         public function dispose():void
@@ -38,7 +38,7 @@
             return this._disposed;
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
         }
 

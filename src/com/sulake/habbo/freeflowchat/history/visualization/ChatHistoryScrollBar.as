@@ -32,7 +32,7 @@
             this._displayObject.addChild(this._background);
             this._displayObject.addChild(this._thumbTrack);
             this._thumbTrack.addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            this._thumbTrack.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            this._thumbTrack.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
             this._thumbTrack.addEventListener(MouseEvent.MOUSE_DOWN, this._Str_24838);
         }
 
@@ -59,7 +59,7 @@
             this._registeredStage = this._thumbTrack.stage;
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
             this._registeredStage = null;
         }

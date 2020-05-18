@@ -87,7 +87,7 @@
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
             Logger.log("Habbo Loading Screen was removed from stage.");
         }
@@ -175,7 +175,7 @@
                 k.removeEventListener(Event.RESIZE, this.onResize);
             }
             removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            removeEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
             this._Str_1397(PHOTOSPLASHSCREEN);
             this._Str_1397(BACKGROUND);
             this._Str_1397(TEXTFIELD);

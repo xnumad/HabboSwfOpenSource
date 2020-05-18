@@ -112,7 +112,7 @@
             this._figureSetData = new Dictionary();
             this._figureColorData = new Dictionary();
             addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
-            addEventListener(Event.REMOVED_FROM_STAGE, this._Str_583);
+            addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
         }
 
         public function dispose():void
@@ -129,7 +129,7 @@
             return this._isDisposed;
         }
 
-        private function _Str_583(k:Event):void
+        private function onRemovedFromStage(k:Event):void
         {
         }
 
