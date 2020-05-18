@@ -12,7 +12,7 @@
 
     public class Background extends Sprite implements IDisposable 
     {
-        private static const _Str_1382:Class = Background__Str_1382;
+        private static const background_tiles_png:Class = Background_background_tiles_png;
 
         private var _backgroundImage:BitmapData;
         private var _disposed:Boolean;
@@ -45,7 +45,7 @@
         protected function onAddedToStage(k:Event):void
         {
             this._lines = new Sprite();
-            var _local_2:Bitmap = new _Str_1382();
+            var _local_2:Bitmap = new background_tiles_png();
             this._backgroundImage = _local_2.bitmapData;
             addChild(this._lines);
             this.resize();
