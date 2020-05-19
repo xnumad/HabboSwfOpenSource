@@ -6,7 +6,7 @@
     public class InitCameraMessageParser implements IMessageParser 
     {
         private var _creditPrice:int = 0;
-        private var _Str_8408:int = 0;
+        private var _ducketPrice:int = 0;
         private var _Str_8279:int = 0;
 
 
@@ -17,7 +17,7 @@
 
         public function _Str_22790():int
         {
-            return this._Str_8408;
+            return this._ducketPrice;
         }
 
         public function _Str_22604():int
@@ -28,7 +28,7 @@
         public function flush():Boolean
         {
             this._creditPrice = 0;
-            this._Str_8408 = 0;
+            this._ducketPrice = 0;
             this._Str_8279 = 0;
             return true;
         }
@@ -36,7 +36,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._creditPrice = k.readInteger();
-            this._Str_8408 = k.readInteger();
+            this._ducketPrice = k.readInteger();
             if (k.bytesAvailable > 0)
             {
                 this._Str_8279 = k.readInteger();
