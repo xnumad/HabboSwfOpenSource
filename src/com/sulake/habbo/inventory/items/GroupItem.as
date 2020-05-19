@@ -946,7 +946,7 @@
                 case FurniCategory.POSTER:
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                     break;
-                case FurniCategory._Str_9125:
+                case FurniCategory.TRAX_SONG:
                     _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(k._Str_2794);
                     if (_local_3 != null)
                     {
@@ -982,7 +982,7 @@
                 case FurniCategory.POSTER:
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
                     break;
-                case FurniCategory._Str_9125:
+                case FurniCategory.TRAX_SONG:
                     _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(k._Str_2794);
                     if (_local_3 != null)
                     {
@@ -1014,7 +1014,7 @@
             this._Str_14420 = -1;
             if (k != null)
             {
-                if (k.category == FurniCategory._Str_9125)
+                if (k.category == FurniCategory.TRAX_SONG)
                 {
                     _local_2 = k._Str_2794;
                     _local_3 = this._Str_2307._Str_2476._Str_2774._Str_3255(_local_2);

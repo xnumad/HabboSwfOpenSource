@@ -851,7 +851,7 @@
                     _local_10 = new Date(_local_9._Str_9408, (_local_9._Str_9050 - 1), _local_9._Str_8932);
                     _local_8 = ((this._localization.getLocalization(("roomItem.name." + _local_5.type)) + " ") + _local_10.toLocaleDateString());
                 }
-                if (_local_5.category == FurniCategory._Str_9125)
+                if (_local_5.category == FurniCategory.TRAX_SONG)
                 {
                     _local_8 = this._Str_19943(_local_4, _local_8, true, _arg_2.id, _arg_3);
                 }
