@@ -7,7 +7,7 @@
     {
         private var _ok:Boolean = false;
         private var _secondsToWait:int = 0;
-        private var _Str_9712:String;
+        private var _extraDataId:String;
 
 
         public function isOk():Boolean
@@ -22,14 +22,14 @@
 
         public function _Str_24023():String
         {
-            return this._Str_9712;
+            return this._extraDataId;
         }
 
         public function flush():Boolean
         {
             this._ok = false;
             this._secondsToWait = 0;
-            this._Str_9712 = null;
+            this._extraDataId = null;
             return true;
         }
 
@@ -39,7 +39,7 @@
             this._secondsToWait = k.readInteger();
             if (((this._ok) && (k.bytesAvailable)))
             {
-                this._Str_9712 = k.readString();
+                this._extraDataId = k.readString();
             }
             return true;
         }
