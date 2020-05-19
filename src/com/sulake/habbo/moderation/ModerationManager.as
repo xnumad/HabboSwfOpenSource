@@ -188,7 +188,7 @@
             return this._windowTracker;
         }
 
-        public function get _Str_14758():int
+        public function get currentFlatId():int
         {
             return this._currentFlatId;
         }
@@ -203,7 +203,7 @@
             this._initMsg = k;
         }
 
-        public function set _Str_14758(k:int):void
+        public function set currentFlatId(k:int):void
         {
             this._currentFlatId = k;
         }

@@ -296,7 +296,7 @@
         {
             var _local_3:RoomToolCtrl;
             var _local_2:_Str_4522 = k.getParser();
-            this._moderationManager._Str_14758 = _local_2._Str_6550;
+            this._moderationManager.currentFlatId = _local_2._Str_6550;
             this._moderationManager._Str_17887._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)
             {
@@ -307,7 +307,7 @@
         private function _Str_2960(k:_Str_3352):void
         {
             var _local_2:RoomToolCtrl;
-            this._moderationManager._Str_14758 = 0;
+            this._moderationManager.currentFlatId = 0;
             this._moderationManager._Str_17887._Str_25510();
             for each (_local_2 in this._roomEnterListeners)
             {

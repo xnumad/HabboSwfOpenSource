@@ -152,7 +152,7 @@
 
         private function _Str_20264(k:String):void
         {
-            var _local_2:Boolean = ((!(this._data == null)) && (this._data.flatId == this._main._Str_14758));
+            var _local_2:Boolean = ((!(this._data == null)) && (this._data.flatId == this._main.currentFlatId));
             var _local_3:IButtonWindow = IButtonWindow(this._frame.findChildByName(k));
             if (((_local_2) && (this._main.initMsg._Str_24851)))
             {
