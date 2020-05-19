@@ -8,25 +8,25 @@
 
     public class FurniListAddOrUpdateParser implements IMessageParser 
     {
-        protected var _items:Vector.<FurniData>;
+        protected var _furniList:Vector.<FurniData>;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._items = new Vector.<FurniData>(0);
-			this._items.push(new FurniData(k));
+            this._furniList = new Vector.<FurniData>(0);
+			this._furniList.push(new FurniData(k));
             return true;
         }
 
         public function flush():Boolean
         {
-            this._items = null;
+            this._furniList = null;
             return true;
         }
 
         public function _Str_9248():Vector.<FurniData>
         {
-            return this._items;
+            return this._furniList;
         }
     }
 }
