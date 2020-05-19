@@ -9,13 +9,13 @@
 
         private var _userId:int;
         private var _username:String;
-        private var _Str_17257:String;
+        private var _classType:String;
 
         public function _Str_6854(k:int, _arg_2:String, _arg_3:String)
         {
             this._userId = k;
             this._username = _arg_2;
-            this._Str_17257 = _arg_3;
+            this._classType = _arg_3;
         }
 
         public function get userId():int
@@ -30,12 +30,12 @@
 
         public function get _Str_25450():String
         {
-            return this._Str_17257;
+            return this._classType;
         }
 
         public function toString():String
         {
-            return ((((("[" + this._userId) + ", ") + this._username) + "] [") + this._Str_17257) + "]";
+            return ((((("[" + this._userId) + ", ") + this._username) + "] [") + this._classType) + "]";
         }
     }
 }
