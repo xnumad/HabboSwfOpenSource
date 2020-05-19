@@ -8,7 +8,7 @@
         public static const _Str_20587:int = 6;
         public static const _Str_3569:int = 5;
         public static const _Str_3751:int = 4;
-        public static const _Str_20881:int = 3;
+        public static const BUS_PARTNER:int = 3;
         public static const PARTNER:int = 2;
         public static const CELEBRITY:int = 1;
         public static const NONE:int = 0;
