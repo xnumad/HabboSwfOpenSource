@@ -5,13 +5,13 @@
 
     public class _Str_8379 implements IMessageParser 
     {
-        private var _Str_4858:Boolean = false;
+        private var _ok:Boolean = false;
         private var _Str_17043:String = null;
 
 
         public function isOk():Boolean
         {
-            return this._Str_4858;
+            return this._ok;
         }
 
         public function _Str_19783():String
@@ -21,14 +21,14 @@
 
         public function flush():Boolean
         {
-            this._Str_4858 = false;
+            this._ok = false;
             this._Str_17043 = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_4858 = k.readBoolean();
+            this._ok = k.readBoolean();
             this._Str_17043 = k.readString();
             return true;
         }
