@@ -15,7 +15,7 @@
         private var _groupName:String = "";
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
-        private var _Str_12413:int = 0;
+        private var _petLevel:int = 0;
         private var _rarityLevel:int = 0;
         private var _hasSaddle:Boolean;
         private var _isRiding:Boolean;
@@ -229,12 +229,12 @@
 
         public function get _Str_3897():int
         {
-            return this._Str_12413;
+            return this._petLevel;
         }
 
         public function set _Str_3897(k:int):void
         {
-            this._Str_12413 = k;
+            this._petLevel = k;
         }
 
         public function get _Str_2899():Array

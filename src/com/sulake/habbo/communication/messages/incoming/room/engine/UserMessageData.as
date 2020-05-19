@@ -30,7 +30,7 @@
         private var _canHarvest:Boolean;
         private var _canRevive:Boolean;
         private var _hasBreedingPermission:Boolean;
-        private var _Str_12413:int = 0;
+        private var _petLevel:int = 0;
         private var _Str_20254:String = "";
         private var _Str_3986:Array;
         private var _Str_9831:Boolean;
@@ -365,14 +365,14 @@
 
         public function get _Str_3897():int
         {
-            return this._Str_12413;
+            return this._petLevel;
         }
 
         public function set _Str_3897(k:int):void
         {
             if (!this._Str_2479)
             {
-                this._Str_12413 = k;
+                this._petLevel = k;
             }
         }
 
