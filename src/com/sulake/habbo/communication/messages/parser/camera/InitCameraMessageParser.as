@@ -20,7 +20,7 @@
             return this._ducketPrice;
         }
 
-        public function _Str_22604():int
+        public function getPublishDucketPrice():int
         {
             return this._publishDucketPrice;
         }

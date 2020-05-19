@@ -102,7 +102,7 @@
         {
             this._creditPrice = k.getParser().getCreditPrice();
             this._ducketPrice = k.getParser().getDucketPrice();
-            this._publishDucketPrice = k.getParser()._Str_22604();
+            this._publishDucketPrice = k.getParser().getPublishDucketPrice();
         }
 
         private function _Str_16050(k:_Str_7027):void
