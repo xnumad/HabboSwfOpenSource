@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListInvalidateParser;
 
-    public class _Str_6821 extends MessageEvent implements IMessageEvent 
+    public class FurniListInvalidateEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_6821(k:Function)
+        public function FurniListInvalidateEvent(k:Function)
         {
             super(k, FurniListInvalidateParser);
         }

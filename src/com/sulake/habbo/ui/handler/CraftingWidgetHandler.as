@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.outgoing.crafting.CraftSecretComposer;
     import com.sulake.habbo.communication.messages.incoming.crafting.CraftingResultObjectParser;
     import com.sulake.habbo.session.furniture.IFurnitureData;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_91._Str_7844;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -212,12 +212,12 @@
             this._inventoryDirty = true;
             if (this._inventoryUpdateEvent == null)
             {
-                this._inventoryUpdateEvent = new _Str_6821(this._Str_18656);
+                this._inventoryUpdateEvent = new FurniListInvalidateEvent(this._Str_18656);
                 this._container.connection.addMessageEvent(this._inventoryUpdateEvent);
             }
         }
 
-        private function _Str_18656(k:_Str_6821):void
+        private function _Str_18656(k:FurniListInvalidateEvent):void
         {
             this._container.connection.send(new _Str_7844());
             this._container.connection.send(new _Str_7271(this._gizmoFurnitureId));

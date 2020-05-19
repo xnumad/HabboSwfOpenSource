@@ -854,7 +854,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
-	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
+	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.*;
@@ -1287,7 +1287,7 @@
             INCOMING_PACKETS[3130] = _Str_3873;
             INCOMING_PACKETS[3138] = _Str_18475;
             INCOMING_PACKETS[3150] = _Str_7889;
-            INCOMING_PACKETS[3151] = _Str_6821;
+            INCOMING_PACKETS[3151] = FurniListInvalidateEvent;
             INCOMING_PACKETS[3164] = RecyclerPrizesEvent;
             INCOMING_PACKETS[3191] = _Str_17782;
             INCOMING_PACKETS[3192] = _Str_9383;
