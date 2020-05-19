@@ -99,7 +99,7 @@
                 return;
             }
             var _local_3:_Str_2484 = _local_2._Str_22192;
-            this._moderationManager.issueManager._Str_4375(_local_3);
+            this._moderationManager.issueManager.playSound(_local_3);
             this._moderationManager.issueManager._Str_12118(_local_3);
         }
 

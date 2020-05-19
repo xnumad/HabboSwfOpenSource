@@ -30,7 +30,7 @@
         {
             this._SafeStr_22184._SafeStr_18847(this._SafeStr_22191.currentLocation.x, this._SafeStr_22191.currentLocation.y);
             this._SafeStr_22184._SafeStr_18846();
-            SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_THROW);
+            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_THROW);
         }
 
         public function get _SafeStr_22184():HumanGameObject

@@ -201,7 +201,7 @@
         {
             if (this._soundManager != null)
             {
-                this._soundManager._Str_4375(HabboSoundConstants.MESSAGE_SENT);
+                this._soundManager.playSound(HabboSoundConstants.MESSAGE_SENT);
             }
         }
 
@@ -254,7 +254,7 @@
         {
             if (this._soundManager != null)
             {
-                this._soundManager._Str_4375(HabboSoundConstants.MESSAGE_RECEIVED);
+                this._soundManager.playSound(HabboSoundConstants.MESSAGE_RECEIVED);
             }
         }
 

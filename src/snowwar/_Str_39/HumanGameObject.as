@@ -482,7 +482,7 @@
                 {
                     this._SafeStr_18845(_arg_3);
                     _arg_2._SafeStr_18843(k, this);
-                    SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_HIT3);
+                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_HIT3);
                 }
                 this._SafeStr_18829--;
                 this._SafeStr_18579._SafeStr_13228(this, _arg_2);
@@ -711,7 +711,7 @@
             var _local_3:HumanGameObject = _arg_2._SafeStr_18040;
             this._SafeStr_18841(k, _local_3, _arg_2.direction360.index());
             _local_3._SafeStr_18842(k, this);
-            SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_HIT1);
+            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_HIT1);
         }
 
         override public function get collisionHeight():int

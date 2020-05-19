@@ -151,7 +151,7 @@
 
         public function _Str_25628():void
         {
-            this.container._Str_2476._Str_4375(HabboSoundConstants.CAMERA_SHUTTER);
+            this.container._Str_2476.playSound(HabboSoundConstants.CAMERA_SHUTTER);
         }
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void

@@ -150,7 +150,7 @@
             super.dispose();
         }
 
-        public function _Str_4375(k:String, _arg_2:int=0):void
+        public function playSound(k:String, _arg_2:int=0):void
         {
             var _local_4:Sound;
             var _local_3:IHabboSound = this._genericSamples.getValue(k);
@@ -491,7 +491,7 @@
             var _local_2:RoomEnginePlaySoundEvent = RoomEnginePlaySoundEvent(k);
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND)
             {
-                this._Str_4375(_local_2.soundId);
+                this.playSound(_local_2.soundId);
             }
             if (k.type == RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH)
             {

@@ -193,11 +193,11 @@
 			));
         }
 
-        public static function _Str_4375(k:String, _arg_2:int=0):void //_SafeStr_6795
+        public static function playSound(k:String, _arg_2:int=0):void //_SafeStr_6795
         {
             if (soundManager != null)
             {
-                soundManager._Str_4375(k, _arg_2);
+                soundManager.playSound(k, _arg_2);
             }
         }
 
@@ -1056,7 +1056,7 @@
             {
                 this._roomUI.visible = true;
                 this.disposeGameStartingViewController();
-                _Str_4375(HabboSoundConstants.GAMES_IG_COUNTDOWN);
+                playSound(HabboSoundConstants.GAMES_IG_COUNTDOWN);
                 this._gameArenaView._SafeStr_13264(k);
                 this._gameState = STAGE_STARTED;
             }

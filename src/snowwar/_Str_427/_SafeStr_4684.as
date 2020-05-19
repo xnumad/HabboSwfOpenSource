@@ -40,7 +40,7 @@
                     {
                         _local_4._SafeStr_18851(_local_3);
                     }
-                    SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_GET_SNOWBALL);
+                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_GET_SNOWBALL);
                 }
             }
         }

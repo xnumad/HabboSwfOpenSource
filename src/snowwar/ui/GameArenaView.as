@@ -299,7 +299,7 @@
             if (((_local_7) && (!(this._SafeStr_18726))))
             {
                 this._SafeStr_18726 = true;
-                SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_WALK, int.MAX_VALUE);
+                SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_WALK, int.MAX_VALUE);
             }
             else
             {

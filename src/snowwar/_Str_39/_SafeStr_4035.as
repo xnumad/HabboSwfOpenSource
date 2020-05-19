@@ -234,7 +234,7 @@
                 collision = _local_2.hasCollision(this);
                 if (collision)
                 {
-                    SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_MISS);
+                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_MISS);
                 }
             }
             if (collision)

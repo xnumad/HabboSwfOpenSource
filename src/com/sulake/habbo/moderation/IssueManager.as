@@ -154,7 +154,7 @@
             this._releaseQueue = this._releaseQueue.concat(k);
         }
 
-        public function _Str_4375(k:_Str_2484):void
+        public function playSound(k:_Str_2484):void
         {
             if (this._issues[k._Str_2869] != null)
             {
@@ -162,7 +162,7 @@
             }
             if (((this._issueBrowser == null) || (!(this._issueBrowser.isOpen()))))
             {
-                this._moderationManager.soundManager._Str_4375(HabboSoundConstants.CALL_FOR_HELP);
+                this._moderationManager.soundManager.playSound(HabboSoundConstants.CALL_FOR_HELP);
             }
         }
 

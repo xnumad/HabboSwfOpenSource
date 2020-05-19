@@ -2032,7 +2032,7 @@
             this._Str_12017();
             if (((!(this._Str_19689)) && (!(this._soundManager == null))))
             {
-                this._soundManager._Str_4375(HabboSoundConstants.PURCHASE);
+                this._soundManager.playSound(HabboSoundConstants.PURCHASE);
             }
             this._Str_19689 = false;
             events.dispatchEvent(new PurseEvent(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._purse.credits, 0));
@@ -2046,7 +2046,7 @@
             this._Str_12017();
             if (((!(this._soundManager == null)) && (_local_2.type == ActivityPointTypeEnum.DUCKET)))
             {
-                this._soundManager._Str_4375(HabboSoundConstants.PIXELS);
+                this._soundManager.playSound(HabboSoundConstants.PIXELS);
             }
             events.dispatchEvent(new PurseEvent(PurseEvent.CATALOG_PURSE_ACTIVITY_POINT_BALANCE, _local_2.amount, _local_2.type));
             events.dispatchEvent(new PurseUpdateEvent());

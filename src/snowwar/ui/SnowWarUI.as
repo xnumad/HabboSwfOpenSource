@@ -233,7 +233,7 @@
                 this._SafeStr_22104 = null;
             }
             this._SafeStr_22104 = new SnowWarAnimatedWindowElement(this._snowWarEngine.assets, this._ballProgress, "load_", 8);
-            SnowWarEngine._Str_4375(HabboSoundConstants.GAMES_SW_MAKE_SNOWBALL);
+            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_MAKE_SNOWBALL);
         }
 
         public function _SafeStr_13225():void
@@ -336,7 +336,7 @@
             WindowUtils._Str_4180(this._timer.findChildByName("time_left"), ((_local_2 + ":") + _local_3));
             if (((k <= 5) && (k > 0)))
             {
-                SnowWarEngine._Str_4375(HabboSoundConstants.CALL_FOR_HELP);
+                SnowWarEngine.playSound(HabboSoundConstants.CALL_FOR_HELP);
                 if (!this._SafeStr_22110)
                 {
                     this._SafeStr_22110 = new Timer(500, 1);
