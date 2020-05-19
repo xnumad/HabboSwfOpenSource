@@ -14,8 +14,8 @@
     public class ButtonMenuView extends ContextInfoView 
     {
         protected static const ICON_MARGIN:int = 8;
-        protected static const _Str_16461:uint = 16744755;
-        protected static const _Str_18867:uint = 16756591;
+        protected static const LINK_COLOR_MODERATE_DEFAULT:uint = 16744755;
+        protected static const LINK_COLOR_MODERATE_HOVER:uint = 16756591;
         protected static const ICON_VIP:String = "icon_vip";
         protected static const ARROW_LEFT:String = "arrow_left";
         protected static const ARROW_RIGHT:String = "arrow_right";
@@ -139,7 +139,7 @@
                         {
                             if (_arg_2.tags.indexOf("moderate") > -1)
                             {
-                                ITextWindow(IWindowContainer(_arg_2).getChildAt(0)).textColor = _Str_18867;
+                                ITextWindow(IWindowContainer(_arg_2).getChildAt(0)).textColor = LINK_COLOR_MODERATE_HOVER;
                             }
                         }
                     }
@@ -169,7 +169,7 @@
                             {
                                 if (_arg_2.tags.indexOf("moderate") > -1)
                                 {
-                                    ITextWindow(IWindowContainer(_arg_2).getChildAt(0)).textColor = _Str_16461;
+                                    ITextWindow(IWindowContainer(_arg_2).getChildAt(0)).textColor = LINK_COLOR_MODERATE_DEFAULT;
                                 }
                             }
                         }
