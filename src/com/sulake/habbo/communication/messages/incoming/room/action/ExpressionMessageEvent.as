@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.action.ExpressionMessageParser;
 
-    public class _Str_7641 extends MessageEvent 
+    public class ExpressionMessageEvent extends MessageEvent 
     {
-        public function _Str_7641(k:Function)
+        public function ExpressionMessageEvent(k:Function)
         {
             super(k, ExpressionMessageParser);
         }

@@ -917,7 +917,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.SleepMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
+	import com.sulake.habbo.communication.messages.incoming.room.action.ExpressionMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
 	import com.sulake.habbo.communication.messages.incoming.poll.*;
 	import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
@@ -1085,7 +1085,7 @@
             INCOMING_PACKETS[1605] = _Str_5567;
             INCOMING_PACKETS[1618] = BotCommandConfigurationEvent;
             INCOMING_PACKETS[1625] = _Str_9336;
-            INCOMING_PACKETS[1631] = _Str_7641;
+            INCOMING_PACKETS[1631] = ExpressionMessageEvent;
             INCOMING_PACKETS[1634] = _Str_9312;
             INCOMING_PACKETS[1640] = UserUpdateEvent;
             INCOMING_PACKETS[1651] = _Str_9121;
