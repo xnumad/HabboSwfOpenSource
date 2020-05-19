@@ -4,6 +4,6 @@
 
     public interface IUserInfoListener 
     {
-        function _Str_3746(_arg_1:_Str_5467):void;
+        function onUserInfo(_arg_1:_Str_5467):void;
     }
 }

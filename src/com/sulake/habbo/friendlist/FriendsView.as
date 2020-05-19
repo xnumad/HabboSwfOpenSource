@@ -153,7 +153,7 @@
                     return true;
                 }
                 _local_6 = IWindowContainer(this._friendList.getXmlWindow("friend_entry"));
-                _local_6.findChildByName("user_info_region").procedure = this._Str_3746;
+                _local_6.findChildByName("user_info_region").procedure = this.onUserInfo;
                 this._list.addListItem(_local_6);
             }
             Util._Str_2930(_local_6);
@@ -463,7 +463,7 @@
             }
         }
 
-        private function _Str_3746(k:WindowEvent, _arg_2:IWindow):void
+        private function onUserInfo(k:WindowEvent, _arg_2:IWindow):void
         {
             this._friendList.view._Str_3476(k, "${infostand.profile.link.tooltip}");
             if (k.type == WindowMouseEvent.OVER)

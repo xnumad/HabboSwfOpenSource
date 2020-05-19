@@ -197,7 +197,7 @@
             k.addEventListener(_Str_6051.RWUE_HIDE_AVATAR_EDITOR, this._Str_20360);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_21703);
             k.addEventListener(_Str_5907.RWBIUE_HABBO_CLUB, this._Str_20017);
-            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this._Str_3746);
+            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this.onUserInfo);
             k.addEventListener(_Str_3963.RWSUE_SETTINGS, this._Str_21972);
             k.addEventListener(_Str_3950.HHTPNUFWE_AE_STARTED, this._Str_14073);
             k.addEventListener(_Str_3950.HHTPNUFWE_AE_HIGHLIGHT, this._Str_14073);
@@ -221,7 +221,7 @@
             k.removeEventListener(_Str_5907.RWBIUE_HABBO_CLUB, this._Str_20017);
             k.removeEventListener(_Str_6051.RWUE_AVATAR_EDITOR_CLOSED, this._Str_20360);
             k.removeEventListener(_Str_6051.RWUE_HIDE_AVATAR_EDITOR, this._Str_21383);
-            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this._Str_3746);
+            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this.onUserInfo);
             k.removeEventListener(_Str_3963.RWSUE_SETTINGS, this._Str_21972);
             k.removeEventListener(_Str_3950.HHTPNUFWE_AE_HIGHLIGHT, this._Str_14073);
             k.removeEventListener(_Str_3950.HHTPNUFWE_AE_STARTED, this._Str_14073);
@@ -242,7 +242,7 @@
             this._isActive = false;
         }
 
-        private function _Str_3746(k:RoomWidgetUpdateInfostandUserEvent):void
+        private function onUserInfo(k:RoomWidgetUpdateInfostandUserEvent):void
         {
             this._userId = k.id;
         }

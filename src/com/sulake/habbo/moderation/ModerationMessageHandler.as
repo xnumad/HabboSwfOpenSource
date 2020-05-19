@@ -190,7 +190,7 @@
             Logger.log(((("GOT USER INFO: " + _local_2.data.userId) + ", ") + _local_2.data._Str_16987));
             for each (_local_3 in this._userInfoListeners)
             {
-                _local_3._Str_3746(_local_2.data);
+                _local_3.onUserInfo(_local_2.data);
             }
         }
 

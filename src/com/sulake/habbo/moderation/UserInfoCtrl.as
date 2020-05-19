@@ -75,7 +75,7 @@
             this._main.connection.send(new _Str_7074(_arg_2));
         }
 
-        public function _Str_3746(k:_Str_5467):void
+        public function onUserInfo(k:_Str_5467):void
         {
             if (k.userId != this._userId)
             {
