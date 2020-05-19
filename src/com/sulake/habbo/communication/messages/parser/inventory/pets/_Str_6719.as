@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.pets._Str_3763;
-    import com.sulake.habbo.communication.messages.incoming.room.pets._Str_5753;
+    import com.sulake.habbo.communication.messages.incoming.room.pets.RarityCategoryData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_6719 implements IMessageParser 
@@ -16,7 +16,7 @@
 
         public function flush():Boolean
         {
-            var k:_Str_5753;
+            var k:RarityCategoryData;
             this._nestId = 0;
             if (this._pet1)
             {
@@ -45,7 +45,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._rarityCategories.push(new _Str_5753(k));
+                this._rarityCategories.push(new RarityCategoryData(k));
                 _local_3++;
             }
             this._Str_21973 = k.readInteger();

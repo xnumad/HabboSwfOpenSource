@@ -2,12 +2,12 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5753 
+    public class RarityCategoryData 
     {
         private var _Str_16211:int;
         private var _breeds:Array;
 
-        public function _Str_5753(k:IMessageDataWrapper)
+        public function RarityCategoryData(k:IMessageDataWrapper)
         {
             this._Str_16211 = k.readInteger();
             this._breeds = [];

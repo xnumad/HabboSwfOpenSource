@@ -87,7 +87,7 @@
     import com.sulake.habbo.ui.widget.events._Str_4736;
     import com.sulake.habbo.ui.widget.events._Str_3919;
     import com.sulake.habbo.ui.widget.events._Str_3575;
-    import com.sulake.habbo.communication.messages.incoming.room.pets._Str_5753;
+    import com.sulake.habbo.communication.messages.incoming.room.pets.RarityCategoryData;
     import com.sulake.habbo.ui.widget.events._Str_4624;
     import com.sulake.habbo.ui.widget.events._Str_5914;
     import com.sulake.habbo.ui.widget.events._Str_3962;
@@ -1340,7 +1340,7 @@
             var _local_2:_Str_3575;
             var _local_3:_Str_3575;
             var _local_4:Array;
-            var _local_5:_Str_5753;
+            var _local_5:RarityCategoryData;
             var _local_6:_Str_4624;
             var _local_7:_Str_5914;
             if (((!(this._container == null)) && (!(this._container.events == null))))
