@@ -268,7 +268,7 @@
             switch (_local_4.actionType)
             {
                 case ModActionDefinition.ALERT:
-                    if (!this._Str_2327._Str_3325._Str_18465)
+                    if (!this._Str_2327.initMsg._Str_18465)
                     {
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
                         return;
@@ -281,7 +281,7 @@
                     this._Str_2327.connection.send(new _Str_12438(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
                 case ModActionDefinition._Str_5684:
-                    if (!this._Str_2327._Str_3325._Str_21242)
+                    if (!this._Str_2327.initMsg._Str_21242)
                     {
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
                         return;
@@ -291,7 +291,7 @@
                     this._Str_2327.connection.send(new _Str_4767(this._Str_4127, this._Str_3121.text, _local_3, _local_4._Str_22995, _local_5, this._Str_7121()));
                     break;
                 case ModActionDefinition._Str_13808:
-                    if (!this._Str_2327._Str_3325._Str_20397)
+                    if (!this._Str_2327.initMsg._Str_20397)
                     {
                         this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
                         return;

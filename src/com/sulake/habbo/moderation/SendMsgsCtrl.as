@@ -71,8 +71,8 @@
 
         private function _Str_23308(k:IDropMenuWindow):void
         {
-            Logger.log(("MSG TEMPLATES: " + this._main._Str_3325._Str_15690.length));
-            k.populate(this._main._Str_3325._Str_15690);
+            Logger.log(("MSG TEMPLATES: " + this._main.initMsg._Str_15690.length));
+            k.populate(this._main.initMsg._Str_15690);
         }
 
         private function _Str_19008(k:WindowEvent, _arg_2:IWindow):void
@@ -81,7 +81,7 @@
             {
                 return;
             }
-            var _local_3:String = this._main._Str_3325._Str_15690[this._msgSelect.selection];
+            var _local_3:String = this._main.initMsg._Str_15690[this._msgSelect.selection];
             if (_local_3 != null)
             {
                 this._placeHolderMessage = false;

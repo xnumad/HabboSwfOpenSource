@@ -173,7 +173,7 @@
             return this._startPanelCtrl;
         }
 
-        public function get _Str_3325():_Str_5018
+        public function get initMsg():_Str_5018
         {
             return this._initMsg;
         }
@@ -198,7 +198,7 @@
             return this._soundManager;
         }
 
-        public function set _Str_3325(k:_Str_5018):void
+        public function set initMsg(k:_Str_5018):void
         {
             this._initMsg = k;
         }

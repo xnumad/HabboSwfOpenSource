@@ -123,7 +123,7 @@
                 this._moderationManager.issueManager._Str_12118(_local_6);
             }
             this._moderationManager.issueManager._Str_19194();
-            this._moderationManager._Str_3325 = _local_3;
+            this._moderationManager.initMsg = _local_3;
             this._moderationManager._Str_17887.show();
         }
 

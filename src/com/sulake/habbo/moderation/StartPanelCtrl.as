@@ -134,11 +134,11 @@
                 this._frame.findChildByName("userinfo_but").disable();
                 this._frame.findChildByName("room_tool_but").disable();
                 this._frame.findChildByName("chatlog_but").disable();
-                if (!this._main._Str_3325._Str_24070)
+                if (!this._main.initMsg._Str_24070)
                 {
                     this._frame.findChildByName("ticket_queue_but").disable();
                 }
-                if (!this._main._Str_3325._Str_12765)
+                if (!this._main.initMsg._Str_12765)
                 {
                     this._frame.findChildByName("chatlog_but").disable();
                 }
@@ -152,7 +152,7 @@
 
         private function _Str_22550():void
         {
-            if (this._main._Str_3325._Str_12765)
+            if (this._main.initMsg._Str_12765)
             {
                 this._frame.findChildByName("chatlog_but").enable();
                 (IWindowContainer(this._frame.findChildByName("chatlog_but")).findChildByName("offence_name") as ILabelWindow).textColor = 0;

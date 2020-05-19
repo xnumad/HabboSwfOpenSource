@@ -154,7 +154,7 @@
         {
             var _local_2:Boolean = ((!(this._data == null)) && (this._data.flatId == this._main._Str_14758));
             var _local_3:IButtonWindow = IButtonWindow(this._frame.findChildByName(k));
-            if (((_local_2) && (this._main._Str_3325._Str_24851)))
+            if (((_local_2) && (this._main.initMsg._Str_24851)))
             {
                 _local_3.enable();
             }
@@ -205,11 +205,11 @@
             this._frame.findChildByName("edit_in_hk_but").procedure = this._Str_24149;
             this._frame.findChildByName("send_caution_but").procedure = this._Str_23752;
             this._frame.findChildByName("send_message_but").procedure = this._Str_24627;
-            if (!this._main._Str_3325._Str_12765)
+            if (!this._main.initMsg._Str_12765)
             {
                 this._frame.findChildByName("chatlog_but").disable();
             }
-            if (!this._main._Str_3325._Str_24333)
+            if (!this._main.initMsg._Str_24333)
             {
                 this._kickCb.disable();
             }
@@ -389,8 +389,8 @@
 
         private function _Str_23705(k:IDropMenuWindow):void
         {
-            Logger.log(("MSG TEMPLATES: " + this._main._Str_3325._Str_18336.length));
-            k.populate(this._main._Str_3325._Str_18336);
+            Logger.log(("MSG TEMPLATES: " + this._main.initMsg._Str_18336.length));
+            k.populate(this._main.initMsg._Str_18336);
         }
 
         private function _Str_19008(k:WindowEvent, _arg_2:IWindow):void
@@ -399,7 +399,7 @@
             {
                 return;
             }
-            var _local_3:String = this._main._Str_3325._Str_18336[this._msgSelect.selection];
+            var _local_3:String = this._main.initMsg._Str_18336[this._msgSelect.selection];
             if (_local_3 != null)
             {
                 this._includeInfo = false;

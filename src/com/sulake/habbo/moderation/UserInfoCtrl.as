@@ -147,15 +147,15 @@
             {
                 k = IWindowContainer(this._main.getXmlWindow("user_info"));
                 this._father.addChild(k);
-                if (!this._main._Str_3325._Str_12765)
+                if (!this._main.initMsg._Str_12765)
                 {
                     k.findChildByName("chatlog_but").disable();
                 }
-                if (!this._main._Str_3325._Str_18465)
+                if (!this._main.initMsg._Str_18465)
                 {
                     k.findChildByName("message_but").disable();
                 }
-                if (!(((this._main._Str_3325._Str_18465) || (this._main._Str_3325._Str_20397)) || (this._main._Str_3325._Str_21242)))
+                if (!(((this._main.initMsg._Str_18465) || (this._main.initMsg._Str_20397)) || (this._main.initMsg._Str_21242)))
                 {
                     k.findChildByName("modaction_but").disable();
                 }
