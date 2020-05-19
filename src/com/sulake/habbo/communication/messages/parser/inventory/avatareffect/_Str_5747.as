@@ -25,7 +25,7 @@
             {
                 _local_4 = new _Str_5511();
                 _local_4.type = k.readInteger();
-                _local_4._Str_3882 = k.readInteger();
+                _local_4.subType = k.readInteger();
                 _local_4.duration = k.readInteger();
                 _local_4._Str_18572 = k.readInteger();
                 _local_4._Str_12185 = k.readInteger();

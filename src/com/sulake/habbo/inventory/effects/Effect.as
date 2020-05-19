@@ -26,7 +26,7 @@
             return this._type;
         }
 
-        public function get _Str_3882():int
+        public function get subType():int
         {
             return this._subType;
         }
@@ -92,7 +92,7 @@
             this._type = k;
         }
 
-        public function set _Str_3882(k:int):void
+        public function set subType(k:int):void
         {
             this._subType = k;
         }

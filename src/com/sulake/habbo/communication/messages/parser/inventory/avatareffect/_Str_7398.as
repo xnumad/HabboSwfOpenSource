@@ -33,7 +33,7 @@
             return this._type;
         }
 
-        public function get _Str_3882():int
+        public function get subType():int
         {
             return this._subType;
         }

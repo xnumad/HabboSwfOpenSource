@@ -136,7 +136,7 @@
                         _local_14.userType = RoomObjectTypeEnum.PET;
                         _local_14.figure = _local_7;
                         _local_14.id = _local_4;
-                        _local_14._Str_3882 = k.readInteger().toString();
+                        _local_14.subType = k.readInteger().toString();
                         _local_14.ownerId = k.readInteger();
                         _local_14.ownerName = k.readString();
                         _local_14.rarityLevel = k.readInteger();

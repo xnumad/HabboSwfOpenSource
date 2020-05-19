@@ -6,7 +6,7 @@
     {
         function get _Str_4225():int;
         function get type():int;
-        function get _Str_3882():int;
+        function get subType():int;
         function get _Str_3709():int;
         function get duration():int;
         function get _Str_4010():Boolean;

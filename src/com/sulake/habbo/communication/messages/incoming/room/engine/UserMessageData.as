@@ -233,12 +233,12 @@
             }
         }
 
-        public function get _Str_3882():String
+        public function get subType():String
         {
             return this._subType;
         }
 
-        public function set _Str_3882(k:String):void
+        public function set subType(k:String):void
         {
             if (!this._isReadOnly)
             {
