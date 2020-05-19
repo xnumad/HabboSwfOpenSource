@@ -479,7 +479,7 @@
             Logger.log("Close useless clicked");
             this._Str_3066("closeUseless");
             this._moderationManager.trackGoogle("actionCountUseless", this._actionCount);
-            this._moderationManager.issueManager._Str_21923(this._issueBundle.id, IssueManager._Str_17442);
+            this._moderationManager.issueManager._Str_21923(this._issueBundle.id, IssueManager.RESOLUTION_USELESS);
             this._Str_13345();
             this.dispose();
         }
@@ -489,7 +489,7 @@
             Logger.log("Close resolved clicked");
             this._Str_3066("closeResolved");
             this._moderationManager.trackGoogle("actionCountResolved", this._actionCount);
-            this._moderationManager.issueManager._Str_21923(this._issueBundle.id, IssueManager._Str_18516);
+            this._moderationManager.issueManager._Str_21923(this._issueBundle.id, IssueManager.RESOLUTION_RESOLVED);
             this._Str_13345();
             this.dispose();
         }

@@ -21,9 +21,9 @@
         public static const ISSUE_BUNDLE_OPEN:String = "issue_bundle_open";
         public static const ISSUE_BUNDLE_MY:String = "issue_bundle_my";
         public static const ISSUE_BUNDLE_PICKED:String = "issue_bundle_picked";
-        public static const _Str_16952:int = 15000;
-        public static const _Str_17442:int = 1;
-        public static const _Str_18516:int = 3;
+        public static const PRIORITY_UPDATE_INTERVAL_MS:int = 15000;
+        public static const RESOLUTION_USELESS:int = 1;
+        public static const RESOLUTION_RESOLVED:int = 3;
 
         private var _moderationManager:ModerationManager;
         private var _issueBrowser:IssueBrowser;
@@ -57,7 +57,7 @@
             this._modActionViews = new Map();
             this._priorityFactor = this._moderationManager.getInteger("chf.score.updatefactor", 60);
             this._issueListLimit = this._moderationManager.getInteger("max.call_for_help.results", 200);
-            this._priorityUpdater = new Timer(_Str_16952, 0);
+            this._priorityUpdater = new Timer(PRIORITY_UPDATE_INTERVAL_MS, 0);
             this._priorityUpdater.addEventListener(TimerEvent.TIMER, this._Str_19194);
             this._priorityUpdater.start();
         }
