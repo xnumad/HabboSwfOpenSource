@@ -478,34 +478,34 @@
                     this.setErrorContextFlag(5, 4);
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FAVOURITES:
-                    this._Str_3754("navigator", "my_favorites");
+                    this.legacyTrackGoogle("navigator", "my_favorites");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_FRIENDS_ROOMS:
-                    this._Str_3754("navigator", "my_friends_rooms");
+                    this.legacyTrackGoogle("navigator", "my_friends_rooms");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_HISTORY:
-                    this._Str_3754("navigator", "my_history");
+                    this.legacyTrackGoogle("navigator", "my_history");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_MY_ROOMS:
-                    this._Str_3754("navigator", "my_rooms");
+                    this.legacyTrackGoogle("navigator", "my_rooms");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_OFFICIALROOMS:
-                    this._Str_3754("navigator", "official_rooms");
+                    this.legacyTrackGoogle("navigator", "official_rooms");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_POPULAR_ROOMS:
-                    this._Str_3754("navigator", "popular_rooms");
+                    this.legacyTrackGoogle("navigator", "popular_rooms");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WHERE_MY_FRIENDS_ARE:
-                    this._Str_3754("navigator", "rooms_where_my_friends_are");
+                    this.legacyTrackGoogle("navigator", "rooms_where_my_friends_are");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_ROOMS_WITH_HIGHEST_SCORE:
-                    this._Str_3754("navigator", "highest_score");
+                    this.legacyTrackGoogle("navigator", "highest_score");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TAG_SEARCH:
-                    this._Str_3754("navigator", "tag_search");
+                    this.legacyTrackGoogle("navigator", "tag_search");
                     return;
                 case HabboNavigatorTrackingEvent.HABBO_NAVIGATOR_TRACKING_EVENT_SEARCHTYPE_TEXT_SEARCH:
-                    this._Str_3754("navigator", "text_search");
+                    this.legacyTrackGoogle("navigator", "text_search");
                     return;
             }
         }
@@ -554,12 +554,12 @@
         private function _Str_25489(k:_Str_3660):void
         {
             var _local_2:_Str_5519 = k.getParser();
-            this._Str_3754("achievement", "achievement", [_local_2.data.badgeCode]);
+            this.legacyTrackGoogle("achievement", "achievement", [_local_2.data.badgeCode]);
         }
 
         private function onCatalogPageOpened(k:CatalogPageOpenedEvent):void
         {
-            this._Str_3754("catalogue", "page", [k.pageLocalization]);
+            this.legacyTrackGoogle("catalogue", "page", [k.pageLocalization]);
         }
 
         private function onCatalogTrackingEvent(k:Event):void
@@ -612,7 +612,7 @@
 
         private function onAuthOK(k:IMessageEvent):void
         {
-            this._Str_3754("authentication", "authok");
+            this.legacyTrackGoogle("authentication", "authok");
         }
 
         private function _Str_17172(k:LatencyPingResponseMessageEvent):void
@@ -633,7 +633,7 @@
             var _local_2:_Str_4522 = _Str_2752(k).getParser();
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.LAST_ROOM, String(_local_2._Str_6550));
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.IN_ROOM, String(true));
-            this._Str_3754("navigator", "private", [_local_2._Str_6550]);
+            this.legacyTrackGoogle("navigator", "private", [_local_2._Str_6550]);
         }
 
         private function onConfigurationComplete(k:Event):void
@@ -646,12 +646,12 @@
 
         private function onRoomAdLoad(k:AdEvent):void
         {
-            this._Str_3754("room_ad", "show", [this.getAliasFromAdTechUrl(k.clickUrl)]);
+            this.legacyTrackGoogle("room_ad", "show", [this.getAliasFromAdTechUrl(k.clickUrl)]);
         }
 
         private function onRoomAdClick(k:RoomObjectRoomAdEvent):void
         {
-            this._Str_3754("room_ad", "click", [this.getAliasFromAdTechUrl(k.clickUrl)]);
+            this.legacyTrackGoogle("room_ad", "click", [this.getAliasFromAdTechUrl(k.clickUrl)]);
         }
 
         private function getAliasFromAdTechUrl(k:String):String
@@ -726,7 +726,7 @@
             }
         }
 
-        public function _Str_3754(k:String, _arg_2:String, _arg_3:Array=null):void
+        public function legacyTrackGoogle(k:String, _arg_2:String, _arg_3:Array=null):void
         {
             Logger.log((((((("legacyTrackGoogle(" + k) + ", ") + _arg_2) + ", ") + _arg_3) + ")"));
             try
