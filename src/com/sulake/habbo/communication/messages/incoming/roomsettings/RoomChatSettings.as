@@ -4,8 +4,8 @@
 
     public class RoomChatSettings 
     {
-        public static const _Str_19408:int = 0;
-        public static const _Str_12787:int = 1;
+        public static const CHAT_MODE_FREE_FLOW:int = 0;
+        public static const CHAT_MODE_LINE_BY_LINE:int = 1;
         public static const _Str_16907:int = 0;
         public static const _Str_12581:int = 1;
         public static const _Str_16484:int = 2;

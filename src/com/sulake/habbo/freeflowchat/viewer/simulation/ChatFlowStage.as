@@ -48,7 +48,7 @@
         {
             if (this._component._Str_7277)
             {
-                this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettings._Str_12787);
+                this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettings.CHAT_MODE_LINE_BY_LINE);
                 this._gravityEnabled = (!(this._lineByLineMode));
                 switch (this._component._Str_7277.scrollSpeed)
                 {

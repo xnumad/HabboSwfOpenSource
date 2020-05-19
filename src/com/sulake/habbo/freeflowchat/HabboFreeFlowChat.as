@@ -480,7 +480,7 @@
         {
             if (this._roomChatSettings)
             {
-                return this._roomChatSettings.mode == RoomChatSettings._Str_12787;
+                return this._roomChatSettings.mode == RoomChatSettings.CHAT_MODE_LINE_BY_LINE;
             }
             return false;
         }
