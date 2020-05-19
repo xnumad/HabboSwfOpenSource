@@ -6,7 +6,7 @@
     public class _Str_7555 implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _Str_21645:Boolean = false;
+        private var _sleeping:Boolean = false;
 
 
         public function get userId():int
@@ -16,7 +16,7 @@
 
         public function get _Str_25565():Boolean
         {
-            return this._Str_21645;
+            return this._sleeping;
         }
 
         public function flush():Boolean
@@ -32,7 +32,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._Str_21645 = k.readBoolean();
+            this._sleeping = k.readBoolean();
             return true;
         }
     }
