@@ -69,7 +69,7 @@
     import com.sulake.habbo.navigator.mainview.tabpagedecorators.RoomsTabPageDecorator;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6276;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4697;
-    import com.sulake.habbo.communication.messages.parser.room.chat._Str_6830;
+    import com.sulake.habbo.communication.messages.parser.room.chat.RoomFilterSettingsMessageParser;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6295;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6506;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_4043;
@@ -380,7 +380,7 @@
 
         private function _Str_9592(k:IMessageEvent):void
         {
-            var _local_2:_Str_6830 = (k as RoomFilterSettingsMessageEvent).getParser();
+            var _local_2:RoomFilterSettingsMessageParser = (k as RoomFilterSettingsMessageEvent).getParser();
             LegacyNavigator(this._navigator._Str_2559)._Str_6472._Str_9592(_local_2._Str_13264);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2._Str_13264));
         }
