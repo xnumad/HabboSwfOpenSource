@@ -141,7 +141,7 @@
                 this._window.findChildByName("rented_view").visible = true;
                 this._window.findChildByName("renter_name").caption = _arg_5;
                 this._window.findChildByName("time_remaining_label").caption = FriendlyTime.format(this._Str_2844.container.localization, _arg_6);
-                this._window.findChildByName("cancel_rent_button").visible = ((this._Str_2844.container.isOwnerOfFurniture(this._roomObject)) || (this._Str_2844.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569)));
+                this._window.findChildByName("cancel_rent_button").visible = ((this._Str_2844.container.isOwnerOfFurniture(this._roomObject)) || (this._Str_2844.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR)));
                 IItemListWindow(this._window.findChildByName("rented_view")).arrangeListItems();
             }
             else

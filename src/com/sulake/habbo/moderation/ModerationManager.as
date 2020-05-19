@@ -210,7 +210,7 @@
 
         public function get _Str_3853():Boolean
         {
-            return this._sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569);
+            return this._sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
         }
 
         public function getXmlWindow(k:String, _arg_2:String="_xml", _arg_3:int=1):IWindow

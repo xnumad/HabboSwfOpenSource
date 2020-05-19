@@ -704,7 +704,7 @@
 
         private function _Str_3853():Boolean
         {
-            return this._catalog.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569);
+            return this._catalog.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
         }
 
         private function _Str_18066():Boolean

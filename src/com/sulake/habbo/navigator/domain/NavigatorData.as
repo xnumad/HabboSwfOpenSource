@@ -77,7 +77,7 @@
 
         public function get _Str_11824():Boolean
         {
-            return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_3569)));
+            return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.MODERATOR)));
         }
 
         public function onCreditBalance(k:_Str_4522):void

@@ -383,7 +383,7 @@
 									{
 										if (_local_4.name == "MODTOOL")
 										{
-											_local_4.visible = this._toolbar.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569);
+											_local_4.visible = this._toolbar.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
 										}
 									}
                                 }

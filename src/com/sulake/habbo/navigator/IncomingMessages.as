@@ -198,7 +198,7 @@
         private function _Str_4297(k:IMessageEvent):void
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
-            if (_local_2.securityLevel >= SecurityLevelEnum._Str_3569)
+            if (_local_2.securityLevel >= SecurityLevelEnum.MODERATOR)
             {
                 this._navigator.data._Str_15161 = true;
             }

@@ -1307,7 +1307,7 @@
         public function toggleCatalog(k:String, _arg_2:Boolean=false, _arg_3:Boolean=true):void
         {
             var _local_5:ITextFieldWindow;
-            if (((!(this._sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))) && (!(this.buildersClubEnabled))))
+            if (((!(this._sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))) && (!(this.buildersClubEnabled))))
             {
                 k = CatalogType.NORMAL;
             }

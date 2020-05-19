@@ -99,7 +99,7 @@
             this._Str_2341 = (this._window.getListItemByName("info_border") as IBorderWindow);
             this._buttons = (this._window.getListItemByName("button_list") as IItemListWindow);
             this._Str_4258 = (this._window.getListItemByName("custom_variables") as IWindowContainer);
-            if (!this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))
+            if (!this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {
                 this._Str_4258.dispose();
                 this._Str_4258 = null;

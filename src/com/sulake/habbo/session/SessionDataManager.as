@@ -526,7 +526,7 @@
 
         public function get isGodMode():Boolean
         {
-            return this._securityLevel >= SecurityLevelEnum._Str_3569;
+            return this._securityLevel >= SecurityLevelEnum.MODERATOR;
         }
 
         public function get isAmbassador():Boolean

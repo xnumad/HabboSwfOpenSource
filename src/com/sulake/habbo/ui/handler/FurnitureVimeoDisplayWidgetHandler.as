@@ -71,7 +71,7 @@
                 case RoomEngineTriggerWidgetEvent.OPEN_WIDGET:
                     if (_local_3 != null)
                     {
-                        _local_4 = this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569);
+                        _local_4 = this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
                         _local_5 = _local_3.getModel().getStringToStringMap(RoomObjectVariableEnum.FURNITURE_DATA).getValue(VIDEOID);
                         this._widget.show(_local_3, _local_4, int(_local_5));
                     }

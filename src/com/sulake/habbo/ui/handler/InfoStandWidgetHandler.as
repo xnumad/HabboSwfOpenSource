@@ -1505,7 +1505,7 @@
 
         public function _Str_23922(k:Map):void
         {
-            if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))
+            if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {
                 this._container.connection.send(new _Str_5686(this._widget.furniData.id, k));
             }
