@@ -237,12 +237,12 @@
             this._petLevel = k;
         }
 
-        public function get _Str_2899():Array
+        public function get botSkills():Array
         {
             return this._botSkills;
         }
 
-        public function set _Str_2899(k:Array):void
+        public function set botSkills(k:Array):void
         {
             this._botSkills = k;
         }

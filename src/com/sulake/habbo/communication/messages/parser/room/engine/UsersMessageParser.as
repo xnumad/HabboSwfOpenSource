@@ -185,7 +185,7 @@
                                         _local_17.push(k.readShort());
                                         _local_18++;
                                     }
-                                    _local_14._Str_2899 = _local_17;
+                                    _local_14.botSkills = _local_17;
                                 }
                             }
                         }

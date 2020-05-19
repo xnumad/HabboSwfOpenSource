@@ -81,12 +81,12 @@
             this._carryItemType = k;
         }
 
-        public function get _Str_2899():Array
+        public function get botSkills():Array
         {
             return this._botSkills;
         }
 
-        public function set _Str_2899(k:Array):void
+        public function set botSkills(k:Array):void
         {
             this._botSkills = k;
         }
@@ -117,7 +117,7 @@
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;
             this.carryItemType = k._Str_3249;
-            this._Str_2899 = k._Str_2899;
+            this.botSkills = k.botSkills;
             this._name = k.name;
         }
 
@@ -127,7 +127,7 @@
             this._botSkills = new Array();
             for each (_local_2 in k)
             {
-                this._Str_2899.push(_local_2.id);
+                this.botSkills.push(_local_2.id);
             }
             this._botSkillsWithCommands = k.concat();
         }

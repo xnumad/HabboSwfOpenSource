@@ -89,12 +89,12 @@
             return this._amIAnyRoomController;
         }
 
-        public function get _Str_2899():Array
+        public function get botSkills():Array
         {
             return this._botSkills;
         }
 
-        public function set _Str_2899(k:Array):void
+        public function set botSkills(k:Array):void
         {
             this._botSkills = k;
         }
@@ -108,7 +108,7 @@
             this._Str_3313 = k._Str_3313;
             this.amIOwner = k.amIOwner;
             this.amIAnyRoomController = k.amIAnyRoomController;
-            this._Str_2899 = k._Str_2899;
+            this.botSkills = k.botSkills;
         }
     }
 }

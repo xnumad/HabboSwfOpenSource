@@ -788,7 +788,7 @@
             _local_5._Str_3313 = _arg_2;
             _local_5.ownerId = _arg_4.ownerId;
             _local_5.ownerName = _arg_4.ownerName;
-            _local_5._Str_2899 = _arg_4._Str_2899;
+            _local_5.botSkills = _arg_4.botSkills;
             var _local_6:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_6 != null)
             {

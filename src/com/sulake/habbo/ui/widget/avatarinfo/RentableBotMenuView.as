@@ -68,21 +68,21 @@
                 _local_5++;
             }
             var _local_6:Boolean = ((this._data.amIOwner) || (this._data.amIAnyRoomController));
-            showButton("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum.NO_PICK_UP) == -1) && (_local_6)) : _local_6));
-            if (this._data._Str_2899)
+            showButton("pick", ((this._data.botSkills) ? ((this._data.botSkills.indexOf(BotSkillsEnum.NO_PICK_UP) == -1) && (_local_6)) : _local_6));
+            if (this._data.botSkills)
             {
-                showButton("donate_to_all", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
-                showButton("donate_to_user", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
+                showButton("donate_to_all", (!(this._data.botSkills.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
+                showButton("donate_to_user", (!(this._data.botSkills.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
                 if (this._data.amIOwner)
                 {
-                    showButton("change_bot_name", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
-                    showButton("change_bot_motto", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
-                    showButton("dress_up", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
-                    showButton("random_walk", (!(this._data._Str_2899.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
-                    showButton("setup_chat", (!(this._data._Str_2899.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
-                    showButton("dance", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DANCE) == -1)));
+                    showButton("change_bot_name", (!(this._data.botSkills.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
+                    showButton("change_bot_motto", (!(this._data.botSkills.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
+                    showButton("dress_up", (!(this._data.botSkills.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
+                    showButton("random_walk", (!(this._data.botSkills.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
+                    showButton("setup_chat", (!(this._data.botSkills.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
+                    showButton("dance", (!(this._data.botSkills.indexOf(BotSkillsEnum.DANCE) == -1)));
                 }
-                showButton("nux_take_tour", (!(this._data._Str_2899.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
+                showButton("nux_take_tour", (!(this._data.botSkills.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
             }
             for each (_local_7 in this._data._Str_10833)
             {

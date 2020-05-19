@@ -162,7 +162,7 @@
                 _local_8.canRevive = _local_7.canRevive;
                 _local_8.hasBreedingPermission = _local_7.hasBreedingPermission;
                 _local_8.petLevel = _local_7.petLevel;
-                _local_8._Str_2899 = _local_7._Str_2899;
+                _local_8.botSkills = _local_7.botSkills;
                 _local_8.isModerator = _local_7.isModerator;
                 if (_local_4.userDataManager.getUserData(_local_7.roomIndex) == null)
                 {
