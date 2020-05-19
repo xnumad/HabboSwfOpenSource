@@ -5,7 +5,7 @@
         public static const _Str_22122:int = 9;
         public static const _Str_20542:int = 8;
         public static const _Str_8629:int = 7;
-        public static const _Str_20587:int = 6;
+        public static const PLAYER_SUPPORT:int = 6;
         public static const MODERATOR:int = 5;
         public static const EMPLOYEE:int = 4;
         public static const BUS_PARTNER:int = 3;
