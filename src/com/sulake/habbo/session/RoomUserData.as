@@ -20,7 +20,7 @@
         private var _hasSaddle:Boolean;
         private var _isRiding:Boolean;
         private var _canBreed:Boolean;
-        private var _Str_3297:Boolean;
+        private var _canHarvest:Boolean;
         private var _Str_3284:Boolean;
         private var _Str_3095:Boolean;
         private var _Str_3986:Array;
@@ -199,12 +199,12 @@
 
         public function get canHarvest():Boolean
         {
-            return this._Str_3297;
+            return this._canHarvest;
         }
 
         public function set canHarvest(k:Boolean):void
         {
-            this._Str_3297 = k;
+            this._canHarvest = k;
         }
 
         public function get canRevive():Boolean
