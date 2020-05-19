@@ -6,87 +6,87 @@
 
     public class TradingItemListParser implements IMessageParser 
     {
-        private var _Str_16633:int;
-        private var _Str_12613:Array;
-        private var _Str_18495:int;
-        private var _Str_18187:int;
-        private var _Str_18907:int;
-        private var _Str_12840:Array;
-        private var _Str_16571:int;
-        private var _Str_17852:int;
+        private var _firstUserID:int;
+        private var _firstUserItemArray:Array;
+        private var _firstUserNumItems:int;
+        private var _firstUserNumCredits:int;
+        private var _secondUserID:int;
+        private var _secondUserItemArray:Array;
+        private var _secondUserNumItems:int;
+        private var _secondUserNumCredits:int;
 
 
         public function get _Str_15162():int
         {
-            return this._Str_16633;
+            return this._firstUserID;
         }
 
         public function get _Str_17841():Array
         {
-            return this._Str_12613;
+            return this._firstUserItemArray;
         }
 
         public function get _Str_14946():int
         {
-            return this._Str_18495;
+            return this._firstUserNumItems;
         }
 
         public function get _Str_15709():int
         {
-            return this._Str_18187;
+            return this._firstUserNumCredits;
         }
 
         public function get _Str_18215():int
         {
-            return this._Str_18907;
+            return this._secondUserID;
         }
 
         public function get _Str_17465():Array
         {
-            return this._Str_12840;
+            return this._secondUserItemArray;
         }
 
         public function get _Str_13801():int
         {
-            return this._Str_16571;
+            return this._secondUserNumItems;
         }
 
         public function get _Str_9138():int
         {
-            return this._Str_17852;
+            return this._secondUserNumCredits;
         }
 
         public function flush():Boolean
         {
-            this._Str_16633 = -1;
-            this._Str_12613 = null;
-            this._Str_18495 = 0;
-            this._Str_18187 = 0;
-            this._Str_18907 = -1;
-            this._Str_12840 = null;
-            this._Str_16571 = 0;
-            this._Str_17852 = 0;
+            this._firstUserID = -1;
+            this._firstUserItemArray = null;
+            this._firstUserNumItems = 0;
+            this._firstUserNumCredits = 0;
+            this._secondUserID = -1;
+            this._secondUserItemArray = null;
+            this._secondUserNumItems = 0;
+            this._secondUserNumCredits = 0;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_16633 = k.readInteger();
-            this._Str_12613 = new Array();
-            if (!this._Str_9484(k, this._Str_12613))
+            this._firstUserID = k.readInteger();
+            this._firstUserItemArray = new Array();
+            if (!this._Str_9484(k, this._firstUserItemArray))
             {
                 return false;
             }
-            this._Str_18495 = k.readInteger();
-            this._Str_18187 = k.readInteger();
-            this._Str_18907 = k.readInteger();
-            this._Str_12840 = new Array();
-            if (!this._Str_9484(k, this._Str_12840))
+            this._firstUserNumItems = k.readInteger();
+            this._firstUserNumCredits = k.readInteger();
+            this._secondUserID = k.readInteger();
+            this._secondUserItemArray = new Array();
+            if (!this._Str_9484(k, this._secondUserItemArray))
             {
                 return false;
             }
-            this._Str_16571 = k.readInteger();
-            this._Str_17852 = k.readInteger();
+            this._secondUserNumItems = k.readInteger();
+            this._secondUserNumCredits = k.readInteger();
             return true;
         }
 
