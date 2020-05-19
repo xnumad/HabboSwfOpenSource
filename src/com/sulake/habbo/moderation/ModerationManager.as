@@ -50,7 +50,7 @@
 		private var _avatarRenderManager:IAvatarRenderManager;
         private var _moderationMessageHandler:ModerationMessageHandler;
         private var _issueManager:IssueManager;
-        private var _Str_8885:StartPanelCtrl;
+        private var _startPanelCtrl:StartPanelCtrl;
         private var _windowTracker:WindowTracker;
         private var _Str_20687:_Str_5018;
         private var _Str_21552:int;
@@ -59,7 +59,7 @@
         public function ModerationManager(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
             super(k, _arg_2, _arg_3);
-            this._Str_8885 = new StartPanelCtrl(this);
+            this._startPanelCtrl = new StartPanelCtrl(this);
             this._windowTracker = new WindowTracker();
 			this._moderationIconWidget = new ModerationIconWidget(this);
         }
@@ -124,10 +124,10 @@
             {
                 return;
             }
-            if (this._Str_8885 != null)
+            if (this._startPanelCtrl != null)
             {
-                this._Str_8885.dispose();
-                this._Str_8885 = null;
+                this._startPanelCtrl.dispose();
+                this._startPanelCtrl = null;
             }
             super.dispose();
         }
@@ -135,12 +135,12 @@
         public function userSelected(k:int, _arg_2:String, figure:String=null, gender:String=null):void
         {
             Logger.log(((("USER SELECTED: " + k) + ", ") + _arg_2));
-            this._Str_8885.userSelected(k, _arg_2, figure, gender);
+            this._startPanelCtrl.userSelected(k, _arg_2, figure, gender);
         }
 		
 		public function setVisible(visible:Boolean):void
 		{
-			this._Str_8885.setVisible(visible);
+			this._startPanelCtrl.setVisible(visible);
 		}
 
         public function get windowManager():IHabboWindowManager
@@ -170,7 +170,7 @@
 
         public function get _Str_17887():StartPanelCtrl
         {
-            return this._Str_8885;
+            return this._startPanelCtrl;
         }
 
         public function get _Str_3325():_Str_5018
