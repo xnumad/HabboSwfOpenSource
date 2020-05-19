@@ -507,14 +507,14 @@
                             }
                             if (_arg_4 == FurniCategory._Str_8726)
                             {
-                                if ((((_local_12._Str_3897 < _local_10) || (_local_12.canRevive)) || (_local_12.canBreed)))
+                                if ((((_local_12.petLevel < _local_10) || (_local_12.canRevive)) || (_local_12.canBreed)))
                                 {
                                     continue;
                                 }
                             }
                             if (_arg_4 == FurniCategory._Str_9449)
                             {
-                                if (((_local_12._Str_3897 >= _local_10) || (_local_12.canRevive)))
+                                if (((_local_12.petLevel >= _local_10) || (_local_12.canRevive)))
                                 {
                                     continue;
                                 }

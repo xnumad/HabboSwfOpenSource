@@ -146,7 +146,7 @@
                         _local_14.canHarvest = k.readBoolean();
                         _local_14.canRevive = k.readBoolean();
                         _local_14.hasBreedingPermission = k.readBoolean();
-                        _local_14._Str_3897 = k.readInteger();
+                        _local_14.petLevel = k.readInteger();
                         _local_14._Str_16593 = k.readString();
                     }
                     else

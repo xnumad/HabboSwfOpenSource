@@ -146,7 +146,7 @@
             var _local_3:RoomUserData = this.getUserDataByIndex(k);
             if (_local_3 != null)
             {
-                _local_3._Str_3897 = _arg_2;
+                _local_3.petLevel = _arg_2;
             }
         }
 

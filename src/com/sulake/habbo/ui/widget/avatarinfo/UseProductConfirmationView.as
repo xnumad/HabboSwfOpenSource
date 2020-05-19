@@ -371,7 +371,7 @@
                             _local_19 = _local_22.getModel().getString(RoomObjectVariableEnum.FIGURE_POSTURE);
                             if (_local_19 == "rip")
                             {
-                                _local_23 = this._petData._Str_3897;
+                                _local_23 = this._petData.petLevel;
                                 if (_local_23 < 7)
                                 {
                                     _local_19 = ("grw" + _local_23);

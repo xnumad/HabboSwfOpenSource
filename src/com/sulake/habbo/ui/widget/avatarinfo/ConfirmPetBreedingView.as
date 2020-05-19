@@ -97,8 +97,8 @@
             this._Str_4105 = _arg_2;
             this._roomUserData = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(k);
             this._petData2 = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(_arg_2);
-            this._roomUserData._Str_3897 = _arg_6;
-            this._petData2._Str_3897 = _arg_7;
+            this._roomUserData.petLevel = _arg_6;
+            this._petData2.petLevel = _arg_7;
             this._rarityCategories = _arg_4;
             this._resultPetTypeId = _arg_5;
             this._Str_2595 = _arg_3;
@@ -154,8 +154,8 @@
             this._Str_2268.localizations.registerParameter("breedpets.widget.pet2.name", "name", this._petData2.name);
             this._Str_2268.localizations.registerParameter("breedpets.widget.pet1.description", "name", this._roomUserData.ownerName);
             this._Str_2268.localizations.registerParameter("breedpets.widget.pet2.description", "name", this._petData2.ownerName);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.pet1.level", "level", this._roomUserData._Str_3897.toString());
-            this._Str_2268.localizations.registerParameter("breedpets.widget.pet2.level", "level", this._petData2._Str_3897.toString());
+            this._Str_2268.localizations.registerParameter("breedpets.widget.pet1.level", "level", this._roomUserData.petLevel.toString());
+            this._Str_2268.localizations.registerParameter("breedpets.widget.pet2.level", "level", this._petData2.petLevel.toString());
             this._Str_2268.localizations.registerParameter("breedpets.widget.request", "name", this._petData2.ownerName);
             if (!this._window)
             {

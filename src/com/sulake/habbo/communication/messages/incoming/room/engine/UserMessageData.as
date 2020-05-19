@@ -363,12 +363,12 @@
             }
         }
 
-        public function get _Str_3897():int
+        public function get petLevel():int
         {
             return this._petLevel;
         }
 
-        public function set _Str_3897(k:int):void
+        public function set petLevel(k:int):void
         {
             if (!this._isReadOnly)
             {
