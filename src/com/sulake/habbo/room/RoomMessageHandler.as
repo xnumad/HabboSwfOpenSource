@@ -30,7 +30,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
-    import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
+    import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Chat;
@@ -209,7 +209,7 @@
                 k.addMessageEvent(new DanceMessageEvent(this.onDance));
                 k.addMessageEvent(new AvatarEffectMessageEvent(this.onAvatarEffect));
                 k.addMessageEvent(new _Str_7216(this.onAvatarSleep));
-                k.addMessageEvent(new _Str_7050(this.onCarryObject));
+                k.addMessageEvent(new CarryObjectMessageEvent(this.onCarryObject));
                 k.addMessageEvent(new _Str_8069(this.onUseObject));
                 k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
                 k.addMessageEvent(new Chat(this.onChat));
@@ -1055,9 +1055,9 @@
             {
                 return;
             }
-            if ((k is _Str_7050))
+            if ((k is CarryObjectMessageEvent))
             {
-                _local_2 = (k as _Str_7050).getParser();
+                _local_2 = (k as CarryObjectMessageEvent).getParser();
                 this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2.itemType);
             }
         }

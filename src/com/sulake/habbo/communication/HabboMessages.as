@@ -915,7 +915,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
 	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
+	import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
@@ -1058,7 +1058,7 @@
             INCOMING_PACKETS[1455] = _Str_5006;
             INCOMING_PACKETS[1456] = GuideSessionEndedEvent;
             INCOMING_PACKETS[1459] = _Str_5093;
-            INCOMING_PACKETS[1474] = _Str_7050;
+            INCOMING_PACKETS[1474] = CarryObjectMessageEvent;
             INCOMING_PACKETS[1477] = LeftQueueMessageEvent;
             INCOMING_PACKETS[1488] = UniqueMachineIDEvent;
             INCOMING_PACKETS[1498] = _Str_5993;
