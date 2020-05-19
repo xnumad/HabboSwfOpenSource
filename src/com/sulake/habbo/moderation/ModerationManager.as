@@ -272,7 +272,7 @@
             }
         }
 
-        public function set _Str_22921(k:Vector.<CallForHelpCategoryData>):void
+        public function set cfhTopics(k:Vector.<CallForHelpCategoryData>):void
         {
             this._issueManager._Str_23714(k);
         }
