@@ -46,10 +46,10 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
 
         override public function parseConfiguration(k:String):void
         {
-            this._Str_23341 = k;
+            this.nameInput = k;
         }
 
-        private function set _Str_23341(k:String):void
+        private function set nameInput(k:String):void
         {
             this._newName = k;
             var _local_2:ITextWindow = ITextWindow(window.findChildByName("motto_input"));
