@@ -6,7 +6,7 @@
     public class DanceMessageParser implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _effectType:int = 0;
+        private var _danceStyle:int = 0;
 
 
         public function get userId():int
@@ -16,7 +16,7 @@
 
         public function get _Str_8263():int
         {
-            return this._effectType;
+            return this._danceStyle;
         }
 
         public function flush():Boolean
@@ -32,7 +32,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._effectType = k.readInteger();
+            this._danceStyle = k.readInteger();
             return true;
         }
     }
