@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.enum.NoobnessLevelEnum;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
-    import com.sulake.habbo.communication.messages.parser.users._Str_5856;
+    import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
     import com.sulake.habbo.session.events.UserNameUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6553;
     import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7765;
@@ -369,7 +369,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5856 = _local_2.getParser();
+            var _local_3:UserNameChangedMessageParser = _local_2.getParser();
             if (_local_3._Str_5277 == this._userId)
             {
                 this._name = _local_3._Str_16428;

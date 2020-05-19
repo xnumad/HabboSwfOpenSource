@@ -21,7 +21,7 @@
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_5856;
+    import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
 
     public class NameChangeController implements INameChangeUI, IDisposable 
     {
@@ -233,7 +233,7 @@
 
         private function onUserNameChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_5856 = _Str_4150(k).getParser();
+            var _local_2:UserNameChangedMessageParser = _Str_4150(k).getParser();
             if (this._ownUserId == _local_2._Str_5277)
             {
                 this._ownUserName = _local_2._Str_16428;

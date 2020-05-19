@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5856 implements IMessageParser 
+    public class UserNameChangedMessageParser implements IMessageParser 
     {
         private var _webId:int;
         private var _id:int;

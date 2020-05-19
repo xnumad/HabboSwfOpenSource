@@ -37,7 +37,7 @@
     import com.sulake.habbo.session.events.RoomSessionUserBadgesEvent;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.session.events.RoomSessionUserFigureUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_5856;
+    import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets._Str_7533;
     import com.sulake.habbo.session.RoomPetData;
     import com.sulake.habbo.session.events.RoomSessionPetInfoUpdateEvent;
@@ -253,7 +253,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5856 = _local_2.getParser();
+            var _local_3:UserNameChangedMessageParser = _local_2.getParser();
             var _local_4:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_4 == null)
             {
