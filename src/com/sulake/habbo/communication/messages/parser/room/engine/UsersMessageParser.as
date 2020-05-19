@@ -118,7 +118,7 @@
                     _local_14.userType = RoomObjectTypeEnum.HABBO;
                     _local_14.sex = this.resolveSex(k.readString());
                     _local_14.groupID = ("" + k.readInteger());
-                    _local_14._Str_7043 = k.readInteger();
+                    _local_14.groupStatus = k.readInteger();
                     _local_14.groupName = k.readString();
                     _local_15 = k.readString();
                     if (_local_15 != "")

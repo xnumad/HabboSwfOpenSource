@@ -150,7 +150,7 @@
                 _local_8.id = _local_7.id;
                 _local_8.groupID = _local_7.groupID;
                 _local_8.groupName = _local_7.groupName;
-                _local_8._Str_7043 = _local_7._Str_7043;
+                _local_8.groupStatus = _local_7.groupStatus;
                 _local_8.sex = _local_7.sex;
                 _local_8.ownerId = _local_7.ownerId;
                 _local_8.ownerName = _local_7.ownerName;

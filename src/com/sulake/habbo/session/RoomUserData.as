@@ -127,12 +127,12 @@
             this._groupName = k;
         }
 
-        public function get _Str_7043():int
+        public function get groupStatus():int
         {
             return this._groupStatus;
         }
 
-        public function set _Str_7043(k:int):void
+        public function set groupStatus(k:int):void
         {
             this._groupStatus = k;
         }
