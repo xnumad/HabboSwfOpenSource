@@ -831,7 +831,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingAcceptEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
-	import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6742;
+	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingItemListEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_7375;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingYouAreNotAllowedEvent;
@@ -1138,7 +1138,7 @@
             INCOMING_PACKETS[2016] = _Str_5269;
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
             INCOMING_PACKETS[2023] = _Str_8667;
-            INCOMING_PACKETS[2024] = _Str_6742;
+            INCOMING_PACKETS[2024] = TradingItemListEvent;
             INCOMING_PACKETS[2030] = _Str_8312;
             INCOMING_PACKETS[2031] = _Str_3407;
             INCOMING_PACKETS[2032] = _Str_6344;

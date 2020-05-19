@@ -17,7 +17,7 @@
     import com.sulake.habbo.inventory.events.HabboInventoryTrackingEvent;
     import com.sulake.habbo.inventory.enum.InventorySubCategory;
     import com.sulake.habbo.inventory.furni.FurniModel;
-    import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6742;
+    import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingItemListEvent;
     import com.sulake.habbo.inventory.items.GroupItem;
     import com.sulake.habbo.inventory.items.IFurnitureItem;
     import com.sulake.core.window.IWindowContainer;
@@ -393,7 +393,7 @@
             return this._inventory;
         }
 
-        public function _Str_25000(k:_Str_6742, _arg_2:Map, _arg_3:Map):void
+        public function _Str_25000(k:TradingItemListEvent, _arg_2:Map, _arg_3:Map):void
         {
             if (this._inventory == null)
             {

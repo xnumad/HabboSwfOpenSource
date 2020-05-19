@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingConfirmationParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCompletedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCompletedParser;
-    import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6742;
+    import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingItemListEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9219;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8269;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
@@ -127,7 +127,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingYouAreNotAllowedEvent(this._Str_24409, TradingYouAreNotAllowedParser));
             this._com.addHabboConnectionMessageEvent(new TradingConfirmationEvent(this._Str_25011, TradingConfirmationParser));
             this._com.addHabboConnectionMessageEvent(new TradingCompletedEvent(this._Str_23780, TradingCompletedParser));
-            this._com.addHabboConnectionMessageEvent(new _Str_6742(this._Str_25320, _Str_9219));
+            this._com.addHabboConnectionMessageEvent(new TradingItemListEvent(this._Str_25320, _Str_9219));
             this._com.addHabboConnectionMessageEvent(new _Str_8269(this._Str_24595));
             this._com.addHabboConnectionMessageEvent(new _Str_6821(this._Str_18656));
             this._com.addHabboConnectionMessageEvent(new FigureSetIdsEvent(this._Str_25862));
@@ -618,7 +618,7 @@
         private function _Str_25320(k:IMessageEvent):void
         {
             var _local_8:GroupItem;
-            var _local_2:_Str_6742 = (k as _Str_6742);
+            var _local_2:TradingItemListEvent = (k as TradingItemListEvent);
             var _local_3:Map = new Map();
             var _local_4:Map = new Map();
             var _local_5:int = this._inventory._Str_2627.userId;
