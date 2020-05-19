@@ -173,7 +173,7 @@
             return 0;
         }
 
-        public function get _Str_19297():Boolean
+        public function get isExternalImageFurni():Boolean
         {
             return !(this._furniType.indexOf("external_image") == -1);
         }

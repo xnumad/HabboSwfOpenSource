@@ -26,6 +26,6 @@
         function get _Str_8932():int;
         function get _Str_9050():int;
         function get _Str_9408():int;
-        function get _Str_19297():Boolean;
+        function get isExternalImageFurni():Boolean;
     }
 }
