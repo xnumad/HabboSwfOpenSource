@@ -853,7 +853,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
-	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
+	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListInvalidateEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
@@ -1460,7 +1460,7 @@
             INCOMING_PACKETS[954] = _Str_3492;
             INCOMING_PACKETS[966] = _Str_8083;
             INCOMING_PACKETS[973] = _Str_8109;
-            INCOMING_PACKETS[994] = _Str_5581;
+            INCOMING_PACKETS[994] = FurniListEvent;
 			
 			/*
 			 * SnowStorm

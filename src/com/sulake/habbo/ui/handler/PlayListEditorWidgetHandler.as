@@ -8,7 +8,7 @@
     import com.sulake.habbo.sound.events.SongDiskInventoryReceivedEvent;
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFurniToWidgetMessage;
@@ -63,7 +63,7 @@
 
         public function set connection(k:IConnection):void
         {
-            this._furniListUpdateListener = new _Str_5581(this._Str_11630);
+            this._furniListUpdateListener = new FurniListEvent(this._Str_11630);
             this._furniListRemoveListener = new FurniListRemoveEvent(this._Str_11630);
             this._furniListInsertListener = new FurniListAddOrUpdateEvent(this._Str_11630);
             this._connection = k;
@@ -200,7 +200,7 @@
 
         private function _Str_11630(k:IMessageEvent):void
         {
-            var _local_2:_Str_5581 = (k as _Str_5581);
+            var _local_2:FurniListEvent = (k as FurniListEvent);
             if (((_local_2) && (_local_2.getParser()._Str_9600 == 0)))
             {
                 if (this._container != null)

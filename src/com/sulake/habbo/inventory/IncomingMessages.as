@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOtherNotAllowedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOtherNotAllowedParser;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingAcceptEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingAcceptParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
@@ -139,7 +139,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_5714(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9517(this._Str_25747));
             this._com.addHabboConnectionMessageEvent(new TradingOtherNotAllowedEvent(this._Str_22530, TradingOtherNotAllowedParser));
-            this._com.addHabboConnectionMessageEvent(new _Str_5581(this._Str_25001));
+            this._com.addHabboConnectionMessageEvent(new FurniListEvent(this._Str_25001));
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
             this._com.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             this._com.addHabboConnectionMessageEvent(new _Str_9550(this._Str_23427));
@@ -176,7 +176,7 @@
             this._com = null;
         }
 
-        public function _Str_25001(k:_Str_5581):void
+        public function _Str_25001(k:FurniListEvent):void
         {
             var _local_2:FurniListParser = k.getParser();
             if (_local_2 == null)
