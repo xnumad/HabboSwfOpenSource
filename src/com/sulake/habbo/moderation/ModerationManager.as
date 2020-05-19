@@ -244,7 +244,7 @@
             this._navigator.goToPrivateRoom(k);
         }
 
-        public function _Str_24468(k:int, _arg_2:int):void
+        public function openThread(k:int, _arg_2:int):void
         {
             context.createLinkEvent(((("groupforum/" + k) + "/") + _arg_2));
             Logger.log(((("MOD: OPEN THREAD: " + k) + ", ") + _arg_2));

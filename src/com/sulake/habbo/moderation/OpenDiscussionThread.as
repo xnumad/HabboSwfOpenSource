@@ -24,7 +24,7 @@
             {
                 return;
             }
-            this._main._Str_24468(this._groupId, this._threadId);
+            this._main.openThread(this._groupId, this._threadId);
         }
     }
 }
