@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.camera.CameraStorageUrlMessageParser;
 
-    public class _Str_7565 extends MessageEvent 
+    public class CameraStorageUrlMessageEvent extends MessageEvent 
     {
-        public function _Str_7565(k:Function)
+        public function CameraStorageUrlMessageEvent(k:Function)
         {
             super(k, CameraStorageUrlMessageParser);
         }

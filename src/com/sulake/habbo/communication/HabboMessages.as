@@ -182,7 +182,7 @@
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
-	import com.sulake.habbo.communication.messages.incoming.camera._Str_7565;
+	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_7662;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_8053;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
@@ -1347,7 +1347,7 @@
             INCOMING_PACKETS[3639] = _Str_8454;
             INCOMING_PACKETS[3654] = LoadGameMessageEvent;
             INCOMING_PACKETS[3684] = _Str_16597;
-            INCOMING_PACKETS[3696] = _Str_7565;
+            INCOMING_PACKETS[3696] = CameraStorageUrlMessageEvent;
             INCOMING_PACKETS[3712] = _Str_7599;
             INCOMING_PACKETS[3728] = HotelClosedAndOpensEvent;
             INCOMING_PACKETS[3738] = NoobnessLevelMessageEvent;

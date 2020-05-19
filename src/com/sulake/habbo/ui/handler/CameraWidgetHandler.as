@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.camera.CameraWidget;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_7565;
+    import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
@@ -27,7 +27,7 @@
         private var _disposed:Boolean = false;
         private var _container:IRoomWidgetHandlerContainer = null;
         private var _widget:CameraWidget;
-        private var _cameraStorageUrlMessageEvent:_Str_7565;
+        private var _cameraStorageUrlMessageEvent:CameraStorageUrlMessageEvent;
         private var _cameraPurchaseOKMessageEvent:_Str_7027;
         private var _cameraPublishStatusMessageEvent:_Str_5617;
         private var _competitionStatusMessageEvent:_Str_5371;
@@ -78,7 +78,7 @@
             {
                 this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this._Str_21956);
             }
-            this._cameraStorageUrlMessageEvent = new _Str_7565(this._Str_23768);
+            this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
             this._cameraPurchaseOKMessageEvent = new _Str_7027(this._Str_16050);
             this._cameraPublishStatusMessageEvent = new _Str_5617(this._Str_22298);
             this._competitionStatusMessageEvent = new _Str_5371(this._Str_24681);
@@ -129,7 +129,7 @@
             }
         }
 
-        private function _Str_23768(k:_Str_7565):void
+        private function _Str_23768(k:CameraStorageUrlMessageEvent):void
         {
             if (!this._widget)
             {
