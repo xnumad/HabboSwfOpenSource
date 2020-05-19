@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.inventory.trading
 {
     import com.sulake.core.communication.messages.MessageEvent;
-    import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9219;
+    import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingItemListParser;
 
     public class TradingItemListEvent extends MessageEvent 
     {
@@ -50,9 +50,9 @@
             return this.getParser()._Str_17465;
         }
 
-        public function getParser():_Str_9219
+        public function getParser():TradingItemListParser
         {
-            return _parser as _Str_9219;
+            return _parser as TradingItemListParser;
         }
     }
 }

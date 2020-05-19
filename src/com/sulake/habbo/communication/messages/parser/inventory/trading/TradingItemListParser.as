@@ -4,7 +4,7 @@
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.ItemDataStructure;
 
-    public class _Str_9219 implements IMessageParser 
+    public class TradingItemListParser implements IMessageParser 
     {
         private var _Str_16633:int;
         private var _Str_12613:Array;
