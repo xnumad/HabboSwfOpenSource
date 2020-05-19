@@ -241,7 +241,7 @@
                 {
                     this._navigator.data._Str_15161 = true;
                 }
-                if (_local_2.securityLevel >= SecurityLevelEnum._Str_8629)
+                if (_local_2.securityLevel >= SecurityLevelEnum.COMMUNITY)
                 {
                     this._navigator.data._Str_14374 = true;
                 }
