@@ -10,7 +10,7 @@
         public static const _Str_3751:int = 4;
         public static const _Str_20881:int = 3;
         public static const _Str_13617:int = 2;
-        public static const _Str_18829:int = 1;
+        public static const CELEBRITY:int = 1;
         public static const NONE:int = 0;
     }
 }
