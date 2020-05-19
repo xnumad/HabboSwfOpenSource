@@ -3,26 +3,26 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8439 implements IMessageParser 
+    public class ThumbnailStatusMessageParser implements IMessageParser 
     {
-        private var _Str_4858:Boolean = true;
-        private var _Str_16594:Boolean = false;
+        private var _ok:Boolean = true;
+        private var _renderLimitHit:Boolean = false;
 
 
         public function isOk():Boolean
         {
-            return this._Str_4858;
+            return this._ok;
         }
 
-        public function _Str_25428():Boolean
+        public function isRenderLimitHit():Boolean
         {
-            return this._Str_16594;
+            return this._renderLimitHit;
         }
 
         public function flush():Boolean
         {
-            this._Str_4858 = true;
-            this._Str_16594 = false;
+            this._ok = true;
+            this._renderLimitHit = false;
             return true;
         }
 
@@ -30,8 +30,8 @@
         {
             if (k.bytesAvailable)
             {
-                this._Str_4858 = k.readBoolean();
-                this._Str_16594 = k.readBoolean();
+                this._ok = k.readBoolean();
+                this._renderLimitHit = k.readBoolean();
             }
             return true;
         }

@@ -107,7 +107,7 @@
             }
             else
             {
-                if (k.getParser()._Str_25428())
+                if (k.getParser().isRenderLimitHit())
                 {
                     this._container.windowManager.alert("${generic.alert.title}", "${camera.render.count.info}", 0, null);
                 }
