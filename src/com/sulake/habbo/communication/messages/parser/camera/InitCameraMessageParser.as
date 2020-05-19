@@ -5,14 +5,14 @@
 
     public class InitCameraMessageParser implements IMessageParser 
     {
-        private var _Str_9271:int = 0;
+        private var _creditPrice:int = 0;
         private var _Str_8408:int = 0;
         private var _Str_8279:int = 0;
 
 
         public function _Str_23524():int
         {
-            return this._Str_9271;
+            return this._creditPrice;
         }
 
         public function _Str_22790():int
@@ -27,7 +27,7 @@
 
         public function flush():Boolean
         {
-            this._Str_9271 = 0;
+            this._creditPrice = 0;
             this._Str_8408 = 0;
             this._Str_8279 = 0;
             return true;
@@ -35,7 +35,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_9271 = k.readInteger();
+            this._creditPrice = k.readInteger();
             this._Str_8408 = k.readInteger();
             if (k.bytesAvailable > 0)
             {
