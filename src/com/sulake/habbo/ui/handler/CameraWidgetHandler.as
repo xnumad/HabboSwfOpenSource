@@ -6,7 +6,7 @@
     import com.sulake.habbo.ui.widget.camera.CameraWidget;
     import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
     import com.sulake.habbo.ui.RoomDesktop;
@@ -29,7 +29,7 @@
         private var _widget:CameraWidget;
         private var _cameraStorageUrlMessageEvent:CameraStorageUrlMessageEvent;
         private var _cameraPurchaseOKMessageEvent:_Str_7027;
-        private var _cameraPublishStatusMessageEvent:_Str_5617;
+        private var _cameraPublishStatusMessageEvent:CameraPublishStatusMessageEvent;
         private var _competitionStatusMessageEvent:CompetitionStatusMessageEvent;
         private var _initCameraMessageEvent:InitCameraMessageEvent;
         private var _roomDesktop:RoomDesktop;
@@ -80,7 +80,7 @@
             }
             this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
             this._cameraPurchaseOKMessageEvent = new _Str_7027(this._Str_16050);
-            this._cameraPublishStatusMessageEvent = new _Str_5617(this._Str_22298);
+            this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this._Str_22298);
             this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this._Str_24681);
             this._initCameraMessageEvent = new InitCameraMessageEvent(this._Str_23954);
             this._container.connection.addMessageEvent(this._cameraStorageUrlMessageEvent);
@@ -113,7 +113,7 @@
             }
         }
 
-        private function _Str_22298(k:_Str_5617):void
+        private function _Str_22298(k:CameraPublishStatusMessageEvent):void
         {
             if (this._widget)
             {

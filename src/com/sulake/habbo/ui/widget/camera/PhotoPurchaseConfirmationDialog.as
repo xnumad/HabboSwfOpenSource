@@ -20,7 +20,7 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.display.Bitmap;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.window.utils._Str_5639;
@@ -332,7 +332,7 @@
             this.setState(RENDERING_FAILED);
         }
 
-        public function _Str_12205(k:_Str_5617):void
+        public function _Str_12205(k:CameraPublishStatusMessageEvent):void
         {
             var _local_2:int;
             var _local_3:int;

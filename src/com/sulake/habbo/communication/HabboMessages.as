@@ -180,7 +180,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
 	import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+	import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
@@ -1146,7 +1146,7 @@
             INCOMING_PACKETS[2035] = _Str_7321;
             INCOMING_PACKETS[2046] = _Str_8033;
             INCOMING_PACKETS[2049] = _Str_9630;
-            INCOMING_PACKETS[2057] = _Str_5617;
+            INCOMING_PACKETS[2057] = CameraPublishStatusMessageEvent;
             INCOMING_PACKETS[2064] = _Str_5891;
             INCOMING_PACKETS[207] = _Str_5459;
             INCOMING_PACKETS[2088] = _Str_6213;

@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.camera.CameraPublishStatusMessageParser;
 
-    public class _Str_5617 extends MessageEvent 
+    public class CameraPublishStatusMessageEvent extends MessageEvent 
     {
-        public function _Str_5617(k:Function)
+        public function CameraPublishStatusMessageEvent(k:Function)
         {
             super(k, CameraPublishStatusMessageParser);
         }

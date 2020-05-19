@@ -22,7 +22,7 @@
     import flash.geom.Matrix;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 
@@ -218,7 +218,7 @@
             }
         }
 
-        public function _Str_12205(k:_Str_5617):void
+        public function _Str_12205(k:CameraPublishStatusMessageEvent):void
         {
             if (this._photoLab)
             {
