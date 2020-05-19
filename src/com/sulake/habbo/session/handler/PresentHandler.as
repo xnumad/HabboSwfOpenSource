@@ -34,7 +34,7 @@
             }
             if (((listener) && (listener.events)))
             {
-                listener.events.dispatchEvent(new RoomSessionPresentEvent(RoomSessionPresentEvent.RSPE_PRESENT_OPENED, _local_3, _local_2.classId, _local_2._Str_2887, _local_2.productCode, _local_2.placedItemId, _local_2.placedItemType, _local_2._Str_4057, _local_2.petFigureString));
+                listener.events.dispatchEvent(new RoomSessionPresentEvent(RoomSessionPresentEvent.RSPE_PRESENT_OPENED, _local_3, _local_2.classId, _local_2.itemType, _local_2.productCode, _local_2.placedItemId, _local_2.placedItemType, _local_2._Str_4057, _local_2.petFigureString));
             }
         }
     }

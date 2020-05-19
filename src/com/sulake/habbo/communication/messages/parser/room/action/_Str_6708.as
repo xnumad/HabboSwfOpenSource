@@ -14,7 +14,7 @@
             return this._userId;
         }
 
-        public function get _Str_2887():int
+        public function get itemType():int
         {
             return this._itemType;
         }

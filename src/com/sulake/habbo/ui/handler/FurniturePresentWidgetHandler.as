@@ -181,13 +181,13 @@
                         {
                             this._name = "";
                             _local_4 = null;
-                            if (_local_2._Str_2887 == ProductTypeEnum.FLOOR)
+                            if (_local_2.itemType == ProductTypeEnum.FLOOR)
                             {
                                 _local_3 = this._container.sessionDataManager.getFloorItemData(_local_2.classId);
                             }
                             else
                             {
-                                if (_local_2._Str_2887 == ProductTypeEnum.WALL)
+                                if (_local_2.itemType == ProductTypeEnum.WALL)
                                 {
                                     _local_3 = this._container.sessionDataManager.getWallItemData(_local_2.classId);
                                 }
@@ -201,7 +201,7 @@
                                     _local_6 = this._container.isOwnerOfFurniture(_local_8);
                                 }
                             }
-                            switch (_local_2._Str_2887)
+                            switch (_local_2.itemType)
                             {
                                 case ProductTypeEnum.WALL:
                                     if (_local_3 != null)
@@ -303,7 +303,7 @@
                             if (_local_5 != null)
                             {
                                 _local_5.classId = _local_2.classId;
-                                _local_5._Str_2887 = _local_2._Str_2887;
+                                _local_5.itemType = _local_2.itemType;
                                 _local_5.placedItemId = _local_2.placedItemId;
                                 _local_5._Str_4057 = _local_2._Str_4057;
                                 _local_5.placedItemType = _local_2.placedItemType;

@@ -144,14 +144,14 @@
                         {
                             _local_3 = null;
                             this._name = "";
-                            if (_local_2._Str_2887 == "s")
+                            if (_local_2.itemType == "s")
                             {
                                 _local_3 = this._container.roomEngine.getFurnitureIcon(_local_2.classId, this);
                                 _local_4 = this._container.sessionDataManager.getFloorItemData(_local_2.classId);
                             }
                             else
                             {
-                                if (_local_2._Str_2887 == "i")
+                                if (_local_2.itemType == "i")
                                 {
                                     _local_3 = this._container.roomEngine.getWallItemIcon(_local_2.classId, this);
                                     _local_4 = this._container.sessionDataManager.getWallItemData(_local_2.classId);

@@ -50,12 +50,12 @@
             this._Str_2825 = k;
         }
 
-        public function get _Str_2887():String
+        public function get itemType():String
         {
             return this._itemType;
         }
 
-        public function set _Str_2887(k:String):void
+        public function set itemType(k:String):void
         {
             this._itemType = k;
         }

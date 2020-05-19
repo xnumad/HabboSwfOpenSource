@@ -14,7 +14,7 @@
         private var _Str_10229:String;
 
 
-        public function get _Str_2887():String
+        public function get itemType():String
         {
             return this._itemType;
         }

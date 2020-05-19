@@ -1058,7 +1058,7 @@
             if ((k is _Str_7050))
             {
                 _local_2 = (k as _Str_7050).getParser();
-                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2._Str_2887);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_2.itemType);
             }
         }
 
@@ -1072,7 +1072,7 @@
             if ((k is _Str_8069))
             {
                 _local_2 = (k as _Str_8069).getParser();
-                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_2._Str_2887);
+                this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_2.userId, RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_2.itemType);
             }
         }
 

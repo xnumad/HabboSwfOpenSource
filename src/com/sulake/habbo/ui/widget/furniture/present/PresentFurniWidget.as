@@ -147,7 +147,7 @@
                     }
                     this._objectId = k._Str_1577;
                     this._classId = k.classId;
-                    this._itemType = k._Str_2887;
+                    this._itemType = k.itemType;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
@@ -163,7 +163,7 @@
                     }
                     this._objectId = k._Str_1577;
                     this._classId = k.classId;
-                    this._itemType = k._Str_2887;
+                    this._itemType = k.itemType;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
@@ -179,7 +179,7 @@
                     }
                     this._objectId = k._Str_1577;
                     this._classId = k.classId;
-                    this._itemType = k._Str_2887;
+                    this._itemType = k.itemType;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;
@@ -195,7 +195,7 @@
                     }
                     this._objectId = k._Str_1577;
                     this._classId = k.classId;
-                    this._itemType = k._Str_2887;
+                    this._itemType = k.itemType;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._Str_10146();
@@ -208,7 +208,7 @@
                     }
                     this._objectId = k._Str_1577;
                     this._classId = k.classId;
-                    this._itemType = k._Str_2887;
+                    this._itemType = k.itemType;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._placedItemId = k.placedItemId;

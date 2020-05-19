@@ -14,7 +14,7 @@
             this._classId = _arg_3;
         }
 
-        public function get _Str_2887():String
+        public function get itemType():String
         {
             return this._itemType;
         }

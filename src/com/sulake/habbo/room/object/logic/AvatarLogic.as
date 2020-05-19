@@ -212,13 +212,13 @@
             if ((k is RoomObjectAvatarCarryObjectUpdateMessage))
             {
                 _local_16 = (k as RoomObjectAvatarCarryObjectUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_16._Str_2887);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT, _local_16.itemType);
                 _local_2.setNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT, 0);
                 this._carryObjectStartTimeStamp = getTimer();
-                if (_local_16._Str_2887 < CARRY_ITEM_EMPTY_HAND_ANIMATION_LENGTH)
+                if (_local_16.itemType < CARRY_ITEM_EMPTY_HAND_ANIMATION_LENGTH)
                 {
                     this._carryObjectEndTimeStamp = 0;
-                    this._allowUseCarryObject = (_local_16._Str_2887 <= CARRY_ITEM_DELAY_BEFORE_USE);
+                    this._allowUseCarryObject = (_local_16.itemType <= CARRY_ITEM_DELAY_BEFORE_USE);
                 }
                 else
                 {
@@ -230,7 +230,7 @@
             if ((k is RoomObjectAvatarUseObjectUpdateMessage))
             {
                 _local_17 = (k as RoomObjectAvatarUseObjectUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_17._Str_2887);
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT, _local_17.itemType);
                 return;
             }
             if ((k is RoomObjectAvatarSignUpdateMessage))
