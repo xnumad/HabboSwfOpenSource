@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
     import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
     import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
-    import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7374;
+    import com.sulake.habbo.communication.messages.parser.mysterybox.GotMysteryBoxPrizeMessageParser;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -59,7 +59,7 @@
 
         private function _Str_22645(k:_Str_7599):void
         {
-            var _local_2:_Str_7374 = k.getParser();
+            var _local_2:GotMysteryBoxPrizeMessageParser = k.getParser();
             this._Str_22444(_local_2.contentType, _local_2.classId);
         }
 

@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7374 implements IMessageParser 
+    public class GotMysteryBoxPrizeMessageParser implements IMessageParser 
     {
         private var _contentType:String;
         private var _Str_2825:int;
