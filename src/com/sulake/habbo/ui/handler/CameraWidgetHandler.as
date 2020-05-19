@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.camera.CameraWidget;
     import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
+    import com.sulake.habbo.communication.messages.incoming.camera.CameraPurchaseOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
@@ -28,7 +28,7 @@
         private var _container:IRoomWidgetHandlerContainer = null;
         private var _widget:CameraWidget;
         private var _cameraStorageUrlMessageEvent:CameraStorageUrlMessageEvent;
-        private var _cameraPurchaseOKMessageEvent:_Str_7027;
+        private var _cameraPurchaseOKMessageEvent:CameraPurchaseOKMessageEvent;
         private var _cameraPublishStatusMessageEvent:CameraPublishStatusMessageEvent;
         private var _competitionStatusMessageEvent:CompetitionStatusMessageEvent;
         private var _initCameraMessageEvent:InitCameraMessageEvent;
@@ -79,7 +79,7 @@
                 this._container.toolbar.events.addEventListener(HabboToolbarEvent.HTE_ICON_CAMERA, this._Str_21956);
             }
             this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
-            this._cameraPurchaseOKMessageEvent = new _Str_7027(this._Str_16050);
+            this._cameraPurchaseOKMessageEvent = new CameraPurchaseOKMessageEvent(this._Str_16050);
             this._cameraPublishStatusMessageEvent = new CameraPublishStatusMessageEvent(this._Str_22298);
             this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this._Str_24681);
             this._initCameraMessageEvent = new InitCameraMessageEvent(this._Str_23954);
@@ -105,7 +105,7 @@
             this._publishDucketPrice = k.getParser().getPublishDucketPrice();
         }
 
-        private function _Str_16050(k:_Str_7027):void
+        private function _Str_16050(k:CameraPurchaseOKMessageEvent):void
         {
             if (this._widget)
             {

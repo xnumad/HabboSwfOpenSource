@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.camera.CameraPurchaseOKMessageParser;
 
-    public class _Str_7027 extends MessageEvent 
+    public class CameraPurchaseOKMessageEvent extends MessageEvent 
     {
-        public function _Str_7027(k:Function)
+        public function CameraPurchaseOKMessageEvent(k:Function)
         {
             super(k, CameraPurchaseOKMessageParser);
         }

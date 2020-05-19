@@ -181,7 +181,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
 	import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraPublishStatusMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
+	import com.sulake.habbo.communication.messages.incoming.camera.CameraPurchaseOKMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
@@ -1241,7 +1241,7 @@
             INCOMING_PACKETS[2772] = _Str_8785;
             INCOMING_PACKETS[2774] = CraftingRecipeEvent;
             INCOMING_PACKETS[2782] = _Str_9038;
-            INCOMING_PACKETS[2783] = _Str_7027;
+            INCOMING_PACKETS[2783] = CameraPurchaseOKMessageEvent;
             INCOMING_PACKETS[2788] = _Str_8482;
             INCOMING_PACKETS[280] = _Str_5641;
             INCOMING_PACKETS[2800] = _Str_4035;
