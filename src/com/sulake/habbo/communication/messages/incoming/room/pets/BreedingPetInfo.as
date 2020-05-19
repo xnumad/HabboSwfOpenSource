@@ -4,7 +4,7 @@
 
     public class BreedingPetInfo 
     {
-        private var _Str_7992:int;
+        private var _webId:int;
         private var _name:String;
         private var _level:int;
         private var _figure:String;
@@ -12,7 +12,7 @@
 
         public function BreedingPetInfo(k:IMessageDataWrapper)
         {
-            this._Str_7992 = k.readInteger();
+            this._webId = k.readInteger();
             this._name = k.readString();
             this._level = k.readInteger();
             this._figure = k.readString();
@@ -21,7 +21,7 @@
 
         public function dispose():void
         {
-            this._Str_7992 = 0;
+            this._webId = 0;
             this._name = "";
             this._level = 0;
             this._figure = "";
@@ -30,7 +30,7 @@
 
         public function get _Str_5277():int
         {
-            return this._Str_7992;
+            return this._webId;
         }
 
         public function get name():String
