@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9589 implements IMessageParser 
+    public class TradingOpenParser implements IMessageParser 
     {
         private var _Str_8107:int;
         private var _Str_16372:Boolean;
