@@ -67,7 +67,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListAddOrUpdateParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListRemoveParser;
-    import com.sulake.habbo.communication.messages.parser.inventory.furni._Str_7548;
+    import com.sulake.habbo.communication.messages.parser.inventory.furni.PostItPlacedParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5511;
     import com.sulake.habbo.inventory.effects.Effect;
     import com.sulake.habbo.inventory.effects.EffectsModel;
@@ -274,7 +274,7 @@
 
         public function _Str_23887(k:IMessageEvent):void
         {
-            var _local_2:_Str_7548 = (k as _Str_9359).getParser();
+            var _local_2:PostItPlacedParser = (k as _Str_9359).getParser();
             if (_local_2 == null)
             {
                 return;
