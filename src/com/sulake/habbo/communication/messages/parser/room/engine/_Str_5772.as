@@ -7,7 +7,7 @@
     {
         private var _id:int;
         private var _figure:String;
-        private var _Str_4037:String;
+        private var _sex:String;
         private var _Str_8430:String;
         private var _activityPoints:int;
 
@@ -24,7 +24,7 @@
 
         public function get _Str_3344():String
         {
-            return this._Str_4037;
+            return this._sex;
         }
 
         public function get customInfo():String
@@ -41,7 +41,7 @@
         {
             this._id = 0;
             this._figure = "";
-            this._Str_4037 = "";
+            this._sex = "";
             this._Str_8430 = "";
             return true;
         }
@@ -50,12 +50,12 @@
         {
             this._id = k.readInteger();
             this._figure = k.readString();
-            this._Str_4037 = k.readString();
+            this._sex = k.readString();
             this._Str_8430 = k.readString();
             this._activityPoints = k.readInteger();
-            if (this._Str_4037)
+            if (this._sex)
             {
-                this._Str_4037 = this._Str_4037.toUpperCase();
+                this._sex = this._sex.toUpperCase();
             }
             return true;
         }

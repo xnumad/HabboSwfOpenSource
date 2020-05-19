@@ -5,7 +5,7 @@
         private var _Str_11596:int = -1;
         private var _name:String = "";
         private var _type:int = 0;
-        private var _Str_4037:String = "";
+        private var _sex:String = "";
         private var _figure:String = "";
         private var _custom:String = "";
         private var _activityPoints:int;
@@ -69,12 +69,12 @@
 
         public function get _Str_3344():String
         {
-            return this._Str_4037;
+            return this._sex;
         }
 
         public function set _Str_3344(k:String):void
         {
-            this._Str_4037 = k;
+            this._sex = k;
         }
 
         public function get figure():String
