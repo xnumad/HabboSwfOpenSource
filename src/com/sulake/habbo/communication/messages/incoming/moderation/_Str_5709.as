@@ -8,7 +8,7 @@
         private var _flatId:int;
         private var _userCount:int;
         private var _Str_21059:Boolean;
-        private var _Str_2592:int;
+        private var _ownerId:int;
         private var _ownerName:String;
         private var _room:_Str_3169;
         private var _disposed:Boolean;
@@ -18,7 +18,7 @@
             this._flatId = k.readInteger();
             this._userCount = k.readInteger();
             this._Str_21059 = k.readBoolean();
-            this._Str_2592 = k.readInteger();
+            this._ownerId = k.readInteger();
             this._ownerName = k.readString();
             this._room = new _Str_3169(k);
         }
@@ -59,7 +59,7 @@
 
         public function get ownerId():int
         {
-            return this._Str_2592;
+            return this._ownerId;
         }
 
         public function get ownerName():String

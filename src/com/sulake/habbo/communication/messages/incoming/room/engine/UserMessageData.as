@@ -21,7 +21,7 @@
         private var _groupStatus:int = 0;
         private var _groupName:String = "";
         private var _subType:String = "";
-        private var _Str_2592:int = 0;
+        private var _ownerId:int = 0;
         private var _ownerName:String;
         private var _rarityLevel:int;
         private var _Str_6842:Boolean;
@@ -248,14 +248,14 @@
 
         public function get ownerId():int
         {
-            return this._Str_2592;
+            return this._ownerId;
         }
 
         public function set ownerId(k:int):void
         {
             if (!this._Str_2479)
             {
-                this._Str_2592 = k;
+                this._ownerId = k;
             }
         }
 

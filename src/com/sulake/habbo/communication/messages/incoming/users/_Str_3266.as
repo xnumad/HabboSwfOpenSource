@@ -10,7 +10,7 @@
         private var _Str_6751:String;
         private var _Str_6979:String;
         private var _favourite:Boolean;
-        private var _Str_2592:int;
+        private var _ownerId:int;
         private var _Str_19808:Boolean;
 
         public function _Str_3266(k:IMessageDataWrapper)
@@ -21,7 +21,7 @@
             this._Str_6751 = k.readString();
             this._Str_6979 = k.readString();
             this._favourite = k.readBoolean();
-            this._Str_2592 = k.readInteger();
+            this._ownerId = k.readInteger();
             this._Str_19808 = k.readBoolean();
         }
 
@@ -57,7 +57,7 @@
 
         public function get ownerId():int
         {
-            return this._Str_2592;
+            return this._ownerId;
         }
 
         public function get _Str_21674():Boolean

@@ -59,7 +59,7 @@
         protected var _Str_3747:IWindow;
         protected var _Str_3810:IWindow;
         private var _Str_5729:int;
-        private var _Str_2592:int = 0;
+        private var _ownerId:int = 0;
         protected var _Str_2268:InfoStandWidget;
         protected var _Str_2373:IItemListWindow;
 
@@ -315,8 +315,8 @@
             var _local_4:ITextWindow;
             var _local_5:IWindow;
             var _local_6:IWindow;
-            this._Str_2592 = k;
-            if (this._Str_2592 == 0)
+            this._ownerId = k;
+            if (this._ownerId == 0)
             {
                 this._Str_3360("owner_region", false);
                 this._Str_3360("owner_spacer", false);
@@ -327,7 +327,7 @@
                 _local_4 = (_local_3.findChildByName("owner_name") as ITextWindow);
                 _local_5 = _local_3.findChildByName("owner_link");
                 _local_6 = _local_3.findChildByName("bcw_icon");
-                if (this._Str_2592 != _Str_12261)
+                if (this._ownerId != _Str_12261)
                 {
                     _local_4.text = _arg_2;
                     _local_3._Str_2613 = this._Str_2268.localizations.getLocalization("infostand.profile.link.tooltip", "");
@@ -362,7 +362,7 @@
                 return;
             }
             this._Str_2268.localizations.registerParameter("infostand.rent.expiration", "time", FriendlyTime.format(this._Str_2268.handler.container.localization, k));
-            _local_2.visible = ((k >= 0) && (this._Str_2592 == this._Str_2268.handler.container.sessionDataManager.userId));
+            _local_2.visible = ((k >= 0) && (this._ownerId == this._Str_2268.handler.container.sessionDataManager.userId));
             this.updateWindow();
         }
 
@@ -430,13 +430,13 @@
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
-                if (this._Str_2592 == _Str_12261)
+                if (this._ownerId == _Str_12261)
                 {
                     this._Str_2268.handler.container.catalog.toggleToBuildersClub();
                 }
                 else
                 {
-                    this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._Str_2592, "infoStand_furniView"));
+                    this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._ownerId, "infoStand_furniView"));
                 }
             }
             if (k.type == WindowMouseEvent.OUT)

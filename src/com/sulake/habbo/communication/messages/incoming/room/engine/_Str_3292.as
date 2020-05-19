@@ -19,7 +19,7 @@
         private var _data:IStuffData;
         private var _Str_6673:int = 0;
         private var _Str_5135:int;
-        private var _Str_2592:int = 0;
+        private var _ownerId:int = 0;
         private var _ownerName:String = "";
         private var _Str_21695:String = null;
         private var _Str_2479:Boolean = false;
@@ -222,12 +222,12 @@
 
         public function get ownerId():int
         {
-            return this._Str_2592;
+            return this._ownerId;
         }
 
         public function set ownerId(k:int):void
         {
-            this._Str_2592 = k;
+            this._ownerId = k;
         }
 
         public function get ownerName():String
