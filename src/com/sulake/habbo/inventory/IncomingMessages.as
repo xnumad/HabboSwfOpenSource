@@ -90,7 +90,7 @@
     import com.sulake.habbo.inventory.enum.InventorySubCategory;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.inventory.trading.TradingModel;
-    import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6342;
+    import com.sulake.habbo.communication.messages.incoming.inventory.trading.ItemDataStructure;
     import com.sulake.habbo.inventory.enum.FurniCategory;
     import com.sulake.habbo.catalog.enum.ProductTypeEnum;
     import com.sulake.habbo.session.furniture.IFurnitureData;
@@ -647,13 +647,13 @@
             var _local_6:int;
             var _local_7:int;
             var _local_8:String;
-            var _local_9:_Str_6342;
+            var _local_9:ItemDataStructure;
             var _local_10:int;
             var _local_4:uint = k.length;
             _local_10 = 0;
             while (_local_10 < _local_4)
             {
-                _local_9 = (k[_local_10] as _Str_6342);
+                _local_9 = (k[_local_10] as ItemDataStructure);
                 _local_6 = _local_9.spriteId;
                 _local_7 = _local_9.category;
                 _local_8 = (_local_9.furniType + String(_local_6));

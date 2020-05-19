@@ -6,7 +6,7 @@
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6342 implements IFurnitureItemData 
+    public class ItemDataStructure implements IFurnitureItemData 
     {
         private var _Str_5390:int;
         private var _isWallItem:Boolean;
@@ -27,7 +27,7 @@
         private var _rentable:Boolean;
         private var _hasRentPeriodStarted:Boolean;
 
-        public function _Str_6342(k:IMessageDataWrapper)
+        public function ItemDataStructure(k:IMessageDataWrapper)
         {
             this._itemId = k.readInteger();
             this._furniType = k.readString().toUpperCase();

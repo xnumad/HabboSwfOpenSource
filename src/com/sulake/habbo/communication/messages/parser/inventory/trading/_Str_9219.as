@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
-    import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_6342;
+    import com.sulake.habbo.communication.messages.incoming.inventory.trading.ItemDataStructure;
 
     public class _Str_9219 implements IMessageParser 
     {
@@ -96,7 +96,7 @@
             _local_3 = k.readInteger();
             while (_local_3 > 0)
             {
-                _arg_2.push(new _Str_6342(k));
+                _arg_2.push(new ItemDataStructure(k));
                 _local_3--;
             }
             return true;
