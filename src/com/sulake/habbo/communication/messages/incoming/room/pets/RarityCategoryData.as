@@ -4,12 +4,12 @@
 
     public class RarityCategoryData 
     {
-        private var _Str_16211:int;
+        private var _chance:int;
         private var _breeds:Array;
 
         public function RarityCategoryData(k:IMessageDataWrapper)
         {
-            this._Str_16211 = k.readInteger();
+            this._chance = k.readInteger();
             this._breeds = [];
             var _local_2:int = k.readInteger();
             var _local_3:int;
@@ -22,13 +22,13 @@
 
         public function dispose():void
         {
-            this._Str_16211 = -1;
+            this._chance = -1;
             this._breeds = [];
         }
 
         public function get _Str_12554():int
         {
-            return this._Str_16211;
+            return this._chance;
         }
 
         public function get breeds():Array
