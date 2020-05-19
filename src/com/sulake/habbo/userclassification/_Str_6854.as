@@ -2,7 +2,7 @@
 {
     public class _Str_6854 
     {
-        public static var _Str_21259:uint = 1;
+        public static var PILLAR_CLASSIFICATION:uint = 1;
         public static var _Str_21838:uint = 2;
         public static var _Str_21043:uint = 3;
         public static var _Str_21904:uint = 4;
