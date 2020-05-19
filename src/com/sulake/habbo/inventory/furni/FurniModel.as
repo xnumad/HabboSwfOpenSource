@@ -326,7 +326,7 @@
                 }
                 else
                 {
-                    if (_arg_2 == FurniCategory._Str_3432)
+                    if (_arg_2 == FurniCategory.LANDSCAPE)
                     {
                         _local_7 = this._windowManager.assets.getAssetByName("inventory_furni_icon_landscape");
                         if (_local_7 != null)
@@ -730,7 +730,7 @@
             {
                 return false;
             }
-            if ((((_local_3.category == FurniCategory.FLOOR) || (_local_3.category == FurniCategory.WALL_PAPER)) || (_local_3.category == FurniCategory._Str_3432)))
+            if ((((_local_3.category == FurniCategory.FLOOR) || (_local_3.category == FurniCategory.WALL_PAPER)) || (_local_3.category == FurniCategory.LANDSCAPE)))
             {
                 if (k)
                 {

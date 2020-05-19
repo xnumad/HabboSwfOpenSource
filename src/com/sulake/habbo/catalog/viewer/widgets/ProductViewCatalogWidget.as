@@ -57,7 +57,7 @@
     {
         private static const WALL_PAPER:int = 2;
         private static const FLOOR:int = 3;
-        private static const _Str_3432:int = 4;
+        private static const LANDSCAPE:int = 4;
 
         private var _Str_17061:BitmapData;
         private var _Str_3160:IWindow;
@@ -394,7 +394,7 @@
                                 }
                                 break;
                             case ProductTypeEnum.WALL:
-                                if ((((_local_7.furnitureData.category == WALL_PAPER) || (_local_7.furnitureData.category == FLOOR)) || (_local_7.furnitureData.category == _Str_3432)))
+                                if ((((_local_7.furnitureData.category == WALL_PAPER) || (_local_7.furnitureData.category == FLOOR)) || (_local_7.furnitureData.category == LANDSCAPE)))
                                 {
                                     _local_15 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
                                     _local_16 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
@@ -405,9 +405,9 @@
                                     _local_6.updateRoomWallsAndFloorVisibility(true, true);
                                     _local_18 = ((_local_7.furnitureData.category == FLOOR) ? _local_7.extraParam : _local_16);
                                     _local_19 = ((_local_7.furnitureData.category == WALL_PAPER) ? _local_7.extraParam : _local_15);
-                                    _local_20 = ((_local_7.furnitureData.category == _Str_3432) ? _local_7.extraParam : _local_17);
+                                    _local_20 = ((_local_7.furnitureData.category == LANDSCAPE) ? _local_7.extraParam : _local_17);
                                     _local_6.updateObjectRoom(_local_18, _local_19, _local_20);
-                                    if (_local_7.furnitureData.category == _Str_3432)
+                                    if (_local_7.furnitureData.category == LANDSCAPE)
                                     {
                                         _local_21 = this._habboCatalog._Str_18225("ads_twi_windw", ProductTypeEnum.WALL);
                                         _local_6.addWallItemIntoRoom(_local_21.id, new Vector3d(90, 0, 0), _local_21.customParams);

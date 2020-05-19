@@ -82,7 +82,7 @@
                     this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.floor.name");
                     this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.floor.desc");
                     break;
-                case FurniCategory._Str_3432:
+                case FurniCategory.LANDSCAPE:
                     this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.landscape.name");
                     this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.landscape.desc");
                     break;

@@ -55,7 +55,7 @@
                                     _local_6 = (_local_4.content as BitmapData).clone();
                                 }
                                 break;
-                            case FurniCategory._Str_3432:
+                            case FurniCategory.LANDSCAPE:
                                 _local_4 = ((this._inventory as Component).assets.getAssetByName("icon_landscape_png") as BitmapDataAsset);
                                 if (_local_4 != null)
                                 {
@@ -116,7 +116,7 @@
                 }
                 if (_arg_2 == 4057)
                 {
-                    return FurniCategory._Str_3432;
+                    return FurniCategory.LANDSCAPE;
                 }
                 return 1;
             }

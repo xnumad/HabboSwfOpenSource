@@ -449,7 +449,7 @@
                 return false;
             }
             var _local_3:Boolean;
-            if ((((k.category == FurniCategory.FLOOR) || (k.category == FurniCategory.WALL_PAPER)) || (k.category == FurniCategory._Str_3432)))
+            if ((((k.category == FurniCategory.FLOOR) || (k.category == FurniCategory.WALL_PAPER)) || (k.category == FurniCategory.LANDSCAPE)))
             {
                 _local_3 = false;
             }
