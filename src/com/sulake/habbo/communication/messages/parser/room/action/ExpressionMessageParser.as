@@ -6,7 +6,7 @@
     public class ExpressionMessageParser implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _mouseHighlight:int = -1;
+        private var _expressionType:int = -1;
 
 
         public function get userId():int
@@ -16,13 +16,13 @@
 
         public function get expressionType():int
         {
-            return this._mouseHighlight;
+            return this._expressionType;
         }
 
         public function flush():Boolean
         {
             this._userId = 0;
-            this._mouseHighlight = -1;
+            this._expressionType = -1;
             return true;
         }
 
@@ -33,7 +33,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._mouseHighlight = k.readInteger();
+            this._expressionType = k.readInteger();
             return true;
         }
     }
