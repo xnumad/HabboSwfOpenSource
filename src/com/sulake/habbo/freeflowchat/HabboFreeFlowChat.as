@@ -184,7 +184,7 @@
         override protected function initComponent():void
         {
             this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
-            this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
+            this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this._Str_25751));
             this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
@@ -251,7 +251,7 @@
             }
         }
 
-        private function onCreditBalance(k:_Str_2752):void
+        private function onRoomEnter(k:_Str_2752):void
         {
             this._roomChangeRecordedInHistory = false;
             this.clear();

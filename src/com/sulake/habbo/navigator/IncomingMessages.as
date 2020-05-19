@@ -157,7 +157,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
+            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this._Str_23354));
             _local_2.addHabboConnectionMessageEvent(new _Str_8002(this._Str_22797));
@@ -269,11 +269,11 @@
             }
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             var _local_2:_Str_4522 = _Str_2752(k).getParser();
             Logger.log("Navigator: entering room");
-            this.data.onCreditBalance(_local_2);
+            this.data.onRoomEnter(_local_2);
             this._Str_20233();
             this._navigator._Str_4012.close();
             this._navigator.send(new _Str_3570(_local_2._Str_6550, true, false));

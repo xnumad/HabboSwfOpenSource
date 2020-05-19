@@ -292,7 +292,7 @@
             this._toolbarClickTracker = new ToolbarClickTracker(this);
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new AuthenticationOKMessageEvent(this.onAuthOK));
-            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
+            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new _Str_3660(this._Str_25489));
             this.addMessageEvent(new LatencyPingResponseMessageEvent(this._Str_17172));
             var k:IEventDispatcher = Component(context).events;
@@ -623,7 +623,7 @@
             }
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             if (!this._anyRoomsVisited)
             {

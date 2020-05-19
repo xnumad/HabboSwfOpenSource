@@ -88,7 +88,7 @@
             this.addMessageEvent(new _Str_9354(this._Str_22529));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
-            this.addMessageEvent(new _Str_5714(this.onCreditBalance));
+            this.addMessageEvent(new _Str_5714(this.onRoomEnter));
             this.addMessageEvent(new _Str_7321(this._Str_24670));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
@@ -103,7 +103,7 @@
             this.addMessageEvent(new _Str_8670(this._Str_24546));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
             this.addMessageEvent(new PetScratchFailedEvent(this._Str_18116));
-            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
+            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this._Str_23488));
 			this.addMessageEvent(new SimpleAlertMessageEvent(this.alertMessageHandler));
             this._notifications.activate();
@@ -382,7 +382,7 @@
             }
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             this._notifications._Str_3069._Str_21530();
         }

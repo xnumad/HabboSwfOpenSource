@@ -80,7 +80,7 @@
             return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.MODERATOR)));
         }
 
-        public function onCreditBalance(k:_Str_4522):void
+        public function onRoomEnter(k:_Str_4522):void
         {
             this._enteredGuestRoom = null;
             this._currentRoomOwner = false;

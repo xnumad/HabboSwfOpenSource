@@ -164,7 +164,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
-            this._com.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
+            this._com.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
             this._com.addHabboConnectionMessageEvent(new _Str_8980(this._Str_25648));
@@ -967,7 +967,7 @@
             this._inventory._Str_22773(k.getParser()._Str_23010, k.getParser()._parser9);
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             if (this._inventory.getBoolean("effects.reactivate.on.room.entry"))
             {

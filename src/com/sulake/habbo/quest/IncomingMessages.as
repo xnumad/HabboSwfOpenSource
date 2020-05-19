@@ -62,7 +62,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new CompetitionEntrySubmitResultEvent(this._Str_17737));
             _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
+            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionProgressMessageEvent(this._Str_23911));
             _local_2.addHabboConnectionMessageEvent(new _Str_7630(this._Str_16392));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionsMessageEvent(this._Str_23908));
@@ -138,9 +138,9 @@
             this._isDisposed = true;
         }
 
-        private function onCreditBalance(k:_Str_2752):void
+        private function onRoomEnter(k:_Str_2752):void
         {
-            this._questEngine._Str_8189.onCreditBalance(k);
+            this._questEngine._Str_8189.onRoomEnter(k);
             this._questEngine._Str_6927 = true;
         }
 

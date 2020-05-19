@@ -172,7 +172,7 @@
             this.addMessageEvent(new _Str_5269(this._Str_18561));
             this.addMessageEvent(new _Str_3921(this._Str_3702));
             this.addMessageEvent(new _Str_3992(this._Str_7358));
-            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
+            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new _Str_6633(this._Str_24985));
             this.addMessageEvent(new _Str_5979(this._Str_25619));
             this.addMessageEvent(new _Str_8194(this._Str_16681));
@@ -392,7 +392,7 @@
             this._groupRoomInfoCtrl.close();
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();

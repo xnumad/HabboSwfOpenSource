@@ -118,7 +118,7 @@
             }
         }
 
-        public function onCreditBalance():void
+        public function onRoomEnter():void
         {
             var _local_3:int;
             var k:* = (this._questEngine.getInteger("new.identity", 0) > 0);

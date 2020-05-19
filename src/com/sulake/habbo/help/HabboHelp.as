@@ -436,7 +436,7 @@
             this.addMessageEvent(new _Str_11155(this._Str_24610));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
-            this.addMessageEvent(new _Str_2752(this.onCreditBalance));
+            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
             this.addMessageEvent(new SanctionStatusEvent(this._Str_22418));
             this._chatEventHandler = new ChatEventHandler(this);
@@ -752,7 +752,7 @@
             return this._instantMessageRegistry;
         }
 
-        private function onCreditBalance(k:_Str_2752):void
+        private function onRoomEnter(k:_Str_2752):void
         {
             var _local_2:_Str_4522 = _Str_2752(k).getParser();
             this._currentRoomId = _local_2._Str_6550;

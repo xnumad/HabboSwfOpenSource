@@ -307,7 +307,7 @@
             this.close();
         }
 
-        public function onCreditBalance(k:_Str_2752):void
+        public function onRoomEnter(k:_Str_2752):void
         {
             this.close();
             var _local_2:_Str_4522 = k.getParser();

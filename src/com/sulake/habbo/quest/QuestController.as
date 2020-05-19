@@ -62,9 +62,9 @@
             this._nextQuestTimer._Str_5242();
         }
 
-        public function onCreditBalance():void
+        public function onRoomEnter():void
         {
-            this._questTracker.onCreditBalance();
+            this._questTracker.onRoomEnter();
         }
 
         public function onRoomExit():void

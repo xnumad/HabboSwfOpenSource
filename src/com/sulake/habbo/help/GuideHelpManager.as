@@ -29,7 +29,7 @@
             this._guideHelpController = new HelpController(this);
             this._guideSessionController = new GuideSessionController(this);
             this._chatReviewReporterFeedbackCtrl = new ChatReviewReporterFeedbackCtrl(this._habboHelp);
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
         }
 
         public function get habboHelp():HabboHelp
@@ -37,7 +37,7 @@
             return this._habboHelp;
         }
 
-        private function onCreditBalance(k:IMessageEvent):void
+        private function onRoomEnter(k:IMessageEvent):void
         {
             if (((((this._habboHelp._Str_19829) && (this._habboHelp._Str_7478)) && (!(this._seenTourPopupDuringSession))) && (!(this._habboHelp.sessionDataManager.isAnyRoomController))))
             {
