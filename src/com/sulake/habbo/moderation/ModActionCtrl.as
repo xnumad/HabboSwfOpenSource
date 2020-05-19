@@ -157,7 +157,7 @@
             this._Str_5384 = [];
             var k:Array = [];
             var _local_2:int;
-            for each (_local_3 in this._Str_2327.issueManager._Str_24441())
+            for each (_local_3 in this._Str_2327.issueManager.getCfhTopics())
             {
                 for each (_local_4 in _local_3._Str_14841)
                 {

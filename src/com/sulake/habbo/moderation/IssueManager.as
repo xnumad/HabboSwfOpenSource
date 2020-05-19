@@ -617,7 +617,7 @@
             this._cfhtopics = k;
         }
 
-        public function _Str_24441():Vector.<CallForHelpCategoryData>
+        public function getCfhTopics():Vector.<CallForHelpCategoryData>
         {
             return this._cfhtopics;
         }
