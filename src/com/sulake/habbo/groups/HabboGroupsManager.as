@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_7832;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
     import com.sulake.habbo.communication.messages.incoming.users._Str_7294;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7472;
+    import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_6293;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5269;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
@@ -167,7 +167,7 @@
             this.addMessageEvent(new _Str_7832(this._Str_25256));
             this.addMessageEvent(new _Str_2929(this.onRoomInfo));
             this.addMessageEvent(new _Str_7294(this._Str_25665));
-            this.addMessageEvent(new _Str_7472(this._guildMembersWindowCtrl._Str_22705));
+            this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new _Str_6293(this._guildMembersWindowCtrl._Str_23412));
             this.addMessageEvent(new _Str_5269(this._Str_18561));
             this.addMessageEvent(new _Str_3921(this._Str_3702));

@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_6896;
     import com.sulake.habbo.communication.messages.incoming.users._Str_6293;
     import com.sulake.habbo.communication.messages.incoming.users._Str_6584;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7472;
+    import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GroupMembershipRequestedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
     import com.sulake.core.window.IWindowContainer;
@@ -140,7 +140,7 @@
 
         public function _Str_22705(k:IMessageEvent):void
         {
-            var _local_2:GroupMembershipRequestedMessageParser = _Str_7472(k).getParser();
+            var _local_2:GroupMembershipRequestedMessageParser = GroupMembershipRequestedMessageEvent(k).getParser();
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.groupId)))
             {
                 this._Str_5312(this._data.pageIndex);

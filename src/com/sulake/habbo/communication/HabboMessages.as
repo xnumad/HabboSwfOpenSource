@@ -337,7 +337,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_7417;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_7452;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_7456;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_7472;
+	import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.GuildMembersEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_7832;
@@ -1018,7 +1018,7 @@
             INCOMING_PACKETS[1167] = AvatarEffectMessageEvent;
             INCOMING_PACKETS[1177] = CompetitionEntrySubmitResultEvent;
             INCOMING_PACKETS[118] = ChangeNameUpdateEvent;
-            INCOMING_PACKETS[1180] = _Str_7472; //Something guild related. perhaps guild request received?
+            INCOMING_PACKETS[1180] = GroupMembershipRequestedMessageEvent;
             INCOMING_PACKETS[119] = TargetedOfferEvent;
             INCOMING_PACKETS[1191] = RoomChatSettingsMessageEvent;
             INCOMING_PACKETS[1200] = GuildMembersEvent;

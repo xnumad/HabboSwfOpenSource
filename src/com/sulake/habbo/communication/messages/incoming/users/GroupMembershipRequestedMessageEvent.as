@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GroupMembershipRequestedMessageParser;
 
-    public class _Str_7472 extends MessageEvent implements IMessageEvent 
+    public class GroupMembershipRequestedMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_7472(k:Function)
+        public function GroupMembershipRequestedMessageEvent(k:Function)
         {
             super(k, GroupMembershipRequestedMessageParser);
         }
