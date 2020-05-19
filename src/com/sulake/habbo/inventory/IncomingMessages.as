@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5514;
     import com.sulake.habbo.communication.messages.incoming._Str_433._Str_8892;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_9359;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
@@ -150,7 +150,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingCloseEvent(this._Str_25275, TradingCloseParser));
             this._com.addHabboConnectionMessageEvent(new _Str_5514(this._Str_16520));
             this._com.addHabboConnectionMessageEvent(new _Str_8892(this._Str_23929));
-            this._com.addHabboConnectionMessageEvent(new _Str_9359(this._Str_23887));
+            this._com.addHabboConnectionMessageEvent(new PostItPlacedEvent(this._Str_23887));
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
             this._com.addHabboConnectionMessageEvent(new _Str_3352(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
@@ -274,7 +274,7 @@
 
         public function _Str_23887(k:IMessageEvent):void
         {
-            var _local_2:PostItPlacedParser = (k as _Str_9359).getParser();
+            var _local_2:PostItPlacedParser = (k as PostItPlacedEvent).getParser();
             if (_local_2 == null)
             {
                 return;

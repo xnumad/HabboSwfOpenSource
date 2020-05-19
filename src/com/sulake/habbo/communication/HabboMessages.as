@@ -856,7 +856,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6908;
-	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_9359;
+	import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_10476;
@@ -1062,7 +1062,7 @@
             INCOMING_PACKETS[1477] = LeftQueueMessageEvent;
             INCOMING_PACKETS[1488] = UniqueMachineIDEvent;
             INCOMING_PACKETS[1498] = _Str_5993;
-            INCOMING_PACKETS[1501] = _Str_9359;
+            INCOMING_PACKETS[1501] = PostItPlacedEvent;
             INCOMING_PACKETS[1503] = _Str_9145;
             INCOMING_PACKETS[151] = _Str_6109;
             INCOMING_PACKETS[1517] = _Str_8409;

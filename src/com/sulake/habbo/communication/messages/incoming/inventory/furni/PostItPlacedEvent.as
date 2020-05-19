@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.PostItPlacedParser;
 
-    public class _Str_9359 extends MessageEvent implements IMessageEvent 
+    public class PostItPlacedEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_9359(k:Function)
+        public function PostItPlacedEvent(k:Function)
         {
             super(k, PostItPlacedParser);
         }
