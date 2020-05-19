@@ -90,7 +90,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_6367;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetFigureUpdateParser;
     import com.sulake.habbo.communication.messages.parser.room.action.ExpressionMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.action._Str_6731;
+    import com.sulake.habbo.communication.messages.parser.room.action.DanceMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.AvatarEffectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.SleepMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.CarryObjectMessageParser;
@@ -1009,7 +1009,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6731 = _local_2.getParser();
+            var _local_3:DanceMessageParser = _local_2.getParser();
             this._roomCreator.updateObjectUserAction(this._currentRoomId, _local_3.userId, RoomObjectVariableEnum.FIGURE_DANCE, _local_3._Str_8263);
         }
 

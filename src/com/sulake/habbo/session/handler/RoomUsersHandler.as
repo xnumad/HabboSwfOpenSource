@@ -62,7 +62,7 @@
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6246;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3742;
     import com.sulake.habbo.session.events.RoomSessionFriendRequestEvent;
-    import com.sulake.habbo.communication.messages.parser.room.action._Str_6731;
+    import com.sulake.habbo.communication.messages.parser.room.action.DanceMessageParser;
     import com.sulake.habbo.session.events.RoomSessionDanceEvent;
     import __AS3__.vec.*;
 
@@ -566,7 +566,7 @@
 
         private function onDance(k:_Str_5619):void
         {
-            var _local_2:_Str_6731 = k.getParser();
+            var _local_2:DanceMessageParser = k.getParser();
             var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             listener.events.dispatchEvent(new RoomSessionDanceEvent(_local_3, _local_2.userId, _local_2._Str_8263));
         }
