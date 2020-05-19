@@ -150,7 +150,7 @@
                     _local_18 = [];
                     switch (_local_11.category)
                     {
-                        case FurniCategory._Str_7696:
+                        case FurniCategory.PET_SHAMPOO:
                             if (_local_13.length < 2)
                             {
                                 Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));

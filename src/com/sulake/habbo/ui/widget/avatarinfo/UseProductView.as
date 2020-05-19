@@ -85,7 +85,7 @@
             this._mode = _Str_2906;
             switch (_local_3.category)
             {
-                case FurniCategory._Str_7696:
+                case FurniCategory.PET_SHAMPOO:
                     this._mode = _Str_13718;
                     return;
                 case FurniCategory._Str_7297:

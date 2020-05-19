@@ -110,7 +110,7 @@
             var _local_6:int = _Str_5091;
             switch (this._furnitureData.category)
             {
-                case FurniCategory._Str_7696:
+                case FurniCategory.PET_SHAMPOO:
                     _local_6 = _Str_11906;
                     break;
                 case FurniCategory._Str_7297:
@@ -268,7 +268,7 @@
             var _local_9:Array = [];
             switch (k.category)
             {
-                case FurniCategory._Str_7696:
+                case FurniCategory.PET_SHAMPOO:
                     if (_local_3.length < 2)
                     {
                         Logger.log(("[UseProductConfirmationView] Invalid custom params: " + _local_3));
