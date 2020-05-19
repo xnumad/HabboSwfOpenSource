@@ -12,7 +12,7 @@
         public static const TRAX_SONG:int = 8;
         public static const PRESENT:int = 9;
         public static const ECOTRON_BOX:int = 10;
-        public static const _Str_4255:int = 11;
+        public static const TROPHY:int = 11;
         public static const _Str_19933:int = 12;
         public static const _Str_7696:int = 13;
         public static const _Str_7297:int = 14;
