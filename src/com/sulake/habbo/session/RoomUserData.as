@@ -18,7 +18,7 @@
         private var _Str_12413:int = 0;
         private var _rarityLevel:int = 0;
         private var _hasSaddle:Boolean;
-        private var _Str_3253:Boolean;
+        private var _isRiding:Boolean;
         private var _Str_3101:Boolean;
         private var _Str_3297:Boolean;
         private var _Str_3284:Boolean;
@@ -179,12 +179,12 @@
 
         public function get isRiding():Boolean
         {
-            return this._Str_3253;
+            return this._isRiding;
         }
 
         public function set isRiding(k:Boolean):void
         {
-            this._Str_3253 = k;
+            this._isRiding = k;
         }
 
         public function get canBreed():Boolean
