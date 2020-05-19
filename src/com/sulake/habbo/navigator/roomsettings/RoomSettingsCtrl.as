@@ -763,11 +763,11 @@
                     this._Str_5830.unselect();
                 }
             }
-            this._Str_15306.selection = k._Str_4965.mode;
-            this._Str_6283.selection = k._Str_4965.weight;
-            this._Str_10492.selection = k._Str_4965.speed;
-            this._Str_14650._Str_2497(k._Str_4965.distance.toString());
-            this._Str_6390.selection = k._Str_4965.protection;
+            this._Str_15306.selection = k.chatSettings.mode;
+            this._Str_6283.selection = k.chatSettings.weight;
+            this._Str_10492.selection = k.chatSettings.speed;
+            this._Str_14650._Str_2497(k.chatSettings.distance.toString());
+            this._Str_6390.selection = k.chatSettings.protection;
             if (this._Str_6424)
             {
                 this._Str_6424.selection = this._Str_10107(k._Str_5962);

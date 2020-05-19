@@ -21,7 +21,7 @@
             return true;
         }
 
-        public function get _Str_4965():RoomChatSettingsParser
+        public function get chatSettings():RoomChatSettingsParser
         {
             return this._chatSettings;
         }

@@ -297,12 +297,12 @@
             return this._bannedUsersList;
         }
 
-        public function get _Str_4965():RoomChatSettingsParser
+        public function get chatSettings():RoomChatSettingsParser
         {
             return this._chatSettings;
         }
 
-        public function set _Str_4965(k:RoomChatSettingsParser):void
+        public function set chatSettings(k:RoomChatSettingsParser):void
         {
             this._chatSettings = k;
         }

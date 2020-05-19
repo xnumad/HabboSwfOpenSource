@@ -244,7 +244,7 @@
                 this._chatHistoryBuffer._Str_24587(k.getParser().data);
             }
             this._roomChangeRecordedInHistory = true;
-            this._roomChatSettings = k.getParser()._Str_4965;
+            this._roomChatSettings = k.getParser().chatSettings;
             if (this._chatFlowStage)
             {
                 this._chatFlowStage._Str_18127();
@@ -259,7 +259,7 @@
 
         private function _Str_25751(k:RoomChatSettingsMessageEvent):void
         {
-            this._roomChatSettings = k.getParser()._Str_4965;
+            this._roomChatSettings = k.getParser().chatSettings;
             if (((this._isInRoom) && (this._chatFlowStage)))
             {
                 this._chatFlowStage._Str_18127();
