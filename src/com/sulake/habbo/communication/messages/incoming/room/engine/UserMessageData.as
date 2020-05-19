@@ -376,12 +376,12 @@
             }
         }
 
-        public function get _Str_16593():String
+        public function get petPosture():String
         {
             return this._petPosture;
         }
 
-        public function set _Str_16593(k:String):void
+        public function set petPosture(k:String):void
         {
             if (!this._isReadOnly)
             {

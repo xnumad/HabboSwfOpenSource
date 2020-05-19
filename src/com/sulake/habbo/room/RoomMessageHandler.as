@@ -807,7 +807,7 @@
                     {
                         if (this._roomCreator.getWallItemTypeId(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
                         {
-                            this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_5.roomIndex, _local_5._Str_16593);
+                            this._roomCreator.updateObjectUserPosture(this._currentRoomId, _local_5.roomIndex, _local_5.petPosture);
                         }
                     }
                     if (this._roomCreator.configuration.getBoolean("avatar.ignored.bubble.enabled"))
