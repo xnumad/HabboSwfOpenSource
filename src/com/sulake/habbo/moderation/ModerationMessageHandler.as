@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.userclassification._Str_6854;
+    import com.sulake.habbo.userclassification.UserClassificationData;
     import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7060;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
@@ -266,7 +266,7 @@
             var _local_7:Array = new Array();
             for each (_local_8 in _local_4.getKeys())
             {
-                _local_7.push(new _Str_6854(_local_8, _local_4[_local_8], _local_5[_local_8]));
+                _local_7.push(new UserClassificationData(_local_8, _local_4[_local_8], _local_5[_local_8]));
             }
             _local_9 = new UserClassificationCtrl(this._moderationManager, _local_6);
             _local_9.show();

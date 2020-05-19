@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.userclassification
 {
-    public class _Str_6854 
+    public class UserClassificationData 
     {
         public static var PILLAR_CLASSIFICATION:uint = 1;
         public static var NEW_USER_CLASSIFICATION:uint = 2;
@@ -11,7 +11,7 @@
         private var _username:String;
         private var _classType:String;
 
-        public function _Str_6854(k:int, _arg_2:String, _arg_3:String)
+        public function UserClassificationData(k:int, _arg_2:String, _arg_3:String)
         {
             this._userId = k;
             this._username = _arg_2;
