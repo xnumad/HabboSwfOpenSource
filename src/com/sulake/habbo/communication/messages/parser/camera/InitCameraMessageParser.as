@@ -7,7 +7,7 @@
     {
         private var _creditPrice:int = 0;
         private var _ducketPrice:int = 0;
-        private var _Str_8279:int = 0;
+        private var _publishDucketPrice:int = 0;
 
 
         public function _Str_23524():int
@@ -22,14 +22,14 @@
 
         public function _Str_22604():int
         {
-            return this._Str_8279;
+            return this._publishDucketPrice;
         }
 
         public function flush():Boolean
         {
             this._creditPrice = 0;
             this._ducketPrice = 0;
-            this._Str_8279 = 0;
+            this._publishDucketPrice = 0;
             return true;
         }
 
@@ -39,7 +39,7 @@
             this._ducketPrice = k.readInteger();
             if (k.bytesAvailable > 0)
             {
-                this._Str_8279 = k.readInteger();
+                this._publishDucketPrice = k.readInteger();
             }
             return true;
         }
