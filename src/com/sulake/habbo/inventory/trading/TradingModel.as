@@ -734,7 +734,7 @@
             }
             else
             {
-                if (_arg_3 == FurniCategory._Str_12454)
+                if (_arg_3 == FurniCategory.GUILD_FURNI)
                 {
                     _local_6 = _Str_16998(_arg_2, _arg_5);
                 }

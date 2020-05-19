@@ -1180,7 +1180,7 @@
                     }
                     else
                     {
-                        if (k.category == FurniCategory._Str_12454)
+                        if (k.category == FurniCategory.GUILD_FURNI)
                         {
                             if (k.stuffData.compare(_local_5.stuffData))
                             {

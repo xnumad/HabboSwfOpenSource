@@ -667,7 +667,7 @@
                 }
                 else
                 {
-                    if (_local_9.category == FurniCategory._Str_12454)
+                    if (_local_9.category == FurniCategory.GUILD_FURNI)
                     {
                         _local_8 = TradingModel._Str_16998(_local_6, _local_9.stuffData);
                     }
