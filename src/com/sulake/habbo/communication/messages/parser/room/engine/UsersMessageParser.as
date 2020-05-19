@@ -163,7 +163,7 @@
                             {
                                 _local_14.figure = "hr-100-.hd-180-1.ch-876-66.lg-270-94.sh-300-64";
                             }
-                            _local_14.sex = UserMessageData.M;
+                            _local_14.sex = UserMessageData.USER_SEX_MALE;
                         }
                         else
                         {
@@ -202,7 +202,7 @@
             {
                 return UserMessageData.F;
             }
-            return UserMessageData.M;
+            return UserMessageData.USER_SEX_MALE;
         }
 
         private function convertSwimFigure(k:String, _arg_2:String, _arg_3:String):String
