@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7435 implements IMessageParser 
+    public class ExpressionMessageParser implements IMessageParser 
     {
         private var _userId:int = 0;
         private var _mouseHighlight:int = -1;

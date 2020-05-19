@@ -89,7 +89,7 @@
     import com.sulake.room.IRoomInstance;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_6367;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetFigureUpdateParser;
-    import com.sulake.habbo.communication.messages.parser.room.action._Str_7435;
+    import com.sulake.habbo.communication.messages.parser.room.action.ExpressionMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_6731;
     import com.sulake.habbo.communication.messages.parser.room.action.AvatarEffectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.SleepMessageParser;
@@ -990,7 +990,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7435 = _local_2.getParser();
+            var _local_3:ExpressionMessageParser = _local_2.getParser();
             if (_local_3 == null)
             {
                 return;
