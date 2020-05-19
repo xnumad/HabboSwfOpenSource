@@ -10,7 +10,7 @@
         private var _canBreed:Boolean;
         private var _canHarvest:Boolean;
         private var _canRevive:Boolean;
-        private var _Str_3095:Boolean;
+        private var _hasBreedingPermission:Boolean;
 
 
         public function get roomIndex():int
@@ -45,7 +45,7 @@
 
         public function get hasBreedingPermission():Boolean
         {
-            return this._Str_3095;
+            return this._hasBreedingPermission;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
@@ -55,7 +55,7 @@
             this._canBreed = k.readBoolean();
             this._canHarvest = k.readBoolean();
             this._canRevive = k.readBoolean();
-            this._Str_3095 = k.readBoolean();
+            this._hasBreedingPermission = k.readBoolean();
             return true;
         }
     }

@@ -8,7 +8,7 @@
         private var _canBreed:Boolean;
         private var _canHarvest:Boolean;
         private var _canRevive:Boolean;
-        private var _Str_3095:Boolean;
+        private var _hasBreedingPermission:Boolean;
 
         public function _Str_4828(k:int, _arg_2:Boolean, _arg_3:Boolean, _arg_4:Boolean, _arg_5:Boolean, _arg_6:Boolean=false, _arg_7:Boolean=false)
         {
@@ -17,7 +17,7 @@
             this._canBreed = _arg_2;
             this._canHarvest = _arg_3;
             this._canRevive = _arg_4;
-            this._Str_3095 = _arg_5;
+            this._hasBreedingPermission = _arg_5;
         }
 
         public function get _Str_2508():int
@@ -42,7 +42,7 @@
 
         public function get hasBreedingPermission():Boolean
         {
-            return this._Str_3095;
+            return this._hasBreedingPermission;
         }
     }
 }

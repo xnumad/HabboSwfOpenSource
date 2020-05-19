@@ -22,7 +22,7 @@
         private var _canBreed:Boolean;
         private var _canHarvest:Boolean;
         private var _canRevive:Boolean;
-        private var _Str_3095:Boolean;
+        private var _hasBreedingPermission:Boolean;
         private var _Str_3986:Array;
         private var _Str_20085:Array;
         private var _Str_9831:Boolean;
@@ -219,12 +219,12 @@
 
         public function get hasBreedingPermission():Boolean
         {
-            return this._Str_3095;
+            return this._hasBreedingPermission;
         }
 
         public function set hasBreedingPermission(k:Boolean):void
         {
-            this._Str_3095 = k;
+            this._hasBreedingPermission = k;
         }
 
         public function get _Str_3897():int
