@@ -1089,7 +1089,7 @@
             }
             if (this._container.isOwnerOfFurniture(_local_4))
             {
-                _local_3._Str_3233 = true;
+                _local_3.isOwner = true;
             }
             this._container.events.dispatchEvent(_local_3);
             if (((!(_local_3.extraParam == null)) && (_local_3.extraParam.length > 0)))

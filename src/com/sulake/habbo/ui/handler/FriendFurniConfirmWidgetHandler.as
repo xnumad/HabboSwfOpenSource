@@ -77,7 +77,7 @@
 
         private function _Str_22615(k:_Str_8413):void
         {
-            this._widget.open(k.getParser().stuffId, k.getParser()._Str_3233);
+            this._widget.open(k.getParser().stuffId, k.getParser().isOwner);
         }
 
         private function _Str_23555(k:_Str_8746):void

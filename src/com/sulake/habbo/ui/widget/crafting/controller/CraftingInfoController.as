@@ -164,7 +164,7 @@
         {
             this._Str_6691(true);
             var k:IButtonWindow = ((this.mainWindow) ? (this.mainWindow.findChildByName("btn_craft") as IButtonWindow) : null);
-            if (this._widget.handler._Str_3233)
+            if (this._widget.handler.isOwner)
             {
                 k.caption = "${crafting.btn.craft}";
                 k.enable();
@@ -181,7 +181,7 @@
         {
             this._Str_6691(true);
             var _local_2:IButtonWindow = ((this.mainWindow) ? (this.mainWindow.findChildByName("btn_craft") as IButtonWindow) : null);
-            if (this._widget.handler._Str_3233)
+            if (this._widget.handler.isOwner)
             {
                 _local_2.caption = k;
             }

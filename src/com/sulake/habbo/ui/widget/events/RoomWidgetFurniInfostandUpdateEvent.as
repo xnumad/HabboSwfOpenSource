@@ -168,12 +168,12 @@
             return this._Str_3194;
         }
 
-        public function set _Str_3233(k:Boolean):void
+        public function set isOwner(k:Boolean):void
         {
             this._isOwner = k;
         }
 
-        public function get _Str_3233():Boolean
+        public function get isOwner():Boolean
         {
             return this._isOwner;
         }

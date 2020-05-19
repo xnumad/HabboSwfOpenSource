@@ -4,7 +4,7 @@
     {
         function get _Str_6848():Array;
         function get _Str_2811():Boolean;
-        function get _Str_3233():Boolean;
+        function get isOwner():Boolean;
         function get groupId():int;
         function get groupName():String;
         function get _Str_17501():String;

@@ -146,7 +146,7 @@
         {
             var _local_3:IWindow;
             this.prepare();
-            var k:Boolean = ((!(this._data._Str_2811)) || (this._data._Str_3233));
+            var k:Boolean = ((!(this._data._Str_2811)) || (this._data.isOwner));
             this._window.findChildByName("edit_tab_1").visible = k;
             this._window.findChildByName("edit_tab_2").visible = k;
             this._window.findChildByName("edit_tab_3").visible = k;

@@ -108,7 +108,7 @@
             this._window.findChildByName("join_button").visible = ((this._expanded) && (this._group._Str_19430));
             this._window.findChildByName("join_button").enable();
             this._window.findChildByName("request_membership_button").visible = ((this._expanded) && (this._group._Str_21531));
-            this._window.findChildByName("manage_button").visible = ((this._expanded) && (this._group._Str_3233));
+            this._window.findChildByName("manage_button").visible = ((this._expanded) && (this._group.isOwner));
             this._window.findChildByName("group_logo").visible = this._expanded;
             this._window.findChildByName("group_name_txt").caption = this._group.groupName;
             this._window.findChildByName("info_region").visible = this._expanded;

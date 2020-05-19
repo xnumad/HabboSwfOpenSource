@@ -294,7 +294,7 @@
             {
                 return;
             }
-            /*if (!this._Str_3233(this._updated.id))
+            /*if (!this.isOwner(this._updated.id))
             {
                 this._roomEvents.windowManager.confirm("${wiredfurni.nonowner.change.confirm.title}", "${wiredfurni.nonowner.change.confirm.body}", 0, this._Str_24497);
             }
@@ -644,7 +644,7 @@
             return this._configureContainer.findChildByName("furni_type_matches_txt");
         }
 
-        private function _Str_3233(k:int):Boolean
+        private function isOwner(k:int):Boolean
         {
             var _local_2:IRoomObject = this._roomEvents.roomEngine.getRoomObject(this._roomEvents.roomId, k, RoomObjectCategoryEnum.CONST_10);
             if (_local_2 == null)

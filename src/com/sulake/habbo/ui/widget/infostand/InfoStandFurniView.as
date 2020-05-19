@@ -493,7 +493,7 @@
             var _local_3:Boolean;
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k._Str_3233)) || (k.isRoomController)) || (k.isGodMode)))
+            if (((((k.roomControllerLevel >= RoomControllerLevel.GUEST) || (k.isOwner)) || (k.isRoomController)) || (k.isGodMode)))
             {
                 _local_2 = true;
                 _local_3 = (!(k._Str_2770));
@@ -513,7 +513,7 @@
             this.showButton("use", _local_5);
             this._Str_24537(_local_4);
             this._Str_22883((k.groupId > 0));
-            this._Str_22377(k._Str_3233, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
+            this._Str_22377(k.isOwner, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
             this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this._Str_9953))) || (_local_5));
@@ -556,7 +556,7 @@
         private function _Str_25151(k:RoomWidgetFurniInfostandUpdateEvent):void
         {
             this._Str_5729 = this._Str_9953;
-            if (((k._Str_3233) || (k.isGodMode)))
+            if (((k.isOwner) || (k.isGodMode)))
             {
                 this._Str_5729 = this._Str_22051;
             }

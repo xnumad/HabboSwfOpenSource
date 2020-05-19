@@ -195,7 +195,7 @@
                 _local_8 = this._navigator._Str_20693(this._guestRoomData.habboGroupId);
                 if (_local_8)
                 {
-                    if (_local_8._Str_3233)
+                    if (_local_8.isOwner)
                     {
                         IStaticBitmapWrapperWindow(this._window.findChildByName("group_mode_admin")).assetUri = "newnavigator_icon_group_owner";
                     }

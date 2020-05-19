@@ -310,7 +310,7 @@
             }
         }
 
-        public function get _Str_3233():Boolean
+        public function get isOwner():Boolean
         {
             var k:int = this._container.roomEngine.activeRoomId;
             var _local_2:IRoomObject = this._container.roomEngine.getRoomObject(k, this._gizmoFurnitureId, RoomObjectCategoryEnum.CONST_10);

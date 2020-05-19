@@ -121,14 +121,14 @@
                 this._window.findChildByName("pending_members_txt").caption = this._manager.localization.getLocalization("group.pendingmembercount");
             }
             var _local_9:IWindow = this._window.findChildByName("manage_guild_region");
-            _local_9.visible = ((this._selectedGroup._Str_3233) && (this._selectedGroup._Str_6444));
+            _local_9.visible = ((this._selectedGroup.isOwner) && (this._selectedGroup._Str_6444));
             _local_9.y = ((_local_8.visible) ? (_local_8.y + 16) : _local_8.y);
             var _local_10:IWindow = this._window.findChildByName("delete_guild_region");
-            _local_10.visible = (((this._selectedGroup._Str_6444) && (this._manager._Str_25533)) && ((this._selectedGroup._Str_3233) || (this._manager.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))));
+            _local_10.visible = (((this._selectedGroup._Str_6444) && (this._manager._Str_25533)) && ((this._selectedGroup.isOwner) || (this._manager.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))));
             _local_10.y = ((_local_9.visible) ? (_local_9.y + 16) : _local_8.y);
-            this._window.findChildByName("you_are_owner_region").visible = ((this._selectedGroup._Str_6444) && (this._selectedGroup._Str_3233));
-            this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup.isAdmin)) && (!(this._selectedGroup._Str_3233)));
-            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == _Str_2974._Str_8362) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup._Str_3233)))));
+            this._window.findChildByName("you_are_owner_region").visible = ((this._selectedGroup._Str_6444) && (this._selectedGroup.isOwner));
+            this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup.isAdmin)) && (!(this._selectedGroup.isOwner)));
+            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == _Str_2974._Str_8362) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup.isOwner)))));
             this._Str_11257(0).visible = false;
             this._Str_11257(1).visible = false;
             this._Str_11257(2).visible = false;

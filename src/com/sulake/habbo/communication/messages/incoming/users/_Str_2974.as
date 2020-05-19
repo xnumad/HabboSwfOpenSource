@@ -116,7 +116,7 @@
             return this._creationDate;
         }
 
-        public function get _Str_3233():Boolean
+        public function get isOwner():Boolean
         {
             return this._isOwner;
         }
