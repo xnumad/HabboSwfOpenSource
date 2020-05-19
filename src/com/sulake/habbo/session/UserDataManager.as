@@ -136,7 +136,7 @@
             {
                 _local_6.figure = _arg_2;
                 _local_6.sex = _arg_3;
-                _local_6._Str_4799 = _arg_4;
+                _local_6.hasSaddle = _arg_4;
                 _local_6.isRiding = _arg_5;
             }
         }

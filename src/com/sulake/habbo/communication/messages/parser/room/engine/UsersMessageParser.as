@@ -140,7 +140,7 @@
                         _local_14.ownerId = k.readInteger();
                         _local_14.ownerName = k.readString();
                         _local_14.rarityLevel = k.readInteger();
-                        _local_14._Str_4799 = k.readBoolean();
+                        _local_14.hasSaddle = k.readBoolean();
                         _local_14.isRiding = k.readBoolean();
                         _local_14.canBreed = k.readBoolean();
                         _local_14.canHarvest = k.readBoolean();

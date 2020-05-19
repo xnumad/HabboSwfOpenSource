@@ -155,7 +155,7 @@
                 _local_8.ownerId = _local_7.ownerId;
                 _local_8.ownerName = _local_7.ownerName;
                 _local_8.rarityLevel = _local_7.rarityLevel;
-                _local_8._Str_4799 = _local_7._Str_4799;
+                _local_8.hasSaddle = _local_7.hasSaddle;
                 _local_8.isRiding = _local_7.isRiding;
                 _local_8.canBreed = _local_7.canBreed;
                 _local_8.canHarvest = _local_7.canHarvest;
@@ -321,7 +321,7 @@
             var _local_5:String = _local_3.figureData.figuredata;
             var _local_6:int = _local_3.roomIndex;
             var _local_7:int = _local_3._Str_2508;
-            var _local_8:Boolean = _local_3._Str_4799;
+            var _local_8:Boolean = _local_3.hasSaddle;
             var _local_9:Boolean = _local_3.isRiding;
             _local_4.userDataManager.updateFigure(_local_6, _local_5, "", _local_8, _local_9);
             listener.events.dispatchEvent(new RoomSessionPetFigureUpdateEvent(_local_4, _local_7, _local_5));

@@ -490,7 +490,7 @@
                 {
                     if (_local_12.ownerId == _arg_5)
                     {
-                        if (((_local_12._Str_4799) && (_arg_4 == FurniCategory._Str_6096)))
+                        if (((_local_12.hasSaddle) && (_arg_4 == FurniCategory._Str_6096)))
                         {
                             _local_13 = true;
                         }

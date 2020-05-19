@@ -167,12 +167,12 @@
             this._rarityLevel = k;
         }
 
-        public function get _Str_4799():Boolean
+        public function get hasSaddle():Boolean
         {
             return this._hasSaddle;
         }
 
-        public function set _Str_4799(k:Boolean):void
+        public function set hasSaddle(k:Boolean):void
         {
             this._hasSaddle = k;
         }

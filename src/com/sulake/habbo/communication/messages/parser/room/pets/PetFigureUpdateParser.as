@@ -28,7 +28,7 @@
             return this._figureData;
         }
 
-        public function get _Str_4799():Boolean
+        public function get hasSaddle():Boolean
         {
             return this._hasSaddle;
         }
