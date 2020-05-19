@@ -3,10 +3,10 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8379 implements IMessageParser 
+    public class CompetitionStatusMessageParser implements IMessageParser 
     {
         private var _ok:Boolean = false;
-        private var _Str_17043:String = null;
+        private var _errorReason:String = null;
 
 
         public function isOk():Boolean
@@ -14,22 +14,22 @@
             return this._ok;
         }
 
-        public function _Str_19783():String
+        public function getErrorReason():String
         {
-            return this._Str_17043;
+            return this._errorReason;
         }
 
         public function flush():Boolean
         {
             this._ok = false;
-            this._Str_17043 = null;
+            this._errorReason = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._ok = k.readBoolean();
-            this._Str_17043 = k.readString();
+            this._errorReason = k.readString();
             return true;
         }
     }

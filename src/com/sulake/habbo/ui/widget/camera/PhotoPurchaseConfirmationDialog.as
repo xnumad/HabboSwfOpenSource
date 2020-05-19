@@ -403,14 +403,14 @@
             }
             else
             {
-                if (k.getParser()._Str_19783() == "too-many-submits")
+                if (k.getParser().getErrorReason() == "too-many-submits")
                 {
                     this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("generic.failed");
                     this._window.findChildByName("competition_name").caption = this._widget.localizations.getLocalization("camera.competition.limit.info");
                 }
                 else
                 {
-                    if (k.getParser()._Str_19783() == "email-not-verified")
+                    if (k.getParser().getErrorReason() == "email-not-verified")
                     {
                         this._competitionSubmitted = false;
                         this._window.findChildByName("status_info").caption = this._widget.localizations.getLocalization("generic.failed");
