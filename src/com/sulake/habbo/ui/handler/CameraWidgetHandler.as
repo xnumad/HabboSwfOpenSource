@@ -100,7 +100,7 @@
 
         private function _Str_23954(k:_Str_7662):void
         {
-            this._creditPrice = k.getParser()._Str_23524();
+            this._creditPrice = k.getParser().getCreditPrice();
             this._ducketPrice = k.getParser()._Str_22790();
             this._publishDucketPrice = k.getParser()._Str_22604();
         }

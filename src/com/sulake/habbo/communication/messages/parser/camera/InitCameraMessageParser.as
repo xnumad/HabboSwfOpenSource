@@ -10,7 +10,7 @@
         private var _publishDucketPrice:int = 0;
 
 
-        public function _Str_23524():int
+        public function getCreditPrice():int
         {
             return this._creditPrice;
         }
