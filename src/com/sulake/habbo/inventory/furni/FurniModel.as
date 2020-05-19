@@ -1062,7 +1062,7 @@
             for each (_local_2 in this._furniData)
             {
                 _local_3 = _local_2.getTotalCount();
-                if (_local_2.category == FurniCategory._Str_12351)
+                if (_local_2.category == FurniCategory.POST_IT)
                 {
                     _local_3 = 1;
                 }

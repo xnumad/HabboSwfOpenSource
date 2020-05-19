@@ -6,7 +6,7 @@
         public static const WALL_PAPER:int = 2;
         public static const FLOOR:int = 3;
         public static const LANDSCAPE:int = 4;
-        public static const _Str_12351:int = 5;
+        public static const POST_IT:int = 5;
         public static const _Str_5186:int = 6;
         public static const _Str_21911:int = 7;
         public static const _Str_9125:int = 8;

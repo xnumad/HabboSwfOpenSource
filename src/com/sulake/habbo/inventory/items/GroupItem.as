@@ -587,7 +587,7 @@
             var k:int;
             var _local_2:int;
             var _local_3:FurnitureItem;
-            if (this.category == FurniCategory._Str_12351)
+            if (this.category == FurniCategory.POST_IT)
             {
                 k = 0;
                 _local_2 = 0;
@@ -668,7 +668,7 @@
         public function getUnlockedCount():int
         {
             var k:FurnitureItem;
-            if (this.category == FurniCategory._Str_12351)
+            if (this.category == FurniCategory.POST_IT)
             {
                 return this.getTotalCount();
             }
