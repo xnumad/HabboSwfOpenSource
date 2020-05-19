@@ -2,7 +2,7 @@
 {
     public class BotSkillsEnum 
     {
-        public static const _Str_19584:int = 0;
+        public static const GENERIC_SKILL:int = 0;
         public static const DRESS_UP:int = 1;
         public static const SETUP_CHAT:int = 2;
         public static const RANDOM_WALK:int = 3;
