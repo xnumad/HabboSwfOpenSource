@@ -304,7 +304,7 @@
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8296;
-	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8413;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8746;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10323;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10953;
@@ -1352,7 +1352,7 @@
             INCOMING_PACKETS[3728] = HotelClosedAndOpensEvent;
             INCOMING_PACKETS[3738] = NoobnessLevelMessageEvent;
             INCOMING_PACKETS[374] = UsersEvent;
-            INCOMING_PACKETS[3753] = _Str_8413;
+            INCOMING_PACKETS[3753] = FriendFurniStartConfirmationMessageEvent;
             INCOMING_PACKETS[377] = _Str_8530;
             INCOMING_PACKETS[3770] = _Str_7086;
             INCOMING_PACKETS[3776] = _Str_7527;

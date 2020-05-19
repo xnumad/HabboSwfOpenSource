@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.friendfurni.FriendFurniStartConfirmationMessageParser;
 
-    public class _Str_8413 extends MessageEvent implements IMessageEvent 
+    public class FriendFurniStartConfirmationMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_8413(k:Function)
+        public function FriendFurniStartConfirmationMessageEvent(k:Function)
         {
             super(k, FriendFurniStartConfirmationMessageParser);
         }

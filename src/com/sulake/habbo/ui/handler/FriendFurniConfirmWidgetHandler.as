@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.furniture.friendfurni.FriendFurniConfirmWidget;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8413;
+    import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8746;
     import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8296;
     import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
@@ -61,7 +61,7 @@
             this._connection = k;
             if (!this._friendFurniConfirmListener)
             {
-                this._friendFurniConfirmListener = new _Str_8413(this._Str_22615);
+                this._friendFurniConfirmListener = new FriendFurniStartConfirmationMessageEvent(this._Str_22615);
                 this._friendFurniOtherLockConfirmListener = new _Str_8746(this._Str_23555);
                 this._friendFurniCancelLockListener = new _Str_8296(this._Str_23369);
                 this._connection.addMessageEvent(this._friendFurniConfirmListener);
@@ -75,7 +75,7 @@
             this._connection.send(new _Str_11713(k, _arg_2));
         }
 
-        private function _Str_22615(k:_Str_8413):void
+        private function _Str_22615(k:FriendFurniStartConfirmationMessageEvent):void
         {
             this._widget.open(k.getParser().stuffId, k.getParser().isOwner);
         }
