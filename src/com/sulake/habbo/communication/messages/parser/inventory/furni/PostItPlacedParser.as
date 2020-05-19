@@ -6,13 +6,13 @@
     public class PostItPlacedParser implements IMessageParser 
     {
         private var _id:int;
-        private var _Str_19661:int;
+        private var _itemsLeft:int;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._id = k.readInteger();
-            this._Str_19661 = k.readInteger();
+            this._itemsLeft = k.readInteger();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get _Str_23779():int
         {
-            return this._Str_19661;
+            return this._itemsLeft;
         }
     }
 }
