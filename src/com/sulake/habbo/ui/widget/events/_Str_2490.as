@@ -14,7 +14,7 @@
 
         private var _Str_2319:int = -1;
         private var _Str_2825:int = 0;
-        private var _Str_2625:String = "";
+        private var _itemType:String = "";
         private var _text:String;
         private var _controller:Boolean;
         private var _Str_12168:BitmapData;
@@ -52,12 +52,12 @@
 
         public function get _Str_2887():String
         {
-            return this._Str_2625;
+            return this._itemType;
         }
 
         public function set _Str_2887(k:String):void
         {
-            this._Str_2625 = k;
+            this._itemType = k;
         }
 
         public function get text():String

@@ -5,7 +5,7 @@
 
     public class _Str_8104 implements IMessageParser 
     {
-        private var _Str_2625:String;
+        private var _itemType:String;
         private var _Str_2825:int;
         private var _Str_2570:String;
         private var _Str_3054:int;
@@ -16,7 +16,7 @@
 
         public function get _Str_2887():String
         {
-            return this._Str_2625;
+            return this._itemType;
         }
 
         public function get classId():int
@@ -51,7 +51,7 @@
 
         public function flush():Boolean
         {
-            this._Str_2625 = "";
+            this._itemType = "";
             this._Str_2825 = 0;
             this._Str_2570 = "";
             return true;
@@ -63,7 +63,7 @@
             {
                 return false;
             }
-            this._Str_2625 = k.readString();
+            this._itemType = k.readString();
             this._Str_2825 = k.readInteger();
             this._Str_2570 = k.readString();
             this._Str_3054 = k.readInteger();
