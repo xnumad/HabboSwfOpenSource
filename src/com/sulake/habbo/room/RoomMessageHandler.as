@@ -1041,7 +1041,7 @@
             }
             var _local_3:_Str_7555 = _local_2.getParser();
             var _local_4:int = 1;
-            if (!_local_3._Str_25565)
+            if (!_local_3.sleeping)
             {
                 _local_4 = 0;
             }

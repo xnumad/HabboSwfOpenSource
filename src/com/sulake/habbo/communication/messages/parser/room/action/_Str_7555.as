@@ -14,7 +14,7 @@
             return this._userId;
         }
 
-        public function get _Str_25565():Boolean
+        public function get sleeping():Boolean
         {
             return this._sleeping;
         }
