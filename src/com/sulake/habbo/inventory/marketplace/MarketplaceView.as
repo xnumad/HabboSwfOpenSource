@@ -151,7 +151,7 @@
                 _local_5 = ("roomItem.name." + k.type);
                 _local_6 = ("roomItem.desc." + k.type);
             }
-            if (k.category == FurniCategory._Str_5186)
+            if (k.category == FurniCategory.POSTER)
             {
                 _local_5 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                 _local_6 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");

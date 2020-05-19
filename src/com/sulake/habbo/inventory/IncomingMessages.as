@@ -661,7 +661,7 @@
                 {
                     _local_8 = ("itemid" + _local_9.itemId);
                 }
-                if (_local_9.category == FurniCategory._Str_5186)
+                if (_local_9.category == FurniCategory.POSTER)
                 {
                     _local_8 = ((String(_local_6) + "poster") + _local_9.stuffData.getLegacyString());
                 }

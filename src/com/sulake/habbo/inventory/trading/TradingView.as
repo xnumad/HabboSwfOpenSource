@@ -841,7 +841,7 @@
                 {
                     _local_8 = ((("$" + "{wallItem.name.") + _local_5.type) + "}");
                 }
-                if (_local_5.category == FurniCategory._Str_5186)
+                if (_local_5.category == FurniCategory.POSTER)
                 {
                     _local_8 = (("${poster_" + _local_5.stuffData.getLegacyString()) + "_name}");
                 }

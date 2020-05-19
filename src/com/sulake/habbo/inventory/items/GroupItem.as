@@ -943,7 +943,7 @@
             }
             switch (this._category)
             {
-                case FurniCategory._Str_5186:
+                case FurniCategory.POSTER:
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_name");
                     break;
                 case FurniCategory._Str_9125:
@@ -979,7 +979,7 @@
             }
             switch (this._category)
             {
-                case FurniCategory._Str_5186:
+                case FurniCategory.POSTER:
                     _local_2 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
                     break;
                 case FurniCategory._Str_9125:

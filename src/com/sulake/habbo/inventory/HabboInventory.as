@@ -771,7 +771,7 @@
             {
                 _local_2 = RoomObjectCategoryEnum.CONST_10;
             }
-            if (k.category == FurniCategory._Str_5186)
+            if (k.category == FurniCategory.POSTER)
             {
                 _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
             }

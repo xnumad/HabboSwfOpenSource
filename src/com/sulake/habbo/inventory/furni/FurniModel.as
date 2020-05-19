@@ -1170,7 +1170,7 @@
             {
                 if ((((_local_5.type == k.type) && (_local_5._Str_2770 == k._Str_2770)) && (_local_5.isGroupable)))
                 {
-                    if (k.category == FurniCategory._Str_5186)
+                    if (k.category == FurniCategory.POSTER)
                     {
                         if (_local_5.stuffData.getLegacyString() == k.stuffData.getLegacyString())
                         {
@@ -1240,7 +1240,7 @@
             {
                 _local_2 = RoomObjectCategoryEnum.CONST_10;
             }
-            if (((k.category == FurniCategory._Str_5186) || (this._Str_22524(k))))
+            if (((k.category == FurniCategory.POSTER) || (this._Str_22524(k))))
             {
                 _local_3 = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, k.id, _local_2, k.type, k.stuffData.getLegacyString());
             }

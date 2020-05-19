@@ -728,7 +728,7 @@
                 return false;
             }
             _local_6 = String(_arg_2);
-            if (_arg_3 == FurniCategory._Str_5186)
+            if (_arg_3 == FurniCategory.POSTER)
             {
                 _local_6 = ((String(_arg_2) + "poster") + _arg_5.getLegacyString());
             }
