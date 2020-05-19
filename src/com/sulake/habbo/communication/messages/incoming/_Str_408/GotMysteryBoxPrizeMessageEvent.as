@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.mysterybox.GotMysteryBoxPrizeMessageParser;
 
-    public class _Str_7599 extends MessageEvent implements IMessageEvent 
+    public class GotMysteryBoxPrizeMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_7599(k:Function)
+        public function GotMysteryBoxPrizeMessageEvent(k:Function)
         {
             super(k, GotMysteryBoxPrizeMessageParser);
         }

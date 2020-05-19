@@ -265,7 +265,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
-	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
+	import com.sulake.habbo.communication.messages.incoming._Str_408.GotMysteryBoxPrizeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_408.MysteryBoxKeysMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
@@ -1348,7 +1348,7 @@
             INCOMING_PACKETS[3654] = LoadGameMessageEvent;
             INCOMING_PACKETS[3684] = _Str_16597;
             INCOMING_PACKETS[3696] = CameraStorageUrlMessageEvent;
-            INCOMING_PACKETS[3712] = _Str_7599;
+            INCOMING_PACKETS[3712] = GotMysteryBoxPrizeMessageEvent;
             INCOMING_PACKETS[3728] = HotelClosedAndOpensEvent;
             INCOMING_PACKETS[3738] = NoobnessLevelMessageEvent;
             INCOMING_PACKETS[374] = UsersEvent;

@@ -8,7 +8,7 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
     import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
-    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
+    import com.sulake.habbo.communication.messages.incoming._Str_408.GotMysteryBoxPrizeMessageEvent;
     import com.sulake.habbo.communication.messages.parser.mysterybox.GotMysteryBoxPrizeMessageParser;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;
@@ -33,7 +33,7 @@
         private var _object:IRoomObject;
         private var _showMysteryBoxWaitMessageEvent:_Str_7564;
         private var _cancelMysteryBoxWaitMessageEvent:_Str_7433;
-        private var _gotMysteryBoxPrizeMessageEvent:_Str_7599;
+        private var _gotMysteryBoxPrizeMessageEvent:GotMysteryBoxPrizeMessageEvent;
         private var _imageId:int = -1;
 
         public function MysteryBoxOpenDialogView(k:FurnitureContextMenuWidget)
@@ -41,7 +41,7 @@
             this._widget = k;
             this._showMysteryBoxWaitMessageEvent = new _Str_7564(this._Str_25289);
             this._cancelMysteryBoxWaitMessageEvent = new _Str_7433(this._Str_24696);
-            this._gotMysteryBoxPrizeMessageEvent = new _Str_7599(this._Str_22645);
+            this._gotMysteryBoxPrizeMessageEvent = new GotMysteryBoxPrizeMessageEvent(this._Str_22645);
             this.connection.addMessageEvent(this._showMysteryBoxWaitMessageEvent);
             this.connection.addMessageEvent(this._cancelMysteryBoxWaitMessageEvent);
             this.connection.addMessageEvent(this._gotMysteryBoxPrizeMessageEvent);
@@ -57,7 +57,7 @@
             this.closeWindow();
         }
 
-        private function _Str_22645(k:_Str_7599):void
+        private function _Str_22645(k:GotMysteryBoxPrizeMessageEvent):void
         {
             var _local_2:GotMysteryBoxPrizeMessageParser = k.getParser();
             this._Str_22444(_local_2.contentType, _local_2.classId);
