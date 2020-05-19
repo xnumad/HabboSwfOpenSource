@@ -31,7 +31,7 @@
         private var _canRevive:Boolean;
         private var _hasBreedingPermission:Boolean;
         private var _petLevel:int = 0;
-        private var _Str_20254:String = "";
+        private var _petPosture:String = "";
         private var _Str_3986:Array;
         private var _Str_9831:Boolean;
         private var _Str_2479:Boolean = false;
@@ -378,14 +378,14 @@
 
         public function get _Str_16593():String
         {
-            return this._Str_20254;
+            return this._petPosture;
         }
 
         public function set _Str_16593(k:String):void
         {
             if (!this._Str_2479)
             {
-                this._Str_20254 = k;
+                this._petPosture = k;
             }
         }
 
