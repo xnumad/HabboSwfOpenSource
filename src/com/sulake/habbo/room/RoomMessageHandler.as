@@ -94,7 +94,7 @@
     import com.sulake.habbo.communication.messages.parser.room.action.AvatarEffectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.SleepMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.CarryObjectMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.action._Str_6590;
+    import com.sulake.habbo.communication.messages.parser.room.action.UseObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_6340;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3381;
     import com.sulake.room.object.IRoomObject;
@@ -1064,7 +1064,7 @@
 
         private function onUseObject(k:IMessageEvent):void
         {
-            var _local_2:_Str_6590;
+            var _local_2:UseObjectMessageParser;
             if (this._roomCreator == null)
             {
                 return;
