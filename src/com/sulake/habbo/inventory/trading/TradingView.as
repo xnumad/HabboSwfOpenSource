@@ -845,7 +845,7 @@
                 {
                     _local_8 = (("${poster_" + _local_5.stuffData.getLegacyString()) + "_name}");
                 }
-                if (_local_5.category == FurniCategory._Str_18231)
+                if (_local_5.category == FurniCategory.ECOTRON_BOX)
                 {
                     _local_9 = (_local_5 as FurnitureItem);
                     _local_10 = new Date(_local_9._Str_9408, (_local_9._Str_9050 - 1), _local_9._Str_8932);
