@@ -486,7 +486,7 @@
         {
             Logger.log("onGuideSessionPartnerIsTyping");
             var _local_2:GuideSessionPartnerIsTypingMessageParser = GuideSessionPartnerIsTypingEvent(k).getParser();
-            this._Str_19579(_local_2._Str_7319);
+            this._Str_19579(_local_2.isTyping);
         }
 
         private function onPerkAllowances(k:PerkAllowancesEvent):void

@@ -142,7 +142,7 @@
             if ((k is RoomObjectAvatarTypingUpdateMessage))
             {
                 _local_5 = (k as RoomObjectAvatarTypingUpdateMessage);
-                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_TYPING, Number(_local_5._Str_7319));
+                _local_2.setNumber(RoomObjectVariableEnum.FIGURE_IS_TYPING, Number(_local_5.isTyping));
                 return;
             }
             if ((k is RoomObjectAvatarMutedUpdateMessage))

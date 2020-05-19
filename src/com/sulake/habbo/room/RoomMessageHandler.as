@@ -1182,7 +1182,7 @@
             }
             var _local_3:UserTypingMessageParser = _local_2.getParser();
             var _local_4:int = 1;
-            if (!_local_3._Str_7319)
+            if (!_local_3.isTyping)
             {
                 _local_4 = 0;
             }

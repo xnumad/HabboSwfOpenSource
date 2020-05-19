@@ -12,7 +12,7 @@
             this._isTyping = k;
         }
 
-        public function get _Str_7319():Boolean
+        public function get isTyping():Boolean
         {
             return this._isTyping;
         }
