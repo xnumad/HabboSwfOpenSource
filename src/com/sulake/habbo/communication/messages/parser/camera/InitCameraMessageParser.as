@@ -15,7 +15,7 @@
             return this._creditPrice;
         }
 
-        public function _Str_22790():int
+        public function getDucketPrice():int
         {
             return this._ducketPrice;
         }
