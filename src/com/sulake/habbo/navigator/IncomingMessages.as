@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5134;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_8939;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5683;
-    import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5767;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
@@ -140,7 +140,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5134(this._Str_16321));
             _local_2.addHabboConnectionMessageEvent(new _Str_8939(this._Str_23463));
             _local_2.addHabboConnectionMessageEvent(new _Str_5683(this._Str_8484));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5834(this._Str_9592));
+            _local_2.addHabboConnectionMessageEvent(new RoomFilterSettingsMessageEvent(this._Str_9592));
             _local_2.addHabboConnectionMessageEvent(new _Str_5767(this._Str_26467));
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
             _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
@@ -511,7 +511,7 @@
 
         private function _Str_9592(k:IMessageEvent):void
         {
-            var _local_2:_Str_6830 = (k as _Str_5834).getParser();
+            var _local_2:_Str_6830 = (k as RoomFilterSettingsMessageEvent).getParser();
             this._navigator._Str_6472._Str_9592(_local_2._Str_13264);
             Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2._Str_13264));
         }

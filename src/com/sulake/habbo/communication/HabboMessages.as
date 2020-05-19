@@ -846,7 +846,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomFilterSettingsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.UserTypingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RemainingMutePeriodEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
@@ -1263,7 +1263,7 @@
             INCOMING_PACKETS[2901] = PetInfoMessageEvent;
             INCOMING_PACKETS[2913] = PetPlacingErrorEvent;
             INCOMING_PACKETS[2927] = _Str_9419;
-            INCOMING_PACKETS[2937] = _Str_5834;
+            INCOMING_PACKETS[2937] = RoomFilterSettingsMessageEvent;
             INCOMING_PACKETS[296] = BotForceOpenContextMenuEvent;
             INCOMING_PACKETS[2997] = PollContentsEvent;
             INCOMING_PACKETS[2998] = _Str_8179;
