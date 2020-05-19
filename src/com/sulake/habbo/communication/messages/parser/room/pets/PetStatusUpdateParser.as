@@ -5,7 +5,7 @@
 
     public class PetStatusUpdateParser implements IMessageParser 
     {
-        private var _Str_2775:int;
+        private var _roomIndex:int;
         private var _Str_2388:int;
         private var _Str_3101:Boolean;
         private var _Str_3297:Boolean;
@@ -15,7 +15,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get _Str_2508():int
@@ -50,7 +50,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2775 = k.readInteger();
+            this._roomIndex = k.readInteger();
             this._Str_2388 = k.readInteger();
             this._Str_3101 = k.readBoolean();
             this._Str_3297 = k.readBoolean();

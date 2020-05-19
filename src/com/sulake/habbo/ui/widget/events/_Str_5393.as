@@ -8,7 +8,7 @@
         private var _userName:String;
         private var _Str_3021:int;
         private var _Str_3947:Boolean;
-        private var _Str_2775:int;
+        private var _roomIndex:int;
 
         public function _Str_5393(k:int, _arg_2:String, _arg_3:int, _arg_4:int, _arg_5:Boolean, _arg_6:Boolean=false, _arg_7:Boolean=false)
         {
@@ -16,7 +16,7 @@
             this._userId = k;
             this._userName = _arg_2;
             this._Str_3021 = _arg_3;
-            this._Str_2775 = _arg_4;
+            this._roomIndex = _arg_4;
             this._Str_3947 = _arg_5;
         }
 
@@ -37,7 +37,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get allowNameChange():Boolean

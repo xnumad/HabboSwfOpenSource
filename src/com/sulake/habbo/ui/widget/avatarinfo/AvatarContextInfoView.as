@@ -15,7 +15,7 @@
         protected var _Str_2360:String;
         protected var _Str_3021:int;
         protected var _Str_3947:Boolean;
-        protected var _Str_2775:int;
+        protected var _roomIndex:int;
 
         public function AvatarContextInfoView(k:IContextMenuParentWidget)
         {
@@ -28,7 +28,7 @@
             k._Str_2306 = _arg_2;
             k._Str_2360 = _arg_3;
             k._Str_3021 = _arg_5;
-            k._Str_2775 = _arg_4;
+            k._roomIndex = _arg_4;
             k._Str_3947 = _arg_6;
             _Str_8532(k);
         }
@@ -46,7 +46,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get userName():String

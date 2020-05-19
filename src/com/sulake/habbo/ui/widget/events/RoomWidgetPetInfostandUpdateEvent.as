@@ -26,7 +26,7 @@
         private var _ownerId:int;
         private var _ownerName:String;
         private var _Str_11149:Boolean;
-        private var _Str_2775:int;
+        private var _roomIndex:int;
         private var _unknownRarityLevel:int;
         private var _saddle:Boolean;
         private var _rider:Boolean;
@@ -52,7 +52,7 @@
             this._Str_10121 = _arg_6;
             this._ownerId = _arg_7;
             this._ownerName = _arg_8;
-            this._Str_2775 = _arg_9;
+            this._roomIndex = _arg_9;
             this._unknownRarityLevel = _arg_10;
         }
 
@@ -103,7 +103,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get age():int

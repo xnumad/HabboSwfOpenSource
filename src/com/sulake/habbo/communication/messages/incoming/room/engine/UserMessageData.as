@@ -5,7 +5,7 @@
         public static const M:String = "M";
         public static const F:String = "F";
 
-        private var _Str_2775:int = 0;
+        private var _roomIndex:int = 0;
         private var _x:Number = 0;
         private var _y:Number = 0;
         private var _z:Number = 0;
@@ -38,7 +38,7 @@
 
         public function UserMessageData(k:int)
         {
-            this._Str_2775 = k;
+            this._roomIndex = k;
         }
 
         public function _Str_4710():void
@@ -48,7 +48,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get x():Number

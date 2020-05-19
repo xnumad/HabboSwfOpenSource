@@ -5,7 +5,7 @@
 
     public class _Str_7301 implements IMessageParser 
     {
-        private var _Str_2775:int;
+        private var _roomIndex:int;
         private var _Str_6639:int;
         private var _status:int;
         private var _Str_11227:String;
@@ -18,7 +18,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2775 = k.readInteger();
+            this._roomIndex = k.readInteger();
             this._Str_6639 = k.readInteger();
             this._status = k.readInteger();
             this._Str_11227 = k.readString();
@@ -27,7 +27,7 @@
 
         public function get roomIndex():int
         {
-            return this._Str_2775;
+            return this._roomIndex;
         }
 
         public function get habboGroupId():int
