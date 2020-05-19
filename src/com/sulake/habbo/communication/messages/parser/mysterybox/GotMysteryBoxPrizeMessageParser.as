@@ -6,7 +6,7 @@
     public class GotMysteryBoxPrizeMessageParser implements IMessageParser 
     {
         private var _contentType:String;
-        private var _Str_2825:int;
+        private var _classId:int;
 
 
         public function flush():Boolean
@@ -18,7 +18,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._contentType = k.readString();
-            this._Str_2825 = k.readInteger();
+            this._classId = k.readInteger();
             return true;
         }
 
@@ -29,7 +29,7 @@
 
         public function get classId():int
         {
-            return this._Str_2825;
+            return this._classId;
         }
     }
 }

@@ -13,7 +13,7 @@
         public static const RWPDUE_CONTENTS_IMAGE:String = "RWPDUE_CONTENTS_IMAGE";
 
         private var _Str_2319:int = -1;
-        private var _Str_2825:int = 0;
+        private var _classId:int = 0;
         private var _itemType:String = "";
         private var _text:String;
         private var _controller:Boolean;
@@ -42,12 +42,12 @@
 
         public function get classId():int
         {
-            return this._Str_2825;
+            return this._classId;
         }
 
         public function set classId(k:int):void
         {
-            this._Str_2825 = k;
+            this._classId = k;
         }
 
         public function get itemType():String

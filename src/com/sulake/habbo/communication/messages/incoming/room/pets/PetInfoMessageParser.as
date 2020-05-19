@@ -3,7 +3,7 @@
     public class PetInfoMessageParser 
     {
         private var _stuffId:int;
-        private var _Str_2825:int;
+        private var _classId:int;
         private var _Str_2570:String;
         private var _userId:int;
         private var _userName:String;
@@ -13,7 +13,7 @@
         public function PetInfoMessageParser(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:Boolean)
         {
             this._stuffId = k;
-            this._Str_2825 = _arg_2;
+            this._classId = _arg_2;
             this._Str_2570 = _arg_3;
             this._userId = _arg_4;
             this._userName = _arg_5;
@@ -28,7 +28,7 @@
 
         public function get classId():int
         {
-            return this._Str_2825;
+            return this._classId;
         }
 
         public function get productCode():String
