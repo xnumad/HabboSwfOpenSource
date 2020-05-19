@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.chat._Str_6399;
 
-    public class FloodControl extends MessageEvent 
+    public class FloodControlMessageEvent extends MessageEvent 
     {
-        public function FloodControl(k:Function)
+        public function FloodControlMessageEvent(k:Function)
         {
             super(k, _Str_6399);
         }

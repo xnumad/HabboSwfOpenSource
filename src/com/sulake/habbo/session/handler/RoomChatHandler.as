@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
     import com.sulake.habbo.communication.messages.incoming.users._Str_9507;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControl;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
     import com.sulake.core.communication.connection.IConnection;
@@ -37,7 +37,7 @@
             k.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             k.addMessageEvent(new _Str_8482(this._Str_23513));
             k.addMessageEvent(new _Str_9507(this._Str_23073));
-            k.addMessageEvent(new FloodControl(this.onFloodControl));
+            k.addMessageEvent(new FloodControlMessageEvent(this.onFloodControl));
             k.addMessageEvent(new _Str_8702(this._Str_23267));
             k.addMessageEvent(new _Str_8596(this._Str_22326));
         }
@@ -255,7 +255,7 @@
             var _local_4:int;
             if (((listener) && (listener.events)))
             {
-                _local_2 = (k as FloodControl).getParser();
+                _local_2 = (k as FloodControlMessageEvent).getParser();
                 _local_3 = listener.getSession(_xxxRoomId);
                 if (_local_3 == null)
                 {
