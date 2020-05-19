@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8536 implements IMessageParser 
+    public class InitCameraMessageParser implements IMessageParser 
     {
         private var _Str_9271:int = 0;
         private var _Str_8408:int = 0;
