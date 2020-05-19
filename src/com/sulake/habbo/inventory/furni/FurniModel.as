@@ -306,7 +306,7 @@
         {
             var _local_6:BitmapData;
             var _local_7:IAsset;
-            if (_arg_2 == FurniCategory._Str_3639)
+            if (_arg_2 == FurniCategory.WALL_PAPER)
             {
                 _local_7 = this._windowManager.assets.getAssetByName("inventory_furni_icon_wallpaper");
                 if (_local_7 != null)
@@ -730,7 +730,7 @@
             {
                 return false;
             }
-            if ((((_local_3.category == FurniCategory._Str_3683) || (_local_3.category == FurniCategory._Str_3639)) || (_local_3.category == FurniCategory._Str_3432)))
+            if ((((_local_3.category == FurniCategory._Str_3683) || (_local_3.category == FurniCategory.WALL_PAPER)) || (_local_3.category == FurniCategory._Str_3432)))
             {
                 if (k)
                 {

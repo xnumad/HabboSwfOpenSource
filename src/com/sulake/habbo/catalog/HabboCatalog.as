@@ -2739,7 +2739,7 @@
                                 this.send(new _Str_5270(_local_2));
                             }
                             break;
-                        case FurniCategory._Str_3639:
+                        case FurniCategory.WALL_PAPER:
                             _local_9 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
                             if (this._placedObjectPurchaseData.extraParameter != _local_9)
                             {

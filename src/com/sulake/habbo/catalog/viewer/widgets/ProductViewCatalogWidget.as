@@ -55,7 +55,7 @@
 
     public class ProductViewCatalogWidget extends CatalogWidget implements IGetImageListener, _Str_4431 
     {
-        private static const _Str_3639:int = 2;
+        private static const WALL_PAPER:int = 2;
         private static const _Str_3683:int = 3;
         private static const _Str_3432:int = 4;
 
@@ -394,7 +394,7 @@
                                 }
                                 break;
                             case ProductTypeEnum.WALL:
-                                if ((((_local_7.furnitureData.category == _Str_3639) || (_local_7.furnitureData.category == _Str_3683)) || (_local_7.furnitureData.category == _Str_3432)))
+                                if ((((_local_7.furnitureData.category == WALL_PAPER) || (_local_7.furnitureData.category == _Str_3683)) || (_local_7.furnitureData.category == _Str_3432)))
                                 {
                                     _local_15 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_WALL_TYPE);
                                     _local_16 = this._habboCatalog.roomEngine.getRoomStringValue(this._habboCatalog.roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
@@ -404,7 +404,7 @@
                                     _local_17 = (((_local_17) && (_local_17.length > 0)) ? _local_17 : "1.1");
                                     _local_6.updateRoomWallsAndFloorVisibility(true, true);
                                     _local_18 = ((_local_7.furnitureData.category == _Str_3683) ? _local_7.extraParam : _local_16);
-                                    _local_19 = ((_local_7.furnitureData.category == _Str_3639) ? _local_7.extraParam : _local_15);
+                                    _local_19 = ((_local_7.furnitureData.category == WALL_PAPER) ? _local_7.extraParam : _local_15);
                                     _local_20 = ((_local_7.furnitureData.category == _Str_3432) ? _local_7.extraParam : _local_17);
                                     _local_6.updateObjectRoom(_local_18, _local_19, _local_20);
                                     if (_local_7.furnitureData.category == _Str_3432)

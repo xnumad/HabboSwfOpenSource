@@ -74,7 +74,7 @@
             this._Str_19058 = _arg_9;
             switch (this._category)
             {
-                case FurniCategory._Str_3639:
+                case FurniCategory.WALL_PAPER:
                     this._name = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.wallpaper.name");
                     this._description = this._Str_2307.controller.localization.getLocalization("inventory.furni.item.wallpaper.desc");
                     break;

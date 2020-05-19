@@ -247,11 +247,11 @@
                 _local_12 = (((_local_12) && (_local_12.length > 0)) ? _local_12 : "1.1");
                 this._roomPreviewer.reset(false);
                 this._roomPreviewer.updateObjectRoom(_local_11, _local_10, _local_12);
-                if ((((_local_2.category == FurniCategory._Str_3639) || (_local_2.category == FurniCategory._Str_3683)) || (_local_2.category == FurniCategory._Str_3432)))
+                if ((((_local_2.category == FurniCategory.WALL_PAPER) || (_local_2.category == FurniCategory._Str_3683)) || (_local_2.category == FurniCategory._Str_3432)))
                 {
                     this._roomPreviewer.updateRoomWallsAndFloorVisibility(true, true);
                     _local_16 = ((_local_2.category == FurniCategory._Str_3683) ? _local_6.stuffData.getLegacyString() : _local_11);
-                    _local_17 = ((_local_2.category == FurniCategory._Str_3639) ? _local_6.stuffData.getLegacyString() : _local_10);
+                    _local_17 = ((_local_2.category == FurniCategory.WALL_PAPER) ? _local_6.stuffData.getLegacyString() : _local_10);
                     _local_18 = ((_local_2.category == FurniCategory._Str_3432) ? _local_6.stuffData.getLegacyString() : _local_12);
                     this._roomPreviewer.updateObjectRoom(_local_16, _local_17, _local_18);
                     if (_local_2.category == FurniCategory._Str_3432)
@@ -753,7 +753,7 @@
                                 return;
                             }
                             _local_7 = _local_6._Str_3205();
-                            if ((((_local_7.category == FurniCategory._Str_3639) || (_local_7.category == FurniCategory._Str_3683)) || (_local_7.category == FurniCategory._Str_3432)))
+                            if ((((_local_7.category == FurniCategory.WALL_PAPER) || (_local_7.category == FurniCategory._Str_3683)) || (_local_7.category == FurniCategory._Str_3432)))
                             {
                                 return;
                             }

@@ -48,7 +48,7 @@
                     {
                         switch (_local_7)
                         {
-                            case FurniCategory._Str_3639:
+                            case FurniCategory.WALL_PAPER:
                                 _local_4 = ((this._inventory as Component).assets.getAssetByName("icon_wallpaper_png") as BitmapDataAsset);
                                 if (_local_4 != null)
                                 {
@@ -108,7 +108,7 @@
             {
                 if (_arg_2 == 3001)
                 {
-                    return FurniCategory._Str_3639;
+                    return FurniCategory.WALL_PAPER;
                 }
                 if (_arg_2 == 3002)
                 {
