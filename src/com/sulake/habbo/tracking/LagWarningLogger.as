@@ -13,7 +13,7 @@
             this._habboTracking = k;
         }
 
-        public function _Str_13181(k:int):void
+        public function chatLagDetected(k:int):void
         {
             if (((!(this.enabled)) || (this.warningInterval <= 0)))
             {

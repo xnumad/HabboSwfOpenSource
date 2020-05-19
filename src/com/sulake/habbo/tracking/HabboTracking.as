@@ -865,9 +865,9 @@
             }
         }
 
-        public function _Str_13181(k:int):void
+        public function chatLagDetected(k:int):void
         {
-            this._lagWarningLogger._Str_13181(k);
+            this._lagWarningLogger.chatLagDetected(k);
         }
 
         public function update(k:uint):void

@@ -282,7 +282,7 @@
                 {
                     if (this._habboTracking != null)
                     {
-                        this._habboTracking._Str_13181(_local_3);
+                        this._habboTracking.chatLagDetected(_local_3);
                     }
                 }
             }
