@@ -58,7 +58,7 @@
     import com.sulake.habbo.ui.widget.memenu.IWidgetAvatarEffect;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetCommandsUpdateEvent;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3575;
+    import com.sulake.habbo.ui.widget.events.ConfirmPetBreedingPetData;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_4844;
     import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotSkillsEnum;
@@ -1529,7 +1529,7 @@
             this._breedMonsterPlantsConfirmationView.open(k, _arg_2, _arg_3);
         }
 
-        public function _Str_22316(k:_Str_3575, _arg_2:_Str_3575, _arg_3:int, _arg_4:Array, _arg_5:int):void
+        public function _Str_22316(k:ConfirmPetBreedingPetData, _arg_2:ConfirmPetBreedingPetData, _arg_3:int, _arg_4:Array, _arg_5:int):void
         {
             if (!this._confirmPetBreedingView)
             {

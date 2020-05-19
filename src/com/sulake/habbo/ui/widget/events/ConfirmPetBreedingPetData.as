@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.events
 {
-    public class _Str_3575 
+    public class ConfirmPetBreedingPetData 
     {
         public var name:String;
         public var level:int;
