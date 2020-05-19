@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9348 implements IMessageParser 
+    public class RoomChatSettingsMessageParser implements IMessageParser 
     {
         private var _Str_5898:RoomChatSettingsParser;
 
