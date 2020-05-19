@@ -124,7 +124,7 @@
             }
             this._moderationManager.issueManager._Str_19194();
             this._moderationManager.initMsg = _local_3;
-            this._moderationManager._Str_17887.show();
+            this._moderationManager.startPanel.show();
         }
 
         private function _Str_25829(k:_Str_9150):void
@@ -297,7 +297,7 @@
             var _local_3:RoomToolCtrl;
             var _local_2:_Str_4522 = k.getParser();
             this._moderationManager.currentFlatId = _local_2._Str_6550;
-            this._moderationManager._Str_17887._Str_25175(_local_2);
+            this._moderationManager.startPanel._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)
             {
                 _local_3._Str_17211();
@@ -308,7 +308,7 @@
         {
             var _local_2:RoomToolCtrl;
             this._moderationManager.currentFlatId = 0;
-            this._moderationManager._Str_17887._Str_25510();
+            this._moderationManager.startPanel._Str_25510();
             for each (_local_2 in this._roomEnterListeners)
             {
                 _local_2._Str_17211();

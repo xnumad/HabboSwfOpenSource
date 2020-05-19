@@ -168,7 +168,7 @@
             return this._communicationManager.connection;
         }
 
-        public function get _Str_17887():StartPanelCtrl
+        public function get startPanel():StartPanelCtrl
         {
             return this._startPanelCtrl;
         }
