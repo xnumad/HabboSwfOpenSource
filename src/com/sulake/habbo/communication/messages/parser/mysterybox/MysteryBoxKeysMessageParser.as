@@ -5,32 +5,32 @@
 
     public class MysteryBoxKeysMessageParser implements IMessageParser 
     {
-        private var _Str_9099:String;
-        private var _Str_8398:String;
+        private var _boxColor:String;
+        private var _keyColor:String;
 
 
         public function flush():Boolean
         {
-            this._Str_9099 = null;
-            this._Str_8398 = null;
+            this._boxColor = null;
+            this._keyColor = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_9099 = k.readString();
-            this._Str_8398 = k.readString();
+            this._boxColor = k.readString();
+            this._keyColor = k.readString();
             return true;
         }
 
         public function get boxColor():String
         {
-            return this._Str_9099;
+            return this._boxColor;
         }
 
         public function get keyColor():String
         {
-            return this._Str_8398;
+            return this._keyColor;
         }
     }
 }
