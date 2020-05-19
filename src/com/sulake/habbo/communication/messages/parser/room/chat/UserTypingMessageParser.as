@@ -6,7 +6,7 @@
     public class UserTypingMessageParser implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _Str_3362:Boolean = false;
+        private var _isTyping:Boolean = false;
 
 
         public function get userId():int
@@ -16,13 +16,13 @@
 
         public function get _Str_7319():Boolean
         {
-            return this._Str_3362;
+            return this._isTyping;
         }
 
         public function flush():Boolean
         {
             this._userId = 0;
-            this._Str_3362 = false;
+            this._isTyping = false;
             return true;
         }
 
@@ -33,7 +33,7 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._Str_3362 = (k.readInteger() == 1);
+            this._isTyping = (k.readInteger() == 1);
             return true;
         }
     }
