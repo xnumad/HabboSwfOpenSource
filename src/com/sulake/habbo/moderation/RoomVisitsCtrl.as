@@ -57,7 +57,7 @@
         {
             this._resizeTimer = new Timer(300, 1);
             this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
-            this._main.moderationMessageHandler._Str_23596(this);
+            this._main.moderationMessageHandler.addRoomVisitsListener(this);
             this._main.connection.send(new _Str_10092(this._userId));
             this._frame = IFrameWindow(this._main.getXmlWindow("roomvisits_frame"));
             this._list = IItemListWindow(this._frame.findChildByName("visits_list"));
@@ -83,7 +83,7 @@
             this.populate();
             this._Str_3774(null);
             this._frame.visible = true;
-            this._main.moderationMessageHandler._Str_23642(this);
+            this._main.moderationMessageHandler.removeRoomVisitsListener(this);
         }
 
         public function getType():int

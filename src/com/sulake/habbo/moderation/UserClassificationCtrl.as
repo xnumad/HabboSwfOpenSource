@@ -45,7 +45,7 @@
         {
             this._resizeTimer = new Timer(300, 1);
             this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_3774);
-            this._main.moderationMessageHandler._Str_24655(this);
+            this._main.moderationMessageHandler.addUserClassificationListener(this);
             this._frame = IFrameWindow(this._main.getXmlWindow("userclassification_frame"));
             this._list = IItemListWindow(this._frame.findChildByName("userclassification_list"));
             this._row = (this._list.getListItemAt(0) as IWindowContainer);
@@ -70,7 +70,7 @@
             this.populate();
             this._Str_3774(null);
             this._frame.visible = true;
-            this._main.moderationMessageHandler._Str_24247(this);
+            this._main.moderationMessageHandler.removeUserClassificationListener(this);
         }
 
         private function populate():void

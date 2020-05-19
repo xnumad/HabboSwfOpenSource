@@ -546,7 +546,7 @@
                         this._callerUserInfo.load(IWindowContainer(this._window.findChildByName("caller_user_info")), _local_3);
                         this._moderationManager.connection.send(new _Str_7268(_local_2._Str_2869));
                         this._chatLogCtrl._Str_25842(_local_2._Str_2869);
-                        this._moderationManager.moderationMessageHandler._Str_20295(this._chatLogCtrl);
+                        this._moderationManager.moderationMessageHandler.addChatlogListener(this._chatLogCtrl);
                     }
                     break;
                 }

@@ -92,7 +92,7 @@
                 k.dispose();
             }
             this._main.connection.send(this._msg);
-            this._main.moderationMessageHandler._Str_20295(this);
+            this._main.moderationMessageHandler.addChatlogListener(this);
         }
 
         public function hide():void
@@ -117,7 +117,7 @@
             }
             this._contentLines = [];
             this._headers = [];
-            this._main.moderationMessageHandler._Str_24755(this);
+            this._main.moderationMessageHandler.removeChatlogListener(this);
             this._rooms = _arg_4;
             this._hilitedUserIds = _arg_5;
             this.populate();

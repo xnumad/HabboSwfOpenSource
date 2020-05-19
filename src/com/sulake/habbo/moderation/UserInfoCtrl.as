@@ -71,7 +71,7 @@
             this._userId = _arg_2;
             this._data = null;
             this.refresh();
-            this._main.moderationMessageHandler._Str_24536(this);
+            this._main.moderationMessageHandler.addUserInfoListener(this);
             this._main.connection.send(new _Str_7074(_arg_2));
         }
 
@@ -133,7 +133,7 @@
                 return;
             }
             this._disposed = true;
-            this._main.moderationMessageHandler._Str_22967(this);
+            this._main.moderationMessageHandler.removeUserInfoListener(this);
             this._callerFrame = null;
             this._main = null;
             this._data = null;

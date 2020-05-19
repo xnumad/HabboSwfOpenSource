@@ -88,7 +88,7 @@
             var _local_2:IWindowContainer = (k.getListItemByName("room_cont") as IWindowContainer);
             this._roomDataPrototype = (_local_2.findChildByName("room_data") as IWindowContainer);
             _local_2.removeChild(this._roomDataPrototype);
-            this._main.moderationMessageHandler._Str_25444(this);
+            this._main.moderationMessageHandler.addRoomInfoListener(this);
             this._main.connection.send(new _Str_12129(this._flatId));
             Logger.log(("BEGINNING TO SHOW: " + this._flatId));
         }
@@ -124,7 +124,7 @@
                 return;
             }
             this._disposed = true;
-            this._main.moderationMessageHandler._Str_14234(this);
+            this._main.moderationMessageHandler.removeRoomEnterListener(this);
             if (this._frame != null)
             {
                 this._frame.destroy();
@@ -178,9 +178,9 @@
             }
             this._data = k;
             this.populate();
-            this._main.moderationMessageHandler._Str_22435(this);
+            this._main.moderationMessageHandler.removeRoomInfoListener(this);
             this._frame.visible = true;
-            this._main.moderationMessageHandler._Str_22442(this);
+            this._main.moderationMessageHandler.addRoomEnterListener(this);
         }
 
         public function populate():void

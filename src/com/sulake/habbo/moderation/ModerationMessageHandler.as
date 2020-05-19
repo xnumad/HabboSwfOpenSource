@@ -68,26 +68,26 @@
             super();
             this._moderationManager = k;
             var _local_2:IConnection = k.connection;
-            _local_2.addMessageEvent(new _Str_9065(this._Str_25409));
-            _local_2.addMessageEvent(new _Str_7080(this._Str_25229));
-            _local_2.addMessageEvent(new _Str_9150(this._Str_25829));
-            _local_2.addMessageEvent(new _Str_7889(this._Str_24562));
-            _local_2.addMessageEvent(new _Str_9383(this._Str_24440));
-            _local_2.addMessageEvent(new _Str_9413(this._Str_3746));
-            _local_2.addMessageEvent(new _Str_8695(this._Str_4428));
-            _local_2.addMessageEvent(new _Str_8088(this._Str_22300));
-            _local_2.addMessageEvent(new _Str_7898(this._Str_25868));
-            _local_2.addMessageEvent(new _Str_7799(this._Str_22589));
-            _local_2.addMessageEvent(new _Str_7632(this._Str_16877));
-            _local_2.addMessageEvent(new _Str_2752(this.onCreditBalance));
-            _local_2.addMessageEvent(new _Str_3352(this._Str_2960));
-            _local_2.addMessageEvent(new _Str_9341(this._Str_24593));
-            _local_2.addMessageEvent(new _Str_8083(this._Str_25353));
+            _local_2.addMessageEvent(new _Str_9065(this.onIssueInfo));
+            _local_2.addMessageEvent(new _Str_7080(this.onModeratorInit));
+            _local_2.addMessageEvent(new _Str_9150(this.onModeratorToolPreferences));
+            _local_2.addMessageEvent(new _Str_7889(this.onIssuePickFailed));
+            _local_2.addMessageEvent(new _Str_9383(this.onIssueDeleted));
+            _local_2.addMessageEvent(new _Str_9413(this.onUserInfo));
+            _local_2.addMessageEvent(new _Str_8695(this.onRoomInfo));
+            _local_2.addMessageEvent(new _Str_8088(this.onCfhChatlog));
+            _local_2.addMessageEvent(new _Str_7898(this.onUserChatlog));
+            _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
+            _local_2.addMessageEvent(new _Str_7632(this.onRoomVisits));
+            _local_2.addMessageEvent(new _Str_2752(this.onRoomEnter));
+            _local_2.addMessageEvent(new _Str_3352(this.onRoomExit));
+            _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
+            _local_2.addMessageEvent(new _Str_8083(this.onRoomUserClassification));
             _local_2.addMessageEvent(new _Str_9038(this.onSanctions));
-            _local_2.addMessageEvent(new CfhTopicsInitEvent(this._Str_17604));
+            _local_2.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
         }
 
-        private function _Str_25409(k:_Str_9065):void
+        private function onIssueInfo(k:_Str_9065):void
         {
             if (((k == null) || (this._moderationManager == null)))
             {
@@ -103,7 +103,7 @@
             this._moderationManager.issueManager._Str_12118(_local_3);
         }
 
-        private function _Str_25229(k:_Str_7080):void
+        private function onModeratorInit(k:_Str_7080):void
         {
             var _local_6:_Str_2484;
             if (((k == null) || (this._moderationManager == null)))
@@ -127,7 +127,7 @@
             this._moderationManager.startPanel.show();
         }
 
-        private function _Str_25829(k:_Str_9150):void
+        private function onModeratorToolPreferences(k:_Str_9150):void
         {
             var _local_2:_Str_6924;
             if (((this._moderationManager) && (this._moderationManager.issueManager)))
@@ -137,7 +137,7 @@
             }
         }
 
-        private function _Str_24562(event:_Str_7889):void
+        private function onIssuePickFailed(event:_Str_7889):void
         {
             var parser:_Str_6763 = event.getParser();
             if (parser == null)
@@ -169,7 +169,7 @@
             }
         }
 
-        private function _Str_24440(k:_Str_9383):void
+        private function onIssueDeleted(k:_Str_9383):void
         {
             if (((k == null) || (this._moderationManager == null)))
             {
@@ -183,7 +183,7 @@
             this._moderationManager.issueManager._Str_11063(_local_2._Str_2869);
         }
 
-        private function _Str_3746(k:_Str_9413):void
+        private function onUserInfo(k:_Str_9413):void
         {
             var _local_3:IUserInfoListener;
             var _local_2:_Str_7467 = k.getParser();
@@ -194,7 +194,7 @@
             }
         }
 
-        private function _Str_4428(k:_Str_8695):void
+        private function onRoomInfo(k:_Str_8695):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:_Str_8106 = k.getParser();
@@ -204,7 +204,7 @@
             }
         }
 
-        private function _Str_22300(k:_Str_8088):void
+        private function onCfhChatlog(k:_Str_8088):void
         {
             var _local_2:_Str_8235 = k.getParser();
             var _local_3:Array = new Array();
@@ -212,27 +212,27 @@
             var _local_4:Dictionary = new Dictionary();
             _local_4[_local_2.data._Str_23592] = 0;
             _local_4[_local_2.data._Str_2662] = 1;
-            this._Str_6773(("Call For Help Evidence #" + _local_2.data._Str_20325), WindowTracker._Str_15411, _local_2.data.callId, _local_3, _local_4);
+            this.onChatlog(("Call For Help Evidence #" + _local_2.data._Str_20325), WindowTracker._Str_15411, _local_2.data.callId, _local_3, _local_4);
         }
 
-        private function _Str_22589(k:_Str_7799):void
+        private function onRoomChatlog(k:_Str_7799):void
         {
             var _local_2:_Str_7868 = k.getParser();
             var _local_3:Array = new Array();
             _local_3.push(_local_2.data);
             var _local_4:Dictionary = new Dictionary();
-            this._Str_6773(("Room Chatlog: " + _local_2.data.roomName), WindowTracker._Str_10414, _local_2.data.roomId, _local_3, _local_4);
+            this.onChatlog(("Room Chatlog: " + _local_2.data.roomName), WindowTracker._Str_10414, _local_2.data.roomId, _local_3, _local_4);
         }
 
-        private function _Str_25868(k:_Str_7898):void
+        private function onUserChatlog(k:_Str_7898):void
         {
             var _local_2:_Str_7908 = k.getParser();
             var _local_3:Dictionary = new Dictionary();
             _local_3[_local_2.data.userId] = 0;
-            this._Str_6773(("User Chatlog: " + _local_2.data.userName), WindowTracker._Str_15435, _local_2.data.userId, _local_2.data.rooms, _local_3);
+            this.onChatlog(("User Chatlog: " + _local_2.data.userName), WindowTracker._Str_15435, _local_2.data.userId, _local_2.data.rooms, _local_3);
         }
 
-        private function _Str_6773(k:String, _arg_2:int, _arg_3:int, _arg_4:Array, _arg_5:Dictionary):void
+        private function onChatlog(k:String, _arg_2:int, _arg_3:int, _arg_4:Array, _arg_5:Dictionary):void
         {
             var _local_7:IChatLogListener;
             var _local_6:Array = this._chatlogListeners.concat();
@@ -242,7 +242,7 @@
             }
         }
 
-        private function _Str_16877(k:_Str_7632):void
+        private function onRoomVisits(k:_Str_7632):void
         {
             var _local_3:RoomVisitsCtrl;
             var _local_2:_Str_7621 = k.getParser();
@@ -253,7 +253,7 @@
             }
         }
 
-        private function _Str_25353(k:_Str_8083):void
+        private function onRoomUserClassification(k:_Str_8083):void
         {
             var _local_3:UserClassificationCtrl;
             var _local_8:int;
@@ -284,7 +284,7 @@
             this._moderationManager.issueManager._Str_24202(_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198);
         }
 
-        private function _Str_17604(k:CfhTopicsInitEvent):void
+        private function onCfhTopics(k:CfhTopicsInitEvent):void
         {
             var _local_3:Vector.<CallForHelpCategoryData>;
             var _local_2:CfhTopicsInitMessageParser = k.getParser();
@@ -292,7 +292,7 @@
             this._moderationManager.cfhTopics = _local_3;
         }
 
-        private function onCreditBalance(k:_Str_2752):void
+        private function onRoomEnter(k:_Str_2752):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:_Str_4522 = k.getParser();
@@ -304,7 +304,7 @@
             }
         }
 
-        private function _Str_2960(k:_Str_3352):void
+        private function onRoomExit(k:_Str_3352):void
         {
             var _local_2:RoomToolCtrl;
             this._moderationManager.currentFlatId = 0;
@@ -315,7 +315,7 @@
             }
         }
 
-        private function _Str_24593(k:_Str_9341):void
+        private function onModeratorActionResult(k:_Str_9341):void
         {
             var _local_2:_Str_8084 = k.getParser();
             Logger.log(((("GOT MOD ACTION RESULT: " + _local_2.userId) + ", ") + _local_2.success));
@@ -325,16 +325,16 @@
             }
             else
             {
-                this._moderationManager.windowManager.alert("Alert", ("Moderation action failed. " + "If you tried to ban a user, please check if the user is already banned."), 0, this._Str_3168);
+                this._moderationManager.windowManager.alert("Alert", ("Moderation action failed. " + "If you tried to ban a user, please check if the user is already banned."), 0, this.onAlertClose);
             }
         }
 
-        public function _Str_24536(k:IUserInfoListener):void
+        public function addUserInfoListener(k:IUserInfoListener):void
         {
             this._userInfoListeners.push(k);
         }
 
-        public function _Str_22967(k:IUserInfoListener):void
+        public function removeUserInfoListener(k:IUserInfoListener):void
         {
             var _local_3:IUserInfoListener;
             var _local_2:Array = new Array();
@@ -348,12 +348,12 @@
             this._userInfoListeners = _local_2;
         }
 
-        public function _Str_25444(k:RoomToolCtrl):void
+        public function addRoomInfoListener(k:RoomToolCtrl):void
         {
             this._roomInfoListeners.push(k);
         }
 
-        public function _Str_22435(k:RoomToolCtrl):void
+        public function removeRoomInfoListener(k:RoomToolCtrl):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:Array = new Array();
@@ -367,12 +367,12 @@
             this._roomInfoListeners = _local_2;
         }
 
-        public function _Str_22442(k:RoomToolCtrl):void
+        public function addRoomEnterListener(k:RoomToolCtrl):void
         {
             this._roomEnterListeners.push(k);
         }
 
-        public function _Str_14234(k:RoomToolCtrl):void
+        public function removeRoomEnterListener(k:RoomToolCtrl):void
         {
             var _local_3:RoomToolCtrl;
             var _local_2:Array = new Array();
@@ -386,12 +386,12 @@
             this._roomEnterListeners = _local_2;
         }
 
-        public function _Str_23596(k:RoomVisitsCtrl):void
+        public function addRoomVisitsListener(k:RoomVisitsCtrl):void
         {
             this._roomVisitsListeners.push(k);
         }
 
-        public function _Str_23642(k:RoomVisitsCtrl):void
+        public function removeRoomVisitsListener(k:RoomVisitsCtrl):void
         {
             var _local_3:RoomVisitsCtrl;
             var _local_2:Array = new Array();
@@ -405,12 +405,12 @@
             this._roomVisitsListeners = _local_2;
         }
 
-        public function _Str_20295(k:IChatLogListener):void
+        public function addChatlogListener(k:IChatLogListener):void
         {
             this._chatlogListeners.push(k);
         }
 
-        public function _Str_24755(k:IChatLogListener):void
+        public function removeChatlogListener(k:IChatLogListener):void
         {
             var _local_3:IChatLogListener;
             var _local_2:Array = new Array();
@@ -424,12 +424,12 @@
             this._chatlogListeners = _local_2;
         }
 
-        public function _Str_24655(k:UserClassificationCtrl):void
+        public function addUserClassificationListener(k:UserClassificationCtrl):void
         {
             this._userClassificationListener.push(k);
         }
 
-        public function _Str_24247(k:UserClassificationCtrl):void
+        public function removeUserClassificationListener(k:UserClassificationCtrl):void
         {
             var _local_3:UserClassificationCtrl;
             var _local_2:Array = new Array();
@@ -440,10 +440,10 @@
                     _local_2.push(_local_3);
                 }
             }
-            this._roomVisitsListeners = _local_2;
+            this._userClassificationListener = _local_2;
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }
