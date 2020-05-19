@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.parser.users._Str_7994;
     import com.sulake.habbo.communication.messages.parser.users._Str_7513;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8921;
-    import com.sulake.habbo.communication.messages.parser.room.chat._Str_6399;
+    import com.sulake.habbo.communication.messages.parser.room.chat.FloodControlMessageParser;
 
     public class RoomChatHandler extends BaseHandler 
     {
@@ -250,7 +250,7 @@
 
         private function onFloodControl(k:IMessageEvent):void
         {
-            var _local_2:_Str_6399;
+            var _local_2:FloodControlMessageParser;
             var _local_3:IRoomSession;
             var _local_4:int;
             if (((listener) && (listener.events)))
