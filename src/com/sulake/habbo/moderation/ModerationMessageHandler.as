@@ -83,7 +83,7 @@
             _local_2.addMessageEvent(new _Str_3352(this._Str_2960));
             _local_2.addMessageEvent(new _Str_9341(this._Str_24593));
             _local_2.addMessageEvent(new _Str_8083(this._Str_25353));
-            _local_2.addMessageEvent(new _Str_9038(this._Str_23004));
+            _local_2.addMessageEvent(new _Str_9038(this.onSanctions));
             _local_2.addMessageEvent(new CfhTopicsInitEvent(this._Str_17604));
         }
 
@@ -277,7 +277,7 @@
             }
         }
 
-        private function _Str_23004(k:_Str_9038):void
+        private function onSanctions(k:_Str_9038):void
         {
             var _local_2:_Str_7060 = k.getParser();
             Logger.log(("Got sanction data..." + [_local_2._Str_2869, _local_2.accountId, _local_2._Str_21198]));
