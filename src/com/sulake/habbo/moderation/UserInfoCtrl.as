@@ -295,11 +295,11 @@
             this._main.openHkPage("identityinformationtool.url", ("" + this._data._Str_25657));
         }
 
-        internal function _Str_8724(k:String, _arg_2:String):void
+        internal function logEvent(k:String, _arg_2:String):void
         {
             if (this._main != null)
             {
-                this._main._Str_8724(k, _arg_2);
+                this._main.logEvent(k, _arg_2);
             }
         }
 

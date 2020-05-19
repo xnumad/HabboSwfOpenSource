@@ -101,11 +101,11 @@
             return this._frame;
         }
 
-        private function _Str_8724(k:String, _arg_2:String=""):void
+        private function logEvent(k:String, _arg_2:String=""):void
         {
             if (this._Str_9258 != null)
             {
-                this._Str_9258._Str_8724(k, _arg_2);
+                this._Str_9258.logEvent(k, _arg_2);
             }
         }
 
@@ -238,7 +238,7 @@
             }
             Logger.log("Giving default sanction...");
             this._Str_3066("defaultAction");
-            this._Str_8724("action.default");
+            this.logEvent("action.default");
             var _local_3:int = this._Str_5384[this._Str_3643.selection];
             this._Str_2327.connection.send(new _Str_10432(this._Str_4127, _local_3, this._Str_3121.text, this._Str_7121()));
             this.dispose();
@@ -314,7 +314,7 @@
                     this._Str_2327.connection.send(new _Str_7103(this._Str_4127, this._Str_3121.text, _local_3, this._Str_7121()));
                     break;
             }
-            this._Str_8724("action.custom", "unknown");
+            this.logEvent("action.custom", "unknown");
             this.dispose();
         }
 

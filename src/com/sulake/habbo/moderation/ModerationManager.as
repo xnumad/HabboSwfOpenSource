@@ -256,7 +256,7 @@
             Logger.log(((((("MOD: OPEN THREAD MESSAGE: " + k) + ", ") + _arg_2) + ", ") + _arg_3));
         }
 
-        internal function _Str_8724(k:String, _arg_2:String):void
+        internal function logEvent(k:String, _arg_2:String):void
         {
             if (this._tracking != null)
             {
