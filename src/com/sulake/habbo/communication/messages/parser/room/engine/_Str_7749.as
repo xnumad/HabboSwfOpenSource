@@ -31,7 +31,7 @@
             {
                 return false;
             }
-            this._Str_2776 = ItemDataParser._Str_9484(k);
+            this._Str_2776 = ItemDataParser.parseItemData(k);
             return true;
         }
     }

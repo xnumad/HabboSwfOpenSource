@@ -73,7 +73,7 @@
         {
             this._firstUserID = k.readInteger();
             this._firstUserItemArray = new Array();
-            if (!this._Str_9484(k, this._firstUserItemArray))
+            if (!this.parseItemData(k, this._firstUserItemArray))
             {
                 return false;
             }
@@ -81,7 +81,7 @@
             this._firstUserNumCredits = k.readInteger();
             this._secondUserID = k.readInteger();
             this._secondUserItemArray = new Array();
-            if (!this._Str_9484(k, this._secondUserItemArray))
+            if (!this.parseItemData(k, this._secondUserItemArray))
             {
                 return false;
             }
@@ -90,7 +90,7 @@
             return true;
         }
 
-        private function _Str_9484(k:IMessageDataWrapper, _arg_2:Array):Boolean
+        private function parseItemData(k:IMessageDataWrapper, _arg_2:Array):Boolean
         {
             var _local_3:int;
             _local_3 = k.readInteger();

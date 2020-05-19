@@ -7,7 +7,7 @@
     {
 
 
-        public static function _Str_9484(k:IMessageDataWrapper):_Str_3079
+        public static function parseItemData(k:IMessageDataWrapper):_Str_3079
         {
             var _local_14:String;
             var _local_15:String;

@@ -66,7 +66,7 @@
             _local_2 = 0;
             while (_local_2 < _local_5)
             {
-                _local_8 = ItemDataParser._Str_9484(k);
+                _local_8 = ItemDataParser.parseItemData(k);
                 _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
                 this._items.push(_local_8);
                 _local_2++;
