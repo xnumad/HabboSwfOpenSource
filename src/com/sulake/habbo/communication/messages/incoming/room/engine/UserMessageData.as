@@ -129,12 +129,12 @@
             }
         }
 
-        public function get _Str_3344():String
+        public function get sex():String
         {
             return this._sex;
         }
 
-        public function set _Str_3344(k:String):void
+        public function set sex(k:String):void
         {
             if (!this._isReadOnly)
             {

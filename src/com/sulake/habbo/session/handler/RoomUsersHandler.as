@@ -151,7 +151,7 @@
                 _local_8._Str_4592 = _local_7._Str_4592;
                 _local_8.groupName = _local_7.groupName;
                 _local_8._Str_7043 = _local_7._Str_7043;
-                _local_8._Str_3344 = _local_7._Str_3344;
+                _local_8.sex = _local_7.sex;
                 _local_8.ownerId = _local_7.ownerId;
                 _local_8.ownerName = _local_7.ownerName;
                 _local_8.rarityLevel = _local_7.rarityLevel;
@@ -239,10 +239,10 @@
             }
             if (_local_2.id >= 0)
             {
-                session.userDataManager.updateFigure(_local_2.id, _local_2.figure, _local_2._Str_3344, false, false);
+                session.userDataManager.updateFigure(_local_2.id, _local_2.figure, _local_2.sex, false, false);
                 session.userDataManager.updateCustom(_local_2.id, _local_2.customInfo);
                 session.userDataManager.updateAchievementScore(_local_2.id, _local_2.activityPoints);
-                listener.events.dispatchEvent(new RoomSessionUserFigureUpdateEvent(session, _local_2.id, _local_2.figure, _local_2._Str_3344, _local_2.customInfo, _local_2.activityPoints));
+                listener.events.dispatchEvent(new RoomSessionUserFigureUpdateEvent(session, _local_2.id, _local_2.figure, _local_2.sex, _local_2.customInfo, _local_2.activityPoints));
             }
         }
 

@@ -60,7 +60,7 @@
             return this._figure;
         }
 
-        public function get _Str_3344():String
+        public function get sex():String
         {
             return this._sex;
         }

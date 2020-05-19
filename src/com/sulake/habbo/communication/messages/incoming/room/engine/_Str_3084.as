@@ -21,9 +21,9 @@
             return (_parser as _Str_5772).figure;
         }
 
-        public function get _Str_3344():String
+        public function get sex():String
         {
-            return (_parser as _Str_5772)._Str_3344;
+            return (_parser as _Str_5772).sex;
         }
 
         public function get customInfo():String

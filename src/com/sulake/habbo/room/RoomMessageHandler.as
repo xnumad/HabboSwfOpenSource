@@ -802,7 +802,7 @@
                         this._roomCreator.setOwnUserId(this._currentRoomId, _local_5.roomIndex);
                         this._roomCreator.updateObjectUserOwnUserAvatar(this._currentRoomId, _local_5.roomIndex);
                     }
-                    this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_5.roomIndex, _local_5.figure, _local_5._Str_3344, _local_5._Str_3882, _local_5.isRiding);
+                    this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_5.roomIndex, _local_5.figure, _local_5.sex, _local_5._Str_3882, _local_5.isRiding);
                     if (RoomObjectUserTypes.getName(_local_8) == RoomObjectUserTypes.PET)
                     {
                         if (this._roomCreator.getWallItemTypeId(_local_5.figure) == PetTypeEnum.MONSTERPLANT)
@@ -965,7 +965,7 @@
             {
                 return;
             }
-            this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_2.id, _local_2.figure, _local_2._Str_3344);
+            this._roomCreator.updateObjectUserFigure(this._currentRoomId, _local_2.id, _local_2.figure, _local_2.sex);
         }
 
         private function _Str_6212(k:IMessageEvent):void

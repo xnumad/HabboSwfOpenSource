@@ -116,14 +116,14 @@
                 {
                     _local_14.id = _local_4;
                     _local_14.userType = RoomObjectTypeEnum.HABBO;
-                    _local_14._Str_3344 = this.resolveSex(k.readString());
+                    _local_14.sex = this.resolveSex(k.readString());
                     _local_14._Str_4592 = ("" + k.readInteger());
                     _local_14._Str_7043 = k.readInteger();
                     _local_14.groupName = k.readString();
                     _local_15 = k.readString();
                     if (_local_15 != "")
                     {
-                        _local_7 = this.convertSwimFigure(_local_15, _local_7, _local_14._Str_3344);
+                        _local_7 = this.convertSwimFigure(_local_15, _local_7, _local_14.sex);
                     }
                     _local_14.figure = _local_7;
                     _local_14.activityPoints = k.readInteger();
@@ -163,7 +163,7 @@
                             {
                                 _local_14.figure = "hr-100-.hd-180-1.ch-876-66.lg-270-94.sh-300-64";
                             }
-                            _local_14._Str_3344 = UserMessageData.M;
+                            _local_14.sex = UserMessageData.M;
                         }
                         else
                         {
@@ -171,7 +171,7 @@
                             {
                                 _local_14.userType = RoomObjectTypeEnum.RENTABLE_BOT;
                                 _local_14.id = _local_4;
-                                _local_14._Str_3344 = this.resolveSex(k.readString());
+                                _local_14.sex = this.resolveSex(k.readString());
                                 _local_14.figure = _local_7;
                                 _local_14.ownerId = k.readInteger();
                                 _local_14.ownerName = k.readString();

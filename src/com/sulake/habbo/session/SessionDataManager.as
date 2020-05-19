@@ -329,7 +329,7 @@
             this._Str_3437 = _local_3.petRespectLeft;
             this._Str_3973 = _local_3._Str_2985;
             this._figure = _local_3.figure;
-            this._gender = _local_3._Str_3344;
+            this._gender = _local_3.sex;
             this._realName = _local_3.realName;
             this._Str_7394 = _local_3._Str_11198;
             this._Str_9602 = _local_3._Str_21338;
@@ -346,7 +346,7 @@
             if (_local_2.id == -1)
             {
                 this._figure = _local_2.figure;
-                this._gender = _local_2._Str_3344;
+                this._gender = _local_2.sex;
             }
         }
 
