@@ -91,7 +91,7 @@
                 case FurniCategory.PET_CUSTOM_PART:
                     this._mode = _Str_14146;
                     return;
-                case FurniCategory._Str_7954:
+                case FurniCategory.PET_CUSTOM_PART_SHAMPOO:
                     this._mode = _Str_15667;
                     return;
                 case FurniCategory._Str_6096:

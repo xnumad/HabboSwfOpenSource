@@ -199,7 +199,7 @@
                             }
                             _local_10 = _local_8.getPetImage(_local_14, this._Str_14581, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
-                        case FurniCategory._Str_7954:
+                        case FurniCategory.PET_CUSTOM_PART_SHAMPOO:
                             if (_local_13.length < 3)
                             {
                                 Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
