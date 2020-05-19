@@ -105,7 +105,7 @@
             this._senderImage = k._Str_23069;
             this._senderColor = k._Str_24330;
             this._roomId = k.roomId;
-            this._userType = k._Str_2908;
+            this._userType = k.userType;
             this._petType = k._Str_4355;
             this._Str_13126();
         }

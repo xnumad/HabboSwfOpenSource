@@ -524,14 +524,14 @@
                     }
                     else
                     {
-                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2._Str_2908, _local_2.roomIndex, _local_2.allowNameChange, null);
+                        this._Str_12674(_local_2.userId, _local_2.userName, _local_2.userType, _local_2.roomIndex, _local_2.allowNameChange, null);
                     }
                     this._isInitialized = true;
                     break;
                 case _Str_3735.RWONE_TYPE:
                     if (_Str_3735(k).category == RoomObjectCategoryEnum.CONST_100)
                     {
-                        this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k)._Str_2908, _Str_3735(k).roomIndex, false, null);
+                        this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k).userType, _Str_3735(k).roomIndex, false, null);
                     }
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED:
@@ -709,7 +709,7 @@
                     _local_13 = (k as RoomWidgetUpdateInfostandUserEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
-                    this._Str_12674(_local_13.id, _local_13.name, _local_13._Str_2908, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
+                    this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
                     break;
                 case RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT:
                     _local_15 = (k as RoomWidgetRentrableBotInfostandUpdateEvent);
@@ -760,7 +760,7 @@
                     break;
                 case RoomWidgetUpdateInfostandUserEvent.BOT:
                     _local_20 = (k as RoomWidgetUpdateInfostandUserEvent);
-                    this._Str_12674(_local_20.id, _local_20.name, _local_20._Str_2908, _local_20._Str_3313, false, null);
+                    this._Str_12674(_local_20.id, _local_20.name, _local_20.userType, _local_20._Str_3313, false, null);
                     break;
                 case RoomWidgetPetInfostandUpdateEvent.PET_INFO:
                     if (this._handlePetInfo)
@@ -930,7 +930,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if ((((((((_arg_6) || (((!(this._view == null)) && (this._view.userId == k)) && (!(_arg_5)))) || (this._view == null)) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.RENTABLE_BOT))))
+            if ((((((((_arg_6) || (((!(this._view == null)) && (this._view.userId == k)) && (!(_arg_5)))) || (this._view == null)) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view.userType == RoomObjectTypeEnum.RENTABLE_BOT))))
             {
                 if (this._view)
                 {
@@ -972,7 +972,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if ((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.PET))))
+            if ((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_3))) || (!(this._view.userType == RoomObjectTypeEnum.PET))))
             {
                 if (this._view)
                 {
@@ -1021,7 +1021,7 @@
                 this.removeView(this._view, false);
             }
             this._Str_8003();
-            if (((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_4))) || (!(this._view._Str_2908 == RoomObjectTypeEnum.HABBO))) || (_arg_5)))
+            if (((((((this._view == null) || (!(this._view.userId == k))) || (!(this._view.userName == _arg_2))) || (!(this._view.roomIndex == _arg_4))) || (!(this._view.userType == RoomObjectTypeEnum.HABBO))) || (_arg_5)))
             {
                 if (this._view)
                 {
@@ -1280,7 +1280,7 @@
             var _local_5:BreedPetView;
             if (this._view)
             {
-                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, this._view.userId, this._view._Str_2908)) as _Str_3174);
+                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, this._view.userId, this._view.userType)) as _Str_3174);
                 if (!_local_2)
                 {
                     return;
@@ -1289,7 +1289,7 @@
             }
             if (((this._decoModeView) && (this._decoModeView.isVisible())))
             {
-                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, this._decoModeView.userId, this._decoModeView._Str_2908)) as _Str_3174);
+                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, this._decoModeView.userId, this._decoModeView.userType)) as _Str_3174);
                 if (!_local_2)
                 {
                     return;
@@ -1300,11 +1300,11 @@
             {
                 if (_local_3._Str_23492)
                 {
-                    _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_GAME_OBJECT_LOCATION, _local_3.userId, _local_3._Str_2908)) as _Str_3174);
+                    _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_GAME_OBJECT_LOCATION, _local_3.userId, _local_3.userType)) as _Str_3174);
                 }
                 else
                 {
-                    _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_3.userId, _local_3._Str_2908)) as _Str_3174);
+                    _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_3.userId, _local_3.userType)) as _Str_3174);
                 }
                 if (_local_2)
                 {
@@ -1313,7 +1313,7 @@
             }
             for each (_local_4 in this._useProductBubbles)
             {
-                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_4.userId, _local_4._Str_2908)) as _Str_3174);
+                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_4.userId, _local_4.userType)) as _Str_3174);
                 if (_local_2)
                 {
                     _local_4.update(_local_2.rectangle, _local_2._Str_9337, k);
@@ -1321,7 +1321,7 @@
             }
             for each (_local_5 in this._breedPetBubbles)
             {
-                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_5.userId, _local_5._Str_2908)) as _Str_3174);
+                _local_2 = (messageListener.processWidgetMessage(new RoomWidgetGetObjectLocationMessage(RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_OBJECT_LOCATION, _local_5.userId, _local_5.userType)) as _Str_3174);
                 if (_local_2)
                 {
                     _local_5.update(_local_2.rectangle, _local_2._Str_9337, k);

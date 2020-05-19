@@ -761,7 +761,7 @@
             _local_6.motto = _arg_4.custom;
             _local_6.id = _arg_4.id;
             _local_6._Str_3313 = _arg_2;
-            _local_6._Str_2908 = _arg_4.type;
+            _local_6.userType = _arg_4.type;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)
             {
@@ -831,7 +831,7 @@
             }
             _local_6.id = _arg_4.id;
             _local_6._Str_3313 = _arg_2;
-            _local_6._Str_2908 = RoomObjectTypeEnum.HABBO;
+            _local_6.userType = RoomObjectTypeEnum.HABBO;
             var _local_7:IRoomObject = this._container.roomEngine.getRoomObject(k, _arg_2, _arg_3);
             if (_local_7 != null)
             {

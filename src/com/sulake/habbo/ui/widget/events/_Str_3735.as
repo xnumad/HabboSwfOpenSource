@@ -35,7 +35,7 @@
             return this._userName;
         }
 
-        public function get _Str_2908():int
+        public function get userType():int
         {
             return this._userType;
         }

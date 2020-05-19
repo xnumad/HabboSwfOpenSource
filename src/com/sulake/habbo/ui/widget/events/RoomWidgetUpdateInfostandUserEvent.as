@@ -98,12 +98,12 @@
             return this._xp;
         }
 
-        public function set _Str_2908(k:int):void
+        public function set userType(k:int):void
         {
             this._userType = k;
         }
 
-        public function get _Str_2908():int
+        public function get userType():int
         {
             return this._userType;
         }

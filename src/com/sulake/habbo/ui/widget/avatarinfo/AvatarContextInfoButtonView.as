@@ -39,7 +39,7 @@
             return this._Str_2306;
         }
 
-        public function get _Str_2908():int
+        public function get userType():int
         {
             return this._userType;
         }
