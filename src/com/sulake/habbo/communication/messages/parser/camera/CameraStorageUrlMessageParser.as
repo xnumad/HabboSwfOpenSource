@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9565 implements IMessageParser 
+    public class CameraStorageUrlMessageParser implements IMessageParser 
     {
         private var _url:String;
 
