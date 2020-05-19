@@ -101,7 +101,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.communication.messages.parser.room.chat.ChatMessageParser;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.communication.messages.parser.room.chat._Str_8185;
+    import com.sulake.habbo.communication.messages.parser.room.chat.UserTypingMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetExperienceParser;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7612;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
@@ -1180,7 +1180,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8185 = _local_2.getParser();
+            var _local_3:UserTypingMessageParser = _local_2.getParser();
             var _local_4:int = 1;
             if (!_local_3._Str_7319)
             {
