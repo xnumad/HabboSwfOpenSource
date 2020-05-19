@@ -5,12 +5,12 @@
 
     public class FurniListRemoveParser implements IMessageParser 
     {
-        private var _Str_2926:int;
+        private var _itemId:int;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2926 = k.readInteger();
+            this._itemId = k.readInteger();
             return true;
         }
 
@@ -21,7 +21,7 @@
 
         public function get _Str_17550():int
         {
-            return this._Str_2926;
+            return this._itemId;
         }
     }
 }
