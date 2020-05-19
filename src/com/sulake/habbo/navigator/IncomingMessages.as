@@ -127,7 +127,7 @@
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2929(this._Str_4428));
+            _local_2.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
@@ -285,7 +285,7 @@
             HabboWebTools.closeNews();
         }
 
-        private function _Str_4428(k:IMessageEvent):void
+        private function onRoomInfo(k:IMessageEvent):void
         {
             var _local_3:Boolean;
             var _local_4:RoomSessionTags;

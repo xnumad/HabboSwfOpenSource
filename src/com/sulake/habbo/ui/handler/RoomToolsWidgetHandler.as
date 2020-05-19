@@ -40,7 +40,7 @@
             this._widget = k;
         }
 
-        private function _Str_4428(k:IMessageEvent):void
+        private function onRoomInfo(k:IMessageEvent):void
         {
             var _local_4:String;
             var _local_2:_Str_4537 = _Str_2929(k).getParser();
@@ -158,7 +158,7 @@
         public function set communicationManager(k:IHabboCommunicationManager):void
         {
             this._communicationManager = k;
-            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new _Str_2929(this._Str_4428)));
+            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo)));
         }
 
         public function rateRoom():void

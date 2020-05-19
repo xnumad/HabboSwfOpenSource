@@ -200,7 +200,7 @@
             var _local_2:_Str_8106 = k.getParser();
             for each (_local_3 in this._roomInfoListeners)
             {
-                _local_3._Str_4428(_local_2.data);
+                _local_3.onRoomInfo(_local_2.data);
             }
         }
 

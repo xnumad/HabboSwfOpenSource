@@ -49,7 +49,7 @@
             return this._manager == null;
         }
 
-        public function _Str_4428(k:_Str_2370):void
+        public function onRoomInfo(k:_Str_2370):void
         {
             if (!this._manager._Str_13386)
             {

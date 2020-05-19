@@ -164,7 +164,7 @@
             }
         }
 
-        public function _Str_4428(k:_Str_5709):void
+        public function onRoomInfo(k:_Str_5709):void
         {
             if (this._disposed)
             {

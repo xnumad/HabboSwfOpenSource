@@ -165,7 +165,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ExtendedProfileMessageEvent(this._Str_24027));
             this.addMessageEvent(new _Str_7832(this._Str_25256));
-            this.addMessageEvent(new _Str_2929(this._Str_4428));
+            this.addMessageEvent(new _Str_2929(this.onRoomInfo));
             this.addMessageEvent(new _Str_7294(this._Str_25665));
             this.addMessageEvent(new _Str_7472(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new _Str_6293(this._guildMembersWindowCtrl._Str_23412));
@@ -514,12 +514,12 @@
             this._guildManagementWindowCtrl._Str_23040();
         }
 
-        private function _Str_4428(k:IMessageEvent):void
+        private function onRoomInfo(k:IMessageEvent):void
         {
             var _local_2:_Str_4537 = _Str_2929(k).getParser();
             if (_local_2._Str_15487)
             {
-                this._groupRoomInfoCtrl._Str_4428(_local_2.data);
+                this._groupRoomInfoCtrl.onRoomInfo(_local_2.data);
             }
         }
 

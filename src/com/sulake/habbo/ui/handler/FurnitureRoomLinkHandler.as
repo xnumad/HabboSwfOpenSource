@@ -54,10 +54,10 @@
         public function set communicationManager(k:IHabboCommunicationManager):void
         {
             this._communicationManager = k;
-            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new _Str_2929(this._Str_4428)));
+            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo)));
         }
 
-        private function _Str_4428(event:IMessageEvent):void
+        private function onRoomInfo(event:IMessageEvent):void
         {
             var message:String;
             var roomName:String;
