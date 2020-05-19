@@ -5,12 +5,12 @@
 
     public class RoomFilterSettingsMessageParser implements IMessageParser 
     {
-        private var _Str_3930:Array;
+        private var _badWords:Array;
 
 
-        public function get _Str_13264():Array
+        public function get badWords():Array
         {
-            return this._Str_3930;
+            return this._badWords;
         }
 
         public function flush():Boolean
@@ -20,12 +20,12 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_3930 = new Array();
+            this._badWords = new Array();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_3930.push(k.readString());
+                this._badWords.push(k.readString());
                 _local_3++;
             }
             return false;

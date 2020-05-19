@@ -381,8 +381,8 @@
         private function _Str_9592(k:IMessageEvent):void
         {
             var _local_2:RoomFilterSettingsMessageParser = (k as RoomFilterSettingsMessageEvent).getParser();
-            LegacyNavigator(this._navigator._Str_2559)._Str_6472._Str_9592(_local_2._Str_13264);
-            Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2._Str_13264));
+            LegacyNavigator(this._navigator._Str_2559)._Str_6472._Str_9592(_local_2.badWords);
+            Logger.log(("GOT ROOM FILTER SETTINGS: " + _local_2.badWords));
         }
 
         private function _Str_18344(k:IMessageEvent):void
