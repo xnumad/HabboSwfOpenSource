@@ -62,7 +62,7 @@
             this._priorityUpdater.start();
         }
 
-        public function get _Str_25472():int
+        public function get issueListLimit():int
         {
             return this._issueListLimit;
         }

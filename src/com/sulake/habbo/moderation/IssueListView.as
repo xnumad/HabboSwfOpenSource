@@ -27,7 +27,7 @@
             this._list = _arg_3;
             this._listItem = (_arg_3.getListItemAt(0) as IWindowContainer);
             _arg_3.removeListItems();
-            this._issueListLimit = k._Str_25472;
+            this._issueListLimit = k.issueListLimit;
         }
 
         public function update(k:Array):void
