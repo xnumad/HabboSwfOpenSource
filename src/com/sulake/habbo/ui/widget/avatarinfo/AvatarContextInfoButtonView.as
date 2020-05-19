@@ -13,7 +13,7 @@
     {
         protected var _Str_2306:int;
         protected var _Str_2360:String;
-        protected var _Str_3021:int;
+        protected var _userType:int;
         protected var _Str_3947:Boolean;
         protected var _roomIndex:int;
 
@@ -26,7 +26,7 @@
         {
             k._Str_2306 = _arg_2;
             k._Str_2360 = _arg_3;
-            k._Str_3021 = _arg_5;
+            k._userType = _arg_5;
             k._roomIndex = _arg_4;
             k._Str_3947 = _arg_6;
             k._Str_3403 = _arg_7;
@@ -41,7 +41,7 @@
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function get roomIndex():int
@@ -102,7 +102,7 @@
         override protected function getOffset(k:Rectangle):int
         {
             var _local_2:int = -(_Str_3007.height);
-            if ((((this._Str_3021 == RoomObjectTypeEnum.HABBO) || (this._Str_3021 == RoomObjectTypeEnum.BOT)) || (this._Str_3021 == RoomObjectTypeEnum.RENTABLE_BOT)))
+            if ((((this._userType == RoomObjectTypeEnum.HABBO) || (this._userType == RoomObjectTypeEnum.BOT)) || (this._userType == RoomObjectTypeEnum.RENTABLE_BOT)))
             {
                 _local_2 = (_local_2 + ((k.height > 50) ? 25 : 0));
             }

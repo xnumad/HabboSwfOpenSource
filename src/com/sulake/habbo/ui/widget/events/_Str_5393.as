@@ -6,7 +6,7 @@
 
         private var _userId:int;
         private var _userName:String;
-        private var _Str_3021:int;
+        private var _userType:int;
         private var _Str_3947:Boolean;
         private var _roomIndex:int;
 
@@ -15,7 +15,7 @@
             super(RWAIE_AVATAR_INFO, _arg_6, _arg_7);
             this._userId = k;
             this._userName = _arg_2;
-            this._Str_3021 = _arg_3;
+            this._userType = _arg_3;
             this._roomIndex = _arg_4;
             this._Str_3947 = _arg_5;
         }
@@ -32,7 +32,7 @@
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function get roomIndex():int

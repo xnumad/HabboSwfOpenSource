@@ -30,7 +30,7 @@
         private var _Str_22210:uint;
         private var _roomId:int;
         private var _Str_22055:int;
-        private var _Str_3021:int;
+        private var _userType:int;
         private var _Str_6689:int;
         private var _styleId:int;
 
@@ -42,7 +42,7 @@
             this._Str_3230 = _arg_13;
             this._userName = _arg_4;
             this._Str_22055 = _arg_5;
-            this._Str_3021 = _arg_6;
+            this._userType = _arg_6;
             this._Str_6689 = _arg_7;
             this._links = _arg_15;
             this._Str_19459 = _arg_8;
@@ -80,7 +80,7 @@
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function get _Str_4355():int

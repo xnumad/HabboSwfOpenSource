@@ -11,7 +11,7 @@
         private var _z:Number = 0;
         private var _dir:int = 0;
         private var _name:String = "";
-        private var _Str_3021:int = 0;
+        private var _userType:int = 0;
         private var _Str_4037:String = "";
         private var _figure:String = "";
         private var _custom:String = "";
@@ -118,14 +118,14 @@
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function set _Str_2908(k:int):void
         {
             if (!this._Str_2479)
             {
-                this._Str_3021 = k;
+                this._userType = k;
             }
         }
 

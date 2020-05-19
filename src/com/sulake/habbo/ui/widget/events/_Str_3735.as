@@ -7,7 +7,7 @@
         private var _userId:int;
         private var _category:int;
         private var _userName:String;
-        private var _Str_3021:int;
+        private var _userType:int;
         private var _roomIndex:int;
 
         public function _Str_3735(k:int, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int)
@@ -15,7 +15,7 @@
             this._userId = k;
             this._category = _arg_2;
             this._userName = _arg_3;
-            this._Str_3021 = _arg_4;
+            this._userType = _arg_4;
             this._roomIndex = _arg_5;
             super(RWONE_TYPE, false, false);
         }
@@ -37,7 +37,7 @@
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function get roomIndex():int

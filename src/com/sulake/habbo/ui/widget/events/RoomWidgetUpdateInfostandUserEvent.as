@@ -15,7 +15,7 @@
         private var _activityPoints:int;
         private var _id:int = 0;
         private var _xp:int = 0;
-        private var _Str_3021:int;
+        private var _userType:int;
         private var _figure:String = "";
         private var _badges:Array;
         private var _groupId:int = 0;
@@ -100,12 +100,12 @@
 
         public function set _Str_2908(k:int):void
         {
-            this._Str_3021 = k;
+            this._userType = k;
         }
 
         public function get _Str_2908():int
         {
-            return this._Str_3021;
+            return this._userType;
         }
 
         public function set figure(k:String):void
