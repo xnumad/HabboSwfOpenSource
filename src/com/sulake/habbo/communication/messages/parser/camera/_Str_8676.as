@@ -15,12 +15,12 @@
             return this._ok;
         }
 
-        public function _Str_25098():int
+        public function getSecondsToWait():int
         {
             return this._secondsToWait;
         }
 
-        public function _Str_24023():String
+        public function getExtraDataId():String
         {
             return this._extraDataId;
         }
