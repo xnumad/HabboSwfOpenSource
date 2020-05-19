@@ -94,7 +94,7 @@
             this._background = this._style.getNewBackgroundSprite(_arg_2);
             this._pointer.bitmapData = this._style.pointer;
             this._useDesktopMargins = _arg_3;
-            var _local_5:int = ((this._component._Str_7277) ? ChatBubbleWidth.fromValue(this._component._Str_7277.weight) : _Str_7976);
+            var _local_5:int = ((this._component._Str_7277) ? ChatBubbleWidth.fromValue(this._component._Str_7277.bubbleWidth) : _Str_7976);
             var _local_6:int = ((_local_5 - this._style.textFieldMargins.x) - this._style.textFieldMargins.width);
             this._textField.width = _local_6;
             this._textField.multiline = true;

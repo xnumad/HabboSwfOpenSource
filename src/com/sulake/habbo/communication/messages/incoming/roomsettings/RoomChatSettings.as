@@ -17,18 +17,18 @@
         public static const _Str_22060:int = 2;
 
         private var _mode:int = 0;
-        private var _weight:int = 1;
-        private var _speed:int = 1;
-        private var _protection:int = 1;
-        private var _distance:int = 14;
+        private var _bubbleWidth:int = 1;
+        private var _scrollSpeed:int = 1;
+        private var _floodSensitivity:int = 1;
+        private var _fullHearRange:int = 14;
 
         public function RoomChatSettings(k:IMessageDataWrapper)
         {
             this._mode = k.readInteger();
-            this._weight = k.readInteger();
-            this._speed = k.readInteger();
-            this._distance = k.readInteger();
-            this._protection = k.readInteger();
+            this._bubbleWidth = k.readInteger();
+            this._scrollSpeed = k.readInteger();
+            this._fullHearRange = k.readInteger();
+            this._floodSensitivity = k.readInteger();
         }
 
         public function get mode():int
@@ -36,24 +36,24 @@
             return this._mode;
         }
 
-        public function get weight():int
+        public function get bubbleWidth():int
         {
-            return this._weight;
+            return this._bubbleWidth;
         }
 
-        public function get speed():int
+        public function get scrollSpeed():int
         {
-            return this._speed;
+            return this._scrollSpeed;
         }
 
-        public function get distance():int
+        public function get fullHearRange():int
         {
-            return this._distance;
+            return this._fullHearRange;
         }
 
-        public function get protection():int
+        public function get floodSensitivity():int
         {
-            return this._protection;
+            return this._floodSensitivity;
         }
     }
 }

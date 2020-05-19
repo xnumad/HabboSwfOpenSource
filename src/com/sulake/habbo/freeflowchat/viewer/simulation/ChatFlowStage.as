@@ -50,7 +50,7 @@
             {
                 this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettings._Str_12787);
                 this._gravityEnabled = (!(this._lineByLineMode));
-                switch (this._component._Str_7277.speed)
+                switch (this._component._Str_7277.scrollSpeed)
                 {
                     case RoomChatSettings._Str_18404:
                         this._scrollUpTimerDelay = 3000;
