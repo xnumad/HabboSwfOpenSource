@@ -266,7 +266,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
 	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7599;
-	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_9310;
+	import com.sulake.habbo.communication.messages.incoming._Str_408.MysteryBoxKeysMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;
@@ -1251,7 +1251,7 @@
             INCOMING_PACKETS[0x0B00] = _Str_9362;
             INCOMING_PACKETS[2819] = _Str_16028;
             INCOMING_PACKETS[2824] = PetLevelUpdateEvent;
-            INCOMING_PACKETS[2833] = _Str_9310;
+            INCOMING_PACKETS[2833] = MysteryBoxKeysMessageEvent;
             INCOMING_PACKETS[286] = _Str_9504;
             INCOMING_PACKETS[2866] = _Str_9413;
             INCOMING_PACKETS[2867] = _Str_6944;

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.mysterybox.MysteryBoxKeysMessageParser;
 
-    public class _Str_9310 extends MessageEvent implements IMessageEvent 
+    public class MysteryBoxKeysMessageEvent extends MessageEvent implements IMessageEvent 
     {
-        public function _Str_9310(k:Function)
+        public function MysteryBoxKeysMessageEvent(k:Function)
         {
             super(k, MysteryBoxKeysMessageParser);
         }
