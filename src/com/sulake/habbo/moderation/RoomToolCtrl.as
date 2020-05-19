@@ -201,7 +201,7 @@
             this._Str_4044("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
             this._Str_4044("user_count_txt", ("" + this._data.userCount));
             this._frame.findChildByName("enter_room_but").procedure = this._Str_22364;
-            this._frame.findChildByName("chatlog_but").procedure = this._Str_6773;
+            this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;
             this._frame.findChildByName("edit_in_hk_but").procedure = this._Str_24149;
             this._frame.findChildByName("send_caution_but").procedure = this._Str_23752;
             this._frame.findChildByName("send_message_but").procedure = this._Str_24627;
@@ -304,7 +304,7 @@
             this._main.goToRoom(this._data.flatId);
         }
 
-        private function _Str_6773(k:WindowEvent, _arg_2:IWindow):void
+        private function onChatlog(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

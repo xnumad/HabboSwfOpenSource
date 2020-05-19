@@ -238,7 +238,7 @@
             var _local_6:Array = this._chatlogListeners.concat();
             for each (_local_7 in _local_6)
             {
-                _local_7._Str_6773(k, _arg_2, _arg_3, _arg_4, _arg_5);
+                _local_7.onChatlog(k, _arg_2, _arg_3, _arg_4, _arg_5);
             }
         }
 

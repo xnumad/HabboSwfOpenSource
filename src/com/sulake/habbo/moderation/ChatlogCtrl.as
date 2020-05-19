@@ -100,7 +100,7 @@
             this.dispose();
         }
 
-        public function _Str_6773(k:String, _arg_2:int, _arg_3:int, _arg_4:Array, _arg_5:Dictionary):void
+        public function onChatlog(k:String, _arg_2:int, _arg_3:int, _arg_4:Array, _arg_5:Dictionary):void
         {
             var _local_6:IWindowContainer;
             if ((((!(_arg_2 == this._type)) || (!(_arg_3 == this._id))) || (this._disposed)))
