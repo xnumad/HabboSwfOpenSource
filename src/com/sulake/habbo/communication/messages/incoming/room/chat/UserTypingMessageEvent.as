@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.chat.UserTypingMessageParser;
 
-    public class _Str_7436 extends MessageEvent 
+    public class UserTypingMessageEvent extends MessageEvent 
     {
-        public function _Str_7436(k:Function)
+        public function UserTypingMessageEvent(k:Function)
         {
             super(k, UserTypingMessageParser);
         }

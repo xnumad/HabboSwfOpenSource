@@ -36,7 +36,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.UserTypingMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetExperienceEvent;
@@ -215,7 +215,7 @@
                 k.addMessageEvent(new ChatMessageEvent(this.onChat));
                 k.addMessageEvent(new WhisperMessageEvent(this.onChat));
                 k.addMessageEvent(new ShoutMessageEvent(this.onChat));
-                k.addMessageEvent(new _Str_7436(this.onTypingStatus));
+                k.addMessageEvent(new UserTypingMessageEvent(this.onTypingStatus));
                 k.addMessageEvent(new _Str_8183(this.onDiceValue));
                 k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
                 k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
@@ -1175,7 +1175,7 @@
 
         private function onTypingStatus(k:IMessageEvent):void
         {
-            var _local_2:_Str_7436 = (k as _Str_7436);
+            var _local_2:UserTypingMessageEvent = (k as UserTypingMessageEvent);
             if (_local_2 == null)
             {
                 return;

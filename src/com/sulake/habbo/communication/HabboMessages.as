@@ -847,7 +847,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.UserTypingMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RemainingMutePeriodEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsMessageEvent;
@@ -1096,7 +1096,7 @@
             INCOMING_PACKETS[1689] = GameAchievementsMessageEvent;
             INCOMING_PACKETS[1702] = _Str_3921;
             INCOMING_PACKETS[1715] = UnloadGameMessageEvent;
-            INCOMING_PACKETS[1717] = _Str_7436;
+            INCOMING_PACKETS[1717] = UserTypingMessageEvent;
             INCOMING_PACKETS[1723] = _Str_6253;
             INCOMING_PACKETS[1730] = _Str_16653;
             INCOMING_PACKETS[1745] = _Str_4748;
