@@ -99,7 +99,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3381;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
-    import com.sulake.habbo.communication.messages.parser.room.chat.RoomUserMessageParser;
+    import com.sulake.habbo.communication.messages.parser.room.chat.ChatMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.parser.room.chat._Str_8185;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetExperienceParser;
@@ -1137,7 +1137,7 @@
 
         private function onChat(k:IMessageEvent):void
         {
-            var _local_2:RoomUserMessageParser;
+            var _local_2:ChatMessageParser;
             if (this._roomCreator == null)
             {
                 return;
