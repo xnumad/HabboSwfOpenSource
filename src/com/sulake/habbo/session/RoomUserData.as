@@ -25,7 +25,7 @@
         private var _hasBreedingPermission:Boolean;
         private var _botSkills:Array;
         private var _Str_20085:Array;
-        private var _Str_9831:Boolean;
+        private var _isModerator:Boolean;
 
         public function RoomUserData(k:int)
         {
@@ -259,12 +259,12 @@
 
         public function get isModerator():Boolean
         {
-            return this._Str_9831;
+            return this._isModerator;
         }
 
         public function set isModerator(k:Boolean):void
         {
-            this._Str_9831 = k;
+            this._isModerator = k;
         }
     }
 }

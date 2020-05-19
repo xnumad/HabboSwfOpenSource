@@ -33,7 +33,7 @@
         private var _petLevel:int = 0;
         private var _petPosture:String = "";
         private var _botSkills:Array;
-        private var _Str_9831:Boolean;
+        private var _isModerator:Boolean;
         private var _Str_2479:Boolean = false;
 
         public function UserMessageData(k:int)
@@ -401,14 +401,14 @@
 
         public function get isModerator():Boolean
         {
-            return this._Str_9831;
+            return this._isModerator;
         }
 
         public function set isModerator(k:Boolean):void
         {
             if (!this._Str_2479)
             {
-                this._Str_9831 = k;
+                this._isModerator = k;
             }
         }
     }
