@@ -3,7 +3,7 @@
     public class _Str_5511 
     {
         private var _type:int;
-        private var _Str_4653:int;
+        private var _subType:int;
         private var _duration:int;
         private var _Str_20427:int;
         private var _Str_22152:int;
@@ -22,12 +22,12 @@
 
         public function get _Str_3882():int
         {
-            return this._Str_4653;
+            return this._subType;
         }
 
         public function set _Str_3882(k:int):void
         {
-            this._Str_4653 = k;
+            this._subType = k;
         }
 
         public function get duration():int

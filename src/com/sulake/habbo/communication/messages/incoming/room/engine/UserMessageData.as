@@ -20,7 +20,7 @@
         private var _groupID:String = "";
         private var _groupStatus:int = 0;
         private var _groupName:String = "";
-        private var _Str_4653:String = "";
+        private var _subType:String = "";
         private var _Str_2592:int = 0;
         private var _ownerName:String;
         private var _rarityLevel:int;
@@ -235,14 +235,14 @@
 
         public function get _Str_3882():String
         {
-            return this._Str_4653;
+            return this._subType;
         }
 
         public function set _Str_3882(k:String):void
         {
             if (!this._Str_2479)
             {
-                this._Str_4653 = k;
+                this._subType = k;
             }
         }
 
