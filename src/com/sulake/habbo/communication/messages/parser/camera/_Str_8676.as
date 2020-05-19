@@ -6,7 +6,7 @@
     public class _Str_8676 implements IMessageParser 
     {
         private var _ok:Boolean = false;
-        private var _Str_16901:int = 0;
+        private var _secondsToWait:int = 0;
         private var _Str_9712:String;
 
 
@@ -17,7 +17,7 @@
 
         public function _Str_25098():int
         {
-            return this._Str_16901;
+            return this._secondsToWait;
         }
 
         public function _Str_24023():String
@@ -28,7 +28,7 @@
         public function flush():Boolean
         {
             this._ok = false;
-            this._Str_16901 = 0;
+            this._secondsToWait = 0;
             this._Str_9712 = null;
             return true;
         }
@@ -36,7 +36,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._ok = k.readBoolean();
-            this._Str_16901 = k.readInteger();
+            this._secondsToWait = k.readInteger();
             if (((this._ok) && (k.bytesAvailable)))
             {
                 this._Str_9712 = k.readString();
