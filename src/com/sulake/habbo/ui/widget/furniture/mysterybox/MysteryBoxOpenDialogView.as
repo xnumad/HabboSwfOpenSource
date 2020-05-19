@@ -6,9 +6,9 @@
     import com.sulake.habbo.window.utils._Str_2784;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
-    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
-    import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
-    import com.sulake.habbo.communication.messages.incoming._Str_408.GotMysteryBoxPrizeMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
+    import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7433;
+    import com.sulake.habbo.communication.messages.incoming.mysterybox.GotMysteryBoxPrizeMessageEvent;
     import com.sulake.habbo.communication.messages.parser.mysterybox.GotMysteryBoxPrizeMessageParser;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.session.ISessionDataManager;

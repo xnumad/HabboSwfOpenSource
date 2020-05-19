@@ -263,10 +263,10 @@
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_6202;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 	import com.sulake.habbo.communication.messages.outgoing.gifts._Str_9957;
-	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7433;
-	import com.sulake.habbo.communication.messages.incoming._Str_408._Str_7564;
-	import com.sulake.habbo.communication.messages.incoming._Str_408.GotMysteryBoxPrizeMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_408.MysteryBoxKeysMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7433;
+	import com.sulake.habbo.communication.messages.incoming.mysterybox._Str_7564;
+	import com.sulake.habbo.communication.messages.incoming.mysterybox.GotMysteryBoxPrizeMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.perk._Str_12157;
 	import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_12037;

@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_6160;
-    import com.sulake.habbo.communication.messages.incoming._Str_408.MysteryBoxKeysMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
