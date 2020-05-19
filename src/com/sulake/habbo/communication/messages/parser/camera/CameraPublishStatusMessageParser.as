@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8676 implements IMessageParser 
+    public class CameraPublishStatusMessageParser implements IMessageParser 
     {
         private var _ok:Boolean = false;
         private var _secondsToWait:int = 0;
