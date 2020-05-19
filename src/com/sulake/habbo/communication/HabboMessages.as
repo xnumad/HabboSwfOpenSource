@@ -827,7 +827,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8714;
 	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8829;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.*;
-	import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_15990;
+	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNoSuchItemEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingAcceptEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
@@ -1255,7 +1255,7 @@
             INCOMING_PACKETS[286] = _Str_9504;
             INCOMING_PACKETS[2866] = _Str_9413;
             INCOMING_PACKETS[2867] = _Str_6944;
-            INCOMING_PACKETS[2873] = _Str_15990; //Unknown Trading Event
+            INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
             INCOMING_PACKETS[2875] = _Str_5633;
             INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;
             INCOMING_PACKETS[2893] = _Str_5416;

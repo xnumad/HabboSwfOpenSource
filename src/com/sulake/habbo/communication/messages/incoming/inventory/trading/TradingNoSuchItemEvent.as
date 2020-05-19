@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_10279;
 
-    public class _Str_15990 extends MessageEvent 
+    public class TradingNoSuchItemEvent extends MessageEvent 
     {
-        public function _Str_15990(k:Function, _arg_2:Class)
+        public function TradingNoSuchItemEvent(k:Function, _arg_2:Class)
         {
             super(k, _arg_2);
         }
