@@ -15,7 +15,7 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
 	 */
 	public class BotChangeMottoConfiguration extends BotSkillConfigurationViewBase 
     {
-        private var _Str_6487:String = "";
+        private var _newName:String = "";
 
         public function BotChangeMottoConfiguration(k:AvatarInfoWidget)
         {
@@ -51,9 +51,9 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
 
         private function set _Str_23341(k:String):void
         {
-            this._Str_6487 = k;
+            this._newName = k;
             var _local_2:ITextWindow = ITextWindow(window.findChildByName("motto_input"));
-            _local_2.text = this._Str_6487;
+            _local_2.text = this._newName;
             _local_2.activate();
         }
 
@@ -69,7 +69,7 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _Str_2268.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.CHANGE_BOT_MOTTO, this._Str_6487));
+                        _Str_2268.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.CHANGE_BOT_MOTTO, this._newName));
                         close();
                         break;
                     case "cancel_button":
@@ -79,7 +79,7 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
             }
             if (k.type == WindowKeyboardEvent.WINDOW_EVENT_KEY_UP)
             {
-                this._Str_6487 = ITextWindow(window.findChildByName("motto_input")).text;
+                this._newName = ITextWindow(window.findChildByName("motto_input")).text;
             }
         }
 
