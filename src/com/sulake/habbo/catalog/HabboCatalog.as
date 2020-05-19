@@ -2732,7 +2732,7 @@
                     _local_7 = this._placedObjectPurchaseData.direction;
                     switch (k.category)
                     {
-                        case FurniCategory._Str_3683:
+                        case FurniCategory.FLOOR:
                             _local_8 = this._roomEngine.getRoomStringValue(this._roomEngine.activeRoomId, RoomObjectVariableEnum.ROOM_FLOOR_TYPE);
                             if (this._placedObjectPurchaseData.extraParameter != _local_8)
                             {

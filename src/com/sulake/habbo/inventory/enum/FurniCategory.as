@@ -4,7 +4,7 @@
     {
         public static const DEFAULT:int = 1;
         public static const WALL_PAPER:int = 2;
-        public static const _Str_3683:int = 3;
+        public static const FLOOR:int = 3;
         public static const _Str_3432:int = 4;
         public static const _Str_12351:int = 5;
         public static const _Str_5186:int = 6;

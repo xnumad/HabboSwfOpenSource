@@ -62,7 +62,7 @@
                                     _local_6 = (_local_4.content as BitmapData).clone();
                                 }
                                 break;
-                            case FurniCategory._Str_3683:
+                            case FurniCategory.FLOOR:
                                 _local_4 = ((this._inventory as Component).assets.getAssetByName("icon_floor_png") as BitmapDataAsset);
                                 if (_local_4 != null)
                                 {
@@ -112,7 +112,7 @@
                 }
                 if (_arg_2 == 3002)
                 {
-                    return FurniCategory._Str_3683;
+                    return FurniCategory.FLOOR;
                 }
                 if (_arg_2 == 4057)
                 {
