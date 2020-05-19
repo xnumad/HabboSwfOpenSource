@@ -916,7 +916,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
+	import com.sulake.habbo.communication.messages.incoming.room.action.SleepMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
 	import com.sulake.habbo.communication.messages.incoming.poll.*;
@@ -1108,7 +1108,7 @@
             INCOMING_PACKETS[1778] = _Str_7849;
             INCOMING_PACKETS[178] = _Str_4585;
             INCOMING_PACKETS[1787] = _Str_8054;
-            INCOMING_PACKETS[1797] = _Str_7216;
+            INCOMING_PACKETS[1797] = SleepMessageEvent;
             INCOMING_PACKETS[1808] = InterstitialMessageEvent;
             INCOMING_PACKETS[1815] = _Str_9204;
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;

@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.action.SleepMessageParser;
 
-    public class _Str_7216 extends MessageEvent 
+    public class SleepMessageEvent extends MessageEvent 
     {
-        public function _Str_7216(k:Function)
+        public function SleepMessageEvent(k:Function)
         {
             super(k, SleepMessageParser);
         }
