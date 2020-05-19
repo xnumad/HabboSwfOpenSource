@@ -850,7 +850,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListEvent;
@@ -1020,7 +1020,7 @@
             INCOMING_PACKETS[118] = ChangeNameUpdateEvent;
             INCOMING_PACKETS[1180] = _Str_7472; //Something guild related. perhaps guild request received?
             INCOMING_PACKETS[119] = TargetedOfferEvent;
-            INCOMING_PACKETS[1191] = RoomChatSettingsEvent;
+            INCOMING_PACKETS[1191] = RoomChatSettingsMessageEvent;
             INCOMING_PACKETS[1200] = GuildMembersEvent;
             INCOMING_PACKETS[1203] = _Str_9397;
             INCOMING_PACKETS[1210] = _Str_8800;

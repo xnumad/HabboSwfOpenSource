@@ -21,7 +21,7 @@
     import com.sulake.habbo.freeflowchat.history.visualization.ChatHistoryTray;
     import com.sulake.habbo.freeflowchat.viewer.ChatFlowViewer;
     import com.sulake.habbo.freeflowchat.viewer.ChatBubbleFactory;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsMessageEvent;
     import com.sulake.core.runtime.IContext;
     import com.sulake.core.assets.IAssetLibrary;
     import flash.display.Sprite;
@@ -186,7 +186,7 @@
             this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
-            this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsEvent(this._Str_25751));
+            this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this._Str_25751));
             this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
         }
 
@@ -257,7 +257,7 @@
             this.clear();
         }
 
-        private function _Str_25751(k:RoomChatSettingsEvent):void
+        private function _Str_25751(k:RoomChatSettingsMessageEvent):void
         {
             this._roomChatSettings = k.getParser()._Str_4965;
             if (((this._isInRoom) && (this._chatFlowStage)))
