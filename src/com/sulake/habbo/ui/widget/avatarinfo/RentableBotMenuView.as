@@ -86,7 +86,7 @@
             }
             for each (_local_7 in this._data._Str_10833)
             {
-                if (_local_7.id == BotSkillsEnum._Str_18934)
+                if (_local_7.id == BotSkillsEnum.INCLIENT_LINK)
                 {
                     _local_9 = (_local_2.clone() as IWindowContainer);
                     _local_8 = _local_7.data.split(",");

@@ -9,7 +9,7 @@
         public static const DANCE:int = 4;
         public static const CHANGE_BOT_NAME:int = 5;
         public static const SERVE_BEVERAGE:int = 6;
-        public static const _Str_18934:int = 7;
+        public static const INCLIENT_LINK:int = 7;
         public static const _Str_14917:int = 8;
 		public static const CHANGE_BOT_MOTTO:int = 9;
         public static const NUX_TAKE_TOUR:int = 10;
