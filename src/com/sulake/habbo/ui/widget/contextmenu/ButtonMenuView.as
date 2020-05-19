@@ -33,7 +33,7 @@
             super.dispose();
         }
 
-        protected function _Str_14514(k:String, _arg_2:Boolean=true):void
+        protected function showButtonGrid(k:String, _arg_2:Boolean=true):void
         {
             var _local_6:int;
             var _local_7:IWindowContainer;

@@ -204,7 +204,7 @@
                     _Str_2304("back");
                     break;
                 case _Str_13243:
-                    _Str_14514("signs_grid");
+                    showButtonGrid("signs_grid");
                     _Str_2304("back");
                     break;
             }

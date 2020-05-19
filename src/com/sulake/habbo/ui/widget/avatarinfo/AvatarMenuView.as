@@ -154,7 +154,7 @@
             }
             if (this._Str_1069 == _Str_15459)
             {
-                _Str_14514("relationship_grid");
+                showButtonGrid("relationship_grid");
                 _Str_2304("no_relationship");
                 _Str_2304("actions");
             }
