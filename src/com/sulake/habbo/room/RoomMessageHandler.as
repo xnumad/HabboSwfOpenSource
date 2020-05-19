@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.UseObjectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
@@ -213,7 +213,7 @@
                 k.addMessageEvent(new UseObjectMessageEvent(this.onUseObject));
                 k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
                 k.addMessageEvent(new ChatMessageEvent(this.onChat));
-                k.addMessageEvent(new Whisper(this.onChat));
+                k.addMessageEvent(new WhisperMessageEvent(this.onChat));
                 k.addMessageEvent(new ShoutMessageEvent(this.onChat));
                 k.addMessageEvent(new _Str_7436(this.onTypingStatus));
                 k.addMessageEvent(new _Str_8183(this.onDiceValue));
@@ -1149,9 +1149,9 @@
             }
             else
             {
-                if ((k is Whisper))
+                if ((k is WhisperMessageEvent))
                 {
-                    _local_2 = (k as Whisper).getParser();
+                    _local_2 = (k as WhisperMessageEvent).getParser();
                     if ((((_local_2) && (_local_3)) && (_local_2.userId == _local_3._Str_3871)))
                     {
                         return;
