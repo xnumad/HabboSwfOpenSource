@@ -3,14 +3,14 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8568 implements IMessageParser 
+    public class RemainingMutePeriodParser implements IMessageParser 
     {
-        private var _Str_20845:int = 0;
+        private var _muteSecondsRemaining:int = 0;
 
 
-        public function get _Str_18555():int
+        public function get secondsRemaining():int
         {
-            return this._Str_20845;
+            return this._muteSecondsRemaining;
         }
 
         public function flush():Boolean
@@ -20,7 +20,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_20845 = k.readInteger();
+            this._muteSecondsRemaining = k.readInteger();
             return true;
         }
     }

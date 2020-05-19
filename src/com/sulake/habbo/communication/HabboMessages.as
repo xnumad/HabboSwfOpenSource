@@ -848,7 +848,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
-	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.RemainingMutePeriodEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.RoomChatSettingsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.*;
@@ -1440,7 +1440,7 @@
             INCOMING_PACKETS[804] = _Str_8504;
             INCOMING_PACKETS[806] = _Str_3660;
             INCOMING_PACKETS[818] = _Str_6293;
-            INCOMING_PACKETS[826] = _Str_8596;
+            INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
             INCOMING_PACKETS[84] = _Str_7883;
             INCOMING_PACKETS[841] = GuideSessionEvent;
             INCOMING_PACKETS[859] = _Str_9048;

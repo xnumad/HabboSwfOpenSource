@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_9507;
     import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
-    import com.sulake.habbo.communication.messages.incoming.room.chat._Str_8596;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.RemainingMutePeriodEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.IRoomSession;
@@ -39,7 +39,7 @@
             k.addMessageEvent(new _Str_9507(this._Str_23073));
             k.addMessageEvent(new FloodControlMessageEvent(this.onFloodControl));
             k.addMessageEvent(new _Str_8702(this._Str_23267));
-            k.addMessageEvent(new _Str_8596(this._Str_22326));
+            k.addMessageEvent(new RemainingMutePeriodEvent(this._Str_22326));
         }
 
         private function onRoomChat(k:IMessageEvent):void
@@ -185,7 +185,7 @@
             }
         }
 
-        private function _Str_22326(k:_Str_8596):void
+        private function _Str_22326(k:RemainingMutePeriodEvent):void
         {
             var _local_2:IRoomSession;
             if (((listener) && (listener.events)))
@@ -193,7 +193,7 @@
                 _local_2 = listener.getSession(_xxxRoomId);
                 if (_local_2)
                 {
-                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, _local_2._Str_3871, "", RoomSessionChatEvent._Str_8909, SystemChatStyleEnum.GENERIC, null, k._Str_18555));
+                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, _local_2._Str_3871, "", RoomSessionChatEvent._Str_8909, SystemChatStyleEnum.GENERIC, null, k.secondsRemaining));
                 }
             }
         }
