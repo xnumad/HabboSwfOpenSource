@@ -22,7 +22,7 @@
         public static const GAME_FURNI:int = 18;
         public static const MONSTERPLANT_SEED:int = 19;
         public static const MONSTERPLANT_REVIVAL:int = 20;
-        public static const _Str_8726:int = 21;
+        public static const MONSTERPLANT_REBREED:int = 21;
         public static const _Str_9449:int = 22;
         public static const _Str_12534:int = 23;
     }

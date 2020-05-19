@@ -505,7 +505,7 @@
                                     continue;
                                 }
                             }
-                            if (_arg_4 == FurniCategory._Str_8726)
+                            if (_arg_4 == FurniCategory.MONSTERPLANT_REBREED)
                             {
                                 if ((((_local_12.petLevel < _local_10) || (_local_12.canRevive)) || (_local_12.canBreed)))
                                 {
