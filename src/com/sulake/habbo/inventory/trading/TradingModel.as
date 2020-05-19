@@ -581,7 +581,7 @@
                 if ((k is TradingAcceptEvent))
                 {
                     Logger.log("TRADING::TradingAcceptEvent");
-                    if (TradingAcceptEvent(k)._Str_4963 == this._ownUserIndex)
+                    if (TradingAcceptEvent(k).userID == this._ownUserIndex)
                     {
                         this._ownUserAccepts = (!(TradingAcceptEvent(k)._Str_15794 == 0));
                     }
@@ -625,7 +625,7 @@
                                 }
                                 else
                                 {
-                                    if (_local_2.getParser()._Str_4963 != this._ownUserIndex)
+                                    if (_local_2.getParser().userID != this._ownUserIndex)
                                     {
                                         this._tradingView._Str_17682(TradingView._Str_15599);
                                     }

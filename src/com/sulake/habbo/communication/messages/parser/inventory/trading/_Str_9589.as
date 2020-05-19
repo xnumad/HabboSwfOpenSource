@@ -11,7 +11,7 @@
         private var _Str_8945:Boolean;
 
 
-        public function get _Str_4963():int
+        public function get userID():int
         {
             return this._Str_8107;
         }

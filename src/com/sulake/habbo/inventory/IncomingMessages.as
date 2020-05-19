@@ -533,7 +533,7 @@
                 ErrorReportStorage.addDebugData("IncomingEvent", (("event is of unknown type:" + k) + "!"));
                 return;
             }
-            var _local_5:int = _local_4._Str_4963;
+            var _local_5:int = _local_4.userID;
             var _local_6:RoomUserData = _local_3.userDataManager.getUserData(_local_5);
             if (!_local_6)
             {

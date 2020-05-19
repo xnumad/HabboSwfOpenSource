@@ -23,7 +23,7 @@
             return true;
         }
 
-        public function get _Str_4963():int
+        public function get userID():int
         {
             return this._userId;
         }

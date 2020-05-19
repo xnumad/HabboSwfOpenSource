@@ -10,9 +10,9 @@
             super(k, _arg_2);
         }
 
-        public function get _Str_4963():int
+        public function get userID():int
         {
-            return this.getParser()._Str_4963;
+            return this.getParser().userID;
         }
 
         public function getParser():TradingCloseParser
