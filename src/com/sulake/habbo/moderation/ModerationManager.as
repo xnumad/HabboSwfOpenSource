@@ -53,7 +53,7 @@
         private var _startPanelCtrl:StartPanelCtrl;
         private var _windowTracker:WindowTracker;
         private var _Str_20687:_Str_5018;
-        private var _Str_21552:int;
+        private var _currentFlatId:int;
 		private var _moderationIconWidget:ModerationIconWidget;
 
         public function ModerationManager(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
@@ -190,7 +190,7 @@
 
         public function get _Str_14758():int
         {
-            return this._Str_21552;
+            return this._currentFlatId;
         }
 
         public function get soundManager():IHabboSoundManager
@@ -205,7 +205,7 @@
 
         public function set _Str_14758(k:int):void
         {
-            this._Str_21552 = k;
+            this._currentFlatId = k;
         }
 
         public function get isModerator():Boolean
