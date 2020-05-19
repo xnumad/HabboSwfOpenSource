@@ -10,44 +10,44 @@
             super(k, _arg_2);
         }
 
-        public function get _Str_15162():int
+        public function get firstUserID():int
         {
-            return this.getParser()._Str_15162;
+            return this.getParser().firstUserID;
         }
 
-        public function get _Str_18215():int
+        public function get secondUserID():int
         {
-            return this.getParser()._Str_18215;
+            return this.getParser().secondUserID;
         }
 
-        public function get _Str_14946():int
+        public function get firstUserNumItems():int
         {
-            return this.getParser()._Str_14946;
+            return this.getParser().firstUserNumItems;
         }
 
-        public function get _Str_13801():int
+        public function get secondUserNumItems():int
         {
-            return this.getParser()._Str_13801;
+            return this.getParser().secondUserNumItems;
         }
 
-        public function get _Str_15709():int
+        public function get firstUserNumCredits():int
         {
-            return this.getParser()._Str_15709;
+            return this.getParser().firstUserNumCredits;
         }
 
-        public function get _Str_9138():int
+        public function get secondUserNumCredits():int
         {
-            return this.getParser()._Str_9138;
+            return this.getParser().secondUserNumCredits;
         }
 
-        public function get _Str_17841():Array
+        public function get firstUserItemArray():Array
         {
-            return this.getParser()._Str_17841;
+            return this.getParser().firstUserItemArray;
         }
 
-        public function get _Str_17465():Array
+        public function get secondUserItemArray():Array
         {
-            return this.getParser()._Str_17465;
+            return this.getParser().secondUserItemArray;
         }
 
         public function getParser():TradingItemListParser

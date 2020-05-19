@@ -407,23 +407,23 @@
             {
                 this._otherUserItems.dispose();
             }
-            if (k._Str_15162 == this._ownUserIndex)
+            if (k.firstUserID == this._ownUserIndex)
             {
                 this._ownUserItems = _arg_2;
-                this._ownUserNumItems = k._Str_14946;
-                this._ownUserNumCredits = k._Str_15709;
+                this._ownUserNumItems = k.firstUserNumItems;
+                this._ownUserNumCredits = k.firstUserNumCredits;
                 this._otherUserItems = _arg_3;
-                this._otherUserNumItems = k._Str_13801;
-                this._otherUserNumCredits = k._Str_9138;
+                this._otherUserNumItems = k.secondUserNumItems;
+                this._otherUserNumCredits = k.secondUserNumCredits;
             }
             else
             {
                 this._ownUserItems = _arg_3;
-                this._ownUserNumItems = k._Str_13801;
-                this._ownUserNumCredits = k._Str_9138;
+                this._ownUserNumItems = k.secondUserNumItems;
+                this._ownUserNumCredits = k.secondUserNumCredits;
                 this._otherUserItems = _arg_2;
-                this._otherUserNumItems = k._Str_14946;
-                this._otherUserNumCredits = k._Str_15709;
+                this._otherUserNumItems = k.firstUserNumItems;
+                this._otherUserNumCredits = k.firstUserNumCredits;
             }
             this._ownUserAccepts = false;
             this._otherUserAccepts = false;

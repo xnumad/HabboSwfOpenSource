@@ -16,42 +16,42 @@
         private var _secondUserNumCredits:int;
 
 
-        public function get _Str_15162():int
+        public function get firstUserID():int
         {
             return this._firstUserID;
         }
 
-        public function get _Str_17841():Array
+        public function get firstUserItemArray():Array
         {
             return this._firstUserItemArray;
         }
 
-        public function get _Str_14946():int
+        public function get firstUserNumItems():int
         {
             return this._firstUserNumItems;
         }
 
-        public function get _Str_15709():int
+        public function get firstUserNumCredits():int
         {
             return this._firstUserNumCredits;
         }
 
-        public function get _Str_18215():int
+        public function get secondUserID():int
         {
             return this._secondUserID;
         }
 
-        public function get _Str_17465():Array
+        public function get secondUserItemArray():Array
         {
             return this._secondUserItemArray;
         }
 
-        public function get _Str_13801():int
+        public function get secondUserNumItems():int
         {
             return this._secondUserNumItems;
         }
 
-        public function get _Str_9138():int
+        public function get secondUserNumCredits():int
         {
             return this._secondUserNumCredits;
         }

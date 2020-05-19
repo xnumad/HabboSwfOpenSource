@@ -627,13 +627,13 @@
             {
                 return;
             }
-            if (((this._inventory.getBoolean("trading.warning.enabled")) && (_local_2._Str_9138 > 0)))
+            if (((this._inventory.getBoolean("trading.warning.enabled")) && (_local_2.secondUserNumCredits > 0)))
             {
-                _local_8 = this._inventory._Str_2834._Str_23876(_local_2._Str_9138);
+                _local_8 = this._inventory._Str_2834._Str_23876(_local_2.secondUserNumCredits);
                 _local_4.add(CREDIT_GROUPITEM_TYPE_ID, _local_8);
             }
-            this._Str_21714(_local_2._Str_17841, _local_3, (_local_2._Str_15162 == _local_5));
-            this._Str_21714(_local_2._Str_17465, _local_4, (_local_2._Str_18215 == _local_5));
+            this._Str_21714(_local_2.firstUserItemArray, _local_3, (_local_2.firstUserID == _local_5));
+            this._Str_21714(_local_2.secondUserItemArray, _local_4, (_local_2.secondUserID == _local_5));
             var _local_7:TradingModel = this._inventory._Str_3957;
             if (_local_7 != null)
             {
