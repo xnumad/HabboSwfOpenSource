@@ -103,7 +103,7 @@
                 case FurniCategory.MONSTERPLANT_REBREED:
                     this._mode = _Str_12577;
                     return;
-                case FurniCategory._Str_9449:
+                case FurniCategory.MONSTERPLANT_FERTILIZE:
                     this._mode = _Str_14611;
                     return;
                 default:

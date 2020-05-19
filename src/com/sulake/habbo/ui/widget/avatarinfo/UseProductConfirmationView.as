@@ -128,7 +128,7 @@
                 case FurniCategory.MONSTERPLANT_REBREED:
                     _local_6 = _Str_8432;
                     break;
-                case FurniCategory._Str_9449:
+                case FurniCategory.MONSTERPLANT_FERTILIZE:
                     _local_6 = _Str_9653;
                     break;
                 default:
@@ -360,7 +360,7 @@
                     break;
                 case FurniCategory.MONSTERPLANT_REBREED:
                 case FurniCategory.MONSTERPLANT_REVIVAL:
-                case FurniCategory._Str_9449:
+                case FurniCategory.MONSTERPLANT_FERTILIZE:
                     _local_19 = null;
                     if (this._petData != null)
                     {
