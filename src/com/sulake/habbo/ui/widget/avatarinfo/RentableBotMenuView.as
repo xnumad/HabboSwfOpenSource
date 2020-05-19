@@ -126,7 +126,7 @@
                         }
                     }
                 }
-                if (_local_7.id == BotSkillsEnum._Str_18173)
+                if (_local_7.id == BotSkillsEnum.NAVIGATOR_SEARCH)
                 {
                     _local_9 = (_local_2.clone() as IWindowContainer);
                     _local_8 = _local_7.data.split(",");
