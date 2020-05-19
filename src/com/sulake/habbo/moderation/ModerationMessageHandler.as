@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7868;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7908;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
-    import com.sulake.habbo.communication.messages.parser._Str_521._Str_7418;
+    import com.sulake.habbo.communication.messages.parser._Str_521.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.userclassification._Str_6854;
     import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7060;
@@ -259,7 +259,7 @@
             var _local_8:int;
             var _local_9:UserClassificationCtrl;
             var _local_10:Array;
-            var _local_2:_Str_7418 = (k as _Str_8083).getParser();
+            var _local_2:UserClassificationMessageParser = (k as _Str_8083).getParser();
             var _local_4:Map = _local_2._Str_24757;
             var _local_5:Map = _local_2._Str_24895;
             var _local_6:int = 1;
