@@ -25,7 +25,7 @@
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.window.utils._Str_5639;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.utils.StringUtil;
     import flash.net.navigateToURL;
@@ -389,7 +389,7 @@
             }
         }
 
-        public function _Str_10685(k:_Str_5371):void
+        public function _Str_10685(k:CompetitionStatusMessageEvent):void
         {
             var _local_3:_Str_2910;
             if (((this._window == null) || (this._window.findChildByName("competition_wrapper") == null)))

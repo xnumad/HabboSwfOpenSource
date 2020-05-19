@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_7662;
     import com.sulake.habbo.ui.RoomDesktop;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
@@ -30,7 +30,7 @@
         private var _cameraStorageUrlMessageEvent:CameraStorageUrlMessageEvent;
         private var _cameraPurchaseOKMessageEvent:_Str_7027;
         private var _cameraPublishStatusMessageEvent:_Str_5617;
-        private var _competitionStatusMessageEvent:_Str_5371;
+        private var _competitionStatusMessageEvent:CompetitionStatusMessageEvent;
         private var _initCameraMessageEvent:_Str_7662;
         private var _roomDesktop:RoomDesktop;
         private var _creditPrice:int = 999;
@@ -81,7 +81,7 @@
             this._cameraStorageUrlMessageEvent = new CameraStorageUrlMessageEvent(this._Str_23768);
             this._cameraPurchaseOKMessageEvent = new _Str_7027(this._Str_16050);
             this._cameraPublishStatusMessageEvent = new _Str_5617(this._Str_22298);
-            this._competitionStatusMessageEvent = new _Str_5371(this._Str_24681);
+            this._competitionStatusMessageEvent = new CompetitionStatusMessageEvent(this._Str_24681);
             this._initCameraMessageEvent = new _Str_7662(this._Str_23954);
             this._container.connection.addMessageEvent(this._cameraStorageUrlMessageEvent);
             this._container.connection.addMessageEvent(this._cameraPurchaseOKMessageEvent);
@@ -121,7 +121,7 @@
             }
         }
 
-        private function _Str_24681(k:_Str_5371):void
+        private function _Str_24681(k:CompetitionStatusMessageEvent):void
         {
             if (this._widget)
             {

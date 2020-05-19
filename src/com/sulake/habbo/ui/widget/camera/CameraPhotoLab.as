@@ -27,7 +27,7 @@
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.tracking.HabboTracking;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import flash.globalization.DateTimeFormatter;
     import com.sulake.habbo.utils.images.PNGEncoder;
     import flash.utils.ByteArray;
@@ -432,7 +432,7 @@
             }
         }
 
-        public function _Str_10685(k:_Str_5371):void
+        public function _Str_10685(k:CompetitionStatusMessageEvent):void
         {
             if (_Str_3498)
             {

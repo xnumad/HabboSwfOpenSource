@@ -179,7 +179,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
-	import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+	import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
@@ -1034,7 +1034,7 @@
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
             INCOMING_PACKETS[1304] = _Str_3992;
             INCOMING_PACKETS[1327] = _Str_5683;
-            INCOMING_PACKETS[133] = _Str_5371;
+            INCOMING_PACKETS[133] = CompetitionStatusMessageEvent;
             INCOMING_PACKETS[1331] = _Str_7272;
             INCOMING_PACKETS[1333] = _Str_8695;
             INCOMING_PACKETS[1347] = InitDiffieHandshakeEvent;

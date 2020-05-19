@@ -23,7 +23,7 @@
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 
     public class CameraWidget extends ConversionTrackingWidget 
@@ -226,7 +226,7 @@
             }
         }
 
-        public function _Str_10685(k:_Str_5371):void
+        public function _Str_10685(k:CompetitionStatusMessageEvent):void
         {
             if (this._photoLab)
             {
