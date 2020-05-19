@@ -518,7 +518,7 @@
         private function _Str_23569():Boolean
         {
             var k:ICheckBoxWindow;
-            if (this._Str_3853())
+            if (this.isModerator())
             {
                 if (this._window != null)
                 {
@@ -642,7 +642,7 @@
             var _local_4:ICheckBoxWindow = (this._window.findChildByName("show_face_checkbox") as ICheckBoxWindow);
             if (_local_4)
             {
-                if (this._Str_3853())
+                if (this.isModerator())
                 {
                     _local_4.visible = true;
                     _local_4.select();
@@ -655,7 +655,7 @@
                 }
             }
             var _local_5:IWindow = this._window.findChildByName("show_face_checkbox_title");
-            if (((!(_local_5 == null)) && (!(this._Str_3853()))))
+            if (((!(_local_5 == null)) && (!(this.isModerator()))))
             {
                 _local_5.visible = false;
             }
@@ -702,7 +702,7 @@
             this._Str_3190();
         }
 
-        private function _Str_3853():Boolean
+        private function isModerator():Boolean
         {
             return this._catalog.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
         }

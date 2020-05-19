@@ -2379,7 +2379,7 @@
                 {
                     _local_4 = this.roomEngine.getRoomObjectWithIndex(this.roomSession.roomId, _local_3, RoomObjectCategoryEnum.CONST_100);
                     _local_5 = this.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
-                    if (((((!(_local_5 == null)) && (_local_5.type == RoomObjectTypeEnum.HABBO)) && (!(_local_5._Str_2713 == this.roomSession._Str_3871))) && (!(_local_5._Str_3853))))
+                    if (((((!(_local_5 == null)) && (_local_5.type == RoomObjectTypeEnum.HABBO)) && (!(_local_5._Str_2713 == this.roomSession._Str_3871))) && (!(_local_5.isModerator))))
                     {
                         return BuilderFurniPlaceableStatus._Str_14774;
                     }

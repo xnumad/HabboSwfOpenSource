@@ -96,13 +96,13 @@
             _local_6.color = _local_4;
             var _local_7:ITextWindow = ITextWindow(_local_3.findChildByName("user_classification_txt"));
             _local_7.text = k._Str_25450;
-            if (((!(this._main)) || (!(this._main._Str_3853))))
+            if (((!(this._main)) || (!(this._main.isModerator))))
             {
                 _local_7.visible = false;
                 _local_6.visible = false;
             }
             this._Str_24423(_local_3, this._list);
-            if (((this._main) && (this._main._Str_3853)))
+            if (((this._main) && (this._main.isModerator)))
             {
                 new OpenUserInfo(this._frame, this._main, _local_5, k.userId);
                 new _Str_10411(this._main, _local_6, k.userId);

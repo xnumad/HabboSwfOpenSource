@@ -399,12 +399,12 @@
             this._Str_3986 = k;
         }
 
-        public function get _Str_3853():Boolean
+        public function get isModerator():Boolean
         {
             return this._Str_9831;
         }
 
-        public function set _Str_3853(k:Boolean):void
+        public function set isModerator(k:Boolean):void
         {
             if (!this._Str_2479)
             {

@@ -208,7 +208,7 @@
             this._Str_21552 = k;
         }
 
-        public function get _Str_3853():Boolean
+        public function get isModerator():Boolean
         {
             return this._sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR);
         }

@@ -127,7 +127,7 @@
                     }
                     _local_14.figure = _local_7;
                     _local_14.activityPoints = k.readInteger();
-                    _local_14._Str_3853 = k.readBoolean();
+                    _local_14.isModerator = k.readBoolean();
                 }
                 else
                 {

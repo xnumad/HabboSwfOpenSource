@@ -163,7 +163,7 @@
                 _local_8.hasBreedingPermission = _local_7.hasBreedingPermission;
                 _local_8._Str_3897 = _local_7._Str_3897;
                 _local_8._Str_2899 = _local_7._Str_2899;
-                _local_8._Str_3853 = _local_7._Str_3853;
+                _local_8.isModerator = _local_7.isModerator;
                 if (_local_4.userDataManager.getUserData(_local_7.roomIndex) == null)
                 {
                     _local_5.push(_local_8);
