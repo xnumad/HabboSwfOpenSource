@@ -12,9 +12,9 @@
         public static const CHAT_SCROLL_SPEED_FAST:int = 0;
         public static const CHAT_SCROLL_SPEED_NORMAL:int = 1;
         public static const CHAT_SCROLL_SPEED_SLOW:int = 2;
-        public static const _Str_21099:int = 0;
-        public static const _Str_20763:int = 1;
-        public static const _Str_22060:int = 2;
+        public static const FLOOD_FILTER_STRICT:int = 0;
+        public static const FLOOD_FILTER_NORMAL:int = 1;
+        public static const FLOOD_FILTER_LOOSE:int = 2;
 
         private var _mode:int = 0;
         private var _bubbleWidth:int = 1;
