@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
     import com.sulake.habbo.session.events.UserNameUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6553;
-    import com.sulake.habbo.communication.messages.parser.mysterybox._Str_7765;
+    import com.sulake.habbo.communication.messages.parser.mysterybox.MysteryBoxKeysMessageParser;
     import com.sulake.habbo.session.events.MysteryBoxKeysUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
     import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
@@ -390,7 +390,7 @@
 
         private function _Str_23478(k:_Str_9310):void
         {
-            var _local_2:_Str_7765 = k.getParser();
+            var _local_2:MysteryBoxKeysMessageParser = k.getParser();
             this._Str_18582 = _local_2.boxColor;
             this._Str_18348 = _local_2.keyColor;
             events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._Str_18582, this._Str_18348));
