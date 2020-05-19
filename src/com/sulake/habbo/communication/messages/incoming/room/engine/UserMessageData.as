@@ -28,7 +28,7 @@
         private var _isRiding:Boolean;
         private var _canBreed:Boolean;
         private var _canHarvest:Boolean;
-        private var _Str_3284:Boolean;
+        private var _canRevive:Boolean;
         private var _Str_3095:Boolean;
         private var _Str_12413:int = 0;
         private var _Str_20254:String = "";
@@ -339,14 +339,14 @@
 
         public function get canRevive():Boolean
         {
-            return this._Str_3284;
+            return this._canRevive;
         }
 
         public function set canRevive(k:Boolean):void
         {
             if (!this._Str_2479)
             {
-                this._Str_3284 = k;
+                this._canRevive = k;
             }
         }
 
