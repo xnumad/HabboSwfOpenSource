@@ -23,7 +23,7 @@
             return this._classId;
         }
 
-        public function get _Str_17550():int
+        public function get stripId():int
         {
             return this._stripId;
         }

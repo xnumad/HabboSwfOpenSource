@@ -2724,7 +2724,7 @@
             {
                 if (this._placedObjectPurchaseData.roomId == this._roomEngine.activeRoomId)
                 {
-                    _local_2 = k._Str_17550;
+                    _local_2 = k.stripId;
                     _local_3 = this._placedObjectPurchaseData.category;
                     _local_4 = this._placedObjectPurchaseData._Str_7031;
                     _local_5 = this._placedObjectPurchaseData.x;

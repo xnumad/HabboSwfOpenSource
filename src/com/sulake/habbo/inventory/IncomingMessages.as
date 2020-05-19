@@ -258,7 +258,7 @@
             {
                 return;
             }
-            var _local_4:int = _local_2._Str_17550;
+            var _local_4:int = _local_2.stripId;
             var _local_5:GroupItem = _local_3._Str_17979(_local_4);
             if (_local_5)
             {
