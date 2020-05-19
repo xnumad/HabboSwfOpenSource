@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9589;
 
-    public class _Str_7375 extends MessageEvent 
+    public class TradingOpenEvent extends MessageEvent 
     {
-        public function _Str_7375(k:Function, _arg_2:Class)
+        public function TradingOpenEvent(k:Function, _arg_2:Class)
         {
             super(k, _arg_2);
         }

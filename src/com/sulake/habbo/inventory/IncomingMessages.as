@@ -41,7 +41,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
-    import com.sulake.habbo.communication.messages.incoming.inventory.trading._Str_7375;
+    import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading._Str_9589;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8120;
@@ -153,7 +153,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_9359(this._Str_23887));
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
             this._com.addHabboConnectionMessageEvent(new _Str_3352(this._Str_15910));
-            this._com.addHabboConnectionMessageEvent(new _Str_7375(this._Str_22556, _Str_9589));
+            this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, _Str_9589));
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
             this._com.addHabboConnectionMessageEvent(new _Str_8120(this._Str_23620));
             this._com.addHabboConnectionMessageEvent(new _Str_5946(this._Str_16617));
@@ -527,7 +527,7 @@
                 return;
             }
             this._inventory._Str_16351(InventorySubCategory.TRADING);
-            var _local_4:_Str_7375 = (k as _Str_7375);
+            var _local_4:TradingOpenEvent = (k as TradingOpenEvent);
             if (!_local_4)
             {
                 ErrorReportStorage.addDebugData("IncomingEvent", (("event is of unknown type:" + k) + "!"));
