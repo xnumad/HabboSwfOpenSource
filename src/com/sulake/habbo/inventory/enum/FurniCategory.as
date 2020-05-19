@@ -17,7 +17,7 @@
         public static const PET_SHAMPOO:int = 13;
         public static const PET_CUSTOM_PART:int = 14;
         public static const PET_CUSTOM_PART_SHAMPOO:int = 15;
-        public static const _Str_6096:int = 16;
+        public static const PET_SADDLE:int = 16;
         public static const _Str_12454:int = 17;
         public static const _Str_19144:int = 18;
         public static const MONSTERPLANT_SEED:int = 19;

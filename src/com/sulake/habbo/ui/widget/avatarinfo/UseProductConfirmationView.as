@@ -119,7 +119,7 @@
                 case FurniCategory.PET_CUSTOM_PART_SHAMPOO:
                     _local_6 = _Str_11733;
                     break;
-                case FurniCategory._Str_6096:
+                case FurniCategory.PET_SADDLE:
                     _local_6 = _Str_11369;
                     break;
                 case FurniCategory._Str_6915:
@@ -334,7 +334,7 @@
                     }
                     _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
                     break;
-                case FurniCategory._Str_6096:
+                case FurniCategory.PET_SADDLE:
                     if (_local_3.length < 4)
                     {
                         Logger.log(("[UseProductConfirmationView] Invalid custom params: " + _local_3));

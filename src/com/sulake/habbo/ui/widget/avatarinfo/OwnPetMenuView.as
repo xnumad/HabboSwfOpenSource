@@ -153,7 +153,7 @@
                     showButton("pick_up");
                     if (this._data._Str_4355 == PetTypeEnum.HORSE)
                     {
-                        this._Str_11220 = this._Str_20669(FurniCategory._Str_6096, PetTypeEnum.HORSE);
+                        this._Str_11220 = this._Str_20669(FurniCategory.PET_SADDLE, PetTypeEnum.HORSE);
                         if (this._Str_11220 != null)
                         {
                             showButton("buy_saddle");
