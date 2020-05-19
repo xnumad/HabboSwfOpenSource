@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9632;
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
-    import com.sulake.habbo.communication.messages.incoming.room.action._Str_5619;
+    import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7839;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -94,7 +94,7 @@
             k.addMessageEvent(new _Str_9632(this._Str_22690));
             k.addMessageEvent(new BotErrorEvent(this.onBotError));
             k.addMessageEvent(new _Str_4841(this._Str_22755));
-            k.addMessageEvent(new _Str_5619(this.onDance));
+            k.addMessageEvent(new DanceMessageEvent(this.onDance));
             k.addMessageEvent(new _Str_7839(this.onFavoriteMembershipUpdate));
         }
 
@@ -564,7 +564,7 @@
             listener.events.dispatchEvent(new RoomSessionFriendRequestEvent(_local_3, _local_4.requestId, _local_4.requestId, _local_4.requesterName));
         }
 
-        private function onDance(k:_Str_5619):void
+        private function onDance(k:DanceMessageEvent):void
         {
             var _local_2:DanceMessageParser = k.getParser();
             var _local_3:IRoomSession = listener.getSession(_xxxRoomId);

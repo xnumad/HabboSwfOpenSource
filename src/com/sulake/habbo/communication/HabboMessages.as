@@ -914,7 +914,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_8008;
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
 	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.action._Str_5619;
+	import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
@@ -1170,7 +1170,7 @@
             INCOMING_PACKETS[222] = GameListMessageEvent;
             INCOMING_PACKETS[2221] = SanctionStatusEvent;
             INCOMING_PACKETS[2228] = _Str_5345;
-            INCOMING_PACKETS[2233] = _Str_5619;
+            INCOMING_PACKETS[2233] = DanceMessageEvent;
             INCOMING_PACKETS[2234] = _Str_7597;
             INCOMING_PACKETS[2238] = _Str_8141;
             INCOMING_PACKETS[2246] = _Str_17347;

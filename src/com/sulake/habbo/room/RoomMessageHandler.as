@@ -27,7 +27,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
-    import com.sulake.habbo.communication.messages.incoming.room.action._Str_5619;
+    import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
@@ -206,7 +206,7 @@
                 k.addMessageEvent(new _Str_4914(this._Str_16267));
                 k.addMessageEvent(new _Str_3084(this._Str_5174));
                 k.addMessageEvent(new _Str_7641(this.onExpression));
-                k.addMessageEvent(new _Str_5619(this.onDance));
+                k.addMessageEvent(new DanceMessageEvent(this.onDance));
                 k.addMessageEvent(new AvatarEffectMessageEvent(this.onAvatarEffect));
                 k.addMessageEvent(new _Str_7216(this.onAvatarSleep));
                 k.addMessageEvent(new _Str_7050(this.onCarryObject));
@@ -1000,7 +1000,7 @@
 
         private function onDance(k:IMessageEvent):void
         {
-            var _local_2:_Str_5619 = (k as _Str_5619);
+            var _local_2:DanceMessageEvent = (k as DanceMessageEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
