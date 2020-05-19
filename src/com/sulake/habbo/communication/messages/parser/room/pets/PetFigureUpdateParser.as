@@ -9,7 +9,7 @@
         private var _roomIndex:int;
         private var _Str_2388:int;
         private var _figureData:PetFigureData;
-        private var _Str_6842:Boolean;
+        private var _hasSaddle:Boolean;
         private var _Str_3253:Boolean;
 
 
@@ -30,7 +30,7 @@
 
         public function get _Str_4799():Boolean
         {
-            return this._Str_6842;
+            return this._hasSaddle;
         }
 
         public function get isRiding():Boolean
@@ -48,7 +48,7 @@
             this._roomIndex = k.readInteger();
             this._Str_2388 = k.readInteger();
             this._figureData = new PetFigureData(k);
-            this._Str_6842 = k.readBoolean();
+            this._hasSaddle = k.readBoolean();
             this._Str_3253 = k.readBoolean();
             return true;
         }

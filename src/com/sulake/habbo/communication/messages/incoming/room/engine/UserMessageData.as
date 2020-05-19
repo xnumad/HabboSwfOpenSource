@@ -24,7 +24,7 @@
         private var _ownerId:int = 0;
         private var _ownerName:String;
         private var _rarityLevel:int;
-        private var _Str_6842:Boolean;
+        private var _hasSaddle:Boolean;
         private var _Str_3253:Boolean;
         private var _Str_3101:Boolean;
         private var _Str_3297:Boolean;
@@ -287,14 +287,14 @@
 
         public function get _Str_4799():Boolean
         {
-            return this._Str_6842;
+            return this._hasSaddle;
         }
 
         public function set _Str_4799(k:Boolean):void
         {
             if (!this._Str_2479)
             {
-                this._Str_6842 = k;
+                this._hasSaddle = k;
             }
         }
 
