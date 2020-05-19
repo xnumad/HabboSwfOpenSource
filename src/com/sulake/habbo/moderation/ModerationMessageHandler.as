@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
-    import com.sulake.habbo.communication.messages.incoming._Str_525.UserClassificationMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;

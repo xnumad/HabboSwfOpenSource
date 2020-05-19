@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_525
+﻿package com.sulake.habbo.communication.messages.incoming.userclassification
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
