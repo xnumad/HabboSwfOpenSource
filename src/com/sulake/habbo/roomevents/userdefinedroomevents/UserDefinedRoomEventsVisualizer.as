@@ -39,7 +39,7 @@
 
         public function hide(k:int):void
         {
-            this._Str_19356(this._Str_9248(k));
+            this._Str_19356(this.getFurni(k));
         }
 
         public function _Str_21701(k:Dictionary):void
@@ -48,13 +48,13 @@
             for (_local_2 in k)
             {
                 Logger.log(("Show furni as unselected: " + _local_2));
-                this._Str_19356(this._Str_9248(parseInt(_local_2)));
+                this._Str_19356(this.getFurni(parseInt(_local_2)));
             }
         }
 
         public function show(k:int):void
         {
-            this._Str_20934(this._Str_9248(k));
+            this._Str_20934(this.getFurni(k));
         }
 
         public function _Str_25313(k:Dictionary):void
@@ -63,11 +63,11 @@
             for (_local_2 in k)
             {
                 Logger.log(("Show furni as selected: " + _local_2));
-                this._Str_20934(this._Str_9248(parseInt(_local_2)));
+                this._Str_20934(this.getFurni(parseInt(_local_2)));
             }
         }
 
-        private function _Str_9248(k:int):IRoomObject
+        private function getFurni(k:int):IRoomObject
         {
             return this._userDefinedRoomEvents.roomEngine.getRoomObject(this._userDefinedRoomEvents.roomId, k, RoomObjectCategoryEnum.CONST_10);
         }

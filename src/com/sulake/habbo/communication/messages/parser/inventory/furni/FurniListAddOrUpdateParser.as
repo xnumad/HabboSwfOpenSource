@@ -24,7 +24,7 @@
             return true;
         }
 
-        public function _Str_9248():Vector.<FurniData>
+        public function getFurni():Vector.<FurniData>
         {
             return this._furniList;
         }

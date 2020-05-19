@@ -223,7 +223,7 @@
             {
                 return;
             }
-            var _local_4:Vector.<FurniData> = _local_2._Str_9248();
+            var _local_4:Vector.<FurniData> = _local_2.getFurni();
             for each (_local_6 in _local_4)
             {
                 _local_7 = _local_3._Str_25496(_local_6.itemId);
