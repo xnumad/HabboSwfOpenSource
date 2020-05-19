@@ -26,7 +26,7 @@
             {
                 return;
             }
-            this._main._Str_22304(this._groupId, this._threadId, this._messageId);
+            this._main.openThreadMessage(this._groupId, this._threadId, this._messageId);
         }
     }
 }

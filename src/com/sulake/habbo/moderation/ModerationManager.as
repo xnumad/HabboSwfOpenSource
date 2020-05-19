@@ -250,7 +250,7 @@
             Logger.log(((("MOD: OPEN THREAD: " + k) + ", ") + _arg_2));
         }
 
-        public function _Str_22304(k:int, _arg_2:int, _arg_3:int):void
+        public function openThreadMessage(k:int, _arg_2:int, _arg_3:int):void
         {
             context.createLinkEvent(((((("groupforum/" + k) + "/") + _arg_2) + "/") + _arg_3));
             Logger.log(((((("MOD: OPEN THREAD MESSAGE: " + k) + ", ") + _arg_2) + ", ") + _arg_3));
