@@ -5,7 +5,7 @@
         public static const RWPIUE_PET_STATUS_UPDATE:String = "RWPIUE_PET_STATUS_UPDATE";
 
         private var _Str_2388:int;
-        private var _Str_3101:Boolean;
+        private var _canBreed:Boolean;
         private var _Str_3297:Boolean;
         private var _Str_3284:Boolean;
         private var _Str_3095:Boolean;
@@ -14,7 +14,7 @@
         {
             super(RWPIUE_PET_STATUS_UPDATE, _arg_6, _arg_7);
             this._Str_2388 = k;
-            this._Str_3101 = _arg_2;
+            this._canBreed = _arg_2;
             this._Str_3297 = _arg_3;
             this._Str_3284 = _arg_4;
             this._Str_3095 = _arg_5;
@@ -27,7 +27,7 @@
 
         public function get canBreed():Boolean
         {
-            return this._Str_3101;
+            return this._canBreed;
         }
 
         public function get canHarvest():Boolean

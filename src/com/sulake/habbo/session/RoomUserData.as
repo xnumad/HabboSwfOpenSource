@@ -19,7 +19,7 @@
         private var _rarityLevel:int = 0;
         private var _hasSaddle:Boolean;
         private var _isRiding:Boolean;
-        private var _Str_3101:Boolean;
+        private var _canBreed:Boolean;
         private var _Str_3297:Boolean;
         private var _Str_3284:Boolean;
         private var _Str_3095:Boolean;
@@ -189,12 +189,12 @@
 
         public function get canBreed():Boolean
         {
-            return this._Str_3101;
+            return this._canBreed;
         }
 
         public function set canBreed(k:Boolean):void
         {
-            this._Str_3101 = k;
+            this._canBreed = k;
         }
 
         public function get canHarvest():Boolean

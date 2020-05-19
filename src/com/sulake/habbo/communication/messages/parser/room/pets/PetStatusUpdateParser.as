@@ -7,7 +7,7 @@
     {
         private var _roomIndex:int;
         private var _Str_2388:int;
-        private var _Str_3101:Boolean;
+        private var _canBreed:Boolean;
         private var _Str_3297:Boolean;
         private var _Str_3284:Boolean;
         private var _Str_3095:Boolean;
@@ -25,7 +25,7 @@
 
         public function get canBreed():Boolean
         {
-            return this._Str_3101;
+            return this._canBreed;
         }
 
         public function get canHarvest():Boolean
@@ -52,7 +52,7 @@
         {
             this._roomIndex = k.readInteger();
             this._Str_2388 = k.readInteger();
-            this._Str_3101 = k.readBoolean();
+            this._canBreed = k.readBoolean();
             this._Str_3297 = k.readBoolean();
             this._Str_3284 = k.readBoolean();
             this._Str_3095 = k.readBoolean();
