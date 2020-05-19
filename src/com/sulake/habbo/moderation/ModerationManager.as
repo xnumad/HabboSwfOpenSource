@@ -52,7 +52,7 @@
         private var _issueManager:IssueManager;
         private var _startPanelCtrl:StartPanelCtrl;
         private var _windowTracker:WindowTracker;
-        private var _Str_20687:_Str_5018;
+        private var _initMsg:_Str_5018;
         private var _currentFlatId:int;
 		private var _moderationIconWidget:ModerationIconWidget;
 
@@ -175,7 +175,7 @@
 
         public function get _Str_3325():_Str_5018
         {
-            return this._Str_20687;
+            return this._initMsg;
         }
 
         public function get moderationMessageHandler():ModerationMessageHandler
@@ -200,7 +200,7 @@
 
         public function set _Str_3325(k:_Str_5018):void
         {
-            this._Str_20687 = k;
+            this._initMsg = k;
         }
 
         public function set _Str_14758(k:int):void
