@@ -6,24 +6,24 @@
 
     public class RoomChatSettingsMessageParser implements IMessageParser 
     {
-        private var _Str_5898:RoomChatSettingsParser;
+        private var _chatSettings:RoomChatSettingsParser;
 
 
         public function flush():Boolean
         {
-            this._Str_5898 = null;
+            this._chatSettings = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_5898 = new RoomChatSettingsParser(k);
+            this._chatSettings = new RoomChatSettingsParser(k);
             return true;
         }
 
         public function get _Str_4965():RoomChatSettingsParser
         {
-            return this._Str_5898;
+            return this._chatSettings;
         }
     }
 }
