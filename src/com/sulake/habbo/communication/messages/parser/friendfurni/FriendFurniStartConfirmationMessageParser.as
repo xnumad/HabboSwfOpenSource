@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9391 implements IMessageParser 
+    public class FriendFurniStartConfirmationMessageParser implements IMessageParser 
     {
         private var _stuffId:int;
         private var _Str_4514:Boolean;
