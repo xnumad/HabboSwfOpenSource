@@ -820,7 +820,7 @@
             }
         }
 
-        public function _Str_3990(k:String, _arg_2:String, _arg_3:String, _arg_4:String="", _arg_5:int=0):void
+        public function trackEventLogOncePerSession(k:String, _arg_2:String, _arg_3:String, _arg_4:String="", _arg_5:int=0):void
         {
             var _local_6:String = ((k + _arg_2) + _arg_3);
             var _local_7:Boolean;

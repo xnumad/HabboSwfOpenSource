@@ -189,22 +189,22 @@
 
         private function _Str_22768(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking._Str_3990("InterfaceExplorer", "hover", "forum.can.read.seen");
+            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.read.seen");
         }
 
         private function _Str_22910(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking._Str_3990("InterfaceExplorer", "hover", "forum.can.post.seen");
+            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.post.seen");
         }
 
         private function _Str_23060(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking._Str_3990("InterfaceExplorer", "hover", "forum.can.start.thread.seen");
+            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.start.thread.seen");
         }
 
         private function _Str_24316(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking._Str_3990("InterfaceExplorer", "hover", "forum.can.moderate.seen");
+            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.moderate.seen");
         }
     }
 }

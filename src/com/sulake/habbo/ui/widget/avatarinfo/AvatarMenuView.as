@@ -431,23 +431,23 @@
                         switch (_arg_2.parent.name)
                         {
                             case "kick":
-                                HabboTracking.getInstance()._Str_3990("InterfaceExplorer", "hover", "avatar.kick.hover");
+                                HabboTracking.getInstance().trackEventLogOncePerSession("InterfaceExplorer", "hover", "avatar.kick.hover");
                                 break;
                             case "perm_ban":
                             case "ban_hour":
                             case "ban_day":
                             case "ban_with_duration":
-                                HabboTracking.getInstance()._Str_3990("InterfaceExplorer", "hover", "avatar.ban.hover");
+                                HabboTracking.getInstance().trackEventLogOncePerSession("InterfaceExplorer", "hover", "avatar.ban.hover");
                                 break;
                             case "mute":
                             case "mute_2min":
                             case "mute_5min":
                             case "mute_10min":
-                                HabboTracking.getInstance()._Str_3990("InterfaceExplorer", "hover", "avatar.mute.hover");
+                                HabboTracking.getInstance().trackEventLogOncePerSession("InterfaceExplorer", "hover", "avatar.mute.hover");
                                 break;
                             case "unignore":
                             case "ignore":
-                                HabboTracking.getInstance()._Str_3990("InterfaceExplorer", "hover", "avatar.ignore.hover");
+                                HabboTracking.getInstance().trackEventLogOncePerSession("InterfaceExplorer", "hover", "avatar.ignore.hover");
                                 break;
                         }
                     }

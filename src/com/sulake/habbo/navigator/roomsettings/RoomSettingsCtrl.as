@@ -1235,7 +1235,7 @@
             this.refresh();
             if (this._Str_5809 == _Str_7004)
             {
-                this._Str_2272.tracking._Str_3990("InterfaceExplorer", "select", "room.settings.doormode.seen");
+                this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "select", "room.settings.doormode.seen");
             }
         }
 
@@ -1276,22 +1276,22 @@
 
         private function _Str_20494(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking._Str_3990("InterfaceExplorer", "hover", "room.settings.walkthrough.seen");
+            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.walkthrough.seen");
         }
 
         private function _Str_25771(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking._Str_3990("InterfaceExplorer", "hover", "room.settings.chat.scrollspeed.seen");
+            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.scrollspeed.seen");
         }
 
         private function _Str_19760(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking._Str_3990("InterfaceExplorer", "hover", "room.settings.chat.floodfilter.seen");
+            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.floodfilter.seen");
         }
 
         private function _Str_21477(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking._Str_3990("InterfaceExplorer", "hover", "room.settings.chat.hearrange.seen");
+            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.hearrange.seen");
         }
     }
 }

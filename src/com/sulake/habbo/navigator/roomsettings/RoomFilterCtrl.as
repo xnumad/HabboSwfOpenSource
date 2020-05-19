@@ -45,7 +45,7 @@
             this._window.visible = true;
             this._window.invalidate();
             this._window.activate();
-            this._navigator.tracking._Str_3990("InterfaceExplorer", "open", "room.filter.seen");
+            this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "open", "room.filter.seen");
         }
 
         private function _Str_2755():void
