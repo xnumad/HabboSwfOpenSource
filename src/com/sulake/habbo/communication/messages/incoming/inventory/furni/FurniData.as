@@ -5,7 +5,7 @@
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class FurniData implements _Str_7108 
+    public class FurniData implements IFurnitureItemData 
     {
         private static const WALL_ITEM:String = "I";
         private static const FLOOR_ITEM:String = "S";

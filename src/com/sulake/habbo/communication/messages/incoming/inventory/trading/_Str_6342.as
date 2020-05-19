@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.inventory.trading
 {
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_7108;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.IFurnitureItemData;
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_4638;
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6342 implements _Str_7108 
+    public class _Str_6342 implements IFurnitureItemData 
     {
         private var _Str_5390:int;
         private var _isWallItem:Boolean;

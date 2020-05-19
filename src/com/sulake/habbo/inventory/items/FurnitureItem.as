@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.inventory.items
 {
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_7108;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.IFurnitureItemData;
     import flash.utils.getTimer;
 
     public class FurnitureItem implements IFurnitureItem 
@@ -29,7 +29,7 @@
         private var _isRented:Boolean;
         private var _flatId:int;
 
-        public function FurnitureItem(k:_Str_7108)
+        public function FurnitureItem(k:IFurnitureItemData)
         {
             this._id = k.itemId;
             this._type = k.spriteId;
@@ -191,7 +191,7 @@
             return this._expirationTimeStamp;
         }
 
-        public function update(k:_Str_7108):void
+        public function update(k:IFurnitureItemData):void
         {
             this._type = k.spriteId;
             this._ref = k.ref;

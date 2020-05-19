@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.room.IStuffData;
 
-    public interface _Str_7108 
+    public interface IFurnitureItemData 
     {
         function get itemId():int;
         function get furniType():String;
