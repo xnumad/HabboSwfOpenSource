@@ -66,7 +66,7 @@
             }
         }
 
-        protected function _Str_2304(k:String, _arg_2:Boolean=true, _arg_3:Boolean=true, _arg_4:Boolean=false):void
+        protected function showButton(k:String, _arg_2:Boolean=true, _arg_3:Boolean=true, _arg_4:Boolean=false):void
         {
             if (!this._buttons)
             {

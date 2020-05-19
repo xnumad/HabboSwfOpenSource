@@ -51,13 +51,13 @@
             {
                 this._Str_2497("info", "${navigator.doorbell.waiting}");
                 this._Str_2497("cancel", "${navigator.doorbell.button.cancel.entering}");
-                this._Str_2304("ring", false);
+                this.showButton("ring", false);
             }
             else
             {
                 this._Str_2497("info", "${navigator.doorbell.info}");
                 this._Str_2497("cancel", "${generic.cancel}");
-                this._Str_2304("ring", true);
+                this.showButton("ring", true);
             }
         }
 
@@ -75,10 +75,10 @@
             this._window.visible = true;
             this._window.activate();
             this._Str_2497("info", "${navigator.doorbell.no.answer}");
-            this._Str_2304("ring", false);
+            this.showButton("ring", false);
         }
 
-        private function _Str_2304(k:String, _arg_2:Boolean):void
+        private function showButton(k:String, _arg_2:Boolean):void
         {
             var _local_3:IButtonWindow = (this._window.findChildByName(k) as IButtonWindow);
             if (_local_3 == null)

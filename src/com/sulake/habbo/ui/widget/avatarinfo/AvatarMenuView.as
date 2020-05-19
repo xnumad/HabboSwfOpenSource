@@ -88,17 +88,17 @@
             }
             if (this._Str_1069 == _Str_10122)
             {
-                _Str_2304("moderate", this.moderateMenuHasContent());
-                _Str_2304("friend", this._data.canBeAskedForAFriend);
-                _Str_2304("ignore", (!(this._data.isIgnored)));
-                _Str_2304("unignore", this._data.isIgnored);
-                _Str_2304("report", ((this.widget.configuration) && (this.widget.configuration.getBoolean("infostand.report.show"))));
+                showButton("moderate", this.moderateMenuHasContent());
+                showButton("friend", this._data.canBeAskedForAFriend);
+                showButton("ignore", (!(this._data.isIgnored)));
+                showButton("unignore", this._data.isIgnored);
+                showButton("report", ((this.widget.configuration) && (this.widget.configuration.getBoolean("infostand.report.show"))));
                 _local_4 = this._data.petRespectLeft;
                 this.widget.localizations.registerParameter("infostand.button.respect", "count", _local_4.toString());
-                _Str_2304("respect", (_local_4 > 0));
+                showButton("respect", (_local_4 > 0));
                 _local_5 = this.widget.handler;
                 _local_6 = _local_5.container.sessionDataManager.isAccountSafetyLocked();
-                _Str_2304("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data.canTrade))));
+                showButton("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data.canTrade))));
                 switch (this._data.canTradeReason)
                 {
                     case RoomWidgetUpdateInfostandUserEvent._Str_14161:
@@ -111,8 +111,8 @@
                         _local_7 = "";
                 }
                 IInteractiveWindow(IWindowContainer(k.getListItemByName("trade")).getChildByName("button"))._Str_2613 = _local_7;
-                _Str_2304("whisper");
-                _Str_2304("group");
+                showButton("whisper");
+                showButton("group");
                 if (this.widget.configuration.getBoolean("handitem.give.enabled"))
                 {
                     _local_8 = _local_5.container.roomSession._Str_3871;
@@ -122,49 +122,49 @@
                         _local_10 = _local_9.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
                         if (((_local_10 > 0) && (_local_10 < 999999)))
                         {
-                            _Str_2304("pass_handitem");
+                            showButton("pass_handitem");
                         }
                     }
                 }
-                _Str_2304("relationship", ((this.widget.configuration.getBoolean("relationship.status.enabled")) && (this._data.isFriend)));
-                _Str_2304("ambassador", this.ambassadorMenuHasContent());
+                showButton("relationship", ((this.widget.configuration.getBoolean("relationship.status.enabled")) && (this._data.isFriend)));
+                showButton("ambassador", this.ambassadorMenuHasContent());
             }
             if (this._Str_1069 == _Str_15297)
             {
-                _Str_2304("kick", this._data.canBeKicked);
-                _Str_2304("ban_with_duration", this._data.canBeBanned);
-                _Str_2304("mute", this._data.canBeMuted);
-                _Str_2304("give_rights", this.isShowGiveRights());
-                _Str_2304("remove_rights", this.isShowRemoveRights());
-                _Str_2304("actions");
+                showButton("kick", this._data.canBeKicked);
+                showButton("ban_with_duration", this._data.canBeBanned);
+                showButton("mute", this._data.canBeMuted);
+                showButton("give_rights", this.isShowGiveRights());
+                showButton("remove_rights", this.isShowRemoveRights());
+                showButton("actions");
             }
             if (this._Str_1069 == _Str_15024)
             {
-                _Str_2304("ban_hour");
-                _Str_2304("ban_day");
-                _Str_2304("perm_ban");
-                _Str_2304("actions");
+                showButton("ban_hour");
+                showButton("ban_day");
+                showButton("perm_ban");
+                showButton("actions");
             }
             if (this._Str_1069 == _Str_14752)
             {
-                _Str_2304("mute_2min");
-                _Str_2304("mute_5min");
-                _Str_2304("mute_10min");
-                _Str_2304("actions");
+                showButton("mute_2min");
+                showButton("mute_5min");
+                showButton("mute_10min");
+                showButton("actions");
             }
             if (this._Str_1069 == _Str_15459)
             {
                 showButtonGrid("relationship_grid");
-                _Str_2304("no_relationship");
-                _Str_2304("actions");
+                showButton("no_relationship");
+                showButton("actions");
             }
             if (this._Str_1069 == _Str_15427)
             {
-                _Str_2304("ambassador_kick");
-                _Str_2304("ambassador_alert");
-                _Str_2304("ambassador_mute_60min");
-                _Str_2304("ambassador_mute_18hour");
-                _Str_2304("actions");
+                showButton("ambassador_kick");
+                showButton("ambassador_alert");
+                showButton("ambassador_mute_60min");
+                showButton("ambassador_mute_18hour");
+                showButton("actions");
             }
             k.autoArrangeItems = true;
             k.visible = true;
@@ -283,7 +283,7 @@
                             this._data.petRespectLeft--;
                             _local_6 = this._data.petRespectLeft;
                             this.widget.localizations.registerParameter("infostand.button.respect", "count", _local_6.toString());
-                            _Str_2304("respect", (this._data.petRespectLeft > 0));
+                            showButton("respect", (this._data.petRespectLeft > 0));
                             _local_5 = RoomWidgetUserActionMessage.RWUAM_RESPECT_USER;
                             if (_local_6 > 0)
                             {

@@ -508,9 +508,9 @@
                 _local_5 = this._Str_2268.config.getBoolean("infostand.use.button.enabled");
             }
             this._Str_25151(k);
-            this._Str_2304("move", _local_2);
-            this._Str_2304("rotate", _local_3);
-            this._Str_2304("use", _local_5);
+            this.showButton("move", _local_2);
+            this.showButton("rotate", _local_3);
+            this.showButton("use", _local_5);
             this._Str_24537(_local_4);
             this._Str_22883((k.groupId > 0));
             this._Str_22377(k._Str_3233, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
@@ -571,7 +571,7 @@
             {
                 this._Str_5729 = this._Str_9953;
             }
-            this._Str_2304("pickup", (!(this._Str_5729 == this._Str_9953)));
+            this.showButton("pickup", (!(this._Str_5729 == this._Str_9953)));
             this._Str_25214(this._Str_5729);
         }
 
@@ -746,7 +746,7 @@
                 }
                 _local_5.caption = _local_7;
             }
-            this._Str_2304("save_branding_configuration", _local_4);
+            this.showButton("save_branding_configuration", _local_4);
         }
 
         private function _Str_22883(k:Boolean):void
@@ -770,7 +770,7 @@
         {
         }
 
-        protected function _Str_2304(k:String, _arg_2:Boolean):void
+        protected function showButton(k:String, _arg_2:Boolean):void
         {
             if (this._buttons == null)
             {

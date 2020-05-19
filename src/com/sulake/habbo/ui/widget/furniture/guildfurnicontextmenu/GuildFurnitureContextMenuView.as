@@ -90,8 +90,8 @@
                 return;
             }
             _buttons.autoArrangeItems = false;
-            _Str_2304("join", (!(this._Str_7536)), true);
-            _Str_2304("open_forum", this._Str_9506, true);
+            showButton("join", (!(this._Str_7536)), true);
+            showButton("open_forum", this._Str_9506, true);
             _buttons.autoArrangeItems = true;
             _buttons.visible = true;
         }
@@ -116,7 +116,7 @@
                     {
                         case "join":
                             this.widget.handler._Str_24943(this._Str_2994);
-                            _Str_2304("join", (!(this._Str_7536)), false);
+                            showButton("join", (!(this._Str_7536)), false);
                             break;
                         case "home_room":
                             this.widget.handler._Str_24389(this._Str_8815);

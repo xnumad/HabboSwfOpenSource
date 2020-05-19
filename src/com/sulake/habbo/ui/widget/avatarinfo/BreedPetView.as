@@ -118,7 +118,7 @@
                 case _Str_2906:
                     if (this._canBreed)
                     {
-                        _Str_2304("breed");
+                        showButton("breed");
                     }
                     break;
             }

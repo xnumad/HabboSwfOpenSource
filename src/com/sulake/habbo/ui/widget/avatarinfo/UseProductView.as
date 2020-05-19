@@ -165,35 +165,35 @@
             switch (this._mode)
             {
                 case _Str_2906:
-                    _Str_2304("use_product");
+                    showButton("use_product");
                     break;
                 case _Str_13718:
-                    _Str_2304("use_product_shampoo");
+                    showButton("use_product_shampoo");
                     break;
                 case _Str_14146:
-                    _Str_2304("use_product_custom_part");
+                    showButton("use_product_custom_part");
                     break;
                 case _Str_15667:
-                    _Str_2304("use_product_custom_part_shampoo");
+                    showButton("use_product_custom_part_shampoo");
                     break;
                 case _Str_14658:
                     if (this._useProductItem.replace)
                     {
-                        _Str_2304("replace_product_saddle");
+                        showButton("replace_product_saddle");
                     }
                     else
                     {
-                        _Str_2304("use_product_saddle");
+                        showButton("use_product_saddle");
                     }
                     break;
                 case _Str_14165:
-                    _Str_2304("revive_monsterplant");
+                    showButton("revive_monsterplant");
                     break;
                 case _Str_12577:
-                    _Str_2304("rebreed_monsterplant");
+                    showButton("rebreed_monsterplant");
                     break;
                 case _Str_14611:
-                    _Str_2304("fertilize_monsterplant");
+                    showButton("fertilize_monsterplant");
                     break;
             }
             _buttons.autoArrangeItems = true;

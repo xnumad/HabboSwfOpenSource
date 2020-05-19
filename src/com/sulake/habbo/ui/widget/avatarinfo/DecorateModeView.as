@@ -75,7 +75,7 @@
 
         public function _Str_2771():void
         {
-            _Str_2304("decorate");
+            showButton("decorate");
         }
 
         private function _Str_5162(k:WindowEvent, _arg_2:IWindow):void

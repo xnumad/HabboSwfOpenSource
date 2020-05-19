@@ -159,53 +159,53 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    _Str_2304("change_name", this._data.allowNameChange);
-                    _Str_2304("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
-                    _Str_2304("change_looks");
-                    _Str_2304("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
-                    _Str_2304("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
-                    _Str_2304("dance_stop", (((!(this.widget._Str_6454)) && (this.widget._Str_4107)) && (!(_local_3))));
+                    showButton("change_name", this._data.allowNameChange);
+                    showButton("decorate", ((this._Str_22241()) && ((this._data.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._data.amIOwner))));
+                    showButton("change_looks");
+                    showButton("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
+                    showButton("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
+                    showButton("dance_stop", (((!(this.widget._Str_6454)) && (this.widget._Str_4107)) && (!(_local_3))));
                     if (!(_Str_2268.windowManager as Component).getBoolean("memenu.effects.widget.disabled"))
                     {
-                        _Str_2304("effects", (!(_local_3)));
+                        showButton("effects", (!(_local_3)));
                     }
-                    _Str_2304("handitem", (((this._data.carryItemType > 0) && (this._data.carryItemType < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
+                    showButton("handitem", (((this._data.carryItemType > 0) && (this._data.carryItemType < 999999)) && (this.widget.configuration.getBoolean("handitem.drop.enabled"))));
                     _local_4 = this.widget.configuration.getBoolean("avatar.expressions_menu.enabled");
-                    _Str_2304(((_local_4) ? "expressions" : "wave"));
+                    showButton(((_local_4) ? "expressions" : "wave"));
                     _local_5 = this.widget.configuration.getBoolean("avatar.signs.enabled");
-                    _Str_2304("signs", _local_5);
+                    showButton("signs", _local_5);
                     break;
                 case _Str_12150:
-                    _Str_2304("dance_stop", true, this.widget._Str_4107);
-                    _Str_2304("dance_1");
-                    _Str_2304("dance_2");
-                    _Str_2304("dance_3");
-                    _Str_2304("dance_4");
-                    _Str_2304("back");
+                    showButton("dance_stop", true, this.widget._Str_4107);
+                    showButton("dance_1");
+                    showButton("dance_2");
+                    showButton("dance_3");
+                    showButton("dance_4");
+                    showButton("back");
                     break;
                 case _Str_14313:
-                    _Str_2304("change_name");
-                    _Str_2304("more");
+                    showButton("change_name");
+                    showButton("more");
                     break;
                 case _Str_16983:
-                    _Str_2304("change_looks");
-                    _Str_2304("more");
+                    showButton("change_looks");
+                    showButton("more");
                     break;
                 case _Str_14565:
-                    _Str_2304("wave", true, (!(this.widget._Str_12708)));
-                    _Str_2304("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
-                    _Str_2304("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
-                    _Str_2304("idle", true);
+                    showButton("wave", true, (!(this.widget._Str_12708)));
+                    showButton("laugh", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
+                    showButton("blow", true, (((!(this.widget._Str_4878)) && (!(this.widget._Str_12708))) && (this.widget._Str_7303)), (!(this.widget._Str_7303)));
+                    showButton("idle", true);
                     if ((((this.widget.configuration.getBoolean("avatar.sitting.enabled")) && (!(this.widget._Str_12708))) && (!(_local_3))))
                     {
-                        _Str_2304("sit", (this.widget._Str_22586 == AvatarAction.POSTURE_STAND));
-                        _Str_2304("stand", this.widget.canStandUp);
+                        showButton("sit", (this.widget._Str_22586 == AvatarAction.POSTURE_STAND));
+                        showButton("stand", this.widget.canStandUp);
                     }
-                    _Str_2304("back");
+                    showButton("back");
                     break;
                 case _Str_13243:
                     showButtonGrid("signs_grid");
-                    _Str_2304("back");
+                    showButton("back");
                     break;
             }
             _buttons.autoArrangeItems = true;

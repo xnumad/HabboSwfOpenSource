@@ -68,21 +68,21 @@
                 _local_5++;
             }
             var _local_6:Boolean = ((this._data.amIOwner) || (this._data.amIAnyRoomController));
-            _Str_2304("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum.NO_PICK_UP) == -1) && (_local_6)) : _local_6));
+            showButton("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum.NO_PICK_UP) == -1) && (_local_6)) : _local_6));
             if (this._data._Str_2899)
             {
-                _Str_2304("donate_to_all", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
-                _Str_2304("donate_to_user", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
+                showButton("donate_to_all", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
+                showButton("donate_to_user", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_USER) == -1)));
                 if (this._data.amIOwner)
                 {
-                    _Str_2304("change_bot_name", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
-                    _Str_2304("change_bot_motto", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
-                    _Str_2304("dress_up", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
-                    _Str_2304("random_walk", (!(this._data._Str_2899.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
-                    _Str_2304("setup_chat", (!(this._data._Str_2899.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
-                    _Str_2304("dance", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DANCE) == -1)));
+                    showButton("change_bot_name", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_NAME) == -1)));
+                    showButton("change_bot_motto", (!(this._data._Str_2899.indexOf(BotSkillsEnum.CHANGE_BOT_MOTTO) == -1)));
+                    showButton("dress_up", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DRESS_UP) == -1)));
+                    showButton("random_walk", (!(this._data._Str_2899.indexOf(BotSkillsEnum.RANDOM_WALK) == -1)));
+                    showButton("setup_chat", (!(this._data._Str_2899.indexOf(BotSkillsEnum.SETUP_CHAT) == -1)));
+                    showButton("dance", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DANCE) == -1)));
                 }
-                _Str_2304("nux_take_tour", (!(this._data._Str_2899.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
+                showButton("nux_take_tour", (!(this._data._Str_2899.indexOf(BotSkillsEnum.NUX_TAKE_TOUR) == -1)));
             }
             for each (_local_7 in this._data._Str_10833)
             {
@@ -102,7 +102,7 @@
                 {
                     if (_local_7.data == "")
                     {
-                        _Str_2304("nux_proceed_1", true);
+                        showButton("nux_proceed_1", true);
                     }
                     else
                     {
@@ -112,7 +112,7 @@
                             _local_10 = parseInt(_local_8[1]);
                             if (_local_10 == 1)
                             {
-                                _Str_2304("nux_proceed_1", true);
+                                showButton("nux_proceed_1", true);
                                 IWindowContainer(k.getListItemByName("nux_proceed_1")).findChildByName("label").caption = _local_8[0];
                             }
                             else

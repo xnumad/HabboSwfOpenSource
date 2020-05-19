@@ -106,34 +106,34 @@
             var _local_5:ISessionDataManager = this.widget.handler.container.sessionDataManager;
             if ((((_local_4.isRoomController) || (_local_5.isGodMode)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
-                _Str_2304("pick_up");
+                showButton("pick_up");
             }
             switch (this._mode)
             {
                 case _Str_2906:
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data._Str_2985 > 0));
                     break;
                 case _Str_5818:
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
-                        _Str_2304("mount");
+                        showButton("mount");
                     }
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data._Str_2985 > 0));
                     break;
                 case _Str_5938:
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
-                        _Str_2304("dismount");
+                        showButton("dismount");
                     }
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data._Str_2985 > 0));
                     break;
                 case _Str_13388:
                     if (!this._data.dead)
                     {
-                        _Str_2304("respect", false);
+                        showButton("respect", false);
                         _local_6 = (this._data.energy as Number);
                         _local_7 = (this._data.maximumEnergy as Number);
-                        _Str_2304("treat", true, ((_local_6 / _local_7) < 0.98));
+                        showButton("treat", true, ((_local_6 / _local_7) < 0.98));
                     }
                     break;
             }
@@ -148,7 +148,7 @@
                     _local_11 = _local_10.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
                     if (((_local_11 > 0) && (_local_11 < 999999)))
                     {
-                        _Str_2304("pass_handitem");
+                        showButton("pass_handitem");
                     }
                 }
             }

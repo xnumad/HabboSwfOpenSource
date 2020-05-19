@@ -148,92 +148,92 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
-                    _Str_2304("train");
-                    _Str_2304("pick_up");
+                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("train");
+                    showButton("pick_up");
                     if (this._data._Str_4355 == PetTypeEnum.HORSE)
                     {
                         this._Str_11220 = this._Str_20669(FurniCategory._Str_6096, PetTypeEnum.HORSE);
                         if (this._Str_11220 != null)
                         {
-                            _Str_2304("buy_saddle");
+                            showButton("buy_saddle");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.bear.enabled"))
                     {
                         if (this._data._Str_4355 == PetTypeEnum.BEAR)
                         {
-                            _Str_2304("breed");
+                            showButton("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.terrier.enabled"))
                     {
                         if (this._data._Str_4355 == PetTypeEnum.TERRIER)
                         {
-                            _Str_2304("breed");
+                            showButton("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.cat.enabled"))
                     {
                         if (this._data._Str_4355 == PetTypeEnum.CAT)
                         {
-                            _Str_2304("breed");
+                            showButton("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.dog.enabled"))
                     {
                         if (this._data._Str_4355 == PetTypeEnum.DOG)
                         {
-                            _Str_2304("breed");
+                            showButton("breed");
                         }
                     }
                     if (this.widget.configuration.getBoolean("nest.breeding.pig.enabled"))
                     {
                         if (this._data._Str_4355 == PetTypeEnum.PIG)
                         {
-                            _Str_2304("breed");
+                            showButton("breed");
                         }
                     }
                     break;
                 case _Str_5818:
-                    _Str_2304("mount");
+                    showButton("mount");
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
-                        _Str_2304("toggle_riding_permission");
+                        showButton("toggle_riding_permission");
                         this._Str_13657("toggle_riding_permission", ((this._data != null) ? (this._data.publiclyRideable == PetAccessRightTypeEnum._Str_18396) : false));
                     }
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
-                    _Str_2304("train");
-                    _Str_2304("pick_up");
-                    _Str_2304("saddle_off");
+                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("train");
+                    showButton("pick_up");
+                    showButton("saddle_off");
                     break;
                 case _Str_5938:
-                    _Str_2304("dismount");
-                    _Str_2304("respect", (this._data._Str_2985 > 0));
+                    showButton("dismount");
+                    showButton("respect", (this._data._Str_2985 > 0));
                     break;
                 case _Str_10946:
-                    _Str_2304("pick_up");
+                    showButton("pick_up");
                     if (this._data.dead)
                     {
                         this._Str_18260 = this._Str_20669(FurniCategory._Str_6915, PetTypeEnum.MONSTERPLANT);
-                        _Str_2304("revive");
+                        showButton("revive");
                         if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession.isRoomController)))
                         {
-                            _Str_2304("compost");
+                            showButton("compost");
                         }
                     }
                     else
                     {
                         _local_4 = (this._data.energy as Number);
                         _local_5 = (this._data.maximumEnergy as Number);
-                        _Str_2304("treat", true, ((_local_4 / _local_5) < 0.98));
+                        showButton("treat", true, ((_local_4 / _local_5) < 0.98));
                         if (this._data.level == this._data.maximumLevel)
                         {
                             if (this._data.breedable)
                             {
-                                _Str_2304("toggle_breeding_permission");
+                                showButton("toggle_breeding_permission");
                                 this._Str_13657("toggle_breeding_permission", this._data.publiclyBreedable);
-                                _Str_2304("breed");
+                                showButton("breed");
                             }
                         }
                     }
@@ -248,7 +248,7 @@
                     _local_8 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
                     if (((_local_8 > 0) && (_local_8 < 999999)))
                     {
-                        _Str_2304("pass_handitem");
+                        showButton("pass_handitem");
                     }
                 }
             }

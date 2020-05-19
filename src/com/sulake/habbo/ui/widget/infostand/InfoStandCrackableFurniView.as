@@ -21,7 +21,7 @@
         {
             super.update(k);
             var _local_2:CrackableStuffData = (k.stuffData as CrackableStuffData);
-            _Str_2304("use", true);
+            showButton("use", true);
             _buttons.visible = true;
             this._Str_25073(_local_2.hits, _local_2.target);
         }

@@ -124,10 +124,10 @@
             var _local_2:Array = k.badges;
             this._Str_5605((((_local_2) && (_local_2.length > 0)) ? _local_2[0] : null));
             this._Str_7907(k.figure);
-            this._Str_2304("whisper", false);
-            this._Str_2304("ignore", false);
-            this._Str_2304("unignore", false);
-            this._Str_2304("pick", ((k.ownerId > -1) && ((k.amIOwner) || (k.amIAnyRoomController))));
+            this.showButton("whisper", false);
+            this.showButton("ignore", false);
+            this.showButton("unignore", false);
+            this.showButton("pick", ((k.ownerId > -1) && ((k.amIOwner) || (k.amIAnyRoomController))));
             this.updateWindow();
         }
 
@@ -279,7 +279,7 @@
             this._widget.close();
         }
 
-        protected function _Str_2304(k:String, _arg_2:Boolean):void
+        protected function showButton(k:String, _arg_2:Boolean):void
         {
             if (this._buttonsContainer == null)
             {

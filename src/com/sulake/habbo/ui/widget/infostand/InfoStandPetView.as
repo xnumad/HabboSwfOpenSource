@@ -168,40 +168,40 @@
                 _local_2 = TimeFormatUtil._Str_22740(k.remainingTimeToLive);
                 this._Str_9597(WELLBEING, k.remainingTimeToLive, k.maximumTimeToLive, _Str_18838, _Str_18945, _local_2);
                 this._Str_22309(GROWTH, k.remainingGrowTime);
-                this._Str_2304("petrespect", false);
+                this.showButton("petrespect", false);
                 if (k.energy > 0)
                 {
                     _local_3 = (k.energy as Number);
                     _local_4 = (k._Str_3966 as Number);
-                    this._Str_2304("pettreat", ((_local_3 / _local_4) < 0.98));
+                    this.showButton("pettreat", ((_local_3 / _local_4) < 0.98));
                 }
                 else
                 {
-                    this._Str_2304("pettreat", false);
+                    this.showButton("pettreat", false);
                 }
-                this._Str_2304("train", false);
-                this._Str_2304("buy_food", false);
-                this._Str_2304("kick", false);
-                this._Str_2304("pick", k._Str_5114);
+                this.showButton("train", false);
+                this.showButton("buy_food", false);
+                this.showButton("kick", false);
+                this.showButton("pick", k._Str_5114);
                 this._Str_16559((k.rarityLevel >= 0), k);
             }
             else
             {
                 this._Str_14440("default", true);
                 this._Str_14440("monsterplant", false);
-                this._Str_2304("petrespect", true);
-                this._Str_2304("pettreat", false);
-                this._Str_2304("train", k._Str_5175);
-                this._Str_2304("pick", k._Str_5175);
-                this._Str_2304("buy_food", true);
-                this._Str_2304("kick", k._Str_5114);
+                this.showButton("petrespect", true);
+                this.showButton("pettreat", false);
+                this.showButton("train", k._Str_5175);
+                this.showButton("pick", k._Str_5175);
+                this.showButton("buy_food", true);
+                this.showButton("kick", k._Str_5114);
                 this._Str_9597(HAPPINESS, k.happyness, k._Str_4448, _Str_15917, _Str_18444);
                 this._Str_9597(EXPERIENCE, k.experience, k._Str_4095, _Str_17091, _Str_17718);
                 this._Str_9597(ENERGY, k.energy, k._Str_3966, _Str_16706, _Str_18621);
                 this._Str_22251();
             }
-            this._Str_2304("move", ((k._Str_5175) && (k.type == PetTypeEnum.MONSTERPLANT)));
-            this._Str_2304("rotate", ((k._Str_5175) && (k.type == PetTypeEnum.MONSTERPLANT)));
+            this.showButton("move", ((k._Str_5175) && (k.type == PetTypeEnum.MONSTERPLANT)));
+            this.showButton("rotate", ((k._Str_5175) && (k.type == PetTypeEnum.MONSTERPLANT)));
             this.updateWindow();
             this._currentPetId = k.id;
             this._petData.remove(k.id);
@@ -730,10 +730,10 @@
         {
             var k:int = this._widget.userData._Str_2985;
             this._widget.localizations.registerParameter("infostand.button.petrespect", "count", k.toString());
-            this._Str_2304("petrespect", (k > 0));
+            this.showButton("petrespect", (k > 0));
         }
 
-        protected function _Str_2304(k:String, _arg_2:Boolean):void
+        protected function showButton(k:String, _arg_2:Boolean):void
         {
             if (this._buttonsContainer == null)
             {
