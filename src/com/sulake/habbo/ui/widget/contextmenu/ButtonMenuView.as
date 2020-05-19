@@ -13,7 +13,7 @@
 
     public class ButtonMenuView extends ContextInfoView 
     {
-        protected static const _Str_15742:int = 8;
+        protected static const ICON_MARGIN:int = 8;
         protected static const _Str_16461:uint = 16744755;
         protected static const _Str_18867:uint = 16756591;
         protected static const ICON_VIP:String = "icon_vip";
@@ -96,11 +96,11 @@
                 _local_8.color = ((_arg_3) ? _Str_16357 : _Str_17248);
                 if (_local_8.tags.indexOf(ARROW_LEFT) != -1)
                 {
-                    _local_8.x = (((_local_7.x + ((_local_7.width - _local_7.textWidth) / 2)) - _local_8.width) - _Str_15742);
+                    _local_8.x = (((_local_7.x + ((_local_7.width - _local_7.textWidth) / 2)) - _local_8.width) - ICON_MARGIN);
                 }
                 if (_local_8.tags.indexOf(ARROW_RIGHT) != -1)
                 {
-                    _local_8.x = ((_local_7.x + ((_local_7.width + _local_7.textWidth) / 2)) + _Str_15742);
+                    _local_8.x = ((_local_7.x + ((_local_7.width + _local_7.textWidth) / 2)) + ICON_MARGIN);
                 }
                 _local_8.visible = ((_local_8.visible) && (!(_arg_4)));
             }
