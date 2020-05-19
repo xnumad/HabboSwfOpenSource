@@ -68,7 +68,7 @@
             k.procedure = this._Str_2392;
         }
 
-        public function _Str_16877(k:_Str_6294):void
+        public function onRoomVisits(k:_Str_6294):void
         {
             if (k.userId != this._userId)
             {

@@ -249,7 +249,7 @@
             var _local_4:Array = this._roomVisitsListeners.concat();
             for each (_local_3 in _local_4)
             {
-                _local_3._Str_16877(_local_2.data);
+                _local_3.onRoomVisits(_local_2.data);
             }
         }
 
