@@ -4,7 +4,7 @@
 	import com.sulake.room.object.visualization.IRoomObjectSprite;
 	import com.sulake.room.object.visualization.IRoomObjectSpriteVisualization;
 	import com.sulake.room.object.visualization.IRoomObjectVisualization;
-	import com.sulake.habbo.sound.HabboSoundConstants;
+	import com.sulake.habbo.sound.HabboSoundTypesEnum;
 	import com.sulake.habbo.avatar.enum.AvatarAction;
 	import com.sulake.habbo.avatar.IAvatarFigureContainer;
 	import com.sulake.habbo.room.object.RoomObjectVariableEnum;
@@ -299,14 +299,14 @@
             if (((_local_7) && (!(this._SafeStr_18726))))
             {
                 this._SafeStr_18726 = true;
-                SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_WALK, int.MAX_VALUE);
+                SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_WALK, int.MAX_VALUE);
             }
             else
             {
                 if (((!(_local_7)) && (this._SafeStr_18726)))
                 {
                     this._SafeStr_18726 = false;
-                    SnowWarEngine._Str_25775(HabboSoundConstants.GAMES_SW_WALK);
+                    SnowWarEngine._Str_25775(HabboSoundTypesEnum.GAMES_SW_WALK);
                 }
             }
             var _local_9:HumanGameObject = this._snowWarEngine._SafeStr_13187();

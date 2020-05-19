@@ -205,49 +205,49 @@
             var _local_2:String = "";
             switch (k)
             {
-                case HabboSoundConstants.CALL_FOR_HELP:
+                case HabboSoundTypesEnum.CALL_FOR_HELP:
                     _local_2 = "sound_call_for_help";
                     break;
-                case HabboSoundConstants.GUIDE_INVITATION:
+                case HabboSoundTypesEnum.GUIDE_INVITATION:
                     _local_2 = "sound_guide_received_invitation";
                     break;
-                case HabboSoundConstants.GUIDE_REQUEST:
+                case HabboSoundTypesEnum.GUIDE_REQUEST:
                     _local_2 = "sound_guide_help_requested";
                     break;
-                case HabboSoundConstants.MESSAGE_RECEIVED:
+                case HabboSoundTypesEnum.MESSAGE_RECEIVED:
                     _local_2 = "sound_console_new_message";
                     break;
-                case HabboSoundConstants.MESSAGE_SENT:
+                case HabboSoundTypesEnum.MESSAGE_SENT:
                     _local_2 = "sound_console_message_sent";
                     break;
-                case HabboSoundConstants.PIXELS:
+                case HabboSoundTypesEnum.PIXELS:
                     _local_2 = "sound_catalogue_duckets";
                     break;
-                case HabboSoundConstants.PURCHASE:
+                case HabboSoundTypesEnum.PURCHASE:
                     _local_2 = "sound_catalogue_cash";
                     break;
-                case HabboSoundConstants.RESPECT:
+                case HabboSoundTypesEnum.RESPECT:
                     _local_2 = "sound_respect_received";
                     break;
-                case HabboSoundConstants.CAMERA_SHUTTER:
+                case HabboSoundTypesEnum.CAMERA_SHUTTER:
                     _local_2 = "sound_camera_shutter";
                     break;
                     _local_2 = k;
                     break;
-                case HabboSoundConstants.GAMES_IG_COUNTDOWN:
-                case HabboSoundConstants.GAMES_IG_WINNING:
-                case HabboSoundConstants.GAMES_IG_LOSING:
-				case HabboSoundConstants.GAMES_SW_GET_SNOWBALL:
-                case HabboSoundConstants.GAMES_SW_HIT1:
-                case HabboSoundConstants.GAMES_SW_HIT2:
-                case HabboSoundConstants.GAMES_SW_HIT3:
-                case HabboSoundConstants.GAMES_SW_MAKE_SNOWBALL:
-                case HabboSoundConstants.GAMES_SW_MISS:
-                case HabboSoundConstants.GAMES_SW_THROW:
-                case HabboSoundConstants.GAMES_SW_WALK:
+                case HabboSoundTypesEnum.GAMES_IG_COUNTDOWN:
+                case HabboSoundTypesEnum.GAMES_IG_WINNING:
+                case HabboSoundTypesEnum.GAMES_IG_LOSING:
+				case HabboSoundTypesEnum.GAMES_SW_GET_SNOWBALL:
+                case HabboSoundTypesEnum.GAMES_SW_HIT1:
+                case HabboSoundTypesEnum.GAMES_SW_HIT2:
+                case HabboSoundTypesEnum.GAMES_SW_HIT3:
+                case HabboSoundTypesEnum.GAMES_SW_MAKE_SNOWBALL:
+                case HabboSoundTypesEnum.GAMES_SW_MISS:
+                case HabboSoundTypesEnum.GAMES_SW_THROW:
+                case HabboSoundTypesEnum.GAMES_SW_WALK:
                     _local_2 = k;
                     break;
-                case HabboSoundConstants.FURNITURE_CUCKOO_CLOCK:
+                case HabboSoundTypesEnum.FURNITURE_CUCKOO_CLOCK:
                     _local_2 = k;
                     break;
                 default:

@@ -1,7 +1,7 @@
 ﻿package snowwar.ui
 {
 	import com.sulake.core.runtime.IDisposable;
-	import com.sulake.habbo.sound.HabboSoundConstants;
+	import com.sulake.habbo.sound.HabboSoundTypesEnum;
 	import com.sulake.core.window.IWindow;
 	import com.sulake.core.window.IWindowContainer;
 	import com.sulake.core.assets.BitmapDataAsset;
@@ -233,13 +233,13 @@
                 this._SafeStr_22104 = null;
             }
             this._SafeStr_22104 = new SnowWarAnimatedWindowElement(this._snowWarEngine.assets, this._ballProgress, "load_", 8);
-            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_MAKE_SNOWBALL);
+            SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_MAKE_SNOWBALL);
         }
 
         public function _SafeStr_13225():void
         {
             this._SafeStr_22116();
-            SnowWarEngine._Str_25775(HabboSoundConstants.GAMES_SW_MAKE_SNOWBALL);
+            SnowWarEngine._Str_25775(HabboSoundTypesEnum.GAMES_SW_MAKE_SNOWBALL);
             if (this._SafeStr_22101)
             {
                 this.onButtonDownEvent(null);
@@ -336,7 +336,7 @@
             WindowUtils._Str_4180(this._timer.findChildByName("time_left"), ((_local_2 + ":") + _local_3));
             if (((k <= 5) && (k > 0)))
             {
-                SnowWarEngine.playSound(HabboSoundConstants.CALL_FOR_HELP);
+                SnowWarEngine.playSound(HabboSoundTypesEnum.CALL_FOR_HELP);
                 if (!this._SafeStr_22110)
                 {
                     this._SafeStr_22110 = new Timer(500, 1);

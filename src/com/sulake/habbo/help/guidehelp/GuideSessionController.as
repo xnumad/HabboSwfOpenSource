@@ -57,7 +57,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_3075;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.window.widgets._Str_2961;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_7016;
     import com.sulake.habbo.window.widgets._Str_2789;
@@ -659,7 +659,7 @@
             this._sessionData._Str_8937 = _arg_2;
             this._sessionData._Str_3989 = k;
             this._Str_2826(this._Str_22772, false);
-            this._habboHelp._Str_2476.playSound(HabboSoundConstants.GUIDE_REQUEST);
+            this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             if (((k == _Str_2849._Str_4749) || (k == _Str_2849._Str_4268)))
             {
                 this._window.findChildByName("frank_greeting").visible = true;
@@ -1055,7 +1055,7 @@
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_ACCEPT;
             this._Str_2826(this._Str_25328, false);
-            this._habboHelp._Str_2476.playSound(HabboSoundConstants.GUIDE_REQUEST);
+            this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             var _local_2:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
             _local_2.seconds = k;
             _local_2.running = true;

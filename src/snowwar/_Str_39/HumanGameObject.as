@@ -13,7 +13,7 @@
     import snowwar._Str_254.Direction360;
     import snowwar._Str_231.SynchronizedGameStage;
     import snowwar._Str_254._SafeStr_4667;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import snowwar._SafeStr_4034;
     import snowwar._Str_231.SynchronizedGameArena;
 	import com.sulake.habbo.avatar.enum.AvatarAction;
@@ -482,7 +482,7 @@
                 {
                     this._SafeStr_18845(_arg_3);
                     _arg_2._SafeStr_18843(k, this);
-                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_HIT3);
+                    SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_HIT3);
                 }
                 this._SafeStr_18829--;
                 this._SafeStr_18579._SafeStr_13228(this, _arg_2);
@@ -711,7 +711,7 @@
             var _local_3:HumanGameObject = _arg_2._SafeStr_18040;
             this._SafeStr_18841(k, _local_3, _arg_2.direction360.index());
             _local_3._SafeStr_18842(k, this);
-            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_HIT1);
+            SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_HIT1);
         }
 
         override public function get collisionHeight():int

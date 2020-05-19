@@ -3,7 +3,7 @@
     import snowwar._Str_39.HumanGameObject;
     import snowwar._Str_39._SafeStr_4670;
     import snowwar.SnowWarEngine;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import snowwar._Str_231.SynchronizedGameStage;
 
     public class _SafeStr_4684 extends _SafeStr_4020 
@@ -40,7 +40,7 @@
                     {
                         _local_4._SafeStr_18851(_local_3);
                     }
-                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_GET_SNOWBALL);
+                    SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_GET_SNOWBALL);
                 }
             }
         }

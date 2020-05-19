@@ -7,7 +7,7 @@
     import flash.events.TimerEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_2484;
     import com.sulake.habbo.communication.messages.outgoing.moderator.ReleaseIssuesMessageComposer;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.events.Event;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7202;
     import com.sulake.habbo.utils.StringUtil;
@@ -162,7 +162,7 @@
             }
             if (((this._issueBrowser == null) || (!(this._issueBrowser.isOpen()))))
             {
-                this._moderationManager.soundManager.playSound(HabboSoundConstants.CALL_FOR_HELP);
+                this._moderationManager.soundManager.playSound(HabboSoundTypesEnum.CALL_FOR_HELP);
             }
         }
 

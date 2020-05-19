@@ -20,7 +20,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import flash.display.BitmapData;
     import flash.geom.Matrix;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
     import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
@@ -171,7 +171,7 @@
 
         public function _Str_23751():void
         {
-            this.container._Str_2476.playSound(HabboSoundConstants.CAMERA_SHUTTER);
+            this.container._Str_2476.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
         }
 
         public function _Str_24657(k:BitmapData):void

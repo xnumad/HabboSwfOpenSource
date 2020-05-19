@@ -199,7 +199,7 @@
     import com.sulake.habbo.communication.messages.parser.users._Str_7205;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.purse.UserCreditsMessageParser;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.catalog.purse.PurseEvent;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_4007;
@@ -2032,7 +2032,7 @@
             this._Str_12017();
             if (((!(this._Str_19689)) && (!(this._soundManager == null))))
             {
-                this._soundManager.playSound(HabboSoundConstants.PURCHASE);
+                this._soundManager.playSound(HabboSoundTypesEnum.PURCHASE);
             }
             this._Str_19689 = false;
             events.dispatchEvent(new PurseEvent(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._purse.credits, 0));
@@ -2046,7 +2046,7 @@
             this._Str_12017();
             if (((!(this._soundManager == null)) && (_local_2.type == ActivityPointTypeEnum.DUCKET)))
             {
-                this._soundManager.playSound(HabboSoundConstants.PIXELS);
+                this._soundManager.playSound(HabboSoundTypesEnum.PIXELS);
             }
             events.dispatchEvent(new PurseEvent(PurseEvent.CATALOG_PURSE_ACTIVITY_POINT_BALANCE, _local_2.amount, _local_2.type));
             events.dispatchEvent(new PurseUpdateEvent());

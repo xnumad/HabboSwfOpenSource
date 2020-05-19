@@ -17,7 +17,7 @@
 	import com.sulake.habbo.friendlist.IHabboFriendsList;
 	import com.sulake.habbo.window.utils._Str_2418;
 	import com.sulake.habbo.sound.IHabboSoundManager;
-	import com.sulake.habbo.sound.HabboSoundConstants;
+	import com.sulake.habbo.sound.HabboSoundTypesEnum;
 	import com.sulake.habbo.help.IHabboHelp;
 	import com.sulake.habbo.localization.IHabboLocalizationManager;
 	import com.sulake.habbo.avatar.enum.AvatarAction;
@@ -1056,7 +1056,7 @@
             {
                 this._roomUI.visible = true;
                 this.disposeGameStartingViewController();
-                playSound(HabboSoundConstants.GAMES_IG_COUNTDOWN);
+                playSound(HabboSoundTypesEnum.GAMES_IG_COUNTDOWN);
                 this._gameArenaView._SafeStr_13264(k);
                 this._gameState = STAGE_STARTED;
             }
@@ -1087,7 +1087,7 @@
                 this._synchronizedGameArena.dispose();
                 this._synchronizedGameArena = null;
             }
-            _Str_25775(HabboSoundConstants.GAMES_SW_WALK);
+            _Str_25775(HabboSoundTypesEnum.GAMES_SW_WALK);
             this.send(new _SafeStr_3624(HabboGames._SafeStr_7697));
         }
 

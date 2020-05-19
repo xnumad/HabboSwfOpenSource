@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.sound
 {
-    public class HabboSoundConstants 
+    public class HabboSoundTypesEnum 
     {
         public static const CALL_FOR_HELP:String 	  		= "HBST_call_for_help";
         public static const PURCHASE:String 	 	  		= "HBST_purchase";

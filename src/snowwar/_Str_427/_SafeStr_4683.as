@@ -2,7 +2,7 @@
 {
     import snowwar._Str_39.HumanGameObject;
     import snowwar.SnowWarEngine;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import snowwar._Str_231.SynchronizedGameStage;
 
     public class _SafeStr_4683 extends _SafeStr_4020 
@@ -30,7 +30,7 @@
         {
             this._SafeStr_22184._SafeStr_18847(this._SafeStr_22191.currentLocation.x, this._SafeStr_22191.currentLocation.y);
             this._SafeStr_22184._SafeStr_18846();
-            SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_THROW);
+            SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_THROW);
         }
 
         public function get _SafeStr_22184():HumanGameObject

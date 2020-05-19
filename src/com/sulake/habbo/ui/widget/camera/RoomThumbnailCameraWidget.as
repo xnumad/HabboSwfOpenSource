@@ -21,7 +21,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import flash.display.BitmapData;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomThumbnailMessageComposer;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
@@ -151,7 +151,7 @@
 
         public function _Str_25628():void
         {
-            this.container._Str_2476.playSound(HabboSoundConstants.CAMERA_SHUTTER);
+            this.container._Str_2476.playSound(HabboSoundTypesEnum.CAMERA_SHUTTER);
         }
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void

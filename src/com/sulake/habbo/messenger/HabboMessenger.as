@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_8339;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4696;
     import com.sulake.core.communication.messages.IMessageComposer;
-    import com.sulake.habbo.sound.HabboSoundConstants;
+    import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6189;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_5791;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7091;
@@ -201,7 +201,7 @@
         {
             if (this._soundManager != null)
             {
-                this._soundManager.playSound(HabboSoundConstants.MESSAGE_SENT);
+                this._soundManager.playSound(HabboSoundTypesEnum.MESSAGE_SENT);
             }
         }
 
@@ -254,7 +254,7 @@
         {
             if (this._soundManager != null)
             {
-                this._soundManager.playSound(HabboSoundConstants.MESSAGE_RECEIVED);
+                this._soundManager.playSound(HabboSoundTypesEnum.MESSAGE_RECEIVED);
             }
         }
 

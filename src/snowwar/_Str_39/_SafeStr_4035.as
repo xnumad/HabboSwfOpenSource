@@ -1,6 +1,6 @@
 ﻿package snowwar._Str_39
 {
-	import com.sulake.habbo.sound.HabboSoundConstants;
+	import com.sulake.habbo.sound.HabboSoundTypesEnum;
 	import com.sulake.core.runtime.exceptions.Exception;
 	import snowwar._Str_231.SynchronizedGameStage;
 	import snowwar._Str_254.CollisionDetection;
@@ -234,7 +234,7 @@
                 collision = _local_2.hasCollision(this);
                 if (collision)
                 {
-                    SnowWarEngine.playSound(HabboSoundConstants.GAMES_SW_MISS);
+                    SnowWarEngine.playSound(HabboSoundTypesEnum.GAMES_SW_MISS);
                 }
             }
             if (collision)
