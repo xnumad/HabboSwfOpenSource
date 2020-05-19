@@ -260,8 +260,8 @@
             var _local_9:UserClassificationCtrl;
             var _local_10:Array;
             var _local_2:UserClassificationMessageParser = (k as _Str_8083).getParser();
-            var _local_4:Map = _local_2._Str_24757;
-            var _local_5:Map = _local_2._Str_24895;
+            var _local_4:Map = _local_2.classifiedUsernameMap;
+            var _local_5:Map = _local_2.classifiedUserTypeMap;
             var _local_6:int = 1;
             var _local_7:Array = new Array();
             for each (_local_8 in _local_4.getKeys())

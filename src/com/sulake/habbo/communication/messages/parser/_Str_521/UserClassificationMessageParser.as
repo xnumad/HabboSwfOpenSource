@@ -6,21 +6,21 @@
 
     public class UserClassificationMessageParser implements IMessageParser 
     {
-        private var _Str_8683:Map;
-        private var _Str_8623:Map;
+        private var _classifiedUsersNames:Map;
+        private var _classifiedUsersClass:Map;
 
 
         public function flush():Boolean
         {
-            if (this._Str_8683)
+            if (this._classifiedUsersNames)
             {
-                this._Str_8683.dispose();
-                this._Str_8683 = null;
+                this._classifiedUsersNames.dispose();
+                this._classifiedUsersNames = null;
             }
-            if (this._Str_8623)
+            if (this._classifiedUsersClass)
             {
-                this._Str_8623.dispose();
-                this._Str_8623 = null;
+                this._classifiedUsersClass.dispose();
+                this._classifiedUsersClass = null;
             }
             return true;
         }
@@ -31,29 +31,29 @@
             var _local_4:String;
             var _local_5:String;
             var _local_2:int = k.readInteger();
-            this._Str_8683 = new Map();
-            this._Str_8623 = new Map();
+            this._classifiedUsersNames = new Map();
+            this._classifiedUsersClass = new Map();
             var _local_6:int;
             while (_local_6 < _local_2)
             {
                 _local_3 = k.readInteger();
                 _local_4 = k.readString();
                 _local_5 = k.readString();
-                this._Str_8683.add(_local_3, _local_4);
-                this._Str_8623.add(_local_3, _local_5);
+                this._classifiedUsersNames.add(_local_3, _local_4);
+                this._classifiedUsersClass.add(_local_3, _local_5);
                 _local_6++;
             }
             return true;
         }
 
-        public function get _Str_24757():Map
+        public function get classifiedUsernameMap():Map
         {
-            return this._Str_8683;
+            return this._classifiedUsersNames;
         }
 
-        public function get _Str_24895():Map
+        public function get classifiedUserTypeMap():Map
         {
-            return this._Str_8623;
+            return this._classifiedUsersClass;
         }
     }
 }
