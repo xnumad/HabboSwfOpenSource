@@ -52,13 +52,13 @@
                 this._gravityEnabled = (!(this._lineByLineMode));
                 switch (this._component._Str_7277.scrollSpeed)
                 {
-                    case RoomChatSettings._Str_18404:
+                    case RoomChatSettings.CHAT_SCROLL_SPEED_FAST:
                         this._scrollUpTimerDelay = 3000;
                         return;
-                    case RoomChatSettings._Str_17874:
+                    case RoomChatSettings.CHAT_SCROLL_SPEED_NORMAL:
                         this._scrollUpTimerDelay = 6000;
                         return;
-                    case RoomChatSettings._Str_16469:
+                    case RoomChatSettings.CHAT_SCROLL_SPEED_SLOW:
                         this._scrollUpTimerDelay = 12000;
                         return;
                 }

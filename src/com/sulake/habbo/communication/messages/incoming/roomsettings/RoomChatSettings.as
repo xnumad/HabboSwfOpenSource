@@ -9,9 +9,9 @@
         public static const CHAT_BUBBLE_WIDTH_WIDE:int = 0;
         public static const CHAT_BUBBLE_WIDTH_NORMAL:int = 1;
         public static const CHAT_BUBBLE_WIDTH_THIN:int = 2;
-        public static const _Str_18404:int = 0;
-        public static const _Str_17874:int = 1;
-        public static const _Str_16469:int = 2;
+        public static const CHAT_SCROLL_SPEED_FAST:int = 0;
+        public static const CHAT_SCROLL_SPEED_NORMAL:int = 1;
+        public static const CHAT_SCROLL_SPEED_SLOW:int = 2;
         public static const _Str_21099:int = 0;
         public static const _Str_20763:int = 1;
         public static const _Str_22060:int = 2;
