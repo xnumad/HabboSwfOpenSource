@@ -66,7 +66,7 @@
         private var _avatars:Map;
         private var _avatarsOnEffect:Map;
         private var _headAngle:int = 0;
-        private var _gpuMode:Boolean;
+        private var _isAnimating:Boolean;
         private var _figure:String;
         private var _gender:String;
         private var _currentAngleDeg:int = 0;
@@ -82,15 +82,15 @@
         private var _isTalking:Boolean = false;
         private var _isSleeping:Boolean = false;
         private var _isBlinking:Boolean = false;
+        private var _expressionType:int = 0;
+        private var _gesture:int = 0;
+        private var _danceStyle:int = 0;
         private var _mouseHighlight:int = 0;
-        private var _signType:int = 0;
+        private var _mouseHighlightEnabled:Boolean = false;
+        private var _signType:int = -1;
         private var _effectType:int = 0;
         private var _carryObjectType:int = 0;
-        private var _mouseHighlightEnabled:Boolean = false;
-        private var _useObjectType:int = -1;
-        private var _geometryOffset:int = 0;
-        private var _baseY:int = 0;
-        private var BASE_Y_SCALE:int = 0;
+        private var _useObjectType:int = 0;
         private var ANIMATION_UPDATE_INTERVAL_MS:int = 0;
         private var SNOWBOARDING_EFFECT:int = 0;
         private var _effectJustApplied:Boolean = false;
@@ -104,7 +104,7 @@
         {
             this._avatars = new Map();
             this._avatarsOnEffect = new Map();
-            this._gpuMode = false;
+            this._isAnimating = false;
         }
 
         override public function dispose():void
@@ -303,9 +303,9 @@
                     _local_4 = true;
                 }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_EXPRESSION);
-                if (_local_6 != this._mouseHighlight)
+                if (_local_6 != this._expressionType)
                 {
-                    this._mouseHighlight = _local_6;
+                    this._expressionType = _local_6;
                     _local_4 = true;
                 }
                 _local_5 = (k.getNumber(RoomObjectVariableEnum.FIGURE_SLEEP) > 0);
@@ -321,9 +321,9 @@
                     _local_4 = true;
                 }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_GESTURE);
-                if (_local_6 != this._signType)
+                if (_local_6 != this._gesture)
                 {
-                    this._signType = _local_6;
+                    this._gesture = _local_6;
                     _local_4 = true;
                 }
                 _local_7 = k.getString(RoomObjectVariableEnum.FIGURE_POSTURE);
@@ -351,27 +351,27 @@
                     _local_4 = true;
                 }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_DANCE);
+                if (_local_6 != this._danceStyle)
+                {
+                    this._danceStyle = _local_6;
+                    _local_4 = true;
+                }
+                _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT);
                 if (_local_6 != this._effectType)
                 {
                     this._effectType = _local_6;
                     _local_4 = true;
                 }
-                _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_EFFECT);
-                if (_local_6 != this._geometryOffset)
-                {
-                    this._geometryOffset = _local_6;
-                    _local_4 = true;
-                }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
-                if (_local_6 != this._baseY)
+                if (_local_6 != this._carryObjectType)
                 {
-                    this._baseY = _local_6;
+                    this._carryObjectType = _local_6;
                     _local_4 = true;
                 }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT);
-                if (_local_6 != this.BASE_Y_SCALE)
+                if (_local_6 != this._useObjectType)
                 {
-                    this.BASE_Y_SCALE = _local_6;
+                    this._useObjectType = _local_6;
                     _local_4 = true;
                 }
                 _local_6 = k.getNumber(RoomObjectVariableEnum.HEAD_DIRECTION);
@@ -380,19 +380,19 @@
                     this._currentHeadAngleDeg = _local_6;
                     _local_4 = true;
                 }
-                if (((this._baseY > 0) && (k.getNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT) > 0)))
+                if (((this._carryObjectType > 0) && (k.getNumber(RoomObjectVariableEnum.FIGURE_USE_OBJECT) > 0)))
                 {
-                    if (this.BASE_Y_SCALE != this._baseY)
+                    if (this._useObjectType != this._carryObjectType)
                     {
-                        this.BASE_Y_SCALE = this._baseY;
+                        this._useObjectType = this._carryObjectType;
                         _local_4 = true;
                     }
                 }
                 else
                 {
-                    if (this.BASE_Y_SCALE != 0)
+                    if (this._useObjectType != 0)
                     {
-                        this.BASE_Y_SCALE = 0;
+                        this._useObjectType = 0;
                         _local_4 = true;
                     }
                 }
@@ -532,10 +532,10 @@
                 if (k.hasNumber(RoomObjectVariableEnum.FIGURE_SIGN))
                 {
                     _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_SIGN);
-                    if (_local_6 != this._useObjectType)
+                    if (_local_6 != this._signType)
                     {
                         _local_4 = true;
-                        this._useObjectType = _local_6;
+                        this._signType = _local_6;
                     }
                 }
                 _local_5 = (k.getNumber(RoomObjectVariableEnum.FIGURE_HIGHLIGHT_ENABLE) > 0);
@@ -547,9 +547,9 @@
                 if (this._mouseHighlightEnabled)
                 {
                     _local_6 = k.getNumber(RoomObjectVariableEnum.FIGURE_HIGHLIGHT);
-                    if (_local_6 != this._carryObjectType)
+                    if (_local_6 != this._mouseHighlight)
                     {
-                        this._carryObjectType = _local_6;
+                        this._mouseHighlight = _local_6;
                         _local_4 = true;
                     }
                 }
@@ -743,7 +743,7 @@
             var _local_2:IRoomObjectSprite = getSprite(ADDITION_ID_TYPING_BUBBLE);
             this._shadowAsset = null;
             var _local_3:Boolean = (((this._posture == "mv") || (this._posture == "std")) || ((this._posture == "sit") && (this._effectJustApplied)));
-            if (this._geometryOffset == SPRITE_INDEX_SHADOW)
+            if (this._effectType == SPRITE_INDEX_SHADOW)
             {
                 _local_3 = false;
             }
@@ -840,7 +840,7 @@
             var _local_8:Boolean;
             var _local_9:Boolean;
             var _local_10:Boolean;
-            var _local_11:int = this._geometryOffset;
+            var _local_11:int = this._effectType;
             var _local_12:Boolean;
             var _local_13:Boolean = this.updateModel(_local_6, _local_7, _arg_3);
             if ((((_local_13) || (!(_local_7 == _currentScale))) || (this._activeAvatarImage == null)))
@@ -850,13 +850,13 @@
                     _local_9 = true;
                     this.validateActions(_local_7);
                 }
-                if (_local_11 != this._geometryOffset)
+                if (_local_11 != this._effectType)
                 {
                     _local_12 = true;
                 }
                 if ((((_local_9) || (this._activeAvatarImage == null)) || (_local_12)))
                 {
-                    this._activeAvatarImage = this._Str_23124(_local_7, this._geometryOffset);
+                    this._activeAvatarImage = this._Str_23124(_local_7, this._effectType);
                     if (this._activeAvatarImage == null)
                     {
                         return;
@@ -912,7 +912,7 @@
                 }
             }
             var _local_15:Boolean = (((_local_10) || (_local_13)) || (_local_9));
-            var _local_16:Boolean = (((this._gpuMode) || (this._currentAngleDeg > 0)) && (_arg_3));
+            var _local_16:Boolean = (((this._isAnimating) || (this._currentAngleDeg > 0)) && (_arg_3));
             if (_local_15)
             {
                 this._currentAngleDeg = SPRITE_INDEX_AVATAR;
@@ -992,7 +992,7 @@
                         TypingBubble(_local_18).relativeDepth = ((AVATAR_SPRITE_LAYING_DEPTH - 0.01) + _local_20[2]);
                     }
                 }
-                this._gpuMode = this._activeAvatarImage._Str_899();
+                this._isAnimating = this._activeAvatarImage._Str_899();
                 _local_21 = ADDITION_ID_EXPRESSION;
                 _local_22 = this._activeAvatarImage.getDirection();
                 for each (_local_23 in this._activeAvatarImage._Str_754())
@@ -1108,25 +1108,25 @@
             }
             k._Str_913();
             k.appendAction(AvatarAction.POSTURE, this._posture, this._postureParameter);
-            if (this._signType > 0)
+            if (this._gesture > 0)
             {
-                k.appendAction(AvatarAction.GESTURE, AvatarAction.getGesture(this._signType));
+                k.appendAction(AvatarAction.GESTURE, AvatarAction.getGesture(this._gesture));
             }
-            if (this._effectType > 0)
+            if (this._danceStyle > 0)
             {
-                k.appendAction(AvatarAction.DANCE, this._effectType);
+                k.appendAction(AvatarAction.DANCE, this._danceStyle);
             }
-            if (this._useObjectType > -1)
+            if (this._signType > -1)
             {
-                k.appendAction(AvatarAction.SIGN, this._useObjectType);
+                k.appendAction(AvatarAction.SIGN, this._signType);
             }
-            if (this._baseY > 0)
+            if (this._carryObjectType > 0)
             {
-                k.appendAction(AvatarAction.CARRY_OBJECT, this._baseY);
+                k.appendAction(AvatarAction.CARRY_OBJECT, this._carryObjectType);
             }
-            if (this.BASE_Y_SCALE > 0)
+            if (this._useObjectType > 0)
             {
-                k.appendAction(AvatarAction.USE_OBJECT, this.BASE_Y_SCALE);
+                k.appendAction(AvatarAction.USE_OBJECT, this._useObjectType);
             }
             if (this._isTalking)
             {
@@ -1136,9 +1136,9 @@
             {
                 k.appendAction(AvatarAction.SLEEP);
             }
-            if (this._mouseHighlight > 0)
+            if (this._expressionType > 0)
             {
-                _local_4 = AvatarAction.getExpression(this._mouseHighlight);
+                _local_4 = AvatarAction.getExpression(this._expressionType);
                 if (_local_4 != "")
                 {
                     switch (_local_4)
@@ -1151,12 +1151,12 @@
                     }
                 }
             }
-            if (this._geometryOffset > 0)
+            if (this._effectType > 0)
             {
-                k.appendAction(AvatarAction.EFFECT, this._geometryOffset);
+                k.appendAction(AvatarAction.EFFECT, this._effectType);
             }
             k._Str_962();
-            this._gpuMode = k._Str_899();
+            this._isAnimating = k._Str_899();
             var _local_2:int = ADDITION_ID_EXPRESSION;
             for each (_local_3 in this._activeAvatarImage._Str_754())
             {
