@@ -6,7 +6,7 @@
     public class FriendFurniStartConfirmationMessageParser implements IMessageParser 
     {
         private var _stuffId:int;
-        private var _Str_4514:Boolean;
+        private var _isOwner:Boolean;
 
 
         public function get stuffId():int
@@ -16,20 +16,20 @@
 
         public function get _Str_3233():Boolean
         {
-            return this._Str_4514;
+            return this._isOwner;
         }
 
         public function flush():Boolean
         {
             this._stuffId = -1;
-            this._Str_4514 = false;
+            this._isOwner = false;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._stuffId = k.readInteger();
-            this._Str_4514 = k.readBoolean();
+            this._isOwner = k.readBoolean();
             return true;
         }
     }

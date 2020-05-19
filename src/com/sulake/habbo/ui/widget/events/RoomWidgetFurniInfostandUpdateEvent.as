@@ -21,7 +21,7 @@
         private var _Str_25890:int = -1;
         private var _Str_6693:int = -1;
         private var _Str_3194:String = "";
-        private var _Str_4514:Boolean = false;
+        private var _isOwner:Boolean = false;
         private var _stuffData:IStuffData = null;
         private var _groupId:int = 0;
         private var _ownerId:int = 0;
@@ -170,12 +170,12 @@
 
         public function set _Str_3233(k:Boolean):void
         {
-            this._Str_4514 = k;
+            this._isOwner = k;
         }
 
         public function get _Str_3233():Boolean
         {
-            return this._Str_4514;
+            return this._isOwner;
         }
 
         public function set stuffData(k:IStuffData):void

@@ -5,7 +5,7 @@
     public class _Str_5372 implements _Str_5716 
     {
         private var _Str_7355:Array;
-        private var _Str_4514:Boolean;
+        private var _isOwner:Boolean;
         private var _groupId:int;
         private var _groupName:String;
         private var _Str_21722:String;
@@ -33,7 +33,7 @@
                 this._Str_7355.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
                 _local_2++;
             }
-            this._Str_4514 = k.readBoolean();
+            this._isOwner = k.readBoolean();
             this._groupId = k.readInteger();
             this._groupName = k.readString();
             this._Str_21722 = k.readString();
@@ -68,7 +68,7 @@
 
         public function get _Str_3233():Boolean
         {
-            return this._Str_4514;
+            return this._isOwner;
         }
 
         public function get groupId():int

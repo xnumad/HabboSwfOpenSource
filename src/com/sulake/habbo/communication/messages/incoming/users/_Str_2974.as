@@ -25,7 +25,7 @@
         private var _totalMembers:int;
         private var _favourite:Boolean;
         private var _creationDate:String;
-        private var _Str_4514:Boolean;
+        private var _isOwner:Boolean;
         private var _Str_14681:Boolean;
         private var _ownerName:String;
         private var _Str_20023:Boolean;
@@ -47,7 +47,7 @@
             this._totalMembers = k.readInteger();
             this._favourite = k.readBoolean();
             this._creationDate = k.readString();
-            this._Str_4514 = k.readBoolean();
+            this._isOwner = k.readBoolean();
             this._Str_14681 = k.readBoolean();
             this._ownerName = k.readString();
             this._Str_20023 = k.readBoolean();
@@ -118,7 +118,7 @@
 
         public function get _Str_3233():Boolean
         {
-            return this._Str_4514;
+            return this._isOwner;
         }
 
         public function get isAdmin():Boolean
@@ -163,7 +163,7 @@
 
         public function get _Str_24358():Boolean
         {
-            return ((this._Str_16148) && (!(this._Str_4514))) && (this._status == _Str_2974._Str_8362);
+            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == _Str_2974._Str_8362);
         }
     }
 }
