@@ -3,6 +3,6 @@
     public class AvatarEffectSubtypeEnum 
     {
         public static const EFFECT:int = 0;
-        public static const _Str_16334:int = 1;
+        public static const COSTUME:int = 1;
     }
 }

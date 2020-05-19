@@ -129,7 +129,7 @@
                         _local_4 = false;
                         for each (_local_5 in _local_3)
                         {
-                            if (_local_5.subType == AvatarEffectSubtypeEnum._Str_16334)
+                            if (_local_5.subType == AvatarEffectSubtypeEnum.COSTUME)
                             {
                                 _local_4 = true;
                                 break;
