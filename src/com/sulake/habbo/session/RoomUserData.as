@@ -10,7 +10,7 @@
         private var _custom:String = "";
         private var _activityPoints:int;
         private var _id:int = 0;
-        private var _Str_11874:String = "";
+        private var _groupID:String = "";
         private var _Str_11729:int = 0;
         private var _groupName:String = "";
         private var _ownerId:int = 0;
@@ -109,12 +109,12 @@
 
         public function get _Str_4592():String
         {
-            return this._Str_11874;
+            return this._groupID;
         }
 
         public function set _Str_4592(k:String):void
         {
-            this._Str_11874 = k;
+            this._groupID = k;
         }
 
         public function get groupName():String
