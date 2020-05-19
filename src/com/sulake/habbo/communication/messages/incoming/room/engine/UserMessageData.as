@@ -3,7 +3,7 @@
     public class UserMessageData 
     {
         public static const USER_SEX_MALE:String = "M";
-        public static const F:String = "F";
+        public static const USER_SEX_FEMALE:String = "F";
 
         private var _roomIndex:int = 0;
         private var _x:Number = 0;

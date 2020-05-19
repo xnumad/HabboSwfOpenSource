@@ -200,7 +200,7 @@
         {
             if (k.substr(0, 1).toLowerCase() == "f")
             {
-                return UserMessageData.F;
+                return UserMessageData.USER_SEX_FEMALE;
             }
             return UserMessageData.USER_SEX_MALE;
         }
