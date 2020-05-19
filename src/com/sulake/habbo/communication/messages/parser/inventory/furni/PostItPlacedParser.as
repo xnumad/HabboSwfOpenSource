@@ -26,7 +26,7 @@
             return this._id;
         }
 
-        public function get _Str_23779():int
+        public function get itemsLeft():int
         {
             return this._itemsLeft;
         }

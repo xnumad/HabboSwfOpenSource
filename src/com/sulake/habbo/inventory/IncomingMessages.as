@@ -285,7 +285,7 @@
                 return;
             }
             var _local_4:int = _local_2.id;
-            var _local_5:int = _local_2._Str_23779;
+            var _local_5:int = _local_2.itemsLeft;
             _local_3._Str_22816(_local_4, _local_5);
         }
 
