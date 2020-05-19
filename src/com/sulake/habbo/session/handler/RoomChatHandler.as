@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.chat.Chat;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Shout;
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
@@ -31,7 +31,7 @@
             {
                 return;
             }
-            k.addMessageEvent(new Chat(this.onRoomChat));
+            k.addMessageEvent(new ChatMessageEvent(this.onRoomChat));
             k.addMessageEvent(new Whisper(this.onRoomWhisper));
             k.addMessageEvent(new Shout(this.onRoomShout));
             k.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
@@ -44,14 +44,14 @@
 
         private function onRoomChat(k:IMessageEvent):void
         {
-            var _local_2:Chat;
+            var _local_2:ChatMessageEvent;
             var _local_3:IRoomSession;
             var _local_4:String;
             var _local_5:int;
             var _local_6:ChatMessageParser;
             if (((listener) && (listener.events)))
             {
-                _local_2 = (k as Chat);
+                _local_2 = (k as ChatMessageEvent);
                 if (((_local_2) && (_local_2.getParser())))
                 {
                     _local_3 = listener.getSession(_xxxRoomId);

@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.UseObjectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.Chat;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Shout;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
@@ -212,7 +212,7 @@
                 k.addMessageEvent(new CarryObjectMessageEvent(this.onCarryObject));
                 k.addMessageEvent(new UseObjectMessageEvent(this.onUseObject));
                 k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
-                k.addMessageEvent(new Chat(this.onChat));
+                k.addMessageEvent(new ChatMessageEvent(this.onChat));
                 k.addMessageEvent(new Whisper(this.onChat));
                 k.addMessageEvent(new Shout(this.onChat));
                 k.addMessageEvent(new _Str_7436(this.onTypingStatus));
@@ -1143,9 +1143,9 @@
                 return;
             }
             var _local_3:IRoomSession = this._roomCreator.roomSessionManager.getSession(this._currentRoomId);
-            if ((k is Chat))
+            if ((k is ChatMessageEvent))
             {
-                _local_2 = (k as Chat).getParser();
+                _local_2 = (k as ChatMessageEvent).getParser();
             }
             else
             {
