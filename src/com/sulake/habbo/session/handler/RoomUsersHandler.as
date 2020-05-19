@@ -28,7 +28,7 @@
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3548;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import __AS3__.vec.Vector;
@@ -123,7 +123,7 @@
 
         private function _Str_10523(k:IMessageEvent):void
         {
-            var _local_7:_Str_3548;
+            var _local_7:UserMessageData;
             var _local_8:RoomUserData;
             var _local_2:UsersEvent = (k as UsersEvent);
             if (_local_2 == null)

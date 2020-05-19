@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.engine
 {
-    public class _Str_3548 
+    public class UserMessageData 
     {
         public static const M:String = "M";
         public static const F:String = "F";
@@ -36,7 +36,7 @@
         private var _Str_9831:Boolean;
         private var _Str_2479:Boolean = false;
 
-        public function _Str_3548(k:int)
+        public function UserMessageData(k:int)
         {
             this._Str_2775 = k;
         }

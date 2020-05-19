@@ -59,7 +59,7 @@
     import com.sulake.habbo.communication.messages.parser.help._Str_5731;
     import com.sulake.habbo.communication.messages.outgoing.friendlist.RemoveFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3548;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
@@ -711,7 +711,7 @@
 
         private function _Str_10523(k:IMessageEvent):void
         {
-            var _local_4:_Str_3548;
+            var _local_4:UserMessageData;
             var _local_2:UsersMessageParser = UsersEvent(k).getParser();
             var _local_3:int;
             while (_local_3 < _local_2.getUserCount())

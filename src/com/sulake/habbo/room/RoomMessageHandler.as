@@ -78,7 +78,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7124;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7749;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_8155;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3548;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import com.sulake.habbo.room.object.RoomObjectUserTypes;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
@@ -773,7 +773,7 @@
 
         private function _Str_10523(k:IMessageEvent):void
         {
-            var _local_5:_Str_3548;
+            var _local_5:UserMessageData;
             var _local_6:IVector3d;
             var _local_7:IVector3d;
             var _local_8:int;

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3548;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -58,13 +58,13 @@
             return this._users.length;
         }
 
-        public function _Str_5126(k:int):_Str_3548
+        public function _Str_5126(k:int):UserMessageData
         {
             if (((k < 0) || (k >= this.getUserCount())))
             {
                 return null;
             }
-            var _local_2:_Str_3548 = (this._users[k] as _Str_3548);
+            var _local_2:UserMessageData = (this._users[k] as UserMessageData);
             if (_local_2 != null)
             {
                 _local_2._Str_4710();
@@ -84,7 +84,7 @@
             var _local_11:String;
             var _local_12:int;
             var _local_13:int;
-            var _local_14:_Str_3548;
+            var _local_14:UserMessageData;
             var _local_15:String;
             var _local_16:int;
             var _local_17:Array;
@@ -104,7 +104,7 @@
                 _local_11 = k.readString();
                 _local_12 = k.readInteger();
                 _local_13 = k.readInteger();
-                _local_14 = new _Str_3548(_local_8);
+                _local_14 = new UserMessageData(_local_8);
                 _local_14.dir = _local_12;
                 _local_14.name = _local_5;
                 _local_14.custom = _local_6;
@@ -163,7 +163,7 @@
                             {
                                 _local_14.figure = "hr-100-.hd-180-1.ch-876-66.lg-270-94.sh-300-64";
                             }
-                            _local_14._Str_3344 = _Str_3548.M;
+                            _local_14._Str_3344 = UserMessageData.M;
                         }
                         else
                         {
@@ -200,9 +200,9 @@
         {
             if (k.substr(0, 1).toLowerCase() == "f")
             {
-                return _Str_3548.F;
+                return UserMessageData.F;
             }
-            return _Str_3548.M;
+            return UserMessageData.M;
         }
 
         private function convertSwimFigure(k:String, _arg_2:String, _arg_3:String):String
