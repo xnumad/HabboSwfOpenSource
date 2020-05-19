@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
 
-    public class _Str_8083 extends MessageEvent 
+    public class UserClassificationMessageEvent extends MessageEvent 
     {
-        public function _Str_8083(k:Function)
+        public function UserClassificationMessageEvent(k:Function)
         {
             super(k, UserClassificationMessageParser);
         }

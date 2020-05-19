@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
-    import com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083;
+    import com.sulake.habbo.communication.messages.incoming._Str_525.UserClassificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_5460;
@@ -82,7 +82,7 @@
             _local_2.addMessageEvent(new _Str_2752(this.onRoomEnter));
             _local_2.addMessageEvent(new _Str_3352(this.onRoomExit));
             _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
-            _local_2.addMessageEvent(new _Str_8083(this.onRoomUserClassification));
+            _local_2.addMessageEvent(new UserClassificationMessageEvent(this.onRoomUserClassification));
             _local_2.addMessageEvent(new _Str_9038(this.onSanctions));
             _local_2.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
         }
@@ -253,13 +253,13 @@
             }
         }
 
-        private function onRoomUserClassification(k:_Str_8083):void
+        private function onRoomUserClassification(k:UserClassificationMessageEvent):void
         {
             var _local_3:UserClassificationCtrl;
             var _local_8:int;
             var _local_9:UserClassificationCtrl;
             var _local_10:Array;
-            var _local_2:UserClassificationMessageParser = (k as _Str_8083).getParser();
+            var _local_2:UserClassificationMessageParser = (k as UserClassificationMessageEvent).getParser();
             var _local_4:Map = _local_2.classifiedUsernameMap;
             var _local_5:Map = _local_2.classifiedUserTypeMap;
             var _local_6:int = 1;

@@ -393,7 +393,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_525._Str_8083;
+	import com.sulake.habbo.communication.messages.incoming._Str_525.UserClassificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog.*;
 	import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_16789;
@@ -1458,7 +1458,7 @@
             INCOMING_PACKETS[948] = _Str_5081;
             INCOMING_PACKETS[949] = QuestCompletedMessageEvent;
             INCOMING_PACKETS[954] = _Str_3492;
-            INCOMING_PACKETS[966] = _Str_8083;
+            INCOMING_PACKETS[966] = UserClassificationMessageEvent;
             INCOMING_PACKETS[973] = _Str_8109;
             INCOMING_PACKETS[994] = FurniListEvent;
 			
