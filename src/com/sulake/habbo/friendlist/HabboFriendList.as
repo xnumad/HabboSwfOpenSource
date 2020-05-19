@@ -435,7 +435,7 @@
             {
                 this._Str_5982.push(_local_3);
             }
-            if ((_local_2._Str_9600 + 1) >= _local_2._Str_7430)
+            if ((_local_2.fragmentNo + 1) >= _local_2.totalFragments)
             {
                 this._Str_3489 = new Timer(5000, Math.ceil((this._Str_5982.length / 300)));
                 this._Str_3489.addEventListener(TimerEvent.TIMER, this._Str_20052);

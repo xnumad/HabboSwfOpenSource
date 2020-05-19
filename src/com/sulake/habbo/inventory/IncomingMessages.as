@@ -194,11 +194,11 @@
             }
             if (this._furniMsgFragments == null)
             {
-                this._furniMsgFragments = new Vector.<Map>(_local_2._Str_7430, true);
+                this._furniMsgFragments = new Vector.<Map>(_local_2.totalFragments, true);
             }
             var _local_4:Map = new Map();
-            _local_4.concatenate(_local_2._Str_22320);
-            var _local_5:Map = this._Str_19767(_local_4, _local_2._Str_7430, _local_2._Str_9600, this._furniMsgFragments);
+            _local_4.concatenate(_local_2.furniFragment);
+            var _local_5:Map = this._Str_19767(_local_4, _local_2.totalFragments, _local_2.fragmentNo, this._furniMsgFragments);
             if (!_local_5)
             {
                 return;
@@ -736,11 +736,11 @@
             var _local_3:_Str_8090 = k.getParser();
             if (this._petMsgFragments == null)
             {
-                this._petMsgFragments = new Vector.<Map>(_local_3._Str_7430, true);
+                this._petMsgFragments = new Vector.<Map>(_local_3.totalFragments, true);
             }
             var _local_4:Map = new Map();
             _local_4.concatenate(_local_3._Str_24388);
-            var _local_5:Map = this._Str_19767(_local_4, _local_3._Str_7430, _local_3._Str_9600, this._petMsgFragments);
+            var _local_5:Map = this._Str_19767(_local_4, _local_3.totalFragments, _local_3.fragmentNo, this._petMsgFragments);
             if (!_local_5)
             {
                 return;

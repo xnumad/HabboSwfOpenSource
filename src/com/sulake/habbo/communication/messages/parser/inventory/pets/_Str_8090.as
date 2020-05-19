@@ -6,8 +6,8 @@
 
     public class _Str_8090 implements IMessageParser 
     {
-        protected var _Str_6580:int;
-        protected var _Str_6945:int;
+        protected var _totalFragments:int;
+        protected var _fragmentNo:int;
         private var _Str_8680:Map;
 
 
@@ -24,8 +24,8 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var _local_4:Pet;
-            this._Str_6580 = k.readInteger();
-            this._Str_6945 = k.readInteger();
+            this._totalFragments = k.readInteger();
+            this._fragmentNo = k.readInteger();
             this._Str_8680 = new Map();
             var _local_2:int = k.readInteger();
             var _local_3:int;
@@ -43,14 +43,14 @@
             return this._Str_8680;
         }
 
-        public function get _Str_7430():int
+        public function get totalFragments():int
         {
-            return this._Str_6580;
+            return this._totalFragments;
         }
 
-        public function get _Str_9600():int
+        public function get fragmentNo():int
         {
-            return this._Str_6945;
+            return this._fragmentNo;
         }
     }
 }

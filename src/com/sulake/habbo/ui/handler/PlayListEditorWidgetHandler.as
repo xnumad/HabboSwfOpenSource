@@ -201,7 +201,7 @@
         private function _Str_11630(k:IMessageEvent):void
         {
             var _local_2:FurniListEvent = (k as FurniListEvent);
-            if (((_local_2) && (_local_2.getParser()._Str_9600 == 0)))
+            if (((_local_2) && (_local_2.getParser().fragmentNo == 0)))
             {
                 if (this._container != null)
                 {
