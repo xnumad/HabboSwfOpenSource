@@ -107,12 +107,12 @@
             this._id = k;
         }
 
-        public function get _Str_4592():String
+        public function get groupID():String
         {
             return this._groupID;
         }
 
-        public function set _Str_4592(k:String):void
+        public function set groupID(k:String):void
         {
             this._groupID = k;
         }

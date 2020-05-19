@@ -58,7 +58,7 @@
             while (_local_2 < this._amount)
             {
                 _local_3 = _Str_2814._Str_4933(k);
-                _local_3._Str_4592 = this._groupId;
+                _local_3.groupID = this._groupId;
                 _local_3.threadId = this._threadId;
                 this._messages.push(_local_3);
                 _local_2++;

@@ -149,7 +149,7 @@
             this._messageIndex = k;
         }
 
-        public function set _Str_4592(k:int):void
+        public function set groupID(k:int):void
         {
             this._groupId = k;
         }

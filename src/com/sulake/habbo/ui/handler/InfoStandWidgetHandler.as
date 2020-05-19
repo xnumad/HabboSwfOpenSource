@@ -905,8 +905,8 @@
                 _local_13 = this._container.sessionDataManager.getUserTags(_local_12);
                 this._Str_16287(_local_12, _local_13);
             }
-            _local_6.groupId = int(_arg_4._Str_4592);
-            _local_6._Str_5235 = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4._Str_4592));
+            _local_6.groupId = int(_arg_4.groupID);
+            _local_6._Str_5235 = this._container.sessionDataManager.getGroupBadgeId(int(_arg_4.groupID));
             _local_6.groupName = _arg_4.groupName;
             _local_6.badges = this._container.roomSession.userDataManager.getUserBadges(_arg_4.id);
             _local_6.figure = _arg_4.figure;

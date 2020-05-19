@@ -112,7 +112,7 @@
             {
                 return;
             }
-            _local_4._Str_4592 = ("" + _local_2.habboGroupId);
+            _local_4.groupID = ("" + _local_2.habboGroupId);
             _local_4.groupName = _local_2.habboGroupName;
             if (((listener) && (listener.events)))
             {
@@ -148,7 +148,7 @@
                 _local_8.figure = _local_7.figure;
                 _local_8.type = _local_7.userType;
                 _local_8.id = _local_7.id;
-                _local_8._Str_4592 = _local_7._Str_4592;
+                _local_8.groupID = _local_7.groupID;
                 _local_8.groupName = _local_7.groupName;
                 _local_8._Str_7043 = _local_7._Str_7043;
                 _local_8.sex = _local_7.sex;
