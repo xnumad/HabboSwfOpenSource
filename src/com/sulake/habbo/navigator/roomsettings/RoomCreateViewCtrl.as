@@ -362,7 +362,7 @@
                 case HabboClubLevelEnum._Str_2575:
                     return (!(_arg_2)) || (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575);
                 default:
-                    return this._navigator._Str_2627.hasSecurity(SecurityLevelEnum._Str_3751);
+                    return this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.EMPLOYEE);
             }
         }
 

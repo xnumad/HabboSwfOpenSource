@@ -283,7 +283,7 @@
                                         (this._container.localization as ICoreLocalizationManager).activateLocalizationDefinition(commandArgument);
                                         return null;
                                     case ":uc":
-                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
+                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                                         {
                                             if (commandArgument == "hotel")
                                             {
@@ -296,13 +296,13 @@
                                         }
                                         return null;
                                     case ":anew":
-                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                                         {
                                             this._container.roomSession._Str_16989("new");
                                         }
                                         return null;
                                     case ":avisit":
-                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                                         {
                                             if ("group" == commandArgument)
                                             {
@@ -315,7 +315,7 @@
                                         }
                                         return null;
                                     case ":aalert":
-                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                                        if (((this._container.sessionDataManager.isAmbassador) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                                         {
                                             userToAlert = this._container.roomSession.userDataManager.getUserDataByName(commandArgument);
                                             if (userToAlert)
@@ -331,7 +331,7 @@
                                         }
                                         return null;
                                     case ":roomid":
-                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
+                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                                         {
 											if (commandArgument != null && commandArgument != "")
 											{
@@ -390,7 +390,7 @@
 										this._container.moderation.setVisible(true);
 										return null;
 									case ":csmm":
-                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
+                                        if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                                         {
                                             this._container._Str_3479._SafeStr_7624();
                                             return null;

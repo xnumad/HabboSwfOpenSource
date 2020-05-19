@@ -225,7 +225,7 @@
             {
                 _local_3 = [];
                 _local_4 = this._widget._Str_13265.getProperty("disabled.custom.chat.styles").split(",");
-                _local_5 = this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751);
+                _local_5 = this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE);
                 for each (_local_6 in this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyleIds())
                 {
                     _local_7 = this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_6);

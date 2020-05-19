@@ -168,7 +168,7 @@
             this._bcSecondsLeft = (this._bcSecondsLeft - 10);
             if (((this._editorWindow) && (this._editorWindow.visible)))
             {
-                if (((this._bcSecondsLeft > 0) || (this._windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                if (((this._bcSecondsLeft > 0) || (this._windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                 {
                     this._editorWindow.findChildByName("save").enable();
                 }
@@ -224,7 +224,7 @@
             this._Str_20209("add_tile");
             IItemListWindow(this._editorWindow.findChildByName("heightmap_wrapper")).disableAutodrag = true;
             IItemListWindow(this._editorWindow.findChildByName("preview_wrapper")).disableAutodrag = true;
-            if (((!(this._windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))) && (this._bcSecondsLeft <= 0)))
+            if (((!(this._windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))) && (this._bcSecondsLeft <= 0)))
             {
                 this._editorWindow.findChildByName("save").disable();
             }

@@ -186,7 +186,7 @@
 
         public function get gameCenterEnabled():Boolean
         {
-            return (this._gameCenterEnabled) || ((this._gameCenterEnabledForStaff) && (this._sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751)));
+            return (this._gameCenterEnabled) || ((this._gameCenterEnabledForStaff) && (this._sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE)));
         }
 
         public function get _Str_12938():Boolean

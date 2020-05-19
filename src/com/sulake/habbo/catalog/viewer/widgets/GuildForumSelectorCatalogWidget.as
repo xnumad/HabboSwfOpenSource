@@ -18,7 +18,7 @@
             var _local_5:_Str_3266;
             var _local_2:Array = new Array();
             var _local_3:int = _Str_5363.catalog.sessionDataManager.userId;
-            var _local_4:Boolean = _Str_5363.catalog.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751);
+            var _local_4:Boolean = _Str_5363.catalog.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE);
             for each (_local_5 in k)
             {
                 if ((((!(_local_5._Str_21674)) && (!(_local_5.ownerId == _local_3))) && (!(_local_4))))

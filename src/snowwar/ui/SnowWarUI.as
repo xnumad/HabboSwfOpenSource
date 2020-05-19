@@ -62,7 +62,7 @@
         {
             this._snowWarEngine = k;
             this._snowWarEngine.windowManager.getDesktop(1).visible = false;
-            this._hasChecksumIndicator = this._snowWarEngine.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751);
+            this._hasChecksumIndicator = this._snowWarEngine.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE);
             if (true)
             {
                 this._indicatorForgroundColor = new RGBColor();

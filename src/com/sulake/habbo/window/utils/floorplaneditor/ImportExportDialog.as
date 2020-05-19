@@ -31,7 +31,7 @@
             {
                 this._window.visible = true;
                 this._window.findChildByName("data").caption = this._bcFloorPlanEditor._Str_4134._Str_21406();
-                if (((this._bcFloorPlanEditor._Str_22721 > 0) || (this._bcFloorPlanEditor.windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))))
+                if (((this._bcFloorPlanEditor._Str_22721 > 0) || (this._bcFloorPlanEditor.windowManager.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))))
                 {
                     this._window.findChildByName("save").enable();
                 }

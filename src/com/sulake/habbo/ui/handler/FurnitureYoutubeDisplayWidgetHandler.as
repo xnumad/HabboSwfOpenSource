@@ -126,7 +126,7 @@
                 case RoomEngineTriggerWidgetEvent.OPEN_WIDGET:
                     if (_local_3 != null)
                     {
-                        _local_4 = ((this._container.isOwnerOfFurniture(_local_3)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751)));
+                        _local_4 = ((this._container.isOwnerOfFurniture(_local_3)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE)));
                         this._widget.show(_local_3, _local_4);
                         this._container.connection.send(new _Str_10913(_local_3.getId()));
                     }

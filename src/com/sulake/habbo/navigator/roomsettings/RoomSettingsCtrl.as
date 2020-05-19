@@ -665,7 +665,7 @@
             var _local_2:ISelectorWindow = (this._window.findChildByName("doormode") as ISelectorWindow);
             if (this._Str_2272.data._Str_2678)
             {
-                this._window.findChildByName("doormode_override_info").visible = ((this._Str_2272.isDoorModeOverriddenInCurrentRoom) && (!(this._Str_2272._Str_2627.hasSecurity(SecurityLevelEnum._Str_3751))));
+                this._window.findChildByName("doormode_override_info").visible = ((this._Str_2272.isDoorModeOverriddenInCurrentRoom) && (!(this._Str_2272._Str_2627.hasSecurity(SecurityLevelEnum.EMPLOYEE))));
                 switch (k._Str_2738)
                 {
                     case RoomSettingsData.DOORMODE_CLOSED:

@@ -392,7 +392,7 @@
                     this._Str_2268.close();
                     break;
                 case "save_branding_configuration":
-                    if (this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3751))
+                    if (this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                     {
                         _local_3 = RoomWidgetFurniActionMessage.RWFAM_SAVE_STUFF_DATA;
                         _local_4 = this._Str_22904();
