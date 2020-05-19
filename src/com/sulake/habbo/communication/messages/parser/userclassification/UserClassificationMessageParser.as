@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.parser._Str_521
+﻿package com.sulake.habbo.communication.messages.parser.userclassification
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.utils.Map;

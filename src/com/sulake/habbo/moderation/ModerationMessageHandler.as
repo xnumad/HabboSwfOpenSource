@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7868;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7908;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7621;
-    import com.sulake.habbo.communication.messages.parser._Str_521.UserClassificationMessageParser;
+    import com.sulake.habbo.communication.messages.parser.userclassification.UserClassificationMessageParser;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.userclassification._Str_6854;
     import com.sulake.habbo.communication.messages.parser.callforhelp._Str_7060;
