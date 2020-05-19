@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451._SafeStr_4642;
+    import snowwar.friendfurni._SafeStr_4642;
 
     public class _SafeStr_3929 extends MessageEvent implements IMessageEvent 
     {

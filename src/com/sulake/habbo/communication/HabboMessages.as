@@ -303,9 +303,9 @@
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8296;
-	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8413;
-	import com.sulake.habbo.communication.messages.incoming._Str_451._Str_8746;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8296;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8413;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8746;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10323;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10953;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_12104;

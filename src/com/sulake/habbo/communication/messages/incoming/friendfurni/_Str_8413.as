@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_451
+﻿package com.sulake.habbo.communication.messages.incoming.friendfurni
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;

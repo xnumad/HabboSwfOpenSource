@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormUnusedAlertGenericParser;
+    import snowwar.friendfurni.SnowStormUnusedAlertGenericParser;
 
     public class SnowStormUnusedAlertGenericEvent extends MessageEvent implements IMessageEvent 
     {

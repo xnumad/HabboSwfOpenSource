@@ -2,8 +2,8 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormPlayAgainParser;
-    import snowwar._Str_451.SnowStormQuePositionParser;
+    import snowwar.friendfurni.SnowStormPlayAgainParser;
+    import snowwar.friendfurni.SnowStormQuePositionParser;
 
     public class SnowStormPlayAgainEvent extends MessageEvent implements IMessageEvent 
     {

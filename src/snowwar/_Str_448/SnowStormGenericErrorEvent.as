@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormGenericErrorParser;
+    import snowwar.friendfurni.SnowStormGenericErrorParser;
 
     public class SnowStormGenericErrorEvent extends MessageEvent implements IMessageEvent 
     {

@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormQuePositionParser;
+    import snowwar.friendfurni.SnowStormQuePositionParser;
 
     public class SnowStormQuePositionEvent extends MessageEvent implements IMessageEvent 
     {

@@ -1,18 +1,15 @@
-﻿package snowwar._Str_451
+﻿package snowwar.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class SnowStormUnusedAlertGenericParser implements IMessageParser 
+    public class SnowStormQuePositionParser implements IMessageParser 
     {
-        public static const _SafeStr_21851:int = 1;
-        public static const _SafeStr_21852:int = 2;
+        private var _position:int;
 
-        private var _reason:int;
-
-        public function get reason():int
+        public function get position():int
         {
-            return this._reason;
+            return this._position;
         }
 
         public function flush():Boolean
@@ -22,7 +19,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._reason = k.readInteger();
+            this._position = k.readInteger();
             return true;
         }
     }

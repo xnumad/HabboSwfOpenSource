@@ -1,4 +1,4 @@
-﻿package snowwar._Str_451
+﻿package snowwar.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import snowwar._Str_496._SafeStr_4018;

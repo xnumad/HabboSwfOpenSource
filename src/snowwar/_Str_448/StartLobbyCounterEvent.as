@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.StartLobbyCounterParser;
+    import snowwar.friendfurni.StartLobbyCounterParser;
 
     public class StartLobbyCounterEvent extends MessageEvent implements IMessageEvent 
     {

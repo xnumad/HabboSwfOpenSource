@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormLongDataParser;
+    import snowwar.friendfurni.SnowStormLongDataParser;
 
     public class SnowStormLongDataEvent extends MessageEvent implements IMessageEvent 
     {

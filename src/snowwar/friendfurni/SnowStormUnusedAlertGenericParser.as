@@ -1,18 +1,12 @@
-﻿package snowwar._Str_451
+﻿package snowwar.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class SnowStormGenericErrorParser implements IMessageParser 
+    public class SnowStormUnusedAlertGenericParser implements IMessageParser 
     {
-        public static const _SafeStr_21887:int = 1;
-        public static const _SafeStr_13125:int = 2;
-        public static const _SafeStr_21888:int = 3;
-        public static const _SafeStr_21889:int = 4;
-        public static const _SafeStr_21890:int = 5;
-        public static const _SafeStr_18973:int = 6;
-        public static const _SafeStr_18974:int = 7;
-        public static const _SafeStr_18975:int = 8;
+        public static const _SafeStr_21851:int = 1;
+        public static const _SafeStr_21852:int = 2;
 
         private var _reason:int;
 

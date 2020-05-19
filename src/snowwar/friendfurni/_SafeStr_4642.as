@@ -1,9 +1,9 @@
-﻿package snowwar._Str_451
+﻿package snowwar.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class SnowStormGameEndedParser implements IMessageParser 
+    public class _SafeStr_4642 implements IMessageParser 
     {
         public function flush():Boolean
         {

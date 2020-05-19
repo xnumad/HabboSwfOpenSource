@@ -1,12 +1,11 @@
-﻿package snowwar._Str_451
+﻿package snowwar.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import snowwar._Str_496._SafeStr_4018;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class SnowStormLongDataParser implements IMessageParser 
+    public class StartLobbyCounterParser implements IMessageParser 
     {
-        private var _SafeStr_21881:_SafeStr_4018;
+        private var _SafeStr_21848:int;
 
         public function flush():Boolean
         {
@@ -15,13 +14,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._SafeStr_21881 = new _SafeStr_4018(k);
+            this._SafeStr_21848 = k.readInteger();
             return true;
         }
 
-        public function get _SafeStr_18970():_SafeStr_4018
+        public function get _SafeStr_18972():int
         {
-            return this._SafeStr_21881;
+            return this._SafeStr_21848;
         }
     }
 }

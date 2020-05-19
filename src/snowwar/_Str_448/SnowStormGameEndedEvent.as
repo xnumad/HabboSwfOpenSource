@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import snowwar._Str_451.SnowStormGameEndedParser;
+    import snowwar.friendfurni.SnowStormGameEndedParser;
 
     public class SnowStormGameEndedEvent extends MessageEvent implements IMessageEvent 
     {
