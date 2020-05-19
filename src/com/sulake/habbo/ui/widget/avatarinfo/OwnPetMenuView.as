@@ -115,8 +115,8 @@
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
                 }
-                _Str_2374 = (_window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this.buttonEventProc;
+                _buttons = (_window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this.buttonEventProc;
                 _window.findChildByName("name").caption = _Str_2360;
                 _window.visible = false;
                 activeView = _window;
@@ -131,16 +131,16 @@
             var _local_6:int;
             var _local_7:IRoomObject;
             var _local_8:int;
-            if ((((!(_window)) || (!(this._data))) || (!(_Str_2374))))
+            if ((((!(_window)) || (!(this._data))) || (!(_buttons))))
             {
                 return;
             }
-            _Str_2374.autoArrangeItems = false;
-            var k:int = _Str_2374.numListItems;
+            _buttons.autoArrangeItems = false;
+            var k:int = _buttons.numListItems;
             var _local_2:int;
             while (_local_2 < k)
             {
-                _Str_2374.getListItemAt(_local_2).visible = false;
+                _buttons.getListItemAt(_local_2).visible = false;
                 _local_2++;
             }
             this._Str_11220 = null;
@@ -253,8 +253,8 @@
                 }
             }
             this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data._Str_2985.toString());
-            _Str_2374.autoArrangeItems = true;
-            _Str_2374.visible = true;
+            _buttons.autoArrangeItems = true;
+            _buttons.visible = true;
         }
 
         private function _Str_20669(k:int, _arg_2:int):IFurnitureData
@@ -347,11 +347,11 @@
 
         private function _Str_18445(k:String):ICheckBoxWindow
         {
-            if (!_Str_2374)
+            if (!_buttons)
             {
                 return null;
             }
-            var _local_2:IWindowContainer = (_Str_2374.getListItemByName(k) as IWindowContainer);
+            var _local_2:IWindowContainer = (_buttons.getListItemByName(k) as IWindowContainer);
             if (!_local_2)
             {
                 return null;

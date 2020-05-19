@@ -20,7 +20,7 @@
         protected static const ARROW_LEFT:String = "arrow_left";
         protected static const ARROW_RIGHT:String = "arrow_right";
 
-        protected var _Str_2374:IItemListWindow;
+        protected var _buttons:IItemListWindow;
 
         public function ButtonMenuView(k:IContextMenuParentWidget)
         {
@@ -29,7 +29,7 @@
 
         override public function dispose():void
         {
-            this._Str_2374 = null;
+            this._buttons = null;
             super.dispose();
         }
 
@@ -38,11 +38,11 @@
             var _local_6:int;
             var _local_7:IWindowContainer;
             var _local_8:IBitmapWrapperWindow;
-            if (!this._Str_2374)
+            if (!this._buttons)
             {
                 return;
             }
-            var _local_3:IItemGridWindow = (this._Str_2374.getListItemByName(k) as IItemGridWindow);
+            var _local_3:IItemGridWindow = (this._buttons.getListItemByName(k) as IItemGridWindow);
             if (!_local_3)
             {
                 return;
@@ -68,11 +68,11 @@
 
         protected function _Str_2304(k:String, _arg_2:Boolean=true, _arg_3:Boolean=true, _arg_4:Boolean=false):void
         {
-            if (!this._Str_2374)
+            if (!this._buttons)
             {
                 return;
             }
-            var _local_5:IWindowContainer = (this._Str_2374.getListItemByName(k) as IWindowContainer);
+            var _local_5:IWindowContainer = (this._buttons.getListItemByName(k) as IWindowContainer);
             if (!_local_5)
             {
                 return;

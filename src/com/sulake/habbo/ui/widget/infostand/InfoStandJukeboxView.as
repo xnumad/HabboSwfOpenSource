@@ -43,7 +43,7 @@
                 throw (new Error("Failed to construct window from XML!"));
             }
             _Str_2341 = (_window.getListItemByName("info_border") as IBorderWindow);
-            _Str_2374 = (_window.getListItemByName("button_list") as IItemListWindow);
+            _buttons = (_window.getListItemByName("button_list") as IItemListWindow);
             if (_Str_2341 != null)
             {
                 _Str_2373 = (_Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
@@ -55,12 +55,12 @@
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, onCloseHandler);
             }
-            if (_Str_2374 != null)
+            if (_buttons != null)
             {
                 _local_10 = 0;
-                while (_local_10 < _Str_2374.numListItems)
+                while (_local_10 < _buttons.numListItems)
                 {
-                    _local_4 = _Str_2374.getListItemAt(_local_10);
+                    _local_4 = _buttons.getListItemAt(_local_10);
                     _local_4.addEventListener(WindowMouseEvent.CLICK, onButtonClicked);
                     _local_10++;
                 }

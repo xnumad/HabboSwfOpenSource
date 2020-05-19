@@ -34,8 +34,8 @@
                 }
                 _window.addEventListener(WindowMouseEvent.OVER, _Str_2743);
                 _window.addEventListener(WindowMouseEvent.OUT, _Str_2743);
-                _Str_2374 = (_window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this._Str_5162;
+                _buttons = (_window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this._Str_5162;
                 this._Str_2771();
             }
             this.activeView = _window;

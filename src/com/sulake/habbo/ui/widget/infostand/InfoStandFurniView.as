@@ -51,7 +51,7 @@
         protected var _Str_4258:IWindowContainer;
         protected var _Str_21812:IWindow;
         protected var _Str_2341:IBorderWindow;
-        protected var _Str_2374:IItemListWindow;
+        protected var _buttons:IItemListWindow;
         protected var _Str_2276:IHabboCatalog;
         protected var _Str_2421:IHabboTracking;
         protected var _Str_3793:IWindow;
@@ -97,7 +97,7 @@
                 throw (new Error("Failed to construct window from XML!"));
             }
             this._Str_2341 = (this._window.getListItemByName("info_border") as IBorderWindow);
-            this._Str_2374 = (this._window.getListItemByName("button_list") as IItemListWindow);
+            this._buttons = (this._window.getListItemByName("button_list") as IItemListWindow);
             this._Str_4258 = (this._window.getListItemByName("custom_variables") as IWindowContainer);
             if (!this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum._Str_3569))
             {
@@ -120,12 +120,12 @@
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             }
-            if (this._Str_2374 != null)
+            if (this._buttons != null)
             {
                 _local_7 = 0;
-                while (_local_7 < this._Str_2374.numListItems)
+                while (_local_7 < this._buttons.numListItems)
                 {
-                    _local_4 = this._Str_2374.getListItemAt(_local_7);
+                    _local_4 = this._buttons.getListItemAt(_local_7);
                     _local_4.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
                     _local_7++;
                 }
@@ -451,24 +451,24 @@
 
         protected function updateWindow():void
         {
-            if ((((this._Str_2373 == null) || (this._Str_2341 == null)) || (this._Str_2374 == null)))
+            if ((((this._Str_2373 == null) || (this._Str_2341 == null)) || (this._buttons == null)))
             {
                 return;
             }
             this._Str_2373.arrangeListItems();
-            this._Str_2374.width = this._Str_2374.visibleRegion.width;
+            this._buttons.width = this._buttons.visibleRegion.width;
             this._Str_2373.height = this._Str_2373.visibleRegion.height;
             this._Str_2341.height = (this._Str_2373.height + 20);
-            this._window.width = Math.max(this._Str_2341.width, this._Str_2374.width);
+            this._window.width = Math.max(this._Str_2341.width, this._buttons.width);
             this._window.height = this._window.visibleRegion.height;
-            if (this._Str_2341.width < this._Str_2374.width)
+            if (this._Str_2341.width < this._buttons.width)
             {
                 this._Str_2341.x = (this._window.width - this._Str_2341.width);
-                this._Str_2374.x = 0;
+                this._buttons.x = 0;
             }
             else
             {
-                this._Str_2374.x = (this._window.width - this._Str_2374.width);
+                this._buttons.x = (this._window.width - this._buttons.width);
                 this._Str_2341.x = 0;
             }
             if (this._Str_4258 != null)
@@ -516,7 +516,7 @@
             this._Str_22377(k._Str_3233, (k.expiration >= 0), (k.purchaseOfferId >= 0), (k.rentOfferId >= 0), k.purchaseCouldBeUsedForBuyout, k.rentCouldBeUsedForBuyout);
             this._Str_22365((k.stuffData.uniqueSerialNumber > 0), k.stuffData);
             this._Str_16559((k.stuffData.rarityLevel >= 0), k.stuffData);
-            this._Str_2374.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this._Str_9953))) || (_local_5));
+            this._buttons.visible = ((((_local_2) || (_local_3)) || (!(this._Str_5729 == this._Str_9953))) || (_local_5));
             this._Str_25743();
             this.updateWindow();
         }
@@ -577,11 +577,11 @@
 
         private function _Str_25214(k:int):void
         {
-            if (this._Str_2374 == null)
+            if (this._buttons == null)
             {
                 return;
             }
-            var _local_2:IWindow = this._Str_2374.getListItemByName("pickup");
+            var _local_2:IWindow = this._buttons.getListItemByName("pickup");
             if (_local_2 != null)
             {
                 if (k == this._Str_20473)
@@ -772,15 +772,15 @@
 
         protected function _Str_2304(k:String, _arg_2:Boolean):void
         {
-            if (this._Str_2374 == null)
+            if (this._buttons == null)
             {
                 return;
             }
-            var _local_3:IWindow = this._Str_2374.getListItemByName(k);
+            var _local_3:IWindow = this._buttons.getListItemByName(k);
             if (_local_3 != null)
             {
                 _local_3.visible = _arg_2;
-                this._Str_2374.arrangeListItems();
+                this._buttons.arrangeListItems();
             }
         }
 

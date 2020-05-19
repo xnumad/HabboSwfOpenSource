@@ -66,8 +66,8 @@
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
                 }
-                _Str_2374 = (window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this.buttonEventProc;
+                _buttons = (window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this.buttonEventProc;
                 _local_1 = (window.findChildByName("profile_link") as IRegionWindow);
                 if (_local_1)
                 {
@@ -85,15 +85,15 @@
 
         protected function _Str_2771():void
         {
-            if (((!(_window)) || (!(_Str_2374))))
+            if (((!(_window)) || (!(_buttons))))
             {
                 return;
             }
-            _Str_2374.autoArrangeItems = false;
+            _buttons.autoArrangeItems = false;
             _Str_2304("join", (!(this._Str_7536)), true);
             _Str_2304("open_forum", this._Str_9506, true);
-            _Str_2374.autoArrangeItems = true;
-            _Str_2374.visible = true;
+            _buttons.autoArrangeItems = true;
+            _buttons.visible = true;
         }
 
         override protected function buttonEventProc(k:WindowEvent, _arg_2:IWindow):void

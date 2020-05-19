@@ -139,8 +139,8 @@
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
                 }
-                _Str_2374 = (_window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this.buttonEventProc;
+                _buttons = (_window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this.buttonEventProc;
                 _window.findChildByName("name").caption = _Str_2360;
                 _window.visible = false;
                 activeView = window;
@@ -150,16 +150,16 @@
 
         public function _Str_2771():void
         {
-            if (((!(_window)) || (!(_Str_2374))))
+            if (((!(_window)) || (!(_buttons))))
             {
                 return;
             }
-            _Str_2374.autoArrangeItems = false;
-            var k:int = _Str_2374.numListItems;
+            _buttons.autoArrangeItems = false;
+            var k:int = _buttons.numListItems;
             var _local_2:int;
             while (_local_2 < k)
             {
-                _Str_2374.getListItemAt(_local_2).visible = false;
+                _buttons.getListItemAt(_local_2).visible = false;
                 _local_2++;
             }
             switch (this._mode)
@@ -196,8 +196,8 @@
                     _Str_2304("fertilize_monsterplant");
                     break;
             }
-            _Str_2374.autoArrangeItems = true;
-            _Str_2374.visible = true;
+            _buttons.autoArrangeItems = true;
+            _buttons.visible = true;
         }
 
         override protected function buttonEventProc(k:WindowEvent, _arg_2:IWindow):void

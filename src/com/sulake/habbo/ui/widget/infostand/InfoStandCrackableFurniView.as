@@ -22,7 +22,7 @@
             super.update(k);
             var _local_2:CrackableStuffData = (k.stuffData as CrackableStuffData);
             _Str_2304("use", true);
-            _Str_2374.visible = true;
+            _buttons.visible = true;
             this._Str_25073(_local_2.hits, _local_2.target);
         }
 
@@ -50,7 +50,7 @@
                 throw (new Error("Failed to construct window from XML!"));
             }
             _Str_2341 = (_window.getListItemByName("info_border") as IBorderWindow);
-            _Str_2374 = (_window.getListItemByName("button_list") as IItemListWindow);
+            _buttons = (_window.getListItemByName("button_list") as IItemListWindow);
             if (_Str_2341 != null)
             {
                 _Str_2373 = (_Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
@@ -62,12 +62,12 @@
             {
                 _local_3.addEventListener(WindowMouseEvent.CLICK, onCloseHandler);
             }
-            if (_Str_2374 != null)
+            if (_buttons != null)
             {
                 _local_6 = 0;
-                while (_local_6 < _Str_2374.numListItems)
+                while (_local_6 < _buttons.numListItems)
                 {
-                    _local_4 = _Str_2374.getListItemAt(_local_6);
+                    _local_4 = _buttons.getListItemAt(_local_6);
                     _local_4.addEventListener(WindowMouseEvent.CLICK, onButtonClicked);
                     _local_6++;
                 }

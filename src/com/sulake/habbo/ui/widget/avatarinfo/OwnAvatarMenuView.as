@@ -112,8 +112,8 @@
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     _window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
                 }
-                _Str_2374 = (_window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this.buttonEventProc;
+                _buttons = (_window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this.buttonEventProc;
                 _local_1 = (_window.findChildByName("signs_grid") as IItemGridWindow);
                 _local_2 = _local_1.iterator;
                 _local_3 = _local_2.length;
@@ -143,16 +143,16 @@
         {
             var _local_4:Boolean;
             var _local_5:Boolean;
-            if ((((!(_window)) || (!(this._data))) || (!(_Str_2374))))
+            if ((((!(_window)) || (!(this._data))) || (!(_buttons))))
             {
                 return;
             }
-            _Str_2374.autoArrangeItems = false;
-            var k:int = _Str_2374.numListItems;
+            _buttons.autoArrangeItems = false;
+            var k:int = _buttons.numListItems;
             var _local_2:int;
             while (_local_2 < k)
             {
-                _Str_2374.getListItemAt(_local_2).visible = false;
+                _buttons.getListItemAt(_local_2).visible = false;
                 _local_2++;
             }
             var _local_3:Boolean = this.widget._Str_25831;
@@ -208,8 +208,8 @@
                     _Str_2304("back");
                     break;
             }
-            _Str_2374.autoArrangeItems = true;
-            _Str_2374.visible = true;
+            _buttons.autoArrangeItems = true;
+            _buttons.visible = true;
         }
 
         private function _Str_23693(k:WindowEvent, _arg_2:IWindow):void

@@ -56,8 +56,8 @@
             {
                 return;
             }
-            var _local_2:IWindowContainer = (_Str_2374.getListItemByName("link_template") as IWindowContainer);
-            var _local_3:IWindowContainer = (_Str_2374.getListItemByName("nux_proceed_1") as IWindowContainer);
+            var _local_2:IWindowContainer = (_buttons.getListItemByName("link_template") as IWindowContainer);
+            var _local_3:IWindowContainer = (_buttons.getListItemByName("nux_proceed_1") as IWindowContainer);
             k.procedure = this.buttonEventProc;
             k.autoArrangeItems = false;
             var _local_4:int = k.numListItems;
@@ -170,8 +170,8 @@
                     window.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, _Str_3052);
                     window.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, _Str_3052);
                 }
-                _Str_2374 = (window.findChildByName("buttons") as IItemListWindow);
-                _Str_2374.procedure = this.buttonEventProc;
+                _buttons = (window.findChildByName("buttons") as IItemListWindow);
+                _buttons.procedure = this.buttonEventProc;
                 window.findChildByName("name").caption = _Str_2360;
                 window.visible = false;
                 activeView = window;
