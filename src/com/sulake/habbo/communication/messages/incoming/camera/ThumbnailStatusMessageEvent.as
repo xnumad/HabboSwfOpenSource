@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.camera.ThumbnailStatusMessageParser;
 
-    public class _Str_8053 extends MessageEvent 
+    public class ThumbnailStatusMessageEvent extends MessageEvent 
     {
-        public function _Str_8053(k:Function)
+        public function ThumbnailStatusMessageEvent(k:Function)
         {
             super(k, ThumbnailStatusMessageParser);
         }

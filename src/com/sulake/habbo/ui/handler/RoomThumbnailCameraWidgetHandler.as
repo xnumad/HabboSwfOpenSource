@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.RoomDesktop;
     import com.sulake.habbo.ui.widget.camera.RoomThumbnailCameraWidget;
-    import com.sulake.habbo.communication.messages.incoming.camera._Str_8053;
+    import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;
@@ -18,7 +18,7 @@
         private var _container:IRoomWidgetHandlerContainer = null;
         private var _roomDesktop:RoomDesktop;
         private var _widget:RoomThumbnailCameraWidget;
-        private var _thumbnailStatusMessageEvent:_Str_8053;
+        private var _thumbnailStatusMessageEvent:ThumbnailStatusMessageEvent;
 
         public function RoomThumbnailCameraWidgetHandler(k:RoomDesktop)
         {
@@ -53,7 +53,7 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            this._thumbnailStatusMessageEvent = new _Str_8053(this._Str_23638);
+            this._thumbnailStatusMessageEvent = new ThumbnailStatusMessageEvent(this._Str_23638);
             this._container.connection.addMessageEvent(this._thumbnailStatusMessageEvent);
         }
 
@@ -98,7 +98,7 @@
             this._container.connection.send(k);
         }
 
-        private function _Str_23638(k:_Str_8053):void
+        private function _Str_23638(k:ThumbnailStatusMessageEvent):void
         {
             this._widget.destroy();
             if (k.getParser().isOk())
