@@ -31,7 +31,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingNotOpenParser;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6908;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5720;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingCloseEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingCloseParser;
@@ -145,7 +145,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_9550(this._Str_23427));
             this._com.addHabboConnectionMessageEvent(new _Str_3492(this._Str_23143));
             this._com.addHabboConnectionMessageEvent(new TradingNotOpenEvent(this._Str_23644, TradingNotOpenParser));
-            this._com.addHabboConnectionMessageEvent(new _Str_6908(this._Str_25700));
+            this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
             this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
             this._com.addHabboConnectionMessageEvent(new TradingCloseEvent(this._Str_25275, TradingCloseParser));
             this._com.addHabboConnectionMessageEvent(new _Str_5514(this._Str_16520));
@@ -248,7 +248,7 @@
 
         public function _Str_25700(k:IMessageEvent):void
         {
-            var _local_2:FurniListRemoveParser = (k as _Str_6908).getParser();
+            var _local_2:FurniListRemoveParser = (k as FurniListRemoveEvent).getParser();
             if (_local_2 == null)
             {
                 return;

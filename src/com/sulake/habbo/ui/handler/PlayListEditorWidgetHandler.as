@@ -9,7 +9,7 @@
     import com.sulake.habbo.sound.events.PlayListStatusEvent;
     import com.sulake.habbo.sound.events.NowPlayingEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6908;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFurniToWidgetMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPlayListModificationMessage;
@@ -64,7 +64,7 @@
         public function set connection(k:IConnection):void
         {
             this._furniListUpdateListener = new _Str_5581(this._Str_11630);
-            this._furniListRemoveListener = new _Str_6908(this._Str_11630);
+            this._furniListRemoveListener = new FurniListRemoveEvent(this._Str_11630);
             this._furniListInsertListener = new FurniListAddOrUpdateEvent(this._Str_11630);
             this._connection = k;
             this._connection.addMessageEvent(this._furniListUpdateListener);

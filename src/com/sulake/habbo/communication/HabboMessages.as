@@ -855,7 +855,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListAddOrUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_5581;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6821;
-	import com.sulake.habbo.communication.messages.incoming.inventory.furni._Str_6908;
+	import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.*;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RemoveRightsMessageComposer;
@@ -1078,7 +1078,7 @@
             INCOMING_PACKETS[1562] = _Str_5728;
             INCOMING_PACKETS[1576] = _Str_9150;
             INCOMING_PACKETS[1587] = _Str_4851;
-            INCOMING_PACKETS[159] = _Str_6908;
+            INCOMING_PACKETS[159] = FurniListRemoveEvent;
             INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
             INCOMING_PACKETS[160] = _Str_8002;
             INCOMING_PACKETS[1600] = GenericErrorEvent;
