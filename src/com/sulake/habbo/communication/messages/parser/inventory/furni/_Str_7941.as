@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.utils.Map;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni.InventoryItemParser;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_7941 implements IMessageParser 
@@ -29,7 +29,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:InventoryItemParser;
+            var _local_4:FurniData;
             this._Str_6580 = k.readInteger();
             this._Str_6945 = k.readInteger();
             this._Str_8344 = new Map();
@@ -37,7 +37,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new InventoryItemParser(k);
+                _local_4 = new FurniData(k);
                 this._Str_8344.add(_local_4.itemId, _local_4);
                 _local_3++;
             }

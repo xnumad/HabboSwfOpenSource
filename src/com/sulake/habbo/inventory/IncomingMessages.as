@@ -62,7 +62,7 @@
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
     import com.sulake.habbo.inventory.items.FurnitureItem;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni.InventoryItemParser;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniData;
     import com.sulake.habbo.inventory.items.GroupItem;
     import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListAddOrUpdateParser;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -211,7 +211,7 @@
         public function _Str_23121(k:IMessageEvent):void
         {
             var _local_5:FurnitureItem;
-            var _local_6:InventoryItemParser;
+            var _local_6:FurniData;
             var _local_7:GroupItem;
             var _local_2:FurniListAddOrUpdateParser = (k as FurniListAddOrUpdateEvent).getParser();
             if (_local_2 == null)
@@ -223,7 +223,7 @@
             {
                 return;
             }
-            var _local_4:Vector.<InventoryItemParser> = _local_2._Str_9248();
+            var _local_4:Vector.<FurniData> = _local_2._Str_9248();
             for each (_local_6 in _local_4)
             {
                 _local_7 = _local_3._Str_25496(_local_6.itemId);

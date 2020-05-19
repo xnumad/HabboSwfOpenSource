@@ -5,7 +5,7 @@
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class InventoryItemParser implements _Str_7108 
+    public class FurniData implements _Str_7108 
     {
         private static const WALL_ITEM:String = "I";
         private static const FLOOR_ITEM:String = "S";
@@ -30,7 +30,7 @@
         private var _slotId:String = "";
         private var _Str_2808:int = -1;
 
-        public function InventoryItemParser(k:IMessageDataWrapper)
+        public function FurniData(k:IMessageDataWrapper)
         {
             this._itemId = k.readInteger();
             this._furniType = k.readString();

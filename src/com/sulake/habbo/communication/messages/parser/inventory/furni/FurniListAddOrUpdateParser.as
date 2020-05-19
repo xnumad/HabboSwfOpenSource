@@ -2,19 +2,19 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni.InventoryItemParser;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import __AS3__.vec.*;
 
     public class FurniListAddOrUpdateParser implements IMessageParser 
     {
-        protected var _items:Vector.<InventoryItemParser>;
+        protected var _items:Vector.<FurniData>;
 
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._items = new Vector.<InventoryItemParser>(0);
-			this._items.push(new InventoryItemParser(k));
+            this._items = new Vector.<FurniData>(0);
+			this._items.push(new FurniData(k));
             return true;
         }
 
@@ -24,7 +24,7 @@
             return true;
         }
 
-        public function _Str_9248():Vector.<InventoryItemParser>
+        public function _Str_9248():Vector.<FurniData>
         {
             return this._items;
         }

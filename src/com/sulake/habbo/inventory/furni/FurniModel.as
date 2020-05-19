@@ -22,7 +22,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
-    import com.sulake.habbo.communication.messages.incoming.inventory.furni.InventoryItemParser;
+    import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniData;
     import com.sulake.habbo.inventory.events.HabboInventoryItemAddedEvent;
     import com.sulake.core.utils.Map;
     import flash.display.BitmapData;
@@ -215,7 +215,7 @@
         public function _Str_24428(k:Map):void
         {
             var _local_2:FurnitureItem;
-            var _local_3:InventoryItemParser;
+            var _local_3:FurniData;
             var _local_4:int;
             var _local_5:int;
             var _local_10:Boolean;
@@ -252,7 +252,7 @@
             }
             for each (_local_5 in _local_8)
             {
-                _local_3 = InventoryItemParser(k.getValue(_local_5));
+                _local_3 = FurniData(k.getValue(_local_5));
                 _local_2 = new FurnitureItem(_local_3);
                 this._Str_20455(_local_2, true);
             }
