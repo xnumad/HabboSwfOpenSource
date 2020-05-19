@@ -6,8 +6,8 @@
     public class AvatarEffectMessageParser implements IMessageParser 
     {
         private var _userId:int = 0;
-        private var _Str_3770:int = 0;
-        private var _Str_11901:int = 0;
+        private var _effectId:int = 0;
+        private var _delayMilliSeconds:int = 0;
 
 
         public function get userId():int
@@ -15,14 +15,14 @@
             return this._userId;
         }
 
-        public function get _Str_6815():int
+        public function get effectId():int
         {
-            return this._Str_3770;
+            return this._effectId;
         }
 
         public function get delayMilliSeconds():int
         {
-            return this._Str_11901;
+            return this._delayMilliSeconds;
         }
 
         public function flush():Boolean
@@ -38,8 +38,8 @@
                 return false;
             }
             this._userId = k.readInteger();
-            this._Str_3770 = k.readInteger();
-            this._Str_11901 = k.readInteger();
+            this._effectId = k.readInteger();
+            this._delayMilliSeconds = k.readInteger();
             return true;
         }
     }

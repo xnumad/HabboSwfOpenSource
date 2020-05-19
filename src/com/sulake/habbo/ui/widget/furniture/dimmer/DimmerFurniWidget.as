@@ -131,7 +131,7 @@
                 return;
             }
             this._dimmerState = k.state;
-            this._effectId = k._Str_6815;
+            this._effectId = k.effectId;
             this._color = k.color;
             this._brightness = k._Str_5123;
             if (this._view != null)

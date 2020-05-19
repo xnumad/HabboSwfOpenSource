@@ -6,7 +6,7 @@
 
         private var _state:int;
         private var _Str_6356:int;
-        private var _Str_3770:int;
+        private var _effectId:int;
         private var _color:uint;
         private var _Str_3486:int;
 
@@ -15,7 +15,7 @@
             super(RWDSUE_DIMMER_STATE, _arg_6, _arg_7);
             this._state = k;
             this._Str_6356 = _arg_2;
-            this._Str_3770 = _arg_3;
+            this._effectId = _arg_3;
             this._color = _arg_4;
             this._Str_3486 = _arg_5;
         }
@@ -30,9 +30,9 @@
             return this._Str_6356;
         }
 
-        public function get _Str_6815():int
+        public function get effectId():int
         {
-            return this._Str_3770;
+            return this._effectId;
         }
 
         public function get color():uint

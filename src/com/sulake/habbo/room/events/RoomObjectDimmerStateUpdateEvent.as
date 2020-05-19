@@ -33,7 +33,7 @@
             return this._presetId;
         }
 
-        public function get _Str_6815():int
+        public function get effectId():int
         {
             return this._effectId;
         }

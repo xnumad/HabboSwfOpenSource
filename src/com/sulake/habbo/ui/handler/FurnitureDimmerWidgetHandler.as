@@ -138,7 +138,7 @@
                     return;
                 case RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR:
                     _local_4 = (k as RoomEngineDimmerStateEvent);
-                    _local_5 = new _Str_5572(_local_4.state, _local_4._Str_14686, _local_4._Str_6815, _local_4.color, _local_4._Str_5123);
+                    _local_5 = new _Str_5572(_local_4.state, _local_4._Str_14686, _local_4.effectId, _local_4.color, _local_4._Str_5123);
                     this._container.events.dispatchEvent(_local_5);
                     return;
                 case RoomEngineTriggerWidgetEvent.RETWE_REMOVE_DIMMER:

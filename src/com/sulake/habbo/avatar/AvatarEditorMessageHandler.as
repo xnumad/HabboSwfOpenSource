@@ -187,7 +187,7 @@
             var _local_2:HabboAvatarEditor = this._controller._Str_6435(AvatarEditorInstanceId._Str_3350);
             if ((((_local_2) && (!(this._controller._Str_6647 == null))) && (k.getParser().userId == this._controller._Str_6647.roomSession._Str_3871)))
             {
-                _local_2.figureData.avatarEffectType = k.getParser()._Str_6815;
+                _local_2.figureData.avatarEffectType = k.getParser().effectId;
                 _local_2.figureData._Str_2491();
             }
         }

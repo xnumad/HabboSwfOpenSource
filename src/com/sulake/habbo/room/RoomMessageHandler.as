@@ -1025,7 +1025,7 @@
                 return;
             }
             var _local_3:AvatarEffectMessageParser = _local_2.getParser();
-            this._roomCreator.updateObjectUserEffect(this._currentRoomId, _local_3.userId, _local_3._Str_6815, _local_3.delayMilliSeconds);
+            this._roomCreator.updateObjectUserEffect(this._currentRoomId, _local_3.userId, _local_3.effectId, _local_3.delayMilliSeconds);
         }
 
         private function onAvatarSleep(k:IMessageEvent):void

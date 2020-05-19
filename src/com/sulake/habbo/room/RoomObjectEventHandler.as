@@ -1585,7 +1585,7 @@
                         _local_4 = (k as RoomObjectDimmerStateUpdateEvent);
                         if (_local_4 != null)
                         {
-                            _local_5 = new RoomEngineDimmerStateEvent(_arg_2, _local_4.state, _local_4._Str_14686, _local_4._Str_6815, _local_4.color, _local_4._Str_5123);
+                            _local_5 = new RoomEngineDimmerStateEvent(_arg_2, _local_4.state, _local_4._Str_14686, _local_4.effectId, _local_4.color, _local_4._Str_5123);
                             this._roomEngine.events.dispatchEvent(_local_5);
                         }
                         return;
