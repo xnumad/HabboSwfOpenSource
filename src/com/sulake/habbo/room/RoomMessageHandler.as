@@ -91,7 +91,7 @@
     import com.sulake.habbo.communication.messages.parser.room.pets.PetFigureUpdateParser;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_7435;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_6731;
-    import com.sulake.habbo.communication.messages.parser.room.action._Str_7571;
+    import com.sulake.habbo.communication.messages.parser.room.action.AvatarEffectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_7555;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_6708;
     import com.sulake.habbo.communication.messages.parser.room.action._Str_6590;
@@ -1024,7 +1024,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7571 = _local_2.getParser();
+            var _local_3:AvatarEffectMessageParser = _local_2.getParser();
             this._roomCreator.updateObjectUserEffect(this._currentRoomId, _local_3.userId, _local_3._Str_6815, _local_3.delayMilliSeconds);
         }
 
