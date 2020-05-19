@@ -73,7 +73,7 @@
             var _local_5:Vector.<int> = new Vector.<int>(0);
             switch (this._furnitureData.category)
             {
-                case FurniCategory._Str_12534:
+                case FurniCategory.FIGURE_PURCHASABLE_SET:
                     _local_4 = _Str_10898;
                     _local_6 = this._furnitureData.customParams.split(",");
                     for each (_local_7 in _local_6)

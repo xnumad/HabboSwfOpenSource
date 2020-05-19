@@ -367,7 +367,7 @@
                                     {
                                         break;
                                     }
-                                    if (_local_7.furnitureData.category == FurniCategory._Str_12534)
+                                    if (_local_7.furnitureData.category == FurniCategory.FIGURE_PURCHASABLE_SET)
                                     {
                                         _local_11 = this._habboCatalog.sessionDataManager.getFloorItemData(_local_7.furnitureData.id);
                                         _local_12 = new Vector.<int>(0);
