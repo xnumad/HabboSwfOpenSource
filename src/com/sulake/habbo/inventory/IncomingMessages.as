@@ -57,7 +57,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
-    import com.sulake.habbo.communication.messages.parser.inventory.furni._Str_7941;
+    import com.sulake.habbo.communication.messages.parser.inventory.furni.FurniListParser;
     import com.sulake.habbo.inventory.furni.FurniModel;
     import com.sulake.habbo.inventory.events.HabboInventoryFurniListParsedEvent;
     import com.sulake.habbo.inventory.enum.InventoryCategory;
@@ -178,7 +178,7 @@
 
         public function _Str_25001(k:_Str_5581):void
         {
-            var _local_2:_Str_7941 = k.getParser();
+            var _local_2:FurniListParser = k.getParser();
             if (_local_2 == null)
             {
                 return;

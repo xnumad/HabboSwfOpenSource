@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7941 implements IMessageParser 
+    public class FurniListParser implements IMessageParser 
     {
         protected var _Str_6580:int;
         protected var _Str_6945:int;
