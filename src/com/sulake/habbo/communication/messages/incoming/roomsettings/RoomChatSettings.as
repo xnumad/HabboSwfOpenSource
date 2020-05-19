@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class RoomChatSettingsParser 
+    public class RoomChatSettings 
     {
         public static const _Str_19408:int = 0;
         public static const _Str_12787:int = 1;
@@ -22,7 +22,7 @@
         private var _protection:int = 1;
         private var _distance:int = 14;
 
-        public function RoomChatSettingsParser(k:IMessageDataWrapper)
+        public function RoomChatSettings(k:IMessageDataWrapper)
         {
             this._mode = k.readInteger();
             this._weight = k.readInteger();

@@ -34,7 +34,7 @@
         private var _bannedUsersById:Dictionary;
         private var _bannedUsersList:Array;
         private var _roomModerationSettings:_Str_2817;
-        private var _chatSettings:RoomChatSettingsParser;
+        private var _chatSettings:RoomChatSettings;
         private var _allowNavigatorDynamicCats:Boolean;
 
 
@@ -297,12 +297,12 @@
             return this._bannedUsersList;
         }
 
-        public function get chatSettings():RoomChatSettingsParser
+        public function get chatSettings():RoomChatSettings
         {
             return this._chatSettings;
         }
 
-        public function set chatSettings(k:RoomChatSettingsParser):void
+        public function set chatSettings(k:RoomChatSettings):void
         {
             this._chatSettings = k;
         }

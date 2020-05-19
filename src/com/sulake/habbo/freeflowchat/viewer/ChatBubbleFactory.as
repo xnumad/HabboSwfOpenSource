@@ -22,7 +22,7 @@
     import flash.utils.getTimer;
     import com.sulake.habbo.freeflowchat.viewer.simulation.ChatFlowStage;
     import com.sulake.habbo.freeflowchat.viewer.visualization.ChatBubble;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.ChatHistoryEntryBitmapBubble;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.IChatHistoryEntryBitmap;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.ChatHistoryRoomChangeEntry;
@@ -317,7 +317,7 @@
                 _local_7 = false;
             }
             this._Str_20462(k, _local_2);
-            var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettingsParser._Str_12581);
+            var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettings._Str_12581);
 			var _local_9:BitmapData = new BitmapData(_local_8.width, _local_8.height, true, 0);
             _local_8._Str_23014(_local_9);
             return new ChatHistoryEntryBitmapBubble(k, _local_7, _local_4, _local_9, _local_2.overlap);

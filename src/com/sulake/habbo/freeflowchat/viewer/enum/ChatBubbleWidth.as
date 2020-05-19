@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.freeflowchat.viewer.enum
 {
-    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
 
     public class ChatBubbleWidth 
     {
@@ -13,11 +13,11 @@
         {
             switch (k)
             {
-                case RoomChatSettingsParser._Str_12581:
+                case RoomChatSettings._Str_12581:
                     return ChatBubbleWidth.NORMAL;
-                case RoomChatSettingsParser._Str_16484:
+                case RoomChatSettings._Str_16484:
                     return ChatBubbleWidth.WIDE;
-                case RoomChatSettingsParser._Str_16907:
+                case RoomChatSettings._Str_16907:
                     return ChatBubbleWidth.SMALL;
             }
             return NORMAL;

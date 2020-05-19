@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.freeflowchat.HabboFreeFlowChat;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import flash.geom.Point;
     import com.sulake.habbo.freeflowchat.viewer.visualization.PooledChatBubble;
     import __AS3__.vec.*;
@@ -48,17 +48,17 @@
         {
             if (this._component._Str_7277)
             {
-                this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettingsParser._Str_12787);
+                this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettings._Str_12787);
                 this._gravityEnabled = (!(this._lineByLineMode));
                 switch (this._component._Str_7277.speed)
                 {
-                    case RoomChatSettingsParser._Str_18404:
+                    case RoomChatSettings._Str_18404:
                         this._scrollUpTimerDelay = 3000;
                         return;
-                    case RoomChatSettingsParser._Str_17874:
+                    case RoomChatSettings._Str_17874:
                         this._scrollUpTimerDelay = 6000;
                         return;
-                    case RoomChatSettingsParser._Str_16469:
+                    case RoomChatSettings._Str_16469:
                         this._scrollUpTimerDelay = 12000;
                         return;
                 }

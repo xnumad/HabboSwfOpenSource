@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_2817;
-    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
+    import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_4537 implements IMessageParser, IDisposable 
@@ -15,7 +15,7 @@
         private var _data:_Str_2370;
         private var _isGroupMember:Boolean;
         private var _roomModerationSettings:_Str_2817;
-        private var _chatSettings:RoomChatSettingsParser;
+        private var _chatSettings:RoomChatSettings;
 
 
         public function flush():Boolean
@@ -34,7 +34,7 @@
             this._roomModerationSettings = new _Str_2817(k);
             this._data._Str_12127 = _local_2;
             this._data._Str_16504 = k.readBoolean();
-            this._chatSettings = new RoomChatSettingsParser(k);
+            this._chatSettings = new RoomChatSettings(k);
             return true;
         }
 
@@ -78,7 +78,7 @@
             return this._roomModerationSettings;
         }
 
-        public function get chatSettings():RoomChatSettingsParser
+        public function get chatSettings():RoomChatSettings
         {
             return this._chatSettings;
         }

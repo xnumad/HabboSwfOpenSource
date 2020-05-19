@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
-	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettingsParser;
+	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import flash.geom.Point;
     import com.sulake.habbo.freeflowchat.viewer.visualization.PooledChatBubble;
@@ -88,7 +88,7 @@
         private var _chatBubbleFactory:ChatBubbleFactory;
         private var _perkAllowed:Boolean = false;
         private var _isInRoom:Boolean = false;
-        private var _roomChatSettings:RoomChatSettingsParser;
+        private var _roomChatSettings:RoomChatSettings;
         private var _freeFlowDisabled:Boolean = false;
         private var _preferedChatStyle:int = 1;
         private var _roomChangeRecordedInHistory:Boolean = false;
@@ -471,7 +471,7 @@
             }
         }
 
-        public function get _Str_7277():RoomChatSettingsParser
+        public function get _Str_7277():RoomChatSettings
         {
             return this._roomChatSettings;
         }
@@ -480,7 +480,7 @@
         {
             if (this._roomChatSettings)
             {
-                return this._roomChatSettings.mode == RoomChatSettingsParser._Str_12787;
+                return this._roomChatSettings.mode == RoomChatSettings._Str_12787;
             }
             return false;
         }
