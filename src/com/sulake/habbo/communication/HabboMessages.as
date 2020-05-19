@@ -183,7 +183,7 @@
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
 	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
 	import com.sulake.habbo.communication.messages.incoming.camera.CameraStorageUrlMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.camera._Str_7662;
+	import com.sulake.habbo.communication.messages.incoming.camera.InitCameraMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.camera.ThumbnailStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10817;
@@ -1368,7 +1368,7 @@
             INCOMING_PACKETS[3841] = _Str_8237;
             INCOMING_PACKETS[3863] = _Str_18906;
             INCOMING_PACKETS[3870] = _Str_4696;
-            INCOMING_PACKETS[3878] = _Str_7662;
+            INCOMING_PACKETS[3878] = InitCameraMessageEvent;
             INCOMING_PACKETS[3884] = _Str_7169;
             INCOMING_PACKETS[3885] = CompleteDiffieHandshakeEvent;
             INCOMING_PACKETS[3896] = _Str_8939;
