@@ -11,7 +11,7 @@
         private var _activityPoints:int;
         private var _id:int = 0;
         private var _groupID:String = "";
-        private var _Str_11729:int = 0;
+        private var _groupStatus:int = 0;
         private var _groupName:String = "";
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
@@ -129,12 +129,12 @@
 
         public function get _Str_7043():int
         {
-            return this._Str_11729;
+            return this._groupStatus;
         }
 
         public function set _Str_7043(k:int):void
         {
-            this._Str_11729 = k;
+            this._groupStatus = k;
         }
 
         public function get ownerId():int
