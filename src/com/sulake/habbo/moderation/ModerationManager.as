@@ -230,7 +230,7 @@
             return _local_4;
         }
 
-        public function _Str_14414(k:String, _arg_2:String):void
+        public function openHkPage(k:String, _arg_2:String):void
         {
             var _local_3:String = getProperty(k);
             var _local_4:String = (_local_3 + _arg_2);

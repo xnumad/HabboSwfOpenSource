@@ -320,7 +320,7 @@
                 return;
             }
             Logger.log("Edit in hk clicked");
-            this._main._Str_14414("roomadmin.url", ("" + this._data.flatId));
+            this._main.openHkPage("roomadmin.url", ("" + this._data.flatId));
         }
 
         private function _Str_23752(k:WindowEvent, _arg_2:IWindow):void

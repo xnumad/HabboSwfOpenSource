@@ -222,7 +222,7 @@
                 return;
             }
             this._Str_3066("openInfoTool");
-            this._main._Str_14414("habboinfotool.url", this._data.userName);
+            this._main.openHkPage("habboinfotool.url", this._data.userName);
         }
 
         private function _Str_24767(k:WindowEvent, _arg_2:IWindow):void
@@ -287,12 +287,12 @@
 
         private function _Str_17807():void
         {
-            this._main._Str_14414("moderatoractionlog.url", this._data.userName);
+            this._main.openHkPage("moderatoractionlog.url", this._data.userName);
         }
 
         private function _Str_25391():void
         {
-            this._main._Str_14414("identityinformationtool.url", ("" + this._data._Str_25657));
+            this._main.openHkPage("identityinformationtool.url", ("" + this._data._Str_25657));
         }
 
         internal function _Str_8724(k:String, _arg_2:String):void
