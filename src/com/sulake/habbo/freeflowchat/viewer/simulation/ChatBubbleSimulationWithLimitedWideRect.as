@@ -6,7 +6,7 @@
 
     public class ChatBubbleSimulationWithLimitedWideRect extends ChatBubbleSimulationEntity 
     {
-        public static const _Str_13155:int = ChatBubbleWidth.WIDE;//240
+        public static const _Str_13155:int = ChatBubbleWidth.THIN;//240
 
         private var _wideRectOffset:Number;
 

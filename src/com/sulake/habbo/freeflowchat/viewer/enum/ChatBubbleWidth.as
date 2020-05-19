@@ -5,20 +5,20 @@
     public class ChatBubbleWidth 
     {
         public static const NORMAL:int = 350;
-        public static const WIDE:int = 240;
-        public static const SMALL:int = 2000;
+        public static const THIN:int = 240;
+        public static const WIDE:int = 2000;
 
 
         public static function fromValue(k:int):int
         {
             switch (k)
             {
-                case RoomChatSettings._Str_12581:
+                case RoomChatSettings.CHAT_BUBBLE_WIDTH_NORMAL:
                     return ChatBubbleWidth.NORMAL;
-                case RoomChatSettings._Str_16484:
+                case RoomChatSettings.CHAT_BUBBLE_WIDTH_THIN:
+                    return ChatBubbleWidth.THIN;
+                case RoomChatSettings.CHAT_BUBBLE_WIDTH_WIDE:
                     return ChatBubbleWidth.WIDE;
-                case RoomChatSettings._Str_16907:
-                    return ChatBubbleWidth.SMALL;
             }
             return NORMAL;
         }

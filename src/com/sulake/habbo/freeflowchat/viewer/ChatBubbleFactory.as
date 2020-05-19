@@ -317,7 +317,7 @@
                 _local_7 = false;
             }
             this._Str_20462(k, _local_2);
-            var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettings._Str_12581);
+            var _local_8:ChatBubble = new ChatBubble(k, _local_2, _local_6, _local_4, ((k._Str_15133) ? uint(k._Str_15133) : _local_5), this._component, RoomChatSettings.CHAT_BUBBLE_WIDTH_NORMAL);
 			var _local_9:BitmapData = new BitmapData(_local_8.width, _local_8.height, true, 0);
             _local_8._Str_23014(_local_9);
             return new ChatHistoryEntryBitmapBubble(k, _local_7, _local_4, _local_9, _local_2.overlap);

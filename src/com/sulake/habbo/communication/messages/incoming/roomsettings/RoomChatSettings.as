@@ -6,9 +6,9 @@
     {
         public static const CHAT_MODE_FREE_FLOW:int = 0;
         public static const CHAT_MODE_LINE_BY_LINE:int = 1;
-        public static const _Str_16907:int = 0;
-        public static const _Str_12581:int = 1;
-        public static const _Str_16484:int = 2;
+        public static const CHAT_BUBBLE_WIDTH_WIDE:int = 0;
+        public static const CHAT_BUBBLE_WIDTH_NORMAL:int = 1;
+        public static const CHAT_BUBBLE_WIDTH_THIN:int = 2;
         public static const _Str_18404:int = 0;
         public static const _Str_17874:int = 1;
         public static const _Str_16469:int = 2;
