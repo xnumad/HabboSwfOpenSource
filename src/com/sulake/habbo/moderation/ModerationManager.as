@@ -274,7 +274,7 @@
 
         public function set cfhTopics(k:Vector.<CallForHelpCategoryData>):void
         {
-            this._issueManager._Str_23714(k);
+            this._issueManager.setCfhTopics(k);
         }
 		
 		public function get moderationIcon():ModerationIconWidget

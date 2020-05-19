@@ -612,7 +612,7 @@
             this._windowWidth = _arg_4;
         }
 
-        public function _Str_23714(k:Vector.<CallForHelpCategoryData>):void
+        public function setCfhTopics(k:Vector.<CallForHelpCategoryData>):void
         {
             this._cfhtopics = k;
         }
