@@ -32,7 +32,7 @@
         private var _hasBreedingPermission:Boolean;
         private var _petLevel:int = 0;
         private var _petPosture:String = "";
-        private var _Str_3986:Array;
+        private var _botSkills:Array;
         private var _Str_9831:Boolean;
         private var _Str_2479:Boolean = false;
 
@@ -391,12 +391,12 @@
 
         public function get _Str_2899():Array
         {
-            return this._Str_3986;
+            return this._botSkills;
         }
 
         public function set _Str_2899(k:Array):void
         {
-            this._Str_3986 = k;
+            this._botSkills = k;
         }
 
         public function get isModerator():Boolean

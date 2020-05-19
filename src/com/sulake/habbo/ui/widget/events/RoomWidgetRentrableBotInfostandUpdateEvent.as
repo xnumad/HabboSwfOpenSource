@@ -17,7 +17,7 @@
         private var _Str_4026:Boolean = false;
         private var _Str_4028:Boolean = false;
         private var _roomControllerLevel:int = 0;
-        private var _Str_3986:Array;
+        private var _botSkills:Array;
 
         public function RoomWidgetRentrableBotInfostandUpdateEvent(k:Boolean=false, _arg_2:Boolean=false)
         {
@@ -147,12 +147,12 @@
 
         public function get _Str_2899():Array
         {
-            return this._Str_3986;
+            return this._botSkills;
         }
 
         public function set _Str_2899(k:Array):void
         {
-            this._Str_3986 = k;
+            this._botSkills = k;
         }
     }
 }
