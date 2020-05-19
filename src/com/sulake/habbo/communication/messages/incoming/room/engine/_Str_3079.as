@@ -14,7 +14,7 @@
         private var _type:int = 0;
         private var _state:int = 0;
         private var _data:String = "";
-        private var _Str_2479:Boolean = false;
+        private var _isReadOnly:Boolean = false;
         private var _Str_5135:int = 0;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
@@ -29,7 +29,7 @@
 
         public function _Str_4710():void
         {
-            this._Str_2479 = true;
+            this._isReadOnly = true;
         }
 
         public function get id():int
@@ -49,7 +49,7 @@
 
         public function set _Str_15139(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_21211 = k;
             }
@@ -62,7 +62,7 @@
 
         public function set _Str_15569(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_19818 = k;
             }
@@ -75,7 +75,7 @@
 
         public function set localX(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._localX = k;
             }
@@ -88,7 +88,7 @@
 
         public function set localY(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._localY = k;
             }
@@ -101,7 +101,7 @@
 
         public function set y(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._y = k;
             }
@@ -114,7 +114,7 @@
 
         public function set z(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._z = k;
             }
@@ -127,7 +127,7 @@
 
         public function set dir(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._dir = k;
             }
@@ -140,7 +140,7 @@
 
         public function set type(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._type = k;
             }
@@ -153,7 +153,7 @@
 
         public function set state(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._state = k;
             }
@@ -166,7 +166,7 @@
 
         public function set data(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._data = k;
             }
@@ -179,7 +179,7 @@
 
         public function set usagePolicy(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_5135 = k;
             }
@@ -192,7 +192,7 @@
 
         public function set ownerId(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._ownerId = k;
             }
@@ -205,7 +205,7 @@
 
         public function set ownerName(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._ownerName = k;
             }
@@ -218,7 +218,7 @@
 
         public function set secondsToExpiration(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._secondsToExpiration = k;
             }

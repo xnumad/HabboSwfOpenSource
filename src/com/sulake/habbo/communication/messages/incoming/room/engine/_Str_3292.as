@@ -22,7 +22,7 @@
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
         private var _Str_21695:String = null;
-        private var _Str_2479:Boolean = false;
+        private var _isReadOnly:Boolean = false;
 
         public function _Str_3292(k:int)
         {
@@ -33,7 +33,7 @@
 
         public function _Str_4710():void
         {
-            this._Str_2479 = true;
+            this._isReadOnly = true;
         }
 
         public function get id():int
@@ -48,7 +48,7 @@
 
         public function set x(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._x = k;
             }
@@ -61,7 +61,7 @@
 
         public function set y(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._y = k;
             }
@@ -74,7 +74,7 @@
 
         public function set z(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._z = k;
             }
@@ -87,7 +87,7 @@
 
         public function set dir(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._dir = k;
             }
@@ -100,7 +100,7 @@
 
         public function set _Str_13204(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_3283 = k;
             }
@@ -113,7 +113,7 @@
 
         public function set _Str_15185(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_3135 = k;
             }
@@ -126,7 +126,7 @@
 
         public function set sizeZ(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_5445 = k;
             }
@@ -139,7 +139,7 @@
 
         public function set type(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._type = k;
             }
@@ -152,7 +152,7 @@
 
         public function set state(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._state = k;
             }
@@ -165,7 +165,7 @@
 
         public function set data(k:IStuffData):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._data = k;
             }
@@ -178,7 +178,7 @@
 
         public function set _Str_13150(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_21695 = k;
             }
@@ -191,7 +191,7 @@
 
         public function set _Str_2794(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_3182 = k;
             }
@@ -204,7 +204,7 @@
 
         public function set expiryTime(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_6673 = k;
             }

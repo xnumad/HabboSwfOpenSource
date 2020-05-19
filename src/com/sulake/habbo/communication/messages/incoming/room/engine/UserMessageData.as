@@ -34,7 +34,7 @@
         private var _petPosture:String = "";
         private var _botSkills:Array;
         private var _isModerator:Boolean;
-        private var _Str_2479:Boolean = false;
+        private var _isReadOnly:Boolean = false;
 
         public function UserMessageData(k:int)
         {
@@ -43,7 +43,7 @@
 
         public function _Str_4710():void
         {
-            this._Str_2479 = true;
+            this._isReadOnly = true;
         }
 
         public function get roomIndex():int
@@ -58,7 +58,7 @@
 
         public function set x(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._x = k;
             }
@@ -71,7 +71,7 @@
 
         public function set y(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._y = k;
             }
@@ -84,7 +84,7 @@
 
         public function set z(k:Number):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._z = k;
             }
@@ -97,7 +97,7 @@
 
         public function set dir(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._dir = k;
             }
@@ -110,7 +110,7 @@
 
         public function set name(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._name = k;
             }
@@ -123,7 +123,7 @@
 
         public function set userType(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._userType = k;
             }
@@ -136,7 +136,7 @@
 
         public function set _Str_3344(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._sex = k;
             }
@@ -149,7 +149,7 @@
 
         public function set figure(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._figure = k;
             }
@@ -162,7 +162,7 @@
 
         public function set custom(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._custom = k;
             }
@@ -175,7 +175,7 @@
 
         public function set activityPoints(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._activityPoints = k;
             }
@@ -188,7 +188,7 @@
 
         public function set id(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._id = k;
             }
@@ -201,7 +201,7 @@
 
         public function set _Str_4592(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._groupID = k;
             }
@@ -214,7 +214,7 @@
 
         public function set groupName(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._groupName = k;
             }
@@ -227,7 +227,7 @@
 
         public function set _Str_7043(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._groupStatus = k;
             }
@@ -240,7 +240,7 @@
 
         public function set _Str_3882(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._subType = k;
             }
@@ -253,7 +253,7 @@
 
         public function set ownerId(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._ownerId = k;
             }
@@ -266,7 +266,7 @@
 
         public function set ownerName(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._ownerName = k;
             }
@@ -279,7 +279,7 @@
 
         public function set rarityLevel(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._rarityLevel = k;
             }
@@ -292,7 +292,7 @@
 
         public function set _Str_4799(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._hasSaddle = k;
             }
@@ -305,7 +305,7 @@
 
         public function set isRiding(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._isRiding = k;
             }
@@ -318,7 +318,7 @@
 
         public function set canBreed(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._canBreed = k;
             }
@@ -331,7 +331,7 @@
 
         public function set canHarvest(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._canHarvest = k;
             }
@@ -344,7 +344,7 @@
 
         public function set canRevive(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._canRevive = k;
             }
@@ -357,7 +357,7 @@
 
         public function set hasBreedingPermission(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._hasBreedingPermission = k;
             }
@@ -370,7 +370,7 @@
 
         public function set _Str_3897(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._petLevel = k;
             }
@@ -383,7 +383,7 @@
 
         public function set _Str_16593(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._petPosture = k;
             }
@@ -406,7 +406,7 @@
 
         public function set isModerator(k:Boolean):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._isModerator = k;
             }

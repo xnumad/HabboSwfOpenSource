@@ -6,7 +6,7 @@
         private var _type:int = 0;
         private var _color:uint = 0;
         private var _Str_3576:uint = 0;
-        private var _Str_2479:Boolean = false;
+        private var _isReadOnly:Boolean = false;
 
         public function _Str_5478(k:int)
         {
@@ -15,7 +15,7 @@
 
         public function _Str_4710():void
         {
-            this._Str_2479 = true;
+            this._isReadOnly = true;
         }
 
         public function get id():int
@@ -30,7 +30,7 @@
 
         public function set type(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._type = k;
             }
@@ -43,7 +43,7 @@
 
         public function set color(k:uint):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._color = k;
             }
@@ -56,7 +56,7 @@
 
         public function set _Str_4272(k:int):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_3576 = k;
             }

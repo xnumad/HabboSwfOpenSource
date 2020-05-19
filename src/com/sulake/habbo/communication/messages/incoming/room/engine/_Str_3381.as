@@ -11,7 +11,7 @@
         private var _loc:Vector3d;
         private var _target:Vector3d;
         private var _Str_16956:String;
-        private var _Str_2479:Boolean = false;
+        private var _isReadOnly:Boolean = false;
 
         public function _Str_3381(k:int, _arg_2:Vector3d, _arg_3:Vector3d, _arg_4:String=null)
         {
@@ -23,7 +23,7 @@
 
         public function _Str_4710():void
         {
-            this._Str_2479 = true;
+            this._isReadOnly = true;
         }
 
         public function get id():int
@@ -38,7 +38,7 @@
 
         public function set loc(k:Vector3d):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._loc = k;
             }
@@ -51,7 +51,7 @@
 
         public function set target(k:Vector3d):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._target = k;
             }
@@ -64,7 +64,7 @@
 
         public function set _Str_21300(k:String):void
         {
-            if (!this._Str_2479)
+            if (!this._isReadOnly)
             {
                 this._Str_16956 = k;
             }
