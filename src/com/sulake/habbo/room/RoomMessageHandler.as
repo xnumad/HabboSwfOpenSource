@@ -35,7 +35,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
-    import com.sulake.habbo.communication.messages.incoming.room.chat.Shout;
+    import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat._Str_7436;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
@@ -214,7 +214,7 @@
                 k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
                 k.addMessageEvent(new ChatMessageEvent(this.onChat));
                 k.addMessageEvent(new Whisper(this.onChat));
-                k.addMessageEvent(new Shout(this.onChat));
+                k.addMessageEvent(new ShoutMessageEvent(this.onChat));
                 k.addMessageEvent(new _Str_7436(this.onTypingStatus));
                 k.addMessageEvent(new _Str_8183(this.onDiceValue));
                 k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
@@ -1159,9 +1159,9 @@
                 }
                 else
                 {
-                    if ((k is Shout))
+                    if ((k is ShoutMessageEvent))
                     {
-                        _local_2 = (k as Shout).getParser();
+                        _local_2 = (k as ShoutMessageEvent).getParser();
                     }
                 }
             }

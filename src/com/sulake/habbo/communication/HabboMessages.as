@@ -843,7 +843,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.*;
-	import com.sulake.habbo.communication.messages.incoming.room.chat.Shout;
+	import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.chat.Whisper;
 	import com.sulake.habbo.communication.messages.incoming.room.chat._Str_5834;
@@ -999,7 +999,7 @@
             INCOMING_PACKETS[1016] = GuideSessionPartnerIsTypingEvent;
             INCOMING_PACKETS[1032] = CatalogPagesListEvent;
             INCOMING_PACKETS[1033] = _Str_8292;
-            INCOMING_PACKETS[1036] = Shout;
+            INCOMING_PACKETS[1036] = ShoutMessageEvent;
             INCOMING_PACKETS[104] = FurniListAddOrUpdateEvent;
             INCOMING_PACKETS[105] = _Str_12108;
             INCOMING_PACKETS[1050] = HotelWillCloseInMinutesEvent;
