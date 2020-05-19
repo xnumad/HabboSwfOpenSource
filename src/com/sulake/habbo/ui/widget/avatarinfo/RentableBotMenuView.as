@@ -98,7 +98,7 @@
                         k.addListItem(_local_9);
                     }
                 }
-                if (_local_7.id == BotSkillsEnum._Str_14917)
+                if (_local_7.id == BotSkillsEnum.NUX_PROCEED)
                 {
                     if (_local_7.data == "")
                     {
@@ -261,7 +261,7 @@
                     if (_arg_2.parent.name.indexOf("nux_proceed_") != -1)
                     {
                         _local_7 = _arg_2.parent.name.substr(12, (_arg_2.parent.name.length - 12));
-                        this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum._Str_14917, _local_7));
+                        this.widget.handler.container.connection.send(new _Str_3365(this._data.id, BotSkillsEnum.NUX_PROCEED, _local_7));
                         _local_3 = true;
                     }
                 }
