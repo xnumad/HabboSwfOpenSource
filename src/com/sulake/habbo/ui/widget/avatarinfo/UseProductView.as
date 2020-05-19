@@ -97,7 +97,7 @@
                 case FurniCategory.PET_SADDLE:
                     this._mode = _Str_14658;
                     return;
-                case FurniCategory._Str_6915:
+                case FurniCategory.MONSTERPLANT_REVIVAL:
                     this._mode = _Str_14165;
                     return;
                 case FurniCategory._Str_8726:

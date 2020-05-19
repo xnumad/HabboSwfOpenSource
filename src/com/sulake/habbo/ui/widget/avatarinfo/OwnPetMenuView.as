@@ -215,7 +215,7 @@
                     showButton("pick_up");
                     if (this._data.dead)
                     {
-                        this._Str_18260 = this._Str_20669(FurniCategory._Str_6915, PetTypeEnum.MONSTERPLANT);
+                        this._Str_18260 = this._Str_20669(FurniCategory.MONSTERPLANT_REVIVAL, PetTypeEnum.MONSTERPLANT);
                         showButton("revive");
                         if (((this.widget.configuration.getBoolean("monsterplants.composting.enabled")) && (_local_3.container.roomSession.isRoomController)))
                         {

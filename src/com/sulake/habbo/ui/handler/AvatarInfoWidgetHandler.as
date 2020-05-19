@@ -498,7 +498,7 @@
                         _local_15 = ((_local_14.length > 0) ? _local_14[0] : -1);
                         if (_local_15 == _arg_3)
                         {
-                            if (_arg_4 == FurniCategory._Str_6915)
+                            if (_arg_4 == FurniCategory.MONSTERPLANT_REVIVAL)
                             {
                                 if (!_local_12.canRevive)
                                 {

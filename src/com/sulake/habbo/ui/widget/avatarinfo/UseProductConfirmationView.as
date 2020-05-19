@@ -122,7 +122,7 @@
                 case FurniCategory.PET_SADDLE:
                     _local_6 = _Str_11369;
                     break;
-                case FurniCategory._Str_6915:
+                case FurniCategory.MONSTERPLANT_REVIVAL:
                     _local_6 = _Str_8759;
                     break;
                 case FurniCategory._Str_8726:
@@ -359,7 +359,7 @@
                     _local_4 = this._widget.handler.roomEngine.getPetImage(_local_2.typeId, _local_2.paletteId, _local_2.color, new Vector3d(90), 64, this, true, 0, _local_9);
                     break;
                 case FurniCategory._Str_8726:
-                case FurniCategory._Str_6915:
+                case FurniCategory.MONSTERPLANT_REVIVAL:
                 case FurniCategory._Str_9449:
                     _local_19 = null;
                     if (this._petData != null)
