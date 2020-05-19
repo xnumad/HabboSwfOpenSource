@@ -13,7 +13,7 @@
         public static const NUX_PROCEED:int = 8;
 		public static const CHANGE_BOT_MOTTO:int = 9;
         public static const NUX_TAKE_TOUR:int = 10;
-        public static const _Str_17261:int = 12;
+        public static const NO_PICK_UP:int = 12;
         public static const _Str_18173:int = 14;
         public static const DONATE_TO_USER:int = 24;
         public static const DONATE_TO_ALL:int = 25;

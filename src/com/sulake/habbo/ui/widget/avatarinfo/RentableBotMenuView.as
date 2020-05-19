@@ -68,7 +68,7 @@
                 _local_5++;
             }
             var _local_6:Boolean = ((this._data.amIOwner) || (this._data.amIAnyRoomController));
-            _Str_2304("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum._Str_17261) == -1) && (_local_6)) : _local_6));
+            _Str_2304("pick", ((this._data._Str_2899) ? ((this._data._Str_2899.indexOf(BotSkillsEnum.NO_PICK_UP) == -1) && (_local_6)) : _local_6));
             if (this._data._Str_2899)
             {
                 _Str_2304("donate_to_all", (!(this._data._Str_2899.indexOf(BotSkillsEnum.DONATE_TO_ALL) == -1)));
