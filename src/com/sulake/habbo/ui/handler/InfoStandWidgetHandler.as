@@ -1346,13 +1346,13 @@
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
                 _local_2 = new _Str_3575();
-                _local_2._Str_5277 = k.pet1._Str_5277;
+                _local_2.webId = k.pet1.webId;
                 _local_2.name = k.pet1.name;
                 _local_2.level = k.pet1.level;
                 _local_2.figure = k.pet1.figure;
                 _local_2.owner = k.pet1.owner;
                 _local_3 = new _Str_3575();
-                _local_3._Str_5277 = k.pet2._Str_5277;
+                _local_3.webId = k.pet2.webId;
                 _local_3.name = k.pet2.name;
                 _local_3.level = k.pet2.level;
                 _local_3.figure = k.pet2.figure;

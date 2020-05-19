@@ -234,7 +234,7 @@
         private function onUserNameChange(k:IMessageEvent):void
         {
             var _local_2:UserNameChangedMessageParser = _Str_4150(k).getParser();
-            if (this._ownUserId == _local_2._Str_5277)
+            if (this._ownUserId == _local_2.webId)
             {
                 this._ownUserName = _local_2._Str_16428;
             }

@@ -1535,8 +1535,8 @@
             {
                 this._confirmPetBreedingView = new ConfirmPetBreedingView(this);
             }
-            var _local_6:int = this._Str_12418(k._Str_5277);
-            var _local_7:int = this._Str_12418(_arg_2._Str_5277);
+            var _local_6:int = this._Str_12418(k.webId);
+            var _local_7:int = this._Str_12418(_arg_2.webId);
             this._confirmPetBreedingView.open(_local_6, _local_7, _arg_3, _arg_4, _arg_5, k.level, _arg_2.level);
         }
 

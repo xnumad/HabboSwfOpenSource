@@ -10,7 +10,7 @@
         private var _newName:String;
 
 
-        public function get _Str_5277():int
+        public function get webId():int
         {
             return this._webId;
         }

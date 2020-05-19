@@ -370,7 +370,7 @@
                 return;
             }
             var _local_3:UserNameChangedMessageParser = _local_2.getParser();
-            if (_local_3._Str_5277 == this._userId)
+            if (_local_3.webId == this._userId)
             {
                 this._name = _local_3._Str_16428;
                 this._Str_7394 = false;
