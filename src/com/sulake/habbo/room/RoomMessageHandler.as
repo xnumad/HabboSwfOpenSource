@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7641;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_5619;
-    import com.sulake.habbo.communication.messages.incoming.room.action.RoomUserEffectEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
     import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
@@ -207,7 +207,7 @@
                 k.addMessageEvent(new _Str_3084(this._Str_5174));
                 k.addMessageEvent(new _Str_7641(this.onExpression));
                 k.addMessageEvent(new _Str_5619(this.onDance));
-                k.addMessageEvent(new RoomUserEffectEvent(this.onAvatarEffect));
+                k.addMessageEvent(new AvatarEffectMessageEvent(this.onAvatarEffect));
                 k.addMessageEvent(new _Str_7216(this.onAvatarSleep));
                 k.addMessageEvent(new _Str_7050(this.onCarryObject));
                 k.addMessageEvent(new _Str_8069(this.onUseObject));
@@ -1015,7 +1015,7 @@
 
         private function onAvatarEffect(k:IMessageEvent):void
         {
-            var _local_2:RoomUserEffectEvent = (k as RoomUserEffectEvent);
+            var _local_2:AvatarEffectMessageEvent = (k as AvatarEffectMessageEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;

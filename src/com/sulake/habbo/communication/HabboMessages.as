@@ -913,7 +913,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_12206;
 	import com.sulake.habbo.communication.messages.outgoing._Str_81._Str_8008;
 	import com.sulake.habbo.communication.messages.incoming.room.action.*;
-	import com.sulake.habbo.communication.messages.incoming.room.action.RoomUserEffectEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_5619;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7050;
 	import com.sulake.habbo.communication.messages.incoming.room.action._Str_7216;
@@ -1015,7 +1015,7 @@
             INCOMING_PACKETS[1140] = JukeBoxPlayListAddSongEvent;
             INCOMING_PACKETS[1155] = WiredSavedEvent;
             INCOMING_PACKETS[1164] = PetTrainingPanelEvent;
-            INCOMING_PACKETS[1167] = RoomUserEffectEvent;
+            INCOMING_PACKETS[1167] = AvatarEffectMessageEvent;
             INCOMING_PACKETS[1177] = CompetitionEntrySubmitResultEvent;
             INCOMING_PACKETS[118] = ChangeNameUpdateEvent;
             INCOMING_PACKETS[1180] = _Str_7472; //Something guild related. perhaps guild request received?
