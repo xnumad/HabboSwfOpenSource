@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_340
+﻿package com.sulake.habbo.communication.messages.incoming.camera
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.camera.CompetitionStatusMessageParser;

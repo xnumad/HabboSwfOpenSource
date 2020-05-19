@@ -179,12 +179,12 @@
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8022;
 	import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7027;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7565;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7662;
-	import com.sulake.habbo.communication.messages.incoming._Str_340._Str_8053;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_7565;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_7662;
+	import com.sulake.habbo.communication.messages.incoming.camera._Str_8053;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10678;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10817;
 	import com.sulake.habbo.communication.messages.outgoing._Str_341._Str_10944;

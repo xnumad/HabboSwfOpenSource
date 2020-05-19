@@ -4,11 +4,11 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.widget.camera.CameraWidget;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7565;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7027;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_7662;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_7565;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_7027;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_7662;
     import com.sulake.habbo.ui.RoomDesktop;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;

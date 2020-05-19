@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.ui.RoomDesktop;
     import com.sulake.habbo.ui.widget.camera.RoomThumbnailCameraWidget;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_8053;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_8053;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import flash.events.Event;

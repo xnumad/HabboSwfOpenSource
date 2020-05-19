@@ -22,8 +22,8 @@
     import flash.geom.Matrix;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 
     public class CameraWidget extends ConversionTrackingWidget 

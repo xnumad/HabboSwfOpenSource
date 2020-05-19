@@ -20,12 +20,12 @@
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.display.Bitmap;
     import flash.events.TimerEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5617;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5617;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.habbo.window.utils._Str_5639;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming._Str_340._Str_5371;
+    import com.sulake.habbo.communication.messages.incoming.camera._Str_5371;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.utils.StringUtil;
     import flash.net.navigateToURL;
