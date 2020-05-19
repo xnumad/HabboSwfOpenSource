@@ -992,7 +992,7 @@
                         TypingBubble(_local_18).relativeDepth = ((AVATAR_SPRITE_LAYING_DEPTH - 0.01) + _local_20[2]);
                     }
                 }
-                this._isAnimating = this._activeAvatarImage._Str_899();
+                this._isAnimating = this._activeAvatarImage.isAnimating();
                 _local_21 = ADDITION_ID_EXPRESSION;
                 _local_22 = this._activeAvatarImage.getDirection();
                 for each (_local_23 in this._activeAvatarImage._Str_754())
@@ -1156,7 +1156,7 @@
                 k.appendAction(AvatarAction.EFFECT, this._effectType);
             }
             k._Str_962();
-            this._isAnimating = k._Str_899();
+            this._isAnimating = k.isAnimating();
             var _local_2:int = ADDITION_ID_EXPRESSION;
             for each (_local_3 in this._activeAvatarImage._Str_754())
             {

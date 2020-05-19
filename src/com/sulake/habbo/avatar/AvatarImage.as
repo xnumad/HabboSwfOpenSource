@@ -57,8 +57,8 @@
         private var _directionOffset:int = 0;
         private var _useTextures:Boolean;
         private var _layersInUse:Array;
-        private var _gpuMode:Boolean;
-        private var _isAnimating:Boolean = false;
+        private var _isAnimating:Boolean;
+        private var _gpuMode:Boolean = false;
         private var _animationHasResetOnToggle:Boolean = false;
         private var _Str_1163:Array;
         private var _lastActionsStr:String;
@@ -660,15 +660,15 @@
             this._Str_614.push(new ActiveActionData(k, _arg_2, this._frameCounter));
         }
 
-        public function _Str_899():Boolean
+        public function isAnimating():Boolean
         {
-            return (this._gpuMode) || (this._animFrameCount > 1);
+            return (this._isAnimating) || (this._animFrameCount > 1);
         }
 
         private function _Str_1632():Boolean
         {
-            this._isAnimating = false;
             this._gpuMode = false;
+            this._isAnimating = false;
             this._layersInUse = [];
             this._avatarDataContainer = null;
             this._directionOffset = 0;
@@ -794,7 +794,7 @@
                     }
                     if (((_local_2) && (_local_2.resetOnToggle)))
                     {
-                        this._isAnimating = true;
+                        this._gpuMode = true;
                     }
                 }
             }
@@ -809,7 +809,7 @@
                     this._Str_1496(k, _local_3);
                     if (k.definition.isAnimation)
                     {
-                        this._gpuMode = k.definition.isAnimated(k.actionParameter);
+                        this._isAnimating = k.definition.isAnimated(k.actionParameter);
                         _local_2 = this._Str_581.getAnimation(((k.definition.state + ".") + k.actionParameter));
                         if (_local_2 != null)
                         {
@@ -933,7 +933,7 @@
 
         public function get _Str_677():Boolean
         {
-            return this._isAnimating;
+            return this._gpuMode;
         }
 
         public function get _Str_792():String
@@ -947,7 +947,7 @@
             {
                 this._Str_1632();
                 this.setActionsToParts();
-                this._isAnimating = true;
+                this._gpuMode = true;
                 this._useTextures = true;
                 if (this._Str_1153)
                 {

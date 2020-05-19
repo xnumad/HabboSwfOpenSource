@@ -23,7 +23,7 @@
         function getDirection():int;
         function _Str_784():IAvatarFigureContainer;
         function _Str_867(_arg_1:String):IPartColor;
-        function _Str_899():Boolean;
+        function isAnimating():Boolean;
         function _Str_781():Array;
         function _Str_913():void;
         function _Str_962():void;
