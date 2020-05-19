@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.events
 {
-    import com.sulake.habbo.communication.messages.incoming.room.pets._Str_3763;
+    import com.sulake.habbo.communication.messages.incoming.room.pets.BreedingPetInfo;
     import com.sulake.habbo.session.IRoomSession;
 
     public class RoomSessionConfirmPetBreedingEvent extends RoomSessionEvent 
@@ -8,12 +8,12 @@
         public static const RSPFUE_CONFIRM_PET_BREEDING:String = "RSPFUE_CONFIRM_PET_BREEDING";
 
         private var _nestId:int;
-        private var _pet1:_Str_3763;
-        private var _pet2:_Str_3763;
+        private var _pet1:BreedingPetInfo;
+        private var _pet2:BreedingPetInfo;
         private var _rarityCategories:Array;
         private var _resultPetTypeId:int;
 
-        public function RoomSessionConfirmPetBreedingEvent(k:IRoomSession, _arg_2:int, _arg_3:_Str_3763, _arg_4:_Str_3763, _arg_5:Array, _arg_6:int, _arg_7:Boolean=false, _arg_8:Boolean=false)
+        public function RoomSessionConfirmPetBreedingEvent(k:IRoomSession, _arg_2:int, _arg_3:BreedingPetInfo, _arg_4:BreedingPetInfo, _arg_5:Array, _arg_6:int, _arg_7:Boolean=false, _arg_8:Boolean=false)
         {
             super(RSPFUE_CONFIRM_PET_BREEDING, k, _arg_7, _arg_8);
             this._nestId = _arg_2;
@@ -33,12 +33,12 @@
             return this._nestId;
         }
 
-        public function get pet1():_Str_3763
+        public function get pet1():BreedingPetInfo
         {
             return this._pet1;
         }
 
-        public function get pet2():_Str_3763
+        public function get pet2():BreedingPetInfo
         {
             return this._pet2;
         }

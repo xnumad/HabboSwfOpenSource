@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_3763 
+    public class BreedingPetInfo 
     {
         private var _Str_7992:int;
         private var _name:String;
@@ -10,7 +10,7 @@
         private var _figure:String;
         private var _owner:String;
 
-        public function _Str_3763(k:IMessageDataWrapper)
+        public function BreedingPetInfo(k:IMessageDataWrapper)
         {
             this._Str_7992 = k.readInteger();
             this._name = k.readString();
