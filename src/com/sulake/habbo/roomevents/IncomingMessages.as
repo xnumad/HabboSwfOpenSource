@@ -39,7 +39,7 @@
             this.addMessageEvent(new _Str_8791(this._Str_24104));
             this.addMessageEvent(new _Str_4585(this._Str_23600));
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
-            this.addMessageEvent(new _Str_3352(this._Str_2960));
+            this.addMessageEvent(new _Str_3352(this.onRoomExit));
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
             this.addMessageEvent(new _Str_4408(this._Str_16200));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));
@@ -82,7 +82,7 @@
             this._roomEvents.userName = _local_2.name;
         }
 
-        private function _Str_2960(k:IMessageEvent):void
+        private function onRoomExit(k:IMessageEvent):void
         {
             this._roomEvents._Str_7247.close();
         }

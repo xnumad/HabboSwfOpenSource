@@ -67,13 +67,13 @@
             this._questTracker.onCreditBalance();
         }
 
-        public function _Str_2960():void
+        public function onRoomExit():void
         {
-            this._questsList._Str_2960();
-            this._seasonalCalendarWindow._Str_2960();
-            this._questTracker._Str_2960();
-            this._questDetails._Str_2960();
-            this._nextQuestTimer._Str_2960();
+            this._questsList.onRoomExit();
+            this._seasonalCalendarWindow.onRoomExit();
+            this._questTracker.onRoomExit();
+            this._questDetails.onRoomExit();
+            this._nextQuestTimer.onRoomExit();
         }
 
         public function update(k:uint):void

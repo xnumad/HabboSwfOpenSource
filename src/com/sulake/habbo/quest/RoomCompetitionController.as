@@ -302,7 +302,7 @@
             this._Str_18216().y = ((this._Str_17393().y + this._Str_17393().textHeight) + 5);
         }
 
-        public function _Str_2960():void
+        public function onRoomExit():void
         {
             this.close();
         }

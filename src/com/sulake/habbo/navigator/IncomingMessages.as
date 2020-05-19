@@ -147,7 +147,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
             _local_2.addHabboConnectionMessageEvent(new _Str_5763(this._Str_18891));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this._Str_17265));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this._Str_2960));
+            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
             _local_2.addHabboConnectionMessageEvent(new _Str_9492(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
@@ -464,10 +464,10 @@
             }
         }
 
-        private function _Str_2960(k:IMessageEvent):void
+        private function onRoomExit(k:IMessageEvent):void
         {
             Logger.log("Navigator: exiting room");
-            this.data._Str_2960();
+            this.data.onRoomExit();
             this._navigator._Str_4012.close();
             this._navigator._Str_5048.close();
             this._navigator._Str_6939.close();

@@ -59,7 +59,7 @@
             _local_2.addHabboConnectionMessageEvent(new QuestMessageEvent(this._Str_4750));
             _local_2.addHabboConnectionMessageEvent(new AchievementEvent(this._Str_12011));
             _local_2.addHabboConnectionMessageEvent(new SeasonalQuestsMessageEvent(this._Str_12986));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this._Str_2960));
+            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new CompetitionEntrySubmitResultEvent(this._Str_17737));
             _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onCreditBalance));
@@ -144,11 +144,11 @@
             this._questEngine._Str_6927 = true;
         }
 
-        private function _Str_2960(k:IMessageEvent):void
+        private function onRoomExit(k:IMessageEvent):void
         {
-            this._questEngine._Str_3398._Str_2960();
-            this._questEngine._Str_17659._Str_2960();
-            this._questEngine._Str_8189._Str_2960();
+            this._questEngine._Str_3398.onRoomExit();
+            this._questEngine._Str_17659.onRoomExit();
+            this._questEngine._Str_8189.onRoomExit();
             this._questEngine._Str_6927 = false;
         }
 

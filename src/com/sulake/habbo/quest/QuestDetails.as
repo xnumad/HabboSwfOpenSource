@@ -76,7 +76,7 @@
             this.close();
         }
 
-        public function _Str_2960():void
+        public function onRoomExit():void
         {
             this.close();
         }

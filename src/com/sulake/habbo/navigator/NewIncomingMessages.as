@@ -134,7 +134,7 @@
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5711(this._Str_18125)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344)));
-            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3352(this._Str_2960)));
+            this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907)));
             this._messageListeners.push(k.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561)));
@@ -333,10 +333,10 @@
             LegacyNavigator(this._navigator._Str_2559)._Str_2813.close();
         }
 
-        private function _Str_2960(k:IMessageEvent):void
+        private function onRoomExit(k:IMessageEvent):void
         {
             Logger.log("Navigator: exiting room");
-            this.data._Str_2960();
+            this.data.onRoomExit();
             LegacyNavigator(this._navigator._Str_2559)._Str_4012.close();
             LegacyNavigator(this._navigator._Str_2559)._Str_5048.close();
             LegacyNavigator(this._navigator._Str_2559)._Str_6939.close();

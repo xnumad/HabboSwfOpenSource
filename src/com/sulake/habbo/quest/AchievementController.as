@@ -188,7 +188,7 @@
             this._questEngine.events.dispatchEvent(new UnseenAchievementsCountUpdateEvent(k));
         }
 
-        public function _Str_2960():void
+        public function onRoomExit():void
         {
             this.close();
         }
