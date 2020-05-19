@@ -95,7 +95,7 @@
             var _local_6:ITextWindow = ITextWindow(_local_3.findChildByName("visit_room_txt"));
             _local_6.color = _local_4;
             var _local_7:ITextWindow = ITextWindow(_local_3.findChildByName("user_classification_txt"));
-            _local_7.text = k._Str_25450;
+            _local_7.text = k.classType;
             if (((!(this._main)) || (!(this._main.isModerator))))
             {
                 _local_7.visible = false;

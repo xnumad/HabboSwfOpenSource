@@ -28,7 +28,7 @@
             return this._username;
         }
 
-        public function get _Str_25450():String
+        public function get classType():String
         {
             return this._classType;
         }
