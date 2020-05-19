@@ -2,7 +2,7 @@
 {
     public class SecurityLevelEnum 
     {
-        public static const _Str_22122:int = 9;
+        public static const SUPER_USER:int = 9;
         public static const ADMINISTRATOR:int = 8;
         public static const COMMUNITY:int = 7;
         public static const PLAYER_SUPPORT:int = 6;
