@@ -35,7 +35,7 @@
             var _local_2:_Str_3292 = (this._objects[k] as _Str_3292);
             if (_local_2 != null)
             {
-                _local_2._Str_4710();
+                _local_2.setReadOnly();
             }
             return _local_2;
         }

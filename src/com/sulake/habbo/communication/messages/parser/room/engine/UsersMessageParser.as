@@ -67,7 +67,7 @@
             var _local_2:UserMessageData = (this._users[k] as UserMessageData);
             if (_local_2 != null)
             {
-                _local_2._Str_4710();
+                _local_2.setReadOnly();
             }
             return _local_2;
         }

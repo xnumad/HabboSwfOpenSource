@@ -21,7 +21,7 @@
             this._Str_16956 = _arg_4;
         }
 
-        public function _Str_4710():void
+        public function setReadOnly():void
         {
             this._isReadOnly = true;
         }

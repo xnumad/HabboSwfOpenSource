@@ -62,7 +62,7 @@
                 _local_9.type = _local_5;
                 _local_9.color = _local_7;
                 _local_9._Str_4272 = _local_8;
-                _local_9._Str_4710();
+                _local_9.setReadOnly();
                 this._presets.push(_local_9);
                 _local_3++;
             }

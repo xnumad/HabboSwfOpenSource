@@ -31,7 +31,7 @@
             this._id = k;
         }
 
-        public function _Str_4710():void
+        public function setReadOnly():void
         {
             this._isReadOnly = true;
         }

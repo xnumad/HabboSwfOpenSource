@@ -20,7 +20,7 @@
             var k:_Str_3079 = this._Str_2776;
             if (k != null)
             {
-                k._Str_4710();
+                k.setReadOnly();
             }
             return k;
         }
