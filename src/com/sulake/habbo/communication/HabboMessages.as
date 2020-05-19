@@ -918,7 +918,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.SleepMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.action.ExpressionMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.action._Str_8069;
+	import com.sulake.habbo.communication.messages.incoming.room.action.UseObjectMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.*;
 	import com.sulake.habbo.communication.messages.incoming.poll.QuestionEvent;
 	import com.sulake.habbo.communication.messages.incoming.poll.SimplePollResultsEvent;
@@ -1104,7 +1104,7 @@
             INCOMING_PACKETS[1748] = _Str_8135;
             INCOMING_PACKETS[1752] = _Str_7632;
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;
-            INCOMING_PACKETS[1774] = _Str_8069;
+            INCOMING_PACKETS[1774] = UseObjectMessageEvent;
             INCOMING_PACKETS[1778] = _Str_7849;
             INCOMING_PACKETS[178] = _Str_4585;
             INCOMING_PACKETS[1787] = _Str_8054;
