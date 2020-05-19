@@ -182,7 +182,7 @@
                             }
                             _local_10 = _local_8.getPetImage(_local_14, _local_22, this.COLOR, new Vector3d(90), 64, this, true, 0, _local_18);
                             break;
-                        case FurniCategory._Str_7297:
+                        case FurniCategory.PET_CUSTOM_PART:
                             if (_local_13.length < 4)
                             {
                                 Logger.log(("[PetPreviewCatalogWidget] Invalid custom params: " + _local_9.productType));
