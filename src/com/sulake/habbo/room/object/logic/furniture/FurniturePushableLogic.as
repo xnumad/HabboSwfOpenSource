@@ -63,7 +63,8 @@
             {
                 if (_local_3.state > 0)
                 {
-                    moveUpdateInterval = (DEFAULT_UPDATE_INTERVAL / this.getUpdateIntervalValue(_local_3.state));
+                    //moveUpdateInterval = (DEFAULT_UPDATE_INTERVAL / this.getUpdateIntervalValue(_local_3.state));
+                    moveUpdateInterval = (DEFAULT_UPDATE_INTERVAL);
                 }
                 else
                 {

@@ -156,7 +156,7 @@
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
         {
-            var _local_4:RenderRoomThumbnailMessageComposer;
+            //var _local_4:RenderRoomThumbnailMessageComposer;
             var _local_3:WindowMouseEvent = (k as WindowMouseEvent);
             if (((_local_3) && (_local_3.type == WindowMouseEvent.CLICK)))
             {
@@ -164,9 +164,9 @@
                 {
                     case "button_capture":
                         this._Str_25628();
-                        _local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
-                        if(_local_4 == null)
-                            return;
+                        //_local_4 = RoomThumbnailCameraWidgetHandler(this.handler)._Str_18593();
+                        //if(_local_4 == null)
+                            //return;
                         //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
                         //{
                             //this.handler._Str_11986(_local_4);

@@ -283,7 +283,7 @@
                                     window.dispose();
                                 });
                                 window.findChildByName("embed_src_txt").caption = this._Str_8567();
-                                window.findChildByName("embed_src_direct_txt").caption = this._Str_8567("embed_src_direct_txt", "${url.prefix}/hotel?room=%roomId%");
+                                window.findChildByName("embed_src_direct_txt").caption = this._Str_8567("embed_src_direct_txt", "${url.prefix}/room/%roomId%");
                                 IStaticBitmapWrapperWindow(window.findChildByName("thumbnail_image")).assetUri = this._Str_24878();
                             }
                             try

@@ -97,7 +97,7 @@
             this._textField.defaultTextFormat = _arg_2.textFormat;
             this._textField.styleSheet = this._style.styleSheet;
             this._textField.addEventListener(TextEvent.LINK, this._Str_10834);
-			this._textField.background = true;
+			// this._textField.background = true;
             var _local_12:* = (k.chatType == RoomSessionChatEvent.CHAT_TYPE_SPEAK);
             var _local_13:* = (k.chatType == RoomSessionChatEvent.CHAT_TYPE_SHOUT);
             var _local_14:Boolean = (((!(_local_12)) && (!(_local_13))) && (!(this._style._Str_4931)));

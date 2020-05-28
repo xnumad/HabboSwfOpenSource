@@ -16,12 +16,10 @@
         private static const _Str_9511:int = 4;
 
         private var _bitmap:BitmapData;
-        private var _overlap:Rectangle;
+        private var _overlap:Rectangle= new Rectangle(0, 0, 0, 0);
 
         public function ChatHistoryRoomChangeEntry(k:_Str_2370, _arg_2:HabboFreeFlowChat)
         {
-            this._overlap = new Rectangle(0, 0, 0, 0);
-            super();
             var _local_3:TextField = new TextField();
             _local_3.defaultTextFormat = ChatHistoryLayoutEnum._Str_16769;
             _local_3.htmlText = ((k == null) ? "null" : k.roomName);

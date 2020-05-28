@@ -62,7 +62,7 @@
                       <var key="leading" value="0" type="Number"/>
                   </variables>
               </text>
-            <input x="0" y="162" width="290" height="24" params="1" style="0" name="embed_src_direct_txt" caption="${url.prefix}/hotel?room=%roomId%" background="true">
+            <input x="0" y="162" width="290" height="24" params="1" style="0" name="embed_src_direct_txt" caption="${url.prefix}/room/%roomId%" background="true">
               <variables>
                 <var key="always_show_selection" value="true" type="Boolean"/>
                 <var key="border" value="true" type="Boolean"/>
