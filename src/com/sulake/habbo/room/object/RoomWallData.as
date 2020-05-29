@@ -6,8 +6,8 @@
 
     public class RoomWallData 
     {
-        public static var _Str_5077:Array = [];
-        public static var _Str_5543:Array = [];
+        public static var WALL_DIRECTION_VECTORS:Array = [];
+        public static var WALL_NORMAL_VECTORS:Array = [];
 
         private var _corners:Array;
         private var _endPoints:Array;
@@ -22,14 +22,14 @@
         private var _count:int = 0;
 
         {
-            _Str_5077.push(new Vector3d(1, 0, 0));
-            _Str_5077.push(new Vector3d(0, 1, 0));
-            _Str_5077.push(new Vector3d(-1, 0, 0));
-            _Str_5077.push(new Vector3d(0, -1, 0));
-            _Str_5543.push(new Vector3d(0, 1, 0));
-            _Str_5543.push(new Vector3d(-1, 0, 0));
-            _Str_5543.push(new Vector3d(0, -1, 0));
-            _Str_5543.push(new Vector3d(1, 0, 0));
+            WALL_DIRECTION_VECTORS.push(new Vector3d(1, 0, 0));
+            WALL_DIRECTION_VECTORS.push(new Vector3d(0, 1, 0));
+            WALL_DIRECTION_VECTORS.push(new Vector3d(-1, 0, 0));
+            WALL_DIRECTION_VECTORS.push(new Vector3d(0, -1, 0));
+            WALL_NORMAL_VECTORS.push(new Vector3d(0, 1, 0));
+            WALL_NORMAL_VECTORS.push(new Vector3d(-1, 0, 0));
+            WALL_NORMAL_VECTORS.push(new Vector3d(0, -1, 0));
+            WALL_NORMAL_VECTORS.push(new Vector3d(1, 0, 0));
         }
 
         public function RoomWallData()
@@ -146,7 +146,7 @@
             var _local_3:IVector3d;
             if (((_arg_2 > 0) && (_arg_2 < this._lengths[k])))
             {
-                _local_3 = _Str_5077[this.getDirection(k)];
+                _local_3 = WALL_DIRECTION_VECTORS[this.getDirection(k)];
                 this._corners[k] = this._corners[k].add(new Point((_arg_2 * _local_3.x), (_arg_2 * _local_3.y)));
                 this._lengths[k] = (this._lengths[k] - _arg_2);
                 this._manuallyLeftCut[k] = true;
@@ -168,7 +168,7 @@
                 {
                     _local_2 = this.getCorner(k);
                     _local_3 = new Point(_local_2.x, _local_2.y);
-                    _local_4 = RoomWallData._Str_5077[this.getDirection(k)];
+                    _local_4 = RoomWallData.WALL_DIRECTION_VECTORS[this.getDirection(k)];
                     _local_5 = this.getLength(k);
                     _local_3.x = (_local_3.x + (_local_4.x * _local_5));
                     _local_3.y = (_local_3.y + (_local_4.y * _local_5));
