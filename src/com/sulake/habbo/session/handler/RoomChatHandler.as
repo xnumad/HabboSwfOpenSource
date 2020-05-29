@@ -19,7 +19,7 @@
     import com.sulake.habbo.ui.widget.enums.SystemChatStyleEnum;
     import com.sulake.habbo.communication.messages.parser.users.PetRespectNotificationParser;
     import com.sulake.habbo.communication.messages.parser.users.PetSupplementedNotificationParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8921;
+    import com.sulake.habbo.communication.messages.incoming.users.PetSupplementTypeEnum;
     import com.sulake.habbo.communication.messages.parser.room.chat.FloodControlMessageParser;
 
     public class RoomChatHandler extends BaseHandler 
@@ -148,13 +148,13 @@
             var _local_5:int = RoomSessionChatEvent.CHAT_TYPE_PETREVIVE;
             switch (_local_2.supplementType)
             {
-                case _Str_8921._Str_16984:
+                case PetSupplementTypeEnum.REVIVE:
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_PETREVIVE;
                     break;
-                case _Str_8921._Str_18768:
+                case PetSupplementTypeEnum.REBREED_FERTILIZER:
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_PET_REBREED_FERTILIZE;
                     break;
-                case _Str_8921._Str_16171:
+                case PetSupplementTypeEnum.SPEED_FERTILIZER:
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_PET_SPEED_FERTILIZE;
                     break;
             }

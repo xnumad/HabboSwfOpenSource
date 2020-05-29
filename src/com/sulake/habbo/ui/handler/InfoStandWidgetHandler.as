@@ -443,10 +443,10 @@
                     this._container.connection.send(new _Str_10187(_local_2));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_WATER_TO_PET:
-                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum._Str_9473));
+                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum.WATER));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_GIVE_LIGHT_TO_PET:
-                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum._Str_8421));
+                    this._container.connection.send(new _Str_7251(_local_2, PetSupplementEnum.LIGHT));
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_TREAT_PET:
                     this._container.connection.send(new _Str_8184(_local_2));

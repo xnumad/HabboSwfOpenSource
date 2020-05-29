@@ -2,7 +2,7 @@
 {
     public class PetSupplementEnum 
     {
-        public static const _Str_9473:int = 0;
-        public static const _Str_8421:int = 1;
+        public static const WATER:int = 0;
+        public static const LIGHT:int = 1;
     }
 }
