@@ -28,7 +28,7 @@
         function get nameChangeAllowed():Boolean;
         function get isAnyRoomController():Boolean;
         function get isAmbassador():Boolean;
-        function get _Str_22301():Boolean;
+        function get isEmailVerified():Boolean;
         function get mysteryBoxColor():String;
         function get mysteryKeyColor():String;
         function getUserTags(_arg_1:int):Array;

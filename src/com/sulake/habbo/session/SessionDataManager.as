@@ -534,7 +534,7 @@
             return this._isAmbassador;
         }
 
-        public function get _Str_22301():Boolean
+        public function get isEmailVerified():Boolean
         {
             return this._Str_20255;
         }
