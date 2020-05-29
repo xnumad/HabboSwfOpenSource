@@ -102,7 +102,7 @@
         private var _productParser:ProductDataParser;
         private var _floorItems:Map;
         private var _wallItems:Map;
-        private var _Str_5556:Map;
+        private var _furnitureIds:Map;
         private var _furnitureParser:FurnitureDataParser;
         private var _Str_7432:_Str_8883;
         private var _badgeImageManager:BadgeImageManager;
@@ -158,7 +158,7 @@
             this._products = new Dictionary();
             this._floorItems = new Map();
             this._wallItems = new Map();
-            this._Str_5556 = new Map();
+            this._furnitureIds = new Map();
             this.initFurnitureData();
             this.initProductData();
             this.initBadgeImageManager();
@@ -211,10 +211,10 @@
                 this._floorItems.dispose();
                 this._floorItems = null;
             }
-            if (this._Str_5556)
+            if (this._furnitureIds)
             {
-                this._Str_5556.dispose();
-                this._Str_5556 = null;
+                this._furnitureIds.dispose();
+                this._furnitureIds = null;
             }
             if (this._perkManager)
             {
@@ -256,7 +256,7 @@
                 this._furnitureParser.dispose();
                 this._furnitureParser = null;
             }
-            this._furnitureParser = new FurnitureDataParser(this._floorItems, this._wallItems, this._Str_5556, this._localizationManager);
+            this._furnitureParser = new FurnitureDataParser(this._floorItems, this._wallItems, this._furnitureIds, this._localizationManager);
             this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             if (propertyExists("furnidata.load.url"))
             {
@@ -765,11 +765,11 @@
         public function getFloorItemDataByName(k:String, _arg_2:int=0):IFurnitureData
         {
             var _local_4:int;
-            if (this._Str_5556 == null)
+            if (this._furnitureIds == null)
             {
                 return null;
             }
-            var _local_3:Array = this._Str_5556.getValue(k);
+            var _local_3:Array = this._furnitureIds.getValue(k);
             if (((!(_local_3 == null)) && (_arg_2 <= (_local_3.length - 1))))
             {
                 _local_4 = _local_3[_arg_2];
@@ -781,11 +781,11 @@
         public function getWallItemDataByName(k:String, _arg_2:int=0):IFurnitureData
         {
             var _local_4:int;
-            if (this._Str_5556 == null)
+            if (this._furnitureIds == null)
             {
                 return null;
             }
-            var _local_3:Array = this._Str_5556.getValue(k);
+            var _local_3:Array = this._furnitureIds.getValue(k);
             if (((!(_local_3 == null)) && (_arg_2 <= (_local_3.length - 1))))
             {
                 _local_4 = _local_3[_arg_2];
@@ -1011,7 +1011,7 @@
             }
             this._floorItems = new Map();
             this._wallItems = new Map();
-            this._Str_5556 = new Map();
+            this._furnitureIds = new Map();
             this.initFurnitureData();
         }
 
