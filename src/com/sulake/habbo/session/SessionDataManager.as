@@ -172,7 +172,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
+                this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
@@ -336,7 +336,7 @@
             this._ignoredUsersManager.initIgnoreList();
         }
 
-        private function _Str_5174(k:IMessageEvent):void
+        private function onUserChange(k:IMessageEvent):void
         {
             var _local_2:_Str_3084 = (k as _Str_3084);
             if (_local_2 == null)

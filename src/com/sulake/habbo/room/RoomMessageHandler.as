@@ -204,7 +204,7 @@
                 k.addMessageEvent(new UsersEvent(this._Str_10523));
                 k.addMessageEvent(new UserUpdateEvent(this.onUserUpdate));
                 k.addMessageEvent(new _Str_4914(this._Str_16267));
-                k.addMessageEvent(new _Str_3084(this._Str_5174));
+                k.addMessageEvent(new _Str_3084(this.onUserChange));
                 k.addMessageEvent(new ExpressionMessageEvent(this.onExpression));
                 k.addMessageEvent(new DanceMessageEvent(this.onDance));
                 k.addMessageEvent(new AvatarEffectMessageEvent(this.onAvatarEffect));
@@ -958,7 +958,7 @@
             this.updateGuideMarker();
         }
 
-        private function _Str_5174(k:IMessageEvent):void
+        private function onUserChange(k:IMessageEvent):void
         {
             var _local_2:_Str_3084 = (k as _Str_3084);
             if (_local_2 == null)

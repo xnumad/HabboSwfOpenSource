@@ -21,7 +21,7 @@
         {
             this._landingView = k;
             this._userObjectEvent = new UserObjectEvent(this.onUserObject);
-            this._userChangeMessageEvent = new _Str_3084(this._Str_5174);
+            this._userChangeMessageEvent = new _Str_3084(this.onUserChange);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
             this._landingView.avatarEditor.events.addEventListener(AvatarUpdateEvent.AVATAR_FIGURE_UPDATED, this._Str_20230);
@@ -72,7 +72,7 @@
             this._Str_7815(k.getParser().figure);
         }
 
-        private function _Str_5174(k:IMessageEvent):void
+        private function onUserChange(k:IMessageEvent):void
         {
             var _local_2:_Str_3084 = (k as _Str_3084);
             if (_local_2 == null)

@@ -28,7 +28,7 @@
         {
             this._toolbar = k;
             this._userObjectEvent = new UserObjectEvent(this.onUserObject);
-            this._figureUpdateEvent = new _Str_3084(this._Str_5174);
+            this._figureUpdateEvent = new _Str_3084(this.onUserChange);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._figureUpdateEvent);
             this.renderAvatar();
@@ -108,7 +108,7 @@
             this.renderAvatar(k.getParser().figure);
         }
 
-        private function _Str_5174(k:_Str_3084):void
+        private function onUserChange(k:_Str_3084):void
         {
             if (k.id == -1)
             {

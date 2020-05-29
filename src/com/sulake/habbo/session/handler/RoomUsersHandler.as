@@ -79,7 +79,7 @@
             k.addMessageEvent(new _Str_4914(this._Str_16267));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
-            k.addMessageEvent(new _Str_3084(this._Str_5174));
+            k.addMessageEvent(new _Str_3084(this.onUserChange));
             k.addMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             k.addMessageEvent(new PetInfoMessageEvent(this.onPetInfo));
             k.addMessageEvent(new PetTrainingPanelEvent(this.onEnabledPetCommands));
@@ -225,7 +225,7 @@
             listener.events.dispatchEvent(new RoomSessionDoorbellEvent(RoomSessionDoorbellEvent.RSDE_DOORBELL, _local_3, _local_2.userName));
         }
 
-        private function _Str_5174(k:IMessageEvent):void
+        private function onUserChange(k:IMessageEvent):void
         {
             var _local_2:_Str_3084 = (k as _Str_3084);
             if (_local_2 == null)

@@ -45,7 +45,7 @@
             this._container = IWindowContainer(this._landingView.getXmlWindow("achievement_competition_prizes"));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
         }
 
         public function refresh():void
@@ -141,7 +141,7 @@
             this._Str_7815();
         }
 
-        private function _Str_5174(k:_Str_3084):void
+        private function onUserChange(k:_Str_3084):void
         {
             if (((!(k == null)) && (k.id == -1)))
             {
