@@ -114,7 +114,7 @@
         private var _Str_6042:Array;
         private var _clubLevel:int;
         private var _securityLevel:int;
-        private var _Str_16966:int = 0;
+        private var _topSecurityLevel:int = 0;
         private var _Str_7106:int = -1;
         private var _isAmbassador:Boolean;
         private var _Str_20255:Boolean;
@@ -306,7 +306,7 @@
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             this._clubLevel = _local_2.clubLevel;
             this._securityLevel = _local_2.securityLevel;
-            this._Str_16966 = Math.max(this._Str_16966, _local_2.securityLevel);
+            this._topSecurityLevel = Math.max(this._topSecurityLevel, _local_2.securityLevel);
             this._isAmbassador = _local_2.isAmbassador;
         }
 
@@ -486,7 +486,7 @@
 
         public function get topSecurityLevel():int
         {
-            return this._Str_16966;
+            return this._topSecurityLevel;
         }
 
         public function get clubLevel():int
