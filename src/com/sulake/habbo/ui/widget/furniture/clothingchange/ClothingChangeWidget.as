@@ -86,7 +86,7 @@
             }
             this._Str_5344 = (windowManager.createWindow("clothing change gender selection", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, (((WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET | WindowParam.WINDOW_PARAM_PARENT_WINDOW) | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(100, 100, 200, 200), null, 0) as IWindowContainer);
             this._Str_5344.buildFromXML(XML(_local_3.content));
-            this._Str_5344.addEventListener(WindowMouseEvent.CLICK, this._Str_17954);
+            this._Str_5344.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
             this._Str_5344.center();
             var _local_4:IWindow = this._Str_5344.findChildByTag("close");
             if (_local_4 != null)
@@ -96,12 +96,12 @@
             _local_4 = this._Str_5344.findChildByName(BOY);
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_17954);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
             }
             _local_4 = this._Str_5344.findChildByName(GIRL);
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_17954);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
             }
         }
 
@@ -123,7 +123,7 @@
             this._Str_9023();
         }
 
-        private function _Str_17954(k:WindowMouseEvent):void
+        private function onGenderSelectionMouseEvent(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;
