@@ -17,9 +17,9 @@
             return (_parser as _Str_9422).userId;
         }
 
-        public function get _Str_14823():Map
+        public function get relationshipStatusMap():Map
         {
-            return (_parser as _Str_9422)._Str_14823;
+            return (_parser as _Str_9422).relationshipStatusMap;
         }
     }
 }

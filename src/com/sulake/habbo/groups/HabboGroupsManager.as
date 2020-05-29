@@ -526,7 +526,7 @@
         private function _Str_18561(k:IMessageEvent):void
         {
             var _local_2:_Str_5269 = _Str_5269(k);
-            this._extendedProfileWindowCtrl._Str_18561(_local_2.userId, _local_2._Str_14823);
+            this._extendedProfileWindowCtrl._Str_18561(_local_2.userId, _local_2.relationshipStatusMap);
         }
 
         private function _Str_24382(k:UserBadgesEvent):void

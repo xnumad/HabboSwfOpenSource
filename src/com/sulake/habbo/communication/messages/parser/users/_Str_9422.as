@@ -42,7 +42,7 @@
             return this._userId;
         }
 
-        public function get _Str_14823():Map
+        public function get relationshipStatusMap():Map
         {
             return this._relationshipStatusMap;
         }

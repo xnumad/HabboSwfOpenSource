@@ -1494,7 +1494,7 @@
         {
             if (((this._widget) && (this._widget.mainWindow.visible)))
             {
-                this._widget.setRelationshipStatus(k.userId, k._Str_14823);
+                this._widget.setRelationshipStatus(k.userId, k.relationshipStatusMap);
             }
         }
 
