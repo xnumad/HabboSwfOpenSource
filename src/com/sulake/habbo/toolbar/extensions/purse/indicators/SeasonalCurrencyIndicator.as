@@ -39,7 +39,7 @@
             this._Str_15051 = "amount";
             this._Str_8446 = _arg_5.getLocalization("purse.snowflakes.zero.amount.text", "Info");
             createWindow("purse_indicator_seasonal_xml", null);
-            window.findChildByName("seasonal_icon").style = ActivityPointTypeEnum._Str_5251(this._Str_20938(), k, true);
+            window.findChildByName("seasonal_icon").style = ActivityPointTypeEnum.getIconStyleFor(this._Str_20938(), k, true);
             this.setAmount(0);
             k.extensionView.attachExtension(ToolbarDisplayExtensionIds.PURSE_SEASONAL_CURRENCY, window, ExtensionFixedSlotsEnum._Str_18616);
             this.registerUpdateEvents(_arg_4.events);

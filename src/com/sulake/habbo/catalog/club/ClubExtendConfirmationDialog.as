@@ -212,7 +212,7 @@
         private function _Str_9646(k:String):void
         {
             var _local_2:IWindow = this._view.findChildByName(k);
-            _local_2.style = ActivityPointTypeEnum._Str_5251(this._offer._Str_22469, this._controller.config, true);
+            _local_2.style = ActivityPointTypeEnum.getIconStyleFor(this._offer._Str_22469, this._controller.config, true);
         }
 
         private function _Str_21389(k:WindowMouseEvent):void

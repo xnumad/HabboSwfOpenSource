@@ -220,7 +220,7 @@
                     _local_5 = _Str_2271.findChildByName(CURRENCY_INDICATOR_RIGHT);
                     if (_local_5)
                     {
-                        _local_5.style = ActivityPointTypeEnum._Str_5251(this._Str_2324.activityPointType, k, false);
+                        _local_5.style = ActivityPointTypeEnum.getIconStyleFor(this._Str_2324.activityPointType, k, false);
                     }
                     _local_4.text = (this._Str_2324.priceInActivityPoints + "");
                 }

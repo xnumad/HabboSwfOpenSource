@@ -22,7 +22,7 @@
             return [DUCKET, SEASONAL_1, SEASONAL_2, SEASONAL_3, SEASONAL_4, SEASONAL_5, NO_OP_1, NO_OP_2, NO_OP_4];
         }
 
-        public static function _Str_5251(k:int, _arg_2:IHabboConfigurationManager, _arg_3:Boolean, _arg_4:Boolean=false):int
+        public static function getIconStyleFor(k:int, _arg_2:IHabboConfigurationManager, _arg_3:Boolean, _arg_4:Boolean=false):int
         {
             var _local_5:String;
             if (k == -1)

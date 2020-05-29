@@ -55,7 +55,7 @@
             _local_2.localization.registerParameter(_local_3, "activitypoints", ("" + _local_2.getPurse().getActivityPointsForType(k)));
             _window.findChildByName("activity_points_txt").caption = _local_2.localization.getLocalization(_local_3);
             var _local_4:IWindow = _window.findChildByName("activity_point_icon");
-            _local_4.style = ActivityPointTypeEnum._Str_5251(k, _local_2, true);
+            _local_4.style = ActivityPointTypeEnum.getIconStyleFor(k, _local_2, true);
             _window.visible = true;
             return true;
         }

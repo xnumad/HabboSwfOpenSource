@@ -166,7 +166,7 @@
             var _local_7:ITextWindow = (k.getListItemByName(("amount_" + _arg_2)) as ITextWindow);
             var _local_8:IWindow = k.getListItemByName(("unit_" + _arg_2));
             _local_7.text = ((_arg_6) ? "" : (((_arg_2 > 0) ? "+ " : "") + _arg_3.amount));
-            _local_8.style = ActivityPointTypeEnum._Str_5251(_arg_3.unit, this._habboCatalog, true, _arg_5);
+            _local_8.style = ActivityPointTypeEnum.getIconStyleFor(_arg_3.unit, this._habboCatalog, true, _arg_5);
             _local_8.width = (((_arg_4) && (_arg_5)) ? 53 : 22);
         }
 

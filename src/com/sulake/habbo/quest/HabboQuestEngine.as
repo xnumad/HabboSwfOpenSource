@@ -563,7 +563,7 @@
         public function _Str_24530(k:IWindowContainer, _arg_2:int):void
         {
             var _local_3:IWindow = k.findChildByName("currency_icon");
-            _local_3.style = ActivityPointTypeEnum._Str_5251(_arg_2, this, true);
+            _local_3.style = ActivityPointTypeEnum.getIconStyleFor(_arg_2, this, true);
         }
 
         public function _Str_19396(k:IWindowContainer, _arg_2:_Str_2455, _arg_3:Boolean):void

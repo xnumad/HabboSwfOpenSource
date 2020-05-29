@@ -172,12 +172,12 @@
                 }
                 if (page.acceptSeasonCurrencyAsCredits)
                 {
-                    k.style = ActivityPointTypeEnum._Str_5251(this._habboCatalog._Str_19095(), this._habboCatalog, true, true);
+                    k.style = ActivityPointTypeEnum.getIconStyleFor(this._habboCatalog._Str_19095(), this._habboCatalog, true, true);
                     k.width = 53;
                 }
                 else
                 {
-                    k.style = ActivityPointTypeEnum._Str_5251(-1, this._habboCatalog, true);
+                    k.style = ActivityPointTypeEnum.getIconStyleFor(-1, this._habboCatalog, true);
                     k.width = 22;
                 }
             }
@@ -190,7 +190,7 @@
                     this._Str_6091.visible = false;
                 }
                 _local_2 = _window.findChildByName(CURRENCY_INDICATOR_BITMAP_RIGHT);
-                _local_2.style = ActivityPointTypeEnum._Str_5251(this._Str_10800, this._habboCatalog, true);
+                _local_2.style = ActivityPointTypeEnum.getIconStyleFor(this._Str_10800, this._habboCatalog, true);
             }
             IItemListWindow(_window.findChildByName(TOTALPRICE_CONTAINER)).arrangeListItems();
         }

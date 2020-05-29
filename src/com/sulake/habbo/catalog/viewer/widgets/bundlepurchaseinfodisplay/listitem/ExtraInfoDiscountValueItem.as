@@ -201,7 +201,7 @@
         private function setIconStyle(k:String, _arg_2:int):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
-            _local_3.style = ActivityPointTypeEnum._Str_5251(_arg_2, this._catalog, false);
+            _local_3.style = ActivityPointTypeEnum.getIconStyleFor(_arg_2, this._catalog, false);
         }
 
         private function setLeftColumnVisibility(k:Boolean):void

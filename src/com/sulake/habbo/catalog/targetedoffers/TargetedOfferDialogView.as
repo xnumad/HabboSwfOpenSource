@@ -116,7 +116,7 @@
         private function _Str_9646(k:String, _arg_2:IWindowContainer, _arg_3:int):void
         {
             var _local_4:IWindow = _arg_2.findChildByName(k);
-            _local_4.style = ActivityPointTypeEnum._Str_5251(_arg_3, _Str_2278.catalog, true);
+            _local_4.style = ActivityPointTypeEnum.getIconStyleFor(_arg_3, _Str_2278.catalog, true);
         }
 
         override protected function setTimeLeft(k:String):void
