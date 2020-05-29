@@ -116,7 +116,7 @@
         private var _securityLevel:int;
         private var _Str_16966:int = 0;
         private var _Str_7106:int = -1;
-        private var isAmbassador:Boolean;
+        private var _isAmbassador:Boolean;
         private var _Str_20255:Boolean;
         private var _roomCameraFollowDisabled:Boolean;
         private var _Str_3790:int;
@@ -307,7 +307,7 @@
             this._clubLevel = _local_2.clubLevel;
             this._securityLevel = _local_2.securityLevel;
             this._Str_16966 = Math.max(this._Str_16966, _local_2.securityLevel);
-            this.isAmbassador = _local_2.isAmbassador;
+            this._isAmbassador = _local_2.isAmbassador;
         }
 
         private function _Str_25667(k:NoobnessLevelMessageEvent):void
@@ -531,7 +531,7 @@
 
         public function get isAmbassador():Boolean
         {
-            return this.isAmbassador;
+            return this._isAmbassador;
         }
 
         public function get _Str_22301():Boolean
