@@ -4,7 +4,7 @@
     import com.sulake.core.window.components.IRadioButtonWindow;
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5716;
+    import com.sulake.habbo.communication.messages.incoming.users.IGuildData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
@@ -40,7 +40,7 @@
             this._membersHaveRights.procedure = this._Str_25398;
         }
 
-        public function refresh(k:_Str_5716):void
+        public function refresh(k:IGuildData):void
         {
             this._data = new GuildSettingsData(k);
             switch (this._data._Str_4830)

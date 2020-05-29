@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.groups.badge.BadgeEditorCtrl;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5716;
+    import com.sulake.habbo.communication.messages.incoming.users.IGuildData;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2866;
@@ -56,7 +56,7 @@
         private var _settingsCtrl:GuildSettingsCtrl;
         private var _alertVisible:Boolean = false;
         private var _alertedBaseRoomId:int = 0;
-        private var _data:_Str_5716;
+        private var _data:IGuildData;
         private var _step:int = 1;
 
         public function GuildManagementWindowCtrl(k:HabboGroupsManager)
@@ -726,7 +726,7 @@
             }
         }
 
-        public function get data():_Str_5716
+        public function get data():IGuildData
         {
             return this._data;
         }

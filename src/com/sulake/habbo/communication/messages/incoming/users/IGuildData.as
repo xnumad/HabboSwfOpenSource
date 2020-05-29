@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.users
 {
-    public interface _Str_5716 
+    public interface IGuildData
     {
         function get ownedRooms():Array;
         function get exists():Boolean;

@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class GuildEditData implements _Str_5716
+    public class GuildEditData implements IGuildData
     {
         private var _ownedRooms:Array;
         private var _isOwner:Boolean;

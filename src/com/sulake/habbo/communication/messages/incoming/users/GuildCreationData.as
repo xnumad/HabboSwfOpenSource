@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class GuildCreationData implements _Str_5716
+    public class GuildCreationData implements IGuildData
     {
         private var _costInCredits:int;
         private var _ownedRooms:Array;

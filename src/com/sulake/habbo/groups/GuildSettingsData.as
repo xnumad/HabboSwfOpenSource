@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.groups
 {
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5716;
+    import com.sulake.habbo.communication.messages.incoming.users.IGuildData;
 
     public class GuildSettingsData 
     {
@@ -8,7 +8,7 @@
         private var _rightsLevel:int = 0;
         private var _modified:Boolean = false;
 
-        public function GuildSettingsData(k:_Str_5716=null)
+        public function GuildSettingsData(k:IGuildData=null)
         {
             if (k == null)
             {
