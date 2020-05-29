@@ -231,7 +231,7 @@
             LegacyNavigator(this._navigator._Str_2559).send(new _Str_7413());
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             var _local_2:UserRightsMessageEvent;
             if (this._navigator)

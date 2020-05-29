@@ -169,7 +169,7 @@
             if (this._communicationManager)
             {
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this._Str_12366));
-                this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+                this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
@@ -301,7 +301,7 @@
             }
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             this._clubLevel = _local_2.clubLevel;

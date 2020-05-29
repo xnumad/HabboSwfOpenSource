@@ -154,7 +154,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
             this._com.addHabboConnectionMessageEvent(new _Str_3352(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
-            this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._com.addHabboConnectionMessageEvent(new _Str_8120(this._Str_23620));
             this._com.addHabboConnectionMessageEvent(new _Str_5946(this._Str_16617));
             this._com.addHabboConnectionMessageEvent(new _Str_6450(this.onAvatarEffects));
@@ -948,7 +948,7 @@
             _local_2._Str_16520();
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             var _local_2:MarketplaceModel;
             if (this._inventory._Str_18826(InventoryCategory.MARKETPLACE))

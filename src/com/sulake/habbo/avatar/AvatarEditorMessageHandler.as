@@ -31,7 +31,7 @@
             this._communication.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
             this._communication.addHabboConnectionMessageEvent(new _Str_9393(this._Str_25446));
             this._communication.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
-            this._communication.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            this._communication.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._communication.addHabboConnectionMessageEvent(new AvatarEffectMessageEvent(this._Str_22375));
             this._communication.addHabboConnectionMessageEvent(new _Str_12022(this._Str_22833));
             this._communication.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
@@ -116,7 +116,7 @@
             }
         }
 
-        private function _Str_4297(k:UserRightsMessageEvent):void
+        private function onUserRights(k:UserRightsMessageEvent):void
         {
             if (((k == null) || (!(this._controller))))
             {

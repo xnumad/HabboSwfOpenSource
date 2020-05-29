@@ -534,7 +534,7 @@
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8535(this._Str_23472));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_8109(this._Str_23021));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_9229(this._Str_22762));
-            this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
         }
 
         private function _Str_22340():void
@@ -939,7 +939,7 @@
             return RelationshipStatusEnum.NONE;
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             if (((!(this._sessionDataManager)) || (!(this._friendRequests))))
             {

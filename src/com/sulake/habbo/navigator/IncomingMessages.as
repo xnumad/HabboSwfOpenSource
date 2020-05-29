@@ -124,7 +124,7 @@
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new _Str_4265(this._Str_16100));
-            _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
             _local_2.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo));
@@ -195,7 +195,7 @@
             this._navigator.send(new _Str_7413());
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             var _local_2:UserRightsMessageEvent = UserRightsMessageEvent(k);
             if (_local_2.securityLevel >= SecurityLevelEnum.MODERATOR)

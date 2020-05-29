@@ -33,7 +33,7 @@
             this._catalog = k;
             this._launchers = new Vector.<IVideoOfferLauncher>();
             this._enabled = false;
-            this._catalog.connection.addMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            this._catalog.connection.addMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._Str_21648();
         }
 
@@ -79,7 +79,7 @@
             }
         }
 
-        private function _Str_4297(k:UserRightsMessageEvent):void
+        private function onUserRights(k:UserRightsMessageEvent):void
         {
             if (k.securityLevel >= SecurityLevelEnum.CELEBRITY)
             {

@@ -285,7 +285,7 @@
             var _local_2:int;
             var _local_3:int;
             this._connection = this._communicationManager.connection;
-            this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this._Str_4297));
+            this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._bottomBarBackground = new BottomBackgroundBorder(this);
             this._view = new BottomBarLeft(this, this._windowManager, assets, events);
             this._view.window.visible = false;
@@ -343,7 +343,7 @@
             }
         }
 
-        private function _Str_4297(k:IMessageEvent):void
+        private function onUserRights(k:IMessageEvent):void
         {
             if (!this._videoOfferExtension)
             {
