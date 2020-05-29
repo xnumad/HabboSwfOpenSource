@@ -73,7 +73,7 @@
                     _local_4 = (k as RoomWidgetCreditFurniRedeemMessage);
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_22199(_local_4._Str_1577);
+                        this._container.roomSession._Str_22199(_local_4.objectId);
                     }
             }
             return null;

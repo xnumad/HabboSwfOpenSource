@@ -1086,7 +1086,7 @@
         {
             var _local_4:IRoomObjectModel;
             var _local_2:Boolean;
-            var _local_3:IRoomObject = this.roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
+            var _local_3:IRoomObject = this.roomEngine.getRoomObject(k.roomId, k.objectId, k.category);
             if (_local_3 != null)
             {
                 _local_4 = _local_3.getModel();
@@ -1118,7 +1118,7 @@
             {
                 return;
             }
-            var _local_2:int = int(k._Str_1577);
+            var _local_2:int = int(k.objectId);
             var _local_3:int = int(k.category);
             var _local_4:RoomWidgetRoomObjectUpdateEvent;
             var _local_5:RoomWidgetFurniToWidgetMessage;
@@ -1180,15 +1180,15 @@
                     _local_4 = new RoomWidgetRoomObjectUpdateEvent(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, _local_2, _local_3, k.roomId);
                     break;
                 case RoomEngineObjectEvent.REQUEST_MOVE:
-                    if (this._Str_21292(k.roomId, k._Str_1577, k.category))
+                    if (this._Str_21292(k.roomId, k.objectId, k.category))
                     {
-                        this._roomEngine.updateObjectWallItemData(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
+                        this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
                     }
                     break;
                 case RoomEngineObjectEvent.REQUEST_ROTATE:
-                    if (this._Str_21292(k.roomId, k._Str_1577, k.category))
+                    if (this._Str_21292(k.roomId, k.objectId, k.category))
                     {
-                        this._roomEngine.updateObjectWallItemData(k._Str_1577, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
+                        this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     }
                     break;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CREDITFURNI:
@@ -1248,7 +1248,7 @@
                     this.processWidgetMessage(_local_5);
                     break;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ACHIEVEMENT_RESOLUTION_FAILED:
-                    _local_7 = this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
+                    _local_7 = this._roomEngine.getRoomObject(k.roomId, k.objectId, k.category);
                     if (_local_7 != null)
                     {
                         _local_9 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_OWNER_ID);
@@ -1845,7 +1845,7 @@
             {
                 return;
             }
-            var _local_2:IRoomObject = this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
+            var _local_2:IRoomObject = this._roomEngine.getRoomObject(k.roomId, k.objectId, k.category);
             if (_local_2 == null)
             {
                 return;
@@ -1892,7 +1892,7 @@
                     {
                         return;
                     }
-                    _local_2 = this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
+                    _local_2 = this._roomEngine.getRoomObject(k.roomId, k.objectId, k.category);
                     if (_local_2 == null)
                     {
                         return;

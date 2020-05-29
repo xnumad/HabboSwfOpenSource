@@ -63,7 +63,7 @@
                 _local_4 = (k as RoomEngineUseProductEvent);
                 if (_local_4.type == RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_INVENTORY)
                 {
-                    this._widget._Str_24496(_local_4._Str_1577);
+                    this._widget._Str_24496(_local_4.objectId);
                 }
             }
             var _local_2:RoomEngineTriggerWidgetEvent = (k as RoomEngineTriggerWidgetEvent);
@@ -71,7 +71,7 @@
             {
                 return;
             }
-            var _local_3:IRoomObject = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+            var _local_3:IRoomObject = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
             switch (k.type)
             {
                 case RoomEngineTriggerWidgetEvent.OPEN_WIDGET:

@@ -83,7 +83,7 @@
             {
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_MANNEQUIN:
                     _local_2 = (k as RoomEngineObjectEvent);
-                    _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+                    _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
                     _local_4 = _local_3.getModel();
                     _local_5 = _local_4.getString(RoomObjectVariableEnum.FURNITURE_MANNEQUIN_FIGURE);
                     _local_6 = _local_4.getString(RoomObjectVariableEnum.FURNITURE_MANNEQUIN_GENDER);

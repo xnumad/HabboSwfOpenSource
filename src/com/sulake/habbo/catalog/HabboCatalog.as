@@ -2497,7 +2497,7 @@
                 _local_3 = this._roomSessionManager.getSession(k.roomId);
                 if (_local_3 != null)
                 {
-                    _local_2 = _local_3.userDataManager.getUserDataByIndex(k._Str_1577);
+                    _local_2 = _local_3.userDataManager.getUserDataByIndex(k.objectId);
                 }
             }
             return _local_2;
@@ -2574,7 +2574,7 @@
                     this._Str_7529();
                     return;
                 }
-                this._placedObjectPurchaseData = new PlacedObjectPurchaseData(k.roomId, k._Str_1577, k.category, k._Str_7031, k.x, k.y, k.direction, this._purchasableOffer);
+                this._placedObjectPurchaseData = new PlacedObjectPurchaseData(k.roomId, k.objectId, k.category, k._Str_7031, k.x, k.y, k.direction, this._purchasableOffer);
                 _local_5 = this._Str_8970;
                 if (_local_5 != null)
                 {
@@ -2585,7 +2585,7 @@
                     case CatalogType.NORMAL:
                         if (_local_2 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                         {
-                            this._roomEngine.addObjectFurniture(k.roomId, k._Str_1577, _local_3.productClassId, new Vector3d(k.x, k.y, k.z), new Vector3d(k.direction, 0, 0), 0, new LegacyStuffData());
+                            this._roomEngine.addObjectFurniture(k.roomId, k.objectId, _local_3.productClassId, new Vector3d(k.x, k.y, k.z), new Vector3d(k.direction, 0, 0), 0, new LegacyStuffData());
                         }
                         else
                         {
@@ -2599,11 +2599,11 @@
                                         this._Str_21839(_local_3.furnitureData.className, _local_3.extraParam);
                                         break;
                                     default:
-                                        this._roomEngine.addObjectWallItem(k.roomId, k._Str_1577, _local_3.productClassId, new Vector3d(k.x, k.y, k.z), new Vector3d((k.direction * 45), 0, 0), 0, k._Str_4766, 0);
+                                        this._roomEngine.addObjectWallItem(k.roomId, k.objectId, _local_3.productClassId, new Vector3d(k.x, k.y, k.z), new Vector3d((k.direction * 45), 0, 0), 0, k._Str_4766, 0);
                                 }
                             }
                         }
-                        _local_6 = (this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category) as IRoomObjectController);
+                        _local_6 = (this._roomEngine.getRoomObject(k.roomId, k.objectId, k.category) as IRoomObjectController);
                         if (_local_6)
                         {
                             _local_6.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_ALPHA_MULTIPLIER, 0.5);
@@ -2672,7 +2672,7 @@
             {
                 if (this._placedObjectPurchaseData.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                 {
-                    this._roomEngine.disposeObjectFurniture(this._placedObjectPurchaseData.roomId, this._placedObjectPurchaseData._Str_1577);
+                    this._roomEngine.disposeObjectFurniture(this._placedObjectPurchaseData.roomId, this._placedObjectPurchaseData.objectId);
                 }
                 else
                 {
@@ -2686,12 +2686,12 @@
                                 this._Str_21839("reset", "");
                                 break;
                             default:
-                                this._roomEngine.disposeObjectWallItem(this._placedObjectPurchaseData.roomId, this._placedObjectPurchaseData._Str_1577);
+                                this._roomEngine.disposeObjectWallItem(this._placedObjectPurchaseData.roomId, this._placedObjectPurchaseData.objectId);
                         }
                     }
                     else
                     {
-                        this._roomEngine.deleteRoomObject(this._placedObjectPurchaseData._Str_1577, this._placedObjectPurchaseData.category);
+                        this._roomEngine.deleteRoomObject(this._placedObjectPurchaseData.objectId, this._placedObjectPurchaseData.category);
                     }
                 }
                 this._placedObjectPurchaseData.dispose();

@@ -47,7 +47,7 @@
         private function _Str_22050(k:_Str_5436):void
         {
             _Str_2718(false);
-            _objectId = k._Str_1577;
+            _objectId = k.objectId;
             this._location = k.location;
             _Str_3796 = k.objectType;
             _text = "";

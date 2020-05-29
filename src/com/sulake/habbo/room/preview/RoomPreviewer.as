@@ -579,18 +579,18 @@
             var _local_2:IRoomObject;
             var _local_3:Number;
             var _local_4:Number;
-            if ((((k.roomId == this._previewRoomId) && (k._Str_1577 == PREVIEW_OBJECT_ID)) && (k.category == this._currentPreviewObjectCategory)))
+            if ((((k.roomId == this._previewRoomId) && (k.objectId == PREVIEW_OBJECT_ID)) && (k.category == this._currentPreviewObjectCategory)))
             {
                 this._currentPreviewRectangle = null;
                 this._currentPreviewNeedsZoomOut = false;
-                _local_2 = this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
+                _local_2 = this._roomEngine.getRoomObject(k.roomId, k.objectId, k.category);
                 if ((((!(_local_2 == null)) && (!(_local_2.getModel() == null))) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
                 {
                     _local_3 = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_SIZE_Z);
                     _local_4 = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_CENTER_Z);
                     if (((!(isNaN(_local_3))) && (!(isNaN(_local_4)))))
                     {
-                        this._roomEngine.updateObjectWallItemLocation(k.roomId, k._Str_1577, new Vector3d(0.5, 2.3, (((3.6 - _local_3) / 2) + _local_4)));
+                        this._roomEngine.updateObjectWallItemLocation(k.roomId, k.objectId, new Vector3d(0.5, 2.3, (((3.6 - _local_3) / 2) + _local_4)));
                     }
                 }
             }

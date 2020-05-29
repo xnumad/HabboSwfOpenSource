@@ -14,7 +14,7 @@
             super(LWMOPRE_MOVING_OBJECT_PATH_RESET, _arg_3, _arg_4);
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

@@ -289,7 +289,7 @@
             {
                 return;
             }
-            var _local_3:IRoomObject = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+            var _local_3:IRoomObject = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
             switch (k.type)
             {
                 case RoomEngineTriggerWidgetEvent.OPEN_WIDGET:

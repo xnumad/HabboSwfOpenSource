@@ -85,33 +85,33 @@
         {
             if (k._Str_6992 != -1)
             {
-                this._Str_23007(k._Str_1577, k._Str_6992);
-                if (this._initialPitch.hasKey(k._Str_1577))
+                this._Str_23007(k.objectId, k._Str_6992);
+                if (this._initialPitch.hasKey(k.objectId))
                 {
-                    this._initialPitch.remove(k._Str_1577);
+                    this._initialPitch.remove(k.objectId);
                 }
-                this._initialPitch.add(k._Str_1577, k._Str_4740);
+                this._initialPitch.add(k.objectId, k._Str_4740);
             }
         }
 
         private function _Str_21969(k:RoomEngineObjectSamplePlaybackEvent):void
         {
-            this._Str_25308(k._Str_1577);
+            this._Str_25308(k.objectId);
         }
 
         private function _Str_22002(k:RoomEngineObjectSamplePlaybackEvent):void
         {
-            if (this._loadedSamples.getValue(k._Str_1577) != null)
+            if (this._loadedSamples.getValue(k.objectId) != null)
             {
-                this._Str_24951(k._Str_1577);
+                this._Str_24951(k.objectId);
             }
         }
 
         private function _Str_20753(k:RoomEngineObjectSamplePlaybackEvent):void
         {
-            if (this._loadedSamples.getValue(k._Str_1577) != null)
+            if (this._loadedSamples.getValue(k.objectId) != null)
             {
-                this._Str_25082(k._Str_1577, k._Str_4740);
+                this._Str_25082(k.objectId, k._Str_4740);
             }
         }
 

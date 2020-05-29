@@ -56,7 +56,7 @@
                     _local_2 = (k as RoomEngineTriggerWidgetEvent);
                     if (((!(k == null)) && (!(this._container.roomEngine == null))))
                     {
-                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
                         if (_local_3 != null)
                         {
                             _local_4 = _local_3.getModel();

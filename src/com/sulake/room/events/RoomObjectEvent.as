@@ -18,7 +18,7 @@
             return this._object;
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             if (this._object != null)
             {

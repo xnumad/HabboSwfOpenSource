@@ -561,7 +561,7 @@
                     if (((!(_local_18 == null)) && (!(this._widget == null))))
                     {
                         _local_25 = this._widget.furniData;
-                        if (((!(_local_25 == null)) && (_local_25.id == _local_18._Str_1577)))
+                        if (((!(_local_25 == null)) && (_local_25.id == _local_18.objectId)))
                         {
                             if (this._widget._Str_25620())
                             {

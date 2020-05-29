@@ -132,7 +132,7 @@
                 case _Str_2490.RWPDUE_PACKAGEINFO:
                     this._Str_2718();
                     this._openRequested = false;
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._text = k.text;
                     this._controller = k.controller;
                     this._senderName = k._Str_22956;
@@ -145,7 +145,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._classId = k.classId;
                     this._itemType = k.itemType;
                     this._text = k.text;
@@ -161,7 +161,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._classId = k.classId;
                     this._itemType = k.itemType;
                     this._text = k.text;
@@ -177,7 +177,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._classId = k.classId;
                     this._itemType = k.itemType;
                     this._text = k.text;
@@ -193,7 +193,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._classId = k.classId;
                     this._itemType = k.itemType;
                     this._text = k.text;
@@ -206,7 +206,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._classId = k.classId;
                     this._itemType = k.itemType;
                     this._text = k.text;

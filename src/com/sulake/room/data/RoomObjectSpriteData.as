@@ -2,7 +2,7 @@
 {
     public class RoomObjectSpriteData 
     {
-        public var _Str_1577:int;
+        public var objectId:int;
         public var x:int;
         public var y:int;
         public var z:Number;

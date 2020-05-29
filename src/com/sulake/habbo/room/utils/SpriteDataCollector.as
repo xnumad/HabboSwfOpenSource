@@ -46,7 +46,7 @@
             {
                 if (((_local_4.objectType == "boutique_mannequin1") && (_local_4.name.indexOf("mannequin_") == 0)))
                 {
-                    _local_5 = _arg_2.getRoomObject(_arg_2.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+                    _local_5 = _arg_2.getRoomObject(_arg_2.activeRoomId, _local_4.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                     if (_local_5 != null)
                     {
                         _local_6 = IRoomObjectSpriteVisualization(_local_5.getVisualization()).getSpriteList();
@@ -195,7 +195,7 @@
             _local_6.sort(_Str_22564);
             for each (_local_9 in _local_6)
             {
-                if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9._Str_1577 == _arg_4)))))
+                if ((((((!(_local_9.name == null)) && (_local_9.name.length > 0)) && (!(_local_9.name.indexOf("tile_cursor_") == 0))) && (_Str_20789(_local_9, k, _arg_2))) && ((_arg_4 < 0) || (!(_local_9.objectId == _arg_4)))))
                 {
                     _local_5.push(this._Str_25132(_local_9, k, _arg_2, _arg_3));
                     if (!this._Str_6409)

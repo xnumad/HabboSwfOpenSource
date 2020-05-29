@@ -111,7 +111,7 @@
                     break;
                 case RoomWidgetPresentOpenMessage.RWPOM_OPEN_PRESENT:
                     _local_4 = (k as RoomWidgetPresentOpenMessage);
-                    if (_local_4._Str_1577 != this._objectId)
+                    if (_local_4.objectId != this._objectId)
                     {
                         return null;
                     }
@@ -119,11 +119,11 @@
                     {
                         if (this._container.roomSession != null)
                         {
-                            this._container.roomSession._Str_17139(_local_4._Str_1577);
+                            this._container.roomSession._Str_17139(_local_4.objectId);
                         }
                         if (this._container.roomEngine != null)
                         {
-                            this._container.roomEngine.changeObjectModelData(this._container.roomEngine.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
+                            this._container.roomEngine.changeObjectModelData(this._container.roomEngine.activeRoomId, _local_4.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
                         }
                     }
                     break;

@@ -35,7 +35,7 @@
             this._Str_19510 = _arg_7;
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

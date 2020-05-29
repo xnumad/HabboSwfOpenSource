@@ -92,13 +92,13 @@
                     break;
                 case RoomWidgetEcotronBoxOpenMessage.RWEBOM_OPEN_ECOTRONBOX:
                     _local_4 = (k as RoomWidgetEcotronBoxOpenMessage);
-                    if (_local_4._Str_1577 != this._objectId)
+                    if (_local_4.objectId != this._objectId)
                     {
                         return null;
                     }
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_17139(_local_4._Str_1577);
+                        this._container.roomSession._Str_17139(_local_4.objectId);
                     }
                     break;
             }

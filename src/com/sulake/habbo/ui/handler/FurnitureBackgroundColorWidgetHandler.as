@@ -86,7 +86,7 @@
                     if (this._Str_6826())
                     {
                         _local_2 = (k as RoomEngineObjectEvent);
-                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
                         _local_4 = _local_3.getModel();
                         _local_5 = _local_4.getNumber(RoomObjectVariableEnum.FURNITURE_ROOM_BACKGROUND_COLOR_HUE);
                         _local_6 = _local_4.getNumber(RoomObjectVariableEnum.FURNITURE_ROOM_BACKGROUND_COLOR_SATURATION);

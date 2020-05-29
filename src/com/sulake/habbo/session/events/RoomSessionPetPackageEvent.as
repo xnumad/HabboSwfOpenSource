@@ -22,7 +22,7 @@
             this._nameValidationInfo = _arg_6;
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

@@ -188,7 +188,7 @@
             {
                 case RoomObjectSoundMachineEvent.JUKEBOX_DISPOSE:
                     _local_2 = (k as RoomObjectSoundMachineEvent);
-                    _local_3 = new _Str_2693(_Str_2693.RWPLEE_HIDE_PLAYLIST_EDITOR, _local_2._Str_1577);
+                    _local_3 = new _Str_2693(_Str_2693.RWPLEE_HIDE_PLAYLIST_EDITOR, _local_2.objectId);
                     this._container.events.dispatchEvent(_local_3);
                     return;
             }

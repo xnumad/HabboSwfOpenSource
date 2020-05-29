@@ -59,7 +59,7 @@
             return [this._roomId, this._objectId, this._category, this._wallLocation, this._x, this._y, this._direction, this._offerId, this._productClassId].toString();
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

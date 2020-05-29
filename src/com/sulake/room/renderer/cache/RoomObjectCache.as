@@ -79,7 +79,7 @@
                     if (((!(_local_4.sprite._Str_4918 == RoomObjectSpriteType.ROOM_PLANE)) && (!(_local_4.sprite._Str_3582 == ""))))
                     {
                         _local_5 = new RoomObjectSpriteData();
-                        _local_5._Str_1577 = _local_3._Str_1577;
+                        _local_5.objectId = _local_3.objectId;
                         _local_5.x = _local_4.x;
                         _local_5.y = _local_4.y;
                         _local_5.z = _local_4.z;

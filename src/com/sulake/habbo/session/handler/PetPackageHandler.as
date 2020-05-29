@@ -37,7 +37,7 @@
             }
             if (((listener) && (listener.events)))
             {
-                listener.events.dispatchEvent(new RoomSessionPetPackageEvent(RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED, _local_3, _local_2._Str_1577, _local_2.figureData, 0, null));
+                listener.events.dispatchEvent(new RoomSessionPetPackageEvent(RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED, _local_3, _local_2.objectId, _local_2.figureData, 0, null));
             }
         }
 
@@ -55,7 +55,7 @@
             }
             if (((listener) && (listener.events)))
             {
-                listener.events.dispatchEvent(new RoomSessionPetPackageEvent(RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT, _local_3, _local_2._Str_1577, null, _local_2.nameValidationStatus, _local_2.nameValidationInfo));
+                listener.events.dispatchEvent(new RoomSessionPetPackageEvent(RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT, _local_3, _local_2.objectId, null, _local_2.nameValidationStatus, _local_2.nameValidationInfo));
             }
         }
     }

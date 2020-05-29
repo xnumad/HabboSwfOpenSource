@@ -60,7 +60,7 @@
 
         private function _Str_20385(k:PathResetEvent):void
         {
-            if (this._triggeringObjectIds.indexOf(k._Str_1577.toString()) != -1)
+            if (this._triggeringObjectIds.indexOf(k.objectId.toString()) != -1)
             {
                 this._triggerMs = this._currentMs;
             }

@@ -361,7 +361,7 @@
                     this._Str_23199((k as RoomEngineUseProductEvent).inventoryStripId, (k as RoomEngineUseProductEvent).furnitureTypeId);
                     return;
                 case RoomEngineUseProductEvent.ROSM_USE_PRODUCT_FROM_ROOM:
-                    this._Str_23807((k as RoomEngineUseProductEvent)._Str_1577);
+                    this._Str_23807((k as RoomEngineUseProductEvent).objectId);
                     return;
             }
         }

@@ -5,12 +5,12 @@
         private var _objectId:String = "";
         private var _spriteTag:String = "";
 
-        public function get _Str_1577():String
+        public function get objectId():String
         {
             return this._objectId;
         }
 
-        public function set _Str_1577(k:String):void
+        public function set objectId(k:String):void
         {
             this._objectId = k;
         }

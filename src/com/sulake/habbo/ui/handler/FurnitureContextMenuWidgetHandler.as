@@ -183,7 +183,7 @@
             {
                 return;
             }
-            var _local_3:IRoomObject = this.getRoomObject(_local_2._Str_1577);
+            var _local_3:IRoomObject = this.getRoomObject(_local_2.objectId);
             if (_local_3 == null)
             {
                 return;
@@ -259,7 +259,7 @@
             if (this._widget != null)
             {
                 _local_2 = k.getParser();
-                _local_3 = this.getRoomObject(_local_2._Str_1577);
+                _local_3 = this.getRoomObject(_local_2.objectId);
                 if (_local_3 != null)
                 {
                     this._widget._Str_24867(_local_3, _local_2.guildId, _local_2._Str_24570, _local_2._Str_25076, _local_2._Str_24832, _local_2._Str_24908);
@@ -273,7 +273,7 @@
             var _local_3:Boolean;
             if (this._widget != null)
             {
-                _local_2 = this.getRoomObject(k._Str_1577);
+                _local_2 = this.getRoomObject(k.objectId);
                 if (_local_2 != null)
                 {
                     _local_3 = this._container.isOwnerOfFurniture(_local_2);
@@ -292,7 +292,7 @@
             var _local_3:Boolean;
             if (this._widget != null)
             {
-                _local_2 = this.getRoomObject(k._Str_1577);
+                _local_2 = this.getRoomObject(k.objectId);
                 if (_local_2 != null)
                 {
                     _local_3 = this._container.isOwnerOfFurniture(_local_2);
@@ -311,7 +311,7 @@
             var _local_3:Boolean;
             if (this._widget != null)
             {
-                _local_2 = this.getRoomObject(k._Str_1577);
+                _local_2 = this.getRoomObject(k.objectId);
                 if (_local_2 != null)
                 {
                     _local_3 = this._container.isOwnerOfFurniture(_local_2);
@@ -330,7 +330,7 @@
             var _local_3:Boolean;
             if (this._widget != null)
             {
-                _local_2 = this.getRoomObject(k._Str_1577);
+                _local_2 = this.getRoomObject(k.objectId);
                 if (_local_2 != null)
                 {
                     _local_3 = this._container.isOwnerOfFurniture(_local_2);
@@ -348,7 +348,7 @@
             var _local_2:IRoomObject;
             if (this._widget != null)
             {
-                _local_2 = this.getRoomObject(k._Str_1577);
+                _local_2 = this.getRoomObject(k.objectId);
                 if (_local_2 != null)
                 {
                     this._widget._Str_20629(_local_2);

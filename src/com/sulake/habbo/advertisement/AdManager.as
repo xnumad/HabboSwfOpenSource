@@ -256,7 +256,7 @@
             {
                 for each (_local_11 in _local_6)
                 {
-                    if ((((_local_11.roomId == k) && (_local_11._Str_1577 == _arg_2)) && (_local_11.objectCategory == _arg_3)))
+                    if ((((_local_11.roomId == k) && (_local_11.objectId == _arg_2)) && (_local_11.objectCategory == _arg_3)))
                     {
                         return;
                     }
@@ -287,7 +287,7 @@
                 {
                     for each (_local_6 in _local_4)
                     {
-                        this.dispatchImageAsset(_local_5.clone(), _local_6.roomId, _local_6._Str_1577, _local_6.objectCategory, _local_6.imageURL, _local_6.clickURL);
+                        this.dispatchImageAsset(_local_5.clone(), _local_6.roomId, _local_6.objectId, _local_6.objectCategory, _local_6.imageURL, _local_6.clickURL);
                     }
                 }
             }
@@ -312,7 +312,7 @@
             }
             for each (_local_4 in _local_3)
             {
-                this.dispatchImageAsset(null, _local_4.roomId, _local_4._Str_1577, _local_4.objectCategory, _local_4.imageURL, _local_4.clickURL);
+                this.dispatchImageAsset(null, _local_4.roomId, _local_4.objectId, _local_4.objectCategory, _local_4.imageURL, _local_4.clickURL);
             }
         }
     }

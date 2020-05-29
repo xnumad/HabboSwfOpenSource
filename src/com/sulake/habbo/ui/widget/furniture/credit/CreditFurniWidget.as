@@ -63,7 +63,7 @@
         private function onObjectUpdate(k:_Str_4899):void
         {
             this._Str_2718();
-            this._Str_10662 = k._Str_1577;
+            this._Str_10662 = k.objectId;
             this._value = k._Str_22599;
 			this._furniType = k.furniType;
             this._Str_3030();

@@ -78,7 +78,7 @@
             {
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIGH_SCORE_DISPLAY:
                     _local_2 = RoomEngineObjectEvent(k);
-                    _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+                    _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
                     if (_local_3 != null)
                     {
                         _local_4 = _local_3.getModel();
@@ -86,14 +86,14 @@
                         {
                             _local_5 = new HighScoreStuffData();
                             _local_5.initializeFromRoomObjectModel(_local_4);
-                            this._widget.open(_local_2._Str_1577, _local_2.roomId, _local_5);
+                            this._widget.open(_local_2.objectId, _local_2.roomId, _local_5);
                         }
                         this._cachedRequest = _local_2;
                     }
                     return;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_HIDE_HIGH_SCORE_DISPLAY:
                     _local_2 = RoomEngineObjectEvent(k);
-                    if (((_local_2.roomId == this._widget.roomId) && (_local_2._Str_1577 == this._widget._Str_21467)))
+                    if (((_local_2.roomId == this._widget.roomId) && (_local_2.objectId == this._widget._Str_21467)))
                     {
                         this._widget.close();
                     }
@@ -115,12 +115,12 @@
         {
             var k:IRoomObject;
             var _local_2:Point;
-            if (((((this._cachedRequest) && (this._widget.isOpen)) && (this._widget.roomId == this._cachedRequest.roomId)) && (this._widget._Str_21467 == this._cachedRequest._Str_1577)))
+            if (((((this._cachedRequest) && (this._widget.isOpen)) && (this._widget.roomId == this._cachedRequest.roomId)) && (this._widget._Str_21467 == this._cachedRequest.objectId)))
             {
-                k = this._container.roomEngine.getRoomObject(this._cachedRequest.roomId, this._cachedRequest._Str_1577, this._cachedRequest.category);
+                k = this._container.roomEngine.getRoomObject(this._cachedRequest.roomId, this._cachedRequest.objectId, this._cachedRequest.category);
                 if (k != null)
                 {
-                    _local_2 = this._container.roomEngine.getRoomObjectScreenLocation(this._cachedRequest.roomId, this._cachedRequest._Str_1577, this._cachedRequest.category);
+                    _local_2 = this._container.roomEngine.getRoomObjectScreenLocation(this._cachedRequest.roomId, this._cachedRequest.objectId, this._cachedRequest.category);
                     if (_local_2 != null)
                     {
                         this._widget._Str_23957(_local_2.x, _local_2.y);

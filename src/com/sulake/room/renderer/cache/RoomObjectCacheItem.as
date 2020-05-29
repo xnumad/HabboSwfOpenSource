@@ -36,12 +36,12 @@
             }
         }
 
-        public function set _Str_1577(k:int):void
+        public function set objectId(k:int):void
         {
             this._objectId = k;
         }
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

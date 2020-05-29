@@ -75,7 +75,7 @@
             {
                 case _Str_3085.RWOPPUE_OPEN_PET_PACKAGE_REQUESTED:
                     this._Str_2718();
-                    this._objectId = event._Str_1577;
+                    this._objectId = event.objectId;
                     this._petImage = event.image;
                     this._typeId = event.typeId;
                     this._Str_3030();
@@ -113,7 +113,7 @@
                     });
                     return;
                 case _Str_3085.RWOPPUE_OPEN_PET_PACKAGE_UPDATE_PET_IMAGE:
-                    if (event._Str_1577 != this._objectId)
+                    if (event.objectId != this._objectId)
                     {
                         return;
                     }

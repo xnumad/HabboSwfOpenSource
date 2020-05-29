@@ -75,8 +75,8 @@
                     _local_2 = (k as RoomEngineTriggerWidgetEvent);
                     if (((!(k == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._lastFurniId = _local_2._Str_1577;
-                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2._Str_1577, _local_2.category);
+                        this._lastFurniId = _local_2.objectId;
+                        _local_3 = this._container.roomEngine.getRoomObject(_local_2.roomId, _local_2.objectId, _local_2.category);
                         if (((_local_3) && (this._Str_6826(_local_3))))
                         {
                             if (this._widget)
@@ -90,7 +90,7 @@
                     _local_2 = (k as RoomEngineTriggerWidgetEvent);
                     if ((((!(k == null)) && (!(this._container.roomEngine == null))) && (!(this._widget == null))))
                     {
-                        if (this._lastFurniId == _local_2._Str_1577)
+                        if (this._lastFurniId == _local_2.objectId)
                         {
                             this._widget.hide();
                         }

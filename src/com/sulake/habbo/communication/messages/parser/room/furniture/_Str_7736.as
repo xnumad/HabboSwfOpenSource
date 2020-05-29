@@ -10,7 +10,7 @@
         private var _figureData:PetFigureData;
 
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }

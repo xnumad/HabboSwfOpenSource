@@ -521,7 +521,7 @@
                 return 0;
             }
             var _local_7:RoomObjectCacheItem = this._Str_23739(_arg_2);
-            _local_7._Str_1577 = k.getId();
+            _local_7.objectId = k.getId();
             var _local_8:RoomObjectLocationCacheItem = _local_7.location;
             var _local_9:RoomObjectSortableSpriteCacheItem = _local_7.sprites;
             var _local_10:IVector3d = _local_8.getScreenLocation(k, this._geometry);
@@ -1115,7 +1115,7 @@
                             if (_local_13 == null)
                             {
                                 _local_13 = new ObjectMouseData();
-                                _local_13._Str_1577 = _local_9;
+                                _local_13.objectId = _local_9;
                                 this._mouseActiveObjects.add(_local_9, _local_13);
                             }
                             _local_13.spriteTag = _local_16;

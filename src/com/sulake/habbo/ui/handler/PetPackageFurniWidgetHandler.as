@@ -46,7 +46,7 @@
                     _local_2 = (k as RoomWidgetOpenPetPackageMessage);
                     if (((!(this._container == null)) && (!(this._container.roomSession == null))))
                     {
-                        this._container.roomSession._Str_20560(_local_2._Str_1577, _local_2.name);
+                        this._container.roomSession._Str_20560(_local_2.objectId, _local_2.name);
                     }
                     break;
             }
@@ -76,7 +76,7 @@
                 {
                     case RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED:
                         _local_2 = (k as RoomSessionPetPackageEvent);
-                        this._objectId = _local_2._Str_1577;
+                        this._objectId = _local_2.objectId;
                         _local_4 = this.getPetImage(_local_2.figureData);
                         _local_5 = ((_local_2.figureData == null) ? -1 : _local_2.figureData.typeId);
                         _local_3 = new _Str_3085(_Str_3085.RWOPPUE_OPEN_PET_PACKAGE_REQUESTED, this._objectId, _local_4, -1, null, _local_5);
@@ -84,7 +84,7 @@
                         return;
                     case RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT:
                         _local_2 = (k as RoomSessionPetPackageEvent);
-                        this._objectId = _local_2._Str_1577;
+                        this._objectId = _local_2.objectId;
                         _local_6 = _local_2.nameValidationStatus;
                         _local_7 = _local_2.nameValidationInfo;
                         _local_3 = new _Str_3085(_Str_3085.RWOPPUE_OPEN_PET_PACKAGE_RESULT, this._objectId, null, _local_6, _local_7, -1);

@@ -75,7 +75,7 @@
         private function _Str_22639(k:RoomWidgetClothingChangeUpdateEvent):void
         {
             this._Str_9023();
-            this._objectId = k._Str_1577;
+            this._objectId = k.objectId;
             this._objectCategory = k.objectCategory;
             this._Str_2337 = k.roomId;
             var _local_2:IAsset = assets.getAssetByName("boygirl");

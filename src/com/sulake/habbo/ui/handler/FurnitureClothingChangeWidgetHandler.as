@@ -91,13 +91,13 @@
                     break;
                 case RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR:
                     _local_6 = (k as RoomWidgetClothingChangeMessage);
-                    _local_2 = this._container.roomEngine.getRoomObject(_local_6.roomId, _local_6._Str_1577, _local_6.objectCategory);
+                    _local_2 = this._container.roomEngine.getRoomObject(_local_6.roomId, _local_6.objectId, _local_6.objectCategory);
                     if (_local_2 != null)
                     {
                         _local_3 = _local_2.getModel();
                         if (_local_3 != null)
                         {
-                            this._objectId = _local_6._Str_1577;
+                            this._objectId = _local_6.objectId;
                             _local_8 = FigureData.M;
                             _local_9 = _local_3.getString(RoomObjectVariableEnum.FURNITURE_CLOTHING_BOY);
                             if (((_local_9 == null) || (_local_9 == "")))
@@ -116,7 +116,7 @@
                             if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_7195, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
                             {
                                 this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId._Str_7195, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
-                                _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_6._Str_1577, _local_6.objectCategory, _local_6.roomId);
+                                _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_6.objectId, _local_6.objectCategory, _local_6.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
                         }

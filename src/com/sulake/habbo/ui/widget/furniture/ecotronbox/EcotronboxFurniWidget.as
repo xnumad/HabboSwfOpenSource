@@ -84,7 +84,7 @@
             {
                 case _Str_3072.RWEBDUE_PACKAGEINFO:
                     this._Str_3608 = false;
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._text = k.text;
                     this._Str_2278 = k.controller;
                     this._Str_6880 = k._Str_17878;
@@ -95,7 +95,7 @@
                     {
                         return;
                     }
-                    this._objectId = k._Str_1577;
+                    this._objectId = k.objectId;
                     this._Str_3030();
                     this._Str_9278(k._Str_11625);
                     this._Str_23892(k.text);

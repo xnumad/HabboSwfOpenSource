@@ -517,7 +517,7 @@
                     _local_3 = this.handleMoveTargetFurni(_arg_2, k);
                 }
             }
-            var _local_6:int = k._Str_1577;
+            var _local_6:int = k.objectId;
             var _local_7:String = k.objectType;
             var _local_8:int = this._roomEngine.getRoomObjectCategory(_local_7);
             var _local_9:String = k.eventId;
@@ -803,7 +803,7 @@
             var _local_4:IRoomObject;
             if (k == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
-                _local_4 = this._roomEngine.getRoomObject(_arg_2, _arg_3._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+                _local_4 = this._roomEngine.getRoomObject(_arg_2, _arg_3.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 if (_local_4)
                 {
                     _local_5 = this.getActiveSurfaceLocation(_local_4, _arg_3);
@@ -826,7 +826,7 @@
         private function handleRoomObjectMouseDown(k:RoomObjectMouseEvent, _arg_2:int):void
         {
             var _local_3:String = k.objectType;
-            var _local_4:int = k._Str_1577;
+            var _local_4:int = k.objectId;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_3);
             if (_local_5 != RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
             {
@@ -838,7 +838,7 @@
             var _local_6:IEventDispatcher = this._roomEngine.events;
             if (_local_6 != null)
             {
-                _local_6.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.MOUSE_ENTER, _arg_2, k._Str_1577, this._roomEngine.getRoomObjectCategory(k.objectType)));
+                _local_6.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.MOUSE_ENTER, _arg_2, k.objectId, this._roomEngine.getRoomObjectCategory(k.objectType)));
             }
         }
 
@@ -863,7 +863,7 @@
             var _local_5:IEventDispatcher = this._roomEngine.events;
             if (_local_5 != null)
             {
-                _local_5.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.MOUSE_LEAVE, _arg_2, k._Str_1577, this._roomEngine.getRoomObjectCategory(k.objectType)));
+                _local_5.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.MOUSE_LEAVE, _arg_2, k.objectId, this._roomEngine.getRoomObjectCategory(k.objectType)));
             }
         }
 
@@ -880,7 +880,7 @@
             {
                 _local_3 = _local_4.operation;
             }
-            var _local_5:int = k._Str_1577;
+            var _local_5:int = k.objectId;
             var _local_6:String = k.objectType;
             var _local_7:int = this._roomEngine.getRoomObjectCategory(_local_6);
             switch (_local_3)
@@ -1125,7 +1125,7 @@
 
         private function handleMoveTargetFurni(k:int, _arg_2:RoomObjectEvent):Boolean
         {
-            var _local_3:IRoomObject = this._roomEngine.getRoomObject(k, _arg_2._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+            var _local_3:IRoomObject = this._roomEngine.getRoomObject(k, _arg_2.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             var _local_4:Vector3d = this.getActiveSurfaceLocation(_local_3, (_arg_2 as RoomObjectMouseEvent));
             if (_local_4)
             {
@@ -1232,7 +1232,7 @@
             {
                 return;
             }
-            this.changeObjectState(_arg_2, k._Str_1577, k.objectType, k.param, false);
+            this.changeObjectState(_arg_2, k.objectId, k.objectType, k.param, false);
         }
 
         private function _Str_24913(k:RoomObjectStateChangedEvent, _arg_2:int):void
@@ -1241,7 +1241,7 @@
             {
                 return;
             }
-            this.changeObjectState(_arg_2, k._Str_1577, k.objectType, k.param, true);
+            this.changeObjectState(_arg_2, k.objectId, k.objectType, k.param, true);
         }
 
         private function handleObjectRoomAdEvent(k:RoomObjectEvent, _arg_2:int):void
@@ -1253,7 +1253,7 @@
             {
                 return;
             }
-            var _local_3:int = k._Str_1577;
+            var _local_3:int = k.objectId;
             var _local_4:String = k.objectType;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_4);
             var _local_6:IEventDispatcher = this._roomEngine.events;
@@ -1317,7 +1317,7 @@
                         return;
                     case RoomObjectWidgetRequestEvent.GUILD_FURNI_CONTEXT_MENU:
                         _local_9 = k.object.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_GUILD_CUSTOMIZED_GUILD_ID);
-                        this._roomEngine.connection.send(new _Str_10477(k._Str_1577, _local_9));
+                        this._roomEngine.connection.send(new _Str_10477(k.objectId, _local_9));
                         return;
                     case RoomObjectWidgetRequestEvent.MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG:
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.ROWRE_REQUEST_MONSTERPLANT_SEED_PLANT_CONFIRMATION_DIALOG, _arg_2, _local_3, _local_5));
@@ -1338,7 +1338,7 @@
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.RETWE_REQUEST_MYSTERYTROPHY_OPEN_DIALOG, _arg_2, _local_3, _local_5));
                         return;
                     case RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_OPEN:
-                        this._roomEngine.connection.send(new _Str_4406(k._Str_1577, 0));
+                        this._roomEngine.connection.send(new _Str_4406(k.objectId, 0));
                         return;
                     case RoomObjectWidgetRequestEvent.ACHIEVEMENT_RESOLUTION_ENGRAVING:
                         _local_6.dispatchEvent(new RoomEngineTriggerWidgetEvent(RoomEngineTriggerWidgetEvent.RETWE_REQUEST_ACHIEVEMENT_RESOLUTION_ENGRAVING, _arg_2, _local_3, _local_5));
@@ -1382,7 +1382,7 @@
             {
                 return;
             }
-            var _local_3:int = k._Str_1577;
+            var _local_3:int = k.objectId;
             var _local_4:String = k.objectType;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_4);
             var _local_7:RoomObjectRoomAdEvent = (k as RoomObjectRoomAdEvent);
@@ -1453,7 +1453,7 @@
             {
                 return;
             }
-            this.useObject(_arg_2, k._Str_1577, k.objectType, k.type);
+            this.useObject(_arg_2, k.objectId, k.objectType, k.type);
         }
 
         private function handleObjectJukeboxEvent(k:RoomObjectEvent, _arg_2:int):void
@@ -1466,7 +1466,7 @@
             var _local_4:SelectedRoomObjectData = this.getSelectedObjectData(_arg_2);
             if (_local_4 != null)
             {
-                if (((_local_4.category == _local_3) && (_local_4.id == k._Str_1577)))
+                if (((_local_4.category == _local_3) && (_local_4.id == k.objectId)))
                 {
                     if (_local_4.operation == RoomObjectOperationEnum.OBJECT_PLACE)
                     {
@@ -1477,16 +1477,16 @@
             switch (k.type)
             {
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_INIT:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_INIT, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_INIT, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_START:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_ON, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_STOP:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_OFF, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_SWITCHED_OFF, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.SOUND_MACHINE_DISPOSE:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_DISPOSE, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.SOUND_MACHINE_DISPOSE, _arg_2, k.objectId, _local_3));
                     return;
             }
         }
@@ -1501,7 +1501,7 @@
             var _local_4:SelectedRoomObjectData = this.getSelectedObjectData(_arg_2);
             if (_local_4 != null)
             {
-                if (((_local_4.category == _local_3) && (_local_4.id == k._Str_1577)))
+                if (((_local_4.category == _local_3) && (_local_4.id == k.objectId)))
                 {
                     if (_local_4.operation == RoomObjectOperationEnum.OBJECT_PLACE)
                     {
@@ -1512,16 +1512,16 @@
             switch (k.type)
             {
                 case RoomObjectFurnitureActionEvent.JUKEBOX_INIT:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_INIT, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_INIT, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.JUKEBOX_START:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_SWITCHED_ON, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_SWITCHED_ON, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.JUKEBOX_MACHINE_STOP:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_SWITCHED_OFF, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_SWITCHED_OFF, _arg_2, k.objectId, _local_3));
                     return;
                 case RoomObjectFurnitureActionEvent.JUKEBOX_DISPOSE:
-                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_DISPOSE, _arg_2, k._Str_1577, _local_3));
+                    this._roomEngine.events.dispatchEvent(new RoomObjectSoundMachineEvent(RoomObjectSoundMachineEvent.JUKEBOX_DISPOSE, _arg_2, k.objectId, _local_3));
                     return;
             }
         }
@@ -1533,7 +1533,7 @@
             {
                 return;
             }
-            var _local_3:int = k._Str_1577;
+            var _local_3:int = k.objectId;
             var _local_4:String = k.objectType;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_4);
             if (k.type == RoomObjectBadgeAssetEvent.ROGBE_LOAD_BADGE)
@@ -1555,17 +1555,17 @@
             switch (k.type)
             {
                 case RoomObjectFloorHoleEvent.ROFHO_ADD_HOLE:
-                    this._roomEngine.addFloorHole(_arg_2, k._Str_1577);
+                    this._roomEngine.addFloorHole(_arg_2, k.objectId);
                     return;
                 case RoomObjectFloorHoleEvent.ROFHO_REMOVE_HOLE:
-                    this._roomEngine.removeFloorHole(_arg_2, k._Str_1577);
+                    this._roomEngine.removeFloorHole(_arg_2, k.objectId);
                     return;
             }
         }
 
         private function handleObjectDimmerStateEvent(k:RoomObjectEvent, _arg_2:int):void
         {
-            this._roomEngine.requestMouseCursor(k.type, k._Str_1577, k.objectType);
+            this._roomEngine.requestMouseCursor(k.type, k.objectId, k.objectType);
         }
 
         private function handleRoomObjectDataRequestEvent(k:RoomObjectEvent, _arg_2:int):void
@@ -1576,7 +1576,7 @@
             {
                 return;
             }
-            var _local_3:int = k._Str_1577;
+            var _local_3:int = k.objectId;
             if (((!(this._roomEngine == null)) && (!(this._roomEngine.connection == null))))
             {
                 switch (k.type)
@@ -1605,10 +1605,10 @@
                 switch (k.type)
                 {
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND:
-                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND, _arg_2, k._Str_1577, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
                         return;
                     case RoomObjectPlaySoundIdEvent.ROPSIE_PLAY_SOUND_AT_PITCH:
-                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k._Str_1577, _local_3, k.soundId, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEnginePlaySoundEvent(RoomEnginePlaySoundEvent.PLAY_SOUND_AT_PITCH, _arg_2, k.objectId, _local_3, k.soundId, k._Str_4740));
                         return;
                 }
             }
@@ -1626,16 +1626,16 @@
                 switch (k.type)
                 {
                     case RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_INITIALIZED:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_INITIALIZED, _arg_2, k._Str_1577, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_INITIALIZED, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_ROOM_OBJECT_DISPOSED:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_DISPOSED, _arg_2, k._Str_1577, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_ROOM_OBJECT_DISPOSED, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_PLAY_SAMPLE:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_PLAY_SAMPLE, _arg_2, k._Str_1577, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_PLAY_SAMPLE, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
                         return;
                     case RoomObjectSamplePlaybackEvent.ROPSPE_CHANGE_PITCH:
-                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_CHANGE_PITCH, _arg_2, k._Str_1577, _local_3, k._Str_6992, k._Str_4740));
+                        this._roomEngine.events.dispatchEvent(new RoomEngineObjectSamplePlaybackEvent(RoomEngineObjectSamplePlaybackEvent.REOSPE_CHANGE_PITCH, _arg_2, k.objectId, _local_3, k._Str_6992, k._Str_4740));
                         return;
                 }
             }
@@ -1684,7 +1684,7 @@
             {
                 return;
             }
-            var _local_3:int = k._Str_1577;
+            var _local_3:int = k.objectId;
             var _local_4:String = k.objectType;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_4);
             var _local_6:IRoomObjectController = (this._roomEngine.getRoomObject(_arg_2, _local_3, _local_5) as IRoomObjectController);

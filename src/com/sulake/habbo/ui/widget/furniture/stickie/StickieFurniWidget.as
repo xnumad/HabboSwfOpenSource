@@ -85,7 +85,7 @@
         protected function onObjectUpdate(k:_Str_4863):void
         {
             this._Str_2718(false);
-            this._objectId = k._Str_1577;
+            this._objectId = k.objectId;
             this._Str_3796 = k.objectType;
             this._text = k.text;
             this._Str_3062 = k._Str_10471;

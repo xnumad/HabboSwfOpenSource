@@ -167,12 +167,12 @@
             var _local_2:RoomUserData;
             if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
             {
-                _local_2 = this.handler.roomSession.userDataManager.getUserDataByIndex(k._Str_1577);
+                _local_2 = this.handler.roomSession.userDataManager.getUserDataByIndex(k.objectId);
                 if (_local_2)
                 {
                     if (this.handler.friendList._Str_9287().indexOf(_local_2.name) > -1)
                     {
-                        this._Str_21156(_local_2, k._Str_1577);
+                        this._Str_21156(_local_2, k.objectId);
                     }
                 }
             }
@@ -191,7 +191,7 @@
             {
                 for each (_local_3 in this._avatarNameBubbles)
                 {
-                    if (_local_3._Str_1577 == k._Str_1577)
+                    if (_local_3.objectId == k.objectId)
                     {
                         this.removeView(_local_3, false);
                     }
@@ -211,21 +211,21 @@
                 }
                 if (this._breedMonsterPlantsConfirmationView != null)
                 {
-                    if (((k._Str_1577 == this._breedMonsterPlantsConfirmationView._Str_3710) || (k._Str_1577 == this._breedMonsterPlantsConfirmationView._Str_5563)))
+                    if (((k.objectId == this._breedMonsterPlantsConfirmationView._Str_3710) || (k.objectId == this._breedMonsterPlantsConfirmationView._Str_5563)))
                     {
                         this._Str_8286();
                     }
                 }
                 if (this._confirmPetBreedingView != null)
                 {
-                    if (((k._Str_1577 == this._confirmPetBreedingView._Str_3710) || (k._Str_1577 == this._confirmPetBreedingView._Str_5563)))
+                    if (((k.objectId == this._confirmPetBreedingView._Str_3710) || (k.objectId == this._confirmPetBreedingView._Str_5563)))
                     {
                         this._Str_10453();
                     }
                 }
                 if (this._useProductConfirmationView != null)
                 {
-                    if (((k._Str_1577 == this._useProductConfirmationView._Str_20466) || (k._Str_1577 == this._useProductConfirmationView._Str_5563)))
+                    if (((k.objectId == this._useProductConfirmationView._Str_20466) || (k.objectId == this._useProductConfirmationView._Str_5563)))
                     {
                         this._Str_13975();
                     }
@@ -233,7 +233,7 @@
             }
             if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
-                _local_6 = k._Str_1577;
+                _local_6 = k.objectId;
                 if (this._useProductConfirmationView != null)
                 {
                     if (this._useProductConfirmationView._Str_20466 == _local_6)
@@ -784,7 +784,7 @@
                     }
                     for each (_local_27 in this._avatarNameBubbles)
                     {
-                        if (_local_27._Str_1577 == _local_21.id)
+                        if (_local_27.objectId == _local_21.id)
                         {
                             this.removeView(_local_27, false);
                             break;
@@ -835,7 +835,7 @@
             var _local_2:Array = new Array();
             for each (_local_3 in this._breedPetBubbles)
             {
-                if (((_local_3._Str_1577 == k) || (_local_3._Str_3710 == k)))
+                if (((_local_3.objectId == k) || (_local_3._Str_3710 == k)))
                 {
                     if (_local_2.indexOf(_local_3) == -1)
                     {

@@ -429,8 +429,8 @@
                     _local_6 = (k as RoomWidgetChatSelectAvatarMessage);
                     if (_local_6 != null)
                     {
-                        this._container.roomEngine.selectAvatar(_local_6.roomId, _local_6._Str_1577);
-                        _local_24 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_6._Str_1577);
+                        this._container.roomEngine.selectAvatar(_local_6.roomId, _local_6.objectId);
+                        _local_24 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_6.objectId);
                         if (_local_24 != null)
                         {
                             this._container.moderation.userSelected(_local_24.id, _local_6.userName, _local_24.figure, _local_24.sex);

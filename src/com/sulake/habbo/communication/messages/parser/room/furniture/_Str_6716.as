@@ -13,7 +13,7 @@
         private var _Str_9506:Boolean;
 
 
-        public function get _Str_1577():int
+        public function get objectId():int
         {
             return this._objectId;
         }
