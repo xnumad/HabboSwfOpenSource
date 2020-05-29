@@ -68,7 +68,7 @@
             if (_local_2)
             {
                 _local_3 = (_local_2.findChildByTag("BITMAP") as IStaticBitmapWrapperWindow);
-                TabUtils._Str_2972(_local_3, true);
+                TabUtils.setElementImage(_local_3, true);
             }
         }
 
@@ -83,7 +83,7 @@
             if (_local_2)
             {
                 _local_3 = (_local_2.findChildByTag("BITMAP") as IStaticBitmapWrapperWindow);
-                TabUtils._Str_2972(_local_3, false);
+                TabUtils.setElementImage(_local_3, false);
             }
         }
     }

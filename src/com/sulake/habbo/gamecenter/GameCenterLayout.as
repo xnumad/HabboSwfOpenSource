@@ -205,7 +205,7 @@
                 this._filterTextField = (this._gameCenterViewWindow.findChildByName("game_center_filter") as ITextFieldWindow);
                 this._filterTextField.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_25099);
                 this._Str_16015();
-                this._Str_2972(this._gameSelectionIcon, this.getBitmap("game_center_icon_selected"));
+                this.setElementImage(this._gameSelectionIcon, this.getBitmap("game_center_icon_selected"));
                 this._gameCenterView.windowManager.getWindowContext(_Str_3446).getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_3630);
                 this._achievementList = (this._gameCenterViewWindow.findChildByName("achievements_list") as IItemListWindow);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new UserGameAchievementsMessageEvent(this._Str_24687));
@@ -443,7 +443,7 @@
             }
         }
 
-        private function _Str_2972(k:IBitmapWrapperWindow, _arg_2:BitmapData):void
+        private function setElementImage(k:IBitmapWrapperWindow, _arg_2:BitmapData):void
         {
             if (_arg_2)
             {
@@ -646,7 +646,7 @@
             {
                 _local_5.setDirection(AvatarSetType.FULL, 2);
                 _local_4 = _local_5._Str_818(AvatarSetType.HEAD);
-                WindowUtils._Str_2972(k, _local_4);
+                WindowUtils.setElementImage(k, _local_4);
                 _local_4.dispose();
             }
         }
@@ -699,7 +699,7 @@
         {
             if (_arg_2)
             {
-                WindowUtils._Str_2972(k, _arg_2);
+                WindowUtils.setElementImage(k, _arg_2);
             }
             else
             {

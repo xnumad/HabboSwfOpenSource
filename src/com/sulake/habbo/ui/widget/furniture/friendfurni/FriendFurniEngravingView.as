@@ -30,7 +30,7 @@
             this._stuffData = _arg_2;
         }
 
-        private static function _Str_2972(k:IWindow, _arg_2:BitmapData, _arg_3:int=0, _arg_4:int=0, _arg_5:int=0):void
+        private static function setElementImage(k:IWindow, _arg_2:BitmapData, _arg_3:int=0, _arg_4:int=0, _arg_5:int=0):void
         {
             var _local_9:IBitmapWrapperWindow;
             var _local_10:IDisplayObjectWrapper;
@@ -158,7 +158,7 @@
         private function _Str_7967(k:String, _arg_2:BitmapData):void
         {
             var _local_3:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName(k));
-            _Str_2972(_local_3, _arg_2, 0, 0, 0);
+            setElementImage(_local_3, _arg_2, 0, 0, 0);
         }
 
         private function _Str_2669():void

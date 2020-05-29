@@ -196,7 +196,7 @@
                 _local_4.setDirection(AvatarSetType.FULL, 2);
                 k = _local_4._Str_818(AvatarSetType.HEAD);
                 _local_4.dispose();
-                WindowUtils._Str_2972(this._ownStats.findChildByName("user_image"), k);
+                WindowUtils.setElementImage(this._ownStats.findChildByName("user_image"), k);
                 k.dispose();
             }
         }
@@ -359,7 +359,7 @@
         {
             if (this._SafeStr_22099 != k)
             {
-                WindowUtils._Str_2972(this._SafeStr_18800(this._ownStats, "energy_bar"), this._SafeStr_12987(("ui_me_health_" + k)));
+                WindowUtils.setElementImage(this._SafeStr_18800(this._ownStats, "energy_bar"), this._SafeStr_12987(("ui_me_health_" + k)));
                 this._SafeStr_22099 = k;
             }
         }
@@ -405,7 +405,7 @@
                 {
                     this._SafeStr_22108 = (this._SafeStr_22108 + k);
                     this._backgroundFlashImage.visible = true;
-                    WindowUtils._Str_2972(this._backgroundFlashImage, this._SafeStr_12987((this._SafeStr_22109 + _local_2)));
+                    WindowUtils.setElementImage(this._backgroundFlashImage, this._SafeStr_12987((this._SafeStr_22109 + _local_2)));
                 }
             }
         }
@@ -498,7 +498,7 @@
         {
             if (this._SafeStr_22101 != k)
             {
-                WindowUtils._Str_2972(this._makeSnowballImage, this._SafeStr_12987(("ui_make_balls_" + ((k) ? "down" : "up"))));
+                WindowUtils.setElementImage(this._makeSnowballImage, this._SafeStr_12987(("ui_make_balls_" + ((k) ? "down" : "up"))));
             }
             this._SafeStr_22101 = k;
         }

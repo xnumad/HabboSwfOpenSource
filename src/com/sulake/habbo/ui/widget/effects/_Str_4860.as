@@ -217,11 +217,11 @@
                 }
                 if (this._effect._Str_3222)
                 {
-                    this._Str_2972("effect_hilite", "memenu_fx_pause");
+                    this.setElementImage("effect_hilite", "memenu_fx_pause");
                 }
                 else
                 {
-                    this._Str_2972("effect_hilite", "memenu_fx_play");
+                    this.setElementImage("effect_hilite", "memenu_fx_play");
                 }
                 this._hilite = this._window.findChildByName("effect_hilite");
                 this._hilite.visible = false;
@@ -281,7 +281,7 @@
             }
         }
 
-        private function _Str_2972(k:String, _arg_2:String):void
+        private function setElementImage(k:String, _arg_2:String):void
         {
             var _local_3:BitmapDataAsset = (this._widget.assets.getAssetByName(_arg_2) as BitmapDataAsset);
             var _local_4:BitmapData = (_local_3.content as BitmapData);

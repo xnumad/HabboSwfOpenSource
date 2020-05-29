@@ -163,7 +163,7 @@
             var _local_7:IWindowContainer = (_local_4.getListItemByName("playerScoreContainer") as IWindowContainer);
             if (k.userId == this._snowWarEngine.sessionDataManager.userId)
             {
-                WindowUtils._Str_2972(_local_5.findChildByName("playerImageBackground"), this._SafeStr_12987("green_square"));
+                WindowUtils.setElementImage(_local_5.findChildByName("playerImageBackground"), this._SafeStr_12987("green_square"));
             }
             switch (_local_2)
             {
@@ -174,7 +174,7 @@
                 default:
                     _local_8 = 2;
             }
-            WindowUtils._Str_2972(this._SafeStr_18800(_local_5, "playerImage"), this._SafeStr_18801(k.final, k.figure, k.gender, _local_8));
+            WindowUtils.setElementImage(this._SafeStr_18800(_local_5, "playerImage"), this._SafeStr_18801(k.final, k.figure, k.gender, _local_8));
             WindowUtils._Str_4180(this._SafeStr_18800(_local_6, "playerName"), k.name);
             WindowUtils._Str_26294(_local_6, "playerStats");
             WindowUtils._Str_26294(_local_7, "playerScore");

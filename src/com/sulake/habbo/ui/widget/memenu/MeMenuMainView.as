@@ -104,7 +104,7 @@
             {
                 this._icons[k][1] = _arg_4;
             }
-            this._Str_2972(k, _arg_3);
+            this.setElementImage(k, _arg_3);
         }
 
         private function createWindow(k:String):void
@@ -206,7 +206,7 @@
                             }
                             break;
                     }
-                    this._Str_2972(_local_5, _local_9, _local_10);
+                    this.setElementImage(_local_5, _local_9, _local_10);
                 }
             }
             _local_7 = 0;
@@ -257,7 +257,7 @@
             return null;
         }
 
-        private function _Str_2972(k:String, _arg_2:String, _arg_3:Number=1):void
+        private function setElementImage(k:String, _arg_2:String, _arg_3:Number=1):void
         {
             var _local_4:IBitmapWrapperWindow = (this._window.findChildByName(k) as IBitmapWrapperWindow);
             var _local_5:BitmapDataAsset = (this._widget.assets.getAssetByName(_arg_2) as BitmapDataAsset);
@@ -432,7 +432,7 @@
             if (_local_5 != null)
             {
                 _local_6 = (_local_7 + _local_5[_local_8]);
-                this._Str_2972(_local_4, _local_6);
+                this.setElementImage(_local_4, _local_6);
             }
         }
 

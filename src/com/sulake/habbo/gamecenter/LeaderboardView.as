@@ -294,7 +294,7 @@
             {
                 _local_6.setDirection(AvatarSetType.FULL, 2);
                 _local_5 = _local_6._Str_818(AvatarSetType.HEAD, ((_local_4) ? 0.5 : 1));
-                WindowUtils._Str_2972(k, _local_5);
+                WindowUtils.setElementImage(k, _local_5);
                 _local_5.dispose();
             }
         }
@@ -384,7 +384,7 @@
         {
             if (_arg_2)
             {
-                WindowUtils._Str_2972(k, _arg_2);
+                WindowUtils.setElementImage(k, _arg_2);
             }
             else
             {

@@ -54,7 +54,7 @@
             _Str_2277 = _arg_2;
         }
 
-        public static function _Str_2972(k:IWindow, _arg_2:BitmapData, _arg_3:int=0, _arg_4:int=0, _arg_5:int=0):void
+        public static function setElementImage(k:IWindow, _arg_2:BitmapData, _arg_3:int=0, _arg_4:int=0, _arg_5:int=0):void
         {
             var _local_9:IBitmapWrapperWindow;
             var _local_10:IDisplayObjectWrapper;

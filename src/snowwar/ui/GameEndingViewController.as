@@ -318,7 +318,7 @@
             var _local_4:IWindowContainer = (_local_3.getListItemByName("playerImageContainer") as IWindowContainer);
             var _local_5:IWindowContainer = (_local_3.getListItemByName("playerDataContainer") as IWindowContainer);
             var _local_6:IWindowContainer = (_local_3.getListItemByName("playerScoreContainer") as IWindowContainer);
-            WindowUtils._Str_2972(this.findChildByName(_local_4, "playerImage"), this._SafeStr_18801(k.final, k.figure, k.gender), 0, 0, 0);
+            WindowUtils.setElementImage(this.findChildByName(_local_4, "playerImage"), this._SafeStr_18801(k.final, k.figure, k.gender), 0, 0, 0);
             WindowUtils._Str_4180(this.findChildByName(_local_5, "playerName"), k.userName);
             WindowUtils._Str_26294(_local_5, "playerTotalStats");
             WindowUtils._Str_4180(this.findChildByName(_local_5, "playerHits"), k.playerStats._SafeStr_18908.toString());
@@ -354,14 +354,14 @@
         private function _SafeStr_18889(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.window as IWindowContainer).getChildAt(0);
-            WindowUtils._Str_2972(_local_2, this._SafeStr_12987("add_friend_icon_green"));
+            WindowUtils.setElementImage(_local_2, this._SafeStr_12987("add_friend_icon_green"));
         }
 
         private function _SafeStr_18890(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.window as IWindowContainer).getChildAt(0);
             var _local_3:String = ("add_friend_icon_" + ((_local_2.id == 1) ? "blue" : "red"));
-            WindowUtils._Str_2972(_local_2, this._SafeStr_12987(_local_3));
+            WindowUtils.setElementImage(_local_2, this._SafeStr_12987(_local_3));
         }
 
         private function _SafeStr_18891(k:int):void
@@ -377,8 +377,8 @@
                 _local_3.visible = false;
                 return;
             }
-            WindowUtils._Str_2972(this.findChildByName(_local_3, "backgroundImage"), this._SafeStr_12987(this.squareNameForTeam(_local_2.final)));
-            WindowUtils._Str_2972(this.findChildByName(_local_3, "playerImage"), this._SafeStr_18801(_local_2.final, _local_2.figure, _local_2.gender), 0, 0, 0);
+            WindowUtils.setElementImage(this.findChildByName(_local_3, "backgroundImage"), this._SafeStr_12987(this.squareNameForTeam(_local_2.final)));
+            WindowUtils.setElementImage(this.findChildByName(_local_3, "playerImage"), this._SafeStr_18801(_local_2.final, _local_2.figure, _local_2.gender), 0, 0, 0);
             WindowUtils._Str_4180(this.findChildByName(_local_3, "playerName"), _local_2.userName);
             WindowUtils._Str_26442(_local_3, this._SafeStr_18895(_local_2.final));
         }
@@ -396,8 +396,8 @@
                 _local_3.visible = false;
                 return;
             }
-            WindowUtils._Str_2972(this.findChildByName(_local_3, "backgroundImage"), this._SafeStr_12987(this.squareNameForTeam(_local_2.final)));
-            WindowUtils._Str_2972(this.findChildByName(_local_3, "playerImage"), this._SafeStr_18801(_local_2.final, _local_2.figure, _local_2.gender), 0, 0, 0);
+            WindowUtils.setElementImage(this.findChildByName(_local_3, "backgroundImage"), this._SafeStr_12987(this.squareNameForTeam(_local_2.final)));
+            WindowUtils.setElementImage(this.findChildByName(_local_3, "playerImage"), this._SafeStr_18801(_local_2.final, _local_2.figure, _local_2.gender), 0, 0, 0);
             WindowUtils._Str_4180(this.findChildByName(_local_3, "playerName"), _local_2.userName);
             WindowUtils._Str_26442(_local_3, this._SafeStr_18895(_local_2.final));
         }
@@ -710,7 +710,7 @@
             WindowUtils._Str_26294((this._SafeStr_9274.findChildByName("loadingContainer") as IWindowContainer), "loadingText");
             WindowUtils._Str_4180(this._SafeStr_9274.findChildByName("arenaName"), this._SafeStr_18579.gameArenaName(k));
             WindowUtils._Str_26442(this.findChildByName(this._SafeStr_9274, "headerContainer"), this._SafeStr_18895(1));
-            WindowUtils._Str_2972(this._SafeStr_9274.findChildByName("arenaPreview"), this._SafeStr_12987((("arena_" + k.fieldName) + "_preview")));
+            WindowUtils.setElementImage(this._SafeStr_9274.findChildByName("arenaPreview"), this._SafeStr_12987((("arena_" + k.fieldName) + "_preview")));
         }
 
         public function _SafeStr_13272(k:_SafeStr_4032):void
@@ -774,7 +774,7 @@
             var _local_5:IWindowContainer = (_local_4.getListItemByName("playerImageContainer") as IWindowContainer);
             var _local_6:IWindowContainer = (_local_4.getListItemByName("playerDataContainer") as IWindowContainer);
             var _local_7:IWindowContainer = (_local_4.getListItemByName("playerScoreContainer") as IWindowContainer);
-            WindowUtils._Str_2972(this.findChildByName(_local_5, "playerImage"), this._SafeStr_18801(_local_2, k.figure, k.gender));
+            WindowUtils.setElementImage(this.findChildByName(_local_5, "playerImage"), this._SafeStr_18801(_local_2, k.figure, k.gender));
             WindowUtils._Str_4180(this.findChildByName(_local_6, "playerName"), k.name);
             WindowUtils._Str_26294(_local_6, "playerStats");
             WindowUtils._Str_26294(_local_7, "playerScore");

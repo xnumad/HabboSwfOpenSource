@@ -255,7 +255,7 @@
             {
                 _local_7 = (_local_5.getListItemAt(_local_6) as IWindowContainer);
                 _local_3 = ((_local_6 <= this._SafeStr_18763) ? "pagination_ball_hilite" : "pagination_ball");
-                WindowUtils._Str_2972(_local_7.getChildAt(0), this._SafeStr_12987(_local_3));
+                WindowUtils.setElementImage(_local_7.getChildAt(0), this._SafeStr_12987(_local_3));
                 _local_6++;
             }
         }

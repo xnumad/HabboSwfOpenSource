@@ -1430,11 +1430,11 @@
             this._Str_5309[CatalogType.NORMAL] = new CatalogNavigator(this, this._mainContainer, CatalogType.NORMAL);
             this._Str_5309[CatalogType.BUILDER] = new CatalogNavigator(this, this._mainContainer, CatalogType.BUILDER);
             var k:BitmapDataAsset = (assets.getAssetByName("purse_coins_small") as BitmapDataAsset);
-            this._Str_2972("creditsIcon", (k.content as BitmapData));
+            this.setElementImage("creditsIcon", (k.content as BitmapData));
             var _local_2:BitmapDataAsset = (assets.getAssetByName("purse_pixels_small") as BitmapDataAsset);
-            this._Str_2972("pixelsIcon", (_local_2.content as BitmapData));
+            this.setElementImage("pixelsIcon", (_local_2.content as BitmapData));
             var _local_3:BitmapDataAsset = (assets.getAssetByName("purse_club_small") as BitmapDataAsset);
-            this._Str_2972("clubIcon", (_local_3.content as BitmapData));
+            this.setElementImage("clubIcon", (_local_3.content as BitmapData));
         }
 
         private function _Str_22909():void
@@ -2275,7 +2275,7 @@
             }
         }
 
-        private function _Str_2972(k:String, _arg_2:BitmapData):void
+        private function setElementImage(k:String, _arg_2:BitmapData):void
         {
             var _local_3:IBitmapWrapperWindow = (this._mainContainer.findChildByName(k) as IBitmapWrapperWindow);
             if (_local_3 != null)

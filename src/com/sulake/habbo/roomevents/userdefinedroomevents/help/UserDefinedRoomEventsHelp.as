@@ -218,7 +218,7 @@
             }
         }
 
-        private function _Str_2972(k:IBitmapWrapperWindow, _arg_2:BitmapData):void
+        private function setElementImage(k:IBitmapWrapperWindow, _arg_2:BitmapData):void
         {
             if (_arg_2 == null)
             {
@@ -258,7 +258,7 @@
             var _local_3:IBitmapWrapperWindow = (this.find(this._window, "help_image") as IBitmapWrapperWindow);
             if (_local_3)
             {
-                this._Str_2972(_local_3, (_local_2.content as BitmapData));
+                this.setElementImage(_local_3, (_local_2.content as BitmapData));
             }
         }
 

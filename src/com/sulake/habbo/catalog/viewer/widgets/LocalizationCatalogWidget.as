@@ -246,7 +246,7 @@
                     this._imageElementMap[_local_4] = _local_3;
                     if (page.viewer.catalog.assets.hasAsset(_local_4))
                     {
-                        this._Str_2972(_local_3, _local_4);
+                        this.setElementImage(_local_3, _local_4);
                     }
                     else
                     {
@@ -317,7 +317,7 @@
                         this._imageElementMap[_local_9] = _local_2;
                         if (page.viewer.catalog.assets.hasAsset(_local_9))
                         {
-                            this._Str_2972(_local_2, _local_9);
+                            this.setElementImage(_local_2, _local_9);
                         }
                         else
                         {
@@ -353,7 +353,7 @@
             }
         }
 
-        private function _Str_2972(k:String, _arg_2:String):void
+        private function setElementImage(k:String, _arg_2:String):void
         {
             var _local_3:IWindow;
             var _local_4:BitmapDataAsset;
@@ -454,7 +454,7 @@
             {
                 _local_3 = _local_2.assetName;
                 _local_4 = this._imageElementMap[_local_3];
-                this._Str_2972(_local_4, _local_3);
+                this.setElementImage(_local_4, _local_3);
             }
         }
 

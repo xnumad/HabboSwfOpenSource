@@ -150,16 +150,16 @@
         {
             this._SafeStr_18611.textColor = 0;
             this._SafeStr_18613.textColor = 0xFFFFFF;
-            WindowUtils._Str_2972(this._SafeStr_18610, this._SafeStr_12987("left_blue"));
-            WindowUtils._Str_2972(this._SafeStr_18612, this._SafeStr_12987("right_black"));
+            WindowUtils.setElementImage(this._SafeStr_18610, this._SafeStr_12987("left_blue"));
+            WindowUtils.setElementImage(this._SafeStr_18612, this._SafeStr_12987("right_black"));
         }
 
         private function _SafeStr_18630():void
         {
             this._SafeStr_18611.textColor = 0xFFFFFF;
             this._SafeStr_18613.textColor = 0;
-            WindowUtils._Str_2972(this._SafeStr_18610, this._SafeStr_12987("left_black"));
-            WindowUtils._Str_2972(this._SafeStr_18612, this._SafeStr_12987("right_blue"));
+            WindowUtils.setElementImage(this._SafeStr_18610, this._SafeStr_12987("left_black"));
+            WindowUtils.setElementImage(this._SafeStr_18612, this._SafeStr_12987("right_blue"));
         }
 
         public function _SafeStr_13282():void
@@ -348,10 +348,10 @@
                 this._SafeStr_18611 = (this._SafeStr_9274.findChildByName("this_week_text") as ITextWindow);
                 this._SafeStr_18614 = (this._SafeStr_9274.findChildByName("scrollUp") as IRegionWindow);
                 this._SafeStr_18647(this._SafeStr_18614);
-                WindowUtils._Str_2972(this._SafeStr_18614.getChildAt(0), this._SafeStr_12987("scroll_up_normal"));
+                WindowUtils.setElementImage(this._SafeStr_18614.getChildAt(0), this._SafeStr_12987("scroll_up_normal"));
                 this._SafeStr_18615 = (this._SafeStr_9274.findChildByName("scrollDown") as IRegionWindow);
                 this._SafeStr_18647(this._SafeStr_18615);
-                WindowUtils._Str_2972(this._SafeStr_18615.getChildAt(0), this._SafeStr_12987("scroll_down_normal"));
+                WindowUtils.setElementImage(this._SafeStr_18615.getChildAt(0), this._SafeStr_12987("scroll_down_normal"));
                 this._SafeStr_18616 = (this._SafeStr_9274.findChildByName("nextWeek") as IRegionWindow);
                 this._SafeStr_18616.addEventListener(WindowMouseEvent.CLICK, this._SafeStr_18645);
                 this._SafeStr_18616.visible = false;
@@ -494,7 +494,7 @@
             }
             var _local_4:String = ((("scroll_" + _local_2) + "_") + _local_3);
             var _local_5:IWindowContainer = (k.window as IWindowContainer);
-            WindowUtils._Str_2972(_local_5.getChildAt(0), this._SafeStr_12987(_local_4));
+            WindowUtils.setElementImage(_local_5.getChildAt(0), this._SafeStr_12987(_local_4));
         }
 
         private function _SafeStr_18645(k:WindowMouseEvent):void
@@ -763,7 +763,7 @@
                 }
                 _local_5.dispose();
             }
-            WindowUtils._Str_2972(k, _local_4);
+            WindowUtils.setElementImage(k, _local_4);
             _local_4.dispose();
         }
 
