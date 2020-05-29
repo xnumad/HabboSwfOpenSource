@@ -91,7 +91,7 @@
         private var _gender:String;
         private var _realName:String;
         private var _respectTotal:int = 0;
-        private var _Str_3437:int = 0;
+        private var _respectLeft:int = 0;
         private var _Str_3973:int = 0;
         private var _Str_7394:Boolean = true;
         private var _Str_25790:Array;
@@ -326,7 +326,7 @@
             this._userId = _local_3.id;
             this._name = _local_3.name;
             this._respectTotal = _local_3.respectTotal;
-            this._Str_3437 = _local_3.petRespectLeft;
+            this._respectLeft = _local_3.petRespectLeft;
             this._Str_3973 = _local_3._Str_2985;
             this._figure = _local_3.figure;
             this._gender = _local_3.sex;
@@ -687,7 +687,7 @@
 
         public function get petRespectLeft():int
         {
-            return this._Str_3437;
+            return this._respectLeft;
         }
 
         public function get _Str_2985():int
@@ -697,16 +697,16 @@
 
         public function giveRespect(k:int):void
         {
-            if (((k >= 0) && (this._Str_3437 > 0)))
+            if (((k >= 0) && (this._respectLeft > 0)))
             {
                 this.send(new _Str_10714(k));
-                this._Str_3437 = (this._Str_3437 - 1);
+                this._respectLeft = (this._respectLeft - 1);
             }
         }
 
         public function giveRespectFailed():void
         {
-            this._Str_3437 = (this._Str_3437 + 1);
+            this._respectLeft = (this._respectLeft + 1);
         }
 
         public function givePetRespect(k:int):void

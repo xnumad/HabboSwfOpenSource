@@ -33,7 +33,7 @@
         private var _Str_9070:Boolean = false;
         private var _Str_8457:Boolean = false;
         private var _Str_8831:Boolean = false;
-        private var _Str_3437:int = 0;
+        private var _respectLeft:int = 0;
         private var _Str_6028:Boolean = false;
         private var _Str_6139:Boolean = false;
         private var _Str_8973:Boolean = false;
@@ -170,12 +170,12 @@
 
         public function set petRespectLeft(k:int):void
         {
-            this._Str_3437 = k;
+            this._respectLeft = k;
         }
 
         public function get petRespectLeft():int
         {
-            return this._Str_3437;
+            return this._respectLeft;
         }
 
         public function set isIgnored(k:Boolean):void
