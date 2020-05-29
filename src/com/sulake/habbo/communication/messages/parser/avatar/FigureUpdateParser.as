@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6876 implements IMessageParser 
+    public class FigureUpdateParser implements IMessageParser
     {
         private var _figure:String;
         private var _gender:String;

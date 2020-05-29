@@ -2,28 +2,28 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.avatar._Str_6876;
+    import com.sulake.habbo.communication.messages.parser.avatar.FigureUpdateParser;
 
     public class FigureUpdateEvent extends MessageEvent implements IMessageEvent
     {
         public function FigureUpdateEvent(k:Function)
         {
-            super(k, _Str_6876);
+            super(k, FigureUpdateParser);
         }
 
-        private function getParser():_Str_6876
+        private function getParser():FigureUpdateParser
         {
-            return this._parser as _Str_6876;
+            return this._parser as FigureUpdateParser;
         }
 
         public function get figure():String
         {
-            return (_parser as _Str_6876).figure;
+            return (_parser as FigureUpdateParser).figure;
         }
 
         public function get gender():String
         {
-            return (_parser as _Str_6876).gender;
+            return (_parser as FigureUpdateParser).gender;
         }
     }
 }
