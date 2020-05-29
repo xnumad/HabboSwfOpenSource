@@ -242,9 +242,9 @@
                 _Str_16173();
                 _Str_6159();
                 _Str_10532();
-                if (_Str_2364)
+                if (_timer)
                 {
-                    _Str_2364.start();
+                    _timer.start();
                 }
                 _local_4 = this._groupIndex[this._selectedGroup];
                 this._Str_25508(_local_4);

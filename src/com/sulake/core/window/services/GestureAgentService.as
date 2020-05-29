@@ -11,7 +11,7 @@
         private var _disposed:Boolean = false;
         protected var _Str_5527:Boolean;
         protected var window:IWindow;
-        protected var _Str_2364:Timer;
+        protected var _timer:Timer;
         protected var _Str_829:uint = 0;
         protected var _Str_2715:Function;
         protected var _Str_5257:int;
@@ -45,9 +45,9 @@
                 this._Str_5527 = true;
                 this._Str_5257 = _arg_4;
                 this._Str_4979 = _arg_5;
-                this._Str_2364 = new Timer(40, 0);
-                this._Str_2364.addEventListener(TimerEvent.TIMER, this.operate);
-                this._Str_2364.start();
+                this._timer = new Timer(40, 0);
+                this._timer.addEventListener(TimerEvent.TIMER, this.operate);
+                this._timer.start();
             }
             return _local_6;
         }
@@ -72,11 +72,11 @@
         public function end(k:IWindow):IWindow
         {
             var _local_2:IWindow = this.window;
-            if (this._Str_2364)
+            if (this._timer)
             {
-                this._Str_2364.stop();
-                this._Str_2364.removeEventListener(TimerEvent.TIMER, this.operate);
-                this._Str_2364 = null;
+                this._timer.stop();
+                this._timer.removeEventListener(TimerEvent.TIMER, this.operate);
+                this._timer = null;
             }
             if (this._Str_5527)
             {

@@ -28,15 +28,15 @@
         private var _bar:IWindow;
         private var _maxWidth:Number;
         private var _timeLeftField:ITextWindow;
-        private var _Str_2364:Timer;
+        private var _timer:Timer;
         private var _Str_6963:IWindow;
 
         public function _Str_4860(k:EffectsWidget, _arg_2:IWidgetAvatarEffect)
         {
             this._effect = _arg_2;
             this._widget = k;
-            this._Str_2364 = new Timer(this._Str_25685);
-            this._Str_2364.addEventListener(TimerEvent.TIMER, this._Str_5183);
+            this._timer = new Timer(this._Str_25685);
+            this._timer.addEventListener(TimerEvent.TIMER, this._Str_5183);
             this.update();
         }
 
@@ -47,11 +47,11 @@
 
         public function dispose():void
         {
-            if (this._Str_2364 != null)
+            if (this._timer != null)
             {
-                this._Str_2364.stop();
-                this._Str_2364.removeEventListener(TimerEvent.TIMER, this._Str_5183);
-                this._Str_2364 = null;
+                this._timer.stop();
+                this._timer.removeEventListener(TimerEvent.TIMER, this._Str_5183);
+                this._timer = null;
             }
             this._widget = null;
             this._effect = null;
@@ -75,7 +75,7 @@
             var _local_2:Number;
             if (this._bar == null)
             {
-                this._Str_2364.stop();
+                this._timer.stop();
                 return;
             }
             if (this._effect.isActive)
@@ -86,7 +86,7 @@
             else
             {
                 this._bar.width = 0;
-                this._Str_2364.stop();
+                this._timer.stop();
             }
             this.setTimeLeft();
         }
@@ -231,7 +231,7 @@
             if (this._bar != null)
             {
                 this._maxWidth = this._bar.width;
-                this._Str_2364.start();
+                this._timer.start();
                 this._Str_5183();
             }
             if (this._effect.icon)

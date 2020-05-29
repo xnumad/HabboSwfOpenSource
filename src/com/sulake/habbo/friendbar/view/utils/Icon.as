@@ -24,7 +24,7 @@
         protected var _Str_671:BitmapDataAsset;
         protected var _Str_1868:IBitmapWrapperWindow;
         private var _Str_4220:uint;
-        protected var _Str_2364:Timer;
+        protected var _timer:Timer;
         protected var _frame:int = 0;
         private var _Str_6692:Point;
         protected var _Str_5470:Boolean = false;
@@ -155,23 +155,23 @@
         {
             if (k)
             {
-                if (!this._Str_2364)
+                if (!this._timer)
                 {
-                    this._Str_2364 = new Timer(_arg_2, 0);
-                    this._Str_2364.addEventListener(TimerEvent.TIMER, this.onTimerEvent);
-                    this._Str_2364.start();
+                    this._timer = new Timer(_arg_2, 0);
+                    this._timer.addEventListener(TimerEvent.TIMER, this.onTimerEvent);
+                    this._timer.start();
                     this.onTimerEvent(null);
                 }
-                this._Str_2364.delay = _arg_2;
+                this._timer.delay = _arg_2;
             }
             else
             {
                 this._frame = 0;
-                if (this._Str_2364)
+                if (this._timer)
                 {
-                    this._Str_2364.reset();
-                    this._Str_2364.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
-                    this._Str_2364 = null;
+                    this._timer.reset();
+                    this._timer.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
+                    this._timer = null;
                 }
             }
         }

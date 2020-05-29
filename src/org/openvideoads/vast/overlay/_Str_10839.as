@@ -9,7 +9,7 @@
         protected var _Str_14323:String = null;
         protected var _Str_2467:int = 0;
         protected var _Str_4771:RegionView = null;
-        protected var _Str_2364:Timer = null;
+        protected var _timer:Timer = null;
 
         public function _Str_10839(k:String, _arg_2:int, _arg_3:RegionView)
         {
@@ -54,10 +54,10 @@
 
         protected function _Str_24263():void
         {
-            if (this._Str_2364 != null)
+            if (this._timer != null)
             {
-                this._Str_2364.stop();
-                this._Str_2364 = null;
+                this._timer.stop();
+                this._timer = null;
             }
             if (this._Str_4771 != null)
             {

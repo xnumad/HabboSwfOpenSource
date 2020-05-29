@@ -9,7 +9,7 @@
     {
         private var _habboFriendList:HabboFriendList;
         private var _Str_3245:IWindowContainer;
-        private var _Str_2364:Timer;
+        private var _timer:Timer;
 
         public function _Str_9313(k:HabboFriendList)
         {
@@ -23,13 +23,13 @@
                 this.close(null);
             }
             this._Str_3245 = this._Str_23551();
-            if (this._Str_2364 != null)
+            if (this._timer != null)
             {
-                this._Str_2364.stop();
+                this._timer.stop();
             }
-            this._Str_2364 = new Timer(2000, 1);
-            this._Str_2364.addEventListener(TimerEvent.TIMER, this.close);
-            this._Str_2364.start();
+            this._timer = new Timer(2000, 1);
+            this._timer.addEventListener(TimerEvent.TIMER, this.close);
+            this._timer.start();
             this._Str_3245.x = k;
             this._Str_3245.y = _arg_2;
         }

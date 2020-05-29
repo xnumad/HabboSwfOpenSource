@@ -38,7 +38,7 @@
         protected var _Str_18737:XML;
         protected var _Str_2537:IGridItem;
         private var _Str_18734:int = 0;
-        protected var _Str_2364:Timer;
+        protected var _timer:Timer;
         protected var _Str_23853:Boolean = true;
         private var _Str_8035:int = 0;
         protected var _Str_2720:ISessionDataManager;
@@ -61,11 +61,11 @@
 
         override public function dispose():void
         {
-            if (this._Str_2364 != null)
+            if (this._timer != null)
             {
-                this._Str_2364.stop();
-                this._Str_2364.removeEventListener(TimerEvent.TIMER, this._Str_10532);
-                this._Str_2364 = null;
+                this._timer.stop();
+                this._timer.removeEventListener(TimerEvent.TIMER, this._Str_10532);
+                this._timer = null;
             }
             if (this._Str_2448 != null)
             {
@@ -103,9 +103,9 @@
             this._Str_6159();
             if (this._Str_23853)
             {
-                this._Str_2364 = new Timer(25);
-                this._Str_2364.addEventListener(TimerEvent.TIMER, this._Str_10532);
-                this._Str_2364.start();
+                this._timer = new Timer(25);
+                this._timer.addEventListener(TimerEvent.TIMER, this._Str_10532);
+                this._timer.start();
             }
             else
             {
@@ -281,9 +281,9 @@
 
         protected function _Str_16173():void
         {
-            if (this._Str_2364 != null)
+            if (this._timer != null)
             {
-                this._Str_2364.reset();
+                this._timer.reset();
             }
             this._Str_8035 = 0;
         }

@@ -120,7 +120,7 @@
         private var _Str_10857:IRegionWindow;
         private var _Str_21385:Boolean = false;
         private var _Str_5894:IStaticBitmapWrapperWindow;
-        private var _Str_2364:Timer;
+        private var _timer:Timer;
         private var _Str_21460:Boolean = false;
 		private var playSnowstormEnabled:Boolean = false;
 		private var snowstormFriendsThreshold:int = 0;
@@ -179,11 +179,11 @@
         {
             if (!disposed)
             {
-                if (this._Str_2364 != null)
+                if (this._timer != null)
                 {
-                    this._Str_2364.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
-                    this._Str_2364.stop();
-                    this._Str_2364 = null;
+                    this._timer.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
+                    this._timer.stop();
+                    this._timer = null;
                 }
                 if (this._Str_2978)
                 {
@@ -771,22 +771,22 @@
             var _local_3:IWindow = (this._Str_4075.getChildByName("icon_1") as IWindow);
             if (k)
             {
-                if (!this._Str_2364)
+                if (!this._timer)
                 {
                     _local_2.visible = false;
                     _local_3.visible = true;
-                    this._Str_2364 = new Timer(500, 0);
-                    this._Str_2364.addEventListener(TimerEvent.TIMER, this.onTimerEvent);
-                    this._Str_2364.start();
+                    this._timer = new Timer(500, 0);
+                    this._timer.addEventListener(TimerEvent.TIMER, this.onTimerEvent);
+                    this._timer.start();
                 }
             }
             else
             {
-                if (this._Str_2364 != null)
+                if (this._timer != null)
                 {
-                    this._Str_2364.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
-                    this._Str_2364.stop();
-                    this._Str_2364 = null;
+                    this._timer.removeEventListener(TimerEvent.TIMER, this.onTimerEvent);
+                    this._timer.stop();
+                    this._timer = null;
                 }
                 _local_2.visible = true;
                 _local_3.visible = false;
