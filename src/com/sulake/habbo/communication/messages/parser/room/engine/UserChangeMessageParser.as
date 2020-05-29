@@ -8,7 +8,7 @@
         private var _id:int;
         private var _figure:String;
         private var _sex:String;
-        private var _Str_8430:String;
+        private var _customInfo:String;
         private var _activityPoints:int;
 
 
@@ -29,7 +29,7 @@
 
         public function get customInfo():String
         {
-            return this._Str_8430;
+            return this._customInfo;
         }
 
         public function get activityPoints():int
@@ -42,7 +42,7 @@
             this._id = 0;
             this._figure = "";
             this._sex = "";
-            this._Str_8430 = "";
+            this._customInfo = "";
             return true;
         }
 
@@ -51,7 +51,7 @@
             this._id = k.readInteger();
             this._figure = k.readString();
             this._sex = k.readString();
-            this._Str_8430 = k.readString();
+            this._customInfo = k.readString();
             this._activityPoints = k.readInteger();
             if (this._sex)
             {
