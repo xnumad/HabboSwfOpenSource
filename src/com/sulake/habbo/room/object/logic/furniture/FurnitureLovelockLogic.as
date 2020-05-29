@@ -8,7 +8,7 @@
 
         override protected function get engravingDialogType():int
         {
-            return FriendFurniEngravingWidgetTypeEnum._Str_13451;
+            return FriendFurniEngravingWidgetTypeEnum.LOVE_LOCK;
         }
     }
 }

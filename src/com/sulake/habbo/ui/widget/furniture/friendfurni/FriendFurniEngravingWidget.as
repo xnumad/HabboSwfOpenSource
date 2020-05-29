@@ -36,17 +36,17 @@
             this._stuffId = k;
             switch (_arg_2)
             {
-                case FriendFurniEngravingWidgetTypeEnum._Str_13451:
+                case FriendFurniEngravingWidgetTypeEnum.LOVE_LOCK:
                     this._engravingView = new LoveLockEngravingView(this, _arg_3);
                     break;
-                case FriendFurniEngravingWidgetTypeEnum._Str_17498:
+                case FriendFurniEngravingWidgetTypeEnum.CARVE_A_TREE:
                     break;
-                case FriendFurniEngravingWidgetTypeEnum._Str_18746:
+                case FriendFurniEngravingWidgetTypeEnum.FRIENDS_PORTRAIT:
                     break;
-                case FriendFurniEngravingWidgetTypeEnum._Str_15230:
+                case FriendFurniEngravingWidgetTypeEnum.WILD_WEST_WANTED:
                     this._engravingView = new WildWestEngravingView(this, _arg_3);
                     break;
-                case FriendFurniEngravingWidgetTypeEnum._Str_15778:
+                case FriendFurniEngravingWidgetTypeEnum.HABBOWEEN:
                     this._engravingView = new HabboweenEngravingView(this, _arg_3);
                     break;
             }
