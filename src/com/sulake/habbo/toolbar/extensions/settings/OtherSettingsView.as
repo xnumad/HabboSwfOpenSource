@@ -8,8 +8,8 @@
     import com.sulake.core.window.components.ICheckBoxWindow;
     import com.sulake.habbo.phonenumber.PhoneNumberStatusEnum;
     import com.sulake.habbo.phonenumber.ClientPhoneVerificationStatusEnum;
-    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_10960;
-    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11774;
+    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_10960;
+    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11774;
     import com.sulake.habbo.communication.messages.outgoing.gifts._Str_7498;
 
     public class OtherSettingsView 

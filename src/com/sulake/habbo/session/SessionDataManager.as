@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.parser.users.EmailStatusParser;
     import com.sulake.habbo.communication.messages.parser.availability.AvailabilityStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing._Str_370.SetUIFlagsMessageComposer;
+    import com.sulake.habbo.communication.messages.outgoing.preferences.SetUIFlagsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
     import flash.display.BitmapData;
     import com.sulake.habbo.window.utils._Str_2418;

@@ -1,13 +1,13 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_370
+﻿package com.sulake.habbo.communication.messages.outgoing.preferences
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class SetUIFlagsMessageComposer implements IMessageComposer, IDisposable
+    public class _Str_10960 implements IMessageComposer, IDisposable 
     {
         private var _array:Array;
 
-        public function SetUIFlagsMessageComposer(k:int)
+        public function _Str_10960(k:Boolean)
         {
             this._array = new Array();
             super();

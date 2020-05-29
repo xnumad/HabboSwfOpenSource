@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.navigator.domain.NavigatorData;
-    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11137;
+    import com.sulake.habbo.communication.messages.outgoing.preferences._Str_11137;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_12436;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11341;
