@@ -85,7 +85,7 @@
     import com.sulake.habbo.groups.events.GuildSettingsChangedInManageEvent;
     import com.sulake.iid.IIDHabboAvatarEditor;
     import com.sulake.iid.IIDHabboQuestEngine;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_9145;
+    import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
@@ -547,7 +547,7 @@
         override protected function initComponent():void
         {
             this._Str_2432 = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_9145(this._Str_11705));
+            this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
             this.addMessageEvent(new _Str_7677(this._Str_16050));
             this.addMessageEvent(new _Str_4508(this._Str_17254));
             this.addMessageEvent(new _Str_8801(this._Str_25682));
@@ -2014,7 +2014,7 @@
             this._windowManager.alert(_local_2, _local_3, 0, this._Str_7211);
         }
 
-        private function _Str_11705(k:_Str_9145):void
+        private function _Str_11705(k:ApproveNameMessageEvent):void
         {
             if (((k == null) || (this._catalogViewer == null)))
             {

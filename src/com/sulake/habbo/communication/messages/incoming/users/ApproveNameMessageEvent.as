@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.ApproveNameMessageParser;
 
-    public class _Str_9145 extends MessageEvent implements IMessageEvent 
+    public class ApproveNameMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9145(k:Function)
+        public function ApproveNameMessageEvent(k:Function)
         {
             super(k, ApproveNameMessageParser);
         }

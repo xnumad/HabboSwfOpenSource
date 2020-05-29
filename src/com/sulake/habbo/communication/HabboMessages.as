@@ -349,7 +349,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_9145;
+	import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
@@ -1063,7 +1063,7 @@
             INCOMING_PACKETS[1488] = UniqueMachineIDEvent;
             INCOMING_PACKETS[1498] = _Str_5993;
             INCOMING_PACKETS[1501] = PostItPlacedEvent;
-            INCOMING_PACKETS[1503] = _Str_9145;
+            INCOMING_PACKETS[1503] = ApproveNameMessageEvent;
             INCOMING_PACKETS[151] = _Str_6109;
             INCOMING_PACKETS[1517] = _Str_8409;
             INCOMING_PACKETS[1533] = _Str_6906;
