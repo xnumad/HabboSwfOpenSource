@@ -6,7 +6,7 @@
     public class AvailabilityStatusMessageParser implements IMessageParser
     {
         private var _isOpen:Boolean;
-        private var _Str_18253:Boolean;
+        private var _onShutDown:Boolean;
         private var _isAuthenticHabbo:Boolean;
 
 
@@ -17,7 +17,7 @@
 
         public function get _Str_22557():Boolean
         {
-            return this._Str_18253;
+            return this._onShutDown;
         }
 
         public function get isAuthenticHabbo():Boolean
@@ -28,7 +28,7 @@
         public function flush():Boolean
         {
             this._isOpen = false;
-            this._Str_18253 = false;
+            this._onShutDown = false;
             this._isAuthenticHabbo = false;
             return true;
         }
@@ -36,7 +36,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._isOpen = k.readBoolean();
-            this._Str_18253 = k.readBoolean();
+            this._onShutDown = k.readBoolean();
             if (k.bytesAvailable)
             {
                 this._isAuthenticHabbo = k.readBoolean();
