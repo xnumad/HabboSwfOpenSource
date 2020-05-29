@@ -4,7 +4,7 @@
     import com.sulake.habbo.friendbar.landingview.HabboLandingView;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.habbo.avatar.events.AvatarUpdateEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -15,13 +15,13 @@
         private var _landingView:HabboLandingView;
         private var _avatarImageWidget:IWidgetWindow;
         private var _userObjectEvent:UserObjectEvent;
-        private var _userChangeMessageEvent:_Str_3084;
+        private var _userChangeMessageEvent:UserChangeMessageEvent;
 
         public function AvatarImageWidget(k:HabboLandingView)
         {
             this._landingView = k;
             this._userObjectEvent = new UserObjectEvent(this.onUserObject);
-            this._userChangeMessageEvent = new _Str_3084(this.onUserChange);
+            this._userChangeMessageEvent = new UserChangeMessageEvent(this.onUserChange);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
             this._landingView.avatarEditor.events.addEventListener(AvatarUpdateEvent.AVATAR_FIGURE_UPDATED, this._Str_20230);
@@ -74,7 +74,7 @@
 
         private function onUserChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_3084 = (k as _Str_3084);
+            var _local_2:UserChangeMessageEvent = (k as UserChangeMessageEvent);
             if (_local_2 == null)
             {
                 return;

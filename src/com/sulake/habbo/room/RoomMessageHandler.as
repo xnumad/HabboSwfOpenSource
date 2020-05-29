@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.ExpressionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.AvatarEffectMessageEvent;
@@ -204,7 +204,7 @@
                 k.addMessageEvent(new UsersEvent(this._Str_10523));
                 k.addMessageEvent(new UserUpdateEvent(this.onUserUpdate));
                 k.addMessageEvent(new _Str_4914(this._Str_16267));
-                k.addMessageEvent(new _Str_3084(this.onUserChange));
+                k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 k.addMessageEvent(new ExpressionMessageEvent(this.onExpression));
                 k.addMessageEvent(new DanceMessageEvent(this.onDance));
                 k.addMessageEvent(new AvatarEffectMessageEvent(this.onAvatarEffect));
@@ -960,7 +960,7 @@
 
         private function onUserChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_3084 = (k as _Str_3084);
+            var _local_2:UserChangeMessageEvent = (k as UserChangeMessageEvent);
             if (_local_2 == null)
             {
                 return;

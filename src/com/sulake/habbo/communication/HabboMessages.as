@@ -429,7 +429,7 @@
 	import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
@@ -1375,7 +1375,7 @@
             INCOMING_PACKETS[3898] = ExtendedProfileMessageEvent;
             INCOMING_PACKETS[3914] = _Str_5514;
             INCOMING_PACKETS[3915] = _Str_15952;
-            INCOMING_PACKETS[3920] = _Str_3084;
+            INCOMING_PACKETS[3920] = UserChangeMessageEvent;
             INCOMING_PACKETS[3926] = _Str_9217;
             INCOMING_PACKETS[3928] = PingMessageEvent;
             INCOMING_PACKETS[3945] = EpicPopupMessageEvent;

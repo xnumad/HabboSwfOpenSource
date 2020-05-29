@@ -8,7 +8,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.quest.CommunityGoalProgressMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2483;
@@ -45,7 +45,7 @@
             this._container = IWindowContainer(this._landingView.getXmlWindow("achievement_competition_prizes"));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
         }
 
         public function refresh():void
@@ -141,7 +141,7 @@
             this._Str_7815();
         }
 
-        private function onUserChange(k:_Str_3084):void
+        private function onUserChange(k:UserChangeMessageEvent):void
         {
             if (((!(k == null)) && (k.id == -1)))
             {

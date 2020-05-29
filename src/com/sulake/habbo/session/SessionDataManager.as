@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
@@ -172,7 +172,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
                 this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
+                this._communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
@@ -338,7 +338,7 @@
 
         private function onUserChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_3084 = (k as _Str_3084);
+            var _local_2:UserChangeMessageEvent = (k as UserChangeMessageEvent);
             if (_local_2 == null)
             {
                 return;
