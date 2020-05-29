@@ -6,7 +6,7 @@
 
     public class _Str_7160 implements IMessageParser 
     {
-        private var _Str_2388:int;
+        private var _petId:int;
         private var _petName:String;
         private var _level:int;
         private var _figureData:PetFigureData;
@@ -19,7 +19,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2388 = k.readInteger();
+            this._petId = k.readInteger();
             this._petName = k.readString();
             this._level = k.readInteger();
             this._figureData = new PetFigureData(k);
@@ -28,7 +28,7 @@
 
         public function get _Str_2508():int
         {
-            return this._Str_2388;
+            return this._petId;
         }
 
         public function get petName():String

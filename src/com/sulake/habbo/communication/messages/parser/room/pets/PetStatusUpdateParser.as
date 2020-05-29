@@ -6,7 +6,7 @@
     public class PetStatusUpdateParser implements IMessageParser 
     {
         private var _roomIndex:int;
-        private var _Str_2388:int;
+        private var _petId:int;
         private var _canBreed:Boolean;
         private var _canHarvest:Boolean;
         private var _canRevive:Boolean;
@@ -20,7 +20,7 @@
 
         public function get _Str_2508():int
         {
-            return this._Str_2388;
+            return this._petId;
         }
 
         public function get canBreed():Boolean
@@ -51,7 +51,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._roomIndex = k.readInteger();
-            this._Str_2388 = k.readInteger();
+            this._petId = k.readInteger();
             this._canBreed = k.readBoolean();
             this._canHarvest = k.readBoolean();
             this._canRevive = k.readBoolean();
