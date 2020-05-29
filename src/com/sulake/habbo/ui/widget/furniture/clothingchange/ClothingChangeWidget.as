@@ -37,7 +37,7 @@
 
         override public function dispose():void
         {
-            this._Str_9023();
+            this.hideGenderSelectionInterface();
             super.dispose();
         }
 
@@ -67,14 +67,14 @@
             switch (k.type)
             {
                 case RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION:
-                    this._Str_22639(k);
+                    this.showGenderSelectionInterface(k);
                     return;
             }
         }
 
-        private function _Str_22639(k:RoomWidgetClothingChangeUpdateEvent):void
+        private function showGenderSelectionInterface(k:RoomWidgetClothingChangeUpdateEvent):void
         {
-            this._Str_9023();
+            this.hideGenderSelectionInterface();
             this._objectId = k.objectId;
             this._objectCategory = k.objectCategory;
             this._Str_2337 = k.roomId;
@@ -91,7 +91,7 @@
             var _local_4:IWindow = this._genderSelectionWindow.findChildByTag("close");
             if (_local_4 != null)
             {
-                _local_4.procedure = this._Str_23303;
+                _local_4.procedure = this.onGenderSelectionWindowClose;
             }
             _local_4 = this._genderSelectionWindow.findChildByName(BOY);
             if (_local_4 != null)
@@ -105,7 +105,7 @@
             }
         }
 
-        private function _Str_9023():void
+        private function hideGenderSelectionInterface():void
         {
             if (this._genderSelectionWindow != null)
             {
@@ -114,13 +114,13 @@
             }
         }
 
-        private function _Str_23303(k:WindowEvent, _arg_2:IWindow):void
+        private function onGenderSelectionWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
             }
-            this._Str_9023();
+            this.hideGenderSelectionInterface();
         }
 
         private function onGenderSelectionMouseEvent(k:WindowMouseEvent):void
@@ -131,15 +131,15 @@
             {
                 case BOY:
                     this.requestEditor(FigureData.M);
-                    this._Str_9023();
+                    this.hideGenderSelectionInterface();
                     return;
                 case GIRL:
                     this.requestEditor(FigureData.F);
-                    this._Str_9023();
+                    this.hideGenderSelectionInterface();
                     return;
                 case "close":
                 case "close_btn":
-                    this._Str_9023();
+                    this.hideGenderSelectionInterface();
                     return;
             }
         }
