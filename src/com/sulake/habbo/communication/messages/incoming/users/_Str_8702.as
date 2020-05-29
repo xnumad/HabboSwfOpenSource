@@ -2,23 +2,23 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_6330;
+    import com.sulake.habbo.communication.messages.parser.users.HandItemReceivedMessageParser;
 
     public class _Str_8702 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_8702(k:Function)
         {
-            super(k, _Str_6330);
+            super(k, HandItemReceivedMessageParser);
         }
 
         public function get _Str_16798():int
         {
-            return _Str_6330(_parser)._Str_16798;
+            return HandItemReceivedMessageParser(_parser).giverUserId;
         }
 
         public function get _Str_17975():int
         {
-            return _Str_6330(_parser)._Str_17975;
+            return HandItemReceivedMessageParser(_parser).handItemType;
         }
     }
 }
