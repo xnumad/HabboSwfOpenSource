@@ -77,7 +77,7 @@
             return 0;
         }
 
-        public function get _Str_7590():int
+        public function get secondaryColorId():int
         {
             return 0;
         }

@@ -96,7 +96,7 @@
             return this._primaryColorId;
         }
 
-        public function get _Str_7590():int
+        public function get secondaryColorId():int
         {
             return this._secondaryColorId;
         }
