@@ -50,7 +50,7 @@
     import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.communication.messages.parser.users.EmailStatusParser;
-    import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
+    import com.sulake.habbo.communication.messages.parser.availability.AvailabilityStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
     import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
@@ -427,7 +427,7 @@
         private function _Str_23236(k:IMessageEvent):void
         {
             var _local_3:IFurniDataListener;
-            var _local_2:_Str_7162 = (k as _Str_9281).getParser();
+            var _local_2:AvailabilityStatusMessageParser = (k as _Str_9281).getParser();
             if (_local_2 == null)
             {
                 return;
