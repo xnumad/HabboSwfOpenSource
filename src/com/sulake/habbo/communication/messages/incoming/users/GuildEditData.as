@@ -81,7 +81,7 @@
             return this._groupName;
         }
 
-        public function get _Str_17501():String
+        public function get groupDesc():String
         {
             return this._groupDesc;
         }

@@ -382,7 +382,7 @@
         private function _Str_20884():void
         {
             ITextWindow(this._window.findChildByName("name_txt")).text = this._data.groupName;
-            ITextWindow(this._window.findChildByName("desc_txt")).text = this._data._Str_17501;
+            ITextWindow(this._window.findChildByName("desc_txt")).text = this._data.groupDesc;
             this._Str_20779();
             this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
             this._primaryColorCtrl._Str_6434(this._data._Str_7342);
