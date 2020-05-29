@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_11607 implements IMessageParser 
+    public class IgnoredUsersMessageParser implements IMessageParser
     {
         protected var _ignoredUsers:Array = null;
 
-        public function _Str_11607()
+        public function IgnoredUsersMessageParser()
         {
             this._ignoredUsers = [];
         }
