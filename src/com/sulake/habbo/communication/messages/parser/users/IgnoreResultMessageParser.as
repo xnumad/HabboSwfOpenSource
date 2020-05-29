@@ -3,12 +3,12 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9156 implements IMessageParser 
+    public class IgnoreResultMessageParser implements IMessageParser
     {
         private var _result:int;
         private var _name:String;
 
-        public function _Str_9156()
+        public function IgnoreResultMessageParser()
         {
             this._result = -1;
         }
