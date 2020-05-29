@@ -265,7 +265,7 @@
             {
                 if (((!(_arg_2 == null)) && (!(_arg_2.disposed))))
                 {
-                    _arg_2._Str_840(_local_3);
+                    _arg_2.avatarImageReady(_local_3);
                 }
             }
         }
@@ -305,7 +305,7 @@
                     {
                         if (((!(_local_10 == null)) && (!(_local_10.disposed))))
                         {
-                            _local_10._Str_840(_local_3);
+                            _local_10.avatarImageReady(_local_3);
                         }
                     }
                     delete this._listeners[_local_3];

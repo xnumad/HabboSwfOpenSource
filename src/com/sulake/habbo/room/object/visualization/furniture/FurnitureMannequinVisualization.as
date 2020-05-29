@@ -192,7 +192,7 @@
             return (((((("mannequin_" + this._figure) + "_") + this._scale) + "_") + direction) + "_") + k.getId();
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             if (k == this._figure)
             {

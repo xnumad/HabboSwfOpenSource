@@ -569,7 +569,7 @@
             return _Str_2318.getGroupBadgeImage(k);
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             var _local_2:IFriendEntity;
             var _local_7:FriendRequest;
@@ -628,17 +628,17 @@
                     {
                         if ((_local_13 is FriendRequestTab))
                         {
-                            FriendRequestTab(_local_13)._Str_840(_local_7, this.getAvatarFaceBitmap(k));
+                            FriendRequestTab(_local_13).avatarImageReady(_local_7, this.getAvatarFaceBitmap(k));
                             return;
                         }
                         if ((_local_13 is NewFriendRequestTab))
                         {
-                            NewFriendRequestTab(_local_13)._Str_840(_local_7, this.getAvatarFaceBitmap(k));
+                            NewFriendRequestTab(_local_13).avatarImageReady(_local_7, this.getAvatarFaceBitmap(k));
                             return;
                         }
                         if ((_local_13 is FriendRequestsTab))
                         {
-                            FriendRequestsTab(_local_13)._Str_840(_local_7, this.getAvatarFaceBitmap(k));
+                            FriendRequestsTab(_local_13).avatarImageReady(_local_7, this.getAvatarFaceBitmap(k));
                             return;
                         }
                     }

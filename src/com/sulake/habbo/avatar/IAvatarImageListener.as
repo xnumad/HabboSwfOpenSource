@@ -4,6 +4,6 @@
 
     public interface IAvatarImageListener extends IDisposable 
     {
-        function _Str_840(_arg_1:String):void;
+        function avatarImageReady(_arg_1:String):void;
     }
 }

@@ -289,7 +289,7 @@
             return this._gender;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             this._Str_2491();
         }

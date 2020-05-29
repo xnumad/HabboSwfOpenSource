@@ -825,7 +825,7 @@
             this._Str_1262();
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             var _local_2:IAvatarImage = this._context._Str_1458.createAvatarImage(k, AvatarScaleType.LARGE);
             var _local_3:BitmapData = _local_2.getImage(AvatarSetType.FULL, false);

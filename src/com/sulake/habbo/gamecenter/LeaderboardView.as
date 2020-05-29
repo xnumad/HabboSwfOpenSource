@@ -299,7 +299,7 @@
             }
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             this._Str_17941(this._thisWeekList, k);
             this._Str_17941(this._lastWeekList, k);

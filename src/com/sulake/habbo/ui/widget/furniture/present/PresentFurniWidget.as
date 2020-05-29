@@ -757,7 +757,7 @@
             return _local_3;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             if (((this._window == null) || (this._window.disposed)))
             {

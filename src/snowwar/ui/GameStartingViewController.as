@@ -227,7 +227,7 @@
             return this._disposed;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             if (this._SafeStr_18795.indexOf(k) == -1)
             {

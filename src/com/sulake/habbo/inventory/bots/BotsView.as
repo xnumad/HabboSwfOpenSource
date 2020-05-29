@@ -230,7 +230,7 @@
             return _local_6;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             var _local_2:BotGridItem;
             if (this.disposed)

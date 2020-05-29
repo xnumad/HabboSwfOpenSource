@@ -456,7 +456,7 @@
             }
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             var _local_2:BitmapData;
             if (this._avatarImageCache)

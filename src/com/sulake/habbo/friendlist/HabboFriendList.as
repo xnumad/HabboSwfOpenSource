@@ -963,7 +963,7 @@
             }
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             var _local_3:Friend;
             var _local_4:IWindowContainer;

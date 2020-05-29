@@ -268,7 +268,7 @@
             }
         }
 
-        public function _Str_840(k:FriendRequest, _arg_2:BitmapData):void
+        public function avatarImageReady(k:FriendRequest, _arg_2:BitmapData):void
         {
             var _local_3:IBitmapWrapperWindow;
             var _local_4:BitmapData;

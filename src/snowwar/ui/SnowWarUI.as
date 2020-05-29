@@ -180,7 +180,7 @@
             this._SafeStr_22099 = _SafeStr_22090;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             this._SafeStr_22115();
         }

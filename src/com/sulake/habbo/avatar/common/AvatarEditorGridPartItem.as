@@ -455,7 +455,7 @@
             return 0;
         }
 
-        public function _Str_840(k:String):void
+        public function avatarImageReady(k:String):void
         {
             if (!this._Str_21262())
             {
