@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_10999 implements IMessageParser 
+    public class HabboGroupBadgesMessageParser implements IMessageParser
     {
         protected var _badges:Map;
 
