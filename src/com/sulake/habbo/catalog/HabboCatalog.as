@@ -196,7 +196,7 @@
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7635;
     import com.sulake.habbo.catalog.navigation.events.CatalogFurniPurchaseEvent;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7888;
-    import com.sulake.habbo.communication.messages.parser.users._Str_7205;
+    import com.sulake.habbo.communication.messages.parser.users.ApproveNameMessageParser;
     import com.sulake.habbo.catalog.viewer.widgets.events.CatalogWidgetApproveNameResultEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.purse.UserCreditsMessageParser;
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
@@ -2020,7 +2020,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7205 = k.getParser();
+            var _local_2:ApproveNameMessageParser = k.getParser();
             this._catalogViewer.dispatchWidgetEvent(new CatalogWidgetApproveNameResultEvent(_local_2.result, _local_2.nameValidationInfo));
         }
 

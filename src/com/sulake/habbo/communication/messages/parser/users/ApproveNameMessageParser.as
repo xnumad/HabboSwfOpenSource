@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7205 implements IMessageParser 
+    public class ApproveNameMessageParser implements IMessageParser
     {
         private var _result:int;
         private var _nameValidationInfo:String;
