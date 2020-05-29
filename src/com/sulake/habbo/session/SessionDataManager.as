@@ -484,7 +484,7 @@
             return this._securityLevel >= k;
         }
 
-        public function get _Str_8500():int
+        public function get topSecurityLevel():int
         {
             return this._Str_16966;
         }

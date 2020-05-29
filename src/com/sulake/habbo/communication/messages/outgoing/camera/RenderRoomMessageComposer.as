@@ -24,7 +24,7 @@
         private var _Str_21758:String = "[]";
         private var roomId:int;
         private var _Str_6594:int = 1;
-        private var _Str_8500:int;
+        private var topSecurityLevel:int;
         private var time:Number;
         protected var _array:Array;
 
@@ -36,7 +36,7 @@
             this._Str_20937 = _arg_2;
             this._Str_19366 = _arg_3;
             this.roomId = _arg_4;
-            this._Str_8500 = _arg_5;
+            this.topSecurityLevel = _arg_5;
             this.time = new Date().getTime();
         }
 
@@ -126,7 +126,7 @@
             }
             var timeLastDigits:int = (this.time % 100);
             this.time = (this.time - timeLastDigits);
-            var status:int = (((this.time / 100) % 23) + this._Str_8500);
+            var status:int = (((this.time / 100) % 23) + this.topSecurityLevel);
             dataStrJsonObj = (dataStrJsonObj + (_Str_20902() + status));
             var check:int = dataStrJsonObj.length;
             check = ((check + ((this.time / 100) * 17)) % 1493);

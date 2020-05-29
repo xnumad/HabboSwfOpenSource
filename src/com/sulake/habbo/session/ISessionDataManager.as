@@ -16,7 +16,7 @@
         function get systemShutDown():Boolean;
         function get isAuthenticHabbo():Boolean;
         function hasSecurity(_arg_1:int):Boolean;
-        function get _Str_8500():int;
+        function get topSecurityLevel():int;
         function get clubLevel():int;
         function get nameChangeAllowed():Boolean;
         function get isAnyRoomController():Boolean;
