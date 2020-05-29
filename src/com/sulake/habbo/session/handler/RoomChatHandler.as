@@ -17,7 +17,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.ui.widget.enums.SystemChatStyleEnum;
-    import com.sulake.habbo.communication.messages.parser.users._Str_7994;
+    import com.sulake.habbo.communication.messages.parser.users.PetRespectNotificationParser;
     import com.sulake.habbo.communication.messages.parser.users._Str_7513;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8921;
     import com.sulake.habbo.communication.messages.parser.room.chat.FloodControlMessageParser;
@@ -104,7 +104,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7994 = k.getParser();
+            var _local_2:PetRespectNotificationParser = k.getParser();
             if (_local_2 == null)
             {
                 return;
@@ -116,11 +116,11 @@
             }
             var _local_4:String = RoomSessionChatEvent.RSCE_CHAT_EVENT;
             var _local_5:int = RoomSessionChatEvent.CHAT_TYPE_PETRESPECT;
-            if (_local_2._Str_24197())
+            if (_local_2.isTreat())
             {
                 _local_5 = RoomSessionChatEvent.CHAT_TYPE_PETTREAT;
             }
-            var _local_6:RoomUserData = _local_3.userDataManager._Str_8631(_local_2._Str_6175.id);
+            var _local_6:RoomUserData = _local_3.userDataManager._Str_8631(_local_2.petData.id);
             if (_local_6 == null)
             {
                 return;

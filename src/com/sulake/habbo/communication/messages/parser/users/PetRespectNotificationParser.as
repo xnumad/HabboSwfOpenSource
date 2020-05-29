@@ -4,32 +4,32 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7994 implements IMessageParser 
+    public class PetRespectNotificationParser implements IMessageParser
     {
-        public static const _Str_16214:int = 16;
+        public static const PET_TYPE_MONSTERPLANT:int = 16;
 
         private var _respect:int;
-        private var _Str_19471:int;
-        private var _Str_2522:Pet;
+        private var _petOwnerId:int;
+        private var _petData:Pet;
 
 
         public function flush():Boolean
         {
-            this._Str_2522 = null;
+            this._petData = null;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._respect = k.readInteger();
-            this._Str_19471 = k.readInteger();
-            this._Str_2522 = new Pet(k);
+            this._petOwnerId = k.readInteger();
+            this._petData = new Pet(k);
             return true;
         }
 
-        public function get _Str_26179():int
+        public function get petOwnerId():int
         {
-            return this._Str_19471;
+            return this._petOwnerId;
         }
 
         public function get respect():int
@@ -37,14 +37,14 @@
             return this._respect;
         }
 
-        public function get _Str_6175():Pet
+        public function get petData():Pet
         {
-            return this._Str_2522;
+            return this._petData;
         }
 
-        public function _Str_24197():Boolean
+        public function isTreat():Boolean
         {
-            return this._Str_2522.typeId == _Str_16214;
+            return this._petData.typeId == PET_TYPE_MONSTERPLANT;
         }
     }
 }
