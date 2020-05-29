@@ -605,7 +605,7 @@
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case _Str_12047:
-                    this._manager.send(new _Str_10635(this._data.groupId, this._settingsCtrl._Str_4830, this._settingsCtrl._Str_7959));
+                    this._manager.send(new _Str_10635(this._data.groupId, this._settingsCtrl.guildType, this._settingsCtrl._Str_7959));
                     this._settingsCtrl._Str_15948();
                     return;
             }

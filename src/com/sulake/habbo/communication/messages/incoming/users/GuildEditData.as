@@ -116,7 +116,7 @@
             return this._url;
         }
 
-        public function get _Str_4830():int
+        public function get guildType():int
         {
             return this._guildType;
         }

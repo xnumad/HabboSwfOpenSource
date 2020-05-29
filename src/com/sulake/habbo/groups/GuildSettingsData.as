@@ -14,16 +14,16 @@
             {
                 return;
             }
-            this._guildType = k._Str_4830;
+            this._guildType = k.guildType;
             this._rightsLevel = k._Str_17566;
         }
 
-        public function get _Str_4830():int
+        public function get guildType():int
         {
             return this._guildType;
         }
 
-        public function set _Str_4830(k:int):void
+        public function set guildType(k:int):void
         {
             if (k != this._guildType)
             {

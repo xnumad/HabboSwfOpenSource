@@ -97,7 +97,7 @@
             return "";
         }
 
-        public function get _Str_4830():int
+        public function get guildType():int
         {
             return 0;
         }

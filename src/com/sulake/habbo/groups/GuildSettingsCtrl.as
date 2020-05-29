@@ -43,7 +43,7 @@
         public function refresh(k:IGuildData):void
         {
             this._data = new GuildSettingsData(k);
-            switch (this._data._Str_4830)
+            switch (this._data.guildType)
             {
                 case TYPE_REGULAR:
                     this._guildSelector.setSelected(this._guildRegular);
@@ -72,7 +72,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = TYPE_REGULAR;
+                this._data.guildType = TYPE_REGULAR;
             }
         }
 
@@ -80,7 +80,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = TYPE_EXCLUSIVE;
+                this._data.guildType = TYPE_EXCLUSIVE;
             }
         }
 
@@ -88,7 +88,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = TYPE_CLOSED;
+                this._data.guildType = TYPE_CLOSED;
             }
         }
 
@@ -112,9 +112,9 @@
             }
         }
 
-        public function get _Str_4830():int
+        public function get guildType():int
         {
-            return this._data._Str_4830;
+            return this._data.guildType;
         }
 
         public function get _Str_7959():int
