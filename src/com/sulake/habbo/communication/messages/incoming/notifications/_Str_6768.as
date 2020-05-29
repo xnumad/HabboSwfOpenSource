@@ -11,7 +11,7 @@
         private var _Str_12282:int;
         private var _Str_20597:int;
         private var _badgeId:int;
-        private var _Str_2722:String = "";
+        private var _badgeCode:String = "";
         private var _Str_20961:String = "";
         private var _Str_20188:int;
         private var _category:String;
@@ -22,7 +22,7 @@
             this._type = k.readInteger();
             this._level = k.readInteger();
             this._badgeId = k.readInteger();
-            this._Str_2722 = k.readString();
+            this._badgeCode = k.readString();
             this._points = k.readInteger();
             this._Str_10280 = k.readInteger();
             this._Str_12282 = k.readInteger();
@@ -70,7 +70,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
 
         public function get _Str_24720():String

@@ -18,7 +18,7 @@
         private var _type:int;
         private var _groupName:String;
         private var _description:String;
-        private var _Str_2722:String;
+        private var _badgeCode:String;
         private var _roomId:int = -1;
         private var _roomName:String = "";
         private var _status:int;
@@ -40,7 +40,7 @@
             this._type = k.readInteger();
             this._groupName = k.readString();
             this._description = k.readString();
-            this._Str_2722 = k.readString();
+            this._badgeCode = k.readString();
             this._roomId = k.readInteger();
             this._roomName = k.readString();
             this._status = k.readInteger();
@@ -83,7 +83,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
 
         public function get roomId():int

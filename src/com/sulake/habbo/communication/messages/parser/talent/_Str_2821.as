@@ -15,7 +15,7 @@
 
         private var _achievementId:int;
         private var _Str_8741:int;
-        private var _Str_2722:String;
+        private var _badgeCode:String;
         private var _state:int;
         private var _Str_11456:int;
         private var _Str_20094:int;
@@ -24,7 +24,7 @@
         {
             this._achievementId = k.readInteger();
             this._Str_8741 = k.readInteger();
-            this._Str_2722 = k.readString();
+            this._badgeCode = k.readString();
             this._state = k.readInteger();
             this._Str_11456 = k.readInteger();
             this._Str_20094 = k.readInteger();
@@ -47,7 +47,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
 
         public function get _Str_7605():int

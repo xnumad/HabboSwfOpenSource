@@ -9,14 +9,14 @@
         private var _guildId:int;
         private var _color1:String;
         private var _color2:String;
-        private var _Str_2722:String;
+        private var _badgeCode:String;
 
         public function CatalogWidgetGuildSelectedEvent(k:int, _arg_2:String, _arg_3:String, _arg_4:String)
         {
             this._guildId = k;
             this._color1 = _arg_2;
             this._color2 = _arg_3;
-            this._Str_2722 = _arg_4;
+            this._badgeCode = _arg_4;
             super(CatalogWidgetEvent.GUILD_SELECTED);
         }
 
@@ -37,7 +37,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
     }
 }

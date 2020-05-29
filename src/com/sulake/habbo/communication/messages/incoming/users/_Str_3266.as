@@ -6,7 +6,7 @@
     {
         private var _groupId:int;
         private var _groupName:String;
-        private var _Str_2722:String;
+        private var _badgeCode:String;
         private var _Str_6751:String;
         private var _Str_6979:String;
         private var _favourite:Boolean;
@@ -17,7 +17,7 @@
         {
             this._groupId = k.readInteger();
             this._groupName = k.readString();
-            this._Str_2722 = k.readString();
+            this._badgeCode = k.readString();
             this._Str_6751 = k.readString();
             this._Str_6979 = k.readString();
             this._favourite = k.readBoolean();
@@ -37,7 +37,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
 
         public function get _Str_5845():String

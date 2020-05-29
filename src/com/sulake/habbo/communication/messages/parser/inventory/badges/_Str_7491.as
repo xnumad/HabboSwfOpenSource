@@ -6,7 +6,7 @@
     public class _Str_7491 implements IMessageParser 
     {
         private var _badgeId:int;
-        private var _Str_2722:String;
+        private var _badgeCode:String;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._badgeId = k.readInteger();
-            this._Str_2722 = k.readString();
+            this._badgeCode = k.readString();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get badgeCode():String
         {
-            return this._Str_2722;
+            return this._badgeCode;
         }
     }
 }
