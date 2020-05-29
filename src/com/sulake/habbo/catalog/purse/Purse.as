@@ -132,13 +132,13 @@
             return (_local_2 > 0) ? _local_2 : 0;
         }
 
-        public function set _Str_6312(k:int):void
+        public function set minutesSinceLastModified(k:int):void
         {
             this._lastUpdated = getTimer();
             this._minutesSinceLastModified = k;
         }
 
-        public function get _Str_6312():int
+        public function get minutesSinceLastModified():int
         {
             return this._minutesSinceLastModified;
         }

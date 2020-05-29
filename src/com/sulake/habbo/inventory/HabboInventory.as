@@ -372,7 +372,7 @@
             this._purse._Str_6682 = _arg_5;
             this._purse._Str_8836 = _arg_6;
             this._purse.minutesUntilExpiration = _arg_7;
-            this._purse._Str_6312 = _arg_8;
+            this._purse.minutesSinceLastModified = _arg_8;
             if (((_arg_7 > 0) && (_arg_7 < (((60 * 1000) * 60) * 24))))
             {
                 if (this._purseTimer == null)

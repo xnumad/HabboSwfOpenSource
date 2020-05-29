@@ -2078,7 +2078,7 @@
             this._purse.pastVipDays = _local_2.pastVipDays;
             this._purse._Str_14389 = ((_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE) ? true : false);
             this._purse.minutesUntilExpiration = _local_2.minutesUntilExpiration;
-            this._purse._Str_6312 = _local_2.minutesSinceLastModified;
+            this._purse.minutesSinceLastModified = _local_2.minutesSinceLastModified;
             if (ExternalInterface.available)
             {
                 if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
