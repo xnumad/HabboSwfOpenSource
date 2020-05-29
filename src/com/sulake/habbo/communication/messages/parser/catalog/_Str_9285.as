@@ -19,7 +19,7 @@
             return true;
         }
 
-        public function get _Str_10882():int
+        public function get furniCount():int
         {
             return this._furniCount;
         }

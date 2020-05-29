@@ -16,9 +16,9 @@
             return GuildMemberFurniCountInHQMessageParser(_parser).userId;
         }
 
-        public function _Str_10882():int
+        public function furniCount():int
         {
-            return GuildMemberFurniCountInHQMessageParser(_parser)._Str_10882;
+            return GuildMemberFurniCountInHQMessageParser(_parser).furniCount;
         }
     }
 }

@@ -3022,7 +3022,7 @@
 
         private function _Str_23753(k:_Str_9458):void
         {
-            this._Str_18106 = k.getParser()._Str_10882;
+            this._Str_18106 = k.getParser().furniCount;
             if (this._Str_3854 != null)
             {
                 this._Str_3854.dispatchWidgetEvent(new CatalogWidgetBuilderSubscriptionUpdatedEvent());

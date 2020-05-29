@@ -455,7 +455,7 @@
         private function _Str_25619(k:IMessageEvent):void
         {
             var _local_2:int = _Str_5979(k).userId();
-            var _local_3:int = _Str_5979(k)._Str_10882();
+            var _local_3:int = _Str_5979(k).furniCount();
             var _local_4:_Str_2891;
             var _local_5:GuildMemberData = this._guildMembersWindowCtrl.data;
             var _local_6:String = ((this._kickData._Str_21067) ? "group.block" : "group.kick");
