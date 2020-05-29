@@ -9,7 +9,7 @@
         private var _name:String;
         private var _figure:String;
         private var _sex:String;
-        private var _Str_7867:String;
+        private var _customData:String;
         private var _realName:String;
         private var _Str_21976:Boolean;
         private var _respectTotal:int;
@@ -32,7 +32,7 @@
             this._name = k.readString();
             this._figure = k.readString();
             this._sex = k.readString();
-            this._Str_7867 = k.readString();
+            this._customData = k.readString();
             this._realName = k.readString();
             this._Str_21976 = k.readBoolean();
             this._respectTotal = k.readInteger();
@@ -67,7 +67,7 @@
 
         public function get _Str_3073():String
         {
-            return this._Str_7867;
+            return this._customData;
         }
 
         public function get realName():String

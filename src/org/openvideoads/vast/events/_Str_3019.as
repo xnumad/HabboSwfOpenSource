@@ -6,21 +6,21 @@
     public class _Str_3019 
     {
         private var _ad:NonLinearVideoAd = null;
-        private var _Str_7867:Object;
+        private var _customData:Object;
         private var _controller:VASTController = null;
         private var _width:int = -1;
         private var _height:int = -1;
 
         public function _Str_3019(k:VASTController=null, _arg_2:int=-1, _arg_3:int=-1, _arg_4:Object=null)
         {
-            this._Str_7867 = new Object();
+            this._customData = new Object();
             super();
             this._controller = k;
             this._width = _arg_2;
             this._height = _arg_3;
             if (_arg_4 != null)
             {
-                this._Str_7867 = _arg_4;
+                this._customData = _arg_4;
             }
         }
 
@@ -71,12 +71,12 @@
 
         public function set _Str_3073(k:Object):void
         {
-            this._Str_7867 = k;
+            this._customData = k;
         }
 
         public function get _Str_3073():Object
         {
-            return this._Str_7867;
+            return this._customData;
         }
     }
 }
