@@ -15,7 +15,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.core.window.components.ITabContextWindow;
     import com.sulake.core.window.components.ISelectableWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5372;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildEditData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
     import com.sulake.habbo.window.utils._Str_2418;
@@ -364,7 +364,7 @@
             this._window.activate();
         }
 
-        public function _Str_18072(k:_Str_5372):void
+        public function _Str_18072(k:GuildEditData):void
         {
             this._data = k;
             this._step = _Str_7036;

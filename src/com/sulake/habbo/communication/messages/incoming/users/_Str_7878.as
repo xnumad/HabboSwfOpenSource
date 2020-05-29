@@ -11,7 +11,7 @@
             super(k, _Str_8900);
         }
 
-        public function get data():_Str_5372
+        public function get data():GuildEditData
         {
             return _Str_8900(_parser).data;
         }

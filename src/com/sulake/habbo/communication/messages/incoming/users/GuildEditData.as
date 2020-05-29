@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5372 implements _Str_5716 
+    public class GuildEditData implements _Str_5716
     {
         private var _ownedRooms:Array;
         private var _isOwner:Boolean;
@@ -20,7 +20,7 @@
         private var _Str_2722:String;
         private var _Str_19172:int;
 
-        public function _Str_5372(k:IMessageDataWrapper)
+        public function GuildEditData(k:IMessageDataWrapper)
         {
             var _local_2:int;
             var _local_3:int;
