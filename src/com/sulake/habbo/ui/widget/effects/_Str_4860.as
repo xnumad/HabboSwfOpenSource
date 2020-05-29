@@ -29,7 +29,7 @@
         private var _maxWidth:Number;
         private var _timeLeftField:ITextWindow;
         private var _timer:Timer;
-        private var _Str_6963:IWindow;
+        private var _hilite:IWindow;
 
         public function _Str_4860(k:EffectsWidget, _arg_2:IWidgetAvatarEffect)
         {
@@ -57,7 +57,7 @@
             this._effect = null;
             this._bar = null;
             this._timeLeftField = null;
-            this._Str_6963 = null;
+            this._hilite = null;
             if (this._window != null)
             {
                 this._window.dispose();
@@ -160,7 +160,7 @@
                 _local_7.dispose();
             }
             this._bar = null;
-            this._Str_6963 = null;
+            this._hilite = null;
             this._timeLeftField = null;
             var _local_2:String = "";
             if (this._effect._Str_3222)
@@ -223,8 +223,8 @@
                 {
                     this._Str_2972("effect_hilite", "memenu_fx_play");
                 }
-                this._Str_6963 = this._window.findChildByName("effect_hilite");
-                this._Str_6963.visible = false;
+                this._hilite = this._window.findChildByName("effect_hilite");
+                this._hilite.visible = false;
             }
             this.setTimeLeft();
             this._bar = this._window.findChildByName("loader_bar");
@@ -264,15 +264,15 @@
             switch (k.type)
             {
                 case WindowMouseEvent.OVER:
-                    if (this._Str_6963 != null)
+                    if (this._hilite != null)
                     {
-                        this._Str_6963.visible = true;
+                        this._hilite.visible = true;
                     }
                     return;
                 case WindowMouseEvent.OUT:
-                    if (this._Str_6963 != null)
+                    if (this._hilite != null)
                     {
-                        this._Str_6963.visible = false;
+                        this._hilite.visible = false;
                     }
                     return;
                 case WindowMouseEvent.CLICK:
