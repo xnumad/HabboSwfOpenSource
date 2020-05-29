@@ -168,12 +168,12 @@
             return this._canBeAskedForAFriend;
         }
 
-        public function set petRespectLeft(k:int):void
+        public function set respectLeft(k:int):void
         {
             this._respectLeft = k;
         }
 
-        public function get petRespectLeft():int
+        public function get respectLeft():int
         {
             return this._respectLeft;
         }

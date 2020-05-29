@@ -685,12 +685,12 @@
             this._ignoredUsersManager.unignoreUser(k);
         }
 
-        public function get petRespectLeft():int
+        public function get respectLeft():int
         {
             return this._respectLeft;
         }
 
-        public function get _Str_2985():int
+        public function get petRespectLeft():int
         {
             return this._petRespectLeft;
         }

@@ -869,7 +869,7 @@
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6.canBeMuted) + ", Kicked: ") + _local_6.canBeKicked) + ", Banned: ") + _local_6.canBeBanned));
                 }
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
-                _local_6.petRespectLeft = this._container.sessionDataManager.respectLeft;
+                _local_6.respectLeft = this._container.sessionDataManager.respectLeft;
                 _local_10 = (!(this._container.sessionDataManager.systemShutDown));
                 _local_11 = this._container.roomSession._Str_3827;
                 if (!_local_10)
@@ -1246,7 +1246,7 @@
                 _local_11.happyness = _local_2.happyness;
                 _local_11.maximumHappyness = _local_2.maximumHappyness;
                 _local_11.respect = _local_2.respect;
-                _local_11._Str_2985 = this._container.sessionDataManager._Str_2985;
+                _local_11._Str_2985 = this._container.sessionDataManager.petRespectLeft;
                 _local_11.age = _local_2.age;
                 _local_11.saddle = _local_2.saddle;
                 _local_11.rider = _local_2.rider;

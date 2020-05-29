@@ -48,8 +48,8 @@
         function whiperGroup(_arg_1:String):void;
         function ignoreUser(_arg_1:String):void;
         function unignoreUser(_arg_1:String):void;
+        function get respectLeft():int;
         function get petRespectLeft():int;
-        function get _Str_2985():int;
         function giveRespect(_arg_1:int):void;
         function giveRespectFailed():void;
         function givePetRespect(_arg_1:int):void;

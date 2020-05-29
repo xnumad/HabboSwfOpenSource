@@ -206,7 +206,7 @@
             this._canTrade = k.canTrade;
             this._canTradeReason = k.canTradeReason;
             this._isIgnored = k.isIgnored;
-            this._respectLeft = k.petRespectLeft;
+            this._respectLeft = k.respectLeft;
             this._isOwnUser = (k.type == RoomWidgetUserInfoUpdateEvent.OWN_USER);
             this._allowNameChange = k.allowNameChange;
             this._isGuildRoom = k.isGuildRoom;
