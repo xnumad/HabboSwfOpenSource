@@ -7,7 +7,7 @@
     {
         private var _petId:int;
         private var _userId:int;
-        private var _Str_19754:int;
+        private var _supplementType:int;
 
 
         public function flush():Boolean
@@ -19,7 +19,7 @@
         {
             this._petId = k.readInteger();
             this._userId = k.readInteger();
-            this._Str_19754 = k.readInteger();
+            this._supplementType = k.readInteger();
             return true;
         }
 
@@ -35,7 +35,7 @@
 
         public function get _Str_25578():int
         {
-            return this._Str_19754;
+            return this._supplementType;
         }
     }
 }
