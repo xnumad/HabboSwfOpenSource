@@ -96,7 +96,7 @@
             this.addMessageEvent(new _Str_9995(this._Str_24460));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
             this.addMessageEvent(new _Str_7309(this._Str_25384));
-            this.addMessageEvent(new UserObjectEvent(this._Str_3241));
+            this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new _Str_9157(this._Str_25493));
             this.addMessageEvent(new _Str_6521(this._parser2));
             this.addMessageEvent(new _Str_9583(this._Str_25354));
@@ -448,7 +448,7 @@
             this._notifications._Str_3069._Str_25686(_local_2._Str_19193);
         }
 
-        private function _Str_3241(k:UserObjectEvent):void
+        private function onUserObject(k:UserObjectEvent):void
         {
             var _local_2:UserObjectMessageParser = k.getParser();
             if (_local_2.accountSafetyLocked)

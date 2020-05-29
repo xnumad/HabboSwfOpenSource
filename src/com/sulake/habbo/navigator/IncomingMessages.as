@@ -121,7 +121,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_4910(this._Str_16568));
             _local_2.addHabboConnectionMessageEvent(new _Str_4187(this._Str_12114));
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
-            _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+            _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
             _local_2.addHabboConnectionMessageEvent(new _Str_4265(this._Str_16100));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
@@ -187,7 +187,7 @@
         {
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this.data._Str_3251 = _local_2.id;

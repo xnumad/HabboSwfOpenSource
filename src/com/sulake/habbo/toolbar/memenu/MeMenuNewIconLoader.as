@@ -27,7 +27,7 @@
         public function MeMenuNewIconLoader(k:HabboToolbar)
         {
             this._toolbar = k;
-            this._userObjectEvent = new UserObjectEvent(this._Str_3241);
+            this._userObjectEvent = new UserObjectEvent(this.onUserObject);
             this._figureUpdateEvent = new _Str_3084(this._Str_5174);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._figureUpdateEvent);
@@ -103,7 +103,7 @@
             this.renderAvatar();
         }
 
-        private function _Str_3241(k:UserObjectEvent):void
+        private function onUserObject(k:UserObjectEvent):void
         {
             this.renderAvatar(k.getParser().figure);
         }

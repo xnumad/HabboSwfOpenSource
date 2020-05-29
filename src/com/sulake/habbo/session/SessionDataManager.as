@@ -170,7 +170,7 @@
             {
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this._Str_12366));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
-                this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+                this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
@@ -319,7 +319,7 @@
             }
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectEvent = (k as UserObjectEvent);
             var _local_3:UserObjectMessageParser = _local_2.getParser();

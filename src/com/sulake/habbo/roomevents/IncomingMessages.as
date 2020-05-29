@@ -44,7 +44,7 @@
             this.addMessageEvent(new _Str_4408(this._Str_16200));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));
             this.addMessageEvent(new _Str_7323(this._Str_25729));
-            this.addMessageEvent(new UserObjectEvent(this._Str_3241));
+            this.addMessageEvent(new UserObjectEvent(this.onUserObject));
         }
 
         private function addMessageEvent(k:IMessageEvent):void
@@ -76,7 +76,7 @@
             this._roomEvents._Str_7247._Str_18351(_local_2.definition);
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = (k as UserObjectEvent).getParser();
             this._roomEvents.userName = _local_2.name;

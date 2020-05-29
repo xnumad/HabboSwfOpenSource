@@ -223,7 +223,7 @@
         {
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._navigator.data._Str_3251 = _local_2.id;

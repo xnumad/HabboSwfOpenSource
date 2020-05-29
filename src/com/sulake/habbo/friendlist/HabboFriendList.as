@@ -166,7 +166,7 @@
 
         override protected function initComponent():void
         {
-            this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+            this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this._Str_19006));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             context.addLinkEventTracker(this);
@@ -421,7 +421,7 @@
             return k == "true";
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = (k as UserObjectEvent).getParser();
             this._Str_3764 = int(_local_2.id);

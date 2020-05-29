@@ -58,10 +58,10 @@
             }
             this._manager.communicationManager.addHabboConnectionMessageEvent(new _Str_9397(this._Str_23765));
             this._manager.communicationManager.addHabboConnectionMessageEvent(new TalentLevelUpEvent(this._Str_16796));
-            this._manager.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+            this._manager.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
         }
 
-        private function _Str_3241(k:UserObjectEvent):void
+        private function onUserObject(k:UserObjectEvent):void
         {
             this._manager.send(new _Str_10709(this._Str_7925));
         }

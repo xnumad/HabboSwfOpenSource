@@ -44,7 +44,7 @@
         {
             this._container = IWindowContainer(this._landingView.getXmlWindow("achievement_competition_prizes"));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new CommunityGoalProgressMessageEvent(this._Str_5286));
-            this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+            this._landingView.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._landingView.communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
         }
 
@@ -135,7 +135,7 @@
             return ("${" + _local_2) + "}";
         }
 
-        private function _Str_3241(k:UserObjectEvent):void
+        private function onUserObject(k:UserObjectEvent):void
         {
             this._figure = k.getParser().figure;
             this._Str_7815();

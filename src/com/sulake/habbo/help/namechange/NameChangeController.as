@@ -36,7 +36,7 @@
         public function NameChangeController(k:HabboHelp)
         {
             this._habboHelp = k;
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
@@ -224,7 +224,7 @@
             }
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._ownUserId = _local_2.id;

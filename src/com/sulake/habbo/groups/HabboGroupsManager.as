@@ -182,7 +182,7 @@
             this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this._Str_26461));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
             this.addMessageEvent(new GroupDetailsChangedMessageEvent(this._Str_18693));
-            this.addMessageEvent(new UserObjectEvent(this._Str_3241));
+            this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new GuildEditInfoMessageEvent(this._Str_18072));
             this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
             this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this._Str_23512));
@@ -428,7 +428,7 @@
             }
         }
 
-        private function _Str_3241(k:IMessageEvent):void
+        private function onUserObject(k:IMessageEvent):void
         {
             var _local_2:UserObjectMessageParser = UserObjectEvent(k).getParser();
             this._avatarId = _local_2.id;

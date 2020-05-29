@@ -20,7 +20,7 @@
         public function AvatarImageWidget(k:HabboLandingView)
         {
             this._landingView = k;
-            this._userObjectEvent = new UserObjectEvent(this._Str_3241);
+            this._userObjectEvent = new UserObjectEvent(this.onUserObject);
             this._userChangeMessageEvent = new _Str_3084(this._Str_5174);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._landingView.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
@@ -67,7 +67,7 @@
             return this._landingView == null;
         }
 
-        private function _Str_3241(k:UserObjectEvent):void
+        private function onUserObject(k:UserObjectEvent):void
         {
             this._Str_7815(k.getParser().figure);
         }
