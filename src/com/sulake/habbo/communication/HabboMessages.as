@@ -352,7 +352,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9145;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9184;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
+	import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_16135;
@@ -1301,7 +1301,7 @@
             INCOMING_PACKETS[3253] = _Str_9047;
             INCOMING_PACKETS[3264] = _Str_6345;
             INCOMING_PACKETS[3276] = _Str_9409;
-            INCOMING_PACKETS[3277] = _Str_9216;
+            INCOMING_PACKETS[3277] = ScrSendKickbackInfoMessageEvent;
             INCOMING_PACKETS[3284] = _Str_7309;
             INCOMING_PACKETS[3285] = _Str_8429;
             INCOMING_PACKETS[3292] = _Str_16527;

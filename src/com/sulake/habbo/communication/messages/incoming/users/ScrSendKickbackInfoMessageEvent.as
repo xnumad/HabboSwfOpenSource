@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
 
-    public class _Str_9216 extends MessageEvent implements IMessageEvent 
+    public class ScrSendKickbackInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9216(k:Function)
+        public function ScrSendKickbackInfoMessageEvent(k:Function)
         {
             super(k, ScrSendKickbackInfoMessageParser);
         }

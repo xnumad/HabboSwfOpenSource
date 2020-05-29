@@ -25,7 +25,7 @@
     import com.sulake.iid.IIDHabboCatalog;
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
@@ -102,7 +102,7 @@
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new _Str_5425(this._Str_18504));
-            this.addMessageEvent(new _Str_9216(this._Str_22489));
+            this.addMessageEvent(new ScrSendKickbackInfoMessageEvent(this._Str_22489));
             this.addMessageEvent(new _Str_5147(this._Str_18002));
             context.addLinkEventTracker(this);
             if (((getBoolean("offers.enabled")) && (getBoolean("offers.habboclub.enabled"))))
@@ -208,7 +208,7 @@
             this._messageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(k));
         }
 
-        private function _Str_22489(k:_Str_9216):void
+        private function _Str_22489(k:ScrSendKickbackInfoMessageEvent):void
         {
             var _local_2:ScrSendKickbackInfoMessageParser = k.getParser();
             this._data = _local_2.data;
