@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.session.events.BadgeImageReadyEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_7942;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendKickbackInfoMessageParser;
     import flash.utils.getTimer;
     import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_6941;
     import com.sulake.habbo.catalog.clubcenter.util.BadgeResolver;
@@ -210,7 +210,7 @@
 
         private function _Str_22489(k:_Str_9216):void
         {
-            var _local_2:_Str_7942 = k.getParser();
+            var _local_2:ScrSendKickbackInfoMessageParser = k.getParser();
             this._data = _local_2.data;
             this._dataPending = false;
             this._dataTimestamp = getTimer();

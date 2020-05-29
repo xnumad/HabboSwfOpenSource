@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.ScrKickbackData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7942 implements IMessageParser 
+    public class ScrSendKickbackInfoMessageParser implements IMessageParser
     {
         private var _data:ScrKickbackData;
 
