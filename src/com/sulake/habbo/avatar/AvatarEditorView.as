@@ -61,7 +61,7 @@
             super();
             this._editor = k;
             this._saveTimer = new Timer(_Str_15942, 1);
-            this._saveTimer.addEventListener(TimerEvent.TIMER, this._Str_5183);
+            this._saveTimer.addEventListener(TimerEvent.TIMER, this.onUpdate);
             if (k.manager.getBoolean("effects.in.avatar.editor"))
             {
                 this._allCategories.push(AvatarEditorFigureCategory.EFFECTS);
@@ -85,7 +85,7 @@
             if (this._saveTimer != null)
             {
                 this._saveTimer.stop();
-                this._saveTimer.removeEventListener(TimerEvent.TIMER, this._Str_5183);
+                this._saveTimer.removeEventListener(TimerEvent.TIMER, this.onUpdate);
                 this._saveTimer = null;
             }
             if (this._tabContainer)
@@ -230,7 +230,7 @@
             return true;
         }
 
-        private function _Str_5183(k:Event=null):void
+        private function onUpdate(k:Event=null):void
         {
             this._saveTimer.stop();
             if (this._editorContent)

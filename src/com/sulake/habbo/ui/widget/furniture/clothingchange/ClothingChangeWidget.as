@@ -47,8 +47,8 @@
             {
                 return;
             }
-            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
-            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
+            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this.onUpdate);
+            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this.onUpdate);
             super.registerUpdateEvents(k);
         }
 
@@ -58,11 +58,11 @@
             {
                 return;
             }
-            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
-            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
+            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this.onUpdate);
+            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this.onUpdate);
         }
 
-        private function _Str_5183(k:RoomWidgetClothingChangeUpdateEvent):void
+        private function onUpdate(k:RoomWidgetClothingChangeUpdateEvent):void
         {
             switch (k.type)
             {

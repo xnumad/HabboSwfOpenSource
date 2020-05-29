@@ -36,7 +36,7 @@
             this._effect = _arg_2;
             this._widget = k;
             this._timer = new Timer(this._Str_25685);
-            this._timer.addEventListener(TimerEvent.TIMER, this._Str_5183);
+            this._timer.addEventListener(TimerEvent.TIMER, this.onUpdate);
             this.update();
         }
 
@@ -50,7 +50,7 @@
             if (this._timer != null)
             {
                 this._timer.stop();
-                this._timer.removeEventListener(TimerEvent.TIMER, this._Str_5183);
+                this._timer.removeEventListener(TimerEvent.TIMER, this.onUpdate);
                 this._timer = null;
             }
             this._widget = null;
@@ -70,7 +70,7 @@
             return this._window;
         }
 
-        private function _Str_5183(k:Event=null):void
+        private function onUpdate(k:Event=null):void
         {
             var _local_2:Number;
             if (this._bar == null)
@@ -232,7 +232,7 @@
             {
                 this._maxWidth = this._bar.width;
                 this._timer.start();
-                this._Str_5183();
+                this.onUpdate();
             }
             if (this._effect.icon)
             {
