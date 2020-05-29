@@ -551,12 +551,12 @@
 
         public function setFriendBarState(k:Boolean):void
         {
-            this._Str_19986(UIFlags._Str_14290, k);
+            this.setUIFlag(UIFlags._Str_14290, k);
         }
 
         public function setRoomToolsState(k:Boolean):void
         {
-            this._Str_19986(UIFlags._Str_13691, k);
+            this.setUIFlag(UIFlags._Str_13691, k);
         }
 
         public function get uiFlags():int
@@ -564,7 +564,7 @@
             return this._uiFlags;
         }
 
-        private function _Str_19986(k:int, _arg_2:Boolean):void
+        private function setUIFlag(k:int, _arg_2:Boolean):void
         {
             if (_arg_2)
             {
