@@ -25,7 +25,7 @@
         private var _widget:EffectsWidget;
         private var _window:IWindowContainer;
         private var _effect:IWidgetAvatarEffect;
-        private var _Str_3425:IWindow;
+        private var _bar:IWindow;
         private var _Str_3701:Number;
         private var _Str_4996:ITextWindow;
         private var _Str_2364:Timer;
@@ -55,7 +55,7 @@
             }
             this._widget = null;
             this._effect = null;
-            this._Str_3425 = null;
+            this._bar = null;
             this._Str_4996 = null;
             this._Str_6963 = null;
             if (this._window != null)
@@ -73,7 +73,7 @@
         private function _Str_5183(k:Event=null):void
         {
             var _local_2:Number;
-            if (this._Str_3425 == null)
+            if (this._bar == null)
             {
                 this._Str_2364.stop();
                 return;
@@ -81,11 +81,11 @@
             if (this._effect.isActive)
             {
                 _local_2 = (this._effect._Str_3709 / Number(this._effect.duration));
-                this._Str_3425.width = (_local_2 * this._Str_3701);
+                this._bar.width = (_local_2 * this._Str_3701);
             }
             else
             {
-                this._Str_3425.width = 0;
+                this._bar.width = 0;
                 this._Str_2364.stop();
             }
             this.setTimeLeft();
@@ -159,7 +159,7 @@
                 _local_7 = this._window.removeChildAt(0);
                 _local_7.dispose();
             }
-            this._Str_3425 = null;
+            this._bar = null;
             this._Str_6963 = null;
             this._Str_4996 = null;
             var _local_2:String = "";
@@ -227,10 +227,10 @@
                 this._Str_6963.visible = false;
             }
             this.setTimeLeft();
-            this._Str_3425 = this._window.findChildByName("loader_bar");
-            if (this._Str_3425 != null)
+            this._bar = this._window.findChildByName("loader_bar");
+            if (this._bar != null)
             {
-                this._Str_3701 = this._Str_3425.width;
+                this._Str_3701 = this._bar.width;
                 this._Str_2364.start();
                 this._Str_5183();
             }
