@@ -1079,7 +1079,7 @@
             return this._nameChangeAllowed;
         }
 
-        public function get _Str_22295():Boolean
+        public function get perksReady():Boolean
         {
             return (!(this._perkManager == null)) && (this._perkManager.isReady);
         }

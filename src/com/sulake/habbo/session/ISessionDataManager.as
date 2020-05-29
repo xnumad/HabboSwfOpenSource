@@ -66,7 +66,7 @@
         function loadProductData(_arg_1:IProductDataListener=null):Boolean;
         function getFurniData(_arg_1:IFurniDataListener):Vector.<IFurnitureData>;
         function addProductsReadyEventListener(_arg_1:IProductDataListener):void;
-        function get _Str_22295():Boolean;
+        function get perksReady():Boolean;
         function isPerkAllowed(_arg_1:String):Boolean;
         function getPerkErrorMessage(_arg_1:String):String;
         function sendSpecialCommandMessage(_arg_1:String):void;
