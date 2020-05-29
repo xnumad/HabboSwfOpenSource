@@ -18,7 +18,7 @@
         private var _streamPublishingAllowed:Boolean;
         private var _lastAccessDate:String;
         private var _nameChangeAllowed:Boolean;
-        private var _Str_9602:Boolean = false;
+        private var _accountSafetyLocked:Boolean = false;
 
 
         public function flush():Boolean
@@ -41,7 +41,7 @@
             this._streamPublishingAllowed = k.readBoolean();
             this._lastAccessDate = k.readString();
             this._nameChangeAllowed = k.readBoolean();
-            this._Str_9602 = k.readBoolean();
+            this._accountSafetyLocked = k.readBoolean();
             return true;
         }
 
@@ -112,7 +112,7 @@
 
         public function get _Str_21338():Boolean
         {
-            return this._Str_9602;
+            return this._accountSafetyLocked;
         }
     }
 }

@@ -120,7 +120,7 @@
         private var _Str_20255:Boolean;
         private var _roomCameraFollowDisabled:Boolean;
         private var _Str_3790:int;
-        private var _Str_9602:Boolean = false;
+        private var _accountSafetyLocked:Boolean = false;
         private var _Str_18582:String;
         private var _Str_18348:String;
         private var _Str_20020:Boolean = false;
@@ -332,7 +332,7 @@
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
             this._nameChangeAllowed = _local_3.nameChangeAllowed;
-            this._Str_9602 = _local_3._Str_21338;
+            this._accountSafetyLocked = _local_3._Str_21338;
             this._ignoredUsersManager.initIgnoreList();
         }
 
@@ -457,7 +457,7 @@
         private function _Str_18012(k:AccountSafetyLockStatusChangeMessageEvent):void
         {
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
-            this._Str_9602 = (_local_2.status == AccountSafetyLockStatusChangeMessageParser.SAFETY_LOCK_STATUS_LOCKED);
+            this._accountSafetyLocked = (_local_2.status == AccountSafetyLockStatusChangeMessageParser.SAFETY_LOCK_STATUS_LOCKED);
         }
 
         public function get systemOpen():Boolean
@@ -657,7 +657,7 @@
 
         public function isAccountSafetyLocked():Boolean
         {
-            return this._Str_9602;
+            return this._accountSafetyLocked;
         }
 
         public function get communication():IHabboCommunicationManager
