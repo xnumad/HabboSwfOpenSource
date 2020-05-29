@@ -146,7 +146,7 @@
             }
             var _local_4:String = RoomSessionChatEvent.RSCE_CHAT_EVENT;
             var _local_5:int = RoomSessionChatEvent.CHAT_TYPE_PETREVIVE;
-            switch (_local_2._Str_25578)
+            switch (_local_2.supplementType)
             {
                 case _Str_8921._Str_16984:
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_PETREVIVE;

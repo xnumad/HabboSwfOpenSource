@@ -33,7 +33,7 @@
             return this._userId;
         }
 
-        public function get _Str_25578():int
+        public function get supplementType():int
         {
             return this._supplementType;
         }
