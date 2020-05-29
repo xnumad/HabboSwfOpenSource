@@ -148,7 +148,7 @@
                 }
                 if (this._container.roomSessionManager != null)
                 {
-                    this._container.roomSessionManager.events.removeEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this._Str_8471);
+                    this._container.roomSessionManager.events.removeEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this.onFigureUpdate);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this._Str_12211);
                     this._container.roomSessionManager.events.removeEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
@@ -185,7 +185,7 @@
             }
             if (this._container.roomSessionManager != null)
             {
-                this._container.roomSessionManager.events.addEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this._Str_8471);
+                this._container.roomSessionManager.events.addEventListener(RoomSessionUserFigureUpdateEvent.RSUBE_FIGURE, this.onFigureUpdate);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetInfoUpdateEvent.PET_INFO, this.onPetInfo);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionPetCommandsUpdateEvent.PET_COMMANDS, this._Str_12211);
                 this._container.roomSessionManager.events.addEventListener(RoomSessionFavouriteGroupUpdateEvent.RSFGUE_FAVOURITE_GROUP_UPDATE, this._Str_20602);
@@ -1171,7 +1171,7 @@
             }
         }
 
-        private function _Str_8471(k:RoomSessionUserFigureUpdateEvent):void
+        private function onFigureUpdate(k:RoomSessionUserFigureUpdateEvent):void
         {
             if (this._container == null)
             {

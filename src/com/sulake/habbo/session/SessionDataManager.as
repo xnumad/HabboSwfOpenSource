@@ -171,7 +171,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this._Str_12366));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
+                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this.onFigureUpdate));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
@@ -350,7 +350,7 @@
             }
         }
 
-        private function _Str_8471(k:IMessageEvent):void
+        private function onFigureUpdate(k:IMessageEvent):void
         {
             var _local_2:_Str_5010 = (k as _Str_5010);
             if (_local_2 == null)

@@ -28,7 +28,7 @@
         {
             this._toolbar = k;
             this._userObjectEvent = new UserObjectEvent(this.onUserObject);
-            this._userChangeMessageEvent = new _Str_5010(this._Str_8471);
+            this._userChangeMessageEvent = new _Str_5010(this.onFigureUpdate);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
             this._Str_5693();
@@ -111,7 +111,7 @@
             this._Str_5693(k.getParser().figure);
         }
 
-        private function _Str_8471(k:_Str_5010):void
+        private function onFigureUpdate(k:_Str_5010):void
         {
             if (this.disposed)
             {
