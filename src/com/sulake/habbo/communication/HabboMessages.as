@@ -350,7 +350,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9145;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_9184;
+	import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
@@ -1029,7 +1029,7 @@
             INCOMING_PACKETS[1243] = _Str_6160;
             INCOMING_PACKETS[1254] = TradingOtherNotAllowedEvent;
             INCOMING_PACKETS[1255] = _Str_8527;
-            INCOMING_PACKETS[126] = _Str_9184;
+            INCOMING_PACKETS[126] = IgnoredUsersMessageEvent;
             INCOMING_PACKETS[1284] = _Str_5771;
             INCOMING_PACKETS[1301] = FloorHeightMapEvent;
             INCOMING_PACKETS[1304] = _Str_3992;

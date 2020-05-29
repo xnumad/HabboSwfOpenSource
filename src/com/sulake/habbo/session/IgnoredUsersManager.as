@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5459;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_9184;
+    import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10288;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5697;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10793;
@@ -24,7 +24,7 @@
             if (this._sessionDataManager.communication)
             {
                 this._ignoreResultMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_5459(this.onIgnoreResult));
-                this._ignoredUsersMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_9184(this._Str_24424));
+                this._ignoredUsersMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new IgnoredUsersMessageEvent(this._Str_24424));
             }
         }
 
@@ -49,7 +49,7 @@
             this._sessionDataManager.send(new _Str_10288(this._sessionDataManager.userName));
         }
 
-        private function _Str_24424(k:_Str_9184):void
+        private function _Str_24424(k:IgnoredUsersMessageEvent):void
         {
             this._ignoredUsers = k.ignoredUsers;
         }
