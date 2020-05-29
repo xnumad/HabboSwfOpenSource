@@ -70,7 +70,7 @@
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
-    import com.sulake.habbo.communication.messages.parser.users._Str_8165;
+    import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2891;
@@ -416,7 +416,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_2:int = _Str_7832(k).reason;
-            if (_local_2 == _Str_8165.INSUFFICIENT_SUBSCRIPTION_LEVEL)
+            if (_local_2 == GuildEditFailedMessageParser.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(true);
             }

@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_8165;
+    import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
 
     public class _Str_7832 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_7832(k:Function)
         {
-            super(k, _Str_8165);
+            super(k, GuildEditFailedMessageParser);
         }
 
         public function get reason():int
         {
-            return _Str_8165(_parser).reason;
+            return GuildEditFailedMessageParser(_parser).reason;
         }
     }
 }
