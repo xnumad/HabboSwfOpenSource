@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
 
-    public class _Str_7294 extends MessageEvent implements IMessageEvent 
+    public class HabboGroupJoinFailedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7294(k:Function)
+        public function HabboGroupJoinFailedMessageEvent(k:Function)
         {
             super(k, HabboGroupJoinFailedMessageParser);
         }

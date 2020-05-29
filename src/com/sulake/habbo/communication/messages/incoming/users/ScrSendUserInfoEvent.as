@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
 
-    public class _Str_3492 extends MessageEvent implements IMessageEvent 
+    public class ScrSendUserInfoEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_3492(k:Function)
+        public function ScrSendUserInfoEvent(k:Function)
         {
             super(k, ScrSendUserInfoMessageParser);
         }

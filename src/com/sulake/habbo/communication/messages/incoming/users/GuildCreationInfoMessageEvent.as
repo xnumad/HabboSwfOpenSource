@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GuildCreationInfoMessageParser;
 
-    public class _Str_8194 extends MessageEvent implements IMessageEvent 
+    public class GuildCreationInfoMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8194(k:Function)
+        public function GuildCreationInfoMessageEvent(k:Function)
         {
             super(k, GuildCreationInfoMessageParser);
         }

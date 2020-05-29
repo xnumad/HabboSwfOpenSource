@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GuildEditFailedMessageParser;
 
-    public class _Str_7832 extends MessageEvent implements IMessageEvent 
+    public class GuildEditFailedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7832(k:Function)
+        public function GuildEditFailedMessageEvent(k:Function)
         {
             super(k, GuildEditFailedMessageParser);
         }

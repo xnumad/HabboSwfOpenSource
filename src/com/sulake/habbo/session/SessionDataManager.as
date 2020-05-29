@@ -24,19 +24,19 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar._Str_5010;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4150;
+    import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.availability._Str_9281;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6160;
+    import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
+    import com.sulake.habbo.communication.messages.incoming.users.EmailStatusResultEvent;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
     import com.sulake.habbo.communication.enum.NoobnessLevelEnum;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
@@ -173,18 +173,18 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this._Str_8471));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_4150(this.onUserNameChange));
+                this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_9281(this._Str_23236));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_6160(this._Str_18012));
+                this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this._Str_23478));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this._Str_25667));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this._Str_25064));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5948(this._Str_16302));
+                this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
             }
             this._Str_25790 = [];
             this._Str_7432 = new _Str_8883(this);
@@ -364,7 +364,7 @@
 
         private function onUserNameChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_4150 = (k as _Str_4150);
+            var _local_2:UserNameChangedMessageEvent = (k as UserNameChangedMessageEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
@@ -418,7 +418,7 @@
             events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
         }
 
-        private function _Str_16302(k:_Str_5948):void
+        private function _Str_16302(k:EmailStatusResultEvent):void
         {
             var _local_2:EmailStatusParser = (k.getParser() as EmailStatusParser);
             this._Str_20255 = _local_2.isVerified;
@@ -454,7 +454,7 @@
             this._Str_3973++;
         }
 
-        private function _Str_18012(k:_Str_6160):void
+        private function _Str_18012(k:AccountSafetyLockStatusChangeMessageEvent):void
         {
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
             this._Str_9602 = (_local_2.status == AccountSafetyLockStatusChangeMessageParser.SAFETY_LOCK_STATUS_LOCKED);

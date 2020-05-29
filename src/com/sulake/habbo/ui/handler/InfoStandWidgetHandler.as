@@ -19,8 +19,8 @@
     import com.sulake.habbo.session.events.RoomSessionPetBreedingEvent;
     import com.sulake.habbo.session.events.RoomSessionConfirmPetBreedingEvent;
     import com.sulake.habbo.session.events.RoomSessionConfirmPetBreedingResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5269;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
@@ -197,14 +197,14 @@
             }
             if (this._container.connection)
             {
-                this._groupDetailsMessageEvent = new _Str_3921(this._Str_3702);
+                this._groupDetailsMessageEvent = new HabboGroupDetailsMessageEvent(this._Str_3702);
                 this._container.connection.addMessageEvent(this._groupDetailsMessageEvent);
-                this._relationshipStatusMessageEvent = new _Str_5269(this._Str_22283);
+                this._relationshipStatusMessageEvent = new RelationshipStatusInfo(this._Str_22283);
                 this._container.connection.addMessageEvent(this._relationshipStatusMessageEvent);
             }
         }
 
-        private function _Str_3702(k:_Str_3921):void
+        private function _Str_3702(k:HabboGroupDetailsMessageEvent):void
         {
             var _local_2:HabboGroupDetailsData = k.data;
             if (this._widget.furniData.groupId == _local_2.groupId)
@@ -1490,7 +1490,7 @@
             }
         }
 
-        private function _Str_22283(k:_Str_5269):void
+        private function _Str_22283(k:RelationshipStatusInfo):void
         {
             if (((this._widget) && (this._widget.mainWindow.visible)))
             {

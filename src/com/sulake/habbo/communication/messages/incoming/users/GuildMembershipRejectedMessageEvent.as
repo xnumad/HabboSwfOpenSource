@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GuildMembershipRejectedMessageParser;
 
-    public class _Str_6584 extends MessageEvent implements IMessageEvent 
+    public class GuildMembershipRejectedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6584(k:Function)
+        public function GuildMembershipRejectedMessageEvent(k:Function)
         {
             super(k, GuildMembershipRejectedMessageParser);
         }

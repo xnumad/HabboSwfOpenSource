@@ -4,7 +4,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5458;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupBadgesMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
 
     public class HabboGroupInfoManager implements IDisposable 
@@ -21,7 +21,7 @@
             if (this._sessionDataManager.communication)
             {
                 this._roomReadyMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_3407(this._Str_5963));
-                this._habboGroupBadgesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_5458(this._Str_18218));
+                this._habboGroupBadgesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new HabboGroupBadgesMessageEvent(this._Str_18218));
             }
         }
 
@@ -50,7 +50,7 @@
             this._sessionDataManager.send(new _Str_10770());
         }
 
-        private function _Str_18218(k:_Str_5458):void
+        private function _Str_18218(k:HabboGroupBadgesMessageEvent):void
         {
             var _local_3:int;
             var _local_2:Map = k.badges;

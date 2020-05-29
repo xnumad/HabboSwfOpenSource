@@ -4,7 +4,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4150;
+    import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
     import com.sulake.core.assets.IAssetLibrary;
@@ -37,7 +37,7 @@
         {
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this._Str_3241));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_4150(this.onUserNameChange));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
         }
@@ -233,7 +233,7 @@
 
         private function onUserNameChange(k:IMessageEvent):void
         {
-            var _local_2:UserNameChangedMessageParser = _Str_4150(k).getParser();
+            var _local_2:UserNameChangedMessageParser = UserNameChangedMessageEvent(k).getParser();
             if (this._ownUserId == _local_2.webId)
             {
                 this._ownUserName = _local_2.newName;

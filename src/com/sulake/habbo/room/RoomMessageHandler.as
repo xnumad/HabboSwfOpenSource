@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_8714;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_7743;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5459;
+    import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionEndedEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
@@ -222,7 +222,7 @@
                 k.addMessageEvent(new _Str_8714(this._Str_24325));
                 k.addMessageEvent(new _Str_7743(this.onGamePlayerNumberValue));
                 k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
-                k.addMessageEvent(new _Str_5459(this.onIgnoreResult));
+                k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
                 k.addMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
                 k.addMessageEvent(new GuideSessionEndedEvent(this.onGuideSessionEnded));
                 k.addMessageEvent(new GuideSessionErrorEvent(this.onGuideSessionError));
@@ -1268,7 +1268,7 @@
             {
                 return;
             }
-            var _local_2:_Str_5459 = (k as _Str_5459);
+            var _local_2:IgnoreResultMessageEvent = (k as IgnoreResultMessageEvent);
             var _local_3:RoomUserData = this._roomCreator.roomSessionManager.getSession(this._currentRoomId).userDataManager.getUserDataByName(_local_2.name);
             if (_local_3 != null)
             {

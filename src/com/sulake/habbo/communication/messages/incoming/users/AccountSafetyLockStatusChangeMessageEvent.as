@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
 
-    public class _Str_6160 extends MessageEvent implements IMessageEvent 
+    public class AccountSafetyLockStatusChangeMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_6160(k:Function)
+        public function AccountSafetyLockStatusChangeMessageEvent(k:Function)
         {
             super(k, AccountSafetyLockStatusChangeMessageParser);
         }

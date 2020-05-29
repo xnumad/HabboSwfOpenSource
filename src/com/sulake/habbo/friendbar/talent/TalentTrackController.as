@@ -8,8 +8,8 @@
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.EmailStatusResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
     import com.sulake.habbo.communication.messages.parser.talent._Str_7210;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
@@ -107,12 +107,12 @@
         public function initialize():void
         {
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this._Str_24186));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_3921(this._Str_3702));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_5948(this._Str_16302));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
         }
 
-        private function _Str_16302(k:_Str_5948):void
+        private function _Str_16302(k:EmailStatusResultEvent):void
         {
             var _local_2:IWindowContainer = this._Str_7795();
             if (_local_2 != null)
@@ -135,7 +135,7 @@
             this.createWindow();
         }
 
-        private function _Str_3702(k:_Str_3921):void
+        private function _Str_3702(k:HabboGroupDetailsMessageEvent):void
         {
             var _local_2:HabboGroupDetailsData = k.data;
             if (_local_2.groupId == this._expectedGroupID)

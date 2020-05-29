@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingAcceptParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9550;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNotOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingNotOpenParser;
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.FurniListRemoveEvent;
@@ -143,7 +143,7 @@
             this._com.addHabboConnectionMessageEvent(new TradingAcceptEvent(this._Str_23770, TradingAcceptParser));
             this._com.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             this._com.addHabboConnectionMessageEvent(new _Str_9550(this._Str_23427));
-            this._com.addHabboConnectionMessageEvent(new _Str_3492(this._Str_23143));
+            this._com.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_23143));
             this._com.addHabboConnectionMessageEvent(new TradingNotOpenEvent(this._Str_23644, TradingNotOpenParser));
             this._com.addHabboConnectionMessageEvent(new FurniListRemoveEvent(this._Str_25700));
             this._com.addHabboConnectionMessageEvent(new _Str_5720(this._Str_17365));
@@ -402,7 +402,7 @@
 
         public function _Str_23143(k:IMessageEvent):void
         {
-            var _local_2:ScrSendUserInfoMessageParser = (k as _Str_3492).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = (k as ScrSendUserInfoEvent).getParser();
             if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
             {
                 this._inventory._Str_23808(_local_2.periodsSubscribedAhead, _local_2.daysToPeriodEnd, _local_2.hasEverBeenMember, _local_2.isVIP, (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE), (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_CITIZENSHIP_DISCOUNT), _local_2.minutesUntilExpiration, _local_2.minutesSinceLastModified);

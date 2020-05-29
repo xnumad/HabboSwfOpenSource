@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4150;
+    import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetTrainingPanelEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetPlacingErrorEvent;
@@ -80,7 +80,7 @@
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
             k.addMessageEvent(new _Str_3084(this._Str_5174));
-            k.addMessageEvent(new _Str_4150(this.onUserNameChange));
+            k.addMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             k.addMessageEvent(new PetInfoMessageEvent(this.onPetInfo));
             k.addMessageEvent(new PetTrainingPanelEvent(this.onEnabledPetCommands));
             k.addMessageEvent(new PetPlacingErrorEvent(this.onPetPlacingError));
@@ -248,7 +248,7 @@
 
         private function onUserNameChange(k:IMessageEvent):void
         {
-            var _local_2:_Str_4150 = (k as _Str_4150);
+            var _local_2:UserNameChangedMessageEvent = (k as UserNameChangedMessageEvent);
             if (_local_2 == null)
             {
                 return;

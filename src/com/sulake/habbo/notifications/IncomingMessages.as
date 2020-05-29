@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9048;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9312;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6160;
+    import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9157;
@@ -94,7 +94,7 @@
             this.addMessageEvent(new _Str_9048(this._Str_24729));
             this.addMessageEvent(new _Str_9312(this._Str_24490));
             this.addMessageEvent(new _Str_9995(this._Str_24460));
-            this.addMessageEvent(new _Str_6160(this._Str_18012));
+            this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
             this.addMessageEvent(new _Str_7309(this._Str_25384));
             this.addMessageEvent(new UserObjectEvent(this._Str_3241));
             this.addMessageEvent(new _Str_9157(this._Str_25493));
@@ -457,7 +457,7 @@
             }
         }
 
-        private function _Str_18012(k:_Str_6160):void
+        private function _Str_18012(k:AccountSafetyLockStatusChangeMessageEvent):void
         {
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
             if (_local_2.status == 1)

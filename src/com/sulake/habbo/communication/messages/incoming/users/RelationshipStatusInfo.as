@@ -5,9 +5,9 @@
     import com.sulake.habbo.communication.messages.parser.users.RelationshipStatusInfoMessageParser;
     import com.sulake.core.utils.Map;
 
-    public class _Str_5269 extends MessageEvent implements IMessageEvent 
+    public class RelationshipStatusInfo extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5269(k:Function)
+        public function RelationshipStatusInfo(k:Function)
         {
             super(k, RelationshipStatusInfoMessageParser);
         }

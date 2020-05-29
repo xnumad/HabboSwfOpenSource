@@ -108,10 +108,10 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
     import com.sulake.habbo.communication.messages.incoming.users.UserCreditsEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7452;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5425;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6022;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_6345;
@@ -570,10 +570,10 @@
             this.addMessageEvent(new ActivityPointsEvent(this._Str_4970));
             this.addMessageEvent(new _Str_5264(this._Str_12366));
             this.addMessageEvent(new UserCreditsEvent(this._Str_7504));
-            this.addMessageEvent(new _Str_7452(this._Str_24089));
+            this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new _Str_5425(this._Str_18504));
             this.addMessageEvent(new _Str_7706(this._Str_23194));
-            this.addMessageEvent(new _Str_3492(this._Str_11640));
+            this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             this.addMessageEvent(new _Str_6022(this._Str_16181));
             this.addMessageEvent(new _Str_9560(this._Str_25412));
             this.addMessageEvent(new _Str_6345(this._Str_24794));
@@ -2070,7 +2070,7 @@
         private function _Str_11640(k:IMessageEvent):void
         {
             var _local_3:Boolean;
-            var _local_2:ScrSendUserInfoMessageParser = (k as _Str_3492).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = (k as ScrSendUserInfoEvent).getParser();
             this._purse.clubDays = Math.max(0, _local_2.daysToPeriodEnd);
             this._purse.clubPeriods = Math.max(0, _local_2.periodsSubscribedAhead);
             this._purse.isVIP = _local_2.isVIP;
@@ -2858,7 +2858,7 @@
             }
         }
 
-        public function _Str_24089(k:_Str_7452):void
+        public function _Str_24089(k:GuildMembershipsMessageEvent):void
         {
             if (this._guildMembershipsController)
             {

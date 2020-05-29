@@ -3,7 +3,7 @@
     import com.sulake.habbo.catalog.HabboCatalog;
     import com.sulake.habbo.catalog.viewer.widgets.GuildSelectorCatalogWidget;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_7664;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7452;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipsMessageEvent;
 
     public class GuildMembershipsController 
     {
@@ -44,7 +44,7 @@
             }
         }
 
-        public function _Str_23306(k:_Str_7452):void
+        public function _Str_23306(k:GuildMembershipsMessageEvent):void
         {
             var _local_2:Array = k.guilds.slice(0, k.guilds.length);
             if (((this._guildSelectorWidget) && (!(this._guildSelectorWidget.disposed))))

@@ -2,7 +2,7 @@
 {
 	import com.sulake.core.runtime.IDisposable;
 	import com.sulake.habbo.game.HabboGames;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
+	import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
 	import snowwar._Str_231.SynchronizedGameArena;
 	import snowwar._Str_231.SynchronizedGameStage;
 	import snowwar._Str_231._SafeStr_4019;
@@ -132,7 +132,7 @@
             _local_2.addHabboConnectionMessageEvent(new SnowStormGenericErrorEvent(this._SafeStr_18924));
             _local_2.addHabboConnectionMessageEvent(new SnowStormRejoinPreviousRoomEvent(this._SafeStr_18925));
             _local_2.addHabboConnectionMessageEvent(new SnowStormLongDataEvent(this._SafeStr_18926));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3492(this._SafeStr_18927));
+            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._SafeStr_18927));
             _local_2.addHabboConnectionMessageEvent(new SnowStormOnStageEndingEvent(this._SafeStr_18928));
             _local_2.addHabboConnectionMessageEvent(new SnowStormOnPlayerExitedArenaEvent(this._SafeStr_18929));
             _local_2.addHabboConnectionMessageEvent(new SnowStormUnusedAlertGenericEvent(this._SafeStr_18930));
@@ -693,7 +693,7 @@
             this._snowWarEngine._SafeStr_13216(_local_2.userId, _local_2._SafeStr_18212);
         }
 
-        private function _SafeStr_18927(k:_Str_3492):void
+        private function _SafeStr_18927(k:ScrSendUserInfoEvent):void
         {
             if (this._snowWarEngine != null)
             {

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.EmailStatusParser;
 
-    public class _Str_5948 extends MessageEvent implements IMessageEvent 
+    public class EmailStatusResultEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5948(k:Function)
+        public function EmailStatusResultEvent(k:Function)
         {
             super(k, EmailStatusParser);
         }

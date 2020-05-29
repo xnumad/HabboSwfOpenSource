@@ -17,7 +17,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5881;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5633;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5051;
@@ -131,7 +131,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3492(this._Str_11640));
+            _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             _local_2.addHabboConnectionMessageEvent(new _Str_5881(this._Str_8907));
             _local_2.addHabboConnectionMessageEvent(new _Str_5633(this._Str_18511));
             _local_2.addHabboConnectionMessageEvent(new _Str_5051(this._Str_17647));
@@ -371,7 +371,7 @@
 
         private function _Str_11640(k:IMessageEvent):void
         {
-            var _local_2:ScrSendUserInfoMessageParser = _Str_3492(k).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             Logger.log(((((((((("Got subscription info: " + _local_2.productName) + ", ") + _local_2.daysToPeriodEnd) + ", ") + _local_2.memberPeriods) + ", ") + _local_2.periodsSubscribedAhead) + ", ") + _local_2.responseType));
             this.data._Str_20281 = (_local_2.daysToPeriodEnd > 0);
         }

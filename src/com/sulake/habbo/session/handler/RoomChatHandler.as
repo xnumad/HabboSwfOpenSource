@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
+    import com.sulake.habbo.communication.messages.incoming.users.PetRespectNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HandItemReceivedMessageEvent;
@@ -35,7 +35,7 @@
             k.addMessageEvent(new WhisperMessageEvent(this.onRoomWhisper));
             k.addMessageEvent(new ShoutMessageEvent(this.onRoomShout));
             k.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
-            k.addMessageEvent(new _Str_8482(this._Str_23513));
+            k.addMessageEvent(new PetRespectNotificationEvent(this._Str_23513));
             k.addMessageEvent(new PetSupplementedNotificationEvent(this._Str_23073));
             k.addMessageEvent(new FloodControlMessageEvent(this.onFloodControl));
             k.addMessageEvent(new HandItemReceivedMessageEvent(this._Str_23267));
@@ -98,7 +98,7 @@
             }
         }
 
-        private function _Str_23513(k:_Str_8482):void
+        private function _Str_23513(k:PetRespectNotificationEvent):void
         {
             if ((((k == null) || (listener == null)) || (listener.events == null)))
             {

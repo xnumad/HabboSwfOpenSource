@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.ExtendedProfileChangedMessageParser;
 
-    public class _Str_7417 extends MessageEvent implements IMessageEvent 
+    public class ExtendedProfileChangedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7417(k:Function)
+        public function ExtendedProfileChangedMessageEvent(k:Function)
         {
             super(k, ExtendedProfileChangedMessageParser);
         }

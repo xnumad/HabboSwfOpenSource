@@ -11,9 +11,9 @@
     import com.sulake.core.window.components.IIconWindow;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembersEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6896;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6293;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6584;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipUpdatedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMemberMgmtFailedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipRejectedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.GroupMembershipRequestedMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_5612;
@@ -108,7 +108,7 @@
 
         public function _Str_25762(k:IMessageEvent):void
         {
-            var _local_2:_Str_6896 = _Str_6896(k);
+            var _local_2:GuildMembershipUpdatedMessageEvent = GuildMembershipUpdatedMessageEvent(k);
             if (((!(this._data == null)) && (this._data.groupId == _local_2.guildId)))
             {
                 this._data.update(_local_2.data);
@@ -118,7 +118,7 @@
 
         public function _Str_23412(k:IMessageEvent):void
         {
-            var _local_2:_Str_6293 = _Str_6293(k);
+            var _local_2:GuildMemberMgmtFailedMessageEvent = GuildMemberMgmtFailedMessageEvent(k);
             var _local_3:int = _local_2.reason;
             var _local_4:String = ("group.membermgmt.fail." + _local_3);
             var _local_5:String = this._manager.localization.getLocalization(_local_4, _local_4);
@@ -131,7 +131,7 @@
 
         public function _Str_25572(k:IMessageEvent):void
         {
-            var _local_2:_Str_6584 = _Str_6584(k);
+            var _local_2:GuildMembershipRejectedMessageEvent = GuildMembershipRejectedMessageEvent(k);
             if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser().guildId)))
             {
                 this._Str_5312(this._data.pageIndex);

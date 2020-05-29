@@ -7,8 +7,8 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IRegionWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5093;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5458;
+    import com.sulake.habbo.communication.messages.incoming.users.GroupDetailsChangedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupBadgesMessageEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.iterators.EmptyIterator;
     import com.sulake.core.window.utils.IIterator;
@@ -37,8 +37,8 @@
         private var _type:String;
         private var _badgeId:String;
         private var _groupId:int;
-        private var _groupDetailsChangedMessageEvent:_Str_5093;
-        private var _habboGroupBadgesMessageEvent:_Str_5458;
+        private var _groupDetailsChangedMessageEvent:GroupDetailsChangedMessageEvent;
+        private var _habboGroupBadgesMessageEvent:HabboGroupBadgesMessageEvent;
 
         public function BadgeImageWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
@@ -183,8 +183,8 @@
                 {
                     if (((_local_2) && (this._habboGroupBadgesMessageEvent == null)))
                     {
-                        this._groupDetailsChangedMessageEvent = new _Str_5093(this._Str_18693);
-                        this._habboGroupBadgesMessageEvent = new _Str_5458(this._Str_18218);
+                        this._groupDetailsChangedMessageEvent = new GroupDetailsChangedMessageEvent(this._Str_18693);
+                        this._habboGroupBadgesMessageEvent = new HabboGroupBadgesMessageEvent(this._Str_18218);
                         this._windowManager.communication.addHabboConnectionMessageEvent(this._groupDetailsChangedMessageEvent);
                         this._windowManager.communication.addHabboConnectionMessageEvent(this._habboGroupBadgesMessageEvent);
                     }
@@ -342,12 +342,12 @@
             this.refresh();
         }
 
-        private function _Str_18693(k:_Str_5093):void
+        private function _Str_18693(k:GroupDetailsChangedMessageEvent):void
         {
             this._Str_22252(k.groupId, this._badgeId);
         }
 
-        private function _Str_18218(k:_Str_5458):void
+        private function _Str_18218(k:HabboGroupBadgesMessageEvent):void
         {
             if (k.badges.hasKey(this._groupId))
             {

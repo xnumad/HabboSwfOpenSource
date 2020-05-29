@@ -29,29 +29,29 @@
     import com.sulake.iid.IIDSessionDataManager;
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7832;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildEditFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7294;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupJoinFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6293;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5269;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMemberMgmtFailedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6633;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5979;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8194;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8141;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildCreatedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMemberFurniCountInHQMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildCreationInfoMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildEditorDataMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6584;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7456;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipRejectedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDeactivatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembersEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5093;
+    import com.sulake.habbo.communication.messages.incoming.users.GroupDetailsChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7878;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_6896;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_7417;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_3492;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildEditInfoMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipUpdatedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileChangedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrSendUserInfoEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
@@ -164,29 +164,29 @@
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ExtendedProfileMessageEvent(this._Str_24027));
-            this.addMessageEvent(new _Str_7832(this._Str_25256));
+            this.addMessageEvent(new GuildEditFailedMessageEvent(this._Str_25256));
             this.addMessageEvent(new _Str_2929(this.onRoomInfo));
-            this.addMessageEvent(new _Str_7294(this._Str_25665));
+            this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this._Str_25665));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
-            this.addMessageEvent(new _Str_6293(this._guildMembersWindowCtrl._Str_23412));
-            this.addMessageEvent(new _Str_5269(this._Str_18561));
-            this.addMessageEvent(new _Str_3921(this._Str_3702));
+            this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
+            this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
+            this.addMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
             this.addMessageEvent(new _Str_3992(this._Str_7358));
             this.addMessageEvent(new _Str_2752(this.onRoomEnter));
-            this.addMessageEvent(new _Str_6633(this._Str_24985));
-            this.addMessageEvent(new _Str_5979(this._Str_25619));
-            this.addMessageEvent(new _Str_8194(this._Str_16681));
-            this.addMessageEvent(new _Str_8141(this._Str_25430));
+            this.addMessageEvent(new GuildCreatedMessageEvent(this._Str_24985));
+            this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
+            this.addMessageEvent(new GuildCreationInfoMessageEvent(this._Str_16681));
+            this.addMessageEvent(new GuildEditorDataMessageEvent(this._Str_25430));
             this.addMessageEvent(new _Str_3352(this._Str_23870));
-            this.addMessageEvent(new _Str_6584(this._guildMembersWindowCtrl._Str_25572));
-            this.addMessageEvent(new _Str_7456(this._Str_26461));
+            this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
+            this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this._Str_26461));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));
-            this.addMessageEvent(new _Str_5093(this._Str_18693));
+            this.addMessageEvent(new GroupDetailsChangedMessageEvent(this._Str_18693));
             this.addMessageEvent(new UserObjectEvent(this._Str_3241));
-            this.addMessageEvent(new _Str_7878(this._Str_18072));
-            this.addMessageEvent(new _Str_6896(this._guildMembersWindowCtrl._Str_25762));
-            this.addMessageEvent(new _Str_7417(this._Str_23512));
-            this.addMessageEvent(new _Str_3492(this._Str_11640));
+            this.addMessageEvent(new GuildEditInfoMessageEvent(this._Str_18072));
+            this.addMessageEvent(new GuildMembershipUpdatedMessageEvent(this._guildMembersWindowCtrl._Str_25762));
+            this.addMessageEvent(new ExtendedProfileChangedMessageEvent(this._Str_23512));
+            this.addMessageEvent(new ScrSendUserInfoEvent(this._Str_11640));
             this.addMessageEvent(new UserBadgesEvent(this._Str_24382));
             context.addLinkEventTracker(this);
         }
@@ -316,14 +316,14 @@
 
         private function _Str_26461(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_7456(k).groupId;
+            var _local_2:int = HabboGroupDeactivatedMessageEvent(k).groupId;
             this._detailsWindowCtrl._Str_26461(_local_2);
             this._groupRoomInfoCtrl._Str_26461(_local_2);
         }
 
         private function _Str_3702(k:IMessageEvent):void
         {
-            var _local_2:HabboGroupDetailsData = _Str_3921(k).data;
+            var _local_2:HabboGroupDetailsData = HabboGroupDetailsMessageEvent(k).data;
             this._detailsWindowCtrl._Str_3702(_local_2);
             this._extendedProfileWindowCtrl._Str_3702(_local_2);
             this._groupRoomInfoCtrl._Str_3702(_local_2);
@@ -342,13 +342,13 @@
 
         private function _Str_23512(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_7417(k).userId;
+            var _local_2:int = ExtendedProfileChangedMessageEvent(k).userId;
             this._extendedProfileWindowCtrl._Str_24312(_local_2);
         }
 
         private function _Str_18693(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_5093(k).groupId;
+            var _local_2:int = GroupDetailsChangedMessageEvent(k).groupId;
             if (((this._detailsWindowCtrl._Str_18808(_local_2)) || (this._groupRoomInfoCtrl._Str_18808(_local_2))))
             {
                 this.send(new _Str_2863(_local_2, false));
@@ -359,7 +359,7 @@
         {
             var _local_3:String;
             var _local_4:String;
-            var _local_2:int = _Str_7294(k).reason;
+            var _local_2:int = HabboGroupJoinFailedMessageEvent(k).reason;
             if (_local_2 == HabboGroupJoinFailedMessageParser.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(false);
@@ -374,14 +374,14 @@
 
         private function _Str_16681(k:IMessageEvent):void
         {
-            var _local_2:GuildCreationData = _Str_8194(k).data;
+            var _local_2:GuildCreationData = GuildCreationInfoMessageEvent(k).data;
             this._guildManagementWindowCtrl._Str_16681(_local_2);
             this._Str_19848();
         }
 
         private function _Str_18072(k:IMessageEvent):void
         {
-            var _local_2:GuildEditData = _Str_7878(k).data;
+            var _local_2:GuildEditData = GuildEditInfoMessageEvent(k).data;
             this._guildManagementWindowCtrl._Str_18072(_local_2);
             this._Str_19848();
         }
@@ -407,7 +407,7 @@
 
         private function _Str_25430(k:IMessageEvent):void
         {
-            this._guildEditorData = _Str_8141(k).data;
+            this._guildEditorData = GuildEditorDataMessageEvent(k).data;
             events.dispatchEvent(new HabboGroupsEditorData());
         }
 
@@ -415,7 +415,7 @@
         {
             var _local_3:String;
             var _local_4:String;
-            var _local_2:int = _Str_7832(k).reason;
+            var _local_2:int = GuildEditFailedMessageEvent(k).reason;
             if (_local_2 == GuildEditFailedMessageParser.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(true);
@@ -442,7 +442,7 @@
 
         private function _Str_24985(k:IMessageEvent):void
         {
-            var _local_2:_Str_6633 = _Str_6633(k);
+            var _local_2:GuildCreatedMessageEvent = GuildCreatedMessageEvent(k);
             this._groupCreatedWindowCtrl.show(_local_2.groupId);
             this._guildManagementWindowCtrl.close();
             this._groupRoomInfoCtrl._Str_21514 = _local_2.groupId;
@@ -454,8 +454,8 @@
 
         private function _Str_25619(k:IMessageEvent):void
         {
-            var _local_2:int = _Str_5979(k).userId();
-            var _local_3:int = _Str_5979(k).furniCount();
+            var _local_2:int = GuildMemberFurniCountInHQMessageEvent(k).userId();
+            var _local_3:int = GuildMemberFurniCountInHQMessageEvent(k).furniCount();
             var _local_4:_Str_2891;
             var _local_5:GuildMemberData = this._guildMembersWindowCtrl.data;
             var _local_6:String = ((this._kickData._Str_21067) ? "group.block" : "group.kick");
@@ -509,7 +509,7 @@
 
         private function _Str_11640(k:IMessageEvent):void
         {
-            var _local_2:ScrSendUserInfoMessageParser = _Str_3492(k).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = ScrSendUserInfoEvent(k).getParser();
             this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));
             this._guildManagementWindowCtrl._Str_23040();
         }
@@ -525,7 +525,7 @@
 
         private function _Str_18561(k:IMessageEvent):void
         {
-            var _local_2:_Str_5269 = _Str_5269(k);
+            var _local_2:RelationshipStatusInfo = RelationshipStatusInfo(k);
             this._extendedProfileWindowCtrl._Str_18561(_local_2.userId, _local_2.relationshipStatusMap);
         }
 
