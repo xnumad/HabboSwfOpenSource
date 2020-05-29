@@ -42,7 +42,7 @@
             return this._isVerified;
         }
 
-        public function get _Str_19540():Boolean
+        public function get allowChange():Boolean
         {
             return this._allowChange;
         }

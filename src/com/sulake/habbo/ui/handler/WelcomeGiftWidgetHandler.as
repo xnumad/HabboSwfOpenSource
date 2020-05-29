@@ -88,7 +88,7 @@
             var _local_3:_Str_5438 = new _Str_5438();
             _local_3.email = _local_2.email;
             _local_3.isVerified = _local_2.isVerified;
-            _local_3._Str_17916 = _local_2._Str_19540;
+            _local_3._Str_17916 = _local_2.allowChange;
             _local_3.furniId = _local_2.furniId;
             _local_3._Str_10512 = _local_2._Str_10512;
             this._container.events.dispatchEvent(_local_3);
