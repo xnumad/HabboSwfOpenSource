@@ -47,7 +47,7 @@
             super(null, k, _arg_2, ALIGN_BOTTOM, true);
             this._catalog = _arg_3;
             this._starAnimationTimer = new Timer(150);
-            this._starAnimationTimer.addEventListener(TimerEvent.TIMER, this._Str_20433);
+            this._starAnimationTimer.addEventListener(TimerEvent.TIMER, this.starAnimationTimerEvent);
         }
 
         override public function dispose():void
@@ -89,7 +89,7 @@
             this.render();
             if (!this._currencyIconsSet)
             {
-                this._Str_25278();
+                this.setCurrencyIcons();
             }
         }
 
@@ -106,7 +106,7 @@
         {
             this._window = IWindowContainer(this._catalog.utils.createWindow("discountValueItem"));
             this.setElementBitmap(ICON_BITMAP, "thumb_up");
-            this._Str_22406();
+            this.startSplashAnimation();
         }
 
         private function render():void
@@ -115,45 +115,45 @@
             {
                 this.createWindow();
             }
-            this._Str_22981();
-            this._Str_24876();
-            this._Str_23996();
+            this.updateColumns();
+            this.updatePriceIndicators();
+            this.updateStrikeThroughElements();
             this._dirty = false;
         }
 
-        private function _Str_22981():void
+        private function updateColumns():void
         {
             if (((this._noCredits) || (this._creditsOnRight)))
             {
-                this._Str_22245(false);
+                this.setLeftColumnVisibility(false);
             }
             else
             {
-                this._Str_22245(true);
+                this.setLeftColumnVisibility(true);
             }
         }
 
-        private function _Str_25278():void
+        private function setCurrencyIcons():void
         {
             if (this._creditsOnLeft)
             {
-                this._Str_9590(TOTAL_CURRENCY_ICON_LEFT, -1);
-                this._Str_9590(DISCOUNT_CURRENCY_ICON_LEFT, -1);
+                this.setIconStyle(TOTAL_CURRENCY_ICON_LEFT, -1);
+                this.setIconStyle(DISCOUNT_CURRENCY_ICON_LEFT, -1);
             }
             if (this._creditsOnRight)
             {
-                this._Str_9590(TOTAL_CURRENCY_ICON_RIGHT, -1);
-                this._Str_9590(DISCOUNT_CURRENCY_ICON_RIGHT, -1);
+                this.setIconStyle(TOTAL_CURRENCY_ICON_RIGHT, -1);
+                this.setIconStyle(DISCOUNT_CURRENCY_ICON_RIGHT, -1);
             }
             else
             {
-                this._Str_9590(TOTAL_CURRENCY_ICON_RIGHT, data.activityPointType);
-                this._Str_9590(DISCOUNT_CURRENCY_ICON_RIGHT, data.activityPointType);
+                this.setIconStyle(TOTAL_CURRENCY_ICON_RIGHT, data.activityPointType);
+                this.setIconStyle(DISCOUNT_CURRENCY_ICON_RIGHT, data.activityPointType);
             }
             this._currencyIconsSet = true;
         }
 
-        private function _Str_24876():void
+        private function updatePriceIndicators():void
         {
             if (this._creditsOnLeft)
             {
@@ -172,7 +172,7 @@
             }
         }
 
-        private function _Str_23996():void
+        private function updateStrikeThroughElements():void
         {
             var k:ITextWindow = ITextWindow(this._window.findChildByName(TOTAL_CURRENCY_VALUE_LEFT));
             var _local_2:int = ((k.x + k.width) - k.textWidth);
@@ -198,13 +198,13 @@
             HabboCatalogUtils._Str_14396(_local_3, _local_4);
         }
 
-        private function _Str_9590(k:String, _arg_2:int):void
+        private function setIconStyle(k:String, _arg_2:int):void
         {
             var _local_3:IWindow = this._window.findChildByName(k);
             _local_3.style = ActivityPointTypeEnum._Str_5251(_arg_2, this._catalog, false);
         }
 
-        private function _Str_22245(k:Boolean):void
+        private function setLeftColumnVisibility(k:Boolean):void
         {
             var _local_3:String;
             var _local_2:Array = [DISCOUNT_CURRENCY_ICON_LEFT, DISCOUNT_CURRENCY_VALUE_LEFT, TOTAL_CURRENCY_ICON_LEFT, STRIKETROUGH_TOTAL_CURRENCY_LEFT, TOTAL_CURRENCY_VALUE_LEFT];
@@ -214,15 +214,15 @@
             }
         }
 
-        private function _Str_22406():void
+        private function startSplashAnimation():void
         {
             var k:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName(ICON_SPLASH_BITMAP));
             k.bitmap = new BitmapData(k.width, k.height, true, 0);
-            this._Str_20433(new TimerEvent(TimerEvent.TIMER));
+            this.starAnimationTimerEvent(new TimerEvent(TimerEvent.TIMER));
             this._starAnimationTimer.start();
         }
 
-        private function _Str_20433(k:TimerEvent):void
+        private function starAnimationTimerEvent(k:TimerEvent):void
         {
             var _local_2:IBitmapWrapperWindow;
             var _local_3:IAsset;
