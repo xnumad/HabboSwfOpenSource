@@ -51,7 +51,7 @@
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.communication.messages.parser.users._Str_6831;
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
-    import com.sulake.habbo.communication.messages.parser.users._Str_5768;
+    import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
     import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
     import flash.display.BitmapData;
@@ -456,8 +456,8 @@
 
         private function _Str_18012(k:_Str_6160):void
         {
-            var _local_2:_Str_5768 = k.getParser();
-            this._Str_9602 = (_local_2.status == _Str_5768._Str_16052);
+            var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
+            this._Str_9602 = (_local_2.status == AccountSafetyLockStatusChangeMessageParser.SAFETY_LOCK_STATUS_LOCKED);
         }
 
         public function get systemOpen():Boolean

@@ -3,10 +3,10 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5768 implements IMessageParser 
+    public class AccountSafetyLockStatusChangeMessageParser implements IMessageParser
     {
-        public static const _Str_16052:int = 0;
-        public static const _Str_20580:int = 1;
+        public static const SAFETY_LOCK_STATUS_LOCKED:int = 0;
+        public static const SAFETY_LOCK_STATUS_UNLOCKED:int = 1;
 
         private var _status:int;
 
