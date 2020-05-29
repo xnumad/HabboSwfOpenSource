@@ -332,7 +332,7 @@
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
             this._nameChangeAllowed = _local_3.nameChangeAllowed;
-            this._accountSafetyLocked = _local_3._Str_21338;
+            this._accountSafetyLocked = _local_3.accountSafetyLocked;
             this._ignoredUsersManager.initIgnoreList();
         }
 

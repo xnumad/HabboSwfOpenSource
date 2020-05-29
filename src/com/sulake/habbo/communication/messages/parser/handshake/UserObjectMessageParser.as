@@ -110,7 +110,7 @@
             return this._nameChangeAllowed;
         }
 
-        public function get _Str_21338():Boolean
+        public function get accountSafetyLocked():Boolean
         {
             return this._accountSafetyLocked;
         }

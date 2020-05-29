@@ -451,7 +451,7 @@
         private function _Str_3241(k:UserObjectEvent):void
         {
             var _local_2:UserObjectMessageParser = k.getParser();
-            if (_local_2._Str_21338)
+            if (_local_2.accountSafetyLocked)
             {
                 this._notifications._Str_3069._Str_24299(_local_2.id);
             }
