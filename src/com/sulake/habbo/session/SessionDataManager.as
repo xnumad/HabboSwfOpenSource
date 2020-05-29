@@ -90,7 +90,7 @@
         private var _figure:String;
         private var _gender:String;
         private var _realName:String;
-        private var _Str_7278:int = 0;
+        private var _respectTotal:int = 0;
         private var _Str_3437:int = 0;
         private var _Str_3973:int = 0;
         private var _Str_7394:Boolean = true;
@@ -325,7 +325,7 @@
             var _local_3:UserObjectMessageParser = _local_2.getParser();
             this._userId = _local_3.id;
             this._name = _local_3.name;
-            this._Str_7278 = _local_3._Str_10295;
+            this._respectTotal = _local_3._Str_10295;
             this._Str_3437 = _local_3.petRespectLeft;
             this._Str_3973 = _local_3._Str_2985;
             this._figure = _local_3.figure;

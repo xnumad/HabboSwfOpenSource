@@ -12,7 +12,7 @@
         private var _Str_7867:String;
         private var _realName:String;
         private var _Str_21976:Boolean;
-        private var _Str_7278:int;
+        private var _respectTotal:int;
         private var _Str_3437:int;
         private var _Str_3973:int;
         private var _Str_21322:Boolean;
@@ -35,7 +35,7 @@
             this._Str_7867 = k.readString();
             this._realName = k.readString();
             this._Str_21976 = k.readBoolean();
-            this._Str_7278 = k.readInteger();
+            this._respectTotal = k.readInteger();
             this._Str_3437 = k.readInteger();
             this._Str_3973 = k.readInteger();
             this._Str_21322 = k.readBoolean();
@@ -82,7 +82,7 @@
 
         public function get _Str_10295():int
         {
-            return this._Str_7278;
+            return this._respectTotal;
         }
 
         public function get petRespectLeft():int

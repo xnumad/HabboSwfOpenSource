@@ -6,7 +6,7 @@
     public class RespectNotificationMessageParser implements IMessageParser
     {
         private var _userId:int = 0;
-        private var _Str_7278:int = 0;
+        private var _respectTotal:int = 0;
 
 
         public function flush():Boolean
@@ -17,7 +17,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._userId = k.readInteger();
-            this._Str_7278 = k.readInteger();
+            this._respectTotal = k.readInteger();
             return true;
         }
 
@@ -28,7 +28,7 @@
 
         public function get _Str_10295():int
         {
-            return this._Str_7278;
+            return this._respectTotal;
         }
     }
 }
