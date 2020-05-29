@@ -56,7 +56,7 @@
             this._membershipCount = k.readInteger();
         }
 
-        public function get _Str_6848():Array
+        public function get ownedRooms():Array
         {
             return this._ownedRooms;
         }

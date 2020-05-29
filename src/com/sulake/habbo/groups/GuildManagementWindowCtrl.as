@@ -128,7 +128,7 @@
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data._Str_2811))))
             {
-                this._data._Str_6848.splice(0, 0, new _Str_2866(k, _arg_2, false));
+                this._data.ownedRooms.splice(0, 0, new _Str_2866(k, _arg_2, false));
                 this._Str_20779();
                 this._Str_20262().selection = 0;
             }
@@ -651,9 +651,9 @@
             var _local_3:int;
             _local_2.push(this._manager.localization.getLocalization("group.edit.base.select.room", "group.edit.base.select.room"));
             var _local_4:int;
-            while (_local_4 < this._data._Str_6848.length)
+            while (_local_4 < this._data.ownedRooms.length)
             {
-                _local_5 = this._data._Str_6848[_local_4];
+                _local_5 = this._data.ownedRooms[_local_4];
                 _local_2.push(_local_5.roomName);
                 if (_local_5.roomId == this._data.baseRoomId)
                 {
@@ -672,9 +672,9 @@
         {
             var k:IDropMenuWindow = IDropMenuWindow(this._window.findChildByName("base_dropmenu"));
             var _local_2:int = (k.selection - 1);
-            if ((((_local_2 >= 0) && (_local_2 < this._data._Str_6848.length)) && (!(this._data._Str_6848[_local_2] == null))))
+            if ((((_local_2 >= 0) && (_local_2 < this._data.ownedRooms.length)) && (!(this._data.ownedRooms[_local_2] == null))))
             {
-                return _Str_2866(this._data._Str_6848[_local_2]);
+                return _Str_2866(this._data.ownedRooms[_local_2]);
             }
             return null;
         }
