@@ -170,7 +170,7 @@
                             _local_9 = (this._Str_22145() + _local_9);
                             if (!this._widget._Str_22242)
                             {
-                                this._Str_3281("hc_text", this._widget.localizations.getLocalization("widget.memenu.hc.join"));
+                                this.setElementText("hc_text", this._widget.localizations.getLocalization("widget.memenu.hc.join"));
                             }
                             else
                             {
@@ -188,7 +188,7 @@
                                 }
                                 this._widget.localizations.registerParameter(_local_11, "days", String(this._widget._Str_22596));
                                 this._widget.localizations.registerParameter(_local_11, "months", String(this._widget._Str_21813));
-                                this._Str_3281("hc_text", this._widget.localizations.getLocalization(_local_11));
+                                this.setElementText("hc_text", this._widget.localizations.getLocalization(_local_11));
                             }
                             break;
                         case "minimail_icon":
@@ -279,7 +279,7 @@
             _local_4.blend = _arg_3;
         }
 
-        private function _Str_3281(k:String, _arg_2:String):void
+        private function setElementText(k:String, _arg_2:String):void
         {
             var _local_3:ITextWindow = (this._window.findChildByName(k) as ITextWindow);
             if (_local_3 != null)

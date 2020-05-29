@@ -157,18 +157,18 @@
         {
             if (this._creditsOnLeft)
             {
-                this._Str_3281(TOTAL_CURRENCY_VALUE_LEFT, (data.quantity * data.priceCredits).toString());
-                this._Str_3281(DISCOUNT_CURRENCY_VALUE_LEFT, ((data.quantity * data.priceCredits) - data.discountPriceCredits).toString());
+                this.setElementText(TOTAL_CURRENCY_VALUE_LEFT, (data.quantity * data.priceCredits).toString());
+                this.setElementText(DISCOUNT_CURRENCY_VALUE_LEFT, ((data.quantity * data.priceCredits) - data.discountPriceCredits).toString());
             }
             if (this._creditsOnRight)
             {
-                this._Str_3281(TOTAL_CURRENCY_VALUE_RIGHT, (data.quantity * data.priceCredits).toString());
-                this._Str_3281(DISCOUNT_CURRENCY_VALUE_RIGHT, ((data.quantity * data.priceCredits) - data.discountPriceCredits).toString());
+                this.setElementText(TOTAL_CURRENCY_VALUE_RIGHT, (data.quantity * data.priceCredits).toString());
+                this.setElementText(DISCOUNT_CURRENCY_VALUE_RIGHT, ((data.quantity * data.priceCredits) - data.discountPriceCredits).toString());
             }
             else
             {
-                this._Str_3281(TOTAL_CURRENCY_VALUE_RIGHT, (data.quantity * data.priceActivityPoints).toString());
-                this._Str_3281(DISCOUNT_CURRENCY_VALUE_RIGHT, ((data.quantity * data.priceActivityPoints) - data.discountPriceActivityPoints).toString());
+                this.setElementText(TOTAL_CURRENCY_VALUE_RIGHT, (data.quantity * data.priceActivityPoints).toString());
+                this.setElementText(DISCOUNT_CURRENCY_VALUE_RIGHT, ((data.quantity * data.priceActivityPoints) - data.discountPriceActivityPoints).toString());
             }
         }
 
@@ -186,7 +186,7 @@
             _local_6.width = ((STRIKETHROUGH_LEFT_MARGIN + _local_4.textWidth) + STRIKETHROUGH_RIGHT_MARGIN);
         }
 
-        private function _Str_3281(k:String, _arg_2:String):void
+        private function setElementText(k:String, _arg_2:String):void
         {
             this._window.findChildByName(k).caption = _arg_2;
         }

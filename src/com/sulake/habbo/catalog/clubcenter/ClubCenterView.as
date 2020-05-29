@@ -81,7 +81,7 @@
             var _local_8:IButtonWindow;
             var _local_9:int;
             var _local_5:String = this._controller._Str_24259();
-            this._Str_3281("status_title", (("${hccenter.status." + _local_5) + "}"));
+            this.setElementText("status_title", (("${hccenter.status." + _local_5) + "}"));
             if (((!(k)) || (!(_arg_2))))
             {
                 this._Str_4219("gift_content", false);
@@ -93,7 +93,7 @@
             _local_6 = _local_6.replace("%timeleft%", this._Str_21064(_arg_2.minutesUntilExpiration));
             _local_6 = _local_6.replace("%joindate%", k.firstSubscriptionDate);
             _local_6 = _local_6.replace("%streakduration%", this._Str_22787(k.currentHcStreak));
-            this._Str_3281("status_info", _local_6);
+            this.setElementText("status_info", _local_6);
             var _local_7:IBitmapWrapperWindow = (this.container.findChildByName("hc_badge") as IBitmapWrapperWindow);
             if (((_local_7) && (_arg_4)))
             {
@@ -103,11 +103,11 @@
             {
                 if (k.timeUntilPayday < 60)
                 {
-                    this._Str_3281("special_time_content", this.getLocalization("hccenter.special.time.soon"));
+                    this.setElementText("special_time_content", this.getLocalization("hccenter.special.time.soon"));
                 }
                 else
                 {
-                    this._Str_3281("special_time_content", this._Str_21064(k.timeUntilPayday));
+                    this.setElementText("special_time_content", this._Str_21064(k.timeUntilPayday));
                 }
                 this._Str_4219("special_time_content", true);
                 _local_9 = (k.creditRewardForMonthlySpent + k.creditRewardForStreakBonus);
@@ -117,7 +117,7 @@
                     this._Str_4219("special_amount_title", true);
                     this._Str_4219("special_amount_content", true);
                     this._Str_4219("special_breakdown_link", true);
-                    this._Str_3281("special_amount_content", this.getLocalization("hccenter.special.sum").replace("%credits%", _local_9));
+                    this.setElementText("special_amount_content", this.getLocalization("hccenter.special.sum").replace("%credits%", _local_9));
                 }
             }
             _local_8 = (this.container.findChildByName("btn_gift") as IButtonWindow);
@@ -127,7 +127,7 @@
                 {
                     _local_8.caption = "${hccenter.btn.gifts.redeem}";
                 }
-                this._Str_3281("gift_info", this.getLocalization("hccenter.unclaimedgifts").replace("%unclaimedgifts%", _arg_3));
+                this.setElementText("gift_info", this.getLocalization("hccenter.unclaimedgifts").replace("%unclaimedgifts%", _arg_3));
             }
             else
             {
@@ -135,7 +135,7 @@
                 {
                     _local_8.caption = "${hccenter.btn.gifts.view}";
                 }
-                this._Str_3281("gift_info", this.getLocalization("hccenter.gift.info"));
+                this.setElementText("gift_info", this.getLocalization("hccenter.gift.info"));
             }
             _local_8 = (this.container.findChildByName("btn_buy") as IButtonWindow);
             if (_local_5 == ClubStatus.ACTIVE)
@@ -216,7 +216,7 @@
             return this._window;
         }
 
-        private function _Str_3281(k:String, _arg_2:String):void
+        private function setElementText(k:String, _arg_2:String):void
         {
             if (!this.container)
             {
