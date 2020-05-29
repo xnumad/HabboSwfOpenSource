@@ -207,7 +207,7 @@
                                         this._container.sessionDataManager.pickAllFurniture(this._container.roomSession.roomId);
                                         return null;
                                     case ":pickallbc":
-                                        this._container.sessionDataManager.pickallBC(this._container.roomSession.roomId);
+                                        this._container.sessionDataManager.pickAllBuilderFurniture(this._container.roomSession.roomId);
                                         return null;
                                     case ":ejectall":
                                         this._container.sessionDataManager.ejectAllFurniture(this._container.roomSession.roomId, _local_8);

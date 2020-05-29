@@ -71,7 +71,7 @@
         function getPerkErrorMessage(_arg_1:String):String;
         function sendSpecialCommandMessage(_arg_1:String):void;
         function get currentTalentTrack():String;
-        function pickallBC(_arg_1:int):void;
+        function pickAllBuilderFurniture(_arg_1:int):void;
         function removeFurniDataListener(_arg_1:IFurniDataListener):void;
         function setRoomCameraFollowDisabled(_arg_1:Boolean):void;
         function get isRoomCameraFollowDisabled():Boolean;

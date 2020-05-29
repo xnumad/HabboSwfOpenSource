@@ -878,7 +878,7 @@
             }
         }
 
-        public function pickallBC(roomId:int):void
+        public function pickAllBuilderFurniture(roomId:int):void
         {
             if (((this._roomSessionManager == null) || (this._windowManager == null)))
             {
