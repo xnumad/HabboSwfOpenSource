@@ -351,7 +351,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9145;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9184;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
+	import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ScrSendKickbackInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
@@ -1110,7 +1110,7 @@
             INCOMING_PACKETS[1787] = _Str_8054;
             INCOMING_PACKETS[1797] = SleepMessageEvent;
             INCOMING_PACKETS[1808] = InterstitialMessageEvent;
-            INCOMING_PACKETS[1815] = _Str_9204;
+            INCOMING_PACKETS[1815] = ChangeEmailResultEvent;
             INCOMING_PACKETS[1823] = MarketplaceConfigurationEvent;
             INCOMING_PACKETS[1829] = _Str_8464;
             INCOMING_PACKETS[1830] = _Str_8791;

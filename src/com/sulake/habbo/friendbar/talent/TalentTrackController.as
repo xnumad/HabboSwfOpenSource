@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.talent._Str_7229;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
+    import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
     import com.sulake.habbo.communication.messages.parser.talent._Str_7210;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowEvent;
@@ -109,7 +109,7 @@
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this._Str_24186));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_3921(this._Str_3702));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_5948(this._Str_16302));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_9204(this._Str_17386));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
         }
 
         private function _Str_16302(k:_Str_5948):void
@@ -123,7 +123,7 @@
             }
         }
 
-        private function _Str_17386(k:_Str_9204):void
+        private function _Str_17386(k:ChangeEmailResultEvent):void
         {
             this._Str_16375(true, k.getParser().result);
         }
