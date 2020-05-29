@@ -11,7 +11,7 @@
         private var _groupDesc:String;
         private var _baseRoomId:int;
         private var _primaryColorId:int;
-        private var _Str_19050:int;
+        private var _secondaryColorId:int;
         private var _locked:Boolean;
         private var _url:String;
         private var _Str_8166:int;
@@ -39,7 +39,7 @@
             this._groupDesc = k.readString();
             this._baseRoomId = k.readInteger();
             this._primaryColorId = k.readInteger();
-            this._Str_19050 = k.readInteger();
+            this._secondaryColorId = k.readInteger();
             this._Str_8166 = k.readInteger();
             this._Str_21056 = k.readInteger();
             this._locked = k.readBoolean();
@@ -98,7 +98,7 @@
 
         public function get _Str_7590():int
         {
-            return this._Str_19050;
+            return this._secondaryColorId;
         }
 
         public function get _Str_6089():Array
