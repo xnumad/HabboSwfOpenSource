@@ -5,7 +5,7 @@
 
     public class _Str_9285 implements IMessageParser 
     {
-        private var _Str_11781:int;
+        private var _furniCount:int;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_11781 = k.readInteger();
+            this._furniCount = k.readInteger();
             return true;
         }
 
         public function get _Str_10882():int
         {
-            return this._Str_11781;
+            return this._furniCount;
         }
     }
 }
