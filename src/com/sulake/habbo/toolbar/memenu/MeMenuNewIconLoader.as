@@ -14,7 +14,7 @@
 
     public class MeMenuNewIconLoader implements IAvatarImageListener 
     {
-        private static const _Str_4588:int = 50;
+        private static const MAX_ICON_HEIGHT:int = 50;
         private static const _Str_6185:int = 3;
 
         private var _toolbar:HabboToolbar;
@@ -77,13 +77,13 @@
             {
                 if (((!(fullImage == null)) && (!(headImage == null))))
                 {
-                    if (fullImage.height > _Str_4588)
+                    if (fullImage.height > MAX_ICON_HEIGHT)
                     {
-                        _local_8 = new BitmapData(fullImage.width, _Str_4588, true, 0);
+                        _local_8 = new BitmapData(fullImage.width, MAX_ICON_HEIGHT, true, 0);
                         _local_9 = _local_8.rect.clone();
-                        if (headImage.height > (_Str_4588 - _Str_6185))
+                        if (headImage.height > (MAX_ICON_HEIGHT - _Str_6185))
                         {
-                            _local_9.offset(0, ((headImage.height - _Str_4588) + _Str_6185));
+                            _local_9.offset(0, ((headImage.height - MAX_ICON_HEIGHT) + _Str_6185));
                         }
                         _local_8.copyPixels(fullImage, _local_9, new Point(0, 0));
                         _local_7 = _local_8;
