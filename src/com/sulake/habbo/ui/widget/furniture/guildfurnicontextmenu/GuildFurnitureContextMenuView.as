@@ -18,7 +18,7 @@
     {
         protected var _Str_17990:IHabboGroupsManager;
         protected var _Str_2277:IHabboWindowManager;
-        public var _Str_2994:int = -1;
+        public var _guildId:int = -1;
         public var _Str_8815:int = -1;
         public var _Str_7536:Boolean = false;
         public var _Str_9506:Boolean = false;
@@ -115,7 +115,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "join":
-                            this.widget.handler._Str_24943(this._Str_2994);
+                            this.widget.handler._Str_24943(this._guildId);
                             showButton("join", (!(this._Str_7536)), false);
                             break;
                         case "home_room":
@@ -127,7 +127,7 @@
                                 _local_4 = (this.widget.roomEngine as Component);
                                 if (_local_4.context != null)
                                 {
-                                    _local_4.context.createLinkEvent(("groupforum/" + this._Str_2994));
+                                    _local_4.context.createLinkEvent(("groupforum/" + this._guildId));
                                     break;
                                 }
                             }
@@ -135,7 +135,7 @@
                 }
                 if (_arg_2.name == "profile_link")
                 {
-                    this._Str_17990._Str_12717(this._Str_2994);
+                    this._Str_17990._Str_12717(this._guildId);
                 }
                 _local_3 = true;
             }

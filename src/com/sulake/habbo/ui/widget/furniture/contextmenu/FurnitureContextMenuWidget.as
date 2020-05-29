@@ -132,7 +132,7 @@
         public function _Str_24867(k:IRoomObject, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:Boolean, _arg_6:Boolean):void
         {
             this._selectedObject = k;
-            this._cachedGuildFurniContextView._Str_2994 = _arg_2;
+            this._cachedGuildFurniContextView._guildId = _arg_2;
             this._cachedGuildFurniContextView._Str_8815 = _arg_4;
             this._cachedGuildFurniContextView._Str_7536 = _arg_5;
             this._cachedGuildFurniContextView._Str_9506 = _arg_6;
