@@ -119,7 +119,7 @@
         private var _isAmbassador:Boolean;
         private var _isEmailVerified:Boolean;
         private var _isRoomCameraFollowDisabled:Boolean;
-        private var _Str_3790:int;
+        private var _uiFlags:int;
         private var _accountSafetyLocked:Boolean = false;
         private var _Str_18582:String;
         private var _Str_18348:String;
@@ -414,8 +414,8 @@
         {
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._isRoomCameraFollowDisabled = _local_2.roomCameraFollowDisabled;
-            this._Str_3790 = _local_2.uiFlags;
-            events.dispatchEvent(new SessionDataPreferencesEvent(this._Str_3790));
+            this._uiFlags = _local_2.uiFlags;
+            events.dispatchEvent(new SessionDataPreferencesEvent(this._uiFlags));
         }
 
         private function _Str_16302(k:EmailStatusResultEvent):void
@@ -561,28 +561,28 @@
 
         public function get uiFlags():int
         {
-            return this._Str_3790;
+            return this._uiFlags;
         }
 
         private function _Str_19986(k:int, _arg_2:Boolean):void
         {
             if (_arg_2)
             {
-                if ((this._Str_3790 & k))
+                if ((this._uiFlags & k))
                 {
                     return;
                 }
-                this._Str_3790 = (this._Str_3790 | k);
+                this._uiFlags = (this._uiFlags | k);
             }
             else
             {
-                if (!(this._Str_3790 & k))
+                if (!(this._uiFlags & k))
                 {
                     return;
                 }
-                this._Str_3790 = (this._Str_3790 & (~(k)));
+                this._uiFlags = (this._uiFlags & (~(k)));
             }
-            this._communicationManager.connection.send(new _Str_9930(this._Str_3790));
+            this._communicationManager.connection.send(new _Str_9930(this._uiFlags));
         }
 
         public function getUserTags(k:int):Array
