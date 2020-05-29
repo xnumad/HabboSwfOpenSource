@@ -20,7 +20,7 @@
             return this._email;
         }
 
-        public function get _Str_5738():Boolean
+        public function get isVerified():Boolean
         {
             return this._isVerified;
         }
@@ -45,7 +45,7 @@
             this._email = k;
         }
 
-        public function set _Str_5738(k:Boolean):void
+        public function set isVerified(k:Boolean):void
         {
             this._isVerified = k;
         }

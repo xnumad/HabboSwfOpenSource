@@ -37,7 +37,7 @@
             return this._email;
         }
 
-        public function get _Str_5738():Boolean
+        public function get isVerified():Boolean
         {
             return this._isVerified;
         }

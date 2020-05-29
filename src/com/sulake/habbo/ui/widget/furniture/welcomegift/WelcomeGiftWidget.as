@@ -287,7 +287,7 @@
             {
                 case _Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS:
                     this._Str_4540 = k.email;
-                    this._isVerified = k._Str_5738;
+                    this._isVerified = k.isVerified;
                     this._Str_5694 = k._Str_17916;
                     if (k._Str_10512)
                     {
