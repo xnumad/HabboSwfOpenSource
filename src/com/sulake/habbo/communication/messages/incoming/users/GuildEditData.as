@@ -8,7 +8,7 @@
         private var _isOwner:Boolean;
         private var _groupId:int;
         private var _groupName:String;
-        private var _Str_21722:String;
+        private var _groupDesc:String;
         private var _baseRoomId:int;
         private var _Str_21311:int;
         private var _Str_19050:int;
@@ -36,7 +36,7 @@
             this._isOwner = k.readBoolean();
             this._groupId = k.readInteger();
             this._groupName = k.readString();
-            this._Str_21722 = k.readString();
+            this._groupDesc = k.readString();
             this._baseRoomId = k.readInteger();
             this._Str_21311 = k.readInteger();
             this._Str_19050 = k.readInteger();
@@ -83,7 +83,7 @@
 
         public function get _Str_17501():String
         {
-            return this._Str_21722;
+            return this._groupDesc;
         }
 
         public function get baseRoomId():int
