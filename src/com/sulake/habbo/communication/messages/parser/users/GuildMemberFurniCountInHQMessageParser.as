@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6411 implements IMessageParser 
+    public class GuildMemberFurniCountInHQMessageParser implements IMessageParser
     {
         private var _userId:int;
         private var _Str_11781:int;
