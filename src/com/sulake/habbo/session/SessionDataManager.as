@@ -224,7 +224,7 @@
             this._Str_6042 = null;
             if (this._furnitureParser)
             {
-                this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+                this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this.onFurnitureReady);
                 this._furnitureParser.dispose();
                 this._furnitureParser = null;
             }
@@ -257,7 +257,7 @@
                 this._furnitureParser = null;
             }
             this._furnitureParser = new FurnitureDataParser(this._floorItems, this._wallItems, this._furnitureIds, this._localizationManager);
-            this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+            this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this.onFurnitureReady);
             if (propertyExists("furnidata.load.url"))
             {
                 k = getProperty("furnidata.load.url");
@@ -286,10 +286,10 @@
             this._productParser.addEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
         }
 
-        private function _Str_17783(k:Event=null):void
+        private function onFurnitureReady(k:Event=null):void
         {
             var _local_2:IFurniDataListener;
-            this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
+            this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this.onFurnitureReady);
             this._Str_20020 = true;
             if (((this.isAuthenticHabbo) && (!(this._Str_12845))))
             {
