@@ -101,7 +101,7 @@
         private var _products:Dictionary;
         private var _productParser:ProductDataParser;
         private var _floorItems:Map;
-        private var _Str_3347:Map;
+        private var _wallItems:Map;
         private var _Str_5556:Map;
         private var _furnitureParser:FurnitureDataParser;
         private var _Str_7432:_Str_8883;
@@ -157,7 +157,7 @@
         {
             this._products = new Dictionary();
             this._floorItems = new Map();
-            this._Str_3347 = new Map();
+            this._wallItems = new Map();
             this._Str_5556 = new Map();
             this.initFurnitureData();
             this.initProductData();
@@ -256,7 +256,7 @@
                 this._furnitureParser.dispose();
                 this._furnitureParser = null;
             }
-            this._furnitureParser = new FurnitureDataParser(this._floorItems, this._Str_3347, this._Str_5556, this._localizationManager);
+            this._furnitureParser = new FurnitureDataParser(this._floorItems, this._wallItems, this._Str_5556, this._localizationManager);
             this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             if (propertyExists("furnidata.load.url"))
             {
@@ -755,11 +755,11 @@
 
         public function getWallItemData(k:int):IFurnitureData
         {
-            if (this._Str_3347 == null)
+            if (this._wallItems == null)
             {
                 return null;
             }
-            return this._Str_3347.getValue(k.toString());
+            return this._wallItems.getValue(k.toString());
         }
 
         public function getFloorItemDataByName(k:String, _arg_2:int=0):IFurnitureData
@@ -1010,7 +1010,7 @@
                 this._Str_8108 = null;
             }
             this._floorItems = new Map();
-            this._Str_3347 = new Map();
+            this._wallItems = new Map();
             this._Str_5556 = new Map();
             this.initFurnitureData();
         }
@@ -1038,7 +1038,7 @@
                 }
                 return null;
             }
-            return Vector.<IFurnitureData>(this._floorItems.getValues().concat(this._Str_3347.getValues()));
+            return Vector.<IFurnitureData>(this._floorItems.getValues().concat(this._wallItems.getValues()));
         }
 
         public function getXmlWindow(k:String):IWindow
