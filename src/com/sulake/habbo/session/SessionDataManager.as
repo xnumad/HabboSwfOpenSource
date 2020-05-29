@@ -96,7 +96,7 @@
         private var _nameChangeAllowed:Boolean = true;
         private var _rights:Array;
         private var _systemOpen:Boolean;
-        private var _Str_20046:Boolean;
+        private var _systemShutDown:Boolean;
         private var _Str_8842:Boolean;
         private var _Str_2804:Dictionary;
         private var _productParser:ProductDataParser;
@@ -433,7 +433,7 @@
                 return;
             }
             this._systemOpen = _local_2.isOpen;
-            this._Str_20046 = _local_2._Str_22557;
+            this._systemShutDown = _local_2._Str_22557;
             this._Str_8842 = _local_2.isRealNoob;
             if ((((this.isRealNoob) && (this._Str_20020)) && (!(this._Str_12845))))
             {
@@ -467,7 +467,7 @@
 
         public function get systemShutDown():Boolean
         {
-            return this._Str_20046;
+            return this._systemShutDown;
         }
 
         public function get isRealNoob():Boolean
