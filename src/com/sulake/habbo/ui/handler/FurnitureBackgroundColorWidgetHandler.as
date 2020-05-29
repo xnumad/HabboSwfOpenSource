@@ -101,7 +101,7 @@
         {
             var k:Boolean = this._container.roomSession.isRoomController;
             var _local_2:* = (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST);
-            var _local_3:Boolean = this._container.sessionDataManager.isGodMode;
+            var _local_3:Boolean = this._container.sessionDataManager.isAnyRoomController;
             return ((k) || (_local_3)) || (_local_2);
         }
 

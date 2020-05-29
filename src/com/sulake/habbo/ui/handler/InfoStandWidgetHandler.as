@@ -770,7 +770,7 @@
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
+            _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6.canBeKicked = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
             _local_8.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
@@ -796,7 +796,7 @@
             }
             _local_5.amIOwner = this._container.roomSession.isRoomController;
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_5.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
+            _local_5.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             var _local_7:Array = new Array();
             _local_7.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
             _local_5.badges = _local_7;
@@ -845,7 +845,7 @@
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_6.amIAnyRoomController = this._container.sessionDataManager.isGodMode;
+            _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
             {
@@ -1077,7 +1077,7 @@
             _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             _local_3.isRoomController = this._container.roomSession.isRoomController;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
-            _local_3.isGodMode = this._container.sessionDataManager.isGodMode;
+            _local_3.isGodMode = this._container.sessionDataManager.isAnyRoomController;
             _local_3.ownerId = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_OWNER_ID);
             _local_3.ownerName = _local_5.getString(RoomObjectVariableEnum.FURNITURE_OWNER_NAME);
             _local_3.usagePolicy = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_USAGE_POLICY);
@@ -1268,7 +1268,7 @@
                 }
                 else
                 {
-                    if ((((_local_12.isRoomController) || (this._container.sessionDataManager.isGodMode)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
+                    if ((((_local_12.isRoomController) || (this._container.sessionDataManager.isAnyRoomController)) || (_local_12.roomControllerLevel >= RoomControllerLevel.GUEST)))
                     {
                         _local_11._Str_5114 = true;
                     }

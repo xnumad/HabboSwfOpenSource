@@ -199,7 +199,7 @@
 
         public function get isGodMode():Boolean
         {
-            return this._sessionDataManager.isGodMode;
+            return this._sessionDataManager.isAnyRoomController;
         }
 
         public function get localizationManager():IHabboLocalizationManager

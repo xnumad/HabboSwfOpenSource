@@ -148,7 +148,7 @@
                 _local_3++;
             }
             _local_2.sort(this._Str_16552);
-            this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT, _local_2, this._container.sessionDataManager.isGodMode));
+            this._container.events.dispatchEvent(new _Str_4178(_Str_4178.RWCCE_FURNI_CHOOSER_CONTENT, _local_2, this._container.sessionDataManager.isAnyRoomController));
         }
 
         private function _Str_16552(k:_Str_3405, _arg_2:_Str_3405):int

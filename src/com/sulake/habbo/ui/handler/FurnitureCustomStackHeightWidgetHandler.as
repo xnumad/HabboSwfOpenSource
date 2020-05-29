@@ -118,7 +118,7 @@
         {
             var _local_2:Boolean = this._container.roomSession.isRoomController;
             var _local_3:* = (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST);
-            var _local_4:Boolean = this._container.sessionDataManager.isGodMode;
+            var _local_4:Boolean = this._container.sessionDataManager.isAnyRoomController;
             var _local_5:Boolean = ((k) && (this._container.isOwnerOfFurniture(k)));
             return (((_local_2) || (_local_4)) || (_local_3)) || (_local_5);
         }

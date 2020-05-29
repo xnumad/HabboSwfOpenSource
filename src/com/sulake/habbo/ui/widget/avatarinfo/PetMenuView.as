@@ -104,7 +104,7 @@
             }
             var _local_4:IRoomSession = this.widget.handler.roomSession;
             var _local_5:ISessionDataManager = this.widget.handler.container.sessionDataManager;
-            if ((((_local_4.isRoomController) || (_local_5.isGodMode)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
+            if ((((_local_4.isRoomController) || (_local_5.isAnyRoomController)) || (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST)))
             {
                 showButton("pick_up");
             }

@@ -84,7 +84,7 @@
                             _local_7 = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
                             _local_8 = this._container.sessionDataManager.getFloorItemData(_local_7);
                             _local_9 = ((_local_8 != null) ? _local_8.className : "");
-                            _local_10 = ((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isGodMode));
+                            _local_10 = ((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isAnyRoomController));
                             _local_11 = new _Str_3072(_Str_3072.RWEBDUE_PACKAGEINFO, _local_2.id, _local_6, _local_9, _local_10);
                             this._container.events.dispatchEvent(_local_11);
                         }

@@ -80,7 +80,7 @@
                         _local_3 = _local_2.getModel();
                         if (_local_3 != null)
                         {
-                            _local_7 = (((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isGodMode)) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST));
+                            _local_7 = (((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isAnyRoomController)) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST));
                             if (_local_7)
                             {
                                 _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_5.id, _local_5.category, _local_5.roomId);

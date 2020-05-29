@@ -83,7 +83,7 @@
                             {
                                 _local_8 = _local_7;
                             }
-                            _local_10 = ((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isGodMode));
+                            _local_10 = ((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isAnyRoomController));
                             _local_11 = new _Str_4863(_Str_4863.RWSDUE_STICKIE_DATA, _local_2.id, _local_3.getType(), _local_9, _local_8, _local_10);
                             this._container.events.dispatchEvent(_local_11);
                         }
