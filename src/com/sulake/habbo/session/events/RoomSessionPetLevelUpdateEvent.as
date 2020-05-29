@@ -16,7 +16,7 @@
             this._level = _arg_3;
         }
 
-        public function get _Str_2508():int
+        public function get petId():int
         {
             return this._petId;
         }

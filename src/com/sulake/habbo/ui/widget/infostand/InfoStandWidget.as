@@ -383,7 +383,7 @@
 
         private function petFigureUpdateHandler(updateEvent:RoomWidgetPetFigureUpdateEvent):void
         {
-            this._petView._Str_4497(updateEvent._Str_2508, updateEvent.image);
+            this._petView._Str_4497(updateEvent.petId, updateEvent.image);
         }
 
         private function petCommandsUpdateHandler(updateEvent:RoomWidgetPetCommandsUpdateEvent):void

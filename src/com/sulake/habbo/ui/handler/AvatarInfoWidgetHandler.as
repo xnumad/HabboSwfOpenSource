@@ -209,10 +209,10 @@
                 _local_3 = k.canHarvest;
                 _local_4 = k.canRevive;
                 _local_5 = k.hasBreedingPermission;
-                _local_6 = this._Str_19958(k._Str_2508);
+                _local_6 = this._Str_19958(k.petId);
                 if (_local_6 == null)
                 {
-                    Logger.log((("Could not find pet with the id: " + k._Str_2508) + " given by petStatusUpdate"));
+                    Logger.log((("Could not find pet with the id: " + k.petId) + " given by petStatusUpdate"));
                     return;
                 }
                 _local_7 = new _Str_4828(_local_6._Str_2713, _local_2, _local_3, _local_4, _local_5);
@@ -228,7 +228,7 @@
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
                 _local_2 = k.level;
-                _local_3 = this._Str_19958(k._Str_2508);
+                _local_3 = this._Str_19958(k.petId);
                 _local_4 = new _Str_4818(_local_3._Str_2713, _local_2);
                 this._container.events.dispatchEvent(_local_4);
             }
@@ -301,7 +301,7 @@
                     useProductMessage = (message as RoomWidgetUseProductMessage);
                     if (useProductMessage)
                     {
-                        this._container.roomSession._Str_21525(useProductMessage._Str_2713, useProductMessage._Str_2508);
+                        this._container.roomSession._Str_21525(useProductMessage._Str_2713, useProductMessage.petId);
                     }
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_HARVEST_PET:
@@ -397,7 +397,7 @@
         {
             if (((!(this._container == null)) && (!(this._container.events == null))))
             {
-                this._widget._Str_24481(k._Str_2508, k.rarityCategory);
+                this._widget._Str_24481(k.petId, k.rarityCategory);
             }
         }
 

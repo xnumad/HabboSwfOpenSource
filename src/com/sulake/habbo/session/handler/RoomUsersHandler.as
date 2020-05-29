@@ -320,7 +320,7 @@
             }
             var _local_5:String = _local_3.figureData.figuredata;
             var _local_6:int = _local_3.roomIndex;
-            var _local_7:int = _local_3._Str_2508;
+            var _local_7:int = _local_3.petId;
             var _local_8:Boolean = _local_3.hasSaddle;
             var _local_9:Boolean = _local_3.isRiding;
             _local_4.userDataManager.updateFigure(_local_6, _local_5, "", _local_8, _local_9);
@@ -384,7 +384,7 @@
             {
                 return;
             }
-            listener.events.dispatchEvent(new RoomSessionNestBreedingSuccessEvent(_local_2, k.getParser()._Str_2508, k.getParser().rarityCategory));
+            listener.events.dispatchEvent(new RoomSessionNestBreedingSuccessEvent(_local_2, k.getParser().petId, k.getParser().rarityCategory));
         }
 
         private function onPetBreedingEvent(k:IMessageEvent):void
@@ -417,7 +417,7 @@
                 return;
             }
             var _local_5:int = _local_3.roomIndex;
-            var _local_6:int = _local_3._Str_2508;
+            var _local_6:int = _local_3.petId;
             var _local_7:Boolean = _local_3.canHarvest;
             var _local_8:Boolean = _local_3.canRevive;
             var _local_9:Boolean = _local_3.canBreed;
@@ -440,7 +440,7 @@
                 return;
             }
             var _local_5:int = _local_3.roomIndex;
-            var _local_6:int = _local_3._Str_2508;
+            var _local_6:int = _local_3.petId;
             var _local_7:int = _local_3.level;
             _local_4.userDataManager.updatePetLevel(_local_5, _local_7);
             listener.events.dispatchEvent(new RoomSessionPetLevelUpdateEvent(_local_4, _local_6, _local_7));

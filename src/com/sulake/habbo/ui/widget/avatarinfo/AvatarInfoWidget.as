@@ -600,7 +600,7 @@
                     {
                         if (((!(_local_3 == null)) && (!(this._petInfoData == null))))
                         {
-                            _local_22 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_3._Str_2508);
+                            _local_22 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_3.petId);
                             if (((!(_local_22 == null)) && (_local_22.id == this._petInfoData.id)))
                             {
                                 this.removeView(this._view, true);
@@ -609,7 +609,7 @@
                     }
                     if (_local_3 != null)
                     {
-                        this._Str_18983(_local_3._Str_2508);
+                        this._Str_18983(_local_3.petId);
                     }
                     break;
                 case _Str_4818.RWPLUE_PET_LEVEL_UPDATE:
@@ -618,7 +618,7 @@
                     {
                         if (((!(_local_4 == null)) && (!(this._petInfoData == null))))
                         {
-                            _local_23 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_4._Str_2508);
+                            _local_23 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_4.petId);
                             if (((!(_local_23 == null)) && (_local_23.id == this._petInfoData.id)))
                             {
                                 this.removeView(this._view, true);
@@ -627,7 +627,7 @@
                     }
                     if (_local_4 != null)
                     {
-                        this._Str_18983(_local_4._Str_2508);
+                        this._Str_18983(_local_4.petId);
                     }
                     break;
                 case _Str_4736.RWPBRE_PET_BREEDING_RESULT:

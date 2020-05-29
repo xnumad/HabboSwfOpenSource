@@ -387,26 +387,26 @@
                         case "respect":
                             this._data._Str_2985--;
                             this._Str_2771();
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, this.petId);
                             break;
                         case "treat":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TREAT_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TREAT_PET, this.petId);
                             break;
                         case "pass_handitem":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_GIVE_CARRY_ITEM_TO_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_GIVE_CARRY_ITEM_TO_PET, this.petId);
                             break;
                         case "train":
                             this.widget._Str_23877();
                             break;
                         case "pick_up":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_PICKUP_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_PICKUP_PET, this.petId);
                             this.widget._Str_25401();
                             break;
                         case "mount":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_MOUNT_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_MOUNT_PET, this.petId);
                             break;
                         case "toggle_riding_permission":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION, this.petId);
                             _local_5 = this._Str_18445("toggle_riding_permission");
                             if (_local_5 != null)
                             {
@@ -414,7 +414,7 @@
                             }
                             break;
                         case "toggle_breeding_permission":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION, this.petId);
                             _local_5 = this._Str_18445("toggle_breeding_permission");
                             if (_local_5 != null)
                             {
@@ -422,10 +422,10 @@
                             }
                             break;
                         case "dismount":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_DISMOUNT_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_DISMOUNT_PET, this.petId);
                             break;
                         case "saddle_off":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_SADDLE_OFF, this.petId);
                             break;
                         case "breed":
                             if (this._Str_1069 == _Str_2906)
@@ -439,22 +439,22 @@
                             {
                                 if (this._Str_1069 == _Str_10946)
                                 {
-                                    _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REQUEST_BREED_PET, this._Str_2508);
+                                    _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REQUEST_BREED_PET, this.petId);
                                 }
                             }
                             break;
                         case "harvest":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_HARVEST_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_HARVEST_PET, this.petId);
                             break;
                         case "revive":
                             _local_6 = this.openCatalogPage(this._Str_18260);
                             if (!_local_6)
                             {
                             }
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REVIVE_PET, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REVIVE_PET, this.petId);
                             break;
                         case "compost":
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_COMPOST_PLANT, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_COMPOST_PLANT, this.petId);
                             break;
                         case "buy_saddle":
                             this.openCatalogPage(this._Str_11220);
@@ -465,21 +465,21 @@
                 {
                     if (_arg_2.name == "profile_link")
                     {
-                        _local_4 = new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._Str_2508, "ownPetContextMenu");
+                        _local_4 = new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this.petId, "ownPetContextMenu");
                     }
                     else
                     {
                         if (_arg_2.name == "toggle_riding_permission_checkbox")
                         {
                             _local_3 = true;
-                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION, this._Str_2508);
+                            _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_RIDING_PERMISSION, this.petId);
                         }
                         else
                         {
                             if (_arg_2.name == "toggle_breeding_permission_checkbox")
                             {
                                 _local_3 = true;
-                                _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION, this._Str_2508);
+                                _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_TOGGLE_PET_BREEDING_PERMISSION, this.petId);
                             }
                         }
                     }
@@ -510,7 +510,7 @@
             this._Str_2771();
         }
 
-        public function get _Str_2508():int
+        public function get petId():int
         {
             return userId;
         }

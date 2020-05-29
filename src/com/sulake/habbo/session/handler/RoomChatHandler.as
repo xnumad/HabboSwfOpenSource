@@ -158,7 +158,7 @@
                     _local_5 = RoomSessionChatEvent.CHAT_TYPE_PET_SPEED_FERTILIZE;
                     break;
             }
-            var _local_6:RoomUserData = _local_3.userDataManager._Str_8631(_local_2._Str_2508);
+            var _local_6:RoomUserData = _local_3.userDataManager._Str_8631(_local_2.petId);
             if (_local_6 == null)
             {
                 return;
