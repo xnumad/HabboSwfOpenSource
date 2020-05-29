@@ -4,11 +4,11 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_3266;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9319 implements IMessageParser 
+    public class GuildMembershipsMessageParser implements IMessageParser
     {
         private var _guilds:Array;
 
-        public function _Str_9319()
+        public function GuildMembershipsMessageParser()
         {
             this._guilds = new Array();
             super();
