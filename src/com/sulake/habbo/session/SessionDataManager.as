@@ -117,7 +117,7 @@
         private var _topSecurityLevel:int = 0;
         private var _noobnessLevel:int = -1;
         private var _isAmbassador:Boolean;
-        private var _Str_20255:Boolean;
+        private var _isEmailVerified:Boolean;
         private var _roomCameraFollowDisabled:Boolean;
         private var _Str_3790:int;
         private var _accountSafetyLocked:Boolean = false;
@@ -421,7 +421,7 @@
         private function _Str_16302(k:EmailStatusResultEvent):void
         {
             var _local_2:EmailStatusParser = (k.getParser() as EmailStatusParser);
-            this._Str_20255 = _local_2.isVerified;
+            this._isEmailVerified = _local_2.isVerified;
         }
 
         private function _Str_23236(k:IMessageEvent):void
@@ -536,7 +536,7 @@
 
         public function get isEmailVerified():Boolean
         {
-            return this._Str_20255;
+            return this._isEmailVerified;
         }
 
         public function setRoomCameraFollowDisabled(k:Boolean):void
