@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6540 implements IMessageParser 
+    public class ChangeEmailResultParser implements IMessageParser
     {
-        public static const _Str_15588:int = 0;
+        public static const EMAIL_STATUS_OK:int = 0;
 
         private var _result:int;
 

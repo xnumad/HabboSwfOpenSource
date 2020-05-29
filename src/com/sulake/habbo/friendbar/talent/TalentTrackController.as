@@ -35,7 +35,7 @@
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.communication.messages.outgoing._Str_364._Str_6216;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10577;
-    import com.sulake.habbo.communication.messages.parser.users._Str_6540;
+    import com.sulake.habbo.communication.messages.parser.users.ChangeEmailResultParser;
     import com.sulake.core.window.components.ITextFieldWindow;
     import __AS3__.vec.*;
 
@@ -905,14 +905,14 @@
             {
                 return;
             }
-            var _local_3:Boolean = ((k) && (!(_arg_2 == _Str_6540._Str_15588)));
+            var _local_3:Boolean = ((k) && (!(_arg_2 == ChangeEmailResultParser.EMAIL_STATUS_OK)));
             var _local_4:IWindowContainer = this._Str_7795();
             var _local_5:IWindow = _local_4.findChildByName("error_txt");
             _local_5.visible = _local_3;
             _local_5.caption = ((("$" + "{welcome.gift.email.error.") + _arg_2) + "}");
             _local_4.findChildByName("error_border").visible = _local_3;
             _local_4.findChildByName("change_email_region").visible = (!(k));
-            _local_4.findChildByName("changed_container").visible = ((k) && (_arg_2 == _Str_6540._Str_15588));
+            _local_4.findChildByName("changed_container").visible = ((k) && (_arg_2 == ChangeEmailResultParser.EMAIL_STATUS_OK));
         }
 
         private function _Str_16767():ITextFieldWindow
