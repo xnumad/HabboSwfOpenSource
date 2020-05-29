@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
     import com.sulake.habbo.communication.messages.parser.handshake.IsFirstLoginOfDayParser;
-    import com.sulake.habbo.communication.messages.parser.users._Str_4007;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import flash.utils.Dictionary;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
 
@@ -245,7 +245,7 @@
 
         private function _Str_24584(k:_Str_3492):void
         {
-            if (((k.getParser().isVIP) && (k.getParser()._Str_9379 == _Str_4007._Str_12890)))
+            if (((k.getParser().isVIP) && (k.getParser().responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)))
             {
                 this._questEngine._Str_8189._Str_25159();
             }

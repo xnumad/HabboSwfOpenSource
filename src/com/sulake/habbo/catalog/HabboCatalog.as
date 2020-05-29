@@ -202,7 +202,7 @@
     import com.sulake.habbo.sound.HabboSoundTypesEnum;
     import com.sulake.habbo.catalog.purse.PurseEvent;
     import com.sulake.habbo.catalog.purse.PurseUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_4007;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import flash.external.ExternalInterface;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_7459;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerStatusMessageParser;
@@ -2070,15 +2070,15 @@
         private function _Str_11640(k:IMessageEvent):void
         {
             var _local_3:Boolean;
-            var _local_2:_Str_4007 = (k as _Str_3492).getParser();
-            this._purse.clubDays = Math.max(0, _local_2._Str_14465);
-            this._purse.clubPeriods = Math.max(0, _local_2._Str_17546);
+            var _local_2:ScrSendUserInfoMessageParser = (k as _Str_3492).getParser();
+            this._purse.clubDays = Math.max(0, _local_2.daysToPeriodEnd);
+            this._purse.clubPeriods = Math.max(0, _local_2.periodsSubscribedAhead);
             this._purse.isVIP = _local_2.isVIP;
             this._purse.pastClubDays = _local_2.pastClubDays;
             this._purse.pastVipDays = _local_2.pastVipDays;
-            this._purse._Str_14389 = ((_local_2._Str_9379 == _Str_4007._Str_14729) ? true : false);
+            this._purse._Str_14389 = ((_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE) ? true : false);
             this._purse.minutesUntilExpiration = _local_2.minutesUntilExpiration;
-            this._purse._Str_6312 = _local_2._Str_6312;
+            this._purse._Str_6312 = _local_2.minutesSinceLastModified;
             if (ExternalInterface.available)
             {
                 if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
@@ -2088,7 +2088,7 @@
                 }
             }
             this._Str_12017();
-            if (_local_2._Str_9379 == _Str_4007._Str_12890)
+            if (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_PURCHASE)
             {
                 this.reset();
                 if (this._Str_8001 != null)

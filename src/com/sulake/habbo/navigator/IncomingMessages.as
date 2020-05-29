@@ -70,7 +70,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.navigator.domain.Tabs;
-    import com.sulake.habbo.communication.messages.parser.users._Str_4007;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_7901;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5654;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_7002;
@@ -371,9 +371,9 @@
 
         private function _Str_11640(k:IMessageEvent):void
         {
-            var _local_2:_Str_4007 = _Str_3492(k).getParser();
-            Logger.log(((((((((("Got subscription info: " + _local_2.productName) + ", ") + _local_2._Str_14465) + ", ") + _local_2._Str_23950) + ", ") + _local_2._Str_17546) + ", ") + _local_2._Str_9379));
-            this.data._Str_20281 = (_local_2._Str_14465 > 0);
+            var _local_2:ScrSendUserInfoMessageParser = _Str_3492(k).getParser();
+            Logger.log(((((((((("Got subscription info: " + _local_2.productName) + ", ") + _local_2.daysToPeriodEnd) + ", ") + _local_2.memberPeriods) + ", ") + _local_2.periodsSubscribedAhead) + ", ") + _local_2.responseType));
+            this.data._Str_20281 = (_local_2.daysToPeriodEnd > 0);
         }
 
         private function _Str_22797(k:IMessageEvent):void

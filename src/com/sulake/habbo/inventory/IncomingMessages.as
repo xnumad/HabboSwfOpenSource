@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_7398;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_8175;
     import com.sulake.habbo.communication.messages.parser.inventory.avatareffect._Str_7054;
-    import com.sulake.habbo.communication.messages.parser.users._Str_4007;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.inventory.events.HabboInventoryHabboClubEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.badges._Str_6941;
     import com.sulake.habbo.inventory.badges.BadgesModel;
@@ -402,10 +402,10 @@
 
         public function _Str_23143(k:IMessageEvent):void
         {
-            var _local_2:_Str_4007 = (k as _Str_3492).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = (k as _Str_3492).getParser();
             if (((_local_2.productName == "habbo_club") || (_local_2.productName == "club_habbo")))
             {
-                this._inventory._Str_23808(_local_2._Str_17546, _local_2._Str_14465, _local_2._Str_24419, _local_2.isVIP, (_local_2._Str_9379 == _Str_4007._Str_14729), (_local_2._Str_9379 == _Str_4007._Str_15916), _local_2.minutesUntilExpiration, _local_2._Str_6312);
+                this._inventory._Str_23808(_local_2.periodsSubscribedAhead, _local_2.daysToPeriodEnd, _local_2.hasEverBeenMember, _local_2.isVIP, (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_DISCOUNT_AVAILABLE), (_local_2.responseType == ScrSendUserInfoMessageParser.RESPONSE_TYPE_CITIZENSHIP_DISCOUNT), _local_2.minutesUntilExpiration, _local_2.minutesSinceLastModified);
                 this._inventory.events.dispatchEvent(new HabboInventoryHabboClubEvent());
             }
         }

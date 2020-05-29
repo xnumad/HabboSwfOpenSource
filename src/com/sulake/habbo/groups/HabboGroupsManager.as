@@ -77,7 +77,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
     import com.sulake.habbo.window.utils._Str_2910;
-    import com.sulake.habbo.communication.messages.parser.users._Str_4007;
+    import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
@@ -509,7 +509,7 @@
 
         private function _Str_11640(k:IMessageEvent):void
         {
-            var _local_2:_Str_4007 = _Str_3492(k).getParser();
+            var _local_2:ScrSendUserInfoMessageParser = _Str_3492(k).getParser();
             this._hasVip = ((_local_2.isVIP) && (_local_2.minutesUntilExpiration > 0));
             this._guildManagementWindowCtrl._Str_23040();
         }
