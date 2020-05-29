@@ -2,8 +2,8 @@
 {
     public class ChatTypeEnum 
     {
-        public static const _Str_16471:int = 0;
-        public static const _Str_16837:int = 1;
-        public static const _Str_17535:int = 2;
+        public static const SPEAK:int = 0;
+        public static const WHISPER:int = 1;
+        public static const SHOUT:int = 2;
     }
 }

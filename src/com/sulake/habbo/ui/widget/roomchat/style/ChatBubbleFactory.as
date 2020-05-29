@@ -51,15 +51,15 @@
             var _local_3:ChatBubbleStyle = this._Str_12308(k);
             switch (_arg_2)
             {
-                case ChatTypeEnum._Str_16471:
+                case ChatTypeEnum.SPEAK:
                     return IRegionWindow(_local_3._Str_14292.clone());
-                case ChatTypeEnum._Str_17535:
+                case ChatTypeEnum.SHOUT:
                     if (_local_3.shoutLayout != null)
                     {
                         return IRegionWindow(_local_3.shoutLayout.clone());
                     }
                     return IRegionWindow(_local_3._Str_14292.clone());
-                case ChatTypeEnum._Str_16837:
+                case ChatTypeEnum.WHISPER:
                     if (_local_3.whisperLayout != null)
                     {
                         return IRegionWindow(_local_3.whisperLayout.clone());
