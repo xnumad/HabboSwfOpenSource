@@ -285,7 +285,7 @@
         private var _questEngine:IHabboQuestEngine;
         private var _videoOfferManager:VideoOfferManager;
         private var _initialized:Boolean = false;
-        private var _Str_7186:Boolean = false;
+        private var _productDataReady:Boolean = false;
         private var _catalogViewer:CatalogViewer;
         private var _Str_5309:Dictionary;
         private var _purse:Purse;
@@ -691,7 +691,7 @@
 
         private function init():Boolean
         {
-            if (((!(this._initialized)) && (this._Str_7186)))
+            if (((!(this._initialized)) && (this._productDataReady)))
             {
                 this._Str_7718();
                 this._Str_25270();
@@ -2336,7 +2336,7 @@
 
         public function productDataReady():void
         {
-            this._Str_7186 = true;
+            this._productDataReady = true;
             events.dispatchEvent(new CatalogEvent(CatalogEvent.CATALOG_INITIALIZED));
         }
 

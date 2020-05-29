@@ -109,7 +109,7 @@
         private var _habboGroupInfoManager:HabboGroupInfoManager;
         private var _ignoredUsersManager:IgnoredUsersManager;
         private var _localizationManager:IHabboLocalizationManager;
-        private var _Str_7186:Boolean = false;
+        private var _productDataReady:Boolean = false;
         private var _Str_8233:Array;
         private var _Str_6042:Array;
         private var _clubLevel:int;
@@ -720,7 +720,7 @@
 
         public function getProductData(k:String):IProductData
         {
-            if (!this._Str_7186)
+            if (!this._productDataReady)
             {
                 this.loadProductData();
             }
@@ -904,7 +904,7 @@
 
         public function loadProductData(k:IProductDataListener=null):Boolean
         {
-            if (this._Str_7186)
+            if (this._productDataReady)
             {
                 return true;
             }
@@ -917,7 +917,7 @@
 
         public function addProductsReadyEventListener(k:IProductDataListener):void
         {
-            if (this._Str_7186)
+            if (this._productDataReady)
             {
                 k.productDataReady();
                 return;
@@ -932,7 +932,7 @@
         {
             var _local_2:IProductDataListener;
             this._productParser.removeEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
-            this._Str_7186 = true;
+            this._productDataReady = true;
             for each (_local_2 in this._Str_8233)
             {
                 if (((!(_local_2 == null)) && (!(_local_2.disposed))))
