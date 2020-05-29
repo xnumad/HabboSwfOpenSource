@@ -6,7 +6,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.ui.widget.events._Str_3584;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetClothingChangeUpdateEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -47,8 +47,8 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
-            k.addEventListener(_Str_3584.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
+            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
+            k.addEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
             super.registerUpdateEvents(k);
         }
 
@@ -58,21 +58,21 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
-            k.removeEventListener(_Str_3584.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
+            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, this._Str_5183);
+            k.removeEventListener(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_CLOTHING_EDITOR, this._Str_5183);
         }
 
-        private function _Str_5183(k:_Str_3584):void
+        private function _Str_5183(k:RoomWidgetClothingChangeUpdateEvent):void
         {
             switch (k.type)
             {
-                case _Str_3584.RWCCUE_SHOW_GENDER_SELECTION:
+                case RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION:
                     this._Str_22639(k);
                     return;
             }
         }
 
-        private function _Str_22639(k:_Str_3584):void
+        private function _Str_22639(k:RoomWidgetClothingChangeUpdateEvent):void
         {
             this._Str_9023();
             this._Str_2319 = k._Str_1577;

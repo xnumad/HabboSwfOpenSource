@@ -10,7 +10,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetAvatarEditorMessage;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.object.IRoomObjectModel;
-    import com.sulake.habbo.ui.widget.events._Str_3584;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetClothingChangeUpdateEvent;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.avatar.figuredata.FigureData;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
@@ -69,7 +69,7 @@
             var _local_9:String;
             var _local_2:IRoomObject;
             var _local_3:IRoomObjectModel;
-            var _local_4:_Str_3584;
+            var _local_4:RoomWidgetClothingChangeUpdateEvent;
             switch (k.type)
             {
                 case RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_CLOTHING_CHANGE:
@@ -83,7 +83,7 @@
                             _local_7 = (((this._container.roomSession.isRoomController) || (this._container.sessionDataManager.isGodMode)) || (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST));
                             if (_local_7)
                             {
-                                _local_4 = new _Str_3584(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, _local_5.id, _local_5.category, _local_5.roomId);
+                                _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_5.id, _local_5.category, _local_5.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
                         }
@@ -116,7 +116,7 @@
                             if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_7195, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
                             {
                                 this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId._Str_7195, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
-                                _local_4 = new _Str_3584(_Str_3584.RWCCUE_SHOW_GENDER_SELECTION, _local_6._Str_1577, _local_6.objectCategory, _local_6.roomId);
+                                _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_6._Str_1577, _local_6.objectCategory, _local_6.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
                         }
