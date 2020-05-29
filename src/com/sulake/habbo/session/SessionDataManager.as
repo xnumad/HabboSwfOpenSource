@@ -49,7 +49,7 @@
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
     import com.sulake.habbo.communication.messages.parser.preferences.AccountPreferencesParser;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_6831;
+    import com.sulake.habbo.communication.messages.parser.users.EmailStatusParser;
     import com.sulake.habbo.communication.messages.parser.availability._Str_7162;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
@@ -420,8 +420,8 @@
 
         private function _Str_16302(k:_Str_5948):void
         {
-            var _local_2:_Str_6831 = (k.getParser() as _Str_6831);
-            this._Str_20255 = _local_2._Str_5738;
+            var _local_2:EmailStatusParser = (k.getParser() as EmailStatusParser);
+            this._Str_20255 = _local_2.isVerified;
         }
 
         private function _Str_23236(k:IMessageEvent):void

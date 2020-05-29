@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6831 implements IMessageParser 
+    public class EmailStatusParser implements IMessageParser
     {
         private var _email:String;
-        private var _Str_4340:Boolean;
-        private var _Str_10981:Boolean;
+        private var _isVerified:Boolean;
+        private var _allowChange:Boolean;
 
 
         public function flush():Boolean
@@ -18,8 +18,8 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._email = k.readString();
-            this._Str_4340 = k.readBoolean();
-            this._Str_10981 = k.readBoolean();
+            this._isVerified = k.readBoolean();
+            this._allowChange = k.readBoolean();
             return true;
         }
 
@@ -28,14 +28,14 @@
             return this._email;
         }
 
-        public function get _Str_5738():Boolean
+        public function get isVerified():Boolean
         {
-            return this._Str_4340;
+            return this._isVerified;
         }
 
-        public function get _Str_19540():Boolean
+        public function get allowChange():Boolean
         {
-            return this._Str_10981;
+            return this._allowChange;
         }
     }
 }

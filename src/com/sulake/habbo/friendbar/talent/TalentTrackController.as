@@ -118,8 +118,8 @@
             if (_local_2 != null)
             {
                 this._Str_16767().text = k.getParser().email;
-                _local_2.findChildByName("unverified_container").visible = (!(k.getParser()._Str_5738));
-                _local_2.findChildByName("verified_txt").visible = k.getParser()._Str_5738;
+                _local_2.findChildByName("unverified_container").visible = (!(k.getParser().isVerified));
+                _local_2.findChildByName("verified_txt").visible = k.getParser().isVerified;
             }
         }
 
