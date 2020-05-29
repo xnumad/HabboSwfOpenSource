@@ -503,7 +503,7 @@
                 _local_4 = true;
             }
             var _local_6:* = (k.roomControllerLevel >= RoomControllerLevel.GUEST);
-            if (((((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum._Str_18353) || ((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum._Str_18194) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.USABLE_PRODUCT) && (_local_6))))
+            if (((((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum.EVERYBODY) || ((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum.CONTROLLER) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.USABLE_PRODUCT) && (_local_6))))
             {
                 _local_5 = this._Str_2268.config.getBoolean("infostand.use.button.enabled");
             }
