@@ -75,7 +75,7 @@
             return this._realName;
         }
 
-        public function get _Str_26317():Boolean
+        public function get directMail():Boolean
         {
             return this._directMail;
         }
