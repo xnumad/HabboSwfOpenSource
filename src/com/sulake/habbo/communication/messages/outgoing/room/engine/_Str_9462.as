@@ -6,12 +6,12 @@
     public class _Str_9462 implements IMessageComposer 
     {
         private var _objectId:int;
-        private var _Str_3014:int;
+        private var _objectCategory:int;
 
         public function _Str_9462(k:int, _arg_2:int)
         {
             this._objectId = k;
-            this._Str_3014 = _arg_2;
+            this._objectCategory = _arg_2;
         }
 
         public function dispose():void
@@ -21,7 +21,7 @@
         public function getMessageArray():Array
         {
             var k:int;
-            switch (this._Str_3014)
+            switch (this._objectCategory)
             {
                 case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                     k = 2;

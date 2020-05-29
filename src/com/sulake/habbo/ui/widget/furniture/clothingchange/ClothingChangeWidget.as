@@ -27,7 +27,7 @@
 
         private var _Str_5344:IWindowContainer;
         private var _objectId:int = 0;
-        private var _Str_3014:int = 0;
+        private var _objectCategory:int = 0;
         private var _Str_2337:int = 0;
 
         public function ClothingChangeWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
@@ -76,7 +76,7 @@
         {
             this._Str_9023();
             this._objectId = k._Str_1577;
-            this._Str_3014 = k.objectCategory;
+            this._objectCategory = k.objectCategory;
             this._Str_2337 = k.roomId;
             var _local_2:IAsset = assets.getAssetByName("boygirl");
             var _local_3:XmlAsset = XmlAsset(_local_2);
@@ -146,7 +146,7 @@
 
         private function requestEditor(k:String):void
         {
-            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._objectId, this._Str_3014, this._Str_2337);
+            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._objectId, this._objectCategory, this._Str_2337);
             messageListener.processWidgetMessage(_local_2);
         }
     }
