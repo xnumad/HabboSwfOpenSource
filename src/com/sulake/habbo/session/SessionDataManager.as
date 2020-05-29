@@ -98,7 +98,7 @@
         private var _systemOpen:Boolean;
         private var _systemShutDown:Boolean;
         private var _isAuthenticHabbo:Boolean;
-        private var _Str_2804:Dictionary;
+        private var _products:Dictionary;
         private var _productParser:ProductDataParser;
         private var _Str_3789:Map;
         private var _Str_3347:Map;
@@ -155,7 +155,7 @@
 
         private function onConfigurationComplete(k:Event):void
         {
-            this._Str_2804 = new Dictionary();
+            this._products = new Dictionary();
             this._Str_3789 = new Map();
             this._Str_3347 = new Map();
             this._Str_5556 = new Map();
@@ -282,7 +282,7 @@
                 this._productParser = null;
             }
             var k:String = getProperty("productdata.load.url");
-            this._productParser = new ProductDataParser(k, this._Str_2804);
+            this._productParser = new ProductDataParser(k, this._products);
             this._productParser.addEventListener(ProductDataParser.PDP_PRODUCT_DATA_READY, this._Str_18413);
         }
 
@@ -724,7 +724,7 @@
             {
                 this.loadProductData();
             }
-            return this._Str_2804[k];
+            return this._products[k];
         }
 
         public function getFloorItemData(k:int):IFurnitureData
