@@ -4,7 +4,7 @@
     import com.sulake.habbo.toolbar.HabboToolbar;
     import flash.display.BitmapData;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.avatar._Str_5010;
+    import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
     import com.sulake.habbo.avatar.IAvatarImage;
     import flash.geom.Rectangle;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -22,13 +22,13 @@
         private var _lastUserImage:BitmapData;
         private var _lastHeadImage:BitmapData;
         private var _userObjectEvent:UserObjectEvent;
-        private var _userChangeMessageEvent:_Str_5010;
+        private var _userChangeMessageEvent:FigureUpdateEvent;
 
         public function MeMenuIconLoader(k:HabboToolbar)
         {
             this._toolbar = k;
             this._userObjectEvent = new UserObjectEvent(this.onUserObject);
-            this._userChangeMessageEvent = new _Str_5010(this.onFigureUpdate);
+            this._userChangeMessageEvent = new FigureUpdateEvent(this.onFigureUpdate);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
             this._Str_5693();
@@ -111,7 +111,7 @@
             this._Str_5693(k.getParser().figure);
         }
 
-        private function onFigureUpdate(k:_Str_5010):void
+        private function onFigureUpdate(k:FigureUpdateEvent):void
         {
             if (this.disposed)
             {

@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6876;
 
-    public class _Str_5010 extends MessageEvent implements IMessageEvent 
+    public class FigureUpdateEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_5010(k:Function)
+        public function FigureUpdateEvent(k:Function)
         {
             super(k, _Str_6876);
         }

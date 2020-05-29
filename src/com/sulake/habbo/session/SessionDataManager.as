@@ -22,7 +22,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5264;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.avatar._Str_5010;
+    import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
@@ -171,7 +171,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5264(this._Str_12366));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_5010(this.onFigureUpdate));
+                this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
@@ -352,7 +352,7 @@
 
         private function onFigureUpdate(k:IMessageEvent):void
         {
-            var _local_2:_Str_5010 = (k as _Str_5010);
+            var _local_2:FigureUpdateEvent = (k as FigureUpdateEvent);
             if (_local_2 == null)
             {
                 return;

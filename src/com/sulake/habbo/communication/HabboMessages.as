@@ -118,7 +118,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_9826;
 	import snowwar.outgoing.*;
 	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
-	import com.sulake.habbo.communication.messages.incoming.avatar._Str_5010;
+	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
 	import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_10126;
@@ -1194,7 +1194,7 @@
             INCOMING_PACKETS[2392] = _Str_8236;
             INCOMING_PACKETS[2402] = HabboGroupBadgesMessageEvent;
             INCOMING_PACKETS[2405] = _Str_7706;
-            INCOMING_PACKETS[2429] = _Str_5010;
+            INCOMING_PACKETS[2429] = FigureUpdateEvent;
             INCOMING_PACKETS[2445] = GuildMembershipRejectedMessageEvent;
             INCOMING_PACKETS[2454] = _Str_7999;
             INCOMING_PACKETS[2468] = _Str_7365;
