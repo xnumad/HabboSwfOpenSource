@@ -32,7 +32,7 @@
         private var _Str_2271:IWindowContainer;
         private var _Str_4540:String;
         private var _Str_14637:String;
-        private var _Str_4340:Boolean;
+        private var _isVerified:Boolean;
         private var _Str_5694:Boolean;
         private var _Str_2502:int;
 
@@ -70,7 +70,7 @@
             this._Str_2271.center();
             this.setBitmap("image_bg", "yellow_highlight");
             this.setBitmap("gift_image", "giftbox_full");
-            if (this._Str_4340)
+            if (this._isVerified)
             {
                 this._Str_6469(this._Str_13122);
             }
@@ -153,7 +153,7 @@
             var _local_5:IWindow = this._Str_2271.findChildByName("open");
             if (_local_5)
             {
-                if (this._Str_4340)
+                if (this._isVerified)
                 {
                     _local_5.enable();
                 }
@@ -222,7 +222,7 @@
 
         private function _Str_23425(k:WindowMouseEvent):void
         {
-            this._Str_6469(((this._Str_4340) ? this._Str_13122 : this._Str_10705));
+            this._Str_6469(((this._isVerified) ? this._Str_13122 : this._Str_10705));
         }
 
         private function _Str_23235(k:WindowMouseEvent):void
@@ -287,7 +287,7 @@
             {
                 case _Str_5438.RWWGUE_WELCOME_GIFT_WIDGET_STATUS:
                     this._Str_4540 = k.email;
-                    this._Str_4340 = k._Str_5738;
+                    this._isVerified = k._Str_5738;
                     this._Str_5694 = k._Str_17916;
                     if (k._Str_10512)
                     {
@@ -308,7 +308,7 @@
             {
                 return;
             }
-            if (this._Str_4340)
+            if (this._isVerified)
             {
                 this._Str_6469(this._Str_13122);
             }

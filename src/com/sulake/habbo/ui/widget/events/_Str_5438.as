@@ -5,7 +5,7 @@
         public static const RWWGUE_WELCOME_GIFT_WIDGET_STATUS:String = "rwwgue_welcome_gift_widget_status";
 
         private var _email:String;
-        private var _Str_4340:Boolean;
+        private var _isVerified:Boolean;
         private var _Str_5694:Boolean;
         private var _furniId:int;
         private var _Str_10840:Boolean;
@@ -22,7 +22,7 @@
 
         public function get _Str_5738():Boolean
         {
-            return this._Str_4340;
+            return this._isVerified;
         }
 
         public function get _Str_17916():Boolean
@@ -47,7 +47,7 @@
 
         public function set _Str_5738(k:Boolean):void
         {
-            this._Str_4340 = k;
+            this._isVerified = k;
         }
 
         public function set _Str_17916(k:Boolean):void
