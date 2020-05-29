@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9168 implements IMessageParser 
+    public class GuildMembersMessageParser implements IMessageParser
     {
         private var _data:GuildMemberData;
 
