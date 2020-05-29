@@ -14,7 +14,7 @@
         function get events():IEventDispatcher;
         function get systemOpen():Boolean;
         function get systemShutDown():Boolean;
-        function get isRealNoob():Boolean;
+        function get isAuthenticHabbo():Boolean;
         function hasSecurity(_arg_1:int):Boolean;
         function get _Str_8500():int;
         function get clubLevel():int;

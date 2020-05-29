@@ -291,7 +291,7 @@
             var _local_2:IFurniDataListener;
             this._furnitureParser.removeEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             this._Str_20020 = true;
-            if (((this.isRealNoob) && (!(this._Str_12845))))
+            if (((this.isAuthenticHabbo) && (!(this._Str_12845))))
             {
                 this._Str_12845 = true;
                 for each (_local_2 in this._Str_6042)
@@ -434,8 +434,8 @@
             }
             this._systemOpen = _local_2.isOpen;
             this._systemShutDown = _local_2._Str_22557;
-            this._isAuthenticHabbo = _local_2.isRealNoob;
-            if ((((this.isRealNoob) && (this._Str_20020)) && (!(this._Str_12845))))
+            this._isAuthenticHabbo = _local_2.isAuthenticHabbo;
+            if ((((this.isAuthenticHabbo) && (this._Str_20020)) && (!(this._Str_12845))))
             {
                 this._Str_12845 = true;
                 for each (_local_3 in this._Str_6042)
@@ -470,7 +470,7 @@
             return this._systemShutDown;
         }
 
-        public function get isRealNoob():Boolean
+        public function get isAuthenticHabbo():Boolean
         {
             if (((((false) || (false)) || (false)) || (false)))
             {

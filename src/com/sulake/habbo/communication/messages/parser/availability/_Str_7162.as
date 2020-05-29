@@ -20,7 +20,7 @@
             return this._Str_18253;
         }
 
-        public function get isRealNoob():Boolean //actually isAuthenticHabbo
+        public function get isAuthenticHabbo():Boolean
         {
             return this._isAuthenticHabbo;
         }
