@@ -26,8 +26,8 @@
         private var _window:IWindowContainer;
         private var _effect:IWidgetAvatarEffect;
         private var _bar:IWindow;
-        private var _Str_3701:Number;
-        private var _Str_4996:ITextWindow;
+        private var _maxWidth:Number;
+        private var _timeLeftField:ITextWindow;
         private var _Str_2364:Timer;
         private var _Str_6963:IWindow;
 
@@ -56,7 +56,7 @@
             this._widget = null;
             this._effect = null;
             this._bar = null;
-            this._Str_4996 = null;
+            this._timeLeftField = null;
             this._Str_6963 = null;
             if (this._window != null)
             {
@@ -81,7 +81,7 @@
             if (this._effect.isActive)
             {
                 _local_2 = (this._effect._Str_3709 / Number(this._effect.duration));
-                this._bar.width = (_local_2 * this._Str_3701);
+                this._bar.width = (_local_2 * this._maxWidth);
             }
             else
             {
@@ -102,30 +102,30 @@
             var _local_7:String;
             var _local_8:String;
             var _local_9:String;
-            if (this._Str_4996 == null)
+            if (this._timeLeftField == null)
             {
-                this._Str_4996 = (this._window.findChildByName("time_left") as ITextWindow);
-                if (this._Str_4996 == null)
+                this._timeLeftField = (this._window.findChildByName("time_left") as ITextWindow);
+                if (this._timeLeftField == null)
                 {
                     return;
                 }
             }
             if (!this._effect.isActive)
             {
-                this._Str_4996.caption = "${widgets.memenu.effects.activate}";
+                this._timeLeftField.caption = "${widgets.memenu.effects.activate}";
                 return;
             }
             if (this._effect._Str_3709 > ((60 * 60) * 24))
             {
-                this._Str_4996.caption = "${widgets.memenu.effects.active.daysleft}";
-                k = this._Str_4996.text;
+                this._timeLeftField.caption = "${widgets.memenu.effects.active.daysleft}";
+                k = this._timeLeftField.text;
                 _local_2 = Math.floor((this._effect._Str_3709 / ((60 * 60) * 24)));
                 k = k.replace("%days_left%", _local_2);
             }
             else
             {
-                this._Str_4996.caption = "${widgets.memenu.effects.active.timeleft}";
-                k = this._Str_4996.text;
+                this._timeLeftField.caption = "${widgets.memenu.effects.active.timeleft}";
+                k = this._timeLeftField.text;
                 _local_3 = this._effect._Str_3709;
                 _local_4 = Math.floor((_local_3 / (60 * 60)));
                 _local_5 = (Math.floor((_local_3 / 60)) % 60);
@@ -142,7 +142,7 @@
                     k = k.replace("%time_left%", ((((_local_8 + _local_5) + ":") + _local_9) + _local_6));
                 }
             }
-            this._Str_4996.text = k;
+            this._timeLeftField.text = k;
         }
 
         public function update():void
@@ -161,7 +161,7 @@
             }
             this._bar = null;
             this._Str_6963 = null;
-            this._Str_4996 = null;
+            this._timeLeftField = null;
             var _local_2:String = "";
             if (this._effect._Str_3222)
             {
@@ -230,7 +230,7 @@
             this._bar = this._window.findChildByName("loader_bar");
             if (this._bar != null)
             {
-                this._Str_3701 = this._bar.width;
+                this._maxWidth = this._bar.width;
                 this._Str_2364.start();
                 this._Str_5183();
             }
