@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class UserBadgesMessageParser implements IMessageParser 
+    public class HabboUserBadgesMessageParser implements IMessageParser
     {
         private var _userId:int;
         private var _badges:Array;
