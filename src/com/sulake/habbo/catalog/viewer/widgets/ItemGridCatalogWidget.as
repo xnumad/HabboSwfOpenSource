@@ -385,7 +385,7 @@
             {
                 return;
             }
-            this._Str_18623 = k._Str_3916;
+            this._Str_18623 = k.guildId;
             this._selectedGuildColor1 = k.color1;
             this._selectedGuildColor2 = k.color2;
             this._Str_19595 = k.badgeCode;

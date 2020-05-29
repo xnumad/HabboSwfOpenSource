@@ -16,7 +16,7 @@
             return GuildMemberMgmtFailedMessageParser(_parser).reason;
         }
 
-        public function get _Str_3916():int
+        public function get guildId():int
         {
             return GuildMemberMgmtFailedMessageParser(_parser).guildId;
         }

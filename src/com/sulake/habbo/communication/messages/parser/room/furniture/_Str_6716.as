@@ -18,7 +18,7 @@
             return this._Str_2319;
         }
 
-        public function get _Str_3916():int
+        public function get guildId():int
         {
             return this._Str_2994;
         }

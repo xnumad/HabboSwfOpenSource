@@ -262,7 +262,7 @@
                 _local_3 = this.getRoomObject(_local_2._Str_1577);
                 if (_local_3 != null)
                 {
-                    this._widget._Str_24867(_local_3, _local_2._Str_3916, _local_2._Str_24570, _local_2._Str_25076, _local_2._Str_24832, _local_2._Str_24908);
+                    this._widget._Str_24867(_local_3, _local_2.guildId, _local_2._Str_24570, _local_2._Str_25076, _local_2._Str_24832, _local_2._Str_24908);
                 }
             }
         }

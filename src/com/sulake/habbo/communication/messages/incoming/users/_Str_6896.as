@@ -16,9 +16,9 @@
             return _Str_6619(_parser).data;
         }
 
-        public function get _Str_3916():int
+        public function get guildId():int
         {
-            return _Str_6619(_parser)._Str_3916;
+            return _Str_6619(_parser).guildId;
         }
     }
 }

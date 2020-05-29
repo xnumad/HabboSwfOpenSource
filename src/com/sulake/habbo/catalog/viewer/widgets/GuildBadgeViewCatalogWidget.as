@@ -47,7 +47,7 @@
             if (_local_2 != null)
             {
                 _local_2.badgeId = k.badgeCode;
-                _local_2.groupId = k._Str_3916;
+                _local_2.groupId = k.guildId;
             }
         }
     }

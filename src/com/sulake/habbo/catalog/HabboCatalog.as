@@ -2885,7 +2885,7 @@
         {
             if (this._guildMembershipsController)
             {
-                this._guildMembershipsController._Str_15960(k._Str_3916);
+                this._guildMembershipsController._Str_15960(k.guildId);
             }
         }
 

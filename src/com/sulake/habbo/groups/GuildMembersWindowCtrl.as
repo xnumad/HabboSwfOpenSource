@@ -109,7 +109,7 @@
         public function _Str_25762(k:IMessageEvent):void
         {
             var _local_2:_Str_6896 = _Str_6896(k);
-            if (((!(this._data == null)) && (this._data.groupId == _local_2._Str_3916)))
+            if (((!(this._data == null)) && (this._data.groupId == _local_2.guildId)))
             {
                 this._data.update(_local_2.data);
                 this.reload();
@@ -123,7 +123,7 @@
             var _local_4:String = ("group.membermgmt.fail." + _local_3);
             var _local_5:String = this._manager.localization.getLocalization(_local_4, _local_4);
             this._manager.windowManager.alert("${group.membermgmt.fail.title}", _local_5, 0, null);
-            if (((((!(this._data == null)) && (this._data.groupId == _local_2._Str_3916)) && (!(this._window == null))) && (this._window.visible)))
+            if (((((!(this._data == null)) && (this._data.groupId == _local_2.guildId)) && (!(this._window == null))) && (this._window.visible)))
             {
                 this._Str_5312(this._data.pageIndex);
             }
@@ -132,7 +132,7 @@
         public function _Str_25572(k:IMessageEvent):void
         {
             var _local_2:_Str_6584 = _Str_6584(k);
-            if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser()._Str_3916)))
+            if (((((this._window) && (this._window.visible)) && (!(this._data == null))) && (this._data.groupId == _local_2.getParser().guildId)))
             {
                 this._Str_5312(this._data.pageIndex);
             }
