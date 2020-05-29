@@ -61,7 +61,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.core.assets.BitmapDataAsset;
     import flash.display.BitmapData;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileData;
     import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5600;
@@ -323,7 +323,7 @@
 
         private function _Str_3702(k:IMessageEvent):void
         {
-            var _local_2:_Str_2974 = _Str_3921(k).data;
+            var _local_2:HabboGroupDetailsData = _Str_3921(k).data;
             this._detailsWindowCtrl._Str_3702(_local_2);
             this._extendedProfileWindowCtrl._Str_3702(_local_2);
             this._groupRoomInfoCtrl._Str_3702(_local_2);

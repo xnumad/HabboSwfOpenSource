@@ -21,7 +21,7 @@
     import com.sulake.habbo.session.events.RoomSessionConfirmPetBreedingResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_3921;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5269;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetUserActionMessage;
@@ -206,7 +206,7 @@
 
         private function _Str_3702(k:_Str_3921):void
         {
-            var _local_2:_Str_2974 = k.data;
+            var _local_2:HabboGroupDetailsData = k.data;
             if (this._widget.furniData.groupId == _local_2.groupId)
             {
                 this._widget._Str_21463._Str_5235 = _local_2.badgeCode;

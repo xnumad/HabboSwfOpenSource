@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
@@ -46,7 +46,7 @@
             return ((!(this._window == null)) && (this._window.visible)) && (k == this._groupId);
         }
 
-        public function _Str_3702(k:_Str_2974):void
+        public function _Str_3702(k:HabboGroupDetailsData):void
         {
             if (((((!(this._window == null)) && (this._window.visible)) && (k.groupId == this._groupId)) || (k._Str_8199)))
             {

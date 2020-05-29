@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import flash.geom.Point;
     import flash.geom.Rectangle;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.habbo.window.widgets._Str_2402;
@@ -144,7 +144,7 @@
 
         private function populate():void
         {
-            var _local_8:_Str_2974;
+            var _local_8:HabboGroupDetailsData;
             var _local_9:String;
             var _local_10:String;
             if (this._guestRoomData == null)

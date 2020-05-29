@@ -12,7 +12,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
     import com.sulake.habbo.communication.messages.parser.talent._Str_7210;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.session.talent.TalentEnum;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -137,7 +137,7 @@
 
         private function _Str_3702(k:_Str_3921):void
         {
-            var _local_2:_Str_2974 = k.data;
+            var _local_2:HabboGroupDetailsData = k.data;
             if (_local_2.groupId == this._expectedGroupID)
             {
                 this._expectedGroupID = -1;

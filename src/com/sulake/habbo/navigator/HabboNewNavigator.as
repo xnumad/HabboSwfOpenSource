@@ -48,7 +48,7 @@
     import com.sulake.habbo.communication.messages.parser.newnavigator._Str_6991;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SavedSearch;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorSavedSearchesParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11428;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_11429;
     import com.sulake.habbo.communication.messages.outgoing._Str_369._Str_9950;
@@ -278,7 +278,7 @@
             this._navigatorView._Str_11632(this._contextContainer._Str_8597);
         }
 
-        public function _Str_3702(k:_Str_2974):void
+        public function _Str_3702(k:HabboGroupDetailsData):void
         {
             if (this._groupDetails.hasKey(k.groupId))
             {
@@ -298,7 +298,7 @@
             return this._collapsedCategories;
         }
 
-        public function _Str_20693(k:int):_Str_2974
+        public function _Str_20693(k:int):HabboGroupDetailsData
         {
             return this._groupDetails.getValue(k);
         }

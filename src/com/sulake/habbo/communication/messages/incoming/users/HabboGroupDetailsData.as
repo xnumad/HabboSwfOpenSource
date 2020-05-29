@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2974 
+    public class HabboGroupDetailsData
     {
         public static const TYPE_REGULAR:int = 0;
         public static const TYPE_EXCLUSIVE:int = 1;
@@ -33,7 +33,7 @@
         private var _Str_22088:Boolean;
         private var _Str_21164:int;
 
-        public function _Str_2974(k:IMessageDataWrapper)
+        public function HabboGroupDetailsData(k:IMessageDataWrapper)
         {
             this._groupId = k.readInteger();
             this._Str_16148 = k.readBoolean();
@@ -153,17 +153,17 @@
 
         public function get _Str_19430():Boolean
         {
-            return (this._status == _Str_2974.STATUS_NOT_MEMBER) && ((this._type == TYPE_REGULAR) || (this._type == TYPE_LARGE_CLOSED));
+            return (this._status == HabboGroupDetailsData.STATUS_NOT_MEMBER) && ((this._type == TYPE_REGULAR) || (this._type == TYPE_LARGE_CLOSED));
         }
 
         public function get _Str_21531():Boolean
         {
-            return (this._status == _Str_2974.STATUS_NOT_MEMBER) && (this._type == _Str_2974.TYPE_EXCLUSIVE);
+            return (this._status == HabboGroupDetailsData.STATUS_NOT_MEMBER) && (this._type == HabboGroupDetailsData.TYPE_EXCLUSIVE);
         }
 
         public function get _Str_24358():Boolean
         {
-            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == _Str_2974.STATUS_MEMBER);
+            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == HabboGroupDetailsData.STATUS_MEMBER);
         }
     }
 }

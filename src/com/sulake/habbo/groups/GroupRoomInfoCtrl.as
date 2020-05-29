@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -22,7 +22,7 @@
         private var _manager:HabboGroupsManager;
         private var _window:IWindowContainer;
         private var _expanded:Boolean = true;
-        private var _group:_Str_2974;
+        private var _group:HabboGroupDetailsData;
         private var _expectedGroupId:int;
 
         public function GroupRoomInfoCtrl(k:HabboGroupsManager)
@@ -76,7 +76,7 @@
             }
         }
 
-        public function _Str_3702(k:_Str_2974):void
+        public function _Str_3702(k:HabboGroupDetailsData):void
         {
             if (!this._manager._Str_13386)
             {

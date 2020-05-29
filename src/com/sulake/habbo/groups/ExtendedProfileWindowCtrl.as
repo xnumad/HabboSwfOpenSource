@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.window.widgets._Str_2483;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.tracking.EventLogMessageComposer;
@@ -292,7 +292,7 @@
             }
         }
 
-        public function _Str_3702(k:_Str_2974):void
+        public function _Str_3702(k:HabboGroupDetailsData):void
         {
             var _local_2:IWindowContainer;
             if (this._selectedGroupId == k.groupId)

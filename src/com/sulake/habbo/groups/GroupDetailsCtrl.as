@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
+    import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.window.IWindow;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IWidgetWindow;
@@ -24,7 +24,7 @@
     {
         private var _manager:HabboGroupsManager;
         private var _window:IWindowContainer;
-        private var _selectedGroup:_Str_2974;
+        private var _selectedGroup:HabboGroupDetailsData;
 
         public function GroupDetailsCtrl(k:HabboGroupsManager, _arg_2:Boolean)
         {
@@ -74,7 +74,7 @@
             }
         }
 
-        public function _Str_3702(k:IWindowContainer, _arg_2:_Str_2974):void
+        public function _Str_3702(k:IWindowContainer, _arg_2:HabboGroupDetailsData):void
         {
             this._selectedGroup = _arg_2;
             this._Str_2755(k);
@@ -110,9 +110,9 @@
             this._window.findChildByName("join_button").enable();
             this._window.findChildByName("request_membership_button").visible = _arg_2._Str_21531;
             this._window.findChildByName("leave_button").visible = _arg_2._Str_24358;
-            this._window.findChildByName("membership_pending_txt").visible = (_arg_2.status == _Str_2974.STATUS_PENDING);
-            this._window.findChildByName("youaremember_txt").visible = ((!(this._selectedGroup._Str_6444)) && (_arg_2.status == _Str_2974.STATUS_MEMBER));
-            this._window.findChildByName("youaremember_icon").visible = ((!(this._selectedGroup._Str_6444)) && (_arg_2.status == _Str_2974.STATUS_MEMBER));
+            this._window.findChildByName("membership_pending_txt").visible = (_arg_2.status == HabboGroupDetailsData.STATUS_PENDING);
+            this._window.findChildByName("youaremember_txt").visible = ((!(this._selectedGroup._Str_6444)) && (_arg_2.status == HabboGroupDetailsData.STATUS_MEMBER));
+            this._window.findChildByName("youaremember_icon").visible = ((!(this._selectedGroup._Str_6444)) && (_arg_2.status == HabboGroupDetailsData.STATUS_MEMBER));
             var _local_8:IWindow = this._window.findChildByName("pending_members_region");
             _local_8.visible = (this._selectedGroup._Str_18324 > 0);
             if (this._selectedGroup._Str_18324 > 0)
@@ -128,7 +128,7 @@
             _local_10.y = ((_local_9.visible) ? (_local_9.y + 16) : _local_8.y);
             this._window.findChildByName("you_are_owner_region").visible = ((this._selectedGroup._Str_6444) && (this._selectedGroup.isOwner));
             this._window.findChildByName("you_are_admin_region").visible = (((this._selectedGroup._Str_6444) && (this._selectedGroup.isAdmin)) && (!(this._selectedGroup.isOwner)));
-            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == _Str_2974.STATUS_MEMBER) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup.isOwner)))));
+            this._window.findChildByName("you_are_member_region").visible = ((this._selectedGroup._Str_6444) && ((this._selectedGroup.status == HabboGroupDetailsData.STATUS_MEMBER) && (!((this._selectedGroup.isAdmin) || (this._selectedGroup.isOwner)))));
             this._Str_11257(0).visible = false;
             this._Str_11257(1).visible = false;
             this._Str_11257(2).visible = false;

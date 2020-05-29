@@ -11,7 +11,7 @@
             super(k, _Str_8926);
         }
 
-        public function get data():_Str_2974
+        public function get data():HabboGroupDetailsData
         {
             return _Str_8926(_parser).data;
         }
