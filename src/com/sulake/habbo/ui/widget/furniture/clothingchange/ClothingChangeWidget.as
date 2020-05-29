@@ -25,7 +25,7 @@
         private static const BOY:String = "Boy";
         private static const GIRL:String = "Girl";
 
-        private var _Str_5344:IWindowContainer;
+        private var _genderSelectionWindow:IWindowContainer;
         private var _objectId:int = 0;
         private var _objectCategory:int = 0;
         private var _Str_2337:int = 0;
@@ -84,21 +84,21 @@
             {
                 return;
             }
-            this._Str_5344 = (windowManager.createWindow("clothing change gender selection", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, (((WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET | WindowParam.WINDOW_PARAM_PARENT_WINDOW) | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(100, 100, 200, 200), null, 0) as IWindowContainer);
-            this._Str_5344.buildFromXML(XML(_local_3.content));
-            this._Str_5344.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
-            this._Str_5344.center();
-            var _local_4:IWindow = this._Str_5344.findChildByTag("close");
+            this._genderSelectionWindow = (windowManager.createWindow("clothing change gender selection", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.NULL, (((WindowParam.WINDOW_PARAM_MOUSE_DRAGGING_TARGET | WindowParam.WINDOW_PARAM_PARENT_WINDOW) | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN) | WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR), new Rectangle(100, 100, 200, 200), null, 0) as IWindowContainer);
+            this._genderSelectionWindow.buildFromXML(XML(_local_3.content));
+            this._genderSelectionWindow.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
+            this._genderSelectionWindow.center();
+            var _local_4:IWindow = this._genderSelectionWindow.findChildByTag("close");
             if (_local_4 != null)
             {
                 _local_4.procedure = this._Str_23303;
             }
-            _local_4 = this._Str_5344.findChildByName(BOY);
+            _local_4 = this._genderSelectionWindow.findChildByName(BOY);
             if (_local_4 != null)
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
             }
-            _local_4 = this._Str_5344.findChildByName(GIRL);
+            _local_4 = this._genderSelectionWindow.findChildByName(GIRL);
             if (_local_4 != null)
             {
                 _local_4.addEventListener(WindowMouseEvent.CLICK, this.onGenderSelectionMouseEvent);
@@ -107,10 +107,10 @@
 
         private function _Str_9023():void
         {
-            if (this._Str_5344 != null)
+            if (this._genderSelectionWindow != null)
             {
-                this._Str_5344.dispose();
-                this._Str_5344 = null;
+                this._genderSelectionWindow.dispose();
+                this._genderSelectionWindow = null;
             }
         }
 
