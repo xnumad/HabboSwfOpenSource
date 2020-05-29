@@ -94,7 +94,7 @@
         private var _respectLeft:int = 0;
         private var _petRespectLeft:int = 0;
         private var _nameChangeAllowed:Boolean = true;
-        private var _Str_25790:Array;
+        private var _rights:Array;
         private var _Str_20692:Boolean;
         private var _Str_20046:Boolean;
         private var _Str_8842:Boolean;
@@ -186,7 +186,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
                 this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
             }
-            this._Str_25790 = [];
+            this._rights = [];
             this._Str_7432 = new _Str_8883(this);
             this._habboGroupInfoManager = new HabboGroupInfoManager(this);
             this._ignoredUsersManager = new IgnoredUsersManager(this);
