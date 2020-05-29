@@ -15,7 +15,7 @@
         function get locked():Boolean;
         function get url():String;
         function get guildType():int;
-        function get _Str_17566():int;
+        function get guildRightsLevel():int;
         function get badgeCode():String;
         function get _Str_16539():int;
     }

@@ -121,7 +121,7 @@
             return this._guildType;
         }
 
-        public function get _Str_17566():int
+        public function get guildRightsLevel():int
         {
             return this._guildRightsLevel;
         }

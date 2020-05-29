@@ -102,7 +102,7 @@
             return 0;
         }
 
-        public function get _Str_17566():int
+        public function get guildRightsLevel():int
         {
             return 0;
         }

@@ -15,7 +15,7 @@
                 return;
             }
             this._guildType = k.guildType;
-            this._rightsLevel = k._Str_17566;
+            this._rightsLevel = k.guildRightsLevel;
         }
 
         public function get guildType():int
