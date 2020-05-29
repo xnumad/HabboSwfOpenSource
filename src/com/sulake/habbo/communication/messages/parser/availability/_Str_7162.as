@@ -7,7 +7,7 @@
     {
         private var _isOpen:Boolean;
         private var _Str_18253:Boolean;
-        private var _Str_8842:Boolean;
+        private var _isAuthenticHabbo:Boolean;
 
 
         public function get isOpen():Boolean
@@ -20,16 +20,16 @@
             return this._Str_18253;
         }
 
-        public function get isRealNoob():Boolean
+        public function get isRealNoob():Boolean //actually isAuthenticHabbo
         {
-            return this._Str_8842;
+            return this._isAuthenticHabbo;
         }
 
         public function flush():Boolean
         {
             this._isOpen = false;
             this._Str_18253 = false;
-            this._Str_8842 = false;
+            this._isAuthenticHabbo = false;
             return true;
         }
 
@@ -39,7 +39,7 @@
             this._Str_18253 = k.readBoolean();
             if (k.bytesAvailable)
             {
-                this._Str_8842 = k.readBoolean();
+                this._isAuthenticHabbo = k.readBoolean();
             }
             return true;
         }

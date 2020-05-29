@@ -97,7 +97,7 @@
         private var _rights:Array;
         private var _systemOpen:Boolean;
         private var _systemShutDown:Boolean;
-        private var _Str_8842:Boolean;
+        private var _isAuthenticHabbo:Boolean;
         private var _Str_2804:Dictionary;
         private var _productParser:ProductDataParser;
         private var _Str_3789:Map;
@@ -434,7 +434,7 @@
             }
             this._systemOpen = _local_2.isOpen;
             this._systemShutDown = _local_2._Str_22557;
-            this._Str_8842 = _local_2.isRealNoob;
+            this._isAuthenticHabbo = _local_2.isRealNoob;
             if ((((this.isRealNoob) && (this._Str_20020)) && (!(this._Str_12845))))
             {
                 this._Str_12845 = true;
@@ -476,7 +476,7 @@
             {
                 return true;
             }
-            return this._Str_8842;
+            return this._isAuthenticHabbo;
         }
 
         public function hasSecurity(k:int):Boolean
