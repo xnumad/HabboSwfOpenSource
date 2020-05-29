@@ -26,7 +26,7 @@
             return this._userId;
         }
 
-        public function get _Str_10295():int
+        public function get respectTotal():int
         {
             return this._respectTotal;
         }

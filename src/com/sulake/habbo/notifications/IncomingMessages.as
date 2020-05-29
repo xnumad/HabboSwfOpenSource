@@ -181,7 +181,7 @@
             var _local_2:RoomUserRespect = (k as RoomUserRespect);
             if (this._notifications.sessionDataManager.userId == _local_2.userId)
             {
-                this._notifications.localization.registerParameter("notifications.text.respect.2", "count", String(_local_2._Str_10295));
+                this._notifications.localization.registerParameter("notifications.text.respect.2", "count", String(_local_2.respectTotal));
                 _local_3 = this._notifications.localization.getLocalizationRaw("notifications.text.respect.1");
                 _local_4 = this._notifications.localization.getLocalizationRaw("notifications.text.respect.2");
                 if (_local_3)

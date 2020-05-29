@@ -16,9 +16,9 @@
             return (_parser as RespectNotificationMessageParser).userId;
         }
 
-        public function get _Str_10295():int
+        public function get respectTotal():int
         {
-            return (_parser as RespectNotificationMessageParser)._Str_10295;
+            return (_parser as RespectNotificationMessageParser).respectTotal;
         }
     }
 }
