@@ -100,7 +100,7 @@
         private var _isAuthenticHabbo:Boolean;
         private var _products:Dictionary;
         private var _productParser:ProductDataParser;
-        private var _Str_3789:Map;
+        private var _floorItems:Map;
         private var _Str_3347:Map;
         private var _Str_5556:Map;
         private var _furnitureParser:FurnitureDataParser;
@@ -156,7 +156,7 @@
         private function onConfigurationComplete(k:Event):void
         {
             this._products = new Dictionary();
-            this._Str_3789 = new Map();
+            this._floorItems = new Map();
             this._Str_3347 = new Map();
             this._Str_5556 = new Map();
             this.initFurnitureData();
@@ -206,10 +206,10 @@
                 this._Str_7432.dispose();
                 this._Str_7432 = null;
             }
-            if (this._Str_3789)
+            if (this._floorItems)
             {
-                this._Str_3789.dispose();
-                this._Str_3789 = null;
+                this._floorItems.dispose();
+                this._floorItems = null;
             }
             if (this._Str_5556)
             {
@@ -256,7 +256,7 @@
                 this._furnitureParser.dispose();
                 this._furnitureParser = null;
             }
-            this._furnitureParser = new FurnitureDataParser(this._Str_3789, this._Str_3347, this._Str_5556, this._localizationManager);
+            this._furnitureParser = new FurnitureDataParser(this._floorItems, this._Str_3347, this._Str_5556, this._localizationManager);
             this._furnitureParser.addEventListener(FurnitureDataParser.FDP_FURNITURE_DATA_READY, this._Str_17783);
             if (propertyExists("furnidata.load.url"))
             {
@@ -729,20 +729,20 @@
 
         public function getFloorItemData(k:int):IFurnitureData
         {
-            if (this._Str_3789 == null)
+            if (this._floorItems == null)
             {
                 return null;
             }
-            return this._Str_3789.getValue(k.toString());
+            return this._floorItems.getValue(k.toString());
         }
 
         public function getFloorItemsDataByCategory(k:int):Array
         {
             var _local_3:IFurnitureData;
             var _local_2:Array = [];
-            if (this._Str_3789 != null)
+            if (this._floorItems != null)
             {
-                for each (_local_3 in this._Str_3789)
+                for each (_local_3 in this._floorItems)
                 {
                     if (_local_3.category == k)
                     {
@@ -1009,7 +1009,7 @@
                 this._Str_8108.removeEventListener(TimerEvent.TIMER, this._Str_18167);
                 this._Str_8108 = null;
             }
-            this._Str_3789 = new Map();
+            this._floorItems = new Map();
             this._Str_3347 = new Map();
             this._Str_5556 = new Map();
             this.initFurnitureData();
@@ -1030,7 +1030,7 @@
 
         public function getFurniData(k:IFurniDataListener):Vector.<IFurnitureData>
         {
-            if (((this._Str_3789 == null) || (this._Str_3789.length == 0)))
+            if (((this._floorItems == null) || (this._floorItems.length == 0)))
             {
                 if (this._Str_6042.indexOf(k) == -1)
                 {
@@ -1038,7 +1038,7 @@
                 }
                 return null;
             }
-            return Vector.<IFurnitureData>(this._Str_3789.getValues().concat(this._Str_3347.getValues()));
+            return Vector.<IFurnitureData>(this._floorItems.getValues().concat(this._Str_3347.getValues()));
         }
 
         public function getXmlWindow(k:String):IWindow
