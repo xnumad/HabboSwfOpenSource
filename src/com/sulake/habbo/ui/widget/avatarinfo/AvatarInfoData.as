@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.avatarinfo
 {
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
 
     public class AvatarInfoData 
     {
@@ -194,7 +194,7 @@
             return this._isAmbassador;
         }
 
-        public function populate(k:RoomWidgetUpdateInfostandUserEvent):void
+        public function populate(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this._amIAnyRoomController = k.amIAnyRoomController;
             this._myRoomControllerLevel = k.roomControllerLevel;
@@ -207,7 +207,7 @@
             this._canTradeReason = k.canTradeReason;
             this._isIgnored = k.isIgnored;
             this._respectLeft = k.petRespectLeft;
-            this._isOwnUser = (k.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
+            this._isOwnUser = (k.type == RoomWidgetUserInfoUpdateEvent.OWN_USER);
             this._allowNameChange = k.allowNameChange;
             this._isGuildRoom = k.isGuildRoom;
             this._targetRoomControllerLevel = k.targetRoomControllerLevel;

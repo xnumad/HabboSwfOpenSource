@@ -9,7 +9,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.geom.Point;
     import com.sulake.core.window.events.WindowMouseEvent;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetGetBadgeDetailsMessage;
     import flash.geom.Rectangle;
     import com.sulake.core.window.components.ITextWindow;
@@ -176,7 +176,7 @@
             {
                 return;
             }
-            var _local_2:* = (this._widget.userData.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
+            var _local_2:* = (this._widget.userData.type == RoomWidgetUserInfoUpdateEvent.OWN_USER);
             var _local_3:RoomWidgetGetBadgeDetailsMessage = new RoomWidgetGetBadgeDetailsMessage(_local_2, this._widget.userData.groupId);
             this._widget.messageListener.processWidgetMessage(_local_3);
         }
@@ -512,7 +512,7 @@
             this._widget.messageListener.processWidgetMessage(new RoomWidgetRoomTagSearchMessage(_local_2.text));
         }
 
-        public function update(k:RoomWidgetUpdateInfostandUserEvent):void
+        public function update(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this._Str_10630();
             this._Str_21116();
@@ -558,10 +558,10 @@
             }
         }
 
-        protected function _Str_11602(k:RoomWidgetUpdateInfostandUserEvent):void
+        protected function _Str_11602(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this.name = k.name;
-            this._Str_12782(k.motto, (k.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER));
+            this._Str_12782(k.motto, (k.type == RoomWidgetUserInfoUpdateEvent.OWN_USER));
             this.activityPoints = k.activityPoints;
             this._Str_3249 = k._Str_3249;
             this.xp = k.xp;

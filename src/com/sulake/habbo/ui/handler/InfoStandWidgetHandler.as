@@ -56,7 +56,7 @@
     import com.sulake.habbo.ui.widget.events._Str_3735;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
     import com.sulake.habbo.friendlist.IFriend;
     import com.sulake.habbo.session.enum.RoomControllerLevel;
@@ -755,8 +755,8 @@
 
         private function _Str_22312(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
-            var _local_5:String = RoomWidgetUpdateInfostandUserEvent.BOT;
-            var _local_6:RoomWidgetUpdateInfostandUserEvent = new RoomWidgetUpdateInfostandUserEvent(_local_5);
+            var _local_5:String = RoomWidgetUserInfoUpdateEvent.BOT;
+            var _local_6:RoomWidgetUserInfoUpdateEvent = new RoomWidgetUserInfoUpdateEvent(_local_5);
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
             _local_6.id = _arg_4.id;
@@ -773,7 +773,7 @@
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6.canBeKicked = this._container.roomSession.isRoomController;
             var _local_8:Array = new Array();
-            _local_8.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
+            _local_8.push(RoomWidgetUserInfoUpdateEvent._Str_7492);
             _local_6.badges = _local_8;
             _local_6.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_6);
@@ -798,7 +798,7 @@
             _local_5.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_5.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             var _local_7:Array = new Array();
-            _local_7.push(RoomWidgetUpdateInfostandUserEvent._Str_7492);
+            _local_7.push(RoomWidgetUserInfoUpdateEvent._Str_7492);
             _local_5.badges = _local_7;
             _local_5.figure = _arg_4.figure;
             this._container.events.dispatchEvent(_local_5);
@@ -807,7 +807,7 @@
         private function _Str_22722(k:int, _arg_2:int, _arg_3:int, _arg_4:RoomUserData):void
         {
             var _local_5:String;
-            var _local_6:RoomWidgetUpdateInfostandUserEvent;
+            var _local_6:RoomWidgetUserInfoUpdateEvent;
             var _local_9:IFriend;
             var _local_10:Boolean;
             var _local_11:int;
@@ -816,12 +816,12 @@
             var _local_14:Number;
             var _local_15:Boolean;
             var _local_16:Boolean;
-            _local_5 = RoomWidgetUpdateInfostandUserEvent.OWN_USER;
+            _local_5 = RoomWidgetUserInfoUpdateEvent.OWN_USER;
             if (_arg_4.id != this._container.sessionDataManager.userId)
             {
-                _local_5 = RoomWidgetUpdateInfostandUserEvent.PEER;
+                _local_5 = RoomWidgetUserInfoUpdateEvent.PEER;
             }
-            _local_6 = new RoomWidgetUpdateInfostandUserEvent(_local_5);
+            _local_6 = new RoomWidgetUserInfoUpdateEvent(_local_5);
             _local_6._Str_4780 = this._container.roomSession._Str_4780;
             _local_6.name = _arg_4.name;
             _local_6.motto = _arg_4.custom;
@@ -837,7 +837,7 @@
             {
                 _local_6._Str_3249 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
             }
-            if (_local_5 == RoomWidgetUpdateInfostandUserEvent.OWN_USER)
+            if (_local_5 == RoomWidgetUserInfoUpdateEvent.OWN_USER)
             {
                 _local_6.realName = this._container.sessionDataManager.realName;
                 _local_6.allowNameChange = this._container.sessionDataManager.nameChangeAllowed;
@@ -847,7 +847,7 @@
             _local_6.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_6.amIAnyRoomController = this._container.sessionDataManager.isAnyRoomController;
             _local_6._Str_18096 = this._container.sessionDataManager.isAmbassador;
-            if (_local_5 == RoomWidgetUpdateInfostandUserEvent.PEER)
+            if (_local_5 == RoomWidgetUserInfoUpdateEvent.PEER)
             {
                 _local_6.canBeAskedForAFriend = this._container.friendList.canBeAskedForAFriend(_arg_4.id);
                 _local_9 = this._container.friendList.getFriend(_arg_4.id);
@@ -869,7 +869,7 @@
                     Logger.log(((((((("Set moderation levels to " + _local_6.name) + "Muted: ") + _local_6.canBeMuted) + ", Kicked: ") + _local_6.canBeKicked) + ", Banned: ") + _local_6.canBeBanned));
                 }
                 _local_6.isIgnored = this._container.sessionDataManager.isIgnored(_arg_4.name);
-                _local_6.petRespectLeft = this._container.sessionDataManager.petRespectLeft;
+                _local_6.petRespectLeft = this._container.sessionDataManager.respectLeft;
                 _local_10 = (!(this._container.sessionDataManager.systemShutDown));
                 _local_11 = this._container.roomSession._Str_3827;
                 if (!_local_10)
@@ -892,14 +892,14 @@
                             _local_6.canTrade = true;
                     }
                 }
-                _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_18400;
+                _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_18400;
                 if (!_local_10)
                 {
-                    _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_14161;
+                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_14161;
                 }
                 if (_local_11 != RoomTradingLevelEnum._Str_9173)
                 {
-                    _local_6.canTradeReason = RoomWidgetUpdateInfostandUserEvent._Str_13798;
+                    _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent._Str_13798;
                 }
                 _local_12 = this._container.sessionDataManager.userId;
                 _local_13 = this._container.sessionDataManager.getUserTags(_local_12);
@@ -917,9 +917,9 @@
             this._container.connection.send(new _Str_8049(_arg_4.id));
         }
 
-        private function _Str_23100(userInfo:RoomWidgetUpdateInfostandUserEvent):Boolean
+        private function _Str_23100(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUpdateInfostandUserEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
             {
                 switch (_arg_2._Str_7688)
                 {
@@ -932,9 +932,9 @@
             return this._Str_18027(userInfo, settingsFunction);
         }
 
-        private function _Str_22729(userInfo:RoomWidgetUpdateInfostandUserEvent):Boolean
+        private function _Str_22729(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUpdateInfostandUserEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
             {
                 switch (_arg_2._Str_6332)
                 {
@@ -949,9 +949,9 @@
             return this._Str_18027(userInfo, settingsFunction);
         }
 
-        private function _Str_23573(userInfo:RoomWidgetUpdateInfostandUserEvent):Boolean
+        private function _Str_23573(userInfo:RoomWidgetUserInfoUpdateEvent):Boolean
         {
-            var settingsFunction:Function = function (k:RoomWidgetUpdateInfostandUserEvent, _arg_2:_Str_2817):Boolean
+            var settingsFunction:Function = function (k:RoomWidgetUserInfoUpdateEvent, _arg_2:_Str_2817):Boolean
             {
                 switch (_arg_2._Str_7772)
                 {
@@ -964,7 +964,7 @@
             return this._Str_18027(userInfo, settingsFunction);
         }
 
-        private function _Str_18027(k:RoomWidgetUpdateInfostandUserEvent, _arg_2:Function):Boolean
+        private function _Str_18027(k:RoomWidgetUserInfoUpdateEvent, _arg_2:Function):Boolean
         {
             if (!this._container.roomSession._Str_7411)
             {
@@ -979,7 +979,7 @@
             return (_local_3) && (k.targetRoomControllerLevel < RoomControllerLevel.ROOM_OWNER);
         }
 
-        private function _Str_9213(k:RoomWidgetUpdateInfostandUserEvent):Boolean
+        private function _Str_9213(k:RoomWidgetUserInfoUpdateEvent):Boolean
         {
             if (k.isGuildRoom)
             {

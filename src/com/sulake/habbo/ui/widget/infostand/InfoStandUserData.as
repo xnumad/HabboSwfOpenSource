@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.infostand
 {
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
 
     public class InfoStandUserData 
     {
@@ -134,10 +134,10 @@
 
         public function _Str_18577():Boolean
         {
-            return this.type == RoomWidgetUpdateInfostandUserEvent.BOT;
+            return this.type == RoomWidgetUserInfoUpdateEvent.BOT;
         }
 
-        public function _Str_5479(k:RoomWidgetUpdateInfostandUserEvent):void
+        public function _Str_5479(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this.userId = k.id;
             this.userName = k.name;

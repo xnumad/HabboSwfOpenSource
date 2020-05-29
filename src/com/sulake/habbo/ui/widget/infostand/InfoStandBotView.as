@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.widgets._Str_2483;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.window.widgets._Str_2402;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
 
     public class InfoStandBotView 
     {
@@ -274,13 +274,13 @@
             }
         }
 
-        public function update(k:RoomWidgetUpdateInfostandUserEvent):void
+        public function update(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this._Str_10630();
             this._Str_11602(k);
         }
 
-        private function _Str_11602(k:RoomWidgetUpdateInfostandUserEvent):void
+        private function _Str_11602(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this.name = k.name;
             this._Str_12782(k.motto);

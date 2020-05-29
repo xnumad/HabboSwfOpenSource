@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.events
 {
-    public class RoomWidgetUpdateInfostandUserEvent extends RoomWidgetUpdateEvent 
+    public class RoomWidgetUserInfoUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const OWN_USER:String = "RWUIUE_OWN_USER";
         public static const BOT:String = "RWUIUE_BOT";
@@ -42,7 +42,7 @@
         private var _isFriend:Boolean = false;
         private var isAmbassador:Boolean = false;
 
-        public function RoomWidgetUpdateInfostandUserEvent(k:String, _arg_2:Boolean=false, _arg_3:Boolean=false)
+        public function RoomWidgetUserInfoUpdateEvent(k:String, _arg_2:Boolean=false, _arg_3:Boolean=false)
         {
             this._badges = [];
             super(k, _arg_2, _arg_3);

@@ -26,7 +26,7 @@
     import com.sulake.habbo.ui.widget.events._Str_5375;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_5393;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetFurniInfostandUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetPetInfostandUpdateEvent;
@@ -425,13 +425,13 @@
             k.addEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
             k.addEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this._Str_2557);
             k.addEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
-            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this._Str_2557);
-            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this._Str_2557);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this._Str_2557);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this._Str_2557);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_2557);
             k.addEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this._Str_2557);
-            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.BOT, this._Str_2557);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this._Str_2557);
             k.addEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this._Str_2557);
             k.addEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this._Str_2557);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this._Str_2557);
@@ -460,13 +460,13 @@
             k.removeEventListener(_Str_5375.RWRBSLUE_SKILL_LIST, this._Str_2557);
             k.removeEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this._Str_2557);
             k.removeEventListener(_Str_5393.RWAIE_AVATAR_INFO, this._Str_2557);
-            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this._Str_2557);
-            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this._Str_2557);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this._Str_2557);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this._Str_2557);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED, this._Str_2557);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, this._Str_2557);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_2557);
             k.removeEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this._Str_2557);
-            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.BOT, this._Str_2557);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this._Str_2557);
             k.removeEventListener(RoomWidgetPetInfostandUpdateEvent.PET_INFO, this._Str_2557);
             k.removeEventListener(_Str_7783.RWUDUE_USER_DATA_UPDATED, this._Str_2557);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this._Str_2557);
@@ -497,14 +497,14 @@
             var _local_10:int;
             var _local_11:_Str_4624;
             var _local_12:_Str_3962;
-            var _local_13:RoomWidgetUpdateInfostandUserEvent;
+            var _local_13:RoomWidgetUserInfoUpdateEvent;
             var _local_14:AvatarInfoData;
             var _local_15:RoomWidgetRentrableBotInfostandUpdateEvent;
             var _local_16:IRoomSession;
             var _local_17:RoomUserData;
             var _local_18:_Str_5375;
             var _local_19:RoomWidgetRequestBotForceOpenContextMenuEvent;
-            var _local_20:RoomWidgetUpdateInfostandUserEvent;
+            var _local_20:RoomWidgetUserInfoUpdateEvent;
             var _local_21:RoomWidgetRoomObjectUpdateEvent;
             var _local_22:RoomUserData;
             var _local_23:RoomUserData;
@@ -704,9 +704,9 @@
                             break;
                     }
                     break;
-                case RoomWidgetUpdateInfostandUserEvent.OWN_USER:
-                case RoomWidgetUpdateInfostandUserEvent.PEER:
-                    _local_13 = (k as RoomWidgetUpdateInfostandUserEvent);
+                case RoomWidgetUserInfoUpdateEvent.OWN_USER:
+                case RoomWidgetUserInfoUpdateEvent.PEER:
+                    _local_13 = (k as RoomWidgetUserInfoUpdateEvent);
                     this._userInfoData.populate(_local_13);
                     _local_14 = ((_local_13._Str_4780) ? null : this._userInfoData);
                     this._Str_12674(_local_13.id, _local_13.name, _local_13.userType, _local_13._Str_3313, this._userInfoData.allowNameChange, _local_14);
@@ -758,8 +758,8 @@
                         this.handler.container.roomEngine.selectAvatar(_local_24, _local_25._Str_2713);
                     }
                     break;
-                case RoomWidgetUpdateInfostandUserEvent.BOT:
-                    _local_20 = (k as RoomWidgetUpdateInfostandUserEvent);
+                case RoomWidgetUserInfoUpdateEvent.BOT:
+                    _local_20 = (k as RoomWidgetUserInfoUpdateEvent);
                     this._Str_12674(_local_20.id, _local_20.name, _local_20.userType, _local_20._Str_3313, false, null);
                     break;
                 case RoomWidgetPetInfostandUpdateEvent.PET_INFO:

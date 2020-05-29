@@ -13,7 +13,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChatMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_4831;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_6300;
     import flash.events.IEventDispatcher;
     import flash.events.TimerEvent;
@@ -104,7 +104,7 @@
             }
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_20658);
             k.addEventListener(_Str_4831.RWWCIDE_CHAT_INPUT_CONTENT, this._Str_20741);
-            k.addEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this.onUserInfo);
+            k.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.onUserInfo);
             k.addEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this.onFloodControl);
             super.registerUpdateEvents(k);
         }
@@ -117,7 +117,7 @@
             }
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this._Str_20658);
             k.removeEventListener(_Str_4831.RWWCIDE_CHAT_INPUT_CONTENT, this._Str_20741);
-            k.removeEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this.onUserInfo);
+            k.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.onUserInfo);
             k.removeEventListener(_Str_6300.RWFCE_FLOOD_CONTROL, this.onFloodControl);
         }
 
@@ -126,7 +126,7 @@
             this._selectedUserName = "";
         }
 
-        private function onUserInfo(k:RoomWidgetUpdateInfostandUserEvent):void
+        private function onUserInfo(k:RoomWidgetUserInfoUpdateEvent):void
         {
             this._selectedUserName = k.name;
         }

@@ -20,7 +20,7 @@
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetFurniInfostandUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRentrableBotInfostandUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUserTagsUpdateEvent;
@@ -231,9 +231,9 @@
             eventDispatcher.addEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this.objectDeselectedHandler);
             eventDispatcher.addEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this.objectRemovedHandler);
             eventDispatcher.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this.objectRemovedHandler);
-            eventDispatcher.addEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this.userInstandUpdateHandler);
-            eventDispatcher.addEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this.userInstandUpdateHandler);
-            eventDispatcher.addEventListener(RoomWidgetUpdateInfostandUserEvent.BOT, this.botInfostandUpdateHandler);
+            eventDispatcher.addEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this.userInstandUpdateHandler);
+            eventDispatcher.addEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.userInstandUpdateHandler);
+            eventDispatcher.addEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.botInfostandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.furniUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
             eventDispatcher.addEventListener(RoomWidgetUserTagsUpdateEvent.USER_TAGS, this.userTagsUpdatedHandler);
@@ -257,9 +257,9 @@
             eventDispatcher.removeEventListener(RoomWidgetRoomObjectUpdateEvent.OBJECT_DESELECTED, this.objectDeselectedHandler);
             eventDispatcher.removeEventListener(RoomWidgetRoomObjectUpdateEvent.USER_REMOVED, this.objectRemovedHandler);
             eventDispatcher.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this.objectRemovedHandler);
-            eventDispatcher.removeEventListener(RoomWidgetUpdateInfostandUserEvent.OWN_USER, this.userInstandUpdateHandler);
-            eventDispatcher.removeEventListener(RoomWidgetUpdateInfostandUserEvent.PEER, this.userInstandUpdateHandler);
-            eventDispatcher.removeEventListener(RoomWidgetUpdateInfostandUserEvent.BOT, this.botInfostandUpdateHandler);
+            eventDispatcher.removeEventListener(RoomWidgetUserInfoUpdateEvent.OWN_USER, this.userInstandUpdateHandler);
+            eventDispatcher.removeEventListener(RoomWidgetUserInfoUpdateEvent.PEER, this.userInstandUpdateHandler);
+            eventDispatcher.removeEventListener(RoomWidgetUserInfoUpdateEvent.BOT, this.botInfostandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetFurniInfostandUpdateEvent.FURNI, this.furniUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetRentrableBotInfostandUpdateEvent.RENTABLE_BOT, this.rentableBotInfostandUpdateHandler);
             eventDispatcher.removeEventListener(RoomWidgetUserTagsUpdateEvent.USER_TAGS, this.userTagsUpdatedHandler);
@@ -301,7 +301,7 @@
             messageListener.processWidgetMessage(new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_REQUEST_PET_UPDATE, this._petView._Str_23859()));
         }
 
-        private function userInstandUpdateHandler(updateEvent:RoomWidgetUpdateInfostandUserEvent):void
+        private function userInstandUpdateHandler(updateEvent:RoomWidgetUserInfoUpdateEvent):void
         {
             this.userData._Str_5479(updateEvent);
             this._userView.update(updateEvent);
@@ -312,7 +312,7 @@
             }
         }
 
-        private function botInfostandUpdateHandler(updateEvent:RoomWidgetUpdateInfostandUserEvent):void
+        private function botInfostandUpdateHandler(updateEvent:RoomWidgetUserInfoUpdateEvent):void
         {
             this.userData._Str_5479(updateEvent);
             this._botView.update(updateEvent);

@@ -4,7 +4,7 @@
     import com.sulake.habbo.ui.handler.AvatarInfoWidgetHandler;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.core.window.components.IItemListWindow;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateInfostandUserEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetUserInfoUpdateEvent;
     import com.sulake.core.window.components.IInteractiveWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
@@ -101,10 +101,10 @@
                 showButton("trade", ((this.citizenshipTalentTrackEnabled) || ((!(_local_6)) && (this._data.canTrade))));
                 switch (this._data.canTradeReason)
                 {
-                    case RoomWidgetUpdateInfostandUserEvent._Str_14161:
+                    case RoomWidgetUserInfoUpdateEvent._Str_14161:
                         _local_7 = "${infostand.button.trade.tooltip.shutdown}";
                         break;
-                    case RoomWidgetUpdateInfostandUserEvent._Str_13798:
+                    case RoomWidgetUserInfoUpdateEvent._Str_13798:
                         _local_7 = "${infostand.button.trade.tooltip.tradingroom}";
                         break;
                     default:
