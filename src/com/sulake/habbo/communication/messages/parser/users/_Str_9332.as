@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.users
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5600;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_9332 implements IMessageParser 
     {
-        private var _data:_Str_5600;
+        private var _data:GuildCreationData;
 
 
         public function flush():Boolean
@@ -17,11 +17,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._data = new _Str_5600(k);
+            this._data = new GuildCreationData(k);
             return true;
         }
 
-        public function get data():_Str_5600
+        public function get data():GuildCreationData
         {
             return this._data;
         }

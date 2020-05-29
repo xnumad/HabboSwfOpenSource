@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2792;
     import com.sulake.core.window.components.ITextWindow;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5600;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.core.window.components.ITabContextWindow;
     import com.sulake.core.window.components.ISelectableWindow;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5372;
@@ -351,7 +351,7 @@
             return this._manager.localization.getLocalization(k, k);
         }
 
-        public function _Str_16681(k:_Str_5600):void
+        public function _Str_16681(k:GuildCreationData):void
         {
             this._data = k;
             this._step = _Str_7036;

@@ -11,7 +11,7 @@
             super(k, _Str_9332);
         }
 
-        public function get data():_Str_5600
+        public function get data():GuildCreationData
         {
             return _Str_9332(_parser).data;
         }

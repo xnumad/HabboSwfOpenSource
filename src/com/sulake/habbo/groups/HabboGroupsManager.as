@@ -64,7 +64,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileData;
     import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_5600;
+    import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5372;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
     import com.sulake.habbo.window.utils._Str_2418;
@@ -374,7 +374,7 @@
 
         private function _Str_16681(k:IMessageEvent):void
         {
-            var _local_2:_Str_5600 = _Str_8194(k).data;
+            var _local_2:GuildCreationData = _Str_8194(k).data;
             this._guildManagementWindowCtrl._Str_16681(_local_2);
             this._Str_19848();
         }

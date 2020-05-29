@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5600 implements _Str_5716 
+    public class GuildCreationData implements _Str_5716
     {
         private var _costInCredits:int;
         private var _ownedRooms:Array;
         private var _badgeSettings:Array;
 
-        public function _Str_5600(k:IMessageDataWrapper)
+        public function GuildCreationData(k:IMessageDataWrapper)
         {
             var _local_2:int;
             var _local_3:int;
