@@ -181,7 +181,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this._Str_23478));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
-                this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this._Str_25667));
+                this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this._Str_25064));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
                 this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
@@ -310,7 +310,7 @@
             this._isAmbassador = _local_2.isAmbassador;
         }
 
-        private function _Str_25667(k:NoobnessLevelMessageEvent):void
+        private function onNoobnessLevelEvent(k:NoobnessLevelMessageEvent):void
         {
             this._noobnessLevel = k._Str_17519;
             if (this._noobnessLevel != NoobnessLevelEnum.OLD_IDENTITY)
