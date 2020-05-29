@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_4838;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9422 implements IMessageParser 
+    public class RelationshipStatusInfoMessageParser implements IMessageParser
     {
         private var _userId:int;
         private var _relationshipStatusMap:Map;
