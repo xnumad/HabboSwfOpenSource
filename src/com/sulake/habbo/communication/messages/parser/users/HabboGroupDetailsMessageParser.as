@@ -4,7 +4,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8926 implements IMessageParser 
+    public class HabboGroupDetailsMessageParser implements IMessageParser
     {
         private var _data:HabboGroupDetailsData;
 
