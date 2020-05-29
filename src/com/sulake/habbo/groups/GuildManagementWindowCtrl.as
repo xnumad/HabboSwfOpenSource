@@ -193,7 +193,7 @@
                     this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager._Str_3058._Str_17665);
                     if (this._data.exists)
                     {
-                        this._primaryColorCtrl._Str_6434(this._data._Str_7342);
+                        this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
                     }
                     else
                     {
@@ -385,7 +385,7 @@
             ITextWindow(this._window.findChildByName("desc_txt")).text = this._data.groupDesc;
             this._Str_20779();
             this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
-            this._primaryColorCtrl._Str_6434(this._data._Str_7342);
+            this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
             this._secondaryColorCtrl._Str_6434(this._data._Str_7590);
             this._settingsCtrl.refresh(this._data);
         }
@@ -412,7 +412,7 @@
             {
                 if (this._primaryColorCtrl.isInitialized)
                 {
-                    this._primaryColorCtrl._Str_6434(this._data._Str_7342);
+                    this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
                 }
                 if (this._secondaryColorCtrl.isInitialized)
                 {
@@ -599,7 +599,7 @@
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case _Str_7447:
-                    _local_4 = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
+                    _local_4 = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
                     _local_5 = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
                     this._manager.send(new _Str_11165(this._data.groupId, _local_4, _local_5));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
@@ -617,7 +617,7 @@
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
             var _local_3:_Str_2866 = this._Str_19886();
             var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data._Str_6089);
-            var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data._Str_7342);
+            var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
             var _local_6:int = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data._Str_7590);
             this._alertedBaseRoomId = 0;
             this._manager.send(new CreateGuildMessageComposer(k, _local_2, _local_3.roomId, _local_5, _local_6, _local_4));

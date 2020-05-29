@@ -9,7 +9,7 @@
         function get groupName():String;
         function get groupDesc():String;
         function get baseRoomId():int;
-        function get _Str_7342():int;
+        function get primaryColorId():int;
         function get _Str_7590():int;
         function get _Str_6089():Array;
         function get locked():Boolean;

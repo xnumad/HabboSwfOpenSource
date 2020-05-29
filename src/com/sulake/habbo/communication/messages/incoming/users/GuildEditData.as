@@ -91,7 +91,7 @@
             return this._baseRoomId;
         }
 
-        public function get _Str_7342():int
+        public function get primaryColorId():int
         {
             return this._primaryColorId;
         }

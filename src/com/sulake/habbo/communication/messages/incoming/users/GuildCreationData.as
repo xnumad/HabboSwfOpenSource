@@ -72,7 +72,7 @@
             return 0;
         }
 
-        public function get _Str_7342():int
+        public function get primaryColorId():int
         {
             return 0;
         }
