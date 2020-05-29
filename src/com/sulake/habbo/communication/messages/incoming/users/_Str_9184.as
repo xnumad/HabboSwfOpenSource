@@ -11,9 +11,9 @@
             super(k, IgnoredUsersMessageParser);
         }
 
-        public function get _Str_16804():Array
+        public function get ignoredUsers():Array
         {
-            return (_parser as IgnoredUsersMessageParser)._Str_16804;
+            return (_parser as IgnoredUsersMessageParser).ignoredUsers;
         }
     }
 }

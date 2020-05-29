@@ -30,7 +30,7 @@
             return true;
         }
 
-        public function get _Str_16804():Array
+        public function get ignoredUsers():Array
         {
             return this._ignoredUsers.slice();
         }

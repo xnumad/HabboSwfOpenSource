@@ -51,7 +51,7 @@
 
         private function _Str_24424(k:_Str_9184):void
         {
-            this._ignoredUsers = k._Str_16804;
+            this._ignoredUsers = k.ignoredUsers;
         }
 
         private function onIgnoreResult(k:_Str_5459):void
