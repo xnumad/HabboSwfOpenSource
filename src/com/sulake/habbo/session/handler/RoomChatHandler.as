@@ -18,7 +18,7 @@
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.ui.widget.enums.SystemChatStyleEnum;
     import com.sulake.habbo.communication.messages.parser.users.PetRespectNotificationParser;
-    import com.sulake.habbo.communication.messages.parser.users._Str_7513;
+    import com.sulake.habbo.communication.messages.parser.users.PetSupplementedNotificationParser;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8921;
     import com.sulake.habbo.communication.messages.parser.room.chat.FloodControlMessageParser;
 
@@ -134,7 +134,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7513 = k.getParser();
+            var _local_2:PetSupplementedNotificationParser = k.getParser();
             if (_local_2 == null)
             {
                 return;
