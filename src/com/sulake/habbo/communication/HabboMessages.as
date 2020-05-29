@@ -353,7 +353,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9184;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9204;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_9216;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_9507;
+	import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_16135;
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes._Str_17532;
@@ -1325,7 +1325,7 @@
             INCOMING_PACKETS[3431] = _Str_8183;
             INCOMING_PACKETS[3433] = RecyclerStatusEvent;
             INCOMING_PACKETS[3434] = _Str_7799;
-            INCOMING_PACKETS[3441] = _Str_9507;
+            INCOMING_PACKETS[3441] = PetSupplementedNotificationEvent;
             INCOMING_PACKETS[3463] = _Str_9074;
             INCOMING_PACKETS[3473] = _Str_12022;
             INCOMING_PACKETS[3475] = UserCreditsEvent;

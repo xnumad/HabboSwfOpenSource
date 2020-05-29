@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.PetSupplementedNotificationParser;
 
-    public class _Str_9507 extends MessageEvent implements IMessageEvent 
+    public class PetSupplementedNotificationEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_9507(k:Function)
+        public function PetSupplementedNotificationEvent(k:Function)
         {
             super(k, PetSupplementedNotificationParser);
         }
