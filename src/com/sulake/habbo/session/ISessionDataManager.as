@@ -19,7 +19,7 @@
         function get topSecurityLevel():int;
         function get clubLevel():int;
         function get isNoob():Boolean;
-        function get isAnyRoomController():Boolean;
+        function get isRealNoob():Boolean;
         function get userId():int;
         function get userName():String;
         function get realName():String;

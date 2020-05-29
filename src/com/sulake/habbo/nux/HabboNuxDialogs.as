@@ -182,7 +182,7 @@
         private function onRoomSessionEvent(k:RoomSessionEvent):void
         {
             var _local_2:uint;
-            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isAnyRoomController))))
+            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isRealNoob))))
             {
                 return;
             }
@@ -260,7 +260,7 @@
 
         private function _Str_21884(k:TimerEvent=null):void
         {
-            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isAnyRoomController))))
+            if (((!(getBoolean("nux.lobbies.enabled"))) || (!(this._Str_2318.isRealNoob))))
             {
                 return;
             }

@@ -499,7 +499,7 @@
             return !(this._noobnessLevel == NoobnessLevelEnum.OLD_IDENTITY);
         }
 
-        public function get isAnyRoomController():Boolean
+        public function get isRealNoob():Boolean
         {
             return this._noobnessLevel == NoobnessLevelEnum.REAL_NOOB;
         }
