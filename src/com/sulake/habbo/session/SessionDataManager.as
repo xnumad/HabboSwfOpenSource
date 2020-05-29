@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.parser.users.EmailStatusParser;
     import com.sulake.habbo.communication.messages.parser.availability.AvailabilityStatusMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
-    import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
+    import com.sulake.habbo.communication.messages.outgoing._Str_370.SetUIFlagsMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users.WhiperGroupComposer;
     import flash.display.BitmapData;
     import com.sulake.habbo.window.utils._Str_2418;
@@ -582,7 +582,7 @@
                 }
                 this._uiFlags = (this._uiFlags & (~(k)));
             }
-            this._communicationManager.connection.send(new _Str_9930(this._uiFlags));
+            this._communicationManager.connection.send(new SetUIFlagsMessageComposer(this._uiFlags));
         }
 
         public function getUserTags(k:int):Array

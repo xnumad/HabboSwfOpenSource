@@ -251,7 +251,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11698;
 	import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_11774;
 	import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_12096;
-	import com.sulake.habbo.communication.messages.outgoing._Str_370._Str_9930;
+	import com.sulake.habbo.communication.messages.outgoing._Str_370.SetUIFlagsMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_10642;
 	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11301;
 	import com.sulake.habbo.communication.messages.outgoing._Str_381._Str_11731;
@@ -1690,7 +1690,7 @@
             OUTGOING_PACKETS[2300] = _Str_7716;
             OUTGOING_PACKETS[0x0900] = _Str_11654;
             OUTGOING_PACKETS[2312] = _Str_5756;
-            OUTGOING_PACKETS[0x0909] = _Str_9930;
+            OUTGOING_PACKETS[0x0909] = SetUIFlagsMessageComposer;
             OUTGOING_PACKETS[232] = _Str_9983;
             OUTGOING_PACKETS[234] = _Str_10522;
             OUTGOING_PACKETS[2341] = _Str_11536;
