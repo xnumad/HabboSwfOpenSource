@@ -153,7 +153,7 @@
                 _local_5 = (_local_4.content as BitmapData);
                 _local_6.bitmap = new BitmapData(_local_6.width, _local_6.height, true, 0);
                 _local_6.bitmap.copyPixels(_local_5, _local_5.rect, new Point(0, 0));
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_6 = (this._window.findChildByTag("delete_button") as IBitmapWrapperWindow);
             if (((!(_local_6 == null)) && (this._Str_2278)))
@@ -162,7 +162,7 @@
                 _local_5 = (_local_4.content as BitmapData);
                 _local_6.bitmap = new BitmapData(_local_6.width, _local_6.height, true, 0);
                 _local_6.bitmap.copyPixels(_local_5, _local_5.rect, new Point(0, 0));
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             this._Str_22258(((this._Str_2278) && (this._Str_3796 == "post_it")));
         }
@@ -196,7 +196,7 @@
                     if (k)
                     {
                         _local_2.visible = true;
-                        _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                        _local_2.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
                     }
                     else
                     {
@@ -297,7 +297,7 @@
             _local_2.maxChars = _local_2.length;
         }
 
-        protected function _Str_3132(k:WindowMouseEvent):void
+        protected function onMouseEvent(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

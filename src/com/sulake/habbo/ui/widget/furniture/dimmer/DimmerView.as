@@ -176,17 +176,17 @@
             k = this._window.findChildByName("type_checkbox");
             if (k != null)
             {
-                k.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                k.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             k = this._window.findChildByName("apply_button");
             if (k != null)
             {
-                k.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                k.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             k = this._window.findChildByName("on_off_button");
             if (k != null)
             {
-                k.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                k.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             var _local_3:IBitmapWrapperWindow = (this._window.findChildByName("off_image") as IBitmapWrapperWindow);
             var _local_4:BitmapDataAsset = (this._widget.assets.getAssetByName("dimmer_info") as BitmapDataAsset);
@@ -201,7 +201,7 @@
             }
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             var _local_4:ICheckBoxWindow;
             var _local_2:IWindow = (k.target as IWindow);

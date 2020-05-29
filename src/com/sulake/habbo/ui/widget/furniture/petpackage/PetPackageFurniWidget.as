@@ -177,14 +177,14 @@
             _local_4 = this._window.findChildByName("pick_name");
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_4 = this._window.findChildByName("cancel");
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
-            this._window.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+            this._window.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             this._Str_18625();
         }
 
@@ -213,7 +213,7 @@
             this._Str_2718();
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

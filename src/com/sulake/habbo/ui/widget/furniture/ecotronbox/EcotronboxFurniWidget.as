@@ -186,7 +186,7 @@
             _local_4 = this._window.findChildByName("ecotronbox_card_btn_close");
             if (_local_4 != null)
             {
-                _local_4.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_4.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             this._Str_19806(true);
         }
@@ -204,7 +204,7 @@
                 if (((this._Str_2278) && (k)))
                 {
                     _local_2.visible = true;
-                    _local_2.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                    _local_2.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
                 }
                 else
                 {
@@ -243,7 +243,7 @@
             }
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = (k.target as IWindow);
             var _local_3:String = _local_2.name;

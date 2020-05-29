@@ -204,16 +204,16 @@
                 _local_8 = (this._window.findChildByName("activate_effect") as IButtonWindow);
                 if (_local_8 != null)
                 {
-                    _local_8.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                    _local_8.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
                 }
             }
             else
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
                 if (this._effect.isActive)
                 {
-                    _local_3.addEventListener(WindowMouseEvent.OVER, this._Str_3132);
-                    _local_3.addEventListener(WindowMouseEvent.OUT, this._Str_3132);
+                    _local_3.addEventListener(WindowMouseEvent.OVER, this.onMouseEvent);
+                    _local_3.addEventListener(WindowMouseEvent.OUT, this.onMouseEvent);
                 }
                 if (this._effect._Str_3222)
                 {
@@ -259,7 +259,7 @@
             }
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             switch (k.type)
             {

@@ -57,7 +57,7 @@
             _local_3 = this._window.findChildByName("close");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_4 = (this._window.findChildByName("title_bg") as IWindowContainer);
             if (_local_4 != null)
@@ -98,7 +98,7 @@
             }
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             this._Str_7493();
         }

@@ -120,24 +120,24 @@
             _local_3 = this._window.findChildByName("cancel");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_3 = this._window.findChildByName("exchange");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_3 = this._window.findChildByName("link");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_3 = this._window.findChildByTag("close");
             if (_local_3 != null)
             {
                 _local_3.procedure = this._Str_3046;
             }
-            this._window.addEventListener(WindowMouseEvent.CLICK, this._Str_3132);
+            this._window.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
         }
 
         private function _Str_2718():void
@@ -166,7 +166,7 @@
             }
         }
 
-        private function _Str_3132(k:WindowMouseEvent):void
+        private function onMouseEvent(k:WindowMouseEvent):void
         {
             var _local_4:String;
             var _local_2:IWindow = (k.target as IWindow);
