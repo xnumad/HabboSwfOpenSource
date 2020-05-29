@@ -5,7 +5,7 @@
 
     public class NoobnessLevelMessageParser implements IMessageParser 
     {
-        private var _Str_7106:int;
+        private var _noobnessLevel:int;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_7106 = k.readInteger();
+            this._noobnessLevel = k.readInteger();
             return true;
         }
 
         public function get _Str_17519():int
         {
-            return this._Str_7106;
+            return this._noobnessLevel;
         }
     }
 }

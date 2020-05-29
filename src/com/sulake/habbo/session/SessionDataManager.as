@@ -115,7 +115,7 @@
         private var _clubLevel:int;
         private var _securityLevel:int;
         private var _topSecurityLevel:int = 0;
-        private var _Str_7106:int = -1;
+        private var _noobnessLevel:int = -1;
         private var _isAmbassador:Boolean;
         private var _Str_20255:Boolean;
         private var _roomCameraFollowDisabled:Boolean;
@@ -312,8 +312,8 @@
 
         private function _Str_25667(k:NoobnessLevelMessageEvent):void
         {
-            this._Str_7106 = k._Str_17519;
-            if (this._Str_7106 != NoobnessLevelEnum.OLD_IDENTITY)
+            this._noobnessLevel = k._Str_17519;
+            if (this._noobnessLevel != NoobnessLevelEnum.OLD_IDENTITY)
             {
                 context.configuration.setProperty("new.identity", "1");
             }
@@ -496,12 +496,12 @@
 
         public function get nameChangeAllowed():Boolean
         {
-            return !(this._Str_7106 == NoobnessLevelEnum.OLD_IDENTITY);
+            return !(this._noobnessLevel == NoobnessLevelEnum.OLD_IDENTITY);
         }
 
         public function get isAnyRoomController():Boolean
         {
-            return this._Str_7106 == NoobnessLevelEnum.REAL_NOOB;
+            return this._noobnessLevel == NoobnessLevelEnum.REAL_NOOB;
         }
 
         public function get userId():int
