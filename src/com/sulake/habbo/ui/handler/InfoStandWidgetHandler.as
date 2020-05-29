@@ -416,7 +416,7 @@
                     this._container.inventory._Str_20389(_local_9._Str_2713, _local_9.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_OPEN_HOME_PAGE:
-                    this._container.sessionDataManager.ejectAllFurniture(_local_3.id, _local_3.name);
+                    this._container.sessionDataManager.openHabboHomePage(_local_3.id, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_PICKUP_PET:
                     this._container.roomSession._Str_13781(_local_2);

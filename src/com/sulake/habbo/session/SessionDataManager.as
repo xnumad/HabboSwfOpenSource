@@ -794,7 +794,7 @@
             return null;
         }
 
-        public function ejectAllFurniture(userId:int, userName:String):void
+        public function openHabboHomePage(userId:int, userName:String):void
         {
             var urlString:String;
             if (propertyExists("link.format.userpage"))
