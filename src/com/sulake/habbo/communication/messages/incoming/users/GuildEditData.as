@@ -14,8 +14,8 @@
         private var _secondaryColorId:int;
         private var _locked:Boolean;
         private var _url:String;
-        private var _Str_8166:int;
-        private var _Str_21056:int;
+        private var _guildType:int;
+        private var _guildRightsLevel:int;
         private var _badgeSettings:Array;
         private var _Str_2722:String;
         private var _Str_19172:int;
@@ -40,8 +40,8 @@
             this._baseRoomId = k.readInteger();
             this._primaryColorId = k.readInteger();
             this._secondaryColorId = k.readInteger();
-            this._Str_8166 = k.readInteger();
-            this._Str_21056 = k.readInteger();
+            this._guildType = k.readInteger();
+            this._guildRightsLevel = k.readInteger();
             this._locked = k.readBoolean();
             this._url = k.readString();
             this._badgeSettings = new Array();
@@ -118,12 +118,12 @@
 
         public function get _Str_4830():int
         {
-            return this._Str_8166;
+            return this._guildType;
         }
 
         public function get _Str_17566():int
         {
-            return this._Str_21056;
+            return this._guildRightsLevel;
         }
 
         public function get badgeCode():String
