@@ -360,7 +360,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_2:int = _Str_7294(k).reason;
-            if (_local_2 == _Str_8198._Str_7099)
+            if (_local_2 == _Str_8198.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(false);
             }
@@ -416,7 +416,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_2:int = _Str_7832(k).reason;
-            if (_local_2 == _Str_8165._Str_7099)
+            if (_local_2 == _Str_8165.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(true);
             }

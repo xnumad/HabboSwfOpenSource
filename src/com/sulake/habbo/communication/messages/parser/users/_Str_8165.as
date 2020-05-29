@@ -5,7 +5,7 @@
 
     public class _Str_8165 implements IMessageParser 
     {
-        public static const _Str_7099:int = 2;
+        public static const INSUFFICIENT_SUBSCRIPTION_LEVEL:int = 2;
 
         private var _reason:int;
 
