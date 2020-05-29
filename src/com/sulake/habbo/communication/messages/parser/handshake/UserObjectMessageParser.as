@@ -100,7 +100,7 @@
             return this._streamPublishingAllowed;
         }
 
-        public function get _Str_26222():String
+        public function get lastAccessDate():String
         {
             return this._lastAccessDate;
         }
