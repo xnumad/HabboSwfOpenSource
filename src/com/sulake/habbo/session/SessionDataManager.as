@@ -433,7 +433,7 @@
                 return;
             }
             this._systemOpen = _local_2.isOpen;
-            this._systemShutDown = _local_2._Str_22557;
+            this._systemShutDown = _local_2.onShutDown;
             this._isAuthenticHabbo = _local_2.isAuthenticHabbo;
             if ((((this.isAuthenticHabbo) && (this._Str_20020)) && (!(this._Str_12845))))
             {

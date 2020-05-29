@@ -15,7 +15,7 @@
             return this._isOpen;
         }
 
-        public function get _Str_22557():Boolean
+        public function get onShutDown():Boolean
         {
             return this._onShutDown;
         }
