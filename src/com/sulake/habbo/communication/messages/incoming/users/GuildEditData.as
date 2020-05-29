@@ -18,7 +18,7 @@
         private var _guildRightsLevel:int;
         private var _badgeSettings:Array;
         private var _badgeCode:String;
-        private var _Str_19172:int;
+        private var _membershipCount:int;
 
         public function GuildEditData(k:IMessageDataWrapper)
         {
@@ -53,7 +53,7 @@
                 _local_2++;
             }
             this._badgeCode = k.readString();
-            this._Str_19172 = k.readInteger();
+            this._membershipCount = k.readInteger();
         }
 
         public function get _Str_6848():Array
@@ -133,7 +133,7 @@
 
         public function get _Str_16539():int
         {
-            return this._Str_19172;
+            return this._membershipCount;
         }
     }
 }
