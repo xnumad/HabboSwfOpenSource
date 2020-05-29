@@ -1090,7 +1090,7 @@
                                 {
                                     this._catalog.windowManager.registerHintWindow(AVATAR, this._view.window);
                                     this._catalog.windowManager.showHint(AVATAR);
-                                    if (!this.handler.container.sessionDataManager.nameChangeAllowed)
+                                    if (!this.handler.container.sessionDataManager.isNoob)
                                     {
                                         this._Str_24286();
                                     }

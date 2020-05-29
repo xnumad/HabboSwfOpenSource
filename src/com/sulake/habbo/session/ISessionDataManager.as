@@ -18,7 +18,7 @@
         function hasSecurity(_arg_1:int):Boolean;
         function get topSecurityLevel():int;
         function get clubLevel():int;
-        function get nameChangeAllowed():Boolean;
+        function get isNoob():Boolean;
         function get isAnyRoomController():Boolean;
         function get userId():int;
         function get userName():String;

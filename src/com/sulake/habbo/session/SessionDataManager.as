@@ -494,7 +494,7 @@
             return this._clubLevel;
         }
 
-        public function get nameChangeAllowed():Boolean
+        public function get isNoob():Boolean
         {
             return !(this._noobnessLevel == NoobnessLevelEnum.OLD_IDENTITY);
         }
