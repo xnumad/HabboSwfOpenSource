@@ -4,14 +4,14 @@
     {
         public static const RWCFUE_CREDIT_FURNI_UPDATE:String = "RWCFUE_CREDIT_FURNI_UPDATE";
 
-        private var _Str_2319:int;
+        private var _objectId:int;
         private var _Str_12356:Number;
 		private var _furniType:String;
         public function _Str_4899(k:String, furniType:String, _arg_2:int, _arg_3:Number, _arg_4:Boolean=false, _arg_5:Boolean=false)
         {
             super(k, _arg_4, _arg_5);
             this._Str_12356 = _arg_3;
-            this._Str_2319 = _arg_2;
+            this._objectId = _arg_2;
 			this._furniType = furniType;
         }
 
@@ -22,7 +22,7 @@
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
 		public function get furniType():String

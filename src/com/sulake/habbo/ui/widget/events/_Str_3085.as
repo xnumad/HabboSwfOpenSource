@@ -8,7 +8,7 @@
         public static const RWOPPUE_OPEN_PET_PACKAGE_RESULT:String = "RWOPPUE_OPEN_PET_PACKAGE_RESULT";
         public static const RWOPPUE_OPEN_PET_PACKAGE_UPDATE_PET_IMAGE:String = "RWOPPUE_OPEN_PET_PACKAGE_UPDATE_PET_IMAGE";
 
-        private var _Str_2319:int = -1;
+        private var _objectId:int = -1;
         private var _typeId:int = -1;
         private var _image:BitmapData = null;
         private var _nameValidationStatus:int = 0;
@@ -17,7 +17,7 @@
         public function _Str_3085(k:String, _arg_2:int, _arg_3:BitmapData, _arg_4:int, _arg_5:String, _arg_6:int, _arg_7:Boolean=false, _arg_8:Boolean=false)
         {
             super(k, _arg_7, _arg_8);
-            this._Str_2319 = _arg_2;
+            this._objectId = _arg_2;
             this._image = _arg_3;
             this._nameValidationStatus = _arg_4;
             this._nameValidationInfo = _arg_5;
@@ -41,7 +41,7 @@
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
         public function get typeId():int

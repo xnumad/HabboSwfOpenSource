@@ -5,14 +5,14 @@
 
     public class _Str_8050 implements IMessageParser 
     {
-        private var _Str_2319:int = 0;
+        private var _objectId:int = 0;
         private var _nameValidationStatus:int = 0;
         private var _nameValidationInfo:String = null;
 
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
         public function get nameValidationStatus():int
@@ -27,7 +27,7 @@
 
         public function flush():Boolean
         {
-            this._Str_2319 = 0;
+            this._objectId = 0;
             this._nameValidationStatus = 0;
             this._nameValidationInfo = null;
             return true;
@@ -39,7 +39,7 @@
             {
                 return false;
             }
-            this._Str_2319 = k.readInteger();
+            this._objectId = k.readInteger();
             this._nameValidationStatus = k.readInteger();
             this._nameValidationInfo = k.readString();
             return true;

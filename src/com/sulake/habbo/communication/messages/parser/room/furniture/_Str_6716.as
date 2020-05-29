@@ -5,7 +5,7 @@
 
     public class _Str_6716 implements IMessageParser 
     {
-        private var _Str_2319:int;
+        private var _objectId:int;
         private var _guildId:int;
         private var _Str_18836:String;
         private var _Str_8815:int;
@@ -15,7 +15,7 @@
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
         public function get guildId():int
@@ -45,7 +45,7 @@
 
         public function flush():Boolean
         {
-            this._Str_2319 = -1;
+            this._objectId = -1;
             this._guildId = -1;
             this._Str_18836 = "";
             this._Str_8815 = -1;
@@ -60,7 +60,7 @@
             {
                 return false;
             }
-            this._Str_2319 = k.readInteger();
+            this._objectId = k.readInteger();
             this._guildId = k.readInteger();
             this._Str_18836 = k.readString();
             this._Str_8815 = k.readInteger();

@@ -6,13 +6,13 @@
 
     public class _Str_7736 implements IMessageParser 
     {
-        private var _Str_2319:int = -1;
+        private var _objectId:int = -1;
         private var _figureData:PetFigureData;
 
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
         public function get figureData():PetFigureData
@@ -22,7 +22,7 @@
 
         public function flush():Boolean
         {
-            this._Str_2319 = -1;
+            this._objectId = -1;
             this._figureData = null;
             return true;
         }
@@ -33,7 +33,7 @@
             {
                 return false;
             }
-            this._Str_2319 = k.readInteger();
+            this._objectId = k.readInteger();
             if (!k.bytesAvailable)
             {
                 return true;

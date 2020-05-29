@@ -26,7 +26,7 @@
         private static const GIRL:String = "Girl";
 
         private var _Str_5344:IWindowContainer;
-        private var _Str_2319:int = 0;
+        private var _objectId:int = 0;
         private var _Str_3014:int = 0;
         private var _Str_2337:int = 0;
 
@@ -75,7 +75,7 @@
         private function _Str_22639(k:RoomWidgetClothingChangeUpdateEvent):void
         {
             this._Str_9023();
-            this._Str_2319 = k._Str_1577;
+            this._objectId = k._Str_1577;
             this._Str_3014 = k.objectCategory;
             this._Str_2337 = k.roomId;
             var _local_2:IAsset = assets.getAssetByName("boygirl");
@@ -146,7 +146,7 @@
 
         private function requestEditor(k:String):void
         {
-            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._Str_2319, this._Str_3014, this._Str_2337);
+            var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._objectId, this._Str_3014, this._Str_2337);
             messageListener.processWidgetMessage(_local_2);
         }
     }

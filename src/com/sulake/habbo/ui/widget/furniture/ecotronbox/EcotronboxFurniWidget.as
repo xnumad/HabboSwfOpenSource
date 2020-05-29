@@ -30,7 +30,7 @@
         private static const _Str_4162:Number = 100;
 
         private var _window:IWindowContainer;
-        private var _Str_2319:int = -1;
+        private var _objectId:int = -1;
         private var _text:String;
         private var _Str_2278:Boolean;
         private var _Str_3608:Boolean = false;
@@ -84,7 +84,7 @@
             {
                 case _Str_3072.RWEBDUE_PACKAGEINFO:
                     this._Str_3608 = false;
-                    this._Str_2319 = k._Str_1577;
+                    this._objectId = k._Str_1577;
                     this._text = k.text;
                     this._Str_2278 = k.controller;
                     this._Str_6880 = k._Str_17878;
@@ -95,7 +95,7 @@
                     {
                         return;
                     }
-                    this._Str_2319 = k._Str_1577;
+                    this._objectId = k._Str_1577;
                     this._Str_3030();
                     this._Str_9278(k._Str_11625);
                     this._Str_23892(k.text);
@@ -106,7 +106,7 @@
 
         private function _Str_4159(k:RoomWidgetRoomObjectUpdateEvent):void
         {
-            if (k.id == this._Str_2319)
+            if (k.id == this._objectId)
             {
                 this._Str_2718();
             }
@@ -161,7 +161,7 @@
         {
             var _local_3:ITextWindow;
             var _local_4:IWindow;
-            if (this._Str_2319 < 0)
+            if (this._objectId < 0)
             {
                 return;
             }
@@ -222,7 +222,7 @@
             }
             if (!this._Str_3608)
             {
-                this._Str_2319 = -1;
+                this._objectId = -1;
             }
             this._text = "";
             this._Str_2278 = false;
@@ -231,14 +231,14 @@
         private function _Str_16426():void
         {
             var k:RoomWidgetEcotronBoxOpenMessage;
-            if ((((this._Str_3608) || (this._Str_2319 == -1)) || (!(this._Str_2278))))
+            if ((((this._Str_3608) || (this._objectId == -1)) || (!(this._Str_2278))))
             {
                 return;
             }
             this._Str_3608 = true;
             if (messageListener != null)
             {
-                k = new RoomWidgetEcotronBoxOpenMessage(RoomWidgetEcotronBoxOpenMessage.RWEBOM_OPEN_ECOTRONBOX, this._Str_2319);
+                k = new RoomWidgetEcotronBoxOpenMessage(RoomWidgetEcotronBoxOpenMessage.RWEBOM_OPEN_ECOTRONBOX, this._objectId);
                 messageListener.processWidgetMessage(k);
             }
         }

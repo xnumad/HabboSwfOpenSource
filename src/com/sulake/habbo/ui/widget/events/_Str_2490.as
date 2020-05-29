@@ -12,7 +12,7 @@
         public static const RWPDUE_CONTENTS_WALLPAPER:String = "RWPDUE_CONTENTS_WALLPAPER";
         public static const RWPDUE_CONTENTS_IMAGE:String = "RWPDUE_CONTENTS_IMAGE";
 
-        private var _Str_2319:int = -1;
+        private var _objectId:int = -1;
         private var _classId:int = 0;
         private var _itemType:String = "";
         private var _text:String;
@@ -27,7 +27,7 @@
         public function _Str_2490(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean=false, _arg_5:BitmapData=null, _arg_6:String=null, _arg_7:String=null, _arg_8:Boolean=false, _arg_9:Boolean=false)
         {
             super(k, _arg_8, _arg_9);
-            this._Str_2319 = _arg_2;
+            this._objectId = _arg_2;
             this._text = _arg_3;
             this._controller = _arg_4;
             this._Str_12168 = _arg_5;
@@ -37,7 +37,7 @@
 
         public function get _Str_1577():int
         {
-            return this._Str_2319;
+            return this._objectId;
         }
 
         public function get classId():int

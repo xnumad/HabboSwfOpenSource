@@ -20,7 +20,7 @@
 
         override public function dispose():void
         {
-            _Str_2319 = -1;
+            _objectId = -1;
             this._location = "";
             super.dispose();
         }
@@ -47,7 +47,7 @@
         private function _Str_22050(k:_Str_5436):void
         {
             _Str_2718(false);
-            _Str_2319 = k._Str_1577;
+            _objectId = k._Str_1577;
             this._location = k.location;
             _Str_3796 = k.objectType;
             _text = "";
@@ -59,13 +59,13 @@
         override protected function sendUpdate():void
         {
             var k:RoomWidgetSpamWallPostItFinishEditingMessage;
-            if (_Str_2319 != -1)
+            if (_objectId != -1)
             {
                 _Str_9532();
                 Logger.log("Spamwall Post-It Widget Send Update");
                 if (messageListener != null)
                 {
-                    k = new RoomWidgetSpamWallPostItFinishEditingMessage(RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA, _Str_2319, this._location, _text, _Str_3062);
+                    k = new RoomWidgetSpamWallPostItFinishEditingMessage(RoomWidgetSpamWallPostItFinishEditingMessage.RWSWPFEE_SEND_POSTIT_DATA, _objectId, this._location, _text, _Str_3062);
                     messageListener.processWidgetMessage(k);
                 }
                 _Str_2718(false);

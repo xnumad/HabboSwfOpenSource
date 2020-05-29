@@ -5,12 +5,12 @@
 
     public class _Str_9462 implements IMessageComposer 
     {
-        private var _Str_2319:int;
+        private var _objectId:int;
         private var _Str_3014:int;
 
         public function _Str_9462(k:int, _arg_2:int)
         {
-            this._Str_2319 = k;
+            this._objectId = k;
             this._Str_3014 = _arg_2;
         }
 
@@ -32,7 +32,7 @@
                 default:
                     return [];
             }
-            return [k, this._Str_2319];
+            return [k, this._objectId];
         }
     }
 }

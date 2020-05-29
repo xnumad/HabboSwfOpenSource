@@ -31,7 +31,7 @@
         private static const _Str_4162:Number = 100;
 
         private var _window:IWindowContainer;
-        protected var _Str_2319:int = -1;
+        protected var _objectId:int = -1;
         protected var _Str_3796:String;
         protected var _text:String;
         protected var _Str_3062:String;
@@ -85,7 +85,7 @@
         protected function onObjectUpdate(k:_Str_4863):void
         {
             this._Str_2718(false);
-            this._Str_2319 = k._Str_1577;
+            this._objectId = k._Str_1577;
             this._Str_3796 = k.objectType;
             this._text = k.text;
             this._Str_3062 = k._Str_10471;
@@ -100,7 +100,7 @@
             var _local_5:BitmapData;
             var _local_6:IBitmapWrapperWindow;
             var _local_7:String;
-            if (this._Str_2319 == -1)
+            if (this._objectId == -1)
             {
                 return;
             }
@@ -178,7 +178,7 @@
                 this._window.dispose();
                 this._window = null;
             }
-            this._Str_2319 = -1;
+            this._objectId = -1;
             this._text = null;
             this._Str_2278 = false;
         }
@@ -225,7 +225,7 @@
         protected function sendUpdate():void
         {
             var k:RoomWidgetStickieSendUpdateMessage;
-            if (this._Str_2319 == -1)
+            if (this._objectId == -1)
             {
                 return;
             }
@@ -235,7 +235,7 @@
             }
             if (messageListener != null)
             {
-                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._Str_2319, this._text, this._Str_3062);
+                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._Str_3062);
                 messageListener.processWidgetMessage(k);
             }
         }
@@ -243,7 +243,7 @@
         protected function sendSetColor(k:uint):void
         {
             var _local_3:RoomWidgetStickieSendUpdateMessage;
-            if (this._Str_2319 == -1)
+            if (this._objectId == -1)
             {
                 return;
             }
@@ -260,7 +260,7 @@
             this._Str_3062 = _local_2;
             if (messageListener != null)
             {
-                _local_3 = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._Str_2319, this._text, this._Str_3062);
+                _local_3 = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_UPDATE, this._objectId, this._text, this._Str_3062);
                 messageListener.processWidgetMessage(_local_3);
             }
             this._Str_3030();
@@ -269,13 +269,13 @@
         protected function sendDelete():void
         {
             var k:RoomWidgetStickieSendUpdateMessage;
-            if (this._Str_2319 == -1)
+            if (this._objectId == -1)
             {
                 return;
             }
             if (((!(messageListener == null)) && (this._Str_2278)))
             {
-                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE, this._Str_2319);
+                k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE, this._objectId);
                 messageListener.processWidgetMessage(k);
             }
         }

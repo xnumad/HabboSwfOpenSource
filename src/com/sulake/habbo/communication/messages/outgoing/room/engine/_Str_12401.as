@@ -4,12 +4,12 @@
 
     public class _Str_12401 implements IMessageComposer 
     {
-        private var _Str_2319:int;
+        private var _objectId:int;
         private var _Str_2487:int = 0;
 
         public function _Str_12401(k:int, _arg_2:int=0)
         {
-            this._Str_2319 = k;
+            this._objectId = k;
             this._Str_2487 = _arg_2;
         }
 
@@ -19,7 +19,7 @@
 
         public function getMessageArray():Array
         {
-            return [this._Str_2319, this._Str_2487];
+            return [this._objectId, this._Str_2487];
         }
     }
 }
