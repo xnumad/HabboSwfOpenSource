@@ -312,7 +312,7 @@
 
         private function onNoobnessLevelEvent(k:NoobnessLevelMessageEvent):void
         {
-            this._noobnessLevel = k._Str_17519;
+            this._noobnessLevel = k.noobnessLevel;
             if (this._noobnessLevel != NoobnessLevelEnum.OLD_IDENTITY)
             {
                 context.configuration.setProperty("new.identity", "1");

@@ -11,9 +11,9 @@
             super(k, NoobnessLevelMessageParser);
         }
 
-        public function get _Str_17519():int
+        public function get noobnessLevel():int
         {
-            return (this._parser as NoobnessLevelMessageParser)._Str_17519;
+            return (this._parser as NoobnessLevelMessageParser).noobnessLevel;
         }
     }
 }
