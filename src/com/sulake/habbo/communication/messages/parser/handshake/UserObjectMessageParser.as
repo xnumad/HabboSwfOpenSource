@@ -95,7 +95,7 @@
             return this._petRespectLeft;
         }
 
-        public function get _Str_26272():Boolean
+        public function get streamPublishingAllowed():Boolean
         {
             return this._streamPublishingAllowed;
         }
