@@ -91,8 +91,8 @@
             this._Str_4219("gift_content", true);
             var _local_6:String = this.getLocalization((("hccenter.status." + _local_5) + ".info"));
             _local_6 = _local_6.replace("%timeleft%", this._Str_21064(_arg_2.minutesUntilExpiration));
-            _local_6 = _local_6.replace("%joindate%", k._Str_25452);
-            _local_6 = _local_6.replace("%streakduration%", this._Str_22787(k._Str_25314));
+            _local_6 = _local_6.replace("%joindate%", k.firstSubscriptionDate);
+            _local_6 = _local_6.replace("%streakduration%", this._Str_22787(k.currentHcStreak));
             this._Str_3281("status_info", _local_6);
             var _local_7:IBitmapWrapperWindow = (this.container.findChildByName("hc_badge") as IBitmapWrapperWindow);
             if (((_local_7) && (_arg_4)))
@@ -101,16 +101,16 @@
             }
             if (this._controller._Str_21512())
             {
-                if (k._Str_20889 < 60)
+                if (k.timeUntilPayday < 60)
                 {
                     this._Str_3281("special_time_content", this.getLocalization("hccenter.special.time.soon"));
                 }
                 else
                 {
-                    this._Str_3281("special_time_content", this._Str_21064(k._Str_20889));
+                    this._Str_3281("special_time_content", this._Str_21064(k.timeUntilPayday));
                 }
                 this._Str_4219("special_time_content", true);
-                _local_9 = (k._Str_19650 + k._Str_14016);
+                _local_9 = (k.creditRewardForMonthlySpent + k.creditRewardForStreakBonus);
                 if (_local_9 > 0)
                 {
                     this._Str_4219("special_amount_icon", true);

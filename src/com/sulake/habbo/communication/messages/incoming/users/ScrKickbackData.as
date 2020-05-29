@@ -27,47 +27,47 @@
             this._timeUntilPayday = k.readInteger();
         }
 
-        public function get _Str_25314():int
+        public function get currentHcStreak():int
         {
             return this._currentHcStreak;
         }
 
-        public function get _Str_25452():String
+        public function get firstSubscriptionDate():String
         {
             return this._firstSubscriptionDate;
         }
 
-        public function get _Str_8404():Number
+        public function get kickbackPercentage():Number
         {
             return this._kickbackPercentage;
         }
 
-        public function get _Str_26025():int
+        public function get totalCreditsMissed():int
         {
             return this._totalCreditsMissed;
         }
 
-        public function get _Str_26262():int
+        public function get totalCreditsRewarded():int
         {
             return this._totalCreditsRewarded;
         }
 
-        public function get _Str_21847():int
+        public function get totalCreditsSpent():int
         {
             return this._totalCreditsSpent;
         }
 
-        public function get _Str_14016():int
+        public function get creditRewardForStreakBonus():int
         {
             return this._creditRewardForStreakBonus;
         }
 
-        public function get _Str_19650():int
+        public function get creditRewardForMonthlySpent():int
         {
             return this._creditRewardForMonthlySpent;
         }
 
-        public function get _Str_20889():int
+        public function get timeUntilPayday():int
         {
             return this._timeUntilPayday;
         }

@@ -33,23 +33,23 @@
             }
             this._window.procedure = this._Str_3055;
             this._Str_15735(_arg_4);
-            this._Str_3281("info_creditsspent", this.getLocalization("hccenter.breakdown.creditsspent").replace("%credits%", this._data._Str_21847));
-            var _local_5:int = int((this._data._Str_8404 * 100));
-            this._Str_3281("info_factor", this.getLocalization("hccenter.breakdown.paydayfactor").replace("%percent%", _local_5).replace("%multiplier%", this._data._Str_8404));
-            _local_5 = int((this._data._Str_8404 * 100));
+            this._Str_3281("info_creditsspent", this.getLocalization("hccenter.breakdown.creditsspent").replace("%credits%", this._data.totalCreditsSpent));
+            var _local_5:int = int((this._data.kickbackPercentage * 100));
+            this._Str_3281("info_factor", this.getLocalization("hccenter.breakdown.paydayfactor").replace("%percent%", _local_5).replace("%multiplier%", this._data.kickbackPercentage));
+            _local_5 = int((this._data.kickbackPercentage * 100));
             var _local_6:String = this._controller.localization.getLocalization("hccenter.breakdown.paydayfactor.percent");
             if (((_local_6) && (_local_6.length > 0)))
             {
-                _local_6 = _local_6.replace("%percent%", _local_5).replace("%multiplier%", this._data._Str_8404);
+                _local_6 = _local_6.replace("%percent%", _local_5).replace("%multiplier%", this._data.kickbackPercentage);
             }
             else
             {
-                _local_6 = this.getLocalization("hccenter.breakdown.paydayfactor").replace("%percent%", this._data._Str_8404);
+                _local_6 = this.getLocalization("hccenter.breakdown.paydayfactor").replace("%percent%", this._data.kickbackPercentage);
             }
             this._Str_3281("info_factor", _local_6);
-            this._Str_3281("info_streakbonus", this.getLocalization("hccenter.breakdown.streakbonus").replace("%credits%", this._data._Str_14016));
-            var _local_7:Number = (int((((this._data._Str_8404 * this._data._Str_21847) + this._data._Str_14016) * 100)) / 100);
-            var _local_8:int = (int(((this._data._Str_19650 + this._data._Str_14016) * 100)) / 100);
+            this._Str_3281("info_streakbonus", this.getLocalization("hccenter.breakdown.streakbonus").replace("%credits%", this._data.creditRewardForStreakBonus));
+            var _local_7:Number = (int((((this._data.kickbackPercentage * this._data.totalCreditsSpent) + this._data.creditRewardForStreakBonus) * 100)) / 100);
+            var _local_8:int = (int(((this._data.creditRewardForMonthlySpent + this._data.creditRewardForStreakBonus) * 100)) / 100);
             this._Str_3281("info_total", this.getLocalization("hccenter.breakdown.total").replace("%credits%", _local_8).replace("%actual%", _local_7));
             this._window.activate();
             this._activateTimer = new Timer(80, 1);
