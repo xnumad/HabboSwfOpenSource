@@ -120,7 +120,7 @@
                         switch (_local_4.type)
                         {
                             case RoomObjectTypeEnum.PET:
-                                _local_11 = this._component.roomEngine.getRoomObject(k.roomId, _local_4._Str_2713, RoomObjectCategoryEnum.CONST_100);
+                                _local_11 = this._component.roomEngine.getRoomObject(k.roomId, _local_4._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                                 _local_12 = null;
                                 if (_local_11 != null)
                                 {
@@ -256,7 +256,7 @@
                         switch (_local_3.type)
                         {
                             case RoomObjectTypeEnum.PET:
-                                _local_11 = this._component.roomEngine.getRoomObject(k.roomId, _local_3._Str_2713, RoomObjectCategoryEnum.CONST_100);
+                                _local_11 = this._component.roomEngine.getRoomObject(k.roomId, _local_3._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                                 _local_12 = null;
                                 if (_local_11 != null)
                                 {

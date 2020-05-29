@@ -69,7 +69,7 @@
         {
             var _local_3:IFurnitureData;
             var k:int = this.widget.handler.roomSession.roomId;
-            var _local_2:IRoomObject = this.widget.handler.roomEngine.getRoomObject(k, this._useProductItem._Str_3710, RoomObjectCategoryEnum.CONST_10);
+            var _local_2:IRoomObject = this.widget.handler.roomEngine.getRoomObject(k, this._useProductItem._Str_3710, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_2 != null)
             {
                 _local_3 = this.widget.handler.getFurniData(_local_2);

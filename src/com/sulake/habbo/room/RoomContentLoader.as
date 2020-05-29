@@ -459,49 +459,49 @@
         {
             if (k == null)
             {
-                return RoomObjectCategoryEnum.CONST_MIN2;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
             }
             if (this._activeObjects[k] != null)
             {
-                return RoomObjectCategoryEnum.CONST_10;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
             }
             if (this._wallItems[k] != null)
             {
-                return RoomObjectCategoryEnum.CONST_20;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
             if (this._pets[k] != null)
             {
-                return RoomObjectCategoryEnum.CONST_100;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             }
             if (k.indexOf("poster") == 0)
             {
-                return RoomObjectCategoryEnum.CONST_20;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
             if (k == "room")
             {
-                return RoomObjectCategoryEnum.CONST_0;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM;
             }
             if (k == RoomObjectUserTypes.USER)
             {
-                return RoomObjectCategoryEnum.CONST_100;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             }
             if (k == RoomObjectUserTypes.PET)
             {
-                return RoomObjectCategoryEnum.CONST_100;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             }
             if (k == RoomObjectUserTypes.BOT)
             {
-                return RoomObjectCategoryEnum.CONST_100;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             }
             if (k == RoomObjectUserTypes.RENTABLE_BOT)
             {
-                return RoomObjectCategoryEnum.CONST_100;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             }
             if (((k == "tile_cursor") || (k == "selection_arrow")))
             {
-                return RoomObjectCategoryEnum.CONST_200;
+                return RoomObjectCategoryEnum.OBJECT_CATEGORY_CURSOR;
             }
-            return RoomObjectCategoryEnum.CONST_MIN2;
+            return RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
         }
 
         public function getPlaceHolderType(k:String):String
@@ -692,7 +692,7 @@
         {
             var _local_3:int;
             var _local_2:int = this.getObjectCategory(k);
-            if (((_local_2 == RoomObjectCategoryEnum.CONST_10) || (_local_2 == RoomObjectCategoryEnum.CONST_20)))
+            if (((_local_2 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_2 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
             {
                 if (k.indexOf("poster") == 0)
                 {
@@ -730,7 +730,7 @@
                     return [this.getAssetLibraryName("SelectionArrow.swf")];
                 default:
                     _local_5 = this.getObjectCategory(_local_4);
-                    if (((_local_5 == RoomObjectCategoryEnum.CONST_10) || (_local_5 == RoomObjectCategoryEnum.CONST_20)))
+                    if (((_local_5 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_5 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
                     {
                         _local_6 = this.getRoomObjectAlias(_local_4);
                         _local_7 = ((_arg_3) ? this._iconLoadNameTemplate : this._furniLoadNameTemplate);
@@ -744,7 +744,7 @@
                         }
                         return [(this._furniLoadUrlBase + _local_7)];
                     }
-                    if (_local_5 == RoomObjectCategoryEnum.CONST_100)
+                    if (_local_5 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
                         _local_10 = (this._assetUrlBase + this._petLoadNameTemplate);
                         _local_10 = _local_10.replace(/%type%/, _local_4);
@@ -766,11 +766,11 @@
             var _local_4:String = this.getAssetLibraryType(_arg_3);
             switch (_arg_2)
             {
-                case RoomObjectCategoryEnum.CONST_10:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                     this._activeObjectTypes[k] = _local_4;
                     this._activeObjectTypeIds.add(_local_4, k);
                     break;
-                case RoomObjectCategoryEnum.CONST_20:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                     this._wallItemTypes[k] = _local_4;
                     break;
                 default:
@@ -784,13 +784,13 @@
                 {
                     switch (_arg_2)
                     {
-                        case RoomObjectCategoryEnum.CONST_10:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                             if (this._activeObjects[_local_4] == null)
                             {
                                 this._activeObjects[_local_4] = 1;
                             }
                             break;
-                        case RoomObjectCategoryEnum.CONST_20:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                             if (this._wallItems[_local_4] == null)
                             {
                                 this._wallItems[_local_4] = 1;
@@ -1455,7 +1455,7 @@
                 return null;
             }
             var _local_3:int = this.getObjectCategory(_local_2);
-            if (((!(_local_3 == RoomObjectCategoryEnum.CONST_10)) && (!(_local_3 == RoomObjectCategoryEnum.CONST_20))))
+            if (((!(_local_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)) && (!(_local_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM))))
             {
                 return null;
             }

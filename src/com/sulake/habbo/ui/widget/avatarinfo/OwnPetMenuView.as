@@ -242,7 +242,7 @@
             if (this.widget.configuration.getBoolean("handitem.give.pet.enabled"))
             {
                 _local_6 = _local_3.container.roomSession._Str_3871;
-                _local_7 = _local_3.container.roomEngine.getRoomObject(_local_3.roomSession.roomId, _local_6, RoomObjectCategoryEnum.CONST_100);
+                _local_7 = _local_3.container.roomEngine.getRoomObject(_local_3.roomSession.roomId, _local_6, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 if (_local_7 != null)
                 {
                     _local_8 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);
@@ -310,11 +310,11 @@
                 return null;
             }
             var _local_4:int = _local_2.roomSession.roomId;
-            var _local_5:int = _local_3.getRoomObjectCount(_local_4, RoomObjectCategoryEnum.CONST_10);
+            var _local_5:int = _local_3.getRoomObjectCount(_local_4, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             var _local_6:int;
             while (_local_6 < _local_5)
             {
-                _local_7 = _local_3.getRoomObjectWithIndex(_local_4, _local_6, RoomObjectCategoryEnum.CONST_10);
+                _local_7 = _local_3.getRoomObjectWithIndex(_local_4, _local_6, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 if (_local_7 != null)
                 {
                     _local_8 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);

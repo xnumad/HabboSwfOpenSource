@@ -317,7 +317,7 @@
             var _local_3:RoomUserData = this.handler.container.roomSessionManager.getSession(_local_2).userDataManager.getUserData(k);
             if (_local_3)
             {
-                return this.handler.container.roomEngine.getRoomObjectBoundingRectangle(_local_2, _local_3._Str_2713, RoomObjectCategoryEnum.CONST_100, this.handler.container.getFirstCanvasId());
+                return this.handler.container.roomEngine.getRoomObjectBoundingRectangle(_local_2, _local_3._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this.handler.container.getFirstCanvasId());
             }
             return null;
         }

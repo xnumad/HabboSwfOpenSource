@@ -1129,7 +1129,7 @@
                     {
                         _local_4 = new RoomWidgetRoomObjectUpdateEvent(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, _local_2, _local_3, k.roomId);
                     }
-                    if (((!(this._moderation == null)) && (_local_3 == RoomObjectCategoryEnum.CONST_100)))
+                    if (((!(this._moderation == null)) && (_local_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
                     {
                         _local_8 = this._session.userDataManager.getUserDataByIndex(_local_2);
                         if (((!(_local_8 == null)) && (_local_8.type == RoomObjectTypeEnum.HABBO)))
@@ -1141,11 +1141,11 @@
                 case RoomEngineObjectEvent.ADDED:
                     switch (_local_3)
                     {
-                        case RoomObjectCategoryEnum.CONST_10:
-                        case RoomObjectCategoryEnum.CONST_20:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                             _local_6 = RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED;
                             break;
-                        case RoomObjectCategoryEnum.CONST_100:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                             _local_6 = RoomWidgetRoomObjectUpdateEvent.USER_ADDED;
                             break;
                     }
@@ -1157,11 +1157,11 @@
                 case RoomEngineObjectEvent.REMOVED:
                     switch (_local_3)
                     {
-                        case RoomObjectCategoryEnum.CONST_10:
-                        case RoomObjectCategoryEnum.CONST_20:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                             _local_6 = RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED;
                             break;
-                        case RoomObjectCategoryEnum.CONST_100:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                             _local_6 = RoomWidgetRoomObjectUpdateEvent.USER_REMOVED;
                             break;
                     }

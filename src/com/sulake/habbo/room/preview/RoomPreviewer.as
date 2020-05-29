@@ -116,7 +116,7 @@
                     this.updatePreviewRoomView();
                 }
             }
-            this._currentPreviewObjectCategory = RoomObjectCategoryEnum.CONST_MIN2;
+            this._currentPreviewObjectCategory = RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
         }
 
         public function addFurnitureIntoRoom(k:int, _arg_2:IVector3d, _arg_3:IStuffData=null, _arg_4:String=null):int
@@ -129,13 +129,13 @@
             }
             if (this.isRoomEngineReady)
             {
-                if (((this._currentPreviewObjectCategory == RoomObjectCategoryEnum.CONST_10) && (this._currentPreviewObjectType == k)))
+                if (((this._currentPreviewObjectCategory == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) && (this._currentPreviewObjectType == k)))
                 {
                     return PREVIEW_OBJECT_ID;
                 }
                 this.reset(false);
                 this._currentPreviewObjectType = k;
-                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.CONST_10;
+                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
                 this._currentPreviewObjectData = "";
                 if (this._roomEngine.addObjectFurniture(this._previewRoomId, PREVIEW_OBJECT_ID, k, new Vector3d(PREVIEW_OBJECT_LOCATION_X, PREVIEW_OBJECT_LOCATION_Y, 0), _arg_2, 0, _arg_3, NaN, -1, 0, 0, "", true, false))
                 {
@@ -161,13 +161,13 @@
             var _local_4:int = -1;
             if (this.isRoomEngineReady)
             {
-                if ((((this._currentPreviewObjectCategory == RoomObjectCategoryEnum.CONST_20) && (this._currentPreviewObjectType == k)) && (this._currentPreviewObjectData == _arg_3)))
+                if ((((this._currentPreviewObjectCategory == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM) && (this._currentPreviewObjectType == k)) && (this._currentPreviewObjectData == _arg_3)))
                 {
                     return PREVIEW_OBJECT_ID;
                 }
                 this.reset(false);
                 this._currentPreviewObjectType = k;
-                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.CONST_20;
+                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
                 this._currentPreviewObjectData = _arg_3;
                 if (this._roomEngine.addObjectWallItem(this._previewRoomId, PREVIEW_OBJECT_ID, k, new Vector3d(0.5, 2.3, 1.8), _arg_2, 0, _arg_3, 0, 0, "", -1, false))
                 {
@@ -185,7 +185,7 @@
             {
                 this.reset(false);
                 this._currentPreviewObjectType = 1;
-                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.CONST_100;
+                this._currentPreviewObjectCategory = RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
                 this._currentPreviewObjectData = k;
                 if (this._roomEngine.addObjectUser(this._previewRoomId, PREVIEW_OBJECT_ID, new Vector3d(PREVIEW_OBJECT_LOCATION_X, PREVIEW_OBJECT_LOCATION_Y, 0), new Vector3d(90, 0, 0), 135, 1, k))
                 {
@@ -247,7 +247,7 @@
             if (this.isRoomEngineReady)
             {
                 this._automaticStateChange = false;
-                if (this._currentPreviewObjectCategory != RoomObjectCategoryEnum.CONST_100)
+                if (this._currentPreviewObjectCategory != RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                 {
                     this._roomEngine.changeObjectState(this._previewRoomId, PREVIEW_OBJECT_ID, this._currentPreviewObjectCategory);
                 }
@@ -481,7 +481,7 @@
             }
             else
             {
-                if (this._currentPreviewObjectCategory != RoomObjectCategoryEnum.CONST_100)
+                if (this._currentPreviewObjectCategory != RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                 {
                     _local_3 = (_local_3 + (5 - Math.max(0, (_local_4 / 2))));
                 }
@@ -584,7 +584,7 @@
                 this._currentPreviewRectangle = null;
                 this._currentPreviewNeedsZoomOut = false;
                 _local_2 = this._roomEngine.getRoomObject(k.roomId, k._Str_1577, k.category);
-                if ((((!(_local_2 == null)) && (!(_local_2.getModel() == null))) && (k.category == RoomObjectCategoryEnum.CONST_20)))
+                if ((((!(_local_2 == null)) && (!(_local_2.getModel() == null))) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
                 {
                     _local_3 = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_SIZE_Z);
                     _local_4 = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_CENTER_Z);
@@ -628,7 +628,7 @@
             var _local_2:IRoomObjectVisualization;
             if (this.isRoomEngineReady)
             {
-                k = this._roomEngine.getRoomObject(this._previewRoomId, PREVIEW_OBJECT_ID, RoomObjectCategoryEnum.CONST_100);
+                k = this._roomEngine.getRoomObject(this._previewRoomId, PREVIEW_OBJECT_ID, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 if (k)
                 {
                     _local_2 = k.getVisualization();

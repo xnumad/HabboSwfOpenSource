@@ -1115,7 +1115,7 @@
                         _local_9 = this._roomCreator.getRoom(this._currentRoomId);
                         if (_local_9)
                         {
-                            _local_7 = _local_9.getObject(_local_6.id, RoomObjectCategoryEnum.CONST_100);
+                            _local_7 = _local_9.getObject(_local_6.id, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                         }
                     }
                     if (((!(_local_7 == null)) && (!(_local_7.getType() == RoomObjectUserTypes.MONSTERPLANT))))

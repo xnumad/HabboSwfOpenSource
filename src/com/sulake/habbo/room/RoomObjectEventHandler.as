@@ -195,7 +195,7 @@
                         _local_3.setDirection(_local_2.dir);
                     }
                     this.setObjectAlphaMultiplier(_local_3, 1);
-                    if (_local_2.category == RoomObjectCategoryEnum.CONST_20)
+                    if (_local_2.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
                         this._roomEngine.updateObjectRoomWindow(k, _local_2.id, true);
                     }
@@ -207,13 +207,13 @@
                     _local_5 = _local_2.category;
                     switch (_local_5)
                     {
-                        case RoomObjectCategoryEnum.CONST_10:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                             this._roomEngine.disposeObjectFurniture(k, _local_4);
                             break;
-                        case RoomObjectCategoryEnum.CONST_20:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                             this._roomEngine.disposeObjectWallItem(k, _local_4);
                             break;
-                        case RoomObjectCategoryEnum.CONST_100:
+                        case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                             this._roomEngine.disposeObjectUser(k, _local_4);
                             break;
                     }
@@ -236,10 +236,10 @@
             }
             switch (_arg_3)
             {
-                case RoomObjectCategoryEnum.CONST_100:
-                case RoomObjectCategoryEnum.CONST_10:
-                case RoomObjectCategoryEnum.CONST_20:
-                    if (_arg_3 == RoomObjectCategoryEnum.CONST_100)
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
+                    if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
                         this.deselectObject(k);
                         this.setSelectedAvatar(k, _arg_2, true);
@@ -274,7 +274,7 @@
                 {
                     _local_2.getEventHandler().processUpdateMessage(new RoomObjectSelectedMessage(false));
                     this._selectedObjectId = -1;
-                    this._selectedObjectCategory = RoomObjectCategoryEnum.CONST_MIN2;
+                    this._selectedObjectCategory = RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
                 }
             }
         }
@@ -292,17 +292,17 @@
             var _local_4:String = _arg_2.getType();
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_4);
             var _local_6:int = _local_5;
-            if (_local_5 != RoomObjectCategoryEnum.CONST_0)
+            if (_local_5 != RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
             {
                 if (!this._roomEngine.getActiveRoomIsPlayingGame())
                 {
-                    _local_5 = RoomObjectCategoryEnum.CONST_MIN2;
+                    _local_5 = RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
                 }
                 else
                 {
-                    if (_local_5 != RoomObjectCategoryEnum.CONST_100)
+                    if (_local_5 != RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
-                        _local_5 = RoomObjectCategoryEnum.CONST_MIN2;
+                        _local_5 = RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN;
                     }
                 }
             }
@@ -528,7 +528,7 @@
             switch (_local_4)
             {
                 case RoomObjectOperationEnum.OBJECT_MOVE:
-                    if (_local_8 == RoomObjectCategoryEnum.CONST_0)
+                    if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
                         if (_local_5 != null)
                         {
@@ -537,7 +537,7 @@
                     }
                     else
                     {
-                        if (_local_8 == RoomObjectCategoryEnum.CONST_100)
+                        if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                         {
                             if (((!(_local_5 == null)) && (_local_7 == RoomObjectUserTypes.MONSTERPLANT)))
                             {
@@ -545,7 +545,7 @@
                             }
                             if (_local_9 != null)
                             {
-                                this.setMouseEventId(RoomObjectCategoryEnum.CONST_0, MouseEvent.CLICK, _local_9);
+                                this.setMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM, MouseEvent.CLICK, _local_9);
                             }
                             this.placeObjectOnUser(_arg_2, _local_6, _local_8);
                         }
@@ -557,13 +557,13 @@
                     }
                     break;
                 case RoomObjectOperationEnum.OBJECT_PLACE:
-                    if (_local_8 == RoomObjectCategoryEnum.CONST_0)
+                    if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
                         this._Str_19271(_arg_2, (!(_local_10 == null)), (!(_local_11 == null)));
                     }
                     else
                     {
-                        if (_local_8 == RoomObjectCategoryEnum.CONST_100)
+                        if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                         {
                             switch (_local_7)
                             {
@@ -574,7 +574,7 @@
                                 default:
                                     if (_local_9 != null)
                                     {
-                                        this.setMouseEventId(RoomObjectCategoryEnum.CONST_0, MouseEvent.CLICK, _local_9);
+                                        this.setMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM, MouseEvent.CLICK, _local_9);
                                     }
                                     this.placeObjectOnUser(_arg_2, _local_6, _local_8);
                             }
@@ -582,7 +582,7 @@
                     }
                     break;
                 case RoomObjectOperationEnum.OBJECT_UNDEFINED:
-                    if (_local_8 == RoomObjectCategoryEnum.CONST_0)
+                    if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
                         if (((!(_local_10 == null)) && (!(_local_3))))
                         {
@@ -593,7 +593,7 @@
                     {
                         this.setSelectedObject(_arg_2, _local_6, _local_8);
                         _local_14 = false;
-                        if (_local_8 == RoomObjectCategoryEnum.CONST_100)
+                        if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                         {
                             if (((((k.ctrlKey) && (!(k.altKey))) && (!(k.shiftKey))) && (_local_7 == RoomObjectUserTypes.RENTABLE_BOT)))
                             {
@@ -628,13 +628,13 @@
                         }
                         else
                         {
-                            if (((_local_8 == RoomObjectCategoryEnum.CONST_10) || (_local_8 == RoomObjectCategoryEnum.CONST_20)))
+                            if (((_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)))
                             {
                                 if (((((k.altKey) || (k.ctrlKey)) || (k.shiftKey)) && (!(this._roomEngine.setIsSelectedObjectInValidPosition))))
                                 {
                                     if ((((!(k.ctrlKey)) && (!(k.altKey))) && (k.shiftKey)))
                                     {
-                                        if (_local_8 == RoomObjectCategoryEnum.CONST_10)
+                                        if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                                         {
                                             if (_local_13 != null)
                                             {
@@ -664,26 +664,26 @@
                         {
                             if (_local_3)
                             {
-                                this.setMouseEventId(RoomObjectCategoryEnum.CONST_0, MouseEvent.CLICK, _local_9);
+                                this.setMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM, MouseEvent.CLICK, _local_9);
                             }
                             if (_local_14)
                             {
-                                this.setMouseEventId(RoomObjectCategoryEnum.CONST_MIN2, MouseEvent.CLICK, _local_9);
+                                this.setMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN, MouseEvent.CLICK, _local_9);
                             }
                         }
                     }
                     break;
             }
-            if (_local_8 == RoomObjectCategoryEnum.CONST_0)
+            if (_local_8 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
             {
-                _local_15 = this.getMouseEventId(RoomObjectCategoryEnum.CONST_MIN2, MouseEvent.CLICK);
-                _local_16 = this.getMouseEventId(RoomObjectCategoryEnum.CONST_100, MouseEvent.CLICK);
+                _local_15 = this.getMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN, MouseEvent.CLICK);
+                _local_16 = this.getMouseEventId(RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, MouseEvent.CLICK);
                 if ((((!(_local_15 == _local_9)) && (!(_local_16 == _local_9))) && (!(_local_12))))
                 {
                     this.deselectObject(_arg_2);
                     if (_local_13 != null)
                     {
-                        _local_13.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.DESELECTED, _arg_2, -1, RoomObjectCategoryEnum.CONST_MIN2));
+                        _local_13.dispatchEvent(new RoomEngineObjectEvent(RoomEngineObjectEvent.DESELECTED, _arg_2, -1, RoomObjectCategoryEnum.OBJECT_CATEGORY_UNKNOWN));
                     }
                     this.setSelectedAvatar(_arg_2, 0, false);
                 }
@@ -735,13 +735,13 @@
             switch (_local_3)
             {
                 case RoomObjectOperationEnum.OBJECT_MOVE:
-                    if (_local_6 == RoomObjectCategoryEnum.CONST_0)
+                    if (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
                         this._Str_24048(k, _arg_2);
                     }
                     return;
                 case RoomObjectOperationEnum.OBJECT_PLACE:
-                    if (_local_6 == RoomObjectCategoryEnum.CONST_0)
+                    if (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
                     {
                         this._Str_22548(k, _arg_2);
                     }
@@ -801,9 +801,9 @@
             var _local_8:int;
             var _local_9:Number;
             var _local_4:IRoomObject;
-            if (k == RoomObjectCategoryEnum.CONST_10)
+            if (k == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
-                _local_4 = this._roomEngine.getRoomObject(_arg_2, _arg_3._Str_1577, RoomObjectCategoryEnum.CONST_10);
+                _local_4 = this._roomEngine.getRoomObject(_arg_2, _arg_3._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 if (_local_4)
                 {
                     _local_5 = this.getActiveSurfaceLocation(_local_4, _arg_3);
@@ -828,9 +828,9 @@
             var _local_3:String = k.objectType;
             var _local_4:int = k._Str_1577;
             var _local_5:int = this._roomEngine.getRoomObjectCategory(_local_3);
-            if (_local_5 != RoomObjectCategoryEnum.CONST_0)
+            if (_local_5 != RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
             {
-                if (_local_5 == RoomObjectCategoryEnum.CONST_100)
+                if (_local_5 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                 {
                     this.handleMouseEnterAvatar(_local_4, k, _arg_2);
                 }
@@ -848,9 +848,9 @@
             var _local_7:RoomObjectDataUpdateMessage;
             var _local_3:String = k.objectType;
             var _local_4:int = this._roomEngine.getRoomObjectCategory(_local_3);
-            if (_local_4 != RoomObjectCategoryEnum.CONST_0)
+            if (_local_4 != RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM)
             {
-                if (_local_4 == RoomObjectCategoryEnum.CONST_100)
+                if (_local_4 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                 {
                     _local_6 = this._roomEngine.getTileCursor(_arg_2);
                     if (_local_6)
@@ -886,7 +886,7 @@
             switch (_local_3)
             {
                 case RoomObjectOperationEnum.OBJECT_UNDEFINED:
-                    if ((((_local_7 == RoomObjectCategoryEnum.CONST_10) || (_local_7 == RoomObjectCategoryEnum.CONST_20)) || (_local_6 == RoomObjectUserTypes.MONSTERPLANT)))
+                    if ((((_local_7 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_7 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)) || (_local_6 == RoomObjectUserTypes.MONSTERPLANT)))
                     {
                         if ((((((k.altKey) && (!(k.ctrlKey))) && (!(k.shiftKey))) || (this.decorateModeMove(k))) && (!(this._roomEngine.setIsSelectedObjectInValidPosition))))
                         {
@@ -936,7 +936,7 @@
             if (_local_5 != null)
             {
                 _local_6 = true;
-                if (((_local_4.category == RoomObjectCategoryEnum.CONST_10) || (_local_4.category == RoomObjectCategoryEnum.CONST_100)))
+                if (((_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
                 {
                     _local_7 = this._roomEngine.getFurniStackingHeightMap(_arg_2);
                     _local_8 = (k as RoomObjectTileMouseEvent);
@@ -948,7 +948,7 @@
                 }
                 else
                 {
-                    if (_local_4.category == RoomObjectCategoryEnum.CONST_20)
+                    if (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
                         _local_6 = false;
                         _local_9 = (k as RoomObjectWallMouseEvent);
@@ -1019,19 +1019,19 @@
             var _local_7:RoomObjectWallMouseEvent = (k as RoomObjectWallMouseEvent);
             if (_local_5 == null)
             {
-                if (((_local_4.category == RoomObjectCategoryEnum.CONST_10) && (!(_local_6 == null))))
+                if (((_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) && (!(_local_6 == null))))
                 {
                     this._roomEngine.addObjectFurniture(_arg_2, _local_4.id, _local_4.typeId, _local_4.loc, _local_4.dir, 0, _local_4.stuffData, Number(_local_4._Str_4766), -1, 0, 0, "", false);
                 }
                 else
                 {
-                    if (((_local_4.category == RoomObjectCategoryEnum.CONST_20) && (!(_local_7 == null))))
+                    if (((_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM) && (!(_local_7 == null))))
                     {
                         this._roomEngine.addObjectWallItem(_arg_2, _local_4.id, _local_4.typeId, _local_4.loc, _local_4.dir, 0, _local_4._Str_4766, 0);
                     }
                     else
                     {
-                        if (((_local_4.category == RoomObjectCategoryEnum.CONST_100) && (!(_local_6 == null))))
+                        if (((_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) && (!(_local_6 == null))))
                         {
                             this._roomEngine.addObjectUser(_arg_2, _local_4.id, new Vector3d(), new Vector3d(180), 180, _local_4.typeId, _local_4._Str_4766);
                             _local_8 = this._roomEngine.getRoomObject(_arg_2, _local_4.id, _local_4.category);
@@ -1049,7 +1049,7 @@
                 _local_5 = (this._roomEngine.getRoomObject(_arg_2, _local_4.id, _local_4.category) as IRoomObjectController);
                 if (_local_5 != null)
                 {
-                    if (_local_4.category == RoomObjectCategoryEnum.CONST_10)
+                    if (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                     {
                         if (_local_5.getModel() != null)
                         {
@@ -1075,7 +1075,7 @@
             {
                 _local_12 = true;
                 _local_13 = this._roomEngine.getFurniStackingHeightMap(_arg_2);
-                if (_local_4.category == RoomObjectCategoryEnum.CONST_10)
+                if (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                 {
                     if (!((!(_local_6 == null)) && (this.handleFurnitureMove(_local_5, _local_4, (_local_6.tileX + 0.5), (_local_6.tileY + 0.5), _local_13))))
                     {
@@ -1085,7 +1085,7 @@
                 }
                 else
                 {
-                    if (_local_4.category == RoomObjectCategoryEnum.CONST_20)
+                    if (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
                         _local_12 = false;
                         if (_local_7 != null)
@@ -1109,7 +1109,7 @@
                     }
                     else
                     {
-                        if (_local_4.category == RoomObjectCategoryEnum.CONST_100)
+                        if (_local_4.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                         {
                             if (!((!(_local_6 == null)) && (this.handleUserPlace(_local_5, (_local_6.tileX + 0.5), (_local_6.tileY + 0.5), this._roomEngine.getLegacyGeometry(_arg_2)))))
                             {
@@ -1125,7 +1125,7 @@
 
         private function handleMoveTargetFurni(k:int, _arg_2:RoomObjectEvent):Boolean
         {
-            var _local_3:IRoomObject = this._roomEngine.getRoomObject(k, _arg_2._Str_1577, RoomObjectCategoryEnum.CONST_10);
+            var _local_3:IRoomObject = this._roomEngine.getRoomObject(k, _arg_2._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             var _local_4:Vector3d = this.getActiveSurfaceLocation(_local_3, (_arg_2 as RoomObjectMouseEvent));
             if (_local_4)
             {
@@ -1941,7 +1941,7 @@
             {
                 return;
             }
-            var _local_4:int = RoomObjectCategoryEnum.CONST_100;
+            var _local_4:int = RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             var _local_5:IRoomObjectController = (this._roomEngine.getRoomObject(k, this._selectedAvatarId, _local_4) as IRoomObjectController);
             if (((!(_local_5 == null)) && (!(_local_5.getEventHandler() == null))))
             {
@@ -2168,7 +2168,7 @@
                     this._roomEngine.removeObjectMoverIconSprite();
                     if (this._roomEngine.connection)
                     {
-                        if (_arg_3 == RoomObjectCategoryEnum.CONST_10)
+                        if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                         {
                             _local_8 = (int(_local_5.getDirection().x) % 360);
                             _local_6 = _local_5.getLocation().x;
@@ -2178,7 +2178,7 @@
                         }
                         else
                         {
-                            if (_arg_3 == RoomObjectCategoryEnum.CONST_100)
+                            if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                             {
                                 _local_8 = (int(_local_5.getDirection().x) % 360);
                                 _local_6 = _local_5.getLocation().x;
@@ -2197,7 +2197,7 @@
                             }
                             else
                             {
-                                if (_arg_3 == RoomObjectCategoryEnum.CONST_20)
+                                if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                                 {
                                     _local_8 = (int(_local_5.getDirection().x) % 360);
                                     _local_14 = this._roomEngine.getLegacyGeometry(k);
@@ -2206,7 +2206,7 @@
                                         _local_15 = _local_14.getOldLocationString(_local_5.getLocation(), _local_8);
                                         if (_local_15 != null)
                                         {
-                                            this._roomEngine.connection.send(new _Str_12057(_arg_2, RoomObjectCategoryEnum.CONST_20, _local_15));
+                                            this._roomEngine.connection.send(new _Str_12057(_arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_15));
                                         }
                                     }
                                 }
@@ -2265,7 +2265,7 @@
                 {
                     _local_12 = _local_7.getDirection().x;
                     _local_14 = _local_7.getLocation();
-                    if (((_local_6 == RoomObjectCategoryEnum.CONST_10) || (_local_6 == RoomObjectCategoryEnum.CONST_100)))
+                    if (((_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) || (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
                     {
                         _local_9 = _local_14.x;
                         _local_10 = _local_14.y;
@@ -2273,7 +2273,7 @@
                     }
                     else
                     {
-                        if (_local_6 == RoomObjectCategoryEnum.CONST_20)
+                        if (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                         {
                             _local_9 = _local_14.x;
                             _local_10 = _local_14.y;
@@ -2286,24 +2286,24 @@
                         }
                     }
                     _local_12 = ((((_local_12 / 45) % 8) + 8) % 8);
-                    if (((_local_7.getType() == "free_placement_room") && (this.roomEngine.getRoom(k).getObjectCountForType("free_placement_room", RoomObjectCategoryEnum.CONST_10) > 1)))
+                    if (((_local_7.getType() == "free_placement_room") && (this.roomEngine.getRoom(k).getObjectCountForType("free_placement_room", RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) > 1)))
                     {
                         this.roomEngine.windowManager.alert("One free placement furni already in room!", "There can be only one free_placement_room furni in a room. See intraweb for instructions on how to use it.", _Str_3023.NULL, null);
                         return;
                     }
-                    if (((_local_5 < 0) && (_local_6 == RoomObjectCategoryEnum.CONST_100)))
+                    if (((_local_5 < 0) && (_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)))
                     {
                         _local_5 = (_local_5 * -1);
                     }
                     if ((((this._roomEngine.catalog == null) || (this._roomEngine.catalog.catalogType == CatalogType.NORMAL)) || (!(this._objectPlacementSource == RoomObjectPlacementSource.CATALOG))))
                     {
-                        if (((_local_6 == RoomObjectCategoryEnum.CONST_100) && (_local_4.typeId == RoomObjectTypeEnum.PET)))
+                        if (((_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) && (_local_4.typeId == RoomObjectTypeEnum.PET)))
                         {
                             this._roomEngine.connection.send(new _Str_8042(_local_5, int(_local_9), int(_local_10)));
                         }
                         else
                         {
-                            if (((_local_6 == RoomObjectCategoryEnum.CONST_100) && (_local_4.typeId == RoomObjectTypeEnum.RENTABLE_BOT)))
+                            if (((_local_6 == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) && (_local_4.typeId == RoomObjectTypeEnum.RENTABLE_BOT)))
                             {
                                 this._roomEngine.connection.send(new _Str_8136(_local_5, int(_local_9), int(_local_10)));
                             }
@@ -2342,7 +2342,7 @@
         {
             if (((!(this._roomEngine == null)) && (!(this._roomEngine.connection == null))))
             {
-                if (_arg_3 == RoomObjectCategoryEnum.CONST_10)
+                if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                 {
                     if (!_arg_5)
                     {
@@ -2355,7 +2355,7 @@
                 }
                 else
                 {
-                    if (_arg_3 == RoomObjectCategoryEnum.CONST_20)
+                    if (_arg_3 == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
                         this._roomEngine.connection.send(new _Str_12401(_arg_2, _arg_4));
                     }
@@ -2498,7 +2498,7 @@
                 _local_4 = this._roomEngine.getTileCursor(_arg_3);
                 if (((!(_local_4 == null)) && (!(_local_4.getEventHandler() == null))))
                 {
-                    _local_5 = (this._roomEngine.getRoomObject(_arg_3, k, RoomObjectCategoryEnum.CONST_100) as IRoomObjectController);
+                    _local_5 = (this._roomEngine.getRoomObject(_arg_3, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER) as IRoomObjectController);
                     _local_6 = null;
                     if (_local_5 != null)
                     {

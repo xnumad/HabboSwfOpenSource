@@ -23,10 +23,10 @@
             var k:int;
             switch (this._Str_3014)
             {
-                case RoomObjectCategoryEnum.CONST_10:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                     k = 2;
                     break;
-                case RoomObjectCategoryEnum.CONST_20:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                     k = 1;
                     break;
                 default:

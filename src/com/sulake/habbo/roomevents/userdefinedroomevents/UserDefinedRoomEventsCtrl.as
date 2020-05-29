@@ -646,7 +646,7 @@
 
         private function isOwner(k:int):Boolean
         {
-            var _local_2:IRoomObject = this._roomEvents.roomEngine.getRoomObject(this._roomEvents.roomId, k, RoomObjectCategoryEnum.CONST_10);
+            var _local_2:IRoomObject = this._roomEvents.roomEngine.getRoomObject(this._roomEvents.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_2 == null)
             {
                 return false;

@@ -30,9 +30,9 @@
         {
             switch (this._Str_3014)
             {
-                case RoomObjectCategoryEnum.CONST_10:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
                     return [((((((this._Str_2319 + " ") + this._x) + " ") + this._y) + " ") + this._dir)];
-                case RoomObjectCategoryEnum.CONST_20:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                     return [((this._Str_2319 + " ") + this._Str_5995)];
                 default:
                     return [];

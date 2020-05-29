@@ -326,7 +326,7 @@
         private function _Str_4159(k:RoomEngineObjectEvent):void
         {
             var _local_2:int;
-            if (k.category == RoomObjectCategoryEnum.CONST_10)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
                 _local_2 = k._Str_1577;
                 if (((!(this._selectedObject == null)) && (this._selectedObject.getId() == _local_2)))

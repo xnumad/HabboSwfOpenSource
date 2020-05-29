@@ -142,7 +142,7 @@
             {
                 _local_8 = this.widget.handler;
                 _local_9 = _local_8.container.roomSession._Str_3871;
-                _local_10 = _local_8.container.roomEngine.getRoomObject(_local_8.roomSession.roomId, _local_9, RoomObjectCategoryEnum.CONST_100);
+                _local_10 = _local_8.container.roomEngine.getRoomObject(_local_8.roomSession.roomId, _local_9, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 if (_local_10 != null)
                 {
                     _local_11 = _local_10.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);

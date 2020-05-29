@@ -454,7 +454,7 @@
                 return;
             }
             var _local_3:IRoomDesktop = this._roomUI.getDesktop("hard_coded_room_id");
-            _local_3.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _arg_2, RoomObjectCategoryEnum.CONST_100));
+            _local_3.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _arg_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER));
             this.roomEngine.selectAvatar(k, _arg_2);
             var _local_4:IRoomSession = this._roomSessionManager.getSession(k);
             if (_local_4)

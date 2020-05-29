@@ -116,7 +116,7 @@
                 if (this.widget.configuration.getBoolean("handitem.give.enabled"))
                 {
                     _local_8 = _local_5.container.roomSession._Str_3871;
-                    _local_9 = _local_5.container.roomEngine.getRoomObject(_local_5.roomSession.roomId, _local_8, RoomObjectCategoryEnum.CONST_100);
+                    _local_9 = _local_5.container.roomEngine.getRoomObject(_local_5.roomSession.roomId, _local_8, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                     if (_local_9 != null)
                     {
                         _local_10 = _local_9.getModel().getNumber(RoomObjectVariableEnum.FIGURE_CARRY_OBJECT);

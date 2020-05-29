@@ -71,13 +71,13 @@
             this._SafeStr_18723 = [];
             super();
             this._snowWarEngine = k;
-            this._snowWarEngine.roomEngine.addObjectUpdateCategory(RoomObjectCategoryEnum.CONST_202);
+            this._snowWarEngine.roomEngine.addObjectUpdateCategory(RoomObjectCategoryEnum.SNOW_SPLASH);
         }
 
         public function dispose():void
         {
             this._snowWarEngine.roomEngine.disposeRoom(_SafeStr_18716);
-            this._snowWarEngine.roomEngine.removeObjectUpdateCategory(RoomObjectCategoryEnum.CONST_202);
+            this._snowWarEngine.roomEngine.removeObjectUpdateCategory(RoomObjectCategoryEnum.SNOW_SPLASH);
             if (this._keyboardListener)
             {
                 this._keyboardListener.dispose();
@@ -226,17 +226,17 @@
                 _local_16 = this._SafeStr_18722.indexOf(_local_14);
                 if (_local_16 > -1)
                 {
-                    _local_17 = this._snowWarEngine.roomEngine.getRoomObject(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.CONST_201);
+                    _local_17 = this._snowWarEngine.roomEngine.getRoomObject(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.SNOWBALL);
                     _local_18 = _local_17.getLocation();
-                    this._snowWarEngine.roomEngine.updateObjectUserGesture(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.CONST_201);
+                    this._snowWarEngine.roomEngine.updateObjectUserGesture(_SafeStr_18716, _local_14, RoomObjectCategoryEnum.SNOWBALL);
                     this._SafeStr_18722.splice(_local_16, 1);
                     if (!SnowWarGameObject(_local_4).isActive)
                     {
-                        this._snowWarEngine.roomEngine._SafeStr_7811(_SafeStr_18716, _local_14, _local_18, RoomObjectCategoryEnum.CONST_202);
+                        this._snowWarEngine.roomEngine._SafeStr_7811(_SafeStr_18716, _local_14, _local_18, RoomObjectCategoryEnum.SNOW_SPLASH);
                         this._SafeStr_18723.push({
                             "id":_local_14,
                             "time":_local_3,
-                            "category":RoomObjectCategoryEnum.CONST_202
+                            "category":RoomObjectCategoryEnum.SNOW_SPLASH
                         });
                     }
                 }
@@ -390,20 +390,20 @@
             if (this._SafeStr_18722.indexOf(_local_6) == -1)
             {
 				//Figure this out. game_snowball //DONE
-                this._snowWarEngine.roomEngine._SafeStr_7811(_SafeStr_18716, _local_6, _local_5, RoomObjectCategoryEnum.CONST_201);
+                this._snowWarEngine.roomEngine._SafeStr_7811(_SafeStr_18716, _local_6, _local_5, RoomObjectCategoryEnum.SNOWBALL);
                 this._SafeStr_18722.push(_local_6);
             }
             else
             {
 				//Figure this out. RoomEngine. Names have changed /removed. Possibly need to be re-added? //DONE
-                this._snowWarEngine.roomEngine._SafeStr_7817(_SafeStr_18716, _local_6, _local_5, RoomObjectCategoryEnum.CONST_201);
+                this._snowWarEngine.roomEngine._SafeStr_7817(_SafeStr_18716, _local_6, _local_5, RoomObjectCategoryEnum.SNOWBALL);
             }
         }
 
         private function _SafeStr_18730(k:_SafeStr_4672):void
         {
             var _local_2:RoomEngine = (this._snowWarEngine.roomEngine as RoomEngine);
-            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.CONST_10) as IRoomObjectController);
+            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) as IRoomObjectController);
             if (_local_3.getState(0) != k._SafeStr_18035)
             {
                 _local_2.updateObjectFurniture(_SafeStr_18716, k._SafeStr_18032, null, null, k._SafeStr_18035, null);
@@ -414,7 +414,7 @@
         private function _SafeStr_18731(k:_SafeStr_4671):void
         {
             var _local_2:RoomEngine = (this._snowWarEngine.roomEngine as RoomEngine);
-            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.CONST_10) as IRoomObjectController);
+            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) as IRoomObjectController);
             var _local_4:int = (k._SafeStr_18034 - k._SafeStr_18035);
             if (((_local_3) && (!(_local_3.getState(0) == _local_4))))
             {
@@ -426,7 +426,7 @@
         private function _SafeStr_18732(k:TreeGameObject):void
         {
             var _local_2:RoomEngine = (this._snowWarEngine.roomEngine as RoomEngine);
-            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.CONST_10) as IRoomObjectController);
+            var _local_3:IRoomObjectController = (_local_2.getRoomObject(_SafeStr_18716, k._SafeStr_18032, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE) as IRoomObjectController);
             if (((_local_3) && (!(_local_3.getState(0) == k.hits))))
             {
                 _local_2.updateObjectFurniture(_SafeStr_18716, k._SafeStr_18032, null, null, k.hits, null);
@@ -436,7 +436,7 @@
 
         private function _SafeStr_18733(k:int):IRoomObject
         {
-            return this._snowWarEngine.roomEngine.getRoomObject(_SafeStr_18716, k, RoomObjectCategoryEnum.CONST_100);
+            return this._snowWarEngine.roomEngine.getRoomObject(_SafeStr_18716, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
         }
 
         private function _SafeStr_18734(k:IRoomObject):void

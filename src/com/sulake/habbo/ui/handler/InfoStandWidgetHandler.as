@@ -642,8 +642,8 @@
             var _local_3:String;
             switch (k.category)
             {
-                case RoomObjectCategoryEnum.CONST_10:
-                case RoomObjectCategoryEnum.CONST_20:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                     if (((this._container.events == null) || (this._container.roomEngine == null)))
                     {
                         return null;
@@ -660,13 +660,13 @@
                     else
                     {
                         _local_11 = _local_7.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                        if (k.category == RoomObjectCategoryEnum.CONST_10)
+                        if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                         {
                             _local_12 = this._container.sessionDataManager.getFloorItemData(_local_11);
                         }
                         else
                         {
-                            if (k.category == RoomObjectCategoryEnum.CONST_20)
+                            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                             {
                                 _local_12 = this._container.sessionDataManager.getWallItemData(_local_11);
                             }
@@ -680,7 +680,7 @@
                         _local_6 = _local_12.id;
                     }
                     break;
-                case RoomObjectCategoryEnum.CONST_100:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                     if ((((((this._container.roomSession == null) || (this._container.sessionDataManager == null)) || (this._container.events == null)) || (this._container.roomEngine == null)) || (this._container.friendList == null)))
                     {
                         return null;
@@ -709,11 +709,11 @@
             var _local_2:int = this._container.roomSession.roomId;
             switch (k.category)
             {
-                case RoomObjectCategoryEnum.CONST_10:
-                case RoomObjectCategoryEnum.CONST_20:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM:
                     this._Str_23142(k, _local_2);
                     break;
-                case RoomObjectCategoryEnum.CONST_100:
+                case RoomObjectCategoryEnum.OBJECT_CATEGORY_USER:
                     if ((((((this._container.roomSession == null) || (this._container.sessionDataManager == null)) || (this._container.events == null)) || (this._container.roomEngine == null)) || (this._container.friendList == null)))
                     {
                         return null;
@@ -1035,13 +1035,13 @@
             else
             {
                 _local_14 = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
-                if (k.category == RoomObjectCategoryEnum.CONST_10)
+                if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                 {
                     _local_15 = this._container.sessionDataManager.getFloorItemData(_local_14);
                 }
                 else
                 {
-                    if (k.category == RoomObjectCategoryEnum.CONST_20)
+                    if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
                     {
                         _local_15 = this._container.sessionDataManager.getWallItemData(_local_14);
                     }
@@ -1055,7 +1055,7 @@
                     _local_3.rentOfferId = _local_15.rentOfferId;
                     _local_3.rentCouldBeUsedForBuyout = _local_15.rentCouldBeUsedForBuyout;
                     _local_3.availableForBuildersClub = _local_15.availableForBuildersClub;
-                    if (((!(this._container._Str_10421 == null)) && (k.category == RoomObjectCategoryEnum.CONST_10)))
+                    if (((!(this._container._Str_10421 == null)) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)))
                     {
                         this._container._Str_10421._Str_15677(_local_4.getId(), _local_15.localizedName);
                     }
@@ -1074,7 +1074,7 @@
                 _local_11 = this._container.roomEngine.getRoomObjectImage(_arg_2, k.id, k.category, new Vector3d(180), 1, null);
             }
             _local_3.image = _local_11.data;
-            _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.CONST_20);
+            _local_3._Str_2770 = (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             _local_3.isRoomController = this._container.roomSession.isRoomController;
             _local_3.roomControllerLevel = this._container.roomSession.roomControllerLevel;
             _local_3.isGodMode = this._container.sessionDataManager.isGodMode;

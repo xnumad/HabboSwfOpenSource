@@ -707,7 +707,7 @@
                 if (((_local_3 == RoomWidgetFurniActionMessage.RWFAM_MOVE) || (_local_3 == RoomWidgetFurniActionMessage.RWFUAM_ROTATE)))
                 {
                     _local_6 = this._widget.petData.roomIndex;
-                    _local_7 = RoomObjectCategoryEnum.CONST_100;
+                    _local_7 = RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
                     _local_2 = new RoomWidgetFurniActionMessage(_local_3, _local_6, _local_7, -1, _local_5);
                     this._widget.messageListener.processWidgetMessage(_local_2);
                 }

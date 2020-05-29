@@ -123,7 +123,7 @@
                         }
                         if (this._container.roomEngine != null)
                         {
-                            this._container.roomEngine.changeObjectModelData(this._container.roomEngine.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.CONST_10, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
+                            this._container.roomEngine.changeObjectModelData(this._container.roomEngine.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectVariableEnum.FURNITURE_DISABLE_PICKING_ANIMATION, 1);
                         }
                     }
                     break;
@@ -195,7 +195,7 @@
                             _local_6 = false;
                             if (_local_2._Str_4057)
                             {
-                                _local_8 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, _local_2.placedItemId, RoomObjectCategoryEnum.CONST_10);
+                                _local_8 = this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, _local_2.placedItemId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                                 if (_local_8 != null)
                                 {
                                     _local_6 = this._container.isOwnerOfFurniture(_local_8);

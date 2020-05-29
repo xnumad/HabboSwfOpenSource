@@ -203,7 +203,7 @@
             if (this._controller.roomSession.isRoomController)
             {
                 _local_4 = (_local_3.id * -1);
-                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_4, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.RENTABLE_BOT, _local_3.figure);
+                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_4, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, RoomObjectTypeEnum.RENTABLE_BOT, _local_3.figure);
                 this._controller._Str_13252();
                 return this._isPlacing;
             }

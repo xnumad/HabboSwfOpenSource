@@ -67,7 +67,7 @@
                     {
                         return null;
                     }
-                    if (_local_2.category == RoomObjectCategoryEnum.CONST_100)
+                    if (_local_2.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
                         this._container.roomEngine._Str_5538(this._container.roomSession.roomId, _local_2.id, _local_2.category);
                     }
@@ -104,15 +104,15 @@
             }
             var k:int = this._container.roomSession.roomId;
             var _local_2:Array = [];
-            var _local_4:int = this._container.roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_100);
+            var _local_4:int = this._container.roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_3 = this._container.roomEngine.getRoomObjectWithIndex(k, _local_5, RoomObjectCategoryEnum.CONST_100);
+                _local_3 = this._container.roomEngine.getRoomObjectWithIndex(k, _local_5, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 _local_6 = this._container.roomSession.userDataManager.getUserDataByIndex(_local_3.getId());
                 if (_local_6 != null)
                 {
-                    _local_2.push(new _Str_3405(_local_6._Str_2713, RoomObjectCategoryEnum.CONST_100, _local_6.name));
+                    _local_2.push(new _Str_3405(_local_6._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_6.name));
                 }
                 _local_5++;
             }

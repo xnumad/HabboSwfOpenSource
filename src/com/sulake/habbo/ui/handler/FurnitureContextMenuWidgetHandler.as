@@ -225,12 +225,12 @@
 
         public function _Str_25023(k:int):Rectangle
         {
-            return this._container.roomEngine.getRoomObjectBoundingRectangle(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10, this._container.getFirstCanvasId());
+            return this._container.roomEngine.getRoomObjectBoundingRectangle(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, this._container.getFirstCanvasId());
         }
 
         public function _Str_22398(k:int):Point
         {
-            return this._container.roomEngine.getRoomObjectScreenLocation(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10, this._container.getFirstCanvasId());
+            return this._container.roomEngine.getRoomObjectScreenLocation(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, this._container.getFirstCanvasId());
         }
 
         public function _Str_24389(k:int):void
@@ -249,7 +249,7 @@
             {
                 return null;
             }
-            return this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.CONST_10);
+            return this._container.roomEngine.getRoomObject(this._container.roomSession.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
         }
 
         private function _Str_23634(k:_Str_8674):void

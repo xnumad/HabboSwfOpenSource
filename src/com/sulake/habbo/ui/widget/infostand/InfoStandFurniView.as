@@ -220,10 +220,10 @@
         private function getRoomObject(k:int):IRoomObject
         {
             var _local_2:int = this._Str_2268.handler.container.roomSession.roomId;
-            var _local_3:IRoomObject = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.CONST_10);
+            var _local_3:IRoomObject = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_3 == null)
             {
-                _local_3 = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.CONST_20);
+                _local_3 = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             }
             return _local_3;
         }
@@ -236,7 +236,7 @@
             {
                 return null;
             }
-            var _local_3:* = (this._Str_2268.furniData.category == RoomObjectCategoryEnum.CONST_20);
+            var _local_3:* = (this._Str_2268.furniData.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             var _local_4:int = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
             if (_local_3)
             {

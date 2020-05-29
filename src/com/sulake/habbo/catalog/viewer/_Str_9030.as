@@ -115,11 +115,11 @@
             {
                 return null;
             }
-            if (k.category == RoomObjectCategoryEnum.CONST_10)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
                 return this._roomEngine.getFurnitureIcon(k.typeId, this);
             }
-            if (k.category == RoomObjectCategoryEnum.CONST_20)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
             {
                 return this._roomEngine.getWallItemIcon(k.typeId, this, k._Str_4766);
             }

@@ -46,7 +46,7 @@
             {
                 if (((_local_4.objectType == "boutique_mannequin1") && (_local_4.name.indexOf("mannequin_") == 0)))
                 {
-                    _local_5 = _arg_2.getRoomObject(_arg_2.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.CONST_10);
+                    _local_5 = _arg_2.getRoomObject(_arg_2.activeRoomId, _local_4._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                     if (_local_5 != null)
                     {
                         _local_6 = IRoomObjectSpriteVisualization(_local_5.getVisualization()).getSpriteList();
@@ -150,7 +150,7 @@
             var _local_16:RoomObjectSpriteData;
             var _local_5:Vector.<Object> = new Vector.<Object>();
             var _local_6:Vector.<RoomObjectSpriteData> = _arg_2._Str_15625();
-            var _local_7:Array = _arg_3.getRoomObjects(_arg_3.activeRoomId, RoomObjectCategoryEnum.CONST_100);
+            var _local_7:Array = _arg_3.getRoomObjects(_arg_3.activeRoomId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             for each (_local_8 in _local_7)
             {
                 if (_local_8.getId() != _arg_4)
@@ -169,7 +169,7 @@
                                 break;
                             }
                         }
-                        _local_15 = _arg_3.getRoomObjectScreenLocation(_arg_3.activeRoomId, _local_8.getId(), RoomObjectCategoryEnum.CONST_100, _arg_2.getId());
+                        _local_15 = _arg_3.getRoomObjectScreenLocation(_arg_3.activeRoomId, _local_8.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _arg_2.getId());
                         if (_local_15)
                         {
                             if (_local_13 == 0)
@@ -387,7 +387,7 @@
             var _local_22:Vector.<Point>;
             var _local_23:IPlaneDrawingData;
             var _local_5:Array = [];
-            var _local_6:IRoomObject = _arg_3.getRoomObject(_arg_3.activeRoomId, RoomEngine.OBJECT_ID_ROOM, RoomObjectCategoryEnum.CONST_0);
+            var _local_6:IRoomObject = _arg_3.getRoomObject(_arg_3.activeRoomId, RoomEngine.OBJECT_ID_ROOM, RoomObjectCategoryEnum.OBJECT_CATEGORY_ROOM);
             var _local_7:IPlaneVisualization = (_local_6.getVisualization() as IPlaneVisualization);
             if (_local_7)
             {

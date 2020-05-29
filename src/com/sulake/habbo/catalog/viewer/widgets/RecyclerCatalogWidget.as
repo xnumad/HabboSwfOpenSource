@@ -220,11 +220,11 @@
             {
                 return null;
             }
-            if (k.category == RoomObjectCategoryEnum.CONST_10)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
                 return page.viewer.roomEngine.getFurnitureIcon(k.typeId, null);
             }
-            if (k.category == RoomObjectCategoryEnum.CONST_20)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM)
             {
                 return page.viewer.roomEngine.getWallItemIcon(k.typeId, null, k.xxxExtra);
             }

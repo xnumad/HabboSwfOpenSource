@@ -94,7 +94,7 @@
         public function open(k:int, _arg_2:int, _arg_3:int):void
         {
             var _local_4:int = this._widget.handler.roomSession.roomId;
-            var _local_5:IRoomObject = this._widget.handler.roomEngine.getRoomObject(_local_4, k, RoomObjectCategoryEnum.CONST_10);
+            var _local_5:IRoomObject = this._widget.handler.roomEngine.getRoomObject(_local_4, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_5 != null)
             {
                 this._furnitureData = this._widget.handler.getFurniData(_local_5);
@@ -398,7 +398,7 @@
 
         private function _Str_13861(k:int):IRoomObject
         {
-            return this._widget.handler.roomEngine.getRoomObject(this._widget.handler.roomEngine.activeRoomId, k, RoomObjectCategoryEnum.CONST_100);
+            return this._widget.handler.roomEngine.getRoomObject(this._widget.handler.roomEngine.activeRoomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
         }
 
         private function _Str_3060(k:BitmapData):void
@@ -445,7 +445,7 @@
                 case PREVIEW_IMAGE_REGION:
                     if (this._petData != null)
                     {
-                        this._Str_22884(this._petData._Str_2713, RoomObjectCategoryEnum.CONST_100);
+                        this._Str_22884(this._petData._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                     }
                     break;
                 case HEADER_BUTTON_CLOSE:

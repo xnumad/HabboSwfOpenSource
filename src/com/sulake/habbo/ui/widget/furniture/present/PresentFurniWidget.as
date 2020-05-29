@@ -554,7 +554,7 @@
                 else
                 {
                     _local_3 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.roomId;
-                    _local_4 = RoomObjectCategoryEnum.CONST_10;
+                    _local_4 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
                     _local_5 = this._roomEngine.getRoomObject(_local_3, this._placedItemId, _local_4);
                     if (_local_5 != null)
                     {
@@ -873,15 +873,15 @@
                 k = this._roomEngine.activeRoomId;
                 if (this._placedItemType == ProductTypeEnum.PET)
                 {
-                    _local_2 = this._roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.CONST_100);
+                    _local_2 = this._roomEngine.getRoomObjectCount(k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                     _local_3 = 0;
                     while (_local_3 < _local_2)
                     {
-                        _local_4 = this._roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.CONST_100);
+                        _local_4 = this._roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                         _local_5 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                         if (((!(_local_5 == null)) && (_local_5.id == this._placedItemId)))
                         {
-                            this._roomEngine._Str_5538(k, _local_5._Str_2713, RoomObjectCategoryEnum.CONST_100);
+                            this._roomEngine._Str_5538(k, _local_5._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                             break;
                         }
                         _local_3++;
@@ -889,7 +889,7 @@
                 }
                 else
                 {
-                    this._roomEngine._Str_5538(k, this._placedItemId, RoomObjectCategoryEnum.CONST_10);
+                    this._roomEngine._Str_5538(k, this._placedItemId, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 }
             }
         }

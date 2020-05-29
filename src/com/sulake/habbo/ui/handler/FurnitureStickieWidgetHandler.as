@@ -97,7 +97,7 @@
                     }
                     if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._container.roomEngine.modifyRoomObjectData(_local_4._Str_1577, RoomObjectCategoryEnum.CONST_20, _local_4._Str_10471, _local_4.text);
+                        this._container.roomEngine.modifyRoomObjectData(_local_4._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM, _local_4._Str_10471, _local_4.text);
                     }
                     break;
                 case RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE:
@@ -108,7 +108,7 @@
                     }
                     if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
                     {
-                        this._container.roomEngine.deleteRoomObject(_local_5._Str_1577, RoomObjectCategoryEnum.CONST_20);
+                        this._container.roomEngine.deleteRoomObject(_local_5._Str_1577, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
                     }
                     break;
             }

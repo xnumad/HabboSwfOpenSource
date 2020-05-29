@@ -90,7 +90,7 @@
         {
             if (((!(this._container == null)) && (!(this._container.roomEngine == null))))
             {
-                this._container.roomEngine.deleteRoomObject(k, RoomObjectCategoryEnum.CONST_20);
+                this._container.roomEngine.deleteRoomObject(k, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             }
         }
 

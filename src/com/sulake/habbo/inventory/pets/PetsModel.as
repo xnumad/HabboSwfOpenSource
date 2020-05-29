@@ -213,7 +213,7 @@
             if (this._controller.roomSession.isRoomController)
             {
                 _local_5 = (_local_3.id * -1);
-                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_5, RoomObjectCategoryEnum.CONST_100, RoomObjectTypeEnum.PET, _local_3.figureString, null, -1, -1, _local_4);
+                this._isPlacing = this._roomEngine.initializeRoomObjectInsert(RoomObjectPlacementSource.INVENTORY, _local_5, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, RoomObjectTypeEnum.PET, _local_3.figureString, null, -1, -1, _local_4);
                 this._controller._Str_13252();
                 return this._isPlacing;
             }

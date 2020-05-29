@@ -40,7 +40,7 @@
 
         private function onRoomChat(k:RoomSessionChatEvent):void
         {
-            var _local_2:IRoomObject = this._component.roomEngine.getRoomObject(k.session.roomId, k.userId, RoomObjectCategoryEnum.CONST_100);
+            var _local_2:IRoomObject = this._component.roomEngine.getRoomObject(k.session.roomId, k.userId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             var _local_3:IVector3d;
             if (_local_2 != null)
             {

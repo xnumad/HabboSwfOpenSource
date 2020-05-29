@@ -390,7 +390,7 @@
             if (_local_3 != null)
             {
                 _local_4 = this._Str_2268.handler.container.roomSession.roomId;
-                _local_5 = RoomObjectCategoryEnum.CONST_10;
+                _local_5 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
                 this._Str_2268.handler.container.roomEngine._Str_5538(_local_4, _local_3.getId(), _local_5);
                 return true;
             }
@@ -402,7 +402,7 @@
             var _local_2:IRoomObject = this._Str_8946(k);
             if (_local_2 != null)
             {
-                this._Str_2268.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.CONST_10, RoomObjectOperationEnum.OBJECT_PICKUP);
+                this._Str_2268.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectOperationEnum.OBJECT_PICKUP);
                 return true;
             }
             return false;
@@ -417,7 +417,7 @@
         private function _Str_8946(k:int):IRoomObject
         {
             var _local_2:int = this._Str_2268.handler.container.roomSession.roomId;
-            var _local_3:int = RoomObjectCategoryEnum.CONST_10;
+            var _local_3:int = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
             var _local_4:IRoomObject = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, _local_3);
             return _local_4;
         }

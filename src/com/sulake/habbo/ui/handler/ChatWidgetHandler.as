@@ -210,7 +210,7 @@
                     _local_3 = (k as RoomSessionChatEvent);
                     if (_local_3 != null)
                     {
-                        _local_4 = this._container.roomEngine.getRoomObject(_local_3.session.roomId, _local_3.userId, RoomObjectCategoryEnum.CONST_100);
+                        _local_4 = this._container.roomEngine.getRoomObject(_local_3.session.roomId, _local_3.userId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                         if (_local_4 != null)
                         {
                             _local_5 = this._container.roomEngine.getRoomCanvasGeometry(_local_3.session.roomId, this._container.getFirstCanvasId());
@@ -322,7 +322,7 @@
                                     _local_19 = SystemChatStyleEnum.GENERIC;
                                 }
                                 _local_23 = _Str_3535.RWCUE_EVENT_CHAT;
-                                _local_2 = new _Str_3535(_local_23, _local_3.userId, _local_22, _local_11, RoomObjectCategoryEnum.CONST_100, _local_20, _local_21, _local_6, _local_7, _local_13, _local_12, _local_3.session.roomId, _local_18, _local_19, _local_3.links);
+                                _local_2 = new _Str_3535(_local_23, _local_3.userId, _local_22, _local_11, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, _local_20, _local_21, _local_6, _local_7, _local_13, _local_12, _local_3.session.roomId, _local_18, _local_19, _local_3.links);
                             }
                         }
                     }
@@ -339,7 +339,7 @@
 
         private function _Str_13861(k:int):IRoomObject
         {
-            return this.container.roomEngine.getRoomObject(this.container.roomEngine.activeRoomId, k, RoomObjectCategoryEnum.CONST_100);
+            return this.container.roomEngine.getRoomObject(this.container.roomEngine.activeRoomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
         }
 
         public function _Str_7081(k:String):BitmapData

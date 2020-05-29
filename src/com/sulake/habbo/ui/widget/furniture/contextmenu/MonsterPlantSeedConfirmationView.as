@@ -68,7 +68,7 @@
         public function open(k:int):void
         {
             var _local_2:int = this._widget.handler.roomSession.roomId;
-            var _local_3:IRoomObject = this._widget.handler.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.CONST_10);
+            var _local_3:IRoomObject = this._widget.handler.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_3 != null)
             {
                 this._furnitureData = this._widget.handler.getFurniData(_local_3);

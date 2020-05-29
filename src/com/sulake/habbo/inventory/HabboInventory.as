@@ -765,11 +765,11 @@
             var _local_3:Boolean;
             if (k._Str_2770)
             {
-                _local_2 = RoomObjectCategoryEnum.CONST_20;
+                _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
             else
             {
-                _local_2 = RoomObjectCategoryEnum.CONST_10;
+                _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
             }
             if (k.category == FurniCategory.POSTER)
             {

@@ -165,7 +165,7 @@
         private function onRoomObjectAdded(k:RoomEngineObjectEvent):void
         {
             var _local_2:RoomUserData;
-            if (k.category == RoomObjectCategoryEnum.CONST_100)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
             {
                 _local_2 = this.handler.roomSession.userDataManager.getUserDataByIndex(k._Str_1577);
                 if (_local_2)
@@ -187,7 +187,7 @@
             var _local_6:int;
             var _local_7:Array;
             var _local_8:UseProductView;
-            if (k.category == RoomObjectCategoryEnum.CONST_100)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
             {
                 for each (_local_3 in this._avatarNameBubbles)
                 {
@@ -231,7 +231,7 @@
                     }
                 }
             }
-            if (k.category == RoomObjectCategoryEnum.CONST_10)
+            if (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
             {
                 _local_6 = k._Str_1577;
                 if (this._useProductConfirmationView != null)
@@ -529,13 +529,13 @@
                     this._isInitialized = true;
                     break;
                 case _Str_3735.RWONE_TYPE:
-                    if (_Str_3735(k).category == RoomObjectCategoryEnum.CONST_100)
+                    if (_Str_3735(k).category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
                         this._Str_12674(_Str_3735(k).userId, _Str_3735(k).userName, _Str_3735(k).userType, _Str_3735(k).roomIndex, false, null);
                     }
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.FURNI_ADDED:
-                    if (RoomWidgetRoomObjectUpdateEvent(k).category == RoomObjectCategoryEnum.CONST_10)
+                    if (RoomWidgetRoomObjectUpdateEvent(k).category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)
                     {
                         if (this._breedPetsResultView != null)
                         {
@@ -544,7 +544,7 @@
                     }
                     break;
                 case RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED:
-                    if (RoomWidgetRoomObjectUpdateEvent(k).category == RoomObjectCategoryEnum.CONST_100)
+                    if (RoomWidgetRoomObjectUpdateEvent(k).category == RoomObjectCategoryEnum.OBJECT_CATEGORY_USER)
                     {
                         this._handlePetInfo = true;
                     }
@@ -754,7 +754,7 @@
                     {
                         _local_24 = this.handler.container.roomEngine.activeRoomId;
                         _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager._Str_6958(_local_19._Str_5455, 4);
-                        messageListener.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _local_25._Str_2713, RoomObjectCategoryEnum.CONST_100));
+                        messageListener.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _local_25._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER));
                         this.handler.container.roomEngine.selectAvatar(_local_24, _local_25._Str_2713);
                     }
                     break;
@@ -807,11 +807,11 @@
             var _local_5:IRoomObject;
             var _local_6:RoomUserData;
             var _local_2:int = this.handler.container.roomSession.roomId;
-            var _local_3:int = this.handler.container.roomEngine.getRoomObjectCount(_local_2, RoomObjectCategoryEnum.CONST_100);
+            var _local_3:int = this.handler.container.roomEngine.getRoomObjectCount(_local_2, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             var _local_4:int;
             while (_local_4 < _local_3)
             {
-                _local_5 = this.handler.container.roomEngine.getRoomObjectWithIndex(_local_2, _local_4, RoomObjectCategoryEnum.CONST_100);
+                _local_5 = this.handler.container.roomEngine.getRoomObjectWithIndex(_local_2, _local_4, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 _local_6 = this.handler.container.roomSession.userDataManager.getUserDataByIndex(_local_5.getId());
                 if (((_local_6 == null) || (!(_local_6.type == RoomObjectTypeEnum.PET))))
                 {
@@ -862,7 +862,7 @@
             {
                 return;
             }
-            _local_3 = new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_SELECT_OBJECT, _local_2._Str_2713, RoomObjectCategoryEnum.CONST_100);
+            _local_3 = new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_SELECT_OBJECT, _local_2._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
             this.handler.container.processWidgetMessage(_local_3);
         }
 
@@ -1589,12 +1589,12 @@
             var _local_7:RoomUserData;
             var k:int = this.handler.container.sessionDataManager.userId;
             var _local_2:int = this.handler.roomEngine.activeRoomId;
-            var _local_3:int = RoomObjectCategoryEnum.CONST_100;
+            var _local_3:int = RoomObjectCategoryEnum.OBJECT_CATEGORY_USER;
             var _local_4:int = this.handler.roomEngine.getRoomObjectCount(_local_2, _local_3);
             var _local_5:int;
             while (_local_5 < _local_4)
             {
-                _local_6 = this.handler.roomEngine.getRoomObjectWithIndex(_local_2, _local_5, RoomObjectCategoryEnum.CONST_100);
+                _local_6 = this.handler.roomEngine.getRoomObjectWithIndex(_local_2, _local_5, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
                 if (_local_6 != null)
                 {
                     _local_7 = this.handler.roomSession.userDataManager.getUserDataByIndex(_local_6.getId());

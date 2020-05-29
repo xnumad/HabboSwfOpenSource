@@ -69,7 +69,7 @@
 
         private function getFurni(k:int):IRoomObject
         {
-            return this._userDefinedRoomEvents.roomEngine.getRoomObject(this._userDefinedRoomEvents.roomId, k, RoomObjectCategoryEnum.CONST_10);
+            return this._userDefinedRoomEvents.roomEngine.getRoomObject(this._userDefinedRoomEvents.roomId, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
         }
 
         private function _Str_20934(k:IRoomObject):void

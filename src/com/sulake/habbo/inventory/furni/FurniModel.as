@@ -1234,11 +1234,11 @@
             var _local_3:Boolean;
             if (k._Str_2770)
             {
-                _local_2 = RoomObjectCategoryEnum.CONST_20;
+                _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM;
             }
             else
             {
-                _local_2 = RoomObjectCategoryEnum.CONST_10;
+                _local_2 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
             }
             if (((k.category == FurniCategory.POSTER) || (this._Str_22524(k))))
             {
@@ -1348,7 +1348,7 @@
             }
             if (this._roomEngine != null)
             {
-                k = ((this._roomItemToSelect._Str_2770) ? RoomObjectCategoryEnum.CONST_20 : RoomObjectCategoryEnum.CONST_10);
+                k = ((this._roomItemToSelect._Str_2770) ? RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM : RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
                 this._roomEngine._Str_5538(this._roomItemToSelect.flatId, Math.abs(this._roomItemToSelect.id), k);
             }
             this._roomItemToSelect = null;
