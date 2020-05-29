@@ -105,7 +105,7 @@
             return this._Str_20853;
         }
 
-        public function get _Str_11198():Boolean
+        public function get nameChangeAllowed():Boolean
         {
             return this._nameChangeAllowed;
         }

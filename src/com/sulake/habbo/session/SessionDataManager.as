@@ -331,7 +331,7 @@
             this._figure = _local_3.figure;
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
-            this._nameChangeAllowed = _local_3._Str_11198;
+            this._nameChangeAllowed = _local_3.nameChangeAllowed;
             this._Str_9602 = _local_3._Str_21338;
             this._ignoredUsersManager.initIgnoreList();
         }
@@ -1074,7 +1074,7 @@
             return this._localizationManager;
         }
 
-        public function get _Str_11198():Boolean
+        public function get nameChangeAllowed():Boolean
         {
             return this._nameChangeAllowed;
         }

@@ -25,7 +25,7 @@
         function get realName():String;
         function get figure():String;
         function get gender():String;
-        function get _Str_11198():Boolean;
+        function get nameChangeAllowed():Boolean;
         function get isAnyRoomController():Boolean;
         function get isAmbassador():Boolean;
         function get _Str_22301():Boolean;

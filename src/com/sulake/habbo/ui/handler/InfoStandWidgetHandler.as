@@ -840,7 +840,7 @@
             if (_local_5 == RoomWidgetUpdateInfostandUserEvent.OWN_USER)
             {
                 _local_6.realName = this._container.sessionDataManager.realName;
-                _local_6.allowNameChange = this._container.sessionDataManager._Str_11198;
+                _local_6.allowNameChange = this._container.sessionDataManager.nameChangeAllowed;
             }
             _local_6.amIOwner = this._container.roomSession.isRoomController;
             _local_6.isGuildRoom = this._container.roomSession.isGuildRoom;

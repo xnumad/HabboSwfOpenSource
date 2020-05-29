@@ -238,7 +238,7 @@
         {
             var k:int = this._container.sessionDataManager.userId;
             var _local_2:String = this._container.sessionDataManager.userName;
-            var _local_3:Boolean = this._container.sessionDataManager._Str_11198;
+            var _local_3:Boolean = this._container.sessionDataManager.nameChangeAllowed;
             var _local_4:RoomUserData = this._container.roomSession.userDataManager.getUserData(k);
             if (_local_4)
             {
