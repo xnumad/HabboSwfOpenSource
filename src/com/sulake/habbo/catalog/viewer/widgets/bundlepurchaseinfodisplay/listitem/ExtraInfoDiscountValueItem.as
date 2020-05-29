@@ -29,8 +29,8 @@
         private static const DISCOUNT_CURRENCY_ICON_LEFT:String = "discount_currency_icon_left";
         private static const DISCOUNT_CURRENCY_VALUE_RIGHT:String = "discount_currency_value_right";
         private static const DISCOUNT_CURRENCY_ICON_RIGHT:String = "discount_currency_icon_right";
-        private static const _Str_7179:int = 4;
-        private static const _Str_12517:int = (16 + _Str_7179);//20
+        private static const STRIKETHROUGH_LEFT_MARGIN:int = 4;
+        private static const STRIKETHROUGH_RIGHT_MARGIN:int = (16 + STRIKETHROUGH_LEFT_MARGIN);//20
 
         private var _window:IWindowContainer = null;
         private var _dirty:Boolean = true;
@@ -177,13 +177,13 @@
             var k:ITextWindow = ITextWindow(this._window.findChildByName(TOTAL_CURRENCY_VALUE_LEFT));
             var _local_2:int = ((k.x + k.width) - k.textWidth);
             var _local_3:IWindowContainer = IWindowContainer(this._window.findChildByName(STRIKETROUGH_TOTAL_CURRENCY_LEFT));
-            _local_3.x = (_local_2 - _Str_7179);
-            _local_3.width = ((_Str_7179 + k.textWidth) + _Str_12517);
+            _local_3.x = (_local_2 - STRIKETHROUGH_LEFT_MARGIN);
+            _local_3.width = ((STRIKETHROUGH_LEFT_MARGIN + k.textWidth) + STRIKETHROUGH_RIGHT_MARGIN);
             var _local_4:ITextWindow = ITextWindow(this._window.findChildByName(TOTAL_CURRENCY_VALUE_RIGHT));
             var _local_5:int = ((_local_4.x + _local_4.width) - _local_4.textWidth);
             var _local_6:IWindowContainer = IWindowContainer(this._window.findChildByName(STRIKETROUGH_TOTAL_CURRENCY_RIGHT));
-            _local_6.x = (_local_5 - _Str_7179);
-            _local_6.width = ((_Str_7179 + _local_4.textWidth) + _Str_12517);
+            _local_6.x = (_local_5 - STRIKETHROUGH_LEFT_MARGIN);
+            _local_6.width = ((STRIKETHROUGH_LEFT_MARGIN + _local_4.textWidth) + STRIKETHROUGH_RIGHT_MARGIN);
         }
 
         private function _Str_3281(k:String, _arg_2:String):void
