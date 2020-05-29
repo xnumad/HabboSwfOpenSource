@@ -13,7 +13,7 @@
     import com.sulake.habbo.catalog.offers.IOfferCenter;
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4528;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrKickbackData;
     import com.sulake.core.runtime.IContext;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.core.runtime.ComponentDependency;
@@ -60,7 +60,7 @@
         private var _messageEvents:Vector.<IMessageEvent>;
         private var _view:ClubCenterView;
         private var _breakdownView:ClubSpecialInfoBubbleView;
-        private var _data:_Str_4528;
+        private var _data:ScrKickbackData;
         private var _dataTimestamp:int;
         private var _dataPending:Boolean = false;
         private var _badgeId:String;
@@ -255,7 +255,7 @@
             }
             else
             {
-                this._data = new _Str_4528();
+                this._data = new ScrKickbackData();
                 this.populate();
             }
         }

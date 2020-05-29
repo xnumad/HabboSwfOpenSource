@@ -12,7 +12,7 @@
     import com.sulake.core.window.components.IButtonWindow;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.habbo.catalog.clubcenter.util.ClubStatus;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4528;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrKickbackData;
     import com.sulake.habbo.catalog.purse.IPurse;
     import flash.display.BitmapData;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -76,7 +76,7 @@
             this._controller = null;
         }
 
-        public function _Str_22518(k:_Str_4528, _arg_2:IPurse, _arg_3:int, _arg_4:BitmapData):void
+        public function _Str_22518(k:ScrKickbackData, _arg_2:IPurse, _arg_3:int, _arg_4:BitmapData):void
         {
             var _local_8:IButtonWindow;
             var _local_9:int;

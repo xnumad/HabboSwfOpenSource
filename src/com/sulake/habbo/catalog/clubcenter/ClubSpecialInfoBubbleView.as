@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.catalog.clubcenter
 {
-    import com.sulake.habbo.communication.messages.incoming.users._Str_4528;
+    import com.sulake.habbo.communication.messages.incoming.users.ScrKickbackData;
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
@@ -17,12 +17,12 @@
     {
         private static const _Str_3226:int = 8;
 
-        private var _data:_Str_4528;
+        private var _data:ScrKickbackData;
         private var _controller:HabboClubCenter;
         private var _window:IWindowContainer;
         private var _activateTimer:Timer;
 
-        public function ClubSpecialInfoBubbleView(k:HabboClubCenter, _arg_2:IHabboWindowManager, _arg_3:_Str_4528, _arg_4:IWindow):void
+        public function ClubSpecialInfoBubbleView(k:HabboClubCenter, _arg_2:IHabboWindowManager, _arg_3:ScrKickbackData, _arg_4:IWindow):void
         {
             this._data = _arg_3;
             this._controller = k;
