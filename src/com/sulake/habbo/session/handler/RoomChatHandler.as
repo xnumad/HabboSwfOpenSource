@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
     import com.sulake.habbo.communication.messages.incoming.users.PetSupplementedNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.FloodControlMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
+    import com.sulake.habbo.communication.messages.incoming.users.HandItemReceivedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.RemainingMutePeriodEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
@@ -38,7 +38,7 @@
             k.addMessageEvent(new _Str_8482(this._Str_23513));
             k.addMessageEvent(new PetSupplementedNotificationEvent(this._Str_23073));
             k.addMessageEvent(new FloodControlMessageEvent(this.onFloodControl));
-            k.addMessageEvent(new _Str_8702(this._Str_23267));
+            k.addMessageEvent(new HandItemReceivedMessageEvent(this._Str_23267));
             k.addMessageEvent(new RemainingMutePeriodEvent(this._Str_22326));
         }
 
@@ -172,7 +172,7 @@
             listener.events.dispatchEvent(new RoomSessionChatEvent(_local_4, _local_3, _local_6._Str_2713, "", _local_5, SystemChatStyleEnum.GENERIC, null, _local_7));
         }
 
-        private function _Str_23267(k:_Str_8702):void
+        private function _Str_23267(k:HandItemReceivedMessageEvent):void
         {
             var _local_2:IRoomSession;
             if (((listener) && (listener.events)))

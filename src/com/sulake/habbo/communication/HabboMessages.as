@@ -348,7 +348,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_8702;
+	import com.sulake.habbo.communication.messages.incoming.users.HandItemReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ChangeEmailResultEvent;
@@ -1335,7 +1335,7 @@
             INCOMING_PACKETS[3512] = _Str_8022;
             INCOMING_PACKETS[3522] = _Str_9259;
             INCOMING_PACKETS[3523] = IdentityAccountsEvent;
-            INCOMING_PACKETS[354] = _Str_8702;
+            INCOMING_PACKETS[354] = HandItemReceivedMessageEvent;
             INCOMING_PACKETS[3547] = _Str_4196;
             INCOMING_PACKETS[3559] = _Str_7811;
             INCOMING_PACKETS[3560] = _Str_8191;

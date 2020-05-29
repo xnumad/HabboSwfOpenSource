@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.HandItemReceivedMessageParser;
 
-    public class _Str_8702 extends MessageEvent implements IMessageEvent 
+    public class HandItemReceivedMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8702(k:Function)
+        public function HandItemReceivedMessageEvent(k:Function)
         {
             super(k, HandItemReceivedMessageParser);
         }
