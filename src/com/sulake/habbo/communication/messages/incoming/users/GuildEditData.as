@@ -10,7 +10,7 @@
         private var _groupName:String;
         private var _groupDesc:String;
         private var _baseRoomId:int;
-        private var _Str_21311:int;
+        private var _primaryColorId:int;
         private var _Str_19050:int;
         private var _locked:Boolean;
         private var _url:String;
@@ -38,7 +38,7 @@
             this._groupName = k.readString();
             this._groupDesc = k.readString();
             this._baseRoomId = k.readInteger();
-            this._Str_21311 = k.readInteger();
+            this._primaryColorId = k.readInteger();
             this._Str_19050 = k.readInteger();
             this._Str_8166 = k.readInteger();
             this._Str_21056 = k.readInteger();
@@ -93,7 +93,7 @@
 
         public function get _Str_7342():int
         {
-            return this._Str_21311;
+            return this._primaryColorId;
         }
 
         public function get _Str_7590():int
