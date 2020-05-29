@@ -539,12 +539,12 @@
             return this._Str_20255;
         }
 
-        public function roomCameraFollowDisabled(k:Boolean):void
+        public function setRoomCameraFollowDisabled(k:Boolean):void
         {
             this._roomCameraFollowDisabled = k;
         }
 
-        public function get roomCameraFollowDisabled():Boolean
+        public function get isRoomCameraFollowDisabled():Boolean
         {
             return this._roomCameraFollowDisabled;
         }

@@ -1131,7 +1131,7 @@
                         _local_8._Str_16377 = _local_7.updateId;
                         _local_8._Str_18975 = _local_14.width;
                         _local_8._Str_15953 = _local_14.height;
-                        if (!this._sessionDataManager.roomCameraFollowDisabled)
+                        if (!this._sessionDataManager.isRoomCameraFollowDisabled)
                         {
                             if (this.useOffsetScrolling)
                             {
