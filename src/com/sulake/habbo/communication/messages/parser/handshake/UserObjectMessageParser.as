@@ -17,7 +17,7 @@
         private var _petRespectLeft:int;
         private var _Str_21322:Boolean;
         private var _Str_20853:String;
-        private var _Str_7394:Boolean;
+        private var _nameChangeAllowed:Boolean;
         private var _Str_9602:Boolean = false;
 
 
@@ -40,7 +40,7 @@
             this._petRespectLeft = k.readInteger();
             this._Str_21322 = k.readBoolean();
             this._Str_20853 = k.readString();
-            this._Str_7394 = k.readBoolean();
+            this._nameChangeAllowed = k.readBoolean();
             this._Str_9602 = k.readBoolean();
             return true;
         }
@@ -107,7 +107,7 @@
 
         public function get _Str_11198():Boolean
         {
-            return this._Str_7394;
+            return this._nameChangeAllowed;
         }
 
         public function get _Str_21338():Boolean

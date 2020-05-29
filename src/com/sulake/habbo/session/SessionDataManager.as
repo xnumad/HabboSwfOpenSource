@@ -93,7 +93,7 @@
         private var _respectTotal:int = 0;
         private var _respectLeft:int = 0;
         private var _petRespectLeft:int = 0;
-        private var _Str_7394:Boolean = true;
+        private var _nameChangeAllowed:Boolean = true;
         private var _Str_25790:Array;
         private var _Str_20692:Boolean;
         private var _Str_20046:Boolean;
@@ -331,7 +331,7 @@
             this._figure = _local_3.figure;
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
-            this._Str_7394 = _local_3._Str_11198;
+            this._nameChangeAllowed = _local_3._Str_11198;
             this._Str_9602 = _local_3._Str_21338;
             this._ignoredUsersManager.initIgnoreList();
         }
@@ -373,7 +373,7 @@
             if (_local_3.webId == this._userId)
             {
                 this._name = _local_3.newName;
-                this._Str_7394 = false;
+                this._nameChangeAllowed = false;
                 events.dispatchEvent(new UserNameUpdateEvent(this._name));
             }
         }
@@ -383,7 +383,7 @@
             var _local_2:_Str_6553 = k.getParser();
             if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
             {
-                this._Str_7394 = false;
+                this._nameChangeAllowed = false;
                 events.dispatchEvent(new UserNameUpdateEvent(_local_2.name));
             }
         }
@@ -1076,7 +1076,7 @@
 
         public function get _Str_11198():Boolean
         {
-            return this._Str_7394;
+            return this._nameChangeAllowed;
         }
 
         public function get _Str_22295():Boolean
