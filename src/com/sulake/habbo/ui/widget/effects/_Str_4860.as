@@ -236,12 +236,12 @@
             }
             if (this._effect.icon)
             {
-                this._Str_14653("effect_icon", this._effect.icon);
+                this.setElementBitmap("effect_icon", this._effect.icon);
             }
             this._window.rectangle = _local_3.rectangle;
         }
 
-        private function _Str_14653(k:String, _arg_2:BitmapData):void
+        private function setElementBitmap(k:String, _arg_2:BitmapData):void
         {
             var _local_3:IBitmapWrapperWindow = (this._window.findChildByName(k) as IBitmapWrapperWindow);
             if (_local_3 != null)
@@ -285,7 +285,7 @@
         {
             var _local_3:BitmapDataAsset = (this._widget.assets.getAssetByName(_arg_2) as BitmapDataAsset);
             var _local_4:BitmapData = (_local_3.content as BitmapData);
-            this._Str_14653(k, _local_4);
+            this.setElementBitmap(k, _local_4);
         }
     }
 }

@@ -105,7 +105,7 @@
         private function createWindow():void
         {
             this._window = IWindowContainer(this._catalog.utils.createWindow("discountValueItem"));
-            this._Str_14653(ICON_BITMAP, "thumb_up");
+            this.setElementBitmap(ICON_BITMAP, "thumb_up");
             this._Str_22406();
         }
 
@@ -191,7 +191,7 @@
             this._window.findChildByName(k).caption = _arg_2;
         }
 
-        private function _Str_14653(k:String, _arg_2:String):void
+        private function setElementBitmap(k:String, _arg_2:String):void
         {
             var _local_3:IBitmapWrapperWindow = IBitmapWrapperWindow(this._window.findChildByName(k));
             var _local_4:BitmapData = BitmapData(this._catalog.assets.getAssetByName(_arg_2).content);
