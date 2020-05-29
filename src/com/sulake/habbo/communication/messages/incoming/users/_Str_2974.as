@@ -4,14 +4,14 @@
 
     public class _Str_2974 
     {
-        public static const _Str_6787:int = 0;
-        public static const _Str_6562:int = 1;
-        public static const _Str_7780:int = 2;
-        public static const _Str_11591:int = 3;
-        public static const _Str_8761:int = 4;
-        public static const _Str_15167:int = 0;
-        public static const _Str_8362:int = 1;
-        public static const _Str_16876:int = 2;
+        public static const TYPE_REGULAR:int = 0;
+        public static const TYPE_EXCLUSIVE:int = 1;
+        public static const TYPE_CLOSED:int = 2;
+        public static const TYPE_LARGE:int = 3;
+        public static const TYPE_LARGE_CLOSED:int = 4;
+        public static const STATUS_NOT_MEMBER:int = 0;
+        public static const STATUS_MEMBER:int = 1;
+        public static const STATUS_PENDING:int = 2;
 
         private var _groupId:int;
         private var _Str_16148:Boolean;
@@ -153,17 +153,17 @@
 
         public function get _Str_19430():Boolean
         {
-            return (this._status == _Str_2974._Str_15167) && ((this._type == _Str_6787) || (this._type == _Str_8761));
+            return (this._status == _Str_2974.STATUS_NOT_MEMBER) && ((this._type == TYPE_REGULAR) || (this._type == TYPE_LARGE_CLOSED));
         }
 
         public function get _Str_21531():Boolean
         {
-            return (this._status == _Str_2974._Str_15167) && (this._type == _Str_2974._Str_6562);
+            return (this._status == _Str_2974.STATUS_NOT_MEMBER) && (this._type == _Str_2974.TYPE_EXCLUSIVE);
         }
 
         public function get _Str_24358():Boolean
         {
-            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == _Str_2974._Str_8362);
+            return ((this._Str_16148) && (!(this._isOwner))) && (this._status == _Str_2974.STATUS_MEMBER);
         }
     }
 }

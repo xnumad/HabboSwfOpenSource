@@ -10,13 +10,13 @@
 
     public class GuildSettingsCtrl 
     {
-        public static const _Str_6787:int = 0;
-        public static const _Str_6562:int = 1;
-        public static const _Str_7780:int = 2;
-        public static const _Str_11591:int = 3;
-        public static const _Str_8761:int = 4;
-        public static const _Str_14996:int = 0;
-        public static const _Str_18015:int = 1;
+        public static const TYPE_REGULAR:int = 0;
+        public static const TYPE_EXCLUSIVE:int = 1;
+        public static const TYPE_CLOSED:int = 2;
+        public static const TYPE_LARGE:int = 3;
+        public static const TYPE_LARGE_CLOSED:int = 4;
+        public static const RIGHTS_MEMBERS:int = 0;
+        public static const RIGHTS_ADMINS:int = 1;
 
         private var _data:GuildSettingsData;
         private var _guildSelector:ISelectorWindow;
@@ -45,19 +45,19 @@
             this._data = new GuildSettingsData(k);
             switch (this._data._Str_4830)
             {
-                case _Str_6787:
+                case TYPE_REGULAR:
                     this._guildSelector.setSelected(this._guildRegular);
                     break;
-                case _Str_6562:
+                case TYPE_EXCLUSIVE:
                     this._guildSelector.setSelected(this._guildExclusive);
                     break;
-                case _Str_7780:
+                case TYPE_CLOSED:
                     this._guildSelector.setSelected(this._guildClosed);
                     break;
                 default:
                     this._guildSelector.setSelected(this._guildRegular);
             }
-            if (this._data._Str_7959 == GuildSettingsCtrl._Str_14996)
+            if (this._data._Str_7959 == GuildSettingsCtrl.RIGHTS_MEMBERS)
             {
                 this._membersHaveRights.select();
             }
@@ -72,7 +72,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = _Str_6787;
+                this._data._Str_4830 = TYPE_REGULAR;
             }
         }
 
@@ -80,7 +80,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = _Str_6562;
+                this._data._Str_4830 = TYPE_EXCLUSIVE;
             }
         }
 
@@ -88,7 +88,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_4830 = _Str_7780;
+                this._data._Str_4830 = TYPE_CLOSED;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECT)
             {
-                this._data._Str_7959 = GuildSettingsCtrl._Str_14996;
+                this._data._Str_7959 = GuildSettingsCtrl.RIGHTS_MEMBERS;
             }
             if (k.type == WindowEvent.WINDOW_EVENT_UNSELECT)
             {
-                this._data._Str_7959 = GuildSettingsCtrl._Str_18015;
+                this._data._Str_7959 = GuildSettingsCtrl.RIGHTS_ADMINS;
             }
         }
 
