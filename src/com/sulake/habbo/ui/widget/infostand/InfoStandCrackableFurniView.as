@@ -33,8 +33,8 @@
             {
                 return;
             }
-            _Str_2268.localizations.registerParameter("infostand.crackable_furni.hits_remaining", "hits", String(k));
-            _Str_2268.localizations.registerParameter("infostand.crackable_furni.hits_remaining", "target", String(_arg_2));
+            _widget.localizations.registerParameter("infostand.crackable_furni.hits_remaining", "hits", String(k));
+            _widget.localizations.registerParameter("infostand.crackable_furni.hits_remaining", "target", String(_arg_2));
             _local_3.visible = true;
             updateWindow();
         }
@@ -43,8 +43,8 @@
         {
             var _local_4:IWindow;
             var _local_6:int;
-            var _local_2:XmlAsset = (_Str_2268.assets.getAssetByName("crackable_furni_view") as XmlAsset);
-            _window = (_Str_2268.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
+            var _local_2:XmlAsset = (_widget.assets.getAssetByName("crackable_furni_view") as XmlAsset);
+            _window = (_widget.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
             if (_window == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -56,7 +56,7 @@
                 _Str_2373 = (_Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
             }
             _window.name = k;
-            _Str_2268.mainContainer.addChild(window);
+            _widget.mainContainer.addChild(window);
             var _local_3:IWindow = _Str_2341.findChildByTag("close");
             if (_local_3 != null)
             {

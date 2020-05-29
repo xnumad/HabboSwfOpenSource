@@ -13,11 +13,11 @@
 
         override protected function onTriggered():void
         {
-            if ((((!(_Str_2268)) || (_Str_2268.craftingInProgress)) || (_Str_2268.inventoryDirty)))
+            if ((((!(_widget)) || (_widget.craftingInProgress)) || (_widget.inventoryDirty)))
             {
                 return;
             }
-            if (!_Str_2268.mixerCtrl.canAdd())
+            if (!_widget.mixerCtrl.canAdd())
             {
                 return;
             }
@@ -26,9 +26,9 @@
             {
                 return;
             }
-            _Str_2268.showSecretRecipeView();
-            _Str_2268.mixerCtrl.addItemToMixer(content, k);
-            _Str_2268.inventoryCtrl.updateItemCounts();
+            _widget.showSecretRecipeView();
+            _widget.mixerCtrl.addItemToMixer(content, k);
+            _widget.inventoryCtrl.updateItemCounts();
         }
 
         override public function updateItemCount():void

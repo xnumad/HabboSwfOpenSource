@@ -22,7 +22,7 @@
     {
         private const _Str_25685:int = 1000;
 
-        private var _Str_2268:EffectsWidget;
+        private var _widget:EffectsWidget;
         private var _window:IWindowContainer;
         private var _effect:IWidgetAvatarEffect;
         private var _Str_3425:IWindow;
@@ -34,7 +34,7 @@
         public function _Str_4860(k:EffectsWidget, _arg_2:IWidgetAvatarEffect)
         {
             this._effect = _arg_2;
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_2364 = new Timer(this._Str_25685);
             this._Str_2364.addEventListener(TimerEvent.TIMER, this._Str_5183);
             this.update();
@@ -53,7 +53,7 @@
                 this._Str_2364.removeEventListener(TimerEvent.TIMER, this._Str_5183);
                 this._Str_2364 = null;
             }
-            this._Str_2268 = null;
+            this._widget = null;
             this._effect = null;
             this._Str_3425 = null;
             this._Str_4996 = null;
@@ -152,7 +152,7 @@
             var _local_8:IButtonWindow;
             if (!this._window)
             {
-                this._window = (this._Str_2268.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) as IWindowContainer);
+                this._window = (this._widget.windowManager.createWindow("", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT) as IWindowContainer);
             }
             while (this._window.numChildren > 0)
             {
@@ -178,8 +178,8 @@
                     _local_2 = "memenu_effect_inactive";
                 }
             }
-            k = (this._Str_2268.assets.getAssetByName(_local_2) as XmlAsset);
-            var _local_3:IWindowContainer = (this._Str_2268.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
+            k = (this._widget.assets.getAssetByName(_local_2) as XmlAsset);
+            var _local_3:IWindowContainer = (this._widget.windowManager.buildFromXML((k.content as XML)) as IWindowContainer);
             this._window.addChild(_local_3);
             var _local_4:ITextWindow = (this._window.findChildByName("effect_name") as ITextWindow);
             if (_local_4 != null)
@@ -276,14 +276,14 @@
                     }
                     return;
                 case WindowMouseEvent.CLICK:
-                    this._Str_2268._Str_25077(this._effect.type, this._effect._Str_3222);
+                    this._widget._Str_25077(this._effect.type, this._effect._Str_3222);
                     return;
             }
         }
 
         private function _Str_2972(k:String, _arg_2:String):void
         {
-            var _local_3:BitmapDataAsset = (this._Str_2268.assets.getAssetByName(_arg_2) as BitmapDataAsset);
+            var _local_3:BitmapDataAsset = (this._widget.assets.getAssetByName(_arg_2) as BitmapDataAsset);
             var _local_4:BitmapData = (_local_3.content as BitmapData);
             this._Str_14653(k, _local_4);
         }

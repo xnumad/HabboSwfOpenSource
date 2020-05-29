@@ -16,18 +16,18 @@
 
         override protected function onTriggered():void
         {
-            if ((((!(_Str_2268)) || (_Str_2268.craftingInProgress)) || (_Str_2268.inventoryDirty)))
+            if ((((!(_widget)) || (_widget.craftingInProgress)) || (_widget.inventoryDirty)))
             {
                 return;
             }
             if (this._inventoryId == 0)
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15827, furnitureData);
+                _widget.setInfoState(CraftingViewStateEnum._Str_15827, furnitureData);
                 return;
             }
-            if (_Str_2268.inSecretRecipeMode)
+            if (_widget.inSecretRecipeMode)
             {
-                _Str_2268.mixerCtrl.removeListItem(this);
+                _widget.mixerCtrl.removeListItem(this);
             }
         }
 

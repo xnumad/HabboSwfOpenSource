@@ -20,7 +20,7 @@
         override protected function updateWindow():void
         {
             var k:XML;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -32,8 +32,8 @@
             {
                 if (!_window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("generic_usable_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("generic_usable_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!_window)
                     {
                         return;
@@ -66,7 +66,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "use":
-                            _Str_2268.messageListener.processWidgetMessage(new RoomWidgetFurniActionMessage(RoomWidgetFurniActionMessage.RWFAM_USE, _Str_2731.getId(), this._objectCategory));
+                            _widget.messageListener.processWidgetMessage(new RoomWidgetFurniActionMessage(RoomWidgetFurniActionMessage.RWFAM_USE, _Str_2731.getId(), this._objectCategory));
                             break;
                     }
                 }
@@ -78,7 +78,7 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 

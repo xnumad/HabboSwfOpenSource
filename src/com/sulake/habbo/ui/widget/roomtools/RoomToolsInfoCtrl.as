@@ -33,7 +33,7 @@
         {
             if (!window)
             {
-                _window = (_Str_2268.windowManager.buildFromXML((_assets.getAssetByName("room_tools_info_xml").content as XML)) as IWindowContainer);
+                _window = (_widget.windowManager.buildFromXML((_assets.getAssetByName("room_tools_info_xml").content as XML)) as IWindowContainer);
                 _window.procedure = this._Str_3061;
                 _window.addEventListener(WindowMouseEvent.OVER, this._Str_3061);
                 _window.addEventListener(WindowMouseEvent.OUT, this._Str_3061);
@@ -65,9 +65,9 @@
             {
                 return;
             }
-            var k:int = ((((_Str_3510) ? -(_window.width) : 0) + _Str_2268.getRoomToolbarRight()) + _Str_3226);
+            var k:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + _Str_3226);
             var _local_2:int = ((_window.desktop.height - _Str_15557) - _window.height);
-            var _local_3:int = _Str_2268.getChatInputY();
+            var _local_3:int = _widget.getChatInputY();
             if (_local_3 < (_local_2 + _window.height))
             {
                 _local_2 = ((_local_3 - _window.height) - _Str_3226);
@@ -92,7 +92,7 @@
                 return;
             }
             _window.visible = true;
-            var _local_2:int = ((((_Str_3510) ? -(_window.width) : 0) + _Str_2268.getRoomToolbarRight()) + _Str_3226);
+            var _local_2:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + _Str_3226);
             if (_Str_3510)
             {
                 _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this._Str_9372));
@@ -111,7 +111,7 @@
                 return;
             }
             this.setCollapsed(k);
-            var _local_2:Motion = new EaseOut(new MoveTo(_window, _Str_7674, (_Str_2268.getRoomToolbarRight() + _Str_3226), _window.y), 1);
+            var _local_2:Motion = new EaseOut(new MoveTo(_window, _Str_7674, (_widget.getRoomToolbarRight() + _Str_3226), _window.y), 1);
             Motions._Str_4598(_local_2);
         }
 

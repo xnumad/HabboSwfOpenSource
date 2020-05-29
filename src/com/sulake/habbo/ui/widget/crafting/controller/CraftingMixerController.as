@@ -45,9 +45,9 @@
             {
                 this.container.destroyGridItems();
             }
-            if (((_Str_2268) && (_Str_2268.inventoryCtrl)))
+            if (((_widget) && (_widget.inventoryCtrl)))
             {
-                _Str_2268.inventoryCtrl.updateItemCounts();
+                _widget.inventoryCtrl.updateItemCounts();
             }
         }
 
@@ -72,13 +72,13 @@
                 return false;
             }
             var _local_3:IWindowContainer = getItemTemplate();
-            var _local_4:CraftingMixerItemRenderer = new CraftingMixerItemRenderer(k, (_local_3.clone() as IWindowContainer), _Str_2268);
+            var _local_4:CraftingMixerItemRenderer = new CraftingMixerItemRenderer(k, (_local_3.clone() as IWindowContainer), _widget);
             _local_4._Str_18598 = _arg_2;
             this.container._Str_2816(_local_4.window);
             this._renderers.push(_local_4);
-            if (_Str_2268.inSecretRecipeMode)
+            if (_widget.inSecretRecipeMode)
             {
-                _Str_2268.mixerContentChanged(this._Str_16929());
+                _widget.mixerContentChanged(this._Str_16929());
             }
             return true;
         }
@@ -103,8 +103,8 @@
                         this.container._Str_11488();
                     }
                     _local_3.returnItemToInventory();
-                    _Str_2268.inventoryCtrl.updateItemCounts();
-                    _Str_2268.mixerContentChanged(this._Str_16929());
+                    _widget.inventoryCtrl.updateItemCounts();
+                    _widget.mixerContentChanged(this._Str_16929());
                     return;
                 }
                 _local_2++;

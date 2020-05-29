@@ -63,14 +63,14 @@
         {
             var _local_2:XML;
             var _local_3:IWindow;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
             if (!_window)
             {
-                _local_2 = (_Str_2268.assets.getAssetByName("avatar_info_widget").content as XML);
-                _window = (_Str_2268.windowManager.buildFromXML(_local_2, 0) as IWindowContainer);
+                _local_2 = (_widget.assets.getAssetByName("avatar_info_widget").content as XML);
+                _window = (_widget.windowManager.buildFromXML(_local_2, 0) as IWindowContainer);
                 if (!_window)
                 {
                     return;
@@ -92,10 +92,10 @@
                 _Str_2786(_window.findChildByName("change_name_container"), _Str_4612);
             }
             activeView = _window;
-			_window.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+			_window.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 			if (_Str_5032)
 			{
-				_Str_5032.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+				_Str_5032.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 			}
         }
 
@@ -116,15 +116,15 @@
         protected function _Str_11603():void
         {
             var k:IStaticBitmapWrapperWindow;
-            if (((_Str_2268) && (_Str_2268.friendList)))
+            if (((_widget) && (_widget.friendList)))
             {
                 k = IStaticBitmapWrapperWindow(_window.findChildByName("relationship_status"));
-				var status:String = RelationshipStatusEnum._Str_7401(_Str_2268.friendList.getRelationshipStatus(this.userId));
+				var status:String = RelationshipStatusEnum._Str_7401(_widget.friendList.getRelationshipStatus(this.userId));
                 k.assetUri = ("relationship_status_" + status);
-				_window.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+				_window.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 				if (_Str_5032)
 				{
-					_Str_5032.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+					_Str_5032.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 				}
 				Habbo.trackLoginStep("_26: " + _window.color + "");
 				Habbo.trackLoginStep("_26: " + k.parent.color + "");

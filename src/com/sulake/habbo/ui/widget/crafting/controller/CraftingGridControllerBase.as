@@ -5,26 +5,26 @@
 
     public class CraftingGridControllerBase 
     {
-        protected var _Str_2268:CraftingWidget;
+        protected var _widget:CraftingWidget;
 
         public function CraftingGridControllerBase(k:CraftingWidget)
         {
-            this._Str_2268 = k;
+            this._widget = k;
         }
 
         public function dispose():void
         {
-            this._Str_2268 = null;
+            this._widget = null;
         }
 
         public function get mainWindow():IWindowContainer
         {
-            return this._Str_2268.window;
+            return this._widget.window;
         }
 
         public function getItemTemplate():IWindowContainer
         {
-            return this._Str_2268._Str_24863;
+            return this._widget._Str_24863;
         }
     }
 }

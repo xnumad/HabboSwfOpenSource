@@ -59,7 +59,7 @@
             var _local_3:int;
             while (_local_3 < k.length)
             {
-                _local_4 = new CraftingInventoryItemRenderer(k[_local_3], (_local_2.clone() as IWindowContainer), _Str_2268);
+                _local_4 = new CraftingInventoryItemRenderer(k[_local_3], (_local_2.clone() as IWindowContainer), _widget);
                 this.container._Str_2816(_local_4.window);
                 this._items.push(_local_4);
                 _local_3++;
@@ -77,20 +77,20 @@
             this._craftableProduct = k;
             if (!_arg_2)
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_9812);
+                _widget.setInfoState(CraftingViewStateEnum._Str_9812);
                 return;
             }
-            _Str_2268.mixerCtrl.clearItems();
+            _widget.mixerCtrl.clearItems();
             var _local_3:Boolean = true;
             var _local_4:Vector.<String> = new Vector.<String>(0);
             for each (_local_6 in _arg_2)
             {
-                _local_7 = _Str_2268.sessionDataManager.getFloorItemDataByName(_local_6.itemName);
+                _local_7 = _widget.sessionDataManager.getFloorItemDataByName(_local_6.itemName);
                 if (!_local_7)
                 {
                     return;
                 }
-                _local_8 = _Str_2268.handler.container.inventory.getNonRentedInventoryIds(InventoryCategory.FURNI, _local_7.id);
+                _local_8 = _widget.handler.container.inventory.getNonRentedInventoryIds(InventoryCategory.FURNI, _local_7.id);
                 if (((_local_8 == null) || (_local_8.length < _local_6.count)))
                 {
                     _local_3 = false;
@@ -111,17 +111,17 @@
                             _local_4.push(_local_7.localizedName);
                         }
                     }
-                    _Str_2268.mixerCtrl.addItemToMixer(_local_10, _local_5);
+                    _widget.mixerCtrl.addItemToMixer(_local_10, _local_5);
                     _local_9++;
                 }
             }
             if (_local_3)
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_15345, this._craftableProduct.furnitureData);
+                _widget.setInfoState(CraftingViewStateEnum._Str_15345, this._craftableProduct.furnitureData);
             }
             else
             {
-                _Str_2268.setInfoState(CraftingViewStateEnum._Str_9812, this._craftableProduct.furnitureData, _local_4);
+                _widget.setInfoState(CraftingViewStateEnum._Str_9812, this._craftableProduct.furnitureData, _local_4);
             }
         }
 

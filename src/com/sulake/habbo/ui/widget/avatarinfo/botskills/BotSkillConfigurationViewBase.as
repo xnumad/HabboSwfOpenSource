@@ -11,13 +11,13 @@
     public class BotSkillConfigurationViewBase implements BotSkillConfigurationView 
     {
         private var _Str_9057:IMessageEvent;
-        protected var _Str_2268:AvatarInfoWidget;
+        protected var _widget:AvatarInfoWidget;
         protected var window:IWindowContainer;
         protected var _Str_2753:int;
 
         public function BotSkillConfigurationViewBase(k:AvatarInfoWidget)
         {
-            this._Str_2268 = k;
+            this._widget = k;
         }
 
         public function dispose():void
@@ -27,21 +27,21 @@
                 this.window.dispose();
                 this.window = null;
             }
-            if (this._Str_2268)
+            if (this._widget)
             {
-                if (((this._Str_2268.handler.container.connection) && (this._Str_9057)))
+                if (((this._widget.handler.container.connection) && (this._Str_9057)))
                 {
-                    this._Str_2268.handler.container.connection.removeMessageEvent(this._Str_9057);
+                    this._widget.handler.container.connection.removeMessageEvent(this._Str_9057);
                     this._Str_9057 = null;
                 }
-                this._Str_2268 = null;
+                this._widget = null;
             }
             this._Str_2753 = -1;
         }
 
         public function get disposed():Boolean
         {
-            return this._Str_2268 == null;
+            return this._widget == null;
         }
 
         public function open(k:int, _arg_2:Point=null):void
@@ -52,13 +52,13 @@
             if (!this._Str_9057)
             {
                 this._Str_9057 = new BotCommandConfigurationEvent(this._Str_22412);
-                this._Str_2268.handler.container.connection.addMessageEvent(this._Str_9057);
+                this._widget.handler.container.connection.addMessageEvent(this._Str_9057);
             }
-            this._Str_2268.handler.container.connection.send(new _Str_12054(this._Str_2753, this.skillType));
+            this._widget.handler.container.connection.send(new _Str_12054(this._Str_2753, this.skillType));
             if (!this.window)
             {
-                _local_3 = (this._Str_2268.assets.getAssetByName(this.windowAssetName).content as XML);
-                this.window = (this._Str_2268.windowManager.buildFromXML(_local_3, 1) as IWindowContainer);
+                _local_3 = (this._widget.assets.getAssetByName(this.windowAssetName).content as XML);
+                this.window = (this._widget.windowManager.buildFromXML(_local_3, 1) as IWindowContainer);
             }
             if (_arg_2)
             {

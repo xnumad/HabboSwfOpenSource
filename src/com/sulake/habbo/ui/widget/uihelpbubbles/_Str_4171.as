@@ -17,7 +17,7 @@
     public class _Str_4171 
     {
         private var _window:IWindowContainer;
-        private var _Str_2268:UiHelpBubblesWidget;
+        private var _widget:UiHelpBubblesWidget;
         private var _id:String;
         private var _Str_6304:Point;
         private var _Str_19278:String;
@@ -33,7 +33,7 @@
 
         public function _Str_4171(k:UiHelpBubblesWidget, _arg_2:_Str_5419, _arg_3:Boolean)
         {
-            this._Str_2268 = k;
+            this._widget = k;
             this._id = _arg_2.name;
             this._Str_19278 = _arg_2.text;
             this._Str_13653 = _arg_3;
@@ -43,7 +43,7 @@
 
         public function dispose():void
         {
-            this._Str_2268 = null;
+            this._widget = null;
             if (((!(this._Str_15322 == null)) && (!(this._Str_4383 == null))))
             {
                 this._Str_15322.removeEventListener(WindowMouseEvent.CLICK, this._Str_4383);
@@ -73,14 +73,14 @@
         {
             var _local_3:XmlAsset;
             var _local_4:int;
-            if ((((!(this._Str_2268)) || (!(this._Str_2268.assets))) || (!(this._Str_2268.windowManager))))
+            if ((((!(this._widget)) || (!(this._widget.assets))) || (!(this._widget.windowManager))))
             {
                 return;
             }
             if (this._Str_20666)
             {
-                _local_3 = (this._Str_2268.assets.getAssetByName("ui_help_modal") as XmlAsset);
-                this._Str_2757 = (this._Str_2268.windowManager.buildFromXML((_local_3.content as XML), 3) as IWindowContainer);
+                _local_3 = (this._widget.assets.getAssetByName("ui_help_modal") as XmlAsset);
+                this._Str_2757 = (this._widget.windowManager.buildFromXML((_local_3.content as XML), 3) as IWindowContainer);
             }
             if (this._Str_2757)
             {
@@ -89,12 +89,12 @@
                 this._Str_12235 = (this._Str_2757.findChildByName("bitmap") as IBitmapWrapperWindow);
                 this._Str_2786(this._Str_12235, this._Str_25803);
             }
-            var k:XmlAsset = (this._Str_2268.assets.getAssetByName("ui_help_bubble") as XmlAsset);
+            var k:XmlAsset = (this._widget.assets.getAssetByName("ui_help_bubble") as XmlAsset);
             if (!k)
             {
                 return;
             }
-            this._window = (this._Str_2268.windowManager.buildFromXML((k.content as XML), 3) as IWindowContainer);
+            this._window = (this._widget.windowManager.buildFromXML((k.content as XML), 3) as IWindowContainer);
             if (!this._window)
             {
                 return;
@@ -111,7 +111,7 @@
             }
             if (!this._Str_13653)
             {
-                this._Str_12172.caption = this._Str_2268.localizations.getLocalization("alert.close.button", "alert.close.button");
+                this._Str_12172.caption = this._widget.localizations.getLocalization("alert.close.button", "alert.close.button");
                 this._Str_2786(this._Str_12172, this._Str_16126);
             }
             else
@@ -138,7 +138,7 @@
 
         private function _Str_17704(k:WindowMouseEvent):void
         {
-            if (!this._Str_2268)
+            if (!this._widget)
             {
                 return;
             }
@@ -146,21 +146,21 @@
             {
                 this._Str_2757.visible = false;
             }
-            this._Str_2268._Str_14683(this._id);
+            this._widget._Str_14683(this._id);
         }
 
         private function _Str_16126(k:WindowMouseEvent):void
         {
-            if (!this._Str_2268)
+            if (!this._widget)
             {
                 return;
             }
-            this._Str_2268._Str_25030();
+            this._widget._Str_25030();
             if (this._Str_2757)
             {
                 this._Str_2757.visible = false;
             }
-            this._Str_2268._Str_14683(this._id);
+            this._widget._Str_14683(this._id);
         }
 
         public function _Str_21122(k:Rectangle):void

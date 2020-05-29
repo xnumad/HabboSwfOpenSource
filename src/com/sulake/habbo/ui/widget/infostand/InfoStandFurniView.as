@@ -60,14 +60,14 @@
         protected var _Str_3810:IWindow;
         private var _Str_5729:int;
         private var _ownerId:int = 0;
-        protected var _Str_2268:InfoStandWidget;
+        protected var _widget:InfoStandWidget;
         protected var _Str_2373:IItemListWindow;
 
         public function InfoStandFurniView(k:InfoStandWidget, _arg_2:String, _arg_3:IHabboCatalog)
         {
             this._Str_5729 = this._Str_9953;
             super();
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_2276 = _arg_3;
             this._Str_2421 = HabboTracking.getInstance();
             this.createWindow(_arg_2);
@@ -76,7 +76,7 @@
         public function dispose():void
         {
             this._Str_2276 = null;
-            this._Str_2268 = null;
+            this._widget = null;
             this._window.dispose();
             this._window = null;
         }
@@ -90,8 +90,8 @@
         {
             var _local_4:IWindow;
             var _local_7:int;
-            var _local_2:XmlAsset = (this._Str_2268.assets.getAssetByName("furni_view") as XmlAsset);
-            this._window = (this._Str_2268.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
+            var _local_2:XmlAsset = (this._widget.assets.getAssetByName("furni_view") as XmlAsset);
+            this._window = (this._widget.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
             if (this._window == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -99,7 +99,7 @@
             this._Str_2341 = (this._window.getListItemByName("info_border") as IBorderWindow);
             this._buttons = (this._window.getListItemByName("button_list") as IItemListWindow);
             this._Str_4258 = (this._window.getListItemByName("custom_variables") as IWindowContainer);
-            if (!this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
+            if (!this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.MODERATOR))
             {
                 this._Str_4258.dispose();
                 this._Str_4258 = null;
@@ -114,7 +114,7 @@
                 this._Str_2373 = (this._Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
             }
             this._window.name = k;
-            this._Str_2268.mainContainer.addChild(this._window);
+            this._widget.mainContainer.addChild(this._window);
             var _local_3:IWindow = this._Str_2341.findChildByTag("close");
             if (_local_3 != null)
             {
@@ -186,7 +186,7 @@
                         _local_3[_local_6.name] = _local_6.findChildByName("value").caption;
                         _local_5++;
                     }
-                    this._Str_2268.handler._Str_23922(_local_3);
+                    this._widget.handler._Str_23922(_local_3);
                     return;
             }
         }
@@ -194,12 +194,12 @@
         protected function _Str_15887(k:WindowMouseEvent):void
         {
             var _local_2:IFurnitureData;
-            if ((((!(this._Str_2276 == null)) && (this._Str_2268)) && (this._Str_2268.furniData)))
+            if ((((!(this._Str_2276 == null)) && (this._widget)) && (this._widget.furniData)))
             {
-                _local_2 = this.getFurnitureData(this._Str_2268.furniData);
+                _local_2 = this.getFurnitureData(this._widget.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276.openRentConfirmationWindow(_local_2, true, this._Str_2268.furniData.id);
+                    this._Str_2276.openRentConfirmationWindow(_local_2, true, this._widget.furniData.id);
                 }
             }
         }
@@ -207,23 +207,23 @@
         protected function _Str_15302(k:WindowMouseEvent):void
         {
             var _local_2:IFurnitureData;
-            if ((((!(this._Str_2276 == null)) && (this._Str_2268)) && (this._Str_2268.furniData)))
+            if ((((!(this._Str_2276 == null)) && (this._widget)) && (this._widget.furniData)))
             {
-                _local_2 = this.getFurnitureData(this._Str_2268.furniData);
+                _local_2 = this.getFurnitureData(this._widget.furniData);
                 if (_local_2)
                 {
-                    this._Str_2276.openRentConfirmationWindow(_local_2, false, this._Str_2268.furniData.id);
+                    this._Str_2276.openRentConfirmationWindow(_local_2, false, this._widget.furniData.id);
                 }
             }
         }
 
         private function getRoomObject(k:int):IRoomObject
         {
-            var _local_2:int = this._Str_2268.handler.container.roomSession.roomId;
-            var _local_3:IRoomObject = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
+            var _local_2:int = this._widget.handler.container.roomSession.roomId;
+            var _local_3:IRoomObject = this._widget.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE);
             if (_local_3 == null)
             {
-                _local_3 = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
+                _local_3 = this._widget.handler.container.roomEngine.getRoomObject(_local_2, k, RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             }
             return _local_3;
         }
@@ -236,15 +236,15 @@
             {
                 return null;
             }
-            var _local_3:* = (this._Str_2268.furniData.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
+            var _local_3:* = (this._widget.furniData.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_WALLITEM);
             var _local_4:int = _local_2.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
             if (_local_3)
             {
-                _local_5 = this._Str_2268.handler.container.sessionDataManager.getWallItemData(_local_4);
+                _local_5 = this._widget.handler.container.sessionDataManager.getWallItemData(_local_4);
             }
             else
             {
-                _local_5 = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(_local_4);
+                _local_5 = this._widget.handler.container.sessionDataManager.getFloorItemData(_local_4);
             }
             return _local_5;
         }
@@ -253,13 +253,13 @@
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276.openCatalogPageByOfferId(this._Str_2268.furniData.rentOfferId, CatalogType.NORMAL);
+                this._Str_2276.openCatalogPageByOfferId(this._widget.furniData.rentOfferId, CatalogType.NORMAL);
             }
         }
 
         protected function onCloseHandler(k:WindowMouseEvent):void
         {
-            this._Str_2268.close();
+            this._widget.close();
         }
 
         public function set name(k:String):void
@@ -330,7 +330,7 @@
                 if (this._ownerId != _Str_12261)
                 {
                     _local_4.text = _arg_2;
-                    _local_3._Str_2613 = this._Str_2268.localizations.getLocalization("infostand.profile.link.tooltip", "");
+                    _local_3._Str_2613 = this._widget.localizations.getLocalization("infostand.profile.link.tooltip", "");
                     _local_3._Str_3099 = 100;
                     _local_5.visible = true;
                     if (_local_6 != null)
@@ -361,8 +361,8 @@
             {
                 return;
             }
-            this._Str_2268.localizations.registerParameter("infostand.rent.expiration", "time", FriendlyTime.format(this._Str_2268.handler.container.localization, k));
-            _local_2.visible = ((k >= 0) && (this._ownerId == this._Str_2268.handler.container.sessionDataManager.userId));
+            this._widget.localizations.registerParameter("infostand.rent.expiration", "time", FriendlyTime.format(this._widget.handler.container.localization, k));
+            _local_2.visible = ((k >= 0) && (this._ownerId == this._widget.handler.container.sessionDataManager.userId));
             this.updateWindow();
         }
 
@@ -389,10 +389,10 @@
                     {
                         _local_3 = RoomWidgetFurniActionMessage.RWFAM_EJECT;
                     }
-                    this._Str_2268.close();
+                    this._widget.close();
                     break;
                 case "save_branding_configuration":
-                    if (this._Str_2268.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
+                    if (this._widget.handler.container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                     {
                         _local_3 = RoomWidgetFurniActionMessage.RWFAM_SAVE_STUFF_DATA;
                         _local_4 = this._Str_22904();
@@ -404,24 +404,24 @@
             }
             if (_local_3 != null)
             {
-                _local_2 = new RoomWidgetFurniActionMessage(_local_3, this._Str_2268.furniData.id, this._Str_2268.furniData.category, this._Str_2268.furniData.purchaseOfferId, _local_4);
-                this._Str_2268.messageListener.processWidgetMessage(_local_2);
+                _local_2 = new RoomWidgetFurniActionMessage(_local_3, this._widget.furniData.id, this._widget.furniData.category, this._widget.furniData.purchaseOfferId, _local_4);
+                this._widget.messageListener.processWidgetMessage(_local_2);
             }
         }
 
         private function _Str_23310(k:WindowMouseEvent):void
         {
-            this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetGetBadgeDetailsMessage(false, this._Str_2268.furniData.groupId));
+            this._widget.messageListener.processWidgetMessage(new RoomWidgetGetBadgeDetailsMessage(false, this._widget.furniData.groupId));
         }
 
         protected function _Str_12960(k:WindowMouseEvent):void
         {
             if (this._Str_2276 != null)
             {
-                this._Str_2276.openCatalogPageByOfferId(this._Str_2268.furniData.purchaseOfferId, CatalogType.NORMAL);
+                this._Str_2276.openCatalogPageByOfferId(this._widget.furniData.purchaseOfferId, CatalogType.NORMAL);
                 if (((this._Str_2421) && (!(this._Str_2421.disposed))))
                 {
-                    this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._Str_2268.furniData.purchaseOfferId);
+                    this._Str_2421.trackGoogle("infostandCatalogButton", "offer", this._widget.furniData.purchaseOfferId);
                 }
             }
         }
@@ -432,11 +432,11 @@
             {
                 if (this._ownerId == _Str_12261)
                 {
-                    this._Str_2268.handler.container.catalog.toggleToBuildersClub();
+                    this._widget.handler.container.catalog.toggleToBuildersClub();
                 }
                 else
                 {
-                    this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._ownerId, "infoStand_furniView"));
+                    this._widget.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._ownerId, "infoStand_furniView"));
                 }
             }
             if (k.type == WindowMouseEvent.OUT)
@@ -475,7 +475,7 @@
             {
                 this._Str_4258.x = this._Str_2341.x;
             }
-            this._Str_2268._Str_10301();
+            this._widget._Str_10301();
         }
 
         public function update(k:RoomWidgetFurniInfostandUpdateEvent):void
@@ -505,7 +505,7 @@
             var _local_6:* = (k.roomControllerLevel >= RoomControllerLevel.GUEST);
             if (((((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum.EVERYBODY) || ((k.usagePolicy == RoomWidgetFurniInfoUsagePolicyEnum.CONTROLLER) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.JUKEBOX) && (_local_6))) || ((k.extraParam == RoomWidgetEnumItemExtradataParameter.USABLE_PRODUCT) && (_local_6))))
             {
-                _local_5 = this._Str_2268.config.getBoolean("infostand.use.button.enabled");
+                _local_5 = this._widget.config.getBoolean("infostand.use.button.enabled");
             }
             this._Str_25151(k);
             this.showButton("move", _local_2);
@@ -525,11 +525,11 @@
         {
             var _local_5:String;
             var _local_6:IWindowContainer;
-            if (((this._Str_4258 == null) || (this._Str_2268.furniData == null)))
+            if (((this._Str_4258 == null) || (this._widget.furniData == null)))
             {
                 return;
             }
-            var k:IRoomObject = this.getRoomObject(this._Str_2268.furniData.id);
+            var k:IRoomObject = this.getRoomObject(this._widget.furniData.id);
             if (k == null)
             {
                 return;
@@ -603,10 +603,10 @@
             var _local_6:IWindow;
             if (this._Str_2373 != null)
             {
-                _local_3 = (this._Str_2268.assets.getAssetByName("furni_view_branding_element") as XmlAsset);
+                _local_3 = (this._widget.assets.getAssetByName("furni_view_branding_element") as XmlAsset);
                 if (_local_3 != null)
                 {
-                    _local_4 = (this._Str_2268.windowManager.buildFromXML((_local_3.content as XML)) as IWindowContainer);
+                    _local_4 = (this._widget.windowManager.buildFromXML((_local_3.content as XML)) as IWindowContainer);
                     if (_local_4 != null)
                     {
                         _local_5 = _local_4.findChildByName("element_name");
@@ -638,9 +638,9 @@
             var _local_6:String;
             var _local_7:String;
             var k:Map = new Map();
-            if (this._Str_2268 != null)
+            if (this._widget != null)
             {
-                _local_2 = this._Str_2268.furniData.extraParam.substr(RoomWidgetEnumItemExtradataParameter.BRANDING_OPTIONS.length);
+                _local_2 = this._widget.furniData.extraParam.substr(RoomWidgetEnumItemExtradataParameter.BRANDING_OPTIONS.length);
                 _local_3 = _local_2.split("\t");
                 if (_local_3 != null)
                 {
@@ -709,7 +709,7 @@
             var _local_8:Map;
             var _local_9:String;
             var _local_10:String;
-            if (((this._Str_2268 == null) || (this._Str_2341 == null)))
+            if (((this._widget == null) || (this._Str_2341 == null)))
             {
                 return;
             }
@@ -733,7 +733,7 @@
             if (_local_5 != null)
             {
                 _local_5.visible = k;
-                _local_7 = ("id: " + this._Str_2268.furniData.id);
+                _local_7 = ("id: " + this._widget.furniData.id);
                 _local_8 = this._Str_25006();
                 if (_local_8.length > 0)
                 {
@@ -884,7 +884,7 @@
             var _local_2:IWidgetWindow = (this._Str_2341.findChildByName("group_badge_image") as IWidgetWindow);
             var _local_3:_Str_2402 = (_local_2.widget as _Str_2402);
             _local_3.badgeId = k;
-            _local_3.groupId = this._Str_2268.furniData.groupId;
+            _local_3.groupId = this._widget.furniData.groupId;
             _local_2.visible = true;
         }
     }

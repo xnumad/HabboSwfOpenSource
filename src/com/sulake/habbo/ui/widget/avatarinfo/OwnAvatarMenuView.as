@@ -88,7 +88,7 @@
             var k:XML;
             var _local_7:IWindowContainer;
             var _local_8:IWindowContainer;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -100,8 +100,8 @@
             {
                 if (!_window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("own_avatar_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("own_avatar_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!window)
                     {
                         return;
@@ -165,7 +165,7 @@
                     showButton("dance_menu", ((this.widget._Str_6454) && (!(_local_3))), (!(this.widget._Str_4878)));
                     showButton("dance", (((!(this.widget._Str_6454)) && (!(this.widget._Str_4107))) && (!(_local_3))), (!(this.widget._Str_4878)));
                     showButton("dance_stop", (((!(this.widget._Str_6454)) && (this.widget._Str_4107)) && (!(_local_3))));
-                    if (!(_Str_2268.windowManager as Component).getBoolean("memenu.effects.widget.disabled"))
+                    if (!(_widget.windowManager as Component).getBoolean("memenu.effects.widget.disabled"))
                     {
                         showButton("effects", (!(_local_3)));
                     }
@@ -251,7 +251,7 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 
@@ -275,7 +275,7 @@
                     _local_5 = (_arg_2 as IWindowContainer).getChildByName("icon_vip");
                     if (((!(_local_5 == null)) && (_local_5.visible)))
                     {
-                        _Str_2268.catalog.openClubCenter();
+                        _widget.catalog.openClubCenter();
                         return;
                     }
                     _local_3 = true;
@@ -372,7 +372,7 @@
                 }
                 if (_local_4)
                 {
-                    _Str_2268.messageListener.processWidgetMessage(_local_4);
+                    _widget.messageListener.processWidgetMessage(_local_4);
                 }
             }
             else
@@ -381,13 +381,13 @@
             }
             if (((_local_3) && (!(_disposed))))
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 
         private function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
 
         private function _Str_6337(k:int):void

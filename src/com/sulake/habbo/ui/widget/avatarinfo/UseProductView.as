@@ -114,7 +114,7 @@
         override protected function updateWindow():void
         {
             var k:XML;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -127,8 +127,8 @@
             {
                 if (!_window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("use_product_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("use_product_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!_window)
                     {
                         return;
@@ -234,7 +234,7 @@
                 }
                 if (_local_4)
                 {
-                    _Str_2268.messageListener.processWidgetMessage(_local_4);
+                    _widget.messageListener.processWidgetMessage(_local_4);
                 }
             }
             else
@@ -255,7 +255,7 @@
 
         private function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
     }
 }

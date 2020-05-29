@@ -53,7 +53,7 @@
             var _local_3:int;
             while (_local_3 < k.length)
             {
-                _local_4 = new CraftingRecipeItemRenderer(k[_local_3], (_local_2.clone() as IWindowContainer), _Str_2268);
+                _local_4 = new CraftingRecipeItemRenderer(k[_local_3], (_local_2.clone() as IWindowContainer), _widget);
                 this.container._Str_2816(_local_4.window);
                 this._items.push(_local_4);
                 _local_3++;

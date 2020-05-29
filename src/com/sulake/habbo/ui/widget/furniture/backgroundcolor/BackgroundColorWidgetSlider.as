@@ -13,7 +13,7 @@
         private static const _Str_2809:int = 0;
         private static const _Str_2856:int = 0xFF;
 
-        private var _Str_2268:BackgroundColorFurniWidget;
+        private var _widget:BackgroundColorFurniWidget;
         private var _Str_2571:IWindowContainer;
         private var _Str_4513:String;
         private var _Str_2764:BitmapData;
@@ -25,7 +25,7 @@
         {
             var _local_5:BitmapDataAsset;
             super();
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_4513 = _arg_2;
             this._Str_2571 = _arg_3;
             _local_5 = BitmapDataAsset(k.assets.getAssetByName("dimmer_slider_base"));
@@ -38,7 +38,7 @@
 
         public function dispose():void
         {
-            this._Str_2268 = null;
+            this._widget = null;
             this._Str_2571 = null;
             this._Str_2764 = null;
             this._Str_2751 = null;
@@ -69,7 +69,7 @@
 
         private function _Str_5862(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._Str_2268._Str_25701(this._Str_4513, this.getValue(_arg_2.x));
+            this._widget._Str_25701(this._Str_4513, this.getValue(_arg_2.x));
         }
 
         private function _Str_4995():void

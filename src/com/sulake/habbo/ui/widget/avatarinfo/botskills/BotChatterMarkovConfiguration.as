@@ -145,14 +145,14 @@
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _Str_2268.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
+                        _widget.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
                         close();
                         return;
                     case "cancel_button":
                         close();
                         return;
                     case "help_link":
-                        HabboWebTools.navigateToURL(_Str_2268.configuration.getProperty("link.format.bots.help"), "habboMain");
+                        HabboWebTools.navigateToURL(_widget.configuration.getProperty("link.format.bots.help"), "habboMain");
                         return;
                 }
             }

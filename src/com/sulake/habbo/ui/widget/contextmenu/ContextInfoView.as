@@ -36,7 +36,7 @@
         protected var _Str_5032:IWindowContainer;
         protected var _Str_3007:IWindowContainer;
         private var _Str_16285:Boolean;
-        protected var _Str_2268:IContextMenuParentWidget;
+        protected var _widget:IContextMenuParentWidget;
         protected var _Str_3196:Boolean;
         protected var _Str_17886:FixedSizeStack;
         protected var _Str_18538:int = -1000000;
@@ -55,7 +55,7 @@
         {
             this._Str_17886 = new FixedSizeStack(_Str_18514);
             super();
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_3403 = true;
             this._Str_14625 = false;
             this._Str_13141 = false;
@@ -93,7 +93,7 @@
 
         public function dispose():void
         {
-            this._Str_2268 = null;
+            this._widget = null;
             this._Str_3007 = null;
             if (this._window)
             {
@@ -135,18 +135,18 @@
 
         protected function _Str_4612(k:WindowMouseEvent):void
         {
-            this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_START_NAME_CHANGE));
-            this._Str_2268.removeView(this, false);
+            this._widget.messageListener.processWidgetMessage(new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_START_NAME_CHANGE));
+            this._widget.removeView(this, false);
         }
 
         public function _Str_16818(k:IBitmapWrapperWindow, _arg_2:String, _arg_3:Boolean=false):void
         {
             var _local_6:Point;
-            if ((((!(k)) || (!(this._Str_2268))) || (!(this._Str_2268.assets))))
+            if ((((!(k)) || (!(this._widget))) || (!(this._widget.assets))))
             {
                 return;
             }
-            var _local_4:BitmapDataAsset = (this._Str_2268.assets.getAssetByName(_arg_2) as BitmapDataAsset);
+            var _local_4:BitmapDataAsset = (this._widget.assets.getAssetByName(_arg_2) as BitmapDataAsset);
             if (!_local_4)
             {
                 return;
@@ -183,7 +183,7 @@
                 this._Str_3007.visible = true;
                 if (!(this._Str_3007.parent is IDesktopWindow))
                 {
-                    this._Str_2268.windowManager.getDesktop(0).addChild(this._Str_3007);
+                    this._widget.windowManager.getDesktop(0).addChild(this._Str_3007);
                 }
                 if (this._Str_21071)
                 {
@@ -241,7 +241,7 @@
             }
             if (this._Str_1917 <= 0)
             {
-                this._Str_2268.removeView(this, false);
+                this._widget.removeView(this, false);
                 return;
             }
             if (((!(this._Str_3196)) || (this._Str_16285)))
@@ -294,8 +294,8 @@
             var k:XML;
             if (!this._Str_5032)
             {
-                k = (XmlAsset(this._Str_2268.assets.getAssetByName("minimized_menu")).content as XML);
-                this._Str_5032 = (this._Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                k = (XmlAsset(this._widget.assets.getAssetByName("minimized_menu")).content as XML);
+                this._Str_5032 = (this._widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.CLICK, this._Str_23220);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OVER, this._Str_3052);
                 this._Str_5032.findChildByName("minimize").addEventListener(WindowMouseEvent.OUT, this._Str_3052);

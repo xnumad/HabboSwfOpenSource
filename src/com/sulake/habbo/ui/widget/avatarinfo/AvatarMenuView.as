@@ -201,7 +201,7 @@
             var k:XML;
             var _local_6:IWindowContainer;
             var _local_7:IWindowContainer;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -213,8 +213,8 @@
             {
                 if (!window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("avatar_menu_widget")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("avatar_menu_widget")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!window)
                     {
                         return;
@@ -418,7 +418,7 @@
                 }
                 if (_local_4 != null)
                 {
-                    _Str_2268.messageListener.processWidgetMessage(_local_4);
+                    _widget.messageListener.processWidgetMessage(_local_4);
                 }
                 this.updateButtons();
             }
@@ -459,23 +459,23 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 
         private function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
 
         private function get citizenshipTalentTrackEnabled():Boolean
         {
-            return AvatarInfoWidget(_Str_2268).configuration.getBoolean("talent.track.citizenship.enabled");
+            return AvatarInfoWidget(_widget).configuration.getBoolean("talent.track.citizenship.enabled");
         }
 
         private function setRelationship(k:int):void
         {
-            _Str_2268.friendList.setRelationshipStatus(_Str_2306, k);
+            _widget.friendList.setRelationshipStatus(_Str_2306, k);
         }
     }
 }

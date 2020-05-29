@@ -49,7 +49,7 @@
         private const _Str_13324:int = 23;
         private const _Str_26389:int = 100;
 
-        protected var _Str_2268:InfoStandWidget;
+        protected var _widget:InfoStandWidget;
         protected var _window:IItemListWindow;
         protected var _Str_2373:IItemListWindow;
         protected var _Str_20844:IItemListWindow;
@@ -61,7 +61,7 @@
 
         public function InfoStandUserView(k:InfoStandWidget, _arg_2:String)
         {
-            this._Str_2268 = k;
+            this._widget = k;
             this.createWindow(_arg_2);
             this._Str_3306 = new TagListRenderer(k, this._Str_25162);
         }
@@ -73,7 +73,7 @@
                 this._Str_4966.dispose();
                 this._Str_4966 = null;
             }
-            this._Str_2268 = null;
+            this._widget = null;
             this._window.dispose();
             this._window = null;
             this._Str_3306.dispose();
@@ -96,7 +96,7 @@
             this._Str_2341.height = (this._Str_2373.height + 20);
             this._window.width = this._Str_2341.width;
             this._window.height = this._window.visibleRegion.height;
-            this._Str_2268._Str_10301();
+            this._widget._Str_10301();
         }
 
         protected function createWindow(k:String):void
@@ -104,7 +104,7 @@
             var _local_4:IWindow;
             var _local_7:BitmapDataAsset;
             var _local_8:BitmapData;
-            this._window = (this._Str_2268.getXmlWindow("user_view") as IItemListWindow);
+            this._window = (this._widget.getXmlWindow("user_view") as IItemListWindow);
             if (this._window == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -114,7 +114,7 @@
             {
                 this._Str_2373 = (this._Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
                 this._Str_20844 = (this._Str_2341.findChildByName("relationship_status_container") as IItemListWindow);
-                this._Str_20844.visible = this._Str_2268.config.getBoolean("relationship.status.enabled");
+                this._Str_20844.visible = this._widget.config.getBoolean("relationship.status.enabled");
                 this._Str_2341.findChildByName("heart_randomusername").procedure = this._Str_18506;
                 this._Str_2341.findChildByName("smile_randomusername").procedure = this._Str_18506;
                 this._Str_2341.findChildByName("bobba_randomusername").procedure = this._Str_18506;
@@ -124,13 +124,13 @@
             if (_local_2 != null)
             {
                 _local_2.bitmap = new BitmapData(_local_2.width, _local_2.height, true, 0);
-                _local_7 = (this._Str_2268.assets.getAssetByName("icon_home") as BitmapDataAsset);
+                _local_7 = (this._widget.assets.getAssetByName("icon_home") as BitmapDataAsset);
                 _local_8 = (_local_7.content as BitmapData);
                 _local_2.bitmap = new BitmapData(_local_2.width, _local_2.height, true, 0);
                 _local_2.bitmap.copyPixels(_local_8, _local_8.rect, new Point(0, 0));
                 _local_2.addEventListener(WindowMouseEvent.CLICK, this.onButtonClicked);
             }
-            this._Str_2268.mainContainer.addChild(this._window);
+            this._widget.mainContainer.addChild(this._window);
             var _local_3:IWindow = this._Str_2341.findChildByTag("close");
             if (_local_3 != null)
             {
@@ -162,7 +162,7 @@
             {
                 _local_6.procedure = this._Str_21251;
             }
-            if (this._Str_2268.handler._Str_7745)
+            if (this._widget.handler._Str_7745)
             {
                 this._Str_2341.findChildByName("score_spacer").visible = true;
                 this._Str_2341.findChildByName("score_value").visible = true;
@@ -172,18 +172,18 @@
 
         private function _Str_23155(k:WindowMouseEvent):void
         {
-            if (this._Str_2268.userData.groupId < 0)
+            if (this._widget.userData.groupId < 0)
             {
                 return;
             }
-            var _local_2:* = (this._Str_2268.userData.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
-            var _local_3:RoomWidgetGetBadgeDetailsMessage = new RoomWidgetGetBadgeDetailsMessage(_local_2, this._Str_2268.userData.groupId);
-            this._Str_2268.messageListener.processWidgetMessage(_local_3);
+            var _local_2:* = (this._widget.userData.type == RoomWidgetUpdateInfostandUserEvent.OWN_USER);
+            var _local_3:RoomWidgetGetBadgeDetailsMessage = new RoomWidgetGetBadgeDetailsMessage(_local_2, this._widget.userData.groupId);
+            this._widget.messageListener.processWidgetMessage(_local_3);
         }
 
         private function _Str_12867(k:WindowMouseEvent):void
         {
-            if (this._Str_2268.userData.groupId < 0)
+            if (this._widget.userData.groupId < 0)
             {
                 return;
             }
@@ -192,7 +192,7 @@
             {
                 return;
             }
-            this._Str_2919.findChildByName("name").caption = this._Str_2268.userData.groupName;
+            this._Str_2919.findChildByName("name").caption = this._widget.userData.groupName;
             this._Str_2919.findChildByName("description").caption = "${group.badgepopup.body}";
             var _local_2:Rectangle = new Rectangle();
             k.window.getGlobalRectangle(_local_2);
@@ -217,7 +217,7 @@
             {
                 return;
             }
-            var _local_3:Array = this._Str_2268.userData.badges;
+            var _local_3:Array = this._widget.userData.badges;
             if (_local_3 == null)
             {
                 return;
@@ -226,7 +226,7 @@
             {
                 return;
             }
-            var _local_4:String = this._Str_2268.userData.badges[_local_2];
+            var _local_4:String = this._widget.userData.badges[_local_2];
             if (_local_4 == null)
             {
                 return;
@@ -235,12 +235,12 @@
             _local_5 = (this._Str_2919.getChildByName("name") as ITextWindow);
             if (_local_5 != null)
             {
-                _local_5.text = this._Str_2268.localizations.getBadgeName(_local_4);
+                _local_5.text = this._widget.localizations.getBadgeName(_local_4);
             }
             _local_5 = (this._Str_2919.getChildByName("description") as ITextWindow);
             if (_local_5 != null)
             {
-                _local_5.text = this._Str_2268.localizations.getBadgeDesc(_local_4);
+                _local_5.text = this._widget.localizations.getBadgeDesc(_local_4);
             }
             var _local_6:Rectangle = new Rectangle();
             k.window.getGlobalRectangle(_local_6);
@@ -259,12 +259,12 @@
             {
                 return;
             }
-            var k:XmlAsset = (this._Str_2268.assets.getAssetByName("badge_details") as XmlAsset);
+            var k:XmlAsset = (this._widget.assets.getAssetByName("badge_details") as XmlAsset);
             if (k == null)
             {
                 return;
             }
-            this._Str_2919 = (this._Str_2268.windowManager.buildFromXML((k.content as XML)) as IBorderWindow);
+            this._Str_2919 = (this._widget.windowManager.buildFromXML((k.content as XML)) as IBorderWindow);
             if (this._Str_2919 == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -282,7 +282,7 @@
 
         private function onCloseHandler(k:WindowMouseEvent):void
         {
-            this._Str_2268.close();
+            this._widget.close();
         }
 
         public function set name(k:String):void
@@ -319,8 +319,8 @@
             }
             else
             {
-                this._Str_2268.localizations.registerParameter("infostand.text.realname", "realname", k);
-                _local_2.text = this._Str_2268.localizations.getLocalization("infostand.text.realname");
+                this._widget.localizations.registerParameter("infostand.text.realname", "realname", k);
+                _local_2.text = this._widget.localizations.getLocalization("infostand.text.realname");
             }
             _local_2.height = (_local_2.textHeight + this._Str_4882);
             _local_2.visible = (k.length > 0);
@@ -355,7 +355,7 @@
                 _local_4.visible = true;
                 if (k == "")
                 {
-                    k = this._Str_2268.localizations.getLocalization("infostand.motto.change");
+                    k = this._widget.localizations.getLocalization("infostand.motto.change");
                     _local_5.textColor = this._Str_17178;
                 }
                 else
@@ -370,7 +370,7 @@
                 _local_5.textColor = this._Str_18971;
                 _local_5.disable();
             }
-            if (!this._Str_2268.config.getBoolean("infostand.motto.change.enabled"))
+            if (!this._widget.config.getBoolean("infostand.motto.change.enabled"))
             {
                 _local_5.disable();
             }
@@ -392,7 +392,7 @@
 
         public function set activityPoints(k:int):void
         {
-            if (!this._Str_2268.handler._Str_7745)
+            if (!this._widget.handler._Str_7745)
             {
                 return;
             }
@@ -415,8 +415,8 @@
             }
             if (((k > 0) && (k < 999999)))
             {
-                _local_6 = this._Str_2268.localizations.getLocalization(("handitem" + k), ("handitem" + k));
-                this._Str_2268.localizations.registerParameter("infostand.text.handitem", "item", _local_6);
+                _local_6 = this._widget.localizations.getLocalization(("handitem" + k), ("handitem" + k));
+                this._widget.localizations.registerParameter("infostand.text.handitem", "item", _local_6);
             }
             _local_2.height = (_local_2.textHeight + this._Str_4882);
             var _local_4:Boolean = _local_2.visible;
@@ -438,7 +438,7 @@
             {
                 return;
             }
-            this._Str_2268.localizations.registerParameter("infostand.text.xp", "xp", k.toString());
+            this._widget.localizations.registerParameter("infostand.text.xp", "xp", k.toString());
             _local_2.height = (_local_2.textHeight + this._Str_4882);
             var _local_4:Boolean = _local_2.visible;
             var _local_5:* = (k > 0);
@@ -509,7 +509,7 @@
             {
                 return;
             }
-            this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetRoomTagSearchMessage(_local_2.text));
+            this._widget.messageListener.processWidgetMessage(new RoomWidgetRoomTagSearchMessage(_local_2.text));
         }
 
         public function update(k:RoomWidgetUpdateInfostandUserEvent):void
@@ -529,7 +529,7 @@
             var _local_5:_Str_4838;
             var _local_6:String;
             var _local_7:IWindow;
-            if (((!(this._Str_2341)) || (!(this._Str_2268))))
+            if (((!(this._Str_2341)) || (!(this._widget))))
             {
                 return;
             }
@@ -549,7 +549,7 @@
                         _local_7.id = int(_local_5._Str_21077);
                     }
                     this._Str_2341.findChildByName((_local_3 + "_others")).visible = (_local_5.friendCount > 1);
-                    this._Str_2268.localizations.registerParameter((("infostand.relstatus." + _local_3) + ".others"), "amount", (_local_5.friendCount - 1).toString());
+                    this._widget.localizations.registerParameter((("infostand.relstatus." + _local_3) + ".others"), "amount", (_local_5.friendCount - 1).toString());
                 }
                 else
                 {
@@ -583,11 +583,11 @@
             if (k.keyCode == Keyboard.ENTER)
             {
                 _local_6 = getTimer();
-                if ((((_local_6 - this._Str_19966) > this._Str_25347) && (!(_local_4 == this._Str_2268.localizations.getLocalization("infostand.motto.change")))))
+                if ((((_local_6 - this._Str_19966) > this._Str_25347) && (!(_local_4 == this._widget.localizations.getLocalization("infostand.motto.change")))))
                 {
-                    _local_7 = this._Str_2268.userData.userId;
+                    _local_7 = this._widget.userData.userId;
                     _local_5 = new RoomWidgetChangeMottoMessage(_local_4);
-                    this._Str_2268.messageListener.processWidgetMessage(_local_5);
+                    this._widget.messageListener.processWidgetMessage(_local_5);
                     this._Str_19966 = _local_6;
                     _local_3.textColor = this._Str_18971;
                     _local_3.unfocus();
@@ -610,7 +610,7 @@
                 return;
             }
             var _local_3:ITextWindow = (_local_2.findChildByName("motto_text") as ITextWindow);
-            if (_local_3.text == this._Str_2268.localizations.getLocalization("infostand.motto.change"))
+            if (_local_3.text == this._widget.localizations.getLocalization("infostand.motto.change"))
             {
                 _local_3.text = "";
             }
@@ -630,12 +630,12 @@
             }
             if (_local_3 != null)
             {
-                _local_2 = new RoomWidgetUserActionMessage(_local_3, this._Str_2268.userData.userId);
+                _local_2 = new RoomWidgetUserActionMessage(_local_3, this._widget.userData.userId);
                 HabboTracking.getInstance().trackEventLog("InfoStand", "click", _local_3);
             }
             if (_local_2 != null)
             {
-                this._Str_2268.messageListener.processWidgetMessage(_local_2);
+                this._widget.messageListener.processWidgetMessage(_local_2);
             }
             this.updateWindow();
         }
@@ -645,7 +645,7 @@
             var _local_3:ITextWindow;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                this._Str_2268.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._Str_2268.userData.userId, "infoStand_userView"));
+                this._widget.messageListener.processWidgetMessage(new RoomWidgetOpenProfileMessage(RoomWidgetOpenProfileMessage.RWOPEM_OPEN_USER_PROFILE, this._widget.userData.userId, "infoStand_userView"));
             }
             if (_arg_2.name == "profile_link")
             {
@@ -666,7 +666,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (_arg_2 is ITextLinkWindow)))
             {
-                this._Str_2268.handler.container.connection.send(new _Str_2553(_arg_2.id));
+                this._widget.handler.container.connection.send(new _Str_2553(_arg_2.id));
             }
         }
     }

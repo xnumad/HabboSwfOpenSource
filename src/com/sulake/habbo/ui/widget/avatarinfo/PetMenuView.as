@@ -159,7 +159,7 @@
         override protected function updateWindow():void
         {
             var k:XML;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -171,8 +171,8 @@
             {
                 if (!window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("pet_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("pet_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!window)
                     {
                         return;
@@ -245,7 +245,7 @@
                 }
                 if (_local_4 != null)
                 {
-                    _Str_2268.messageListener.processWidgetMessage(_local_4);
+                    _widget.messageListener.processWidgetMessage(_local_4);
                 }
                 this._Str_2771();
             }
@@ -255,13 +255,13 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 
         private function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
     }
 }

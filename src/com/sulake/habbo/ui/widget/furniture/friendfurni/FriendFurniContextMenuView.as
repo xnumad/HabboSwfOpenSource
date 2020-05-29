@@ -20,7 +20,7 @@
         {
             var k:XML;
             var _local_2:IWindow;
-            if ((((_Str_2268 == null) || (_Str_2268.assets == null)) || (_Str_2268.windowManager == null)))
+            if ((((_widget == null) || (_widget.assets == null)) || (_widget.windowManager == null)))
             {
                 return;
             }
@@ -32,8 +32,8 @@
             {
                 if (((window == null) || (window.disposed)))
                 {
-                    k = (_Str_2268.assets.getAssetByName("friendfurni_menu").content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (_widget.assets.getAssetByName("friendfurni_menu").content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (window == null)
                     {
                         return;
@@ -70,7 +70,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "use":
-                            _local_4 = (_Str_2268 as FurnitureContextMenuWidget);
+                            _local_4 = (_widget as FurnitureContextMenuWidget);
                             if (_local_4 != null)
                             {
                                 _local_4.handler.container.connection.send(new _Str_3382(_Str_2731.getId()));
@@ -86,7 +86,7 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
     }

@@ -44,7 +44,7 @@
                 this._roomToolsHistory.dispose();
                 this._roomToolsHistory = null;
             }
-            var k:IWindowContainer = (_Str_2268.windowManager.getWindowByName("share_room_link") as IWindowContainer);
+            var k:IWindowContainer = (_widget.windowManager.getWindowByName("share_room_link") as IWindowContainer);
             if (k)
             {
                 k.dispose();
@@ -54,7 +54,7 @@
 
         public function _Str_20713():void
         {
-            if (_Str_2268.currentRoomIndex >= (_Str_2268.visitedRooms.length - 1))
+            if (_widget.currentRoomIndex >= (_widget.visitedRooms.length - 1))
             {
                 _window.findChildByName("button_history_forward").disable();
             }
@@ -62,7 +62,7 @@
             {
                 _window.findChildByName("button_history_forward").enable();
             }
-            if (_Str_2268.currentRoomIndex == 0)
+            if (_widget.currentRoomIndex == 0)
             {
                 _window.findChildByName("button_history_back").disable();
             }
@@ -70,7 +70,7 @@
             {
                 _window.findChildByName("button_history_back").enable();
             }
-            if (_Str_2268.visitedRooms.length <= 1)
+            if (_widget.visitedRooms.length <= 1)
             {
                 _window.findChildByName("button_history").disable();
             }
@@ -96,7 +96,7 @@
             else
             {
                 this._roomToolsHistory = new RoomToolsHistory(_Str_2277, _assets, handler);
-                this._roomToolsHistory.populate(_Str_2268.visitedRooms);
+                this._roomToolsHistory.populate(_widget.visitedRooms);
                 this._Str_3714();
             }
         }
@@ -232,30 +232,30 @@
                             handler.toggleRoomInfoWindow();
                             break;
                         case "button_zoom":
-                            if (_Str_2268.messageListener)
+                            if (_widget.messageListener)
                             {
                                 message = new RoomWidgetZoomToggleMessage();
-                                _Str_2268.messageListener.processWidgetMessage(message);
+                                _widget.messageListener.processWidgetMessage(message);
                             }
                             break;
                         case "button_collapse":
                         case "button_expand":
-                            _Str_2268.setCollapsed((!(_Str_3510)));
+                            _widget.setCollapsed((!(_Str_3510)));
                             handler.sessionDataManager.setRoomToolsState((!(_Str_3510)));
                             break;
                         case "button_history_back":
-                            _Str_2268.goToPreviousRoom();
+                            _widget.goToPreviousRoom();
                             break;
                         case "button_history_forward":
-                            _Str_2268.goToNextRoom();
+                            _widget.goToNextRoom();
                             break;
                         case "button_history":
                             this._Str_24287();
                             break;
                         case "button_chat_history":
-                            if (_Str_2268.freeFlowChat)
+                            if (_widget.freeFlowChat)
                             {
-                                _Str_2268.freeFlowChat.toggleVisibility();
+                                _widget.freeFlowChat.toggleVisibility();
                             }
                             break;
                         case "button_like":
@@ -264,13 +264,13 @@
                             break;
                         case "button_share":
                             link = this._Str_8567();
-                            window = (_Str_2268.windowManager.getWindowByName("share_room_link") as IWindowContainer);
+                            window = (_widget.windowManager.getWindowByName("share_room_link") as IWindowContainer);
                             if (window == null)
                             {
                                 asset = (_assets.getAssetByName("share_room_xml").content as XML);
                                 if (asset)
                                 {
-                                    window = (_Str_2268.windowManager.buildFromXML(asset) as IWindowContainer);
+                                    window = (_widget.windowManager.buildFromXML(asset) as IWindowContainer);
                                 }
                             }
                             if (window)
@@ -308,50 +308,50 @@
         {
             var _local_3:String;
             var _local_4:String;
-            if (_Str_2268.handler.navigator.enteredGuestRoomData != null)
+            if (_widget.handler.navigator.enteredGuestRoomData != null)
             {
                 _local_3 = "private";
-                _local_4 = ("" + _Str_2268.handler.navigator.enteredGuestRoomData.flatId);
+                _local_4 = ("" + _widget.handler.navigator.enteredGuestRoomData.flatId);
             }
-            var _local_5:String = _Str_2268.handler.container.config.getProperty("user.hash");
-            if (_Str_2268.localizations.hasLocalization(k))
+            var _local_5:String = _widget.handler.container.config.getProperty("user.hash");
+            if (_widget.localizations.hasLocalization(k))
             {
-                _Str_2268.localizations.registerParameter(k, "roomType", _local_3);
-                _Str_2268.localizations.registerParameter(k, "embedCode", _local_5);
-                _Str_2268.localizations.registerParameter(k, "roomId", _local_4);
+                _widget.localizations.registerParameter(k, "roomType", _local_3);
+                _widget.localizations.registerParameter(k, "embedCode", _local_5);
+                _widget.localizations.registerParameter(k, "roomId", _local_4);
             }
             else
             {
                 if (_arg_2 != "")
                 {
-                    _arg_2 = _arg_2.replace("${url.prefix}", _Str_2268.handler.container.config.getProperty("url.prefix"));
+                    _arg_2 = _arg_2.replace("${url.prefix}", _widget.handler.container.config.getProperty("url.prefix"));
                     _arg_2 = _arg_2.replace("%roomId%", _local_4);
                     return _arg_2;
                 }
             }
-            return _Str_2268.localizations.getLocalization(k, _arg_2);
+            return _widget.localizations.getLocalization(k, _arg_2);
         }
 
         private function _Str_24878():String
         {
             var _local_2:String;
             var k:String = "";
-            if (_Str_2268.handler.navigator.enteredGuestRoomData.officialRoomPicRef != null)
+            if (_widget.handler.navigator.enteredGuestRoomData.officialRoomPicRef != null)
             {
-                if (_Str_2268.handler.container.config.getBoolean("new.navigator.official.room.thumbnails.in.amazon"))
+                if (_widget.handler.container.config.getBoolean("new.navigator.official.room.thumbnails.in.amazon"))
                 {
-                    _local_2 = _Str_2268.handler.container.config.getProperty("navigator.thumbnail.url_base");
-                    k = ((_local_2 + _Str_2268.handler.navigator.enteredGuestRoomData.flatId) + ".png");
+                    _local_2 = _widget.handler.container.config.getProperty("navigator.thumbnail.url_base");
+                    k = ((_local_2 + _widget.handler.navigator.enteredGuestRoomData.flatId) + ".png");
                 }
                 else
                 {
-                    k = (_Str_2268.handler.container.config.getProperty("image.library.url") + _Str_2268.handler.navigator.enteredGuestRoomData.officialRoomPicRef);
+                    k = (_widget.handler.container.config.getProperty("image.library.url") + _widget.handler.navigator.enteredGuestRoomData.officialRoomPicRef);
                 }
             }
             else
             {
-                _local_2 = _Str_2268.handler.container.config.getProperty("navigator.thumbnail.url_base");
-                k = ((_local_2 + _Str_2268.handler.navigator.enteredGuestRoomData.flatId) + ".png");
+                _local_2 = _widget.handler.container.config.getProperty("navigator.thumbnail.url_base");
+                k = ((_local_2 + _widget.handler.navigator.enteredGuestRoomData.flatId) + ".png");
             }
             return k;
         }

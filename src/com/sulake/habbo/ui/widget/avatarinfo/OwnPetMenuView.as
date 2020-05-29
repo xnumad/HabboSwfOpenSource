@@ -91,7 +91,7 @@
         override protected function updateWindow():void
         {
             var k:XML;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -103,8 +103,8 @@
             {
                 if (!window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("own_pet_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("own_pet_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!window)
                     {
                         return;
@@ -432,7 +432,7 @@
                             {
                                 _local_7 = RoomWidgetPetCommandMessage._Str_16282;
                                 _local_8 = ("pet.command." + _local_7);
-                                _local_9 = _Str_2268.catalog.localization.getLocalization(_local_8);
+                                _local_9 = _widget.catalog.localization.getLocalization(_local_8);
                                 _local_4 = new RoomWidgetPetCommandMessage(RoomWidgetPetCommandMessage.RWPCM_PET_COMMAND, this._data.id, ((this._data.name + " ") + _local_9));
                             }
                             else
@@ -486,7 +486,7 @@
                 }
                 if (_local_4)
                 {
-                    _Str_2268.messageListener.processWidgetMessage(_local_4);
+                    _widget.messageListener.processWidgetMessage(_local_4);
                 }
             }
             else
@@ -495,13 +495,13 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 
         public function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
 
         private function _Str_6337(k:int):void

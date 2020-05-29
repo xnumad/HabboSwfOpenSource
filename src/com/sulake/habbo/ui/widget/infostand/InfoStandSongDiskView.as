@@ -51,8 +51,8 @@
             var _local_5:BitmapDataAsset;
             var _local_6:BitmapData;
             var _local_10:int;
-            var _local_2:XmlAsset = (_Str_2268.assets.getAssetByName("songdisk_view") as XmlAsset);
-            _window = (_Str_2268.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
+            var _local_2:XmlAsset = (_widget.assets.getAssetByName("songdisk_view") as XmlAsset);
+            _window = (_widget.windowManager.buildFromXML((_local_2.content as XML)) as IItemListWindow);
             if (window == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -64,7 +64,7 @@
                 _Str_2373 = (_Str_2341.findChildByName("infostand_element_list") as IItemListWindow);
             }
             window.name = k;
-            _Str_2268.mainContainer.addChild(window);
+            _widget.mainContainer.addChild(window);
             var _local_3:IWindow = _Str_2341.findChildByTag("close");
             if (_local_3 != null)
             {
@@ -103,14 +103,14 @@
             var _local_7:IBitmapWrapperWindow = (_Str_2341.findChildByName("icon_disc") as IBitmapWrapperWindow);
             if (_local_7 != null)
             {
-                _local_5 = (_Str_2268.assets.getAssetByName("jb_icon_disc") as BitmapDataAsset);
+                _local_5 = (_widget.assets.getAssetByName("jb_icon_disc") as BitmapDataAsset);
                 _local_6 = (_local_5.content as BitmapData);
                 _local_7.bitmap = _local_6.clone();
             }
             var _local_8:IBitmapWrapperWindow = (_Str_2341.findChildByName("icon_composer") as IBitmapWrapperWindow);
             if (_local_8 != null)
             {
-                _local_5 = (_Str_2268.assets.getAssetByName("jb_icon_composer") as BitmapDataAsset);
+                _local_5 = (_widget.assets.getAssetByName("jb_icon_composer") as BitmapDataAsset);
                 _local_6 = (_local_5.content as BitmapData);
                 _local_8.bitmap = _local_6.clone();
             }

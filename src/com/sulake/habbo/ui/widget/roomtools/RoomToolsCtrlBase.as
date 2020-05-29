@@ -14,7 +14,7 @@
         protected static const _Str_7674:int = 100;
 
         protected var _window:IWindowContainer;
-        protected var _Str_2268:RoomToolsWidget;
+        protected var _widget:RoomToolsWidget;
         protected var _Str_2277:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
         protected var _Str_3510:Boolean = true;
@@ -24,7 +24,7 @@
 
         public function RoomToolsCtrlBase(k:RoomToolsWidget, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary)
         {
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_2277 = _arg_2;
             this._assets = _arg_3;
             this._Str_20667 = this.handler.container.config.getInteger("room.enter.info.collapse.delay", 5000);
@@ -44,7 +44,7 @@
                 this._Str_5637 = null;
                 this._Str_13353 = false;
             }
-            this._Str_2268 = null;
+            this._widget = null;
         }
 
         public function setElementVisible(k:String, _arg_2:Boolean):void
@@ -113,7 +113,7 @@
 
         public function get handler():RoomToolsWidgetHandler
         {
-            return (this._Str_2268) ? this._Str_2268.handler : null;
+            return (this._widget) ? this._widget.handler : null;
         }
     }
 }

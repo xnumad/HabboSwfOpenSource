@@ -24,14 +24,14 @@
         {
             var k:XML;
             var _local_2:IWindow;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
             if (!window)
             {
-                k = (_Str_2268.assets.getAssetByName("new_user_help").content as XML);
-                _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                k = (_widget.assets.getAssetByName("new_user_help").content as XML);
+                _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                 if (!window)
                 {
                     return;
@@ -45,7 +45,7 @@
 
         public function get widget():AvatarInfoWidget
         {
-            return _Str_2268 as AvatarInfoWidget;
+            return _widget as AvatarInfoWidget;
         }
     }
 }

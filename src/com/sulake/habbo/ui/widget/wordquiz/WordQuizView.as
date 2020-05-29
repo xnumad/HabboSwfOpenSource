@@ -21,18 +21,18 @@
         private static const _Str_12004:Boolean = false;
         private static var _Str_18458:int;
 
-        private var _Str_2268:WordQuizWidget;
+        private var _widget:WordQuizWidget;
         private var _mainWindow:IWindowContainer;
         private var _Str_3891:Timer;
         private var _Str_17234:String;
 
         public function WordQuizView(k:WordQuizWidget)
         {
-            this._Str_2268 = k;
-            _Str_18458 = (this._Str_2268.handler.container.config.getInteger("poll.word.quiz.result.view.seconds", 4) * 1000);
+            this._widget = k;
+            _Str_18458 = (this._widget.handler.container.config.getInteger("poll.word.quiz.result.view.seconds", 4) * 1000);
             if (_Str_12004)
             {
-                this._mainWindow = (this._Str_2268.windowManager.createWindow("wordquiz_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN), new Rectangle(0, 0, 2, 2), null, 0, 2) as IWindowContainer);
+                this._mainWindow = (this._widget.windowManager.createWindow("wordquiz_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, (WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN), new Rectangle(0, 0, 2, 2), null, 0, 2) as IWindowContainer);
                 this._mainWindow.width = this._mainWindow.desktop.width;
                 this._mainWindow.height = this._mainWindow.desktop.height;
             }
@@ -40,7 +40,7 @@
 
         public function dispose():void
         {
-            this._Str_2268 = null;
+            this._widget = null;
             this.removeWindow();
             if (this._mainWindow)
             {
@@ -65,7 +65,7 @@
             {
                 _local_3 = "wordquiz_result_xml";
             }
-            _local_4 = (this._Str_2268.windowManager.buildFromXML((this._Str_2268.assets.getAssetByName(_local_3).content as XML)) as IWindowContainer);
+            _local_4 = (this._widget.windowManager.buildFromXML((this._widget.assets.getAssetByName(_local_3).content as XML)) as IWindowContainer);
             if (_local_4 == null)
             {
                 throw (new Error("Failed to construct window from XML!"));
@@ -91,11 +91,11 @@
             }
             if (_Str_12004)
             {
-                this._mainWindow.buildFromXML((this._Str_2268.assets.getAssetByName(_local_3).content as XML));
+                this._mainWindow.buildFromXML((this._widget.assets.getAssetByName(_local_3).content as XML));
             }
             else
             {
-                this._mainWindow = (this._Str_2268.windowManager.buildFromXML((this._Str_2268.assets.getAssetByName(_local_3).content as XML)) as IWindowContainer);
+                this._mainWindow = (this._widget.windowManager.buildFromXML((this._widget.assets.getAssetByName(_local_3).content as XML)) as IWindowContainer);
             }
             if (this._mainWindow == null)
             {
@@ -199,12 +199,12 @@
 
         private function _Str_23518(k:WindowMouseEvent):void
         {
-            this._Str_2268._Str_20809(1);
+            this._widget._Str_20809(1);
         }
 
         private function _Str_24275(k:WindowMouseEvent):void
         {
-            this._Str_2268._Str_20809(0);
+            this._widget._Str_20809(0);
         }
 
         private function _Str_3630(k:WindowEvent):void

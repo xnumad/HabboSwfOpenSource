@@ -14,11 +14,11 @@
 
         override protected function onTriggered():void
         {
-            if ((((!(_Str_2268)) || (!(content))) || (_Str_2268.craftingInProgress)))
+            if ((((!(_widget)) || (!(content))) || (_widget.craftingInProgress)))
             {
                 return;
             }
-            _Str_2268.showCraftableProduct(content);
+            _widget.showCraftableProduct(content);
         }
     }
 }

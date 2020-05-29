@@ -20,7 +20,7 @@
         public function AvatarContextInfoView(k:IContextMenuParentWidget)
         {
             super(k);
-            _Str_2268 = (k as AvatarInfoWidget);
+            _widget = (k as AvatarInfoWidget);
         }
 
         public static function setup(k:AvatarContextInfoView, _arg_2:int, _arg_3:String, _arg_4:int, _arg_5:int, _arg_6:Boolean=false):void
@@ -62,14 +62,14 @@
         override protected function updateWindow():void
         {
             var _local_2:XML;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
             if (!_window)
             {
-                _local_2 = (_Str_2268.assets.getAssetByName("avatar_info_widget").content as XML);
-                _window = (_Str_2268.windowManager.buildFromXML(_local_2, 0) as IWindowContainer);
+                _local_2 = (_widget.assets.getAssetByName("avatar_info_widget").content as XML);
+                _window = (_widget.windowManager.buildFromXML(_local_2, 0) as IWindowContainer);
                 if (!_window)
                 {
                     return;
@@ -81,11 +81,11 @@
             _window.findChildByName("change_name_container").visible = false;
             _window.height = 39;
             activeView = _window;
-			_window.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+			_window.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 			
 			if (_Str_5032)
 			{
-				_Str_5032.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+				_Str_5032.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 			}
 			
 		}
@@ -107,16 +107,16 @@
         protected function _Str_11603():void
         {
             var k:IStaticBitmapWrapperWindow;
-            if (((_Str_2268) && (_Str_2268.friendList)))
+            if (((_widget) && (_widget.friendList)))
             {
                 k = IStaticBitmapWrapperWindow(_window.findChildByName("relationship_status"));
-                var status:String = RelationshipStatusEnum._Str_7401(_Str_2268.friendList.getRelationshipStatus(this.userId));
+                var status:String = RelationshipStatusEnum._Str_7401(_widget.friendList.getRelationshipStatus(this.userId));
                 k.assetUri = ("relationship_status_" + status);
-				_window.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+				_window.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 				
 				if (_Str_5032)
 				{
-					_Str_5032.color = RelationshipStatusEnum.relationshipColor(_Str_2268.friendList.getRelationshipStatus(this.userId));
+					_Str_5032.color = RelationshipStatusEnum.relationshipColor(_widget.friendList.getRelationshipStatus(this.userId));
 				}
 				Habbo.trackLoginStep("_67: " + _window.color + "");
 				Habbo.trackLoginStep("_67: " + k.parent.color + "");

@@ -21,13 +21,13 @@
         private const _Str_18094:Number = 1;
         private const _Str_18535:Number = 0.2;
 
-        protected var _Str_2268:CraftingWidget;
+        protected var _widget:CraftingWidget;
         protected var _data:CraftingFurnitureItem;
         protected var _window:IWindowContainer;
 
         public function FurniThumbnailRendererBase(k:CraftingFurnitureItem, _arg_2:IWindowContainer, _arg_3:CraftingWidget)
         {
-            this._Str_2268 = _arg_3;
+            this._widget = _arg_3;
             this._window = _arg_2;
             this._data = k;
             this._Str_6402(this.furnitureData);
@@ -53,10 +53,10 @@
             switch (k.type)
             {
                 case ProductTypeEnum.FLOOR:
-                    _local_2 = this._Str_2268.handler.container.roomEngine.getFurnitureIcon(k.id, this);
+                    _local_2 = this._widget.handler.container.roomEngine.getFurnitureIcon(k.id, this);
                     break;
                 case ProductTypeEnum.WALL:
-                    _local_2 = this._Str_2268.handler.container.roomEngine.getWallItemIcon(k.id, this);
+                    _local_2 = this._widget.handler.container.roomEngine.getWallItemIcon(k.id, this);
                     break;
             }
             if (_local_2.data)

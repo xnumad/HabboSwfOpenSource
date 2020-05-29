@@ -41,7 +41,7 @@
         private static var _Str_10423:int = 6;
         private static var _Str_3498:PhotoPurchaseConfirmationDialog;
 
-        private var _Str_2268:CameraWidget;
+        private var _widget:CameraWidget;
         private var _window:IWindowContainer;
         private var _disposed:Boolean = false;
         private var _Str_2726:IBitmapWrapperWindow;
@@ -64,7 +64,7 @@
             this._Str_11626 = new Map();
             this._Str_2063 = new FileReference();
             super();
-            this._Str_2268 = k;
+            this._widget = k;
         }
 
         public static function _Str_23652(k:String, _arg_2:String, _arg_3:IHabboLocalizationManager):void
@@ -95,7 +95,7 @@
             }
             CameraEffect._Str_21096();
             this._Str_15808 = null;
-            this._Str_2268 = null;
+            this._widget = null;
             this._Str_2726 = null;
             if (this._Str_5076 != null)
             {
@@ -177,12 +177,12 @@
                 setTimeout(this._Str_20969, 200);
             }
             var k:int;
-            var _local_2:IHabboQuestEngine = this._Str_2268.handler._Str_6647.questEngine;
+            var _local_2:IHabboQuestEngine = this._widget.handler._Str_6647.questEngine;
             if (_local_2 != null)
             {
                 k = _local_2._Str_13119("explore", "ACH_CameraPhotoCount");
             }
-            var _local_4:Map = CameraEffect._Str_6532(this._Str_2268.component.getProperty("camera.available.effects"), this._Str_2268.localizations);
+            var _local_4:Map = CameraEffect._Str_6532(this._widget.component.getProperty("camera.available.effects"), this._widget.localizations);
             for each (_local_5 in _local_4)
             {
                 _local_3 = this._Str_22327(_local_5, this._Str_15808.clone(), k);
@@ -191,13 +191,13 @@
                     _local_7 = _local_5.description;
                     if (k < _local_5._Str_15852)
                     {
-                        _local_7 = ((this._Str_2268.localizations.getLocalization("camera.effect.required.level") + " ") + _local_5._Str_15852);
+                        _local_7 = ((this._widget.localizations.getLocalization("camera.effect.required.level") + " ") + _local_5._Str_15852);
                     }
                     IRegionWindow(_local_3)._Str_2613 = _local_7;
                 }
             }
             _local_6 = (this._window.findChildByName("slider_container") as IWindowContainer);
-            this._Str_5076 = new CameraFxStrengthSlider(this, _local_6, this._Str_2268.windowManager.assets);
+            this._Str_5076 = new CameraFxStrengthSlider(this, _local_6, this._widget.windowManager.assets);
             this._Str_5076.disable();
             CameraEffect._Str_24241(this._Str_5076.scale());
             this._Str_20709(CameraEffect.COLORMATRIX);
@@ -205,9 +205,9 @@
 
         private function _Str_22253(k:String, _arg_2:String):IWindowContainer
         {
-            var _local_3:IRegionWindow = (this._Str_2268.getXmlWindow("camera_typebutton") as IRegionWindow);
+            var _local_3:IRegionWindow = (this._widget.getXmlWindow("camera_typebutton") as IRegionWindow);
             var _local_4:IBitmapWrapperWindow = (_local_3.findChildByName("icon") as IBitmapWrapperWindow);
-            _local_4.bitmap = (this._Str_2268.windowManager.assets.getAssetByName(_arg_2).content as BitmapData).clone();
+            _local_4.bitmap = (this._widget.windowManager.assets.getAssetByName(_arg_2).content as BitmapData).clone();
             _local_3.name = ("typebutton," + k);
             _local_3._Str_2613 = k;
             this._Str_11626.add(k, _local_3);
@@ -221,7 +221,7 @@
             var _local_7:Matrix;
             var _local_8:Bitmap;
             var _local_9:IWindow;
-            var _local_4:IWindowContainer = (this._Str_2268.getXmlWindow("camera_filterbutton") as IWindowContainer);
+            var _local_4:IWindowContainer = (this._widget.getXmlWindow("camera_filterbutton") as IWindowContainer);
             if (_arg_3 >= k._Str_15852)
             {
                 _local_5 = (_local_4.findChildByName("content") as IBitmapWrapperWindow);
@@ -266,9 +266,9 @@
 
         public function _Str_23895(k:BitmapData):void
         {
-            this._window = (this._Str_2268.getXmlWindow("camera_editor") as IWindowContainer);
+            this._window = (this._widget.getXmlWindow("camera_editor") as IWindowContainer);
             this._window.center();
-            if (this._Str_2268.component.getProperty("camera.effects.enabled") != "true")
+            if (this._widget.component.getProperty("camera.effects.enabled") != "true")
             {
                 this._Str_19845(null);
                 return;
@@ -376,23 +376,23 @@
             {
                 _Str_3498.hide();
             }
-            if (this._Str_2268.container.sessionDataManager.isAccountSafetyLocked())
+            if (this._widget.container.sessionDataManager.isAccountSafetyLocked())
             {
-                this._Str_2268.windowManager.alert("${generic.alert.title}", "${notifications.text.safety_locked}", 0, null);
-                if (this._Str_2268.component.getProperty("camera.effects.enabled") != "true")
+                this._widget.windowManager.alert("${generic.alert.title}", "${notifications.text.safety_locked}", 0, null);
+                if (this._widget.component.getProperty("camera.effects.enabled") != "true")
                 {
                     this.dispose();
                 }
                 return;
             }
-            _Str_3498 = new PhotoPurchaseConfirmationDialog(this._Str_2268, ITextWindow(this._window.findChildByName("captionInput")).text);
-            //var _local_2:Boolean = this._Str_2268._Str_11986();
-            _Str_3498._Str_24882(this._Str_2268.handler._Str_20642, this._Str_2268.handler._Str_19681, this._Str_2268.handler._Str_22201);
+            _Str_3498 = new PhotoPurchaseConfirmationDialog(this._widget, ITextWindow(this._window.findChildByName("captionInput")).text);
+            //var _local_2:Boolean = this._widget._Str_11986();
+            _Str_3498._Str_24882(this._widget.handler._Str_20642, this._widget.handler._Str_19681, this._widget.handler._Str_22201);
             HabboTracking.getInstance().trackEventLog("Stories", "camera", "stories.photo.purchase_dialog_opened");
             /*if (!_local_2)
             {
                 _Str_3498._Str_19543();
-                this._Str_2268.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
+                this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
             }*/
             this.hide();
         }
@@ -484,14 +484,14 @@
             switch (_arg_2.name)
             {
                 case "cancel_button":
-                    this._Str_2268._Str_10821("effectEditorCancel");
+                    this._widget._Str_10821("effectEditorCancel");
                     this.dispose();
                     break;
                 case "header_button_close":
                     this.dispose();
                     break;
                 case "help_button":
-                    this._Str_2268.component.context.createLinkEvent("habbopages/camera");
+                    this._widget.component.context.createLinkEvent("habbopages/camera");
                     break;
                 case "save_button":
                     break;

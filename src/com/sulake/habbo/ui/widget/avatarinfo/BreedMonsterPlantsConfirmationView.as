@@ -37,7 +37,7 @@
 
         private var _window:IFrameWindow;
         private var _disposed:Boolean = false;
-        private var _Str_2268:AvatarInfoWidget;
+        private var _widget:AvatarInfoWidget;
         private var _windowManager:IHabboWindowManager;
         private var _assets:IAssetLibrary;
         private var _Str_2879:Map;
@@ -49,9 +49,9 @@
 
         public function BreedMonsterPlantsConfirmationView(k:AvatarInfoWidget)
         {
-            this._Str_2268 = k;
+            this._widget = k;
             this._windowManager = k.windowManager;
-            this._assets = this._Str_2268.assets;
+            this._assets = this._widget.assets;
             this._Str_2879 = new Map();
         }
 
@@ -93,8 +93,8 @@
         {
             this._Str_3748 = k;
             this._Str_4105 = _arg_2;
-            this._roomUserData = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(k);
-            this._petData2 = this._Str_2268.handler.roomSession.userDataManager.getUserDataByIndex(_arg_2);
+            this._roomUserData = this._widget.handler.roomSession.userDataManager.getUserDataByIndex(k);
+            this._petData2 = this._widget.handler.roomSession.userDataManager.getUserDataByIndex(_arg_2);
             this._state = ((_arg_3) ? _Str_15445 : _Str_13053);
             this._Str_3248();
             this._window.visible = true;
@@ -106,7 +106,7 @@
             var _local_7:int;
             var _local_3:PetFigureData = new PetFigureData(k);
             var _local_5:String = "std";
-            var _local_6:ImageResult = this._Str_2268.handler.roomEngine.getPetImage(_local_3.typeId, _local_3.paletteId, _local_3.color, new Vector3d(90), 64, this, true, 0, _local_3._Str_3542, _local_5);
+            var _local_6:ImageResult = this._widget.handler.roomEngine.getPetImage(_local_3.typeId, _local_3.paletteId, _local_3.color, new Vector3d(90), 64, this, true, 0, _local_3._Str_3542, _local_5);
             if (_local_6 != null)
             {
                 _local_7 = _local_6.id;
@@ -138,14 +138,14 @@
 
         private function _Str_3248():void
         {
-            this._Str_2268.localizations.registerParameter("breedpets.widget.title", "name", this._roomUserData.name);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant1.name", "name", this._roomUserData.name);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant2.name", "name", this._petData2.name);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant1.description", "name", this._roomUserData.ownerName);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant2.description", "name", this._petData2.ownerName);
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant1.raritylevel", "level", this._roomUserData.rarityLevel.toString());
-            this._Str_2268.localizations.registerParameter("breedpets.widget.plant2.raritylevel", "level", this._petData2.rarityLevel.toString());
-            this._Str_2268.localizations.registerParameter("breedpets.widget.request", "name", this._petData2.ownerName);
+            this._widget.localizations.registerParameter("breedpets.widget.title", "name", this._roomUserData.name);
+            this._widget.localizations.registerParameter("breedpets.widget.plant1.name", "name", this._roomUserData.name);
+            this._widget.localizations.registerParameter("breedpets.widget.plant2.name", "name", this._petData2.name);
+            this._widget.localizations.registerParameter("breedpets.widget.plant1.description", "name", this._roomUserData.ownerName);
+            this._widget.localizations.registerParameter("breedpets.widget.plant2.description", "name", this._petData2.ownerName);
+            this._widget.localizations.registerParameter("breedpets.widget.plant1.raritylevel", "level", this._roomUserData.rarityLevel.toString());
+            this._widget.localizations.registerParameter("breedpets.widget.plant2.raritylevel", "level", this._petData2.rarityLevel.toString());
+            this._widget.localizations.registerParameter("breedpets.widget.request", "name", this._petData2.ownerName);
             if (!this._window)
             {
                 this._window = (this._windowManager.buildFromXML((this._assets.getAssetByName("breed_pets_confirmation_xml").content as XML)) as IFrameWindow);
@@ -252,7 +252,7 @@
             {
                 case HEADER_BUTTON_CLOSE:
                 case CANCEL_BUTTON:
-                    this._Str_2268._Str_19339(this._Str_3748, this._Str_4105);
+                    this._widget._Str_19339(this._Str_3748, this._Str_4105);
                     this.close();
                     return;
                 case OK_BUTTON:
@@ -260,13 +260,13 @@
                     return;
                 case ACCEPT_BUTTON:
                     this.close();
-                    this._Str_2268._Str_24933(this._Str_3748, this._Str_4105);
+                    this._widget._Str_24933(this._Str_3748, this._Str_4105);
                     return;
                 case SAVE_BUTTON:
-                    this._Str_2268._Str_22619(this._Str_3748, this._Str_4105);
+                    this._widget._Str_22619(this._Str_3748, this._Str_4105);
                     if (this._roomUserData.ownerId != this._petData2.ownerId)
                     {
-                        this._Str_2268._Str_23724(this._Str_3710, this._Str_4105);
+                        this._widget._Str_23724(this._Str_3710, this._Str_4105);
                     }
                     this.close();
                     return;

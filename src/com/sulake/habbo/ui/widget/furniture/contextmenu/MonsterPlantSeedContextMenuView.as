@@ -20,7 +20,7 @@
         {
             var k:XML;
             var _local_2:IWindow;
-            if ((((!(_Str_2268)) || (!(_Str_2268.assets))) || (!(_Str_2268.windowManager))))
+            if ((((!(_widget)) || (!(_widget.assets))) || (!(_widget.windowManager))))
             {
                 return;
             }
@@ -32,8 +32,8 @@
             {
                 if (!_window)
                 {
-                    k = (XmlAsset(_Str_2268.assets.getAssetByName("monsterplant_seed_menu")).content as XML);
-                    _window = (_Str_2268.windowManager.buildFromXML(k, 0) as IWindowContainer);
+                    k = (XmlAsset(_widget.assets.getAssetByName("monsterplant_seed_menu")).content as XML);
+                    _window = (_widget.windowManager.buildFromXML(k, 0) as IWindowContainer);
                     if (!_window)
                     {
                         return;
@@ -71,7 +71,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "use":
-                            _local_4 = (_Str_2268 as FurnitureContextMenuWidget);
+                            _local_4 = (_widget as FurnitureContextMenuWidget);
                             if (_local_4 != null)
                             {
                                 _local_4._Str_20801(_Str_2731);
@@ -87,7 +87,7 @@
             }
             if (_local_3)
             {
-                _Str_2268.removeView(this, false);
+                _widget.removeView(this, false);
             }
         }
 

@@ -55,7 +55,7 @@
 
         private var _window:IFrameWindow;
         private var _disposed:Boolean = false;
-        private var _Str_2268:AvatarInfoWidget;
+        private var _widget:AvatarInfoWidget;
         private var _windowManager:IHabboWindowManager;
         private var _assets:IAssetLibrary;
         private var _Str_2879:Map;
@@ -65,9 +65,9 @@
 
         public function BreedPetsResultView(k:AvatarInfoWidget)
         {
-            this._Str_2268 = k;
+            this._widget = k;
             this._windowManager = k.windowManager;
-            this._assets = this._Str_2268.assets;
+            this._assets = this._widget.assets;
             this._Str_2879 = new Map();
         }
 
@@ -107,7 +107,7 @@
         {
             var _local_3:BitmapData;
             var _local_5:int;
-            var _local_4:ImageResult = this._Str_2268.handler.container.roomEngine.getFurnitureImage(k, new Vector3d(90, 0, 0), 64, this, 0, null, -1, -1, null);
+            var _local_4:ImageResult = this._widget.handler.container.roomEngine.getFurnitureImage(k, new Vector3d(90, 0, 0), 64, this, 0, null, -1, -1, null);
             if (_local_4 != null)
             {
                 _local_5 = _local_4.id;
@@ -140,15 +140,15 @@
         private function _Str_3248():void
         {
             var _local_8:String;
-            var k:IFurnitureData = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(this._Str_3111.classId);
-            var _local_2:IFurnitureData = this._Str_2268.handler.container.sessionDataManager.getFloorItemData(this._resultData2.classId);
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.name", "name", ((k != null) ? k.localizedName : ""));
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed2.name", "name", ((_local_2 != null) ? _local_2.localizedName : ""));
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.description", "name", this._Str_3111.userName);
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed2.description", "name", this._resultData2.userName);
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed1.raritylevel", "level", this._Str_3111.rarityLevel.toString());
-            this._Str_2268.localizations.registerParameter("breedpetsresult.widget.seed2.raritylevel", "level", this._resultData2.rarityLevel.toString());
-            var _local_3:int = this._Str_2268.handler.container.sessionDataManager.userId;
+            var k:IFurnitureData = this._widget.handler.container.sessionDataManager.getFloorItemData(this._Str_3111.classId);
+            var _local_2:IFurnitureData = this._widget.handler.container.sessionDataManager.getFloorItemData(this._resultData2.classId);
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed1.name", "name", ((k != null) ? k.localizedName : ""));
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed2.name", "name", ((_local_2 != null) ? _local_2.localizedName : ""));
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed1.description", "name", this._Str_3111.userName);
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed2.description", "name", this._resultData2.userName);
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed1.raritylevel", "level", this._Str_3111.rarityLevel.toString());
+            this._widget.localizations.registerParameter("breedpetsresult.widget.seed2.raritylevel", "level", this._resultData2.rarityLevel.toString());
+            var _local_3:int = this._widget.handler.container.sessionDataManager.userId;
             var _local_4:* = (this._Str_3111.userId == _local_3);
             var _local_5:* = (this._resultData2.userId == _local_3);
             var _local_6:Boolean = ((_local_4) || (_local_5));
@@ -166,7 +166,7 @@
                         _local_8 = this._resultData2.userName;
                     }
                 }
-                this._Str_2268.localization.registerParameter("breedpetsresult.widget.text.sorry", "name", _local_8);
+                this._widget.localization.registerParameter("breedpetsresult.widget.text.sorry", "name", _local_8);
             }
             if (!this._window)
             {
@@ -301,9 +301,9 @@
 
         public function close():void
         {
-            if (this._Str_2268)
+            if (this._widget)
             {
-                this._Str_2268._Str_24769(this);
+                this._widget._Str_24769(this);
             }
         }
 
@@ -383,15 +383,15 @@
             var _local_2:IFurnitureItem = this._Str_17630(k);
             if (_local_2 != null)
             {
-                this._Str_2268.handler.container.inventory._Str_4511(InventoryCategory.FURNI);
+                this._widget.handler.container.inventory._Str_4511(InventoryCategory.FURNI);
                 return true;
             }
             var _local_3:IRoomObject = this._Str_8946(k);
             if (_local_3 != null)
             {
-                _local_4 = this._Str_2268.handler.container.roomSession.roomId;
+                _local_4 = this._widget.handler.container.roomSession.roomId;
                 _local_5 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
-                this._Str_2268.handler.container.roomEngine._Str_5538(_local_4, _local_3.getId(), _local_5);
+                this._widget.handler.container.roomEngine._Str_5538(_local_4, _local_3.getId(), _local_5);
                 return true;
             }
             return false;
@@ -402,7 +402,7 @@
             var _local_2:IRoomObject = this._Str_8946(k);
             if (_local_2 != null)
             {
-                this._Str_2268.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectOperationEnum.OBJECT_PICKUP);
+                this._widget.handler.container.roomEngine.updateObjectWallItemData(_local_2.getId(), RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE, RoomObjectOperationEnum.OBJECT_PICKUP);
                 return true;
             }
             return false;
@@ -416,19 +416,19 @@
 
         private function _Str_8946(k:int):IRoomObject
         {
-            var _local_2:int = this._Str_2268.handler.container.roomSession.roomId;
+            var _local_2:int = this._widget.handler.container.roomSession.roomId;
             var _local_3:int = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
-            var _local_4:IRoomObject = this._Str_2268.handler.container.roomEngine.getRoomObject(_local_2, k, _local_3);
+            var _local_4:IRoomObject = this._widget.handler.container.roomEngine.getRoomObject(_local_2, k, _local_3);
             return _local_4;
         }
 
         private function _Str_17630(k:int):IFurnitureItem
         {
-            if (this._Str_2268 == null)
+            if (this._widget == null)
             {
                 return null;
             }
-            var _local_2:IHabboInventory = this._Str_2268.handler.container.inventory;
+            var _local_2:IHabboInventory = this._widget.handler.container.inventory;
             if (_local_2 == null)
             {
                 return null;
@@ -439,11 +439,11 @@
 
         private function _Str_5337(k:IFurnitureItem):Boolean
         {
-            if (((k == null) || (this._Str_2268 == null)))
+            if (((k == null) || (this._widget == null)))
             {
                 return false;
             }
-            var _local_2:IHabboInventory = this._Str_2268.handler.container.inventory;
+            var _local_2:IHabboInventory = this._widget.handler.container.inventory;
             if (_local_2 == null)
             {
                 return false;
@@ -500,7 +500,7 @@
             {
                 return;
             }
-            var _local_4:int = this._Str_2268.handler.container.sessionDataManager.userId;
+            var _local_4:int = this._widget.handler.container.sessionDataManager.userId;
             var _local_5:* = (k.userId == _local_4);
             var _local_6:Boolean;
             var _local_7:Boolean;

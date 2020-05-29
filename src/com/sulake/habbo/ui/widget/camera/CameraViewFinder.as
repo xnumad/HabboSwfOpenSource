@@ -30,7 +30,7 @@
         private static var _Str_3638:Vector.<CameraSlotData> = new Vector.<CameraSlotData>(_Str_5206);
         private static var _Str_15112:Vector.<RenderRoomMessageComposer> = new Vector.<RenderRoomMessageComposer>(_Str_5206);
 
-        private var _Str_2268:CameraWidget;
+        private var _widget:CameraWidget;
         private var _window:IWindowContainer;
         private var _disposed:Boolean = false;
         private var _Str_2726:IBitmapWrapperWindow;
@@ -47,7 +47,7 @@
         {
             var _local_3:IWindow;
             super();
-            this._Str_2268 = k;
+            this._widget = k;
             this._Str_25311();
             this._Str_3290 = 0;
             while (this._Str_3290 < _Str_5206)
@@ -77,7 +77,7 @@
             }
             this._Str_5658 = null;
             this._Str_2726 = null;
-            this._Str_2268.component.removeUpdateReceiver(this);
+            this._widget.component.removeUpdateReceiver(this);
             if (this._window)
             {
                 this._window.dispose();
@@ -97,7 +97,7 @@
             {
                 return;
             }
-            this._window = (this._Str_2268.getXmlWindow("camera_interface") as IWindowContainer);
+            this._window = (this._widget.getXmlWindow("camera_interface") as IWindowContainer);
             this._window.center();
             this._window.visible = false;
             this._Str_2726 = (this._window.findChildByName("image") as IBitmapWrapperWindow);
@@ -117,11 +117,11 @@
             {
                 this._Str_2726.bitmap = new BitmapData(this._Str_17640, this._Str_21362, false, 0);
             }
-            this._Str_2726.bitmap.fillRect(this._Str_2726.bitmap.rect, this._Str_2268.handler._Str_6647._Str_14394);
+            this._Str_2726.bitmap.fillRect(this._Str_2726.bitmap.rect, this._widget.handler._Str_6647._Str_14394);
             var _local_2:Matrix = new Matrix();
             var _local_3:Rectangle = this._Str_14786();
             _local_2.translate(-(_local_3.x), -(_local_3.y));
-            this._Str_2268._Str_23027(this._Str_2726.bitmap, _local_2, false);
+            this._widget._Str_23027(this._Str_2726.bitmap, _local_2, false);
             this._Str_2726.invalidate();
             if (this._Str_15606 > 0)
             {
@@ -166,13 +166,13 @@
         {
             this._window.visible = true;
             this._window.center();
-            this._Str_2268.component.registerUpdateReceiver(this, 100);
+            this._widget.component.registerUpdateReceiver(this, 100);
         }
 
         public function hide():void
         {
             this._window.visible = false;
-            this._Str_2268.component.removeUpdateReceiver(this);
+            this._widget.component.removeUpdateReceiver(this);
         }
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void
@@ -213,14 +213,14 @@
                     break;
                 case "button_editor":
                     this.hide();
-                    this._Str_2268._Str_24657(this._Str_2726.bitmap.clone());
+                    this._widget._Str_24657(this._Str_2726.bitmap.clone());
                     break;
                 case "delete_photo_button":
                     this._Str_19622();
                     this._Str_6381(false);
                     break;
                 case "header_button_help":
-                    this._Str_2268.component.context.createLinkEvent("habbopages/camera");
+                    this._widget.component.context.createLinkEvent("habbopages/camera");
                     break;
                 case "button_release":
                     if (this._Str_17681)
@@ -229,8 +229,8 @@
                     }
                     else
                     {
-                        this._Str_2268._Str_23751();
-                        //_local_4 = this._Str_2268.handler._Str_18593();
+                        this._widget._Str_23751();
+                        //_local_4 = this._widget.handler._Str_18593();
                         //if (((!(_local_4 == null)) && (_local_4._Str_17633())))
                         //{
                             //_Str_15112[this._Str_3290] = _local_4;
@@ -242,7 +242,7 @@
                         /*}
                         else
                         {
-                            //this._Str_2268.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
+                            //this._widget.windowManager.alert("${generic.alert.title}", "${camera.alert.too_much_stuff}", 0, null);
                         }*/
                     }
                     break;
@@ -311,17 +311,17 @@
                 switch (data.error.code)
                 {
                     case "PURCHASING_FAILED":
-                        this._Str_2268.windowManager.alert("Something went wrong", "sorry, purhcase failed. We will investigate the issue. #code 1", 0, null);
+                        this._widget.windowManager.alert("Something went wrong", "sorry, purhcase failed. We will investigate the issue. #code 1", 0, null);
                         break;
                     case "MODERATED":
-                        this._Str_2268.windowManager.alert("Inappropriate text", "Your photo caption contained inappropriate words. They were changed to bobba. Please edit the text and try again.", 0, null);
-                        this._Str_2268._Str_25345(data.error.message, true);
+                        this._widget.windowManager.alert("Inappropriate text", "Your photo caption contained inappropriate words. They were changed to bobba. Please edit the text and try again.", 0, null);
+                        this._widget._Str_25345(data.error.message, true);
                         break;
                 }
             }
             catch(error:Error)
             {
-                _Str_2268.windowManager.alert("Something went wrong", "sorry, purhcase failed. We will investigate the issue. # code 2", 0, null);
+                _widget.windowManager.alert("Something went wrong", "sorry, purhcase failed. We will investigate the issue. # code 2", 0, null);
             }
         }
 
@@ -464,7 +464,7 @@
                 {
                     if (((!(_Str_7234)) && (!(_arg_3))))
                     {
-                        this._Str_2268.windowManager.alert(this._Str_2268.localizations.getLocalization("camera.full.header"), this._Str_2268.localizations.getLocalization("camera.full.body"), 0, null);
+                        this._widget.windowManager.alert(this._widget.localizations.getLocalization("camera.full.header"), this._widget.localizations.getLocalization("camera.full.body"), 0, null);
                         _Str_7234 = true;
                     }
                 }
