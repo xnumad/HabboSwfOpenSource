@@ -20,7 +20,7 @@
             return this._id;
         }
 
-        public function get _Str_16428():String
+        public function get newName():String
         {
             return this._newName;
         }

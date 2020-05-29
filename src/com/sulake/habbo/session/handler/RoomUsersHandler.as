@@ -259,7 +259,7 @@
             {
                 return;
             }
-            _local_4.userDataManager.updateNameByIndex(_local_3.id, _local_3._Str_16428);
+            _local_4.userDataManager.updateNameByIndex(_local_3.id, _local_3.newName);
         }
 
         private function onPetInfo(k:IMessageEvent):void
