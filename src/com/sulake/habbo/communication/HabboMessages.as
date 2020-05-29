@@ -347,7 +347,7 @@
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8246;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8482;
 	import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
-	import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
+	import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.HandItemReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.ApproveNameMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.users.IgnoredUsersMessageEvent;
@@ -1137,7 +1137,7 @@
             INCOMING_PACKETS[2012] = _Str_5017;
             INCOMING_PACKETS[2016] = _Str_5269;
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
-            INCOMING_PACKETS[2023] = _Str_8667;
+            INCOMING_PACKETS[2023] = InClientLinkMessageEvent;
             INCOMING_PACKETS[2024] = TradingItemListEvent;
             INCOMING_PACKETS[2030] = _Str_8312;
             INCOMING_PACKETS[2031] = _Str_3407;

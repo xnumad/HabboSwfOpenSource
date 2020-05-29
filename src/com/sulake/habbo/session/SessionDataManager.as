@@ -34,7 +34,7 @@
     import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_8527;
     import com.sulake.habbo.communication.messages.incoming.handshake.NoobnessLevelMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.users._Str_8667;
+    import com.sulake.habbo.communication.messages.incoming.users.InClientLinkMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5948;
     import com.sulake.habbo.session.furniture.IFurniDataListener;
@@ -182,7 +182,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this._Str_23478));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this._Str_25667));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_8667(this._Str_25064));
+                this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this._Str_25064));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_5948(this._Str_16302));
             }
@@ -405,7 +405,7 @@
             events.dispatchEvent(new RoomSessionUserTagsEvent(this.userId, k.tags.slice()));
         }
 
-        private function _Str_25064(k:_Str_8667):void
+        private function _Str_25064(k:InClientLinkMessageEvent):void
         {
             context.createLinkEvent(k.link);
         }
