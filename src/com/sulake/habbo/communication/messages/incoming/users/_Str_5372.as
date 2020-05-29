@@ -4,7 +4,7 @@
 
     public class _Str_5372 implements _Str_5716 
     {
-        private var _Str_7355:Array;
+        private var _ownedRooms:Array;
         private var _isOwner:Boolean;
         private var _groupId:int;
         private var _groupName:String;
@@ -16,7 +16,7 @@
         private var _url:String;
         private var _Str_8166:int;
         private var _Str_21056:int;
-        private var _Str_8202:Array;
+        private var _badgeSettings:Array;
         private var _Str_2722:String;
         private var _Str_19172:int;
 
@@ -25,12 +25,12 @@
             var _local_2:int;
             var _local_3:int;
             super();
-            this._Str_7355 = new Array();
+            this._ownedRooms = new Array();
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_7355.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
+                this._ownedRooms.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
                 _local_2++;
             }
             this._isOwner = k.readBoolean();
@@ -44,12 +44,12 @@
             this._Str_21056 = k.readInteger();
             this._locked = k.readBoolean();
             this._url = k.readString();
-            this._Str_8202 = new Array();
+            this._badgeSettings = new Array();
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_8202.push(new _Str_5965(k));
+                this._badgeSettings.push(new _Str_5965(k));
                 _local_2++;
             }
             this._Str_2722 = k.readString();
@@ -58,7 +58,7 @@
 
         public function get _Str_6848():Array
         {
-            return this._Str_7355;
+            return this._ownedRooms;
         }
 
         public function get _Str_2811():Boolean
@@ -103,7 +103,7 @@
 
         public function get _Str_6089():Array
         {
-            return this._Str_8202;
+            return this._badgeSettings;
         }
 
         public function get locked():Boolean

@@ -4,42 +4,42 @@
 
     public class _Str_5600 implements _Str_5716 
     {
-        private var _Str_20748:int;
-        private var _Str_7355:Array;
-        private var _Str_8202:Array;
+        private var _costInCredits:int;
+        private var _ownedRooms:Array;
+        private var _badgeSettings:Array;
 
         public function _Str_5600(k:IMessageDataWrapper)
         {
             var _local_2:int;
             var _local_3:int;
             super();
-            this._Str_20748 = k.readInteger();
-            this._Str_7355 = new Array();
+            this._costInCredits = k.readInteger();
+            this._ownedRooms = new Array();
             _local_3 = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_7355.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
+                this._ownedRooms.push(new _Str_2866(k.readInteger(), k.readString(), k.readBoolean()));
                 _local_2++;
             }
             _local_3 = k.readInteger();
-            this._Str_8202 = new Array();
+            this._badgeSettings = new Array();
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_8202.push(new _Str_5965(k));
+                this._badgeSettings.push(new _Str_5965(k));
                 _local_2++;
             }
         }
 
         public function get _Str_23650():int
         {
-            return this._Str_20748;
+            return this._costInCredits;
         }
 
         public function get _Str_6848():Array
         {
-            return this._Str_7355;
+            return this._ownedRooms;
         }
 
         public function get _Str_2811():Boolean
@@ -84,7 +84,7 @@
 
         public function get _Str_6089():Array
         {
-            return this._Str_8202;
+            return this._badgeSettings;
         }
 
         public function get locked():Boolean
