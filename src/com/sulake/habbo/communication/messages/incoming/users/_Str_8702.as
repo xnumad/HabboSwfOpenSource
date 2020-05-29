@@ -11,7 +11,7 @@
             super(k, HandItemReceivedMessageParser);
         }
 
-        public function get _Str_16798():int
+        public function get giverUserId():int
         {
             return HandItemReceivedMessageParser(_parser).giverUserId;
         }

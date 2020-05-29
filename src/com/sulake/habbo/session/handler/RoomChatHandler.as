@@ -180,7 +180,7 @@
                 _local_2 = listener.getSession(_xxxRoomId);
                 if (_local_2)
                 {
-                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, k._Str_16798, "", RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED, SystemChatStyleEnum.GENERIC, null, k._Str_17975));
+                    listener.events.dispatchEvent(new RoomSessionChatEvent(RoomSessionChatEvent.RSCE_CHAT_EVENT, _local_2, k.giverUserId, "", RoomSessionChatEvent.CHAT_TYPE_HAND_ITEM_RECEIVED, SystemChatStyleEnum.GENERIC, null, k._Str_17975));
                 }
             }
         }
