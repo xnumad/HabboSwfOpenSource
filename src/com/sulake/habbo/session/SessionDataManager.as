@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3084;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
-    import com.sulake.habbo.communication.messages.incoming.availability._Str_9281;
+    import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -175,7 +175,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_3084(this._Str_5174));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
-                this._communicationManager.addHabboConnectionMessageEvent(new _Str_9281(this._Str_23236));
+                this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
@@ -427,7 +427,7 @@
         private function _Str_23236(k:IMessageEvent):void
         {
             var _local_3:IFurniDataListener;
-            var _local_2:AvailabilityStatusMessageParser = (k as _Str_9281).getParser();
+            var _local_2:AvailabilityStatusMessageParser = (k as AvailabilityStatusMessageEvent).getParser();
             if (_local_2 == null)
             {
                 return;
