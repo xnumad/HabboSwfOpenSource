@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_8198;
+    import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
 
     public class _Str_7294 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_7294(k:Function)
         {
-            super(k, _Str_8198);
+            super(k, HabboGroupJoinFailedMessageParser);
         }
 
         public function get reason():int
         {
-            return _Str_8198(_parser).reason;
+            return HabboGroupJoinFailedMessageParser(_parser).reason;
         }
     }
 }

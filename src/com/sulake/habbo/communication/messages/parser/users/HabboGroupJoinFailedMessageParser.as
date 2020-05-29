@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8198 implements IMessageParser 
+    public class HabboGroupJoinFailedMessageParser implements IMessageParser
     {
         public static const INSUFFICIENT_SUBSCRIPTION_LEVEL:int = 4;
 

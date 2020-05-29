@@ -63,7 +63,7 @@
     import flash.display.BitmapData;
     import com.sulake.habbo.communication.messages.incoming.users._Str_2974;
     import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileData;
-    import com.sulake.habbo.communication.messages.parser.users._Str_8198;
+    import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5600;
     import com.sulake.habbo.communication.messages.incoming.users._Str_5372;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
@@ -360,7 +360,7 @@
             var _local_3:String;
             var _local_4:String;
             var _local_2:int = _Str_7294(k).reason;
-            if (_local_2 == _Str_8198.INSUFFICIENT_SUBSCRIPTION_LEVEL)
+            if (_local_2 == HabboGroupJoinFailedMessageParser.INSUFFICIENT_SUBSCRIPTION_LEVEL)
             {
                 this._hcRequiredWindowCtrl.show(false);
             }
