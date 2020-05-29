@@ -92,7 +92,7 @@
         private var _realName:String;
         private var _respectTotal:int = 0;
         private var _respectLeft:int = 0;
-        private var _Str_3973:int = 0;
+        private var _petRespectLeft:int = 0;
         private var _Str_7394:Boolean = true;
         private var _Str_25790:Array;
         private var _Str_20692:Boolean;
@@ -327,7 +327,7 @@
             this._name = _local_3.name;
             this._respectTotal = _local_3.respectTotal;
             this._respectLeft = _local_3.petRespectLeft;
-            this._Str_3973 = _local_3._Str_2985;
+            this._petRespectLeft = _local_3._Str_2985;
             this._figure = _local_3.figure;
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
@@ -451,7 +451,7 @@
             {
                 return;
             }
-            this._Str_3973++;
+            this._petRespectLeft++;
         }
 
         private function _Str_18012(k:AccountSafetyLockStatusChangeMessageEvent):void
@@ -692,7 +692,7 @@
 
         public function get _Str_2985():int
         {
-            return this._Str_3973;
+            return this._petRespectLeft;
         }
 
         public function giveRespect(k:int):void
@@ -711,10 +711,10 @@
 
         public function givePetRespect(k:int):void
         {
-            if (((k >= 0) && (this._Str_3973 > 0)))
+            if (((k >= 0) && (this._petRespectLeft > 0)))
             {
                 this.send(new _Str_8184(k));
-                this._Str_3973 = (this._Str_3973 - 1);
+                this._petRespectLeft = (this._petRespectLeft - 1);
             }
         }
 

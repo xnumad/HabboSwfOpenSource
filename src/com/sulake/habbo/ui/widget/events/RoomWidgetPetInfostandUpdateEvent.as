@@ -14,7 +14,7 @@
         private var _maximumEnergy:int;
         private var _happyness:int;
         private var _maximumHappyness:int;
-        private var _Str_3973:int;
+        private var _petRespectLeft:int;
         private var _respect:int;
         private var _age:int;
         private var _name:String;
@@ -198,7 +198,7 @@
 
         public function get _Str_2985():int
         {
-            return this._Str_3973;
+            return this._petRespectLeft;
         }
 
         public function get respect():int
@@ -248,7 +248,7 @@
 
         public function set _Str_2985(k:int):void
         {
-            this._Str_3973 = k;
+            this._petRespectLeft = k;
         }
 
         public function set _Str_5114(k:Boolean):void
