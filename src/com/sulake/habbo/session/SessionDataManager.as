@@ -95,7 +95,7 @@
         private var _petRespectLeft:int = 0;
         private var _nameChangeAllowed:Boolean = true;
         private var _rights:Array;
-        private var _Str_20692:Boolean;
+        private var _systemOpen:Boolean;
         private var _Str_20046:Boolean;
         private var _Str_8842:Boolean;
         private var _Str_2804:Dictionary;
@@ -432,7 +432,7 @@
             {
                 return;
             }
-            this._Str_20692 = _local_2.isOpen;
+            this._systemOpen = _local_2.isOpen;
             this._Str_20046 = _local_2._Str_22557;
             this._Str_8842 = _local_2.isRealNoob;
             if ((((this.isRealNoob) && (this._Str_20020)) && (!(this._Str_12845))))
@@ -462,7 +462,7 @@
 
         public function get systemOpen():Boolean
         {
-            return this._Str_20692;
+            return this._systemOpen;
         }
 
         public function get systemShutDown():Boolean
