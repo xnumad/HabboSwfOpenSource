@@ -2,23 +2,23 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.users._Str_6619;
+    import com.sulake.habbo.communication.messages.parser.users.GuildMembershipUpdatedMessageParser;
 
     public class _Str_6896 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_6896(k:Function)
         {
-            super(k, _Str_6619);
+            super(k, GuildMembershipUpdatedMessageParser);
         }
 
         public function get data():_Str_2891
         {
-            return _Str_6619(_parser).data;
+            return GuildMembershipUpdatedMessageParser(_parser).data;
         }
 
         public function get guildId():int
         {
-            return _Str_6619(_parser).guildId;
+            return GuildMembershipUpdatedMessageParser(_parser).guildId;
         }
     }
 }
