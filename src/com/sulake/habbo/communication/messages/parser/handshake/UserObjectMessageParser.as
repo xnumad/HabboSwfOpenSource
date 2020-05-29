@@ -16,7 +16,7 @@
         private var _respectLeft:int;
         private var _petRespectLeft:int;
         private var _streamPublishingAllowed:Boolean;
-        private var _Str_20853:String;
+        private var _lastAccessDate:String;
         private var _nameChangeAllowed:Boolean;
         private var _Str_9602:Boolean = false;
 
@@ -39,7 +39,7 @@
             this._respectLeft = k.readInteger();
             this._petRespectLeft = k.readInteger();
             this._streamPublishingAllowed = k.readBoolean();
-            this._Str_20853 = k.readString();
+            this._lastAccessDate = k.readString();
             this._nameChangeAllowed = k.readBoolean();
             this._Str_9602 = k.readBoolean();
             return true;
@@ -102,7 +102,7 @@
 
         public function get _Str_26222():String
         {
-            return this._Str_20853;
+            return this._lastAccessDate;
         }
 
         public function get nameChangeAllowed():Boolean
