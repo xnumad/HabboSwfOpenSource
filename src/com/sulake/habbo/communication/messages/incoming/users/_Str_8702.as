@@ -16,7 +16,7 @@
             return HandItemReceivedMessageParser(_parser).giverUserId;
         }
 
-        public function get _Str_17975():int
+        public function get handItemType():int
         {
             return HandItemReceivedMessageParser(_parser).handItemType;
         }
