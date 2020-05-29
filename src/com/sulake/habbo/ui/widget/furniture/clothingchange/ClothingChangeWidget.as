@@ -130,11 +130,11 @@
             switch (_local_3)
             {
                 case BOY:
-                    this._Str_19153(FigureData.M);
+                    this.requestEditor(FigureData.M);
                     this._Str_9023();
                     return;
                 case GIRL:
-                    this._Str_19153(FigureData.F);
+                    this.requestEditor(FigureData.F);
                     this._Str_9023();
                     return;
                 case "close":
@@ -144,7 +144,7 @@
             }
         }
 
-        private function _Str_19153(k:String):void
+        private function requestEditor(k:String):void
         {
             var _local_2:RoomWidgetClothingChangeMessage = new RoomWidgetClothingChangeMessage(RoomWidgetClothingChangeMessage.RWCCM_REQUEST_EDITOR, k, this._Str_2319, this._Str_3014, this._Str_2337);
             messageListener.processWidgetMessage(_local_2);
