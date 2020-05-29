@@ -11,7 +11,7 @@
         function get baseRoomId():int;
         function get primaryColorId():int;
         function get secondaryColorId():int;
-        function get _Str_6089():Array;
+        function get badgeSettings():Array;
         function get locked():Boolean;
         function get url():String;
         function get _Str_4830():int;

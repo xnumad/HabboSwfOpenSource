@@ -177,8 +177,8 @@
                 }
                 if (!this._badgeEditorCtrl._Str_6443)
                 {
-                    this._badgeEditorCtrl.createWindow(this._Str_15138(_Str_8727), this._data._Str_6089);
-                    this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
+                    this._badgeEditorCtrl.createWindow(this._Str_15138(_Str_8727), this._data.badgeSettings);
+                    this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
                 }
                 this._window.findChildByName("reset_badge").visible = this._data.exists;
             }
@@ -384,7 +384,7 @@
             ITextWindow(this._window.findChildByName("name_txt")).text = this._data.groupName;
             ITextWindow(this._window.findChildByName("desc_txt")).text = this._data.groupDesc;
             this._Str_20779();
-            this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
+            this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
             this._primaryColorCtrl._Str_6434(this._data.primaryColorId);
             this._secondaryColorCtrl._Str_6434(this._data.secondaryColorId);
             this._settingsCtrl.refresh(this._data);
@@ -425,7 +425,7 @@
         {
             if (((k.type == WindowMouseEvent.CLICK) && (this._badgeEditorCtrl._Str_6443)))
             {
-                this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
+                this._badgeEditorCtrl._Str_15567(this._data.badgeSettings);
             }
         }
 
@@ -563,7 +563,7 @@
                     }
                     return true;
                 case _Str_8727:
-                    _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data._Str_6089);
+                    _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
                     this._badgeEditorCtrl._Str_23176();
                     return true;
                 case _Str_7447:
@@ -594,7 +594,7 @@
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
                 case _Str_8727:
-                    _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data._Str_6089);
+                    _local_3 = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
                     this._manager.send(new UpdateGuildBadgeMessageComposer(this._data.groupId, _local_3));
                     this._manager.events.dispatchEvent(new GuildSettingsChangedInManageEvent(GuildSettingsChangedInManageEvent.GSCIME_GUILD_VISUAL_SETTINGS_CHANGED, this._data.groupId));
                     return;
@@ -616,7 +616,7 @@
             var k:String = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
             var _local_2:String = ITextFieldWindow(this._window.findChildByName("desc_txt")).text;
             var _local_3:_Str_2866 = this._Str_19886();
-            var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data._Str_6089);
+            var _local_4:Array = ((this._badgeEditorCtrl._Str_6443) ? this._badgeEditorCtrl._Str_15937() : this._data.badgeSettings);
             var _local_5:int = ((this._primaryColorCtrl.isInitialized) ? this._primaryColorCtrl._Str_15044() : this._data.primaryColorId);
             var _local_6:int = ((this._secondaryColorCtrl.isInitialized) ? this._secondaryColorCtrl._Str_15044() : this._data.secondaryColorId);
             this._alertedBaseRoomId = 0;

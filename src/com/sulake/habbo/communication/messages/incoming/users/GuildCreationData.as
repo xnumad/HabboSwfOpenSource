@@ -82,7 +82,7 @@
             return 0;
         }
 
-        public function get _Str_6089():Array
+        public function get badgeSettings():Array
         {
             return this._badgeSettings;
         }
