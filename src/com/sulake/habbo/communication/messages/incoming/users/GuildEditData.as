@@ -61,7 +61,7 @@
             return this._ownedRooms;
         }
 
-        public function get _Str_2811():Boolean
+        public function get exists():Boolean
         {
             return true;
         }

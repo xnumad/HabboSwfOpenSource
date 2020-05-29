@@ -3,7 +3,7 @@
     public interface _Str_5716 
     {
         function get ownedRooms():Array;
-        function get _Str_2811():Boolean;
+        function get exists():Boolean;
         function get isOwner():Boolean;
         function get groupId():int;
         function get groupName():String;

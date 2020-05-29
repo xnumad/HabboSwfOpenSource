@@ -16,7 +16,7 @@
             this._tags = new Array();
             super();
             this._Str_22209 = k.readBoolean();
-            if (!this._Str_2811)
+            if (!this.exists)
             {
                 return;
             }
@@ -61,7 +61,7 @@
             return this._tags;
         }
 
-        public function get _Str_2811():Boolean
+        public function get exists():Boolean
         {
             return this._Str_22209;
         }

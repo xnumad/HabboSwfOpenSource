@@ -126,7 +126,7 @@
 
         public function _Str_7358(k:int, _arg_2:String):void
         {
-            if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data._Str_2811))))
+            if (((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))))
             {
                 this._data.ownedRooms.splice(0, 0, new _Str_2866(k, _arg_2, false));
                 this._Str_20779();
@@ -136,7 +136,7 @@
 
         public function _Str_23040():void
         {
-            if ((((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data._Str_2811))) && (this._step == _Str_7672)))
+            if ((((((!(this._window == null)) && (this._window.visible)) && (!(this._data == null))) && (!(this._data.exists))) && (this._step == _Str_7672)))
             {
                 this.refresh();
             }
@@ -146,7 +146,7 @@
         {
             var _local_3:IWindow;
             this.prepare();
-            var k:Boolean = ((!(this._data._Str_2811)) || (this._data.isOwner));
+            var k:Boolean = ((!(this._data.exists)) || (this._data.isOwner));
             this._window.findChildByName("edit_tab_1").visible = k;
             this._window.findChildByName("edit_tab_2").visible = k;
             this._window.findChildByName("edit_tab_3").visible = k;
@@ -156,7 +156,7 @@
             {
                 this._Str_15138(_local_2).visible = (this._step == _local_2);
                 _local_3 = this._window.findChildByName(("header_pic_bitmap_step_" + _local_2));
-                _local_3.y = ((this._data._Str_2811) ? 0 : _Str_16773);
+                _local_3.y = ((this._data.exists) ? 0 : _Str_16773);
                 _local_3.visible = (this._step == _local_2);
                 _local_2++;
             }
@@ -165,13 +165,13 @@
             this._window.findChildByName("header_pic_bitmap");
             this._window.findChildByName("header_caption_txt").y = (_Str_18111 + this._Str_19668());
             this._window.findChildByName("header_desc_txt").y = (_Str_17494 + this._Str_19668());
-            this._window.findChildByName("edit_guild_tab_context").visible = this._data._Str_2811;
-            this._window.findChildByName("footer_cont").visible = (!(this._data._Str_2811));
+            this._window.findChildByName("edit_guild_tab_context").visible = this._data.exists;
+            this._window.findChildByName("footer_cont").visible = (!(this._data.exists));
             this._window.findChildByName("reset_badge").visible = false;
             this._window.findChildByName("reset_colors").visible = false;
             if (this._step == _Str_8727)
             {
-                if (!this._data._Str_2811)
+                if (!this._data.exists)
                 {
                     this._manager.trackGoogle("groupPurchase", "step2_badge");
                 }
@@ -180,18 +180,18 @@
                     this._badgeEditorCtrl.createWindow(this._Str_15138(_Str_8727), this._data._Str_6089);
                     this._badgeEditorCtrl._Str_15567(this._data._Str_6089);
                 }
-                this._window.findChildByName("reset_badge").visible = this._data._Str_2811;
+                this._window.findChildByName("reset_badge").visible = this._data.exists;
             }
             if (this._step == _Str_7447)
             {
-                if (!this._data._Str_2811)
+                if (!this._data.exists)
                 {
                     this._manager.trackGoogle("groupPurchase", "step3_colors");
                 }
                 if (!this._primaryColorCtrl.isInitialized)
                 {
                     this._primaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_primary_color_selector", this._manager._Str_3058._Str_17665);
-                    if (this._data._Str_2811)
+                    if (this._data.exists)
                     {
                         this._primaryColorCtrl._Str_6434(this._data._Str_7342);
                     }
@@ -203,7 +203,7 @@
                 if (!this._secondaryColorCtrl.isInitialized)
                 {
                     this._secondaryColorCtrl._Str_16890(this._Str_15138(_Str_7447), "guild_secondary_color_selector", this._manager._Str_3058._Str_16298);
-                    if (this._data._Str_2811)
+                    if (this._data.exists)
                     {
                         this._secondaryColorCtrl._Str_6434(this._data._Str_7590);
                     }
@@ -212,7 +212,7 @@
                         this._secondaryColorCtrl._Str_6434(this._manager._Str_3058.findMatchingSecondaryColorId(this._badgeEditorCtrl._Str_24812));
                     }
                 }
-                this._window.findChildByName("reset_colors").visible = this._data._Str_2811;
+                this._window.findChildByName("reset_colors").visible = this._data.exists;
             }
             if (this._step == _Str_12047)
             {
@@ -223,7 +223,7 @@
             }
             if (this._step == _Str_7672)
             {
-                if (!this._data._Str_2811)
+                if (!this._data.exists)
                 {
                     this._manager.trackGoogle("groupPurchase", "step4_confirm");
                 }
@@ -231,7 +231,7 @@
             }
             if (this._step == _Str_7036)
             {
-                if (!this._data._Str_2811)
+                if (!this._data.exists)
                 {
                     this._manager.trackGoogle("groupPurchase", "step1_identity");
                 }
@@ -240,11 +240,11 @@
                     this._manager.windowManager.registerLocalizationParameter("group.membercount", "totalMembers", ("" + this._data._Str_16539));
                     this._window.findChildByName("step_1_members_txt").caption = this._manager.localization.getLocalization("group.membercount");
                 }
-                this._window.findChildByName("base_label").visible = (!(this._data._Str_2811));
-                this._window.findChildByName("base_dropmenu").visible = (!(this._data._Str_2811));
-                this._window.findChildByName("base_warning").visible = (!(this._data._Str_2811));
-                this._window.findChildByName("create_room_link_region").visible = (!(this._data._Str_2811));
-                this._window.findChildByName("step_1_members_region").visible = this.data._Str_2811;
+                this._window.findChildByName("base_label").visible = (!(this._data.exists));
+                this._window.findChildByName("base_dropmenu").visible = (!(this._data.exists));
+                this._window.findChildByName("base_warning").visible = (!(this._data.exists));
+                this._window.findChildByName("create_room_link_region").visible = (!(this._data.exists));
+                this._window.findChildByName("step_1_members_region").visible = this.data.exists;
             }
             this._Str_24568();
         }
@@ -304,13 +304,13 @@
 
         private function _Str_19668():int
         {
-            return (this._data._Str_2811) ? _Str_17986 : 0;
+            return (this._data.exists) ? _Str_17986 : 0;
         }
 
         private function _Str_24568():void
         {
-            this._window.findChildByName("steps_header_cont").visible = (!(this._data._Str_2811));
-            if (this._data._Str_2811)
+            this._window.findChildByName("steps_header_cont").visible = (!(this._data.exists));
+            if (this._data.exists)
             {
                 return;
             }
@@ -341,13 +341,13 @@
 
         private function _Str_24672():String
         {
-            var k:String = (((this._data._Str_2811) ? "group.edit.tabcaption." : "group.create.stepcaption.") + this._step);
+            var k:String = (((this._data.exists) ? "group.edit.tabcaption." : "group.create.stepcaption.") + this._step);
             return this._manager.localization.getLocalization(k, k);
         }
 
         private function _Str_25664():String
         {
-            var k:String = (((this._data._Str_2811) ? "group.edit.tabdesc." : "group.create.stepdesc.") + this._step);
+            var k:String = (((this._data.exists) ? "group.edit.tabdesc." : "group.create.stepdesc.") + this._step);
             return this._manager.localization.getLocalization(k, k);
         }
 
@@ -431,7 +431,7 @@
 
         private function _Str_12428(k:WindowEvent, _arg_2:IWindow):void
         {
-            if ((((k.type == WindowMouseEvent.CLICK) && (this._data._Str_2811)) && (!(this._manager._Str_14291 == null))))
+            if ((((k.type == WindowMouseEvent.CLICK) && (this._data.exists)) && (!(this._manager._Str_14291 == null))))
             {
                 this._manager.trackGoogle("groupManagement", "groupMembers");
                 this._manager._Str_14291._Str_12428(this._data.groupId, _Str_5612._Str_13464);
@@ -490,7 +490,7 @@
             {
                 return;
             }
-            if (!this._data._Str_2811)
+            if (!this._data.exists)
             {
                 this._manager.trackGoogle("groupPurchase", "buyGroup");
             }
@@ -503,7 +503,7 @@
             {
                 return;
             }
-            if (!this._data._Str_2811)
+            if (!this._data.exists)
             {
                 this._manager.trackGoogle("groupPurchase", "buyVip");
             }
@@ -535,7 +535,7 @@
             {
                 case _Str_7036:
                     k = ITextFieldWindow(this._window.findChildByName("name_txt")).text;
-                    if (!this._data._Str_2811)
+                    if (!this._data.exists)
                     {
                         _local_4 = this._Str_19886();
                         if (((((k == null) || (k.length == 0)) || (_local_4 == null)) || (_local_4.roomId == 0)))
@@ -685,7 +685,7 @@
             {
                 return;
             }
-            if (this._data._Str_2811)
+            if (this._data.exists)
             {
                 if (!this._Str_13503())
                 {
@@ -739,7 +739,7 @@
             {
                 return;
             }
-            if (!this._data._Str_2811)
+            if (!this._data.exists)
             {
                 k.visible = false;
                 k.invalidate();
@@ -755,7 +755,7 @@
 
         private function _Str_24784(k:WindowEvent):void
         {
-            if (((((!(this._data == null)) && (this._data._Str_2811)) && (!(this._window == null))) && (this._window.visible)))
+            if (((((!(this._data == null)) && (this._data.exists)) && (!(this._window == null))) && (this._window.visible)))
             {
                 this._Str_18142();
             }

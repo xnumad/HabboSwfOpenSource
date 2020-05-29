@@ -234,7 +234,7 @@
             {
                 _local_4 = (_local_3.addChild(this._roomDataPrototype.clone()) as IWindowContainer);
             }
-            if (!k._Str_2811)
+            if (!k.exists)
             {
                 this._Str_20408(this._list, _local_3);
                 this._Str_20408(this._list, this._list.getListItemByName("event_spacing"));
