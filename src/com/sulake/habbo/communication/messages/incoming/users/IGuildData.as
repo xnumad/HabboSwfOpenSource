@@ -17,6 +17,6 @@
         function get guildType():int;
         function get guildRightsLevel():int;
         function get badgeCode():String;
-        function get _Str_16539():int;
+        function get membershipCount():int;
     }
 }

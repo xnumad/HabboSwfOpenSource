@@ -112,7 +112,7 @@
             return "";
         }
 
-        public function get _Str_16539():int
+        public function get membershipCount():int
         {
             return 0;
         }

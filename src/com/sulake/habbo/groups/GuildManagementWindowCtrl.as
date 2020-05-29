@@ -237,7 +237,7 @@
                 }
                 else
                 {
-                    this._manager.windowManager.registerLocalizationParameter("group.membercount", "totalMembers", ("" + this._data._Str_16539));
+                    this._manager.windowManager.registerLocalizationParameter("group.membercount", "totalMembers", ("" + this._data.membershipCount));
                     this._window.findChildByName("step_1_members_txt").caption = this._manager.localization.getLocalization("group.membercount");
                 }
                 this._window.findChildByName("base_label").visible = (!(this._data.exists));
