@@ -11,7 +11,7 @@
         private var _sex:String;
         private var _customData:String;
         private var _realName:String;
-        private var _Str_21976:Boolean;
+        private var _directMail:Boolean;
         private var _respectTotal:int;
         private var _respectLeft:int;
         private var _petRespectLeft:int;
@@ -34,7 +34,7 @@
             this._sex = k.readString();
             this._customData = k.readString();
             this._realName = k.readString();
-            this._Str_21976 = k.readBoolean();
+            this._directMail = k.readBoolean();
             this._respectTotal = k.readInteger();
             this._respectLeft = k.readInteger();
             this._petRespectLeft = k.readInteger();
@@ -77,7 +77,7 @@
 
         public function get _Str_26317():Boolean
         {
-            return this._Str_21976;
+            return this._directMail;
         }
 
         public function get respectTotal():int
