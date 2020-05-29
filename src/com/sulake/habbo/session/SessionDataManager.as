@@ -326,8 +326,8 @@
             this._userId = _local_3.id;
             this._name = _local_3.name;
             this._respectTotal = _local_3.respectTotal;
-            this._respectLeft = _local_3.petRespectLeft;
-            this._petRespectLeft = _local_3._Str_2985;
+            this._respectLeft = _local_3.respectLeft;
+            this._petRespectLeft = _local_3.petRespectLeft;
             this._figure = _local_3.figure;
             this._gender = _local_3.sex;
             this._realName = _local_3.realName;
