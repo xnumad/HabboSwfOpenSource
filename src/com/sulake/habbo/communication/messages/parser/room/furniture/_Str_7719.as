@@ -7,7 +7,7 @@
     {
         private var _email:String;
         private var _isVerified:Boolean;
-        private var _Str_10981:Boolean;
+        private var _allowChange:Boolean;
         private var _furniId:int;
         private var _Str_10840:Boolean;
 
@@ -21,7 +21,7 @@
         {
             this._email = k.readString();
             this._isVerified = k.readBoolean();
-            this._Str_10981 = k.readBoolean();
+            this._allowChange = k.readBoolean();
             this._furniId = k.readInteger();
             this._Str_10840 = k.readBoolean();
             return true;
@@ -44,7 +44,7 @@
 
         public function get _Str_19540():Boolean
         {
-            return this._Str_10981;
+            return this._allowChange;
         }
 
         public function get furniId():int
