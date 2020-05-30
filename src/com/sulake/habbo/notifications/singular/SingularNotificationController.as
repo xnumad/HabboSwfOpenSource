@@ -177,7 +177,7 @@
             }
         }
 
-        public function _Str_22352(k:String):void
+        public function onInternalLink(k:String):void
         {
             this._notifications.createLinkEvent(k);
         }

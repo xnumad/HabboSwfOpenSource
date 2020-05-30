@@ -40,7 +40,7 @@
         {
             if (this._style.internalLink)
             {
-                this._controller._Str_22352(this._style.internalLink);
+                this._controller.onInternalLink(this._style.internalLink);
             }
         }
     }
