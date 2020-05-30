@@ -8,7 +8,7 @@
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.enum.CompetitionVotingInfoResult;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_7630;
+    import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
     import com.sulake.habbo.communication.messages.parser.competition.CompetitionEntrySubmitResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
     import com.sulake.core.window.enum.WindowParam;
@@ -105,10 +105,10 @@
             }
         }
 
-        public function _Str_16392(k:_Str_7630):void
+        public function _Str_16392(k:CompetitionVotingInfoMessageEvent):void
         {
-            this._remainingVotes = k.getParser()._Str_24679;
-            var _local_2:Boolean = k.getParser()._Str_24414;
+            this._remainingVotes = k.getParser().votesRemaining;
+            var _local_2:Boolean = k.getParser().isVotingAllowedForUser;
             var _local_3:int = k.getParser().resultCode;
             this.refreshContent(k.getParser().goalId, false, k.getParser().goalCode, _local_3.toString());
             this._Str_6512(((_local_3 == CompetitionVotingInfoResult.REQUIRED_PERK_MISSING) ? this._Str_24392 : this._Str_24761));

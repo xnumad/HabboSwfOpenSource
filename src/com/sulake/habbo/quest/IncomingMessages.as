@@ -11,7 +11,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionProgressMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.competition._Str_7630;
+    import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementsScoreEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestsMessageEvent;
@@ -64,7 +64,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionProgressMessageEvent(this._Str_23911));
-            _local_2.addHabboConnectionMessageEvent(new _Str_7630(this._Str_16392));
+            _local_2.addHabboConnectionMessageEvent(new CompetitionVotingInfoMessageEvent(this._Str_16392));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionsMessageEvent(this._Str_23908));
             _local_2.addHabboConnectionMessageEvent(new AchievementsScoreEvent(this._Str_18065));
             _local_2.addHabboConnectionMessageEvent(new QuestsMessageEvent(this._Str_8212));
@@ -238,7 +238,7 @@
             this._questEngine._Str_8189._Str_17737(k);
         }
 
-        private function _Str_16392(k:_Str_7630):void
+        private function _Str_16392(k:CompetitionVotingInfoMessageEvent):void
         {
             this._questEngine._Str_8189._Str_16392(k);
         }

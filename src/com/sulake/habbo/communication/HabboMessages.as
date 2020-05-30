@@ -166,7 +166,7 @@
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_4748;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_5891;
 	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
-	import com.sulake.habbo.communication.messages.incoming.competition._Str_7630;
+	import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_8237;
 	import com.sulake.habbo.communication.messages.incoming.competition._Str_9217;
 	import com.sulake.habbo.communication.messages.incoming.nux._Str_8454;
@@ -1331,7 +1331,7 @@
             INCOMING_PACKETS[3475] = UserCreditsEvent;
             INCOMING_PACKETS[3479] = _Str_8029;
             INCOMING_PACKETS[35] = _Str_7104;
-            INCOMING_PACKETS[3506] = _Str_7630;
+            INCOMING_PACKETS[3506] = CompetitionVotingInfoMessageEvent;
             INCOMING_PACKETS[3512] = _Str_8022;
             INCOMING_PACKETS[3522] = _Str_9259;
             INCOMING_PACKETS[3523] = IdentityAccountsEvent;
