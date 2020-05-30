@@ -37,7 +37,7 @@
 
         public function _Str_24684(k:int):void
         {
-            this._feed._Str_23011();
+            this._feed.updateFeedCategoryFiltering();
         }
     }
 }

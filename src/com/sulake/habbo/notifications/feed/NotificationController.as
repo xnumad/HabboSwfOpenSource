@@ -76,7 +76,7 @@
             return this._settings;
         }
 
-        public function _Str_23011():void
+        public function updateFeedCategoryFiltering():void
         {
         }
 
