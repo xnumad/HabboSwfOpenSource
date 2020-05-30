@@ -174,7 +174,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
-                this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
+                this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this.onChangeUserNameResult));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
@@ -378,7 +378,7 @@
             }
         }
 
-        private function _Str_18227(k:ChangeNameUpdateEvent):void
+        private function onChangeUserNameResult(k:ChangeNameUpdateEvent):void
         {
             var _local_2:_Str_6553 = k.getParser();
             if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)

@@ -38,7 +38,7 @@
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this._Str_18227));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this.onChangeUserNameResult));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
         }
 
@@ -182,7 +182,7 @@
             });
         }
 
-        private function _Str_18227(k:ChangeNameUpdateEvent):void
+        private function onChangeUserNameResult(k:ChangeNameUpdateEvent):void
         {
             if (k == null)
             {
