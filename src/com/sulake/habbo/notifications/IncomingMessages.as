@@ -80,7 +80,7 @@
             this._communication = _arg_2;
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
-            this.addMessageEvent(new _Str_8665(this.onNotificationDialogMessageEvent));
+            this.addMessageEvent(new _Str_8665(this.onBroadcastMessageEvent));
             this.addMessageEvent(new _Str_3660(this.onLevelUp));
             this.addMessageEvent(new _Str_8414(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
@@ -387,7 +387,7 @@
             this._notifications.singularController.showModerationDisclaimer();
         }
 
-        private function onNotificationDialogMessageEvent(k:IMessageEvent):void
+        private function onBroadcastMessageEvent(k:IMessageEvent):void
         {
             var _local_2:_Str_6671 = (k as _Str_8665).getParser();
             var _local_3:String = _local_2._Str_3460;
