@@ -103,7 +103,7 @@
             return this._habboHelp;
         }
 
-        public function get _Str_3069():SingularNotificationController
+        public function get singularController():SingularNotificationController
         {
             return this._singularController;
         }

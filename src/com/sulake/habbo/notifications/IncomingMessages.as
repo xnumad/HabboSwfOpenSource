@@ -171,7 +171,7 @@
             var _local_4:String = this._notifications.localization.getLocalization("achievements.levelup.desc", "");
             var _local_5:String = this._notifications.localization.getBadgeName(_local_3.data.badgeCode);
             var _local_6:BitmapData = this._notifications.sessionDataManager.requestBadgeImage(_local_3.data.badgeCode);
-            this._notifications._Str_3069.addItem(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
+            this._notifications.singularController.addItem(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
         }
 
         internal function onRespectNotification(k:IMessageEvent):void
@@ -186,11 +186,11 @@
                 _local_4 = this._notifications.localization.getLocalizationRaw("notifications.text.respect.2");
                 if (_local_3)
                 {
-                    this._notifications._Str_3069.addItem(_local_3.value, NotificationType.RESPECT, null);
+                    this._notifications.singularController.addItem(_local_3.value, NotificationType.RESPECT, null);
                 }
                 if (_local_4)
                 {
-                    this._notifications._Str_3069.addItem(_local_4.value, NotificationType.RESPECT, null);
+                    this._notifications.singularController.addItem(_local_4.value, NotificationType.RESPECT, null);
                 }
             }
         }
@@ -207,7 +207,7 @@
             var _local_6:BitmapData = (_local_5.content as BitmapData);
             if (_local_3)
             {
-                this._notifications._Str_3069.addItem(_local_3.value, _local_4, _local_6.clone());
+                this._notifications.singularController.addItem(_local_3.value, _local_4, _local_6.clone());
             }
         }
 
@@ -221,7 +221,7 @@
             var _local_3:ILocalization = this._notifications.localization.getLocalizationRaw("notifications.text.recycle.ok");
             if (_local_3)
             {
-                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.RECYCLEROK, null);
+                this._notifications.singularController.addItem(_local_3.value, NotificationType.RECYCLEROK, null);
             }
             Logger.log("[HabboNotifications] recycle ok");
         }
@@ -239,13 +239,13 @@
         {
             var _local_3:GenericNotificationItemData;
             var _local_2:_Str_7427 = (k as _Str_9583).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
             if (this._Str_16186())
             {
-                this._notifications._Str_3069.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
+                this._notifications.singularController.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
             }
             if (this._Str_18948())
             {
@@ -262,13 +262,13 @@
         {
             var _local_3:GenericNotificationItemData;
             var _local_2:_Str_7904 = (k as _Str_8312).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
             if (this._Str_16186())
             {
-                this._notifications._Str_3069.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
+                this._notifications.singularController.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
             }
             if (this._Str_18948())
             {
@@ -284,51 +284,51 @@
         private function _Str_22529(k:IMessageEvent):void
         {
             var _local_2:_Str_8126 = (k as _Str_9354).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069.alertDialogManager._Str_24335(_local_2.message);
+            this._notifications.singularController.alertDialogManager._Str_24335(_local_2.message);
         }
 
         private function _Str_24833(k:IMessageEvent):void
         {
             var _local_2:HotelWillCloseInMinutesMessageParser = (k as HotelWillCloseInMinutesEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069.alertDialogManager._Str_24270(_local_2.minutes);
+            this._notifications.singularController.alertDialogManager._Str_24270(_local_2.minutes);
         }
 
         private function _parser2(k:IMessageEvent):void
         {
             var _local_2:_Str_7315 = (k as _Str_6521).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069.alertDialogManager._Str_23818(_local_2._Str_23709, _local_2.duration);
+            this._notifications.singularController.alertDialogManager._Str_23818(_local_2._Str_23709, _local_2.duration);
         }
 
         private function _Str_10317(k:IMessageEvent):void
         {
             var _local_2:HotelClosesAndWillOpenAtMessageParser = (k as HotelClosesAndWillOpenAtEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069.alertDialogManager._Str_24493(_local_2.openHour, _local_2.openMinute, _local_2.userThrownOutAtClose);
+            this._notifications.singularController.alertDialogManager._Str_24493(_local_2.openHour, _local_2.openMinute, _local_2.userThrownOutAtClose);
         }
 
         private function _Str_23488(k:IMessageEvent):void
         {
             var _local_2:HotelClosedAndOpensMessageParser = (k as HotelClosedAndOpensEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
+            if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069.alertDialogManager._Str_24317(_local_2.openHour, _local_2.openMinute);
+            this._notifications.singularController.alertDialogManager._Str_24317(_local_2.openHour, _local_2.openMinute);
         }
 
         private function _Str_24460(k:IMessageEvent):void
@@ -352,7 +352,7 @@
             {
                 _local_4 = _local_2.figureData;
                 _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
-                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
+                this._notifications.singularController.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
 
@@ -378,13 +378,13 @@
             {
                 _local_4 = _local_2.pet;
                 _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
-                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
+                this._notifications.singularController.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
 
         private function onRoomEnter(k:IMessageEvent):void
         {
-            this._notifications._Str_3069.showModerationDisclaimer();
+            this._notifications.singularController.showModerationDisclaimer();
         }
 
         private function _Str_24393(k:IMessageEvent):void
@@ -445,7 +445,7 @@
             {
                 return;
             }
-            this._notifications._Str_3069.showClubGiftNotification(_local_2._Str_19193);
+            this._notifications.singularController.showClubGiftNotification(_local_2._Str_19193);
         }
 
         private function onUserObject(k:UserObjectEvent):void
@@ -453,7 +453,7 @@
             var _local_2:UserObjectMessageParser = k.getParser();
             if (_local_2.accountSafetyLocked)
             {
-                this._notifications._Str_3069.showSafetyLockedNotification(_local_2.id);
+                this._notifications.singularController.showSafetyLockedNotification(_local_2.id);
             }
         }
 
@@ -462,7 +462,7 @@
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
             if (_local_2.status == 1)
             {
-                this._notifications._Str_3069.hideSafetyLockedNotification();
+                this._notifications.singularController.hideSafetyLockedNotification();
             }
         }
 
@@ -489,7 +489,7 @@
             }
             var _local_5:String = this._notifications.localization.getLocalization("notifications.text.club_gift.received");
             var _local_6:BitmapData = this._notifications._Str_24642._Str_23662(_local_4.productType, _local_4._Str_6164, _local_4.extraParam);
-            this._notifications._Str_3069.addItem(_local_5, NotificationType.INFO, _local_6);
+            this._notifications.singularController.addItem(_local_5, NotificationType.INFO, _local_6);
         }
 
         private function _Str_17254(k:_Str_4508):void
@@ -509,7 +509,7 @@
                 default:
                     return;
             }
-            this._notifications._Str_3069.addItem(_local_2, NotificationType.INFO, _local_3.clone());
+            this._notifications.singularController.addItem(_local_2, NotificationType.INFO, _local_3.clone());
         }
     }
 }
