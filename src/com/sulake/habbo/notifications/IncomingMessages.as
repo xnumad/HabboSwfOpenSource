@@ -366,7 +366,7 @@
                 return;
             }
             var _local_2:PetReceivedMessageParser = k.getParser();
-            if (_local_2.gift)
+            if (_local_2.boughtAsGift)
             {
                 _local_3 = this._notifications.localization.getLocalizationRaw("notifications.text.petbought");
             }
