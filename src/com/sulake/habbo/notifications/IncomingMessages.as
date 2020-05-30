@@ -101,7 +101,7 @@
             this.addMessageEvent(new _Str_6521(this._parser2));
             this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.showCallCreatedNotification));
-            this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
+            this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
             this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this._Str_23488));
@@ -291,7 +291,7 @@
             this._notifications.singularController.alertDialogManager._Str_24335(_local_2.message);
         }
 
-        private function _Str_24833(k:IMessageEvent):void
+        private function onHotelClosing(k:IMessageEvent):void
         {
             var _local_2:HotelWillCloseInMinutesMessageParser = (k as HotelWillCloseInMinutesEvent).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
