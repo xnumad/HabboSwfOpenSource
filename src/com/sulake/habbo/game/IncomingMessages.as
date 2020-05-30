@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.lobby.UnloadGameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.LoadGameMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_348._Str_5416;
+    import com.sulake.habbo.communication.messages.incoming.game.directory._Str_5416;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.LeftQueueMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.JoinedQueueMessageEvent;

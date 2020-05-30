@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
-    import com.sulake.habbo.communication.messages.incoming._Str_348._Str_5416;
+    import com.sulake.habbo.communication.messages.incoming.game.directory._Str_5416;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameStatusMessageEvent;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.core.window.components.IRegionWindow;
