@@ -454,7 +454,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
 	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
-	import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
+	import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.GetPromoArticlesComposer;
@@ -1894,7 +1894,7 @@
             OUTGOING_PACKETS[3736] = RoomNetworkOpenConnectionMessageComposer;
             OUTGOING_PACKETS[3742] = _Str_12485;
             OUTGOING_PACKETS[3768] = _Str_11696;
-            OUTGOING_PACKETS[3775] = _Str_11713;
+            OUTGOING_PACKETS[3775] = FriendFurniConfirmLockMessageComposer;
             OUTGOING_PACKETS[3782] = _Str_17077;
             OUTGOING_PACKETS[3786] = _Str_12273;
             OUTGOING_PACKETS[3802] = AcceptGameInviteMessageComposer;

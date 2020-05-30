@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniCancelLockMessageEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
+    import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
     import flash.events.Event;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
@@ -72,7 +72,7 @@
 
         public function sendLockConfirm(k:int, _arg_2:Boolean):void
         {
-            this._connection.send(new _Str_11713(k, _arg_2));
+            this._connection.send(new FriendFurniConfirmLockMessageComposer(k, _arg_2));
         }
 
         private function onStartConfirmation(k:FriendFurniStartConfirmationMessageEvent):void

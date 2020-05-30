@@ -1,13 +1,13 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_547
+﻿package com.sulake.habbo.communication.messages.outgoing.friendfurni
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_11713 implements IMessageComposer, IDisposable 
+    public class FriendFurniConfirmLockMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_11713(k:int, _arg_2:Boolean)
+        public function FriendFurniConfirmLockMessageComposer(k:int, _arg_2:Boolean)
         {
             this._array = new Array();
             super();
