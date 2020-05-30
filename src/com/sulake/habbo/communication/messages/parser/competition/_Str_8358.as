@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
-    import com.sulake.habbo.communication.enum._Str_10666;
+    import com.sulake.habbo.communication.enum.CompetitionVotingInfoResult;
 
     public class _Str_8358 implements IMessageParser 
     {
@@ -38,7 +38,7 @@
 
         public function get _Str_24414():Boolean
         {
-            return this._resultCode == _Str_10666._Str_17462;
+            return this._resultCode == CompetitionVotingInfoResult.ALLOWED;
         }
 
         public function get _Str_24679():int

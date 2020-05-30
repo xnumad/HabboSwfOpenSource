@@ -7,7 +7,7 @@
     import com.sulake.core.utils.Map;
     import flash.events.TimerEvent;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.enum._Str_10666;
+    import com.sulake.habbo.communication.enum.CompetitionVotingInfoResult;
     import com.sulake.habbo.communication.messages.incoming.competition._Str_7630;
     import com.sulake.habbo.communication.messages.parser.competition.CompetitionEntrySubmitResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
@@ -111,7 +111,7 @@
             var _local_2:Boolean = k.getParser()._Str_24414;
             var _local_3:int = k.getParser().resultCode;
             this.refreshContent(k.getParser().goalId, false, k.getParser().goalCode, _local_3.toString());
-            this._Str_6512(((_local_3 == _Str_10666._Str_17690) ? this._Str_24392 : this._Str_24761));
+            this._Str_6512(((_local_3 == CompetitionVotingInfoResult.REQUIRED_PERK_MISSING) ? this._Str_24392 : this._Str_24761));
             this._Str_4365().procedure = this._Str_24140;
             this._Str_4365().visible = ((this._remainingVotes > 0) && (_local_2));
             this._Str_19349().visible = _local_2;
