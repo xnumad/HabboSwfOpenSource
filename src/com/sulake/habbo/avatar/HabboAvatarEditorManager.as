@@ -136,7 +136,7 @@
             return _local_7._Str_2826(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
-        public function _Str_24938(k:uint, _arg_2:IWindowContainer, _arg_3:_Str_5523=null, _arg_4:Array=null, _arg_5:Boolean=false, _arg_6:Boolean=false):Boolean
+        public function embedEditorToContext(k:uint, _arg_2:IWindowContainer, _arg_3:_Str_5523=null, _arg_4:Array=null, _arg_5:Boolean=false, _arg_6:Boolean=false):Boolean
         {
             var _local_7:HabboAvatarEditor = this._editors.getValue(k);
             if (_local_7)
