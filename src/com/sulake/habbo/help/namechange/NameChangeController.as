@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
+    import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.core.assets.XmlAsset;
@@ -39,7 +39,7 @@
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new CheckUserNameResultMessageEvent(this._Str_18696));
         }
 
         public function get help():HabboHelp
@@ -207,7 +207,7 @@
             }
         }
 
-        private function _Str_18696(k:_Str_6232):void
+        private function _Str_18696(k:CheckUserNameResultMessageEvent):void
         {
             if (((!(k)) || (!(this._nameChangeView))))
             {

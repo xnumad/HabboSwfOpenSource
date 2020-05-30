@@ -4,7 +4,7 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
 
-    public class _Str_6232 extends MessageEvent implements IMessageEvent 
+    public class CheckUserNameResultMessageEvent extends MessageEvent implements IMessageEvent
     {
         public static var NAME_OK:int = 0;
         public static var _Str_7005:int = 1;
@@ -13,7 +13,7 @@
         public static var _Str_7836:int = 4;
         public static var _Str_7721:int = 5;
 
-        public function _Str_6232(k:Function)
+        public function CheckUserNameResultMessageEvent(k:Function)
         {
             super(k, _Str_6537);
         }

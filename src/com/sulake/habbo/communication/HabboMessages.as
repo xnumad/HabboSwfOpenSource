@@ -119,7 +119,7 @@
 	import snowwar.outgoing.*;
 	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
-	import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
+	import com.sulake.habbo.communication.messages.incoming.avatar.CheckUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
 	import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_10126;
 	import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_10525;
@@ -1405,7 +1405,7 @@
             INCOMING_PACKETS[546] = _Str_8241;
             INCOMING_PACKETS[558] = _Str_7777;
             INCOMING_PACKETS[56] = _Str_9591;
-            INCOMING_PACKETS[563] = _Str_6232;
+            INCOMING_PACKETS[563] = CheckUserNameResultMessageEvent;
             INCOMING_PACKETS[566] = FloodControlMessageEvent;
             INCOMING_PACKETS[596] = _Str_7433;
             INCOMING_PACKETS[600] = _Str_17595;
