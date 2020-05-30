@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_8077;
+    import com.sulake.habbo.communication.messages.parser.catalog.ClubGiftSelectedParser;
 
     public class _Str_9157 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_9157(k:Function)
         {
-            super(k, _Str_8077);
+            super(k, ClubGiftSelectedParser);
         }
 
-        public function getParser():_Str_8077
+        public function getParser():ClubGiftSelectedParser
         {
-            return this._parser as _Str_8077;
+            return this._parser as ClubGiftSelectedParser;
         }
     }
 }

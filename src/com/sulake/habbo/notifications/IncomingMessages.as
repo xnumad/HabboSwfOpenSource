@@ -63,7 +63,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications.ClubGiftNotificationParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_8077;
+    import com.sulake.habbo.communication.messages.parser.catalog.ClubGiftSelectedParser;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_2853;
     import com.sulake.habbo.catalog.purse.ActivityPointTypeEnum;
     import __AS3__.vec.*;
@@ -472,7 +472,7 @@
             {
                 return;
             }
-            var _local_2:_Str_8077 = k.getParser();
+            var _local_2:ClubGiftSelectedParser = k.getParser();
             if (!_local_2)
             {
                 return;
