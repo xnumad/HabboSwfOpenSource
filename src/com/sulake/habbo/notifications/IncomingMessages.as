@@ -91,7 +91,7 @@
             this.addMessageEvent(new _Str_5714(this.onRoomEnter));
             this.addMessageEvent(new _Str_7321(this.onMOTD));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
-            this.addMessageEvent(new _Str_9048(this._Str_24729));
+            this.addMessageEvent(new _Str_9048(this.onPetLevelNotification));
             this.addMessageEvent(new _Str_9312(this.onRoomMessagesNotification));
             this.addMessageEvent(new _Str_9995(this.onRestoreClientMessageEvent));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
@@ -336,7 +336,7 @@
             HabboWebTools.closeWebPageAndRestoreClient();
         }
 
-        private function _Str_24729(k:_Str_9048):void
+        private function onPetLevelNotification(k:_Str_9048):void
         {
             var _local_4:PetFigureData;
             var _local_5:BitmapData;
