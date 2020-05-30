@@ -81,7 +81,7 @@
                 return;
             }
             var _local_4:_Str_6537 = k.getParser();
-            if (_local_4.resultCode == ChangeNameUpdateEvent._Str_5797)
+            if (_local_4.resultCode == ChangeNameUpdateEvent.NAME_OK)
             {
                 _local_3._Str_16320 = _local_4.name;
             }

@@ -6,7 +6,7 @@
 
     public class ChangeNameUpdateEvent extends MessageEvent implements IMessageEvent 
     {
-        public static var _Str_5797:int = 0;
+        public static var NAME_OK:int = 0;
         public static var _Str_7005:int = 1;
         public static var _Str_7389:int = 2;
         public static var _Str_7137:int = 3;

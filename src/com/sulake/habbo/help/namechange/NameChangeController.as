@@ -193,7 +193,7 @@
             {
                 return;
             }
-            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
             {
                 this._Str_25375(_local_2.name);
                 this._Str_5574();
@@ -214,7 +214,7 @@
                 return;
             }
             var _local_2:_Str_6537 = k.getParser();
-            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
             {
                 this._nameChangeView._Str_16320 = _local_2.name;
             }

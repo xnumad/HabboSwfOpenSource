@@ -381,7 +381,7 @@
         private function onChangeUserNameResult(k:ChangeNameUpdateEvent):void
         {
             var _local_2:_Str_6553 = k.getParser();
-            if (_local_2.resultCode == ChangeNameUpdateEvent._Str_5797)
+            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
             {
                 this._nameChangeAllowed = false;
                 events.dispatchEvent(new UserNameUpdateEvent(_local_2.name));
