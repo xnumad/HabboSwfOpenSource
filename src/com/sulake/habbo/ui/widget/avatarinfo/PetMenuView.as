@@ -111,21 +111,21 @@
             switch (this._mode)
             {
                 case _Str_2906:
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     break;
                 case _Str_5818:
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
                         showButton("mount");
                     }
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     break;
                 case _Str_5938:
                     if (this.widget.configuration.getBoolean("sharedhorseriding.enabled"))
                     {
                         showButton("dismount");
                     }
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     break;
                 case _Str_13388:
                     if (!this._data.dead)
@@ -137,7 +137,7 @@
                     }
                     break;
             }
-            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data._Str_2985.toString());
+            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data.petRespectLeft.toString());
             if (this.widget.configuration.getBoolean("handitem.give.pet.enabled"))
             {
                 _local_8 = this.widget.handler;
@@ -219,7 +219,7 @@
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage.RWUAM_DISMOUNT_PET, userId);
                             break;
                         case "respect":
-                            this._data._Str_2985--;
+                            this._data.petRespectLeft--;
                             this._Str_2771();
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, userId);
                             break;

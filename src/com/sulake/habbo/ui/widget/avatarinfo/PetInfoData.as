@@ -22,7 +22,7 @@
         public var ownerName:String = "";
         public var _Str_14767:int = 0;
         public var respect:int = 0;
-        public var _Str_2985:int = 0;
+        public var petRespectLeft:int = 0;
         public var _Str_4355:int = 0;
         public var saddle:Boolean = false;
         public var rider:Boolean = false;
@@ -62,7 +62,7 @@
             this.ownerName = k.ownerName;
             this._Str_14767 = k._Str_14767;
             this.respect = k.respect;
-            this._Str_2985 = k._Str_2985;
+            this.petRespectLeft = k.petRespectLeft;
             this._Str_4355 = k._Str_4355;
             this.saddle = k.saddle;
             this.rider = k.rider;

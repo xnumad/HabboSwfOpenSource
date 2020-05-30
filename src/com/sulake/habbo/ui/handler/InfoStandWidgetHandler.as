@@ -1246,7 +1246,7 @@
                 _local_11.happyness = _local_2.happyness;
                 _local_11.maximumHappyness = _local_2.maximumHappyness;
                 _local_11.respect = _local_2.respect;
-                _local_11._Str_2985 = this._container.sessionDataManager.petRespectLeft;
+                _local_11.petRespectLeft = this._container.sessionDataManager.petRespectLeft;
                 _local_11.age = _local_2.age;
                 _local_11.saddle = _local_2.saddle;
                 _local_11.rider = _local_2.rider;

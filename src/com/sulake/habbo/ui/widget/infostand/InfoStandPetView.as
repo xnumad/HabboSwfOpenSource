@@ -694,7 +694,7 @@
                     }
                     break;
                 case "btn_petrespect":
-                    this._widget.userData._Str_2985--;
+                    this._widget.userData.petRespectLeft--;
                     this._Str_22251();
                     _local_3 = RoomWidgetUserActionMessage._Str_6480;
                     break;
@@ -728,7 +728,7 @@
 
         private function _Str_22251():void
         {
-            var k:int = this._widget.userData._Str_2985;
+            var k:int = this._widget.userData.petRespectLeft;
             this._widget.localizations.registerParameter("infostand.button.petrespect", "count", k.toString());
             this.showButton("petrespect", (k > 0));
         }

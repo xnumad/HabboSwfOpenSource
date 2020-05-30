@@ -196,7 +196,7 @@
             return this._maximumHappyness;
         }
 
-        public function get _Str_2985():int
+        public function get petRespectLeft():int
         {
             return this._petRespectLeft;
         }
@@ -246,7 +246,7 @@
             this._maximumHappyness = k;
         }
 
-        public function set _Str_2985(k:int):void
+        public function set petRespectLeft(k:int):void
         {
             this._petRespectLeft = k;
         }

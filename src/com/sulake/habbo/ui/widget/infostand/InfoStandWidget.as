@@ -372,7 +372,7 @@
         private function petInfostandUpdateHandler(updateEvent:RoomWidgetPetInfostandUpdateEvent):void
         {
             this.petData._Str_5479(updateEvent);
-            this.userData._Str_2985 = updateEvent._Str_2985;
+            this.userData.petRespectLeft = updateEvent.petRespectLeft;
             this._petView.update(this.petData);
             this._Str_3734(PET_VIEW);
             if (this._updateTimer)

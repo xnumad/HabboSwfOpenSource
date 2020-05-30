@@ -148,7 +148,7 @@
             switch (this._Str_1069)
             {
                 case _Str_2906:
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     showButton("train");
                     showButton("pick_up");
                     if (this._data._Str_4355 == PetTypeEnum.HORSE)
@@ -202,14 +202,14 @@
                         showButton("toggle_riding_permission");
                         this._Str_13657("toggle_riding_permission", ((this._data != null) ? (this._data.publiclyRideable == PetAccessRightTypeEnum._Str_18396) : false));
                     }
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     showButton("train");
                     showButton("pick_up");
                     showButton("saddle_off");
                     break;
                 case _Str_5938:
                     showButton("dismount");
-                    showButton("respect", (this._data._Str_2985 > 0));
+                    showButton("respect", (this._data.petRespectLeft > 0));
                     break;
                 case _Str_10946:
                     showButton("pick_up");
@@ -252,7 +252,7 @@
                     }
                 }
             }
-            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data._Str_2985.toString());
+            this.widget.localizations.registerParameter("infostand.button.petrespect", "count", this._data.petRespectLeft.toString());
             _buttons.autoArrangeItems = true;
             _buttons.visible = true;
         }
@@ -385,7 +385,7 @@
                     switch (_arg_2.parent.name)
                     {
                         case "respect":
-                            this._data._Str_2985--;
+                            this._data.petRespectLeft--;
                             this._Str_2771();
                             _local_4 = new RoomWidgetUserActionMessage(RoomWidgetUserActionMessage._Str_6480, this.petId);
                             break;
