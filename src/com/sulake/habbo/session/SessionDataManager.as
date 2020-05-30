@@ -43,7 +43,7 @@
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
     import com.sulake.habbo.session.events.UserNameUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.avatar._Str_6553;
+    import com.sulake.habbo.communication.messages.parser.avatar.ChangeUserNameResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.mysterybox.MysteryBoxKeysMessageParser;
     import com.sulake.habbo.session.events.MysteryBoxKeysUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionUserTagsEvent;
@@ -380,7 +380,7 @@
 
         private function onChangeUserNameResult(k:ChangeUserNameResultMessageEvent):void
         {
-            var _local_2:_Str_6553 = k.getParser();
+            var _local_2:ChangeUserNameResultMessageParser = k.getParser();
             if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._nameChangeAllowed = false;
