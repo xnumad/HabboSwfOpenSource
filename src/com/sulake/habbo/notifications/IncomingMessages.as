@@ -53,7 +53,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetFigureData;
     import com.sulake.habbo.communication.messages.parser.notifications.PetLevelNotificationParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBoughtNotificationMessageParser;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetReceivedMessageParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_6671;
     import com.sulake.habbo.window.enum.FrankIllustration;
     import com.sulake.habbo.communication.messages.parser.notifications.NotificationDialogMessageParser;
@@ -365,7 +365,7 @@
             {
                 return;
             }
-            var _local_2:PetBoughtNotificationMessageParser = k.getParser();
+            var _local_2:PetReceivedMessageParser = k.getParser();
             if (_local_2.gift)
             {
                 _local_3 = this._notifications.localization.getLocalizationRaw("notifications.text.petbought");

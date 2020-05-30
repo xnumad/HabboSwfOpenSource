@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBoughtNotificationMessageParser;
+    import com.sulake.habbo.communication.messages.parser.inventory.pets.PetReceivedMessageParser;
 
     public class PetReceivedMessageEvent extends MessageEvent implements IMessageEvent
     {
         public function PetReceivedMessageEvent(k:Function)
         {
-            super(k, PetBoughtNotificationMessageParser);
+            super(k, PetReceivedMessageParser);
         }
 
-        public function getParser():PetBoughtNotificationMessageParser
+        public function getParser():PetReceivedMessageParser
         {
-            return _parser as PetBoughtNotificationMessageParser;
+            return _parser as PetReceivedMessageParser;
         }
     }
 }
