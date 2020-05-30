@@ -182,7 +182,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
-                this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this._Str_25064));
+                this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this.onInClientLink));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
                 this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
             }
@@ -405,7 +405,7 @@
             events.dispatchEvent(new RoomSessionUserTagsEvent(this.userId, k.tags.slice()));
         }
 
-        private function _Str_25064(k:InClientLinkMessageEvent):void
+        private function onInClientLink(k:InClientLinkMessageEvent):void
         {
             context.createLinkEvent(k.link);
         }
