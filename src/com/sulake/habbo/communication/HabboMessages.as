@@ -788,7 +788,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9687;
 	import com.sulake.habbo.communication.messages.incoming.notifications.*;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
+	import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.ActivityPointsEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7261;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
@@ -1177,7 +1177,7 @@
             INCOMING_PACKETS[2260] = JoinedQueueMessageEvent;
             INCOMING_PACKETS[2265] = UserGameAchievementsMessageEvent;
             INCOMING_PACKETS[2270] = Game2WeeklyLeaderboardEvent;
-            INCOMING_PACKETS[2275] = _Str_4508;
+            INCOMING_PACKETS[2275] = HabboActivityPointNotificationMessageEvent;
             INCOMING_PACKETS[2278] = _Str_12157;
             INCOMING_PACKETS[2293] = _Str_8246;
             INCOMING_PACKETS[230] = QuestMessageEvent;

@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionCompletedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
     import com.sulake.habbo.communication.messages.incoming.handshake.IsFirstLoginOfDayEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.QuestCompletedMessageEvent;
@@ -72,7 +72,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
             _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4508(this._Str_24427));
+            _local_2.addHabboConnectionMessageEvent(new HabboActivityPointNotificationMessageEvent(this._Str_24427));
             _local_2.addHabboConnectionMessageEvent(new _Str_5843(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new IsFirstLoginOfDayEvent(this._Str_22814));
             _local_2.addHabboConnectionMessageEvent(new QuestCompletedMessageEvent(this._Str_5657));
@@ -266,7 +266,7 @@
             }
         }
 
-        private function _Str_24427(k:_Str_4508):void
+        private function _Str_24427(k:HabboActivityPointNotificationMessageEvent):void
         {
             this._questEngine._Str_3398._Str_4970(k.type, k.amount);
         }

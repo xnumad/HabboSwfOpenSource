@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
+    import com.sulake.habbo.communication.messages.incoming.notifications.HabboActivityPointNotificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9354;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
@@ -84,7 +84,7 @@
             this.addMessageEvent(new _Str_3660(this.onLevelUp));
             this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
-            this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
+            this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_9354(this.onUserBannedMessageEvent));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             this.addMessageEvent(new PetReceivedMessageEvent(this.onPetReceived));
@@ -492,7 +492,7 @@
             this._notifications.singularController.addItem(_local_5, NotificationType.INFO, _local_6);
         }
 
-        private function onActivityPointNotification(k:_Str_4508):void
+        private function onActivityPointNotification(k:HabboActivityPointNotificationMessageEvent):void
         {
             var _local_2:String;
             var _local_3:BitmapData;
