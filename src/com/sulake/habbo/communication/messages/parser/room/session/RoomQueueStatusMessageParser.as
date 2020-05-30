@@ -15,7 +15,7 @@
             super();
         }
 
-        public function get _Str_22264():int
+        public function get activeTarget():int
         {
             return this._activeTarget;
         }
