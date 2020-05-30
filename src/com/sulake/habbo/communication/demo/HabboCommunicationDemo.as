@@ -682,7 +682,7 @@
             _local_2.dispose();
             var _local_5:int = _local_4.charCodeAt(0);
             var _local_6:int = _local_4.charCodeAt((_local_5 + 1));
-            var _local_7:Array = KeyObfuscator._Str_23865();
+            var _local_7:Array = KeyObfuscator.getRsaData();
             _local_7[0] = _local_4.substr(1, _local_5);
             _local_7[1] = _local_4.substr((_local_5 + 2), _local_6);
         }
