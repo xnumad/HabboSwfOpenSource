@@ -50,7 +50,7 @@
             _local_2.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
             _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this.onLeftQueue));
             _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOk));
-            _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this._Str_24534));
+            _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this.onJoinedQueue));
             _local_2.addHabboConnectionMessageEvent(new LoadGameUrlMessageEvent(this.onLoadGameUrl));
         }
 
@@ -65,7 +65,7 @@
             return this._isDisposed;
         }
 
-        private function _Str_24534(k:JoinedQueueMessageEvent):void
+        private function onJoinedQueue(k:JoinedQueueMessageEvent):void
         {
             var _local_2:JoinedQueueMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] joined queue for game " + _local_2.gameTypeId));
