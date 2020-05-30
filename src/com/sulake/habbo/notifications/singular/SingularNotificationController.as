@@ -231,7 +231,7 @@
             this._safetyLockedNotification = new SafetyLockedNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications._Str_9496);
         }
 
-        public function _Str_23533():void
+        public function hideSafetyLockedNotification():void
         {
             if (!this._safetyLockedNotification)
             {

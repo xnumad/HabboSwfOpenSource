@@ -462,7 +462,7 @@
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
             if (_local_2.status == 1)
             {
-                this._notifications._Str_3069._Str_23533();
+                this._notifications._Str_3069.hideSafetyLockedNotification();
             }
         }
 
