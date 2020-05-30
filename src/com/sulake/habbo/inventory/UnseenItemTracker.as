@@ -7,8 +7,8 @@
     import com.sulake.habbo.communication.messages.parser.notifications._Str_7601;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.events.HabboUnseenItemsUpdatedEvent;
-    import com.sulake.habbo.communication.messages.outgoing._Str_498._Str_10536;
-    import com.sulake.habbo.communication.messages.outgoing._Str_498._Str_11812;
+    import com.sulake.habbo.communication.messages.outgoing.notifications._Str_10536;
+    import com.sulake.habbo.communication.messages.outgoing.notifications._Str_11812;
 
     public class UnseenItemTracker implements IUnseenItemTracker 
     {

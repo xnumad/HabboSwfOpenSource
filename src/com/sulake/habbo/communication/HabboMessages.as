@@ -388,8 +388,8 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_16208;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_7123;
-	import com.sulake.habbo.communication.messages.outgoing._Str_498._Str_10536;
-	import com.sulake.habbo.communication.messages.outgoing._Str_498._Str_11812;
+	import com.sulake.habbo.communication.messages.outgoing.notifications._Str_10536;
+	import com.sulake.habbo.communication.messages.outgoing.notifications._Str_11812;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
