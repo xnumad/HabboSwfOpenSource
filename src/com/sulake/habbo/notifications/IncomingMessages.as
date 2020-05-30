@@ -89,7 +89,7 @@
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
             this.addMessageEvent(new _Str_5714(this.onRoomEnter));
-            this.addMessageEvent(new _Str_7321(this._Str_24670));
+            this.addMessageEvent(new _Str_7321(this.onMOTD));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
             this.addMessageEvent(new _Str_9312(this._Str_24490));
@@ -139,7 +139,7 @@
             return this._notifications.getBoolean("notification.items.enabled");
         }
 
-        internal function _Str_24670(k:IMessageEvent):void
+        internal function onMOTD(k:IMessageEvent):void
         {
             var _local_4:String;
             var _local_5:GenericNotificationItemData;
