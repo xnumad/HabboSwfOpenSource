@@ -488,7 +488,7 @@
                 return;
             }
             var _local_5:String = this._notifications.localization.getLocalization("notifications.text.club_gift.received");
-            var _local_6:BitmapData = this._notifications._Str_24642._Str_23662(_local_4.productType, _local_4._Str_6164, _local_4.extraParam);
+            var _local_6:BitmapData = this._notifications.productImageUtility._Str_23662(_local_4.productType, _local_4._Str_6164, _local_4.extraParam);
             this._notifications.singularController.addItem(_local_5, NotificationType.INFO, _local_6);
         }
 

@@ -123,7 +123,7 @@
             this._disabled = k;
         }
 
-        public function get _Str_24642():ProductImageUtility
+        public function get productImageUtility():ProductImageUtility
         {
             if (((this._roomEngine == null) || (this._inventory == null)))
             {
