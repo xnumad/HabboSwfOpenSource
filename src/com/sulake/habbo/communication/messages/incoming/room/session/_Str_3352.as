@@ -2,18 +2,18 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_8438;
+    import com.sulake.habbo.communication.messages.parser.room.session.CloseConnectionMessageParser;
 
     public class _Str_3352 extends MessageEvent implements IMessageEvent 
     {
         public function _Str_3352(k:Function)
         {
-            super(k, _Str_8438);
+            super(k, CloseConnectionMessageParser);
         }
 
-        public function getParser():_Str_8438
+        public function getParser():CloseConnectionMessageParser
         {
-            return _parser as _Str_8438;
+            return _parser as CloseConnectionMessageParser;
         }
     }
 }

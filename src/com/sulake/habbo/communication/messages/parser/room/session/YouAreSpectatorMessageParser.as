@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9467 implements IMessageParser 
+    public class YouAreSpectatorMessageParser implements IMessageParser
     {
         public function flush():Boolean
         {
