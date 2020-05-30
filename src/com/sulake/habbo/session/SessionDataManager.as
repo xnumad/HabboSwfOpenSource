@@ -176,7 +176,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this.onAvailabilityStatus));
-                this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
+                this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
@@ -445,7 +445,7 @@
             }
         }
 
-        private function _Str_18116(k:PetScratchFailedEvent):void
+        private function onPetRespectFailed(k:PetScratchFailedEvent):void
         {
             if (k == null)
             {

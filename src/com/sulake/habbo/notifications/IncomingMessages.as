@@ -102,7 +102,7 @@
             this.addMessageEvent(new _Str_9583(this._Str_25354));
             this.addMessageEvent(new _Str_8670(this._Str_24546));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
-            this.addMessageEvent(new PetScratchFailedEvent(this._Str_18116));
+            this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
             this.addMessageEvent(new _Str_2752(this.onRoomEnter));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this._Str_23488));
 			this.addMessageEvent(new SimpleAlertMessageEvent(this.alertMessageHandler));
@@ -402,7 +402,7 @@
             this._notifications._Str_10093(_local_2.type, _local_2.parameters);
         }
 
-        private function _Str_18116(k:IMessageEvent):void
+        private function onPetRespectFailed(k:IMessageEvent):void
         {
             var _local_2:PetScratchFailedMessageParser = (k as PetScratchFailedEvent).getParser();
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "required_age", ("" + _local_2.currentAge));
