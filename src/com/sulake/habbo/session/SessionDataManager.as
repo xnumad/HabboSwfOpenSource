@@ -179,7 +179,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
-                this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this._Str_23478));
+                this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this._Str_25064));
@@ -388,7 +388,7 @@
             }
         }
 
-        private function _Str_23478(k:MysteryBoxKeysMessageEvent):void
+        private function onMysteryBoxKeys(k:MysteryBoxKeysMessageEvent):void
         {
             var _local_2:MysteryBoxKeysMessageParser = k.getParser();
             this._Str_18582 = _local_2.boxColor;
