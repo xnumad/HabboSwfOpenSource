@@ -34,7 +34,7 @@
             return this._quests;
         }
 
-        public function get _Str_2826():Boolean
+        public function get openWindow():Boolean
         {
             return this._Str_14850;
         }

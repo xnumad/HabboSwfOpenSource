@@ -1940,7 +1940,7 @@
                     if (((_local_4._Str_10419()) && (_local_4.isInteractive() == false)))
                     {
                         _local_6 = _local_4._Str_6447();
-                        UserAgentUtils._Str_2826(_local_6, this._Str_2297.adsConfig.clickSignConfig.target);
+                        UserAgentUtils.openWindow(_local_6, this._Str_2297.adsConfig.clickSignConfig.target);
                     }
                     dispatchEvent(_local_5);
                 }
@@ -1960,7 +1960,7 @@
                 if (((!(_local_2 == null)) && (_local_2._Str_10419())))
                 {
                     _local_2.clicked();
-                    UserAgentUtils._Str_2826(_local_2._Str_6447(), this._Str_2297.adsConfig.clickSignConfig.target);
+                    UserAgentUtils.openWindow(_local_2._Str_6447(), this._Str_2297.adsConfig.clickSignConfig.target);
                     dispatchEvent(new _Str_4041(_Str_4041._Str_16178, k));
                     if (_Str_2361 != null)
                     {

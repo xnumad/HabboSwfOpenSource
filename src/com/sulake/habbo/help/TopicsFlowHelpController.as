@@ -137,12 +137,12 @@
             this._contentModerationType = k;
             if (this._helpDialog == null)
             {
-                this._Str_2826();
+                this.openWindow();
             }
             this._view.findChildByName("change_user").visible = _arg_2;
         }
 
-        private function _Str_2826():void
+        private function openWindow():void
         {
             if (((this._helpDialog == null) && (!(this.disposed))))
             {
@@ -178,7 +178,7 @@
             if (this._helpDialog == null)
             {
                 this._contentModerationType = -1;
-                this._Str_2826();
+                this.openWindow();
                 this._Str_3615(START_CONTAINER);
             }
             else
@@ -733,7 +733,7 @@
         {
             if (this._helpDialog == null)
             {
-                this._Str_2826();
+                this.openWindow();
             }
             this._currentTopic = this._Str_21261(k.target.name);
             this._Str_3615(MESSAGE_CONTAINER);

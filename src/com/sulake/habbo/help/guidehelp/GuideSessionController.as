@@ -548,7 +548,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_TOOL;
-            this._Str_2826(this._Str_21226, true);
+            this.openWindow(this._Str_21226, true);
             this._Str_13929(this._onDuty);
             this._window.procedure = this._Str_21226;
             this._Str_18493("handle_guardian_tickets", this._handleGuardianRequests);
@@ -658,7 +658,7 @@
             this._sessionData._Str_17222 = GuideSessionData._Str_15093;
             this._sessionData._Str_8937 = _arg_2;
             this._sessionData._Str_3989 = k;
-            this._Str_2826(this._Str_22772, false);
+            this.openWindow(this._Str_22772, false);
             this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             if (((k == _Str_2849._Str_4749) || (k == _Str_2849._Str_4268)))
             {
@@ -720,7 +720,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_ONGOING;
-            this._Str_2826(this._Str_23050, false);
+            this.openWindow(this._Str_23050, false);
             this._Str_5863(this._sessionData.userId, this._sessionData.userName, this._sessionData._Str_7586, this._sessionData._Str_8937, true, _Str_7012);
             this._window.caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.ongoing.title", "", "name", this._sessionData.userName);
             var inputWidget:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
@@ -778,7 +778,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUIDE_CLOSED;
-            this._Str_2826(this._Str_22605, true);
+            this.openWindow(this._Str_22605, true);
             if (((k == GuideSessionData._Str_14462) || (k == GuideSessionData._Str_19034)))
             {
                 this._window.findChildByName("close_reason").caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.guide.closed.reason.other", "", "name", this._sessionData.userName);
@@ -821,7 +821,7 @@
             this._sessionData._Str_17222 = GuideSessionData._Str_11013;
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_CREATE;
             this._sessionData._Str_3989 = k;
-            this._Str_2826(this._Str_24366, true);
+            this.openWindow(this._Str_24366, true);
             var _local_3:_Str_2789 = _Str_2789(IWidgetWindow(this._window.findChildByName("input_widget")).widget);
             _local_3.maxChars = this._habboHelp.getInteger("guide.help.request.max.description.length", 0xFF);
             if (_arg_2)
@@ -871,7 +871,7 @@
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_PENDING;
             this._sessionData._Str_3989 = k;
             this._sessionData._Str_8937 = _arg_2;
-            this._Str_2826(this._Str_23008, false);
+            this.openWindow(this._Str_23008, false);
             this._window.findChildByName("request_type").caption = this._Str_20710(k);
             this._window.findChildByName("request_description").caption = _arg_2;
             this._window.findChildByName("waiting_time").caption = this._habboHelp.localization.getLocalizationWithParams("guide.help.request.user.pending.info.waiting", "", "waitingtime", FriendlyTime.format(this._habboHelp.localization, _arg_3));
@@ -901,7 +901,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_ONGOING;
-            this._Str_2826(this._Str_22821, false);
+            this.openWindow(this._Str_22821, false);
             this._Str_14185(_Str_14376, this._habboHelp.localization.getLocalization("guide.help.requester.disclaimer"));
             if (((this._sessionData._Str_3989 == _Str_2849._Str_4268) || (this._sessionData._Str_3989 == _Str_2849._Str_4749)))
             {
@@ -951,7 +951,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_GUIDE_DISCONNECTED;
-            this._Str_2826(this._Str_25007, true);
+            this.openWindow(this._Str_25007, true);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
@@ -992,7 +992,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_FEEDBACK;
-            this._Str_2826(this._Str_25707, false);
+            this.openWindow(this._Str_25707, false);
             this._window.findChildByName("guide_name_link").caption = this._sessionData.guideName;
         }
 
@@ -1033,7 +1033,7 @@
                 return;
             }
             this._sessionData._Str_3201 = GuideSessionStateEnum.USER_THANKS;
-            this._Str_2826(this._Str_24558, true);
+            this.openWindow(this._Str_24558, true);
         }
 
         private function _Str_24558(k:WindowEvent, _arg_2:IWindow):void
@@ -1054,7 +1054,7 @@
         private function _Str_22573(k:int):void
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_ACCEPT;
-            this._Str_2826(this._Str_25328, false);
+            this.openWindow(this._Str_25328, false);
             this._habboHelp._Str_2476.playSound(HabboSoundTypesEnum.GUIDE_REQUEST);
             var _local_2:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
             _local_2.seconds = k;
@@ -1083,7 +1083,7 @@
         private function _Str_24340():void
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_WAIT_FOR_VOTERS;
-            this._Str_2826(this._Str_25421, false);
+            this.openWindow(this._Str_25421, false);
             this._Str_20955((this._window.findChildByName("waiting_animation") as IStaticBitmapWrapperWindow), "help_chat_review_progress_big", 4);
         }
 
@@ -1112,7 +1112,7 @@
             var _local_17:Boolean;
             var _local_18:String;
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_VOTE;
-            this._Str_2826(this._Str_23629, false);
+            this.openWindow(this._Str_23629, false);
             var _local_3:_Str_2961 = (IWidgetWindow(this._window.findChildByName("countdown")).widget as _Str_2961);
             _local_3.seconds = k;
             _local_3.running = true;
@@ -1242,7 +1242,7 @@
         private function _Str_18645(k:int):void
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_WAIT_FOR_RESULTS;
-            this._Str_2826(this._Str_25506, true);
+            this.openWindow(this._Str_25506, true);
             this._Str_20571(k);
         }
 
@@ -1265,7 +1265,7 @@
         private function _Str_22460(k:int, _arg_2:int, _arg_3:Array):void
         {
             this._sessionData._Str_3201 = GuideSessionStateEnum.GUARDIAN_CHAT_REVIEW_RESULTS;
-            this._Str_2826(this._Str_22977, true);
+            this.openWindow(this._Str_22977, true);
             var _local_4:int = _Str_13055(k);
             this._window.findChildByName("result_text").caption = ((_Str_10603 + _Str_17966[_local_4]) + "}");
             IStaticBitmapWrapperWindow(this._window.findChildByName("result_image")).assetUri = (HELP_CHAT_REVIEW_DECISION_ + _Str_6777[_local_4]);
@@ -1346,7 +1346,7 @@
         {
             this._Str_10865(false);
             this._sessionData._Str_3201 = GuideSessionStateEnum.ERROR;
-            this._Str_2826(this._Str_22344, true);
+            this.openWindow(this._Str_22344, true);
         }
 
         private function _Str_22344(k:WindowEvent, _arg_2:IWindow):void
@@ -1368,7 +1368,7 @@
         {
             this._Str_10865(false);
             this._sessionData._Str_3201 = GuideSessionStateEnum.REJECTED;
-            this._Str_2826(this._Str_22562, true);
+            this.openWindow(this._Str_22562, true);
             if (((this._sessionData._Str_3989 == _Str_2849._Str_4268) || (this._sessionData._Str_3989 == _Str_2849._Str_4749)))
             {
                 this._window.caption = "${guide.help.request.no_tour_guides.title}";
@@ -1406,7 +1406,7 @@
             }
         }
 
-        private function _Str_2826(k:Function, _arg_2:Boolean):void
+        private function openWindow(k:Function, _arg_2:Boolean):void
         {
             if (this._disposed)
             {

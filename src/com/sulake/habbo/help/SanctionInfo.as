@@ -41,7 +41,7 @@
             return this._disposed;
         }
 
-        public function _Str_2826(k:SanctionStatusEvent):void
+        public function openWindow(k:SanctionStatusEvent):void
         {
             this.dispose();
             this._disposed = false;

@@ -772,7 +772,7 @@
                 {
                     if (((k.data.playerHandles) && (!(StringUtils.isEmpty(k.data.url)))))
                     {
-                        UserAgentUtils._Str_2826(k.data.url, "_blank");
+                        UserAgentUtils.openWindow(k.data.url, "_blank");
                     }
                 }
             }

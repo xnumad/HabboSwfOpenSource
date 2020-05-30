@@ -110,8 +110,8 @@
         private function _Str_8212(k:IMessageEvent):void
         {
             var _local_2:QuestsParser = (k as QuestsMessageEvent).getParser();
-            Logger.log(((("Got Quests: " + _local_2.quests) + ", ") + _local_2._Str_2826));
-            this._questEngine.events.dispatchEvent(new QuestsListEvent(QuestsListEvent.QUESTS, _local_2.quests, _local_2._Str_2826));
+            Logger.log(((("Got Quests: " + _local_2.quests) + ", ") + _local_2.openWindow));
+            this._questEngine.events.dispatchEvent(new QuestsListEvent(QuestsListEvent.QUESTS, _local_2.quests, _local_2.openWindow));
         }
 
         private function _Str_12986(k:IMessageEvent):void

@@ -52,7 +52,7 @@
             return this._disposed;
         }
 
-        private function _Str_2826():void
+        private function openWindow():void
         {
             if (((this._helpDialog == null) && (!(this.disposed))))
             {

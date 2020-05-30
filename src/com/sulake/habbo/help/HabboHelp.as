@@ -864,7 +864,7 @@
 
         private function _Str_22418(k:SanctionStatusEvent):void
         {
-            this._sanctionInfo._Str_2826(k);
+            this._sanctionInfo.openWindow(k);
         }
 
         public function _Str_19088():void

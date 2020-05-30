@@ -40,7 +40,7 @@
             return "UNDEFINED";
         }
 
-        public static function _Str_2826(k:String, _arg_2:String="_blank", _arg_3:String=""):void
+        public static function openWindow(k:String, _arg_2:String="_blank", _arg_3:String=""):void
         {
             var _local_4:String = UserAgentUtils.getUA();
             switch (_local_4)
