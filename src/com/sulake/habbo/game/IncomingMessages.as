@@ -48,7 +48,7 @@
             _local_2.addHabboConnectionMessageEvent(new LoadGameMessageEvent(this.onLoadGame));
             _local_2.addHabboConnectionMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
-            _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this._Str_22378));
+            _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this.onLeftQueue));
             _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOk));
             _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this._Str_24534));
             _local_2.addHabboConnectionMessageEvent(new LoadGameUrlMessageEvent(this.onLoadGameUrl));
@@ -71,7 +71,7 @@
             HabboGamesCom.log(("[BaseJump] joined queue for game " + _local_2.gameTypeId));
         }
 
-        private function _Str_22378(k:LeftQueueMessageEvent):void
+        private function onLeftQueue(k:LeftQueueMessageEvent):void
         {
             var _local_2:LeftQueueMessageParser = k.getParser();
             HabboGamesCom.log(("[BaseJump] left queue for game " + _local_2.gameTypeId));
