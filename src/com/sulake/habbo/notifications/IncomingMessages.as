@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_9157;
+    import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
     import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
     import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
@@ -97,7 +97,7 @@
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
             this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
-            this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
+            this.addMessageEvent(new ClubGiftSelectedEvent(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this.onHotelMaintenance));
             this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
@@ -466,7 +466,7 @@
             }
         }
 
-        private function onClubGiftSelected(k:_Str_9157):void
+        private function onClubGiftSelected(k:ClubGiftSelectedEvent):void
         {
             if (((!(k)) || (!(this._notifications.localization))))
             {

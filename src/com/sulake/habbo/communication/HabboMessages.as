@@ -422,7 +422,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8784;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_8801;
 	import com.sulake.habbo.communication.messages.incoming.catalog.TargetedOfferEvent;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9157;
+	import com.sulake.habbo.communication.messages.incoming.catalog.ClubGiftSelectedEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9208;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9458;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
@@ -1416,7 +1416,7 @@
             INCOMING_PACKETS[634] = _Str_9293;
             INCOMING_PACKETS[638] = TalentLevelUpEvent;
             INCOMING_PACKETS[639] = BotErrorEvent;
-            INCOMING_PACKETS[659] = _Str_9157;
+            INCOMING_PACKETS[659] = ClubGiftSelectedEvent;
             INCOMING_PACKETS[66] = AchievementResolutionsMessageEvent;
             INCOMING_PACKETS[662] = PollErrorEvent;
             INCOMING_PACKETS[673] = GuideSessionErrorEvent;
