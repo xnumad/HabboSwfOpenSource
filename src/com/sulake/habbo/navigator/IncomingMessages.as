@@ -96,7 +96,7 @@
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6587;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_5762;
+    import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_6990;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
     import com.sulake.core.window.IWindowContext;
@@ -676,7 +676,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5762 = _local_2.getParser();
+            var _local_3:FlatAccessibleMessageParser = _local_2.getParser();
             if (((!(_local_3 == null)) && ((_local_3.userName == null) || (_local_3.userName.length == 0))))
             {
                 this._navigator.doorbell.hide();

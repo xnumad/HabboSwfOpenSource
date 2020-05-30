@@ -11,7 +11,7 @@
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_5762;
+    import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
@@ -56,7 +56,7 @@
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
-            var _local_3:_Str_5762 = k.getParser();
+            var _local_3:FlatAccessibleMessageParser = k.getParser();
             if (_local_3 == null)
             {
                 return;

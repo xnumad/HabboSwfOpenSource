@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5762 implements IMessageParser 
+    public class FlatAccessibleMessageParser implements IMessageParser
     {
         private var _userName:String = null;
 
