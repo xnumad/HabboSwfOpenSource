@@ -117,7 +117,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_8138;
 	import com.sulake.habbo.communication.messages.outgoing._Str_295._Str_9826;
 	import snowwar.outgoing.*;
-	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
+	import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
 	import com.sulake.habbo.communication.messages.incoming.avatar._Str_9393;
@@ -1017,7 +1017,7 @@
             INCOMING_PACKETS[1164] = PetTrainingPanelEvent;
             INCOMING_PACKETS[1167] = AvatarEffectMessageEvent;
             INCOMING_PACKETS[1177] = CompetitionEntrySubmitResultEvent;
-            INCOMING_PACKETS[118] = ChangeNameUpdateEvent;
+            INCOMING_PACKETS[118] = ChangeUserNameResultMessageEvent;
             INCOMING_PACKETS[1180] = GroupMembershipRequestedMessageEvent;
             INCOMING_PACKETS[119] = TargetedOfferEvent;
             INCOMING_PACKETS[1191] = RoomChatSettingsMessageEvent;

@@ -25,7 +25,7 @@
     import com.sulake.habbo.communication.messages.incoming.avatar.FigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
+    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
@@ -174,7 +174,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new FigureUpdateEvent(this.onFigureUpdate));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
-                this._communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this.onChangeUserNameResult));
+                this._communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
@@ -378,10 +378,10 @@
             }
         }
 
-        private function onChangeUserNameResult(k:ChangeNameUpdateEvent):void
+        private function onChangeUserNameResult(k:ChangeUserNameResultMessageEvent):void
         {
             var _local_2:_Str_6553 = k.getParser();
-            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
+            if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._nameChangeAllowed = false;
                 events.dispatchEvent(new UserNameUpdateEvent(_local_2.name));

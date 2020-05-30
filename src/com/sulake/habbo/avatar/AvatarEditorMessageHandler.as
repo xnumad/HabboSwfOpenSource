@@ -14,7 +14,7 @@
     import com.sulake.habbo.avatar.enum.AvatarEditorInstanceId;
     import com.sulake.habbo.avatar.view.AvatarEditorNameChangeView;
     import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
-    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
+    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7827;
     import com.sulake.core.communication.messages.IMessageEvent;
 
@@ -81,7 +81,7 @@
                 return;
             }
             var _local_4:_Str_6537 = k.getParser();
-            if (_local_4.resultCode == ChangeNameUpdateEvent.NAME_OK)
+            if (_local_4.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 _local_3._Str_16320 = _local_4.name;
             }

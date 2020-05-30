@@ -5,7 +5,7 @@
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserNameChangedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
+    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.avatar._Str_6232;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
@@ -38,7 +38,7 @@
             this._habboHelp = k;
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeNameUpdateEvent(this.onChangeUserNameResult));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
             this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_6232(this._Str_18696));
         }
 
@@ -182,7 +182,7 @@
             });
         }
 
-        private function onChangeUserNameResult(k:ChangeNameUpdateEvent):void
+        private function onChangeUserNameResult(k:ChangeUserNameResultMessageEvent):void
         {
             if (k == null)
             {
@@ -193,7 +193,7 @@
             {
                 return;
             }
-            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
+            if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._Str_25375(_local_2.name);
                 this._Str_5574();
@@ -214,7 +214,7 @@
                 return;
             }
             var _local_2:_Str_6537 = k.getParser();
-            if (_local_2.resultCode == ChangeNameUpdateEvent.NAME_OK)
+            if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._nameChangeView._Str_16320 = _local_2.name;
             }

@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeNameUpdateEvent;
+    import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
 
     public class AvatarEditorNameChangeView 
     {
@@ -192,26 +192,26 @@
             }
             switch (k)
             {
-                case ChangeNameUpdateEvent._Str_7721:
+                case ChangeUserNameResultMessageEvent._Str_7721:
                     this._manager.localization.registerParameter("help.tutorial.name.taken", "name", _arg_2);
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.taken");
                     break;
-                case ChangeNameUpdateEvent._Str_7836:
+                case ChangeUserNameResultMessageEvent._Str_7836:
                     this._manager.localization.registerParameter("help.tutorial.name.invalid", "name", _arg_2);
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.invalid");
                     break;
-                case ChangeNameUpdateEvent._Str_7005:
+                case ChangeUserNameResultMessageEvent._Str_7005:
                     break;
-                case ChangeNameUpdateEvent._Str_7137:
+                case ChangeUserNameResultMessageEvent._Str_7137:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.long");
                     break;
-                case ChangeNameUpdateEvent._Str_7389:
+                case ChangeUserNameResultMessageEvent._Str_7389:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.short");
                     break;
-                case ChangeNameUpdateEvent._Str_8620:
+                case ChangeUserNameResultMessageEvent._Str_8620:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.change_not_allowed");
                     break;
-                case ChangeNameUpdateEvent._Str_9429:
+                case ChangeUserNameResultMessageEvent._Str_9429:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.merge_hotel_down");
                     break;
             }
@@ -220,7 +220,7 @@
             {
                 return;
             }
-            if (((k == ChangeNameUpdateEvent._Str_9429) || (k == ChangeNameUpdateEvent._Str_8620)))
+            if (((k == ChangeUserNameResultMessageEvent._Str_9429) || (k == ChangeUserNameResultMessageEvent._Str_8620)))
             {
                 _local_5.visible = false;
                 return;
