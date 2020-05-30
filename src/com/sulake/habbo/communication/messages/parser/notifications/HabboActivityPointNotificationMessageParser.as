@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7164 implements IMessageParser 
+    public class HabboActivityPointNotificationMessageParser implements IMessageParser
     {
         private var _amount:int = 0;
         private var _change:int = 0;
