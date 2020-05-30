@@ -58,12 +58,12 @@
             return true;
         }
 
-        public function _Str_23931():Array
+        public function getQueueSetTargets():Array
         {
             return this._queueSets.getKeys();
         }
 
-        public function _Str_25714(k:int):RoomQueueSet
+        public function getQueueSet(k:int):RoomQueueSet
         {
             return this._queueSets.getValue(k) as RoomQueueSet;
         }

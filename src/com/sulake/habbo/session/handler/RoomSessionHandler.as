@@ -162,11 +162,11 @@
             {
                 return;
             }
-            var _local_6:Array = _local_2._Str_23931();
+            var _local_6:Array = _local_2.getQueueSetTargets();
             var _local_8:int = _local_2.activeTarget;
             for each (_local_9 in _local_6)
             {
-                _local_4 = _local_2._Str_25714(_local_9);
+                _local_4 = _local_2.getQueueSet(_local_9);
                 _local_5 = new RoomSessionQueueEvent(_local_3, _local_4.name, _local_4.target, (_local_4.target == _local_8));
                 _local_7 = _local_4.queueTypes;
                 for each (_local_10 in _local_7)
