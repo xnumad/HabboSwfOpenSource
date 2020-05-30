@@ -781,7 +781,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8382;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8674;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8731;
-	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9312;
+	import com.sulake.habbo.communication.messages.incoming.room.furniture.RoomMessageNotificationMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9325;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9362;
 	import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_9591;
@@ -1086,7 +1086,7 @@
             INCOMING_PACKETS[1618] = BotCommandConfigurationEvent;
             INCOMING_PACKETS[1625] = _Str_9336;
             INCOMING_PACKETS[1631] = ExpressionMessageEvent;
-            INCOMING_PACKETS[1634] = _Str_9312;
+            INCOMING_PACKETS[1634] = RoomMessageNotificationMessageEvent;
             INCOMING_PACKETS[1640] = UserUpdateEvent;
             INCOMING_PACKETS[1651] = _Str_9121;
             INCOMING_PACKETS[1660] = _Str_16258;
