@@ -292,7 +292,7 @@
 
         protected function _Str_21462(k:WindowMouseEvent):void
         {
-            _Str_11726._Str_25651(this._Str_9283);
+            _Str_11726.executeAction(this._Str_9283);
         }
 
         private function _Str_4497(k:IBitmapWrapperWindow, _arg_2:BitmapData):void

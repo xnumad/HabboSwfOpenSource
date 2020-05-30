@@ -86,7 +86,7 @@
             this._baseView.addNotificationFeedItem(k, _local_3);
         }
 
-        public function _Str_25651(k:String):void
+        public function executeAction(k:String):void
         {
             if (k.indexOf("http") == 0)
             {
