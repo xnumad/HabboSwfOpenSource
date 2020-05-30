@@ -796,7 +796,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8054;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8414;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8670;
+	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9048;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9435;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
@@ -1132,7 +1132,7 @@
             INCOMING_PACKETS[1959] = _Str_5720;
             INCOMING_PACKETS[1968] = AchievementsScoreEvent;
             INCOMING_PACKETS[1982] = _Str_17148;
-            INCOMING_PACKETS[1992] = _Str_8670;
+            INCOMING_PACKETS[1992] = NotificationDialogMessageEvent;
             INCOMING_PACKETS[2009] = _Str_7464;
             INCOMING_PACKETS[2012] = _Str_5017;
             INCOMING_PACKETS[2016] = RelationshipStatusInfo;

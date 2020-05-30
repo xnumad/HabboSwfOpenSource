@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_9157;
     import com.sulake.habbo.communication.messages.incoming.availability._Str_6521;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9583;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_8670;
+    import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
@@ -100,7 +100,7 @@
             this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this._parser2));
             this.addMessageEvent(new _Str_9583(this._Str_25354));
-            this.addMessageEvent(new _Str_8670(this._Str_24546));
+            this.addMessageEvent(new NotificationDialogMessageEvent(this._Str_24546));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
             this.addMessageEvent(new _Str_2752(this.onRoomEnter));
@@ -396,7 +396,7 @@
             this._notifications.windowManager.simpleAlert("${notifications.broadcast.title}", "", _local_3, "", "", null, FrankIllustration.NEUTRAL);
         }
 
-        private function _Str_24546(k:_Str_8670):void
+        private function _Str_24546(k:NotificationDialogMessageEvent):void
         {
             var _local_2:NotificationDialogMessageParser = k.getParser();
             this._notifications.showNotification(_local_2.type, _local_2.parameters);
