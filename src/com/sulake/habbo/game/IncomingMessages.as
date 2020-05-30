@@ -103,7 +103,7 @@
             var _local_2:Game2AccountGameStatusMessageParser = k.getParser();
             if (_local_2.gameTypeId == this._gameManager.promotedGameId())
             {
-                this._gameManager._Str_23215(_local_2._Str_22319);
+                this._gameManager._Str_23215(_local_2.gamesPlayedTotal);
                 this._gameManager._Str_22499();
             }
         }
