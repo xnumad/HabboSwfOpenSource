@@ -232,7 +232,7 @@
             this._talentLevelUp._Str_3360(k, _arg_2.level, _arg_2._Str_8893, _arg_2._Str_7068);
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "talent/";
         }

@@ -225,7 +225,7 @@
             this._Str_14770(k, 0);
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "groupforum/";
         }

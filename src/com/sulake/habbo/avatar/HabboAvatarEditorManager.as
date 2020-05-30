@@ -252,7 +252,7 @@
             return this._roomUI.getDesktop("hard_coded_room_id");
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "avatareditor/";
         }

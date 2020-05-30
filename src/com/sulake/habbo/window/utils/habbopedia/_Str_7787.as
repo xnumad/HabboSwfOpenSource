@@ -113,7 +113,7 @@
             return this._habboWindowManagerComponent == null;
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "habbopages/";
         }

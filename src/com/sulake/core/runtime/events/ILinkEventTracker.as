@@ -2,7 +2,7 @@
 {
     public interface ILinkEventTracker 
     {
-        function get eventUrlPrefix():String;
+        function get linkPattern():String;
         function linkReceived(link:String):void;
     }
 }

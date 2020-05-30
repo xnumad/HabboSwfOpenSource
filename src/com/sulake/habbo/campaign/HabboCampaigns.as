@@ -152,7 +152,7 @@
             return _local_3;
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "openView/";
         }

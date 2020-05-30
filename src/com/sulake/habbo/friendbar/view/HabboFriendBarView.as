@@ -1154,7 +1154,7 @@
             this._Str_6258(true);
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "friendbar/";
         }

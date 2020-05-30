@@ -1041,7 +1041,7 @@
             return this._snowWarEngine._SafeStr_7702();
         }
 		
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "games/";
         }

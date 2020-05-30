@@ -113,7 +113,7 @@
             context.addLinkEventTracker(this);
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "nux/";
         }

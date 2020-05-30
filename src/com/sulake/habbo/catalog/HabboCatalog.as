@@ -3117,7 +3117,7 @@
             return this._roomSession;
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "catalog/";
         }

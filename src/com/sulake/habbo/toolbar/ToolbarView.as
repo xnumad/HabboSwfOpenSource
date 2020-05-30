@@ -701,7 +701,7 @@
             return this._memenu;
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "toolbar/";
         }

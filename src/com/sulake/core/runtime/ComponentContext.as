@@ -599,9 +599,9 @@
             var _local_2:ILinkEventTracker;
             for each (_local_2 in this._linkEventTrackers)
             {
-                if (_local_2.eventUrlPrefix.length > 0)
+                if (_local_2.linkPattern.length > 0)
                 {
-                    if (k.substr(0, _local_2.eventUrlPrefix.length) == _local_2.eventUrlPrefix)
+                    if (k.substr(0, _local_2.linkPattern.length) == _local_2.linkPattern)
                     {
                         _local_2.linkReceived(k);
                     }

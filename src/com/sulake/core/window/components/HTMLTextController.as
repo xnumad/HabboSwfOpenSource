@@ -235,9 +235,9 @@
                 _local_3 = false;
                 for each (_local_4 in _context.linkEventTrackers)
                 {
-                    if (_local_4.eventUrlPrefix.length > 0)
+                    if (_local_4.linkPattern.length > 0)
                     {
-                        if (_local_2.link.substr(0, _local_4.eventUrlPrefix.length) == _local_4.eventUrlPrefix)
+                        if (_local_2.link.substr(0, _local_4.linkPattern.length) == _local_4.linkPattern)
                         {
                             _local_4.linkReceived(_local_2.link);
                             _local_3 = true;

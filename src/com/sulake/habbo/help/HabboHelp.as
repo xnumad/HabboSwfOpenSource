@@ -774,7 +774,7 @@
             return getBoolean("guardians.enabled");
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "help/";
         }

@@ -702,7 +702,7 @@
             this.send(new _Str_4916(k));
         }
 
-        public function get eventUrlPrefix():String
+        public function get linkPattern():String
         {
             return "questengine/";
         }
