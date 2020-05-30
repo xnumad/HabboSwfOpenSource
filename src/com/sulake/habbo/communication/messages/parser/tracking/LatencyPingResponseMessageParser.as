@@ -5,23 +5,23 @@
 
     public class LatencyPingResponseMessageParser implements IMessageParser 
     {
-        private var _Str_2914:int;
+        private var _requestId:int;
 
 
         public function get requestId():int
         {
-            return this._Str_2914;
+            return this._requestId;
         }
 
         public function flush():Boolean
         {
-            this._Str_2914 = -1;
+            this._requestId = -1;
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2914 = k.readInteger();
+            this._requestId = k.readInteger();
             return true;
         }
     }
