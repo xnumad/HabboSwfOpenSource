@@ -354,7 +354,7 @@
             ((_arg_2 == null) ? k : k.findChildByName(_arg_2)).color = ((_arg_3) ? _arg_4 : _arg_5);
         }
 
-        public function _Str_21745(k:_Str_2418, _arg_2:WindowEvent):void
+        public function onAlert(k:_Str_2418, _arg_2:WindowEvent):void
         {
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) || (_arg_2.type == WindowEvent.WINDOW_EVENT_CANCEL)))
             {

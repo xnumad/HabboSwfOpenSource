@@ -407,7 +407,7 @@
             var _local_2:PetScratchFailedMessageParser = (k as PetScratchFailedEvent).getParser();
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "required_age", ("" + _local_2.currentAge));
             this._notifications.localization.registerParameter("room.error.pets.respectfailed", "avatar_age", ("" + _local_2.requiredAge));
-            this._notifications.windowManager.alert("${error.title}", "${room.error.pets.respectfailed}", 0, this._Str_21745);
+            this._notifications.windowManager.alert("${error.title}", "${room.error.pets.respectfailed}", 0, this.onAlert);
         }
 		
 		private function alertMessageHandler(k:IMessageEvent):void
@@ -419,10 +419,10 @@
 			{
 				titleMessage = packet.titleMessage;
 			}
-			this._notifications.windowManager.alert(titleMessage, packet.alertMessage, 0, this._Str_21745);
+			this._notifications.windowManager.alert(titleMessage, packet.alertMessage, 0, this.onAlert);
 		}
 
-        public function _Str_21745(k:_Str_2418, _arg_2:WindowEvent):void
+        public function onAlert(k:_Str_2418, _arg_2:WindowEvent):void
         {
             if (((_arg_2.type == WindowEvent.WINDOW_EVENT_OK) || (_arg_2.type == WindowEvent.WINDOW_EVENT_CANCEL)))
             {
