@@ -107,7 +107,7 @@
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7431;
     import com.sulake.habbo.communication.messages.parser.room.session.YouArePlayingGameMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_6864;
+    import com.sulake.habbo.communication.messages.parser.room.session.GamePlayerValueMessageParser;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
     import com.sulake.habbo.avatar.enum.AvatarGuideStatus;
@@ -1248,7 +1248,7 @@
 
         private function onGamePlayerNumberValue(k:IMessageEvent):void
         {
-            var _local_2:_Str_6864;
+            var _local_2:GamePlayerValueMessageParser;
             var _local_3:int;
             if (this._roomCreator == null)
             {
