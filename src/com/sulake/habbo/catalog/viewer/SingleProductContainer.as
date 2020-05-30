@@ -28,19 +28,19 @@
 
         public function _Str_23923():void
         {
-            _Str_2271.findChildByName("unique_item_background_bitmap").visible = true;
-            var k:IWidgetWindow = IWidgetWindow(_Str_2271.findChildByName("unique_item_overlay_container"));
+            _view.findChildByName("unique_item_background_bitmap").visible = true;
+            var k:IWidgetWindow = IWidgetWindow(_view.findChildByName("unique_item_overlay_container"));
             var _local_2:_Str_3353 = _Str_3353(k.widget);
             k.visible = true;
             _local_2._Str_3442 = _Str_6851.uniqueLimitedItemSeriesSize;
             _local_2.animated = true;
             if (_Str_6851.uniqueLimitedItemsLeft == 0)
             {
-                _Str_2271.findChildByName("unique_item_sold_out_bitmap").visible = true;
+                _view.findChildByName("unique_item_sold_out_bitmap").visible = true;
             }
             else
             {
-                _Str_2271.findChildByName("unique_item_sold_out_bitmap").visible = false;
+                _view.findChildByName("unique_item_sold_out_bitmap").visible = false;
             }
         }
 

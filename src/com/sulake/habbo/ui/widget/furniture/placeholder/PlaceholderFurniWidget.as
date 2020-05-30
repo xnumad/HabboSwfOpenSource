@@ -10,7 +10,7 @@
 
     public class PlaceholderFurniWidget extends ConversionTrackingWidget 
     {
-        private var _Str_2271:PlaceholderView;
+        private var _view:PlaceholderView;
 
         public function PlaceholderFurniWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {
@@ -19,10 +19,10 @@
 
         override public function dispose():void
         {
-            if (this._Str_2271 != null)
+            if (this._view != null)
             {
-                this._Str_2271.dispose();
-                this._Str_2271 = null;
+                this._view.dispose();
+                this._view = null;
             }
             super.dispose();
         }
@@ -53,19 +53,19 @@
 
         private function _Str_3030():void
         {
-            if (this._Str_2271 == null)
+            if (this._view == null)
             {
-                this._Str_2271 = new PlaceholderView(assets, windowManager);
+                this._view = new PlaceholderView(assets, windowManager);
             }
-            this._Str_2271._Str_3360();
+            this._view._Str_3360();
         }
 
         private function _Str_2718():void
         {
-            if (this._Str_2271 != null)
+            if (this._view != null)
             {
-                this._Str_2271.dispose();
-                this._Str_2271 = null;
+                this._view.dispose();
+                this._view = null;
             }
         }
     }

@@ -21,7 +21,7 @@
     {
         public static const BG:String = "bg";
 
-        protected var _Str_2271:IWindowContainer;
+        protected var _view:IWindowContainer;
         private var _grid:_Str_4311;
         protected var _icon:IBitmapWrapperWindow;
         private var _disposed:Boolean = false;
@@ -36,7 +36,7 @@
 
         public function get view():IWindowContainer
         {
-            return this._Str_2271;
+            return this._view;
         }
 
         public function set grid(k:_Str_4311):void
@@ -54,10 +54,10 @@
             this._grid = null;
             this._icon = null;
             this._habboCatalog = null;
-            if (this._Str_2271 != null)
+            if (this._view != null)
             {
-                this._Str_2271.dispose();
-                this._Str_2271 = null;
+                this._view.dispose();
+                this._view = null;
             }
         }
 
@@ -73,33 +73,33 @@
 
         public function activate():void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
-            if (this._Str_2271.findChildByTag("ITEM_HILIGHT"))
+            if (this._view.findChildByTag("ITEM_HILIGHT"))
             {
-                this._Str_2271.findChildByTag("ITEM_HILIGHT").visible = true;
+                this._view.findChildByTag("ITEM_HILIGHT").visible = true;
             }
             else
             {
-                this._Str_2271.getChildByName(BG).style = _Str_3108.DEFAULT;
+                this._view.getChildByName(BG).style = _Str_3108.DEFAULT;
             }
         }
 
         public function deactivate():void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
-            if (this._Str_2271.findChildByTag("ITEM_HILIGHT"))
+            if (this._view.findChildByTag("ITEM_HILIGHT"))
             {
-                this._Str_2271.findChildByTag("ITEM_HILIGHT").visible = false;
+                this._view.findChildByTag("ITEM_HILIGHT").visible = false;
             }
             else
             {
-                this._Str_2271.getChildByName(BG).style = 3;
+                this._view.getChildByName(BG).style = 3;
             }
         }
 
@@ -109,14 +109,14 @@
             {
                 return;
             }
-            this._Str_2271 = k;
-            this._Str_2271.procedure = this._Str_5162;
-            this._icon = (this._Str_2271.findChildByName("image") as IBitmapWrapperWindow);
-            if (this._Str_2271.findChildByTag("ITEM_HILIGHT"))
+            this._view = k;
+            this._view.procedure = this._Str_5162;
+            this._icon = (this._view.findChildByName("image") as IBitmapWrapperWindow);
+            if (this._view.findChildByTag("ITEM_HILIGHT"))
             {
-                this._Str_2271.findChildByTag("ITEM_HILIGHT").visible = false;
+                this._view.findChildByTag("ITEM_HILIGHT").visible = false;
             }
-            var _local_2:IWindow = this._Str_2271.findChildByName("multiContainer");
+            var _local_2:IWindow = this._view.findChildByName("multiContainer");
             if (_local_2)
             {
                 _local_2.visible = false;
@@ -125,10 +125,10 @@
 
         public function _Str_16497(k:Boolean):void
         {
-            if (((this._Str_2271 as IInteractiveWindow) && (k)))
+            if (((this._view as IInteractiveWindow) && (k)))
             {
-                (this._Str_2271 as IInteractiveWindow).setMouseCursorForState(WindowState.HOVERING, MouseCursorType.DRAG);
-                (this._Str_2271 as IInteractiveWindow).setMouseCursorForState((WindowState.HOVERING | WindowState.ACTIVE), MouseCursorType.DRAG);
+                (this._view as IInteractiveWindow).setMouseCursorForState(WindowState.HOVERING, MouseCursorType.DRAG);
+                (this._view as IInteractiveWindow).setMouseCursorForState((WindowState.HOVERING | WindowState.ACTIVE), MouseCursorType.DRAG);
             }
         }
 

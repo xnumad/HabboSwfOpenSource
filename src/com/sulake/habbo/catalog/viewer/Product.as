@@ -278,12 +278,12 @@
             super.view = k;
             if (this._productCount > 1)
             {
-                _local_2 = _Str_2271.findChildByName("multiContainer");
+                _local_2 = _view.findChildByName("multiContainer");
                 if (_local_2)
                 {
                     _local_2.visible = true;
                 }
-                _local_3 = (_Str_2271.findChildByName("multiCounter") as ITextWindow);
+                _local_3 = (_view.findChildByName("multiCounter") as ITextWindow);
                 if (_local_3)
                 {
                     _local_3.text = ("x" + this.productCount);

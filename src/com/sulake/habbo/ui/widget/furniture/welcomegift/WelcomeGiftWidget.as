@@ -29,7 +29,7 @@
         private const _Str_23012:int = 4;
 
         private var _Str_580:Boolean = false;
-        private var _Str_2271:IWindowContainer;
+        private var _view:IWindowContainer;
         private var _Str_4540:String;
         private var _Str_14637:String;
         private var _isVerified:Boolean;
@@ -52,9 +52,9 @@
             {
                 return;
             }
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271.dispose();
+                this._view.dispose();
             }
             super.dispose();
             this._Str_580 = true;
@@ -62,12 +62,12 @@
 
         private function _Str_23801():void
         {
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271.dispose();
+                this._view.dispose();
             }
-            this._Str_2271 = (this._Str_13142("welcome_gift_widget") as IWindowContainer);
-            this._Str_2271.center();
+            this._view = (this._Str_13142("welcome_gift_widget") as IWindowContainer);
+            this._view.center();
             this.setBitmap("image_bg", "yellow_highlight");
             this.setBitmap("gift_image", "giftbox_full");
             if (this._isVerified)
@@ -92,21 +92,21 @@
 
         private function _Str_4782():void
         {
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271.dispose();
-                this._Str_2271 = null;
+                this._view.dispose();
+                this._view = null;
             }
         }
 
         private function _Str_6469(k:String):void
         {
             var _local_6:ITextFieldWindow;
-            if (this._Str_2271 == null)
+            if (this._view == null)
             {
                 return;
             }
-            var _local_2:IWindowContainer = (this._Str_2271.findChildByName("state_content") as IWindowContainer);
+            var _local_2:IWindowContainer = (this._view.findChildByName("state_content") as IWindowContainer);
             while (_local_2.numChildren > 0)
             {
                 _local_2.removeChildAt(0);
@@ -122,12 +122,12 @@
             switch (k)
             {
                 case this._Str_10705:
-                    this._Str_8459(this._Str_2271.findChildByName("edit"), this._Str_23358);
+                    this._Str_8459(this._view.findChildByName("edit"), this._Str_23358);
                     this.setBitmap("email_icon", "email_icon");
                     this._Str_4180("title", "${welcome.gift.title.email.unverified}");
                     this._Str_4180("text", "${welcome.gift.text.email.unverified}");
-                    this._Str_2271.findChildByName("edit_text").visible = this._Str_5694;
-                    this._Str_2271.findChildByName("edit").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, this._Str_5694);
+                    this._view.findChildByName("edit_text").visible = this._Str_5694;
+                    this._view.findChildByName("edit").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, this._Str_5694);
                     break;
                 case this._Str_13122:
                     this.setBitmap("email_icon", "ok_icon");
@@ -135,22 +135,22 @@
                     this._Str_4180("text", "${welcome.gift.text.email.verified}");
                     break;
                 case this._Str_16369:
-                    this._Str_8459(this._Str_2271.findChildByName("cancel_email_change"), this._Str_23425);
-                    this._Str_8459(this._Str_2271.findChildByName("save_email"), this._Str_23235);
+                    this._Str_8459(this._view.findChildByName("cancel_email_change"), this._Str_23425);
+                    this._Str_8459(this._view.findChildByName("save_email"), this._Str_23235);
                     this.setBitmap("email_icon", "email_icon");
                     this._Str_19208("save_email", this._Str_5694);
-                    _local_6 = (this._Str_2271.findChildByName("email_input") as ITextFieldWindow);
+                    _local_6 = (this._view.findChildByName("email_input") as ITextFieldWindow);
                     _local_6.caption = this._Str_4540;
                     _local_6.focus();
                     _local_6.setSelection(0, int.MAX_VALUE);
                     break;
             }
-            var _local_4:IWindow = this._Str_2271.findChildByName("email");
+            var _local_4:IWindow = this._view.findChildByName("email");
             if (_local_4)
             {
                 _local_4.caption = this._Str_4540;
             }
-            var _local_5:IWindow = this._Str_2271.findChildByName("open");
+            var _local_5:IWindow = this._view.findChildByName("open");
             if (_local_5)
             {
                 if (this._isVerified)
@@ -162,18 +162,18 @@
                     _local_5.disable();
                 }
             }
-            this._Str_8459(this._Str_2271.findChildByName("close"), this.close);
-            this._Str_8459(this._Str_2271.findChildByTag("close"), this.close);
-            this._Str_8459(this._Str_2271.findChildByName("open"), this._Str_23940);
+            this._Str_8459(this._view.findChildByName("close"), this.close);
+            this._Str_8459(this._view.findChildByTag("close"), this.close);
+            this._Str_8459(this._view.findChildByName("open"), this._Str_23940);
         }
 
         private function _Str_4180(k:String, _arg_2:String):void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
-            var _local_3:IWindow = this._Str_2271.findChildByName(k);
+            var _local_3:IWindow = this._view.findChildByName(k);
             if (_local_3)
             {
                 _local_3.caption = _arg_2;
@@ -182,7 +182,7 @@
 
         private function setBitmap(k:String, _arg_2:String):void
         {
-            var _local_3:IBitmapWrapperWindow = (this._Str_2271.findChildByName(k) as IBitmapWrapperWindow);
+            var _local_3:IBitmapWrapperWindow = (this._view.findChildByName(k) as IBitmapWrapperWindow);
             var _local_4:BitmapDataAsset = (_assets.getAssetByName(_arg_2) as BitmapDataAsset);
             if (((!(_local_3)) || (!(_local_4))))
             {
@@ -231,8 +231,8 @@
             {
                 return;
             }
-            var _local_2:ITextFieldWindow = (this._Str_2271.findChildByName("email_input") as ITextFieldWindow);
-            this._Str_2271.findChildByName("cancel_email_change").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, false);
+            var _local_2:ITextFieldWindow = (this._view.findChildByName("email_input") as ITextFieldWindow);
+            this._view.findChildByName("cancel_email_change").setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, false);
             this._Str_19208("save_email", false);
             _local_2.editable = false;
             _local_2.selectable = false;
@@ -242,11 +242,11 @@
 
         private function _Str_19208(k:String, _arg_2:Boolean):void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
-            var _local_3:IButtonWindow = (this._Str_2271.findChildByName(k) as IButtonWindow);
+            var _local_3:IButtonWindow = (this._view.findChildByName(k) as IButtonWindow);
             if (_local_3)
             {
                 if (_arg_2)
@@ -304,7 +304,7 @@
 
         private function _Str_2491():void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
@@ -337,12 +337,12 @@
 
         private function _Str_24136(k:int):void
         {
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return;
             }
             this._Str_6469(this._Str_16369);
-            var _local_2:IWindow = this._Str_2271.findChildByName("email_input_container");
+            var _local_2:IWindow = this._view.findChildByName("email_input_container");
             if (_local_2)
             {
                 _local_2.color = 0xFFFF8888;

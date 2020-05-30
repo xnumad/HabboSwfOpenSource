@@ -18,7 +18,7 @@
         private var _Str_3602:Array;
         private var _habboCatalog:HabboCatalog;
         private var _windowManager:IHabboWindowManager;
-        private var _Str_2271:_Str_7232;
+        private var _view:_Str_7232;
         private var _Str_3154:Array;
         private var _Str_7638:int;
 
@@ -71,7 +71,7 @@
             {
                 return;
             }
-            this._Str_2271 = k;
+            this._view = k;
             this._habboCatalog.getRecyclerStatus();
         }
 
@@ -118,30 +118,30 @@
             {
                 case RecyclerStatusEvent._Str_16635:
                     this._Str_6624 = _Str_9243;
-                    if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
+                    if (((this._view == null) || (this._view.disposed)))
                     {
                         return;
                     }
-                    this._Str_2271._Str_19869();
+                    this._view._Str_19869();
                     this._habboCatalog.setupInventoryForRecycler(true);
                     this._Str_21753();
                     this._Str_15040();
                     this._Str_8448();
                     return;
                 case RecyclerStatusEvent._Str_14635:
-                    if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
+                    if (((this._view == null) || (this._view.disposed)))
                     {
                         return;
                     }
-                    this._Str_2271._Str_17679();
+                    this._view._Str_17679();
                     this._habboCatalog.setupInventoryForRecycler(false);
                     return;
                 case RecyclerStatusEvent._Str_16908:
-                    if (((this._Str_2271 == null) || (this._Str_2271.disposed)))
+                    if (((this._view == null) || (this._view.disposed)))
                     {
                         return;
                     }
-                    this._Str_2271._Str_19627(_arg_2);
+                    this._view._Str_19627(_arg_2);
                     this._habboCatalog.setupInventoryForRecycler(false);
                     return;
             }
@@ -161,9 +161,9 @@
             switch (status)
             {
                 case RecyclerFinishedEvent._Str_15052:
-                    if (this._Str_2271 != null)
+                    if (this._view != null)
                     {
-                        this._Str_2271._Str_20131();
+                        this._view._Str_20131();
                     }
                     break;
                 case RecyclerFinishedEvent._Str_18717:
@@ -172,9 +172,9 @@
                     {
                         k.dispose();
                     });
-                    if (this._Str_2271 != null)
+                    if (this._view != null)
                     {
-                        this._Str_2271._Str_17679();
+                        this._view._Str_17679();
                     }
                     break;
             }
@@ -278,7 +278,7 @@
                 _local_2++;
             }
             this._habboCatalog.sendRecycleItems(k);
-            this._Str_2271._Str_20090();
+            this._view._Str_20090();
         }
 
         public function isReadyToRecycle():Boolean
@@ -321,20 +321,20 @@
 
         private function _Str_15040():void
         {
-            if (((this._Str_2271 == null) || (!(this._Str_14201))))
+            if (((this._view == null) || (!(this._Str_14201))))
             {
                 return;
             }
-            this._Str_2271._Str_15301();
+            this._view._Str_15301();
         }
 
         private function _Str_8448():void
         {
-            if (((this._Str_2271 == null) || (!(this._Str_14201))))
+            if (((this._view == null) || (!(this._Str_14201))))
             {
                 return;
             }
-            this._Str_2271._Str_20203(this.isReadyToRecycle());
+            this._view._Str_20203(this.isReadyToRecycle());
         }
 
         private function _Str_23847():Boolean

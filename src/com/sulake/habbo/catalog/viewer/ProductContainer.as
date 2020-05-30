@@ -98,7 +98,7 @@
             var _local_2:int;
             var _local_3:IProduct;
             super.view = k;
-            if (_Str_2271 == null)
+            if (_view == null)
             {
                 return;
             }
@@ -131,7 +131,7 @@
 
         private function _Str_20490(k:String):void
         {
-            var _local_2:IBitmapWrapperWindow = (_Str_2271.findChildByName("badge_add_on") as IBitmapWrapperWindow);
+            var _local_2:IBitmapWrapperWindow = (_view.findChildByName("badge_add_on") as IBitmapWrapperWindow);
             var _local_3:IAsset = catalog.assets.getAssetByName(k);
             _local_2.bitmap = (_local_3.content as BitmapData);
             var _local_4:BitmapData = (_local_3.content as BitmapData);
@@ -201,11 +201,11 @@
             {
                 if (this._Str_2324.priceInActivityPoints > 0)
                 {
-                    _local_3 = ITextWindow(_Str_2271.findChildByName(AMOUNT_TEXT_LEFT));
+                    _local_3 = ITextWindow(_view.findChildByName(AMOUNT_TEXT_LEFT));
                 }
                 else
                 {
-                    _local_3 = ITextWindow(_Str_2271.findChildByName(AMOUNT_TEXT_RIGHT));
+                    _local_3 = ITextWindow(_view.findChildByName(AMOUNT_TEXT_RIGHT));
                 }
                 if (_local_3)
                 {
@@ -214,10 +214,10 @@
             }
             if (this._Str_2324.priceInActivityPoints > 0)
             {
-                _local_4 = ITextWindow(_Str_2271.findChildByName(AMOUNT_TEXT_RIGHT));
+                _local_4 = ITextWindow(_view.findChildByName(AMOUNT_TEXT_RIGHT));
                 if (_local_4)
                 {
-                    _local_5 = _Str_2271.findChildByName(CURRENCY_INDICATOR_RIGHT);
+                    _local_5 = _view.findChildByName(CURRENCY_INDICATOR_RIGHT);
                     if (_local_5)
                     {
                         _local_5.style = ActivityPointTypeEnum.getIconStyleFor(this._Str_2324.activityPointType, k, false);
@@ -225,7 +225,7 @@
                     _local_4.text = (this._Str_2324.priceInActivityPoints + "");
                 }
             }
-            var _local_2:IItemListWindow = IItemListWindow(_Str_2271.findChildByName(TOTALPRICE_CONTAINER));
+            var _local_2:IItemListWindow = IItemListWindow(_view.findChildByName(TOTALPRICE_CONTAINER));
             if (_local_2)
             {
                 _local_2.arrangeListItems();

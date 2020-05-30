@@ -18,12 +18,12 @@
         override public function initProductIcon(k:IRoomEngine, _arg_2:IStuffData=null):void
         {
             super.initProductIcon(k);
-            var _local_3:IWindow = _Str_2271.findChildByName("multiContainer");
+            var _local_3:IWindow = _view.findChildByName("multiContainer");
             if (_local_3)
             {
                 _local_3.visible = true;
             }
-            var _local_4:ITextWindow = (_Str_2271.findChildByName("multiCounter") as ITextWindow);
+            var _local_4:ITextWindow = (_view.findChildByName("multiCounter") as ITextWindow);
             if (_local_4)
             {
                 _local_4.text = ("x" + _Str_6851.productCount);

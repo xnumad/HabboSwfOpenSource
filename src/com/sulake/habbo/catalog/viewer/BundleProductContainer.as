@@ -80,7 +80,7 @@
 
         public function _Str_21877(k:int):void
         {
-            var _local_2:IWindow = (_Str_2271.findChildByName("bundleCounter") as ITextWindow);
+            var _local_2:IWindow = (_view.findChildByName("bundleCounter") as ITextWindow);
             if (_local_2 != null)
             {
                 _local_2.caption = k.toString();
