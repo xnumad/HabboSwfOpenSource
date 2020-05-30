@@ -171,7 +171,7 @@
                 _catalog = k;
             }, false, [{
                 "type":CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_EXPIRED,
-                "callback":this._Str_24508
+                "callback":this.onBuilderMembershipExpired
             }, {
                 "type":CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_IN_GRACE,
                 "callback":this._Str_25671
@@ -307,7 +307,7 @@
             this.showNotification("builders_club.membership_in_grace", null);
         }
 
-        private function _Str_24508(k:CatalogEvent):void
+        private function onBuilderMembershipExpired(k:CatalogEvent):void
         {
             this.showNotification("builders_club.membership_expired", null);
         }
