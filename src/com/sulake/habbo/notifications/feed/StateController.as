@@ -21,7 +21,7 @@
             return (this._isEnabled) && (!(this._isGameMode));
         }
 
-        public function _Str_6130(k:Boolean):int
+        public function setEnabled(k:Boolean):int
         {
             this._isEnabled = k;
             if (!this.isActive())

@@ -149,7 +149,7 @@
 
         public function setViewEnabled(k:Boolean):void
         {
-            this._stateController._Str_6130(k);
+            this._stateController.setEnabled(k);
             this.setVisibilityState(this._stateController._Str_16276());
         }
 

@@ -321,13 +321,13 @@
         private function _Str_4295():void
         {
             var k:Array = this._friendList.categories._Str_8217();
-            this._Str_6130(this._minimailButton, this._Str_23891(k));
-            this._Str_6130(this._homeButton, this._Str_25087(k));
-            this._Str_6130(this._inviteButton, this._Str_25613(k));
-            this._Str_6130(this._removeButton, this._Str_22478(k));
+            this.setEnabled(this._minimailButton, this._Str_23891(k));
+            this.setEnabled(this._homeButton, this._Str_25087(k));
+            this.setEnabled(this._inviteButton, this._Str_25613(k));
+            this.setEnabled(this._removeButton, this._Str_22478(k));
         }
 
-        private function _Str_6130(k:IContainerButtonWindow, _arg_2:Boolean):void
+        private function setEnabled(k:IContainerButtonWindow, _arg_2:Boolean):void
         {
             if (_arg_2)
             {

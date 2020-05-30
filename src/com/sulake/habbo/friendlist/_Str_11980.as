@@ -310,11 +310,11 @@
         private function _Str_4295():void
         {
             var k:* = (this._habboFriendList.friendRequests._Str_19367() > 0);
-            this._Str_6130(this._Str_17060, k);
-            this._Str_6130(this._Str_18246, k);
+            this.setEnabled(this._Str_17060, k);
+            this.setEnabled(this._Str_18246, k);
         }
 
-        private function _Str_6130(k:IContainerButtonWindow, _arg_2:Boolean):void
+        private function setEnabled(k:IContainerButtonWindow, _arg_2:Boolean):void
         {
             if (!k)
             {
