@@ -178,7 +178,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this.onAvailabilityStatus));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
-                this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
+                this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
@@ -454,7 +454,7 @@
             this._petRespectLeft++;
         }
 
-        private function _Str_18012(k:AccountSafetyLockStatusChangeMessageEvent):void
+        private function onAccountSafetyLockStatusChanged(k:AccountSafetyLockStatusChangeMessageEvent):void
         {
             var _local_2:AccountSafetyLockStatusChangeMessageParser = k.getParser();
             this._accountSafetyLocked = (_local_2.status == AccountSafetyLockStatusChangeMessageParser.SAFETY_LOCK_STATUS_LOCKED);
