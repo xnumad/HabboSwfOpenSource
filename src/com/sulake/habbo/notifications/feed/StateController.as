@@ -41,7 +41,7 @@
             return this._Str_15221();
         }
 
-        public function _Str_16276():int
+        public function currentState():int
         {
             return this._currentState;
         }

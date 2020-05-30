@@ -114,7 +114,7 @@
 
         public function toggleMinimized():void
         {
-            switch (this._stateController._Str_16276())
+            switch (this._stateController.currentState())
             {
                 case FeedVisibilityEnum.VIEW_STATE_MAXIMIZED:
                     this.setVisibilityState(FeedVisibilityEnum.VIEW_STATE_MINIMIZED);
@@ -150,13 +150,13 @@
         public function setViewEnabled(k:Boolean):void
         {
             this._stateController.setEnabled(k);
-            this.setVisibilityState(this._stateController._Str_16276());
+            this.setVisibilityState(this._stateController.currentState());
         }
 
         public function setGameMode(k:Boolean):void
         {
             this._stateController.setGameMode(k);
-            this.setVisibilityState(this._stateController._Str_16276());
+            this.setVisibilityState(this._stateController.currentState());
         }
 
         public function switchToPane(k:String):void
