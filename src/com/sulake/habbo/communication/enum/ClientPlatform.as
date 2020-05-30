@@ -4,7 +4,7 @@
     {
         public static const UNKNOWN:int = 0;
         public static const FLASH:int = 1;
-        public static const _Str_19708:int = 2;
-        public static const _Str_19134:int = 3;
+        public static const IOS:int = 2;
+        public static const ANDROID:int = 3;
     }
 }

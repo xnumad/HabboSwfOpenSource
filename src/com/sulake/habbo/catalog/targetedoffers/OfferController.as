@@ -69,7 +69,7 @@
         {
             var _local_2:_Str_7335 = k.getParser();
             var _local_3:TargetedOffer = new TargetedOffer(_local_2.data);
-            if (_local_3._Str_11180 == TargetedOfferTrackingStateEnum._Str_6027)
+            if (_local_3._Str_11180 == TargetedOfferTrackingStateEnum.MINIMIZED)
             {
                 this.minimizeOffer(_local_3);
             }
@@ -93,8 +93,8 @@
             switch (k._Str_11180)
             {
                 case 0:
-                case TargetedOfferTrackingStateEnum._Str_13442:
-                case TargetedOfferTrackingStateEnum._Str_4934:
+                case TargetedOfferTrackingStateEnum.PREVIEWED:
+                case TargetedOfferTrackingStateEnum.SELECTED:
                     this.maximizeMallOffer(k);
                     return;
                 case TargetedOfferTrackingStateEnum.REJECTED:
@@ -112,7 +112,7 @@
             }
             this._Str_6602();
             this._mallOfferDialog = new MallOfferDialogView(this, k);
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum._Str_13442));
+            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.PREVIEWED));
         }
 
         public function _Str_18546(k:HabboMallOffer, _arg_2:Boolean=false):void
@@ -123,14 +123,14 @@
 
         public function _Str_23977(k:HabboMallOffer):void
         {
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum._Str_14608));
+            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.OFFERED));
             this._catalog.openCreditsHabblet();
             this._Str_18546(k);
         }
 
         public function _Str_25187(k:HabboMallOffer):void
         {
-            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum._Str_6027));
+            this._catalog.connection.send(new _Str_6074(k.targetedOfferId, TargetedOfferTrackingStateEnum.MINIMIZED));
             this._Str_18546(k);
         }
 
@@ -138,7 +138,7 @@
         {
             this._Str_6602();
             this._extension = new TargetedOfferMinimizedView(this, k);
-            this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum._Str_6027));
+            this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum.MINIMIZED));
         }
 
         public function maximizeOffer(k:TargetedOffer):void
@@ -161,7 +161,7 @@
                 {
                     this._offerDialog._Str_6297("targeted_offer_dialog_xml");
                 }
-                this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum._Str_14608));
+                this._catalog.connection.send(new _Str_7084(k.id, TargetedOfferTrackingStateEnum.OFFERED));
             }
         }
 
