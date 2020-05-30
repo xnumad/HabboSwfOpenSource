@@ -797,7 +797,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8414;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9048;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9435;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9995;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist.*;
@@ -1443,7 +1443,7 @@
             INCOMING_PACKETS[826] = RemainingMutePeriodEvent;
             INCOMING_PACKETS[84] = _Str_7883;
             INCOMING_PACKETS[841] = GuideSessionEvent;
-            INCOMING_PACKETS[859] = _Str_9048;
+            INCOMING_PACKETS[859] = PetLevelNotificationEvent;
             INCOMING_PACKETS[869] = _Str_7677;
             INCOMING_PACKETS[872] = _Str_16892;
             INCOMING_PACKETS[876] = ExtendedProfileChangedMessageEvent;
