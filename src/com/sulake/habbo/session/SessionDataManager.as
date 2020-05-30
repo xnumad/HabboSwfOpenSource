@@ -175,7 +175,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new UserNameChangedMessageEvent(this.onUserNameChange));
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
-                this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this._Str_23236));
+                this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this.onAvailabilityStatus));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this._Str_18116));
                 this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this._Str_18012));
@@ -424,7 +424,7 @@
             this._isEmailVerified = _local_2.isVerified;
         }
 
-        private function _Str_23236(k:IMessageEvent):void
+        private function onAvailabilityStatus(k:IMessageEvent):void
         {
             var _local_3:IFurniDataListener;
             var _local_2:AvailabilityStatusMessageParser = (k as AvailabilityStatusMessageEvent).getParser();
