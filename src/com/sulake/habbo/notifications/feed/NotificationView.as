@@ -46,7 +46,7 @@
             this.setupUserInterface();
             this.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
             this.switchToPane(PANE_NOTIFICATIONS);
-            this._Str_10921(FeedVisibilityEnum._Str_6770);
+            this.setVisibilityState(FeedVisibilityEnum._Str_6770);
         }
 
         public function dispose():void
@@ -117,15 +117,15 @@
             switch (this._stateController._Str_16276())
             {
                 case FeedVisibilityEnum._Str_11176:
-                    this._Str_10921(FeedVisibilityEnum._Str_6770);
+                    this.setVisibilityState(FeedVisibilityEnum._Str_6770);
                     return;
                 case FeedVisibilityEnum._Str_6770:
-                    this._Str_10921(FeedVisibilityEnum._Str_11176);
+                    this.setVisibilityState(FeedVisibilityEnum._Str_11176);
                     return;
             }
         }
 
-        public function _Str_10921(k:int):void
+        public function setVisibilityState(k:int):void
         {
             var _local_3:IWindowContainer;
             var _local_2:int = this._stateController._Str_18568(k);
@@ -150,13 +150,13 @@
         public function setViewEnabled(k:Boolean):void
         {
             this._stateController._Str_6130(k);
-            this._Str_10921(this._stateController._Str_16276());
+            this.setVisibilityState(this._stateController._Str_16276());
         }
 
         public function setGameMode(k:Boolean):void
         {
             this._stateController.setGameMode(k);
-            this._Str_10921(this._stateController._Str_16276());
+            this.setVisibilityState(this._stateController._Str_16276());
         }
 
         public function switchToPane(k:String):void
