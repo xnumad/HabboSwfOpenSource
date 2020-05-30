@@ -5,13 +5,13 @@
 
     public class RoomEntryInfoMessageParser implements IMessageParser
     {
-        private var _Str_21881:int;
+        private var _guestRoomId:int;
         private var _owner:Boolean;
 
 
         public function get _Str_6550():int
         {
-            return this._Str_21881;
+            return this._guestRoomId;
         }
 
         public function get owner():Boolean
@@ -26,7 +26,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_21881 = k.readInteger();
+            this._guestRoomId = k.readInteger();
             this._owner = k.readBoolean();
             return true;
         }
