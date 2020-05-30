@@ -311,7 +311,7 @@
                 this._Str_25640(this._tradingModel._Str_24984, this._tradingModel._Str_23259);
                 switch (this._tradingModel.state)
                 {
-                    case TradingModel._Str_5529:
+                    case TradingModel.TRADING_STATE_READY:
                         if (((this._tradingModel._Str_5629.length > 0) || (this._tradingModel._Str_5319.length > 0)))
                         {
                             k.enable();
@@ -322,7 +322,7 @@
                         }
                         k.caption = "${inventory.trading.accept}";
                         return;
-                    case TradingModel._Str_5536:
+                    case TradingModel.TRADING_STATE_RUNNING:
                         if (((this._tradingModel._Str_5629.length > 0) || (this._tradingModel._Str_5319.length > 0)))
                         {
                             k.enable();
@@ -334,26 +334,26 @@
                         k.caption = ((this._tradingModel._Str_11659) ? "${inventory.trading.modify}" : "${inventory.trading.accept}");
                         this._Str_9274("${inventory.trading.info.add}");
                         return;
-                    case TradingModel._Str_8223:
+                    case TradingModel.TRADING_STATE_COUNTDOWN:
                         k.disable();
                         k.caption = "${inventory.trading.countdown}";
                         this._Str_9274("${inventory.trading.info.confirm}");
                         return;
-                    case TradingModel._Str_6408:
+                    case TradingModel.TRADING_STATE_CONFIRMING:
                         k.enable();
                         k.caption = "${inventory.trading.confirm}";
                         this._Str_9274("${inventory.trading.info.confirm}");
                         return;
-                    case TradingModel._Str_8721:
+                    case TradingModel.TRADING_STATE_CONFIRMED:
                         k.disable();
                         this._Str_9274("${inventory.trading.info.waiting}");
                         return;
-                    case TradingModel._Str_5869:
+                    case TradingModel.TRADING_STATE_COMPLETED:
                         k.disable();
                         k.caption = "${inventory.trading.accept}";
                         this._Str_9274("${inventory.trading.info.confirm}");
                         return;
-                    case TradingModel._Str_5812:
+                    case TradingModel.TRADING_STATE_CANCELLED:
                         return;
                     default:
                         throw (new Error((('Unknown trading progress state: "' + this._tradingModel.state) + '"')));
@@ -748,7 +748,7 @@
                     case "button_accept":
                         switch (this._tradingModel.state)
                         {
-                            case TradingModel._Str_5536:
+                            case TradingModel.TRADING_STATE_RUNNING:
                                 if (((this._tradingModel._Str_5629.length == 0) && (!(this._tradingModel._Str_11659))))
                                 {
                                     this._Str_17682(_Str_15142);
@@ -762,7 +762,7 @@
                                     this._tradingModel._Str_24188();
                                 }
                                 break;
-                            case TradingModel._Str_6408:
+                            case TradingModel.TRADING_STATE_CONFIRMING:
                                 _arg_2.disable();
                                 this._tradingModel._Str_25581();
                                 break;
@@ -771,10 +771,10 @@
                     case "button_cancel":
                         switch (this._tradingModel.state)
                         {
-                            case TradingModel._Str_5536:
+                            case TradingModel.TRADING_STATE_RUNNING:
                                 this._tradingModel._Str_14630();
                                 break;
-                            case TradingModel._Str_6408:
+                            case TradingModel.TRADING_STATE_CONFIRMING:
                                 this._tradingModel._Str_24661();
                                 break;
                         }

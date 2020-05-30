@@ -53,14 +53,14 @@
 
     public class TradingModel implements IInventoryModel, IGetImageListener 
     {
-        public static const _Str_16036:uint = 9;
-        public static const _Str_5529:uint = 0;
-        public static const _Str_5536:uint = 1;
-        public static const _Str_8223:uint = 2;
-        public static const _Str_6408:uint = 3;
-        public static const _Str_8721:uint = 4;
-        public static const _Str_5869:uint = 5;
-        public static const _Str_5812:uint = 6;
+        public static const MAX_ITEMS_TO_TRADE:uint = 9;
+        public static const TRADING_STATE_READY:uint = 0;
+        public static const TRADING_STATE_RUNNING:uint = 1;
+        public static const TRADING_STATE_COUNTDOWN:uint = 2;
+        public static const TRADING_STATE_CONFIRMING:uint = 3;
+        public static const TRADING_STATE_CONFIRMED:uint = 4;
+        public static const TRADING_STATE_COMPLETED:uint = 5;
+        public static const TRADING_STATE_CANCELLED:uint = 6;
 
         private var _inventory:HabboInventory;
         private var _assetLibrary:IAssetLibrary;
@@ -118,7 +118,7 @@
 
         public function get running():Boolean
         {
-            return !(this._state == _Str_5529);
+            return !(this._state == TRADING_STATE_READY);
         }
 
         public function get state():uint
@@ -212,7 +212,7 @@
             this._otherUserAccepts = false;
             this._otherUserCanTrade = _arg_6;
             this._running = true;
-            this.state = _Str_5536;
+            this.state = TRADING_STATE_RUNNING;
             this._tradingView.setup(k, _arg_3, _arg_4, _arg_6);
             this._tradingView._Str_9059(this._ownUserIndex);
             this._tradingView._Str_9059(this._otherUserIndex);
@@ -226,12 +226,12 @@
         {
             if (this._running)
             {
-                if (((!(this._state == _Str_5529)) && (!(this._state == _Str_5869))))
+                if (((!(this._state == TRADING_STATE_READY)) && (!(this._state == TRADING_STATE_COMPLETED))))
                 {
                     this._Str_14630();
-                    this.state = TradingModel._Str_5812;
+                    this.state = TradingModel.TRADING_STATE_CANCELLED;
                 }
-                this.state = _Str_5529;
+                this.state = TRADING_STATE_READY;
                 this._inventory._Str_16351(InventorySubCategory.EMPTY);
                 this._running = false;
             }
@@ -254,15 +254,15 @@
             }
             switch (this._state)
             {
-                case _Str_5529:
-                    if (((k == _Str_5536) || (k == _Str_5869)))
+                case TRADING_STATE_READY:
+                    if (((k == TRADING_STATE_RUNNING) || (k == TRADING_STATE_COMPLETED)))
                     {
                         this._state = k;
                         _local_2 = true;
                     }
                     break;
-                case _Str_5536:
-                    if (k == _Str_8223)
+                case TRADING_STATE_RUNNING:
+                    if (k == TRADING_STATE_COUNTDOWN)
                     {
                         this._state = k;
                         _local_2 = true;
@@ -270,7 +270,7 @@
                     }
                     else
                     {
-                        if (k == _Str_5812)
+                        if (k == TRADING_STATE_CANCELLED)
                         {
                             this._state = k;
                             this._tradingView._Str_5129(false);
@@ -278,15 +278,15 @@
                         }
                     }
                     break;
-                case _Str_8223:
-                    if (k == _Str_6408)
+                case TRADING_STATE_COUNTDOWN:
+                    if (k == TRADING_STATE_CONFIRMING)
                     {
                         this._state = k;
                         _local_2 = true;
                     }
                     else
                     {
-                        if (k == _Str_5812)
+                        if (k == TRADING_STATE_CANCELLED)
                         {
                             this._state = k;
                             this._tradingView._Str_5129(false);
@@ -294,7 +294,7 @@
                         }
                         else
                         {
-                            if (k == _Str_5536)
+                            if (k == TRADING_STATE_RUNNING)
                             {
                                 this._state = k;
                                 _local_2 = true;
@@ -303,15 +303,15 @@
                         }
                     }
                     break;
-                case _Str_6408:
-                    if (k == _Str_8721)
+                case TRADING_STATE_CONFIRMING:
+                    if (k == TRADING_STATE_CONFIRMED)
                     {
                         this._state = k;
                         _local_2 = true;
                     }
                     else
                     {
-                        if (k == _Str_5869)
+                        if (k == TRADING_STATE_COMPLETED)
                         {
                             this._state = k;
                             _local_2 = true;
@@ -319,7 +319,7 @@
                         }
                         else
                         {
-                            if (k == _Str_5812)
+                            if (k == TRADING_STATE_CANCELLED)
                             {
                                 this._state = k;
                                 this._tradingView._Str_5129(false);
@@ -329,8 +329,8 @@
                         }
                     }
                     break;
-                case _Str_8721:
-                    if (k == _Str_5869)
+                case TRADING_STATE_CONFIRMED:
+                    if (k == TRADING_STATE_COMPLETED)
                     {
                         this._state = k;
                         this._tradingView._Str_5129(false);
@@ -339,7 +339,7 @@
                     }
                     else
                     {
-                        if (k == _Str_5812)
+                        if (k == TRADING_STATE_CANCELLED)
                         {
                             this._state = k;
                             this._tradingView._Str_5129(false);
@@ -348,22 +348,22 @@
                         }
                     }
                     break;
-                case _Str_5869:
-                    if (k == _Str_5529)
+                case TRADING_STATE_COMPLETED:
+                    if (k == TRADING_STATE_READY)
                     {
                         this._state = k;
                         _local_2 = true;
                     }
                     break;
-                case _Str_5812:
-                    if (k == _Str_5529)
+                case TRADING_STATE_CANCELLED:
+                    if (k == TRADING_STATE_READY)
                     {
                         this._state = k;
                         _local_2 = true;
                     }
                     else
                     {
-                        if (k == _Str_5536)
+                        if (k == TRADING_STATE_RUNNING)
                         {
                             this._state = k;
                             _local_2 = true;
@@ -502,7 +502,7 @@
         {
             if (this._running)
             {
-                if (this._state != _Str_5529)
+                if (this._state != TRADING_STATE_READY)
                 {
                     this._Str_14630();
                 }
@@ -529,9 +529,9 @@
 
         public function _Str_24577():void
         {
-            if (this._state == _Str_8223)
+            if (this._state == TRADING_STATE_COUNTDOWN)
             {
-                this.state = _Str_6408;
+                this.state = TRADING_STATE_CONFIRMING;
             }
         }
 
@@ -596,14 +596,14 @@
                     if ((k is TradingConfirmationEvent))
                     {
                         Logger.log("TRADING::TradingConfirmationEvent");
-                        this.state = _Str_8223;
+                        this.state = TRADING_STATE_COUNTDOWN;
                     }
                     else
                     {
                         if ((k is TradingCompletedEvent))
                         {
                             Logger.log("TRADING::TradingCompletedEvent");
-                            this.state = _Str_5869;
+                            this.state = TRADING_STATE_COMPLETED;
                         }
                         else
                         {
@@ -719,7 +719,7 @@
             {
                 return false;
             }
-            if (this._ownUserItems.length < _Str_16036)
+            if (this._ownUserItems.length < MAX_ITEMS_TO_TRADE)
             {
                 return true;
             }
@@ -776,7 +776,7 @@
 
         public function _Str_25581():void
         {
-            this.state = _Str_8721;
+            this.state = TRADING_STATE_CONFIRMED;
             this._communication.connection.send(new _Str_11362());
         }
 
