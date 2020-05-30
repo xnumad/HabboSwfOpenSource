@@ -5,10 +5,10 @@
 
     public class Game2GameDirectoryStatusMessageParser implements IMessageParser
     {
-        public static const _Str_21125:int = 0;
-        public static const _Str_20011:int = 1;
-        public static const _Str_20194:int = 2;
-        public static const _Str_21170:int = 3;
+        public static const STATUS_OK:int = 0;
+        public static const STATUS_FAILED_REASON_UNKNOWN:int = 1;
+        public static const STATUS_FAILED_REASON_GAME_DIRECTORY_IS_NOT_AVAILABLE:int = 2;
+        public static const STATUS_FAILED_REASON_HOTEL_IS_CLOSED:int = 3;
 
         private var _status:int;
         private var _Str_21469:int;
