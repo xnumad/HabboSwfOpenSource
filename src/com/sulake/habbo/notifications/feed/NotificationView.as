@@ -103,7 +103,7 @@
             this._window.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_MOVE);
             this._window.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH);
             this._window.findChildByName(SETTINGS_TOGGLE).addEventListener(WindowMouseEvent.CLICK, this.onSettingsToggle);
-            this._window.findChildByName(INFO_TOGGLE).addEventListener(WindowMouseEvent.CLICK, this._Str_25427);
+            this._window.findChildByName(INFO_TOGGLE).addEventListener(WindowMouseEvent.CLICK, this.onInfoToggle);
             this._views = new Map();
             this._views.add(PANE_NOTIFICATIONS, new NotificationsPane(PANE_NOTIFICATIONS, this, (this._window.findChildByName(PANE_NOTIFICATIONS) as IWindowContainer)));
             this._views.add(PANE_STREAM, new StreamPane(PANE_STREAM, this, (this._window.findChildByName(PANE_STREAM) as IWindowContainer)));
@@ -212,7 +212,7 @@
             }
         }
 
-        private function _Str_25427(k:WindowMouseEvent):void
+        private function onInfoToggle(k:WindowMouseEvent):void
         {
             var _local_2:IPane = (this._views.getValue(PANE_INFO) as IPane);
             if (_local_2)
