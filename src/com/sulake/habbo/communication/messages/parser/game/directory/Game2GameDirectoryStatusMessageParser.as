@@ -26,7 +26,7 @@
             return this._blockLength;
         }
 
-        public function get _Str_26070():int
+        public function get gamesPlayed():int
         {
             return this._gamesPlayed;
         }
