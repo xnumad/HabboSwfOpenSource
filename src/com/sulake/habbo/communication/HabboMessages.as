@@ -456,7 +456,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
 	import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
 	import com.sulake.habbo.communication.messages.outgoing._Str_549._Str_9845;
-	import com.sulake.habbo.communication.messages.outgoing._Str_550._Str_11999;
+	import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.GetPromoArticlesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.*;
 	import com.sulake.habbo.communication.messages.outgoing.users.CreateGuildMessageComposer;
@@ -1871,7 +1871,7 @@
             OUTGOING_PACKETS[3505] = PollAnswerComposer;
             OUTGOING_PACKETS[3526] = _Str_10092;
             OUTGOING_PACKETS[3529] = PostMessageMessageComposer;
-            OUTGOING_PACKETS[3536] = _Str_11999;
+            OUTGOING_PACKETS[3536] = CommunityGoalVoteMessageComposer;
             OUTGOING_PACKETS[3549] = _Str_10887;
             OUTGOING_PACKETS[3558] = _Str_10141;
             OUTGOING_PACKETS[3559] = _Str_8089;

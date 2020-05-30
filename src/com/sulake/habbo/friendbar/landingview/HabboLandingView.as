@@ -53,7 +53,7 @@
     import com.sulake.habbo.session.product.IProductDataListener;
     import com.sulake.habbo.session.product.IProductData;
     import com.sulake.habbo.communication.messages.outgoing.inventory.badges._Str_11090;
-    import com.sulake.habbo.communication.messages.outgoing._Str_550._Str_11999;
+    import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
     import com.sulake.habbo.session.ISessionDataManager;
 
     public class HabboLandingView extends AbstractView implements IHabboLandingView 
@@ -447,7 +447,7 @@
 
         public function communityGoalVote(k:int):void
         {
-            this.send(new _Str_11999(k));
+            this.send(new CommunityGoalVoteMessageComposer(k));
         }
 
         public function get sessionDataManager():ISessionDataManager
