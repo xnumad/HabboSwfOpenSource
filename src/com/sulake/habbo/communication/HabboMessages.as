@@ -200,7 +200,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_16892;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17054;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17148;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17347;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2GameDirectoryStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17782;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18475;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18557;
@@ -1173,7 +1173,7 @@
             INCOMING_PACKETS[2233] = DanceMessageEvent;
             INCOMING_PACKETS[2234] = _Str_7597;
             INCOMING_PACKETS[2238] = GuildEditorDataMessageEvent;
-            INCOMING_PACKETS[2246] = _Str_17347;
+            INCOMING_PACKETS[2246] = Game2GameDirectoryStatusMessageEvent;
             INCOMING_PACKETS[2260] = JoinedQueueMessageEvent;
             INCOMING_PACKETS[2265] = UserGameAchievementsMessageEvent;
             INCOMING_PACKETS[2270] = Game2WeeklyLeaderboardEvent;
