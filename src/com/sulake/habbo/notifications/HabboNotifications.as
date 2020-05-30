@@ -265,8 +265,8 @@
             }
             if (_arg_2["display"] == "BUBBLE")
             {
-                _local_6 = this._Str_5512(_arg_2, k, "message", true);
-                _local_7 = this._Str_5512(_arg_2, k, "linkUrl", false);
+                _local_6 = this.getNotificationPart(_arg_2, k, "message", true);
+                _local_7 = this.getNotificationPart(_arg_2, k, "linkUrl", false);
                 _local_8 = ((!(_local_7 == null)) && (_local_7.substr(0, 6) == "event:"));
                 _local_9 = this.getNotificationImageUrl(_arg_2, k);
                 this._singularController.addItem(_local_6, NotificationType.INFO, null, _local_9, null, ((_local_8) ? _local_7.substr(6) : _local_7));
@@ -277,7 +277,7 @@
             }
         }
 
-        public function _Str_5512(k:Map, _arg_2:String, _arg_3:String, _arg_4:Boolean):String
+        public function getNotificationPart(k:Map, _arg_2:String, _arg_3:String, _arg_4:Boolean):String
         {
             var _local_5:String;
             if (k.hasKey(_arg_3))

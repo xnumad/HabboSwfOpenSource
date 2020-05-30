@@ -27,14 +27,14 @@
             this._habboNotifications = k;
             this._type = _arg_2;
             this._Str_4071 = _arg_3;
-            var _local_4:String = this._Str_5512("title", true);
-            var _local_5:String = this._Str_5512("message", true).replace(/\\r/g, "\r");
-            var _local_6:String = this._Str_5512("linkUrl", false);
+            var _local_4:String = this.getNotificationPart("title", true);
+            var _local_5:String = this.getNotificationPart("message", true).replace(/\\r/g, "\r");
+            var _local_6:String = this.getNotificationPart("linkUrl", false);
             var _local_7:String;
             var _local_8:Boolean = ((!(_local_6 == null)) && (_local_6.substr(0, 6) == "event:"));
             if (_local_6 != null)
             {
-                _local_7 = this._Str_5512("linkTitle", false);
+                _local_7 = this.getNotificationPart("linkTitle", false);
                 if (_local_7 == null)
                 {
                     _local_7 = _local_6;
@@ -97,11 +97,11 @@
                             this.dispose();
                             break;
                         case "action":
-                            this._habboNotifications.createLinkEvent(this._Str_5512("linkUrl", false).substr(6));
+                            this._habboNotifications.createLinkEvent(this.getNotificationPart("linkUrl", false).substr(6));
                             this.dispose();
                             break;
                         case "link":
-                            HabboWebTools.openWebPage(this._Str_5512("linkUrl", false), "habboMain");
+                            HabboWebTools.openWebPage(this.getNotificationPart("linkUrl", false), "habboMain");
                             break;
                     }
                     return;
@@ -114,9 +114,9 @@
             }
         }
 
-        private function _Str_5512(k:String, _arg_2:Boolean):String
+        private function getNotificationPart(k:String, _arg_2:Boolean):String
         {
-            return this._habboNotifications._Str_5512(this._Str_4071, this._type, k, _arg_2);
+            return this._habboNotifications.getNotificationPart(this._Str_4071, this._type, k, _arg_2);
         }
     }
 }
