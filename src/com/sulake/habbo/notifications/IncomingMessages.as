@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9354;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosesAndWillOpenAtEvent;
-    import com.sulake.habbo.communication.messages.incoming.notifications.PetBoughtNotificationEvent;
+    import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
     import com.sulake.habbo.communication.messages.incoming.recycler.RecyclerFinishedEvent;
@@ -87,7 +87,7 @@
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_9354(this.onUserBannedMessageEvent));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
-            this.addMessageEvent(new PetBoughtNotificationEvent(this.onPetReceived));
+            this.addMessageEvent(new PetReceivedMessageEvent(this.onPetReceived));
             this.addMessageEvent(new _Str_5714(this.onRoomEnter));
             this.addMessageEvent(new _Str_7321(this.onMOTD));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
@@ -356,7 +356,7 @@
             }
         }
 
-        private function onPetReceived(k:PetBoughtNotificationEvent):void
+        private function onPetReceived(k:PetReceivedMessageEvent):void
         {
             var _local_3:ILocalization;
             var _local_4:Pet;

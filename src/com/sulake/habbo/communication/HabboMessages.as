@@ -140,7 +140,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_7890;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9793;
 	import com.sulake.habbo.communication.messages.outgoing._Str_307._Str_9940;
-	import com.sulake.habbo.communication.messages.incoming.notifications.PetBoughtNotificationEvent;
+	import com.sulake.habbo.communication.messages.incoming.notifications.PetReceivedMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7734;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
@@ -1007,7 +1007,7 @@
             INCOMING_PACKETS[1073] = GuildForumThreadsEvent;
             INCOMING_PACKETS[1087] = UserBadgesEvent;
             INCOMING_PACKETS[1108] = WiredConditionDataEvent;
-            INCOMING_PACKETS[1111] = PetBoughtNotificationEvent;
+            INCOMING_PACKETS[1111] = PetReceivedMessageEvent;
             INCOMING_PACKETS[1112] = YoutubeDisplayPlaylistsEvent;
             INCOMING_PACKETS[1121] = CallForHelpPendingCallsEvent;
             INCOMING_PACKETS[1122] = SeasonalQuestsMessageEvent;
