@@ -388,8 +388,8 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_495._Str_9928;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_16208;
 	import com.sulake.habbo.communication.messages.outgoing._Str_497._Str_7123;
-	import com.sulake.habbo.communication.messages.outgoing.notifications._Str_10536;
-	import com.sulake.habbo.communication.messages.outgoing.notifications._Str_11812;
+	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
+	import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_10855;
 	import com.sulake.habbo.communication.messages.outgoing._Str_499._Str_11497;
 	import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
@@ -1694,7 +1694,7 @@
             OUTGOING_PACKETS[232] = _Str_9983;
             OUTGOING_PACKETS[234] = _Str_10522;
             OUTGOING_PACKETS[2341] = _Str_11536;
-            OUTGOING_PACKETS[2343] = _Str_11812;
+            OUTGOING_PACKETS[2343] = ResetUnseenItemsComposer;
             OUTGOING_PACKETS[2384] = _Str_10650;
             OUTGOING_PACKETS[2388] = _Str_10678;
             OUTGOING_PACKETS[2397] = RejectQuestMessageComposer;
@@ -1865,7 +1865,7 @@
             OUTGOING_PACKETS[3483] = _Str_6074;
             OUTGOING_PACKETS[3485] = RoomUserMuteMessageComposer;
             OUTGOING_PACKETS[3492] = _Str_11783;
-            OUTGOING_PACKETS[3493] = _Str_10536;
+            OUTGOING_PACKETS[3493] = ResetUnseenItemIdsComposer;
             OUTGOING_PACKETS[3498] = _Str_11141;
             OUTGOING_PACKETS[3500] = _Str_11327;
             OUTGOING_PACKETS[3505] = PollAnswerComposer;

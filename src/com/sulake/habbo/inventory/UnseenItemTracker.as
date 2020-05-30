@@ -7,8 +7,8 @@
     import com.sulake.habbo.communication.messages.parser.notifications._Str_7601;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.habbo.inventory.events.HabboUnseenItemsUpdatedEvent;
-    import com.sulake.habbo.communication.messages.outgoing.notifications._Str_10536;
-    import com.sulake.habbo.communication.messages.outgoing.notifications._Str_11812;
+    import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemIdsComposer;
+    import com.sulake.habbo.communication.messages.outgoing.notifications.ResetUnseenItemsComposer;
 
     public class UnseenItemTracker implements IUnseenItemTracker 
     {
@@ -193,12 +193,12 @@
 
         private function _Str_20981(k:int):void
         {
-            this._communication.connection.send(new _Str_10536(k));
+            this._communication.connection.send(new ResetUnseenItemIdsComposer(k));
         }
 
         private function _Str_23994(k:int, _arg_2:Array):void
         {
-            this._communication.connection.send(new _Str_11812(k, _arg_2));
+            this._communication.connection.send(new ResetUnseenItemsComposer(k, _arg_2));
         }
     }
 }

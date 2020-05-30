@@ -3,11 +3,11 @@
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_10536 implements IMessageComposer, IDisposable 
+    public class ResetUnseenItemIdsComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_10536(k:int)
+        public function ResetUnseenItemIdsComposer(k:int)
         {
             this._array = new Array();
             super();
