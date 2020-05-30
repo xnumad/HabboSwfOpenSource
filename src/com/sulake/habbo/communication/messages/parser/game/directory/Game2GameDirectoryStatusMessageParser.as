@@ -12,7 +12,7 @@
 
         private var _status:int;
         private var _blockLength:int;
-        private var _Str_21518:int;
+        private var _gamesPlayed:int;
         private var _freeGamesLeft:int;
 
 
@@ -28,7 +28,7 @@
 
         public function get _Str_26070():int
         {
-            return this._Str_21518;
+            return this._gamesPlayed;
         }
 
         public function get _Str_21510():int
@@ -50,7 +50,7 @@
         {
             this._status = k.readInteger();
             this._blockLength = k.readInteger();
-            this._Str_21518 = k.readInteger();
+            this._gamesPlayed = k.readInteger();
             this._freeGamesLeft = k.readInteger();
             return true;
         }
