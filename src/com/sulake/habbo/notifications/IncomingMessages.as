@@ -90,7 +90,7 @@
             this.addMessageEvent(new PetReceivedMessageEvent(this.onPetReceived));
             this.addMessageEvent(new _Str_5714(this.onRoomEnter));
             this.addMessageEvent(new _Str_7321(this.onMOTD));
-            this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
+            this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new PetLevelNotificationEvent(this.onPetLevelNotification));
             this.addMessageEvent(new RoomMessageNotificationMessageEvent(this.onRoomMessagesNotification));
             this.addMessageEvent(new _Str_9995(this.onRestoreClientMessageEvent));
@@ -211,7 +211,7 @@
             }
         }
 
-        private function _Str_17153(k:IMessageEvent):void
+        private function onRecyclerFinished(k:IMessageEvent):void
         {
             var _local_2:RecyclerFinishedMessageParser = (k as RecyclerFinishedEvent).getParser();
             if (((_local_2 == null) || (!(_local_2.recyclerFinishedStatus == RecyclerFinishedEvent._Str_15052))))

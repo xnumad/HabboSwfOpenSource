@@ -551,7 +551,7 @@
             this.addMessageEvent(new _Str_7677(this._Str_16050));
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_8801(this._Str_25682));
-            this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
+            this.addMessageEvent(new RecyclerFinishedEvent(this.onRecyclerFinished));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
             this.addMessageEvent(new _Str_8530(this._Str_24685));
             this.addMessageEvent(new _Str_7086(this._Str_23734));
@@ -2123,7 +2123,7 @@
             this._recyclerLogic._Str_25018(_local_2.recyclerStatus, _local_2.recyclerTimeoutSeconds);
         }
 
-        private function _Str_17153(k:IMessageEvent):void
+        private function onRecyclerFinished(k:IMessageEvent):void
         {
             var _local_2:RecyclerFinishedMessageParser = (k as RecyclerFinishedEvent).getParser();
             if (((_local_2 == null) || (this._recyclerLogic == null)))
