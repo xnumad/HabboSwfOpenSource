@@ -37,7 +37,7 @@
             return this._timer == null;
         }
 
-        public function _Str_15221(k:IIconWindow, _arg_2:Boolean):void
+        public function setVisible(k:IIconWindow, _arg_2:Boolean):void
         {
             this._icon = k;
             this._icon.visible = _arg_2;

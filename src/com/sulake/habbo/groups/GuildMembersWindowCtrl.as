@@ -89,7 +89,7 @@
         {
             if (this._window)
             {
-                this._loadingIcon._Str_15221(IIconWindow(this._window.findChildByName("searching_icon")), k);
+                this._loadingIcon.setVisible(IIconWindow(this._window.findChildByName("searching_icon")), k);
             }
         }
 

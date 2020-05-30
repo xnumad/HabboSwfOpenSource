@@ -28,7 +28,7 @@
             {
                 return this.requestState(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
-            return this._Str_15221();
+            return this.setVisible();
         }
 
         public function setGameMode(k:Boolean):int
@@ -38,7 +38,7 @@
             {
                 return this.requestState(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
-            return this._Str_15221();
+            return this.setVisible();
         }
 
         public function currentState():int
@@ -58,7 +58,7 @@
             return this._currentState;
         }
 
-        private function _Str_15221():int
+        private function setVisible():int
         {
             var k:int = this._lastRequestedState;
             if (k == FeedVisibilityEnum.VIEW_STATE_HIDDEN)
