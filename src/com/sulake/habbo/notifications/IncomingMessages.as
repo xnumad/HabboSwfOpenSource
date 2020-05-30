@@ -239,13 +239,13 @@
         {
             var _local_3:GenericNotificationItemData;
             var _local_2:_Str_7427 = (k as _Str_9583).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
             if (this._Str_16186())
             {
-                this._notifications._Str_3069._Str_4262._Str_22425(_local_2.message, _local_2.url);
+                this._notifications._Str_3069.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
             }
             if (this._Str_18948())
             {
@@ -262,13 +262,13 @@
         {
             var _local_3:GenericNotificationItemData;
             var _local_2:_Str_7904 = (k as _Str_8312).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
             if (this._Str_16186())
             {
-                this._notifications._Str_3069._Str_4262._Str_22997(_local_2.message, _local_2.url);
+                this._notifications._Str_3069.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
             }
             if (this._Str_18948())
             {
@@ -284,51 +284,51 @@
         private function _Str_22529(k:IMessageEvent):void
         {
             var _local_2:_Str_8126 = (k as _Str_9354).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069._Str_4262._Str_24335(_local_2.message);
+            this._notifications._Str_3069.alertDialogManager._Str_24335(_local_2.message);
         }
 
         private function _Str_24833(k:IMessageEvent):void
         {
             var _local_2:HotelWillCloseInMinutesMessageParser = (k as HotelWillCloseInMinutesEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069._Str_4262._Str_24270(_local_2.minutes);
+            this._notifications._Str_3069.alertDialogManager._Str_24270(_local_2.minutes);
         }
 
         private function _parser2(k:IMessageEvent):void
         {
             var _local_2:_Str_7315 = (k as _Str_6521).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069._Str_4262._Str_23818(_local_2._Str_23709, _local_2.duration);
+            this._notifications._Str_3069.alertDialogManager._Str_23818(_local_2._Str_23709, _local_2.duration);
         }
 
         private function _Str_10317(k:IMessageEvent):void
         {
             var _local_2:HotelClosesAndWillOpenAtMessageParser = (k as HotelClosesAndWillOpenAtEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069._Str_4262._Str_24493(_local_2.openHour, _local_2.openMinute, _local_2.userThrownOutAtClose);
+            this._notifications._Str_3069.alertDialogManager._Str_24493(_local_2.openHour, _local_2.openMinute, _local_2.userThrownOutAtClose);
         }
 
         private function _Str_23488(k:IMessageEvent):void
         {
             var _local_2:HotelClosedAndOpensMessageParser = (k as HotelClosedAndOpensEvent).getParser();
-            if (((_local_2 == null) || (this._notifications._Str_3069._Str_4262 == null)))
+            if (((_local_2 == null) || (this._notifications._Str_3069.alertDialogManager == null)))
             {
                 return;
             }
-            this._notifications._Str_3069._Str_4262._Str_24317(_local_2.openHour, _local_2.openMinute);
+            this._notifications._Str_3069.alertDialogManager._Str_24317(_local_2.openHour, _local_2.openMinute);
         }
 
         private function _Str_24460(k:IMessageEvent):void

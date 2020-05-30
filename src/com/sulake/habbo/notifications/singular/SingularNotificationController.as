@@ -76,7 +76,7 @@
             this._notifications.registerUpdateReceiver(this, 2);
         }
 
-        public function get _Str_4262():HabboAlertDialogManager
+        public function get alertDialogManager():HabboAlertDialogManager
         {
             return this._alertDialogManager;
         }
