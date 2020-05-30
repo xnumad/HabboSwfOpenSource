@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.communication.messages.parser.game.lobby
 {
-    public class _Str_5597 
+    public class GameAchievementData
     {
         private var _gameTypeId:int;
         private var _achievementId:int;
         private var _Str_21038:String;
         private var _levels:int;
 
-        public function _Str_5597(k:int, _arg_2:int, _arg_3:String, _arg_4:int)
+        public function GameAchievementData(k:int, _arg_2:int, _arg_3:String, _arg_4:int)
         {
             this._gameTypeId = k;
             this._achievementId = _arg_2;

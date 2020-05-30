@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameListMessageParser;
     import com.sulake.habbo.gamecenter.GameConfigurations;
     import com.sulake.habbo.gamecenter.GameConfiguration;
-    import com.sulake.habbo.communication.messages.parser.game.lobby._Str_5597;
+    import com.sulake.habbo.communication.messages.parser.game.lobby.GameAchievementData;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameAchievementsMessageParser;
 
     public class IncomingMessages implements IDisposable 
@@ -138,7 +138,7 @@
 
         private function onGameAchievements(k:GameAchievementsMessageEvent):void
         {
-            var _local_3:_Str_5597;
+            var _local_3:GameAchievementData;
             var _local_4:int;
             var _local_5:String;
             var _local_2:GameAchievementsMessageParser = (k.parser as GameAchievementsMessageParser);

@@ -7,7 +7,7 @@
 
     public class GameAchievementsMessageParser implements IMessageParser 
     {
-        private var _achievements:Vector.<_Str_5597>;
+        private var _achievements:Vector.<GameAchievementData>;
 
 
         public function flush():Boolean
@@ -15,7 +15,7 @@
             return true;
         }
 
-        public function get achievements():Vector.<_Str_5597>
+        public function get achievements():Vector.<GameAchievementData>
         {
             return this._achievements;
         }
@@ -28,7 +28,7 @@
             var _local_7:int;
             var _local_8:String;
             var _local_9:int;
-            this._achievements = new Vector.<_Str_5597>();
+            this._achievements = new Vector.<GameAchievementData>();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -41,7 +41,7 @@
                     _local_7 = k.readInteger();
                     _local_8 = k.readString();
                     _local_9 = k.readInteger();
-                    this._achievements.push(new _Str_5597(_local_4, _local_7, _local_8, _local_9));
+                    this._achievements.push(new GameAchievementData(_local_4, _local_7, _local_8, _local_9));
                     _local_6++;
                 }
                 _local_3++;
