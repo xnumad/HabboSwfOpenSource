@@ -100,7 +100,7 @@
             this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this.onHotelMaintenance));
             this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
-            this.addMessageEvent(new NotificationDialogMessageEvent(this.showCallCreatedNotification));
+            this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
             this.addMessageEvent(new _Str_2752(this.onRoomEnter));
@@ -396,7 +396,7 @@
             this._notifications.windowManager.simpleAlert("${notifications.broadcast.title}", "", _local_3, "", "", null, FrankIllustration.NEUTRAL);
         }
 
-        private function showCallCreatedNotification(k:NotificationDialogMessageEvent):void
+        private function onNotificationDialogMessageEvent(k:NotificationDialogMessageEvent):void
         {
             var _local_2:NotificationDialogMessageParser = k.getParser();
             this._notifications.showNotification(_local_2.type, _local_2.parameters);
