@@ -35,7 +35,7 @@
 
     public class HabboAvatarEditorManager extends Component implements IHabboAvatarEditor, ILinkEventTracker 
     {
-        public static const _Str_18629:uint = 1;
+        public static const SETUP_WITHOUT_INVENTORY:uint = 1;
         public static const SETUP_WITHOUT_TOOLBAR:uint = 2;
         public static const SETUP_WITHOUT_COMMUNICATION:uint = 3;
         private static const GENERIC:String = AvatarEditorFigureCategory.GENERIC;//"generic"
@@ -74,7 +74,7 @@
             }]), new ComponentDependency(new IIDHabboInventory(), function (k:IHabboInventory):void
             {
                 _inventory = k;
-            }, ((flags & _Str_18629) == 0), []), new ComponentDependency(new IIDCoreLocalizationManager(), function (k:IHabboLocalizationManager):void
+            }, ((flags & SETUP_WITHOUT_INVENTORY) == 0), []), new ComponentDependency(new IIDCoreLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localization = k;
             }), new ComponentDependency(new IIDHabboConfigurationManager(), null, true, [{
