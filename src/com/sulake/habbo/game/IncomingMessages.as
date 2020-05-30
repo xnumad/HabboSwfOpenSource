@@ -47,7 +47,7 @@
             _local_2.addHabboConnectionMessageEvent(new UnloadGameMessageEvent(this._Str_25361));
             _local_2.addHabboConnectionMessageEvent(new LoadGameMessageEvent(this._Str_22979));
             _local_2.addHabboConnectionMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
-            _local_2.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this._Str_16577));
+            _local_2.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
             _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this._Str_22378));
             _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOk));
             _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this._Str_24534));
@@ -98,7 +98,7 @@
             this._gameManager._Str_8716(_local_2.gameTypeId, _local_2._Str_12486, "unloadGameClient");
         }
 
-        private function _Str_16577(k:Game2AccountGameStatusMessageEvent):void
+        private function onAccountGameStatus(k:Game2AccountGameStatusMessageEvent):void
         {
             var _local_2:Game2AccountGameStatusMessageParser = k.getParser();
             if (_local_2.gameTypeId == this._gameManager.promotedGameId())

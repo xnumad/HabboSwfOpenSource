@@ -220,7 +220,7 @@
                 this._gamesLeftContainer = this._gameCenterView.windowManager.createUnseenItemCounter();
                 k = (this._playNowLimitedButton.findChildByName("games_left_container") as IWindowContainer);
                 k.addChild(this._gamesLeftContainer);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this._Str_16577));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new GameStatusMessageEvent(this._Str_25204));
                 this._Str_22075(this._gameCenterView._Str_3479.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES));
                 this._achievementsContainer = (this._gameCenterViewWindow.findChildByName("achievements_container") as IWindowContainer);
@@ -728,7 +728,7 @@
             }
         }
 
-        private function _Str_16577(k:IMessageEvent):void
+        private function onAccountGameStatus(k:IMessageEvent):void
         {
             var _local_4:IHabboLocalizationManager;
             var _local_2:Game2AccountGameStatusMessageEvent = (k as Game2AccountGameStatusMessageEvent);
