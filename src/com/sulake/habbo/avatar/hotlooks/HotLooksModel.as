@@ -18,7 +18,7 @@
     {
         public static const HOT_LOOKS:String = "hot_looks";
         public static const MY_LOOKS:String = "my_looks";
-        private static const _Str_18333:int = 20;
+        private static const MAXIMUM_HOT_LOOKS:int = 20;
 
         private var _hotLooks:Dictionary;
 
@@ -30,7 +30,7 @@
             this._hotLooks[FigureData.F] = new Array();
             this._hotLooks[(FigureData.M + ".index")] = 0;
             this._hotLooks[(FigureData.F + ".index")] = 0;
-            this._Str_24688();
+            this.requestHotLooks();
         }
 
         override public function dispose():void
@@ -41,17 +41,17 @@
 
         override protected function init():void
         {
-            if (!_Str_2271)
+            if (!_view)
             {
-                _Str_2271 = new HotLooksView(this);
+                _view = new HotLooksView(this);
             }
-            _Str_2271.init();
-            _Str_2367 = true;
+            _view.init();
+            _isInitialized = true;
         }
 
-        public function _Str_24318(k:int):void
+        public function selectHotLook(k:int):void
         {
-            var _local_2:Array = this._hotLooks[_Str_2278.gender];
+            var _local_2:Array = this._hotLooks[_controller.gender];
             var _local_3:Outfit = _local_2[k];
             if (_local_3 != null)
             {
@@ -59,20 +59,20 @@
                 {
                     return;
                 }
-                _Str_2278.loadAvatarInEditor(_local_3.figure, _local_3.gender, _Str_2278.clubMemberLevel);
+                _controller.loadAvatarInEditor(_local_3.figure, _local_3.gender, _controller.clubMemberLevel);
             }
         }
 
-        public function get _Str_24788():Array
+        public function get hotLooks():Array
         {
-            return this._hotLooks[_Str_2278.gender];
+            return this._hotLooks[_controller.gender];
         }
 
-        private function _Str_24688():void
+        private function requestHotLooks():void
         {
-            var k:String = _Str_2278.manager.getProperty("avatareditor.promohabbos");
+            var k:String = _controller.manager.getProperty("avatareditor.promohabbos");
             var _local_2:URLRequest = new URLRequest(k);
-            var _local_3:AssetLoaderStruct = _Str_2278.manager.assets.loadAssetFromFile("hotLooksConfiguration", _local_2, "text/xml");
+            var _local_3:AssetLoaderStruct = _controller.manager.assets.loadAssetFromFile("hotLooksConfiguration", _local_2, "text/xml");
             _local_3.addEventListener(AssetLoaderEvent.ASSETLOADEREVENTCOMPLETE, this._Str_23272);
         }
 
@@ -87,7 +87,7 @@
             {
                 return;
             }
-            var xmlAsset:XmlAsset = (_Str_2278.manager.assets.getAssetByName("hotLooksConfiguration") as XmlAsset);
+            var xmlAsset:XmlAsset = (_controller.manager.assets.getAssetByName("hotLooksConfiguration") as XmlAsset);
             if (xmlAsset != null)
             {
                 try
@@ -96,11 +96,11 @@
                     processedHotLooks = 0;
                     for each (habbo in habbos.habbo)
                     {
-                        if (processedHotLooks > _Str_18333)
+                        if (processedHotLooks > MAXIMUM_HOT_LOOKS)
                         {
                             break;
                         }
-                        hotLook = new Outfit(_Str_2278, habbo.@figure, habbo.@gender);
+                        hotLook = new Outfit(_controller, habbo.@figure, habbo.@gender);
                         (this._hotLooks[hotLook.gender] as Array).push(hotLook);
                         processedHotLooks = (processedHotLooks + 1);
                     }

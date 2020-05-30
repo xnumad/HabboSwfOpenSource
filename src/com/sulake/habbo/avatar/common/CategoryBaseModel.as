@@ -7,26 +7,26 @@
 
     public class CategoryBaseModel implements IAvatarEditorCategoryModel 
     {
-        protected var _Str_2382:Map;
-        protected var _Str_2278:HabboAvatarEditor;
-        protected var _Str_2367:Boolean = false;
-        protected var _Str_2271:IAvatarEditorCategoryView;
+        protected var _categories:Map;
+        protected var _controller:HabboAvatarEditor;
+        protected var _isInitialized:Boolean = false;
+        protected var _view:IAvatarEditorCategoryView;
         private var _disposed:Boolean;
 
         public function CategoryBaseModel(k:HabboAvatarEditor)
         {
-            this._Str_2278 = k;
+            this._controller = k;
         }
 
         public function dispose():void
         {
-            if (this._Str_2271 != null)
+            if (this._view != null)
             {
-                this._Str_2271.dispose();
+                this._view.dispose();
             }
-            this._Str_2271 = null;
-            this._Str_2382 = null;
-            this._Str_2278 = null;
+            this._view = null;
+            this._categories = null;
+            this._controller = null;
             this._disposed = true;
         }
 
@@ -37,40 +37,40 @@
 
         protected function init():void
         {
-            if (!this._Str_2382)
+            if (!this._categories)
             {
-                this._Str_2382 = new Map();
+                this._categories = new Map();
             }
         }
 
         public function reset():void
         {
             var k:CategoryData;
-            this._Str_2367 = false;
-            for each (k in this._Str_2382)
+            this._isInitialized = false;
+            for each (k in this._categories)
             {
                 if (k)
                 {
                     k.dispose();
                 }
             }
-            this._Str_2382 = new Map();
-            if (this._Str_2271)
+            this._categories = new Map();
+            if (this._view)
             {
-                this._Str_2271.reset();
+                this._view.reset();
             }
         }
 
         protected function _Str_3130(k:String):void
         {
             var _local_3:CategoryData;
-            var _local_2:CategoryData = this._Str_2382[k];
+            var _local_2:CategoryData = this._categories[k];
             if (_local_2 == null)
             {
-                _local_3 = this._Str_2278._Str_24037(this, k);
+                _local_3 = this._controller._Str_24037(this, k);
                 if (_local_3)
                 {
-                    this._Str_2382[k] = _local_3;
+                    this._categories[k] = _local_3;
                     this.updateSelectionsFromFigure(k);
                 }
             }
@@ -78,38 +78,38 @@
 
         public function switchCategory(k:String=""):void
         {
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this.init();
             }
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271.switchCategory(k);
+                this._view.switchCategory(k);
             }
         }
 
         protected function updateSelectionsFromFigure(k:String):void
         {
-            if ((((!(this._Str_2382)) || (!(this._Str_2278))) || (!(this._Str_2278.figureData))))
+            if ((((!(this._categories)) || (!(this._controller))) || (!(this._controller.figureData))))
             {
                 return;
             }
-            var _local_2:CategoryData = this._Str_2382[k];
+            var _local_2:CategoryData = this._categories[k];
             if (_local_2 == null)
             {
                 return;
             }
-            var _local_3:int = this._Str_2278.figureData.getPartSetId(k);
-            var _local_4:Array = this._Str_2278.figureData.getColourIds(k);
+            var _local_3:int = this._controller.figureData.getPartSetId(k);
+            var _local_4:Array = this._controller.figureData.getColourIds(k);
             if (!_local_4)
             {
                 _local_4 = new Array();
             }
             _local_2._Str_20245(_local_3);
             _local_2._Str_17669(_local_4);
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271._Str_5614(k, _local_4.length);
+                this._view._Str_5614(k, _local_4.length);
             }
         }
 
@@ -117,11 +117,11 @@
         {
             var _local_2:CategoryData;
             var _local_3:Boolean;
-            if (!this._Str_2382)
+            if (!this._categories)
             {
                 return false;
             }
-            for each (_local_2 in this._Str_2382.getValues())
+            for each (_local_2 in this._categories.getValues())
             {
                 if (_local_2 != null)
                 {
@@ -139,11 +139,11 @@
         {
             var _local_2:CategoryData;
             var _local_3:Boolean;
-            if (!this._Str_2382)
+            if (!this._categories)
             {
                 return false;
             }
-            for each (_local_2 in this._Str_2382.getValues())
+            for each (_local_2 in this._categories.getValues())
             {
                 if (_local_2 != null)
                 {
@@ -163,17 +163,17 @@
             var _local_6:CategoryData;
             var _local_7:Boolean;
             var _local_8:AvatarEditorGridPartItem;
-            if (!this._Str_2382)
+            if (!this._categories)
             {
                 return false;
             }
-            var _local_2:Array = this._Str_2382.getKeys();
+            var _local_2:Array = this._categories.getKeys();
             var _local_3:Boolean;
             var _local_4:int;
             while (_local_4 < _local_2.length)
             {
                 _local_5 = _local_2[_local_4];
-                _local_6 = this._Str_2382[_local_5];
+                _local_6 = this._categories[_local_5];
                 _local_7 = false;
                 if (_local_6._Str_15298(k))
                 {
@@ -186,9 +186,9 @@
                 if (_local_7)
                 {
                     _local_8 = _local_6._Str_6315();
-                    if (((((_local_8) && (this._Str_2278)) && (this._Str_2278.figureData)) && (_local_6)))
+                    if (((((_local_8) && (this._controller)) && (this._controller.figureData)) && (_local_6)))
                     {
-                        this._Str_2278.figureData._Str_2088(_local_5, _local_8.id, _local_6._Str_11211(), true);
+                        this._controller.figureData._Str_2088(_local_5, _local_8.id, _local_6.getSelectedColorIds(), true);
                     }
                     _local_3 = true;
                 }
@@ -203,28 +203,28 @@
             var _local_5:CategoryData;
             var _local_6:Boolean;
             var _local_7:AvatarEditorGridPartItem;
-            if (!this._Str_2382)
+            if (!this._categories)
             {
                 return false;
             }
-            var k:Array = this._Str_2382.getKeys();
+            var k:Array = this._categories.getKeys();
             var _local_2:Boolean;
             var _local_3:int;
             while (_local_3 < k.length)
             {
                 _local_4 = k[_local_3];
-                _local_5 = this._Str_2382[_local_4];
+                _local_5 = this._categories[_local_4];
                 _local_6 = false;
-                if (_local_5._Str_8360(this._Str_2278.manager.inventory))
+                if (_local_5._Str_8360(this._controller.manager.inventory))
                 {
                     _local_6 = true;
                 }
                 if (_local_6)
                 {
                     _local_7 = _local_5._Str_6315();
-                    if (((((_local_7) && (this._Str_2278)) && (this._Str_2278.figureData)) && (_local_5)))
+                    if (((((_local_7) && (this._controller)) && (this._controller.figureData)) && (_local_5)))
                     {
-                        this._Str_2278.figureData._Str_2088(_local_4, _local_7.id, _local_5._Str_11211(), true);
+                        this._controller.figureData._Str_2088(_local_4, _local_7.id, _local_5.getSelectedColorIds(), true);
                     }
                     _local_2 = true;
                 }
@@ -235,7 +235,7 @@
 
         public function selectPart(k:String, _arg_2:int):void
         {
-            var _local_3:CategoryData = this._Str_2382[k];
+            var _local_3:CategoryData = this._categories[k];
             if (_local_3 == null)
             {
                 return;
@@ -250,71 +250,71 @@
             if (_local_5._Str_14863)
             {
                 _local_3._Str_8066(_local_4);
-                this._Str_2278.openHabboClubAdWindow();
+                this._controller.openHabboClubAdWindow();
                 return;
             }
-            if (this._Str_2271)
+            if (this._view)
             {
-                this._Str_2271._Str_5614(k, _local_5._Str_17445);
+                this._view._Str_5614(k, _local_5._Str_17445);
             }
-            if (((this._Str_2278) && (this._Str_2278.figureData)))
+            if (((this._controller) && (this._controller.figureData)))
             {
-                this._Str_2278.figureData._Str_2088(k, _local_5.id, _local_3._Str_11211(), true);
+                this._controller.figureData._Str_2088(k, _local_5.id, _local_3.getSelectedColorIds(), true);
             }
         }
 
         public function selectColor(k:String, _arg_2:int, _arg_3:int):void
         {
             var _local_6:AvatarEditorGridColorItem;
-            var _local_4:CategoryData = this._Str_2382[k];
+            var _local_4:CategoryData = this._categories[k];
             if (_local_4 == null)
             {
                 return;
             }
             var _local_5:int = _local_4._Str_24480(_arg_3);
             _local_4._Str_17959(_arg_2, _arg_3);
-            if (((this._Str_2278) && (this._Str_2278.figureData)))
+            if (((this._controller) && (this._controller.figureData)))
             {
-                _local_6 = _local_4._Str_13355(_arg_3);
-                if (_local_6._Str_14863)
+                _local_6 = _local_4.getSelectedColor(_arg_3);
+                if (_local_6.isDisabledForWearing)
                 {
                     _local_4._Str_17959(_local_5, _arg_3);
-                    this._Str_2278.openHabboClubAdWindow();
+                    this._controller.openHabboClubAdWindow();
                     return;
                 }
-                this._Str_2278.figureData.savePartSetColourId(k, _local_4._Str_11211(), true);
+                this._controller.figureData.savePartSetColourId(k, _local_4.getSelectedColorIds(), true);
             }
         }
 
         public function get controller():HabboAvatarEditor
         {
-            return this._Str_2278;
+            return this._controller;
         }
 
         public function getWindowContainer():IWindow
         {
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this.init();
             }
-            if (!this._Str_2271)
+            if (!this._view)
             {
                 return null;
             }
-            return this._Str_2271.getWindowContainer();
+            return this._view.getWindowContainer();
         }
 
         public function getCategoryData(k:String):CategoryData
         {
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this.init();
             }
-            if (!this._Str_2382)
+            if (!this._categories)
             {
                 return null;
             }
-            return this._Str_2382[k];
+            return this._categories[k];
         }
     }
 }

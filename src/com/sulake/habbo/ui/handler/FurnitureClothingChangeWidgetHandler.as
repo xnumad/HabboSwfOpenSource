@@ -49,7 +49,7 @@
         {
             if (((this._container) && (this._container.avatarEditor)))
             {
-                this._container.avatarEditor.close(AvatarEditorInstanceId._Str_7195);
+                this._container.avatarEditor.close(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR);
             }
             this._isDisposed = true;
             this._container = null;
@@ -113,9 +113,9 @@
                                     _local_9 = _Str_18077;
                                 }
                             }
-                            if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_7195, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
+                            if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
                             {
-                                this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId._Str_7195, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
+                                this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
                                 _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_6.objectId, _local_6.objectCategory, _local_6.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
@@ -146,7 +146,7 @@
                 return;
             }
             this._container.roomSession._Str_21093(this._objectId, _arg_2, k);
-            this._container.avatarEditor.close(AvatarEditorInstanceId._Str_7195);
+            this._container.avatarEditor.close(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR);
         }
     }
 }

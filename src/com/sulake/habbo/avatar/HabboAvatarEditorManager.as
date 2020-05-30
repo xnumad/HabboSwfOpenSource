@@ -133,7 +133,7 @@
                 _local_7 = new HabboAvatarEditor(k, this);
                 this._editors.add(k, _local_7);
             }
-            return _local_7._Str_2826(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
+            return _local_7.openWindow(_arg_2, _arg_3, _arg_4, _arg_5, _arg_6);
         }
 
         public function embedEditorToContext(k:uint, _arg_2:IWindowContainer, _arg_3:_Str_5523=null, _arg_4:Array=null, _arg_5:Boolean=false, _arg_6:Boolean=false):Boolean
@@ -145,7 +145,7 @@
             }
             _local_7 = new HabboAvatarEditor(k, this, _arg_6);
             this._editors.add(k, _local_7);
-            _local_7._Str_13533(_arg_2, _arg_3, _arg_4, _arg_5);
+            _local_7.embedToContext(_arg_2, _arg_3, _arg_4, _arg_5);
             return true;
         }
 
@@ -181,15 +181,15 @@
             _local_2.figureData.avatarEffectType = this.inventory._Str_19470();
             switch (k)
             {
-                case AvatarEditorInstanceId._Str_3350:
+                case AvatarEditorInstanceId.OWN_AVATAR_EDITOR:
                     _local_2.hide();
                     return;
-                case AvatarEditorInstanceId._Str_7195:
+                case AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR:
                     _local_2.hide();
                     _local_2.dispose();
                     this._editors.remove(k);
                     return;
-                case AvatarEditorInstanceId._Str_17909:
+                case AvatarEditorInstanceId.BOT_EDITOR:
                     return;
                 default:
                     _local_2.dispose();
@@ -267,8 +267,8 @@
             switch (_local_2[1])
             {
                 case "open":
-                    this.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true);
-                    this.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
+                    this.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
+                    this.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
                     return;
             }
         }

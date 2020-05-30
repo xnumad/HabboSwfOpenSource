@@ -155,7 +155,7 @@
             {
                 return;
             }
-            if (!this._habboAvatarEditor._Str_10922())
+            if (!this._habboAvatarEditor.verifyClubLevel())
             {
                 return;
             }

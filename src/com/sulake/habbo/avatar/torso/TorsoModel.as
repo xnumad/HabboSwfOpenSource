@@ -19,13 +19,13 @@
             _Str_3130(FigureData.CH);
             _Str_3130(FigureData.CHEST_ACCESSORIES);
             _Str_3130(FigureData.CHEST_PRINTS);
-            _Str_2367 = true;
-            if (!_Str_2271)
+            _isInitialized = true;
+            if (!_view)
             {
-                _Str_2271 = new TorsoView(this);
-                if (_Str_2271)
+                _view = new TorsoView(this);
+                if (_view)
                 {
-                    _Str_2271.init();
+                    _view.init();
                 }
             }
         }

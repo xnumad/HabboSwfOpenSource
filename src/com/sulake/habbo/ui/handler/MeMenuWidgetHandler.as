@@ -68,7 +68,7 @@
         {
             if (((this._container) && (this._container.avatarEditor)))
             {
-                this._container.avatarEditor.close(AvatarEditorInstanceId._Str_3350);
+                this._container.avatarEditor.close(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             }
             this._isDisposed = true;
             this.container = null;
@@ -366,8 +366,8 @@
                     Logger.log("MeMenuWidgetHandler: Open avatar editor...");
                     if (this._container)
                     {
-                        this._container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true);
-                        this._container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
+                        this._container.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
+                        this._container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
                         if (((this._container.habboHelp) && (this._container.habboHelp.events)))
                         {
                             this._container.habboHelp.events.dispatchEvent(new HabboHelpTutorialEvent(HabboHelpTutorialEvent.HHTE_DONE_AVATAR_EDITOR_OPENING));

@@ -18,13 +18,13 @@
             _Str_3130(FigureData.LG);
             _Str_3130(FigureData.SH);
             _Str_3130(FigureData.WA);
-            _Str_2367 = true;
-            if (!_Str_2271)
+            _isInitialized = true;
+            if (!_view)
             {
-                _Str_2271 = new LegsView(this);
-                if (_Str_2271)
+                _view = new LegsView(this);
+                if (_view)
                 {
-                    _Str_2271.init();
+                    _view.init();
                 }
             }
         }

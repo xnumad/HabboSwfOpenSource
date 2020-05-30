@@ -12,9 +12,9 @@
 
     public class AvatarEditorGridColorItem 
     {
-        private static const _Str_9541:String = "avatar_editor_editor_clr_13x21_3";
-        private static const _Str_14698:String = "avatar_editor_editor_clr_13x21_1";
-        private static const _Str_17221:String = "avatar_editor_editor_clr_13x21_2";
+        private static const SELECTED_ASSET:String = "avatar_editor_editor_clr_13x21_3";
+        private static const UNSELECTED_ASSET:String = "avatar_editor_editor_clr_13x21_1";
+        private static const COLORIZATION_ASSET:String = "avatar_editor_editor_clr_13x21_2";
 
         private var _model:IAvatarEditorCategoryModel;
         private var _window:IWindowContainer;
@@ -30,25 +30,25 @@
             this._partColor = _arg_3;
             this._isDisabledForWearing = _arg_4;
             this._border = (this._window.findChildByTag("BORDER") as IStaticBitmapWrapperWindow);
-            this._Str_25547();
-            this._Str_22595();
+            this.setupColor();
+            this.updateThumbData();
             this._window.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
             this._window.addEventListener(WindowMouseEvent.OUT, this.onMouseOut);
         }
 
         private function onMouseOut(k:WindowMouseEvent):void
         {
-            this._border.assetUri = ((this._isSelected) ? _Str_9541 : _Str_14698);
+            this._border.assetUri = ((this._isSelected) ? SELECTED_ASSET : UNSELECTED_ASSET);
         }
 
         private function onMouseOver(k:WindowMouseEvent):void
         {
-            this._border.assetUri = _Str_9541;
+            this._border.assetUri = SELECTED_ASSET;
         }
 
-        private function _Str_25547():void
+        private function setupColor():void
         {
-            var k:BitmapDataAsset = (this._model.controller.manager.windowManager.assets.getAssetByName(_Str_17221) as BitmapDataAsset);
+            var k:BitmapDataAsset = (this._model.controller.manager.windowManager.assets.getAssetByName(COLORIZATION_ASSET) as BitmapDataAsset);
             var _local_2:BitmapData = (k.content as BitmapData);
             var _local_3:BitmapData = _local_2.clone();
             var _local_4:IBitmapWrapperWindow = (this._window.findChildByTag("COLOR_IMAGE") as IBitmapWrapperWindow);
@@ -77,18 +77,18 @@
             return this._window;
         }
 
-        public function get Selected():Boolean
+        public function get isSelected():Boolean
         {
             return this._isSelected;
         }
 
-        public function set Selected(k:Boolean):void
+        public function set isSelected(k:Boolean):void
         {
             this._isSelected = k;
-            this._border.assetUri = ((this._isSelected) ? _Str_9541 : _Str_14698);
+            this._border.assetUri = ((this._isSelected) ? SELECTED_ASSET : UNSELECTED_ASSET);
         }
 
-        private function _Str_22595():void
+        private function updateThumbData():void
         {
             if (this._window == null)
             {
@@ -98,7 +98,7 @@
             {
                 return;
             }
-            this._border.assetUri = _Str_9541;
+            this._border.assetUri = SELECTED_ASSET;
             var k:IWindow = this._window.findChildByTag("CLUB_ICON");
             if (this._partColor)
             {
@@ -110,12 +110,12 @@
             }
         }
 
-        public function get _Str_3420():IPartColor
+        public function get partColor():IPartColor
         {
             return this._partColor;
         }
 
-        public function get _Str_14863():Boolean
+        public function get isDisabledForWearing():Boolean
         {
             return this._isDisabledForWearing;
         }

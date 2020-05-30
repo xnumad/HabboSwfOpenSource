@@ -1331,8 +1331,8 @@
 
         public function _Str_25121():void
         {
-            this.handler.container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true);
-            this.handler.container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
+            this.handler.container.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
+            this.handler.container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
         }
 
         public function get _Str_6454():Boolean

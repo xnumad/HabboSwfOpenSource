@@ -137,8 +137,8 @@
                         }
                         if (_local_4)
                         {
-                            this._widgetHandler.container.avatarEditor.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true, null, AvatarEditorFigureCategory.EFFECTS);
-                            this._widgetHandler.container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
+                            this._widgetHandler.container.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true, null, AvatarEditorFigureCategory.EFFECTS);
+                            this._widgetHandler.container.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
                         }
                         else
                         {

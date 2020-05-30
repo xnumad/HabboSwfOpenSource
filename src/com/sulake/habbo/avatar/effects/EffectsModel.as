@@ -22,14 +22,14 @@
         override protected function init():void
         {
             super.init();
-            _Str_2367 = true;
-            if (!_Str_2271)
+            _isInitialized = true;
+            if (!_view)
             {
-                _Str_2271 = new EffectsView(this);
+                _view = new EffectsView(this);
                 this._effectsParamView = new EffectsParamView(this, controller.manager.windowManager, controller.manager.assets);
-                if (_Str_2271)
+                if (_view)
                 {
-                    _Str_2271.init();
+                    _view.init();
                 }
             }
         }
@@ -51,7 +51,7 @@
             var _local_3:int = controller.figureData.avatarEffectType;
             if (((_arg_2 == -1) && (!(_local_3 == -1))))
             {
-                _arg_2 = EffectsView(_Str_2271)._Str_17454(_local_3);
+                _arg_2 = EffectsView(_view)._Str_17454(_local_3);
                 for each (_local_4 in this.effects)
                 {
                     if (_local_4.type == _local_3)
@@ -84,7 +84,7 @@
 
         private function _Str_20089(k:String, _arg_2:int, _arg_3:Boolean):void
         {
-            EffectsView(_Str_2271)._Str_8706(k, _arg_2, _arg_3);
+            EffectsView(_view)._Str_8706(k, _arg_2, _arg_3);
         }
     }
 }

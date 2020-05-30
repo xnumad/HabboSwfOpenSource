@@ -20,13 +20,13 @@
             _Str_3130(FigureData.HE);
             _Str_3130(FigureData.EA);
             _Str_3130(FigureData.FA);
-            _Str_2367 = true;
-            if (!_Str_2271)
+            _isInitialized = true;
+            if (!_view)
             {
-                _Str_2271 = new HeadView(this);
-                if (_Str_2271)
+                _view = new HeadView(this);
+                if (_view)
                 {
-                    _Str_2271.init();
+                    _view.init();
                 }
             }
         }

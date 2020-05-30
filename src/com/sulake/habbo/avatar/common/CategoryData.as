@@ -6,11 +6,11 @@
 
     public class CategoryData 
     {
-        private const _Str_13041:int = 2;
+        private const MAX_PALETTES:int = 2;
 
         private var _parts:Array;
         private var _palettes:Array;
-        private var _selectedPartIndex:int = -1;
+        private var __Str_22359:int = -1;
         private var _paletteIndexes:Array;
 
         public function CategoryData(k:Array, _arg_2:Array)
@@ -30,9 +30,9 @@
             while (_local_3 < k.length)
             {
                 _local_4 = k[_local_3];
-                if (((_local_4._Str_3420) && (_local_4._Str_3420.clubLevel <= _arg_2)))
+                if (((_local_4.partColor) && (_local_4.partColor.clubLevel <= _arg_2)))
                 {
-                    return _local_4._Str_3420.id;
+                    return _local_4.partColor.id;
                 }
                 _local_3++;
             }
@@ -67,7 +67,7 @@
                 }
                 this._palettes = null;
             }
-            this._selectedPartIndex = -1;
+            this.__Str_22359 = -1;
             this._paletteIndexes = null;
         }
 
@@ -120,23 +120,23 @@
                     else
                     {
                         _local_7 = (_local_4[0] as AvatarEditorGridColorItem);
-                        if (((_local_7) && (_local_7._Str_3420)))
+                        if (((_local_7) && (_local_7.partColor)))
                         {
-                            _local_5 = _local_7._Str_3420.id;
+                            _local_5 = _local_7.partColor.id;
                         }
                     }
                     _local_6 = 0;
                     while (_local_6 < _local_4.length)
                     {
                         _local_2 = (_local_4[_local_6] as AvatarEditorGridColorItem);
-                        if (_local_2._Str_3420.id == _local_5)
+                        if (_local_2.partColor.id == _local_5)
                         {
                             this._paletteIndexes[_local_3] = _local_6;
-                            _local_2.Selected = true;
+                            _local_2.isSelected = true;
                         }
                         else
                         {
-                            _local_2.Selected = false;
+                            _local_2.isSelected = false;
                         }
                         _local_6++;
                     }
@@ -154,9 +154,9 @@
             {
                 return null;
             }
-            if (((this._selectedPartIndex >= 0) && (this._parts.length > this._selectedPartIndex)))
+            if (((this.__Str_22359 >= 0) && (this._parts.length > this.__Str_22359)))
             {
-                _local_2 = this._parts[this._selectedPartIndex];
+                _local_2 = this._parts[this.__Str_22359];
                 if (_local_2)
                 {
                     _local_2.Selected = false;
@@ -168,7 +168,7 @@
                 if (_local_3)
                 {
                     _local_3.Selected = true;
-                    this._selectedPartIndex = k;
+                    this.__Str_22359 = k;
                     return _local_3;
                 }
             }
@@ -186,14 +186,14 @@
             {
                 return null;
             }
-            this._Str_23284(this._paletteIndexes[_arg_2], _arg_2);
+            this.deselectColorIndex(this._paletteIndexes[_arg_2], _arg_2);
             this._paletteIndexes[_arg_2] = k;
             var _local_4:AvatarEditorGridColorItem = (_local_3[k] as AvatarEditorGridColorItem);
             if (!_local_4)
             {
                 return null;
             }
-            _local_4.Selected = true;
+            _local_4.isSelected = true;
             this._Str_19574();
             return _local_4;
         }
@@ -203,7 +203,7 @@
             return this._paletteIndexes[k];
         }
 
-        private function _Str_23284(k:int, _arg_2:int):void
+        private function deselectColorIndex(k:int, _arg_2:int):void
         {
             var _local_3:Array = this.getPalette(_arg_2);
             if (!_local_3)
@@ -219,10 +219,10 @@
             {
                 return;
             }
-            _local_4.Selected = false;
+            _local_4.isSelected = false;
         }
 
-        public function _Str_11211():Array
+        public function getSelectedColorIds():Array
         {
             var _local_7:Array;
             var _local_8:AvatarEditorGridColorItem;
@@ -240,11 +240,11 @@
                 return null;
             }
             var _local_2:AvatarEditorGridColorItem = (k[0] as AvatarEditorGridColorItem);
-            if (((!(_local_2)) || (!(_local_2._Str_3420))))
+            if (((!(_local_2)) || (!(_local_2.partColor))))
             {
                 return null;
             }
-            var _local_3:int = _local_2._Str_3420.id;
+            var _local_3:int = _local_2.partColor.id;
             var _local_4:Array = new Array();
             var _local_5:int;
             while (_local_5 < this._paletteIndexes.length)
@@ -255,9 +255,9 @@
                     if (_local_7.length > this._paletteIndexes[_local_5])
                     {
                         _local_8 = (_local_7[this._paletteIndexes[_local_5]] as AvatarEditorGridColorItem);
-                        if (((_local_8) && (_local_8._Str_3420)))
+                        if (((_local_8) && (_local_8.partColor)))
                         {
-                            _local_4.push(_local_8._Str_3420.id);
+                            _local_4.push(_local_8.partColor.id);
                         }
                         else
                         {
@@ -287,10 +287,10 @@
             var _local_3:int;
             while (_local_3 < this._paletteIndexes.length)
             {
-                _local_2 = this._Str_13355(_local_3);
+                _local_2 = this.getSelectedColor(_local_3);
                 if (_local_2)
                 {
-                    k.push(_local_2._Str_3420);
+                    k.push(_local_2.partColor);
                 }
                 else
                 {
@@ -301,7 +301,7 @@
             return k;
         }
 
-        public function _Str_13355(k:int):AvatarEditorGridColorItem
+        public function getSelectedColor(k:int):AvatarEditorGridColorItem
         {
             var _local_2:Array = this.getPalette(k);
             if (((!(_local_2)) || (_local_2.length <= this._paletteIndexes[k])))
@@ -311,12 +311,12 @@
             return _local_2[this._paletteIndexes[k]] as AvatarEditorGridColorItem;
         }
 
-        public function _Str_26437(k:int):int
+        public function getCurrentColorId(k:int):int
         {
-            var _local_2:AvatarEditorGridColorItem = this._Str_13355(k);
-            if (((_local_2) && (_local_2._Str_3420)))
+            var _local_2:AvatarEditorGridColorItem = this.getSelectedColor(k);
+            if (((_local_2) && (_local_2.partColor)))
             {
-                return _local_2._Str_3420.id;
+                return _local_2.partColor.id;
             }
             return 0;
         }
@@ -345,7 +345,7 @@
 
         public function _Str_6315():AvatarEditorGridPartItem
         {
-            return this._parts[this._selectedPartIndex] as AvatarEditorGridPartItem;
+            return this._parts[this.__Str_22359] as AvatarEditorGridPartItem;
         }
 
         private function _Str_19574():void
@@ -496,7 +496,7 @@
 
         public function get _Str_22359():int
         {
-            return this._selectedPartIndex;
+            return this.__Str_22359;
         }
     }
 }

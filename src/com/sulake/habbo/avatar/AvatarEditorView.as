@@ -460,7 +460,7 @@
             var _local_3:IWindow = _local_2.getChildAt(0);
             _local_2.removeChild(_local_3);
             _local_2.invalidate();
-            var _local_4:IWindow = this._editor._Str_17609(k);
+            var _local_4:IWindow = this._editor.getCategoryWindowContainer(k);
             if (_local_4 == null)
             {
                 return;
@@ -468,7 +468,7 @@
             this._gridView.window.visible = false;
             _local_4.visible = true;
             _local_2.addChild(_local_4);
-            this._editor._Str_25043(k);
+            this._editor.activateCategory(k);
             this._currentViewId = k;
             this._tabContainer.selector.setSelected(this._tabContainer._Str_19493(k));
         }
@@ -491,14 +491,14 @@
                     switch (_arg_2.name)
                     {
                         case "save":
-                            if (((!(this._editor._Str_16064())) && (this._editor._Str_7960())))
+                            if (((!(this._editor.isDevelopmentEditor())) && (this._editor._Str_7960())))
                             {
                                 this._Str_25363();
                                 this._saveTimer.start();
                                 this._editorContent.findChildByName("save").disable();
                                 return;
                             }
-                            if (((!(this._editor._Str_16064())) && (this._editor._Str_16127())))
+                            if (((!(this._editor.isDevelopmentEditor())) && (this._editor._Str_16127())))
                             {
                                 this._editor.openHabboClubAdWindow();
                                 this._saveTimer.start();
@@ -508,7 +508,7 @@
                             this._saveTimer.start();
                             this._editorContent.findChildByName("save").disable();
                             this._editor._Str_22528();
-                            this._editor.manager.close(this._editor._Str_12289);
+                            this._editor.manager.close(this._editor.instanceId);
                             return;
                         case "cancel":
                         case "header_button_close":
@@ -517,7 +517,7 @@
                                 this._editor._Str_21762();
                                 this._editor._Str_21039();
                             }
-                            this._editor.manager.close(this._editor._Str_12289);
+                            this._editor.manager.close(this._editor.instanceId);
                             return;
                         case "rotate_avatar":
                             this._avatarDirection++;

@@ -47,7 +47,7 @@
             var k:IWindow;
             var _local_2:Outfit;
             this._hotLooksGrid._Str_3956();
-            for each (_local_2 in this._model._Str_24788)
+            for each (_local_2 in this._model.hotLooks)
             {
                 k = _local_2.view.window;
                 this._hotLooksGrid._Str_2816(k);
@@ -70,7 +70,7 @@
             if (k.type == WindowMouseEvent.CLICK)
             {
                 _local_3 = this._hotLooksGrid._Str_3373(_arg_2.parent);
-                this._model._Str_24318(_local_3);
+                this._model.selectHotLook(_local_3);
             }
         }
 

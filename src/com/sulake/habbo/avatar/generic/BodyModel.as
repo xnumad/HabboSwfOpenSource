@@ -25,37 +25,37 @@
         {
             super.init();
             _Str_3130(FigureData.FACE);
-            _Str_2367 = true;
-            if (!_Str_2271)
+            _isInitialized = true;
+            if (!_view)
             {
-                _Str_2271 = new BodyView(this);
-                if (_Str_2271)
+                _view = new BodyView(this);
+                if (_view)
                 {
-                    _Str_2271.init();
+                    _view.init();
                 }
             }
         }
 
         override public function switchCategory(k:String=""):void
         {
-            _Str_2271.switchCategory(k);
+            _view.switchCategory(k);
         }
 
         override public function selectColor(k:String, _arg_2:int, _arg_3:int):void
         {
-            var _local_4:CategoryData = _Str_2382[k];
+            var _local_4:CategoryData = _categories[k];
             if (_local_4 == null)
             {
                 return;
             }
             _local_4._Str_17959(_arg_2, _arg_3);
-            var _local_5:AvatarEditorGridColorItem = _local_4._Str_13355(_arg_3);
-            if (_local_5._Str_14863)
+            var _local_5:AvatarEditorGridColorItem = _local_4.getSelectedColor(_arg_3);
+            if (_local_5.isDisabledForWearing)
             {
-                _Str_2278.openHabboClubAdWindow();
+                _controller.openHabboClubAdWindow();
                 return;
             }
-            _Str_2278.figureData.savePartSetColourId(k, _local_4._Str_11211(), true);
+            _controller.figureData.savePartSetColourId(k, _local_4.getSelectedColorIds(), true);
             this.updateSelectionsFromFigure(FigureData.FACE);
         }
 
@@ -64,13 +64,13 @@
             var _local_5:AvatarEditorGridPartItem;
             var _local_6:String;
             var _local_7:IAvatarImage;
-            if (!_Str_2382)
+            if (!_categories)
             {
                 return;
             }
-            var _local_2:int = _Str_2278.figureData.getPartSetId(FigureData.FACE);
-            var _local_3:Array = _Str_2278.figureData.getColourIds(FigureData.FACE);
-            var _local_4:CategoryData = _Str_2382[k];
+            var _local_2:int = _controller.figureData.getPartSetId(FigureData.FACE);
+            var _local_3:Array = _controller.figureData.getColourIds(FigureData.FACE);
+            var _local_4:CategoryData = _categories[k];
             if (_local_4 == null)
             {
                 return;
@@ -79,8 +79,8 @@
             _local_4._Str_17669(_local_3);
             for each (_local_5 in _local_4.parts)
             {
-                _local_6 = _Str_2278.figureData.getFigureStringWithFace(_local_5.id);
-                _local_7 = _Str_2278.manager.avatarRenderManager.createAvatarImage(_local_6, AvatarScaleType.LARGE, null, this);
+                _local_6 = _controller.figureData.getFigureStringWithFace(_local_5.id);
+                _local_7 = _controller.manager.avatarRenderManager.createAvatarImage(_local_6, AvatarScaleType.LARGE, null, this);
                 _local_5._Str_3093 = _local_7._Str_818(AvatarSetType.HEAD);
                 _local_7.dispose();
             }

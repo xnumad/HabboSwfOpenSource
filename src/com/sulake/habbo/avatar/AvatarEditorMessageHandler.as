@@ -70,7 +70,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2 == null)
             {
                 return;
@@ -109,7 +109,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.wardrobe._Str_15301(k.state, k._Str_17746);
@@ -122,7 +122,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.clubMemberLevel = k.clubLevel;
@@ -136,7 +136,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.effects.reset();
@@ -149,7 +149,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.effects.reset();
@@ -165,7 +165,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.effects.reset();
@@ -184,7 +184,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if ((((_local_2) && (!(this._controller.roomDesktop == null))) && (k.getParser().userId == this._controller.roomDesktop.roomSession._Str_3871)))
             {
                 _local_2.figureData.avatarEffectType = k.getParser().effectId;
@@ -198,7 +198,7 @@
             {
                 return;
             }
-            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId._Str_3350);
+            var _local_2:HabboAvatarEditor = this._controller.getEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
             if (_local_2)
             {
                 _local_2.figureData.avatarEffectType = k.getParser().type;

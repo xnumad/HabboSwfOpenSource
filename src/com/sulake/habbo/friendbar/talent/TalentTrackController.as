@@ -827,8 +827,8 @@
                     return;
                 case _Str_2821._Str_14749:
                     this._Str_8556(_arg_2.name);
-                    this._habboTalent.avatarEditor.openEditor(AvatarEditorInstanceId._Str_3350, null, null, true);
-                    this._habboTalent.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId._Str_3350);
+                    this._habboTalent.avatarEditor.openEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR, null, null, true);
+                    this._habboTalent.avatarEditor.loadOwnAvatarInEditor(AvatarEditorInstanceId.OWN_AVATAR_EDITOR);
                     return;
             }
         }
