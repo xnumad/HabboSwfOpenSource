@@ -80,7 +80,7 @@
         {
         }
 
-        public function _Str_18026(k:int, _arg_2:GenericNotificationItemData):void
+        public function addFeedItem(k:int, _arg_2:GenericNotificationItemData):void
         {
             var _local_3:IFeedEntity = this._entityFactory._Str_23084(_arg_2);
             this._baseView.addNotificationFeedItem(k, _local_3);
