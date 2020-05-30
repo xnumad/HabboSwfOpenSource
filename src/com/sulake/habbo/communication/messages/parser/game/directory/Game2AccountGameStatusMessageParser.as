@@ -7,7 +7,7 @@
     {
         private var _gameTypeId:int;
         private var _freeGamesLeft:int;
-        private var _Str_21057:int;
+        private var _gamesPlayedTotal:int;
 
 
         public function get gameTypeId():int
@@ -22,7 +22,7 @@
 
         public function get _Str_22319():int
         {
-            return this._Str_21057;
+            return this._gamesPlayedTotal;
         }
 
         public function get hasUnlimitedGames():Boolean
@@ -39,7 +39,7 @@
         {
             this._gameTypeId = k.readInteger();
             this._freeGamesLeft = k.readInteger();
-            this._Str_21057 = k.readInteger();
+            this._gamesPlayedTotal = k.readInteger();
             return true;
         }
     }
