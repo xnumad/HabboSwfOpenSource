@@ -232,7 +232,7 @@
         {
             if (this._feedController != null)
             {
-                this._feedController._Str_23337(true);
+                this._feedController.setFeedEnabled(true);
             }
             this._communication.connection.send(new _Str_11544());
         }

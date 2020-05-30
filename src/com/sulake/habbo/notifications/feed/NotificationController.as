@@ -63,7 +63,7 @@
             }
         }
 
-        public function _Str_23337(k:Boolean):void
+        public function setFeedEnabled(k:Boolean):void
         {
             if (this._baseView)
             {
