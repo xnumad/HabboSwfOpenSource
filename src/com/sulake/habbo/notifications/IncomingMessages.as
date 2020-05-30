@@ -93,7 +93,7 @@
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
             this.addMessageEvent(new _Str_9312(this.onRoomMessagesNotification));
-            this.addMessageEvent(new _Str_9995(this._Str_24460));
+            this.addMessageEvent(new _Str_9995(this.onRestoreClientMessageEvent));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
             this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -331,7 +331,7 @@
             this._notifications.singularController.alertDialogManager._Str_24317(_local_2.openHour, _local_2.openMinute);
         }
 
-        private function _Str_24460(k:IMessageEvent):void
+        private function onRestoreClientMessageEvent(k:IMessageEvent):void
         {
             HabboWebTools.closeWebPageAndRestoreClient();
         }
