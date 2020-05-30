@@ -4,16 +4,16 @@
     import com.sulake.habbo.communication.messages.incoming.avatar._Str_5988;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_9423 implements IMessageParser 
+    public class WardrobeMessageParser implements IMessageParser
     {
         private var _state:int;
-        private var _Str_16827:Array;
+        private var _outfits:Array;
 
 
         public function flush():Boolean
         {
             this._state = 0;
-            this._Str_16827 = [];
+            this._outfits = [];
             return true;
         }
 
@@ -26,15 +26,15 @@
             while (_local_3 < _local_2)
             {
                 _local_4 = new _Str_5988(k);
-                this._Str_16827.push(_local_4);
+                this._outfits.push(_local_4);
                 _local_3++;
             }
             return true;
         }
 
-        public function get _Str_17746():Array
+        public function get outfits():Array
         {
-            return this._Str_16827;
+            return this._outfits;
         }
 
         public function get state():int
