@@ -134,7 +134,7 @@
             return this._notifications.getBoolean("notification.feed.enabled");
         }
 
-        private function _Str_16186():Boolean
+        private function useNotifications():Boolean
         {
             return this._notifications.getBoolean("notification.items.enabled");
         }
@@ -147,7 +147,7 @@
             var _local_3:_Str_6680 = (_local_2.getParser() as _Str_6680);
             if (((_local_3.messages) && (_local_3.messages.length > 0)))
             {
-                if (this._Str_16186())
+                if (this.useNotifications())
                 {
                     new NotificationPopup(_local_3.messages, this._notifications.assetLibrary, this._notifications.windowManager);
                 }
@@ -243,7 +243,7 @@
             {
                 return;
             }
-            if (this._Str_16186())
+            if (this.useNotifications())
             {
                 this._notifications.singularController.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
             }
@@ -266,7 +266,7 @@
             {
                 return;
             }
-            if (this._Str_16186())
+            if (this.useNotifications())
             {
                 this._notifications.singularController.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
             }
