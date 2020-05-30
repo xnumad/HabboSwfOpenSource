@@ -65,7 +65,7 @@
     import com.sulake.habbo.session.enum.RoomControllerLevel;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.session.product.IProductDataListener;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
+    import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.chat._Str_7738;
     import flash.events.TimerEvent;
     import com.sulake.core.assets.IAsset;
@@ -950,7 +950,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5199 = _local_2.getParser();
+            var _local_3:RoomReadyMessageParser = _local_2.getParser();
             HabboWebTools.roomVisited(_local_3.roomId);
         }
 

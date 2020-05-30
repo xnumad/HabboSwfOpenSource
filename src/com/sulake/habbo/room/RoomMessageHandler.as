@@ -49,7 +49,7 @@
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionErrorEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
+    import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_6431;
@@ -250,7 +250,7 @@
             {
                 return;
             }
-            var _local_3:_Str_5199 = _local_2.getParser();
+            var _local_3:RoomReadyMessageParser = _local_2.getParser();
             if (this._currentRoomId != _local_3.roomId)
             {
                 this.setCurrentRoom(_local_3.roomId);

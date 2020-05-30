@@ -14,7 +14,7 @@
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_10646;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
+    import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_5002;
@@ -81,7 +81,7 @@
 
         private function _Str_5963(k:IMessageEvent):void
         {
-            var _local_5:_Str_5199;
+            var _local_5:RoomReadyMessageParser;
             var _local_2:int = _xxxRoomId;
             var _local_3:int = _local_2;
             var _local_4:_Str_3407 = (k as _Str_3407);
