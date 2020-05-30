@@ -51,7 +51,7 @@
             _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this._Str_22378));
             _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOk));
             _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this._Str_24534));
-            _local_2.addHabboConnectionMessageEvent(new LoadGameUrlMessageEvent(this._Str_25712));
+            _local_2.addHabboConnectionMessageEvent(new LoadGameUrlMessageEvent(this.onLoadGameUrl));
         }
 
         public function dispose():void
@@ -84,7 +84,7 @@
             this._gameManager.loadGameClient(_local_2.gameTypeId, _local_2._Str_12486, _local_2.url, _local_2.quality, _local_2.scaleMode, _local_2.frameRate, _local_2.minMajorVersion, _local_2.minMinorVersion, _local_2.params);
         }
 
-        private function _Str_25712(k:LoadGameUrlMessageEvent):void
+        private function onLoadGameUrl(k:LoadGameUrlMessageEvent):void
         {
             var _local_2:LoadGameUrlMessageParser = k.getParser();
             HabboGamesCom.log(((("[BaseJump] load game url " + _local_2.gameTypeId) + " url:") + _local_2.url));
