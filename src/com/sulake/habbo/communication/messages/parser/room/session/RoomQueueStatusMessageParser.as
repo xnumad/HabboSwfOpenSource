@@ -6,23 +6,23 @@
 
     public class RoomQueueStatusMessageParser implements IMessageParser
     {
-        private var _Str_9564:Map;
-        private var _Str_8285:int = 0;
+        private var _queueSets:Map;
+        private var _activeTarget:int = 0;
 
         public function RoomQueueStatusMessageParser()
         {
-            this._Str_9564 = new Map();
+            this._queueSets = new Map();
             super();
         }
 
         public function get _Str_22264():int
         {
-            return this._Str_8285;
+            return this._activeTarget;
         }
 
         public function flush():Boolean
         {
-            this._Str_9564.reset();
+            this._queueSets.reset();
             return true;
         }
 
@@ -33,7 +33,7 @@
             var _local_6:String;
             var _local_7:int;
             var _local_8:int;
-            this._Str_9564.reset();
+            this._queueSets.reset();
             var _local_2:int = k.readInteger();
             var _local_5:int;
             while (_local_5 < _local_2)
@@ -42,7 +42,7 @@
                 _local_7 = k.readInteger();
                 if (_local_5 == 0)
                 {
-                    this._Str_8285 = _local_7;
+                    this._activeTarget = _local_7;
                 }
                 _local_4 = new RoomQueueSet(_local_6, _local_7);
                 _local_3 = k.readInteger();
@@ -52,7 +52,7 @@
                     _local_4.addQueue(k.readString(), k.readInteger());
                     _local_8++;
                 }
-                this._Str_9564.add(_local_4.target, _local_4);
+                this._queueSets.add(_local_4.target, _local_4);
                 _local_5++;
             }
             return true;
@@ -60,12 +60,12 @@
 
         public function _Str_23931():Array
         {
-            return this._Str_9564.getKeys();
+            return this._queueSets.getKeys();
         }
 
         public function _Str_25714(k:int):RoomQueueSet
         {
-            return this._Str_9564.getValue(k) as RoomQueueSet;
+            return this._queueSets.getValue(k) as RoomQueueSet;
         }
     }
 }
