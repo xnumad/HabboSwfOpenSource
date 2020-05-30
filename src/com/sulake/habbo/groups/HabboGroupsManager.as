@@ -37,7 +37,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.RelationshipStatusInfo;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberFurniCountInHQMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationInfoMessageEvent;
@@ -172,7 +172,7 @@
             this.addMessageEvent(new RelationshipStatusInfo(this._Str_18561));
             this.addMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
             this.addMessageEvent(new _Str_3992(this._Str_7358));
-            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
+            this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new GuildCreatedMessageEvent(this._Str_24985));
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this._Str_16681));
@@ -396,7 +396,7 @@
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
-            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = RoomEntryInfoMessageEvent(k).getParser();
             this._roomId = _local_2.guestRoomId;
         }
 

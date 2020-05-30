@@ -4,7 +4,7 @@
     import com.sulake.habbo.help.guidehelp.HelpController;
     import com.sulake.habbo.help.guidehelp.GuideSessionController;
     import flash.utils.Timer;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import flash.events.TimerEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.help.data._Str_5959;
@@ -29,7 +29,7 @@
             this._guideHelpController = new HelpController(this);
             this._guideSessionController = new GuideSessionController(this);
             this._chatReviewReporterFeedbackCtrl = new ChatReviewReporterFeedbackCtrl(this._habboHelp);
-            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
+            this._habboHelp.communicationManager.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
         }
 
         public function get habboHelp():HabboHelp

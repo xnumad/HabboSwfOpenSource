@@ -428,7 +428,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_9560;
 	import com.sulake.habbo.communication.messages.incoming._Str_530._Str_9665;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.*;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
@@ -1428,7 +1428,7 @@
             INCOMING_PACKETS[725] = _Str_5946;
             INCOMING_PACKETS[735] = _Str_8747;
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;
-            INCOMING_PACKETS[749] = _Str_2752;
+            INCOMING_PACKETS[749] = RoomEntryInfoMessageEvent;
             INCOMING_PACKETS[758] = _Str_5714;
             INCOMING_PACKETS[761] = _Str_16789;
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;

@@ -20,7 +20,7 @@
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_7424;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_4038;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -307,7 +307,7 @@
             this.close();
         }
 
-        public function onRoomEnter(k:_Str_2752):void
+        public function onRoomEnter(k:RoomEntryInfoMessageEvent):void
         {
             this.close();
             var _local_2:RoomEntryInfoMessageParser = k.getParser();

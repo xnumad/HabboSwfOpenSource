@@ -29,7 +29,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelWillCloseInMinutesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.HotelClosedAndOpensEvent;
     import com.sulake.habbo.notifications.feed.data.GenericNotificationItemData;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_6680;
@@ -103,7 +103,7 @@
             this.addMessageEvent(new NotificationDialogMessageEvent(this.onNotificationDialogMessageEvent));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
-            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
+            this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new HotelClosedAndOpensEvent(this.onLoginFailedHotelClosed));
 			this.addMessageEvent(new SimpleAlertMessageEvent(this.alertMessageHandler));
             this._notifications.activate();

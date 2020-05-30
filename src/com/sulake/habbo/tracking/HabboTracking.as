@@ -42,7 +42,7 @@
     import com.sulake.habbo.advertisement.events.AdEvent;
     import com.sulake.iid.IIDHabboToolbar;
     import com.sulake.habbo.communication.messages.incoming.handshake.AuthenticationOKMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.tracking.LatencyPingResponseMessageEvent;
     import flash.events.IEventDispatcher;
@@ -292,7 +292,7 @@
             this._toolbarClickTracker = new ToolbarClickTracker(this);
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new AuthenticationOKMessageEvent(this.onAuthOK));
-            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
+            this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new _Str_3660(this._Str_25489));
             this.addMessageEvent(new LatencyPingResponseMessageEvent(this._Str_17172));
             var k:IEventDispatcher = Component(context).events;
@@ -630,7 +630,7 @@
                 this.trackLoginStep(HabboLoginTrackingStep.CLIENT_INIT_ROOM_ENTER);
                 this._anyRoomsVisited = true;
             }
-            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = RoomEntryInfoMessageEvent(k).getParser();
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.LAST_ROOM, String(_local_2.guestRoomId));
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.IN_ROOM, String(true));
             this.legacyTrackGoogle("navigator", "private", [_local_2.guestRoomId]);

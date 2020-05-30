@@ -43,7 +43,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5766;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5795;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5006;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
     import com.sulake.habbo.communication.messages.incoming.room.session._Str_8002;
@@ -157,7 +157,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5766(this._Str_15947));
             _local_2.addHabboConnectionMessageEvent(new _Str_5795(this._Str_16972));
             _local_2.addHabboConnectionMessageEvent(new _Str_5006(this._Str_18837));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
+            _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this._Str_23354));
             _local_2.addHabboConnectionMessageEvent(new _Str_8002(this._Str_22797));
@@ -271,7 +271,7 @@
 
         private function onRoomEnter(k:IMessageEvent):void
         {
-            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = RoomEntryInfoMessageEvent(k).getParser();
             Logger.log("Navigator: entering room");
             this.data.onRoomEnter(_local_2);
             this._Str_20233();

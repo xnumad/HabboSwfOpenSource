@@ -53,7 +53,7 @@
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8524;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_5345;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.avatareffect._Str_6944;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_9047;
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_8980;
@@ -164,7 +164,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_3660(this._Str_25294));
             this._com.addHabboConnectionMessageEvent(new _Str_8524(this._Str_25173));
             this._com.addHabboConnectionMessageEvent(new _Str_5345(this._Str_17996));
-            this._com.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
+            this._com.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._com.addHabboConnectionMessageEvent(new _Str_6944(this._Str_18461));
             this._com.addHabboConnectionMessageEvent(new _Str_9047(this._Str_22306));
             this._com.addHabboConnectionMessageEvent(new _Str_8980(this._Str_25648));

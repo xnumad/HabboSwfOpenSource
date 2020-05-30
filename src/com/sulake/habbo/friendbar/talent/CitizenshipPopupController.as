@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.habbo.window.utils._Str_2784;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import flash.utils.Timer;
     import flash.events.TimerEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -18,13 +18,13 @@
         private var _habboTalent:HabboTalent;
         private var _dialog:_Str_2784;
         private var _disposed:Boolean;
-        private var _messageEvent:_Str_2752;
+        private var _messageEvent:RoomEntryInfoMessageEvent;
         private var _seenPopupDuringSession:Boolean;
 
         public function CitizenshipPopupController(k:HabboTalent)
         {
             this._habboTalent = k;
-            this._messageEvent = new _Str_2752(this.onRoomEnter);
+            this._messageEvent = new RoomEntryInfoMessageEvent(this.onRoomEnter);
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(this._messageEvent);
         }
 

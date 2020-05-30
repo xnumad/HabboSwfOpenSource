@@ -42,7 +42,7 @@
     import com.sulake.iid.IIDHabboWindowManager;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
@@ -184,7 +184,7 @@
         override protected function initComponent():void
         {
             this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
-            this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
+            this._communication.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this._Str_25751));
             this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
@@ -251,7 +251,7 @@
             }
         }
 
-        private function onRoomEnter(k:_Str_2752):void
+        private function onRoomEnter(k:RoomEntryInfoMessageEvent):void
         {
             this._roomChangeRecordedInHistory = false;
             this.clear();

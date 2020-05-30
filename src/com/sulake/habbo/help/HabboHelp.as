@@ -44,7 +44,7 @@
     import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9074;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CfhTopicsInitEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.SanctionStatusEvent;
     import com.sulake.core.assets.IAsset;
@@ -436,7 +436,7 @@
             this.addMessageEvent(new _Str_11155(this._Str_24610));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
             this.addMessageEvent(new _Str_9074(this._Str_23107));
-            this.addMessageEvent(new _Str_2752(this.onRoomEnter));
+            this.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             this.addMessageEvent(new CfhTopicsInitEvent(this.onCfhTopics));
             this.addMessageEvent(new SanctionStatusEvent(this._Str_22418));
             this._chatEventHandler = new ChatEventHandler(this);
@@ -752,9 +752,9 @@
             return this._instantMessageRegistry;
         }
 
-        private function onRoomEnter(k:_Str_2752):void
+        private function onRoomEnter(k:RoomEntryInfoMessageEvent):void
         {
-            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = RoomEntryInfoMessageEvent(k).getParser();
             this._currentRoomId = _local_2.guestRoomId;
         }
 
