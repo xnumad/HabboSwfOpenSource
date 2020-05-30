@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomQueueSet;
     import com.sulake.habbo.session.events.RoomSessionQueueEvent;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_7701;
+    import com.sulake.habbo.communication.messages.parser.room.session.RoomQueueStatusMessageParser;
 
     public class RoomSessionHandler extends BaseHandler 
     {
@@ -152,7 +152,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7701 = k.getParser();
+            var _local_2:RoomQueueStatusMessageParser = k.getParser();
             if (_local_2 == null)
             {
                 return;

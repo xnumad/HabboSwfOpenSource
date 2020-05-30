@@ -4,12 +4,12 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7701 implements IMessageParser 
+    public class RoomQueueStatusMessageParser implements IMessageParser
     {
         private var _Str_9564:Map;
         private var _Str_8285:int = 0;
 
-        public function _Str_7701()
+        public function RoomQueueStatusMessageParser()
         {
             this._Str_9564 = new Map();
             super();
