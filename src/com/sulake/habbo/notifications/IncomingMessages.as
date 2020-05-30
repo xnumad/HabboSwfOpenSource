@@ -351,7 +351,7 @@
             if (_local_3)
             {
                 _local_4 = _local_2.figureData;
-                _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
+                _local_5 = this._notifications.petImageUtility.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
                 this._notifications.singularController.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
@@ -377,7 +377,7 @@
             if (_local_3)
             {
                 _local_4 = _local_2.pet;
-                _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
+                _local_5 = this._notifications.petImageUtility.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
                 this._notifications.singularController.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }

@@ -136,7 +136,7 @@
             return this._productImageUtility;
         }
 
-        public function get _Str_21924():PetImageUtility
+        public function get petImageUtility():PetImageUtility
         {
             if (this._roomEngine == null)
             {
