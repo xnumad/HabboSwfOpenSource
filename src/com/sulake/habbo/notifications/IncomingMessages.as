@@ -95,7 +95,7 @@
             this.addMessageEvent(new _Str_9312(this.onRoomMessagesNotification));
             this.addMessageEvent(new _Str_9995(this._Str_24460));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
-            this.addMessageEvent(new _Str_7309(this._Str_25384));
+            this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this._parser2));
@@ -226,7 +226,7 @@
             Logger.log("[HabboNotifications] recycle ok");
         }
 
-        private function _Str_25384(k:IMessageEvent):void
+        private function onInfoFeedEnable(k:IMessageEvent):void
         {
             var _local_2:_Str_7309 = (k as _Str_7309);
             if (_local_2 != null)
