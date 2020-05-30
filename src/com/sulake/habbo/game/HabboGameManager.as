@@ -103,7 +103,7 @@
         private var _jsMessageHandler:JsMessageHandler;
         private var _gameCenterEnabled:Boolean = false;
         private var _gameCenterEnabledForStaff:Boolean = false;
-        private var _Str_19179:Boolean = false;
+        private var _hotelClosed:Boolean = false;
         private var _Str_2368:GameCenterView;
         private var _landingView:IHabboLandingView;
         private var _loader:Loader;
@@ -191,12 +191,12 @@
 
         public function get isHotelClosed():Boolean
         {
-            return this._Str_19179;
+            return this._hotelClosed;
         }
 
         public function set hotelClosed(k:Boolean):void
         {
-            this._Str_19179 = k;
+            this._hotelClosed = k;
         }
 
         override public function dispose():void
