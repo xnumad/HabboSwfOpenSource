@@ -72,7 +72,7 @@
                 }
             }
             this._notificationViewManager = new HabboNotificationViewManager(this._notifications, this._notifications.assetLibrary, this._notifications.windowManager, this._notifications._Str_9496, this._styleConfiguration["styles"], this._styleConfiguration["view"]);
-            this._notifications.sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this._Str_23023);
+            this._notifications.sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this.onBadgeImage);
             this._notifications.registerUpdateReceiver(this, 2);
         }
 
@@ -240,7 +240,7 @@
             this._safetyLockedNotification.dispose();
         }
 
-        private function _Str_23023(k:BadgeImageReadyEvent):void
+        private function onBadgeImage(k:BadgeImageReadyEvent):void
         {
             if (((!(k == null)) && (!(this._notificationViewManager == null))))
             {
