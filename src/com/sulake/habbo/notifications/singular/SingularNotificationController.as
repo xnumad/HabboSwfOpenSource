@@ -23,7 +23,7 @@
 
     public class SingularNotificationController implements IUpdateReceiver 
     {
-        private static const _Str_19032:int = 5000;
+        private static const MODERATION_DISCLAIMER_DELAY_MS:int = 5000;
 
         private var _notifications:HabboNotifications;
         private var _notificationQueue:Array;
@@ -196,7 +196,7 @@
             {
                 if (this._moderationDelayTimer == null)
                 {
-                    this._moderationDelayTimer = new Timer((RoomEnterEffect.totalRunningTime + _Str_19032), 1);
+                    this._moderationDelayTimer = new Timer((RoomEnterEffect.totalRunningTime + MODERATION_DISCLAIMER_DELAY_MS), 1);
                     this._moderationDelayTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onShowModerationDisclaimer);
                     this._moderationDelayTimer.start();
                 }
