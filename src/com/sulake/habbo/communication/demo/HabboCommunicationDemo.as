@@ -148,7 +148,7 @@
             return (super.dependencies.concat(new <ComponentDependency>[new ComponentDependency(new IIDHabboWindowManager(), function (k:IHabboWindowManager):void
             {
                 _windowManager = k;
-            }, (!(this._Str_4954))), new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
+            }, (!(this.isRoomViewerMode))), new ComponentDependency(new IIDHabboCommunicationManager(), function (k:IHabboCommunicationManager):void
             {
                 _communication = k;
             })]));
@@ -206,7 +206,7 @@
             }
             else
             {
-                if (((!(this._windowManager == null)) && (!(this._Str_4954))))
+                if (((!(this._windowManager == null)) && (!(this.isRoomViewerMode))))
                 {
                     if (((false) || (false)))
                     {
@@ -486,7 +486,7 @@
             {
                 return;
             }
-            if (this._Str_4954)
+            if (this.isRoomViewerMode)
             {
                 _local_2 = getProperty("roomviewer.login.name");
                 _local_3 = getProperty("roomviewer.login.password");
@@ -559,7 +559,7 @@
 
         private function _Str_23126(k:DisconnectReasonEvent):void
         {
-            if (this._Str_4954)
+            if (this.isRoomViewerMode)
             {
                 return;
             }
@@ -641,7 +641,7 @@
         private function onParsedTicketSuccess(k:Event):void
         {
             var _local_2:String;
-            if (this._Str_4954)
+            if (this.isRoomViewerMode)
             {
                 return;
             }
@@ -668,7 +668,7 @@
             }
         }
 
-        private function get _Str_4954():Boolean
+        private function get isRoomViewerMode():Boolean
         {
             return HabboComponentFlags.isRoomViewerMode(flags);
         }
