@@ -187,7 +187,7 @@
             (this._views.getValue(PANE_NOTIFICATIONS) as NotificationsPane).addItem(k, _arg_2);
         }
 
-        public function _Str_25875(k:IFeedEntity):void
+        public function addStreamFeedItem(k:IFeedEntity):void
         {
             (this._views.getValue(PANE_STREAM) as StreamPane).addItem(k);
         }
