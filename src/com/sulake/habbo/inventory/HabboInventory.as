@@ -465,7 +465,7 @@
             this._isInitialized = true;
         }
 
-        public function _Str_17609(k:String):IWindowContainer
+        public function getCategoryWindowContainer(k:String):IWindowContainer
         {
             var _local_2:IInventoryModel = IInventoryModel(this._inventories.getValue(k));
             if (_local_2 == null)

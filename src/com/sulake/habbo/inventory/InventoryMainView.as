@@ -476,7 +476,7 @@
             }
             this.mainContainer.removeChild(this._lastView);
             this.mainContainer.invalidate();
-            var _local_2:IWindowContainer = this._controller._Str_17609(k);
+            var _local_2:IWindowContainer = this._controller.getCategoryWindowContainer(k);
             if (_local_2 == null)
             {
                 return;
