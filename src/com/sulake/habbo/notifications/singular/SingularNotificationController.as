@@ -213,7 +213,7 @@
             }
         }
 
-        public function _Str_25686(k:int):void
+        public function showClubGiftNotification(k:int):void
         {
             if (((this._clubGiftNotification) && (this._clubGiftNotification.visible)))
             {

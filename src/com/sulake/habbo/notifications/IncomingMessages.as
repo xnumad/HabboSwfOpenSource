@@ -445,7 +445,7 @@
             {
                 return;
             }
-            this._notifications._Str_3069._Str_25686(_local_2._Str_19193);
+            this._notifications._Str_3069.showClubGiftNotification(_local_2._Str_19193);
         }
 
         private function onUserObject(k:UserObjectEvent):void
