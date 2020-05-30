@@ -2,8 +2,8 @@
 {
     public class FeedVisibilityEnum 
     {
-        public static const _Str_7747:int = 0;
-        public static const _Str_6770:int = 1;
-        public static const _Str_11176:int = 2;
+        public static const VIEW_STATE_HIDDEN:int = 0;
+        public static const VIEW_STATE_MINIMIZED:int = 1;
+        public static const VIEW_STATE_MAXIMIZED:int = 2;
     }
 }

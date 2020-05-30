@@ -11,8 +11,8 @@
 
         public function StateController()
         {
-            this._currentState = FeedVisibilityEnum._Str_7747;
-            this._lastRequestedState = FeedVisibilityEnum._Str_6770;
+            this._currentState = FeedVisibilityEnum.VIEW_STATE_HIDDEN;
+            this._lastRequestedState = FeedVisibilityEnum.VIEW_STATE_MINIMIZED;
             super();
         }
 
@@ -26,7 +26,7 @@
             this._isEnabled = k;
             if (!this.isActive())
             {
-                return this._Str_18568(FeedVisibilityEnum._Str_7747);
+                return this._Str_18568(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
             return this._Str_15221();
         }
@@ -36,7 +36,7 @@
             this._isGameMode = k;
             if (!this.isActive())
             {
-                return this._Str_18568(FeedVisibilityEnum._Str_7747);
+                return this._Str_18568(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
             return this._Str_15221();
         }
@@ -61,9 +61,9 @@
         private function _Str_15221():int
         {
             var k:int = this._lastRequestedState;
-            if (k == FeedVisibilityEnum._Str_7747)
+            if (k == FeedVisibilityEnum.VIEW_STATE_HIDDEN)
             {
-                k = FeedVisibilityEnum._Str_6770;
+                k = FeedVisibilityEnum.VIEW_STATE_MINIMIZED;
             }
             this._currentState = k;
             this._lastRequestedState = k;

@@ -46,7 +46,7 @@
             this.setupUserInterface();
             this.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
             this.switchToPane(PANE_NOTIFICATIONS);
-            this.setVisibilityState(FeedVisibilityEnum._Str_6770);
+            this.setVisibilityState(FeedVisibilityEnum.VIEW_STATE_MINIMIZED);
         }
 
         public function dispose():void
@@ -116,11 +116,11 @@
         {
             switch (this._stateController._Str_16276())
             {
-                case FeedVisibilityEnum._Str_11176:
-                    this.setVisibilityState(FeedVisibilityEnum._Str_6770);
+                case FeedVisibilityEnum.VIEW_STATE_MAXIMIZED:
+                    this.setVisibilityState(FeedVisibilityEnum.VIEW_STATE_MINIMIZED);
                     return;
-                case FeedVisibilityEnum._Str_6770:
-                    this.setVisibilityState(FeedVisibilityEnum._Str_11176);
+                case FeedVisibilityEnum.VIEW_STATE_MINIMIZED:
+                    this.setVisibilityState(FeedVisibilityEnum.VIEW_STATE_MAXIMIZED);
                     return;
             }
         }
@@ -131,16 +131,16 @@
             var _local_2:int = this._stateController._Str_18568(k);
             switch (_local_2)
             {
-                case FeedVisibilityEnum._Str_7747:
+                case FeedVisibilityEnum.VIEW_STATE_HIDDEN:
                     this._window.x = this._window.desktop.width;
                     this._window.visible = false;
                     return;
-                case FeedVisibilityEnum._Str_6770:
+                case FeedVisibilityEnum.VIEW_STATE_MINIMIZED:
                     this._window.visible = true;
                     _local_3 = (this._window.findChildByName("main_view") as IWindowContainer);
                     this._window.x = (this._window.desktop.width - (this._window.width - _local_3.width));
                     return;
-                case FeedVisibilityEnum._Str_11176:
+                case FeedVisibilityEnum.VIEW_STATE_MAXIMIZED:
                     this._window.visible = true;
                     this._window.x = (this._window.desktop.width - this._window.width);
                     return;
