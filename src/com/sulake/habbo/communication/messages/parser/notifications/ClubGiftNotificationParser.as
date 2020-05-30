@@ -5,7 +5,7 @@
 
     public class ClubGiftNotificationParser implements IMessageParser
     {
-        private var _Str_19631:int;
+        private var _numGifts:int;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_19631 = k.readInteger();
+            this._numGifts = k.readInteger();
             return true;
         }
 
-        public function get _Str_19193():int
+        public function get numGifts():int
         {
-            return this._Str_19631;
+            return this._numGifts;
         }
     }
 }

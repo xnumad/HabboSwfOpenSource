@@ -441,11 +441,11 @@
             {
                 return;
             }
-            if (_local_2._Str_19193 < 1)
+            if (_local_2.numGifts < 1)
             {
                 return;
             }
-            this._notifications.singularController.showClubGiftNotification(_local_2._Str_19193);
+            this._notifications.singularController.showClubGiftNotification(_local_2.numGifts);
         }
 
         private function onUserObject(k:UserObjectEvent):void
