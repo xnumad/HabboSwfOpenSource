@@ -49,7 +49,7 @@
             _local_2.addHabboConnectionMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new _Str_5416(this._Str_16577));
             _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this._Str_22378));
-            _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_24100));
+            _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this.onAuthenticationOk));
             _local_2.addHabboConnectionMessageEvent(new JoinedQueueMessageEvent(this._Str_24534));
             _local_2.addHabboConnectionMessageEvent(new LoadGameUrlMessageEvent(this._Str_25712));
         }
@@ -108,7 +108,7 @@
             }
         }
 
-        private function _Str_24100(k:AuthenticationOKMessageEvent):void
+        private function onAuthenticationOk(k:AuthenticationOKMessageEvent):void
         {
             var _local_2:int = this._gameManager.promotedGameId();
             if (_local_2 != -1)
