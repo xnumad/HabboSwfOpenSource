@@ -29,7 +29,7 @@
         private var _Str_19410:String = "";
         private var _Str_2617:RoomToolsToolbarCtrl;
         private var _roomToolsInfoCtrl:RoomToolsInfoCtrl;
-        private var _Str_4242:IRoomDesktop;
+        private var _desktop:IRoomDesktop;
         private var _freeFlowChat:IHabboFreeFlowChat;
         private var _Str_6811:Timer;
 
@@ -37,7 +37,7 @@
         {
             super(k, _arg_2, _arg_3, _arg_4.localization);
             this.handler.widget = this;
-            this._Str_4242 = _arg_4.getDesktop("hard_coded_room_id");
+            this._desktop = _arg_4.getDesktop("hard_coded_room_id");
             this._freeFlowChat = _arg_4.freeFlowChat;
             this._roomToolsInfoCtrl = new RoomToolsInfoCtrl(this, _arg_2, _arg_3);
             this._Str_2617 = new RoomToolsToolbarCtrl(this, _arg_2, _arg_3);
@@ -67,7 +67,7 @@
                 this._roomToolsInfoCtrl = null;
             }
             this._freeFlowChat = null;
-            this._Str_4242 = null;
+            this._desktop = null;
             super.dispose();
         }
 
@@ -186,11 +186,11 @@
 
         public function getChatInputY():int
         {
-            if (!this._Str_4242)
+            if (!this._desktop)
             {
                 return 0;
             }
-            var k:RoomChatInputWidget = (this._Str_4242._Str_11511(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
+            var k:RoomChatInputWidget = (this._desktop._Str_11511(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
             if (!k)
             {
                 return 0;
