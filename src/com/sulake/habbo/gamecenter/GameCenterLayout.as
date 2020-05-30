@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_8191;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_5142;
     import com.sulake.habbo.communication.messages.incoming.game.score._Str_6994;
-    import com.sulake.habbo.communication.messages.incoming.game.directory._Str_5416;
+    import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.GameStatusMessageEvent;
     import com.sulake.habbo.inventory.enum.UnseenItemCategoryEnum;
     import com.sulake.core.window.components.IRegionWindow;
@@ -220,7 +220,7 @@
                 this._gamesLeftContainer = this._gameCenterView.windowManager.createUnseenItemCounter();
                 k = (this._playNowLimitedButton.findChildByName("games_left_container") as IWindowContainer);
                 k.addChild(this._gamesLeftContainer);
-                this._gameCenterView.communication.addHabboConnectionMessageEvent(new _Str_5416(this._Str_16577));
+                this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this._Str_16577));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new GameStatusMessageEvent(this._Str_25204));
                 this._Str_22075(this._gameCenterView._Str_3479.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES));
                 this._achievementsContainer = (this._gameCenterViewWindow.findChildByName("achievements_container") as IWindowContainer);
@@ -731,7 +731,7 @@
         private function _Str_16577(k:IMessageEvent):void
         {
             var _local_4:IHabboLocalizationManager;
-            var _local_2:_Str_5416 = (k as _Str_5416);
+            var _local_2:Game2AccountGameStatusMessageEvent = (k as Game2AccountGameStatusMessageEvent);
             var _local_3:_Str_6554 = _local_2.getParser();
             if (_local_3.gameTypeId == this._selectedGame)
             {

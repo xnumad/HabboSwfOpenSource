@@ -204,7 +204,7 @@
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_17782;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18475;
 	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_18557;
-	import com.sulake.habbo.communication.messages.incoming.game.directory._Str_5416;
+	import com.sulake.habbo.communication.messages.incoming.game.directory.Game2AccountGameStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.moderation.*;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7080;
 	import com.sulake.habbo.communication.messages.incoming.moderation._Str_7632;
@@ -1258,7 +1258,7 @@
             INCOMING_PACKETS[2873] = TradingNoSuchItemEvent;
             INCOMING_PACKETS[2875] = _Str_5633;
             INCOMING_PACKETS[2890] = PhoneCollectionStateMessageEvent;
-            INCOMING_PACKETS[2893] = _Str_5416;
+            INCOMING_PACKETS[2893] = Game2AccountGameStatusMessageEvent;
             INCOMING_PACKETS[2897] = _Str_5752;
             INCOMING_PACKETS[2901] = PetInfoMessageEvent;
             INCOMING_PACKETS[2913] = PetPlacingErrorEvent;
