@@ -36,13 +36,13 @@
                 window.procedure = this.windowEventProc;
             }
             updateGridView(FigureData.FACE);
-            _Str_2367 = true;
+            _isInitialized = true;
             this.updateGenderTab();
         }
 
         override public function getWindowContainer():IWindowContainer
         {
-            if (!_Str_2367)
+            if (!_isInitialized)
             {
                 this.init();
             }

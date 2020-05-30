@@ -23,7 +23,7 @@
         private var _roomObjectLogic:IRoomObjectEventHandler;
         private var _updateID:int;
         private var _instanceId:int = 0;
-        private var _Str_2367:Boolean = false;
+        private var _isInitialized:Boolean = false;
 
         public function RoomObject(k:int, _arg_2:int, _arg_3:String)
         {
@@ -63,12 +63,12 @@
 
         public function setInitialized(k:Boolean):void
         {
-            this._Str_2367 = k;
+            this._isInitialized = k;
         }
 
         public function isInitialized():Boolean
         {
-            return this._Str_2367;
+            return this._isInitialized;
         }
 
         public function getId():int

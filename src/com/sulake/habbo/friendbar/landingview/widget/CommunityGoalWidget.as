@@ -33,7 +33,7 @@
         private var _Str_17426:Boolean = false;
         private var _Str_16752:Number = 0;
         private var _Str_10390:Number = 0;
-        private var _Str_2367:Boolean = false;
+        private var _isInitialized:Boolean = false;
         private var _Str_18550:Boolean = true;
         private var _Str_11816:Boolean = false;
 
@@ -127,7 +127,7 @@
                 this._Str_7300("goal_caption", "landing.view.community.caption");
                 this._Str_7300("goal_info", "landing.view.community.info");
                 this._Str_7300("community_catalog_button", "landing.view.community_catalog_button.text");
-                this._Str_2367 = true;
+                this._isInitialized = true;
             }
         }
 
@@ -138,7 +138,7 @@
                 this._Str_3186.visible = false;
                 return;
             }
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this._Str_16817();
             }

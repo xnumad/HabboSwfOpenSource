@@ -24,7 +24,7 @@
             {
                 _Str_2307.switchCategory(EffectsModel.EFFECTS);
             }
-            _Str_2367 = true;
+            _isInitialized = true;
             this.updateGridView(_Str_2889);
         }
 
@@ -46,7 +46,7 @@
             }
             k = ((k == "") ? _Str_2889 : k);
             _Str_2889 = k;
-            if (!_Str_2367)
+            if (!_isInitialized)
             {
                 this.init();
             }

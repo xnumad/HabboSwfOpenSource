@@ -25,7 +25,7 @@
                 window.visible = false;
                 window.procedure = this._Str_3328;
             }
-            _Str_2367 = true;
+            _isInitialized = true;
             if (((_Str_2307) && (_Str_2889 == "")))
             {
                 _Str_2307.switchCategory(FigureData.LG);
@@ -60,7 +60,7 @@
             }
             _Str_2889 = k;
             _Str_3621(_Str_2851);
-            if (!_Str_2367)
+            if (!_isInitialized)
             {
                 this.init();
             }

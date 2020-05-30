@@ -9,7 +9,7 @@
         protected var _Str_2889:String = "";
         protected var _Str_2851:String = "";
         protected var _Str_2307:IAvatarEditorCategoryModel;
-        protected var _Str_2367:Boolean;
+        protected var _isInitialized:Boolean;
 
         public function CategoryBaseView(k:IAvatarEditorCategoryModel)
         {
@@ -24,7 +24,7 @@
                 this.window = null;
             }
             this._Str_2307 = null;
-            this._Str_2367 = false;
+            this._isInitialized = false;
         }
 
         public function init():void
@@ -35,12 +35,12 @@
         {
             this._Str_2889 = "";
             this._Str_2851 = "";
-            this._Str_2367 = false;
+            this._isInitialized = false;
         }
 
         public function getWindowContainer():IWindowContainer
         {
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this.init();
             }

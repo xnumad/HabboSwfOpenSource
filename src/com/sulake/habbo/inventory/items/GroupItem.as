@@ -53,7 +53,7 @@
         private var _Str_8275:Boolean;
         private var _Str_8894:Boolean;
         private var _alignment:String = "center";
-        private var _Str_2367:Boolean = false;
+        private var _isInitialized:Boolean = false;
         private var _name:String = "";
         private var _description:String = "";
         private var _Str_14420:int = -1;
@@ -92,7 +92,7 @@
 
         public function get _Str_23694():Boolean
         {
-            return (this._Str_2367) && (this._Str_10374);
+            return (this._isInitialized) && (this._Str_10374);
         }
 
         public function get _Str_26366():Boolean
@@ -102,7 +102,7 @@
 
         public function get window():IWindowContainer
         {
-            if (!this._Str_2367)
+            if (!this._isInitialized)
             {
                 this._Str_22349();
             }
@@ -923,7 +923,7 @@
             this._Str_11831();
             this._Str_12824();
             this._Str_8706();
-            this._Str_2367 = true;
+            this._isInitialized = true;
         }
 
         protected function createWindow():void
