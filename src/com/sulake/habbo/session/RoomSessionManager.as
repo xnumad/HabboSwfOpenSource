@@ -65,7 +65,7 @@
         public function RoomSessionManager(k:IContext, _arg_2:uint=0)
         {
             super(k, _arg_2);
-            this._roomViewerMode = (!((_arg_2 & HabboComponentFlags._Str_14905) == 0));
+            this._roomViewerMode = (!((_arg_2 & HabboComponentFlags.ROOM_VIEWER_MODE) == 0));
             this._handlers = [];
             this._sessions = new Map();
         }

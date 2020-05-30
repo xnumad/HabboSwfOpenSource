@@ -2,12 +2,12 @@
 {
     public class HabboComponentFlags 
     {
-        public static const _Str_14905:int = 1;
+        public static const ROOM_VIEWER_MODE:int = 1;
 
 
-        public static function _Str_4954(k:int):Boolean
+        public static function isRoomViewerMode(k:int):Boolean
         {
-            return !((k & _Str_14905) == 0);
+            return !((k & ROOM_VIEWER_MODE) == 0);
         }
     }
 }

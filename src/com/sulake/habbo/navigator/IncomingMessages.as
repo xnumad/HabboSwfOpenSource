@@ -411,7 +411,7 @@
             this._navigator._Str_2813.refresh();
             var _local_4:int = -1;
             var _local_5:int = -1;
-            if (((_local_3) && (!(HabboComponentFlags._Str_4954(this._navigator.flags)))))
+            if (((_local_3) && (!(HabboComponentFlags.isRoomViewerMode(this._navigator.flags)))))
             {
                 _local_6 = false;
                 _local_7 = false;

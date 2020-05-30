@@ -110,7 +110,7 @@
 		
         override protected function initComponent():void
         {
-            if (HabboComponentFlags._Str_4954(flags))
+            if (HabboComponentFlags.isRoomViewerMode(flags))
             {
                 return;
             }

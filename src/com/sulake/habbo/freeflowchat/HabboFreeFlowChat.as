@@ -388,7 +388,7 @@
             {
                 return new Point(0, 0);
             }
-            var _local_3:int = ((HabboComponentFlags._Str_4954(flags)) ? 1 : -1);
+            var _local_3:int = ((HabboComponentFlags.isRoomViewerMode(flags)) ? 1 : -1);
             var _local_4:IRoomGeometry = this.roomEngine.getRoomCanvasGeometry(k, _local_3);
             var _local_5:Number = this.roomEngine._Str_5151(k);
             var _local_6:Number = ((this._chatFlowViewer._Str_5128.stage.stageWidth * _local_5) / 2);

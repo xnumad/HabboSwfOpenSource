@@ -670,7 +670,7 @@
 
         private function get _Str_4954():Boolean
         {
-            return HabboComponentFlags._Str_4954(flags);
+            return HabboComponentFlags.isRoomViewerMode(flags);
         }
 
         public function _Str_25592(k:Event=null):void
