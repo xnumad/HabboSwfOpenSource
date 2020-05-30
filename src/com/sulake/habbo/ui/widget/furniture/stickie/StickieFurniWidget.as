@@ -35,7 +35,7 @@
         protected var _Str_3796:String;
         protected var _text:String;
         protected var _Str_3062:String;
-        protected var _Str_2278:Boolean;
+        protected var _controller:Boolean;
         private var _Str_14561:BitmapData;
         protected var _Str_18958:String = "stickieui_container";
 
@@ -89,7 +89,7 @@
             this._Str_3796 = k.objectType;
             this._text = k.text;
             this._Str_3062 = k._Str_10471;
-            this._Str_2278 = k.controller;
+            this._controller = k.controller;
             this._Str_3030();
         }
 
@@ -156,7 +156,7 @@
                 _local_6.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
             _local_6 = (this._window.findChildByTag("delete_button") as IBitmapWrapperWindow);
-            if (((!(_local_6 == null)) && (this._Str_2278)))
+            if (((!(_local_6 == null)) && (this._controller)))
             {
                 _local_4 = (assets.getAssetByName("stickie_remove") as BitmapDataAsset);
                 _local_5 = (_local_4.content as BitmapData);
@@ -164,7 +164,7 @@
                 _local_6.bitmap.copyPixels(_local_5, _local_5.rect, new Point(0, 0));
                 _local_6.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
             }
-            this._Str_22258(((this._Str_2278) && (this._Str_3796 == "post_it")));
+            this._Str_22258(((this._controller) && (this._Str_3796 == "post_it")));
         }
 
         protected function _Str_2718(k:Boolean=true):void
@@ -180,7 +180,7 @@
             }
             this._objectId = -1;
             this._text = null;
-            this._Str_2278 = false;
+            this._controller = false;
         }
 
         private function _Str_22258(k:Boolean):void
@@ -273,7 +273,7 @@
             {
                 return;
             }
-            if (((!(messageListener == null)) && (this._Str_2278)))
+            if (((!(messageListener == null)) && (this._controller)))
             {
                 k = new RoomWidgetStickieSendUpdateMessage(RoomWidgetStickieSendUpdateMessage.RWSUM_STICKIE_SEND_DELETE, this._objectId);
                 messageListener.processWidgetMessage(k);

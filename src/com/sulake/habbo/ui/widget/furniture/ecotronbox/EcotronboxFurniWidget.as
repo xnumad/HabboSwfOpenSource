@@ -32,7 +32,7 @@
         private var _window:IWindowContainer;
         private var _objectId:int = -1;
         private var _text:String;
-        private var _Str_2278:Boolean;
+        private var _controller:Boolean;
         private var _Str_3608:Boolean = false;
         private var _Str_6880:String = "ecotron_box";
         private var _Str_10029:Map;
@@ -86,7 +86,7 @@
                     this._Str_3608 = false;
                     this._objectId = k.objectId;
                     this._text = k.text;
-                    this._Str_2278 = k.controller;
+                    this._controller = k.controller;
                     this._Str_6880 = k._Str_17878;
                     this._Str_3030();
                     return;
@@ -201,7 +201,7 @@
             _local_2 = this._window.findChildByName("ecotronbox_card_btn_open");
             if (_local_2 != null)
             {
-                if (((this._Str_2278) && (k)))
+                if (((this._controller) && (k)))
                 {
                     _local_2.visible = true;
                     _local_2.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
@@ -225,13 +225,13 @@
                 this._objectId = -1;
             }
             this._text = "";
-            this._Str_2278 = false;
+            this._controller = false;
         }
 
         private function _Str_16426():void
         {
             var k:RoomWidgetEcotronBoxOpenMessage;
-            if ((((this._Str_3608) || (this._objectId == -1)) || (!(this._Str_2278))))
+            if ((((this._Str_3608) || (this._objectId == -1)) || (!(this._controller))))
             {
                 return;
             }

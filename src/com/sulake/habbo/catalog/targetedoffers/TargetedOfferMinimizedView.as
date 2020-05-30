@@ -18,13 +18,13 @@
         {
             var _local_6:IItemListWindow;
             super(k, _arg_2);
-            _window = IWindowContainer(_Str_2278.catalog.windowManager.buildFromXML(XML(_Str_2278.catalog.assets.getAssetByName("targeted_offer_minimized_xml").content)));
+            _window = IWindowContainer(_controller.catalog.windowManager.buildFromXML(XML(_controller.catalog.assets.getAssetByName("targeted_offer_minimized_xml").content)));
             var _local_3:ITextWindow = ITextWindow(_window.findChildByName("txt_title"));
             if (_local_3)
             {
                 _local_3.text = getLocalization(_arg_2.title);
             }
-            var _local_4:String = (_Str_2278.catalog as IHabboConfigurationManager).getProperty("image.library.url");
+            var _local_4:String = (_controller.catalog as IHabboConfigurationManager).getProperty("image.library.url");
             var _local_5:String = (((_arg_2._Str_13452) && (_arg_2._Str_13452.length > 0)) ? _arg_2._Str_13452 : _Str_5155);
             IStaticBitmapWrapperWindow(_window.findChildByName("bmp_icon")).assetUri = (_local_4 + _local_5);
             _Str_5181 = getLocalization("targeted.offer.minimized.timeleft", "");
@@ -41,18 +41,18 @@
                 _Str_13550();
             }
             _window.procedure = this._Str_3055;
-            _Str_2278.attachExtension(_window);
+            _controller.attachExtension(_window);
         }
 
         private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
         {
-            if (!_Str_2278)
+            if (!_controller)
             {
                 return;
             }
             if (k.type == WindowMouseEvent.DOWN)
             {
-                _Str_2278.maximizeOffer(_Str_2324);
+                _controller.maximizeOffer(_Str_2324);
                 switch (_arg_2.name)
                 {
                 }

@@ -11,7 +11,7 @@
     public class OfferView implements IDisposable 
     {
         protected var _window:IWindowContainer;
-        protected var _Str_2278:OfferController;
+        protected var _controller:OfferController;
         protected var _Str_2324:TargetedOffer;
         protected var _Str_2788:Timer;
         protected var _disposed:Boolean;
@@ -19,7 +19,7 @@
 
         public function OfferView(k:OfferController, _arg_2:TargetedOffer)
         {
-            this._Str_2278 = k;
+            this._controller = k;
             this._Str_2324 = _arg_2;
         }
 
@@ -62,10 +62,10 @@
 
         protected function _Str_20163():void
         {
-            this.setTimeLeft(RemainingTimeFormatter._Str_25649(this._Str_2278.catalog.localization, this._Str_2324._Str_18165()));
+            this.setTimeLeft(RemainingTimeFormatter._Str_25649(this._controller.catalog.localization, this._Str_2324._Str_18165()));
             if (this._Str_2324._Str_18165() == 0)
             {
-                this._Str_2278._Str_6602();
+                this._controller._Str_6602();
             }
         }
 
@@ -81,7 +81,7 @@
 
         protected function getLocalization(k:String, _arg_2:String=null):String
         {
-            var _local_3:String = this._Str_2278.catalog.localization.getLocalization(k, ((_arg_2) || (k)));
+            var _local_3:String = this._controller.catalog.localization.getLocalization(k, ((_arg_2) || (k)));
             if (!_local_3)
             {
                 return null;

@@ -31,11 +31,11 @@
         {
             var _local_6:String;
             var _local_7:String;
-            if (((!(_Str_2278.catalog)) || (!(_Str_2278.catalog.windowManager))))
+            if (((!(_controller.catalog)) || (!(_controller.catalog.windowManager))))
             {
                 return;
             }
-            _window = IWindowContainer(_Str_2278.catalog.windowManager.buildFromXML(XML(_Str_2278.catalog.assets.getAssetByName(k).content)));
+            _window = IWindowContainer(_controller.catalog.windowManager.buildFromXML(XML(_controller.catalog.assets.getAssetByName(k).content)));
             if (IFrameWindow(_window))
             {
                 IFrameWindow(_window).title.text = getLocalization(_Str_2324.title);
@@ -56,12 +56,12 @@
             {
                 _local_2.text = getLocalization("targeted.offer.price.label");
             }
-            var _local_3:Map = _Str_2278.catalog.utils.getPriceMap(_Str_2324, this._quantity);
+            var _local_3:Map = _controller.catalog.utils.getPriceMap(_Str_2324, this._quantity);
             this._Str_23782(_window, _local_3);
             var _local_4:IStaticBitmapWrapperWindow = IStaticBitmapWrapperWindow(_window.findChildByName("bmp_illustration"));
             if (_local_4)
             {
-                _local_6 = (_Str_2278.catalog as IHabboConfigurationManager).getProperty("image.library.url");
+                _local_6 = (_controller.catalog as IHabboConfigurationManager).getProperty("image.library.url");
                 _local_7 = this._Str_23626(_Str_2324);
                 if (((_local_7 == null) || (_local_7.length == 0)))
                 {
@@ -116,7 +116,7 @@
         private function _Str_9646(k:String, _arg_2:IWindowContainer, _arg_3:int):void
         {
             var _local_4:IWindow = _arg_2.findChildByName(k);
-            _local_4.style = ActivityPointTypeEnum.getIconStyleFor(_arg_3, _Str_2278.catalog, true);
+            _local_4.style = ActivityPointTypeEnum.getIconStyleFor(_arg_3, _controller.catalog, true);
         }
 
         override protected function setTimeLeft(k:String):void
@@ -151,7 +151,7 @@
             {
                 return;
             }
-            var _local_2:Boolean = _Str_2324.checkPurseBalance(_Str_2278.catalog.getPurse(), this._quantity);
+            var _local_2:Boolean = _Str_2324.checkPurseBalance(_controller.catalog.getPurse(), this._quantity);
             if (_local_2)
             {
                 k.text = "";
@@ -207,7 +207,7 @@
 
         private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
         {
-            if (!_Str_2278)
+            if (!_controller)
             {
                 return;
             }
@@ -216,17 +216,17 @@
                 switch (_arg_2.name)
                 {
                     case "header_button_close":
-                        _Str_2278.minimizeOffer(_Str_2324);
+                        _controller.minimizeOffer(_Str_2324);
                         return;
                     case "btn_get_credits":
-                        _Str_2278.purchaseCredits(_Str_2324);
+                        _controller.purchaseCredits(_Str_2324);
                         return;
                     case "btn_buy":
                         if (!this._Str_19566())
                         {
                             return;
                         }
-                        _Str_2278.showConfirmation(_Str_2324, this._quantity);
+                        _controller.showConfirmation(_Str_2324, this._quantity);
                         return;
                 }
             }
@@ -265,7 +265,7 @@
 
         private function _Str_23626(k:TargetedOffer):String
         {
-            return _Str_2278.catalog.getProperty(("targeted.offer.override.preview_image." + k.id));
+            return _controller.catalog.getProperty(("targeted.offer.override.preview_image." + k.id));
         }
     }
 }

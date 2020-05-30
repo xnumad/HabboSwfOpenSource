@@ -14,7 +14,7 @@
     {
         private static const _Str_13986:Number = 0.5;
 
-        private var _Str_2278:GroupForumController;
+        private var _controller:GroupForumController;
         private var _Str_2439:GroupForumView;
         private var _window:IFrameWindow;
         private var _Str_9870:ISelectorWindow;
@@ -30,11 +30,11 @@
         public function GroupForumViewController(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_3372)
         {
             this._Str_2439 = k;
-            this._Str_2278 = this._Str_2439.controller;
+            this._controller = this._Str_2439.controller;
             this._Str_2381 = _arg_4;
-            this._window = IFrameWindow(this._Str_2278.windowManager.buildFromXML(XML(new HabboFriendBarCom.groupforum_forum_settings_xml())));
+            this._window = IFrameWindow(this._controller.windowManager.buildFromXML(XML(new HabboFriendBarCom.groupforum_forum_settings_xml())));
             this._window.x = _arg_2;
-            var _local_5:int = this._Str_2278.windowManager.getDesktop(1).width;
+            var _local_5:int = this._controller.windowManager.getDesktop(1).width;
             if ((this._window.x + this._window.width) > _local_5)
             {
                 this._window.x = (_local_5 - this._window.width);
@@ -145,19 +145,19 @@
 
         public function dispose():void
         {
-            this._Str_2278._Str_11338 = null;
+            this._controller._Str_11338 = null;
             this._window.dispose();
             this._window = null;
         }
 
         private function _Str_4912(k:WindowMouseEvent):void
         {
-            this._Str_2278.context.createLinkEvent(("group/" + this._Str_2381.groupId));
+            this._controller.context.createLinkEvent(("group/" + this._Str_2381.groupId));
         }
 
         private function _Str_10704(k:WindowMouseEvent):void
         {
-            this._Str_2278._Str_25084(this._Str_2381.groupId, this._Str_6730, this._Str_6541, this._Str_9497, this._Str_9468);
+            this._controller._Str_25084(this._Str_2381.groupId, this._Str_6730, this._Str_6541, this._Str_9497, this._Str_9468);
             this.dispose();
         }
 
@@ -189,22 +189,22 @@
 
         private function _Str_22768(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.read.seen");
+            this._controller.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.read.seen");
         }
 
         private function _Str_22910(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.post.seen");
+            this._controller.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.post.seen");
         }
 
         private function _Str_23060(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.start.thread.seen");
+            this._controller.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.start.thread.seen");
         }
 
         private function _Str_24316(k:WindowMouseEvent):void
         {
-            this._Str_2278.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.moderate.seen");
+            this._controller.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "forum.can.moderate.seen");
         }
     }
 }

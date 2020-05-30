@@ -17,8 +17,8 @@
         {
             super(k, _arg_2);
             this._quantity = _arg_3;
-            _window = IWindowContainer(_Str_2278.catalog.windowManager.buildFromXML(XML(_Str_2278.catalog.assets.getAssetByName("targeted_offer_purchase_confirmation_xml").content)));
-            var _local_4:HabboCatalog = (_Str_2278.catalog as HabboCatalog);
+            _window = IWindowContainer(_controller.catalog.windowManager.buildFromXML(XML(_controller.catalog.assets.getAssetByName("targeted_offer_purchase_confirmation_xml").content)));
+            var _local_4:HabboCatalog = (_controller.catalog as HabboCatalog);
             if (_local_4.getBoolean("disclaimer.credit_spending.enabled"))
             {
                 this._Str_3515(false);
@@ -66,7 +66,7 @@
 
         private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
         {
-            if (!_Str_2278)
+            if (!_controller)
             {
                 return;
             }
@@ -79,10 +79,10 @@
                         return;
                     case "header_button_close":
                     case "cancel_button":
-                        _Str_2278.maximizeOffer(_Str_2324);
+                        _controller.maximizeOffer(_Str_2324);
                         return;
                     case "buy_button":
-                        _Str_2278.purchaseTargetedOffer(_Str_2324, this._quantity);
+                        _controller.purchaseTargetedOffer(_Str_2324, this._quantity);
                         return;
                 }
             }

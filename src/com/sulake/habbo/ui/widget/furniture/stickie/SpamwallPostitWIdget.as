@@ -52,7 +52,7 @@
             _Str_3796 = k.objectType;
             _text = "";
             _Str_3062 = "FFFF33";
-            _Str_2278 = true;
+            _controller = true;
             _Str_3030();
         }
 

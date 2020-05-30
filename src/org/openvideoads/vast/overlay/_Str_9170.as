@@ -96,7 +96,7 @@
         {
             this._Str_10361.stop();
             this._Str_7465();
-            (_Str_2278 as OverlayController)._Str_17469(_Str_5530);
+            (_controller as OverlayController)._Str_17469(_Str_5530);
         }
     }
 }

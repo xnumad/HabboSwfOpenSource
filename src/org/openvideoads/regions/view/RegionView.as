@@ -32,7 +32,7 @@
 
     public class RegionView extends Sprite 
     {
-        protected var _Str_2278:RegionController;
+        protected var _controller:RegionController;
         protected var _Str_2297:RegionViewConfig;
         protected var _Str_2758:Display;
         protected var _Str_5857:_Str_5987 = null;
@@ -57,7 +57,7 @@
             visible = false;
             buttonMode = true;
             mouseChildren = true;
-            this._Str_2278 = k;
+            this._controller = k;
             this._Str_2297 = _arg_2;
             this._Str_2758 = _arg_3;
             this._Str_7726 = _arg_2.autoHide;
@@ -1137,7 +1137,7 @@
         public function _Str_14359():void
         {
             this.hide();
-            this._Str_2278.onRegionCloseClicked(this);
+            this._controller.onRegionCloseClicked(this);
         }
 
         public function show():void
@@ -1166,7 +1166,7 @@
             {
                 this.hide();
             }
-            this._Str_2278.onRegionClicked(this, k);
+            this._controller.onRegionClicked(this, k);
         }
 
         private function _Str_6950():void
