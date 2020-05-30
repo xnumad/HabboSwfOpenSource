@@ -108,7 +108,7 @@
             return this._singularController;
         }
 
-        public function get _Str_16215():NotificationController
+        public function get feedController():NotificationController
         {
             return this._feedController;
         }

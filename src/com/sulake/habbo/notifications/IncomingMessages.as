@@ -158,7 +158,7 @@
                         _local_5 = new GenericNotificationItemData();
                         _local_5.title = _local_4;
                         _local_5.timeStamp = getTimer();
-                        this._notifications._Str_16215._Str_18026(FeedSettings._Str_9534, _local_5);
+                        this._notifications.feedController._Str_18026(FeedSettings._Str_9534, _local_5);
                     }
                 }
             }
@@ -254,7 +254,7 @@
                 _local_3._Str_15192 = _local_2.url;
                 _local_3._Str_5167 = _local_2.url;
                 _local_3.timeStamp = getTimer();
-                this._notifications._Str_16215._Str_18026(FeedSettings._Str_9534, _local_3);
+                this._notifications.feedController._Str_18026(FeedSettings._Str_9534, _local_3);
             }
         }
 
@@ -277,7 +277,7 @@
                 _local_3._Str_15192 = _local_2.url;
                 _local_3._Str_5167 = _local_2.url;
                 _local_3.timeStamp = getTimer();
-                this._notifications._Str_16215._Str_18026(FeedSettings._Str_9534, _local_3);
+                this._notifications.feedController._Str_18026(FeedSettings._Str_9534, _local_3);
             }
         }
 
