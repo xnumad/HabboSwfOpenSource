@@ -33,7 +33,7 @@
             this._list = (window.findChildByName(LIST) as IItemListWindow);
         }
 
-        public function _Str_2822(k:int, _arg_2:IFeedEntity):void
+        public function addItem(k:int, _arg_2:IFeedEntity):void
         {
             var _local_3:IItemListWindow = this._Str_23056(k);
             _local_3.addListItemAt(_arg_2.window, 0);

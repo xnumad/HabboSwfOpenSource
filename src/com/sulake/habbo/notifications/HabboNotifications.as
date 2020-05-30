@@ -269,7 +269,7 @@
                 _local_7 = this._Str_5512(_arg_2, k, "linkUrl", false);
                 _local_8 = ((!(_local_7 == null)) && (_local_7.substr(0, 6) == "event:"));
                 _local_9 = this._Str_20214(_arg_2, k);
-                this._singularController._Str_2822(_local_6, NotificationType.INFO, null, _local_9, null, ((_local_8) ? _local_7.substr(6) : _local_7));
+                this._singularController.addItem(_local_6, NotificationType.INFO, null, _local_9, null, ((_local_8) ? _local_7.substr(6) : _local_7));
             }
             else
             {

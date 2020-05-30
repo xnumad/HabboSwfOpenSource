@@ -21,7 +21,7 @@
             super.dispose();
         }
 
-        public function _Str_2822(k:IFeedEntity):void
+        public function addItem(k:IFeedEntity):void
         {
             this._list.addListItem(k.window);
         }

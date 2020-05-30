@@ -764,7 +764,7 @@
             while (_local_2 >= 0)
             {
                 _local_3 = k[_local_2];
-                this._chatStyleSelector._Str_2822(_local_3, this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_3).selectorPreview);
+                this._chatStyleSelector.addItem(_local_3, this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_3).selectorPreview);
                 _local_2--;
             }
             this._chatStyleSelector._Str_24820();

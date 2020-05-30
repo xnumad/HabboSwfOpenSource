@@ -71,7 +71,7 @@
         {
             var k:ExtraInfoItemData = new ExtraInfoItemData(ExtraInfoItemData._Str_13400);
             k.quantity = this._Str_11260;
-            this._Str_6878 = this._Str_4613._Str_2822(k);
+            this._Str_6878 = this._Str_4613.addItem(k);
         }
 
         private function _Str_23161(k:int):void
@@ -103,7 +103,7 @@
             k.priceActivityPoints = this._Str_5642;
             k.activityPointType = this._Str_10800;
             k.priceCredits = this._Str_6654;
-            this._Str_6832 = this._Str_4613._Str_2822(k);
+            this._Str_6832 = this._Str_4613.addItem(k);
             this._habboCatalog.utils._Str_25517();
         }
 
@@ -134,7 +134,7 @@
         private function _Str_22330():void
         {
             var k:ExtraInfoItemData = new ExtraInfoItemData(ExtraInfoItemData._Str_14719);
-            this._Str_9708 = this._Str_4613._Str_2822(k);
+            this._Str_9708 = this._Str_4613.addItem(k);
             this._habboCatalog.utils._Str_22409();
         }
 

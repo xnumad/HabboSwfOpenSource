@@ -34,7 +34,7 @@
             return this._registry;
         }
 
-        public function _Str_2822(k:int, _arg_2:String, _arg_3:int, _arg_4:String, _arg_5:String):void
+        public function addItem(k:int, _arg_2:String, _arg_3:int, _arg_4:String, _arg_5:String):void
         {
             this._registry.push(new ChatRegistryItem(this._nextIndex++, k, _arg_2, _arg_3, _arg_4, _arg_5));
             this._Str_18273();

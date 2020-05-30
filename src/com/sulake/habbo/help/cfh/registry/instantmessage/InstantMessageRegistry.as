@@ -19,7 +19,7 @@
             this._registry = new Map();
         }
 
-        public function _Str_2822(k:int, _arg_2:String, _arg_3:String):void
+        public function addItem(k:int, _arg_2:String, _arg_3:String):void
         {
             var _local_4:Vector.<InstantMessageRegistryItem>;
             var _local_5:Vector.<InstantMessageRegistryItem>;

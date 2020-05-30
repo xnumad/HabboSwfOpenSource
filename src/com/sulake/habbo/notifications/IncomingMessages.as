@@ -171,7 +171,7 @@
             var _local_4:String = this._notifications.localization.getLocalization("achievements.levelup.desc", "");
             var _local_5:String = this._notifications.localization.getBadgeName(_local_3.data.badgeCode);
             var _local_6:BitmapData = this._notifications.sessionDataManager.requestBadgeImage(_local_3.data.badgeCode);
-            this._notifications._Str_3069._Str_2822(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
+            this._notifications._Str_3069.addItem(((_local_4 + " ") + _local_5), NotificationType.ACHIEVEMENT, _local_6, null, _local_3.data.badgeCode, ("questengine/achievements/" + _local_3.data.category));
         }
 
         internal function onRespectNotification(k:IMessageEvent):void
@@ -186,11 +186,11 @@
                 _local_4 = this._notifications.localization.getLocalizationRaw("notifications.text.respect.2");
                 if (_local_3)
                 {
-                    this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.RESPECT, null);
+                    this._notifications._Str_3069.addItem(_local_3.value, NotificationType.RESPECT, null);
                 }
                 if (_local_4)
                 {
-                    this._notifications._Str_3069._Str_2822(_local_4.value, NotificationType.RESPECT, null);
+                    this._notifications._Str_3069.addItem(_local_4.value, NotificationType.RESPECT, null);
                 }
             }
         }
@@ -207,7 +207,7 @@
             var _local_6:BitmapData = (_local_5.content as BitmapData);
             if (_local_3)
             {
-                this._notifications._Str_3069._Str_2822(_local_3.value, _local_4, _local_6.clone());
+                this._notifications._Str_3069.addItem(_local_3.value, _local_4, _local_6.clone());
             }
         }
 
@@ -221,7 +221,7 @@
             var _local_3:ILocalization = this._notifications.localization.getLocalizationRaw("notifications.text.recycle.ok");
             if (_local_3)
             {
-                this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.RECYCLEROK, null);
+                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.RECYCLEROK, null);
             }
             Logger.log("[HabboNotifications] recycle ok");
         }
@@ -352,7 +352,7 @@
             {
                 _local_4 = _local_2.figureData;
                 _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
-                this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.PETLEVEL, _local_5);
+                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
 
@@ -378,7 +378,7 @@
             {
                 _local_4 = _local_2.pet;
                 _local_5 = this._notifications._Str_21924.getPetImage(_local_4.typeId, _local_4.paletteId, _local_4.color);
-                this._notifications._Str_3069._Str_2822(_local_3.value, NotificationType.PETLEVEL, _local_5);
+                this._notifications._Str_3069.addItem(_local_3.value, NotificationType.PETLEVEL, _local_5);
             }
         }
 
@@ -489,7 +489,7 @@
             }
             var _local_5:String = this._notifications.localization.getLocalization("notifications.text.club_gift.received");
             var _local_6:BitmapData = this._notifications._Str_24642._Str_23662(_local_4.productType, _local_4._Str_6164, _local_4.extraParam);
-            this._notifications._Str_3069._Str_2822(_local_5, NotificationType.INFO, _local_6);
+            this._notifications._Str_3069.addItem(_local_5, NotificationType.INFO, _local_6);
         }
 
         private function _Str_17254(k:_Str_4508):void
@@ -509,7 +509,7 @@
                 default:
                     return;
             }
-            this._notifications._Str_3069._Str_2822(_local_2, NotificationType.INFO, _local_3.clone());
+            this._notifications._Str_3069.addItem(_local_2, NotificationType.INFO, _local_3.clone());
         }
     }
 }

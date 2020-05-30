@@ -69,7 +69,7 @@
             return this._roomChatInputView;
         }
 
-        public function _Str_2822(k:int, _arg_2:BitmapData):void
+        public function addItem(k:int, _arg_2:BitmapData):void
         {
             this._Str_2514.push(new ChatStyleGridEntry(k, _arg_2));
             var _local_3:IWindowContainer = this._Str_22807(_arg_2);

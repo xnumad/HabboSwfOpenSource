@@ -134,7 +134,7 @@
             }
         }
 
-        public function _Str_2822(k:String, _arg_2:String, _arg_3:BitmapData, _arg_4:String=null, _arg_5:String=null, _arg_6:String=null):int
+        public function addItem(k:String, _arg_2:String, _arg_3:BitmapData, _arg_4:String=null, _arg_5:String=null, _arg_6:String=null):int
         {
             if (this._notifications.disabled)
             {
@@ -173,7 +173,7 @@
             var _local_3:ILocalization = this._notifications.localization.getLocalizationRaw("soundmachine.notification.playing");
             if (_local_3)
             {
-                this._Str_2822(_local_3.value, NotificationType.SOUNDMACHINE, null);
+                this.addItem(_local_3.value, NotificationType.SOUNDMACHINE, null);
             }
         }
 
@@ -206,7 +206,7 @@
                 if (!this._moderationDisclaimerShown)
                 {
                     k = this._notifications.localization.getLocalization("mod.chatdisclaimer", "NA");
-                    this._Str_2822(k, NotificationType.INFO, null);
+                    this.addItem(k, NotificationType.INFO, null);
                     this._moderationDisclaimerShown = true;
                     Logger.log(("DISPLAYED MOD INFO: " + k));
                 }

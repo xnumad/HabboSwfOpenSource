@@ -184,12 +184,12 @@
 
         public function _Str_23809(k:int, _arg_2:IFeedEntity):void
         {
-            (this._views.getValue(PANE_NOTIFICATIONS) as NotificationsPane)._Str_2822(k, _arg_2);
+            (this._views.getValue(PANE_NOTIFICATIONS) as NotificationsPane).addItem(k, _arg_2);
         }
 
         public function _Str_25875(k:IFeedEntity):void
         {
-            (this._views.getValue(PANE_STREAM) as StreamPane)._Str_2822(k);
+            (this._views.getValue(PANE_STREAM) as StreamPane).addItem(k);
         }
 
         public function _Str_26377():void

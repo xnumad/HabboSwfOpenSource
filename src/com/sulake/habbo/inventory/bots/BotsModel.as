@@ -119,11 +119,11 @@
             return this._items;
         }
 
-        public function _Str_2822(k:_Str_3013):void
+        public function addItem(k:_Str_3013):void
         {
             if (this._items.add(k.id, k))
             {
-                this._view._Str_2822(k);
+                this._view.addItem(k);
             }
             this._view._Str_3820();
         }
@@ -146,7 +146,7 @@
                 if (_local_4.indexOf(_local_2) == -1)
                 {
                     this._items.add(_local_2, k.getValue(_local_2));
-                    this._view._Str_2822(k.getValue(_local_2));
+                    this._view.addItem(k.getValue(_local_2));
                 }
             }
         }

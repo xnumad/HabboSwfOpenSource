@@ -184,7 +184,7 @@
         {
         }
 
-        public function _Str_2822(k:ISongInfo, _arg_2:int=0):int
+        public function addItem(k:ISongInfo, _arg_2:int=0):int
         {
             return -1;
         }

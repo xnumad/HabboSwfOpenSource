@@ -76,7 +76,7 @@
             this.render();
         }
 
-        public function _Str_2822(k:ExtraInfoItemData):int
+        public function addItem(k:ExtraInfoItemData):int
         {
             var _local_2:ExtraInfoListItem;
             var _local_3:int = this._idGenerator++;

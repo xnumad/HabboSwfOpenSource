@@ -105,7 +105,7 @@
             }
         }
 
-        public function _Str_2822(k:_Str_3013):void
+        public function addItem(k:_Str_3013):void
         {
             if (!this._isInitialized)
             {
@@ -283,7 +283,7 @@
             {
                 if (k.indexOf(_local_3) == -1)
                 {
-                    this._Str_2822(this._model.items.getValue(_local_3));
+                    this.addItem(this._model.items.getValue(_local_3));
                 }
                 _local_4 = this._gridItems.getValue(_local_3);
                 _local_4._Str_17526(this._model._Str_3613(_local_3));

@@ -858,7 +858,7 @@
                 return;
             }
             var _local_3:_Str_6995 = k.getParser();
-            _local_2._Str_2822(_local_3.item);
+            _local_2.addItem(_local_3.item);
         }
 
         private function _Str_16010(k:MarketplaceConfigurationEvent):void

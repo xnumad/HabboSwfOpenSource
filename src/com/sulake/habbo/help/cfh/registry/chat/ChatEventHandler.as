@@ -43,7 +43,7 @@
                 return;
             }
             var _local_4:String = ((_local_3) ? _local_3.roomName : "Unknown Room");
-            this._component._Str_3531._Str_2822(k.session.roomId, _local_4, _local_2.id, _local_2.name, k.text);
+            this._component._Str_3531.addItem(k.session.roomId, _local_4, _local_2.id, _local_2.name, k.text);
         }
     }
 }
