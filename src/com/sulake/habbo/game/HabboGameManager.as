@@ -189,7 +189,7 @@
             return (this._gameCenterEnabled) || ((this._gameCenterEnabledForStaff) && (this._sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE)));
         }
 
-        public function get _Str_12938():Boolean
+        public function get isHotelClosed():Boolean
         {
             return this._Str_19179;
         }

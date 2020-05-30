@@ -763,7 +763,7 @@
             var _local_3:GameStatusMessageParser = _local_2.getParser();
             if (_local_3.gameTypeId == this._selectedGame)
             {
-                if (((_local_3.isOk) && (!(this._gameCenterView._Str_12938))))
+                if (((_local_3.isOk) && (!(this._gameCenterView.isHotelClosed))))
                 {
                     this._playNowUnlimitedButton.enable();
                     this._playNowLimitedButton.enable();

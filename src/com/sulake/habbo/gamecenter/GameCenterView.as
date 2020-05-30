@@ -171,9 +171,9 @@
             }
         }
 
-        public function get _Str_12938():Boolean
+        public function get isHotelClosed():Boolean
         {
-            return this._gameManager._Str_12938;
+            return this._gameManager.isHotelClosed;
         }
 
         public function getLocalization(k:int):String
