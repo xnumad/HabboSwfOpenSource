@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.RoomUserRespect;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_3660;
-    import com.sulake.habbo.communication.messages.incoming.notifications._Str_8414;
+    import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_8312;
     import com.sulake.habbo.communication.messages.incoming.notifications._Str_4508;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9354;
@@ -82,7 +82,7 @@
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             this.addMessageEvent(new _Str_8665(this.onBroadcastMessageEvent));
             this.addMessageEvent(new _Str_3660(this.onLevelUp));
-            this.addMessageEvent(new _Str_8414(this.onClubGiftNotification));
+            this.addMessageEvent(new ClubGiftNotificationEvent(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_9354(this.onUserBannedMessageEvent));
@@ -430,7 +430,7 @@
             }
         }
 
-        private function onClubGiftNotification(k:_Str_8414):void
+        private function onClubGiftNotification(k:ClubGiftNotificationEvent):void
         {
             if (!k)
             {

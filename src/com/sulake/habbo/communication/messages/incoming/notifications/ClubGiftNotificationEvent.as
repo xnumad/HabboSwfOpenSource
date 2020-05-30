@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.notifications.ClubGiftNotificationParser;
 
-    public class _Str_8414 extends MessageEvent implements IMessageEvent 
+    public class ClubGiftNotificationEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_8414(k:Function)
+        public function ClubGiftNotificationEvent(k:Function)
         {
             super(k, ClubGiftNotificationParser);
         }

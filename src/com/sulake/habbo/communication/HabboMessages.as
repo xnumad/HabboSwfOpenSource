@@ -794,7 +794,7 @@
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7309;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_7321;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8054;
-	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8414;
+	import com.sulake.habbo.communication.messages.incoming.notifications.ClubGiftNotificationEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications._Str_8665;
 	import com.sulake.habbo.communication.messages.incoming.notifications.NotificationDialogMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.notifications.PetLevelNotificationEvent;
@@ -1161,7 +1161,7 @@
             INCOMING_PACKETS[217] = TradingOpenFailedEvent;
             INCOMING_PACKETS[2182] = UserNameChangedMessageEvent;
             INCOMING_PACKETS[2187] = _Str_7704;
-            INCOMING_PACKETS[2188] = _Str_8414;
+            INCOMING_PACKETS[2188] = ClubGiftNotificationEvent;
             INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
             INCOMING_PACKETS[2196] = _Str_5142;
             INCOMING_PACKETS[2202] = _Str_7291;
