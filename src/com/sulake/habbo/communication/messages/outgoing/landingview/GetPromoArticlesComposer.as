@@ -1,9 +1,9 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_551
+﻿package com.sulake.habbo.communication.messages.outgoing.landingview
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_12132 implements IMessageComposer, IDisposable 
+    public class GetPromoArticlesComposer implements IMessageComposer, IDisposable
     {
 
 

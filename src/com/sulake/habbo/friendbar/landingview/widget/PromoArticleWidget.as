@@ -7,7 +7,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
-    import com.sulake.habbo.communication.messages.outgoing._Str_551._Str_12132;
+    import com.sulake.habbo.communication.messages.outgoing.landingview.GetPromoArticlesComposer;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
@@ -51,7 +51,7 @@
         {
             if (((this._lastRequestTime == null) || ((this._lastRequestTime.time + _Str_3981) < new Date().time)))
             {
-                this._landingView.send(new _Str_12132());
+                this._landingView.send(new GetPromoArticlesComposer());
                 this._lastRequestTime = new Date();
             }
             else
