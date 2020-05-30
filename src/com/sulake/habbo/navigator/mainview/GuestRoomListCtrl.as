@@ -271,7 +271,7 @@
             {
                 return;
             }
-            if (_local_4.ownerName != this._Str_2272._Str_2627.userName)
+            if (_local_4.ownerName != this._Str_2272.sessionData.userName)
             {
                 if (_local_4.habboGroupId != 0)
                 {

@@ -123,9 +123,9 @@
         {
             if (k <= 5)
             {
-                return this._controller.manager._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2964;
+                return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964;
             }
-            return this._controller.manager._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575;
+            return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575;
         }
 
         public function get _Str_22986():Array

@@ -120,9 +120,9 @@
             return this._roomSettingsCtrl;
         }
 
-        public function get _Str_2627():ISessionDataManager
+        public function get sessionData():ISessionDataManager
         {
-            return this._oldNavigator._Str_2627;
+            return this._oldNavigator.sessionData;
         }
 
         public function get _Str_7174():GuestRoomPasswordInput

@@ -153,7 +153,7 @@
             var _local_4:String = ((_local_3.text == "") ? (("${navigator.searchcode.title." + _local_3.searchCode) + "}") : _local_3.text);
             if (_arg_2)
             {
-                _local_5 = (((!(this._navigator._Str_2627.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))) && (!(this._navigator._Str_3440._Str_4569 == ViewMode.OFFICIAL_VIEW))) ? ResultsModeEnum._Str_6023 : _local_3.viewMode);
+                _local_5 = (((!(this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))) && (!(this._navigator._Str_3440._Str_4569 == ViewMode.OFFICIAL_VIEW))) ? ResultsModeEnum._Str_6023 : _local_3.viewMode);
                 return this._categoryElementFactory._Str_22713(_local_3.guestRooms, _local_4, k, _local_3.actionAllowed, _local_5);
             }
             return this._categoryElementFactory._Str_24067(_local_4, k, _local_3.actionAllowed);

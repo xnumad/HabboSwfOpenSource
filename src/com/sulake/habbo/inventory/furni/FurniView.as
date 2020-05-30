@@ -528,7 +528,7 @@
                 return;
             }
             var _local_5:IFurnitureData = this._model.controller.getFurnitureData(_local_4.type, ((_local_4._Str_2770) ? ProductTypeEnum.WALL : ProductTypeEnum.FLOOR));
-            var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller._Str_2627.isAccountSafetyLocked()))) && (!(_local_2)));
+            var _local_6:Boolean = ((((((k) && (this._marketplace)) && (this._marketplace.enabled)) && (_local_4.sellable)) && (!(this._model.controller.sessionData.isAccountSafetyLocked()))) && (!(_local_2)));
             var _local_7:Boolean = (((this._model._Str_7411) && (k)) && (((((_local_4.category == FurniCategory.PET_SADDLE) || (_local_4.category == FurniCategory.PET_CUSTOM_PART)) || (_local_4.category == FurniCategory.PET_CUSTOM_PART_SHAMPOO)) || (_local_4.category == FurniCategory.PET_SHAMPOO)) || (_local_4.category == FurniCategory.MONSTERPLANT_REVIVAL)));
             var _local_8:Boolean = true;
             if (_local_4.rentable)

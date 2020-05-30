@@ -49,7 +49,7 @@
             this._visibleAndSelectableCategories = [];
             for each (_local_5 in this._navigator.data._Str_11717)
             {
-                if (((!(_local_5.automatic)) && ((!(_local_5._Str_13024)) || ((_local_5._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.COMMUNITY))))))
+                if (((!(_local_5.automatic)) && ((!(_local_5._Str_13024)) || ((_local_5._Str_13024) && (this._navigator.sessionData.hasSecurity(SecurityLevelEnum.COMMUNITY))))))
                 {
                     this._visibleAndSelectableCategories.push(_local_5);
                 }

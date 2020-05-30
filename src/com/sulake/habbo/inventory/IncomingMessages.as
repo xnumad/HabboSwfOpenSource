@@ -453,7 +453,7 @@
         {
             var _local_4:String;
             var _local_2:UserBadgesEvent = (k as UserBadgesEvent);
-            if (_local_2.userId != this._inventory._Str_2627.userId)
+            if (_local_2.userId != this._inventory.sessionData.userId)
             {
                 return;
             }
@@ -514,7 +514,7 @@
                 ErrorReportStorage.addDebugData("IncomingEvent", "Trading open - inventory is null!");
                 return;
             }
-            var _local_2:ISessionDataManager = this._inventory._Str_2627;
+            var _local_2:ISessionDataManager = this._inventory.sessionData;
             var _local_3:IRoomSession = this._inventory.roomSession;
             if (!_local_2)
             {
@@ -621,7 +621,7 @@
             var _local_2:TradingItemListEvent = (k as TradingItemListEvent);
             var _local_3:Map = new Map();
             var _local_4:Map = new Map();
-            var _local_5:int = this._inventory._Str_2627.userId;
+            var _local_5:int = this._inventory.sessionData.userId;
             var _local_6:FurniModel = this._inventory._Str_2834;
             if (_local_6 == null)
             {

@@ -189,7 +189,7 @@
             this._selectableAndVisibleCategories = [];
             for each (_local_2 in this._navigator.data._Str_11717)
             {
-                if (((!(_local_2.automatic)) && ((!(_local_2._Str_13024)) || ((_local_2._Str_13024) && (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.COMMUNITY))))))
+                if (((!(_local_2.automatic)) && ((!(_local_2._Str_13024)) || ((_local_2._Str_13024) && (this._navigator.sessionData.hasSecurity(SecurityLevelEnum.COMMUNITY))))))
                 {
                     this._selectableAndVisibleCategories.push(_local_2);
                     k.push(_local_2._Str_14718);
@@ -220,7 +220,7 @@
             this._categoryMenu.selection = 0;
             this._selectedLayout = this._layouts[0];
             this._Str_19409();
-            if (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575)
+            if (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575)
             {
                 this._Str_10439(_Str_18545);
             }
@@ -315,7 +315,7 @@
             }
             this._Str_16163();
             var _local_5:String;
-            if (((this._navigator._Str_2627.clubLevel < HabboClubLevelEnum._Str_2575) && (!(this._navigator.getBoolean("habbo_club_buy_disabled")))))
+            if (((this._navigator.sessionData.clubLevel < HabboClubLevelEnum._Str_2575) && (!(this._navigator.getBoolean("habbo_club_buy_disabled")))))
             {
                 _local_5 = "roc_vip_promo";
             }
@@ -343,7 +343,7 @@
             var _local_5:IStaticBitmapWrapperWindow = (_local_4.findChildByName("bg_pic") as IStaticBitmapWrapperWindow);
             _local_5.assetUri = (("${image.library.url}newroom/model_" + _arg_2.name) + ".png");
             k.addChild(_local_4);
-            (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575);
+            (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575);
             k.width = (2 * _local_4.width);
             k.height = _local_4.height;
             _arg_2.view = _local_4;
@@ -358,11 +358,11 @@
                 case HabboClubLevelEnum._Str_3159:
                     return true;
                 case HabboClubLevelEnum._Str_2964:
-                    return (!(_arg_2)) || (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2964);
+                    return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964);
                 case HabboClubLevelEnum._Str_2575:
-                    return (!(_arg_2)) || (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575);
+                    return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575);
                 default:
-                    return this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.EMPLOYEE);
+                    return this._navigator.sessionData.hasSecurity(SecurityLevelEnum.EMPLOYEE);
             }
         }
 

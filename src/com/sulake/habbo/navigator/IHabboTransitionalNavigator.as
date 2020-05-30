@@ -38,7 +38,7 @@
         function get _Str_15114():RoomCreateViewCtrl;
         function get communication():IHabboCommunicationManager;
         function get _Str_3188():RoomSettingsCtrl;
-        function get _Str_2627():ISessionDataManager;
+        function get sessionData():ISessionDataManager;
         function get _Str_7174():GuestRoomPasswordInput;
         function get doorbell():GuestRoomDoorbell;
         function get _Str_6939():RoomInfoViewCtrl;

@@ -123,7 +123,7 @@
             return this._communication;
         }
 
-        public function get _Str_2627():ISessionDataManager
+        public function get sessionData():ISessionDataManager
         {
             return this._sessionData;
         }

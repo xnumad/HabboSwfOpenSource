@@ -718,7 +718,7 @@
         {
             if (!this._clubMemberLevel)
             {
-                return this._manager._Str_2627.clubLevel;
+                return this._manager.sessionData.clubLevel;
             }
             return this._clubMemberLevel;
         }

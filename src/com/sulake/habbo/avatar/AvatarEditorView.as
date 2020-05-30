@@ -295,9 +295,9 @@
                     this._editorContent.removeChild(_Str_8604);
                 }
             }
-            if (((!(this._editor.manager == null)) && (!(this._editor.manager._Str_2627 == null))))
+            if (((!(this._editor.manager == null)) && (!(this._editor.manager.sessionData == null))))
             {
-                this._editorContent.findChildByName("avatar_name").caption = this._editor.manager._Str_2627.userName;
+                this._editorContent.findChildByName("avatar_name").caption = this._editor.manager.sessionData.userName;
                 if (this._editor.manager.getBoolean("premium.name.change.enabled"))
                 {
                     this._editorContent.findChildByName("avatar_name_change").visible = true;
@@ -342,9 +342,9 @@
         public function update():void
         {
             var k:IWindow = (this._editorContent.findChildByName("wardrobeButtonContainer") as IWindow);
-            if (((k) && (this._editor.manager._Str_2627)))
+            if (((k) && (this._editor.manager.sessionData)))
             {
-                k.visible = ((this._editor.manager._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._editor._Str_16133()));
+                k.visible = ((this._editor.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._editor._Str_16133()));
                 k.visible = this._editor._Str_16133();
             }
             var _local_2:String = AvatarEditorSideCategory.NOTHING;

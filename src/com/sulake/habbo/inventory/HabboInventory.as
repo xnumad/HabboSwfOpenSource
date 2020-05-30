@@ -290,7 +290,7 @@
             return (disposed) ? null : MarketplaceModel(this.getModel(InventoryCategory.MARKETPLACE));
         }
 
-        public function get _Str_2627():ISessionDataManager
+        public function get sessionData():ISessionDataManager
         {
             return this._sessionDataManager;
         }

@@ -71,7 +71,7 @@
             container.findChildByName("category_content_background").height = (12 + (this._roomEntryElementFactory._Str_19124 * (guestRooms.length + 1)));
             container.findChildByName("category_add_quick_link").visible = (this._navigator._Str_3440._Str_4569.indexOf(ViewMode.OFFICIAL_VIEW) == -1);
             var headerControls:IItemListWindow = IItemListWindow(container.findChildByName("category_controls_itemlist"));
-            if (this._navigator._Str_2627.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
+            if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
                 headerControls.getListItemByName("category_toggle_tiles").addEventListener(WindowMouseEvent.CLICK, this._blockResultsView._Str_20474);
                 headerControls.getListItemByName("category_toggle_tiles").id = showMoreId;

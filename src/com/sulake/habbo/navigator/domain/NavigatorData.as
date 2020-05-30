@@ -77,7 +77,7 @@
 
         public function get _Str_11824():Boolean
         {
-            return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.MODERATOR)));
+            return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator.sessionData.hasSecurity(SecurityLevelEnum.MODERATOR)));
         }
 
         public function onRoomEnter(k:RoomEntryInfoMessageParser):void

@@ -670,7 +670,7 @@
 
         public function _Str_24442(k:int):void
         {
-            if (_Str_14579.isPerkAllowed(this._inventory._Str_2627, this._inventory.windowManager, PerkEnum.TRADE))
+            if (_Str_14579.isPerkAllowed(this._inventory.sessionData, this._inventory.windowManager, PerkEnum.TRADE))
             {
                 this._communication.connection.send(new _Str_11737(k));
             }

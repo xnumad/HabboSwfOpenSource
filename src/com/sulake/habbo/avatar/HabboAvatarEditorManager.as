@@ -163,7 +163,7 @@
             var _local_2:HabboAvatarEditor = (this._editors.getValue(k) as HabboAvatarEditor);
             if (_local_2)
             {
-                return _local_2.loadAvatarInEditor(this._Str_2627.figure, this._Str_2627.gender, this._Str_2627.clubLevel);
+                return _local_2.loadAvatarInEditor(this.sessionData.figure, this.sessionData.gender, this.sessionData.clubLevel);
             }
         }
 
@@ -237,7 +237,7 @@
             return this._catalog;
         }
 
-        public function get _Str_2627():ISessionDataManager
+        public function get sessionData():ISessionDataManager
         {
             return this._sessionData;
         }

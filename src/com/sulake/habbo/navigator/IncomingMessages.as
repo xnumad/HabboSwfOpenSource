@@ -316,19 +316,19 @@
             {
                 if (_local_2._Str_18882)
                 {
-                    if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_CLOSED) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                    if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_CLOSED) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                     {
                         this._navigator.doorbell.show(_local_2.data);
                     }
                     else
                     {
-                        if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator._Str_2627.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
+                        if (((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_PASSWORD) && ((!(this._navigator.sessionData.userName == _local_2.data.ownerName)) && (_local_2._Str_22141 == false))))
                         {
                             this._navigator._Str_7174.show(_local_2.data);
                         }
                         else
                         {
-                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator._Str_2627.isAmbassador))) && (!(this._navigator._Str_2627.isRealNoob))) && (!(this._navigator._Str_2627.isAnyRoomController))))
+                            if (((((_local_2.data._Str_2738 == RoomSettingsData.DOORMODE_NOOBS_ONLY) && (!(this._navigator.sessionData.isAmbassador))) && (!(this._navigator.sessionData.isRealNoob))) && (!(this._navigator.sessionData.isAnyRoomController))))
                             {
                                 return;
                             }
@@ -569,7 +569,7 @@
             else
             {
                 this._navigator.registerParameter("navigator.createroom.limitreached", "limit", ("" + _local_2._Str_20396));
-                if (this._navigator._Str_2627.clubLevel >= HabboClubLevelEnum._Str_2575)
+                if (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575)
                 {
                     _local_3 = new SimpleAlertView(this._navigator, "${navigator.createroom.error}", "${navigator.createroom.limitreached}");
                 }

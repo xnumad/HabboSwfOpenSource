@@ -164,8 +164,8 @@
             this._window.findChildByName("favorite_region").procedure = this._Str_24499;
             this._window.findChildByName("home_region").procedure = this._Str_24346;
             this._window.findChildByName("settings_region").procedure = this._Str_23718;
-            this._window.findChildByName("settings_container").visible = (this._guestRoomData.ownerName == this._navigator._Str_2627.userName);
-            if (((this._navigator.context.configuration.getBoolean("room.report.enabled")) && (!(this._guestRoomData.ownerName == this._navigator._Str_2627.userName))))
+            this._window.findChildByName("settings_container").visible = (this._guestRoomData.ownerName == this._navigator.sessionData.userName);
+            if (((this._navigator.context.configuration.getBoolean("room.report.enabled")) && (!(this._guestRoomData.ownerName == this._navigator.sessionData.userName))))
             {
                 this._window.findChildByName("report_region").id = this._guestRoomData.ownerId;
                 this._window.findChildByName("report_region").procedure = this._Str_24003;
@@ -249,7 +249,7 @@
             }
             this._Str_16458("properties", "${navigator.roompopup.property.max_users}", this._guestRoomData._Str_9029.toString());
             IStaticBitmapWrapperWindow(this._window.findChildByName("room_thumbnail")).assetUri = "newnavigator_default_room";
-            if (this._navigator._Str_2627.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
+            if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
                 if (this._guestRoomData.officialRoomPicRef != null)
                 {

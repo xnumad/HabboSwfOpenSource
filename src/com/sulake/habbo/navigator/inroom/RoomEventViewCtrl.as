@@ -302,7 +302,7 @@
             Util._Str_4679(_local_3, ["embed_info_txt", "embed_src_txt"], _local_4.y, 2);
             _local_3.height = (Util._Str_2647(_local_3) + 5);
             _local_3.findChildByName("embed_info_region").procedure = this._Str_25487;
-            if (this._Str_2272._Str_2627.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
+            if (this._Str_2272.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
                 this._window.findChildByName("add_thumbnail_region").visible = this._Str_2272.data._Str_11824;
                 if (this._Str_2272.data._Str_11824)
