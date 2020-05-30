@@ -6,8 +6,8 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8746;
-    import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8296;
+    import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniCancelLockMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
     import flash.events.Event;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
@@ -61,31 +61,31 @@
             this._connection = k;
             if (!this._friendFurniConfirmListener)
             {
-                this._friendFurniConfirmListener = new FriendFurniStartConfirmationMessageEvent(this._Str_22615);
-                this._friendFurniOtherLockConfirmListener = new _Str_8746(this._Str_23555);
-                this._friendFurniCancelLockListener = new _Str_8296(this._Str_23369);
+                this._friendFurniConfirmListener = new FriendFurniStartConfirmationMessageEvent(this.onStartConfirmation);
+                this._friendFurniOtherLockConfirmListener = new FriendFurniOtherLockConfirmedMessageEvent(this.onOtherLockConfirmed);
+                this._friendFurniCancelLockListener = new FriendFurniCancelLockMessageEvent(this.onCancelLock);
                 this._connection.addMessageEvent(this._friendFurniConfirmListener);
                 this._connection.addMessageEvent(this._friendFurniOtherLockConfirmListener);
                 this._connection.addMessageEvent(this._friendFurniCancelLockListener);
             }
         }
 
-        public function _Str_17138(k:int, _arg_2:Boolean):void
+        public function sendLockConfirm(k:int, _arg_2:Boolean):void
         {
             this._connection.send(new _Str_11713(k, _arg_2));
         }
 
-        private function _Str_22615(k:FriendFurniStartConfirmationMessageEvent):void
+        private function onStartConfirmation(k:FriendFurniStartConfirmationMessageEvent):void
         {
             this._widget.open(k.getParser().stuffId, k.getParser().isOwner);
         }
 
-        private function _Str_23555(k:_Str_8746):void
+        private function onOtherLockConfirmed(k:FriendFurniOtherLockConfirmedMessageEvent):void
         {
             this._widget._Str_25728(k.getParser().stuffId);
         }
 
-        private function _Str_23369(k:_Str_8296):void
+        private function onCancelLock(k:FriendFurniCancelLockMessageEvent):void
         {
             this._widget.close(k.getParser().stuffId);
         }

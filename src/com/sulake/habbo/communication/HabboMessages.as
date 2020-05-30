@@ -303,9 +303,9 @@
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8296;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniCancelLockMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniStartConfirmationMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.friendfurni._Str_8746;
+	import com.sulake.habbo.communication.messages.incoming.friendfurni.FriendFurniOtherLockConfirmedMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10323;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_10953;
 	import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_12104;
@@ -1362,7 +1362,7 @@
             INCOMING_PACKETS[3796] = _Str_7837;
             INCOMING_PACKETS[3801] = _Str_8665;
             INCOMING_PACKETS[3805] = GameStatusMessageEvent;
-            INCOMING_PACKETS[382] = _Str_8746;
+            INCOMING_PACKETS[382] = FriendFurniOtherLockConfirmedMessageEvent;
             INCOMING_PACKETS[3828] = _Str_9458;
             INCOMING_PACKETS[383] = WiredTriggerDataEvent;
             INCOMING_PACKETS[3841] = _Str_8237;
@@ -1433,7 +1433,7 @@
             INCOMING_PACKETS[761] = _Str_16789;
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;
             INCOMING_PACKETS[77] = _Str_11155;
-            INCOMING_PACKETS[770] = _Str_8296;
+            INCOMING_PACKETS[770] = FriendFurniCancelLockMessageEvent;
             INCOMING_PACKETS[780] = _Str_7845;
             INCOMING_PACKETS[793] = IsFirstLoginOfDayEvent;
             INCOMING_PACKETS[800] = TryPhoneNumberResultMessageEvent;

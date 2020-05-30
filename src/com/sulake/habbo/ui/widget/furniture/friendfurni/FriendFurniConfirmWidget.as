@@ -40,7 +40,7 @@
         {
             if ((((this._window) && (this._window.visible)) && (!(this._stuffId == -1))))
             {
-                this._Str_14761._Str_17138(this._stuffId, false);
+                this._Str_14761.sendLockConfirm(this._stuffId, false);
                 this._Str_2669();
             }
             this._stuffId = k;
@@ -108,11 +108,11 @@
                 {
                     case "header_button_close":
                     case "cancel_button":
-                        this._Str_14761._Str_17138(this._stuffId, false);
+                        this._Str_14761.sendLockConfirm(this._stuffId, false);
                         this._Str_2669();
                         return;
                     case "confirm_button":
-                        this._Str_14761._Str_17138(this._stuffId, true);
+                        this._Str_14761.sendLockConfirm(this._stuffId, true);
                         this._Str_2669();
                         return;
                 }
