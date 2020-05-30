@@ -90,7 +90,7 @@
         {
             if (this._moderationDelayTimer)
             {
-                this._moderationDelayTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_18481);
+                this._moderationDelayTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onShowModerationDisclaimer);
                 this._moderationDelayTimer = null;
             }
             if (this._notificationViewManager != null)
@@ -182,9 +182,9 @@
             this._notifications.createLinkEvent(k);
         }
 
-        private function _Str_18481(k:TimerEvent):void
+        private function onShowModerationDisclaimer(k:TimerEvent):void
         {
-            this._moderationDelayTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_18481);
+            this._moderationDelayTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this.onShowModerationDisclaimer);
             this._moderationDelayTimer = null;
             this.showModerationDisclaimer();
         }
@@ -197,7 +197,7 @@
                 if (this._moderationDelayTimer == null)
                 {
                     this._moderationDelayTimer = new Timer((RoomEnterEffect.totalRunningTime + _Str_19032), 1);
-                    this._moderationDelayTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_18481);
+                    this._moderationDelayTimer.addEventListener(TimerEvent.TIMER_COMPLETE, this.onShowModerationDisclaimer);
                     this._moderationDelayTimer.start();
                 }
             }
