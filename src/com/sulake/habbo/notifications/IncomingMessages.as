@@ -39,7 +39,7 @@
     import com.sulake.habbo.communication.messages.parser.notifications._Str_5519;
     import flash.display.BitmapData;
     import com.sulake.core.localization.ILocalization;
-    import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7351;
+    import com.sulake.habbo.communication.messages.parser.room.furniture.RoomMessageNotificationMessageParser;
     import com.sulake.core.assets.BitmapDataAsset;
     import com.sulake.habbo.communication.messages.parser.recycler.RecyclerFinishedMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_7427;
@@ -198,7 +198,7 @@
         private function onRoomMessagesNotification(k:_Str_9312):void
         {
             var _local_3:ILocalization;
-            var _local_2:_Str_7351 = k.getParser();
+            var _local_2:RoomMessageNotificationMessageParser = k.getParser();
             var _local_4:String = NotificationType.ROOMMESSAGESPOSTED;
             this._notifications.localization.registerParameter("notifications.text.room.messages.posted", "room_name", _local_2.roomName);
             this._notifications.localization.registerParameter("notifications.text.room.messages.posted", "messages_count", _local_2._Str_25507.toString());
