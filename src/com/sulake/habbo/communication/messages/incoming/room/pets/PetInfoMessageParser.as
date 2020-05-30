@@ -4,7 +4,7 @@
     {
         private var _stuffId:int;
         private var _classId:int;
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _userId:int;
         private var _userName:String;
         private var _rarityLevel:int;
@@ -14,7 +14,7 @@
         {
             this._stuffId = k;
             this._classId = _arg_2;
-            this._Str_2570 = _arg_3;
+            this._productCode = _arg_3;
             this._userId = _arg_4;
             this._userName = _arg_5;
             this._rarityLevel = _arg_6;
@@ -33,7 +33,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get userId():int

@@ -7,7 +7,7 @@
     {
         private var _itemType:String;
         private var _classId:int;
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _Str_3054:int;
         private var _Str_3970:String;
         private var _Str_3224:Boolean;
@@ -26,7 +26,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get placedItemId():int
@@ -53,7 +53,7 @@
         {
             this._itemType = "";
             this._classId = 0;
-            this._Str_2570 = "";
+            this._productCode = "";
             return true;
         }
 
@@ -65,7 +65,7 @@
             }
             this._itemType = k.readString();
             this._classId = k.readInteger();
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             this._Str_3054 = k.readInteger();
             this._Str_3970 = k.readString();
             this._Str_3224 = k.readBoolean();

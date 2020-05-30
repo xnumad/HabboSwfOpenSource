@@ -5,7 +5,7 @@
     public class _Str_5442 
     {
         private var _Str_2507:int;
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _priceCredits:int;
         private var _priceActivityPoints:int;
         private var _Str_10007:int;
@@ -21,7 +21,7 @@
         public function _Str_5442(k:IMessageDataWrapper)
         {
             this._Str_2507 = k.readInteger();
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             k.readBoolean();
             this._priceCredits = k.readInteger();
             this._priceActivityPoints = k.readInteger();
@@ -43,7 +43,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get priceCredits():int

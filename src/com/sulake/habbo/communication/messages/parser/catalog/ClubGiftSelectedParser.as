@@ -6,7 +6,7 @@
 
     public class ClubGiftSelectedParser implements IMessageParser
     {
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _products:Array;
 
 
@@ -19,7 +19,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._products = new Array();
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
@@ -32,7 +32,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get products():Array

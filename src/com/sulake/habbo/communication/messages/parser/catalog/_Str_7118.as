@@ -5,7 +5,7 @@
 
     public class _Str_7118 implements IMessageParser 
     {
-        private var _Str_2570:String = "";
+        private var _productCode:String = "";
         private var _Str_6479:Array;
 
         public function _Str_7118()
@@ -16,7 +16,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get _Str_13588():Array
@@ -26,14 +26,14 @@
 
         public function flush():Boolean
         {
-            this._Str_2570 = "";
+            this._productCode = "";
             this._Str_6479 = [];
             return true;
         }
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)

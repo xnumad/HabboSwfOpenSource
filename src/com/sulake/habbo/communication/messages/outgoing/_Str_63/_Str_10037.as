@@ -4,21 +4,21 @@
 
     public class _Str_10037 implements IMessageComposer 
     {
-        private var _Str_2570:String;
+        private var _productCode:String;
 
         public function _Str_10037(k:String)
         {
-            this._Str_2570 = k;
+            this._productCode = k;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_2570];
+            return [this._productCode];
         }
 
         public function dispose():void
         {
-            this._Str_2570 = null;
+            this._productCode = null;
         }
     }
 }

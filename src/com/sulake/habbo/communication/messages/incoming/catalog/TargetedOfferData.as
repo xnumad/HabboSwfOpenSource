@@ -14,7 +14,7 @@
         protected var _Str_1858:String;
         protected var _Str_2991:String;
         protected var _Str_18782:String;
-        protected var _Str_2570:String;
+        protected var _productCode:String;
         protected var _Str_9772:int;
         protected var _Str_4678:uint;
         protected var _Str_3594:int;
@@ -34,7 +34,7 @@
                 this._Str_1858 = k.description;
                 this._Str_2991 = k.imageUrl;
                 this._Str_18782 = k._Str_13452;
-                this._Str_2570 = k.productCode;
+                this._productCode = k.productCode;
                 this._Str_9772 = k.purchaseLimit;
                 this._Str_4678 = k.expirationTime;
                 this._Str_3594 = k.priceInCredits;
@@ -50,7 +50,7 @@
             this._Str_9163 = k.readInteger();
             this._id = k.readInteger();
             this._Str_679 = k.readString();
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             this._Str_3594 = k.readInteger();
             this._Str_3539 = k.readInteger();
             this._Str_2956 = k.readInteger();
@@ -115,7 +115,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get purchaseLimit():int

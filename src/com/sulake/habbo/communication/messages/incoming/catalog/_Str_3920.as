@@ -14,7 +14,7 @@
         private var _Str_10488:String;
         private var _Str_21319:String;
         private var _Str_21451:String;
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _Str_19890:int;
         private var _Str_4678:int;
 
@@ -34,7 +34,7 @@
                     this._Str_21451 = k.readString();
                     break;
                 case _Str_17904:
-                    this._Str_2570 = k.readString();
+                    this._productCode = k.readString();
                     break;
                 case _Str_15225:
                     this._Str_19890 = k.readInteger();
@@ -81,7 +81,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
 
         public function get _Str_24645():int

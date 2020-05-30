@@ -5,7 +5,7 @@
     public class _Str_7352 
     {
         private var _Str_18365:int = 1;
-        private var _Str_2570:String;
+        private var _productCode:String;
         private var _Str_7699:Array;
         private var _Str_6780:String;
         private var _Str_6222:int;
@@ -15,7 +15,7 @@
             var _local_2:int;
             this._Str_7699 = [];
             super();
-            this._Str_2570 = k.readString();
+            this._productCode = k.readString();
             this._Str_18365 = k.readInteger();
             if (!this._Str_19070)
             {
@@ -54,7 +54,7 @@
 
         public function get productCode():String
         {
-            return this._Str_2570;
+            return this._productCode;
         }
     }
 }
