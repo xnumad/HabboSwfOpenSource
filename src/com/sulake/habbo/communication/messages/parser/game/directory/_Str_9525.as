@@ -13,7 +13,7 @@
         private var _status:int;
         private var _Str_21469:int;
         private var _Str_21518:int;
-        private var _Str_7940:int;
+        private var _freeGamesLeft:int;
 
 
         public function get status():int
@@ -33,12 +33,12 @@
 
         public function get _Str_21510():int
         {
-            return this._Str_7940;
+            return this._freeGamesLeft;
         }
 
         public function get _Str_23843():Boolean
         {
-            return this._Str_7940 == -1;
+            return this._freeGamesLeft == -1;
         }
 
         public function flush():Boolean
@@ -51,7 +51,7 @@
             this._status = k.readInteger();
             this._Str_21469 = k.readInteger();
             this._Str_21518 = k.readInteger();
-            this._Str_7940 = k.readInteger();
+            this._freeGamesLeft = k.readInteger();
             return true;
         }
     }

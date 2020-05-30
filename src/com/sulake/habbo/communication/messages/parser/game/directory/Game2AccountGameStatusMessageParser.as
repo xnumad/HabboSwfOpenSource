@@ -6,7 +6,7 @@
     public class Game2AccountGameStatusMessageParser implements IMessageParser
     {
         private var _gameTypeId:int;
-        private var _Str_7940:int;
+        private var _freeGamesLeft:int;
         private var _Str_21057:int;
 
 
@@ -17,7 +17,7 @@
 
         public function get _Str_21510():int
         {
-            return this._Str_7940;
+            return this._freeGamesLeft;
         }
 
         public function get _Str_22319():int
@@ -27,7 +27,7 @@
 
         public function get _Str_23843():Boolean
         {
-            return this._Str_7940 == -1;
+            return this._freeGamesLeft == -1;
         }
 
         public function flush():Boolean
@@ -38,7 +38,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._gameTypeId = k.readInteger();
-            this._Str_7940 = k.readInteger();
+            this._freeGamesLeft = k.readInteger();
             this._Str_21057 = k.readInteger();
             return true;
         }
