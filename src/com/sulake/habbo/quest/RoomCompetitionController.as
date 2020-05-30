@@ -18,7 +18,7 @@
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_7424;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_2752;
     import com.sulake.habbo.communication.messages.outgoing._Str_301._Str_4038;
@@ -310,7 +310,7 @@
         public function onRoomEnter(k:_Str_2752):void
         {
             this.close();
-            var _local_2:_Str_4522 = k.getParser();
+            var _local_2:RoomEntryInfoMessageParser = k.getParser();
             var _local_3:Boolean = ((this._questEngine.getInteger("new.identity", 0) == 0) || (!(this._questEngine.getBoolean("new.identity.hide.ui"))));
             if (((!(this._dontShowAgain)) && (_local_3)))
             {

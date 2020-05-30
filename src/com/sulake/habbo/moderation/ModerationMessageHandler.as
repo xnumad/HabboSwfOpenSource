@@ -41,7 +41,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.callforhelp.CallForHelpCategoryData;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.moderation._Str_8084;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7074;
     import com.sulake.habbo.communication.messages.incoming.moderation.*;
@@ -295,7 +295,7 @@
         private function onRoomEnter(k:_Str_2752):void
         {
             var _local_3:RoomToolCtrl;
-            var _local_2:_Str_4522 = k.getParser();
+            var _local_2:RoomEntryInfoMessageParser = k.getParser();
             this._moderationManager.currentFlatId = _local_2._Str_6550;
             this._moderationManager.startPanel._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)

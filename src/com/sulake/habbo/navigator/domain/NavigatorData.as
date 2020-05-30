@@ -10,7 +10,7 @@
     import com.sulake.habbo.navigator.roomsettings.FriendList;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import com.sulake.habbo.session.SecurityLevelEnum;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4587;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4081;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5078;
@@ -80,7 +80,7 @@
             return (!(this._enteredGuestRoom == null)) && ((this._currentRoomOwner) || (this._navigator._Str_2627.hasSecurity(SecurityLevelEnum.MODERATOR)));
         }
 
-        public function onRoomEnter(k:_Str_4522):void
+        public function onRoomEnter(k:RoomEntryInfoMessageParser):void
         {
             this._enteredGuestRoom = null;
             this._currentRoomOwner = false;

@@ -6,7 +6,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.ILabelWindow;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.moderator._Str_7731;
@@ -91,7 +91,7 @@
 			}
 		}
 
-        public function _Str_25175(k:_Str_4522):void
+        public function _Str_25175(k:RoomEntryInfoMessageParser):void
         {
             if (((this._frame == null) || (k == null)))
             {

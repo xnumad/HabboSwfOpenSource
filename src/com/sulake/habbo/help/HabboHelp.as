@@ -64,7 +64,7 @@
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_5199;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
     import com.sulake.habbo.utils.StringUtil;
@@ -754,7 +754,7 @@
 
         private function onRoomEnter(k:_Str_2752):void
         {
-            var _local_2:_Str_4522 = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
             this._currentRoomId = _local_2._Str_6550;
         }
 

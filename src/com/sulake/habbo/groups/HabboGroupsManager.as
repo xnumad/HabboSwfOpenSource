@@ -66,7 +66,7 @@
     import com.sulake.habbo.communication.messages.parser.users.HabboGroupJoinFailedMessageParser;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationData;
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditData;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4522;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.groups.events.HabboGroupsEditorData;
@@ -396,7 +396,7 @@
         {
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
-            var _local_2:_Str_4522 = _Str_2752(k).getParser();
+            var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
             this._roomId = _local_2._Str_6550;
         }
 
