@@ -7,7 +7,7 @@
     {
         private var _roomId:int;
         private var _roomName:String;
-        private var _Str_5786:int;
+        private var _messageCount:int;
 
 
         public function get roomId():int
@@ -22,14 +22,14 @@
 
         public function get _Str_25507():int
         {
-            return this._Str_5786;
+            return this._messageCount;
         }
 
         public function flush():Boolean
         {
             this._roomId = -1;
             this._roomName = "";
-            this._Str_5786 = 0;
+            this._messageCount = 0;
             return true;
         }
 
@@ -37,7 +37,7 @@
         {
             this._roomId = k.readInteger();
             this._roomName = k.readString();
-            this._Str_5786 = k.readInteger();
+            this._messageCount = k.readInteger();
             return true;
         }
     }
