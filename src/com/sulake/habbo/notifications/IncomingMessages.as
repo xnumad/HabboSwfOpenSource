@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils._Str_2418;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_7739;
+    import com.sulake.habbo.communication.messages.parser.notifications.ClubGiftNotificationParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.users.AccountSafetyLockStatusChangeMessageParser;
     import com.sulake.habbo.communication.messages.parser.catalog._Str_8077;
@@ -436,7 +436,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7739 = k.getParser();
+            var _local_2:ClubGiftNotificationParser = k.getParser();
             if (!_local_2)
             {
                 return;
