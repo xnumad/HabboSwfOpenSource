@@ -41,7 +41,7 @@
             this._gameManager = k;
             var _local_2:IHabboCommunicationManager = this._gameManager.communication;
             _local_2.addHabboConnectionMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosed));
-            _local_2.addHabboConnectionMessageEvent(new GameListMessageEvent(this._Str_25333));
+            _local_2.addHabboConnectionMessageEvent(new GameListMessageEvent(this.onGameList));
             _local_2.addHabboConnectionMessageEvent(new _Str_6521(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new GameAchievementsMessageEvent(this._Str_25513));
             _local_2.addHabboConnectionMessageEvent(new UnloadGameMessageEvent(this.onUnloadGame));
@@ -124,7 +124,7 @@
             this._gameManager.hotelClosed = true;
         }
 
-        private function _Str_25333(k:GameListMessageEvent):void
+        private function onGameList(k:GameListMessageEvent):void
         {
             var _local_3:_Str_5486;
             var _local_2:GameListMessageParser = (k.parser as GameListMessageParser);
