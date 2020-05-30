@@ -153,9 +153,9 @@
             this._Str_10921(this._stateController._Str_16276());
         }
 
-        public function _Str_17368(k:Boolean):void
+        public function setGameMode(k:Boolean):void
         {
-            this._stateController._Str_17368(k);
+            this._stateController.setGameMode(k);
             this._Str_10921(this._stateController._Str_16276());
         }
 

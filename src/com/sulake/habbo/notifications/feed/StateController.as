@@ -31,7 +31,7 @@
             return this._Str_15221();
         }
 
-        public function _Str_17368(k:Boolean):int
+        public function setGameMode(k:Boolean):int
         {
             this._isGameMode = k;
             if (!this.isActive())

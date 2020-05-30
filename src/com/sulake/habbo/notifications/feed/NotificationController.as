@@ -57,7 +57,7 @@
                 case RoomSessionEvent.ENDED:
                     if (this._baseView)
                     {
-                        this._baseView._Str_17368(k.session.isGameSession);
+                        this._baseView.setGameMode(k.session.isGameSession);
                     }
                     return;
             }
