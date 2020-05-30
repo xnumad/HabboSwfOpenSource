@@ -182,7 +182,7 @@
             }
         }
 
-        public function _Str_23809(k:int, _arg_2:IFeedEntity):void
+        public function addNotificationFeedItem(k:int, _arg_2:IFeedEntity):void
         {
             (this._views.getValue(PANE_NOTIFICATIONS) as NotificationsPane).addItem(k, _arg_2);
         }
