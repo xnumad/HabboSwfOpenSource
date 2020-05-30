@@ -20,7 +20,7 @@
             return this._name;
         }
 
-        public function get _Str_14643():Array
+        public function get nameSuggestions():Array
         {
             return this._nameSuggestions;
         }

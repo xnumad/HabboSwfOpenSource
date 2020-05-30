@@ -202,7 +202,7 @@
             {
                 if (this._nameChangeView)
                 {
-                    this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2._Str_14643);
+                    this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2.nameSuggestions);
                 }
             }
         }
@@ -220,7 +220,7 @@
             }
             else
             {
-                this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2._Str_14643);
+                this._nameChangeView._Str_14489(_local_2.resultCode, _local_2.name, _local_2.nameSuggestions);
             }
         }
 

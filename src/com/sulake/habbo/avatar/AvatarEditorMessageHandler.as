@@ -87,7 +87,7 @@
             }
             else
             {
-                _local_3._Str_14489(_local_4.resultCode, _local_4.name, _local_4._Str_14643);
+                _local_3._Str_14489(_local_4.resultCode, _local_4.name, _local_4.nameSuggestions);
             }
         }
 
