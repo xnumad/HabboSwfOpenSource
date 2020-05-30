@@ -384,7 +384,7 @@
 
         private function onRoomEnter(k:IMessageEvent):void
         {
-            this._notifications._Str_3069._Str_21530();
+            this._notifications._Str_3069.showModerationDisclaimer();
         }
 
         private function _Str_24393(k:IMessageEvent):void

@@ -186,10 +186,10 @@
         {
             this._moderationDelayTimer.removeEventListener(TimerEvent.TIMER_COMPLETE, this._Str_18481);
             this._moderationDelayTimer = null;
-            this._Str_21530();
+            this.showModerationDisclaimer();
         }
 
-        public function _Str_21530():void
+        public function showModerationDisclaimer():void
         {
             var k:String;
             if (RoomEnterEffect.isRunning())
