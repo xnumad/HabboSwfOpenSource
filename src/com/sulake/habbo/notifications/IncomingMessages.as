@@ -99,7 +99,7 @@
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this._parser2));
-            this.addMessageEvent(new _Str_9583(this._Str_25354));
+            this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.showCallCreatedNotification));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_24833));
             this.addMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
@@ -235,7 +235,7 @@
             }
         }
 
-        private function _Str_25354(k:IMessageEvent):void
+        private function onModCautionEvent(k:IMessageEvent):void
         {
             var _local_3:GenericNotificationItemData;
             var _local_2:_Str_7427 = (k as _Str_9583).getParser();
