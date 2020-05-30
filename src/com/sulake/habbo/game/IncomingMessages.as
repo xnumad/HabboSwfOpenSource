@@ -121,7 +121,7 @@
 
         private function onHotelClosed(k:IMessageEvent):void
         {
-            this._gameManager._Str_25498 = true;
+            this._gameManager.hotelClosed = true;
         }
 
         private function _Str_25333(k:GameListMessageEvent):void

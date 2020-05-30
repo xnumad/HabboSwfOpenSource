@@ -194,7 +194,7 @@
             return this._Str_19179;
         }
 
-        public function set _Str_25498(k:Boolean):void
+        public function set hotelClosed(k:Boolean):void
         {
             this._Str_19179 = k;
         }
