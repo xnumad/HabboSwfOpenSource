@@ -97,7 +97,7 @@
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
             this.addMessageEvent(new _Str_7309(this._Str_25384));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
-            this.addMessageEvent(new _Str_9157(this._Str_25493));
+            this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
             this.addMessageEvent(new _Str_6521(this._parser2));
             this.addMessageEvent(new _Str_9583(this._Str_25354));
             this.addMessageEvent(new _Str_8670(this._Str_24546));
@@ -466,7 +466,7 @@
             }
         }
 
-        private function _Str_25493(k:_Str_9157):void
+        private function onClubGiftSelected(k:_Str_9157):void
         {
             if (((!(k)) || (!(this._notifications.localization))))
             {
