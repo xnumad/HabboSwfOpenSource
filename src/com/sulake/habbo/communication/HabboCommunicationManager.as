@@ -18,7 +18,7 @@
     import flash.events.IOErrorEvent;
     import flash.events.SecurityErrorEvent;
     import com.sulake.core.Core;
-    import com.sulake.habbo.communication.enum._Str_6905;
+    import com.sulake.habbo.communication.enum.HabboConnectionType;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.tracking.HabboErrorVariableEnum;
@@ -214,7 +214,7 @@
         {
             switch (k)
             {
-                case _Str_6905.HABBO:
+                case HabboConnectionType.HABBO_MAIN:
                     if (this._connection == null)
                     {
                         Core.crash("Tried to connect to proxy but connection was null", Core.ERROR_CATEGORY_CONNECT_TO_PROXY);

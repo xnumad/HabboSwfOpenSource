@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.DisconnectReasonEvent;
     import flash.display.Stage;
     import com.sulake.core.runtime.events.HotelViewReadyEvent;
-    import com.sulake.habbo.communication.enum._Str_6905;
+    import com.sulake.habbo.communication.enum.HabboConnectionType;
     import com.sulake.core.Core;
     import com.sulake.core.assets.IAsset;
     import com.sulake.core.assets.XmlAsset;
@@ -201,8 +201,8 @@
             this._externalVariablesUrl = getProperty("external.variables.txt");
             if (this._ssoTicket)
             {
-                this._communication.mode = _Str_6905._Str_4282;
-                this._communication.initConnection(_Str_6905.HABBO);
+                this._communication.mode = HabboConnectionType.NORMAL_MODE;
+                this._communication.initConnection(HabboConnectionType.HABBO_MAIN);
             }
             else
             {
@@ -235,7 +235,7 @@
             if (((k) && (!(this._ssoTicket))))
             {
                 this._ssoTicket = k;
-                this._communication.initConnection(_Str_6905.HABBO);
+                this._communication.initConnection(HabboConnectionType.HABBO_MAIN);
             }
         }
 
@@ -634,8 +634,8 @@
         private function _Str_24041(k:Event=null):void
         {
             this.dispatchLoginStepEvent(HabboCommunicationEvent.INIT);
-            this._communication.mode = _Str_6905._Str_4282;
-            this._communication.initConnection(_Str_6905.HABBO);
+            this._communication.mode = HabboConnectionType.NORMAL_MODE;
+            this._communication.initConnection(HabboConnectionType.HABBO_MAIN);
         }
 
         private function onParsedTicketSuccess(k:Event):void
