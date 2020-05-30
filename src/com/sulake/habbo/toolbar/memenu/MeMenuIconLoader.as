@@ -31,10 +31,10 @@
             this._userChangeMessageEvent = new FigureUpdateEvent(this.onFigureUpdate);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userObjectEvent);
             this._toolbar.communicationManager.addHabboConnectionMessageEvent(this._userChangeMessageEvent);
-            this._Str_5693();
+            this.setMeMenuToolbarIcon();
         }
 
-        private function _Str_5693(k:String=null):void
+        private function setMeMenuToolbarIcon(k:String=null):void
         {
             var _local_2:BitmapData;
             var _local_3:BitmapData;
@@ -103,12 +103,12 @@
         public function avatarImageReady(k:String):void
         {
             this._lastFigure = "";
-            this._Str_5693();
+            this.setMeMenuToolbarIcon();
         }
 
         private function onUserObject(k:UserObjectEvent):void
         {
-            this._Str_5693(k.getParser().figure);
+            this.setMeMenuToolbarIcon(k.getParser().figure);
         }
 
         private function onFigureUpdate(k:FigureUpdateEvent):void
@@ -117,7 +117,7 @@
             {
                 return;
             }
-            this._Str_5693(k.figure);
+            this.setMeMenuToolbarIcon(k.figure);
         }
 
         public function dispose():void
