@@ -192,7 +192,7 @@
             (this._views.getValue(PANE_STREAM) as StreamPane).addItem(k);
         }
 
-        public function _Str_26377():void
+        public function removeStreamItems():void
         {
         }
 
