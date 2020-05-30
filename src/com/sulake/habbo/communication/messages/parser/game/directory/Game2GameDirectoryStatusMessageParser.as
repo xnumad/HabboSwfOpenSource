@@ -31,7 +31,7 @@
             return this._gamesPlayed;
         }
 
-        public function get _Str_21510():int
+        public function get freeGamesLeft():int
         {
             return this._freeGamesLeft;
         }

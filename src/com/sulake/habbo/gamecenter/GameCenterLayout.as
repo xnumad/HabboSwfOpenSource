@@ -736,7 +736,7 @@
             if (_local_3.gameTypeId == this._selectedGame)
             {
                 _local_4 = this._gameCenterView.localization;
-                this._gamesLeft = _local_3._Str_21510;
+                this._gamesLeft = _local_3.freeGamesLeft;
                 if (this._gamesLeft >= 0)
                 {
                     this._Str_4343(this._gameCenterViewWindow, "playnow_text", _local_4.registerParameter("gamecenter.play_now_desc.limited_games", "games_left", this._gamesLeft.toString()));
