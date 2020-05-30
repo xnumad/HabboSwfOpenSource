@@ -61,7 +61,7 @@
                 }
             }
             _local_10.findChildByName("message").caption = _local_5;
-            IStaticBitmapWrapperWindow(_local_10.findChildByName("illustration")).assetUri = this._habboNotifications._Str_20214(_arg_3, _arg_2);
+            IStaticBitmapWrapperWindow(_local_10.findChildByName("illustration")).assetUri = this._habboNotifications.getNotificationImageUrl(_arg_3, _arg_2);
         }
 
         public function dispose():void

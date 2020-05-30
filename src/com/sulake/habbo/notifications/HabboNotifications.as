@@ -268,7 +268,7 @@
                 _local_6 = this._Str_5512(_arg_2, k, "message", true);
                 _local_7 = this._Str_5512(_arg_2, k, "linkUrl", false);
                 _local_8 = ((!(_local_7 == null)) && (_local_7.substr(0, 6) == "event:"));
-                _local_9 = this._Str_20214(_arg_2, k);
+                _local_9 = this.getNotificationImageUrl(_arg_2, k);
                 this._singularController.addItem(_local_6, NotificationType.INFO, null, _local_9, null, ((_local_8) ? _local_7.substr(6) : _local_7));
             }
             else
@@ -292,7 +292,7 @@
             return null;
         }
 
-        public function _Str_20214(k:Map, _arg_2:String):String
+        public function getNotificationImageUrl(k:Map, _arg_2:String):String
         {
             var _local_3:String = k.getValue("image");
             if (_local_3 == null)
