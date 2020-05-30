@@ -40,13 +40,13 @@
         {
             this._gameManager = k;
             var _local_2:IHabboCommunicationManager = this._gameManager.communication;
-            _local_2.addHabboConnectionMessageEvent(new HotelWillCloseInMinutesEvent(this._Str_10317));
+            _local_2.addHabboConnectionMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new GameListMessageEvent(this._Str_25333));
-            _local_2.addHabboConnectionMessageEvent(new _Str_6521(this._Str_10317));
+            _local_2.addHabboConnectionMessageEvent(new _Str_6521(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new GameAchievementsMessageEvent(this._Str_25513));
             _local_2.addHabboConnectionMessageEvent(new UnloadGameMessageEvent(this._Str_25361));
             _local_2.addHabboConnectionMessageEvent(new LoadGameMessageEvent(this._Str_22979));
-            _local_2.addHabboConnectionMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
+            _local_2.addHabboConnectionMessageEvent(new HotelClosesAndWillOpenAtEvent(this.onHotelClosed));
             _local_2.addHabboConnectionMessageEvent(new _Str_5416(this._Str_16577));
             _local_2.addHabboConnectionMessageEvent(new LeftQueueMessageEvent(this._Str_22378));
             _local_2.addHabboConnectionMessageEvent(new AuthenticationOKMessageEvent(this._Str_24100));
@@ -119,7 +119,7 @@
             this._gameManager.send(new _Str_8040());
         }
 
-        private function _Str_10317(k:IMessageEvent):void
+        private function onHotelClosed(k:IMessageEvent):void
         {
             this._gameManager._Str_25498 = true;
         }
