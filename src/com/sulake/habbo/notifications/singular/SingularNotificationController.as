@@ -71,7 +71,7 @@
                     _local_5++;
                 }
             }
-            this._notificationViewManager = new HabboNotificationViewManager(this._notifications, this._notifications.assetLibrary, this._notifications.windowManager, this._notifications._Str_9496, this._styleConfiguration["styles"], this._styleConfiguration["view"]);
+            this._notificationViewManager = new HabboNotificationViewManager(this._notifications, this._notifications.assetLibrary, this._notifications.windowManager, this._notifications.toolBar, this._styleConfiguration["styles"], this._styleConfiguration["view"]);
             this._notifications.sessionDataManager.events.addEventListener(BadgeImageReadyEvent.BIRE_BADGE_IMAGE_READY, this.onBadgeImage);
             this._notifications.registerUpdateReceiver(this, 2);
         }
@@ -219,7 +219,7 @@
             {
                 return;
             }
-            this._clubGiftNotification = new ClubGiftNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications._Str_9496);
+            this._clubGiftNotification = new ClubGiftNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications.toolBar);
         }
 
         public function showSafetyLockedNotification(k:int):void
@@ -228,7 +228,7 @@
             {
                 return;
             }
-            this._safetyLockedNotification = new SafetyLockedNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications._Str_9496);
+            this._safetyLockedNotification = new SafetyLockedNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications.toolBar);
         }
 
         public function hideSafetyLockedNotification():void

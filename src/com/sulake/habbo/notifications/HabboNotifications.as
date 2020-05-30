@@ -93,7 +93,7 @@
             return this._catalog;
         }
 
-        public function get _Str_9496():IHabboToolbar
+        public function get toolBar():IHabboToolbar
         {
             return this._toolBar;
         }

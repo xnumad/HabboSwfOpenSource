@@ -99,9 +99,9 @@
             var _local_5:int = k._Str_5493().width;
             var _local_6:String = Direction.DOWN;
             var _local_7:int = -1;
-            if (this._Str_9496)
+            if (this.toolBar)
             {
-                _local_10 = this._Str_9496._Str_6621(_local_3);
+                _local_10 = this.toolBar._Str_6621(_local_3);
                 if (_local_10)
                 {
                     _local_8 = new Rectangle();
@@ -362,7 +362,7 @@
             }
         }
 
-        public function get _Str_9496():IHabboToolbar
+        public function get toolBar():IHabboToolbar
         {
             return this._toolBar;
         }
