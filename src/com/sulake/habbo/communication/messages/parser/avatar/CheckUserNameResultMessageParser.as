@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6537 implements IMessageParser 
+    public class CheckUserNameResultMessageParser implements IMessageParser
     {
         private var _resultCode:int = -1;
         private var _name:String;

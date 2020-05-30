@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
+    import com.sulake.habbo.communication.messages.parser.avatar.CheckUserNameResultMessageParser;
 
     public class CheckUserNameResultMessageEvent extends MessageEvent implements IMessageEvent
     {
@@ -15,12 +15,12 @@
 
         public function CheckUserNameResultMessageEvent(k:Function)
         {
-            super(k, _Str_6537);
+            super(k, CheckUserNameResultMessageParser);
         }
 
-        public function getParser():_Str_6537
+        public function getParser():CheckUserNameResultMessageParser
         {
-            return _parser as _Str_6537;
+            return _parser as CheckUserNameResultMessageParser;
         }
     }
 }

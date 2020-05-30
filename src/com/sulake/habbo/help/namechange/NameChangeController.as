@@ -18,7 +18,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_411._Str_7887;
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.habbo.communication.messages.parser.avatar.ChangeUserNameResultMessageParser;
-    import com.sulake.habbo.communication.messages.parser.avatar._Str_6537;
+    import com.sulake.habbo.communication.messages.parser.avatar.CheckUserNameResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.users.UserNameChangedMessageParser;
@@ -213,7 +213,7 @@
             {
                 return;
             }
-            var _local_2:_Str_6537 = k.getParser();
+            var _local_2:CheckUserNameResultMessageParser = k.getParser();
             if (_local_2.resultCode == ChangeUserNameResultMessageEvent.NAME_OK)
             {
                 this._nameChangeView._Str_16320 = _local_2.name;
