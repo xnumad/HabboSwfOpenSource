@@ -106,7 +106,7 @@
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7612;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.habbo.communication.messages.parser.room.furniture._Str_7431;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_7187;
+    import com.sulake.habbo.communication.messages.parser.room.session.YouArePlayingGameMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.session._Str_6864;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.habbo.communication.messages.parser.help.GuideSessionStartedMessageParser;
@@ -1241,7 +1241,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7187 = k.getParser();
+            var _local_2:YouArePlayingGameMessageParser = k.getParser();
             var _local_3:Boolean = _local_2.isPlaying;
             this._roomCreator.setIsPlayingGame(this._currentRoomId, _local_3);
         }
