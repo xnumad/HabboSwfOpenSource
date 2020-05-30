@@ -222,7 +222,7 @@
             this._clubGiftNotification = new ClubGiftNotification(k, this._notifications.assets, this._notifications.windowManager, this._notifications.catalog, this._notifications._Str_9496);
         }
 
-        public function _Str_24299(k:int):void
+        public function showSafetyLockedNotification(k:int):void
         {
             if (((this._safetyLockedNotification) && (this._safetyLockedNotification.visible)))
             {
