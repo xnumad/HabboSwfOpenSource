@@ -174,7 +174,7 @@
                 "callback":this.onBuilderMembershipExpired
             }, {
                 "type":CatalogEvent.CATALOG_BUILDER_MEMBERSHIP_IN_GRACE,
-                "callback":this._Str_25671
+                "callback":this.onBuilderMembershipInGrace
             }]), new ComponentDependency(new IIDHabboToolbar(), function (k:IHabboToolbar):void
             {
                 _toolBar = k;
@@ -302,7 +302,7 @@
             return _local_3;
         }
 
-        private function _Str_25671(k:CatalogEvent):void
+        private function onBuilderMembershipInGrace(k:CatalogEvent):void
         {
             this.showNotification("builders_club.membership_in_grace", null);
         }
