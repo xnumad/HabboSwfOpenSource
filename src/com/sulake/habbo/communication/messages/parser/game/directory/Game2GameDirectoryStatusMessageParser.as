@@ -21,7 +21,7 @@
             return this._status;
         }
 
-        public function get _Str_26321():int
+        public function get blockLength():int
         {
             return this._blockLength;
         }
