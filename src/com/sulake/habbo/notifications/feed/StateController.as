@@ -26,7 +26,7 @@
             this._isEnabled = k;
             if (!this.isActive())
             {
-                return this._Str_18568(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
+                return this.requestState(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
             return this._Str_15221();
         }
@@ -36,7 +36,7 @@
             this._isGameMode = k;
             if (!this.isActive())
             {
-                return this._Str_18568(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
+                return this.requestState(FeedVisibilityEnum.VIEW_STATE_HIDDEN);
             }
             return this._Str_15221();
         }
@@ -46,7 +46,7 @@
             return this._currentState;
         }
 
-        public function _Str_18568(k:int):int
+        public function requestState(k:int):int
         {
             if (!this.isActive())
             {

@@ -128,7 +128,7 @@
         public function setVisibilityState(k:int):void
         {
             var _local_3:IWindowContainer;
-            var _local_2:int = this._stateController._Str_18568(k);
+            var _local_2:int = this._stateController.requestState(k);
             switch (_local_2)
             {
                 case FeedVisibilityEnum.VIEW_STATE_HIDDEN:
