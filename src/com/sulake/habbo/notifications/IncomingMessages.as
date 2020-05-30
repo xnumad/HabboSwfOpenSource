@@ -51,7 +51,7 @@
     import com.sulake.habbo.communication.messages.parser.availability.HotelClosedAndOpensMessageParser;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetFigureData;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_7160;
+    import com.sulake.habbo.communication.messages.parser.notifications.PetLevelNotificationParser;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.Pet;
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBoughtNotificationMessageParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_6671;
@@ -344,7 +344,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7160 = k.getParser();
+            var _local_2:PetLevelNotificationParser = k.getParser();
             this._notifications.localization.registerParameter("notifications.text.petlevel", "pet_name", _local_2.petName);
             this._notifications.localization.registerParameter("notifications.text.petlevel", "level", _local_2.level.toString());
             var _local_3:ILocalization = this._notifications.localization.getLocalizationRaw("notifications.text.petlevel");
