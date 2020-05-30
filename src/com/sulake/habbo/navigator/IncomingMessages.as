@@ -773,15 +773,15 @@
             Logger.log(("FAILED TO CONNECT: REASON: " + _local_2.reason));
             switch (_local_2.reason)
             {
-                case CantConnectMessageParser._Str_14993:
+                case CantConnectMessageParser.REASON_FULL:
                     _local_3 = new SimpleAlertView(this._navigator, "${navigator.guestroomfull.title}", "${navigator.guestroomfull.text}");
                     _local_3.show();
                     break;
-                case CantConnectMessageParser._Str_12569:
+                case CantConnectMessageParser.REASON_QUEUE_ERROR:
                     _local_3 = new SimpleAlertView(this._navigator, "${room.queue.error.title}", (("${room.queue.error." + _local_2.parameter) + "}"));
                     _local_3.show();
                     break;
-                case CantConnectMessageParser._Str_12985:
+                case CantConnectMessageParser.REASON_BANNED:
                     _local_3 = new SimpleAlertView(this._navigator, "${navigator.banned.title}", "${navigator.banned.text}");
                     _local_3.show();
                     break;

@@ -5,10 +5,10 @@
 
     public class CantConnectMessageParser implements IMessageParser
     {
-        public static const _Str_14993:int = 1;
-        public static const _Str_19431:int = 2;
-        public static const _Str_12569:int = 3;
-        public static const _Str_12985:int = 4;
+        public static const REASON_FULL:int = 1;
+        public static const REASON_CLOSED:int = 2;
+        public static const REASON_QUEUE_ERROR:int = 3;
+        public static const REASON_BANNED:int = 4;
 
         private var _reason:int = 0;
         private var _parameter:String = "";
