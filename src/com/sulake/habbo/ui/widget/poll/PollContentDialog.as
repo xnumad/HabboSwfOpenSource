@@ -162,16 +162,16 @@
                     }
                     switch (this._currentQuestion.questionType)
                     {
-                        case QuestionType._Str_7537:
+                        case QuestionType.RADIO_BUTTON:
                             this._Str_24518(_local_2, this._currentQuestion.questionChoices);
                             break;
-                        case QuestionType._Str_7059:
+                        case QuestionType.CHECKBOX:
                             this._parser6(_local_2, this._currentQuestion.questionChoices);
                             break;
-                        case QuestionType._Str_13062:
+                        case QuestionType.TEXTLINE:
                             this._Str_22247(_local_2);
                             break;
-                        case QuestionType._Str_15228:
+                        case QuestionType.TEXTAREA:
                             this._Str_23290(_local_2);
                             break;
                         default:
@@ -413,10 +413,10 @@
             this._nextQuestionType = PollQuestion._Str_12458;
             switch (question.questionType)
             {
-                case QuestionType._Str_7537:
+                case QuestionType.RADIO_BUTTON:
                     answerArray = this._Str_23831(question);
                     break;
-                case QuestionType._Str_7059:
+                case QuestionType.CHECKBOX:
                     answerArray = this._Str_22504(question);
                     if (answerArray.length < 0)
                     {
@@ -435,10 +435,10 @@
                         return;
                     }
                     break;
-                case QuestionType._Str_13062:
+                case QuestionType.TEXTLINE:
                     answerArray = this._Str_21937();
                     break;
-                case QuestionType._Str_15228:
+                case QuestionType.TEXTAREA:
                     answerArray = this._Str_23417();
                     break;
                 default:
