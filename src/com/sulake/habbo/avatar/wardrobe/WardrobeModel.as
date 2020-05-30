@@ -4,7 +4,7 @@
     import com.sulake.habbo.avatar.HabboAvatarEditor;
     import com.sulake.core.utils.Map;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.avatar._Str_5988;
+    import com.sulake.habbo.communication.messages.incoming.avatar.OutfitData;
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.session.HabboClubLevelEnum;
 
@@ -96,7 +96,7 @@
         public function _Str_15301(k:int, _arg_2:Array):void
         {
             var _local_3:_Str_4142;
-            var _local_4:_Str_5988;
+            var _local_4:OutfitData;
             if (!this._isInitialized)
             {
                 return;

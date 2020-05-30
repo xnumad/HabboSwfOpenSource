@@ -2,13 +2,13 @@
 {
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5988 
+    public class OutfitData
     {
         private var _slotId:int;
         private var _Str_3704:String;
         private var _gender:String;
 
-        public function _Str_5988(k:IMessageDataWrapper)
+        public function OutfitData(k:IMessageDataWrapper)
         {
             this._slotId = k.readInteger();
             this._Str_3704 = k.readString();

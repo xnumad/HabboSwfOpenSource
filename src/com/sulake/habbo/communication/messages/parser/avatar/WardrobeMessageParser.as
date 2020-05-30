@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.avatar
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.avatar._Str_5988;
+    import com.sulake.habbo.communication.messages.incoming.avatar.OutfitData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class WardrobeMessageParser implements IMessageParser
@@ -19,13 +19,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_4:_Str_5988;
+            var _local_4:OutfitData;
             this._state = k.readInteger();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                _local_4 = new _Str_5988(k);
+                _local_4 = new OutfitData(k);
                 this._outfits.push(_local_4);
                 _local_3++;
             }
