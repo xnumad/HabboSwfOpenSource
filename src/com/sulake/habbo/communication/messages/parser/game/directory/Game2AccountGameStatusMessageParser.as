@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6554 implements IMessageParser 
+    public class Game2AccountGameStatusMessageParser implements IMessageParser
     {
         private var _gameTypeId:int;
         private var _Str_7940:int;

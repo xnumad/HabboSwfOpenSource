@@ -52,7 +52,7 @@
     import com.sulake.habbo.avatar.enum.AvatarSetType;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.communication.messages.parser.game.directory._Str_6554;
+    import com.sulake.habbo.communication.messages.parser.game.directory.Game2AccountGameStatusMessageParser;
     import com.sulake.habbo.window.enum._Str_12232;
     import com.sulake.habbo.communication.messages.parser.game.lobby.GameStatusMessageParser;
 
@@ -732,7 +732,7 @@
         {
             var _local_4:IHabboLocalizationManager;
             var _local_2:Game2AccountGameStatusMessageEvent = (k as Game2AccountGameStatusMessageEvent);
-            var _local_3:_Str_6554 = _local_2.getParser();
+            var _local_3:Game2AccountGameStatusMessageParser = _local_2.getParser();
             if (_local_3.gameTypeId == this._selectedGame)
             {
                 _local_4 = this._gameCenterView.localization;
