@@ -549,7 +549,7 @@
             this._Str_2432 = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
             this.addMessageEvent(new _Str_7677(this._Str_16050));
-            this.addMessageEvent(new _Str_4508(this._Str_17254));
+            this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_8801(this._Str_25682));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_8409(this._Str_23986));
@@ -2039,7 +2039,7 @@
             events.dispatchEvent(new PurseUpdateEvent());
         }
 
-        private function _Str_17254(k:IMessageEvent):void
+        private function onActivityPointNotification(k:IMessageEvent):void
         {
             var _local_2:_Str_4508 = (k as _Str_4508);
             this._purse._Str_18527[_local_2.type] = _local_2.amount;

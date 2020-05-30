@@ -84,7 +84,7 @@
             this.addMessageEvent(new _Str_3660(this._Str_11598));
             this.addMessageEvent(new _Str_8414(this._Str_24449));
             this.addMessageEvent(new _Str_8312(this._Str_25676));
-            this.addMessageEvent(new _Str_4508(this._Str_17254));
+            this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_9354(this._Str_22529));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
@@ -492,7 +492,7 @@
             this._notifications.singularController.addItem(_local_5, NotificationType.INFO, _local_6);
         }
 
-        private function _Str_17254(k:_Str_4508):void
+        private function onActivityPointNotification(k:_Str_4508):void
         {
             var _local_2:String;
             var _local_3:BitmapData;
