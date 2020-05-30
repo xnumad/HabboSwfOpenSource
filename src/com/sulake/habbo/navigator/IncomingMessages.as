@@ -71,7 +71,7 @@
     import com.sulake.core.utils.ErrorReportStorage;
     import com.sulake.habbo.navigator.domain.Tabs;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_7901;
+    import com.sulake.habbo.communication.messages.parser.room.session.RoomForwardMessageParser;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5654;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_7002;
     import com.sulake.habbo.configuration.enum.HabboComponentFlags;
@@ -378,7 +378,7 @@
 
         private function _Str_22797(k:IMessageEvent):void
         {
-            var _local_2:_Str_7901 = _Str_8002(k).getParser();
+            var _local_2:RoomForwardMessageParser = _Str_8002(k).getParser();
             Logger.log(("Got room forward: " + _local_2.roomId));
             this._Str_14669(_local_2.roomId);
         }
