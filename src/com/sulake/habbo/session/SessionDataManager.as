@@ -121,7 +121,7 @@
         private var _isRoomCameraFollowDisabled:Boolean;
         private var _uiFlags:int;
         private var _accountSafetyLocked:Boolean = false;
-        private var _Str_18582:String;
+        private var _mysteryBoxColor:String;
         private var _Str_18348:String;
         private var _Str_20020:Boolean = false;
         private var _Str_12845:Boolean = false;
@@ -391,9 +391,9 @@
         private function onMysteryBoxKeys(k:MysteryBoxKeysMessageEvent):void
         {
             var _local_2:MysteryBoxKeysMessageParser = k.getParser();
-            this._Str_18582 = _local_2.boxColor;
+            this._mysteryBoxColor = _local_2.boxColor;
             this._Str_18348 = _local_2.keyColor;
-            events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._Str_18582, this._Str_18348));
+            events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._mysteryBoxColor, this._Str_18348));
         }
 
         private function _Str_7983(k:_Str_8527):void
@@ -1101,7 +1101,7 @@
 
         public function get mysteryBoxColor():String
         {
-            return this._Str_18582;
+            return this._mysteryBoxColor;
         }
 
         public function get mysteryKeyColor():String
