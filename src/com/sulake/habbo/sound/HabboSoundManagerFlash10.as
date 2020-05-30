@@ -331,7 +331,7 @@
             {
                 return;
             }
-            this._notifications._Str_15846(k, _arg_2);
+            this._notifications.addSongPlayingNotification(k, _arg_2);
         }
 
         private function _Str_25566(k:IID=null, _arg_2:IUnknown=null):void

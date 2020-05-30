@@ -166,7 +166,7 @@
             return k[0] as HabboNotificationItem;
         }
 
-        public function _Str_15846(k:String, _arg_2:String):void
+        public function addSongPlayingNotification(k:String, _arg_2:String):void
         {
             this._notifications.localization.registerParameter("soundmachine.notification.playing", "songname", k);
             this._notifications.localization.registerParameter("soundmachine.notification.playing", "songauthor", _arg_2);

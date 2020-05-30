@@ -237,9 +237,9 @@
             this._communication.connection.send(new _Str_11544());
         }
 
-        public function _Str_15846(k:String, _arg_2:String):void
+        public function addSongPlayingNotification(k:String, _arg_2:String):void
         {
-            this._singularController._Str_15846(k, _arg_2);
+            this._singularController.addSongPlayingNotification(k, _arg_2);
         }
 
         public function _Str_10093(k:String, _arg_2:Map=null):void
