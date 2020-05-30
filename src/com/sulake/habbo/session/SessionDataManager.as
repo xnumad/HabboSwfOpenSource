@@ -183,7 +183,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this.onInClientLink));
-                this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
+                this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
                 this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
             }
             this._rights = [];
@@ -410,7 +410,7 @@
             context.createLinkEvent(k.link);
         }
 
-        private function _Str_10366(k:AccountPreferencesEvent):void
+        private function onAccountPreferences(k:AccountPreferencesEvent):void
         {
             var _local_2:AccountPreferencesParser = (k.getParser() as AccountPreferencesParser);
             this._isRoomCameraFollowDisabled = _local_2.roomCameraFollowDisabled;

@@ -96,7 +96,7 @@
         {
             this._Str_2432 = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new _Str_5567(this._Str_19006));
-            this.addMessageEvent(new AccountPreferencesEvent(this._Str_10366));
+            this.addMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
             if (getBoolean("client.minimail.embed.enabled"))
             {
                 this.addMessageEvent(new _Str_11459(this._Str_23193));
@@ -139,7 +139,7 @@
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._Str_9588));
         }
 
-        private function _Str_10366(k:AccountPreferencesEvent):void
+        private function onAccountPreferences(k:AccountPreferencesEvent):void
         {
             this._Str_9090 = k.getParser().roomInvitesIgnored;
         }

@@ -187,7 +187,7 @@
             this._communication.addHabboConnectionMessageEvent(new _Str_2752(this.onRoomEnter));
             this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this._Str_25751));
-            this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this._Str_10366));
+            this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
         }
 
         private function onPerkAllowances(k:PerkAllowancesEvent):void
@@ -266,7 +266,7 @@
             }
         }
 
-        private function _Str_10366(k:AccountPreferencesEvent):void
+        private function onAccountPreferences(k:AccountPreferencesEvent):void
         {
             this._freeFlowDisabled = k.getParser().freeFlowChatDisabled;
             this._preferedChatStyle = k.getParser().preferedChatStyle;
