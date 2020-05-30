@@ -36,7 +36,7 @@
             return this._freeGamesLeft;
         }
 
-        public function get _Str_23843():Boolean
+        public function get hasUnlimitedGames():Boolean
         {
             return this._freeGamesLeft == -1;
         }
