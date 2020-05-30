@@ -67,7 +67,7 @@
         {
             if (this._baseView)
             {
-                this._baseView._Str_22882(k);
+                this._baseView.setViewEnabled(k);
             }
         }
 

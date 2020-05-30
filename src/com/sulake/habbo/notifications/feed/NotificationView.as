@@ -147,7 +147,7 @@
             }
         }
 
-        public function _Str_22882(k:Boolean):void
+        public function setViewEnabled(k:Boolean):void
         {
             this._stateController._Str_6130(k);
             this._Str_10921(this._stateController._Str_16276());
