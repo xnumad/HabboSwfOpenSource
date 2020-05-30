@@ -4,21 +4,21 @@
 
     public class AvatarExpressionMessageComposer implements IMessageComposer
     {
-        private var _Str_5400:int = 0;
+        private var _typeCode:int = 0;
 
         public function AvatarExpressionMessageComposer(k:int)
         {
-            this._Str_5400 = k;
+            this._typeCode = k;
         }
 
         public function dispose():void
         {
-            this._Str_5400 = 0;
+            this._typeCode = 0;
         }
 
         public function getMessageArray():Array
         {
-            return [this._Str_5400];
+            return [this._typeCode];
         }
     }
 }
