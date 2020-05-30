@@ -192,26 +192,26 @@
             }
             switch (k)
             {
-                case ChangeUserNameResultMessageEvent._Str_7721:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_IN_USE:
                     this._manager.localization.registerParameter("help.tutorial.name.taken", "name", _arg_2);
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.taken");
                     break;
-                case ChangeUserNameResultMessageEvent._Str_7836:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_NOT_VALID:
                     this._manager.localization.registerParameter("help.tutorial.name.invalid", "name", _arg_2);
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.invalid");
                     break;
-                case ChangeUserNameResultMessageEvent._Str_7005:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_REQUIRED:
                     break;
-                case ChangeUserNameResultMessageEvent._Str_7137:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_TOO_LONG:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.long");
                     break;
-                case ChangeUserNameResultMessageEvent._Str_7389:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_TOO_SHORT:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.short");
                     break;
-                case ChangeUserNameResultMessageEvent._Str_8620:
+                case ChangeUserNameResultMessageEvent.ERROR_NAME_CHANGE_NOT_ALLOWED:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.change_not_allowed");
                     break;
-                case ChangeUserNameResultMessageEvent._Str_9429:
+                case ChangeUserNameResultMessageEvent.ERROR_MERGE_HOTEL_DOWN:
                     _local_4.text = this._manager.localization.getLocalization("help.tutorial.name.merge_hotel_down");
                     break;
             }
@@ -220,7 +220,7 @@
             {
                 return;
             }
-            if (((k == ChangeUserNameResultMessageEvent._Str_9429) || (k == ChangeUserNameResultMessageEvent._Str_8620)))
+            if (((k == ChangeUserNameResultMessageEvent.ERROR_MERGE_HOTEL_DOWN) || (k == ChangeUserNameResultMessageEvent.ERROR_NAME_CHANGE_NOT_ALLOWED)))
             {
                 _local_5.visible = false;
                 return;

@@ -7,11 +7,11 @@
     public class CheckUserNameResultMessageEvent extends MessageEvent implements IMessageEvent
     {
         public static var NAME_OK:int = 0;
-        public static var _Str_7005:int = 1;
-        public static var _Str_7389:int = 2;
-        public static var _Str_7137:int = 3;
-        public static var _Str_7836:int = 4;
-        public static var _Str_7721:int = 5;
+        public static var ERROR_NAME_REQUIRED:int = 1;
+        public static var ERROR_NAME_TOO_SHORT:int = 2;
+        public static var ERROR_NAME_TOO_LONG:int = 3;
+        public static var ERROR_NAME_NOT_VALID:int = 4;
+        public static var ERROR_NAME_IN_USE:int = 5;
 
         public function CheckUserNameResultMessageEvent(k:Function)
         {

@@ -7,13 +7,13 @@
     public class ChangeUserNameResultMessageEvent extends MessageEvent implements IMessageEvent
     {
         public static var NAME_OK:int = 0;
-        public static var _Str_7005:int = 1;
-        public static var _Str_7389:int = 2;
-        public static var _Str_7137:int = 3;
-        public static var _Str_7836:int = 4;
-        public static var _Str_7721:int = 5;
-        public static var _Str_8620:int = 6;
-        public static var _Str_9429:int = 7;
+        public static var ERROR_NAME_REQUIRED:int = 1;
+        public static var ERROR_NAME_TOO_SHORT:int = 2;
+        public static var ERROR_NAME_TOO_LONG:int = 3;
+        public static var ERROR_NAME_NOT_VALID:int = 4;
+        public static var ERROR_NAME_IN_USE:int = 5;
+        public static var ERROR_NAME_CHANGE_NOT_ALLOWED:int = 6;
+        public static var ERROR_MERGE_HOTEL_DOWN:int = 7;
 
         public function ChangeUserNameResultMessageEvent(k:Function)
         {
