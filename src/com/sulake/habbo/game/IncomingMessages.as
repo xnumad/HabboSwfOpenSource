@@ -148,7 +148,7 @@
                 _local_4 = 1;
                 while (_local_4 <= _local_3.levels)
                 {
-                    _local_5 = (("ACH_" + _local_3._Str_25317) + _local_4);
+                    _local_5 = (("ACH_" + _local_3.achievementName) + _local_4);
                     GameConfigurations.addGameAchievementBadge(_local_3.gameTypeId, _local_5);
                     _local_4++;
                 }

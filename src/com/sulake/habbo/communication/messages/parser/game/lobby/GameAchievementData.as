@@ -25,7 +25,7 @@
             return this._achievementId;
         }
 
-        public function get _Str_25317():String
+        public function get achievementName():String
         {
             return this._achievementName;
         }
