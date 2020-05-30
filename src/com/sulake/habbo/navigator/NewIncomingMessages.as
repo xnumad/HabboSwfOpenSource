@@ -87,7 +87,7 @@
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5700;
     import com.sulake.core.window.IWindowContext;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.parser.room.session._Str_4184;
+    import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
     import com.sulake.habbo.communication.messages.outgoing._Str_84._Str_3719;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
@@ -575,19 +575,19 @@
         private function _Str_18891(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:_Str_4184 = (k as _Str_5763).getParser();
+            var _local_2:CantConnectMessageParser = (k as _Str_5763).getParser();
             Logger.log(("FAILED TO CONNECT: REASON: " + _local_2.reason));
             switch (_local_2.reason)
             {
-                case _Str_4184._Str_14993:
+                case CantConnectMessageParser._Str_14993:
                     _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${navigator.guestroomfull.title}", "${navigator.guestroomfull.text}");
                     _local_3.show();
                     break;
-                case _Str_4184._Str_12569:
+                case CantConnectMessageParser._Str_12569:
                     _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${room.queue.error.title}", (("${room.queue.error." + _local_2.parameter) + "}"));
                     _local_3.show();
                     break;
-                case _Str_4184._Str_12985:
+                case CantConnectMessageParser._Str_12985:
                     _local_3 = new SimpleAlertView(LegacyNavigator(this._navigator._Str_2559), "${navigator.banned.title}", "${navigator.banned.text}");
                     _local_3.show();
                     break;
