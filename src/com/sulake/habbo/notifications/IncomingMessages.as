@@ -129,7 +129,7 @@
             this._communication = null;
         }
 
-        private function _Str_18948():Boolean
+        private function useNotificationFeed():Boolean
         {
             return this._notifications.getBoolean("notification.feed.enabled");
         }
@@ -151,7 +151,7 @@
                 {
                     new NotificationPopup(_local_3.messages, this._notifications.assetLibrary, this._notifications.windowManager);
                 }
-                if (this._Str_18948())
+                if (this.useNotificationFeed())
                 {
                     for each (_local_4 in _local_3.messages)
                     {
@@ -247,7 +247,7 @@
             {
                 this._notifications.singularController.alertDialogManager._Str_22425(_local_2.message, _local_2.url);
             }
-            if (this._Str_18948())
+            if (this.useNotificationFeed())
             {
                 _local_3 = new GenericNotificationItemData();
                 _local_3.title = _local_2.message;
@@ -270,7 +270,7 @@
             {
                 this._notifications.singularController.alertDialogManager._Str_22997(_local_2.message, _local_2.url);
             }
-            if (this._Str_18948())
+            if (this.useNotificationFeed())
             {
                 _local_3 = new GenericNotificationItemData();
                 _local_3.title = _local_2.message;
