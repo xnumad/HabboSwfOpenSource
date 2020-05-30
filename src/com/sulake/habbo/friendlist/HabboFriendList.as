@@ -76,7 +76,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_11750;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_12244;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3742;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_7531;
     import com.sulake.habbo.friendlist.domain.FriendRequest;
     import com.sulake.habbo.communication.messages.parser.friendlist._Str_6246;
@@ -551,7 +551,7 @@
 
         private function _Str_24954(k:IMessageEvent):void
         {
-            var _local_3:_Str_3742;
+            var _local_3:FriendRequestData;
             var _local_2:_Str_7531 = (k as _Str_5641).getParser();
             this._friendRequests._Str_20199(false);
             for each (_local_3 in _local_2._Str_17539)

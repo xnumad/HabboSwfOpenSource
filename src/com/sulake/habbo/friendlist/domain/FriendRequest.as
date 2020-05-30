@@ -2,7 +2,7 @@
 {
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3742;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
 
     public class FriendRequest implements IDisposable 
     {
@@ -18,7 +18,7 @@
         private var _disposed:Boolean;
         private var _view:IWindowContainer;
 
-        public function FriendRequest(k:_Str_3742)
+        public function FriendRequest(k:FriendRequestData)
         {
             this._requestId = k.requestId;
             this._requesterName = k.requesterName;

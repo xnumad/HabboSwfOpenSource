@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.friendlist
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3742;
+    import com.sulake.habbo.communication.messages.incoming.friendlist.FriendRequestData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class _Str_6246 implements IMessageParser 
     {
-        private var _req:_Str_3742;
+        private var _req:FriendRequestData;
 
 
         public function flush():Boolean
@@ -16,11 +16,11 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._req = new _Str_3742(k);
+            this._req = new FriendRequestData(k);
             return true;
         }
 
-        public function get req():_Str_3742
+        public function get req():FriendRequestData
         {
             return this._req;
         }
