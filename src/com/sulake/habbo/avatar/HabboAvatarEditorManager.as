@@ -70,7 +70,7 @@
                 _avatarRenderManager = k;
             }, true, [{
                 "type":AvatarRenderEvent.AVATAR_RENDER_READY,
-                "callback":this._Str_23577
+                "callback":this.onAvatarRendererReady
             }]), new ComponentDependency(new IIDHabboInventory(), function (k:IHabboInventory):void
             {
                 _inventory = k;
@@ -197,7 +197,7 @@
             }
         }
 
-        public function _Str_6435(k:uint):HabboAvatarEditor
+        public function getEditor(k:uint):HabboAvatarEditor
         {
             return this._editors.getValue(k) as HabboAvatarEditor;
         }
@@ -217,7 +217,7 @@
             return this._avatarRenderManager;
         }
 
-        private function _Str_23577(k:Event=null):void
+        private function onAvatarRendererReady(k:Event=null):void
         {
             this.events.dispatchEvent(new Event(AvatarEditorEvent.AVATAR_EDITOR_READY));
         }
@@ -247,7 +247,7 @@
             return this._inventory;
         }
 
-        public function get _Str_6647():IRoomDesktop
+        public function get roomDesktop():IRoomDesktop
         {
             return this._roomUI.getDesktop("hard_coded_room_id");
         }
