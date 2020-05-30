@@ -92,7 +92,7 @@
             this.addMessageEvent(new _Str_7321(this.onMOTD));
             this.addMessageEvent(new RecyclerFinishedEvent(this._Str_17153));
             this.addMessageEvent(new _Str_9048(this._Str_24729));
-            this.addMessageEvent(new _Str_9312(this._Str_24490));
+            this.addMessageEvent(new _Str_9312(this.onRoomMessagesNotification));
             this.addMessageEvent(new _Str_9995(this._Str_24460));
             this.addMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
             this.addMessageEvent(new _Str_7309(this._Str_25384));
@@ -195,7 +195,7 @@
             }
         }
 
-        private function _Str_24490(k:_Str_9312):void
+        private function onRoomMessagesNotification(k:_Str_9312):void
         {
             var _local_3:ILocalization;
             var _local_2:_Str_7351 = k.getParser();
