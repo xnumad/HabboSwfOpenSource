@@ -37,7 +37,7 @@
     import flash.events.Event;
     import com.sulake.room.utils.Vector3d;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.outgoing._Str_549._Str_9845;
+    import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.habbo.session.handler.BaseHandler;
     import com.sulake.iid.*;
@@ -260,7 +260,7 @@
             _local_3.roomId = 1;
             _local_3.roomPassword = "";
             _local_3.habboTracking = this._habboTracking;
-            _local_3.openConnectionComposer = new _Str_9845(k, _arg_2);
+            _local_3.openConnectionComposer = new RoomNetworkOpenConnectionMessageComposer(k, _arg_2);
             return this.createSession(_local_3);
         }
 

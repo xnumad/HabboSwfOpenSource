@@ -455,7 +455,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
 	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
 	import com.sulake.habbo.communication.messages.outgoing._Str_547._Str_11713;
-	import com.sulake.habbo.communication.messages.outgoing._Str_549._Str_9845;
+	import com.sulake.habbo.communication.messages.outgoing.roomdirectory.RoomNetworkOpenConnectionMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.votes.CommunityGoalVoteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.landingview.GetPromoArticlesComposer;
 	import com.sulake.habbo.communication.messages.outgoing.users.*;
@@ -1891,7 +1891,7 @@
             OUTGOING_PACKETS[367] = _Str_7664;
             OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;
             OUTGOING_PACKETS[3720] = PostQuizAnswersComposer;
-            OUTGOING_PACKETS[3736] = _Str_9845;
+            OUTGOING_PACKETS[3736] = RoomNetworkOpenConnectionMessageComposer;
             OUTGOING_PACKETS[3742] = _Str_12485;
             OUTGOING_PACKETS[3768] = _Str_11696;
             OUTGOING_PACKETS[3775] = _Str_11713;

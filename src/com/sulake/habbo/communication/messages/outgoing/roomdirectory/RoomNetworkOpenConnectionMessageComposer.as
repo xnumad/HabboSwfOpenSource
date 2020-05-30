@@ -1,13 +1,13 @@
-﻿package com.sulake.habbo.communication.messages.outgoing._Str_549
+﻿package com.sulake.habbo.communication.messages.outgoing.roomdirectory
 {
     import com.sulake.core.communication.messages.IMessageComposer;
     import com.sulake.core.runtime.IDisposable;
 
-    public class _Str_9845 implements IMessageComposer, IDisposable 
+    public class RoomNetworkOpenConnectionMessageComposer implements IMessageComposer, IDisposable
     {
         private var _array:Array;
 
-        public function _Str_9845(k:int, _arg_2:int)
+        public function RoomNetworkOpenConnectionMessageComposer(k:int, _arg_2:int)
         {
             this._array = new Array();
             super();
