@@ -354,7 +354,7 @@
                 _local_3 = new Map();
                 _local_4 = this.localizationManager.getLocalization("groupforum.view.error.operation_read");
                 _local_3.add("message", this.localizationManager.getLocalizationWithParams(("groupforum.view.error." + _local_2._Str_24689), "", "operation", _local_4));
-                this.notifications._Str_10093("forums.error.access_denied", _local_3);
+                this.notifications.showNotification("forums.error.access_denied", _local_3);
                 return;
             }
             this._forumData = _local_2;

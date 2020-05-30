@@ -242,7 +242,7 @@
             this._singularController.addSongPlayingNotification(k, _arg_2);
         }
 
-        public function _Str_10093(k:String, _arg_2:Map=null):void
+        public function showNotification(k:String, _arg_2:Map=null):void
         {
             var _local_4:Object;
             var _local_5:String;
@@ -304,12 +304,12 @@
 
         private function _Str_25671(k:CatalogEvent):void
         {
-            this._Str_10093("builders_club.membership_in_grace", null);
+            this.showNotification("builders_club.membership_in_grace", null);
         }
 
         private function _Str_24508(k:CatalogEvent):void
         {
-            this._Str_10093("builders_club.membership_expired", null);
+            this.showNotification("builders_club.membership_expired", null);
         }
 
         public function createLinkEvent(k:String):void

@@ -399,7 +399,7 @@
         private function _Str_24546(k:_Str_8670):void
         {
             var _local_2:_Str_7117 = k.getParser();
-            this._notifications._Str_10093(_local_2.type, _local_2.parameters);
+            this._notifications.showNotification(_local_2.type, _local_2.parameters);
         }
 
         private function onPetRespectFailed(k:IMessageEvent):void

@@ -5,7 +5,7 @@
 
     public interface IHabboNotifications extends IUnknown 
     {
-        function _Str_10093(_arg_1:String, _arg_2:Map=null):void;
+        function showNotification(_arg_1:String, _arg_2:Map=null):void;
         function addSongPlayingNotification(_arg_1:String, _arg_2:String):void;
     }
 }
