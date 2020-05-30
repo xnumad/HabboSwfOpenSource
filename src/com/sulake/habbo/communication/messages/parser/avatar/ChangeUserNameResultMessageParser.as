@@ -7,7 +7,7 @@
     {
         private var _resultCode:int = -1;
         private var _name:String;
-        private var _Str_5895:Array;
+        private var _nameSuggestions:Array;
 
 
         public function get resultCode():int
@@ -22,14 +22,14 @@
 
         public function get _Str_14643():Array
         {
-            return this._Str_5895;
+            return this._nameSuggestions;
         }
 
         public function flush():Boolean
         {
             this._resultCode = -1;
             this._name = "";
-            this._Str_5895 = null;
+            this._nameSuggestions = null;
             return true;
         }
 
@@ -38,11 +38,11 @@
             this._resultCode = k.readInteger();
             this._name = k.readString();
             var _local_2:int = k.readInteger();
-            this._Str_5895 = new Array();
+            this._nameSuggestions = new Array();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_5895.push(k.readString());
+                this._nameSuggestions.push(k.readString());
                 _local_3++;
             }
             return true;
