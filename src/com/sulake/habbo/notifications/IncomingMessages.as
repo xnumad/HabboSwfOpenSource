@@ -85,7 +85,7 @@
             this.addMessageEvent(new _Str_8414(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this.onModMessageEvent));
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
-            this.addMessageEvent(new _Str_9354(this._Str_22529));
+            this.addMessageEvent(new _Str_9354(this.onUserBannedMessageEvent));
             this.addMessageEvent(new HotelClosesAndWillOpenAtEvent(this._Str_10317));
             this.addMessageEvent(new PetBoughtNotificationEvent(this._Str_25804));
             this.addMessageEvent(new _Str_5714(this.onRoomEnter));
@@ -281,7 +281,7 @@
             }
         }
 
-        private function _Str_22529(k:IMessageEvent):void
+        private function onUserBannedMessageEvent(k:IMessageEvent):void
         {
             var _local_2:_Str_8126 = (k as _Str_9354).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
