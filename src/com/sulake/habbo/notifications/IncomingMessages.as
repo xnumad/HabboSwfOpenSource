@@ -56,7 +56,7 @@
     import com.sulake.habbo.communication.messages.parser.inventory.pets.PetBoughtNotificationMessageParser;
     import com.sulake.habbo.communication.messages.parser.notifications._Str_6671;
     import com.sulake.habbo.window.enum.FrankIllustration;
-    import com.sulake.habbo.communication.messages.parser.notifications._Str_7117;
+    import com.sulake.habbo.communication.messages.parser.notifications.NotificationDialogMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetScratchFailedMessageParser;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.window.utils._Str_2418;
@@ -398,7 +398,7 @@
 
         private function _Str_24546(k:_Str_8670):void
         {
-            var _local_2:_Str_7117 = k.getParser();
+            var _local_2:NotificationDialogMessageParser = k.getParser();
             this._notifications.showNotification(_local_2.type, _local_2.parameters);
         }
 
