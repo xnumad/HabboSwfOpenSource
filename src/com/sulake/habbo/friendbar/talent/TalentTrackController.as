@@ -108,11 +108,11 @@
         {
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new _Str_7229(this._Str_24186));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new HabboGroupDetailsMessageEvent(this._Str_3702));
-            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
+            this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
             this._habboTalent.communicationManager.addHabboConnectionMessageEvent(new ChangeEmailResultEvent(this._Str_17386));
         }
 
-        private function _Str_16302(k:EmailStatusResultEvent):void
+        private function onEmailStatus(k:EmailStatusResultEvent):void
         {
             var _local_2:IWindowContainer = this._Str_7795();
             if (_local_2 != null)

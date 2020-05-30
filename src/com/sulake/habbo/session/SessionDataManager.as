@@ -184,7 +184,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new NoobnessLevelMessageEvent(this.onNoobnessLevelEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new InClientLinkMessageEvent(this.onInClientLink));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
-                this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this._Str_16302));
+                this._communicationManager.addHabboConnectionMessageEvent(new EmailStatusResultEvent(this.onEmailStatus));
             }
             this._rights = [];
             this._Str_7432 = new _Str_8883(this);
@@ -418,7 +418,7 @@
             events.dispatchEvent(new SessionDataPreferencesEvent(this._uiFlags));
         }
 
-        private function _Str_16302(k:EmailStatusResultEvent):void
+        private function onEmailStatus(k:EmailStatusResultEvent):void
         {
             var _local_2:EmailStatusParser = (k.getParser() as EmailStatusParser);
             this._isEmailVerified = _local_2.isVerified;
