@@ -122,7 +122,7 @@
         private var _uiFlags:int;
         private var _accountSafetyLocked:Boolean = false;
         private var _mysteryBoxColor:String;
-        private var _Str_18348:String;
+        private var _mysteryKeyColor:String;
         private var _Str_20020:Boolean = false;
         private var _Str_12845:Boolean = false;
         private var _Str_8108:Timer = null;
@@ -392,8 +392,8 @@
         {
             var _local_2:MysteryBoxKeysMessageParser = k.getParser();
             this._mysteryBoxColor = _local_2.boxColor;
-            this._Str_18348 = _local_2.keyColor;
-            events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._mysteryBoxColor, this._Str_18348));
+            this._mysteryKeyColor = _local_2.keyColor;
+            events.dispatchEvent(new MysteryBoxKeysUpdateEvent(this._mysteryBoxColor, this._mysteryKeyColor));
         }
 
         private function _Str_7983(k:_Str_8527):void
@@ -1106,7 +1106,7 @@
 
         public function get mysteryKeyColor():String
         {
-            return this._Str_18348;
+            return this._mysteryKeyColor;
         }
     }
 }
