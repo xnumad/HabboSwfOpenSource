@@ -9,7 +9,7 @@
         private var _owner:Boolean;
 
 
-        public function get _Str_6550():int
+        public function get guestRoomId():int
         {
             return this._guestRoomId;
         }

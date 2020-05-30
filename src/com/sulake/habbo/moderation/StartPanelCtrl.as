@@ -101,7 +101,7 @@
             (IWindowContainer(this._frame.findChildByName("room_tool_but")).findChildByName("offence_name") as ILabelWindow).textColor = 0;
             this._Str_22550();
             this._isGuestRoom = true;
-            this._roomId = k._Str_6550;
+            this._roomId = k.guestRoomId;
         }
 
         public function _Str_25510():void

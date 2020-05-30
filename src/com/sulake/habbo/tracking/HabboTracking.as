@@ -631,9 +631,9 @@
                 this._anyRoomsVisited = true;
             }
             var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
-            ErrorReportStorage.setParameter(HabboErrorVariableEnum.LAST_ROOM, String(_local_2._Str_6550));
+            ErrorReportStorage.setParameter(HabboErrorVariableEnum.LAST_ROOM, String(_local_2.guestRoomId));
             ErrorReportStorage.setParameter(HabboErrorVariableEnum.IN_ROOM, String(true));
-            this.legacyTrackGoogle("navigator", "private", [_local_2._Str_6550]);
+            this.legacyTrackGoogle("navigator", "private", [_local_2.guestRoomId]);
         }
 
         private function onConfigurationComplete(k:Event):void

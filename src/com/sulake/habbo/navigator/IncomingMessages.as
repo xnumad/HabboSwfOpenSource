@@ -276,7 +276,7 @@
             this.data.onRoomEnter(_local_2);
             this._Str_20233();
             this._navigator._Str_4012.close();
-            this._navigator.send(new _Str_3570(_local_2._Str_6550, true, false));
+            this._navigator.send(new _Str_3570(_local_2.guestRoomId, true, false));
             Logger.log("Sent get guest room...");
             this._navigator._Str_5048.refresh();
             this._navigator._Str_6939.close();

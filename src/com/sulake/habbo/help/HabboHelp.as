@@ -755,7 +755,7 @@
         private function onRoomEnter(k:_Str_2752):void
         {
             var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
-            this._currentRoomId = _local_2._Str_6550;
+            this._currentRoomId = _local_2.guestRoomId;
         }
 
         private function onCfhTopics(k:CfhTopicsInitEvent):void

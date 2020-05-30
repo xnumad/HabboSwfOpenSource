@@ -397,7 +397,7 @@
             this._detailsWindowCtrl.close();
             this._groupRoomInfoCtrl.close();
             var _local_2:RoomEntryInfoMessageParser = _Str_2752(k).getParser();
-            this._roomId = _local_2._Str_6550;
+            this._roomId = _local_2.guestRoomId;
         }
 
         private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void

@@ -296,7 +296,7 @@
         {
             var _local_3:RoomToolCtrl;
             var _local_2:RoomEntryInfoMessageParser = k.getParser();
-            this._moderationManager.currentFlatId = _local_2._Str_6550;
+            this._moderationManager.currentFlatId = _local_2.guestRoomId;
             this._moderationManager.startPanel._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)
             {

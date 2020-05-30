@@ -85,7 +85,7 @@
             this._enteredGuestRoom = null;
             this._currentRoomOwner = false;
             this._currentRoomOwner = k.owner;
-            this._currentRoomId = k._Str_6550;
+            this._currentRoomId = k.guestRoomId;
         }
 
         public function onRoomExit():void
