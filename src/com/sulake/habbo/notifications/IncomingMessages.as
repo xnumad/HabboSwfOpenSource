@@ -82,7 +82,7 @@
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             this.addMessageEvent(new _Str_8665(this._Str_24393));
             this.addMessageEvent(new _Str_3660(this._Str_11598));
-            this.addMessageEvent(new _Str_8414(this._Str_24449));
+            this.addMessageEvent(new _Str_8414(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this._Str_25676));
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
             this.addMessageEvent(new _Str_9354(this._Str_22529));
@@ -430,7 +430,7 @@
             }
         }
 
-        private function _Str_24449(k:_Str_8414):void
+        private function onClubGiftNotification(k:_Str_8414):void
         {
             if (!k)
             {
