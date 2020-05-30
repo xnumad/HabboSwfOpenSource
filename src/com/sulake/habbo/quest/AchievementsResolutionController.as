@@ -106,7 +106,7 @@
             this._completedView.show(_arg_2, k);
         }
 
-        public function _Str_11598(k:_Str_6768):void
+        public function onLevelUp(k:_Str_6768):void
         {
             if ((((this._progressView) && (this._progressView.visible)) && (k.type == this._progressView.achievementId)))
             {

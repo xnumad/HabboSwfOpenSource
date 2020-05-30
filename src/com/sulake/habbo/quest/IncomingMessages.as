@@ -71,7 +71,7 @@
             _local_2.addHabboConnectionMessageEvent(new ScrSendUserInfoEvent(this._Str_24584));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionCompletedMessageEvent(this._Str_24464));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3660(this._Str_11598));
+            _local_2.addHabboConnectionMessageEvent(new _Str_3660(this.onLevelUp));
             _local_2.addHabboConnectionMessageEvent(new _Str_4508(this._Str_24427));
             _local_2.addHabboConnectionMessageEvent(new _Str_5843(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new IsFirstLoginOfDayEvent(this._Str_22814));
@@ -218,13 +218,13 @@
             return result;
         }
 
-        private function _Str_11598(k:IMessageEvent):void
+        private function onLevelUp(k:IMessageEvent):void
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
             var _local_3:_Str_5519 = _local_2.getParser();
             var _local_4:String = this._questEngine.localization._Str_21634(_local_3.data.badgeCode);
             this._questEngine.send(new EventLogMessageComposer("Achievements", _local_4, "Leveled", "", _local_3.data.level));
-            this._questEngine._Str_10255._Str_11598(_local_3.data);
+            this._questEngine._Str_10255.onLevelUp(_local_3.data);
         }
 
         private function _Str_22814(k:IMessageEvent):void

@@ -81,7 +81,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new RoomUserRespect(this.onRespectNotification));
             this.addMessageEvent(new _Str_8665(this.onNotificationDialogMessageEvent));
-            this.addMessageEvent(new _Str_3660(this._Str_11598));
+            this.addMessageEvent(new _Str_3660(this.onLevelUp));
             this.addMessageEvent(new _Str_8414(this.onClubGiftNotification));
             this.addMessageEvent(new _Str_8312(this._Str_25676));
             this.addMessageEvent(new _Str_4508(this.onActivityPointNotification));
@@ -164,7 +164,7 @@
             }
         }
 
-        private function _Str_11598(k:IMessageEvent):void
+        private function onLevelUp(k:IMessageEvent):void
         {
             var _local_2:_Str_3660 = (k as _Str_3660);
             var _local_3:_Str_5519 = _local_2.getParser();
