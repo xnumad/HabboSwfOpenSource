@@ -29,7 +29,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var _local_3:int;
-            var _local_4:_Str_5002;
+            var _local_4:RoomQueueSet;
             var _local_6:String;
             var _local_7:int;
             var _local_8:int;
@@ -44,7 +44,7 @@
                 {
                     this._Str_8285 = _local_7;
                 }
-                _local_4 = new _Str_5002(_local_6, _local_7);
+                _local_4 = new RoomQueueSet(_local_6, _local_7);
                 _local_3 = k.readInteger();
                 _local_8 = 0;
                 while (_local_8 < _local_3)
@@ -63,9 +63,9 @@
             return this._Str_9564.getKeys();
         }
 
-        public function _Str_25714(k:int):_Str_5002
+        public function _Str_25714(k:int):RoomQueueSet
         {
-            return this._Str_9564.getValue(k) as _Str_5002;
+            return this._Str_9564.getValue(k) as RoomQueueSet;
         }
     }
 }

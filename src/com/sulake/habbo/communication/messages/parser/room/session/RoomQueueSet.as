@@ -2,13 +2,13 @@
 {
     import com.sulake.core.utils.Map;
 
-    public class _Str_5002 
+    public class RoomQueueSet
     {
         private var _name:String;
         private var _target:int;
         private var _Str_5811:Map;
 
-        public function _Str_5002(k:String, _arg_2:int)
+        public function RoomQueueSet(k:String, _arg_2:int)
         {
             this._name = k;
             this._target = _arg_2;
