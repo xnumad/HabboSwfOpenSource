@@ -43,7 +43,7 @@
             this._component = _arg_2;
             this._stateController = new StateController();
             FeedEntity._Str_23222(this.windowManager, this.assets, this.localization, k);
-            this._Str_25673();
+            this.setupUserInterface();
             this.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
             this.switchToPane(PANE_NOTIFICATIONS);
             this._Str_10921(FeedVisibilityEnum._Str_6770);
@@ -92,7 +92,7 @@
             return this._controller;
         }
 
-        private function _Str_25673():void
+        private function setupUserInterface():void
         {
             if (this._window)
             {
