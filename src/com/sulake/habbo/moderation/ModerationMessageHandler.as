@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7799;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_7632;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.moderation._Str_9341;
     import com.sulake.habbo.communication.messages.incoming.userclassification.UserClassificationMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.callforhelp._Str_9038;
@@ -80,7 +80,7 @@
             _local_2.addMessageEvent(new _Str_7799(this.onRoomChatlog));
             _local_2.addMessageEvent(new _Str_7632(this.onRoomVisits));
             _local_2.addMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            _local_2.addMessageEvent(new _Str_3352(this.onRoomExit));
+            _local_2.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addMessageEvent(new _Str_9341(this.onModeratorActionResult));
             _local_2.addMessageEvent(new UserClassificationMessageEvent(this.onRoomUserClassification));
             _local_2.addMessageEvent(new _Str_9038(this.onSanctions));
@@ -304,7 +304,7 @@
             }
         }
 
-        private function onRoomExit(k:_Str_3352):void
+        private function onRoomExit(k:CloseConnectionMessageEvent):void
         {
             var _local_2:RoomToolCtrl;
             this._moderationManager.currentFlatId = 0;

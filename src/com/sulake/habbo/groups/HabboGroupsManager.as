@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberFurniCountInHQMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildCreationInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditorDataMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembershipRejectedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDeactivatedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMembersEvent;
@@ -177,7 +177,7 @@
             this.addMessageEvent(new GuildMemberFurniCountInHQMessageEvent(this._Str_25619));
             this.addMessageEvent(new GuildCreationInfoMessageEvent(this._Str_16681));
             this.addMessageEvent(new GuildEditorDataMessageEvent(this._Str_25430));
-            this.addMessageEvent(new _Str_3352(this._Str_23870));
+            this.addMessageEvent(new CloseConnectionMessageEvent(this._Str_23870));
             this.addMessageEvent(new GuildMembershipRejectedMessageEvent(this._guildMembersWindowCtrl._Str_25572));
             this.addMessageEvent(new HabboGroupDeactivatedMessageEvent(this._Str_26461));
             this.addMessageEvent(new GuildMembersEvent(this._guildMembersWindowCtrl._Str_22267));

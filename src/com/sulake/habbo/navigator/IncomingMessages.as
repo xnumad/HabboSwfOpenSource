@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_3873;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5752;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_4265;
+    import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
@@ -31,9 +31,9 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5038;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5993;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_5763;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6001;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4035;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_9492;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5771;
@@ -46,7 +46,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5655;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_7272;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_8002;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomForwardMessageEvent;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6564;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
@@ -123,7 +123,7 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             _local_2.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
             _local_2.addHabboConnectionMessageEvent(new _Str_5752(this._Str_18344));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4265(this._Str_16100));
+            _local_2.addHabboConnectionMessageEvent(new FlatAccessibleMessageEvent(this._Str_16100));
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
@@ -145,9 +145,9 @@
             _local_2.addHabboConnectionMessageEvent(new _Str_5038(this._Str_17199));
             _local_2.addHabboConnectionMessageEvent(new _Str_3992(this._Str_7358));
             _local_2.addHabboConnectionMessageEvent(new _Str_5993(this._Str_16485));
-            _local_2.addHabboConnectionMessageEvent(new _Str_5763(this._Str_18891));
+            _local_2.addHabboConnectionMessageEvent(new CantConnectMessageEvent(this._Str_18891));
             _local_2.addHabboConnectionMessageEvent(new _Str_6001(this._Str_17265));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit));
+            _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
             _local_2.addHabboConnectionMessageEvent(new _Str_9492(this._Str_25812));
             _local_2.addHabboConnectionMessageEvent(new _Str_5771(this._Str_8576));
@@ -160,7 +160,7 @@
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new _Str_5655(this._Str_8351));
             _local_2.addHabboConnectionMessageEvent(new _Str_7272(this._Str_23354));
-            _local_2.addHabboConnectionMessageEvent(new _Str_8002(this._Str_22797));
+            _local_2.addHabboConnectionMessageEvent(new RoomForwardMessageEvent(this._Str_22797));
         }
 
         public function get data():NavigatorData
@@ -378,7 +378,7 @@
 
         private function _Str_22797(k:IMessageEvent):void
         {
-            var _local_2:RoomForwardMessageParser = _Str_8002(k).getParser();
+            var _local_2:RoomForwardMessageParser = RoomForwardMessageEvent(k).getParser();
             Logger.log(("Got room forward: " + _local_2.roomId));
             this._Str_14669(_local_2.roomId);
         }
@@ -671,7 +671,7 @@
 
         private function _Str_16100(k:IMessageEvent):void
         {
-            var _local_2:_Str_4265 = (k as _Str_4265);
+            var _local_2:FlatAccessibleMessageEvent = (k as FlatAccessibleMessageEvent);
             if (_local_2 == null)
             {
                 return;
@@ -769,7 +769,7 @@
         private function _Str_18891(k:IMessageEvent):void
         {
             var _local_3:SimpleAlertView;
-            var _local_2:CantConnectMessageParser = (k as _Str_5763).getParser();
+            var _local_2:CantConnectMessageParser = (k as CantConnectMessageEvent).getParser();
             Logger.log(("FAILED TO CONNECT: REASON: " + _local_2.reason));
             switch (_local_2.reason)
             {

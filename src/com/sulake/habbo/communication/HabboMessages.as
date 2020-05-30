@@ -816,16 +816,16 @@
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_4348;
 	import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_9977;
 	import com.sulake.habbo.communication.messages.incoming.room.session.*;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_4265;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_5763;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_7743;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8002;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8292;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8714;
-	import com.sulake.habbo.communication.messages.incoming.room.session._Str_8829;
+	import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.CantConnectMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.GamePlayerValueMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.RoomForwardMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.YouAreSpectatorMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.YouArePlayingGameMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.session.RoomQueueStatusMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.*;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingNoSuchItemEvent;
 	import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
@@ -998,7 +998,7 @@
             INCOMING_PACKETS[1004] = ErrorReportEvent;
             INCOMING_PACKETS[1016] = GuideSessionPartnerIsTypingEvent;
             INCOMING_PACKETS[1032] = CatalogPagesListEvent;
-            INCOMING_PACKETS[1033] = _Str_8292;
+            INCOMING_PACKETS[1033] = YouAreSpectatorMessageEvent;
             INCOMING_PACKETS[1036] = ShoutMessageEvent;
             INCOMING_PACKETS[104] = FurniListAddOrUpdateEvent;
             INCOMING_PACKETS[105] = _Str_12108;
@@ -1024,7 +1024,7 @@
             INCOMING_PACKETS[1200] = GuildMembersEvent;
             INCOMING_PACKETS[1203] = _Str_9397;
             INCOMING_PACKETS[1210] = _Str_8800;
-            INCOMING_PACKETS[122] = _Str_3352;
+            INCOMING_PACKETS[122] = CloseConnectionMessageEvent;
             INCOMING_PACKETS[1237] = _Str_9208;
             INCOMING_PACKETS[1243] = AccountSafetyLockStatusChangeMessageEvent;
             INCOMING_PACKETS[1254] = TradingOtherNotAllowedEvent;
@@ -1080,7 +1080,7 @@
             INCOMING_PACKETS[1587] = _Str_4851;
             INCOMING_PACKETS[159] = FurniListRemoveEvent;
             INCOMING_PACKETS[1591] = GuideSessionAttachedEvent;
-            INCOMING_PACKETS[160] = _Str_8002;
+            INCOMING_PACKETS[160] = RoomForwardMessageEvent;
             INCOMING_PACKETS[1600] = GenericErrorEvent;
             INCOMING_PACKETS[1605] = _Str_5567;
             INCOMING_PACKETS[1618] = BotCommandConfigurationEvent;
@@ -1140,7 +1140,7 @@
             INCOMING_PACKETS[2023] = InClientLinkMessageEvent;
             INCOMING_PACKETS[2024] = TradingItemListEvent;
             INCOMING_PACKETS[2030] = _Str_8312;
-            INCOMING_PACKETS[2031] = _Str_3407;
+            INCOMING_PACKETS[2031] = RoomReadyMessageEvent;
             INCOMING_PACKETS[2032] = _Str_6344;
             INCOMING_PACKETS[2033] = AvailabilityStatusMessageEvent;
             INCOMING_PACKETS[2035] = _Str_7321;
@@ -1165,7 +1165,7 @@
             INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
             INCOMING_PACKETS[2196] = _Str_5142;
             INCOMING_PACKETS[2202] = _Str_7291;
-            INCOMING_PACKETS[2208] = _Str_8829;
+            INCOMING_PACKETS[2208] = RoomQueueStatusMessageEvent;
             INCOMING_PACKETS[2219] = _Str_4841;
             INCOMING_PACKETS[222] = GameListMessageEvent;
             INCOMING_PACKETS[2221] = SanctionStatusEvent;
@@ -1183,7 +1183,7 @@
             INCOMING_PACKETS[230] = QuestMessageEvent;
             INCOMING_PACKETS[2309] = _Str_4129;
             INCOMING_PACKETS[2313] = _Str_16135;
-            INCOMING_PACKETS[2324] = _Str_7743;
+            INCOMING_PACKETS[2324] = GamePlayerValueMessageEvent;
             INCOMING_PACKETS[233] = _Str_8269;
             INCOMING_PACKETS[2335] = _Str_9341;
             INCOMING_PACKETS[2347] = _Str_7288;
@@ -1357,7 +1357,7 @@
             INCOMING_PACKETS[3770] = _Str_7086;
             INCOMING_PACKETS[3776] = _Str_7527;
             INCOMING_PACKETS[378] = _Str_9492;
-            INCOMING_PACKETS[3783] = _Str_4265;
+            INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;
             INCOMING_PACKETS[3785] = PollOfferEvent;
             INCOMING_PACKETS[3796] = _Str_7837;
             INCOMING_PACKETS[3801] = _Str_8665;
@@ -1391,7 +1391,7 @@
             INCOMING_PACKETS[420] = GuildMembershipsMessageEvent;
             INCOMING_PACKETS[426] = _Str_9995;
             INCOMING_PACKETS[44] = _Str_8320;
-            INCOMING_PACKETS[448] = _Str_8714;
+            INCOMING_PACKETS[448] = YouArePlayingGameMessageEvent;
             INCOMING_PACKETS[462] = _Str_9229;
             INCOMING_PACKETS[463] = _Str_15969;
             INCOMING_PACKETS[468] = RecyclerFinishedEvent;
@@ -1429,7 +1429,7 @@
             INCOMING_PACKETS[735] = _Str_8747;
             INCOMING_PACKETS[740] = AchievementResolutionCompletedMessageEvent;
             INCOMING_PACKETS[749] = RoomEntryInfoMessageEvent;
-            INCOMING_PACKETS[758] = _Str_5714;
+            INCOMING_PACKETS[758] = OpenConnectionMessageEvent;
             INCOMING_PACKETS[761] = _Str_16789;
             INCOMING_PACKETS[762] = HabboGroupJoinFailedMessageEvent;
             INCOMING_PACKETS[77] = _Str_11155;
@@ -1450,7 +1450,7 @@
             INCOMING_PACKETS[878] = _Str_4187;
             INCOMING_PACKETS[892] = _Str_8535;
             INCOMING_PACKETS[896] = _Str_7759;
-            INCOMING_PACKETS[899] = _Str_5763;
+            INCOMING_PACKETS[899] = CantConnectMessageEvent;
             INCOMING_PACKETS[904] = GameInviteMessageEvent;
             INCOMING_PACKETS[909] = _Str_6132;
             INCOMING_PACKETS[91] = TryVerificationCodeResultMessageEvent;

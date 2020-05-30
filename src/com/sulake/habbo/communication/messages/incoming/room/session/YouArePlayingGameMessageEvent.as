@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.YouArePlayingGameMessageParser;
 
-    public class _Str_8714 extends MessageEvent 
+    public class YouArePlayingGameMessageEvent extends MessageEvent
     {
-        public function _Str_8714(k:Function)
+        public function YouArePlayingGameMessageEvent(k:Function)
         {
             super(k, YouArePlayingGameMessageParser);
         }

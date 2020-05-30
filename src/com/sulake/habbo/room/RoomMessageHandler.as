@@ -4,7 +4,7 @@
     import com.sulake.habbo.room.object.RoomPlaneParser;
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
@@ -40,8 +40,8 @@
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_8183;
     import com.sulake.habbo.communication.messages.incoming.room.furniture._Str_7657;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetExperienceEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_8714;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_7743;
+    import com.sulake.habbo.communication.messages.incoming.room.session.YouArePlayingGameMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.session.GamePlayerValueMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetFigureUpdateEvent;
     import com.sulake.habbo.communication.messages.incoming.users.IgnoreResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.help.GuideSessionStartedEvent;
@@ -182,7 +182,7 @@
             {
                 this._connection = k;
                 k.addMessageEvent(new UserObjectEvent(this.onOwnUserEvent));
-                k.addMessageEvent(new _Str_3407(this._Str_5963));
+                k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
                 k.addMessageEvent(new _Str_7999(this.onRoomProperty));
                 k.addMessageEvent(new _Str_4976(this._Str_16587));
                 k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
@@ -219,8 +219,8 @@
                 k.addMessageEvent(new _Str_8183(this.onDiceValue));
                 k.addMessageEvent(new _Str_7657(this.onOneWayDoorStatus));
                 k.addMessageEvent(new PetExperienceEvent(this.onPetExperience));
-                k.addMessageEvent(new _Str_8714(this._Str_24325));
-                k.addMessageEvent(new _Str_7743(this.onGamePlayerNumberValue));
+                k.addMessageEvent(new YouArePlayingGameMessageEvent(this._Str_24325));
+                k.addMessageEvent(new GamePlayerValueMessageEvent(this.onGamePlayerNumberValue));
                 k.addMessageEvent(new PetFigureUpdateEvent(this._Str_6212));
                 k.addMessageEvent(new IgnoreResultMessageEvent(this.onIgnoreResult));
                 k.addMessageEvent(new GuideSessionStartedEvent(this.onGuideSessionStarted));
@@ -245,7 +245,7 @@
 
         private function _Str_5963(k:IMessageEvent):void
         {
-            var _local_2:_Str_3407 = (k as _Str_3407);
+            var _local_2:RoomReadyMessageEvent = (k as RoomReadyMessageEvent);
             if ((((_local_2 == null) || (_local_2.getParser() == null)) || (k.connection == null)))
             {
                 return;
@@ -1235,7 +1235,7 @@
             this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4, null, null, _local_5, _local_6);
         }
 
-        private function _Str_24325(k:_Str_8714):void
+        private function _Str_24325(k:YouArePlayingGameMessageEvent):void
         {
             if (k == null)
             {
@@ -1254,9 +1254,9 @@
             {
                 return;
             }
-            if ((k is _Str_7743))
+            if ((k is GamePlayerValueMessageEvent))
             {
-                _local_2 = (k as _Str_7743).getParser();
+                _local_2 = (k as GamePlayerValueMessageEvent).getParser();
                 _local_3 = this.getRoomId(0);
                 this._roomCreator.updateObjectUserAction(_local_3, _local_2.userId, RoomObjectVariableEnum.FIGURE_NUMBER_VALUE, _local_2.value);
             }

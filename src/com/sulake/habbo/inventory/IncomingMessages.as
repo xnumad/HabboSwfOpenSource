@@ -19,7 +19,7 @@
     import com.sulake.habbo.communication.messages.incoming._Str_87._Str_5147;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace.MarketplaceConfigurationEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
+    import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_9517;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOtherNotAllowedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOtherNotAllowedParser;
@@ -40,7 +40,7 @@
     import com.sulake.habbo.communication.messages.incoming.inventory.furni.PostItPlacedEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenFailedEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenFailedEventParser;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.trading.TradingOpenEvent;
     import com.sulake.habbo.communication.messages.parser.inventory.trading.TradingOpenParser;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
@@ -136,7 +136,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_5147(this._Str_18002));
             this._com.addHabboConnectionMessageEvent(new UserBadgesEvent(this.onUserBadges));
             this._com.addHabboConnectionMessageEvent(new MarketplaceConfigurationEvent(this._Str_16010));
-            this._com.addHabboConnectionMessageEvent(new _Str_5714(this._Str_15910));
+            this._com.addHabboConnectionMessageEvent(new OpenConnectionMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new _Str_9517(this._Str_25747));
             this._com.addHabboConnectionMessageEvent(new TradingOtherNotAllowedEvent(this._Str_22530, TradingOtherNotAllowedParser));
             this._com.addHabboConnectionMessageEvent(new FurniListEvent(this._Str_25001));
@@ -152,7 +152,7 @@
             this._com.addHabboConnectionMessageEvent(new _Str_8892(this._Str_23929));
             this._com.addHabboConnectionMessageEvent(new PostItPlacedEvent(this._Str_23887));
             this._com.addHabboConnectionMessageEvent(new TradingOpenFailedEvent(this._Str_23502, TradingOpenFailedEventParser));
-            this._com.addHabboConnectionMessageEvent(new _Str_3352(this._Str_15910));
+            this._com.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this._Str_15910));
             this._com.addHabboConnectionMessageEvent(new TradingOpenEvent(this._Str_22556, TradingOpenParser));
             this._com.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             this._com.addHabboConnectionMessageEvent(new _Str_8120(this._Str_23620));

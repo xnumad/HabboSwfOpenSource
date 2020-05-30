@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.CloseConnectionMessageParser;
 
-    public class _Str_3352 extends MessageEvent implements IMessageEvent 
+    public class CloseConnectionMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_3352(k:Function)
+        public function CloseConnectionMessageEvent(k:Function)
         {
             super(k, CloseConnectionMessageParser);
         }

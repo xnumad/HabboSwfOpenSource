@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.CantConnectMessageParser;
 
-    public class _Str_5763 extends MessageEvent 
+    public class CantConnectMessageEvent extends MessageEvent
     {
-        public function _Str_5763(k:Function)
+        public function CantConnectMessageEvent(k:Function)
         {
             super(k, CantConnectMessageParser);
         }

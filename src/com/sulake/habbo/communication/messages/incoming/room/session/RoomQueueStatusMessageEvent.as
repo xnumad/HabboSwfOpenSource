@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomQueueStatusMessageParser;
 
-    public class _Str_8829 extends MessageEvent 
+    public class RoomQueueStatusMessageEvent extends MessageEvent
     {
-        public function _Str_8829(k:Function)
+        public function RoomQueueStatusMessageEvent(k:Function)
         {
             super(k, RoomQueueStatusMessageParser);
         }

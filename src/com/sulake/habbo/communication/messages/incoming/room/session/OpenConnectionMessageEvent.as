@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.OpenConnectionMessageParser;
 
-    public class _Str_5714 extends MessageEvent 
+    public class OpenConnectionMessageEvent extends MessageEvent
     {
-        public function _Str_5714(k:Function)
+        public function OpenConnectionMessageEvent(k:Function)
         {
             super(k, OpenConnectionMessageParser);
         }

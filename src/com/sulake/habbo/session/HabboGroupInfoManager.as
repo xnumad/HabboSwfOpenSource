@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupBadgesMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_10770;
 
@@ -20,7 +20,7 @@
             this._badges = new Map();
             if (this._sessionDataManager.communication)
             {
-                this._roomReadyMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new _Str_3407(this._Str_5963));
+                this._roomReadyMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
                 this._habboGroupBadgesMessageEvent = this._sessionDataManager.communication.addHabboConnectionMessageEvent(new HabboGroupBadgesMessageEvent(this._Str_18218));
             }
         }

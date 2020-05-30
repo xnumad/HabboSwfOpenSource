@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_8791;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_4585;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredConditionDataEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredEffectDataEvent;
@@ -39,7 +39,7 @@
             this.addMessageEvent(new _Str_8791(this._Str_24104));
             this.addMessageEvent(new _Str_4585(this._Str_23600));
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
-            this.addMessageEvent(new _Str_3352(this.onRoomExit));
+            this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
             this.addMessageEvent(new _Str_4408(this._Str_16200));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));

@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.session.FlatAccessibleMessageParser;
 
-    public class _Str_4265 extends MessageEvent 
+    public class FlatAccessibleMessageEvent extends MessageEvent
     {
-        public function _Str_4265(k:Function)
+        public function FlatAccessibleMessageEvent(k:Function)
         {
             super(k, FlatAccessibleMessageParser);
         }

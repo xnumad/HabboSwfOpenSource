@@ -28,7 +28,7 @@
     import com.sulake.habbo.communication.messages.incoming.avatar.ChangeUserNameResultMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.availability.AvailabilityStatusMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.pets.PetScratchFailedEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.AccountSafetyLockStatusChangeMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.mysterybox.MysteryBoxKeysMessageEvent;
@@ -177,7 +177,7 @@
                 this._communicationManager.addHabboConnectionMessageEvent(new ChangeUserNameResultMessageEvent(this.onChangeUserNameResult));
                 this._communicationManager.addHabboConnectionMessageEvent(new AvailabilityStatusMessageEvent(this.onAvailabilityStatus));
                 this._communicationManager.addHabboConnectionMessageEvent(new PetScratchFailedEvent(this.onPetRespectFailed));
-                this._communicationManager.addHabboConnectionMessageEvent((new _Str_3407(this._Str_5963) as IMessageEvent));
+                this._communicationManager.addHabboConnectionMessageEvent((new RoomReadyMessageEvent(this._Str_5963) as IMessageEvent));
                 this._communicationManager.addHabboConnectionMessageEvent(new AccountSafetyLockStatusChangeMessageEvent(this.onAccountSafetyLockStatusChanged));
                 this._communicationManager.addHabboConnectionMessageEvent(new MysteryBoxKeysMessageEvent(this.onMysteryBoxKeys));
                 this._communicationManager.addHabboConnectionMessageEvent(new _Str_8527(this._Str_7983));
@@ -945,7 +945,7 @@
 
         private function _Str_5963(k:IMessageEvent):void
         {
-            var _local_2:_Str_3407 = (k as _Str_3407);
+            var _local_2:RoomReadyMessageEvent = (k as RoomReadyMessageEvent);
             if ((((_local_2 == null) || (_local_2.getParser() == null)) || (k.connection == null)))
             {
                 return;

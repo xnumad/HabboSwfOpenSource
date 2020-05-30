@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_5714;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_4265;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3407;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.OpenConnectionMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.session.FlatAccessibleMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_8829;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_8292;
+    import com.sulake.habbo.communication.messages.incoming.room.session.RoomQueueStatusMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.session.YouAreSpectatorMessageEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -34,13 +34,13 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_5714(this.onRoomConnected));
-            k.addMessageEvent(new _Str_4265(this._Str_24463));
-            k.addMessageEvent(new _Str_3407(this._Str_5963));
-            k.addMessageEvent(new _Str_3352(this.onRoomDisconnected));
+            k.addMessageEvent(new OpenConnectionMessageEvent(this.onRoomConnected));
+            k.addMessageEvent(new FlatAccessibleMessageEvent(this._Str_24463));
+            k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
+            k.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomDisconnected));
             k.addMessageEvent(new _Str_4187(this._Str_12114));
-            k.addMessageEvent(new _Str_8829(this._Str_23914));
-            k.addMessageEvent(new _Str_8292(this._Str_22437));
+            k.addMessageEvent(new RoomQueueStatusMessageEvent(this._Str_23914));
+            k.addMessageEvent(new YouAreSpectatorMessageEvent(this._Str_22437));
         }
 
         private function onRoomConnected(k:IMessageEvent):void
@@ -52,7 +52,7 @@
             }
         }
 
-        private function _Str_24463(k:_Str_4265):void
+        private function _Str_24463(k:FlatAccessibleMessageEvent):void
         {
             var _local_5:IRoomSession;
             var _local_2:int = _xxxRoomId;
@@ -84,7 +84,7 @@
             var _local_5:RoomReadyMessageParser;
             var _local_2:int = _xxxRoomId;
             var _local_3:int = _local_2;
-            var _local_4:_Str_3407 = (k as _Str_3407);
+            var _local_4:RoomReadyMessageEvent = (k as RoomReadyMessageEvent);
             if (_local_4 != null)
             {
                 _local_5 = _local_4.getParser();
@@ -141,7 +141,7 @@
             }
         }
 
-        private function _Str_23914(k:_Str_8829):void
+        private function _Str_23914(k:RoomQueueStatusMessageEvent):void
         {
             var _local_4:RoomQueueSet;
             var _local_5:RoomSessionQueueEvent;
@@ -177,7 +177,7 @@
             }
         }
 
-        private function _Str_22437(k:_Str_8292):void
+        private function _Str_22437(k:YouAreSpectatorMessageEvent):void
         {
             if (listener == null)
             {

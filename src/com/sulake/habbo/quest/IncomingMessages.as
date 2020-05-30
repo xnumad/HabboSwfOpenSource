@@ -6,7 +6,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.QuestMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.inventory.achievements.AchievementEvent;
     import com.sulake.habbo.communication.messages.incoming.quest.SeasonalQuestsMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.session._Str_3352;
+    import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
@@ -59,7 +59,7 @@
             _local_2.addHabboConnectionMessageEvent(new QuestMessageEvent(this._Str_4750));
             _local_2.addHabboConnectionMessageEvent(new AchievementEvent(this._Str_12011));
             _local_2.addHabboConnectionMessageEvent(new SeasonalQuestsMessageEvent(this._Str_12986));
-            _local_2.addHabboConnectionMessageEvent(new _Str_3352(this.onRoomExit));
+            _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new CompetitionEntrySubmitResultEvent(this._Str_17737));
             _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
