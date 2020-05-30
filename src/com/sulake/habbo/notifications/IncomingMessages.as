@@ -98,7 +98,7 @@
             this.addMessageEvent(new _Str_7309(this.onInfoFeedEnable));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
             this.addMessageEvent(new _Str_9157(this.onClubGiftSelected));
-            this.addMessageEvent(new _Str_6521(this._parser2));
+            this.addMessageEvent(new _Str_6521(this.onHotelMaintenance));
             this.addMessageEvent(new _Str_9583(this.onModCautionEvent));
             this.addMessageEvent(new NotificationDialogMessageEvent(this.showCallCreatedNotification));
             this.addMessageEvent(new HotelWillCloseInMinutesEvent(this.onHotelClosing));
@@ -301,7 +301,7 @@
             this._notifications.singularController.alertDialogManager._Str_24270(_local_2.minutes);
         }
 
-        private function _parser2(k:IMessageEvent):void
+        private function onHotelMaintenance(k:IMessageEvent):void
         {
             var _local_2:_Str_7315 = (k as _Str_6521).getParser();
             if (((_local_2 == null) || (this._notifications.singularController.alertDialogManager == null)))
