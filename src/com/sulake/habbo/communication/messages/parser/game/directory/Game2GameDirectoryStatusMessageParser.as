@@ -11,7 +11,7 @@
         public static const STATUS_FAILED_REASON_HOTEL_IS_CLOSED:int = 3;
 
         private var _status:int;
-        private var _Str_21469:int;
+        private var _blockLength:int;
         private var _Str_21518:int;
         private var _freeGamesLeft:int;
 
@@ -23,7 +23,7 @@
 
         public function get _Str_26321():int
         {
-            return this._Str_21469;
+            return this._blockLength;
         }
 
         public function get _Str_26070():int
@@ -49,7 +49,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._status = k.readInteger();
-            this._Str_21469 = k.readInteger();
+            this._blockLength = k.readInteger();
             this._Str_21518 = k.readInteger();
             this._freeGamesLeft = k.readInteger();
             return true;
