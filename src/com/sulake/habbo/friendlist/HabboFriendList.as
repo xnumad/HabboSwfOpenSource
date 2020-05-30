@@ -114,7 +114,7 @@
         private var _view:_Str_7249;
         private var _Str_16825:_Str_9313;
         private var _Str_3764:int;
-        internal var _Str_2382:FriendCategories;
+        internal var _categories:FriendCategories;
         private var _friendRequests:_Str_9210;
         private var _Str_17300:AvatarSearchResults;
         private var _notifications:IHabboNotifications;
@@ -129,7 +129,7 @@
         {
             this._Str_18300 = -(FriendsView._Str_13372);
             super(k, _arg_2, _arg_3);
-            this._Str_2382 = new FriendCategories(new _Str_10966(this));
+            this._categories = new FriendCategories(new _Str_10966(this));
             this._Str_17300 = new AvatarSearchResults(new _Str_10395(this));
             this._Str_19590 = new _Str_8767();
             this._Str_5982 = [];
@@ -260,7 +260,7 @@
                 Logger.log("Cannot process getFriend. Friendlist not initialized.");
                 return null;
             }
-            var _local_2:Friend = this._Str_2382._Str_13534(k);
+            var _local_2:Friend = this._categories._Str_13534(k);
             return _local_2;
         }
 
@@ -370,7 +370,7 @@
                 Logger.log("Cannot get friend count. Friendlist not initialized.");
                 return 0;
             }
-            return this._Str_2382._Str_5401(k, _arg_2);
+            return this._categories._Str_5401(k, _arg_2);
         }
 
         public function _Str_10781(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
@@ -455,7 +455,7 @@
             while (_local_3 >= _local_2)
             {
                 _local_4 = this._Str_5982[_local_3];
-                this._Str_2382._Str_11247(new Friend(_local_4));
+                this._categories._Str_11247(new Friend(_local_4));
                 this._Str_5982.splice(_local_3, 1);
                 _local_3--;
             }
@@ -474,10 +474,10 @@
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
             {
-                this._Str_2382._Str_15664(new _Str_2591(_local_3.id, _local_3.name));
+                this._categories._Str_15664(new _Str_2591(_local_3.id, _local_3.name));
             }
-            this._Str_2382._Str_15664(new _Str_2591(_Str_2591._Str_15031, this.getText("friendlist.friends")));
-            this._Str_2382._Str_15664(new _Str_2591(_Str_2591._Str_7666, this.getText("friendlist.friends.offlinecaption")));
+            this._categories._Str_15664(new _Str_2591(_Str_2591._Str_15031, this.getText("friendlist.friends")));
+            this._categories._Str_15664(new _Str_2591(_Str_2591._Str_7666, this.getText("friendlist.friends.offlinecaption")));
             this._tabs = new FriendListTabs(new _Str_11703(this));
             if (!this._Str_6311)
             {
@@ -487,9 +487,9 @@
             }
             this._Str_22340();
             this._Str_22421();
-            if (this._Str_2382._Str_5401(true, false) == 0)
+            if (this._categories._Str_5401(true, false) == 0)
             {
-                _local_4 = this._Str_2382._Str_5067(_Str_2591._Str_7666);
+                _local_4 = this._categories._Str_5067(_Str_2591._Str_7666);
                 if (_local_4)
                 {
                     _local_4._Str_22255(true);
@@ -632,7 +632,7 @@
 
         private function _Str_4132(k:IMessageEvent):void
         {
-            this._Str_2382._Str_4132(k);
+            this._categories._Str_4132(k);
             this._view.refresh("friendListUpdate");
         }
 
@@ -794,7 +794,7 @@
 
         public function get categories():FriendCategories
         {
-            return this._Str_2382;
+            return this._categories;
         }
 
         public function get friendRequests():_Str_9210
@@ -853,11 +853,11 @@
 
         public function _Str_9287():Array
         {
-            if (this._Str_2382 == null)
+            if (this._categories == null)
             {
                 return [];
             }
-            return this._Str_2382._Str_9287();
+            return this._categories._Str_9287();
         }
 
         public function acceptFriendRequest(k:int):void
@@ -931,7 +931,7 @@
 
         public function getRelationshipStatus(k:int):int
         {
-            var _local_2:Friend = this._Str_2382._Str_13534(k);
+            var _local_2:Friend = this._categories._Str_13534(k);
             if (_local_2)
             {
                 return _local_2._Str_10060;
@@ -969,11 +969,11 @@
             var _local_4:IWindowContainer;
             var _local_5:IBitmapWrapperWindow;
             var _local_6:BitmapData;
-            if (((disposed) || (this._Str_2382 == null)))
+            if (((disposed) || (this._categories == null)))
             {
                 return;
             }
-            var _local_2:Dictionary = this._Str_2382._Str_22560();
+            var _local_2:Dictionary = this._categories._Str_22560();
             if (_local_2 == null)
             {
                 return;
