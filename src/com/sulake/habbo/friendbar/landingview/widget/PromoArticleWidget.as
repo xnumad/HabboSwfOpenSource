@@ -11,7 +11,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3695;
     import com.sulake.habbo.friendbar.landingview.layout._Str_3198;
-    import com.sulake.habbo.communication.messages.incoming.landingview._Str_4053;
+    import com.sulake.habbo.communication.messages.incoming.landingview.PromoArticleData;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.habbo.utils.HabboWebTools;
@@ -99,15 +99,15 @@
 
         private function _Str_24669():void
         {
-            var article:_Str_4053;
+            var article:PromoArticleData;
             article = this._articles[this._currentArticle];
             if (article)
             {
                 this._container.findChildByName("promo_title").caption = article.title;
-                this._container.findChildByName("promo_text").caption = article._Str_23333;
-                this._container.findChildByName("button").visible = (!((article._Str_18393 == _Str_4053._Str_17401) || ((article._Str_18393 == _Str_4053._Str_15693) && (article._Str_18141 == ""))));
+                this._container.findChildByName("promo_text").caption = article.bodyText;
+                this._container.findChildByName("button").visible = (!((article.linkType == PromoArticleData.LINK_TYPE_NO_LINK) || ((article.linkType == PromoArticleData.LINK_TYPE_URL) && (article.linkContent == ""))));
                 this._container.findChildByName("button").immediateClickMode = true;
-                this._container.findChildByName("button").caption = article._Str_22430;
+                this._container.findChildByName("button").caption = article.buttonText;
                 this._container.findChildByName("promo_image").visible = (!(article.imageUrl == ""));
                 try
                 {
@@ -189,14 +189,14 @@
 
         private function _Str_24223():void
         {
-            var k:_Str_4053 = this._articles[this._currentArticle];
-            switch (k._Str_18393)
+            var k:PromoArticleData = this._articles[this._currentArticle];
+            switch (k.linkType)
             {
-                case _Str_4053._Str_15693:
-                    HabboWebTools.openWebPage(k._Str_18141);
+                case PromoArticleData.LINK_TYPE_URL:
+                    HabboWebTools.openWebPage(k.linkContent);
                     return;
-                case _Str_4053._Str_18301:
-                    this._landingView.context.createLinkEvent(k._Str_18141);
+                case PromoArticleData.LINK_TYPE_INTERNAL:
+                    this._landingView.context.createLinkEvent(k.linkContent);
                     return;
             }
         }
@@ -244,7 +244,7 @@
 
         private function _Str_25476(k:_Str_9504):void
         {
-            var _local_2:_Str_4053;
+            var _local_2:PromoArticleData;
             this._articles = [];
             for each (_local_2 in k.getParser()._Str_23579)
             {
