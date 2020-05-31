@@ -10,7 +10,7 @@
         private var _y:Number = 0;
         private var _z:Number = 0;
         private var _dir:int = 0;
-        private var _Str_3283:int = 0;
+        private var _sizeX:int = 0;
         private var _Str_3135:int = 0;
         private var _Str_5445:Number = 0;
         private var _type:int = 0;
@@ -95,14 +95,14 @@
 
         public function get _Str_13204():int
         {
-            return this._Str_3283;
+            return this._sizeX;
         }
 
         public function set _Str_13204(k:int):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_3283 = k;
+                this._sizeX = k;
             }
         }
 
