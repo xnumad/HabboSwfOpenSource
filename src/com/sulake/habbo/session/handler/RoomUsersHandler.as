@@ -24,7 +24,7 @@
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.events.RoomSessionFavouriteGroupUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7301;
+    import com.sulake.habbo.communication.messages.parser.room.engine.FavouriteMembershipUpdateMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.session.RoomUserData;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -101,7 +101,7 @@
         private function onFavoriteMembershipUpdate(k:IMessageEvent):void
         {
             var _local_5:RoomSessionFavouriteGroupUpdateEvent;
-            var _local_2:_Str_7301 = _Str_7839(k).getParser();
+            var _local_2:FavouriteMembershipUpdateMessageParser = _Str_7839(k).getParser();
             var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
