@@ -63,7 +63,7 @@
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_8082;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectAddMessageParser;
     import com.sulake.room.utils.IVector3d;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectUpdateMessageParser;
     import com.sulake.room.utils.Vector3d;
@@ -536,7 +536,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8082 = _local_2.getParser();
+            var _local_3:ObjectAddMessageParser = _local_2.getParser();
             var _local_4:_Str_3292 = _local_3.data;
             this._Str_18595(this._currentRoomId, _local_4);
         }
