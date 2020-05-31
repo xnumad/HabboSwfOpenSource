@@ -77,7 +77,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7298;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7749;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_8155;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ItemDataUpdateMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import com.sulake.habbo.room.object.RoomObjectUserTypes;
@@ -743,7 +743,7 @@
             {
                 return;
             }
-            var _local_3:_Str_8155 = _local_2.getParser();
+            var _local_3:ItemDataUpdateMessageParser = _local_2.getParser();
             this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
