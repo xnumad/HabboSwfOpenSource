@@ -22,7 +22,7 @@
         private var _tradable:Boolean;
         private var _sellable:Boolean;
         private var _secondsToExpiration:int;
-        private var _Str_3182:int;
+        private var _extra:int;
         private var _flatId:int;
         private var _isWallItem:Boolean;
         private var _hasRentPeriodStarted:Boolean;
@@ -59,7 +59,7 @@
             if (this._furniType == FLOOR_ITEM)
             {
                 this._slotId = k.readString();
-                this._Str_3182 = k.readInteger();
+                this._extra = k.readInteger();
             }
         }
 
@@ -135,7 +135,7 @@
 
         public function get _Str_2794():int
         {
-            return this._Str_3182;
+            return this._extra;
         }
 
         public function get rentable():Boolean

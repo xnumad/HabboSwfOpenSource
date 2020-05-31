@@ -14,7 +14,7 @@
         private var _sizeY:int = 0;
         private var _sizeZ:Number = 0;
         private var _type:int = 0;
-        private var _Str_3182:int = -1;
+        private var _extra:int = -1;
         private var _state:int = 0;
         private var _data:IStuffData;
         private var _Str_6673:int = 0;
@@ -186,14 +186,14 @@
 
         public function get _Str_2794():int
         {
-            return this._Str_3182;
+            return this._extra;
         }
 
         public function set _Str_2794(k:int):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_3182 = k;
+                this._extra = k;
             }
         }
 

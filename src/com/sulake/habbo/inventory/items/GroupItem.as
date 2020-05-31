@@ -41,7 +41,7 @@
         private var _Str_1007:Boolean;
         private var _category:int;
         private var _stuffData:IStuffData;
-        private var _Str_3182:Number;
+        private var _extra:Number;
         private var _Str_7053:int = 0;
         private var _Str_3155:BitmapData;
         private var _Str_3412:int;
@@ -68,7 +68,7 @@
             this._Str_1636 = new Map();
             this._category = _arg_3;
             this._stuffData = _arg_6;
-            this._Str_3182 = _arg_7;
+            this._extra = _arg_7;
             this._alignment = _arg_10;
             this._icon = _arg_8;
             this._Str_19058 = _arg_9;
@@ -188,7 +188,7 @@
 
         public function get _Str_2794():Number
         {
-            return this._Str_3182;
+            return this._extra;
         }
 
         public function set _Str_14978(k:Boolean):void
@@ -302,7 +302,7 @@
             }
             else
             {
-                _local_2 = this._roomEngine.getFurnitureIcon(this._type, this, String(this._Str_3182), this._stuffData);
+                _local_2 = this._roomEngine.getFurnitureIcon(this._type, this, String(this._extra), this._stuffData);
             }
             if (_local_2.id > 0)
             {

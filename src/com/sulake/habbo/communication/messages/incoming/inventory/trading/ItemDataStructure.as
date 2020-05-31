@@ -16,7 +16,7 @@
         private var _spriteId:int;
         private var _category:int;
         private var _stuffData:IStuffData;
-        private var _Str_3182:int;
+        private var _extra:int;
         private var _secondsToExpiration:int;
         private var _Str_9291:int;
         private var _Str_8744:int;
@@ -42,7 +42,7 @@
             this._Str_9291 = k.readInteger();
             this._Str_8744 = k.readInteger();
             this._Str_9700 = k.readInteger();
-            this._Str_3182 = ((this.furniType == "S") ? k.readInteger() : -1);
+            this._extra = ((this.furniType == "S") ? k.readInteger() : -1);
             this._flatId = -1;
             this._rentable = false;
             this._isWallItem = (this._furniType == "I");
@@ -80,7 +80,7 @@
 
         public function get _Str_2794():int
         {
-            return this._Str_3182;
+            return this._extra;
         }
 
         public function get secondsToExpiration():int
@@ -110,7 +110,7 @@
 
         public function get _Str_3951():int
         {
-            return this._Str_3182;
+            return this._extra;
         }
 
         public function get flatId():int
