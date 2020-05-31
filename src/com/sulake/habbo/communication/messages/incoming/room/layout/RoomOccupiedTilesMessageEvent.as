@@ -1,4 +1,4 @@
-﻿package com.sulake.habbo.communication.messages.incoming._Str_446
+﻿package com.sulake.habbo.communication.messages.incoming.room.layout
 {
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomOccupiedTilesMessageParser;

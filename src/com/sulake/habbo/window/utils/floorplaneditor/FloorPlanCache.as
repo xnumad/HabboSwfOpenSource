@@ -3,7 +3,7 @@
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomOccupiedTilesMessageParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
 
     public class FloorPlanCache 
     {

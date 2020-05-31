@@ -298,8 +298,8 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
-	import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
+	import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;

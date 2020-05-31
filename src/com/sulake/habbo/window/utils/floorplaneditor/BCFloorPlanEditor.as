@@ -3,8 +3,8 @@
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
+    import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
