@@ -65,7 +65,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_8082;
     import com.sulake.room.utils.IVector3d;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7802;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectUpdateMessageParser;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7918;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6765;
@@ -554,7 +554,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7802 = _local_2.getParser();
+            var _local_3:ObjectUpdateMessageParser = _local_2.getParser();
             var _local_4:_Str_3292 = _local_3.data;
             if (_local_4 != null)
             {
