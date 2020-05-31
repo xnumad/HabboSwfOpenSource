@@ -70,7 +70,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7918;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6765;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsDataUpdateMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_5317;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
     import flash.utils.setTimeout;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
@@ -617,7 +617,7 @@
 
         private function onObjectRemove(event:IMessageEvent):void
         {
-            var parser:_Str_5317;
+            var parser:ObjectRemoveMessageParser;
             var id:int;
             var objectRemoveEvent:_Str_4408 = (event as _Str_4408);
             if (((objectRemoveEvent == null) || (objectRemoveEvent.getParser() == null)))

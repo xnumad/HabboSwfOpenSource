@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredEffectDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents.WiredConditionDataMessageParser;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_5317;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7138;
     import com.sulake.habbo.communication.messages.parser.userdefinedroomevents._Str_7758;
     import __AS3__.vec.*;
@@ -89,7 +89,7 @@
 
         private function onObjectRemove(k:IMessageEvent):void
         {
-            var _local_2:_Str_5317 = (k as _Str_4408).getParser();
+            var _local_2:ObjectRemoveMessageParser = (k as _Str_4408).getParser();
             Logger.log(((("Received object remove event: " + _local_2.id) + ", ") + _local_2.isExpired));
             this._roomEvents._Str_7247._Str_25654(_local_2.id);
         }

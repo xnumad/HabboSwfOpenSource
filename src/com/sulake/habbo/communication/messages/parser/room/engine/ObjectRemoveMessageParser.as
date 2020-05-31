@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_5317 implements IMessageParser 
+    public class ObjectRemoveMessageParser implements IMessageParser
     {
         private var _id:int;
         private var _isExpired:Boolean;
