@@ -18,7 +18,7 @@
             this._tileSize = _arg_4;
         }
 
-        public function get _Str_5259():String
+        public function get wallType():String
         {
             return this._wallType;
         }

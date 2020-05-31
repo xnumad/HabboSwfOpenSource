@@ -399,7 +399,7 @@
             }
             var _local_3:RoomPropertyMessageParser = _local_2.getParser();
             var _local_4:String = _local_3.floorType;
-            var _local_5:String = _local_3._Str_5259;
+            var _local_5:String = _local_3.wallType;
             var _local_6:String = _local_3._Str_5109;
             if (this._roomCreator != null)
             {

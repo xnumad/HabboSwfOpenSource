@@ -16,7 +16,7 @@
             return this._floorType;
         }
 
-        public function get _Str_5259():String
+        public function get wallType():String
         {
             return this._wallType;
         }

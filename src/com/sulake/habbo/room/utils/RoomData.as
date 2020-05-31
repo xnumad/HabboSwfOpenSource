@@ -34,12 +34,12 @@
             this._floorType = k;
         }
 
-        public function get _Str_5259():String
+        public function get wallType():String
         {
             return this._wallType;
         }
 
-        public function set _Str_5259(k:String):void
+        public function set wallType(k:String):void
         {
             this._wallType = k;
         }
