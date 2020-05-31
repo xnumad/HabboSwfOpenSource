@@ -9,7 +9,7 @@
         private var _count:int;
         private var _x:int;
         private var _y:int;
-        private var _Str_2196:int;
+        private var _value:int;
 
 
         public function next():Boolean
@@ -21,7 +21,7 @@
             this._count--;
             this._x = this._data.readByte();
             this._y = this._data.readByte();
-            this._Str_2196 = this._data.readShort();
+            this._value = this._data.readShort();
             return true;
         }
 
@@ -37,17 +37,17 @@
 
         public function get _Str_9852():Number
         {
-            return HeightMapMessageParser.decodeTileHeight(this._Str_2196);
+            return HeightMapMessageParser.decodeTileHeight(this._value);
         }
 
         public function get window3():Boolean
         {
-            return HeightMapMessageParser.decodeIsStackingBlocked(this._Str_2196);
+            return HeightMapMessageParser.decodeIsStackingBlocked(this._value);
         }
 
         public function get _Str_10375():Boolean
         {
-            return HeightMapMessageParser.decodeIsRoomTile(this._Str_2196);
+            return HeightMapMessageParser.decodeIsRoomTile(this._value);
         }
 
         public function flush():Boolean
