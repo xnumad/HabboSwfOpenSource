@@ -76,7 +76,7 @@
                 return;
             }
             k.addMessageEvent(new UsersEvent(this._Str_10523));
-            k.addMessageEvent(new _Str_4914(this._Str_16267));
+            k.addMessageEvent(new _Str_4914(this.onUserRemove));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
             k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
@@ -174,7 +174,7 @@
             listener.events.dispatchEvent(new RoomSessionUserDataUpdateEvent(_local_4, _local_5));
         }
 
-        private function _Str_16267(k:IMessageEvent):void
+        private function onUserRemove(k:IMessageEvent):void
         {
             var _local_2:_Str_4914 = (k as _Str_4914);
             if (_local_2 == null)

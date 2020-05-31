@@ -203,7 +203,7 @@
                 k.addMessageEvent(new _Str_7291(this.onItemDataUpdate));
                 k.addMessageEvent(new UsersEvent(this._Str_10523));
                 k.addMessageEvent(new UserUpdateEvent(this.onUserUpdate));
-                k.addMessageEvent(new _Str_4914(this._Str_16267));
+                k.addMessageEvent(new _Str_4914(this.onUserRemove));
                 k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
                 k.addMessageEvent(new ExpressionMessageEvent(this.onExpression));
                 k.addMessageEvent(new DanceMessageEvent(this.onDance));
@@ -942,7 +942,7 @@
             this.updateGuideMarker();
         }
 
-        private function _Str_16267(k:IMessageEvent):void
+        private function onUserRemove(k:IMessageEvent):void
         {
             var _local_2:_Str_4914 = (k as _Str_4914);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
