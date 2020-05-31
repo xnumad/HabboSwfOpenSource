@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7700 implements IMessageParser 
+    public class HeightMapUpdateMessageParser implements IMessageParser
     {
         private var _data:IMessageDataWrapper;
         private var _Str_3431:int;
