@@ -85,7 +85,7 @@
             {
                 this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
                 this._entryTileDataMessageEvent = new _Str_4976(this.onEntryTileData);
-                this._occupiedTilesMessageEvent = new _Str_6566(this._Str_18596);
+                this._occupiedTilesMessageEvent = new _Str_6566(this.onOccupiedTiles);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
                 this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
@@ -505,9 +505,9 @@
             this._Str_16217();
         }
 
-        private function _Str_18596(k:_Str_6566):void
+        private function onOccupiedTiles(k:_Str_6566):void
         {
-            this._floorPlanCache._Str_18596(k);
+            this._floorPlanCache.onOccupiedTiles(k);
             if (this._heightMapEditor)
             {
                 this._heightMapEditor._Str_9032();

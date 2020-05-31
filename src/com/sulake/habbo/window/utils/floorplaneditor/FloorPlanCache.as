@@ -28,7 +28,7 @@
             this._Str_22644(k.getParser().text);
         }
 
-        public function _Str_18596(k:_Str_6566):void
+        public function onOccupiedTiles(k:_Str_6566):void
         {
             var _local_2:_Str_6361;
             var _local_3:Object;
