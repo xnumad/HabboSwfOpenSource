@@ -31,7 +31,7 @@
         private var _saddle:Boolean;
         private var _rider:Boolean;
         private var _breedable:Boolean;
-        private var _Str_4460:Array;
+        private var _skillTresholds:Array;
         private var _publiclyRideable:int;
         private var _fullyGrown:Boolean;
         private var _dead:Boolean;
@@ -148,7 +148,7 @@
 
         public function get _Str_3307():Array
         {
-            return this._Str_4460;
+            return this._skillTresholds;
         }
 
         public function get publiclyRideable():int
@@ -283,7 +283,7 @@
 
         public function set _Str_3307(k:Array):void
         {
-            this._Str_4460 = k;
+            this._skillTresholds = k;
         }
 
         public function set publiclyRideable(k:int):void

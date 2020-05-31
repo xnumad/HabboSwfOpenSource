@@ -28,7 +28,7 @@
         private var _maximumTimeToLive:int;
         private var _remainingTimeToLive:int;
         private var _remainingGrowTime:int;
-        private var _Str_4460:Array;
+        private var _skillTresholds:Array;
         private var _publiclyRideable:int;
         private var _unknownRarity:int;
         private var _publiclyBreedable:Boolean;
@@ -151,7 +151,7 @@
 
         public function get _Str_3307():Array
         {
-            return this._Str_4460;
+            return this._skillTresholds;
         }
 
         public function get publiclyRideable():int
@@ -172,7 +172,7 @@
         public function flush():Boolean
         {
             this._id = -1;
-            this._Str_4460 = [];
+            this._skillTresholds = [];
             return true;
         }
 
@@ -203,10 +203,10 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._Str_4460.push(k.readInteger());
+                this._skillTresholds.push(k.readInteger());
                 _local_3++;
             }
-            this._Str_4460.sort(Array.NUMERIC);
+            this._skillTresholds.sort(Array.NUMERIC);
             this._publiclyRideable = k.readInteger();
             this._breedable = k.readBoolean();
             this._fullyGrown = k.readBoolean();
