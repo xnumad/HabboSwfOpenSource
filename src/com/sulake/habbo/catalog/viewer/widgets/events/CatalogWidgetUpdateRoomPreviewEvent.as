@@ -28,7 +28,7 @@
             return this._floorType;
         }
 
-        public function get _Str_5109():String
+        public function get landscapeType():String
         {
             return this._landscapeType;
         }

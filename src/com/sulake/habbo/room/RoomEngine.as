@@ -1333,12 +1333,12 @@
                 {
                     _local_5 = _local_4.floorType;
                     _local_6 = _local_4.wallType;
-                    _local_7 = _local_4._Str_5109;
+                    _local_7 = _local_4.landscapeType;
                 }
                 _local_4 = new RoomData(k, _arg_2);
                 _local_4.floorType = _local_5;
                 _local_4.wallType = _local_6;
-                _local_4._Str_5109 = _local_7;
+                _local_4.landscapeType = _local_7;
                 this._roomDatas.add(_local_3, _local_4);
                 Logger.log("Room Engine not initilized yet, can not create room. Room data stored for later initialization.");
                 return;
@@ -1359,9 +1359,9 @@
                 {
                     _local_6 = _local_4.wallType;
                 }
-                if (((!(_local_4._Str_5109 == null)) && (_local_4._Str_5109.length > 0)))
+                if (((!(_local_4.landscapeType == null)) && (_local_4.landscapeType.length > 0)))
                 {
-                    _local_7 = _local_4._Str_5109;
+                    _local_7 = _local_4.landscapeType;
                 }
             }
             var _local_8:IRoomInstance = this.createRoom(_local_3, _arg_2, _local_5, _local_6, _local_7, this.getWorldType(k));
@@ -1532,7 +1532,7 @@
                 }
                 if (_arg_4 != null)
                 {
-                    _local_10._Str_5109 = _arg_4;
+                    _local_10.landscapeType = _arg_4;
                 }
                 return true;
             }

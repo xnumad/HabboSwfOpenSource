@@ -44,12 +44,12 @@
             this._wallType = k;
         }
 
-        public function get _Str_5109():String
+        public function get landscapeType():String
         {
             return this._landscapeType;
         }
 
-        public function set _Str_5109(k:String):void
+        public function set landscapeType(k:String):void
         {
             this._landscapeType = k;
         }
