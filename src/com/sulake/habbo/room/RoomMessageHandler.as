@@ -379,7 +379,7 @@
                 return;
             }
             var _local_3:RoomVisualizationSettingsParser = _local_2.getParser();
-            var _local_4:* = (!(_local_3._Str_22900));
+            var _local_4:* = (!(_local_3.wallsHidden));
             var _local_5:Boolean = true;
             var _local_6:Number = _local_3._Str_9955;
             var _local_7:Number = _local_3._Str_9990;

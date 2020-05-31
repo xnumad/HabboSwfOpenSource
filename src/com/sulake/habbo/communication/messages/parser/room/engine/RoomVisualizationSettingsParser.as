@@ -10,7 +10,7 @@
         private var _floorThicknessMultiplier:Number = 1;
 
 
-        public function get _Str_22900():Boolean
+        public function get wallsHidden():Boolean
         {
             return this._wallsHidden;
         }
