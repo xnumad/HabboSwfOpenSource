@@ -27,7 +27,7 @@
             return this._aliases.getKey(k);
         }
 
-        public function _Str_24465(k:int):String
+        public function getAlias(k:int):String
         {
             if (((k < 0) || (k >= this.aliasCount)))
             {

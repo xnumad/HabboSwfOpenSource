@@ -294,7 +294,7 @@
                     while (_local_5 < _local_4)
                     {
                         _local_6 = _local_3.getName(_local_5);
-                        _local_7 = _local_3._Str_24465(_local_5);
+                        _local_7 = _local_3.getAlias(_local_5);
                         this._roomCreator.setRoomObjectAlias(_local_6, _local_7);
                         _local_5++;
                     }
