@@ -279,7 +279,7 @@
             }
             if (!isNaN(this._wallThicknessMultiplier))
             {
-                this._roomPlaneParser._Str_9955 = this._wallThicknessMultiplier;
+                this._roomPlaneParser.wallThicknessMultiplier = this._wallThicknessMultiplier;
             }
             var _local_2:String = k.getModel().getString(RoomObjectVariableEnum.ROOM_PLANE_XML);
             if (!this._roomPlaneParser.initializeFromXML(new XML(_local_2)))

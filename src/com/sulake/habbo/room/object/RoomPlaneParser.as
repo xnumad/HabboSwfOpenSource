@@ -355,12 +355,12 @@
             this._wallHeight = k;
         }
 
-        public function get _Str_9955():Number
+        public function get wallThicknessMultiplier():Number
         {
             return this._wallThicknessMultiplier;
         }
 
-        public function set _Str_9955(k:Number):void
+        public function set wallThicknessMultiplier(k:Number):void
         {
             if (k < 0)
             {

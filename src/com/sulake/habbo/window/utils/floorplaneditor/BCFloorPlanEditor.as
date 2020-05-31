@@ -518,7 +518,7 @@
         {
             var _local_2:RoomVisualizationSettingsParser = k.getParser();
             this._floorThickness = this._Str_10107(_local_2._Str_9990);
-            this._wallThickness = this._Str_10107(_local_2._Str_9955);
+            this._wallThickness = this._Str_10107(_local_2.wallThicknessMultiplier);
             this._Str_21392();
         }
 

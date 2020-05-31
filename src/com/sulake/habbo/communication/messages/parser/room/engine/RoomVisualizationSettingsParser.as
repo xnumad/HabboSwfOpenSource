@@ -15,7 +15,7 @@
             return this._wallsHidden;
         }
 
-        public function get _Str_9955():Number
+        public function get wallThicknessMultiplier():Number
         {
             return this._wallThicknessMultiplier;
         }
