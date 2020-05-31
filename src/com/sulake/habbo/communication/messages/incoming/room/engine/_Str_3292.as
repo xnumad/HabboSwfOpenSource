@@ -12,7 +12,7 @@
         private var _dir:int = 0;
         private var _sizeX:int = 0;
         private var _sizeY:int = 0;
-        private var _Str_5445:Number = 0;
+        private var _sizeZ:Number = 0;
         private var _type:int = 0;
         private var _Str_3182:int = -1;
         private var _state:int = 0;
@@ -121,14 +121,14 @@
 
         public function get sizeZ():Number
         {
-            return this._Str_5445;
+            return this._sizeZ;
         }
 
         public function set sizeZ(k:Number):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_5445 = k;
+                this._sizeZ = k;
             }
         }
 
