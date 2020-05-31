@@ -13,14 +13,14 @@
             this._aliases = new Map();
         }
 
-        public function get _Str_17132():int
+        public function get aliasCount():int
         {
             return this._aliases.length;
         }
 
         public function getName(k:int):String
         {
-            if (((k < 0) || (k >= this._Str_17132)))
+            if (((k < 0) || (k >= this.aliasCount)))
             {
                 return null;
             }
@@ -29,7 +29,7 @@
 
         public function _Str_24465(k:int):String
         {
-            if (((k < 0) || (k >= this._Str_17132)))
+            if (((k < 0) || (k >= this.aliasCount)))
             {
                 return null;
             }

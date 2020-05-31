@@ -289,7 +289,7 @@
                 _local_3 = _local_2.getParser();
                 if (_local_3 != null)
                 {
-                    _local_4 = _local_3._Str_17132;
+                    _local_4 = _local_3.aliasCount;
                     _local_5 = 0;
                     while (_local_5 < _local_4)
                     {
