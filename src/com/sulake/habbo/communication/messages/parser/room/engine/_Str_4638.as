@@ -36,7 +36,7 @@
             _local_3.ownerId = k.readInteger();
             if (_local_4 < 0)
             {
-                _local_3._Str_13150 = k.readString();
+                _local_3.staticClass = k.readString();
             }
             return _local_3;
         }

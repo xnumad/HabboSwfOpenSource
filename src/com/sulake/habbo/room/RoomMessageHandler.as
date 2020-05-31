@@ -652,9 +652,9 @@
             }
             var _local_3:IVector3d = new Vector3d(_arg_2.x, _arg_2.y, _arg_2.z);
             var _local_4:IVector3d = new Vector3d(_arg_2.dir);
-            if (_arg_2._Str_13150 != null)
+            if (_arg_2.staticClass != null)
             {
-                this._roomCreator.addObjectFurnitureByName(k, _arg_2.id, _arg_2._Str_13150, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794);
+                this._roomCreator.addObjectFurnitureByName(k, _arg_2.id, _arg_2.staticClass, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794);
             }
             else
             {

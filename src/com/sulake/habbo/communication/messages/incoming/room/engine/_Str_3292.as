@@ -171,12 +171,12 @@
             }
         }
 
-        public function get _Str_13150():String
+        public function get staticClass():String
         {
             return this._staticClass;
         }
 
-        public function set _Str_13150(k:String):void
+        public function set staticClass(k:String):void
         {
             if (!this._isReadOnly)
             {
