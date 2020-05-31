@@ -8,7 +8,7 @@
         private var _roomIndex:int;
         private var _habboGroupId:int;
         private var _status:int;
-        private var _Str_11227:String;
+        private var _habboGroupName:String;
 
 
         public function flush():Boolean
@@ -21,7 +21,7 @@
             this._roomIndex = k.readInteger();
             this._habboGroupId = k.readInteger();
             this._status = k.readInteger();
-            this._Str_11227 = k.readString();
+            this._habboGroupName = k.readString();
             return true;
         }
 
@@ -42,7 +42,7 @@
 
         public function get habboGroupName():String
         {
-            return this._Str_11227;
+            return this._habboGroupName;
         }
     }
 }
