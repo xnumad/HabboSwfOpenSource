@@ -35,7 +35,7 @@
             return this._y;
         }
 
-        public function get _Str_9852():Number
+        public function get tileHeight():Number
         {
             return HeightMapMessageParser.decodeTileHeight(this._value);
         }

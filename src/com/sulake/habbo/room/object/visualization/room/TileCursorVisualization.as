@@ -8,12 +8,12 @@
         private var _tileHeight:Number = 0;
 
 
-        public function get _Str_9852():Number
+        public function get tileHeight():Number
         {
             return this._tileHeight;
         }
 
-        public function set _Str_9852(k:Number):void
+        public function set tileHeight(k:Number):void
         {
             this._tileHeight = k;
         }
@@ -22,8 +22,8 @@
         {
             if (_arg_3 == 1)
             {
-                this._Str_9852 = object.getModel().getNumber(RoomObjectVariableEnum.TILE_CURSOR_HEIGHT);
-                return -(this._Str_9852) * (k / 2);
+                this.tileHeight = object.getModel().getNumber(RoomObjectVariableEnum.TILE_CURSOR_HEIGHT);
+                return -(this.tileHeight) * (k / 2);
             }
             return super.getSpriteYOffset(k, _arg_2, _arg_3);
         }
