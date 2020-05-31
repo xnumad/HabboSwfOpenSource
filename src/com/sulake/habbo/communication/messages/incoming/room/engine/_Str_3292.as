@@ -21,7 +21,7 @@
         private var _usagePolicy:int;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
-        private var _Str_21695:String = null;
+        private var _staticClass:String = null;
         private var _isReadOnly:Boolean = false;
 
         public function _Str_3292(k:int)
@@ -173,14 +173,14 @@
 
         public function get _Str_13150():String
         {
-            return this._Str_21695;
+            return this._staticClass;
         }
 
         public function set _Str_13150(k:String):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_21695 = k;
+                this._staticClass = k;
             }
         }
 
