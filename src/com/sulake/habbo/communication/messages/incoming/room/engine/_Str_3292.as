@@ -11,7 +11,7 @@
         private var _z:Number = 0;
         private var _dir:int = 0;
         private var _sizeX:int = 0;
-        private var _Str_3135:int = 0;
+        private var _sizeY:int = 0;
         private var _Str_5445:Number = 0;
         private var _type:int = 0;
         private var _Str_3182:int = -1;
@@ -106,16 +106,16 @@
             }
         }
 
-        public function get _Str_15185():int
+        public function get sizeY():int
         {
-            return this._Str_3135;
+            return this._sizeY;
         }
 
-        public function set _Str_15185(k:int):void
+        public function set sizeY(k:int):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_3135 = k;
+                this._sizeY = k;
             }
         }
 
