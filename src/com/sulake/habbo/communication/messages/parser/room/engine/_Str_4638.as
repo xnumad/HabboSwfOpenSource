@@ -44,7 +44,7 @@
         public static function _Str_6271(k:IMessageDataWrapper):IStuffData
         {
             var _local_2:int = k.readInteger();
-            var _local_3:IStuffData = StuffDataFactory._Str_6438(_local_2);
+            var _local_3:IStuffData = StuffDataFactory.getStuffDataWrapperForType(_local_2);
             _local_3.initializeFromIncomingMessage(k);
             return _local_3;
         }

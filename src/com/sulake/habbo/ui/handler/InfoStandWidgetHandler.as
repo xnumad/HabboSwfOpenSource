@@ -1022,7 +1022,7 @@
                 _local_3.extraParam = _local_5.getString(RoomWidgetEnumItemExtradataParameter.INFOSTAND_EXTRA_PARAM);
             }
             var _local_6:int = _local_5.getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
-            var _local_7:IStuffData = StuffDataFactory._Str_6438(_local_6);
+            var _local_7:IStuffData = StuffDataFactory.getStuffDataWrapperForType(_local_6);
             _local_7.initializeFromRoomObjectModel(_local_5);
             _local_3.stuffData = _local_7;
             var _local_8:String = _local_4.getType();

@@ -4,7 +4,7 @@
 
     public class StuffDataFactory 
     {
-        public static function _Str_6438(type:int):IStuffData
+        public static function getStuffDataWrapperForType(type:int):IStuffData
         {
             var stuffData:IStuffData;
             switch (type & 0xFF)

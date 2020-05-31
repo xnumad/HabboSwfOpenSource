@@ -2681,7 +2681,7 @@
                 }
                 _local_4.getModelController().setNumber(RoomObjectVariableEnum.FURNITURE_AUTOMATIC_STATE_INDEX, _local_5);
                 _local_6 = _local_4.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
-                _local_7 = StuffDataFactory._Str_6438(_local_6);
+                _local_7 = StuffDataFactory.getStuffDataWrapperForType(_local_6);
                 _local_7.initializeFromRoomObjectModel(_local_4.getModel());
                 _local_8 = new RoomObjectDataUpdateMessage(_local_5, _local_7);
                 if (_local_4.getEventHandler() != null)
@@ -2811,7 +2811,7 @@
                             _local_10 = _local_8.getNumber(RoomObjectVariableEnum.FURNITURE_TYPE_ID);
                             _local_11 = _local_8.getString(RoomObjectVariableEnum.FURNITURE_EXTRAS);
                             _local_12 = _local_8.getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
-                            _local_13 = StuffDataFactory._Str_6438(_local_12);
+                            _local_13 = StuffDataFactory.getStuffDataWrapperForType(_local_12);
                             _local_14 = this.getFurnitureIcon(_local_10, null, _local_11, _local_13).data;
                             if (_local_14)
                             {
@@ -3537,7 +3537,7 @@
                             _local_16 = _local_15.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
                             if (_local_16 != LegacyStuffData.FORMAT_KEY)
                             {
-                                _local_11 = StuffDataFactory._Str_6438(_local_16);
+                                _local_11 = StuffDataFactory.getStuffDataWrapperForType(_local_16);
                                 _local_11.initializeFromRoomObjectModel(_local_15.getModel());
                             }
                             break;
@@ -4030,7 +4030,7 @@
                 if (!isNaN(_local_5.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT)))
                 {
                     _local_6 = _local_5.getModel().getNumber(RoomObjectVariableEnum.FURNITURE_DATA_FORMAT);
-                    _local_7 = StuffDataFactory._Str_6438(_local_6);
+                    _local_7 = StuffDataFactory.getStuffDataWrapperForType(_local_6);
                     _local_7.initializeFromRoomObjectModel(_local_5.getModel());
                     _local_8 = _local_5.getState(0);
                     _local_9 = new RoomObjectDataUpdateMessage(_local_8, _local_7);
