@@ -6,7 +6,7 @@
     public class ItemDataUpdateMessageParser implements IMessageParser
     {
         private var _id:int = 0;
-        private var _Str_9228:String;
+        private var _itemData:String;
 
 
         public function get id():int
@@ -16,13 +16,13 @@
 
         public function get itemData():String
         {
-            return this._Str_9228;
+            return this._itemData;
         }
 
         public function flush():Boolean
         {
             this._id = 0;
-            this._Str_9228 = "";
+            this._itemData = "";
             return true;
         }
 
@@ -34,7 +34,7 @@
             }
             var _local_2:String = k.readString();
             this._id = int(_local_2);
-            this._Str_9228 = k.readString();
+            this._itemData = k.readString();
             return true;
         }
     }
