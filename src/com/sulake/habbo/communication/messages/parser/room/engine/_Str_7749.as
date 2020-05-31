@@ -6,18 +6,18 @@
 
     public class _Str_7749 implements IMessageParser 
     {
-        private var _Str_2776:_Str_3079 = null;
+        private var _item:_Str_3079 = null;
 
 
         public function flush():Boolean
         {
-            this._Str_2776 = null;
+            this._item = null;
             return true;
         }
 
         public function get data():_Str_3079
         {
-            var k:_Str_3079 = this._Str_2776;
+            var k:_Str_3079 = this._item;
             if (k != null)
             {
                 k.setReadOnly();
@@ -31,7 +31,7 @@
             {
                 return false;
             }
-            this._Str_2776 = ItemDataParser.parseItemData(k);
+            this._item = ItemDataParser.parseItemData(k);
             return true;
         }
     }
