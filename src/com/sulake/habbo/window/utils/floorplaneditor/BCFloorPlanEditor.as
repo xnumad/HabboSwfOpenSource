@@ -4,7 +4,7 @@
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
+    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
@@ -52,7 +52,7 @@
         private var _windowManager:HabboWindowManagerComponent;
         private var _floorHeightMapMessageEvent:FloorHeightMapEvent;
         private var _entryTileDataMessageEvent:RoomEntryTileMessageEvent;
-        private var _occupiedTilesMessageEvent:_Str_6566;
+        private var _occupiedTilesMessageEvent:RoomOccupiedTilesMessageEvent;
         private var _roomVisualizationSettingsMessageEvent:_Str_4196;
         private var _buildersClubSubscriptionStatusMessageEvent:_Str_5417;
         private var _perkAllowancesMessageEvent:PerkAllowancesEvent;
@@ -85,7 +85,7 @@
             {
                 this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
                 this._entryTileDataMessageEvent = new RoomEntryTileMessageEvent(this.onEntryTileData);
-                this._occupiedTilesMessageEvent = new _Str_6566(this.onOccupiedTiles);
+                this._occupiedTilesMessageEvent = new RoomOccupiedTilesMessageEvent(this.onOccupiedTiles);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
                 this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
@@ -505,7 +505,7 @@
             this._Str_16217();
         }
 
-        private function onOccupiedTiles(k:_Str_6566):void
+        private function onOccupiedTiles(k:RoomOccupiedTilesMessageEvent):void
         {
             this._floorPlanCache.onOccupiedTiles(k);
             if (this._heightMapEditor)

@@ -299,7 +299,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
 	import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
+	import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.PhoneCollectionStateMessageEvent;
@@ -1384,7 +1384,7 @@
             INCOMING_PACKETS[3965] = GuildEditInfoMessageEvent;
             INCOMING_PACKETS[3984] = NavigatorSavedSearchesEvent;
             INCOMING_PACKETS[3988] = GuildEditFailedMessageEvent;
-            INCOMING_PACKETS[3990] = _Str_6566;
+            INCOMING_PACKETS[3990] = RoomOccupiedTilesMessageEvent;
             INCOMING_PACKETS[4000] = DisconnectReasonEvent;
             INCOMING_PACKETS[411] = UserRightsMessageEvent;
             INCOMING_PACKETS[416] = _Str_17054;

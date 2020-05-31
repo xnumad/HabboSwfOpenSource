@@ -2,8 +2,8 @@
 {
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
-    import com.sulake.habbo.communication.messages.parser.room.layout._Str_6361;
-    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
+    import com.sulake.habbo.communication.messages.parser.room.layout.RoomOccupiedTilesMessageParser;
+    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomOccupiedTilesMessageEvent;
 
     public class FloorPlanCache 
     {
@@ -28,9 +28,9 @@
             this._Str_22644(k.getParser().text);
         }
 
-        public function onOccupiedTiles(k:_Str_6566):void
+        public function onOccupiedTiles(k:RoomOccupiedTilesMessageEvent):void
         {
-            var _local_2:_Str_6361;
+            var _local_2:RoomOccupiedTilesMessageParser;
             var _local_3:Object;
             if (this._floorPlanCache)
             {
