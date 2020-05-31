@@ -87,7 +87,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8180;
     import com.sulake.habbo.communication.messages.parser.room.engine.UserUpdateMessageParser;
     import com.sulake.room.IRoomInstance;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_6367;
+    import com.sulake.habbo.communication.messages.parser.room.engine.UserRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.pets.PetFigureUpdateParser;
     import com.sulake.habbo.communication.messages.parser.room.action.ExpressionMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.DanceMessageParser;
@@ -953,7 +953,7 @@
             {
                 return;
             }
-            var _local_3:_Str_6367 = _local_2.getParser();
+            var _local_3:UserRemoveMessageParser = _local_2.getParser();
             this._roomCreator.disposeObjectUser(this._currentRoomId, _local_3.id);
             this.updateGuideMarker();
         }

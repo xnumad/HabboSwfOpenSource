@@ -33,7 +33,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.session.events.RoomSessionUserDataUpdateEvent;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_6367;
+    import com.sulake.habbo.communication.messages.parser.room.engine.UserRemoveMessageParser;
     import com.sulake.habbo.session.events.RoomSessionUserBadgesEvent;
     import com.sulake.habbo.session.events.RoomSessionDoorbellEvent;
     import com.sulake.habbo.session.events.RoomSessionUserFigureUpdateEvent;
@@ -186,7 +186,7 @@
             {
                 return;
             }
-            var _local_4:int = (_local_2.getParser() as _Str_6367).id;
+            var _local_4:int = (_local_2.getParser() as UserRemoveMessageParser).id;
             _local_3.userDataManager.removeUserDataByRoomIndex(_local_4);
         }
 
