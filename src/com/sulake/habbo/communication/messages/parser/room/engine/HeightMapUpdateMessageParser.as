@@ -40,7 +40,7 @@
             return HeightMapMessageParser.decodeTileHeight(this._value);
         }
 
-        public function get window3():Boolean
+        public function get isStackingBlocked():Boolean
         {
             return HeightMapMessageParser.decodeIsStackingBlocked(this._value);
         }
