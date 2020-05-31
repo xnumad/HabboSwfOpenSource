@@ -72,7 +72,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsDataUpdateMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
     import flash.utils.setTimeout;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ItemMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemAddMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
@@ -664,7 +664,7 @@
 
         private function onItems(k:IMessageEvent):void
         {
-            var _local_6:_Str_3079;
+            var _local_6:ItemMessageData;
             var _local_2:ItemsEvent = (k as ItemsEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
@@ -689,7 +689,7 @@
                 return;
             }
             var _local_3:ItemAddMessageParser = _local_2.getParser();
-            var _local_4:_Str_3079 = _local_3.data;
+            var _local_4:ItemMessageData = _local_3.data;
             if (_local_4 != null)
             {
                 this._Str_19994(this._currentRoomId, _local_4);
@@ -726,7 +726,7 @@
             {
                 return;
             }
-            var _local_5:_Str_3079 = _local_3.data;
+            var _local_5:ItemMessageData = _local_3.data;
             if (_local_5 != null)
             {
                 _local_6 = _local_4.getLocation(_local_5._Str_15139, _local_5._Str_15569, _local_5.localX, _local_5.localY, _local_5.dir);
@@ -747,7 +747,7 @@
             this._roomCreator.updateObjectUserFlatControl(this._currentRoomId, _local_3.id, _local_3.itemData);
         }
 
-        private function _Str_19994(k:int, _arg_2:_Str_3079):void
+        private function _Str_19994(k:int, _arg_2:ItemMessageData):void
         {
             if (((_arg_2 == null) || (this._roomCreator == null)))
             {

@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ItemMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class ItemDataParser 
     {
 
 
-        public static function parseItemData(k:IMessageDataWrapper):_Str_3079
+        public static function parseItemData(k:IMessageDataWrapper):ItemMessageData
         {
             var _local_14:String;
             var _local_15:String;
@@ -40,12 +40,12 @@
             Logger.log(("dataStr: " + _local_5));
             Logger.log(("secondsToExpiration: " + _local_6));
             Logger.log(("state: " + _local_9));
-            var _local_11:_Str_3079;
+            var _local_11:ItemMessageData;
             var _local_12:Array;
             var _local_13:String;
             if (_local_4.indexOf(":") == 0)
             {
-                _local_11 = new _Str_3079(_local_2, _local_3, false);
+                _local_11 = new ItemMessageData(_local_2, _local_3, false);
                 _local_12 = _local_4.split(" ");
                 if (_local_12.length >= 3)
                 {
@@ -80,7 +80,7 @@
             }
             else
             {
-                _local_11 = new _Str_3079(_local_2, _local_3, true);
+                _local_11 = new ItemMessageData(_local_2, _local_3, true);
                 _local_12 = _local_4.split(" ");
                 if (_local_12.length >= 2)
                 {

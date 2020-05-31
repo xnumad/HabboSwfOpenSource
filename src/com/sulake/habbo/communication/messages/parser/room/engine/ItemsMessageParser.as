@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ItemMessageData;
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -26,13 +26,13 @@
             return this._items.length;
         }
 
-        public function _Str_2990(k:int):_Str_3079
+        public function _Str_2990(k:int):ItemMessageData
         {
             if (((k < 0) || (k >= this.getItemCount())))
             {
                 return null;
             }
-            var _local_2:_Str_3079 = (this._items[k] as _Str_3079);
+            var _local_2:ItemMessageData = (this._items[k] as ItemMessageData);
             if (_local_2 != null)
             {
                 _local_2.setReadOnly();
@@ -45,7 +45,7 @@
             var _local_2:int;
             var _local_6:int;
             var _local_7:String;
-            var _local_8:_Str_3079;
+            var _local_8:ItemMessageData;
             if (k == null)
             {
                 return false;

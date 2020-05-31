@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.engine
 {
-    public class _Str_3079 
+    public class ItemMessageData
     {
         private var _id:int = 0;
         private var _Str_19875:Boolean = false;
@@ -20,7 +20,7 @@
         private var _ownerName:String = "";
         private var _secondsToExpiration:int;
 
-        public function _Str_3079(k:int, _arg_2:int, _arg_3:Boolean)
+        public function ItemMessageData(k:int, _arg_2:int, _arg_3:Boolean)
         {
             this._id = k;
             this._type = _arg_2;
