@@ -1254,7 +1254,7 @@
                 _local_11.fullyGrown = _local_2.fullyGrown;
                 _local_11.dead = _local_2.dead;
                 _local_11.rarityLevel = _local_2.rarityLevel;
-                _local_11._Str_3307 = _local_2._Str_3307;
+                _local_11.skillTresholds = _local_2.skillTresholds;
                 _local_11._Str_5114 = false;
                 _local_11.publiclyRideable = _local_2.publiclyRideable;
                 _local_11.maximumTimeToLive = _local_2.maximumTimeToLive;

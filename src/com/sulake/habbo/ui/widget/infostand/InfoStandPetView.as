@@ -159,7 +159,7 @@
             this._Str_23761(k._Str_6943, (!(k.type == PetTypeEnum.MONSTERPLANT)));
             this._Str_25526 = k.age;
             this._Str_25746(k.level, k._Str_4276, (!(k.type == PetTypeEnum.MONSTERPLANT)));
-            this._Str_25402(k.level, k._Str_3307, k.type);
+            this._Str_25402(k.level, k.skillTresholds, k.type);
             this._Str_25516(k.rarityLevel, k.type);
             if (k.type == PetTypeEnum.MONSTERPLANT)
             {
@@ -208,9 +208,9 @@
             this._petData.add(k.id, k);
             if ((((this._petCommadTool) && (this._petCommadTool.isVisible())) && (k._Str_5175)))
             {
-                _local_5 = this._Str_16104(k.level, k._Str_3307);
+                _local_5 = this._Str_16104(k.level, k.skillTresholds);
                 _local_6 = (k.experience / k._Str_4095);
-                this._petCommadTool._Str_19046(k.id, k.name, k.image, k.type, (k.level - _local_5), _local_6, (this._Str_19542(k.level, k._Str_3307) - _local_5), k._Str_3307);
+                this._petCommadTool._Str_19046(k.id, k.name, k.image, k.type, (k.level - _local_5), _local_6, (this._Str_19542(k.level, k.skillTresholds) - _local_5), k.skillTresholds);
             }
         }
 
@@ -283,9 +283,9 @@
             if (k != null)
             {
                 this._petCommadTool._Str_3360(true);
-                _local_2 = this._Str_16104(k.level, k._Str_3307);
+                _local_2 = this._Str_16104(k.level, k.skillTresholds);
                 _local_3 = (k.experience / k._Str_4095);
-                this._petCommadTool._Str_19046(k.id, k.name, k.image, k.type, (k.level - _local_2), _local_3, (this._Str_19542(k.level, k._Str_3307) - _local_2), k._Str_3307);
+                this._petCommadTool._Str_19046(k.id, k.name, k.image, k.type, (k.level - _local_2), _local_3, (this._Str_19542(k.level, k.skillTresholds) - _local_2), k.skillTresholds);
             }
         }
 

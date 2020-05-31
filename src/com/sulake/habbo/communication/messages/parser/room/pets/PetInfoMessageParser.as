@@ -149,7 +149,7 @@
             return this._remainingGrowTime;
         }
 
-        public function get _Str_3307():Array
+        public function get skillTresholds():Array
         {
             return this._skillTresholds;
         }

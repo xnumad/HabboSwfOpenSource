@@ -90,7 +90,7 @@
             return this._breedId;
         }
 
-        public function get _Str_3307():Array
+        public function get skillTresholds():Array
         {
             return this._skillTresholds;
         }
@@ -198,7 +198,7 @@
             this._roomIndex = k.roomIndex;
             this._age = k.age;
             this._breedId = k.unknownRarityLevel;
-            this._skillTresholds = k._Str_3307;
+            this._skillTresholds = k.skillTresholds;
             this._accessRights = k.publiclyRideable;
             this._maxWellBeingSeconds = k.maximumTimeToLive;
             this._remainingWellBeingSeconds = k.remainingTimeToLive;

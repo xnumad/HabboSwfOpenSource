@@ -29,7 +29,7 @@
         public var breedable:Boolean = false;
         public var fullyGrown:Boolean = false;
         public var dead:Boolean = false;
-        public var _Str_3307:Array;
+        public var skillTresholds:Array;
         public var publiclyRideable:int = 0;
         public var maximumTimeToLive:int = 0;
         public var remainingTimeToLive:int = 0;
@@ -38,7 +38,7 @@
 
         public function PetInfoData()
         {
-            this._Str_3307 = [];
+            this.skillTresholds = [];
             super();
         }
 
@@ -69,7 +69,7 @@
             this.breedable = k.breedable;
             this.dead = k.dead;
             this.fullyGrown = k.fullyGrown;
-            this._Str_3307 = k._Str_3307;
+            this.skillTresholds = k.skillTresholds;
             this.publiclyRideable = k.publiclyRideable;
             this.maximumTimeToLive = k.maximumTimeToLive;
             this.remainingTimeToLive = k.remainingTimeToLive;

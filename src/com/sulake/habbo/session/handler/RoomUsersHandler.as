@@ -296,7 +296,7 @@
             _local_5.fullyGrown = _local_4.fullyGrown;
             _local_5.rarityLevel = _local_4.rarityLevel;
             _local_5.dead = _local_4.dead;
-            _local_5._Str_3307 = _local_4._Str_3307;
+            _local_5.skillTresholds = _local_4.skillTresholds;
             _local_5.publiclyRideable = _local_4.publiclyRideable;
             _local_5.maximumTimeToLive = _local_4.maximumTimeToLive;
             _local_5.remainingTimeToLive = _local_4.remainingTimeToLive;

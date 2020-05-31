@@ -146,7 +146,7 @@
             return this._rarityLevel;
         }
 
-        public function get _Str_3307():Array
+        public function get skillTresholds():Array
         {
             return this._skillTresholds;
         }
@@ -281,7 +281,7 @@
             this._breedable = k;
         }
 
-        public function set _Str_3307(k:Array):void
+        public function set skillTresholds(k:Array):void
         {
             this._skillTresholds = k;
         }

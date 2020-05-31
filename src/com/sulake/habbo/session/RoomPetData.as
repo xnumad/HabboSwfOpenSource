@@ -111,7 +111,7 @@
             return this._rider;
         }
 
-        public function get _Str_3307():Array
+        public function get skillTresholds():Array
         {
             return this._skillTresholds;
         }
@@ -221,7 +221,7 @@
             this._rider = k;
         }
 
-        public function set _Str_3307(k:Array):void
+        public function set skillTresholds(k:Array):void
         {
             this._skillTresholds = k;
         }
