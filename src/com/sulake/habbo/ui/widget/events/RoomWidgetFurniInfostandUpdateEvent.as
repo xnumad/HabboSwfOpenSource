@@ -26,7 +26,7 @@
         private var _groupId:int = 0;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
-        private var _Str_5135:int = 0;
+        private var _usagePolicy:int = 0;
         private var _Str_26155:int = -1;
         private var _Str_6586:int = -1;
         private var _Str_9981:Boolean;
@@ -220,12 +220,12 @@
 
         public function set usagePolicy(k:int):void
         {
-            this._Str_5135 = k;
+            this._usagePolicy = k;
         }
 
         public function get usagePolicy():int
         {
-            return this._Str_5135;
+            return this._usagePolicy;
         }
 
         public function set rentOfferId(k:int):void

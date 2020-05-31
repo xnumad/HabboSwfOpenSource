@@ -18,7 +18,7 @@
         private var _state:int = 0;
         private var _data:IStuffData;
         private var _expiryTime:int = 0;
-        private var _Str_5135:int;
+        private var _usagePolicy:int;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
         private var _Str_21695:String = null;
@@ -212,12 +212,12 @@
 
         public function get usagePolicy():int
         {
-            return this._Str_5135;
+            return this._usagePolicy;
         }
 
         public function set usagePolicy(k:int):void
         {
-            this._Str_5135 = k;
+            this._usagePolicy = k;
         }
 
         public function get ownerId():int

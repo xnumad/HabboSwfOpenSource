@@ -15,7 +15,7 @@
         private var _state:int = 0;
         private var _data:String = "";
         private var _isReadOnly:Boolean = false;
-        private var _Str_5135:int = 0;
+        private var _usagePolicy:int = 0;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
         private var _secondsToExpiration:int;
@@ -174,14 +174,14 @@
 
         public function get usagePolicy():int
         {
-            return this._Str_5135;
+            return this._usagePolicy;
         }
 
         public function set usagePolicy(k:int):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_5135 = k;
+                this._usagePolicy = k;
             }
         }
 
