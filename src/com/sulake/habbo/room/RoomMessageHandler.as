@@ -57,7 +57,7 @@
     import com.sulake.habbo.room.utils.FurniStackingHeightMap;
     import com.sulake.habbo.communication.messages.parser.room.engine.HeightMapUpdateMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomVisualizationSettingsParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7512;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomPropertyMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.FloorHeightMapMessageParser;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
@@ -397,7 +397,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7512 = _local_2.getParser();
+            var _local_3:RoomPropertyMessageParser = _local_2.getParser();
             var _local_4:String = _local_3._Str_5207;
             var _local_5:String = _local_3._Str_5259;
             var _local_6:String = _local_3._Str_5109;
