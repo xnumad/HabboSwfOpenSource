@@ -6,16 +6,16 @@
 
     public class FurnitureAliasesMessageParser implements IMessageParser
     {
-        private var _Str_1040:Map = null;
+        private var _aliases:Map = null;
 
         public function FurnitureAliasesMessageParser()
         {
-            this._Str_1040 = new Map();
+            this._aliases = new Map();
         }
 
         public function get _Str_17132():int
         {
-            return this._Str_1040.length;
+            return this._aliases.length;
         }
 
         public function getName(k:int):String
@@ -24,7 +24,7 @@
             {
                 return null;
             }
-            return this._Str_1040.getKey(k);
+            return this._aliases.getKey(k);
         }
 
         public function _Str_24465(k:int):String
@@ -33,12 +33,12 @@
             {
                 return null;
             }
-            return this._Str_1040.getWithIndex(k);
+            return this._aliases.getWithIndex(k);
         }
 
         public function flush():Boolean
         {
-            this._Str_1040.reset();
+            this._aliases.reset();
             return true;
         }
 
@@ -46,15 +46,15 @@
         {
             var _local_4:String;
             var _local_5:String;
-            this._Str_1040.reset();
+            this._aliases.reset();
             var _local_2:int = k.readInteger();
             var _local_3:int;
             while (_local_3 < _local_2)
             {
                 _local_4 = k.readString();
                 _local_5 = k.readString();
-                this._Str_1040.remove(_local_4);
-                this._Str_1040.add(_local_4, _local_5);
+                this._aliases.remove(_local_4);
+                this._aliases.add(_local_4, _local_5);
                 _local_3++;
             }
             return true;
