@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.window.HabboWindowManagerComponent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
-    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
+    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
     import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
@@ -28,7 +28,7 @@
     import com.sulake.core.window.IWindow;
     import flash.events.KeyboardEvent;
     import flash.ui.Keyboard;
-    import com.sulake.habbo.communication.messages.parser.room.layout._Str_5770;
+    import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
     import flash.geom.Point;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_6347;
     import com.sulake.habbo.communication.messages.parser.perk.PerkAllowancesMessageParser;
@@ -51,7 +51,7 @@
 
         private var _windowManager:HabboWindowManagerComponent;
         private var _floorHeightMapMessageEvent:FloorHeightMapEvent;
-        private var _entryTileDataMessageEvent:_Str_4976;
+        private var _entryTileDataMessageEvent:RoomEntryTileMessageEvent;
         private var _occupiedTilesMessageEvent:_Str_6566;
         private var _roomVisualizationSettingsMessageEvent:_Str_4196;
         private var _buildersClubSubscriptionStatusMessageEvent:_Str_5417;
@@ -84,7 +84,7 @@
             if (this._windowManager.communication != null)
             {
                 this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
-                this._entryTileDataMessageEvent = new _Str_4976(this.onEntryTileData);
+                this._entryTileDataMessageEvent = new RoomEntryTileMessageEvent(this.onEntryTileData);
                 this._occupiedTilesMessageEvent = new _Str_6566(this.onOccupiedTiles);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
@@ -489,13 +489,13 @@
             }
         }
 
-        private function onEntryTileData(k:_Str_4976):void
+        private function onEntryTileData(k:RoomEntryTileMessageEvent):void
         {
             if (!this._editorWindow)
             {
                 return;
             }
-            var _local_2:_Str_5770 = k.getParser();
+            var _local_2:RoomEntryTileMessageParser = k.getParser();
             this._floorPlanCache._Str_7642 = new Point(_local_2.x, _local_2.y);
             this._floorPlanCache._Str_6184 = _local_2.dir;
             if (this._heightMapEditor)

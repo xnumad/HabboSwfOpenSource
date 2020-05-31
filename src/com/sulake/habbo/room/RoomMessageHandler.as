@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.room.object.RoomPlaneParser;
-    import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
+    import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
@@ -60,7 +60,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7512;
     import com.sulake.habbo.communication.messages.parser.room.engine.FloorHeightMapMessageParser;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
-    import com.sulake.habbo.communication.messages.parser.room.layout._Str_5770;
+    import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_8082;
@@ -118,7 +118,7 @@
         private var _connection:IConnection = null;
         private var _roomCreator:IRoomCreator = null;
         private var _planeParser:RoomPlaneParser = null;
-        private var _latestEntryTileEvent:_Str_4976 = null;
+        private var _latestEntryTileEvent:RoomEntryTileMessageEvent = null;
         private var _ownUserId:int = -1;
         private var _initialConnection:Boolean = true;
         private var _passiveObjectRunningId:int = -1000000000;
@@ -184,7 +184,7 @@
                 k.addMessageEvent(new UserObjectEvent(this.onOwnUserEvent));
                 k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
                 k.addMessageEvent(new _Str_7999(this.onRoomProperty));
-                k.addMessageEvent(new _Str_4976(this.onEntryTileData));
+                k.addMessageEvent(new RoomEntryTileMessageEvent(this.onEntryTileData));
                 k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
                 k.addMessageEvent(new HeightMapEvent(this.onHeightMap));
                 k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
@@ -407,7 +407,7 @@
             }
         }
 
-        private function onEntryTileData(k:_Str_4976):void
+        private function onEntryTileData(k:RoomEntryTileMessageEvent):void
         {
             this._latestEntryTileEvent = k;
         }
@@ -440,7 +440,7 @@
             var _local_8:Number = -1;
             var _local_9:Number = 0;
             var _local_10:Number = 0;
-            var _local_11:_Str_5770;
+            var _local_11:RoomEntryTileMessageParser;
             if (this._latestEntryTileEvent != null)
             {
                 _local_11 = this._latestEntryTileEvent.getParser();

@@ -298,7 +298,7 @@
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_7289;
 	import com.sulake.habbo.communication.messages.outgoing._Str_438._Str_8089;
 	import com.sulake.habbo.communication.messages.incoming.landingview._Str_9504;
-	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_4976;
+	import com.sulake.habbo.communication.messages.incoming._Str_446.RoomEntryTileMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming._Str_446._Str_6566;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryPhoneNumberResultMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.gifts.TryVerificationCodeResultMessageEvent;
@@ -1091,7 +1091,7 @@
             INCOMING_PACKETS[1651] = _Str_9121;
             INCOMING_PACKETS[1660] = _Str_16258;
             INCOMING_PACKETS[1663] = _Str_17947;
-            INCOMING_PACKETS[1664] = _Str_4976;
+            INCOMING_PACKETS[1664] = RoomEntryTileMessageEvent;
             INCOMING_PACKETS[1683] = _Str_9354;
             INCOMING_PACKETS[1689] = GameAchievementsMessageEvent;
             INCOMING_PACKETS[1702] = HabboGroupDetailsMessageEvent;
