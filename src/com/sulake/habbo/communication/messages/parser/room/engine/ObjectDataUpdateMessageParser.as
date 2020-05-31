@@ -5,7 +5,7 @@
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7918 implements IMessageParser 
+    public class ObjectDataUpdateMessageParser implements IMessageParser
     {
         private var _id:int = 0;
         private var _state:int = 0;
