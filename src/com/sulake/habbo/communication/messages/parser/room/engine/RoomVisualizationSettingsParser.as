@@ -5,14 +5,14 @@
 
     public class RoomVisualizationSettingsParser implements IMessageParser
     {
-        private var _Str_16940:Boolean = false;
+        private var _wallsHidden:Boolean = false;
         private var _wallThicknessMultiplier:Number = 1;
         private var _floorThicknessMultiplier:Number = 1;
 
 
         public function get _Str_22900():Boolean
         {
-            return this._Str_16940;
+            return this._wallsHidden;
         }
 
         public function get _Str_9955():Number
@@ -27,7 +27,7 @@
 
         public function flush():Boolean
         {
-            this._Str_16940 = false;
+            this._wallsHidden = false;
             this._wallThicknessMultiplier = 1;
             this._floorThicknessMultiplier = 1;
             return true;
@@ -39,7 +39,7 @@
             {
                 return false;
             }
-            this._Str_16940 = k.readBoolean();
+            this._wallsHidden = k.readBoolean();
             var _local_2:int = k.readInteger();
             var _local_3:int = k.readInteger();
             if (_local_2 < -2)
