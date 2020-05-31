@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_7124 implements IMessageParser 
+    public class ItemRemoveMessageParser implements IMessageParser
     {
         private var _itemId:int = 0;
         private var _pickerId:int = -1;

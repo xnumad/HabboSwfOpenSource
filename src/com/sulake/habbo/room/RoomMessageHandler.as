@@ -75,7 +75,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7298;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7124;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7749;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_8155;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
@@ -707,7 +707,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7124 = _local_2.getParser();
+            var _local_3:ItemRemoveMessageParser = _local_2.getParser();
             this._roomCreator.disposeObjectWallItem(this._currentRoomId, _local_3.itemId, _local_3.pickerId);
         }
 
