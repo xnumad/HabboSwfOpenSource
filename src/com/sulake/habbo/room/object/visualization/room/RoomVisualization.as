@@ -275,7 +275,7 @@
             }
             if (!isNaN(this._floorThicknessMultiplier))
             {
-                this._roomPlaneParser._Str_9990 = this._floorThicknessMultiplier;
+                this._roomPlaneParser.floorThicknessMultiplier = this._floorThicknessMultiplier;
             }
             if (!isNaN(this._wallThicknessMultiplier))
             {

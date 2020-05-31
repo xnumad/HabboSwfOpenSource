@@ -382,7 +382,7 @@
             var _local_4:* = (!(_local_3.wallsHidden));
             var _local_5:Boolean = true;
             var _local_6:Number = _local_3.wallThicknessMultiplier;
-            var _local_7:Number = _local_3._Str_9990;
+            var _local_7:Number = _local_3.floorThicknessMultiplier;
             if (this._roomCreator != null)
             {
                 this._roomCreator.updateObjectRoomVisibilities(this._currentRoomId, _local_4, _local_5);

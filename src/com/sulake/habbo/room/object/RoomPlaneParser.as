@@ -369,12 +369,12 @@
             this._wallThicknessMultiplier = k;
         }
 
-        public function get _Str_9990():Number
+        public function get floorThicknessMultiplier():Number
         {
             return this._floorThicknessMultiplier;
         }
 
-        public function set _Str_9990(k:Number):void
+        public function set floorThicknessMultiplier(k:Number):void
         {
             if (k < 0)
             {

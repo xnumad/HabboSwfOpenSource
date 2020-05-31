@@ -20,7 +20,7 @@
             return this._wallThicknessMultiplier;
         }
 
-        public function get _Str_9990():Number
+        public function get floorThicknessMultiplier():Number
         {
             return this._floorThicknessMultiplier;
         }
