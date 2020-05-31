@@ -52,7 +52,7 @@
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_10528;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_7716;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_6431;
+    import com.sulake.habbo.communication.messages.parser.room.engine.FurnitureAliasesMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.HeightMapMessageParser;
     import com.sulake.habbo.room.utils.FurniStackingHeightMap;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7700;
@@ -274,7 +274,7 @@
         private function onFurnitureAliases(k:IMessageEvent):void
         {
             var _local_2:_Str_6253;
-            var _local_3:_Str_6431;
+            var _local_3:FurnitureAliasesMessageParser;
             var _local_4:int;
             var _local_5:int;
             var _local_6:String;

@@ -4,11 +4,11 @@
     import com.sulake.core.utils.Map;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6431 implements IMessageParser 
+    public class FurnitureAliasesMessageParser implements IMessageParser
     {
         private var _Str_1040:Map = null;
 
-        public function _Str_6431()
+        public function FurnitureAliasesMessageParser()
         {
             this._Str_1040 = new Map();
         }
