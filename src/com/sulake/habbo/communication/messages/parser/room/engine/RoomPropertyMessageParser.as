@@ -26,7 +26,7 @@
             return this._landscapeType;
         }
 
-        public function get _Str_25889():String
+        public function get animatedLandscapeType():String
         {
             return this._animatedLandscapeType;
         }
