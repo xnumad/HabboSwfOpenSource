@@ -1753,7 +1753,7 @@
 
         private function handleUserPlace(k:IRoomObjectController, _arg_2:int, _arg_3:int, _arg_4:LegacyWallGeometry):Boolean
         {
-            if (!_arg_4._Str_10375(_arg_2, _arg_3))
+            if (!_arg_4.isRoomTile(_arg_2, _arg_3))
             {
                 return false;
             }

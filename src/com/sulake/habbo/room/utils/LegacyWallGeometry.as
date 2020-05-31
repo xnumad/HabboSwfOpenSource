@@ -323,7 +323,7 @@
             return _local_3 + (((((((((int(this._Str_2754((k - 1), (_arg_2 - 1))) == _local_4) || (int(this._Str_2754(k, (_arg_2 - 1))) == _local_4)) || (int(this._Str_2754((k + 1), (_arg_2 - 1))) == _local_4)) || (int(this._Str_2754((k - 1), _arg_2)) == _local_4)) || (int(this._Str_2754((k + 1), _arg_2)) == _local_4)) || (int(this._Str_2754((k - 1), (_arg_2 + 1))) == _local_4)) || (int(this._Str_2754(k, (_arg_2 + 1))) == _local_4)) || (int(this._Str_2754((k + 1), (_arg_2 + 1))) == _local_4)) ? 0.5 : 0);
         }
 
-        public function _Str_10375(k:int, _arg_2:int):Boolean
+        public function isRoomTile(k:int, _arg_2:int):Boolean
         {
             return ((((k >= 0) && (k < this._width)) && (_arg_2 >= 0)) && (_arg_2 < this._height)) && (this._heightMap[_arg_2][k] >= 0);
         }

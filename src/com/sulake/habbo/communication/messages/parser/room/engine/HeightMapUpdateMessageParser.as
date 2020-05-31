@@ -45,7 +45,7 @@
             return HeightMapMessageParser.decodeIsStackingBlocked(this._value);
         }
 
-        public function get _Str_10375():Boolean
+        public function get isRoomTile():Boolean
         {
             return HeightMapMessageParser.decodeIsRoomTile(this._value);
         }

@@ -59,7 +59,7 @@
             return decodeIsStackingBlocked(this._data[((_arg_2 * this._width) + k)]);
         }
 
-        public function _Str_10375(k:int, _arg_2:int):Boolean
+        public function isRoomTile(k:int, _arg_2:int):Boolean
         {
             if (((((k < 0) || (k >= this._width)) || (_arg_2 < 0)) || (_arg_2 >= this._height)))
             {

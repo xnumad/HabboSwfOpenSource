@@ -330,7 +330,7 @@
                 {
                     _local_9 = _local_3._Str_2754(_local_8, _local_7);
                     _local_10 = _local_3.getStackingBlocked(_local_8, _local_7);
-                    _local_11 = _local_3._Str_10375(_local_8, _local_7);
+                    _local_11 = _local_3.isRoomTile(_local_8, _local_7);
                     _local_6._Str_3982(_local_8, _local_7, _local_9);
                     _local_6.setStackingBlocked(_local_8, _local_7, _local_10);
                     _local_6.setIsRoomTile(_local_8, _local_7, _local_11);
@@ -366,7 +366,7 @@
                 _local_6 = _local_3.y;
                 _local_4._Str_3982(_local_5, _local_6, _local_3.tileHeight);
                 _local_4.setStackingBlocked(_local_5, _local_6, _local_3.isStackingBlocked);
-                _local_4.setIsRoomTile(_local_5, _local_6, _local_3._Str_10375);
+                _local_4.setIsRoomTile(_local_5, _local_6, _local_3.isRoomTile);
             }
             this._roomCreator.refreshTileObjectMap(this._currentRoomId, "RoomMessageHandler.onHeightMapUpdate()");
         }
