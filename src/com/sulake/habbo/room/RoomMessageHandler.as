@@ -74,7 +74,7 @@
     import flash.utils.setTimeout;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3079;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7298;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ItemAddMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine._Str_7749;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemDataUpdateMessageParser;
@@ -688,7 +688,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7298 = _local_2.getParser();
+            var _local_3:ItemAddMessageParser = _local_2.getParser();
             var _local_4:_Str_3079 = _local_3.data;
             if (_local_4 != null)
             {
