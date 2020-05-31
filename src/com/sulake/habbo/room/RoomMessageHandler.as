@@ -76,7 +76,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemAddMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_7749;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ItemUpdateMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemDataUpdateMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
@@ -720,7 +720,7 @@
             {
                 return;
             }
-            var _local_3:_Str_7749 = _local_2.getParser();
+            var _local_3:ItemUpdateMessageParser = _local_2.getParser();
             var _local_4:LegacyWallGeometry = this._roomCreator.getLegacyGeometry(this._currentRoomId);
             if (((this._roomCreator == null) || (_local_4 == null)))
             {
