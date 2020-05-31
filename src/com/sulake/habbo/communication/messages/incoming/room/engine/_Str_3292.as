@@ -93,12 +93,12 @@
             }
         }
 
-        public function get _Str_13204():int
+        public function get sizeX():int
         {
             return this._sizeX;
         }
 
-        public function set _Str_13204(k:int):void
+        public function set sizeX(k:int):void
         {
             if (!this._isReadOnly)
             {
