@@ -11,7 +11,7 @@
         private var _animatedLandscapeType:String = null;
 
 
-        public function get _Str_5207():String
+        public function get floorType():String
         {
             return this._floorType;
         }

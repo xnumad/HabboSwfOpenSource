@@ -1331,12 +1331,12 @@
                 _local_4 = this._roomDatas.remove(_local_3);
                 if (_local_4 != null)
                 {
-                    _local_5 = _local_4._Str_5207;
+                    _local_5 = _local_4.floorType;
                     _local_6 = _local_4._Str_5259;
                     _local_7 = _local_4._Str_5109;
                 }
                 _local_4 = new RoomData(k, _arg_2);
-                _local_4._Str_5207 = _local_5;
+                _local_4.floorType = _local_5;
                 _local_4._Str_5259 = _local_6;
                 _local_4._Str_5109 = _local_7;
                 this._roomDatas.add(_local_3, _local_4);
@@ -1351,9 +1351,9 @@
             _local_4 = this._roomDatas.remove(_local_3);
             if (_local_4 != null)
             {
-                if (((!(_local_4._Str_5207 == null)) && (_local_4._Str_5207.length > 0)))
+                if (((!(_local_4.floorType == null)) && (_local_4.floorType.length > 0)))
                 {
-                    _local_5 = _local_4._Str_5207;
+                    _local_5 = _local_4.floorType;
                 }
                 if (((!(_local_4._Str_5259 == null)) && (_local_4._Str_5259.length > 0)))
                 {
@@ -1524,7 +1524,7 @@
                 }
                 if (_arg_2 != null)
                 {
-                    _local_10._Str_5207 = _arg_2;
+                    _local_10.floorType = _arg_2;
                 }
                 if (_arg_3 != null)
                 {

@@ -24,12 +24,12 @@
             return this._data;
         }
 
-        public function get _Str_5207():String
+        public function get floorType():String
         {
             return this._floorType;
         }
 
-        public function set _Str_5207(k:String):void
+        public function set floorType(k:String):void
         {
             this._floorType = k;
         }
