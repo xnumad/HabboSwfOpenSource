@@ -1095,7 +1095,7 @@
                 _local_2 = (k as _Str_7350).getParser();
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 1, null);
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 2, null);
-                _local_3 = _local_2._Str_24284;
+                _local_3 = _local_2.objectList;
                 _local_4 = 0;
                 while (_local_4 < _local_3.length)
                 {

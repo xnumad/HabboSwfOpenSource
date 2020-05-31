@@ -22,7 +22,7 @@
             return this._avatar;
         }
 
-        public function get _Str_24284():Array
+        public function get objectList():Array
         {
             return this._objectList;
         }
