@@ -8,7 +8,7 @@
     public class SlideObjectBundleMessageParser implements IMessageParser
     {
         private var _id:int;
-        private var _Str_13269:Array;
+        private var _objectList:Array;
         private var _avatar:_Str_3381 = null;
 
 
@@ -24,14 +24,14 @@
 
         public function get _Str_24284():Array
         {
-            return this._Str_13269;
+            return this._objectList;
         }
 
         public function flush():Boolean
         {
             this._id = -1;
             this._avatar = null;
-            this._Str_13269 = [];
+            this._objectList = [];
             return true;
         }
 
@@ -52,7 +52,7 @@
             var _local_4:Number = k.readInteger();
             var _local_5:Number = k.readInteger();
             var _local_6:int = k.readInteger();
-            this._Str_13269 = new Array();
+            this._objectList = new Array();
             var _local_13:int;
             while (_local_13 < _local_6)
             {
@@ -62,7 +62,7 @@
                 _local_9 = new Vector3d(_local_2, _local_3, _local_11);
                 _local_10 = new Vector3d(_local_4, _local_5, _local_12);
                 _local_8 = new _Str_3381(_local_7, _local_9, _local_10);
-                this._Str_13269.push(_local_8);
+                this._objectList.push(_local_8);
                 _local_13++;
             }
             this._id = k.readInteger();
