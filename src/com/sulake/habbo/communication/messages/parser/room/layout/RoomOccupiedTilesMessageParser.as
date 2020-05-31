@@ -5,17 +5,17 @@
 
     public class RoomOccupiedTilesMessageParser implements IMessageParser
     {
-        private var _Str_17579:Array;
+        private var _occupiedTiles:Array;
 
 
-        public function get _Str_24835():Array
+        public function get occupiedTiles():Array
         {
-            return this._Str_17579;
+            return this._occupiedTiles;
         }
 
         public function flush():Boolean
         {
-            this._Str_17579 = [];
+            this._occupiedTiles = [];
             return true;
         }
 
@@ -29,7 +29,7 @@
             {
                 _local_4 = k.readInteger();
                 _local_5 = k.readInteger();
-                this._Str_17579.push({
+                this._occupiedTiles.push({
                     "x":_local_4,
                     "y":_local_5
                 });

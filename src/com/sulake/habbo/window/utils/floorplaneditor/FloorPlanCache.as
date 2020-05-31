@@ -36,7 +36,7 @@
             {
                 _local_2 = k.getParser();
                 this._Str_24995();
-                for each (_local_3 in _local_2._Str_24835)
+                for each (_local_3 in _local_2.occupiedTiles)
                 {
                     this._reservedTiles[_local_3.y][_local_3.x] = true;
                 }
