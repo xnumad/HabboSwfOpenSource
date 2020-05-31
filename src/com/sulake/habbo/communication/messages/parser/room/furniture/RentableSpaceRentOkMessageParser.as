@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_8274 implements IMessageParser 
+    public class RentableSpaceRentOkMessageParser implements IMessageParser
     {
         private var _expiryTime:int;
 
