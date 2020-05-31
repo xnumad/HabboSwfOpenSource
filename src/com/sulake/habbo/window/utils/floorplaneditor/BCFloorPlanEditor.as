@@ -30,7 +30,7 @@
     import flash.ui.Keyboard;
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_6347;
+    import com.sulake.habbo.communication.messages.parser.room.engine.RoomVisualizationSettingsParser;
     import com.sulake.habbo.communication.messages.parser.perk.PerkAllowancesMessageParser;
     import com.sulake.habbo.communication.enum.perk.PerkEnum;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -516,7 +516,7 @@
 
         private function onRoomVisualizationSettings(k:_Str_4196):void
         {
-            var _local_2:_Str_6347 = k.getParser();
+            var _local_2:RoomVisualizationSettingsParser = k.getParser();
             this._floorThickness = this._Str_10107(_local_2._Str_9990);
             this._wallThickness = this._Str_10107(_local_2._Str_9955);
             this._Str_21392();

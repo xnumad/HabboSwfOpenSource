@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6347 implements IMessageParser 
+    public class RoomVisualizationSettingsParser implements IMessageParser
     {
         private var _Str_16940:Boolean = false;
         private var _wallThicknessMultiplier:Number = 1;
