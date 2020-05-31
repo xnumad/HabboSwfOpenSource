@@ -6,7 +6,7 @@
     public class HeightMapUpdateMessageParser implements IMessageParser
     {
         private var _data:IMessageDataWrapper;
-        private var _Str_3431:int;
+        private var _count:int;
         private var _x:int;
         private var _y:int;
         private var _Str_2196:int;
@@ -14,11 +14,11 @@
 
         public function next():Boolean
         {
-            if (this._Str_3431 == 0)
+            if (this._count == 0)
             {
                 return false;
             }
-            this._Str_3431--;
+            this._count--;
             this._x = this._data.readByte();
             this._y = this._data.readByte();
             this._Str_2196 = this._data.readShort();
@@ -52,7 +52,7 @@
 
         public function flush():Boolean
         {
-            this._Str_3431 = 0;
+            this._count = 0;
             this._data = null;
             return true;
         }
@@ -64,7 +64,7 @@
                 return false;
             }
             this._data = k;
-            this._Str_3431 = k.readByte();
+            this._count = k.readByte();
             return true;
         }
     }
