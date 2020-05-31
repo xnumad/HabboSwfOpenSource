@@ -41,7 +41,7 @@
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
-            this.addMessageEvent(new _Str_4408(this._Str_16200));
+            this.addMessageEvent(new _Str_4408(this.onObjectRemove));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));
             this.addMessageEvent(new _Str_7323(this._Str_25729));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -87,7 +87,7 @@
             this._roomEvents._Str_7247.close();
         }
 
-        private function _Str_16200(k:IMessageEvent):void
+        private function onObjectRemove(k:IMessageEvent):void
         {
             var _local_2:_Str_5317 = (k as _Str_4408).getParser();
             Logger.log(((("Received object remove event: " + _local_2.id) + ", ") + _local_2.isExpired));

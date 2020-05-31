@@ -195,7 +195,7 @@
                 k.addMessageEvent(new _Str_7527(this.onObjectUpdate));
                 k.addMessageEvent(new _Str_8234(this.onObjectDataUpdate));
                 k.addMessageEvent(new _Str_8080(this.onObjectsDataUpdate));
-                k.addMessageEvent(new _Str_4408(this._Str_16200));
+                k.addMessageEvent(new _Str_4408(this.onObjectRemove));
                 k.addMessageEvent(new ItemsEvent(this.onItems));
                 k.addMessageEvent(new _Str_7704(this.onItemAdd));
                 k.addMessageEvent(new _Str_8204(this.onItemRemove));
@@ -615,7 +615,7 @@
             }
         }
 
-        private function _Str_16200(event:IMessageEvent):void
+        private function onObjectRemove(event:IMessageEvent):void
         {
             var parser:_Str_5317;
             var id:int;
