@@ -6,7 +6,7 @@
     public class FavouriteMembershipUpdateMessageParser implements IMessageParser
     {
         private var _roomIndex:int;
-        private var _Str_6639:int;
+        private var _habboGroupId:int;
         private var _status:int;
         private var _Str_11227:String;
 
@@ -19,7 +19,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._roomIndex = k.readInteger();
-            this._Str_6639 = k.readInteger();
+            this._habboGroupId = k.readInteger();
             this._status = k.readInteger();
             this._Str_11227 = k.readString();
             return true;
@@ -32,7 +32,7 @@
 
         public function get habboGroupId():int
         {
-            return this._Str_6639;
+            return this._habboGroupId;
         }
 
         public function get status():int
