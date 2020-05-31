@@ -8,7 +8,7 @@
         private var _floorType:String = null;
         private var _wallType:String = null;
         private var _landscapeType:String = null;
-        private var _Str_18118:String = null;
+        private var _animatedLandscapeType:String = null;
 
 
         public function get _Str_5207():String
@@ -28,7 +28,7 @@
 
         public function get _Str_25889():String
         {
-            return this._Str_18118;
+            return this._animatedLandscapeType;
         }
 
         public function flush():Boolean
@@ -36,7 +36,7 @@
             this._floorType = null;
             this._wallType = null;
             this._landscapeType = null;
-            this._Str_18118 = null;
+            this._animatedLandscapeType = null;
             return true;
         }
 
@@ -56,7 +56,7 @@
                     this._landscapeType = _local_3;
                     break;
                 case "landscapeanim":
-                    this._Str_18118 = _local_3;
+                    this._animatedLandscapeType = _local_3;
                     break;
             }
             return true;
