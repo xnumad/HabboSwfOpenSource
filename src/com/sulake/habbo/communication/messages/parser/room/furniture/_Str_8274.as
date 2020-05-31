@@ -5,7 +5,7 @@
 
     public class _Str_8274 implements IMessageParser 
     {
-        private var _Str_6673:int;
+        private var _expiryTime:int;
 
 
         public function flush():Boolean
@@ -15,13 +15,13 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            this._Str_6673 = k.readInteger();
+            this._expiryTime = k.readInteger();
             return true;
         }
 
         public function get expiryTime():int
         {
-            return this._Str_6673;
+            return this._expiryTime;
         }
     }
 }

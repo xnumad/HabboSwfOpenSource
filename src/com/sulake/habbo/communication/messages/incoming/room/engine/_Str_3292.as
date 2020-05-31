@@ -17,7 +17,7 @@
         private var _extra:int = -1;
         private var _state:int = 0;
         private var _data:IStuffData;
-        private var _Str_6673:int = 0;
+        private var _expiryTime:int = 0;
         private var _Str_5135:int;
         private var _ownerId:int = 0;
         private var _ownerName:String = "";
@@ -199,14 +199,14 @@
 
         public function get expiryTime():int
         {
-            return this._Str_6673;
+            return this._expiryTime;
         }
 
         public function set expiryTime(k:int):void
         {
             if (!this._isReadOnly)
             {
-                this._Str_6673 = k;
+                this._expiryTime = k;
             }
         }
 
