@@ -184,7 +184,7 @@
                 k.addMessageEvent(new UserObjectEvent(this.onOwnUserEvent));
                 k.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
                 k.addMessageEvent(new _Str_7999(this.onRoomProperty));
-                k.addMessageEvent(new _Str_4976(this._Str_16587));
+                k.addMessageEvent(new _Str_4976(this.onEntryTileData));
                 k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
                 k.addMessageEvent(new HeightMapEvent(this.onHeightMap));
                 k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
@@ -407,7 +407,7 @@
             }
         }
 
-        private function _Str_16587(k:_Str_4976):void
+        private function onEntryTileData(k:_Str_4976):void
         {
             this._latestEntryTileEvent = k;
         }

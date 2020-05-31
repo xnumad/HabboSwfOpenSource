@@ -84,7 +84,7 @@
             if (this._windowManager.communication != null)
             {
                 this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
-                this._entryTileDataMessageEvent = new _Str_4976(this._Str_16587);
+                this._entryTileDataMessageEvent = new _Str_4976(this.onEntryTileData);
                 this._occupiedTilesMessageEvent = new _Str_6566(this._Str_18596);
                 this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
@@ -489,7 +489,7 @@
             }
         }
 
-        private function _Str_16587(k:_Str_4976):void
+        private function onEntryTileData(k:_Str_4976):void
         {
             if (!this._editorWindow)
             {
