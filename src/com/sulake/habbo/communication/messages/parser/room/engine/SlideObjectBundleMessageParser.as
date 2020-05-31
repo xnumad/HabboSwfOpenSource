@@ -5,7 +5,7 @@
     import com.sulake.room.utils.Vector3d;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_6340 implements IMessageParser 
+    public class SlideObjectBundleMessageParser implements IMessageParser
     {
         private var _id:int;
         private var _Str_13269:Array;

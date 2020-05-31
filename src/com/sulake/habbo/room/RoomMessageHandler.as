@@ -95,7 +95,7 @@
     import com.sulake.habbo.communication.messages.parser.room.action.SleepMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.CarryObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.UseObjectMessageParser;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_6340;
+    import com.sulake.habbo.communication.messages.parser.room.engine.SlideObjectBundleMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3381;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
@@ -1078,7 +1078,7 @@
 
         private function onSlideUpdate(k:IMessageEvent):void
         {
-            var _local_2:_Str_6340;
+            var _local_2:SlideObjectBundleMessageParser;
             var _local_3:Array;
             var _local_4:int;
             var _local_5:_Str_3381;
