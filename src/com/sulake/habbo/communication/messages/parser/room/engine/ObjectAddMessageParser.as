@@ -31,7 +31,7 @@
             {
                 return false;
             }
-            this._data = ObjectDataParser._Str_16439(k);
+            this._data = ObjectDataParser.parseObjectData(k);
             this._data.ownerName = k.readString();
             return true;
         }

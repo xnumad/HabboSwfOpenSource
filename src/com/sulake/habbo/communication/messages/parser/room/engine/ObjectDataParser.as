@@ -9,7 +9,7 @@
     {
 
 
-        public static function _Str_16439(k:IMessageDataWrapper):ObjectMessageData
+        public static function parseObjectData(k:IMessageDataWrapper):ObjectMessageData
         {
             if (k == null)
             {

@@ -65,7 +65,7 @@
             _local_2 = 0;
             while (_local_2 < _local_5)
             {
-                _local_8 = ObjectDataParser._Str_16439(k);
+                _local_8 = ObjectDataParser.parseObjectData(k);
                 if (_local_8 != null)
                 {
                     _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
