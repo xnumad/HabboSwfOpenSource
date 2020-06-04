@@ -52,9 +52,9 @@
             }
             this._objects = [];
             var owners:Map = new Map();
-            var _local_4:int = k.readInteger();
+            var ownersAmount:int = k.readInteger();
             iterator = 0;
-            while (iterator < _local_4)
+            while (iterator < ownersAmount)
             {
                 ownerId = k.readInteger();
                 ownerName = k.readString();
