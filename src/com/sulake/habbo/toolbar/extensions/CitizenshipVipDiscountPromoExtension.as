@@ -78,7 +78,7 @@
 
         private function onButtonClicked(k:WindowMouseEvent):void
         {
-            if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_2575)
+            if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP)
             {
                 this._toolbar.connection.send(new EventLogMessageComposer("DiscountPromo", "citizenshipdiscount", "client.club.extend.discount.clicked"));
                 this._toolbar.connection.send(new _Str_7218());
@@ -138,7 +138,7 @@
 
         private function _Str_17305():Boolean
         {
-            return (this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_2575) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"));
+            return (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"));
         }
 
         private function _Str_12174(k:WindowMouseEvent):void

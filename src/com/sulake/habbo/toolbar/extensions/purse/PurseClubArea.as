@@ -105,7 +105,7 @@
                 case HabboClubLevelEnum.CLUB:
                     this._Str_5997(_Str_5044);
                     return;
-                case HabboClubLevelEnum._Str_2575:
+                case HabboClubLevelEnum.VIP:
                     this._Str_5997(_Str_3830);
                     return;
             }

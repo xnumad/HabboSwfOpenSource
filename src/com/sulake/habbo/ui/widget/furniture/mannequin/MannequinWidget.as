@@ -277,7 +277,7 @@
                     _local_2.style = _Str_5044;
                     _local_2.visible = true;
                     return;
-                case HabboClubLevelEnum._Str_2575:
+                case HabboClubLevelEnum.VIP:
                     _local_2.style = _Str_3830;
                     _local_2.visible = true;
                     return;

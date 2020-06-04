@@ -125,7 +125,7 @@
             {
                 return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum.CLUB;
             }
-            return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575;
+            return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum.VIP;
         }
 
         public function get _Str_22986():Array

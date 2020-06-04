@@ -59,7 +59,7 @@
 
         private function _Str_20377():Boolean
         {
-            return (this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_2575) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"));
+            return (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"));
         }
 
         public function offersAvailable(k:int):void

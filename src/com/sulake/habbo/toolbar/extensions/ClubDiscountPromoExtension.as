@@ -111,7 +111,7 @@
 
         private function _Str_13315(k:WindowMouseEvent):void
         {
-            if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_2575)
+            if (this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP)
             {
                 this._toolbar.connection.send(new EventLogMessageComposer("DiscountPromo", "discount", "client.club.extend.discount.clicked"));
                 this._toolbar.connection.send(new _Str_7218());
@@ -126,7 +126,7 @@
                     this._Str_2497("${discount.bar.no.club.promo}");
                     this._Str_5997(_Str_3830);
                     break;
-                case HabboClubLevelEnum._Str_2575:
+                case HabboClubLevelEnum.VIP:
                     this._Str_2497("${discount.bar.vip.expiring}");
                     this._Str_5997(_Str_3830);
                     break;
@@ -177,7 +177,7 @@
 
         private function _Str_17305():Boolean
         {
-            if (((this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_2575) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"))))
+            if (((this._toolbar.inventory.clubLevel == HabboClubLevelEnum.VIP) && (this._toolbar.getBoolean("club.membership.extend.vip.promotion.enabled"))))
             {
                 return true;
             }

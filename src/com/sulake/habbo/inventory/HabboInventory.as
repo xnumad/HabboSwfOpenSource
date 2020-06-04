@@ -348,7 +348,7 @@
             }
             if (this._purse.isVIP)
             {
-                return HabboClubLevelEnum._Str_2575;
+                return HabboClubLevelEnum.VIP;
             }
             return HabboClubLevelEnum.CLUB;
         }

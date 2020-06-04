@@ -946,7 +946,7 @@
                 return;
             }
             var _local_2:int;
-            if (this._sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2575)
+            if (this._sessionDataManager.clubLevel >= HabboClubLevelEnum.VIP)
             {
                 _local_2 = this._friendRequests._Str_17940;
             }

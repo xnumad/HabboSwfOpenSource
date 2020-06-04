@@ -1342,7 +1342,7 @@
 
         public function get _Str_7303():Boolean
         {
-            return this.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2575;
+            return this.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum.VIP;
         }
 
         public function get _Str_4878():Boolean

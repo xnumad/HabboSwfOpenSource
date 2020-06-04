@@ -118,7 +118,7 @@
                             _window.findChildByName("club_info").caption = "${catalog.club.buy.info.hc}";
                             _window.findChildByName("club_remaining").caption = "${catalog.club.buy.remaining.hc}";
                             break;
-                        case HabboClubLevelEnum._Str_2575:
+                        case HabboClubLevelEnum.VIP:
                             _window.findChildByName("club_header").caption = "${catalog.club.buy.header.vip}";
                             _window.findChildByName("club_info").caption = "${catalog.club.buy.info.vip}";
                             _window.findChildByName("club_remaining").caption = "${catalog.club.buy.remaining.vip}";

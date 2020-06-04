@@ -87,7 +87,7 @@
                 _local_6 = ((_local_5 * 31) + _local_4);
                 _local_2.registerParameter("catalog.vip.extend.info", "days", String(_local_6));
             }
-            if (((!(_window == null)) && (k == HabboClubLevelEnum._Str_2575)))
+            if (((!(_window == null)) && (k == HabboClubLevelEnum.VIP)))
             {
                 _window.findChildByName("vip_title").caption = "${catalog.vip.extend.title}";
                 _window.findChildByName("vip_info").caption = "${catalog.vip.extend.info}";

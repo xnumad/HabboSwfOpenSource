@@ -169,7 +169,7 @@
                     _local_2.style = 11;
                     _local_2.x = (_local_2.x + 3);
                     return;
-                case HabboClubLevelEnum._Str_2575:
+                case HabboClubLevelEnum.VIP:
                     _local_2.visible = true;
                     _local_2.style = 12;
                     return;

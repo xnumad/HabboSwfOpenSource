@@ -344,7 +344,7 @@
                 while (_local_2 < k.length)
                 {
                     _local_3 = (k[_local_2] as Offer);
-                    if ((((_local_3.clubLevel == HabboClubLevelEnum._Str_2575) && (this._isVip)) || ((!(_local_3.clubLevel == HabboClubLevelEnum._Str_2575)) && (!(this._isVip)))))
+                    if ((((_local_3.clubLevel == HabboClubLevelEnum.VIP) && (this._isVip)) || ((!(_local_3.clubLevel == HabboClubLevelEnum.VIP)) && (!(this._isVip)))))
                     {
                         return _local_3;
                     }

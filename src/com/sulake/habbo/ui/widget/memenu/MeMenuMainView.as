@@ -174,7 +174,7 @@
                             }
                             else
                             {
-                                if (this._widget._Str_21502 == HabboClubLevelEnum._Str_2575)
+                                if (this._widget._Str_21502 == HabboClubLevelEnum.VIP)
                                 {
                                     _local_11 = "widget.memenu.vip";
                                 }
@@ -251,7 +251,7 @@
                 case HabboClubLevelEnum.NO_CLUB:
                 case HabboClubLevelEnum.CLUB:
                     return "club";
-                case HabboClubLevelEnum._Str_2575:
+                case HabboClubLevelEnum.VIP:
                     return "vip";
             }
             return null;

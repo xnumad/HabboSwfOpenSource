@@ -569,7 +569,7 @@
             else
             {
                 this._navigator.registerParameter("navigator.createroom.limitreached", "limit", ("" + _local_2._Str_20396));
-                if (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575)
+                if (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum.VIP)
                 {
                     _local_3 = new SimpleAlertView(this._navigator, "${navigator.createroom.error}", "${navigator.createroom.limitreached}");
                 }

@@ -151,7 +151,7 @@
                                 {
                                     case ":d":
                                     case ";d":
-                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
+                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum.VIP)
                                         {
                                             this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.LAUGH.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "laugh");
@@ -162,7 +162,7 @@
                                         this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.WAVE.ordinal);
                                         return null;
                                     case ":kiss":
-                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
+                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum.VIP)
                                         {
                                             this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.BLOW.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "blow");
@@ -170,7 +170,7 @@
                                         }
                                         break;
                                     case ":jump":
-                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum._Str_2575)
+                                        if (this._container.sessionDataManager.clubLevel == HabboClubLevelEnum.VIP)
                                         {
                                             this._container.roomSession.sendAvatarExpressionMessage(AvatarExpressionEnum.JUMP.ordinal);
                                             HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "jump");

@@ -821,7 +821,7 @@
 
         private function _Str_21757():Boolean
         {
-            return this._Str_2272.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575;
+            return this._Str_2272.sessionData.clubLevel >= HabboClubLevelEnum.VIP;
         }
 
         private function _Str_10439(k:RoomSettingsData):void

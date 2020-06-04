@@ -192,7 +192,7 @@
             var k:int = HabboClubLevelEnum.NO_CLUB;
             if (this._habboCatalog.getPurse().hasClubLeft)
             {
-                k = ((this._habboCatalog.getPurse().isVIP) ? HabboClubLevelEnum._Str_2575 : HabboClubLevelEnum.CLUB);
+                k = ((this._habboCatalog.getPurse().isVIP) ? HabboClubLevelEnum.VIP : HabboClubLevelEnum.CLUB);
             }
             return k;
         }
