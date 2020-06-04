@@ -61,10 +61,10 @@
                 owners.add(ownerId, ownerName);
                 iterator++;
             }
-            var _local_5:int = k.readInteger();
-            Logger.log((("We have: " + _local_5) + " items"));
+            var items:int = k.readInteger();
+            Logger.log((("We have: " + items) + " items"));
             iterator = 0;
-            while (iterator < _local_5)
+            while (iterator < items)
             {
                 item = ItemDataParser.parseItemData(k);
                 item.ownerName = owners.getValue(item.ownerId);
