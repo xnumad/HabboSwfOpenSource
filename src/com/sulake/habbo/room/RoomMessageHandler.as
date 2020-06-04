@@ -560,7 +560,7 @@
             {
                 _local_5 = new Vector3d(_local_4.x, _local_4.y, _local_4.z);
                 _local_6 = new Vector3d(_local_4.dir);
-                this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4.id, _local_5, _local_6, _local_4.state, _local_4.data, _local_4._Str_2794);
+                this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_4.id, _local_5, _local_6, _local_4.state, _local_4.data, _local_4.extra);
                 this._roomCreator.updateObjectFurnitureHeight(this._currentRoomId, _local_4.id, _local_4.sizeZ);
                 this._roomCreator.updateObjectFurnitureExpiryTime(this._currentRoomId, _local_4.id, _local_4.expiryTime);
             }
@@ -654,11 +654,11 @@
             var _local_4:IVector3d = new Vector3d(_arg_2.dir);
             if (_arg_2.staticClass != null)
             {
-                this._roomCreator.addObjectFurnitureByName(k, _arg_2.id, _arg_2.staticClass, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794);
+                this._roomCreator.addObjectFurnitureByName(k, _arg_2.id, _arg_2.staticClass, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2.extra);
             }
             else
             {
-                this._roomCreator.addObjectFurniture(k, _arg_2.id, _arg_2.type, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2._Str_2794, _arg_2.expiryTime, _arg_2.usagePolicy, _arg_2.ownerId, _arg_2.ownerName, true, true, _arg_2.sizeZ);
+                this._roomCreator.addObjectFurniture(k, _arg_2.id, _arg_2.type, _local_3, _local_4, _arg_2.state, _arg_2.data, _arg_2.extra, _arg_2.expiryTime, _arg_2.usagePolicy, _arg_2.ownerId, _arg_2.ownerName, true, true, _arg_2.sizeZ);
             }
         }
 

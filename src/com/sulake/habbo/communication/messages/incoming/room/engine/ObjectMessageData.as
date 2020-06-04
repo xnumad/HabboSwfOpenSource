@@ -184,12 +184,12 @@
             }
         }
 
-        public function get _Str_2794():int
+        public function get extra():int
         {
             return this._extra;
         }
 
-        public function set _Str_2794(k:int):void
+        public function set extra(k:int):void
         {
             if (!this._isReadOnly)
             {

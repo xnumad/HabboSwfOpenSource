@@ -24,7 +24,7 @@
             _local_3.dir = ((k.readInteger() % 8) * 45);
             _local_3.z = Number(k.readString());
             _local_3.sizeZ = Number(k.readString());
-            _local_3._Str_2794 = k.readInteger();
+            _local_3.extra = k.readInteger();
             _local_3.data = parseStuffData(k);
             var _local_5:Number = parseFloat(_local_3.data.getLegacyString());
             if (!isNaN(_local_5))
