@@ -42,7 +42,7 @@
 
         public function parse(k:IMessageDataWrapper):Boolean
         {
-            var _local_2:int;
+            var iterator:int;
             var _local_6:int;
             var _local_7:String;
             var _local_8:ObjectMessageData;
@@ -53,17 +53,17 @@
             this._objects = [];
             var _local_3:Map = new Map();
             var _local_4:int = k.readInteger();
-            _local_2 = 0;
-            while (_local_2 < _local_4)
+            iterator = 0;
+            while (iterator < _local_4)
             {
                 _local_6 = k.readInteger();
                 _local_7 = k.readString();
                 _local_3.add(_local_6, _local_7);
-                _local_2++;
+                iterator++;
             }
             var _local_5:int = k.readInteger();
-            _local_2 = 0;
-            while (_local_2 < _local_5)
+            iterator = 0;
+            while (iterator < _local_5)
             {
                 _local_8 = ObjectDataParser.parseObjectData(k);
                 if (_local_8 != null)
@@ -71,7 +71,7 @@
                     _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
                     this._objects.push(_local_8);
                 }
-                _local_2++;
+                iterator++;
             }
             return true;
         }
