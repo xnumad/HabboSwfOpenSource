@@ -43,7 +43,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var iterator:int;
-            var _local_6:int;
+            var ownerId:int;
             var _local_7:String;
             var _local_8:ItemMessageData;
             if (k == null)
@@ -56,9 +56,9 @@
             iterator = 0;
             while (iterator < _local_4)
             {
-                _local_6 = k.readInteger();
+                ownerId = k.readInteger();
                 _local_7 = k.readString();
-                _local_3.add(_local_6, _local_7);
+                _local_3.add(ownerId, _local_7);
                 iterator++;
             }
             var _local_5:int = k.readInteger();
