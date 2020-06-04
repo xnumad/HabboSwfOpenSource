@@ -556,7 +556,7 @@
 
         public function setRoomToolsState(k:Boolean):void
         {
-            this.setUIFlag(UIFlags._Str_13691, k);
+            this.setUIFlag(UIFlags.ROOM_TOOLS_OPEN, k);
         }
 
         public function get uiFlags():int
