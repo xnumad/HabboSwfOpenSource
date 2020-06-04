@@ -883,7 +883,7 @@
                         default:
                             _local_6.canTrade = false;
                             break;
-                        case RoomTradingLevelEnum._Str_14475:
+                        case RoomTradingLevelEnum.ROOM_CONTROLLER_REQUIRED:
                             _local_15 = ((!(_local_6.myRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.myRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
                             _local_16 = ((!(_local_6.targetRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.targetRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
                             _local_6.canTrade = ((_local_15) || (_local_16));

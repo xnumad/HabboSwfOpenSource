@@ -3,7 +3,7 @@
     public class RoomTradingLevelEnum 
     {
         public static const _Str_12752:int = 0;
-        public static const _Str_14475:int = 1;
+        public static const ROOM_CONTROLLER_REQUIRED:int = 1;
         public static const FREE_TRADING:int = 2;
 
 
@@ -13,7 +13,7 @@
             {
                 case FREE_TRADING:
                     return "${trading.mode.free}";
-                case _Str_14475:
+                case ROOM_CONTROLLER_REQUIRED:
                     return "${trading.mode.controller}";
                 case _Str_12752:
                     return "${trading.mode.not.allowed}";
