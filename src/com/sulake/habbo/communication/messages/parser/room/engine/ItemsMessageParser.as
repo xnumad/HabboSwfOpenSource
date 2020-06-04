@@ -44,7 +44,7 @@
         {
             var iterator:int;
             var ownerId:int;
-            var _local_7:String;
+            var ownerName:String;
             var _local_8:ItemMessageData;
             if (k == null)
             {
@@ -57,8 +57,8 @@
             while (iterator < _local_4)
             {
                 ownerId = k.readInteger();
-                _local_7 = k.readString();
-                _local_3.add(ownerId, _local_7);
+                ownerName = k.readString();
+                _local_3.add(ownerId, ownerName);
                 iterator++;
             }
             var _local_5:int = k.readInteger();
