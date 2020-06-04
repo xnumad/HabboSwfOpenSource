@@ -3,6 +3,6 @@
     public class GenericErrorEnum 
     {
         public static const KICKED_BY_OWNER:int = 4008;
-        public static const _Str_19451:int = -13001;
+        public static const STRIP_LOCKED_FOR_TRADING:int = -13001;
     }
 }
