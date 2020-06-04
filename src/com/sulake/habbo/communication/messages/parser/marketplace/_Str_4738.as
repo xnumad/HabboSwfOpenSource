@@ -3,7 +3,7 @@
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.communication.messages.incoming.marketplace._Str_4192;
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4638;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectDataParser;
     import com.sulake.habbo.room.object.data.StuffDataFactory;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
@@ -51,7 +51,7 @@
                 if (_local_4 == _Str_8964)
                 {
                     _local_5 = k.readInteger();
-                    _local_7 = _Str_4638._Str_6271(k);
+                    _local_7 = ObjectDataParser._Str_6271(k);
                 }
                 else
                 {

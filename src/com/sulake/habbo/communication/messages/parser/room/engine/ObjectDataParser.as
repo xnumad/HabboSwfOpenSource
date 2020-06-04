@@ -5,7 +5,7 @@
     import com.sulake.habbo.room.object.data.StuffDataFactory;
     import com.sulake.habbo.room.IStuffData;
 
-    public class _Str_4638 
+    public class ObjectDataParser
     {
 
 

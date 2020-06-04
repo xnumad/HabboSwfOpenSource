@@ -1,7 +1,7 @@
 ﻿package snowwar._Str_496
 {
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4638;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectDataParser;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class SnowWarFurnitureObject 
@@ -31,7 +31,7 @@
             this._direction = k.readInteger();
             this._altitude = k.readInteger();
             this._walkable = k.readBoolean();
-            this._extradata = _Str_4638._Str_6271(k);
+            this._extradata = ObjectDataParser._Str_6271(k);
         }
 
         public function get name():String

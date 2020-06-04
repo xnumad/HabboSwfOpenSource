@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.inventory.furni
 {
     import com.sulake.habbo.room.IStuffData;
-    import com.sulake.habbo.communication.messages.parser.room.engine._Str_4638;
+    import com.sulake.habbo.communication.messages.parser.room.engine.ObjectDataParser;
     import flash.utils.getTimer;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -37,7 +37,7 @@
             this._ref = k.readInteger();
             this._spriteId = k.readInteger();
             this._category = k.readInteger();
-            this._stuffData = _Str_4638._Str_6271(k);
+            this._stuffData = ObjectDataParser._Str_6271(k);
             this._isRecyclable = k.readBoolean();
             this._tradable = k.readBoolean();
             this._isGroupable = k.readBoolean();
