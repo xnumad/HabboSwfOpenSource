@@ -45,7 +45,7 @@
             var iterator:int;
             var ownerId:int;
             var ownerName:String;
-            var _local_8:ObjectMessageData;
+            var object:ObjectMessageData;
             if (k == null)
             {
                 return false;
@@ -65,11 +65,11 @@
             iterator = 0;
             while (iterator < _local_5)
             {
-                _local_8 = ObjectDataParser.parseObjectData(k);
-                if (_local_8 != null)
+                object = ObjectDataParser.parseObjectData(k);
+                if (object != null)
                 {
-                    _local_8.ownerName = _local_3.getValue(_local_8.ownerId);
-                    this._objects.push(_local_8);
+                    object.ownerName = _local_3.getValue(object.ownerId);
+                    this._objects.push(object);
                 }
                 iterator++;
             }
