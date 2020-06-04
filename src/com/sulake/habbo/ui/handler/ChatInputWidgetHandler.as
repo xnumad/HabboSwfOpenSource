@@ -190,14 +190,14 @@
                                         HabboTracking.getInstance().trackEventLog("OwnAvatarMenu", "chat", "sign", null, int(commandArgument));
                                         return null;
                                     case ":chooser":
-                                        if ((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.PARTNER))) || (this._container.sessionDataManager.isAmbassador)))
+                                        if ((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.PARTNER))) || (this._container.sessionDataManager.isAmbassador)))
                                         {
                                             _local_9 = new RoomWidgetRequestWidgetMessage(RoomWidgetRequestWidgetMessage.RWRWM_USER_CHOOSER);
                                             this._container.processWidgetMessage(_local_9);
                                         }
                                         return null;
                                     case ":furni":
-                                        if (((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.PARTNER))) || (this._container.sessionDataManager.isAmbassador)))
+                                        if (((((this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB) && (this._container.roomSession.roomControllerLevel >= RoomControllerLevel.GUEST)) || (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.PARTNER))) || (this._container.sessionDataManager.isAmbassador)))
                                         {
                                             _local_9 = new RoomWidgetRequestWidgetMessage(RoomWidgetRequestWidgetMessage.RWRWM_FURNI_CHOOSER);
                                             this._container.processWidgetMessage(_local_9);
@@ -325,7 +325,7 @@
                                         }
                                         return null;
                                     case ":visit":
-                                        if (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)
+                                        if (this._container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB)
                                         {
                                             this._container.roomSession.sendVisitUserMessage(commandArgument);
                                         }

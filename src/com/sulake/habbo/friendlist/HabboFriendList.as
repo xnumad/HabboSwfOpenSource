@@ -952,7 +952,7 @@
             }
             else
             {
-                if (this._sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)
+                if (this._sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB)
                 {
                     _local_2 = this._friendRequests._Str_17940;
                 }

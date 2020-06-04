@@ -231,7 +231,7 @@
                     _local_7 = this._widget.handler.container.freeFlowChat.chatStyleLibrary.getStyle(_local_6);
                     if (((!(_local_7.isSystemStyle)) && (_local_4.indexOf(_local_6.toString()) == -1)))
                     {
-                        if (((_local_7.isHcOnly) && (this._widget.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum._Str_2964)))
+                        if (((_local_7.isHcOnly) && (this._widget.handler.container.sessionDataManager.clubLevel >= HabboClubLevelEnum.CLUB)))
                         {
                             _local_3.push(_local_6);
                         }

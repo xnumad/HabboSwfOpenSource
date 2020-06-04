@@ -164,7 +164,7 @@
                 case HabboClubLevelEnum.NO_CLUB:
                     _local_2.visible = false;
                     return;
-                case HabboClubLevelEnum._Str_2964:
+                case HabboClubLevelEnum.CLUB:
                     _local_2.visible = true;
                     _local_2.style = 11;
                     _local_2.x = (_local_2.x + 3);

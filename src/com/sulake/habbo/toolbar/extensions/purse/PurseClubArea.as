@@ -102,7 +102,7 @@
                     this._Str_5997(_Str_3830);
                     _Str_2497(this._Str_8446);
                     return;
-                case HabboClubLevelEnum._Str_2964:
+                case HabboClubLevelEnum.CLUB:
                     this._Str_5997(_Str_5044);
                     return;
                 case HabboClubLevelEnum._Str_2575:

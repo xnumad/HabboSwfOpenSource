@@ -350,7 +350,7 @@
             {
                 return HabboClubLevelEnum._Str_2575;
             }
-            return HabboClubLevelEnum._Str_2964;
+            return HabboClubLevelEnum.CLUB;
         }
 
         public function get _Str_25019():Boolean

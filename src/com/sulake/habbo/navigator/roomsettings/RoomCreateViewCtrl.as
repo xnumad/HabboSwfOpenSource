@@ -69,14 +69,14 @@
             this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 352, "l"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 384, "m"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 372, "n"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 80, "g"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 74, "h"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 416, "o"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 352, "p"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 304, "q"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 336, "r"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 748, "u"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 438, "v"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 80, "g"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 74, "h"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 416, "o"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 352, "p"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 304, "q"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 336, "r"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 748, "u"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.CLUB, 438, "v"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 540, "t"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 512, "w"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2575, 396, "x"));
@@ -348,7 +348,7 @@
             k.height = _local_4.height;
             _arg_2.view = _local_4;
             ITextWindow(_arg_2.view.findChildByName("tile_size_txt")).text = ((_arg_2.tileSize + " ") + this._navigator.getText("navigator.createroom.tilesize"));
-            _local_4.findChildByName("club_icon").visible = ((_arg_2.requiredClubLevel == HabboClubLevelEnum._Str_2964) || (_arg_2.requiredClubLevel == HabboClubLevelEnum._Str_2575));
+            _local_4.findChildByName("club_icon").visible = ((_arg_2.requiredClubLevel == HabboClubLevelEnum.CLUB) || (_arg_2.requiredClubLevel == HabboClubLevelEnum._Str_2575));
         }
 
         private function isAllowed(k:RoomLayout, _arg_2:Boolean=true):Boolean
@@ -357,8 +357,8 @@
             {
                 case HabboClubLevelEnum.NO_CLUB:
                     return true;
-                case HabboClubLevelEnum._Str_2964:
-                    return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964);
+                case HabboClubLevelEnum.CLUB:
+                    return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum.CLUB);
                 case HabboClubLevelEnum._Str_2575:
                     return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575);
                 default:

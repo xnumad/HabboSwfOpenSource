@@ -123,7 +123,7 @@
         {
             if (k <= 5)
             {
-                return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964;
+                return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum.CLUB;
             }
             return this._controller.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2575;
         }

@@ -344,7 +344,7 @@
             var k:IWindow = (this._editorContent.findChildByName("wardrobeButtonContainer") as IWindow);
             if (((k) && (this._editor.manager.sessionData)))
             {
-                k.visible = ((this._editor.manager.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964) && (this._editor.isSideContentEnabled()));
+                k.visible = ((this._editor.manager.sessionData.clubLevel >= HabboClubLevelEnum.CLUB) && (this._editor.isSideContentEnabled()));
                 k.visible = this._editor.isSideContentEnabled();
             }
             var _local_2:String = AvatarEditorSideCategory.NOTHING;

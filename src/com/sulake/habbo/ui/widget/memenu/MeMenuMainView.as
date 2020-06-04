@@ -249,7 +249,7 @@
             switch (this._widget._Str_21502)
             {
                 case HabboClubLevelEnum.NO_CLUB:
-                case HabboClubLevelEnum._Str_2964:
+                case HabboClubLevelEnum.CLUB:
                     return "club";
                 case HabboClubLevelEnum._Str_2575:
                     return "vip";
