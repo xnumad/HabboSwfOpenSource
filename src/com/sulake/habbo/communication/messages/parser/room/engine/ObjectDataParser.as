@@ -25,7 +25,7 @@
             _local_3.z = Number(k.readString());
             _local_3.sizeZ = Number(k.readString());
             _local_3._Str_2794 = k.readInteger();
-            _local_3.data = _Str_6271(k);
+            _local_3.data = parseStuffData(k);
             var _local_5:Number = parseFloat(_local_3.data.getLegacyString());
             if (!isNaN(_local_5))
             {
@@ -41,7 +41,7 @@
             return _local_3;
         }
 
-        public static function _Str_6271(k:IMessageDataWrapper):IStuffData
+        public static function parseStuffData(k:IMessageDataWrapper):IStuffData
         {
             var _local_2:int = k.readInteger();
             var _local_3:IStuffData = StuffDataFactory.getStuffDataWrapperForType(_local_2);

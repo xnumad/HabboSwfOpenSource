@@ -51,7 +51,7 @@
                 if (_local_4 == _Str_8964)
                 {
                     _local_5 = k.readInteger();
-                    _local_7 = ObjectDataParser._Str_6271(k);
+                    _local_7 = ObjectDataParser.parseStuffData(k);
                 }
                 else
                 {

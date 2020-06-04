@@ -50,7 +50,7 @@
             while (_local_3 < _local_2)
             {
                 _local_4 = k.readInteger();
-                _local_5 = ObjectDataParser._Str_6271(k);
+                _local_5 = ObjectDataParser.parseStuffData(k);
                 _local_6 = 0;
                 _local_7 = parseFloat(_local_5.getLegacyString());
                 if (!isNaN(_local_7))

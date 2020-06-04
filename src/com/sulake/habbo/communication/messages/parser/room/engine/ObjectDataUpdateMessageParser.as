@@ -42,7 +42,7 @@
             }
             var _local_2:String = k.readString();
             this._id = int(_local_2);
-            this._data = ObjectDataParser._Str_6271(k);
+            this._data = ObjectDataParser.parseStuffData(k);
             var _local_3:Number = parseFloat(this._data.getLegacyString());
             if (!isNaN(_local_3))
             {

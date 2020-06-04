@@ -31,7 +31,7 @@
             this._direction = k.readInteger();
             this._altitude = k.readInteger();
             this._walkable = k.readBoolean();
-            this._extradata = ObjectDataParser._Str_6271(k);
+            this._extradata = ObjectDataParser.parseStuffData(k);
         }
 
         public function get name():String

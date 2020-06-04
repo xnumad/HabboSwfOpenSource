@@ -37,7 +37,7 @@
             this._ref = k.readInteger();
             this._spriteId = k.readInteger();
             this._category = k.readInteger();
-            this._stuffData = ObjectDataParser._Str_6271(k);
+            this._stuffData = ObjectDataParser.parseStuffData(k);
             this._isRecyclable = k.readBoolean();
             this._tradable = k.readBoolean();
             this._isGroupable = k.readBoolean();

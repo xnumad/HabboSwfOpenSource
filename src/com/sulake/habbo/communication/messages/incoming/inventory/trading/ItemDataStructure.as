@@ -35,7 +35,7 @@
             this._spriteId = k.readInteger();
             this._category = k.readInteger();
             this._isGroupable = k.readBoolean();
-            this._stuffData = ObjectDataParser._Str_6271(k);
+            this._stuffData = ObjectDataParser.parseStuffData(k);
             this._secondsToExpiration = -1;
             this._Str_5390 = getTimer();
             this._hasRentPeriodStarted = false;
