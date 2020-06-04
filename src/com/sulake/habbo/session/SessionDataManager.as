@@ -551,7 +551,7 @@
 
         public function setFriendBarState(k:Boolean):void
         {
-            this.setUIFlag(UIFlags._Str_14290, k);
+            this.setUIFlag(UIFlags.FRIEND_BAR_OPEN, k);
         }
 
         public function setRoomToolsState(k:Boolean):void

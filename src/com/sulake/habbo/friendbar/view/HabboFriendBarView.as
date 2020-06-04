@@ -841,7 +841,7 @@
 
         private function _Str_10326(k:SessionDataPreferencesEvent):void
         {
-            if (!(k.uiFlags & UIFlags._Str_14290))
+            if (!(k.uiFlags & UIFlags.FRIEND_BAR_OPEN))
             {
                 if (!this._Str_3312)
                 {
