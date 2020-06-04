@@ -61,7 +61,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.FloorHeightMapMessageParser;
     import com.sulake.habbo.room.utils.LegacyWallGeometry;
     import com.sulake.habbo.communication.messages.parser.room.layout.RoomEntryTileMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectAddMessageParser;
     import com.sulake.room.utils.IVector3d;
@@ -512,7 +512,7 @@
 
         private function onObjects(k:IMessageEvent):void
         {
-            var _local_6:_Str_3292;
+            var _local_6:ObjectMessageData;
             var _local_2:_Str_7849 = (k as _Str_7849);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
@@ -537,7 +537,7 @@
                 return;
             }
             var _local_3:ObjectAddMessageParser = _local_2.getParser();
-            var _local_4:_Str_3292 = _local_3.data;
+            var _local_4:ObjectMessageData = _local_3.data;
             this._Str_18595(this._currentRoomId, _local_4);
         }
 
@@ -555,7 +555,7 @@
                 return;
             }
             var _local_3:ObjectUpdateMessageParser = _local_2.getParser();
-            var _local_4:_Str_3292 = _local_3.data;
+            var _local_4:ObjectMessageData = _local_3.data;
             if (_local_4 != null)
             {
                 _local_5 = new Vector3d(_local_4.x, _local_4.y, _local_4.z);
@@ -644,7 +644,7 @@
             }
         }
 
-        private function _Str_18595(k:int, _arg_2:_Str_3292):void
+        private function _Str_18595(k:int, _arg_2:ObjectMessageData):void
         {
             if (((_arg_2 == null) || (this._roomCreator == null)))
             {

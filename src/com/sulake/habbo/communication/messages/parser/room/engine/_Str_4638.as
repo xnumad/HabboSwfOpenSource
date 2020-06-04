@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import com.sulake.habbo.room.object.data.StuffDataFactory;
     import com.sulake.habbo.room.IStuffData;
@@ -9,14 +9,14 @@
     {
 
 
-        public static function _Str_16439(k:IMessageDataWrapper):_Str_3292
+        public static function _Str_16439(k:IMessageDataWrapper):ObjectMessageData
         {
             if (k == null)
             {
                 return null;
             }
             var _local_2:int = k.readInteger();
-            var _local_3:_Str_3292 = new _Str_3292(_local_2);
+            var _local_3:ObjectMessageData = new ObjectMessageData(_local_2);
             var _local_4:int = k.readInteger();
             _local_3.type = _local_4;
             _local_3.x = k.readInteger();

@@ -1,12 +1,12 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3292;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class ObjectAddMessageParser implements IMessageParser
     {
-        private var _data:_Str_3292;
+        private var _data:ObjectMessageData;
 
 
         public function flush():Boolean
@@ -15,9 +15,9 @@
             return true;
         }
 
-        public function get data():_Str_3292
+        public function get data():ObjectMessageData
         {
-            var k:_Str_3292 = this._data;
+            var k:ObjectMessageData = this._data;
             if (k != null)
             {
                 k.setReadOnly();

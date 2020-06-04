@@ -3,7 +3,7 @@
     import com.sulake.habbo.room.IStuffData;
     import com.sulake.habbo.room.object.data.LegacyStuffData;
 
-    public class _Str_3292 
+    public class ObjectMessageData
     {
         private var _id:int = 0;
         private var _x:Number = 0;
@@ -24,7 +24,7 @@
         private var _staticClass:String = null;
         private var _isReadOnly:Boolean = false;
 
-        public function _Str_3292(k:int)
+        public function ObjectMessageData(k:int)
         {
             this._data = new LegacyStuffData();
             super();
