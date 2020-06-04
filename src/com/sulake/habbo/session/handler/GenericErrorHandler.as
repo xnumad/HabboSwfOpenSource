@@ -36,7 +36,7 @@
             }
             switch (_local_2.errorCode)
             {
-                case GenericErrorEnum._Str_5980:
+                case GenericErrorEnum.KICKED_BY_OWNER:
                     _local_4 = RoomSessionErrorMessageEvent.RSEME_KICKED;
                     break;
                 default:
