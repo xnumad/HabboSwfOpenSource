@@ -57,18 +57,18 @@
             this._arrowTimer = new Timer(100);
             this._arrowTimer.addEventListener(TimerEvent.TIMER, this._Str_19844);
             this._layouts = new Vector.<RoomLayout>();
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 104, "a"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 94, "b"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 36, "c"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 84, "d"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 80, "e"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 80, "f"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 416, "i"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 320, "j"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 448, "k"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 352, "l"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 384, "m"));
-            this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_3159, 372, "n"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 104, "a"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 94, "b"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 36, "c"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 84, "d"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 80, "e"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 80, "f"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 416, "i"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 320, "j"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 448, "k"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 352, "l"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 384, "m"));
+            this._layouts.push(new RoomLayout(HabboClubLevelEnum.NO_CLUB, 372, "n"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 80, "g"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 74, "h"));
             this._layouts.push(new RoomLayout(HabboClubLevelEnum._Str_2964, 416, "o"));
@@ -355,7 +355,7 @@
         {
             switch (k.requiredClubLevel)
             {
-                case HabboClubLevelEnum._Str_3159:
+                case HabboClubLevelEnum.NO_CLUB:
                     return true;
                 case HabboClubLevelEnum._Str_2964:
                     return (!(_arg_2)) || (this._navigator.sessionData.clubLevel >= HabboClubLevelEnum._Str_2964);

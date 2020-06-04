@@ -107,7 +107,7 @@
                 {
                     switch (clubType)
                     {
-                        case HabboClubLevelEnum._Str_3159:
+                        case HabboClubLevelEnum.NO_CLUB:
                             _window.findChildByName("club_header").caption = "${catalog.club.buy.header.none}";
                             _window.findChildByName("club_info").caption = "${catalog.club.buy.info.none}";
                             _window.findChildByName("club_remaining").visible = false;

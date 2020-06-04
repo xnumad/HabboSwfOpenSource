@@ -248,7 +248,7 @@
         {
             switch (this._widget._Str_21502)
             {
-                case HabboClubLevelEnum._Str_3159:
+                case HabboClubLevelEnum.NO_CLUB:
                 case HabboClubLevelEnum._Str_2964:
                     return "club";
                 case HabboClubLevelEnum._Str_2575:

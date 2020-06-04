@@ -122,7 +122,7 @@
         {
             switch (this._toolbar.inventory.clubLevel)
             {
-                case HabboClubLevelEnum._Str_3159:
+                case HabboClubLevelEnum.NO_CLUB:
                     this._Str_2497("${discount.bar.no.club.promo}");
                     this._Str_5997(_Str_3830);
                     break;

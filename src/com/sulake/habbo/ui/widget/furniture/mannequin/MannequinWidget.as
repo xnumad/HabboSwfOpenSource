@@ -270,7 +270,7 @@
             }
             switch (k)
             {
-                case HabboClubLevelEnum._Str_3159:
+                case HabboClubLevelEnum.NO_CLUB:
                     _local_2.visible = false;
                     return;
                 case HabboClubLevelEnum._Str_2964:

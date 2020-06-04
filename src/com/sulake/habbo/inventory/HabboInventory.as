@@ -344,7 +344,7 @@
         {
             if (((this.clubDays == 0) && (this.clubPeriods == 0)))
             {
-                return HabboClubLevelEnum._Str_3159;
+                return HabboClubLevelEnum.NO_CLUB;
             }
             if (this._purse.isVIP)
             {

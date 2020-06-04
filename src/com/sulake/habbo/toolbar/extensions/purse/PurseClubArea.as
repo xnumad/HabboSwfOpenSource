@@ -85,7 +85,7 @@
             }
             var _local_2:int = ((this._toolbar.inventory.clubPeriods * 31) + this._toolbar.inventory.clubDays);
             var _local_3:int = this._toolbar.inventory._Str_6338;
-            if (((!(this._clubDays == -1)) && (!(this._toolbar.inventory.clubLevel == HabboClubLevelEnum._Str_3159))))
+            if (((!(this._clubDays == -1)) && (!(this._toolbar.inventory.clubLevel == HabboClubLevelEnum.NO_CLUB))))
             {
                 this.setAmount(_local_2, _local_3);
                 _local_4 = (_window.findChildByName("hc_join_button") as IWindowContainer);
@@ -98,7 +98,7 @@
             this._clubMinutes = _local_3;
             switch (this._toolbar.inventory.clubLevel)
             {
-                case HabboClubLevelEnum._Str_3159:
+                case HabboClubLevelEnum.NO_CLUB:
                     this._Str_5997(_Str_3830);
                     _Str_2497(this._Str_8446);
                     return;

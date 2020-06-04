@@ -189,7 +189,7 @@
 
         public function _Str_25808():int
         {
-            var k:int = HabboClubLevelEnum._Str_3159;
+            var k:int = HabboClubLevelEnum.NO_CLUB;
             if (this._habboCatalog.getPurse().hasClubLeft)
             {
                 k = ((this._habboCatalog.getPurse().isVIP) ? HabboClubLevelEnum._Str_2575 : HabboClubLevelEnum._Str_2964);

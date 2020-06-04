@@ -115,7 +115,7 @@
                             }
                             if (this._container.avatarEditor.openEditor(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR, this, [AvatarEditorFigureCategory.TORSO, AvatarEditorFigureCategory.LEGS], false, "${widget.furni.clothingchange.editor.title}"))
                             {
-                                this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR, _local_9, _local_8, HabboClubLevelEnum._Str_3159);
+                                this._container.avatarEditor.loadAvatarInEditor(AvatarEditorInstanceId.FURNITURE_AVATAR_EDITOR, _local_9, _local_8, HabboClubLevelEnum.NO_CLUB);
                                 _local_4 = new RoomWidgetClothingChangeUpdateEvent(RoomWidgetClothingChangeUpdateEvent.RWCCUE_SHOW_GENDER_SELECTION, _local_6.objectId, _local_6.objectCategory, _local_6.roomId);
                                 this._container.events.dispatchEvent(_local_4);
                             }
