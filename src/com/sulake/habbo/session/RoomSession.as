@@ -225,7 +225,7 @@
                 this._roomId = k;
                 this._isRoomOwner = false;
                 this._roomControllerLevel = RoomControllerLevel.NONE;
-                this._tradeMode = RoomTradingLevelEnum._Str_12752;
+                this._tradeMode = RoomTradingLevelEnum.NO_TRADING;
                 this._isSpectatorMode = false;
             }
         }
