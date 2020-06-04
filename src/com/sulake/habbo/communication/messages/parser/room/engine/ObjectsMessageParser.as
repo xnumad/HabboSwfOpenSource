@@ -61,9 +61,9 @@
                 owners.add(ownerId, ownerName);
                 iterator++;
             }
-            var _local_5:int = k.readInteger();
+            var objects:int = k.readInteger();
             iterator = 0;
-            while (iterator < _local_5)
+            while (iterator < objects)
             {
                 object = ObjectDataParser.parseObjectData(k);
                 if (object != null)
