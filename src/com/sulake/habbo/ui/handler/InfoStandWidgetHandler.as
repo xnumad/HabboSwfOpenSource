@@ -888,7 +888,7 @@
                             _local_16 = ((!(_local_6.targetRoomControllerLevel == RoomControllerLevel.NONE)) && (!(_local_6.targetRoomControllerLevel == RoomControllerLevel.GUILD_MEMBER)));
                             _local_6.canTrade = ((_local_15) || (_local_16));
                             break;
-                        case RoomTradingLevelEnum._Str_9173:
+                        case RoomTradingLevelEnum.FREE_TRADING:
                             _local_6.canTrade = true;
                     }
                 }
@@ -897,7 +897,7 @@
                 {
                     _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_SHUTDOWN;
                 }
-                if (_local_11 != RoomTradingLevelEnum._Str_9173)
+                if (_local_11 != RoomTradingLevelEnum.FREE_TRADING)
                 {
                     _local_6.canTradeReason = RoomWidgetUserInfoUpdateEvent.TRADE_REASON_NO_TRADINGROOM;
                 }
