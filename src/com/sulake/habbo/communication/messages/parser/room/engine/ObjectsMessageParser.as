@@ -51,14 +51,14 @@
                 return false;
             }
             this._objects = [];
-            var _local_3:Map = new Map();
+            var owners:Map = new Map();
             var _local_4:int = k.readInteger();
             iterator = 0;
             while (iterator < _local_4)
             {
                 ownerId = k.readInteger();
                 ownerName = k.readString();
-                _local_3.add(ownerId, ownerName);
+                owners.add(ownerId, ownerName);
                 iterator++;
             }
             var _local_5:int = k.readInteger();
@@ -68,7 +68,7 @@
                 object = ObjectDataParser.parseObjectData(k);
                 if (object != null)
                 {
-                    object.ownerName = _local_3.getValue(object.ownerId);
+                    object.ownerName = owners.getValue(object.ownerId);
                     this._objects.push(object);
                 }
                 iterator++;

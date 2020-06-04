@@ -51,14 +51,14 @@
                 return false;
             }
             this._items = [];
-            var _local_3:Map = new Map();
+            var owners:Map = new Map();
             var _local_4:int = k.readInteger();
             iterator = 0;
             while (iterator < _local_4)
             {
                 ownerId = k.readInteger();
                 ownerName = k.readString();
-                _local_3.add(ownerId, ownerName);
+                owners.add(ownerId, ownerName);
                 iterator++;
             }
             var _local_5:int = k.readInteger();
@@ -67,7 +67,7 @@
             while (iterator < _local_5)
             {
                 item = ItemDataParser.parseItemData(k);
-                item.ownerName = _local_3.getValue(item.ownerId);
+                item.ownerName = owners.getValue(item.ownerId);
                 this._items.push(item);
                 iterator++;
             }
