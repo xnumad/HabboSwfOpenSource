@@ -36,7 +36,7 @@
                 this._input.text = _arg_5;
             }
             Util._Str_6937(this._input, this.onInputClick);
-            this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_24438);
+            this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this.checkEnterPress);
             this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22400);
             this._orgTextBackground = this._input.textBackground;
             this._orgTextBackgroundColor = this._input.textBackgroundColor;
@@ -163,7 +163,7 @@
             this._Str_16652();
         }
 
-        private function _Str_24438(k:WindowKeyboardEvent):void
+        private function checkEnterPress(k:WindowKeyboardEvent):void
         {
             if (k.charCode == Keyboard.ENTER)
             {
