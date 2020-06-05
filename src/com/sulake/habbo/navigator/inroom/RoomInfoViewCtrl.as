@@ -307,7 +307,7 @@
                 this._window.findChildByName("add_thumbnail_region").visible = this._navigator.data._Str_11824;
                 if (this._navigator.data._Str_11824)
                 {
-                    this.addMouseClickListener(this.find("add_thumbnail_region"), this._Str_22351);
+                    this.addMouseClickListener(this.find("add_thumbnail_region"), this.onAddRoomThumbnail);
                 }
                 _local_5 = "";
                 if (this._navigator.data._Str_2678.officialRoomPicRef != null)
@@ -473,7 +473,7 @@
             this._navigator.trackGoogle("roomInfo", "embedSrc");
         }
 
-        private function _Str_22351(k:WindowEvent):void
+        private function onAddRoomThumbnail(k:WindowEvent):void
         {
             (this._navigator.windowManager as Component).context.createLinkEvent("roomThumbnailCamera/open");
             this.close();
