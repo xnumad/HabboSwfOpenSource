@@ -514,7 +514,7 @@
                 _gameManager = k;
             }, true, [{
                 "type":GameChatEvent.GCE_GAME_CHAT,
-                "callback":this._Str_20532
+                "callback":this.gameEventHandler
             }]), new ComponentDependency(new IIDHabboFriendBar(), function (k:IHabboFriendBar):void
             {
                 _friendBar = k;
@@ -1058,7 +1058,7 @@
             }
         }
 
-        private function _Str_20532(k:Event):void
+        private function gameEventHandler(k:Event):void
         {
             var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(0)) as RoomDesktop);
             if (_local_2)
