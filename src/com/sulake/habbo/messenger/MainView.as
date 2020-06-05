@@ -609,7 +609,7 @@
             }
         }
 
-        private function _Str_22338():void
+        private function adjustListItemWidths():void
         {
             var _local_2:IWindow;
             var _local_3:IWindow;
@@ -765,7 +765,7 @@
                 case WindowEvent.WINDOW_EVENT_RESIZE:
                     if (_arg_2 == this._frame)
                     {
-                        this._Str_22338();
+                        this.adjustListItemWidths();
                         this._Str_7204();
                     }
                     return;
