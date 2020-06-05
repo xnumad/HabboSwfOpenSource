@@ -430,7 +430,7 @@
             var k:Object = new Object();
             k = {
                 "id":this._id,
-                "uid":_Str_2995,
+                "uid":_uid,
                 "url":this._Str_577,
                 "mimeType":this._Str_2230
             }

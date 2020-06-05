@@ -1726,7 +1726,7 @@
             var k:Object = new Object();
             k = {
                 "id":_id,
-                "uid":_Str_2995,
+                "uid":_uid,
                 "type":this._Str_22554(),
                 "position":this._Str_2539,
                 "loadOnDemand":this._Str_5097,

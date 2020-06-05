@@ -276,7 +276,7 @@
             var k:Object = new Object();
             k = {
                 "id":this._id,
-                "uid":_Str_2995,
+                "uid":_uid,
                 "bandwidth":this._Str_18599,
                 "delivery":this._Str_6705,
                 "scale":this._scale,

@@ -1650,7 +1650,7 @@
             var k:Object = new Object();
             k = {
                 "id":this._id,
-                "uid":_Str_2995,
+                "uid":_uid,
                 "adId":this._Str_7451,
                 "inlineAdId":this._Str_9985,
                 "type":this.adType,

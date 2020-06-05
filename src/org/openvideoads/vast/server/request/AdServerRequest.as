@@ -473,7 +473,7 @@
         {
             var k:Object = new Object();
             k = {
-                "uid":_Str_2995,
+                "uid":_uid,
                 "index":this._index,
                 "adServerType":((this.config != null) ? this.config.type : "unknown"),
                 "formedTag":this._Str_4164,

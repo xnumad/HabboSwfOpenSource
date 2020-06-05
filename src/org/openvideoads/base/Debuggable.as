@@ -32,11 +32,11 @@
         protected static var _Str_14737:String = "firebug";
         public static var _Str_1229:Debuggable;
 
-        protected var _Str_2995:String = null;
+        protected var _uid:String = null;
 
         public function Debuggable()
         {
-            this._Str_2995 = ObjectUtils._Str_22043();
+            this._uid = ObjectUtils._Str_22043();
         }
 
         public static function getInstance():Debuggable
@@ -66,7 +66,7 @@
 
         public function get uid():String
         {
-            return this._Str_2995;
+            return this._uid;
         }
 
         public function set level(k:int):void

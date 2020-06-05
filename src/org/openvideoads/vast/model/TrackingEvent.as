@@ -119,7 +119,7 @@
         {
             var k:Object = new Object();
             k = {
-                "uid":_Str_2995,
+                "uid":_uid,
                 "eventType":this._eventType,
                 "urls":ArrayUtils._Str_6975(this._urls),
                 "alwaysFire":this._alwaysFire

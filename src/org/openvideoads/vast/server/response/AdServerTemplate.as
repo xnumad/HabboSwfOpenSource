@@ -272,17 +272,17 @@
         protected function templateLoaded(k:Event):void
         {
             this._Str_17582();
-            this._Str_6919(_Str_2995);
+            this._Str_6919(_uid);
         }
 
         protected function errorHandler(k:Event):void
         {
-            this._Str_6067(_Str_2995, k);
+            this._Str_6067(_uid, k);
         }
 
         protected function timeoutHandler(k:Event):void
         {
-            this._Str_8677(_Str_2995, k);
+            this._Str_8677(_uid, k);
         }
 
         public function _Str_22097():Boolean
@@ -441,7 +441,7 @@
             }
             else
             {
-                this._Str_6067(_Str_2995, new Event("Unexpeced error - No ad server request to failover to - signaling error"));
+                this._Str_6067(_uid, new Event("Unexpeced error - No ad server request to failover to - signaling error"));
             }
         }
 

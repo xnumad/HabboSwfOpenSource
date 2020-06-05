@@ -225,7 +225,7 @@
             {
                 if (this._Str_4845 != null)
                 {
-                    this._Str_4845._Str_15107(_Str_2995);
+                    this._Str_4845._Str_15107(_uid);
                 }
                 k = new _Str_6140(this._Str_5185, this._Str_19298);
                 _local_2 = new Array();
@@ -243,12 +243,12 @@
                 this._Str_2611.addCustomClickTrackingItems(this._Str_17653);
                 this._Str_2611.wrapper = this;
             }
-            this._Str_4845._Str_6919(_Str_2995);
+            this._Str_4845._Str_6919(_uid);
         }
 
         public function onTemplateLoadError(k:Event):void
         {
-            this._Str_4845._Str_6067(_Str_2995, k);
+            this._Str_4845._Str_6067(_uid, k);
         }
 
         public function _Str_5807(k:Event):void

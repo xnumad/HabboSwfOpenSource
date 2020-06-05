@@ -78,7 +78,7 @@
 
         public function set uid(k:String):void
         {
-            _Str_2995 = uid;
+            _uid = uid;
         }
 
         public function set _Str_18431(k:String):void
@@ -418,7 +418,7 @@
                 _local_2 = k;
             }
             _local_2.id = this._id;
-            _local_2.uid = _Str_2995;
+            _local_2.uid = _uid;
             _local_2._Str_18431 = this._Str_9867;
             _local_2.parentAdContainer = this._Str_4070;
             _local_2.scale = this._scale;
@@ -451,7 +451,7 @@
             k = {
                 "adId":this._Str_9867,
                 "id":this._id,
-                "uid":_Str_2995,
+                "uid":_uid,
                 "trackingEvents":ArrayUtils._Str_6975(this._Str_3053),
                 "clickThroughs":ArrayUtils._Str_6975(this._Str_3772),
                 "clickTracking":ArrayUtils._Str_6975(this._Str_4684),

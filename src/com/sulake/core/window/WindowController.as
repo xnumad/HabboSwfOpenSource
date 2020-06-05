@@ -56,13 +56,13 @@
         private var _currentDynamicStyle:DynamicStyle;
         private var _forceGraphicContexts:Boolean = false;
         private var _lastParentRect:Rectangle;
-        private var _Str_2995:uint;
+        private var _uid:uint;
         private var _Str_8085:IPropertyMap;
 
         public function WindowController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0, _arg_12:String="")
         {
             var _local_15:uint;
-            this._Str_2995 = _uidCounter++;
+            this._uid = _uidCounter++;
             var _local_13:XML = _arg_5.getWindowFactory()._Str_19128(_arg_2, _arg_3);
             if (_arg_6 == null)
             {
@@ -738,7 +738,7 @@
 
         public function toString():String
         {
-            return (((((("[" + "Window ") + getQualifiedClassName(this)) + " ") + _name) + " ") + this._Str_2995) + "]";
+            return (((((("[" + "Window ") + getQualifiedClassName(this)) + " ") + _name) + " ") + this._uid) + "]";
         }
 
         override public function invalidate(k:Rectangle=null):void

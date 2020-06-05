@@ -65,7 +65,7 @@
                 _local_4 = null;
                 if (this._Str_5787 != null)
                 {
-                    this._Str_5787._Str_15107(_Str_2995);
+                    this._Str_5787._Str_15107(_uid);
                     _local_4 = this._Str_5787._Str_18666();
                 }
                 load(new _Str_6140(this._Str_6281, _local_4));
@@ -97,7 +97,7 @@
             _Str_6188 = _Str_3081.data;
             _Str_15022(_Str_6188);
             _Str_17582();
-            _Str_6919(_Str_2995);
+            _Str_6919(_uid);
         }
 
         override protected function errorHandler(k:Event):void

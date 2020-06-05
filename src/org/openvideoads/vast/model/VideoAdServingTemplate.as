@@ -37,7 +37,7 @@
                 if (!_arg_2)
                 {
                     _Str_17208 = k;
-                    _Str_15107(_Str_2995);
+                    _Str_15107(_uid);
                 }
                 if ((k is _Str_9148))
                 {
@@ -154,12 +154,12 @@
 
         override protected function errorHandler(k:Event):void
         {
-            _Str_6067(_Str_2995, k);
+            _Str_6067(_uid, k);
         }
 
         override protected function timeoutHandler(k:Event):void
         {
-            _Str_8677(_Str_2995, k);
+            _Str_8677(_uid, k);
         }
 
         override public function filterLinearAdMediaFileByMimeType(k:Array):void

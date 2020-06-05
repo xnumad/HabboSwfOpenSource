@@ -515,7 +515,7 @@
 
         public function _Str_23380():String
         {
-            return this.serverType + ((this.oneAdPerRequest) ? "-single" : ("-multiple-" + _Str_2995));
+            return this.serverType + ((this.oneAdPerRequest) ? "-single" : ("-multiple-" + _uid));
         }
 
         public function set type(k:String):void
