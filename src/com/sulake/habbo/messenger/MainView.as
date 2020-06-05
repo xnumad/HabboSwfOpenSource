@@ -186,7 +186,7 @@
 
         public function show(k:Boolean=false):void
         {
-            if (((k) || (this._Str_9747 > 0)))
+            if (((k) || (this.visibleAvatarCount > 0)))
             {
                 this._frame.visible = true;
                 this._frame.activate();
@@ -331,7 +331,7 @@
             {
                 setAvatarVisibilityTag(_local_2, false);
             }
-            if (this._Str_9747 == 0)
+            if (this.visibleAvatarCount == 0)
             {
                 this.selectConversation(NO_CONVERSATION);
                 this.hide();
@@ -353,8 +353,8 @@
 
         private function refreshChatCount():void
         {
-            this._messenger.localization.registerParameter("messenger.window.title", "open_chat_count", this._Str_9747.toString());
-            this._messenger._Str_23234(this._Str_9747);
+            this._messenger.localization.registerParameter("messenger.window.title", "open_chat_count", this.visibleAvatarCount.toString());
+            this._messenger._Str_23234(this.visibleAvatarCount);
         }
 
         private function recordChatMessage(k:int, _arg_2:String, _arg_3:Boolean, _arg_4:int, _arg_5:String=null):void
@@ -469,7 +469,7 @@
                 {
                     this.setChatIndicatorVisibility(k, true);
                 }
-                if (this._Str_9747 == 1)
+                if (this.visibleAvatarCount == 1)
                 {
                     this.selectConversation(k);
                 }
@@ -744,7 +744,7 @@
             this._frame.findChildByName("avatars_scroll_right").visible = this._avatarListLastNotShown;
         }
 
-        private function get _Str_9747():int
+        private function get visibleAvatarCount():int
         {
             var _local_2:IWindow;
             var k:int;
