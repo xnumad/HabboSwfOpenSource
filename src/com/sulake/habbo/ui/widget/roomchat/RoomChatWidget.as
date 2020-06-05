@@ -145,7 +145,7 @@
             }
         }
 
-        public static function get _Str_5827():ChatBubbleFactory
+        public static function get chatBubbleFactory():ChatBubbleFactory
         {
             return _Str_3867;
         }
@@ -753,7 +753,7 @@
 
         private function _Str_9323(k:RoomChatItem, _arg_2:RoomChatItem):Number
         {
-            var _local_3:int = _Str_5827._Str_24902(k._Str_24439);
+            var _local_3:int = chatBubbleFactory._Str_24902(k._Str_24439);
             if (k._Str_23373(_local_3, _arg_2.x, k.y, _arg_2.width, _arg_2.height))
             {
                 return _Str_3729;

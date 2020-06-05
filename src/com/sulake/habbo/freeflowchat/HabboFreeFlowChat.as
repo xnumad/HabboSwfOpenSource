@@ -416,7 +416,7 @@
             return this._chatFlowViewer;
         }
 
-        public function get _Str_5827():ChatBubbleFactory
+        public function get chatBubbleFactory():ChatBubbleFactory
         {
             return this._chatBubbleFactory;
         }

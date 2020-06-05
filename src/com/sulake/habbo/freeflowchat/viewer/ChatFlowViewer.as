@@ -97,7 +97,7 @@
                     _local_6 = this._bubbles.indexOf(_local_5);
                     this._bubbles.splice(_local_6, 1);
                     _local_5._Str_23848();
-                    this._component._Str_5827.recycle(_local_5);
+                    this._component.chatBubbleFactory.recycle(_local_5);
                 }
                 this._toRemove = new Vector.<PooledChatBubble>(0);
             }

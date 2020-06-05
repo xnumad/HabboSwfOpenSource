@@ -39,7 +39,7 @@
             var entry:IChatHistoryEntryBitmap;
             try
             {
-                entry = this._component._Str_5827._Str_23020(chatItem);
+                entry = this._component.chatBubbleFactory._Str_23020(chatItem);
             }
             catch(e:Error)
             {
@@ -59,7 +59,7 @@
 
         public function _Str_24587(k:_Str_2370):void
         {
-            var _local_2:IChatHistoryEntryBitmap = this._component._Str_5827._Str_23311(k);
+            var _local_2:IChatHistoryEntryBitmap = this._component.chatBubbleFactory._Str_23311(k);
             this._entries.push(_local_2);
             this._Str_19617(_local_2);
         }

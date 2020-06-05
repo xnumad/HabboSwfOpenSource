@@ -299,7 +299,7 @@
             {
                 return;
             }
-            this._window = RoomChatWidget._Str_5827._Str_25575(this._chatStyle, this._chatType);
+            this._window = RoomChatWidget.chatBubbleFactory._Str_25575(this._chatStyle, this._chatType);
             if (!this._window)
             {
                 return;
@@ -310,7 +310,7 @@
             var textWindow:ITextWindow = (this._window.findChildByName(MESSAGE) as ITextWindow);
             var pointerWindow:IBitmapWrapperWindow = (this._window.findChildByName(POINTER) as IBitmapWrapperWindow);
             var totalHeight:Number = this._window.height;
-            var pointerBitmapData:BitmapData = RoomChatWidget._Str_5827._Str_23013(this._chatStyle);
+            var pointerBitmapData:BitmapData = RoomChatWidget.chatBubbleFactory._Str_23013(this._chatStyle);
             this._originalBackgroundYOffset = background.y;
             var textWindowOffsetX:int = ((textWindow.x <= _Str_13391) ? 0 : (textWindow.x - _Str_13391));
             if (this._senderImage != null)
@@ -499,7 +499,7 @@
             {
                 textWidth = (textWidth + nameWindow.width);
             }
-            var bitmap:BitmapData = RoomChatWidget._Str_5827._Str_25059(this._chatStyle, this._chatType, textWidth, background.height, this._senderColor);
+            var bitmap:BitmapData = RoomChatWidget.chatBubbleFactory._Str_25059(this._chatStyle, this._chatType, textWidth, background.height, this._senderColor);
             this._window.width = bitmap.width;
             this._window.y = (this._window.y - this._topOffset);
             this._window.y = (this._window.y + this._originalBackgroundYOffset);

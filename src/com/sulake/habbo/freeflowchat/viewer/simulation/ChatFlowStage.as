@@ -323,7 +323,7 @@
             }
             if (this._lineByLineMode)
             {
-                this._Str_12872(this._component._Str_5827._Str_25435(_Str_7698));
+                this._Str_12872(this._component.chatBubbleFactory._Str_25435(_Str_7698));
                 this._bubbles[(this._bubbles.length - 1)].fullHeightCollision = true;
                 this._bubbles[(this._bubbles.length - 1)].isSpacer = true;
             }
