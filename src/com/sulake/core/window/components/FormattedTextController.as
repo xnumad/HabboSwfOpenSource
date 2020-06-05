@@ -30,9 +30,9 @@
             }
             else
             {
-                if (_Str_2309 != null)
+                if (_field != null)
                 {
-                    _Str_2309.htmlText = _caption;
+                    _field.htmlText = _caption;
                     refreshTextImage();
                 }
             }
@@ -40,9 +40,9 @@
 
         override public function set localization(k:String):void
         {
-            if (((!(k == null)) && (!(_Str_2309 == null))))
+            if (((!(k == null)) && (!(_field == null))))
             {
-                _Str_2309.htmlText = _Str_8027(k);
+                _field.htmlText = _Str_8027(k);
                 refreshTextImage();
             }
         }

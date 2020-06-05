@@ -47,15 +47,15 @@
             _y = _arg_6.y;
             _w = _arg_6.width;
             _h = _arg_6.height;
-            _Str_2309 = TextField(this.getGraphicContext(true).getDisplayObject());
+            _field = TextField(this.getGraphicContext(true).getDisplayObject());
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            _Str_2309.addEventListener(TextEvent.TEXT_INPUT, this._Str_22281);
-            _Str_2309.addEventListener(KeyboardEvent.KEY_DOWN, this._Str_19964);
-            _Str_2309.addEventListener(KeyboardEvent.KEY_UP, this._Str_21573);
-            _Str_2309.addEventListener(Event.CHANGE, this._Str_16912);
-            _Str_2309.addEventListener(FocusEvent.FOCUS_IN, this._Str_4932);
-            _Str_2309.addEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
-            _Str_2309.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
+            _field.addEventListener(TextEvent.TEXT_INPUT, this._Str_22281);
+            _field.addEventListener(KeyboardEvent.KEY_DOWN, this._Str_19964);
+            _field.addEventListener(KeyboardEvent.KEY_UP, this._Str_21573);
+            _field.addEventListener(Event.CHANGE, this._Str_16912);
+            _field.addEventListener(FocusEvent.FOCUS_IN, this._Str_4932);
+            _field.addEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
+            _field.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
             _drawable = false;
             this._initialized = true;
         }
@@ -78,11 +78,11 @@
 
         public function get focused():Boolean
         {
-            if (_Str_2309)
+            if (_field)
             {
-                if (_Str_2309.stage)
+                if (_field.stage)
                 {
-                    return _Str_2309.stage.focus == _Str_2309;
+                    return _field.stage.focus == _field;
                 }
             }
             return false;
@@ -92,10 +92,10 @@
         {
             if (super.enable())
             {
-                _Str_2309.type = TextFieldType.INPUT;
+                _field.type = TextFieldType.INPUT;
                 return true;
             }
-            _Str_2309.type = TextFieldType.DYNAMIC;
+            _field.type = TextFieldType.DYNAMIC;
             return false;
         }
 
@@ -103,41 +103,41 @@
         {
             if (super.disable())
             {
-                _Str_2309.type = TextFieldType.DYNAMIC;
+                _field.type = TextFieldType.DYNAMIC;
                 return true;
             }
-            _Str_2309.type = TextFieldType.INPUT;
+            _field.type = TextFieldType.INPUT;
             return false;
         }
 
         public function get editable():Boolean
         {
-            return _Str_2309.type == TextFieldType.INPUT;
+            return _field.type == TextFieldType.INPUT;
         }
 
         public function set editable(k:Boolean):void
         {
-            _Str_2309.type = ((k) ? TextFieldType.INPUT : TextFieldType.DYNAMIC);
+            _field.type = ((k) ? TextFieldType.INPUT : TextFieldType.DYNAMIC);
         }
 
         public function get selectable():Boolean
         {
-            return _Str_2309.selectable;
+            return _field.selectable;
         }
 
         public function set selectable(k:Boolean):void
         {
-            _Str_2309.selectable = k;
+            _field.selectable = k;
         }
 
         public function set displayAsPassword(k:Boolean):void
         {
-            _Str_2309.displayAsPassword = k;
+            _field.displayAsPassword = k;
         }
 
         public function get displayAsPassword():Boolean
         {
-            return _Str_2309.displayAsPassword;
+            return _field.displayAsPassword;
         }
 
         public function set mouseCursorType(k:uint):void
@@ -197,24 +197,24 @@
 
         override public function set background(k:Boolean):void
         {
-            _Str_2309.background = k;
+            _field.background = k;
             _background = k;
             _fillColor = ((_background) ? (_fillColor | _alphaColor) : (_fillColor & 0xFFFFFF));
         }
 
         public function setSelection(k:int, _arg_2:int):void
         {
-            _Str_2309.setSelection(k, _arg_2);
+            _field.setSelection(k, _arg_2);
         }
 
         public function get selectionBeginIndex():int
         {
-            return _Str_2309.selectionBeginIndex;
+            return _field.selectionBeginIndex;
         }
 
         public function get selectionEndIndex():int
         {
-            return _Str_2309.selectionEndIndex;
+            return _field.selectionEndIndex;
         }
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
@@ -232,18 +232,18 @@
             {
                 _context.getWindowServices().getFocusManagerService().removeFocusWindow(this);
                 this._Str_9948 = false;
-                if (_Str_2309)
+                if (_field)
                 {
                     if (this.focused)
                     {
                         this.unfocus();
                     }
-                    _Str_2309.removeEventListener(KeyboardEvent.KEY_DOWN, this._Str_19964);
-                    _Str_2309.removeEventListener(KeyboardEvent.KEY_UP, this._Str_21573);
-                    _Str_2309.removeEventListener(Event.CHANGE, this._Str_16912);
-                    _Str_2309.removeEventListener(FocusEvent.FOCUS_IN, this._Str_4932);
-                    _Str_2309.removeEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
-                    _Str_2309.removeEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
+                    _field.removeEventListener(KeyboardEvent.KEY_DOWN, this._Str_19964);
+                    _field.removeEventListener(KeyboardEvent.KEY_UP, this._Str_21573);
+                    _field.removeEventListener(Event.CHANGE, this._Str_16912);
+                    _field.removeEventListener(FocusEvent.FOCUS_IN, this._Str_4932);
+                    _field.removeEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
+                    _field.removeEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
                 }
                 super.dispose();
             }
@@ -260,13 +260,13 @@
             var k:Boolean = super.focus();
             if (k)
             {
-                if (_Str_2309)
+                if (_field)
                 {
-                    if (_Str_2309.stage)
+                    if (_field.stage)
                     {
-                        if (_Str_2309.stage.focus != _Str_2309)
+                        if (_field.stage.focus != _field)
                         {
-                            _Str_2309.stage.focus = _Str_2309;
+                            _field.stage.focus = _field;
                         }
                     }
                 }
@@ -276,13 +276,13 @@
 
         override public function unfocus():Boolean
         {
-            if (_Str_2309)
+            if (_field)
             {
-                if (_Str_2309.stage)
+                if (_field.stage)
                 {
-                    if (_Str_2309.stage.focus == _Str_2309)
+                    if (_field.stage.focus == _field)
                     {
-                        _Str_2309.stage.focus = null;
+                        _field.stage.focus = null;
                     }
                 }
             }
@@ -301,8 +301,8 @@
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (k == this)
                     {
-                        _Str_2309.width = this.width;
-                        _Str_2309.height = this.height;
+                        _field.width = this.width;
+                        _field.height = this.height;
                     }
                     break;
             }
@@ -320,13 +320,13 @@
             var _local_3:Point;
             if (((this._initialized) && (!(autoSize == TextFieldAutoSize.NONE))))
             {
-                if (((!(_w == _Str_2309.width)) || (!(_h == _Str_2309.height))))
+                if (((!(_w == _field.width)) || (!(_h == _field.height))))
                 {
-                    k = _Str_2309.localToGlobal(new Point(_Str_2309.x, _Str_2309.y));
+                    k = _field.localToGlobal(new Point(_field.x, _field.y));
                     _local_2 = new Point();
                     getGlobalPosition(_local_2);
                     _local_3 = new Point((k.x - _local_2.x), (k.y - _local_2.y));
-                    setRectangle((_x + _local_3.x), (_y + _local_3.y), _Str_2309.width, _Str_2309.height);
+                    setRectangle((_x + _local_3.x), (_y + _local_3.y), _field.width, _field.height);
                 }
             }
         }
@@ -376,28 +376,28 @@
             var _local_3:WindowEvent;
             var _local_2:Boolean;
             this._Str_20609();
-            if (_w != _Str_2309.width)
+            if (_w != _field.width)
             {
                 if (autoSize != TextFieldAutoSize.NONE)
                 {
-                    width = _Str_2309.width;
+                    width = _field.width;
                     _local_2 = true;
                 }
                 else
                 {
-                    _Str_2309.width = width;
+                    _field.width = width;
                 }
             }
-            if (_h != _Str_2309.height)
+            if (_h != _field.height)
             {
                 if (autoSize != TextFieldAutoSize.NONE)
                 {
-                    height = _Str_2309.height;
+                    height = _field.height;
                     _local_2 = true;
                 }
                 else
                 {
-                    _Str_2309.height = height;
+                    _field.height = height;
                 }
             }
             if ((((!(_local_2)) && (!(k))) && (_events)))
@@ -426,14 +426,14 @@
                 _local_2 = (numLines > _Str_9760);
                 if (k != null)
                 {
-                    _local_3 = _Str_2309.text;
-                    _local_4 = _Str_2309.caretIndex;
-                    _Str_2309.text = ((_local_3.substring(0, _local_4) + k) + _local_3.substring(_local_4, _local_3.length));
+                    _local_3 = _field.text;
+                    _local_4 = _field.caretIndex;
+                    _field.text = ((_local_3.substring(0, _local_4) + k) + _local_3.substring(_local_4, _local_3.length));
                     if (numLines > _Str_9760)
                     {
                         _local_2 = true;
                     }
-                    _Str_2309.text = _local_3;
+                    _field.text = _local_3;
                 }
             }
             return _local_2;
@@ -469,7 +469,7 @@
             var tracker:IInputEventTracker;
             try
             {
-                _caption = _Str_2309.text;
+                _caption = _field.text;
                 windowEvent = WindowKeyboardEvent.allocate(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, event, this, null);
                 this.update(this, windowEvent);
                 if (disposed)
@@ -555,10 +555,10 @@
         override public function get properties():Array
         {
             var k:Array = InteractiveController._Str_8987(this, super.properties);
-            k.push(createProperty(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
+            k.push(createProperty(PropertyKeys.EDITABLE, (_field.type == TextFieldType.INPUT)));
             k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, this._Str_9948));
-            k.push(createProperty(PropertyKeys.SELECTABLE, _Str_2309.selectable));
-            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
+            k.push(createProperty(PropertyKeys.SELECTABLE, _field.selectable));
+            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _field.displayAsPassword));
             k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
             return k;
         }
@@ -579,13 +579,13 @@
                         }
                         break;
                     case PropertyKeys.SELECTABLE:
-                        _Str_2309.selectable = (_local_2.value as Boolean);
+                        _field.selectable = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.EDITABLE:
-                        _Str_2309.type = ((_local_2.value) ? TextFieldType.INPUT : TextFieldType.DYNAMIC);
+                        _field.type = ((_local_2.value) ? TextFieldType.INPUT : TextFieldType.DYNAMIC);
                         break;
                     case PropertyKeys.DISPLAY_AS_PASSWORD:
-                        _Str_2309.displayAsPassword = (_local_2.value as Boolean);
+                        _field.displayAsPassword = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.DISPLAY_RAW:
                         _Str_5517 = (_local_2.value as Boolean);
@@ -625,7 +625,7 @@
             var _local_8:int;
             var _local_9:int;
             var _local_3:int = getCharIndexAtPoint(k, _arg_2);
-            var _local_4:String = _Str_2309.text;
+            var _local_4:String = _field.text;
             var _local_5:Array = _Str_22243(_local_4);
             var _local_6:String = "";
             var _local_7:int;

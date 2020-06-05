@@ -36,7 +36,7 @@
         protected static const _PROPERTY_SETTER_TABLE:Dictionary = createPropertySetterTable();
 
         private var _overFlowReplace:String = "";
-        protected var _Str_2309:TextField;
+        protected var _field:TextField;
         protected var _Str_7995:Number;
         protected var _Str_3375:Number;
         protected var _Str_4263:Boolean;
@@ -59,24 +59,24 @@
             this._Str_4263 = false;
             this._Str_7995 = 0;
             this._Str_3375 = 0;
-            if (this._Str_2309 == null)
+            if (this._field == null)
             {
-                this._Str_2309 = new TextField();
+                this._field = new TextField();
                 if (_arg_6)
                 {
-                    this._Str_2309.width = _arg_6.width;
-                    this._Str_2309.height = _arg_6.height;
+                    this._field.width = _arg_6.width;
+                    this._field.height = _arg_6.height;
                 }
-                this._Str_2309.mouseWheelEnabled = false;
+                this._field.mouseWheelEnabled = false;
             }
             this._Str_4040 = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             setTextFormatting(this);
             TextStyleManager.events.addEventListener(Event.CHANGE, this.onTextStyleChanged);
-            if (this._Str_2309.autoSize == TextFieldAutoSize.NONE)
+            if (this._field.autoSize == TextFieldAutoSize.NONE)
             {
-                this._Str_2309.width = _w;
-                this._Str_2309.height = _h;
+                this._field.width = _w;
+                this._field.height = _h;
             }
         }
 
@@ -84,13 +84,13 @@
         {
             _arg_2 = ((_arg_2 == AntiAliasType.ADVANCED) ? AntiAliasType.ADVANCED : AntiAliasType.NORMAL);
             k._Str_3808.antiAliasType = _arg_2;
-            k._Str_2309.antiAliasType = _arg_2;
+            k._field.antiAliasType = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setAlwaysShowSelection(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.alwaysShowSelection = _arg_2;
+            k._field.alwaysShowSelection = _arg_2;
         }
 
         private static function setAutoSize(k:TextController, _arg_2:String):void
@@ -99,7 +99,7 @@
             if (_arg_2 != k._Str_4318)
             {
                 k._Str_4318 = _arg_2;
-                k._Str_2309.autoSize = ((_arg_2 != TextFieldAutoSize.NONE) ? TextFieldAutoSize.LEFT : TextFieldAutoSize.NONE);
+                k._field.autoSize = ((_arg_2 != TextFieldAutoSize.NONE) ? TextFieldAutoSize.LEFT : TextFieldAutoSize.NONE);
                 _local_3 = k.defaultTextFormat;
                 switch (_arg_2)
                 {
@@ -139,31 +139,31 @@
 
         private static function setBorder(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.border = _arg_2;
+            k._field.border = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setBorderColor(k:TextController, _arg_2:uint):void
         {
-            k._Str_2309.borderColor = _arg_2;
+            k._field.borderColor = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setCondenseWhite(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.condenseWhite = _arg_2;
+            k._field.condenseWhite = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setDefaultTextFormat(k:TextController, _arg_2:TextFormat):void
         {
-            k._Str_2309.defaultTextFormat = _arg_2;
+            k._field.defaultTextFormat = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setEmbedFonts(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.embedFonts = _arg_2;
+            k._field.embedFonts = _arg_2;
         }
 
         private static function setFontFace(k:TextController, _arg_2:String):void
@@ -171,7 +171,7 @@
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.font = _arg_2;
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
-            k._Str_2309.embedFonts = FontEnum.isEmbeddedFont(_arg_2);
+            k._field.embedFonts = FontEnum.isEmbeddedFont(_arg_2);
             k.defaultTextFormat = _local_3;
             k._Str_3808.fontFamily = _arg_2;
         }
@@ -187,7 +187,7 @@
 
         private static function setGridFitType(k:TextController, _arg_2:String):void
         {
-            k._Str_2309.gridFitType = _arg_2;
+            k._field.gridFitType = _arg_2;
             k.refreshTextImage();
         }
 
@@ -210,9 +210,9 @@
             }
             else
             {
-                if (k._Str_2309 != null)
+                if (k._field != null)
                 {
-                    k._Str_2309.htmlText = k._caption;
+                    k._field.htmlText = k._caption;
                     k.refreshTextImage();
                 }
             }
@@ -285,29 +285,29 @@
 
         private static function setMaxChars(k:TextController, _arg_2:int):void
         {
-            k._Str_2309.maxChars = _arg_2;
+            k._field.maxChars = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setMouseWheelEnabled(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.mouseWheelEnabled = _arg_2;
+            k._field.mouseWheelEnabled = _arg_2;
         }
 
         private static function setMultiline(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.multiline = _arg_2;
+            k._field.multiline = _arg_2;
             k.refreshTextImage();
         }
 
         private static function setRestrict(k:TextController, _arg_2:String):void
         {
-            k._Str_2309.restrict = _arg_2;
+            k._field.restrict = _arg_2;
         }
 
         private static function setSharpness(k:TextController, _arg_2:Number):void
         {
-            k._Str_2309.sharpness = _arg_2;
+            k._field.sharpness = _arg_2;
             k.refreshTextImage();
             k._Str_3808.sharpness = _arg_2;
         }
@@ -342,7 +342,7 @@
 
         private static function setTextColor(k:TextController, _arg_2:uint):void
         {
-            k._Str_2309.textColor = _arg_2;
+            k._field.textColor = _arg_2;
             k.refreshTextImage();
             k._Str_3808.color = _arg_2;
         }
@@ -396,13 +396,13 @@
             {
                 _local_4 = new TextFormat();
                 _local_4.align = TextFormatAlign.CENTER;
-                k._Str_2309.setTextFormat(_local_4);
+                k._field.setTextFormat(_local_4);
             }
         }
 
         private static function setThickness(k:TextController, _arg_2:Number):void
         {
-            k._Str_2309.thickness = _arg_2;
+            k._field.thickness = _arg_2;
             k.refreshTextImage();
             k._Str_3808.thickness = _arg_2;
         }
@@ -418,7 +418,7 @@
 
         private static function setWordWrap(k:TextController, _arg_2:Boolean):void
         {
-            k._Str_2309.wordWrap = _arg_2;
+            k._field.wordWrap = _arg_2;
             k.refreshTextImage();
         }
 
@@ -430,7 +430,7 @@
 
         protected static function setTextFormatting(k:TextController):void
         {
-            var _local_2:TextField = k._Str_2309;
+            var _local_2:TextField = k._field;
             var _local_3:String = k._Str_4040;
             var _local_4:TextStyle = k._Str_3808;
             var _local_5:TextStyle = TextStyleManager.getStyle(_local_3);
@@ -616,7 +616,7 @@
 
         public function get antiAliasType():String
         {
-            return this._Str_2309.antiAliasType;
+            return this._field.antiAliasType;
         }
 
         public function get autoSize():String
@@ -626,67 +626,67 @@
 
         public function get bold():Boolean
         {
-            return this._Str_2309.defaultTextFormat.bold;
+            return this._field.defaultTextFormat.bold;
         }
 
         public function get border():Boolean
         {
-            return this._Str_2309.border;
+            return this._field.border;
         }
 
         public function get borderColor():uint
         {
-            return this._Str_2309.borderColor;
+            return this._field.borderColor;
         }
 
         public function get bottomScrollV():int
         {
-            return this._Str_2309.bottomScrollV;
+            return this._field.bottomScrollV;
         }
 
         public function get defaultTextFormat():TextFormat
         {
-            return this._Str_2309.defaultTextFormat;
+            return this._field.defaultTextFormat;
         }
 
         public function get embedFonts():Boolean
         {
-            return this._Str_2309.embedFonts;
+            return this._field.embedFonts;
         }
 
         public function get fontFace():String
         {
-            return this._Str_2309.defaultTextFormat.font;
+            return this._field.defaultTextFormat.font;
         }
 
         public function get fontSize():uint
         {
-            return (this._Str_2309.defaultTextFormat.size == null) ? 12 : uint(this._Str_2309.defaultTextFormat.size);
+            return (this._field.defaultTextFormat.size == null) ? 12 : uint(this._field.defaultTextFormat.size);
         }
 
         public function get gridFitType():String
         {
-            return this._Str_2309.gridFitType;
+            return this._field.gridFitType;
         }
 
         public function get htmlText():String
         {
-            return this._Str_2309.htmlText;
+            return this._field.htmlText;
         }
 
         public function get italic():Boolean
         {
-            return this._Str_2309.defaultTextFormat.italic;
+            return this._field.defaultTextFormat.italic;
         }
 
         public function get kerning():Boolean
         {
-            return this._Str_2309.defaultTextFormat.kerning;
+            return this._field.defaultTextFormat.kerning;
         }
 
         public function get length():int
         {
-            return this._Str_2309.length;
+            return this._field.length;
         }
 
         public function get margins():IMargins
@@ -696,42 +696,42 @@
 
         public function get maxChars():int
         {
-            return this._Str_2309.maxChars;
+            return this._field.maxChars;
         }
 
         public function get multiline():Boolean
         {
-            return this._Str_2309.multiline;
+            return this._field.multiline;
         }
 
         public function get numLines():int
         {
-            return this._Str_2309.numLines;
+            return this._field.numLines;
         }
 
         public function get restrict():String
         {
-            return this._Str_2309.restrict;
+            return this._field.restrict;
         }
 
         public function get sharpness():Number
         {
-            return this._Str_2309.sharpness;
+            return this._field.sharpness;
         }
 
         public function get spacing():Number
         {
-            return Number(this._Str_2309.defaultTextFormat.letterSpacing);
+            return Number(this._field.defaultTextFormat.letterSpacing);
         }
 
         public function get text():String
         {
-            return (this._Str_2309 != null) ? this._Str_2309.text : "";
+            return (this._field != null) ? this._field.text : "";
         }
 
         public function get textColor():uint
         {
-            return this._Str_2309.textColor;
+            return this._field.textColor;
         }
 
         public function get _Str_5349():Boolean
@@ -746,12 +746,12 @@
 
         public function get textHeight():Number
         {
-            return this._Str_2309.textHeight;
+            return this._field.textHeight;
         }
 
         public function get textWidth():Number
         {
-            return this._Str_2309.textWidth;
+            return this._field.textWidth;
         }
 
         public function get textStyle():TextStyle
@@ -761,22 +761,22 @@
 
         public function get thickness():Number
         {
-            return this._Str_2309.thickness;
+            return this._field.thickness;
         }
 
         public function get underline():Boolean
         {
-            return this._Str_2309.defaultTextFormat.underline;
+            return this._field.defaultTextFormat.underline;
         }
 
         public function get wordWrap():Boolean
         {
-            return this._Str_2309.wordWrap;
+            return this._field.wordWrap;
         }
 
         public function get textField():TextField
         {
-            return this._Str_2309;
+            return this._field;
         }
 
         public function get _Str_9760():int
@@ -786,7 +786,7 @@
 
         public function get leading():Number
         {
-            return Number(this._Str_2309.defaultTextFormat.leading);
+            return Number(this._field.defaultTextFormat.leading);
         }
 
         public function get _Str_24155():Boolean
@@ -811,12 +811,12 @@
 
         public function get maxScrollH():int
         {
-            return this._Str_2309.maxScrollH;
+            return this._field.maxScrollH;
         }
 
         public function get maxScrollV():int
         {
-            return Math.max((this._Str_2309.textHeight - height), 0);
+            return Math.max((this._field.textHeight - height), 0);
         }
 
         public function set antiAliasType(k:String):void
@@ -982,7 +982,7 @@
         public function set scrollH(k:Number):void
         {
             this._Str_7995 = k;
-            this._Str_2309.scrollH = (this._Str_7995 * Number(this._Str_2309.maxScrollH));
+            this._field.scrollH = (this._Str_7995 * Number(this._field.maxScrollH));
             this.refreshTextImage();
         }
 
@@ -991,7 +991,7 @@
             if (k > this._Str_3375)
             {
                 this._Str_3375 = k;
-                this._Str_2309.scrollV = Math.max(this._Str_2309.scrollV, ((k * this._Str_2309.maxScrollV) + 1));
+                this._field.scrollV = Math.max(this._field.scrollV, ((k * this._field.maxScrollV) + 1));
                 this.refreshTextImage();
             }
             else
@@ -999,7 +999,7 @@
                 if (k < this._Str_3375)
                 {
                     this._Str_3375 = k;
-                    this._Str_2309.scrollV = Math.min(this._Str_2309.scrollV, ((k * this._Str_2309.maxScrollV) - 1));
+                    this._field.scrollV = Math.min(this._field.scrollV, ((k * this._field.maxScrollV) - 1));
                     this.refreshTextImage();
                 }
             }
@@ -1022,7 +1022,7 @@
 
         public function get scrollStepV():Number
         {
-            return this._Str_2309.textHeight / this._Str_2309.numLines;
+            return this._field.textHeight / this._field.numLines;
         }
 
         public function set scrollStepH(k:Number):void
@@ -1040,7 +1040,7 @@
             var _local_6:String;
             var _local_7:int;
             var _local_8:String;
-            var _local_2:TextFormat = this._Str_2309.getTextFormat();
+            var _local_2:TextFormat = this._field.getTextFormat();
             if (((!(_local_2)) || (!(_local_2.font))))
             {
                 return k;
@@ -1098,9 +1098,9 @@
             }
             else
             {
-                if (this._Str_2309 != null)
+                if (this._field != null)
                 {
-                    this._Str_2309.text = this._Str_23637(_caption);
+                    this._field.text = this._Str_23637(_caption);
                     this.refreshTextImage();
                 }
             }
@@ -1114,20 +1114,20 @@
         override public function set color(k:uint):void
         {
             super.color = k;
-            this._Str_2309.backgroundColor = k;
+            this._field.backgroundColor = k;
         }
 
         override public function set background(k:Boolean):void
         {
             super.background = k;
-            this._Str_2309.background = k;
+            this._field.background = k;
         }
 
         public function set localization(k:String):void
         {
-            if (((!(k == null)) && (!(this._Str_2309 == null))))
+            if (((!(k == null)) && (!(this._field == null))))
             {
-                this._Str_2309.text = this._Str_8027(k);
+                this._field.text = this._Str_8027(k);
                 this.refreshTextImage();
             }
         }
@@ -1135,8 +1135,8 @@
         override public function clone():IWindow
         {
             var k:TextController = (super.clone() as TextController);
-            k._Str_2309.backgroundColor = color;
-            k._Str_2309.background = background;
+            k._field.backgroundColor = color;
+            k._field.background = background;
             k._Str_7995 = this._Str_7995;
             k._Str_3375 = this._Str_3375;
             k._Str_2480 = this._Str_2480.clone(k.setTextMargins);
@@ -1158,7 +1158,7 @@
                 this._Str_2480.dispose();
                 this._Str_2480 = null;
             }
-            this._Str_2309 = null;
+            this._field = null;
             super.dispose();
         }
 
@@ -1195,49 +1195,49 @@
             var _local_3:int = (this._Str_2480.top + this._Str_2480.bottom);
             var _local_4:int = (_w - _local_2);
             var _local_5:int = (_h - _local_3);
-            var _local_6:int = (Math.floor(this._Str_2309.width) + ((this._Str_2309.border) ? 1 : 0));
+            var _local_6:int = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
             var _local_7:Boolean;
             if (((this._Str_4318 == TextFieldAutoSize.NONE) && (this._Str_24155)))
             {
-                _local_9 = this._Str_2309.text;
-                if ((this._Str_2309.textHeight + _local_3) > _local_5)
+                _local_9 = this._field.text;
+                if ((this._field.textHeight + _local_3) > _local_5)
                 {
-                    _local_11 = (this._Str_2309.numLines - 1);
-                    while (((this._Str_2309.getCharBoundaries(this._Str_2309.getLineOffset(_local_11)) == null) || (this._Str_2309.getCharBoundaries(this._Str_2309.getLineOffset(_local_11)).bottom > _local_5)))
+                    _local_11 = (this._field.numLines - 1);
+                    while (((this._field.getCharBoundaries(this._field.getLineOffset(_local_11)) == null) || (this._field.getCharBoundaries(this._field.getLineOffset(_local_11)).bottom > _local_5)))
                     {
                         _local_11--;
                     }
-                    _local_12 = this._Str_2309.getLineOffset(_local_11);
-                    _local_13 = (_local_12 + this._Str_2309.getLineLength(_local_11));
+                    _local_12 = this._field.getLineOffset(_local_11);
+                    _local_13 = (_local_12 + this._field.getLineLength(_local_11));
                     _local_8 = _local_13;
-                    while ((((this._Str_2309.textHeight + _local_3) > _local_5) && (_local_8 > 0)))
+                    while ((((this._field.textHeight + _local_3) > _local_5) && (_local_8 > 0)))
                     {
-                        this._Str_2309.text = (_local_9.slice(0, --_local_8) + this._Str_15348);
+                        this._field.text = (_local_9.slice(0, --_local_8) + this._Str_15348);
                     }
                 }
-                _local_10 = this._Str_2309.text;
-                if ((this._Str_2309.textWidth + _local_2) > _local_4)
+                _local_10 = this._field.text;
+                if ((this._field.textWidth + _local_2) > _local_4)
                 {
-                    _local_14 = (this._Str_2309.text.length - 1);
-                    while (((this._Str_2309.getCharBoundaries(_local_14) == null) || (this._Str_2309.getCharBoundaries(_local_14).right > _local_4)))
+                    _local_14 = (this._field.text.length - 1);
+                    while (((this._field.getCharBoundaries(_local_14) == null) || (this._field.getCharBoundaries(_local_14).right > _local_4)))
                     {
                         _local_14--;
                     }
                     _local_15 = this.getTextFormat(0, _local_14);
                     _local_8 = _local_14;
                     _local_16 = (((_local_2 + _local_15.indent) + _local_15.leftMargin) + _local_15.rightMargin);
-                    while (((((this._Str_2309.textWidth + _local_16) + 2) > _local_4) && (_local_8 > 0)))
+                    while (((((this._field.textWidth + _local_16) + 2) > _local_4) && (_local_8 > 0)))
                     {
-                        this._Str_2309.text = (_local_10.slice(0, --_local_8) + this._Str_15348);
+                        this._field.text = (_local_10.slice(0, --_local_8) + this._Str_15348);
                     }
                 }
-                _local_6 = (Math.floor(this._Str_2309.width) + ((this._Str_2309.border) ? 1 : 0));
+                _local_6 = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
             }
             if (_local_6 != _local_4)
             {
                 if (this._Str_4318 == TextFieldAutoSize.LEFT)
                 {
-                    this.setRectangle(_x, _y, (_local_6 + _local_2), (Math.floor(this._Str_2309.height) + _local_3));
+                    this.setRectangle(_x, _y, (_local_6 + _local_2), (Math.floor(this._field.height) + _local_3));
                     _local_7 = true;
                 }
                 else
@@ -1246,31 +1246,31 @@
                     {
                         if (this._Str_4318 != TextFieldAutoSize.CENTER)
                         {
-                            this._Str_2309.width = (_local_4 - ((this._Str_2309.border) ? 1 : 0));
-                            this._Str_2309.height = (_local_5 - ((this._Str_2309.border) ? 1 : 0));
+                            this._field.width = (_local_4 - ((this._field.border) ? 1 : 0));
+                            this._field.height = (_local_5 - ((this._field.border) ? 1 : 0));
                         }
                     }
                 }
             }
-            if ((this._Str_2309.height + ((this._Str_2309.border) ? 1 : 0)) < _local_5)
+            if ((this._field.height + ((this._field.border) ? 1 : 0)) < _local_5)
             {
                 if (this._Str_4318 == TextFieldAutoSize.NONE)
                 {
-                    this._Str_2309.height = (_local_5 - ((this._Str_2309.border) ? 1 : 0));
+                    this._field.height = (_local_5 - ((this._field.border) ? 1 : 0));
                 }
                 else
                 {
-                    height = (Math.floor(this._Str_2309.height) + _local_3);
+                    height = (Math.floor(this._field.height) + _local_3);
                     _local_7 = true;
                 }
             }
             else
             {
-                if ((this._Str_2309.height + ((this._Str_2309.border) ? 1 : 0)) > _local_5)
+                if ((this._field.height + ((this._field.border) ? 1 : 0)) > _local_5)
                 {
                     if (this._Str_4318 != TextFieldAutoSize.NONE)
                     {
-                        height = (Math.floor(this._Str_2309.height) + _local_3);
+                        height = (Math.floor(this._field.height) + _local_3);
                         _local_7 = true;
                     }
                 }
@@ -1287,81 +1287,81 @@
 
         public function appendText(k:String):void
         {
-            this._Str_2309.appendText(k);
+            this._field.appendText(k);
             this.refreshTextImage();
         }
 
         public function getCharBoundaries(k:int):Rectangle
         {
-            return this._Str_2309.getCharBoundaries(k);
+            return this._field.getCharBoundaries(k);
         }
 
         public function getCharIndexAtPoint(k:Number, _arg_2:Number):int
         {
-            return this._Str_2309.getCharIndexAtPoint(k, _arg_2);
+            return this._field.getCharIndexAtPoint(k, _arg_2);
         }
 
         public function getFirstCharInParagraph(k:int):int
         {
-            return this._Str_2309.getFirstCharInParagraph(k);
+            return this._field.getFirstCharInParagraph(k);
         }
 
         public function getImageReference(k:String):DisplayObject
         {
-            return this._Str_2309.getImageReference(k);
+            return this._field.getImageReference(k);
         }
 
         public function getLineIndexAtPoint(k:Number, _arg_2:Number):int
         {
-            return this._Str_2309.getLineIndexAtPoint(k, _arg_2);
+            return this._field.getLineIndexAtPoint(k, _arg_2);
         }
 
         public function getLineIndexOfChar(k:int):int
         {
-            return this._Str_2309.getLineIndexOfChar(k);
+            return this._field.getLineIndexOfChar(k);
         }
 
         public function getLineLength(k:int):int
         {
-            return this._Str_2309.getLineLength(k);
+            return this._field.getLineLength(k);
         }
 
         public function getLineMetrics(k:int):TextLineMetrics
         {
-            return this._Str_2309.getLineMetrics(k);
+            return this._field.getLineMetrics(k);
         }
 
         public function getLineOffset(k:int):int
         {
-            return this._Str_2309.getLineOffset(k);
+            return this._field.getLineOffset(k);
         }
 
         public function getLineText(k:int):String
         {
-            return this._Str_2309.getLineText(k);
+            return this._field.getLineText(k);
         }
 
         public function getParagraphLength(k:int):int
         {
-            return this._Str_2309.getParagraphLength(k);
+            return this._field.getParagraphLength(k);
         }
 
         public function getTextFormat(k:int=-1, _arg_2:int=-1):TextFormat
         {
-            return this._Str_2309.getTextFormat(k, _arg_2);
+            return this._field.getTextFormat(k, _arg_2);
         }
 
         public function replaceText(k:int, _arg_2:int, _arg_3:String):void
         {
-            this._Str_2309.replaceText(k, _arg_2, _arg_3);
+            this._field.replaceText(k, _arg_2, _arg_3);
             this.refreshTextImage();
         }
 
         public function setTextFormat(k:TextFormat, _arg_2:int=-1, _arg_3:int=-1):void
         {
-            if ((((_arg_2 >= 0) && (_arg_3 > _arg_2)) && (_arg_3 < this._Str_2309.length)))
+            if ((((_arg_2 >= 0) && (_arg_3 > _arg_2)) && (_arg_3 < this._field.length)))
             {
-                this._Str_2309.setTextFormat(k, _arg_2, _arg_3);
+                this._field.setTextFormat(k, _arg_2, _arg_3);
                 this.refreshTextImage();
             }
         }
@@ -1375,7 +1375,7 @@
             }
             if (this._Str_4318 == TextFieldAutoSize.LEFT)
             {
-                this._Str_2309.width = ((_w - this._Str_2480.left) - this._Str_2480.right);
+                this._field.width = ((_w - this._Str_2480.left) - this._Str_2480.right);
             }
             this.refreshTextImage();
         }
@@ -1430,39 +1430,39 @@
         {
             var k:Array = super.properties;
             var _local_2:TextStyle = TextStyleManager.getStyle(this._Str_4040);
-            k.push(createProperty(PropertyKeys.ALWAYS_SHOW_SELECTION, this._Str_2309.alwaysShowSelection));
-            k.push(new PropertyStruct(PropertyKeys.ANTIALIAS_TYPE, this._Str_2309.antiAliasType, PropertyStruct.STRING, (!(this._Str_2309.antiAliasType == _local_2.antiAliasType)), PropertyKeys.ANTIALIAS_TYPE_RANGE));
+            k.push(createProperty(PropertyKeys.ALWAYS_SHOW_SELECTION, this._field.alwaysShowSelection));
+            k.push(new PropertyStruct(PropertyKeys.ANTIALIAS_TYPE, this._field.antiAliasType, PropertyStruct.STRING, (!(this._field.antiAliasType == _local_2.antiAliasType)), PropertyKeys.ANTIALIAS_TYPE_RANGE));
             k.push(createProperty(PropertyKeys.AUTO_SIZE, this._Str_4318));
-            k.push(createProperty(PropertyKeys.BORDER, this._Str_2309.border));
-            k.push(createProperty(PropertyKeys.BORDER_COLOR, this._Str_2309.borderColor));
+            k.push(createProperty(PropertyKeys.BORDER, this._field.border));
+            k.push(createProperty(PropertyKeys.BORDER_COLOR, this._field.borderColor));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._etchingColor, PropertyStruct.HEX, (!(this._etchingColor == uint(_local_2.etchingColor)))));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_POSITION, this._Str_5717, PropertyStruct.STRING, (!(this._Str_5717 == String(_local_2.etchingPosition))), PropertyKeys.ETCHING_POSITION_RANGE));
-            k.push(createProperty(PropertyKeys.CONDENSE_WHITE, this._Str_2309.condenseWhite));
+            k.push(createProperty(PropertyKeys.CONDENSE_WHITE, this._field.condenseWhite));
             k.push(new PropertyStruct(PropertyKeys.FONT_FACE, this.defaultTextFormat.font, PropertyStruct.STRING, (!(this.defaultTextFormat.font == _local_2.fontFamily))));
             k.push(new PropertyStruct(PropertyKeys.FONT_SIZE, this.defaultTextFormat.size, PropertyStruct.UINT, (!(this.defaultTextFormat.size == _local_2.fontSize))));
-            k.push(createProperty(PropertyKeys.GRID_FIT_TYPE, this._Str_2309.gridFitType));
+            k.push(createProperty(PropertyKeys.GRID_FIT_TYPE, this._field.gridFitType));
             var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : getDefaultProperty(PropertyKeys.TEXT_COLOR).value));
-            k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, this._Str_2309.textColor, PropertyStruct.HEX, (!(this._Str_2309.textColor == _local_3))));
+            k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, this._field.textColor, PropertyStruct.HEX, (!(this._field.textColor == _local_3))));
             k.push(createProperty(PropertyKeys.TEXT_STYLE, this._Str_4040));
             k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._Str_2480.left));
             k.push(createProperty(PropertyKeys.MARGIN_TOP, this._Str_2480.top));
             k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._Str_2480.right));
             k.push(createProperty(PropertyKeys.MARGIN_BOTTOM, this._Str_2480.bottom));
-            k.push(createProperty(PropertyKeys.MOUSE_WHEEL_ENABLED, this._Str_2309.mouseWheelEnabled));
-            k.push(createProperty(PropertyKeys.MAX_CHARS, this._Str_2309.maxChars));
-            k.push(createProperty(PropertyKeys.MULTILINE, this._Str_2309.multiline));
-            k.push(createProperty(PropertyKeys.RESTRICT, this._Str_2309.restrict));
-            k.push(new PropertyStruct(PropertyKeys.SHARPNESS, this._Str_2309.sharpness, PropertyStruct.NUMBER, (!(this._Str_2309.sharpness == _local_2.sharpness))));
-            k.push(new PropertyStruct(PropertyKeys.THICKNESS, this._Str_2309.thickness, PropertyStruct.NUMBER, (!(this._Str_2309.thickness == _local_2.thickness))));
-            k.push(createProperty(PropertyKeys.WORD_WRAP, this._Str_2309.wordWrap));
+            k.push(createProperty(PropertyKeys.MOUSE_WHEEL_ENABLED, this._field.mouseWheelEnabled));
+            k.push(createProperty(PropertyKeys.MAX_CHARS, this._field.maxChars));
+            k.push(createProperty(PropertyKeys.MULTILINE, this._field.multiline));
+            k.push(createProperty(PropertyKeys.RESTRICT, this._field.restrict));
+            k.push(new PropertyStruct(PropertyKeys.SHARPNESS, this._field.sharpness, PropertyStruct.NUMBER, (!(this._field.sharpness == _local_2.sharpness))));
+            k.push(new PropertyStruct(PropertyKeys.THICKNESS, this._field.thickness, PropertyStruct.NUMBER, (!(this._field.thickness == _local_2.thickness))));
+            k.push(createProperty(PropertyKeys.WORD_WRAP, this._field.wordWrap));
             k.push(createProperty(PropertyKeys.MAX_LINES, this._Str_9760));
             k.push(createProperty(PropertyKeys.OVERFLOW_REPLACE, this._Str_15348));
-            k.push(new PropertyStruct(PropertyKeys.BOLD, (!(this._Str_2309.defaultTextFormat.bold == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.bold == (_local_2.fontWeight == FontStyle.BOLD)))));
-            k.push(new PropertyStruct(PropertyKeys.ITALIC, (!(this._Str_2309.defaultTextFormat.italic == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.italic == (_local_2.fontStyle == FontStyle.ITALIC)))));
-            k.push(new PropertyStruct(PropertyKeys.UNDERLINE, (!(this._Str_2309.defaultTextFormat.underline == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.underline == (_local_2.textDecoration == "underline")))));
-            k.push(new PropertyStruct(PropertyKeys.KERNING, (!(this._Str_2309.defaultTextFormat.kerning == false)), PropertyStruct.BOOLEAN, (!(this._Str_2309.defaultTextFormat.kerning == _local_2.kerning))));
-            k.push(new PropertyStruct(PropertyKeys.SPACING, this._Str_2309.defaultTextFormat.letterSpacing, PropertyStruct.NUMBER, (!(this._Str_2309.defaultTextFormat.letterSpacing == _local_2.letterSpacing))));
-            k.push(new PropertyStruct(PropertyKeys.LEADING, this._Str_2309.defaultTextFormat.leading, PropertyStruct.NUMBER, (!(this._Str_2309.defaultTextFormat.leading == _local_2.leading))));
+            k.push(new PropertyStruct(PropertyKeys.BOLD, (!(this._field.defaultTextFormat.bold == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.bold == (_local_2.fontWeight == FontStyle.BOLD)))));
+            k.push(new PropertyStruct(PropertyKeys.ITALIC, (!(this._field.defaultTextFormat.italic == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.italic == (_local_2.fontStyle == FontStyle.ITALIC)))));
+            k.push(new PropertyStruct(PropertyKeys.UNDERLINE, (!(this._field.defaultTextFormat.underline == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.underline == (_local_2.textDecoration == "underline")))));
+            k.push(new PropertyStruct(PropertyKeys.KERNING, (!(this._field.defaultTextFormat.kerning == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.kerning == _local_2.kerning))));
+            k.push(new PropertyStruct(PropertyKeys.SPACING, this._field.defaultTextFormat.letterSpacing, PropertyStruct.NUMBER, (!(this._field.defaultTextFormat.letterSpacing == _local_2.letterSpacing))));
+            k.push(new PropertyStruct(PropertyKeys.LEADING, this._field.defaultTextFormat.leading, PropertyStruct.NUMBER, (!(this._field.defaultTextFormat.leading == _local_2.leading))));
             return k;
         }
 
@@ -1483,7 +1483,7 @@
 
         private function setStyleSheet(k:TextController, _arg_2:StyleSheet):void
         {
-            k._Str_2309.styleSheet = _arg_2;
+            k._field.styleSheet = _arg_2;
             this.refreshTextImage();
         }
 

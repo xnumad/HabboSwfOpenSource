@@ -30,10 +30,10 @@
             this._Str_9241 = PropertyKeys.HTML_LINK_TARGET_VALUE;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             this.immediateClickMode = true;
-            _Str_2309.type = TextFieldType.DYNAMIC;
-            _Str_2309.mouseEnabled = true;
-            _Str_2309.selectable = false;
-            _Str_2309.mouseWheelEnabled = true;
+            _field.type = TextFieldType.DYNAMIC;
+            _field.mouseEnabled = true;
+            _field.selectable = false;
+            _field.mouseWheelEnabled = true;
         }
 
         public static function set _Str_16826(k:String):void
@@ -141,18 +141,18 @@
 
         override public function set immediateClickMode(k:Boolean):void
         {
-            if (((k == _immediateClickMode) || (_Str_2309 == null)))
+            if (((k == _immediateClickMode) || (_field == null)))
             {
                 return;
             }
             super.immediateClickMode = k;
             if (_immediateClickMode)
             {
-                _Str_2309.addEventListener(TextEvent.LINK, this.immediateClickHandler);
+                _field.addEventListener(TextEvent.LINK, this.immediateClickHandler);
             }
             else
             {
-                _Str_2309.removeEventListener(TextEvent.LINK, this.immediateClickHandler);
+                _field.removeEventListener(TextEvent.LINK, this.immediateClickHandler);
             }
         }
 
@@ -175,9 +175,9 @@
             }
             else
             {
-                if (_Str_2309 != null)
+                if (_field != null)
                 {
-                    _Str_2309.htmlText = _Str_8814(_caption);
+                    _field.htmlText = _Str_8814(_caption);
                     refreshTextImage();
                 }
             }
@@ -185,9 +185,9 @@
 
         override public function set localization(k:String):void
         {
-            if (((!(k == null)) && (!(_Str_2309 == null))))
+            if (((!(k == null)) && (!(_field == null))))
             {
-                _Str_2309.htmlText = _Str_8027(_Str_8814(k));
+                _field.htmlText = _Str_8027(_Str_8814(k));
                 refreshTextImage();
             }
         }
@@ -211,10 +211,10 @@
             }
             else
             {
-                if (_Str_2309 != null)
+                if (_field != null)
                 {
-                    _Str_2309.htmlText = _Str_8814(_caption);
-                    _Str_2309.styleSheet = this._Str_5143;
+                    _field.htmlText = _Str_8814(_caption);
+                    _field.styleSheet = this._Str_5143;
                     refreshTextImage();
                 }
             }
@@ -271,10 +271,10 @@
         override public function get properties():Array
         {
             var k:Array = InteractiveController._Str_8987(this, super.properties);
-            k.push(createProperty(PropertyKeys.EDITABLE, (_Str_2309.type == TextFieldType.INPUT)));
+            k.push(createProperty(PropertyKeys.EDITABLE, (_field.type == TextFieldType.INPUT)));
             k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, _Str_9948));
-            k.push(createProperty(PropertyKeys.SELECTABLE, _Str_2309.selectable));
-            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _Str_2309.displayAsPassword));
+            k.push(createProperty(PropertyKeys.SELECTABLE, _field.selectable));
+            k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _field.displayAsPassword));
             k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
             k.push(createProperty(PropertyKeys.LINK_TARGET, this._Str_9241));
             return k;
