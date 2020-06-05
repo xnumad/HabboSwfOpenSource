@@ -482,12 +482,12 @@
             }
         }
 
-        public function set _Str_6120(k:ColorTransform):void
+        public function set dynamicStyleColor(k:ColorTransform):void
         {
             _dynamicStyleColorTransform = k;
         }
 
-        public function get _Str_6120():ColorTransform
+        public function get dynamicStyleColor():ColorTransform
         {
             return _dynamicStyleColorTransform;
         }

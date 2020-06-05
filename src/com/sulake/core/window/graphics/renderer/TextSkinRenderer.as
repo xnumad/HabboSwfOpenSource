@@ -74,9 +74,9 @@
                         this._Str_2085.ty = (this._Str_2085.ty - _local_11.y);
                     }
                 }
-                if (k._Str_6120)
+                if (k.dynamicStyleColor)
                 {
-                    _local_10 = k._Str_6120;
+                    _local_10 = k.dynamicStyleColor;
                 }
                 _arg_2.draw(_local_9, this._Str_2085, _local_10, null, null, false);
             }

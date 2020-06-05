@@ -54,8 +54,8 @@
         function get renderingWidth():int;
         function get renderingHeight():int;
         function get etchingPoint():Point;
-        function get _Str_6120():ColorTransform;
-        function set _Str_6120(_arg_1:ColorTransform):void;
+        function get dynamicStyleColor():ColorTransform;
+        function set dynamicStyleColor(_arg_1:ColorTransform):void;
         function set x(_arg_1:int):void;
         function set y(_arg_1:int):void;
         function set id(_arg_1:int):void;

@@ -134,9 +134,9 @@
                             _COLOR_TRANSFORM.greenOffset = 0;
                             _COLOR_TRANSFORM.blueOffset = 0;
                             _COLOR_TRANSFORM.alphaOffset = 0;
-                            if (k._Str_6120)
+                            if (k.dynamicStyleColor)
                             {
-                                _COLOR_TRANSFORM.concat(k._Str_6120);
+                                _COLOR_TRANSFORM.concat(k.dynamicStyleColor);
                             }
                             if (_ETCHING_COLOR_TRANSFORM.alphaMultiplier >= 0.001)
                             {

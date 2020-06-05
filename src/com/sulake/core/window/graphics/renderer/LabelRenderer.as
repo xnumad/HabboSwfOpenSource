@@ -79,9 +79,9 @@
                         }
                     }
                 }
-                if (k._Str_6120)
+                if (k.dynamicStyleColor)
                 {
-                    _local_9 = k._Str_6120;
+                    _local_9 = k.dynamicStyleColor;
                 }
                 _arg_2.draw(this._Str_7685, this._Str_2085, _local_9, null, null, false);
                 if (_local_6.vertical)
