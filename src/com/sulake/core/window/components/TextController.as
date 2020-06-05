@@ -283,7 +283,7 @@
             }
         }
 
-        private static function _Str_18813(k:TextController, _arg_2:int):void
+        private static function setMaxChars(k:TextController, _arg_2:int):void
         {
             k._Str_2309.maxChars = _arg_2;
             k.refreshTextImage();
@@ -575,7 +575,7 @@
             k[PropertyKeys.GRID_FIT_TYPE] = setGridFitType;
             k[PropertyKeys.ITALIC] = setItalic;
             k[PropertyKeys.KERNING] = setKerning;
-            k[PropertyKeys.MAX_CHARS] = _Str_18813;
+            k[PropertyKeys.MAX_CHARS] = setMaxChars;
             k[PropertyKeys.MULTILINE] = _Str_17885;
             k[PropertyKeys.RESTRICT] = _Str_17907;
             k[PropertyKeys.SPACING] = _Str_9915;
@@ -886,7 +886,7 @@
 
         public function set maxChars(k:int):void
         {
-            _Str_18813(this, k);
+            setMaxChars(this, k);
         }
 
         public function set multiline(k:Boolean):void
