@@ -45,7 +45,7 @@
         public static const ERROR_DURING_EVENT_HANDLING:int = 5;
         public static var inputEventQueue:IEventQueue;
         private static var inputEventProcessor:IEventProcessor;
-        private static var _Str_17012:uint = INPUT_MODE_MOUSE;//0
+        private static var inputModeFlag:uint = INPUT_MODE_MOUSE;//0
         private static var _Str_2884:IWindowRenderer;
         private static var stage:Stage;
 
@@ -116,7 +116,7 @@
 
         public static function get _Str_9993():uint
         {
-            return _Str_17012;
+            return inputModeFlag;
         }
 
         public static function set _Str_9993(k:uint):void
