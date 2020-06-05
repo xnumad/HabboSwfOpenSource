@@ -30,7 +30,7 @@
     {
         private static const HIDDEN:String = "HIDDEN";
         private static const NO_CONVERSATION:int = -1;
-        private static const _Str_11283:int = 55;
+        private static const NOTIFICATION_ICON_WIDTH:int = 55;
         private static const _Str_13145:int = 5;
         private static const _Str_18765:int = 150;
         private static const _Str_4550:Dictionary = new Dictionary();
@@ -540,12 +540,12 @@
                     return _local_4;
                 case ChatEntry._Str_10130:
                     _local_6 = (this._chatNotificationTemplate.clone() as IWindowContainer);
-                    _local_6.findChildByName("content").width = (this._Str_5428 - _Str_11283);
+                    _local_6.findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
                     _local_6.findChildByName("content").caption = k.message;
                     return _local_6;
                 case ChatEntry._Str_15691:
                     _local_7 = (this._chatInvitationTemplate.clone() as IWindowContainer);
-                    _local_7.findChildByName("content").width = (this._Str_5428 - _Str_11283);
+                    _local_7.findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
                     _local_7.findChildByName("content").caption = k.message;
                     return _local_7;
                 case ChatEntry._Str_8431:
@@ -622,7 +622,7 @@
                     case "msg_normal":
                         break;
                     case "msg_notification":
-                        IWindowContainer(_local_2).findChildByName("content").width = (this._Str_5428 - _Str_11283);
+                        IWindowContainer(_local_2).findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
                         break;
                     case "msg_info":
                         _local_3 = IWindowContainer(_local_2).findChildByName("content");
