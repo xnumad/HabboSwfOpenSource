@@ -613,7 +613,7 @@
                 case RoomSessionEvent.STARTED:
                     if (this._toolbar)
                     {
-                        this._Str_19696(k.session);
+                        this.defineToolbarState(k.session);
                     }
                     if (this._landingView)
                     {
@@ -625,7 +625,7 @@
                     }
                     return;
                 case RoomSessionEvent.ROOM_DATA:
-                    this._Str_19696(k.session);
+                    this.defineToolbarState(k.session);
                     return;
                 case RoomSessionEvent.ENDED:
                     if (k.session != null)
@@ -668,7 +668,7 @@
             }
         }
 
-        private function _Str_19696(k:IRoomSession):void
+        private function defineToolbarState(k:IRoomSession):void
         {
             if (((getBoolean("nux.lobbies.enabled")) && (this._sessionDataManager.isRealNoob)))
             {
