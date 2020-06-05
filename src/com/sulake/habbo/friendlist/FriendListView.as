@@ -107,7 +107,7 @@
             var k:Boolean = this._habboFriendList.getBoolean("friendship.category.management.enabled");
             if (((k) && (!(this._habboFriendList.getInteger("spaweb", 0) == 1))))
             {
-                this._mainWindow.findChildByName("open_edit_ctgs_but").procedure = this._Str_24823;
+                this._mainWindow.findChildByName("open_edit_ctgs_but").procedure = this.onEditCategoriesButtonClick;
             }
             else
             {
@@ -178,7 +178,7 @@
             Logger.log(("RESIZED: " + this._habboFriendList.tabs._Str_4971));
         }
 
-        private function _Str_24823(k:WindowEvent, _arg_2:IWindow):void
+        private function onEditCategoriesButtonClick(k:WindowEvent, _arg_2:IWindow):void
         {
             this._habboFriendList.view._Str_3476(k, "${friendlist.tip.preferences}");
             if (k.type != WindowMouseEvent.CLICK)
