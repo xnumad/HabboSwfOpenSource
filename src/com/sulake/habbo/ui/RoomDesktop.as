@@ -1981,7 +1981,7 @@
             _local_3.initialize(_arg_2);
         }
 
-        public function _Str_24524(k:String):int
+        public function getWidgetState(k:String):int
         {
             var _local_2:IRoomWidget = this._widgets[k];
             if (_local_2 == null)

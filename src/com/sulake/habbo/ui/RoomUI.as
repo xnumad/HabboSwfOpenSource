@@ -1141,7 +1141,7 @@
             var _local_2:RoomDesktop = (this._desktops.remove(k) as RoomDesktop);
             if (_local_2 != null)
             {
-                _local_3 = _local_2._Str_24524(RoomWidgetEnum.USER_CHOOSER);
+                _local_3 = _local_2.getWidgetState(RoomWidgetEnum.USER_CHOOSER);
                 if (_local_3 != RoomDesktop._Str_8876)
                 {
                     this._userChooserState = _local_3;
