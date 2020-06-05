@@ -24,7 +24,7 @@
                 return;
             }
             this._isEnabled = _local_2.isWrappingEnabled;
-            this._price = _local_2._Str_23413;
+            this._price = _local_2.wrappingPrice;
             this._stuffTypes = _local_2.stuffTypes;
             this._boxTypes = _local_2.boxTypes;
             this._ribbonTypes = _local_2.ribbonTypes;

@@ -18,7 +18,7 @@
             return this._wrappingEnabled;
         }
 
-        public function get _Str_23413():int
+        public function get wrappingPrice():int
         {
             return this._wrappingPrice;
         }
