@@ -141,12 +141,12 @@
 
         override public function set immediateClickMode(k:Boolean):void
         {
-            if (((k == _Str_9238) || (_Str_2309 == null)))
+            if (((k == _immediateClickMode) || (_Str_2309 == null)))
             {
                 return;
             }
             super.immediateClickMode = k;
-            if (_Str_9238)
+            if (_immediateClickMode)
             {
                 _Str_2309.addEventListener(TextEvent.LINK, this.immediateClickHandler);
             }

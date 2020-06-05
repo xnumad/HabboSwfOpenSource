@@ -52,7 +52,7 @@
         protected var _children:Vector.<IWindow>;
         protected var _debug:Boolean = false;
         protected var _limits:WindowRectLimits;
-        protected var _Str_9238:Boolean = false;
+        protected var _immediateClickMode:Boolean = false;
         private var _Str_9367:DynamicStyle;
         private var _Str_10190:Boolean = false;
         private var _Str_5110:Rectangle;
@@ -301,7 +301,7 @@
 
         public function get immediateClickMode():Boolean
         {
-            return this._Str_9238;
+            return this._immediateClickMode;
         }
 
         public function set x(k:int):void
@@ -2731,13 +2731,13 @@
         public function set immediateClickMode(k:Boolean):void
         {
             var _local_2:IGraphicContext;
-            if (k != this._Str_9238)
+            if (k != this._immediateClickMode)
             {
-                this._Str_9238 = k;
+                this._immediateClickMode = k;
                 _local_2 = this.getGraphicContext(false);
                 if (_local_2)
                 {
-                    if (this._Str_9238)
+                    if (this._immediateClickMode)
                     {
                         _local_2._Str_10223 = true;
                         _local_2.addEventListener(MouseEvent.CLICK, this.immediateClickHandler);
