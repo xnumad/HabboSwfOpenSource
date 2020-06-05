@@ -59,7 +59,7 @@
 
         public function _Str_22184(k:String):Boolean
         {
-            if (!this._Str_24081())
+            if (!this.isInputValid())
             {
                 this._Str_5374(k);
                 return false;
@@ -143,7 +143,7 @@
             return this._input;
         }
 
-        private function _Str_24081():Boolean
+        private function isInputValid():Boolean
         {
             return (!(this._includeInfo)) && (Util.trim(this.getText()).length > 2);
         }
