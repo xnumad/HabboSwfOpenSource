@@ -63,7 +63,7 @@
         protected var _widgetFactory:IWidgetFactory;
         protected var _resourceManager:IResourceManager;
         protected var _desktopWindow:IDesktopWindow;
-        protected var _Str_13721:SubstituteParentController;
+        protected var _substituteParent:SubstituteParentController;
         private var _disposed:Boolean = false;
         private var _Str_4816:Boolean = false;
         private var _Str_21204:Boolean = false;
@@ -111,7 +111,7 @@
             this._rootDisplayObject.addEventListener(Event.RESIZE, this._Str_21888);
             this._eventProcessorState = new EventProcessorState(_renderer, this._desktopWindow, this._desktopWindow, null, this.inputEventTrackers);
             _Str_9993 = INPUT_MODE_MOUSE;
-            this._Str_13721 = new SubstituteParentController(this);
+            this._substituteParent = new SubstituteParentController(this);
         }
 
         public static function get _Str_9993():uint
@@ -178,8 +178,8 @@
                 this._rootDisplayObject.removeChild((IGraphicContextHost(this._desktopWindow).getGraphicContext(true) as DisplayObject));
                 this._desktopWindow.destroy();
                 this._desktopWindow = null;
-                this._Str_13721.destroy();
-                this._Str_13721 = null;
+                this._substituteParent.destroy();
+                this._substituteParent = null;
                 if ((this._windowServices is IDisposable))
                 {
                     IDisposable(this._windowServices).dispose();
@@ -280,7 +280,7 @@
             {
                 if ((_arg_5 & WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
                 {
-                    _arg_8 = this._Str_13721;
+                    _arg_8 = this._substituteParent;
                 }
             }
             _local_13 = new _local_14(k, _arg_3, _arg_4, _arg_5, this, _arg_6, ((_arg_8 != null) ? _arg_8 : (this._desktopWindow)), _arg_7, _arg_10, _arg_12, _arg_9);
