@@ -302,8 +302,8 @@
         {
             var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
             var _local_4:Boolean = this._Str_10475(_arg_2);
-            this._Str_19600(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this.onAddFavouriteClick);
-            this._Str_19600(k, "favourite", ((_local_3) && (!(_local_4))), this.onRemoveFavouriteClick);
+            this.refreshRegion(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this.onAddFavouriteClick);
+            this.refreshRegion(k, "favourite", ((_local_3) && (!(_local_4))), this.onRemoveFavouriteClick);
         }
 
         private function _Str_10475(k:_Str_2370):Boolean
@@ -311,7 +311,7 @@
             return k.flatId == this._navigator.data.homeRoomId;
         }
 
-        private function _Str_19600(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function):void
+        private function refreshRegion(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function):void
         {
             var _local_5:IRegionWindow = (k.findChildByName(_arg_2) as IRegionWindow);
             if (!_local_5)
