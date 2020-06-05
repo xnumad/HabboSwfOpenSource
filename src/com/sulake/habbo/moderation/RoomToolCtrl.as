@@ -196,7 +196,7 @@
             this._kickCb = ICheckBoxWindow(this._frame.findChildByName("kick_check"));
             this._lockCb = ICheckBoxWindow(this._frame.findChildByName("lock_check"));
             this._changeNameCb = ICheckBoxWindow(this._frame.findChildByName("changename_check"));
-            this._Str_23414(this._data.room, "room_cont");
+            this.refreshRoomData(this._data.room, "room_cont");
             this._Str_4044("owner_name_txt", this._data.ownerName);
             this._Str_4044("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
             this._Str_4044("user_count_txt", ("" + this._data.userCount));
@@ -226,7 +226,7 @@
             }
         }
 
-        private function _Str_23414(k:_Str_3169, _arg_2:String):void
+        private function refreshRoomData(k:_Str_3169, _arg_2:String):void
         {
             var _local_3:IWindowContainer = IWindowContainer(this._list.getListItemByName(_arg_2));
             var _local_4:IWindowContainer = IWindowContainer(_local_3.findChildByName("room_data"));
