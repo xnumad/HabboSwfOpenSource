@@ -47,7 +47,7 @@
             }
         }
 
-        public function _Str_3476(k:WindowEvent, _arg_2:String):void
+        public function showInfo(k:WindowEvent, _arg_2:String):void
         {
             var _local_3:WindowMouseEvent = (k as WindowMouseEvent);
             if (_local_3 == null)
@@ -180,7 +180,7 @@
 
         private function onEditCategoriesButtonClick(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${friendlist.tip.preferences}");
+            this._habboFriendList.view.showInfo(k, "${friendlist.tip.preferences}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;

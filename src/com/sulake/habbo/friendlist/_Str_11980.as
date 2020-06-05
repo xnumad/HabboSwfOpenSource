@@ -158,7 +158,7 @@
 
         private function _Str_22888(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${friendlist.tip.accept}");
+            this._habboFriendList.view.showInfo(k, "${friendlist.tip.accept}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -220,7 +220,7 @@
 
         private function _Str_23925(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${friendlist.tip.decline}");
+            this._habboFriendList.view.showInfo(k, "${friendlist.tip.decline}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -271,7 +271,7 @@
 
         private function _Str_6514(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${infostand.profile.link.tooltip}");
+            this._habboFriendList.view.showInfo(k, "${infostand.profile.link.tooltip}");
             _Str_3521._Str_6514(k, _arg_2);
             if (k.type == WindowMouseEvent.CLICK)
             {
@@ -282,7 +282,7 @@
 
         private function _Str_23039(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${friendlist.tip.declineall}");
+            this._habboFriendList.view.showInfo(k, "${friendlist.tip.declineall}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -293,7 +293,7 @@
 
         private function _Str_22777(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._habboFriendList.view._Str_3476(k, "${friendlist.tip.acceptall}");
+            this._habboFriendList.view.showInfo(k, "${friendlist.tip.acceptall}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;

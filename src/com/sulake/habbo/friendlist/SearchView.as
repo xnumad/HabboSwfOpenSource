@@ -212,7 +212,7 @@
             {
                 return;
             }
-            this._friendList.view._Str_3476(k, "${infostand.profile.link.tooltip}");
+            this._friendList.view.showInfo(k, "${infostand.profile.link.tooltip}");
             if (k.type == WindowMouseEvent.OVER)
             {
                 _Str_3521._Str_3927(true, IWindowContainer(_arg_2.parent));
@@ -236,7 +236,7 @@
 
         private function _Str_17805(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.search}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.search}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -247,7 +247,7 @@
 
         private function _Str_25796(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.addfriend}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.addfriend}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -288,7 +288,7 @@
 
         private function _Str_18658(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.im}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.im}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -304,7 +304,7 @@
 
         private function _Str_24321(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.searchstr}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.searchstr}");
         }
 
         private function _Str_23556(k:WindowKeyboardEvent):void

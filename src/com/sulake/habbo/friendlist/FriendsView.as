@@ -421,7 +421,7 @@
 
         private function _Str_18658(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.im}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.im}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -432,7 +432,7 @@
 
         private function _Str_23763(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.follow}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.follow}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -455,7 +455,7 @@
                     return;
                 }
             }
-            this._friendList.view._Str_3476(k, "${friendlist.tip.relationship}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.relationship}");
             if (k.type == WindowMouseEvent.CLICK)
             {
                 this._relationshipStatusSelector._Str_9566 = _arg_2.id;
@@ -465,7 +465,7 @@
 
         private function onUserInfo(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${infostand.profile.link.tooltip}");
+            this._friendList.view.showInfo(k, "${infostand.profile.link.tooltip}");
             if (k.type == WindowMouseEvent.OVER)
             {
                 _Str_3521._Str_3927(true, IWindowContainer(_arg_2));
@@ -489,7 +489,7 @@
 
         private function _Str_24605(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.compose}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.compose}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -527,7 +527,7 @@
 
         private function _Str_25436(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.home}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.home}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -547,7 +547,7 @@
 
         private function _Str_25558(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.invite}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.invite}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
@@ -562,7 +562,7 @@
 
         private function _Str_23409(k:WindowEvent, _arg_2:IWindow):void
         {
-            this._friendList.view._Str_3476(k, "${friendlist.tip.remove}");
+            this._friendList.view.showInfo(k, "${friendlist.tip.remove}");
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;

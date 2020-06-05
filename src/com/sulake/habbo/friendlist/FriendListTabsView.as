@@ -152,7 +152,7 @@
         private function _Str_16089(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_4:_Str_2740;
-            this._habboFriendList.view._Str_3476(k, (("${friendlist.tip.tab." + _arg_2.id) + "}"));
+            this._habboFriendList.view.showInfo(k, (("${friendlist.tip.tab." + _arg_2.id) + "}"));
             if (k.type != WindowMouseEvent.CLICK)
             {
                 return;
