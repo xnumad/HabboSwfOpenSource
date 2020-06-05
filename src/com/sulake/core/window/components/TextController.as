@@ -149,7 +149,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_23959(k:TextController, _arg_2:Boolean):void
+        private static function setCondenseWhite(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.condenseWhite = _arg_2;
             k.refreshTextImage();
@@ -566,7 +566,7 @@
             k[PropertyKeys.BOLD] = setBold;
             k[PropertyKeys.BORDER] = setBorder;
             k[PropertyKeys.BORDER_COLOR] = setBorderColor;
-            k[PropertyKeys.CONDENSE_WHITE] = _Str_23959;
+            k[PropertyKeys.CONDENSE_WHITE] = setCondenseWhite;
             k["default_text_format"] = _Str_18477;
             k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
