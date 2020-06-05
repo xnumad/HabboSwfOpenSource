@@ -25,7 +25,7 @@
         private static const STATE_IDLE:int = 0;
         private static const STATE_FADE_IN:int = 1;
         private static const STATE_DISPLAY:int = 2;
-        private static const _Str_6008:int = 3;
+        private static const STATE_FADE_OUT:int = 3;
 
         private var _window:IWindow;
         private var _item:HabboNotificationItem;
@@ -146,7 +146,7 @@
                         this.startFadeOut();
                     }
                     return;
-                case _Str_6008:
+                case STATE_FADE_OUT:
                     this._fadeOutStart = (this._fadeOutStart + k);
                     _local_3 = (1 - (Number(this._fadeOutStart) / Number(this._viewConfig["time_fade_out"])));
                     this.adjustBlend(_local_3);
@@ -247,7 +247,7 @@
         private function startFadeOut():void
         {
             this._fadeOutStart = 0;
-            this._state = _Str_6008;
+            this._state = STATE_FADE_OUT;
         }
 
         private function startDisplay():void

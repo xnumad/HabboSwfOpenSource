@@ -20,7 +20,7 @@
 
     public class RoomChatHistoryPulldown 
     {
-        public static const _Str_6008:int = 3;
+        public static const STATE_FADE_OUT:int = 3;
         public static const STATE_FADE_IN:int = 2;
         public static const _Str_8230:int = 1;
         public static const _Str_5954:int = 0;
@@ -124,7 +124,7 @@
                         this.state = _Str_8230;
                     }
                     return;
-                case _Str_6008:
+                case STATE_FADE_OUT:
                     this._bgWindow.blend = (this._bgWindow.blend - (k / _Str_15421));
                     this._window.blend = (this._window.blend - (k / _Str_15421));
                     if (this._window.blend <= 0)
@@ -181,7 +181,7 @@
                     this._bgWindow.visible = true;
                     this._state = k;
                     return;
-                case _Str_6008:
+                case STATE_FADE_OUT:
                     if (((this._window == null) || (this._bgWindow == null)))
                     {
                         return;
