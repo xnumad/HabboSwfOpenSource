@@ -439,7 +439,7 @@
 			{
 				this._profilerAgentTaskUpdate.start();
 			};
-			if (WindowContext._Str_4956.length > 0)
+			if (WindowContext.inputEventQueue.length > 0)
 			{
 				events.dispatchEvent(_Str_16806);
 				_local_2 = (_Str_8995 - 1);
@@ -468,9 +468,9 @@
 			{
 				this._profilerAgentTaskRedraw.stop();
 			};
-			if (WindowContext._Str_4956.length > 0)
+			if (WindowContext.inputEventQueue.length > 0)
 			{
-				WindowContext._Str_4956.flush();
+				WindowContext.inputEventQueue.flush();
 			};
 			MouseCursorControl.change();
 			events.dispatchEvent(_Str_18861);

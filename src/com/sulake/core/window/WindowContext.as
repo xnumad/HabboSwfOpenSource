@@ -43,7 +43,7 @@
         public static const ERROR_WINDOW_ALREADY_EXISTS:int = 3;
         public static const ERROR_UNKNOWN_WINDOW_TYPE:int = 4;
         public static const ERROR_DURING_EVENT_HANDLING:int = 5;
-        public static var _Str_4956:IEventQueue;
+        public static var inputEventQueue:IEventQueue;
         private static var _Str_6468:IEventProcessor;
         private static var _Str_17012:uint = INPUT_MODE_MOUSE;//0
         private static var _Str_2884:IWindowRenderer;
@@ -121,11 +121,11 @@
 
         public static function set _Str_9993(k:uint):void
         {
-            if (_Str_4956)
+            if (inputEventQueue)
             {
-                if ((_Str_4956 is IDisposable))
+                if ((inputEventQueue is IDisposable))
                 {
-                    IDisposable(_Str_4956).dispose();
+                    IDisposable(inputEventQueue).dispose();
                 }
             }
             if (_Str_6468)
@@ -138,7 +138,7 @@
             switch (k)
             {
                 case INPUT_MODE_MOUSE:
-                    _Str_4956 = new MouseEventQueue(stage);
+                    inputEventQueue = new MouseEventQueue(stage);
                     _Str_6468 = new MouseEventProcessor();
                     try
                     {
@@ -148,7 +148,7 @@
                     }
                     return;
                 case INPUT_MODE_TOUCH:
-                    _Str_4956 = new TabletEventQueue(stage);
+                    inputEventQueue = new TabletEventQueue(stage);
                     _Str_6468 = new TabletEventProcessor();
                     try
                     {
@@ -325,7 +325,7 @@
                 this._Str_1984 = null;
                 throw (_local_2);
             }
-            _Str_6468.process(this._Str_20725, _Str_4956);
+            _Str_6468.process(this._Str_20725, inputEventQueue);
 			}
 			catch (error: Error)
 			{
