@@ -275,7 +275,7 @@
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_room_details_framed"));
             this._window.center();
             this._Str_2786(this.find("make_favourite_region"), this.onAddFavouriteClick);
-            this._Str_2786(this.find("favourite_region"), this._Str_16307);
+            this._Str_2786(this.find("favourite_region"), this.onRemoveFavouriteClick);
             this._Str_2786(this.find("room_settings_button"), this._Str_25312);
             this._Str_2786(this.find("room_filter_button"), this._Str_22339);
             this._Str_2786(this.find("floor_plan_editor_button"), this._Str_23389);
@@ -380,7 +380,7 @@
             }
         }
 
-        public function _Str_16307(k:WindowEvent):void
+        public function onRemoveFavouriteClick(k:WindowEvent):void
         {
             if (this._navigator.data._Str_2678 == null)
             {
