@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.customstackheight
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.handler.FurnitureCustomStackHeightWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -13,7 +13,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
 
-    public class CustomStackHeightWidget extends ConversionTrackingWidget 
+    public class CustomStackHeightWidget extends RoomWidgetBase
     {
         private static const _Str_14570:int = 10;
         private static const MAX_HEIGHT:int = 40;

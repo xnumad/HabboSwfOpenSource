@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.memenu
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import flash.geom.Point;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.runtime.IHabboConfigurationManager;
@@ -33,7 +33,7 @@
     import com.sulake.habbo.utils._Str_3942;
     import flash.events.Event;
 
-    public class MeMenuWidget extends ConversionTrackingWidget 
+    public class MeMenuWidget extends RoomWidgetBase
     {
         public static const ME_MENU_TOP_VIEW:String = "me_menu_top_view";
         public static const ME_MENU_MY_CLOTHES_VIEW:String = "me_menu_my_clothes_view";

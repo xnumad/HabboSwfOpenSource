@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.camera
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import com.sulake.habbo.quest.IHabboQuestEngine;
@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.incoming.camera.CompetitionStatusMessageEvent;
     import com.sulake.habbo.communication.messages.outgoing.camera.RenderRoomMessageComposer;
 
-    public class CameraWidget extends ConversionTrackingWidget 
+    public class CameraWidget extends RoomWidgetBase
     {
         private var _component:RoomUI;
         private var _viewFinder:CameraViewFinder;

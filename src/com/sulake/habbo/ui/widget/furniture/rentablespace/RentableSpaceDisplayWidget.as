@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.rentablespace
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import flash.utils.Dictionary;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
@@ -16,7 +16,7 @@
     import com.sulake.habbo.session.SecurityLevelEnum;
     import com.sulake.core.window.components.IItemListWindow;
 
-    public class RentableSpaceDisplayWidget extends ConversionTrackingWidget 
+    public class RentableSpaceDisplayWidget extends RoomWidgetBase
     {
         private static var _Str_4003:Dictionary = new Dictionary();
 

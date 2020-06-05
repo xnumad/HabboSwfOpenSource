@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.stickie
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -23,7 +23,7 @@
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetStickieSendUpdateMessage;
 
-    public class StickieFurniWidget extends ConversionTrackingWidget 
+    public class StickieFurniWidget extends RoomWidgetBase
     {
         private static const _Str_16242:int = 14;
         private static const _Str_5003:int = 500;

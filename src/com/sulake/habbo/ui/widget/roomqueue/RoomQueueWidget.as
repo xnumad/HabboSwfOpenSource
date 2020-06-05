@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.roomqueue
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -17,7 +17,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomQueueMessage;
 
-    public class RoomQueueWidget extends ConversionTrackingWidget 
+    public class RoomQueueWidget extends RoomWidgetBase
     {
         private var _window:IFrameWindow;
         private var _config:IHabboConfigurationManager;

@@ -3,7 +3,7 @@
     import com.sulake.habbo.ui.IRoomWidgetFactory;
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.core.assets.IAssetLibrary;
-	import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+	import com.sulake.habbo.ui.widget.RoomWidgetBase;
 	import com.sulake.habbo.ui.widget.IRoomWidget;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.habbo.ui.widget.roomchat.RoomChatWidget;
@@ -125,7 +125,7 @@
                 case RoomWidgetEnum.CLOTHING_CHANGE:
                     return new ClothingChangeWidget(_arg_2, windowManager, assets, this._roomUI.localization);
                 case RoomWidgetEnum.CONVERSION_TRACKING:
-                    return new ConversionTrackingWidget(_arg_2, windowManager);
+                    return new RoomWidgetBase(_arg_2, windowManager);
                 case RoomWidgetEnum.AVATAR_INFO:
                     return new AvatarInfoWidget(_arg_2, windowManager, assets, this._roomUI, this._roomUI.localization, this._roomUI, this._roomUI.catalog);
                 case RoomWidgetEnum.WELCOME_GIFT:

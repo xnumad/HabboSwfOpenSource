@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.roomchat
 {
 	import com.sulake.core.window.enum.WindowParam;
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.ui.widget.roomchat.style.ChatBubbleFactory;
     import com.sulake.core.window.IWindowContainer;
@@ -30,7 +30,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChatSelectAvatarMessage;
     import com.sulake.core.window.events.WindowMouseEvent;
 
-    public class RoomChatWidget extends ConversionTrackingWidget implements IUpdateReceiver 
+    public class RoomChatWidget extends RoomWidgetBase implements IUpdateReceiver
     {
         private static var _chatBubbleFactory:ChatBubbleFactory = null;
         private static const _Str_3729:int = 19;

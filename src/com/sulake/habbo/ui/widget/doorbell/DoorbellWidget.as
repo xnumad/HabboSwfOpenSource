@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.doorbell
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -10,7 +10,7 @@
     import flash.events.IEventDispatcher;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetLetUserInMessage;
 
-    public class DoorbellWidget extends ConversionTrackingWidget 
+    public class DoorbellWidget extends RoomWidgetBase
     {
         private static const _Str_16464:int = 50;
 

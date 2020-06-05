@@ -8,7 +8,7 @@
     import flash.events.IEventDispatcher;
     import com.sulake.core.window.IWindow;
 
-    public class ConversionTrackingWidget implements IRoomWidget 
+    public class RoomWidgetBase implements IRoomWidget
     {
         private var _disposed:Boolean = false;
         private var _events:EventDispatcherWrapper;
@@ -18,7 +18,7 @@
         protected var _Str_2499:IHabboLocalizationManager;
         protected var _Str_2470:IRoomWidgetHandler;
 
-        public function ConversionTrackingWidget(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
+        public function RoomWidgetBase(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {
             this._Str_2470 = k;
             this._windowManager = _arg_2;

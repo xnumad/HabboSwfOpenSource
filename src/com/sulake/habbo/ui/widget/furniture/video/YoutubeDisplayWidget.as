@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.video
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.tracking.IHabboTracking;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
@@ -26,7 +26,7 @@
     import com.sulake.habbo.communication.messages.parser.room.furniture.YoutubePlayListNode;
     import __AS3__.vec.Vector;
 
-    public class YoutubeDisplayWidget extends ConversionTrackingWidget 
+    public class YoutubeDisplayWidget extends RoomWidgetBase
     {
         private static const _Str_13698:uint = 4291611903;
         private static const _Str_16441:uint = 0xFFFFFFFF;

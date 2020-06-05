@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.petpackage
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IFrameWindow;
     import flash.display.BitmapData;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -20,7 +20,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenPetPackageMessage;
     import com.sulake.core.window.components.ITextFieldWindow;
 
-    public class PetPackageFurniWidget extends ConversionTrackingWidget 
+    public class PetPackageFurniWidget extends RoomWidgetBase
     {
         private static const _Str_22236:int = 26;
 

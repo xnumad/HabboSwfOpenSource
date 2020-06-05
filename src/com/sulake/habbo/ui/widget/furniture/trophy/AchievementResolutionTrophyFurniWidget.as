@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.trophy
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.events._Str_5117;
     import flash.events.IEventDispatcher;
 
-    public class AchievementResolutionTrophyFurniWidget extends ConversionTrackingWidget implements ITrophyFurniWidget 
+    public class AchievementResolutionTrophyFurniWidget extends RoomWidgetBase implements ITrophyFurniWidget
     {
         private var _name:String;
         private var _date:String;

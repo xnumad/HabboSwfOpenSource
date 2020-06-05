@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.placeholder
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -8,7 +8,7 @@
     import com.sulake.habbo.ui.widget.events._Str_4984;
     import flash.events.IEventDispatcher;
 
-    public class PlaceholderFurniWidget extends ConversionTrackingWidget 
+    public class PlaceholderFurniWidget extends RoomWidgetBase
     {
         private var _view:PlaceholderView;
 

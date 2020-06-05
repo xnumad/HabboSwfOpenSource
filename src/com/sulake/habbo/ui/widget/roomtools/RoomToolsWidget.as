@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.roomtools
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.habbo.ui.IRoomDesktop;
@@ -20,7 +20,7 @@
     import com.sulake.habbo.ui.widget.chatinput.RoomChatInputWidget;
     import __AS3__.vec.*;
 
-    public class RoomToolsWidget extends ConversionTrackingWidget 
+    public class RoomToolsWidget extends RoomWidgetBase
     {
         private static const _Str_18581:int = 10;
         private static var _Str_4498:Vector.<_Str_2370> = new Vector.<_Str_2370>();

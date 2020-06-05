@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.wordquiz
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import flash.utils.Timer;
     import flash.utils.Dictionary;
     import __AS3__.vec.Vector;
@@ -23,7 +23,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPollMessage;
     import __AS3__.vec.*;
 
-    public class WordQuizWidget extends ConversionTrackingWidget 
+    public class WordQuizWidget extends RoomWidgetBase
     {
         private static const WORDQUIZ_LIKE_XML:String = "wordquiz_like_xml";
         private static const WORDQUIZ_UNLIKE_XML:String = "wordquiz_unlike_xml";

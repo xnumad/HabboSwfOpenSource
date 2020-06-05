@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.chatinput
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import flash.utils.Timer;
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.habbo.ui.IRoomDesktop;
@@ -21,7 +21,7 @@
     import com.sulake.habbo.ui.widget.roomtools.RoomToolsWidget;
     import com.sulake.core.window.IWindow;
 
-    public class RoomChatInputWidget extends ConversionTrackingWidget 
+    public class RoomChatInputWidget extends RoomWidgetBase
     {
         private static const _Str_16319:int = 5000;
 

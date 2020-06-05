@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.poll
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -12,7 +12,7 @@
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class RoomPollWidget extends ConversionTrackingWidget 
+    public class RoomPollWidget extends RoomWidgetBase
     {
         private var _Str_4484:Map;
 

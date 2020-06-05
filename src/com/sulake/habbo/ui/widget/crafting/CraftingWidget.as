@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.crafting
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.RoomUI;
     import com.sulake.habbo.ui.widget.crafting.utils.CraftingFurnitureItem;
     import com.sulake.habbo.window.utils._Str_2784;
@@ -27,7 +27,7 @@
     import com.sulake.habbo.ui.handler.CraftingWidgetHandler;
     import __AS3__.vec.*;
 
-    public class CraftingWidget extends ConversionTrackingWidget 
+    public class CraftingWidget extends RoomWidgetBase
     {
         public static const _Str_17512:int = 0;
         public static const _Str_8972:int = 1;

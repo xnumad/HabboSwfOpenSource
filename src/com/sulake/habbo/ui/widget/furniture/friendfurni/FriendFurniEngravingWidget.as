@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.friendfurni
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.enums.FriendFurniEngravingWidgetTypeEnum;
     import com.sulake.habbo.room.object.data.StringArrayStuffData;
 
-    public class FriendFurniEngravingWidget extends ConversionTrackingWidget 
+    public class FriendFurniEngravingWidget extends RoomWidgetBase
     {
         private var _stuffId:int = -1;
         private var _engravingView:FriendFurniEngravingView;

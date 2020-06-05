@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.playlisteditor
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.catalog.IHabboCatalog;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.sound.IHabboSoundManager;
@@ -28,7 +28,7 @@
     import com.sulake.habbo.window.utils._Str_2418;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class PlaylistEditorWidget extends ConversionTrackingWidget 
+    public class PlaylistEditorWidget extends RoomWidgetBase
     {
         private static const _Str_17485:int = 130;
         private static const _Str_16479:int = 100;

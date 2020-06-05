@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.friendfurni
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -12,7 +12,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class FriendFurniConfirmWidget extends ConversionTrackingWidget 
+    public class FriendFurniConfirmWidget extends RoomWidgetBase
     {
         private var _stuffId:int = -1;
         private var _window:IFrameWindow;

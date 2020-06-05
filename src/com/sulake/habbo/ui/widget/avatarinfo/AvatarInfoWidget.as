@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.avatarinfo
 {
 	import com.sulake.habbo.ui.widget.avatarinfo.botskills.BotChangeMottoConfiguration;
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.habbo.ui.widget.contextmenu.IContextMenuParentWidget;
     import com.sulake.core.runtime.Component;
@@ -70,7 +70,7 @@
     import com.sulake.habbo.communication.messages.outgoing._Str_461._Str_12104;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
-    public class AvatarInfoWidget extends ConversionTrackingWidget implements IUpdateReceiver, IContextMenuParentWidget 
+    public class AvatarInfoWidget extends RoomWidgetBase implements IUpdateReceiver, IContextMenuParentWidget
     {
         private static const _Str_17951:int = 77;
         private static const _Str_18968:int = 29;

@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.backgroundcolor
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IFrameWindow;
     import __AS3__.vec.Vector;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -19,7 +19,7 @@
     import com.sulake.core.window.IWindow;
     import __AS3__.vec.*;
 
-    public class BackgroundColorFurniWidget extends ConversionTrackingWidget 
+    public class BackgroundColorFurniWidget extends RoomWidgetBase
     {
         private static const HUE:String = "hue";
         private static const SATURATION:String = "saturation";

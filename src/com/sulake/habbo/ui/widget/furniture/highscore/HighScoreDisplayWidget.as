@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.highscore
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IBubbleWindow;
     import flash.geom.Point;
@@ -19,7 +19,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.room.object.data.HighScoreStuffData;
 
-    public class HighScoreDisplayWidget extends ConversionTrackingWidget 
+    public class HighScoreDisplayWidget extends RoomWidgetBase
     {
         public static const _Str_8951:int = -1;
         private static const _Str_15987:int = -138;

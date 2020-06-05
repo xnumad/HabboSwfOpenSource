@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.present
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.avatar.IAvatarImageListener;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import com.sulake.habbo.catalog.IHabboCatalog;
@@ -48,7 +48,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetPresentOpenMessage;
     import com.sulake.habbo.session.RoomUserData;
 
-    public class PresentFurniWidget extends ConversionTrackingWidget implements IAvatarImageListener 
+    public class PresentFurniWidget extends RoomWidgetBase implements IAvatarImageListener
     {
         private static const FLOOR:String = "floor";
         private static const WALLPAPER:String = "wallpaper";

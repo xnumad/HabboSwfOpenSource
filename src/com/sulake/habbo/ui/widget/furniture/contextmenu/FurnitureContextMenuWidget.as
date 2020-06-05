@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.contextmenu
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.widget.contextmenu.IContextMenuParentWidget;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.core.runtime.Component;
@@ -26,7 +26,7 @@
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.friendlist.IHabboFriendsList;
 
-    public class FurnitureContextMenuWidget extends ConversionTrackingWidget implements IContextMenuParentWidget, IUpdateReceiver 
+    public class FurnitureContextMenuWidget extends RoomWidgetBase implements IContextMenuParentWidget, IUpdateReceiver
     {
         private var _component:Component;
         private var _view:FurnitureContextInfoView;

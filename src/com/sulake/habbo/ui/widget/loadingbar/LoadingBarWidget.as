@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.loadingbar
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IBorderWindow;
     import com.sulake.core.runtime.IHabboConfigurationManager;
     import flash.display.BitmapData;
@@ -35,7 +35,7 @@
     import flash.net.URLRequest;
     import com.sulake.habbo.utils.HabboWebTools;
 
-    public class LoadingBarWidget extends ConversionTrackingWidget 
+    public class LoadingBarWidget extends RoomWidgetBase
     {
         private static const CLOSE:String = "close";
         private static const COMPLETE:String = "complete";

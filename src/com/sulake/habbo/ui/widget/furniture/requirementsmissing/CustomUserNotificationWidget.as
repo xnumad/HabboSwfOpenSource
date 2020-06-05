@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.requirementsmissing
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.components.IFrameWindow;
     import com.sulake.habbo.ui.handler.CustomUserNotificationWidgetHandler;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -15,7 +15,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
-    public class CustomUserNotificationWidget extends ConversionTrackingWidget 
+    public class CustomUserNotificationWidget extends RoomWidgetBase
     {
         public static const VIPHOPPER:String = "viphopper";
         public static const VIPGATE:String = "vipgate";

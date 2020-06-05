@@ -14,7 +14,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
 	import com.sulake.core.window.events.WindowEvent;
 	import com.sulake.core.window.events.WindowMouseEvent;
 	import com.sulake.habbo.localization.IHabboLocalizationManager;
-	import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+	import com.sulake.habbo.ui.widget.RoomWidgetBase;
 	import com.sulake.habbo.window.IHabboWindowManager;
 	import flash.display.BitmapData;
 	import flash.events.IEventDispatcher;
@@ -26,7 +26,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
 	import com.sulake.core.window.IWindow;
 	import flash.geom.Point;
     import flash.utils.getTimer;
-	public class VotePollWidget extends ConversionTrackingWidget 
+	public class VotePollWidget extends RoomWidgetBase
     {
         private var _window:IFrameWindow;
         private var _SafeStr_4823:IItemListWindow;

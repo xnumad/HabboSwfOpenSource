@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.friendrequest
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.core.runtime.Component;
     import com.sulake.core.utils.Map;
@@ -16,7 +16,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetFriendRequestMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetOpenProfileMessage;
 
-    public class FriendRequestWidget extends ConversionTrackingWidget implements IUpdateReceiver 
+    public class FriendRequestWidget extends RoomWidgetBase implements IUpdateReceiver
     {
         private var _component:Component;
         private var _requests:Map;

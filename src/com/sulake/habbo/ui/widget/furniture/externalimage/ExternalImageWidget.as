@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.externalimage
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
     import com.sulake.core.window.components.IHTMLTextWindow;
@@ -56,7 +56,7 @@
     import com.sulake.core.window.components.IWidgetWindow;
     import __AS3__.vec.*;
 
-    public class ExternalImageWidget extends ConversionTrackingWidget 
+    public class ExternalImageWidget extends RoomWidgetBase
     {
         private static const PHOTO_POSTER:String = "photo_poster";
         private static const SELFIE:String = "selfie";

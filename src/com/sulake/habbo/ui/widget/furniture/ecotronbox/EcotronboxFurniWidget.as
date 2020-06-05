@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.ecotronbox
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -24,7 +24,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetEcotronBoxOpenMessage;
 
-    public class EcotronboxFurniWidget extends ConversionTrackingWidget 
+    public class EcotronboxFurniWidget extends RoomWidgetBase
     {
         private static const _Str_4126:Number = 100;
         private static const _Str_4162:Number = 100;

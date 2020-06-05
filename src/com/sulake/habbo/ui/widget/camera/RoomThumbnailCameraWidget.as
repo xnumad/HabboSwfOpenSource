@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.camera
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.IUpdateReceiver;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.habbo.ui.RoomUI;
@@ -27,7 +27,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.IWindow;
 
-    public class RoomThumbnailCameraWidget extends ConversionTrackingWidget implements IUpdateReceiver, ILinkEventTracker 
+    public class RoomThumbnailCameraWidget extends RoomWidgetBase implements IUpdateReceiver, ILinkEventTracker
     {
         private var _component:RoomUI;
         private var _window:IFrameWindow = null;

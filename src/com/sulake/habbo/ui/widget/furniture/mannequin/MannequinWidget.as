@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.mannequin
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.avatar.enum.AvatarFigurePartType;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
@@ -31,7 +31,7 @@
     import com.sulake.core.window.events.WindowKeyboardEvent;
     import com.sulake.habbo.communication.messages.outgoing.room.engine._Str_3382;
 
-    public class MannequinWidget extends ConversionTrackingWidget 
+    public class MannequinWidget extends RoomWidgetBase
     {
         private static const _Str_9305:int = 0;
         private static const _Str_11074:int = 1;

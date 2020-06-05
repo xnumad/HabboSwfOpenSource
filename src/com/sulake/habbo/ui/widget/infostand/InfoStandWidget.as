@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.infostand
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import flash.utils.Timer;
     import com.sulake.core.runtime.IHabboConfigurationManager;
@@ -35,7 +35,7 @@
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
 
-    public class InfoStandWidget extends ConversionTrackingWidget 
+    public class InfoStandWidget extends RoomWidgetBase
     {
         private static const USER_VIEW:String = "infostand_user_view";
         private static const FURNI_VIEW:String = "infostand_furni_view";

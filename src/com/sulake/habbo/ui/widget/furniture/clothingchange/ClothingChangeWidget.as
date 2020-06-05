@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.clothingchange
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -20,7 +20,7 @@
     import com.sulake.habbo.avatar.figuredata.FigureData;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetClothingChangeMessage;
 
-    public class ClothingChangeWidget extends ConversionTrackingWidget 
+    public class ClothingChangeWidget extends RoomWidgetBase
     {
         private static const BOY:String = "Boy";
         private static const GIRL:String = "Girl";

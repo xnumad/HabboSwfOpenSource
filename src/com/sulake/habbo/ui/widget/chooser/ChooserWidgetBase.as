@@ -1,13 +1,13 @@
 ﻿package com.sulake.habbo.ui.widget.chooser
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRoomObjectMessage;
 
-    public class ChooserWidgetBase extends ConversionTrackingWidget 
+    public class ChooserWidgetBase extends RoomWidgetBase
     {
         public function ChooserWidgetBase(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {

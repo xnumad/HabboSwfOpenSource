@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.effects
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IScrollableListWindow;
     import com.sulake.core.utils.Map;
@@ -14,7 +14,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.ui.widget.memenu.IWidgetAvatarEffect;
 
-    public class EffectsWidget extends ConversionTrackingWidget 
+    public class EffectsWidget extends RoomWidgetBase
     {
         private static const _Str_18779:int = 320;
         private static const _Str_16932:int = 48;

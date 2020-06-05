@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.welcomegift
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
@@ -21,7 +21,7 @@
     import com.sulake.habbo.ui.widget.events._Str_6843;
     import flash.events.IEventDispatcher;
 
-    public class WelcomeGiftWidget extends ConversionTrackingWidget 
+    public class WelcomeGiftWidget extends RoomWidgetBase
     {
         private const _Str_10705:String = "welcome_gift_email_unverified";
         private const _Str_13122:String = "welcome_gift_email_verified";

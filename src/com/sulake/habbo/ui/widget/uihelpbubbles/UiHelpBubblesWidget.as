@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.uihelpbubbles
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.core.runtime.events.ILinkEventTracker;
     import com.sulake.core.runtime.Component;
     import com.sulake.core.utils.Map;
@@ -24,7 +24,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetScriptProceedMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
 
-    public class UiHelpBubblesWidget extends ConversionTrackingWidget implements ILinkEventTracker 
+    public class UiHelpBubblesWidget extends RoomWidgetBase implements ILinkEventTracker
     {
         private var _component:Component;
         private var _bubbles:Map;

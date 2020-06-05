@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.video
 {
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.vimeo.api.VimeoPlayer;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.room.object.IRoomObject;
@@ -17,7 +17,7 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.events.WindowKeyboardEvent;
 
-    public class VimeoDisplayWidget extends ConversionTrackingWidget 
+    public class VimeoDisplayWidget extends RoomWidgetBase
     {
         private static const _Str_16140:String = "9a106b76302cbce891b714afdc6a0c93";
 

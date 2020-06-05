@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.ui.widget.furniture.dimmer
 {
 	import com.sulake.habbo.ui.widget.furniture.dimmer.DimmerView;
-    import com.sulake.habbo.ui.widget.ConversionTrackingWidget;
+    import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import com.sulake.habbo.ui.IRoomWidgetHandler;
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
@@ -14,7 +14,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetDimmerSavePresetMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetDimmerChangeStateMessage;
 
-    public class DimmerFurniWidget extends ConversionTrackingWidget 
+    public class DimmerFurniWidget extends RoomWidgetBase
     {
         private static const _Str_17357:Array = new Array(7665141, 21495, 15161822, 15353138, 15923281, 8581961, 0);
         private static const _Str_18775:Array = new Array(int((0.3 * 0xFF)), int((0.3 * 0xFF)));
