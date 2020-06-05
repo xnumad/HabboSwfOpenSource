@@ -20,7 +20,7 @@
         protected var _stretchedY:Boolean;
         protected var _zoomX:Number;
         protected var _zoomY:Number;
-        protected var _Str_14793:Boolean;
+        protected var _greyscale:Boolean;
         protected var _Str_3778:uint;
         protected var _Str_18939:Point;
         protected var _Str_13795:Boolean;
@@ -106,12 +106,12 @@
 
         public function get greyscale():Boolean
         {
-            return this._Str_14793;
+            return this._greyscale;
         }
 
         public function set greyscale(k:Boolean):void
         {
-            this._Str_14793 = k;
+            this._greyscale = k;
         }
 
         public function get etchingColor():uint
@@ -185,7 +185,7 @@
             k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
             k.push(createProperty(PropertyKeys.ZOOM_X, this._zoomX));
             k.push(createProperty(PropertyKeys.ZOOM_Y, this._zoomY));
-            k.push(createProperty(PropertyKeys.GREYSCALE, this._Str_14793));
+            k.push(createProperty(PropertyKeys.GREYSCALE, this._greyscale));
             k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._Str_3778));
             k.push(createProperty(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._Str_13795));
             return k;
@@ -220,7 +220,7 @@
                         this._Str_12136 = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.GREYSCALE:
-                        this._Str_14793 = Boolean(_local_2.value);
+                        this._greyscale = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.ETCHING_COLOR:
                         this._Str_3778 = uint(_local_2.value);
