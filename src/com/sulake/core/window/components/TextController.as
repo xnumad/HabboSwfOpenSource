@@ -779,7 +779,7 @@
             return this._field;
         }
 
-        public function get _Str_9760():int
+        public function get maxLines():int
         {
             return this._maxLines;
         }
@@ -944,7 +944,7 @@
             setWordWrap(this, k);
         }
 
-        public function set _Str_9760(k:int):void
+        public function set maxLines(k:int):void
         {
             setMaxLines(this, k);
         }
@@ -1455,7 +1455,7 @@
             k.push(new PropertyStruct(PropertyKeys.SHARPNESS, this._field.sharpness, PropertyStruct.NUMBER, (!(this._field.sharpness == _local_2.sharpness))));
             k.push(new PropertyStruct(PropertyKeys.THICKNESS, this._field.thickness, PropertyStruct.NUMBER, (!(this._field.thickness == _local_2.thickness))));
             k.push(createProperty(PropertyKeys.WORD_WRAP, this._field.wordWrap));
-            k.push(createProperty(PropertyKeys.MAX_LINES, this._Str_9760));
+            k.push(createProperty(PropertyKeys.MAX_LINES, this.maxLines));
             k.push(createProperty(PropertyKeys.OVERFLOW_REPLACE, this.overflowReplace));
             k.push(new PropertyStruct(PropertyKeys.BOLD, (!(this._field.defaultTextFormat.bold == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.bold == (_local_2.fontWeight == FontStyle.BOLD)))));
             k.push(new PropertyStruct(PropertyKeys.ITALIC, (!(this._field.defaultTextFormat.italic == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.italic == (_local_2.fontStyle == FontStyle.ITALIC)))));

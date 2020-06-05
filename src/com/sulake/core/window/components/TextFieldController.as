@@ -421,15 +421,15 @@
             var _local_3:String;
             var _local_4:int;
             var _local_2:Boolean;
-            if (((multiline) && (_Str_9760 > 0)))
+            if (((multiline) && (maxLines > 0)))
             {
-                _local_2 = (numLines > _Str_9760);
+                _local_2 = (numLines > maxLines);
                 if (k != null)
                 {
                     _local_3 = _field.text;
                     _local_4 = _field.caretIndex;
                     _field.text = ((_local_3.substring(0, _local_4) + k) + _local_3.substring(_local_4, _local_3.length));
-                    if (numLines > _Str_9760)
+                    if (numLines > maxLines)
                     {
                         _local_2 = true;
                     }
