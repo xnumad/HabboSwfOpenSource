@@ -369,7 +369,7 @@
             try
             {
                 parser = (event as _Str_5993).getParser();
-                LegacyNavigator(this._navigator._Str_2559)._Str_3188._Str_15066(parser.data);
+                LegacyNavigator(this._navigator._Str_2559)._Str_3188.onRoomSettings(parser.data);
                 Logger.log(((((("GOT ROOM SETTINGS DATA: " + parser.data.name) + ", ") + parser.data._Str_5552) + ", ") + parser.data._Str_13128));
             }
             catch(e:Error)

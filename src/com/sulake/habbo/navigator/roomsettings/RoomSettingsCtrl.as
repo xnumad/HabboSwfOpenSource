@@ -205,7 +205,7 @@
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 
-        public function _Str_15066(k:RoomSettingsData):void
+        public function onRoomSettings(k:RoomSettingsData):void
         {
             if (k.roomId != this._Str_2449)
             {

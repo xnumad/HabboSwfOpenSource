@@ -80,7 +80,7 @@
             {
                 _local_2 = IRegionWindow(this._details.findChildByName("roomsettings_cont"));
                 _local_3 = ITextWindow(this._details.findChildByName("roomsettings"));
-                _local_2.procedure = this._Str_15066;
+                _local_2.procedure = this.onRoomSettings;
                 _local_2.visible = ((k) && (this._navigator.sessionData.userId == this._room.ownerId));
                 Util._Str_7173(_local_2, 1000, 10, 2);
             }
@@ -204,7 +204,7 @@
             }
         }
 
-        private function _Str_15066(k:WindowEvent, _arg_2:IWindow):void
+        private function onRoomSettings(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
