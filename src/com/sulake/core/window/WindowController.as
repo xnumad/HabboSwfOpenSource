@@ -1123,7 +1123,7 @@
                                 _RECT.offset(-(_x), -(_y));
                                 _context.invalidate(this, _RECT, WindowRedrawFlag.RESIZE);
                                 _local_5 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this, null);
-                                this._Str_16194(_local_5);
+                                this.notifyChildren(_local_5);
                                 _local_5.recycle();
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER, WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER))
                                 {
@@ -1165,7 +1165,7 @@
                                 _RECT.offset(-(_x), -(_y));
                                 _context.invalidate(this, _RECT, WindowRedrawFlag.RELOCATE);
                                 _local_5 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_RELOCATED, this, null);
-                                this._Str_16194(_local_5);
+                                this.notifyChildren(_local_5);
                                 _local_5.recycle();
                                 if (this._parent != null)
                                 {
@@ -1179,7 +1179,7 @@
                             if (k == this)
                             {
                                 _local_5 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_ACTIVATED, this, null);
-                                this._Str_16194(_local_5);
+                                this.notifyChildren(_local_5);
                                 _local_5.recycle();
                                 if (this._parent != null)
                                 {
@@ -1373,7 +1373,7 @@
         {
         }
 
-        private function _Str_16194(k:WindowEvent):void
+        private function notifyChildren(k:WindowEvent):void
         {
             var _local_2:WindowController;
             if (this._children)
