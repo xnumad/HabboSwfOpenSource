@@ -40,7 +40,7 @@
     public class HabboNuxDialogs extends Component implements ILinkEventTracker 
     {
         protected var _Str_2355:IHabboCommunicationManager;
-        protected var _Str_2272:IHabboNavigator;
+        protected var _navigator:IHabboNavigator;
         protected var _windowManager:IHabboWindowManager;
         protected var _localizationManager:IHabboLocalizationManager;
         protected var _Str_2276:IHabboCatalog;
@@ -67,7 +67,7 @@
                 _windowManager = k;
             }), new ComponentDependency(new IIDHabboNavigator(), function (k:IHabboNavigator):void
             {
-                _Str_2272 = k;
+                _navigator = k;
             }), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localizationManager = k;
@@ -186,7 +186,7 @@
             {
                 return;
             }
-            if ((((k.type == RoomSessionEvent.STARTED) && (k.session)) && (k.session.roomId == this._Str_2272.homeRoomId)))
+            if ((((k.type == RoomSessionEvent.STARTED) && (k.session)) && (k.session.roomId == this._navigator.homeRoomId)))
             {
                 _local_2 = (getInteger("nux.noob.lobby.popup.delay", 70) * 1000);
                 this._Str_4439 = new Timer(_local_2, 1);

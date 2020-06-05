@@ -21,7 +21,7 @@
 
         override protected function getListEntry(k:int):IWindowContainer
         {
-            var _local_2:IWindowContainer = IWindowContainer(_Str_2272.getXmlWindow("grs_room_ads_details_phase_one"));
+            var _local_2:IWindowContainer = IWindowContainer(_navigator.getXmlWindow("grs_room_ads_details_phase_one"));
             _local_2.background = true;
             _local_2.addEventListener(WindowMouseEvent.MOVE, _Str_4955);
             _local_2.addEventListener(WindowMouseEvent.OVER, onMouseOver);
@@ -40,9 +40,9 @@
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("adname"));
             _local_3.visible = true;
             Util._Str_21212(_local_3, _arg_2._Str_8163, k.width);
-            _Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
-            _Str_2272.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            _Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            _navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
+            _navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
+            _navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
             _Str_3220.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
         }
 
@@ -56,9 +56,9 @@
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.tags[0];
             var _local_4:_Str_2370 = this._Str_9465(_local_3);
-            if (_Str_2272)
+            if (_navigator)
             {
-                _Str_2272.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4._Str_15104));
+                _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4._Str_15104));
             }
             super.onMouseClick(k);
         }

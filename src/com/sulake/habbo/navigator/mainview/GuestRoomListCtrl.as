@@ -26,7 +26,7 @@
 
     public class GuestRoomListCtrl implements IViewCtrl 
     {
-        protected var _Str_2272:HabboNavigator;
+        protected var _navigator:HabboNavigator;
         private var _content:IWindowContainer;
         private var _Str_1929:IItemListWindow;
         private var _Str_4871:RoomPopupCtrl;
@@ -40,11 +40,11 @@
 
         public function GuestRoomListCtrl(k:HabboNavigator, _arg_2:int, _arg_3:Boolean):void
         {
-            this._Str_2272 = k;
+            this._navigator = k;
             this._Str_21859 = _arg_2;
             this._Str_16040 = _arg_3;
-            this._Str_4871 = new RoomPopupCtrl(this._Str_2272, 5, -5);
-            this._Str_3220 = new UserCountRenderer(this._Str_2272);
+            this._Str_4871 = new RoomPopupCtrl(this._navigator, 5, -5);
+            this._Str_3220 = new UserCountRenderer(this._navigator);
         }
 
         public function dispose():void
@@ -129,7 +129,7 @@
         protected function getListEntry(k:int):IWindowContainer
         {
             var _local_3:int;
-            var _local_2:IWindowContainer = IWindowContainer(this._Str_2272.getXmlWindow("grs_guest_room_details_phase_one"));
+            var _local_2:IWindowContainer = IWindowContainer(this._navigator.getXmlWindow("grs_guest_room_details_phase_one"));
             _local_2.background = true;
             _local_2.addEventListener(WindowMouseEvent.MOVE, this._Str_4955);
             _local_2.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
@@ -193,11 +193,11 @@
             Util._Str_2930(k);
             this._Str_23295(k, _arg_2);
             var _local_3:String = ((((_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED) || (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
-            this._Str_2272.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
-            this._Str_2272.refreshButton(k, "home", this._Str_10475(_arg_2), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
-            this._Str_2272.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
+            this._navigator.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
+            this._navigator.refreshButton(k, "home", this._Str_10475(_arg_2), null, 0);
+            this._navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
+            this._navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
+            this._navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
             if (this._Str_16040)
             {
                 k.findChildByName("room_number").visible = true;
@@ -241,7 +241,7 @@
 
         public function getRooms():Array
         {
-            return ((((this._Str_2272 == null) || (this._Str_2272.data == null)) || (this._Str_2272.data._Str_4518 == null)) || (this._Str_2272.data._Str_4518.rooms == null)) ? (new Array()) : this._Str_2272.data._Str_4518.rooms;
+            return ((((this._navigator == null) || (this._navigator.data == null)) || (this._navigator.data._Str_4518 == null)) || (this._navigator.data._Str_4518.rooms == null)) ? (new Array()) : this._navigator.data._Str_4518.rooms;
         }
 
         private function _Str_9465(k:int):_Str_2370
@@ -271,26 +271,26 @@
             {
                 return;
             }
-            if (_local_4.ownerName != this._Str_2272.sessionData.userName)
+            if (_local_4.ownerName != this._navigator.sessionData.userName)
             {
                 if (_local_4.habboGroupId != 0)
                 {
-                    this._Str_2272.goToPrivateRoom(_local_4.flatId);
+                    this._navigator.goToPrivateRoom(_local_4.flatId);
                     return;
                 }
                 _local_5 = new Point((k as WindowMouseEvent).stageX, (k as WindowMouseEvent).stageY);
                 switch (_local_4.doorMode)
                 {
                     case _Str_3560.DOORMODE_PASSWORD:
-                        this._Str_2272._Str_7174.show(_local_4, _local_5);
+                        this._navigator._Str_7174.show(_local_4, _local_5);
                         return;
                     case _Str_3560.DOORMODE_CLOSED:
-                        this._Str_2272.doorbell.show(_local_4, _local_5);
+                        this._navigator.doorbell.show(_local_4, _local_5);
                         return;
                 }
             }
             this.beforeEnterRoom(_local_3);
-            this._Str_2272.goToRoom(_local_4.flatId, true, "", _local_3);
+            this._navigator.goToRoom(_local_4.flatId, true, "", _local_3);
             this._Str_4871._Str_14696();
         }
 
@@ -300,7 +300,7 @@
 
         private function _Str_23295(k:IWindowContainer, _arg_2:_Str_2370):void
         {
-            var _local_3:Boolean = this._Str_2272.data._Str_20543(_arg_2.flatId);
+            var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
             var _local_4:Boolean = this._Str_10475(_arg_2);
             this._Str_19600(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this._Str_16071);
             this._Str_19600(k, "favourite", ((_local_3) && (!(_local_4))), this._Str_16307);
@@ -308,7 +308,7 @@
 
         private function _Str_10475(k:_Str_2370):Boolean
         {
-            return k.flatId == this._Str_2272.data.homeRoomId;
+            return k.flatId == this._navigator.data.homeRoomId;
         }
 
         private function _Str_19600(k:IWindowContainer, _arg_2:String, _arg_3:Boolean, _arg_4:Function):void
@@ -330,7 +330,7 @@
             {
                 _local_5.addEventListener(WindowMouseEvent.CLICK, _arg_4);
                 _local_5.visible = true;
-                this._Str_2272.refreshButton(_local_5, _arg_2, _arg_3, null, 0);
+                this._navigator.refreshButton(_local_5, _arg_2, _arg_3, null, 0);
             }
         }
 
@@ -346,7 +346,7 @@
             {
                 return;
             }
-            this._Str_2272.send(new _Str_5262(_local_3.flatId));
+            this._navigator.send(new _Str_5262(_local_3.flatId));
         }
 
         private function _Str_16071(k:WindowMouseEvent):void
@@ -361,7 +361,7 @@
             {
                 return;
             }
-            this._Str_2272.send(new _Str_4893(_local_3.flatId));
+            this._navigator.send(new _Str_4893(_local_3.flatId));
         }
 
         private function _Str_23553(k:IWindowContainer):void
@@ -391,7 +391,7 @@
 
         public function get navigator():HabboNavigator
         {
-            return this._Str_2272;
+            return this._navigator;
         }
     }
 }

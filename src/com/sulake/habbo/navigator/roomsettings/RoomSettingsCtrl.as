@@ -59,7 +59,7 @@
 
         private var _Str_2449:int;
         private var _Str_2366:int;
-        private var _Str_2272:IHabboTransitionalNavigator;
+        private var _navigator:IHabboTransitionalNavigator;
         private var _roomSettingsData:RoomSettingsData;
         private var _Str_15710:int;
         private var _window:IFrameWindow;
@@ -97,10 +97,10 @@
 
         public function RoomSettingsCtrl(k:IHabboTransitionalNavigator)
         {
-            this._Str_2272 = k;
-            this._Str_8572 = new UserListCtrl(this._Str_2272, false);
-            this._Str_8896 = new UserListCtrl(this._Str_2272, true);
-            this._Str_7254 = new ToolbarHoverCtrl(this._Str_2272);
+            this._navigator = k;
+            this._Str_8572 = new UserListCtrl(this._navigator, false);
+            this._Str_8896 = new UserListCtrl(this._navigator, true);
+            this._Str_7254 = new ToolbarHoverCtrl(this._navigator);
         }
 
         private static function get _Str_8651():Boolean
@@ -179,21 +179,21 @@
             this._Str_14390 = null;
             this._Str_6424 = null;
             this._Str_6508 = null;
-            this._Str_2272 = null;
+            this._navigator = null;
         }
 
         public function get disposed():Boolean
         {
-            return this._Str_2272 == null;
+            return this._navigator == null;
         }
 
         public function _Str_25624(k:int):void
         {
             this.close();
             this._Str_2449 = k;
-            this._Str_2366 = this._Str_2272.data._Str_2678.habboGroupId;
-            this._Str_2272.send(new _Str_7484(this._Str_2449));
-            this._Str_2272.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
+            this._Str_2366 = this._navigator.data._Str_2678.habboGroupId;
+            this._navigator.send(new _Str_7484(this._Str_2449));
+            this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 
         public function _Str_21207(k:int, _arg_2:int):void
@@ -201,8 +201,8 @@
             this.close();
             this._Str_2449 = k;
             this._Str_2366 = _arg_2;
-            this._Str_2272.send(new _Str_7484(this._Str_2449));
-            this._Str_2272.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
+            this._navigator.send(new _Str_7484(this._Str_2449));
+            this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_DEFAULT));
         }
 
         public function _Str_15066(k:RoomSettingsData):void
@@ -435,7 +435,7 @@
             }
             if (this._window == null)
             {
-                this._window = IFrameWindow(this._Str_2272.getXmlWindow("ros_room_settings"));
+                this._window = IFrameWindow(this._navigator.getXmlWindow("ros_room_settings"));
             }
             if (!this._Str_16440)
             {
@@ -453,7 +453,7 @@
             this._window.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseHandler);
             this._Str_23113().addEventListener(WindowMouseEvent.CLICK, this._Str_25553);
             this._window.findChildByName("filter_users_input").addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22741);
-            this._Str_17244 = ((!(this._Str_2272.data._Str_2678)) || (!(this._Str_2272.data._Str_2678.flatId == this._roomSettingsData.roomId)));
+            this._Str_17244 = ((!(this._navigator.data._Str_2678)) || (!(this._navigator.data._Str_2678.flatId == this._roomSettingsData.roomId)));
             if (this._Str_17244)
             {
                 this._window.findChildByName("remove_link_region").visible = false;
@@ -462,12 +462,12 @@
             {
                 this._window.findChildByName("remove_link_region").procedure = this._Str_23147;
             }
-            this._Str_5666 = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("room_name")), 60);
-            this._Str_7105 = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("description")), 0xFF);
-            this._tag1Input = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("tag1")), 30);
-            this._tag2Input = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("tag2")), 30);
-            this._Str_4194 = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("password")), 30);
-            this._Str_7349 = new TextFieldManager(this._Str_2272, ITextFieldWindow(this._window.findChildByName("password_confirm")), 30);
+            this._Str_5666 = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("room_name")), 60);
+            this._Str_7105 = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("description")), 0xFF);
+            this._tag1Input = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("tag1")), 30);
+            this._tag2Input = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("tag2")), 30);
+            this._Str_4194 = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("password")), 30);
+            this._Str_7349 = new TextFieldManager(this._navigator, ITextFieldWindow(this._window.findChildByName("password_confirm")), 30);
             this._Str_7157 = ICheckBoxWindow(this._window.findChildByName("allow_pets_checkbox"));
             this._Str_7429 = ICheckBoxWindow(this._window.findChildByName("allow_foodconsume_checkbox"));
             this._Str_5537 = ICheckBoxWindow(this._window.findChildByName("allow_walk_through_checkbox"));
@@ -491,7 +491,7 @@
             this._Str_23899 = ITextWindow(this._window.findChildByName("chat_settings_info"));
             this._Str_8266 = ITextFieldWindow(this._window.findChildByName("chat_settings_hearing_distance"));
             this._Str_8266.addEventListener(WindowMouseEvent.OVER, this._Str_21477);
-            this._Str_14650 = new TextFieldManager(this._Str_2272, this._Str_8266, 2);
+            this._Str_14650 = new TextFieldManager(this._navigator, this._Str_8266, 2);
             var _local_2:Array = [this._Str_5666, this._Str_7105, this._tag1Input, this._tag2Input, this._Str_4194, this._Str_7349, this._Str_14650];
             for each (_local_3 in _local_2)
             {
@@ -565,7 +565,7 @@
 
         private function _Str_19901():void
         {
-            if (this._Str_2272.sessionData.isAccountSafetyLocked())
+            if (this._navigator.sessionData.isAccountSafetyLocked())
             {
                 this._window.findChildByName("remove_link_region").disable();
                 this._window.findChildByName("remove_link").blend = 0.5;
@@ -663,9 +663,9 @@
             this._Str_4194._Str_2497("");
             this._Str_7349._Str_2497("");
             var _local_2:ISelectorWindow = (this._window.findChildByName("doormode") as ISelectorWindow);
-            if (this._Str_2272.data._Str_2678)
+            if (this._navigator.data._Str_2678)
             {
-                this._window.findChildByName("doormode_override_info").visible = ((this._Str_2272.isDoorModeOverriddenInCurrentRoom) && (!(this._Str_2272.sessionData.hasSecurity(SecurityLevelEnum.EMPLOYEE))));
+                this._window.findChildByName("doormode_override_info").visible = ((this._navigator.isDoorModeOverriddenInCurrentRoom) && (!(this._navigator.sessionData.hasSecurity(SecurityLevelEnum.EMPLOYEE))));
                 switch (k.doorMode)
                 {
                     case RoomSettingsData.DOORMODE_CLOSED:
@@ -821,7 +821,7 @@
 
         private function _Str_21757():Boolean
         {
-            return this._Str_2272.sessionData.clubLevel >= HabboClubLevelEnum.VIP;
+            return this._navigator.sessionData.clubLevel >= HabboClubLevelEnum.VIP;
         }
 
         private function _Str_10439(k:RoomSettingsData):void
@@ -858,7 +858,7 @@
             var _local_3:Array = [];
             var _local_4:int;
             var _local_5:int;
-            for each (_local_6 in this._Str_2272.data.allCategories)
+            for each (_local_6 in this._navigator.data.allCategories)
             {
                 if ((((_local_6.visible) || (k == _local_6.nodeId)) && (!(_local_6.automatic))))
                 {
@@ -889,7 +889,7 @@
         {
             var _local_4:FlatCategory;
             var _local_3:int;
-            for each (_local_4 in this._Str_2272.data.allCategories)
+            for each (_local_4 in this._navigator.data.allCategories)
             {
                 if ((((_local_4.visible) || (k == _local_4.nodeId)) && (!(_local_4.automatic))))
                 {
@@ -992,7 +992,7 @@
             k._Str_16006 = this._Str_6390.selection;
             this._Str_3732();
             this._Str_15710 = k.roomId;
-            this._Str_2272.send(new SaveRoomSettingsMessageComposer(k));
+            this._navigator.send(new SaveRoomSettingsMessageComposer(k));
         }
 
         private function _Str_21352(k:TextFieldManager, _arg_2:Array):void
@@ -1053,14 +1053,14 @@
             {
                 return;
             }
-            if (this._Str_2449 == this._Str_2272.homeRoomId)
+            if (this._Str_2449 == this._navigator.homeRoomId)
             {
-                this._Str_2272.windowManager.alert("${navigator.delete.homeroom.title}", "${navigator.delete.homeroom.body}", 0, this._Str_3168);
+                this._navigator.windowManager.alert("${navigator.delete.homeroom.title}", "${navigator.delete.homeroom.body}", 0, this._Str_3168);
                 return;
             }
             if (this._Str_2366 > 0)
             {
-                this._Str_2272.windowManager.alert("${group.deletebase.title}", "${group.deletebase.body}", 0, this._Str_3168);
+                this._navigator.windowManager.alert("${group.deletebase.title}", "${group.deletebase.body}", 0, this._Str_3168);
                 return;
             }
             Logger.log(("[RoomSettingsCtrl.onDeleteButtonClick] " + this._Str_2449));
@@ -1072,8 +1072,8 @@
             {
                 this._Str_3508.dispose();
             }
-            this._Str_2272.registerParameter("navigator.roomsettings.deleteroom.confirm.message", "room_name", this._roomSettingsData.name);
-            this._Str_3508 = new ConfirmDialogView(this._Str_2272, this._Str_22815, "${navigator.roomsettings}", "${navigator.roomsettings.deleteroom.confirm.message}");
+            this._navigator.registerParameter("navigator.roomsettings.deleteroom.confirm.message", "room_name", this._roomSettingsData.name);
+            this._Str_3508 = new ConfirmDialogView(this._navigator, this._Str_22815, "${navigator.roomsettings}", "${navigator.roomsettings.deleteroom.confirm.message}");
         }
 
         private function _Str_22624(k:WindowEvent, _arg_2:IWindow):void
@@ -1082,9 +1082,9 @@
             {
                 return;
             }
-            if (this._Str_2272.windowManager != null)
+            if (this._navigator.windowManager != null)
             {
-                (this._Str_2272.windowManager as Component).context.createLinkEvent("habbopages/builders-club/faq");
+                (this._navigator.windowManager as Component).context.createLinkEvent("habbopages/builders-club/faq");
             }
         }
 
@@ -1096,12 +1096,12 @@
         private function _Str_22815():void
         {
             var k:_Str_4081;
-            this._Str_2272.send(new _Str_9786(this._roomSettingsData.roomId));
+            this._navigator.send(new _Str_9786(this._roomSettingsData.roomId));
             this.close();
-            if (this._Str_2272.data._Str_4518 != null)
+            if (this._navigator.data._Str_4518 != null)
             {
-                k = this._Str_2272.data._Str_4518;
-                this._Str_2272._Str_2813._Str_2798(this._Str_2272.tabs.getSelected().id, k.searchType, k._Str_25185);
+                k = this._navigator.data._Str_4518;
+                this._navigator._Str_2813._Str_2798(this._navigator.tabs.getSelected().id, k.searchType, k._Str_25185);
             }
         }
 
@@ -1126,11 +1126,11 @@
             {
                 return;
             }
-            if (!this._Str_2272.data._Str_2678)
+            if (!this._navigator.data._Str_2678)
             {
                 return;
             }
-            var k:Boolean = (this._Str_2272.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = (this._navigator.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_access_disclaimer").visible = k;
         }
 
@@ -1141,11 +1141,11 @@
             {
                 return;
             }
-            if (!this._Str_2272.data._Str_2678)
+            if (!this._navigator.data._Str_2678)
             {
                 return;
             }
-            var k:Boolean = false;//(this._Str_2272.data._Str_2678.habboGroupId > 0);
+            var k:Boolean = false;//(this._navigator.data._Str_2678.habboGroupId > 0);
             this._window.findChildByName("guild_rights_container").visible = k;
             this._window.findChildByName("normal_rights_container").visible = (!(k));
             if (k)
@@ -1155,7 +1155,7 @@
             if (this._roomSettingsData._Str_13003 == null)
             {
                 this._roomSettingsData._Str_13003 = new Dictionary();
-                this._Str_2272.send(new _Str_11252(this._roomSettingsData.roomId));
+                this._navigator.send(new _Str_11252(this._roomSettingsData.roomId));
                 _local_2 = new Array();
             }
             else
@@ -1166,10 +1166,10 @@
             var _local_4:Array = this._Str_24611();
             this._Str_8572.refresh(IItemListWindow(this._window.findChildByName("users_with_rights_item_list")), _local_2, _local_3, this._roomSettingsData.highlightedUserId);
             this._Str_8896.refresh(IItemListWindow(this._window.findChildByName("friends_item_list")), _local_4, _local_3, this._roomSettingsData.highlightedUserId);
-            this._Str_2272.registerParameter("navigator.flatctrls.userswithrights", "displayed", ("" + this._Str_8572.userCount));
-            this._Str_2272.registerParameter("navigator.flatctrls.friends", "displayed", ("" + this._Str_8896.userCount));
-            this._Str_2272.registerParameter("navigator.flatctrls.userswithrights", "total", ("" + _local_2.length));
-            this._Str_2272.registerParameter("navigator.flatctrls.friends", "total", ("" + _local_4.length));
+            this._navigator.registerParameter("navigator.flatctrls.userswithrights", "displayed", ("" + this._Str_8572.userCount));
+            this._navigator.registerParameter("navigator.flatctrls.friends", "displayed", ("" + this._Str_8896.userCount));
+            this._navigator.registerParameter("navigator.flatctrls.userswithrights", "total", ("" + _local_2.length));
+            this._navigator.registerParameter("navigator.flatctrls.friends", "total", ("" + _local_4.length));
         }
 
         private function _Str_22485():void
@@ -1181,7 +1181,7 @@
             }
             if (this._roomSettingsData.bannedUsersById == null)
             {
-                this._Str_2272.send(new _Str_12287(this._roomSettingsData.roomId));
+                this._navigator.send(new _Str_12287(this._roomSettingsData.roomId));
                 k = new Array();
             }
             else
@@ -1200,7 +1200,7 @@
             {
                 return _local_2;
             }
-            for each (_local_3 in this._Str_2272.data.friendList.list)
+            for each (_local_3 in this._navigator.data.friendList.list)
             {
                 if (k[_local_3.userId] == null)
                 {
@@ -1217,12 +1217,12 @@
             {
                 this._Str_3508.dispose();
             }
-            this._Str_3508 = new ConfirmDialogView(this._Str_2272, this._Str_25387, "${navigator.flatctrls.removeconfirm.title}", "${navigator.flatctrls.removeconfirm.info}");
+            this._Str_3508 = new ConfirmDialogView(this._navigator, this._Str_25387, "${navigator.flatctrls.removeconfirm.title}", "${navigator.flatctrls.removeconfirm.info}");
         }
 
         private function _Str_25387():void
         {
-            this._Str_2272.send(new _Str_12446(this._Str_2449));
+            this._navigator.send(new _Str_12446(this._Str_2449));
         }
 
         private function _Str_5308(k:WindowEvent, _arg_2:IWindow):void
@@ -1235,7 +1235,7 @@
             this.refresh();
             if (this._Str_5809 == _Str_7004)
             {
-                this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "select", "room.settings.doormode.seen");
+                this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "select", "room.settings.doormode.seen");
             }
         }
 
@@ -1253,7 +1253,7 @@
             var _local_2:IItemListWindow = (this._window.findChildByName("moderation_banned_users") as IItemListWindow);
             var _local_3:IWindow = IWindowContainer(_local_2.getListItemAt(this._Str_7254._Str_20232)).findChildByName("user_info_region");
             var _local_4:int = _local_3.id;
-            this._Str_2272.send(new _Str_11552(_local_4, this._Str_2449));
+            this._navigator.send(new _Str_11552(_local_4, this._Str_2449));
         }
 
         private function _Str_20309(k:int):String
@@ -1276,22 +1276,22 @@
 
         private function _Str_20494(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.walkthrough.seen");
+            this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.walkthrough.seen");
         }
 
         private function _Str_25771(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.scrollspeed.seen");
+            this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.scrollspeed.seen");
         }
 
         private function _Str_19760(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.floodfilter.seen");
+            this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.floodfilter.seen");
         }
 
         private function _Str_21477(k:WindowMouseEvent):void
         {
-            this._Str_2272.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.hearrange.seen");
+            this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "hover", "room.settings.chat.hearrange.seen");
         }
     }
 }

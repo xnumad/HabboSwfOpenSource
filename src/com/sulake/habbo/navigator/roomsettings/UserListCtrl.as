@@ -18,24 +18,24 @@
     {
         private static const _Str_17518:int = 200;
 
-        protected var _Str_2272:IHabboTransitionalNavigator;
+        protected var _navigator:IHabboTransitionalNavigator;
         private var _Str_16557:Boolean;
         protected var _Str_3114:int;
 
         public function UserListCtrl(k:IHabboTransitionalNavigator, _arg_2:Boolean)
         {
-            this._Str_2272 = k;
+            this._navigator = k;
             this._Str_16557 = _arg_2;
         }
 
         public function dispose():void
         {
-            this._Str_2272 = null;
+            this._navigator = null;
         }
 
         public function get disposed():Boolean
         {
-            return this._Str_2272 == null;
+            return this._navigator == null;
         }
 
         public function refresh(k:IItemListWindow, _arg_2:Array, _arg_3:String, _arg_4:int):void
@@ -85,7 +85,7 @@
 
         protected function getRowView():IWindowContainer
         {
-            return IWindowContainer(this._Str_2272.getXmlWindow(((this._Str_16557) ? "ros_friend" : "ros_flat_controller")));
+            return IWindowContainer(this._navigator.getXmlWindow(((this._Str_16557) ? "ros_friend" : "ros_flat_controller")));
         }
 
         protected function getBgColor(k:int, _arg_2:Boolean):uint
@@ -135,13 +135,13 @@
             var _local_2:IWindowContainer = IWindowContainer(k.target);
             if (this._Str_16557)
             {
-                this._Str_2272.send(new _Str_7856(_local_2.id));
+                this._navigator.send(new _Str_7856(_local_2.id));
             }
             else
             {
                 _local_3 = new Array();
                 _local_3.push(_local_2.id);
-                this._Str_2272.send(new RemoveRightsMessageComposer(_local_3));
+                this._navigator.send(new RemoveRightsMessageComposer(_local_3));
             }
         }
 
@@ -174,8 +174,8 @@
 
         private function _Str_25336(k:WindowEvent):void
         {
-            this._Str_2272.trackGoogle("extendedProfile", "navigator_roomSettingsUsersList");
-            this._Str_2272.send(new _Str_2553(k.target.id));
+            this._navigator.trackGoogle("extendedProfile", "navigator_roomSettingsUsersList");
+            this._navigator.send(new _Str_2553(k.target.id));
         }
     }
 }

@@ -16,7 +16,7 @@
 
         override protected function getRowView():IWindowContainer
         {
-            return IWindowContainer(_Str_2272.getXmlWindow("ros_banned_user"));
+            return IWindowContainer(_navigator.getXmlWindow("ros_banned_user"));
         }
 
         override protected function onBgMouseClick(k:WindowEvent):void

@@ -16,19 +16,19 @@
 
     public class RoomInfoViewCtrl implements IDisposable 
     {
-        private var _Str_2272:IHabboTransitionalNavigator;
+        private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
         private var _Str_5340:TextFieldManager;
         private var _Str_5951:TextFieldManager;
 
         public function RoomInfoViewCtrl(k:IHabboTransitionalNavigator)
         {
-            this._Str_2272 = k;
+            this._navigator = k;
         }
 
         public function dispose():void
         {
-            this._Str_2272 = null;
+            this._navigator = null;
             if (this._window)
             {
                 this._window.dispose();
@@ -40,7 +40,7 @@
 
         public function get disposed():Boolean
         {
-            return this._Str_2272 == null;
+            return this._navigator == null;
         }
 
         public function show():void
@@ -52,7 +52,7 @@
             }
             this._Str_2755();
             this._Str_3732();
-            var k:_Str_3579 = this._Str_2272.data._Str_4112;
+            var k:_Str_3579 = this._navigator.data._Str_4112;
             if (k == null)
             {
                 this._Str_25306();
@@ -67,14 +67,14 @@
 
         private function _Str_26474(k:_Str_3579):void
         {
-            this._window.caption = this._Str_2272.getText("navigator.eventsettings.editcaption");
+            this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
             this._Str_5340._Str_2497(k.eventName);
             this._Str_5951._Str_2497(k.eventDescription);
         }
 
         private function _Str_25306():void
         {
-            this._window.caption = this._Str_2272.getText("navigator.createevent");
+            this._window.caption = this._navigator.getText("navigator.createevent");
             this._Str_5951._Str_8407();
             this._Str_5340._Str_8407();
         }
@@ -91,19 +91,19 @@
 
         private function save():void
         {
-            var k:int = this._Str_2272.data._Str_4112.adId;
+            var k:int = this._navigator.data._Str_4112.adId;
             var _local_2:String = this._Str_5340.getText();
             var _local_3:String = this._Str_5951.getText();
             if (!this._Str_17505())
             {
                 return;
             }
-            this._Str_2272.send(new _Str_9806(k, _local_2, _local_3));
+            this._navigator.send(new _Str_9806(k, _local_2, _local_3));
         }
 
         private function _Str_26060(k:WindowEvent):void
         {
-            this._Str_2272.send(new _Str_11893(this._Str_2272.data._Str_4112.adId));
+            this._navigator.send(new _Str_11893(this._navigator.data._Str_4112.adId));
             this.close();
         }
 
@@ -114,7 +114,7 @@
 
         private function _Str_5137(k:WindowEvent):void
         {
-            if (this._Str_2272.data._Str_4112 != null)
+            if (this._navigator.data._Str_4112 != null)
             {
                 this.save();
             }
@@ -127,14 +127,14 @@
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
             {
-                this._Str_5340._Str_5374(this._Str_2272.getText("roomad.error.0.description"));
+                this._Str_5340._Str_5374(this._navigator.getText("roomad.error.0.description"));
                 this._Str_5340._Str_2497(_local_2.filteredText);
             }
             else
             {
                 if (_local_3 == 1)
                 {
-                    this._Str_5951._Str_5374(this._Str_2272.getText("roomad.error.0.description"));
+                    this._Str_5951._Str_5374(this._navigator.getText("roomad.error.0.description"));
                     this._Str_5951._Str_2497(_local_2.filteredText);
                 }
             }
@@ -143,7 +143,7 @@
         private function _Str_17505():Boolean
         {
             this._Str_3732();
-            if (!this._Str_5340._Str_22184(this._Str_2272.getText("navigator.eventsettings.nameerr")))
+            if (!this._Str_5340._Str_22184(this._navigator.getText("navigator.eventsettings.nameerr")))
             {
                 return false;
             }
@@ -162,13 +162,13 @@
             {
                 return;
             }
-            this._window = IFrameWindow(this._Str_2272.getXmlWindow("iro_event_settings"));
+            this._window = IFrameWindow(this._navigator.getXmlWindow("iro_event_settings"));
             this._Str_2786(this._window.findChildByTag("close"), this.onClose);
-            this._Str_5340 = new TextFieldManager(this._Str_2272, this._Str_2453("event_name"), 25);
-            this._Str_5951 = new TextFieldManager(this._Str_2272, this._Str_2453("event_desc"), 100);
+            this._Str_5340 = new TextFieldManager(this._navigator, this._Str_2453("event_name"), 25);
+            this._Str_5951 = new TextFieldManager(this._navigator, this._Str_2453("event_desc"), 100);
             this._Str_5340.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
             this._Str_5951.input.addEventListener(WindowEvent.WINDOW_EVENT_UNFOCUSED, this._Str_5137);
-            this._Str_2272.communication.addHabboConnectionMessageEvent(new RoomAdErrorEvent(this._Str_24049));
+            this._navigator.communication.addHabboConnectionMessageEvent(new RoomAdErrorEvent(this._Str_24049));
             this._window.center();
         }
 
@@ -200,7 +200,7 @@
             while (_local_3 < _local_2)
             {
                 _local_4 = ("roomevent_type_" + _local_3);
-                _local_5 = this._Str_2272.getText(_local_4);
+                _local_5 = this._navigator.getText(_local_4);
                 if (((_local_5 == null) || (_local_5 == _local_4)))
                 {
                     return;
