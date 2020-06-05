@@ -34,7 +34,7 @@
         protected var _scrollStepH:Number = -1;
         protected var _scrollStepV:Number = -1;
         protected var _arrangeListItems:Boolean;
-        protected var _Str_5418:Boolean;
+        protected var _scaleToFitItems:Boolean;
         protected var _Str_12072:Boolean;
         protected var _Str_19352:Number;
         protected var _Str_5885:Number;
@@ -52,7 +52,7 @@
             var _local_12:IThemeManager = _arg_5.getWindowFactory().getThemeManager();
             this._spacing = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
             this._arrangeListItems = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
-            this._Str_5418 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SCALE_TO_FIT_ITEMS).value;
+            this._scaleToFitItems = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SCALE_TO_FIT_ITEMS).value;
             this._Str_12072 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.RESIZE_ON_ITEM_UPDATE).value;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             _Str_3781 = ((_background) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
@@ -203,16 +203,16 @@
 
         public function set _Str_3640(k:Boolean):void
         {
-            if (this._Str_5418 != k)
+            if (this._scaleToFitItems != k)
             {
-                this._Str_5418 = k;
+                this._scaleToFitItems = k;
                 this._Str_4024();
             }
         }
 
         public function get _Str_3640():Boolean
         {
-            return this._Str_5418;
+            return this._scaleToFitItems;
         }
 
         public function set autoArrangeItems(k:Boolean):void
@@ -442,7 +442,7 @@
                     this._resizing = true;
                     break;
                 case WindowEvent.WINDOW_EVENT_RESIZED:
-                    if (!this._Str_5418)
+                    if (!this._scaleToFitItems)
                     {
                         if (this._horizontal)
                         {
@@ -583,7 +583,7 @@
                         {
                             _local_2.x = this._scrollAreaWidth;
                             this._scrollAreaWidth = (this._scrollAreaWidth + (_local_2.width + this._spacing));
-                            if (this._Str_5418)
+                            if (this._scaleToFitItems)
                             {
                                 _local_3 = (_local_2.height + _local_2.y);
                                 this._scrollAreaHeight = ((_local_3 > this._scrollAreaHeight) ? _local_3 : this._scrollAreaHeight);
@@ -608,7 +608,7 @@
                         {
                             _local_2.y = this._scrollAreaHeight;
                             this._scrollAreaHeight = (this._scrollAreaHeight + (_local_2.height + this._spacing));
-                            if (this._Str_5418)
+                            if (this._scaleToFitItems)
                             {
                                 _local_3 = (_local_2.width + _local_2.x);
                                 this._scrollAreaWidth = ((_local_3 > this._scrollAreaWidth) ? _local_3 : this._scrollAreaWidth);
@@ -654,7 +654,7 @@
             var k:Array = super.properties;
             k.push(createProperty(PropertyKeys.SPACING, this._spacing));
             k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._arrangeListItems));
-            k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
+            k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._scaleToFitItems));
             k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._scrollStepH));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._scrollStepV));

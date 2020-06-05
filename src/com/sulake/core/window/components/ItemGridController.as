@@ -26,7 +26,7 @@
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             _horizontal = (!(_arg_2 == WindowType.WINDOW_TYPE_ITEMGRID_HORIZONTAL));
-            _Str_5418 = true;
+            _scaleToFitItems = true;
             if (!_horizontal)
             {
                 throw (new Error("Horizontal item grid not yet implemented!"));
