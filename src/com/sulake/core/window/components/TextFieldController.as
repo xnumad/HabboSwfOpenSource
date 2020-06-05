@@ -459,7 +459,7 @@
             }
             catch(e:Error)
             {
-                _context.handleError(WindowContext._Str_7405, e);
+                _context.handleError(WindowContext.ERROR_DURING_EVENT_HANDLING, e);
             }
         }
 
@@ -484,7 +484,7 @@
             }
             catch(e:Error)
             {
-                _context.handleError(WindowContext._Str_7405, e);
+                _context.handleError(WindowContext.ERROR_DURING_EVENT_HANDLING, e);
             }
         }
 
@@ -505,7 +505,7 @@
             }
             catch(e:Error)
             {
-                _context.handleError(WindowContext._Str_7405, e);
+                _context.handleError(WindowContext.ERROR_DURING_EVENT_HANDLING, e);
             }
         }
 
@@ -533,7 +533,7 @@
             }
             catch(e:Error)
             {
-                _context.handleError(WindowContext._Str_7405, e);
+                _context.handleError(WindowContext.ERROR_DURING_EVENT_HANDLING, e);
             }
         }
 
@@ -548,7 +548,7 @@
             }
             catch(e:Error)
             {
-                _context.handleError(WindowContext._Str_7405, e);
+                _context.handleError(WindowContext.ERROR_DURING_EVENT_HANDLING, e);
             }
         }
 
