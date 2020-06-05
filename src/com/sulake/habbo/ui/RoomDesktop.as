@@ -1406,7 +1406,7 @@
                 return;
             }
             _local_11.setDisplayObject(_local_10);
-            _local_11.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_23585);
+            _local_11.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.resizeColorizer);
             var _local_12:Sprite = new Sprite();
 			_local_12.alpha = 1;
             _local_12.mouseEnabled = false;
@@ -1456,7 +1456,7 @@
             }
         }
 
-        private function _Str_23585(k:WindowEvent):void
+        private function resizeColorizer(k:WindowEvent):void
         {
             var _local_2:IDisplayObjectWrapper = (k.target as IDisplayObjectWrapper);
             if (_local_2 == null)
