@@ -48,7 +48,7 @@
         function get toolbar():IHabboToolbar;
         function get navigator():IHabboNavigator;
         function get habboGroupsManager():IHabboGroupsManager;
-        function get _Str_17230():IRoomWidgetFactory;
+        function get roomWidgetFactory():IRoomWidgetFactory;
         function get roomSessionManager():IRoomSessionManager;
         function get avatarEditor():IHabboAvatarEditor;
         function get catalog():IHabboCatalog;

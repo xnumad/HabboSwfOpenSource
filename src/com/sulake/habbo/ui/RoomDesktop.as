@@ -291,7 +291,7 @@
             return this._toolbar;
         }
 
-        public function get _Str_17230():IRoomWidgetFactory
+        public function get roomWidgetFactory():IRoomWidgetFactory
         {
             return this._roomWidgetFactory;
         }
@@ -396,7 +396,7 @@
             this._avatarEditor = k;
         }
 
-        public function set _Str_17230(k:IRoomWidgetFactory):void
+        public function set roomWidgetFactory(k:IRoomWidgetFactory):void
         {
             this._roomWidgetFactory = k;
         }

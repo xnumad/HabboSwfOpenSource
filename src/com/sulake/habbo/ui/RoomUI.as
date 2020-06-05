@@ -1086,7 +1086,7 @@
             _local_3 = new RoomDesktop(k, assets, this._communication.connection);
             _local_3.roomEngine = this._roomEngine;
             _local_3.windowManager = this._windowManager;
-            _local_3._Str_17230 = this._roomWidgetFactory;
+            _local_3.roomWidgetFactory = this._roomWidgetFactory;
             _local_3.sessionDataManager = this._sessionDataManager;
             _local_3.roomSessionManager = this._roomSessionManager;
             _local_3.communicationManager = this._communication;
