@@ -218,7 +218,7 @@
 
         protected function _Str_4955(k:WindowEvent):void
         {
-            this._Str_22464(k);
+            this.checkFastHorizontalMove(k);
         }
 
         protected function onMouseOver(k:WindowEvent):void
@@ -376,7 +376,7 @@
             k.color = 4288861930;
         }
 
-        private function _Str_22464(k:WindowEvent):void
+        private function checkFastHorizontalMove(k:WindowEvent):void
         {
             var _local_2:WindowMouseEvent = WindowMouseEvent(k);
             var _local_3:int = Math.abs((this._lastMouseX - _local_2.stageX));
