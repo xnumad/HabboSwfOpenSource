@@ -54,7 +54,7 @@
         private var _eventProcessorState:EventProcessorState;
         protected var _localization:ICoreLocalizationManager;
         protected var _rootDisplayObject:DisplayObjectContainer;
-        protected var _Str_24909:Boolean = true;
+        protected var _throwErrors:Boolean = true;
         protected var _Str_1984:Error;
         protected var _Str_16327:int = -1;
         protected var _Str_11208:IInternalWindowServices;
@@ -210,7 +210,7 @@
         {
             this._Str_1984 = _arg_2;
             this._Str_16327 = k;
-            if (this._Str_24909)
+            if (this._throwErrors)
             {
                 throw (_arg_2);
             }
