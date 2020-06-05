@@ -206,7 +206,7 @@
             this._Str_7516();
         }
 
-        public function _Str_9915(k:int):void
+        public function setSpacing(k:int):void
         {
             this._spacing = k;
             this._Str_7516();

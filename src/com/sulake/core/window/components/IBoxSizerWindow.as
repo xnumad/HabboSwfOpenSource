@@ -6,7 +6,7 @@
     {
         function _Str_22450(_arg_1:int):void;
         function _Str_24158(_arg_1:int):void;
-        function _Str_9915(_arg_1:int):void;
+        function setSpacing(_arg_1:int):void;
         function _Str_25833(_arg_1:Boolean):void;
         function _Str_18113(_arg_1:Boolean):void;
         function _Str_22747():Boolean;

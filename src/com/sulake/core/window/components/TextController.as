@@ -312,7 +312,7 @@
             k._Str_3808.sharpness = _arg_2;
         }
 
-        private static function _Str_9915(k:TextController, _arg_2:Number):void
+        private static function setSpacing(k:TextController, _arg_2:Number):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.letterSpacing = _arg_2;
@@ -578,7 +578,7 @@
             k[PropertyKeys.MAX_CHARS] = setMaxChars;
             k[PropertyKeys.MULTILINE] = setMultiline;
             k[PropertyKeys.RESTRICT] = setRestrict;
-            k[PropertyKeys.SPACING] = _Str_9915;
+            k[PropertyKeys.SPACING] = setSpacing;
             k[PropertyKeys.SHARPNESS] = setSharpness;
             k[PropertyKeys.THICKNESS] = _Str_18660;
             k[PropertyKeys.UNDERLINE] = _Str_16916;
@@ -906,7 +906,7 @@
 
         public function set spacing(k:Number):void
         {
-            _Str_9915(this, k);
+            setSpacing(this, k);
         }
 
         public function set textColor(k:uint):void
