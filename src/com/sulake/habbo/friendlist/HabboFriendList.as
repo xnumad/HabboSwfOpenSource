@@ -274,7 +274,7 @@
             return ((this.getFriend(k) == null) && (!(this._Str_4227.isRequestFriend(k)))) && (this.categories._Str_5401(false) < this.friendRequests.limit);
         }
 
-        public function _Str_14642(k:int, _arg_2:String):Boolean
+        public function askForAFriend(k:int, _arg_2:String):Boolean
         {
             if (this._view == null)
             {

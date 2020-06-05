@@ -10,7 +10,7 @@
     {
         function get events():IEventDispatcher;
         function canBeAskedForAFriend(_arg_1:int):Boolean;
-        function _Str_14642(_arg_1:int, _arg_2:String):Boolean;
+        function askForAFriend(_arg_1:int, _arg_2:String):Boolean;
         function getFriend(_arg_1:int):IFriend;
         function openFriendList():void;
         function _Str_19682():void;

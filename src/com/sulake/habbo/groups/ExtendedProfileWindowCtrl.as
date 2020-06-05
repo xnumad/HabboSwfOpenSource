@@ -345,7 +345,7 @@
             {
                 return;
             }
-            this._manager.friendlist._Str_14642(this._data.userId, this._data.userName);
+            this._manager.friendlist.askForAFriend(this._data.userId, this._data.userName);
             this._data.isRequestFriend = true;
             this.refresh();
         }

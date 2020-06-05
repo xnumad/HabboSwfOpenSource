@@ -260,7 +260,7 @@
                 return;
             }
             Logger.log(("Search result found: " + _local_3._Str_8751));
-            var _local_4:Boolean = this._friendList._Str_14642(_local_3._Str_3251, _local_3._Str_8751);
+            var _local_4:Boolean = this._friendList.askForAFriend(_local_3._Str_3251, _local_3._Str_8751);
             if (!_local_4)
             {
                 this._friendList._Str_18624();

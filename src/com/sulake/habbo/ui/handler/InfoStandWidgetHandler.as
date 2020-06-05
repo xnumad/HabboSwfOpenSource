@@ -370,7 +370,7 @@
                 case RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_NAME:
                     return this.handleGetObjectNameMessage((k as RoomWidgetRoomObjectMessage));
                 case RoomWidgetUserActionMessage.RWUAM_SEND_FRIEND_REQUEST:
-                    this._container.friendList._Str_14642(_local_2, _local_3.name);
+                    this._container.friendList.askForAFriend(_local_2, _local_3.name);
                     break;
                 case RoomWidgetUserActionMessage.RWUAM_RESPECT_USER:
                     this._container.sessionDataManager.giveRespect(_local_2);

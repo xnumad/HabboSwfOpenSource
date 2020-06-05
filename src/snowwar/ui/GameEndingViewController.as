@@ -344,7 +344,7 @@
             var _local_3:Game2TeamPlayerData = this._SafeStr_13149[_local_2];
             if (_local_3)
             {
-                this._SafeStr_18579.friendList._Str_14642(_local_2, _local_3.userName);
+                this._SafeStr_18579.friendList.askForAFriend(_local_2, _local_3.userName);
                 this._SafeStr_18579.communication.connection.send(new _SafeStr_1434("GameFramework", "SnowStorm", "gameFramework.sendFriendRequest.rematchView"));
                 this._SafeStr_18579._SafeStr_13216(_local_2, "${snowwar.friend_request.sent}", true);
             }
