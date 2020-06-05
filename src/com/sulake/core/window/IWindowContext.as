@@ -22,6 +22,6 @@
         function getLastErrorCode():int;
         function flushError():void;
         function addMouseEventTracker(_arg_1:IInputEventTracker):void;
-        function _Str_14802(_arg_1:IInputEventTracker):void;
+        function removeMouseEventTracker(_arg_1:IInputEventTracker):void;
     }
 }

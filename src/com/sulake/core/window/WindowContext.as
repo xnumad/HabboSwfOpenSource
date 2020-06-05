@@ -383,7 +383,7 @@
             }
         }
 
-        public function _Str_14802(k:IInputEventTracker):void
+        public function removeMouseEventTracker(k:IInputEventTracker):void
         {
             var _local_2:int = this.inputEventTrackers.indexOf(k);
             if (_local_2 > -1)

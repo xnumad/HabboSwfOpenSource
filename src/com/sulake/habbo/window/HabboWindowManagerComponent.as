@@ -494,12 +494,12 @@
             }
         }
 
-        public function _Str_14802(k:IInputEventTracker):void
+        public function removeMouseEventTracker(k:IInputEventTracker):void
         {
             var _local_2:IWindowContext;
             for each (_local_2 in this._windowContextArray)
             {
-                _local_2._Str_14802(k);
+                _local_2.removeMouseEventTracker(k);
             }
         }
 
