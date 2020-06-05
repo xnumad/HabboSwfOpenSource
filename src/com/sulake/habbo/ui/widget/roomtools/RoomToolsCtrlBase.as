@@ -101,7 +101,7 @@
         {
         }
 
-        public function get _Str_25900():Boolean
+        public function get isCollapsed():Boolean
         {
             return this._isCollapsed;
         }
