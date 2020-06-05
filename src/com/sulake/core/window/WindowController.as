@@ -57,7 +57,7 @@
         private var _forceGraphicContexts:Boolean = false;
         private var _lastParentRect:Rectangle;
         private var _uid:uint;
-        private var _Str_8085:IPropertyMap;
+        private var _propertyDefaults:IPropertyMap;
 
         public function WindowController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0, _arg_12:String="")
         {
@@ -68,7 +68,7 @@
             {
                 _arg_6 = new Rectangle(0, 0, ((_local_13) ? int(_local_13.attribute("width")) : 10), ((_local_13) ? int(_local_13.attribute("height")) : 10));
             }
-            this._Str_8085 = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
+            this._propertyDefaults = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
             super(_arg_11, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_10, _arg_12);
             if (!this._graphics)
             {
@@ -512,7 +512,7 @@
                     }
                 }
                 _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
-                this._Str_8085 = _context.getWindowFactory().getThemeManager().getPropertyDefaults(_style);
+                this._propertyDefaults = _context.getWindowFactory().getThemeManager().getPropertyDefaults(_style);
             }
         }
 
@@ -2659,12 +2659,12 @@
 
         public function createProperty(k:String, _arg_2:Object):PropertyStruct
         {
-            return this._Str_8085.get(k).withValue(_arg_2);
+            return this._propertyDefaults.get(k).withValue(_arg_2);
         }
 
         public function getDefaultProperty(k:String):PropertyStruct
         {
-            return this._Str_8085.get(k);
+            return this._propertyDefaults.get(k);
         }
 
         public function _Str_5065():Boolean
