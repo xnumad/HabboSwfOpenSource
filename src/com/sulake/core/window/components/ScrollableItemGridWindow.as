@@ -14,7 +14,7 @@
     {
         private var _Str_12329:IItemGridWindow;
         private var _Str_3397:IScrollbarWindow;
-        private var _Str_5880:Boolean = true;
+        private var _autoHideScrollBar:Boolean = true;
 
         public function ScrollableItemGridWindow(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -62,12 +62,12 @@
 
         public function get _Str_6416():Boolean
         {
-            return this._Str_5880;
+            return this._autoHideScrollBar;
         }
 
         public function set _Str_6416(k:Boolean):void
         {
-            this._Str_5880 = k;
+            this._autoHideScrollBar = k;
             this._Str_17242();
         }
 
@@ -366,7 +366,7 @@
 
         private function _Str_17242():void
         {
-            if (this._Str_5880)
+            if (this._autoHideScrollBar)
             {
                 if (this._Str_2734.testStateFlag(WindowState.DISABLED))
                 {
