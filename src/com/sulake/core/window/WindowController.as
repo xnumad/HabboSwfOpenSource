@@ -49,7 +49,7 @@
         protected var _procedure:Function;
         protected var _drawable:Boolean = true;
         protected var _parent:WindowController;
-        protected var _Str_2187:Vector.<IWindow>;
+        protected var _children:Vector.<IWindow>;
         protected var _Str_610:Boolean = false;
         protected var _Str_5058:WindowRectLimits;
         protected var _Str_9238:Boolean = false;
@@ -552,9 +552,9 @@
             if (((!(k == null)) && (!(k.context == _context))))
             {
                 _context = WindowContext(k.context);
-                if (this._Str_2187)
+                if (this._children)
                 {
-                    for each (_local_3 in this._Str_2187)
+                    for each (_local_3 in this._children)
                     {
                         _local_3.parent = this;
                     }
@@ -615,12 +615,12 @@
             {
                 this._parent.setupGraphicsContext();
             }
-            if (((this._Str_2187) && (this._Str_2187.length > 0)))
+            if (((this._children) && (this._children.length > 0)))
             {
                 if (this._graphics._Str_13711 != this.numChildren)
                 {
                     k = 0;
-                    for each (_local_2 in this._Str_2187)
+                    for each (_local_2 in this._children)
                     {
                         this._graphics._Str_16175(_local_2.getGraphicContext(true), k++);
                     }
@@ -675,9 +675,9 @@
         protected function cloneChildWindows(k:WindowController):void
         {
             var _local_2:WindowController;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     if (_local_2.tags.indexOf(WindowController.TAG_EXCLUDE) == -1)
                     {
@@ -704,14 +704,14 @@
                         }
                     }
                 }
-                if (this._Str_2187)
+                if (this._children)
                 {
-                    while (this._Str_2187.length > 0)
+                    while (this._children.length > 0)
                     {
-                        IDisposable(this._Str_2187.pop()).dispose();
+                        IDisposable(this._children.pop()).dispose();
                     }
                 }
-                this._Str_2187 = null;
+                this._children = null;
                 if (this.parent)
                 {
                     this.parent = null;
@@ -1307,9 +1307,9 @@
                 }
             }
             this._Str_20599(this, this._Str_9367, k);
-            if (this._Str_2187)
+            if (this._children)
             {
-                this._Str_21070(this._Str_2187, k);
+                this._Str_21070(this._children, k);
             }
         }
 
@@ -1350,9 +1350,9 @@
                 {
                     this._Str_20599(_local_3, this._Str_9367.getChildStyle(_local_3), _arg_2);
                 }
-                if (_local_3._Str_2187)
+                if (_local_3._children)
                 {
-                    this._Str_21070(_local_3._Str_2187, _arg_2);
+                    this._Str_21070(_local_3._children, _arg_2);
                 }
             }
         }
@@ -1376,9 +1376,9 @@
         private function _Str_16194(k:WindowEvent):void
         {
             var _local_2:WindowController;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     _local_2.update(this, k);
                 }
@@ -1659,7 +1659,7 @@
             var k:IWindow;
             var _local_8:Array;
             var _local_9:uint;
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return;
             }
@@ -1669,7 +1669,7 @@
             var _local_5:int;
             var _local_6:Boolean;
             var _local_7:uint = (param & (WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN | WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN));
-            for each (k in this._Str_2187)
+            for each (k in this._children)
             {
                 if (k.x < _local_2)
                 {
@@ -1697,7 +1697,7 @@
             if (_local_6)
             {
                 _local_8 = [];
-                for each (k in this._Str_2187)
+                for each (k in this._children)
                 {
                     _local_9 = (k.param & (WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER | WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER));
                     k.setParamFlag(_local_9, false);
@@ -1708,7 +1708,7 @@
                     this.setParamFlag(_local_7, false);
                 }
                 this.setRectangle((_x + _local_2), (_y + _local_3), _local_4, _local_5);
-                for each (k in this._Str_2187)
+                for each (k in this._children)
                 {
                     k.offset(-(_local_2), -(_local_3));
                     k.setParamFlag(_local_8.shift(), true);
@@ -2169,7 +2169,7 @@
                 {
                     while (_local_5 > 0)
                     {
-                        _local_4 = WindowController(this._Str_2187[(_local_5 - 1)]).getChildUnderPoint(k);
+                        _local_4 = WindowController(this._children[(_local_5 - 1)]).getChildUnderPoint(k);
                         if (_local_4 != null)
                         {
                             return _local_4;
@@ -2193,10 +2193,10 @@
                 if (((((k.x >= _x) && (k.x < (_x + _w))) && (k.y >= _y)) && (k.y < (_y + _h))))
                 {
                     _arg_2.push(this);
-                    if (this._Str_2187)
+                    if (this._children)
                     {
                         k.offset(-(_x), -(_y));
-                        for each (_local_3 in this._Str_2187)
+                        for each (_local_3 in this._children)
                         {
                             _local_3.groupChildrenUnderPoint(k, _arg_2);
                         }
@@ -2207,10 +2207,10 @@
                 {
                     if (!_clipping)
                     {
-                        if (this._Str_2187)
+                        if (this._children)
                         {
                             k.offset(-(_x), -(_y));
-                            for each (_local_3 in this._Str_2187)
+                            for each (_local_3 in this._children)
                             {
                                 _local_3.groupChildrenUnderPoint(k, _arg_2);
                             }
@@ -2232,10 +2232,10 @@
                     {
                         _arg_2.push(this);
                     }
-                    if (this._Str_2187)
+                    if (this._children)
                     {
                         k.offset(-(_x), -(_y));
-                        for each (_local_4 in this._Str_2187)
+                        for each (_local_4 in this._children)
                         {
                             _local_4.groupParameterFilteredChildrenUnderPoint(k, _arg_2, _arg_3);
                         }
@@ -2246,10 +2246,10 @@
                 {
                     if (!_clipping)
                     {
-                        if (this._Str_2187)
+                        if (this._children)
                         {
                             k.offset(-(_x), -(_y));
-                            for each (_local_4 in this._Str_2187)
+                            for each (_local_4 in this._children)
                             {
                                 _local_4.groupParameterFilteredChildrenUnderPoint(k, _arg_2, _arg_3);
                             }
@@ -2287,27 +2287,27 @@
 
         public function get children():Vector.<IWindow>
         {
-            return this._Str_2187;
+            return this._children;
         }
 
         public function get numChildren():int
         {
-            return (this._Str_2187) ? this._Str_2187.length : 0;
+            return (this._children) ? this._children.length : 0;
         }
 
         public function populate(k:Array):void
         {
             var _local_3:WindowController;
             var _local_2:Boolean;
-            if (!this._Str_2187)
+            if (!this._children)
             {
-                this._Str_2187 = new Vector.<IWindow>();
+                this._children = new Vector.<IWindow>();
             }
             for each (_local_3 in k)
             {
                 if (((_local_3) && (!(_local_3.parent == this))))
                 {
-                    this._Str_2187.push(_local_3);
+                    this._children.push(_local_3);
                     _local_3.parent = this;
                     _local_2 = ((_local_2) || (_local_3._Str_4453()));
                 }
@@ -2325,11 +2325,11 @@
             {
                 WindowController(_local_2.parent).removeChild(_local_2);
             }
-            if (!this._Str_2187)
+            if (!this._children)
             {
-                this._Str_2187 = new Vector.<IWindow>();
+                this._children = new Vector.<IWindow>();
             }
-            this._Str_2187.push(_local_2);
+            this._children.push(_local_2);
             _local_2.parent = this;
             if (((this._Str_10190) || (_local_2._Str_4453())))
             {
@@ -2352,11 +2352,11 @@
             {
                 WindowController(_local_3.parent).removeChild(_local_3);
             }
-            if (!this._Str_2187)
+            if (!this._children)
             {
-                this._Str_2187 = new Vector.<IWindow>();
+                this._children = new Vector.<IWindow>();
             }
-            this._Str_2187.splice(_arg_2, 0, _local_3);
+            this._children.splice(_arg_2, 0, _local_3);
             _local_3.parent = this;
             if (((this._Str_10190) || (_local_3._Str_4453())))
             {
@@ -2374,15 +2374,15 @@
 
         public function getChildAt(k:int):IWindow
         {
-            return (this._Str_2187) ? (((k < this._Str_2187.length) && (k > -1)) ? this._Str_2187[k] : null) : null;
+            return (this._children) ? (((k < this._children.length) && (k > -1)) ? this._children[k] : null) : null;
         }
 
         public function getChildByID(k:int):IWindow
         {
             var _local_2:IWindow;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     if (_local_2.id == k)
                     {
@@ -2396,9 +2396,9 @@
         public function getChildByName(k:String):IWindow
         {
             var _local_2:IWindow;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     if (_local_2.name == k)
                     {
@@ -2412,16 +2412,16 @@
         public function findChildByName(k:String):IWindow
         {
             var _local_2:WindowController;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     if (_local_2.name == k)
                     {
                         return _local_2;
                     }
                 }
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     _local_2 = (_local_2.findChildByName(k) as WindowController);
                     if (_local_2)
@@ -2436,9 +2436,9 @@
         public function getChildByTag(k:String):IWindow
         {
             var _local_2:IWindow;
-            if (this._Str_2187)
+            if (this._children)
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     if (_local_2.tags.indexOf(k) > -1)
                     {
@@ -2456,9 +2456,9 @@
                 return this;
             }
             var _local_2:WindowController = WindowController(this.getChildByTag(k));
-            if (((_local_2 == null) && (this._Str_2187)))
+            if (((_local_2 == null) && (this._children)))
             {
-                for each (_local_2 in this._Str_2187)
+                for each (_local_2 in this._children)
                 {
                     _local_2 = (_local_2.findChildByTag(k) as WindowController);
                     if (_local_2 != null) break;
@@ -2469,21 +2469,21 @@
 
         public function getChildIndex(k:IWindow):int
         {
-            return (this._Str_2187) ? this._Str_2187.indexOf(k) : -1;
+            return (this._children) ? this._children.indexOf(k) : -1;
         }
 
         public function removeChild(k:IWindow):IWindow
         {
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return null;
             }
-            var _local_2:int = this._Str_2187.indexOf(k);
+            var _local_2:int = this._children.indexOf(k);
             if (_local_2 < 0)
             {
                 return null;
             }
-            this._Str_2187.splice(_local_2, 1);
+            this._children.splice(_local_2, 1);
             k.parent = null;
             var _local_3:IGraphicContextHost = (k as IGraphicContextHost);
             if (((_local_3) && (_local_3._Str_4453())))
@@ -2504,15 +2504,15 @@
         public function setChildIndex(k:IWindow, _arg_2:int):void
         {
             var _local_4:WindowController;
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return;
             }
-            var _local_3:int = this._Str_2187.indexOf(k);
+            var _local_3:int = this._children.indexOf(k);
             if (((_local_3 > -1) && (!(_arg_2 == _local_3))))
             {
-                this._Str_2187.splice(_local_3, 1);
-                this._Str_2187.splice(_arg_2, 0, k);
+                this._children.splice(_local_3, 1);
+                this._children.splice(_arg_2, 0, k);
                 _local_4 = WindowController(k);
                 if (_local_4._Str_4453())
                 {
@@ -2527,18 +2527,18 @@
             var _local_4:int;
             var _local_5:IWindow;
             var _local_6:int;
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return;
             }
             if ((((!(k == null)) && (!(_arg_2 == null))) && (!(k == _arg_2))))
             {
-                _local_3 = this._Str_2187.indexOf(k);
+                _local_3 = this._children.indexOf(k);
                 if (_local_3 < 0)
                 {
                     return;
                 }
-                _local_4 = this._Str_2187.indexOf(_arg_2);
+                _local_4 = this._children.indexOf(_arg_2);
                 if (_local_4 < 0)
                 {
                     return;
@@ -2552,10 +2552,10 @@
                     _local_3 = _local_4;
                     _local_4 = _local_6;
                 }
-                this._Str_2187.splice(_local_4, 1);
-                this._Str_2187.splice(_local_3, 1);
-                this._Str_2187.splice(_local_3, 0, _arg_2);
-                this._Str_2187.splice(_local_4, 0, k);
+                this._children.splice(_local_4, 1);
+                this._children.splice(_local_3, 1);
+                this._children.splice(_local_3, 0, _arg_2);
+                this._children.splice(_local_4, 0, k);
                 if (((WindowController(k)._Str_4453()) || (WindowController(_arg_2)._Str_4453())))
                 {
                     this._graphics._Str_20742(WindowController(k).getGraphicContext(true), WindowController(_arg_2).getGraphicContext(true));
@@ -2565,23 +2565,23 @@
 
         public function swapChildrenAt(k:int, _arg_2:int):void
         {
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return;
             }
-            this.swapChildren(this._Str_2187[k], this._Str_2187[_arg_2]);
+            this.swapChildren(this._children[k], this._children[_arg_2]);
             this._graphics._Str_21032(k, _arg_2);
         }
 
         public function groupChildrenWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint
         {
             var _local_4:WindowController;
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return 0;
             }
             var _local_5:uint;
-            for each (_local_4 in this._Str_2187)
+            for each (_local_4 in this._children)
             {
                 if (_local_4.id == k)
                 {
@@ -2600,12 +2600,12 @@
         public function groupChildrenWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
             var _local_4:WindowController;
-            if (!this._Str_2187)
+            if (!this._children)
             {
                 return 0;
             }
             var _local_5:uint;
-            for each (_local_4 in this._Str_2187)
+            for each (_local_4 in this._children)
             {
                 if (_local_4.tags.indexOf(k) > -1)
                 {
@@ -2642,9 +2642,9 @@
             var k:WindowController;
             if (testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
             {
-                if (this._Str_2187)
+                if (this._children)
                 {
-                    for each (k in this._Str_2187)
+                    for each (k in this._children)
                     {
                         if (k._Str_25024())
                         {

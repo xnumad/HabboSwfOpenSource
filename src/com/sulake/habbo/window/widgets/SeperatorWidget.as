@@ -27,7 +27,7 @@
         private var _Str_2302:IWindowContainer;
         private var _Str_1868:IBitmapWrapperWindow;
         private var _Str_2903:BitmapData;
-        private var _Str_2187:IWindowContainer;
+        private var _children:IWindowContainer;
         private var _vertical:Boolean;
 
         public function SeperatorWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
@@ -38,13 +38,13 @@
             this._habboWindowManagerComponent = _arg_2;
             this._Str_2302 = (this._habboWindowManagerComponent.buildFromXML((this._habboWindowManagerComponent.assets.getAssetByName("separator_xml").content as XML)) as IWindowContainer);
             this._Str_1868 = (this._Str_2302.getChildByName("canvas") as IBitmapWrapperWindow);
-            this._Str_2187 = (this._Str_2302.getChildByName("children") as IWindowContainer);
+            this._children = (this._Str_2302.getChildByName("children") as IWindowContainer);
             this._Str_1868.addEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_2832);
             this._Str_1868.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
-            this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
-            this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
-            this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
-            this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
+            this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
+            this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
+            this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
+            this._children.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
             this._Str_2326.rootWindow = this._Str_2302;
             this._Str_2302.width = this._Str_2326.width;
             this._Str_2302.height = this._Str_2326.height;
@@ -70,13 +70,13 @@
                     this._Str_1868.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
                     this._Str_1868 = null;
                 }
-                if (this._Str_2187 != null)
+                if (this._children != null)
                 {
-                    this._Str_2187.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
-                    this._Str_2187.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
-                    this._Str_2187.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
-                    this._Str_2187.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
-                    this._Str_2187 = null;
+                    this._children.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this._Str_2832);
+                    this._children.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
+                    this._children.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
+                    this._children.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
+                    this._children = null;
                 }
                 if (this._Str_2302 != null)
                 {
@@ -100,7 +100,7 @@
 
         public function get iterator():IIterator
         {
-            return this._Str_2187.iterator;
+            return this._children.iterator;
         }
 
         public function get properties():Array
@@ -186,7 +186,7 @@
                     }
                 }
             }
-            for each (_local_2 in this._Str_2187.iterator)
+            for each (_local_2 in this._children.iterator)
             {
                 if (_local_2.visible)
                 {

@@ -14,7 +14,7 @@
         public function SubstituteParentController(k:WindowContext)
         {
             super("_CONTEXT_SUBSTITUTE_PARENT", 0, 0, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, k, new Rectangle(0, 0, 2000, 2000), null, null, null, null, 0);
-            _Str_2187 = new Vector.<IWindow>();
+            _children = new Vector.<IWindow>();
             _drawable = false;
         }
 
@@ -42,7 +42,7 @@
 
         override public function addChild(k:IWindow):IWindow
         {
-            _Str_2187.push(k);
+            _children.push(k);
             return k;
         }
 
@@ -53,22 +53,22 @@
             {
                 WindowController(_local_3.parent).removeChild(_local_3);
             }
-            _Str_2187.splice(_arg_2, 0, k);
+            _children.splice(_arg_2, 0, k);
             _local_3.parent = this;
             return k;
         }
 
         override public function getChildAt(k:int):IWindow
         {
-            return (_Str_2187) ? ((k < _Str_2187.length) ? _Str_2187[k] : null) : null;
+            return (_children) ? ((k < _children.length) ? _children[k] : null) : null;
         }
 
         override public function getChildByID(k:int):IWindow
         {
             var _local_2:IWindow;
-            if (_Str_2187)
+            if (_children)
             {
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     if (_local_2.id == k)
                     {
@@ -82,9 +82,9 @@
         override public function getChildByName(k:String):IWindow
         {
             var _local_2:IWindow;
-            if (_Str_2187)
+            if (_children)
             {
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     if (_local_2.name == k)
                     {
@@ -98,16 +98,16 @@
         override public function findChildByName(k:String):IWindow
         {
             var _local_2:WindowController;
-            if (_Str_2187)
+            if (_children)
             {
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     if (_local_2.name == k)
                     {
                         return _local_2;
                     }
                 }
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     _local_2 = (_local_2.findChildByName(k) as WindowController);
                     if (_local_2)
@@ -121,10 +121,10 @@
 
         override public function removeChild(k:IWindow):IWindow
         {
-            var _local_2:int = _Str_2187.indexOf(k);
+            var _local_2:int = _children.indexOf(k);
             if (_local_2 > -1)
             {
-                _Str_2187.splice(_local_2, 1);
+                _children.splice(_local_2, 1);
                 k.parent = null;
                 return k;
             }
@@ -133,11 +133,11 @@
 
         override public function setChildIndex(k:IWindow, _arg_2:int):void
         {
-            var _local_3:int = _Str_2187.indexOf(k);
+            var _local_3:int = _children.indexOf(k);
             if (((_local_3 > -1) && (!(_arg_2 == _local_3))))
             {
-                _Str_2187.splice(_local_3, 1);
-                _Str_2187.splice(_arg_2, 0, k);
+                _children.splice(_local_3, 1);
+                _children.splice(_arg_2, 0, k);
             }
         }
 
@@ -149,12 +149,12 @@
             var _local_6:int;
             if ((((!(k == null)) && (!(_arg_2 == null))) && (!(k == _arg_2))))
             {
-                _local_3 = _Str_2187.indexOf(k);
+                _local_3 = _children.indexOf(k);
                 if (_local_3 < 0)
                 {
                     return;
                 }
-                _local_4 = _Str_2187.indexOf(_arg_2);
+                _local_4 = _children.indexOf(_arg_2);
                 if (_local_4 < 0)
                 {
                     return;
@@ -168,16 +168,16 @@
                     _local_3 = _local_4;
                     _local_4 = _local_6;
                 }
-                _Str_2187.splice(_local_4, 1);
-                _Str_2187.splice(_local_3, 1);
-                _Str_2187.splice(_local_3, 0, _arg_2);
-                _Str_2187.splice(_local_4, 0, k);
+                _children.splice(_local_4, 1);
+                _children.splice(_local_3, 1);
+                _children.splice(_local_3, 0, _arg_2);
+                _children.splice(_local_4, 0, k);
             }
         }
 
         override public function swapChildrenAt(k:int, _arg_2:int):void
         {
-            this.swapChildren(_Str_2187[k], _Str_2187[_arg_2]);
+            this.swapChildren(_children[k], _children[_arg_2]);
         }
     }
 }

@@ -49,7 +49,7 @@
             var _local_4:int = this._Str_22917();
             if (!this._vertical)
             {
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     if (_local_2.visible)
                     {
@@ -72,7 +72,7 @@
             }
             else
             {
-                for each (_local_2 in _Str_2187)
+                for each (_local_2 in _children)
                 {
                     if (_local_2.visible)
                     {
@@ -121,7 +121,7 @@
         {
             var _local_2:IWindow;
             var k:int;
-            for each (_local_2 in _Str_2187)
+            for each (_local_2 in _children)
             {
                 if (_local_2.visible)
                 {
@@ -135,7 +135,7 @@
         {
             var _local_2:IWindow;
             var k:int = ((this._vertical) ? (this.height - (this._verticalPadding * 2)) : (this.width - (this._horizontalPadding * 2)));
-            for each (_local_2 in _Str_2187)
+            for each (_local_2 in _children)
             {
                 if (_local_2.visible != false)
                 {
