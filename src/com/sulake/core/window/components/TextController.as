@@ -1478,10 +1478,10 @@
 
         public function set styleSheet(k:StyleSheet):void
         {
-            this._Str_25457(this, k);
+            this.setStyleSheet(this, k);
         }
 
-        private function _Str_25457(k:TextController, _arg_2:StyleSheet):void
+        private function setStyleSheet(k:TextController, _arg_2:StyleSheet):void
         {
             k._Str_2309.styleSheet = _arg_2;
             this.refreshTextImage();
