@@ -523,7 +523,7 @@
                 _friendBarView = k;
             }, true, [{
                 "type":FriendBarResizeEvent.FBE_BAR_RESIZE_EVENT,
-                "callback":this._Str_21850
+                "callback":this.bottomBarResizeHandler
             }]), new ComponentDependency(new IIDHabboLandingView(), function (k:IHabboLandingView):void
             {
                 _landingView = k;
@@ -771,10 +771,10 @@
 
         public function triggerbottomBarResize():void
         {
-            this._Str_21850(new FriendBarResizeEvent());
+            this.bottomBarResizeHandler(new FriendBarResizeEvent());
         }
 
-        private function _Str_21850(k:FriendBarResizeEvent):void
+        private function bottomBarResizeHandler(k:FriendBarResizeEvent):void
         {
             var _local_2:String = this.getRoomIdentifier(this._roomEngine.activeRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
