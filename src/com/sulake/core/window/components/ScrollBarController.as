@@ -25,7 +25,7 @@
         protected var _scrollable:IScrollableWindow;
         private var _horizontal:Boolean;
         private var _targetName:String;
-        private var _Str_12228:Boolean = false;
+        private var _handlingButtonEvent:Boolean = false;
 
         public function ScrollBarController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0, _arg_12:IScrollableWindow=null)
         {
@@ -247,7 +247,7 @@
                 case ScrollBarController.SLIDER_BAR:
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_CHILD_RELOCATED)
                     {
-                        if (!this._Str_12228)
+                        if (!this._handlingButtonEvent)
                         {
                             if (this._horizontal)
                             {
@@ -372,7 +372,7 @@
                 {
                     if (this._scrollable)
                     {
-                        this._Str_12228 = true;
+                        this._handlingButtonEvent = true;
                         if (this._horizontal)
                         {
                             this.scrollH = (this.scrollH + (this._scrollable.scrollStepH / this._scrollable.maxScrollH));
@@ -381,7 +381,7 @@
                         {
                             this.scrollV = (this.scrollV + (this._scrollable.scrollStepV / this._scrollable.maxScrollV));
                         }
-                        this._Str_12228 = false;
+                        this._handlingButtonEvent = false;
                     }
                 }
                 else
@@ -390,7 +390,7 @@
                     {
                         if (this._scrollable)
                         {
-                            this._Str_12228 = true;
+                            this._handlingButtonEvent = true;
                             if (this._horizontal)
                             {
                                 this.scrollH = (this.scrollH - (this._scrollable.scrollStepH / this._scrollable.maxScrollH));
@@ -399,7 +399,7 @@
                             {
                                 this.scrollV = (this.scrollV - (this._scrollable.scrollStepV / this._scrollable.maxScrollV));
                             }
-                            this._Str_12228 = false;
+                            this._handlingButtonEvent = false;
                         }
                     }
                     else
