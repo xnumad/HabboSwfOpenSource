@@ -70,7 +70,7 @@
             return null;
         }
 
-        public function _Str_5401(k:Boolean, _arg_2:Boolean=false):int
+        public function getFriendCount(k:Boolean, _arg_2:Boolean=false):int
         {
             var _local_4:Friend;
             var _local_3:int;

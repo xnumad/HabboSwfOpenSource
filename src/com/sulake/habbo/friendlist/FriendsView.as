@@ -44,7 +44,7 @@
 
         public function _Str_14366():int
         {
-            return this._friendList.categories._Str_5401(true);
+            return this._friendList.categories.getFriendCount(true);
         }
 
         public function _Str_15797(k:IWindowContainer):void

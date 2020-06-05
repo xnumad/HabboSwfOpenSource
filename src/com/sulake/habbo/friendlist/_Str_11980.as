@@ -176,7 +176,7 @@
                 return;
             }
             _local_2.state = FriendRequest._Str_7320;
-            if (this._habboFriendList.categories._Str_5401(false) >= this._habboFriendList.friendRequests.limit)
+            if (this._habboFriendList.categories.getFriendCount(false) >= this._habboFriendList.friendRequests.limit)
             {
                 this._habboFriendList._Str_18624();
                 return;
@@ -195,7 +195,7 @@
         public function _Str_17684():void
         {
             var _local_2:FriendRequest;
-            if ((this._habboFriendList.categories._Str_5401(false) + this._habboFriendList.friendRequests.requests.length) > this._habboFriendList.friendRequests.limit)
+            if ((this._habboFriendList.categories.getFriendCount(false) + this._habboFriendList.friendRequests.requests.length) > this._habboFriendList.friendRequests.limit)
             {
                 this._habboFriendList._Str_18624();
                 return;

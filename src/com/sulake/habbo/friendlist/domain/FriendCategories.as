@@ -62,13 +62,13 @@
             return this._friendsById;
         }
 
-        public function _Str_5401(k:Boolean, _arg_2:Boolean=false):int
+        public function getFriendCount(k:Boolean, _arg_2:Boolean=false):int
         {
             var _local_4:_Str_2591;
             var _local_3:int;
             for each (_local_4 in this._categories)
             {
-                _local_3 = (_local_3 + _local_4._Str_5401(k, _arg_2));
+                _local_3 = (_local_3 + _local_4.getFriendCount(k, _arg_2));
             }
             return _local_3;
         }

@@ -271,7 +271,7 @@
                 Logger.log("Cannot process canBeAskedForAFriend. Friendlist not initialized.");
                 return false;
             }
-            return ((this.getFriend(k) == null) && (!(this._Str_4227.isRequestFriend(k)))) && (this.categories._Str_5401(false) < this.friendRequests.limit);
+            return ((this.getFriend(k) == null) && (!(this._Str_4227.isRequestFriend(k)))) && (this.categories.getFriendCount(false) < this.friendRequests.limit);
         }
 
         public function askForAFriend(k:int, _arg_2:String):Boolean
@@ -363,14 +363,14 @@
             this._Str_21357 = k;
         }
 
-        public function _Str_5401(k:Boolean, _arg_2:Boolean):int
+        public function getFriendCount(k:Boolean, _arg_2:Boolean):int
         {
             if (this._view == null)
             {
                 Logger.log("Cannot get friend count. Friendlist not initialized.");
                 return 0;
             }
-            return this._categories._Str_5401(k, _arg_2);
+            return this._categories.getFriendCount(k, _arg_2);
         }
 
         public function _Str_10781(k:String, _arg_2:String, _arg_3:Function, _arg_4:int=0, _arg_5:int=0, _arg_6:int=0):IBitmapWrapperWindow
@@ -487,7 +487,7 @@
             }
             this._Str_22340();
             this._Str_22421();
-            if (this._categories._Str_5401(true, false) == 0)
+            if (this._categories.getFriendCount(true, false) == 0)
             {
                 _local_4 = this._categories._Str_5067(_Str_2591._Str_7666);
                 if (_local_4)
