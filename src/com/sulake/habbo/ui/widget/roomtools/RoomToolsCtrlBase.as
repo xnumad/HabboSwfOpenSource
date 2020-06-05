@@ -56,7 +56,7 @@
             this._window.findChildByName(k).visible = _arg_2;
         }
 
-        protected function _Str_18018():void
+        protected function collapseAfterDelay():void
         {
             this._Str_10524();
             this._windowCollapseTimer = new Timer(this._windowCollapseDelay, 1);
@@ -68,7 +68,7 @@
         {
             if (this._windowCollapsePending)
             {
-                this._Str_18018();
+                this.collapseAfterDelay();
             }
         }
 

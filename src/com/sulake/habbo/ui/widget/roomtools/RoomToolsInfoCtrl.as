@@ -85,7 +85,7 @@
             _isCollapsed = k;
             if (!_isCollapsed)
             {
-                _Str_18018();
+                collapseAfterDelay();
             }
             if (!_window)
             {
