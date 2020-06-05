@@ -1229,7 +1229,7 @@
                     break;
                 case RoomEngineRoomAdEvent.TOOLTIP_SHOW:
                 case RoomEngineRoomAdEvent.TOOLTIP_HIDE:
-                    this._Str_22753(k);
+                    this.handleRoomAdTooltip(k);
                     break;
                 case RoomEngineTriggerWidgetEvent.RETWE_REQUEST_CLOTHING_CHANGE:
                     _local_5 = new RoomWidgetFurniToWidgetMessage(RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_CLOTHING_CHANGE, _local_2, _local_3, k.roomId);
@@ -1875,7 +1875,7 @@
             }
         }
 
-        private function _Str_22753(k:RoomEngineObjectEvent):void
+        private function handleRoomAdTooltip(k:RoomEngineObjectEvent):void
         {
             var _local_2:IRoomObject;
             var _local_3:String;
