@@ -53,7 +53,7 @@
         protected var _debug:Boolean = false;
         protected var _limits:WindowRectLimits;
         protected var _immediateClickMode:Boolean = false;
-        private var _Str_9367:DynamicStyle;
+        private var _currentDynamicStyle:DynamicStyle;
         private var _Str_10190:Boolean = false;
         private var _Str_5110:Rectangle;
         private var _Str_2995:uint;
@@ -1280,9 +1280,9 @@
             {
                 return;
             }
-            if (((!(this._Str_9367)) || (!(this._Str_9367.name == _dynamicStyle))))
+            if (((!(this._currentDynamicStyle)) || (!(this._currentDynamicStyle.name == _dynamicStyle))))
             {
-                this._Str_9367 = DynamicStyleManager.getStyle(_dynamicStyle);
+                this._currentDynamicStyle = DynamicStyleManager.getStyle(_dynamicStyle);
             }
             if (this.getStateFlag(WindowState.DISABLED))
             {
@@ -1306,7 +1306,7 @@
                     }
                 }
             }
-            this._Str_20599(this, this._Str_9367, k);
+            this._Str_20599(this, this._currentDynamicStyle, k);
             if (this._children)
             {
                 this._Str_21070(this._children, k);
@@ -1346,9 +1346,9 @@
             var _local_3:WindowController;
             for each (_local_3 in k)
             {
-                if (this._Str_9367.getChildStyle(_local_3))
+                if (this._currentDynamicStyle.getChildStyle(_local_3))
                 {
-                    this._Str_20599(_local_3, this._Str_9367.getChildStyle(_local_3), _arg_2);
+                    this._Str_20599(_local_3, this._currentDynamicStyle.getChildStyle(_local_3), _arg_2);
                 }
                 if (_local_3._children)
                 {
