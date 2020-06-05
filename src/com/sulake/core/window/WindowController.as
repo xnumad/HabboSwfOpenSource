@@ -1546,7 +1546,7 @@
             return _local_2.intersects(k);
         }
 
-        public function _Str_22545(k:Point, _arg_2:BitmapData):Boolean
+        public function validateGlobalPointIntersection(k:Point, _arg_2:BitmapData):Boolean
         {
             var _local_3:Point = new Point();
             this.getGlobalPosition(_local_3);
@@ -2177,7 +2177,7 @@
                         _local_5--;
                     }
                 }
-                if (this._Str_22545(k, null))
+                if (this.validateGlobalPointIntersection(k, null))
                 {
                     return this;
                 }
