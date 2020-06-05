@@ -200,7 +200,7 @@
             this._Str_7516();
         }
 
-        public function _Str_24158(k:int):void
+        public function setVerticalPadding(k:int):void
         {
             this._verticalPadding = k;
             this._Str_7516();
