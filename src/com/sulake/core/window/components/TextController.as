@@ -251,7 +251,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_22964(k:TextController, _arg_2:int):void
+        private static function setMarginLeft(k:TextController, _arg_2:int):void
         {
             if (((k._Str_2480) && (!(k._Str_2480.left == _arg_2))))
             {
@@ -591,7 +591,7 @@
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = _Str_24930;
             k[PropertyKeys.TEXT_COLOR] = _Str_18306;
             k[PropertyKeys.TEXT_STYLE] = _Str_25567;
-            k[PropertyKeys.MARGIN_LEFT] = _Str_22964;
+            k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
             k[PropertyKeys.MARGIN_TOP] = _Str_24238;
             k[PropertyKeys.MARGIN_RIGHT] = _Str_22453;
             k[PropertyKeys.MARGIN_BOTTOM] = _Str_24630;
