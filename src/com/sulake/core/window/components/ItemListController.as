@@ -257,7 +257,7 @@
             return (this.numListItems > 0) ? this.getListItemAt(0) : null;
         }
 
-        public function get _Str_25983():IWindow
+        public function get lastListItem():IWindow
         {
             return (this.numListItems > 0) ? this.getListItemAt((this.numListItems - 1)) : null;
         }
