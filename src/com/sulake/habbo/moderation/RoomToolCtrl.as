@@ -146,11 +146,11 @@
 
         public function onRoomChange():void
         {
-            this._Str_20264("send_caution_but");
-            this._Str_20264("send_message_but");
+            this.setSendButtonState("send_caution_but");
+            this.setSendButtonState("send_message_but");
         }
 
-        private function _Str_20264(k:String):void
+        private function setSendButtonState(k:String):void
         {
             var _local_2:Boolean = ((!(this._data == null)) && (this._data.flatId == this._main.currentFlatId));
             var _local_3:IButtonWindow = IButtonWindow(this._frame.findChildByName(k));
