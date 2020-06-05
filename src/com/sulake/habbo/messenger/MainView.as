@@ -313,7 +313,7 @@
         {
             this._currentConversationId = k;
             setAvatarVisibilityTag(this.getAvatarWrapper(k), true);
-            this._Str_20231(k, false);
+            this.setChatIndicatorVisibility(k, false);
             this._Str_21370();
             this._Str_7204();
             var _local_2:IFriend = this._messenger.getFriend(this._currentConversationId);
@@ -467,7 +467,7 @@
             {
                 if (_arg_3)
                 {
-                    this._Str_20231(k, true);
+                    this.setChatIndicatorVisibility(k, true);
                 }
                 if (this._Str_9747 == 1)
                 {
@@ -509,7 +509,7 @@
             return this._avatarList.getChildByID(k) as IWindowContainer;
         }
 
-        private function _Str_20231(k:int, _arg_2:Boolean):void
+        private function setChatIndicatorVisibility(k:int, _arg_2:Boolean):void
         {
             var _local_3:IWindowContainer = this.getAvatarWrapper(k);
             if (_local_3 != null)
