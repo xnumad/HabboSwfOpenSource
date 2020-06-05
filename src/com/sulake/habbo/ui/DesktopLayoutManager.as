@@ -141,7 +141,7 @@
             return true;
         }
 
-        public function window2(k:String, _arg_2:IWindow):void
+        public function removeWidgetWindow(k:String, _arg_2:IWindow):void
         {
             var _local_3:IWindowContainer = this.getWidgetContainer(k, _arg_2);
             if (_local_3 != null)

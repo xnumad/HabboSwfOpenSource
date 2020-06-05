@@ -1002,7 +1002,7 @@
                 {
                     if (this._layoutManager != null)
                     {
-                        this._layoutManager.window2(k, _local_2.mainWindow);
+                        this._layoutManager.removeWidgetWindow(k, _local_2.mainWindow);
                     }
                     _local_2.dispose();
                 }
