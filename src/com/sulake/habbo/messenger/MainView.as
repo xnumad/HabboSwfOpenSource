@@ -518,7 +518,7 @@
             }
         }
 
-        private function _Str_20924(k:ChatEntry):IWindow
+        private function createChatItem(k:ChatEntry):IWindow
         {
             var _local_2:IWidgetWindow;
             var _local_3:_Str_3904;
@@ -601,7 +601,7 @@
 
         private function _Str_20919(k:ChatEntry, _arg_2:Boolean=true):void
         {
-            this._conversationList.addListItem(this._Str_20924(k));
+            this._conversationList.addListItem(this.createChatItem(k));
             if (_arg_2)
             {
                 this._conversationList.scrollV = 1;
@@ -687,7 +687,7 @@
             var _local_6:int = Math.max(0, (_local_4 - CHAT_ITEM_RENDER_BUNDLE_SIZE));
             while (_local_6 < _local_4)
             {
-                this._conversationList.addListItemAt(this._Str_20924(_local_3[_local_6]), _local_5);
+                this._conversationList.addListItemAt(this.createChatItem(_local_3[_local_6]), _local_5);
                 _local_5++;
                 _local_6++;
             }
