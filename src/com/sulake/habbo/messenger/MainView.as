@@ -260,7 +260,7 @@
             {
                 this.selectConversation(k);
             }
-            this._Str_16374();
+            this.refreshChatCount();
         }
 
         public function addConsoleMessage(k:int, _arg_2:String, _arg_3:int, _arg_4:String):void
@@ -348,10 +348,10 @@
                     }
                 }
             }
-            this._Str_16374();
+            this.refreshChatCount();
         }
 
-        private function _Str_16374():void
+        private function refreshChatCount():void
         {
             this._messenger.localization.registerParameter("messenger.window.title", "open_chat_count", this._Str_9747.toString());
             this._messenger._Str_23234(this._Str_9747);
@@ -474,7 +474,7 @@
                     this.selectConversation(k);
                 }
             }
-            this._Str_16374();
+            this.refreshChatCount();
         }
 
         private function _Str_25635(k:TimerEvent):void
