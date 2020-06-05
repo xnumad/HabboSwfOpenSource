@@ -354,7 +354,7 @@
         private function refreshChatCount():void
         {
             this._messenger.localization.registerParameter("messenger.window.title", "open_chat_count", this.visibleAvatarCount.toString());
-            this._messenger._Str_23234(this.visibleAvatarCount);
+            this._messenger.conversationCountUpdated(this.visibleAvatarCount);
         }
 
         private function recordChatMessage(k:int, _arg_2:String, _arg_3:Boolean, _arg_4:int, _arg_5:String=null):void

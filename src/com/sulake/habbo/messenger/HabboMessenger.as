@@ -267,7 +267,7 @@
             }
         }
 
-        public function _Str_23234(k:int):void
+        public function conversationCountUpdated(k:int):void
         {
             events.dispatchEvent(new ActiveConversationEvent(ActiveConversationEvent.ACCE_CHANGED, k));
         }
