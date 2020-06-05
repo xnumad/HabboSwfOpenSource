@@ -18,7 +18,7 @@
         protected var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
         protected var _isCollapsed:Boolean = true;
-        protected var _Str_5637:Timer;
+        protected var _windowCollapseTimer:Timer;
         protected var _Str_13353:Boolean;
         protected var _Str_20667:int;
 
@@ -38,10 +38,10 @@
                 this._window.dispose();
                 this._window = null;
             }
-            if (this._Str_5637)
+            if (this._windowCollapseTimer)
             {
-                this._Str_5637.reset();
-                this._Str_5637 = null;
+                this._windowCollapseTimer.reset();
+                this._windowCollapseTimer = null;
                 this._Str_13353 = false;
             }
             this._widget = null;
@@ -59,9 +59,9 @@
         protected function _Str_18018():void
         {
             this._Str_10524();
-            this._Str_5637 = new Timer(this._Str_20667, 1);
-            this._Str_5637.addEventListener(TimerEvent.TIMER, this._Str_22422);
-            this._Str_5637.start();
+            this._windowCollapseTimer = new Timer(this._Str_20667, 1);
+            this._windowCollapseTimer.addEventListener(TimerEvent.TIMER, this._Str_22422);
+            this._windowCollapseTimer.start();
         }
 
         protected function _Str_20157():void
@@ -74,10 +74,10 @@
 
         protected function _Str_10524():void
         {
-            if (this._Str_5637 != null)
+            if (this._windowCollapseTimer != null)
             {
-                this._Str_5637.reset();
-                this._Str_5637 = null;
+                this._windowCollapseTimer.reset();
+                this._windowCollapseTimer = null;
             }
             this._Str_13353 = false;
         }
@@ -90,7 +90,7 @@
 
         protected function _Str_21734():void
         {
-            if (this._Str_5637 != null)
+            if (this._windowCollapseTimer != null)
             {
                 this._Str_10524();
                 this._Str_13353 = true;
