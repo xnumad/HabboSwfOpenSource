@@ -102,7 +102,7 @@
             }
         }
 
-        private function _Str_17242(k:Boolean=false):void
+        private function updateScrollBarVisibility(k:Boolean=false):void
         {
             if (this._autoHideScrollBar)
             {
@@ -131,7 +131,7 @@
         public function set autoHideScrollBar(k:Boolean):void
         {
             this._autoHideScrollBar = k;
-            this._Str_17242(true);
+            this.updateScrollBarVisibility(true);
         }
 
         public function get autoHideScrollBar():Boolean

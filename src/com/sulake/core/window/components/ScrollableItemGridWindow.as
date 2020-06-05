@@ -68,7 +68,7 @@
         public function set autoHideScrollBar(k:Boolean):void
         {
             this._autoHideScrollBar = k;
-            this._Str_17242();
+            this.updateScrollBarVisibility();
         }
 
         public function get iterator():IIterator
@@ -364,7 +364,7 @@
             }
         }
 
-        private function _Str_17242():void
+        private function updateScrollBarVisibility():void
         {
             if (this._autoHideScrollBar)
             {
