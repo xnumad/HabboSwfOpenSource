@@ -227,7 +227,7 @@
             this._session = k;
             this._assets = _arg_2;
             this._connection = _arg_3;
-            this._botSkillListUpdateMessageEvent = new BotSkillListUpdateEvent(this._Str_23048);
+            this._botSkillListUpdateMessageEvent = new BotSkillListUpdateEvent(this.onBotSkillListUpdateEvent);
             this._connection.addMessageEvent(this._botSkillListUpdateMessageEvent);
             this._botForceOpenContextMenuMessageEvent = new BotForceOpenContextMenuEvent(this.onBotForceOpenContextMenuEvent);
             this._connection.addMessageEvent(this._botForceOpenContextMenuMessageEvent);
@@ -664,7 +664,7 @@
             this._roomViewContainerRect = null;
         }
 
-        private function _Str_23048(k:BotSkillListUpdateEvent):void
+        private function onBotSkillListUpdateEvent(k:BotSkillListUpdateEvent):void
         {
             var _local_3:RoomUserData;
             var _local_2:BotSkillListUpdateParser = k.getParser();
