@@ -2,7 +2,7 @@
 {
     import com.sulake.room.utils.Vector3d;
 
-    public class _Str_3381 
+    public class SlideObjectMessageData
     {
         public static const MV:String = "mv";
         public static const SLD:String = "sld";
@@ -13,7 +13,7 @@
         private var _Str_16956:String;
         private var _isReadOnly:Boolean = false;
 
-        public function _Str_3381(k:int, _arg_2:Vector3d, _arg_3:Vector3d, _arg_4:String=null)
+        public function SlideObjectMessageData(k:int, _arg_2:Vector3d, _arg_3:Vector3d, _arg_4:String=null)
         {
             this._id = k;
             this._loc = _arg_2;

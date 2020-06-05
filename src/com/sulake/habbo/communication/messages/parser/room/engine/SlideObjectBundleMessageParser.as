@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3381;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectMessageData;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -9,7 +9,7 @@
     {
         private var _id:int;
         private var _objectList:Array;
-        private var _avatar:_Str_3381 = null;
+        private var _avatar:SlideObjectMessageData = null;
 
 
         public function get id():int
@@ -17,7 +17,7 @@
             return this._id;
         }
 
-        public function get avatar():_Str_3381
+        public function get avatar():SlideObjectMessageData
         {
             return this._avatar;
         }
@@ -38,7 +38,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var _local_7:int;
-            var _local_8:_Str_3381;
+            var _local_8:SlideObjectMessageData;
             var _local_9:Vector3d;
             var _local_10:Vector3d;
             var _local_11:Number;
@@ -61,7 +61,7 @@
                 _local_12 = Number(k.readString());
                 _local_9 = new Vector3d(_local_2, _local_3, _local_11);
                 _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                _local_8 = new _Str_3381(_local_7, _local_9, _local_10);
+                _local_8 = new SlideObjectMessageData(_local_7, _local_9, _local_10);
                 this._objectList.push(_local_8);
                 _local_13++;
             }
@@ -81,7 +81,7 @@
                     _local_12 = Number(k.readString());
                     _local_9 = new Vector3d(_local_2, _local_3, _local_11);
                     _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                    this._avatar = new _Str_3381(_local_7, _local_9, _local_10, _Str_3381.MV);
+                    this._avatar = new SlideObjectMessageData(_local_7, _local_9, _local_10, SlideObjectMessageData.MV);
                     break;
                 case 2:
                     _local_7 = k.readInteger();
@@ -89,7 +89,7 @@
                     _local_12 = Number(k.readString());
                     _local_9 = new Vector3d(_local_2, _local_3, _local_11);
                     _local_10 = new Vector3d(_local_4, _local_5, _local_12);
-                    this._avatar = new _Str_3381(_local_7, _local_9, _local_10, _Str_3381.SLD);
+                    this._avatar = new SlideObjectMessageData(_local_7, _local_9, _local_10, SlideObjectMessageData.SLD);
                     break;
                 default:
                     Logger.log("** Incompatible character movetype!");

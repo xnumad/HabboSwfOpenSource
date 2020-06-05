@@ -96,7 +96,7 @@
     import com.sulake.habbo.communication.messages.parser.room.action.CarryObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.action.UseObjectMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.SlideObjectBundleMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_3381;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectMessageData;
     import com.sulake.room.object.IRoomObject;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
     import com.sulake.habbo.communication.messages.parser.room.chat.ChatMessageParser;
@@ -1081,8 +1081,8 @@
             var _local_2:SlideObjectBundleMessageParser;
             var _local_3:Array;
             var _local_4:int;
-            var _local_5:_Str_3381;
-            var _local_6:_Str_3381;
+            var _local_5:SlideObjectMessageData;
+            var _local_6:SlideObjectMessageData;
             var _local_7:IRoomObject;
             var _local_8:String;
             var _local_9:IRoomInstance;
@@ -1122,10 +1122,10 @@
                     {
                         switch (_local_6._Str_21300)
                         {
-                            case _Str_3381.MV:
+                            case SlideObjectMessageData.MV:
                                 _local_8 = "mv";
                                 break;
-                            case _Str_3381.SLD:
+                            case SlideObjectMessageData.SLD:
                                 _local_8 = "std";
                                 break;
                         }
