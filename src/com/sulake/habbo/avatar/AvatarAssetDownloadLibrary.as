@@ -11,7 +11,7 @@
 
     public class AvatarAssetDownloadLibrary extends EventDispatcherWrapper 
     {
-        private static var _Str_694:int = 0;
+        private static var STATE_IDLE:int = 0;
         private static var _Str_997:int = 1;
         private static var _Str_599:int = 2;
 
@@ -23,7 +23,7 @@
 
         public function AvatarAssetDownloadLibrary(k:String, _arg_2:String, _arg_3:String, _arg_4:IAssetLibrary, _arg_5:String)
         {
-            this._state = _Str_694;
+            this._state = STATE_IDLE;
             this._assets = _arg_4;
             this._libraryName = String(k);
             this._revision = String(_arg_2);

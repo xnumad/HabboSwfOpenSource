@@ -22,7 +22,7 @@
     {
         public static const ITEM_HEIGHT:int = 70;
         public static const SIDE_MARGIN:int = 5;
-        private static const _Str_694:int = 0;
+        private static const STATE_IDLE:int = 0;
         private static const _Str_3847:int = 1;
         private static const _Str_14483:int = 2;
         private static const _Str_6008:int = 3;
@@ -68,7 +68,7 @@
             this._windowMinHeight = this._window.height;
             this._margin = 4;
             this._blend = 0;
-            this._state = _Str_694;
+            this._state = STATE_IDLE;
             this.showItem(_arg_5);
         }
 
@@ -79,7 +79,7 @@
 
         public function get ready():Boolean
         {
-            return this._state == _Str_694;
+            return this._state == STATE_IDLE;
         }
 
         public function get verticalPosition():int
@@ -128,7 +128,7 @@
             var _local_3:Number;
             switch (this._state)
             {
-                case _Str_694:
+                case STATE_IDLE:
                     return;
                 case _Str_3847:
                     this._fadeInStart = (this._fadeInStart + k);
@@ -258,7 +258,7 @@
 
         private function startIdling():void
         {
-            this._state = _Str_694;
+            this._state = STATE_IDLE;
             this._window.visible = false;
         }
 
