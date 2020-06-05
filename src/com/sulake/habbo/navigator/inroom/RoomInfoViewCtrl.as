@@ -34,7 +34,7 @@
         private var _navigator:IHabboTransitionalNavigator;
         private var _guildInfoCtrl:GuildInfoCtrl;
         private var _window:IFrameWindow;
-        private var _Str_3306:TagRenderer;
+        private var _tagRenderer:TagRenderer;
         private var _Str_9199:Boolean = false;
         private var _Str_2500:Boolean = false;
 
@@ -42,7 +42,7 @@
         {
             this._navigator = k;
             this._guildInfoCtrl = new GuildInfoCtrl(this._navigator);
-            this._Str_3306 = new TagRenderer(this._navigator);
+            this._tagRenderer = new TagRenderer(this._navigator);
         }
 
         public function dispose():void
@@ -54,10 +54,10 @@
                 this._window.dispose();
                 this._window = null;
             }
-            if (this._Str_3306)
+            if (this._tagRenderer)
             {
-                this._Str_3306.dispose();
-                this._Str_3306 = null;
+                this._tagRenderer.dispose();
+                this._tagRenderer = null;
             }
             if (this._guildInfoCtrl)
             {
@@ -114,7 +114,7 @@
             {
                 return;
             }
-            this._Str_3306._Str_8651 = true;
+            this._tagRenderer._Str_8651 = true;
             this._Str_2755();
             Util._Str_2930(this._window.content);
             this.refreshRoomDetails(this._navigator.data._Str_2678);
@@ -186,7 +186,7 @@
             }
             var _local_5:ITextWindow = ITextWindow(this.find("room_desc"));
             _local_5.text = k.description;
-            this._Str_3306._Str_19120(_local_2, k.tags);
+            this._tagRenderer._Str_19120(_local_2, k.tags);
             _local_5.visible = false;
             if (k.description != "")
             {

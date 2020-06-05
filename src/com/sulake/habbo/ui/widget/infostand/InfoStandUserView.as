@@ -54,7 +54,7 @@
         protected var _Str_2373:IItemListWindow;
         protected var _Str_20844:IItemListWindow;
         private var _Str_2341:IBorderWindow;
-        private var _Str_3306:TagListRenderer;
+        private var _tagRenderer:TagListRenderer;
         private var _Str_2919:IBorderWindow;
         private var _Str_19966:int;
         protected var _Str_4966:IRegionWindow;
@@ -63,7 +63,7 @@
         {
             this._widget = k;
             this.createWindow(_arg_2);
-            this._Str_3306 = new TagListRenderer(k, this._Str_25162);
+            this._tagRenderer = new TagListRenderer(k, this._Str_25162);
         }
 
         public function dispose():void
@@ -76,8 +76,8 @@
             this._widget = null;
             this._window.dispose();
             this._window = null;
-            this._Str_3306.dispose();
-            this._Str_3306 = null;
+            this._tagRenderer.dispose();
+            this._tagRenderer = null;
             this._Str_9682();
         }
 
@@ -461,7 +461,7 @@
             }
             if (k.length != 0)
             {
-                _local_3.height = this._Str_3306._Str_23731(k, _local_3, _arg_2);
+                _local_3.height = this._tagRenderer._Str_23731(k, _local_3, _arg_2);
                 _local_4.height = 1;
             }
             else
