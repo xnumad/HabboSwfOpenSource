@@ -361,30 +361,30 @@
         {
             if (_arg_3)
             {
-                this._Str_8645(k, new ChatEntry(ChatEntry._Str_8431, k, _arg_2, _arg_4, _arg_5), true);
+                this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_8431, k, _arg_2, _arg_4, _arg_5), true);
             }
             else
             {
-                this._Str_8645(k, new ChatEntry(ChatEntry._Str_9544, 0, _arg_2, _arg_4));
+                this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_9544, 0, _arg_2, _arg_4));
             }
         }
 
         private function recordNotificationMessage(k:int, _arg_2:String):void
         {
-            this._Str_8645(k, new ChatEntry(ChatEntry._Str_10130, 0, _arg_2, 0));
+            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_10130, 0, _arg_2, 0));
         }
 
         private function recordInfoMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
-            this._Str_8645(k, new ChatEntry(ChatEntry._Str_12682, 0, _arg_2, 0), _arg_3);
+            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_12682, 0, _arg_2, 0), _arg_3);
         }
 
         private function recordInvitationMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
-            this._Str_8645(k, new ChatEntry(ChatEntry._Str_15691, 0, _arg_2, 0), _arg_3);
+            this.recordChatEntry(k, new ChatEntry(ChatEntry._Str_15691, 0, _arg_2, 0), _arg_3);
         }
 
-        private function _Str_8645(k:int, _arg_2:ChatEntry, _arg_3:Boolean=false):void
+        private function recordChatEntry(k:int, _arg_2:ChatEntry, _arg_3:Boolean=false):void
         {
             var _local_6:ChatEntry;
             var _local_7:Boolean;
@@ -493,7 +493,7 @@
                     for each (_local_3 in this._pendingMessages)
                     {
                         _local_2 = _local_3._Str_20358;
-                        this._Str_8645(_local_3._Str_20358, _local_3._Str_24552, _local_3._Str_24452);
+                        this.recordChatEntry(_local_3._Str_20358, _local_3._Str_24552, _local_3._Str_24452);
                     }
                     this._Str_21370();
                     this._Str_7204();
