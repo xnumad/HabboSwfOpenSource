@@ -478,7 +478,7 @@
                 _adManager = k;
             }, true, [{
                 "type":InterstitialEvent.INTERSTITIAL_NOT_SHOWN,
-                "callback":this._Str_25420
+                "callback":this.interstitialNotAvailableEventHandler
             }, {
                 "type":InterstitialEvent.INTERSTITIAL_COMPLETE,
                 "callback":this._Str_24565
@@ -784,7 +784,7 @@
             }
         }
 
-        private function _Str_25420(k:InterstitialEvent):void
+        private function interstitialNotAvailableEventHandler(k:InterstitialEvent):void
         {
             this._interstitialActive = false;
         }
