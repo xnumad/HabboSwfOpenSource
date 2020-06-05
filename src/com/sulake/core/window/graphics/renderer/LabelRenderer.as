@@ -37,7 +37,7 @@
                 _local_7 = _local_6.textStyle;
                 if (_local_7 != this._Str_20528)
                 {
-                    this._Str_7685 = TextFieldCache._Str_17336(_local_7);
+                    this._Str_7685 = TextFieldCache.getTextFieldByStyle(_local_7);
                     this._Str_20528 = _local_7;
                 }
                 this._Str_2085.tx = _local_6._Str_22822;

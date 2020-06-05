@@ -25,7 +25,7 @@
             }
         }
 
-        public static function _Str_17336(k:TextStyle):TextField
+        public static function getTextFieldByStyle(k:TextStyle):TextField
         {
             var _local_2:TextField = _textFieldCache[k.name];
             if (_local_2)
@@ -98,7 +98,7 @@
             {
                 return null;
             }
-            return _Str_17336(_local_2);
+            return getTextFieldByStyle(_local_2);
         }
 
 
