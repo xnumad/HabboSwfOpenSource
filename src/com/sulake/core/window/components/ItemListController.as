@@ -22,7 +22,7 @@
     {
         private var _disableAutoDrag:Boolean = false;
         private var _isPartOfGridWindow:Boolean = false;
-        protected var _Str_6178:Number;
+        protected var _scrollOffsetH:Number;
         protected var _Str_5996:Number;
         protected var _Str_3673:Number;
         protected var _Str_3472:Number;
@@ -44,7 +44,7 @@
 
         public function ItemListController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
-            this._Str_6178 = 0;
+            this._scrollOffsetH = 0;
             this._Str_5996 = 0;
             this._Str_3673 = 0;
             this._Str_3472 = 0;
@@ -81,7 +81,7 @@
 
         public function get scrollH():Number
         {
-            return this._Str_6178;
+            return this._scrollOffsetH;
         }
 
         public function get scrollV():Number
@@ -116,7 +116,7 @@
 
         public function get _Str_3707():Rectangle
         {
-            return new Rectangle((this._Str_6178 * this.maxScrollH), (this._Str_5996 * this.maxScrollV), width, height);
+            return new Rectangle((this._scrollOffsetH * this.maxScrollH), (this._Str_5996 * this.maxScrollV), width, height);
         }
 
         public function get visibleRegion():Rectangle
@@ -135,10 +135,10 @@
             {
                 k = 1;
             }
-            if (k != this._Str_6178)
+            if (k != this._scrollOffsetH)
             {
-                this._Str_6178 = k;
-                this._container.x = (-(this._Str_6178) * this.maxScrollH);
+                this._scrollOffsetH = k;
+                this._container.x = (-(this._scrollOffsetH) * this.maxScrollH);
                 _context.invalidate(this._container, this._Str_3707, WindowRedrawFlag.REDRAW);
                 if (_Str_759)
                 {
@@ -493,7 +493,7 @@
                 case WindowMouseEvent.DOWN:
                     this._Str_19352 = _local_3;
                     this._Str_5885 = _local_4;
-                    this._Str_19220 = (this._Str_6178 * this.maxScrollH);
+                    this._Str_19220 = (this._scrollOffsetH * this.maxScrollH);
                     this._Str_20088 = (this._Str_5996 * this.maxScrollV);
                     this._Str_11276 = true;
                     _local_2 = true;
@@ -621,7 +621,7 @@
                         this._Str_3472 = (this._Str_3472 - this._Str_2981);
                     }
                 }
-                if (this._Str_6178 > 0)
+                if (this._scrollOffsetH > 0)
                 {
                     if (this._Str_3673 <= _w)
                     {
@@ -629,7 +629,7 @@
                     }
                     else
                     {
-                        this._container.x = -(this._Str_6178 * this.maxScrollH);
+                        this._container.x = -(this._scrollOffsetH * this.maxScrollH);
                     }
                 }
                 if (this._Str_5996 > 0)
