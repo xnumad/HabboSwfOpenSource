@@ -321,7 +321,7 @@
             if (!_local_4)
             {
                 _local_10 = this._renderer._Str_19855(k);
-                if (!k._Str_23321(_local_5, _local_10))
+                if (!k.validateLocalPointIntersection(_local_5, _local_10))
                 {
                     return null;
                 }

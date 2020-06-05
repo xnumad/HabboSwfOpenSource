@@ -1460,7 +1460,7 @@
             return rectangle.intersects(k);
         }
 
-        public function _Str_23321(k:Point, _arg_2:BitmapData):Boolean
+        public function validateLocalPointIntersection(k:Point, _arg_2:BitmapData):Boolean
         {
             return this._Str_21791(k, _arg_2, _mouseThreshold);
         }
