@@ -67,7 +67,7 @@
                         _local_10 = (this._window.findChildByName("poll_offer_headline_wrapper") as IItemListWindow);
                         if (_local_10)
                         {
-                            this._window.height = (this._window.height + (_local_10.visibleRegion.height - _local_10._Str_3707.height));
+                            this._window.height = (this._window.height + (_local_10.scrollableRegion.height - _local_10.visibleRegion.height));
                         }
                     }
                     _local_12 = (this._window.findChildByName("poll_offer_summary") as ITextWindow);
@@ -77,7 +77,7 @@
                         _local_10 = (this._window.findChildByName("poll_offer_summary_wrapper") as IItemListWindow);
                         if (_local_10)
                         {
-                            this._window.height = (this._window.height + (_local_10.visibleRegion.height - _local_10._Str_3707.height));
+                            this._window.height = (this._window.height + (_local_10.scrollableRegion.height - _local_10.visibleRegion.height));
                         }
                     }
                 }

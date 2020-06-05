@@ -670,13 +670,13 @@
 
         private function _Str_25362():void
         {
-            if (-(this._conversationList.visibleRegion.y) > _Str_18765)
+            if (-(this._conversationList.scrollableRegion.y) > _Str_18765)
             {
                 return;
             }
             this._populatingList = true;
             var k:Number = this._conversationList.scrollV;
-            var _local_2:int = this._conversationList.visibleRegion.height;
+            var _local_2:int = this._conversationList.scrollableRegion.height;
             var _local_3:Array = this._chatEntries[this._currentConversationId];
             if (_local_3 == null)
             {
@@ -692,7 +692,7 @@
                 _local_6++;
             }
             this._conversationList.arrangeListItems();
-            this._conversationList.scrollV = (1 - ((_local_2 * (1 - k)) / this._conversationList.visibleRegion.height));
+            this._conversationList.scrollV = (1 - ((_local_2 * (1 - k)) / this._conversationList.scrollableRegion.height));
             this._populatingList = false;
         }
 

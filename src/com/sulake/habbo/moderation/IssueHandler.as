@@ -259,7 +259,7 @@
             {
                 return;
             }
-            var _local_5:int = ((((_local_2.height - _local_2.visibleRegion.height) + _local_3.height) + _local_4.height) * 0.5);
+            var _local_5:int = ((((_local_2.height - _local_2.scrollableRegion.height) + _local_3.height) + _local_4.height) * 0.5);
             _local_2.autoArrangeItems = false;
             _local_3.height = _local_5;
             _local_4.height = _local_5;

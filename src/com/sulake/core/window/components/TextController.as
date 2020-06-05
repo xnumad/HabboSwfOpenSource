@@ -1005,12 +1005,12 @@
             }
         }
 
-        public function get _Str_3707():Rectangle
+        public function get visibleRegion():Rectangle
         {
             return new Rectangle((this._Str_7995 * this.maxScrollH), (this._Str_3375 * this.maxScrollV), width, height);
         }
 
-        public function get visibleRegion():Rectangle
+        public function get scrollableRegion():Rectangle
         {
             return new Rectangle(0, 0, (this.maxScrollH + width), (this.maxScrollV + height));
         }

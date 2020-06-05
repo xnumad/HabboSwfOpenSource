@@ -180,7 +180,7 @@
                     _local_3 = (this._window.findChildByName("poll_content_wrapper") as IItemListWindow);
                     if (_local_3 != null)
                     {
-                        _local_5 = (_local_3.visibleRegion.height - _local_3._Str_3707.height);
+                        _local_5 = (_local_3.scrollableRegion.height - _local_3.visibleRegion.height);
                         this._window.height = (this._window.height + _local_5);
                         this._window.center();
                     }

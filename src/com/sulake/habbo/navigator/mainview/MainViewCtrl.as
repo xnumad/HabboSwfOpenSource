@@ -107,7 +107,7 @@
             }
             _local_3 = IItemListWindow(k.content.findChildByName("item_list"));
             _local_4 = k.content.findChildByName("scroller");
-            var _local_5:* = (_local_3.visibleRegion.height > _local_3.height);
+            var _local_5:* = (_local_3.scrollableRegion.height > _local_3.height);
             if (_local_4.visible)
             {
                 if (!_local_5)

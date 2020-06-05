@@ -106,14 +106,14 @@
             return this._Str_2448.maxScrollV;
         }
 
-        public function get _Str_3707():Rectangle
-        {
-            return this._Str_2448._Str_3707;
-        }
-
         public function get visibleRegion():Rectangle
         {
             return this._Str_2448.visibleRegion;
+        }
+
+        public function get scrollableRegion():Rectangle
+        {
+            return this._Str_2448.scrollableRegion;
         }
 
         public function get scrollStepH():Number

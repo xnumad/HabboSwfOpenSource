@@ -110,10 +110,10 @@
             }
             this._buttonsContainer.width = this._buttonsContainer.width;
             this._buttonsContainer.visible = (this._buttonsContainer.width > 0);
-            this._infoElements.height = this._infoElements.visibleRegion.height;
+            this._infoElements.height = this._infoElements.scrollableRegion.height;
             this._border.height = (this._infoElements.height + 20);
             this._window.width = Math.max(this._border.width, this._buttonsContainer.width);
-            this._window.height = this._window.visibleRegion.height;
+            this._window.height = this._window.scrollableRegion.height;
             if (this._border.width < this._buttonsContainer.width)
             {
                 this._border.x = (this._window.width - this._border.width);

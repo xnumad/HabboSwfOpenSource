@@ -92,10 +92,10 @@
             {
                 return;
             }
-            this._Str_2373.height = this._Str_2373.visibleRegion.height;
+            this._Str_2373.height = this._Str_2373.scrollableRegion.height;
             this._Str_2341.height = (this._Str_2373.height + 20);
             this._window.width = this._Str_2341.width;
-            this._window.height = this._window.visibleRegion.height;
+            this._window.height = this._window.scrollableRegion.height;
             this._widget._Str_10301();
         }
 

@@ -15,7 +15,7 @@
         function set scrollStepV(_arg_1:Number):void;
         function get maxScrollH():int;
         function get maxScrollV():int;
-        function get _Str_3707():Rectangle; //visibleRegion
         function get visibleRegion():Rectangle;
+        function get scrollableRegion():Rectangle;
     }
 }

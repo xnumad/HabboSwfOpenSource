@@ -115,7 +115,7 @@ package com.sulake.habbo.ui.widget.infobuspolls
                 this._SafeStr_4823.addListItem(_local_6);
                 _local_7++;
             }
-            var _local_8:int = Math.max((this._SafeStr_4823.visibleRegion.height - this._SafeStr_4823.height), 0);
+            var _local_8:int = Math.max((this._SafeStr_4823.scrollableRegion.height - this._SafeStr_4823.height), 0);
             list_container.scale(0, _local_8);
             this._window.scale(0, (_local_4 + _local_8));
             var waiting_text:IWindow = this._window.findChildByName("waiting_text");

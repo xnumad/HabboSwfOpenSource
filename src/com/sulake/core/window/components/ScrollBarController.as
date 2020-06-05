@@ -325,7 +325,7 @@
             {
                 if (this._horizontal)
                 {
-                    k = (this._Str_2566._Str_3707.width / this._Str_2566.visibleRegion.width);
+                    k = (this._Str_2566.visibleRegion.width / this._Str_2566.scrollableRegion.width);
                     if (k > 1)
                     {
                         k = 1;
@@ -336,7 +336,7 @@
                 }
                 else
                 {
-                    k = (this._Str_2566._Str_3707.height / this._Str_2566.visibleRegion.height);
+                    k = (this._Str_2566.visibleRegion.height / this._Str_2566.scrollableRegion.height);
                     if (k > 1)
                     {
                         k = 1;
@@ -424,13 +424,13 @@
                             {
                                 if (_local_4 < _local_6.x)
                                 {
-                                    this.scrollH = (this.scrollH - ((this._Str_2566._Str_3707.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
+                                    this.scrollH = (this.scrollH - ((this._Str_2566.visibleRegion.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
                                 }
                                 else
                                 {
                                     if (_local_4 > _local_6.right)
                                     {
-                                        this.scrollH = (this.scrollH + ((this._Str_2566._Str_3707.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
+                                        this.scrollH = (this.scrollH + ((this._Str_2566.visibleRegion.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
                                     }
                                 }
                             }
@@ -438,13 +438,13 @@
                             {
                                 if (_local_5 < _local_6.y)
                                 {
-                                    this.scrollV = (this.scrollV - ((this._Str_2566._Str_3707.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
+                                    this.scrollV = (this.scrollV - ((this._Str_2566.visibleRegion.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
                                 }
                                 else
                                 {
                                     if (_local_5 > _local_6.bottom)
                                     {
-                                        this.scrollV = (this.scrollV + ((this._Str_2566._Str_3707.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
+                                        this.scrollV = (this.scrollV + ((this._Str_2566.visibleRegion.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
                                     }
                                 }
                             }

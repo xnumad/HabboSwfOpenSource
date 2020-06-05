@@ -114,12 +114,12 @@
             return this;
         }
 
-        public function get _Str_3707():Rectangle
+        public function get visibleRegion():Rectangle
         {
             return new Rectangle((this._scrollOffsetH * this.maxScrollH), (this._scrollOffsetV * this.maxScrollV), width, height);
         }
 
-        public function get visibleRegion():Rectangle
+        public function get scrollableRegion():Rectangle
         {
             return this._container.rectangle;
         }
@@ -139,7 +139,7 @@
             {
                 this._scrollOffsetH = k;
                 this._container.x = (-(this._scrollOffsetH) * this.maxScrollH);
-                _context.invalidate(this._container, this._Str_3707, WindowRedrawFlag.REDRAW);
+                _context.invalidate(this._container, this.visibleRegion, WindowRedrawFlag.REDRAW);
                 if (_Str_759)
                 {
                     _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_SCROLL, this, null);

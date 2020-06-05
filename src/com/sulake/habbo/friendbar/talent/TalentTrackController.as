@@ -673,8 +673,8 @@
                 if (_local_2 != null)
                 {
                     Logger.log(this._panoramaList.scrollH);
-                    this._panoramaList.scrollH = _Str_988._Str_1452((_local_2.x - 20), 0, (this._panoramaList.visibleRegion.width - this._panoramaList._Str_3707.width), 0, 1);
-                    Logger.log(((((((_local_2.x + " ") + this._panoramaList.visibleRegion.width) + " ") + _Str_988._Str_1452(_local_2.x, 0, this._panoramaList.visibleRegion.width, 0, 1)) + " ") + this._panoramaList.scrollH));
+                    this._panoramaList.scrollH = _Str_988._Str_1452((_local_2.x - 20), 0, (this._panoramaList.scrollableRegion.width - this._panoramaList.visibleRegion.width), 0, 1);
+                    Logger.log(((((((_local_2.x + " ") + this._panoramaList.scrollableRegion.width) + " ") + _Str_988._Str_1452(_local_2.x, 0, this._panoramaList.scrollableRegion.width, 0, 1)) + " ") + this._panoramaList.scrollH));
                 }
             }
         }

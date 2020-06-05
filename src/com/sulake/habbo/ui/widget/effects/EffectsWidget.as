@@ -113,7 +113,7 @@
                 }
                 _local_4--;
             }
-            var _local_5:int = this._list.visibleRegion.height;
+            var _local_5:int = this._list.scrollableRegion.height;
             this._list.height = Math.max(Math.min(_local_5, _Str_18779), _Str_16932);
             this._view.findChildByName("no_effects").visible = (_local_2.length == 0);
         }

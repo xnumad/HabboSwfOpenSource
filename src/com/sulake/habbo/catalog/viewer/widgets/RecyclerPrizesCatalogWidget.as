@@ -111,10 +111,10 @@
             k.grid = this;
             k.setIcon(page.viewer.roomEngine);
             _arg_2._Str_2816(_local_3);
-            _arg_2.height = _arg_2.visibleRegion.height;
+            _arg_2.height = _arg_2.scrollableRegion.height;
             if ((k is DealPrizeContainer))
             {
-                _arg_2.width = _arg_2.visibleRegion.width;
+                _arg_2.width = _arg_2.scrollableRegion.width;
             }
         }
 

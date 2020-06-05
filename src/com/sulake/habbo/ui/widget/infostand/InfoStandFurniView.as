@@ -456,11 +456,11 @@
                 return;
             }
             this._Str_2373.arrangeListItems();
-            this._buttons.width = this._buttons.visibleRegion.width;
-            this._Str_2373.height = this._Str_2373.visibleRegion.height;
+            this._buttons.width = this._buttons.scrollableRegion.width;
+            this._Str_2373.height = this._Str_2373.scrollableRegion.height;
             this._Str_2341.height = (this._Str_2373.height + 20);
             this._window.width = Math.max(this._Str_2341.width, this._buttons.width);
-            this._window.height = this._window.visibleRegion.height;
+            this._window.height = this._window.scrollableRegion.height;
             if (this._Str_2341.width < this._buttons.width)
             {
                 this._Str_2341.x = (this._window.width - this._Str_2341.width);

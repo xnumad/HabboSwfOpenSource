@@ -170,7 +170,7 @@
         {
             var _local_2:IWindowContainer = IWindowContainer(this._list.parent);
             var _local_3:IWindow = (_local_2.getChildByName("scroller") as IWindow);
-            var _local_4:* = (this._list.visibleRegion.height > this._list.height);
+            var _local_4:* = (this._list.scrollableRegion.height > this._list.height);
             var _local_5:int = 17;
             if (_local_3.visible)
             {

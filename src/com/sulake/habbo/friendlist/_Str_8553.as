@@ -225,7 +225,7 @@
             var _local_2:IWindowContainer = (k.getChildByName("list") as IWindowContainer);
             var _local_3:IWindow = (_local_2.getChildByName("scroller") as IWindow);
             var _local_4:IItemListWindow = IItemListWindow(_local_2.getChildByName("list_content"));
-            var _local_5:* = (_local_4.visibleRegion.height > _local_4.height);
+            var _local_5:* = (_local_4.scrollableRegion.height > _local_4.height);
             var _local_6:int = 22;
             var _local_7:int = (this._habboFriendList.tabs._Str_7233 - 10);
             var _local_8:int = (_local_7 - _local_6);

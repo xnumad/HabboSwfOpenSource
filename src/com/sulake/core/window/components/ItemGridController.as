@@ -85,7 +85,7 @@
             {
                 return _scrollStepH;
             }
-            return (_horizontal) ? (0.1 * visibleRegion.height) : (visibleRegion.width / this._Str_3080);
+            return (_horizontal) ? (0.1 * scrollableRegion.height) : (scrollableRegion.width / this._Str_3080);
         }
 
         override public function get scrollStepV():Number
@@ -94,7 +94,7 @@
             {
                 return _scrollStepV;
             }
-            return (_horizontal) ? (visibleRegion.height / this._Str_11491) : (0.1 * visibleRegion.width);
+            return (_horizontal) ? (scrollableRegion.height / this._Str_11491) : (0.1 * scrollableRegion.width);
         }
 
         public function get _Str_6405():Boolean
@@ -284,11 +284,11 @@
             var _local_3:IItemListWindow = this._Str_6836(_local_2);
             if (!_horizontal)
             {
-                _local_3.width = _local_3.visibleRegion.width;
+                _local_3.width = _local_3.scrollableRegion.width;
             }
             else
             {
-                _local_3.height = _local_3.visibleRegion.height;
+                _local_3.height = _local_3.scrollableRegion.height;
             }
             return k;
         }
@@ -575,7 +575,7 @@
             {
                 _local_5 = IItemListWindow(getListItemAt(_local_9));
                 _local_5.autoArrangeItems = true;
-                _local_5.height = _local_5.visibleRegion.height;
+                _local_5.height = _local_5.scrollableRegion.height;
                 _local_10 = Math.max(_local_10, _local_5.height);
                 _local_9++;
             }
@@ -614,7 +614,7 @@
             {
                 _local_3 = IItemListWindow(getListItemAt(_local_8));
                 _local_3.autoArrangeItems = true;
-                _local_3.height = _local_3.visibleRegion.height;
+                _local_3.height = _local_3.scrollableRegion.height;
                 _local_9 = Math.max(_local_9, _local_3.height);
                 _local_8++;
             }
@@ -667,7 +667,7 @@
                 {
                     _local_4 = IItemListWindow(getListItemAt(_local_7));
                     _local_4.autoArrangeItems = true;
-                    _local_4.height = _local_4.visibleRegion.height;
+                    _local_4.height = _local_4.scrollableRegion.height;
                     _local_8 = Math.max(_local_8, _local_4.height);
                     _local_7++;
                 }

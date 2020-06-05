@@ -232,7 +232,7 @@
                 {
                     this._widget.handler.container.toolbar.extensionView.extraMargin = HabboToolbarEnum._Str_18993;
                     this._Str_17156();
-                    _local_4 = (this._scrollbarWindow.scrollable.visibleRegion.height / this._scrollbarWindow.scrollable._Str_3707.height);
+                    _local_4 = (this._scrollbarWindow.scrollable.scrollableRegion.height / this._scrollbarWindow.scrollable.visibleRegion.height);
                     _local_5 = ((k - this._historyViewerDragStartY) / this._scrollbarWindow.height);
                     _local_3 = (this._scrollTarget - (_local_5 / _local_4));
                     _local_3 = Math.max(0, _local_3);
@@ -240,7 +240,7 @@
                     _local_6 = (k - this._historyViewerDragStartY);
                     _local_7 = true;
                     _local_8 = true;
-                    if (this._scrollbarWindow.scrollV < (1 - (_Str_16289 / this._scrollbarWindow.scrollable.visibleRegion.height)))
+                    if (this._scrollbarWindow.scrollV < (1 - (_Str_16289 / this._scrollbarWindow.scrollable.scrollableRegion.height)))
                     {
                         _local_8 = false;
                     }
