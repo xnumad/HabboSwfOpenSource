@@ -46,7 +46,7 @@
         public static var inputEventQueue:IEventQueue;
         private static var inputEventProcessor:IEventProcessor;
         private static var inputModeFlag:uint = INPUT_MODE_MOUSE;//0
-        private static var _Str_2884:IWindowRenderer;
+        private static var _renderer:IWindowRenderer;
         private static var stage:Stage;
 
         public var inputEventTrackers:Vector.<IInputEventTracker>;
@@ -73,7 +73,7 @@
         public function WindowContext(k:String, _arg_2:IWindowRenderer, _arg_3:IWindowFactory, _arg_4:IWidgetFactory, _arg_5:IResourceManager, _arg_6:ICoreLocalizationManager, _arg_7:IHabboConfigurationManager, _arg_8:DisplayObjectContainer, _arg_9:Rectangle, _arg_10:Vector.<ILinkEventTracker>)
         {
             this._name = k;
-            _Str_2884 = _arg_2;
+            _renderer = _arg_2;
             this._Str_2312 = _arg_6;
             this._configurationManager = _arg_7;
             this._Str_2417 = _arg_8;
@@ -109,7 +109,7 @@
             this._Str_2417.addChild(this._Str_2867.getDisplayObject());
             this._Str_2417.doubleClickEnabled = true;
             this._Str_2417.addEventListener(Event.RESIZE, this._Str_21888);
-            this._Str_20725 = new EventProcessorState(_Str_2884, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
+            this._Str_20725 = new EventProcessorState(_renderer, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
             _Str_9993 = INPUT_MODE_MOUSE;
             this._Str_13721 = new SubstituteParentController(this);
         }
@@ -187,7 +187,7 @@
                 this._Str_11208 = null;
                 this._Str_14601.dispose();
                 this._Str_14601 = null;
-                _Str_2884 = null;
+                _renderer = null;
                 this._Str_2312 = null;
                 this._Str_2417 = null;
                 this._Str_18011 = null;
@@ -309,7 +309,7 @@
         {
             if (!this.disposed)
             {
-                _Str_2884._Str_18389(k, _arg_2, _arg_3);
+                _renderer._Str_18389(k, _arg_2, _arg_3);
             }
         }
 
@@ -339,7 +339,7 @@
 			try
 			{
 				this._Str_21204 = true;
-				_Str_2884.render();
+				_renderer.render();
 				this._Str_21204 = false;
 			}
 			catch (error: Error)

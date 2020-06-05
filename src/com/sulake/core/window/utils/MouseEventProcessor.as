@@ -28,7 +28,7 @@
         protected var location:Point;
         protected var _Str_3558:WindowController;
         protected var _Str_3275:WindowController;
-        protected var _Str_2884:IWindowRenderer;
+        protected var _renderer:IWindowRenderer;
         protected var _Str_2867:IDesktopWindow;
         protected var _Str_8811:Vector.<IInputEventTracker>;
         private var _disposed:Boolean = false;
@@ -158,7 +158,7 @@
             this._Str_2867 = state.desktop;
             this._Str_3275 = (state.hoverWindow as WindowController);
             this._Str_3558 = (state.lastClickTarget as WindowController);
-            this._Str_2884 = state.renderer;
+            this._renderer = state.renderer;
             this._Str_8811 = state.eventTrackers;
             eventQueue.begin();
             this.location.x = -1;
@@ -276,7 +276,7 @@
             state.desktop = this._Str_2867;
             state.hoverWindow = this._Str_3275;
             state.lastClickTarget = this._Str_3558;
-            state.renderer = this._Str_2884;
+            state.renderer = this._renderer;
             state.eventTrackers = this._Str_8811;
         }
 
@@ -320,7 +320,7 @@
             }
             if (!_local_4)
             {
-                _local_10 = this._Str_2884._Str_19855(k);
+                _local_10 = this._renderer._Str_19855(k);
                 if (!k._Str_23321(_local_5, _local_10))
                 {
                     return null;
