@@ -300,7 +300,7 @@
             this._Str_17876(_Str_2777._Str_4113);
         }
 
-        public function _Str_19682():void
+        public function openFriendRequests():void
         {
             this._Str_17876(_Str_2777._Str_3798);
         }

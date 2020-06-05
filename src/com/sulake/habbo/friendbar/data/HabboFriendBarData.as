@@ -382,7 +382,7 @@
                     {
                         if (this._friendRequests.length > 0)
                         {
-                            this._habboFriendListComponent._Str_19682();
+                            this._habboFriendListComponent.openFriendRequests();
                         }
                         else
                         {

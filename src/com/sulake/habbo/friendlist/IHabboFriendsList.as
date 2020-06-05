@@ -13,7 +13,7 @@
         function askForAFriend(_arg_1:int, _arg_2:String):Boolean;
         function getFriend(_arg_1:int):IFriend;
         function openFriendList():void;
-        function _Str_19682():void;
+        function openFriendRequests():void;
         function _Str_22200():void;
         function close():void;
         function alignBottomLeftTo(_arg_1:Point):void;
