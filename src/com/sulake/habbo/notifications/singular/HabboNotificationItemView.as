@@ -20,7 +20,7 @@
 
     public class HabboNotificationItemView implements IUpdateReceiver 
     {
-        public static const _Str_9659:int = 70;
+        public static const ITEM_HEIGHT:int = 70;
         public static const _Str_18890:int = 5;
         private static const _Str_694:int = 0;
         private static const _Str_3847:int = 1;

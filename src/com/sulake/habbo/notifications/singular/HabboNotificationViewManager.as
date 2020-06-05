@@ -103,7 +103,7 @@
 
         public function _Str_19647():Boolean
         {
-            return (this._Str_22218() + HabboNotificationItemView._Str_9659) < this._windowManager.getDesktop(0).height;
+            return (this._Str_22218() + HabboNotificationItemView.ITEM_HEIGHT) < this._windowManager.getDesktop(0).height;
         }
 
         public function update(k:uint):void
@@ -151,11 +151,11 @@
             while (_local_3 < this._viewItems.length)
             {
                 _local_4 = (this._viewItems[_local_3] as HabboNotificationItemView);
-                if ((_local_2 + HabboNotificationItemView._Str_9659) < _local_4.verticalPosition)
+                if ((_local_2 + HabboNotificationItemView.ITEM_HEIGHT) < _local_4.verticalPosition)
                 {
                     return _local_2;
                 }
-                _local_2 = ((_local_4.verticalPosition + HabboNotificationItemView._Str_9659) + _Str_2942);
+                _local_2 = ((_local_4.verticalPosition + HabboNotificationItemView.ITEM_HEIGHT) + _Str_2942);
                 _local_3++;
             }
             return _local_2;
@@ -170,7 +170,7 @@
             {
                 _local_4 = (this._viewItems[_local_3] as HabboNotificationItemView);
                 _local_4.reposition(_local_2);
-                _local_2 = ((_local_4.verticalPosition + HabboNotificationItemView._Str_9659) + _Str_2942);
+                _local_2 = ((_local_4.verticalPosition + HabboNotificationItemView.ITEM_HEIGHT) + _Str_2942);
                 _local_3++;
             }
         }
