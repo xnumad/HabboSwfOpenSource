@@ -301,7 +301,7 @@
             }
         }
 
-        public function _Str_10473(k:int, _arg_2:Boolean):void
+        public function setOnlineStatus(k:int, _arg_2:Boolean):void
         {
             if ((k in this._chatEntries))
             {

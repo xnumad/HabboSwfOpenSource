@@ -11,7 +11,7 @@
         function startConversation(_arg_1:int):void;
         function closeConversation(_arg_1:int):void;
         function setFollowingAllowed(_arg_1:int, _arg_2:Boolean):void;
-        function _Str_10473(_arg_1:int, _arg_2:Boolean):void;
+        function setOnlineStatus(_arg_1:int, _arg_2:Boolean):void;
         function getUnseenMiniMailMessageCount():int;
         function _Str_16882():Boolean;
         function _Str_19823(_arg_1:Boolean):void;

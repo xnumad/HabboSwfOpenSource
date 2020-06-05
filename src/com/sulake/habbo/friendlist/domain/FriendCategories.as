@@ -131,11 +131,11 @@
                     currentlyOnline = this._Str_25874(updatedFriend.id);
                     if (((currentlyOnline) && (!(updatedFriend.online))))
                     {
-                        this._deps.messenger._Str_10473(updatedFriend.id, updatedFriend.online);
+                        this._deps.messenger.setOnlineStatus(updatedFriend.id, updatedFriend.online);
                     }
                     if (((!(currentlyOnline)) && (updatedFriend.online)))
                     {
-                        this._deps.messenger._Str_10473(updatedFriend.id, updatedFriend.online);
+                        this._deps.messenger.setOnlineStatus(updatedFriend.id, updatedFriend.online);
                         this._deps.view._Str_9276();
                     }
                     wasSelected = this._Str_8793(updatedFriend.id, true);

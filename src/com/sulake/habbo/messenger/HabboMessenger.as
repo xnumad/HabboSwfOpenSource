@@ -184,11 +184,11 @@
             }
         }
 
-        public function _Str_10473(k:int, _arg_2:Boolean):void
+        public function setOnlineStatus(k:int, _arg_2:Boolean):void
         {
             if (this._Str_2439 != null)
             {
-                this._Str_2439._Str_10473(k, _arg_2);
+                this._Str_2439.setOnlineStatus(k, _arg_2);
             }
         }
 
