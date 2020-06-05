@@ -23,7 +23,7 @@
         public static const STATE_FADE_OUT:int = 3;
         public static const STATE_FADE_IN:int = 2;
         public static const STATE_VISIBLE:int = 1;
-        public static const _Str_5954:int = 0;
+        public static const STATE_HIDDEN:int = 0;
         public static const _Str_3788:int = 39;
         private static const _Str_15421:int = 150;
         private static const _Str_14143:int = 250;
@@ -89,7 +89,7 @@
             this._window.background = true;
             this._window.color = 0;
             this._window.mouseThreshold = 0;
-            this.state = _Str_5954;
+            this.state = STATE_HIDDEN;
             this._Str_20103();
         }
 
@@ -129,7 +129,7 @@
                     this._window.blend = (this._window.blend - (k / _Str_15421));
                     if (this._window.blend <= 0)
                     {
-                        this.state = _Str_5954;
+                        this.state = STATE_HIDDEN;
                     }
                     return;
             }
@@ -144,7 +144,7 @@
             switch (k)
             {
                 case STATE_VISIBLE:
-                    if (this._state == _Str_5954)
+                    if (this._state == STATE_HIDDEN)
                     {
                         this.state = STATE_FADE_IN;
                     }
@@ -160,7 +160,7 @@
                         this._state = k;
                     }
                     return;
-                case _Str_5954:
+                case STATE_HIDDEN:
                     if (((this._window == null) || (this._bgWindow == null)))
                     {
                         return;

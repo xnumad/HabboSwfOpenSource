@@ -38,7 +38,7 @@
             this._isDisposed = false;
             this._widget = k;
             this._historyPulldown = new RoomChatHistoryPulldown(k, _arg_2, _arg_3, _arg_4);
-            this._historyPulldown.state = RoomChatHistoryPulldown._Str_5954;
+            this._historyPulldown.state = RoomChatHistoryPulldown.STATE_HIDDEN;
             var _local_5:IItemListWindow = (_arg_3.getChildByName("chat_contentlist") as IItemListWindow);
             if (_local_5 == null)
             {
@@ -63,7 +63,7 @@
             {
                 return;
             }
-            this._historyPulldown.state = ((k) ? RoomChatHistoryPulldown.STATE_VISIBLE : RoomChatHistoryPulldown._Str_5954);
+            this._historyPulldown.state = ((k) ? RoomChatHistoryPulldown.STATE_VISIBLE : RoomChatHistoryPulldown.STATE_HIDDEN);
         }
 
         public function get active():Boolean
@@ -138,7 +138,7 @@
             this._Str_21402();
             this._historyViewerActive = false;
             this._Str_20323(false);
-            this._historyPulldown.state = RoomChatHistoryPulldown._Str_5954;
+            this._historyPulldown.state = RoomChatHistoryPulldown.STATE_HIDDEN;
             if (this._widget != null)
             {
                 this._widget._Str_8599();
