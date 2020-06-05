@@ -25,7 +25,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionChatEvent;
-    import com.sulake.habbo.ui.widget.events._Str_6310;
+    import com.sulake.habbo.ui.widget.events.HideRoomWidgetEvent;
     import com.sulake.habbo.friendbar.events.FriendBarResizeEvent;
     import flash.events.Event;
     import com.sulake.habbo.ui.widget.events._Str_6300;
@@ -443,7 +443,7 @@
 
         public function getProcessedEvents():Array
         {
-            return [RoomSessionChatEvent.RSCE_FLOOD_EVENT, _Str_6310.HRWE_HIDE_ROOM_WIDGET, FriendBarResizeEvent.FBE_BAR_RESIZE_EVENT];
+            return [RoomSessionChatEvent.RSCE_FLOOD_EVENT, HideRoomWidgetEvent.HRWE_HIDE_ROOM_WIDGET, FriendBarResizeEvent.FBE_BAR_RESIZE_EVENT];
         }
 
         public function update():void
@@ -467,8 +467,8 @@
                     _local_4 = parseInt(_local_3.text);
                     _local_2 = new _Str_6300(_local_4);
                     break;
-                case _Str_6310.HRWE_HIDE_ROOM_WIDGET:
-                    this._Str_22488((k as _Str_6310));
+                case HideRoomWidgetEvent.HRWE_HIDE_ROOM_WIDGET:
+                    this._Str_22488((k as HideRoomWidgetEvent));
                     return;
                 case FriendBarResizeEvent.FBE_BAR_RESIZE_EVENT:
                     _local_5 = (k as FriendBarResizeEvent);
@@ -481,7 +481,7 @@
             }
         }
 
-        private function _Str_22488(k:_Str_6310):void
+        private function _Str_22488(k:HideRoomWidgetEvent):void
         {
             if (((k) && (k._Str_23558 == this.type)))
             {

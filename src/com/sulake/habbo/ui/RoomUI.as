@@ -112,7 +112,7 @@
     import flash.events.Event;
     import com.sulake.core.assets.XmlAsset;
     import com.sulake.core.window.components.IDisplayObjectWrapper;
-    import com.sulake.habbo.ui.widget.events._Str_6310;
+    import com.sulake.habbo.ui.widget.events.HideRoomWidgetEvent;
     import flash.events.MouseEvent;
     import com.sulake.habbo.freeflowchat.style.IChatStyleLibrary;
 	import com.sulake.habbo.session.events.RoomSessionPollEvent;
@@ -1195,7 +1195,7 @@
             var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
-                _local_2.processEvent(new _Str_6310(k));
+                _local_2.processEvent(new HideRoomWidgetEvent(k));
             }
         }
 
