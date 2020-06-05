@@ -276,7 +276,7 @@
             this._window.center();
             this.addMouseClickListener(this.find("make_favourite_region"), this.onAddFavouriteClick);
             this.addMouseClickListener(this.find("favourite_region"), this.onRemoveFavouriteClick);
-            this.addMouseClickListener(this.find("room_settings_button"), this._Str_25312);
+            this.addMouseClickListener(this.find("room_settings_button"), this.onRoomSettingsClick);
             this.addMouseClickListener(this.find("room_filter_button"), this._Str_22339);
             this.addMouseClickListener(this.find("floor_plan_editor_button"), this._Str_23389);
             this.addMouseClickListener(this.find("room_muteall_button"), this._Str_25149);
@@ -390,7 +390,7 @@
             this._navigator.send(new _Str_5262(this._navigator.data._Str_2678.flatId));
         }
 
-        private function _Str_25312(k:WindowEvent):void
+        private function onRoomSettingsClick(k:WindowEvent):void
         {
             var _local_2:GuestRoomData = this._navigator.data._Str_2678;
             if (_local_2 == null)
