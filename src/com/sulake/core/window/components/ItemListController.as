@@ -40,7 +40,7 @@
         protected var _dragStartY:Number;
         protected var _dragStartScrollH:Number;
         protected var _dragStartScrollV:Number;
-        protected var _Str_11276:Boolean;
+        protected var _dragging:Boolean;
 
         public function ItemListController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -495,11 +495,11 @@
                     this._dragStartY = _local_4;
                     this._dragStartScrollH = (this._scrollOffsetH * this.maxScrollH);
                     this._dragStartScrollV = (this._scrollOffsetV * this.maxScrollV);
-                    this._Str_11276 = true;
+                    this._dragging = true;
                     _local_2 = true;
                     break;
                 case WindowMouseEvent.MOVE:
-                    if (((this._Str_11276) && (!(this._disableAutoDrag))))
+                    if (((this._dragging) && (!(this._disableAutoDrag))))
                     {
                         if (this._horizontal)
                         {
@@ -514,9 +514,9 @@
                     break;
                 case WindowMouseEvent.UP:
                 case WindowMouseEvent.UP_OUTSIDE:
-                    if (this._Str_11276)
+                    if (this._dragging)
                     {
-                        this._Str_11276 = false;
+                        this._dragging = false;
                         _local_2 = true;
                     }
                     break;
@@ -693,7 +693,7 @@
 
         public function stopDragging():void
         {
-            this._Str_11276 = false;
+            this._dragging = false;
         }
 
         public function set disableAutodrag(k:Boolean):void
