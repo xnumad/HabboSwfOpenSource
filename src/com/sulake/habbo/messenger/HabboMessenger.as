@@ -100,7 +100,7 @@
             if (getBoolean("client.minimail.embed.enabled"))
             {
                 this.addMessageEvent(new _Str_11459(this.onMiniMailMessage));
-                this.addMessageEvent(new _Str_11571(this._Str_12932));
+                this.addMessageEvent(new _Str_11571(this.onMiniMailUnreadCount));
             }
         }
 
@@ -133,7 +133,7 @@
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_NEW, this._miniMailUnseenCount));
         }
 
-        private function _Str_12932(k:IMessageEvent):void
+        private function onMiniMailUnreadCount(k:IMessageEvent):void
         {
             this._miniMailUnseenCount = (k.parser as _Str_8206)._Str_22745;
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._miniMailUnseenCount));
