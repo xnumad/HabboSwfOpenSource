@@ -21,7 +21,7 @@
     public class HabboNotificationItemView implements IUpdateReceiver 
     {
         public static const ITEM_HEIGHT:int = 70;
-        public static const _Str_18890:int = 5;
+        public static const SIDE_MARGIN:int = 5;
         private static const _Str_694:int = 0;
         private static const _Str_3847:int = 1;
         private static const _Str_14483:int = 2;
@@ -277,7 +277,7 @@
             {
                 this._margin = k;
             }
-            this._window.x = ((_local_2.width - this._window.width) - _Str_18890);
+            this._window.x = ((_local_2.width - this._window.width) - SIDE_MARGIN);
             this._window.y = this._margin;
         }
 
