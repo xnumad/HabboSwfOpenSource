@@ -56,7 +56,7 @@
         protected var _rootDisplayObject:DisplayObjectContainer;
         protected var _throwErrors:Boolean = true;
         protected var _lastError:Error;
-        protected var _Str_16327:int = -1;
+        protected var _lastErrorCode:int = -1;
         protected var _Str_11208:IInternalWindowServices;
         protected var _Str_14601:IWindowParser;
         protected var _Str_18011:IWindowFactory;
@@ -203,13 +203,13 @@
 
         public function getLastErrorCode():int
         {
-            return this._Str_16327;
+            return this._lastErrorCode;
         }
 
         public function handleError(k:int, _arg_2:Error):void
         {
             this._lastError = _arg_2;
-            this._Str_16327 = k;
+            this._lastErrorCode = k;
             if (this._throwErrors)
             {
                 throw (_arg_2);
@@ -219,7 +219,7 @@
         public function flushError():void
         {
             this._lastError = null;
-            this._Str_16327 = -1;
+            this._lastErrorCode = -1;
         }
 
         public function getWindowServices():IInternalWindowServices
