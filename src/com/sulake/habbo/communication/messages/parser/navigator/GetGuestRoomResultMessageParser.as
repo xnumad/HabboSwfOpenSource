@@ -7,7 +7,7 @@
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_4537 implements IMessageParser, IDisposable 
+    public class GetGuestRoomResultMessageParser implements IMessageParser, IDisposable
     {
         private var _enterRoom:Boolean;
         private var _roomForward:Boolean;

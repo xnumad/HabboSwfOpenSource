@@ -78,7 +78,7 @@
     import com.sulake.habbo.communication.messages.outgoing.users._Str_9992;
     import com.sulake.habbo.window.utils._Str_2910;
     import com.sulake.habbo.communication.messages.parser.users.ScrSendUserInfoMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
+    import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_11712;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_8228;
@@ -516,7 +516,7 @@
 
         private function onRoomInfo(k:IMessageEvent):void
         {
-            var _local_2:_Str_4537 = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
             if (_local_2._Str_15487)
             {
                 this._groupRoomInfoCtrl.onRoomInfo(_local_2.data);

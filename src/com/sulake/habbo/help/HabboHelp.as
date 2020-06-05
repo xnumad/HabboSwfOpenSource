@@ -63,7 +63,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.UsersMessageParser;
     import com.sulake.habbo.room.object.RoomObjectTypeEnum;
     import com.sulake.habbo.communication.messages.parser.room.session.RoomReadyMessageParser;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
+    import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomEntryInfoMessageParser;
     import com.sulake.habbo.communication.messages.parser.callforhelp.CfhTopicsInitMessageParser;
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11701;
@@ -733,7 +733,7 @@
 
         private function _Str_24404(k:IMessageEvent):void
         {
-            var _local_2:_Str_4537 = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
             this._userRegistry._Str_19528(_local_2.data.flatId, _local_2.data.roomName);
         }
 

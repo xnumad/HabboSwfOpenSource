@@ -65,7 +65,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_3570;
     import com.sulake.habbo.utils.HabboWebTools;
     import com.sulake.habbo.navigator.domain.RoomSessionTags;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
+    import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomSettingsData;
     import com.sulake.habbo.communication.messages.parser.navigator._Str_5936;
     import com.sulake.core.utils.ErrorReportStorage;
@@ -289,7 +289,7 @@
         {
             var _local_3:Boolean;
             var _local_4:RoomSessionTags;
-            var _local_2:_Str_4537 = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
             Logger.log(((("Got room info: " + _local_2._Str_15487) + ", ") + _local_2._Str_18882));
             if (_local_2._Str_15487)
             {

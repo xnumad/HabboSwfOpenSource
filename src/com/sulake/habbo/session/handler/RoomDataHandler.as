@@ -3,7 +3,7 @@
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
-    import com.sulake.habbo.communication.messages.parser.navigator._Str_4537;
+    import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.session.IRoomSession;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.habbo.session.events.RoomSessionPropertyUpdateEvent;
@@ -29,7 +29,7 @@
             {
                 return;
             }
-            var _local_3:_Str_4537 = _local_2.getParser();
+            var _local_3:GetGuestRoomResultMessageParser = _local_2.getParser();
             if (_local_3._Str_18882)
             {
                 return;
