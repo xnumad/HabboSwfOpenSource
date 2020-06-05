@@ -191,7 +191,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_20777(k:TextController, _arg_2:String):void
+        private static function setHtmlText(k:TextController, _arg_2:String):void
         {
             if (_arg_2 == null)
             {
@@ -871,7 +871,7 @@
 
         public function set htmlText(k:String):void
         {
-            _Str_20777(this, k);
+            setHtmlText(this, k);
         }
 
         public function set italic(k:Boolean):void
