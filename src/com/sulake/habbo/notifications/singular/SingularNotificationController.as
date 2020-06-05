@@ -127,7 +127,7 @@
             if (((this._notificationViewManager._Str_19647()) && (this._notificationQueue.length > 0)))
             {
                 _local_2 = this.getNextItemFromQueue();
-                if (!this._notificationViewManager._Str_16969(_local_2))
+                if (!this._notificationViewManager.showItem(_local_2))
                 {
                     _local_2.dispose();
                 }

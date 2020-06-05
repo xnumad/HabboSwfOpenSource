@@ -69,7 +69,7 @@
             this._margin = 4;
             this._blend = 0;
             this._state = _Str_694;
-            this._Str_16969(_arg_5);
+            this.showItem(_arg_5);
         }
 
         public function get disposed():Boolean
@@ -87,7 +87,7 @@
             return this._margin;
         }
 
-        private function _Str_16969(k:HabboNotificationItem):void
+        private function showItem(k:HabboNotificationItem):void
         {
             var _local_3:BitmapData;
             if (k == null)

@@ -88,7 +88,7 @@
             this._disposed = true;
         }
 
-        public function _Str_16969(k:HabboNotificationItem):Boolean
+        public function showItem(k:HabboNotificationItem):Boolean
         {
             if (!this._Str_19647())
             {
