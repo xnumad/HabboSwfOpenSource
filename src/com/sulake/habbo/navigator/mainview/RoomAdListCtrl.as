@@ -46,7 +46,7 @@
             _userCountRenderer.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
         }
 
-        private function _Str_9465(k:int):_Str_2370
+        private function getRoomAt(k:int):_Str_2370
         {
             return getRooms()[k];
         }
@@ -55,7 +55,7 @@
         {
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this._Str_9465(_local_3);
+            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
             if (_navigator)
             {
                 _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4._Str_15104));

@@ -230,7 +230,7 @@
             }
             this.hilite(IWindowContainer(_local_2));
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this._Str_9465(_local_3);
+            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
             if (_local_4 == null)
             {
                 return;
@@ -244,7 +244,7 @@
             return ((((this._navigator == null) || (this._navigator.data == null)) || (this._navigator.data._Str_4518 == null)) || (this._navigator.data._Str_4518.rooms == null)) ? (new Array()) : this._navigator.data._Str_4518.rooms;
         }
 
-        private function _Str_9465(k:int):_Str_2370
+        private function getRoomAt(k:int):_Str_2370
         {
             return this.getRooms()[k];
         }
@@ -266,7 +266,7 @@
             var _local_5:Point;
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this._Str_9465(_local_3);
+            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
             if (_local_4 == null)
             {
                 return;
@@ -341,7 +341,7 @@
             {
                 return;
             }
-            var _local_3:_Str_2370 = this._Str_9465(_local_2.parent.tags[0]);
+            var _local_3:_Str_2370 = this.getRoomAt(_local_2.parent.tags[0]);
             if (_local_3 == null)
             {
                 return;
@@ -356,7 +356,7 @@
             {
                 return;
             }
-            var _local_3:_Str_2370 = this._Str_9465(int(_local_2.parent.tags[0]));
+            var _local_3:_Str_2370 = this.getRoomAt(int(_local_2.parent.tags[0]));
             if (_local_3 == null)
             {
                 return;
