@@ -68,14 +68,14 @@
             {
                 this._region.background = true;
                 this._region.mouseThreshold = 0;
-                this._region.addEventListener(WindowMouseEvent.DOWN, this._Str_12979);
+                this._region.addEventListener(WindowMouseEvent.DOWN, this.onPulldownMouseDown);
                 this._containerWindow.addChild(this._region);
                 this._region._Str_2613 = "${chat.history.drag.tooltip}";
                 this._region._Str_3099 = 250;
             }
             var _local_5:XmlAsset = (_arg_4.getAssetByName("chat_history_pulldown") as XmlAsset);
             this._window.buildFromXML((_local_5.content as XML));
-            this._window.addEventListener(WindowMouseEvent.DOWN, this._Str_12979);
+            this._window.addEventListener(WindowMouseEvent.DOWN, this.onPulldownMouseDown);
             var _local_6:IBitmapWrapperWindow = (this._window.findChildByName("GrapBarX") as IBitmapWrapperWindow);
             if (_local_6 != null)
             {
@@ -325,11 +325,11 @@
             }
         }
 
-        private function _Str_12979(k:WindowMouseEvent):void
+        private function onPulldownMouseDown(k:WindowMouseEvent):void
         {
             if (this._widget != null)
             {
-                this._widget._Str_12979(k);
+                this._widget.onPulldownMouseDown(k);
             }
         }
 

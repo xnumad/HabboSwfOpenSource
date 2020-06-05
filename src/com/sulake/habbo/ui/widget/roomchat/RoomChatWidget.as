@@ -885,7 +885,7 @@
         {
         }
 
-        public function _Str_12979(k:WindowMouseEvent):void
+        public function onPulldownMouseDown(k:WindowMouseEvent):void
         {
             if (this._Str_2701 != null)
             {
