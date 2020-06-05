@@ -33,7 +33,7 @@
     public class TextController extends WindowController implements ITextWindow, ITextFieldContainer, ILocalizable 
     {
         private static const REPLACE_RANDOM_CHARS:Array = ["a", "B", "c", "D", "e"];
-        protected static const _PROPERTY_SETTER_TABLE:Dictionary = _Str_19301();
+        protected static const _PROPERTY_SETTER_TABLE:Dictionary = createPropertySetterTable();
 
         private var _Str_16655:String = "";
         protected var _Str_2309:TextField;
@@ -557,7 +557,7 @@
             k._Str_22881 = _local_6;
         }
 
-        protected static function _Str_19301():Dictionary
+        protected static function createPropertySetterTable():Dictionary
         {
             var k:Dictionary = new Dictionary();
             k[PropertyKeys.ALWAYS_SHOW_SELECTION] = setAlwaysShowSelection;
