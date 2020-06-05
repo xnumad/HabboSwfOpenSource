@@ -20,7 +20,7 @@
             return true;
         }
 
-        public function get _Str_5455():int
+        public function get botId():int
         {
             return this._botId;
         }

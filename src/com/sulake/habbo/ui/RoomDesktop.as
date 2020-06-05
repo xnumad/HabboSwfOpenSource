@@ -670,16 +670,16 @@
             var _local_2:BotSkillListUpdateParser = k.getParser();
             if (this._session != null)
             {
-                _local_3 = this._session.userDataManager._Str_17237(_local_2._Str_5455);
+                _local_3 = this._session.userDataManager._Str_17237(_local_2.botId);
                 _local_3._Str_7594 = k.getParser().skillList.concat();
             }
-            this.events.dispatchEvent(new _Str_5375(_local_2._Str_5455, _local_2.skillList));
+            this.events.dispatchEvent(new _Str_5375(_local_2.botId, _local_2.skillList));
         }
 
         private function onBotForceOpenContextMenuEvent(k:BotForceOpenContextMenuEvent):void
         {
             var _local_2:BotForceOpenContextMenuParser = k.getParser();
-            this.events.dispatchEvent(new RoomWidgetRequestBotForceOpenContextMenuEvent(_local_2._Str_5455));
+            this.events.dispatchEvent(new RoomWidgetRequestBotForceOpenContextMenuEvent(_local_2.botId));
         }
 
         public function init():void

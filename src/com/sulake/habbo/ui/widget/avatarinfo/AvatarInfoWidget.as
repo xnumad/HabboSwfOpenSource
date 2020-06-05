@@ -737,7 +737,7 @@
                     break;
                 case _Str_5375.RWRBSLUE_SKILL_LIST:
                     _local_18 = (k as _Str_5375);
-                    this._botSkillsWithCommandsMap[_local_18._Str_5455.toString()] = _local_18._Str_10833;
+                    this._botSkillsWithCommandsMap[_local_18.botId.toString()] = _local_18._Str_10833;
                     if (this._rentableBotInfoData)
                     {
                         this._rentableBotInfoData._Str_19891(_local_18._Str_10833);
@@ -753,7 +753,7 @@
                     else
                     {
                         _local_24 = this.handler.container.roomEngine.activeRoomId;
-                        _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager._Str_6958(_local_19._Str_5455, 4);
+                        _local_25 = this.handler.container.roomSessionManager.getSession(_local_24).userDataManager._Str_6958(_local_19.botId, 4);
                         messageListener.processWidgetMessage(new RoomWidgetRoomObjectMessage(RoomWidgetRoomObjectMessage.RWROM_GET_OBJECT_INFO, _local_25._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER));
                         this.handler.container.roomEngine.selectAvatar(_local_24, _local_25._Str_2713);
                     }
