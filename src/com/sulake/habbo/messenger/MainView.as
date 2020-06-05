@@ -324,7 +324,7 @@
             this._frame.invalidate();
         }
 
-        public function _Str_20614(k:int):void
+        public function hideConversation(k:int):void
         {
             var _local_2:IWindow = this._Str_12553(k);
             if (_local_2 != null)
@@ -796,7 +796,7 @@
                             }
                             break;
                         case "close_conversation_button":
-                            this._Str_20614(this._currentConversationId);
+                            this.hideConversation(this._currentConversationId);
                             break;
                         case "follow_button":
                             this._messenger.send(new _Str_4348(this._currentConversationId));

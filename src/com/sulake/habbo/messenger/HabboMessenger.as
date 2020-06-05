@@ -309,7 +309,7 @@
 
         public function closeConversation(k:int):void
         {
-            this._Str_2439._Str_20614(k);
+            this._Str_2439.hideConversation(k);
         }
 
         public function get hasfriendsListInitialized():Boolean
