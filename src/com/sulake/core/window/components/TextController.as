@@ -294,7 +294,7 @@
             k._Str_2309.mouseWheelEnabled = _arg_2;
         }
 
-        private static function _Str_17885(k:TextController, _arg_2:Boolean):void
+        private static function setMultiline(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.multiline = _arg_2;
             k.refreshTextImage();
@@ -576,7 +576,7 @@
             k[PropertyKeys.ITALIC] = setItalic;
             k[PropertyKeys.KERNING] = setKerning;
             k[PropertyKeys.MAX_CHARS] = setMaxChars;
-            k[PropertyKeys.MULTILINE] = _Str_17885;
+            k[PropertyKeys.MULTILINE] = setMultiline;
             k[PropertyKeys.RESTRICT] = _Str_17907;
             k[PropertyKeys.SPACING] = _Str_9915;
             k[PropertyKeys.SHARPNESS] = _Str_16622;
@@ -891,7 +891,7 @@
 
         public function set multiline(k:Boolean):void
         {
-            _Str_17885(this, k);
+            setMultiline(this, k);
         }
 
         public function set restrict(k:String):void
