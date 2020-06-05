@@ -329,7 +329,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_18703(k:TextController, _arg_2:Number):void
+        private static function setLeading(k:TextController, _arg_2:Number):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.leading = _arg_2;
@@ -585,7 +585,7 @@
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
             k["margins"] = setTextMarginMap;
             k[PropertyKeys.MAX_LINES] = setMaxLines;
-            k[PropertyKeys.LEADING] = _Str_18703;
+            k[PropertyKeys.LEADING] = setLeading;
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
             k[PropertyKeys.AUTO_SIZE] = setAutoSize;
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = setMouseWheelEnabled;
@@ -951,7 +951,7 @@
 
         public function set leading(k:Number):void
         {
-            _Str_18703(this, k);
+            setLeading(this, k);
         }
 
         public function set _Str_15348(k:String):void
