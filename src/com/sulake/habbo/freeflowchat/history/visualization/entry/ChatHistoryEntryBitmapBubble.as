@@ -27,7 +27,7 @@
             this._roomId = k.roomId;
             var _local_6:TextField = new TextField();
             _local_6.defaultTextFormat = ChatHistoryLayoutEnum._Str_14898;
-            _local_6.text = HabboFreeFlowChat._Str_21613();
+            _local_6.text = HabboFreeFlowChat.getTimeStampNow();
             _local_6.thickness = -15;
             _local_6.sharpness = 80;
             _local_6.antiAliasType = AntiAliasType.ADVANCED;

@@ -32,7 +32,7 @@
             _local_3.gridFitType = GridFitType.PIXEL;
             var _local_4:TextField = new TextField();
             _local_4.defaultTextFormat = ChatHistoryLayoutEnum._Str_14898;
-            _local_4.text = HabboFreeFlowChat._Str_21613();
+            _local_4.text = HabboFreeFlowChat.getTimeStampNow();
             _local_4.width = (_local_4.textWidth + 5);
             _local_4.height = (_local_4.textHeight + 5);
             _local_4.thickness = -15;

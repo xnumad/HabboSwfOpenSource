@@ -98,7 +98,7 @@
             super(k, _arg_2, _arg_3);
         }
 
-        public static function _Str_21613():String
+        public static function getTimeStampNow():String
         {
             var k:Date = new Date();
             var _local_2:Number = k.getHours();
