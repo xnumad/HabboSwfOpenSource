@@ -330,7 +330,7 @@
                 return;
             }
             Logger.log("Sending caution...");
-            this._Str_20346(true);
+            this.act(true);
         }
 
         private function onSendMessage(k:WindowEvent, _arg_2:IWindow):void
@@ -340,10 +340,10 @@
                 return;
             }
             Logger.log("Sending message...");
-            this._Str_20346(false);
+            this.act(false);
         }
 
-        private function _Str_20346(k:Boolean):void
+        private function act(k:Boolean):void
         {
             if (((this._includeInfo) || (this._msgInput.text == "")))
             {
