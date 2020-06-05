@@ -446,7 +446,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomPropertyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsDataUpdateMessageEvent;
@@ -1105,7 +1105,7 @@
             INCOMING_PACKETS[1752] = _Str_7632;
             INCOMING_PACKETS[1759] = RoomAdErrorEvent;
             INCOMING_PACKETS[1774] = UseObjectMessageEvent;
-            INCOMING_PACKETS[1778] = _Str_7849;
+            INCOMING_PACKETS[1778] = ObjectsMessageEvent;
             INCOMING_PACKETS[178] = _Str_4585;
             INCOMING_PACKETS[1787] = _Str_8054;
             INCOMING_PACKETS[1797] = SleepMessageEvent;
