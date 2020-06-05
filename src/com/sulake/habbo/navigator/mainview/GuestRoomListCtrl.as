@@ -33,7 +33,7 @@
         private var _scrollV:IScrollbarWindow;
         protected var _userCountRenderer:UserCountRenderer;
         private var _lastHilite:IWindowContainer;
-        private var _Str_22153:int;
+        private var _lastMouseX:int;
         private var _Str_19895:Boolean;
         private var _Str_21859:int;
         private var _Str_16040:Boolean;
@@ -379,8 +379,8 @@
         private function _Str_22464(k:WindowEvent):void
         {
             var _local_2:WindowMouseEvent = WindowMouseEvent(k);
-            var _local_3:int = Math.abs((this._Str_22153 - _local_2.stageX));
-            this._Str_22153 = _local_2.stageX;
+            var _local_3:int = Math.abs((this._lastMouseX - _local_2.stageX));
+            this._lastMouseX = _local_2.stageX;
             this._Str_19895 = (_local_3 > 2);
         }
 
