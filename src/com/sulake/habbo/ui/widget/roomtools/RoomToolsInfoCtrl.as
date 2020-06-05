@@ -147,7 +147,7 @@
                     this.setCollapsed(true);
                     break;
                 case WindowMouseEvent.OVER:
-                    _Str_21734();
+                    cancelWindowCollapse();
                     break;
                 case WindowMouseEvent.OUT:
                     collapseIfPending();

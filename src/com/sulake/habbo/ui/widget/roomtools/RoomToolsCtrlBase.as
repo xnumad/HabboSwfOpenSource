@@ -88,7 +88,7 @@
             this.setCollapsed(true);
         }
 
-        protected function _Str_21734():void
+        protected function cancelWindowCollapse():void
         {
             if (this._windowCollapseTimer != null)
             {
