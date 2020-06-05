@@ -285,7 +285,7 @@
                     {
                         _local_15.setDirection(AvatarSetType.HEAD, 2);
                         _local_16 = _local_15._Str_818(AvatarSetType.HEAD);
-                        _local_11 = (_local_10._Str_2830(_local_9) as IRegionWindow);
+                        _local_11 = (_local_10.getGridItemAt(_local_9) as IRegionWindow);
                         if (_local_11)
                         {
                             _local_11._Str_2613 = _local_14.name;
@@ -311,7 +311,7 @@
                 }
                 while (_local_9 < this._SafeStr_18593)
                 {
-                    _local_11 = (_local_10._Str_2830(_local_9) as IRegionWindow);
+                    _local_11 = (_local_10.getGridItemAt(_local_9) as IRegionWindow);
                     _local_12 = (_local_11.findChildByName("image") as IBitmapWrapperWindow);
                     if (!this._SafeStr_18586.hasKey(_local_12))
                     {

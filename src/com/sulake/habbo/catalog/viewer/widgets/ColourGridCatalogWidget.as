@@ -87,7 +87,7 @@
             _local_5 = (page.viewer.catalog.assets.getAssetByName(k._Str_17175) as BitmapDataAsset);
             this._colourChosen = (_local_5.content as BitmapData);
             this._Str_14728();
-            this.select((this._colourGrid._Str_2830(k.index) as IWindowContainer));
+            this.select((this._colourGrid.getGridItemAt(k.index) as IWindowContainer));
         }
 
         private function _Str_22045(k:CatalogWidgetMultiColoursEvent):void
@@ -108,7 +108,7 @@
             _local_5 = (page.viewer.catalog.assets.getAssetByName(k._Str_17175) as BitmapDataAsset);
             this._colourChosen = (_local_5.content as BitmapData);
             this._Str_14728();
-            this.select((this._colourGrid._Str_2830(0) as IWindowContainer));
+            this.select((this._colourGrid.getGridItemAt(0) as IWindowContainer));
         }
 
         private function select(k:IWindowContainer):void

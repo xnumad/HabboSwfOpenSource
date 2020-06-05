@@ -134,7 +134,7 @@
                     _local_3 = this._Str_6872.indexOf(k);
                     if (_local_3 != -1)
                     {
-                        _local_4 = IWindowContainer(this._Str_3889._Str_2830(_local_3));
+                        _local_4 = IWindowContainer(this._Str_3889.getGridItemAt(_local_3));
                         _Str_12777(_local_4, _arg_2);
                     }
                     else

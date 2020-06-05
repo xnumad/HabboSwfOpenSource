@@ -52,7 +52,7 @@
             {
                 return;
             }
-            this.select((this._gridWindow._Str_2830(k) as IWindowContainer));
+            this.select((this._gridWindow.getGridItemAt(k) as IWindowContainer));
         }
 
         private function populate(k:IHabboWindowManager):void

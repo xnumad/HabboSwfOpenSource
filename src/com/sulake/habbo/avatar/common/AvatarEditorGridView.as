@@ -159,7 +159,7 @@
 
         public function _Str_830(k:int, _arg_2:IWindowContainer):void
         {
-            var _local_3:IWindow = this._partGrid._Str_2830(k);
+            var _local_3:IWindow = this._partGrid.getGridItemAt(k);
             if (!_local_3)
             {
                 return;

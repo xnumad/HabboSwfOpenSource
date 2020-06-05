@@ -29,7 +29,7 @@
 
         override flash_proxy function getProperty(k:*):*
         {
-            return this._iterable._Str_2830(uint(k));
+            return this._iterable.getGridItemAt(uint(k));
         }
 
         override flash_proxy function setProperty(k:*, _arg_2:*):void
@@ -54,7 +54,7 @@
 
         override flash_proxy function nextValue(k:int):*
         {
-            return this._iterable._Str_2830((uint(k) - 1));
+            return this._iterable.getGridItemAt((uint(k) - 1));
         }
     }
 }

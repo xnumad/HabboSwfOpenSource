@@ -97,7 +97,7 @@
             {
                 return null;
             }
-            return this._grid._Str_2830(0) as IWindowContainer;
+            return this._grid.getGridItemAt(0) as IWindowContainer;
         }
 
         public function _Str_25722(k:Vector.<GroupItem>):void

@@ -150,7 +150,7 @@
             var _local_2:IWindowContainer;
             if ((((!(this._layerOptions == null)) && (this._layerOptions._Str_3617 == BadgeLayerCtrl._Str_5392)) && (this._parentCtrl._Str_20634.visible)))
             {
-                _local_2 = (this._parentCtrl._Str_5636._Str_2830(k._Str_3324) as IWindowContainer);
+                _local_2 = (this._parentCtrl._Str_5636.getGridItemAt(k._Str_3324) as IWindowContainer);
                 this._Str_17901(_local_2, k);
             }
         }
@@ -160,7 +160,7 @@
             var _local_2:IWindowContainer;
             if ((((!(this._layerOptions == null)) && (!(this._layerOptions._Str_3617 == BadgeLayerCtrl._Str_5392))) && (this._parentCtrl._Str_20634.visible)))
             {
-                _local_2 = (this._parentCtrl._Str_5636._Str_2830((k._Str_3324 + 1)) as IWindowContainer);
+                _local_2 = (this._parentCtrl._Str_5636.getGridItemAt((k._Str_3324 + 1)) as IWindowContainer);
                 this._Str_17901(_local_2, k);
             }
         }

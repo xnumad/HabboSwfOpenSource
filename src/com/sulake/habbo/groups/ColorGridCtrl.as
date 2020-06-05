@@ -200,7 +200,7 @@
             {
                 return;
             }
-            var _local_3:IWindowContainer = (this._colorGrid._Str_2830(k) as IWindowContainer);
+            var _local_3:IWindowContainer = (this._colorGrid.getGridItemAt(k) as IWindowContainer);
             if (_local_3 != null)
             {
                 _local_4 = (_local_3.findChildByName("selected") as IWindow);

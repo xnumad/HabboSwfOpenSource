@@ -99,7 +99,7 @@
 
         private function _Str_21961(k:int, _arg_2:Boolean):void
         {
-            var _local_3:IWindowContainer = IWindowContainer(this._itemGrid._Str_2830(k));
+            var _local_3:IWindowContainer = IWindowContainer(this._itemGrid.getGridItemAt(k));
             if (_local_3 != null)
             {
                 IBorderWindow(_local_3.findChildByName("bg")).style = ((_arg_2) ? 0 : 2);
@@ -108,7 +108,7 @@
 
         private function _Str_22817(k:int):String
         {
-            var _local_2:IWindowContainer = IWindowContainer(this._itemGrid._Str_2830(k));
+            var _local_2:IWindowContainer = IWindowContainer(this._itemGrid.getGridItemAt(k));
             var _local_3:_Str_2402 = _Str_2402(IWidgetWindow(_local_2.findChildByName("badgeWidget")).widget);
             return _local_3.badgeId;
         }

@@ -190,7 +190,7 @@
             return k;
         }
 
-        public function _Str_2830(k:uint):IWindow
+        public function getGridItemAt(k:uint):IWindow
         {
             var _local_2:IItemListWindow = this._Str_6836(k);
             if (_local_2 == null)
@@ -295,7 +295,7 @@
 
         public function _Str_17500(k:int):IWindow
         {
-            return this._Str_4725(this._Str_2830(k));
+            return this._Str_4725(this.getGridItemAt(k));
         }
 
         public function _Str_17625(k:IWindow, _arg_2:int):void
@@ -314,7 +314,7 @@
 
         public function swapGridItemsAt(k:int, _arg_2:int):void
         {
-            this.swapGridItems(this._Str_2830(k), this._Str_2830(_arg_2));
+            this.swapGridItems(this.getGridItemAt(k), this.getGridItemAt(_arg_2));
         }
 
         public function removeGridItems():void
@@ -554,13 +554,13 @@
             {
                 if (this.numRows == 1)
                 {
-                    _local_7 = this._Str_2830(_local_4);
+                    _local_7 = this.getGridItemAt(_local_4);
                     _local_5 = this._Str_16044(_local_7);
                     _local_4--;
                 }
                 while (_local_4 >= _arg_2)
                 {
-                    _local_7 = this._Str_2830(_local_4);
+                    _local_7 = this.getGridItemAt(_local_4);
                     _local_8 = this._Str_16931((_local_4 + 1));
                     _local_5 = this._Str_6836((_local_4 + 1));
                     _local_5.addListItemAt(_local_7, _local_8);
@@ -603,7 +603,7 @@
             while (_local_6 < _local_5)
             {
                 _local_2 = this._Str_16931(_local_6);
-                _local_7 = this._Str_2830((_local_6 + 1));
+                _local_7 = this.getGridItemAt((_local_6 + 1));
                 _local_3 = this._Str_6836(_local_6);
                 _local_3.addListItemAt(_local_7, _local_2);
                 _local_6++;

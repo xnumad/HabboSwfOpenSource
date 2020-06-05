@@ -1443,7 +1443,7 @@
             var _local_4:int;
             while (_local_4 < k.numGridItems)
             {
-                _local_2 = (k._Str_2830(_local_4) as IWindowContainer);
+                _local_2 = (k.getGridItemAt(_local_4) as IWindowContainer);
                 if (_local_2 == null)
                 {
                 }

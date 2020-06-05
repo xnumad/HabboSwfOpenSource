@@ -212,7 +212,7 @@
             var _local_2:int;
             while (_local_2 < this._Str_3334.grid.numGridItems)
             {
-                IWindowContainer(this._Str_3334.grid._Str_2830(_local_2)).findChildByName("background_color").visible = false;
+                IWindowContainer(this._Str_3334.grid.getGridItemAt(_local_2)).findChildByName("background_color").visible = false;
                 _local_2++;
             }
             IWindowContainer(k).findChildByName("background_color").visible = true;

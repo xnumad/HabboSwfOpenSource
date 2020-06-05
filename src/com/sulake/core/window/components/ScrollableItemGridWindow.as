@@ -263,9 +263,9 @@
             return this._Str_2448.addGridItemAt(k, _arg_2);
         }
 
-        public function _Str_2830(k:uint):IWindow
+        public function getGridItemAt(k:uint):IWindow
         {
-            return this._Str_2448._Str_2830(k);
+            return this._Str_2448.getGridItemAt(k);
         }
 
         public function _Str_15490(k:uint):IWindow

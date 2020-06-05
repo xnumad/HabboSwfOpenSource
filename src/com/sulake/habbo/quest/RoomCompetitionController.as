@@ -498,7 +498,7 @@
         {
             var _local_4:int;
             var _local_2:IItemGridWindow = IItemGridWindow(this._window.findChildByName("required_furnis_itemgrid"));
-            var _local_3:IWindowContainer = IWindowContainer(_local_2._Str_2830(0));
+            var _local_3:IWindowContainer = IWindowContainer(_local_2.getGridItemAt(0));
             if (_local_2.numGridItems < k)
             {
                 _local_4 = 0;
@@ -508,7 +508,7 @@
                     _local_4++;
                 }
             }
-            return IWindowContainer(_local_2._Str_2830((k - 1)));
+            return IWindowContainer(_local_2.getGridItemAt((k - 1)));
         }
 
         private function onDesktopResized(k:WindowEvent):void

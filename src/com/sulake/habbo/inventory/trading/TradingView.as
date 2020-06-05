@@ -199,7 +199,7 @@
             while (_local_2 < _local_10.length)
             {
                 _local_3 = (_local_10.getWithIndex(_local_2) as GroupItem);
-                _local_4 = (_local_11._Str_2830(_local_2) as IWindowContainer);
+                _local_4 = (_local_11.getGridItemAt(_local_2) as IWindowContainer);
                 if (_local_4)
                 {
                     _local_4.id = _local_2;
@@ -215,7 +215,7 @@
             }
             while (_local_2 < _local_11.numGridItems)
             {
-                _local_4 = (_local_11._Str_2830(_local_2) as IWindowContainer);
+                _local_4 = (_local_11.getGridItemAt(_local_2) as IWindowContainer);
                 if (_local_4)
                 {
                     _local_4.id = _local_2;
@@ -236,7 +236,7 @@
             _local_3 = 0;
             while (_local_3 < k.numGridItems)
             {
-                _local_2 = (k._Str_2830(_local_3) as IWindowContainer);
+                _local_2 = (k.getGridItemAt(_local_3) as IWindowContainer);
                 if (_local_2)
                 {
                     _local_2.id = _local_3;
@@ -248,7 +248,7 @@
             _local_3 = 0;
             while (_local_3 < k.numGridItems)
             {
-                _local_2 = (k._Str_2830(_local_3) as IWindowContainer);
+                _local_2 = (k.getGridItemAt(_local_3) as IWindowContainer);
                 if (_local_2)
                 {
                     _local_2.id = _local_3;
@@ -693,7 +693,7 @@
             _local_6 = 0;
             while (_local_6 < _local_3.numGridItems)
             {
-                _local_4 = _local_3._Str_2830(_local_6);
+                _local_4 = _local_3.getGridItemAt(_local_6);
                 _local_4.id = _local_6;
                 _local_4.procedure = this._Str_16472;
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_16472);
@@ -704,7 +704,7 @@
             _local_6 = 0;
             while (_local_6 < _local_3.numGridItems)
             {
-                _local_4 = _local_3._Str_2830(_local_6);
+                _local_4 = _local_3.getGridItemAt(_local_6);
                 _local_4.id = _local_6;
                 _local_4.procedure = this._Str_16416;
                 _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_16416);
@@ -937,7 +937,7 @@
                     {
                         _local_6 = this._Str_19943(_local_3, "", false);
                         _local_7 = this._tradingModel._Str_9836(_local_5);
-                        _local_8 = ((_local_2) ? (this._Str_18316()._Str_2830(_local_4)) : this._Str_16996()._Str_2830(_local_4));
+                        _local_8 = ((_local_2) ? (this._Str_18316().getGridItemAt(_local_4)) : this._Str_16996().getGridItemAt(_local_4));
                         this._popupCtrl._Str_17992((_local_8 as IWindowContainer), _local_6, _local_7);
                     }
                 }
