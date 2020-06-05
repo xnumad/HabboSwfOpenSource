@@ -275,7 +275,7 @@
             k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, _Str_9948));
             k.push(createProperty(PropertyKeys.SELECTABLE, _field.selectable));
             k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _field.displayAsPassword));
-            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
+            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _displayRaw));
             k.push(createProperty(PropertyKeys.LINK_TARGET, this._Str_9241));
             return k;
         }

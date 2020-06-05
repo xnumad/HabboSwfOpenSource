@@ -23,7 +23,7 @@
                 _localized = false;
             }
             _caption = k;
-            if ((((!(_Str_5517)) && (_caption.charAt(0) == "$")) && (_caption.charAt(1) == "{")))
+            if ((((!(_displayRaw)) && (_caption.charAt(0) == "$")) && (_caption.charAt(1) == "{")))
             {
                 _localized = true;
                 context.registerLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);

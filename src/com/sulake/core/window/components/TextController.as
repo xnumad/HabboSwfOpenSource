@@ -44,7 +44,7 @@
         protected var _autoSize:String = "none";
         protected var _localized:Boolean = false;
         protected var _maxLines:int = 0;
-        protected var _Str_5517:Boolean = false;
+        protected var _displayRaw:Boolean = false;
         protected var _etchingColor:uint;
         protected var _Str_5717:String;
         protected var _Str_22881:TextFormat;
@@ -1091,7 +1091,7 @@
                 this._localized = false;
             }
             _caption = k;
-            if ((((!(this._Str_5517)) && (_caption.charAt(0) == "$")) && (_caption.charAt(1) == "{")))
+            if ((((!(this._displayRaw)) && (_caption.charAt(0) == "$")) && (_caption.charAt(1) == "{")))
             {
                 this._localized = true;
                 context.registerLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);

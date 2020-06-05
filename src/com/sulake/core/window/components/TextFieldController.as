@@ -559,7 +559,7 @@
             k.push(createProperty(PropertyKeys.FOCUS_CAPTURER, this._Str_9948));
             k.push(createProperty(PropertyKeys.SELECTABLE, _field.selectable));
             k.push(createProperty(PropertyKeys.DISPLAY_AS_PASSWORD, _field.displayAsPassword));
-            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _Str_5517));
+            k.push(createProperty(PropertyKeys.DISPLAY_RAW, _displayRaw));
             return k;
         }
 
@@ -588,7 +588,7 @@
                         _field.displayAsPassword = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.DISPLAY_RAW:
-                        _Str_5517 = (_local_2.value as Boolean);
+                        _displayRaw = (_local_2.value as Boolean);
                         break;
                 }
             }
@@ -607,17 +607,17 @@
 
         public function set _Str_16747(k:Boolean):void
         {
-            _Str_5517 = k;
+            _displayRaw = k;
         }
 
         public function get _Str_16747():Boolean
         {
-            return _Str_5517;
+            return _displayRaw;
         }
 
         override public function set localization(k:String):void
         {
-            super.localization = _Str_8027(((_Str_5517) ? _caption : k));
+            super.localization = _Str_8027(((_displayRaw) ? _caption : k));
         }
 
         public function getWordAt(k:int, _arg_2:int):String
