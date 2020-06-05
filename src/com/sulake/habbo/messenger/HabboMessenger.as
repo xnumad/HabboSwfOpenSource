@@ -129,7 +129,7 @@
         private function onMiniMailMessage(k:IMessageEvent):void
         {
             this._miniMailUnseenCount++;
-            this._Str_17105();
+            this.playMessageReceivedSound();
             events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_NEW, this._miniMailUnseenCount));
         }
 
@@ -232,7 +232,7 @@
                 this._mainView.addConsoleMessage(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
                 if (!this._mainView.isOpen)
                 {
-                    this._Str_17105();
+                    this.playMessageReceivedSound();
                 }
             }
         }
@@ -245,12 +245,12 @@
                 this._mainView.addRoomInvite(_local_2.senderId, _local_2._Str_3460);
                 if (!this._mainView.isOpen)
                 {
-                    this._Str_17105();
+                    this.playMessageReceivedSound();
                 }
             }
         }
 
-        private function _Str_17105():void
+        private function playMessageReceivedSound():void
         {
             if (this._soundManager != null)
             {
