@@ -457,7 +457,7 @@
             this._navigator = k;
         }
 
-        public function set _Str_25206(k:IAdManager):void
+        public function set adManager(k:IAdManager):void
         {
             this._adManager = k;
         }

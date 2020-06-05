@@ -1099,7 +1099,7 @@
             _local_3.habboGroupsManager = this._habboGroupsManager;
             _local_3.avatarEditor = this._avatarEditor;
             _local_3.catalog = this._catalog;
-            _local_3._Str_25206 = this._adManager;
+            _local_3.adManager = this._adManager;
             _local_3.localization = this._localization;
             _local_3.habboHelp = this._habboHelp;
             _local_3.moderation = this._moderation;
