@@ -25,7 +25,7 @@
         private var _infoText:ITextWindow;
         private var _lastWindowHeight:int = -1;
         private var _lastWindowWidth:int = -1;
-        private var _Str_18916:Boolean;
+        private var _ignoreResizeEvents:Boolean;
 
         public function FriendListView(k:HabboFriendList)
         {
@@ -143,7 +143,7 @@
             {
                 return;
             }
-            if (this._Str_18916)
+            if (this._ignoreResizeEvents)
             {
                 return;
             }
@@ -156,7 +156,7 @@
 
         private function _Str_23758():void
         {
-            this._Str_18916 = true;
+            this._ignoreResizeEvents = true;
             this._footer.visible = false;
             this._footer.y = Util.getLowestPoint(this._mainWindow.content);
             this._footer.width = this._habboFriendList.tabs._Str_4971;
@@ -166,7 +166,7 @@
             this._mainWindow.header.width = (this._habboFriendList.tabs._Str_4971 - 10);
             this._mainWindow.height = (this._mainWindow.content.height + 30);
             this._mainWindow.width = this._habboFriendList.tabs._Str_4971;
-            this._Str_18916 = false;
+            this._ignoreResizeEvents = false;
             this._mainWindow.scaler.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TRIGGER, false);
             this._mainWindow.scaler.setParamFlag(WindowParam.WINDOW_PARAM_MOUSE_SCALING_TRIGGER, (!(this._habboFriendList.tabs._Str_14015() == null)));
             this._mainWindow.scaler.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER, false);
