@@ -38,7 +38,7 @@
         private var _Str_13484:Timer;
         private var _Str_8436:Timer;
         private var _Str_11229:String;
-        private var _Str_588:Number;
+        private var _offset:Number;
         private var _Str_23145:Number;
         private var _Str_11271:int;
         private var _Str_16691:String;
@@ -207,7 +207,7 @@
         {
             var _local_3:Number;
             this._Str_22687 = 0;
-            this._Str_588 = 0;
+            this._offset = 0;
             this._Str_23145 = 0;
             this._Str_11271 = 0;
             this._autoPlay = false;

@@ -14,7 +14,7 @@
         protected var _Str_2302:DisplayObject;
         protected var window:WindowController;
         protected var _Str_5527:Boolean;
-        protected var _Str_588:Point;
+        protected var _offset:Point;
         protected var _Str_3282:Point;
         protected var _Str_3368:Point;
         protected var _Str_829:uint;
@@ -25,7 +25,7 @@
             this._Str_2302 = k;
             this._Str_3368 = new Point();
             this._Str_3282 = new Point();
-            this._Str_588 = new Point();
+            this._offset = new Point();
             this._Str_5527 = false;
             this._Str_829 = 0;
         }
@@ -38,7 +38,7 @@
         public function dispose():void
         {
             this.end(this.window);
-            this._Str_588 = null;
+            this._offset = null;
             this._Str_3282 = null;
             this._Str_3368 = null;
             this._Str_2302 = null;
@@ -61,7 +61,7 @@
                 this._Str_3282.x = this._Str_2302.mouseX;
                 this._Str_3282.y = this._Str_2302.mouseY;
                 this.window = WindowController(k);
-                this.getMousePositionRelativeTo(k, this._Str_3282, this._Str_588);
+                this.getMousePositionRelativeTo(k, this._Str_3282, this._offset);
                 this.window.addEventListener(WindowEvent.WINDOW_EVENT_DESTROYED, this.clientWindowDestroyed);
                 this._Str_5527 = true;
             }
@@ -129,7 +129,7 @@
             this._Str_3282.x = k;
             this._Str_3282.y = _arg_2;
             this.getMousePositionRelativeTo(this.window, this._Str_3282, this._Str_3368);
-            this.window.offset((this._Str_3368.x - this._Str_588.x), (this._Str_3368.y - this._Str_588.y));
+            this.window.offset((this._Str_3368.x - this._offset.x), (this._Str_3368.y - this._offset.y));
         }
 
         private function clientWindowDestroyed(k:WindowEvent):void

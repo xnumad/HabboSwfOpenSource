@@ -22,7 +22,7 @@
         private var _flipH:Boolean = false;
         private var _flipV:Boolean = false;
         private var _direction:int = 0;
-        private var _Str_588:Point;
+        private var _offset:Point;
         private var _width:int = 0;
         private var _height:int = 0;
         private var _relativeDepth:Number = 0;
@@ -38,7 +38,7 @@
 
         public function RoomObjectSprite()
         {
-            this._Str_588 = new Point(0, 0);
+            this._offset = new Point(0, 0);
             this._Str_13928 = AlphaTolerance.MATCH_OPAQUE_PIXELS;
             this._Str_17033 = RoomObjectSpriteType.DEFAULT;
             super();
@@ -124,12 +124,12 @@
 
         public function get offsetX():int
         {
-            return this._Str_588.x;
+            return this._offset.x;
         }
 
         public function get offsetY():int
         {
-            return this._Str_588.y;
+            return this._offset.y;
         }
 
         public function get width():int
@@ -316,21 +316,21 @@
 
         public function set offsetX(k:int):void
         {
-            if (k == this._Str_588.x)
+            if (k == this._offset.x)
             {
                 return;
             }
-            this._Str_588.x = k;
+            this._offset.x = k;
             this._updateID++;
         }
 
         public function set offsetY(k:int):void
         {
-            if (k == this._Str_588.y)
+            if (k == this._offset.y)
             {
                 return;
             }
-            this._Str_588.y = k;
+            this._offset.y = k;
             this._updateID++;
         }
 

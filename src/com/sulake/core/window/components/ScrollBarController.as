@@ -20,7 +20,7 @@
         private static const SLIDER_TRACK:String = "slider_track";
         private static const SLIDER_BAR:String = "slider_bar";
 
-        protected var _Str_588:Number = 0;
+        protected var _offset:Number = 0;
         protected var _Str_6248:Number = 0.1;
         protected var _Str_2566:IScrollableWindow;
         private var _horizontal:Boolean;
@@ -45,12 +45,12 @@
 
         public function get scrollH():Number
         {
-            return (this._horizontal) ? this._Str_588 : 0;
+            return (this._horizontal) ? this._offset : 0;
         }
 
         public function get scrollV():Number
         {
-            return (this._horizontal) ? 0 : this._Str_588;
+            return (this._horizontal) ? 0 : this._offset;
         }
 
         public function get scrollable():IScrollableWindow
@@ -220,21 +220,21 @@
             {
                 k = 1;
             }
-            this._Str_588 = k;
+            this._offset = k;
             if (this._horizontal)
             {
-                _local_2 = (!(this._Str_2566.scrollH == this._Str_588));
+                _local_2 = (!(this._Str_2566.scrollH == this._offset));
                 if (_local_2)
                 {
-                    this._Str_2566.scrollH = this._Str_588;
+                    this._Str_2566.scrollH = this._offset;
                 }
             }
             else
             {
-                _local_2 = (!(this._Str_2566.scrollV == this._Str_588));
+                _local_2 = (!(this._Str_2566.scrollV == this._offset));
                 if (_local_2)
                 {
-                    this._Str_2566.scrollV = this._Str_588;
+                    this._Str_2566.scrollV = this._offset;
                 }
             }
             return _local_2;
@@ -537,7 +537,7 @@
         private function onScrollableResized(k:WindowEvent):void
         {
             this.updateLiftSizeAndPosition();
-            this.setScrollPosition(this._Str_588);
+            this.setScrollPosition(this._offset);
         }
 
         private function onScrollableScrolled(k:WindowEvent):void
