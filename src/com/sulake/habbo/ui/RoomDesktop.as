@@ -1427,7 +1427,7 @@
                     _local_9.addChild(_local_22);
                 }
             }
-            this._layoutManager._Str_24675(_local_9);
+            this._layoutManager.addRoomView(_local_9);
             this._canvasIDs.push(k);
         }
 

@@ -150,7 +150,7 @@
             }
         }
 
-        public function _Str_24675(k:IWindow):Boolean
+        public function addRoomView(k:IWindow):Boolean
         {
             if (k == null)
             {
