@@ -1765,7 +1765,7 @@
             if (Math.abs(this._mouseWheelSpeed) > 0.01)
             {
                 k = this._roomEngine._Str_5151(this._roomEngine.activeRoomId);
-                _local_5 = this._Str_24422(k);
+                _local_5 = this.hibit(k);
                 _local_6 = (((_local_5 > 1) ? (_local_5 << 1) : 1) / 10);
                 _local_7 = ((this._mouseWheelSpeed > 0) ? (k - _local_6) : (k + _local_6));
                 _local_7 = Math.max(0.5, _local_7);
@@ -1791,7 +1791,7 @@
             }
         }
 
-        private function _Str_24422(k:int):int
+        private function hibit(k:int):int
         {
             k = (k | (k >> 1));
             k = (k | (k >> 2));
