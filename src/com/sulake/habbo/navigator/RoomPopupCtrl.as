@@ -49,7 +49,7 @@
             this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
             this._Str_25479(this._details, this._room);
             this.refreshExtraCont();
-            this._Str_24547(this._room);
+            this.refreshEventInfo(this._room);
             this.refreshRoomSettings();
             this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum.FREE_TRADING));
             this._Str_15598(this._details, "doormode_doorbell", (this._room.doorMode == 1));
@@ -104,7 +104,7 @@
             }
         }
 
-        private function _Str_24547(k:GuestRoomData):void
+        private function refreshEventInfo(k:GuestRoomData):void
         {
             if (((k._Str_8163 == null) || (k._Str_8163.length == 0)))
             {
