@@ -240,7 +240,7 @@
             return null;
         }
 
-        public function _Str_18560(k:String):IWindow
+        public function getGridItemByTag(k:String):IWindow
         {
             var _local_3:IItemListWindow;
             var _local_4:IWindow;

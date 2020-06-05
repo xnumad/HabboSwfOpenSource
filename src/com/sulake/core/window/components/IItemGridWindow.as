@@ -22,7 +22,7 @@
         function getGridItemAt(_arg_1:uint):IWindow;
         function getGridItemByID(_arg_1:uint):IWindow;
         function getGridItemByName(_arg_1:String):IWindow;
-        function _Str_18560(_arg_1:String):IWindow;
+        function getGridItemByTag(_arg_1:String):IWindow;
         function _Str_3373(_arg_1:IWindow):int;
         function _Str_4725(_arg_1:IWindow):IWindow;
         function _Str_17500(_arg_1:int):IWindow;
