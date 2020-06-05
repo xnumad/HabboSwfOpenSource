@@ -628,7 +628,7 @@
 
         public function registerHintWindow(k:String, _arg_2:IWindow, _arg_3:int=1):void
         {
-            this._hintManager._Str_23129(k, _arg_2, _arg_3);
+            this._hintManager.registerWindow(k, _arg_2, _arg_3);
         }
 
         public function unregisterHintWindow(k:String):void

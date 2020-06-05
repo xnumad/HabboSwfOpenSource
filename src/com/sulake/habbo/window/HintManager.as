@@ -56,7 +56,7 @@
             return this._windowManager == null;
         }
 
-        public function _Str_23129(k:String, _arg_2:IWindow, _arg_3:int):void
+        public function registerWindow(k:String, _arg_2:IWindow, _arg_3:int):void
         {
             if (this._registeredWindows[k] != null)
             {
