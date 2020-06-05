@@ -352,9 +352,9 @@
             this._customContent.height = Util.getLowestPoint(this._customContent);
             this._footer.height = Util.getLowestPoint(this._footer);
             var k:int = this._listContent.y;
-            Util._Str_4679(this._content, ["custom_content", "list_content"], this._customContent.y, 8);
+            Util.moveChildrenToColumn(this._content, ["custom_content", "list_content"], this._customContent.y, 8);
             this._listContent.height = ((((this._listContent.height + k) - this._listContent.y) - this._footer.height) + this._footerHeight);
-            Util._Str_4679(this._content, ["list_content", "custom_footer"], this._listContent.y, 0);
+            Util.moveChildrenToColumn(this._content, ["list_content", "custom_footer"], this._listContent.y, 0);
             this._footerHeight = this._footer.height;
             this._Str_3774(null);
         }

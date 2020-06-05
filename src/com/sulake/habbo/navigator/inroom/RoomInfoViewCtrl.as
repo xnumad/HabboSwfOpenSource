@@ -121,7 +121,7 @@
             this.refreshEmbed();
             this._guildInfoCtrl.refresh(this._window.content, this._navigator.data._Str_2678);
             this.refreshButtons(this._navigator.data._Str_2678);
-            Util._Str_4679(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
+            Util.moveChildrenToColumn(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
             this._window.findChildByName("guild_info").x = 11;
             this._window.height = (Util.getLowestPoint(this._window.content) + 45);
         }
@@ -204,7 +204,7 @@
             this._window.findChildByName("make_favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (!(this._navigator.data._Str_21092())));
             this._window.findChildByName("favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (this._navigator.data._Str_21092()));
             this._window.findChildByName("floor_plan_editor_button").visible = this._navigator.data._Str_11824;
-            Util._Str_4679(_local_2, ["room_name", "owner_name_cont", "rating_cont", "ranking_cont", "padding_cont", "tags", "room_desc", "thumbnail_container"], _local_3.y, 0);
+            Util.moveChildrenToColumn(_local_2, ["room_name", "owner_name_cont", "rating_cont", "ranking_cont", "padding_cont", "tags", "room_desc", "thumbnail_container"], _local_3.y, 0);
             _local_2.visible = true;
             _local_2.height = Util.getLowestPoint(_local_2);
         }
@@ -258,7 +258,7 @@
             this.find("floor_plan_editor_button").visible = (_local_4.roomControllerLevel >= RoomControllerLevel.GUEST);
             var _local_5:IWindowContainer = IWindowContainer(this._window.findChildByName("buttons_cont"));
             var _local_6:Array = ["room_settings_button", "room_filter_button", "floor_plan_editor_button", "staff_pick_button", "room_report_button", "room_muteall_button"];
-            Util._Str_4679(_local_5, _local_6, 0, 3);
+            Util.moveChildrenToColumn(_local_5, _local_6, 0, 3);
             _local_5.visible = Util._Str_13639(IWindowContainer(_local_5));
             _local_5.height = Util.getLowestPoint(_local_5);
         }
@@ -299,7 +299,7 @@
             var _local_3:IWindowContainer = IWindowContainer(this.find("embed_info"));
             var _local_4:ITextWindow = ITextWindow(this.find("embed_info_txt"));
             _local_4.height = (_local_4.textHeight + 5);
-            Util._Str_4679(_local_3, ["embed_info_txt", "embed_src_txt"], _local_4.y, 2);
+            Util.moveChildrenToColumn(_local_3, ["embed_info_txt", "embed_src_txt"], _local_4.y, 2);
             _local_3.height = (Util.getLowestPoint(_local_3) + 5);
             _local_3.findChildByName("embed_info_region").procedure = this.onEmbedInfo;
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))

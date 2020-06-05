@@ -55,7 +55,7 @@
             this.refreshInfo(this._details, "doormode_doorbell", (this._room.doorMode == 1));
             this.refreshInfo(this._details, "doormode_password", (this._room.doorMode == 2));
             this.refreshInfo(this._details, "doormode_invisible", (this._room.doorMode == 3));
-            Util._Str_4679(this._details, ["guild_info", "roomname", "roomctg_cont", "roomowner_cont", "roomdesc", "extra_cont", "doormode_doorbell", "doormode_password", "doormode_invisible", "trading_allowed", "eventinfo_cont", "roomsettings_cont"], 0, 0);
+            Util.moveChildrenToColumn(this._details, ["guild_info", "roomname", "roomctg_cont", "roomowner_cont", "roomdesc", "extra_cont", "doormode_doorbell", "doormode_password", "doormode_invisible", "trading_allowed", "eventinfo_cont", "roomsettings_cont"], 0, 0);
             this._details.findChildByName("guild_info").x = 2;
             this._details.height = Util.getLowestPoint(this._details);
         }
@@ -98,7 +98,7 @@
             }
             if (Util._Str_13639(k))
             {
-                Util._Str_4679(k, ["tags", "startedat_cont", "rating_cont"], 0, 3);
+                Util.moveChildrenToColumn(k, ["tags", "startedat_cont", "rating_cont"], 0, 3);
                 k.height = (Util.getLowestPoint(k) + 4);
                 k.visible = true;
             }

@@ -59,7 +59,7 @@
             return _local_2;
         }
 
-        public static function _Str_4679(k:IWindowContainer, _arg_2:int, _arg_3:int):void
+        public static function moveChildrenToColumn(k:IWindowContainer, _arg_2:int, _arg_3:int):void
         {
             var _local_5:IWindow;
             var _local_4:int;
@@ -255,7 +255,7 @@
             {
                 _local_4.removeChild(_local_7);
             }
-            _Str_4679(_local_4, _local_5.y, 0);
+            moveChildrenToColumn(_local_4, _local_5.y, 0);
             _local_4.height = getLowestPoint(_local_4);
             _local_3.height = (_local_4.height + (2 * _local_4.y));
             Logger.log(((((((((((("XXXX: " + _local_3.height) + ", ") + _local_4.height) + ", ") + _local_5.height) + ", ") + _local_6.height) + ", ") + _local_7.height) + ", ") + _local_8.height));

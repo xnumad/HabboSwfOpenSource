@@ -49,7 +49,7 @@
             }
         }
 
-        public static function _Str_4679(k:IWindowContainer, _arg_2:Array, _arg_3:int, _arg_4:int):void
+        public static function moveChildrenToColumn(k:IWindowContainer, _arg_2:Array, _arg_3:int, _arg_4:int):void
         {
             var _local_5:String;
             var _local_6:IWindow;
