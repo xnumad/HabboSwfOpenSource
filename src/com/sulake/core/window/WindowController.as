@@ -36,7 +36,7 @@
 
     public class WindowController extends WindowModel implements IWindow, IGraphicContextHost, IChildWindowHost 
     {
-        private static var _Str_10736:uint = 0;
+        private static var _uidCounter:uint = 0;
         private static const _Str_4232:Rectangle = new Rectangle();
         public static const TAG_EXCLUDE:String = "_EXCLUDE";
         public static const TAG_INTERNAL:String = "_INTERNAL";
@@ -62,7 +62,7 @@
         public function WindowController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0, _arg_12:String="")
         {
             var _local_15:uint;
-            this._Str_2995 = _Str_10736++;
+            this._Str_2995 = _uidCounter++;
             var _local_13:XML = _arg_5.getWindowFactory()._Str_19128(_arg_2, _arg_3);
             if (_arg_6 == null)
             {
