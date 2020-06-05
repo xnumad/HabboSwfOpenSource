@@ -828,7 +828,7 @@
             if (((((this._freeFlowChat) && (!(this._freeFlowChat.isDisabledInPreferences))) && (this._isInRoom)) && (!(this._wasFreeFlowChatPerkAllowedAtInitialize))))
             {
                 _local_2 = new Timer(250, 1);
-                _local_2.addEventListener(TimerEvent.TIMER_COMPLETE, this._Str_25540);
+                _local_2.addEventListener(TimerEvent.TIMER_COMPLETE, this.delayedAddToStageFreeFlowChat);
                 _local_2.start();
             }
             if (this._isInRoom)
@@ -842,7 +842,7 @@
             }
         }
 
-        private function _Str_25540(k:TimerEvent):void
+        private function delayedAddToStageFreeFlowChat(k:TimerEvent):void
         {
             var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(this._roomEngine.activeRoomId)) as RoomDesktop);
             if (((_local_2) && (this._freeFlowChat.displayObject)))
