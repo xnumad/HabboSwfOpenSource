@@ -2637,7 +2637,7 @@
             return null;
         }
 
-        protected function _Str_25024():Boolean
+        protected function requiresOwnGraphicContext():Boolean
         {
             var k:WindowController;
             if (testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
@@ -2646,7 +2646,7 @@
                 {
                     for each (k in this._children)
                     {
-                        if (k._Str_25024())
+                        if (k.requiresOwnGraphicContext())
                         {
                             return true;
                         }
