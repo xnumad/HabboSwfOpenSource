@@ -43,7 +43,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.habbo.communication.messages.incoming.preferences.AccountPreferencesEvent;
     import flash.geom.Point;
@@ -185,7 +185,7 @@
         {
             this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._communication.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            this._communication.addHabboConnectionMessageEvent(new _Str_2929(this.onGuestRoomData));
+            this._communication.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onGuestRoomData));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this.onRoomChatSettings));
             this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
         }
@@ -237,7 +237,7 @@
             }
         }
 
-        private function onGuestRoomData(k:_Str_2929):void
+        private function onGuestRoomData(k:GetGuestRoomResultEvent):void
         {
             if (((this._chatHistoryBuffer) && (!(this._roomChangeRecordedInHistory))))
             {

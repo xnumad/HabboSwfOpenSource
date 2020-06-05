@@ -360,7 +360,7 @@
 	import com.sulake.habbo.communication.messages.incoming.inventory.clothes.FigureSetIdsEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator.*;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_16380;
-	import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+	import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_3992;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
 	import com.sulake.habbo.communication.messages.incoming.navigator._Str_4187;
@@ -1421,7 +1421,7 @@
             INCOMING_PACKETS[662] = PollErrorEvent;
             INCOMING_PACKETS[673] = GuideSessionErrorEvent;
             INCOMING_PACKETS[680] = _Str_7697;
-            INCOMING_PACKETS[687] = _Str_2929;
+            INCOMING_PACKETS[687] = GetGuestRoomResultEvent;
             INCOMING_PACKETS[69] = BotSkillListUpdateEvent;
             INCOMING_PACKETS[714] = _Str_8418;
             INCOMING_PACKETS[717] = _Str_5147;

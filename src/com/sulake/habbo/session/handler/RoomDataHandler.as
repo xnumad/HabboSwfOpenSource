@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.session.handler
 {
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
@@ -19,12 +19,12 @@
             {
                 return;
             }
-            k.addMessageEvent(new _Str_2929(this.onRoomResult));
+            k.addMessageEvent(new GetGuestRoomResultEvent(this.onRoomResult));
         }
 
         private function onRoomResult(k:IMessageEvent):void
         {
-            var _local_2:_Str_2929 = (k as _Str_2929);
+            var _local_2:GetGuestRoomResultEvent = (k as GetGuestRoomResultEvent);
             if (_local_2 == null)
             {
                 return;

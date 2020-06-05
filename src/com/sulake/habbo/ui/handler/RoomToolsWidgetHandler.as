@@ -7,7 +7,7 @@
     import com.sulake.habbo.navigator.IHabboNavigator;
     import com.sulake.habbo.ui.widget.roomtools.RoomToolsWidget;
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
@@ -43,7 +43,7 @@
         private function onRoomInfo(k:IMessageEvent):void
         {
             var _local_4:String;
-            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
             var _local_3:_Str_2370 = _local_2.data;
             if (_local_3)
             {
@@ -158,7 +158,7 @@
         public function set communicationManager(k:IHabboCommunicationManager):void
         {
             this._communicationManager = k;
-            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo)));
+            this._communicationManagerMessageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo)));
         }
 
         public function rateRoom():void

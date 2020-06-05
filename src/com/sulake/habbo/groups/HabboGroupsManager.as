@@ -30,7 +30,7 @@
     import com.sulake.iid.IIDHabboTracking;
     import com.sulake.habbo.communication.messages.incoming.users.ExtendedProfileMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildEditFailedMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupJoinFailedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GroupMembershipRequestedMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberMgmtFailedMessageEvent;
@@ -165,7 +165,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ExtendedProfileMessageEvent(this._Str_24027));
             this.addMessageEvent(new GuildEditFailedMessageEvent(this._Str_25256));
-            this.addMessageEvent(new _Str_2929(this.onRoomInfo));
+            this.addMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             this.addMessageEvent(new HabboGroupJoinFailedMessageEvent(this._Str_25665));
             this.addMessageEvent(new GroupMembershipRequestedMessageEvent(this._guildMembersWindowCtrl._Str_22705));
             this.addMessageEvent(new GuildMemberMgmtFailedMessageEvent(this._guildMembersWindowCtrl._Str_23412));
@@ -516,7 +516,7 @@
 
         private function onRoomInfo(k:IMessageEvent):void
         {
-            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
             if (_local_2._Str_15487)
             {
                 this._groupRoomInfoCtrl.onRoomInfo(_local_2.data);

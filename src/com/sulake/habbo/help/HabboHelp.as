@@ -39,7 +39,7 @@
     import com.sulake.iid.IIDHabboFriendList;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.RoomReadyMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.help.CallForHelpPendingCallsEvent;
     import com.sulake.habbo.communication.messages.incoming.help._Str_11155;
     import com.sulake.habbo.communication.messages.incoming.help._Str_9121;
@@ -431,7 +431,7 @@
             this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new UsersEvent(this._Str_10523));
             this.addMessageEvent(new RoomReadyMessageEvent(this._Str_5963));
-            this.addMessageEvent(new _Str_2929(this._Str_24404));
+            this.addMessageEvent(new GetGuestRoomResultEvent(this._Str_24404));
             this.addMessageEvent(new CallForHelpPendingCallsEvent(this._Str_23679));
             this.addMessageEvent(new _Str_11155(this._Str_24610));
             this.addMessageEvent(new _Str_9121(this._Str_24314));
@@ -733,7 +733,7 @@
 
         private function _Str_24404(k:IMessageEvent):void
         {
-            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
             this._userRegistry._Str_19528(_local_2.data.flatId, _local_2.data.roomName);
         }
 

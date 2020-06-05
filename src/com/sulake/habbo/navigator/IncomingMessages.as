@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.handshake.UserRightsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_6109;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_8029;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2929;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_6213;
     import com.sulake.habbo.communication.messages.incoming.roomsettings._Str_5081;
@@ -127,7 +127,7 @@
             _local_2.addHabboConnectionMessageEvent(new UserRightsMessageEvent(this.onUserRights));
             _local_2.addHabboConnectionMessageEvent(new _Str_6109(this._Str_8561));
             _local_2.addHabboConnectionMessageEvent(new _Str_8029(this._Str_15955));
-            _local_2.addHabboConnectionMessageEvent(new _Str_2929(this.onRoomInfo));
+            _local_2.addHabboConnectionMessageEvent(new GetGuestRoomResultEvent(this.onRoomInfo));
             _local_2.addHabboConnectionMessageEvent(new _Str_4129(this.onDoorbell));
             _local_2.addHabboConnectionMessageEvent(new _Str_6213(this._Str_9346));
             _local_2.addHabboConnectionMessageEvent(new _Str_5081(this._Str_12021));
@@ -289,7 +289,7 @@
         {
             var _local_3:Boolean;
             var _local_4:RoomSessionTags;
-            var _local_2:GetGuestRoomResultMessageParser = _Str_2929(k).getParser();
+            var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
             Logger.log(((("Got room info: " + _local_2._Str_15487) + ", ") + _local_2._Str_18882));
             if (_local_2._Str_15487)
             {
