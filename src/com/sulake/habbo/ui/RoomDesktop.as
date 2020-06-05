@@ -1416,7 +1416,7 @@
                 return;
             }
             _local_13.setDisplayObject(_local_12);
-            _local_13.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_22744);
+            _local_13.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.resizeBackgroundColorizer);
             if (this._session.isSpectatorMode)
             {
                 _local_22 = this._Str_24343();
@@ -1474,7 +1474,7 @@
             _local_3.graphics.endFill();
         }
 
-        private function _Str_22744(k:WindowEvent):void
+        private function resizeBackgroundColorizer(k:WindowEvent):void
         {
             var _local_2:IDisplayObjectWrapper = (k.target as IDisplayObjectWrapper);
             if (_local_2 == null)
