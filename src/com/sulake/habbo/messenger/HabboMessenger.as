@@ -307,7 +307,7 @@
             this._help._Str_19984(k);
         }
 
-        public function _Str_20291(k:int):void
+        public function closeConversation(k:int):void
         {
             this._Str_2439._Str_20614(k);
         }

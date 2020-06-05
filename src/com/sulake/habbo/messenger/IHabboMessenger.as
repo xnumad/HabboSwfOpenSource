@@ -9,7 +9,7 @@
         function isOpen():Boolean;
         function toggleMessenger():void;
         function startConversation(_arg_1:int):void;
-        function _Str_20291(_arg_1:int):void;
+        function closeConversation(_arg_1:int):void;
         function _Str_14047(_arg_1:int, _arg_2:Boolean):void;
         function _Str_10473(_arg_1:int, _arg_2:Boolean):void;
         function getUnseenMiniMailMessageCount():int;

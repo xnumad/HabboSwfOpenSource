@@ -451,7 +451,7 @@
                 {
                     this._friendMappedByID.remove(_local_8);
                     this._friendEntityList.splice(this._friendEntityList.indexOf(_local_3), 1);
-                    this._habboMessengerComponent._Str_20291(_local_8);
+                    this._habboMessengerComponent.closeConversation(_local_8);
                 }
             }
             for each (_local_4 in _local_6)
