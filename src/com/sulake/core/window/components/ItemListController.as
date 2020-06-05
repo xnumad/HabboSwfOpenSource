@@ -30,7 +30,7 @@
         protected var _resizing:Boolean = false;
         protected var _updating:Boolean = false;
         protected var _spacing:int;
-        protected var _Str_2803:Boolean = false;
+        protected var _horizontal:Boolean = false;
         protected var _Str_7087:Number = -1;
         protected var _Str_7859:Number = -1;
         protected var _Str_9264:Boolean;
@@ -48,7 +48,7 @@
             this._scrollOffsetV = 0;
             this._scrollAreaWidth = 0;
             this._scrollAreaHeight = 0;
-            this._Str_2803 = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
+            this._horizontal = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
             var _local_12:IThemeManager = _arg_5.getWindowFactory().getThemeManager();
             this._spacing = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
             this._Str_9264 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
@@ -179,7 +179,7 @@
             {
                 return this._Str_7087;
             }
-            return (this._Str_2803) ? (this._container.width / this.numListItems) : (0.1 * this._container.width);
+            return (this._horizontal) ? (this._container.width / this.numListItems) : (0.1 * this._container.width);
         }
 
         public function get scrollStepV():Number
@@ -188,7 +188,7 @@
             {
                 return this._Str_7859;
             }
-            return (this._Str_2803) ? (0.1 * this._container.height) : (this._container.height / this.numListItems);
+            return (this._horizontal) ? (0.1 * this._container.height) : (this._container.height / this.numListItems);
         }
 
         public function set scrollStepH(k:Number):void
@@ -231,7 +231,7 @@
             this._Str_12072 = k;
             if (this._container)
             {
-                if (this._Str_2803)
+                if (this._horizontal)
                 {
                     this._container.setParamFlag(WindowParam.WINDOW_PARAM_REFLECT_HORIZONTAL_RESIZE_TO_PARENT, k);
                 }
@@ -301,7 +301,7 @@
         public function addListItem(k:IWindow):IWindow
         {
             this._updating = true;
-            if (this._Str_2803)
+            if (this._horizontal)
             {
                 k.x = (this._scrollAreaWidth + ((this.numListItems > 0) ? this._spacing : 0));
                 this._scrollAreaWidth = k.right;
@@ -444,7 +444,7 @@
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (!this._Str_5418)
                     {
-                        if (this._Str_2803)
+                        if (this._horizontal)
                         {
                             this._container.height = _h;
                         }
@@ -480,7 +480,7 @@
             switch (k.type)
             {
                 case WindowMouseEvent.WHEEL:
-                    if (this._Str_2803)
+                    if (this._horizontal)
                     {
                         this.scrollH = (this.scrollH - ((_local_5 * this.scrollStepH) / this.maxScrollH));
                     }
@@ -501,7 +501,7 @@
                 case WindowMouseEvent.MOVE:
                     if (((this._Str_11276) && (!(this._disableAutoDrag))))
                     {
-                        if (this._Str_2803)
+                        if (this._horizontal)
                         {
                             this.scrollH = (((this._Str_19220 + this._Str_19352) - _local_3) / this.maxScrollH);
                         }
@@ -571,7 +571,7 @@
             {
                 this._updating = true;
                 k = this._container.numChildren;
-                if (this._Str_2803)
+                if (this._horizontal)
                 {
                     this._scrollAreaWidth = 0;
                     this._scrollAreaHeight = _h;

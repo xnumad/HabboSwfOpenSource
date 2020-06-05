@@ -25,9 +25,9 @@
         public function ItemGridController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            _Str_2803 = (!(_arg_2 == WindowType.WINDOW_TYPE_ITEMGRID_HORIZONTAL));
+            _horizontal = (!(_arg_2 == WindowType.WINDOW_TYPE_ITEMGRID_HORIZONTAL));
             _Str_5418 = true;
-            if (!_Str_2803)
+            if (!_horizontal)
             {
                 throw (new Error("Horizontal item grid not yet implemented!"));
             }
@@ -85,7 +85,7 @@
             {
                 return _Str_7087;
             }
-            return (_Str_2803) ? (0.1 * visibleRegion.height) : (visibleRegion.width / this._Str_3080);
+            return (_horizontal) ? (0.1 * visibleRegion.height) : (visibleRegion.width / this._Str_3080);
         }
 
         override public function get scrollStepV():Number
@@ -94,7 +94,7 @@
             {
                 return _Str_7859;
             }
-            return (_Str_2803) ? (visibleRegion.height / this._Str_11491) : (0.1 * visibleRegion.width);
+            return (_horizontal) ? (visibleRegion.height / this._Str_11491) : (0.1 * visibleRegion.width);
         }
 
         public function get _Str_6405():Boolean
@@ -135,7 +135,7 @@
                     }
                     break;
                 case WindowMouseEvent.WHEEL:
-                    if (_Str_2803)
+                    if (_horizontal)
                     {
                         scrollV = (scrollV - (WindowMouseEvent(_arg_2).delta * 0.01));
                     }
@@ -282,7 +282,7 @@
                 throw (new Error("Item grid is out of order!"));
             }
             var _local_3:IItemListWindow = this._Str_6836(_local_2);
-            if (!_Str_2803)
+            if (!_horizontal)
             {
                 _local_3.width = _local_3.visibleRegion.width;
             }
@@ -326,7 +326,7 @@
             {
                 _local_2 = IItemListWindow(getListItemAt(_local_3));
                 _local_2.removeListItems();
-                if (!_Str_2803)
+                if (!_horizontal)
                 {
                     _local_2.width = 0;
                 }
@@ -347,7 +347,7 @@
             {
                 _local_2 = IItemListWindow(getListItemAt(_local_3));
                 _local_2.destroyListItems();
-                if (!_Str_2803)
+                if (!_horizontal)
                 {
                     _local_2.width = 0;
                 }
