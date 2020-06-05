@@ -42,7 +42,7 @@
         protected var _drawing:Boolean;
         protected var _margins:TextMargins;
         protected var _autoSize:String = "none";
-        protected var _Str_2959:Boolean = false;
+        protected var _localized:Boolean = false;
         protected var _Str_22084:int = 0;
         protected var _Str_5517:Boolean = false;
         protected var _etchingColor:uint;
@@ -197,16 +197,16 @@
             {
                 return;
             }
-            if (k._Str_2959)
+            if (k._localized)
             {
                 k.context.removeLocalizationListener(k._caption.slice(2, k._caption.indexOf("}")), k);
-                k._Str_2959 = false;
+                k._localized = false;
             }
             k._caption = _arg_2;
             if (((k._caption.charAt(0) == "$") && (k._caption.charAt(1) == "{")))
             {
                 k.context.registerLocalizationListener(k._caption.slice(2, k._caption.indexOf("}")), k);
-                k._Str_2959 = true;
+                k._localized = true;
             }
             else
             {
@@ -1085,15 +1085,15 @@
             {
                 return;
             }
-            if (this._Str_2959)
+            if (this._localized)
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
-                this._Str_2959 = false;
+                this._localized = false;
             }
             _caption = k;
             if ((((!(this._Str_5517)) && (_caption.charAt(0) == "$")) && (_caption.charAt(1) == "{")))
             {
-                this._Str_2959 = true;
+                this._localized = true;
                 context.registerLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
             }
             else
@@ -1141,7 +1141,7 @@
             k._scrollV = this._scrollV;
             k._margins = this._margins.clone(k.setTextMargins);
             k._autoSize = this._autoSize;
-            k._Str_2959 = this._Str_2959;
+            k._localized = this._localized;
             return k;
         }
 
@@ -1149,7 +1149,7 @@
         {
             immediateClickMode = false;
             TextStyleManager.events.removeEventListener(Event.CHANGE, this.onTextStyleChanged);
-            if (this._Str_2959)
+            if (this._localized)
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
             }

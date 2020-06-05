@@ -162,16 +162,16 @@
             {
                 return;
             }
-            if (_Str_2959)
+            if (_localized)
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
-                _Str_2959 = false;
+                _localized = false;
             }
             _caption = k;
             if (((_caption.charAt(0) == "$") && (_caption.charAt(1) == "{")))
             {
                 context.registerLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
-                _Str_2959 = true;
+                _localized = true;
             }
             else
             {
@@ -198,16 +198,16 @@
             {
                 return;
             }
-            if (_Str_2959)
+            if (_localized)
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
-                _Str_2959 = false;
+                _localized = false;
             }
             _caption = k;
             if (((_caption.charAt(0) == "$") && (_caption.charAt(1) == "{")))
             {
                 context.registerLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
-                _Str_2959 = true;
+                _localized = true;
             }
             else
             {
