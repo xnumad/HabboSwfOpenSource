@@ -46,7 +46,7 @@
             this._guildInfoCtrl.refresh(this._details, this._room);
             this.refreshRoomName(this._details, this._room);
             this.refreshOwnerName();
-            this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
+            this.refreshTextWithCaption("roomctg", this._details, this._Str_23067(this._room._Str_2712));
             this.refreshRoomDesc(this._details, this._room);
             this.refreshExtraCont();
             this.refreshEventInfo(this._room);
@@ -93,7 +93,7 @@
             this._tagRenderer._Str_19120(k, this._room.tags);
             if (this._room.score > 0)
             {
-                this._Str_22171("rating", k, ("" + this._room.score));
+                this.refreshTextWithCaption("rating", k, ("" + this._room.score));
                 k.findChildByName("rating_cont").visible = true;
             }
             if (Util._Str_13639(k))
@@ -152,7 +152,7 @@
             _local_4.visible = true;
         }
 
-        private function _Str_22171(k:String, _arg_2:IWindowContainer, _arg_3:String):void
+        private function refreshTextWithCaption(k:String, _arg_2:IWindowContainer, _arg_3:String):void
         {
             var _local_4:IWindowContainer = IWindowContainer(_arg_2.findChildByName((k + "_cont")));
             _local_4.visible = true;
