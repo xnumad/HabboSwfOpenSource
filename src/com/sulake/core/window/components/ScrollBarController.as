@@ -207,7 +207,7 @@
             var _local_2:Boolean;
             if (((this._Str_2566 == null) || (this._Str_2566.disposed)))
             {
-                if (!this._Str_16407())
+                if (!this.resolveScrollTarget())
                 {
                     return false;
                 }
@@ -266,7 +266,7 @@
             {
                 if (this._Str_2566 == null)
                 {
-                    this._Str_16407();
+                    this.resolveScrollTarget();
                 }
             }
             if (k == this)
@@ -314,7 +314,7 @@
             var _local_4:int;
             if (((this._Str_2566 == null) || (this._Str_2566.disposed)))
             {
-                if (((_disposed) || (!(this._Str_16407()))))
+                if (((_disposed) || (!(this.resolveScrollTarget()))))
                 {
                     return;
                 }
@@ -485,7 +485,7 @@
             }
         }
 
-        private function _Str_16407():Boolean
+        private function resolveScrollTarget():Boolean
         {
             var k:IScrollableWindow;
             var _local_2:uint;
