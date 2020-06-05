@@ -71,22 +71,22 @@
                 this._notification.visible = false;
                 this._title.visible = false;
                 _local_4 = new AvatarEditorGridItemEffect(null, this._model.controller.manager.windowManager, this._model.controller.manager.assets);
-                this._Str_2816(_local_4);
+                this.addGridItem(_local_4);
                 for each (_local_5 in _local_3)
                 {
                     _local_4 = new AvatarEditorGridItemEffect(_local_5, this._model.controller.manager.windowManager, this._model.controller.manager.assets);
-                    this._Str_2816(_local_4);
+                    this.addGridItem(_local_4);
                 }
             }
             this._Str_5614(0);
             this._firstView = false;
         }
 
-        private function _Str_2816(k:AvatarEditorGridItemEffect):void
+        private function addGridItem(k:AvatarEditorGridItemEffect):void
         {
             k.window.procedure = this._Str_23531;
             this._effectItems.push(k);
-            this._partGrid._Str_2816(k.window);
+            this._partGrid.addGridItem(k.window);
         }
 
         public function _Str_5614(k:int):void

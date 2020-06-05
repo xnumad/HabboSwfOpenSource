@@ -162,7 +162,7 @@
                     _local_2.color = 0xFFFFFFFF;
                     _local_2.width = this._colourChooserBackground.width;
                     _local_2.height = this._colourChooserBackground.height;
-                    this._colourGrid._Str_2816(_local_2);
+                    this._colourGrid.addGridItem(_local_2);
                     _local_3 = (_local_2.findChildByTag("BG_BORDER") as IBitmapWrapperWindow);
                     if (_local_3 != null)
                     {

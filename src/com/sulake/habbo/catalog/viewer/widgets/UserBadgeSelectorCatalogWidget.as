@@ -70,7 +70,7 @@
             var k:int;
             for each (_local_2 in this._catalog.inventory._Str_15524(this._excludedBadges))
             {
-                this._itemGrid._Str_2816(this._Str_7360(_local_2, k++));
+                this._itemGrid.addGridItem(this._Str_7360(_local_2, k++));
             }
         }
 

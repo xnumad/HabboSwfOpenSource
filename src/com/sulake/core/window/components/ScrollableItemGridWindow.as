@@ -253,9 +253,9 @@
             super.dispose();
         }
 
-        public function _Str_2816(k:IWindow):IWindow
+        public function addGridItem(k:IWindow):IWindow
         {
-            return this._Str_2448._Str_2816(k);
+            return this._Str_2448.addGridItem(k);
         }
 
         public function _Str_12115(k:IWindow, _arg_2:uint):IWindow

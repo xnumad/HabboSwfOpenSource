@@ -122,7 +122,7 @@
             var _local_2:PetsGridItem = new PetsGridItem(this, k, this._windowManager, this._assetLibrary, this._model._Str_3613(k.id));
             if (_local_2 != null)
             {
-                this._grid._Str_2816(_local_2.window);
+                this._grid.addGridItem(_local_2.window);
                 this._gridItems.add(k.id, _local_2);
                 if (this._selectedGridItem == null)
                 {

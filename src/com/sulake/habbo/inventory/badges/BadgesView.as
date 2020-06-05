@@ -203,7 +203,7 @@
                     }
                     if (_local_7)
                     {
-                        this._inactiveGrid._Str_2816(_local_4.window);
+                        this._inactiveGrid.addGridItem(_local_4.window);
                         this._filteredBadges.push(_local_4);
                         _local_4.window.addEventListener(WindowMouseEvent.CLICK, this._Str_20827);
                     }
@@ -219,7 +219,7 @@
             while (_local_5 < _local_6.length)
             {
                 _local_4 = (_local_6[_local_5] as Badge);
-                this._activeGrid._Str_2816(_local_4.window);
+                this._activeGrid.addGridItem(_local_4.window);
                 _local_4.window.addEventListener(WindowMouseEvent.CLICK, this._Str_20205);
                 _local_5++;
             }

@@ -66,7 +66,7 @@
                     {
                         _local_6.visible = false;
                     }
-                    k._Str_2816(_local_5);
+                    k.addGridItem(_local_5);
                     _local_4.view = _local_5;
                     _local_7 = _local_4.initIcon(this);
                     if (_local_7 != null)

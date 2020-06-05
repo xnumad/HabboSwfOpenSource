@@ -563,7 +563,7 @@
             {
                 if (_local_2.type == k)
                 {
-                    this._Str_2448._Str_2816(_local_2.button);
+                    this._Str_2448.addGridItem(_local_2.button);
                 }
             }
             this._Str_22699(k);

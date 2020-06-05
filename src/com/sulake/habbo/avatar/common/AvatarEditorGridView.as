@@ -109,7 +109,7 @@
                 {
                     if (_local_5)
                     {
-                        this._partGrid._Str_2816(_local_5.view);
+                        this._partGrid.addGridItem(_local_5.view);
                         _local_5.view.addEventListener(WindowMouseEvent.CLICK, this._Str_22871);
                         if (_local_5.Selected)
                         {
@@ -126,7 +126,7 @@
                     {
                         for each (_local_8 in _local_7)
                         {
-                            _local_4._Str_2816(_local_8.view);
+                            _local_4.addGridItem(_local_8.view);
                             _local_8.view.procedure = this._Str_25838;
                         }
                     }

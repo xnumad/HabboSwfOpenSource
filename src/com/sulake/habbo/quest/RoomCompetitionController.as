@@ -504,7 +504,7 @@
                 _local_4 = 0;
                 while (_local_4 < (k - _local_2.numGridItems))
                 {
-                    _local_2._Str_2816(_local_3.clone());
+                    _local_2.addGridItem(_local_3.clone());
                     _local_4++;
                 }
             }

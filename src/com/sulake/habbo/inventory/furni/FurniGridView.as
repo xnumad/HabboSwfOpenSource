@@ -179,7 +179,7 @@
             var _local_5:int = _local_3;
             while (_local_5 < _local_4)
             {
-                this._grid._Str_2816(this._passedItems[_local_5].window);
+                this._grid.addGridItem(this._passedItems[_local_5].window);
                 this._currentPageItems.push(this._passedItems[_local_5]);
                 _local_5++;
             }

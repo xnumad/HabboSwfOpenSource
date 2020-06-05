@@ -93,7 +93,7 @@
                     {
                         _local_4.visible = false;
                     }
-                    this._itemGrid._Str_2816(_local_3);
+                    this._itemGrid.addGridItem(_local_3);
                     _local_2.view = _local_3;
                     _local_5 = _local_2.initIcon(this);
                     if (_local_5 != null)

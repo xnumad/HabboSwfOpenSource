@@ -17,7 +17,7 @@
         function get numColumns():uint;
         function get numRows():uint;
         function get numGridItems():uint;
-        function _Str_2816(_arg_1:IWindow):IWindow;
+        function addGridItem(_arg_1:IWindow):IWindow;
         function _Str_12115(_arg_1:IWindow, _arg_2:uint):IWindow;
         function _Str_2830(_arg_1:uint):IWindow;
         function _Str_15490(_arg_1:uint):IWindow;

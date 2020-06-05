@@ -178,7 +178,7 @@
             return k;
         }
 
-        public function _Str_2816(k:IWindow):IWindow
+        public function addGridItem(k:IWindow):IWindow
         {
             var _local_2:IItemListWindow = this._Str_16044(k);
             return k;
@@ -657,7 +657,7 @@
             this.autoArrangeItems = _local_6;
             for each (_local_5 in _local_2)
             {
-                this._Str_2816(_local_5);
+                this.addGridItem(_local_5);
             }
             if (this._containerResizeToColumns)
             {

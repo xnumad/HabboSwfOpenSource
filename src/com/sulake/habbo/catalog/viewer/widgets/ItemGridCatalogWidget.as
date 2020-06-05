@@ -345,7 +345,7 @@
             var _local_6:IWindowContainer = (page.viewer.catalog.windowManager.buildFromXML(_local_3) as IWindowContainer);
             if (_arg_2)
             {
-                this._Str_2448._Str_2816(_local_6);
+                this._Str_2448.addGridItem(_local_6);
             }
             k.view = _local_6;
             if ((_local_4 is ProductContainer))

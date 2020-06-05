@@ -73,7 +73,7 @@
         {
             this._Str_2514.push(new ChatStyleGridEntry(k, _arg_2));
             var _local_3:IWindowContainer = this._Str_22807(_arg_2);
-            this._Str_3334.grid._Str_2816(_local_3);
+            this._Str_3334.grid.addGridItem(_local_3);
             _local_3.findChildByName("background_color").visible = false;
         }
 

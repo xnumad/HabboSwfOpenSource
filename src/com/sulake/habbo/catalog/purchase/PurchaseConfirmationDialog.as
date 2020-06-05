@@ -807,7 +807,7 @@
                     _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_22731);
                     _local_5.findChildByName("color").color = _local_4.colours[0];
                     _local_5.id = _local_3;
-                    k._Str_2816(_local_5);
+                    k.addGridItem(_local_5);
                 }
             }
         }

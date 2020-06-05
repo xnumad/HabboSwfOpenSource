@@ -108,7 +108,7 @@
                 _local_3.color = 0xFFFFFFFF;
                 _local_3.width = this._colorCellFrame.width;
                 _local_3.height = this._colorCellFrame.height;
-                this._gridWindow._Str_2816(_local_3);
+                this._gridWindow.addGridItem(_local_3);
                 _local_4 = (_local_3.findChildByTag("BG_BORDER") as IBitmapWrapperWindow);
                 if (_local_4 != null)
                 {

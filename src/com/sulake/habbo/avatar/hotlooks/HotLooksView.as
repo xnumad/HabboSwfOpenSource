@@ -50,7 +50,7 @@
             for each (_local_2 in this._model.hotLooks)
             {
                 k = _local_2.view.window;
-                this._hotLooksGrid._Str_2816(k);
+                this._hotLooksGrid.addGridItem(k);
                 k.procedure = this._Str_23998;
             }
         }

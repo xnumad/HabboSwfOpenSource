@@ -66,7 +66,7 @@
             var _local_4:int;
             while (_local_4 < this._SafeStr_18583)
             {
-                k._Str_2816(_local_2.clone());
+                k.addGridItem(_local_2.clone());
                 _local_4++;
             }
             _local_2.dispose();

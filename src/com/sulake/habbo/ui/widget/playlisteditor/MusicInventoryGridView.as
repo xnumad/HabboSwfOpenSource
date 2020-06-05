@@ -102,7 +102,7 @@
                 }
                 _local_12.window.procedure = this._Str_20197;
                 _local_12._Str_23170.procedure = this._Str_20197;
-                this._itemGridWindow._Str_2816(_local_12.window);
+                this._itemGridWindow.addGridItem(_local_12.window);
                 this._items.add(_local_7, _local_12);
                 _local_5++;
             }

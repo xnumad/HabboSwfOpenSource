@@ -74,7 +74,7 @@
             var _local_3:IWindowContainer = getItemTemplate();
             var _local_4:CraftingMixerItemRenderer = new CraftingMixerItemRenderer(k, (_local_3.clone() as IWindowContainer), _widget);
             _local_4._Str_18598 = _arg_2;
-            this.container._Str_2816(_local_4.window);
+            this.container.addGridItem(_local_4.window);
             this._renderers.push(_local_4);
             if (_widget.inSecretRecipeMode)
             {

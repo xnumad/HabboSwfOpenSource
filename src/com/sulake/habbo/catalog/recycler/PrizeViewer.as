@@ -98,7 +98,7 @@
                 if (_local_13 != null)
                 {
                     _Str_12777(_local_12, _local_13.data);
-                    this._Str_3889._Str_2816(_local_12);
+                    this._Str_3889.addGridItem(_local_12);
                 }
                 if (_local_13.id != 0)
                 {

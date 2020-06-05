@@ -125,14 +125,14 @@
             {
                 for each (k in this._badgeBaseParts)
                 {
-                    this._parentCtrl._Str_5636._Str_2816(this._Str_7360(k));
+                    this._parentCtrl._Str_5636.addGridItem(this._Str_7360(k));
                 }
             }
             else
             {
                 for each (k in this._badgeLayerParts)
                 {
-                    this._parentCtrl._Str_5636._Str_2816(this._Str_7360(k));
+                    this._parentCtrl._Str_5636.addGridItem(this._Str_7360(k));
                 }
             }
         }

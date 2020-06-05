@@ -102,7 +102,7 @@
                 this._Str_18553(_local_5, "background", this._backgroundBitmap, true, null);
                 this._Str_18553(_local_5, "foreground", this._foregroundBitmap, true, _local_4);
                 this._Str_18553(_local_5, "selected", this._selectedColorBitmap, false, null);
-                this._colorGrid._Str_2816(_local_5);
+                this._colorGrid.addGridItem(_local_5);
             }
         }
 

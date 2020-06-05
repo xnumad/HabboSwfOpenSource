@@ -245,7 +245,7 @@
                 this._Str_9242(_local_4, _local_3);
                 _local_4.findChildByName("bg_region").procedure = this._Str_25036;
                 _local_4.findChildByName("bg_selected_bitmap").visible = false;
-                k._Str_2816(_local_4);
+                k.addGridItem(_local_4);
             }
         }
 
