@@ -15,7 +15,7 @@
         function get resizeOnItemUpdate():Boolean;
         function set resizeOnItemUpdate(_arg_1:Boolean):void;
         function get numColumns():uint;
-        function get _Str_11491():uint;
+        function get numRows():uint;
         function get numGridItems():uint;
         function _Str_2816(_arg_1:IWindow):IWindow;
         function _Str_12115(_arg_1:IWindow, _arg_2:uint):IWindow;

@@ -94,7 +94,7 @@
             {
                 return _scrollStepV;
             }
-            return (_horizontal) ? (scrollableRegion.height / this._Str_11491) : (0.1 * scrollableRegion.width);
+            return (_horizontal) ? (scrollableRegion.height / this.numRows) : (0.1 * scrollableRegion.width);
         }
 
         public function get shouldRebuildGridOnResize():Boolean
@@ -165,7 +165,7 @@
             return numListItems;
         }
 
-        public function get _Str_11491():uint
+        public function get numRows():uint
         {
             var k:uint;
             var _local_2:uint = this.numColumns;
@@ -552,7 +552,7 @@
             }
             else
             {
-                if (this._Str_11491 == 1)
+                if (this.numRows == 1)
                 {
                     _local_7 = this._Str_2830(_local_4);
                     _local_5 = this._Str_16044(_local_7);
