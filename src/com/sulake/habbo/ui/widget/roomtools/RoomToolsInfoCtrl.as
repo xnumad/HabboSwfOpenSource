@@ -29,7 +29,7 @@
             this._roomTags = new Array();
         }
 
-        public function _Str_15920(k:Boolean, _arg_2:String, _arg_3:String, _arg_4:Array):void
+        public function showRoomInfo(k:Boolean, _arg_2:String, _arg_3:String, _arg_4:Array):void
         {
             if (!window)
             {

@@ -105,14 +105,14 @@
             }
         }
 
-        public function _Str_15920(k:Boolean, _arg_2:String, _arg_3:String, _arg_4:Array):void
+        public function showRoomInfo(k:Boolean, _arg_2:String, _arg_3:String, _arg_4:Array):void
         {
             if (!this._roomToolsInfoCtrl)
             {
                 return;
             }
             this._Str_19410 = _arg_2;
-            this._roomToolsInfoCtrl._Str_15920(k, _arg_2, _arg_3, _arg_4);
+            this._roomToolsInfoCtrl.showRoomInfo(k, _arg_2, _arg_3, _arg_4);
         }
 
         public function _Str_23696(k:int):void
