@@ -15,7 +15,7 @@
 
     public class ExtensionView implements IExtensionView 
     {
-        private static const _Str_3226:int = 3;
+        private static const MARGIN:int = 3;
         private static const _Str_18425:int = -8;
 
         private var _toolbar:HabboToolbar;
@@ -41,8 +41,8 @@
             var _local_5:IWindowContainer = this._itemWindow.desktop;
             if (this._itemWindow)
             {
-                this._itemWindow.x = (((_local_5.width - this._itemWindow.width) - _Str_3226) - this.extraMargin);
-                this._itemWindow.y = _Str_3226;
+                this._itemWindow.x = (((_local_5.width - this._itemWindow.width) - MARGIN) - this.extraMargin);
+                this._itemWindow.y = MARGIN;
                 this._itemWindow.visible = true;
             }
             else
@@ -159,7 +159,7 @@
                         break;
                     case ToolbarDisplayExtensionIds.PURSE:
                         this._itemWindow.addListItem(k);
-                        this._itemWindow.y = (_Str_3226 + _Str_18425);
+                        this._itemWindow.y = (MARGIN + _Str_18425);
                         break;
                     default:
                         if (!this._landingView)
@@ -283,7 +283,7 @@
             this._extraMargin = k;
             if (this._itemWindow)
             {
-                this._itemWindow.x = (((this._itemWindow.desktop.width - this._itemWindow.width) - _Str_3226) - this.extraMargin);
+                this._itemWindow.x = (((this._itemWindow.desktop.width - this._itemWindow.width) - MARGIN) - this.extraMargin);
             }
         }
 

@@ -20,7 +20,7 @@
 
     public class CalendarView implements IGetImageListener 
     {
-        private static const _Str_3226:int = 75;
+        private static const MARGIN:int = 75;
 
         private var _controller:HabboCampaigns;
         private var _modal:_Str_2784;
@@ -102,7 +102,7 @@
         private function onResize(k:Event):void
         {
             var _local_2:Stage = this._controller.context.displayObjectContainer.stage;
-            this._itemsOnScreen = Math.floor(((_local_2.stageWidth - (_Str_3226 * 2)) / (this._Str_13395 + this._Str_18214)));
+            this._itemsOnScreen = Math.floor(((_local_2.stageWidth - (MARGIN * 2)) / (this._Str_13395 + this._Str_18214)));
             this._modal._Str_2429.width = this._Str_18893(this._itemsOnScreen);
             var _local_3:IWindow = this.window.findChildByName("btn_forward");
             if (_local_3)

@@ -15,7 +15,7 @@
 
     public class ClubSpecialInfoBubbleView 
     {
-        private static const _Str_3226:int = 8;
+        private static const MARGIN:int = 8;
 
         private var _data:ScrKickbackData;
         private var _controller:HabboClubCenter;
@@ -115,14 +115,14 @@
             }
             var _local_2:Point = new Point();
             k.getGlobalPosition(_local_2);
-            if (((this._controller.stage.stageWidth < (((_local_2.x + k.width) + this._window.width) + _Str_3226)) && (_local_2.x > (this._window.width + _Str_3226))))
+            if (((this._controller.stage.stageWidth < (((_local_2.x + k.width) + this._window.width) + MARGIN)) && (_local_2.x > (this._window.width + MARGIN))))
             {
                 (this._window as IBubbleWindow).direction = "right";
-                _local_2.x = (_local_2.x - (this._window.width + _Str_3226));
+                _local_2.x = (_local_2.x - (this._window.width + MARGIN));
             }
             else
             {
-                _local_2.x = (_local_2.x + (k.width + _Str_3226));
+                _local_2.x = (_local_2.x + (k.width + MARGIN));
             }
             _local_2.y = (_local_2.y + ((k.height * 0.5) - (this._window.height * 0.5)));
             this._window.position = _local_2;
