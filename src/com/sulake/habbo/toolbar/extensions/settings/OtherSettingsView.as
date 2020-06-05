@@ -75,9 +75,9 @@
                     this._toolbar.freeFlowChat.isDisabledInPreferences = ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected;
                     if (!this._toolbar.freeFlowChat.isDisabledInPreferences)
                     {
-                        if (((!(this._toolbar._Str_12052._Str_10612 == null)) && (!(this._toolbar.freeFlowChat.displayObject == null))))
+                        if (((!(this._toolbar._Str_12052.chatContainer == null)) && (!(this._toolbar.freeFlowChat.displayObject == null))))
                         {
-                            this._toolbar._Str_12052._Str_10612.setDisplayObject(this._toolbar.freeFlowChat.displayObject);
+                            this._toolbar._Str_12052.chatContainer.setDisplayObject(this._toolbar.freeFlowChat.displayObject);
                         }
                     }
                     else

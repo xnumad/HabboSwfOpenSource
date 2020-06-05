@@ -8,7 +8,7 @@
     public interface IRoomUI extends IUnknown 
     {
         function createDesktop(_arg_1:IRoomSession):IRoomDesktop;
-        function get _Str_10612():IDisplayObjectWrapper;
+        function get chatContainer():IDisplayObjectWrapper;
         function _Str_17382(_arg_1:String):void;
         function getDesktop(_arg_1:String):IRoomDesktop;
         function _Str_17538(_arg_1:int):int;

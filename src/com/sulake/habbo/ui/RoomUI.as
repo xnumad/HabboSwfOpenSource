@@ -1125,7 +1125,7 @@
             return _local_3;
         }
 
-        public function get _Str_10612():IDisplayObjectWrapper
+        public function get chatContainer():IDisplayObjectWrapper
         {
             var k:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(this._roomEngine.activeRoomId)) as RoomDesktop);
             if (((!(k)) || (!(k.layoutManager))))
