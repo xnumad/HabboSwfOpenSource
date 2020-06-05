@@ -769,7 +769,7 @@
             this._interstitialActive = true;
         }
 
-        public function _Str_22028():void
+        public function triggerbottomBarResize():void
         {
             this._Str_21850(new FriendBarResizeEvent());
         }

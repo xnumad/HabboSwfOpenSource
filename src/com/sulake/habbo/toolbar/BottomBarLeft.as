@@ -776,7 +776,7 @@
                 this.updateVisibility(this._previousState);
             }
             this._Str_5532();
-            this._toolbar._Str_12052._Str_22028();
+            this._toolbar._Str_12052.triggerbottomBarResize();
         }
 
         public function linkReceived(k:String):void

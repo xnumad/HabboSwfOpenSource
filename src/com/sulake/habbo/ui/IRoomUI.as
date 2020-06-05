@@ -16,6 +16,6 @@
         function _Str_25327(_arg_1:String):void;
         function _Str_9753(_arg_1:int, _arg_2:String, _arg_3:uint, _arg_4:int):void;
         function _Str_21446(_arg_1:MouseEvent):Boolean;
-        function _Str_22028():void;
+        function triggerbottomBarResize():void;
     }
 }
