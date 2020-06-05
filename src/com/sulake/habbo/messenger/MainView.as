@@ -825,7 +825,7 @@
             }
         }
 
-        public function _Str_3055(k:IWidgetWindow, _arg_2:String):void
+        public function onInput(k:IWidgetWindow, _arg_2:String):void
         {
             this._messenger.send(new _Str_10962(this._currentConversationId, _arg_2));
             _Str_2789(k.widget).message = "";

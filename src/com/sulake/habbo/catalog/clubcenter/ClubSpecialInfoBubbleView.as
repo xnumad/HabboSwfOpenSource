@@ -31,7 +31,7 @@
             {
                 return;
             }
-            this._window.procedure = this._Str_3055;
+            this._window.procedure = this.onInput;
             this._Str_15735(_arg_4);
             this.setElementText("info_creditsspent", this.getLocalization("hccenter.breakdown.creditsspent").replace("%credits%", this._data.totalCreditsSpent));
             var _local_5:int = int((this._data.kickbackPercentage * 100));
@@ -83,7 +83,7 @@
             this._controller = null;
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowMouseEvent.DOWN)) || (!(this._controller))))
             {

@@ -62,7 +62,7 @@
                 _local_4.setDirection(AvatarSetType.FULL, 4);
                 this._widget._Str_9202(_local_4._Str_818(AvatarSetType.FULL));
             }
-            this.container.procedure = this._Str_3055;
+            this.container.procedure = this.onInput;
         }
 
         public function dispose():void
@@ -165,7 +165,7 @@
             }
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowMouseEvent.DOWN)) || (!(this._controller))))
             {

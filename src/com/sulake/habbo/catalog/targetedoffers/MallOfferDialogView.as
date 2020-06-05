@@ -30,7 +30,7 @@
                 _local_3 = (this._controller.catalog as IHabboConfigurationManager).getProperty("image.library.url");
                 IStaticBitmapWrapperWindow(this._window.findChildByName("bmp_illustration")).assetUri = (_local_3 + _arg_2.imageUrl);
             }
-            this._window.procedure = this._Str_3055;
+            this._window.procedure = this.onInput;
             this._window.center();
         }
 
@@ -43,7 +43,7 @@
             }
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(this._controller)) || (!(this._offer))))
             {

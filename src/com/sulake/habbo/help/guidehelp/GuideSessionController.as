@@ -1644,7 +1644,7 @@
             return null;
         }
 
-        public function _Str_3055(k:IWidgetWindow, _arg_2:String):void
+        public function onInput(k:IWidgetWindow, _arg_2:String):void
         {
             if (_arg_2.length > 0)
             {

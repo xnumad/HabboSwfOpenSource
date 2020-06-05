@@ -4,6 +4,6 @@
 
     public interface _Str_5480 
     {
-        function _Str_3055(_arg_1:IWidgetWindow, _arg_2:String):void;
+        function onInput(_arg_1:IWidgetWindow, _arg_2:String):void;
     }
 }

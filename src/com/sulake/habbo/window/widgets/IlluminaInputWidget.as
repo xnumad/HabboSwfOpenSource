@@ -225,7 +225,7 @@
         {
             if (this._submitHandler != null)
             {
-                this._submitHandler._Str_3055(this._widgetWindow, this.message);
+                this._submitHandler.onInput(this._widgetWindow, this.message);
             }
         }
 

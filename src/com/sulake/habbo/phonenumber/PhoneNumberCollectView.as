@@ -59,11 +59,11 @@
             }
             this._window = IFrameWindow(this._component.windowManager.buildFromXML(XML(this._component.assets.getAssetByName("phonenumber_collect_xml").content)));
             this._window.center();
-            this._window.findChildByName("never_link").procedure = this._Str_3055;
-            this._window.findChildByName("skip_link").procedure = this._Str_3055;
-            this._window.findChildByName("ok_button").procedure = this._Str_3055;
-            this._window.findChildByName("header_button_close").procedure = this._Str_3055;
-            this._window.findChildByName("phone_number_input").procedure = this._Str_3055;
+            this._window.findChildByName("never_link").procedure = this.onInput;
+            this._window.findChildByName("skip_link").procedure = this.onInput;
+            this._window.findChildByName("ok_button").procedure = this.onInput;
+            this._window.findChildByName("header_button_close").procedure = this.onInput;
+            this._window.findChildByName("phone_number_input").procedure = this.onInput;
             ITextFieldWindow(this._window.findChildByName("phone_number_input")).maxChars = _Str_7625;
             var _local_2:String = ((this._component.localizationManager.getLocalization("phone.number.collect.countries")) || ("{}"));
             var _local_3:Object = new JSONDecoder(_local_2, false).getValue();
@@ -158,7 +158,7 @@
             }
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.DOWN)
             {

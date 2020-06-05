@@ -45,14 +45,14 @@
             while (_local_5 < _local_4)
             {
                 _local_7 = CalendarItem._Str_15147(_local_3, this._Str_6223, _local_5);
-                _local_7.procedure = this._Str_3055;
+                _local_7.procedure = this.onInput;
                 this.itemList.addListItem(_local_7);
                 _local_5++;
             }
             this.itemList.scrollStepH = (_local_3.width / this.itemList.maxScrollH);
             var _local_6:Stage = this._controller.context.displayObjectContainer.stage;
             _local_6.addEventListener(Event.RESIZE, this.onResize);
-            this.window.procedure = this._Str_3055;
+            this.window.procedure = this.onInput;
             this.onResize(null);
             this._Str_10170(this._controller._Str_6223._Str_5472);
         }
@@ -121,7 +121,7 @@
             }
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:int;
             if (k.type != WindowMouseEvent.DOWN)

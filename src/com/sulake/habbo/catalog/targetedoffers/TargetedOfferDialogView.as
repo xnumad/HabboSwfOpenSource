@@ -86,7 +86,7 @@
             {
                 _local_5.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_UP, this._Str_23435);
             }
-            _window.procedure = this._Str_3055;
+            _window.procedure = this.onInput;
             _window.center();
             this._Str_20970();
             this._Str_18148();
@@ -205,7 +205,7 @@
             }
         }
 
-        private function _Str_3055(k:WindowEvent, _arg_2:IWindow):void
+        private function onInput(k:WindowEvent, _arg_2:IWindow):void
         {
             if (!_controller)
             {
