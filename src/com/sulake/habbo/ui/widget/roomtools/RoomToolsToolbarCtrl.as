@@ -161,7 +161,7 @@
                 window.height = (_local_3.height = (window.findChildByName("window_bg").height = _local_5));
                 _local_2.y = ((_local_5 * 0.5) - (_local_2.height * 0.5));
             }
-            window.position = new Point(_Str_10400, ((window.desktop.height - DISTANCE_FROM_BOTTOM) - window.height));
+            window.position = new Point(TOOLBAR_X, ((window.desktop.height - DISTANCE_FROM_BOTTOM) - window.height));
             if (this._roomToolsHistory)
             {
                 this._roomToolsHistory.window.position = new Point((this.right - this._roomToolsHistory.window.width), (window.position.y - this._roomToolsHistory.window.height));
@@ -366,9 +366,9 @@
             if (_Str_3510)
             {
                 k = window.findChildByName("side_bar_expand");
-                return (k) ? (k.width + _Str_10400) : 0;
+                return (k) ? (k.width + TOOLBAR_X) : 0;
             }
-            return window.width + _Str_10400;
+            return window.width + TOOLBAR_X;
         }
     }
 }

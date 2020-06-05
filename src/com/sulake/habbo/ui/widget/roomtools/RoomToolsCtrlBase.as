@@ -10,7 +10,7 @@
     public class RoomToolsCtrlBase 
     {
         protected static const DISTANCE_FROM_BOTTOM:int = 55;
-        protected static const _Str_10400:int = -5;
+        protected static const TOOLBAR_X:int = -5;
         protected static const _Str_7674:int = 100;
 
         protected var _window:IWindowContainer;
