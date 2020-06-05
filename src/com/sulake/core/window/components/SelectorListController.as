@@ -28,33 +28,33 @@
         public function set spacing(k:int):void
         {
             this._spacing = k;
-            this._Str_11558();
+            this.updateSelectableRegion();
         }
 
         override public function update(k:WindowController, _arg_2:WindowEvent):Boolean
         {
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_CHILD_ADDED)
             {
-                this._Str_11558();
+                this.updateSelectableRegion();
             }
             else
             {
                 if (_arg_2.type == WindowEvent.WINDOW_EVENT_CHILD_RESIZED)
                 {
-                    this._Str_11558();
+                    this.updateSelectableRegion();
                 }
                 else
                 {
                     if (_arg_2.type == WindowEvent.WINDOW_EVENT_CHILD_RELOCATED)
                     {
-                        this._Str_11558();
+                        this.updateSelectableRegion();
                     }
                 }
             }
             return super.update(k, _arg_2);
         }
 
-        private function _Str_11558():void
+        private function updateSelectableRegion():void
         {
             var _local_2:IWindow;
             var _local_4:uint;
@@ -124,7 +124,7 @@
         public function set vertical(k:Boolean):void
         {
             this._vertical = k;
-            this._Str_11558();
+            this.updateSelectableRegion();
         }
     }
 }
