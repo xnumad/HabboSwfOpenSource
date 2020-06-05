@@ -331,16 +331,16 @@
                 _roomSessionManager = k;
             }, true, [{
                 "type":RoomSessionEvent.CREATED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionEvent.STARTED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionEvent.ENDED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionEvent.ROOM_DATA,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionChatEvent.RSCE_CHAT_EVENT,
                 "callback":this._Str_3207
@@ -580,7 +580,7 @@
             super.dispose();
         }
 
-        private function _Str_3985(k:RoomSessionEvent):void
+        private function roomSessionStateEventHandler(k:RoomSessionEvent):void
         {
             if (this._roomEngine == null)
             {

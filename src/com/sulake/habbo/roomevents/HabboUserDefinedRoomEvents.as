@@ -79,13 +79,13 @@
                 _roomEngine = k;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), null, false, [{
                 "type":RoomSessionEvent.CREATED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionEvent.STARTED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionEvent.ENDED,
-                "callback":this._Str_3985
+                "callback":this.roomSessionStateEventHandler
             }]), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionDataManager = k;
@@ -194,7 +194,7 @@
             return this._roomEngine;
         }
 
-        private function _Str_3985(k:RoomSessionEvent):void
+        private function roomSessionStateEventHandler(k:RoomSessionEvent):void
         {
             if (this._roomEngine == null)
             {
