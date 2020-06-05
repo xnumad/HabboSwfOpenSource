@@ -16,7 +16,7 @@
 
         protected var _Str_9660:ISelectorListWindow;
         protected var _Str_17833:IWindowContainer;
-        private var _Str_12981:Boolean = false;
+        private var _repositioning:Boolean = false;
         private var _initialized:Boolean = false;
 
         public function TabContextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)

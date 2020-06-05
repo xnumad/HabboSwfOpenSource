@@ -11,7 +11,7 @@
     public class SelectorListController extends SelectorController implements ISelectorListWindow 
     {
         protected var _spacing:int = 0;
-        private var _Str_12981:Boolean = false;
+        private var _repositioning:Boolean = false;
         private var _vertical:Boolean;
 
         public function SelectorListController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
@@ -58,11 +58,11 @@
         {
             var _local_2:IWindow;
             var _local_4:uint;
-            if (this._Str_12981)
+            if (this._repositioning)
             {
                 return;
             }
-            this._Str_12981 = true;
+            this._repositioning = true;
             var k:uint = numSelectables;
             var _local_3:int;
             _local_4 = 0;
@@ -81,7 +81,7 @@
                 }
                 _local_4++;
             }
-            this._Str_12981 = false;
+            this._repositioning = false;
         }
 
         override public function get properties():Array
