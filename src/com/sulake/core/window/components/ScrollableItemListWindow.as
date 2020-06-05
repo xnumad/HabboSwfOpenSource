@@ -73,7 +73,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_ENABLED)
             {
-                this._Str_11231();
+                this.showScrollBar();
             }
             else
             {
@@ -93,7 +93,7 @@
             }
         }
 
-        private function _Str_11231():void
+        private function showScrollBar():void
         {
             if (!this._Str_2734.visible)
             {
@@ -118,7 +118,7 @@
             {
                 if (((k) || (this._Str_2734.visible)))
                 {
-                    this._Str_11231();
+                    this.showScrollBar();
                 }
             }
         }
