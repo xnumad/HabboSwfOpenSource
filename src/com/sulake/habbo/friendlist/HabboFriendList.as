@@ -111,7 +111,7 @@
         private var _tracking:IHabboTracking;
         private var _Str_19590:_Str_8767;
         private var _tabs:FriendListTabs;
-        private var _view:_Str_7249;
+        private var _view:FriendListView;
         private var _Str_16825:_Str_9313;
         private var _Str_3764:int;
         internal var _categories:FriendCategories;
@@ -469,7 +469,7 @@
         {
             var _local_3:_Str_5148;
             var _local_4:_Str_2591;
-            this._view = new _Str_7249(this);
+            this._view = new FriendListView(this);
             var _local_2:_Str_7185 = (k as _Str_5567).getParser();
             this._friendRequests = new _Str_9210(new _Str_11887(this), _local_2._Str_22808, _local_2._Str_23653);
             for each (_local_3 in _local_2.categories)
@@ -807,7 +807,7 @@
             return this._Str_17300;
         }
 
-        public function get view():_Str_7249
+        public function get view():FriendListView
         {
             return this._view;
         }

@@ -11,7 +11,7 @@
     import com.sulake.core.window.IWindow;
     import flash.utils.Dictionary;
 
-    public class _Str_7249 
+    public class FriendListView
     {
         private static const _Str_3163:Point = new Point(110, 50);
         private static const _Str_16690:int = 110;
@@ -27,7 +27,7 @@
         private var _Str_4481:int = -1;
         private var _Str_18916:Boolean;
 
-        public function _Str_7249(k:HabboFriendList)
+        public function FriendListView(k:HabboFriendList)
         {
             this._habboFriendList = k;
             this._Str_18526 = new _Str_8553(this._habboFriendList);
