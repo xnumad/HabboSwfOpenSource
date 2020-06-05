@@ -22,14 +22,14 @@
         protected var _zoomY:Number;
         protected var _greyscale:Boolean;
         protected var _etchingColor:uint;
-        protected var _Str_18939:Point;
+        protected var _etchingPoint:Point;
         protected var _Str_13795:Boolean;
         private var _Str_10479:Boolean;
         private var _Str_12136:Boolean;
 
         public function BitmapDataController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
-            this._Str_18939 = new Point(0, -1);
+            this._etchingPoint = new Point(0, -1);
             var _local_12:IPropertyMap = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
             this._pivot = PivotPoint.pivotFromName(String(_local_12.get(PropertyKeys.PIVOT_POINT).value));
             this._stretchedX = Boolean(_local_12.get(PropertyKeys.STRETCHED_X).value);
@@ -137,13 +137,13 @@
 
         override public function get etchingPoint():Point
         {
-            return this._Str_18939;
+            return this._etchingPoint;
         }
 
         override public function set etching(k:Array):void
         {
             this.etchingColor = k[0];
-            this._Str_18939 = new Point(k[1], k[2]);
+            this._etchingPoint = new Point(k[1], k[2]);
         }
 
         public function get wrapX():Boolean
