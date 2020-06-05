@@ -435,7 +435,7 @@
             return null;
         }
 
-        public function _Str_20784(k:int):void
+        public function disableRoomMouseEventsLeftOfX(k:int):void
         {
             this._roomEngine.mouseEventsDisabledLeftToX = k;
         }

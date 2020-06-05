@@ -63,7 +63,7 @@
 
         public function dispose():void
         {
-            this._component._Str_20784(0);
+            this._component.disableRoomMouseEventsLeftOfX(0);
             if (this._rootDisplayObject)
             {
                 this._scrollView._Str_15425();
@@ -149,7 +149,7 @@
         {
             if (((this._flagUpdateDisableRoomMouseEvents) && (k > 20)))
             {
-                this._component._Str_20784(((this._scrollView.isActive) ? (this._openedWidth + this._tabBg.bitmapData.width) : 0));
+                this._component.disableRoomMouseEventsLeftOfX(((this._scrollView.isActive) ? (this._openedWidth + this._tabBg.bitmapData.width) : 0));
                 this._flagUpdateDisableRoomMouseEvents = false;
             }
         }
