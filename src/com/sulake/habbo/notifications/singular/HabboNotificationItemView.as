@@ -137,7 +137,7 @@
                     {
                         this._Str_25847();
                     }
-                    this._Str_20743(_local_2);
+                    this.adjustBlend(_local_2);
                     return;
                 case _Str_14483:
                     this._displayStart = (this._displayStart + k);
@@ -149,7 +149,7 @@
                 case _Str_6008:
                     this._fadeOutStart = (this._fadeOutStart + k);
                     _local_3 = (1 - (Number(this._fadeOutStart) / Number(this._viewConfig["time_fade_out"])));
-                    this._Str_20743(_local_3);
+                    this.adjustBlend(_local_3);
                     if (this._fadeOutStart > int(this._viewConfig["time_fade_in"]))
                     {
                         this._Str_22474();
@@ -316,7 +316,7 @@
             this._Str_5615();
         }
 
-        private function _Str_20743(k:Number):void
+        private function adjustBlend(k:Number):void
         {
             this._blend = k;
             if (this._blend > 1)
