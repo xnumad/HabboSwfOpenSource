@@ -48,7 +48,7 @@
             this.refreshOwnerName();
             this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
             this._Str_25479(this._details, this._room);
-            this._Str_23089();
+            this.refreshExtraCont();
             this._Str_24547(this._room);
             this.refreshRoomSettings();
             this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum.FREE_TRADING));
@@ -86,7 +86,7 @@
             }
         }
 
-        private function _Str_23089():void
+        private function refreshExtraCont():void
         {
             var k:IWindowContainer = IWindowContainer(this._details.findChildByName("extra_cont"));
             Util._Str_2930(k);
