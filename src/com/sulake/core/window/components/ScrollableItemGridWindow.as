@@ -298,9 +298,9 @@
             return this._Str_2448.removeGridItemAt(k);
         }
 
-        public function _Str_17625(k:IWindow, _arg_2:int):void
+        public function setGridItemIndex(k:IWindow, _arg_2:int):void
         {
-            this._Str_2448._Str_17625(k, _arg_2);
+            this._Str_2448.setGridItemIndex(k, _arg_2);
         }
 
         public function swapGridItems(k:IWindow, _arg_2:IWindow):void

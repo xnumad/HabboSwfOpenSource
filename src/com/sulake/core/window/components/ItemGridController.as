@@ -298,7 +298,7 @@
             return this.removeGridItem(this.getGridItemAt(k));
         }
 
-        public function _Str_17625(k:IWindow, _arg_2:int):void
+        public function setGridItemIndex(k:IWindow, _arg_2:int):void
         {
             if (this.removeGridItem(k) == null)
             {
