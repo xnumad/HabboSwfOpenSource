@@ -27,7 +27,7 @@
         protected var _scrollAreaWidth:Number;
         protected var _scrollAreaHeight:Number;
         protected var _container:IWindowContainer;
-        protected var _Str_16905:Boolean = false;
+        protected var _resizing:Boolean = false;
         protected var _updating:Boolean = false;
         protected var _Str_2981:int;
         protected var _Str_2803:Boolean = false;
@@ -439,7 +439,7 @@
             switch (_arg_2.type)
             {
                 case WindowEvent.WINDOW_EVENT_RESIZE:
-                    this._Str_16905 = true;
+                    this._resizing = true;
                     break;
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (!this._Str_5418)
@@ -454,7 +454,7 @@
                         }
                     }
                     this._Str_4024();
-                    this._Str_16905 = false;
+                    this._resizing = false;
                     break;
                 default:
                     if ((_arg_2 is WindowEvent))
@@ -542,7 +542,7 @@
                     this._Str_4024();
                     return;
                 case WindowEvent.WINDOW_EVENT_CHILD_RESIZED:
-                    if (!this._Str_16905)
+                    if (!this._resizing)
                     {
                         this._Str_4024();
                     }
