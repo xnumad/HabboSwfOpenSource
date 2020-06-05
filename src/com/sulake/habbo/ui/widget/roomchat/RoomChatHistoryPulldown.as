@@ -274,7 +274,7 @@
                     if (((width > 0) && (height > 0)))
                     {
                         destBgBitmap = new TrackedBitmapData(this, width, height);
-                        this._Str_16872(this._grabBarBgBmp, destBgBitmap);
+                        this.tileBitmapHorz(this._grabBarBgBmp, destBgBitmap);
                         barBg.disposesBitmap = true;
                         barBg.bitmap = destBgBitmap;
                     }
@@ -284,7 +284,7 @@
                     if (((width > 0) && (height > 0)))
                     {
                         destGripLBitmap = new TrackedBitmapData(this, width, height);
-                        this._Str_16872(this._grabBarGripBmp, destGripLBitmap);
+                        this.tileBitmapHorz(this._grabBarGripBmp, destGripLBitmap);
                         barGripL.disposesBitmap = true;
                         barGripL.bitmap = destGripLBitmap;
                     }
@@ -294,7 +294,7 @@
                     if (((width > 0) && (height > 0)))
                     {
                         destGripRBitmap = new TrackedBitmapData(this, width, height);
-                        this._Str_16872(this._grabBarGripBmp, destGripRBitmap);
+                        this.tileBitmapHorz(this._grabBarGripBmp, destGripRBitmap);
                         barGripR.disposesBitmap = true;
                         barGripR.bitmap = destGripRBitmap;
                     }
@@ -312,7 +312,7 @@
             this._bgWindow.disposesBitmap = false;
         }
 
-        private function _Str_16872(k:BitmapData, _arg_2:BitmapData):void
+        private function tileBitmapHorz(k:BitmapData, _arg_2:BitmapData):void
         {
             var _local_3:int = (_arg_2.width / k.width);
             var _local_4:Point = new Point();
