@@ -1992,7 +1992,7 @@
             return _local_2.state;
         }
 
-        public function _Str_19457(k:IRoomWidgetHandler):void
+        public function addUpdateListener(k:IRoomWidgetHandler):void
         {
             if (this._updateListeners == null)
             {

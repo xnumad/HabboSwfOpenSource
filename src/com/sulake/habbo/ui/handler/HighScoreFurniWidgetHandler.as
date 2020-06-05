@@ -45,7 +45,7 @@
         public function set container(k:IRoomWidgetHandlerContainer):void
         {
             this._container = k;
-            this._container._Str_19457(this);
+            this._container.addUpdateListener(this);
         }
 
         public function dispose():void

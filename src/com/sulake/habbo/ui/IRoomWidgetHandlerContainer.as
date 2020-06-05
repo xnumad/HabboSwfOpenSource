@@ -69,7 +69,7 @@
         function getFirstCanvasId():int;
         function getRoomViewRect():Rectangle;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
-        function _Str_19457(_arg_1:IRoomWidgetHandler):void;
+        function addUpdateListener(_arg_1:IRoomWidgetHandler):void;
         function _Str_20159(_arg_1:IRoomWidgetHandler):void;
         function isOwnerOfFurniture(_arg_1:IRoomObject):Boolean;
         function getFurnitureOwnerId(_arg_1:IRoomObject):int;
