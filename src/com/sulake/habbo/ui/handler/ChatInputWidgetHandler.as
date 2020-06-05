@@ -483,7 +483,7 @@
 
         private function _Str_22488(k:HideRoomWidgetEvent):void
         {
-            if (((k) && (k._Str_23558 == this.type)))
+            if (((k) && (k.widgetType == this.type)))
             {
                 this._widget.hide();
             }

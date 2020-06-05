@@ -14,7 +14,7 @@
             this._widgetType = k;
         }
 
-        public function get _Str_23558():String
+        public function get widgetType():String
         {
             return this._widgetType;
         }
