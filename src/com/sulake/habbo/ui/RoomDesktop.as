@@ -55,7 +55,7 @@
     import com.sulake.habbo.communication.messages.parser.room.bots.BotSkillListUpdateParser;
     import com.sulake.habbo.ui.widget.events._Str_5375;
     import com.sulake.habbo.communication.messages.parser.room.bots.BotForceOpenContextMenuParser;
-    import com.sulake.habbo.ui.widget.events.RoomWidgetRequestBotForceOpenContextMenuEvent;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetRentableBotForceOpenContextMenuEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetLoadingBarUpdateEvent;
     import com.sulake.habbo.ui.handler.ChatWidgetHandler;
     import com.sulake.habbo.ui.handler.PlayListEditorWidgetHandler;
@@ -679,7 +679,7 @@
         private function onBotForceOpenContextMenuEvent(k:BotForceOpenContextMenuEvent):void
         {
             var _local_2:BotForceOpenContextMenuParser = k.getParser();
-            this.events.dispatchEvent(new RoomWidgetRequestBotForceOpenContextMenuEvent(_local_2.botId));
+            this.events.dispatchEvent(new RoomWidgetRentableBotForceOpenContextMenuEvent(_local_2.botId));
         }
 
         public function init():void
