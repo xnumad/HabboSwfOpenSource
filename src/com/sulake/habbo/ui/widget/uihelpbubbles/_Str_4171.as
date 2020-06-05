@@ -60,7 +60,7 @@
             }
         }
 
-        private function _Str_2786(k:IWindow, _arg_2:Function):void
+        private function addMouseClickListener(k:IWindow, _arg_2:Function):void
         {
             if (k != null)
             {
@@ -87,7 +87,7 @@
                 this._Str_2757.width = this._Str_2757.desktop.width;
                 this._Str_2757.height = this._Str_2757.desktop.height;
                 this._Str_12235 = (this._Str_2757.findChildByName("bitmap") as IBitmapWrapperWindow);
-                this._Str_2786(this._Str_12235, this._Str_25803);
+                this.addMouseClickListener(this._Str_12235, this._Str_25803);
             }
             var k:XmlAsset = (this._widget.assets.getAssetByName("ui_help_bubble") as XmlAsset);
             if (!k)
@@ -112,11 +112,11 @@
             if (!this._Str_13653)
             {
                 this._Str_12172.caption = this._widget.localizations.getLocalization("alert.close.button", "alert.close.button");
-                this._Str_2786(this._Str_12172, this._Str_16126);
+                this.addMouseClickListener(this._Str_12172, this._Str_16126);
             }
             else
             {
-                this._Str_2786(this._Str_12172, this._Str_17704);
+                this.addMouseClickListener(this._Str_12172, this._Str_17704);
             }
             this._window.visible = true;
         }

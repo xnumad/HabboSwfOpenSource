@@ -44,7 +44,7 @@
             this._window = null;
         }
 
-        private function _Str_2786(k:IWindow, _arg_2:Function):void
+        private function addMouseClickListener(k:IWindow, _arg_2:Function):void
         {
             if (k != null)
             {
@@ -83,11 +83,11 @@
                 _local_3.text = this._widget.localizations.registerParameter("widget.friendrequest.from", "username", this._userName);
             }
             var _local_4:IWindow = this._window.findChildByName("accept_button");
-            this._Str_2786(_local_4, this._Str_16362);
+            this.addMouseClickListener(_local_4, this._Str_16362);
             var _local_5:IWindow = this._window.findChildByName("decline_button");
-            this._Str_2786(_local_5, this._Str_23136);
+            this.addMouseClickListener(_local_5, this._Str_23136);
             var _local_6:IWindow = this._window.findChildByName("close_button");
-            this._Str_2786(_local_6, this.onCloseHandler);
+            this.addMouseClickListener(_local_6, this.onCloseHandler);
             var _local_7:IIconWindow = (this._window.findChildByName("profile_icon") as IIconWindow);
             _local_7.procedure = this._Str_22905;
             this._window.procedure = this._Str_3545;

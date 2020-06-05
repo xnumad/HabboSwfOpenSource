@@ -96,7 +96,7 @@
             this._layouts.push(new RoomLayout(-1, 2500, "snowwar2"));
         }
 
-        private static function _Str_2786(k:IWindow, _arg_2:Function):void
+        private static function addMouseClickListener(k:IWindow, _arg_2:Function):void
         {
             if (k != null)
             {
@@ -166,11 +166,11 @@
             this._list = IItemListWindow(this._content.findChildByName("layout_item_list"));
             this._Str_19409();
             var k:IButtonWindow = this._Str_24078();
-            _Str_2786(k, this._Str_23902);
+            addMouseClickListener(k, this._Str_23902);
             var _local_2:IButtonWindow = this._Str_25310();
-            _Str_2786(_local_2, this._Str_4604);
+            addMouseClickListener(_local_2, this._Str_4604);
             var _local_3:IWindow = this._content.findChildByTag("close");
-            _Str_2786(_local_3, this._Str_4604);
+            addMouseClickListener(_local_3, this._Str_4604);
             this._roomNameInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_name_input")), 25, null, this._navigator.getText("navigator.createroom.roomnameinfo"));
             this._roomDescInput = new TextFieldManager(this._navigator, ITextFieldWindow(this._content.findChildByName("room_desc_input")), 128, null, this._navigator.getText("navigator.createroom.roomdescinfo"));
             this._Str_23605();
@@ -325,7 +325,7 @@
                 if (_local_8)
                 {
                     _local_9 = _local_8.findChildByName("link");
-                    _Str_2786(_local_9, this._Str_22826);
+                    addMouseClickListener(_local_9, this._Str_22826);
                     this._list.addListItem(_local_8);
                 }
             }
@@ -339,7 +339,7 @@
             {
                 _local_4.x = _local_4.width;
             }
-            _Str_2786(_local_4, this._Str_22785);
+            addMouseClickListener(_local_4, this._Str_22785);
             var _local_5:IStaticBitmapWrapperWindow = (_local_4.findChildByName("bg_pic") as IStaticBitmapWrapperWindow);
             _local_5.assetUri = (("${image.library.url}newroom/model_" + _arg_2.name) + ".png");
             k.addChild(_local_4);

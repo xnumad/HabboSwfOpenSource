@@ -121,7 +121,7 @@
             this.hide(true);
         }
 
-        protected function _Str_2786(k:IWindow, _arg_2:Function):void
+        protected function addMouseClickListener(k:IWindow, _arg_2:Function):void
         {
             if (k != null)
             {

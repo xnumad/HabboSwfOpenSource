@@ -274,23 +274,23 @@
             }
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_room_details_framed"));
             this._window.center();
-            this._Str_2786(this.find("make_favourite_region"), this.onAddFavouriteClick);
-            this._Str_2786(this.find("favourite_region"), this.onRemoveFavouriteClick);
-            this._Str_2786(this.find("room_settings_button"), this._Str_25312);
-            this._Str_2786(this.find("room_filter_button"), this._Str_22339);
-            this._Str_2786(this.find("floor_plan_editor_button"), this._Str_23389);
-            this._Str_2786(this.find("room_muteall_button"), this._Str_25149);
-            this._Str_2786(this.find("make_home_region"), this._Str_25302);
-            this._Str_2786(this.find("remove_rights_region"), this._Str_25186);
-            this._Str_2786(this.find("embed_src_txt"), this._Str_23461);
-            this._Str_2786(this.find("staff_pick_button"), this._Str_22695);
-            this._Str_2786(this.find("room_report_button"), this._Str_24254);
+            this.addMouseClickListener(this.find("make_favourite_region"), this.onAddFavouriteClick);
+            this.addMouseClickListener(this.find("favourite_region"), this.onRemoveFavouriteClick);
+            this.addMouseClickListener(this.find("room_settings_button"), this._Str_25312);
+            this.addMouseClickListener(this.find("room_filter_button"), this._Str_22339);
+            this.addMouseClickListener(this.find("floor_plan_editor_button"), this._Str_23389);
+            this.addMouseClickListener(this.find("room_muteall_button"), this._Str_25149);
+            this.addMouseClickListener(this.find("make_home_region"), this._Str_25302);
+            this.addMouseClickListener(this.find("remove_rights_region"), this._Str_25186);
+            this.addMouseClickListener(this.find("embed_src_txt"), this._Str_23461);
+            this.addMouseClickListener(this.find("staff_pick_button"), this._Str_22695);
+            this.addMouseClickListener(this.find("room_report_button"), this._Str_24254);
             this._navigator.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._navigator.hasRoomRightsButIsNotOwner(this._navigator.data._Str_2678.flatId), null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_home_region")), "make_home", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("favourite_region")), "favourite", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_favourite_region")), "make_favourite", true, null, 0);
             this._navigator.refreshButton(IWindowContainer(this.find("embed_info")), "icon_weblink", true, null, 0);
-            this._Str_2786(this._window.findChildByTag("close"), this._Str_18537);
+            this.addMouseClickListener(this._window.findChildByTag("close"), this._Str_18537);
             var _local_2:IWindowContainer = IWindowContainer(this._window.findChildByName("owner_name_cont"));
             _local_2.procedure = this.onOwnerName;
             Util._Str_7173(_local_2, 1000, 10, 2, 5);
@@ -307,7 +307,7 @@
                 this._window.findChildByName("add_thumbnail_region").visible = this._navigator.data._Str_11824;
                 if (this._navigator.data._Str_11824)
                 {
-                    this._Str_2786(this.find("add_thumbnail_region"), this._Str_22351);
+                    this.addMouseClickListener(this.find("add_thumbnail_region"), this._Str_22351);
                 }
                 _local_5 = "";
                 if (this._navigator.data._Str_2678.officialRoomPicRef != null)
@@ -343,7 +343,7 @@
             Util._Str_5055(_local_4, [_arg_2, _arg_3], _local_5.x, _local_5.y, 3);
         }
 
-        private function _Str_2786(k:IWindow, _arg_2:Function):void
+        private function addMouseClickListener(k:IWindow, _arg_2:Function):void
         {
             if (k != null)
             {
