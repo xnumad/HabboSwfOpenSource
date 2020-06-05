@@ -192,7 +192,7 @@
             this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
             this.prepareMsgSelect(this._msgSelect);
-            this._msgSelect.procedure = this._Str_19008;
+            this._msgSelect.procedure = this.onSelectTemplate;
             this._kickCb = ICheckBoxWindow(this._frame.findChildByName("kick_check"));
             this._lockCb = ICheckBoxWindow(this._frame.findChildByName("lock_check"));
             this._changeNameCb = ICheckBoxWindow(this._frame.findChildByName("changename_check"));
@@ -393,7 +393,7 @@
             k.populate(this._main.initMsg._Str_18336);
         }
 
-        private function _Str_19008(k:WindowEvent, _arg_2:IWindow):void
+        private function onSelectTemplate(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowEvent.WINDOW_EVENT_SELECTED)
             {

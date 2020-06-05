@@ -48,7 +48,7 @@
             this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
             this._Str_23308(this._msgSelect);
-            this._msgSelect.procedure = this._Str_19008;
+            this._msgSelect.procedure = this.onSelectTemplate;
             var k:IWindow = this._frame.findChildByTag("close");
             k.procedure = this.onClose;
             this._frame.visible = true;
@@ -75,7 +75,7 @@
             k.populate(this._main.initMsg._Str_15690);
         }
 
-        private function _Str_19008(k:WindowEvent, _arg_2:IWindow):void
+        private function onSelectTemplate(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowEvent.WINDOW_EVENT_SELECTED)
             {
