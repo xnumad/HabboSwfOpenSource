@@ -14,7 +14,7 @@
 
     public class SendMsgsCtrl implements IDisposable, ITrackedWindow 
     {
-        private static const _Str_16626:int = -999;
+        private static const TOPIC_ID_NOT_SELECTED:int = -999;
 
         private var _main:ModerationManager;
         private var _targetUserId:int;
@@ -101,7 +101,7 @@
                 return;
             }
             Logger.log("Sending message...");
-            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, _Str_16626, ((this._issue != null) ? this._issue._Str_2869 : _Str_4767._Str_2979)));
+            this._main.connection.send(new _Str_7103(this._targetUserId, this._msgInput.text, TOPIC_ID_NOT_SELECTED, ((this._issue != null) ? this._issue._Str_2869 : _Str_4767._Str_2979)));
             this.dispose();
         }
 
