@@ -37,7 +37,7 @@
             }
             if ((k.parent is IItemGridWindow))
             {
-                _local_3 = (k.parent as IItemGridWindow)._Str_13519((k.name + "_stroke"));
+                _local_3 = (k.parent as IItemGridWindow).getGridItemByName((k.name + "_stroke"));
             }
             if (_local_3)
             {

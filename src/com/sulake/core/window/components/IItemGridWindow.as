@@ -21,7 +21,7 @@
         function addGridItemAt(_arg_1:IWindow, _arg_2:uint):IWindow;
         function getGridItemAt(_arg_1:uint):IWindow;
         function getGridItemByID(_arg_1:uint):IWindow;
-        function _Str_13519(_arg_1:String):IWindow;
+        function getGridItemByName(_arg_1:String):IWindow;
         function _Str_18560(_arg_1:String):IWindow;
         function _Str_3373(_arg_1:IWindow):int;
         function _Str_4725(_arg_1:IWindow):IWindow;

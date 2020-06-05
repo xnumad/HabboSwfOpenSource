@@ -220,7 +220,7 @@
             return null;
         }
 
-        public function _Str_13519(k:String):IWindow
+        public function getGridItemByName(k:String):IWindow
         {
             var _local_3:IItemListWindow;
             var _local_4:IWindow;
