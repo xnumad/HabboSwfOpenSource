@@ -441,7 +441,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectBundleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
@@ -1355,7 +1355,7 @@
             INCOMING_PACKETS[3753] = FriendFurniStartConfirmationMessageEvent;
             INCOMING_PACKETS[377] = _Str_8530;
             INCOMING_PACKETS[3770] = _Str_7086;
-            INCOMING_PACKETS[3776] = _Str_7527;
+            INCOMING_PACKETS[3776] = ObjectUpdateMessageEvent;
             INCOMING_PACKETS[378] = _Str_9492;
             INCOMING_PACKETS[3783] = FlatAccessibleMessageEvent;
             INCOMING_PACKETS[3785] = PollOfferEvent;

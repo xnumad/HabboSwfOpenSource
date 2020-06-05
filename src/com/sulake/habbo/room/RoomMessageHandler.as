@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.FurnitureAliasesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectUpdateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsDataUpdateMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
@@ -192,7 +192,7 @@
                 k.addMessageEvent(new FurnitureAliasesMessageEvent(this.onFurnitureAliases));
                 k.addMessageEvent(new _Str_7849(this.onObjects));
                 k.addMessageEvent(new ObjectAddMessageEvent(this.onObjectAdd));
-                k.addMessageEvent(new _Str_7527(this.onObjectUpdate));
+                k.addMessageEvent(new ObjectUpdateMessageEvent(this.onObjectUpdate));
                 k.addMessageEvent(new ObjectDataUpdateMessageEvent(this.onObjectDataUpdate));
                 k.addMessageEvent(new ObjectsDataUpdateMessageEvent(this.onObjectsDataUpdate));
                 k.addMessageEvent(new ObjectRemoveMessageEvent(this.onObjectRemove));
@@ -545,7 +545,7 @@
         {
             var _local_5:IVector3d;
             var _local_6:IVector3d;
-            var _local_2:_Str_7527 = (k as _Str_7527);
+            var _local_2:ObjectUpdateMessageEvent = (k as ObjectUpdateMessageEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
