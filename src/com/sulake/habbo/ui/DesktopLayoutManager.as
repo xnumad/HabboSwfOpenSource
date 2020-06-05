@@ -79,7 +79,7 @@
             _local_2.height = _local_3.height;
         }
 
-        private function _Str_20326(k:String, _arg_2:IWindow):IWindowContainer
+        private function getWidgetContainer(k:String, _arg_2:IWindow):IWindowContainer
         {
             var _local_4:String;
             var _local_7:IWindowContainer;
@@ -123,7 +123,7 @@
             {
                 return false;
             }
-            var _local_3:IWindowContainer = this._Str_20326(k, _arg_2);
+            var _local_3:IWindowContainer = this.getWidgetContainer(k, _arg_2);
             if (_local_3 == null)
             {
                 return false;
@@ -143,7 +143,7 @@
 
         public function window2(k:String, _arg_2:IWindow):void
         {
-            var _local_3:IWindowContainer = this._Str_20326(k, _arg_2);
+            var _local_3:IWindowContainer = this.getWidgetContainer(k, _arg_2);
             if (_local_3 != null)
             {
                 _local_3.removeChild(_arg_2);
