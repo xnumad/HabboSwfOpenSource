@@ -198,7 +198,7 @@
             return this._state;
         }
 
-        public function _Str_8958(k:Rectangle):void
+        public function containerResized(k:Rectangle):void
         {
             if (this._window != null)
             {

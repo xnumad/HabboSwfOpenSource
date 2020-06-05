@@ -335,7 +335,7 @@
                 {
                     this._Str_20247();
                 }
-                this._Str_2701._Str_8958(this._Str_2496.rectangle, true);
+                this._Str_2701.containerResized(this._Str_2496.rectangle, true);
             }
             this._Str_12615();
         }
@@ -405,7 +405,7 @@
                     this._Str_3454.height = (this._Str_3454.height + _Str_3729);
                     if (this._Str_2701 != null)
                     {
-                        this._Str_2701._Str_8958(this._Str_2496.rectangle);
+                        this._Str_2701.containerResized(this._Str_2496.rectangle);
                     }
                 }
             }
@@ -915,7 +915,7 @@
             this._Str_2496.height = (this._Str_3991 + RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT);
             if (this._Str_2701 != null)
             {
-                this._Str_2701._Str_8958(this._Str_2496.rectangle);
+                this._Str_2701.containerResized(this._Str_2496.rectangle);
             }
         }
 
@@ -942,7 +942,7 @@
             this._Str_4396.scrollV = 1;
             if (!this._Str_3910())
             {
-                this._Str_2701._Str_8958(this._Str_2496.rectangle);
+                this._Str_2701.containerResized(this._Str_2496.rectangle);
             }
             this._Str_19458();
             if (((this._Str_3910()) || (k)))

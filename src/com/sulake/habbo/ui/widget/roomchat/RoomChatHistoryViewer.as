@@ -183,7 +183,7 @@
             }
         }
 
-        public function _Str_8958(k:Rectangle, _arg_2:Boolean=false):void
+        public function containerResized(k:Rectangle, _arg_2:Boolean=false):void
         {
             if (this._scrollbarWindow != null)
             {
@@ -197,7 +197,7 @@
             }
             if (this._historyPulldown != null)
             {
-                this._historyPulldown._Str_8958(k);
+                this._historyPulldown.containerResized(k);
             }
         }
 
