@@ -166,7 +166,7 @@
 
         public function _Str_24485():void
         {
-            this._visualization._Str_3714(null);
+            this._visualization.updatePosition(null);
         }
 
         public function _Str_24691():int

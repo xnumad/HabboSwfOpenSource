@@ -38,7 +38,7 @@
                 _window.addEventListener(WindowMouseEvent.OVER, this.onWindowEvent);
                 _window.addEventListener(WindowMouseEvent.OUT, this.onWindowEvent);
             }
-            this._Str_3714();
+            this.updatePosition();
             _window.findChildByName("room_name").caption = _arg_2;
             _window.findChildByName("room_owner").caption = _arg_3;
             if (_arg_4 == null)
@@ -59,7 +59,7 @@
             this.setCollapsed(false);
         }
 
-        public function _Str_3714():void
+        public function updatePosition():void
         {
             if (!_window)
             {
@@ -139,7 +139,7 @@
             var _local_4:String;
             if (k.type == WindowEvent.WINDOW_EVENT_PARENT_RESIZED)
             {
-                return this._Str_3714();
+                return this.updatePosition();
             }
             switch (k.type)
             {

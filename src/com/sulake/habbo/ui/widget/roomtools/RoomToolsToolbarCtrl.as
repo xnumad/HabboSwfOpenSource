@@ -97,7 +97,7 @@
             {
                 this._roomToolsHistory = new RoomToolsHistory(_windowManager, _assets, handler);
                 this._roomToolsHistory.populate(_widget.visitedRooms);
-                this._Str_3714();
+                this.updatePosition();
             }
         }
 
@@ -124,10 +124,10 @@
             }
             window.visible = true;
             super.setElementVisible(k, _arg_2);
-            this._Str_3714();
+            this.updatePosition();
         }
 
-        public function _Str_3714():void
+        public function updatePosition():void
         {
             var k:IWindow;
             var _local_2:IWindow;
@@ -208,7 +208,7 @@
             window.findChildByName("window_bg").visible = (!(_Str_3510));
             window.findChildByName("side_bar_collapse").visible = (!(_Str_3510));
             window.findChildByName("side_bar_expand").visible = _Str_3510;
-            this._Str_3714();
+            this.updatePosition();
         }
 
         private function onWindowEvent(event:WindowEvent, target:IWindow):void
@@ -220,7 +220,7 @@
             var asset:XML;
             if (((((event.type == WindowEvent.WINDOW_EVENT_PARENT_RESIZED) && (window)) && (window.parent)) && (event.target == window.parent)))
             {
-                return this._Str_3714();
+                return this.updatePosition();
             }
             switch (event.type)
             {

@@ -15,7 +15,7 @@
         {
             this._window = (k.windowManager.buildFromXML((k.assets.getAssetByName("bottom_background_border_xml").content as XML)) as IWindowContainer);
             this._window.procedure = this.onWindowEvent;
-            this._Str_3714();
+            this.updatePosition();
         }
 
         public function dispose():void
@@ -30,11 +30,11 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_PARENT_RESIZED)
             {
-                this._Str_3714();
+                this.updatePosition();
             }
         }
 
-        private function _Str_3714():void
+        private function updatePosition():void
         {
             this._window.position = new Point(-10, (this._window.desktop.height - (this._window.height - 3)));
             this._window.width = (this._window.desktop.width + 20);

@@ -206,7 +206,7 @@
             this._helpButtonShowRegion = IRegionWindow(this._chatInputContainerWindow.findChildByName("helpbutton_show_hover_region"));
             this._helpButtonShowRegion.addEventListener(WindowMouseEvent.OVER, this._Str_6563);
             this._helpButtonShowRegion.addEventListener(WindowMouseEvent.OUT, this._Str_6563);
-            this._Str_3714();
+            this.updatePosition();
             this._inputField.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);
             this._inputField.addEventListener(WindowMouseEvent.DOWN, this._Str_22202);
             this._inputField.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_10572);
@@ -219,8 +219,8 @@
             this._isHelpTextShowing = true;
             this._inputField.setTextFormat(this._helpTextFormat);
             this._lastContent = "";
-            this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this._Str_3714);
-            this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_ADDED, this._Str_3714);
+            this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this.updatePosition);
+            this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_ADDED, this.updatePosition);
             if (((((this._Str_20898()) && (!(this._widget.handler.container.roomSession.isGameSession))) && (!(this._widget.handler.container.freeFlowChat == null))) && (!(this._widget.handler.container.freeFlowChat.chatStyleLibrary == null))))
             {
                 _local_3 = [];
@@ -325,7 +325,7 @@
             }
         }
 
-        public function _Str_3714(k:WindowEvent=null, _arg_2:int=10000, _arg_3:int=10000):void
+        public function updatePosition(k:WindowEvent=null, _arg_2:int=10000, _arg_3:int=10000):void
         {
             this._window.width = this._window.desktop.width;
             this._window.height = this._window.desktop.height;

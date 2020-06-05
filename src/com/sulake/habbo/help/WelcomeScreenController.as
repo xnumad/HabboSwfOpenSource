@@ -68,7 +68,7 @@
             var _local_5:ITextWindow = ITextWindow(this._window.findChildByName("text"));
             _local_5.caption = (("${" + _arg_2) + "}");
             _local_5.height = (_local_5.textHeight + 5);
-            this._Str_3714();
+            this.updatePosition();
             this._Str_25505();
             this._window.visible = true;
             this._window.activate();
@@ -89,7 +89,7 @@
             this._window.findChildByName("click").addEventListener(WindowMouseEvent.CLICK, this._Str_21239);
         }
 
-        private function _Str_3714():void
+        private function updatePosition():void
         {
             var k:Rectangle = this._habboHelp.toolbar.getIconLocation(this._targetIconId);
             var _local_2:IWindow = this._window.findChildByName("arrow");
