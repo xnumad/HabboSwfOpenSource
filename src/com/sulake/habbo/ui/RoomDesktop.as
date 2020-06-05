@@ -1057,7 +1057,7 @@
             }
             if (((this._roomCanvasWrapper) && (k.type == _Str_9973.RDMZEE_ENABLED)))
             {
-                this._Str_19067(this._roomCanvasWrapper.getDisplayObject());
+                this.checkAndEnableMouseZoomEvent(this._roomCanvasWrapper.getDisplayObject());
             }
             var _local_2:Array = this._widgetHandlerEventMap.getValue(k.type);
             if (_local_2 != null)
@@ -1389,7 +1389,7 @@
             {
                 _local_6.addEventListener(MouseEvent.CLICK, this._Str_23529);
             }
-            this._Str_19067(_local_6);
+            this.checkAndEnableMouseZoomEvent(_local_6);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.CLICK, this._Str_9634);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOUBLE_CLICK, this._Str_9634);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.MOVE, this._Str_9634);
@@ -1431,7 +1431,7 @@
             this._canvasIDs.push(k);
         }
 
-        private function _Str_19067(k:DisplayObject):void
+        private function checkAndEnableMouseZoomEvent(k:DisplayObject):void
         {
             k.removeEventListener(MouseEvent.MOUSE_WHEEL, this._Str_19200);
             if (this._sessionDataManager.isPerkAllowed(PerkEnum.MOUSE_ZOOM))
