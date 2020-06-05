@@ -35,7 +35,7 @@
         private var _guildInfoCtrl:GuildInfoCtrl;
         private var _window:IFrameWindow;
         private var _tagRenderer:TagRenderer;
-        private var _Str_9199:Boolean = false;
+        private var _embedExpanded:Boolean = false;
         private var _Str_2500:Boolean = false;
 
         public function RoomInfoViewCtrl(k:IHabboTransitionalNavigator)
@@ -145,16 +145,16 @@
                 _local_5 = ITextFieldWindow(k.findChildByName("embed_src_txt"));
                 _local_6 = k.findChildByName("embed_info_region");
                 k.visible = true;
-                if (this._Str_9199)
+                if (this._embedExpanded)
                 {
                     _local_5.text = this._Str_8567();
                 }
-                _local_4.visible = this._Str_9199;
-                _local_5.visible = this._Str_9199;
+                _local_4.visible = this._embedExpanded;
+                _local_5.visible = this._embedExpanded;
                 _local_6.visible = false;
                 k.height = (Util._Str_2647(k) + 5);
                 _local_6.visible = true;
-                _local_6.height = ((this._Str_9199) ? _local_5.y : k.height);
+                _local_6.height = ((this._embedExpanded) ? _local_5.y : k.height);
             }
             else
             {
@@ -514,7 +514,7 @@
             {
                 return;
             }
-            this._Str_9199 = (!(this._Str_9199));
+            this._embedExpanded = (!(this._embedExpanded));
             this.refresh();
         }
 
