@@ -138,7 +138,7 @@
             }
         }
 
-        public function _Str_2259(k:Array, _arg_2:String=null):IFrameWindow
+        public function getFrame(k:Array, _arg_2:String=null):IFrameWindow
         {
             if (this._frameWindow)
             {

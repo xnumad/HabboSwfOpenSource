@@ -45,17 +45,17 @@
 
         public function _Str_22065(k:int):Boolean
         {
-            return this._Str_2259(k) == _Str_14452;
+            return this.getFrame(k) == _Str_14452;
         }
 
         public function getBitmap(k:int):BitmapData
         {
-            var _local_2:int = this._Str_2259(k);
+            var _local_2:int = this.getFrame(k);
             var _local_3:BitmapData = this._twinkleImages.getImage(_Str_15029[_local_2]);
             return _local_3;
         }
 
-        private function _Str_2259(k:int):int
+        private function getFrame(k:int):int
         {
             var _local_2:int = (k - this._startTimeInMsecs);
             if (_local_2 < 0)

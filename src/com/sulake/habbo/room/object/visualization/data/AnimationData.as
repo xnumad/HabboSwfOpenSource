@@ -238,12 +238,12 @@
             return _local_2;
         }
 
-        public function _Str_2259(k:int, _arg_2:int, _arg_3:int):AnimationFrame
+        public function getFrame(k:int, _arg_2:int, _arg_3:int):AnimationFrame
         {
             var _local_4:AnimationLayerData = (this._layers.getValue(_arg_2) as AnimationLayerData);
             if (_local_4 != null)
             {
-                return _local_4._Str_2259(k, _arg_3);
+                return _local_4.getFrame(k, _arg_3);
             }
             return null;
         }

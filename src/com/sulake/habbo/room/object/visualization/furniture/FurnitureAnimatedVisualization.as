@@ -336,7 +336,7 @@
                 if (((!(_local_8)) || (this._Str_9006)))
                 {
                     _local_9 = k.getLastFramePlayed(_local_7);
-                    _local_10 = k._Str_2259(_local_7);
+                    _local_10 = k.getFrame(_local_7);
                     if (_local_10 != null)
                     {
                         if (((_local_10.isLastFrame) && (_local_10._Str_9508 <= this.frameIncrease)))
@@ -353,7 +353,7 @@
                         }
                         if (_local_11 == AnimationFrame.SEQUENCE_NOT_DEFINED)
                         {
-                            _local_10 = this._Str_1033._Str_2259(_arg_2, _local_4, direction, _local_7, _local_3);
+                            _local_10 = this._Str_1033.getFrame(_arg_2, _local_4, direction, _local_7, _local_3);
                         }
                         else
                         {
@@ -382,7 +382,7 @@
 
         override protected function getFrameNumber(k:int, _arg_2:int):int
         {
-            var _local_3:AnimationFrame = this._Str_3566._Str_2259(_arg_2);
+            var _local_3:AnimationFrame = this._Str_3566.getFrame(_arg_2);
             if (_local_3 != null)
             {
                 return _local_3.id;
@@ -393,7 +393,7 @@
         override protected function getSpriteXOffset(k:int, _arg_2:int, _arg_3:int):int
         {
             var _local_4:int = super.getSpriteXOffset(k, _arg_2, _arg_3);
-            var _local_5:AnimationFrame = this._Str_3566._Str_2259(_arg_3);
+            var _local_5:AnimationFrame = this._Str_3566.getFrame(_arg_3);
             if (_local_5 != null)
             {
                 _local_4 = (_local_4 + _local_5.x);
@@ -404,7 +404,7 @@
         override protected function getSpriteYOffset(k:int, _arg_2:int, _arg_3:int):int
         {
             var _local_4:int = super.getSpriteYOffset(k, _arg_2, _arg_3);
-            var _local_5:AnimationFrame = this._Str_3566._Str_2259(_arg_3);
+            var _local_5:AnimationFrame = this._Str_3566.getFrame(_arg_3);
             if (_local_5 != null)
             {
                 _local_4 = (_local_4 + _local_5.y);

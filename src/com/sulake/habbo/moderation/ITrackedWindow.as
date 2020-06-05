@@ -7,7 +7,7 @@
     {
         function getType():int;
         function getId():String;
-        function _Str_2259():IFrameWindow;
+        function getFrame():IFrameWindow;
         function show():void;
     }
 }

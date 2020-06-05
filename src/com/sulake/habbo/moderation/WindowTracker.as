@@ -39,11 +39,11 @@
                     return;
                 }
                 k.show();
-                _local_12 = _local_11._Str_2259();
-                k._Str_2259().x = ((_arg_6) ? _arg_7 : _local_12.x);
-                k._Str_2259().y = ((_arg_6) ? _arg_8 : _local_12.y);
-                k._Str_2259().width = ((_arg_6) ? _arg_9 : _local_12.width);
-                k._Str_2259().height = ((_arg_6) ? _arg_10 : _local_12.height);
+                _local_12 = _local_11.getFrame();
+                k.getFrame().x = ((_arg_6) ? _arg_7 : _local_12.x);
+                k.getFrame().y = ((_arg_6) ? _arg_8 : _local_12.y);
+                k.getFrame().width = ((_arg_6) ? _arg_9 : _local_12.width);
+                k.getFrame().height = ((_arg_6) ? _arg_10 : _local_12.height);
                 this._Str_17883(k.getType())[k.getId()] = k;
                 _local_11.dispose();
             }
@@ -57,31 +57,31 @@
                         _local_13 = 5;
                         if (_arg_3)
                         {
-                            k._Str_2259().x = ((_arg_6) ? _arg_7 : _arg_2.x);
-                            k._Str_2259().y = ((_arg_6) ? _arg_8 : ((_arg_2.y + _arg_2.height) + _local_13));
+                            k.getFrame().x = ((_arg_6) ? _arg_7 : _arg_2.x);
+                            k.getFrame().y = ((_arg_6) ? _arg_8 : ((_arg_2.y + _arg_2.height) + _local_13));
                         }
                         else
                         {
-                            k._Str_2259().x = ((_arg_6) ? _arg_7 : ((_arg_2.x + _arg_2.width) + _local_13));
-                            k._Str_2259().y = ((_arg_6) ? _arg_8 : _arg_2.y);
+                            k.getFrame().x = ((_arg_6) ? _arg_7 : ((_arg_2.x + _arg_2.width) + _local_13));
+                            k.getFrame().y = ((_arg_6) ? _arg_8 : _arg_2.y);
                         }
                     }
                     else
                     {
                         if (_arg_6)
                         {
-                            k._Str_2259().x = _arg_7;
-                            k._Str_2259().y = _arg_8;
+                            k.getFrame().x = _arg_7;
+                            k.getFrame().y = _arg_8;
                         }
                         else
                         {
-                            _local_14 = k._Str_2259().desktop;
-                            k._Str_2259().x = ((_local_14.width / 2) - (k._Str_2259().width / 2));
-                            k._Str_2259().y = ((_local_14.height / 2) - (k._Str_2259().height / 2));
+                            _local_14 = k.getFrame().desktop;
+                            k.getFrame().x = ((_local_14.width / 2) - (k.getFrame().width / 2));
+                            k.getFrame().y = ((_local_14.height / 2) - (k.getFrame().height / 2));
                         }
                     }
-                    k._Str_2259().x = Math.max(0, Math.min(k._Str_2259().x, (k._Str_2259().desktop.width - k._Str_2259().width)));
-                    k._Str_2259().y = Math.max(0, Math.min(k._Str_2259().y, (k._Str_2259().desktop.height - k._Str_2259().height)));
+                    k.getFrame().x = Math.max(0, Math.min(k.getFrame().x, (k.getFrame().desktop.width - k.getFrame().width)));
+                    k.getFrame().y = Math.max(0, Math.min(k.getFrame().y, (k.getFrame().desktop.height - k.getFrame().height)));
                     this._Str_17883(k.getType())[k.getId()] = k;
                 }
             }

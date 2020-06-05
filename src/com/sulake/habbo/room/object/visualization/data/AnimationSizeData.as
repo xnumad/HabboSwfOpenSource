@@ -160,13 +160,13 @@
             return 0;
         }
 
-        public function _Str_2259(k:int, _arg_2:int, _arg_3:int, _arg_4:int):AnimationFrame
+        public function getFrame(k:int, _arg_2:int, _arg_3:int, _arg_4:int):AnimationFrame
         {
             var _local_6:AnimationFrame;
             var _local_5:AnimationData = (this._animations.getValue(k) as AnimationData);
             if (_local_5 != null)
             {
-                _local_6 = _local_5._Str_2259(_arg_2, _arg_3, _arg_4);
+                _local_6 = _local_5.getFrame(_arg_2, _arg_3, _arg_4);
                 return _local_6;
             }
             return null;

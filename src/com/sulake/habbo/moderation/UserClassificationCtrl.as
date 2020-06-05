@@ -238,7 +238,7 @@
             return "" + this._classificationType;
         }
 
-        public function _Str_2259():IFrameWindow
+        public function getFrame():IFrameWindow
         {
             return this._frame;
         }

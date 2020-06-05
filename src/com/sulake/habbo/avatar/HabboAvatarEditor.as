@@ -196,7 +196,7 @@
             this._enableSideContent = _arg_3;
             this.init(_arg_2);
             this.selectDefaultCategory(_arg_2, _arg_5);
-            return this._view._Str_2259(_arg_2, _arg_4);
+            return this._view.getFrame(_arg_2, _arg_4);
         }
 
         public function embedToContext(k:IWindowContainer=null, _arg_2:_Str_5523=null, _arg_3:Array=null, _arg_4:Boolean=false):Boolean

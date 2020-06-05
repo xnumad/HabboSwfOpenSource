@@ -72,7 +72,7 @@
             return "" + this._issueBundle.id;
         }
 
-        public function _Str_2259():IFrameWindow
+        public function getFrame():IFrameWindow
         {
             return this._window;
         }

@@ -409,7 +409,7 @@
                 _local_4 = this._animationStates[_local_3];
                 if (_local_4 != null)
                 {
-                    _local_5 = _local_4._Str_2259(_arg_2);
+                    _local_5 = _local_4.getFrame(_arg_2);
                     if (_local_5 != null)
                     {
                         return _local_5.id;
@@ -460,7 +460,7 @@
                 _local_6 = this._animationStates[_local_5];
                 if (_local_6 != null)
                 {
-                    _local_7 = _local_6._Str_2259(_arg_3);
+                    _local_7 = _local_6.getFrame(_arg_3);
                     if (_local_7 != null)
                     {
                         _local_4 = (_local_4 + _local_7.x);
@@ -482,7 +482,7 @@
                 _local_6 = this._animationStates[_local_5];
                 if (_local_6 != null)
                 {
-                    _local_7 = _local_6._Str_2259(_arg_3);
+                    _local_7 = _local_6.getFrame(_arg_3);
                     if (_local_7 != null)
                     {
                         _local_4 = (_local_4 + _local_7.y);

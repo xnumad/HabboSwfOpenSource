@@ -126,7 +126,7 @@
             }
         }
 
-        public function _Str_2259(k:int):AnimationFrame
+        public function getFrame(k:int):AnimationFrame
         {
             if (((k >= 0) && (k < this._layerCount)))
             {

@@ -93,12 +93,12 @@
             return 0;
         }
 
-        public function _Str_2259(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):AnimationFrame
+        public function getFrame(k:int, _arg_2:int, _arg_3:int, _arg_4:int, _arg_5:int):AnimationFrame
         {
             var _local_6:AnimationSizeData = (getSizeData(k) as AnimationSizeData);
             if (_local_6 != null)
             {
-                return _local_6._Str_2259(_arg_2, _arg_3, _arg_4, _arg_5);
+                return _local_6.getFrame(_arg_2, _arg_3, _arg_4, _arg_5);
             }
             return null;
         }

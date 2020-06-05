@@ -185,7 +185,7 @@
             return this._overriddenActions.getValue(k);
         }
 
-        private function _Str_2259(k:int, _arg_2:String=null):Array
+        private function getFrame(k:int, _arg_2:String=null):Array
         {
             var _local_4:Array;
             var _local_3:Array = [];
@@ -212,7 +212,7 @@
             var _local_4:AnimationLayerData;
             var _local_5:AddDataContainer;
             var _local_3:Array = new Array();
-            for each (_local_4 in this._Str_2259(k, _arg_2))
+            for each (_local_4 in this.getFrame(k, _arg_2))
             {
                 if (_local_4.type == AnimationLayerData.BODYPART)
                 {
@@ -242,7 +242,7 @@
         {
             var _local_4:AnimationLayerData;
             var _local_5:AddDataContainer;
-            for each (_local_4 in this._Str_2259(k, _arg_3))
+            for each (_local_4 in this.getFrame(k, _arg_3))
             {
                 if (_local_4.id == _arg_2)
                 {

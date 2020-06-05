@@ -73,7 +73,7 @@
             }
         }
 
-        public function _Str_2259(k:int, _arg_2:int):AnimationFrame
+        public function getFrame(k:int, _arg_2:int):AnimationFrame
         {
             var _local_6:int;
             var _local_7:int;
@@ -132,7 +132,7 @@
             {
                 if (_arg_3 >= _local_5._Str_2185)
                 {
-                    return this._Str_2259(k, _arg_4);
+                    return this.getFrame(k, _arg_4);
                 }
                 return this.getFrameFromSpecificSequence(k, _local_5, _arg_2, _arg_3, false);
             }
@@ -154,7 +154,7 @@
             if (_arg_2 != null)
             {
                 _local_6 = _arg_2._Str_1674(_arg_4);
-                _local_7 = _arg_2._Str_2259(_local_6);
+                _local_7 = _arg_2.getFrame(_local_6);
                 if (_local_7 == null)
                 {
                     return null;

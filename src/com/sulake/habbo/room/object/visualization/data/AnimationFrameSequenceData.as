@@ -85,7 +85,7 @@
             this._frameRepeats.push(1);
         }
 
-        public function _Str_2259(k:int):AnimationFrameData
+        public function getFrame(k:int):AnimationFrameData
         {
             if ((((this._frames.length == 0) || (k < 0)) || (k >= this._Str_2185)))
             {
