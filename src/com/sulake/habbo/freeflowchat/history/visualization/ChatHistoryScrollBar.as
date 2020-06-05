@@ -24,10 +24,10 @@
         public function ChatHistoryScrollBar(k:ChatHistoryScrollView, _arg_2:HabboFreeFlowChat)
         {
             this._scrollView = k;
-            this._thumbTrack = HabboFreeFlowChat._Str_18206(new Rectangle(2, 2, 1, 1), (_arg_2.assets.getAssetByName("scrollbar_thumb").content as BitmapData));
+            this._thumbTrack = HabboFreeFlowChat.create9SliceSprite(new Rectangle(2, 2, 1, 1), (_arg_2.assets.getAssetByName("scrollbar_thumb").content as BitmapData));
             this._thumbTrack.x = 2;
             this._thumbTrack.y = 2;
-            this._background = HabboFreeFlowChat._Str_18206(new Rectangle(2, 2, 5, 5), (_arg_2.assets.getAssetByName("scrollbar_back").content as BitmapData));
+            this._background = HabboFreeFlowChat.create9SliceSprite(new Rectangle(2, 2, 5, 5), (_arg_2.assets.getAssetByName("scrollbar_back").content as BitmapData));
             this._displayObject = new Sprite();
             this._displayObject.addChild(this._background);
             this._displayObject.addChild(this._thumbTrack);

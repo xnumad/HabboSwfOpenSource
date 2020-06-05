@@ -110,7 +110,7 @@
             return _local_5;
         }
 
-        public static function _Str_18206(k:Rectangle, _arg_2:BitmapData):Sprite
+        public static function create9SliceSprite(k:Rectangle, _arg_2:BitmapData):Sprite
         {
             var _local_8:Number;
             var _local_9:int;

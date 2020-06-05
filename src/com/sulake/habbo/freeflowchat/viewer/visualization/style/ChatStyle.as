@@ -75,7 +75,7 @@
             {
                 _local_2 = this._background;
             }
-            return HabboFreeFlowChat._Str_18206(this._scale9Grid, _local_2);
+            return HabboFreeFlowChat.create9SliceSprite(this._scale9Grid, _local_2);
         }
 
         public function get textFormat():TextFormat
