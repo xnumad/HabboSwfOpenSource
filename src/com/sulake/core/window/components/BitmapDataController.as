@@ -25,7 +25,7 @@
         protected var _etchingPoint:Point;
         protected var _fitSizeToContents:Boolean;
         private var _wrapX:Boolean;
-        private var _Str_12136:Boolean;
+        private var _wrapY:Boolean;
 
         public function BitmapDataController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -37,7 +37,7 @@
             this._zoomX = Number(_local_12.get(PropertyKeys.ZOOM_X).value);
             this._zoomY = Number(_local_12.get(PropertyKeys.ZOOM_Y).value);
             this._wrapX = Boolean(_local_12.get(PropertyKeys.WRAP_X).value);
-            this._Str_12136 = Boolean(_local_12.get(PropertyKeys.WRAP_Y).value);
+            this._wrapY = Boolean(_local_12.get(PropertyKeys.WRAP_Y).value);
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
         }
 
@@ -158,12 +158,12 @@
 
         public function get wrapY():Boolean
         {
-            return this._Str_12136;
+            return this._wrapY;
         }
 
         public function set wrapY(k:Boolean):void
         {
-            this._Str_12136 = k;
+            this._wrapY = k;
         }
 
         protected function _Str_8020():void
@@ -182,7 +182,7 @@
             k.push(createProperty(PropertyKeys.STRETCHED_X, this._stretchedX));
             k.push(createProperty(PropertyKeys.STRETCHED_Y, this._stretchedY));
             k.push(createProperty(PropertyKeys.WRAP_X, this._wrapX));
-            k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
+            k.push(createProperty(PropertyKeys.WRAP_Y, this._wrapY));
             k.push(createProperty(PropertyKeys.ZOOM_X, this._zoomX));
             k.push(createProperty(PropertyKeys.ZOOM_Y, this._zoomY));
             k.push(createProperty(PropertyKeys.GREYSCALE, this._greyscale));
@@ -217,7 +217,7 @@
                         this._wrapX = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.WRAP_Y:
-                        this._Str_12136 = Boolean(_local_2.value);
+                        this._wrapY = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.GREYSCALE:
                         this._greyscale = Boolean(_local_2.value);
