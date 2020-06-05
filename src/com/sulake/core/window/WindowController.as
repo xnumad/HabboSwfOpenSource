@@ -54,7 +54,7 @@
         protected var _limits:WindowRectLimits;
         protected var _immediateClickMode:Boolean = false;
         private var _currentDynamicStyle:DynamicStyle;
-        private var _Str_10190:Boolean = false;
+        private var _forceGraphicContexts:Boolean = false;
         private var _Str_5110:Rectangle;
         private var _Str_2995:uint;
         private var _Str_8085:IPropertyMap;
@@ -626,13 +626,13 @@
                     }
                 }
             }
-            this._Str_10190 = true;
+            this._forceGraphicContexts = true;
             return this._graphics;
         }
 
         public function _Str_26385():void
         {
-            this._Str_10190 = false;
+            this._forceGraphicContexts = false;
             if (this._graphics)
             {
             }
@@ -2312,7 +2312,7 @@
                     _local_2 = ((_local_2) || (_local_3._Str_4453()));
                 }
             }
-            if (((this._Str_10190) || (_local_2)))
+            if (((this._forceGraphicContexts) || (_local_2)))
             {
                 this.setupGraphicsContext();
             }
@@ -2331,7 +2331,7 @@
             }
             this._children.push(_local_2);
             _local_2.parent = this;
-            if (((this._Str_10190) || (_local_2._Str_4453())))
+            if (((this._forceGraphicContexts) || (_local_2._Str_4453())))
             {
                 this.setupGraphicsContext();
                 if (_local_2.getGraphicContext(true).parent != this._graphics)
@@ -2358,7 +2358,7 @@
             }
             this._children.splice(_arg_2, 0, _local_3);
             _local_3.parent = this;
-            if (((this._Str_10190) || (_local_3._Str_4453())))
+            if (((this._forceGraphicContexts) || (_local_3._Str_4453())))
             {
                 this.setupGraphicsContext();
                 if (_local_3.getGraphicContext(true).parent != this._graphics)
