@@ -32,7 +32,7 @@
 
     public class RoomChatWidget extends ConversionTrackingWidget implements IUpdateReceiver 
     {
-        private static var _Str_3867:ChatBubbleFactory = null;
+        private static var _chatBubbleFactory:ChatBubbleFactory = null;
         private static const _Str_3729:int = 19;
         private static const _Str_18120:int = 10;
         private static const _Str_12991:int = 20;
@@ -139,15 +139,15 @@
                 this._Str_2296 = _arg_7;
                 this._Str_2296.registerUpdateReceiver(this, 1);
             }
-            if (!_Str_3867)
+            if (!_chatBubbleFactory)
             {
-                _Str_3867 = new ChatBubbleFactory(_arg_3, _arg_2, XML(_assets.getAssetByName("roomchat_styles_chatstyles_xml").content));
+                _chatBubbleFactory = new ChatBubbleFactory(_arg_3, _arg_2, XML(_assets.getAssetByName("roomchat_styles_chatstyles_xml").content));
             }
         }
 
         public static function get chatBubbleFactory():ChatBubbleFactory
         {
-            return _Str_3867;
+            return _chatBubbleFactory;
         }
 
 
