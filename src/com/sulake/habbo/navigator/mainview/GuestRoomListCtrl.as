@@ -191,7 +191,7 @@
         {
             k.visible = true;
             Util._Str_2930(k);
-            this._Str_23295(k, _arg_2);
+            this.refreshFavouriteIcon(k, _arg_2);
             var _local_3:String = ((((_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED) || (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
             this._navigator.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
             this._navigator.refreshButton(k, "home", this.isHome(_arg_2), null, 0);
@@ -298,7 +298,7 @@
         {
         }
 
-        private function _Str_23295(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function refreshFavouriteIcon(k:IWindowContainer, _arg_2:_Str_2370):void
         {
             var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
             var _local_4:Boolean = this.isHome(_arg_2);
