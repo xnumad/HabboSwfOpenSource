@@ -107,7 +107,7 @@
             }
             this._item = k;
             this.reposition();
-            this._Str_23164();
+            this.startFadeIn();
         }
 
         public function _Str_18673(k:BadgeImageReadyEvent):void
@@ -237,7 +237,7 @@
             _local_2.bitmap = _local_3;
         }
 
-        private function _Str_23164():void
+        private function startFadeIn():void
         {
             this._fadeInStart = 0;
             this._state = _Str_3847;
