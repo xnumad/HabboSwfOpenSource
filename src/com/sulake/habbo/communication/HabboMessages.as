@@ -431,7 +431,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
@@ -1336,7 +1336,7 @@
             INCOMING_PACKETS[3522] = _Str_9259;
             INCOMING_PACKETS[3523] = IdentityAccountsEvent;
             INCOMING_PACKETS[354] = HandItemReceivedMessageEvent;
-            INCOMING_PACKETS[3547] = _Str_4196;
+            INCOMING_PACKETS[3547] = RoomVisualizationSettingsEvent;
             INCOMING_PACKETS[3559] = _Str_7811;
             INCOMING_PACKETS[3560] = _Str_8191;
             INCOMING_PACKETS[3575] = NewUserExperienceGiftOfferEvent;

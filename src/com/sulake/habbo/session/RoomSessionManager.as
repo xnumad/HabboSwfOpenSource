@@ -17,7 +17,7 @@
     import com.sulake.iid.IIDRoomEngine;
     import com.sulake.habbo.room.events.RoomEngineEvent;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.handler.RoomSessionHandler;
@@ -105,7 +105,7 @@
             this.createHandlers();
             if (((this._roomViewerMode) && (!(this._communication == null))))
             {
-                this._communication.addHabboConnectionMessageEvent(new _Str_4196(this.onRoomVisualizationSettings));
+                this._communication.addHabboConnectionMessageEvent(new RoomVisualizationSettingsEvent(this.onRoomVisualizationSettings));
             }
             this.executePendingSessionRequest();
         }
@@ -188,7 +188,7 @@
             }
         }
 
-        private function onRoomVisualizationSettings(k:_Str_4196):void
+        private function onRoomVisualizationSettings(k:RoomVisualizationSettingsEvent):void
         {
             var _local_3:int;
             var _local_4:int;

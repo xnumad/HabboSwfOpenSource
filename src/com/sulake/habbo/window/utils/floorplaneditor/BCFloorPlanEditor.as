@@ -5,7 +5,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.layout.RoomEntryTileMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.layout.RoomOccupiedTilesMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_5417;
     import com.sulake.habbo.communication.messages.incoming.perk.PerkAllowancesEvent;
     import com.sulake.core.window.components.IFrameWindow;
@@ -53,7 +53,7 @@
         private var _floorHeightMapMessageEvent:FloorHeightMapEvent;
         private var _entryTileDataMessageEvent:RoomEntryTileMessageEvent;
         private var _occupiedTilesMessageEvent:RoomOccupiedTilesMessageEvent;
-        private var _roomVisualizationSettingsMessageEvent:_Str_4196;
+        private var _roomVisualizationSettingsMessageEvent:RoomVisualizationSettingsEvent;
         private var _buildersClubSubscriptionStatusMessageEvent:_Str_5417;
         private var _perkAllowancesMessageEvent:PerkAllowancesEvent;
         private var _floorPlanCache:FloorPlanCache;
@@ -86,7 +86,7 @@
                 this._floorHeightMapMessageEvent = new FloorHeightMapEvent(this.onFloorHeightMap);
                 this._entryTileDataMessageEvent = new RoomEntryTileMessageEvent(this.onEntryTileData);
                 this._occupiedTilesMessageEvent = new RoomOccupiedTilesMessageEvent(this.onOccupiedTiles);
-                this._roomVisualizationSettingsMessageEvent = new _Str_4196(this.onRoomVisualizationSettings);
+                this._roomVisualizationSettingsMessageEvent = new RoomVisualizationSettingsEvent(this.onRoomVisualizationSettings);
                 this._buildersClubSubscriptionStatusMessageEvent = new _Str_5417(this._Str_22764);
                 this._perkAllowancesMessageEvent = new PerkAllowancesEvent(this.onPerkAllowances);
                 this._windowManager.communication.addHabboConnectionMessageEvent(this._floorHeightMapMessageEvent);
@@ -514,7 +514,7 @@
             }
         }
 
-        private function onRoomVisualizationSettings(k:_Str_4196):void
+        private function onRoomVisualizationSettings(k:RoomVisualizationSettingsEvent):void
         {
             var _local_2:RoomVisualizationSettingsParser = k.getParser();
             this._floorThickness = this._Str_10107(_local_2.floorThicknessMultiplier);

@@ -9,7 +9,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4196;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
@@ -188,7 +188,7 @@
                 k.addMessageEvent(new FloorHeightMapEvent(this.onFloorHeightMap));
                 k.addMessageEvent(new HeightMapEvent(this.onHeightMap));
                 k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
-                k.addMessageEvent(new _Str_4196(this.onRoomVisualizationSettings));
+                k.addMessageEvent(new RoomVisualizationSettingsEvent(this.onRoomVisualizationSettings));
                 k.addMessageEvent(new _Str_6253(this.onFurnitureAliases));
                 k.addMessageEvent(new _Str_7849(this.onObjects));
                 k.addMessageEvent(new _Str_5843(this.onObjectAdd));
@@ -373,7 +373,7 @@
 
         private function onRoomVisualizationSettings(k:IMessageEvent):void
         {
-            var _local_2:_Str_4196 = (k as _Str_4196);
+            var _local_2:RoomVisualizationSettingsEvent = (k as RoomVisualizationSettingsEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {
                 return;
