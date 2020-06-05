@@ -231,8 +231,8 @@
                 this._Str_3397 = (findChildByTag("_SCROLLBAR") as IScrollbarWindow);
                 if (this._Str_3397)
                 {
-                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this._Str_6204);
-                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this._Str_6204);
+                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
+                    this._Str_3397.addEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
                 }
             }
             return this._Str_3397;
@@ -242,8 +242,8 @@
         {
             if (this._Str_3397)
             {
-                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this._Str_6204);
-                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this._Str_6204);
+                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_ENABLED, this.scrollBarEventProc);
+                this._Str_3397.removeEventListener(WindowEvent.WINDOW_EVENT_DISABLED, this.scrollBarEventProc);
                 this._Str_3397 = null;
             }
             if (this._Str_12329)
@@ -333,7 +333,7 @@
             return (this._Str_2448) && (this._Str_2734);
         }
 
-        private function _Str_6204(k:WindowEvent):void
+        private function scrollBarEventProc(k:WindowEvent):void
         {
             if (k.type == WindowEvent.WINDOW_EVENT_ENABLED)
             {
