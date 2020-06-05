@@ -276,7 +276,7 @@
 
         public function get procedure():Function
         {
-            return (this._procedure != null) ? this._procedure : ((this._parent != null) ? this._parent.procedure : this._Str_20825);
+            return (this._procedure != null) ? this._procedure : ((this._parent != null) ? this._parent.procedure : this.nullEventProc);
         }
 
         public function get filters():Array
@@ -1369,7 +1369,7 @@
             }
         }
 
-        private function _Str_20825(k:WindowEvent, _arg_2:IWindow):void
+        private function nullEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
         }
 

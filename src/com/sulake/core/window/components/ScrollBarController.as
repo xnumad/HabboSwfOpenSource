@@ -356,7 +356,7 @@
             }
         }
 
-        private function _Str_20825(k:WindowEvent, _arg_2:IWindow):void
+        private function nullEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
         }
 
