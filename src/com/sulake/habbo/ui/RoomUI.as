@@ -1213,7 +1213,7 @@
             var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
             {
-                return _local_2._Str_25373(k, 0);
+                return _local_2.mouseEventPositionHasInputEventWindow(k, 0);
             }
             return false;
         }

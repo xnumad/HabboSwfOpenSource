@@ -2069,7 +2069,7 @@
             return this._layoutManager;
         }
 
-        public function _Str_25373(k:MouseEvent, _arg_2:int):Boolean
+        public function mouseEventPositionHasInputEventWindow(k:MouseEvent, _arg_2:int):Boolean
         {
             var _local_3:Array = new Array(0);
             var _local_4:Point = new Point(k.stageX, k.stageY);
