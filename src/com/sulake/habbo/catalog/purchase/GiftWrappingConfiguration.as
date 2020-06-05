@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.catalog.purchase
 {
-    import com.sulake.habbo.communication.messages.parser.catalog._Str_7223;
+    import com.sulake.habbo.communication.messages.parser.catalog.GiftWrappingConfigurationParser;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7597;
 
     public class GiftWrappingConfiguration 
@@ -18,7 +18,7 @@
             {
                 return;
             }
-            var _local_2:_Str_7223 = k.getParser();
+            var _local_2:GiftWrappingConfigurationParser = k.getParser();
             if (_local_2 == null)
             {
                 return;
