@@ -46,7 +46,7 @@
         protected var _maxLines:int = 0;
         protected var _displayRaw:Boolean = false;
         protected var _etchingColor:uint;
-        protected var _Str_5717:String;
+        protected var _etchingPosition:String;
         protected var _Str_22881:TextFormat;
         private var _Str_4040:String;
         private var _Str_3808:TextStyle;
@@ -608,9 +608,9 @@
 
         private static function setEtchingPosition(k:TextController, _arg_2:String):void
         {
-            k._Str_5717 = _arg_2;
+            k._etchingPosition = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.etchingPosition = k._Str_5717;
+            k._Str_3808.etchingPosition = k._etchingPosition;
         }
 
 
@@ -1436,7 +1436,7 @@
             k.push(createProperty(PropertyKeys.BORDER, this._field.border));
             k.push(createProperty(PropertyKeys.BORDER_COLOR, this._field.borderColor));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._etchingColor, PropertyStruct.HEX, (!(this._etchingColor == uint(_local_2.etchingColor)))));
-            k.push(new PropertyStruct(PropertyKeys.ETCHING_POSITION, this._Str_5717, PropertyStruct.STRING, (!(this._Str_5717 == String(_local_2.etchingPosition))), PropertyKeys.ETCHING_POSITION_RANGE));
+            k.push(new PropertyStruct(PropertyKeys.ETCHING_POSITION, this._etchingPosition, PropertyStruct.STRING, (!(this._etchingPosition == String(_local_2.etchingPosition))), PropertyKeys.ETCHING_POSITION_RANGE));
             k.push(createProperty(PropertyKeys.CONDENSE_WHITE, this._field.condenseWhite));
             k.push(new PropertyStruct(PropertyKeys.FONT_FACE, this.defaultTextFormat.font, PropertyStruct.STRING, (!(this.defaultTextFormat.font == _local_2.fontFamily))));
             k.push(new PropertyStruct(PropertyKeys.FONT_SIZE, this.defaultTextFormat.size, PropertyStruct.UINT, (!(this.defaultTextFormat.size == _local_2.fontSize))));
@@ -1489,7 +1489,7 @@
 
         public function get etchingPosition():String
         {
-            return this._Str_5717;
+            return this._etchingPosition;
         }
 
         public function set etchingPosition(k:String):void
