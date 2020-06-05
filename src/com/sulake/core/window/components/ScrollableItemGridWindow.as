@@ -146,9 +146,9 @@
             this._Str_2448.autoArrangeItems = k;
         }
 
-        public function get _Str_3080():uint
+        public function get numColumns():uint
         {
-            return this._Str_2448._Str_3080;
+            return this._Str_2448.numColumns;
         }
 
         public function get _Str_11491():uint

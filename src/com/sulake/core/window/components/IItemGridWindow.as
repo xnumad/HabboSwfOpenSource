@@ -14,7 +14,7 @@
         function set autoArrangeItems(_arg_1:Boolean):void;
         function get resizeOnItemUpdate():Boolean;
         function set resizeOnItemUpdate(_arg_1:Boolean):void;
-        function get _Str_3080():uint;
+        function get numColumns():uint;
         function get _Str_11491():uint;
         function get numGridItems():uint;
         function _Str_2816(_arg_1:IWindow):IWindow;

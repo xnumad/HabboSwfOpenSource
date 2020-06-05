@@ -72,7 +72,7 @@
         {
             super.autoArrangeItems = k;
             var _local_2:int;
-            while (_local_2 < this._Str_3080)
+            while (_local_2 < this.numColumns)
             {
                 IItemListWindow(getListItemAt(_local_2)).autoArrangeItems = k;
                 _local_2++;
@@ -85,7 +85,7 @@
             {
                 return _scrollStepH;
             }
-            return (_horizontal) ? (0.1 * scrollableRegion.height) : (scrollableRegion.width / this._Str_3080);
+            return (_horizontal) ? (0.1 * scrollableRegion.height) : (scrollableRegion.width / this.numColumns);
         }
 
         override public function get scrollStepV():Number
@@ -160,7 +160,7 @@
             return _local_2;
         }
 
-        public function get _Str_3080():uint
+        public function get numColumns():uint
         {
             return numListItems;
         }
@@ -168,7 +168,7 @@
         public function get _Str_11491():uint
         {
             var k:uint;
-            var _local_2:uint = this._Str_3080;
+            var _local_2:uint = this.numColumns;
             var _local_3:uint;
             while (_local_3 < _local_2)
             {
@@ -197,7 +197,7 @@
             {
                 return null;
             }
-            return _local_2.getListItemAt((k / this._Str_3080));
+            return _local_2.getListItemAt((k / this.numColumns));
         }
 
         public function _Str_15490(k:uint):IWindow
@@ -205,7 +205,7 @@
             var _local_3:IItemListWindow;
             var _local_4:IWindow;
             var _local_5:uint;
-            var _local_2:uint = this._Str_3080;
+            var _local_2:uint = this.numColumns;
             _local_5 = 0;
             while (_local_5 < _local_2)
             {
@@ -225,7 +225,7 @@
             var _local_3:IItemListWindow;
             var _local_4:IWindow;
             var _local_5:uint;
-            var _local_2:uint = this._Str_3080;
+            var _local_2:uint = this.numColumns;
             _local_5 = 0;
             while (_local_5 < _local_2)
             {
@@ -245,7 +245,7 @@
             var _local_3:IItemListWindow;
             var _local_4:IWindow;
             var _local_5:uint;
-            var _local_2:uint = this._Str_3080;
+            var _local_2:uint = this.numColumns;
             _local_5 = 0;
             while (_local_5 < _local_2)
             {
@@ -267,7 +267,7 @@
             {
                 return -1;
             }
-            return (_local_2.getListItemIndex(k) * this._Str_3080) + this._Str_22838(_local_2);
+            return (_local_2.getListItemIndex(k) * this.numColumns) + this._Str_22838(_local_2);
         }
 
         public function _Str_4725(k:IWindow):IWindow
@@ -320,7 +320,7 @@
         public function removeGridItems():void
         {
             var _local_2:IItemListWindow;
-            var k:uint = this._Str_3080;
+            var k:uint = this.numColumns;
             var _local_3:uint;
             while (_local_3 < k)
             {
@@ -341,7 +341,7 @@
         public function destroyGridItems():void
         {
             var _local_2:IItemListWindow;
-            var k:uint = this._Str_3080;
+            var k:uint = this.numColumns;
             var _local_3:uint;
             while (_local_3 < k)
             {
@@ -381,17 +381,17 @@
 
         protected function _Str_6836(k:uint):IItemListWindow
         {
-            return getListItemAt((k % this._Str_3080)) as IItemListWindow;
+            return getListItemAt((k % this.numColumns)) as IItemListWindow;
         }
 
         public function _Str_26410(k:uint):uint
         {
-            return k % this._Str_3080;
+            return k % this.numColumns;
         }
 
         public function _Str_16931(k:uint):uint
         {
-            return k / this._Str_3080;
+            return k / this.numColumns;
         }
 
         override public function populate(k:Array):void
@@ -404,7 +404,7 @@
             var _local_2:Boolean = autoArrangeItems;
             this.autoArrangeItems = false;
             var _local_3:int = this.numGridItems;
-            var _local_4:int = this._Str_3080;
+            var _local_4:int = this.numColumns;
             var _local_6:Array = [];
             for each (_local_7 in k)
             {
@@ -455,7 +455,7 @@
         protected function _Str_22998(k:IWindow):IItemListWindow
         {
             var _local_3:IItemListWindow;
-            var _local_2:uint = this._Str_3080;
+            var _local_2:uint = this.numColumns;
             while (_local_2-- > 0)
             {
                 _local_3 = IItemListWindow(getListItemAt(_local_2));
@@ -473,7 +473,7 @@
             var _local_4:IItemListWindow;
             var _local_5:int;
             var _local_6:Boolean;
-            if (this._Str_3080 == 0)
+            if (this.numColumns == 0)
             {
                 return this._Str_14060(k);
             }
@@ -482,7 +482,7 @@
             {
                 _local_4 = this._Str_6836(((_local_2 > 0) ? (_local_2 - 1) : 0));
                 _local_5 = getListItemIndex(_local_4);
-                _local_6 = ((_local_5 > -1) ? (_local_5 == (this._Str_3080 - 1)) : true);
+                _local_6 = ((_local_5 > -1) ? (_local_5 == (this.numColumns - 1)) : true);
                 if (_local_6)
                 {
                     if (_local_4.numListItems == 1)
@@ -539,7 +539,7 @@
             var _local_8:uint;
             var _local_3:uint = this.numGridItems;
             var _local_4:int = (_local_3 - 1);
-            var _local_6:uint = this._Str_3080;
+            var _local_6:uint = this.numColumns;
             var _local_9:int;
             while (_local_9 < _local_6)
             {
@@ -566,10 +566,10 @@
                     _local_5.addListItemAt(_local_7, _local_8);
                     _local_4--;
                 }
-                this._Str_6836(_arg_2).addListItemAt(k, (_arg_2 / this._Str_3080));
+                this._Str_6836(_arg_2).addListItemAt(k, (_arg_2 / this.numColumns));
             }
             var _local_10:uint;
-            _local_6 = this._Str_3080;
+            _local_6 = this.numColumns;
             _local_9 = 0;
             while (_local_9 < _local_6)
             {
@@ -595,7 +595,7 @@
                 return null;
             }
             var _local_8:int;
-            while (_local_8 < this._Str_3080)
+            while (_local_8 < this.numColumns)
             {
                 IItemListWindow(getListItemAt(_local_8)).autoArrangeItems = false;
                 _local_8++;
@@ -610,7 +610,7 @@
             }
             var _local_9:uint;
             _local_8 = 0;
-            while (_local_8 < this._Str_3080)
+            while (_local_8 < this.numColumns)
             {
                 _local_3 = IItemListWindow(getListItemAt(_local_8));
                 _local_3.autoArrangeItems = true;
@@ -630,7 +630,7 @@
             var _local_8:uint;
             var k:int = this.numGridItems;
             var _local_2:Array = [];
-            var _local_3:int = this._Str_3080;
+            var _local_3:int = this.numColumns;
             if (this._isGridRebuilding)
             {
                 return;
@@ -663,7 +663,7 @@
             {
                 _local_8 = 0;
                 _local_7 = 0;
-                while (_local_7 < this._Str_3080)
+                while (_local_7 < this.numColumns)
                 {
                     _local_4 = IItemListWindow(getListItemAt(_local_7));
                     _local_4.autoArrangeItems = true;
