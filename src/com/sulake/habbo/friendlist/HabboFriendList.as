@@ -211,7 +211,7 @@
             }
         }
 
-        public function _Str_12559(linkAlias:String, params:Dictionary, x:int, y:int):void
+        public function openHabboWebPage(linkAlias:String, params:Dictionary, x:int, y:int):void
         {
             var url:String = getProperty(linkAlias, params);
             var webWindowName:String = "habboMain";

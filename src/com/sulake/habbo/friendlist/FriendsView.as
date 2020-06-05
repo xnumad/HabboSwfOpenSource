@@ -521,7 +521,7 @@
             }
             else
             {
-                this._friendList._Str_12559("link.format.mail.compose", _local_4, _local_7.stageX, _local_7.stageY);
+                this._friendList.openHabboWebPage("link.format.mail.compose", _local_4, _local_7.stageX, _local_7.stageY);
             }
         }
 
@@ -542,7 +542,7 @@
             _local_4["ID"] = ("" + _local_3.id);
             _local_4["username"] = _local_3.name;
             var _local_5:WindowMouseEvent = (k as WindowMouseEvent);
-            this._friendList._Str_12559("link.format.userpage", _local_4, _local_5.stageX, _local_5.stageY);
+            this._friendList.openHabboWebPage("link.format.userpage", _local_4, _local_5.stageX, _local_5.stageY);
         }
 
         private function _Str_25558(k:WindowEvent, _arg_2:IWindow):void

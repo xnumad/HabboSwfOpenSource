@@ -187,7 +187,7 @@
             }
             Logger.log("Edit categories clicked");
             var _local_3:WindowMouseEvent = (k as WindowMouseEvent);
-            this._habboFriendList._Str_12559("link.format.friendlist.pref", new Dictionary(), _local_3.stageX, _local_3.stageY);
+            this._habboFriendList.openHabboWebPage("link.format.friendlist.pref", new Dictionary(), _local_3.stageX, _local_3.stageY);
         }
 
         public function get mainWindow():IWindowContainer
