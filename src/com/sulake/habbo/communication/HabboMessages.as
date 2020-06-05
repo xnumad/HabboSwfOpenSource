@@ -449,7 +449,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
@@ -1054,7 +1054,7 @@
             INCOMING_PACKETS[1446] = ChatMessageEvent;
             INCOMING_PACKETS[1450] = FigureSetIdsEvent;
             INCOMING_PACKETS[1452] = _Str_5417;
-            INCOMING_PACKETS[1453] = _Str_8080;
+            INCOMING_PACKETS[1453] = ObjectsDataUpdateMessageEvent;
             INCOMING_PACKETS[1455] = _Str_5006;
             INCOMING_PACKETS[1456] = GuideSessionEndedEvent;
             INCOMING_PACKETS[1459] = GroupDetailsChangedMessageEvent;

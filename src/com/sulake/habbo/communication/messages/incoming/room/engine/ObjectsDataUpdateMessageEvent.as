@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsDataUpdateMessageParser;
 
-    public class _Str_8080 extends MessageEvent 
+    public class ObjectsDataUpdateMessageEvent extends MessageEvent
     {
-        public function _Str_8080(k:Function)
+        public function ObjectsDataUpdateMessageEvent(k:Function)
         {
             super(k, ObjectsDataUpdateMessageParser);
         }
