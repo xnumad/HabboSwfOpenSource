@@ -71,7 +71,7 @@
             this._messenger = k;
             this._frame = (this._messenger.getXmlWindow("messenger") as IWindowContainer);
             this._frame.visible = false;
-            this._frame.procedure = this._Str_22468;
+            this._frame.procedure = this.messengerWindowProcedure;
             IStaticBitmapWrapperWindow(this._frame.findChildByName("header_button_image")).assetUri = "messenger_minimize_button";
             this._avatarList = (this._frame.findChildByName("avatar_list") as IWindowContainer);
             this._avatarTemplate = (this._avatarList.getChildAt(0) as IWindowContainer);
@@ -758,7 +758,7 @@
             return k;
         }
 
-        private function _Str_22468(k:WindowEvent, _arg_2:IWindow):void
+        private function messengerWindowProcedure(k:WindowEvent, _arg_2:IWindow):void
         {
             switch (k.type)
             {
