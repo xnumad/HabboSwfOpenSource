@@ -258,7 +258,7 @@
             }
             if (((_arg_2) || (!(this.isOpen))))
             {
-                this._Str_11644(k);
+                this.selectConversation(k);
             }
             this._Str_16374();
         }
@@ -309,7 +309,7 @@
             }
         }
 
-        private function _Str_11644(k:int):void
+        private function selectConversation(k:int):void
         {
             this._currentConversationId = k;
             setAvatarVisibilityTag(this._Str_12553(k), true);
@@ -333,7 +333,7 @@
             }
             if (this._Str_9747 == 0)
             {
-                this._Str_11644(NO_CONVERSATION);
+                this.selectConversation(NO_CONVERSATION);
                 this.hide();
             }
             else
@@ -343,7 +343,7 @@
                     if (avatarVisible(_local_2))
                     {
                         this._avatarListPosition = 0;
-                        this._Str_11644(_local_2.id);
+                        this.selectConversation(_local_2.id);
                         break;
                     }
                 }
@@ -471,7 +471,7 @@
                 }
                 if (this._Str_9747 == 1)
                 {
-                    this._Str_11644(k);
+                    this.selectConversation(k);
                 }
             }
             this._Str_16374();
@@ -779,7 +779,7 @@
                     switch (_arg_2.name)
                     {
                         case "avatar_click_region":
-                            this._Str_11644(_arg_2.parent.id);
+                            this.selectConversation(_arg_2.parent.id);
                             break;
                         case "avatars_scroll_left":
                             if (this._avatarListPosition > 0)
