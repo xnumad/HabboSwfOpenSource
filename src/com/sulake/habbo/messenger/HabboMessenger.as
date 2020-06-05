@@ -158,7 +158,7 @@
         {
             this._Str_2439 = new MainView(this);
             this.addMessageEvent(new _Str_4851(this._Str_18650));
-            this.addMessageEvent(new _Str_8339(this._Str_17683));
+            this.addMessageEvent(new _Str_8339(this.onInstantMessageError));
             this.addMessageEvent(new _Str_4696(this._Str_10457));
         }
 
@@ -258,12 +258,12 @@
             }
         }
 
-        private function _Str_17683(k:IMessageEvent):void
+        private function onInstantMessageError(k:IMessageEvent):void
         {
             var _local_2:_Str_7091 = (k as _Str_8339).getParser();
             if (this._Str_2439 != null)
             {
-                this._Str_2439._Str_17683(_local_2.userId, _local_2.errorCode, _local_2.message);
+                this._Str_2439.onInstantMessageError(_local_2.userId, _local_2.errorCode, _local_2.message);
             }
         }
 

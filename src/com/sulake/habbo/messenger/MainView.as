@@ -281,7 +281,7 @@
             }
         }
 
-        public function _Str_17683(k:int, _arg_2:int, _arg_3:String):void
+        public function onInstantMessageError(k:int, _arg_2:int, _arg_3:String):void
         {
             var _local_4:String;
             var _local_5:RegExp;
