@@ -50,7 +50,7 @@
         protected var _defaultFormat:TextFormat;
         private var _textStyleName:String;
         private var _explicitStyle:TextStyle;
-        protected var _Str_17282:Boolean;
+        protected var _settingRectangle:Boolean;
 
         public function TextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
@@ -966,17 +966,17 @@
 
         override public function setRectangle(k:int, _arg_2:int, _arg_3:int, _arg_4:int):void
         {
-            if ((((this._Str_17282) || (!(this.multiline))) || (!(this.wordWrap))))
+            if ((((this._settingRectangle) || (!(this.multiline))) || (!(this.wordWrap))))
             {
                 super.setRectangle(k, _arg_2, _arg_3, _arg_4);
                 return;
             }
-            this._Str_17282 = true;
+            this._settingRectangle = true;
             var _local_5:String = this.autoSize;
             this.autoSize = TextFieldAutoSize.NONE;
             super.setRectangle(k, _arg_2, _arg_3, _arg_4);
             this.autoSize = _local_5;
-            this._Str_17282 = false;
+            this._settingRectangle = false;
         }
 
         public function set scrollH(k:Number):void
