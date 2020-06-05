@@ -443,7 +443,7 @@
 
         private function onCloseButtonClick(k:WindowEvent):void
         {
-            this._Str_24298(null);
+            this.hideInfo(null);
         }
 
         private function onRemoveRights(k:WindowEvent):void
@@ -482,7 +482,7 @@
             this._navigator.trackGoogle("roomInfo", "addThumbnail");
         }
 
-        private function _Str_24298(k:Event):void
+        private function hideInfo(k:Event):void
         {
             if (this._window)
             {
