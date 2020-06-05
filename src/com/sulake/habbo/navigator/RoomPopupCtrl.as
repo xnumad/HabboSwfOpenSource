@@ -50,7 +50,7 @@
             this._Str_25479(this._details, this._room);
             this._Str_23089();
             this._Str_24547(this._room);
-            this._Str_24426();
+            this.refreshRoomSettings();
             this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum.FREE_TRADING));
             this._Str_15598(this._details, "doormode_doorbell", (this._room.doorMode == 1));
             this._Str_15598(this._details, "doormode_password", (this._room.doorMode == 2));
@@ -71,7 +71,7 @@
             Util._Str_7173(_local_2, 1000, 10, 2);
         }
 
-        private function _Str_24426():void
+        private function refreshRoomSettings():void
         {
             var _local_2:IRegionWindow;
             var _local_3:ITextWindow;
