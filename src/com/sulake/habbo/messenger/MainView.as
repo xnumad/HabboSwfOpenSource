@@ -92,7 +92,7 @@
             return (!(k == null)) && (k.tags.indexOf(HIDDEN) < 0);
         }
 
-        private static function _Str_5616(k:IWindow, _arg_2:Boolean):void
+        private static function setAvatarVisibilityTag(k:IWindow, _arg_2:Boolean):void
         {
             if (k == null)
             {
@@ -225,7 +225,7 @@
                     this._Str_14230(k, "${messenger.notification.persisted_messages}");
                 }
                 _local_4 = (this._avatarTemplate.clone() as IWindowContainer);
-                _Str_5616(_local_4, true);
+                setAvatarVisibilityTag(_local_4, true);
                 _local_4.blend = 0;
                 _local_4.id = k;
                 if (k < 0)
@@ -312,7 +312,7 @@
         private function _Str_11644(k:int):void
         {
             this._currentConversationId = k;
-            _Str_5616(this._Str_12553(k), true);
+            setAvatarVisibilityTag(this._Str_12553(k), true);
             this._Str_20231(k, false);
             this._Str_21370();
             this._Str_7204();
@@ -329,7 +329,7 @@
             var _local_2:IWindow = this._Str_12553(k);
             if (_local_2 != null)
             {
-                _Str_5616(_local_2, false);
+                setAvatarVisibilityTag(_local_2, false);
             }
             if (this._Str_9747 == 0)
             {
@@ -456,7 +456,7 @@
             var _local_5:IWindowContainer = this._Str_12553(k);
             if (_local_5 != null)
             {
-                _Str_5616(_local_5, true);
+                setAvatarVisibilityTag(_local_5, true);
                 this._Str_7204();
             }
             if (k == this._currentConversationId)
@@ -713,7 +713,7 @@
                 }
                 if (_local_4)
                 {
-                    _Str_5616(_local_3, true);
+                    setAvatarVisibilityTag(_local_3, true);
                 }
                 _local_5 = avatarVisible(_local_3);
                 if ((((_local_2 < this._avatarListPosition) || (!(_local_5))) || (this._avatarListLastNotShown)))
