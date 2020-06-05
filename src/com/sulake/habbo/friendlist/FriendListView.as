@@ -18,7 +18,7 @@
         private static const WINDOW_LAYER_INDEX:int = 1;
 
         private var _habboFriendList:HabboFriendList;
-        private var _Str_18526:_Str_8553;
+        private var _tabsView:_Str_8553;
         private var _mainWindow:IFrameWindow;
         private var _Str_21315:IWindowContainer;
         private var _Str_3541:IWindowContainer;
@@ -30,7 +30,7 @@
         public function FriendListView(k:HabboFriendList)
         {
             this._habboFriendList = k;
-            this._Str_18526 = new _Str_8553(this._habboFriendList);
+            this._tabsView = new _Str_8553(this._habboFriendList);
         }
 
         public function openFriendList():void
@@ -73,7 +73,7 @@
             {
                 return;
             }
-            this._Str_18526.refresh(k);
+            this._tabsView.refresh(k);
             this._Str_23758();
         }
 
@@ -96,7 +96,7 @@
             this._mainWindow.findChildByTag("close").procedure = this._Str_3046;
             this._Str_21315 = IWindowContainer(this._mainWindow.content.findChildByName("main_content"));
             this._Str_3541 = IWindowContainer(this._mainWindow.content.findChildByName("footer"));
-            this._Str_18526.prepare(this._Str_21315);
+            this._tabsView.prepare(this._Str_21315);
             this._mainWindow.procedure = this._Str_7142;
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, false);
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_FIXED, true);
