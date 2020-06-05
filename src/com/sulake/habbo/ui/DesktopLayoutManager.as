@@ -199,7 +199,7 @@
             return null;
         }
 
-        public function _Str_10173():IDisplayObjectWrapper
+        public function getChatContainer():IDisplayObjectWrapper
         {
             if (this._layoutContainer == null)
             {

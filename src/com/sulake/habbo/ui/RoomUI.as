@@ -847,7 +847,7 @@
             var _local_2:RoomDesktop = (this.getDesktop(this.getRoomIdentifier(this._roomEngine.activeRoomId)) as RoomDesktop);
             if (((_local_2) && (this._freeFlowChat.displayObject)))
             {
-                _local_2._Str_6642._Str_10173().setDisplayObject(this._freeFlowChat.displayObject);
+                _local_2._Str_6642.getChatContainer().setDisplayObject(this._freeFlowChat.displayObject);
                 this._wasFreeFlowChatPerkAllowedAtInitialize = true;
             }
         }
@@ -933,7 +933,7 @@
                         this._wasFreeFlowChatPerkAllowedAtInitialize = true;
                         if (this._freeFlowChat.displayObject != null)
                         {
-                            _local_3._Str_6642._Str_10173().setDisplayObject(this._freeFlowChat.displayObject);
+                            _local_3._Str_6642.getChatContainer().setDisplayObject(this._freeFlowChat.displayObject);
                         }
                     }
                     _local_3._Str_2548(RoomWidgetEnum.INFOSTAND);
@@ -1132,7 +1132,7 @@
             {
                 return null;
             }
-            return k._Str_6642._Str_10173();
+            return k._Str_6642.getChatContainer();
         }
 
         public function _Str_17382(k:String):void
