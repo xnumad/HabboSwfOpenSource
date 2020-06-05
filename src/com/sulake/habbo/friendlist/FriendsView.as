@@ -53,7 +53,7 @@
             this._homeButton = this._Str_14329("open_homepage", this._Str_25436, k);
             this._inviteButton = this._Str_14329("room_invite", this._Str_25558, k);
             this._removeButton = this._Str_14329("remove_friend", this._Str_23409, k);
-            this._Str_4295();
+            this.refreshButtons();
         }
 
         public function _Str_13719(k:IItemListWindow):void
@@ -120,7 +120,7 @@
                 k++;
             }
             this._list.autoArrangeItems = true;
-            this._Str_4295();
+            this.refreshButtons();
         }
 
         public function _Str_18123():void
@@ -318,7 +318,7 @@
             return this._friendList._Str_4930._Str_9273(_Str_2777._Str_4113, k);
         }
 
-        private function _Str_4295():void
+        private function refreshButtons():void
         {
             var k:Array = this._friendList.categories._Str_8217();
             this.setEnabled(this._minimailButton, this._Str_23891(k));
@@ -410,7 +410,7 @@
             {
                 _local_3 = this._friendList.categories._Str_13534(_arg_2.id);
                 _local_3.selected = ((!(_local_3 == null)) && (!(_local_3.selected)));
-                this._Str_4295();
+                this.refreshButtons();
                 this._Str_3836();
                 if ((((k.type == WindowMouseEvent.DOUBLE_CLICK) && (!(_local_3 == null))) && (_local_3.online)))
                 {

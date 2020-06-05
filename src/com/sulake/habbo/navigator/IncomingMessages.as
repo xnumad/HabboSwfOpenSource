@@ -178,7 +178,7 @@
                 _local_4._Str_12127 = _local_3._Str_20186;
                 if (this._navigator._Str_4012 != null)
                 {
-                    this._navigator._Str_4012._Str_4295(this._navigator.data._Str_2678);
+                    this._navigator._Str_4012.refreshButtons(this._navigator.data._Str_2678);
                 }
             }
         }

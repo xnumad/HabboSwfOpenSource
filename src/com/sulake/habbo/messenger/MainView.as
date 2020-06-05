@@ -277,7 +277,7 @@
         {
             if (k == this._currentConversationId)
             {
-                this._Str_4295();
+                this.refreshButtons();
             }
         }
 
@@ -642,7 +642,7 @@
             return this._frame.width - 27;
         }
 
-        private function _Str_4295():void
+        private function refreshButtons():void
         {
             IItemListWindow(this._frame.findChildByName("button_strip")).arrangeListItems();
         }

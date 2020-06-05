@@ -39,7 +39,7 @@
             this._Str_18246 = IContainerButtonWindow(k.findChildByName("reject_all_but"));
             this._Str_18246.procedure = this._Str_23039;
             this._Str_17060.procedure = this._Str_22777;
-            this._Str_4295();
+            this.refreshButtons();
         }
 
         public function _Str_13719(k:IItemListWindow):void
@@ -137,7 +137,7 @@
             this._Str_6657(k);
             this._list.addListItem(k.view);
             this._habboFriendList.friendRequests._Str_6988();
-            this._Str_4295();
+            this.refreshButtons();
         }
 
         public function _Str_7667(k:FriendRequest):void
@@ -147,7 +147,7 @@
                 return;
             }
             this._list.removeListItem(k.view);
-            this._Str_4295();
+            this.refreshButtons();
         }
 
         private function _Str_21250(k:FriendRequest):void
@@ -304,10 +304,10 @@
 
         private function refresh():void
         {
-            this._Str_4295();
+            this.refreshButtons();
         }
 
-        private function _Str_4295():void
+        private function refreshButtons():void
         {
             var k:* = (this._habboFriendList.friendRequests._Str_19367() > 0);
             this.setEnabled(this._Str_17060, k);

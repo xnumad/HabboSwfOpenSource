@@ -120,7 +120,7 @@
             this.refreshRoomDetails(this._navigator.data._Str_2678);
             this.refreshEmbed();
             this._guildInfoCtrl.refresh(this._window.content, this._navigator.data._Str_2678);
-            this._Str_4295(this._navigator.data._Str_2678);
+            this.refreshButtons(this._navigator.data._Str_2678);
             Util._Str_4679(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
             this._window.findChildByName("guild_info").x = 11;
             this._window.height = (Util._Str_2647(this._window.content) + 45);
@@ -232,7 +232,7 @@
             }
         }
 
-        public function _Str_4295(k:GuestRoomData):void
+        public function refreshButtons(k:GuestRoomData):void
         {
             var _local_7:IWindowContainer;
             if (((this._navigator.data._Str_2678 == null) || (this._window == null)))

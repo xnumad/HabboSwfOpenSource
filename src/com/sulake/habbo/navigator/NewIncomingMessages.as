@@ -214,7 +214,7 @@
                 _local_4._Str_12127 = _local_3._Str_20186;
                 if (LegacyNavigator(this._navigator._Str_2559)._Str_4012 != null)
                 {
-                    LegacyNavigator(this._navigator._Str_2559)._Str_4012._Str_4295(this._navigator.data._Str_2678);
+                    LegacyNavigator(this._navigator._Str_2559)._Str_4012.refreshButtons(this._navigator.data._Str_2678);
                 }
             }
         }
