@@ -39,7 +39,7 @@
         protected var _field:TextField;
         protected var _scrollH:Number;
         protected var _scrollV:Number;
-        protected var _Str_4263:Boolean;
+        protected var _drawing:Boolean;
         protected var _Str_2480:TextMargins;
         protected var _Str_4318:String = "none";
         protected var _Str_2959:Boolean = false;
@@ -56,7 +56,7 @@
         {
             this._Str_3808 = new TextStyle();
             this._Str_2480 = new TextMargins(0, 0, 0, 0, this.setTextMargins);
-            this._Str_4263 = false;
+            this._drawing = false;
             this._scrollH = 0;
             this._scrollV = 0;
             if (this._field == null)
@@ -1164,7 +1164,7 @@
 
         override public function update(k:WindowController, _arg_2:WindowEvent):Boolean
         {
-            if (!this._Str_4263)
+            if (!this._drawing)
             {
                 if (_arg_2.type == WindowEvent.WINDOW_EVENT_RESIZED)
                 {
@@ -1186,11 +1186,11 @@
             var _local_15:TextFormat;
             var _local_16:int;
             var _local_17:WindowEvent;
-            if (this._Str_4263)
+            if (this._drawing)
             {
                 return;
             }
-            this._Str_4263 = true;
+            this._drawing = true;
             var _local_2:int = (this._Str_2480.left + this._Str_2480.right);
             var _local_3:int = (this._Str_2480.top + this._Str_2480.bottom);
             var _local_4:int = (_w - _local_2);
@@ -1275,7 +1275,7 @@
                     }
                 }
             }
-            this._Str_4263 = false;
+            this._drawing = false;
             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
             if ((((!(_local_7)) && (!(k))) && (_events)))
             {
@@ -1395,7 +1395,7 @@
             {
                 _local_4 = new Map();
                 XMLVariableParser.parseVariableList(k.children(), _local_4);
-                this._Str_4263 = true;
+                this._drawing = true;
                 for (_local_2 in _local_4)
                 {
                     _local_3 = _PROPERTY_SETTER_TABLE[_local_2];
@@ -1404,7 +1404,7 @@
                         (_local_3(this, _local_4[_local_2]));
                     }
                 }
-                this._Str_4263 = false;
+                this._drawing = false;
             }
         }
 
@@ -1412,7 +1412,7 @@
         {
             var _local_2:Function;
             var _local_3:PropertyStruct;
-            this._Str_4263 = true;
+            this._drawing = true;
             for each (_local_3 in k)
             {
                 _local_2 = _PROPERTY_SETTER_TABLE[_local_3.key];
@@ -1421,7 +1421,7 @@
                     (_local_2(this, _local_3.value));
                 }
             }
-            this._Str_4263 = false;
+            this._drawing = false;
             super.properties = k;
             this.refreshTextImage();
         }

@@ -21,7 +21,7 @@
         public static const _Str_7283:int = 30;
 
         private var _Str_2594:BCFloorPlanEditor;
-        private var _Str_4263:Boolean = false;
+        private var _drawing:Boolean = false;
         private var _Str_12032:int = 0;
         private var _Str_12507:BitmapData;
         private var _Str_14705:BitmapData;
@@ -124,7 +124,7 @@
 
         public function set _Str_22137(k:Boolean):void
         {
-            this._Str_4263 = k;
+            this._drawing = k;
         }
 
         public function _Str_9032():void
@@ -155,15 +155,15 @@
             {
                 if (((k.type == WindowMouseEvent.UP) || (k.type == WindowMouseEvent.UP_OUTSIDE)))
                 {
-                    this._Str_4263 = false;
+                    this._drawing = false;
                 }
                 if (k.type == WindowMouseEvent.DOWN)
                 {
-                    this._Str_4263 = true;
+                    this._drawing = true;
                     this._Str_14057 = true;
                     this._Str_4248 = new Point(-1000, -1000);
                 }
-                if (((k.type == WindowMouseEvent.CLICK) || ((this._Str_4263) && (k.type == WindowMouseEvent.MOVE))))
+                if (((k.type == WindowMouseEvent.CLICK) || ((this._drawing) && (k.type == WindowMouseEvent.MOVE))))
                 {
                     _local_3 = ((this._Str_2594._Str_4964.width / 2) - (this._Str_2594._Str_4964.bitmap.width / 2));
                     _local_4 = ((this._Str_2594._Str_4964.height / 2) - (this._Str_2594._Str_4964.bitmap.height / 2));
