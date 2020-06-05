@@ -1386,7 +1386,7 @@
             this.refreshTextImage();
         }
 
-        protected function _Str_26328(k:XML):void
+        protected function parseVariableSet(k:XML):void
         {
             var _local_2:String;
             var _local_3:Function;
