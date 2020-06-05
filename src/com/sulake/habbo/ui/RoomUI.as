@@ -481,7 +481,7 @@
                 "callback":this.interstitialNotAvailableEventHandler
             }, {
                 "type":InterstitialEvent.INTERSTITIAL_COMPLETE,
-                "callback":this._Str_24565
+                "callback":this.interstitialCompleteEventHandler
             }, {
                 "type":InterstitialEvent.INTERSTITIAL_SHOW,
                 "callback":this.interstitialShowEventHandler
@@ -789,7 +789,7 @@
             this._interstitialActive = false;
         }
 
-        private function _Str_24565(k:InterstitialEvent):void
+        private function interstitialCompleteEventHandler(k:InterstitialEvent):void
         {
             var _local_4:IRoomSession;
             this._interstitialActive = false;
