@@ -51,7 +51,7 @@
                 return;
             }
             this.prepareWindow();
-            this._Str_3732();
+            this.clearErrors();
             var k:_Str_3579 = this._navigator.data._Str_4112;
             if (k == null)
             {
@@ -122,7 +122,7 @@
 
         private function _Str_24049(k:RoomAdErrorEvent):void
         {
-            this._Str_3732();
+            this.clearErrors();
             var _local_2:RoomAdErrorMessageParser = k.getParser();
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
@@ -142,7 +142,7 @@
 
         private function _Str_17505():Boolean
         {
-            this._Str_3732();
+            this.clearErrors();
             if (!this._Str_5340._Str_22184(this._navigator.getText("navigator.eventsettings.nameerr")))
             {
                 return false;
@@ -150,10 +150,10 @@
             return true;
         }
 
-        private function _Str_3732():void
+        private function clearErrors():void
         {
-            this._Str_5340._Str_3732();
-            this._Str_5951._Str_3732();
+            this._Str_5340.clearErrors();
+            this._Str_5951.clearErrors();
         }
 
         private function prepareWindow():void

@@ -412,14 +412,14 @@
             }
         }
 
-        private function _Str_3732():void
+        private function clearErrors():void
         {
-            this._Str_5666._Str_3732();
-            this._Str_7105._Str_3732();
-            this._tag1Input._Str_3732();
-            this._tag2Input._Str_3732();
-            this._Str_4194._Str_3732();
-            this._Str_7349._Str_3732();
+            this._Str_5666.clearErrors();
+            this._Str_7105.clearErrors();
+            this._tag1Input.clearErrors();
+            this._tag2Input.clearErrors();
+            this._Str_4194.clearErrors();
+            this._Str_7349.clearErrors();
         }
 
         private function prepareWindow():void
@@ -777,7 +777,7 @@
                 this._Str_6508.selection = this._Str_10107(k._Str_6205);
             }
             this._Str_22581(k);
-            this._Str_3732();
+            this.clearErrors();
             this._Str_18175 = false;
         }
 
@@ -957,7 +957,7 @@
                 _local_9 = this._Str_7349.getText();
                 if (_local_8 != _local_9)
                 {
-                    this._Str_4194._Str_3732();
+                    this._Str_4194.clearErrors();
                     this._Str_5306(_Str_7004);
                     this._Str_7349._Str_5374("${navigator.roomsettings.invalidconfirm}");
                     return;
@@ -990,7 +990,7 @@
             k._Str_17830 = this._Str_10492.selection;
             k._Str_18410 = int(this._Str_14650.getText());
             k._Str_16006 = this._Str_6390.selection;
-            this._Str_3732();
+            this.clearErrors();
             this._Str_15710 = k.roomId;
             this._navigator.send(new SaveRoomSettingsMessageComposer(k));
         }

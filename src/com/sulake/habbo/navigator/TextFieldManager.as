@@ -101,7 +101,7 @@
 
         public function _Str_8407():void
         {
-            this._Str_3732();
+            this.clearErrors();
             if (this._infoText != null)
             {
                 this._input.text = this._infoText;
@@ -129,7 +129,7 @@
             this._input.text = k;
         }
 
-        public function _Str_3732():void
+        public function clearErrors():void
         {
             this._Str_16652();
             if (this._errorPopup != null)
