@@ -61,7 +61,7 @@
         protected var _windowParser:IWindowParser;
         protected var _windowFactory:IWindowFactory;
         protected var _widgetFactory:IWidgetFactory;
-        protected var _Str_5526:IResourceManager;
+        protected var _resourceManager:IResourceManager;
         protected var _Str_2867:IDesktopWindow;
         protected var _Str_13721:SubstituteParentController;
         private var _disposed:Boolean = false;
@@ -80,7 +80,7 @@
             this._windowServices = new ServiceManager(this, _arg_8);
             this._windowFactory = _arg_3;
             this._widgetFactory = _arg_4;
-            this._Str_5526 = _arg_5;
+            this._resourceManager = _arg_5;
             this._windowParser = new WindowParser(this);
             this.inputEventTrackers = new Vector.<IInputEventTracker>(0);
             this._linkEventTrackers = _arg_10;
@@ -192,7 +192,7 @@
                 this._rootDisplayObject = null;
                 this._windowFactory = null;
                 this._widgetFactory = null;
-                this._Str_5526 = null;
+                this._resourceManager = null;
             }
         }
 
@@ -394,7 +394,7 @@
 
         public function getResourceManager():IResourceManager
         {
-            return this._Str_5526;
+            return this._resourceManager;
         }
 
         public function _Str_23058():IWidgetFactory
