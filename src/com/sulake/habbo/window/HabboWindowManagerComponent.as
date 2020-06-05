@@ -75,7 +75,7 @@
     import com.sulake.core.assets.IResourceManager;
     import com.sulake.habbo.window.utils.ModalDialog;
     import com.sulake.habbo.window.utils._Str_2784;
-    import com.sulake.habbo.window.utils._Str_10133;
+    import com.sulake.habbo.window.utils.SimpleAlertDialog;
     import flash.text.StyleSheet;
     import com.sulake.core.window.events.*;
     import com.sulake.core.window.tools.*;
@@ -623,7 +623,7 @@
 
         public function simpleAlert(k:String, _arg_2:String, _arg_3:String, _arg_4:String=null, _arg_5:String=null, _arg_6:Map=null, _arg_7:String=null, _arg_8:Function=null, _arg_9:Function=null):void
         {
-            new _Str_10133(this, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9);
+            new SimpleAlertDialog(this, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9);
         }
 
         public function registerHintWindow(k:String, _arg_2:IWindow, _arg_3:int=1):void

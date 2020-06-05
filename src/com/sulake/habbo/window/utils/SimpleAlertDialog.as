@@ -13,7 +13,7 @@
     import com.sulake.core.utils.Map;
     import com.sulake.habbo.utils.HabboWebTools;
 
-    public class _Str_10133 implements IDisposable 
+    public class SimpleAlertDialog implements IDisposable
     {
         private static const _Str_4658:int = 10;
 
@@ -32,7 +32,7 @@
         private var _Str_15643:Function;
         private var _habboWindowManagerComponent:HabboWindowManagerComponent;
 
-        public function _Str_10133(k:HabboWindowManagerComponent, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:Map, _arg_8:String, _arg_9:Function, _arg_10:Function)
+        public function SimpleAlertDialog(k:HabboWindowManagerComponent, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:String, _arg_7:Map, _arg_8:String, _arg_9:Function, _arg_10:Function)
         {
             var _local_12:String;
             var _local_13:String;
