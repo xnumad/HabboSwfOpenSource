@@ -143,7 +143,7 @@
                     this._displayStart = (this._displayStart + k);
                     if (((this._displayStart > int(this._viewConfig["time_display"])) && (!(this._hovering))))
                     {
-                        this._Str_21559();
+                        this.startFadeOut();
                     }
                     return;
                 case _Str_6008:
@@ -244,7 +244,7 @@
             this._window.visible = true;
         }
 
-        private function _Str_21559():void
+        private function startFadeOut():void
         {
             this._fadeOutStart = 0;
             this._state = _Str_6008;
@@ -304,7 +304,7 @@
                         if (this._item != null)
                         {
                             this._item._Str_25246();
-                            this._Str_21559();
+                            this.startFadeOut();
                         }
                     }
                 }
