@@ -41,7 +41,7 @@
         protected var _scrollV:Number;
         protected var _drawing:Boolean;
         protected var _margins:TextMargins;
-        protected var _Str_4318:String = "none";
+        protected var _autoSize:String = "none";
         protected var _Str_2959:Boolean = false;
         protected var _Str_22084:int = 0;
         protected var _Str_5517:Boolean = false;
@@ -96,9 +96,9 @@
         private static function setAutoSize(k:TextController, _arg_2:String):void
         {
             var _local_3:TextFormat;
-            if (_arg_2 != k._Str_4318)
+            if (_arg_2 != k._autoSize)
             {
-                k._Str_4318 = _arg_2;
+                k._autoSize = _arg_2;
                 k._field.autoSize = ((_arg_2 != TextFieldAutoSize.NONE) ? TextFieldAutoSize.LEFT : TextFieldAutoSize.NONE);
                 _local_3 = k.defaultTextFormat;
                 switch (_arg_2)
@@ -392,7 +392,7 @@
                     setTextStyle(k, _local_3);
                 }
             }
-            if (k._Str_4318 == TextFieldAutoSize.CENTER)
+            if (k._autoSize == TextFieldAutoSize.CENTER)
             {
                 _local_4 = new TextFormat();
                 _local_4.align = TextFormatAlign.CENTER;
@@ -621,7 +621,7 @@
 
         public function get autoSize():String
         {
-            return this._Str_4318;
+            return this._autoSize;
         }
 
         public function get bold():Boolean
@@ -1140,7 +1140,7 @@
             k._scrollH = this._scrollH;
             k._scrollV = this._scrollV;
             k._margins = this._margins.clone(k.setTextMargins);
-            k._Str_4318 = this._Str_4318;
+            k._autoSize = this._autoSize;
             k._Str_2959 = this._Str_2959;
             return k;
         }
@@ -1197,7 +1197,7 @@
             var _local_5:int = (_h - _local_3);
             var _local_6:int = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
             var _local_7:Boolean;
-            if (((this._Str_4318 == TextFieldAutoSize.NONE) && (this._Str_24155)))
+            if (((this._autoSize == TextFieldAutoSize.NONE) && (this._Str_24155)))
             {
                 _local_9 = this._field.text;
                 if ((this._field.textHeight + _local_3) > _local_5)
@@ -1235,16 +1235,16 @@
             }
             if (_local_6 != _local_4)
             {
-                if (this._Str_4318 == TextFieldAutoSize.LEFT)
+                if (this._autoSize == TextFieldAutoSize.LEFT)
                 {
                     this.setRectangle(_x, _y, (_local_6 + _local_2), (Math.floor(this._field.height) + _local_3));
                     _local_7 = true;
                 }
                 else
                 {
-                    if (this._Str_4318 != TextFieldAutoSize.RIGHT)
+                    if (this._autoSize != TextFieldAutoSize.RIGHT)
                     {
-                        if (this._Str_4318 != TextFieldAutoSize.CENTER)
+                        if (this._autoSize != TextFieldAutoSize.CENTER)
                         {
                             this._field.width = (_local_4 - ((this._field.border) ? 1 : 0));
                             this._field.height = (_local_5 - ((this._field.border) ? 1 : 0));
@@ -1254,7 +1254,7 @@
             }
             if ((this._field.height + ((this._field.border) ? 1 : 0)) < _local_5)
             {
-                if (this._Str_4318 == TextFieldAutoSize.NONE)
+                if (this._autoSize == TextFieldAutoSize.NONE)
                 {
                     this._field.height = (_local_5 - ((this._field.border) ? 1 : 0));
                 }
@@ -1268,7 +1268,7 @@
             {
                 if ((this._field.height + ((this._field.border) ? 1 : 0)) > _local_5)
                 {
-                    if (this._Str_4318 != TextFieldAutoSize.NONE)
+                    if (this._autoSize != TextFieldAutoSize.NONE)
                     {
                         height = (Math.floor(this._field.height) + _local_3);
                         _local_7 = true;
@@ -1373,7 +1373,7 @@
                 this._margins.dispose();
                 this._margins = new TextMargins(k.left, k.top, k.right, k.bottom, this.setTextMargins);
             }
-            if (this._Str_4318 == TextFieldAutoSize.LEFT)
+            if (this._autoSize == TextFieldAutoSize.LEFT)
             {
                 this._field.width = ((_w - this._margins.left) - this._margins.right);
             }
@@ -1432,7 +1432,7 @@
             var _local_2:TextStyle = TextStyleManager.getStyle(this._Str_4040);
             k.push(createProperty(PropertyKeys.ALWAYS_SHOW_SELECTION, this._field.alwaysShowSelection));
             k.push(new PropertyStruct(PropertyKeys.ANTIALIAS_TYPE, this._field.antiAliasType, PropertyStruct.STRING, (!(this._field.antiAliasType == _local_2.antiAliasType)), PropertyKeys.ANTIALIAS_TYPE_RANGE));
-            k.push(createProperty(PropertyKeys.AUTO_SIZE, this._Str_4318));
+            k.push(createProperty(PropertyKeys.AUTO_SIZE, this._autoSize));
             k.push(createProperty(PropertyKeys.BORDER, this._field.border));
             k.push(createProperty(PropertyKeys.BORDER_COLOR, this._field.borderColor));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._etchingColor, PropertyStruct.HEX, (!(this._etchingColor == uint(_local_2.etchingColor)))));
