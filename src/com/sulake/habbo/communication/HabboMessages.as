@@ -451,7 +451,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
 	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
 	import com.sulake.habbo.communication.messages.outgoing.friendfurni.FriendFurniConfirmLockMessageComposer;
@@ -1210,7 +1210,7 @@
             INCOMING_PACKETS[2528] = _Str_8526;
             INCOMING_PACKETS[2531] = _Str_9003;
             INCOMING_PACKETS[2533] = _Str_5038;
-            INCOMING_PACKETS[2547] = _Str_8234;
+            INCOMING_PACKETS[2547] = ObjectDataUpdateMessageEvent;
             INCOMING_PACKETS[2551] = _Str_9045;
             INCOMING_PACKETS[2568] = TradingAcceptEvent;
             INCOMING_PACKETS[2586] = PerkAllowancesEvent;
