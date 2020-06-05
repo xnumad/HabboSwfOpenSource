@@ -443,7 +443,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
@@ -1403,7 +1403,7 @@
             INCOMING_PACKETS[52] = _Str_4910;
             INCOMING_PACKETS[54] = _Str_9517;
             INCOMING_PACKETS[546] = _Str_8241;
-            INCOMING_PACKETS[558] = _Str_7777;
+            INCOMING_PACKETS[558] = HeightMapUpdateMessageEvent;
             INCOMING_PACKETS[56] = _Str_9591;
             INCOMING_PACKETS[563] = CheckUserNameResultMessageEvent;
             INCOMING_PACKETS[566] = FloodControlMessageEvent;
