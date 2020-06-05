@@ -23,7 +23,7 @@
     {
         private static const HINT_DISTANCE:int = 10;
         private static const HINT_ANIM_DISTANCE:int = 400;
-        private static const _Str_8038:int = 15;
+        private static const HINT_ANIM_SPEED:int = 15;
 
         private var _windowManager:HabboWindowManagerComponent;
         private var _registeredWindows:Dictionary;
@@ -174,11 +174,11 @@
                             _local_5 = (_local_2.y - this._hint.height);
                             if (this._hint.y == 0)
                             {
-                                this._hint.y = Math.max((_local_5 - HINT_ANIM_DISTANCE), _Str_8038);
+                                this._hint.y = Math.max((_local_5 - HINT_ANIM_DISTANCE), HINT_ANIM_SPEED);
                             }
-                            if ((_local_5 - this._hint.y) > (_Str_8038 + HINT_DISTANCE))
+                            if ((_local_5 - this._hint.y) > (HINT_ANIM_SPEED + HINT_DISTANCE))
                             {
-                                this._hint.y = (this._hint.y + _Str_8038);
+                                this._hint.y = (this._hint.y + HINT_ANIM_SPEED);
                             }
                             else
                             {
@@ -193,9 +193,9 @@
                             {
                                 this._hint.y = Math.min((this._windowManager.context.displayObjectContainer.stage.stageHeight - this._hint.height), (this._hint.y + HINT_ANIM_DISTANCE));
                             }
-                            if ((_local_6 - this._hint.y) > (_Str_8038 + HINT_DISTANCE))
+                            if ((_local_6 - this._hint.y) > (HINT_ANIM_SPEED + HINT_DISTANCE))
                             {
-                                this._hint.y = (this._hint.y - _Str_8038);
+                                this._hint.y = (this._hint.y - HINT_ANIM_SPEED);
                             }
                             else
                             {
