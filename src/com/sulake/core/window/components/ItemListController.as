@@ -20,7 +20,7 @@
 
     public class ItemListController extends WindowController implements IItemListWindow, IInputProcessorRoot 
     {
-        private var _Str_19909:Boolean = false;
+        private var _disableAutoDrag:Boolean = false;
         private var _Str_17945:Boolean = false;
         protected var _Str_6178:Number;
         protected var _Str_5996:Number;
@@ -499,7 +499,7 @@
                     _local_2 = true;
                     break;
                 case WindowMouseEvent.MOVE:
-                    if (((this._Str_11276) && (!(this._Str_19909))))
+                    if (((this._Str_11276) && (!(this._disableAutoDrag))))
                     {
                         if (this._Str_2803)
                         {
@@ -698,7 +698,7 @@
 
         public function set disableAutodrag(k:Boolean):void
         {
-            this._Str_19909 = k;
+            this._disableAutoDrag = k;
         }
     }
 }
