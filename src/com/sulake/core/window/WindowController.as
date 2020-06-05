@@ -37,7 +37,7 @@
     public class WindowController extends WindowModel implements IWindow, IGraphicContextHost, IChildWindowHost 
     {
         private static var _uidCounter:uint = 0;
-        private static const _Str_4232:Rectangle = new Rectangle();
+        private static const _RECT:Rectangle = new Rectangle();
         public static const TAG_EXCLUDE:String = "_EXCLUDE";
         public static const TAG_INTERNAL:String = "_INTERNAL";
         public static const _COLORIZE:String = "_COLORIZE";
@@ -1116,12 +1116,12 @@
                         case WindowEvent.WINDOW_EVENT_RESIZED:
                             if (k == this)
                             {
-                                _Str_4232.x = ((_x < _previousRect.x) ? _x : _previousRect.x);
-                                _Str_4232.y = ((_y < _previousRect.y) ? _y : _previousRect.y);
-                                _Str_4232.right = (((_x + _w) > _previousRect.right) ? (_x + _w) : _previousRect.right);
-                                _Str_4232.bottom = (((_y + _h) > _previousRect.bottom) ? (_y + _h) : _previousRect.bottom);
-                                _Str_4232.offset(-(_x), -(_y));
-                                _context.invalidate(this, _Str_4232, WindowRedrawFlag.RESIZE);
+                                _RECT.x = ((_x < _previousRect.x) ? _x : _previousRect.x);
+                                _RECT.y = ((_y < _previousRect.y) ? _y : _previousRect.y);
+                                _RECT.right = (((_x + _w) > _previousRect.right) ? (_x + _w) : _previousRect.right);
+                                _RECT.bottom = (((_y + _h) > _previousRect.bottom) ? (_y + _h) : _previousRect.bottom);
+                                _RECT.offset(-(_x), -(_y));
+                                _context.invalidate(this, _RECT, WindowRedrawFlag.RESIZE);
                                 _local_5 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this, null);
                                 this._Str_16194(_local_5);
                                 _local_5.recycle();
@@ -1158,12 +1158,12 @@
                         case WindowEvent.WINDOW_EVENT_RELOCATED:
                             if (k == this)
                             {
-                                _Str_4232.x = ((_x < _previousRect.x) ? _x : _previousRect.x);
-                                _Str_4232.y = ((_y < _previousRect.y) ? _y : _previousRect.y);
-                                _Str_4232.right = (((_x + _w) > _previousRect.right) ? (_x + _w) : _previousRect.right);
-                                _Str_4232.bottom = (((_y + _h) > _previousRect.bottom) ? (_y + _h) : _previousRect.bottom);
-                                _Str_4232.offset(-(_x), -(_y));
-                                _context.invalidate(this, _Str_4232, WindowRedrawFlag.RELOCATE);
+                                _RECT.x = ((_x < _previousRect.x) ? _x : _previousRect.x);
+                                _RECT.y = ((_y < _previousRect.y) ? _y : _previousRect.y);
+                                _RECT.right = (((_x + _w) > _previousRect.right) ? (_x + _w) : _previousRect.right);
+                                _RECT.bottom = (((_y + _h) > _previousRect.bottom) ? (_y + _h) : _previousRect.bottom);
+                                _RECT.offset(-(_x), -(_y));
+                                _context.invalidate(this, _RECT, WindowRedrawFlag.RELOCATE);
                                 _local_5 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_RELOCATED, this, null);
                                 this._Str_16194(_local_5);
                                 _local_5.recycle();
