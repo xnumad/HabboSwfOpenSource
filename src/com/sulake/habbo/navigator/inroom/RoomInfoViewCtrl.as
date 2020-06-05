@@ -290,7 +290,7 @@
             this._navigator.refreshButton(IRegionWindow(this.find("favourite_region")), "favourite", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_favourite_region")), "make_favourite", true, null, 0);
             this._navigator.refreshButton(IWindowContainer(this.find("embed_info")), "icon_weblink", true, null, 0);
-            this.addMouseClickListener(this._window.findChildByTag("close"), this._Str_18537);
+            this.addMouseClickListener(this._window.findChildByTag("close"), this.onCloseButtonClick);
             var _local_2:IWindowContainer = IWindowContainer(this._window.findChildByName("owner_name_cont"));
             _local_2.procedure = this.onOwnerName;
             Util._Str_7173(_local_2, 1000, 10, 2, 5);
@@ -441,7 +441,7 @@
             this._navigator.send(new _Str_7911(_local_2.flatId));
         }
 
-        private function _Str_18537(k:WindowEvent):void
+        private function onCloseButtonClick(k:WindowEvent):void
         {
             this._Str_24298(null);
         }

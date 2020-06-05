@@ -57,7 +57,7 @@
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_room_filter_framed"));
             this._window.findChildByName("badword_remove_btn").addEventListener(WindowMouseEvent.CLICK, this._Str_24328);
             this._window.findChildByName("badword_add_btn").addEventListener(WindowMouseEvent.CLICK, this._Str_24260);
-            this._window.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this._Str_18537);
+            this._window.findChildByTag("close").addEventListener(WindowMouseEvent.CLICK, this.onCloseButtonClick);
             this._badWordField = (this._window.findChildByName("roomfilter_addword_txt") as ITextFieldWindow);
             this._badWordList = IItemListWindow(this._window.findChildByName("badwords_itemlist"));
             this._Str_20699();
@@ -122,7 +122,7 @@
             k.findChildByName("badword_txt").caption = _arg_2;
         }
 
-        private function _Str_18537(k:WindowEvent):void
+        private function onCloseButtonClick(k:WindowEvent):void
         {
             this._Str_6430();
         }
