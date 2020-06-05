@@ -42,7 +42,7 @@
         public static const TAG_INTERNAL:String = "_INTERNAL";
         public static const _COLORIZE:String = "_COLORIZE";
         public static const _IGNORE_INHERITED_STYLE:String = "_IGNORE_INHERITED_STYLE";
-        private static const _Str_13133:Point = new Point();
+        private static const _POINT_ZERO:Point = new Point();
 
         protected var _Str_759:WindowEventDispatcher;
         protected var _Str_2624:IGraphicContext;
@@ -1607,13 +1607,13 @@
                         _local_5 = (this.getGraphicContext(true).fetchDrawBuffer() as BitmapData);
                         if (_local_5 != null)
                         {
-                            _local_4 = _local_5.hitTest(_Str_13133, _arg_3, k);
+                            _local_4 = _local_5.hitTest(_POINT_ZERO, _arg_3, k);
                         }
                     }
                 }
                 else
                 {
-                    _local_4 = ((_arg_2 != null) ? _arg_2.hitTest(_Str_13133, _arg_3, k) : false);
+                    _local_4 = ((_arg_2 != null) ? _arg_2.hitTest(_POINT_ZERO, _arg_3, k) : false);
                 }
             }
             else
