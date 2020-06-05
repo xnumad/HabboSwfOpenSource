@@ -13,7 +13,7 @@
         private var _Str_9057:IMessageEvent;
         protected var _widget:AvatarInfoWidget;
         protected var window:IWindowContainer;
-        protected var _Str_2753:int;
+        protected var _botId:int;
 
         public function BotSkillConfigurationViewBase(k:AvatarInfoWidget)
         {
@@ -36,7 +36,7 @@
                 }
                 this._widget = null;
             }
-            this._Str_2753 = -1;
+            this._botId = -1;
         }
 
         public function get disposed():Boolean
@@ -48,13 +48,13 @@
         {
             var _local_3:XML;
             var _local_4:Rectangle;
-            this._Str_2753 = k;
+            this._botId = k;
             if (!this._Str_9057)
             {
                 this._Str_9057 = new BotCommandConfigurationEvent(this._Str_22412);
                 this._widget.handler.container.connection.addMessageEvent(this._Str_9057);
             }
-            this._widget.handler.container.connection.send(new _Str_12054(this._Str_2753, this.skillType));
+            this._widget.handler.container.connection.send(new _Str_12054(this._botId, this.skillType));
             if (!this.window)
             {
                 _local_3 = (this._widget.assets.getAssetByName(this.windowAssetName).content as XML);
@@ -100,7 +100,7 @@
 
         private function _Str_22412(k:BotCommandConfigurationEvent):void
         {
-            if (((k.getParser().botId == this._Str_2753) && (k.getParser().commandId == this.skillType)))
+            if (((k.getParser().botId == this._botId) && (k.getParser().commandId == this.skillType)))
             {
                 this.parseConfiguration(k.getParser().data);
             }

@@ -69,7 +69,7 @@ package com.sulake.habbo.ui.widget.avatarinfo.botskills
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _widget.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.CHANGE_BOT_MOTTO, this._newName));
+                        _widget.handler.container.connection.send(new _Str_3365(_botId, BotSkillsEnum.CHANGE_BOT_MOTTO, this._newName));
                         close();
                         break;
                     case "cancel_button":

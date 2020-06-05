@@ -145,7 +145,7 @@
                 switch (_arg_2.name)
                 {
                     case "save_button":
-                        _widget.handler.container.connection.send(new _Str_3365(_Str_2753, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
+                        _widget.handler.container.connection.send(new _Str_3365(_botId, BotSkillsEnum.SETUP_CHAT, this._Str_23395));
                         close();
                         return;
                     case "cancel_button":
