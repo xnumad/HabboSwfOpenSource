@@ -536,7 +536,7 @@
         public function set toolbar(k:IHabboToolbar):void
         {
             this._toolbar = k;
-            this._toolbar.events.addEventListener(HabboToolbarEvent.HTIE_ICON_ZOOM, this._Str_21588);
+            this._toolbar.events.addEventListener(HabboToolbarEvent.HTIE_ICON_ZOOM, this.onToolbarEvent);
         }
 
         public function set layout(k:XML):void
@@ -646,7 +646,7 @@
             this._habboGroupsManager = null;
             if (((this._toolbar) && (this.toolbar.events)))
             {
-                this._toolbar.events.removeEventListener(HabboToolbarEvent.HTIE_ICON_ZOOM, this._Str_21588);
+                this._toolbar.events.removeEventListener(HabboToolbarEvent.HTIE_ICON_ZOOM, this.onToolbarEvent);
                 this._toolbar = null;
             }
             this._navigator = null;
@@ -1707,7 +1707,7 @@
             }
         }
 
-        private function _Str_21588(k:HabboToolbarEvent):void
+        private function onToolbarEvent(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTIE_ICON_ZOOM)
             {
