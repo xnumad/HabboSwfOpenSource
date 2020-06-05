@@ -394,7 +394,7 @@
             return new _Str_4045(this, _local_6, k, _arg_2, _arg_3, _arg_4, true);
         }
 
-        public function _Str_23503(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548
+        public function alertWithLink(k:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548
         {
             var alertAsset:IAsset = assets.getAssetByName("habbo_window_alert_link_xml");
             if (!alertAsset)
