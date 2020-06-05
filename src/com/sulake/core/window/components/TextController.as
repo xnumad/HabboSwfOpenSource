@@ -1033,7 +1033,7 @@
         {
         }
 
-        private function _Str_23637(k:String):String
+        private function replaceNonRenderableCharacters(k:String):String
         {
             var _local_4:Font;
             var _local_5:Font;
@@ -1100,7 +1100,7 @@
             {
                 if (this._field != null)
                 {
-                    this._field.text = this._Str_23637(_caption);
+                    this._field.text = this.replaceNonRenderableCharacters(_caption);
                     this.refreshTextImage();
                 }
             }
