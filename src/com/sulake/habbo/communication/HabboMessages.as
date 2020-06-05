@@ -442,7 +442,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectBundleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectUpdateMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemAddMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
@@ -1160,7 +1160,7 @@
             INCOMING_PACKETS[2159] = GuildCreationInfoMessageEvent;
             INCOMING_PACKETS[217] = TradingOpenFailedEvent;
             INCOMING_PACKETS[2182] = UserNameChangedMessageEvent;
-            INCOMING_PACKETS[2187] = _Str_7704;
+            INCOMING_PACKETS[2187] = ItemAddMessageEvent;
             INCOMING_PACKETS[2188] = ClubGiftNotificationEvent;
             INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
             INCOMING_PACKETS[2196] = _Str_5142;
