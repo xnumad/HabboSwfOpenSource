@@ -6,7 +6,7 @@
     public class GiftWrappingConfigurationParser implements IMessageParser
     {
         private var _wrappingEnabled:Boolean;
-        private var _Str_19335:int;
+        private var _wrappingPrice:int;
         private var _Str_5208:Array;
         private var _Str_3691:Array;
         private var _Str_4062:Array;
@@ -20,7 +20,7 @@
 
         public function get _Str_23413():int
         {
-            return this._Str_19335;
+            return this._wrappingPrice;
         }
 
         public function get stuffTypes():Array
@@ -56,7 +56,7 @@
             this._Str_4062 = [];
             this._Str_8259 = [];
             this._wrappingEnabled = k.readBoolean();
-            this._Str_19335 = k.readInteger();
+            this._wrappingPrice = k.readInteger();
             var _local_3:int = k.readInteger();
             _local_2 = 0;
             while (_local_2 < _local_3)
