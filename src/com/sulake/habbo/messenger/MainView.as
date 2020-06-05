@@ -268,7 +268,7 @@
             this._Str_21468(k, _arg_2, true, _arg_3, _arg_4);
         }
 
-        public function _Str_24937(k:int, _arg_2:String):void
+        public function addRoomInvite(k:int, _arg_2:String):void
         {
             this._Str_25852(k, ((this._messenger.getText("messenger.invitation") + " ") + _arg_2), true);
         }

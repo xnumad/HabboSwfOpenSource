@@ -242,7 +242,7 @@
             var _local_2:_Str_5791 = k.getParser();
             if (this._Str_2439 != null)
             {
-                this._Str_2439._Str_24937(_local_2.senderId, _local_2._Str_3460);
+                this._Str_2439.addRoomInvite(_local_2.senderId, _local_2._Str_3460);
                 if (!this._Str_2439.isOpen)
                 {
                     this._Str_17105();
