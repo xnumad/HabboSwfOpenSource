@@ -217,7 +217,7 @@
             this.onRoomChange();
         }
 
-        private function _Str_20408(k:IItemListWindow, _arg_2:IWindow):void
+        private function disposeItemFromList(k:IItemListWindow, _arg_2:IWindow):void
         {
             var _local_3:IWindow = k.removeListItem(_arg_2);
             if (_local_3 != null)
@@ -236,8 +236,8 @@
             }
             if (!k.exists)
             {
-                this._Str_20408(this._list, _local_3);
-                this._Str_20408(this._list, this._list.getListItemByName("event_spacing"));
+                this.disposeItemFromList(this._list, _local_3);
+                this.disposeItemFromList(this._list, this._list.getListItemByName("event_spacing"));
                 //return;
             }
             var _local_5:ITextWindow = ITextWindow(_local_4.findChildByName("name"));
