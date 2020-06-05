@@ -145,13 +145,13 @@
                 _avatarRenderer = k;
             }), new ComponentDependency(new IIDHabboRoomSessionManager(), null, false, [{
                 "type":RoomSessionEvent.STARTED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionEvent.ENDED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionPropertyUpdateEvent.RSDUE_ALLOW_PETS,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }]), new ComponentDependency(new IIDHabboToolbar(), null, false, [{
                 "type":HabboToolbarEvent.HTE_TOOLBAR_CLICK,
                 "callback":this._Str_23889
@@ -401,7 +401,7 @@
             this._communication.connection.send(new _Str_6530("habbo_club"));
         }
 
-        private function _Str_3207(k:RoomSessionEvent):void
+        private function roomSessionEventHandler(k:RoomSessionEvent):void
         {
             switch (k.type)
             {

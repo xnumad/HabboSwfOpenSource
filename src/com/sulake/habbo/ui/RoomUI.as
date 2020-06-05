@@ -343,31 +343,31 @@
                 "callback":this.roomSessionStateEventHandler
             }, {
                 "type":RoomSessionChatEvent.RSCE_CHAT_EVENT,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionChatEvent.RSCE_FLOOD_EVENT,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionUserBadgesEvent.RSUBE_BADGES,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionDoorbellEvent.RSDE_DOORBELL,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionDoorbellEvent.REJECTED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionDoorbellEvent.RSDE_ACCEPTED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionPresentEvent.RSPE_PRESENT_OPENED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_REQUESTED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionPetPackageEvent.RSOPPE_OPEN_PET_PACKAGE_RESULT,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_KICKED,
                 "callback":this._Str_4868
@@ -406,43 +406,43 @@
                 "callback":this._Str_4868
             }, {
                 "type":RoomSessionQueueEvent.RSQE_QUEUE_STATUS,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":_Str_3051.RSPE_POLL_CONTENT,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":_Str_3051.ERROR,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":_Str_3051.RSPE_POLL_OFFER,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionWordQuizEvent.RWPUW_QUESTION_ANSWERED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionWordQuizEvent.RWPUW_QUESION_FINSIHED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionWordQuizEvent.RWPUW_NEW_QUESTION,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionDimmerPresetsEvent.RSDPE_PRESETS,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionFriendRequestEvent.RSFRE_FRIEND_REQUEST,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionPollEvent.VOTE_QUESTION,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             },  {
                 "type":RoomSessionPollEvent.VOTE_RESULT,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionUserDataUpdateEvent.RSUDUE_USER_DATA_UPDATED,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionDanceEvent.RSDE_DANCE,
-                "callback":this._Str_3207
+                "callback":this.roomSessionEventHandler
             }]), new ComponentDependency(new IIDSessionDataManager(), function (k:ISessionDataManager):void
             {
                 _sessionDataManager = k;
@@ -687,7 +687,7 @@
             }
         }
 
-        private function _Str_3207(k:RoomSessionEvent):void
+        private function roomSessionEventHandler(k:RoomSessionEvent):void
         {
             var _local_2:String;
             var _local_3:IRoomDesktop;
