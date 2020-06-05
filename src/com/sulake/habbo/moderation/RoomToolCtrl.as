@@ -200,7 +200,7 @@
             this.setTxt("owner_name_txt", this._data.ownerName);
             this.setTxt("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
             this.setTxt("user_count_txt", ("" + this._data.userCount));
-            this._frame.findChildByName("enter_room_but").procedure = this._Str_22364;
+            this._frame.findChildByName("enter_room_but").procedure = this.onEnterRoom;
             this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;
             this._frame.findChildByName("edit_in_hk_but").procedure = this._Str_24149;
             this._frame.findChildByName("send_caution_but").procedure = this._Str_23752;
@@ -294,7 +294,7 @@
             this._main.windowTracker.show(new UserInfoFrameCtrl(this._main, this._data.ownerId), this._frame, false, false, true);
         }
 
-        private function _Str_22364(k:WindowEvent, _arg_2:IWindow):void
+        private function onEnterRoom(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
