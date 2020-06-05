@@ -445,7 +445,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7839;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
@@ -1319,7 +1319,7 @@
             INCOMING_PACKETS[339] = _Str_5266;
             INCOMING_PACKETS[34] = _Str_7248;
             INCOMING_PACKETS[340] = _Str_6450;
-            INCOMING_PACKETS[3403] = _Str_7839;
+            INCOMING_PACKETS[3403] = FavoriteMembershipUpdateMessageEvent;
             INCOMING_PACKETS[3406] = _Str_7229;
             INCOMING_PACKETS[3429] = _Str_5655;
             INCOMING_PACKETS[3431] = _Str_8183;

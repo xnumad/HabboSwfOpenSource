@@ -20,7 +20,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.bots.BotErrorEvent;
     import com.sulake.habbo.communication.messages.incoming.friendlist._Str_4841;
     import com.sulake.habbo.communication.messages.incoming.room.action.DanceMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7839;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
     import com.sulake.core.communication.connection.IConnection;
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.session.events.RoomSessionFavouriteGroupUpdateEvent;
@@ -95,13 +95,13 @@
             k.addMessageEvent(new BotErrorEvent(this.onBotError));
             k.addMessageEvent(new _Str_4841(this._Str_22755));
             k.addMessageEvent(new DanceMessageEvent(this.onDance));
-            k.addMessageEvent(new _Str_7839(this.onFavoriteMembershipUpdate));
+            k.addMessageEvent(new FavoriteMembershipUpdateMessageEvent(this.onFavoriteMembershipUpdate));
         }
 
         private function onFavoriteMembershipUpdate(k:IMessageEvent):void
         {
             var _local_5:RoomSessionFavouriteGroupUpdateEvent;
-            var _local_2:FavouriteMembershipUpdateMessageParser = _Str_7839(k).getParser();
+            var _local_2:FavouriteMembershipUpdateMessageParser = FavoriteMembershipUpdateMessageEvent(k).getParser();
             var _local_3:IRoomSession = listener.getSession(_xxxRoomId);
             if (_local_3 == null)
             {
