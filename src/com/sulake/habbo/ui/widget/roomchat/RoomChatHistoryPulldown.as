@@ -90,7 +90,7 @@
             this._window.color = 0;
             this._window.mouseThreshold = 0;
             this.state = STATE_HIDDEN;
-            this._Str_20103();
+            this.buildWindowGraphics();
         }
 
         public function dispose():void
@@ -217,10 +217,10 @@
                 this._bgWindow.rectangle = this._containerWindow.rectangle;
                 this._bgWindow.height = (this._bgWindow.height - PULLDOWN_WINDOW_HEIGHT);
             }
-            this._Str_20103();
+            this.buildWindowGraphics();
         }
 
-        private function _Str_20103():void
+        private function buildWindowGraphics():void
         {
             var width:int;
             var height:int;
