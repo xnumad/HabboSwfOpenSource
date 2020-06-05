@@ -1462,7 +1462,7 @@
 
         public function validateLocalPointIntersection(k:Point, _arg_2:BitmapData):Boolean
         {
-            return this._Str_21791(k, _arg_2, _mouseThreshold);
+            return this.testLocalPointHitAgainstAlpha(k, _arg_2, _mouseThreshold);
         }
 
         public function getGlobalPosition(k:Point):void
@@ -1552,7 +1552,7 @@
             this.getGlobalPosition(_local_3);
             _local_3.x = (k.x - _local_3.x);
             _local_3.y = (k.y - _local_3.y);
-            return this._Str_21791(_local_3, _arg_2, _mouseThreshold);
+            return this.testLocalPointHitAgainstAlpha(_local_3, _arg_2, _mouseThreshold);
         }
 
         public function getMouseRegion(k:Rectangle):void
@@ -1590,7 +1590,7 @@
             }
         }
 
-        protected function _Str_21791(k:Point, _arg_2:BitmapData, _arg_3:uint):Boolean
+        protected function testLocalPointHitAgainstAlpha(k:Point, _arg_2:BitmapData, _arg_3:uint):Boolean
         {
             var _local_5:BitmapData;
             var _local_4:Boolean;
