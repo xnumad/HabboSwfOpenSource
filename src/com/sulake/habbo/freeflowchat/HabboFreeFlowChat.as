@@ -205,7 +205,7 @@
                 }
                 if (this._isInRoom)
                 {
-                    this._Str_15723();
+                    this.roomEntered();
                 }
             }
             else
@@ -312,7 +312,7 @@
             return this._sessionDataManager;
         }
 
-        public function _Str_15723():void
+        public function roomEntered():void
         {
             this._isInRoom = true;
             if (((((this._perkAllowed) && (this._chatBubbleFactory)) && (this._chatEventHandler)) && (this._roomEventHandler)))

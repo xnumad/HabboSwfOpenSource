@@ -1338,7 +1338,7 @@
             }
         }
 
-        public function _Str_15723():void
+        public function roomEntered():void
         {
             var k:int;
             this._isInRoom = true;

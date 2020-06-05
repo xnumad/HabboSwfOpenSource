@@ -973,7 +973,7 @@
             {
                 this._inventory._Str_3994._Str_24964();
             }
-            this._inventory._Str_2834._Str_15723();
+            this._inventory._Str_2834.roomEntered();
         }
 
         private function _Str_19767(k:Map, _arg_2:int, _arg_3:int, _arg_4:Vector.<Map>):Map
