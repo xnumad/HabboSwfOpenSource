@@ -45,7 +45,7 @@
             Util._Str_2930(this._details);
             this._guildInfoCtrl.refresh(this._details, this._room);
             this.refreshRoomName(this._details, this._room);
-            this._Str_24501();
+            this.refreshOwnerName();
             this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
             this._Str_25479(this._details, this._room);
             this._Str_23089();
@@ -60,7 +60,7 @@
             this._details.height = Util._Str_2647(this._details);
         }
 
-        private function _Str_24501():void
+        private function refreshOwnerName():void
         {
             var k:ITextWindow = ITextWindow(this._details.findChildByName("roomowner"));
             var _local_2:IRegionWindow = IRegionWindow(this._details.findChildByName("roomowner_cont"));
