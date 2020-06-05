@@ -100,21 +100,21 @@
             }
             k.findChildByName("fields").visible = true;
             k.findChildByName("loading_txt").visible = false;
-            this._Str_4044(k, "name_txt", this._data.userName);
-            this._Str_4044(k, "registered_txt", _Str_12797((this._data._Str_24334 * 60)));
-            this._Str_4044(k, "cfh_count_txt", ("" + this._data._Str_24656));
+            this.setTxt(k, "name_txt", this._data.userName);
+            this.setTxt(k, "registered_txt", _Str_12797((this._data._Str_24334 * 60)));
+            this.setTxt(k, "cfh_count_txt", ("" + this._data._Str_24656));
             this._Str_13036(k, "abusive_cfh_count_txt", this._data._Str_22987);
             this._Str_13036(k, "caution_count_txt", this._data._Str_16987);
             this._Str_13036(k, "ban_count_txt", this._data._Str_20373);
             this._Str_13036(k, "trading_lock_count_txt", this._data._Str_24526);
-            this._Str_4044(k, "trading_lock_expiry_txt", this._data._Str_23969, "No active lock");
-            this._Str_4044(k, "last_login_txt", _Str_12797((this._data._Str_23276 * 60)));
-            this._Str_4044(k, "online_txt", ((this._data.online) ? "Yes" : "No"));
-            this._Str_4044(k, "last_purchase_txt", this._data._Str_22786, "No purchases");
-            this._Str_4044(k, "email_address_txt", this._data._Str_20219, "No email found");
-            this._Str_4044(k, "id_bans_txt", ("" + this._data._Str_22700));
-            this._Str_4044(k, "user_class_txt", this._data._Str_22262, "-");
-            this._Str_4044(k, "last_sanction_time_txt", this._data._Str_24447);
+            this.setTxt(k, "trading_lock_expiry_txt", this._data._Str_23969, "No active lock");
+            this.setTxt(k, "last_login_txt", _Str_12797((this._data._Str_23276 * 60)));
+            this.setTxt(k, "online_txt", ((this._data.online) ? "Yes" : "No"));
+            this.setTxt(k, "last_purchase_txt", this._data._Str_22786, "No purchases");
+            this.setTxt(k, "email_address_txt", this._data._Str_20219, "No email found");
+            this.setTxt(k, "id_bans_txt", ("" + this._data._Str_22700));
+            this.setTxt(k, "user_class_txt", this._data._Str_22262, "-");
+            this.setTxt(k, "last_sanction_time_txt", this._data._Str_24447);
             if (this._data._Str_19137 <= 48)
             {
                 (k.findChildByName("last_sanction_time_txt") as ITextWindow).textColor = (((0xFF * (48 - this._data._Str_19137)) / 48) << 16);
@@ -183,7 +183,7 @@
             _local_4.caption = ("" + _arg_3);
         }
 
-        private function _Str_4044(k:IWindowContainer, _arg_2:String, _arg_3:String, _arg_4:String=""):void
+        private function setTxt(k:IWindowContainer, _arg_2:String, _arg_3:String, _arg_4:String=""):void
         {
             var _local_5:IWindow = ITextWindow(k.findChildByName(_arg_2));
             if (((!(_arg_3)) || (_arg_3.length == 0)))

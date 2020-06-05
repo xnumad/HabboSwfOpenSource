@@ -197,9 +197,9 @@
             this._lockCb = ICheckBoxWindow(this._frame.findChildByName("lock_check"));
             this._changeNameCb = ICheckBoxWindow(this._frame.findChildByName("changename_check"));
             this.refreshRoomData(this._data.room, "room_cont");
-            this._Str_4044("owner_name_txt", this._data.ownerName);
-            this._Str_4044("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
-            this._Str_4044("user_count_txt", ("" + this._data.userCount));
+            this.setTxt("owner_name_txt", this._data.ownerName);
+            this.setTxt("owner_in_room_txt", ((this._data._Str_24479) ? "Yes" : "No"));
+            this.setTxt("user_count_txt", ("" + this._data.userCount));
             this._frame.findChildByName("enter_room_but").procedure = this._Str_22364;
             this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;
             this._frame.findChildByName("edit_in_hk_but").procedure = this._Str_24149;
@@ -279,7 +279,7 @@
             return _local_2;
         }
 
-        private function _Str_4044(k:String, _arg_2:String):void
+        private function setTxt(k:String, _arg_2:String):void
         {
             var _local_3:ITextWindow = ITextWindow(this._frame.findChildByName(k));
             _local_3.text = _arg_2;
