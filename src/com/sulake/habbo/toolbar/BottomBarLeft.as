@@ -41,7 +41,7 @@
 
     public class BottomBarLeft implements ILinkEventTracker 
     {
-        private static const _Str_3163:Point = new Point(0, 500);
+        private static const DEFAULT_LOCATION:Point = new Point(0, 500);
         private static const _Str_7220:Point = new Point(0, 500);
         private static const _Str_7111:uint = 7433577;
         private static const _Str_7665:uint = 5723213;
@@ -319,7 +319,7 @@
             {
                 case HabboToolbarEnum.HTE_STATE_GAME_CENTER_VIEW:
                     _local_3 = "VISIBLE_GAME_CENTER";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
                 case HabboToolbarEnum.HTE_STATE_HOTEL_VIEW:
                     _local_3 = "VISIBLE_HOTEL";
@@ -327,19 +327,19 @@
                     break;
                 case HabboToolbarEnum.HTE_STATE_NOOB_NOT_HOME:
                     _local_3 = "VISIBLE_NOOB";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
                 case HabboToolbarEnum.HETE_STATE_NOOB_HOME:
                     _local_3 = "VISIBLE_ROOM";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
                 case HabboToolbarEnum.HTE_STATE_ROOM_VIEW:
                     _local_3 = "VISIBLE_ROOM";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
                 case HabboToolbarEnum.HTE_STATE_COLLAPSED:
                     _local_3 = "VISIBLE_COLLAPSED";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
             }
             for each (_local_4 in _local_2)

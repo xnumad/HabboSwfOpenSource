@@ -34,7 +34,7 @@
         public static var _Str_8604:IWindowContainer;
         public static var _Str_20146:int = 0x666666;
         private static const _Str_15942:int = 1500;
-        private static const _Str_3163:Point = new Point(100, 30);
+        private static const DEFAULT_LOCATION:Point = new Point(100, 30);
 
         private var _editor:HabboAvatarEditor;
         private var _editorContent:IWindowContainer;
@@ -171,7 +171,7 @@
             {
                 this._frameWindow.header.title.text = _arg_2;
             }
-            this._frameWindow.position = _Str_3163;
+            this._frameWindow.position = DEFAULT_LOCATION;
             this._frameWindow.findChildByName("header_button_close").procedure = this._Str_3328;
             return this._frameWindow;
         }

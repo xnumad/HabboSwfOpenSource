@@ -41,7 +41,7 @@
 
     public class ToolbarView implements ILinkEventTracker 
     {
-        private static const _Str_3163:Point = new Point(3, 3);
+        private static const DEFAULT_LOCATION:Point = new Point(3, 3);
         private static const _Str_7220:Point = new Point(3, 3);
         private static const _Str_7111:uint = 7433577;
         private static const _Str_7665:uint = 5723213;
@@ -89,7 +89,7 @@
             {
                 throw (new Error("Failed to construct window from XML!"));
             }
-            this._window.position = _Str_3163;
+            this._window.position = DEFAULT_LOCATION;
             this._window.addEventListener(WindowEvent.WINDOW_EVENT_PARENT_RESIZED, this._Str_16256);
             if (this._toolbar._Str_24996())
             {
@@ -347,7 +347,7 @@
             {
                 case HabboToolbarEnum.HTE_STATE_GAME_CENTER_VIEW:
                     _local_3 = "VISIBLE_GAME_CENTER";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
                 case HabboToolbarEnum.HTE_STATE_HOTEL_VIEW:
                     _local_3 = "VISIBLE_HOTEL";
@@ -355,7 +355,7 @@
                     break;
                 case HabboToolbarEnum.HTE_STATE_ROOM_VIEW:
                     _local_3 = "VISIBLE_ROOM";
-                    this._window.position = _Str_3163;
+                    this._window.position = DEFAULT_LOCATION;
                     break;
             }
             var extension:IWindow;

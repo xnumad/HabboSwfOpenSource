@@ -13,7 +13,7 @@
 
     public class FriendListView
     {
-        private static const _Str_3163:Point = new Point(110, 50);
+        private static const DEFAULT_LOCATION:Point = new Point(110, 50);
         private static const _Str_16690:int = 110;
         private static const WINDOW_LAYER_INDEX:int = 1;
 
@@ -38,7 +38,7 @@
             if (this._mainWindow == null)
             {
                 this.prepare();
-                this._mainWindow.position = _Str_3163;
+                this._mainWindow.position = DEFAULT_LOCATION;
             }
             else
             {

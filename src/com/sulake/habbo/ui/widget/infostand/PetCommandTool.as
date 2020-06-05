@@ -21,7 +21,7 @@
 
     public class PetCommandTool 
     {
-        private static const _Str_3163:Point = new Point(100, 70);
+        private static const DEFAULT_LOCATION:Point = new Point(100, 70);
         private static const _Str_5169:int = 162;
         private static const _Str_8071:int = 16;
         private static const _Str_3835:int = 4;
@@ -267,7 +267,7 @@
                 _local_7 = (_local_6.content as BitmapData);
                 _local_5.bitmap = _local_7.clone();
             }
-            this._commandWindow.position = _Str_3163;
+            this._commandWindow.position = DEFAULT_LOCATION;
         }
 
         private function _Str_16721(k:CommandConfiguration):void
