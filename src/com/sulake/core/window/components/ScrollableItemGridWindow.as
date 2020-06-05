@@ -323,9 +323,9 @@
             this._Str_2448.destroyGridItems();
         }
 
-        public function _Str_11488():void
+        public function rebuildGridStructure():void
         {
-            this._Str_2448._Str_11488();
+            this._Str_2448.rebuildGridStructure();
         }
 
         protected function _Str_17415():Boolean

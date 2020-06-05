@@ -100,7 +100,7 @@
                     if (_local_3.window)
                     {
                         this.container._Str_4725(_local_3.window);
-                        this.container._Str_11488();
+                        this.container.rebuildGridStructure();
                     }
                     _local_3.returnItemToInventory();
                     _widget.inventoryCtrl.updateItemCounts();

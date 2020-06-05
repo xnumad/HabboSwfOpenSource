@@ -131,7 +131,7 @@
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (this._shouldRebuildGridOnResize)
                     {
-                        this._Str_11488();
+                        this.rebuildGridStructure();
                     }
                     break;
                 case WindowMouseEvent.WHEEL:
@@ -622,7 +622,7 @@
             return _local_4;
         }
 
-        public function _Str_11488():void
+        public function rebuildGridStructure():void
         {
             var _local_4:IItemListWindow;
             var _local_5:IWindow;
