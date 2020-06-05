@@ -20,7 +20,7 @@
         private var _habboFriendList:HabboFriendList;
         private var _tabsView:FriendListTabsView;
         private var _mainWindow:IFrameWindow;
-        private var _Str_21315:IWindowContainer;
+        private var _tabContent:IWindowContainer;
         private var _Str_3541:IWindowContainer;
         private var _infoText:ITextWindow;
         private var _Str_3860:int = -1;
@@ -94,9 +94,9 @@
         {
             this._mainWindow = IFrameWindow(this._habboFriendList.getXmlWindow("main_window"));
             this._mainWindow.findChildByTag("close").procedure = this._Str_3046;
-            this._Str_21315 = IWindowContainer(this._mainWindow.content.findChildByName("main_content"));
+            this._tabContent = IWindowContainer(this._mainWindow.content.findChildByName("main_content"));
             this._Str_3541 = IWindowContainer(this._mainWindow.content.findChildByName("footer"));
-            this._tabsView.prepare(this._Str_21315);
+            this._tabsView.prepare(this._tabContent);
             this._mainWindow.procedure = this._Str_7142;
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, false);
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_FIXED, true);
