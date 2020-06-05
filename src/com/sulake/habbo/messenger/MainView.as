@@ -87,7 +87,7 @@
             this._pendingMessages = new Array();
         }
 
-        private static function _Str_6745(k:IWindow):Boolean
+        private static function avatarVisible(k:IWindow):Boolean
         {
             return (!(k == null)) && (k.tags.indexOf(HIDDEN) < 0);
         }
@@ -98,7 +98,7 @@
             {
                 return;
             }
-            var _local_3:Boolean = _Str_6745(k);
+            var _local_3:Boolean = avatarVisible(k);
             if (((_local_3) && (!(_arg_2))))
             {
                 k.tags.push(HIDDEN);
@@ -340,7 +340,7 @@
             {
                 for each (_local_2 in this._avatarList.iterator)
                 {
-                    if (_Str_6745(_local_2))
+                    if (avatarVisible(_local_2))
                     {
                         this._avatarListPosition = 0;
                         this._Str_11644(_local_2.id);
@@ -715,7 +715,7 @@
                 {
                     _Str_5616(_local_3, true);
                 }
-                _local_5 = _Str_6745(_local_3);
+                _local_5 = avatarVisible(_local_3);
                 if ((((_local_2 < this._avatarListPosition) || (!(_local_5))) || (this._avatarListLastNotShown)))
                 {
                     _local_3.visible = false;
@@ -750,7 +750,7 @@
             var k:int;
             for each (_local_2 in this._avatarList.iterator)
             {
-                if (_Str_6745(_local_2))
+                if (avatarVisible(_local_2))
                 {
                     k++;
                 }
