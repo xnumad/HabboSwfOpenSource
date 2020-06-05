@@ -13,6 +13,6 @@
         function processEvent(_arg_1:Event):void;
         function get roomSession():IRoomSession;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
-        function _Str_11511(_arg_1:String):IRoomWidget;
+        function getWidget(_arg_1:String):IRoomWidget;
     }
 }

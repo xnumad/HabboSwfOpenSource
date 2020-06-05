@@ -47,8 +47,8 @@
             this._bubblesToShow = [];
             if (_arg_7)
             {
-                this._roomTools = (_arg_7._Str_11511(RoomWidgetEnum.ROOM_TOOLS) as RoomToolsWidget);
-                this._chatInput = (_arg_7._Str_11511(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
+                this._roomTools = (_arg_7.getWidget(RoomWidgetEnum.ROOM_TOOLS) as RoomToolsWidget);
+                this._chatInput = (_arg_7.getWidget(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
             }
             (_arg_2 as Component).context.addLinkEventTracker(this);
         }

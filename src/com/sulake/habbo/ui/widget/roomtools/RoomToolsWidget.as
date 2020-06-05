@@ -190,7 +190,7 @@
             {
                 return 0;
             }
-            var k:RoomChatInputWidget = (this._desktop._Str_11511(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
+            var k:RoomChatInputWidget = (this._desktop.getWidget(RoomWidgetEnum.CHAT_INPUT_WIDGET) as RoomChatInputWidget);
             if (!k)
             {
                 return 0;

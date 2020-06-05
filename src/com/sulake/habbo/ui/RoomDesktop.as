@@ -1009,7 +1009,7 @@
             }
         }
 
-        public function _Str_11511(k:String):IRoomWidget
+        public function getWidget(k:String):IRoomWidget
         {
             var _local_2:IRoomWidget;
             if (this._widgets != null)

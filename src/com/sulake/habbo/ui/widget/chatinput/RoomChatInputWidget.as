@@ -189,7 +189,7 @@
 
         public function _Str_22730():int
         {
-            var k:RoomToolsWidget = (this._desktop._Str_11511(RoomWidgetEnum.ROOM_TOOLS) as RoomToolsWidget);
+            var k:RoomToolsWidget = (this._desktop.getWidget(RoomWidgetEnum.ROOM_TOOLS) as RoomToolsWidget);
             if (!k)
             {
                 return 0;
