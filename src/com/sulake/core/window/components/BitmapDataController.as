@@ -16,7 +16,7 @@
     {
         protected var _bitmapData:BitmapData;
         protected var _pivot:uint;
-        protected var _Str_10541:Boolean;
+        protected var _stretchedX:Boolean;
         protected var _Str_12317:Boolean;
         protected var _Str_8672:Number;
         protected var _Str_8540:Number;
@@ -32,7 +32,7 @@
             this._Str_18939 = new Point(0, -1);
             var _local_12:IPropertyMap = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
             this._pivot = PivotPoint.pivotFromName(String(_local_12.get(PropertyKeys.PIVOT_POINT).value));
-            this._Str_10541 = Boolean(_local_12.get(PropertyKeys.STRETCHED_X).value);
+            this._stretchedX = Boolean(_local_12.get(PropertyKeys.STRETCHED_X).value);
             this._Str_12317 = Boolean(_local_12.get(PropertyKeys.STRETCHED_Y).value);
             this._Str_8672 = Number(_local_12.get(PropertyKeys.ZOOM_X).value);
             this._Str_8540 = Number(_local_12.get(PropertyKeys.ZOOM_Y).value);
@@ -64,12 +64,12 @@
 
         public function get stretchedX():Boolean
         {
-            return this._Str_10541;
+            return this._stretchedX;
         }
 
         public function set stretchedX(k:Boolean):void
         {
-            this._Str_10541 = k;
+            this._stretchedX = k;
         }
 
         public function get stretchedY():Boolean
@@ -179,7 +179,7 @@
         {
             var k:Array = super.properties;
             k.push(createProperty(PropertyKeys.PIVOT_POINT, PivotPoint.PIVOT_NAMES[this._pivot]));
-            k.push(createProperty(PropertyKeys.STRETCHED_X, this._Str_10541));
+            k.push(createProperty(PropertyKeys.STRETCHED_X, this._stretchedX));
             k.push(createProperty(PropertyKeys.STRETCHED_Y, this._Str_12317));
             k.push(createProperty(PropertyKeys.WRAP_X, this._Str_10479));
             k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
@@ -202,7 +202,7 @@
                         this._pivot = PivotPoint.pivotFromName(String(_local_2.value));
                         break;
                     case PropertyKeys.STRETCHED_X:
-                        this._Str_10541 = Boolean(_local_2.value);
+                        this._stretchedX = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.STRETCHED_Y:
                         this._Str_12317 = Boolean(_local_2.value);
