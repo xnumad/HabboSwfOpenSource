@@ -569,7 +569,7 @@
             k[PropertyKeys.CONDENSE_WHITE] = setCondenseWhite;
             k["default_text_format"] = setDefaultTextFormat;
             k[PropertyKeys.ETCHING_COLOR] = setEtchingColor;
-            k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
+            k[PropertyKeys.ETCHING_POSITION] = setEtchingPosition;
             k[PropertyKeys.FONT_FACE] = setFontFace;
             k[PropertyKeys.FONT_SIZE] = setFontSize;
             k[PropertyKeys.GRID_FIT_TYPE] = setGridFitType;
@@ -606,7 +606,7 @@
             k._Str_3808.etchingColor = k._etchingColor;
         }
 
-        private static function _Str_18207(k:TextController, _arg_2:String):void
+        private static function setEtchingPosition(k:TextController, _arg_2:String):void
         {
             k._Str_5717 = _arg_2;
             k.refreshTextImage();
@@ -1494,7 +1494,7 @@
 
         public function set etchingPosition(k:String):void
         {
-            _Str_18207(this, k);
+            setEtchingPosition(this, k);
         }
 
         public function resetExplicitStyle():void
