@@ -258,9 +258,9 @@
             return this._Str_2448.addGridItem(k);
         }
 
-        public function _Str_12115(k:IWindow, _arg_2:uint):IWindow
+        public function addGridItemAt(k:IWindow, _arg_2:uint):IWindow
         {
-            return this._Str_2448._Str_12115(k, _arg_2);
+            return this._Str_2448.addGridItemAt(k, _arg_2);
         }
 
         public function _Str_2830(k:uint):IWindow

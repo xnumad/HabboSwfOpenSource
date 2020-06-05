@@ -184,7 +184,7 @@
             return k;
         }
 
-        public function _Str_12115(k:IWindow, _arg_2:uint):IWindow
+        public function addGridItemAt(k:IWindow, _arg_2:uint):IWindow
         {
             this._Str_22897(k, Math.min(this.numGridItems, _arg_2));
             return k;

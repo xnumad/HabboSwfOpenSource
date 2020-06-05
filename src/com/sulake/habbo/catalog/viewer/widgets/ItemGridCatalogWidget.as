@@ -429,7 +429,7 @@
             {
                 if (_local_3.product.furnitureData.fullName == _local_5)
                 {
-                    this._Str_2448._Str_12115(_local_3.gridItem.view, _local_4);
+                    this._Str_2448.addGridItemAt(_local_3.gridItem.view, _local_4);
                     this.select(_local_3.gridItem, false);
                     _local_3.gridItem.grid = this;
                 }

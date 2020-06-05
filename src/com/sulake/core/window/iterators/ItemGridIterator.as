@@ -44,7 +44,7 @@
             {
                 this._iterable._Str_4725(_local_3);
             }
-            this._iterable._Str_12115(_local_3, uint(k));
+            this._iterable.addGridItemAt(_local_3, uint(k));
         }
 
         override flash_proxy function nextNameIndex(k:int):int
