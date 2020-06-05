@@ -422,7 +422,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_18098(k:TextController, _arg_2:String):void
+        private static function setOverflowReplace(k:TextController, _arg_2:String):void
         {
             k._Str_16655 = _arg_2;
             k.refreshTextImage();
@@ -595,7 +595,7 @@
             k[PropertyKeys.MARGIN_TOP] = setMarginTop;
             k[PropertyKeys.MARGIN_RIGHT] = setMarginRight;
             k[PropertyKeys.MARGIN_BOTTOM] = setMarginBottom;
-            k[PropertyKeys.OVERFLOW_REPLACE] = _Str_18098;
+            k[PropertyKeys.OVERFLOW_REPLACE] = setOverflowReplace;
             return k;
         }
 
@@ -956,7 +956,7 @@
 
         public function set _Str_15348(k:String):void
         {
-            _Str_18098(this, k);
+            setOverflowReplace(this, k);
         }
 
         protected function _Str_8027(k:String):String
