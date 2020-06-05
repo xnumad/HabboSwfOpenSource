@@ -50,11 +50,11 @@
             _window.findChildByName("tag2_border").visible = (_arg_4.length >= 2);
             if (_arg_4.length >= 1)
             {
-                _window.findChildByName("tag1").caption = ("#" + this._Str_19801(_arg_4[0]));
+                _window.findChildByName("tag1").caption = ("#" + this.trimTag(_arg_4[0]));
             }
             if (_arg_4.length >= 2)
             {
-                _window.findChildByName("tag2").caption = ("#" + this._Str_19801(_arg_4[1]));
+                _window.findChildByName("tag2").caption = ("#" + this.trimTag(_arg_4[1]));
             }
             this.setCollapsed(false);
         }
@@ -123,7 +123,7 @@
             }
         }
 
-        private function _Str_19801(k:String):String
+        private function trimTag(k:String):String
         {
             var _local_2:String = k;
             if (_local_2.length > 16)
