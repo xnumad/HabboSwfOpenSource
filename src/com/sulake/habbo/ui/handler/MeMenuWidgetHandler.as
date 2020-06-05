@@ -93,7 +93,7 @@
             {
                 if ((((this._inventory) && (!(this._inventory.disposed))) && (this._inventory.events)))
                 {
-                    this._inventory.events.removeEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this._Str_21765);
+                    this._inventory.events.removeEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this.onAvatarEffectsChanged);
                     this._inventory.events.removeEventListener(HabboInventoryHabboClubEvent.HIHCE_HABBO_CLUB_CHANGED, this.onHabboClubSubscriptionChanged);
                 }
                 if ((((this._toolbar) && (!(this._toolbar.disposed))) && (this._toolbar.events)))
@@ -123,7 +123,7 @@
             this._inventory = this._container.inventory;
             if (this._inventory != null)
             {
-                this._inventory.events.addEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this._Str_21765);
+                this._inventory.events.addEventListener(HabboInventoryEffectsEvent.HIEE_EFFECTS_CHANGED, this.onAvatarEffectsChanged);
                 this._inventory.events.addEventListener(HabboInventoryHabboClubEvent.HIHCE_HABBO_CLUB_CHANGED, this.onHabboClubSubscriptionChanged);
             }
             this._toolbar = this._container.toolbar;
@@ -430,7 +430,7 @@
         {
         }
 
-        private function _Str_21765(k:Event=null):void
+        private function onAvatarEffectsChanged(k:Event=null):void
         {
             var _local_2:Array;
             if (this._container == null)
