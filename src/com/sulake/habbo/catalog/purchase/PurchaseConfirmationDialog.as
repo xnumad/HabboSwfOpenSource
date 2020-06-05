@@ -681,10 +681,10 @@
             this._Str_2471("box_prev", this._Str_24477);
             this._Str_2471("box_next", this._Str_24629);
             this._localization.registerParameter("catalog.gift_wrapping_new.price", "price", k.price.toString());
-            if (k._Str_11034.length > 0)
+            if (k.defaultStuffTypes.length > 0)
             {
-                _local_11 = Math.floor((Math.random() * k._Str_11034.length));
-                this._defaultStuffType = k._Str_11034[_local_11];
+                _local_11 = Math.floor((Math.random() * k.defaultStuffTypes.length));
+                this._defaultStuffType = k.defaultStuffTypes[_local_11];
             }
             this._stuffTypes = k.stuffTypes;
             this._boxTypes = this._boxTypes.concat(k.boxTypes);

@@ -28,7 +28,7 @@
             this._stuffTypes = _local_2.stuffTypes;
             this._boxTypes = _local_2.boxTypes;
             this._ribbonTypes = _local_2.ribbonTypes;
-            this._defaultStuffTypes = _local_2._Str_11034;
+            this._defaultStuffTypes = _local_2.defaultStuffTypes;
         }
 
         public function get isEnabled():Boolean
@@ -56,7 +56,7 @@
             return this._ribbonTypes;
         }
 
-        public function get _Str_11034():Array
+        public function get defaultStuffTypes():Array
         {
             return this._defaultStuffTypes;
         }

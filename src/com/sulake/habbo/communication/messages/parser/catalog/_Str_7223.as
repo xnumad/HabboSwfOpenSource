@@ -38,7 +38,7 @@
             return this._Str_4062;
         }
 
-        public function get _Str_11034():Array
+        public function get defaultStuffTypes():Array
         {
             return this._Str_8259;
         }
