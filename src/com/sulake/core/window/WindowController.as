@@ -50,7 +50,7 @@
         protected var _drawable:Boolean = true;
         protected var _parent:WindowController;
         protected var _children:Vector.<IWindow>;
-        protected var _Str_610:Boolean = false;
+        protected var _debug:Boolean = false;
         protected var _Str_5058:WindowRectLimits;
         protected var _Str_9238:Boolean = false;
         private var _Str_9367:DynamicStyle;
@@ -291,7 +291,7 @@
 
         public function get debug():Boolean
         {
-            return this._Str_610;
+            return this._debug;
         }
 
         public function get limits():IRectLimiter
@@ -452,7 +452,7 @@
 
         public function set debug(k:Boolean):void
         {
-            this._Str_610 = k;
+            this._debug = k;
         }
 
         public function set properties(k:Array):void
@@ -645,7 +645,7 @@
             _local_2.dynamicStyle = _dynamicStyle;
             _local_2._mouseThreshold = _mouseThreshold;
             _local_2._drawable = this._drawable;
-            _local_2._Str_610 = this._Str_610;
+            _local_2._debug = this._debug;
             _local_2._Str_5110 = this._Str_5110.clone();
             _local_2._x = _x;
             _local_2._y = _y;

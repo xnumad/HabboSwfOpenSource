@@ -20,7 +20,7 @@
         protected static const _Str_18683:int = 3;
         protected static const _Str_13499:int = 10;
 
-        protected var _Str_610:Boolean = false;
+        protected var _debug:Boolean = false;
         protected var _disposed:Boolean;
         protected var _Str_3102:ISkinContainer;
         protected var _Str_3892:Dictionary;
@@ -197,12 +197,12 @@
 
         public function set debug(k:Boolean):void
         {
-            this._Str_610 = k;
+            this._debug = k;
         }
 
         public function get debug():Boolean
         {
-            return this._Str_610;
+            return this._debug;
         }
 
         public function dispose():void
