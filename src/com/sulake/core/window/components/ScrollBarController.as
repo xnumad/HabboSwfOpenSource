@@ -153,7 +153,7 @@
             return findChildByName(SLIDER_TRACK) as WindowController;
         }
 
-        protected function get _Str_24726():WindowController
+        protected function get lift():WindowController
         {
             return this.track.findChildByName(SLIDER_BAR) as WindowController;
         }
@@ -320,7 +320,7 @@
                 }
             }
             var _local_2:WindowController = this.track;
-            var _local_3:WindowController = this._Str_24726;
+            var _local_3:WindowController = this.lift;
             if (_local_3 != null)
             {
                 if (this._horizontal)
