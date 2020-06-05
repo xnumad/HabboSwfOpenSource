@@ -26,12 +26,12 @@
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
         {
-            if (((k) && (!(_Str_2624))))
+            if (((k) && (!(_graphics))))
             {
-                _Str_2624 = new GraphicContext((("GC {" + _name) + "}"), ((testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)) ? (GraphicContext.GC_TYPE_CONTAINER) : (GraphicContext.GC_TYPE_BITMAP)), rectangle);
-                _Str_2624.visible = _visible;
+                _graphics = new GraphicContext((("GC {" + _name) + "}"), ((testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)) ? (GraphicContext.GC_TYPE_CONTAINER) : (GraphicContext.GC_TYPE_BITMAP)), rectangle);
+                _graphics.visible = _visible;
             }
-            return _Str_2624;
+            return _graphics;
         }
     }
 }

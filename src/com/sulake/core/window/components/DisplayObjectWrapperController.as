@@ -21,11 +21,11 @@
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
         {
-            if (((k) && (!(_Str_2624))))
+            if (((k) && (!(_graphics))))
             {
-                _Str_2624 = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_CONTAINER, rectangle);
+                _graphics = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_CONTAINER, rectangle);
             }
-            return _Str_2624;
+            return _graphics;
         }
 
         public function getDisplayObject():DisplayObject

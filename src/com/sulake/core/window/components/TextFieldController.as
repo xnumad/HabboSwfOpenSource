@@ -219,11 +219,11 @@
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
         {
-            if (((k) && (!(_Str_2624))))
+            if (((k) && (!(_graphics))))
             {
-                _Str_2624 = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_TEXTFIELD, rectangle);
+                _graphics = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_TEXTFIELD, rectangle);
             }
-            return _Str_2624;
+            return _graphics;
         }
 
         override public function dispose():void

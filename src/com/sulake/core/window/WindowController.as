@@ -45,7 +45,7 @@
         private static const _POINT_ZERO:Point = new Point();
 
         protected var _events:WindowEventDispatcher;
-        protected var _Str_2624:IGraphicContext;
+        protected var _graphics:IGraphicContext;
         protected var _Str_6620:Function;
         protected var _Str_3781:Boolean = true;
         protected var _parent:WindowController;
@@ -70,9 +70,9 @@
             }
             this._Str_8085 = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
             super(_arg_11, k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_10, _arg_12);
-            if (!this._Str_2624)
+            if (!this._graphics)
             {
-                this._Str_2624 = this.getGraphicContext((!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
+                this._graphics = this.getGraphicContext((!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
             }
             this._Str_5110 = new Rectangle();
             if (_local_13 != null)
@@ -120,7 +120,7 @@
             {
                 this._parent = (_arg_7 as WindowController);
                 WindowController(_arg_7).addChild(this);
-                if (this._Str_2624)
+                if (this._graphics)
                 {
                     _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                 }
@@ -394,9 +394,9 @@
             if (k != _visible)
             {
                 _visible = k;
-                if (((this._Str_2624) && (!(k))))
+                if (((this._graphics) && (!(k))))
                 {
-                    this._Str_2624.visible = false;
+                    this._graphics.visible = false;
                 }
                 _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                 _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CHILD_VISIBILITY, this, this);
@@ -593,47 +593,47 @@
 
         public function _Str_4453():Boolean
         {
-            return (!(this._Str_2624 == null)) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)));
+            return (!(this._graphics == null)) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)));
         }
 
         public function getGraphicContext(k:Boolean):IGraphicContext
         {
-            if (((k) && (!(this._Str_2624))))
+            if (((k) && (!(this._graphics))))
             {
-                this._Str_2624 = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_BITMAP, new Rectangle(_x, _y, _w, _h));
-                this._Str_2624.visible = _visible;
+                this._graphics = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_BITMAP, new Rectangle(_x, _y, _w, _h));
+                this._graphics.visible = _visible;
             }
-            return this._Str_2624;
+            return this._graphics;
         }
 
         public function setupGraphicsContext():IGraphicContext
         {
             var k:int;
             var _local_2:WindowController;
-            this._Str_2624 = this.getGraphicContext(true);
+            this._graphics = this.getGraphicContext(true);
             if (this._parent)
             {
                 this._parent.setupGraphicsContext();
             }
             if (((this._Str_2187) && (this._Str_2187.length > 0)))
             {
-                if (this._Str_2624._Str_13711 != this.numChildren)
+                if (this._graphics._Str_13711 != this.numChildren)
                 {
                     k = 0;
                     for each (_local_2 in this._Str_2187)
                     {
-                        this._Str_2624._Str_16175(_local_2.getGraphicContext(true), k++);
+                        this._graphics._Str_16175(_local_2.getGraphicContext(true), k++);
                     }
                 }
             }
             this._Str_10190 = true;
-            return this._Str_2624;
+            return this._graphics;
         }
 
         public function _Str_26385():void
         {
             this._Str_10190 = false;
-            if (this._Str_2624)
+            if (this._graphics)
             {
             }
         }
@@ -727,10 +727,10 @@
                         this._events = null;
                     }
                 }
-                if (this._Str_2624 != null)
+                if (this._graphics != null)
                 {
-                    this._Str_2624.dispose();
-                    this._Str_2624 = null;
+                    this._graphics.dispose();
+                    this._graphics = null;
                 }
                 super.dispose();
             }
@@ -1321,7 +1321,7 @@
             k.offsetY = ((_local_4.offsetY) ? _local_4.offsetY : 0);
             if (k._Str_4453())
             {
-                k._Str_2624.getDisplayObject().transform.colorTransform = _arg_2.getColorTransform(_arg_3);
+                k._graphics.getDisplayObject().transform.colorTransform = _arg_2.getColorTransform(_arg_3);
             }
             else
             {
@@ -1778,7 +1778,7 @@
             {
                 if (!(_param & WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
                 {
-                    if (!this._Str_2624)
+                    if (!this._graphics)
                     {
                         this.setupGraphicsContext();
                         _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
@@ -1788,7 +1788,7 @@
                 {
                     if ((_param & WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
                     {
-                        if (this._Str_2624)
+                        if (this._graphics)
                         {
                             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                         }
@@ -2334,9 +2334,9 @@
             if (((this._Str_10190) || (_local_2._Str_4453())))
             {
                 this.setupGraphicsContext();
-                if (_local_2.getGraphicContext(true).parent != this._Str_2624)
+                if (_local_2.getGraphicContext(true).parent != this._graphics)
                 {
-                    this._Str_2624._Str_22175(_local_2.getGraphicContext(true));
+                    this._graphics._Str_22175(_local_2.getGraphicContext(true));
                 }
             }
             var _local_3:WindowEvent = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this, k);
@@ -2361,9 +2361,9 @@
             if (((this._Str_10190) || (_local_3._Str_4453())))
             {
                 this.setupGraphicsContext();
-                if (_local_3.getGraphicContext(true).parent != this._Str_2624)
+                if (_local_3.getGraphicContext(true).parent != this._graphics)
                 {
-                    this._Str_2624._Str_16175(_local_3.getGraphicContext(true), _arg_2);
+                    this._graphics._Str_16175(_local_3.getGraphicContext(true), _arg_2);
                 }
             }
             var _local_4:WindowEvent = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CHILD_ADDED, this, k);
@@ -2488,7 +2488,7 @@
             var _local_3:IGraphicContextHost = (k as IGraphicContextHost);
             if (((_local_3) && (_local_3._Str_4453())))
             {
-                this._Str_2624._Str_17938(_local_3.getGraphicContext(true));
+                this._graphics._Str_17938(_local_3.getGraphicContext(true));
             }
             var _local_4:WindowEvent = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this, k);
             this.update(this, _local_4);
@@ -2516,7 +2516,7 @@
                 _local_4 = WindowController(k);
                 if (_local_4._Str_4453())
                 {
-                    this._Str_2624._Str_19243(_local_4.getGraphicContext(true), this.getChildIndex(_local_4));
+                    this._graphics._Str_19243(_local_4.getGraphicContext(true), this.getChildIndex(_local_4));
                 }
             }
         }
@@ -2558,7 +2558,7 @@
                 this._Str_2187.splice(_local_4, 0, k);
                 if (((WindowController(k)._Str_4453()) || (WindowController(_arg_2)._Str_4453())))
                 {
-                    this._Str_2624._Str_20742(WindowController(k).getGraphicContext(true), WindowController(_arg_2).getGraphicContext(true));
+                    this._graphics._Str_20742(WindowController(k).getGraphicContext(true), WindowController(_arg_2).getGraphicContext(true));
                 }
             }
         }
@@ -2570,7 +2570,7 @@
                 return;
             }
             this.swapChildren(this._Str_2187[k], this._Str_2187[_arg_2]);
-            this._Str_2624._Str_21032(k, _arg_2);
+            this._graphics._Str_21032(k, _arg_2);
         }
 
         public function groupChildrenWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint

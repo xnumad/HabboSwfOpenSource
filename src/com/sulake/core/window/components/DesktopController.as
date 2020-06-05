@@ -47,13 +47,13 @@
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
         {
-            if (((k) && (!(_Str_2624))))
+            if (((k) && (!(_graphics))))
             {
-                _Str_2624 = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_DESKTOP, rectangle);
-                GraphicContext(_Str_2624).mouseEnabled = true;
-                GraphicContext(_Str_2624).doubleClickEnabled = true;
+                _graphics = new GraphicContext((("GC {" + _name) + "}"), GraphicContext.GC_TYPE_DESKTOP, rectangle);
+                GraphicContext(_graphics).mouseEnabled = true;
+                GraphicContext(_graphics).doubleClickEnabled = true;
             }
-            return _Str_2624;
+            return _graphics;
         }
 
         public function getActiveWindow():IWindow
