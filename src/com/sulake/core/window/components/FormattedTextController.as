@@ -42,7 +42,7 @@
         {
             if (((!(k == null)) && (!(_field == null))))
             {
-                _field.htmlText = _Str_8027(k);
+                _field.htmlText = limitStringLength(k);
                 refreshTextImage();
             }
         }

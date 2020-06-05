@@ -959,7 +959,7 @@
             setOverflowReplace(this, k);
         }
 
-        protected function _Str_8027(k:String):String
+        protected function limitStringLength(k:String):String
         {
             return (this.maxChars > 0) ? k.substr(0, this.maxChars) : k;
         }
@@ -1127,7 +1127,7 @@
         {
             if (((!(k == null)) && (!(this._field == null))))
             {
-                this._field.text = this._Str_8027(k);
+                this._field.text = this.limitStringLength(k);
                 this.refreshTextImage();
             }
         }

@@ -617,7 +617,7 @@
 
         override public function set localization(k:String):void
         {
-            super.localization = _Str_8027(((_displayRaw) ? _caption : k));
+            super.localization = limitStringLength(((_displayRaw) ? _caption : k));
         }
 
         public function getWordAt(k:int, _arg_2:int):String
