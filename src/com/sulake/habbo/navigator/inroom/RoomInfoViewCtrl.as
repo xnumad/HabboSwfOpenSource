@@ -282,7 +282,7 @@
             this.addMouseClickListener(this.find("room_muteall_button"), this.onMuteAllClick);
             this.addMouseClickListener(this.find("make_home_region"), this.onMakeHomeClick);
             this.addMouseClickListener(this.find("remove_rights_region"), this.onRemoveRights);
-            this.addMouseClickListener(this.find("embed_src_txt"), this._Str_23461);
+            this.addMouseClickListener(this.find("embed_src_txt"), this.onEmbedSrcClick);
             this.addMouseClickListener(this.find("staff_pick_button"), this.onStaffPick);
             this.addMouseClickListener(this.find("room_report_button"), this.onRoomReport);
             this._navigator.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._navigator.hasRoomRightsButIsNotOwner(this._navigator.data._Str_2678.flatId), null, 0);
@@ -466,7 +466,7 @@
             this.close();
         }
 
-        private function _Str_23461(k:WindowEvent):void
+        private function onEmbedSrcClick(k:WindowEvent):void
         {
             var _local_2:ITextFieldWindow = ITextFieldWindow(this.find("embed_src_txt"));
             _local_2.setSelection(0, _local_2.text.length);
