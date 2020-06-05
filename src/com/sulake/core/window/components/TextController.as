@@ -407,7 +407,7 @@
             k._Str_3808.thickness = _arg_2;
         }
 
-        private static function _Str_16916(k:TextController, _arg_2:Boolean):void
+        private static function setUnderline(k:TextController, _arg_2:Boolean):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.underline = _arg_2;
@@ -581,7 +581,7 @@
             k[PropertyKeys.SPACING] = setSpacing;
             k[PropertyKeys.SHARPNESS] = setSharpness;
             k[PropertyKeys.THICKNESS] = setThickness;
-            k[PropertyKeys.UNDERLINE] = _Str_16916;
+            k[PropertyKeys.UNDERLINE] = setUnderline;
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
             k["margins"] = setTextMarginMap;
             k[PropertyKeys.MAX_LINES] = setMaxLines;
@@ -936,7 +936,7 @@
 
         public function set underline(k:Boolean):void
         {
-            _Str_16916(this, k);
+            setUnderline(this, k);
         }
 
         public function set wordWrap(k:Boolean):void
