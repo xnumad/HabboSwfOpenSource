@@ -57,10 +57,10 @@
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             _Str_3781 = ((_background) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
             this._container = (_context.create("_CONTAINER", "", WindowType.WINDOW_TYPE_CONTAINER, WindowStyle.WINDOW_STYLE_DEFAULT, ((WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_RELATIVE_SCALE_FIXED) | WindowParam.WINDOW_PARAM_NULL), new Rectangle(0, 0, width, height), null, this, 0, null, "", [TAG_INTERNAL, TAG_EXCLUDE]) as IWindowContainer);
-            this._container.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_6611);
-            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_6611);
-            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_6611);
-            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_6611);
+            this._container.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.containerEventHandler);
+            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this.containerEventHandler);
+            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this.containerEventHandler);
+            this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this.containerEventHandler);
             this._container.clipping = clipping;
             this.resizeOnItemUpdate = this._resizeOnItemUpdate;
         }
@@ -275,10 +275,10 @@
         {
             if (!_disposed)
             {
-                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_6611);
-                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_6611);
-                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_6611);
-                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_6611);
+                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.containerEventHandler);
+                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this.containerEventHandler);
+                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this.containerEventHandler);
+                this._container.removeEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this.containerEventHandler);
                 super.dispose();
             }
         }
@@ -533,7 +533,7 @@
             }
         }
 
-        private function _Str_6611(k:WindowEvent):void
+        private function containerEventHandler(k:WindowEvent):void
         {
             var _local_2:WindowEvent;
             switch (k.type)
