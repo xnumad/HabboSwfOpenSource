@@ -1806,7 +1806,7 @@
             return "Room_Engine_Window_" + k;
         }
 
-        private function _Str_25922(k:int, _arg_2:int):Array
+        private function createFilter(k:int, _arg_2:int):Array
         {
             var _local_3:BlurFilter = new BlurFilter(2, 2);
             return [];
