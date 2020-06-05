@@ -40,7 +40,7 @@
         public static const ERROR_UNKNOWN:int = 0;
         public static const ERROR_INVALID_WINDOW:int = 1;
         public static const ERROR_WINDOW_NOT_FOUND:int = 2;
-        public static const _Str_20675:int = 3;
+        public static const ERROR_WINDOW_ALREADY_EXISTS:int = 3;
         public static const _Str_18985:int = 4;
         public static const _Str_7405:int = 5;
         public static var _Str_4956:IEventQueue;
