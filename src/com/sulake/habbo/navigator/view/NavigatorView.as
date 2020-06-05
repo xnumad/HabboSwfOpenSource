@@ -53,7 +53,7 @@
         private var _Str_4451:int = -1;
         private var _Str_4599:int = -1;
         private var _Str_4481:int = -1;
-        private var _Str_3860:int = -1;
+        private var _lastWindowHeight:int = -1;
         private var _Str_11769:Boolean = false;
         private var _Str_16641:int = -1;
         private var _Str_13354:int = 4000;
@@ -139,7 +139,7 @@
             {
                 this._Str_4451 = k;
                 this._Str_4599 = _arg_2;
-                this._Str_3860 = _arg_3;
+                this._lastWindowHeight = _arg_3;
                 this._Str_11769 = _arg_4;
             }
         }
@@ -345,7 +345,7 @@
                 this._Str_4451 = this._window.x;
                 this._Str_4599 = this._window.y;
                 this._Str_4481 = this._window.width;
-                this._Str_3860 = this._window.height;
+                this._lastWindowHeight = this._window.height;
             }
             else
             {
@@ -355,7 +355,7 @@
                 }
                 this._window.x = this._Str_4451;
                 this._window.y = this._Str_4599;
-                this._window.height = this._Str_3860;
+                this._window.height = this._lastWindowHeight;
             }
             this._Str_13838 = getTimer();
         }
@@ -478,10 +478,10 @@
             this._Str_4451 = this._window.x;
             this._Str_4599 = this._window.y;
             this._Str_4481 = this._window.width;
-            this._Str_3860 = this._window.height;
+            this._lastWindowHeight = this._window.height;
             this._Str_11769 = this._window.findChildByName("left_pane").visible;
             this._Str_13838 = getTimer();
-            this._habboNewNavigator._Str_10331(this._Str_4451, this._Str_4599, this._Str_4481, this._Str_3860, this._Str_11769, ResultsModeEnum._Str_6023);
+            this._habboNewNavigator._Str_10331(this._Str_4451, this._Str_4599, this._Str_4481, this._lastWindowHeight, this._Str_11769, ResultsModeEnum._Str_6023);
             this._habboNewNavigator.trackEventLog("windowsettings", "Interface", ((this._window.width + " x ") + this._window.height));
         }
 
@@ -499,7 +499,7 @@
             {
                 return true;
             }
-            if (this._Str_3860 != this._window.height)
+            if (this._lastWindowHeight != this._window.height)
             {
                 return true;
             }
