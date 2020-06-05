@@ -1812,7 +1812,7 @@
             return [];
         }
 
-        private function _Str_26066(k:int, _arg_2:int):BitmapFilter
+        private function getBitmapFilter(k:int, _arg_2:int):BitmapFilter
         {
             var _local_3:BitmapData = new BitmapData(k, _arg_2);
             _local_3.perlinNoise(k, _arg_2, 5, (Math.random() * 0x77359400), true, false);
