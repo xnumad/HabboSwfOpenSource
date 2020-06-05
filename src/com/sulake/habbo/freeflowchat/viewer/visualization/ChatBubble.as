@@ -379,7 +379,7 @@
             {
                 return;
             }
-            if (!this._component._Str_21417(k))
+            if (!this._component.clickHasToPropagate(k))
             {
                 this._component.selectAvatarWithChatItem(this._chatItem);
                 k.stopImmediatePropagation();

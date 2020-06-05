@@ -485,7 +485,7 @@
             return false;
         }
 
-        public function _Str_21417(k:MouseEvent):Boolean
+        public function clickHasToPropagate(k:MouseEvent):Boolean
         {
             return (this._roomUI) ? this._roomUI._Str_21446(k) : false;
         }
