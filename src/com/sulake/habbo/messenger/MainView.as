@@ -461,7 +461,7 @@
             }
             if (k == this._currentConversationId)
             {
-                this._Str_20919(_arg_2);
+                this.appendChatEntry(_arg_2);
             }
             else
             {
@@ -599,7 +599,7 @@
             return null;
         }
 
-        private function _Str_20919(k:ChatEntry, _arg_2:Boolean=true):void
+        private function appendChatEntry(k:ChatEntry, _arg_2:Boolean=true):void
         {
             this._conversationList.addListItem(this.createChatItem(k));
             if (_arg_2)
@@ -660,7 +660,7 @@
             var _local_3:int = Math.max(0, (_local_2 - CHAT_ITEM_RENDER_BUNDLE_SIZE));
             while (_local_3 < _local_2)
             {
-                this._Str_20919(k[_local_3]);
+                this.appendChatEntry(k[_local_3]);
                 _local_3++;
             }
             this._conversationList.scrollV = 1;
