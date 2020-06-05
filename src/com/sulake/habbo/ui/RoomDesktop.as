@@ -555,7 +555,7 @@
                 _local_2 = this._roomEngine.getRoomCanvasGeometry(this._session.roomId, this.getFirstCanvasId());
                 if (_local_2 != null)
                 {
-                    this._Str_21074(_local_2.isZoomedIn(), false);
+                    this.trackZooming(_local_2.isZoomedIn(), false);
                 }
             }
             var k:int;
@@ -1676,7 +1676,7 @@
             this.events.dispatchEvent(new _Str_3040(_local_2, this._roomViewContainerRect));
         }
 
-        private function _Str_21074(k:Boolean, _arg_2:Boolean):void
+        private function trackZooming(k:Boolean, _arg_2:Boolean):void
         {
             var _local_3:int;
             var _local_4:int;
@@ -1733,7 +1733,7 @@
                     _local_3 = this._roomEngine.getRoomCanvasGeometry(this._session.roomId, this.getFirstCanvasId());
                     if (_local_3 != null)
                     {
-                        this._Str_21074(_local_3.isZoomedIn(), true);
+                        this.trackZooming(_local_3.isZoomedIn(), true);
                         _local_3.performZoom();
                     }
                 }
