@@ -45,7 +45,7 @@
                 return;
             }
             var k:IWindow;
-            var _local_3:int = this._Str_22835();
+            var _local_3:int = this.calculateSpaceForRelatives();
             var _local_4:int = this._Str_22917();
             if (!this._vertical)
             {
@@ -131,7 +131,7 @@
             return k;
         }
 
-        private function _Str_22835():int
+        private function calculateSpaceForRelatives():int
         {
             var _local_2:IWindow;
             var k:int = ((this._vertical) ? (this.height - (this._verticalPadding * 2)) : (this.width - (this._horizontalPadding * 2)));
