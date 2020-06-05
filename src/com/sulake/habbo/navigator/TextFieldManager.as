@@ -57,7 +57,7 @@
             this._navigator = null;
         }
 
-        public function _Str_22184(k:String):Boolean
+        public function checkMandatory(k:String):Boolean
         {
             if (!this.isInputValid())
             {

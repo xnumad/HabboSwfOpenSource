@@ -373,7 +373,7 @@
 
         private function _Str_17505():Boolean
         {
-            var k:Boolean = this._roomNameInput._Str_22184(this._navigator.getText("navigator.createroom.nameerr"));
+            var k:Boolean = this._roomNameInput.checkMandatory(this._navigator.getText("navigator.createroom.nameerr"));
             return k;
         }
 

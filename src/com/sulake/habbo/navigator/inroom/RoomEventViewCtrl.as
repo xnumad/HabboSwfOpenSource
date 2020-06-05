@@ -143,7 +143,7 @@
         private function _Str_17505():Boolean
         {
             this.clearErrors();
-            if (!this._Str_5340._Str_22184(this._navigator.getText("navigator.eventsettings.nameerr")))
+            if (!this._Str_5340.checkMandatory(this._navigator.getText("navigator.eventsettings.nameerr")))
             {
                 return false;
             }
