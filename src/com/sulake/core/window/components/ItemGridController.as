@@ -312,7 +312,7 @@
             throw (new Error("ItemGridWindow / Unimplemented method!"));
         }
 
-        public function _Str_18089(k:int, _arg_2:int):void
+        public function swapGridItemsAt(k:int, _arg_2:int):void
         {
             this._Str_13972(this._Str_2830(k), this._Str_2830(_arg_2));
         }
