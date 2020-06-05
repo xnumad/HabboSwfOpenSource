@@ -36,7 +36,7 @@
         private var _window:IFrameWindow;
         private var _tagRenderer:TagRenderer;
         private var _embedExpanded:Boolean = false;
-        private var _Str_2500:Boolean = false;
+        private var _visible:Boolean = false;
 
         public function RoomInfoViewCtrl(k:IHabboTransitionalNavigator)
         {
@@ -48,7 +48,7 @@
         public function dispose():void
         {
             this._navigator = null;
-            this._Str_2500 = false;
+            this._visible = false;
             if (this._window)
             {
                 this._window.dispose();
@@ -72,7 +72,7 @@
             {
                 return;
             }
-            this._Str_2500 = false;
+            this._visible = false;
             this._window.dispose();
             this._window = null;
             this._navigator.events.dispatchEvent(new Event(HabboRoomSettingsTrackingEvent.HABBO_ROOM_SETTINGS_TRACKING_EVENT_CLOSED));
@@ -80,7 +80,7 @@
 
         public function reload():void
         {
-            if (this._Str_2500)
+            if (this._visible)
             {
                 this.refresh();
             }
@@ -88,9 +88,9 @@
 
         public function toggle():void
         {
-            if (this._Str_2500)
+            if (this._visible)
             {
-                this._Str_2500 = false;
+                this._visible = false;
                 if (this._window)
                 {
                     this._window.dispose();
@@ -99,7 +99,7 @@
             }
             else
             {
-                this._Str_2500 = true;
+                this._visible = true;
                 this.refresh();
                 if (this._window != null)
                 {
@@ -267,7 +267,7 @@
         {
             var k:String;
             var _local_5:String;
-            this._Str_2500 = true;
+            this._visible = true;
             if (this._window != null)
             {
                 return;
@@ -489,7 +489,7 @@
                 this._window.dispose();
                 this._window = null;
             }
-            this._Str_2500 = false;
+            this._visible = false;
         }
 
         private function _Str_8567():String

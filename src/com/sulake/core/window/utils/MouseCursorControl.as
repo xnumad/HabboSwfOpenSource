@@ -13,7 +13,7 @@
     {
         private static var _type:uint = MouseCursorType.DEFAULT;
         private static var _Str_2691:Stage;
-        private static var _Str_2500:Boolean = true;
+        private static var _visible:Boolean = true;
         private static var _disposed:Boolean = false;
         private static var _Str_7147:Boolean = true;
         private static var _Str_3522:DisplayObject;
@@ -61,13 +61,13 @@
 
         public static function get visible():Boolean
         {
-            return _Str_2500;
+            return _visible;
         }
 
         public static function set visible(k:Boolean):void
         {
-            _Str_2500 = k;
-            if (_Str_2500)
+            _visible = k;
+            if (_visible)
             {
                 if (_Str_3522)
                 {
@@ -164,12 +164,12 @@
                 _Str_3522.y = k.stageY;
                 if (_type == MouseCursorType.DEFAULT)
                 {
-                    _Str_2500 = false;
+                    _visible = false;
                     Mouse.show();
                 }
                 else
                 {
-                    _Str_2500 = true;
+                    _visible = true;
                     Mouse.hide();
                 }
             }
@@ -180,7 +180,7 @@
             if (((_Str_3522) && (!(_type == MouseCursorType.DEFAULT))))
             {
                 Mouse.hide();
-                _Str_2500 = false;
+                _visible = false;
             }
         }
     }

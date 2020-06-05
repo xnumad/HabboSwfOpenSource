@@ -14,7 +14,7 @@
         public static const FULLSCREEN:String = "FULLSCREEN";
 
         protected var _Str_17432:Boolean = true;
-        protected var _Str_2500:Boolean = true;
+        protected var _visible:Boolean = true;
         protected var _Str_2699:Boolean = false;
         protected var _Str_16538:Boolean = true;
         protected var _Str_16202:Boolean = true;
@@ -46,7 +46,7 @@
                 }
                 if (k.hasOwnProperty("visible"))
                 {
-                    this._Str_2500 = StringUtils._Str_2810(k.visible);
+                    this._visible = StringUtils._Str_2810(k.visible);
                 }
                 if (k.hasOwnProperty("enable"))
                 {
@@ -104,7 +104,7 @@
 
         public function _Str_25897():Boolean
         {
-            return this._Str_2500;
+            return this._visible;
         }
 
         public function controlEnabled(k:String):Boolean
@@ -174,12 +174,12 @@
 
         public function set visible(k:Boolean):void
         {
-            this._Str_2500 = k;
+            this._visible = k;
         }
 
         public function get visible():Boolean
         {
-            return this._Str_2500;
+            return this._visible;
         }
 
         public function set anchorNonLinearToBottom(k:Boolean):void
