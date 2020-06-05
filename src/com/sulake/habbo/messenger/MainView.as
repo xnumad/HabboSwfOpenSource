@@ -832,7 +832,7 @@
             var _local_3:Array = this._chatEntries[this._currentConversationId];
             if (((_local_3.length == 0) || ((_local_3.length == 1) && (ChatEntry(_local_3[0]).type == ChatEntry._Str_10130))))
             {
-                this._messenger._Str_24965();
+                this._messenger.playSendSound();
             }
             this.recordChatMessage(this._currentConversationId, this.escapeExternalKeys(_arg_2), false, 0);
         }

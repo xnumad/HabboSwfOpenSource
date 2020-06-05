@@ -197,7 +197,7 @@
             this._communicationManager.connection.send(k);
         }
 
-        public function _Str_24965():void
+        public function playSendSound():void
         {
             if (this._soundManager != null)
             {
