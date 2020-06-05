@@ -95,11 +95,11 @@
             var _local_2:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
             if (_Str_3510)
             {
-                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this.motionComplete));
+                _local_3 = new Queue(new EaseOut(new MoveTo(_window, WINDOW_ANIM_SPEED, _local_2, _window.y), 1), new Callback(this.motionComplete));
             }
             else
             {
-                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this.motionComplete));
+                _local_3 = new Queue(new EaseOut(new MoveTo(_window, WINDOW_ANIM_SPEED, _local_2, _window.y), 1), new Callback(this.motionComplete));
             }
             Motions._Str_4598(_local_3);
         }
@@ -111,7 +111,7 @@
                 return;
             }
             this.setCollapsed(k);
-            var _local_2:Motion = new EaseOut(new MoveTo(_window, _Str_7674, (_widget.getRoomToolbarRight() + MARGIN), _window.y), 1);
+            var _local_2:Motion = new EaseOut(new MoveTo(_window, WINDOW_ANIM_SPEED, (_widget.getRoomToolbarRight() + MARGIN), _window.y), 1);
             Motions._Str_4598(_local_2);
         }
 

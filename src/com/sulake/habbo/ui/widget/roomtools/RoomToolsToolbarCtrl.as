@@ -183,13 +183,13 @@
             }
             if (_Str_3510)
             {
-                _local_2 = new Queue(new EaseOut(new MoveTo(_local_3, _Str_7674, _Str_12959, _local_3.y), 1), new Callback(this.motionComplete));
+                _local_2 = new Queue(new EaseOut(new MoveTo(_local_3, WINDOW_ANIM_SPEED, _Str_12959, _local_3.y), 1), new Callback(this.motionComplete));
             }
             else
             {
                 _local_3.x = _Str_12959;
                 this._Str_17459();
-                _local_2 = new EaseOut(new MoveTo(_local_3, _Str_7674, _Str_18592, _local_3.y), 1);
+                _local_2 = new EaseOut(new MoveTo(_local_3, WINDOW_ANIM_SPEED, _Str_18592, _local_3.y), 1);
             }
             Motions._Str_4598(_local_2);
         }
