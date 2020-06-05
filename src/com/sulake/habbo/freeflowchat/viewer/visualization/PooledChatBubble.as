@@ -448,7 +448,7 @@
             }
             if (!this._component._Str_21417(k))
             {
-                this._component._Str_19178(this._chatItem);
+                this._component.selectAvatarWithChatItem(this._chatItem);
                 k.stopImmediatePropagation();
             }
         }

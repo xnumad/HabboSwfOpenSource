@@ -440,7 +440,7 @@
             this._roomEngine.mouseEventsDisabledLeftToX = k;
         }
 
-        public function _Str_19178(k:ChatItem):void
+        public function selectAvatarWithChatItem(k:ChatItem):void
         {
             this.selectAvatar(k.roomId, k.userId);
         }
