@@ -21,7 +21,7 @@
         private static const SLIDER_BAR:String = "slider_bar";
 
         protected var _offset:Number = 0;
-        protected var _Str_6248:Number = 0.1;
+        protected var _scrollStep:Number = 0.1;
         protected var _Str_2566:IScrollableWindow;
         private var _horizontal:Boolean;
         private var _Str_9086:String;
@@ -283,22 +283,22 @@
                         {
                             if (this._horizontal)
                             {
-                                this.scrollH = (this.scrollH - this._Str_6248);
+                                this.scrollH = (this.scrollH - this._scrollStep);
                             }
                             else
                             {
-                                this.scrollV = (this.scrollV - this._Str_6248);
+                                this.scrollV = (this.scrollV - this._scrollStep);
                             }
                         }
                         else
                         {
                             if (this._horizontal)
                             {
-                                this.scrollH = (this.scrollH + this._Str_6248);
+                                this.scrollH = (this.scrollH + this._scrollStep);
                             }
                             else
                             {
-                                this.scrollV = (this.scrollV + this._Str_6248);
+                                this.scrollV = (this.scrollV + this._scrollStep);
                             }
                         }
                         _local_3 = true;
@@ -459,22 +459,22 @@
                 {
                     if (this._horizontal)
                     {
-                        this.scrollH = (this.scrollH - this._Str_6248);
+                        this.scrollH = (this.scrollH - this._scrollStep);
                     }
                     else
                     {
-                        this.scrollV = (this.scrollV - this._Str_6248);
+                        this.scrollV = (this.scrollV - this._scrollStep);
                     }
                 }
                 else
                 {
                     if (this._horizontal)
                     {
-                        this.scrollH = (this.scrollH + this._Str_6248);
+                        this.scrollH = (this.scrollH + this._scrollStep);
                     }
                     else
                     {
-                        this.scrollV = (this.scrollV + this._Str_6248);
+                        this.scrollV = (this.scrollV + this._scrollStep);
                     }
                 }
                 _local_3 = true;
