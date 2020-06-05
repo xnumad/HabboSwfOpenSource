@@ -1029,7 +1029,7 @@
             }
             if (k.type == RoomWidgetZoomToggleMessage.RWZTM_ZOOM_TOGGLE)
             {
-                this._Str_17253();
+                this.toggleZoom();
             }
             var _local_2:Array = this._widgetHandlerMessageMap.getValue(k.type);
             if (_local_2 != null)
@@ -1072,7 +1072,7 @@
                     }
                     if (k.type == RoomWidgetZoomToggleMessage.RWZTM_ZOOM_TOGGLE)
                     {
-                        this._Str_17253();
+                        this.toggleZoom();
                     }
                     if (_local_4)
                     {
@@ -1711,11 +1711,11 @@
         {
             if (k.type == HabboToolbarEvent.HTIE_ICON_ZOOM)
             {
-                this._Str_17253();
+                this.toggleZoom();
             }
         }
 
-        private function _Str_17253():void
+        private function toggleZoom():void
         {
             var k:Number;
             var _local_2:Number;
