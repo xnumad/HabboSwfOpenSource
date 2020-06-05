@@ -31,7 +31,7 @@
         private static const HIDDEN:String = "HIDDEN";
         private static const NO_CONVERSATION:int = -1;
         private static const NOTIFICATION_ICON_WIDTH:int = 55;
-        private static const _Str_13145:int = 5;
+        private static const CHAT_ITEM_RENDER_BUNDLE_SIZE:int = 5;
         private static const _Str_18765:int = 150;
         private static const _Str_4550:Dictionary = new Dictionary();
 
@@ -657,7 +657,7 @@
                 return;
             }
             var _local_2:int = k.length;
-            var _local_3:int = Math.max(0, (_local_2 - _Str_13145));
+            var _local_3:int = Math.max(0, (_local_2 - CHAT_ITEM_RENDER_BUNDLE_SIZE));
             while (_local_3 < _local_2)
             {
                 this._Str_20919(k[_local_3]);
@@ -684,7 +684,7 @@
             }
             var _local_4:int = (_local_3.length - this._conversationList.numListItems);
             var _local_5:int;
-            var _local_6:int = Math.max(0, (_local_4 - _Str_13145));
+            var _local_6:int = Math.max(0, (_local_4 - CHAT_ITEM_RENDER_BUNDLE_SIZE));
             while (_local_6 < _local_4)
             {
                 this._conversationList.addListItemAt(this._Str_20924(_local_3[_local_6]), _local_5);
