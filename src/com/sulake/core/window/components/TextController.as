@@ -400,7 +400,7 @@
             }
         }
 
-        private static function _Str_18660(k:TextController, _arg_2:Number):void
+        private static function setThickness(k:TextController, _arg_2:Number):void
         {
             k._Str_2309.thickness = _arg_2;
             k.refreshTextImage();
@@ -580,7 +580,7 @@
             k[PropertyKeys.RESTRICT] = setRestrict;
             k[PropertyKeys.SPACING] = setSpacing;
             k[PropertyKeys.SHARPNESS] = setSharpness;
-            k[PropertyKeys.THICKNESS] = _Str_18660;
+            k[PropertyKeys.THICKNESS] = setThickness;
             k[PropertyKeys.UNDERLINE] = _Str_16916;
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
             k["margins"] = setTextMarginMap;
@@ -931,7 +931,7 @@
 
         public function set thickness(k:Number):void
         {
-            _Str_18660(this, k);
+            setThickness(this, k);
         }
 
         public function set underline(k:Boolean):void
