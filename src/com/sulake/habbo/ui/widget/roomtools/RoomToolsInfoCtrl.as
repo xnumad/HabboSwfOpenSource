@@ -104,7 +104,7 @@
             Motions._Str_4598(_local_3);
         }
 
-        public function _Str_23422(k:Boolean):void
+        public function setToolbarCollapsed(k:Boolean):void
         {
             if (!_window)
             {

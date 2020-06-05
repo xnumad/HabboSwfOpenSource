@@ -164,7 +164,7 @@
             }
             if (this._roomToolsInfoCtrl)
             {
-                this._roomToolsInfoCtrl._Str_23422(k);
+                this._roomToolsInfoCtrl.setToolbarCollapsed(k);
             }
         }
 
