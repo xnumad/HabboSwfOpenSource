@@ -152,7 +152,7 @@
                     this.adjustBlend(_local_3);
                     if (this._fadeOutStart > int(this._viewConfig["time_fade_in"]))
                     {
-                        this._Str_22474();
+                        this.startIdling();
                     }
                     return;
             }
@@ -256,7 +256,7 @@
             this._state = _Str_14483;
         }
 
-        private function _Str_22474():void
+        private function startIdling():void
         {
             this._state = _Str_694;
             this._window.visible = false;
