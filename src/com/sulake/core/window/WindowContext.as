@@ -36,7 +36,7 @@
     public class WindowContext implements IWindowContext, IDisposable, IUpdateReceiver 
     {
         public static const INPUT_MODE_MOUSE:uint = 0;
-        public static const _Str_18399:uint = 1;
+        public static const INPUT_MODE_TOUCH:uint = 1;
         public static const _Str_20491:int = 0;
         public static const _Str_19384:int = 1;
         public static const _Str_19632:int = 2;
@@ -147,7 +147,7 @@
                     {
                     }
                     return;
-                case _Str_18399:
+                case INPUT_MODE_TOUCH:
                     _Str_4956 = new TabletEventQueue(stage);
                     _Str_6468 = new TabletEventProcessor();
                     try
