@@ -211,7 +211,7 @@
                 this._chatEntries[k] = [];
                 if (!this._moderationInfoShown)
                 {
-                    this._Str_14230(k, "${messenger.moderationinfo}");
+                    this.recordNotificationMessage(k, "${messenger.moderationinfo}");
                     this._moderationInfoShown = true;
                 }
                 _local_3 = this._messenger.getFriend(k);
@@ -222,7 +222,7 @@
                 }
                 if (!_local_3.online)
                 {
-                    this._Str_14230(k, "${messenger.notification.persisted_messages}");
+                    this.recordNotificationMessage(k, "${messenger.notification.persisted_messages}");
                 }
                 _local_4 = (this._avatarTemplate.clone() as IWindowContainer);
                 setAvatarVisibilityTag(_local_4, true);
@@ -292,11 +292,11 @@
                     _local_4 = ERROR_MESSAGES[_arg_2];
                     _local_5 = /[${}]/g;
                     _local_4 = _local_4.replace(_local_5, "");
-                    this._Str_14230(k, ((this._messenger.getText(_local_4) + ": ") + _arg_3));
+                    this.recordNotificationMessage(k, ((this._messenger.getText(_local_4) + ": ") + _arg_3));
                 }
                 else
                 {
-                    this._Str_14230(k, ERROR_MESSAGES[_arg_2]);
+                    this.recordNotificationMessage(k, ERROR_MESSAGES[_arg_2]);
                 }
             }
         }
@@ -369,7 +369,7 @@
             }
         }
 
-        private function _Str_14230(k:int, _arg_2:String):void
+        private function recordNotificationMessage(k:int, _arg_2:String):void
         {
             this._Str_8645(k, new ChatEntry(ChatEntry._Str_10130, 0, _arg_2, 0));
         }
