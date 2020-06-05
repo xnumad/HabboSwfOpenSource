@@ -259,7 +259,7 @@
             }
         }
 
-        private static function _Str_24238(k:TextController, _arg_2:int):void
+        private static function setMarginTop(k:TextController, _arg_2:int):void
         {
             if (((k._Str_2480) && (!(k._Str_2480.top == _arg_2))))
             {
@@ -592,7 +592,7 @@
             k[PropertyKeys.TEXT_COLOR] = _Str_18306;
             k[PropertyKeys.TEXT_STYLE] = _Str_25567;
             k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
-            k[PropertyKeys.MARGIN_TOP] = _Str_24238;
+            k[PropertyKeys.MARGIN_TOP] = setMarginTop;
             k[PropertyKeys.MARGIN_RIGHT] = _Str_22453;
             k[PropertyKeys.MARGIN_BOTTOM] = _Str_24630;
             k[PropertyKeys.OVERFLOW_REPLACE] = _Str_18098;
