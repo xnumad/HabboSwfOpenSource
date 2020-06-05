@@ -305,7 +305,7 @@
         {
             if ((k in this._chatEntries))
             {
-                this._Str_24402(k, ((_arg_2) ? "${messenger.notification.online}" : "${messenger.notification.offline}"));
+                this.recordInfoMessage(k, ((_arg_2) ? "${messenger.notification.online}" : "${messenger.notification.offline}"));
             }
         }
 
@@ -374,7 +374,7 @@
             this._Str_8645(k, new ChatEntry(ChatEntry._Str_10130, 0, _arg_2, 0));
         }
 
-        private function _Str_24402(k:int, _arg_2:String, _arg_3:Boolean=false):void
+        private function recordInfoMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
             this._Str_8645(k, new ChatEntry(ChatEntry._Str_12682, 0, _arg_2, 0), _arg_3);
         }
