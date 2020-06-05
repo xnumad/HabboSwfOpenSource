@@ -2,18 +2,18 @@
 {
     public class AvatarActionMessageData
     {
-        private var _Str_1659:String;
+        private var _actionType:String;
         private var _Str_1638:String;
 
         public function AvatarActionMessageData(k:String, _arg_2:String)
         {
-            this._Str_1659 = k;
+            this._actionType = k;
             this._Str_1638 = _arg_2;
         }
 
         public function get actionType():String
         {
-            return this._Str_1659;
+            return this._actionType;
         }
 
         public function get actionParameter():String
@@ -23,7 +23,7 @@
 
         public function toString():String
         {
-            return (this._Str_1659 + ":") + this._Str_1638;
+            return (this._actionType + ":") + this._Str_1638;
         }
     }
 }
