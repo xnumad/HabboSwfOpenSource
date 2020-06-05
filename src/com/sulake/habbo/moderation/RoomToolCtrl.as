@@ -350,7 +350,7 @@
                 this._main.windowManager.alert("Alert", "You must input a message to the user", 0, this._Str_3168);
                 return;
             }
-            var _local_2:int = this._Str_25499(k, this._kickCb.Selected);
+            var _local_2:int = this.determineAction(k, this._kickCb.Selected);
             this._main.connection.send(new _Str_5691(_local_2, this._msgInput.text, ""));
             if ((((this._lockCb.Selected) || (this._changeNameCb.Selected)) || (this._kickCb.Selected)))
             {
@@ -359,7 +359,7 @@
             this.dispose();
         }
 
-        private function _Str_25499(k:Boolean, _arg_2:Boolean):int
+        private function determineAction(k:Boolean, _arg_2:Boolean):int
         {
             if (_arg_2)
             {
