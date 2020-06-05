@@ -131,7 +131,7 @@
             var _local_3:int;
             var _local_2:IWindowContainer = IWindowContainer(this._navigator.getXmlWindow("grs_guest_room_details_phase_one"));
             _local_2.background = true;
-            _local_2.addEventListener(WindowMouseEvent.MOVE, this._Str_4955);
+            _local_2.addEventListener(WindowMouseEvent.MOVE, this.onMouseMove);
             _local_2.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
             _local_2.addEventListener(WindowMouseEvent.OUT, this.onMouseOut);
             _local_2.addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
@@ -216,7 +216,7 @@
             Util._Str_21212(_local_3, _arg_2.roomName, ((_local_4) ? (_local_3.width - 20) : _local_3.width));
         }
 
-        protected function _Str_4955(k:WindowEvent):void
+        protected function onMouseMove(k:WindowEvent):void
         {
             this.checkFastHorizontalMove(k);
         }

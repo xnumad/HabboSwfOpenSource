@@ -23,7 +23,7 @@
         {
             var _local_2:IWindowContainer = IWindowContainer(_navigator.getXmlWindow("grs_room_ads_details_phase_one"));
             _local_2.background = true;
-            _local_2.addEventListener(WindowMouseEvent.MOVE, _Str_4955);
+            _local_2.addEventListener(WindowMouseEvent.MOVE, onMouseMove);
             _local_2.addEventListener(WindowMouseEvent.OVER, onMouseOver);
             _local_2.addEventListener(WindowMouseEvent.OUT, onMouseOut);
             _local_2.addEventListener(WindowMouseEvent.CLICK, this.onMouseClick);
