@@ -59,7 +59,7 @@
         protected var _lastErrorCode:int = -1;
         protected var _windowServices:IInternalWindowServices;
         protected var _windowParser:IWindowParser;
-        protected var _Str_18011:IWindowFactory;
+        protected var _windowFactory:IWindowFactory;
         protected var _widgetFactory:IWidgetFactory;
         protected var _Str_5526:IResourceManager;
         protected var _Str_2867:IDesktopWindow;
@@ -78,7 +78,7 @@
             this._configurationManager = _arg_7;
             this._rootDisplayObject = _arg_8;
             this._windowServices = new ServiceManager(this, _arg_8);
-            this._Str_18011 = _arg_3;
+            this._windowFactory = _arg_3;
             this._widgetFactory = _arg_4;
             this._Str_5526 = _arg_5;
             this._windowParser = new WindowParser(this);
@@ -190,7 +190,7 @@
                 _renderer = null;
                 this._localization = null;
                 this._rootDisplayObject = null;
-                this._Str_18011 = null;
+                this._windowFactory = null;
                 this._widgetFactory = null;
                 this._Str_5526 = null;
             }
@@ -234,7 +234,7 @@
 
         public function getWindowFactory():IWindowFactory
         {
-            return this._Str_18011;
+            return this._windowFactory;
         }
 
         public function getDesktopWindow():IDesktopWindow
