@@ -746,7 +746,7 @@
             _context.invalidate(this, k, WindowRedrawFlag.REDRAW);
         }
 
-        public function _Str_25488():uint
+        public function resolve():uint
         {
             return 0;
         }

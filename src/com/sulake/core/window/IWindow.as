@@ -84,7 +84,7 @@
         function toString():String;
         function clone():IWindow;
         function invalidate(_arg_1:Rectangle=null):void;
-        function _Str_25488():uint;
+        function resolve():uint;
         function buildFromXML(_arg_1:XML, _arg_2:Map=null):Boolean;
         function center():void;
         function offset(_arg_1:Number, _arg_2:Number):void;
