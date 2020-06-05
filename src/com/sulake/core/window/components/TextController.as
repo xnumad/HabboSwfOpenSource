@@ -161,7 +161,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_19185(k:TextController, _arg_2:Boolean):void
+        private static function setEmbedFonts(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.embedFonts = _arg_2;
         }
@@ -851,7 +851,7 @@
 
         public function set embedFonts(k:Boolean):void
         {
-            _Str_19185(this, k);
+            setEmbedFonts(this, k);
         }
 
         public function set fontFace(k:String):void
