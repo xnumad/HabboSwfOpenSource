@@ -27,7 +27,7 @@
         function _Str_4725(_arg_1:IWindow):IWindow;
         function _Str_17500(_arg_1:int):IWindow;
         function _Str_17625(_arg_1:IWindow, _arg_2:int):void;
-        function _Str_13972(_arg_1:IWindow, _arg_2:IWindow):void;
+        function swapGridItems(_arg_1:IWindow, _arg_2:IWindow):void;
         function swapGridItemsAt(_arg_1:int, _arg_2:int):void;
         function removeGridItems():void;
         function destroyGridItems():void;

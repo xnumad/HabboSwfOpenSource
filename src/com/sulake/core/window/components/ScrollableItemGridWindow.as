@@ -303,9 +303,9 @@
             this._Str_2448._Str_17625(k, _arg_2);
         }
 
-        public function _Str_13972(k:IWindow, _arg_2:IWindow):void
+        public function swapGridItems(k:IWindow, _arg_2:IWindow):void
         {
-            this._Str_2448._Str_13972(k, _arg_2);
+            this._Str_2448.swapGridItems(k, _arg_2);
         }
 
         public function swapGridItemsAt(k:int, _arg_2:int):void

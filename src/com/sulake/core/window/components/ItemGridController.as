@@ -307,14 +307,14 @@
             addListItemAt(k, _arg_2);
         }
 
-        public function _Str_13972(k:IWindow, _arg_2:IWindow):void
+        public function swapGridItems(k:IWindow, _arg_2:IWindow):void
         {
             throw (new Error("ItemGridWindow / Unimplemented method!"));
         }
 
         public function swapGridItemsAt(k:int, _arg_2:int):void
         {
-            this._Str_13972(this._Str_2830(k), this._Str_2830(_arg_2));
+            this.swapGridItems(this._Str_2830(k), this._Str_2830(_arg_2));
         }
 
         public function removeGridItems():void
