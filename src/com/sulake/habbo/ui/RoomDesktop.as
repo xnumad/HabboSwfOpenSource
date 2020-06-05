@@ -1082,7 +1082,7 @@
             }
         }
 
-        private function _Str_22621(k:RoomEngineObjectEvent):Boolean
+        private function isFurnitureSelectionDisabled(k:RoomEngineObjectEvent):Boolean
         {
             var _local_4:IRoomObjectModel;
             var _local_2:Boolean;
@@ -1125,7 +1125,7 @@
             switch (k.type)
             {
                 case RoomEngineObjectEvent.SELECTED:
-                    if (!this._Str_22621(k))
+                    if (!this.isFurnitureSelectionDisabled(k))
                     {
                         _local_4 = new RoomWidgetRoomObjectUpdateEvent(RoomWidgetRoomObjectUpdateEvent.OBJECT_SELECTED, _local_2, _local_3, k.roomId);
                     }
