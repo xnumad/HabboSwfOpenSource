@@ -94,7 +94,7 @@
             var _local_11:ChatBubbleSimulationEntity;
             if (this._oldChatAreaHeight == 0)
             {
-                this._oldChatAreaHeight = this._component._Str_9270._Str_12498;
+                this._oldChatAreaHeight = this._component.chatFlowViewer._Str_12498;
             }
             if (((!(this._lineByLineMode)) && (k.width < this._Str_25857)))
             {
@@ -104,7 +104,7 @@
             {
                 _local_2 = new ChatBubbleSimulationEntity(k, this._lineByLineMode);
             }
-            var _local_3:Point = new Point((k._Str_11643.x - (_local_2._Str_6163.width / 2)), this._component._Str_9270._Str_12498);
+            var _local_3:Point = new Point((k._Str_11643.x - (_local_2._Str_6163.width / 2)), this._component.chatFlowViewer._Str_12498);
             var _local_4:Point = this._component.roomEngine.getRoomCanvasScreenOffset(k.roomId);
             if (_local_4 != null)
             {
@@ -205,7 +205,7 @@
                 k._Str_4702 = true;
             }
             this.update(0);
-            this._component._Str_9270.update(0);
+            this._component.chatFlowViewer.update(0);
         }
 
         private function _Str_19305():void
@@ -303,7 +303,7 @@
         {
             var k:ChatBubbleSimulationEntity;
             var _local_2:ChatBubbleSimulationEntity;
-            if (this._component._Str_9270 == null)
+            if (this._component.chatFlowViewer == null)
             {
                 return;
             }
@@ -367,11 +367,11 @@
             {
                 return;
             }
-            if (!this._component._Str_9270)
+            if (!this._component.chatFlowViewer)
             {
                 return;
             }
-            var _local_3:int = this._component._Str_9270._Str_12498;
+            var _local_3:int = this._component.chatFlowViewer._Str_12498;
             if (this._oldChatAreaHeight != _local_3)
             {
                 if (this._oldChatAreaHeight < _local_3)

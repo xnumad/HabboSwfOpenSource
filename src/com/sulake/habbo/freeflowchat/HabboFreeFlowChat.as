@@ -411,7 +411,7 @@
             return new Point(_local_6, _local_7);
         }
 
-        public function get _Str_9270():ChatFlowViewer
+        public function get chatFlowViewer():ChatFlowViewer
         {
             return this._chatFlowViewer;
         }
