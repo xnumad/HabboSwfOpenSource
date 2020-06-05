@@ -185,7 +185,7 @@
             return _local_2;
         }
 
-        public function _Str_19928():IWindow
+        public function getRoomView():IWindow
         {
             if (this._layoutContainer == null)
             {

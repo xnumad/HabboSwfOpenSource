@@ -1499,7 +1499,7 @@
 
         public function setRoomViewColor(k:uint, _arg_2:int):void
         {
-            var _local_3:IWindowContainer = (this._layoutManager._Str_19928() as IWindowContainer);
+            var _local_3:IWindowContainer = (this._layoutManager.getRoomView() as IWindowContainer);
             if (_local_3 == null)
             {
                 return;
@@ -1527,7 +1527,7 @@
         public function setRoomBackgroundColor(k:int, _arg_2:int, _arg_3:int):void
         {
             this._roomBackgroundColor = ColorConverter.hslToRGB(((((k & 0xFF) << 16) + ((_arg_2 & 0xFF) << 8)) + (_arg_3 & 0xFF)));
-            var _local_4:IWindowContainer = (this._layoutManager._Str_19928() as IWindowContainer);
+            var _local_4:IWindowContainer = (this._layoutManager.getRoomView() as IWindowContainer);
             if (_local_4 == null)
             {
                 return;
