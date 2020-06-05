@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.parser.room.engine
 {
     import com.sulake.core.communication.messages.IMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5499;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateMessageData;
     import com.sulake.habbo.communication.messages.incoming.room.engine.AvatarActionMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
@@ -26,7 +26,7 @@
             return true;
         }
 
-        public function _Str_24400(k:int):_Str_5499
+        public function _Str_24400(k:int):UserUpdateMessageData
         {
             if (((k < 0) || (k >= this.userUpdateCount)))
             {
@@ -55,7 +55,7 @@
             var _local_19:Boolean;
             var _local_20:Array;
             var _local_21:int;
-            var _local_22:_Str_5499;
+            var _local_22:UserUpdateMessageData;
             var _local_23:String;
             var _local_24:Array;
             var _local_25:String;
@@ -136,7 +136,7 @@
                     }
                     _local_21++;
                 }
-                _local_22 = new _Str_5499(_local_4, _local_5, _local_6, _local_7, _local_8, _local_14, _local_13, _local_16, _local_17, _local_18, _local_19, _local_12, _local_15);
+                _local_22 = new UserUpdateMessageData(_local_4, _local_5, _local_6, _local_7, _local_8, _local_14, _local_13, _local_16, _local_17, _local_18, _local_19, _local_12, _local_15);
                 this._users.push(_local_22);
                 _local_3++;
             }

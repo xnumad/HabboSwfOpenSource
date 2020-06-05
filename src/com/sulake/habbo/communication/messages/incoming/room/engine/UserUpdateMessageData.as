@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.engine
 {
-    public class _Str_5499 
+    public class UserUpdateMessageData
     {
         private var _id:int = 0;
         private var _x:Number = 0;
@@ -16,7 +16,7 @@
         private var _Str_19151:Boolean = false;
         private var _Str_11245:Boolean = false;
 
-        public function _Str_5499(k:int, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:int, _arg_7:int, _arg_8:Number, _arg_9:Number, _arg_10:Number, _arg_11:Boolean, _arg_12:Boolean, _arg_13:Array)
+        public function UserUpdateMessageData(k:int, _arg_2:Number, _arg_3:Number, _arg_4:Number, _arg_5:Number, _arg_6:int, _arg_7:int, _arg_8:Number, _arg_9:Number, _arg_10:Number, _arg_11:Boolean, _arg_12:Boolean, _arg_13:Array)
         {
             this._Str_614 = [];
             super();

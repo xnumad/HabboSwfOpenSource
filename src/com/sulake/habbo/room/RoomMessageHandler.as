@@ -83,7 +83,7 @@
     import com.sulake.habbo.room.object.RoomObjectUserTypes;
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5499;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateMessageData;
     import com.sulake.habbo.communication.messages.incoming.room.engine.AvatarActionMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UserUpdateMessageParser;
     import com.sulake.room.IRoomInstance;
@@ -822,7 +822,7 @@
 
         private function onUserUpdate(k:IMessageEvent):void
         {
-            var _local_7:_Str_5499;
+            var _local_7:UserUpdateMessageData;
             var _local_8:Number;
             var _local_9:IVector3d;
             var _local_10:IVector3d;
