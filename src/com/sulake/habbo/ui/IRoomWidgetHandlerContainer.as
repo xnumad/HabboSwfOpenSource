@@ -70,7 +70,7 @@
         function getRoomViewRect():Rectangle;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
         function addUpdateListener(_arg_1:IRoomWidgetHandler):void;
-        function _Str_20159(_arg_1:IRoomWidgetHandler):void;
+        function removeUpdateListener(_arg_1:IRoomWidgetHandler):void;
         function isOwnerOfFurniture(_arg_1:IRoomObject):Boolean;
         function getFurnitureOwnerId(_arg_1:IRoomObject):int;
         function _Str_25220(_arg_1:RoomUserData):Boolean;

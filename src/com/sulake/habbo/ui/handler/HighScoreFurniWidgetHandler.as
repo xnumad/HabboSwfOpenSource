@@ -52,7 +52,7 @@
         {
             if (this._container)
             {
-                this._container._Str_20159(this);
+                this._container.removeUpdateListener(this);
             }
             this._isDisposed = true;
             this._container = null;

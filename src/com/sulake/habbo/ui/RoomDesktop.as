@@ -2004,7 +2004,7 @@
             }
         }
 
-        public function _Str_20159(k:IRoomWidgetHandler):void
+        public function removeUpdateListener(k:IRoomWidgetHandler):void
         {
             if (this._updateListeners == null)
             {
