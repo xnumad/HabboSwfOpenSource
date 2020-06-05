@@ -11,7 +11,7 @@
         function get chatContainer():IDisplayObjectWrapper;
         function disposeDesktop(_arg_1:String):void;
         function getDesktop(_arg_1:String):IRoomDesktop;
-        function _Str_17538(_arg_1:int):int;
+        function getActiveCanvasId(_arg_1:int):int;
         function set visible(_arg_1:Boolean):void;
         function _Str_25327(_arg_1:String):void;
         function showGamePlayerName(_arg_1:int, _arg_2:String, _arg_3:uint, _arg_4:int):void;

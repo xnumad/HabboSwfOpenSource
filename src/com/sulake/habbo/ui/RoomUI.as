@@ -921,7 +921,7 @@
             switch (k.type)
             {
                 case RoomEngineEvent.INITIALIZED:
-                    _local_3.createRoomView(this._Str_17538(k.roomId));
+                    _local_3.createRoomView(this.getActiveCanvasId(k.roomId));
                     if (((!(this._roomEngine == null)) && (!(RoomId.isRoomPreviewerId(k.roomId)))))
                     {
                         this._roomEngine.setActiveRoom(k.roomId);
@@ -1025,7 +1025,7 @@
                     {
                         return;
                     }
-                    this._roomEngine._Str_5041(this._roomEngine.activeRoomId, this._Str_17538(this._roomEngine.activeRoomId), ((_local_6.level < 1) ? 0.5 : (1 << (Math.floor(_local_6.level) - 1))), null, null, _local_6._Str_25423);
+                    this._roomEngine._Str_5041(this._roomEngine.activeRoomId, this.getActiveCanvasId(this._roomEngine.activeRoomId), ((_local_6.level < 1) ? 0.5 : (1 << (Math.floor(_local_6.level) - 1))), null, null, _local_6._Str_25423);
                     return;
                 case RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR:
                     _local_3.processEvent(k);
@@ -1156,7 +1156,7 @@
             return this._desktops.getValue(k) as RoomDesktop;
         }
 
-        public function _Str_17538(k:int):int
+        public function getActiveCanvasId(k:int):int
         {
             return 1;
         }
