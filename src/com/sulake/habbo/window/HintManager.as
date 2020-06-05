@@ -119,11 +119,11 @@
             var _local_7:int = this._hint.height;
             this._hint.width = (this._hint.width * 0.4);
             this._hint.height = (this._hint.height * 0.4);
-            var _local_8:Motion = new Queue(new Combo(new EaseOut(new MoveTo(this._hint, _local_5, this._absTargetRect.x, this._absTargetRect.y), 1), new ResizeTo(this._hint, _local_5, _local_6, _local_7)), new Callback(this._Str_9372));
+            var _local_8:Motion = new Queue(new Combo(new EaseOut(new MoveTo(this._hint, _local_5, this._absTargetRect.x, this._absTargetRect.y), 1), new ResizeTo(this._hint, _local_5, _local_6, _local_7)), new Callback(this.motionComplete));
             Motions._Str_4598(_local_8);
         }
 
-        protected function _Str_9372(k:Motion):void
+        protected function motionComplete(k:Motion):void
         {
             this._windowManager.registerUpdateReceiver(this, 10);
             this.update(0);

@@ -95,11 +95,11 @@
             var _local_2:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + _Str_3226);
             if (_Str_3510)
             {
-                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this._Str_9372));
+                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this.motionComplete));
             }
             else
             {
-                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this._Str_9372));
+                _local_3 = new Queue(new EaseOut(new MoveTo(_window, _Str_7674, _local_2, _window.y), 1), new Callback(this.motionComplete));
             }
             Motions._Str_4598(_local_3);
         }
@@ -115,7 +115,7 @@
             Motions._Str_4598(_local_2);
         }
 
-        private function _Str_9372(k:Motion):void
+        private function motionComplete(k:Motion):void
         {
             if (((_Str_3510) && (_window)))
             {
