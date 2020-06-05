@@ -42,7 +42,7 @@
                 _window.findChildByName("days").visible = false;
                 _window.findChildByName("join").visible = true;
                 this._Str_15051 = "join";
-                this._Str_2497(this._Str_8446);
+                this.setText(this._Str_8446);
             }
             else
             {
@@ -51,11 +51,11 @@
                 this._Str_15051 = "days";
                 if (((!(_arg_2 == -1)) && (_arg_2 < (60 * 24))))
                 {
-                    this._Str_2497(FriendlyTime.shortFormat(this._toolbar.catalog.localization, (_arg_2 * 60)));
+                    this.setText(FriendlyTime.shortFormat(this._toolbar.catalog.localization, (_arg_2 * 60)));
                 }
                 else
                 {
-                    this._Str_2497(FriendlyTime.shortFormat(this._toolbar.catalog.localization, (k * 86400)));
+                    this.setText(FriendlyTime.shortFormat(this._toolbar.catalog.localization, (k * 86400)));
                 }
             }
         }
@@ -100,7 +100,7 @@
             {
                 case HabboClubLevelEnum.NO_CLUB:
                     this._Str_5997(_Str_3830);
-                    _Str_2497(this._Str_8446);
+                    setText(this._Str_8446);
                     return;
                 case HabboClubLevelEnum.CLUB:
                     this._Str_5997(_Str_5044);

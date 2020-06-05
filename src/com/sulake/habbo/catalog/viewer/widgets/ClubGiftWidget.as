@@ -240,8 +240,8 @@
             {
                 return null;
             }
-            this._Str_2497(_local_3.findChildByName("gift_name"), _local_5.name);
-            this._Str_2497(_local_3.findChildByName("gift_desc"), _local_5.description);
+            this.setText(_local_3.findChildByName("gift_name"), _local_5.name);
+            this.setText(_local_3.findChildByName("gift_desc"), _local_5.description);
             if (_arg_2._Str_12313)
             {
                 _local_6 = (_arg_2._Str_21146 - this._controller.purse.pastVipDays);
@@ -280,7 +280,7 @@
                     _local_7 = "";
                 }
             }
-            this._Str_2497(_local_3.findChildByName("months_required"), ((_local_7.length > 0) ? this._controller.localization.getLocalization(_local_7) : ""));
+            this.setText(_local_3.findChildByName("months_required"), ((_local_7.length > 0) ? this._controller.localization.getLocalization(_local_7) : ""));
             var _local_8:IIconWindow = (_local_3.findChildByName("vip_icon") as IIconWindow);
             if (_local_8)
             {
@@ -319,7 +319,7 @@
             return _local_3;
         }
 
-        private function _Str_2497(k:IWindow, _arg_2:String):void
+        private function setText(k:IWindow, _arg_2:String):void
         {
             k.caption = _arg_2;
         }

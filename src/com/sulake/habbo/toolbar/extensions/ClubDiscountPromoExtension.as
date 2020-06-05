@@ -123,11 +123,11 @@
             switch (this._toolbar.inventory.clubLevel)
             {
                 case HabboClubLevelEnum.NO_CLUB:
-                    this._Str_2497("${discount.bar.no.club.promo}");
+                    this.setText("${discount.bar.no.club.promo}");
                     this._Str_5997(_Str_3830);
                     break;
                 case HabboClubLevelEnum.VIP:
-                    this._Str_2497("${discount.bar.vip.expiring}");
+                    this.setText("${discount.bar.vip.expiring}");
                     this._Str_5997(_Str_3830);
                     break;
             }
@@ -184,7 +184,7 @@
             return false;
         }
 
-        private function _Str_2497(k:String):void
+        private function setText(k:String):void
         {
             var _local_2:ITextWindow;
             var _local_3:ITextWindow;

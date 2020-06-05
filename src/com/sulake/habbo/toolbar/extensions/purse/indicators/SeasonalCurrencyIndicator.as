@@ -94,7 +94,7 @@
             {
                 _Str_13549(false);
             }
-            _Str_2497(_local_3);
+            setText(_local_3);
         }
     }
 }

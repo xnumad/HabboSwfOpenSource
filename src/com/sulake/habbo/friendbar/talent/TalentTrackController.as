@@ -712,8 +712,8 @@
                 _local_7 = ((!(_local_5 == "")) || (!(_local_6 == "")));
                 _local_3.findChildByName("action_separator").visible = _local_7;
                 _local_3.findChildByName("action_title").visible = _local_7;
-                this._Str_2497(_local_3, "action_description", _local_5);
-                this._Str_2497(_local_3, "action_link", _local_6);
+                this.setText(_local_3, "action_description", _local_5);
+                this.setText(_local_3, "action_link", _local_6);
                 _local_3.findChildByName("action_link").name = _local_2.badgeCode;
                 _local_3.findChildByName("progress_separator").visible = (!(_local_6 == ""));
                 if (((_local_2.badgeCode == _Str_2821._Str_13850) && (this._Str_25273)))
@@ -774,7 +774,7 @@
             return k;
         }
 
-        private function _Str_2497(k:IWindowContainer, _arg_2:String, _arg_3:String):void
+        private function setText(k:IWindowContainer, _arg_2:String, _arg_3:String):void
         {
             var _local_4:IWindow = k.findChildByName(_arg_2);
             _local_4.caption = _arg_3;

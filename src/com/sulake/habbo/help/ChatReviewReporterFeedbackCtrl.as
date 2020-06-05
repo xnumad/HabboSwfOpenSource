@@ -53,15 +53,15 @@
                 return;
             }
             this.prepare();
-            this._Str_2497("caption_txt", k, "caption");
-            this._Str_2497("body_txt", k, "body");
-            this._Str_2497("note_txt", k, "note");
+            this.setText("caption_txt", k, "caption");
+            this.setText("body_txt", k, "body");
+            this.setText("note_txt", k, "note");
             var _local_2:ITextWindow = ITextWindow(this._window.findChildByName("caption_txt"));
             this._window.findChildByName("body_txt").y = ((_local_2.y + _local_2.textHeight) + 5);
             this._window.visible = true;
         }
 
-        private function _Str_2497(k:String, _arg_2:String, _arg_3:String):void
+        private function setText(k:String, _arg_2:String, _arg_3:String):void
         {
             var _local_4:String = ((("guide.bully.request.reporter." + _arg_2) + ".") + _arg_3);
             if (this._habboHelp.localization.getLocalization(_local_4, "") == "")

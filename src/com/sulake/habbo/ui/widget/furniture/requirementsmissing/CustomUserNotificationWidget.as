@@ -52,12 +52,12 @@
                         break;
                     case RESPECTFAILEDSTAGE:
                         this._Str_6297("respect_giving_failed_notification_xml");
-                        this._Str_2497("stage");
+                        this.setText("stage");
                         this._Str_22240("stage");
                         break;
                     case RESPECTFAILEDAUDIENCE:
                         this._Str_6297("respect_giving_failed_notification_xml");
-                        this._Str_2497("audience");
+                        this.setText("audience");
                         this._Str_22240("audience");
                         break;
                 }
@@ -77,7 +77,7 @@
             this._window.findChildByName("bodytext").caption = (("${" + k) + ".viprequired.bodytext}");
         }
 
-        private function _Str_2497(k:String):void
+        private function setText(k:String):void
         {
             var _local_2:String = ("respect.giving.failed.no." + k);
             var _local_3:String = this._widgetHandler.container.localization.getLocalization(_local_2);

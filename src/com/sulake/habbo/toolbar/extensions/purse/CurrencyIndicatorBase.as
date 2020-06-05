@@ -172,10 +172,10 @@
 
         protected function setAmount(k:int, _arg_2:int=-1):void
         {
-            this._Str_2497(k.toString());
+            this.setText(k.toString());
         }
 
-        protected function _Str_2497(k:String):void
+        protected function setText(k:String):void
         {
             if (this._window)
             {

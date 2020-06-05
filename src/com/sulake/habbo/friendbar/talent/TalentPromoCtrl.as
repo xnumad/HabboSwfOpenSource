@@ -95,7 +95,7 @@
                 return;
             }
             this.prepareWindow();
-            this._Str_2497("title");
+            this.setText("title");
             this._window.x = 0;
             this._window.y = 0;
             if (this._Str_8061())
@@ -104,7 +104,7 @@
             }
         }
 
-        private function _Str_2497(k:String):void
+        private function setText(k:String):void
         {
             this._window.findChildByName((k + "_txt")).caption = (((("${talentpromo." + this._Str_7925) + ".") + k) + "}");
         }

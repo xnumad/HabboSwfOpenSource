@@ -479,7 +479,7 @@
             return _local_2.description;
         }
 
-        private function _Str_2497(k:IWindowContainer, _arg_2:String, _arg_3:String):void
+        private function setText(k:IWindowContainer, _arg_2:String, _arg_3:String):void
         {
             var _local_4:ITextWindow = ITextWindow(this.find(k, _arg_2));
             _local_4.caption = _arg_3;
@@ -490,8 +490,8 @@
         {
             var _local_3:IWindowContainer = IWindowContainer(this.find(this._configureContainer, "header_container"));
             this.find(_local_3, (_arg_2 + "_icon_bitmap")).visible = true;
-            this._Str_2497(_local_3, "conf_name_txt", this._Str_16874(this._updated.spriteId));
-            this._Str_2497(_local_3, "conf_desc_txt", this._Str_23026(this._updated.spriteId));
+            this.setText(_local_3, "conf_name_txt", this._Str_16874(this._updated.spriteId));
+            this.setText(_local_3, "conf_desc_txt", this._Str_23026(this._updated.spriteId));
             var _local_4:IWindow = this.find(_local_3, "conf_name_txt");
             var _local_5:IWindow = this.find(_local_3, "conf_desc_txt");
             _local_5.y = (_local_4.y + _local_4.height);
@@ -575,8 +575,8 @@
         private function _Str_22112(k:String, _arg_2:String):void
         {
             var _local_3:IWindowContainer = IWindowContainer(this.find(this._configureContainer, "warning_container"));
-            this._Str_2497(_local_3, "caption_txt", k);
-            this._Str_2497(_local_3, "desc_txt", _arg_2);
+            this.setText(_local_3, "caption_txt", k);
+            this.setText(_local_3, "desc_txt", _arg_2);
             var _local_4:IWindow = this.find(_local_3, "caption_txt");
             this.find(_local_3, "desc_txt").y = (_local_4.y + _local_4.height);
             _local_3.height = (Util.getLowestPoint(_local_3) + 4);

@@ -41,7 +41,7 @@
             return (this._Str_3484) ? "" : this._input.text;
         }
 
-        public function _Str_2497(k:String):void
+        public function setText(k:String):void
         {
             this._Str_3484 = false;
             this._input.text = k;

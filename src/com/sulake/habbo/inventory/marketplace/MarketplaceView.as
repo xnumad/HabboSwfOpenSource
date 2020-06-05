@@ -157,8 +157,8 @@
                 _local_6 = (("poster_" + k.stuffData.getLegacyString()) + "_desc");
             }
             this._furniName = this._localization.getLocalization(_local_5);
-            this._Str_2497("furni_name", ((("$" + "{") + _local_5) + "}"));
-            this._Str_2497("furni_desc", ((("$" + "{") + _local_6) + "}"));
+            this.setText("furni_name", ((("$" + "{") + _local_5) + "}"));
+            this.setText("furni_desc", ((("$" + "{") + _local_6) + "}"));
             this._view.procedure = this._Str_4612;
             this._view.center();
             var _local_7:ITextWindow = (this._view.findChildByName("average_price") as ITextWindow);
@@ -202,7 +202,7 @@
             _local_2.bitmap = _local_3;
         }
 
-        private function _Str_2497(k:String, _arg_2:String):void
+        private function setText(k:String, _arg_2:String):void
         {
             if (this._view == null)
             {

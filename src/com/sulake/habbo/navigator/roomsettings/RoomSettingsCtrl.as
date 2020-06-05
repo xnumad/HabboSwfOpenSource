@@ -110,7 +110,7 @@
 
         private static function setTag(k:TextFieldManager, _arg_2:String):void
         {
-            k._Str_2497(((_arg_2 == null) ? "" : (((_Str_8651) ? "#" : "") + _arg_2)));
+            k.setText(((_arg_2 == null) ? "" : (((_Str_8651) ? "#" : "") + _arg_2)));
         }
 
 
@@ -658,10 +658,10 @@
             var _local_6:IRadioButtonWindow;
             this._Str_18175 = true;
             var k:RoomSettingsData = this._roomSettingsData;
-            this._Str_5666._Str_2497(k.name);
-            this._Str_7105._Str_2497(k.description);
-            this._Str_4194._Str_2497("");
-            this._Str_7349._Str_2497("");
+            this._Str_5666.setText(k.name);
+            this._Str_7105.setText(k.description);
+            this._Str_4194.setText("");
+            this._Str_7349.setText("");
             var _local_2:ISelectorWindow = (this._window.findChildByName("doormode") as ISelectorWindow);
             if (this._navigator.data._Str_2678)
             {
@@ -766,7 +766,7 @@
             this._Str_15306.selection = k.chatSettings.mode;
             this._Str_6283.selection = k.chatSettings.bubbleWidth;
             this._Str_10492.selection = k.chatSettings.scrollSpeed;
-            this._Str_14650._Str_2497(k.chatSettings.fullHearRange.toString());
+            this._Str_14650.setText(k.chatSettings.fullHearRange.toString());
             this._Str_6390.selection = k.chatSettings.floodSensitivity;
             if (this._Str_6424)
             {

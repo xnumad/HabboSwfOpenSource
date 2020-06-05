@@ -47,9 +47,9 @@
             this._navigator = null;
         }
 
-        public function _Str_2497(k:String, _arg_2:int):void
+        public function setText(k:String, _arg_2:int):void
         {
-            this._searchStr._Str_2497(k);
+            this._searchStr.setText(k);
             if (this._searchType != null)
             {
                 switch (_arg_2)

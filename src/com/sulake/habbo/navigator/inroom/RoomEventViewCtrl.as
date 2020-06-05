@@ -68,8 +68,8 @@
         private function _Str_26474(k:_Str_3579):void
         {
             this._window.caption = this._navigator.getText("navigator.eventsettings.editcaption");
-            this._Str_5340._Str_2497(k.eventName);
-            this._Str_5951._Str_2497(k.eventDescription);
+            this._Str_5340.setText(k.eventName);
+            this._Str_5951.setText(k.eventDescription);
         }
 
         private function _Str_25306():void
@@ -128,14 +128,14 @@
             if (_local_3 == 0)
             {
                 this._Str_5340._Str_5374(this._navigator.getText("roomad.error.0.description"));
-                this._Str_5340._Str_2497(_local_2.filteredText);
+                this._Str_5340.setText(_local_2.filteredText);
             }
             else
             {
                 if (_local_3 == 1)
                 {
                     this._Str_5951._Str_5374(this._navigator.getText("roomad.error.0.description"));
-                    this._Str_5951._Str_2497(_local_2.filteredText);
+                    this._Str_5951.setText(_local_2.filteredText);
                 }
             }
         }

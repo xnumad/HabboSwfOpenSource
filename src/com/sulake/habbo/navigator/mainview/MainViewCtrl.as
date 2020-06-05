@@ -563,7 +563,7 @@
                 {
                     if (_arg_2 != Tabs._Str_5348)
                     {
-                        this._Str_6414._Str_2497(_arg_3, _arg_2);
+                        this._Str_6414.setText(_arg_3, _arg_2);
                     }
                 }
             }

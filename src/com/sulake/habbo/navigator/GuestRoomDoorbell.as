@@ -49,14 +49,14 @@
             }
             if (this._isWaiting)
             {
-                this._Str_2497("info", "${navigator.doorbell.waiting}");
-                this._Str_2497("cancel", "${navigator.doorbell.button.cancel.entering}");
+                this.setText("info", "${navigator.doorbell.waiting}");
+                this.setText("cancel", "${navigator.doorbell.button.cancel.entering}");
                 this.showButton("ring", false);
             }
             else
             {
-                this._Str_2497("info", "${navigator.doorbell.info}");
-                this._Str_2497("cancel", "${generic.cancel}");
+                this.setText("info", "${navigator.doorbell.info}");
+                this.setText("cancel", "${generic.cancel}");
                 this.showButton("ring", true);
             }
         }
@@ -74,7 +74,7 @@
             }
             this._window.visible = true;
             this._window.activate();
-            this._Str_2497("info", "${navigator.doorbell.no.answer}");
+            this.setText("info", "${navigator.doorbell.no.answer}");
             this.showButton("ring", false);
         }
 
@@ -117,7 +117,7 @@
             }
         }
 
-        private function _Str_2497(k:String, _arg_2:String):void
+        private function setText(k:String, _arg_2:String):void
         {
             if (this._window == null)
             {

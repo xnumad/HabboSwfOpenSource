@@ -83,7 +83,7 @@
             return this._window == null;
         }
 
-        private function _Str_2497(k:IWindow, _arg_2:String, _arg_3:String):void
+        private function setText(k:IWindow, _arg_2:String, _arg_3:String):void
         {
             var _local_4:String = ((_arg_2 + ".") + _arg_3);
             var _local_5:String = this._questEngine.localization.getLocalization(_local_4, "");
@@ -290,10 +290,10 @@
 
         private function _Str_22878(k:String, _arg_2:String):void
         {
-            this._Str_2497(this._Str_17393(), ("roomcompetition.caption." + k), _arg_2);
-            this._Str_2497(this._Str_25844(), ("roomcompetition.info." + k), _arg_2);
-            this._Str_2497(this._Str_4365(), ("roomcompetition.button." + k), _arg_2);
-            this._Str_2497(this._Str_19349(), ("roomcompetition.buttoninfo." + k), _arg_2);
+            this.setText(this._Str_17393(), ("roomcompetition.caption." + k), _arg_2);
+            this.setText(this._Str_25844(), ("roomcompetition.info." + k), _arg_2);
+            this.setText(this._Str_4365(), ("roomcompetition.button." + k), _arg_2);
+            this.setText(this._Str_19349(), ("roomcompetition.buttoninfo." + k), _arg_2);
             this.onResize();
         }
 

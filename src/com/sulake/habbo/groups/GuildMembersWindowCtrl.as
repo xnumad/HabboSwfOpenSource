@@ -593,7 +593,7 @@
             k.procedure = null;
             if (this._userNameFilter.getText() != this._data.userNameFilter)
             {
-                this._userNameFilter._Str_2497(this._data.userNameFilter);
+                this._userNameFilter.setText(this._data.userNameFilter);
             }
             k.procedure = this._Str_23009;
             this._searchTimer.stop();
