@@ -447,7 +447,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserUpdateEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FavoriteMembershipUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomPropertyMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectsDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
@@ -1196,7 +1196,7 @@
             INCOMING_PACKETS[2405] = _Str_7706;
             INCOMING_PACKETS[2429] = FigureUpdateEvent;
             INCOMING_PACKETS[2445] = GuildMembershipRejectedMessageEvent;
-            INCOMING_PACKETS[2454] = _Str_7999;
+            INCOMING_PACKETS[2454] = RoomPropertyMessageEvent;
             INCOMING_PACKETS[2468] = _Str_7365;
             INCOMING_PACKETS[2491] = AuthenticationOKMessageEvent;
             INCOMING_PACKETS[2493] = _Str_8120;

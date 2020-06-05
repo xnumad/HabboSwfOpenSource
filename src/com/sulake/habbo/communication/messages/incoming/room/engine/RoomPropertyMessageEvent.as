@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.RoomPropertyMessageParser;
 
-    public class _Str_7999 extends MessageEvent 
+    public class RoomPropertyMessageEvent extends MessageEvent
     {
-        public function _Str_7999(k:Function)
+        public function RoomPropertyMessageEvent(k:Function)
         {
             super(k, RoomPropertyMessageParser);
         }
