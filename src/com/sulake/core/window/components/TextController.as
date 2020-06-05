@@ -88,7 +88,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_23745(k:TextController, _arg_2:Boolean):void
+        private static function setAlwaysShowSelection(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.alwaysShowSelection = _arg_2;
         }
@@ -560,7 +560,7 @@
         protected static function _Str_19301():Dictionary
         {
             var k:Dictionary = new Dictionary();
-            k[PropertyKeys.ALWAYS_SHOW_SELECTION] = _Str_23745;
+            k[PropertyKeys.ALWAYS_SHOW_SELECTION] = setAlwaysShowSelection;
             k["background"] = _Str_16638;
             k["background_color"] = _Str_16255;
             k[PropertyKeys.BOLD] = _Str_17644;
