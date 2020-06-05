@@ -633,7 +633,7 @@
 
         public function unregisterHintWindow(k:String):void
         {
-            this._hintManager._Str_20106(k);
+            this._hintManager.unregisterWindow(k);
         }
 
         public function showHint(k:String, _arg_2:Rectangle=null):void

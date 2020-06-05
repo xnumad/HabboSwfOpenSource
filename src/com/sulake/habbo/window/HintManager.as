@@ -60,12 +60,12 @@
         {
             if (this._registeredWindows[k] != null)
             {
-                this._Str_20106(k);
+                this.unregisterWindow(k);
             }
             this._registeredWindows[k] = new _Str_7715(_arg_2, k, _arg_3);
         }
 
-        public function _Str_20106(k:String):void
+        public function unregisterWindow(k:String):void
         {
             if (this._Str_16927 == k)
             {
