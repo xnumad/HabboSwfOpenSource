@@ -877,7 +877,7 @@
             }
         }
 
-        public function _Str_22290(k:Rectangle=null, _arg_2:Rectangle=null, _arg_3:Rectangle=null, _arg_4:Rectangle=null):void
+        public function getRegionProperties(k:Rectangle=null, _arg_2:Rectangle=null, _arg_3:Rectangle=null, _arg_4:Rectangle=null):void
         {
             if (k != null)
             {
@@ -1204,7 +1204,7 @@
                             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                             break;
                         case WindowEvent.WINDOW_EVENT_PARENT_RESIZED:
-                            this._parent._Str_22290(null, this._lastParentRect);
+                            this._parent.getRegionProperties(null, this._lastParentRect);
                             this.updateScaleRelativeToParent();
                             break;
                         case WindowEvent.WINDOW_EVENT_CHILD_ADDED:
