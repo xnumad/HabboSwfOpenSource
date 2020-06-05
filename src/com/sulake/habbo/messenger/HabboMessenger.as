@@ -229,7 +229,7 @@
             Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));
             if (this._Str_2439 != null)
             {
-                this._Str_2439._Str_24983(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
+                this._Str_2439.addConsoleMessage(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
                 if (!this._Str_2439.isOpen)
                 {
                     this._Str_17105();

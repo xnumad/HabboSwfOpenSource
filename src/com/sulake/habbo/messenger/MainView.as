@@ -263,7 +263,7 @@
             this._Str_16374();
         }
 
-        public function _Str_24983(k:int, _arg_2:String, _arg_3:int, _arg_4:String):void
+        public function addConsoleMessage(k:int, _arg_2:String, _arg_3:int, _arg_4:String):void
         {
             this._Str_21468(k, _arg_2, true, _arg_3, _arg_4);
         }
