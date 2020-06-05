@@ -52,7 +52,7 @@
             }
             this._window = _arg_2.buildFromXML((_local_6.content as XML), 1);
             this._window.tags.push("notificationview");
-            this._window.context.getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_17251);
+            this._window.context.getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onRoomViewResized);
             this._window.procedure = this._Str_3061;
             this._window.blend = 0;
             this._window.visible = false;
@@ -311,7 +311,7 @@
             }
         }
 
-        private function _Str_17251(k:WindowEvent):void
+        private function onRoomViewResized(k:WindowEvent):void
         {
             this._Str_5615();
         }

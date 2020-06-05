@@ -1396,7 +1396,7 @@
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOWN, this.canvasMouseHandler);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP, this.canvasMouseHandler);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP_OUTSIDE, this.canvasMouseHandler);
-            this._roomCanvasWrapper.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_17251);
+            this._roomCanvasWrapper.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onRoomViewResized);
             var _local_10:Sprite = new Sprite();
             _local_10.mouseEnabled = false;
             _local_10.blendMode = BlendMode.MULTIPLY;
@@ -1653,7 +1653,7 @@
             this._roomEngine.handleRoomCanvasMouseEvent(this._canvasIDs[0], _local_3, _local_4, k.type, k.altKey, k.ctrlKey, k.shiftKey, k.buttonDown);
         }
 
-        private function _Str_17251(k:WindowEvent):void
+        private function onRoomViewResized(k:WindowEvent):void
         {
             var _local_2:IWindow = k.window;
             this._roomViewContainerRect = _local_2.rectangle;
