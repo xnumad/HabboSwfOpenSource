@@ -402,7 +402,7 @@
         {
             if (this._Str_2448.getGridItemIndex(k.gridItem.view) >= 0)
             {
-                this._Str_2448._Str_4725(k.gridItem.view);
+                this._Str_2448.removeGridItem(k.gridItem.view);
             }
         }
 

@@ -24,7 +24,7 @@
         function getGridItemByName(_arg_1:String):IWindow;
         function getGridItemByTag(_arg_1:String):IWindow;
         function getGridItemIndex(_arg_1:IWindow):int;
-        function _Str_4725(_arg_1:IWindow):IWindow;
+        function removeGridItem(_arg_1:IWindow):IWindow;
         function _Str_17500(_arg_1:int):IWindow;
         function _Str_17625(_arg_1:IWindow, _arg_2:int):void;
         function swapGridItems(_arg_1:IWindow, _arg_2:IWindow):void;

@@ -42,7 +42,7 @@
             }
             if (_local_4 > -1)
             {
-                this._iterable._Str_4725(_local_3);
+                this._iterable.removeGridItem(_local_3);
             }
             this._iterable.addGridItemAt(_local_3, uint(k));
         }

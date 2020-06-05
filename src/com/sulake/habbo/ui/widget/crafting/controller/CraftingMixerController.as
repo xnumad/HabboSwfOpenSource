@@ -99,7 +99,7 @@
                     this._renderers.splice(_local_2, 1);
                     if (_local_3.window)
                     {
-                        this.container._Str_4725(_local_3.window);
+                        this.container.removeGridItem(_local_3.window);
                         this.container.rebuildGridStructure();
                     }
                     _local_3.returnItemToInventory();

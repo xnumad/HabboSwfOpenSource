@@ -127,7 +127,7 @@
             }
             var _local_2:IItemGridWindow = (this.window.findChildByName("itemgrid_products") as IItemGridWindow);
             this._itemTemplate = (_local_2.getGridItemAt(0) as IWindowContainer);
-            _local_2._Str_4725(this._itemTemplate);
+            _local_2.removeGridItem(this._itemTemplate);
             this.window.procedure = this._Str_3055;
             this.window.center();
         }

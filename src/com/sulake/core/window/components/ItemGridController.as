@@ -270,7 +270,7 @@
             return (_local_2.getListItemIndex(k) * this.numColumns) + this._Str_22838(_local_2);
         }
 
-        public function _Str_4725(k:IWindow):IWindow
+        public function removeGridItem(k:IWindow):IWindow
         {
             var _local_2:int = this.getGridItemIndex(k);
             if (_local_2 == -1)
@@ -295,12 +295,12 @@
 
         public function _Str_17500(k:int):IWindow
         {
-            return this._Str_4725(this.getGridItemAt(k));
+            return this.removeGridItem(this.getGridItemAt(k));
         }
 
         public function _Str_17625(k:IWindow, _arg_2:int):void
         {
-            if (this._Str_4725(k) == null)
+            if (this.removeGridItem(k) == null)
             {
                 throw (new Error("Item not found in grid!"));
             }
@@ -370,7 +370,7 @@
             if (k.type == WindowEvent.WINDOW_EVENT_DESTROYED)
             {
                 _local_2 = (k.target as IWindow);
-                this._Str_4725(_local_2);
+                this.removeGridItem(_local_2);
             }
         }
 

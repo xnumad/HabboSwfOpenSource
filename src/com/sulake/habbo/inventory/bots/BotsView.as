@@ -97,7 +97,7 @@
             {
                 return;
             }
-            this._grid._Str_4725(_local_2.window);
+            this._grid.removeGridItem(_local_2.window);
             if (this._selectedGridItem == _local_2)
             {
                 this._selectedGridItem = null;
