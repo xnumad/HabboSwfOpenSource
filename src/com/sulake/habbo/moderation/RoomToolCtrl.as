@@ -248,7 +248,7 @@
             _local_6.height = (_local_6.textHeight + 5);
             var _local_7:IWindowContainer = IWindowContainer(_local_4.findChildByName("tags_cont"));
             var _local_8:ITextWindow = ITextWindow(_local_7.findChildByName("tags_txt"));
-            _local_8.caption = this._Str_25247(k.tags);
+            _local_8.caption = this.getTagsAsString(k.tags);
             _local_8.height = (_local_8.textHeight + 5);
             _local_7.height = _local_8.height;
             if (k.tags.length < 1)
@@ -261,7 +261,7 @@
             Logger.log(((((((((((("XXXX: " + _local_3.height) + ", ") + _local_4.height) + ", ") + _local_5.height) + ", ") + _local_6.height) + ", ") + _local_7.height) + ", ") + _local_8.height));
         }
 
-        private function _Str_25247(k:Array):String
+        private function getTagsAsString(k:Array):String
         {
             var _local_3:String;
             var _local_2:String = "";
