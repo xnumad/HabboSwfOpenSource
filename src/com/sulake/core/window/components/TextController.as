@@ -40,7 +40,7 @@
         protected var _scrollH:Number;
         protected var _scrollV:Number;
         protected var _drawing:Boolean;
-        protected var _Str_2480:TextMargins;
+        protected var _margins:TextMargins;
         protected var _Str_4318:String = "none";
         protected var _Str_2959:Boolean = false;
         protected var _Str_22084:int = 0;
@@ -55,7 +55,7 @@
         public function TextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             this._Str_3808 = new TextStyle();
-            this._Str_2480 = new TextMargins(0, 0, 0, 0, this.setTextMargins);
+            this._margins = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             this._drawing = false;
             this._scrollH = 0;
             this._scrollV = 0;
@@ -240,20 +240,20 @@
 
         private static function setTextMarginMap(k:TextController, _arg_2:Map):void
         {
-            if (k._Str_2480)
+            if (k._margins)
             {
-                k._Str_2480.assign(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
+                k._margins.assign(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
             }
             else
             {
-                k._Str_2480 = new TextMargins(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
+                k._margins = new TextMargins(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
             }
             k.refreshTextImage();
         }
 
         private static function setMarginLeft(k:TextController, _arg_2:int):void
         {
-            if (((k._Str_2480) && (!(k._Str_2480.left == _arg_2))))
+            if (((k._margins) && (!(k._margins.left == _arg_2))))
             {
                 k.margins.left = _arg_2;
             }
@@ -261,7 +261,7 @@
 
         private static function setMarginTop(k:TextController, _arg_2:int):void
         {
-            if (((k._Str_2480) && (!(k._Str_2480.top == _arg_2))))
+            if (((k._margins) && (!(k._margins.top == _arg_2))))
             {
                 k.margins.top = _arg_2;
             }
@@ -269,7 +269,7 @@
 
         private static function setMarginRight(k:TextController, _arg_2:int):void
         {
-            if (((k._Str_2480) && (!(k._Str_2480.right == _arg_2))))
+            if (((k._margins) && (!(k._margins.right == _arg_2))))
             {
                 k.margins.right = _arg_2;
             }
@@ -277,7 +277,7 @@
 
         private static function setMarginBottom(k:TextController, _arg_2:int):void
         {
-            if (((k._Str_2480) && (!(k._Str_2480.bottom == _arg_2))))
+            if (((k._margins) && (!(k._margins.bottom == _arg_2))))
             {
                 k.margins.bottom = _arg_2;
             }
@@ -691,7 +691,7 @@
 
         public function get margins():IMargins
         {
-            return this._Str_2480;
+            return this._margins;
         }
 
         public function get maxChars():int
@@ -1139,7 +1139,7 @@
             k._field.background = background;
             k._scrollH = this._scrollH;
             k._scrollV = this._scrollV;
-            k._Str_2480 = this._Str_2480.clone(k.setTextMargins);
+            k._margins = this._margins.clone(k.setTextMargins);
             k._Str_4318 = this._Str_4318;
             k._Str_2959 = this._Str_2959;
             return k;
@@ -1153,10 +1153,10 @@
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
             }
-            if (this._Str_2480 != null)
+            if (this._margins != null)
             {
-                this._Str_2480.dispose();
-                this._Str_2480 = null;
+                this._margins.dispose();
+                this._margins = null;
             }
             this._field = null;
             super.dispose();
@@ -1191,8 +1191,8 @@
                 return;
             }
             this._drawing = true;
-            var _local_2:int = (this._Str_2480.left + this._Str_2480.right);
-            var _local_3:int = (this._Str_2480.top + this._Str_2480.bottom);
+            var _local_2:int = (this._margins.left + this._margins.right);
+            var _local_3:int = (this._margins.top + this._margins.bottom);
             var _local_4:int = (_w - _local_2);
             var _local_5:int = (_h - _local_3);
             var _local_6:int = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
@@ -1368,14 +1368,14 @@
 
         public function setTextMargins(k:IMargins):void
         {
-            if (k != this._Str_2480)
+            if (k != this._margins)
             {
-                this._Str_2480.dispose();
-                this._Str_2480 = new TextMargins(k.left, k.top, k.right, k.bottom, this.setTextMargins);
+                this._margins.dispose();
+                this._margins = new TextMargins(k.left, k.top, k.right, k.bottom, this.setTextMargins);
             }
             if (this._Str_4318 == TextFieldAutoSize.LEFT)
             {
-                this._field.width = ((_w - this._Str_2480.left) - this._Str_2480.right);
+                this._field.width = ((_w - this._margins.left) - this._margins.right);
             }
             this.refreshTextImage();
         }
@@ -1444,10 +1444,10 @@
             var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : getDefaultProperty(PropertyKeys.TEXT_COLOR).value));
             k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, this._field.textColor, PropertyStruct.HEX, (!(this._field.textColor == _local_3))));
             k.push(createProperty(PropertyKeys.TEXT_STYLE, this._Str_4040));
-            k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._Str_2480.left));
-            k.push(createProperty(PropertyKeys.MARGIN_TOP, this._Str_2480.top));
-            k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._Str_2480.right));
-            k.push(createProperty(PropertyKeys.MARGIN_BOTTOM, this._Str_2480.bottom));
+            k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._margins.left));
+            k.push(createProperty(PropertyKeys.MARGIN_TOP, this._margins.top));
+            k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._margins.right));
+            k.push(createProperty(PropertyKeys.MARGIN_BOTTOM, this._margins.bottom));
             k.push(createProperty(PropertyKeys.MOUSE_WHEEL_ENABLED, this._field.mouseWheelEnabled));
             k.push(createProperty(PropertyKeys.MAX_CHARS, this._field.maxChars));
             k.push(createProperty(PropertyKeys.MULTILINE, this._field.multiline));
