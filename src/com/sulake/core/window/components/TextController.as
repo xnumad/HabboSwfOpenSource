@@ -227,7 +227,7 @@
             k._Str_3808.fontStyle = ((_arg_2) ? TextStyle.ITALIC : TextStyle.NORMAL);
         }
 
-        private static function _Str_18973(k:TextController, _arg_2:Boolean):void
+        private static function setKerning(k:TextController, _arg_2:Boolean):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.kerning = _arg_2;
@@ -574,7 +574,7 @@
             k[PropertyKeys.FONT_SIZE] = setFontSize;
             k[PropertyKeys.GRID_FIT_TYPE] = setGridFitType;
             k[PropertyKeys.ITALIC] = setItalic;
-            k[PropertyKeys.KERNING] = _Str_18973;
+            k[PropertyKeys.KERNING] = setKerning;
             k[PropertyKeys.MAX_CHARS] = _Str_18813;
             k[PropertyKeys.MULTILINE] = _Str_17885;
             k[PropertyKeys.RESTRICT] = _Str_17907;
@@ -881,7 +881,7 @@
 
         public function set kerning(k:Boolean):void
         {
-            _Str_18973(this, k);
+            setKerning(this, k);
         }
 
         public function set maxChars(k:int):void
