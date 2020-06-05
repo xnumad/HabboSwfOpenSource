@@ -302,7 +302,7 @@
             return this._localizationManager;
         }
 
-        internal function _Str_6694(k:int):void
+        internal function reportUser(k:int):void
         {
             this._help.reportUserFromIM(k);
         }

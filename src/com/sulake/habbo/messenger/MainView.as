@@ -815,7 +815,7 @@
                             }
                             break;
                         case "report_button":
-                            this._messenger._Str_6694(this._currentConversationId);
+                            this._messenger.reportUser(this._currentConversationId);
                             break;
                         case "header_button_close":
                             this.hide();

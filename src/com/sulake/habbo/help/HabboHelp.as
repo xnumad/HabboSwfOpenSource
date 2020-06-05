@@ -214,7 +214,7 @@
             }
         }
 
-        public function _Str_6694(k:int, _arg_2:int, _arg_3:String):void
+        public function reportUser(k:int, _arg_2:int, _arg_3:String):void
         {
             this._callForHelpManager._Str_2662 = k;
             this._topicsFlowHelpController._Str_25197();

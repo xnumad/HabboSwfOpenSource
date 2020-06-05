@@ -200,11 +200,11 @@
             }
             else
             {
-                this._Str_6694(k, HabboHelp._Str_5723, 123);
+                this.reportUser(k, HabboHelp._Str_5723, 123);
             }
         }
 
-        public function _Str_6694(k:int, _arg_2:int, _arg_3:int):void
+        public function reportUser(k:int, _arg_2:int, _arg_3:int):void
         {
             this._reportedUserId = k;
             this._reportedRoomId = -1;
@@ -249,7 +249,7 @@
 
         public function _Str_22391():void
         {
-            this._Str_6694(0, HabboHelp._Str_5723, -1);
+            this.reportUser(0, HabboHelp._Str_5723, -1);
         }
 
         private function _Str_22936():void
