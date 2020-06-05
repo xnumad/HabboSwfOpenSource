@@ -6,17 +6,17 @@
     {
         public static const HRWE_HIDE_ROOM_WIDGET:String = "hrwe_hide_room_widget";
 
-        private var _Str_9477:String;
+        private var _widgetType:String;
 
         public function HideRoomWidgetEvent(k:String, _arg_2:Boolean=false, _arg_3:Boolean=false)
         {
             super(HRWE_HIDE_ROOM_WIDGET, _arg_2, _arg_3);
-            this._Str_9477 = k;
+            this._widgetType = k;
         }
 
         public function get _Str_23558():String
         {
-            return this._Str_9477;
+            return this._widgetType;
         }
     }
 }
