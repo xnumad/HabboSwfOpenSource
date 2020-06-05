@@ -1219,7 +1219,7 @@
                                     expandToAccommodateChild(this, _arg_2.related);
                                 }
                             }
-                            this._Str_19941();
+                            this.renderDynamicStyle();
                             break;
                         case WindowEvent.WINDOW_EVENT_CHILD_REMOVED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
@@ -1273,7 +1273,7 @@
             return true;
         }
 
-        private function _Str_19941():void
+        private function renderDynamicStyle():void
         {
             var k:uint;
             if (_dynamicStyle == "")
@@ -1731,7 +1731,7 @@
             _state = ((_arg_2) ? _state = (_state | k) : _state = (_state & (~(k))));
             if (_state != _local_3)
             {
-                this._Str_19941();
+                this.renderDynamicStyle();
                 _context.invalidate(this, null, WindowRedrawFlag.STATE);
             }
         }
