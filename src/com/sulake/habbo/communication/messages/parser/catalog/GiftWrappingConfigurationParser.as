@@ -8,7 +8,7 @@
         private var _wrappingEnabled:Boolean;
         private var _wrappingPrice:int;
         private var _stuffTypes:Array;
-        private var _Str_3691:Array;
+        private var _boxTypes:Array;
         private var _Str_4062:Array;
         private var _Str_8259:Array;
 
@@ -30,7 +30,7 @@
 
         public function get boxTypes():Array
         {
-            return this._Str_3691;
+            return this._boxTypes;
         }
 
         public function get ribbonTypes():Array
@@ -52,7 +52,7 @@
         {
             var _local_2:int;
             this._stuffTypes = [];
-            this._Str_3691 = [];
+            this._boxTypes = [];
             this._Str_4062 = [];
             this._Str_8259 = [];
             this._wrappingEnabled = k.readBoolean();
@@ -68,7 +68,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_3691.push(k.readInteger());
+                this._boxTypes.push(k.readInteger());
                 _local_2++;
             }
             _local_3 = k.readInteger();
