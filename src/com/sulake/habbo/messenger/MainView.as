@@ -270,7 +270,7 @@
 
         public function addRoomInvite(k:int, _arg_2:String):void
         {
-            this._Str_25852(k, ((this._messenger.getText("messenger.invitation") + " ") + _arg_2), true);
+            this.recordInvitationMessage(k, ((this._messenger.getText("messenger.invitation") + " ") + _arg_2), true);
         }
 
         public function setFollowingAllowed(k:int, _arg_2:Boolean):void
@@ -379,7 +379,7 @@
             this._Str_8645(k, new ChatEntry(ChatEntry._Str_12682, 0, _arg_2, 0), _arg_3);
         }
 
-        private function _Str_25852(k:int, _arg_2:String, _arg_3:Boolean=false):void
+        private function recordInvitationMessage(k:int, _arg_2:String, _arg_3:Boolean=false):void
         {
             this._Str_8645(k, new ChatEntry(ChatEntry._Str_15691, 0, _arg_2, 0), _arg_3);
         }
