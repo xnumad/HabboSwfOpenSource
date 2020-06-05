@@ -40,7 +40,7 @@
             {
                 _local_14.procedure = this.scrollButtonEventProc;
             }
-            this._Str_6685();
+            this.updateLiftSizeAndPosition();
         }
 
         public function get scrollH():Number
@@ -64,7 +64,7 @@
             {
                 if (this._Str_10345(k))
                 {
-                    this._Str_6685();
+                    this.updateLiftSizeAndPosition();
                 }
             }
         }
@@ -75,7 +75,7 @@
             {
                 if (this._Str_10345(k))
                 {
-                    this._Str_6685();
+                    this.updateLiftSizeAndPosition();
                 }
             }
         }
@@ -92,7 +92,7 @@
             {
                 this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
                 this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrollableScrolled);
-                this._Str_6685();
+                this.updateLiftSizeAndPosition();
             }
         }
 
@@ -273,7 +273,7 @@
             {
                 if (_arg_2.type == WindowEvent.WINDOW_EVENT_RESIZED)
                 {
-                    this._Str_6685();
+                    this.updateLiftSizeAndPosition();
                 }
                 else
                 {
@@ -308,7 +308,7 @@
             return _local_3;
         }
 
-        private function _Str_6685():void
+        private function updateLiftSizeAndPosition():void
         {
             var k:Number;
             var _local_4:int;
@@ -481,7 +481,7 @@
             }
             if (_local_3)
             {
-                this._Str_6685();
+                this.updateLiftSizeAndPosition();
             }
         }
 
@@ -536,13 +536,13 @@
 
         private function onScrollableResized(k:WindowEvent):void
         {
-            this._Str_6685();
+            this.updateLiftSizeAndPosition();
             this._Str_10345(this._Str_588);
         }
 
         private function onScrollableScrolled(k:WindowEvent):void
         {
-            this._Str_6685();
+            this.updateLiftSizeAndPosition();
         }
     }
 }
