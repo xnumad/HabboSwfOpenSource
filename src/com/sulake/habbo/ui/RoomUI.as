@@ -1258,7 +1258,7 @@
             return this._habboGroupsManager;
         }
 
-        public function get _Str_16059():IHabboFriendBarView
+        public function get friendBarView():IHabboFriendBarView
         {
             return this._friendBarView;
         }

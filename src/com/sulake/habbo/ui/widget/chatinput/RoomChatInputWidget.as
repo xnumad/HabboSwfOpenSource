@@ -171,11 +171,11 @@
 
         public function _Str_24691():int
         {
-            if (!this._roomUi._Str_16059)
+            if (!this._roomUi.friendBarView)
             {
                 return 1000;
             }
-            return this._roomUi._Str_16059._Str_20387;
+            return this._roomUi.friendBarView._Str_20387;
         }
 
         public function _Str_26449():int

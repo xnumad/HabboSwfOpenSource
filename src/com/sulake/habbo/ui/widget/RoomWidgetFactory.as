@@ -167,7 +167,7 @@
                 case RoomWidgetEnum.WORD_QUIZZ:
                     return new WordQuizWidget(_arg_2, windowManager, assets, this._roomUI.localization);
                 case RoomWidgetEnum.UI_HELP_BUBBLE:
-                    return new UiHelpBubblesWidget(_arg_2, windowManager, assets, this._roomUI.localization, this._roomUI._Str_16059, this._roomUI.toolbar, this._roomUI.getDesktop("hard_coded_room_id"), this._roomUI);
+                    return new UiHelpBubblesWidget(_arg_2, windowManager, assets, this._roomUI.localization, this._roomUI.friendBarView, this._roomUI.toolbar, this._roomUI.getDesktop("hard_coded_room_id"), this._roomUI);
                 case RoomWidgetEnum.ROOM_THUMBNAIL_CAMERA:
                     return new RoomThumbnailCameraWidget(_arg_2, windowManager, assets, this._roomUI, this._roomUI.localization, this._roomUI);
                 case RoomWidgetEnum.ROOM_LINK:
