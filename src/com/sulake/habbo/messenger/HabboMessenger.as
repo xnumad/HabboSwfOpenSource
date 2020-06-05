@@ -95,7 +95,7 @@
         override protected function initComponent():void
         {
             this._messageEvents = new Vector.<IMessageEvent>(0);
-            this.addMessageEvent(new _Str_5567(this._Str_19006));
+            this.addMessageEvent(new _Str_5567(this.onMessengerInit));
             this.addMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
             if (getBoolean("client.minimail.embed.enabled"))
             {
@@ -154,7 +154,7 @@
             this._roomInvitesIgnored = k;
         }
 
-        private function _Str_19006(k:IMessageEvent):void
+        private function onMessengerInit(k:IMessageEvent):void
         {
             this._mainView = new MainView(this);
             this.addMessageEvent(new _Str_4851(this.onNewConsoleMessage));

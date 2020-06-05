@@ -167,7 +167,7 @@
         override protected function initComponent():void
         {
             this._communicationManager.addHabboConnectionMessageEvent(new UserObjectEvent(this.onUserObject));
-            this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this._Str_19006));
+            this._communicationManager.addHabboConnectionMessageEvent(new _Str_5567(this.onMessengerInit));
             this._communicationManager.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             context.addLinkEventTracker(this);
             this.send(new _Str_9977());
@@ -465,7 +465,7 @@
             }
         }
 
-        private function _Str_19006(k:IMessageEvent):void
+        private function onMessengerInit(k:IMessageEvent):void
         {
             var _local_3:_Str_5148;
             var _local_4:_Str_2591;
