@@ -272,7 +272,7 @@
             this._preferedChatStyle = k.getParser().preferedChatStyle;
         }
 
-        public function _Str_19756():BitmapData
+        public function getRoomChangeBitmap():BitmapData
         {
             return BitmapData(assets.getAssetByName("room_change").content);
         }

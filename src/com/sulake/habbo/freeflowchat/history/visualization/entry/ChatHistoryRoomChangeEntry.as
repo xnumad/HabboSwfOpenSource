@@ -41,7 +41,7 @@
             _local_4.embedFonts = true;
             _local_4.gridFitType = GridFitType.PIXEL;
             this._bitmap = new BitmapData(ChatHistoryLayoutEnum._Str_18359, (((_local_3.textHeight + 5) + ChatHistoryLayoutEnum._Str_6853) + _Str_9511), true, 0);
-            this._bitmap.copyPixels(_arg_2._Str_19756(), _arg_2._Str_19756().rect, new Point(ChatHistoryLayoutEnum._Str_7140, (1 + _Str_9511)));
+            this._bitmap.copyPixels(_arg_2.getRoomChangeBitmap(), _arg_2.getRoomChangeBitmap().rect, new Point(ChatHistoryLayoutEnum._Str_7140, (1 + _Str_9511)));
             this._bitmap.draw(_local_4, new Matrix(1, 0, 0, 1, 0, _Str_9511));
             this._bitmap.draw(_local_3, new Matrix(1, 0, 0, 1, (ChatHistoryLayoutEnum._Str_7140 + 20), _Str_9511));
         }
