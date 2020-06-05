@@ -370,40 +370,40 @@
                 "callback":this.roomSessionEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_KICKED,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_PETS_FORBIDDEN_IN_HOTEL,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_PETS_FORBIDDEN_IN_FLAT,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_MAX_PETS,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_MAX_NUMBER_OF_OWN_PETS,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_NO_FREE_TILES_FOR_PET,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_SELECTED_TILE_NOT_FREE_FOR_PET,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_BOTS_FORBIDDEN_IN_HOTEL,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_BOTS_FORBIDDEN_IN_FLAT,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_BOT_LIMIT_REACHED,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_SELECTED_TILE_NOT_FREE_FOR_BOT,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionErrorMessageEvent.RSEME_BOT_NAME_NOT_ACCEPTED,
-                "callback":this._Str_4868
+                "callback":this.roomSessionDialogEventHandler
             }, {
                 "type":RoomSessionQueueEvent.RSQE_QUEUE_STATUS,
                 "callback":this.roomSessionEventHandler
@@ -706,7 +706,7 @@
             }
         }
 
-        private function _Str_4868(event:RoomSessionEvent):void
+        private function roomSessionDialogEventHandler(event:RoomSessionEvent):void
         {
             var errorMessage:String;
             var errorTitle:String = "${error.title}";
