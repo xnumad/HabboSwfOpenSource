@@ -63,7 +63,7 @@
             {
                 return;
             }
-            this._historyPulldown.state = ((k) ? RoomChatHistoryPulldown._Str_8230 : RoomChatHistoryPulldown._Str_5954);
+            this._historyPulldown.state = ((k) ? RoomChatHistoryPulldown.STATE_VISIBLE : RoomChatHistoryPulldown._Str_5954);
         }
 
         public function get active():Boolean
@@ -92,7 +92,7 @@
             {
                 return false;
             }
-            return (this._historyPulldown.state == RoomChatHistoryPulldown._Str_8230) || (this._historyPulldown.state == RoomChatHistoryPulldown.STATE_FADE_IN);
+            return (this._historyPulldown.state == RoomChatHistoryPulldown.STATE_VISIBLE) || (this._historyPulldown.state == RoomChatHistoryPulldown.STATE_FADE_IN);
         }
 
         public function dispose():void
@@ -156,7 +156,7 @@
             {
                 this._historyViewerActive = true;
                 this._Str_20323(true);
-                this._historyPulldown.state = RoomChatHistoryPulldown._Str_8230;
+                this._historyPulldown.state = RoomChatHistoryPulldown.STATE_VISIBLE;
                 if (this._widget != null)
                 {
                     this._widget._Str_20247();

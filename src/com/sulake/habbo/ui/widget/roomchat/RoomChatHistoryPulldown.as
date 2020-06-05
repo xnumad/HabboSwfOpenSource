@@ -22,7 +22,7 @@
     {
         public static const STATE_FADE_OUT:int = 3;
         public static const STATE_FADE_IN:int = 2;
-        public static const _Str_8230:int = 1;
+        public static const STATE_VISIBLE:int = 1;
         public static const _Str_5954:int = 0;
         public static const _Str_3788:int = 39;
         private static const _Str_15421:int = 150;
@@ -121,7 +121,7 @@
                     this._window.blend = (this._window.blend + (k / _Str_14143));
                     if (this._window.blend >= 1)
                     {
-                        this.state = _Str_8230;
+                        this.state = STATE_VISIBLE;
                     }
                     return;
                 case STATE_FADE_OUT:
@@ -143,7 +143,7 @@
             }
             switch (k)
             {
-                case _Str_8230:
+                case STATE_VISIBLE:
                     if (this._state == _Str_5954)
                     {
                         this.state = STATE_FADE_IN;
