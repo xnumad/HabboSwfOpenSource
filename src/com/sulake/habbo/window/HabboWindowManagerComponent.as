@@ -182,7 +182,7 @@
             assets.removeAsset(_local_2);
             _local_2.dispose();
             this._windowContext = this._windowContextArray[_Str_17369];
-            this._Str_11270(this);
+            this.addMouseEventTracker(this);
             registerUpdateReceiver(this, 0);
             queueInterface(new IIDProfiler(), this._Str_24384);
             k = (getTimer() - k);
@@ -485,12 +485,12 @@
             }
         }
 
-        public function _Str_11270(k:IInputEventTracker):void
+        public function addMouseEventTracker(k:IInputEventTracker):void
         {
             var _local_2:IWindowContext;
             for each (_local_2 in this._windowContextArray)
             {
-                _local_2._Str_11270(k);
+                _local_2.addMouseEventTracker(k);
             }
         }
 

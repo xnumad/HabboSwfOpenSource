@@ -375,7 +375,7 @@
             }
         }
 
-        public function _Str_11270(k:IInputEventTracker):void
+        public function addMouseEventTracker(k:IInputEventTracker):void
         {
             if (this.inputEventTrackers.indexOf(k) < 0)
             {

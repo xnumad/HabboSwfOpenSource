@@ -29,7 +29,7 @@
         function confirm(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910;
         function _Str_21720(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910;
         function registerLocalizationParameter(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String="%"):void;
-        function _Str_11270(_arg_1:IInputEventTracker):void;
+        function addMouseEventTracker(_arg_1:IInputEventTracker):void;
         function _Str_14802(_arg_1:IInputEventTracker):void;
         function createUnseenItemCounter():IWindowContainer;
         function get resourceManager():IResourceManager;
