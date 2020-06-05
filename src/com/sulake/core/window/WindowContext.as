@@ -58,7 +58,7 @@
         protected var _lastError:Error;
         protected var _lastErrorCode:int = -1;
         protected var _windowServices:IInternalWindowServices;
-        protected var _Str_14601:IWindowParser;
+        protected var _windowParser:IWindowParser;
         protected var _Str_18011:IWindowFactory;
         protected var _widgetFactory:IWidgetFactory;
         protected var _Str_5526:IResourceManager;
@@ -81,7 +81,7 @@
             this._Str_18011 = _arg_3;
             this._widgetFactory = _arg_4;
             this._Str_5526 = _arg_5;
-            this._Str_14601 = new WindowParser(this);
+            this._windowParser = new WindowParser(this);
             this.inputEventTrackers = new Vector.<IInputEventTracker>(0);
             this._linkEventTrackers = _arg_10;
             if (!stage)
@@ -185,8 +185,8 @@
                     IDisposable(this._windowServices).dispose();
                 }
                 this._windowServices = null;
-                this._Str_14601.dispose();
-                this._Str_14601 = null;
+                this._windowParser.dispose();
+                this._windowParser = null;
                 _renderer = null;
                 this._localization = null;
                 this._rootDisplayObject = null;
@@ -229,7 +229,7 @@
 
         public function getWindowParser():IWindowParser
         {
-            return this._Str_14601;
+            return this._windowParser;
         }
 
         public function getWindowFactory():IWindowFactory
