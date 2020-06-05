@@ -7,8 +7,8 @@
     {
         function get spacing():int;
         function set spacing(_arg_1:int):void;
-        function get _Str_3640():Boolean;
-        function set _Str_3640(_arg_1:Boolean):void;
+        function get scaleToFitItems():Boolean;
+        function set scaleToFitItems(_arg_1:Boolean):void;
         function get autoArrangeItems():Boolean;
         function set autoArrangeItems(_arg_1:Boolean):void;
         function get resizeOnItemUpdate():Boolean;

@@ -201,7 +201,7 @@
             this._scrollStepV = k;
         }
 
-        public function set _Str_3640(k:Boolean):void
+        public function set scaleToFitItems(k:Boolean):void
         {
             if (this._scaleToFitItems != k)
             {
@@ -210,7 +210,7 @@
             }
         }
 
-        public function get _Str_3640():Boolean
+        public function get scaleToFitItems():Boolean
         {
             return this._scaleToFitItems;
         }
@@ -672,7 +672,7 @@
                         this.spacing = (_local_2.value as int);
                         break;
                     case PropertyKeys.SCALE_TO_FIT_ITEMS:
-                        this._Str_3640 = (_local_2.value as Boolean);
+                        this.scaleToFitItems = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.RESIZE_ON_ITEM_UPDATE:
                         this.resizeOnItemUpdate = (_local_2.value as Boolean);
