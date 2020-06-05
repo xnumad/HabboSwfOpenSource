@@ -57,7 +57,7 @@
         protected var _throwErrors:Boolean = true;
         protected var _lastError:Error;
         protected var _lastErrorCode:int = -1;
-        protected var _Str_11208:IInternalWindowServices;
+        protected var _windowServices:IInternalWindowServices;
         protected var _Str_14601:IWindowParser;
         protected var _Str_18011:IWindowFactory;
         protected var _widgetFactory:IWidgetFactory;
@@ -77,7 +77,7 @@
             this._localization = _arg_6;
             this._configurationManager = _arg_7;
             this._rootDisplayObject = _arg_8;
-            this._Str_11208 = new ServiceManager(this, _arg_8);
+            this._windowServices = new ServiceManager(this, _arg_8);
             this._Str_18011 = _arg_3;
             this._widgetFactory = _arg_4;
             this._Str_5526 = _arg_5;
@@ -180,11 +180,11 @@
                 this._Str_2867 = null;
                 this._Str_13721.destroy();
                 this._Str_13721 = null;
-                if ((this._Str_11208 is IDisposable))
+                if ((this._windowServices is IDisposable))
                 {
-                    IDisposable(this._Str_11208).dispose();
+                    IDisposable(this._windowServices).dispose();
                 }
-                this._Str_11208 = null;
+                this._windowServices = null;
                 this._Str_14601.dispose();
                 this._Str_14601 = null;
                 _renderer = null;
@@ -224,7 +224,7 @@
 
         public function getWindowServices():IInternalWindowServices
         {
-            return this._Str_11208;
+            return this._windowServices;
         }
 
         public function getWindowParser():IWindowParser
