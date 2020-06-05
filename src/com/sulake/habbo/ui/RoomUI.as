@@ -487,7 +487,7 @@
                 "callback":this.interstitialShowEventHandler
             }, {
                 "type":AdEvent.ROOM_AD_SHOW,
-                "callback":this._Str_24555
+                "callback":this.adEventHandler
             }]), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localization = k;
@@ -810,7 +810,7 @@
             }
         }
 
-        private function _Str_24555(k:AdEvent):void
+        private function adEventHandler(k:AdEvent):void
         {
             var _local_2:String = this.getRoomIdentifier(k.roomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
