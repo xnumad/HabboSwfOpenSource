@@ -387,7 +387,7 @@
             var k:Boolean;
             if (this._itemType == ProductTypeEnum.WALL)
             {
-                _local_2 = (_Str_2470 as FurniturePresentWidgetHandler).container.sessionDataManager.getWallItemData(this._classId);
+                _local_2 = (_handler as FurniturePresentWidgetHandler).container.sessionDataManager.getWallItemData(this._classId);
                 if (_local_2 != null)
                 {
                     _local_3 = _local_2.className;
@@ -549,11 +549,11 @@
             {
                 if (this._placedItemType == ProductTypeEnum.PET)
                 {
-                    (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.pickUpPet(this._placedItemId);
+                    (_handler as FurniturePresentWidgetHandler).container.roomSession.pickUpPet(this._placedItemId);
                 }
                 else
                 {
-                    _local_3 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.roomId;
+                    _local_3 = (_handler as FurniturePresentWidgetHandler).container.roomSession.roomId;
                     _local_4 = RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE;
                     _local_5 = this._roomEngine.getRoomObject(_local_3, this._placedItemId, _local_4);
                     if (_local_5 != null)
@@ -742,7 +742,7 @@
 
         public function getAvatarFaceBitmap(k:String):BitmapData
         {
-            var _local_2:IAvatarRenderManager = (_Str_2470 as FurniturePresentWidgetHandler).container.avatarRenderManager;
+            var _local_2:IAvatarRenderManager = (_handler as FurniturePresentWidgetHandler).container.avatarRenderManager;
             if ((((_local_2 == null) || (k == null)) || (k.length == 0)))
             {
                 return null;
@@ -878,7 +878,7 @@
                     while (_local_3 < _local_2)
                     {
                         _local_4 = this._roomEngine.getRoomObjectWithIndex(k, _local_3, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);
-                        _local_5 = (_Str_2470 as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
+                        _local_5 = (_handler as FurniturePresentWidgetHandler).container.roomSession.userDataManager.getUserDataByIndex(_local_4.getId());
                         if (((!(_local_5 == null)) && (_local_5.id == this._placedItemId)))
                         {
                             this._roomEngine._Str_5538(k, _local_5._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER);

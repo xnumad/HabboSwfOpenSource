@@ -144,7 +144,7 @@
 
         public function get handler():AvatarInfoWidgetHandler
         {
-            return _Str_2470 as AvatarInfoWidgetHandler;
+            return _handler as AvatarInfoWidgetHandler;
         }
 
         public function get configuration():IHabboConfigurationManager

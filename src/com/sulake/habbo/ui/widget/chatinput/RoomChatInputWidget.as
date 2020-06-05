@@ -54,7 +54,7 @@
 
         public function get handler():ChatInputWidgetHandler
         {
-            return _Str_2470 as ChatInputWidgetHandler;
+            return _handler as ChatInputWidgetHandler;
         }
 
         override public function dispose():void

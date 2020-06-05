@@ -170,7 +170,7 @@
 
         public function get handler():RoomToolsWidgetHandler
         {
-            return _Str_2470 as RoomToolsWidgetHandler;
+            return _handler as RoomToolsWidgetHandler;
         }
 
         public function getIconLocation(k:String):IWindow

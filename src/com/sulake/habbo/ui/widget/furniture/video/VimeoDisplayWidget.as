@@ -33,7 +33,7 @@
 
         private function get _Str_2844():FurnitureVimeoDisplayWidgetHandler
         {
-            return _Str_2470 as FurnitureVimeoDisplayWidgetHandler;
+            return _handler as FurnitureVimeoDisplayWidgetHandler;
         }
 
         override public function get mainWindow():IWindow

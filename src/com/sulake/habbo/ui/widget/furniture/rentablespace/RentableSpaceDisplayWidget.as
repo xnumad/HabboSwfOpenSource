@@ -44,7 +44,7 @@
 
         private function get _Str_2844():FurnitureRentableSpaceWidgetHandler
         {
-            return _Str_2470 as FurnitureRentableSpaceWidgetHandler;
+            return _handler as FurnitureRentableSpaceWidgetHandler;
         }
 
         public function hide(k:IRoomObject):void

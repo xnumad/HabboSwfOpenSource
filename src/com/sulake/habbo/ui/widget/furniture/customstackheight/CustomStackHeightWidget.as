@@ -188,7 +188,7 @@
 
         private function get handler():FurnitureCustomStackHeightWidgetHandler
         {
-            return _Str_2470 as FurnitureCustomStackHeightWidgetHandler;
+            return _handler as FurnitureCustomStackHeightWidgetHandler;
         }
 
         private function set _Str_19462(k:Number):void

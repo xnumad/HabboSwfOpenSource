@@ -163,7 +163,7 @@
 
         public function get handler():ChatWidgetHandler
         {
-            return _Str_2470 as ChatWidgetHandler;
+            return _handler as ChatWidgetHandler;
         }
 
         override public function dispose():void

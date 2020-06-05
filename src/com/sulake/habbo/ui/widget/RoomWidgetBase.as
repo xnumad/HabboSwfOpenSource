@@ -16,11 +16,11 @@
         private var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
         protected var _localizations:IHabboLocalizationManager;
-        protected var _Str_2470:IRoomWidgetHandler;
+        protected var _handler:IRoomWidgetHandler;
 
         public function RoomWidgetBase(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
         {
-            this._Str_2470 = k;
+            this._handler = k;
             this._windowManager = _arg_2;
             this._assets = _arg_3;
             this._localizations = _arg_4;
@@ -52,10 +52,10 @@
             {
                 this.unregisterUpdateEvents(this._events);
             }
-            if (this._Str_2470)
+            if (this._handler)
             {
-                this._Str_2470.dispose();
-                this._Str_2470 = null;
+                this._handler.dispose();
+                this._handler = null;
             }
             this._events = null;
             this._assets = null;

@@ -88,7 +88,7 @@
 
         public function get handler():InfoStandWidgetHandler
         {
-            return _Str_2470 as InfoStandWidgetHandler;
+            return _handler as InfoStandWidgetHandler;
         }
 
         public function get _Str_21463():InfoStandFurniView

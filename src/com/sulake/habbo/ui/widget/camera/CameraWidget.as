@@ -88,7 +88,7 @@
 
         public function get handler():CameraWidgetHandler
         {
-            return _Str_2470 as CameraWidgetHandler;
+            return _handler as CameraWidgetHandler;
         }
 
         public function get roomEngine():IRoomEngine

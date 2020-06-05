@@ -27,7 +27,7 @@
 
         public function get _Str_11963():FriendFurniEngravingWidgetHandler
         {
-            return _Str_2470 as FriendFurniEngravingWidgetHandler;
+            return _handler as FriendFurniEngravingWidgetHandler;
         }
 
         public function open(k:int, _arg_2:int, _arg_3:StringArrayStuffData):void

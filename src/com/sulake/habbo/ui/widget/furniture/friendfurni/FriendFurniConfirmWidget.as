@@ -97,7 +97,7 @@
 
         private function get _Str_14761():FriendFurniConfirmWidgetHandler
         {
-            return FriendFurniConfirmWidgetHandler(_Str_2470);
+            return FriendFurniConfirmWidgetHandler(_handler);
         }
 
         private function _Str_2533(k:WindowEvent, _arg_2:IWindow):void

@@ -51,7 +51,7 @@
 
         private function get _Str_2844():FurnitureYoutubeDisplayWidgetHandler
         {
-            return _Str_2470 as FurnitureYoutubeDisplayWidgetHandler;
+            return _handler as FurnitureYoutubeDisplayWidgetHandler;
         }
 
         override public function get mainWindow():IWindow

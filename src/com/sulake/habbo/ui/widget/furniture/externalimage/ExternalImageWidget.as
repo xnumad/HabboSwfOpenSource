@@ -136,7 +136,7 @@
 
         private function get _Str_2844():ExternalImageWidgetHandler
         {
-            return _Str_2470 as ExternalImageWidgetHandler;
+            return _handler as ExternalImageWidgetHandler;
         }
 
         public function _Str_16946(k:IRoomObject):void

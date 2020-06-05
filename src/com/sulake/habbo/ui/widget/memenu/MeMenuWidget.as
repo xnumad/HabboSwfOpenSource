@@ -91,7 +91,7 @@
 
         public function get handler():MeMenuWidgetHandler
         {
-            return _Str_2470 as MeMenuWidgetHandler;
+            return _handler as MeMenuWidgetHandler;
         }
 
         override public function get mainWindow():IWindow

@@ -33,7 +33,7 @@
 
         public function get handler():EffectsWidgetHandler
         {
-            return _Str_2470 as EffectsWidgetHandler;
+            return _handler as EffectsWidgetHandler;
         }
 
         override public function dispose():void

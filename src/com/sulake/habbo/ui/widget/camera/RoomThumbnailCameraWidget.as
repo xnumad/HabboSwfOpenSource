@@ -63,7 +63,7 @@
 
         public function get handler():RoomThumbnailCameraWidgetHandler
         {
-            return _Str_2470 as RoomThumbnailCameraWidgetHandler;
+            return _handler as RoomThumbnailCameraWidgetHandler;
         }
 
         public function get roomEngine():IRoomEngine

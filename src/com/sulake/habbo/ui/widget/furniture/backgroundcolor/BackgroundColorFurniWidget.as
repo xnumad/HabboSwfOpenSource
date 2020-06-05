@@ -41,7 +41,7 @@
 
         public function get handler():FurnitureBackgroundColorWidgetHandler
         {
-            return _Str_2470 as FurnitureBackgroundColorWidgetHandler;
+            return _handler as FurnitureBackgroundColorWidgetHandler;
         }
 
         override public function dispose():void

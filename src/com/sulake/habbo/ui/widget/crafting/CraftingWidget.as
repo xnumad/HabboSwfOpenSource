@@ -324,7 +324,7 @@
 
         public function get handler():CraftingWidgetHandler
         {
-            return _Str_2470 as CraftingWidgetHandler;
+            return _handler as CraftingWidgetHandler;
         }
 
         public function get sessionDataManager():ISessionDataManager

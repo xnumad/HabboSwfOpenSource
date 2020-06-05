@@ -75,7 +75,7 @@
 
         public function get handler():MannequinWidgetHandler
         {
-            return _Str_2470 as MannequinWidgetHandler;
+            return _handler as MannequinWidgetHandler;
         }
 
         override public function dispose():void
@@ -98,10 +98,10 @@
             this._mannequinFigure = _arg_2;
             this._mannequinGender = _arg_3;
             this._savedOutfitName = _arg_4;
-            var _local_5:IRoomSession = (_Str_2470 as MannequinWidgetHandler).container.roomSession;
-            var _local_6:ISessionDataManager = (_Str_2470 as MannequinWidgetHandler).container.sessionDataManager;
+            var _local_5:IRoomSession = (_handler as MannequinWidgetHandler).container.roomSession;
+            var _local_6:ISessionDataManager = (_handler as MannequinWidgetHandler).container.sessionDataManager;
             var _local_7:Boolean = (((_local_5.isRoomOwner) || (_local_5.roomControllerLevel >= RoomControllerLevel.GUEST)) || (_local_6.isAnyRoomController));
-            var _local_8:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
+            var _local_8:IAvatarRenderManager = (_handler as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_9:IAvatarFigureContainer = _local_8._Str_718(_arg_2);
             this._mannequinClubLevel = _local_8._Str_932(_local_9, this._mannequinGender, _Str_9402);
             var _local_10:int = this._Str_24391(_local_7, _local_6.gender, _local_6.clubLevel, _arg_3, this._mannequinClubLevel);
@@ -132,9 +132,9 @@
         {
             var _local_2:BitmapData;
             var _local_3:IAvatarFigureContainer;
-            var _local_4:ISessionDataManager = (_Str_2470 as MannequinWidgetHandler).container.sessionDataManager;
+            var _local_4:ISessionDataManager = (_handler as MannequinWidgetHandler).container.sessionDataManager;
             var _local_5:String = _local_4.figure;
-            var _local_6:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
+            var _local_6:IAvatarRenderManager = (_handler as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_7:int = (((this._savedOutfitName) && (!(this._savedOutfitName == ""))) ? _Str_8218 : _Str_9071);
             if (!this._window)
             {
@@ -218,7 +218,7 @@
                 default:
                     throw (new Error(("Invalid type for mannequin widget content creation: " + k)));
             }
-            _local_3 = ((_Str_2470 as MannequinWidgetHandler).container.windowManager.buildFromXML((_local_2.content as XML)) as IWindowContainer);
+            _local_3 = ((_handler as MannequinWidgetHandler).container.windowManager.buildFromXML((_local_2.content as XML)) as IWindowContainer);
             return _local_3;
         }
 
@@ -237,7 +237,7 @@
 
         private function createAvatarImage(k:String):BitmapData
         {
-            var _local_2:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
+            var _local_2:IAvatarRenderManager = (_handler as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_3:IAvatarImage = _local_2.createAvatarImage(k, AvatarScaleType.LARGE);
             var _local_4:BitmapData = _local_3._Str_818(AvatarSetType.FULL);
             _local_3.dispose();
@@ -247,7 +247,7 @@
         private function _Str_19759(k:String, _arg_2:String):IAvatarFigureContainer
         {
             var _local_6:String;
-            var _local_3:IAvatarRenderManager = (_Str_2470 as MannequinWidgetHandler).container.avatarRenderManager;
+            var _local_3:IAvatarRenderManager = (_handler as MannequinWidgetHandler).container.avatarRenderManager;
             var _local_4:IAvatarFigureContainer = _local_3._Str_718(k);
             var _local_5:IAvatarFigureContainer = _local_3._Str_718(_arg_2);
             for each (_local_6 in _Str_9402)
@@ -413,7 +413,7 @@
 
         private function onMouseClick(k:WindowMouseEvent):void
         {
-            var _local_2:ISessionDataManager = (_Str_2470 as MannequinWidgetHandler).container.sessionDataManager;
+            var _local_2:ISessionDataManager = (_handler as MannequinWidgetHandler).container.sessionDataManager;
             switch (k.target.name)
             {
                 case HEADER_BUTTON_CLOSE:
@@ -451,7 +451,7 @@
                     this._Str_3248(_Str_9305);
                     return;
                 case GET_CLUB_BUTTON:
-                    (_Str_2470 as MannequinWidgetHandler).container.catalog.openClubCenter();
+                    (_handler as MannequinWidgetHandler).container.catalog.openClubCenter();
                     this.close();
                     return;
                 case OUTFIT_NAME_SET:

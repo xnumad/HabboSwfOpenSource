@@ -56,7 +56,7 @@
             this._yesWindowPool = new Vector.<IWindowContainer>(0);
             this._noWindowPool = new Vector.<IWindowContainer>(0);
             super(this.handler, _arg_2, _arg_3, _arg_4);
-            _Str_2470 = k;
+            _handler = k;
             this._view = new WordQuizView(this);
             this._showResultTime = (this.handler.container.config.getInteger("poll.word.quiz.answer.bubble.seconds", 3) * 1000);
         }
@@ -92,7 +92,7 @@
 
         public function get handler():WordQuizWidgetHandler
         {
-            return _Str_2470 as WordQuizWidgetHandler;
+            return _handler as WordQuizWidgetHandler;
         }
 
         override public function dispose():void

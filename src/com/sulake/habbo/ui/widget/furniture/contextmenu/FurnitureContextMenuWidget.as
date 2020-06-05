@@ -111,7 +111,7 @@
 
         public function get handler():FurnitureContextMenuWidgetHandler
         {
-            return _Str_2470 as FurnitureContextMenuWidgetHandler;
+            return _handler as FurnitureContextMenuWidgetHandler;
         }
 
         public function get roomEngine():IRoomEngine
