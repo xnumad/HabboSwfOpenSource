@@ -46,7 +46,7 @@
             this._guildInfoCtrl.refresh(this._details, this._room);
             this.refreshRoomName(this._details, this._room);
             this.refreshOwnerName();
-            this.refreshTextWithCaption("roomctg", this._details, this._Str_23067(this._room._Str_2712));
+            this.refreshTextWithCaption("roomctg", this._details, this.getRoomCtg(this._room._Str_2712));
             this.refreshRoomDesc(this._details, this._room);
             this.refreshExtraCont();
             this.refreshEventInfo(this._room);
@@ -180,7 +180,7 @@
             return (_local_3 == null) ? "" : _local_3;
         }
 
-        private function _Str_23067(k:int):String
+        private function getRoomCtg(k:int):String
         {
             var _local_2:FlatCategory;
             for each (_local_2 in navigator.data.allCategories)
