@@ -695,7 +695,7 @@
             }
         }
 
-        public function _Str_23725():void
+        public function requestInterstitial():void
         {
             if (this._adManager != null)
             {

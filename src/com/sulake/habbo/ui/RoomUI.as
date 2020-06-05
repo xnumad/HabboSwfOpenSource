@@ -1118,7 +1118,7 @@
             _local_3._Str_2548(RoomWidgetEnum.LOADINGBAR);
             _local_3._Str_2548(RoomWidgetEnum.ROOM_QUEUE);
             _local_3.init();
-            _local_3._Str_23725();
+            _local_3.requestInterstitial();
             this._interstitialActive = false;
             this._interstitialRoomId = k.roomId;
             this._desktops.add(_local_2, _local_3);
