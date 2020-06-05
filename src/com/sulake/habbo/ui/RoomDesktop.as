@@ -2044,7 +2044,7 @@
             return -1;
         }
 
-        public function _Str_25220(k:RoomUserData):Boolean
+        public function isOwnerOfPet(k:RoomUserData):Boolean
         {
             if (k == null)
             {

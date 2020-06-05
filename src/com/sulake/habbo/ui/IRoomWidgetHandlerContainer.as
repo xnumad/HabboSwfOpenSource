@@ -73,7 +73,7 @@
         function removeUpdateListener(_arg_1:IRoomWidgetHandler):void;
         function isOwnerOfFurniture(_arg_1:IRoomObject):Boolean;
         function getFurnitureOwnerId(_arg_1:IRoomObject):int;
-        function _Str_25220(_arg_1:RoomUserData):Boolean;
+        function isOwnerOfPet(_arg_1:RoomUserData):Boolean;
         function setRoomBackgroundColor(_arg_1:int, _arg_2:int, _arg_3:int):void;
     }
 }
