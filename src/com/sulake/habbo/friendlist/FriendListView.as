@@ -97,7 +97,7 @@
             this._tabContent = IWindowContainer(this._mainWindow.content.findChildByName("main_content"));
             this._footer = IWindowContainer(this._mainWindow.content.findChildByName("footer"));
             this._tabsView.prepare(this._tabContent);
-            this._mainWindow.procedure = this._Str_7142;
+            this._mainWindow.procedure = this.onWindow;
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, false);
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_FIXED, true);
             this._mainWindow.header.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER, false);
@@ -133,7 +133,7 @@
             this._habboFriendList.categories.view._Str_18123();
         }
 
-        private function _Str_7142(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindow(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((k.type == WindowEvent.WINDOW_EVENT_RELOCATE) || (k.type == WindowEvent.WINDOW_EVENT_RESIZED)))
             {

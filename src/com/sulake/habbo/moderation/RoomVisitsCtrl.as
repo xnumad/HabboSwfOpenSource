@@ -63,7 +63,7 @@
             this._list = IItemListWindow(this._frame.findChildByName("visits_list"));
             this._row = (this._list.getListItemAt(0) as IWindowContainer);
             this._list.removeListItems();
-            this._frame.procedure = this._Str_7142;
+            this._frame.procedure = this.onWindow;
             var k:IWindow = this._frame.findChildByTag("close");
             k.procedure = this.onClose;
         }
@@ -173,7 +173,7 @@
             this.dispose();
         }
 
-        private function _Str_7142(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindow(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowEvent.WINDOW_EVENT_RESIZED)) || (!(_arg_2 == this._frame))))
             {

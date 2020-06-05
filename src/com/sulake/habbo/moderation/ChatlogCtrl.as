@@ -81,7 +81,7 @@
             if (!this._embedded)
             {
                 this._frame = k;
-                this._frame.procedure = this._Str_7142;
+                this._frame.procedure = this.onWindow;
                 this._frame.visible = true;
                 _local_3 = this._frame.findChildByTag("close");
                 _local_3.procedure = this.onClose;
@@ -406,7 +406,7 @@
             this.dispose();
         }
 
-        private function _Str_7142(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindow(k:WindowEvent, _arg_2:IWindow):void
         {
             if (((!(k.type == WindowEvent.WINDOW_EVENT_RESIZED)) || (!(_arg_2 == this._frame))))
             {
