@@ -135,7 +135,7 @@
                     _local_2 = (Number(this._fadeInStart) / Number(this._viewConfig["time_fade_in"]));
                     if (this._fadeInStart > int(this._viewConfig["time_fade_in"]))
                     {
-                        this._Str_25847();
+                        this.startDisplay();
                     }
                     this.adjustBlend(_local_2);
                     return;
@@ -250,7 +250,7 @@
             this._state = _Str_6008;
         }
 
-        private function _Str_25847():void
+        private function startDisplay():void
         {
             this._displayStart = 0;
             this._state = _Str_14483;
