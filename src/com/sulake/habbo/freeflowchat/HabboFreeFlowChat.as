@@ -421,7 +421,7 @@
             return this._chatBubbleFactory;
         }
 
-        public function get _Str_18503():ChatHistoryScrollView
+        public function get chatHistoryScrollView():ChatHistoryScrollView
         {
             return this._chatHistoryScrollView;
         }

@@ -51,9 +51,9 @@
             }
             this._entries.push(entry);
             this._Str_19617(entry);
-            if (this._component._Str_18503.isActive)
+            if (this._component.chatHistoryScrollView.isActive)
             {
-                this._component._Str_18503._Str_23438(this._entries[(this._entries.length - 1)]);
+                this._component.chatHistoryScrollView._Str_23438(this._entries[(this._entries.length - 1)]);
             }
         }
 
@@ -68,7 +68,7 @@
         {
             if (this._entries.length > this._Str_22590)
             {
-                this._component._Str_18503._Str_25251(((k.bitmap.height - k.overlap.y) - ChatHistoryLayoutEnum._Str_6853));
+                this._component.chatHistoryScrollView._Str_25251(((k.bitmap.height - k.overlap.y) - ChatHistoryLayoutEnum._Str_6853));
                 this._entries.splice(0, 1);
             }
         }
