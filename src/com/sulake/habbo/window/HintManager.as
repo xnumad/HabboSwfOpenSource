@@ -96,7 +96,7 @@
                 this._absTargetRect = this._Str_23325(this._activeHint.window);
                 if (_arg_2 != null)
                 {
-                    this._Str_25500(_arg_2);
+                    this.animateHint(_arg_2);
                 }
                 else
                 {
@@ -106,7 +106,7 @@
             }
         }
 
-        protected function _Str_25500(k:Rectangle):void
+        protected function animateHint(k:Rectangle):void
         {
             this._hint.x = k.x;
             this._hint.y = k.y;
