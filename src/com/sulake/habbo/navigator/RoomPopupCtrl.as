@@ -47,7 +47,7 @@
             this.refreshRoomName(this._details, this._room);
             this.refreshOwnerName();
             this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
-            this._Str_25479(this._details, this._room);
+            this.refreshRoomDesc(this._details, this._room);
             this.refreshExtraCont();
             this.refreshEventInfo(this._room);
             this.refreshRoomSettings();
@@ -138,7 +138,7 @@
             _local_3.height = (_local_3.textHeight + 3);
         }
 
-        private function _Str_25479(k:IWindowContainer, _arg_2:GuestRoomData):void
+        private function refreshRoomDesc(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             if (_arg_2.description == "")
             {
