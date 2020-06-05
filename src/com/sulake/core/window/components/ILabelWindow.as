@@ -27,7 +27,7 @@
         function get text():String;
         function get textColor():uint;
         function get _Str_5349():Boolean;
-        function get _Str_4807():uint;
+        function get textBackgroundColor():uint;
         function get textHeight():Number;
         function get textWidth():Number;
         function get textStyle():TextStyle;

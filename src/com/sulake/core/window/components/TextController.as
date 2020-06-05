@@ -739,7 +739,7 @@
             return background;
         }
 
-        public function get _Str_4807():uint
+        public function get textBackgroundColor():uint
         {
             return color;
         }
@@ -919,7 +919,7 @@
             setTextBackground(this, k);
         }
 
-        public function set _Str_4807(k:uint):void
+        public function set textBackgroundColor(k:uint):void
         {
             setTextBackgroundColor(this, k);
         }

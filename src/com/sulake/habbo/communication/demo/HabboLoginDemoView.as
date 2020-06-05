@@ -119,7 +119,7 @@
             if (_local_2 != null)
             {
                 _local_2._Str_5349 = true;
-                _local_2._Str_4807 = 0xFFFFFF;
+                _local_2.textBackgroundColor = 0xFFFFFF;
                 if (_local_4.data.login != null)
                 {
                     _local_2.text = _local_4.data.login;
@@ -131,7 +131,7 @@
             if (_local_3 != null)
             {
                 _local_3._Str_5349 = true;
-                _local_3._Str_4807 = 0xFFFFFF;
+                _local_3.textBackgroundColor = 0xFFFFFF;
                 if (_local_4.data.password != null)
                 {
                     _local_3.text = _local_4.data.password;

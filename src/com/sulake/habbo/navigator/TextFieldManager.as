@@ -39,7 +39,7 @@
             this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_24438);
             this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22400);
             this._orgTextBackground = this._input._Str_5349;
-            this._orgTextBackgroundColor = this._input._Str_4807;
+            this._orgTextBackgroundColor = this._input.textBackgroundColor;
         }
 
         public function dispose():void
@@ -71,13 +71,13 @@
         public function _Str_16652():void
         {
             this._input._Str_5349 = this._orgTextBackground;
-            this._input._Str_4807 = this._orgTextBackgroundColor;
+            this._input.textBackgroundColor = this._orgTextBackgroundColor;
         }
 
         public function _Str_5374(k:String):void
         {
             this._input._Str_5349 = true;
-            this._input._Str_4807 = 4294021019;
+            this._input.textBackgroundColor = 4294021019;
             if (this._errorPopup == null)
             {
                 this._errorPopup = IWindowContainer(this._navigator.getXmlWindow("nav_error_popup"));

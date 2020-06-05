@@ -144,7 +144,7 @@
             return background;
         }
 
-        public function get _Str_4807():uint
+        public function get textBackgroundColor():uint
         {
             return color;
         }
