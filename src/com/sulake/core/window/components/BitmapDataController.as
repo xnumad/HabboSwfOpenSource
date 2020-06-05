@@ -21,7 +21,7 @@
         protected var _zoomX:Number;
         protected var _zoomY:Number;
         protected var _greyscale:Boolean;
-        protected var _Str_3778:uint;
+        protected var _etchingColor:uint;
         protected var _Str_18939:Point;
         protected var _Str_13795:Boolean;
         private var _Str_10479:Boolean;
@@ -116,12 +116,12 @@
 
         public function get etchingColor():uint
         {
-            return this._Str_3778;
+            return this._etchingColor;
         }
 
         public function set etchingColor(k:uint):void
         {
-            this._Str_3778 = k;
+            this._etchingColor = k;
         }
 
         public function get fitSizeToContents():Boolean
@@ -186,7 +186,7 @@
             k.push(createProperty(PropertyKeys.ZOOM_X, this._zoomX));
             k.push(createProperty(PropertyKeys.ZOOM_Y, this._zoomY));
             k.push(createProperty(PropertyKeys.GREYSCALE, this._greyscale));
-            k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._Str_3778));
+            k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._etchingColor));
             k.push(createProperty(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._Str_13795));
             return k;
         }
@@ -223,7 +223,7 @@
                         this._greyscale = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.ETCHING_COLOR:
-                        this._Str_3778 = uint(_local_2.value);
+                        this._etchingColor = uint(_local_2.value);
                         break;
                     case PropertyKeys.FIT_SIZE_TO_CONTENTS:
                         this.fitSizeToContents = (_local_2.value as Boolean);

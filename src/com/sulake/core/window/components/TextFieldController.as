@@ -357,10 +357,10 @@
                 return;
             }
             this._Str_12892 = false;
-            if ((_Str_3778 & 0xFF000000) != 0)
+            if ((_etchingColor & 0xFF000000) != 0)
             {
-                this._Str_14685.color = (_Str_3778 & 0xFFFFFF);
-                this._Str_14685.alpha = (((_Str_3778 >> 24) & 0xFF) / 0xFF);
+                this._Str_14685.color = (_etchingColor & 0xFFFFFF);
+                this._Str_14685.alpha = (((_etchingColor >> 24) & 0xFF) / 0xFF);
                 k = this._Str_6131.slice();
                 k.push(this._Str_14685);
                 this.getGraphicContext(true).filters = k;

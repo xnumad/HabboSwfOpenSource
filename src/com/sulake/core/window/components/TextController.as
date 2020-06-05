@@ -45,7 +45,7 @@
         protected var _Str_2959:Boolean = false;
         protected var _Str_22084:int = 0;
         protected var _Str_5517:Boolean = false;
-        protected var _Str_3778:uint;
+        protected var _etchingColor:uint;
         protected var _Str_5717:String;
         protected var _Str_22881:TextFormat;
         private var _Str_4040:String;
@@ -601,9 +601,9 @@
 
         private static function _Str_16906(k:TextController, _arg_2:uint):void
         {
-            k._Str_3778 = _arg_2;
+            k._etchingColor = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.etchingColor = k._Str_3778;
+            k._Str_3808.etchingColor = k._etchingColor;
         }
 
         private static function _Str_18207(k:TextController, _arg_2:String):void
@@ -1435,7 +1435,7 @@
             k.push(createProperty(PropertyKeys.AUTO_SIZE, this._Str_4318));
             k.push(createProperty(PropertyKeys.BORDER, this._Str_2309.border));
             k.push(createProperty(PropertyKeys.BORDER_COLOR, this._Str_2309.borderColor));
-            k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._Str_3778, PropertyStruct.HEX, (!(this._Str_3778 == uint(_local_2.etchingColor)))));
+            k.push(new PropertyStruct(PropertyKeys.ETCHING_COLOR, this._etchingColor, PropertyStruct.HEX, (!(this._etchingColor == uint(_local_2.etchingColor)))));
             k.push(new PropertyStruct(PropertyKeys.ETCHING_POSITION, this._Str_5717, PropertyStruct.STRING, (!(this._Str_5717 == String(_local_2.etchingPosition))), PropertyKeys.ETCHING_POSITION_RANGE));
             k.push(createProperty(PropertyKeys.CONDENSE_WHITE, this._Str_2309.condenseWhite));
             k.push(new PropertyStruct(PropertyKeys.FONT_FACE, this.defaultTextFormat.font, PropertyStruct.STRING, (!(this.defaultTextFormat.font == _local_2.fontFamily))));
@@ -1468,7 +1468,7 @@
 
         public function get etchingColor():uint
         {
-            return this._Str_3778;
+            return this._etchingColor;
         }
 
         public function set etchingColor(k:uint):void
