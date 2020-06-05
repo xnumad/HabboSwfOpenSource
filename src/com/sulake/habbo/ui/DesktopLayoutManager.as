@@ -53,13 +53,13 @@
                 _local_7 = ((WindowParam.WINDOW_PARAM_ON_ACCOMMODATE_ALIGN_BOTTOM) || (WindowParam.WINDOW_PARAM_ON_ACCOMMODATE_ALIGN_RIGHT));
                 if (_local_5.testParamFlag(_local_7))
                 {
-                    _local_5.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_22282);
+                    _local_5.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this.trimContainer);
                 }
                 _local_6++;
             }
         }
 
-        private function _Str_22282(k:WindowEvent):void
+        private function trimContainer(k:WindowEvent):void
         {
             var _local_2:IWindowContainer = (k.window as IWindowContainer);
             if (_local_2 == null)
