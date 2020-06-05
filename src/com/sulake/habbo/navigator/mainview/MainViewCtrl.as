@@ -288,7 +288,7 @@
             var _local_3:IWindow = this._mainWindow.findChildByTag("close");
             if (_local_3 != null)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3046);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onWindowClose);
             }
             this._mainWindow.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_22608);
             if (((!(k)) || (!(this._phaseOneNavigator))))
@@ -448,7 +448,7 @@
             }
         }
 
-        private function _Str_3046(k:WindowEvent):void
+        private function onWindowClose(k:WindowEvent):void
         {
             Logger.log("Close navigator window");
             this.close();

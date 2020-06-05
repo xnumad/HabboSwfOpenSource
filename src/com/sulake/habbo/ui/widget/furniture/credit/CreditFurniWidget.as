@@ -135,7 +135,7 @@
             _local_3 = this._window.findChildByTag("close");
             if (_local_3 != null)
             {
-                _local_3.procedure = this._Str_3046;
+                _local_3.procedure = this.onWindowClose;
             }
             this._window.addEventListener(WindowMouseEvent.CLICK, this.onMouseEvent);
         }
@@ -190,7 +190,7 @@
             }
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

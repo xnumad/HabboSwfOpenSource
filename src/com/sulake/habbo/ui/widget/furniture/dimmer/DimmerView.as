@@ -147,7 +147,7 @@
             k = this._window.findChildByTag("close");
             if (k != null)
             {
-                k.procedure = this._Str_3046;
+                k.procedure = this.onWindowClose;
             }
             k = this._window.findChildByName("color_grid_container");
             if (k != null)
@@ -248,7 +248,7 @@
             this._Str_19341(_local_3);
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

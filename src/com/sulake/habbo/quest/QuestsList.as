@@ -169,7 +169,7 @@
                 return;
             }
             this._window = IFrameWindow(this._questEngine.getXmlWindow("Quests"));
-            this._window.findChildByTag("close").procedure = this._Str_3046;
+            this._window.findChildByTag("close").procedure = this.onWindowClose;
             this._list = IItemListWindow(this._window.findChildByName("quest_list"));
             this._scrollV = IScrollbarWindow(this._window.findChildByName("scroller"));
             this._window.center();
@@ -312,7 +312,7 @@
             return false;
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:Boolean;
             if (k.type == WindowMouseEvent.CLICK)

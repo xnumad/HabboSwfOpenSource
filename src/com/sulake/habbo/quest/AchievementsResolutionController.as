@@ -161,7 +161,7 @@
                 return;
             }
             this._window = IFrameWindow(this._questEngine.getXmlWindow("AchievementsResolutions"));
-            this._window.findChildByTag("close").procedure = this._Str_3046;
+            this._window.findChildByTag("close").procedure = this.onWindowClose;
             this._window.center();
             this._window.visible = true;
             this._Str_2471(HEADER_BUTTON_CLOSE);
@@ -169,7 +169,7 @@
             this._Str_2471(CANCEL_BUTTON);
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

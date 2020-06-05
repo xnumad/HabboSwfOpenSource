@@ -1467,7 +1467,7 @@
             }
             if (_local_3 != null)
             {
-                _local_3.procedure = this._Str_3046;
+                _local_3.procedure = this.onWindowClose;
             }
             var _local_4:ITextFieldWindow = (this._mainContainer.findChildByName("search.input") as ITextFieldWindow);
             if (_local_4)
@@ -1723,7 +1723,7 @@
             this.send(new _Str_10337(k));
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

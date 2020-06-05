@@ -172,7 +172,7 @@
             var _local_3:IWindow = this._window.header.findChildByTag("close");
             if (_local_3)
             {
-                _local_3.addEventListener(WindowMouseEvent.CLICK, this._Str_3046);
+                _local_3.addEventListener(WindowMouseEvent.CLICK, this.onWindowClose);
             }
             _local_4 = this._window.findChildByName("pick_name");
             if (_local_4 != null)
@@ -204,7 +204,7 @@
             }
         }
 
-        private function _Str_3046(k:WindowEvent):void
+        private function onWindowClose(k:WindowEvent):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

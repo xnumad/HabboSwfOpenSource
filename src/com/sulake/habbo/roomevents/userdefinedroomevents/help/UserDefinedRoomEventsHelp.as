@@ -57,7 +57,7 @@
                 this._buttonNext.procedure = this._Str_3369;
             }
             var k:IWindow = this._window.findChildByTag("close");
-            k.procedure = this._Str_3046;
+            k.procedure = this.onWindowClose;
             this._window.center();
         }
 
@@ -76,7 +76,7 @@
             }
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

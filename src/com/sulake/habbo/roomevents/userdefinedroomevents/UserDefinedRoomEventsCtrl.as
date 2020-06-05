@@ -129,7 +129,7 @@
             this._window = IFrameWindow(this._roomEvents.getXmlWindow("ude_main"));
             this._configureContainer = IWindowContainer(this.find(this._window, "configure_container"));
             Util._Str_6937(this.find(this._configureContainer, "save_button"), this._Str_24143);
-            Util._Str_6937(this.find(this._configureContainer, "cancel_save_button"), this._Str_3046);
+            Util._Str_6937(this.find(this._configureContainer, "cancel_save_button"), this.onWindowClose);
             Util._Str_6937(this.find(this._configureContainer, "helplink"), this._Str_22441);
             Util._Str_6937(this.find(this._configureContainer, "apply_snapshot_txt"), this._Str_23497);
             Util._Str_6937(this.find(this._configureContainer, "dec_stuff_sel_button"), this._Str_23536);
@@ -143,7 +143,7 @@
             this.setIcon("configure_container", "icon_action", "action_icon_bitmap");
             this.setIcon("configure_container", "icon_condition", "condition_icon_bitmap");
             var k:IWindow = this._window.findChildByTag("close");
-            k.procedure = this._Str_3046;
+            k.procedure = this.onWindowClose;
             this._window.center();
         }
 
@@ -172,7 +172,7 @@
             this._roomEvents.refreshButton(_local_4, _arg_3, true, null, 0, _arg_2);
         }
 
-        private function _Str_3046(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowClose(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {
