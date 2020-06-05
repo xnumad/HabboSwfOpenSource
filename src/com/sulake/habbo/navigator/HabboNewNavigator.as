@@ -151,7 +151,7 @@
                 _toolbar = k;
             }, false, [{
                 "type":HabboToolbarEvent.HTE_TOOLBAR_CLICK,
-                "callback":this._Str_3304
+                "callback":this.onHabboToolbarEvent
             }]), new ComponentDependency(new IIDHabboCatalog(), function (k:IHabboCatalog):void
             {
                 _catalog = k;
@@ -202,7 +202,7 @@
             this._initialized = true;
         }
 
-        private function _Str_3304(k:HabboToolbarEvent):void
+        private function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {

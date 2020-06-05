@@ -98,7 +98,7 @@
                 }
                 if ((((this._toolbar) && (!(this._toolbar.disposed))) && (this._toolbar.events)))
                 {
-                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
+                    this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onHabboToolbarEvent);
                 }
                 if ((((this._container.habboHelp) && (!(this._container.habboHelp.disposed))) && (this._container.habboHelp.events)))
                 {
@@ -129,7 +129,7 @@
             this._toolbar = this._container.toolbar;
             if (((this._toolbar) && (this._toolbar.events)))
             {
-                this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
+                this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onHabboToolbarEvent);
             }
             if (this._container.habboHelp != null)
             {
@@ -153,7 +153,7 @@
             return this._container;
         }
 
-        private function _Str_3304(k:HabboToolbarEvent):void
+        private function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if ((((this.disposed) || (!(this._container))) || (!(this._container.events))))
             {

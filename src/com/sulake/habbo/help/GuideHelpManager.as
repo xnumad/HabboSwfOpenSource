@@ -130,7 +130,7 @@
             return this._habboHelp.getInteger("guide.help.new.user.tour.popup.delay", 30) * 1000;
         }
 
-        public function _Str_3304(k:HabboToolbarEvent):void
+        public function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {

@@ -428,10 +428,10 @@
         private function onToolbarReady(k:IID=null, _arg_2:IUnknown=null):void
         {
             this._toolbar = (IHabboToolbar(_arg_2) as IHabboToolbar);
-            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
+            this._toolbar.events.addEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onHabboToolbarEvent);
         }
 
-        private function _Str_3304(k:HabboToolbarEvent):void
+        private function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {

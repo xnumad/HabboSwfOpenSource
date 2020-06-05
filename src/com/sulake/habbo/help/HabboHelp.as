@@ -398,13 +398,13 @@
                 _toolbar = k;
             }, true, [{
                 "type":HabboToolbarEvent.HTE_TOOLBAR_CLICK,
-                "callback":this._Str_3304
+                "callback":this.onHabboToolbarEvent
             }, {
                 "type":HabboToolbarEvent.HTE_GROUP_ROOM_INFO_CLICK,
-                "callback":this._Str_3304
+                "callback":this.onHabboToolbarEvent
             }, {
                 "type":HabboToolbarEvent.HTE_RESIZED,
-                "callback":this._Str_3304
+                "callback":this.onHabboToolbarEvent
             }]), new ComponentDependency(new IIDHabboLocalizationManager(), function (k:IHabboLocalizationManager):void
             {
                 _localizationManager = k;
@@ -835,15 +835,15 @@
             }
         }
 
-        private function _Str_3304(k:HabboToolbarEvent):void
+        private function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if (this._welcomeScreenController != null)
             {
-                this._welcomeScreenController._Str_3304(k);
+                this._welcomeScreenController.onHabboToolbarEvent(k);
             }
             if (this._guideHelpManager != null)
             {
-                this._guideHelpManager._Str_3304(k);
+                this._guideHelpManager.onHabboToolbarEvent(k);
             }
         }
 

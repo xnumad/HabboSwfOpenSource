@@ -233,7 +233,7 @@
                 _toolbar = k;
             }, false, [{
                 "type":HabboToolbarEvent.HTE_TOOLBAR_CLICK,
-                "callback":this._Str_3304
+                "callback":this.onHabboToolbarEvent
             }]), new ComponentDependency(new IIDHabboCatalog(), function (k:IHabboCatalog):void
             {
                 _catalog = k;
@@ -313,7 +313,7 @@
             context.removeLinkEventTracker(this);
             if (((!(this._toolbar == null)) && (!(this._toolbar.events == null))))
             {
-                this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this._Str_3304);
+                this._toolbar.events.removeEventListener(HabboToolbarEvent.HTE_TOOLBAR_CLICK, this.onHabboToolbarEvent);
             }
             if (this._roomInfoViewCtrl)
             {
@@ -570,7 +570,7 @@
             this._catalog.openRoomAdCatalogPageInExtendedMode("room_ad", k, _arg_2, _local_5, _arg_3, _arg_4);
         }
 
-        private function _Str_3304(k:HabboToolbarEvent):void
+        private function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             if (k.type == HabboToolbarEvent.HTE_TOOLBAR_CLICK)
             {

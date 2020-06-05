@@ -178,7 +178,7 @@
             this._habboHelp.registerUpdateReceiver(this, 10);
         }
 
-        public function _Str_3304(k:HabboToolbarEvent):void
+        public function onHabboToolbarEvent(k:HabboToolbarEvent):void
         {
             var _local_2:Rectangle;
             if (this._disposed)
