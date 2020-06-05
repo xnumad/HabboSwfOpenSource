@@ -150,7 +150,7 @@
                     _Str_21734();
                     break;
                 case WindowMouseEvent.OUT:
-                    _Str_20157();
+                    collapseIfPending();
                     break;
             }
             if ((k as WindowMouseEvent) == null)

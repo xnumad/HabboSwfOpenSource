@@ -64,7 +64,7 @@
             this._windowCollapseTimer.start();
         }
 
-        protected function _Str_20157():void
+        protected function collapseIfPending():void
         {
             if (this._windowCollapsePending)
             {
