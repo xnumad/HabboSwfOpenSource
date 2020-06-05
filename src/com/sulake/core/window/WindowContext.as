@@ -60,7 +60,7 @@
         protected var _Str_11208:IInternalWindowServices;
         protected var _Str_14601:IWindowParser;
         protected var _Str_18011:IWindowFactory;
-        protected var _Str_8197:IWidgetFactory;
+        protected var _widgetFactory:IWidgetFactory;
         protected var _Str_5526:IResourceManager;
         protected var _Str_2867:IDesktopWindow;
         protected var _Str_13721:SubstituteParentController;
@@ -79,7 +79,7 @@
             this._Str_2417 = _arg_8;
             this._Str_11208 = new ServiceManager(this, _arg_8);
             this._Str_18011 = _arg_3;
-            this._Str_8197 = _arg_4;
+            this._widgetFactory = _arg_4;
             this._Str_5526 = _arg_5;
             this._Str_14601 = new WindowParser(this);
             this.inputEventTrackers = new Vector.<IInputEventTracker>(0);
@@ -191,7 +191,7 @@
                 this._Str_2312 = null;
                 this._Str_2417 = null;
                 this._Str_18011 = null;
-                this._Str_8197 = null;
+                this._widgetFactory = null;
                 this._Str_5526 = null;
             }
         }
@@ -399,7 +399,7 @@
 
         public function _Str_23058():IWidgetFactory
         {
-            return this._Str_8197;
+            return this._widgetFactory;
         }
 
         public function get linkEventTrackers():Vector.<ILinkEventTracker>

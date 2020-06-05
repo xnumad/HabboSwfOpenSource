@@ -13,13 +13,13 @@
 
     public class WidgetWindowController extends WindowController implements IWidgetWindow
     {
-        private var _Str_8197:IWidgetFactory;
+        private var _widgetFactory:IWidgetFactory;
         private var _widgetType:String = "";
         private var _widget:IWidget;
 
         public function WidgetWindowController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
-            this._Str_8197 = _arg_5._Str_23058();
+            this._widgetFactory = _arg_5._Str_23058();
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
         }
 
@@ -32,7 +32,7 @@
                     this._widget.dispose();
                     this._widget = null;
                 }
-                this._Str_8197 = null;
+                this._widgetFactory = null;
                 super.dispose();
             }
         }
@@ -60,7 +60,7 @@
                             removeChildAt(0);
                             this._widget.dispose();
                         }
-                        this._widget = this._Str_8197.createWidget(String(_local_2.value), this);
+                        this._widget = this._widgetFactory.createWidget(String(_local_2.value), this);
                         this._widgetType = _local_3;
                     }
                     break;
