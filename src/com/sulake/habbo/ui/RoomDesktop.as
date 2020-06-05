@@ -164,7 +164,7 @@
     {
         public static const STATE_UNDEFINED:int = -1;
         private static const RESIZE_UPDATE_TIMEOUT_MS:int = 1000;
-        private static const _Str_19484:int = 1000;
+        private static const SCALE_UPDATE_TIMEOUT_MS:int = 1000;
 
         private var _events:EventDispatcherWrapper;
         private var _windowManager:IHabboWindowManager = null;
