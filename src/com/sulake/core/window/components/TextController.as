@@ -185,7 +185,7 @@
             k._Str_3808.fontSize = _arg_2;
         }
 
-        private static function _Str_18868(k:TextController, _arg_2:String):void
+        private static function setGridFitType(k:TextController, _arg_2:String):void
         {
             k._Str_2309.gridFitType = _arg_2;
             k.refreshTextImage();
@@ -572,7 +572,7 @@
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
             k[PropertyKeys.FONT_FACE] = setFontFace;
             k[PropertyKeys.FONT_SIZE] = setFontSize;
-            k[PropertyKeys.GRID_FIT_TYPE] = _Str_18868;
+            k[PropertyKeys.GRID_FIT_TYPE] = setGridFitType;
             k[PropertyKeys.ITALIC] = _Str_17524;
             k[PropertyKeys.KERNING] = _Str_18973;
             k[PropertyKeys.MAX_CHARS] = _Str_18813;
@@ -866,7 +866,7 @@
 
         public function set gridFitType(k:String):void
         {
-            _Str_18868(this, k);
+            setGridFitType(this, k);
         }
 
         public function set htmlText(k:String):void
