@@ -55,7 +55,7 @@
         protected var _immediateClickMode:Boolean = false;
         private var _currentDynamicStyle:DynamicStyle;
         private var _forceGraphicContexts:Boolean = false;
-        private var _Str_5110:Rectangle;
+        private var _lastParentRect:Rectangle;
         private var _Str_2995:uint;
         private var _Str_8085:IPropertyMap;
 
@@ -74,7 +74,7 @@
             {
                 this._graphics = this.getGraphicContext((!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
             }
-            this._Str_5110 = new Rectangle();
+            this._lastParentRect = new Rectangle();
             if (_local_13 != null)
             {
                 _initialRect = new Rectangle(0, 0, int(_local_13.attribute("width")), int(_local_13.attribute("height")));
@@ -570,7 +570,7 @@
                 this._parent = WindowController(k);
                 if (this._parent != null)
                 {
-                    this._Str_5110 = this._parent.rectangle;
+                    this._lastParentRect = this._parent.rectangle;
                     _previousRect.x = _x;
                     _previousRect.y = _y;
                     _previousRect.width = _w;
@@ -580,10 +580,10 @@
                 }
                 else
                 {
-                    this._Str_5110.x = 0;
-                    this._Str_5110.y = 0;
-                    this._Str_5110.width = 0;
-                    this._Str_5110.height = 0;
+                    this._lastParentRect.x = 0;
+                    this._lastParentRect.y = 0;
+                    this._lastParentRect.width = 0;
+                    this._lastParentRect.height = 0;
                     _local_4 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_PARENT_REMOVED, this, _local_2);
                     this.update(this, _local_4);
                 }
@@ -646,7 +646,7 @@
             _local_2._mouseThreshold = _mouseThreshold;
             _local_2._drawable = this._drawable;
             _local_2._debug = this._debug;
-            _local_2._Str_5110 = this._Str_5110.clone();
+            _local_2._lastParentRect = this._lastParentRect.clone();
             _local_2._x = _x;
             _local_2._y = _y;
             _local_2._w = _w;
@@ -1204,7 +1204,7 @@
                             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                             break;
                         case WindowEvent.WINDOW_EVENT_PARENT_RESIZED:
-                            this._parent._Str_22290(null, this._Str_5110);
+                            this._parent._Str_22290(null, this._lastParentRect);
                             this._Str_10618();
                             break;
                         case WindowEvent.WINDOW_EVENT_CHILD_ADDED:
@@ -1816,7 +1816,7 @@
             {
                 if (k)
                 {
-                    _local_3 = (this._parent.width - this._Str_5110.width);
+                    _local_3 = (this._parent.width - this._lastParentRect.width);
                     _local_4 = (_param & WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER);
                     if (_local_4 == WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH)
                     {
@@ -1846,7 +1846,7 @@
                 }
                 if (_local_2)
                 {
-                    _local_3 = (this._parent.height - this._Str_5110.height);
+                    _local_3 = (this._parent.height - this._lastParentRect.height);
                     _local_4 = (_param & WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER);
                     if (_local_4 == WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_STRETCH)
                     {
