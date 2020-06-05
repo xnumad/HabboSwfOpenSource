@@ -1225,7 +1225,7 @@
                     break;
                 case RoomEngineRoomAdEvent.FURNI_CLICK:
                 case RoomEngineRoomAdEvent.FURNI_DOUBLE_CLICK:
-                    this._Str_24118(k);
+                    this.handleRoomAdClick(k);
                     break;
                 case RoomEngineRoomAdEvent.TOOLTIP_SHOW:
                 case RoomEngineRoomAdEvent.TOOLTIP_HIDE:
@@ -1839,7 +1839,7 @@
             return false;
         }
 
-        private function _Str_24118(k:RoomEngineObjectEvent):void
+        private function handleRoomAdClick(k:RoomEngineObjectEvent):void
         {
             if (k == null)
             {
