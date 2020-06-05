@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.friendlist._Str_2777;
     import com.sulake.habbo.friendlist.FriendsView;
-    import com.sulake.habbo.friendlist._Str_11980;
+    import com.sulake.habbo.friendlist.FriendRequestsView;
     import com.sulake.habbo.friendlist.SearchView;
     import com.sulake.habbo.friendlist.*;
 
@@ -21,7 +21,7 @@
             super();
             this._deps = k;
             this._tabs.push(new _Str_2740(this._deps._Str_15196(), _Str_2777._Str_4113, new FriendsView(), "${friendlist.friends}", "friends_footer", "hdr_friends"));
-            this._tabs.push(new _Str_2740(this._deps._Str_15196(), _Str_2777._Str_3798, new _Str_11980(), "${friendlist.tab.friendrequests}", "friend_requests_footer", "hdr_friend_requests"));
+            this._tabs.push(new _Str_2740(this._deps._Str_15196(), _Str_2777._Str_3798, new FriendRequestsView(), "${friendlist.tab.friendrequests}", "friend_requests_footer", "hdr_friend_requests"));
             this._tabs.push(new _Str_2740(this._deps._Str_15196(), _Str_2777._Str_5722, new SearchView(), "${generic.search}", "search_footer", "hdr_search"));
             this._Str_16257(null);
         }

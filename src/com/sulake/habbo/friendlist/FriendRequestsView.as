@@ -13,7 +13,7 @@
     import com.sulake.habbo.communication.messages.outgoing.friendlist.DeclineFriendMessageComposer;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2553;
 
-    public class _Str_11980 implements _Str_6180, _Str_4097 
+    public class FriendRequestsView implements _Str_6180, _Str_4097
     {
         private static const NO_REQS_INFO:String = "no_reqs_info";
 
