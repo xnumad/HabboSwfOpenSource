@@ -23,7 +23,7 @@
             return this._Str_19335;
         }
 
-        public function get _Str_17761():Array
+        public function get stuffTypes():Array
         {
             return this._Str_5208;
         }
