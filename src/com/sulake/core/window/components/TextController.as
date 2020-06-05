@@ -43,7 +43,7 @@
         protected var _margins:TextMargins;
         protected var _autoSize:String = "none";
         protected var _localized:Boolean = false;
-        protected var _Str_22084:int = 0;
+        protected var _maxLines:int = 0;
         protected var _Str_5517:Boolean = false;
         protected var _etchingColor:uint;
         protected var _Str_5717:String;
@@ -325,7 +325,7 @@
 
         private static function setMaxLines(k:TextController, _arg_2:int):void
         {
-            k._Str_22084 = _arg_2;
+            k._maxLines = _arg_2;
             k.refreshTextImage();
         }
 
@@ -781,7 +781,7 @@
 
         public function get _Str_9760():int
         {
-            return this._Str_22084;
+            return this._maxLines;
         }
 
         public function get leading():Number
