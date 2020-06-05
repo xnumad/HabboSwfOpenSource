@@ -381,7 +381,7 @@
             return this._freeFlowChat;
         }
 
-        public function get _Str_14394():uint
+        public function get roomBackgroundColor():uint
         {
             return this._roomBackgroundColor;
         }

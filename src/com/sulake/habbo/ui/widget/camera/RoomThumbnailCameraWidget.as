@@ -82,7 +82,7 @@
                 {
                     this._imageWindow.bitmap = new BitmapData(this._imageWindow.width, this._imageWindow.height, false, 0);
                 }
-                this._imageWindow.bitmap.fillRect(this._imageWindow.bitmap.rect, this.handler._Str_6647._Str_14394);
+                this._imageWindow.bitmap.fillRect(this._imageWindow.bitmap.rect, this.handler._Str_6647.roomBackgroundColor);
                 _local_2 = new Point(0, 0);
                 this._imageWindow.getGlobalPosition(_local_2);
                 _local_3 = new Matrix();
