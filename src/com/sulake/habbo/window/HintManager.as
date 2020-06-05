@@ -141,7 +141,7 @@
             this._hint = null;
         }
 
-        public function _Str_12248(k:String):void
+        public function hideMatchingHint(k:String):void
         {
             if (k == this._Str_16927)
             {

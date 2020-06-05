@@ -43,6 +43,6 @@
         function displayFloorPlanEditor():void;
         function openHelpPage(_arg_1:String):void;
         function get habboPagesStyleSheet():StyleSheet;
-        function _Str_12248(_arg_1:String):void;
+        function hideMatchingHint(_arg_1:String):void;
     }
 }

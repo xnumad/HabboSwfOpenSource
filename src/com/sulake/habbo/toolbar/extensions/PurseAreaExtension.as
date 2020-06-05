@@ -171,7 +171,7 @@
             {
                 return;
             }
-            this._toolbar.windowManager._Str_12248(_arg_2.name);
+            this._toolbar.windowManager.hideMatchingHint(_arg_2.name);
             switch (_arg_2.name)
             {
                 case "hc_join_button":

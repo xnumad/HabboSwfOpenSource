@@ -646,9 +646,9 @@
             this._hintManager.hideHint();
         }
 
-        public function _Str_12248(k:String):void
+        public function hideMatchingHint(k:String):void
         {
-            this._hintManager._Str_12248(k);
+            this._hintManager.hideMatchingHint(k);
         }
 
         public function displayFloorPlanEditor():void

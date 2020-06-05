@@ -513,7 +513,7 @@
         {
             var _local_2:String = IWindow(k.target).name;
             this._toolbar.toggleWindowVisibility(_local_2);
-            this._windowManager._Str_12248(_local_2);
+            this._windowManager.hideMatchingHint(_local_2);
         }
 
         public function setAssetUri(location:String, image:BitmapData):void
