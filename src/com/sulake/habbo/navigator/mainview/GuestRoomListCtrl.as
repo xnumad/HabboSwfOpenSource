@@ -31,7 +31,7 @@
         private var _list:IItemListWindow;
         private var _roomPopupCtrl:RoomPopupCtrl;
         private var _scrollV:IScrollbarWindow;
-        protected var _Str_3220:UserCountRenderer;
+        protected var _userCountRenderer:UserCountRenderer;
         private var _Str_12349:IWindowContainer;
         private var _Str_22153:int;
         private var _Str_19895:Boolean;
@@ -44,7 +44,7 @@
             this._Str_21859 = _arg_2;
             this._Str_16040 = _arg_3;
             this._roomPopupCtrl = new RoomPopupCtrl(this._navigator, 5, -5);
-            this._Str_3220 = new UserCountRenderer(this._navigator);
+            this._userCountRenderer = new UserCountRenderer(this._navigator);
         }
 
         public function dispose():void
@@ -54,10 +54,10 @@
                 this._roomPopupCtrl.dispose();
                 this._roomPopupCtrl = null;
             }
-            if (this._Str_3220)
+            if (this._userCountRenderer)
             {
-                this._Str_3220.dispose();
-                this._Str_3220 = null;
+                this._userCountRenderer.dispose();
+                this._userCountRenderer = null;
             }
         }
 
@@ -204,7 +204,7 @@
                 k.findChildByName("room_number").caption = ((k.tags[0] + 2) + ".");
             }
             this._Str_16465(k, _arg_2);
-            this._Str_3220.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
+            this._userCountRenderer.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
             k.name = ((("guestroom_" + _arg_2.ownerName) + "_") + _arg_2.roomName);
         }
 
