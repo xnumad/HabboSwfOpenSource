@@ -84,7 +84,7 @@
                 _local_6.addEventListener(WindowMouseEvent.UP, this._Str_23294);
                 _local_6.addEventListener(WindowMouseEvent.DOWN, this._Str_22989);
                 _local_6.addEventListener(WindowMouseEvent.OVER, this.onCloseButtonMouseOver);
-                _local_6.addEventListener(WindowMouseEvent.OUT, this._Str_24771);
+                _local_6.addEventListener(WindowMouseEvent.OUT, this.onCloseButtonMouseOut);
             }
             this._window.background = true;
             this._window.color = 0;
@@ -359,7 +359,7 @@
             }
         }
 
-        private function _Str_24771(k:WindowMouseEvent):void
+        private function onCloseButtonMouseOut(k:WindowMouseEvent):void
         {
             if (this._window == null)
             {
