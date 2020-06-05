@@ -127,7 +127,7 @@
             }
         }
 
-        private static function _Str_23737(k:WindowController, _arg_2:Rectangle):void
+        private static function calculateMouseRegion(k:WindowController, _arg_2:Rectangle):void
         {
             var _local_3:Rectangle = new Rectangle();
             k.getGlobalRectangle(_local_3);
@@ -141,7 +141,7 @@
             var _local_7:int;
             while (_local_7 < _local_4)
             {
-                WindowController._Str_23737((k.getChildAt(_local_7) as WindowController), _arg_2);
+                WindowController.calculateMouseRegion((k.getChildAt(_local_7) as WindowController), _arg_2);
                 _local_7++;
             }
         }
