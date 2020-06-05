@@ -55,7 +55,7 @@
         protected var _localization:ICoreLocalizationManager;
         protected var _rootDisplayObject:DisplayObjectContainer;
         protected var _throwErrors:Boolean = true;
-        protected var _Str_1984:Error;
+        protected var _lastError:Error;
         protected var _Str_16327:int = -1;
         protected var _Str_11208:IInternalWindowServices;
         protected var _Str_14601:IWindowParser;
@@ -198,7 +198,7 @@
 
         public function getLastError():Error
         {
-            return this._Str_1984;
+            return this._lastError;
         }
 
         public function getLastErrorCode():int
@@ -208,7 +208,7 @@
 
         public function handleError(k:int, _arg_2:Error):void
         {
-            this._Str_1984 = _arg_2;
+            this._lastError = _arg_2;
             this._Str_16327 = k;
             if (this._throwErrors)
             {
@@ -218,7 +218,7 @@
 
         public function flushError():void
         {
-            this._Str_1984 = null;
+            this._lastError = null;
             this._Str_16327 = -1;
         }
 
@@ -319,10 +319,10 @@
 			{
             var _local_2:Error;
             this._Str_4816 = true;
-            if (this._Str_1984)
+            if (this._lastError)
             {
-                _local_2 = this._Str_1984;
-                this._Str_1984 = null;
+                _local_2 = this._lastError;
+                this._lastError = null;
                 throw (_local_2);
             }
             inputEventProcessor.process(this._eventProcessorState, inputEventQueue);
