@@ -281,7 +281,7 @@
 
         public function get filters():Array
         {
-            return (this._Str_4453()) ? this.getGraphicContext(true).filters : [];
+            return (this.hasGraphicsContext()) ? this.getGraphicContext(true).filters : [];
         }
 
         public function get parent():IWindow
@@ -444,7 +444,7 @@
 
         public function set filters(k:Array):void
         {
-            if (this._Str_4453())
+            if (this.hasGraphicsContext())
             {
                 this.getGraphicContext(true).filters = k;
             }
@@ -591,7 +591,7 @@
             }
         }
 
-        public function _Str_4453():Boolean
+        public function hasGraphicsContext():Boolean
         {
             return (!(this._graphics == null)) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT)));
         }
@@ -1319,7 +1319,7 @@
             var _local_4:Object = _arg_2.getStyleByWindowState(_arg_3);
             k.offsetX = ((_local_4.offsetX) ? _local_4.offsetX : 0);
             k.offsetY = ((_local_4.offsetY) ? _local_4.offsetY : 0);
-            if (k._Str_4453())
+            if (k.hasGraphicsContext())
             {
                 k._graphics.getDisplayObject().transform.colorTransform = _arg_2.getColorTransform(_arg_3);
             }
@@ -2309,7 +2309,7 @@
                 {
                     this._children.push(_local_3);
                     _local_3.parent = this;
-                    _local_2 = ((_local_2) || (_local_3._Str_4453()));
+                    _local_2 = ((_local_2) || (_local_3.hasGraphicsContext()));
                 }
             }
             if (((this._forceGraphicContexts) || (_local_2)))
@@ -2331,7 +2331,7 @@
             }
             this._children.push(_local_2);
             _local_2.parent = this;
-            if (((this._forceGraphicContexts) || (_local_2._Str_4453())))
+            if (((this._forceGraphicContexts) || (_local_2.hasGraphicsContext())))
             {
                 this.setupGraphicsContext();
                 if (_local_2.getGraphicContext(true).parent != this._graphics)
@@ -2358,7 +2358,7 @@
             }
             this._children.splice(_arg_2, 0, _local_3);
             _local_3.parent = this;
-            if (((this._forceGraphicContexts) || (_local_3._Str_4453())))
+            if (((this._forceGraphicContexts) || (_local_3.hasGraphicsContext())))
             {
                 this.setupGraphicsContext();
                 if (_local_3.getGraphicContext(true).parent != this._graphics)
@@ -2486,7 +2486,7 @@
             this._children.splice(_local_2, 1);
             k.parent = null;
             var _local_3:IGraphicContextHost = (k as IGraphicContextHost);
-            if (((_local_3) && (_local_3._Str_4453())))
+            if (((_local_3) && (_local_3.hasGraphicsContext())))
             {
                 this._graphics._Str_17938(_local_3.getGraphicContext(true));
             }
@@ -2514,7 +2514,7 @@
                 this._children.splice(_local_3, 1);
                 this._children.splice(_arg_2, 0, k);
                 _local_4 = WindowController(k);
-                if (_local_4._Str_4453())
+                if (_local_4.hasGraphicsContext())
                 {
                     this._graphics._Str_19243(_local_4.getGraphicContext(true), this.getChildIndex(_local_4));
                 }
@@ -2556,7 +2556,7 @@
                 this._children.splice(_local_3, 1);
                 this._children.splice(_local_3, 0, _arg_2);
                 this._children.splice(_local_4, 0, k);
-                if (((WindowController(k)._Str_4453()) || (WindowController(_arg_2)._Str_4453())))
+                if (((WindowController(k).hasGraphicsContext()) || (WindowController(_arg_2).hasGraphicsContext())))
                 {
                     this._graphics._Str_20742(WindowController(k).getGraphicContext(true), WindowController(_arg_2).getGraphicContext(true));
                 }

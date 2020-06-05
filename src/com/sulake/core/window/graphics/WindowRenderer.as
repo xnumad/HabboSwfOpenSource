@@ -572,7 +572,7 @@
                                     if (_local_7.visible)
                                     {
                                         _local_8 = IGraphicContextHost(_local_7);
-                                        if (_local_8._Str_4453())
+                                        if (_local_8.hasGraphicsContext())
                                         {
                                             _local_8.getGraphicContext(true).visible = true;
                                         }
@@ -585,7 +585,7 @@
                             if (!_Str_6670.intersects(_arg_3))
                             {
                                 _local_8 = IGraphicContextHost(_local_7);
-                                if (_local_8._Str_4453())
+                                if (_local_8.hasGraphicsContext())
                                 {
                                     _local_8.getGraphicContext(true).visible = false;
                                 }
