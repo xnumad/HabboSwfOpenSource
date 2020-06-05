@@ -17,7 +17,7 @@
         protected var _bitmapData:BitmapData;
         protected var _pivot:uint;
         protected var _stretchedX:Boolean;
-        protected var _Str_12317:Boolean;
+        protected var _stretchedY:Boolean;
         protected var _Str_8672:Number;
         protected var _Str_8540:Number;
         protected var _Str_14793:Boolean;
@@ -33,7 +33,7 @@
             var _local_12:IPropertyMap = _arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3);
             this._pivot = PivotPoint.pivotFromName(String(_local_12.get(PropertyKeys.PIVOT_POINT).value));
             this._stretchedX = Boolean(_local_12.get(PropertyKeys.STRETCHED_X).value);
-            this._Str_12317 = Boolean(_local_12.get(PropertyKeys.STRETCHED_Y).value);
+            this._stretchedY = Boolean(_local_12.get(PropertyKeys.STRETCHED_Y).value);
             this._Str_8672 = Number(_local_12.get(PropertyKeys.ZOOM_X).value);
             this._Str_8540 = Number(_local_12.get(PropertyKeys.ZOOM_Y).value);
             this._Str_10479 = Boolean(_local_12.get(PropertyKeys.WRAP_X).value);
@@ -74,12 +74,12 @@
 
         public function get stretchedY():Boolean
         {
-            return this._Str_12317;
+            return this._stretchedY;
         }
 
         public function set stretchedY(k:Boolean):void
         {
-            this._Str_12317 = k;
+            this._stretchedY = k;
         }
 
         public function get zoomX():Number
@@ -180,7 +180,7 @@
             var k:Array = super.properties;
             k.push(createProperty(PropertyKeys.PIVOT_POINT, PivotPoint.PIVOT_NAMES[this._pivot]));
             k.push(createProperty(PropertyKeys.STRETCHED_X, this._stretchedX));
-            k.push(createProperty(PropertyKeys.STRETCHED_Y, this._Str_12317));
+            k.push(createProperty(PropertyKeys.STRETCHED_Y, this._stretchedY));
             k.push(createProperty(PropertyKeys.WRAP_X, this._Str_10479));
             k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
             k.push(createProperty(PropertyKeys.ZOOM_X, this._Str_8672));
@@ -205,7 +205,7 @@
                         this._stretchedX = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.STRETCHED_Y:
-                        this._Str_12317 = Boolean(_local_2.value);
+                        this._stretchedY = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.ZOOM_X:
                         this._Str_8672 = Number(_local_2.value);
