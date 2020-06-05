@@ -174,7 +174,7 @@
             return this.textField.defaultTextFormat.underline;
         }
 
-        public function get _Str_22822():int
+        public function get drawOffsetX():int
         {
             return (this._margins) ? this._margins.left : 0;
         }
