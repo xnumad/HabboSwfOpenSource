@@ -284,7 +284,7 @@
             this.addMouseClickListener(this.find("remove_rights_region"), this.onRemoveRights);
             this.addMouseClickListener(this.find("embed_src_txt"), this._Str_23461);
             this.addMouseClickListener(this.find("staff_pick_button"), this.onStaffPick);
-            this.addMouseClickListener(this.find("room_report_button"), this._Str_24254);
+            this.addMouseClickListener(this.find("room_report_button"), this.onRoomReport);
             this._navigator.refreshButton(IRegionWindow(this.find("remove_rights_region")), "remove_rights", this._navigator.hasRoomRightsButIsNotOwner(this._navigator.data._Str_2678.flatId), null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("make_home_region")), "make_home", true, null, 0);
             this._navigator.refreshButton(IRegionWindow(this.find("favourite_region")), "favourite", true, null, 0);
@@ -458,7 +458,7 @@
             this._navigator.send(new _Str_11662(this._navigator.data._Str_2678.flatId, this._navigator.data._Str_8299));
         }
 
-        private function _Str_24254(k:WindowEvent):void
+        private function onRoomReport(k:WindowEvent):void
         {
             this._navigator.trackGoogle("roomInfo", "reportRoom");
             var _local_2:GuestRoomData = this._navigator.data._Str_2678;
