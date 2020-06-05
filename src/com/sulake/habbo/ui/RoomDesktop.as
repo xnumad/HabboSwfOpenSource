@@ -746,7 +746,7 @@
             {
                 return;
             }
-            if (((this._session.isGameSession) && (!(this._Str_24010(k)))))
+            if (((this._session.isGameSession) && (!(this.isGameWidget(k)))))
             {
                 return;
             }
@@ -978,7 +978,7 @@
             }
         }
 
-        private function _Str_24010(k:String):Boolean
+        private function isGameWidget(k:String):Boolean
         {
             switch (k)
             {
