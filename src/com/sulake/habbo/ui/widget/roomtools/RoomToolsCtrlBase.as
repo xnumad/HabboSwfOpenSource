@@ -17,7 +17,7 @@
         protected var _widget:RoomToolsWidget;
         protected var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
-        protected var _Str_3510:Boolean = true;
+        protected var _isCollapsed:Boolean = true;
         protected var _Str_5637:Timer;
         protected var _Str_13353:Boolean;
         protected var _Str_20667:int;
@@ -103,7 +103,7 @@
 
         public function get _Str_25900():Boolean
         {
-            return this._Str_3510;
+            return this._isCollapsed;
         }
 
         public function get window():IWindowContainer

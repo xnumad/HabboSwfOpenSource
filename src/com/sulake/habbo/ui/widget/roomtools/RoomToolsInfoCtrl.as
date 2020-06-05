@@ -65,7 +65,7 @@
             {
                 return;
             }
-            var k:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
+            var k:int = ((((_isCollapsed) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
             var _local_2:int = ((_window.desktop.height - DISTANCE_FROM_BOTTOM) - _window.height);
             var _local_3:int = _widget.getChatInputY();
             if (_local_3 < (_local_2 + _window.height))
@@ -78,12 +78,12 @@
         override public function setCollapsed(k:Boolean):void
         {
             var _local_3:Motion;
-            if (_Str_3510 == k)
+            if (_isCollapsed == k)
             {
                 return;
             }
-            _Str_3510 = k;
-            if (!_Str_3510)
+            _isCollapsed = k;
+            if (!_isCollapsed)
             {
                 _Str_18018();
             }
@@ -92,8 +92,8 @@
                 return;
             }
             _window.visible = true;
-            var _local_2:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
-            if (_Str_3510)
+            var _local_2:int = ((((_isCollapsed) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
+            if (_isCollapsed)
             {
                 _local_3 = new Queue(new EaseOut(new MoveTo(_window, WINDOW_ANIM_SPEED, _local_2, _window.y), 1), new Callback(this.motionComplete));
             }
@@ -117,7 +117,7 @@
 
         private function motionComplete(k:Motion):void
         {
-            if (((_Str_3510) && (_window)))
+            if (((_isCollapsed) && (_window)))
             {
                 _window.visible = false;
             }

@@ -136,7 +136,7 @@
             var _local_5:int;
             var _local_6:int;
             var _local_7:IWindow;
-            if (_Str_3510)
+            if (_isCollapsed)
             {
                 k = window.findChildByName("side_bar_expand");
                 k.y = (window.height - k.height);
@@ -171,17 +171,17 @@
         override public function setCollapsed(k:Boolean):void
         {
             var _local_2:Motion;
-            if (((_Str_3510 == k) || (!(window))))
+            if (((_isCollapsed == k) || (!(window))))
             {
                 return;
             }
-            _Str_3510 = k;
+            _isCollapsed = k;
             var _local_3:IWindow = window.findChildByName("window_bg");
             if (!_local_3)
             {
                 return;
             }
-            if (_Str_3510)
+            if (_isCollapsed)
             {
                 _local_2 = new Queue(new EaseOut(new MoveTo(_local_3, WINDOW_ANIM_SPEED, _Str_12959, _local_3.y), 1), new Callback(this.motionComplete));
             }
@@ -205,9 +205,9 @@
             {
                 return;
             }
-            window.findChildByName("window_bg").visible = (!(_Str_3510));
-            window.findChildByName("side_bar_collapse").visible = (!(_Str_3510));
-            window.findChildByName("side_bar_expand").visible = _Str_3510;
+            window.findChildByName("window_bg").visible = (!(_isCollapsed));
+            window.findChildByName("side_bar_collapse").visible = (!(_isCollapsed));
+            window.findChildByName("side_bar_expand").visible = _isCollapsed;
             this.updatePosition();
         }
 
@@ -240,8 +240,8 @@
                             break;
                         case "button_collapse":
                         case "button_expand":
-                            _widget.setCollapsed((!(_Str_3510)));
-                            handler.sessionDataManager.setRoomToolsState((!(_Str_3510)));
+                            _widget.setCollapsed((!(_isCollapsed)));
+                            handler.sessionDataManager.setRoomToolsState((!(_isCollapsed)));
                             break;
                         case "button_history_back":
                             _widget.goToPreviousRoom();
@@ -363,7 +363,7 @@
             {
                 return 0;
             }
-            if (_Str_3510)
+            if (_isCollapsed)
             {
                 k = window.findChildByName("side_bar_expand");
                 return (k) ? (k.width + TOOLBAR_X) : 0;
