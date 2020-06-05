@@ -84,13 +84,13 @@
         {
             if (((!(this._Str_2566 == null)) && (!(this._Str_2566.disposed))))
             {
-                this._Str_2566.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_20343);
+                this._Str_2566.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
                 this._Str_2566.removeEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this._Str_19899);
             }
             this._Str_2566 = k;
             if (((!(this._Str_2566 == null)) && (!(this._Str_2566.disposed))))
             {
-                this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_20343);
+                this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
                 this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this._Str_19899);
                 this._Str_6685();
             }
@@ -534,7 +534,7 @@
             return false;
         }
 
-        private function _Str_20343(k:WindowEvent):void
+        private function onScrollableResized(k:WindowEvent):void
         {
             this._Str_6685();
             this._Str_10345(this._Str_588);
