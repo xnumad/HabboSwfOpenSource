@@ -51,7 +51,7 @@
         private var _friendsList:IHabboFriendsList;
         private var _soundManager:IHabboSoundManager;
         private var _tracking:IHabboTracking;
-        private var _Str_9588:int = 0;
+        private var _miniMailUnseenCount:int = 0;
         private var _sessionDataManager:ISessionDataManager;
         private var _help:IHabboHelp;
         private var _Str_2439:MainView;
@@ -128,15 +128,15 @@
 
         private function _Str_23193(k:IMessageEvent):void
         {
-            this._Str_9588++;
+            this._miniMailUnseenCount++;
             this._Str_17105();
-            events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_NEW, this._Str_9588));
+            events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_NEW, this._miniMailUnseenCount));
         }
 
         private function _Str_12932(k:IMessageEvent):void
         {
-            this._Str_9588 = (k.parser as _Str_8206)._Str_22745;
-            events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._Str_9588));
+            this._miniMailUnseenCount = (k.parser as _Str_8206)._Str_22745;
+            events.dispatchEvent(new MiniMailMessageEvent(MiniMailMessageEvent.MMME_UNREAD, this._miniMailUnseenCount));
         }
 
         private function onAccountPreferences(k:AccountPreferencesEvent):void
@@ -173,7 +173,7 @@
 
         public function getUnseenMiniMailMessageCount():int
         {
-            return this._Str_9588;
+            return this._miniMailUnseenCount;
         }
 
         public function setFollowingAllowed(k:int, _arg_2:Boolean):void
