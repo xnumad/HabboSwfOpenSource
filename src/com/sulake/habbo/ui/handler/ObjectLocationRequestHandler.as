@@ -78,7 +78,7 @@
                     {
                         _local_4 = this._container.roomEngine.getRoomObjectBoundingRectangle(_local_3.roomId, _local_7._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
                         _local_5 = this._container.roomEngine.getRoomObjectScreenLocation(_local_3.roomId, _local_7._Str_2713, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
-                        _local_6 = this._container._Str_18304();
+                        _local_6 = this._container.getRoomViewRect();
                         if ((((_local_4) && (_local_6)) && (_local_5)))
                         {
                             _local_4.offset(_local_6.x, _local_6.y);
@@ -89,7 +89,7 @@
                 case RoomWidgetGetObjectLocationMessage.RWGOI_MESSAGE_GET_GAME_OBJECT_LOCATION:
                     _local_4 = this._container.roomEngine.getRoomObjectBoundingRectangle(_local_3.roomId, _local_2.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
                     _local_5 = this._container.roomEngine.getRoomObjectScreenLocation(_local_3.roomId, _local_2.objectId, RoomObjectCategoryEnum.OBJECT_CATEGORY_USER, this._container.getFirstCanvasId());
-                    _local_6 = this._container._Str_18304();
+                    _local_6 = this._container.getRoomViewRect();
                     if ((((_local_4) && (_local_6)) && (_local_5)))
                     {
                         _local_4.offset(_local_6.x, _local_6.y);

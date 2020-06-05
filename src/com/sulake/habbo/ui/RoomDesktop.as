@@ -1560,7 +1560,7 @@
             return 0;
         }
 
-        public function _Str_18304():Rectangle
+        public function getRoomViewRect():Rectangle
         {
             if (!this._layoutManager)
             {

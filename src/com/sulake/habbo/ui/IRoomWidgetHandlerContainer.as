@@ -67,7 +67,7 @@
         function get _Str_6642():DesktopLayoutManager;
         function setRoomViewColor(_arg_1:uint, _arg_2:int):void;
         function getFirstCanvasId():int;
-        function _Str_18304():Rectangle;
+        function getRoomViewRect():Rectangle;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
         function _Str_19457(_arg_1:IRoomWidgetHandler):void;
         function _Str_20159(_arg_1:IRoomWidgetHandler):void;
