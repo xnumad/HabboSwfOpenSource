@@ -33,7 +33,7 @@
         private static const NOTIFICATION_ICON_WIDTH:int = 55;
         private static const CHAT_ITEM_RENDER_BUNDLE_SIZE:int = 5;
         private static const SCROLL_TRIGGER_HEIGHT:int = 150;
-        private static const _Str_4550:Dictionary = new Dictionary();
+        private static const ERROR_MESSAGES:Dictionary = new Dictionary();
 
         private var _messenger:HabboMessenger;
         private var _frame:IWindowContainer;
@@ -54,14 +54,14 @@
         private var _batchUpdatingTimer:Timer;
 
         {
-            _Str_4550[3] = "${messenger.error.receivermuted}";
-            _Str_4550[4] = "${messenger.error.sendermuted}";
-            _Str_4550[5] = "${messenger.error.offline}";
-            _Str_4550[6] = "${messenger.error.notfriend}";
-            _Str_4550[7] = "${messenger.error.busy}";
-            _Str_4550[8] = "${messenger.error.receiverhasnochat}";
-            _Str_4550[9] = "${messenger.error.senderhasnochat}";
-            _Str_4550[10] = "${messenger.error.offline_failed}";
+            ERROR_MESSAGES[3] = "${messenger.error.receivermuted}";
+            ERROR_MESSAGES[4] = "${messenger.error.sendermuted}";
+            ERROR_MESSAGES[5] = "${messenger.error.offline}";
+            ERROR_MESSAGES[6] = "${messenger.error.notfriend}";
+            ERROR_MESSAGES[7] = "${messenger.error.busy}";
+            ERROR_MESSAGES[8] = "${messenger.error.receiverhasnochat}";
+            ERROR_MESSAGES[9] = "${messenger.error.senderhasnochat}";
+            ERROR_MESSAGES[10] = "${messenger.error.offline_failed}";
         }
 
         public function MainView(k:HabboMessenger)
@@ -285,18 +285,18 @@
         {
             var _local_4:String;
             var _local_5:RegExp;
-            if ((_arg_2 in _Str_4550))
+            if ((_arg_2 in ERROR_MESSAGES))
             {
                 if (_arg_3.length > 0)
                 {
-                    _local_4 = _Str_4550[_arg_2];
+                    _local_4 = ERROR_MESSAGES[_arg_2];
                     _local_5 = /[${}]/g;
                     _local_4 = _local_4.replace(_local_5, "");
                     this._Str_14230(k, ((this._messenger.getText(_local_4) + ": ") + _arg_3));
                 }
                 else
                 {
-                    this._Str_14230(k, _Str_4550[_arg_2]);
+                    this._Str_14230(k, ERROR_MESSAGES[_arg_2]);
                 }
             }
         }
