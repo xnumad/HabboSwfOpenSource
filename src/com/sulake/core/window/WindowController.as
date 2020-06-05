@@ -51,7 +51,7 @@
         protected var _parent:WindowController;
         protected var _children:Vector.<IWindow>;
         protected var _debug:Boolean = false;
-        protected var _Str_5058:WindowRectLimits;
+        protected var _limits:WindowRectLimits;
         protected var _Str_9238:Boolean = false;
         private var _Str_9367:DynamicStyle;
         private var _Str_10190:Boolean = false;
@@ -296,7 +296,7 @@
 
         public function get limits():IRectLimiter
         {
-            return (this._Str_5058) ? this._Str_5058 : this._Str_5058 = new WindowRectLimits(this);
+            return (this._limits) ? this._limits : this._limits = new WindowRectLimits(this);
         }
 
         public function get immediateClickMode():Boolean
@@ -655,7 +655,7 @@
             _local_2._previousRect = _previousRect.clone();
             _local_2._minimizedRect = ((_minimizedRect) ? _minimizedRect.clone() : null);
             _local_2._maximizedRect = ((_maximizedRect) ? _maximizedRect.clone() : null);
-            _local_2._Str_5058 = ((this._Str_5058) ? this._Str_5058.clone(_local_2) : null);
+            _local_2._limits = ((this._limits) ? this._limits.clone(_local_2) : null);
             _local_2._context = _context;
             _local_2._fillColor = _fillColor;
             _local_2._alphaColor = _alphaColor;
@@ -764,12 +764,12 @@
         {
             var _local_7:uint;
             var _local_8:WindowEvent;
-            if (this._Str_5058)
+            if (this._limits)
             {
-                _arg_4 = Math.max(this._Str_5058.minHeight, _arg_4);
-                _arg_4 = Math.min(this._Str_5058.maxHeight, _arg_4);
-                _arg_3 = Math.max(this._Str_5058.minWidth, _arg_3);
-                _arg_3 = Math.min(this._Str_5058.maxWidth, _arg_3);
+                _arg_4 = Math.max(this._limits.minHeight, _arg_4);
+                _arg_4 = Math.min(this._limits.maxHeight, _arg_4);
+                _arg_3 = Math.max(this._limits.minWidth, _arg_3);
+                _arg_3 = Math.min(this._limits.maxWidth, _arg_3);
             }
             var _local_5:Boolean = ((!(k == _x)) || (!(_arg_2 == _y)));
             var _local_6:Boolean = ((!(_arg_3 == _w)) || (!(_arg_4 == _h)));
