@@ -568,7 +568,7 @@
             k[PropertyKeys.BORDER_COLOR] = setBorderColor;
             k[PropertyKeys.CONDENSE_WHITE] = setCondenseWhite;
             k["default_text_format"] = setDefaultTextFormat;
-            k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
+            k[PropertyKeys.ETCHING_COLOR] = setEtchingColor;
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
             k[PropertyKeys.FONT_FACE] = setFontFace;
             k[PropertyKeys.FONT_SIZE] = setFontSize;
@@ -599,7 +599,7 @@
             return k;
         }
 
-        private static function _Str_16906(k:TextController, _arg_2:uint):void
+        private static function setEtchingColor(k:TextController, _arg_2:uint):void
         {
             k._etchingColor = _arg_2;
             k.refreshTextImage();
@@ -1473,7 +1473,7 @@
 
         public function set etchingColor(k:uint):void
         {
-            _Str_16906(this, k);
+            setEtchingColor(this, k);
         }
 
         public function set styleSheet(k:StyleSheet):void
