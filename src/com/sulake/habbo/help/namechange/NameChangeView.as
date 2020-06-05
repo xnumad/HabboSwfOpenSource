@@ -56,7 +56,7 @@
         {
             if (!this._disposed)
             {
-                this._Str_6430();
+                this.disposeWindow();
                 if (this._suggestionsRenderer != null)
                 {
                     this._suggestionsRenderer.dispose();
@@ -66,7 +66,7 @@
             }
         }
 
-        private function _Str_6430():void
+        private function disposeWindow():void
         {
             this._mainView = null;
             this._selectionView = null;

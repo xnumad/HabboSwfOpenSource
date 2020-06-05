@@ -104,7 +104,7 @@
             return this._habboHelp.windowManager.buildFromXML(XML(_local_3.content), _arg_2);
         }
 
-        private function _Str_6430(k:WindowEvent=null):void
+        private function disposeWindow(k:WindowEvent=null):void
         {
         }
 
@@ -115,7 +115,7 @@
                 this._nameChangeView.dispose();
                 this._nameChangeView = null;
             }
-            this._Str_6430();
+            this.disposeWindow();
         }
 
         public function _Str_5574():void
@@ -159,13 +159,13 @@
 
         public function _Str_20431(k:String):void
         {
-            this._Str_6430();
+            this.disposeWindow();
             this._habboHelp._Str_2488(new _Str_12037(k));
         }
 
         public function checkName(k:String):void
         {
-            this._Str_6430();
+            this.disposeWindow();
             this._habboHelp._Str_2488(new _Str_7887(k));
         }
 

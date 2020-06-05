@@ -124,7 +124,7 @@
 
         private function onCloseButtonClick(k:WindowEvent):void
         {
-            this._Str_6430();
+            this.disposeWindow();
         }
 
         private function _Str_24260(k:WindowMouseEvent):void
@@ -231,7 +231,7 @@
             }
         }
 
-        public function _Str_6430():void
+        public function disposeWindow():void
         {
             if (this._window)
             {
@@ -262,7 +262,7 @@
             {
                 return;
             }
-            this._Str_6430();
+            this.disposeWindow();
             this._navigator = null;
         }
 
