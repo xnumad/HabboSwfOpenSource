@@ -300,7 +300,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_17907(k:TextController, _arg_2:String):void
+        private static function setRestrict(k:TextController, _arg_2:String):void
         {
             k._Str_2309.restrict = _arg_2;
         }
@@ -577,7 +577,7 @@
             k[PropertyKeys.KERNING] = setKerning;
             k[PropertyKeys.MAX_CHARS] = setMaxChars;
             k[PropertyKeys.MULTILINE] = setMultiline;
-            k[PropertyKeys.RESTRICT] = _Str_17907;
+            k[PropertyKeys.RESTRICT] = setRestrict;
             k[PropertyKeys.SPACING] = _Str_9915;
             k[PropertyKeys.SHARPNESS] = _Str_16622;
             k[PropertyKeys.THICKNESS] = _Str_18660;
@@ -896,7 +896,7 @@
 
         public function set restrict(k:String):void
         {
-            _Str_17907(this, k);
+            setRestrict(this, k);
         }
 
         public function set sharpness(k:Number):void
