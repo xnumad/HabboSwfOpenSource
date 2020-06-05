@@ -353,7 +353,7 @@
 
         public function _Str_21870():void
         {
-            if (this._habboFriendListComponent._Str_19440() != _Str_2777._Str_5722)
+            if (this._habboFriendListComponent.currentTabId() != _Str_2777._Str_5722)
             {
                 this._habboFriendListComponent.openFriendSearch();
             }

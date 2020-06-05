@@ -336,7 +336,7 @@
             return false;
         }
 
-        public function _Str_19440():int
+        public function currentTabId():int
         {
             if (((this._view == null) || (!(this._view.isOpen()))))
             {
