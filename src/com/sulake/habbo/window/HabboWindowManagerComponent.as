@@ -383,7 +383,7 @@
             return new _Str_4045(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
-        public function _Str_5947(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418
+        public function alertWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418
         {
             var alertAsset:IAsset = assets.getAssetByName("habbo_window_alert_xml");
             if (!alertAsset)

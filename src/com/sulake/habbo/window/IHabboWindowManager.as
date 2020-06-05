@@ -24,7 +24,7 @@
         function getActiveWindow(_arg_1:uint=1):IWindow;
         function getWindowContext(_arg_1:uint):IWindowContext;
         function alert(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418;
-        function _Str_5947(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418;
+        function alertWithModal(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2418;
         function _Str_23503(_arg_1:String, _arg_2:String, _arg_3:String, _arg_4:String, _arg_5:uint, _arg_6:Function):_Str_10548;
         function confirm(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910;
         function _Str_21720(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910;

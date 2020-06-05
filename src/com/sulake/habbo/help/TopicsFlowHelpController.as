@@ -127,7 +127,7 @@
             this._Str_23695();
             if (this._chatList.numListItems == 0)
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.no_user_data}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.no_user_data}", 0, null);
                 this.closeWindow();
             }
         }
@@ -240,7 +240,7 @@
         {
             if (this._habboHelp._Str_2662 == -1)
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${guide.bully.request.usermissing}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${guide.bully.request.usermissing}", 0, null);
                 return false;
             }
             return true;
@@ -251,12 +251,12 @@
             this._message = _Str_2789(IWidgetWindow(this._view.findChildByName("help_message")).widget).message;
             if (((this._message == null) || (this._message == "")))
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.nomsg}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.nomsg}", 0, null);
                 return false;
             }
             if (this._message.length < this._habboHelp.getInteger("help.cfh.length.minimum", 15))
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.msgtooshort}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.msgtooshort}", 0, null);
                 return false;
             }
             return true;
@@ -267,7 +267,7 @@
             var k:Array = this._habboHelp._Str_5721._Str_18787._Str_9701(this._contentModerationType, this._habboHelp._Str_2662);
             if (((k == null) || (k.length == 0)))
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.chatmissing}", 0, null);
                 return false;
             }
             return true;
@@ -350,7 +350,7 @@
                     }
                     else
                     {
-                        this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.nochathistory}", 0, null);
+                        this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.nochathistory}", 0, null);
                     }
                     return;
                 case "button_account":
@@ -405,7 +405,7 @@
                     }
                     else
                     {
-                        this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.notopic}", 0, null);
+                        this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.notopic}", 0, null);
                     }
                     return;
             }
@@ -760,7 +760,7 @@
             this._Str_16001();
             if (this._habboHelp._Str_2662 <= 0)
             {
-                this._habboHelp.windowManager._Str_5947("${generic.alert.title}", "${help.cfh.error.no_user_data}", 0, null);
+                this._habboHelp.windowManager.alertWithModal("${generic.alert.title}", "${help.cfh.error.no_user_data}", 0, null);
                 this.closeWindow();
                 return false;
             }
