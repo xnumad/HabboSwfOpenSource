@@ -64,7 +64,7 @@
         {
             var k:ITextWindow = ITextWindow(this._details.findChildByName("roomowner"));
             var _local_2:IRegionWindow = IRegionWindow(this._details.findChildByName("roomowner_cont"));
-            _local_2.procedure = this._Str_10211;
+            _local_2.procedure = this.onOwnerName;
             k.caption = ((this._room._Str_6938) ? this._room.ownerName : "");
             _local_2.visible = (((this._room._Str_6938) && (!(this._room.ownerName == ""))) && (!(this._room.ownerName == "-")));
             _Str_3521._Str_3927(false, _local_2);
@@ -193,7 +193,7 @@
             return "";
         }
 
-        private function _Str_10211(k:WindowEvent, _arg_2:IWindow):void
+        private function onOwnerName(k:WindowEvent, _arg_2:IWindow):void
         {
             _Str_3521._Str_6514(k, _arg_2);
             if (k.type == WindowMouseEvent.CLICK)

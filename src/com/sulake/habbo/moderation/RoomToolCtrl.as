@@ -213,7 +213,7 @@
             {
                 this._kickCb.disable();
             }
-            this._frame.findChildByName("owner_name_txt").procedure = this._Str_10211;
+            this._frame.findChildByName("owner_name_txt").procedure = this.onOwnerName;
             this._Str_17211();
         }
 
@@ -285,7 +285,7 @@
             _local_3.text = _arg_2;
         }
 
-        private function _Str_10211(k:WindowEvent, _arg_2:IWindow):void
+        private function onOwnerName(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {

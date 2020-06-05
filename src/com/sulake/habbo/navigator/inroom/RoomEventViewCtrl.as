@@ -292,7 +292,7 @@
             this._navigator.refreshButton(IWindowContainer(this.find("embed_info")), "icon_weblink", true, null, 0);
             this._Str_2786(this._window.findChildByTag("close"), this._Str_18537);
             var _local_2:IWindowContainer = IWindowContainer(this._window.findChildByName("owner_name_cont"));
-            _local_2.procedure = this._Str_10211;
+            _local_2.procedure = this.onOwnerName;
             Util._Str_7173(_local_2, 1000, 10, 2, 5);
             this._Str_19728("rating_cont", "rating_caption", "rating_txt");
             this._Str_19728("ranking_cont", "ranking_caption", "ranking_txt");
@@ -518,7 +518,7 @@
             this.refresh();
         }
 
-        private function _Str_10211(k:WindowEvent, _arg_2:IWindow):void
+        private function onOwnerName(k:WindowEvent, _arg_2:IWindow):void
         {
             _Str_3521._Str_6514(k, _arg_2);
             if (k.type == WindowMouseEvent.CLICK)
