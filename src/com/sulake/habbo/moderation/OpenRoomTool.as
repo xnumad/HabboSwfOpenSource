@@ -29,7 +29,7 @@
             this._main.windowTracker.show(new RoomToolCtrl(this._main, this._roomId), this._frame, false, false, true);
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

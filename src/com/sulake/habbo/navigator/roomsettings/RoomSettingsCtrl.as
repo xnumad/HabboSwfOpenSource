@@ -1055,12 +1055,12 @@
             }
             if (this._Str_2449 == this._navigator.homeRoomId)
             {
-                this._navigator.windowManager.alert("${navigator.delete.homeroom.title}", "${navigator.delete.homeroom.body}", 0, this._Str_3168);
+                this._navigator.windowManager.alert("${navigator.delete.homeroom.title}", "${navigator.delete.homeroom.body}", 0, this.onAlertClose);
                 return;
             }
             if (this._Str_2366 > 0)
             {
-                this._navigator.windowManager.alert("${group.deletebase.title}", "${group.deletebase.body}", 0, this._Str_3168);
+                this._navigator.windowManager.alert("${group.deletebase.title}", "${group.deletebase.body}", 0, this.onAlertClose);
                 return;
             }
             Logger.log(("[RoomSettingsCtrl.onDeleteButtonClick] " + this._Str_2449));
@@ -1088,7 +1088,7 @@
             }
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

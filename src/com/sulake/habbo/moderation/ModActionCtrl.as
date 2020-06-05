@@ -233,7 +233,7 @@
             }
             if (this._Str_3643.selection < 0)
             {
-                this._Str_2327.windowManager.alert("Alert", "Please select a topic.", 0, this._Str_3168);
+                this._Str_2327.windowManager.alert("Alert", "Please select a topic.", 0, this.onAlertClose);
                 return;
             }
             Logger.log("Giving default sanction...");
@@ -255,12 +255,12 @@
             }
             if (this._Str_3643.selection < 0)
             {
-                this._Str_2327.windowManager.alert("Alert", "Please select a topic.", 0, this._Str_3168);
+                this._Str_2327.windowManager.alert("Alert", "Please select a topic.", 0, this.onAlertClose);
                 return;
             }
             if (this._Str_8957.selection < 0)
             {
-                this._Str_2327.windowManager.alert("Alert", "Please select a sanction.", 0, this._Str_3168);
+                this._Str_2327.windowManager.alert("Alert", "Please select a sanction.", 0, this.onAlertClose);
                 return;
             }
             var _local_3:int = this._Str_5384[this._Str_3643.selection];
@@ -270,7 +270,7 @@
                 case ModActionDefinition.ALERT:
                     if (!this._Str_2327.initMsg._Str_18465)
                     {
-                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
+                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
                     this._Str_3066("sendCaution");
@@ -283,7 +283,7 @@
                 case ModActionDefinition._Str_5684:
                     if (!this._Str_2327.initMsg._Str_21242)
                     {
-                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
+                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
                     this._Str_3066("ban");
@@ -293,7 +293,7 @@
                 case ModActionDefinition._Str_13808:
                     if (!this._Str_2327.initMsg._Str_20397)
                     {
-                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this._Str_3168);
+                        this._Str_2327.windowManager.alert("Alert", "You have insufficient permissions.", 0, this.onAlertClose);
                         return;
                     }
                     this._Str_3066("kick");
@@ -307,7 +307,7 @@
                 case ModActionDefinition.MESSAGE:
                     if (StringUtil.isEmpty(this._Str_3121.text))
                     {
-                        this._Str_2327.windowManager.alert("Alert", "Please write a message to user.", 0, this._Str_3168);
+                        this._Str_2327.windowManager.alert("Alert", "Please write a message to user.", 0, this.onAlertClose);
                         return;
                     }
                     this._Str_3066("sendCaution");
@@ -346,7 +346,7 @@
             this._Str_2327 = null;
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

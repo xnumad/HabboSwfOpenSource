@@ -271,7 +271,7 @@
         public function _Str_5104(k:String):void
         {
             this._Str_18574();
-            this._alert = this.windowManager.alert("Game Center Alert", k, 0, this._Str_3168);
+            this._alert = this.windowManager.alert("Game Center Alert", k, 0, this.onAlertClose);
         }
 
         private function _Str_18574():void
@@ -283,7 +283,7 @@
             }
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             this._Str_18574();
         }

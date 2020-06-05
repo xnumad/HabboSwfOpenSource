@@ -97,7 +97,7 @@
             }
             if (((this._placeHolderMessage) || (this._msgInput.text == "")))
             {
-                this._main.windowManager.alert("Alert", "You must input a message to the user", 0, this._Str_3168);
+                this._main.windowManager.alert("Alert", "You must input a message to the user", 0, this.onAlertClose);
                 return;
             }
             Logger.log("Sending message...");
@@ -144,7 +144,7 @@
             this._main = null;
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

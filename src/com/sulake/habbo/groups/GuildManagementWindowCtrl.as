@@ -515,11 +515,11 @@
             if (!this._alertVisible)
             {
                 this._alertVisible = true;
-                this._manager.windowManager.alert(k, _arg_2, 0, this._Str_3168);
+                this._manager.windowManager.alert(k, _arg_2, 0, this.onAlertClose);
             }
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
             this._alertVisible = false;

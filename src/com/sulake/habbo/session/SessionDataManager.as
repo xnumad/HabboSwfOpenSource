@@ -620,7 +620,7 @@
             return this._badgeImageManager.getBadgeImageWithInfo(k);
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }

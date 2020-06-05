@@ -368,7 +368,7 @@
             {
                 _local_3 = ("group.joinfail." + _local_2);
                 _local_4 = this._localization.getLocalization(_local_3, _local_3);
-                this._windowManager.alert("${group.joinfail.title}", _local_4, 0, this._Str_3168);
+                this._windowManager.alert("${group.joinfail.title}", _local_4, 0, this.onAlertClose);
             }
         }
 
@@ -400,7 +400,7 @@
             this._roomId = _local_2.guestRoomId;
         }
 
-        private function _Str_3168(k:_Str_2418, _arg_2:WindowEvent):void
+        private function onAlertClose(k:_Str_2418, _arg_2:WindowEvent):void
         {
             k.dispose();
         }
@@ -424,7 +424,7 @@
             {
                 _local_3 = ("group.edit.fail." + _local_2);
                 _local_4 = this._localization.getLocalization(_local_3, _local_3);
-                this._windowManager.alert("${group.edit.fail.title}", _local_4, 0, this._Str_3168);
+                this._windowManager.alert("${group.edit.fail.title}", _local_4, 0, this.onAlertClose);
             }
         }
 
