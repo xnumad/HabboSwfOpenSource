@@ -29,7 +29,7 @@
         protected var _navigator:HabboNavigator;
         private var _content:IWindowContainer;
         private var _list:IItemListWindow;
-        private var _Str_4871:RoomPopupCtrl;
+        private var _roomPopupCtrl:RoomPopupCtrl;
         private var _scrollV:IScrollbarWindow;
         protected var _Str_3220:UserCountRenderer;
         private var _Str_12349:IWindowContainer;
@@ -43,16 +43,16 @@
             this._navigator = k;
             this._Str_21859 = _arg_2;
             this._Str_16040 = _arg_3;
-            this._Str_4871 = new RoomPopupCtrl(this._navigator, 5, -5);
+            this._roomPopupCtrl = new RoomPopupCtrl(this._navigator, 5, -5);
             this._Str_3220 = new UserCountRenderer(this._navigator);
         }
 
         public function dispose():void
         {
-            if (this._Str_4871)
+            if (this._roomPopupCtrl)
             {
-                this._Str_4871.dispose();
-                this._Str_4871 = null;
+                this._roomPopupCtrl.dispose();
+                this._roomPopupCtrl = null;
             }
             if (this._Str_3220)
             {
@@ -66,9 +66,9 @@
             this._content = k;
             this._list = ((this._content) ? IItemListWindow(this._content.findChildByName("item_list")) : null);
             this._scrollV = ((this._content) ? IScrollbarWindow(this._content.findChildByName("scroller")) : null);
-            if (((k == null) && (this._Str_4871)))
+            if (((k == null) && (this._roomPopupCtrl)))
             {
-                this._Str_4871._Str_17240();
+                this._roomPopupCtrl._Str_17240();
             }
         }
 
@@ -224,7 +224,7 @@
         protected function onMouseOver(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            if (((this._Str_4871.visible) && (this._Str_19895)))
+            if (((this._roomPopupCtrl.visible) && (this._Str_19895)))
             {
                 return;
             }
@@ -235,8 +235,8 @@
             {
                 return;
             }
-            this._Str_4871.room = _local_4;
-            this._Str_4871._Str_8168(_local_2);
+            this._roomPopupCtrl.room = _local_4;
+            this._roomPopupCtrl._Str_8168(_local_2);
         }
 
         public function getRooms():Array
@@ -258,7 +258,7 @@
             }
             var _local_3:int = _local_2.tags[0];
             _local_2.color = this.getBgColor(_local_3);
-            this._Str_4871._Str_17240();
+            this._roomPopupCtrl._Str_17240();
         }
 
         protected function onMouseClick(k:WindowEvent):void
@@ -291,7 +291,7 @@
             }
             this.beforeEnterRoom(_local_3);
             this._navigator.goToRoom(_local_4.flatId, true, "", _local_3);
-            this._Str_4871._Str_14696();
+            this._roomPopupCtrl._Str_14696();
         }
 
         public function beforeEnterRoom(k:int):void
@@ -386,7 +386,7 @@
 
         public function get _Str_26238():RoomPopupCtrl
         {
-            return this._Str_4871;
+            return this._roomPopupCtrl;
         }
 
         public function get navigator():HabboNavigator
