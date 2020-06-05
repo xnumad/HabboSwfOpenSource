@@ -252,7 +252,7 @@
         private function _Str_22239(k:int, _arg_2:Boolean):void
         {
             var _local_3:IItemGridWindow = (this._window.findChildByName("achievements") as IItemGridWindow);
-            var _local_4:IWindowContainer = (_local_3._Str_15490(k) as IWindowContainer);
+            var _local_4:IWindowContainer = (_local_3.getGridItemByID(k) as IWindowContainer);
             if (_local_4)
             {
                 _local_4.findChildByName("bg_selected_bitmap").visible = _arg_2;

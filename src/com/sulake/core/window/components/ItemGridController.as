@@ -200,7 +200,7 @@
             return _local_2.getListItemAt((k / this.numColumns));
         }
 
-        public function _Str_15490(k:uint):IWindow
+        public function getGridItemByID(k:uint):IWindow
         {
             var _local_3:IItemListWindow;
             var _local_4:IWindow;
