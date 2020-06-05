@@ -61,7 +61,7 @@
         {
             if (!this.isInputValid())
             {
-                this._Str_5374(k);
+                this.displayError(k);
                 return false;
             }
             this._Str_16652();
@@ -74,7 +74,7 @@
             this._input.textBackgroundColor = this._orgTextBackgroundColor;
         }
 
-        public function _Str_5374(k:String):void
+        public function displayError(k:String):void
         {
             this._input.textBackground = true;
             this._input.textBackgroundColor = 4294021019;

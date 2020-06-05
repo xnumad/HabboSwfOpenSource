@@ -313,21 +313,21 @@
             if (_arg_2 == _Str_4043._Str_18222)
             {
                 this._Str_5306(_Str_5300);
-                this._Str_5666._Str_5374("${navigator.roomsettings.roomnameismandatory}");
+                this._Str_5666.displayError("${navigator.roomsettings.roomnameismandatory}");
             }
             else
             {
                 if (_arg_2 == _Str_4043._Str_17186)
                 {
                     this._Str_5306(_Str_5300);
-                    this._Str_5666._Str_5374("${navigator.roomsettings.unacceptablewords}");
+                    this._Str_5666.displayError("${navigator.roomsettings.unacceptablewords}");
                 }
                 else
                 {
                     if (_arg_2 == _Str_4043._Str_18833)
                     {
                         this._Str_5306(_Str_5300);
-                        this._Str_7105._Str_5374("${navigator.roomsettings.unacceptablewords}");
+                        this._Str_7105.displayError("${navigator.roomsettings.unacceptablewords}");
                     }
                     else
                     {
@@ -350,7 +350,7 @@
                                 if (_arg_2 == _Str_4043._Str_16354)
                                 {
                                     this._Str_5306(_Str_7004);
-                                    this._Str_4194._Str_5374("${navigator.roomsettings.passwordismandatory}");
+                                    this._Str_4194.displayError("${navigator.roomsettings.passwordismandatory}");
                                 }
                                 else
                                 {
@@ -363,7 +363,7 @@
                                     else
                                     {
                                         this._Str_5306(_Str_5300);
-                                        this._Str_5666._Str_5374(("Update failed: error " + _arg_2));
+                                        this._Str_5666.displayError(("Update failed: error " + _arg_2));
                                     }
                                 }
                             }
@@ -390,7 +390,7 @@
         {
             if (_arg_2 == k.getText().toLowerCase())
             {
-                k._Str_5374(_arg_3);
+                k.displayError(_arg_3);
             }
         }
 
@@ -959,7 +959,7 @@
                 {
                     this._Str_4194.clearErrors();
                     this._Str_5306(_Str_7004);
-                    this._Str_7349._Str_5374("${navigator.roomsettings.invalidconfirm}");
+                    this._Str_7349.displayError("${navigator.roomsettings.invalidconfirm}");
                     return;
                 }
                 if (_local_8 != "")

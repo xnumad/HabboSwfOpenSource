@@ -127,14 +127,14 @@
             var _local_3:int = _local_2.errorCode;
             if (_local_3 == 0)
             {
-                this._Str_5340._Str_5374(this._navigator.getText("roomad.error.0.description"));
+                this._Str_5340.displayError(this._navigator.getText("roomad.error.0.description"));
                 this._Str_5340.setText(_local_2.filteredText);
             }
             else
             {
                 if (_local_3 == 1)
                 {
-                    this._Str_5951._Str_5374(this._navigator.getText("roomad.error.0.description"));
+                    this._Str_5951.displayError(this._navigator.getText("roomad.error.0.description"));
                     this._Str_5951.setText(_local_2.filteredText);
                 }
             }
