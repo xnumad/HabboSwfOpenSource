@@ -104,7 +104,7 @@
         {
             if (k.type == WindowEvent.WINDOW_EVENT_SELECTED)
             {
-                _Str_21166(k);
+                notifyEventListeners(k);
             }
         }
     }

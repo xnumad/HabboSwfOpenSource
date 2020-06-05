@@ -1357,7 +1357,7 @@
             }
         }
 
-        protected function _Str_21166(k:WindowEvent):void
+        protected function notifyEventListeners(k:WindowEvent):void
         {
             this.procedure(k, this);
             if (!k.isWindowOperationPrevented())
