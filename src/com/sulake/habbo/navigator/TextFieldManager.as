@@ -37,7 +37,7 @@
             }
             Util._Str_6937(this._input, this.onInputClick);
             this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this.checkEnterPress);
-            this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22400);
+            this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this.checkMaxLen);
             this._orgTextBackground = this._input.textBackground;
             this._orgTextBackgroundColor = this._input.textBackgroundColor;
         }
@@ -174,7 +174,7 @@
             }
         }
 
-        private function _Str_22400(k:WindowEvent):void
+        private function checkMaxLen(k:WindowEvent):void
         {
             var _local_2:String = this._input.text;
             if (_local_2.length > this._maxTextLen)
