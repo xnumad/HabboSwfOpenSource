@@ -144,7 +144,7 @@
             this._Str_9090 = k.getParser().roomInvitesIgnored;
         }
 
-        public function _Str_16882():Boolean
+        public function getRoomInvitesIgnored():Boolean
         {
             return this._Str_9090;
         }

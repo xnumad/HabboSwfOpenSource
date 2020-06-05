@@ -46,7 +46,7 @@
                 _local_2++;
             }
             ICheckBoxWindow(this._window.findChildByName("prefer_old_chat_checkbox")).Selected = this._toolbar.freeFlowChat.isDisabledInPreferences;
-            ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected = this._toolbar.messenger._Str_16882();
+            ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected = this._toolbar.messenger.getRoomInvitesIgnored();
             this._window.findChildByName("disable_room_camera_follow_checkbox").visible = (this._window.findChildByName("disable_room_camera_follow_label").visible = this._toolbar.getBoolean("room.camera.follow_user"));
             if (this._toolbar.getBoolean("room.camera.follow_user"))
             {
@@ -87,7 +87,7 @@
                     return;
                 case "ignore_room_invites_checkbox":
                     this._toolbar.messenger._Str_19823(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
-                    this._toolbar.connection.send(new _Str_10960(this._toolbar.messenger._Str_16882()));
+                    this._toolbar.connection.send(new _Str_10960(this._toolbar.messenger.getRoomInvitesIgnored()));
                     return;
                 case "disable_room_camera_follow_checkbox":
                     _local_4 = ICheckBoxWindow(this._window.findChildByName("disable_room_camera_follow_checkbox")).Selected;
