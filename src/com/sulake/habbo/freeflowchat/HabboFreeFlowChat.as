@@ -487,7 +487,7 @@
 
         public function clickHasToPropagate(k:MouseEvent):Boolean
         {
-            return (this._roomUI) ? this._roomUI._Str_21446(k) : false;
+            return (this._roomUI) ? this._roomUI.mouseEventPositionHasContextMenu(k) : false;
         }
 
         public function get chatStyleLibrary():IChatStyleLibrary

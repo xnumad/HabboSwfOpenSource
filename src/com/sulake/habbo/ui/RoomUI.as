@@ -1208,7 +1208,7 @@
             }
         }
 
-        public function _Str_21446(k:MouseEvent):Boolean
+        public function mouseEventPositionHasContextMenu(k:MouseEvent):Boolean
         {
             var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)
