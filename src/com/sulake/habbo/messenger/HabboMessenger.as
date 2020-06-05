@@ -54,7 +54,7 @@
         private var _miniMailUnseenCount:int = 0;
         private var _sessionDataManager:ISessionDataManager;
         private var _help:IHabboHelp;
-        private var _Str_2439:MainView;
+        private var _mainView:MainView;
         private var _Str_2432:Vector.<IMessageEvent>;
         private var _Str_9090:Boolean = false;
 
@@ -156,7 +156,7 @@
 
         private function _Str_19006(k:IMessageEvent):void
         {
-            this._Str_2439 = new MainView(this);
+            this._mainView = new MainView(this);
             this.addMessageEvent(new _Str_4851(this._Str_18650));
             this.addMessageEvent(new _Str_8339(this.onInstantMessageError));
             this.addMessageEvent(new _Str_4696(this._Str_10457));
@@ -164,10 +164,10 @@
 
         public function startConversation(k:int):void
         {
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.startConversation(k);
-                this._Str_2439.show();
+                this._mainView.startConversation(k);
+                this._mainView.show();
             }
         }
 
@@ -178,17 +178,17 @@
 
         public function setFollowingAllowed(k:int, _arg_2:Boolean):void
         {
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.setFollowingAllowed(k, _arg_2);
+                this._mainView.setFollowingAllowed(k, _arg_2);
             }
         }
 
         public function setOnlineStatus(k:int, _arg_2:Boolean):void
         {
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.setOnlineStatus(k, _arg_2);
+                this._mainView.setOnlineStatus(k, _arg_2);
             }
         }
 
@@ -207,14 +207,14 @@
 
         public function isOpen():Boolean
         {
-            return (!(this._Str_2439 == null)) && (this._Str_2439.isOpen);
+            return (!(this._mainView == null)) && (this._mainView.isOpen);
         }
 
         public function toggleMessenger():void
         {
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.toggle();
+                this._mainView.toggle();
             }
         }
 
@@ -227,10 +227,10 @@
         {
             var _local_2:_Str_6189 = k.getParser();
             Logger.log(((("Received console msg: " + _local_2._Str_3460) + ", ") + _local_2.senderId));
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.addConsoleMessage(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
-                if (!this._Str_2439.isOpen)
+                this._mainView.addConsoleMessage(_local_2.senderId, _local_2._Str_3460, _local_2._Str_17201, _local_2.extraData);
+                if (!this._mainView.isOpen)
                 {
                     this._Str_17105();
                 }
@@ -240,10 +240,10 @@
         private function _Str_10457(k:_Str_4696):void
         {
             var _local_2:_Str_5791 = k.getParser();
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.addRoomInvite(_local_2.senderId, _local_2._Str_3460);
-                if (!this._Str_2439.isOpen)
+                this._mainView.addRoomInvite(_local_2.senderId, _local_2._Str_3460);
+                if (!this._mainView.isOpen)
                 {
                     this._Str_17105();
                 }
@@ -261,9 +261,9 @@
         private function onInstantMessageError(k:IMessageEvent):void
         {
             var _local_2:_Str_7091 = (k as _Str_8339).getParser();
-            if (this._Str_2439 != null)
+            if (this._mainView != null)
             {
-                this._Str_2439.onInstantMessageError(_local_2.userId, _local_2.errorCode, _local_2.message);
+                this._mainView.onInstantMessageError(_local_2.userId, _local_2.errorCode, _local_2.message);
             }
         }
 
@@ -309,7 +309,7 @@
 
         public function closeConversation(k:int):void
         {
-            this._Str_2439.hideConversation(k);
+            this._mainView.hideConversation(k);
         }
 
         public function get hasfriendsListInitialized():Boolean

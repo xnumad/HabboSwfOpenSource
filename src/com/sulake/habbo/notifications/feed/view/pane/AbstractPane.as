@@ -14,7 +14,7 @@
         protected var _isVisible:Boolean;
         private var _Str_20734:int;
         protected var window:IWindowContainer;
-        protected var _Str_2439:NotificationView;
+        protected var _mainView:NotificationView;
         protected var _name:String;
 
         public function AbstractPane(k:String, _arg_2:NotificationView, _arg_3:IWindowContainer, _arg_4:int)
@@ -24,7 +24,7 @@
                 throw (new Exception(("Window was null for feed pane: " + k)));
             }
             this._name = k;
-            this._Str_2439 = _arg_2;
+            this._mainView = _arg_2;
             this._Str_20734 = _arg_4;
             this.window = _arg_3;
         }

@@ -30,17 +30,17 @@
 
         private function _Str_15286(k:WindowMouseEvent):void
         {
-            _Str_2439.toggleMinimized();
+            _mainView.toggleMinimized();
         }
 
         private function _Str_23102(k:WindowMouseEvent):void
         {
-            _Str_2439.switchToPane(NotificationView.PANE_NOTIFICATIONS);
+            _mainView.switchToPane(NotificationView.PANE_NOTIFICATIONS);
         }
 
         private function _Str_22735(k:WindowMouseEvent):void
         {
-            _Str_2439.switchToPane(NotificationView.PANE_STREAM);
+            _mainView.switchToPane(NotificationView.PANE_STREAM);
         }
     }
 }

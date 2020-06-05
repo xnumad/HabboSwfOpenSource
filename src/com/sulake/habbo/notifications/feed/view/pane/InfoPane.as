@@ -30,7 +30,7 @@
 
         private function _Str_19389(k:WindowMouseEvent):void
         {
-            _Str_2439.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
+            _mainView.closePaneLevel(AbstractPane.PANE_VIEW_LEVEL_MODAL);
         }
     }
 }

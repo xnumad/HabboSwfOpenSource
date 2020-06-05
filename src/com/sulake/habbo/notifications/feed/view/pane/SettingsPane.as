@@ -23,7 +23,7 @@
 
         private function _Str_21774():void
         {
-            var k:FeedSettings = _Str_2439.controller.getSettings();
+            var k:FeedSettings = _mainView.controller.getSettings();
             k._Str_22647();
         }
 
@@ -34,7 +34,7 @@
             var _local_5:String;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = _Str_2439.controller.getSettings();
+                _local_3 = _mainView.controller.getSettings();
                 for each (_local_5 in _arg_2.tags)
                 {
                     switch (_local_5)

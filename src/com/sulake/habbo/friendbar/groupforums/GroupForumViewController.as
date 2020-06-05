@@ -15,7 +15,7 @@
         private static const _Str_13986:Number = 0.5;
 
         private var _controller:GroupForumController;
-        private var _Str_2439:GroupForumView;
+        private var _mainView:GroupForumView;
         private var _window:IFrameWindow;
         private var _Str_9870:ISelectorWindow;
         private var _Str_8356:ISelectorWindow;
@@ -29,8 +29,8 @@
 
         public function GroupForumViewController(k:GroupForumView, _arg_2:int, _arg_3:int, _arg_4:_Str_3372)
         {
-            this._Str_2439 = k;
-            this._controller = this._Str_2439.controller;
+            this._mainView = k;
+            this._controller = this._mainView.controller;
             this._Str_2381 = _arg_4;
             this._window = IFrameWindow(this._controller.windowManager.buildFromXML(XML(new HabboFriendBarCom.groupforum_forum_settings_xml())));
             this._window.x = _arg_2;
