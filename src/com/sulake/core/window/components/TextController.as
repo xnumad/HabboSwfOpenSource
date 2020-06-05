@@ -794,7 +794,7 @@
             return !(this._overFlowReplace == "");
         }
 
-        public function get _Str_15348():String
+        public function get overflowReplace():String
         {
             return this._overFlowReplace;
         }
@@ -954,7 +954,7 @@
             setLeading(this, k);
         }
 
-        public function set _Str_15348(k:String):void
+        public function set overflowReplace(k:String):void
         {
             setOverflowReplace(this, k);
         }
@@ -1212,7 +1212,7 @@
                     _local_8 = _local_13;
                     while ((((this._field.textHeight + _local_3) > _local_5) && (_local_8 > 0)))
                     {
-                        this._field.text = (_local_9.slice(0, --_local_8) + this._Str_15348);
+                        this._field.text = (_local_9.slice(0, --_local_8) + this.overflowReplace);
                     }
                 }
                 _local_10 = this._field.text;
@@ -1228,7 +1228,7 @@
                     _local_16 = (((_local_2 + _local_15.indent) + _local_15.leftMargin) + _local_15.rightMargin);
                     while (((((this._field.textWidth + _local_16) + 2) > _local_4) && (_local_8 > 0)))
                     {
-                        this._field.text = (_local_10.slice(0, --_local_8) + this._Str_15348);
+                        this._field.text = (_local_10.slice(0, --_local_8) + this.overflowReplace);
                     }
                 }
                 _local_6 = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
@@ -1456,7 +1456,7 @@
             k.push(new PropertyStruct(PropertyKeys.THICKNESS, this._field.thickness, PropertyStruct.NUMBER, (!(this._field.thickness == _local_2.thickness))));
             k.push(createProperty(PropertyKeys.WORD_WRAP, this._field.wordWrap));
             k.push(createProperty(PropertyKeys.MAX_LINES, this._Str_9760));
-            k.push(createProperty(PropertyKeys.OVERFLOW_REPLACE, this._Str_15348));
+            k.push(createProperty(PropertyKeys.OVERFLOW_REPLACE, this.overflowReplace));
             k.push(new PropertyStruct(PropertyKeys.BOLD, (!(this._field.defaultTextFormat.bold == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.bold == (_local_2.fontWeight == FontStyle.BOLD)))));
             k.push(new PropertyStruct(PropertyKeys.ITALIC, (!(this._field.defaultTextFormat.italic == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.italic == (_local_2.fontStyle == FontStyle.ITALIC)))));
             k.push(new PropertyStruct(PropertyKeys.UNDERLINE, (!(this._field.defaultTextFormat.underline == false)), PropertyStruct.BOOLEAN, (!(this._field.defaultTextFormat.underline == (_local_2.textDecoration == "underline")))));
