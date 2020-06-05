@@ -20,14 +20,14 @@
         protected var _isCollapsed:Boolean = true;
         protected var _windowCollapseTimer:Timer;
         protected var _windowCollapsePending:Boolean;
-        protected var _Str_20667:int;
+        protected var _windowCollapseDelay:int;
 
         public function RoomToolsCtrlBase(k:RoomToolsWidget, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary)
         {
             this._widget = k;
             this._windowManager = _arg_2;
             this._assets = _arg_3;
-            this._Str_20667 = this.handler.container.config.getInteger("room.enter.info.collapse.delay", 5000);
+            this._windowCollapseDelay = this.handler.container.config.getInteger("room.enter.info.collapse.delay", 5000);
         }
 
         public function dispose():void
@@ -59,7 +59,7 @@
         protected function _Str_18018():void
         {
             this._Str_10524();
-            this._windowCollapseTimer = new Timer(this._Str_20667, 1);
+            this._windowCollapseTimer = new Timer(this._windowCollapseDelay, 1);
             this._windowCollapseTimer.addEventListener(TimerEvent.TIMER, this._Str_22422);
             this._windowCollapseTimer.start();
         }
