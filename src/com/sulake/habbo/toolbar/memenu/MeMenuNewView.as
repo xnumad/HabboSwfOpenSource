@@ -171,7 +171,7 @@
                     this._Str_8899(k);
                 }
             }
-            this._Str_5615();
+            this.reposition();
         }
 
         public function dispose():void
@@ -207,7 +207,7 @@
             return this._window;
         }
 
-        public function _Str_5615():void
+        public function reposition():void
         {
             this._window.x = 3;
             this._window.y = (this._Str_2617.window.top - this._window.height);

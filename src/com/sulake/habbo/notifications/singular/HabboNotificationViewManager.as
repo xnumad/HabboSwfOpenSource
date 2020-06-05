@@ -95,7 +95,7 @@
                 return false;
             }
             var _local_2:HabboNotificationItemView = new HabboNotificationItemView(this._assetLibrary.getAssetByName("layout_notification_xml"), this._windowManager, this._styleConfig, this._viewConfig, k);
-            _local_2._Str_5615(this._Str_22218());
+            _local_2.reposition(this._Str_22218());
             this._viewItems.push(_local_2);
             this._viewItems.sortOn("verticalPosition", Array.NUMERIC);
             return true;
@@ -169,7 +169,7 @@
             while (_local_3 < this._viewItems.length)
             {
                 _local_4 = (this._viewItems[_local_3] as HabboNotificationItemView);
-                _local_4._Str_5615(_local_2);
+                _local_4.reposition(_local_2);
                 _local_2 = ((_local_4.verticalPosition + HabboNotificationItemView._Str_9659) + _Str_2942);
                 _local_3++;
             }

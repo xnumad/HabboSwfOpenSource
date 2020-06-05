@@ -106,7 +106,7 @@
                 IStaticBitmapWrapperWindow(IWindowContainer(this._window).findChildByTag("notification_icon_static")).assetUri = k.style._Str_21712;
             }
             this._item = k;
-            this._Str_5615();
+            this.reposition();
             this._Str_23164();
         }
 
@@ -262,7 +262,7 @@
             this._window.visible = false;
         }
 
-        public function _Str_5615(k:int=-1):void
+        public function reposition(k:int=-1):void
         {
             if (this._window == null)
             {
@@ -313,7 +313,7 @@
 
         private function onRoomViewResized(k:WindowEvent):void
         {
-            this._Str_5615();
+            this.reposition();
         }
 
         private function adjustBlend(k:Number):void

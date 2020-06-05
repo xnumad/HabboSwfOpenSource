@@ -190,7 +190,7 @@
             {
                 if (this._memenu != null)
                 {
-                    this._memenu._Str_5615();
+                    this._memenu.reposition();
                 }
             }
             this._window.invalidate();
