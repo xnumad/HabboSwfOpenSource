@@ -29,7 +29,7 @@
     public class MainView implements IDisposable, _Str_5480 
     {
         private static const HIDDEN:String = "HIDDEN";
-        private static const _Str_18940:int = -1;
+        private static const NO_CONVERSATION:int = -1;
         private static const _Str_11283:int = 55;
         private static const _Str_13145:int = 5;
         private static const _Str_18765:int = 150;
@@ -333,7 +333,7 @@
             }
             if (this._Str_9747 == 0)
             {
-                this._Str_11644(_Str_18940);
+                this._Str_11644(NO_CONVERSATION);
                 this.hide();
             }
             else
