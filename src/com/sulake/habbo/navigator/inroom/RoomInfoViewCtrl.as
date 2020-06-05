@@ -301,7 +301,7 @@
             _local_4.height = (_local_4.textHeight + 5);
             Util._Str_4679(_local_3, ["embed_info_txt", "embed_src_txt"], _local_4.y, 2);
             _local_3.height = (Util._Str_2647(_local_3) + 5);
-            _local_3.findChildByName("embed_info_region").procedure = this._Str_25487;
+            _local_3.findChildByName("embed_info_region").procedure = this.onEmbedInfo;
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
                 this._window.findChildByName("add_thumbnail_region").visible = this._navigator.data._Str_11824;
@@ -508,7 +508,7 @@
             return this._navigator.getText("navigator.embed.src");
         }
 
-        private function _Str_25487(k:WindowEvent, _arg_2:IWindow):void
+        private function onEmbedInfo(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
