@@ -100,12 +100,12 @@
         {
             if (((this.roomEngine) && (!(this.roomEngine._Str_5151() == 1))))
             {
-                windowManager.alert(_Str_2499.getLocalization("camera.zoom.missing.header"), _Str_2499.getLocalization("camera.zoom.missing.body"), 0, null);
+                windowManager.alert(_localizations.getLocalization("camera.zoom.missing.header"), _localizations.getLocalization("camera.zoom.missing.body"), 0, null);
                 return;
             }
             if (this.component.getProperty("camera.effects.enabled") == "true")
             {
-                CameraPhotoLab._Str_23652(this._component.context.configuration.getProperty("image.library.url"), this._component.getProperty("camera.available.effects"), _Str_2499);
+                CameraPhotoLab._Str_23652(this._component.context.configuration.getProperty("image.library.url"), this._component.getProperty("camera.available.effects"), _localizations);
             }
             if (this._photoLab)
             {

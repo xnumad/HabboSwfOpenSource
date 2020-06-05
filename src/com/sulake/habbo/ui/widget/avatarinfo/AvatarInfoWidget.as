@@ -154,7 +154,7 @@
 
         public function get localization():IHabboLocalizationManager
         {
-            return _Str_2499;
+            return _localizations;
         }
 
         public function set _Str_25663(k:Boolean):void

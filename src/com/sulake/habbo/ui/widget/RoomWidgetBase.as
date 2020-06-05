@@ -15,7 +15,7 @@
         private var _messageListener:IRoomWidgetMessageListener;
         private var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
-        protected var _Str_2499:IHabboLocalizationManager;
+        protected var _localizations:IHabboLocalizationManager;
         protected var _Str_2470:IRoomWidgetHandler;
 
         public function RoomWidgetBase(k:IRoomWidgetHandler, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary=null, _arg_4:IHabboLocalizationManager=null)
@@ -23,7 +23,7 @@
             this._Str_2470 = k;
             this._windowManager = _arg_2;
             this._assets = _arg_3;
-            this._Str_2499 = _arg_4;
+            this._localizations = _arg_4;
         }
 
         public function get state():int
@@ -59,7 +59,7 @@
             }
             this._events = null;
             this._assets = null;
-            this._Str_2499 = null;
+            this._localizations = null;
             this._disposed = true;
         }
 
@@ -85,7 +85,7 @@
 
         public function get localizations():IHabboLocalizationManager
         {
-            return this._Str_2499;
+            return this._localizations;
         }
 
         public function registerUpdateEvents(k:IEventDispatcher):void

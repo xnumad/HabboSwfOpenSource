@@ -19,7 +19,7 @@
         private static var _Str_3005:Map;
         private static var _Str_15813:Array = [];
         private static var _Str_2856:int = 1;
-        private static var _Str_2499:IHabboLocalizationManager;
+        private static var _localizations:IHabboLocalizationManager;
 
         public var type:String;
         public var _Str_12742:Array;
@@ -34,7 +34,7 @@
         public function CameraEffect(k:String, _arg_2:String, _arg_3:Array, _arg_4:String, _arg_5:int)
         {
             this.name = k;
-            this.description = _Str_2499.getLocalization(("camera.effect.name." + k), k);
+            this.description = _localizations.getLocalization(("camera.effect.name." + k), k);
             this.type = _arg_2;
             this._Str_16566 = _arg_4;
             this._Str_12742 = _arg_3;
@@ -70,7 +70,7 @@
                         _Str_15813.push(StringUtils.trim(_local_4));
                     }
                 }
-                _Str_2499 = _arg_2;
+                _localizations = _arg_2;
                 _Str_21194();
             }
             return _Str_3005;

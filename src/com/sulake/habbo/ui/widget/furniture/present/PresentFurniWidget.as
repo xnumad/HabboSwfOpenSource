@@ -310,8 +310,8 @@
             if (!this._Str_4649())
             {
                 _local_6 = "widget.furni.present.window.title_from";
-                _Str_2499.registerParameter(_local_6, "name", this._senderName);
-                this._window.caption = _Str_2499.getLocalization(_local_6, this._senderName);
+                _localizations.registerParameter(_local_6, "name", this._senderName);
+                this._window.caption = _localizations.getLocalization(_local_6, this._senderName);
             }
             var _local_2:IWindow = this._window.findChildByName("header_button_close");
             if (_local_2 != null)
@@ -344,14 +344,14 @@
                     {
                         _local_9 = "widget.furni.present.spaces.message_opened";
                     }
-                    _Str_2499.registerParameter(_local_9, "product", this._text);
+                    _localizations.registerParameter(_local_9, "product", this._text);
                     if (this._itemType == ProductTypeEnum.HABBO_CLUB)
                     {
                         _local_4.text = this._text;
                     }
                     else
                     {
-                        _local_4.text = _Str_2499.getLocalization(_local_9, this._text);
+                        _local_4.text = _localizations.getLocalization(_local_9, this._text);
                     }
                 }
                 else
@@ -365,8 +365,8 @@
                 if (!this._Str_4649())
                 {
                     _local_11 = "widget.furni.present.give_gift";
-                    _Str_2499.registerParameter(_local_11, "name", this._senderName);
-                    _local_5.caption = _Str_2499.getLocalization(_local_11, this._senderName);
+                    _localizations.registerParameter(_local_11, "name", this._senderName);
+                    _local_5.caption = _localizations.getLocalization(_local_11, this._senderName);
                     _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_24931);
                 }
                 else
@@ -587,8 +587,8 @@
             if (!this._Str_4649())
             {
                 _local_7 = "widget.furni.present.window.title_from";
-                _Str_2499.registerParameter(_local_7, "name", this._senderName);
-                this._window.caption = _Str_2499.getLocalization(_local_7, this._senderName);
+                _localizations.registerParameter(_local_7, "name", this._senderName);
+                this._window.caption = _localizations.getLocalization(_local_7, this._senderName);
             }
             var _local_2:IWindow = this._window.findChildByName("header_button_close");
             if (_local_2 != null)
@@ -625,8 +625,8 @@
                 if (!this._Str_4649())
                 {
                     _local_9 = "widget.furni.present.message_from";
-                    _Str_2499.registerParameter(_local_9, "name", this._senderName);
-                    _local_5.text = _Str_2499.getLocalization(_local_9, this._senderName);
+                    _localizations.registerParameter(_local_9, "name", this._senderName);
+                    _local_5.text = _localizations.getLocalization(_local_9, this._senderName);
                     _local_5.addEventListener(WindowMouseEvent.CLICK, this._Str_24633);
                 }
                 else
@@ -643,8 +643,8 @@
                     if (!this._Str_4649())
                     {
                         _local_12 = "widget.furni.present.give_gift";
-                        _Str_2499.registerParameter(_local_12, "name", this._senderName);
-                        _local_10.caption = _Str_2499.getLocalization(_local_12, this._senderName);
+                        _localizations.registerParameter(_local_12, "name", this._senderName);
+                        _local_10.caption = _localizations.getLocalization(_local_12, this._senderName);
                     }
                     if (this._controller)
                     {
