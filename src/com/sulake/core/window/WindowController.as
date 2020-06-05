@@ -909,7 +909,7 @@
             }
         }
 
-        public function _Str_26163(k:Rectangle=null, _arg_2:Rectangle=null, _arg_3:Rectangle=null):void
+        public function setRegionProperties(k:Rectangle=null, _arg_2:Rectangle=null, _arg_3:Rectangle=null):void
         {
             if (_arg_3 != null)
             {
