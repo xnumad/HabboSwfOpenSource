@@ -280,7 +280,7 @@
             }
             var _local_2:IWindowContainer = IWindowContainer(this._commandWindow.findChildByName("commands_container"));
             _Str_2930(_local_2);
-            var _local_3:Array = k._Str_22858;
+            var _local_3:Array = k.allCommandIds;
             var _local_4:int = 25;
             var _local_5:int;
             var _local_6:int = 86;

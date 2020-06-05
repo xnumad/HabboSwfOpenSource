@@ -22,7 +22,7 @@
             }
         }
 
-        public function get _Str_22858():Array
+        public function get allCommandIds():Array
         {
             return this._allCommandIds;
         }
