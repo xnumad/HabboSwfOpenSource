@@ -26,7 +26,7 @@
         public static const STATE_HIDDEN:int = 0;
         public static const PULLDOWN_WINDOW_HEIGHT:int = 39;
         private static const FADE_OUT_MS:int = 150;
-        private static const _Str_14143:int = 250;
+        private static const FADE_IN_MS:int = 250;
 
         private var _widget:RoomChatWidget;
         private var _windowManager:IHabboWindowManager;
@@ -117,8 +117,8 @@
             switch (this.state)
             {
                 case STATE_FADE_IN:
-                    this._bgWindow.blend = (this._bgWindow.blend + (k / _Str_14143));
-                    this._window.blend = (this._window.blend + (k / _Str_14143));
+                    this._bgWindow.blend = (this._bgWindow.blend + (k / FADE_IN_MS));
+                    this._window.blend = (this._window.blend + (k / FADE_IN_MS));
                     if (this._window.blend >= 1)
                     {
                         this.state = STATE_VISIBLE;
