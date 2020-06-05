@@ -143,7 +143,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_18700(k:TextController, _arg_2:uint):void
+        private static function setBorderColor(k:TextController, _arg_2:uint):void
         {
             k._Str_2309.borderColor = _arg_2;
             k.refreshTextImage();
@@ -565,7 +565,7 @@
             k["background_color"] = setTextBackgroundColor;
             k[PropertyKeys.BOLD] = setBold;
             k[PropertyKeys.BORDER] = setBorder;
-            k[PropertyKeys.BORDER_COLOR] = _Str_18700;
+            k[PropertyKeys.BORDER_COLOR] = setBorderColor;
             k[PropertyKeys.CONDENSE_WHITE] = _Str_23959;
             k["default_text_format"] = _Str_18477;
             k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
@@ -841,7 +841,7 @@
 
         public function set borderColor(k:uint):void
         {
-            _Str_18700(this, k);
+            setBorderColor(this, k);
         }
 
         public function set defaultTextFormat(k:TextFormat):void
