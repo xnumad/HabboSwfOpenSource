@@ -22,7 +22,7 @@
 
         protected var _offset:Number = 0;
         protected var _scrollStep:Number = 0.1;
-        protected var _Str_2566:IScrollableWindow;
+        protected var _scrollable:IScrollableWindow;
         private var _horizontal:Boolean;
         private var _Str_9086:String;
         private var _Str_12228:Boolean = false;
@@ -32,7 +32,7 @@
             var _local_14:IWindow;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             _drawable = false;
-            this._Str_2566 = _arg_12;
+            this._scrollable = _arg_12;
             this._horizontal = (_arg_2 == WindowType.WINDOW_TYPE_SCROLLBAR_HORIZONTAL);
             var _local_13:Array = new Array();
             groupChildrenWithTag(TAG_INTERNAL, _local_13, -1);
@@ -55,7 +55,7 @@
 
         public function get scrollable():IScrollableWindow
         {
-            return this._Str_2566;
+            return this._scrollable;
         }
 
         public function set scrollH(k:Number):void
@@ -82,16 +82,16 @@
 
         public function set scrollable(k:IScrollableWindow):void
         {
-            if (((!(this._Str_2566 == null)) && (!(this._Str_2566.disposed))))
+            if (((!(this._scrollable == null)) && (!(this._scrollable.disposed))))
             {
-                this._Str_2566.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
-                this._Str_2566.removeEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrollableScrolled);
+                this._scrollable.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
+                this._scrollable.removeEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrollableScrolled);
             }
-            this._Str_2566 = k;
-            if (((!(this._Str_2566 == null)) && (!(this._Str_2566.disposed))))
+            this._scrollable = k;
+            if (((!(this._scrollable == null)) && (!(this._scrollable.disposed))))
             {
-                this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
-                this._Str_2566.addEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrollableScrolled);
+                this._scrollable.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onScrollableResized);
+                this._scrollable.addEventListener(WindowEvent.WINDOW_EVENT_SCROLL, this.onScrollableScrolled);
                 this.updateLiftSizeAndPosition();
             }
         }
@@ -110,9 +110,9 @@
         {
             var k:Array = super.properties;
             var _local_2:String;
-            if ((this._Str_2566 is IWindow))
+            if ((this._scrollable is IWindow))
             {
-                _local_2 = IWindow(this._Str_2566).name;
+                _local_2 = IWindow(this._scrollable).name;
             }
             else
             {
@@ -141,7 +141,7 @@
                 {
                     case PropertyKeys.SCROLLABLE:
                         this._Str_9086 = (_local_2.value as String);
-                        this._Str_2566 = null;
+                        this._scrollable = null;
                         break;
                 }
             }
@@ -205,7 +205,7 @@
         protected function setScrollPosition(k:Number):Boolean
         {
             var _local_2:Boolean;
-            if (((this._Str_2566 == null) || (this._Str_2566.disposed)))
+            if (((this._scrollable == null) || (this._scrollable.disposed)))
             {
                 if (!this.resolveScrollTarget())
                 {
@@ -223,18 +223,18 @@
             this._offset = k;
             if (this._horizontal)
             {
-                _local_2 = (!(this._Str_2566.scrollH == this._offset));
+                _local_2 = (!(this._scrollable.scrollH == this._offset));
                 if (_local_2)
                 {
-                    this._Str_2566.scrollH = this._offset;
+                    this._scrollable.scrollH = this._offset;
                 }
             }
             else
             {
-                _local_2 = (!(this._Str_2566.scrollV == this._offset));
+                _local_2 = (!(this._scrollable.scrollV == this._offset));
                 if (_local_2)
                 {
-                    this._Str_2566.scrollV = this._offset;
+                    this._scrollable.scrollV = this._offset;
                 }
             }
             return _local_2;
@@ -264,7 +264,7 @@
             var _local_3:Boolean = super.update(k, _arg_2);
             if (_arg_2.type == WindowEvent.WINDOW_EVENT_PARENT_ADDED)
             {
-                if (this._Str_2566 == null)
+                if (this._scrollable == null)
                 {
                     this.resolveScrollTarget();
                 }
@@ -312,7 +312,7 @@
         {
             var k:Number;
             var _local_4:int;
-            if (((this._Str_2566 == null) || (this._Str_2566.disposed)))
+            if (((this._scrollable == null) || (this._scrollable.disposed)))
             {
                 if (((_disposed) || (!(this.resolveScrollTarget()))))
                 {
@@ -325,25 +325,25 @@
             {
                 if (this._horizontal)
                 {
-                    k = (this._Str_2566.visibleRegion.width / this._Str_2566.scrollableRegion.width);
+                    k = (this._scrollable.visibleRegion.width / this._scrollable.scrollableRegion.width);
                     if (k > 1)
                     {
                         k = 1;
                     }
                     _local_4 = (k * _local_2.width);
                     _local_3.width = _local_4;
-                    _local_3.x = Math.round((this._Str_2566.scrollH * (_local_2.width - _local_4)));
+                    _local_3.x = Math.round((this._scrollable.scrollH * (_local_2.width - _local_4)));
                 }
                 else
                 {
-                    k = (this._Str_2566.visibleRegion.height / this._Str_2566.scrollableRegion.height);
+                    k = (this._scrollable.visibleRegion.height / this._scrollable.scrollableRegion.height);
                     if (k > 1)
                     {
                         k = 1;
                     }
                     _local_4 = (k * _local_2.height);
                     _local_3.height = _local_4;
-                    _local_3.y = Math.round((this._Str_2566.scrollV * (_local_2.height - _local_3.height)));
+                    _local_3.y = Math.round((this._scrollable.scrollV * (_local_2.height - _local_3.height)));
                 }
             }
             if (k == 1)
@@ -370,16 +370,16 @@
             {
                 if (_arg_2.name == INCREMENT)
                 {
-                    if (this._Str_2566)
+                    if (this._scrollable)
                     {
                         this._Str_12228 = true;
                         if (this._horizontal)
                         {
-                            this.scrollH = (this.scrollH + (this._Str_2566.scrollStepH / this._Str_2566.maxScrollH));
+                            this.scrollH = (this.scrollH + (this._scrollable.scrollStepH / this._scrollable.maxScrollH));
                         }
                         else
                         {
-                            this.scrollV = (this.scrollV + (this._Str_2566.scrollStepV / this._Str_2566.maxScrollV));
+                            this.scrollV = (this.scrollV + (this._scrollable.scrollStepV / this._scrollable.maxScrollV));
                         }
                         this._Str_12228 = false;
                     }
@@ -388,16 +388,16 @@
                 {
                     if (_arg_2.name == DECREMENT)
                     {
-                        if (this._Str_2566)
+                        if (this._scrollable)
                         {
                             this._Str_12228 = true;
                             if (this._horizontal)
                             {
-                                this.scrollH = (this.scrollH - (this._Str_2566.scrollStepH / this._Str_2566.maxScrollH));
+                                this.scrollH = (this.scrollH - (this._scrollable.scrollStepH / this._scrollable.maxScrollH));
                             }
                             else
                             {
-                                this.scrollV = (this.scrollV - (this._Str_2566.scrollStepV / this._Str_2566.maxScrollV));
+                                this.scrollV = (this.scrollV - (this._scrollable.scrollStepV / this._scrollable.maxScrollV));
                             }
                             this._Str_12228 = false;
                         }
@@ -424,13 +424,13 @@
                             {
                                 if (_local_4 < _local_6.x)
                                 {
-                                    this.scrollH = (this.scrollH - ((this._Str_2566.visibleRegion.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
+                                    this.scrollH = (this.scrollH - ((this._scrollable.visibleRegion.width - this._scrollable.scrollStepH) / this._scrollable.maxScrollH));
                                 }
                                 else
                                 {
                                     if (_local_4 > _local_6.right)
                                     {
-                                        this.scrollH = (this.scrollH + ((this._Str_2566.visibleRegion.width - this._Str_2566.scrollStepH) / this._Str_2566.maxScrollH));
+                                        this.scrollH = (this.scrollH + ((this._scrollable.visibleRegion.width - this._scrollable.scrollStepH) / this._scrollable.maxScrollH));
                                     }
                                 }
                             }
@@ -438,13 +438,13 @@
                             {
                                 if (_local_5 < _local_6.y)
                                 {
-                                    this.scrollV = (this.scrollV - ((this._Str_2566.visibleRegion.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
+                                    this.scrollV = (this.scrollV - ((this._scrollable.visibleRegion.height - this._scrollable.scrollStepV) / this._scrollable.maxScrollV));
                                 }
                                 else
                                 {
                                     if (_local_5 > _local_6.bottom)
                                     {
-                                        this.scrollV = (this.scrollV + ((this._Str_2566.visibleRegion.height - this._Str_2566.scrollStepV) / this._Str_2566.maxScrollV));
+                                        this.scrollV = (this.scrollV + ((this._scrollable.visibleRegion.height - this._scrollable.scrollStepV) / this._scrollable.maxScrollV));
                                     }
                                 }
                             }
@@ -491,9 +491,9 @@
             var _local_2:uint;
             var _local_3:IScrollableWindow;
             var _local_4:uint;
-            if (this._Str_2566 != null)
+            if (this._scrollable != null)
             {
-                if (!this._Str_2566.disposed)
+                if (!this._scrollable.disposed)
                 {
                     return true;
                 }
