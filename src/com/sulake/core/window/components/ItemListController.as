@@ -62,7 +62,7 @@
             this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_6611);
             this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_6611);
             this._container.clipping = clipping;
-            this._Str_3583 = this._resizeOnItemUpdate;
+            this.resizeOnItemUpdate = this._resizeOnItemUpdate;
         }
 
         public function get spacing():int
@@ -226,7 +226,7 @@
             return this._arrangeListItems;
         }
 
-        public function set _Str_3583(k:Boolean):void
+        public function set resizeOnItemUpdate(k:Boolean):void
         {
             this._resizeOnItemUpdate = k;
             if (this._container)
@@ -242,7 +242,7 @@
             }
         }
 
-        public function get _Str_3583():Boolean
+        public function get resizeOnItemUpdate():Boolean
         {
             return this._resizeOnItemUpdate;
         }
@@ -675,7 +675,7 @@
                         this._Str_3640 = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.RESIZE_ON_ITEM_UPDATE:
-                        this._Str_3583 = (_local_2.value as Boolean);
+                        this.resizeOnItemUpdate = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.AUTO_ARRANGE_ITEMS:
                         this._arrangeListItems = (_local_2.value as Boolean);

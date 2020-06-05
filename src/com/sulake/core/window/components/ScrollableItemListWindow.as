@@ -234,14 +234,14 @@
             this._Str_2338.autoArrangeItems = k;
         }
 
-        public function set _Str_3583(k:Boolean):void
+        public function set resizeOnItemUpdate(k:Boolean):void
         {
-            this._Str_2338._Str_3583 = k;
+            this._Str_2338.resizeOnItemUpdate = k;
         }
 
-        public function get _Str_3583():Boolean
+        public function get resizeOnItemUpdate():Boolean
         {
-            return this._Str_2338._Str_3583;
+            return this._Str_2338.resizeOnItemUpdate;
         }
 
         public function get numListItems():int
@@ -360,7 +360,7 @@
             k.push(createProperty(PropertyKeys.SPACING, this.spacing));
             k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this.autoArrangeItems));
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_3640));
-            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_3583));
+            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this.resizeOnItemUpdate));
             return k;
         }
 
@@ -378,7 +378,7 @@
                         this._Str_3640 = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.RESIZE_ON_ITEM_UPDATE:
-                        this._Str_3583 = (_local_2.value as Boolean);
+                        this.resizeOnItemUpdate = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.AUTO_ARRANGE_ITEMS:
                         this.autoArrangeItems = (_local_2.value as Boolean);
