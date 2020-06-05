@@ -18,7 +18,7 @@
         protected var _pivot:uint;
         protected var _stretchedX:Boolean;
         protected var _stretchedY:Boolean;
-        protected var _Str_8672:Number;
+        protected var _zoomX:Number;
         protected var _Str_8540:Number;
         protected var _Str_14793:Boolean;
         protected var _Str_3778:uint;
@@ -34,7 +34,7 @@
             this._pivot = PivotPoint.pivotFromName(String(_local_12.get(PropertyKeys.PIVOT_POINT).value));
             this._stretchedX = Boolean(_local_12.get(PropertyKeys.STRETCHED_X).value);
             this._stretchedY = Boolean(_local_12.get(PropertyKeys.STRETCHED_Y).value);
-            this._Str_8672 = Number(_local_12.get(PropertyKeys.ZOOM_X).value);
+            this._zoomX = Number(_local_12.get(PropertyKeys.ZOOM_X).value);
             this._Str_8540 = Number(_local_12.get(PropertyKeys.ZOOM_Y).value);
             this._Str_10479 = Boolean(_local_12.get(PropertyKeys.WRAP_X).value);
             this._Str_12136 = Boolean(_local_12.get(PropertyKeys.WRAP_Y).value);
@@ -84,12 +84,12 @@
 
         public function get zoomX():Number
         {
-            return this._Str_8672;
+            return this._zoomX;
         }
 
         public function set zoomX(k:Number):void
         {
-            this._Str_8672 = k;
+            this._zoomX = k;
             this._Str_8020();
         }
 
@@ -170,7 +170,7 @@
         {
             if (((this._Str_13795) && (!(this._bitmapData == null))))
             {
-                width = Math.abs((this._bitmapData.width * this._Str_8672));
+                width = Math.abs((this._bitmapData.width * this._zoomX));
                 height = Math.abs((this._bitmapData.height * this._Str_8540));
             }
         }
@@ -183,7 +183,7 @@
             k.push(createProperty(PropertyKeys.STRETCHED_Y, this._stretchedY));
             k.push(createProperty(PropertyKeys.WRAP_X, this._Str_10479));
             k.push(createProperty(PropertyKeys.WRAP_Y, this._Str_12136));
-            k.push(createProperty(PropertyKeys.ZOOM_X, this._Str_8672));
+            k.push(createProperty(PropertyKeys.ZOOM_X, this._zoomX));
             k.push(createProperty(PropertyKeys.ZOOM_Y, this._Str_8540));
             k.push(createProperty(PropertyKeys.GREYSCALE, this._Str_14793));
             k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._Str_3778));
@@ -208,7 +208,7 @@
                         this._stretchedY = Boolean(_local_2.value);
                         break;
                     case PropertyKeys.ZOOM_X:
-                        this._Str_8672 = Number(_local_2.value);
+                        this._zoomX = Number(_local_2.value);
                         break;
                     case PropertyKeys.ZOOM_Y:
                         this._Str_8540 = Number(_local_2.value);
