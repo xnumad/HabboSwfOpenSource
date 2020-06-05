@@ -19,7 +19,7 @@
         protected var _assets:IAssetLibrary;
         protected var _isCollapsed:Boolean = true;
         protected var _windowCollapseTimer:Timer;
-        protected var _Str_13353:Boolean;
+        protected var _windowCollapsePending:Boolean;
         protected var _Str_20667:int;
 
         public function RoomToolsCtrlBase(k:RoomToolsWidget, _arg_2:IHabboWindowManager, _arg_3:IAssetLibrary)
@@ -42,7 +42,7 @@
             {
                 this._windowCollapseTimer.reset();
                 this._windowCollapseTimer = null;
-                this._Str_13353 = false;
+                this._windowCollapsePending = false;
             }
             this._widget = null;
         }
@@ -66,7 +66,7 @@
 
         protected function _Str_20157():void
         {
-            if (this._Str_13353)
+            if (this._windowCollapsePending)
             {
                 this._Str_18018();
             }
@@ -79,7 +79,7 @@
                 this._windowCollapseTimer.reset();
                 this._windowCollapseTimer = null;
             }
-            this._Str_13353 = false;
+            this._windowCollapsePending = false;
         }
 
         private function _Str_22422(k:TimerEvent):void
@@ -93,7 +93,7 @@
             if (this._windowCollapseTimer != null)
             {
                 this._Str_10524();
-                this._Str_13353 = true;
+                this._windowCollapsePending = true;
             }
         }
 
