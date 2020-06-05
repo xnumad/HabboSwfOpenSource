@@ -35,7 +35,7 @@
 
     public class WindowContext implements IWindowContext, IDisposable, IUpdateReceiver 
     {
-        public static const _Str_9387:uint = 0;
+        public static const INPUT_MODE_MOUSE:uint = 0;
         public static const _Str_18399:uint = 1;
         public static const _Str_20491:int = 0;
         public static const _Str_19384:int = 1;
@@ -45,7 +45,7 @@
         public static const _Str_7405:int = 5;
         public static var _Str_4956:IEventQueue;
         private static var _Str_6468:IEventProcessor;
-        private static var _Str_17012:uint = _Str_9387;//0
+        private static var _Str_17012:uint = INPUT_MODE_MOUSE;//0
         private static var _Str_2884:IWindowRenderer;
         private static var stage:Stage;
 
@@ -110,7 +110,7 @@
             this._Str_2417.doubleClickEnabled = true;
             this._Str_2417.addEventListener(Event.RESIZE, this._Str_21888);
             this._Str_20725 = new EventProcessorState(_Str_2884, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
-            _Str_9993 = _Str_9387;
+            _Str_9993 = INPUT_MODE_MOUSE;
             this._Str_13721 = new SubstituteParentController(this);
         }
 
@@ -137,7 +137,7 @@
             }
             switch (k)
             {
-                case _Str_9387:
+                case INPUT_MODE_MOUSE:
                     _Str_4956 = new MouseEventQueue(stage);
                     _Str_6468 = new MouseEventProcessor();
                     try
@@ -158,7 +158,7 @@
                     }
                     return;
                 default:
-                    _Str_9993 = _Str_9387;
+                    _Str_9993 = INPUT_MODE_MOUSE;
                     throw (new Error(("Unknown input mode " + k)));
             }
         }
