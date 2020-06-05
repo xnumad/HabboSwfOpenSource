@@ -149,7 +149,7 @@
             return this._Str_9090;
         }
 
-        public function _Str_19823(k:Boolean):void
+        public function setRoomInvitesIgnored(k:Boolean):void
         {
             this._Str_9090 = k;
         }

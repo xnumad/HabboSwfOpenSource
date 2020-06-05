@@ -14,7 +14,7 @@
         function setOnlineStatus(_arg_1:int, _arg_2:Boolean):void;
         function getUnseenMiniMailMessageCount():int;
         function getRoomInvitesIgnored():Boolean;
-        function _Str_19823(_arg_1:Boolean):void;
+        function setRoomInvitesIgnored(_arg_1:Boolean):void;
         function get hasfriendsListInitialized():Boolean;
     }
 }

@@ -86,7 +86,7 @@
                     }
                     return;
                 case "ignore_room_invites_checkbox":
-                    this._toolbar.messenger._Str_19823(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
+                    this._toolbar.messenger.setRoomInvitesIgnored(ICheckBoxWindow(this._window.findChildByName("ignore_room_invites_checkbox")).Selected);
                     this._toolbar.connection.send(new _Str_10960(this._toolbar.messenger.getRoomInvitesIgnored()));
                     return;
                 case "disable_room_camera_follow_checkbox":
