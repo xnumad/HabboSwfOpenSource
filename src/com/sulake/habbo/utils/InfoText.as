@@ -18,7 +18,7 @@
                 this._infoText = _arg_2;
                 this._input.text = _arg_2;
             }
-            this._input.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this._Str_22308);
+            this._input.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this.onFocus);
         }
 
         public function dispose():void
@@ -52,7 +52,7 @@
             return this._input;
         }
 
-        private function _Str_22308(k:WindowEvent):void
+        private function onFocus(k:WindowEvent):void
         {
             if (!this._includeInfo)
             {
