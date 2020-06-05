@@ -397,7 +397,7 @@
             return this._resourceManager;
         }
 
-        public function _Str_23058():IWidgetFactory
+        public function getWidgetFactory():IWidgetFactory
         {
             return this._widgetFactory;
         }
