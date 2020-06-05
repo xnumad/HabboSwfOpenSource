@@ -209,7 +209,7 @@
             _local_2.height = Util._Str_2647(_local_2);
         }
 
-        private function _Str_19944(k:Boolean=false):void
+        private function refreshStaffPick(k:Boolean=false):void
         {
             var _local_2:IWindow;
             if (this._window)
@@ -249,7 +249,7 @@
                     _local_7.visible = false;
                 }
             }
-            this._Str_19944();
+            this.refreshStaffPick();
             var _local_2:IWindow = this.find("room_muteall_button");
             _local_2.visible = ((this._navigator.data._Str_2678._Str_16504) && (this._navigator.getBoolean("room_moderation.mute_all.enabled")));
             var _local_3:Boolean = this._navigator.data._Str_2678._Str_12127;
@@ -454,7 +454,7 @@
 
         private function _Str_22695(k:WindowEvent):void
         {
-            this._Str_19944(true);
+            this.refreshStaffPick(true);
             this._navigator.send(new _Str_11662(this._navigator.data._Str_2678.flatId, this._navigator.data._Str_8299));
         }
 
