@@ -440,7 +440,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectBundleMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapUpdateMessageEvent;
@@ -1133,7 +1133,7 @@
             INCOMING_PACKETS[1968] = AchievementsScoreEvent;
             INCOMING_PACKETS[1982] = _Str_17148;
             INCOMING_PACKETS[1992] = NotificationDialogMessageEvent;
-            INCOMING_PACKETS[2009] = _Str_7464;
+            INCOMING_PACKETS[2009] = ItemUpdateMessageEvent;
             INCOMING_PACKETS[2012] = _Str_5017;
             INCOMING_PACKETS[2016] = RelationshipStatusInfo;
             INCOMING_PACKETS[2018] = ActivityPointsEvent;
