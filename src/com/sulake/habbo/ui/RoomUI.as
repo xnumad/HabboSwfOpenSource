@@ -926,7 +926,7 @@
                     {
                         this._roomEngine.setActiveRoom(k.roomId);
                     }
-                    _local_3._Str_22861(RoomWidgetEnum.ROOM_QUEUE);
+                    _local_3.disposeWidget(RoomWidgetEnum.ROOM_QUEUE);
                     _local_3.createWidget(RoomWidgetEnum.CHAT_WIDGET);
                     if (((this._freeFlowChat) && (!(this._freeFlowChat.isDisabledInPreferences))))
                     {

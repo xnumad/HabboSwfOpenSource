@@ -992,7 +992,7 @@
             }
         }
 
-        public function _Str_22861(k:String):void
+        public function disposeWidget(k:String):void
         {
             var _local_2:IRoomWidget;
             if (this._widgets != null)
