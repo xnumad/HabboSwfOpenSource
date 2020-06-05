@@ -3,9 +3,9 @@
     import com.sulake.core.communication.messages.MessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.ItemRemoveMessageParser;
 
-    public class _Str_8204 extends MessageEvent 
+    public class ItemRemoveMessageEvent extends MessageEvent
     {
-        public function _Str_8204(k:Function)
+        public function ItemRemoveMessageEvent(k:Function)
         {
             super(k, ItemRemoveMessageParser);
         }

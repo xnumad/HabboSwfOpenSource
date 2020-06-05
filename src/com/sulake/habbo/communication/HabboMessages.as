@@ -450,7 +450,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7999;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8204;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
 	import com.sulake.habbo.communication.messages.outgoing._Str_540._Str_10971;
 	import com.sulake.habbo.communication.messages.outgoing._Str_541._Str_11402;
@@ -1293,7 +1293,7 @@
             INCOMING_PACKETS[3192] = _Str_9383;
             INCOMING_PACKETS[3201] = _Str_7564;
             INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;
-            INCOMING_PACKETS[3208] = _Str_8204;
+            INCOMING_PACKETS[3208] = ItemRemoveMessageEvent;
             INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
             INCOMING_PACKETS[324] = _Str_8758;
             INCOMING_PACKETS[3244] = _Str_5766;
