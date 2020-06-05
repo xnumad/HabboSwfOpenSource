@@ -64,11 +64,11 @@
                 this.displayError(k);
                 return false;
             }
-            this._Str_16652();
+            this.restoreBackground();
             return true;
         }
 
-        public function _Str_16652():void
+        public function restoreBackground():void
         {
             this._input.textBackground = this._orgTextBackground;
             this._input.textBackgroundColor = this._orgTextBackgroundColor;
@@ -131,7 +131,7 @@
 
         public function clearErrors():void
         {
-            this._Str_16652();
+            this.restoreBackground();
             if (this._errorPopup != null)
             {
                 this._errorPopup.visible = false;
@@ -160,7 +160,7 @@
             }
             this._input.text = this._invalidText;
             this._includeInfo = false;
-            this._Str_16652();
+            this.restoreBackground();
         }
 
         private function checkEnterPress(k:WindowKeyboardEvent):void
