@@ -110,16 +110,16 @@
             this._rootDisplayObject.doubleClickEnabled = true;
             this._rootDisplayObject.addEventListener(Event.RESIZE, this._Str_21888);
             this._eventProcessorState = new EventProcessorState(_renderer, this._desktopWindow, this._desktopWindow, null, this.inputEventTrackers);
-            _Str_9993 = INPUT_MODE_MOUSE;
+            inputMode = INPUT_MODE_MOUSE;
             this._substituteParent = new SubstituteParentController(this);
         }
 
-        public static function get _Str_9993():uint
+        public static function get inputMode():uint
         {
             return inputModeFlag;
         }
 
-        public static function set _Str_9993(k:uint):void
+        public static function set inputMode(k:uint):void
         {
             if (inputEventQueue)
             {
@@ -158,7 +158,7 @@
                     }
                     return;
                 default:
-                    _Str_9993 = INPUT_MODE_MOUSE;
+                    inputMode = INPUT_MODE_MOUSE;
                     throw (new Error(("Unknown input mode " + k)));
             }
         }
