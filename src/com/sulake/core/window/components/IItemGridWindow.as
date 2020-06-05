@@ -31,8 +31,8 @@
         function _Str_18089(_arg_1:int, _arg_2:int):void;
         function _Str_3956():void;
         function destroyGridItems():void;
-        function set _Str_6405(_arg_1:Boolean):void;
-        function get _Str_6405():Boolean;
+        function set shouldRebuildGridOnResize(_arg_1:Boolean):void;
+        function get shouldRebuildGridOnResize():Boolean;
         function rebuildGridStructure():void;
         function set containerResizeToColumns(_arg_1:Boolean):void;
         function get containerResizeToColumns():Boolean;

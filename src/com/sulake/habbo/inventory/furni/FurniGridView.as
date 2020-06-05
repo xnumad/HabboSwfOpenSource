@@ -33,7 +33,7 @@
         public function FurniGridView(k:IItemGridWindow, _arg_2:IItemListWindow)
         {
             this._grid = k;
-            this._grid._Str_6405 = false;
+            this._grid.shouldRebuildGridOnResize = false;
             this._items = new Vector.<GroupItem>(0);
             this._passedItems = new Vector.<GroupItem>(0);
             this._pages = _arg_2;

@@ -97,12 +97,12 @@
             return (_horizontal) ? (scrollableRegion.height / this._Str_11491) : (0.1 * scrollableRegion.width);
         }
 
-        public function get _Str_6405():Boolean
+        public function get shouldRebuildGridOnResize():Boolean
         {
             return this._shouldRebuildGridOnResize;
         }
 
-        public function set _Str_6405(k:Boolean):void
+        public function set shouldRebuildGridOnResize(k:Boolean):void
         {
             this._shouldRebuildGridOnResize = k;
         }

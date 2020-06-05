@@ -161,14 +161,14 @@
             return this._Str_2448.numGridItems;
         }
 
-        public function get _Str_6405():Boolean
+        public function get shouldRebuildGridOnResize():Boolean
         {
-            return this._Str_2448._Str_6405;
+            return this._Str_2448.shouldRebuildGridOnResize;
         }
 
-        public function set _Str_6405(k:Boolean):void
+        public function set shouldRebuildGridOnResize(k:Boolean):void
         {
-            this._Str_2448._Str_6405 = k;
+            this._Str_2448.shouldRebuildGridOnResize = k;
         }
 
         public function get spacing():int
