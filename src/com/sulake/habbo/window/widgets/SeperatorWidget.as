@@ -45,7 +45,7 @@
             this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_REMOVED, this._Str_2832);
             this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_2832);
             this._Str_2187.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_2832);
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
             this._Str_2302.width = this._Str_2326.width;
             this._Str_2302.height = this._Str_2326.height;
         }
@@ -85,7 +85,7 @@
                 }
                 if (this._Str_2326 != null)
                 {
-                    this._Str_2326._Str_2429 = null;
+                    this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
                 this._habboWindowManagerComponent = null;

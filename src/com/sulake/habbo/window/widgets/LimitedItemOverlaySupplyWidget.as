@@ -22,7 +22,7 @@
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
             this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("unique_item_overlay_supply_xml").content)));
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
         }
 
         public function set _Str_13963(k:int):void

@@ -661,7 +661,7 @@
                 _local_3.visible = false;
                 return;
             }
-            IStaticBitmapWrapperWindow(IWindowContainer(_local_3._Str_2429).findChildByName("bitmap")).assetUri = "common_loading_icon";
+            IStaticBitmapWrapperWindow(IWindowContainer(_local_3.rootWindow).findChildByName("bitmap")).assetUri = "common_loading_icon";
             _local_4.badgeId = this._Str_16394(_arg_2);
             _local_4.greyscale = (!(_arg_2._Str_10438));
             _local_3.visible = true;
@@ -671,7 +671,7 @@
         {
             var _local_3:IWidgetWindow = (k.findChildByName("achievement_pic_bitmap") as IWidgetWindow);
             var _local_4:_Str_2402 = (_local_3.widget as _Str_2402);
-            IStaticBitmapWrapperWindow(IWindowContainer(_local_3._Str_2429).findChildByName("bitmap")).assetUri = "common_loading_icon";
+            IStaticBitmapWrapperWindow(IWindowContainer(_local_3.rootWindow).findChildByName("bitmap")).assetUri = "common_loading_icon";
             _local_4.badgeId = this._Str_16394(_arg_2);
             _local_4.greyscale = (!(_arg_2._Str_10438));
             _local_3.visible = true;

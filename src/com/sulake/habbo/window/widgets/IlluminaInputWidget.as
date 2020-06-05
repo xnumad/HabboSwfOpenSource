@@ -52,7 +52,7 @@
             this.maxChars = int(_Str_14030.value);
             this.refresh();
             this._root.procedure = this._Str_16893;
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
         }
 
         public function dispose():void
@@ -72,7 +72,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

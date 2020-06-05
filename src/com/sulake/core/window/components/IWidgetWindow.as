@@ -7,7 +7,7 @@
     public interface IWidgetWindow extends IWindow, IIterable 
     {
         function get widget():IWidget;
-        function get _Str_2429():IWindow;
-        function set _Str_2429(_arg_1:IWindow):void;
+        function get rootWindow():IWindow;
+        function set rootWindow(_arg_1:IWindow):void;
     }
 }

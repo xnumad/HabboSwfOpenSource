@@ -1567,7 +1567,7 @@
                 switch (_arg_6)
                 {
                     case _Str_13205:
-                        _local_10 = IWindowContainer(IWindowContainer(_local_8._Str_2429).findChildByName("message_region"));
+                        _local_10 = IWindowContainer(IWindowContainer(_local_8.rootWindow).findChildByName("message_region"));
                         _local_10.procedure = this._Str_22682;
                         _local_10.setParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR, true);
                         _local_10.id = _arg_7;

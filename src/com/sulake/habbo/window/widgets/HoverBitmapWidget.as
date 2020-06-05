@@ -32,7 +32,7 @@
             this._bitmap = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("hover_bitmap_xml").content as XML)) as IStaticBitmapWrapperWindow);
             this._bitmap.addEventListener(WindowMouseEvent.OVER, this.onMouseOver);
             this._bitmap.addEventListener(WindowMouseEvent.OUT, this.onMouseOut);
-            this._widgetWindow._Str_2429 = this._bitmap;
+            this._widgetWindow.rootWindow = this._bitmap;
             this._bitmap.width = this._widgetWindow.width;
             this._bitmap.height = this._widgetWindow.height;
             this._bitmap.invalidate();
@@ -59,7 +59,7 @@
                     this._bitmap.dispose();
                     this._bitmap = null;
                 }
-                this._widgetWindow._Str_2429 = null;
+                this._widgetWindow.rootWindow = null;
                 this._widgetWindow = null;
                 this._windowManager = null;
             }

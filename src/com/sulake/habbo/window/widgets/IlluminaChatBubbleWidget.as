@@ -66,7 +66,7 @@
             this.userName = String(_Str_13288.value);
             this.figure = String(_Str_3804.value);
             this.message = String(_Str_13034.value);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
             this._root.width = this._widgetWindow.width;
         }
@@ -82,7 +82,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

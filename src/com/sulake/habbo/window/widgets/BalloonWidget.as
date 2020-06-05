@@ -51,7 +51,7 @@
             this._widgetWindow.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
             this._contents.addEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_2832);
             this._contents.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
         }
@@ -76,7 +76,7 @@
                 {
                     this._widgetWindow.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZE, this._Str_2832);
                     this._widgetWindow.removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_2832);
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

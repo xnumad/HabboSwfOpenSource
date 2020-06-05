@@ -42,7 +42,7 @@
             this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("unique_item_overlay_griditem_xml").content)));
             this._Str_5779 = IBitmapWrapperWindow(this._Str_2302.findChildByName("unique_item_overlay_plaque_background_bitmap"));
             this._Str_5779.bitmap = this._Str_11590;
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
         }
 
         public function dispose():void
@@ -55,7 +55,7 @@
                 }
                 if (this._Str_2326 != null)
                 {
-                    this._Str_2326._Str_2429 = null;
+                    this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
                 if (this._Str_2302 != null)

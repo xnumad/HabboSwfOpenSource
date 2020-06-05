@@ -62,7 +62,7 @@
                     this._roomCanvas.setDisplayObject(_local_3);
                 }
             }
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
             this._roomPreviewer.modifyRoomCanvas(this._root.width, this._root.height);
@@ -164,7 +164,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

@@ -54,7 +54,7 @@
             this._region = (this._root.findChildByName("region") as IRegionWindow);
             this._region.addEventListener(WindowMouseEvent.CLICK, this.onClick);
             this.refresh();
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
         }
@@ -77,7 +77,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

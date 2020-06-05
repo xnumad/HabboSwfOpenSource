@@ -45,7 +45,7 @@
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("running_number_xml").content as XML)) as IWindowContainer);
             this._windowManager.registerUpdateReceiver(this, this._updateFrequency);
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
         }
 
         public function dispose():void
@@ -59,7 +59,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager.removeUpdateReceiver(this);

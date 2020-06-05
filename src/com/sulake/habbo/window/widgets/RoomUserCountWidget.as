@@ -18,7 +18,7 @@
             this._widgetWindow = k;
             this._windowManager = _arg_2;
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("room_user_count_xml").content as XML)) as IWindowContainer);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
         }

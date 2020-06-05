@@ -25,7 +25,7 @@
             this._Str_2326 = k;
             this._habboWindowManagerComponent = _arg_2;
             this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_griditem_xml").content)));
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
         }
 
         public function get disposed():Boolean
@@ -60,7 +60,7 @@
             {
                 if (this._Str_2326 != null)
                 {
-                    this._Str_2326._Str_2429 = null;
+                    this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
                 if (this._Str_2302 != null)

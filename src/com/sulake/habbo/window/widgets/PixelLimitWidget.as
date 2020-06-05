@@ -37,7 +37,7 @@
             this._windowManager = _arg_2;
             this._root = (this._windowManager.buildFromXML((this._windowManager.assets.getAssetByName("badge_image_xml").content as XML)) as IWindowContainer);
             this._bitmap = (this._root.findChildByName("bitmap") as IStaticBitmapWrapperWindow);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
             this._root.width = this._widgetWindow.width;
             this._root.height = this._widgetWindow.height;
         }
@@ -71,7 +71,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager = null;

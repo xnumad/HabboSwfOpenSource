@@ -95,12 +95,12 @@
             return this._widget;
         }
 
-        public function get _Str_2429():IWindow
+        public function get rootWindow():IWindow
         {
             return getChildAt(0);
         }
 
-        public function set _Str_2429(k:IWindow):void
+        public function set rootWindow(k:IWindow):void
         {
             removeChildAt(0);
             if (k == null)

@@ -27,7 +27,7 @@
             this._habboWindowManagerComponent = _arg_2;
             this._Str_2302 = IWindowContainer(this._habboWindowManagerComponent.buildFromXML(XML(this._habboWindowManagerComponent.assets.getAssetByName("rarity_item_overlay_preview_xml").content)));
             this._Str_19285 = (this._Str_2302.findChildByName("level") as ITextWindow);
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
         }
 
         public function set rarityLevel(k:int):void

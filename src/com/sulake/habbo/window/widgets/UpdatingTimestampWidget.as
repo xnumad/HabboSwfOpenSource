@@ -33,7 +33,7 @@
             this._habboWindowManagerComponent = _arg_2;
             this._Str_2302 = (this._habboWindowManagerComponent.create("", WindowType.WINDOW_TYPE_LABEL, 100, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, new Rectangle()) as ILabelWindow);
             this._Str_2302.textColor = 0x555555;
-            this._Str_2326._Str_2429 = this._Str_2302;
+            this._Str_2326.rootWindow = this._Str_2302;
             _Str_10472.addEventListener(TimerEvent.TIMER, this._Str_12760);
             this.reset();
         }
@@ -70,7 +70,7 @@
                 }
                 if (this._Str_2326 != null)
                 {
-                    this._Str_2326._Str_2429 = null;
+                    this._Str_2326.rootWindow = null;
                     this._Str_2326 = null;
                 }
                 this._habboWindowManagerComponent = null;

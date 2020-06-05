@@ -57,7 +57,7 @@
             this._Str_4056 = uint(_Str_5707.value);
             this._windowManager.registerUpdateReceiver(this, 10);
             this._widgetWindow.setParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN);
-            this._widgetWindow._Str_2429 = this._root;
+            this._widgetWindow.rootWindow = this._root;
         }
 
         public function dispose():void
@@ -81,7 +81,7 @@
                 }
                 if (this._widgetWindow != null)
                 {
-                    this._widgetWindow._Str_2429 = null;
+                    this._widgetWindow.rootWindow = null;
                     this._widgetWindow = null;
                 }
                 this._windowManager.removeUpdateReceiver(this);
