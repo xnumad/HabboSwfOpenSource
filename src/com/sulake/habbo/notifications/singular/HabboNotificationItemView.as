@@ -95,7 +95,7 @@
                 return;
             }
             var _local_2:String = k.content;
-            this._Str_23521(_local_2);
+            this.setNotificationText(_local_2);
             if (k.style._Str_21712 == null)
             {
                 _local_3 = k.style.icon;
@@ -172,7 +172,7 @@
             }
         }
 
-        private function _Str_23521(k:String):void
+        private function setNotificationText(k:String):void
         {
             var _local_2:ITextWindow = (IWindowContainer(this._window).findChildByTag("notification_text") as ITextWindow);
             if (((_local_2 == null) || (k == null)))
