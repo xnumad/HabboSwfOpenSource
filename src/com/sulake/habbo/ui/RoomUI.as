@@ -630,7 +630,7 @@
                 case RoomSessionEvent.ENDED:
                     if (k.session != null)
                     {
-                        this._Str_17382(this.getRoomIdentifier(k.session.roomId));
+                        this.disposeDesktop(this.getRoomIdentifier(k.session.roomId));
                         if (k.session.isGameSession)
                         {
                             this._friendBar.visible = true;
@@ -1001,7 +1001,7 @@
                     this._isInRoom = true;
                     return;
                 case RoomEngineEvent.DISPOSED:
-                    this._Str_17382(_local_2);
+                    this.disposeDesktop(_local_2);
                     this._isInRoom = false;
                     return;
                 case RoomBackgroundColorEvent.ROOM_COLOR:
@@ -1135,7 +1135,7 @@
             return k.layoutManager.getChatContainer();
         }
 
-        public function _Str_17382(k:String):void
+        public function disposeDesktop(k:String):void
         {
             var _local_3:int;
             var _local_2:RoomDesktop = (this._desktops.remove(k) as RoomDesktop);

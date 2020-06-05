@@ -9,7 +9,7 @@
     {
         function createDesktop(_arg_1:IRoomSession):IRoomDesktop;
         function get chatContainer():IDisplayObjectWrapper;
-        function _Str_17382(_arg_1:String):void;
+        function disposeDesktop(_arg_1:String):void;
         function getDesktop(_arg_1:String):IRoomDesktop;
         function _Str_17538(_arg_1:int):int;
         function set visible(_arg_1:Boolean):void;
