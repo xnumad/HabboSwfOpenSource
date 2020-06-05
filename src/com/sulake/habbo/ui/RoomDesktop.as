@@ -565,7 +565,7 @@
                 while (k < this._canvasIDs.length)
                 {
                     _local_3 = this._canvasIDs[k];
-                    _local_4 = this._Str_25468(_local_3);
+                    _local_4 = this.getWindowName(_local_3);
                     if (this._windowManager)
                     {
                         this._windowManager.removeWindow(_local_4);
@@ -1801,7 +1801,7 @@
             return k - (k >> 1);
         }
 
-        private function _Str_25468(k:int):String
+        private function getWindowName(k:int):String
         {
             return "Room_Engine_Window_" + k;
         }
