@@ -99,7 +99,7 @@
             this.addMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
             if (getBoolean("client.minimail.embed.enabled"))
             {
-                this.addMessageEvent(new _Str_11459(this._Str_23193));
+                this.addMessageEvent(new _Str_11459(this.onMiniMailMessage));
                 this.addMessageEvent(new _Str_11571(this._Str_12932));
             }
         }
@@ -126,7 +126,7 @@
             super.dispose();
         }
 
-        private function _Str_23193(k:IMessageEvent):void
+        private function onMiniMailMessage(k:IMessageEvent):void
         {
             this._miniMailUnseenCount++;
             this._Str_17105();
