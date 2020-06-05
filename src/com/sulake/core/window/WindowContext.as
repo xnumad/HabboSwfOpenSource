@@ -66,7 +66,7 @@
         protected var _substituteParent:SubstituteParentController;
         private var _disposed:Boolean = false;
         private var _updating:Boolean = false;
-        private var _Str_21204:Boolean = false;
+        private var _rendering:Boolean = false;
         private var _name:String;
         private var _configurationManager:IHabboConfigurationManager;
 
@@ -338,15 +338,15 @@
         {
 			try
 			{
-				this._Str_21204 = true;
+				this._rendering = true;
 				_renderer.render();
-				this._Str_21204 = false;
+				this._rendering = false;
 			}
 			catch (error: Error)
 			{
 				Habbo.trackLoginStep("Error Updating WindowContext " + this._name + ": " + error.message + " | " + error.getStackTrace());
 			}
-			this._Str_21204 = false;
+			this._rendering = false;
         }
 
         private function _Str_21888(k:Event):void
