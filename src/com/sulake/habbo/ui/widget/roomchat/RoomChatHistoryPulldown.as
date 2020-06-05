@@ -81,7 +81,7 @@
             {
                 _local_6.mouseThreshold = 0;
                 _local_6.addEventListener(WindowMouseEvent.CLICK, this.onCloseButtonClicked);
-                _local_6.addEventListener(WindowMouseEvent.UP, this._Str_23294);
+                _local_6.addEventListener(WindowMouseEvent.UP, this.onCloseButtonMouseUp);
                 _local_6.addEventListener(WindowMouseEvent.DOWN, this.onCloseButtonMouseDown);
                 _local_6.addEventListener(WindowMouseEvent.OVER, this.onCloseButtonMouseOver);
                 _local_6.addEventListener(WindowMouseEvent.OUT, this.onCloseButtonMouseOut);
@@ -395,7 +395,7 @@
             }
         }
 
-        private function _Str_23294(k:WindowMouseEvent):void
+        private function onCloseButtonMouseUp(k:WindowMouseEvent):void
         {
             if (this._window == null)
             {
