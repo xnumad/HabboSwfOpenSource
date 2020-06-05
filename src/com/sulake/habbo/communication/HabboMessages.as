@@ -435,7 +435,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserRemoveMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7291;
@@ -1067,7 +1067,7 @@
             INCOMING_PACKETS[151] = _Str_6109;
             INCOMING_PACKETS[1517] = _Str_8409;
             INCOMING_PACKETS[1533] = _Str_6906;
-            INCOMING_PACKETS[1534] = _Str_5843;
+            INCOMING_PACKETS[1534] = ObjectAddMessageEvent;
             INCOMING_PACKETS[1543] = CollapsedCategoriesEvent;
             INCOMING_PACKETS[1548] = _Str_8903;
             INCOMING_PACKETS[1551] = _Str_16338;
