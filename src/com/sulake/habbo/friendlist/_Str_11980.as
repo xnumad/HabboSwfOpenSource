@@ -18,7 +18,7 @@
         private static const NO_REQS_INFO:String = "no_reqs_info";
 
         private var _habboFriendList:HabboFriendList;
-        private var _Str_1929:IItemListWindow;
+        private var _list:IItemListWindow;
         private var _Str_17060:IContainerButtonWindow;
         private var _Str_18246:IContainerButtonWindow;
 
@@ -45,7 +45,7 @@
         public function _Str_13719(k:IItemListWindow):void
         {
             var _local_2:FriendRequest;
-            this._Str_1929 = k;
+            this._list = k;
             for each (_local_2 in this._habboFriendList.friendRequests.requests)
             {
                 this._Str_21250(_local_2);
@@ -57,7 +57,7 @@
 
         public function _Str_14179(k:int):void
         {
-            if (this._Str_1929 == null)
+            if (this._list == null)
             {
                 return;
             }
@@ -66,7 +66,7 @@
 
         public function _Str_6988(k:FriendRequest, _arg_2:Boolean):void
         {
-            if (this._Str_1929 == null)
+            if (this._list == null)
             {
                 return;
             }
@@ -77,7 +77,7 @@
 
         public function _Str_6657(k:FriendRequest):void
         {
-            if (this._Str_1929 == null)
+            if (this._list == null)
             {
                 return;
             }
@@ -129,24 +129,24 @@
 
         public function _Str_8472(k:FriendRequest):void
         {
-            if (this._Str_1929 == null)
+            if (this._list == null)
             {
                 return;
             }
             this._Str_21250(k);
             this._Str_6657(k);
-            this._Str_1929.addListItem(k.view);
+            this._list.addListItem(k.view);
             this._habboFriendList.friendRequests._Str_6988();
             this._Str_4295();
         }
 
         public function _Str_7667(k:FriendRequest):void
         {
-            if (this._Str_1929 == null)
+            if (this._list == null)
             {
                 return;
             }
-            this._Str_1929.removeListItem(k.view);
+            this._list.removeListItem(k.view);
             this._Str_4295();
         }
 

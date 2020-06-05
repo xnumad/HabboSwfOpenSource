@@ -28,7 +28,7 @@
     {
         protected var _navigator:HabboNavigator;
         private var _content:IWindowContainer;
-        private var _Str_1929:IItemListWindow;
+        private var _list:IItemListWindow;
         private var _Str_4871:RoomPopupCtrl;
         private var _scrollV:IScrollbarWindow;
         protected var _Str_3220:UserCountRenderer;
@@ -64,7 +64,7 @@
         public function set content(k:IWindowContainer):void
         {
             this._content = k;
-            this._Str_1929 = ((this._content) ? IItemListWindow(this._content.findChildByName("item_list")) : null);
+            this._list = ((this._content) ? IItemListWindow(this._content.findChildByName("item_list")) : null);
             this._scrollV = ((this._content) ? IScrollbarWindow(this._content.findChildByName("scroller")) : null);
             if (((k == null) && (this._Str_4871)))
             {
@@ -82,7 +82,7 @@
             var _local_4:Boolean;
             var k:Array = this.getRooms();
             var _local_2:int = this._Str_21927();
-            this._Str_1929.autoArrangeItems = false;
+            this._list.autoArrangeItems = false;
             var _local_3:int;
             while (true)
             {
@@ -100,7 +100,7 @@
                 }
                 _local_3++;
             }
-            this._Str_1929.autoArrangeItems = true;
+            this._list.autoArrangeItems = true;
             if (((!(this._scrollV == null)) && (!(this._Str_21927() == _local_2))))
             {
                 this._scrollV.scrollV = 0;
@@ -115,9 +115,9 @@
         {
             var k:int;
             var _local_2:int;
-            while (_local_2 < this._Str_1929.numListItems)
+            while (_local_2 < this._list.numListItems)
             {
-                if (this._Str_1929.getListItemAt(_local_2).visible)
+                if (this._list.getListItemAt(_local_2).visible)
                 {
                     k++;
                 }
@@ -155,7 +155,7 @@
 
         private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:_Str_2370):Boolean
         {
-            var _local_4:IWindowContainer = IWindowContainer(this._Str_1929.getListItemAt(_arg_2));
+            var _local_4:IWindowContainer = IWindowContainer(this._list.getListItemAt(_arg_2));
             var _local_5:Boolean;
             if (_local_4 == null)
             {
@@ -164,7 +164,7 @@
                     return true;
                 }
                 _local_4 = this.getListEntry(_arg_2);
-                this._Str_1929.addListItem(_local_4);
+                this._list.addListItem(_local_4);
                 _local_5 = true;
             }
             Util._Str_2930(_local_4);

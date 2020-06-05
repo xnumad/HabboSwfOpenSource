@@ -21,7 +21,7 @@
         private var _Str_2440:_Str_2784;
         private var _Str_577:String;
         private var _window:IWindowContainer;
-        private var _Str_1929:IItemListWindow;
+        private var _list:IItemListWindow;
         private var _Str_7458:IItemListWindow;
         private var _Str_13821:IItemListWindow;
         private var _Str_18789:IWindow;
@@ -44,7 +44,7 @@
             var _local_11:IAsset = k.assets.getAssetByName("simple_alert_xml");
             this._Str_2440 = k.buildModalDialogFromXML((_local_11.content as XML));
             this._window = IWindowContainer(this._Str_2440._Str_2429);
-            this._Str_1929 = IItemListWindow(this._window.findChildByName("list"));
+            this._list = IItemListWindow(this._window.findChildByName("list"));
             this._Str_7458 = IItemListWindow(this._window.findChildByName("list_top"));
             this._Str_13821 = IItemListWindow(this._window.findChildByName("list_bottom"));
             this._Str_18789 = this._window.findChildByName("message");
@@ -138,7 +138,7 @@
                     this._Str_5447 = null;
                 }
                 this._window = null;
-                this._Str_1929 = null;
+                this._list = null;
                 this._Str_7458 = null;
                 this._Str_13821 = null;
                 this._Str_18789 = null;
@@ -195,8 +195,8 @@
         {
             this._Str_7458.arrangeListItems();
             this._Str_13821.arrangeListItems();
-            this._Str_1929.arrangeListItems();
-            this._window.height = (this._Str_1929.height + 40);
+            this._list.arrangeListItems();
+            this._window.height = (this._list.height + 40);
             this._window.center();
         }
     }

@@ -26,7 +26,7 @@
         private var _habboNavigator:HabboNavigator;
         private var _localizationManager:IHabboLocalizationManager;
         private var _window:IWindowContainer;
-        private var _Str_1929:IItemListWindow;
+        private var _list:IItemListWindow;
         private var _Str_13051:IWindowContainer;
         private var _Str_4789:Timer;
         private var _Str_7476:Boolean;
@@ -36,9 +36,9 @@
             this._habboNavigator = k;
             this._localizationManager = k.localization;
             this._window = IWindowContainer(this._habboNavigator.getXmlWindow("toolbar_hover"));
-            this._Str_1929 = IItemListWindow(this._window.findChildByName(this._Str_24574));
-            this._Str_13051 = IWindowContainer(this._Str_1929.getListItemByTag(this._Str_22393));
-            this._Str_1929.removeListItem(this._Str_13051);
+            this._list = IItemListWindow(this._window.findChildByName(this._Str_24574));
+            this._Str_13051 = IWindowContainer(this._list.getListItemByTag(this._Str_22393));
+            this._list.removeListItem(this._Str_13051);
             this._window.addEventListener(WindowMouseEvent.OVER, this._Str_19268);
             this._window.addEventListener(WindowMouseEvent.HOVERING, this._Str_19268);
             this._window.addEventListener(WindowMouseEvent.OUT, this._Str_20048);
@@ -58,7 +58,7 @@
                 this._Str_4789.reset();
                 this._Str_4789 = null;
             }
-            this._Str_1929 = null;
+            this._list = null;
             this._window = null;
             this._Str_13051 = null;
             this._habboNavigator = null;
@@ -114,7 +114,7 @@
             _local_4.addEventListener(WindowMouseEvent.CLICK, _arg_3);
             _local_4.addEventListener(WindowMouseEvent.OVER, this._Str_20179);
             _local_4.addEventListener(WindowMouseEvent.OUT, this._Str_20179);
-            this._Str_1929.addListItem(_local_4);
+            this._list.addListItem(_local_4);
         }
 
         public function show(k:Point):void
