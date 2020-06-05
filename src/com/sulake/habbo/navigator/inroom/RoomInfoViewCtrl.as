@@ -123,7 +123,7 @@
             this.refreshButtons(this._navigator.data._Str_2678);
             Util._Str_4679(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
             this._window.findChildByName("guild_info").x = 11;
-            this._window.height = (Util._Str_2647(this._window.content) + 45);
+            this._window.height = (Util.getLowestPoint(this._window.content) + 45);
         }
 
         private function isHome(k:GuestRoomData):Boolean
@@ -152,7 +152,7 @@
                 _local_4.visible = this._embedExpanded;
                 _local_5.visible = this._embedExpanded;
                 _local_6.visible = false;
-                k.height = (Util._Str_2647(k) + 5);
+                k.height = (Util.getLowestPoint(k) + 5);
                 _local_6.visible = true;
                 _local_6.height = ((this._embedExpanded) ? _local_5.y : k.height);
             }
@@ -206,7 +206,7 @@
             this._window.findChildByName("floor_plan_editor_button").visible = this._navigator.data._Str_11824;
             Util._Str_4679(_local_2, ["room_name", "owner_name_cont", "rating_cont", "ranking_cont", "padding_cont", "tags", "room_desc", "thumbnail_container"], _local_3.y, 0);
             _local_2.visible = true;
-            _local_2.height = Util._Str_2647(_local_2);
+            _local_2.height = Util.getLowestPoint(_local_2);
         }
 
         private function refreshStaffPick(k:Boolean=false):void
@@ -260,7 +260,7 @@
             var _local_6:Array = ["room_settings_button", "room_filter_button", "floor_plan_editor_button", "staff_pick_button", "room_report_button", "room_muteall_button"];
             Util._Str_4679(_local_5, _local_6, 0, 3);
             _local_5.visible = Util._Str_13639(IWindowContainer(_local_5));
-            _local_5.height = Util._Str_2647(_local_5);
+            _local_5.height = Util.getLowestPoint(_local_5);
         }
 
         private function prepareWindow():void
@@ -300,7 +300,7 @@
             var _local_4:ITextWindow = ITextWindow(this.find("embed_info_txt"));
             _local_4.height = (_local_4.textHeight + 5);
             Util._Str_4679(_local_3, ["embed_info_txt", "embed_src_txt"], _local_4.y, 2);
-            _local_3.height = (Util._Str_2647(_local_3) + 5);
+            _local_3.height = (Util.getLowestPoint(_local_3) + 5);
             _local_3.findChildByName("embed_info_region").procedure = this.onEmbedInfo;
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {

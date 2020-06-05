@@ -95,7 +95,7 @@
             }
         }
 
-        public static function _Str_2647(k:IWindowContainer):int
+        public static function getLowestPoint(k:IWindowContainer):int
         {
             var _local_4:IWindow;
             var _local_2:int;
@@ -306,7 +306,7 @@
             this._Str_24736();
             this._Str_22606();
             _Str_14509(this._window.content, 0, 4);
-            this._window.height = (_Str_2647(this._window.content) + _Str_7408);
+            this._window.height = (getLowestPoint(this._window.content) + _Str_7408);
         }
 
         private function _Str_20399():void
@@ -336,7 +336,7 @@
                 }
                 _local_2++;
             }
-            this._categoriesContainer.height = _Str_2647(this._categoriesContainer);
+            this._categoriesContainer.height = getLowestPoint(this._categoriesContainer);
         }
 
         private function _Str_23920():void
@@ -384,7 +384,7 @@
                 }
                 _local_3++;
             }
-            this._achievementsContainer.height = _Str_2647(this._achievementsContainer);
+            this._achievementsContainer.height = getLowestPoint(this._achievementsContainer);
             k.height = (this._achievementsContainer.height + 1);
             this._window.findChildByName("achievements_scrollarea").height = k.height;
             _local_4 = this._window.findChildByName("achievements_scrollbar");

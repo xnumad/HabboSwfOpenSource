@@ -69,7 +69,7 @@
                     _local_8.y = k;
                     k = (k + (_local_8.height + _Str_7717));
                     _local_8.visible = true;
-                    _local_5.height = ((Util._Str_2647(_local_5) > 0) ? (Util._Str_2647(_local_5) + 5) : 0);
+                    _local_5.height = ((Util.getLowestPoint(_local_5) > 0) ? (Util.getLowestPoint(_local_5) + 5) : 0);
                 }
                 _local_6++;
             }

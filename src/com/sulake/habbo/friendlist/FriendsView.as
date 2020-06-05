@@ -194,7 +194,7 @@
             _local_3.procedure = this._Str_20246;
             _local_3.visible = false;
             this._Str_22394(k, _arg_2);
-            _local_3.height = Math.max(Util._Str_2647(_local_3), 20);
+            _local_3.height = Math.max(Util.getLowestPoint(_local_3), 20);
             _local_3.visible = true;
         }
 
@@ -588,7 +588,7 @@
                 _local_4++;
             }
             Util._Str_7173(_local_3, _local_3.width, 15);
-            _local_3.height = Util._Str_2647(_local_3);
+            _local_3.height = Util.getLowestPoint(_local_3);
         }
 
         private function _Str_22539(k:IWindowContainer, _arg_2:int, _arg_3:int, _arg_4:Boolean):void

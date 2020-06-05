@@ -68,7 +68,7 @@
                 _local_3++;
             }
             Util._Str_7173(_local_2, _local_2.width, 18, 3);
-            _local_2.height = Util._Str_2647(_local_2);
+            _local_2.height = Util.getLowestPoint(_local_2);
             this._content.findChildByName("no_tags_found").visible = (k.length < 1);
         }
 

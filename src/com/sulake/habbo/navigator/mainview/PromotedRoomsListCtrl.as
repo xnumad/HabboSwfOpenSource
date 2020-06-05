@@ -76,7 +76,7 @@
                 _local_5.visible = true;
                 _local_4++;
             }
-            k.height = ((Util._Str_2647(k) > 0) ? (Util._Str_2647(k) + 5) : 0);
+            k.height = ((Util.getLowestPoint(k) > 0) ? (Util.getLowestPoint(k) + 5) : 0);
         }
 
         public function _Str_9034(k:int):IWindowContainer
@@ -130,7 +130,7 @@
                 this._guestRoomListCtrl.category = _arg_2;
                 this._guestRoomListCtrl.refresh();
             }
-            k.height = ((_arg_2.open) ? (Util._Str_2647(k) + 3) : 90);
+            k.height = ((_arg_2.open) ? (Util.getLowestPoint(k) + 3) : 90);
         }
 
         private function _Str_23764(k:WindowEvent, _arg_2:IWindow):void

@@ -158,10 +158,10 @@
         {
             this._Str_18916 = true;
             this._Str_3541.visible = false;
-            this._Str_3541.y = Util._Str_2647(this._mainWindow.content);
+            this._Str_3541.y = Util.getLowestPoint(this._mainWindow.content);
             this._Str_3541.width = this._habboFriendList.tabs._Str_4971;
             this._Str_3541.visible = true;
-            this._mainWindow.content.height = Util._Str_2647(this._mainWindow.content);
+            this._mainWindow.content.height = Util.getLowestPoint(this._mainWindow.content);
             this._mainWindow.content.width = (this._habboFriendList.tabs._Str_4971 - 10);
             this._mainWindow.header.width = (this._habboFriendList.tabs._Str_4971 - 10);
             this._mainWindow.height = (this._mainWindow.content.height + 30);

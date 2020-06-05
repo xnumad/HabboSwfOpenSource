@@ -42,7 +42,7 @@
             this._flatId = _arg_2;
         }
 
-        public static function _Str_2647(k:IWindowContainer):int
+        public static function getLowestPoint(k:IWindowContainer):int
         {
             var _local_4:IWindow;
             var _local_2:int;
@@ -256,7 +256,7 @@
                 _local_4.removeChild(_local_7);
             }
             _Str_4679(_local_4, _local_5.y, 0);
-            _local_4.height = _Str_2647(_local_4);
+            _local_4.height = getLowestPoint(_local_4);
             _local_3.height = (_local_4.height + (2 * _local_4.y));
             Logger.log(((((((((((("XXXX: " + _local_3.height) + ", ") + _local_4.height) + ", ") + _local_5.height) + ", ") + _local_6.height) + ", ") + _local_7.height) + ", ") + _local_8.height));
         }

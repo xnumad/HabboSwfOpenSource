@@ -34,7 +34,7 @@
             return new Rectangle((k.x + (0.5 * _local_4)), (k.y + (0.5 * _local_5)), _arg_2, _arg_3);
         }
 
-        public static function _Str_2647(k:IWindowContainer):int
+        public static function getLowestPoint(k:IWindowContainer):int
         {
             var _local_4:IWindow;
             var _local_2:int;

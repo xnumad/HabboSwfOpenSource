@@ -45,7 +45,7 @@
             }
             var _local_5:int = (k.width - _local_3.x);
             Util._Str_7173(_local_3, _local_5, 14);
-            _local_3.height = Util._Str_2647(_local_3);
+            _local_3.height = Util.getLowestPoint(_local_3);
             _local_3.visible = (_arg_2.length > 0);
         }
 

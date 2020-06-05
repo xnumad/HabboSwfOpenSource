@@ -368,8 +368,8 @@
                 _local_4.visible = (_local_3 < this._displayedRewards);
                 _local_3++;
             }
-            _local_2.height = Util._Str_2647(_local_2);
-            k.height = Util._Str_2647(k);
+            _local_2.height = Util.getLowestPoint(_local_2);
+            k.height = Util.getLowestPoint(k);
             this._roomEvents._Str_7247.refresh();
         }
 

@@ -246,7 +246,7 @@
                 }
             }
             var k:IWindowContainer = IWindowContainer(this._configureContainer.findChildByName("select_furni_container"));
-            k.height = Util._Str_2647(k);
+            k.height = Util.getLowestPoint(k);
         }
 
         private function _Str_17985():void
@@ -433,7 +433,7 @@
             this._Str_18398(this._triggerConfs);
             this._Str_18398(this._actionTypes);
             this._Str_18398(this._conditionTypes);
-            this._window.content.height = Util._Str_2647(this._window.content);
+            this._window.content.height = Util.getLowestPoint(this._window.content);
             this._window.visible = true;
         }
 
@@ -454,7 +454,7 @@
             this._Str_23045();
             this._Str_25418();
             Util._Str_14509(this._configureContainer, 3, 5);
-            this._configureContainer.height = (Util._Str_2647(this._configureContainer) + 1);
+            this._configureContainer.height = (Util.getLowestPoint(this._configureContainer) + 1);
         }
 
         private function _Str_16874(k:int):String
@@ -506,7 +506,7 @@
             {
                 _local_7.visible = false;
             }
-            _local_3.height = (Util._Str_2647(_local_3) + 4);
+            _local_3.height = (Util.getLowestPoint(_local_3) + 4);
         }
 
         private function _Str_25418():void
@@ -579,7 +579,7 @@
             this._Str_2497(_local_3, "desc_txt", _arg_2);
             var _local_4:IWindow = this.find(_local_3, "caption_txt");
             this.find(_local_3, "desc_txt").y = (_local_4.y + _local_4.height);
-            _local_3.height = (Util._Str_2647(_local_3) + 4);
+            _local_3.height = (Util.getLowestPoint(_local_3) + 4);
             this.find(this._configureContainer, "warning_container").visible = true;
         }
 
@@ -593,7 +593,7 @@
                 _local_2 = this._Str_10876();
                 _local_2.visible = true;
             }
-            k.height = Util._Str_2647(k);
+            k.height = Util.getLowestPoint(k);
         }
 
         private function _Str_10876():IWindowContainer

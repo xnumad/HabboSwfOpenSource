@@ -60,7 +60,7 @@
             }
         }
 
-        public static function _Str_2647(k:IWindowContainer):int
+        public static function getLowestPoint(k:IWindowContainer):int
         {
             var _local_4:IWindow;
             var _local_2:int;
@@ -321,7 +321,7 @@
             }
             var _local_9:Boolean = this._widget.config.getBoolean("pet.enhancements.enabled");
             var _local_10:int = ((_local_9) ? 180 : 160);
-            _local_2.height = _Str_2647(_local_2);
+            _local_2.height = getLowestPoint(_local_2);
             this._commandWindow.height = (_local_2.height + _local_10);
             this._disableTimer.stop();
         }

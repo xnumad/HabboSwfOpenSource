@@ -57,7 +57,7 @@
             this.refreshInfo(this._details, "doormode_invisible", (this._room.doorMode == 3));
             Util._Str_4679(this._details, ["guild_info", "roomname", "roomctg_cont", "roomowner_cont", "roomdesc", "extra_cont", "doormode_doorbell", "doormode_password", "doormode_invisible", "trading_allowed", "eventinfo_cont", "roomsettings_cont"], 0, 0);
             this._details.findChildByName("guild_info").x = 2;
-            this._details.height = Util._Str_2647(this._details);
+            this._details.height = Util.getLowestPoint(this._details);
         }
 
         private function refreshOwnerName():void
@@ -99,7 +99,7 @@
             if (Util._Str_13639(k))
             {
                 Util._Str_4679(k, ["tags", "startedat_cont", "rating_cont"], 0, 3);
-                k.height = (Util._Str_2647(k) + 4);
+                k.height = (Util.getLowestPoint(k) + 4);
                 k.visible = true;
             }
         }
@@ -124,7 +124,7 @@
             _local_2.height = (((_local_3.height + _local_4.height) + _local_5.height) + 20);
             var _local_7:IWindowContainer = (_local_2.findChildByName("eventinfo_child_container") as IWindowContainer);
             _local_7.x = (_local_6.textWidth + 5);
-            _local_7.height = (Util._Str_2647(_local_7) + 5);
+            _local_7.height = (Util.getLowestPoint(_local_7) + 5);
             _local_2.visible = true;
             _local_6.visible = true;
             _local_7.visible = true;
@@ -148,7 +148,7 @@
             var _local_4:ITextWindow = ITextWindow(k.getChildByName(_local_3));
             _local_4.text = _arg_2.description;
             _local_4.height = (_local_4.textHeight + 10);
-            _local_4.y = Util._Str_2647(k);
+            _local_4.y = Util.getLowestPoint(k);
             _local_4.visible = true;
         }
 

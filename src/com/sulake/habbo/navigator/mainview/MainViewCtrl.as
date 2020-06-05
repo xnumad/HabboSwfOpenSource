@@ -349,8 +349,8 @@
             this._Str_6025();
             this._Str_24816(true);
             this._Str_5920();
-            this._customContent.height = Util._Str_2647(this._customContent);
-            this._footer.height = Util._Str_2647(this._footer);
+            this._customContent.height = Util.getLowestPoint(this._customContent);
+            this._footer.height = Util.getLowestPoint(this._footer);
             var k:int = this._listContent.y;
             Util._Str_4679(this._content, ["custom_content", "list_content"], this._customContent.y, 8);
             this._listContent.height = ((((this._listContent.height + k) - this._listContent.y) - this._footer.height) + this._footerHeight);

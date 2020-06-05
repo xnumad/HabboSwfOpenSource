@@ -66,7 +66,7 @@
             }
             Util._Str_2930(this._popup);
             this.refreshContent(this._popup);
-            this._popup.height = (Util._Str_2647(this._popup) + 5);
+            this._popup.height = (Util.getLowestPoint(this._popup) + 5);
             var _local_2:Point = new Point();
             k.getGlobalPosition(_local_2);
             this._popup.x = ((_local_2.x + this._popupIndentRight) + k.width);
