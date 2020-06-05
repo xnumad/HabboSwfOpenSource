@@ -123,7 +123,7 @@
             }
         }
 
-        protected function _Str_17415():Boolean
+        protected function isConstructionReady():Boolean
         {
             return (this._Str_2338) && (this._Str_2734);
         }
@@ -141,7 +141,7 @@
 
         public function get iterator():IIterator
         {
-            return (this._Str_17415()) ? this._Str_2338.iterator : null;
+            return (this.isConstructionReady()) ? this._Str_2338.iterator : null;
         }
 
         public function get scrollH():Number

@@ -73,7 +73,7 @@
 
         public function get iterator():IIterator
         {
-            return (this._Str_17415()) ? this._Str_2448.iterator : null;
+            return (this.isConstructionReady()) ? this._Str_2448.iterator : null;
         }
 
         public function get scrollH():Number
@@ -328,7 +328,7 @@
             this._Str_2448.rebuildGridStructure();
         }
 
-        protected function _Str_17415():Boolean
+        protected function isConstructionReady():Boolean
         {
             return (this._Str_2448) && (this._Str_2734);
         }
