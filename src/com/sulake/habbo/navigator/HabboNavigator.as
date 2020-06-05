@@ -23,7 +23,7 @@
     import com.sulake.habbo.navigator.inroom.RoomEventViewCtrl;
     import com.sulake.habbo.navigator.inroom.RoomEventInfoCtrl;
     import com.sulake.habbo.navigator.roomsettings.RoomFilterCtrl;
-    import com.sulake.habbo.navigator.toolbar._Str_8760;
+    import com.sulake.habbo.navigator.toolbar.ToolbarHoverCtrl;
     import com.sulake.habbo.navigator.roomsettings.EnforceCategoryCtrl;
     import com.sulake.core.assets.AssetLibraryCollection;
     import com.sulake.core.runtime.IContext;
@@ -97,7 +97,7 @@
         private var _roomEventViewCtrl:RoomEventViewCtrl;
         private var _roomEventInfoCtrl:RoomEventInfoCtrl;
         private var _roomFilterCtrl:RoomFilterCtrl;
-        private var _toolbarHover:_Str_8760;
+        private var _toolbarHover:ToolbarHoverCtrl;
         private var _enforceCategoryCtrl:EnforceCategoryCtrl;
         private var _webRoomReport:Boolean = true;
         private var _webRoomReportedName:String = null;
@@ -840,7 +840,7 @@
         {
             if (!this._toolbarHover)
             {
-                this._toolbarHover = new _Str_8760(this);
+                this._toolbarHover = new ToolbarHoverCtrl(this);
             }
             this._toolbarHover.show(k);
         }

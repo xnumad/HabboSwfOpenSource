@@ -14,7 +14,7 @@
     import com.sulake.core.window.components.IRegionWindow;
     import com.sulake.core.window.components.IBorderWindow;
 
-    public class _Str_8760 
+    public class ToolbarHoverCtrl
     {
         private static const _Str_18494:uint = 7433577;
         private static const _Str_18752:uint = 5723213;
@@ -31,7 +31,7 @@
         private var _Str_4789:Timer;
         private var _Str_7476:Boolean;
 
-        public function _Str_8760(k:HabboNavigator)
+        public function ToolbarHoverCtrl(k:HabboNavigator)
         {
             this._habboNavigator = k;
             this._localizationManager = k.localization;
