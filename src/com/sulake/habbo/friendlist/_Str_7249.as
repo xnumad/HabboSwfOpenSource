@@ -22,7 +22,7 @@
         private var _mainWindow:IFrameWindow;
         private var _Str_21315:IWindowContainer;
         private var _Str_3541:IWindowContainer;
-        private var _Str_5074:ITextWindow;
+        private var _infoText:ITextWindow;
         private var _Str_3860:int = -1;
         private var _Str_4481:int = -1;
         private var _Str_18916:Boolean;
@@ -56,13 +56,13 @@
             }
             if (_local_3.type == WindowMouseEvent.OUT)
             {
-                this._Str_5074.text = "";
+                this._infoText.text = "";
             }
             else
             {
                 if (_local_3.type == WindowMouseEvent.OVER)
                 {
-                    this._Str_5074.text = _arg_2;
+                    this._infoText.text = _arg_2;
                 }
             }
         }
@@ -113,8 +113,8 @@
             {
                 this._mainWindow.findChildByName("open_edit_ctgs_but").visible = false;
             }
-            this._Str_5074 = ITextWindow(this._mainWindow.findChildByName("info_text"));
-            this._Str_5074.text = "";
+            this._infoText = ITextWindow(this._mainWindow.findChildByName("info_text"));
+            this._infoText.text = "";
             this._habboFriendList.refreshButton(this._mainWindow, "open_edit_ctgs", true, null, 0);
             this.refresh("prepare");
             this._mainWindow.height = 350;

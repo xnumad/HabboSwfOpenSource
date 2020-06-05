@@ -7,7 +7,7 @@
     {
         private var _input:ITextFieldWindow;
         private var _includeInfo:Boolean;
-        private var _Str_5074:String = "";
+        private var _infoText:String = "";
 
         public function InfoText(k:ITextFieldWindow, _arg_2:String=null)
         {
@@ -15,7 +15,7 @@
             if (_arg_2 != null)
             {
                 this._includeInfo = true;
-                this._Str_5074 = _arg_2;
+                this._infoText = _arg_2;
                 this._input.text = _arg_2;
             }
             this._input.addEventListener(WindowEvent.WINDOW_EVENT_FOCUSED, this._Str_22308);
@@ -32,7 +32,7 @@
 
         public function goBackToInitialState():void
         {
-            this._input.text = this._Str_5074;
+            this._input.text = this._infoText;
             this._includeInfo = true;
         }
 
