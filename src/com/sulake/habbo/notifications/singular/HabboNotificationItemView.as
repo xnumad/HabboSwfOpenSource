@@ -24,7 +24,7 @@
         public static const SIDE_MARGIN:int = 5;
         private static const STATE_IDLE:int = 0;
         private static const STATE_FADE_IN:int = 1;
-        private static const _Str_14483:int = 2;
+        private static const STATE_DISPLAY:int = 2;
         private static const _Str_6008:int = 3;
 
         private var _window:IWindow;
@@ -139,7 +139,7 @@
                     }
                     this.adjustBlend(_local_2);
                     return;
-                case _Str_14483:
+                case STATE_DISPLAY:
                     this._displayStart = (this._displayStart + k);
                     if (((this._displayStart > int(this._viewConfig["time_display"])) && (!(this._hovering))))
                     {
@@ -253,7 +253,7 @@
         private function startDisplay():void
         {
             this._displayStart = 0;
-            this._state = _Str_14483;
+            this._state = STATE_DISPLAY;
         }
 
         private function startIdling():void
