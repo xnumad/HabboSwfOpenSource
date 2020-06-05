@@ -212,7 +212,7 @@
             this._Str_7516();
         }
 
-        public function _Str_25833(k:Boolean):void
+        public function setVertical(k:Boolean):void
         {
             this._vertical = k;
             this._Str_7516();
