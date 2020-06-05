@@ -116,7 +116,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5567(this._Str_24730));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4841(this._Str_16886));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_8552(this._Str_15197));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4851(this._Str_18650));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4851(this.onNewConsoleMessage));
             this._habboFriendListComponent.events.addEventListener(_Str_2948.FRE_ACCEPTED, this._Str_14893);
             this._habboFriendListComponent.events.addEventListener(_Str_2948.FRE_DECLINED, this._Str_14893);
         }
@@ -543,7 +543,7 @@
             this._Str_15774(k.requestId);
         }
 
-        private function _Str_18650(k:_Str_4851):void
+        private function onNewConsoleMessage(k:_Str_4851):void
         {
             var _local_2:_Str_6189 = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;
