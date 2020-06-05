@@ -35,7 +35,7 @@
                 this._infoText = _arg_5;
                 this._input.text = _arg_5;
             }
-            Util._Str_6937(this._input, this._Str_12396);
+            Util._Str_6937(this._input, this.onInputClick);
             this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_24438);
             this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22400);
             this._orgTextBackground = this._input.textBackground;
@@ -148,7 +148,7 @@
             return (!(this._includeInfo)) && (Util.trim(this.getText()).length > 2);
         }
 
-        private function _Str_12396(k:WindowEvent, _arg_2:IWindow):void
+        private function onInputClick(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowEvent.WINDOW_EVENT_FOCUSED)
             {

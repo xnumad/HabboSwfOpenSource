@@ -45,7 +45,7 @@
             this._frame.caption = ("Msg To: " + this._targetUserName);
             this._frame.findChildByName("send_message_but").procedure = this._Str_22479;
             this._msgInput = ITextFieldWindow(this._frame.findChildByName("message_input"));
-            this._msgInput.procedure = this._Str_12396;
+            this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
             this._Str_23308(this._msgSelect);
             this._msgSelect.procedure = this._Str_19008;
@@ -114,7 +114,7 @@
             this.dispose();
         }
 
-        private function _Str_12396(k:WindowEvent, _arg_2:IWindow):void
+        private function onInputClick(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowEvent.WINDOW_EVENT_FOCUSED)
             {
