@@ -62,7 +62,7 @@
         {
             if (this._horizontal)
             {
-                if (this._Str_10345(k))
+                if (this.setScrollPosition(k))
                 {
                     this.updateLiftSizeAndPosition();
                 }
@@ -73,7 +73,7 @@
         {
             if (!this._horizontal)
             {
-                if (this._Str_10345(k))
+                if (this.setScrollPosition(k))
                 {
                     this.updateLiftSizeAndPosition();
                 }
@@ -202,7 +202,7 @@
             return false;
         }
 
-        protected function _Str_10345(k:Number):Boolean
+        protected function setScrollPosition(k:Number):Boolean
         {
             var _local_2:Boolean;
             if (((this._Str_2566 == null) || (this._Str_2566.disposed)))
@@ -251,11 +251,11 @@
                         {
                             if (this._horizontal)
                             {
-                                this._Str_10345(DragBarController(k)._Str_14866);
+                                this.setScrollPosition(DragBarController(k)._Str_14866);
                             }
                             else
                             {
-                                this._Str_10345(DragBarController(k)._Str_15234);
+                                this.setScrollPosition(DragBarController(k)._Str_15234);
                             }
                         }
                     }
@@ -537,7 +537,7 @@
         private function onScrollableResized(k:WindowEvent):void
         {
             this.updateLiftSizeAndPosition();
-            this._Str_10345(this._Str_588);
+            this.setScrollPosition(this._Str_588);
         }
 
         private function onScrollableScrolled(k:WindowEvent):void
