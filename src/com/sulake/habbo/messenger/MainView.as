@@ -314,7 +314,7 @@
             this._currentConversationId = k;
             setAvatarVisibilityTag(this.getAvatarWrapper(k), true);
             this.setChatIndicatorVisibility(k, false);
-            this._Str_21370();
+            this.refreshConversationList();
             this._Str_7204();
             var _local_2:IFriend = this._messenger.getFriend(this._currentConversationId);
             var _local_3:String = ((_local_2 != null) ? _local_2.name : "");
@@ -495,7 +495,7 @@
                         _local_2 = _local_3._Str_20358;
                         this.recordChatEntry(_local_3._Str_20358, _local_3._Str_24552, _local_3._Str_24452);
                     }
-                    this._Str_21370();
+                    this.refreshConversationList();
                     this._Str_7204();
                     this._messenger.events.dispatchEvent(new NewMessageEvent(true, _local_2));
                 }
@@ -647,7 +647,7 @@
             IItemListWindow(this._frame.findChildByName("button_strip")).arrangeListItems();
         }
 
-        private function _Str_21370():void
+        private function refreshConversationList():void
         {
             this._populatingList = true;
             this._conversationList.destroyListItems();
