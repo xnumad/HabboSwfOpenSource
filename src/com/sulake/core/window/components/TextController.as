@@ -416,7 +416,7 @@
             k._Str_3808.textDecoration = ((_arg_2) ? TextStyle.UNDERLINE : TextStyle.NONE);
         }
 
-        private static function _Str_16858(k:TextController, _arg_2:Boolean):void
+        private static function setWordWrap(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.wordWrap = _arg_2;
             k.refreshTextImage();
@@ -582,7 +582,7 @@
             k[PropertyKeys.SHARPNESS] = setSharpness;
             k[PropertyKeys.THICKNESS] = setThickness;
             k[PropertyKeys.UNDERLINE] = setUnderline;
-            k[PropertyKeys.WORD_WRAP] = _Str_16858;
+            k[PropertyKeys.WORD_WRAP] = setWordWrap;
             k["margins"] = setTextMarginMap;
             k[PropertyKeys.MAX_LINES] = setMaxLines;
             k[PropertyKeys.LEADING] = setLeading;
@@ -941,7 +941,7 @@
 
         public function set wordWrap(k:Boolean):void
         {
-            _Str_16858(this, k);
+            setWordWrap(this, k);
         }
 
         public function set _Str_9760(k:int):void
