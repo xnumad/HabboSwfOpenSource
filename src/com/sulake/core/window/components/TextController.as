@@ -49,12 +49,12 @@
         protected var _etchingPosition:String;
         protected var _defaultFormat:TextFormat;
         private var _textStyleName:String;
-        private var _Str_3808:TextStyle;
+        private var _explicitStyle:TextStyle;
         protected var _Str_17282:Boolean;
 
         public function TextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
-            this._Str_3808 = new TextStyle();
+            this._explicitStyle = new TextStyle();
             this._margins = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             this._drawing = false;
             this._scrollH = 0;
@@ -83,7 +83,7 @@
         private static function setAntiAliasType(k:TextController, _arg_2:String):void
         {
             _arg_2 = ((_arg_2 == AntiAliasType.ADVANCED) ? AntiAliasType.ADVANCED : AntiAliasType.NORMAL);
-            k._Str_3808.antiAliasType = _arg_2;
+            k._explicitStyle.antiAliasType = _arg_2;
             k._field.antiAliasType = _arg_2;
             k.refreshTextImage();
         }
@@ -134,7 +134,7 @@
             _local_3.bold = _arg_2;
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
             k.defaultTextFormat = _local_3;
-            k._Str_3808.fontWeight = TextStyle.BOLD;
+            k._explicitStyle.fontWeight = TextStyle.BOLD;
         }
 
         private static function setBorder(k:TextController, _arg_2:Boolean):void
@@ -173,7 +173,7 @@
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
             k._field.embedFonts = FontEnum.isEmbeddedFont(_arg_2);
             k.defaultTextFormat = _local_3;
-            k._Str_3808.fontFamily = _arg_2;
+            k._explicitStyle.fontFamily = _arg_2;
         }
 
         private static function setFontSize(k:TextController, _arg_2:uint):void
@@ -182,7 +182,7 @@
             _local_3.size = _arg_2;
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
             k.defaultTextFormat = _local_3;
-            k._Str_3808.fontSize = _arg_2;
+            k._explicitStyle.fontSize = _arg_2;
         }
 
         private static function setGridFitType(k:TextController, _arg_2:String):void
@@ -224,7 +224,7 @@
             _local_3.italic = _arg_2;
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
             k.defaultTextFormat = _local_3;
-            k._Str_3808.fontStyle = ((_arg_2) ? TextStyle.ITALIC : TextStyle.NORMAL);
+            k._explicitStyle.fontStyle = ((_arg_2) ? TextStyle.ITALIC : TextStyle.NORMAL);
         }
 
         private static function setKerning(k:TextController, _arg_2:Boolean):void
@@ -235,7 +235,7 @@
             _local_4.kerning = _arg_2;
             k.setTextFormat(_local_4);
             k.defaultTextFormat = _local_3;
-            k._Str_3808.kerning = _arg_2;
+            k._explicitStyle.kerning = _arg_2;
         }
 
         private static function setTextMarginMap(k:TextController, _arg_2:Map):void
@@ -309,7 +309,7 @@
         {
             k._field.sharpness = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.sharpness = _arg_2;
+            k._explicitStyle.sharpness = _arg_2;
         }
 
         private static function setSpacing(k:TextController, _arg_2:Number):void
@@ -320,7 +320,7 @@
             _local_4.letterSpacing = _arg_2;
             k.setTextFormat(_local_4);
             k.defaultTextFormat = _local_3;
-            k._Str_3808.letterSpacing = _arg_2;
+            k._explicitStyle.letterSpacing = _arg_2;
         }
 
         private static function setMaxLines(k:TextController, _arg_2:int):void
@@ -337,14 +337,14 @@
             _local_4.leading = _arg_2;
             k.setTextFormat(_local_4);
             k.defaultTextFormat = _local_3;
-            k._Str_3808.leading = _arg_2;
+            k._explicitStyle.leading = _arg_2;
         }
 
         private static function setTextColor(k:TextController, _arg_2:uint):void
         {
             k._field.textColor = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.color = _arg_2;
+            k._explicitStyle.color = _arg_2;
         }
 
         private static function setTextStyle(k:TextController, _arg_2:TextStyle):void
@@ -404,7 +404,7 @@
         {
             k._field.thickness = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.thickness = _arg_2;
+            k._explicitStyle.thickness = _arg_2;
         }
 
         private static function setUnderline(k:TextController, _arg_2:Boolean):void
@@ -413,7 +413,7 @@
             _local_3.underline = _arg_2;
             k.setTextFormat(new TextFormat(_local_3.font, _local_3.size, _local_3.color, _local_3.bold, _local_3.italic, _local_3.underline, _local_3.url, _local_3.target, _local_3.align, _local_3.leftMargin, _local_3.rightMargin, _local_3.indent, _local_3.leading));
             k.defaultTextFormat = _local_3;
-            k._Str_3808.textDecoration = ((_arg_2) ? TextStyle.UNDERLINE : TextStyle.NONE);
+            k._explicitStyle.textDecoration = ((_arg_2) ? TextStyle.UNDERLINE : TextStyle.NONE);
         }
 
         private static function setWordWrap(k:TextController, _arg_2:Boolean):void
@@ -432,7 +432,7 @@
         {
             var _local_2:TextField = k._field;
             var _local_3:String = k._textStyleName;
-            var _local_4:TextStyle = k._Str_3808;
+            var _local_4:TextStyle = k._explicitStyle;
             var _local_5:TextStyle = TextStyleManager.getStyle(_local_3);
             var _local_6:TextFormat = _local_2.defaultTextFormat;
             if (!_local_5)
@@ -603,14 +603,14 @@
         {
             k._etchingColor = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.etchingColor = k._etchingColor;
+            k._explicitStyle.etchingColor = k._etchingColor;
         }
 
         private static function setEtchingPosition(k:TextController, _arg_2:String):void
         {
             k._etchingPosition = _arg_2;
             k.refreshTextImage();
-            k._Str_3808.etchingPosition = k._etchingPosition;
+            k._explicitStyle.etchingPosition = k._etchingPosition;
         }
 
 
@@ -1499,7 +1499,7 @@
 
         public function resetExplicitStyle():void
         {
-            this._Str_3808 = new TextStyle();
+            this._explicitStyle = new TextStyle();
         }
     }
 }
