@@ -108,7 +108,7 @@
             this._desktopWindow.limits.maxHeight = _arg_9.height;
             this._rootDisplayObject.addChild(this._desktopWindow.getDisplayObject());
             this._rootDisplayObject.doubleClickEnabled = true;
-            this._rootDisplayObject.addEventListener(Event.RESIZE, this._Str_21888);
+            this._rootDisplayObject.addEventListener(Event.RESIZE, this.stageResizedHandler);
             this._eventProcessorState = new EventProcessorState(_renderer, this._desktopWindow, this._desktopWindow, null, this.inputEventTrackers);
             inputMode = INPUT_MODE_MOUSE;
             this._substituteParent = new SubstituteParentController(this);
@@ -174,7 +174,7 @@
             if (!this._disposed)
             {
                 this._disposed = true;
-                this._rootDisplayObject.removeEventListener(Event.RESIZE, this._Str_21888);
+                this._rootDisplayObject.removeEventListener(Event.RESIZE, this.stageResizedHandler);
                 this._rootDisplayObject.removeChild((IGraphicContextHost(this._desktopWindow).getGraphicContext(true) as DisplayObject));
                 this._desktopWindow.destroy();
                 this._desktopWindow = null;
@@ -349,7 +349,7 @@
 			this._rendering = false;
         }
 
-        private function _Str_21888(k:Event):void
+        private function stageResizedHandler(k:Event):void
         {
             var _local_2:int;
             var _local_3:int;
