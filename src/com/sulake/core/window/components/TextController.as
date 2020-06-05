@@ -137,7 +137,7 @@
             k._Str_3808.fontWeight = TextStyle.BOLD;
         }
 
-        private static function _Str_18639(k:TextController, _arg_2:Boolean):void
+        private static function setBorder(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.border = _arg_2;
             k.refreshTextImage();
@@ -564,7 +564,7 @@
             k["background"] = setTextBackground;
             k["background_color"] = setTextBackgroundColor;
             k[PropertyKeys.BOLD] = setBold;
-            k[PropertyKeys.BORDER] = _Str_18639;
+            k[PropertyKeys.BORDER] = setBorder;
             k[PropertyKeys.BORDER_COLOR] = _Str_18700;
             k[PropertyKeys.CONDENSE_WHITE] = _Str_23959;
             k["default_text_format"] = _Str_18477;
@@ -836,7 +836,7 @@
 
         public function set border(k:Boolean):void
         {
-            _Str_18639(this, k);
+            setBorder(this, k);
         }
 
         public function set borderColor(k:uint):void
