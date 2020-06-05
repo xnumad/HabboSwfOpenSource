@@ -15,6 +15,6 @@
         function getUnseenMiniMailMessageCount():int;
         function _Str_16882():Boolean;
         function _Str_19823(_arg_1:Boolean):void;
-        function get _Str_7577():Boolean;
+        function get hasfriendsListInitialized():Boolean;
     }
 }

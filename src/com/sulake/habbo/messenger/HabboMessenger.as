@@ -312,9 +312,9 @@
             this._Str_2439._Str_20614(k);
         }
 
-        public function get _Str_7577():Boolean
+        public function get hasfriendsListInitialized():Boolean
         {
-            return this._friendsList._Str_7577;
+            return this._friendsList.hasfriendsListInitialized;
         }
     }
 }

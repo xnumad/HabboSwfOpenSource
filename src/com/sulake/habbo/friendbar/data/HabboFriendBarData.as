@@ -555,7 +555,7 @@
                     _local_3 = false;
                 }
             }
-            if (this._habboFriendListComponent._Str_7577)
+            if (this._habboFriendListComponent.hasfriendsListInitialized)
             {
                 events.dispatchEvent(new NewMessageEvent(_local_3, this._lastMessageSenderId));
             }

@@ -29,6 +29,6 @@
         function get mainWindow():IWindowContainer;
         function getRelationshipStatus(_arg_1:int):int;
         function setRelationshipStatus(_arg_1:int, _arg_2:int):void;
-        function get _Str_7577():Boolean;
+        function get hasfriendsListInitialized():Boolean;
     }
 }

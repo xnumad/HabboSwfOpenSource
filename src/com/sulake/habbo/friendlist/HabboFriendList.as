@@ -782,7 +782,7 @@
             this._Str_18300 = getTimer();
         }
 
-        public function get _Str_7577():Boolean
+        public function get hasfriendsListInitialized():Boolean
         {
             return this._Str_21697;
         }

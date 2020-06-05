@@ -394,7 +394,7 @@
             {
                 return;
             }
-            if (!this._messenger._Str_7577)
+            if (!this._messenger.hasfriendsListInitialized)
             {
                 this._pendingMessages.push(new ChatQueueEntry(k, _arg_2, _arg_3));
                 if (((!(this._batchUpdatingTimer)) || ((this._batchUpdatingTimer) && (!(this._batchUpdatingTimer.running)))))
@@ -485,7 +485,7 @@
             {
                 return;
             }
-            if (this._messenger._Str_7577)
+            if (this._messenger.hasfriendsListInitialized)
             {
                 if (this._pendingMessages.length > 0)
                 {
