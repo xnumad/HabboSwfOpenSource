@@ -18,7 +18,7 @@
         private static const WINDOW_LAYER_INDEX:int = 1;
 
         private var _habboFriendList:HabboFriendList;
-        private var _tabsView:_Str_8553;
+        private var _tabsView:FriendListTabsView;
         private var _mainWindow:IFrameWindow;
         private var _Str_21315:IWindowContainer;
         private var _Str_3541:IWindowContainer;
@@ -30,7 +30,7 @@
         public function FriendListView(k:HabboFriendList)
         {
             this._habboFriendList = k;
-            this._tabsView = new _Str_8553(this._habboFriendList);
+            this._tabsView = new FriendListTabsView(this._habboFriendList);
         }
 
         public function openFriendList():void

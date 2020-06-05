@@ -10,12 +10,12 @@
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.window.components.IItemListWindow;
 
-    public class _Str_8553 
+    public class FriendListTabsView
     {
         private var _habboFriendList:HabboFriendList;
         private var _content:IWindowContainer;
 
-        public function _Str_8553(k:HabboFriendList)
+        public function FriendListTabsView(k:HabboFriendList)
         {
             this._habboFriendList = k;
         }
