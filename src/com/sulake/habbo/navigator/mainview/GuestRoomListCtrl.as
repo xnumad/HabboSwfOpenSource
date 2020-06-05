@@ -228,7 +228,7 @@
             {
                 return;
             }
-            this._Str_23553(IWindowContainer(_local_2));
+            this.hilite(IWindowContainer(_local_2));
             var _local_3:int = _local_2.tags[0];
             var _local_4:_Str_2370 = this._Str_9465(_local_3);
             if (_local_4 == null)
@@ -364,7 +364,7 @@
             this._navigator.send(new _Str_4893(_local_3.flatId));
         }
 
-        private function _Str_23553(k:IWindowContainer):void
+        private function hilite(k:IWindowContainer):void
         {
             var _local_2:int;
             if (((!(this._lastHilite == null)) && (!(this._lastHilite.disposed))))
