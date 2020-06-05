@@ -37,7 +37,7 @@
         protected var _scaleToFitItems:Boolean;
         protected var _resizeOnItemUpdate:Boolean;
         protected var _dragStartX:Number;
-        protected var _Str_5885:Number;
+        protected var _dragStartY:Number;
         protected var _Str_19220:Number;
         protected var _Str_20088:Number;
         protected var _Str_11276:Boolean;
@@ -492,7 +492,7 @@
                     break;
                 case WindowMouseEvent.DOWN:
                     this._dragStartX = _local_3;
-                    this._Str_5885 = _local_4;
+                    this._dragStartY = _local_4;
                     this._Str_19220 = (this._scrollOffsetH * this.maxScrollH);
                     this._Str_20088 = (this._scrollOffsetV * this.maxScrollV);
                     this._Str_11276 = true;
@@ -507,7 +507,7 @@
                         }
                         else
                         {
-                            this.scrollV = (((this._Str_20088 + this._Str_5885) - _local_4) / this.maxScrollV);
+                            this.scrollV = (((this._Str_20088 + this._dragStartY) - _local_4) / this.maxScrollV);
                         }
                         _local_2 = true;
                     }
