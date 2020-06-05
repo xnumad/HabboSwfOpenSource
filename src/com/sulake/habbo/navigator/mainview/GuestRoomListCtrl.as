@@ -81,7 +81,7 @@
         {
             var _local_4:Boolean;
             var k:Array = this.getRooms();
-            var _local_2:int = this._Str_21927();
+            var _local_2:int = this.getVisibleEntryCount();
             this._list.autoArrangeItems = false;
             var _local_3:int;
             while (true)
@@ -101,7 +101,7 @@
                 _local_3++;
             }
             this._list.autoArrangeItems = true;
-            if (((!(this._scrollV == null)) && (!(this._Str_21927() == _local_2))))
+            if (((!(this._scrollV == null)) && (!(this.getVisibleEntryCount() == _local_2))))
             {
                 this._scrollV.scrollV = 0;
             }
@@ -111,7 +111,7 @@
             }
         }
 
-        private function _Str_21927():int
+        private function getVisibleEntryCount():int
         {
             var k:int;
             var _local_2:int;
