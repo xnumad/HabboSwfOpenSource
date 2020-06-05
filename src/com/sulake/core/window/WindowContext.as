@@ -62,7 +62,7 @@
         protected var _windowFactory:IWindowFactory;
         protected var _widgetFactory:IWidgetFactory;
         protected var _resourceManager:IResourceManager;
-        protected var _Str_2867:IDesktopWindow;
+        protected var _desktopWindow:IDesktopWindow;
         protected var _Str_13721:SubstituteParentController;
         private var _disposed:Boolean = false;
         private var _Str_4816:Boolean = false;
@@ -103,13 +103,13 @@
             {
                 _arg_9 = new Rectangle(0, 0, 800, 600);
             }
-            this._Str_2867 = new DesktopController(("_CONTEXT_DESKTOP_" + this._name), this, _arg_9);
-            this._Str_2867.limits.maxWidth = _arg_9.width;
-            this._Str_2867.limits.maxHeight = _arg_9.height;
-            this._rootDisplayObject.addChild(this._Str_2867.getDisplayObject());
+            this._desktopWindow = new DesktopController(("_CONTEXT_DESKTOP_" + this._name), this, _arg_9);
+            this._desktopWindow.limits.maxWidth = _arg_9.width;
+            this._desktopWindow.limits.maxHeight = _arg_9.height;
+            this._rootDisplayObject.addChild(this._desktopWindow.getDisplayObject());
             this._rootDisplayObject.doubleClickEnabled = true;
             this._rootDisplayObject.addEventListener(Event.RESIZE, this._Str_21888);
-            this._eventProcessorState = new EventProcessorState(_renderer, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
+            this._eventProcessorState = new EventProcessorState(_renderer, this._desktopWindow, this._desktopWindow, null, this.inputEventTrackers);
             _Str_9993 = INPUT_MODE_MOUSE;
             this._Str_13721 = new SubstituteParentController(this);
         }
@@ -175,9 +175,9 @@
             {
                 this._disposed = true;
                 this._rootDisplayObject.removeEventListener(Event.RESIZE, this._Str_21888);
-                this._rootDisplayObject.removeChild((IGraphicContextHost(this._Str_2867).getGraphicContext(true) as DisplayObject));
-                this._Str_2867.destroy();
-                this._Str_2867 = null;
+                this._rootDisplayObject.removeChild((IGraphicContextHost(this._desktopWindow).getGraphicContext(true) as DisplayObject));
+                this._desktopWindow.destroy();
+                this._desktopWindow = null;
                 this._Str_13721.destroy();
                 this._Str_13721 = null;
                 if ((this._windowServices is IDisposable))
@@ -239,22 +239,22 @@
 
         public function getDesktopWindow():IDesktopWindow
         {
-            return this._Str_2867;
+            return this._desktopWindow;
         }
 
         public function findWindowByName(k:String):IWindow
         {
-            return this._Str_2867.findChildByName(k);
+            return this._desktopWindow.findChildByName(k);
         }
 
         public function findWindowByTag(k:String):IWindow
         {
-            return this._Str_2867.findChildByTag(k);
+            return this._desktopWindow.findChildByTag(k);
         }
 
         public function groupChildrenWithTag(k:String, _arg_2:Array, _arg_3:int=0):uint
         {
-            return this._Str_2867.groupChildrenWithTag(k, _arg_2, _arg_3);
+            return this._desktopWindow.groupChildrenWithTag(k, _arg_2, _arg_3);
         }
 
         public function registerLocalizationListener(k:String, _arg_2:IWindow):void
@@ -283,7 +283,7 @@
                     _arg_8 = this._Str_13721;
                 }
             }
-            _local_13 = new _local_14(k, _arg_3, _arg_4, _arg_5, this, _arg_6, ((_arg_8 != null) ? _arg_8 : (this._Str_2867)), _arg_7, _arg_10, _arg_12, _arg_9);
+            _local_13 = new _local_14(k, _arg_3, _arg_4, _arg_5, this, _arg_6, ((_arg_8 != null) ? _arg_8 : (this._desktopWindow)), _arg_7, _arg_10, _arg_12, _arg_9);
             _local_13.dynamicStyle = _arg_11;
             if (((_arg_2) && (_arg_2.length)))
             {
@@ -294,9 +294,9 @@
 
         public function destroy(k:IWindow):Boolean
         {
-            if (k == this._Str_2867)
+            if (k == this._desktopWindow)
             {
-                this._Str_2867 = null;
+                this._desktopWindow = null;
             }
             if (k.state != WindowState.DISPOSED)
             {
@@ -353,7 +353,7 @@
         {
             var _local_2:int;
             var _local_3:int;
-            if (((!(this._Str_2867 == null)) && (!(this._Str_2867.disposed))))
+            if (((!(this._desktopWindow == null)) && (!(this._desktopWindow.disposed))))
             {
                 if ((this._rootDisplayObject is Stage))
                 {
@@ -367,10 +367,10 @@
                 }
                 if (((_local_2 >= 10) && (_local_3 >= 10)))
                 {
-                    this._Str_2867.limits.maxWidth = _local_2;
-                    this._Str_2867.limits.maxHeight = _local_3;
-                    this._Str_2867.width = _local_2;
-                    this._Str_2867.height = _local_3;
+                    this._desktopWindow.limits.maxWidth = _local_2;
+                    this._desktopWindow.limits.maxHeight = _local_3;
+                    this._desktopWindow.width = _local_2;
+                    this._desktopWindow.height = _local_3;
                 }
             }
         }

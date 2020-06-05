@@ -29,7 +29,7 @@
         protected var _Str_3558:WindowController;
         protected var _Str_3275:WindowController;
         protected var _renderer:IWindowRenderer;
-        protected var _Str_2867:IDesktopWindow;
+        protected var _desktopWindow:IDesktopWindow;
         protected var _Str_8811:Vector.<IInputEventTracker>;
         private var _disposed:Boolean = false;
 
@@ -155,7 +155,7 @@
             {
                 return;
             }
-            this._Str_2867 = state.desktop;
+            this._desktopWindow = state.desktop;
             this._Str_3275 = (state.hoverWindow as WindowController);
             this._Str_3558 = (state.lastClickTarget as WindowController);
             this._renderer = state.renderer;
@@ -173,7 +173,7 @@
                     this.location.x = event.stageX;
                     this.location.y = event.stageY;
                     array = new Array();
-                    this._Str_2867.groupParameterFilteredChildrenUnderPoint(this.location, array, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR);
+                    this._desktopWindow.groupParameterFilteredChildrenUnderPoint(this.location, array, WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR);
                 }
                 index = ((array != null) ? array.length : 0);
                 if (index == 0)
@@ -181,17 +181,17 @@
                     switch (event.type)
                     {
                         case MouseEvent.MOUSE_MOVE:
-                            if (((!(this._Str_3275 == this._Str_2867)) && (!(this._Str_3275.disposed))))
+                            if (((!(this._Str_3275 == this._desktopWindow)) && (!(this._Str_3275.disposed))))
                             {
                                 this._Str_3275.getGlobalPosition(_Str_5267);
                                 tempWindowEvent = WindowMouseEvent.allocate(WindowMouseEvent.OUT, this._Str_3275, null, (event.stageX - _Str_5267.x), (event.stageY - _Str_5267.y), event.stageX, event.stageY, event.altKey, event.ctrlKey, event.shiftKey, event.buttonDown, event.delta);
                                 this._Str_3275.update(this._Str_3275, tempWindowEvent);
-                                this._Str_3275 = WindowController(this._Str_2867);
+                                this._Str_3275 = WindowController(this._desktopWindow);
                                 tempWindowEvent.recycle();
                             }
                             break;
                         case MouseEvent.MOUSE_DOWN:
-                            window = this._Str_2867.getActiveWindow();
+                            window = this._desktopWindow.getActiveWindow();
                             if (window)
                             {
                                 window.deactivate();
@@ -262,7 +262,7 @@
                                 mouseCursorType = MouseCursorType.DEFAULT;
                             }
                         }
-                        if (child != this._Str_2867)
+                        if (child != this._desktopWindow)
                         {
                             event.stopPropagation();
                             eventQueue.remove();
@@ -273,7 +273,7 @@
             }
             eventQueue.end();
             MouseCursorControl.type = mouseCursorType;
-            state.desktop = this._Str_2867;
+            state.desktop = this._desktopWindow;
             state.hoverWindow = this._Str_3275;
             state.lastClickTarget = this._Str_3558;
             state.renderer = this._renderer;
