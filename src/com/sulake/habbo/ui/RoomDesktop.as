@@ -1419,7 +1419,7 @@
             _local_13.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.resizeBackgroundColorizer);
             if (this._session.isSpectatorMode)
             {
-                _local_22 = this._Str_24343();
+                _local_22 = this.getSpectatorModeVisualization();
                 if (_local_22 != null)
                 {
                     _local_22.width = _local_9.width;
@@ -1927,7 +1927,7 @@
             }
         }
 
-        private function _Str_24343():IWindow
+        private function getSpectatorModeVisualization():IWindow
         {
             var k:XmlAsset = (this._assets.getAssetByName("spectator_mode_xml") as XmlAsset);
             if (k == null)
