@@ -36,13 +36,13 @@
         private var _lastMouseX:int;
         private var _fastHorizontalMove:Boolean;
         private var _entryWidthAdjustment:int;
-        private var _Str_16040:Boolean;
+        private var _showRoomNumbers:Boolean;
 
         public function GuestRoomListCtrl(k:HabboNavigator, _arg_2:int, _arg_3:Boolean):void
         {
             this._navigator = k;
             this._entryWidthAdjustment = _arg_2;
-            this._Str_16040 = _arg_3;
+            this._showRoomNumbers = _arg_3;
             this._roomPopupCtrl = new RoomPopupCtrl(this._navigator, 5, -5);
             this._userCountRenderer = new UserCountRenderer(this._navigator);
         }
@@ -139,7 +139,7 @@
             _local_2.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_STRETCH, true);
             _local_2.color = this.getBgColor(k);
             _local_2.tags.push(k);
-            if (this._Str_16040)
+            if (this._showRoomNumbers)
             {
                 _local_3 = 20;
                 _local_2.findChildByName("roomname").x = (_local_2.findChildByName("roomname").x + _local_3);
@@ -198,7 +198,7 @@
             this._navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
             this._navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
             this._navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
-            if (this._Str_16040)
+            if (this._showRoomNumbers)
             {
                 k.findChildByName("room_number").visible = true;
                 k.findChildByName("room_number").caption = ((k.tags[0] + 2) + ".");
