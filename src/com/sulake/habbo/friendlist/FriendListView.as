@@ -74,7 +74,7 @@
                 return;
             }
             this._tabsView.refresh(k);
-            this._Str_23758();
+            this.refreshWindowSize();
         }
 
         public function close():void
@@ -154,7 +154,7 @@
             this.refresh(("resize: " + _local_3));
         }
 
-        private function _Str_23758():void
+        private function refreshWindowSize():void
         {
             this._ignoreResizeEvents = true;
             this._footer.visible = false;
