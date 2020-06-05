@@ -10,7 +10,7 @@
         private var _stuffTypes:Array;
         private var _boxTypes:Array;
         private var _ribbonTypes:Array;
-        private var _Str_8259:Array;
+        private var _defaultStuffTypes:Array;
 
 
         public function get _Str_25735():Boolean
@@ -40,7 +40,7 @@
 
         public function get defaultStuffTypes():Array
         {
-            return this._Str_8259;
+            return this._defaultStuffTypes;
         }
 
         public function flush():Boolean
@@ -54,7 +54,7 @@
             this._stuffTypes = [];
             this._boxTypes = [];
             this._ribbonTypes = [];
-            this._Str_8259 = [];
+            this._defaultStuffTypes = [];
             this._wrappingEnabled = k.readBoolean();
             this._wrappingPrice = k.readInteger();
             var _local_3:int = k.readInteger();
@@ -82,7 +82,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_8259.push(k.readInteger());
+                this._defaultStuffTypes.push(k.readInteger());
                 _local_2++;
             }
             return true;
