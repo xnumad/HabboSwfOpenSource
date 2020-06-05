@@ -305,7 +305,7 @@
             k._Str_2309.restrict = _arg_2;
         }
 
-        private static function _Str_16622(k:TextController, _arg_2:Number):void
+        private static function setSharpness(k:TextController, _arg_2:Number):void
         {
             k._Str_2309.sharpness = _arg_2;
             k.refreshTextImage();
@@ -579,7 +579,7 @@
             k[PropertyKeys.MULTILINE] = setMultiline;
             k[PropertyKeys.RESTRICT] = setRestrict;
             k[PropertyKeys.SPACING] = _Str_9915;
-            k[PropertyKeys.SHARPNESS] = _Str_16622;
+            k[PropertyKeys.SHARPNESS] = setSharpness;
             k[PropertyKeys.THICKNESS] = _Str_18660;
             k[PropertyKeys.UNDERLINE] = _Str_16916;
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
@@ -901,7 +901,7 @@
 
         public function set sharpness(k:Number):void
         {
-            _Str_16622(this, k);
+            setSharpness(this, k);
         }
 
         public function set spacing(k:Number):void
