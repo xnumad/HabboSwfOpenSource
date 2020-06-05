@@ -47,7 +47,7 @@
             this._msgInput = ITextFieldWindow(this._frame.findChildByName("message_input"));
             this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
-            this._Str_23308(this._msgSelect);
+            this.prepareMessageSelection(this._msgSelect);
             this._msgSelect.procedure = this.onSelectTemplate;
             var k:IWindow = this._frame.findChildByTag("close");
             k.procedure = this.onClose;
@@ -69,7 +69,7 @@
             return this._frame;
         }
 
-        private function _Str_23308(k:IDropMenuWindow):void
+        private function prepareMessageSelection(k:IDropMenuWindow):void
         {
             Logger.log(("MSG TEMPLATES: " + this._main.initMsg._Str_15690.length));
             k.populate(this._main.initMsg._Str_15690);
