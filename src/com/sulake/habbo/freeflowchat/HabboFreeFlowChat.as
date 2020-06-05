@@ -185,7 +185,7 @@
         {
             this._communication.addHabboConnectionMessageEvent(new PerkAllowancesEvent(this.onPerkAllowances));
             this._communication.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
-            this._communication.addHabboConnectionMessageEvent(new _Str_2929(this._Str_25407));
+            this._communication.addHabboConnectionMessageEvent(new _Str_2929(this.onGuestRoomData));
             this._communication.addHabboConnectionMessageEvent(new RoomChatSettingsMessageEvent(this.onRoomChatSettings));
             this._communication.addHabboConnectionMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
         }
@@ -237,7 +237,7 @@
             }
         }
 
-        private function _Str_25407(k:_Str_2929):void
+        private function onGuestRoomData(k:_Str_2929):void
         {
             if (((this._chatHistoryBuffer) && (!(this._roomChangeRecordedInHistory))))
             {
