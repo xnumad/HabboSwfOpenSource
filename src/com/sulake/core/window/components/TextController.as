@@ -37,7 +37,7 @@
 
         private var _overFlowReplace:String = "";
         protected var _field:TextField;
-        protected var _Str_7995:Number;
+        protected var _scrollH:Number;
         protected var _Str_3375:Number;
         protected var _Str_4263:Boolean;
         protected var _Str_2480:TextMargins;
@@ -57,7 +57,7 @@
             this._Str_3808 = new TextStyle();
             this._Str_2480 = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             this._Str_4263 = false;
-            this._Str_7995 = 0;
+            this._scrollH = 0;
             this._Str_3375 = 0;
             if (this._field == null)
             {
@@ -801,7 +801,7 @@
 
         public function get scrollH():Number
         {
-            return this._Str_7995;
+            return this._scrollH;
         }
 
         public function get scrollV():Number
@@ -981,8 +981,8 @@
 
         public function set scrollH(k:Number):void
         {
-            this._Str_7995 = k;
-            this._field.scrollH = (this._Str_7995 * Number(this._field.maxScrollH));
+            this._scrollH = k;
+            this._field.scrollH = (this._scrollH * Number(this._field.maxScrollH));
             this.refreshTextImage();
         }
 
@@ -1007,7 +1007,7 @@
 
         public function get visibleRegion():Rectangle
         {
-            return new Rectangle((this._Str_7995 * this.maxScrollH), (this._Str_3375 * this.maxScrollV), width, height);
+            return new Rectangle((this._scrollH * this.maxScrollH), (this._Str_3375 * this.maxScrollV), width, height);
         }
 
         public function get scrollableRegion():Rectangle
@@ -1137,7 +1137,7 @@
             var k:TextController = (super.clone() as TextController);
             k._field.backgroundColor = color;
             k._field.background = background;
-            k._Str_7995 = this._Str_7995;
+            k._scrollH = this._scrollH;
             k._Str_3375 = this._Str_3375;
             k._Str_2480 = this._Str_2480.clone(k.setTextMargins);
             k._Str_4318 = this._Str_4318;
