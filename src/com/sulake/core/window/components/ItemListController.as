@@ -24,7 +24,7 @@
         private var _isPartOfGridWindow:Boolean = false;
         protected var _scrollOffsetH:Number;
         protected var _scrollOffsetV:Number;
-        protected var _Str_3673:Number;
+        protected var _scrollAreaWidth:Number;
         protected var _Str_3472:Number;
         protected var _container:IWindowContainer;
         protected var _Str_16905:Boolean = false;
@@ -46,7 +46,7 @@
         {
             this._scrollOffsetH = 0;
             this._scrollOffsetV = 0;
-            this._Str_3673 = 0;
+            this._scrollAreaWidth = 0;
             this._Str_3472 = 0;
             this._Str_2803 = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
             var _local_12:IThemeManager = _arg_5.getWindowFactory().getThemeManager();
@@ -91,7 +91,7 @@
 
         public function get maxScrollH():int
         {
-            return Math.max(0, (this._Str_3673 - width));
+            return Math.max(0, (this._scrollAreaWidth - width));
         }
 
         public function get maxScrollV():int
@@ -303,9 +303,9 @@
             this._updating = true;
             if (this._Str_2803)
             {
-                k.x = (this._Str_3673 + ((this.numListItems > 0) ? this._Str_2981 : 0));
-                this._Str_3673 = k.right;
-                this._container.width = this._Str_3673;
+                k.x = (this._scrollAreaWidth + ((this.numListItems > 0) ? this._Str_2981 : 0));
+                this._scrollAreaWidth = k.right;
+                this._container.width = this._scrollAreaWidth;
             }
             else
             {
@@ -528,7 +528,7 @@
         {
             if (!disposed)
             {
-                this.scrollH = (this.scrollH - (k / this._Str_3673));
+                this.scrollH = (this.scrollH - (k / this._scrollAreaWidth));
                 this.scrollV = (this.scrollV - (_arg_2 / this._Str_3472));
             }
         }
@@ -573,7 +573,7 @@
                 k = this._container.numChildren;
                 if (this._Str_2803)
                 {
-                    this._Str_3673 = 0;
+                    this._scrollAreaWidth = 0;
                     this._Str_3472 = _h;
                     _local_4 = 0;
                     while (_local_4 < k)
@@ -581,8 +581,8 @@
                         _local_2 = this._container.getChildAt(_local_4);
                         if (_local_2.visible)
                         {
-                            _local_2.x = this._Str_3673;
-                            this._Str_3673 = (this._Str_3673 + (_local_2.width + this._Str_2981));
+                            _local_2.x = this._scrollAreaWidth;
+                            this._scrollAreaWidth = (this._scrollAreaWidth + (_local_2.width + this._Str_2981));
                             if (this._Str_5418)
                             {
                                 _local_3 = (_local_2.height + _local_2.y);
@@ -593,12 +593,12 @@
                     }
                     if (k > 0)
                     {
-                        this._Str_3673 = (this._Str_3673 - this._Str_2981);
+                        this._scrollAreaWidth = (this._scrollAreaWidth - this._Str_2981);
                     }
                 }
                 else
                 {
-                    this._Str_3673 = _w;
+                    this._scrollAreaWidth = _w;
                     this._Str_3472 = 0;
                     _local_4 = 0;
                     while (_local_4 < k)
@@ -611,7 +611,7 @@
                             if (this._Str_5418)
                             {
                                 _local_3 = (_local_2.width + _local_2.x);
-                                this._Str_3673 = ((_local_3 > this._Str_3673) ? _local_3 : this._Str_3673);
+                                this._scrollAreaWidth = ((_local_3 > this._scrollAreaWidth) ? _local_3 : this._scrollAreaWidth);
                             }
                         }
                         _local_4++;
@@ -623,7 +623,7 @@
                 }
                 if (this._scrollOffsetH > 0)
                 {
-                    if (this._Str_3673 <= _w)
+                    if (this._scrollAreaWidth <= _w)
                     {
                         this.scrollH = 0;
                     }
@@ -644,7 +644,7 @@
                     }
                 }
                 this._container.height = this._Str_3472;
-                this._container.width = this._Str_3673;
+                this._container.width = this._scrollAreaWidth;
                 this._updating = false;
             }
         }
