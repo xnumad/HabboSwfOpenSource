@@ -834,10 +834,10 @@
             {
                 this._messenger._Str_24965();
             }
-            this.recordChatMessage(this._currentConversationId, this._Str_25699(_arg_2), false, 0);
+            this.recordChatMessage(this._currentConversationId, this.escapeExternalKeys(_arg_2), false, 0);
         }
 
-        private function _Str_25699(k:String):String
+        private function escapeExternalKeys(k:String):String
         {
             if (k.search("\\${") == 0)
             {
