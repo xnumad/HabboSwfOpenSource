@@ -15,7 +15,7 @@
         private static const ROOM_VIEW:String = "room_view";
         private static const ROOM_NEW_CHAT:String = "room_new_chat";
         private static const ROOM_WIDGET:String = "room_widget";
-        private static const _Str_17686:int = 47;
+        private static const BOTTOM_MARGIN:int = 47;
 
         private var _layoutContainer:IWindowContainer;
 
@@ -45,7 +45,7 @@
             this._layoutContainer.height = this._layoutContainer.desktop.height;
             var _local_4:IWindowContainer = (this._layoutContainer.desktop as IWindowContainer);
             _local_4.addChild(this._layoutContainer);
-            this._layoutContainer.findChildByTag("room_widget_infostand").y = (this._layoutContainer.findChildByTag("room_widget_infostand").y - _Str_17686);
+            this._layoutContainer.findChildByTag("room_widget_infostand").y = (this._layoutContainer.findChildByTag("room_widget_infostand").y - BOTTOM_MARGIN);
             var _local_6:int;
             while (_local_6 < this._layoutContainer.numChildren)
             {
