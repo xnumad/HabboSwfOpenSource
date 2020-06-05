@@ -35,7 +35,7 @@
         private static const REPLACE_RANDOM_CHARS:Array = ["a", "B", "c", "D", "e"];
         protected static const _PROPERTY_SETTER_TABLE:Dictionary = createPropertySetterTable();
 
-        private var _Str_16655:String = "";
+        private var _overFlowReplace:String = "";
         protected var _Str_2309:TextField;
         protected var _Str_7995:Number;
         protected var _Str_3375:Number;
@@ -424,7 +424,7 @@
 
         private static function setOverflowReplace(k:TextController, _arg_2:String):void
         {
-            k._Str_16655 = _arg_2;
+            k._overFlowReplace = _arg_2;
             k.refreshTextImage();
         }
 
@@ -791,12 +791,12 @@
 
         public function get _Str_24155():Boolean
         {
-            return !(this._Str_16655 == "");
+            return !(this._overFlowReplace == "");
         }
 
         public function get _Str_15348():String
         {
-            return this._Str_16655;
+            return this._overFlowReplace;
         }
 
         public function get scrollH():Number
