@@ -118,7 +118,7 @@
             this._Str_2755();
             Util._Str_2930(this._window.content);
             this.refreshRoomDetails(this._navigator.data._Str_2678);
-            this._Str_22403();
+            this.refreshEmbed();
             this._guildInfoCtrl.refresh(this._window.content, this._navigator.data._Str_2678);
             this._Str_4295(this._navigator.data._Str_2678);
             Util._Str_4679(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
@@ -131,7 +131,7 @@
             return (!(k == null)) && (k.flatId == this._navigator.data.homeRoomId);
         }
 
-        private function _Str_22403():void
+        private function refreshEmbed():void
         {
             var _local_4:ITextWindow;
             var _local_5:ITextFieldWindow;
