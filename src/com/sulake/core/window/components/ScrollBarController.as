@@ -38,7 +38,7 @@
             groupChildrenWithTag(TAG_INTERNAL, _local_13, -1);
             for each (_local_14 in _local_13)
             {
-                _local_14.procedure = this._Str_24088;
+                _local_14.procedure = this.scrollButtonEventProc;
             }
             this._Str_6685();
         }
@@ -360,7 +360,7 @@
         {
         }
 
-        private function _Str_24088(k:WindowEvent, _arg_2:IWindow):void
+        private function scrollButtonEventProc(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_4:int;
             var _local_5:int;
