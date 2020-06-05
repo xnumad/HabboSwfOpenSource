@@ -658,7 +658,7 @@
             if (this._resizeTimer != null)
             {
                 this._resizeTimer.reset();
-                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this._Str_19147);
+                this._resizeTimer.removeEventListener(TimerEvent.TIMER, this.onResizeTimerEvent);
                 this._resizeTimer = null;
             }
             this._roomViewContainerRect = null;
@@ -1661,7 +1661,7 @@
             if (this._resizeTimer == null)
             {
                 this._resizeTimer = new Timer(_Str_17829, 1);
-                this._resizeTimer.addEventListener(TimerEvent.TIMER, this._Str_19147);
+                this._resizeTimer.addEventListener(TimerEvent.TIMER, this.onResizeTimerEvent);
             }
             else
             {
@@ -1670,7 +1670,7 @@
             this._resizeTimer.start();
         }
 
-        private function _Str_19147(k:TimerEvent):void
+        private function onResizeTimerEvent(k:TimerEvent):void
         {
             var _local_2:String = _Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED;
             this.events.dispatchEvent(new _Str_3040(_local_2, this._roomViewContainerRect));
