@@ -1127,13 +1127,13 @@
                                 _local_5.recycle();
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER, WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER))
                                 {
-                                    this._Str_10618();
+                                    this.updateScaleRelativeToParent();
                                 }
                                 else
                                 {
                                     if (testParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER))
                                     {
-                                        this._Str_10618();
+                                        this.updateScaleRelativeToParent();
                                     }
                                 }
                                 if (this._parent != null)
@@ -1192,20 +1192,20 @@
                         case WindowEvent.WINDOW_EVENT_PARENT_ADDED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER, WindowParam.WINDOW_PARAM_RELATIVE_HORIZONTAL_SCALE_CENTER))
                             {
-                                this._Str_10618();
+                                this.updateScaleRelativeToParent();
                             }
                             else
                             {
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER))
                                 {
-                                    this._Str_10618();
+                                    this.updateScaleRelativeToParent();
                                 }
                             }
                             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
                             break;
                         case WindowEvent.WINDOW_EVENT_PARENT_RESIZED:
                             this._parent._Str_22290(null, this._lastParentRect);
-                            this._Str_10618();
+                            this.updateScaleRelativeToParent();
                             break;
                         case WindowEvent.WINDOW_EVENT_CHILD_ADDED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
@@ -1797,7 +1797,7 @@
             }
         }
 
-        protected function _Str_10618():void
+        protected function updateScaleRelativeToParent():void
         {
             var _local_3:int;
             var _local_4:uint;
