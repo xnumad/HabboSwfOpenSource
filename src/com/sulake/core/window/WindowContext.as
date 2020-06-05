@@ -38,7 +38,7 @@
         public static const INPUT_MODE_MOUSE:uint = 0;
         public static const INPUT_MODE_TOUCH:uint = 1;
         public static const ERROR_UNKNOWN:int = 0;
-        public static const _Str_19384:int = 1;
+        public static const ERROR_INVALID_WINDOW:int = 1;
         public static const _Str_19632:int = 2;
         public static const _Str_20675:int = 3;
         public static const _Str_18985:int = 4;
