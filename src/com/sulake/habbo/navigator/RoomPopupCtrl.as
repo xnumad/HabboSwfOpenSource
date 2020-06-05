@@ -44,7 +44,7 @@
             this._tagRenderer._Str_8651 = true;
             Util._Str_2930(this._details);
             this._guildInfoCtrl.refresh(this._details, this._room);
-            this._Str_16465(this._details, this._room);
+            this.refreshRoomName(this._details, this._room);
             this._Str_24501();
             this._Str_22171("roomctg", this._details, this._Str_23067(this._room._Str_2712));
             this._Str_25479(this._details, this._room);
@@ -130,7 +130,7 @@
             _local_7.visible = true;
         }
 
-        private function _Str_16465(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function refreshRoomName(k:IWindowContainer, _arg_2:_Str_2370):void
         {
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("roomname"));
             _local_3.visible = true;
