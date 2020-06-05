@@ -34,7 +34,7 @@
         protected var _userCountRenderer:UserCountRenderer;
         private var _lastHilite:IWindowContainer;
         private var _lastMouseX:int;
-        private var _Str_19895:Boolean;
+        private var _fastHorizontalMove:Boolean;
         private var _Str_21859:int;
         private var _Str_16040:Boolean;
 
@@ -224,7 +224,7 @@
         protected function onMouseOver(k:WindowEvent):void
         {
             var _local_2:IWindow = k.target;
-            if (((this._roomPopupCtrl.visible) && (this._Str_19895)))
+            if (((this._roomPopupCtrl.visible) && (this._fastHorizontalMove)))
             {
                 return;
             }
@@ -381,7 +381,7 @@
             var _local_2:WindowMouseEvent = WindowMouseEvent(k);
             var _local_3:int = Math.abs((this._lastMouseX - _local_2.stageX));
             this._lastMouseX = _local_2.stageX;
-            this._Str_19895 = (_local_3 > 2);
+            this._fastHorizontalMove = (_local_3 > 2);
         }
 
         public function get _Str_26238():RoomPopupCtrl
