@@ -12,7 +12,7 @@
 
     public class TextFieldCache implements IDisposable 
     {
-        private static var _Str_9479:Map = new Map();
+        private static var _textFieldCache:Map = new Map();
         private static var _Str_1229:TextFieldCache = new (TextFieldCache)();
 
         private var _disposed:Boolean = false;
@@ -27,7 +27,7 @@
 
         public static function _Str_17336(k:TextStyle):TextField
         {
-            var _local_2:TextField = _Str_9479[k.name];
+            var _local_2:TextField = _textFieldCache[k.name];
             if (_local_2)
             {
                 return _local_2;
@@ -87,7 +87,7 @@
             _local_2.setTextFormat(_local_3);
             _local_2.embedFonts = FontEnum.isEmbeddedFont(_local_3.font);
             _local_2.defaultTextFormat = _local_3;
-            _Str_9479[k.name] = _local_2;
+            _textFieldCache[k.name] = _local_2;
             return _local_2;
         }
 
@@ -110,14 +110,14 @@
         public function dispose():void
         {
             TextStyleManager.events.removeEventListener(Event.CHANGE, this.onTextStyleChanged);
-            _Str_9479.reset();
+            _textFieldCache.reset();
             _Str_1229 = null;
             this._disposed = true;
         }
 
         private function onTextStyleChanged(k:Event):void
         {
-            _Str_9479.reset();
+            _textFieldCache.reset();
         }
     }
 }
