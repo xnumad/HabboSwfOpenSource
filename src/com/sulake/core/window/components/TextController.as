@@ -155,7 +155,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_18477(k:TextController, _arg_2:TextFormat):void
+        private static function setDefaultTextFormat(k:TextController, _arg_2:TextFormat):void
         {
             k._Str_2309.defaultTextFormat = _arg_2;
             k.refreshTextImage();
@@ -567,7 +567,7 @@
             k[PropertyKeys.BORDER] = setBorder;
             k[PropertyKeys.BORDER_COLOR] = setBorderColor;
             k[PropertyKeys.CONDENSE_WHITE] = setCondenseWhite;
-            k["default_text_format"] = _Str_18477;
+            k["default_text_format"] = setDefaultTextFormat;
             k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
             k[PropertyKeys.FONT_FACE] = _Str_16898;
@@ -846,7 +846,7 @@
 
         public function set defaultTextFormat(k:TextFormat):void
         {
-            _Str_18477(this, k);
+            setDefaultTextFormat(this, k);
         }
 
         public function set embedFonts(k:Boolean):void
