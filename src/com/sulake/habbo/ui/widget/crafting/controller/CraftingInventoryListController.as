@@ -49,7 +49,7 @@
                 return;
             }
             var _local_2:IWindowContainer = getItemTemplate();
-            this.container._Str_3956();
+            this.container.removeGridItems();
             var _local_3:int;
             while (_local_3 < k.length)
             {

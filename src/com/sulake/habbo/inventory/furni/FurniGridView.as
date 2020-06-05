@@ -68,7 +68,7 @@
         {
             if (this._grid != null)
             {
-                this._grid._Str_3956();
+                this._grid.removeGridItems();
             }
             this._grid.destroyGridItems();
         }

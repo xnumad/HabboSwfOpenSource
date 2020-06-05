@@ -24,7 +24,7 @@
         {
             if (this._hotLooksGrid)
             {
-                this._hotLooksGrid._Str_3956();
+                this._hotLooksGrid.removeGridItems();
             }
             if (!this._window)
             {
@@ -37,7 +37,7 @@
 
         public function dispose():void
         {
-            this._hotLooksGrid._Str_3956();
+            this._hotLooksGrid.removeGridItems();
             this._window = null;
             this._model = null;
         }
@@ -46,7 +46,7 @@
         {
             var k:IWindow;
             var _local_2:Outfit;
-            this._hotLooksGrid._Str_3956();
+            this._hotLooksGrid.removeGridItems();
             for each (_local_2 in this._model.hotLooks)
             {
                 k = _local_2.view.window;

@@ -317,7 +317,7 @@
             this._Str_13972(this._Str_2830(k), this._Str_2830(_arg_2));
         }
 
-        public function _Str_3956():void
+        public function removeGridItems():void
         {
             var _local_2:IItemListWindow;
             var k:uint = this._Str_3080;

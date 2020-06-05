@@ -59,7 +59,7 @@
             this._categoryId = _arg_2;
             this._view.visible = true;
             var _local_3:Array = EffectsModel(this._model).effects;
-            this._partGrid._Str_3956();
+            this._partGrid.removeGridItems();
             this._effectItems = new Vector.<AvatarEditorGridItemEffect>();
             if (_local_3.length == 0)
             {

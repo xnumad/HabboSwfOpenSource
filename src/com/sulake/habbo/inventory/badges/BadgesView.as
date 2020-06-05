@@ -167,8 +167,8 @@
                 return;
             }
             var _local_2:Number = this._inactiveGrid.scrollV;
-            this._inactiveGrid._Str_3956();
-            this._activeGrid._Str_3956();
+            this._inactiveGrid.removeGridItems();
+            this._activeGrid.removeGridItems();
             this._filteredBadges.length = 0;
             var _local_3:Array = this._model._Str_5453(BadgesModel._Str_8369);
             var _local_5:int;

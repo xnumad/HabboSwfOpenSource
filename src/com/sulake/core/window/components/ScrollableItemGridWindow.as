@@ -313,9 +313,9 @@
             this._Str_2448._Str_18089(k, _arg_2);
         }
 
-        public function _Str_3956():void
+        public function removeGridItems():void
         {
-            this._Str_2448._Str_3956();
+            this._Str_2448.removeGridItems();
         }
 
         public function destroyGridItems():void

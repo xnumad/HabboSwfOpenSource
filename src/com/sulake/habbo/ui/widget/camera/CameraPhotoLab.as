@@ -558,7 +558,7 @@
             {
                 this._Str_4049._Str_18911();
             }
-            this._Str_2448._Str_3956();
+            this._Str_2448.removeGridItems();
             for each (_local_2 in this._Str_4335)
             {
                 if (_local_2.type == k)

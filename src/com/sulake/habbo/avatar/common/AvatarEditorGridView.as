@@ -91,7 +91,7 @@
             this._view.visible = true;
             this._model = k;
             this._categoryId = _arg_2;
-            this._partGrid._Str_3956();
+            this._partGrid.removeGridItems();
             if (_local_3.parts.length == 0)
             {
                 this._title.visible = true;
@@ -103,7 +103,7 @@
                 this._notification.visible = false;
                 for each (_local_4 in this._paletteGrids)
                 {
-                    _local_4._Str_3956();
+                    _local_4.removeGridItems();
                 }
                 for each (_local_5 in _local_3.parts)
                 {

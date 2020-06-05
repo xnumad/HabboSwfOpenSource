@@ -72,7 +72,7 @@
             {
                 return;
             }
-            this._itemGridWindow._Str_3956();
+            this._itemGridWindow.removeGridItems();
             var k:Map = this._items;
             var _local_2:Map = new Map();
             var _local_3:Array = k.getKeys();
