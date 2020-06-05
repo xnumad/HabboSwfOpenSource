@@ -21,7 +21,7 @@
         private var _tabsView:FriendListTabsView;
         private var _mainWindow:IFrameWindow;
         private var _tabContent:IWindowContainer;
-        private var _Str_3541:IWindowContainer;
+        private var _footer:IWindowContainer;
         private var _infoText:ITextWindow;
         private var _Str_3860:int = -1;
         private var _Str_4481:int = -1;
@@ -95,7 +95,7 @@
             this._mainWindow = IFrameWindow(this._habboFriendList.getXmlWindow("main_window"));
             this._mainWindow.findChildByTag("close").procedure = this._Str_3046;
             this._tabContent = IWindowContainer(this._mainWindow.content.findChildByName("main_content"));
-            this._Str_3541 = IWindowContainer(this._mainWindow.content.findChildByName("footer"));
+            this._footer = IWindowContainer(this._mainWindow.content.findChildByName("footer"));
             this._tabsView.prepare(this._tabContent);
             this._mainWindow.procedure = this._Str_7142;
             this._mainWindow.content.setParamFlag(WindowParam.WINDOW_PARAM_RELATIVE_VERTICAL_SCALE_CENTER, false);
@@ -157,10 +157,10 @@
         private function _Str_23758():void
         {
             this._Str_18916 = true;
-            this._Str_3541.visible = false;
-            this._Str_3541.y = Util.getLowestPoint(this._mainWindow.content);
-            this._Str_3541.width = this._habboFriendList.tabs._Str_4971;
-            this._Str_3541.visible = true;
+            this._footer.visible = false;
+            this._footer.y = Util.getLowestPoint(this._mainWindow.content);
+            this._footer.width = this._habboFriendList.tabs._Str_4971;
+            this._footer.visible = true;
             this._mainWindow.content.height = Util.getLowestPoint(this._mainWindow.content);
             this._mainWindow.content.width = (this._habboFriendList.tabs._Str_4971 - 10);
             this._mainWindow.header.width = (this._habboFriendList.tabs._Str_4971 - 10);
