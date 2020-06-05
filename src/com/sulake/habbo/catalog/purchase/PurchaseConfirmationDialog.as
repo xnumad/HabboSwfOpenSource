@@ -689,7 +689,7 @@
             this._stuffTypes = k.stuffTypes;
             this._boxTypes = this._boxTypes.concat(k.boxTypes);
             this._boxTypes.push(this._defaultStuffType);
-            this._ribbonTypes = k._Str_17780;
+            this._ribbonTypes = k.ribbonTypes;
             this._selectedTypeId = this._stuffTypes[0];
             this._ribbonIndex = this._ribbonTypes[0];
             this._boxIndex = this._catalog.getInteger("catalog.purchase.gift_wrapping.default_box_index", 0);

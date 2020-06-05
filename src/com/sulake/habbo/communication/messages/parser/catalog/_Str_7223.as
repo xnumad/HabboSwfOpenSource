@@ -33,7 +33,7 @@
             return this._Str_3691;
         }
 
-        public function get _Str_17780():Array
+        public function get ribbonTypes():Array
         {
             return this._Str_4062;
         }
