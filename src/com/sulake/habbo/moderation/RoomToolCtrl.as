@@ -202,7 +202,7 @@
             this.setTxt("user_count_txt", ("" + this._data.userCount));
             this._frame.findChildByName("enter_room_but").procedure = this.onEnterRoom;
             this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;
-            this._frame.findChildByName("edit_in_hk_but").procedure = this._Str_24149;
+            this._frame.findChildByName("edit_in_hk_but").procedure = this.onEditInHk;
             this._frame.findChildByName("send_caution_but").procedure = this._Str_23752;
             this._frame.findChildByName("send_message_but").procedure = this._Str_24627;
             if (!this._main.initMsg._Str_12765)
@@ -313,7 +313,7 @@
             this._main.windowTracker.show(new ChatlogCtrl(new _Str_7731(0, this._data.flatId), this._main, WindowTracker._Str_10414, this._data.flatId), this._frame, false, false, true);
         }
 
-        private function _Str_24149(k:WindowEvent, _arg_2:IWindow):void
+        private function onEditInHk(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
