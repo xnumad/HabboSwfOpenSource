@@ -1578,7 +1578,7 @@
             this._roomCanvasWrapper.getDisplayObject().stage.addEventListener(k, _arg_2, false, 0, true);
         }
 
-        public function _Str_19098(k:String, _arg_2:Function):void
+        public function removeListenerFromStage(k:String, _arg_2:Function):void
         {
             if ((((!(this._roomCanvasWrapper)) || (!(this._roomCanvasWrapper.getDisplayObject()))) || (!(this._roomCanvasWrapper.getDisplayObject().stage))))
             {

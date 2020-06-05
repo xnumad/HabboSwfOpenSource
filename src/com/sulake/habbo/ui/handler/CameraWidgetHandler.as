@@ -209,9 +209,9 @@
             this._roomDesktop.addListenerToStage(k, _arg_2);
         }
 
-        public function _Str_19098(k:String, _arg_2:Function):void
+        public function removeListenerFromStage(k:String, _arg_2:Function):void
         {
-            this._roomDesktop._Str_19098(k, _arg_2);
+            this._roomDesktop.removeListenerFromStage(k, _arg_2);
         }
 
         public function _Str_23090(PhotoId:String):void
