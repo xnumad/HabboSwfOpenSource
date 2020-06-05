@@ -45,7 +45,7 @@
     import com.sulake.core.window.components.TextController;
     import com.sulake.core.window.components.TextFieldController;
     import com.sulake.core.window.components.TooltipController;
-    import com.sulake.core.window.components.WidgetController;
+    import com.sulake.core.window.components.WidgetWindowController;
     import com.sulake.core.window.components.*;
 
     public class Classes 
@@ -124,7 +124,7 @@
                 _Str_2474[WindowType.WINDOW_TYPE_TEXT] = TextController;
                 _Str_2474[WindowType.WINDOW_TYPE_TEXTFIELD] = TextFieldController;
                 _Str_2474[WindowType.WINDOW_TYPE_TOOLTIP] = TooltipController;
-                _Str_2474[WindowType.WINDOW_TYPE_WIDGET] = WidgetController;
+                _Str_2474[WindowType.WINDOW_TYPE_WIDGET] = WidgetWindowController;
             }
         }
 
