@@ -21,7 +21,7 @@
 
     public class HintManager implements IDisposable, IUpdateReceiver 
     {
-        private static const _Str_4228:int = 10;
+        private static const HINT_DISTANCE:int = 10;
         private static const _Str_14711:int = 400;
         private static const _Str_8038:int = 15;
 
@@ -169,20 +169,20 @@
                 switch (this._activeHint.style)
                 {
                     case HintStatus.NEW:
-                        if (((_local_2.y - this._hint.height) - _Str_4228) > 0)
+                        if (((_local_2.y - this._hint.height) - HINT_DISTANCE) > 0)
                         {
                             _local_5 = (_local_2.y - this._hint.height);
                             if (this._hint.y == 0)
                             {
                                 this._hint.y = Math.max((_local_5 - _Str_14711), _Str_8038);
                             }
-                            if ((_local_5 - this._hint.y) > (_Str_8038 + _Str_4228))
+                            if ((_local_5 - this._hint.y) > (_Str_8038 + HINT_DISTANCE))
                             {
                                 this._hint.y = (this._hint.y + _Str_8038);
                             }
                             else
                             {
-                                this._hint.y = ((_local_5 - _Str_4228) - (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
+                                this._hint.y = ((_local_5 - HINT_DISTANCE) - (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
                             }
                             this._hint.zoomY = 1;
                         }
@@ -193,13 +193,13 @@
                             {
                                 this._hint.y = Math.min((this._windowManager.context.displayObjectContainer.stage.stageHeight - this._hint.height), (this._hint.y + _Str_14711));
                             }
-                            if ((_local_6 - this._hint.y) > (_Str_8038 + _Str_4228))
+                            if ((_local_6 - this._hint.y) > (_Str_8038 + HINT_DISTANCE))
                             {
                                 this._hint.y = (this._hint.y - _Str_8038);
                             }
                             else
                             {
-                                this._hint.y = ((_local_6 + _Str_4228) + (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
+                                this._hint.y = ((_local_6 + HINT_DISTANCE) + (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
                             }
                             this._hint.zoomY = -1;
                         }
@@ -208,12 +208,12 @@
                     default:
                         if ((_local_2.x + (this._activeHint.window.width / 2)) > (this._activeHint.window.desktop.width / 2))
                         {
-                            this._hint.x = (((_local_2.x - this._hint.width) - _Str_4228) - (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
+                            this._hint.x = (((_local_2.x - this._hint.width) - HINT_DISTANCE) - (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
                             this._hint.zoomX = 1;
                         }
                         else
                         {
-                            this._hint.x = (((_local_2.x + this._activeHint.window.width) + _Str_4228) + (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
+                            this._hint.x = (((_local_2.x + this._activeHint.window.width) + HINT_DISTANCE) + (5 * Math.abs(Math.sin((getTimer() * 0.003)))));
                             this._hint.zoomX = -1;
                         }
                         this._hint.y = (_local_2.y + ((this._activeHint.window.height - this._hint.height) / 2));
@@ -234,24 +234,24 @@
             switch (this._activeHint.style)
             {
                 case HintStatus.NEW:
-                    if (((_local_3.y - this._hint.height) - _Str_4228) > 0)
+                    if (((_local_3.y - this._hint.height) - HINT_DISTANCE) > 0)
                     {
-                        _local_2.y = ((_local_3.y - this._hint.height) - _Str_4228);
+                        _local_2.y = ((_local_3.y - this._hint.height) - HINT_DISTANCE);
                     }
                     else
                     {
-                        _local_2.y = ((_local_3.y + k.height) + _Str_4228);
+                        _local_2.y = ((_local_3.y + k.height) + HINT_DISTANCE);
                     }
                     _local_2.x = (_local_3.x + ((k.width - this._hint.width) / 2));
                     break;
                 default:
                     if ((_local_3.x + (k.width / 2)) > (k.desktop.width / 2))
                     {
-                        _local_2.x = ((_local_3.x - this._hint.width) - _Str_4228);
+                        _local_2.x = ((_local_3.x - this._hint.width) - HINT_DISTANCE);
                     }
                     else
                     {
-                        _local_2.x = ((_local_3.x + k.width) + _Str_4228);
+                        _local_2.x = ((_local_3.x + k.width) + HINT_DISTANCE);
                     }
                     _local_2.y = (_local_3.y + ((k.height - this._hint.height) / 2));
             }
