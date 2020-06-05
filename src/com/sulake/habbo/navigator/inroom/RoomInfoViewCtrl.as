@@ -294,8 +294,8 @@
             var _local_2:IWindowContainer = IWindowContainer(this._window.findChildByName("owner_name_cont"));
             _local_2.procedure = this.onOwnerName;
             Util._Str_7173(_local_2, 1000, 10, 2, 5);
-            this._Str_19728("rating_cont", "rating_caption", "rating_txt");
-            this._Str_19728("ranking_cont", "ranking_caption", "ranking_txt");
+            this.setupLabelAndValue("rating_cont", "rating_caption", "rating_txt");
+            this.setupLabelAndValue("ranking_cont", "ranking_caption", "ranking_txt");
             var _local_3:IWindowContainer = IWindowContainer(this.find("embed_info"));
             var _local_4:ITextWindow = ITextWindow(this.find("embed_info_txt"));
             _local_4.height = (_local_4.textHeight + 5);
@@ -335,7 +335,7 @@
             }
         }
 
-        private function _Str_19728(k:String, _arg_2:String, _arg_3:String):void
+        private function setupLabelAndValue(k:String, _arg_2:String, _arg_3:String):void
         {
             var _local_4:IWindowContainer = IWindowContainer(this.find(k));
             var _local_5:ITextWindow = ITextWindow(_local_4.findChildByName(_arg_2));
