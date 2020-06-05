@@ -1390,12 +1390,12 @@
                 _local_6.addEventListener(MouseEvent.CLICK, this._Str_23529);
             }
             this.checkAndEnableMouseZoomEvent(_local_6);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.CLICK, this._Str_9634);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOUBLE_CLICK, this._Str_9634);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.MOVE, this._Str_9634);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOWN, this._Str_9634);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP, this._Str_9634);
-            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP_OUTSIDE, this._Str_9634);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.CLICK, this.canvasMouseHandler);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOUBLE_CLICK, this.canvasMouseHandler);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.MOVE, this.canvasMouseHandler);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.DOWN, this.canvasMouseHandler);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP, this.canvasMouseHandler);
+            this._roomCanvasWrapper.addEventListener(WindowMouseEvent.UP_OUTSIDE, this.canvasMouseHandler);
             this._roomCanvasWrapper.addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this._Str_17251);
             var _local_10:Sprite = new Sprite();
             _local_10.mouseEnabled = false;
@@ -1587,7 +1587,7 @@
             this._roomCanvasWrapper.getDisplayObject().stage.removeEventListener(k, _arg_2);
         }
 
-        public function _Str_9634(k:WindowEvent):void
+        public function canvasMouseHandler(k:WindowEvent):void
         {
             var _local_5:Point;
             var _local_6:int;
