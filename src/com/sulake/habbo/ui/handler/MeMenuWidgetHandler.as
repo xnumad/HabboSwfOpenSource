@@ -111,7 +111,7 @@
                 }
                 if ((((this._container.messenger) && (!(this._container.messenger.disposed))) && (this._container.messenger.events)))
                 {
-                    this._container.messenger.events.removeEventListener(MiniMailMessageEvent.MMME_NEW, this._Str_19218);
+                    this._container.messenger.events.removeEventListener(MiniMailMessageEvent.MMME_NEW, this.onMiniMailNewMessage);
                     this._container.messenger.events.removeEventListener(MiniMailMessageEvent.MMME_UNREAD, this.onMiniMailUnreadCount);
                 }
             }
@@ -143,7 +143,7 @@
             }
             if ((((this._container.messenger) && (!(this._container.messenger.disposed))) && (this._container.messenger.events)))
             {
-                this._container.messenger.events.addEventListener(MiniMailMessageEvent.MMME_NEW, this._Str_19218);
+                this._container.messenger.events.addEventListener(MiniMailMessageEvent.MMME_NEW, this.onMiniMailNewMessage);
                 this._container.messenger.events.addEventListener(MiniMailMessageEvent.MMME_UNREAD, this.onMiniMailUnreadCount);
             }
         }
@@ -485,7 +485,7 @@
             }
         }
 
-        private function _Str_19218(k:MiniMailMessageEvent):void
+        private function onMiniMailNewMessage(k:MiniMailMessageEvent):void
         {
             this._container.events.dispatchEvent(new _Str_4677(_Str_4677.RWMMUE_NEW_MINI_MAIL));
         }
