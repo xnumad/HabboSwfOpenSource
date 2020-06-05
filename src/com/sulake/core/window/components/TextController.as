@@ -289,7 +289,7 @@
             k.refreshTextImage();
         }
 
-        private static function _Str_24930(k:TextController, _arg_2:Boolean):void
+        private static function setMouseWheelEnabled(k:TextController, _arg_2:Boolean):void
         {
             k._Str_2309.mouseWheelEnabled = _arg_2;
         }
@@ -588,7 +588,7 @@
             k[PropertyKeys.LEADING] = _Str_18703;
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
             k[PropertyKeys.AUTO_SIZE] = setAutoSize;
-            k[PropertyKeys.MOUSE_WHEEL_ENABLED] = _Str_24930;
+            k[PropertyKeys.MOUSE_WHEEL_ENABLED] = setMouseWheelEnabled;
             k[PropertyKeys.TEXT_COLOR] = _Str_18306;
             k[PropertyKeys.TEXT_STYLE] = _Str_25567;
             k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
