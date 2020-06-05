@@ -166,7 +166,7 @@
             k._Str_2309.embedFonts = _arg_2;
         }
 
-        private static function _Str_16898(k:TextController, _arg_2:String):void
+        private static function setFontFace(k:TextController, _arg_2:String):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.font = _arg_2;
@@ -570,7 +570,7 @@
             k["default_text_format"] = setDefaultTextFormat;
             k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
-            k[PropertyKeys.FONT_FACE] = _Str_16898;
+            k[PropertyKeys.FONT_FACE] = setFontFace;
             k[PropertyKeys.FONT_SIZE] = _Str_16385;
             k[PropertyKeys.GRID_FIT_TYPE] = _Str_18868;
             k[PropertyKeys.ITALIC] = _Str_17524;
@@ -856,7 +856,7 @@
 
         public function set fontFace(k:String):void
         {
-            _Str_16898(this, k);
+            setFontFace(this, k);
         }
 
         public function set fontSize(k:uint):void
