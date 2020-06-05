@@ -67,7 +67,7 @@
 
         public function unregisterWindow(k:String):void
         {
-            if (this._Str_16927 == k)
+            if (this.activeKey == k)
             {
                 this.hideHint();
             }
@@ -77,7 +77,7 @@
         public function showHint(k:String, _arg_2:Rectangle=null):void
         {
             var _local_3:_Str_7715 = this._registeredWindows[k];
-            if ((((!(_local_3 == null)) && (!(_local_3.window == null))) && (!(k == this._Str_16927))))
+            if ((((!(_local_3 == null)) && (!(_local_3.window == null))) && (!(k == this.activeKey))))
             {
                 this.hideHint();
                 this._hint = (_local_3.window.context.create("", "", WindowType.WINDOW_TYPE_STATIC_BITMAP_WRAPPER, 0, 0, null, null, null, 0) as IStaticBitmapWrapperWindow);
@@ -143,7 +143,7 @@
 
         public function hideMatchingHint(k:String):void
         {
-            if (k == this._Str_16927)
+            if (k == this.activeKey)
             {
                 this.hideHint();
             }
@@ -258,7 +258,7 @@
             return _local_2;
         }
 
-        private function get _Str_16927():String
+        private function get activeKey():String
         {
             return (this._activeHint) ? this._activeHint.key : null;
         }
