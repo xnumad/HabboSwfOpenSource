@@ -228,7 +228,7 @@
             this._topicsFlowHelpController._Str_24232();
         }
 
-        public function _Str_19984(k:int):void
+        public function reportUserFromIM(k:int):void
         {
             if (this._callForHelpManager != null)
             {

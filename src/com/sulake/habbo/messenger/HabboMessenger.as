@@ -304,7 +304,7 @@
 
         internal function _Str_6694(k:int):void
         {
-            this._help._Str_19984(k);
+            this._help.reportUserFromIM(k);
         }
 
         public function closeConversation(k:int):void
