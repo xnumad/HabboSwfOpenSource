@@ -75,7 +75,7 @@
             if (k != this._spacing)
             {
                 this._spacing = k;
-                this._Str_4024();
+                this.updateScrollAreaRegion();
             }
         }
 
@@ -206,7 +206,7 @@
             if (this._scaleToFitItems != k)
             {
                 this._scaleToFitItems = k;
-                this._Str_4024();
+                this.updateScrollAreaRegion();
             }
         }
 
@@ -218,7 +218,7 @@
         public function set autoArrangeItems(k:Boolean):void
         {
             this._arrangeListItems = k;
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         public function get autoArrangeItems():Boolean
@@ -328,7 +328,7 @@
         public function addListItemAt(k:IWindow, _arg_2:uint):IWindow
         {
             k = this._container.addChildAt(k, _arg_2);
-            this._Str_4024();
+            this.updateScrollAreaRegion();
             return k;
         }
 
@@ -362,7 +362,7 @@
             k = this._container.removeChild(k);
             if (k)
             {
-                this._Str_4024();
+                this.updateScrollAreaRegion();
             }
             return k;
         }
@@ -381,13 +381,13 @@
         public function swapListItems(k:IWindow, _arg_2:IWindow):void
         {
             this._container.swapChildren(k, _arg_2);
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         public function swapListItemsAt(k:int, _arg_2:int):void
         {
             this._container.swapChildrenAt(k, _arg_2);
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         public function groupListItemsWithID(k:uint, _arg_2:Array, _arg_3:int=0):uint
@@ -408,7 +408,7 @@
                 this._container.removeChildAt(0);
             }
             this._updating = false;
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         public function destroyListItems():void
@@ -419,18 +419,18 @@
                 this._container.removeChildAt(0).destroy();
             }
             this._updating = false;
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         public function arrangeListItems():void
         {
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         override public function populate(k:Array):void
         {
             WindowController(this._container).populate(k);
-            this._Str_4024();
+            this.updateScrollAreaRegion();
         }
 
         override public function update(k:WindowController, _arg_2:WindowEvent):Boolean
@@ -453,7 +453,7 @@
                             this._container.width = _w;
                         }
                     }
-                    this._Str_4024();
+                    this.updateScrollAreaRegion();
                     this._resizing = false;
                     break;
                 default:
@@ -539,16 +539,16 @@
             switch (k.type)
             {
                 case WindowEvent.WINDOW_EVENT_CHILD_REMOVED:
-                    this._Str_4024();
+                    this.updateScrollAreaRegion();
                     return;
                 case WindowEvent.WINDOW_EVENT_CHILD_RESIZED:
                     if (!this._resizing)
                     {
-                        this._Str_4024();
+                        this.updateScrollAreaRegion();
                     }
                     return;
                 case WindowEvent.WINDOW_EVENT_CHILD_RELOCATED:
-                    this._Str_4024();
+                    this.updateScrollAreaRegion();
                     return;
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                     if (_Str_759)
@@ -561,7 +561,7 @@
             }
         }
 
-        protected function _Str_4024():void
+        protected function updateScrollAreaRegion():void
         {
             var k:uint;
             var _local_2:IWindow;
