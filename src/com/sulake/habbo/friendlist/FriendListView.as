@@ -14,7 +14,7 @@
     public class FriendListView
     {
         private static const DEFAULT_LOCATION:Point = new Point(110, 50);
-        private static const _Str_16690:int = 110;
+        private static const MIN_LEFT_MARGIN:int = 110;
         private static const WINDOW_LAYER_INDEX:int = 1;
 
         private var _habboFriendList:HabboFriendList;
@@ -201,7 +201,7 @@
             _local_2.y = (_local_2.y - this._mainWindow.height);
             var _local_3:int = this._habboFriendList.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().width;
             _local_2.x = Math.min((_local_3 - this._mainWindow.width), _local_2.x);
-            _local_2.x = Math.max(_Str_16690, _local_2.x);
+            _local_2.x = Math.max(MIN_LEFT_MARGIN, _local_2.x);
             this._mainWindow.position = _local_2;
         }
     }
