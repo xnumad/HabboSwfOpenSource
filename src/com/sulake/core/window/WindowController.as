@@ -1306,14 +1306,14 @@
                     }
                 }
             }
-            this._Str_20599(this, this._currentDynamicStyle, k);
+            this.applyDynamicStyleByState(this, this._currentDynamicStyle, k);
             if (this._children)
             {
                 this.recursivelyUpdateChildrensDynamicStyles(this._children, k);
             }
         }
 
-        private function _Str_20599(k:WindowController, _arg_2:DynamicStyle, _arg_3:uint):void
+        private function applyDynamicStyleByState(k:WindowController, _arg_2:DynamicStyle, _arg_3:uint):void
         {
             var _local_5:Array;
             var _local_4:Object = _arg_2.getStyleByWindowState(_arg_3);
@@ -1348,7 +1348,7 @@
             {
                 if (this._currentDynamicStyle.getChildStyle(_local_3))
                 {
-                    this._Str_20599(_local_3, this._currentDynamicStyle.getChildStyle(_local_3), _arg_2);
+                    this.applyDynamicStyleByState(_local_3, this._currentDynamicStyle.getChildStyle(_local_3), _arg_2);
                 }
                 if (_local_3._children)
                 {
