@@ -99,7 +99,7 @@
             if (k.style._Str_21712 == null)
             {
                 _local_3 = k.style.icon;
-                this._Str_20154(_local_3);
+                this.setNotificationIcon(_local_3);
             }
             else
             {
@@ -118,7 +118,7 @@
             }
             if (k.badgeImage != null)
             {
-                this._Str_20154(k.badgeImage);
+                this.setNotificationIcon(k.badgeImage);
             }
         }
 
@@ -188,7 +188,7 @@
             }
         }
 
-        private function _Str_20154(k:BitmapData):void
+        private function setNotificationIcon(k:BitmapData):void
         {
             var _local_3:BitmapData;
             var _local_4:int;
