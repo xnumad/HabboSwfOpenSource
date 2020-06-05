@@ -347,7 +347,7 @@
             k._Str_3808.color = _arg_2;
         }
 
-        private static function _Str_15545(k:TextController, _arg_2:TextStyle):void
+        private static function setTextStyle(k:TextController, _arg_2:TextStyle):void
         {
             if (((!(k)) || (!(_arg_2))))
             {
@@ -389,7 +389,7 @@
                     {
                         TextStyleManager.setStyle(_local_3.name, _local_3);
                     }
-                    _Str_15545(k, _local_3);
+                    setTextStyle(k, _local_3);
                 }
             }
             if (k._Str_4318 == TextFieldAutoSize.CENTER)
@@ -926,7 +926,7 @@
 
         public function set textStyle(k:TextStyle):void
         {
-            _Str_15545(this, k);
+            setTextStyle(this, k);
         }
 
         public function set thickness(k:Number):void
