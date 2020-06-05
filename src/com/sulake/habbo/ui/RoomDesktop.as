@@ -1497,7 +1497,7 @@
             _local_2.graphics.endFill();
         }
 
-        public function _Str_16960(k:uint, _arg_2:int):void
+        public function setRoomViewColor(k:uint, _arg_2:int):void
         {
             var _local_3:IWindowContainer = (this._layoutManager._Str_19928() as IWindowContainer);
             if (_local_3 == null)

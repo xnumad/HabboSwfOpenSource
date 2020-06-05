@@ -1012,11 +1012,11 @@
                     }
                     if (_local_5.bgOnly)
                     {
-                        _local_3._Str_16960(0x000000, 0xFF);
+                        _local_3.setRoomViewColor(0x000000, 0xFF);
                     }
                     else
                     {
-                        _local_3._Str_16960(_local_5.color, _local_5._Str_5123);
+                        _local_3.setRoomViewColor(_local_5.color, _local_5._Str_5123);
                     }
                     return;
                 case RoomZoomEvent.ROOM_ZOOM:

@@ -65,7 +65,7 @@
         function get questEngine():IHabboQuestEngine;
         function get freeFlowChat():IHabboFreeFlowChat;
         function get _Str_6642():DesktopLayoutManager;
-        function _Str_16960(_arg_1:uint, _arg_2:int):void;
+        function setRoomViewColor(_arg_1:uint, _arg_2:int):void;
         function getFirstCanvasId():int;
         function _Str_18304():Rectangle;
         function processWidgetMessage(_arg_1:RoomWidgetMessage):RoomWidgetUpdateEvent;
