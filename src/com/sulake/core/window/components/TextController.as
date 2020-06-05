@@ -734,7 +734,7 @@
             return this._field.textColor;
         }
 
-        public function get _Str_5349():Boolean
+        public function get textBackground():Boolean
         {
             return background;
         }
@@ -914,7 +914,7 @@
             setTextColor(this, k);
         }
 
-        public function set _Str_5349(k:Boolean):void
+        public function set textBackground(k:Boolean):void
         {
             setTextBackground(this, k);
         }

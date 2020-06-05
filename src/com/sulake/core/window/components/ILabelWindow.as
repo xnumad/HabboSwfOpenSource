@@ -26,7 +26,7 @@
         function get spacing():Number;
         function get text():String;
         function get textColor():uint;
-        function get _Str_5349():Boolean;
+        function get textBackground():Boolean;
         function get textBackgroundColor():uint;
         function get textHeight():Number;
         function get textWidth():Number;

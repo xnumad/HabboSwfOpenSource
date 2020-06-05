@@ -139,7 +139,7 @@
             return uint(this._textColor);
         }
 
-        public function get _Str_5349():Boolean
+        public function get textBackground():Boolean
         {
             return background;
         }

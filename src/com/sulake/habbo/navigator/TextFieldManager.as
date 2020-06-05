@@ -38,7 +38,7 @@
             Util._Str_6937(this._input, this._Str_12396);
             this._input.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_24438);
             this._input.addEventListener(WindowEvent.WINDOW_EVENT_CHANGE, this._Str_22400);
-            this._orgTextBackground = this._input._Str_5349;
+            this._orgTextBackground = this._input.textBackground;
             this._orgTextBackgroundColor = this._input.textBackgroundColor;
         }
 
@@ -70,13 +70,13 @@
 
         public function _Str_16652():void
         {
-            this._input._Str_5349 = this._orgTextBackground;
+            this._input.textBackground = this._orgTextBackground;
             this._input.textBackgroundColor = this._orgTextBackgroundColor;
         }
 
         public function _Str_5374(k:String):void
         {
-            this._input._Str_5349 = true;
+            this._input.textBackground = true;
             this._input.textBackgroundColor = 4294021019;
             if (this._errorPopup == null)
             {

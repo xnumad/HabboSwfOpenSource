@@ -118,7 +118,7 @@
             var _local_4:SharedObject = SharedObject.getLocal(this._Str_4939, "/");
             if (_local_2 != null)
             {
-                _local_2._Str_5349 = true;
+                _local_2.textBackground = true;
                 _local_2.textBackgroundColor = 0xFFFFFF;
                 if (_local_4.data.login != null)
                 {
@@ -130,7 +130,7 @@
             }
             if (_local_3 != null)
             {
-                _local_3._Str_5349 = true;
+                _local_3.textBackground = true;
                 _local_3.textBackgroundColor = 0xFFFFFF;
                 if (_local_4.data.password != null)
                 {

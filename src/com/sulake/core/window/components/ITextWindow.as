@@ -34,7 +34,7 @@
         function get spacing():Number;
         function get text():String;
         function get textColor():uint;
-        function get _Str_5349():Boolean;
+        function get textBackground():Boolean;
         function get textBackgroundColor():uint;
         function get textHeight():Number;
         function get textWidth():Number;
@@ -63,7 +63,7 @@
         function set spacing(_arg_1:Number):void;
         function set text(_arg_1:String):void;
         function set textColor(_arg_1:uint):void;
-        function set _Str_5349(_arg_1:Boolean):void;
+        function set textBackground(_arg_1:Boolean):void;
         function set textBackgroundColor(_arg_1:uint):void;
         function set textStyle(_arg_1:TextStyle):void;
         function set thickness(_arg_1:Number):void;
