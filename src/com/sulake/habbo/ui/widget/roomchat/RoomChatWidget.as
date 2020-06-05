@@ -116,7 +116,7 @@
                 }
             }
             this._Str_3991 = (this._Str_8959 + _Str_6383);
-            this._Str_2496 = (_arg_2.createWindow("chat_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 200, (this._Str_3991 + RoomChatHistoryPulldown._Str_3788)), null, 0) as IWindowContainer);
+            this._Str_2496 = (_arg_2.createWindow("chat_container", "", WindowType.WINDOW_TYPE_CONTAINER, _Str_3108.DEFAULT, WindowParam.WINDOW_PARAM_NULL, new Rectangle(0, 0, 200, (this._Str_3991 + RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT)), null, 0) as IWindowContainer);
             this._Str_2496.background = true;
             this._Str_2496.color = 33554431;
             this._Str_2496.tags.push("room_widget_chat");
@@ -903,16 +903,16 @@
 
         public function _Str_23426(k:Number):void
         {
-            var _local_2:Number = ((this._Str_2496.bottom + k) - RoomChatHistoryPulldown._Str_3788);
+            var _local_2:Number = ((this._Str_2496.bottom + k) - RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT);
             this._Str_16224(_local_2);
         }
 
         public function _Str_16224(k:Number):void
         {
-            var _local_2:int = ((this._Str_2496.context.getDesktopWindow().height - RoomChatHistoryPulldown._Str_3788) - _Str_18228);
+            var _local_2:int = ((this._Str_2496.context.getDesktopWindow().height - RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT) - _Str_18228);
             k = Math.min(k, _local_2);
             this._Str_3991 = (k - this._Str_2496.y);
-            this._Str_2496.height = (this._Str_3991 + RoomChatHistoryPulldown._Str_3788);
+            this._Str_2496.height = (this._Str_3991 + RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT);
             if (this._Str_2701 != null)
             {
                 this._Str_2701._Str_8958(this._Str_2496.rectangle);
@@ -1028,7 +1028,7 @@
         public function _Str_20437():void
         {
             this._Str_4396.stopDragging();
-            var k:Number = (this._Str_2496.bottom - RoomChatHistoryPulldown._Str_3788);
+            var k:Number = (this._Str_2496.bottom - RoomChatHistoryPulldown.PULLDOWN_WINDOW_HEIGHT);
             if (k < this._Str_8959)
             {
                 if (k <= (this._Str_3991 + this._Str_2496.y))
