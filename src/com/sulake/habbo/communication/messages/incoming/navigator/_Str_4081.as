@@ -21,7 +21,7 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._rooms.push(new _Str_2370(k));
+                this._rooms.push(new GuestRoomData(k));
                 _local_3++;
             }
             var _local_4:Boolean = k.readBoolean();
@@ -33,7 +33,7 @@
 
         public function dispose():void
         {
-            var k:_Str_2370;
+            var k:GuestRoomData;
             if (this._disposed)
             {
                 return;

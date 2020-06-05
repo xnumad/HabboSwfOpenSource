@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.messages.RoomWidgetChatSelectAvatarMessage;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetRequestWidgetMessage;
     import com.sulake.habbo.session.RoomUserData;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.toolbar.events.HabboToolbarEvent;
     import com.sulake.habbo.session.HabboClubLevelEnum;
     import com.sulake.habbo.ui.widget.enums.AvatarExpressionEnum;
@@ -96,7 +96,7 @@
             var _local_14:int;
             var _local_15:RoomUserData;
             var _local_16:String;
-            var _local_17:_Str_2370;
+            var _local_17:GuestRoomData;
             var userToKick:RoomUserData;
             var userToMute:RoomUserData;
             var userToAlert:RoomUserData;

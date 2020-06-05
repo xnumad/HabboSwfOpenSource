@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IUnknown;
     import flash.events.IEventDispatcher;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
 
     public interface IHabboNavigator extends IUnknown 
     {
@@ -22,7 +22,7 @@
         function openNavigator(_arg_1:Point=null):void;
         function closeNavigator():void;
         function get homeRoomId():int;
-        function get enteredGuestRoomData():_Str_2370;
+        function get enteredGuestRoomData():GuestRoomData;
         function showToolbarHover(_arg_1:Point):void;
         function hideToolbarHover(_arg_1:Boolean):void;
         function toggleRoomInfoVisibility():void;

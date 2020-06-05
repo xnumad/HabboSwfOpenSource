@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.ui.widget.RoomWidgetBase;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.ui.IRoomDesktop;
     import com.sulake.habbo.freeflowchat.IHabboFreeFlowChat;
     import flash.utils.Timer;
@@ -23,7 +23,7 @@
     public class RoomToolsWidget extends RoomWidgetBase
     {
         private static const _Str_18581:int = 10;
-        private static var _Str_4498:Vector.<_Str_2370> = new Vector.<_Str_2370>();
+        private static var _Str_4498:Vector.<GuestRoomData> = new Vector.<GuestRoomData>();
         private static var _Str_7037:int;
 
         private var _Str_19410:String = "";
@@ -71,9 +71,9 @@
             super.dispose();
         }
 
-        public function _Str_23062(k:_Str_2370):void
+        public function _Str_23062(k:GuestRoomData):void
         {
-            var _local_2:_Str_2370;
+            var _local_2:GuestRoomData;
             for each (_local_2 in _Str_4498)
             {
                 if (_local_2.flatId == k.flatId)
@@ -83,9 +83,9 @@
             }
         }
 
-        public function _Str_22970(k:_Str_2370):void
+        public function _Str_22970(k:GuestRoomData):void
         {
-            var _local_2:_Str_2370;
+            var _local_2:GuestRoomData;
             for each (_local_2 in _Str_4498)
             {
                 if (_local_2.flatId == k.flatId)
@@ -117,7 +117,7 @@
 
         public function _Str_23696(k:int):void
         {
-            var _local_3:_Str_2370;
+            var _local_3:GuestRoomData;
             if (((!(this._Str_2617)) || (!(this._roomToolsInfoCtrl))))
             {
                 return;
@@ -231,7 +231,7 @@
             return this._freeFlowChat;
         }
 
-        public function get visitedRooms():Vector.<_Str_2370>
+        public function get visitedRooms():Vector.<GuestRoomData>
         {
             return _Str_4498;
         }

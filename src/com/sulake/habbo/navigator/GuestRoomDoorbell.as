@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator
 {
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.ITextWindow;
     import flash.geom.Point;
     import com.sulake.core.window.components.IButtonWindow;
@@ -14,7 +14,7 @@
     {
         private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
-        private var _roomData:_Str_2370;
+        private var _roomData:GuestRoomData;
         private var _isWaiting:Boolean;
 
         public function GuestRoomDoorbell(k:IHabboTransitionalNavigator)
@@ -22,7 +22,7 @@
             this._navigator = k;
         }
 
-        public function show(k:_Str_2370, _arg_2:Point=null, _arg_3:Boolean=false):void
+        public function show(k:GuestRoomData, _arg_2:Point=null, _arg_3:Boolean=false):void
         {
             if (k == null)
             {

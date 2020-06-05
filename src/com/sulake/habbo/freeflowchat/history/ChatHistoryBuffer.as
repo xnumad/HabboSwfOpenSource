@@ -5,7 +5,7 @@
     import __AS3__.vec.Vector;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.IChatHistoryEntryBitmap;
     import com.sulake.habbo.freeflowchat.data.ChatItem;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.freeflowchat.history.visualization.enum.ChatHistoryLayoutEnum;
     import __AS3__.vec.*;
 
@@ -57,7 +57,7 @@
             }
         }
 
-        public function _Str_24587(k:_Str_2370):void
+        public function _Str_24587(k:GuestRoomData):void
         {
             var _local_2:IChatHistoryEntryBitmap = this._component.chatBubbleFactory._Str_23311(k);
             this._entries.push(_local_2);

@@ -6,7 +6,7 @@
     import com.sulake.habbo.ui.handler.RoomToolsWidgetHandler;
     import __AS3__.vec.Vector;
     import com.sulake.core.window.IWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.events.WindowEvent;
     import __AS3__.vec.*;
@@ -32,10 +32,10 @@
             this._window = (k.buildFromXML((_arg_2.getAssetByName("room_tools_history_xml").content as XML)) as IWindowContainer);
         }
 
-        public function populate(k:Vector.<_Str_2370>):void
+        public function populate(k:Vector.<GuestRoomData>):void
         {
             var _local_2:IWindow;
-            var _local_3:_Str_2370;
+            var _local_3:GuestRoomData;
             var _local_4:IWindowContainer;
             for each (_local_3 in k)
             {

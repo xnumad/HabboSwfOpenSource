@@ -10,7 +10,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.enum.WindowParam;
     import com.sulake.habbo.navigator.Util;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.events.WindowEvent;
@@ -153,7 +153,7 @@
             return ((k % 2) != 0) ? 0xFFFFFFFF : 4292797682;
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:_Str_2370):Boolean
+        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:GuestRoomData):Boolean
         {
             var _local_4:IWindowContainer = IWindowContainer(this._list.getListItemAt(_arg_2));
             var _local_5:Boolean;
@@ -187,7 +187,7 @@
             return false;
         }
 
-        protected function refreshEntryDetails(k:IWindowContainer, _arg_2:_Str_2370):void
+        protected function refreshEntryDetails(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             k.visible = true;
             Util._Str_2930(k);
@@ -208,7 +208,7 @@
             k.name = ((("guestroom_" + _arg_2.ownerName) + "_") + _arg_2.roomName);
         }
 
-        private function refreshRoomName(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function refreshRoomName(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("roomname"));
             _local_3.visible = true;
@@ -230,7 +230,7 @@
             }
             this.hilite(IWindowContainer(_local_2));
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
+            var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_local_4 == null)
             {
                 return;
@@ -244,7 +244,7 @@
             return ((((this._navigator == null) || (this._navigator.data == null)) || (this._navigator.data._Str_4518 == null)) || (this._navigator.data._Str_4518.rooms == null)) ? (new Array()) : this._navigator.data._Str_4518.rooms;
         }
 
-        private function getRoomAt(k:int):_Str_2370
+        private function getRoomAt(k:int):GuestRoomData
         {
             return this.getRooms()[k];
         }
@@ -266,7 +266,7 @@
             var _local_5:Point;
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
+            var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_local_4 == null)
             {
                 return;
@@ -298,7 +298,7 @@
         {
         }
 
-        private function refreshFavouriteIcon(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function refreshFavouriteIcon(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
             var _local_4:Boolean = this.isHome(_arg_2);
@@ -306,7 +306,7 @@
             this.refreshRegion(k, "favourite", ((_local_3) && (!(_local_4))), this.onRemoveFavouriteClick);
         }
 
-        private function isHome(k:_Str_2370):Boolean
+        private function isHome(k:GuestRoomData):Boolean
         {
             return k.flatId == this._navigator.data.homeRoomId;
         }
@@ -341,7 +341,7 @@
             {
                 return;
             }
-            var _local_3:_Str_2370 = this.getRoomAt(_local_2.parent.tags[0]);
+            var _local_3:GuestRoomData = this.getRoomAt(_local_2.parent.tags[0]);
             if (_local_3 == null)
             {
                 return;
@@ -356,7 +356,7 @@
             {
                 return;
             }
-            var _local_3:_Str_2370 = this.getRoomAt(int(_local_2.parent.tags[0]));
+            var _local_3:GuestRoomData = this.getRoomAt(int(_local_2.parent.tags[0]));
             if (_local_3 == null)
             {
                 return;

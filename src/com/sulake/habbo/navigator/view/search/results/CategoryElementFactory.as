@@ -2,7 +2,7 @@
 {
     import com.sulake.habbo.navigator.HabboNewNavigator;
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultList;
     import com.sulake.habbo.navigator.view.search.ViewMode;
@@ -47,9 +47,9 @@
             this._noResultsTemplate = k;
         }
 
-        public function _Str_22713(guestRooms:Vector.<_Str_2370>, title:String, showMoreId:int=-1, actionAllowed:int=0, resultMode:int=-1):IWindowContainer
+        public function _Str_22713(guestRooms:Vector.<GuestRoomData>, title:String, showMoreId:int=-1, actionAllowed:int=0, resultMode:int=-1):IWindowContainer
         {
-            var guestRoom:_Str_2370;
+            var guestRoom:GuestRoomData;
             var alternatingColor:int;
             var container:IWindowContainer = IWindowContainer(this._categoryTemplate.clone());
             container.width = (this._blockResultsView._Str_20093 - _Str_14513);

@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomModerationSettings;
     import com.sulake.habbo.communication.messages.incoming.roomsettings.RoomChatSettings;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
@@ -12,7 +12,7 @@
         private var _enterRoom:Boolean;
         private var _roomForward:Boolean;
         private var _staffPick:Boolean;
-        private var _data:_Str_2370;
+        private var _data:GuestRoomData;
         private var _isGroupMember:Boolean;
         private var _roomModerationSettings:RoomModerationSettings;
         private var _chatSettings:RoomChatSettings;
@@ -26,7 +26,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             this._enterRoom = k.readBoolean();
-            this._data = new _Str_2370(k);
+            this._data = new GuestRoomData(k);
             this._roomForward = k.readBoolean();
             this._staffPick = k.readBoolean();
             this._isGroupMember = k.readBoolean();
@@ -53,7 +53,7 @@
             return this._enterRoom;
         }
 
-        public function get data():_Str_2370
+        public function get data():GuestRoomData
         {
             return this._data;
         }

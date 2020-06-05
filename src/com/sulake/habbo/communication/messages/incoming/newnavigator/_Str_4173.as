@@ -1,6 +1,6 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.newnavigator
 {
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
 
     public class _Str_4173 
     {
@@ -30,7 +30,7 @@
             return this._Str_13083;
         }
 
-        public function _Str_6684(k:int):_Str_2370
+        public function _Str_6684(k:int):GuestRoomData
         {
             if (this._Str_13083 != null)
             {

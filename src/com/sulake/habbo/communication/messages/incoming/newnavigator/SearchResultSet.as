@@ -2,7 +2,7 @@
 {
     import __AS3__.vec.Vector;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import __AS3__.vec.*;
 
     public class SearchResultSet 
@@ -52,10 +52,10 @@
             return this._blocks;
         }
 
-        public function _Str_6684(k:int):_Str_2370
+        public function _Str_6684(k:int):GuestRoomData
         {
             var _local_2:SearchResultList;
-            var _local_3:_Str_2370;
+            var _local_3:GuestRoomData;
             for each (_local_2 in this._blocks)
             {
                 _local_3 = _local_2._Str_6684(k);

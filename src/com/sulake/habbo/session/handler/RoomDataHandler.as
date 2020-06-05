@@ -5,7 +5,7 @@
     import com.sulake.habbo.session.IRoomHandlerListener;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
     import com.sulake.habbo.session.IRoomSession;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.session.events.RoomSessionPropertyUpdateEvent;
     import com.sulake.habbo.session.events.RoomSessionEvent;
     import com.sulake.core.communication.messages.IMessageEvent;
@@ -39,7 +39,7 @@
             {
                 return;
             }
-            var _local_5:_Str_2370 = _local_3.data;
+            var _local_5:GuestRoomData = _local_3.data;
             _local_4.tradeMode = _local_5.tradeMode;
             _local_4.isGuildRoom = (!(_local_5.habboGroupId == 0));
             _local_4.doorMode = _local_5.doorMode;

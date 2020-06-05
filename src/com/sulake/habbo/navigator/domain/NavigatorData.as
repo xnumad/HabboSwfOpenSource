@@ -3,7 +3,7 @@
     import com.sulake.habbo.navigator.HabboNavigator;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5733;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3579;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import flash.utils.Dictionary;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_2632;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_5485;
@@ -34,7 +34,7 @@
         private var _currentRoomOwner:Boolean;
         private var _currentRoomId:int;
         private var _avatarId:int;
-        private var _enteredGuestRoom:_Str_2370;
+        private var _enteredGuestRoom:GuestRoomData;
         private var _hcMember:Boolean;
         private var _createdFlatId:int;
         private var _hotRoomPopupOpen:Boolean;
@@ -103,7 +103,7 @@
             this._currentRoomOwner = false;
         }
 
-        public function set _Str_20702(k:_Str_2370):void
+        public function set _Str_20702(k:GuestRoomData):void
         {
             if (this._enteredGuestRoom != null)
             {
@@ -245,7 +245,7 @@
             return this._currentRoomOwner;
         }
 
-        public function get _Str_2678():_Str_2370
+        public function get _Str_2678():GuestRoomData
         {
             return this._enteredGuestRoom;
         }

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.newnavigator
 {
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
     import __AS3__.vec.*;
 
@@ -16,11 +16,11 @@
         private var _actionAllowed:int;
         private var _forceClosed:Boolean;
         private var _viewMode:int;
-        private var _guestRooms:Vector.<_Str_2370>;
+        private var _guestRooms:Vector.<GuestRoomData>;
 
         public function SearchResultList(k:IMessageDataWrapper)
         {
-            this._guestRooms = new Vector.<_Str_2370>(0);
+            this._guestRooms = new Vector.<GuestRoomData>(0);
             super();
             this._searchCode = k.readString();
             this._text = k.readString();
@@ -31,12 +31,12 @@
             var _local_3:int;
             while (_local_3 < _local_2)
             {
-                this._guestRooms.push(new _Str_2370(k));
+                this._guestRooms.push(new GuestRoomData(k));
                 _local_3++;
             }
         }
 
-        public function get guestRooms():Vector.<_Str_2370>
+        public function get guestRooms():Vector.<GuestRoomData>
         {
             return this._guestRooms;
         }
@@ -71,9 +71,9 @@
             this._viewMode = k;
         }
 
-        public function _Str_6684(k:int):_Str_2370
+        public function _Str_6684(k:int):GuestRoomData
         {
-            var _local_2:_Str_2370;
+            var _local_2:GuestRoomData;
             for each (_local_2 in this._guestRooms)
             {
                 if (_local_2.flatId == k)

@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator
 {
     import com.sulake.core.window.components.IFrameWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IPasswordFieldWindow;
     import flash.geom.Point;
@@ -14,14 +14,14 @@
     {
         private var _navigator:IHabboTransitionalNavigator;
         private var _window:IFrameWindow;
-        private var _roomData:_Str_2370;
+        private var _roomData:GuestRoomData;
 
         public function GuestRoomPasswordInput(k:IHabboTransitionalNavigator)
         {
             this._navigator = k;
         }
 
-        public function show(k:_Str_2370, _arg_2:Point=null):void
+        public function show(k:GuestRoomData, _arg_2:Point=null):void
         {
             this._roomData = k;
             if (this._roomData == null)

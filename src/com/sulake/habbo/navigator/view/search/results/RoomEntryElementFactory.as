@@ -5,7 +5,7 @@
     import com.sulake.core.window.components.IItemListWindow;
     import com.sulake.habbo.navigator.view.search.ViewMode;
     import com.sulake.core.window.components.IBorderWindow;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.window.widgets._Str_2402;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.core.window.components.IStaticBitmapWrapperWindow;
@@ -58,7 +58,7 @@
             return this._rowEntryTemplate.height;
         }
 
-        public function _Str_24858(k:_Str_2370, _arg_2:int, _arg_3:int=-1):IWindowContainer
+        public function _Str_24858(k:GuestRoomData, _arg_2:int, _arg_3:int=-1):IWindowContainer
         {
             var _local_4:IWindowContainer = IWindowContainer(this._rowEntryTemplate.clone());
             if (_arg_3 != -1)
@@ -71,7 +71,7 @@
             return _local_4;
         }
 
-        public function _Str_22789(k:_Str_2370, _arg_2:int):IWindowContainer
+        public function _Str_22789(k:GuestRoomData, _arg_2:int):IWindowContainer
         {
             var _local_3:IWindowContainer = IWindowContainer(this._tileEntryTemplate.clone());
             this._Str_20769(_local_3, k, true);
@@ -98,7 +98,7 @@
             return _local_3;
         }
 
-        private function _Str_20769(k:IWindowContainer, _arg_2:_Str_2370, _arg_3:Boolean):void
+        private function _Str_20769(k:IWindowContainer, _arg_2:GuestRoomData, _arg_3:Boolean):void
         {
             k.findChildByName("room_usercount").caption = _arg_2.userCount.toString();
             k.findChildByName("room_name").caption = ((ViewMode._Str_25096(this._viewMode)) ? _arg_2._Str_8163 : _arg_2.roomName);

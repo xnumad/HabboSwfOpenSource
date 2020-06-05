@@ -7,7 +7,7 @@
     {
         private var _code:String;
         private var _Str_21922:String;
-        private var _Str_10956:_Str_2370;
+        private var _Str_10956:GuestRoomData;
         private var _rooms:Array;
         private var _open:Boolean;
         private var _Str_20192:Boolean;
@@ -20,18 +20,18 @@
             this._code = k.readString();
             this._Str_21922 = k.readString();
             var _local_2:int = k.readInteger();
-            this._Str_10956 = new _Str_2370(k);
+            this._Str_10956 = new GuestRoomData(k);
             var _local_3:int = 1;
             while (_local_3 < _local_2)
             {
-                this._rooms.push(new _Str_2370(k));
+                this._rooms.push(new GuestRoomData(k));
                 _local_3++;
             }
         }
 
         public function dispose():void
         {
-            var k:_Str_2370;
+            var k:GuestRoomData;
             if (this._disposed)
             {
                 return;
@@ -84,7 +84,7 @@
             this._open = (!(this._open));
         }
 
-        public function get _Str_7144():_Str_2370
+        public function get _Str_7144():GuestRoomData
         {
             return this._Str_10956;
         }

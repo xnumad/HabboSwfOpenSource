@@ -7,7 +7,7 @@
     import flash.events.Event;
     import com.sulake.habbo.navigator.events.HabboRoomSettingsTrackingEvent;
     import com.sulake.habbo.navigator.Util;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.IWindow;
@@ -126,7 +126,7 @@
             this._window.height = (Util._Str_2647(this._window.content) + 45);
         }
 
-        private function isHome(k:_Str_2370):Boolean
+        private function isHome(k:GuestRoomData):Boolean
         {
             return (!(k == null)) && (k.flatId == this._navigator.data.homeRoomId);
         }
@@ -162,7 +162,7 @@
             }
         }
 
-        private function _Str_22543(k:_Str_2370):void
+        private function _Str_22543(k:GuestRoomData):void
         {
             if (k == null)
             {
@@ -232,7 +232,7 @@
             }
         }
 
-        public function _Str_4295(k:_Str_2370):void
+        public function _Str_4295(k:GuestRoomData):void
         {
             var _local_7:IWindowContainer;
             if (((this._navigator.data._Str_2678 == null) || (this._window == null)))
@@ -392,7 +392,7 @@
 
         private function _Str_25312(k:WindowEvent):void
         {
-            var _local_2:_Str_2370 = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -405,7 +405,7 @@
 
         private function _Str_22339(k:WindowEvent):void
         {
-            var _local_2:_Str_2370 = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -430,7 +430,7 @@
 
         private function _Str_25302(k:WindowEvent):void
         {
-            var _local_2:_Str_2370 = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
             if (_local_2 == null)
             {
                 Logger.log("No entered room data?!");
@@ -461,7 +461,7 @@
         private function _Str_24254(k:WindowEvent):void
         {
             this._navigator.trackGoogle("roomInfo", "reportRoom");
-            var _local_2:_Str_2370 = this._navigator.data._Str_2678;
+            var _local_2:GuestRoomData = this._navigator.data._Str_2678;
             this._navigator.habboHelp.reportRoom(_local_2.flatId, _local_2.roomName, _local_2.description);
             this.close();
         }

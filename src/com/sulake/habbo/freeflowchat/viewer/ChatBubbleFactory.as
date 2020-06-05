@@ -26,7 +26,7 @@
     import com.sulake.habbo.freeflowchat.history.visualization.entry.ChatHistoryEntryBitmapBubble;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.IChatHistoryEntryBitmap;
     import com.sulake.habbo.freeflowchat.history.visualization.entry.ChatHistoryRoomChangeEntry;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.avatar.IAvatarImage;
     import com.sulake.habbo.avatar.structure.figure.IPartColor;
     import com.sulake.habbo.avatar.enum.AvatarScaleType;
@@ -333,7 +333,7 @@
             }
         }
 
-        public function _Str_23311(k:_Str_2370):IChatHistoryEntryBitmap
+        public function _Str_23311(k:GuestRoomData):IChatHistoryEntryBitmap
         {
             return new ChatHistoryRoomChangeEntry(k, this._component);
         }

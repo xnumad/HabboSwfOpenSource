@@ -9,7 +9,7 @@
     import com.sulake.habbo.freeflowchat.HabboFreeFlowChat;
     import flash.geom.Point;
     import flash.geom.Matrix;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
 
     public class ChatHistoryRoomChangeEntry implements IChatHistoryEntryBitmap 
     {
@@ -18,7 +18,7 @@
         private var _bitmap:BitmapData;
         private var _overlap:Rectangle= new Rectangle(0, 0, 0, 0);
 
-        public function ChatHistoryRoomChangeEntry(k:_Str_2370, _arg_2:HabboFreeFlowChat)
+        public function ChatHistoryRoomChangeEntry(k:GuestRoomData, _arg_2:HabboFreeFlowChat)
         {
             var _local_3:TextField = new TextField();
             _local_3.defaultTextFormat = ChatHistoryLayoutEnum._Str_16769;

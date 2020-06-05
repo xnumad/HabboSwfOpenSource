@@ -47,7 +47,7 @@
     import com.sulake.habbo.communication.messages.incoming.newnavigator._Str_4173;
     import com.sulake.habbo.navigator.domain.NavigatorData;
     import com.sulake.habbo.communication.messages.parser.roomsettings._Str_6564;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.navigator.transitional.LegacyNavigator;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
     import com.sulake.habbo.communication.messages.parser.handshake.UserObjectMessageParser;
@@ -208,7 +208,7 @@
         {
             var _local_2:_Str_5038 = (k as _Str_5038);
             var _local_3:_Str_6564 = _local_2.getParser();
-            var _local_4:_Str_2370 = this._navigator.data._Str_2678;
+            var _local_4:GuestRoomData = this._navigator.data._Str_2678;
             if (_local_4 != null)
             {
                 _local_4._Str_12127 = _local_3._Str_20186;

@@ -5,7 +5,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2402;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
     import com.sulake.core.window.events.WindowEvent;
 
@@ -31,7 +31,7 @@
             return this._navigator == null;
         }
 
-        public function refresh(k:IWindowContainer, _arg_2:_Str_2370, _arg_3:Boolean=false):void
+        public function refresh(k:IWindowContainer, _arg_2:GuestRoomData, _arg_3:Boolean=false):void
         {
             var _local_4:IWindowContainer = IWindowContainer(k.findChildByName(GUILD_INFO));
             if (_local_4 == null)

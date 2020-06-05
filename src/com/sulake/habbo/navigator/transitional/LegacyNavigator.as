@@ -32,7 +32,7 @@
     import com.sulake.habbo.tracking.IHabboTracking;
     import flash.events.IEventDispatcher;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.runtime.IID;
     import com.sulake.core.runtime.IUnknown;
     import flash.utils.Dictionary;
@@ -356,7 +356,7 @@
             return this._oldNavigator.homeRoomId;
         }
 
-        public function get enteredGuestRoomData():_Str_2370
+        public function get enteredGuestRoomData():GuestRoomData
         {
             return this._oldNavigator.enteredGuestRoomData;
         }

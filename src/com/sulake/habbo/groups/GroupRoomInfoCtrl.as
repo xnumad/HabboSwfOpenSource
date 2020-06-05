@@ -4,7 +4,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
     import com.sulake.habbo.communication.messages.outgoing.users._Str_2863;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.components.IWidgetWindow;
     import com.sulake.habbo.window.widgets._Str_2402;
     import com.sulake.core.window.events.WindowMouseEvent;
@@ -49,7 +49,7 @@
             return this._manager == null;
         }
 
-        public function onRoomInfo(k:_Str_2370):void
+        public function onRoomInfo(k:GuestRoomData):void
         {
             if (!this._manager._Str_13386)
             {

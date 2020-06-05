@@ -67,7 +67,7 @@
     import com.sulake.habbo.toolbar.HabboToolbarIconEnum;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4374;
     import flash.geom.Point;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7393;
     import com.sulake.habbo.navigator.inroom.*;
 
@@ -739,7 +739,7 @@
             return this._webRoomReportedName;
         }
 
-        public function get enteredGuestRoomData():_Str_2370
+        public function get enteredGuestRoomData():GuestRoomData
         {
             if (this._data)
             {

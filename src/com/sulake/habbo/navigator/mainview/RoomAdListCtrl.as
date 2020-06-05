@@ -7,7 +7,7 @@
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.habbo.navigator.Util;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_3560;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.core.window.IWindow;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11792;
     import com.sulake.core.window.events.WindowEvent;
@@ -34,7 +34,7 @@
             return _local_2;
         }
 
-        override protected function refreshEntryDetails(k:IWindowContainer, _arg_2:_Str_2370):void
+        override protected function refreshEntryDetails(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             k.visible = true;
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("adname"));
@@ -46,7 +46,7 @@
             _userCountRenderer.refreshUserCount(_arg_2._Str_9029, k, _arg_2.userCount, "${navigator.usercounttooltip.users}", 308, 2);
         }
 
-        private function getRoomAt(k:int):_Str_2370
+        private function getRoomAt(k:int):GuestRoomData
         {
             return getRooms()[k];
         }
@@ -55,7 +55,7 @@
         {
             var _local_2:IWindow = k.target;
             var _local_3:int = _local_2.tags[0];
-            var _local_4:_Str_2370 = this.getRoomAt(_local_3);
+            var _local_4:GuestRoomData = this.getRoomAt(_local_3);
             if (_navigator)
             {
                 _navigator.send(new _Str_11792(_local_4.flatId, _local_4._Str_8163, _local_4._Str_15104));

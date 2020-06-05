@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.window.enum._Str_3023;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.core.runtime.Component;
@@ -63,7 +63,7 @@
             var roomName:String;
             var ownerName:String;
             var p:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(event).getParser();
-            var roomData:_Str_2370 = p.data;
+            var roomData:GuestRoomData = p.data;
             if (((roomData) && (roomData.flatId == this._roomIdToEnter)))
             {
                 this._roomIdToEnter = 0;

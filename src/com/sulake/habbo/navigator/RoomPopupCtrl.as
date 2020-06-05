@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.navigator
 {
     import com.sulake.core.window.IWindowContainer;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.session.enum.RoomTradingLevelEnum;
     import com.sulake.core.window.components.ITextWindow;
     import com.sulake.core.window.components.IRegionWindow;
@@ -16,7 +16,7 @@
     public class RoomPopupCtrl extends PopupCtrl 
     {
         private var _details:IWindowContainer;
-        private var _room:_Str_2370;
+        private var _room:GuestRoomData;
         private var _tagRenderer:TagRenderer;
         private var _navigator:IHabboTransitionalNavigator;
         private var _guildInfoCtrl:GuildInfoCtrl;
@@ -29,7 +29,7 @@
             this._guildInfoCtrl = new GuildInfoCtrl(this._navigator);
         }
 
-        public function set room(k:_Str_2370):void
+        public function set room(k:GuestRoomData):void
         {
             this._room = k;
         }
@@ -104,7 +104,7 @@
             }
         }
 
-        private function _Str_24547(k:_Str_2370):void
+        private function _Str_24547(k:GuestRoomData):void
         {
             if (((k._Str_8163 == null) || (k._Str_8163.length == 0)))
             {
@@ -130,7 +130,7 @@
             _local_7.visible = true;
         }
 
-        private function refreshRoomName(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function refreshRoomName(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             var _local_3:ITextWindow = ITextWindow(k.getChildByName("roomname"));
             _local_3.visible = true;
@@ -138,7 +138,7 @@
             _local_3.height = (_local_3.textHeight + 3);
         }
 
-        private function _Str_25479(k:IWindowContainer, _arg_2:_Str_2370):void
+        private function _Str_25479(k:IWindowContainer, _arg_2:GuestRoomData):void
         {
             if (_arg_2.description == "")
             {

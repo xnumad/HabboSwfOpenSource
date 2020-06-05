@@ -19,7 +19,7 @@
         private var _userCount:int;
         private var _type:int;
         private var _tag:String;
-        private var _Str_2567:_Str_2370;
+        private var _Str_2567:GuestRoomData;
         private var _open:Boolean;
         private var _disposed:Boolean;
 
@@ -42,7 +42,7 @@
             {
                 if (this._type == _Str_12025)
                 {
-                    this._Str_2567 = new _Str_2370(k);
+                    this._Str_2567 = new GuestRoomData(k);
                 }
                 else
                 {
@@ -120,7 +120,7 @@
             return this._userCount;
         }
 
-        public function get _Str_5019():_Str_2370
+        public function get _Str_5019():GuestRoomData
         {
             return this._Str_2567;
         }

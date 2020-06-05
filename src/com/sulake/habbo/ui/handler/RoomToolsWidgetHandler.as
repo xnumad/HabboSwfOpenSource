@@ -9,7 +9,7 @@
     import com.sulake.habbo.ui.IRoomWidgetHandlerContainer;
     import com.sulake.habbo.communication.messages.incoming.navigator.GetGuestRoomResultEvent;
     import com.sulake.habbo.communication.messages.parser.navigator.GetGuestRoomResultMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.session.events.SessionDataPreferencesEvent;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetZoomToggleMessage;
@@ -44,7 +44,7 @@
         {
             var _local_4:String;
             var _local_2:GetGuestRoomResultMessageParser = GetGuestRoomResultEvent(k).getParser();
-            var _local_3:_Str_2370 = _local_2.data;
+            var _local_3:GuestRoomData = _local_2.data;
             if (_local_3)
             {
                 this._widget._Str_23062(_local_3);

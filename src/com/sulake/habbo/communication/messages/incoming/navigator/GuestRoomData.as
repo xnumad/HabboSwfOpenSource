@@ -3,7 +3,7 @@
     import com.sulake.core.runtime.IDisposable;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
-    public class _Str_2370 implements IDisposable 
+    public class GuestRoomData implements IDisposable
     {
         private const THUMBNAIL_BITMASK:int = 1;
         private const GROUPDATA_BITMASK:int = 2;
@@ -41,7 +41,7 @@
         private var _disposed:Boolean;
         private var _officialRoomPicRef:String = null;
 
-        public function _Str_2370(k:IMessageDataWrapper)
+        public function GuestRoomData(k:IMessageDataWrapper)
         {
             var _local_5:String;
             this._tags = new Array();

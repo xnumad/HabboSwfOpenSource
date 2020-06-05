@@ -3,7 +3,7 @@
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.habbo.navigator.HabboNewNavigator;
     import __AS3__.vec.Vector;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import flash.geom.Point;
     import flash.geom.Rectangle;
     import com.sulake.habbo.communication.messages.incoming.users.HabboGroupDetailsData;
@@ -30,7 +30,7 @@
         private var _window:IWindowContainer;
         private var _navigator:HabboNewNavigator;
         private var _displayedTags:Vector.<String>;
-        private var _guestRoomData:_Str_2370 = null;
+        private var _guestRoomData:GuestRoomData = null;
         private var _lastWindowPosition:Point;
         private var _roomHomeAltered:Boolean = false;
         private var _roomHomeAlteredValue:Boolean;
@@ -96,7 +96,7 @@
             }
         }
 
-        public function _Str_5479(k:_Str_2370):void
+        public function _Str_5479(k:GuestRoomData):void
         {
             this._guestRoomData = k;
         }

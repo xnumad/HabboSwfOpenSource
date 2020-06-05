@@ -42,7 +42,7 @@
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorMetaDataParser;
     import com.sulake.habbo.navigator.context.SearchContext;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultList;
-    import com.sulake.habbo.communication.messages.incoming.navigator._Str_2370;
+    import com.sulake.habbo.communication.messages.incoming.navigator.GuestRoomData;
     import com.sulake.habbo.communication.messages.incoming.newnavigator.SearchResultSet;
     import com.sulake.habbo.communication.messages.parser.newnavigator.NavigatorLiftedRoomsParser;
     import com.sulake.habbo.communication.messages.parser.newnavigator._Str_6991;
@@ -240,7 +240,7 @@
         private function _Str_25713(k:SearchResultSet):void
         {
             var _local_2:SearchResultList;
-            var _local_3:_Str_2370;
+            var _local_3:GuestRoomData;
             this._currentResultRoomNameData = new Map();
             for each (_local_2 in k._Str_7385)
             {
