@@ -163,7 +163,7 @@
     public class RoomDesktop implements IRoomDesktop, IRoomWidgetMessageListener, IRoomWidgetHandlerContainer 
     {
         public static const STATE_UNDEFINED:int = -1;
-        private static const _Str_17829:int = 1000;
+        private static const RESIZE_UPDATE_TIMEOUT_MS:int = 1000;
         private static const _Str_19484:int = 1000;
 
         private var _events:EventDispatcherWrapper;
@@ -1660,7 +1660,7 @@
             this._roomEngine.modifyRoomCanvas(this._session.roomId, this._canvasIDs[0], _local_2.width, _local_2.height);
             if (this._resizeTimer == null)
             {
-                this._resizeTimer = new Timer(_Str_17829, 1);
+                this._resizeTimer = new Timer(RESIZE_UPDATE_TIMEOUT_MS, 1);
                 this._resizeTimer.addEventListener(TimerEvent.TIMER, this.onResizeTimerEvent);
             }
             else
