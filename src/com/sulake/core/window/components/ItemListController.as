@@ -39,7 +39,7 @@
         protected var _dragStartX:Number;
         protected var _dragStartY:Number;
         protected var _dragStartScrollH:Number;
-        protected var _Str_20088:Number;
+        protected var _dragStartScrollV:Number;
         protected var _Str_11276:Boolean;
 
         public function ItemListController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
@@ -494,7 +494,7 @@
                     this._dragStartX = _local_3;
                     this._dragStartY = _local_4;
                     this._dragStartScrollH = (this._scrollOffsetH * this.maxScrollH);
-                    this._Str_20088 = (this._scrollOffsetV * this.maxScrollV);
+                    this._dragStartScrollV = (this._scrollOffsetV * this.maxScrollV);
                     this._Str_11276 = true;
                     _local_2 = true;
                     break;
@@ -507,7 +507,7 @@
                         }
                         else
                         {
-                            this.scrollV = (((this._Str_20088 + this._dragStartY) - _local_4) / this.maxScrollV);
+                            this.scrollV = (((this._dragStartScrollV + this._dragStartY) - _local_4) / this.maxScrollV);
                         }
                         _local_2 = true;
                     }
