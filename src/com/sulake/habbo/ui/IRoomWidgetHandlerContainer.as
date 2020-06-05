@@ -59,7 +59,7 @@
         function get messenger():IHabboMessenger;
         function get moderation():IHabboModeration;
         function get windowManager():IHabboWindowManager;
-        function get _Str_10421():IHabboUserDefinedRoomEvents;
+        function get userDefinedRoomEvents():IHabboUserDefinedRoomEvents;
         function get connection():IConnection;
         function get _Str_3479():IHabboGameManager;
         function get questEngine():IHabboQuestEngine;

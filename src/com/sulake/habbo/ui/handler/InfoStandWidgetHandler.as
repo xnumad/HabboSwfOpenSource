@@ -1055,9 +1055,9 @@
                     _local_3.rentOfferId = _local_15.rentOfferId;
                     _local_3.rentCouldBeUsedForBuyout = _local_15.rentCouldBeUsedForBuyout;
                     _local_3.availableForBuildersClub = _local_15.availableForBuildersClub;
-                    if (((!(this._container._Str_10421 == null)) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)))
+                    if (((!(this._container.userDefinedRoomEvents == null)) && (k.category == RoomObjectCategoryEnum.OBJECT_CATEGORY_FURNITURE)))
                     {
-                        this._container._Str_10421._Str_15677(_local_4.getId(), _local_15.localizedName);
+                        this._container.userDefinedRoomEvents._Str_15677(_local_4.getId(), _local_15.localizedName);
                     }
                 }
             }

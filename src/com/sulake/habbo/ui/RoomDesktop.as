@@ -417,7 +417,7 @@
             this._communicationManager = k;
         }
 
-        public function get _Str_10421():IHabboUserDefinedRoomEvents
+        public function get userDefinedRoomEvents():IHabboUserDefinedRoomEvents
         {
             return this._userDefinedRoomEvents;
         }
@@ -492,7 +492,7 @@
             this._habboTracking = k;
         }
 
-        public function set _Str_10421(k:IHabboUserDefinedRoomEvents):void
+        public function set userDefinedRoomEvents(k:IHabboUserDefinedRoomEvents):void
         {
             this._userDefinedRoomEvents = k;
         }

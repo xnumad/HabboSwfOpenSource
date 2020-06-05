@@ -1106,7 +1106,7 @@
             _local_3.config = this;
             _local_3._Str_2476 = this._soundManager;
             _local_3.habboTracking = this._habboTracking;
-            _local_3._Str_10421 = this._userDefinedRoomEvents;
+            _local_3.userDefinedRoomEvents = this._userDefinedRoomEvents;
             _local_3._Str_3479 = this._gameManager;
             _local_3.questEngine = this._questEngine;
             _local_3.freeFlowChat = this._freeFlowChat;
