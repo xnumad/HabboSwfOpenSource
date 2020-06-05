@@ -340,7 +340,7 @@
             k._Str_3808.leading = _arg_2;
         }
 
-        private static function _Str_18306(k:TextController, _arg_2:uint):void
+        private static function setTextColor(k:TextController, _arg_2:uint):void
         {
             k._Str_2309.textColor = _arg_2;
             k.refreshTextImage();
@@ -589,7 +589,7 @@
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
             k[PropertyKeys.AUTO_SIZE] = setAutoSize;
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = setMouseWheelEnabled;
-            k[PropertyKeys.TEXT_COLOR] = _Str_18306;
+            k[PropertyKeys.TEXT_COLOR] = setTextColor;
             k[PropertyKeys.TEXT_STYLE] = _Str_25567;
             k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
             k[PropertyKeys.MARGIN_TOP] = setMarginTop;
@@ -911,7 +911,7 @@
 
         public function set textColor(k:uint):void
         {
-            _Str_18306(this, k);
+            setTextColor(this, k);
         }
 
         public function set _Str_5349(k:Boolean):void
