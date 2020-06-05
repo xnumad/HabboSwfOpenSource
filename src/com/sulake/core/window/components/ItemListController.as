@@ -29,7 +29,7 @@
         protected var _container:IWindowContainer;
         protected var _resizing:Boolean = false;
         protected var _updating:Boolean = false;
-        protected var _Str_2981:int;
+        protected var _spacing:int;
         protected var _Str_2803:Boolean = false;
         protected var _Str_7087:Number = -1;
         protected var _Str_7859:Number = -1;
@@ -50,7 +50,7 @@
             this._scrollAreaHeight = 0;
             this._Str_2803 = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
             var _local_12:IThemeManager = _arg_5.getWindowFactory().getThemeManager();
-            this._Str_2981 = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
+            this._spacing = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
             this._Str_9264 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
             this._Str_5418 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SCALE_TO_FIT_ITEMS).value;
             this._Str_12072 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.RESIZE_ON_ITEM_UPDATE).value;
@@ -67,14 +67,14 @@
 
         public function get spacing():int
         {
-            return this._Str_2981;
+            return this._spacing;
         }
 
         public function set spacing(k:int):void
         {
-            if (k != this._Str_2981)
+            if (k != this._spacing)
             {
-                this._Str_2981 = k;
+                this._spacing = k;
                 this._Str_4024();
             }
         }
@@ -303,7 +303,7 @@
             this._updating = true;
             if (this._Str_2803)
             {
-                k.x = (this._scrollAreaWidth + ((this.numListItems > 0) ? this._Str_2981 : 0));
+                k.x = (this._scrollAreaWidth + ((this.numListItems > 0) ? this._spacing : 0));
                 this._scrollAreaWidth = k.right;
                 this._container.width = this._scrollAreaWidth;
             }
@@ -311,7 +311,7 @@
             {
                 if (this.autoArrangeItems)
                 {
-                    k.y = (this._scrollAreaHeight + ((this.numListItems > 0) ? this._Str_2981 : 0));
+                    k.y = (this._scrollAreaHeight + ((this.numListItems > 0) ? this._spacing : 0));
                     this._scrollAreaHeight = k.bottom;
                 }
                 else
@@ -582,7 +582,7 @@
                         if (_local_2.visible)
                         {
                             _local_2.x = this._scrollAreaWidth;
-                            this._scrollAreaWidth = (this._scrollAreaWidth + (_local_2.width + this._Str_2981));
+                            this._scrollAreaWidth = (this._scrollAreaWidth + (_local_2.width + this._spacing));
                             if (this._Str_5418)
                             {
                                 _local_3 = (_local_2.height + _local_2.y);
@@ -593,7 +593,7 @@
                     }
                     if (k > 0)
                     {
-                        this._scrollAreaWidth = (this._scrollAreaWidth - this._Str_2981);
+                        this._scrollAreaWidth = (this._scrollAreaWidth - this._spacing);
                     }
                 }
                 else
@@ -607,7 +607,7 @@
                         if (_local_2.visible)
                         {
                             _local_2.y = this._scrollAreaHeight;
-                            this._scrollAreaHeight = (this._scrollAreaHeight + (_local_2.height + this._Str_2981));
+                            this._scrollAreaHeight = (this._scrollAreaHeight + (_local_2.height + this._spacing));
                             if (this._Str_5418)
                             {
                                 _local_3 = (_local_2.width + _local_2.x);
@@ -618,7 +618,7 @@
                     }
                     if (k > 0)
                     {
-                        this._scrollAreaHeight = (this._scrollAreaHeight - this._Str_2981);
+                        this._scrollAreaHeight = (this._scrollAreaHeight - this._spacing);
                     }
                 }
                 if (this._scrollOffsetH > 0)
@@ -652,7 +652,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(createProperty(PropertyKeys.SPACING, this._Str_2981));
+            k.push(createProperty(PropertyKeys.SPACING, this._spacing));
             k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._Str_9264));
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
             k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));

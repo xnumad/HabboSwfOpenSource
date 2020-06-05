@@ -10,7 +10,7 @@
 
     public class SelectorListController extends SelectorController implements ISelectorListWindow 
     {
-        protected var _Str_2981:int = 0;
+        protected var _spacing:int = 0;
         private var _Str_12981:Boolean = false;
         private var _vertical:Boolean;
 
@@ -22,12 +22,12 @@
 
         public function get spacing():int
         {
-            return this._Str_2981;
+            return this._spacing;
         }
 
         public function set spacing(k:int):void
         {
-            this._Str_2981 = k;
+            this._spacing = k;
             this._Str_11558();
         }
 
@@ -72,12 +72,12 @@
                 if (this._vertical)
                 {
                     _local_2.y = _local_3;
-                    _local_3 = (_local_3 + (_local_2.height + this._Str_2981));
+                    _local_3 = (_local_3 + (_local_2.height + this._spacing));
                 }
                 else
                 {
                     _local_2.x = _local_3;
-                    _local_3 = (_local_3 + (_local_2.width + this._Str_2981));
+                    _local_3 = (_local_3 + (_local_2.width + this._spacing));
                 }
                 _local_4++;
             }
@@ -87,7 +87,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(createProperty(PropertyKeys.SPACING, this._Str_2981));
+            k.push(createProperty(PropertyKeys.SPACING, this._spacing));
             k.push(createProperty(PropertyKeys.VERTICAL, this._vertical));
             return k;
         }
@@ -100,7 +100,7 @@
                 switch (_local_2.key)
                 {
                     case PropertyKeys.SPACING:
-                        if (_local_2.value != this._Str_2981)
+                        if (_local_2.value != this._spacing)
                         {
                             this.spacing = (_local_2.value as int);
                         }

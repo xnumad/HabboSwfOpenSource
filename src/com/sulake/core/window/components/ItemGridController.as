@@ -517,7 +517,7 @@
             _local_2._Str_8004 = true;
             _local_2.background = background;
             _local_2.color = color;
-            _local_2.spacing = ((this._explicitVerticalSpacing) ? this._verticalSpacing : _Str_2981);
+            _local_2.spacing = ((this._explicitVerticalSpacing) ? this._verticalSpacing : _spacing);
             addListItem(_local_2);
             _local_2.addListItem(k);
             return _local_2;
