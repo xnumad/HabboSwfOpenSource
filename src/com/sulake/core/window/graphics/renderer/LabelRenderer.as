@@ -44,7 +44,7 @@
                 this._Str_2085.ty = _local_6.drawOffsetY;
                 this._Str_7685.text = _local_6.text;
                 _local_8 = uint(_local_7.color);
-                this._Str_7685.textColor = ((_local_6._Str_25634) ? _local_6.textColor : _local_8);
+                this._Str_7685.textColor = ((_local_6.hasTextColor) ? _local_6.textColor : _local_8);
                 if (_local_6.vertical)
                 {
                     this._Str_2085.a = 0;

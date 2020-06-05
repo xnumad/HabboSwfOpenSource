@@ -184,7 +184,7 @@
             return (this._margins) ? this._margins.top : 0;
         }
 
-        public function get _Str_25634():Boolean
+        public function get hasTextColor():Boolean
         {
             return !(this._textColor == null);
         }
