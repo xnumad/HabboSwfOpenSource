@@ -80,7 +80,7 @@
             if (_local_6 != null)
             {
                 _local_6.mouseThreshold = 0;
-                _local_6.addEventListener(WindowMouseEvent.CLICK, this._Str_23452);
+                _local_6.addEventListener(WindowMouseEvent.CLICK, this.onCloseButtonClicked);
                 _local_6.addEventListener(WindowMouseEvent.UP, this._Str_23294);
                 _local_6.addEventListener(WindowMouseEvent.DOWN, this._Str_22989);
                 _local_6.addEventListener(WindowMouseEvent.OVER, this._Str_25625);
@@ -333,7 +333,7 @@
             }
         }
 
-        private function _Str_23452(k:WindowMouseEvent):void
+        private function onCloseButtonClicked(k:WindowMouseEvent):void
         {
             if (this._widget != null)
             {
