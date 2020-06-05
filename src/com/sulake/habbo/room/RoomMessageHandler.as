@@ -16,7 +16,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8234;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8080;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ItemsEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8204;
@@ -195,7 +195,7 @@
                 k.addMessageEvent(new _Str_7527(this.onObjectUpdate));
                 k.addMessageEvent(new _Str_8234(this.onObjectDataUpdate));
                 k.addMessageEvent(new _Str_8080(this.onObjectsDataUpdate));
-                k.addMessageEvent(new _Str_4408(this.onObjectRemove));
+                k.addMessageEvent(new ObjectRemoveMessageEvent(this.onObjectRemove));
                 k.addMessageEvent(new ItemsEvent(this.onItems));
                 k.addMessageEvent(new _Str_7704(this.onItemAdd));
                 k.addMessageEvent(new _Str_8204(this.onItemRemove));
@@ -619,7 +619,7 @@
         {
             var parser:ObjectRemoveMessageParser;
             var id:int;
-            var objectRemoveEvent:_Str_4408 = (event as _Str_4408);
+            var objectRemoveEvent:ObjectRemoveMessageEvent = (event as ObjectRemoveMessageEvent);
             if (((objectRemoveEvent == null) || (objectRemoveEvent.getParser() == null)))
             {
                 return;

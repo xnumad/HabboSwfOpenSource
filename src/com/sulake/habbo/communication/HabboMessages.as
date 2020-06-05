@@ -433,7 +433,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
@@ -1227,7 +1227,7 @@
             INCOMING_PACKETS[2674] = _Str_9538;
             INCOMING_PACKETS[2690] = _Str_9455;
             INCOMING_PACKETS[2696] = _Str_7080;
-            INCOMING_PACKETS[2703] = _Str_4408;
+            INCOMING_PACKETS[2703] = ObjectRemoveMessageEvent;
             INCOMING_PACKETS[2704] = WhisperMessageEvent;
             INCOMING_PACKETS[2707] = _Str_8288;
             INCOMING_PACKETS[2710] = RoomDimmerPresetsEvent;

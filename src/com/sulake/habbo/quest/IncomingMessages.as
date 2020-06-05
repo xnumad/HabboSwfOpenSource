@@ -8,7 +8,7 @@
     import com.sulake.habbo.communication.messages.incoming.quest.SeasonalQuestsMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.CompetitionEntrySubmitResultEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomEntryInfoMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.game.lobby.AchievementResolutionProgressMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.competition.CompetitionVotingInfoMessageEvent;
@@ -61,7 +61,7 @@
             _local_2.addHabboConnectionMessageEvent(new SeasonalQuestsMessageEvent(this._Str_12986));
             _local_2.addHabboConnectionMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             _local_2.addHabboConnectionMessageEvent(new CompetitionEntrySubmitResultEvent(this._Str_17737));
-            _local_2.addHabboConnectionMessageEvent(new _Str_4408(this._Str_19159));
+            _local_2.addHabboConnectionMessageEvent(new ObjectRemoveMessageEvent(this._Str_19159));
             _local_2.addHabboConnectionMessageEvent(new RoomEntryInfoMessageEvent(this.onRoomEnter));
             _local_2.addHabboConnectionMessageEvent(new AchievementResolutionProgressMessageEvent(this._Str_23911));
             _local_2.addHabboConnectionMessageEvent(new CompetitionVotingInfoMessageEvent(this._Str_16392));

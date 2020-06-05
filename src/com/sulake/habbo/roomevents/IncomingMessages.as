@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredConditionDataEvent;
     import com.sulake.habbo.communication.messages.incoming.room.session.CloseConnectionMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredSavedEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4408;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents.WiredEffectDataEvent;
     import com.sulake.habbo.communication.messages.incoming.userdefinedroomevents._Str_7323;
     import com.sulake.habbo.communication.messages.incoming.handshake.UserObjectEvent;
@@ -41,7 +41,7 @@
             this.addMessageEvent(new WiredConditionDataEvent(this._Str_23144));
             this.addMessageEvent(new CloseConnectionMessageEvent(this.onRoomExit));
             this.addMessageEvent(new WiredSavedEvent(this._Str_25470));
-            this.addMessageEvent(new _Str_4408(this.onObjectRemove));
+            this.addMessageEvent(new ObjectRemoveMessageEvent(this.onObjectRemove));
             this.addMessageEvent(new WiredEffectDataEvent(this._Str_23979));
             this.addMessageEvent(new _Str_7323(this._Str_25729));
             this.addMessageEvent(new UserObjectEvent(this.onUserObject));
@@ -89,7 +89,7 @@
 
         private function onObjectRemove(k:IMessageEvent):void
         {
-            var _local_2:ObjectRemoveMessageParser = (k as _Str_4408).getParser();
+            var _local_2:ObjectRemoveMessageParser = (k as ObjectRemoveMessageEvent).getParser();
             Logger.log(((("Received object remove event: " + _local_2.id) + ", ") + _local_2.isExpired));
             this._roomEvents._Str_7247._Str_25654(_local_2.id);
         }
