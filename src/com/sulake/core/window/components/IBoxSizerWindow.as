@@ -8,7 +8,7 @@
         function setVerticalPadding(_arg_1:int):void;
         function setSpacing(_arg_1:int):void;
         function setVertical(_arg_1:Boolean):void;
-        function _Str_18113(_arg_1:Boolean):void;
+        function setAutoRearrange(_arg_1:Boolean):void;
         function _Str_22747():Boolean;
     }
 }

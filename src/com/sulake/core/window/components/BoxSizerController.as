@@ -218,7 +218,7 @@
             this._Str_7516();
         }
 
-        public function _Str_18113(k:Boolean):void
+        public function setAutoRearrange(k:Boolean):void
         {
             this._autoArrange = k;
             if (k)

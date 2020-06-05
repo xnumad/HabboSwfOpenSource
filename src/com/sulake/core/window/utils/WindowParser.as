@@ -354,7 +354,7 @@
                 _local_21 = _local_20.length();
                 if ((_local_4 is IBoxSizerWindow))
                 {
-                    IBoxSizerWindow(_local_4)._Str_18113(false);
+                    IBoxSizerWindow(_local_4).setAutoRearrange(false);
                 }
                 _local_23 = 0;
                 while (_local_23 < _local_21)
@@ -365,7 +365,7 @@
             }
             if ((_local_4 is IBoxSizerWindow))
             {
-                IBoxSizerWindow(_local_4)._Str_18113(true);
+                IBoxSizerWindow(_local_4).setAutoRearrange(true);
             }
             return _local_4;
         }
