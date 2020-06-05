@@ -254,7 +254,7 @@
                 }
                 IRegionWindow(_local_4.findChildByName("avatar_click_region"))._Str_2613 = _local_3.name;
                 this._avatarList.addChild(_local_4);
-                this._Str_7204();
+                this.refreshAvatarList();
             }
             if (((_arg_2) || (!(this.isOpen))))
             {
@@ -315,7 +315,7 @@
             setAvatarVisibilityTag(this.getAvatarWrapper(k), true);
             this.setChatIndicatorVisibility(k, false);
             this.refreshConversationList();
-            this._Str_7204();
+            this.refreshAvatarList();
             var _local_2:IFriend = this._messenger.getFriend(this._currentConversationId);
             var _local_3:String = ((_local_2 != null) ? _local_2.name : "");
             this._frame.findChildByName("separator_label").visible = ((this._currentConversationId < 0) || (!(_local_2 == null)));
@@ -457,7 +457,7 @@
             if (_local_5 != null)
             {
                 setAvatarVisibilityTag(_local_5, true);
-                this._Str_7204();
+                this.refreshAvatarList();
             }
             if (k == this._currentConversationId)
             {
@@ -496,7 +496,7 @@
                         this.recordChatEntry(_local_3._Str_20358, _local_3._Str_24552, _local_3._Str_24452);
                     }
                     this.refreshConversationList();
-                    this._Str_7204();
+                    this.refreshAvatarList();
                     this._messenger.events.dispatchEvent(new NewMessageEvent(true, _local_2));
                 }
                 this._pendingMessages = new Array();
@@ -696,7 +696,7 @@
             this._populatingList = false;
         }
 
-        private function _Str_7204():void
+        private function refreshAvatarList():void
         {
             var _local_3:IWindow;
             var _local_4:Boolean;
@@ -766,7 +766,7 @@
                     if (_arg_2 == this._frame)
                     {
                         this.adjustListItemWidths();
-                        this._Str_7204();
+                        this.refreshAvatarList();
                     }
                     return;
                 case WindowEvent.WINDOW_EVENT_RELOCATED:
@@ -785,14 +785,14 @@
                             if (this._avatarListPosition > 0)
                             {
                                 this._avatarListPosition--;
-                                this._Str_7204();
+                                this.refreshAvatarList();
                             }
                             break;
                         case "avatars_scroll_right":
                             if (this._avatarListLastNotShown)
                             {
                                 this._avatarListPosition++;
-                                this._Str_7204();
+                                this.refreshAvatarList();
                             }
                             break;
                         case "close_conversation_button":
