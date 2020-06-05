@@ -93,7 +93,7 @@
             k._Str_2309.alwaysShowSelection = _arg_2;
         }
 
-        private static function _Str_16361(k:TextController, _arg_2:String):void
+        private static function setAutoSize(k:TextController, _arg_2:String):void
         {
             var _local_3:TextFormat;
             if (_arg_2 != k._Str_4318)
@@ -587,7 +587,7 @@
             k[PropertyKeys.MAX_LINES] = _Str_16363;
             k[PropertyKeys.LEADING] = _Str_18703;
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
-            k[PropertyKeys.AUTO_SIZE] = _Str_16361;
+            k[PropertyKeys.AUTO_SIZE] = setAutoSize;
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = _Str_24930;
             k[PropertyKeys.TEXT_COLOR] = _Str_18306;
             k[PropertyKeys.TEXT_STYLE] = _Str_25567;
@@ -826,7 +826,7 @@
 
         public function set autoSize(k:String):void
         {
-            _Str_16361(this, k);
+            setAutoSize(this, k);
         }
 
         public function set bold(k:Boolean):void
