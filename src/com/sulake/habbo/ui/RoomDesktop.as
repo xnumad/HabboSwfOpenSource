@@ -1306,7 +1306,7 @@
             return ((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager.isAnyRoomController)) || (this.isOwnerOfFurniture(this._roomEngine.getRoomObject(k, _arg_2, _arg_3)));
         }
 
-        public function _Str_9500(k:RoomEngineEvent):void
+        public function roomEngineEventHandler(k:RoomEngineEvent):void
         {
             var _local_2:RoomWidgetUpdateEvent;
             switch (k.type)

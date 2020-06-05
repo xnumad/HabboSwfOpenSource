@@ -175,22 +175,22 @@
                 _roomEngine = k;
             }, true, [{
                 "type":RoomEngineEvent.ENGINE_INITIALIZED,
-                "callback":this._Str_9500
+                "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineEvent.INITIALIZED,
                 "callback":this._Str_9331
             }, {
                 "type":RoomEngineEvent.OBJECTS_INITIALIZED,
-                "callback":this._Str_9500
+                "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineEvent.DISPOSED,
                 "callback":this._Str_9331
             }, {
                 "type":RoomEngineEvent.NORMAL_MODE,
-                "callback":this._Str_9500
+                "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineEvent.GAME_MODE,
-                "callback":this._Str_9500
+                "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR,
                 "callback":this._Str_9331
@@ -852,7 +852,7 @@
             }
         }
 
-        private function _Str_9500(k:RoomEngineEvent):void
+        private function roomEngineEventHandler(k:RoomEngineEvent):void
         {
             var _local_2:String;
             var _local_3:RoomDesktop;
@@ -863,7 +863,7 @@
                 _local_3 = (this.getDesktop(_local_2) as RoomDesktop);
                 if (_local_3 != null)
                 {
-                    _local_3._Str_9500(k);
+                    _local_3.roomEngineEventHandler(k);
                 }
             }
             if (k.roomId == this._interstitialRoomId)
