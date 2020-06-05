@@ -569,7 +569,7 @@
             this.addMessageEvent(new _Str_6344(this._Str_23861));
             this.addMessageEvent(new ActivityPointsEvent(this._Str_4970));
             this.addMessageEvent(new _Str_5264(this._Str_12366));
-            this.addMessageEvent(new UserCreditsEvent(this._Str_7504));
+            this.addMessageEvent(new UserCreditsEvent(this.onCreditBalance));
             this.addMessageEvent(new GuildMembershipsMessageEvent(this._Str_24089));
             this.addMessageEvent(new _Str_5425(this._Str_18504));
             this.addMessageEvent(new _Str_7706(this._Str_23194));
@@ -2024,7 +2024,7 @@
             this._catalogViewer.dispatchWidgetEvent(new CatalogWidgetApproveNameResultEvent(_local_2.result, _local_2.nameValidationInfo));
         }
 
-        private function _Str_7504(k:IMessageEvent):void
+        private function onCreditBalance(k:IMessageEvent):void
         {
             var _local_2:UserCreditsEvent = (k as UserCreditsEvent);
             var _local_3:UserCreditsMessageParser = _local_2.getParser();

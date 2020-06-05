@@ -201,7 +201,7 @@
             k.addEventListener(_Str_3963.RWSUE_SETTINGS, this._Str_21972);
             k.addEventListener(_Str_3950.HHTPNUFWE_AE_STARTED, this._Str_14073);
             k.addEventListener(_Str_3950.HHTPNUFWE_AE_HIGHLIGHT, this._Str_14073);
-            k.addEventListener(_Str_4656.RWPUE_CREDIT_BALANCE, this._Str_7504);
+            k.addEventListener(_Str_4656.RWPUE_CREDIT_BALANCE, this.onCreditBalance);
             k.addEventListener(_Str_3345.RWREUE_NORMAL_MODE, this._Str_21253);
             k.addEventListener(_Str_3345.RWREUE_GAME_MODE, this._Str_21709);
             super.registerUpdateEvents(k);
@@ -225,7 +225,7 @@
             k.removeEventListener(_Str_3963.RWSUE_SETTINGS, this._Str_21972);
             k.removeEventListener(_Str_3950.HHTPNUFWE_AE_HIGHLIGHT, this._Str_14073);
             k.removeEventListener(_Str_3950.HHTPNUFWE_AE_STARTED, this._Str_14073);
-            k.removeEventListener(_Str_4656.RWPUE_CREDIT_BALANCE, this._Str_7504);
+            k.removeEventListener(_Str_4656.RWPUE_CREDIT_BALANCE, this.onCreditBalance);
             k.removeEventListener(_Str_3345.RWREUE_NORMAL_MODE, this._Str_21253);
             k.removeEventListener(_Str_3345.RWREUE_NORMAL_MODE, this._Str_21709);
         }
@@ -381,7 +381,7 @@
             }
         }
 
-        private function _Str_7504(k:_Str_4656):void
+        private function onCreditBalance(k:_Str_4656):void
         {
             if (k == null)
             {

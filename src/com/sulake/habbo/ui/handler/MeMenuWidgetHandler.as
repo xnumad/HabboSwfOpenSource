@@ -107,7 +107,7 @@
                 }
                 if ((((this._container.catalog) && (!(this._container.catalog.disposed))) && (this._container.catalog.events)))
                 {
-                    this._container.catalog.events.removeEventListener(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._Str_7504);
+                    this._container.catalog.events.removeEventListener(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this.onCreditBalance);
                 }
                 if ((((this._container.messenger) && (!(this._container.messenger.disposed))) && (this._container.messenger.events)))
                 {
@@ -139,7 +139,7 @@
             this._catalog = this._container.catalog;
             if (this._container.catalog != null)
             {
-                this._container.catalog.events.addEventListener(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this._Str_7504);
+                this._container.catalog.events.addEventListener(PurseEvent.CATALOG_PURSE_CREDIT_BALANCE, this.onCreditBalance);
             }
             if ((((this._container.messenger) && (!(this._container.messenger.disposed))) && (this._container.messenger.events)))
             {
@@ -459,7 +459,7 @@
             }
         }
 
-        private function _Str_7504(k:PurseEvent):void
+        private function onCreditBalance(k:PurseEvent):void
         {
             if ((((k == null) || (this._container == null)) || (this._container.events == null)))
             {
