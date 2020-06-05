@@ -28,7 +28,7 @@
         protected var _Str_3472:Number;
         protected var _container:IWindowContainer;
         protected var _Str_16905:Boolean = false;
-        protected var _Str_4816:Boolean = false;
+        protected var _updating:Boolean = false;
         protected var _Str_2981:int;
         protected var _Str_2803:Boolean = false;
         protected var _Str_7087:Number = -1;
@@ -300,7 +300,7 @@
 
         public function addListItem(k:IWindow):IWindow
         {
-            this._Str_4816 = true;
+            this._updating = true;
             if (this._Str_2803)
             {
                 k.x = (this._Str_3673 + ((this.numListItems > 0) ? this._Str_2981 : 0));
@@ -321,7 +321,7 @@
                 this._container.height = this._Str_3472;
             }
             k = this._container.addChild(k);
-            this._Str_4816 = false;
+            this._updating = false;
             return k;
         }
 
@@ -402,23 +402,23 @@
 
         public function removeListItems():void
         {
-            this._Str_4816 = true;
+            this._updating = true;
             while (this.numListItems > 0)
             {
                 this._container.removeChildAt(0);
             }
-            this._Str_4816 = false;
+            this._updating = false;
             this._Str_4024();
         }
 
         public function destroyListItems():void
         {
-            this._Str_4816 = true;
+            this._updating = true;
             while (this.numListItems > 0)
             {
                 this._container.removeChildAt(0).destroy();
             }
-            this._Str_4816 = false;
+            this._updating = false;
             this._Str_4024();
         }
 
@@ -567,9 +567,9 @@
             var _local_2:IWindow;
             var _local_3:int;
             var _local_4:uint;
-            if ((((this._Str_9264) && (!(this._Str_4816))) && (this._container)))
+            if ((((this._Str_9264) && (!(this._updating))) && (this._container)))
             {
-                this._Str_4816 = true;
+                this._updating = true;
                 k = this._container.numChildren;
                 if (this._Str_2803)
                 {
@@ -645,7 +645,7 @@
                 }
                 this._container.height = this._Str_3472;
                 this._container.width = this._Str_3673;
-                this._Str_4816 = false;
+                this._updating = false;
             }
         }
 

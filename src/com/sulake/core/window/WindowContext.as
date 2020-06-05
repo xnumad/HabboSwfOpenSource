@@ -65,7 +65,7 @@
         protected var _desktopWindow:IDesktopWindow;
         protected var _substituteParent:SubstituteParentController;
         private var _disposed:Boolean = false;
-        private var _Str_4816:Boolean = false;
+        private var _updating:Boolean = false;
         private var _Str_21204:Boolean = false;
         private var _name:String;
         private var _configurationManager:IHabboConfigurationManager;
@@ -318,7 +318,7 @@
 			try
 			{
             var _local_2:Error;
-            this._Str_4816 = true;
+            this._updating = true;
             if (this._lastError)
             {
                 _local_2 = this._lastError;
@@ -331,7 +331,7 @@
 			{
 				Habbo.trackLoginStep("Error Updating WindowContext " + this._name + ": " + error.message + " | " + error.getStackTrace());
 			}
-            this._Str_4816 = false;
+            this._updating = false;
         }
 
         public function render(k:uint):void
