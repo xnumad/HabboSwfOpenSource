@@ -265,7 +265,7 @@
 
         public function addConsoleMessage(k:int, _arg_2:String, _arg_3:int, _arg_4:String):void
         {
-            this._Str_21468(k, _arg_2, true, _arg_3, _arg_4);
+            this.recordChatMessage(k, _arg_2, true, _arg_3, _arg_4);
         }
 
         public function addRoomInvite(k:int, _arg_2:String):void
@@ -357,7 +357,7 @@
             this._messenger._Str_23234(this._Str_9747);
         }
 
-        private function _Str_21468(k:int, _arg_2:String, _arg_3:Boolean, _arg_4:int, _arg_5:String=null):void
+        private function recordChatMessage(k:int, _arg_2:String, _arg_3:Boolean, _arg_4:int, _arg_5:String=null):void
         {
             if (_arg_3)
             {
@@ -834,7 +834,7 @@
             {
                 this._messenger._Str_24965();
             }
-            this._Str_21468(this._currentConversationId, this._Str_25699(_arg_2), false, 0);
+            this.recordChatMessage(this._currentConversationId, this._Str_25699(_arg_2), false, 0);
         }
 
         private function _Str_25699(k:String):String
