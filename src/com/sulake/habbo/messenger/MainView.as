@@ -312,7 +312,7 @@
         private function selectConversation(k:int):void
         {
             this._currentConversationId = k;
-            setAvatarVisibilityTag(this._Str_12553(k), true);
+            setAvatarVisibilityTag(this.getAvatarWrapper(k), true);
             this._Str_20231(k, false);
             this._Str_21370();
             this._Str_7204();
@@ -326,7 +326,7 @@
 
         public function hideConversation(k:int):void
         {
-            var _local_2:IWindow = this._Str_12553(k);
+            var _local_2:IWindow = this.getAvatarWrapper(k);
             if (_local_2 != null)
             {
                 setAvatarVisibilityTag(_local_2, false);
@@ -453,7 +453,7 @@
                 }
             }
             _local_4.push(_arg_2);
-            var _local_5:IWindowContainer = this._Str_12553(k);
+            var _local_5:IWindowContainer = this.getAvatarWrapper(k);
             if (_local_5 != null)
             {
                 setAvatarVisibilityTag(_local_5, true);
@@ -504,14 +504,14 @@
             }
         }
 
-        private function _Str_12553(k:int):IWindowContainer
+        private function getAvatarWrapper(k:int):IWindowContainer
         {
             return this._avatarList.getChildByID(k) as IWindowContainer;
         }
 
         private function _Str_20231(k:int, _arg_2:Boolean):void
         {
-            var _local_3:IWindowContainer = this._Str_12553(k);
+            var _local_3:IWindowContainer = this.getAvatarWrapper(k);
             if (_local_3 != null)
             {
                 _local_3.findChildByName("chat_indicator").visible = _arg_2;
