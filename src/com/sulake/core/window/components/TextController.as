@@ -176,7 +176,7 @@
             k._Str_3808.fontFamily = _arg_2;
         }
 
-        private static function _Str_16385(k:TextController, _arg_2:uint):void
+        private static function setFontSize(k:TextController, _arg_2:uint):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.size = _arg_2;
@@ -571,7 +571,7 @@
             k[PropertyKeys.ETCHING_COLOR] = _Str_16906;
             k[PropertyKeys.ETCHING_POSITION] = _Str_18207;
             k[PropertyKeys.FONT_FACE] = setFontFace;
-            k[PropertyKeys.FONT_SIZE] = _Str_16385;
+            k[PropertyKeys.FONT_SIZE] = setFontSize;
             k[PropertyKeys.GRID_FIT_TYPE] = _Str_18868;
             k[PropertyKeys.ITALIC] = _Str_17524;
             k[PropertyKeys.KERNING] = _Str_18973;
@@ -861,7 +861,7 @@
 
         public function set fontSize(k:uint):void
         {
-            _Str_16385(this, k);
+            setFontSize(this, k);
         }
 
         public function set gridFitType(k:String):void
