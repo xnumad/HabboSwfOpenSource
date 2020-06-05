@@ -60,12 +60,12 @@
             super.properties = k;
         }
 
-        public function get _Str_6416():Boolean
+        public function get autoHideScrollBar():Boolean
         {
             return this._autoHideScrollBar;
         }
 
-        public function set _Str_6416(k:Boolean):void
+        public function set autoHideScrollBar(k:Boolean):void
         {
             this._autoHideScrollBar = k;
             this._Str_17242();

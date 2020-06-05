@@ -2,7 +2,7 @@
 {
     public interface IScrollableGridWindow extends IItemGridWindow 
     {
-        function set _Str_6416(_arg_1:Boolean):void;
-        function get _Str_6416():Boolean;
+        function set autoHideScrollBar(_arg_1:Boolean):void;
+        function get autoHideScrollBar():Boolean;
     }
 }

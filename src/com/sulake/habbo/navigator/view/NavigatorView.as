@@ -289,7 +289,7 @@
         private function _Str_7718():void
         {
             var k:IWindowContainer = IWindowContainer(this._habboNewNavigator.windowManager.buildFromXML(XML(this._habboNewNavigator.assets.getAssetByName("navigator_frame_2_xml").content)));
-            IScrollableListWindow(k.findChildByName("block_results"))._Str_6416 = false;
+            IScrollableListWindow(k.findChildByName("block_results")).autoHideScrollBar = false;
             var _local_2:IWindowContainer = IWindowContainer(k.findChildByName("navigator_entry_row_container"));
             this._Str_4128._Str_23915 = IWindowContainer(_local_2.clone());
             _local_2.destroy();
