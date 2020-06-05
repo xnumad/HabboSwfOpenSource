@@ -476,7 +476,7 @@
             return this._roomChatSettings;
         }
 
-        public function get _Str_22462():Boolean
+        public function get roomChatBorderLimited():Boolean
         {
             if (this._roomChatSettings)
             {

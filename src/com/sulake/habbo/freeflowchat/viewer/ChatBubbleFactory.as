@@ -189,7 +189,7 @@
             _local_8.chatItem = k;
             _local_8.style = _local_3;
             _local_8.face = _local_7;
-            _local_8._Str_19209(_local_5, ((k._Str_15133) ? uint(k._Str_15133) : _local_6), this._component._Str_22462);
+            _local_8._Str_19209(_local_5, ((k._Str_15133) ? uint(k._Str_15133) : _local_6), this._component.roomChatBorderLimited);
             _local_3.textFormat.color = _local_9;
             return _local_8;
         }
