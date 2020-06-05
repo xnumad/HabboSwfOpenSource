@@ -128,7 +128,7 @@
             k.color = _arg_2;
         }
 
-        private static function _Str_17644(k:TextController, _arg_2:Boolean):void
+        private static function setBold(k:TextController, _arg_2:Boolean):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.bold = _arg_2;
@@ -563,7 +563,7 @@
             k[PropertyKeys.ALWAYS_SHOW_SELECTION] = setAlwaysShowSelection;
             k["background"] = setTextBackground;
             k["background_color"] = setTextBackgroundColor;
-            k[PropertyKeys.BOLD] = _Str_17644;
+            k[PropertyKeys.BOLD] = setBold;
             k[PropertyKeys.BORDER] = _Str_18639;
             k[PropertyKeys.BORDER_COLOR] = _Str_18700;
             k[PropertyKeys.CONDENSE_WHITE] = _Str_23959;
@@ -831,7 +831,7 @@
 
         public function set bold(k:Boolean):void
         {
-            _Str_17644(this, k);
+            setBold(this, k);
         }
 
         public function set border(k:Boolean):void
