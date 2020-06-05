@@ -31,7 +31,7 @@
         protected var _updating:Boolean = false;
         protected var _spacing:int;
         protected var _horizontal:Boolean = false;
-        protected var _Str_7087:Number = -1;
+        protected var _scrollStepH:Number = -1;
         protected var _Str_7859:Number = -1;
         protected var _Str_9264:Boolean;
         protected var _Str_5418:Boolean;
@@ -175,9 +175,9 @@
 
         public function get scrollStepH():Number
         {
-            if (this._Str_7087 >= 0)
+            if (this._scrollStepH >= 0)
             {
-                return this._Str_7087;
+                return this._scrollStepH;
             }
             return (this._horizontal) ? (this._container.width / this.numListItems) : (0.1 * this._container.width);
         }
@@ -193,7 +193,7 @@
 
         public function set scrollStepH(k:Number):void
         {
-            this._Str_7087 = k;
+            this._scrollStepH = k;
         }
 
         public function set scrollStepV(k:Number):void
@@ -656,7 +656,7 @@
             k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._Str_9264));
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
             k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
-            k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._Str_7087));
+            k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._scrollStepH));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._Str_7859));
             return k;
         }
@@ -681,7 +681,7 @@
                         this._Str_9264 = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.SCROLL_STEP_HORIZONTAL:
-                        this._Str_7087 = (_local_2.value as Number);
+                        this._scrollStepH = (_local_2.value as Number);
                         break;
                     case PropertyKeys.SCROLL_STEP_VERTICAL:
                         this._Str_7859 = (_local_2.value as Number);

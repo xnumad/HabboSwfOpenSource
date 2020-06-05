@@ -81,9 +81,9 @@
 
         override public function get scrollStepH():Number
         {
-            if (_Str_7087 >= 0)
+            if (_scrollStepH >= 0)
             {
-                return _Str_7087;
+                return _scrollStepH;
             }
             return (_horizontal) ? (0.1 * visibleRegion.height) : (visibleRegion.width / this._Str_3080);
         }
