@@ -32,7 +32,7 @@
         private var _roomPopupCtrl:RoomPopupCtrl;
         private var _scrollV:IScrollbarWindow;
         protected var _userCountRenderer:UserCountRenderer;
-        private var _Str_12349:IWindowContainer;
+        private var _lastHilite:IWindowContainer;
         private var _Str_22153:int;
         private var _Str_19895:Boolean;
         private var _Str_21859:int;
@@ -367,12 +367,12 @@
         private function _Str_23553(k:IWindowContainer):void
         {
             var _local_2:int;
-            if (((!(this._Str_12349 == null)) && (!(this._Str_12349.disposed))))
+            if (((!(this._lastHilite == null)) && (!(this._lastHilite.disposed))))
             {
-                _local_2 = this._Str_12349.tags[0];
-                this._Str_12349.color = this.getBgColor(_local_2);
+                _local_2 = this._lastHilite.tags[0];
+                this._lastHilite.color = this.getBgColor(_local_2);
             }
-            this._Str_12349 = k;
+            this._lastHilite = k;
             k.color = 4288861930;
         }
 
