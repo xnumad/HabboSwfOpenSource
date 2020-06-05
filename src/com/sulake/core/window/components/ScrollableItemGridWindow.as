@@ -22,7 +22,7 @@
             this._Str_2734.scrollable = this._Str_2448;
             if (this._Str_2734.testStateFlag(WindowState.DISABLED))
             {
-                this._Str_7763();
+                this.hideScrollBar();
             }
         }
 
@@ -343,12 +343,12 @@
             {
                 if (k.type == WindowEvent.WINDOW_EVENT_DISABLED)
                 {
-                    this._Str_7763();
+                    this.hideScrollBar();
                 }
             }
         }
 
-        private function _Str_7763():void
+        private function hideScrollBar():void
         {
             if (this._Str_2734.visible)
             {
@@ -372,7 +372,7 @@
                 {
                     if (this._Str_2734.visible)
                     {
-                        this._Str_7763();
+                        this.hideScrollBar();
                     }
                 }
             }
