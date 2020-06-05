@@ -1387,7 +1387,7 @@
             this._roomCanvasWrapper.setDisplayObject(_local_6);
             if (this._session.isGameSession)
             {
-                _local_6.addEventListener(MouseEvent.CLICK, this._Str_23529);
+                _local_6.addEventListener(MouseEvent.CLICK, this.mouseEventHandler);
             }
             this.checkAndEnableMouseZoomEvent(_local_6);
             this._roomCanvasWrapper.addEventListener(WindowMouseEvent.CLICK, this.canvasMouseHandler);
@@ -1642,7 +1642,7 @@
             }
         }
 
-        private function _Str_23529(k:MouseEvent):void
+        private function mouseEventHandler(k:MouseEvent):void
         {
             var _local_2:Point = new Point();
             this._roomCanvasWrapper.getGlobalPosition(_local_2);
