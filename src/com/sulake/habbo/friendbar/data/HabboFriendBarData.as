@@ -355,7 +355,7 @@
         {
             if (this._habboFriendListComponent._Str_19440() != _Str_2777._Str_5722)
             {
-                this._habboFriendListComponent._Str_22200();
+                this._habboFriendListComponent.openFriendSearch();
             }
             else
             {

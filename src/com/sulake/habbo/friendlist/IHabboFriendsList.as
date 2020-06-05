@@ -14,7 +14,7 @@
         function getFriend(_arg_1:int):IFriend;
         function openFriendList():void;
         function openFriendRequests():void;
-        function _Str_22200():void;
+        function openFriendSearch():void;
         function close():void;
         function alignBottomLeftTo(_arg_1:Point):void;
         function isOpen():Boolean;

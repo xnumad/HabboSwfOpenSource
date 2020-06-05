@@ -305,7 +305,7 @@
             this._Str_17876(_Str_2777._Str_3798);
         }
 
-        public function _Str_22200():void
+        public function openFriendSearch():void
         {
             this._Str_17876(_Str_2777._Str_5722);
             SearchView(this._tabs._Str_4403(_Str_2777._Str_5722)._Str_4621).focus();
