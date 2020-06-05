@@ -52,7 +52,7 @@
         public var inputEventTrackers:Vector.<IInputEventTracker>;
         private var _linkEventTrackers:Vector.<ILinkEventTracker>;
         private var _eventProcessorState:EventProcessorState;
-        protected var _Str_2312:ICoreLocalizationManager;
+        protected var _localization:ICoreLocalizationManager;
         protected var _Str_2417:DisplayObjectContainer;
         protected var _Str_24909:Boolean = true;
         protected var _Str_1984:Error;
@@ -74,7 +74,7 @@
         {
             this._name = k;
             _renderer = _arg_2;
-            this._Str_2312 = _arg_6;
+            this._localization = _arg_6;
             this._configurationManager = _arg_7;
             this._Str_2417 = _arg_8;
             this._Str_11208 = new ServiceManager(this, _arg_8);
@@ -188,7 +188,7 @@
                 this._Str_14601.dispose();
                 this._Str_14601 = null;
                 _renderer = null;
-                this._Str_2312 = null;
+                this._localization = null;
                 this._Str_2417 = null;
                 this._Str_18011 = null;
                 this._widgetFactory = null;
@@ -259,12 +259,12 @@
 
         public function registerLocalizationListener(k:String, _arg_2:IWindow):void
         {
-            this._Str_2312.registerListener(k, (_arg_2 as ILocalizable));
+            this._localization.registerListener(k, (_arg_2 as ILocalizable));
         }
 
         public function removeLocalizationListener(k:String, _arg_2:IWindow):void
         {
-            this._Str_2312.removeListener(k, (_arg_2 as ILocalizable));
+            this._localization.removeListener(k, (_arg_2 as ILocalizable));
         }
 
         public function create(k:String, _arg_2:String, _arg_3:uint, _arg_4:uint, _arg_5:uint, _arg_6:Rectangle, _arg_7:Function, _arg_8:IWindow, _arg_9:uint, _arg_10:Array=null, _arg_11:String="", _arg_12:Array=null):IWindow
