@@ -36,7 +36,7 @@
         public function TextLabelController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             this._textStyleName = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
-            TextStyleManager.events.addEventListener(Event.CHANGE, this._Str_6721);
+            TextStyleManager.events.addEventListener(Event.CHANGE, this.onTextStyleChanged);
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
         }
 
@@ -267,7 +267,7 @@
         {
             if (!_disposed)
             {
-                TextStyleManager.events.removeEventListener(Event.CHANGE, this._Str_6721);
+                TextStyleManager.events.removeEventListener(Event.CHANGE, this.onTextStyleChanged);
                 if (this._localized)
                 {
                     this._localized = false;
@@ -372,7 +372,7 @@
             this.refresh();
         }
 
-        private function _Str_6721(k:Event):void
+        private function onTextStyleChanged(k:Event):void
         {
             this.refresh();
         }

@@ -72,7 +72,7 @@
             this._Str_4040 = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             setTextFormatting(this);
-            TextStyleManager.events.addEventListener(Event.CHANGE, this._Str_6721);
+            TextStyleManager.events.addEventListener(Event.CHANGE, this.onTextStyleChanged);
             if (this._Str_2309.autoSize == TextFieldAutoSize.NONE)
             {
                 this._Str_2309.width = _w;
@@ -1148,7 +1148,7 @@
         override public function dispose():void
         {
             immediateClickMode = false;
-            TextStyleManager.events.removeEventListener(Event.CHANGE, this._Str_6721);
+            TextStyleManager.events.removeEventListener(Event.CHANGE, this.onTextStyleChanged);
             if (this._Str_2959)
             {
                 context.removeLocalizationListener(_caption.slice(2, _caption.indexOf("}")), this);
@@ -1380,7 +1380,7 @@
             this.refreshTextImage();
         }
 
-        private function _Str_6721(k:Event):void
+        private function onTextStyleChanged(k:Event):void
         {
             setTextFormatting(this);
             this.refreshTextImage();

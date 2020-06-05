@@ -21,7 +21,7 @@
         {
             if (_Str_1229 == null)
             {
-                TextStyleManager.events.addEventListener(Event.CHANGE, this._Str_6721);
+                TextStyleManager.events.addEventListener(Event.CHANGE, this.onTextStyleChanged);
             }
         }
 
@@ -109,13 +109,13 @@
 
         public function dispose():void
         {
-            TextStyleManager.events.removeEventListener(Event.CHANGE, this._Str_6721);
+            TextStyleManager.events.removeEventListener(Event.CHANGE, this.onTextStyleChanged);
             _Str_9479.reset();
             _Str_1229 = null;
             this._disposed = true;
         }
 
-        private function _Str_6721(k:Event):void
+        private function onTextStyleChanged(k:Event):void
         {
             _Str_9479.reset();
         }
