@@ -10,7 +10,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7777;
     import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.FurnitureAliasesMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7849;
     import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
@@ -189,7 +189,7 @@
                 k.addMessageEvent(new HeightMapEvent(this.onHeightMap));
                 k.addMessageEvent(new _Str_7777(this.onHeightMapUpdate));
                 k.addMessageEvent(new RoomVisualizationSettingsEvent(this.onRoomVisualizationSettings));
-                k.addMessageEvent(new _Str_6253(this.onFurnitureAliases));
+                k.addMessageEvent(new FurnitureAliasesMessageEvent(this.onFurnitureAliases));
                 k.addMessageEvent(new _Str_7849(this.onObjects));
                 k.addMessageEvent(new ObjectAddMessageEvent(this.onObjectAdd));
                 k.addMessageEvent(new _Str_7527(this.onObjectUpdate));
@@ -273,7 +273,7 @@
 
         private function onFurnitureAliases(k:IMessageEvent):void
         {
-            var _local_2:_Str_6253;
+            var _local_2:FurnitureAliasesMessageEvent;
             var _local_3:FurnitureAliasesMessageParser;
             var _local_4:int;
             var _local_5:int;
@@ -281,7 +281,7 @@
             var _local_7:String;
             if (this._roomCreator != null)
             {
-                _local_2 = (k as _Str_6253);
+                _local_2 = (k as FurnitureAliasesMessageEvent);
                 if (((_local_2 == null) || (_local_2.getParser() == null)))
                 {
                     return;

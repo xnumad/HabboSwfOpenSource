@@ -436,7 +436,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.UserRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.FurnitureAliasesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7291;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
@@ -1097,7 +1097,7 @@
             INCOMING_PACKETS[1702] = HabboGroupDetailsMessageEvent;
             INCOMING_PACKETS[1715] = UnloadGameMessageEvent;
             INCOMING_PACKETS[1717] = UserTypingMessageEvent;
-            INCOMING_PACKETS[1723] = _Str_6253;
+            INCOMING_PACKETS[1723] = FurnitureAliasesMessageEvent;
             INCOMING_PACKETS[1730] = _Str_16653;
             INCOMING_PACKETS[1745] = CurrentTimingCodeMessageEvent;
             INCOMING_PACKETS[1746] = _Str_7734;
