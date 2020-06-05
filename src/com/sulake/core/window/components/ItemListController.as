@@ -21,7 +21,7 @@
     public class ItemListController extends WindowController implements IItemListWindow, IInputProcessorRoot 
     {
         private var _disableAutoDrag:Boolean = false;
-        private var _Str_17945:Boolean = false;
+        private var _isPartOfGridWindow:Boolean = false;
         protected var _Str_6178:Number;
         protected var _Str_5996:Number;
         protected var _Str_3673:Number;
@@ -101,12 +101,12 @@
 
         public function get _Str_8004():Boolean
         {
-            return this._Str_17945;
+            return this._isPartOfGridWindow;
         }
 
         public function set _Str_8004(k:Boolean):void
         {
-            this._Str_17945 = k;
+            this._isPartOfGridWindow = k;
         }
 
         public function get scrollableWindow():IWindow
@@ -488,7 +488,7 @@
                     {
                         this.scrollV = (this.scrollV - ((_local_5 * this.scrollStepV) / this.maxScrollV));
                     }
-                    _local_2 = (!(this._Str_17945));
+                    _local_2 = (!(this._isPartOfGridWindow));
                     break;
                 case WindowMouseEvent.DOWN:
                     this._Str_19352 = _local_3;
