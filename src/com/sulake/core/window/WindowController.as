@@ -630,7 +630,7 @@
             return this._graphics;
         }
 
-        public function _Str_26385():void
+        public function releaseGraphicsContext():void
         {
             this._forceGraphicContexts = false;
             if (this._graphics)
