@@ -117,7 +117,7 @@
             return _local_6;
         }
 
-        public function _Str_24018(k:String, _arg_2:IWindow):Boolean
+        public function addWidgetWindow(k:String, _arg_2:IWindow):Boolean
         {
             if (_arg_2 == null)
             {

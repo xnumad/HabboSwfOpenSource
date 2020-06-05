@@ -968,7 +968,7 @@
             }
             else
             {
-                this._layoutManager._Str_24018(k, _local_2.mainWindow);
+                this._layoutManager.addWidgetWindow(k, _local_2.mainWindow);
             }
             if (_local_3)
             {
