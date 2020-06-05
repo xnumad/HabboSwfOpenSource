@@ -7,7 +7,7 @@
     {
         private var _wrappingEnabled:Boolean;
         private var _wrappingPrice:int;
-        private var _Str_5208:Array;
+        private var _stuffTypes:Array;
         private var _Str_3691:Array;
         private var _Str_4062:Array;
         private var _Str_8259:Array;
@@ -25,7 +25,7 @@
 
         public function get stuffTypes():Array
         {
-            return this._Str_5208;
+            return this._stuffTypes;
         }
 
         public function get boxTypes():Array
@@ -51,7 +51,7 @@
         public function parse(k:IMessageDataWrapper):Boolean
         {
             var _local_2:int;
-            this._Str_5208 = [];
+            this._stuffTypes = [];
             this._Str_3691 = [];
             this._Str_4062 = [];
             this._Str_8259 = [];
@@ -61,7 +61,7 @@
             _local_2 = 0;
             while (_local_2 < _local_3)
             {
-                this._Str_5208.push(k.readInteger());
+                this._stuffTypes.push(k.readInteger());
                 _local_2++;
             }
             _local_3 = k.readInteger();
