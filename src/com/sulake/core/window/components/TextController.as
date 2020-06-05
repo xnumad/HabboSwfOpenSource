@@ -32,7 +32,7 @@
 
     public class TextController extends WindowController implements ITextWindow, ITextFieldContainer, ILocalizable 
     {
-        private static const _Str_15102:Array = ["a", "B", "c", "D", "e"];
+        private static const REPLACE_RANDOM_CHARS:Array = ["a", "B", "c", "D", "e"];
         protected static const _Str_13927:Dictionary = _Str_19301();
 
         private var _Str_16655:String = "";
@@ -1068,7 +1068,7 @@
                 _local_8 = k.charAt(_local_7);
                 if ((((!(_local_4.hasGlyphs(_local_8))) && (!(_local_8 == "\r"))) && (!(_local_8 == "\n"))))
                 {
-                    _local_6 = (_local_6 + _Str_15102[Math.floor((Math.random() * _Str_15102.length))]);
+                    _local_6 = (_local_6 + REPLACE_RANDOM_CHARS[Math.floor((Math.random() * REPLACE_RANDOM_CHARS.length))]);
                 }
                 else
                 {
