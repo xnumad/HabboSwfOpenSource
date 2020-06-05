@@ -1629,7 +1629,7 @@
             return _local_4;
         }
 
-        public function _Str_26170():Boolean
+        public function isCapableOfUsingSharedGraphicContext():Boolean
         {
             return true;
         }
