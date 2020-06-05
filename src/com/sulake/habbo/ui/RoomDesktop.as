@@ -1180,13 +1180,13 @@
                     _local_4 = new RoomWidgetRoomObjectUpdateEvent(RoomWidgetRoomObjectUpdateEvent.OBJECT_ROLL_OUT, _local_2, _local_3, k.roomId);
                     break;
                 case RoomEngineObjectEvent.REQUEST_MOVE:
-                    if (this._Str_21292(k.roomId, k.objectId, k.category))
+                    if (this.checkFurniManipulationRights(k.roomId, k.objectId, k.category))
                     {
                         this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_MOVE);
                     }
                     break;
                 case RoomEngineObjectEvent.REQUEST_ROTATE:
-                    if (this._Str_21292(k.roomId, k.objectId, k.category))
+                    if (this.checkFurniManipulationRights(k.roomId, k.objectId, k.category))
                     {
                         this._roomEngine.updateObjectWallItemData(k.objectId, k.category, RoomObjectOperationEnum.OBJECT_ROTATE_POSITIVE);
                     }
@@ -1301,7 +1301,7 @@
             }
         }
 
-        private function _Str_21292(k:int, _arg_2:int, _arg_3:int):Boolean
+        private function checkFurniManipulationRights(k:int, _arg_2:int, _arg_3:int):Boolean
         {
             return ((this._session.roomControllerLevel >= RoomControllerLevel.GUEST) || (this._sessionDataManager.isAnyRoomController)) || (this.isOwnerOfFurniture(this._roomEngine.getRoomObject(k, _arg_2, _arg_3)));
         }
