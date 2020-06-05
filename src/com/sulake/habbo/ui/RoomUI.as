@@ -484,7 +484,7 @@
                 "callback":this._Str_24565
             }, {
                 "type":InterstitialEvent.INTERSTITIAL_SHOW,
-                "callback":this._Str_25109
+                "callback":this.interstitialShowEventHandler
             }, {
                 "type":AdEvent.ROOM_AD_SHOW,
                 "callback":this._Str_24555
@@ -758,7 +758,7 @@
             });
         }
 
-        private function _Str_25109(k:InterstitialEvent):void
+        private function interstitialShowEventHandler(k:InterstitialEvent):void
         {
             var _local_2:String = this.getRoomIdentifier(this._interstitialRoomId);
             var _local_3:RoomDesktop = (this.getDesktop(_local_2) as RoomDesktop);
