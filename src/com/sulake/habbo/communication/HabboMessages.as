@@ -434,7 +434,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.RoomVisualizationSettingsEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FloorHeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectRemoveMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.UserRemoveMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5843;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6253;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
@@ -1221,7 +1221,7 @@
             INCOMING_PACKETS[2624] = LoadGameUrlMessageEvent;
             INCOMING_PACKETS[2641] = _Str_11645;
             INCOMING_PACKETS[265] = GuildMembershipUpdatedMessageEvent;
-            INCOMING_PACKETS[2661] = _Str_4914;
+            INCOMING_PACKETS[2661] = UserRemoveMessageEvent;
             INCOMING_PACKETS[2665] = QuestionEvent;
             INCOMING_PACKETS[2668] = _Str_17379;
             INCOMING_PACKETS[2674] = _Str_9538;

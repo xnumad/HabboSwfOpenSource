@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.session.handler
 {
     import com.sulake.habbo.communication.messages.incoming.room.engine.UsersEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_4914;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.UserRemoveMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.users.UserBadgesEvent;
     import com.sulake.habbo.communication.messages.incoming.navigator._Str_4129;
     import com.sulake.habbo.communication.messages.incoming.room.engine.UserChangeMessageEvent;
@@ -76,7 +76,7 @@
                 return;
             }
             k.addMessageEvent(new UsersEvent(this._Str_10523));
-            k.addMessageEvent(new _Str_4914(this.onUserRemove));
+            k.addMessageEvent(new UserRemoveMessageEvent(this.onUserRemove));
             k.addMessageEvent(new UserBadgesEvent(this.onUserBadges));
             k.addMessageEvent(new _Str_4129(this.onDoorbell));
             k.addMessageEvent(new UserChangeMessageEvent(this.onUserChange));
@@ -176,7 +176,7 @@
 
         private function onUserRemove(k:IMessageEvent):void
         {
-            var _local_2:_Str_4914 = (k as _Str_4914);
+            var _local_2:UserRemoveMessageEvent = (k as UserRemoveMessageEvent);
             if (_local_2 == null)
             {
                 return;
