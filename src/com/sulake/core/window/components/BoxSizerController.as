@@ -46,7 +46,7 @@
             }
             var k:IWindow;
             var _local_3:int = this.calculateSpaceForRelatives();
-            var _local_4:int = this._Str_22917();
+            var _local_4:int = this.getRelativeValuesSum();
             if (!this._vertical)
             {
                 for each (_local_2 in _children)
@@ -117,7 +117,7 @@
             return _local_2;
         }
 
-        private function _Str_22917():int
+        private function getRelativeValuesSum():int
         {
             var _local_2:IWindow;
             var k:int;
