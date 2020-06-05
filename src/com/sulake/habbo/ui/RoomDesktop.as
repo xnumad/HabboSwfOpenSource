@@ -1433,14 +1433,14 @@
 
         private function checkAndEnableMouseZoomEvent(k:DisplayObject):void
         {
-            k.removeEventListener(MouseEvent.MOUSE_WHEEL, this._Str_19200);
+            k.removeEventListener(MouseEvent.MOUSE_WHEEL, this.mouseWheelHandler);
             if (this._sessionDataManager.isPerkAllowed(PerkEnum.MOUSE_ZOOM))
             {
-                k.addEventListener(MouseEvent.MOUSE_WHEEL, this._Str_19200);
+                k.addEventListener(MouseEvent.MOUSE_WHEEL, this.mouseWheelHandler);
             }
         }
 
-        private function _Str_19200(k:MouseEvent):void
+        private function mouseWheelHandler(k:MouseEvent):void
         {
             var _local_2:Point;
             var _local_3:int;
