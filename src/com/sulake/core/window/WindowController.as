@@ -1210,7 +1210,7 @@
                         case WindowEvent.WINDOW_EVENT_CHILD_ADDED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
                             {
-                                this._Str_14067();
+                                this.scaleToAccommodateChildren();
                             }
                             else
                             {
@@ -1224,7 +1224,7 @@
                         case WindowEvent.WINDOW_EVENT_CHILD_REMOVED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
                             {
-                                this._Str_14067();
+                                this.scaleToAccommodateChildren();
                             }
                             break;
                         case WindowEvent.WINDOW_EVENT_CHILD_ACTIVATED:
@@ -1233,7 +1233,7 @@
                         case WindowEvent.WINDOW_EVENT_CHILD_RESIZED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
                             {
-                                this._Str_14067();
+                                this.scaleToAccommodateChildren();
                             }
                             else
                             {
@@ -1246,7 +1246,7 @@
                         case WindowEvent.WINDOW_EVENT_CHILD_RELOCATED:
                             if (testParamFlag(WindowParam.WINDOW_PARAM_RESIZE_TO_ACCOMMODATE_CHILDREN))
                             {
-                                this._Str_14067();
+                                this.scaleToAccommodateChildren();
                             }
                             else
                             {
@@ -1654,7 +1654,7 @@
             this.setRectangle(_x, _y, (_w + k), (_h + _arg_2));
         }
 
-        public function _Str_14067():void
+        public function scaleToAccommodateChildren():void
         {
             var k:IWindow;
             var _local_8:Array;
