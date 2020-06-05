@@ -204,9 +204,9 @@
             }
         }
 
-        public function _Str_22190(k:String, _arg_2:Function):void
+        public function addListenerToStage(k:String, _arg_2:Function):void
         {
-            this._roomDesktop._Str_22190(k, _arg_2);
+            this._roomDesktop.addListenerToStage(k, _arg_2);
         }
 
         public function _Str_19098(k:String, _arg_2:Function):void

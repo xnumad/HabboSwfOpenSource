@@ -1569,7 +1569,7 @@
             return this._layoutManager.roomViewRect;
         }
 
-        public function _Str_22190(k:String, _arg_2:Function):void
+        public function addListenerToStage(k:String, _arg_2:Function):void
         {
             if ((((!(this._roomCanvasWrapper)) || (!(this._roomCanvasWrapper.getDisplayObject()))) || (!(this._roomCanvasWrapper.getDisplayObject().stage))))
             {
