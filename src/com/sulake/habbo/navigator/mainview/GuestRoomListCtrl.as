@@ -35,13 +35,13 @@
         private var _lastHilite:IWindowContainer;
         private var _lastMouseX:int;
         private var _fastHorizontalMove:Boolean;
-        private var _Str_21859:int;
+        private var _entryWidthAdjustment:int;
         private var _Str_16040:Boolean;
 
         public function GuestRoomListCtrl(k:HabboNavigator, _arg_2:int, _arg_3:Boolean):void
         {
             this._navigator = k;
-            this._Str_21859 = _arg_2;
+            this._entryWidthAdjustment = _arg_2;
             this._Str_16040 = _arg_3;
             this._roomPopupCtrl = new RoomPopupCtrl(this._navigator, 5, -5);
             this._userCountRenderer = new UserCountRenderer(this._navigator);
@@ -181,7 +181,7 @@
             }
             if (_local_5)
             {
-                _local_4.width = (_local_4.width + this._Str_21859);
+                _local_4.width = (_local_4.width + this._entryWidthAdjustment);
                 MainViewCtrl._Str_24055(this, _local_4);
             }
             return false;
