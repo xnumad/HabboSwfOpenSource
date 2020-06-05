@@ -23,7 +23,7 @@
         protected var _greyscale:Boolean;
         protected var _etchingColor:uint;
         protected var _etchingPoint:Point;
-        protected var _Str_13795:Boolean;
+        protected var _fitSizeToContents:Boolean;
         private var _Str_10479:Boolean;
         private var _Str_12136:Boolean;
 
@@ -126,12 +126,12 @@
 
         public function get fitSizeToContents():Boolean
         {
-            return this._Str_13795;
+            return this._fitSizeToContents;
         }
 
         public function set fitSizeToContents(k:Boolean):void
         {
-            this._Str_13795 = k;
+            this._fitSizeToContents = k;
             this._Str_8020();
         }
 
@@ -168,7 +168,7 @@
 
         protected function _Str_8020():void
         {
-            if (((this._Str_13795) && (!(this._bitmapData == null))))
+            if (((this._fitSizeToContents) && (!(this._bitmapData == null))))
             {
                 width = Math.abs((this._bitmapData.width * this._zoomX));
                 height = Math.abs((this._bitmapData.height * this._zoomY));
@@ -187,7 +187,7 @@
             k.push(createProperty(PropertyKeys.ZOOM_Y, this._zoomY));
             k.push(createProperty(PropertyKeys.GREYSCALE, this._greyscale));
             k.push(createProperty(PropertyKeys.ETCHING_COLOR, this._etchingColor));
-            k.push(createProperty(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._Str_13795));
+            k.push(createProperty(PropertyKeys.FIT_SIZE_TO_CONTENTS, this._fitSizeToContents));
             return k;
         }
 
