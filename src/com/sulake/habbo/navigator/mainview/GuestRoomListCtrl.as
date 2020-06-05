@@ -384,7 +384,7 @@
             this._fastHorizontalMove = (_local_3 > 2);
         }
 
-        public function get _Str_26238():RoomPopupCtrl
+        public function get roomPopupCtrl():RoomPopupCtrl
         {
             return this._roomPopupCtrl;
         }
