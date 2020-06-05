@@ -356,7 +356,7 @@
             {
                 return new Point(((this._component.displayObject.stage.stageWidth / 2) + Number(this._chatItem._Str_12917)), 500);
             }
-            return this._component._Str_21534(this._chatItem.roomId, this._chatItem._Str_20712);
+            return this._component.getScreenPointFromRoomLocation(this._chatItem.roomId, this._chatItem._Str_20712);
         }
 
         public function get roomId():int

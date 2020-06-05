@@ -380,7 +380,7 @@
             this._chatFlowViewer._Str_12872(chatBubble, insertPosition);
         }
 
-        public function _Str_21534(k:int, _arg_2:IVector3d):Point
+        public function getScreenPointFromRoomLocation(k:int, _arg_2:IVector3d):Point
         {
             var _local_8:Point;
             var _local_9:Point;
