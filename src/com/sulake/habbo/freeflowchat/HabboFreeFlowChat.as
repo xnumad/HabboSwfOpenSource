@@ -471,7 +471,7 @@
             }
         }
 
-        public function get _Str_7277():RoomChatSettings
+        public function get roomChatSettings():RoomChatSettings
         {
             return this._roomChatSettings;
         }

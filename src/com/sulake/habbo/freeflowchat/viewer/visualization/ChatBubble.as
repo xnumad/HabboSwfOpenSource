@@ -75,9 +75,9 @@
             }
             else
             {
-                if (_arg_6._Str_7277)
+                if (_arg_6.roomChatSettings)
                 {
-                    _local_10 = ChatBubbleWidth.fromValue(_arg_6._Str_7277.bubbleWidth);
+                    _local_10 = ChatBubbleWidth.fromValue(_arg_6.roomChatSettings.bubbleWidth);
                 }
             }
             _local_10 = (_local_10 - _Str_16761);

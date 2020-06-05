@@ -46,11 +46,11 @@
 
         public function _Str_18127():void
         {
-            if (this._component._Str_7277)
+            if (this._component.roomChatSettings)
             {
-                this._lineByLineMode = (this._component._Str_7277.mode == RoomChatSettings.CHAT_MODE_LINE_BY_LINE);
+                this._lineByLineMode = (this._component.roomChatSettings.mode == RoomChatSettings.CHAT_MODE_LINE_BY_LINE);
                 this._gravityEnabled = (!(this._lineByLineMode));
-                switch (this._component._Str_7277.scrollSpeed)
+                switch (this._component.roomChatSettings.scrollSpeed)
                 {
                     case RoomChatSettings.CHAT_SCROLL_SPEED_FAST:
                         this._scrollUpTimerDelay = 3000;
