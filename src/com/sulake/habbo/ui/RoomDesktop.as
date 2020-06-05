@@ -721,7 +721,7 @@
             }
         }
 
-        public function _Str_2548(k:String):void
+        public function createWidget(k:String):void
         {
             var _local_3:Boolean;
             var widgetHandler:IRoomWidgetHandler;
@@ -955,7 +955,7 @@
                     }
                 }
             }
-            _local_2 = this._roomWidgetFactory._Str_2548(k, widgetHandler);
+            _local_2 = this._roomWidgetFactory.createWidget(k, widgetHandler);
             if (_local_2 == null)
             {
                 return;

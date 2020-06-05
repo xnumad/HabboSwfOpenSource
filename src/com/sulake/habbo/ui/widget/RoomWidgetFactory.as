@@ -70,7 +70,7 @@
             this._roomUI = null;
         }
 
-        public function _Str_2548(k:String, _arg_2:IRoomWidgetHandler):IRoomWidget
+        public function createWidget(k:String, _arg_2:IRoomWidgetHandler):IRoomWidget
         {
             if (((this._roomUI == null) || (this._roomUI.windowManager == null)))
             {

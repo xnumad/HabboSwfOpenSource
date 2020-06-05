@@ -313,7 +313,7 @@
                     _local_3 = (k.getChildAt(_local_2) as IWindowContainer);
                     if (_local_3 != null)
                     {
-                        this._Str_2548(_local_3);
+                        this.createWidget(_local_3);
                         this._Str_20303(_local_3);
                     }
                     _local_2++;
@@ -321,7 +321,7 @@
             }
         }
 
-        private function _Str_2548(k:IWindowContainer):void
+        private function createWidget(k:IWindowContainer):void
         {
             if (k == null)
             {

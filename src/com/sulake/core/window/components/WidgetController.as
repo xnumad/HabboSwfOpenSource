@@ -60,7 +60,7 @@
                             removeChildAt(0);
                             this._widget.dispose();
                         }
-                        this._widget = this._Str_8197._Str_2548(String(_local_2.value), this);
+                        this._widget = this._Str_8197.createWidget(String(_local_2.value), this);
                         this._Str_9477 = _local_3;
                     }
                     break;

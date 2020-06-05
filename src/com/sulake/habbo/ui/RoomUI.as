@@ -927,7 +927,7 @@
                         this._roomEngine.setActiveRoom(k.roomId);
                     }
                     _local_3._Str_22861(RoomWidgetEnum.ROOM_QUEUE);
-                    _local_3._Str_2548(RoomWidgetEnum.CHAT_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.CHAT_WIDGET);
                     if (((this._freeFlowChat) && (!(this._freeFlowChat.isDisabledInPreferences))))
                     {
                         this._wasFreeFlowChatPerkAllowedAtInitialize = true;
@@ -936,68 +936,68 @@
                             _local_3.layoutManager.getChatContainer().setDisplayObject(this._freeFlowChat.displayObject);
                         }
                     }
-                    _local_3._Str_2548(RoomWidgetEnum.INFOSTAND);
-                    _local_3._Str_2548(RoomWidgetEnum.LOCATION_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_TOOLS);
+                    _local_3.createWidget(RoomWidgetEnum.INFOSTAND);
+                    _local_3.createWidget(RoomWidgetEnum.LOCATION_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_TOOLS);
                     if (!_local_3.session.isSpectatorMode)
                     {
-                        _local_3._Str_2548(RoomWidgetEnum.ME_MENU);
-                        _local_3._Str_2548(RoomWidgetEnum.CHAT_INPUT_WIDGET);
-                        _local_3._Str_2548(RoomWidgetEnum.FRIEND_REQUEST);
+                        _local_3.createWidget(RoomWidgetEnum.ME_MENU);
+                        _local_3.createWidget(RoomWidgetEnum.CHAT_INPUT_WIDGET);
+                        _local_3.createWidget(RoomWidgetEnum.FRIEND_REQUEST);
                         if (getBoolean("avatar.widget.enabled"))
                         {
-                            _local_3._Str_2548(RoomWidgetEnum.AVATAR_INFO);
+                            _local_3.createWidget(RoomWidgetEnum.AVATAR_INFO);
                         }
                     }
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_PLACEHOLDER);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_CREDIT_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_STICKIE_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_PRESENT_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_TROPHY_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_ECOTRONBOX_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_PET_PACKAGE_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.DOORBELL);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_POLL);
-					_local_3._Str_2548(RoomWidgetEnum.ROOM_VOTE);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_DIMMER);
-                    _local_3._Str_2548(RoomWidgetEnum.CLOTHING_CHANGE);
-                    _local_3._Str_2548(RoomWidgetEnum.CONVERSION_TRACKING);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_PLACEHOLDER);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_CREDIT_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_STICKIE_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_PRESENT_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_TROPHY_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_ECOTRONBOX_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_PET_PACKAGE_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.DOORBELL);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_POLL);
+					_local_3.createWidget(RoomWidgetEnum.ROOM_VOTE);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_DIMMER);
+                    _local_3.createWidget(RoomWidgetEnum.CLOTHING_CHANGE);
+                    _local_3.createWidget(RoomWidgetEnum.CONVERSION_TRACKING);
                     if (getBoolean("welcome.gift.feature.enabled"))
                     {
-                        _local_3._Str_2548(RoomWidgetEnum.WELCOME_GIFT);
+                        _local_3.createWidget(RoomWidgetEnum.WELCOME_GIFT);
                     }
                     if (!getBoolean("memenu.effects.widget.disabled"))
                     {
-                        _local_3._Str_2548(RoomWidgetEnum.EFFECTS);
+                        _local_3.createWidget(RoomWidgetEnum.EFFECTS);
                     }
-                    _local_3._Str_2548(RoomWidgetEnum.MANNEQUIN);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_BACKGROUND_COLOR);
-                    _local_3._Str_2548(RoomWidgetEnum.CUSTOM_USER_NOTIFICATION);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_CHOOSER);
-                    _local_3._Str_2548(RoomWidgetEnum.USER_CHOOSER);
+                    _local_3.createWidget(RoomWidgetEnum.MANNEQUIN);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_BACKGROUND_COLOR);
+                    _local_3.createWidget(RoomWidgetEnum.CUSTOM_USER_NOTIFICATION);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_CHOOSER);
+                    _local_3.createWidget(RoomWidgetEnum.USER_CHOOSER);
                     if (this._userChooserState != RoomDesktop._Str_8876)
                     {
                         _local_3.initializeWidget(RoomWidgetEnum.USER_CHOOSER, this._userChooserState);
                     }
-                    _local_3._Str_2548(RoomWidgetEnum.PLAYLIST_EDITOR_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.SPAMWALL_POSTIT_WIDGET);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNITURE_CONTEXT_MENU);
-                    _local_3._Str_2548(RoomWidgetEnum.CAMERA);
-                    _local_3._Str_2548(RoomWidgetEnum.FURNI_ACHIEVEMENT_RESOLUTION_ENGRAVING);
-                    _local_3._Str_2548(RoomWidgetEnum.FRIEND_FURNI_CONFIRM);
-                    _local_3._Str_2548(RoomWidgetEnum.FRIEND_FURNI_ENGRAVING);
-                    _local_3._Str_2548(RoomWidgetEnum.HIGH_SCORE_DISPLAY);
-                    _local_3._Str_2548(RoomWidgetEnum.INTERNAL_LINK);
-                    _local_3._Str_2548(RoomWidgetEnum.CUSTOM_STACK_HEIGHT);
-                    _local_3._Str_2548(RoomWidgetEnum.YOUTUBE);
-                    _local_3._Str_2548(RoomWidgetEnum.RENTABLESPACE);
-                    _local_3._Str_2548(RoomWidgetEnum.VIMEO);
-                    _local_3._Str_2548(RoomWidgetEnum.EXTERNAL_IMAGE);
-                    _local_3._Str_2548(RoomWidgetEnum.UI_HELP_BUBBLE);
-                    _local_3._Str_2548(RoomWidgetEnum.WORD_QUIZZ);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_THUMBNAIL_CAMERA);
-                    _local_3._Str_2548(RoomWidgetEnum.ROOM_LINK);
-                    _local_3._Str_2548(RoomWidgetEnum.CRAFTING);
+                    _local_3.createWidget(RoomWidgetEnum.PLAYLIST_EDITOR_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.SPAMWALL_POSTIT_WIDGET);
+                    _local_3.createWidget(RoomWidgetEnum.FURNITURE_CONTEXT_MENU);
+                    _local_3.createWidget(RoomWidgetEnum.CAMERA);
+                    _local_3.createWidget(RoomWidgetEnum.FURNI_ACHIEVEMENT_RESOLUTION_ENGRAVING);
+                    _local_3.createWidget(RoomWidgetEnum.FRIEND_FURNI_CONFIRM);
+                    _local_3.createWidget(RoomWidgetEnum.FRIEND_FURNI_ENGRAVING);
+                    _local_3.createWidget(RoomWidgetEnum.HIGH_SCORE_DISPLAY);
+                    _local_3.createWidget(RoomWidgetEnum.INTERNAL_LINK);
+                    _local_3.createWidget(RoomWidgetEnum.CUSTOM_STACK_HEIGHT);
+                    _local_3.createWidget(RoomWidgetEnum.YOUTUBE);
+                    _local_3.createWidget(RoomWidgetEnum.RENTABLESPACE);
+                    _local_3.createWidget(RoomWidgetEnum.VIMEO);
+                    _local_3.createWidget(RoomWidgetEnum.EXTERNAL_IMAGE);
+                    _local_3.createWidget(RoomWidgetEnum.UI_HELP_BUBBLE);
+                    _local_3.createWidget(RoomWidgetEnum.WORD_QUIZZ);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_THUMBNAIL_CAMERA);
+                    _local_3.createWidget(RoomWidgetEnum.ROOM_LINK);
+                    _local_3.createWidget(RoomWidgetEnum.CRAFTING);
                     this._isInRoom = true;
                     return;
                 case RoomEngineEvent.DISPOSED:
@@ -1115,8 +1115,8 @@
             {
                 _local_3.layout = (_local_4.content as XML);
             }
-            _local_3._Str_2548(RoomWidgetEnum.LOADINGBAR);
-            _local_3._Str_2548(RoomWidgetEnum.ROOM_QUEUE);
+            _local_3.createWidget(RoomWidgetEnum.LOADINGBAR);
+            _local_3.createWidget(RoomWidgetEnum.ROOM_QUEUE);
             _local_3.init();
             _local_3.requestInterstitial();
             this._interstitialActive = false;

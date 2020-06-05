@@ -581,7 +581,7 @@
             return this.buildFromXML(_local_2) as IWindowContainer;
         }
 
-        public function _Str_2548(k:String, _arg_2:IWidgetWindow):IWidget
+        public function createWidget(k:String, _arg_2:IWidgetWindow):IWidget
         {
             var _local_3:Class = WidgetClasses._Str_3059[k];
             if (_local_3 != null)
