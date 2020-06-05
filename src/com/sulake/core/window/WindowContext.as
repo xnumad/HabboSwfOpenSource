@@ -41,7 +41,7 @@
         public static const ERROR_INVALID_WINDOW:int = 1;
         public static const ERROR_WINDOW_NOT_FOUND:int = 2;
         public static const ERROR_WINDOW_ALREADY_EXISTS:int = 3;
-        public static const _Str_18985:int = 4;
+        public static const ERROR_UNKNOWN_WINDOW_TYPE:int = 4;
         public static const _Str_7405:int = 5;
         public static var _Str_4956:IEventQueue;
         private static var _Str_6468:IEventProcessor;
@@ -273,7 +273,7 @@
             var _local_14:Class = Classes._Str_23901(_arg_3);
             if (_local_14 == null)
             {
-                this.handleError(WindowContext._Str_18985, new Error((('Failed to solve implementation for window "' + k) + '"!')));
+                this.handleError(WindowContext.ERROR_UNKNOWN_WINDOW_TYPE, new Error((('Failed to solve implementation for window "' + k) + '"!')));
                 return null;
             }
             if (_arg_8 == null)
