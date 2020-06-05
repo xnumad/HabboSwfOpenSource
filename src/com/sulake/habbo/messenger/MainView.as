@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.messenger
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.widgets._Str_5480;
+    import com.sulake.habbo.window.widgets.IIlluminaInputHandler;
     import flash.utils.Dictionary;
     import com.sulake.core.window.IWindowContainer;
     import com.sulake.core.window.components.IItemListWindow;
@@ -26,7 +26,7 @@
     import com.sulake.core.window.events.WindowMouseEvent;
     import com.sulake.habbo.communication.messages.outgoing.friendlist._Str_10962;
 
-    public class MainView implements IDisposable, _Str_5480 
+    public class MainView implements IDisposable, IIlluminaInputHandler
     {
         private static const HIDDEN:String = "HIDDEN";
         private static const NO_CONVERSATION:int = -1;

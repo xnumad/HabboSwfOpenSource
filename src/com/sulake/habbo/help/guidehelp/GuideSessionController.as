@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.help.guidehelp
 {
     import com.sulake.core.runtime.IDisposable;
-    import com.sulake.habbo.window.widgets._Str_5480;
+    import com.sulake.habbo.window.widgets.IIlluminaInputHandler;
     import com.sulake.habbo.help.HabboHelp;
     import com.sulake.habbo.help.GuideHelpManager;
     import com.sulake.core.window.IWindowContainer;
@@ -85,7 +85,7 @@
     import com.sulake.habbo.communication.messages.outgoing.help._Str_11748;
     import __AS3__.vec.*;
 
-    public class GuideSessionController implements IDisposable, _Str_5480 
+    public class GuideSessionController implements IDisposable, IIlluminaInputHandler
     {
         private static const _Str_12638:int = 0;
         private static const _Str_14376:int = 1;

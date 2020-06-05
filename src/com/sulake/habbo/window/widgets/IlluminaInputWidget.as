@@ -35,7 +35,7 @@
         private var _submitButton:IButtonWindow;
         private var _inputField:ITextFieldWindow;
         private var _emptyMessageLabel:ILabelWindow;
-        private var _submitHandler:_Str_5480;
+        private var _submitHandler:IIlluminaInputHandler;
 
         public function IlluminaInputWidget(k:IWidgetWindow, _arg_2:HabboWindowManagerComponent)
         {
@@ -186,12 +186,12 @@
             this.refresh();
         }
 
-        public function get _Str_8859():_Str_5480
+        public function get _Str_8859():IIlluminaInputHandler
         {
             return this._submitHandler;
         }
 
-        public function set _Str_8859(k:_Str_5480):void
+        public function set _Str_8859(k:IIlluminaInputHandler):void
         {
             this._submitHandler = k;
         }

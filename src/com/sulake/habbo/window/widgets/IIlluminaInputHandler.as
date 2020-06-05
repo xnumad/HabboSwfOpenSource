@@ -2,7 +2,7 @@
 {
     import com.sulake.core.window.components.IWidgetWindow;
 
-    public interface _Str_5480 
+    public interface IIlluminaInputHandler
     {
         function onInput(_arg_1:IWidgetWindow, _arg_2:String):void;
     }
