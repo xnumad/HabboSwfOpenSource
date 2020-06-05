@@ -687,7 +687,7 @@
                 this._defaultStuffType = k._Str_11034[_local_11];
             }
             this._stuffTypes = k.stuffTypes;
-            this._boxTypes = this._boxTypes.concat(k._Str_17162);
+            this._boxTypes = this._boxTypes.concat(k.boxTypes);
             this._boxTypes.push(this._defaultStuffType);
             this._ribbonTypes = k._Str_17780;
             this._selectedTypeId = this._stuffTypes[0];

@@ -28,7 +28,7 @@
             return this._Str_5208;
         }
 
-        public function get _Str_17162():Array
+        public function get boxTypes():Array
         {
             return this._Str_3691;
         }

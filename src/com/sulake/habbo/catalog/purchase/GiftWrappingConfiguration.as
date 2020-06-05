@@ -26,7 +26,7 @@
             this._isEnabled = _local_2._Str_25735;
             this._price = _local_2._Str_23413;
             this._stuffTypes = _local_2.stuffTypes;
-            this._boxTypes = _local_2._Str_17162;
+            this._boxTypes = _local_2.boxTypes;
             this._ribbonTypes = _local_2._Str_17780;
             this._defaultStuffTypes = _local_2._Str_11034;
         }
@@ -46,7 +46,7 @@
             return this._stuffTypes;
         }
 
-        public function get _Str_17162():Array
+        public function get boxTypes():Array
         {
             return this._boxTypes;
         }
