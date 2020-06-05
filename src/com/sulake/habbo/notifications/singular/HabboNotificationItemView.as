@@ -23,7 +23,7 @@
         public static const ITEM_HEIGHT:int = 70;
         public static const SIDE_MARGIN:int = 5;
         private static const STATE_IDLE:int = 0;
-        private static const _Str_3847:int = 1;
+        private static const STATE_FADE_IN:int = 1;
         private static const _Str_14483:int = 2;
         private static const _Str_6008:int = 3;
 
@@ -130,7 +130,7 @@
             {
                 case STATE_IDLE:
                     return;
-                case _Str_3847:
+                case STATE_FADE_IN:
                     this._fadeInStart = (this._fadeInStart + k);
                     _local_2 = (Number(this._fadeInStart) / Number(this._viewConfig["time_fade_in"]));
                     if (this._fadeInStart > int(this._viewConfig["time_fade_in"]))
@@ -240,7 +240,7 @@
         private function startFadeIn():void
         {
             this._fadeInStart = 0;
-            this._state = _Str_3847;
+            this._state = STATE_FADE_IN;
             this._window.visible = true;
         }
 

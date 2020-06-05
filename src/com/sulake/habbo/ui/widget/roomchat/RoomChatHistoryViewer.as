@@ -92,7 +92,7 @@
             {
                 return false;
             }
-            return (this._historyPulldown.state == RoomChatHistoryPulldown._Str_8230) || (this._historyPulldown.state == RoomChatHistoryPulldown._Str_3847);
+            return (this._historyPulldown.state == RoomChatHistoryPulldown._Str_8230) || (this._historyPulldown.state == RoomChatHistoryPulldown.STATE_FADE_IN);
         }
 
         public function dispose():void

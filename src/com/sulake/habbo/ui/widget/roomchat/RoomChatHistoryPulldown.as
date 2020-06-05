@@ -21,7 +21,7 @@
     public class RoomChatHistoryPulldown 
     {
         public static const _Str_6008:int = 3;
-        public static const _Str_3847:int = 2;
+        public static const STATE_FADE_IN:int = 2;
         public static const _Str_8230:int = 1;
         public static const _Str_5954:int = 0;
         public static const _Str_3788:int = 39;
@@ -116,7 +116,7 @@
         {
             switch (this.state)
             {
-                case _Str_3847:
+                case STATE_FADE_IN:
                     this._bgWindow.blend = (this._bgWindow.blend + (k / _Str_14143));
                     this._window.blend = (this._window.blend + (k / _Str_14143));
                     if (this._window.blend >= 1)
@@ -146,7 +146,7 @@
                 case _Str_8230:
                     if (this._state == _Str_5954)
                     {
-                        this.state = _Str_3847;
+                        this.state = STATE_FADE_IN;
                     }
                     else
                     {
@@ -170,7 +170,7 @@
                     this._region.visible = false;
                     this._state = k;
                     return;
-                case _Str_3847:
+                case STATE_FADE_IN:
                     if (((this._window == null) || (this._bgWindow == null)))
                     {
                         return;
