@@ -38,7 +38,7 @@
         private var _overFlowReplace:String = "";
         protected var _field:TextField;
         protected var _scrollH:Number;
-        protected var _Str_3375:Number;
+        protected var _scrollV:Number;
         protected var _Str_4263:Boolean;
         protected var _Str_2480:TextMargins;
         protected var _Str_4318:String = "none";
@@ -58,7 +58,7 @@
             this._Str_2480 = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             this._Str_4263 = false;
             this._scrollH = 0;
-            this._Str_3375 = 0;
+            this._scrollV = 0;
             if (this._field == null)
             {
                 this._field = new TextField();
@@ -806,7 +806,7 @@
 
         public function get scrollV():Number
         {
-            return this._Str_3375;
+            return this._scrollV;
         }
 
         public function get maxScrollH():int
@@ -988,17 +988,17 @@
 
         public function set scrollV(k:Number):void
         {
-            if (k > this._Str_3375)
+            if (k > this._scrollV)
             {
-                this._Str_3375 = k;
+                this._scrollV = k;
                 this._field.scrollV = Math.max(this._field.scrollV, ((k * this._field.maxScrollV) + 1));
                 this.refreshTextImage();
             }
             else
             {
-                if (k < this._Str_3375)
+                if (k < this._scrollV)
                 {
-                    this._Str_3375 = k;
+                    this._scrollV = k;
                     this._field.scrollV = Math.min(this._field.scrollV, ((k * this._field.maxScrollV) - 1));
                     this.refreshTextImage();
                 }
@@ -1007,7 +1007,7 @@
 
         public function get visibleRegion():Rectangle
         {
-            return new Rectangle((this._scrollH * this.maxScrollH), (this._Str_3375 * this.maxScrollV), width, height);
+            return new Rectangle((this._scrollH * this.maxScrollH), (this._scrollV * this.maxScrollV), width, height);
         }
 
         public function get scrollableRegion():Rectangle
@@ -1138,7 +1138,7 @@
             k._field.backgroundColor = color;
             k._field.background = background;
             k._scrollH = this._scrollH;
-            k._Str_3375 = this._Str_3375;
+            k._scrollV = this._scrollV;
             k._Str_2480 = this._Str_2480.clone(k.setTextMargins);
             k._Str_4318 = this._Str_4318;
             k._Str_2959 = this._Str_2959;

@@ -30,7 +30,7 @@
         private var _content:IWindowContainer;
         private var _Str_1929:IItemListWindow;
         private var _Str_4871:RoomPopupCtrl;
-        private var _Str_3375:IScrollbarWindow;
+        private var _scrollV:IScrollbarWindow;
         protected var _Str_3220:UserCountRenderer;
         private var _Str_12349:IWindowContainer;
         private var _Str_22153:int;
@@ -65,7 +65,7 @@
         {
             this._content = k;
             this._Str_1929 = ((this._content) ? IItemListWindow(this._content.findChildByName("item_list")) : null);
-            this._Str_3375 = ((this._content) ? IScrollbarWindow(this._content.findChildByName("scroller")) : null);
+            this._scrollV = ((this._content) ? IScrollbarWindow(this._content.findChildByName("scroller")) : null);
             if (((k == null) && (this._Str_4871)))
             {
                 this._Str_4871._Str_17240();
@@ -101,9 +101,9 @@
                 _local_3++;
             }
             this._Str_1929.autoArrangeItems = true;
-            if (((!(this._Str_3375 == null)) && (!(this._Str_21927() == _local_2))))
+            if (((!(this._scrollV == null)) && (!(this._Str_21927() == _local_2))))
             {
-                this._Str_3375.scrollV = 0;
+                this._scrollV.scrollV = 0;
             }
             if (this._content.findChildByName("no_rooms_found"))
             {
