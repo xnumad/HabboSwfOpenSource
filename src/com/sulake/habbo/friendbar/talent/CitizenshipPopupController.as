@@ -59,7 +59,7 @@
         {
             this.hide();
             this._dialog = this._habboTalent._Str_4804("citizenship_welcome");
-            this._dialog._Str_2429.procedure = this._Str_3061;
+            this._dialog._Str_2429.procedure = this.onWindowEvent;
             IWindowContainer(this._dialog._Str_2429).findChildByName("header_button_close").visible = false;
         }
 
@@ -87,7 +87,7 @@
             return this._disposed;
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._dialog == null) || (this._dialog.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
             {

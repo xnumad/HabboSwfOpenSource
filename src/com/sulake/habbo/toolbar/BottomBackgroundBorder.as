@@ -14,7 +14,7 @@
         public function BottomBackgroundBorder(k:HabboToolbar)
         {
             this._window = (k.windowManager.buildFromXML((k.assets.getAssetByName("bottom_background_border_xml").content as XML)) as IWindowContainer);
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             this._Str_3714();
         }
 
@@ -26,7 +26,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowEvent.WINDOW_EVENT_PARENT_RESIZED)
             {

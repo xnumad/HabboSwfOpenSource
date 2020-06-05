@@ -53,7 +53,7 @@
             this.closeWindow();
             this._dialog = this._habboHelp._Str_4804("habbo_way");
             this._window = IWindowContainer(this._dialog._Str_2429);
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             _Str_4466(IWidgetWindow(this._window.findChildByName("page_widget")).widget).size = this._Str_16191;
             this._Str_7910(this._Str_7835);
         }
@@ -68,7 +68,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._disposed) || (!(this._window))) || (!(k.type == WindowMouseEvent.CLICK))))
             {

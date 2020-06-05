@@ -85,7 +85,7 @@
             this._track = k;
             this._window = (this._habboTalent.getXmlWindow("level_up") as IWindowContainer);
             this._window.center();
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             IStaticBitmapWrapperWindow(this._window.findChildByName("level_decoration")).assetUri = (((("${image.library.url}talent/" + k) + "_levelup_") + _arg_2) + ".png");
             this._window.findChildByName("level_up_message").caption = (("${talent.track." + k) + ".levelup.message}");
             this._window.findChildByName("level_title").caption = (((("${talent.track." + k) + ".level.") + _arg_2) + ".title}");
@@ -154,7 +154,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._window == null) || (this._window.disposed)) || (!(k.type == WindowMouseEvent.CLICK))))
             {

@@ -113,7 +113,7 @@
             this.closeWindow();
             this._dialog = this._habboHelp._Str_4804("habbo_way_quiz");
             this._window = IWindowContainer(this._dialog._Str_2429);
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             this._questionPane = IWindowContainer(this._window.findChildByName("question_pane"));
             this._answerList = ISelectorListWindow(this._questionPane.findChildByName("answer_list"));
             this._answerTemplate = this._answerList.getSelectableAt(0);
@@ -221,7 +221,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if ((((this._disposed) || (this._window == null)) || (!(k.type == WindowMouseEvent.CLICK))))
             {

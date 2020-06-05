@@ -31,9 +31,9 @@
         {
             super(k, _arg_2, _arg_3);
             _window = (_arg_2.buildFromXML((_arg_3.getAssetByName("room_tools_toolbar_xml").content as XML)) as IWindowContainer);
-            _window.procedure = this._Str_3061;
-            _window.addEventListener(WindowMouseEvent.OVER, this._Str_3061);
-            _window.addEventListener(WindowMouseEvent.OUT, this._Str_3061);
+            _window.procedure = this.onWindowEvent;
+            _window.addEventListener(WindowMouseEvent.OVER, this.onWindowEvent);
+            _window.addEventListener(WindowMouseEvent.OUT, this.onWindowEvent);
             this._Str_17459();
         }
 
@@ -211,7 +211,7 @@
             this._Str_3714();
         }
 
-        private function _Str_3061(event:WindowEvent, target:IWindow):void
+        private function onWindowEvent(event:WindowEvent, target:IWindow):void
         {
             var link:String;
             var window:IWindowContainer;

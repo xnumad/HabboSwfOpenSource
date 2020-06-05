@@ -127,7 +127,7 @@
             this._help = _arg_6;
             this._roomEngine = _arg_7;
             this._Str_15263 = (this._window.findChildByName("reportButtonContainer") as IWindowContainer);
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             this._window.center();
             this._Str_12629.visible = false;
             this._Str_2296 = _arg_8;
@@ -514,7 +514,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:_Str_2910;
             var _local_4:ITextFieldWindow;

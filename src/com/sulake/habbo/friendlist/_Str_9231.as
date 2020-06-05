@@ -57,7 +57,7 @@
         private function createWindow():void
         {
             this._window = IBorderWindow(this._habboFriendList.windowManager.buildFromXML(XML(this._habboFriendList.assets.getAssetByName("relationship_chooser_xml").content)));
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             this._window.visible = false;
         }
 
@@ -70,7 +70,7 @@
             }
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type == WindowMouseEvent.CLICK)
             {

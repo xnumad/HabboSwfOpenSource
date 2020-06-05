@@ -53,7 +53,7 @@
             this._window = _arg_2.buildFromXML((_local_6.content as XML), 1);
             this._window.tags.push("notificationview");
             this._window.context.getDesktopWindow().addEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onRoomViewResized);
-            this._window.procedure = this._Str_3061;
+            this._window.procedure = this.onWindowEvent;
             this._window.blend = 0;
             this._window.visible = false;
             var _local_7:ITextWindow = (IWindowContainer(this._window).findChildByTag("notification_text") as ITextWindow);
@@ -281,7 +281,7 @@
             this._window.y = this._margin;
         }
 
-        public function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        public function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k == null)
             {

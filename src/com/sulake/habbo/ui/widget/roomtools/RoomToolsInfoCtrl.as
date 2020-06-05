@@ -34,9 +34,9 @@
             if (!window)
             {
                 _window = (_widget.windowManager.buildFromXML((_assets.getAssetByName("room_tools_info_xml").content as XML)) as IWindowContainer);
-                _window.procedure = this._Str_3061;
-                _window.addEventListener(WindowMouseEvent.OVER, this._Str_3061);
-                _window.addEventListener(WindowMouseEvent.OUT, this._Str_3061);
+                _window.procedure = this.onWindowEvent;
+                _window.addEventListener(WindowMouseEvent.OVER, this.onWindowEvent);
+                _window.addEventListener(WindowMouseEvent.OUT, this.onWindowEvent);
             }
             this._Str_3714();
             _window.findChildByName("room_name").caption = _arg_2;
@@ -133,7 +133,7 @@
             return _local_2;
         }
 
-        private function _Str_3061(k:WindowEvent, _arg_2:IWindow):void
+        private function onWindowEvent(k:WindowEvent, _arg_2:IWindow):void
         {
             var _local_3:ITextWindow;
             var _local_4:String;
