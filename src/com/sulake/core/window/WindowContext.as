@@ -247,7 +247,7 @@
             return this._Str_2867.findChildByName(k);
         }
 
-        public function _Str_15444(k:String):IWindow
+        public function findWindowByTag(k:String):IWindow
         {
             return this._Str_2867.findChildByTag(k);
         }

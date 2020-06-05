@@ -543,13 +543,13 @@
             return null;
         }
 
-        public function _Str_15444(k:String):IWindow
+        public function findWindowByTag(k:String):IWindow
         {
             var _local_2:IWindow;
             var _local_3:IWindowContext;
             for each (_local_3 in this._windowContextArray)
             {
-                _local_2 = _local_3._Str_15444(k);
+                _local_2 = _local_3.findWindowByTag(k);
                 if (_local_2)
                 {
                     return _local_2;
