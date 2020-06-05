@@ -32,7 +32,7 @@
     public class RoomInfoViewCtrl
     {
         private var _navigator:IHabboTransitionalNavigator;
-        private var _Str_6891:GuildInfoCtrl;
+        private var _guildInfoCtrl:GuildInfoCtrl;
         private var _window:IFrameWindow;
         private var _Str_3306:TagRenderer;
         private var _Str_9199:Boolean = false;
@@ -41,7 +41,7 @@
         public function RoomInfoViewCtrl(k:IHabboTransitionalNavigator)
         {
             this._navigator = k;
-            this._Str_6891 = new GuildInfoCtrl(this._navigator);
+            this._guildInfoCtrl = new GuildInfoCtrl(this._navigator);
             this._Str_3306 = new TagRenderer(this._navigator);
         }
 
@@ -59,10 +59,10 @@
                 this._Str_3306.dispose();
                 this._Str_3306 = null;
             }
-            if (this._Str_6891)
+            if (this._guildInfoCtrl)
             {
-                this._Str_6891.dispose();
-                this._Str_6891 = null;
+                this._guildInfoCtrl.dispose();
+                this._guildInfoCtrl = null;
             }
         }
 
@@ -119,7 +119,7 @@
             Util._Str_2930(this._window.content);
             this.refreshRoomDetails(this._navigator.data._Str_2678);
             this._Str_22403();
-            this._Str_6891.refresh(this._window.content, this._navigator.data._Str_2678);
+            this._guildInfoCtrl.refresh(this._window.content, this._navigator.data._Str_2678);
             this._Str_4295(this._navigator.data._Str_2678);
             Util._Str_4679(this._window.content, ["room_details", "public_space_details", "guild_info", "embed_info", "buttons_cont"], 0, 3);
             this._window.findChildByName("guild_info").x = 11;
