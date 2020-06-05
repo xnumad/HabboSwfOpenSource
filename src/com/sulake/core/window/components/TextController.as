@@ -71,7 +71,7 @@
             }
             this._Str_4040 = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            _Str_6964(this);
+            setTextFormatting(this);
             TextStyleManager.events.addEventListener(Event.CHANGE, this._Str_6721);
             if (this._Str_2309.autoSize == TextFieldAutoSize.NONE)
             {
@@ -361,7 +361,7 @@
             if (_local_3)
             {
                 k._Str_4040 = _local_3.name;
-                _Str_6964(k);
+                setTextFormatting(k);
                 k.refreshTextImage();
             }
         }
@@ -377,7 +377,7 @@
             if (_local_3)
             {
                 k._Str_4040 = _local_3.name;
-                _Str_6964(k);
+                setTextFormatting(k);
                 k.refreshTextImage();
             }
             else
@@ -428,7 +428,7 @@
             k.refreshTextImage();
         }
 
-        protected static function _Str_6964(k:TextController):void
+        protected static function setTextFormatting(k:TextController):void
         {
             var _local_2:TextField = k._Str_2309;
             var _local_3:String = k._Str_4040;
@@ -1382,7 +1382,7 @@
 
         private function _Str_6721(k:Event):void
         {
-            _Str_6964(this);
+            setTextFormatting(this);
             this.refreshTextImage();
         }
 
