@@ -5,7 +5,7 @@
 
     public class GiftWrappingConfigurationParser implements IMessageParser
     {
-        private var _Str_21168:Boolean;
+        private var _wrappingEnabled:Boolean;
         private var _Str_19335:int;
         private var _Str_5208:Array;
         private var _Str_3691:Array;
@@ -15,7 +15,7 @@
 
         public function get _Str_25735():Boolean
         {
-            return this._Str_21168;
+            return this._wrappingEnabled;
         }
 
         public function get _Str_23413():int
@@ -55,7 +55,7 @@
             this._Str_3691 = [];
             this._Str_4062 = [];
             this._Str_8259 = [];
-            this._Str_21168 = k.readBoolean();
+            this._wrappingEnabled = k.readBoolean();
             this._Str_19335 = k.readInteger();
             var _local_3:int = k.readInteger();
             _local_2 = 0;
