@@ -422,7 +422,7 @@
             this._Str_7349._Str_3732();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             var _local_3:TextFieldManager;
             var _local_4:Array;
@@ -596,7 +596,7 @@
 
         public function refresh():void
         {
-            this._Str_2755();
+            this.prepareWindow();
             if (!this._Str_16440)
             {
                 Util._Str_2930(IWindowContainer(this._window.findChildByName("content_container")));

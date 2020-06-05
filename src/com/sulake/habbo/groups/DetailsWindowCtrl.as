@@ -51,7 +51,7 @@
             if (((((!(this._window == null)) && (this._window.visible)) && (k.groupId == this._groupId)) || (k._Str_8199)))
             {
                 this._groupId = k.groupId;
-                this._Str_2755();
+                this.prepareWindow();
                 this._groupDetailsCtrl.onGroupDetails(IWindowContainer(this._window.findChildByName("group_cont")), k);
                 if (k._Str_8199)
                 {
@@ -61,7 +61,7 @@
             }
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

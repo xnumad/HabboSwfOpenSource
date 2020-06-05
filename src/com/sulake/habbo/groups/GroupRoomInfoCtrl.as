@@ -101,7 +101,7 @@
             {
                 return;
             }
-            this._Str_2755();
+            this.prepareWindow();
             this._window.findChildByName("bg_expanded").visible = this._expanded;
             this._window.findChildByName("bg_contracted").visible = (!(this._expanded));
             this._window.findChildByName("group_name_txt").visible = this._expanded;
@@ -124,7 +124,7 @@
             }
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

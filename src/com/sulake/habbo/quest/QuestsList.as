@@ -140,7 +140,7 @@
         private function refresh(k:Boolean):void
         {
             var _local_3:Boolean;
-            this._Str_2755();
+            this.prepareWindow();
             this._list.autoArrangeItems = false;
             var _local_2:int;
             while (true)
@@ -162,7 +162,7 @@
             this._list.autoArrangeItems = true;
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

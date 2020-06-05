@@ -77,7 +77,7 @@
             return this._manager == null;
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             var k:int;
             if (this._window != null)
@@ -163,7 +163,7 @@
         {
             this._manager.send(new _Str_8049(this._data.userId));
             this._manager.send(new _Str_6996(this._data.userId));
-            this._Str_2755();
+            this.prepareWindow();
             this._Str_11540();
             this._Str_25048();
         }

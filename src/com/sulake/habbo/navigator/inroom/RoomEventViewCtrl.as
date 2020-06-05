@@ -50,7 +50,7 @@
                 this._window.visible = false;
                 return;
             }
-            this._Str_2755();
+            this.prepareWindow();
             this._Str_3732();
             var k:_Str_3579 = this._navigator.data._Str_4112;
             if (k == null)
@@ -156,7 +156,7 @@
             this._Str_5951._Str_3732();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

@@ -33,13 +33,13 @@
 
         public function show(k:Boolean):void
         {
-            this._Str_2755();
+            this.prepareWindow();
             this._window.findChildByName("info_txt").caption = ((k) ? "${group.hcrequired.info.manage}" : "${group.hcrequired.info.join}");
             this._window.visible = true;
             this._window.activate();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

@@ -146,7 +146,7 @@
         {
             if (this._window == null)
             {
-                this._Str_2755();
+                this.prepareWindow();
             }
             var k:IWidgetWindow = IWidgetWindow(this._window.findChildByName("countdown_widget"));
             var _local_2:_Str_2961 = _Str_2961(k.widget);
@@ -154,7 +154,7 @@
             _local_2.running = true;
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

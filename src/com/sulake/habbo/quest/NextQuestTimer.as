@@ -67,13 +67,13 @@
                 return;
             }
             this._quest = k;
-            this._Str_2755();
+            this.prepareWindow();
             this._Str_18138();
             this._window.visible = true;
             this._questEngine.toolbar.extensionView.attachExtension(NEXT_QUEST, this._window);
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

@@ -163,13 +163,13 @@
 
         private function refresh():void
         {
-            this._Str_2755();
+            this.prepareWindow();
             this._calendar.refresh();
             this._catalogPromo.refresh();
             this._rareTeaser.refresh();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

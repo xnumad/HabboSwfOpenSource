@@ -120,7 +120,7 @@
             return null;
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {
@@ -205,7 +205,7 @@
             var _local_4:IWindowContainer;
             var _local_5:ActionDefinition;
             var _local_6:int;
-            this._Str_2755();
+            this.prepareWindow();
             this._updated = k;
             Logger.log(((("Received: " + this._updated) + ", ") + k.code));
             var _local_2:WiredFurniture = this._Str_3959();

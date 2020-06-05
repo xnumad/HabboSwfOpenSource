@@ -47,7 +47,7 @@
             return this._manager == null;
         }
 
-        private function _Str_2755(k:IWindowContainer):void
+        private function prepareWindow(k:IWindowContainer):void
         {
             if (this._window != null)
             {
@@ -77,7 +77,7 @@
         public function onGroupDetails(k:IWindowContainer, _arg_2:HabboGroupDetailsData):void
         {
             this._selectedGroup = _arg_2;
-            this._Str_2755(k);
+            this.prepareWindow(k);
             this._Str_24132(k);
             var _local_3:IWindow = this._window.findChildByName("group_decorate_icon_region");
             var _local_4:IWindow = this._window.findChildByName("group_name");

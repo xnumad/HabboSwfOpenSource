@@ -115,7 +115,7 @@
                 return;
             }
             this._tagRenderer._Str_8651 = true;
-            this._Str_2755();
+            this.prepareWindow();
             Util._Str_2930(this._window.content);
             this.refreshRoomDetails(this._navigator.data._Str_2678);
             this.refreshEmbed();
@@ -263,7 +263,7 @@
             _local_5.height = Util._Str_2647(_local_5);
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             var k:String;
             var _local_5:String;

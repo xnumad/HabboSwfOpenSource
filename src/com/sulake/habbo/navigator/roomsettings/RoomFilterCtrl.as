@@ -41,14 +41,14 @@
             {
                 return;
             }
-            this._Str_2755();
+            this.prepareWindow();
             this._window.visible = true;
             this._window.invalidate();
             this._window.activate();
             this._navigator.tracking.trackEventLogOncePerSession("InterfaceExplorer", "open", "room.filter.seen");
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

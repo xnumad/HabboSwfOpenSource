@@ -36,12 +36,12 @@
         public function show(k:int):void
         {
             this._groupId = k;
-            this._Str_2755();
+            this.prepareWindow();
             this._window.visible = true;
             this._window.activate();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

@@ -37,7 +37,7 @@
         {
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {
@@ -63,7 +63,7 @@
 
         public function open(k:int=-1, _arg_2:int=-1):void
         {
-            this._Str_2755();
+            this.prepareWindow();
             this.openPage();
             this._window.visible = true;
             if (k >= 0)

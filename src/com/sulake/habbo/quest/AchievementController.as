@@ -299,7 +299,7 @@
 
         private function refresh():void
         {
-            this._Str_2755();
+            this.prepareWindow();
             this._Str_20399();
             this._Str_23920();
             this._Str_25170();
@@ -426,7 +426,7 @@
             this._inLevelProgressBar.visible = ((!(this._achievement._Str_24874 == Achievement._Str_15908)) && (!(this._achievement._Str_7518)));
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

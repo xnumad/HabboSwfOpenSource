@@ -94,7 +94,7 @@
                 this.close();
                 return;
             }
-            this._Str_2755();
+            this.prepareWindow();
             this._Str_2497("title");
             this._window.x = 0;
             this._window.y = 0;
@@ -109,7 +109,7 @@
             this._window.findChildByName((k + "_txt")).caption = (((("${talentpromo." + this._Str_7925) + ".") + k) + "}");
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

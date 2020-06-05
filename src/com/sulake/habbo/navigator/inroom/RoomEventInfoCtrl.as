@@ -72,7 +72,7 @@
                 this._navigator.toolbar.extensionView.detachExtension(ROOM_EVENT_INFO);
                 return;
             }
-            this._Str_2755();
+            this.prepareWindow();
             var _local_6:Boolean = (((this._expanded) && (k)) && (_local_5));
             this._window.findChildByName("event_bg_owner").visible = _local_6;
             var _local_7:Boolean = (((this._expanded) && (k)) && (!(_local_5)));
@@ -134,7 +134,7 @@
             }
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {

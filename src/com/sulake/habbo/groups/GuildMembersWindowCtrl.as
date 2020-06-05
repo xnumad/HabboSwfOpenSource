@@ -170,7 +170,7 @@
 
         public function show():void
         {
-            this._Str_2755();
+            this.prepareWindow();
             this.refresh();
             this._window.visible = true;
             this._window.activate();
@@ -205,7 +205,7 @@
             this._window.findChildByName("next_page_button").visible = this._Str_25422();
         }
 
-        private function _Str_2755():void
+        private function prepareWindow():void
         {
             if (this._window != null)
             {
