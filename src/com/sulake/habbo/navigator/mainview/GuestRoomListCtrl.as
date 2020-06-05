@@ -302,7 +302,7 @@
         {
             var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
             var _local_4:Boolean = this._Str_10475(_arg_2);
-            this._Str_19600(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this._Str_16071);
+            this._Str_19600(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this.onAddFavouriteClick);
             this._Str_19600(k, "favourite", ((_local_3) && (!(_local_4))), this._Str_16307);
         }
 
@@ -349,7 +349,7 @@
             this._navigator.send(new _Str_5262(_local_3.flatId));
         }
 
-        private function _Str_16071(k:WindowMouseEvent):void
+        private function onAddFavouriteClick(k:WindowMouseEvent):void
         {
             var _local_2:IWindow = k.target;
             if (((_local_2 == null) || (_local_2.parent == null)))

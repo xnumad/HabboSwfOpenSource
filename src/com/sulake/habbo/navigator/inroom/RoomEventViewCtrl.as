@@ -274,7 +274,7 @@
             }
             this._window = IFrameWindow(this._navigator.getXmlWindow("iro_room_details_framed"));
             this._window.center();
-            this._Str_2786(this.find("make_favourite_region"), this._Str_16071);
+            this._Str_2786(this.find("make_favourite_region"), this.onAddFavouriteClick);
             this._Str_2786(this.find("favourite_region"), this._Str_16307);
             this._Str_2786(this.find("room_settings_button"), this._Str_25312);
             this._Str_2786(this.find("room_filter_button"), this._Str_22339);
@@ -361,7 +361,7 @@
             return _local_2;
         }
 
-        public function _Str_16071(k:WindowEvent):void
+        public function onAddFavouriteClick(k:WindowEvent):void
         {
             var _local_2:SimpleAlertView;
             if (this._navigator.data._Str_2678 == null)
