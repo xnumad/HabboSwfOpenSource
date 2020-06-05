@@ -48,7 +48,7 @@
         protected var _etchingColor:uint;
         protected var _etchingPosition:String;
         protected var _defaultFormat:TextFormat;
-        private var _Str_4040:String;
+        private var _textStyleName:String;
         private var _Str_3808:TextStyle;
         protected var _Str_17282:Boolean;
 
@@ -69,7 +69,7 @@
                 }
                 this._field.mouseWheelEnabled = false;
             }
-            this._Str_4040 = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
+            this._textStyleName = String(_arg_5.getWindowFactory().getThemeManager().getPropertyDefaults(_arg_3).get(PropertyKeys.TEXT_STYLE));
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             setTextFormatting(this);
             TextStyleManager.events.addEventListener(Event.CHANGE, this.onTextStyleChanged);
@@ -360,7 +360,7 @@
             }
             if (_local_3)
             {
-                k._Str_4040 = _local_3.name;
+                k._textStyleName = _local_3.name;
                 setTextFormatting(k);
                 k.refreshTextImage();
             }
@@ -376,7 +376,7 @@
             }
             if (_local_3)
             {
-                k._Str_4040 = _local_3.name;
+                k._textStyleName = _local_3.name;
                 setTextFormatting(k);
                 k.refreshTextImage();
             }
@@ -431,7 +431,7 @@
         protected static function setTextFormatting(k:TextController):void
         {
             var _local_2:TextField = k._field;
-            var _local_3:String = k._Str_4040;
+            var _local_3:String = k._textStyleName;
             var _local_4:TextStyle = k._Str_3808;
             var _local_5:TextStyle = TextStyleManager.getStyle(_local_3);
             var _local_6:TextFormat = _local_2.defaultTextFormat;
@@ -756,7 +756,7 @@
 
         public function get textStyle():TextStyle
         {
-            return TextStyleManager.getStyle(this._Str_4040);
+            return TextStyleManager.getStyle(this._textStyleName);
         }
 
         public function get thickness():Number
@@ -1429,7 +1429,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            var _local_2:TextStyle = TextStyleManager.getStyle(this._Str_4040);
+            var _local_2:TextStyle = TextStyleManager.getStyle(this._textStyleName);
             k.push(createProperty(PropertyKeys.ALWAYS_SHOW_SELECTION, this._field.alwaysShowSelection));
             k.push(new PropertyStruct(PropertyKeys.ANTIALIAS_TYPE, this._field.antiAliasType, PropertyStruct.STRING, (!(this._field.antiAliasType == _local_2.antiAliasType)), PropertyKeys.ANTIALIAS_TYPE_RANGE));
             k.push(createProperty(PropertyKeys.AUTO_SIZE, this._autoSize));
@@ -1443,7 +1443,7 @@
             k.push(createProperty(PropertyKeys.GRID_FIT_TYPE, this._field.gridFitType));
             var _local_3:uint = uint(((_local_2.color != null) ? _local_2.color : getDefaultProperty(PropertyKeys.TEXT_COLOR).value));
             k.push(new PropertyStruct(PropertyKeys.TEXT_COLOR, this._field.textColor, PropertyStruct.HEX, (!(this._field.textColor == _local_3))));
-            k.push(createProperty(PropertyKeys.TEXT_STYLE, this._Str_4040));
+            k.push(createProperty(PropertyKeys.TEXT_STYLE, this._textStyleName));
             k.push(createProperty(PropertyKeys.MARGIN_LEFT, this._margins.left));
             k.push(createProperty(PropertyKeys.MARGIN_TOP, this._margins.top));
             k.push(createProperty(PropertyKeys.MARGIN_RIGHT, this._margins.right));
