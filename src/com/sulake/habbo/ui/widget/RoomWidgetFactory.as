@@ -139,7 +139,7 @@
                 case RoomWidgetEnum.MANNEQUIN:
                     return new MannequinWidget(_arg_2, windowManager, assets, this._roomUI.localization);
                 case RoomWidgetEnum.FURNITURE_CONTEXT_MENU:
-                    return new FurnitureContextMenuWidget(_arg_2, windowManager, assets, this._roomUI, this._roomUI.localization, this._roomUI, this._roomUI._Str_8097, this._roomUI.catalog);
+                    return new FurnitureContextMenuWidget(_arg_2, windowManager, assets, this._roomUI, this._roomUI.localization, this._roomUI, this._roomUI.habboGroupsManager, this._roomUI.catalog);
                 case RoomWidgetEnum.CAMERA:
                     return new CameraWidget(_arg_2, windowManager, assets, this._roomUI, this._roomUI.localization, this._roomUI);
                 case RoomWidgetEnum.ROOM_BACKGROUND_COLOR:

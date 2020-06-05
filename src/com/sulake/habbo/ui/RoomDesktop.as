@@ -301,7 +301,7 @@
             return this._navigator;
         }
 
-        public function get _Str_8097():IHabboGroupsManager
+        public function get habboGroupsManager():IHabboGroupsManager
         {
             return this._habboGroupsManager;
         }
@@ -512,7 +512,7 @@
             this._freeFlowChat = k;
         }
 
-        public function set _Str_8097(k:IHabboGroupsManager):void
+        public function set habboGroupsManager(k:IHabboGroupsManager):void
         {
             this._habboGroupsManager = k;
         }

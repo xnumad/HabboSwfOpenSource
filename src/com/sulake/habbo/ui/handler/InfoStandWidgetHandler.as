@@ -515,7 +515,7 @@
                     {
                         return null;
                     }
-                    this._container._Str_8097._Str_12867(_local_12.own, _local_12.groupId);
+                    this._container.habboGroupsManager._Str_12867(_local_12.own, _local_12.groupId);
                     break;
                 case RoomWidgetGetBadgeImageMessage.RWGOI_MESSAGE_GET_BADGE_IMAGE:
                     _local_13 = (k as RoomWidgetGetBadgeImageMessage);
@@ -913,7 +913,7 @@
             this._container.events.dispatchEvent(_local_6);
             var _local_8:Array = this._container.sessionDataManager.getUserTags(_arg_4.id);
             this._Str_16287(_arg_4.id, _local_8);
-            this._container._Str_8097._Str_14387(_arg_4.id);
+            this._container.habboGroupsManager._Str_14387(_arg_4.id);
             this._container.connection.send(new _Str_8049(_arg_4.id));
         }
 

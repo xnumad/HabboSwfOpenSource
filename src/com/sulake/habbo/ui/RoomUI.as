@@ -1096,7 +1096,7 @@
             _local_3.messenger = this._messenger;
             _local_3.toolbar = this._toolbar;
             _local_3.navigator = this._newNavigator._Str_2559;
-            _local_3._Str_8097 = this._habboGroupsManager;
+            _local_3.habboGroupsManager = this._habboGroupsManager;
             _local_3.avatarEditor = this._avatarEditor;
             _local_3.catalog = this._catalog;
             _local_3._Str_25206 = this._adManager;
@@ -1253,7 +1253,7 @@
             return this._habboTracking;
         }
 
-        public function get _Str_8097():IHabboGroupsManager
+        public function get habboGroupsManager():IHabboGroupsManager
         {
             return this._habboGroupsManager;
         }

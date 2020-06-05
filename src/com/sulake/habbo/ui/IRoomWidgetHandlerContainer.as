@@ -47,7 +47,7 @@
         function get inventory():IHabboInventory;
         function get toolbar():IHabboToolbar;
         function get navigator():IHabboNavigator;
-        function get _Str_8097():IHabboGroupsManager;
+        function get habboGroupsManager():IHabboGroupsManager;
         function get _Str_17230():IRoomWidgetFactory;
         function get roomSessionManager():IRoomSessionManager;
         function get avatarEditor():IHabboAvatarEditor;
