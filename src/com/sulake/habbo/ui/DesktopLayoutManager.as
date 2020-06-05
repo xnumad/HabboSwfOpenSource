@@ -165,7 +165,7 @@
             return true;
         }
 
-        public function get _Str_16760():Rectangle
+        public function get roomViewRect():Rectangle
         {
             if (this._layoutContainer == null)
             {

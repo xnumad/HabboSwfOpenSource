@@ -973,7 +973,7 @@
             if (_local_3)
             {
                 k = _Str_3040.RWRVUE_ROOM_VIEW_SIZE_CHANGED;
-                _local_16 = new _Str_3040(k, this._layoutManager._Str_16760);
+                _local_16 = new _Str_3040(k, this._layoutManager.roomViewRect);
                 this.events.dispatchEvent(_local_16);
             }
         }
@@ -1335,7 +1335,7 @@
             var _local_20:Number;
             var _local_21:Number;
             var _local_22:IWindow;
-            var _local_2:Rectangle = this._layoutManager._Str_16760;
+            var _local_2:Rectangle = this._layoutManager.roomViewRect;
             var _local_3:int = _local_2.width;
             var _local_4:int = _local_2.height;
             var _local_5:int = ((this._session.isGameSession) ? RoomGeometry.SCALE_ZOOMED_OUT : RoomGeometry.SCALE_ZOOMED_IN);
@@ -1566,7 +1566,7 @@
             {
                 return null;
             }
-            return this._layoutManager._Str_16760;
+            return this._layoutManager.roomViewRect;
         }
 
         public function _Str_22190(k:String, _arg_2:Function):void
