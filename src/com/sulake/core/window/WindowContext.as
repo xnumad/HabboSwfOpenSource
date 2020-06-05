@@ -51,7 +51,7 @@
 
         public var inputEventTrackers:Vector.<IInputEventTracker>;
         private var _linkEventTrackers:Vector.<ILinkEventTracker>;
-        private var _Str_20725:EventProcessorState;
+        private var _eventProcessorState:EventProcessorState;
         protected var _Str_2312:ICoreLocalizationManager;
         protected var _Str_2417:DisplayObjectContainer;
         protected var _Str_24909:Boolean = true;
@@ -109,7 +109,7 @@
             this._Str_2417.addChild(this._Str_2867.getDisplayObject());
             this._Str_2417.doubleClickEnabled = true;
             this._Str_2417.addEventListener(Event.RESIZE, this._Str_21888);
-            this._Str_20725 = new EventProcessorState(_renderer, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
+            this._eventProcessorState = new EventProcessorState(_renderer, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
             _Str_9993 = INPUT_MODE_MOUSE;
             this._Str_13721 = new SubstituteParentController(this);
         }
@@ -325,7 +325,7 @@
                 this._Str_1984 = null;
                 throw (_local_2);
             }
-            inputEventProcessor.process(this._Str_20725, inputEventQueue);
+            inputEventProcessor.process(this._eventProcessorState, inputEventQueue);
 			}
 			catch (error: Error)
 			{
