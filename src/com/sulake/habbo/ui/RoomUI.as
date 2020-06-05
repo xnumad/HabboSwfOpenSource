@@ -921,7 +921,7 @@
             switch (k.type)
             {
                 case RoomEngineEvent.INITIALIZED:
-                    _local_3._Str_22664(this._Str_17538(k.roomId));
+                    _local_3.createRoomView(this._Str_17538(k.roomId));
                     if (((!(this._roomEngine == null)) && (!(RoomId.isRoomPreviewerId(k.roomId)))))
                     {
                         this._roomEngine.setActiveRoom(k.roomId);

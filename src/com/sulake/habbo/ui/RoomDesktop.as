@@ -1324,7 +1324,7 @@
             }
         }
 
-        public function _Str_22664(k:int):void
+        public function createRoomView(k:int):void
         {
             var _local_14:Number;
             var _local_15:Number;
