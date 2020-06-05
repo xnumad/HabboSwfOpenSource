@@ -24,7 +24,7 @@
         protected var _scrollStep:Number = 0.1;
         protected var _scrollable:IScrollableWindow;
         private var _horizontal:Boolean;
-        private var _Str_9086:String;
+        private var _targetName:String;
         private var _Str_12228:Boolean = false;
 
         public function ScrollBarController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0, _arg_12:IScrollableWindow=null)
@@ -116,9 +116,9 @@
             }
             else
             {
-                if (this._Str_9086 != null)
+                if (this._targetName != null)
                 {
-                    _local_2 = this._Str_9086;
+                    _local_2 = this._targetName;
                 }
             }
             if (_local_2 == null)
@@ -140,7 +140,7 @@
                 switch (_local_2.key)
                 {
                     case PropertyKeys.SCROLLABLE:
-                        this._Str_9086 = (_local_2.value as String);
+                        this._targetName = (_local_2.value as String);
                         this._scrollable = null;
                         break;
                 }
@@ -498,12 +498,12 @@
                     return true;
                 }
             }
-            if (this._Str_9086 != null)
+            if (this._targetName != null)
             {
-                k = (findParentByName(this._Str_9086) as IScrollableWindow);
+                k = (findParentByName(this._targetName) as IScrollableWindow);
                 if ((((k == null) && (_parent is IWindowContainer)) && (!(_parent is IDesktopWindow))))
                 {
-                    k = (IWindowContainer(_parent).findChildByName(this._Str_9086) as IScrollableWindow);
+                    k = (IWindowContainer(_parent).findChildByName(this._targetName) as IScrollableWindow);
                     if (k)
                     {
                         this.scrollable = k;
