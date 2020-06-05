@@ -194,7 +194,7 @@
             this._Str_23295(k, _arg_2);
             var _local_3:String = ((((_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED) || (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD)) || (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE)) ? "group_base_icon" : "group_base_icon_no_doormode");
             this._navigator.refreshButton(k, _local_3, (_arg_2.habboGroupId > 0), null, 0, "group_base_icon");
-            this._navigator.refreshButton(k, "home", this._Str_10475(_arg_2), null, 0);
+            this._navigator.refreshButton(k, "home", this.isHome(_arg_2), null, 0);
             this._navigator.refreshButton(k, "doormode_doorbell_small", (_arg_2.doorMode == _Str_3560.DOORMODE_CLOSED), null, 0);
             this._navigator.refreshButton(k, "doormode_password_small", (_arg_2.doorMode == _Str_3560.DOORMODE_PASSWORD), null, 0);
             this._navigator.refreshButton(k, "doormode_invisible_small", (_arg_2.doorMode == _Str_3560.DOORMODE_INVISIBLE), null, 0);
@@ -301,12 +301,12 @@
         private function _Str_23295(k:IWindowContainer, _arg_2:_Str_2370):void
         {
             var _local_3:Boolean = this._navigator.data._Str_20543(_arg_2.flatId);
-            var _local_4:Boolean = this._Str_10475(_arg_2);
+            var _local_4:Boolean = this.isHome(_arg_2);
             this.refreshRegion(k, "make_favourite", ((!(_local_3)) && (!(_local_4))), this.onAddFavouriteClick);
             this.refreshRegion(k, "favourite", ((_local_3) && (!(_local_4))), this.onRemoveFavouriteClick);
         }
 
-        private function _Str_10475(k:_Str_2370):Boolean
+        private function isHome(k:_Str_2370):Boolean
         {
             return k.flatId == this._navigator.data.homeRoomId;
         }

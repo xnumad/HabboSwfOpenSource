@@ -126,7 +126,7 @@
             this._window.height = (Util._Str_2647(this._window.content) + 45);
         }
 
-        private function _Str_10475(k:_Str_2370):Boolean
+        private function isHome(k:_Str_2370):Boolean
         {
             return (!(k == null)) && (k.flatId == this._navigator.data.homeRoomId);
         }
@@ -199,8 +199,8 @@
             this._window.findChildByName("rating_region").x = ((_local_6.x + _local_6.width) + 5);
             this.find("ranking_cont").visible = (k.ranking > 0);
             ITextWindow(this.find("ranking_txt")).text = ("" + k.ranking);
-            this._navigator.refreshButton(_local_2, "home", this._Str_10475(k), null, 0);
-            this._window.findChildByName("make_home_region").visible = (!(this._Str_10475(k)));
+            this._navigator.refreshButton(_local_2, "home", this.isHome(k), null, 0);
+            this._window.findChildByName("make_home_region").visible = (!(this.isHome(k)));
             this._window.findChildByName("make_favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (!(this._navigator.data._Str_21092())));
             this._window.findChildByName("favourite_region").visible = ((!(this._navigator.data._Str_12763)) && (this._navigator.data._Str_21092()));
             this._window.findChildByName("floor_plan_editor_button").visible = this._navigator.data._Str_11824;
