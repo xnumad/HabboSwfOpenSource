@@ -80,7 +80,7 @@
             }
         }
 
-        private static function _Str_17232(k:TextController, _arg_2:String):void
+        private static function setAntiAliasType(k:TextController, _arg_2:String):void
         {
             _arg_2 = ((_arg_2 == AntiAliasType.ADVANCED) ? AntiAliasType.ADVANCED : AntiAliasType.NORMAL);
             k._Str_3808.antiAliasType = _arg_2;
@@ -586,7 +586,7 @@
             k["margins"] = _Str_18664;
             k[PropertyKeys.MAX_LINES] = _Str_16363;
             k[PropertyKeys.LEADING] = _Str_18703;
-            k[PropertyKeys.ANTIALIAS_TYPE] = _Str_17232;
+            k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
             k[PropertyKeys.AUTO_SIZE] = _Str_16361;
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = _Str_24930;
             k[PropertyKeys.TEXT_COLOR] = _Str_18306;
@@ -821,7 +821,7 @@
 
         public function set antiAliasType(k:String):void
         {
-            _Str_17232(this, k);
+            setAntiAliasType(this, k);
         }
 
         public function set autoSize(k:String):void
