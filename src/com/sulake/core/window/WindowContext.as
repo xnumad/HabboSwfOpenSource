@@ -44,7 +44,7 @@
         public static const ERROR_UNKNOWN_WINDOW_TYPE:int = 4;
         public static const ERROR_DURING_EVENT_HANDLING:int = 5;
         public static var inputEventQueue:IEventQueue;
-        private static var _Str_6468:IEventProcessor;
+        private static var inputEventProcessor:IEventProcessor;
         private static var _Str_17012:uint = INPUT_MODE_MOUSE;//0
         private static var _Str_2884:IWindowRenderer;
         private static var stage:Stage;
@@ -128,18 +128,18 @@
                     IDisposable(inputEventQueue).dispose();
                 }
             }
-            if (_Str_6468)
+            if (inputEventProcessor)
             {
-                if ((_Str_6468 is IDisposable))
+                if ((inputEventProcessor is IDisposable))
                 {
-                    IDisposable(_Str_6468).dispose();
+                    IDisposable(inputEventProcessor).dispose();
                 }
             }
             switch (k)
             {
                 case INPUT_MODE_MOUSE:
                     inputEventQueue = new MouseEventQueue(stage);
-                    _Str_6468 = new MouseEventProcessor();
+                    inputEventProcessor = new MouseEventProcessor();
                     try
                     {
                     }
@@ -149,7 +149,7 @@
                     return;
                 case INPUT_MODE_TOUCH:
                     inputEventQueue = new TabletEventQueue(stage);
-                    _Str_6468 = new TabletEventProcessor();
+                    inputEventProcessor = new TabletEventProcessor();
                     try
                     {
                     }
@@ -325,7 +325,7 @@
                 this._Str_1984 = null;
                 throw (_local_2);
             }
-            _Str_6468.process(this._Str_20725, inputEventQueue);
+            inputEventProcessor.process(this._Str_20725, inputEventQueue);
 			}
 			catch (error: Error)
 			{
