@@ -366,7 +366,7 @@
             }
         }
 
-        private static function _Str_25567(k:TextController, _arg_2:String):void
+        private static function setTextStyleString(k:TextController, _arg_2:String):void
         {
             var _local_4:TextFormat;
             var _local_3:TextStyle = TextStyleManager.getStyle(_arg_2);
@@ -590,7 +590,7 @@
             k[PropertyKeys.AUTO_SIZE] = setAutoSize;
             k[PropertyKeys.MOUSE_WHEEL_ENABLED] = setMouseWheelEnabled;
             k[PropertyKeys.TEXT_COLOR] = setTextColor;
-            k[PropertyKeys.TEXT_STYLE] = _Str_25567;
+            k[PropertyKeys.TEXT_STYLE] = setTextStyleString;
             k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
             k[PropertyKeys.MARGIN_TOP] = setMarginTop;
             k[PropertyKeys.MARGIN_RIGHT] = setMarginRight;
