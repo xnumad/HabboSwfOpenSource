@@ -1190,7 +1190,7 @@
             }
         }
 
-        public function _Str_25327(k:String):void
+        public function hideWidget(k:String):void
         {
             var _local_2:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_2 != null)

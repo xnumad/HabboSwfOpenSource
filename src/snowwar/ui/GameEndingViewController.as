@@ -875,7 +875,7 @@
 
         private function _SafeStr_18904():void
         {
-            this._SafeStr_18579.roomUI._Str_25327(RoomWidgetEnum.CHAT_INPUT_WIDGET);
+            this._SafeStr_18579.roomUI.hideWidget(RoomWidgetEnum.CHAT_INPUT_WIDGET);
         }
 
         public function offersAvailable(k:int):void

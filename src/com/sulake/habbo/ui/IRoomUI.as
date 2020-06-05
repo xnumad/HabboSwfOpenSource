@@ -13,7 +13,7 @@
         function getDesktop(_arg_1:String):IRoomDesktop;
         function getActiveCanvasId(_arg_1:int):int;
         function set visible(_arg_1:Boolean):void;
-        function _Str_25327(_arg_1:String):void;
+        function hideWidget(_arg_1:String):void;
         function showGamePlayerName(_arg_1:int, _arg_2:String, _arg_3:uint, _arg_4:int):void;
         function _Str_21446(_arg_1:MouseEvent):Boolean;
         function triggerbottomBarResize():void;
