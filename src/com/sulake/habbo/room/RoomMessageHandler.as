@@ -84,7 +84,7 @@
     import com.sulake.habbo.avatar.pets.PetTypeEnum;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5499;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8180;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.AvatarActionMessageData;
     import com.sulake.habbo.communication.messages.parser.room.engine.UserUpdateMessageParser;
     import com.sulake.room.IRoomInstance;
     import com.sulake.habbo.communication.messages.parser.room.engine.UserRemoveMessageParser;
@@ -834,7 +834,7 @@
             var _local_16:Boolean;
             var _local_17:Boolean;
             var _local_18:uint;
-            var _local_19:_Str_8180;
+            var _local_19:AvatarActionMessageData;
             var _local_2:UserUpdateEvent = (k as UserUpdateEvent);
             if (((_local_2 == null) || (_local_2.getParser() == null)))
             {

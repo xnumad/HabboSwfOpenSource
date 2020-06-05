@@ -1,11 +1,11 @@
 ﻿package com.sulake.habbo.communication.messages.incoming.room.engine
 {
-    public class _Str_8180 
+    public class AvatarActionMessageData
     {
         private var _Str_1659:String;
         private var _Str_1638:String;
 
-        public function _Str_8180(k:String, _arg_2:String)
+        public function AvatarActionMessageData(k:String, _arg_2:String)
         {
             this._Str_1659 = k;
             this._Str_1638 = _arg_2;

@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageParser;
     import com.sulake.habbo.communication.messages.incoming.room.engine._Str_5499;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_8180;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.AvatarActionMessageData;
     import com.sulake.core.communication.messages.IMessageDataWrapper;
 
     public class UserUpdateMessageParser implements IMessageParser 
@@ -132,7 +132,7 @@
                                     break;
                             }
                         }
-                        _local_15.push(new _Str_8180(_local_25, _local_26));
+                        _local_15.push(new AvatarActionMessageData(_local_25, _local_26));
                     }
                     _local_21++;
                 }
