@@ -109,7 +109,7 @@
         {
             if (!this._margins)
             {
-                this._margins = new TextMargins(0, 0, 0, 0, this._Str_5268);
+                this._margins = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             }
             return this._margins;
         }
@@ -356,17 +356,17 @@
             }
         }
 
-        private function _Str_5268(k:IMargins):void
+        private function setTextMargins(k:IMargins):void
         {
             if (((k) && (!(k == this._margins))))
             {
                 if (this._margins)
                 {
-                    this._margins.assign(k.left, k.top, k.right, k.bottom, this._Str_5268);
+                    this._margins.assign(k.left, k.top, k.right, k.bottom, this.setTextMargins);
                 }
                 else
                 {
-                    this._margins = new TextMargins(k.left, k.top, k.right, k.bottom, this._Str_5268);
+                    this._margins = new TextMargins(k.left, k.top, k.right, k.bottom, this.setTextMargins);
                 }
             }
             this.refresh();
@@ -381,11 +381,11 @@
         {
             if (this._margins)
             {
-                this._margins.assign(int(k["left"]), int(k["top"]), int(k["right"]), int(k["bottom"]), this._Str_5268);
+                this._margins.assign(int(k["left"]), int(k["top"]), int(k["right"]), int(k["bottom"]), this.setTextMargins);
             }
             else
             {
-                this._margins = new TextMargins(int(k["left"]), int(k["top"]), int(k["right"]), int(k["bottom"]), this._Str_5268);
+                this._margins = new TextMargins(int(k["left"]), int(k["top"]), int(k["right"]), int(k["bottom"]), this.setTextMargins);
             }
             this.refresh();
         }

@@ -55,7 +55,7 @@
         public function TextController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             this._Str_3808 = new TextStyle();
-            this._Str_2480 = new TextMargins(0, 0, 0, 0, this._Str_5268);
+            this._Str_2480 = new TextMargins(0, 0, 0, 0, this.setTextMargins);
             this._Str_4263 = false;
             this._Str_7995 = 0;
             this._Str_3375 = 0;
@@ -242,11 +242,11 @@
         {
             if (k._Str_2480)
             {
-                k._Str_2480.assign(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k._Str_5268);
+                k._Str_2480.assign(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
             }
             else
             {
-                k._Str_2480 = new TextMargins(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k._Str_5268);
+                k._Str_2480 = new TextMargins(int(_arg_2["left"]), int(_arg_2["top"]), int(_arg_2["right"]), int(_arg_2["bottom"]), k.setTextMargins);
             }
             k.refreshTextImage();
         }
@@ -1139,7 +1139,7 @@
             k._Str_2309.background = background;
             k._Str_7995 = this._Str_7995;
             k._Str_3375 = this._Str_3375;
-            k._Str_2480 = this._Str_2480.clone(k._Str_5268);
+            k._Str_2480 = this._Str_2480.clone(k.setTextMargins);
             k._Str_4318 = this._Str_4318;
             k._Str_2959 = this._Str_2959;
             return k;
@@ -1366,12 +1366,12 @@
             }
         }
 
-        public function _Str_5268(k:IMargins):void
+        public function setTextMargins(k:IMargins):void
         {
             if (k != this._Str_2480)
             {
                 this._Str_2480.dispose();
-                this._Str_2480 = new TextMargins(k.left, k.top, k.right, k.bottom, this._Str_5268);
+                this._Str_2480 = new TextMargins(k.left, k.top, k.right, k.bottom, this.setTextMargins);
             }
             if (this._Str_4318 == TextFieldAutoSize.LEFT)
             {
