@@ -142,7 +142,7 @@
 
         private function onClick(k:WindowMouseEvent):void
         {
-            var _local_2:int = this._gridWindow._Str_3373((k.target as IWindow));
+            var _local_2:int = this._gridWindow.getGridItemIndex((k.target as IWindow));
             this._Str_6965(_local_2);
             this._view._Str_4246 = _local_2;
         }

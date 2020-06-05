@@ -129,7 +129,7 @@
             var _local_3:int;
             if (k.type == WindowMouseEvent.DOWN)
             {
-                _local_3 = this._partGrid._Str_3373(k.window);
+                _local_3 = this._partGrid.getGridItemIndex(k.window);
                 this._model.selectPart(this._categoryId, _local_3);
             }
         }

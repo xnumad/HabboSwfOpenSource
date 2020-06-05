@@ -217,7 +217,7 @@
             {
                 return;
             }
-            this._Str_6965(this._colorGrid._Str_3373(_arg_2));
+            this._Str_6965(this._colorGrid.getGridItemIndex(_arg_2));
         }
     }
 }

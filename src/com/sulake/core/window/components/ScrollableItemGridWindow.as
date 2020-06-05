@@ -283,9 +283,9 @@
             return this._Str_2448.getGridItemByTag(k);
         }
 
-        public function _Str_3373(k:IWindow):int
+        public function getGridItemIndex(k:IWindow):int
         {
-            return this._Str_2448._Str_3373(k);
+            return this._Str_2448.getGridItemIndex(k);
         }
 
         public function _Str_4725(k:IWindow):IWindow

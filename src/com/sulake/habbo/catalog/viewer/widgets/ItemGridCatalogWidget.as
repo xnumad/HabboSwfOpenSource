@@ -400,7 +400,7 @@
 
         private function _Str_25239(k:IPurchasableOffer):void
         {
-            if (this._Str_2448._Str_3373(k.gridItem.view) >= 0)
+            if (this._Str_2448.getGridItemIndex(k.gridItem.view) >= 0)
             {
                 this._Str_2448._Str_4725(k.gridItem.view);
             }
@@ -422,7 +422,7 @@
             {
                 return;
             }
-            _local_4 = this._Str_2448._Str_3373(_local_2.gridItem.view);
+            _local_4 = this._Str_2448.getGridItemIndex(_local_2.gridItem.view);
             this._Str_25239(_local_2);
             var _local_5:String = ((_local_2.product.furnitureData.fullName.split("*")[0] + "*") + (k.index + 1));
             for each (_local_3 in page.offers)

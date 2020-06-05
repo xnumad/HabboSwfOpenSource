@@ -85,7 +85,7 @@
             var k:int = -1;
             if ((((!(this._layerOptions == null)) && (!(this._parentCtrl._Str_5636 == null))) && (!(this._selectedItem == null))))
             {
-                k = this._parentCtrl._Str_5636._Str_3373(this._selectedItem);
+                k = this._parentCtrl._Str_5636.getGridItemIndex(this._selectedItem);
                 if (((!(k == -1)) && (!(this._layerOptions._Str_3617 == BadgeLayerCtrl._Str_5392))))
                 {
                     k--;

@@ -172,7 +172,7 @@
                     }
                     else
                     {
-                        _local_4 = this._itemGridWindow._Str_3373(k.window);
+                        _local_4 = this._itemGridWindow.getGridItemIndex(k.window);
                         if (_local_4 != -1)
                         {
                             _local_5 = this._items.getWithIndex(_local_4);

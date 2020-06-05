@@ -173,14 +173,14 @@
             switch (k.target.name)
             {
                 case REMOVE_ITEM:
-                    _local_2 = this._partGrid._Str_3373(k.window);
+                    _local_2 = this._partGrid.getGridItemIndex(k.window);
                     this._model.selectPart(this._categoryId, _local_2);
                     return;
                 case GET_MORE:
                     this._model.controller.manager.catalog.openCatalogPage(this._model.controller.manager.getProperty("catalog.clothes.page"));
                     return;
                 default:
-                    _local_2 = this._partGrid._Str_3373(k.window);
+                    _local_2 = this._partGrid.getGridItemIndex(k.window);
                     this._model.selectPart(this._categoryId, _local_2);
             }
         }
@@ -201,7 +201,7 @@
                     if (this._paletteGrids.length > _local_7)
                     {
                         _local_4 = (this._paletteGrids[_local_7] as IItemGridWindow);
-                        _local_5 = _local_4._Str_3373(_local_6);
+                        _local_5 = _local_4.getGridItemIndex(_local_6);
                         if (_local_5 > -1)
                         {
                             this._model.selectColor(this._categoryId, _local_5, _local_7);

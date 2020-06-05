@@ -69,7 +69,7 @@
             }
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._hotLooksGrid._Str_3373(_arg_2.parent);
+                _local_3 = this._hotLooksGrid.getGridItemIndex(_arg_2.parent);
                 this._model.selectHotLook(_local_3);
             }
         }

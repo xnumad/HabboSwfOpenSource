@@ -260,7 +260,7 @@
             return null;
         }
 
-        public function _Str_3373(k:IWindow):int
+        public function getGridItemIndex(k:IWindow):int
         {
             var _local_2:IItemListWindow = this._Str_22998(k);
             if (_local_2 == null)
@@ -272,7 +272,7 @@
 
         public function _Str_4725(k:IWindow):IWindow
         {
-            var _local_2:int = this._Str_3373(k);
+            var _local_2:int = this.getGridItemIndex(k);
             if (_local_2 == -1)
             {
                 return null;

@@ -192,7 +192,7 @@
             var _local_3:int;
             if (k.type == WindowMouseEvent.CLICK)
             {
-                _local_3 = this._Str_3334.grid._Str_3373(_arg_2);
+                _local_3 = this._Str_3334.grid.getGridItemIndex(_arg_2);
                 this._Str_23446(_arg_2);
                 this.selected = this._Str_2514[_local_3];
                 this._Str_3334.window.visible = false;

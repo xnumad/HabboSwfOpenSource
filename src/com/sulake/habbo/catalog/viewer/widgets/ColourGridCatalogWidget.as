@@ -222,7 +222,7 @@
         private function onClick(k:WindowMouseEvent):void
         {
             this.select((k.target as IWindowContainer));
-            var _local_2:int = this._colourGrid._Str_3373((k.target as IWindow));
+            var _local_2:int = this._colourGrid.getGridItemIndex((k.target as IWindow));
             events.dispatchEvent(new CatalogWidgetColourIndexEvent(_local_2));
         }
     }

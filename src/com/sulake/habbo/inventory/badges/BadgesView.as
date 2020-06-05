@@ -304,7 +304,7 @@
 
         private function _Str_20827(k:WindowEvent):void
         {
-            var _local_2:int = this._inactiveGrid._Str_3373(k.window);
+            var _local_2:int = this._inactiveGrid.getGridItemIndex(k.window);
             var _local_3:Badge = this._filteredBadges[_local_2];
             if (_local_3 != null)
             {
@@ -314,7 +314,7 @@
 
         private function _Str_20205(k:WindowEvent):void
         {
-            var _local_2:int = this._activeGrid._Str_3373(k.window);
+            var _local_2:int = this._activeGrid.getGridItemIndex(k.window);
             var _local_3:Badge = this._model._Str_24207(_local_2);
             if (_local_3 != null)
             {
