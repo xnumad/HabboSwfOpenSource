@@ -118,7 +118,7 @@
             }
         }
 
-        private static function _Str_16638(k:TextController, _arg_2:Boolean):void
+        private static function setTextBackground(k:TextController, _arg_2:Boolean):void
         {
             k.background = _arg_2;
         }
@@ -561,7 +561,7 @@
         {
             var k:Dictionary = new Dictionary();
             k[PropertyKeys.ALWAYS_SHOW_SELECTION] = setAlwaysShowSelection;
-            k["background"] = _Str_16638;
+            k["background"] = setTextBackground;
             k["background_color"] = _Str_16255;
             k[PropertyKeys.BOLD] = _Str_17644;
             k[PropertyKeys.BORDER] = _Str_18639;
@@ -916,7 +916,7 @@
 
         public function set _Str_5349(k:Boolean):void
         {
-            _Str_16638(this, k);
+            setTextBackground(this, k);
         }
 
         public function set _Str_4807(k:uint):void
