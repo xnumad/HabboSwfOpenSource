@@ -1481,10 +1481,10 @@
             {
                 return;
             }
-            this._Str_19741(_local_2);
+            this.fillBackgroundColorizer(_local_2);
         }
 
-        private function _Str_19741(k:IDisplayObjectWrapper):void
+        private function fillBackgroundColorizer(k:IDisplayObjectWrapper):void
         {
             var _local_2:Sprite = (k.getDisplayObject() as Sprite);
             if (_local_2 == null)
@@ -1544,7 +1544,7 @@
             else
             {
                 _local_5.visible = true;
-                this._Str_19741(_local_5);
+                this.fillBackgroundColorizer(_local_5);
             }
         }
 
