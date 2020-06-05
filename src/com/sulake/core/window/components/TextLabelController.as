@@ -179,7 +179,7 @@
             return (this._margins) ? this._margins.left : 0;
         }
 
-        public function get _Str_23873():int
+        public function get drawOffsetY():int
         {
             return (this._margins) ? this._margins.top : 0;
         }

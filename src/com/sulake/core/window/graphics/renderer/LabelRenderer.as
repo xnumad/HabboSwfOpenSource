@@ -41,7 +41,7 @@
                     this._Str_20528 = _local_7;
                 }
                 this._Str_2085.tx = _local_6.drawOffsetX;
-                this._Str_2085.ty = _local_6._Str_23873;
+                this._Str_2085.ty = _local_6.drawOffsetY;
                 this._Str_7685.text = _local_6.text;
                 _local_8 = uint(_local_7.color);
                 this._Str_7685.textColor = ((_local_6._Str_25634) ? _local_6.textColor : _local_8);
