@@ -676,12 +676,12 @@
             this._isGridRebuilding = false;
         }
 
-        public function set _Str_7858(k:Boolean):void
+        public function set containerResizeToColumns(k:Boolean):void
         {
             this._containerResizeToColumns = k;
         }
 
-        public function get _Str_7858():Boolean
+        public function get containerResizeToColumns():Boolean
         {
             return this._containerResizeToColumns;
         }
@@ -689,7 +689,7 @@
         override public function get properties():Array
         {
             var k:Array = super.properties;
-            k.push(createProperty(PropertyKeys.CONTAINER_RESIZE_TO_COLUMNS, this._Str_7858));
+            k.push(createProperty(PropertyKeys.CONTAINER_RESIZE_TO_COLUMNS, this.containerResizeToColumns));
             return k;
         }
 
@@ -701,7 +701,7 @@
                 switch (_local_2.key)
                 {
                     case PropertyKeys.CONTAINER_RESIZE_TO_COLUMNS:
-                        this._Str_7858 = (_local_2.value as Boolean);
+                        this.containerResizeToColumns = (_local_2.value as Boolean);
                         break;
                 }
             }

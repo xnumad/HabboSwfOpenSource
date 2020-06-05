@@ -206,11 +206,11 @@
             this._Str_2448.resizeOnItemUpdate = k;
         }
 
-        public function set _Str_7858(k:Boolean):void
+        public function set containerResizeToColumns(k:Boolean):void
         {
         }
 
-        public function get _Str_7858():Boolean
+        public function get containerResizeToColumns():Boolean
         {
             return false;
         }

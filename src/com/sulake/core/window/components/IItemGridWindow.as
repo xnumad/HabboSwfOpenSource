@@ -34,8 +34,8 @@
         function set _Str_6405(_arg_1:Boolean):void;
         function get _Str_6405():Boolean;
         function _Str_11488():void;
-        function set _Str_7858(_arg_1:Boolean):void;
-        function get _Str_7858():Boolean;
+        function set containerResizeToColumns(_arg_1:Boolean):void;
+        function get containerResizeToColumns():Boolean;
         function populate(_arg_1:Array):void;
     }
 }
