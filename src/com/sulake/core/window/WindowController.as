@@ -146,7 +146,7 @@
             }
         }
 
-        public static function _Str_9294(k:WindowController, _arg_2:IWindow):void
+        public static function expandToAccommodateChild(k:WindowController, _arg_2:IWindow):void
         {
             var _local_8:uint;
             var _local_9:uint;
@@ -1216,7 +1216,7 @@
                             {
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN))
                                 {
-                                    _Str_9294(this, _arg_2.related);
+                                    expandToAccommodateChild(this, _arg_2.related);
                                 }
                             }
                             this._Str_19941();
@@ -1239,7 +1239,7 @@
                             {
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN))
                                 {
-                                    _Str_9294(this, _arg_2.related);
+                                    expandToAccommodateChild(this, _arg_2.related);
                                 }
                             }
                             break;
@@ -1252,7 +1252,7 @@
                             {
                                 if (testParamFlag(WindowParam.WINDOW_PARAM_EXPAND_TO_ACCOMMODATE_CHILDREN))
                                 {
-                                    _Str_9294(this, _arg_2.related);
+                                    expandToAccommodateChild(this, _arg_2.related);
                                 }
                             }
                             break;
