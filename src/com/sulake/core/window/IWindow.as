@@ -136,6 +136,6 @@
         function enableChildren(_arg_1:Boolean, _arg_2:Array):void;
         function activateChildren(_arg_1:Boolean, _arg_2:Array):void;
         function setVisibleChildren(_arg_1:Boolean, _arg_2:Array):void;
-        function _Str_5065():Boolean;
+        function isEnabled():Boolean;
     }
 }

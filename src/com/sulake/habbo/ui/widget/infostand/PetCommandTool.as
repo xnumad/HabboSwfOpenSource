@@ -299,7 +299,7 @@
                 _local_12 = _local_3[_local_8];
                 _local_11.id = _local_12;
                 _local_11.caption = this._widget.localizations.getLocalization(("pet.command." + _local_12));
-                if (k._Str_5065(_local_12))
+                if (k.isEnabled(_local_12))
                 {
                     _local_11.enable();
                 }

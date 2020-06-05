@@ -2667,7 +2667,7 @@
             return this._propertyDefaults.get(k);
         }
 
-        public function _Str_5065():Boolean
+        public function isEnabled():Boolean
         {
             return !(this.getStateFlag(WindowState.DISABLED));
         }

@@ -27,7 +27,7 @@
             return this._allCommandIds;
         }
 
-        public function _Str_5065(k:int):Boolean
+        public function isEnabled(k:int):Boolean
         {
             return !(this._enabledCommands[k] == null);
         }

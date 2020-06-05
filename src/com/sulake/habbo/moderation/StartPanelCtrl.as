@@ -161,7 +161,7 @@
 
         private function onMouseOver(k:WindowEvent):void
         {
-            if (!k.window._Str_5065())
+            if (!k.window.isEnabled())
             {
                 return;
             }

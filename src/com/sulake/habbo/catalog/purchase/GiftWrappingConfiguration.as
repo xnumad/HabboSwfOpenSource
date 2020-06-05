@@ -31,7 +31,7 @@
             this._defaultStuffTypes = _local_2._Str_11034;
         }
 
-        public function get _Str_5065():Boolean
+        public function get isEnabled():Boolean
         {
             return this._isEnabled;
         }
