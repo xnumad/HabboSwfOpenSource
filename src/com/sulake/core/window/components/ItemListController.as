@@ -252,7 +252,7 @@
             return new ItemListIterator(this);
         }
 
-        public function get _Str_26443():IWindow
+        public function get firstListItem():IWindow
         {
             return (this.numListItems > 0) ? this.getListItemAt(0) : null;
         }
