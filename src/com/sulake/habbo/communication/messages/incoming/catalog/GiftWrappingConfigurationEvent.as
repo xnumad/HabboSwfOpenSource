@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.catalog.GiftWrappingConfigurationParser;
 
-    public class _Str_7597 extends MessageEvent implements IMessageEvent 
+    public class GiftWrappingConfigurationEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7597(k:Function)
+        public function GiftWrappingConfigurationEvent(k:Function)
         {
             super(k, GiftWrappingConfigurationParser);
         }

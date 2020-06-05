@@ -93,7 +93,7 @@
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8409;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8530;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7086;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7597;
+    import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_8078;
     import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
     import com.sulake.habbo.communication.messages.incoming.catalog.CatalogPagesListEvent;
@@ -555,7 +555,7 @@
             this.addMessageEvent(new _Str_8409(this._Str_23986));
             this.addMessageEvent(new _Str_8530(this._Str_24685));
             this.addMessageEvent(new _Str_7086(this._Str_23734));
-            this.addMessageEvent(new _Str_7597(this._Str_23158));
+            this.addMessageEvent(new GiftWrappingConfigurationEvent(this._Str_23158));
             this.addMessageEvent(new _Str_8078(this._Str_19518));
             this.addMessageEvent(new _Str_7288(this._Str_22941));
             this.addMessageEvent(new CatalogPagesListEvent(this._Str_25188));
@@ -2175,7 +2175,7 @@
             }
         }
 
-        private function _Str_23158(k:_Str_7597):void
+        private function _Str_23158(k:GiftWrappingConfigurationEvent):void
         {
             if (k == null)
             {

@@ -409,7 +409,7 @@
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7288;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7365;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7445;
-	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7597;
+	import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7618;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7677;
 	import com.sulake.habbo.communication.messages.incoming.catalog._Str_7706;
@@ -1171,7 +1171,7 @@
             INCOMING_PACKETS[2221] = SanctionStatusEvent;
             INCOMING_PACKETS[2228] = _Str_5345;
             INCOMING_PACKETS[2233] = DanceMessageEvent;
-            INCOMING_PACKETS[2234] = _Str_7597;
+            INCOMING_PACKETS[2234] = GiftWrappingConfigurationEvent;
             INCOMING_PACKETS[2238] = GuildEditorDataMessageEvent;
             INCOMING_PACKETS[2246] = Game2GameDirectoryStatusMessageEvent;
             INCOMING_PACKETS[2260] = JoinedQueueMessageEvent;

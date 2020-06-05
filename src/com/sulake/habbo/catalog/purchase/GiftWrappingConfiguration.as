@@ -1,7 +1,7 @@
 ﻿package com.sulake.habbo.catalog.purchase
 {
     import com.sulake.habbo.communication.messages.parser.catalog.GiftWrappingConfigurationParser;
-    import com.sulake.habbo.communication.messages.incoming.catalog._Str_7597;
+    import com.sulake.habbo.communication.messages.incoming.catalog.GiftWrappingConfigurationEvent;
 
     public class GiftWrappingConfiguration 
     {
@@ -12,7 +12,7 @@
         private var _ribbonTypes:Array;
         private var _defaultStuffTypes:Array;
 
-        public function GiftWrappingConfiguration(k:_Str_7597)
+        public function GiftWrappingConfiguration(k:GiftWrappingConfigurationEvent)
         {
             if (k == null)
             {
