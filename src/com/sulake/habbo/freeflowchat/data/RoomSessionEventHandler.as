@@ -40,7 +40,7 @@
 
         private function _Str_21581(k:RoomSessionEvent):void
         {
-            this._component._Str_13202();
+            this._component.roomLeft();
         }
     }
 }

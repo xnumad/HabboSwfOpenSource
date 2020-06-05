@@ -232,7 +232,7 @@
                         this._chatHistoryBuffer.dispose();
                         this._chatHistoryBuffer = null;
                     }
-                    this._Str_13202();
+                    this.roomLeft();
                 }
             }
         }
@@ -325,7 +325,7 @@
             }
         }
 
-        public function _Str_13202():void
+        public function roomLeft():void
         {
             if (this._chatHistoryPulldown)
             {

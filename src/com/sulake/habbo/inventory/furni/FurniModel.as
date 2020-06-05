@@ -1354,7 +1354,7 @@
             this._roomItemToSelect = null;
         }
 
-        public function _Str_13202():void
+        public function roomLeft():void
         {
             this._isInRoom = false;
         }

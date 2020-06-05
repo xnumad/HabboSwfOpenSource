@@ -719,7 +719,7 @@
         private function _Str_15910(k:IMessageEvent):void
         {
             this._inventory._Str_13252();
-            this._inventory._Str_2834._Str_13202();
+            this._inventory._Str_2834.roomLeft();
         }
 
         private function _Str_24135(k:_Str_9259):void
