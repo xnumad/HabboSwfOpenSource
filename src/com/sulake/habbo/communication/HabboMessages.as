@@ -439,7 +439,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FurnitureAliasesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemDataUpdateMessageEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectBundleMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7704;
@@ -1292,7 +1292,7 @@
             INCOMING_PACKETS[3191] = _Str_17782;
             INCOMING_PACKETS[3192] = _Str_9383;
             INCOMING_PACKETS[3201] = _Str_7564;
-            INCOMING_PACKETS[3207] = _Str_7350;
+            INCOMING_PACKETS[3207] = SlideObjectBundleMessageEvent;
             INCOMING_PACKETS[3208] = _Str_8204;
             INCOMING_PACKETS[3209] = GuideSessionStartedEvent;
             INCOMING_PACKETS[324] = _Str_8758;

@@ -32,7 +32,7 @@
     import com.sulake.habbo.communication.messages.incoming.room.action.SleepMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.CarryObjectMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.action.UseObjectMessageEvent;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.SlideObjectBundleMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ChatMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.WhisperMessageEvent;
     import com.sulake.habbo.communication.messages.incoming.room.chat.ShoutMessageEvent;
@@ -211,7 +211,7 @@
                 k.addMessageEvent(new SleepMessageEvent(this.onAvatarSleep));
                 k.addMessageEvent(new CarryObjectMessageEvent(this.onCarryObject));
                 k.addMessageEvent(new UseObjectMessageEvent(this.onUseObject));
-                k.addMessageEvent(new _Str_7350(this.onSlideUpdate));
+                k.addMessageEvent(new SlideObjectBundleMessageEvent(this.onSlideUpdate));
                 k.addMessageEvent(new ChatMessageEvent(this.onChat));
                 k.addMessageEvent(new WhisperMessageEvent(this.onChat));
                 k.addMessageEvent(new ShoutMessageEvent(this.onChat));
@@ -1090,9 +1090,9 @@
             {
                 return;
             }
-            if ((k is _Str_7350))
+            if ((k is SlideObjectBundleMessageEvent))
             {
-                _local_2 = (k as _Str_7350).getParser();
+                _local_2 = (k as SlideObjectBundleMessageEvent).getParser();
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 1, null);
                 this._roomCreator.updateObjectFurniture(this._currentRoomId, _local_2.id, null, null, 2, null);
                 _local_3 = _local_2.objectList;

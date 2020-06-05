@@ -4,9 +4,9 @@
     import com.sulake.core.communication.messages.IMessageEvent;
     import com.sulake.habbo.communication.messages.parser.room.engine.SlideObjectBundleMessageParser;
 
-    public class _Str_7350 extends MessageEvent implements IMessageEvent 
+    public class SlideObjectBundleMessageEvent extends MessageEvent implements IMessageEvent
     {
-        public function _Str_7350(k:Function)
+        public function SlideObjectBundleMessageEvent(k:Function)
         {
             super(k, SlideObjectBundleMessageParser);
         }
