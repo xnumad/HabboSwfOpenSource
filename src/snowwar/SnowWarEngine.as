@@ -674,7 +674,7 @@
             {
                 _local_5 = ((playerObject.team == 1) ? 4281310921 : 4290988872);
                 _local_6 = 500;
-                this._roomUI._Str_9753(playerObject._SafeStr_13236, playerObject.name, _local_5, _local_6);
+                this._roomUI.showGamePlayerName(playerObject._SafeStr_13236, playerObject.name, _local_5, _local_6);
             }
             if (this._gameState == STAGE_RUNNING)
             {

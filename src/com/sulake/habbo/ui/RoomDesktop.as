@@ -2054,14 +2054,14 @@
             return _local_2 == k.ownerId;
         }
 
-        public function _Str_9753(k:int, _arg_2:String, _arg_3:uint, _arg_4:int):void
+        public function showGamePlayerName(k:int, _arg_2:String, _arg_3:uint, _arg_4:int):void
         {
             var _local_5:AvatarInfoWidget = (this._widgets[RoomWidgetEnum.AVATAR_INFO] as AvatarInfoWidget);
             if (!_local_5)
             {
                 return;
             }
-            _local_5._Str_9753(k, _arg_2, _arg_3, _arg_4);
+            _local_5.showGamePlayerName(k, _arg_2, _arg_3, _arg_4);
         }
 
         public function get _Str_6642():DesktopLayoutManager

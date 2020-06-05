@@ -1199,12 +1199,12 @@
             }
         }
 
-        public function _Str_9753(k:int, _arg_2:String, _arg_3:uint, _arg_4:int):void
+        public function showGamePlayerName(k:int, _arg_2:String, _arg_3:uint, _arg_4:int):void
         {
             var _local_5:RoomDesktop = this._desktops.getValue(this.getRoomIdentifier(this._roomEngine.activeRoomId));
             if (_local_5 != null)
             {
-                _local_5._Str_9753(k, _arg_2, _arg_3, _arg_4);
+                _local_5.showGamePlayerName(k, _arg_2, _arg_3, _arg_4);
             }
         }
 
