@@ -204,7 +204,7 @@
             this._frame.findChildByName("chatlog_but").procedure = this.onChatlog;
             this._frame.findChildByName("edit_in_hk_but").procedure = this.onEditInHk;
             this._frame.findChildByName("send_caution_but").procedure = this.onSendCaution;
-            this._frame.findChildByName("send_message_but").procedure = this._Str_24627;
+            this._frame.findChildByName("send_message_but").procedure = this.onSendMessage;
             if (!this._main.initMsg._Str_12765)
             {
                 this._frame.findChildByName("chatlog_but").disable();
@@ -333,7 +333,7 @@
             this._Str_20346(true);
         }
 
-        private function _Str_24627(k:WindowEvent, _arg_2:IWindow):void
+        private function onSendMessage(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
