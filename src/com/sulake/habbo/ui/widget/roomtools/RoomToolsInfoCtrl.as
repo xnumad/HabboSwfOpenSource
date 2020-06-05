@@ -18,7 +18,7 @@
     public class RoomToolsInfoCtrl extends RoomToolsCtrlBase 
     {
         private static const MARGIN:int = 12;
-        private static const _Str_15927:uint = 1800619;
+        private static const TAG_COLOR:uint = 1800619;
         private static const _Str_17809:uint = 4696294;
 
         private var _roomTags:Array;
@@ -176,7 +176,7 @@
                         _local_3.textColor = _Str_17809;
                         return;
                     case WindowMouseEvent.OUT:
-                        _local_3.textColor = _Str_15927;
+                        _local_3.textColor = TAG_COLOR;
                         return;
                     case WindowMouseEvent.CLICK:
                         handler.navigator.performTagSearch(_local_4);
