@@ -344,12 +344,12 @@
             this._Str_2338.disableAutodrag = k;
         }
 
-        public function get _Str_8004():Boolean
+        public function get isPartOfGridWindow():Boolean
         {
-            return this._Str_2338._Str_8004;
+            return this._Str_2338.isPartOfGridWindow;
         }
 
-        public function set _Str_8004(k:Boolean):void
+        public function set isPartOfGridWindow(k:Boolean):void
         {
             this._Str_2338.disableAutodrag = k;
         }

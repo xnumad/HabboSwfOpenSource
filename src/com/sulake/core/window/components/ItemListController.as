@@ -99,12 +99,12 @@
             return Math.max(0, (this._scrollAreaHeight - height));
         }
 
-        public function get _Str_8004():Boolean
+        public function get isPartOfGridWindow():Boolean
         {
             return this._isPartOfGridWindow;
         }
 
-        public function set _Str_8004(k:Boolean):void
+        public function set isPartOfGridWindow(k:Boolean):void
         {
             this._isPartOfGridWindow = k;
         }

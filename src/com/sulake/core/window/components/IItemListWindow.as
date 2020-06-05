@@ -34,8 +34,8 @@
         function populate(_arg_1:Array):void;
         function stopDragging():void;
         function set disableAutodrag(_arg_1:Boolean):void;
-        function get _Str_8004():Boolean;
-        function set _Str_8004(_arg_1:Boolean):void;
+        function get isPartOfGridWindow():Boolean;
+        function set isPartOfGridWindow(_arg_1:Boolean):void;
         function get scrollableWindow():IWindow;
     }
 }

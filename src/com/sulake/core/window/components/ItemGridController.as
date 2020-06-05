@@ -514,7 +514,7 @@
         protected function _Str_14060(k:IWindow):IItemListWindow
         {
             var _local_2:IItemListWindow = (_context.create(((_name + "_COLUMN_") + numListItems), null, WindowType.WINDOW_TYPE_ITEMLIST_VERTICAL, WindowStyle.WINDOW_STYLE_DEFAULT, (WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_NULL), new Rectangle(0, 0, Math.max(k.width, 0), Math.max(k.height, 0)), this._Str_24723, null, numListItems, null, "", [WindowController.TAG_INTERNAL, WindowController.TAG_EXCLUDE]) as IItemListWindow);
-            _local_2._Str_8004 = true;
+            _local_2.isPartOfGridWindow = true;
             _local_2.background = background;
             _local_2.color = color;
             _local_2.spacing = ((this._explicitVerticalSpacing) ? this._verticalSpacing : _spacing);
