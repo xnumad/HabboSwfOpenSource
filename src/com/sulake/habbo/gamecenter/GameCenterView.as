@@ -82,7 +82,7 @@
             return this._disposed;
         }
 
-        public function get _Str_3479():HabboGameManager
+        public function get gameManager():HabboGameManager
         {
             return this._gameManager;
         }

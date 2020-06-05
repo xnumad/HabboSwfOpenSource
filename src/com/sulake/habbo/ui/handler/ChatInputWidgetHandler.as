@@ -392,7 +392,7 @@
 									case ":csmm":
                                         if (this._container.sessionDataManager.hasSecurity(SecurityLevelEnum.EMPLOYEE))
                                         {
-                                            this._container._Str_3479._SafeStr_7624();
+                                            this._container.gameManager._SafeStr_7624();
                                             return null;
                                         }
                                         break;

@@ -292,7 +292,7 @@
             return this._avatarRenderManager;
         }
 
-        public function get _Str_3479():IHabboGameManager
+        public function get gameManager():IHabboGameManager
         {
             return this._gameManager;
         }

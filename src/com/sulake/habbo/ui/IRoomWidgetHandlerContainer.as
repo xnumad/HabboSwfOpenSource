@@ -61,7 +61,7 @@
         function get windowManager():IHabboWindowManager;
         function get userDefinedRoomEvents():IHabboUserDefinedRoomEvents;
         function get connection():IConnection;
-        function get _Str_3479():IHabboGameManager;
+        function get gameManager():IHabboGameManager;
         function get questEngine():IHabboQuestEngine;
         function get freeFlowChat():IHabboFreeFlowChat;
         function get layoutManager():DesktopLayoutManager;

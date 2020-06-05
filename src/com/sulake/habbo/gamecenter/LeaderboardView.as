@@ -288,7 +288,7 @@
         private function _Str_21627(k:IBitmapWrapperWindow, _arg_2:String, _arg_3:String=null):void
         {
             var _local_5:BitmapData;
-            var _local_4:Boolean = this._gameCenterView._Str_3479.getBoolean("zoom.enabled");
+            var _local_4:Boolean = this._gameCenterView.gameManager.getBoolean("zoom.enabled");
             var _local_6:IAvatarImage = this._gameCenterView.avatarRenderManager.createAvatarImage(_arg_2, ((_local_4) ? AvatarScaleType.LARGE : AvatarScaleType.SMALL), _arg_3, this);
             if (_local_6)
             {

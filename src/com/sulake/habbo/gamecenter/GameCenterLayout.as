@@ -93,8 +93,8 @@
         public function GameCenterLayout(k:GameCenterView)
         {
             this._gameCenterView = k;
-            this._gameCenterView._Str_3479.inventory.events.addEventListener(HabboUnseenItemsUpdatedEvent.HUIUE_UNSEEN_ITEMS_CHANGED, this._Str_14461);
-            this._gameCenterView._Str_3479.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this._Str_25836);
+            this._gameCenterView.gameManager.inventory.events.addEventListener(HabboUnseenItemsUpdatedEvent.HUIUE_UNSEEN_ITEMS_CHANGED, this._Str_14461);
+            this._gameCenterView.gameManager.events.addEventListener(GameCenterEvent.GAME_CONFIGURATIONS_INITIALIZED, this._Str_25836);
         }
 
         public function get disposed():Boolean
@@ -146,9 +146,9 @@
                 {
                     this._gameCenterView.windowManager.getWindowContext(WINDOW_LAYER_INDEX).getDesktopWindow().removeEventListener(WindowEvent.WINDOW_EVENT_RESIZED, this.onDesktopResized);
                 }
-                if (this._gameCenterView._Str_3479.inventory.events)
+                if (this._gameCenterView.gameManager.inventory.events)
                 {
-                    this._gameCenterView._Str_3479.inventory.events.removeEventListener(HabboUnseenItemsUpdatedEvent.HUIUE_UNSEEN_ITEMS_CHANGED, this._Str_14461);
+                    this._gameCenterView.gameManager.inventory.events.removeEventListener(HabboUnseenItemsUpdatedEvent.HUIUE_UNSEEN_ITEMS_CHANGED, this._Str_14461);
                 }
                 this._playNowLimitedButton.removeEventListener(WindowMouseEvent.CLICK, this._Str_13877);
                 this._playNowUnlimitedButton.removeEventListener(WindowMouseEvent.CLICK, this._Str_13877);
@@ -201,7 +201,7 @@
                 this._gameSelectionIcon = (this._gameListItemBase.findChildByName("selected_icon") as IBitmapWrapperWindow);
                 this._gameListItemBase.removeChild(this._gameSelectionIcon);
                 this._gameListScroller = (this._gameCenterViewWindow.findChildByName("game_icon_list_scroll") as IScrollbarWindow);
-                this._gameCenterViewWindow.findChildByName("game_center_filter_container").visible = this._gameCenterView._Str_3479.getBoolean("games.filter.enabled");
+                this._gameCenterViewWindow.findChildByName("game_center_filter_container").visible = this._gameCenterView.gameManager.getBoolean("games.filter.enabled");
                 this._filterTextField = (this._gameCenterViewWindow.findChildByName("game_center_filter") as ITextFieldWindow);
                 this._filterTextField.addEventListener(WindowKeyboardEvent.WINDOW_EVENT_KEY_DOWN, this._Str_25099);
                 this._Str_16015();
@@ -222,7 +222,7 @@
                 k.addChild(this._gamesLeftContainer);
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new Game2AccountGameStatusMessageEvent(this.onAccountGameStatus));
                 this._gameCenterView.communication.addHabboConnectionMessageEvent(new GameStatusMessageEvent(this._Str_25204));
-                this._Str_22075(this._gameCenterView._Str_3479.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES));
+                this._Str_22075(this._gameCenterView.gameManager.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES));
                 this._achievementsContainer = (this._gameCenterViewWindow.findChildByName("achievements_container") as IWindowContainer);
                 this._leaderboardContainer = (this._gameCenterViewWindow.findChildByName("leaderboard_container") as IWindowContainer);
                 this._gameGeneralInfoContainer = (this._gameCenterViewWindow.findChildByName("game_general_info_container") as IWindowContainer);
@@ -287,7 +287,7 @@
             if (!this._gameCenterViewWindow)
             {
                 this.createWindow();
-                this._gameCenterView._Str_3479._SafeStr_7683();
+                this._gameCenterView.gameManager._SafeStr_7683();
             }
             this._selectedGame = -1;
             this._gameCenterViewWindow.invalidate();
@@ -375,7 +375,7 @@
         {
             if (this._gamesLeft != 0)
             {
-				if (((this._selectedGame == HabboGames._SafeStr_7697) && (!(this._gameCenterView._Str_3479._SafeStr_7684()))))
+				if (((this._selectedGame == HabboGames._SafeStr_7697) && (!(this._gameCenterView.gameManager._SafeStr_7684()))))
                 {
                     return;
                 }
@@ -429,7 +429,7 @@
             this._gameCenterView.send(new _Str_11560(this._selectedGame));
             this._gameCenterView._Str_20681(this);
             var _local_5:String = ("gamecenter.roomlink." + _local_2);
-            var _local_6:String = this._gameCenterView._Str_3479.getProperty(_local_5);
+            var _local_6:String = this._gameCenterView.gameManager.getProperty(_local_5);
             var _local_7:IWindowContainer = (this._gameCenterViewWindow.findChildByName("room_link_container") as IWindowContainer);
             _local_7.visible = ((_local_6) && (!(_local_6 == "")));
             if (_local_2 == "elisa_habbo_stories")
@@ -721,10 +721,10 @@
         private function _Str_17423(k:WindowMouseEvent):void
         {
             var _local_2:String = GameConfigurations.getNameId(this._selectedGame);
-            var _local_3:String = this._gameCenterView._Str_3479.getProperty(("gamecenter.roomlink." + _local_2));
+            var _local_3:String = this._gameCenterView.gameManager.getProperty(("gamecenter.roomlink." + _local_2));
             if (_local_3)
             {
-                this._gameCenterView._Str_3479.navigator.goToPrivateRoom(parseInt(_local_3));
+                this._gameCenterView.gameManager.navigator.goToPrivateRoom(parseInt(_local_3));
             }
         }
 
@@ -782,7 +782,7 @@
 
         private function _Str_14461(k:HabboUnseenItemsUpdatedEvent):void
         {
-            var _local_2:Array = this._gameCenterView._Str_3479.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES);
+            var _local_2:Array = this._gameCenterView.gameManager.inventory._Str_3455._Str_11239(UnseenItemCategoryEnum.GAMES);
             this._Str_22075(_local_2);
         }
 

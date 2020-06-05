@@ -366,7 +366,7 @@
             return this._session;
         }
 
-        public function get _Str_3479():IHabboGameManager
+        public function get gameManager():IHabboGameManager
         {
             return this._gameManager;
         }
@@ -497,7 +497,7 @@
             this._userDefinedRoomEvents = k;
         }
 
-        public function set _Str_3479(k:IHabboGameManager):void
+        public function set gameManager(k:IHabboGameManager):void
         {
             this._gameManager = k;
         }
