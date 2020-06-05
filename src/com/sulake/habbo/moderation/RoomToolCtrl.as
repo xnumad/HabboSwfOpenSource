@@ -191,7 +191,7 @@
             this._msgInput = ITextFieldWindow(this._frame.findChildByName("message_input"));
             this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
-            this._Str_23705(this._msgSelect);
+            this.prepareMsgSelect(this._msgSelect);
             this._msgSelect.procedure = this._Str_19008;
             this._kickCb = ICheckBoxWindow(this._frame.findChildByName("kick_check"));
             this._lockCb = ICheckBoxWindow(this._frame.findChildByName("lock_check"));
@@ -387,7 +387,7 @@
             k.dispose();
         }
 
-        private function _Str_23705(k:IDropMenuWindow):void
+        private function prepareMsgSelect(k:IDropMenuWindow):void
         {
             Logger.log(("MSG TEMPLATES: " + this._main.initMsg._Str_18336.length));
             k.populate(this._main.initMsg._Str_18336);
