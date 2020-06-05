@@ -541,7 +541,7 @@
 
         public function set layout(k:XML):void
         {
-            this._layoutManager._Str_22537(k, this._windowManager, this._config);
+            this._layoutManager.setLayout(k, this._windowManager, this._config);
         }
 
         public function dispose():void

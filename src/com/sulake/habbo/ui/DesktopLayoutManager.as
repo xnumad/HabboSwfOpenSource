@@ -28,7 +28,7 @@
             }
         }
 
-        public function _Str_22537(k:XML, _arg_2:IHabboWindowManager, _arg_3:IHabboConfigurationManager):void
+        public function setLayout(k:XML, _arg_2:IHabboWindowManager, _arg_3:IHabboConfigurationManager):void
         {
             var _local_5:IWindow;
             var _local_7:int;
