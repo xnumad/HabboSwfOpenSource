@@ -789,7 +789,7 @@
             return Number(this._field.defaultTextFormat.leading);
         }
 
-        public function get _Str_24155():Boolean
+        public function get isOverflowReplaceOn():Boolean
         {
             return !(this._overFlowReplace == "");
         }
@@ -1197,7 +1197,7 @@
             var _local_5:int = (_h - _local_3);
             var _local_6:int = (Math.floor(this._field.width) + ((this._field.border) ? 1 : 0));
             var _local_7:Boolean;
-            if (((this._autoSize == TextFieldAutoSize.NONE) && (this._Str_24155)))
+            if (((this._autoSize == TextFieldAutoSize.NONE) && (this.isOverflowReplaceOn)))
             {
                 _local_9 = this._field.text;
                 if ((this._field.textHeight + _local_3) > _local_5)
