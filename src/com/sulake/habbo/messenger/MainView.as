@@ -32,7 +32,7 @@
         private static const NO_CONVERSATION:int = -1;
         private static const NOTIFICATION_ICON_WIDTH:int = 55;
         private static const CHAT_ITEM_RENDER_BUNDLE_SIZE:int = 5;
-        private static const _Str_18765:int = 150;
+        private static const SCROLL_TRIGGER_HEIGHT:int = 150;
         private static const _Str_4550:Dictionary = new Dictionary();
 
         private var _messenger:HabboMessenger;
@@ -670,7 +670,7 @@
 
         private function _Str_25362():void
         {
-            if (-(this._conversationList.scrollableRegion.y) > _Str_18765)
+            if (-(this._conversationList.scrollableRegion.y) > SCROLL_TRIGGER_HEIGHT)
             {
                 return;
             }
