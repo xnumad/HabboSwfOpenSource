@@ -38,7 +38,7 @@
         protected var _resizeOnItemUpdate:Boolean;
         protected var _dragStartX:Number;
         protected var _dragStartY:Number;
-        protected var _Str_19220:Number;
+        protected var _dragStartScrollH:Number;
         protected var _Str_20088:Number;
         protected var _Str_11276:Boolean;
 
@@ -493,7 +493,7 @@
                 case WindowMouseEvent.DOWN:
                     this._dragStartX = _local_3;
                     this._dragStartY = _local_4;
-                    this._Str_19220 = (this._scrollOffsetH * this.maxScrollH);
+                    this._dragStartScrollH = (this._scrollOffsetH * this.maxScrollH);
                     this._Str_20088 = (this._scrollOffsetV * this.maxScrollV);
                     this._Str_11276 = true;
                     _local_2 = true;
@@ -503,7 +503,7 @@
                     {
                         if (this._horizontal)
                         {
-                            this.scrollH = (((this._Str_19220 + this._dragStartX) - _local_3) / this.maxScrollH);
+                            this.scrollH = (((this._dragStartScrollH + this._dragStartX) - _local_3) / this.maxScrollH);
                         }
                         else
                         {
