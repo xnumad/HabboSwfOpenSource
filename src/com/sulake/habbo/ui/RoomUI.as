@@ -589,7 +589,7 @@
             switch (k.type)
             {
                 case RoomSessionEvent.CREATED:
-                    this._Str_16218(k.session);
+                    this.createDesktop(k.session);
                     if (k.session.isGameSession)
                     {
                         if (this._toolbar)
@@ -911,7 +911,7 @@
                 _local_4 = this._roomSessionManager.getSession(k.roomId);
                 if (_local_4 != null)
                 {
-                    _local_3 = (this._Str_16218(_local_4) as RoomDesktop);
+                    _local_3 = (this.createDesktop(_local_4) as RoomDesktop);
                 }
             }
             if (_local_3 == null)
@@ -1067,7 +1067,7 @@
             }
         }
 
-        public function _Str_16218(k:IRoomSession):IRoomDesktop
+        public function createDesktop(k:IRoomSession):IRoomDesktop
         {
             if (k == null)
             {
