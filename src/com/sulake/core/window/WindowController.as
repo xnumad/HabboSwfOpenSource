@@ -696,7 +696,7 @@
                 this._procedure = null;
                 if (!_context.disposed)
                 {
-                    if (!this._Str_25369())
+                    if (!this.isChildWindow())
                     {
                         if (this.getStateFlag(WindowState.ACTIVE))
                         {
@@ -1903,7 +1903,7 @@
             }
         }
 
-        protected function _Str_25369():Boolean
+        protected function isChildWindow():Boolean
         {
             return !(this._parent == context.getDesktopWindow());
         }
