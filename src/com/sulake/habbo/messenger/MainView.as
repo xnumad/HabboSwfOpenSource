@@ -534,23 +534,23 @@
                 case ChatEntry._Str_12682:
                     _local_4 = (this._chatInfoTemplate.clone() as IWindowContainer);
                     _local_5 = _local_4.findChildByName("content");
-                    _local_5.limits.minWidth = this._Str_5428;
-                    _local_5.limits.maxWidth = this._Str_5428;
+                    _local_5.limits.minWidth = this.conversationItemWidth;
+                    _local_5.limits.maxWidth = this.conversationItemWidth;
                     _local_5.caption = k.message;
                     return _local_4;
                 case ChatEntry._Str_10130:
                     _local_6 = (this._chatNotificationTemplate.clone() as IWindowContainer);
-                    _local_6.findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
+                    _local_6.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_6.findChildByName("content").caption = k.message;
                     return _local_6;
                 case ChatEntry._Str_15691:
                     _local_7 = (this._chatInvitationTemplate.clone() as IWindowContainer);
-                    _local_7.findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
+                    _local_7.findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                     _local_7.findChildByName("content").caption = k.message;
                     return _local_7;
                 case ChatEntry._Str_8431:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
-                    _local_2.width = this._Str_5428;
+                    _local_2.width = this.conversationItemWidth;
                     _local_3 = (_local_2.widget as _Str_3904);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
@@ -582,7 +582,7 @@
                     return _local_2;
                 case ChatEntry._Str_9544:
                     _local_2 = (this._chatMessageTemplate.clone() as IWidgetWindow);
-                    _local_2.width = this._Str_5428;
+                    _local_2.width = this.conversationItemWidth;
                     _local_3 = (_local_2.widget as _Str_3904);
                     _local_3.message = k.message;
                     _local_3.timeStamp = k._Str_22172();
@@ -622,22 +622,22 @@
                     case "msg_normal":
                         break;
                     case "msg_notification":
-                        IWindowContainer(_local_2).findChildByName("content").width = (this._Str_5428 - NOTIFICATION_ICON_WIDTH);
+                        IWindowContainer(_local_2).findChildByName("content").width = (this.conversationItemWidth - NOTIFICATION_ICON_WIDTH);
                         break;
                     case "msg_info":
                         _local_3 = IWindowContainer(_local_2).findChildByName("content");
-                        _local_3.limits.minWidth = this._Str_5428;
-                        _local_3.limits.maxWidth = this._Str_5428;
+                        _local_3.limits.minWidth = this.conversationItemWidth;
+                        _local_3.limits.maxWidth = this.conversationItemWidth;
                         break;
                 }
-                _local_2.width = this._Str_5428;
+                _local_2.width = this.conversationItemWidth;
                 k++;
             }
             this._conversationList.arrangeListItems();
             this._frame.invalidate();
         }
 
-        private function get _Str_5428():int
+        private function get conversationItemWidth():int
         {
             return this._frame.width - 27;
         }
