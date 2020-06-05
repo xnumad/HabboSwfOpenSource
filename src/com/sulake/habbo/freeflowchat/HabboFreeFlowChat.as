@@ -355,7 +355,7 @@
             this._isInRoom = false;
         }
 
-        public function _Str_15063(chatItem:ChatItem):void
+        public function insertChat(chatItem:ChatItem):void
         {
             var insertPosition:Point;
             var chatBubble:PooledChatBubble;
@@ -363,7 +363,7 @@
             {
                 return;
             }
-            this._chatHistoryBuffer._Str_15063(chatItem);
+            this._chatHistoryBuffer.insertChat(chatItem);
             try
             {
                 chatBubble = this._chatBubbleFactory._Str_22521(chatItem);

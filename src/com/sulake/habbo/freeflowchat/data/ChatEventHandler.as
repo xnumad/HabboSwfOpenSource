@@ -55,7 +55,7 @@
             {
                 this._chatFakeMsIncrementor = 0;
             }
-            this._component._Str_15063(new ChatItem(k, (_local_4 + this._chatFakeMsIncrementor), _local_3, k.extraParam));
+            this._component.insertChat(new ChatItem(k, (_local_4 + this._chatFakeMsIncrementor), _local_3, k.extraParam));
             this._lastAddedChatMs = _local_4;
         }
     }

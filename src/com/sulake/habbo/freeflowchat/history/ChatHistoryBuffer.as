@@ -34,7 +34,7 @@
             return this._component == null;
         }
 
-        public function _Str_15063(chatItem:ChatItem):void
+        public function insertChat(chatItem:ChatItem):void
         {
             var entry:IChatHistoryEntryBitmap;
             try
