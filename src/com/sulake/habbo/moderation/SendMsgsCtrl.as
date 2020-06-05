@@ -43,7 +43,7 @@
         {
             this._frame = IFrameWindow(this._main.getXmlWindow("send_msgs"));
             this._frame.caption = ("Msg To: " + this._targetUserName);
-            this._frame.findChildByName("send_message_but").procedure = this._Str_22479;
+            this._frame.findChildByName("send_message_but").procedure = this.onSendMessageButton;
             this._msgInput = ITextFieldWindow(this._frame.findChildByName("message_input"));
             this._msgInput.procedure = this.onInputClick;
             this._msgSelect = IDropMenuWindow(this._frame.findChildByName("msgTemplatesSelect"));
@@ -89,7 +89,7 @@
             }
         }
 
-        private function _Str_22479(k:WindowEvent, _arg_2:IWindow):void
+        private function onSendMessageButton(k:WindowEvent, _arg_2:IWindow):void
         {
             if (k.type != WindowMouseEvent.CLICK)
             {
