@@ -56,7 +56,7 @@
             _Str_2309.addEventListener(FocusEvent.FOCUS_IN, this._Str_4932);
             _Str_2309.addEventListener(FocusEvent.FOCUS_OUT, this._Str_4932);
             _Str_2309.addEventListener(Event.REMOVED_FROM_STAGE, this._Str_19111);
-            _Str_3781 = false;
+            _drawable = false;
             this._initialized = true;
         }
 

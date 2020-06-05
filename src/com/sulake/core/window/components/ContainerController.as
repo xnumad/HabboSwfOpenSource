@@ -16,7 +16,7 @@
         public function ContainerController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            _Str_3781 = (((_background) || (testParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR))) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
+            _drawable = (((_background) || (testParamFlag(WindowParam.WINDOW_PARAM_INPUT_EVENT_PROCESSOR))) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
         }
 
         public function get iterator():IIterator

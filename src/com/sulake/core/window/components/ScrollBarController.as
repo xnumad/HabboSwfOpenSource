@@ -31,7 +31,7 @@
         {
             var _local_14:IWindow;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
-            _Str_3781 = false;
+            _drawable = false;
             this._Str_2566 = _arg_12;
             this._horizontal = (_arg_2 == WindowType.WINDOW_TYPE_SCROLLBAR_HORIZONTAL);
             var _local_13:Array = new Array();

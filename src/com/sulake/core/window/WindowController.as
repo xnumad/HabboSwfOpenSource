@@ -47,7 +47,7 @@
         protected var _events:WindowEventDispatcher;
         protected var _graphics:IGraphicContext;
         protected var _procedure:Function;
-        protected var _Str_3781:Boolean = true;
+        protected var _drawable:Boolean = true;
         protected var _parent:WindowController;
         protected var _Str_2187:Vector.<IWindow>;
         protected var _Str_610:Boolean = false;
@@ -360,7 +360,7 @@
         {
             _background = k;
             _fillColor = ((_background) ? (_fillColor | _alphaColor) : (_fillColor & 0xFFFFFF));
-            this._Str_3781 = ((this._Str_3781) || (k));
+            this._drawable = ((this._drawable) || (k));
             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
         }
 
@@ -644,7 +644,7 @@
             var _local_2:WindowController = (new k(_name, _type, _style, _param, _context, new Rectangle(_x, _y, _w, _h), null, this._procedure, this.properties, ((_tags) ? _tags.concat() : (null)), _id) as WindowController);
             _local_2.dynamicStyle = _dynamicStyle;
             _local_2._mouseThreshold = _mouseThreshold;
-            _local_2._Str_3781 = this._Str_3781;
+            _local_2._drawable = this._drawable;
             _local_2._Str_610 = this._Str_610;
             _local_2._Str_5110 = this._Str_5110.clone();
             _local_2._x = _x;
@@ -1598,7 +1598,7 @@
             {
                 return false;
             }
-            if (((this._Str_3781) && (_mouseThreshold > 0)))
+            if (((this._drawable) && (_mouseThreshold > 0)))
             {
                 if (!testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))
                 {

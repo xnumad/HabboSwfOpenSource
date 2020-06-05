@@ -15,7 +15,7 @@
         {
             super("_CONTEXT_SUBSTITUTE_PARENT", 0, 0, WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT, k, new Rectangle(0, 0, 2000, 2000), null, null, null, null, 0);
             _Str_2187 = new Vector.<IWindow>();
-            _Str_3781 = false;
+            _drawable = false;
         }
 
         override public function getGraphicContext(k:Boolean):IGraphicContext
