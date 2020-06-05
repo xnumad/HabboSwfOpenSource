@@ -35,7 +35,7 @@
         protected var _scrollStepV:Number = -1;
         protected var _arrangeListItems:Boolean;
         protected var _scaleToFitItems:Boolean;
-        protected var _Str_12072:Boolean;
+        protected var _resizeOnItemUpdate:Boolean;
         protected var _Str_19352:Number;
         protected var _Str_5885:Number;
         protected var _Str_19220:Number;
@@ -53,7 +53,7 @@
             this._spacing = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
             this._arrangeListItems = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
             this._scaleToFitItems = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SCALE_TO_FIT_ITEMS).value;
-            this._Str_12072 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.RESIZE_ON_ITEM_UPDATE).value;
+            this._resizeOnItemUpdate = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.RESIZE_ON_ITEM_UPDATE).value;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
             _Str_3781 = ((_background) || (!(testParamFlag(WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT))));
             this._container = (_context.create("_CONTAINER", "", WindowType.WINDOW_TYPE_CONTAINER, WindowStyle.WINDOW_STYLE_DEFAULT, ((WindowParam.WINDOW_PARAM_USE_PARENT_GRAPHIC_CONTEXT | WindowParam.WINDOW_PARAM_RELATIVE_SCALE_FIXED) | WindowParam.WINDOW_PARAM_NULL), new Rectangle(0, 0, width, height), null, this, 0, null, "", [TAG_INTERNAL, TAG_EXCLUDE]) as IWindowContainer);
@@ -62,7 +62,7 @@
             this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RESIZED, this._Str_6611);
             this._container.addEventListener(WindowEvent.WINDOW_EVENT_CHILD_RELOCATED, this._Str_6611);
             this._container.clipping = clipping;
-            this._Str_3583 = this._Str_12072;
+            this._Str_3583 = this._resizeOnItemUpdate;
         }
 
         public function get spacing():int
@@ -228,7 +228,7 @@
 
         public function set _Str_3583(k:Boolean):void
         {
-            this._Str_12072 = k;
+            this._resizeOnItemUpdate = k;
             if (this._container)
             {
                 if (this._horizontal)
@@ -244,7 +244,7 @@
 
         public function get _Str_3583():Boolean
         {
-            return this._Str_12072;
+            return this._resizeOnItemUpdate;
         }
 
         public function get iterator():IIterator
@@ -655,7 +655,7 @@
             k.push(createProperty(PropertyKeys.SPACING, this._spacing));
             k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._arrangeListItems));
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._scaleToFitItems));
-            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
+            k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._resizeOnItemUpdate));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._scrollStepH));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._scrollStepV));
             return k;
