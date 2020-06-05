@@ -864,7 +864,7 @@
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserMuteMessageComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11552;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11568;
-	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11661;
+	import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_12446;
 	import com.sulake.habbo.communication.messages.outgoing.room.action._Str_7856;
 	import com.sulake.habbo.communication.messages.outgoing.room.action.RoomUserKickMessageComposer;
@@ -1886,7 +1886,7 @@
             OUTGOING_PACKETS[3608] = _Str_5686;
             OUTGOING_PACKETS[3617] = _Str_10710;
             OUTGOING_PACKETS[3632] = _Str_16470;
-            OUTGOING_PACKETS[3637] = _Str_11661;
+            OUTGOING_PACKETS[3637] = MuteAllInRoomComposer;
             OUTGOING_PACKETS[3666] = _Str_10640;
             OUTGOING_PACKETS[367] = _Str_7664;
             OUTGOING_PACKETS[3698] = OpenPetPackageMessageComposer;

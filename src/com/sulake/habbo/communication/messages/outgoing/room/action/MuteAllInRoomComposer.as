@@ -2,7 +2,7 @@
 {
     import com.sulake.core.communication.messages.IMessageComposer;
 
-    public class _Str_11661 implements IMessageComposer 
+    public class MuteAllInRoomComposer implements IMessageComposer
     {
 
 

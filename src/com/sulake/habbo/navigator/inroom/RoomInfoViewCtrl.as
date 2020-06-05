@@ -23,7 +23,7 @@
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_4893;
     import com.sulake.core.window.events.WindowEvent;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_5262;
-    import com.sulake.habbo.communication.messages.outgoing.room.action._Str_11661;
+    import com.sulake.habbo.communication.messages.outgoing.room.action.MuteAllInRoomComposer;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_7911;
     import com.sulake.habbo.communication.messages.outgoing.navigator._Str_11662;
     import com.sulake.core.runtime.Component;
@@ -425,7 +425,7 @@
 
         private function onMuteAllClick(k:WindowEvent):void
         {
-            this._navigator.send(new _Str_11661());
+            this._navigator.send(new MuteAllInRoomComposer());
         }
 
         private function _Str_25302(k:WindowEvent):void
