@@ -93,7 +93,7 @@
                 _window.getChildAt(0).width = _window.width;
                 _window.getChildAt(0).height = _window.height;
             }
-            this._Str_2448._Str_13282 = 0;
+            this._Str_2448.verticalSpacing = 0;
             var _local_2:XmlAsset = (page.viewer.catalog.assets.getAssetByName("gridItem") as XmlAsset);
             this._Str_3370 = (_local_2.content as XML);
             _local_2 = (page.viewer.catalog.assets.getAssetByName("grid_item_with_price_single") as XmlAsset);

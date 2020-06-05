@@ -7,7 +7,7 @@
     {
         function get spacing():int;
         function set spacing(_arg_1:int):void;
-        function set _Str_13282(_arg_1:int):void;
+        function set verticalSpacing(_arg_1:int):void;
         function get scaleToFitItems():Boolean;
         function set scaleToFitItems(_arg_1:Boolean):void;
         function get autoArrangeItems():Boolean;

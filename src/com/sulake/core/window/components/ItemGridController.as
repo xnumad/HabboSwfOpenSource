@@ -107,7 +107,7 @@
             this._shouldRebuildGridOnResize = k;
         }
 
-        public function set _Str_13282(k:int):void
+        public function set verticalSpacing(k:int):void
         {
             this._verticalSpacing = k;
             this._explicitVerticalSpacing = true;
