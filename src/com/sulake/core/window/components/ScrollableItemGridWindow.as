@@ -293,9 +293,9 @@
             return this._Str_2448.removeGridItem(k);
         }
 
-        public function _Str_17500(k:int):IWindow
+        public function removeGridItemAt(k:int):IWindow
         {
-            return this._Str_2448._Str_17500(k);
+            return this._Str_2448.removeGridItemAt(k);
         }
 
         public function _Str_17625(k:IWindow, _arg_2:int):void

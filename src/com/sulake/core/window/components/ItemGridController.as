@@ -293,7 +293,7 @@
             return k;
         }
 
-        public function _Str_17500(k:int):IWindow
+        public function removeGridItemAt(k:int):IWindow
         {
             return this.removeGridItem(this.getGridItemAt(k));
         }
