@@ -1970,7 +1970,7 @@
             _local_3.bitmap = _local_5.clone();
         }
 
-        public function _Str_23614(k:String, _arg_2:int=0):void
+        public function initializeWidget(k:String, _arg_2:int=0):void
         {
             var _local_3:IRoomWidget = this._widgets[k];
             if (_local_3 == null)

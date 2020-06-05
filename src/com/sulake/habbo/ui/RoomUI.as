@@ -977,7 +977,7 @@
                     _local_3._Str_2548(RoomWidgetEnum.USER_CHOOSER);
                     if (this._userChooserState != RoomDesktop._Str_8876)
                     {
-                        _local_3._Str_23614(RoomWidgetEnum.USER_CHOOSER, this._userChooserState);
+                        _local_3.initializeWidget(RoomWidgetEnum.USER_CHOOSER, this._userChooserState);
                     }
                     _local_3._Str_2548(RoomWidgetEnum.PLAYLIST_EDITOR_WIDGET);
                     _local_3._Str_2548(RoomWidgetEnum.SPAMWALL_POSTIT_WIDGET);
