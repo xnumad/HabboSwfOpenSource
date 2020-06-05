@@ -93,7 +93,7 @@
                 }
                 this._activeHint = _local_3;
                 this._absStartRect = _arg_2;
-                this._absTargetRect = this._Str_23325(this._activeHint.window);
+                this._absTargetRect = this.getTargetRect(this._activeHint.window);
                 if (_arg_2 != null)
                 {
                     this.animateHint(_arg_2);
@@ -226,7 +226,7 @@
             }
         }
 
-        private function _Str_23325(k:IWindow):Rectangle
+        private function getTargetRect(k:IWindow):Rectangle
         {
             var _local_2:Rectangle = new Rectangle();
             var _local_3:Point = new Point();
