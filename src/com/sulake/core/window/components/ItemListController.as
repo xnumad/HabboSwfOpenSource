@@ -23,7 +23,7 @@
         private var _disableAutoDrag:Boolean = false;
         private var _isPartOfGridWindow:Boolean = false;
         protected var _scrollOffsetH:Number;
-        protected var _Str_5996:Number;
+        protected var _scrollOffsetV:Number;
         protected var _Str_3673:Number;
         protected var _Str_3472:Number;
         protected var _container:IWindowContainer;
@@ -45,7 +45,7 @@
         public function ItemListController(k:String, _arg_2:uint, _arg_3:uint, _arg_4:uint, _arg_5:WindowContext, _arg_6:Rectangle, _arg_7:IWindow, _arg_8:Function=null, _arg_9:Array=null, _arg_10:Array=null, _arg_11:uint=0)
         {
             this._scrollOffsetH = 0;
-            this._Str_5996 = 0;
+            this._scrollOffsetV = 0;
             this._Str_3673 = 0;
             this._Str_3472 = 0;
             this._Str_2803 = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
@@ -86,7 +86,7 @@
 
         public function get scrollV():Number
         {
-            return this._Str_5996;
+            return this._scrollOffsetV;
         }
 
         public function get maxScrollH():int
@@ -116,7 +116,7 @@
 
         public function get _Str_3707():Rectangle
         {
-            return new Rectangle((this._scrollOffsetH * this.maxScrollH), (this._Str_5996 * this.maxScrollV), width, height);
+            return new Rectangle((this._scrollOffsetH * this.maxScrollH), (this._scrollOffsetV * this.maxScrollV), width, height);
         }
 
         public function get visibleRegion():Rectangle
@@ -160,10 +160,10 @@
             {
                 k = 1;
             }
-            if (k != this._Str_5996)
+            if (k != this._scrollOffsetV)
             {
-                this._Str_5996 = k;
-                this._container.y = (-(this._Str_5996) * this.maxScrollV);
+                this._scrollOffsetV = k;
+                this._container.y = (-(this._scrollOffsetV) * this.maxScrollV);
                 if (_Str_759)
                 {
                     _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_SCROLL, this, null);
@@ -494,7 +494,7 @@
                     this._Str_19352 = _local_3;
                     this._Str_5885 = _local_4;
                     this._Str_19220 = (this._scrollOffsetH * this.maxScrollH);
-                    this._Str_20088 = (this._Str_5996 * this.maxScrollV);
+                    this._Str_20088 = (this._scrollOffsetV * this.maxScrollV);
                     this._Str_11276 = true;
                     _local_2 = true;
                     break;
@@ -632,7 +632,7 @@
                         this._container.x = -(this._scrollOffsetH * this.maxScrollH);
                     }
                 }
-                if (this._Str_5996 > 0)
+                if (this._scrollOffsetV > 0)
                 {
                     if (this._Str_3472 <= _h)
                     {
@@ -640,7 +640,7 @@
                     }
                     else
                     {
-                        this._container.y = -(this._Str_5996 * this.maxScrollV);
+                        this._container.y = -(this._scrollOffsetV * this.maxScrollV);
                     }
                 }
                 this._container.height = this._Str_3472;
