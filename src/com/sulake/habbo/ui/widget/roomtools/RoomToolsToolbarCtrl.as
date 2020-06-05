@@ -263,7 +263,7 @@
                             window.findChildByName("button_like").disable();
                             break;
                         case "button_share":
-                            link = this._Str_8567();
+                            link = this.getEmbedData();
                             window = (_widget.windowManager.getWindowByName("share_room_link") as IWindowContainer);
                             if (window == null)
                             {
@@ -282,13 +282,13 @@
                                 {
                                     window.dispose();
                                 });
-                                window.findChildByName("embed_src_txt").caption = this._Str_8567();
-                                window.findChildByName("embed_src_direct_txt").caption = this._Str_8567("embed_src_direct_txt", "${url.prefix}/room/%roomId%");
+                                window.findChildByName("embed_src_txt").caption = this.getEmbedData();
+                                window.findChildByName("embed_src_direct_txt").caption = this.getEmbedData("embed_src_direct_txt", "${url.prefix}/room/%roomId%");
                                 IStaticBitmapWrapperWindow(window.findChildByName("thumbnail_image")).assetUri = this._Str_24878();
                             }
                             try
                             {
-                                System.setClipboard(this._Str_8567());
+                                System.setClipboard(this.getEmbedData());
                             }
                             catch(error:Error)
                             {
@@ -304,7 +304,7 @@
             }
         }
 
-        private function _Str_8567(k:String="navigator.embed.src", _arg_2:String=""):String
+        private function getEmbedData(k:String="navigator.embed.src", _arg_2:String=""):String
         {
             var _local_3:String;
             var _local_4:String;

@@ -147,7 +147,7 @@
                 k.visible = true;
                 if (this._embedExpanded)
                 {
-                    _local_5.text = this._Str_8567();
+                    _local_5.text = this.getEmbedData();
                 }
                 _local_4.visible = this._embedExpanded;
                 _local_5.visible = this._embedExpanded;
@@ -492,7 +492,7 @@
             this._visible = false;
         }
 
-        private function _Str_8567():String
+        private function getEmbedData():String
         {
             var k:String;
             var _local_2:String;
