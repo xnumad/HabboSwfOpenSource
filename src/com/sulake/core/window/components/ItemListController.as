@@ -524,7 +524,7 @@
             return _local_2;
         }
 
-        private function _Str_26393(k:int, _arg_2:int):void
+        private function scrollAnimationCallback(k:int, _arg_2:int):void
         {
             if (!disposed)
             {
