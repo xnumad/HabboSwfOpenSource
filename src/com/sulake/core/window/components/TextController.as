@@ -218,7 +218,7 @@
             }
         }
 
-        private static function _Str_17524(k:TextController, _arg_2:Boolean):void
+        private static function setItalic(k:TextController, _arg_2:Boolean):void
         {
             var _local_3:TextFormat = k.defaultTextFormat;
             _local_3.italic = _arg_2;
@@ -573,7 +573,7 @@
             k[PropertyKeys.FONT_FACE] = setFontFace;
             k[PropertyKeys.FONT_SIZE] = setFontSize;
             k[PropertyKeys.GRID_FIT_TYPE] = setGridFitType;
-            k[PropertyKeys.ITALIC] = _Str_17524;
+            k[PropertyKeys.ITALIC] = setItalic;
             k[PropertyKeys.KERNING] = _Str_18973;
             k[PropertyKeys.MAX_CHARS] = _Str_18813;
             k[PropertyKeys.MULTILINE] = _Str_17885;
@@ -876,7 +876,7 @@
 
         public function set italic(k:Boolean):void
         {
-            _Str_17524(this, k);
+            setItalic(this, k);
         }
 
         public function set kerning(k:Boolean):void
