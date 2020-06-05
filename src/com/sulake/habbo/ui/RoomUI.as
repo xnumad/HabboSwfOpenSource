@@ -178,13 +178,13 @@
                 "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineEvent.INITIALIZED,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomEngineEvent.OBJECTS_INITIALIZED,
                 "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineEvent.DISPOSED,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomEngineEvent.NORMAL_MODE,
                 "callback":this.roomEngineEventHandler
@@ -193,16 +193,16 @@
                 "callback":this.roomEngineEventHandler
             }, {
                 "type":RoomEngineDimmerStateEvent.REDSE_ROOM_COLOR,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomBackgroundColorEvent.ROOM_COLOR,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomZoomEvent.ROOM_ZOOM,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomObjectHSLColorEnabledEvent.ROOM_BACKGROUND_COLOR,
-                "callback":this._Str_9331
+                "callback":this.roomEventHandler
             }, {
                 "type":RoomEngineObjectEvent.SELECTED,
                 "callback":this.roomObjectEventHandler
@@ -890,7 +890,7 @@
             }
         }
 
-        private function _Str_9331(k:RoomEngineEvent):void
+        private function roomEventHandler(k:RoomEngineEvent):void
         {
             var _local_4:IRoomSession;
             var _local_5:RoomBackgroundColorEvent;
