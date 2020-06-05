@@ -13,7 +13,7 @@
         private var _defaultStuffTypes:Array;
 
 
-        public function get _Str_25735():Boolean
+        public function get isWrappingEnabled():Boolean
         {
             return this._wrappingEnabled;
         }

@@ -23,7 +23,7 @@
             {
                 return;
             }
-            this._isEnabled = _local_2._Str_25735;
+            this._isEnabled = _local_2.isWrappingEnabled;
             this._price = _local_2._Str_23413;
             this._stuffTypes = _local_2.stuffTypes;
             this._boxTypes = _local_2.boxTypes;
