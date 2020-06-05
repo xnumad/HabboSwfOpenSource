@@ -229,7 +229,7 @@
             this._connection = _arg_3;
             this._botSkillListUpdateMessageEvent = new BotSkillListUpdateEvent(this._Str_23048);
             this._connection.addMessageEvent(this._botSkillListUpdateMessageEvent);
-            this._botForceOpenContextMenuMessageEvent = new BotForceOpenContextMenuEvent(this._Str_25865);
+            this._botForceOpenContextMenuMessageEvent = new BotForceOpenContextMenuEvent(this.onBotForceOpenContextMenuEvent);
             this._connection.addMessageEvent(this._botForceOpenContextMenuMessageEvent);
             this._widgets = new Map();
             this._widgetHandlerMessageMap = new Map();
@@ -676,7 +676,7 @@
             this.events.dispatchEvent(new _Str_5375(_local_2._Str_5455, _local_2.skillList));
         }
 
-        private function _Str_25865(k:BotForceOpenContextMenuEvent):void
+        private function onBotForceOpenContextMenuEvent(k:BotForceOpenContextMenuEvent):void
         {
             var _local_2:BotForceOpenContextMenuParser = k.getParser();
             this.events.dispatchEvent(new RoomWidgetRequestBotForceOpenContextMenuEvent(_local_2._Str_5455));
