@@ -68,7 +68,7 @@
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectUpdateMessageParser;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectDataUpdateMessageParser;
-    import com.sulake.habbo.communication.messages.incoming.room.engine._Str_6765;
+    import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectData;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectsDataUpdateMessageParser;
     import com.sulake.habbo.communication.messages.parser.room.engine.ObjectRemoveMessageParser;
     import flash.utils.setTimeout;
@@ -586,7 +586,7 @@
 
         private function onObjectsDataUpdate(k:IMessageEvent):void
         {
-            var _local_5:_Str_6765;
+            var _local_5:ObjectData;
             var _local_6:int;
             var _local_7:int;
             var _local_8:IStuffData;
