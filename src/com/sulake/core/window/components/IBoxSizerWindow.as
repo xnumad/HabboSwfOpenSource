@@ -4,7 +4,7 @@
 
     public interface IBoxSizerWindow extends IWindowContainer 
     {
-        function _Str_22450(_arg_1:int):void;
+        function setHorizontalPadding(_arg_1:int):void;
         function _Str_24158(_arg_1:int):void;
         function setSpacing(_arg_1:int):void;
         function _Str_25833(_arg_1:Boolean):void;

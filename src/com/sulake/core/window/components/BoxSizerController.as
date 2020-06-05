@@ -194,7 +194,7 @@
             this._Str_7516();
         }
 
-        public function _Str_22450(k:int):void
+        public function setHorizontalPadding(k:int):void
         {
             this._horizontalPadding = k;
             this._Str_7516();
