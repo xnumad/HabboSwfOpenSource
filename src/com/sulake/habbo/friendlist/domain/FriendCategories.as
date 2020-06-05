@@ -254,7 +254,7 @@
             return (_local_2 == null) ? false : _local_2.online;
         }
 
-        public function _Str_9287():Array
+        public function getFriendNames():Array
         {
             var _local_2:Friend;
             if (this._friendsById == null)

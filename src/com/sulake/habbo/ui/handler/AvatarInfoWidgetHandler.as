@@ -340,7 +340,7 @@
                     this._container.events.dispatchEvent(new _Str_7783());
                     for each (_local_3 in RoomSessionUserDataUpdateEvent(k)._Str_24272)
                     {
-                        if (this.friendList._Str_9287().indexOf(_local_3.name) > -1)
+                        if (this.friendList.getFriendNames().indexOf(_local_3.name) > -1)
                         {
                             this._widget._Str_21156(_local_3, _local_3._Str_2713);
                         }

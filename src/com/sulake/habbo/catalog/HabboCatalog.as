@@ -910,7 +910,7 @@
                 _local_12 = [];
                 if (this._friendsList != null)
                 {
-                    _local_12 = this._friendsList._Str_9287();
+                    _local_12 = this._friendsList.getFriendNames();
                 }
                 _local_13 = _arg_6;
                 if (_local_13 == null)

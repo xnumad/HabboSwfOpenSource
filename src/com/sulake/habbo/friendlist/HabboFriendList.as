@@ -851,13 +851,13 @@
             return this._view.mainWindow;
         }
 
-        public function _Str_9287():Array
+        public function getFriendNames():Array
         {
             if (this._categories == null)
             {
                 return [];
             }
-            return this._categories._Str_9287();
+            return this._categories.getFriendNames();
         }
 
         public function acceptFriendRequest(k:int):void

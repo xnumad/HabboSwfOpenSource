@@ -21,7 +21,7 @@
         function currentTabId():int;
         function getFriendCount(_arg_1:Boolean, _arg_2:Boolean):int;
         function openHabboWebPage(_arg_1:String, _arg_2:Dictionary, _arg_3:int, _arg_4:int):void;
-        function _Str_9287():Array;
+        function getFriendNames():Array;
         function acceptFriendRequest(_arg_1:int):void;
         function acceptAllFriendRequests():void;
         function declineFriendRequest(_arg_1:int):void;

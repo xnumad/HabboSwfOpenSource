@@ -170,7 +170,7 @@
                 _local_2 = this.handler.roomSession.userDataManager.getUserDataByIndex(k.objectId);
                 if (_local_2)
                 {
-                    if (this.handler.friendList._Str_9287().indexOf(_local_2.name) > -1)
+                    if (this.handler.friendList.getFriendNames().indexOf(_local_2.name) > -1)
                     {
                         this._Str_21156(_local_2, k.objectId);
                     }
