@@ -58,7 +58,7 @@
 
         protected function collapseAfterDelay():void
         {
-            this._Str_10524();
+            this.clearCollapseTimer();
             this._windowCollapseTimer = new Timer(this._windowCollapseDelay, 1);
             this._windowCollapseTimer.addEventListener(TimerEvent.TIMER, this._Str_22422);
             this._windowCollapseTimer.start();
@@ -72,7 +72,7 @@
             }
         }
 
-        protected function _Str_10524():void
+        protected function clearCollapseTimer():void
         {
             if (this._windowCollapseTimer != null)
             {
@@ -84,7 +84,7 @@
 
         private function _Str_22422(k:TimerEvent):void
         {
-            this._Str_10524();
+            this.clearCollapseTimer();
             this.setCollapsed(true);
         }
 
@@ -92,7 +92,7 @@
         {
             if (this._windowCollapseTimer != null)
             {
-                this._Str_10524();
+                this.clearCollapseTimer();
                 this._windowCollapsePending = true;
             }
         }

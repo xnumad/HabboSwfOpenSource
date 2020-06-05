@@ -225,7 +225,7 @@
             switch (event.type)
             {
                 case WindowMouseEvent.CLICK:
-                    _Str_10524();
+                    clearCollapseTimer();
                     switch (target.name)
                     {
                         case "button_settings":
