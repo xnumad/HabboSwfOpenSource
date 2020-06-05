@@ -9,6 +9,6 @@
         function setSpacing(_arg_1:int):void;
         function setVertical(_arg_1:Boolean):void;
         function setAutoRearrange(_arg_1:Boolean):void;
-        function _Str_22747():Boolean;
+        function getAutoRearrange():Boolean;
     }
 }

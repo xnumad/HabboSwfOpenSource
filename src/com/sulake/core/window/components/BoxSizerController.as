@@ -227,7 +227,7 @@
             }
         }
 
-        public function _Str_22747():Boolean
+        public function getAutoRearrange():Boolean
         {
             return this._autoArrange;
         }
