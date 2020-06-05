@@ -56,7 +56,7 @@
     import com.sulake.habbo.ui.widget.events._Str_5375;
     import com.sulake.habbo.communication.messages.parser.room.bots.BotForceOpenContextMenuParser;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRequestBotForceOpenContextMenuEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3227;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetLoadingBarUpdateEvent;
     import com.sulake.habbo.ui.handler.ChatWidgetHandler;
     import com.sulake.habbo.ui.handler.PlayListEditorWidgetHandler;
     import com.sulake.habbo.ui.handler.SpamWallPostItWidgetHandler;
@@ -690,7 +690,7 @@
                 if (this._pendingResources.length > 0)
                 {
                     this._loadingComplete = false;
-                    this.processEvent(new _Str_3227(_Str_3227.RWLBUE_SHOW_LOADING_BAR));
+                    this.processEvent(new RoomWidgetLoadingBarUpdateEvent(RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR));
                 }
             }
         }
@@ -1833,7 +1833,7 @@
             if ((((!(this._roomSessionManager == null)) && (!(this._session == null))) && (this._loadingComplete)))
             {
                 this._roomSessionManager.startSession(this._session);
-                this.processEvent(new _Str_3227(_Str_3227.RWLBUW_HIDE_LOADING_BAR));
+                this.processEvent(new RoomWidgetLoadingBarUpdateEvent(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR));
                 return true;
             }
             return false;

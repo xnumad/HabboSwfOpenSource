@@ -13,7 +13,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
     import flash.events.MouseEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3227;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetLoadingBarUpdateEvent;
     import flash.events.IEventDispatcher;
     import com.sulake.core.assets.loaders.AssetLoaderEvent;
     import flash.events.SecurityErrorEvent;
@@ -98,8 +98,8 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3227.RWLBUE_SHOW_LOADING_BAR, this._Str_16768);
-            k.addEventListener(_Str_3227.RWLBUW_HIDE_LOADING_BAR, this._Str_18442);
+            k.addEventListener(RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR, this._Str_16768);
+            k.addEventListener(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR, this._Str_18442);
             super.registerUpdateEvents(k);
         }
 
@@ -109,9 +109,9 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3227.RWLBUE_SHOW_LOADING_BAR, this._Str_16768);
-            k.removeEventListener(_Str_3227.RWLBUW_HIDE_LOADING_BAR, this._Str_16768);
-            k.removeEventListener(_Str_3227.RWLBUW_HIDE_LOADING_BAR, this._Str_18442);
+            k.removeEventListener(RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR, this._Str_16768);
+            k.removeEventListener(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR, this._Str_16768);
+            k.removeEventListener(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR, this._Str_18442);
         }
 
         private function _Str_25958(k:AssetLoaderEvent):void
@@ -123,9 +123,9 @@
         {
         }
 
-        private function _Str_16768(k:_Str_3227):void
+        private function _Str_16768(k:RoomWidgetLoadingBarUpdateEvent):void
         {
-            if (((k == null) || (!(k.type == _Str_3227.RWLBUE_SHOW_LOADING_BAR))))
+            if (((k == null) || (!(k.type == RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR))))
             {
                 return;
             }
@@ -137,9 +137,9 @@
             this._window.center();
         }
 
-        private function _Str_18442(k:_Str_3227):void
+        private function _Str_18442(k:RoomWidgetLoadingBarUpdateEvent):void
         {
-            if (((k == null) || (!(k.type == _Str_3227.RWLBUW_HIDE_LOADING_BAR))))
+            if (((k == null) || (!(k.type == RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR))))
             {
                 return;
             }
@@ -378,7 +378,7 @@
                 this._interstitialVideoTimer.reset();
                 this._Str_5407(COMPLETE);
                 this._Str_5407(CLOSE);
-                this._Str_18442(new _Str_3227(_Str_3227.RWLBUW_HIDE_LOADING_BAR));
+                this._Str_18442(new RoomWidgetLoadingBarUpdateEvent(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR));
             }
             else
             {

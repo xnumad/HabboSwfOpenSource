@@ -5,7 +5,7 @@
     import com.sulake.habbo.ui.widget.enums.RoomWidgetEnum;
     import com.sulake.habbo.ui.widget.messages.RoomWidgetMessage;
     import com.sulake.habbo.ui.widget.events.RoomWidgetUpdateEvent;
-    import com.sulake.habbo.ui.widget.events._Str_3227;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetLoadingBarUpdateEvent;
     import flash.events.Event;
 
     public class LoadingBarWidgetHandler implements IRoomWidgetHandler 
@@ -48,8 +48,8 @@
         public function getProcessedEvents():Array
         {
             var k:Array = [];
-            k.push(_Str_3227.RWLBUE_SHOW_LOADING_BAR);
-            k.push(_Str_3227.RWLBUW_HIDE_LOADING_BAR);
+            k.push(RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR);
+            k.push(RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR);
             return k;
         }
 
@@ -61,10 +61,10 @@
             }
             switch (k.type)
             {
-                case _Str_3227.RWLBUE_SHOW_LOADING_BAR:
+                case RoomWidgetLoadingBarUpdateEvent.RWLBUE_SHOW_LOADING_BAR:
                     this._container.events.dispatchEvent(k);
                     return;
-                case _Str_3227.RWLBUW_HIDE_LOADING_BAR:
+                case RoomWidgetLoadingBarUpdateEvent.RWLBUW_HIDE_LOADING_BAR:
                     this._container.events.dispatchEvent(k);
                     return;
             }
