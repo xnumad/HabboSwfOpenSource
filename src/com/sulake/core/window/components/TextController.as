@@ -123,7 +123,7 @@
             k.background = _arg_2;
         }
 
-        private static function _Str_16255(k:TextController, _arg_2:uint):void
+        private static function setTextBackgroundColor(k:TextController, _arg_2:uint):void
         {
             k.color = _arg_2;
         }
@@ -562,7 +562,7 @@
             var k:Dictionary = new Dictionary();
             k[PropertyKeys.ALWAYS_SHOW_SELECTION] = setAlwaysShowSelection;
             k["background"] = setTextBackground;
-            k["background_color"] = _Str_16255;
+            k["background_color"] = setTextBackgroundColor;
             k[PropertyKeys.BOLD] = _Str_17644;
             k[PropertyKeys.BORDER] = _Str_18639;
             k[PropertyKeys.BORDER_COLOR] = _Str_18700;
@@ -921,7 +921,7 @@
 
         public function set _Str_4807(k:uint):void
         {
-            _Str_16255(this, k);
+            setTextBackgroundColor(this, k);
         }
 
         public function set textStyle(k:TextStyle):void
