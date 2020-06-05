@@ -46,7 +46,7 @@
 
         protected var _events:WindowEventDispatcher;
         protected var _graphics:IGraphicContext;
-        protected var _Str_6620:Function;
+        protected var _procedure:Function;
         protected var _Str_3781:Boolean = true;
         protected var _parent:WindowController;
         protected var _Str_2187:Vector.<IWindow>;
@@ -115,7 +115,7 @@
             {
                 this.properties = _arg_9;
             }
-            this._Str_6620 = _arg_8;
+            this._procedure = _arg_8;
             if (_arg_7 != null)
             {
                 this._parent = (_arg_7 as WindowController);
@@ -276,7 +276,7 @@
 
         public function get procedure():Function
         {
-            return (this._Str_6620 != null) ? this._Str_6620 : ((this._parent != null) ? this._parent.procedure : this._Str_20825);
+            return (this._procedure != null) ? this._procedure : ((this._parent != null) ? this._parent.procedure : this._Str_20825);
         }
 
         public function get filters():Array
@@ -439,7 +439,7 @@
 
         public function set procedure(k:Function):void
         {
-            this._Str_6620 = k;
+            this._procedure = k;
         }
 
         public function set filters(k:Array):void
@@ -641,7 +641,7 @@
         public function clone():IWindow
         {
             var k:Class = Object(this).constructor;
-            var _local_2:WindowController = (new k(_name, _type, _style, _param, _context, new Rectangle(_x, _y, _w, _h), null, this._Str_6620, this.properties, ((_tags) ? _tags.concat() : (null)), _id) as WindowController);
+            var _local_2:WindowController = (new k(_name, _type, _style, _param, _context, new Rectangle(_x, _y, _w, _h), null, this._procedure, this.properties, ((_tags) ? _tags.concat() : (null)), _id) as WindowController);
             _local_2.dynamicStyle = _dynamicStyle;
             _local_2._mouseThreshold = _mouseThreshold;
             _local_2._Str_3781 = this._Str_3781;
@@ -693,7 +693,7 @@
             if (!_disposed)
             {
                 this.immediateClickMode = false;
-                this._Str_6620 = null;
+                this._procedure = null;
                 if (!_context.disposed)
                 {
                     if (!this._Str_25369())

@@ -32,7 +32,7 @@
 
         override public function set procedure(k:Function):void
         {
-            _Str_6620 = ((k != null) ? k : this._Str_19694);
+            _procedure = ((k != null) ? k : this._Str_19694);
         }
 
         override public function get host():IWindow
