@@ -99,7 +99,7 @@
             this._errorPopup.visible = true;
         }
 
-        public function _Str_8407():void
+        public function goBackToInitialState():void
         {
             this.clearErrors();
             if (this._infoText != null)

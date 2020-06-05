@@ -75,8 +75,8 @@
         private function _Str_25306():void
         {
             this._window.caption = this._navigator.getText("navigator.createevent");
-            this._Str_5951._Str_8407();
-            this._Str_5340._Str_8407();
+            this._Str_5951.goBackToInitialState();
+            this._Str_5340.goBackToInitialState();
         }
 
         private function _Str_2453(k:String):ITextFieldWindow

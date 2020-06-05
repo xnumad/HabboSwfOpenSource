@@ -30,7 +30,7 @@
             }
         }
 
-        public function _Str_8407():void
+        public function goBackToInitialState():void
         {
             this._input.text = this._Str_5074;
             this._Str_3484 = true;

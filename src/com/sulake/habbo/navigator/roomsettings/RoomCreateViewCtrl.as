@@ -212,9 +212,9 @@
 
         public function refresh():void
         {
-            this._roomNameInput._Str_8407();
+            this._roomNameInput.goBackToInitialState();
             this._roomNameInput.input.textBackgroundColor = 0xFFFFFFFF;
-            this._roomDescInput._Str_8407();
+            this._roomDescInput.goBackToInitialState();
             this._roomDescInput.input.textBackgroundColor = 0xFFFFFFFF;
             this._tradeSettings.selection = 0;
             this._categoryMenu.selection = 0;

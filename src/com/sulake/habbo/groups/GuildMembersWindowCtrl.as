@@ -161,7 +161,7 @@
             {
                 if (this._userNameFilter)
                 {
-                    this._userNameFilter._Str_8407();
+                    this._userNameFilter.goBackToInitialState();
                 }
                 this._groupId = k;
                 this._manager.send(new _Str_5612(k, 0, "", _arg_2));
