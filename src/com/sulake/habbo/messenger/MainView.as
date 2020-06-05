@@ -400,7 +400,7 @@
                 if (((!(this._batchUpdatingTimer)) || ((this._batchUpdatingTimer) && (!(this._batchUpdatingTimer.running)))))
                 {
                     this._batchUpdatingTimer = new Timer(12000);
-                    this._batchUpdatingTimer.addEventListener(TimerEvent.TIMER, this._Str_25635);
+                    this._batchUpdatingTimer.addEventListener(TimerEvent.TIMER, this.batchMessageUpdate);
                     this._batchUpdatingTimer.start();
                 }
                 return;
@@ -477,7 +477,7 @@
             this.refreshChatCount();
         }
 
-        private function _Str_25635(k:TimerEvent):void
+        private function batchMessageUpdate(k:TimerEvent):void
         {
             var _local_2:int;
             var _local_3:ChatQueueEntry;
