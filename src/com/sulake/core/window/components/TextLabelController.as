@@ -377,7 +377,7 @@
             this.refresh();
         }
 
-        private function _Str_18664(k:Map):void
+        private function setTextMarginMap(k:Map):void
         {
             if (this._margins)
             {
@@ -453,7 +453,7 @@
                         }
                         break;
                     case MARGINS:
-                        this._Str_18664((_local_2.value as Map));
+                        this.setTextMarginMap((_local_2.value as Map));
                         break;
                     case PropertyKeys.VERTICAL:
                         this.vertical = (_local_2.value as Boolean);

@@ -238,7 +238,7 @@
             k._Str_3808.kerning = _arg_2;
         }
 
-        private static function _Str_18664(k:TextController, _arg_2:Map):void
+        private static function setTextMarginMap(k:TextController, _arg_2:Map):void
         {
             if (k._Str_2480)
             {
@@ -583,7 +583,7 @@
             k[PropertyKeys.THICKNESS] = _Str_18660;
             k[PropertyKeys.UNDERLINE] = _Str_16916;
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
-            k["margins"] = _Str_18664;
+            k["margins"] = setTextMarginMap;
             k[PropertyKeys.MAX_LINES] = _Str_16363;
             k[PropertyKeys.LEADING] = _Str_18703;
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
