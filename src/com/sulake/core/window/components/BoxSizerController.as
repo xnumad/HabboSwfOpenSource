@@ -31,13 +31,13 @@
                 case WindowEvent.WINDOW_EVENT_CHILD_RESIZED:
                 case WindowEvent.WINDOW_EVENT_RESIZED:
                 case WindowEvent.WINDOW_EVENT_CHILD_VISIBILITY:
-                    this._Str_7516();
+                    this.arrangeChildren();
                     break;
             }
             return super.update(k, _arg_2);
         }
 
-        private function _Str_7516():void
+        private function arrangeChildren():void
         {
             var _local_2:IWindow;
             if (!this._autoArrange)
@@ -191,31 +191,31 @@
                 }
             }
             super.properties = k;
-            this._Str_7516();
+            this.arrangeChildren();
         }
 
         public function setHorizontalPadding(k:int):void
         {
             this._horizontalPadding = k;
-            this._Str_7516();
+            this.arrangeChildren();
         }
 
         public function setVerticalPadding(k:int):void
         {
             this._verticalPadding = k;
-            this._Str_7516();
+            this.arrangeChildren();
         }
 
         public function setSpacing(k:int):void
         {
             this._spacing = k;
-            this._Str_7516();
+            this.arrangeChildren();
         }
 
         public function setVertical(k:Boolean):void
         {
             this._vertical = k;
-            this._Str_7516();
+            this.arrangeChildren();
         }
 
         public function setAutoRearrange(k:Boolean):void
@@ -223,7 +223,7 @@
             this._autoArrange = k;
             if (k)
             {
-                this._Str_7516();
+                this.arrangeChildren();
             }
         }
 
