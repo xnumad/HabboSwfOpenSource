@@ -281,7 +281,7 @@
             this.addMouseClickListener(this.find("floor_plan_editor_button"), this.onFloorPlanEditorButtonClick);
             this.addMouseClickListener(this.find("room_muteall_button"), this.onMuteAllClick);
             this.addMouseClickListener(this.find("make_home_region"), this.onMakeHomeClick);
-            this.addMouseClickListener(this.find("remove_rights_region"), this._Str_25186);
+            this.addMouseClickListener(this.find("remove_rights_region"), this.onRemoveRights);
             this.addMouseClickListener(this.find("embed_src_txt"), this._Str_23461);
             this.addMouseClickListener(this.find("staff_pick_button"), this._Str_22695);
             this.addMouseClickListener(this.find("room_report_button"), this._Str_24254);
@@ -446,7 +446,7 @@
             this._Str_24298(null);
         }
 
-        private function _Str_25186(k:WindowEvent):void
+        private function onRemoveRights(k:WindowEvent):void
         {
             this._navigator.removeRoomRights(this._navigator.enteredGuestRoomData.flatId);
             this.find("remove_rights_region").visible = false;
