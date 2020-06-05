@@ -15,7 +15,7 @@
         {
             this._component = k;
             this._component.addMessageEvent(new _Str_4851(this._Str_24521));
-            this._component.addMessageEvent(new _Str_4696(this._Str_10457));
+            this._component.addMessageEvent(new _Str_4696(this.onRoomInvite));
         }
 
         public function _Str_24521(k:_Str_4851):void
@@ -35,7 +35,7 @@
             }
         }
 
-        public function _Str_10457(k:_Str_4696):void
+        public function onRoomInvite(k:_Str_4696):void
         {
             var _local_2:_Str_5791 = k.getParser();
             this._component._Str_3977.addItem(_local_2.senderId, "", _local_2._Str_3460);

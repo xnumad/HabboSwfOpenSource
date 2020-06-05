@@ -110,7 +110,7 @@
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4035(this._Str_4132));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5641(this._Str_22480));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_8800(this._Str_24044));
-            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this._Str_10457));
+            this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_4696(this.onRoomInvite));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_3873(this._Str_5276));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new GameInviteMessageEvent(this._Str_25411));
             this._habboCommunicationManager.addHabboConnectionMessageEvent(new _Str_5567(this._Str_24730));
@@ -570,7 +570,7 @@
             events.dispatchEvent(new ActiveConversationsCountEvent(k._Str_18689));
         }
 
-        private function _Str_10457(k:_Str_4696):void
+        private function onRoomInvite(k:_Str_4696):void
         {
             var _local_2:_Str_5791 = k.getParser();
             this._lastMessageSenderId = _local_2.senderId;

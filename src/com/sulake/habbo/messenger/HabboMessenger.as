@@ -159,7 +159,7 @@
             this._mainView = new MainView(this);
             this.addMessageEvent(new _Str_4851(this.onNewConsoleMessage));
             this.addMessageEvent(new _Str_8339(this.onInstantMessageError));
-            this.addMessageEvent(new _Str_4696(this._Str_10457));
+            this.addMessageEvent(new _Str_4696(this.onRoomInvite));
         }
 
         public function startConversation(k:int):void
@@ -237,7 +237,7 @@
             }
         }
 
-        private function _Str_10457(k:_Str_4696):void
+        private function onRoomInvite(k:_Str_4696):void
         {
             var _local_2:_Str_5791 = k.getParser();
             if (this._mainView != null)
