@@ -47,7 +47,7 @@
         protected var _displayRaw:Boolean = false;
         protected var _etchingColor:uint;
         protected var _etchingPosition:String;
-        protected var _Str_22881:TextFormat;
+        protected var _defaultFormat:TextFormat;
         private var _Str_4040:String;
         private var _Str_3808:TextStyle;
         protected var _Str_17282:Boolean;
@@ -554,7 +554,7 @@
             _local_2.setTextFormat(_local_6);
             _local_2.embedFonts = FontEnum.isEmbeddedFont(_local_6.font);
             _local_2.defaultTextFormat = _local_6;
-            k._Str_22881 = _local_6;
+            k._defaultFormat = _local_6;
         }
 
         protected static function createPropertySetterTable():Dictionary
