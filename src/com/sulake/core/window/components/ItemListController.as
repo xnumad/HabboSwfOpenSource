@@ -32,7 +32,7 @@
         protected var _spacing:int;
         protected var _horizontal:Boolean = false;
         protected var _scrollStepH:Number = -1;
-        protected var _Str_7859:Number = -1;
+        protected var _scrollStepV:Number = -1;
         protected var _Str_9264:Boolean;
         protected var _Str_5418:Boolean;
         protected var _Str_12072:Boolean;
@@ -184,9 +184,9 @@
 
         public function get scrollStepV():Number
         {
-            if (this._Str_7859 >= 0)
+            if (this._scrollStepV >= 0)
             {
-                return this._Str_7859;
+                return this._scrollStepV;
             }
             return (this._horizontal) ? (0.1 * this._container.height) : (this._container.height / this.numListItems);
         }
@@ -198,7 +198,7 @@
 
         public function set scrollStepV(k:Number):void
         {
-            this._Str_7859 = k;
+            this._scrollStepV = k;
         }
 
         public function set _Str_3640(k:Boolean):void
@@ -657,7 +657,7 @@
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
             k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._scrollStepH));
-            k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._Str_7859));
+            k.push(createProperty(PropertyKeys.SCROLL_STEP_VERTICAL, this._scrollStepV));
             return k;
         }
 
@@ -684,7 +684,7 @@
                         this._scrollStepH = (_local_2.value as Number);
                         break;
                     case PropertyKeys.SCROLL_STEP_VERTICAL:
-                        this._Str_7859 = (_local_2.value as Number);
+                        this._scrollStepV = (_local_2.value as Number);
                         break;
                 }
             }

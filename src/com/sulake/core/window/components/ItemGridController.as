@@ -90,9 +90,9 @@
 
         override public function get scrollStepV():Number
         {
-            if (_Str_7859 >= 0)
+            if (_scrollStepV >= 0)
             {
-                return _Str_7859;
+                return _scrollStepV;
             }
             return (_horizontal) ? (visibleRegion.height / this._Str_11491) : (0.1 * visibleRegion.width);
         }
