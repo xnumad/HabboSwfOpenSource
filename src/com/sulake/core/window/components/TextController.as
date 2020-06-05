@@ -275,7 +275,7 @@
             }
         }
 
-        private static function _Str_24630(k:TextController, _arg_2:int):void
+        private static function setMarginBottom(k:TextController, _arg_2:int):void
         {
             if (((k._Str_2480) && (!(k._Str_2480.bottom == _arg_2))))
             {
@@ -594,7 +594,7 @@
             k[PropertyKeys.MARGIN_LEFT] = setMarginLeft;
             k[PropertyKeys.MARGIN_TOP] = setMarginTop;
             k[PropertyKeys.MARGIN_RIGHT] = setMarginRight;
-            k[PropertyKeys.MARGIN_BOTTOM] = _Str_24630;
+            k[PropertyKeys.MARGIN_BOTTOM] = setMarginBottom;
             k[PropertyKeys.OVERFLOW_REPLACE] = _Str_18098;
             return k;
         }
