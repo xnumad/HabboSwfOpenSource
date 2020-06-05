@@ -62,9 +62,9 @@
                             _local_2.x = ((k.x + k.width) + this._spacing);
                         }
                         _local_2.y = this._verticalPadding;
-                        if (this._Str_9056(_local_2) > 0)
+                        if (this.getRelativeValue(_local_2) > 0)
                         {
-                            _local_2.width = ((_local_3 * this._Str_9056(_local_2)) / _local_4);
+                            _local_2.width = ((_local_3 * this.getRelativeValue(_local_2)) / _local_4);
                         }
                         k = _local_2;
                     }
@@ -85,9 +85,9 @@
                             _local_2.y = ((k.y + k.height) + this._spacing);
                         }
                         _local_2.x = this._horizontalPadding;
-                        if (this._Str_9056(_local_2) > 0)
+                        if (this.getRelativeValue(_local_2) > 0)
                         {
-                            _local_2.height = ((_local_3 * this._Str_9056(_local_2)) / _local_4);
+                            _local_2.height = ((_local_3 * this.getRelativeValue(_local_2)) / _local_4);
                         }
                         k = _local_2;
                     }
@@ -95,7 +95,7 @@
             }
         }
 
-        private function _Str_9056(k:IWindow):int
+        private function getRelativeValue(k:IWindow):int
         {
             var _local_3:String;
             var _local_2:int;
@@ -125,7 +125,7 @@
             {
                 if (_local_2.visible)
                 {
-                    k = (k + this._Str_9056(_local_2));
+                    k = (k + this.getRelativeValue(_local_2));
                 }
             }
             return k;
@@ -139,7 +139,7 @@
             {
                 if (_local_2.visible != false)
                 {
-                    if (this._Str_9056(_local_2) == 0)
+                    if (this.getRelativeValue(_local_2) == 0)
                     {
                         if (this._vertical)
                         {
