@@ -416,7 +416,7 @@
             return new _Str_9679(this, _local_6, k, _arg_2, _arg_3, _arg_4, false);
         }
 
-        public function _Str_21720(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910
+        public function confirmWithModal(k:String, _arg_2:String, _arg_3:uint, _arg_4:Function):_Str_2910
         {
             var confirmAsset:IAsset = assets.getAssetByName("habbo_window_confirm_xml");
             if (!confirmAsset)

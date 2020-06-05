@@ -383,7 +383,7 @@
             this._component.localizations.registerParameter("chat.ignore_user.confirm.info", "username", this._currentIgnored.userName);
             var _local_3:String = this._component.localizations.getLocalization("chat.ignore_user.confirm.title");
             var _local_4:String = this._component.localizations.getLocalization("chat.ignore_user.confirm.info");
-            this._component.windowManager._Str_21720(_local_3, _local_4, 0, this._Str_22950);
+            this._component.windowManager.confirmWithModal(_local_3, _local_4, 0, this._Str_22950);
             return true;
         }
 
