@@ -12,7 +12,7 @@
         function getDesktopWindow():IDesktopWindow;
         function registerLocalizationListener(_arg_1:String, _arg_2:IWindow):void;
         function removeLocalizationListener(_arg_1:String, _arg_2:IWindow):void;
-        function _Str_14038(_arg_1:String):IWindow;
+        function findWindowByName(_arg_1:String):IWindow;
         function _Str_15444(_arg_1:String):IWindow;
         function groupChildrenWithTag(_arg_1:String, _arg_2:Array, _arg_3:int=0):uint;
         function create(_arg_1:String, _arg_2:String, _arg_3:uint, _arg_4:uint, _arg_5:uint, _arg_6:Rectangle, _arg_7:Function, _arg_8:IWindow, _arg_9:uint, _arg_10:Array=null, _arg_11:String="", _arg_12:Array=null):IWindow;

@@ -528,13 +528,13 @@
             Logger.log(((((("type: " + Capabilities.playerType) + " debugger: ") + Capabilities.isDebugger) + " version: ") + Capabilities.version));
         }
 
-        public function _Str_14038(k:String):IWindow
+        public function findWindowByName(k:String):IWindow
         {
             var _local_2:IWindow;
             var _local_3:IWindowContext;
             for each (_local_3 in this._windowContextArray)
             {
-                _local_2 = _local_3._Str_14038(k);
+                _local_2 = _local_3.findWindowByName(k);
                 if (_local_2)
                 {
                     return _local_2;

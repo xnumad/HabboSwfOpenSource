@@ -242,7 +242,7 @@
             return this._Str_2867;
         }
 
-        public function _Str_14038(k:String):IWindow
+        public function findWindowByName(k:String):IWindow
         {
             return this._Str_2867.findChildByName(k);
         }
