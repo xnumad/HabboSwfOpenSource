@@ -323,7 +323,7 @@
             k._Str_3808.letterSpacing = _arg_2;
         }
 
-        private static function _Str_16363(k:TextController, _arg_2:int):void
+        private static function setMaxLines(k:TextController, _arg_2:int):void
         {
             k._Str_22084 = _arg_2;
             k.refreshTextImage();
@@ -584,7 +584,7 @@
             k[PropertyKeys.UNDERLINE] = _Str_16916;
             k[PropertyKeys.WORD_WRAP] = _Str_16858;
             k["margins"] = setTextMarginMap;
-            k[PropertyKeys.MAX_LINES] = _Str_16363;
+            k[PropertyKeys.MAX_LINES] = setMaxLines;
             k[PropertyKeys.LEADING] = _Str_18703;
             k[PropertyKeys.ANTIALIAS_TYPE] = setAntiAliasType;
             k[PropertyKeys.AUTO_SIZE] = setAutoSize;
@@ -946,7 +946,7 @@
 
         public function set _Str_9760(k:int):void
         {
-            _Str_16363(this, k);
+            setMaxLines(this, k);
         }
 
         public function set leading(k:Number):void
