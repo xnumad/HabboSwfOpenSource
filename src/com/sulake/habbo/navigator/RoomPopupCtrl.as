@@ -51,10 +51,10 @@
             this.refreshExtraCont();
             this.refreshEventInfo(this._room);
             this.refreshRoomSettings();
-            this._Str_15598(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum.FREE_TRADING));
-            this._Str_15598(this._details, "doormode_doorbell", (this._room.doorMode == 1));
-            this._Str_15598(this._details, "doormode_password", (this._room.doorMode == 2));
-            this._Str_15598(this._details, "doormode_invisible", (this._room.doorMode == 3));
+            this.refreshInfo(this._details, "trading_allowed", (this._room.tradeMode == RoomTradingLevelEnum.FREE_TRADING));
+            this.refreshInfo(this._details, "doormode_doorbell", (this._room.doorMode == 1));
+            this.refreshInfo(this._details, "doormode_password", (this._room.doorMode == 2));
+            this.refreshInfo(this._details, "doormode_invisible", (this._room.doorMode == 3));
             Util._Str_4679(this._details, ["guild_info", "roomname", "roomctg_cont", "roomowner_cont", "roomdesc", "extra_cont", "doormode_doorbell", "doormode_password", "doormode_invisible", "trading_allowed", "eventinfo_cont", "roomsettings_cont"], 0, 0);
             this._details.findChildByName("guild_info").x = 2;
             this._details.height = Util._Str_2647(this._details);
@@ -162,7 +162,7 @@
             Util._Str_5055(_local_4, [(k + ".caption"), k], _local_6.x, 0, 2);
         }
 
-        private function _Str_15598(k:IWindowContainer, _arg_2:String, _arg_3:Boolean):void
+        private function refreshInfo(k:IWindowContainer, _arg_2:String, _arg_3:Boolean):void
         {
             if (!_arg_3)
             {
