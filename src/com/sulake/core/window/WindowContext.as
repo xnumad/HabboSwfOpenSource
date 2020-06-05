@@ -53,7 +53,7 @@
         private var _linkEventTrackers:Vector.<ILinkEventTracker>;
         private var _eventProcessorState:EventProcessorState;
         protected var _localization:ICoreLocalizationManager;
-        protected var _Str_2417:DisplayObjectContainer;
+        protected var _rootDisplayObject:DisplayObjectContainer;
         protected var _Str_24909:Boolean = true;
         protected var _Str_1984:Error;
         protected var _Str_16327:int = -1;
@@ -76,7 +76,7 @@
             _renderer = _arg_2;
             this._localization = _arg_6;
             this._configurationManager = _arg_7;
-            this._Str_2417 = _arg_8;
+            this._rootDisplayObject = _arg_8;
             this._Str_11208 = new ServiceManager(this, _arg_8);
             this._Str_18011 = _arg_3;
             this._widgetFactory = _arg_4;
@@ -86,15 +86,15 @@
             this._linkEventTrackers = _arg_10;
             if (!stage)
             {
-                if ((this._Str_2417 is Stage))
+                if ((this._rootDisplayObject is Stage))
                 {
-                    stage = (this._Str_2417 as Stage);
+                    stage = (this._rootDisplayObject as Stage);
                 }
                 else
                 {
-                    if (this._Str_2417.stage)
+                    if (this._rootDisplayObject.stage)
                     {
-                        stage = this._Str_2417.stage;
+                        stage = this._rootDisplayObject.stage;
                     }
                 }
             }
@@ -106,9 +106,9 @@
             this._Str_2867 = new DesktopController(("_CONTEXT_DESKTOP_" + this._name), this, _arg_9);
             this._Str_2867.limits.maxWidth = _arg_9.width;
             this._Str_2867.limits.maxHeight = _arg_9.height;
-            this._Str_2417.addChild(this._Str_2867.getDisplayObject());
-            this._Str_2417.doubleClickEnabled = true;
-            this._Str_2417.addEventListener(Event.RESIZE, this._Str_21888);
+            this._rootDisplayObject.addChild(this._Str_2867.getDisplayObject());
+            this._rootDisplayObject.doubleClickEnabled = true;
+            this._rootDisplayObject.addEventListener(Event.RESIZE, this._Str_21888);
             this._eventProcessorState = new EventProcessorState(_renderer, this._Str_2867, this._Str_2867, null, this.inputEventTrackers);
             _Str_9993 = INPUT_MODE_MOUSE;
             this._Str_13721 = new SubstituteParentController(this);
@@ -174,8 +174,8 @@
             if (!this._disposed)
             {
                 this._disposed = true;
-                this._Str_2417.removeEventListener(Event.RESIZE, this._Str_21888);
-                this._Str_2417.removeChild((IGraphicContextHost(this._Str_2867).getGraphicContext(true) as DisplayObject));
+                this._rootDisplayObject.removeEventListener(Event.RESIZE, this._Str_21888);
+                this._rootDisplayObject.removeChild((IGraphicContextHost(this._Str_2867).getGraphicContext(true) as DisplayObject));
                 this._Str_2867.destroy();
                 this._Str_2867 = null;
                 this._Str_13721.destroy();
@@ -189,7 +189,7 @@
                 this._Str_14601 = null;
                 _renderer = null;
                 this._localization = null;
-                this._Str_2417 = null;
+                this._rootDisplayObject = null;
                 this._Str_18011 = null;
                 this._widgetFactory = null;
                 this._Str_5526 = null;
@@ -355,15 +355,15 @@
             var _local_3:int;
             if (((!(this._Str_2867 == null)) && (!(this._Str_2867.disposed))))
             {
-                if ((this._Str_2417 is Stage))
+                if ((this._rootDisplayObject is Stage))
                 {
-                    _local_2 = Stage(this._Str_2417).stageWidth;
-                    _local_3 = Stage(this._Str_2417).stageHeight;
+                    _local_2 = Stage(this._rootDisplayObject).stageWidth;
+                    _local_3 = Stage(this._rootDisplayObject).stageHeight;
                 }
                 else
                 {
-                    _local_2 = this._Str_2417.width;
-                    _local_3 = this._Str_2417.height;
+                    _local_2 = this._rootDisplayObject.width;
+                    _local_3 = this._rootDisplayObject.height;
                 }
                 if (((_local_2 >= 10) && (_local_3 >= 10)))
                 {
