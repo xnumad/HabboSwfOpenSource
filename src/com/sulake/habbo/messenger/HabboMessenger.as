@@ -56,7 +56,7 @@
         private var _help:IHabboHelp;
         private var _mainView:MainView;
         private var _messageEvents:Vector.<IMessageEvent>;
-        private var _Str_9090:Boolean = false;
+        private var _roomInvitesIgnored:Boolean = false;
 
         public function HabboMessenger(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
@@ -141,17 +141,17 @@
 
         private function onAccountPreferences(k:AccountPreferencesEvent):void
         {
-            this._Str_9090 = k.getParser().roomInvitesIgnored;
+            this._roomInvitesIgnored = k.getParser().roomInvitesIgnored;
         }
 
         public function getRoomInvitesIgnored():Boolean
         {
-            return this._Str_9090;
+            return this._roomInvitesIgnored;
         }
 
         public function setRoomInvitesIgnored(k:Boolean):void
         {
-            this._Str_9090 = k;
+            this._roomInvitesIgnored = k;
         }
 
         private function _Str_19006(k:IMessageEvent):void
