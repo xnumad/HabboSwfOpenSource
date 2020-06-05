@@ -95,7 +95,7 @@
             var k:int;
             for each (_local_2 in this._friendList.categories._Str_17858())
             {
-                this._Str_2966(true, k, _local_2, null);
+                this.refreshEntry(true, k, _local_2, null);
                 k++;
                 if (_local_2.open)
                 {
@@ -104,7 +104,7 @@
                     _local_5 = _local_3;
                     while (_local_5 < _local_4)
                     {
-                        this._Str_2966(true, k, _local_2, _local_2.friends[_local_5]);
+                        this.refreshEntry(true, k, _local_2, _local_2.friends[_local_5]);
                         k++;
                         _local_5++;
                     }
@@ -112,7 +112,7 @@
             }
             while (true)
             {
-                _local_6 = this._Str_2966(false, k, null, null);
+                _local_6 = this.refreshEntry(false, k, null, null);
                 if (_local_6)
                 {
                     break;
@@ -142,7 +142,7 @@
             return _local_4;
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:_Str_2591, _arg_4:Friend):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:_Str_2591, _arg_4:Friend):Boolean
         {
             var _local_5:* = ((_arg_2 % 2) == 1);
             var _local_6:IWindowContainer = (this._list.getListItemAt(_arg_2) as IWindowContainer);

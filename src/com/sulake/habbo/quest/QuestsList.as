@@ -147,11 +147,11 @@
             {
                 if (_local_2 < this._quests.length)
                 {
-                    this._Str_2966(true, _local_2, this._quests[_local_2], k);
+                    this.refreshEntry(true, _local_2, this._quests[_local_2], k);
                 }
                 else
                 {
-                    _local_3 = this._Str_2966(false, _local_2, null, k);
+                    _local_3 = this.refreshEntry(false, _local_2, null, k);
                     if (_local_3)
                     {
                         break;
@@ -176,7 +176,7 @@
             this._list.spacing = _Str_17206;
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:_Str_2455, _arg_4:Boolean):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:_Str_2455, _arg_4:Boolean):Boolean
         {
             var _local_5:IWindowContainer = IWindowContainer(this._list.getListItemAt(_arg_2));
             var _local_6:Boolean;

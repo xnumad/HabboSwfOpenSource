@@ -192,7 +192,7 @@
             var _local_3:int;
             while (_local_3 < this._data.pageSize)
             {
-                this._Str_2966(k, _local_3, _local_2[_local_3]);
+                this.refreshEntry(k, _local_3, _local_2[_local_3]);
                 _local_3++;
             }
             var _local_4:_Str_2402 = (IWidgetWindow(this._window.findChildByName("group_logo")).widget as _Str_2402);
@@ -237,7 +237,7 @@
             }
         }
 
-        private function _Str_2966(k:IWindowContainer, _arg_2:int, _arg_3:_Str_2891):void
+        private function refreshEntry(k:IWindowContainer, _arg_2:int, _arg_3:_Str_2891):void
         {
             var _local_4:IWindowContainer = IWindowContainer(k.getChildAt(_arg_2));
             if (_local_4 == null)

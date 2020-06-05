@@ -88,11 +88,11 @@
             {
                 if (_local_3 < k.length)
                 {
-                    this._Str_2966(true, _local_3, k[_local_3]);
+                    this.refreshEntry(true, _local_3, k[_local_3]);
                 }
                 else
                 {
-                    _local_4 = this._Str_2966(false, _local_3, null);
+                    _local_4 = this.refreshEntry(false, _local_3, null);
                     if (_local_4)
                     {
                         break;
@@ -153,7 +153,7 @@
             return ((k % 2) != 0) ? 0xFFFFFFFF : 4292797682;
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:GuestRoomData):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:GuestRoomData):Boolean
         {
             var _local_4:IWindowContainer = IWindowContainer(this._list.getListItemAt(_arg_2));
             var _local_5:Boolean;

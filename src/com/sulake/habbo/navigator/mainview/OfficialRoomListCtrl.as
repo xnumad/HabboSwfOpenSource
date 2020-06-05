@@ -56,11 +56,11 @@
                 _local_4 = IWindowContainer(this._list.getListItemAt((_local_2 + 1)));
                 if (_local_2 < k.length)
                 {
-                    this._Str_2966(true, _local_3, _local_4, k[_local_2]);
+                    this.refreshEntry(true, _local_3, _local_4, k[_local_2]);
                 }
                 else
                 {
-                    _local_5 = this._Str_2966(false, _local_3, _local_4, null);
+                    _local_5 = this.refreshEntry(false, _local_3, _local_4, null);
                     if (_local_5)
                     {
                         break;
@@ -95,7 +95,7 @@
             return _local_2;
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer, _arg_4:_Str_2632):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:Boolean, _arg_3:IWindowContainer, _arg_4:_Str_2632):Boolean
         {
             if (_arg_3 == null)
             {
@@ -106,7 +106,7 @@
                 _arg_3 = this._navigator._Str_7596._Str_9034(_arg_2);
                 this._list.addListItem(_arg_3);
             }
-            this._navigator._Str_7596._Str_2966(_arg_3, k, _arg_4);
+            this._navigator._Str_7596.refreshEntry(_arg_3, k, _arg_4);
             return false;
         }
 

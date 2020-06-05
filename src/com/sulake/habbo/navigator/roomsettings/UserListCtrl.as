@@ -59,7 +59,7 @@
             _local_7 = 0;
             while (true)
             {
-                _local_8 = this._Str_2966(k, _local_7, _local_5[_local_7], _arg_4);
+                _local_8 = this.refreshEntry(k, _local_7, _local_5[_local_7], _arg_4);
                 if (_local_8)
                 {
                     break;
@@ -93,7 +93,7 @@
             return (_arg_2) ? 4290173439 : (((k % 2) != 0) ? 0xFFFFFFFF : 4293519841);
         }
 
-        private function _Str_2966(k:IItemListWindow, _arg_2:int, _arg_3:_Str_4633, _arg_4:int):Boolean
+        private function refreshEntry(k:IItemListWindow, _arg_2:int, _arg_3:_Str_4633, _arg_4:int):Boolean
         {
             var _local_5:IWindowContainer = IWindowContainer(k.getListItemAt(_arg_2));
             if (_local_5 == null)

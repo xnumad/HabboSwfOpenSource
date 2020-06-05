@@ -65,7 +65,7 @@
                     }
                     _local_9 = _local_3.getValue(_local_7.nodeId);
                     _local_10 = _local_4.getValue(_local_7.nodeId);
-                    this._Str_2966(_local_8, _local_7, _local_9, _local_10);
+                    this.refreshEntry(_local_8, _local_7, _local_9, _local_10);
                     _local_8.y = k;
                     k = (k + (_local_8.height + _Str_7717));
                     _local_8.visible = true;
@@ -80,7 +80,7 @@
             }
         }
 
-        public function _Str_2966(k:IWindowContainer, _arg_2:FlatCategory, _arg_3:int, _arg_4:int):void
+        public function refreshEntry(k:IWindowContainer, _arg_2:FlatCategory, _arg_3:int, _arg_4:int):void
         {
             k.findChildByName("category_name_txt").caption = _arg_2._Str_14718;
             k.findChildByName("arrow_right_icon").visible = true;

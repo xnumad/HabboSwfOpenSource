@@ -61,7 +61,7 @@
                 _local_4.addChild(this._Str_9034(true));
             }
             var _local_5:IWindowContainer = IWindowContainer(_local_4.getChildAt(0));
-            this._Str_2966(_local_5, true, this._navigator.data._Str_5653);
+            this.refreshEntry(_local_5, true, this._navigator.data._Str_5653);
             _local_3.visible = true;
             this._navigator.data._Str_6357++;
         }
@@ -90,7 +90,7 @@
             return _local_2;
         }
 
-        public function _Str_2966(k:IWindowContainer, _arg_2:Boolean, _arg_3:_Str_2632):void
+        public function refreshEntry(k:IWindowContainer, _arg_2:Boolean, _arg_3:_Str_2632):void
         {
             Util._Str_2930(k);
             if (_arg_2)

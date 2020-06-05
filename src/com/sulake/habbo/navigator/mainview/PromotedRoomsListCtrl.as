@@ -70,7 +70,7 @@
                     _local_5.id = _local_4;
                     k.addChild(_local_5);
                 }
-                this._Str_2966(_local_5, _arg_2[_local_4]);
+                this.refreshEntry(_local_5, _arg_2[_local_4]);
                 _local_5.y = _local_3;
                 _local_3 = (_local_3 + (_local_5.height + _Str_7717));
                 _local_5.visible = true;
@@ -101,7 +101,7 @@
             k.findChildByName(_arg_3).id = _arg_2;
         }
 
-        public function _Str_2966(k:IWindowContainer, _arg_2:_Str_3451):void
+        public function refreshEntry(k:IWindowContainer, _arg_2:_Str_3451):void
         {
             var _local_3:String = this._navigator.getText(("promotedroomcategory." + _arg_2.code));
             k.findChildByName("category_name_txt").caption = _local_3;

@@ -69,31 +69,31 @@
                 _local_3 = this._friendList._Str_21131();
                 if (_local_2 == 0)
                 {
-                    this._Str_2966(true, _local_2, null, null, this._Str_22898(), false, false, 0);
+                    this.refreshEntry(true, _local_2, null, null, this._Str_22898(), false, false, 0);
                 }
                 else
                 {
                     if (_local_2 <= k.friends.length)
                     {
                         _local_4 = k.friends[(_local_2 - 1)];
-                        this._Str_2966(true, _local_2, _local_4._Str_17102, _local_4._Str_8751, null, ((_local_4._Str_25717) || (_local_3)), false, _local_4._Str_3251);
+                        this.refreshEntry(true, _local_2, _local_4._Str_17102, _local_4._Str_8751, null, ((_local_4._Str_25717) || (_local_3)), false, _local_4._Str_3251);
                     }
                     else
                     {
                         if (_local_2 == (k.friends.length + 1))
                         {
-                            this._Str_2966(true, _local_2, null, null, this._Str_25692(), false, false, 0);
+                            this.refreshEntry(true, _local_2, null, null, this._Str_25692(), false, false, 0);
                         }
                         else
                         {
                             if (_local_2 <= ((k.friends.length + k.others.length) + 1))
                             {
                                 _local_5 = k.others[((_local_2 - 2) - k.friends.length)];
-                                this._Str_2966(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5._Str_3251 == this._friendList._Str_3251)) && (!(this._friendList._Str_4227.isRequestFriend(_local_5._Str_3251)))), _local_5._Str_3251);
+                                this.refreshEntry(true, _local_2, _local_5._Str_17102, _local_5._Str_8751, null, false, ((!(_local_5._Str_3251 == this._friendList._Str_3251)) && (!(this._friendList._Str_4227.isRequestFriend(_local_5._Str_3251)))), _local_5._Str_3251);
                             }
                             else
                             {
-                                _local_6 = this._Str_2966(false, _local_2, null, null, null, false, false, 0);
+                                _local_6 = this.refreshEntry(false, _local_2, null, null, null, false, false, 0);
                                 if (_local_6)
                                 {
                                     break;
@@ -148,7 +148,7 @@
             return "${friendlist.search.otherscaption}";
         }
 
-        private function _Str_2966(k:Boolean, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Boolean, _arg_7:Boolean, _arg_8:int):Boolean
+        private function refreshEntry(k:Boolean, _arg_2:int, _arg_3:String, _arg_4:String, _arg_5:String, _arg_6:Boolean, _arg_7:Boolean, _arg_8:int):Boolean
         {
             var _local_9:IWindowContainer = (this._list.getListItemAt(_arg_2) as IWindowContainer);
             if (_local_9 == null)
@@ -268,7 +268,7 @@
             else
             {
                 this._friendList._Str_23469(_local_3._Str_8751);
-                this._Str_2966(true, this._Str_22578(_local_3._Str_3251), _local_3._Str_17102, _local_3._Str_8751, null, false, false, _local_3._Str_3251);
+                this.refreshEntry(true, this._Str_22578(_local_3._Str_3251), _local_3._Str_17102, _local_3._Str_8751, null, false, false, _local_3._Str_3251);
             }
         }
 
