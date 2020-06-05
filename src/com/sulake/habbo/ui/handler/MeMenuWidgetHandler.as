@@ -102,8 +102,8 @@
                 }
                 if ((((this._container.habboHelp) && (!(this._container.habboHelp.disposed))) && (this._container.habboHelp.events)))
                 {
-                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
-                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
+                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this.onHelpTutorialEvent);
+                    this._container.habboHelp.events.removeEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this.onHelpTutorialEvent);
                 }
                 if ((((this._container.catalog) && (!(this._container.catalog.disposed))) && (this._container.catalog.events)))
                 {
@@ -133,8 +133,8 @@
             }
             if (this._container.habboHelp != null)
             {
-                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this._Str_14173);
-                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this._Str_14173);
+                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_LIGHT_CLOTHES_ICON, this.onHelpTutorialEvent);
+                this._container.habboHelp.events.addEventListener(HabboHelpTutorialEvent.HHTPNUFWE_AVATAR_TUTORIAL_START, this.onHelpTutorialEvent);
             }
             this._catalog = this._container.catalog;
             if (this._container.catalog != null)
@@ -468,7 +468,7 @@
             this._container.events.dispatchEvent(new _Str_4656(_Str_4656.RWPUE_CREDIT_BALANCE, k.balance));
         }
 
-        private function _Str_14173(k:HabboHelpTutorialEvent):void
+        private function onHelpTutorialEvent(k:HabboHelpTutorialEvent):void
         {
             if (this._container == null)
             {
