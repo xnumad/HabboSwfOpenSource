@@ -33,7 +33,7 @@
         protected var _horizontal:Boolean = false;
         protected var _scrollStepH:Number = -1;
         protected var _scrollStepV:Number = -1;
-        protected var _Str_9264:Boolean;
+        protected var _arrangeListItems:Boolean;
         protected var _Str_5418:Boolean;
         protected var _Str_12072:Boolean;
         protected var _Str_19352:Number;
@@ -51,7 +51,7 @@
             this._horizontal = (_arg_2 == WindowType.WINDOW_TYPE_ITEMLIST_HORIZONTAL);
             var _local_12:IThemeManager = _arg_5.getWindowFactory().getThemeManager();
             this._spacing = int(_local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SPACING).value);
-            this._Str_9264 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
+            this._arrangeListItems = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.AUTO_ARRANGE_ITEMS).value;
             this._Str_5418 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.SCALE_TO_FIT_ITEMS).value;
             this._Str_12072 = _local_12.getPropertyDefaults(_arg_3).get(PropertyKeys.RESIZE_ON_ITEM_UPDATE).value;
             super(k, _arg_2, _arg_3, _arg_4, _arg_5, _arg_6, _arg_7, _arg_8, _arg_9, _arg_10, _arg_11);
@@ -217,13 +217,13 @@
 
         public function set autoArrangeItems(k:Boolean):void
         {
-            this._Str_9264 = k;
+            this._arrangeListItems = k;
             this._Str_4024();
         }
 
         public function get autoArrangeItems():Boolean
         {
-            return this._Str_9264;
+            return this._arrangeListItems;
         }
 
         public function set _Str_3583(k:Boolean):void
@@ -567,7 +567,7 @@
             var _local_2:IWindow;
             var _local_3:int;
             var _local_4:uint;
-            if ((((this._Str_9264) && (!(this._updating))) && (this._container)))
+            if ((((this._arrangeListItems) && (!(this._updating))) && (this._container)))
             {
                 this._updating = true;
                 k = this._container.numChildren;
@@ -653,7 +653,7 @@
         {
             var k:Array = super.properties;
             k.push(createProperty(PropertyKeys.SPACING, this._spacing));
-            k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._Str_9264));
+            k.push(createProperty(PropertyKeys.AUTO_ARRANGE_ITEMS, this._arrangeListItems));
             k.push(createProperty(PropertyKeys.SCALE_TO_FIT_ITEMS, this._Str_5418));
             k.push(createProperty(PropertyKeys.RESIZE_ON_ITEM_UPDATE, this._Str_12072));
             k.push(createProperty(PropertyKeys.SCROLL_STEP_HORIZONTAL, this._scrollStepH));
@@ -678,7 +678,7 @@
                         this._Str_3583 = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.AUTO_ARRANGE_ITEMS:
-                        this._Str_9264 = (_local_2.value as Boolean);
+                        this._arrangeListItems = (_local_2.value as Boolean);
                         break;
                     case PropertyKeys.SCROLL_STEP_HORIZONTAL:
                         this._scrollStepH = (_local_2.value as Number);
