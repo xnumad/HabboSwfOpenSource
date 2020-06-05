@@ -100,7 +100,7 @@
                 }
                 _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
             }
-            _Str_8020();
+            fitSize();
         }
 
         override public function clone():IWindow

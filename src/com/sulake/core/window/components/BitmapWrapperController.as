@@ -32,7 +32,7 @@
                 _bitmapData.dispose();
             }
             _bitmapData = k;
-            _Str_8020();
+            fitSize();
             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
         }
 

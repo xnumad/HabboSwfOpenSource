@@ -90,7 +90,7 @@
         public function set zoomX(k:Number):void
         {
             this._zoomX = k;
-            this._Str_8020();
+            this.fitSize();
         }
 
         public function get zoomY():Number
@@ -101,7 +101,7 @@
         public function set zoomY(k:Number):void
         {
             this._zoomY = k;
-            this._Str_8020();
+            this.fitSize();
         }
 
         public function get greyscale():Boolean
@@ -132,7 +132,7 @@
         public function set fitSizeToContents(k:Boolean):void
         {
             this._fitSizeToContents = k;
-            this._Str_8020();
+            this.fitSize();
         }
 
         override public function get etchingPoint():Point
@@ -166,7 +166,7 @@
             this._wrapY = k;
         }
 
-        protected function _Str_8020():void
+        protected function fitSize():void
         {
             if (((this._fitSizeToContents) && (!(this._bitmapData == null))))
             {
