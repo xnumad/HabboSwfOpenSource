@@ -5,7 +5,7 @@
     import com.sulake.core.window.components.IFrameWindow;
     import flash.utils.Timer;
     import com.sulake.habbo.communication.messages.incoming.users.GuildMemberData;
-    import com.sulake.habbo.utils._Str_8330;
+    import com.sulake.habbo.utils.InfoText;
     import com.sulake.habbo.utils.LoadingIcon;
     import flash.events.TimerEvent;
     import com.sulake.core.window.components.IIconWindow;
@@ -47,7 +47,7 @@
         private var _groupId:int;
         private var _searchTimer:Timer;
         private var _data:GuildMemberData;
-        private var _userNameFilter:_Str_8330;
+        private var _userNameFilter:InfoText;
         private var _loadingIcon:LoadingIcon;
 
         public function GuildMembersWindowCtrl(k:HabboGroupsManager)
@@ -215,7 +215,7 @@
             this._window.findChildByTag("close").procedure = this.onClose;
             this._window.findChildByName("previous_page_button").procedure = this._Str_23530;
             this._window.findChildByName("next_page_button").procedure = this._Str_22381;
-            this._userNameFilter = new _Str_8330(ITextFieldWindow(this._window.findChildByName("filter_members_input")), this._manager.localization.getLocalization("group.members.searchinfo"));
+            this._userNameFilter = new InfoText(ITextFieldWindow(this._window.findChildByName("filter_members_input")), this._manager.localization.getLocalization("group.members.searchinfo"));
             this._window.center();
         }
 

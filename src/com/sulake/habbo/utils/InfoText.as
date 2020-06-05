@@ -3,13 +3,13 @@
     import com.sulake.core.window.components.ITextFieldWindow;
     import com.sulake.core.window.events.WindowEvent;
 
-    public class _Str_8330 
+    public class InfoText
     {
         private var _input:ITextFieldWindow;
         private var _Str_3484:Boolean;
         private var _Str_5074:String = "";
 
-        public function _Str_8330(k:ITextFieldWindow, _arg_2:String=null)
+        public function InfoText(k:ITextFieldWindow, _arg_2:String=null)
         {
             this._input = k;
             if (_arg_2 != null)
