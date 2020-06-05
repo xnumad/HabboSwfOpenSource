@@ -127,7 +127,7 @@
                 for each (updatedFriend in p._Str_20668)
                 {
                     Logger.log(((((((("Got UPDATE: " + updatedFriend.id) + ", ") + updatedFriend.online) + ", ") + updatedFriend.name) + ", ") + updatedFriend._Str_4501));
-                    this._deps.messenger._Str_14047(updatedFriend.id, ((updatedFriend._Str_4501) && (updatedFriend.online)));
+                    this._deps.messenger.setFollowingAllowed(updatedFriend.id, ((updatedFriend._Str_4501) && (updatedFriend.online)));
                     currentlyOnline = this._Str_25874(updatedFriend.id);
                     if (((currentlyOnline) && (!(updatedFriend.online))))
                     {

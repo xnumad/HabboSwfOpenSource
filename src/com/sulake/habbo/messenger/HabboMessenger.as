@@ -176,11 +176,11 @@
             return this._Str_9588;
         }
 
-        public function _Str_14047(k:int, _arg_2:Boolean):void
+        public function setFollowingAllowed(k:int, _arg_2:Boolean):void
         {
             if (this._Str_2439 != null)
             {
-                this._Str_2439._Str_14047(k, _arg_2);
+                this._Str_2439.setFollowingAllowed(k, _arg_2);
             }
         }
 

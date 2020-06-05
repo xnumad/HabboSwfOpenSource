@@ -273,7 +273,7 @@
             this._Str_25852(k, ((this._messenger.getText("messenger.invitation") + " ") + _arg_2), true);
         }
 
-        public function _Str_14047(k:int, _arg_2:Boolean):void
+        public function setFollowingAllowed(k:int, _arg_2:Boolean):void
         {
             if (k == this._currentConversationId)
             {
