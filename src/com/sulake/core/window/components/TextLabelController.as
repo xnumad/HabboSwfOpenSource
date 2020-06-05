@@ -191,7 +191,7 @@
 
         protected function get textField():TextField
         {
-            var k:TextField = TextFieldCache._Str_24073(this._textStyleName);
+            var k:TextField = TextFieldCache.getTextFieldByStyleName(this._textStyleName);
             if (k)
             {
                 k.text = this._text;

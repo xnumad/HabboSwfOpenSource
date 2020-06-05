@@ -91,7 +91,7 @@
             return _local_2;
         }
 
-        public static function _Str_24073(k:String):TextField
+        public static function getTextFieldByStyleName(k:String):TextField
         {
             var _local_2:TextStyle = TextStyleManager.getStyle(k);
             if (!_local_2)
