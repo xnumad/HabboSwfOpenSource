@@ -244,7 +244,7 @@
         {
             if (((!(k == null)) && (!(this._notificationViewManager == null))))
             {
-                this._notificationViewManager._Str_18673(k);
+                this._notificationViewManager.replaceIcon(k);
             }
         }
     }

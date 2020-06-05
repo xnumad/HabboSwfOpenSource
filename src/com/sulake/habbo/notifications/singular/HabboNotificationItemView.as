@@ -110,7 +110,7 @@
             this.startFadeIn();
         }
 
-        public function _Str_18673(k:BadgeImageReadyEvent):void
+        public function replaceIcon(k:BadgeImageReadyEvent):void
         {
             if (k.badgeId != this._item.style._Str_25821)
             {

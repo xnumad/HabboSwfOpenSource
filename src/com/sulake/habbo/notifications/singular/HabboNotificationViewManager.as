@@ -45,12 +45,12 @@
             return this._disposed;
         }
 
-        public function _Str_18673(k:BadgeImageReadyEvent):void
+        public function replaceIcon(k:BadgeImageReadyEvent):void
         {
             var _local_2:HabboNotificationItemView;
             for each (_local_2 in this._viewItems)
             {
-                _local_2._Str_18673(k);
+                _local_2.replaceIcon(k);
             }
         }
 
