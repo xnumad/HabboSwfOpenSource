@@ -173,7 +173,7 @@
             navigator.refreshButton(_local_4, _arg_2, true, null, 0);
         }
 
-        private function _Str_26278(k:int):String
+        private function getEventCtg(k:int):String
         {
             var _local_2:String = ("roomevent_type_" + k);
             var _local_3:String = navigator.getText(_local_2);
