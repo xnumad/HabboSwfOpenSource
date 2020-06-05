@@ -24,7 +24,7 @@
         private var _footer:IWindowContainer;
         private var _infoText:ITextWindow;
         private var _lastWindowHeight:int = -1;
-        private var _Str_4481:int = -1;
+        private var _lastWindowWidth:int = -1;
         private var _Str_18916:Boolean;
 
         public function FriendListView(k:HabboFriendList)
@@ -148,7 +148,7 @@
                 return;
             }
             var _local_3:int = ((this._lastWindowHeight == -1) ? 0 : (this._mainWindow.height - this._lastWindowHeight));
-            var _local_4:int = ((this._Str_4481 == -1) ? 0 : (this._mainWindow.width - this._Str_4481));
+            var _local_4:int = ((this._lastWindowWidth == -1) ? 0 : (this._mainWindow.width - this._lastWindowWidth));
             this._habboFriendList.tabs._Str_12266 = Math.max(100, (this._habboFriendList.tabs._Str_12266 + _local_3));
             this._habboFriendList.tabs._Str_4971 = Math.max(147, (this._habboFriendList.tabs._Str_4971 + _local_4));
             this.refresh(("resize: " + _local_3));
@@ -174,7 +174,7 @@
             this._mainWindow.scaler.x = (this._mainWindow.width - this._mainWindow.scaler.width);
             this._mainWindow.scaler.y = (this._mainWindow.height - this._mainWindow.scaler.height);
             this._lastWindowHeight = this._mainWindow.height;
-            this._Str_4481 = this._mainWindow.width;
+            this._lastWindowWidth = this._mainWindow.width;
             Logger.log(("RESIZED: " + this._habboFriendList.tabs._Str_4971));
         }
 
