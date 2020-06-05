@@ -438,7 +438,7 @@
 	import com.sulake.habbo.communication.messages.incoming.room.engine.ObjectAddMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.FurnitureAliasesMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine.HeightMapEvent;
-	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7291;
+	import com.sulake.habbo.communication.messages.incoming.room.engine.ItemDataUpdateMessageEvent;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7350;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7464;
 	import com.sulake.habbo.communication.messages.incoming.room.engine._Str_7527;
@@ -1164,7 +1164,7 @@
             INCOMING_PACKETS[2188] = ClubGiftNotificationEvent;
             INCOMING_PACKETS[219] = GuideSessionInvitedToGuideRoomEvent;
             INCOMING_PACKETS[2196] = _Str_5142;
-            INCOMING_PACKETS[2202] = _Str_7291;
+            INCOMING_PACKETS[2202] = ItemDataUpdateMessageEvent;
             INCOMING_PACKETS[2208] = RoomQueueStatusMessageEvent;
             INCOMING_PACKETS[2219] = _Str_4841;
             INCOMING_PACKETS[222] = GameListMessageEvent;
