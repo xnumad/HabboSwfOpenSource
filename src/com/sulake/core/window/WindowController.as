@@ -44,7 +44,7 @@
         public static const _IGNORE_INHERITED_STYLE:String = "_IGNORE_INHERITED_STYLE";
         private static const _POINT_ZERO:Point = new Point();
 
-        protected var _Str_759:WindowEventDispatcher;
+        protected var _events:WindowEventDispatcher;
         protected var _Str_2624:IGraphicContext;
         protected var _Str_6620:Function;
         protected var _Str_3781:Boolean = true;
@@ -716,15 +716,15 @@
                 {
                     this.parent = null;
                 }
-                if (this._Str_759)
+                if (this._events)
                 {
                     k = WindowDisposeEvent.allocate(this);
-                    this._Str_759.dispatchEvent(k);
+                    this._events.dispatchEvent(k);
                     k.recycle();
-                    if ((this._Str_759 is IDisposable))
+                    if ((this._events is IDisposable))
                     {
-                        IDisposable(this._Str_759).dispose();
-                        this._Str_759 = null;
+                        IDisposable(this._events).dispose();
+                        this._events = null;
                     }
                 }
                 if (this._Str_2624 != null)
@@ -1009,7 +1009,7 @@
                 {
                     if (this.hasEventListener(_arg_2.type))
                     {
-                        this._Str_759.dispatchEvent(_arg_2);
+                        this._events.dispatchEvent(_arg_2);
                         if (_disposed)
                         {
                             return true;
@@ -1364,7 +1364,7 @@
             {
                 if (this.hasEventListener(k.type))
                 {
-                    this._Str_759.dispatchEvent(k);
+                    this._events.dispatchEvent(k);
                 }
             }
         }
@@ -2264,24 +2264,24 @@
         {
             if (!_disposed)
             {
-                if (!this._Str_759)
+                if (!this._events)
                 {
-                    this._Str_759 = new WindowEventDispatcher(this);
+                    this._events = new WindowEventDispatcher(this);
                 }
-                this._Str_759.addEventListener(k, _arg_2, _arg_3);
+                this._events.addEventListener(k, _arg_2, _arg_3);
             }
         }
 
         public function hasEventListener(k:String):Boolean
         {
-            return ((_disposed) || (!(this._Str_759))) ? false : this._Str_759.hasEventListener(k);
+            return ((_disposed) || (!(this._events))) ? false : this._events.hasEventListener(k);
         }
 
         public function removeEventListener(k:String, _arg_2:Function):void
         {
-            if (((!(_disposed)) && (this._Str_759)))
+            if (((!(_disposed)) && (this._events)))
             {
-                this._Str_759.removeEventListener(k, _arg_2);
+                this._events.removeEventListener(k, _arg_2);
             }
         }
 
@@ -2769,9 +2769,9 @@
             }
             this.getRelativeMousePosition(_local_3);
             var _local_5:WindowEvent = WindowMouseEvent.allocate(WindowMouseEvent.CLICK, this, null, _local_3.x, _local_3.y, _local_2.stageX, _local_2.stageY, _local_2.altKey, _local_2.ctrlKey, _local_2.shiftKey, _local_2.buttonDown, _local_2.delta);
-            if (this._Str_759)
+            if (this._events)
             {
-                this._Str_759.dispatchEvent(_local_5);
+                this._events.dispatchEvent(_local_5);
             }
             if (!_local_5.isWindowOperationPrevented())
             {

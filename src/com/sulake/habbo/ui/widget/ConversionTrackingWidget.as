@@ -11,7 +11,7 @@
     public class ConversionTrackingWidget implements IRoomWidget 
     {
         private var _disposed:Boolean = false;
-        private var _Str_759:EventDispatcherWrapper;
+        private var _events:EventDispatcherWrapper;
         private var _messageListener:IRoomWidgetMessageListener;
         private var _windowManager:IHabboWindowManager;
         protected var _assets:IAssetLibrary;
@@ -48,16 +48,16 @@
             }
             this._messageListener = null;
             this._windowManager = null;
-            if (((!(this._Str_759 == null)) && (!(this._Str_759.disposed))))
+            if (((!(this._events == null)) && (!(this._events.disposed))))
             {
-                this.unregisterUpdateEvents(this._Str_759);
+                this.unregisterUpdateEvents(this._events);
             }
             if (this._Str_2470)
             {
                 this._Str_2470.dispose();
                 this._Str_2470 = null;
             }
-            this._Str_759 = null;
+            this._events = null;
             this._assets = null;
             this._Str_2499 = null;
             this._disposed = true;
@@ -92,7 +92,7 @@
         {
             if ((k is EventDispatcherWrapper))
             {
-                this._Str_759 = (k as EventDispatcherWrapper);
+                this._events = (k as EventDispatcherWrapper);
             }
         }
 

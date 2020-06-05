@@ -1277,10 +1277,10 @@
             }
             this._Str_4263 = false;
             _context.invalidate(this, null, WindowRedrawFlag.REDRAW);
-            if ((((!(_local_7)) && (!(k))) && (_Str_759)))
+            if ((((!(_local_7)) && (!(k))) && (_events)))
             {
                 _local_17 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_RESIZED, this, null);
-                _Str_759.dispatchEvent(_local_17);
+                _events.dispatchEvent(_local_17);
                 _local_17.recycle();
             }
         }

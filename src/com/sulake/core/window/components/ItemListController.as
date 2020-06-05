@@ -140,10 +140,10 @@
                 this._scrollOffsetH = k;
                 this._container.x = (-(this._scrollOffsetH) * this.maxScrollH);
                 _context.invalidate(this._container, this.visibleRegion, WindowRedrawFlag.REDRAW);
-                if (_Str_759)
+                if (_events)
                 {
                     _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_SCROLL, this, null);
-                    _Str_759.dispatchEvent(_local_2);
+                    _events.dispatchEvent(_local_2);
                     _local_2.recycle();
                 }
             }
@@ -164,10 +164,10 @@
             {
                 this._scrollOffsetV = k;
                 this._container.y = (-(this._scrollOffsetV) * this.maxScrollV);
-                if (_Str_759)
+                if (_events)
                 {
                     _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_SCROLL, this, null);
-                    _Str_759.dispatchEvent(_local_2);
+                    _events.dispatchEvent(_local_2);
                     _local_2.recycle();
                 }
             }
@@ -551,10 +551,10 @@
                     this.updateScrollAreaRegion();
                     return;
                 case WindowEvent.WINDOW_EVENT_RESIZED:
-                    if (_Str_759)
+                    if (_events)
                     {
                         _local_2 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_RESIZED, this, null);
-                        _Str_759.dispatchEvent(_local_2);
+                        _events.dispatchEvent(_local_2);
                         _local_2.recycle();
                     }
                     return;

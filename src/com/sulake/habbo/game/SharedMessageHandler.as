@@ -9,21 +9,21 @@
     public class SharedMessageHandler 
     {
         private var _habboGameManager:HabboGameManager;
-        private var _Str_759:EventDispatcher;
+        private var _events:EventDispatcher;
         private var _Str_16707:int = -1;
         private var _Str_580:Boolean;
 
         public function SharedMessageHandler(k:HabboGameManager, _arg_2:EventDispatcher)
         {
             this._habboGameManager = k;
-            this._Str_759 = _arg_2;
-            this._Str_759.addEventListener(SharedGameEvent.EVENT_TYPE_TO_HABBO, this._Str_19772);
+            this._events = _arg_2;
+            this._events.addEventListener(SharedGameEvent.EVENT_TYPE_TO_HABBO, this._Str_19772);
         }
 
         public function dispose():void
         {
-            this._Str_759.removeEventListener(SharedGameEvent.EVENT_TYPE_TO_HABBO, this._Str_19772);
-            this._Str_759 = null;
+            this._events.removeEventListener(SharedGameEvent.EVENT_TYPE_TO_HABBO, this._Str_19772);
+            this._events = null;
             this._habboGameManager = null;
             this._Str_580 = true;
         }
@@ -35,7 +35,7 @@
 
         public function send(k:int, _arg_2:String, _arg_3:*=null):Boolean
         {
-            this._Str_759.dispatchEvent(new SharedGameEvent(SharedGameEvent.EVENT_TYPE_TO_GAME, k, _arg_2, _arg_3));
+            this._events.dispatchEvent(new SharedGameEvent(SharedGameEvent.EVENT_TYPE_TO_GAME, k, _arg_2, _arg_3));
             return true;
         }
 

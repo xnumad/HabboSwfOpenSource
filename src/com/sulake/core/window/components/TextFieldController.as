@@ -400,10 +400,10 @@
                     _Str_2309.height = height;
                 }
             }
-            if ((((!(_local_2)) && (!(k))) && (_Str_759)))
+            if ((((!(_local_2)) && (!(k))) && (_events)))
             {
                 _local_3 = WindowEvent.allocate(WindowEvent.WINDOW_EVENT_RESIZED, this, null);
-                _Str_759.dispatchEvent(_local_3);
+                _events.dispatchEvent(_local_3);
                 _local_3.recycle();
             }
         }

@@ -228,9 +228,9 @@
             if ((k is TextEvent))
             {
                 _local_2 = (WindowLinkEvent.allocate(TextEvent(k).text, this, null) as WindowLinkEvent);
-                if (_Str_759)
+                if (_events)
                 {
-                    _Str_759.dispatchEvent(_local_2);
+                    _events.dispatchEvent(_local_2);
                 }
                 _local_3 = false;
                 for each (_local_4 in _context.linkEventTrackers)
