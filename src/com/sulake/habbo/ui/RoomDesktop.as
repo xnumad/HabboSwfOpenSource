@@ -1524,7 +1524,7 @@
             _local_5.graphics.endFill();
         }
 
-        public function _Str_18812(k:int, _arg_2:int, _arg_3:int):void
+        public function setRoomBackgroundColor(k:int, _arg_2:int, _arg_3:int):void
         {
             this._roomBackgroundColor = ColorConverter.hslToRGB(((((k & 0xFF) << 16) + ((_arg_2 & 0xFF) << 8)) + (_arg_3 & 0xFF)));
             var _local_4:IWindowContainer = (this._layoutManager._Str_19928() as IWindowContainer);

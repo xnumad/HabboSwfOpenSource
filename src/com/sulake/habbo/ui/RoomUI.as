@@ -1034,11 +1034,11 @@
                     _local_7 = RoomObjectHSLColorEnabledEvent(k);
                     if (!_local_7.enable)
                     {
-                        _local_3._Str_18812(0, 0, 0);
+                        _local_3.setRoomBackgroundColor(0, 0, 0);
                     }
                     else
                     {
-                        _local_3._Str_18812(_local_7.hue, _local_7.saturation, _local_7.lightness);
+                        _local_3.setRoomBackgroundColor(_local_7.hue, _local_7.saturation, _local_7.lightness);
                     }
                     return;
             }

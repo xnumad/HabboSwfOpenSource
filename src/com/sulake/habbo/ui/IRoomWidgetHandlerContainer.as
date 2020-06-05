@@ -74,6 +74,6 @@
         function isOwnerOfFurniture(_arg_1:IRoomObject):Boolean;
         function getFurnitureOwnerId(_arg_1:IRoomObject):int;
         function _Str_25220(_arg_1:RoomUserData):Boolean;
-        function _Str_18812(_arg_1:int, _arg_2:int, _arg_3:int):void;
+        function setRoomBackgroundColor(_arg_1:int, _arg_2:int, _arg_3:int):void;
     }
 }
