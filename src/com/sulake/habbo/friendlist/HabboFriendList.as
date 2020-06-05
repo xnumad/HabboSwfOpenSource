@@ -319,11 +319,11 @@
             }
         }
 
-        public function _Str_18944(k:Point):void
+        public function alignBottomLeftTo(k:Point):void
         {
             if (this._view)
             {
-                this._view._Str_18944(k);
+                this._view.alignBottomLeftTo(k);
             }
         }
 

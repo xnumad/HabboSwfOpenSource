@@ -195,7 +195,7 @@
             return this._mainWindow;
         }
 
-        public function _Str_18944(k:Point):void
+        public function alignBottomLeftTo(k:Point):void
         {
             var _local_2:Point = k.clone();
             _local_2.y = (_local_2.y - this._mainWindow.height);

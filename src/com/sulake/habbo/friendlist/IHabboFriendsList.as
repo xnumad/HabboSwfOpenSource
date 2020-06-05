@@ -16,7 +16,7 @@
         function _Str_19682():void;
         function _Str_22200():void;
         function close():void;
-        function _Str_18944(_arg_1:Point):void;
+        function alignBottomLeftTo(_arg_1:Point):void;
         function isOpen():Boolean;
         function _Str_19440():int;
         function _Str_5401(_arg_1:Boolean, _arg_2:Boolean):int;
