@@ -2064,7 +2064,7 @@
             _local_5.showGamePlayerName(k, _arg_2, _arg_3, _arg_4);
         }
 
-        public function get _Str_6642():DesktopLayoutManager
+        public function get layoutManager():DesktopLayoutManager
         {
             return this._layoutManager;
         }

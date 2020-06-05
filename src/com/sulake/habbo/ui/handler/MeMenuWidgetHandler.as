@@ -400,9 +400,9 @@
                         this._container.freeFlowChat.isDisabledInPreferences = RoomWidgetStoreSettingsMessage(k)._Str_12967;
                         if (!RoomWidgetStoreSettingsMessage(k)._Str_12967)
                         {
-                            if (((this._container._Str_6642) && (this._container._Str_6642.getChatContainer())))
+                            if (((this._container.layoutManager) && (this._container.layoutManager.getChatContainer())))
                             {
-                                this._container._Str_6642.getChatContainer().setDisplayObject(this._container.freeFlowChat.displayObject);
+                                this._container.layoutManager.getChatContainer().setDisplayObject(this._container.freeFlowChat.displayObject);
                             }
                         }
                         else
