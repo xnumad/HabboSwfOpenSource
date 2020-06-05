@@ -162,7 +162,7 @@
 
     public class RoomDesktop implements IRoomDesktop, IRoomWidgetMessageListener, IRoomWidgetHandlerContainer 
     {
-        public static const _Str_8876:int = -1;
+        public static const STATE_UNDEFINED:int = -1;
         private static const _Str_17829:int = 1000;
         private static const _Str_19484:int = 1000;
 
@@ -1987,7 +1987,7 @@
             if (_local_2 == null)
             {
                 Logger.log(("Requested the state of an unknown widget " + k));
-                return _Str_8876;
+                return STATE_UNDEFINED;
             }
             return _local_2.state;
         }

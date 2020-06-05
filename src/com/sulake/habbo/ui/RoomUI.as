@@ -158,7 +158,7 @@
 
         public function RoomUI(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
         {
-            this._userChooserState = RoomDesktop._Str_8876;
+            this._userChooserState = RoomDesktop.STATE_UNDEFINED;
             super(k, _arg_2, _arg_3);
             this._roomWidgetFactory = new RoomWidgetFactory(this);
             this._desktops = new Map();
@@ -975,7 +975,7 @@
                     _local_3.createWidget(RoomWidgetEnum.CUSTOM_USER_NOTIFICATION);
                     _local_3.createWidget(RoomWidgetEnum.FURNI_CHOOSER);
                     _local_3.createWidget(RoomWidgetEnum.USER_CHOOSER);
-                    if (this._userChooserState != RoomDesktop._Str_8876)
+                    if (this._userChooserState != RoomDesktop.STATE_UNDEFINED)
                     {
                         _local_3.initializeWidget(RoomWidgetEnum.USER_CHOOSER, this._userChooserState);
                     }
@@ -1142,7 +1142,7 @@
             if (_local_2 != null)
             {
                 _local_3 = _local_2.getWidgetState(RoomWidgetEnum.USER_CHOOSER);
-                if (_local_3 != RoomDesktop._Str_8876)
+                if (_local_3 != RoomDesktop.STATE_UNDEFINED)
                 {
                     this._userChooserState = _local_3;
                 }
