@@ -1309,7 +1309,7 @@
             this._Str_20599(this, this._currentDynamicStyle, k);
             if (this._children)
             {
-                this._Str_21070(this._children, k);
+                this.recursivelyUpdateChildrensDynamicStyles(this._children, k);
             }
         }
 
@@ -1341,7 +1341,7 @@
             }
         }
 
-        private function _Str_21070(k:Vector.<IWindow>, _arg_2:uint):void
+        private function recursivelyUpdateChildrensDynamicStyles(k:Vector.<IWindow>, _arg_2:uint):void
         {
             var _local_3:WindowController;
             for each (_local_3 in k)
@@ -1352,7 +1352,7 @@
                 }
                 if (_local_3._children)
                 {
-                    this._Str_21070(_local_3._children, _arg_2);
+                    this.recursivelyUpdateChildrensDynamicStyles(_local_3._children, _arg_2);
                 }
             }
         }
