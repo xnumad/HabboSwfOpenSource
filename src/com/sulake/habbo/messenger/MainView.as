@@ -668,7 +668,7 @@
             this._populatingList = false;
         }
 
-        private function _Str_25362():void
+        private function addMissingChatEntries():void
         {
             if (-(this._conversationList.scrollableRegion.y) > SCROLL_TRIGGER_HEIGHT)
             {
@@ -772,7 +772,7 @@
                 case WindowEvent.WINDOW_EVENT_RELOCATED:
                     if (((_arg_2.name == "_CONTAINER") && (!(this._populatingList))))
                     {
-                        this._Str_25362();
+                        this.addMissingChatEntries();
                     }
                     return;
                 case WindowMouseEvent.CLICK:
