@@ -66,7 +66,7 @@
                 return;
             }
             var k:int = ((((_Str_3510) ? -(_window.width) : 0) + _widget.getRoomToolbarRight()) + MARGIN);
-            var _local_2:int = ((_window.desktop.height - _Str_15557) - _window.height);
+            var _local_2:int = ((_window.desktop.height - DISTANCE_FROM_BOTTOM) - _window.height);
             var _local_3:int = _widget.getChatInputY();
             if (_local_3 < (_local_2 + _window.height))
             {

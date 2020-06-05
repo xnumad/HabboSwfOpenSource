@@ -161,7 +161,7 @@
                 window.height = (_local_3.height = (window.findChildByName("window_bg").height = _local_5));
                 _local_2.y = ((_local_5 * 0.5) - (_local_2.height * 0.5));
             }
-            window.position = new Point(_Str_10400, ((window.desktop.height - _Str_15557) - window.height));
+            window.position = new Point(_Str_10400, ((window.desktop.height - DISTANCE_FROM_BOTTOM) - window.height));
             if (this._roomToolsHistory)
             {
                 this._roomToolsHistory.window.position = new Point((this.right - this._roomToolsHistory.window.width), (window.position.y - this._roomToolsHistory.window.height));
