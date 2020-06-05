@@ -22,7 +22,7 @@
     {
         private var _disposed:Boolean = false;
         private var _container:IRoomWidgetHandlerContainer = null;
-        private var _Str_2432:Array;
+        private var _messageEvents:Array;
 
 
         public function get disposed():Boolean
@@ -58,10 +58,10 @@
             {
                 return;
             }
-            this._Str_2432 = [];
-            this._Str_2432.push(new _Str_8288(this._Str_23237));
-            this._Str_2432.push(new _Str_8246(this._Str_17386));
-            for each (k in this._Str_2432)
+            this._messageEvents = [];
+            this._messageEvents.push(new _Str_8288(this._Str_23237));
+            this._messageEvents.push(new _Str_8246(this._Str_17386));
+            for each (k in this._messageEvents)
             {
                 this._container.connection.addMessageEvent(k);
             }
@@ -70,16 +70,16 @@
         private function _Str_15944():void
         {
             var k:IMessageEvent;
-            if ((((!(this._container)) || (!(this._container.connection))) || (!(this._Str_2432))))
+            if ((((!(this._container)) || (!(this._container.connection))) || (!(this._messageEvents))))
             {
                 return;
             }
-            for each (k in this._Str_2432)
+            for each (k in this._messageEvents)
             {
                 this._container.connection.removeMessageEvent(k);
                 k.dispose();
             }
-            this._Str_2432 = null;
+            this._messageEvents = null;
         }
 
         private function _Str_23237(k:_Str_8288):void

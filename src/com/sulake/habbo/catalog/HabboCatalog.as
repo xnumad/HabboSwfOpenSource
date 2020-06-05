@@ -319,7 +319,7 @@
         private var _pageId:int;
         private var _roomAdPurchaseData:RoomAdPurchaseData;
         private var _rentConfirmationWindow:RentConfirmationWindow;
-        private var _Str_2432:Vector.<IMessageEvent>;
+        private var _messageEvents:Vector.<IMessageEvent>;
         private var _catalogType:String = "NORMAL";
         private var _Str_2509:Vector.<IFurnitureData>;
         private var _Str_8752:Vector.<_Str_3920>;
@@ -546,7 +546,7 @@
 
         override protected function initComponent():void
         {
-            this._Str_2432 = new Vector.<IMessageEvent>(0);
+            this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new ApproveNameMessageEvent(this._Str_11705));
             this.addMessageEvent(new _Str_7677(this._Str_16050));
             this.addMessageEvent(new HabboActivityPointNotificationMessageEvent(this.onActivityPointNotification));
@@ -596,7 +596,7 @@
 
         private function addMessageEvent(k:IMessageEvent):void
         {
-            this._Str_2432.push(this._communicationManager.addHabboConnectionMessageEvent(k));
+            this._messageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(k));
         }
 
         override public function dispose():void
@@ -607,9 +607,9 @@
                 return;
             }
             removeUpdateReceiver(this);
-            if (((!(this._Str_2432 == null)) && (!(this._communicationManager == null))))
+            if (((!(this._messageEvents == null)) && (!(this._communicationManager == null))))
             {
-                for each (k in this._Str_2432)
+                for each (k in this._messageEvents)
                 {
                     this._communicationManager.removeHabboConnectionMessageEvent(k);
                 }

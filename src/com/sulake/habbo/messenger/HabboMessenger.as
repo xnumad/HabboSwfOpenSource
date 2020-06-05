@@ -55,7 +55,7 @@
         private var _sessionDataManager:ISessionDataManager;
         private var _help:IHabboHelp;
         private var _mainView:MainView;
-        private var _Str_2432:Vector.<IMessageEvent>;
+        private var _messageEvents:Vector.<IMessageEvent>;
         private var _Str_9090:Boolean = false;
 
         public function HabboMessenger(k:IContext, _arg_2:uint=0, _arg_3:IAssetLibrary=null)
@@ -94,7 +94,7 @@
 
         override protected function initComponent():void
         {
-            this._Str_2432 = new Vector.<IMessageEvent>(0);
+            this._messageEvents = new Vector.<IMessageEvent>(0);
             this.addMessageEvent(new _Str_5567(this._Str_19006));
             this.addMessageEvent(new AccountPreferencesEvent(this.onAccountPreferences));
             if (getBoolean("client.minimail.embed.enabled"))
@@ -106,7 +106,7 @@
 
         private function addMessageEvent(k:IMessageEvent):void
         {
-            this._Str_2432.push(this._communicationManager.addHabboConnectionMessageEvent(k));
+            this._messageEvents.push(this._communicationManager.addHabboConnectionMessageEvent(k));
         }
 
         override public function dispose():void
@@ -116,9 +116,9 @@
             {
                 return;
             }
-            if (((!(this._Str_2432 == null)) && (!(this._communicationManager == null))))
+            if (((!(this._messageEvents == null)) && (!(this._communicationManager == null))))
             {
-                for each (k in this._Str_2432)
+                for each (k in this._messageEvents)
                 {
                     this._communicationManager.removeHabboConnectionMessageEvent(k);
                 }
