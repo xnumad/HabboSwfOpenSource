@@ -144,7 +144,7 @@
             this._changeNameCb = null;
         }
 
-        public function _Str_17211():void
+        public function onRoomChange():void
         {
             this._Str_20264("send_caution_but");
             this._Str_20264("send_message_but");
@@ -214,7 +214,7 @@
                 this._kickCb.disable();
             }
             this._frame.findChildByName("owner_name_txt").procedure = this.onOwnerName;
-            this._Str_17211();
+            this.onRoomChange();
         }
 
         private function _Str_20408(k:IItemListWindow, _arg_2:IWindow):void

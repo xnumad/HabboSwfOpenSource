@@ -300,7 +300,7 @@
             this._moderationManager.startPanel._Str_25175(_local_2);
             for each (_local_3 in this._roomEnterListeners)
             {
-                _local_3._Str_17211();
+                _local_3.onRoomChange();
             }
         }
 
@@ -311,7 +311,7 @@
             this._moderationManager.startPanel._Str_25510();
             for each (_local_2 in this._roomEnterListeners)
             {
-                _local_2._Str_17211();
+                _local_2.onRoomChange();
             }
         }
 
