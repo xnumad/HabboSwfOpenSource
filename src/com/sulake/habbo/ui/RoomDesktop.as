@@ -235,7 +235,7 @@
             this._widgetHandlerMessageMap = new Map();
             this._widgetHandlerEventMap = new Map();
             this._layoutManager = new DesktopLayoutManager();
-            this._Str_16862();
+            this.checkInterrupts();
         }
 
         public function set visible(k:Boolean):void
@@ -409,7 +409,7 @@
         public function set roomSessionManager(k:IRoomSessionManager):void
         {
             this._roomSessionManager = k;
-            this._Str_16862();
+            this.checkInterrupts();
         }
 
         public function set communicationManager(k:IHabboCommunicationManager):void
@@ -717,7 +717,7 @@
             if (this._pendingResources.length == 0)
             {
                 this._loadingComplete = true;
-                this._Str_16862();
+                this.checkInterrupts();
             }
         }
 
@@ -1828,7 +1828,7 @@
             return new DisplacementMapFilter(_local_3, _local_4, _local_6, _local_7, _local_8, _local_9, _local_10, _local_11, _local_12);
         }
 
-        private function _Str_16862():Boolean
+        private function checkInterrupts():Boolean
         {
             if ((((!(this._roomSessionManager == null)) && (!(this._session == null))) && (this._loadingComplete)))
             {
