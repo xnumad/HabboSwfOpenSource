@@ -188,11 +188,11 @@
             {
                 return;
             }
-            this._Str_4128.viewMode = ViewMode._Str_20005(k._Str_4569);
+            this._Str_4128.viewMode = ViewMode._Str_20005(k.searchCodeOriginal);
             this._Str_3208._Str_22947();
-            if (this._habboNewNavigator._Str_7014._Str_23059(k._Str_4569))
+            if (this._habboNewNavigator._Str_7014._Str_23059(k.searchCodeOriginal))
             {
-                _local_3 = this._habboNewNavigator._Str_7014._Str_9965().indexOf(k._Str_4569);
+                _local_3 = this._habboNewNavigator._Str_7014._Str_9965().indexOf(k.searchCodeOriginal);
                 if (_local_3 != -1)
                 {
                     this._Str_4000._Str_12925(_local_3);
@@ -201,7 +201,7 @@
             this._window.findChildByName("create_room").procedure = this._Str_25038;
             this._window.findChildByName("random_room_border").visible = false;
             this._window.findChildByName("promote_room_border").visible = false;
-            if (((k._Str_4569 == ViewMode.ROOMADS_VIEW) || (k._Str_4569 == ViewMode.MYWORLD_VIEW)))
+            if (((k.searchCodeOriginal == ViewMode.ROOMADS_VIEW) || (k.searchCodeOriginal == ViewMode.MYWORLD_VIEW)))
             {
                 this._window.findChildByName("promote_room_border").visible = true;
                 this._window.findChildByName("promote_room").procedure = this._Str_23064;

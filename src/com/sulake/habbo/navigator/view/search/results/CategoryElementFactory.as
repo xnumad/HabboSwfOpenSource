@@ -69,7 +69,7 @@
             container.findChildByName("category_add_quick_link").addEventListener(WindowMouseEvent.CLICK, this._blockResultsView._Str_21650);
             container.findChildByName("category_content_background").background = true;
             container.findChildByName("category_content_background").height = (12 + (this._roomEntryElementFactory._Str_19124 * (guestRooms.length + 1)));
-            container.findChildByName("category_add_quick_link").visible = (this._navigator._Str_3440._Str_4569.indexOf(ViewMode.OFFICIAL_VIEW) == -1);
+            container.findChildByName("category_add_quick_link").visible = (this._navigator._Str_3440.searchCodeOriginal.indexOf(ViewMode.OFFICIAL_VIEW) == -1);
             var headerControls:IItemListWindow = IItemListWindow(container.findChildByName("category_controls_itemlist"));
             if (this._navigator.sessionData.isPerkAllowed(PerkEnum.NAVIGATOR_ROOM_THUMBNAIL_CAMERA))
             {
@@ -139,7 +139,7 @@
             _local_4.findChildByName("category_name_region").id = _arg_2;
             _local_4.findChildByName("category_add_quick_link").addEventListener(WindowMouseEvent.CLICK, this._blockResultsView._Str_21650);
             _local_4.findChildByName("category_add_quick_link").id = _arg_2;
-            _local_4.findChildByName("category_add_quick_link").visible = (this._navigator._Str_3440._Str_4569.indexOf(ViewMode.OFFICIAL_VIEW) == -1);
+            _local_4.findChildByName("category_add_quick_link").visible = (this._navigator._Str_3440.searchCodeOriginal.indexOf(ViewMode.OFFICIAL_VIEW) == -1);
             _local_4.width = (this._blockResultsView._Str_20093 - _Str_14513);
             IItemListWindow(_local_4.findChildByName("category_controls_itemlist")).arrangeListItems();
             return _local_4;

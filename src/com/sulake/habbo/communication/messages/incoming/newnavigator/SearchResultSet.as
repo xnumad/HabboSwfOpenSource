@@ -37,7 +37,7 @@
             }
         }
 
-        public function get _Str_4569():String
+        public function get searchCodeOriginal():String
         {
             return this._searchCodeOriginal;
         }

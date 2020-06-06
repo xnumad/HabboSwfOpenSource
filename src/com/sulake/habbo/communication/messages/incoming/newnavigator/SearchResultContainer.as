@@ -10,12 +10,12 @@
 
         public function SearchResultContainer(k:SearchResultSet)
         {
-            this._searchCodeOriginal = k._Str_4569;
+            this._searchCodeOriginal = k.searchCodeOriginal;
             this._filteringData = k._Str_5610;
             this._resultSet = k;
         }
 
-        public function get _Str_4569():String
+        public function get searchCodeOriginal():String
         {
             return this._searchCodeOriginal;
         }

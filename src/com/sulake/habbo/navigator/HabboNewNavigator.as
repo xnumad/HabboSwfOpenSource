@@ -227,9 +227,9 @@
             this.extractRoomNamesFromResults(k._Str_11413);
             if (!this._noPushToHistoryDueToNavigation)
             {
-                this._searchContextHistoryManager._Str_23951(new SearchContext(k._Str_4569, k._Str_5610));
+                this._searchContextHistoryManager._Str_23951(new SearchContext(k.searchCodeOriginal, k._Str_5610));
             }
-            this._navigatorCache._Str_22588(((k._Str_4569 + "/") + k._Str_5610), k);
+            this._navigatorCache._Str_22588(((k.searchCodeOriginal + "/") + k._Str_5610), k);
             this._noPushToHistoryDueToNavigation = false;
             if (this._navigatorView.visible)
             {
