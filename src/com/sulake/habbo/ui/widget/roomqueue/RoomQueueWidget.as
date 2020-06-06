@@ -46,8 +46,8 @@
             {
                 return;
             }
-            k.addEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this._Str_15479);
-            k.addEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this._Str_15479);
+            k.addEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
+            k.addEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
             super.registerUpdateEvents(k);
         }
 
@@ -57,8 +57,8 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this._Str_15479);
-            k.removeEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this._Str_15479);
+            k.removeEventListener(_Str_3879.RWRQUE_VISITOR_QUEUE_STATUS, this.onQueueStatus);
+            k.removeEventListener(_Str_3879.RWRQUE_SPECTATOR_QUEUE_STATUS, this.onQueueStatus);
         }
 
         private function removeWindow():void
@@ -70,7 +70,7 @@
             }
         }
 
-        private function _Str_15479(k:_Str_3879):void
+        private function onQueueStatus(k:_Str_3879):void
         {
             if (k == null)
             {
