@@ -8,7 +8,7 @@
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.ui.widget.events._Str_3072;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
-    import com.sulake.habbo.ui.widget.events._Str_2490;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPresentDataUpdateEvent;
     import flash.events.IEventDispatcher;
     import flash.display.BitmapData;
     import com.sulake.core.window.components.IBitmapWrapperWindow;
@@ -61,7 +61,7 @@
             k.addEventListener(_Str_3072.RWEBDUE_PACKAGEINFO, this.onObjectUpdate);
             k.addEventListener(_Str_3072.RWEBDUE_CONTENTS, this.onObjectUpdate);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this._Str_4159);
-            k.addEventListener(_Str_2490.RWPDUE_PACKAGEINFO, this._Str_20683);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO, this._Str_20683);
             super.registerUpdateEvents(k);
         }
 
@@ -73,7 +73,7 @@
             }
             k.removeEventListener(_Str_3072.RWEBDUE_PACKAGEINFO, this.onObjectUpdate);
             k.removeEventListener(_Str_3072.RWEBDUE_CONTENTS, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_PACKAGEINFO, this._Str_20683);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO, this._Str_20683);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this._Str_4159);
         }
 
@@ -112,11 +112,11 @@
             }
         }
 
-        private function _Str_20683(k:_Str_2490):void
+        private function _Str_20683(k:RoomWidgetPresentDataUpdateEvent):void
         {
             switch (k.type)
             {
-                case _Str_2490.RWPDUE_PACKAGEINFO:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO:
                     this._Str_2718();
                     return;
             }

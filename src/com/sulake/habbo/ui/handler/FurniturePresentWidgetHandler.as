@@ -9,7 +9,7 @@
     import com.sulake.room.object.IRoomObject;
     import com.sulake.room.object.IRoomObjectModel;
     import com.sulake.habbo.room.ImageResult;
-    import com.sulake.habbo.ui.widget.events._Str_2490;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPresentDataUpdateEvent;
     import com.sulake.habbo.room.object.RoomObjectVariableEnum;
     import com.sulake.room.utils.Vector3d;
     import com.sulake.habbo.room.object.RoomObjectCategoryEnum;
@@ -81,7 +81,7 @@
             var _local_10:String;
             var _local_11:int;
             var _local_12:ImageResult;
-            var _local_13:_Str_2490;
+            var _local_13:RoomWidgetPresentDataUpdateEvent;
             switch (k.type)
             {
                 case RoomWidgetFurniToWidgetMessage.RWFWM_MESSAGE_REQUEST_PRESENT:
@@ -104,7 +104,7 @@
                             _local_10 = _local_5.getString(RoomObjectVariableEnum.FURNITURE_EXTRAS);
                             _local_11 = 32;
                             _local_12 = this._container.roomEngine.getFurnitureImage(_local_9, new Vector3d(180), _local_11, null, 0, _local_10);
-                            _local_13 = new _Str_2490(_Str_2490.RWPDUE_PACKAGEINFO, _local_2.id, _local_6, this._container.isOwnerOfFurniture(_local_3), _local_12.data, _local_7, _local_8);
+                            _local_13 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO, _local_2.id, _local_6, this._container.isOwnerOfFurniture(_local_3), _local_12.data, _local_7, _local_8);
                             this._container.events.dispatchEvent(_local_13);
                         }
                     }
@@ -137,7 +137,7 @@
             {
                 return;
             }
-            var _local_3:_Str_2490 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_IMAGE, 0, this._name, false, _arg_2);
+            var _local_3:RoomWidgetPresentDataUpdateEvent = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_IMAGE, 0, this._name, false, _arg_2);
             this._container.events.dispatchEvent(_local_3);
         }
 
@@ -155,7 +155,7 @@
             var _local_2:RoomSessionPresentEvent;
             var _local_3:IFurnitureData;
             var _local_4:ImageResult;
-            var _local_5:_Str_2490;
+            var _local_5:RoomWidgetPresentDataUpdateEvent;
             var _local_6:Boolean;
             var _local_7:IProductData;
             var _local_8:IRoomObject;
@@ -209,13 +209,13 @@
                                         switch (_local_3.className)
                                         {
                                             case FLOOR:
-                                                _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_FLOOR, 0, this._container.localization.getLocalization("inventory.furni.item.floor.name"), _local_6, null);
+                                                _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_FLOOR, 0, this._container.localization.getLocalization("inventory.furni.item.floor.name"), _local_6, null);
                                                 break;
                                             case LANDSCAPE:
-                                                _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_LANDSCAPE, 0, this._container.localization.getLocalization("inventory.furni.item.landscape.name"), _local_6, null);
+                                                _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_LANDSCAPE, 0, this._container.localization.getLocalization("inventory.furni.item.landscape.name"), _local_6, null);
                                                 break;
                                             case WALLPAPER:
-                                                _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_WALLPAPER, 0, this._container.localization.getLocalization("inventory.furni.item.wallpaper.name"), _local_6, null);
+                                                _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_WALLPAPER, 0, this._container.localization.getLocalization("inventory.furni.item.wallpaper.name"), _local_6, null);
                                                 break;
                                             case POSTER:
                                                 _local_9 = _local_2.productCode;
@@ -240,7 +240,7 @@
                                                 }
                                                 if (_local_4 != null)
                                                 {
-                                                    _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
+                                                    _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
                                                 }
                                                 break;
                                             default:
@@ -251,13 +251,13 @@
                                                 }
                                                 if (_local_4 != null)
                                                 {
-                                                    _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
+                                                    _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
                                                 }
                                         }
                                     }
                                     break;
                                 case ProductTypeEnum.HABBO_CLUB:
-                                    _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS_CLUB, 0, this._container.localization.getLocalization("widget.furni.present.hc"), false, null);
+                                    _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_CLUB, 0, this._container.localization.getLocalization("widget.furni.present.hc"), false, null);
                                     break;
                                 default:
                                     if (_local_2.placedItemType == ProductTypeEnum.PET)
@@ -297,7 +297,7 @@
                                     }
                                     if (_local_4 != null)
                                     {
-                                        _local_5 = new _Str_2490(_Str_2490.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
+                                        _local_5 = new RoomWidgetPresentDataUpdateEvent(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS, 0, this._name, _local_6, _local_4.data);
                                     }
                             }
                             if (_local_5 != null)

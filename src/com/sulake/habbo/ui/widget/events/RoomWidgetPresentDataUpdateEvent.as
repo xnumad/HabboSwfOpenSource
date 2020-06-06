@@ -2,7 +2,7 @@
 {
     import flash.display.BitmapData;
 
-    public class _Str_2490 extends RoomWidgetUpdateEvent 
+    public class RoomWidgetPresentDataUpdateEvent extends RoomWidgetUpdateEvent
     {
         public static const RWPDUE_PACKAGEINFO:String = "RWPDUE_PACKAGEINFO";
         public static const RWPDUE_CONTENTS:String = "RWPDUE_CONTENTS";
@@ -24,7 +24,7 @@
         private var _Str_3970:String = "";
         private var _Str_3224:Boolean;
 
-        public function _Str_2490(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean=false, _arg_5:BitmapData=null, _arg_6:String=null, _arg_7:String=null, _arg_8:Boolean=false, _arg_9:Boolean=false)
+        public function RoomWidgetPresentDataUpdateEvent(k:String, _arg_2:int, _arg_3:String, _arg_4:Boolean=false, _arg_5:BitmapData=null, _arg_6:String=null, _arg_7:String=null, _arg_8:Boolean=false, _arg_9:Boolean=false)
         {
             super(k, _arg_8, _arg_9);
             this._objectId = _arg_2;

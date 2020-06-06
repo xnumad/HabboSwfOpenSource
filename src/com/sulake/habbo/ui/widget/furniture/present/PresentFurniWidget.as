@@ -11,7 +11,7 @@
     import com.sulake.habbo.window.IHabboWindowManager;
     import com.sulake.core.assets.IAssetLibrary;
     import com.sulake.habbo.localization.IHabboLocalizationManager;
-    import com.sulake.habbo.ui.widget.events._Str_2490;
+    import com.sulake.habbo.ui.widget.events.RoomWidgetPresentDataUpdateEvent;
     import com.sulake.habbo.ui.widget.events.RoomWidgetRoomObjectUpdateEvent;
     import com.sulake.habbo.ui.widget.events._Str_3072;
     import flash.events.IEventDispatcher;
@@ -96,13 +96,13 @@
             {
                 return;
             }
-            k.addEventListener(_Str_2490.RWPDUE_PACKAGEINFO, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS_IMAGE, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS_CLUB, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS_FLOOR, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS_LANDSCAPE, this.onObjectUpdate);
-            k.addEventListener(_Str_2490.RWPDUE_CONTENTS_WALLPAPER, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_IMAGE, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_CLUB, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_FLOOR, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_LANDSCAPE, this.onObjectUpdate);
+            k.addEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_WALLPAPER, this.onObjectUpdate);
             k.addEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this._Str_4159);
             k.addEventListener(_Str_3072.RWEBDUE_PACKAGEINFO, this._Str_21234);
             super.registerUpdateEvents(k);
@@ -114,22 +114,22 @@
             {
                 return;
             }
-            k.removeEventListener(_Str_2490.RWPDUE_PACKAGEINFO, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS_IMAGE, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS_CLUB, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS_FLOOR, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS_LANDSCAPE, this.onObjectUpdate);
-            k.removeEventListener(_Str_2490.RWPDUE_CONTENTS_WALLPAPER, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_IMAGE, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_CLUB, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_FLOOR, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_LANDSCAPE, this.onObjectUpdate);
+            k.removeEventListener(RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_WALLPAPER, this.onObjectUpdate);
             k.removeEventListener(_Str_3072.RWEBDUE_PACKAGEINFO, this._Str_21234);
             k.removeEventListener(RoomWidgetRoomObjectUpdateEvent.FURNI_REMOVED, this._Str_4159);
         }
 
-        private function onObjectUpdate(k:_Str_2490):void
+        private function onObjectUpdate(k:RoomWidgetPresentDataUpdateEvent):void
         {
             switch (k.type)
             {
-                case _Str_2490.RWPDUE_PACKAGEINFO:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_PACKAGEINFO:
                     this._Str_2718();
                     this._openRequested = false;
                     this._objectId = k.objectId;
@@ -140,7 +140,7 @@
                     this._Str_3030();
                     this._Str_9278(k._Str_11625);
                     return;
-                case _Str_2490.RWPDUE_CONTENTS_FLOOR:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_FLOOR:
                     if (!this._openRequested)
                     {
                         return;
@@ -156,7 +156,7 @@
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_floor");
                     return;
-                case _Str_2490.RWPDUE_CONTENTS_LANDSCAPE:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_LANDSCAPE:
                     if (!this._openRequested)
                     {
                         return;
@@ -172,7 +172,7 @@
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_landscape");
                     return;
-                case _Str_2490.RWPDUE_CONTENTS_WALLPAPER:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_WALLPAPER:
                     if (!this._openRequested)
                     {
                         return;
@@ -188,7 +188,7 @@
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_wallpaper");
                     return;
-                case _Str_2490.RWPDUE_CONTENTS_CLUB:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_CLUB:
                     if (!this._openRequested)
                     {
                         return;
@@ -201,7 +201,7 @@
                     this._Str_10146();
                     this._Str_12806("packagecard_icon_hc");
                     return;
-                case _Str_2490.RWPDUE_CONTENTS:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS:
                     if (!this._openRequested)
                     {
                         return;
@@ -217,7 +217,7 @@
                     this._Str_10146();
                     this._Str_9278(k._Str_11625);
                     return;
-                case _Str_2490.RWPDUE_CONTENTS_IMAGE:
+                case RoomWidgetPresentDataUpdateEvent.RWPDUE_CONTENTS_IMAGE:
                     if (!this._openRequested)
                     {
                         return;
