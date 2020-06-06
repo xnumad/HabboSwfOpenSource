@@ -78,7 +78,7 @@
         private var _layoutCode:String;
         private var _offers:Vector.<IPurchasableOffer>;
         private var _localization:IPageLocalization;
-        private var _Str_2413:Array;
+        private var _widgets:Array;
         private var _Str_5564:EventDispatcherWrapper;
         private var _habboCatalog:HabboCatalog;
         private var _Str_23068:int;
@@ -89,7 +89,7 @@
         public function CatalogPage(k:ICatalogViewer, _arg_2:int, _arg_3:String, _arg_4:IPageLocalization, _arg_5:Vector.<IPurchasableOffer>, _arg_6:HabboCatalog, _arg_7:Boolean, _arg_8:int=-1)
         {
             var _local_9:IPurchasableOffer;
-            this._Str_2413 = [];
+            this._widgets = [];
             super();
             this._viewer = k;
             this._Str_2709 = _arg_2;
@@ -102,7 +102,7 @@
                 _local_9.page = this;
             }
             this._Str_5564 = new EventDispatcherWrapper();
-            this._Str_2413 = new Array();
+            this._widgets = new Array();
             this._acceptSeasonCurrencyAsCredits = _arg_7;
             if (_arg_8 == -1)
             {
@@ -209,11 +209,11 @@
         {
             var k:CatalogWidget;
             var _local_2:IPurchasableOffer;
-            for each (k in this._Str_2413)
+            for each (k in this._widgets)
             {
                 k.dispose();
             }
-            this._Str_2413 = null;
+            this._widgets = null;
             this._localization.dispose();
             for each (_local_2 in this._offers)
             {
@@ -248,9 +248,9 @@
         public function closed():void
         {
             var k:CatalogWidget;
-            if (this._Str_2413 != null)
+            if (this._widgets != null)
             {
-                for each (k in this._Str_2413)
+                for each (k in this._widgets)
                 {
                     k.closed();
                 }
@@ -333,149 +333,149 @@
                     if (this._Str_11744 == null)
                     {
                         this._Str_11744 = new ItemGridCatalogWidget(k, this._habboCatalog.sessionDataManager, this._habboCatalog.catalogType);
-                        this._Str_2413.push(this._Str_11744);
+                        this._widgets.push(this._Str_11744);
                     }
                     return;
                 case CatalogWidgetEnum.PRODUCT_VIEW:
-                    this._Str_2413.push(new ProductViewCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new ProductViewCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.SONG_DISK_PRODUCT_VIEW:
-                    this._Str_2413.push(new SongDiskProductViewCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new SongDiskProductViewCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.SINGLE_VIEW:
-                    this._Str_2413.push(new SingleViewCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new SingleViewCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.PURCHASE:
-                    this._Str_2413.push(new PurchaseCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new PurchaseCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.COLOUR_GRID:
-                    this._Str_2413.push(new ColourGridCatalogWidget(k));
+                    this._widgets.push(new ColourGridCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.TRAX_PREVIEW:
-                    this._Str_2413.push(new TraxPreviewCatalogWidget(k, this._habboCatalog.soundManager));
+                    this._widgets.push(new TraxPreviewCatalogWidget(k, this._habboCatalog.soundManager));
                     return;
                 case CatalogWidgetEnum.REDEEM_ITEM_CODE:
-                    this._Str_2413.push(new RedeemItemCodeCatalogWidget(k));
+                    this._widgets.push(new RedeemItemCodeCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.SPACES_NEW:
-                    this._Str_2413.push(new SpacesNewCatalogWidget(k, this._habboCatalog.sessionDataManager, this._habboCatalog.catalogType));
+                    this._widgets.push(new SpacesNewCatalogWidget(k, this._habboCatalog.sessionDataManager, this._habboCatalog.catalogType));
                     return;
                 case CatalogWidgetEnum.ROOM_PREVIEW:
-                    this._Str_2413.push(new RoomPreviewCatalogWidget(k));
+                    this._widgets.push(new RoomPreviewCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.TROPHY:
-                    this._Str_2413.push(new TrophyCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new TrophyCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.ADD_ON_BADGE_VIEW:
-                    this._Str_2413.push(new AddOnBadgeViewCatalogWidget(k));
+                    this._widgets.push(new AddOnBadgeViewCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.PETS:
-                    this._Str_2413.push(new PetsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new PetsCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.NEW_PETS:
-                    this._Str_2413.push(new NewPetsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new NewPetsCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.ROOM_ADS:
-                    this._Str_2413.push(new RoomAdsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new RoomAdsCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.TEXT_INPUT:
-                    this._Str_2413.push(new TextInputCatalogWidget(k));
+                    this._widgets.push(new TextInputCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.SPECIAL_INFO:
-                    this._Str_2413.push(new SpecialInfoCatalogWidget(k));
+                    this._widgets.push(new SpecialInfoCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.RECYCLER:
-                    this._Str_2413.push(new RecyclerCatalogWidget(k));
+                    this._widgets.push(new RecyclerCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.RECYCLER_PRIZES:
-                    this._Str_2413.push(new RecyclerPrizesCatalogWidget(k));
+                    this._widgets.push(new RecyclerPrizesCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.MARKET_PLACE:
-                    this._Str_2413.push(new MarketPlaceCatalogWidget(k));
+                    this._widgets.push(new MarketPlaceCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.MARKET_PLACE_OWN_ITEMS:
-                    this._Str_2413.push(new MarketPlaceOwnItemsCatalogWidget(k));
+                    this._widgets.push(new MarketPlaceOwnItemsCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.CLUB_GIFT:
-                    this._Str_2413.push(new ClubGiftWidget(k, this._habboCatalog._Str_24953(), this._habboCatalog));
+                    this._widgets.push(new ClubGiftWidget(k, this._habboCatalog._Str_24953(), this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.CLUB_BUY:
-                    this._Str_2413.push(new ClubBuyCatalogWidget(k));
+                    this._widgets.push(new ClubBuyCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.VIP_BUY:
-                    this._Str_2413.push(new VipBuyCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new VipBuyCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.LOYALTY_VIP_BUY:
-                    this._Str_2413.push(new LoyaltyVipBuyCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new LoyaltyVipBuyCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.VIP_GIFT:
-                    this._Str_2413.push(new VipBuyCatalogWidget(k, this._habboCatalog, true));
+                    this._widgets.push(new VipBuyCatalogWidget(k, this._habboCatalog, true));
                     return;
                 case CatalogWidgetEnum.ACTIVITY_POINT_DISPLAY:
-                    this._Str_2413.push(new ActivityPointDisplayCatalogWidget(k));
+                    this._widgets.push(new ActivityPointDisplayCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.MAD_MONEY:
-                    this._Str_2413.push(new MadMoneyCatalogWidget(k));
+                    this._widgets.push(new MadMoneyCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.BUY_GUILD:
-                    this._Str_2413.push(new BuyGuildCatalogWidget(k));
+                    this._widgets.push(new BuyGuildCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.GUILD_BADGE_VIEW:
-                    this._Str_2413.push(new GuildBadgeViewCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildBadgeViewCatalogWidget(k, this._habboCatalog._Str_16509()));
                     return;
                 case CatalogWidgetEnum.GUILD_SELECTOR:
-                    this._Str_2413.push(new GuildSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
                     return;
                 case CatalogWidgetEnum.GUILD_FORUM_SELECTOR:
-                    this._Str_2413.push(new GuildForumSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
+                    this._widgets.push(new GuildForumSelectorCatalogWidget(k, this._habboCatalog._Str_16509()));
                     return;
                 case CatalogWidgetEnum.PET_PREVIEW:
-                    this._Str_2413.push(new PetPreviewCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new PetPreviewCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.SPINNER:
-                    this._Str_2413.push(new SpinnerCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new SpinnerCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUNDLE_PURCHASE_EXTRA_INFO:
-                    this._Str_2413.push(new BundlePurchaseExtraInfoCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new BundlePurchaseExtraInfoCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.TOTAL_PRICE:
-                    this._Str_2413.push(new TotalPriceCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new TotalPriceCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.LIMITED_ITEM:
-                    this._Str_2413.push(new LimitedItemCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new LimitedItemCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.SOLD_LTD_ITEMS:
-                    this._Str_2413.push(new SoldLtdItemsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new SoldLtdItemsCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.USER_BADGE_SELECTOR:
-                    this._Str_2413.push(new UserBadgeSelectorCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new UserBadgeSelectorCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUILDER_GRID_SCROLL:
-                    this._Str_2413.push(new BundleGridViewCatalogWidget(k));
+                    this._widgets.push(new BundleGridViewCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.SIMPLE_PRICE:
-                    this._Str_2413.push(new SimplePriceCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new SimplePriceCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUILDER:
-                    this._Str_2413.push(new BuilderCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new BuilderCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUILDER_SUBSCRIPTION:
-                    this._Str_2413.push(new BuilderSubscriptionCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new BuilderSubscriptionCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUILDER_ADDONS:
-                    this._Str_2413.push(new BuilderAddonsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new BuilderAddonsCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.BUILDER_LOYALTY:
-                    this._Str_2413.push(new BuilderLoyaltyCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new BuilderLoyaltyCatalogWidget(k, this._habboCatalog));
                     return;
                 case CatalogWidgetEnum.WARNING:
-                    this._Str_2413.push(new WarningCatalogWidget(k));
+                    this._widgets.push(new WarningCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.FIRST_PRODUCT_AUTO_SELECTOR:
-                    this._Str_2413.push(new FirstProductSelectorCatalogWidget(k));
+                    this._widgets.push(new FirstProductSelectorCatalogWidget(k));
                     return;
                 case CatalogWidgetEnum.FEATURED_ITEMS:
-                    this._Str_2413.push(new FeaturedItemsCatalogWidget(k, this._habboCatalog));
+                    this._widgets.push(new FeaturedItemsCatalogWidget(k, this._habboCatalog));
                     return;
             }
         }
@@ -501,9 +501,9 @@
                 _local_7.y = ((_local_5.y + _local_5.height) + _local_6);
                 _local_7.height = 51;
                 _local_3 = new ColourGridCatalogWidget(_local_7);
-                this._Str_2413.push(_local_3);
+                this._widgets.push(_local_3);
             }
-            for each (k in this._Str_2413)
+            for each (k in this._widgets)
             {
                 k.page = this;
                 if ((k is ItemGridCatalogWidget))
@@ -524,7 +524,7 @@
         private function _Str_16817():void
         {
             var k:CatalogWidget = new LocalizationCatalogWidget(this._window, this._habboCatalog);
-            this._Str_2413.push(k);
+            this._widgets.push(k);
             k.page = this;
             k.events = this._Str_5564;
             k.init();
@@ -539,7 +539,7 @@
             {
                 return;
             }
-            for each (_local_2 in this._Str_2413)
+            for each (_local_2 in this._widgets)
             {
                 if (_local_2.window != null)
                 {
@@ -566,10 +566,10 @@
                     this._window.removeChild(_local_3.window);
                     _local_3.window.dispose();
                 }
-                _local_4 = this._Str_2413.indexOf(_local_3);
+                _local_4 = this._widgets.indexOf(_local_3);
                 if (_local_4 >= 0)
                 {
-                    this._Str_2413.splice(_local_4, 1);
+                    this._widgets.splice(_local_4, 1);
                 }
                 _local_3.dispose();
             }
